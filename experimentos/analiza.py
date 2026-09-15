@@ -51,6 +51,12 @@ por primera vez. Se marcan como PROPUESTAS, no como definiciones establecidas.
     --param log_cada=N. Sin log se reporta 'no medible (sin log)'.
     En escenarios con invertir_en se mide ademas la reconvergencia a partir de
     invertir_en (cuanto tarda en re-aprender despues de la inversion).
+    Se reporta COMO COMPLEMENTO t90 = pasos hasta recorrer el 90% del cambio
+    total de W. La banda 0.1 sostenida queda dominada por la cola asintotica,
+    que aqui esta limitada por EXPOSICION (lo temido se re-muestrea poco) y no
+    por la tasa de aprendizaje; t90 separa las dos cosas. Ejemplo medido en E2:
+    W_A tras la inversion, banda 0.1 = 25.750 pasos (mediana, n=4) pero
+    t90 = 8.250 pasos. Son dos preguntas distintas; se reportan las dos.
 
  8. RECUPERACION = cuanto del rendimiento previo a la perturbacion se restaura.
         recuperacion = tasa_por_visita(estimulo nutritivo vigente en Q4, Q4)
