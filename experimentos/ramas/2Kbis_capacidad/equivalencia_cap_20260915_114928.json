@@ -1,0 +1,279 @@
+{
+ "fecha": "2026-09-15T11:49:28",
+ "python": "3.14.2",
+ "numpy": "2.4.3",
+ "sha_v6": "5f38f83cf49248a3",
+ "sha_v7": "3db0475ef0ea95ce",
+ "sha_cap": "dc058e0a43216bf3",
+ "sha_este": "c3354b2552564666",
+ "escenarios": {
+  "E1": [
+   "{}",
+   "{'plan': [(0, 'A', 'comida'), (0, 'B', 'veneno')]}"
+  ],
+  "C_veneno_50k": [
+   "{'nuevo': 'C'}",
+   "{'plan': [(0, 'A', 'comida'), (0, 'B', 'veneno'), (50000, 'C', 'veneno')]}"
+  ],
+  "D_comida_50k": [
+   "{'nuevo': 'D', 'nuevo_val': 'comida'}",
+   "{'plan': [(0, 'A', 'comida'), (0, 'B', 'veneno'), (50000, 'D', 'comida')]}"
+  ]
+ },
+ "ncampos": 306,
+ "ndif": 0,
+ "resultados": [
+  {
+   "esc": "E1",
+   "seed": 1,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 1,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 2,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 2,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 3,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 3,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 4,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 4,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 5,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 5,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 6,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "E1",
+   "seed": 6,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 1,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 1,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 2,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 2,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 3,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 3,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 4,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 4,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 5,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 5,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 6,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "C_veneno_50k",
+   "seed": 6,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 1,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 1,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 2,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 2,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 3,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 3,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 4,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 4,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 5,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 5,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 6,
+   "ver": "v6",
+   "ncol": 7,
+   "dif": []
+  },
+  {
+   "esc": "D_comida_50k",
+   "seed": 6,
+   "ver": "v7",
+   "ncol": 10,
+   "dif": []
+  }
+ ]
+}

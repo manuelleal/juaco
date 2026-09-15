@@ -22,7 +22,20 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import corre_3T as c
 
 if __name__ == '__main__':
-    print("\n########## PH1: pool 300, clip 3.0 (solo se levanta el agotamiento) ##########")
-    c.main(arms=['C1', 'C3', 'C3C'], tag='PH1', extra=dict(nkmax=300, wclip=3.0))
-    print("\n########## PH2: pool 300, clip 30.0 (se levantan los dos confusores) ##########")
-    c.main(arms=['C1', 'C3', 'C3C'], tag='PH2', extra=dict(nkmax=300, wclip=30.0))
+    import sys as _s
+    que = _s.argv[1] if len(_s.argv) > 1 else 'todo'
+    if que in ('todo', '12'):
+        print("\n########## PH1: pool 300, clip 3.0 (solo se levanta el agotamiento) ##########")
+        c.main(arms=['C1', 'C3', 'C3C'], tag='PH1', extra=dict(nkmax=300, wclip=3.0))
+        print("\n########## PH2: pool 300, clip 30.0 (se levantan los dos confusores) ##########")
+        c.main(arms=['C1', 'C3', 'C3C'], tag='PH2', extra=dict(nkmax=300, wclip=30.0))
+    if que in ('todo', '3'):
+        # PH3: pool ORIGINAL de v7 (90). Unica constante levantada: el techo de Wp/Wn.
+        print("\n########## PH3: pool 90 (el de v7, intacto), clip 30.0 ##########")
+        c.main(arms=['C1', 'C2', 'C3', 'C3C'], tag='PH3', extra=dict(nkmax=90, wclip=30.0))
+    if que in ('todo', 'barrido'):
+        # Barrido del techo con el pool de v7: si el bloqueo es una CARRERA entre la
+        # division y la saturacion, el exito debe crecer de forma monotona con el techo.
+        for wc in (3.0, 4.5, 6.0, 9.0, 15.0, 30.0):
+            print(f"\n########## BARRIDO techo Wp/Wn = {wc} (pool 90) ##########")
+            c.main(arms=['C3'], tag=f'BAR{wc:g}', extra=dict(nkmax=90, wclip=wc))

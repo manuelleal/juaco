@@ -1,0 +1,108 @@
+=== 3K Kenyon aprendido — 3K_kenyon_20260915_120959.json ===
+20 semillas, T=200000, fase2=100000, sha organismo_3k=cb5a528d123056a7, PREREGISTRO=f303e55005fcdec1
+
+
+########## VARIANTE FASE 2: congelado (toda la plasticidad apagada — generalizacion de tiro cero) ##########
+
+condicion                   precTest          rango  tComida  tVeneno  accSigno  Wa_com  Wa_ven  muert  precTren
+----------------------------------------------------------------------------------------------------------------------
+1  fijo (=v6)                  0.683    [0.47,1.00]    0.719    0.397     0.675   +0.12   -1.04    291     0.993
+2  hebb_visita lr=0.003        0.650    [0.40,0.94]    0.779    0.485     0.700   +0.10   -0.57    293     0.993
+2  hebb_visita lr=0.01         0.698    [0.43,0.85]    0.644    0.228     0.700   -0.23   -1.23    290     0.991
+2  hebb_visita lr=0.03         0.650    [0.46,0.85]    0.560    0.223     0.600   -0.39   -1.58    288     0.993
+2b hebb_mordida lr=0.003       0.706    [0.34,0.99]    0.740    0.317     0.675   +0.11   -1.62    292     0.992
+2b hebb_mordida lr=0.01        0.731    [0.49,0.99]    0.720    0.226     0.725   +0.01   -1.86    299     0.995
+2b hebb_mordida lr=0.03        0.719    [0.49,0.97]    0.779    0.269     0.700   -0.01   -1.42    290     0.996
+3  error       lr=0.003        0.694    [0.36,0.92]    0.702    0.368     0.650   +0.00   -1.15    284     0.992
+3  error       lr=0.01         0.707    [0.47,0.92]    0.754    0.325     0.700   +0.03   -1.35    302     0.992
+3  error       lr=0.03         0.716    [0.51,0.97]    0.736    0.302     0.700   +0.33   -1.21    297     0.993
+
+condicion                   r_clase  r_solap  |rs|>|rc|  ratio_disp  ratio_med  sel_clase  ratio_solap  celdas  derivaKW
+----------------------------------------------------------------------------------------------------------------------
+1  fijo (=v6)                  0.41     0.87      18/20       1.020      0.970      0.163        1.219      16    0.0000
+2  hebb_visita lr=0.003        0.45     0.81      16/20       1.041      0.775      0.185        1.556      20    0.1217
+2  hebb_visita lr=0.01         0.58     0.83      18/20       1.060      0.782      0.181        1.943      22    0.1619
+2  hebb_visita lr=0.03         0.50     0.82      18/20       0.996      0.792      0.172        1.635      22    0.1846
+2b hebb_mordida lr=0.003       0.65     0.90      18/20       1.055      1.030      0.180        1.313      17    0.0316
+2b hebb_mordida lr=0.01        0.65     0.86      17/20       1.079      1.109      0.195        1.566      19    0.0732
+2b hebb_mordida lr=0.03        0.57     0.89      19/20       1.090      1.117      0.195        1.994      20    0.1092
+3  error       lr=0.003        0.43     0.88      19/20       1.004      0.962      0.164        1.211      16    0.0076
+3  error       lr=0.01         0.57     0.83      19/20       1.018      0.966      0.165        1.245      17    0.0205
+3  error       lr=0.03         0.55     0.88      18/20       0.989      0.978      0.171        1.295      18    0.0500
+
+
+########## VARIANTE FASE 2: aprende (sigue aprendiendo) ##########
+
+condicion                   precTest          rango  tComida  tVeneno  accSigno  Wa_com  Wa_ven  muert  precTren
+----------------------------------------------------------------------------------------------------------------------
+1  fijo (=v6)                  0.880    [0.66,1.00]    0.830    0.035     0.675   +0.12   -1.04    298     0.957
+2  hebb_visita lr=0.003        0.826    [0.68,0.94]    0.802    0.063     0.700   +0.10   -0.57    298     0.967
+2  hebb_visita lr=0.01         0.806    [0.69,0.94]    0.749    0.028     0.700   -0.23   -1.23    308     0.959
+2  hebb_visita lr=0.03         0.763    [0.55,0.96]    0.633    0.034     0.600   -0.39   -1.58    306     0.943
+2b hebb_mordida lr=0.003       0.882    [0.66,1.00]    0.803    0.027     0.675   +0.11   -1.62    288     0.986
+2b hebb_mordida lr=0.01        0.921    [0.74,1.00]    0.892    0.027     0.725   +0.01   -1.86    304     0.989
+2b hebb_mordida lr=0.03        0.884    [0.65,0.99]    0.836    0.025     0.700   -0.01   -1.42    292     0.992
+3  error       lr=0.003        0.873    [0.69,0.99]    0.853    0.049     0.650   +0.00   -1.15    299     0.970
+3  error       lr=0.01         0.864    [0.70,1.00]    0.796    0.034     0.700   +0.03   -1.35    310     0.980
+3  error       lr=0.03         0.846    [0.68,0.99]    0.812    0.025     0.700   +0.33   -1.21    295     0.975
+
+condicion                   r_clase  r_solap  |rs|>|rc|  ratio_disp  ratio_med  sel_clase  ratio_solap  celdas  derivaKW
+----------------------------------------------------------------------------------------------------------------------
+1  fijo (=v6)                  0.41     0.87      18/20       1.020      0.970      0.163        1.219      16    0.0000
+2  hebb_visita lr=0.003        0.45     0.81      16/20       0.983      0.683      0.185        1.852      22    0.1578
+2  hebb_visita lr=0.01         0.58     0.83      18/20       1.017      0.703      0.187        2.080      22    0.2050
+2  hebb_visita lr=0.03         0.50     0.82      18/20       1.006      0.810      0.182        2.145      24    0.2467
+2b hebb_mordida lr=0.003       0.65     0.90      18/20       1.083      1.071      0.177        1.412      17    0.0434
+2b hebb_mordida lr=0.01        0.65     0.86      17/20       1.109      1.134      0.194        1.693      19    0.0868
+2b hebb_mordida lr=0.03        0.57     0.89      19/20       1.132      1.149      0.190        1.845      20    0.1375
+3  error       lr=0.003        0.43     0.88      19/20       0.993      0.944      0.171        1.223      17    0.0143
+3  error       lr=0.01         0.57     0.83      19/20       1.000      0.951      0.178        1.312      18    0.0341
+3  error       lr=0.03         0.55     0.88      18/20       0.991      0.956      0.178        1.450      19    0.0786
+
+
+########## CRITERIOS PREREGISTRADOS ##########
+
+Condicion 1 (fijo): precision mediana = 0.683 [0.47,1.00]
+  Prediccion preregistrada C1: precision mediana en (0.50, 0.70) -> SE CUMPLE
+  Prediccion C1 |r_solap|>|r_clase|: 0.87 vs 0.41, 18/20 semillas -> SE CUMPLE
+
+-- C-1 (margen >= +0.10) y C-2 (pareado > 0 en >=15/20), variante congelado --
+condicion                     prec  delta_med    C-1   pareado    C-2  muertes   C-3b
+------------------------------------------------------------------------------------------
+2  hebb_visita lr=0.003      0.650     -0.032     no     10/20     no      293     SI
+2  hebb_visita lr=0.01       0.698     +0.015     no      9/20     no      290     SI
+2  hebb_visita lr=0.03       0.650     -0.032     no     10/20     no      288     SI
+2b hebb_mordida lr=0.003     0.706     +0.024     no     12/20     no      292     SI
+2b hebb_mordida lr=0.01      0.731     +0.048     no     14/20     no      299     SI
+2b hebb_mordida lr=0.03      0.719     +0.036     no     13/20     no      290     SI
+3  error       lr=0.003      0.694     +0.011     no     10/20     no      284     SI
+3  error       lr=0.01       0.707     +0.024     no     12/20     no      302     SI
+3  error       lr=0.03       0.716     +0.033     no     15/20     SI      297     SI
+
+-- Co-primaria mecanistica: acc_signo del valor a priori (delta >= +0.10) --
+2  hebb_visita lr=0.003    acc_signo=0.700 delta=+0.025 no
+2  hebb_visita lr=0.01     acc_signo=0.700 delta=+0.025 no
+2  hebb_visita lr=0.03     acc_signo=0.600 delta=-0.075 no
+2b hebb_mordida lr=0.003   acc_signo=0.675 delta=+0.000 no
+2b hebb_mordida lr=0.01    acc_signo=0.725 delta=+0.050 no
+2b hebb_mordida lr=0.03    acc_signo=0.700 delta=+0.025 no
+3  error       lr=0.003    acc_signo=0.650 delta=-0.025 no
+3  error       lr=0.01     acc_signo=0.700 delta=+0.025 no
+3  error       lr=0.03     acc_signo=0.700 delta=+0.025 no
+
+-- PRIMARIA: condicion 3 (error, k_lr=0.01, congelado) vs condicion 1 --
+  precision 1 = 0.683 [0.47,1.00]
+  precision 3 = 0.707 [0.47,0.92]
+  C-1 margen  = +0.024  (>= +0.10)  -> FALLA
+  C-2 pareado = 12/20  (>= 15)     -> FALLA
+  C-3b muertes= 302 vs 291x1.5=436 -> PASA
+  deltas por semilla: +0.03 +0.06 -0.00 -0.11 +0.14 +0.06 +0.24 +0.16 +0.01 -0.04 +0.00 -0.02 -0.04 -0.07 +0.14 +0.02 +0.08 +0.05 -0.09 +0.06
+
+  VEREDICTO PREREGISTRADO: HIPOTESIS REFUTADA
+
+-- Trayectoria por cuarto de fase 2 (variante aprende) --
+condicion                      q1     q2     q3     q4   (variante congelado: q1..q4)
+1  fijo (=v6)               0.805  0.926  0.938  0.909    0.675  0.673  0.681  0.677
+2  hebb_visita lr=0.01      0.767  0.855  0.879  0.887    0.706  0.708  0.682  0.701
+2b hebb_mordida lr=0.01     0.836  0.948  0.969  0.972    0.746  0.741  0.764  0.753
+3  error       lr=0.01      0.781  0.925  0.928  0.903    0.701  0.702  0.708  0.735

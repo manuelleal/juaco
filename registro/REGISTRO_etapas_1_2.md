@@ -309,6 +309,32 @@ arquitectura: se generaliza compartiendo celdas o no se generaliza en absoluto.
 **Qué NO prueba.** Que el valor a priori sea correcto no dice nada sobre si el organismo ACTÚA según él, ni sobre
 aprendizaje de características abstractas. Es generalización de valor por representación, y sólo eso.
 
+### ERR-08 — tercer criterio mal escrito del día 3, y el patrón que lo produce
+Al implementar el criterio v2 en `bateria_v7b.py` (hash al pie), dos defectos más, los dos míos, los dos cazados
+por autoverificación antes de correr 20 semillas:
+
+1. **El solapamiento que hay que leer es el INICIAL, no el final.** `organismo_v7.run` devuelve `solap` calculado
+   al terminar, con la KW ya modificada por la plasticidad. El criterio 4 necesita el solapamiento con el que el
+   organismo NACE, que es el que predice si cabe esperar error crónico. En E2L la diferencia es justo la medida
+   del éxito: inicial 3, final 0. La batería replica el sorteo de KW sin simular y **se autoverifica** contra el
+   organismo en las semillas sin divisiones (donde inicial = final); ahí saltó el fallo.
+2. **"todas las divisiones en t > 50.000" es falso para E2L.** El criterio v2 asumía que el error crónico siempre
+   lo crea un evento a mitad de corrida. En E2L el solapamiento es **congénito**: A y B nacen con códigos idénticos
+   y la separación debe ocurrir PRONTO, no tarde. El propio registro ya lo decía ("solapamiento 3→0 antes de 25k
+   pasos") y no lo usé al escribir el criterio.
+
+**Corrección**: el disparo se ancla a la CAUSA, no a un reloj fijo. `t_causa = 0` si el solapamiento es congénito,
+`t_causa = 50.000` si lo crea un evento (inversión o estímulo nuevo); ninguna división antes de su causa; y para el
+caso congénito, la separación debe **completarse** antes de t=25.000 — umbral tomado del registro previo, no
+elegido hoy a la vista de estos datos.
+
+**El patrón, que importa más que los dos errores.** ERR-06 y ERR-08 tienen la misma raíz: **escribir un criterio
+que da por hecho que todas las etapas se comportan igual, en vez de mirar qué hace cada una.** Tres veces en un día.
+Los cuatro errores anteriores del proyecto (unidades, disponibilidad, aliasing, aritmética) eran de medición; estos
+son de *generalización indebida al redactar el criterio*, que es una familia distinta y hasta hoy no identificada.
+Regla derivada, para las próximas baterías: **un criterio que se aplica a N etapas debe justificarse etapa por
+etapa antes de correr, o escribirse en términos del mecanismo (la causa) y no del escenario (el reloj).**
+
 ### Fase 1 — infraestructura paralela. HECHA
 `experimentos/run_etapa.py` (`a3d6dad063eb809d`) y `experimentos/analiza.py`. Pool de procesos con método `spawn`,
 cabecera de procedencia obligatoria (fecha, hash del organismo, hash del script, versiones de Python y NumPy, kwargs

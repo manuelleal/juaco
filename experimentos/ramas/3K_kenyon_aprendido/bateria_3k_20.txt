@@ -1,0 +1,29 @@
+=== Bateria A/B sobre organismo_3k, 20 semillas (criterio C-3a del PREREGISTRO) ===
+
+-- Condicion 1  fijo        --
+  PASA  E1 aprendizaje A/B     20/20  [venenoQ4<Q1:20/20 W_A~+1:20/20 W_B~-3:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=142
+  PASA  E2 inversion A<->B     20/20  [W_A->-3:20/20 W_B->+1:20/20 come B Q4>=50:20/20]  W_A med=-2.97 W_B med=+1.00 muertes med=147
+  PASA  E2I nuevo C veneno     20/20  [W_C<=-2.5:20/20 W_A~+1:20/20 W_B<=-2.8:20/20 tasaA Q4>=80%Q2:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=178
+  PASA  E2J nuevo D, D&B=1     20/20  [W_D>=0.85:20/20 W_B<=-2.7:20/20]  W_A med=+1.00 W_B med=-2.94 muertes med=128
+  PASA  E2K nuevo D, D&B=2     20/20  [W_D>=0.8:20/20 W_B<=-2.4:20/20]  W_A med=+1.00 W_B med=-2.81 muertes med=126
+
+-- Condicion 2  hebb_visita --
+  PASA  E1 aprendizaje A/B     20/20  [venenoQ4<Q1:20/20 W_A~+1:20/20 W_B~-3:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=142
+  PASA  E2 inversion A<->B     20/20  [W_A->-3:20/20 W_B->+1:20/20 come B Q4>=50:20/20]  W_A med=-2.97 W_B med=+1.00 muertes med=147
+  PASA  E2I nuevo C veneno     20/20  [W_C<=-2.5:20/20 W_A~+1:20/20 W_B<=-2.8:20/20 tasaA Q4>=80%Q2:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=176
+  PASA  E2J nuevo D, D&B=1     20/20  [W_D>=0.85:20/20 W_B<=-2.7:20/20]  W_A med=+1.00 W_B med=-2.96 muertes med=126
+  PASA  E2K nuevo D, D&B=2     20/20  [W_D>=0.8:20/20 W_B<=-2.4:20/20]  W_A med=+1.00 W_B med=-2.96 muertes med=124
+
+-- Condicion 2b hebb_mordid --
+  PASA  E1 aprendizaje A/B     20/20  [venenoQ4<Q1:20/20 W_A~+1:20/20 W_B~-3:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=142
+  PASA  E2 inversion A<->B     20/20  [W_A->-3:20/20 W_B->+1:20/20 come B Q4>=50:20/20]  W_A med=-2.97 W_B med=+1.00 muertes med=147
+  PASA  E2I nuevo C veneno     20/20  [W_C<=-2.5:20/20 W_A~+1:20/20 W_B<=-2.8:20/20 tasaA Q4>=80%Q2:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=178
+  PASA  E2J nuevo D, D&B=1     20/20  [W_D>=0.85:20/20 W_B<=-2.7:20/20]  W_A med=+1.00 W_B med=-2.94 muertes med=128
+  FALLA E2K nuevo D, D&B=2     18/20  [W_D>=0.8:18/20 W_B<=-2.4:18/20]  W_A med=+1.00 W_B med=-2.82 muertes med=126
+
+-- Condicion 3  error       --
+  PASA  E1 aprendizaje A/B     20/20  [venenoQ4<Q1:20/20 W_A~+1:20/20 W_B~-3:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=142
+  PASA  E2 inversion A<->B     20/20  [W_A->-3:20/20 W_B->+1:20/20 come B Q4>=50:20/20]  W_A med=-2.97 W_B med=+1.00 muertes med=147
+  PASA  E2I nuevo C veneno     20/20  [W_C<=-2.5:20/20 W_A~+1:20/20 W_B<=-2.8:20/20 tasaA Q4>=80%Q2:20/20]  W_A med=+1.00 W_B med=-3.00 muertes med=178
+  PASA  E2J nuevo D, D&B=1     20/20  [W_D>=0.85:20/20 W_B<=-2.7:20/20]  W_A med=+1.00 W_B med=-2.94 muertes med=128
+  PASA  E2K nuevo D, D&B=2     20/20  [W_D>=0.8:20/20 W_B<=-2.4:20/20]  W_A med=+1.00 W_B med=-2.81 muertes med=126
