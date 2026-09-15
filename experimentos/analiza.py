@@ -364,6 +364,30 @@ def velocidad(log, estimulo, t_min=0):
     return pts[ultimo_malo + 1][0]
 
 
+def t_fraccion(log, estimulo, frac=0.9, t_min=0):
+    """Primer t >= t_min en que W ha recorrido `frac` del cambio total W(t_min)->W(final).
+
+    Medida COMPLEMENTARIA de la velocidad. La de arriba (banda 0.1 sostenida) queda
+    dominada por la cola asintotica, que en este organismo esta limitada por
+    EXPOSICION (un estimulo temido se re-muestrea poco), no por la tasa de
+    aprendizaje. t90 separa las dos cosas. None si el cambio total es < 0.1.
+    """
+    if not log:
+        return None
+    i = IDX_W[estimulo]
+    pts = [(e[0], e[i]) for e in log if e[0] >= t_min and e[i] is not None]
+    if len(pts) < 2:
+        return None
+    w0, wf = pts[0][1], pts[-1][1]
+    if abs(wf - w0) < 0.1:
+        return None
+    objetivo = w0 + frac * (wf - w0)
+    for t, w in pts:
+        if (w >= objetivo) if wf > w0 else (w <= objetivo):
+            return t
+    return None
+
+
 # ----------------------------------------------------------------------------
 # variabilidad y diversidad (definiciones PROPUESTAS, ver docstring)
 # ----------------------------------------------------------------------------
@@ -575,12 +599,25 @@ def informe(c):
             print(linea(f'pasos hasta W_{st} estable', resumen(ok), 0, 30))
             if len(ok) != len(vs):
                 print(f'  ({len(vs)-len(ok)} semillas sin convergencia sostenida para W_{st})')
+        for st in ('A', 'B'):
+            vs = [t_fraccion(logs.get(f['seed'], []), st) for f in c.filas]
+            ok = [v for v in vs if v is not None]
+            if ok:
+                print(linea(f'  t90 de W_{st} (complement.)', resumen(ok), 0, 30))
         inv = kw.get('invertir_en')
         if inv:
             for st in ('A', 'B'):
                 vs = [velocidad(logs.get(f['seed'], []), st, t_min=inv) for f in c.filas]
                 ok = [v - inv for v in vs if v is not None]
                 print(linea(f'pasos tras inversion, W_{st}', resumen(ok), 0, 30))
+            for st in ('A', 'B'):
+                vs = [t_fraccion(logs.get(f['seed'], []), st, t_min=inv) for f in c.filas]
+                ok = [v - inv for v in vs if v is not None]
+                if ok:
+                    print(linea(f'  t90 tras inversion, W_{st}', resumen(ok), 0, 30))
+            print('  (la banda 0.1 sostenida esta limitada por EXPOSICION -lo temido se '
+                  're-muestrea poco-;\n   t90 = pasos hasta recorrer el 90% del cambio total, '
+                  'mas cercano a la tasa de aprendizaje)')
         res = int(kw.get('log_cada') or 0)
         if res:
             print(f'  resolucion del log: {res} pasos (la cifra no puede ser mas fina que esto)')

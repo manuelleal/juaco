@@ -215,6 +215,68 @@ v7 se congela si y sólo si, con 20 semillas:
 6. El control sin plasticidad **FALLA** (≤1/20 lo pasa). Si pasara, la plasticidad no aporta nada.
 Si algo falla, 2L vuelve a hipótesis y v6 sigue siendo el tronco. No se recalibra a posteriori.
 
+### Examen de congelación de v7, 20 semillas — RESULTADO: NO SE CONGELA
+`bateria_v7.py 20`. Todos los criterios científicos heredados pasan 20/20 (W_C≤−2.5, W_A≈+1, W_B≤−2.8, tasaA,
+W_D, reversa, extinción, rescate A∩B=3, solapamiento→0, celdas≤45 en todas). El control negativo es válido:
+0/20 lo pasan, W_A y W_B colapsan a 0.00 sin plasticidad.
+
+**Falla un único criterio: `splits==0` en E2I, 19/20.** La semilla 15 divide 3 veces: dos sobre A en t=53.904
+y una sobre C en t=57.059. Bajo el criterio preregistrado esta mañana, v7 NO se congela. 2L vuelve a hipótesis
+y v6 sigue siendo el tronco.
+
+### ERR-06 — sexto error de instrumento, y es del día 3 (mío)
+Diagnóstico de la semilla 15 (regla 5: primero el instrumento). Replicado el sorteo de códigos de las 20 semillas:
+
+| Solapamiento con A | semillas | splits |
+|---|---|---|
+| C∩A = 0 | 13 | 0 |
+| C∩A = 1 | 6 (2,5,11,12,13,20) | 0 |
+| **C∩A = 2** | **1 (la 15)** | **3** |
+
+**El criterio estaba mal escrito.** `E2I` se invoca como `run(s, nuevo='C')` con `solap_B=None`, de modo que la
+condición de sorteo **sólo exige A∩B=0 y deja C∩A y C∩B libres**. E2I no es una etapa sin error crónico: es una
+etapa donde el solapamiento sale por sorteo. Lo escribí a partir de 6 semillas y ninguna de las 6 sacó un 2.
+Mismo tipo de error que 2H (α derivado en tasas, criterio escrito en conteos): una premisa de hecho falsa dentro
+del criterio. El registro ya documentaba el mecanismo en 2I ("ΔW_B = −0.55 con C∩B>0 vs −0.02 sin") — la
+información para escribirlo bien estaba disponible y no la usé.
+
+La semilla 15 NO es un fallo del organismo: es la regla respondiendo al castigo de C filtrado por dos celdas
+compartidas con A, exactamente para lo que fue diseñada, y recuperando después (W_A≈+1 se cumple 20/20).
+
+### HALLAZGO — umbral de disparo de la regla 2L en 2 celdas compartidas
+Del fallo sale una cifra que el registro no tenía. Seis condiciones independientes, todas consistentes:
+
+| Condición | solapamiento | splits |
+|---|---|---|
+| E1 | 0 | 0/20 |
+| E2J (D∩B=1 forzado) | 1 | 0/20 |
+| E2I, semillas con C∩A≤1 | 0–1 | 0/19 |
+| E2I, semilla 15 | 2 | 3 |
+| E2K (D∩B=2 forzado) | 2 | 20/20 |
+| E2L (A∩B=3 forzado) | 3 | 20/20 |
+
+**Con 0 o 1 celda compartida la regla nunca dispara; con 2 o 3 dispara siempre.** El umbral es una consecuencia
+medible de θ=0.6 sobre la media móvil del |error|, no un parámetro puesto a mano. Encaja con la degradación
+graduada ya medida en 2K (W_B −3.00 / −2.9 / −2.78 con 0/1/2 celdas): a 1 celda el error se absorbe, a 2 no.
+E2 (inversión) dispara sin solapamiento alguno: el error crónico también puede venir del valor, no sólo de la
+representación. Son dos vías distintas al mismo disparador.
+
+### Criterio de congelación de v7, VERSIÓN 2 — preregistrado tras ERR-06, antes de volver a correr
+Regla 3: el criterio estaba mal, se registra el error y se decide uno nuevo ANTES de volver a correr. El nuevo
+criterio es **más exigente**, porque predice por semilla y no por etapa, y porque añade una predicción que puede
+fallar (el umbral):
+
+1. Los criterios científicos heredados: 20/20 en E1, E2, E2I, E2J, E2K y E2L rescate (idénticos a v6).
+2. `celdas ≤ 45` en todas las etapas, 20/20.
+3. El control sin plasticidad FALLA (≤1/20).
+4. **Criterio de disparo, evaluado por semilla contra el solapamiento MEDIDO, no contra el nombre de la etapa**:
+   - solapamiento máximo ≤1 y sin inversión → `splits == 0`
+   - solapamiento máximo ≥2, o inversión del mundo → `splits > 0` y todas las divisiones en t > 50.000
+   Debe cumplirse en 20/20 semillas de cada etapa.
+5. **Predicción del umbral, falsable**: en un barrido forzado de solapamiento 0,1,2,3 (2K-bis), la fracción de
+   semillas que divide debe ser 0 en 0 y 1, y 1 en 2 y 3. Si alguna semilla divide con solapamiento 1, o alguna
+   no divide con solapamiento 2, el umbral no está en 2 y la afirmación se retira.
+
 ### Etapa 3 — Generalización. PREREGISTRO (escrito ANTES de correr, día 3)
 Punto 10 del brief. Principio rector: "primero que aprende, después que recuerda, después que generaliza". Nivel 4 de
 la escala del punto 6, hoy con "indicios" (2I/2J) y sin criterio propio.

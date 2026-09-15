@@ -1,0 +1,576 @@
+{
+ "procedencia": {
+  "fecha_iso": "2026-09-15T11:13:38-05:00",
+  "etapa": "E1",
+  "prefijo_salida": "E1",
+  "escenario": {
+   "nombre": "E1",
+   "kwargs_escenario_base": {},
+   "kwargs_completos_de_run": {
+    "T": 100000
+   },
+   "kwargs_sobrescritos_por_param": {},
+   "llamada": "organismo_v6.run(seed, T=100000)"
+  },
+  "n_semillas": 6,
+  "semillas": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "organismo": {
+   "alias": "v6",
+   "modulo": "organismo_v6",
+   "archivo": "C:\\Users\\User\\Documents\\PROYECTOS\\JUACO\\bundle\\organismo\\organismo_v6.py",
+   "sha256_16": "5f38f83cf49248a3"
+  },
+  "script": {
+   "archivo": "C:\\Users\\User\\Documents\\PROYECTOS\\JUACO\\bundle\\experimentos\\run_etapa.py",
+   "sha256_16": "a3d6dad063eb809d"
+  },
+  "entorno": {
+   "python": "3.14.2",
+   "python_full": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+   "numpy": "2.4.3",
+   "plataforma": "Windows-11-10.0.26200-SP0",
+   "cpu_count": 16,
+   "procesos_usados": 6,
+   "metodo_arranque_mp": "spawn"
+  },
+  "tiempos": {
+   "segundos_pared_paralelo": 5.215,
+   "segundos_cpu_sumados": 27.71,
+   "aceleracion_observada": 5.31,
+   "segundos_secuencial_verificacion": null
+  },
+  "equivalencia_paralelo_vs_secuencial": "no verificada",
+  "notas": {
+   "T": 100000,
+   "atribucion_valencia_por_cuarto_exacta": true,
+   "energia_neta": "magnitud DERIVADA: sum(mordidas*dE) - costo*T, con dE comida=+0.8, veneno=-0.4. run() no devuelve E.",
+   "log_cada": null,
+   "determinismo": "run() usa np.random.default_rng(seed) y ningun estado global; el paralelismo no altera resultados."
+  }
+ },
+ "resultados": [
+  {
+   "seed": 1,
+   "mord": {
+    "A": [
+     105,
+     68,
+     72,
+     78
+    ],
+    "B": [
+     39,
+     12,
+     10,
+     7
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     107,
+     68,
+     73,
+     78
+    ],
+    "B": [
+     4206,
+     5222,
+     4963,
+     4389
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": -1.0,
+    "D": -1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.0,
+     1.0
+    ],
+    "D": [
+     0.0,
+     1.0
+    ]
+   },
+   "deaths": 134,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "log": [],
+   "segundos": 4.886
+  },
+  {
+   "seed": 2,
+   "mord": {
+    "A": [
+     84,
+     78,
+     99,
+     57
+    ],
+    "B": [
+     37,
+     19,
+     11,
+     19
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     84,
+     78,
+     99,
+     57
+    ],
+    "B": [
+     4746,
+     6174,
+     4286,
+     5674
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": -0.67,
+    "D": -2.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.33,
+     1.0
+    ],
+    "D": [
+     0.0,
+     2.0
+    ]
+   },
+   "deaths": 143,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "log": [],
+   "segundos": 4.645
+  },
+  {
+   "seed": 3,
+   "mord": {
+    "A": [
+     118,
+     74,
+     61,
+     85
+    ],
+    "B": [
+     41,
+     14,
+     14,
+     16
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     118,
+     74,
+     61,
+     85
+    ],
+    "B": [
+     5409,
+     7002,
+     5979,
+     5510
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": 0.0,
+    "D": -2.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     2.0
+    ]
+   },
+   "deaths": 134,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "log": [],
+   "segundos": 4.492
+  },
+  {
+   "seed": 4,
+   "mord": {
+    "A": [
+     105,
+     76,
+     82,
+     91
+    ],
+    "B": [
+     33,
+     18,
+     11,
+     15
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     106,
+     76,
+     82,
+     92
+    ],
+    "B": [
+     4335,
+     7524,
+     5683,
+     5230
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": 0.0,
+    "D": -1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     1.0
+    ]
+   },
+   "deaths": 141,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "log": [],
+   "segundos": 4.497
+  },
+  {
+   "seed": 5,
+   "mord": {
+    "A": [
+     138,
+     57,
+     59,
+     48
+    ],
+    "B": [
+     37,
+     21,
+     15,
+     15
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     142,
+     58,
+     59,
+     48
+    ],
+    "B": [
+     5640,
+     6022,
+     5721,
+     4075
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": 0.33,
+    "D": -0.67
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.33,
+     0.0
+    ],
+    "D": [
+     0.33,
+     1.0
+    ]
+   },
+   "deaths": 161,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "log": [],
+   "segundos": 4.595
+  },
+  {
+   "seed": 6,
+   "mord": {
+    "A": [
+     114,
+     75,
+     73,
+     71
+    ],
+    "B": [
+     40,
+     15,
+     12,
+     16
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     114,
+     76,
+     73,
+     71
+    ],
+    "B": [
+     6693,
+     4521,
+     6118,
+     5071
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": 0.0,
+    "D": -1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     1.0
+    ]
+   },
+   "deaths": 152,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "log": [],
+   "segundos": 4.595
+  }
+ ]
+}
