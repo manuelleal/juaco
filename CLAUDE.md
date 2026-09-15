@@ -36,11 +36,25 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - Etapa 1 (aprende A/B): cerrada, 20/20 en v6.
 - Etapa 2 (inversión, extinción, estímulo nuevo, valencias opuestas): cerrada en valor. Ver registro.
 - Problema abierto de conducta: política bajo hambre (mordidas de veneno 1–4% por visita en inanición). Fase 2P.
-- **v7 NO congelado.** Pasa 20/20 todos los criterios científicos, pero falla `splits==0` en E2I (19/20).
-  El criterio estaba mal escrito (ERR-06): E2I deja C∩A y C∩B libres, no es una etapa sin error crónico.
-  Criterio v2 preregistrado en el registro; pendiente volver a correr. v6 sigue siendo el tronco.
-- **Umbral de división 2L en 2 celdas compartidas**: con 0 o 1 nunca dispara, con 2 o 3 siempre. Seis condiciones
-  independientes. Dos vías de disparo: representación (solapamiento) y valor (inversión).
+- **v7 NO congelado**, tras dos exámenes con criterio preregistrado. Los criterios científicos pasan 20/20 en
+  las seis etapas y el control negativo es válido (0/20); lo que falla es el criterio de disparo en E2I.
+  v6 sigue siendo el tronco.
+- **Ley de disparo de 2L, corregida (20/20 en todas las etapas)**: la regla divide con ≥2 celdas compartidas
+  entre estímulos de **VALENCIA OPUESTA**, o cuando el valor cambia de signo. El solapamiento entre estímulos
+  de la MISMA valencia no dispara, por mucho que sea. (El "umbral en 2 celdas" sin más quedó refutado: las
+  semillas 8 y 18 de E2I tienen solapamiento 2 con otro veneno y no dividen.)
+- **BUG-01, bloqueo real del tronco y lo más importante pendiente**: bajo refuerzo contradictorio sobre un
+  código compartido, `Wp` y `Wn` corren los DOS al techo (9.0/código) y su diferencia se anula exactamente;
+  a partir de ahí no se aprende nada en esas celdas. Reproducible sin tocar nada:
+  `organismo_v7.run(1, plast=False, solap_AB=3)` → `comp A=(9.0, 9.0)`, `W=0.0`.
+  Es el "v6 colapsa: W=0" de 2L, el "ambos canales saturan" de 2F y los "canales inflados" de 2J/2K.
+- **La regla de división no selecciona por dirección, selecciona por parada** (rama 3T): `P − mu[c]` es
+  distintividad no supervisada y el control de ruido separa MÁS que la señal. Lo que selecciona es el error
+  que dispara y apaga la división.
+- Rama 3T (composición temporal, nivel 7): **NO** con las constantes actuales. Post-hoc, levantando sólo el
+  techo de BUG-01, sí emerge 20/20 — no cuenta hasta repetirlo con criterio escrito antes.
+- Rama 3K (¿debe aprender el Kenyon?): **NO, basta el azar** para características lineales. Aprender KW mejora
+  la representación y no mejora la generalización: descorrelacionar códigos ≠ representar la característica.
 - **Fase 1 hecha**: `experimentos/run_etapa.py` + `analiza.py`, paralelo 6.3×, equivalencia 20/20 bit a bit.
   Desbloquea las 100 semillas del punto 8 del brief.
 - **Etapa 3 (generalización): predicción sostenida al 100%**, residuo exactamente 0.000 en 1.280 pares.

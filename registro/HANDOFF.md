@@ -77,3 +77,105 @@ Lo que el organismo dictó fue la NECESIDAD de cada mecanismo (quitarlo rompe al
 
 ## 8. Qué NO hemos demostrado
 Generalización a patrones no vistos, transferencia, planificación, memoria más allá de una vida, acumulación poblacional, comunicación. Nada de esto se afirma.
+(Actualizado el día 3: la generalización de VALOR por solapamiento de códigos sí está demostrada — ver §9.)
+
+---
+
+# 9. DÍA 3 (15 sep 2026) — sesión en el repo con Claude Code
+
+Entorno: Windows 11, Python 3.14.2, NumPy 2.4.3, 16 núcleos. **1 corrida de 100k pasos = 4.0 s.**
+Detalle completo y criterios en `REGISTRO_etapas_1_2.md`, sección "Día 3". Ocho commits, tag `v6-baseline`.
+
+## 9.1 Para retomar en 30 segundos
+```
+cd organismo && PYTHONIOENCODING=utf-8 python bateria.py 6     # regla 1: debe salir todo PASA
+python manifiesto.py                                            # verifica los 4 congelados por hash
+```
+`manifiesto.py` sale con código 1 si algún archivo congelado cambió de hash. Si eso pasa: **detenerse**.
+**Nunca quitar `.gitattributes`**: sin `* -text`, git convierte LF→CRLF y rompe los 55 hashes en cualquier clon.
+
+## 9.2 Qué se cerró
+- **Traspaso validado**: batería 20/20; baseline reproducido **bit a bit** (259/260 campos; la única diferencia
+  es redondeo del CSV viejo). Repo git creado, tag `v6-baseline`.
+- **Fase 1 hecha**: `experimentos/run_etapa.py` + `analiza.py`. Paralelo **6.3×** (20 semillas: 80 s → 13 s),
+  equivalencia paralelo/secuencial 20/20 bit a bit. 100 semillas en ~60 s. Desbloquea el punto 8 del brief.
+- **Etapa 3 (generalización), primera mitad**: la predicción del brief se confirma —
+  **R²(valor a priori ~ solapamiento de códigos) = 0.999999** contra **R²(~ similitud visual) = 0.33**.
+  Nivel 4 de la escala pasa de "indicios" a criterio preregistrado cumplido.
+- **Variabilidad y diversidad** medidas por primera vez. **sd(W_A) = 0.0000** en 20 semillas: el valor aprendido
+  no tiene diversidad; la conducta sí (CV 7–9%). Separa las tres capas con una cifra.
+
+## 9.3 Los tres hallazgos nuevos
+1. **El alcance de la generalización es una lotería del sorteo.** Patrones con valor a priori 0 exacto:
+   mediana 13.3%, **rango 2/64 a 27/64 — varía 13.5× entre semillas**. Verificado que KW nunca cambia en v6:
+   lo decide el nacimiento, no la vida. Es una desigualdad estructural, medida.
+2. **BUG-01, bloqueo real del tronco.** Bajo refuerzo contradictorio sobre un código compartido, `Wp` y `Wn`
+   corren **los dos** al techo (9.0/código) y su diferencia se anula **exactamente**: a partir de ahí no se
+   aprende nada más en esas celdas. Reproducible en el organismo congelado sin tocarlo:
+   `organismo_v7.run(1, plast=False, solap_AB=3)` → `comp A=(9.0, 9.0)`, `W=0.0`.
+   Es el "v6 colapsa: W=0" de 2L, el "ambos canales saturan en 9" de 2F y los "canales inflados" de 2J/2K:
+   **el mismo fenómeno visto tres veces y nunca nombrado.**
+3. **La firma mecánica de la regla de división** (rama 3T). La dirección `P − mu[c]` es distintividad **no
+   supervisada**: el control de ruido separa los códigos *más* que la condición con señal. La selectividad no
+   está ahí. Está **aguas abajo**: la condición con señal **se detiene sola** (16 divisiones, la última en
+   t≈7.400) porque el error desaparece; el control de ruido **no se detiene nunca** y agota el pool.
+   > El mecanismo no es "dividir hacia lo distintivo". Es **"dividir a ciegas mientras el error no baje, y parar
+   > cuando baja"**. La dirección no necesita ser inteligente: el criterio de parada hace el trabajo.
+
+## 9.4 Los dos veredictos negativos, que se sostienen
+- **3T, composición temporal (nivel 7): NO.** Con las constantes congeladas, la regla no produce composición.
+  `sep = 0.00` en 20/20. **Post-hoc** (sin valor confirmatorio, etiquetado como tal antes de correr): levantando
+  **sólo** el techo de BUG-01 y nada más, la regla descubre sola la dimensión temporal, 20/20, alcanzando el
+  techo de la versión cableada a mano. No cuenta hasta repetirlo con criterio escrito antes.
+- **3K, ¿debe aprender la expansión Kenyon?: NO, basta el azar.** Margen +0.024 contra +0.10 exigido.
+  En el Kenyon aleatorio congelado, r = 0.87 entre el peso en el píxel relevante y la preferencia de clase de la
+  celda, **antes de un solo paso de experiencia**. Aprender KW mejora la representación (celdas usadas 16→22,
+  ratio intra/inter 1.22→1.94) **y la generalización no mejora**:
+  **descorrelacionar códigos ≠ representar la característica**. Corrige la afirmación de que "el Kenyon aleatorio
+  es el muro": para características lineales no lo es; el cuello de botella está en la lectura.
+
+## 9.5 v7 sigue SIN congelar, y la ley de disparo quedó corregida
+Dos exámenes, los dos con criterio preregistrado antes de correr. **Todos los criterios científicos pasan 20/20
+en las seis etapas, y el control negativo es válido (0/20).** Lo que falla es el criterio de disparo en E2I.
+- Examen 1 (`bateria_v7.py`): falla por ERR-06, criterio mal escrito (E2I deja los solapamientos libres).
+- Examen 2 (`bateria_v7b.py`, criterio anclado a la causa): 18/20, y **refuta el umbral de 2 celdas**.
+- **Ley corregida, 20/20 en todas las etapas**: la regla dispara con ≥2 celdas compartidas entre estímulos de
+  **VALENCIA OPUESTA**, o cuando el valor cambia de signo. El solapamiento entre estímulos de la **misma**
+  valencia no dispara, por mucha que sea. Es el mismo eje que 2I y 2J ya habían medido en el valor, nunca
+  conectado con la plasticidad estructural.
+- **Predicción falsable pendiente**: forzar C∩B=3 con C veneno (misma valencia, solapamiento máximo) debe dar
+  **0 divisiones**. Si divide, la ley de valencia también cae.
+
+## 9.6 Errores del día 3 (van siete en el proyecto)
+- **ERR-05**: "0 divisiones en etapas normales" del registro era FALSO (probable residuo de la corrida con el
+  import equivocado; v6 no divide nunca).
+- **ERR-06** y **ERR-08**: dos criterios mal escritos, míos. **Misma raíz**: asumir que todas las etapas se
+  comportan igual en vez de mirar cada una. Familia nueva — los cuatro errores anteriores del proyecto eran de
+  *medición*; estos son de *generalización indebida al redactar el criterio*.
+  **Regla derivada**: un criterio que se aplica a N etapas se justifica etapa por etapa antes de correr, o se
+  escribe en términos del mecanismo (la causa) y no del escenario (el reloj).
+- **ERR-07**: el patrón `000000` hace `KW@X` = vector cero, `argsort` desempata por índice y el código sale
+  `{27,28,29}` en las 20 semillas. Un patrón sin un solo píxel encendido puede heredar hasta **−2.000** de valor
+  a priori. 20 de 1.280 pares; no cambia ninguna conclusión.
+- Autocrítica registrada en Etapa 3: el criterio 1 con los W reales de cada semilla es una **identidad
+  algebraica** (residuo 2.2e-16 = épsilon de máquina), no una prueba. El contenido empírico está en la versión
+  nominal y en la comparación de R².
+
+## 9.7 Decisiones que esperan al director
+1. **BUG-01: cómo arreglarlo en el tronco.** Es lo más importante pendiente. Subir el techo es arbitrario y
+   probablemente no es la solución. Tres candidatos, uno por experimento y con preregistro propio:
+   decaimiento en `Wp`/`Wn`, normalización del par, o penalizar el crecimiento conjunto.
+   Sólo después tiene sentido repetir 3T como confirmatorio.
+2. **v7**: volver a correr el examen con la ley de valencia como criterio de disparo, más la predicción
+   falsable de C∩B=3.
+3. **2P, política bajo hambre**: sigue siendo el único problema abierto de conducta. Con la Fase 1 hecha, el
+   barrido cuesta minutos. Falta escribir la función objetivo antes de correr.
+4. Preregistros propios pendientes: la versión dura de Etapa 3 (donde la fórmula puede romperse), `hebb_mordida`
+   rompiendo E2K, y la dirección de división 2L v2 en la tarea de 3K.
+
+## 9.8 Estado de las ramas
+`experimentos/ramas/` — todas con `PREREGISTRO.md` escrito antes de correr y datos con cabecera de procedencia.
+`2M` pulpo (refutada el día 2) · `3T` temporal (NO confirmatorio, post-hoc prometedor) ·
+`3K` Kenyon aprendido (refutada) · `2Kbis` capacidad (corriendo al cierre de la sesión).
+**Sin lanzar**: `3F` fusión — la operación inversa de 2L. El organismo sabe dividir y no sabe juntar. Su diseño
+depende de si el ruido fragmenta los códigos.

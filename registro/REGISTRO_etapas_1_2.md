@@ -533,6 +533,83 @@ insatisfacible y no discrimina. El veredicto NO se sostiene con los criterios 2 
 (C3C saca 0/20 en todas las variantes). Y la predicción de oscilación de `W_A` en C1 falló: fue 0.000 exacto
 por saturación — que es BUG-01 otra vez.
 
+### Batería v7 criterio v2, 20 semillas — v7 SIGUE SIN CONGELARSE, y el umbral queda REFUTADO
+`bateria_v7b.py`. E1, E2, E2J, E2K, E2L y el control negativo: **20/20**. Falla E2I con 18/20 en el disparo.
+
+**CRITERIO 5 (umbral en 2 celdas) REFUTADO**, exactamente como estaba escrito que podía fallar:
+las semillas **8 y 18 tienen solapamiento 2 y NO dividen**. La afirmación que registré esta mañana
+("con 2 o 3 celdas compartidas la regla dispara siempre") es falsa.
+
+**La refutación destapa la variable correcta: no es el número de celdas, es la VALENCIA.**
+En E2I, C es veneno. C∩B es solapamiento entre dos venenos (**misma** valencia, sin conflicto de valor);
+C∩A es entre veneno y comida (**opuesta**). Las semillas 8 y 18 tienen C∩B=2 y C∩A=0; la 15 tiene C∩A=2.
+
+| ley | aciertos en E2I |
+|---|---|
+| solapamiento ≥2 (la de esta mañana) | 18/20 |
+| **solapamiento ≥2 entre valencias OPUESTAS** | **20/20** |
+
+Y es consistente con todas las demás etapas sin excepción:
+
+| etapa | solapamiento | valencias | divide |
+|---|---|---|---|
+| E2J D comida ∩ B veneno | 1 | opuesta | no, 20/20 |
+| E2K D comida ∩ B veneno | 2 | opuesta | **sí, 20/20** |
+| E2L A comida ∩ B veneno | 3 | opuesta | **sí, 20/20** |
+| E2I C veneno ∩ B veneno | 2 | misma | no (s8, s18) |
+| E2I C veneno ∩ A comida | 2 | opuesta | **sí (s15)** |
+| E2 inversión (sin solapamiento) | 0 | el valor cambia de signo | **sí, 20/20** |
+
+**LEY CORREGIDA (a preregistrar antes de volver a correr):** la regla de división dispara cuando ≥2 celdas
+de Kenyon son compartidas por estímulos de **valencia opuesta**, o cuando el valor de un estímulo cambia de
+signo (inversión). El solapamiento entre estímulos de la misma valencia **no** dispara, por mucha que sea.
+Esto no es nuevo en el proyecto, es la misma distinción que 2I y 2J ya habían medido en el valor
+("misma valencia: deriva no corregida porque B no se re-muestrea" vs "con valencia opuesta el organismo
+re-muestrea y RW corrige") — y que no se había conectado con la plasticidad estructural. Es el mismo eje.
+Encaja además con la firma de 3T: lo que dispara y apaga la división es el error de predicción, y sólo el
+conflicto de valencia produce un error que no baja.
+
+**Predicción falsable de la ley corregida**, para el siguiente examen: forzar C∩B=3 con C veneno (misma
+valencia, solapamiento máximo) debe dar **0 divisiones**. Si divide, la ley de valencia también cae.
+
+### RAMA 3K — ¿hace falta que la expansión Kenyon aprenda? VEREDICTO: **NO, basta el azar. REFUTADA**
+`experimentos/ramas/3K_kenyon_aprendido/`, preregistro `f303e55005fcdec1`. Mundo de 20 patrones de 6 px con
+exactamente 3 activos; la valencia la decide **el píxel 0** y nada más. 10 patrones de entrenamiento, 10 de test
+nunca vistos. Precisión = exactitud balanceada (toda política ciega a la clase vale exactamente 0.50).
+Margen fijado ANTES: la expansión aprendida por error debe superar al azar en **≥ +0.10**.
+
+| condición | precisión test | peso en el píxel relevante |
+|---|---|---|
+| 1 — Kenyon fijo aleatorio (= v6) | **0.683** | 1.02 |
+| 2 — Hebb local | 0.698 | 1.06 |
+| 3 — modulada por error de predicción | **0.707** | **1.02** |
+| (techo medido, patrones de entrenamiento) | 0.993 | |
+
+**Margen obtenido: +0.024 contra +0.10 exigido. Pareado 12/20 contra 15/20 exigido. REFUTADA.**
+
+**La cifra que lo explica**: en el Kenyon **aleatorio y congelado**, la correlación entre `KW[i,0]` (el peso de
+la celda en el píxel relevante) y la preferencia de clase de esa celda es **r = 0.87 antes de un solo paso de
+experiencia**. No hay nada que descubrir: la proyección aleatoria ya está alineada con la característica,
+porque el píxel relevante suma su peso al empuje de toda una clase y sesga el top-3 automáticamente.
+El peso en el píxel relevante **no crece** con ninguna regla (1.02 → 1.02 con la modulada por error).
+
+**El resultado más útil de la rama**: aprender KW **sí** mejora la representación — celdas usadas 16/30 → 19–22,
+ratio de solapamiento intra/inter 1.22 → 1.94 — **y aun así la generalización no mejora**.
+> **Descorrelacionar códigos no es lo mismo que representar la característica.**
+
+**Corrige una afirmación mía del día 3.** Dije que "la capa Kenyon aleatoria y fija es el muro" del proyecto.
+Para una característica que es función lineal de la entrada, **no lo es**: el azar la preserva y aprender la
+expansión no aporta. El cuello de botella está en la **lectura** (30 celdas, códigos que colisionan), no en el
+sorteo. La respuesta a la pregunta de la mosca, en este banco de pruebas, es que el azar basta.
+Queda abierto si basta también para características NO lineales; eso es otro experimento.
+
+Hallazgos laterales, con preregistro propio pendiente: (a) `hebb_mordida` **rompe E2K (18/20)**, única condición
+que lo hace: el Hebb no supervisado degrada justo la etapa de solapamiento forzado. (b) Sonda exploratoria fuera
+del preregistro: con la dirección de división de 2L **v2** (hacia lo distintivo, no hacia el patrón completo) la
+precisión sube a **0.763**, el mejor de todo el estudio, pero sigue por debajo del margen y `ratio_disp`=0.97
+— tampoco descubre el píxel relevante. Candidato al siguiente preregistro, no rescate de éste.
+(c) El azar desperdicia un tercio de la capa: con 20 patrones sólo **16 de 30 celdas** entran en algún código.
+
 ### Nota de entorno (Windows)
 `bateria.py` aborta en Windows con `UnicodeEncodeError` al imprimir `≈`: la consola es cp1252. Es fallo de impresión,
 no de cálculo. Se corre con `PYTHONIOENCODING=utf-8`. Los archivos congelados NO se tocaron; `bateria_v7.py` incluye
