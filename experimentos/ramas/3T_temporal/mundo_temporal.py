@@ -51,13 +51,17 @@ def valor(cur, last):
 
 def run(seed, arm='C1', T=100000, learn=True, eta=.03, tau_e=.85, alpha=1.2,
         hambre_boca=2.0, aversion=1.0, costo=.002, nobj=4,
-        theta=0.6, ema=0.02, paso=0.5, early=5000):
+        theta=0.6, ema=0.02, paso=0.5, early=5000, nkmax=NKMAX, wclip=3.0):
+    # nkmax y wclip son parametros SOLO para el diagnostico POST-HOC de los dos
+    # confusores preregistrados (agotamiento del pool y saturacion de canales).
+    # Con los valores por defecto (90, 3.0) el codigo es identico al congelado en v7:
+    # equivalencia verificada campo a campo en las 120 corridas (ver equivalencia.py).
     cfg = ARMS[arm]; NIN = cfg['nin']; plast = cfg['plast']; falso = cfg['falso']
     rng = np.random.default_rng(seed)
     rng2 = np.random.default_rng(seed + 100000)        # canal falso, flujo separado
 
     Wl = rng.uniform(.1, .4, (2, 9))
-    KW = np.zeros((NKMAX, NIN)); activa = np.zeros(NKMAX, bool); activa[:NK] = True
+    KW = np.zeros((nkmax, NIN)); activa = np.zeros(nkmax, bool); activa[:NK] = True
 
     def inp(cur, prev):
         return PAT[cur] if NIN == 6 else np.concatenate([PAT[cur], PAT[prev]])
@@ -76,10 +80,10 @@ def run(seed, arm='C1', T=100000, learn=True, eta=.03, tau_e=.85, alpha=1.2,
             KW[:NK, :6] = rng.uniform(0, 1, (NK, 6))
 
     def kenyon(P):
-        k = np.zeros(NKMAX); k[list(code(P))] = 1; return k
+        k = np.zeros(nkmax); k[list(code(P))] = 1; return k
 
-    Wp = np.zeros(NKMAX); Wn = np.zeros(NKMAX)
-    err = np.zeros(NKMAX); mu = np.zeros((NKMAX, NIN))
+    Wp = np.zeros(nkmax); Wn = np.zeros(nkmax)
+    err = np.zeros(nkmax); mu = np.zeros((nkmax, NIN))
     el = np.zeros_like(Wl); tr = np.zeros(9)
     pos = 0; E = 1.0; objs = {}; tipos = ['A', 'B']; last = 'B'
     splits = 0; split_t = []; deaths = 0; Rtot = 0.0; t_pool = None
@@ -158,8 +162,8 @@ def run(seed, arm='C1', T=100000, learn=True, eta=.03, tau_e=.85, alpha=1.2,
                 del objs[pos]; spawn()
                 if learn:
                     dlt = R - Wb @ kc
-                    if dlt > 0: Wp = np.clip(Wp + eta * dlt * kc, 0, 3.)
-                    else:       Wn = np.clip(Wn + eta * aversion * (-dlt) * kc, 0, 3.)
+                    if dlt > 0: Wp = np.clip(Wp + eta * dlt * kc, 0, wclip)
+                    else:       Wn = np.clip(Wn + eta * aversion * (-dlt) * kc, 0, wclip)
                     if plast:
                         idx = np.where(kc > 0)[0]
                         err[idx] = (1 - ema) * err[idx] + ema * abs(dlt)

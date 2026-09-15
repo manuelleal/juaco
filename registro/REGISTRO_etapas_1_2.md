@@ -364,9 +364,55 @@ la regla RW actualiza `Wp += eta·dlt·kc`, o sea **suma lo mismo a las 3 celdas
 3 celdas de code(A) tienen pesos idénticos por construcción. Con A∩B=0 forzado y sin C ni D presentes en E1, la
 identidad `W_X = (nA/3)·W_A + (nB/3)·W_B` no puede fallar. El experimento confirma el modelo pero no lo arriesga.
 
-**Conclusión que sí se sostiene**: en E1 la generalización está determinada por el solapamiento de códigos y por
-nada más, y el 15.9% de alcance nulo es una medida real del techo. **Lo que NO se ha probado** es que la fórmula
-aguante donde puede romperse. Queda preregistrada la versión dura, para correr:
+**Dónde está el contenido empírico (análisis completo, par canónico `etapa3_generalizacion_20260915_114117`).**
+Separando lo tautológico de lo que sí arriesga:
+
+| modelo de W_pred | % cumple C1 | \|residuo\| máx | qué es |
+|---|---|---|---|
+| con W_A, W_B **reales** de cada semilla | 100.00% | 2.2e-16 | **identidad algebraica, no podía fallar** |
+| **nominal** 0.333·nA − 1.0·nB | 100.00% | 5.94e-3 | **empírico, y pasa con margen de 25×** |
+
+Verificado mecánicamente por qué la primera no es falsable: `Wp−Wn` es *exactamente* uniforme dentro de code(A)
+(0.333333/celda) y de code(B), y *exactamente* 0 en las 24 celdas restantes. Con A∩B=0 y sólo A y B mordidos, la
+identidad está forzada. El residuo de 2.2e-16 es épsilon de máquina.
+
+**La cifra que sí decide el criterio de refutación** ("refutada si la similitud visual predice mejor"):
+
+| modelo | R² |
+|---|---|
+| W_obs ~ [nA, nB] (solapamiento de códigos) | **0.999999** |
+| W_obs ~ [compartidos_A, compartidos_B] (píxeles) | 0.334 |
+| W_obs ~ [hamming_A, hamming_B] | 0.323 |
+
+El solapamiento explica prácticamente todo; la similitud visual, un tercio. **C2 sostenida** (parcial pooled
++0.027 y +0.003, criterio |r|<0.2) aunque es degenerada intra-semilla (0/20 dan r definido: el residuo tiene
+std 3e-16). **C3 no refutada**: el residuo del modelo nominal tiene estructura (r con nB = +0.731) pero queda
+explicada al 100% por el propio modelo — `residuo = (nA/3)(W_A−1) + (nB/3)(W_B+3)` con desviación máxima 1.85e-16,
+o sea que viene sólo de que W_B converge a −2.9987 y no a −3.0000 exacto. No hay componente ajena al modelo.
+
+**HALLAZGO con contenido real — el alcance de la generalización es una lotería del sorteo.**
+Fracción de los 64 patrones con nA=nB=0 (valor a priori exactamente 0, alcance nulo): mediana **13.3%**,
+rango **[2/64 .. 27/64]**. Conteo por semilla: 15,11,12,19,7,17,4,4,14,8,4,4,9,7,2,18,27,2,15,5.
+**Varía 13.5× entre semillas.** Un organismo queda ciego al 42% de los patrones posibles y otro sólo al 3%,
+con el mismo aprendizaje y la misma experiencia. La causa está medida: r(conteo, fuerza relativa de las 6 celdas
+de code(A)∪code(B) frente a las otras 24) = −0.42. Verificado además que KW no cambia nunca en v6 (KW en T=4 es
+idéntico a KW en T=100000): **el alcance es una propiedad de la proyección aleatoria, no del aprendizaje.**
+Esto es motivación directa para la rama 3K (¿hace falta que la expansión aprenda?).
+
+**ERR-07 — artefacto del patrón nulo.** Para X = 000000, `KW@X` es el vector cero y `np.argsort` sobre empates
+devuelve 0..29 en orden, de modo que code(000000) = {27,28,29} en **las 20 semillas**, determinado por el desempate
+del argsort y no por KW. Consecuencia: un patrón sin un solo píxel encendido puede heredar un valor a priori de
+hasta **−2.000**. Son 20/1280 pares; excluirlo no cambia C1–C3 (100%→100%) y mueve el alcance de 0.133 a 0.119.
+Marcado en la columna `es_patron_nulo` del CSV. Séptimo artefacto de instrumento del proyecto.
+
+**Reproducibilidad**: dos corridas independientes produjeron CSV con **hash idéntico** (`4982abc26690989e`).
+El par `..._112340` queda superado (su JSON contenía tokens `NaN`, no estrictos); el canónico es `..._114117`.
+Equivalencia de la sonda: **18/18 escenarios × semillas idénticos** a v6.
+
+**Conclusión que se sostiene**: en E1 la generalización está determinada por el solapamiento de códigos
+(R²=0.999999) y no por la similitud visual (R²=0.33), y el alcance nulo —mediana 13.3%, rango 3%–42%— es una
+medida real del techo, fijada por el sorteo inicial. **Lo que NO se ha probado** es que la fórmula aguante donde
+puede romperse. Queda preregistrada la versión dura, para correr:
 la fórmula debe fallar de forma medible cuando (a) los códigos se solapan (escenarios 2I/2J/2K, donde las celdas
 compartidas reciben actualizaciones mixtas y la uniformidad dentro del código se rompe), (b) el clip de ±3 por celda
 está activo, o (c) hay más de dos estímulos. **Predicción: el residuo deja de ser 0 exactamente en esos tres casos,
