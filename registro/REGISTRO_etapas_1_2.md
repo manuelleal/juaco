@@ -446,6 +446,93 @@ y crece con el solapamiento.** Si el residuo sigue siendo 0 con códigos solapad
 robusta de lo que creemos y eso es un hallazgo. Si crece, tenemos la primera medida de cuánto se degrada la
 generalización por interferencia, que es lo que 2I y 2J insinuaban sin cuantificar.
 
+### RAMA 3T — Composición temporal (nivel 7). VEREDICTO CONFIRMATORIO: **NO**
+`experimentos/ramas/3T_temporal/`. Preregistro `7a96acbf3122dce1` escrito antes de correr nada.
+Mundo idéntico a v6/v7 salvo la tabla de valor: morder A tras B → comida (+1); morder A tras A → veneno (−3);
+morder B → neutro (0). El valor depende del ORDEN y de nada más. Seis brazos, 20 semillas, T=100k.
+
+| | C1 (v6) | C2 (12 entradas a mano) | **C3 (la pregunta)** | C3C (control de ruido) |
+|---|---|---|---|---|
+| sep = W(A\|B) − W(A\|A) | 0.00 | **3.99** (20/20) | **0.00 (0/20)** | 0.00 |
+| lift_q4 | −0.003 | +0.353 | **−0.005** | +0.001 |
+| muertes | 230 | 113 | 236 | 234 |
+| divisiones | 0 | 0 | 60 (pool agotado 20/20) | 60 (agotado) |
+
+**Con las constantes congeladas de v7, la regla de división NO produce composición temporal.** Criterios 2 y 3
+fallan 20/20. C1 no lo resuelve (predicción cumplida), C2 sí (techo alcanzable), C2b reproduce C1 con **0
+discrepancias en 7.560 campos** (instrumento limpio), y el mundo se verificó 50/50 con `learn=False`.
+
+**La cifra que más limpiamente lo decide**: el control de ruido C3C **separa los códigos MÁS que C3**
+(solap_A = 0 [0,0] frente a 2 [1,3]). La dirección de división `P − mu[c]` es **distintividad no supervisada**:
+separa lo que varía, no lo que predice. Es ciega a si el canal lleva información.
+
+### BUG-01 (del tronco, no del instrumento) — bloqueo por saturación simétrica de canales
+Bajo refuerzo contradictorio sobre un código compartido, **`Wp` y `Wn` corren los DOS al techo** (3.0/celda =
+9.0/código) y su diferencia se anula **exactamente**, congelando todo aprendizaje posterior en esas celdas:
+con `Wp=Wn=9`, `dlt>0` no puede subir `Wp` y `dlt<0` no puede subir `Wn`. Verificado sobre el organismo
+**congelado sin modificarlo**:
+
+    organismo_v7.run(1, plast=False, solap_AB=3)
+      -> comp = {'A': (9.0, 9.0), 'B': (9.0, 9.0)},  W = {'A': 0.0, 'B': 0.0}
+    (control E1 normal: A=(1.0, 0.0), B=(0.0, 3.0), sin inflar)
+
+Esto **es** el *"v6 colapsa: W=0"* que el registro anotó en 2L el día 2 como observación, sin diagnosticar el
+mecanismo. Ahora está diagnosticado. Es un bloqueo real del tronco, no un artefacto de medición: de ahí que se
+numere BUG-01 y no ERR-09. Medido: se alcanza hacia t≈8.000; a T=3.000 `W_A=−1.48`, después se clava en 0.
+Conecta también con 2F ("ambos canales saturan en 9, sin freno al apetitivo") y con 2J/2K ("canales inflados"):
+era el mismo fenómeno visto tres veces y nunca nombrado.
+
+### Diagnóstico POST-HOC de 3T (SIN valor confirmatorio, etiquetado como tal ANTES de correr)
+Los dos modos de fallo estaban anticipados por escrito en el preregistro. Levantados por separado:
+
+| | pool | techo Wp/Wn | C3 resuelve |
+|---|---|---|---|
+| confirmatorio | 90 | 3.0 | **0/20** |
+| PH1 | 300 | 3.0 | 0/20 (separa representación 20/20, pero sep=0) |
+| PH2 | 300 | 30.0 | 20/20 |
+| **PH3** | **90 (el de v7, intacto)** | **30.0** | **20/20** |
+
+**El pool nunca fue el problema. La única constante que bloquea es el techo de `Wp`/`Wn` en 3.0.**
+Barrido con el pool intacto: techo 3.0 → 0/20 · 4.5 → 12/20 · 6.0 → 19/20 · 9.0 → 20/20 · 15 y 30 → igual que 9.
+Transición monótona: es una **carrera entre la división y la saturación**.
+
+Con ese único techo levantado y nada más (PH3, pool 90, θ/ema/paso intactos):
+
+| PH3 | sep | lift_q4 | solap_A | divisiones | muertes |
+|---|---|---|---|---|---|
+| C2 (a mano) | 3.99 (20/20) | 0.35 | 0 | 0 | 113 |
+| **C3 (sola)** | **3.97 (20/20)** | **0.34 (20/20)** | 1 (18/20 ≤1) | **16 [10,33]** | 114 |
+| C3C (ruido) | 0.53 (**0/20**) | −0.04 (**0/20**) | 0 | 60 (agotado) | 114 |
+
+C3 alcanza el techo de C2 **sin que nadie le diga dónde mirar**.
+
+**LA FIRMA MECÁNICA, y es el hallazgo conceptual del día.** C3 **se detiene sola** (16 divisiones, última en
+t≈7.418, 95% sobre A) porque el error desaparece. C3C **no se detiene nunca** (60, agota el pool en t≈24.486)
+porque el error no baja jamás. Es decir:
+
+> **La selección no está en la dirección de la división —que es indiscriminada y no supervisada— sino aguas
+> abajo, en el error de predicción que la dispara y que la apaga.**
+
+Eso refina la afirmación de unificación del día 2. El mecanismo no es "dividir hacia lo distintivo"; es
+"dividir a ciegas mientras el error no baje, y parar cuando baja". La dirección no necesita ser inteligente:
+el criterio de parada hace el trabajo. Y explica el umbral de 2 celdas medido esta mañana: ambos son la misma
+carrera entre la señal de error y su extinción.
+
+### Qué queda preregistrado y SIN correr a partir de 3T
+1. **BUG-01 es del tronco y hay que arreglarlo en el tronco, con un cambio y un preregistro propios.**
+   Subir el techo es arbitrario y no es la solución principista. Candidatos a evaluar uno por uno:
+   decaimiento en `Wp`/`Wn`, normalización del par, o penalizar el crecimiento conjunto. **Decisión del director.**
+2. Sólo después, repetir 3T como experimento **confirmatorio** con el tronco corregido. Si C3 sigue dando
+   20/20 con criterio escrito antes, la composición temporal pasa de post-hoc a resultado.
+3. Límite de diseño reconocido: la memoria es de **una** mordida, dada como copia eferente. No prueba secuencias
+   largas ni orden abstracto. Un `lift` alto no implica planificación.
+
+**Erratas del preregistro 3T, fechadas y sin recalibrar** (ERR-3T-01, ERR-3T-02): el criterio 4 se ancló en
+`solap_A` suponiendo que la división sería selectiva; no lo es (C3C separa igual), así que ese criterio es
+insatisfacible y no discrimina. El veredicto NO se sostiene con los criterios 2 y 3, que sí discriminan
+(C3C saca 0/20 en todas las variantes). Y la predicción de oscilación de `W_A` en C1 falló: fue 0.000 exacto
+por saturación — que es BUG-01 otra vez.
+
 ### Nota de entorno (Windows)
 `bateria.py` aborta en Windows con `UnicodeEncodeError` al imprimir `≈`: la consola es cp1252. Es fallo de impresión,
 no de cálculo. Se corre con `PYTHONIOENCODING=utf-8`. Los archivos congelados NO se tocaron; `bateria_v7.py` incluye

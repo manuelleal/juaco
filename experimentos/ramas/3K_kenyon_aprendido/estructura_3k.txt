@@ -1,0 +1,13 @@
+=== estructura 3K (descriptivo), 20 semillas, fase2 congelada ===
+cond                test sin solapar    W=0  solap mismo cls  solap otra cls  r(KW px0, pref)  celdas  usomax
+fijo lr=0.0                      0.0    0.0             4.75            3.65             0.87    16.5    11.0
+hebb_visita lr=0.01               0.0    0.0             3.50            1.95             0.89    22.0     9.0
+hebb_mordida lr=0.01               0.0    0.0             3.95            2.35             0.85    19.0    10.0
+error lr=0.01                    0.0    0.0             4.25            3.35             0.89    17.0    10.0
+
+-- columnas de KW final (media y desv. tipica por pixel; px0 es el relevante) --
+fijo lr=0.0        media 0.504 0.483 0.494 0.493 0.493 0.514  |  sd 0.287 0.282 0.277 0.276 0.286 0.285
+hebb_visita lr=0.01 media 0.354 0.440 0.449 0.476 0.451 0.477  |  sd 0.370 0.354 0.357 0.361 0.364 0.366
+hebb_mordida lr=0.01 media 0.516 0.469 0.461 0.480 0.479 0.504  |  sd 0.332 0.307 0.314 0.307 0.313 0.327
+error lr=0.01      media 0.487 0.491 0.497 0.502 0.498 0.516  |  sd 0.285 0.289 0.284 0.282 0.299 0.301
+escrito: C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\3K_estructura_20260915_121809.json

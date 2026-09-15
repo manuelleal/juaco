@@ -185,3 +185,32 @@ explícitamente como POST-HOC y sin valor confirmatorio. No se recalibra θ, ema
 Cada CSV/JSON llevará cabecera con fecha, sha256 corto de `mundo_temporal.py` y `corre_3T.py`,
 versión de Python (3.14.2) y NumPy (2.4.3) y los kwargs completos. 20 semillas 1..20, T=100000,
 `multiprocessing.Pool` con `spawn` y guard `__main__`.
+
+---
+
+# ERRATA — añadida el 15 sep 2026 DESPUÉS de ver los resultados (regla 3)
+El texto de arriba **no se ha modificado**. Se añaden aquí los errores cometidos al redactarlo.
+
+**ERR-3T-01 — la predicción sobre `W_A` en C1 era errónea en su forma, no en su fondo.**
+Predije que `W_A` oscilaría (IQR entre semillas > 1.0) por la realimentación valor→política→frecuencia.
+Lo observado es otra cosa y más extrema: **`W_A = 0.000 exactamente en 20/20 semillas, IQR = 0**, porque
+`Wp` y `Wn` **se saturan los dos en el techo** (3.0/celda = 9.0/código, medido: `Wp(A|A)=Wn(A|A)=9.00`
+en 20/20) y su diferencia se anula. La oscilación sí existe, pero solo hasta t≈8.000: a T=3.000 medí
+`W_A = −1.48`, cerca del −1 que el encargo sugería, y luego el sistema **se bloquea**. La parte falsable de
+la predicción (C1 no separa: `sep = 0`, `solap_A = 3`, `lift_q4 ≈ 0`) se cumplió 20/20. No se recalibra nada.
+
+**ERR-3T-02 — el criterio 4 (no-artefacto) de C3 estaba mal operacionalizado.**
+Lo escribí como "el control C3C no cumple 1–3 (≤5/20 semillas cumplen **el punto 1**)", anclándolo en la
+métrica **representacional** `solap_A`. Es un error de diseño del criterio: supuse que la división sería
+selectiva, es decir, que separaría el canal temporal **solo si lleva información**. Los datos dicen que no:
+C3C, cuyo canal temporal es ruido puro, separa los códigos **igual o más** que C3 (19–20/20 con `solap_A ≤ 1`).
+El criterio, tal como lo escribí, es por tanto **insatisfacible por construcción** y no discrimina nada.
+El discriminador real —que también estaba preregistrado, en los criterios 2 y 3— es **valor y conducta**:
+C3C saca 0/20 en `sep ≥ 2.8` y 0/20 en `lift_q4 ≥ 0.15` en todas las variantes corridas.
+Se reportan las dos lecturas. **El veredicto preregistrado con las constantes congeladas no cambia: NO**,
+porque los criterios 1, 2 y 3 fallan por sí solos, 20/20.
+
+**Nota sobre el requisito 50/50.** El análisis marcó C2 como "FUERA" (`acc_early = 0.734`). No es un fallo
+del mundo: es que C2 ya está aprendiendo dentro de los primeros 5.000 pasos. Verificado con el control
+correcto (`learn=False`, política fija, 10 semillas): `acc_q4 = 0.492–0.499` y `A|B / A|A = 691 / 684`
+en todos los brazos. **El mundo es 50/50; el requisito se cumple.**
