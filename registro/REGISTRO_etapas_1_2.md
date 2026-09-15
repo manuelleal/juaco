@@ -129,7 +129,10 @@ DISTINTIVO del patrón actual (P − media de lo que suele ver), la madre se des
   Con A∩B=2: 8/8 en valor; 4/8 dejan una celda compartida (separación de valor sí, representacional incompleta).
 - **v7 candidato (`organismo_v7c.py`, hash 212f0746d52577c7) = v6 + 2L v2.** Batería completa (`bateria_v7c.py`, 21b97967e48ed971),
   6 semillas: E1, E2, 2I, 2J, 2K → todas PASAN 6/6; E2L rescate A∩B=3 → 6/6 (solap→0); control sin plasticidad → 0/6.
-  **Divisiones en etapas normales: 0 en 6/6** — la regla no dispara sin error crónico.
+  ~~**Divisiones en etapas normales: 0 en 6/6** — la regla no dispara sin error crónico.~~
+  **CORREGIDO (ERR-05, día 3): FALSO.** 0 sólo en E1, E2I y E2J; E2 da 3–5 divisiones y E2K da 2–4, en 6/6 semillas.
+  Enunciado correcto: la regla no dispara sin error de predicción crónico; cuando lo hay, dispara sobre el estímulo
+  que lo causa y nunca antes del evento. Ver sección "Día 3".
 - Honestidad: la regla de división la escribimos nosotros; lo que emerge es DÓNDE y CUÁNDO se aplica. La corrección v1→v2 es
   aprendizaje competitivo clásico. No genera canales (la otra mitad de la lista: motivación/cuerpo) — eso sigue abierto.
 - Errores de proceso: primera "batería v7" era v6 con otro título (import sin cambiar); caché de Python. Cuarta vez que el
@@ -147,3 +150,104 @@ Pregunta abierta (sin correr): a cuántos estímulos se cruza la curva central/d
 Mosca (cuerpo fungiforme), pulpo (lóbulo vertical) y vertebrados (hipocampo/cerebelo) llegaron por separado a la misma
 arquitectura: expansión → código disperso → plasticidad en la salida. Nuestro organismo también, forzado por sus fallas.
 Fortalece la afirmación de NECESIDAD del diseño (la defendible) frente a la de descubrimiento a ciegas (la no defendible).
+
+---
+
+## Día 3 — Traspaso al repo (Claude Code, Windows). Fase 0 cerrada y corrección de un dato del registro
+
+Fecha de sistema: 15 sep 2026. (El registro fecha las sesiones previas como 15–16 sep; se deja constancia de la
+inconsistencia sin resolverla, porque no afecta a ningún resultado.)
+Entorno: Windows 11, Python 3.14.2, NumPy 2.4.3, 16 núcleos. **1 corrida de 100k pasos = 4.0 s.**
+
+### Fase 0 — traspaso VALIDADO
+- Hashes verificados 4/4 contra MANIFEST: organismo_v6.py `5f38f83cf49248a3`, bateria.py `1add9e6f85e97978`,
+  organismo_v7c.py `212f0746d52577c7`, bateria_v7c.py `21b97967e48ed971`; baseline_v6.csv `3ffde98fd346a659`.
+- `bateria.py 6` → PASA 5/5 etapas 6/6. `bateria.py 20` → **PASA 5/5 etapas, 20/20 semillas.**
+- **Reproducción exacta del baseline**: semillas 1–3 en ambas condiciones, 45/48 campos idénticos a `baseline_v6.csv`.
+  Las 3 diferencias son `tasaA_q4` guardada con 1 decimal en el CSV original (92.00 vs 92.02 recalculado).
+  Mordidas, muertes, W_A y W_B coinciden bit a bit con NumPy 2.4.3. El traspaso no cambió ningún número.
+- `git init`, commit inicial, tag `v6-baseline`. Se añadió `.gitattributes` con `* -text`: git iba a convertir
+  LF→CRLF y **eso habría roto todos los hashes sha256 en cualquier clon**. Verificado post-commit: los 4 hashes intactos.
+
+### ERR-05 — quinto error de instrumento: "divisiones = 0 en etapas normales" es FALSO
+El registro del día 2 afirma: *"Divisiones en etapas normales: 0 en 6/6 — la regla no dispara sin error crónico"*.
+`bateria_v7c.py` **no mide splits en ninguna etapa**, así que la afirmación no venía de la batería. Medido ahora:
+
+| Etapa | splits (semillas 1–6) | celdas |
+|---|---|---|
+| E1 | 0 0 0 0 0 0 | 30 |
+| E2 inversión | **5 5 5 3 3 5** | 33–35 |
+| E2I | 0 0 0 0 0 0 | 30 |
+| E2J | 0 0 0 0 0 0 | 30 |
+| E2K (D∩B=2) | **2 2 2 2 4 2** | 32–34 |
+
+Instrumento verificado primero (regla 5): registrado el paso de cada división. Ninguna ocurre antes del evento.
+- E2 (inversión en t=50.000): divisiones en t≈52.700–54.600, y **en orden** — primero B (3 divisiones, el que pasó
+  a ser comida) y ~700 pasos después A (2 divisiones).
+- E2K (D entra en t=50.000): divisiones en t≈52.900–53.800, **todas sobre D**, el estímulo solapado.
+- E1: cero.
+
+Origen probable: el `Historial..md` documenta que la primera "batería v7" era v6 con el import sin cambiar, y **v6 no
+tiene divisiones en ninguna etapa**. "0 en 6/6" es, con alta probabilidad, residuo de esa corrida. Encaja con el patrón
+de los cuatro errores anteriores (unidades 2H, disponibilidad 2I, aliasing ANOM-01, aritmética del techo 2K).
+
+**El hallazgo mejora el mecanismo, no lo empeora.** El enunciado correcto es más fuerte y más falsable:
+*la regla no dispara sin error de predicción crónico; cuando lo hay, dispara sobre el estímulo que lo causa y nunca
+antes del evento.* Se corrige en consecuencia la afirmación del día 2.
+
+### organismo_v7.py — instrumentación inerte (hash `3db0475ef0ea95ce`)
+= `organismo_v7c.py` + registro de `split_t` (paso y estímulo de cada división). Diff de 4 líneas, 3 funcionales,
+sin una sola llamada nueva al RNG. **Equivalencia verificada: 21/21 escenarios × semillas idénticos a v7c** en todos
+los campos. Se usa para poder evaluar el criterio temporal; v7c queda intacto con su hash.
+
+### Criterio de congelación de v7 — PREREGISTRADO antes de correr 20 semillas
+`bateria_v7.py`. Corrige dos defectos de `bateria_v7c.py`:
+(a) su etapa "control sin plasticidad" llevaba los mismos criterios de éxito que el rescate, de modo que su resultado
+correcto era FALLA: con esa redacción "todo PASA" era insatisfacible y **v7 no podía congelarse nunca**;
+(b) `PLAN.md` exigía "divisiones=0 en etapas normales", que es el dato falso de ERR-05 y que además la batería no medía.
+
+v7 se congela si y sólo si, con 20 semillas:
+1. E1, E2, E2I, E2J, E2K pasan 20/20 los criterios idénticos a v6.
+2. E2L rescate (A∩B=3) pasa 20/20: separa solo, W_A=+1, W_B=−3, solapamiento→0.
+3. `splits == 0` en E1, E2I, E2J (20/20).
+4. `splits > 0` en E2 y E2K (20/20) **y todas las divisiones en t > 50.000** (20/20).
+5. `celdas ≤ 45` en todas las etapas (20/20).
+6. El control sin plasticidad **FALLA** (≤1/20 lo pasa). Si pasara, la plasticidad no aporta nada.
+Si algo falla, 2L vuelve a hipótesis y v6 sigue siendo el tronco. No se recalibra a posteriori.
+
+### Etapa 3 — Generalización. PREREGISTRO (escrito ANTES de correr, día 3)
+Punto 10 del brief. Principio rector: "primero que aprende, después que recuerda, después que generaliza". Nivel 4 de
+la escala del punto 6, hoy con "indicios" (2I/2J) y sin criterio propio.
+
+**Hipótesis.** Lo que el organismo generaliza está determinado por el solapamiento de códigos Kenyon y por nada más.
+La similitud visual en la retina no tiene papel independiente.
+
+**Diseño.** Medición pura, sin mecanismo nuevo y sin tocar v6. Se corre E1 normal hasta convergencia (W_A=+1.00,
+W_B=−3.00) y se SONDEA: para cada uno de los 64 patrones binarios de 6 píxeles se lee el valor a priori
+W_X = (Wp−Wn)·kenyon(X) **sin que el organismo los haya visto ni mordido nunca**. 20 semillas.
+Requiere `organismo_v6_sonda.py` = v6 + devolución de Wp, Wn, KW al final (instrumentación inerte, con prueba de
+equivalencia frente a v6 como la que se hizo para v7).
+
+**Predicción numérica, derivada y exacta.** Tras converger, cada celda de code(A) vale +1/3 neto y cada celda de
+code(B) vale −1 neto. Por tanto, con nA = |code(X)∩code(A)| y nB = |code(X)∩code(B)|:
+
+        W_X = (nA/3)·W_A + (nB/3)·W_B = 0.333·nA − 1.0·nB
+
+**Criterios.**
+- Sostenida si |W_X observado − W_X predicho| < 0.15 en ≥90% de los pares (patrón × semilla).
+- Y si la correlación parcial de W_X con la similitud visual a A (píxeles compartidos / distancia de Hamming),
+  controlando nA y nB, cumple |r| < 0.2.
+- **Refutada** si la similitud visual predice W_X mejor que el solapamiento, o si el residuo del modelo tiene
+  estructura sistemática. Eso significaría que el Kenyon no hace lo que creemos.
+
+**Métrica de alcance (la que importa para el nivel 4).** Fracción de los 64 patrones con nA = nB = 0, para los que la
+predicción es W_X = 0 exacto: el organismo no generaliza NADA hacia ellos. Cuantifica el límite duro de esta
+arquitectura: se generaliza compartiendo celdas o no se generaliza en absoluto.
+
+**Qué NO prueba.** Que el valor a priori sea correcto no dice nada sobre si el organismo ACTÚA según él, ni sobre
+aprendizaje de características abstractas. Es generalización de valor por representación, y sólo eso.
+
+### Nota de entorno (Windows)
+`bateria.py` aborta en Windows con `UnicodeEncodeError` al imprimir `≈`: la consola es cp1252. Es fallo de impresión,
+no de cálculo. Se corre con `PYTHONIOENCODING=utf-8`. Los archivos congelados NO se tocaron; `bateria_v7.py` incluye
+`sys.stdout.reconfigure(encoding='utf-8')`.
