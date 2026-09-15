@@ -161,6 +161,28 @@ en las seis etapas, y el control negativo es válido (0/20).** Lo que falla es e
   algebraica** (residuo 2.2e-16 = épsilon de máquina), no una prueba. El contenido empírico está en la versión
   nominal y en la comparación de R².
 
+## 9.6-bis Cierre del día: BUG-01 es el cuello de botella de todo el proyecto
+Tres ramas que no se hablaban entre sí convergen en el mismo punto:
+- **3T** (composición temporal): la regla no produce composición... hasta que se levanta el bloqueo; entonces sí,
+  20/20, post-hoc.
+- **2K-bis** (capacidad): **el 82% de los valores finales de v7 valen 0.000 exacto**, y en **169/169** de esos
+  casos `Wp·kc = Wn·kc = 9.000`. No es falta de aprendizaje: esos estímulos tienen 960 mordidas medianas.
+  Con realimentación: `W=0` → la política muerde con p=0.84 → v7 muerde **7× más** que v6 → satura antes.
+  Consecuencia: **la capacidad de v7 es MENOR que la de v6** (v7 gana en 6/20; se pedían ≥15).
+  > *"El límite de esta arquitectura no está en el número de celdas Kenyon, sino en el rango dinámico de los
+  > canales de valor. Dividir compra separación; no compra rango."*
+- **BUG-01 exp. 1** (decaimiento uniforme): **REFUTADO**, y con demostración de que no es calibración.
+  Hace falta λ>0.015 para no saturar y λ<0.010 para no estropear W_B: **ventana vacía**. El decaimiento
+  uniforme ataca la magnitud; la patología es de **redundancia**. Validación del mecanismo: el equilibrio
+  `W* = 3·eta·R/(3·eta+λ)` predice lo observado a **3 decimales** en los 5 valores de λ probados.
+
+**Ley de disparo, versión definitiva: `err_max > 0.6`.** Concordancia **320/320** sin excepción; frontera de
+cuchillo (0.5996 no divide, 0.6003 sí); y derivación cerrada: `err_max = 0.147509·|R|`, pico a las ~21
+mordidas, que con |R|=3 da 0.4425 — exactamente lo medido. Cruzar θ=0.6 exige `|R|` efectivo > 4.068, mayor
+que cualquier recompensa del mundo. **Con solapamiento 0 la regla no es que no dispare: no puede.**
+Mis dos leyes anteriores ("umbral en 2 celdas" y "valencia opuesta") quedan **refutadas** como enunciados
+generales: con A∩B=1 co-aprendido desde t=0 dividen 8/20, y con solapamiento 2 de misma valencia dividen 0/20.
+
 ## 9.7 Decisiones que esperan al director
 1. **BUG-01: cómo arreglarlo en el tronco.** Es lo más importante pendiente. Subir el techo es arbitrario y
    probablemente no es la solución. Tres candidatos, uno por experimento y con preregistro propio:

@@ -39,10 +39,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - **v7 NO congelado**, tras dos exámenes con criterio preregistrado. Los criterios científicos pasan 20/20 en
   las seis etapas y el control negativo es válido (0/20); lo que falla es el criterio de disparo en E2I.
   v6 sigue siendo el tronco.
-- **Ley de disparo de 2L, corregida (20/20 en todas las etapas)**: la regla divide con ≥2 celdas compartidas
-  entre estímulos de **VALENCIA OPUESTA**, o cuando el valor cambia de signo. El solapamiento entre estímulos
-  de la MISMA valencia no dispara, por mucho que sea. (El "umbral en 2 celdas" sin más quedó refutado: las
-  semillas 8 y 18 de E2I tienen solapamiento 2 con otro veneno y no dividen.)
+- **Ley de disparo de 2L, definitiva: `err_max > 0.6`.** Concordancia 320/320 sin excepción, frontera de
+  cuchillo (0.5996 no divide, 0.6003 sí), y derivación cerrada: `err_max = 0.147509·|R|`, así que cruzar θ
+  exige `|R|` efectivo > 4.068 — imposible sin recompensas de signo opuesto sobre la misma celda.
+  **Con solapamiento 0 la regla no puede disparar.** Las dos leyes previas del día 3 ("umbral en 2 celdas" y
+  "valencia opuesta") están REFUTADAS como enunciados generales: con A∩B=1 co-aprendido desde t=0 dividen
+  8/20, y con solapamiento 2 de misma valencia dividen 0/20. El recuento de celdas era un proxy.
 - **BUG-01, bloqueo real del tronco y lo más importante pendiente**: bajo refuerzo contradictorio sobre un
   código compartido, `Wp` y `Wn` corren los DOS al techo (9.0/código) y su diferencia se anula exactamente;
   a partir de ahí no se aprende nada en esas celdas. Reproducible sin tocar nada:

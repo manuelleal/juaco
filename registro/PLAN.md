@@ -1,12 +1,80 @@
 # PLAN — Traspaso a Claude Code y etapas siguientes
 
-> **ESTADO AL 15 sep 2026 (día 3).** Fase 0: **HECHA**. Fase 1: **HECHA** (6.3× paralelo, equivalencia 20/20).
-> Fase 2: v7 **NO congelado** (ERR-06, criterio v2 preregistrado y sin correr); 2K-bis redefinida y corriendo;
-> 2P sin empezar; semilla congelada sin correr. Fase 3: primera mitad **hecha** (predicción sostenida al 100%,
-> pero diseño demasiado fácil); versión dura preregistrada y sin correr. Fases 4–6 sin empezar.
-> Ramas exploratorias abiertas el día 3: **3T** (composición temporal, nivel 7), **3K** (¿Kenyon aprendido o basta
-> el azar?). Pendiente de lanzar: **3F** (fusión, la operación inversa de 2L, que hoy no existe).
-> Detalle completo y criterios vivos en `REGISTRO_etapas_1_2.md`, sección "Día 3".
+> **ESTADO AL CIERRE DEL DÍA 3 (15 sep 2026).** Fase 0 y Fase 1: **HECHAS**. Etapa 3: primera mitad hecha.
+> Ramas 3T, 3K y 2K-bis: cerradas, las tres con veredicto negativo y las tres útiles.
+> v7 **NO congelado**. Detalle y criterios vivos en `REGISTRO_etapas_1_2.md`, sección "Día 3".
+> Para retomar sin esta conversación: `registro/HANDOFF.md`, sección 9.
+
+---
+
+# PLAN PARA LA PRÓXIMA SESIÓN (escrito al cierre del día 3)
+
+**Todo el proyecto converge hoy en un solo punto: BUG-01.** Tres ramas independientes que no se hablaban entre
+sí (3T composición temporal, 2K-bis capacidad, y el propio arreglo) lo señalan como el cuello de botella real.
+No es un detalle de implementación: es lo que impide la composición temporal, lo que baja la capacidad de v7
+por debajo de la de v6, y lo que congela el 82% de los valores de v7 en 0.000 exacto.
+
+## Paso 1 (el que importa) — BUG-01 experimento 2: decaer sólo la PARTE COMÚN
+El experimento 1 (decaimiento uniforme) está **refutado con demostración**: la ventana de λ es vacía
+(hace falta λ>0.015 para no saturar y λ<0.010 para no estropear W_B). El diagnóstico es que el decaimiento
+uniforme ataca la **magnitud** y la patología es de **redundancia**.
+
+Cambio a probar, UNO solo:
+
+    m = np.minimum(Wp[ix], Wn[ix]);  Wp[ix] -= lam_c*m;  Wn[ix] -= lam_c*m
+
+**Propiedad clave, que es la razón de elegirlo**: resta lo mismo a los dos canales, así que **`Wp − Wn` queda
+exactamente intacto** y el valor neto sigue obedeciendo Rescorla-Wagner puro. Desaparece el sesgo del 1.1%
+que hundió P2 en el experimento 1, y con él la tensión entre no saturar y conservar el valor.
+
+Predicción a derivar y escribir ANTES de correr (base: la derivación validada del exp. 1, que acertó a 3
+decimales): la redundancia `m` tiene equilibrio `m* ≈ 0.045/λ_c`; para `m* < 1` hace falta **λ_c > 0.045**.
+Elegir λ_c a priori por ese argumento, no por barrido. Predecir explícitamente si el canal mayor (`Wn`, que
+crece 3× más rápido por la aversión) puede seguir topando y bajo qué condición, porque eso decide si hace
+falta el experimento 3.
+
+**Experimento 3, si el 2 no basta**: normalización opuesta completa — `m = min(Wp,Wn); Wp -= m; Wn -= m`,
+que impide por construcción que se acumule redundancia. Un cambio por experimento; no mezclar con el 2.
+
+Reusar `experimentos/bug01/corre_bug01.py`: ya evalúa P1–P4 con los mismos criterios y produce datos con
+cabecera de procedencia. Los controles de inercia (`lam=0` bit-idéntico) y de reproducción del bug son
+obligatorios otra vez.
+
+## Paso 2 — con BUG-01 arreglado, repetir 3T como CONFIRMATORIO
+3T ya mostró post-hoc que, levantando sólo el bloqueo, la regla de división **descubre sola la dimensión
+temporal**: `sep` 3.97, `lift` 0.34, 20/20, alcanzando el techo de la versión cableada a mano. Eso no cuenta
+hasta repetirlo con criterio escrito antes y con el arreglo principista en lugar del techo subido a mano.
+**Si sale, es el nivel 7 de la escala del punto 6 con criterio preregistrado.** Es lo más valioso pendiente.
+
+## Paso 3 — v7, con la ley de disparo definitiva
+La ley correcta es **`err_max > 0.6`** (concordancia 320/320, con derivación: `err_max = 0.147509·|R|`, que
+exige `|R|` efectivo > 4.068, imposible sin recompensas de signo opuesto sobre la misma celda). Las dos leyes
+que registré antes —"umbral en 2 celdas" y "valencia opuesta"— están **refutadas** como enunciados generales.
+Reescribir el criterio de disparo de `bateria_v7b.py` en términos de `err` y volver a correr 20 semillas.
+Ojo: v7 sólo debería congelarse **después** de arreglar BUG-01, porque 2K-bis mostró que v7 tiene menos
+capacidad que v6 precisamente por ese bloqueo.
+
+## Paso 4 — 2P, política bajo hambre
+Sigue siendo el único problema abierto de conducta y ahora cuesta minutos con la Fase 1 hecha.
+Antes de correr: escribir la función objetivo (propuesta: minimizar muertes sujeto a tasa de mordida de comida
+≥95% por visita) y reportar **la superficie completa** de α × hambre_boca × sesgo, no el mejor punto.
+
+## Cola de preregistros pendientes (ninguno corrido)
+- **Etapa 3 versión dura**: la fórmula `W_X = 0.333·nA − 1.0·nB` sólo se probó donde no podía fallar. Correrla
+  con códigos solapados, con el clip activo y con más de dos estímulos, donde sí puede romperse.
+- **3F fusión**: la operación inversa de 2L. El organismo sabe dividir y no sabe juntar. Sin lanzar.
+- **`hebb_mordida` rompe E2K** (18/20), única condición de 3K que lo hace.
+- **Dirección de división 2L v2 en la tarea de 3K**: dio 0.763 contra 0.683 del azar, el mejor de ese estudio,
+  aunque por debajo del margen.
+- **Techo de v6 en capacidad**: no se estableció; el diseño de 20.000 pasos por estímulo mide muestreo, no
+  capacidad. Hace falta un cuarto punto de tiempo o igualar mordidas por estímulo en vez de pasos.
+
+## Lo que NO hay que tocar
+- `.gitattributes` con `* -text`. Sin él, git convierte LF→CRLF y **rompe los 55 hashes** en cualquier clon.
+- Los cuatro archivos congelados. `python manifiesto.py` los verifica y sale con código 1 si alguno cambió.
+- Rama 2M (pulpo): refutada el día 2, no entra al tronco salvo decisión explícita.
+
+---
 
 ## Fase 0 — Validar el traspaso (primera sesión, ~20 min)
 1. `git init`, commit inicial con este bundle. Etiquetar `v6-baseline`.

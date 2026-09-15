@@ -610,6 +610,80 @@ precisión sube a **0.763**, el mejor de todo el estudio, pero sigue por debajo 
 — tampoco descubre el píxel relevante. Candidato al siguiente preregistro, no rescate de éste.
 (c) El azar desperdicia un tercio de la capa: con 20 patrones sólo **16 de 30 celdas** entran en algún código.
 
+### BUG-01, experimento 1 — decaimiento local en Wp/Wn. **REFUTADO**
+Preregistro `experimentos/bug01/PREREGISTRO.md`, escrito y cerrado antes de tocar código.
+`organismo_v7d.py` = v7 + `Wp[ix]*=(1-lam); Wn[ix]*=(1-lam)` en las celdas activas, sólo al morder.
+Diff de 3 líneas funcionales. **Control 1: `lam=0.0` es bit-idéntico a v7, 42/42 escenarios × semillas.**
+**Control 2: el bug se reproduce con `lam=0.0`** → `comp=(9.0, 9.0)`, `W=0.0`. λ=0.001 fijado a priori.
+400 corridas, 20 semillas, 197 s.
+
+| predicción | veredicto | cifra |
+|---|---|---|
+| **P1 desbloqueo** | **REFUTADA** | canales por debajo del techo: **0/20**. Con λ=0.001, `Wp=9.00`, `Wn=8.98`, `W=+0.02`. El bloqueo sigue intacto |
+| **P2 no regresión** | **REFUTADA** | **E2K cae a 19/20** en `W_B ≤ −2.4`: el sesgo del 1.1% empuja una semilla fuera del criterio |
+| P3 precisión | SOSTENIDA | el equilibrio analítico acierta a **3 decimales en los 5 valores de λ** |
+| P4 ley de disparo | SOSTENIDA | el patrón de divisiones no cambia en ninguna etapa |
+
+**Y no es cuestión de ajustar λ: la ventana es VACÍA.** Demostración, con `eta=0.03`, `K=3`, `aversion=1`,
+clip 3.0/celda (9.0 por código). En el bloqueo `W≈0`, así que `dlt≈R` y el empuje **no se atenúa**:
+
+    crecimiento por mordida de comida (R=+1):  K·eta·|R|            = 0.090
+    crecimiento por mordida de veneno (R=−3):  K·eta·aversion·|R|   = 0.270
+    con mezcla 50/50:  Wp* = 0.045/λ     Wn* = 0.135/λ
+
+    para que Wn* < 9 (no saturar)                  ->  λ > 0.01500
+    para que |W_B + 3| < 0.3 (valor correcto)      ->  λ < 0.01000
+
+**λ tendría que ser a la vez mayor que 0.015 y menor que 0.010. No existe.** Y el criterio que aprieta es
+el del veneno: **el mismo factor 3 que hace saturar antes el canal aversivo es el que estrecha la tolerancia**.
+El decaimiento uniforme está estructuralmente condenado, no mal calibrado. **No se recalibra λ** (regla 3).
+
+**Lo que sí deja el experimento**: P3 confirma que el mecanismo está entendido — el equilibrio
+`W* = 3·eta·R/(3·eta+λ)` predice lo observado a 3 decimales para λ ∈ {0, 0.0003, 0.001, 0.003, 0.01}.
+La derivación de arriba se apoya en esa validación, no en intuición.
+
+**Diagnóstico de por qué falla**: el decaimiento uniforme ataca la **magnitud** de los canales, y la patología
+no es de magnitud sino de **redundancia** — que los dos canales codifiquen lo mismo a la vez. Pagar en valor
+neto (el sesgo del 1.1%) para corregir un exceso que no está en el valor neto es el error de diseño.
+Eso apunta al experimento 2, ya nombrado en el preregistro del 1 y sin probar entonces: decaer **sólo la parte
+común**, `m = min(Wp, Wn)`, que deja `Wp − Wn` **exactamente** intacto.
+
+### Convergencia independiente: 2K-bis llega a BUG-01 por otro camino
+La rama `2Kbis_capacidad` (que no sabía de este experimento) identifica BUG-01 como la causa raíz de su
+resultado principal: **el 82% de los valores finales de v7 valen 0.000 exacto**, y en **169/169** de esos casos
+`Wp·kc = Wn·kc = 9.000`. No es falta de aprendizaje — esos estímulos tienen 960 mordidas medianas, más que los
+que sí aprenden. Y hay realimentación: con `W=0` la política muerde con p=0.84, así que v7 muerde **7× más**
+que v6 (20.557 contra 2.864 mordidas), lo que acelera la saturación.
+
+Su conclusión, que conviene citar literal en el texto:
+> **El límite de esta arquitectura no está en el número de celdas Kenyon, sino en el rango dinámico de los
+> canales de valor. Dividir compra separación; no compra rango.**
+
+Con dos consecuencias que corrigen cosas registradas hoy:
+- **La capacidad de v7 es MENOR que la de v6** (v7 gana sólo en 6/20; se pedían ≥15). La plasticidad no compra
+  capacidad: la quita, por esta vía. v6 no tiene techo medible en ese diseño (su propio control preregistrado
+  lo anula); v7 sí, en ~7 estímulos. Máximo de estímulos simultáneamente bien aprendidos: v6 = 6, v7 = 4.
+- **Coste real ~7.5 celdas por estímulo** (no 1–4), y las 90 celdas se agotan con sólo 10 estímulos vivos.
+
+### La ley de disparo, versión definitiva: **`err > 0.6`**, y las dos anteriores quedan refutadas
+2K-bis refuta por dos sitios independientes la ley del umbral que registré esta mañana **y** la ley de valencia:
+- con **A∩B=1** forzado y co-aprendizaje desde t=0, dividen **8/20** semillas (el umbral de 2 exigía 0);
+- con solapamiento **2 y misma valencia** (D veneno ∩ B veneno) dividen **0/20**.
+
+El primitivo real: **concordancia 320/320, sin una excepción, entre `splits>0` y `err_max > 0.6`.** Frontera de
+cuchillo: la más alta que NO divide es 0.5996, la más baja que SÍ divide es 0.6003. Y cierra con derivación:
+con solapamiento 0 la trayectoria del error es determinista (`|dlt|` decae por 1−K·η mientras la media móvil
+olvida a 1−ema) y su máximo es analítico, **err_max = 0.147509·|R|**, con pico a las ~21 mordidas. Con |R|=3 da
+**0.442508**, que es exactamente el 0.4425 medido en las 320 corridas. Cruzar θ=0.6 exigiría un error efectivo
+sostenido de **|R| = 4.068**, mayor que cualquier recompensa que el mundo puede dar.
+
+> **Con solapamiento 0 la regla no es que no dispare: es que NO PUEDE.** Sólo una celda que recibe premio *y*
+> castigo supera 4.068. El recuento de celdas compartidas era un proxy, y falla en los dos extremos.
+
+Mi "ley de valencia" de esta mañana es una **consecuencia** de esto (sólo el conflicto de signo produce error
+suficiente), no el primitivo, y como enunciado general también es falsa. Queda sustituida por la de `err`.
+Encaja con la firma de 3T: lo que dispara y apaga la división es el error, y sólo el conflicto lo sostiene.
+
 ### Nota de entorno (Windows)
 `bateria.py` aborta en Windows con `UnicodeEncodeError` al imprimir `≈`: la consola es cp1252. Es fallo de impresión,
 no de cálculo. Se corre con `PYTHONIOENCODING=utf-8`. Los archivos congelados NO se tocaron; `bateria_v7.py` incluye
