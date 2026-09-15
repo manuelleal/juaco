@@ -29,18 +29,40 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
    extingue, generaliza, transfiere — solo cuando el criterio preregistrado lo respalde.
 9. Preferencia del director: preguntarle y proyectar hacia adelante, no frenarlo; discrepar con datos, no con cautela genérica.
 
-## Estado al traspaso (16 sep 2026)
+## Estado (día 3 — repo en Claude Code, 15 sep 2026)
+- **Traspaso VALIDADO**: batería 20/20, baseline reproducido bit a bit (259/260 celdas; la única diferencia es
+  redondeo del CSV viejo). Repo git con tag `v6-baseline`. `.gitattributes` con `* -text`: sin eso, git convierte
+  LF→CRLF y **rompe los 55 hashes sha256 en cualquier clon**.
 - Etapa 1 (aprende A/B): cerrada, 20/20 en v6.
 - Etapa 2 (inversión, extinción, estímulo nuevo, valencias opuestas): cerrada en valor. Ver registro.
-- Problema abierto de conducta: política bajo hambre (mordidas de veneno 1–4% por visita en inanición).
-- 2L (plasticidad estructural) pasa la batería con 6 semillas; pendiente 20 semillas para congelar v7.
-- 2K-bis (capacidad) parcialmente respondida por 2L: con plasticidad el techo se resuelve dividiendo. Redefinir antes de correr.
+- Problema abierto de conducta: política bajo hambre (mordidas de veneno 1–4% por visita en inanición). Fase 2P.
+- **v7 NO congelado.** Pasa 20/20 todos los criterios científicos, pero falla `splits==0` en E2I (19/20).
+  El criterio estaba mal escrito (ERR-06): E2I deja C∩A y C∩B libres, no es una etapa sin error crónico.
+  Criterio v2 preregistrado en el registro; pendiente volver a correr. v6 sigue siendo el tronco.
+- **Umbral de división 2L en 2 celdas compartidas**: con 0 o 1 nunca dispara, con 2 o 3 siempre. Seis condiciones
+  independientes. Dos vías de disparo: representación (solapamiento) y valor (inversión).
+- **Fase 1 hecha**: `experimentos/run_etapa.py` + `analiza.py`, paralelo 6.3×, equivalencia 20/20 bit a bit.
+  Desbloquea las 100 semillas del punto 8 del brief.
+- **Etapa 3 (generalización): predicción sostenida al 100%**, residuo exactamente 0.000 en 1.280 pares.
+  Alcance nulo: 15.9% de los patrones reciben W=0 exacto. PERO el diseño era demasiado fácil (la identidad es
+  mecánica con A∩B=0); la versión dura está preregistrada y sin correr.
+- Variabilidad y diversidad medidas por primera vez: **sd(W_A)=0.0000** — el valor aprendido no tiene diversidad
+  entre semillas; la conducta sí (CV 7–9%).
+- 2K-bis redefinida por decisión del director: capacidad = nº de estímulos y celdas gastadas por estímulo.
 - Rama 2M (pulpo/distribución): refutada a 6 estímulos; especialización emerge. NO tocar salvo decisión explícita.
 - Bug de sincronía sensor-acción corregido en v6; cifras anteriores a v6 se reproducen aproximadamente, no exactamente.
+- Seis errores de instrumento documentados. Cuando algo se vea raro: primero el instrumento, siempre.
 
 ## Comandos
 ```
-cd organismo && python3 bateria.py 6          # regresión rápida (~1 min)
-cd organismo && python3 bateria.py 20         # regresión completa
-python3 -c "import organismo_v6 as o; print(o.run(1))"   # una corrida
+# IMPORTANTE en Windows: la consola es cp1252 y revienta al imprimir ≈ → ∩ (UnicodeEncodeError).
+PYTHONIOENCODING=utf-8 python bateria.py 6     # (desde organismo/) regresión rápida
+PYTHONIOENCODING=utf-8 python bateria.py 20    # regresión completa
+python organismo/bateria_v7.py 20              # examen de congelación de v7 (ya trae reconfigure utf-8)
+
+python experimentos/run_etapa.py --etapa E1 --semillas 20        # paralelo, ~13 s
+python experimentos/run_etapa.py --etapa E1 --semillas 20 --verificar-equivalencia
+python experimentos/analiza.py --etapa E1 --baseline
+
+python -c "import organismo_v6 as o; print(o.run(1))"   # una corrida (~4 s)
 ```

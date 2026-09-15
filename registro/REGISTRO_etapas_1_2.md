@@ -309,6 +309,71 @@ arquitectura: se generaliza compartiendo celdas o no se generaliza en absoluto.
 **Qué NO prueba.** Que el valor a priori sea correcto no dice nada sobre si el organismo ACTÚA según él, ni sobre
 aprendizaje de características abstractas. Es generalización de valor por representación, y sólo eso.
 
+### Fase 1 — infraestructura paralela. HECHA
+`experimentos/run_etapa.py` (`a3d6dad063eb809d`) y `experimentos/analiza.py`. Pool de procesos con método `spawn`,
+cabecera de procedencia obligatoria (fecha, hash del organismo, hash del script, versiones de Python y NumPy, kwargs
+completos), y nunca sobrescribe un archivo.
+- **Equivalencia paralelo vs secuencial: 20/20 semillas idénticas bit a bit.** El paralelismo no cambia un número.
+- Contra `baseline_v6.csv`: **259 de 260 celdas idénticas**. La única discrepancia es el redondeo de `tasaA_q4`
+  a 1 decimal en el CSV original; corroboración independiente de lo hallado esta mañana.
+- Medianas reproducidas exactamente: comida 338, venenoB_q4 13, muertes 142, W_A +1.00, W_B −3.00.
+- **20 semillas: 79.7 s secuencial → 12.7 s paralelo (6.3×).** 100 semillas caben en ~60 s. El barrido de política
+  2P pasa de ~96 min a minutos. Queda desbloqueado el "100 semillas pendiente" del punto 8 del brief.
+
+### Variabilidad y diversidad — primeras mediciones (punto 8, marcadas pendientes desde el brief)
+Definiciones nuevas, marcadas como PROPUESTAS en el docstring de `analiza.py`, no como hechos establecidos.
+Variabilidad = dispersión entre semillas; diversidad = distancia euclídea media por pares entre vectores de conducta
+z-scoreados. E1, 20 semillas:
+
+| | valor |
+|---|---|
+| CV(muertes) | 0.081 |
+| CV(comidaA) | 0.072 |
+| CV(venenoB) | 0.088 |
+| **sd(W_A)** | **0.0000** |
+| **sd(W_B)** | **0.0022** |
+| diversidad (distancia por pares) | mediana 2.78, rango 0.44–8.85; 1.28 por dimensión (ref. 1.414) |
+
+**El valor aprendido tiene diversidad cero.** Con 20 sorteos distintos de la capa Kenyon, la conducta varía (CV 7–9%)
+y el valor converge siempre al mismo número exacto. Separa las tres capas del proyecto con una cifra: representación
+azarosa, política ruidosa, **valor determinista**. `W_A` hubo que descartarlo del cálculo de diversidad por sd=0, y
+ese descarte es en sí el resultado.
+
+### Aclaración de medida — "velocidad de aprendizaje" nombraba dos cosas distintas
+El registro dice que la reversa de A se resuelve en t≈4.800 pasos (2A). Con criterio literal de convergencia
+(|W − asíntota| < 0.1 sostenido) la medida da **25.750 pasos** (mediana). No es contradicción ni error de nadie:
+la cola asintótica está limitada por **exposición**, no por tasa de aprendizaje — un estímulo temido casi no se
+re-muestrea, así que los últimos décimos de W tardan por falta de visitas. Con t90 (90% del cambio total) salen
+**8.250 pasos**, del orden del registro. A partir de ahora se reportan las dos: **t90** (aprendizaje) y
+**t_convergencia** (aprendizaje + disponibilidad). Son magnitudes distintas y llevaban el mismo nombre.
+
+### ETAPA 3 — Generalización. RESULTADO: predicción SOSTENIDA, y el diseño era demasiado fácil
+Datos: `datos/etapa3_generalizacion_20260915_112340.csv/.json`. 20 semillas × 64 patrones = 1.280 pares.
+Sonda `experimentos/etapa3/organismo_v6_sonda.py` (`8db4b85aeb33e7a2`), script `39f428bb0dc1cafc`.
+
+- **Criterio 1 (preregistrado: |W_obs − W_pred| < 0.15 en ≥90%)**: cumplido en **100.00%** de los 1.280 pares.
+  El residuo no es pequeño, es **exactamente 0.000**, rango [+0.000 .. +0.000].
+- **Métrica de alcance**: **15.9%** de los pares tienen nA=nB=0 y por tanto W_obs = 0.000 exacto. A uno de cada seis
+  patrones posibles el organismo no le asigna ningún valor: no generaliza nada hacia ellos.
+- corr(W_obs, nB) = **−0.96** frente a corr(W_obs, nA) = **+0.59**: el veneno domina la generalización, como toca
+  con |W_B|=3 contra |W_A|=1. La generalización del organismo está sesgada al miedo.
+
+**AUTOCRÍTICA, regla 5 aplicada a mi propio resultado.** Un residuo de exactamente 0.000 en 1.280 pares no es una
+confirmación fuerte: es señal de que la predicción era casi tautológica en este escenario. La razón es mecánica —
+la regla RW actualiza `Wp += eta·dlt·kc`, o sea **suma lo mismo a las 3 celdas del código a la vez**, de modo que las
+3 celdas de code(A) tienen pesos idénticos por construcción. Con A∩B=0 forzado y sin C ni D presentes en E1, la
+identidad `W_X = (nA/3)·W_A + (nB/3)·W_B` no puede fallar. El experimento confirma el modelo pero no lo arriesga.
+
+**Conclusión que sí se sostiene**: en E1 la generalización está determinada por el solapamiento de códigos y por
+nada más, y el 15.9% de alcance nulo es una medida real del techo. **Lo que NO se ha probado** es que la fórmula
+aguante donde puede romperse. Queda preregistrada la versión dura, para correr:
+la fórmula debe fallar de forma medible cuando (a) los códigos se solapan (escenarios 2I/2J/2K, donde las celdas
+compartidas reciben actualizaciones mixtas y la uniformidad dentro del código se rompe), (b) el clip de ±3 por celda
+está activo, o (c) hay más de dos estímulos. **Predicción: el residuo deja de ser 0 exactamente en esos tres casos,
+y crece con el solapamiento.** Si el residuo sigue siendo 0 con códigos solapados, la uniformidad del código es más
+robusta de lo que creemos y eso es un hallazgo. Si crece, tenemos la primera medida de cuánto se degrada la
+generalización por interferencia, que es lo que 2I y 2J insinuaban sin cuantificar.
+
 ### Nota de entorno (Windows)
 `bateria.py` aborta en Windows con `UnicodeEncodeError` al imprimir `≈`: la consola es cp1252. Es fallo de impresión,
 no de cálculo. Se corre con `PYTHONIOENCODING=utf-8`. Los archivos congelados NO se tocaron; `bateria_v7.py` incluye

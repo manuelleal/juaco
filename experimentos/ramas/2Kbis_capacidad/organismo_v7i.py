@@ -12,6 +12,10 @@ Que se anade (y por que es inerte):
   (4) solap_ini / solap_fin : solapamientos de codigo de TODOS los pares de PAT, antes de entrenar y al final.
       Se calculan fuera del bucle. Inertes.
   (5) devolver_estado=False : si True anade KW/Wp/Wn/activa al dict de salida. No cambia el computo.
+  (6) forzar_KW=True (defecto = comportamiento de v7). Si False, el solapamiento A&B objetivo NO se impone
+      poniendo KW[:N]=[5,0,0,0,0,0] sino por PURO RECHAZO sobre KW aleatoria (se re-sortean las 30 filas hasta
+      que |code(A)&code(B)|==objetivo). Es el CONTROL de si el efecto medido depende del truco de forzado.
+      Con el defecto True el codigo ejecutado es identico linea a linea al de v7.
 
 Ningun otro cambio. Prueba de equivalencia: equivalencia_v7i.py (6 semillas x 3 escenarios, todos los campos comunes).
 
@@ -26,15 +30,16 @@ R_VAL={'comida':1.0,'veneno':-3.0}; E_VAL={'comida':+0.8,'veneno':-0.4}
 
 def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuevo_val='veneno',solap_B=None,
         eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,
-        devolver_estado=False):
+        devolver_estado=False,forzar_KW=True):
     rng=np.random.default_rng(seed)
     Wl=rng.uniform(.1,.4,(2,9)); KW=np.zeros((NKMAX,6)); activa=np.zeros(NKMAX,bool); KW[:NK]=rng.uniform(0,1,(NK,6)); activa[:NK]=True
     def code(P):
         v=KW@P; v=np.where(activa,v,-1e9); return set(np.argsort(v)[-K:])
     objetivo_AB=0 if solap_AB is None else solap_AB
-    if solap_AB: KW[:solap_AB]=0; KW[:solap_AB,0]=5.0
+    if solap_AB and forzar_KW: KW[:solap_AB]=0; KW[:solap_AB,0]=5.0
+    _i0=objetivo_AB if forzar_KW else 0                                          # (6)
     cond=lambda: len(code(PAT['A'])&code(PAT['B']))==objetivo_AB and (nuevo is None or solap_B is None or (len(code(PAT[nuevo])&code(PAT['B']))==solap_B and len(code(PAT[nuevo])&code(PAT['A']))==0))
-    while not cond(): KW[objetivo_AB:NK]=rng.uniform(0,1,(NK-objetivo_AB,6))
+    while not cond(): KW[_i0:NK]=rng.uniform(0,1,(NK-_i0,6))
     def kenyon(P): k=np.zeros(NKMAX); k[list(code(P))]=1; return k
     # (4) INSTRUMENTACION: solapamientos iniciales de todos los pares. Inerte.
     _ks=sorted(PAT); solap_ini={a+b:len(code(PAT[a])&code(PAT[b])) for i,a in enumerate(_ks) for b in _ks[i+1:]}

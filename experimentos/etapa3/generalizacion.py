@@ -125,6 +125,17 @@ def r2(y, Z):
     return float(1 - ry.var() / vt)
 
 
+def json_limpio(x):
+    """NaN/Inf -> None, para que el .json sea JSON estricto legible por cualquier parser."""
+    if isinstance(x, dict):
+        return {k: json_limpio(v) for k, v in x.items()}
+    if isinstance(x, (list, tuple)):
+        return [json_limpio(v) for v in x]
+    if isinstance(x, float) and not np.isfinite(x):
+        return None
+    return x
+
+
 def med_rango(v):
     v = np.asarray(v, float)
     return float(np.median(v)), float(v.min()), float(v.max())
@@ -202,7 +213,7 @@ def main():
         resultados=an,
     )
     with open(json_path, 'w', encoding='utf-8') as fh:
-        json.dump(cab, fh, indent=2, ensure_ascii=False)
+        json.dump(json_limpio(cab), fh, indent=2, ensure_ascii=False, allow_nan=False)
     print(f"\nCSV : {csv_path}")
     print(f"JSON: {json_path}")
     print(f"sha256[:16] csv={sha16(csv_path)}  json={sha16(json_path)}")

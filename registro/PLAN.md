@@ -1,5 +1,13 @@
 # PLAN — Traspaso a Claude Code y etapas siguientes
 
+> **ESTADO AL 15 sep 2026 (día 3).** Fase 0: **HECHA**. Fase 1: **HECHA** (6.3× paralelo, equivalencia 20/20).
+> Fase 2: v7 **NO congelado** (ERR-06, criterio v2 preregistrado y sin correr); 2K-bis redefinida y corriendo;
+> 2P sin empezar; semilla congelada sin correr. Fase 3: primera mitad **hecha** (predicción sostenida al 100%,
+> pero diseño demasiado fácil); versión dura preregistrada y sin correr. Fases 4–6 sin empezar.
+> Ramas exploratorias abiertas el día 3: **3T** (composición temporal, nivel 7), **3K** (¿Kenyon aprendido o basta
+> el azar?). Pendiente de lanzar: **3F** (fusión, la operación inversa de 2L, que hoy no existe).
+> Detalle completo y criterios vivos en `REGISTRO_etapas_1_2.md`, sección "Día 3".
+
 ## Fase 0 — Validar el traspaso (primera sesión, ~20 min)
 1. `git init`, commit inicial con este bundle. Etiquetar `v6-baseline`.
 2. `cd organismo && python3 bateria.py 6` → todo PASA. Luego `python3 bateria.py 20`.
