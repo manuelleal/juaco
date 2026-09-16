@@ -88,7 +88,17 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
       semillas.
     - XOR no generaliza (0.44).
     - La versión dura cuantifica la degradación por solapamiento (0.007 → 0.20 → 0.63 → 1.41).
-  - 4 memoria persistente, parcial.
+  - **4 memoria persistente: NO cerrada** (`experimentos/etapa4_v9/`, datos `etapa4_v9_20260916_170519`).
+    - Exacta sin experiencia.
+    - Pero **olvido catastrófico:** aprender C y D mientras A y B no están lleva el miedo a B de −2.92 a −0.34
+      (conserva 7/20).
+    - Dos vías: valor por celdas compartidas y divisiones que reescriben códigos (r = 0.87; sin plasticidad, 10/20).
+    - Heredar el valor ahorra 80% del veneno inicial en un mundo igual (20/20); en uno invertido la desventaja va en
+      la dirección predicha, pero no es consistente.
+    - **Falta un órgano de consolidación.**
+- **3T y 2K-bis re-verificados sobre v9:** sobreviven (datos `reverificacion_v9_20260916_165658`).
+- **Comunicación:** diseño en `experimentos/etapa5_comunicacion/DISENO_comunicacion_simbiotica.md` (N0–N3), sin
+  correr.
 - **ERR-14, 15 y 16 (día 4, tarde):**
   - ERR-14: banda de validación más estrecha que el ruido de Poisson.
   - ERR-15: línea de azar mal puesta (5% en vez de 9.2%) y "parado" que en realidad era oscilación.

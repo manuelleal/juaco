@@ -1,0 +1,40 @@
+[17:05:19 +    0.0s] ARRANQUE Etapa 4 sobre v9 (memoria persistente). Pool(14).
+[17:05:19 +    0.0s] sha preregistro 9f14cd3b1b1150b3  script a28d98430c72457c  v9m 8afa74b805ba2102  v9 d3b72fb8819fbe8e
+[17:05:19 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 2252:
+[17:05:19 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[17:05:19 +    0.3s]     2252 "C:\Python314\python.exe" experimentos/etapa4_v9/corre_etapa4_v9.py
+[17:05:20 +    0.5s] ETAPA 1/4 — instrumento (24)...
+[17:05:43 +   23.5s]   v9m(defecto) == v9: 21/21;  herencia corre: 3/3
+[17:05:43 +   23.5s] ETAPA 2/4 — bloque M (40) y progenitores de H (20)...
+[17:06:02 +   43.0s]           20/60
+[17:06:12 +   52.9s]           40/60
+[17:06:22 +   63.0s]           60/60
+[17:06:22 +   63.0s] ETAPA 3/4 — crias de H (120)...
+[17:06:42 +   83.3s]           30/120
+[17:06:56 +   96.9s]           60/120
+[17:07:10 +  110.8s]           90/120
+[17:07:21 +  122.2s]           120/120
+[17:07:21 +  122.2s] ETAPA 4/4 — analisis.
+[17:07:21 +  122.2s] 
+[17:07:21 +  122.2s]   BLOQUE M — ausencia con interferencia (A,B fuera en [50k,100k); se aprende C veneno y D comida)
+[17:07:21 +  122.2s]    M1 control sin aprendizaje: W_A y W_B en 100k == 50k en 20/20 -> SOSTENIDA
+[17:07:21 +  122.2s]    con aprendizaje: W_A 50k +1.000 -> 100k +0.572 [-2.79,+1.00];  W_B 50k -2.924 -> 100k -0.344 [-3.80,+2.26]
+[17:07:21 +  122.2s]    M2 recuerda (W_B<=-2 en 7/20, W_A>=0.5 en 10/20; >=15 cada): REFUTADA
+[17:07:21 +  122.2s]    M3 interferencia medible (|dA|+|dB|>0.01 en 18/20, >=10): SOSTENIDA  mediana 3.921 [0.000,7.242]
+[17:07:21 +  122.2s]    (sin voto) primer reencuentro con B: pb mediana 0.6044; mordio 10/20;  splits en ausencia (con) 10
+[17:07:21 +  122.2s] 
+[17:07:21 +  122.2s]   BLOQUE H — herencia (cria con semilla 1000+s; progenitor v9 E1 semilla s)
+[17:07:21 +  122.2s]    igual     cero     veneno Q1   30.5  muertes Q1  32.0  Q1+Q2  66.0  total 135.0  W_A +1.00 W_B -2.99
+[17:07:21 +  122.2s]    igual     parcial  veneno Q1    7.0  muertes Q1  35.0  Q1+Q2  66.5  total 137.0  W_A +1.00 W_B -3.00
+[17:07:21 +  122.2s]    igual     completa veneno Q1    6.5  muertes Q1  29.5  Q1+Q2  64.5  total 132.5  W_A +1.00 W_B -3.00
+[17:07:21 +  122.2s]    invertido cero     veneno Q1   32.0  muertes Q1  34.5  Q1+Q2  66.5  total 137.5  W_A -2.98 W_B +1.00
+[17:07:21 +  122.2s]    invertido parcial  veneno Q1   33.0  muertes Q1  36.5  Q1+Q2  68.5  total 136.0  W_A -2.98 W_B +1.00
+[17:07:21 +  122.2s]    invertido completa veneno Q1   36.5  muertes Q1  40.0  Q1+Q2  74.0  total 146.0  W_A -2.98 W_B +1.00
+[17:07:21 +  122.2s]    H1 igual: veneno Q1 completa 6.5 <= 0.5x cero 30.5; completa<cero 20/20: SOSTENIDA
+[17:07:21 +  122.2s]    H3 igual: muertes Q1 completa<cero 14/20: REFUTADA
+[17:07:21 +  122.2s]    H4 invertido: muertes Q1+Q2 completa>cero 12/20: REFUTADA
+[17:07:21 +  122.2s]    H5 invertido: completa revierte al final 20/20: SOSTENIDA
+[17:07:21 +  122.2s]    H2 (sin voto) parcial veneno Q1 7.0 <= 0.6x cero: True
+[17:07:21 +  122.2s] 
+[17:07:21 +  122.2s] VEREDICTO etapa4_v9: K_identidad=True K_herencia_corre=True M1=True M2=False M3=True H1=True H3=False H4=False H5=True H2_sin_voto=True ETAPA4_CERRADA=False
+[17:07:21 +  122.3s] datos -> etapa4_v9_20260916_170519.json  sha256_16 = d15df10103ebb5a1
