@@ -1369,3 +1369,76 @@ Lo que se admite es **la cifra**, no la lectura que la acompañaba: "cura la par
 siendo falsas (auditoría). H-ext-2 queda **subsumida** en S0: tocar el techo sin truncar no separa los brazos.
 
 **Estado:** el **paso 1 está cerrado: PASA**. v6 sigue siendo el tronco.
+
+### Decisiones de dirección tras el paso 1 (16 sep 2026, tarde)
+
+1. **Los pasos 2 (batería con el arreglo) y 3 (examen de congelación) se funden en un solo examen**, con un
+   preregistro y una corrida. Motivo: el exp. 2b P2c ya pasó las seis etapas 20/20 con `lam=0.05`, y el examen
+   vuelve a correr esas mismas seis etapas.
+2. **Nombres descriptivos.** El candidato congelable es **`organismo/organismo_v8.py`**: v6 + 2L + drenaje de la
+   parte común con `lam=0.05`. Su examen y regresión, **`organismo/bateria_v8.py`**. Su preregistro,
+   `experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md`.
+   **No se sobrescribe `organismo_v7.py`**: de él dependen ocho archivos (lección de la auditoría).
+3. **Si el examen pasa, v8 se congela como tronco** y sigue la **fase 4: 3T confirmatorio**.
+
+### ERR-12 — la "ley de disparo" era, en su mitad empírica, una identidad del código, y en la otra mitad, falsa
+
+Lo encontré al redactar el criterio de disparo del examen de v8, releyendo `organismo_v7e.py` (líneas 74–76):
+
+```
+err[idx]=(1-ema)*err[idx]+ema*abs(dlt)
+for c in idx:
+    if err[c]>theta and (~activa).any():   -> division
+```
+
+**(a) La concordancia "320/320 sin excepción" entre `splits>0` y `err_max>0.6` no es evidencia de nada.**
+`err_max` se mide justo después de actualizar `err`, que es exactamente la cantidad que compara la condición de
+división. Mientras quede alguna celda libre, `err_max > θ` ⇔ `splits > 0` **por construcción**. La "frontera de
+cuchillo 0.5996 / 0.6003" es el propio θ=0.6 visto desde fuera.
+- Vuelto a medir hoy sobre las 120 corridas con plasticidad de la prueba de coste: **120/120, 0 discordantes, 0
+  con el pool agotado**. Una identidad no puede dar otra cosa.
+
+**(b) "Con solapamiento 0 la regla NO PUEDE disparar" es FALSO.**
+- Medido hoy con `organismo_v7h`, E2 (inversión, A∩B=0):
+  - semilla 1: 5 divisiones, todas de **B**, desde t=53.290, con `err_max = 0.6260`;
+  - semilla 2: desde t=52.732, con `err_max = 0.6031`.
+- El propio registro del día 3 ya tenía en su tabla "E2 inversión, solapamiento 0, divide sí 20/20", **en el
+  mismo día** en que escribió que no podía.
+- **Por qué la derivación no lo vio.** `err_max = 0.147509·|R|` vale para aprender desde `err=0` con |dlt| inicial
+  = |R| ≤ 3.
+  - En una inversión, |dlt| inicial es **4**, y eso da 0.590.
+  - Además `err` no parte de 0: el estímulo temido se muerde poco y su error residual decae sólo 0.98 por mordida.
+  - 0.590 más un residual pequeño cruza 0.6. Es **coherente** con el 0.603–0.626 medido. No está verificado celda
+    a celda.
+- El error de fondo es el mismo de ERR-10: **olvidar el conflicto temporal**.
+
+**Qué sobrevive.**
+- La fórmula analítica `err_max = 0.147509·|R|`, para aprendizaje nuevo con R constante (acertó 0.4425 donde
+  aplica).
+- Y la idea de que **sin conflicto —espacial o temporal— el error no se sostiene lo bastante**. Eso deja de ser
+  una "ley medida 320/320" y pasa a ser una **predicción derivada que hay que poner a prueba**. El examen de v8
+  lo hace (criterio 4b).
+
+**Es el quinto error del patrón que más caro sale** (ERR-06, ERR-08, ERR-10, ERR-11, ERR-12): un criterio que no
+mide lo que dice medir. Esta vez es peor, porque la identidad se presentó como la **mejor** evidencia del día 3.
+- **Regla derivada:** antes de citar una concordancia como evidencia, comprobar en el código que las dos
+  cantidades no se calculan con la misma comparación.
+
+### PREREGISTRO — examen de congelación de v8, criterio v3. Escrito, SIN correr
+
+`experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md`, **sha `d2924e69128fe0f6`**. Está commiteado antes de
+construir `organismo_v8.py`.
+
+**Criterios**
+- **1–3**, heredados: los criterios científicos de las seis etapas 20/20, `celdas ≤ 45` y el control negativo
+  válido.
+- **4, disparo, reescrito tras ERR-12:**
+  - **4a:** la identidad `splits ⇔ err_max>0.6`, sólo como comprobación del instrumento, **sin valor de evidencia**;
+  - **4b:** *sin conflicto no hay división*, derivada y falsable, con control positivo y negativo del detector;
+  - **4c:** la predicción pendiente del día 3, C∩B=3 con misma valencia → **0 divisiones**, y C hereda el valor de
+    B, con guardas de que el escenario ocurrió;
+  - **4d:** el disparo anclado a la causa.
+- **5:** identidad `v8 ≡ v7e(lam=0.05)` y `v8(lam=0) ≡ v7`.
+- **6:** la regresión de v6.
+
+**Si todo pasa, v8 se congela como tronco** (tag `v8-tronco`), por decisión de dirección tomada antes de correr.
