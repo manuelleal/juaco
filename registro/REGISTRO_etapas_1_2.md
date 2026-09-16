@@ -1746,3 +1746,70 @@ cambia la mordida de comida.
 - **El problema real es que las patas no saben alejarse de lo temido**, y eso cuesta ~20% del tiempo de vida.
 - **La Etapa 2 NO se cierra con este experimento.** Su regla de cierre exigía F2–F5 y no se cumplió. Queda
   replanteada con un problema medido y un mecanismo candidato.
+
+### EXPLORACIÓN — "órganos" que faltan: dimensionados y probados (subagente, SIN valor confirmatorio)
+
+**Encargo de dirección:** un loop de variantes medidas con varianza para saber qué órganos funcionales le faltan
+al organismo para explorar y decidir.
+
+**Procedencia**
+- Lo ejecutó un subagente (modelo Fable) **fuera del repo**, en `JUACO/exploracion/organos_20260916/`.
+- Informe `INFORME.md` (`f7a3ff032a9d2ec0`), constructor `construye_v8x.py` (`92cccc24fa24f302`), variante
+  `organismo_v8x.py` (`976bfe7061456b04`), datos `corridas_20260916_160957.csv` (`0324bdd418400838`).
+- 864 corridas, 20 semillas (1–20), E1 y E2. Cada variante con el órgano apagado es idéntica a v8 (8/8 por
+  construcción).
+- `bundle/` y `sandbox/` sin tocar, verificado.
+- **Las cifras clave de O3 y D0 las recalculé yo desde el CSV, y coinciden.**
+
+**Todo lo que sigue es hipótesis con evidencia exploratoria.** Las semillas 1–20 quedan vistas: la confirmación se
+hará en semillas nuevas.
+
+**Ronda 0: diagnóstico del atasco. Corrige lo que escribí esta tarde.**
+- **No está "parado" encima: oscila atado al objeto más cercano.** En E1, segunda mitad, hay 7.142 llegadas a
+  veneno con **1.42 pasos por llegada**.
+- **La línea de azar que usé (5%) estaba mal.** El 92% de los objetos vivos son veneno, porque la comida se come al
+  llegar. Un paseo uniforme daría **9.2%**, así que el exceso es **×2.2, no ×4**.
+- **El atasco se aprende.** Con las patas sin aprendizaje (D1) baja a 9.73%, exactamente el azar corregido (exceso
+  1.10), en 20/20.
+- **Mi mecanismo sospechado era falso.** Quitar la señal "estoy encima" (D2) no cambia nada: esa entrada no puede
+  frenar, sólo empujar. El vehículo es la **política de objetivo** (`see()` elige siempre el objeto más cercano) más
+  las entradas de dirección.
+- **Las tasas "por visita" (por paso) del registro están diluidas ×1.42** frente a "por llegada" (0.251% frente a
+  0.370%). Afecta a las cifras del día 2–3 y a la frontera de hoy; **ninguna cambia de signo**.
+
+**ERR-15 — dos afirmaciones mías de esta tarde, falsas por el instrumento de comparación.**
+1. **"Al azar estaría encima ~5%":** supuse que la mitad de los objetos eran veneno. La composición real del mundo
+   vivo es 92% veneno.
+2. **"Se estaciona":** interpreté pasos como estancia. Eran llegadas repetidas.
+
+El hallazgo cualitativo (se aprende un exceso de tiempo sobre el veneno) **se sostiene**; su magnitud y su mecanismo
+no. Es otra vez el patrón de **la línea base mal puesta**.
+
+**Ronda 1–2: un órgano por variante, pareado frente a v8.**
+
+| órgano | efecto | veredicto exploratorio |
+|---|---|---|
+| O1 valor→movimiento (señal "encima" con valor) | ≈ 0; actúa sobre una entrada inerte | descartar |
+| O2 habituación | ≈ 0; misma entrada inerte | descartar |
+| O4 sorpresa como disparador de exploración | 0 mordidas de veneno en E1, pero **rompe E1 (7/20) y E2 (8/20)**, come menos y no muere menos | descartar tal cual: es `hb = 0` con otro nombre |
+| **O3 memoria de trabajo de rechazo** (ignorar como objetivo un objeto rechazado durante τ = 20 pasos) | **veneno 20.1% → 9.8%** (exceso 1.01; 20/20 bajan, en E1 y en E2); llegadas a veneno 7.142 → 3.969; comida +7.5; **muertes −8.5 en E1 (16↓ 3↑), −17.5 combinadas (17↓ 3↑)**; criterios de E1 y E2 20/20 | **candidato a preregistrar** |
+
+**La varianza del mecanismo (ronda 2) importa.** O3 **no es monótona en τ**:
+
+| τ | % del tiempo sobre veneno |
+|---|---|
+| 20 | 9.8% |
+| 50 | 12.9% |
+| 150 | 16.9% |
+
+Con τ largo se rechazan los cuatro objetos, no queda objetivo y vuelve la política original (fallback: 1.8% → 57%
+→ 75%). **El parámetro importa por lo que pasa cuando no hay objetivo.** El agente señala un órgano que nadie pidió:
+**O7, "qué hacer sin objetivo"**.
+
+**O5 (mapa de lugares) y O6 (consolidación/fusión)** quedan dimensionados por escrito, sin implementar.
+- O5 no tiene nada que mapear en este mundo.
+- O6 exige medir antes si hay fragmentación.
+
+**Lectura.** El órgano que falta para decidir dónde ir no está en el valor ni en la habituación: es **memoria de
+trabajo** ("acabo de rechazar esto, busca otra cosa"). Encaja con la tabla de mecanismos del HANDOFF, donde cada
+órgano lo pidió una falla medible.
