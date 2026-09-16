@@ -2175,3 +2175,49 @@ consolidado resista la sobrescritura, y que lo nuevo reclute celdas en vez de pi
   - Por sí sola no cierra la Etapa 4.
 - **Propuesta del agente para v10:** K4 con r=100 y n=8, con cinco controles de artefacto, y K5 como brazo secundario.
   **La decisión de cuál entra primero, o si van los dos, es de dirección.**
+
+### ETAPA 5, N1 — señal innata honesta y aprendizaje vicario. **NO se demuestra**
+
+**Procedencia**
+- Preregistro `experimentos/etapa5_comunicacion/PREREGISTRO_N1.md` (`ed4c995020f9ff4a`, commit `ee6f3c9`).
+- Instrumento `mundo_social.py`, escrito antes del preregistro y sin ejecutar hasta después. Script commiteado antes de
+  correr (`74decdf`).
+- Datos: `datos/N1_20260916_174236.json` (`cd15946bc4b2395f`) y `.log`.
+- Humo declarado (semilla 7, T=20k): ya sugería que S1 podía caer.
+
+**Instrumento:**
+- K1: `mundo_social(n=1)` ≡ v9, 6/6.
+- K2: señales recibidas: N0 0; N1, mediana 156 por semilla.
+- K3: BAR, mediana 190, dentro de ±50%.
+
+**E1** (mediana por organismo):
+
+| condición | veneno propio hasta el criterio | veneno Q1 | muertes | aprendizajes vicarios sobre B |
+|---|---|---|---|---|
+| SOLO | 19 | 30 | **132** | 0 |
+| N0 (dos, sin señal) | 19 | 39 | **177.5** | 0 |
+| **N1** (señal honesta) | **18** | 37 | 179 | 22 |
+| BAR (barajada) | 20 | 43 | 167 | 31 |
+
+| criterio | veredicto | cifra |
+|---|---|---|
+| **S1** aprende del asco del otro | **REFUTADA** | N1 18 frente a N0 19; se pedía ≤ 13.3 |
+| **S2** simbiosis (ganan los dos) | **REFUTADA** | 9/20; se pedían ≥ 15 |
+| **S3** importa el contenido | **SOSTENIDA** | BAR 20 ≥ N0 19; la señal barajada empeora |
+| S4 (E2, sin voto) | "verdadera", pero **no informativa** | `t_ext_B`: N1 52.466 < N0 52.860, **pero BAR 52.162 es aún más rápida**. La extinción más rápida no es contenido: las señales "placer" al azar sobre B también la empujan |
+
+**Lectura (qué dice el fallo).**
+1. **Dos aprendices igual de ignorantes a la vez no tienen nada que enseñarse.**
+   - Cada uno aprende que B es veneno en sus primeras ~19 mordidas, muy al principio.
+   - Las señales útiles del otro llegan a la vez o después, y de a pocas: ~30% dentro del alcance, tasa 1/3.
+   - **La comunicación sólo puede valer donde hay asimetría de información:** uno sabe y el otro no (experto y
+     novato, o un mundo que cambió para uno). Ese es el rediseño; va con preregistro nuevo, sin recalibrar
+     `d_senal` ni `f_vicaria` (regla 3).
+2. **Ser dos cuesta mucho: +34% de muertes por organismo** (177.5 frente a 132), aun con 4 objetos por cabeza.
+   - Hay competencia por la comida en un anillo compartido.
+   - BAR muere **menos** que N0 aunque muerde **más** veneno: otra vez la renovación del mundo al morder veneno
+     (frontera de la Etapa 2).
+3. **Lo que sí queda:** el contenido de la señal importa (S3). La vía de transmisión existe; lo que falta es una
+   situación en la que valga la pena.
+
+**Etapa 5, N1: NO demostrado.** Queda el diseño y un problema bien planteado.

@@ -1,0 +1,34 @@
+[17:42:36 +    0.0s] ARRANQUE Etapa 5 N1 (comunicacion). Pool(14).
+[17:42:36 +    0.0s] sha preregistro ed4c995020f9ff4a  script 59cd373600aa4242  mundo_social bad7e3dbd5a5fda9  v9 d3b72fb8819fbe8e
+[17:42:37 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 23276:
+[17:42:37 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[17:42:37 +    0.3s]     23276 "C:\Python314\python.exe" experimentos/etapa5_comunicacion/corre_N1.py
+[17:42:45 +    9.2s] ETAPA 1/3 — K1 mundo_social(n=1) == v9: 6/6 -> OK
+[17:42:45 +    9.2s] ETAPA 2/3 — 160 corridas...
+[17:43:00 +   23.3s]           20/160
+[17:43:07 +   30.9s]           40/160
+[17:43:37 +   61.0s]           60/160
+[17:43:53 +   76.9s]           80/160
+[17:44:23 +  106.7s]           100/160
+[17:44:40 +  123.4s]           120/160
+[17:45:04 +  147.8s]           140/160
+[17:45:21 +  164.6s]           160/160
+[17:45:21 +  164.6s] ETAPA 3/3 — analisis.
+[17:45:21 +  164.6s]   K2 senales recibidas (E1, por semilla): N0 max 0; N1 mediana 156 (min 135); BAR mediana 190 -> OK;  K3 BAR dentro de +-50% de N1: OK
+[17:45:21 +  164.6s] 
+[17:45:21 +  164.6s]   E1 SOLO  veneno propio hasta criterio (B) mediana  19.0 (censurados 0/20)  veneno Q1  30.0  muertes/org  132.0  W_B -2.98  vicarias B     0
+[17:45:21 +  164.6s]   E1 N0    veneno propio hasta criterio (B) mediana  19.0 (censurados 0/40)  veneno Q1  39.0  muertes/org  177.5  W_B -3.00  vicarias B     0
+[17:45:21 +  164.6s]   E1 N1    veneno propio hasta criterio (B) mediana  18.0 (censurados 0/40)  veneno Q1  37.0  muertes/org  179.0  W_B -3.00  vicarias B    22
+[17:45:21 +  164.6s]   E1 BAR   veneno propio hasta criterio (B) mediana  20.0 (censurados 0/40)  veneno Q1  43.0  muertes/org  167.0  W_B -2.88  vicarias B    31
+[17:45:21 +  164.6s]   E2 SOLO  veneno propio hasta criterio (B) mediana  19.0 (censurados 0/20)  veneno Q1  30.0  muertes/org  137.0  W_B +1.00  vicarias B     0  t_ext_B 54118
+[17:45:21 +  164.6s]   E2 N0    veneno propio hasta criterio (B) mediana  19.0 (censurados 0/40)  veneno Q1  39.0  muertes/org  171.5  W_B +1.00  vicarias B     0  t_ext_B 52860
+[17:45:21 +  164.6s]   E2 N1    veneno propio hasta criterio (B) mediana  18.0 (censurados 0/40)  veneno Q1  37.0  muertes/org  175.5  W_B +1.00  vicarias B    46  t_ext_B 52466
+[17:45:21 +  164.6s]   E2 BAR   veneno propio hasta criterio (B) mediana  20.0 (censurados 0/40)  veneno Q1  43.0  muertes/org  169.0  W_B +0.85  vicarias B    56  t_ext_B 52162
+[17:45:21 +  164.6s] 
+[17:45:21 +  164.6s]   S1 aprende del asco del otro: N1 18.0 <= 0.7 x N0 19.0 = 13.3: REFUTADA
+[17:45:21 +  164.6s]   S2 simbiosis (los dos mejoran frente a N0) en 9/20 (>=15): REFUTADA
+[17:45:21 +  164.6s]   S3 contenido, no cantidad: BAR 20.0 >= N0 19.0: SOSTENIDA
+[17:45:21 +  164.6s]   S4 (sin voto) E2 extincion: t_ext_B N1 52466 < N0 52860: True
+[17:45:21 +  164.6s] 
+[17:45:21 +  164.6s] VEREDICTO N1: K1=True K2=True K3=True S1=False S2=False S3=True S4_sin_voto=True N1_DEMOSTRADO=False
+[17:45:21 +  164.7s] datos -> N1_20260916_174236.json  sha256_16 = cd15946bc4b2395f

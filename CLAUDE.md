@@ -97,8 +97,19 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
       la dirección predicha, pero no es consistente.
     - **Falta un órgano de consolidación.**
 - **3T y 2K-bis re-verificados sobre v9:** sobreviven (datos `reverificacion_v9_20260916_165658`).
-- **Comunicación:** diseño en `experimentos/etapa5_comunicacion/DISENO_comunicacion_simbiotica.md` (N0–N3), sin
-  correr.
+- **Consolidación (exploración, subagente):** el olvido es la **toma del código de B por celdas hijas** (`mu` no
+  convergida).
+  - **K4, repaso desde un almacén episódico:** retiene 17–20/20 aprendiendo lo nuevo, pero la memoria vive en el
+    almacén (control 9/20): "memoria escondida".
+  - **K5, `mu` normalizada** (1 línea): arregla la mitad sin almacén (10/20) y hace 2L más económica.
+  - **v10 (K4, K5 o ambos) lo decide dirección.**
+- **Comunicación N1 (señal innata de placer/asco + aprendizaje vicario): NO demostrada** (datos `N1_20260916_174236`).
+  - Veneno hasta el criterio 18 frente a 19; simbiosis 9/20.
+  - Sí importa el contenido (la señal barajada empeora).
+  - Dos aprendices igual de ignorantes no tienen nada que enseñarse: rediseñar con **asimetría de información**
+    (experto y novato).
+  - Ser dos cuesta +34% de muertes.
+  - Diseño completo N0–N3 en `experimentos/etapa5_comunicacion/DISENO_comunicacion_simbiotica.md`.
 - **ERR-14, 15 y 16 (día 4, tarde):**
   - ERR-14: banda de validación más estrecha que el ruido de Poisson.
   - ERR-15: línea de azar mal puesta (5% en vez de 9.2%) y "parado" que en realidad era oscilación.
