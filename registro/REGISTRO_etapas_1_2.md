@@ -1501,3 +1501,45 @@ reproducir PH3 **semilla a semilla**. Controles:
 
 Criterios 1–3 de C3 como en el original. **El criterio 4 queda corregido por ERR-3T-02:** el no-artefacto se
 mide en valor y conducta de C3C, no en `solap_A`.
+
+### 3T confirmatorio, PRIMERA corrida — veredicto de la ejecución: NO, porque E salió refutada. Y era ERR-13
+
+**Procedencia.** Instrumentos commiteados antes (`e01841b`). Script `6eda944b6ebbc24d`. Datos
+`datos/3T_confirmatorio_20260916_150348.json` (`2417def9cf057916`), `.csv` (`6f65c77205453db7`) y `.log`.
+
+**Lo que dijo el script, tal cual:**
+- K1 18/18, K2 20/20, K3 20/20 (reproduce PH3 guardado) y K4 20/20;
+- **E: C3 19/20 idénticas (difiere la semilla 11); C3C 3/9 idénticas;**
+- E-alcance sostenida;
+- criterios 1, 2, 3 y 4 **cumplidos**;
+- las cuatro [PH] cumplidas;
+- **VEREDICTO: NO**, porque el preregistro (§6) manda parar la lectura si E se refuta.
+
+**ERR-13 — el comparador de E comparaba TEXTO JSON, y `0.0` ≠ `-0.0` como texto.** Diagnosticado antes de tocar
+nada (regla 5).
+- **Todas** las "diferencias" son `W(B|A)` o `W(B|B)`, con v8 = `0.0` y la referencia = `-0.0`: el cero negativo
+  de IEEE.
+- El estímulo B es neutro (R=0), así que su `W` queda en ruido de coma flotante de orden 1e-17. El signo de ese
+  ruido cambia con la aritmética del drenaje y `round(…, 3)` lo convierte en ±0.0.
+- **Numéricamente son el mismo número.** Medido sobre los datos guardados, con igualdad numérica en las doce
+  claves de E:
+  - C3: **20/20 idénticas**;
+  - C3C: **9/9 idénticas**;
+  - ninguna otra clave difiere en ninguna semilla.
+- El preregistro dice "W … a 3 decimales", que es igualdad numérica. **El criterio estaba bien escrito; la
+  implementación era más estricta que el criterio.**
+- Es la **primera vez que un error de instrumento va en la dirección de refutar** en vez de hacer pasar algo.
+  Se registra igual.
+
+**K4 revisado por la misma vía.** También comparaba texto, y podría haber "pasado" por un `-0.0`. Numéricamente
+difiere 20/20 y de forma real. Semilla 1, A|A: v8 `(0.03, 3.01)` frente a la referencia sin drenaje
+`(14.69, 17.66)`. **Sin el drenaje, los canales de C3 crecen a 15–18: con el techo de v7 (3.0) eso es BUG-01.**
+Es exactamente por qué el confirmatorio del día 3 dio NO.
+
+**Decisión, tomada ANTES de volver a correr.**
+- Se corrige **sólo** el comparador de E y de K4, a igualdad numérica de Python, que trata `-0.0 == 0.0`.
+- K1, K2 y K3 se dejan como están: su comparación por texto es **más** estricta y pasó.
+- Nada más cambia: ni criterios, ni umbrales, ni brazos, ni semillas.
+- Se vuelve a correr **el script completo** desde un commit, para que el veredicto lo produzca código commiteado y
+  no un análisis a mano.
+- **Se reportan los dos veredictos.** El de esta corrida (NO por E) queda en el registro y no se borra.

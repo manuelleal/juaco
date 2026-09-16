@@ -137,7 +137,8 @@ if __name__ == '__main__':
     log(f"  K3 referencia de hoy == PH3 guardado: {k3} -> {'OK' if V['K3'] else 'FALLA'}")
 
     # K4
-    k4 = sum(J(a['comp']) != J(b['comp']) for a, b in zip(G('v8', 'C3'), G('ref', 'C3')))
+    # ERR-13: igualdad NUMERICA (el texto JSON distingue 0.0 de -0.0, que son el mismo numero)
+    k4 = sum(a['comp'] != b['comp'] for a, b in zip(G('v8', 'C3'), G('ref', 'C3')))
     V['K4'] = k4 == S
     log(f"  K4 el drenaje actua (comp C3 v8 != referencia): {k4}/{S} -> {'OK' if V['K4'] else 'FALLA'}")
 
@@ -146,7 +147,8 @@ if __name__ == '__main__':
     E_ok = True; E_det = {}
     for arm in REF_ARMS:
         eleg = [(a, b) for a, b in zip(G('v8', arm), G('ref', arm)) if a['t_techo'] is None and b['t_techo'] is None]
-        dif = [(a['seed'], [k for k in claves_E if J(a[k]) != J(b[k])]) for a, b in eleg]
+        # ERR-13: igualdad NUMERICA, que es lo que dice el preregistro ("W a 3 decimales"); 0.0 == -0.0
+        dif = [(a['seed'], [k for k in claves_E if a[k] != b[k]]) for a, b in eleg]
         dif = [d for d in dif if d[1]]
         E_det[arm] = dict(elegibles=len(eleg), difieren=dif)
         if eleg:
