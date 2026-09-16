@@ -1238,3 +1238,28 @@ B en Q4.
 
 Consecuencia para el diseño: **la batería de seis etapas no puede ver el coste del arreglo**, porque allí los
 dos brazos son el mismo organismo. El coste sólo puede vivir donde el techo **muerde contra el objetivo**.
+
+### PREREGISTRO — prueba de coste con el techo MORDIENDO. Escrito, SIN correr
+
+`experimentos/bug01/PREREGISTRO_coste_techo.md`, **sha `e0e2709f71dff15f`**. Está commiteado antes de construir
+los instrumentos.
+
+**Primitivo: la truncación del clip**, no el valor del canal (H-ext-2: tocar 9 no es morder). Por la demostración
+de ERR-11, la primera truncación del control es **el único instante posible de divergencia** entre brazos.
+
+**Bloque S — inversiones seriadas.** Siete fases de 50k, `plast ∈ {F, T}` × `lam ∈ {0, 0.05}`. Derivado a mano,
+antes de correr:
+- **en las fases 1–4 la truncación es imposible**: cota exacta `Wp, Wn ≤ 8/3` por celda;
+- **B trunca en la fase 5**, congelado en `W_B ≈ −1`;
+- en la fase 7 aparece **BUG-01 sin solapamiento espacial, por conflicto temporal puro** (`W≈0`, canales 9/9);
+- el arreglo no trunca nunca.
+
+**Bloque C — capacidad.** Es 2K-bis Parte 2 importada sin tocarla, con `lam ∈ {0, 0.05}`. Reproduce H-ext-1 y
+añade **C1**, derivada: *N\* sólo puede diferir entre brazos si la primera truncación ocurre antes del checkpoint
+donde cae el techo.*
+
+**Qué decide.** El **COSTE** se mide en muertes y mordidas de veneno, pareado por semilla, en tres condiciones
+principales. Con una **condición de validez añadida al releer antes de correr**: si el control no trunca en
+≥15/20, la condición es **NULA** y la prueba no pasa. Es el patrón de ERR-11, cerrado de antemano.
+
+Predicciones [ext] declaradas como no independientes.
