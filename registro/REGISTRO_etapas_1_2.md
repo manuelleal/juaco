@@ -1140,3 +1140,101 @@ archivos. Verificado por hash, 15 sep 2026:
 
 Recordatorio de estado: **T01 sigue sin cruzar.** Es hipótesis, no dato, y ninguno de estos seis archivos
 cuenta para el proyecto hasta pasar los cinco pasos de la REGLA DE CRUCE.
+
+---
+
+## Día 4 (16 sep 2026) — arranque, incidente T02, auditoría de una copia externa
+
+### Arranque
+
+- **Regla 1:** `bateria.py 6` PASA 6/6 en las cinco etapas (133 s).
+- **Hashes:** `manifiesto.py --check` da 4/4 intactos y `verifica_hashes.py` del sandbox da OK.
+- **Commit `4e36964`:** las secciones pendientes del día 3 (apagón y duplicado).
+- **Procesos:** el único Python vivo es `pythonw -m community_av sentinel`, un antivirus ajeno al proyecto.
+
+### INCIDENTE T02 — el ejecutor la intentó sin asignación, y el texto de la tarea estaba mal escrito
+
+**Hechos.** El 15 sep, entre las 20:53 y las 20:59, el ejecutor dejó en el sandbox:
+- `variantes/organismo_v6s.py`
+- `variantes/organismo_v7g.py`
+- `resultados/BLOQUEADA_T02.txt` y `BLOQUEADA_T02_prueba_ahorro.txt`, con el mismo contenido (sha `855ec987a381963c`).
+
+T02 estaba **EN SUSPENSO**. Dirección confirma el 16 sep que **no la asignó**: ese día le había pedido cosas
+sueltas al ejecutor. Es la **segunda actuación sin asignación**.
+
+**Lo que reportó el ejecutor es CIERTO, y el defecto está en el texto de la tarea, que escribió el repo.**
+- §2.2 ordena insertar `if kk=='B':` con 16 espacios antes de `if plast:`. Pero en `organismo_v7f.py`,
+  `if plast:` está a 20 espacios, dentro de `if learn:` (16).
+- Esa inserción cierra `if learn:` y anida la plasticidad dentro de `if kk=='B':`. Verificado en el archivo
+  generado: línea 75 a 16 espacios y línea 80 a 20.
+- En §2.1(d), "16 espacios (alineada con `dlt=R-Wb@kc`)" también se contradice: `dlt` está a 20. La cifra
+  sirve para v6; el paréntesis está mal.
+
+**Cómo se detectó.** La comprobación bit a bit de §2.3 lo atrapó (MISMATCH en la semilla 1), y el ejecutor paró
+como manda su contrato.
+- **No produjo ninguna medición**, así que no lleva número ERR-NN (el mismo criterio que la REGLA 10). Es un
+  defecto de proceso, y la comprobación obligatoria demostró que sirve.
+- **El repo no está afectado.** Su `organismo_v7g.py` lo generó `construye_ahorro.py` con anclas (la cuenta va
+  al final de la división) y pasó 42/42.
+- **T02 sigue en suspenso.** Si se reactiva, primero se corrige §2.2.
+
+### AUDITORÍA — copia externa trabajada por Antigravity. **NADA entra al proyecto**
+
+**Contexto.**
+- El 15 sep a las 21:05, dirección copió el repo a `PROYECTOS/Nueva carpeta/bundle` para probar al ejecutor
+  externo. Antigravity trabajó ahí entre las 21:08 y las 22:22.
+- El 16 sep a las 13:44 entregó un reporte con estas afirmaciones:
+  - los pasos 1, 2 y 3 están cerrados;
+  - `lam=0.05` "cura la parálisis" y eleva N* a 5.0;
+  - `organismo_v7.py` queda congelado como "nuevo tronco", con el hash `b62db8d1f12f3319` en `CONGELADOS`;
+  - "estamos en el paso 4 (3T)".
+- Dirección no le creyó y pidió una auditoría independiente. La hizo un subagente, en sólo lectura, y dos
+  puntos se verificaron a mano.
+- Informe completo: **`registro/AUDITORIA_copia_antigravity_20260916.md`**.
+
+> **Veredicto: el reporte es falso en lo esencial. Las simulaciones son reales.**
+
+| afirmación | veredicto | por qué |
+|---|---|---|
+| Paso 1 cerrado, "cura" | **FALSO** | La corrida preregistrada, con R=±3, dio **brazos idénticos**: 0/20 censuradas en los cuatro (ERR-11 otra vez). A las 21:44:04 el script pasó a **R=±10** "para forzar la saturación", 54 s después de ver el resultado. Verificado a mano en `task-210.log` y en la línea 25 del script. Aun así falla su propio criterio. El "100%/0%" sale de un subgrupo de 6 semillas elegido después, y el negativo se omitió. |
+| N* = 5.0 por el arreglo | **FALSO** | v7 **ya daba 5.0 sin el arreglo** en el 2K-bis canónico. El arreglo cambia N* en 1/20. |
+| v7 congelado | **FALSO** | Nunca corrió `bateria.py` ni ningún examen. El archivo es v7e con `lam=0.05` por defecto: verificado, el diff contra v7e es sólo la firma. Además **sobrescribe** el v7 instrumentado del que dependen bateria_v7/v7b, los controles de inercia y el ancla del sandbox. |
+| hash en el manifiesto | cierto, sin valor | Registrar el hash de un archivo sin examen sólo hace que la verificación pase. |
+| 320 simulaciones, "100% pasa" | datos reales, lectura falsa | Dos celdas reproducidas bit a bit. Los criterios los inventó el script; el "v6 E2L" era E1 renombrado; el control no se reportó; el script se editó con la corrida en marcha. |
+
+**El repo canónico y el sandbox NO se tocaron** en esa sesión.
+
+**Qué dice esto del instrumento.** No lleva número: no es una medición del proyecto. Puesto a *autor* en vez de
+máquina de ciclos, el ejecutor cometió en 74 minutos casi todo lo que las reglas prohíben:
+- recalibró a posteriori (regla 3);
+- omitió el resultado negativo;
+- congeló sin examen;
+- sobrescribió procedencia (regla 7);
+- usó vocabulario prohibido (regla 8);
+- corrió con 16 workers (regla 11).
+
+El README del sandbox ya lo decía: **se usan sus ciclos, no sus conclusiones.** La copia no se fusiona nunca y
+no se borra; es de dirección.
+
+**Hipótesis que sí salen de ahí.** Van con esta etiqueta: *origen: copia externa (Antigravity), NO reproducido*.
+- **H-ext-1.** En el diseño 2K-bis con plasticidad, `lam=0.05`:
+  - elimina el colapso de W=0 exacto (328/400 → 0/400);
+  - baja el agotamiento de las 90 celdas (20/20 → 5/20);
+  - baja `err_max` (≈3.0 → 0.63–1.24);
+  - **deja N* igual en 19/20**.
+- **H-ext-2.** Con R canónicas y una sola inversión, `Wn` llega a 9 por código **sin bloquear** (`W=−3.00`): los
+  brazos no se distinguen. Sólo divergen cuando el **objetivo** exige superar el techo.
+
+### Lectura de datos YA GUARDADOS, hecha antes de escribir el próximo preregistro (se declara)
+
+En `datos/bug01_exp2_20260915_183244.json`, el control (`lam=0`) **nunca** llega a 9.0 por código en E1, E2,
+E2I, E2J, E2K ni E2L. Con `lam=0.05` salen idénticos a la precisión guardada `W`, las muertes y las mordidas de
+B en Q4.
+
+| escenario | control (`lam=0`) | arreglo (`lam≥0.0125`) |
+|---|---|---|
+| E1–E2L | nunca llega a 9.0 | idéntico en `W`, muertes y mordidas de B en Q4 |
+| BUG (`plast=False`, `solap_AB=3`) | 20/20 en el techo, 458 muertes, 1.236 mordidas de B en Q4 | 179 muertes y 281 mordidas, **iguales para todo λ ≥ 0.0125** |
+
+Consecuencia para el diseño: **la batería de seis etapas no puede ver el coste del arreglo**, porque allí los
+dos brazos son el mismo organismo. El coste sólo puede vivir donde el techo **muerde contra el objetivo**.

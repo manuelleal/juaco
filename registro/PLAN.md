@@ -1,5 +1,16 @@
 # PLAN — Traspaso a Claude Code y etapas siguientes
 
+> **ORDEN VIGENTE AL 16 SEP 2026 (día 4). Manda sobre todo lo de abajo.**
+> Los "Pasos" numerados de la sección "PLAN PARA LA PRÓXIMA SESIÓN" son **históricos**: su Paso 1 (exp. 2 de
+> BUG-01) ya se hizo. El orden real es el del registro ("Estado al cierre", día 3):
+> 1. **Prueba de coste del arreglo con el techo mordiendo contra el objetivo** (preregistro nuevo, día 4).
+> 2. Batería completa con el arreglo.
+> 3. Examen de congelación de v7 con la ley `err > 0.6`, guardando `err_max` por corrida.
+> 4. 3T confirmatorio.
+>
+> **v6 sigue siendo el tronco. v7 NO está congelado.** Circula una copia externa del repo que afirma lo
+> contrario: es falsa y no se fusiona (`registro/AUDITORIA_copia_antigravity_20260916.md`).
+
 > **ESTADO AL CIERRE DEL DÍA 3 (15 sep 2026).** Fase 0 y Fase 1: **HECHAS**. Etapa 3: primera mitad hecha.
 > Ramas 3T, 3K y 2K-bis: cerradas, las tres con veredicto negativo y las tres útiles.
 > v7 **NO congelado**. Detalle y criterios vivos en `REGISTRO_etapas_1_2.md`, sección "Día 3".
