@@ -1263,3 +1263,109 @@ principales. Con una **condición de validez añadida al releer antes de correr*
 ≥15/20, la condición es **NULA** y la prueba no pasa. Es el patrón de ERR-11, cerrado de antemano.
 
 Predicciones [ext] declaradas como no independientes.
+
+### PRUEBA DE COSTE CON EL TECHO — CORRIDA. **PASA**, y las 14 predicciones se sostienen
+
+**Procedencia**
+- Preregistro `e0e2709f71dff15f` (commit `5702cbf`). Instrumentos y script commiteados **antes** de correr
+  (`3423f0a`).
+- Script `corre_coste_techo.py`: `32db7b09773dc159`. Constructor: `05a2ed9255fb2ac7`.
+- Organismos: `organismo_v7h.py` `9cb27a3e8b4d061a` y `organismo_caph.py` `38e259b0175d6375`.
+- Datos: `datos/coste_techo_20260916_142116.json` (`5f1cf3dd3834f4c3`), `.csv` (`6fdafd64ff33cda8`),
+  `_crudo.json` (`e3b2a2e4d8ebb3f8`, escrito **antes** del análisis) y `.log`.
+- 200 corridas más 126 controles, 697 s, `Pool(14)`. Único Python ajeno vivo: el antivirus.
+
+**Se declara:** antes de la corrida real hubo un ensayo de humo y un ensayo de 2 semillas, escritos **fuera de
+`datos/`**, para cazar errores del script. Se vieron sus números (las semillas 1–2). El preregistro ya estaba
+commiteado y no se tocó.
+
+**Control 1: 126/126 idénticos.** `v7h(lam=0)` ≡ v7 42/42; `v7h(lam=0.05)` ≡ v7e 42/42; `caph(lam=0)` ≡ cap 42/42.
+
+| predicción | resultado | cifra |
+|---|---|---|
+| **S0** [exacta] | **SOSTENIDA** | idéntico antes de la primera truncación, **20/20** con `plast=F` y 20/20 con `plast=T` |
+| S1a sin truncación en fases 1–4 | SOSTENIDA | 20/20 |
+| S1b B trunca primero, en la fase 5 | SOSTENIDA | **20/20** |
+| S1c `W_B` congelado en [−1.5, −0.7] | SOSTENIDA | **−1.04** [−1.05, −1.03]; derivado −1.0 |
+| S1d BUG-01 por conflicto temporal | SOSTENIDA | fase 7: `W_A = W_B = 0.00` en 20/20 |
+| S2 el arreglo no trunca | SOSTENIDA | 0/20; valores de E1 al final |
+| S3 ahorro del arreglo | SOSTENIDA | `n_B` por fase: 19, 22.5, 23, 22, 23, 22, 23; ninguna censurada |
+| S3 control | SOSTENIDA | `n_3` igual al arreglo 20/20; `n_5`, `n_6` y `n_7` censuradas 20/20 |
+| **C0** [exacta] | **SOSTENIDA** | 20/20 en las tres condiciones |
+| **C1** [derivada] | **SOSTENIDA** | 12 corridas con N* distinto, **0 violaciones**: en las 12 la truncación precede al checkpoint |
+| C2 [ext] N* igual | SOSTENIDA | 19/20 (semilla 1: 5→7, truncación en 81.178 < 100.000) |
+| C3 [ext] W=0 exacto | SOSTENIDA | control **328/400**, arreglo **0/400** |
+| C4 [ext] agotamiento de celdas | SOSTENIDA | control 20/20, arreglo 5/20 |
+| C5 M_max | SOSTENIDA | arreglo ≥ control en 20/20 |
+
+**COSTE**, pareado por semilla (arreglo − control). Las tres condiciones principales son válidas: el control
+trunca en 20/20.
+
+| condición | muertes | mordidas de veneno | COSTE |
+|---|---|---|---|
+| S, `plast=F` | arreglo **mejor 20/20**, mediana **−405** | mejor 20/20, **−5.425** | **no** |
+| S, `plast=T` | mejor 20/20, −430 | mejor 20/20, −5.774 | **no** |
+| C principal (`plast=T`, 20k) | mejor 20/20, **−650** (1.197 → 564) | mejor 20/20, −9.109 | **no** |
+| C, 60k (sin voto) | mejor 20/20, −1.874 | mejor 20/20 | — |
+| C, `plast=F` (sin voto) | **peor en 4/20** (hasta +63), mediana −27.5 | mejor 20/20 | — |
+
+### Lectura
+
+**1. La demostración de ERR-11 queda confirmada midiendo, no sólo derivando.** S0 y C0 dan 20/20 en todas las
+condiciones. Antes de la primera truncación, `lam=0` y `lam=0.05` **son el mismo organismo**. Y C1 muestra que
+el techo N* sólo se separa cuando la truncación llega antes que el checkpoint: 12 de 12.
+
+**2. La objeción de la memoria latente queda respondida, y la respuesta no viene del criterio de COSTE, sino de
+S0 + S3.**
+- Mientras no trunca, el control es idéntico al arreglo y su ahorro es **0**: `n_3` sale igual en las 20
+  semillas.
+- Cuando trunca, **no reaprende nunca**: `n_5`, `n_6` y `n_7` salen censuradas en 20/20.
+- **No existe un tercer régimen** en el que el control funcione y además sea distinto.
+
+> **Lo que los canales del control guardan de más no es memoria latente que ahorre: es la deuda que lo deja
+> sin poder reaprender.** El arreglo no vende nada, porque no hay nada a la venta.
+
+**3. BUG-01 no necesita un código compartido.** Con A∩B=0, siete fases de inversiones bastan para llevar los dos
+estímulos a `W=0` con canales 9/9. Estaba derivado antes de correr y salió en 20/20. La definición de BUG-01
+("código compartido") queda **ampliada**: basta el conflicto sobre el mismo código **en el tiempo**.
+
+**4. Corrección de una afirmación registrada: 2K-bis y "el rango dinámico".** La cita del día 3 (*"el límite …
+no está en el número de celdas Kenyon, sino en el rango dinámico de los canales"*) era **verdadera a medias**.
+- El rango **sí** explica el colapso a W=0 (328 → 0 de 400), el agotamiento de las 90 celdas (20 → 5 de 20) y la
+  capacidad útil **M_max, que se duplica** (mediana 4 → 8).
+- El rango **no** explica el techo N* a paso 20k, que no se mueve (19/20). Lo fija la representación **antes**
+  de que trunque nada (C1, exacto).
+
+**5. Descriptivo, sin voto, contra lo registrado.**
+- *"La capacidad de v7 es MENOR que la de v6"* era un efecto de BUG-01. Con el arreglo, v7 da M_max 8 [6, 11],
+  frente a 7 [4, 9] de v6 (C_F20 control), y 564 muertes frente a 588.
+- Con 60k, el arreglo sube su N* de 5 a 8. Por la regla de muestreo de 2K-bis, eso indica que **con el arreglo,
+  el techo a 20k es de muestreo y no de representación**.
+- En inversiones seriadas con plasticidad, el control agota el pool (60 divisiones en 20/20) y el arreglo usa 26.
+
+**6. Dónde hay señal de coste. Se reporta aunque no vote.**
+- En capacidad **sin plasticidad** (C_F20), el arreglo tiene más muertes en **4/20** semillas (máximo +63; la
+  mediana favorece al arreglo por −27.5).
+- Con 60k, la semilla 20 **baja** N* de 13 a 7 con el arreglo (C1 se cumple: trunca en 377.480, antes de 420.000).
+- No alcanza el criterio, pero existe, y el texto no debe decir "el arreglo es mejor en todo".
+
+**Qué NO dice.**
+- No congela nada.
+- No dice nada de la política bajo hambre ni de la recuperación espontánea estructural (A5 corregida, en cola).
+- Sólo prueba `lam=0.05`.
+
+**Regresión posterior:** `bateria.py 20` **PASA 20/20 en las cinco etapas** (422 s, 14:33–14:41), y
+`manifiesto.py --check` da los 4 congelados intactos.
+
+**Regla de cruce, H-ext-1.** Queda reproducida en el repo con cifras idénticas a las de la copia externa: 328/400
+→ 0/400, agotamiento 20/20 → 5/20, N* igual en 19/20, semilla 1 de 5 a 7. Pasó los pasos de la regla (script y
+preregistro propios, batería 20 y manifiesto). Se admite como dato con la etiqueta:
+
+```
+origen: copia externa (Antigravity, 15 sep), reproducido en repo, 16 sep 2026, corre_coste_techo.py 32db7b09773dc159
+```
+
+Lo que se admite es **la cifra**, no la lectura que la acompañaba: "cura la parálisis" y "N* sube a 5.0" siguen
+siendo falsas (auditoría). H-ext-2 queda **subsumida** en S0: tocar el techo sin truncar no separa los brazos.
+
+**Estado:** el **paso 1 está cerrado: PASA**. v6 sigue siendo el tronco.

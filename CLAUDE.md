@@ -37,6 +37,24 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 11. **Repo y sandbox nunca corren a la vez; el repo tiene prioridad.** El sandbox arranca sólo con el repo
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
+## Estado (día 4 — 16 sep 2026). Manda sobre el bloque del día 3 cuando se contradigan
+- **v6 sigue siendo el tronco. v7 NO está congelado.** Hay una copia externa del repo
+  (`PROYECTOS/Nueva carpeta/bundle`) que dice lo contrario: es **falsa** y no se fusiona nunca
+  (`registro/AUDITORIA_copia_antigravity_20260916.md`).
+- **La prueba de AHORRO del día 3 SÍ corrió** y su lectura es nula por ERR-11.
+- **Paso 1, prueba de coste con el techo mordiendo: PASA**, con 14/14 predicciones preregistradas
+  (`experimentos/bug01/PREREGISTRO_coste_techo.md`, datos `coste_techo_20260916_142116`).
+  - Antes de la primera truncación del clip, `lam=0` y `lam=0.05` son **idénticos** (20/20).
+  - Después, el control no reaprende nunca; el arreglo tiene ahorro 0 y coste 0 en todos los ciclos.
+  - **La objeción de "memoria latente" queda respondida:** no hay nada a la venta.
+- **BUG-01 también aparece sin código compartido:** siete inversiones seriadas con A∩B=0 dan `W=0` y canales
+  9/9 (derivado antes y medido 20/20).
+- **Corrección de 2K-bis:** el rango dinámico explica el colapso a W=0 y la capacidad útil (M_max 4 → 8), no el
+  techo N* a 20k (igual en 19/20).
+- **Siguiente, en orden:** batería completa con el arreglo (cubierta en lo esencial por exp. 2b P2c) → examen
+  de congelación con `err > 0.6`, guardando `err_max` por corrida → 3T confirmatorio.
+- **Primitivo nuevo:** "mordida del techo" = **truncación** del clip, no el valor del canal. Tocar 3.0 no es morder.
+
 ## Estado (día 3 — repo en Claude Code, 15 sep 2026)
 - **Traspaso VALIDADO**: batería 20/20, baseline reproducido bit a bit (259/260 celdas; la única diferencia es
   redondeo del CSV viejo). Repo git con tag `v6-baseline`. `.gitattributes` con `* -text`: sin eso, git convierte

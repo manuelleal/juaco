@@ -1,0 +1,134 @@
+[14:21:16 +    0.0s] ARRANQUE. prueba de coste con el techo mordiendo, 20 semillas, lam=0.05, Pool(14).
+[14:21:16 +    0.0s] log -> datos/coste_techo_20260916_142116.log   (regla 10: se escribe desde ya)
+[14:21:16 +    0.0s] sha preregistro e0e2709f71dff15f  script 32db7b09773dc159  v7h 9cb27a3e8b4d061a  caph 38e259b0175d6375
+[14:21:16 +    0.3s] REGLA 11 — procesos python vivos al arrancar (2), este script es pid 4284:
+[14:21:16 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[14:21:16 +    0.3s]     4284 "C:\Python314\python.exe" experimentos/bug01/corre_coste_techo.py 20
+[14:21:17 +    0.5s] ETAPA 1/5 — control de inercia de los instrumentos (126 comparaciones)...
+[14:21:45 +   28.8s]           control 20/126  (20 identicos)
+[14:21:59 +   43.1s]           control 40/126  (40 identicos)
+[14:22:27 +   70.5s]           control 60/126  (60 identicos)
+[14:22:42 +   85.4s]           control 80/126  (80 identicos)
+[14:23:09 +  112.8s]           control 100/126  (100 identicos)
+[14:23:24 +  127.7s]           control 120/126  (120 identicos)
+[14:23:26 +  130.2s]           control 126/126  (126 identicos)
+[14:23:26 +  130.2s]   v7h(lam=0) vs v7                  : 42/42 -> OK
+[14:23:26 +  130.2s]   v7h(lam=0.05) vs v7e(lam=0.05)    : 42/42 -> OK
+[14:23:26 +  130.2s]   caph(lam=0) vs cap                : 42/42 -> OK
+[14:23:26 +  130.2s] ETAPA 2/5 — bloque S: 80 corridas a T=350000 (inversion cada 50000).
+[14:23:26 +  130.2s] ETAPA 3/5 — bloque C: 120 corridas (2K-bis Parte 2; paso_t 60000 primero). Se lanzan juntas.
+[14:26:24 +  308.2s]           corridas 28/200  (S 0/80, C 28/120)
+[14:28:18 +  422.2s]           corridas 50/200  (S 0/80, C 50/120)
+[14:28:50 +  454.3s]           corridas 72/200  (S 0/80, C 72/120)
+[14:29:46 +  510.3s]           corridas 98/200  (S 0/80, C 98/120)
+[14:30:40 +  564.3s]           corridas 123/200  (S 6/80, C 117/120)
+[14:31:10 +  594.3s]           corridas 143/200  (S 23/80, C 120/120)
+[14:31:56 +  640.3s]           corridas 164/200  (S 44/80, C 120/120)
+[14:32:24 +  668.3s]           corridas 184/200  (S 64/80, C 120/120)
+[14:32:52 +  696.3s]           corridas 200/200  (S 80/80, C 120/120)
+[14:32:53 +  696.6s] crudo -> coste_techo_20260916_142116_crudo.json  sha256_16 = e3b2a2e4d8ebb3f8  (escrito antes del analisis)
+[14:32:53 +  696.6s] ETAPA 4/5 — analisis.
+[14:32:53 +  696.6s] 
+[14:32:53 +  696.6s] ================================================================================================
+[14:32:53 +  696.6s] BLOQUE S — inversiones seriadas, 7 fases de 50k
+[14:32:53 +  696.6s] ================================================================================================
+[14:32:53 +  696.6s]   S0 S_F: identico antes de la primera truncacion del control en 20/20
+[14:32:53 +  696.6s]   S0 S_T: identico antes de la primera truncacion del control en 20/20
+[14:32:53 +  696.6s]   S0 [exacta, decide la lectura]: SOSTENIDA
+[14:32:53 +  696.6s]   S_F lam=0.0: truncan 20/20; primera: {'B-Wn-fase5': 20}; muertes +923 [+877, +955]; veneno +5812 [+5630, +5944]; splits +0 [+0, +0]
+[14:32:53 +  696.6s]       W_A por fase: +1.00 [+1.00, +1.00] | -2.97 [-2.99, -2.95] | +1.00 [+1.00, +1.00] | -2.97 [-2.99, -2.94] | +1.00 [+1.00, +1.00] | -0.05 [-0.11, -0.04] | +0.00 [+0.00, +0.00]
+[14:32:53 +  696.6s]       n_A mediana por fase: [8.0, 23.0, 22.0, 23.0, 22.0, None, None]   censuradas: [0, 0, 0, 0, 0, 20, 20]
+[14:32:53 +  696.6s]       W_B por fase: -2.98 [-2.99, -2.98] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.96] | +1.00 [+1.00, +1.00] | -1.04 [-1.05, -1.03] | +0.00 [+0.00, +0.00] | +0.00 [+0.00, +0.00]
+[14:32:53 +  696.6s]       n_B mediana por fase: [19.0, 22.5, 23.0, 22.0, None, None, None]   censuradas: [0, 0, 0, 0, 20, 20, 20]
+[14:32:53 +  696.6s]   S_F lam=0.05: truncan 0/20; primera: {'ninguna': 20}; muertes +523 [+473, +562]; veneno +382 [+362, +397]; splits +0 [+0, +0]
+[14:32:53 +  696.6s]       W_A por fase: +1.00 [+1.00, +1.00] | -2.97 [-2.99, -2.95] | +1.00 [+1.00, +1.00] | -2.97 [-2.99, -2.94] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.96] | +1.00 [+1.00, +1.00]
+[14:32:53 +  696.6s]       n_A mediana por fase: [8.0, 23.0, 22.0, 23.0, 22.0, 23.0, 22.0]   censuradas: [0, 0, 0, 0, 0, 0, 0]
+[14:32:53 +  696.6s]       W_B por fase: -2.98 [-2.99, -2.98] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.96] | +1.00 [+1.00, +1.00] | -2.97 [-2.99, -2.95] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.93]
+[14:32:53 +  696.6s]       n_B mediana por fase: [19.0, 22.5, 23.0, 22.0, 23.0, 22.0, 23.0]   censuradas: [0, 0, 0, 0, 0, 0, 0]
+[14:32:53 +  696.6s]   S_T lam=0.0: truncan 20/20; primera: {'B-Wn-fase5': 15, 'A-Wp-fase3': 2, 'A-Wn-fase4': 3}; muertes +948 [+906, +1143]; veneno +6162 [+5654, +9917]; splits +60 [+60, +60]
+[14:32:53 +  696.6s]       W_A por fase: +1.00 [+1.00, +1.00] | -2.97 [-2.98, -2.92] | +1.00 [+1.00, +1.00] | -2.97 [-2.99, +0.00] | +1.00 [+0.00, +1.00] | -0.06 [-0.11, +0.00] | +0.00 [+0.00, +0.00]
+[14:32:53 +  696.6s]       n_A mediana por fase: [8.0, 23.0, 22.0, 23.0, 22.0, None, None]   censuradas: [0, 0, 0, 5, 5, 20, 20]
+[14:32:53 +  696.6s]       W_B por fase: -2.98 [-2.99, -2.98] | +1.00 [+1.00, +1.00] | -2.98 [-3.00, -2.95] | +1.00 [+0.00, +1.00] | -0.84 [-1.05, +0.00] | +0.00 [+0.00, +0.00] | +0.00 [+0.00, +0.00]
+[14:32:53 +  696.6s]       n_B mediana por fase: [19.0, 24.0, 23.0, 23.0, None, None, None]   censuradas: [0, 0, 0, 1, 20, 20, 20]
+[14:32:53 +  696.6s]   S_T lam=0.05: truncan 0/20; primera: {'ninguna': 20}; muertes +527 [+489, +562]; veneno +382 [+362, +416]; splits +26 [+24, +33]
+[14:32:53 +  696.6s]       W_A por fase: +1.00 [+1.00, +1.00] | -2.97 [-2.98, -2.92] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.94] | +1.00 [+1.00, +1.00] | -2.98 [-3.00, -2.96] | +1.00 [+1.00, +1.00]
+[14:32:53 +  696.6s]       n_A mediana por fase: [8.0, 23.0, 22.0, 23.0, 22.0, 23.0, 22.0]   censuradas: [0, 0, 0, 0, 0, 0, 0]
+[14:32:53 +  696.6s]       W_B por fase: -2.98 [-2.99, -2.98] | +1.00 [+1.00, +1.00] | -2.98 [-3.00, -2.96] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.94] | +1.00 [+1.00, +1.00] | -2.98 [-2.99, -2.94]
+[14:32:53 +  696.6s]       n_B mediana por fase: [19.0, 24.0, 23.0, 23.0, 23.0, 22.0, 23.0]   censuradas: [0, 0, 0, 0, 0, 0, 0]
+[14:32:53 +  696.6s] 
+[14:32:53 +  696.6s]   S1a cero truncaciones en fases 1-4 (control, plast=F), 20/20 : SOSTENIDA
+[14:32:53 +  696.6s]   S1b primera truncacion = B en fase 5, >=15/20                 : SOSTENIDA
+[14:32:53 +  696.6s]   S1c mediana W_B fin fase 5 en [-1.5,-0.7]  (-1.0402989447720217)            : SOSTENIDA
+[14:32:53 +  696.6s]   S1d |W_A|,|W_B|<=0.3 al final (BUG-01 temporal), >=15/20      : SOSTENIDA
+[14:32:53 +  696.6s]   S2  arreglo plast=F: 0 truncaciones y valores E1 al final     : SOSTENIDA
+[14:32:53 +  696.6s]   S3  arreglo: n1=19 y n3,n5,n7 en [21,23]                      : SOSTENIDA
+[14:32:53 +  696.6s]   S3  control: n3 = arreglo 20/20 y n5 censurada >=15/20        : SOSTENIDA
+[14:32:53 +  696.6s] 
+[14:32:53 +  696.6s] ================================================================================================
+[14:32:53 +  696.6s] BLOQUE C — capacidad 2K-bis Parte 2
+[14:32:53 +  696.6s] ================================================================================================
+[14:32:53 +  696.6s]   C_T20: C0 identico antes de la truncacion 20/20; truncan control 20/20, arreglo 6/20
+[14:32:53 +  696.6s]       t_techo control +107126 [+46160, +215190]
+[14:32:53 +  696.6s]       N* control +5.0 [+3.0, +7.0]  arreglo +5.0 [+3.0, +7.0]  iguales 19/20  difieren: [(1, 5, 7, 81178, 100000)]
+[14:32:53 +  696.6s]       C1 violaciones: ninguna
+[14:32:53 +  696.6s]       W==0.000 al final: control 328/400  arreglo 0/400
+[14:32:53 +  696.6s]       agotan 90 celdas: control 20/20  arreglo 5/20
+[14:32:53 +  696.6s]       M_max control +4.0 [+2.0, +8.0]  arreglo +8.0 [+6.0, +11.0]  arreglo>=control 20/20
+[14:32:53 +  696.6s]       muertes control +1197 [+574, +1469]  arreglo +564 [+521, +665]
+[14:32:53 +  696.6s]   C_T60: C0 identico antes de la truncacion 20/20; truncan control 20/20, arreglo 10/20
+[14:32:53 +  696.6s]       t_techo control +293608 [+157750, +460850]
+[14:32:53 +  696.6s]       N* control +6.0 [+3.0, +13.0]  arreglo +8.0 [+3.0, +14.0]  iguales 9/20  difieren: [(1, 5, 12, 242409, 300000), (2, 5, 7, 250093, 300000), (4, 5, 12, 269753, 300000), (10, 9, 10, 294993, 540000), (13, 11, 12, 384358, 660000), (14, 5, 12, 262542, 300000), (16, 8, 9, 363846, 480000), (17, 9, 14, 348285, 540000), (18, 5, 14, 206700, 300000), (19, 5, 6, 256255, 300000), (20, 13, 7, 377480, 420000)]
+[14:32:53 +  696.6s]       C1 violaciones: ninguna
+[14:32:53 +  696.6s]       W==0.000 al final: control 339/400  arreglo 0/400
+[14:32:53 +  696.6s]       agotan 90 celdas: control 20/20  arreglo 15/20
+[14:32:53 +  696.6s]       M_max control +5.0 [+3.0, +10.0]  arreglo +12.0 [+9.0, +17.0]  arreglo>=control 20/20
+[14:32:53 +  696.6s]       muertes control +3522 [+1677, +4332]  arreglo +1650 [+1591, +1741]
+[14:32:53 +  696.6s]   C_F20: C0 identico antes de la truncacion 20/20; truncan control 20/20, arreglo 13/20
+[14:32:53 +  696.6s]       t_techo control +130499 [+47000, +251970]
+[14:32:53 +  696.6s]       N* control +4.5 [+3.0, +7.0]  arreglo +4.5 [+3.0, +7.0]  iguales 20/20  difieren: []
+[14:32:53 +  696.6s]       C1 violaciones: ninguna
+[14:32:53 +  696.6s]       W==0.000 al final: control 152/400  arreglo 0/400
+[14:32:53 +  696.6s]       agotan 90 celdas: control 0/20  arreglo 0/20
+[14:32:53 +  696.6s]       M_max control +7.0 [+4.0, +9.0]  arreglo +8.0 [+5.0, +11.0]  arreglo>=control 16/20
+[14:32:53 +  696.6s]       muertes control +588 [+532, +681]  arreglo +560 [+497, +661]
+[14:32:53 +  696.6s] 
+[14:32:53 +  696.6s]   C0 [exacta] identico antes de la primera truncacion, todas las condiciones : SOSTENIDA
+[14:32:53 +  696.6s]   C1 [derivada] N* solo difiere si la truncacion precede al checkpoint n0+1    : SOSTENIDA
+[14:32:53 +  696.6s]   C2 [ext] N* igual >=18/20 (C_T20)                                             : SOSTENIDA
+[14:32:53 +  696.6s]   C3 [ext] W=0 exacto control >=70%, arreglo <=5% (C_T20)                        : SOSTENIDA
+[14:32:53 +  696.6s]   C4 [ext] agotamiento control >=18/20, arreglo <=10/20 (C_T20)                  : SOSTENIDA
+[14:32:53 +  696.6s]   C5 M_max arreglo >= control en >=15/20 (C_T20)                                 : SOSTENIDA
+[14:32:53 +  696.6s] 
+[14:32:53 +  696.6s] ================================================================================================
+[14:32:53 +  696.6s] CRITERIO DE COSTE — pareado por semilla, arreglo - control
+[14:32:53 +  696.6s] ================================================================================================
+[14:32:53 +  696.6s]   S_F (principal) control trunca en >=15/20: SI
+[14:32:53 +  696.6s]       M1_muertes  arreglo peor  0/20, mejor 20/20, mediana dif   -405.5 rango [-434, -378]  COSTE=False
+[14:32:53 +  696.7s]       M2_veneno   arreglo peor  0/20, mejor 20/20, mediana dif  -5425.5 rango [-5574, -5243]  COSTE=False
+[14:32:53 +  696.7s]       M3_comida   arreglo peor  0/20, mejor 20/20, mediana dif  -5141.0 rango [-5311, -4936]  (sin voto)
+[14:32:53 +  696.7s]   S_T (principal) control trunca en >=15/20: SI
+[14:32:53 +  696.7s]       M1_muertes  arreglo peor  0/20, mejor 20/20, mediana dif   -429.5 rango [-628, -378]  COSTE=False
+[14:32:53 +  696.7s]       M2_veneno   arreglo peor  0/20, mejor 20/20, mediana dif  -5774.0 rango [-9514, -5267]  COSTE=False
+[14:32:53 +  696.7s]       M3_comida   arreglo peor  0/20, mejor 20/20, mediana dif  -5557.0 rango [-9117, -4968]  (sin voto)
+[14:32:53 +  696.7s]   C_T20 (principal) control trunca en >=15/20: SI
+[14:32:53 +  696.7s]       M1_muertes  arreglo peor  0/20, mejor 20/20, mediana dif   -649.5 rango [-894, -29]  COSTE=False
+[14:32:53 +  696.7s]       M2_veneno   arreglo peor  0/20, mejor 20/20, mediana dif  -9109.0 rango [-14842, -372]  COSTE=False
+[14:32:53 +  696.7s]       M3_comida   arreglo peor  0/20, mejor 20/20, mediana dif  -9162.5 rango [-15657, -392]  (sin voto)
+[14:32:53 +  696.7s]   C_T60 (sin voto)   control trunca en >=15/20: SI
+[14:32:53 +  696.7s]       M1_muertes  arreglo peor  0/20, mejor 20/20, mediana dif  -1874.0 rango [-2669, -45]  COSTE=False
+[14:32:53 +  696.7s]       M2_veneno   arreglo peor  0/20, mejor 20/20, mediana dif -30540.0 rango [-45833, -2241]  COSTE=False
+[14:32:53 +  696.7s]       M3_comida   arreglo peor  0/20, mejor 20/20, mediana dif -30754.5 rango [-46859, -2270]  (sin voto)
+[14:32:53 +  696.7s]   C_F20 (sin voto)   control trunca en >=15/20: SI
+[14:32:53 +  696.7s]       M1_muertes  arreglo peor  4/20, mejor 16/20, mediana dif    -27.5 rango [-83, +63]  COSTE=False
+[14:32:53 +  696.7s]       M2_veneno   arreglo peor  0/20, mejor 20/20, mediana dif   -273.0 rango [-1405, -16]  COSTE=False
+[14:32:53 +  696.7s]       M3_comida   arreglo peor  3/20, mejor 17/20, mediana dif   -310.0 rango [-1548, +95]  (sin voto)
+[14:32:53 +  696.7s] 
+[14:32:53 +  696.7s]   condiciones principales NULAS: ninguna
+[14:32:53 +  696.7s]   condiciones principales con COSTE: ninguna
+[14:32:53 +  696.7s]   PRUEBA DE COSTE: PASA
+[14:32:53 +  696.7s] ETAPA 5/5 — escritura de datos.
+[14:32:53 +  697.0s] datos -> coste_techo_20260916_142116.json  sha256_16 = 5f1cf3dd3834f4c3
+[14:32:53 +  697.0s]          coste_techo_20260916_142116.csv  sha256_16 = 6fdafd64ff33cda8
+[14:32:53 +  697.0s] 
+[14:32:53 +  697.0s] VEREDICTO coste_techo: S0=True S1a=True S1b=True S1c=True S1d=True S2=True S3_arreglo=True S3_control=True C0=True C1=True C2=True C3=True C4=True C5=True nulas=[] con_coste=[] PASA=True
+[14:32:53 +  697.0s] Pega en el registro: fecha, veredictos y hashes de arriba (regla 7).
