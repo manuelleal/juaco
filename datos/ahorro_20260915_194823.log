@@ -1,0 +1,86 @@
+[19:48:23 +    0.0s] ARRANQUE. prueba de ahorro, 20 semillas, T=200000, 16 nucleos.
+[19:48:23 +    0.0s] log -> datos/ahorro_20260915_194823.log   (regla 10: se escribe desde ya, no al final)
+[19:48:23 +    0.2s] ETAPA 1/4 — control de inercia de las variantes (72 comparaciones)...
+[19:48:57 +   33.7s]           control 20/72  (20 identicos)
+[19:49:29 +   66.1s]           control 40/72  (40 identicos)
+[19:49:32 +   69.3s]           control 60/72  (60 identicos)
+[19:49:58 +   95.0s]           control 72/72  (72 identicos)
+[19:49:58 +   95.0s]   v6s vs v6: 30/30 -> OK
+[19:49:58 +   95.0s]   v7g vs v7: 42/42 -> OK
+[19:49:58 +   95.0s] ETAPA 2/4 — corridas: bloque A (ahorro) 260, bloque B (recuperacion) 380, total 640 a T=200000...
+[19:50:48 +  144.9s]           corrida 40/640  (6%)
+[19:51:35 +  192.4s]           corrida 80/640  (12%)
+[19:52:15 +  232.4s]           corrida 120/640  (19%)
+[19:52:59 +  276.2s]           corrida 160/640  (25%)
+[19:53:44 +  320.9s]           corrida 200/640  (31%)
+[19:54:27 +  363.7s]           corrida 240/640  (38%)
+[19:55:08 +  404.9s]           corrida 280/640  (44%)
+[19:55:53 +  450.2s]           corrida 320/640  (50%)
+[19:56:34 +  491.1s]           corrida 360/640  (56%)
+[19:57:18 +  535.3s]           corrida 400/640  (62%)
+[19:57:59 +  576.0s]           corrida 440/640  (69%)
+[19:58:43 +  619.5s]           corrida 480/640  (75%)
+[19:59:25 +  661.9s]           corrida 520/640  (81%)
+[20:00:12 +  709.1s]           corrida 560/640  (88%)
+[20:00:51 +  747.8s]           corrida 600/640  (94%)
+[20:01:36 +  792.8s]           corrida 640/640  (100%)
+[20:01:36 +  792.8s] ETAPA 3/4 — analisis.
+[20:01:36 +  792.8s] 
+[20:01:36 +  792.8s] ========================================================================================
+[20:01:36 +  792.8s] BLOQUE A — AHORRO.  Ahorro = (n1-n3)/n1 en mordidas de B.  primario: solap_AB=0
+[20:01:36 +  792.8s] ========================================================================================
+[20:01:36 +  792.8s]   --- solap_AB=0 ---
+[20:01:36 +  792.8s]   brazo         n1 mediana  n3 mediana                 ahorro  censuradas
+[20:01:36 +  792.8s]   v6                    19          23 -0.211 [-0.211, -0.211]        0/20
+[20:01:36 +  792.8s]   v7_control            19          23 -0.211 [-0.421, +0.158]        0/20
+[20:01:36 +  792.8s]   exp2                  19          23 -0.211 [-0.368, +0.158]        0/20
+[20:01:36 +  792.8s]   total                 19          23 -0.211 [-0.368, +0.158]        0/20
+[20:01:36 +  792.8s]   piso_025              19          23 -0.211 [-0.368, +0.158]        0/20
+[20:01:36 +  792.8s]   piso_050              19          23 -0.211 [-0.368, +0.158]        0/20
+[20:01:36 +  792.8s]   piso_100              19          23 -0.211 [-0.368, +0.158]        0/20
+[20:01:36 +  792.8s]   --- solap_AB=1 ---
+[20:01:36 +  792.8s]   brazo         n1 mediana  n3 mediana                 ahorro  censuradas
+[20:01:36 +  792.8s]   v7_control            25           1 +0.958 [+0.880, +0.958]       17/20
+[20:01:36 +  792.8s]   exp2                  25          22 +0.465 [-0.120, +0.983]        1/20
+[20:01:36 +  792.8s]   total                 25          22 +0.465 [-0.120, +0.983]        1/20
+[20:01:36 +  792.8s]   piso_025              25          22 +0.465 [-0.120, +0.983]        1/20
+[20:01:36 +  792.8s]   piso_050              25          22 +0.465 [-0.120, +0.983]        1/20
+[20:01:36 +  792.8s]   piso_100              25          22 +0.465 [-0.120, +0.983]        1/20
+[20:01:36 +  792.8s] 
+[20:01:36 +  792.8s]   A1 (control del instrumento: Ahorro(v6) > 0): REFUTADA  -> -0.21052631578947367
+[20:01:36 +  792.8s]   *** A1 refutada: la prueba no mide ahorro. NO se lee ningun otro brazo (preregistro sec.4).
+[20:01:36 +  792.8s] 
+[20:01:36 +  792.8s] ========================================================================================
+[20:01:36 +  792.8s] BLOQUE B — RECUPERACION ESPONTANEA.  delta = wB_post - wB_pre  (negativo = el miedo vuelve)
+[20:01:36 +  792.8s] ========================================================================================
+[20:01:36 +  792.8s]   --- solap_AB=0 ---
+[20:01:36 +  792.8s]   v6           delta +0.000 [+0.000, +0.000]  vuelve el miedo: 0/20   exacto 0.000: SI
+[20:01:36 +  792.8s]   v7_control   delta +0.000 [-0.014, +0.000]  vuelve el miedo: 2/20   exacto 0.000: NO <- ROMPE EL CONTROL
+[20:01:36 +  792.8s]   exp2         delta +0.000 [-0.014, +0.000]  vuelve el miedo: 2/20   exacto 0.000: NO <- ROMPE EL CONTROL
+[20:01:36 +  792.8s]   total        delta +0.000 [-0.014, +0.000]  vuelve el miedo: 2/20   exacto 0.000: NO <- ROMPE EL CONTROL
+[20:01:36 +  792.8s]   piso_025     delta +0.000 [-0.014, +0.000]  vuelve el miedo: 2/20   exacto 0.000: NO <- ROMPE EL CONTROL
+[20:01:36 +  792.8s]   piso_050     delta +0.000 [-0.014, +0.000]  vuelve el miedo: 2/20   exacto 0.000: NO <- ROMPE EL CONTROL
+[20:01:36 +  792.8s]   piso_100     delta +0.000 [-0.014, +0.000]  vuelve el miedo: 2/20   exacto 0.000: NO <- ROMPE EL CONTROL
+[20:01:36 +  792.8s]   --- solap_AB=1 ---
+[20:01:36 +  792.8s]   v7_control   delta +0.000 [-0.009, +0.119]  vuelve el miedo: 2/20
+[20:01:36 +  792.8s]   exp2         delta +0.000 [-0.013, +0.204]  vuelve el miedo: 5/20
+[20:01:36 +  792.8s]   total        delta +0.000 [-0.013, +0.204]  vuelve el miedo: 5/20
+[20:01:36 +  792.8s]   piso_025     delta +0.000 [-0.013, +0.204]  vuelve el miedo: 5/20
+[20:01:36 +  792.8s]   piso_050     delta +0.000 [-0.013, +0.204]  vuelve el miedo: 5/20
+[20:01:36 +  792.8s]   piso_100     delta +0.000 [-0.013, +0.204]  vuelve el miedo: 5/20
+[20:01:36 +  792.8s]   --- solap_AB=2 ---
+[20:01:36 +  792.9s]   v7_control   delta +0.000 [+0.000, +0.000]  vuelve el miedo: 0/20
+[20:01:36 +  792.9s]   exp2         delta +0.000 [-0.032, +0.000]  vuelve el miedo: 1/20
+[20:01:36 +  792.9s]   total        delta +0.000 [-0.032, +0.000]  vuelve el miedo: 1/20
+[20:01:36 +  792.9s]   piso_025     delta +0.000 [-0.032, +0.000]  vuelve el miedo: 1/20
+[20:01:36 +  792.9s]   piso_050     delta +0.000 [-0.032, +0.000]  vuelve el miedo: 1/20
+[20:01:36 +  792.9s]   piso_100     delta +0.000 [-0.032, +0.000]  vuelve el miedo: 1/20
+[20:01:36 +  792.9s] 
+[20:01:36 +  792.9s]   A5 (control negativo: con solap_AB=0 delta es 0.000 exacto): REFUTADA
+[20:01:36 +  792.9s]   A6 es direccional y sin cifra preregistrada: se reporta arriba, no se vota.
+[20:01:36 +  792.9s] ETAPA 4/4 — escritura de datos.
+[20:01:36 +  792.9s] datos -> ahorro_20260915_194823.json  sha256_16 = 18990c8a6febc261
+[20:01:36 +  793.0s]          ahorro_20260915_194823.csv  sha256_16 = d9649b0a033e56cc
+[20:01:36 +  793.0s] 
+[20:01:36 +  793.0s] VEREDICTO ahorro: A1=False A2=None A3=None A4=None A5=False
+[20:01:36 +  793.0s] Pega en el registro la linea con: fecha, veredictos y hashes de arriba (regla 7).

@@ -688,3 +688,408 @@ Encaja con la firma de 3T: lo que dispara y apaga la división es el error, y s�
 `bateria.py` aborta en Windows con `UnicodeEncodeError` al imprimir `≈`: la consola es cp1252. Es fallo de impresión,
 no de cálculo. Se corre con `PYTHONIOENCODING=utf-8`. Los archivos congelados NO se tocaron; `bateria_v7.py` incluye
 `sys.stdout.reconfigure(encoding='utf-8')`.
+
+---
+
+## Día 3 — tarde. BUG-01 experimento 2, dos errores de instrumento más, y un instrumento nuevo
+
+### BUG-01, experimento 2 — decaimiento de la PARTE COMÚN. Mecanismo CONFIRMADO, P1 REFUTADA
+
+Preregistro: `experimentos/bug01/PREREGISTRO_exp2.md` (sha `8786ad6382e255f5`).
+Script: `corre_bug01_exp2.py` (sha `968b49172c54a16c`).
+Organismo: `organismo_v7e.py` (sha `3118c6d563542da2`) = v7 + una línea.
+Datos: `datos/bug01_exp2_20260915_183244.json` (sha `1eb82a17119e5447`). 440 corridas, 20 semillas, 223 s.
+
+Controles 1 y 2: **OK** (42/42 inercia contra v7; el bug se reproduce con `lam=0`).
+
+**Veredictos tal como salieron: P1=REFUTADA, P2=REFUTADA, P3=SOSTENIDA, P4=SOSTENIDA.**
+
+**Lo que el experimento sí demuestra, y es el resultado de fondo:**
+
+| λ_c | Wp (mediana) | Wn (mediana) | W (mediana) | bajo techo |
+|-----|--------------|--------------|-------------|------------|
+| 0.0     | 9.000 | 9.000 | **+0.000** | 0/20 |
+| 0.0125  | 6.995 | 8.310 | **−1.365** | 20/20 |
+| 0.02    | 4.340 | 5.635 | **−1.365** | 20/20 |
+| **0.05**| **1.775** | **3.035** | **−1.365** | 20/20 |
+| 0.1     | 0.935 | 2.215 | **−1.365** | 20/20 |
+| 0.3     | 0.370 | 1.700 | **−1.365** | 20/20 |
+
+Tres cosas, ninguna menor:
+
+1. **El techo se despeja 20/20 con cualquier λ_c ≥ 0.0125**, y la frontera derivada a priori era
+   **λ_c > 0.01125**. La derivación acertó la frontera antes de correr.
+2. **`W` es EXACTAMENTE el mismo — a tres decimales y con rango idéntico [−2.090, −0.300] — para las cinco
+   λ_c, que cubren un rango de 24×.** Ésa es la propiedad 1 del diseño (restar lo mismo a los dos canales
+   deja `Wp − Wn` intacto) confirmada de la forma más fuerte posible: **el arreglo no cuesta NADA en valor
+   neto.**
+3. **P3 lo cierra**: `W_A = +1.000` y `W_B = −3.000` exactos, desviación **0.0000**. El sesgo del 1.1% que
+   hundió el experimento 1 **desaparece por completo**. P4: la ley de disparo no se mueve — los mismos
+   individuos dividen en las seis etapas.
+
+**Por qué P1 queda REFUTADA igual.** Falló **sólo** su tercer subcriterio, `W ∈ [−1.5,−0.5] en ≥18/20`.
+Los otros dos pasaron: techo despejado 20/20, y `Wp`/`Wn` en 1.77/3.04 contra 1.8/2.8 predichos (±0.5) —
+**predicción puntual acertada**. La predicción `W_eq = −1` supuso mezcla exacta 50/50 de mordidas A:B; la
+mezcla real la fija la política y varía por semilla, y el rango sale [−2.09, −0.30].
+**Es un fallo de la capa de política, no del mecanismo** (regla 4). No se recalibra (regla 3). Cualquier
+criterio nuevo sobre la dispersión de `W` exige preregistro propio, escrito antes.
+
+### ERR-09 — noveno error de instrumento: la comprobación de inercia era imposible por construcción
+
+> **Aviso de numeración**: los artefactos del exp. 2b (preregistro, script y JSON) llaman a este error
+> "ERR-07" porque lo numeré antes de comprobar que ERR-05…ERR-08 ya estaban asignados. **El número correcto
+> es ERR-09**, que estaba libre a propósito (ver la línea de BUG-01: "se numere BUG-01 y no ERR-09"). Los
+> tres artefactos **no se editan**: son un trío casado por hash y corregirlos rompería la trazabilidad de la
+> regla 7. **El registro manda: ERR-09.**
+
+En `corre_bug01_exp2.py`, P2 comprobaba la inercia así:
+
+```python
+ident = all(a == b for a, b in zip(R(esc, 0.0), rs))
+```
+
+`R(esc, lam)` devuelve los dicts de `tarea()`, y esos dicts **contienen la propia clave `lam`** (línea 41:
+`return dict(esc=esc, lam=lam, seed=seed, ...)`). Al comparar el brazo `lam=0.0` contra el brazo `lam=0.05`,
+la clave `lam` difiere **por construcción**.
+
+> **`ident` era estructuralmente `False`. No podía dar `True` jamás, ni aunque el organismo fuese literalmente
+> el mismo archivo.** No medía inercia: medía que 0.0 ≠ 0.05.
+
+**Corrección**: excluir las claves de etiqueta (`esc`, `lam`, `seed`), que son índice y no resultado.
+Aplicada a los datos ya guardados: **E1 20/20**, E2I 6/20, E2J 0/20.
+
+### ERR-10 — décimo error: "sin conflicto" definido como solapamiento espacial final
+
+Tras ERR-09 escribí `PREREGISTRO_exp2b.md` redefiniendo `SIN_CONFLICTO` por criterio mecánico medido, no
+declarado: cero solapamiento entre **todos** los códigos presentes. Con eso, E2J sale de la categoría (su
+`solap_B=1` fuerza D-comida ∩ B-veneno: es conflicto por definición) y E2I se clasifica semilla a semilla.
+
+**Esa definición también está mal, y la reejecución lo demuestra.** Tiene dos agujeros, los dos míos:
+
+- **Ignora el conflicto TEMPORAL.** En **E2** (`invertir_en=50000`) la misma celda recibe premio y castigo
+  **separados en el tiempo**, no en el espacio. El solapamiento espacial es 0 y el conflicto es total.
+  Clasifiqué 18/20 semillas de E2 como "sin conflicto" y las 18 difieren.
+- **Mide el código en el momento equivocado.** En **E2L** (`solap_AB=3`) la plasticidad divide y lleva el
+  solapamiento a 0 **al final** — de hecho el criterio `solap->0` pasa 20/20. Mi clasificador leyó el código
+  final y vio 0, cuando durante la corrida fue 3. Clasificó mal las 20/20.
+
+**El primitivo correcto no es el solapamiento: es `min(Wp, Wn) > 0` en alguna celda activa en algún momento.**
+Espacial y temporal quedan cubiertos por la misma condición, que es exactamente la que dispara la línea del
+arreglo. Se mide instrumentando el organismo para registrar si `min(Wp,Wn)` llega a ser > 0 en una celda que
+se actualiza. **Eso exige preregistro nuevo, escrito antes de correr. NO se corre todavía.**
+
+**El patrón, tercera vez.** ERR-06, ERR-08 y ahora ERR-10 tienen la misma raíz, ya identificada el día 3:
+**escribir un criterio que no dice lo que quiero decir, y descubrirlo sólo al correrlo.** Las tres veces el
+organismo estaba bien y el enunciado mal. Diez de diez anomalías del proyecto han sido del instrumento.
+
+### BUG-01 exp. 2b — reejecución de P2 con el instrumento corregido
+
+Preregistro: `PREREGISTRO_exp2b.md` (sha `024b3e292ec60f59`).
+Script: `corre_bug01_exp2b.py` (sha `2f92f5bebdb5bff6`).
+Sonda: `sonda_codigos.py` (sha `1fb8577e12aeed16`), copia de v7e + una línea que exporta los códigos.
+Datos: `datos/bug01_exp2b_20260915_191934.json` (sha `8fac06e68e2675c6`). 243 s.
+
+Controles: **1, 2 y 3 OK**. El control 3 es nuevo y verifica que la sonda es bit-idéntica a `organismo_v7e`
+en las claves compartidas: **42/42**. La sonda es el mismo organismo.
+
+| predicción | resultado | detalle |
+|------------|-----------|---------|
+| **P2a** inercia donde solap=0, debe ser 100% | **REFUTADA** | 26/64 — ver ERR-10 |
+| **P2b** control positivo: 0% idénticos donde hay conflicto | **SOSTENIDA** | **0/76**, sin excepción |
+| **P2c** las seis etapas pasan sus criterios científicos | **SOSTENIDA** | **20/20 en las seis** |
+
+Desglose de P2a, que es donde vive ERR-10:
+
+| esc | clasificadas sin conflicto | idénticas | lectura |
+|-----|---------------------------|-----------|---------|
+| E1   | 20/20 | **20/20** | la inercia se cumple exactamente |
+| E2I  | 6/20 (semillas 3,4,6,14,16,17) | **6/6** | idem, y la clasificación por semilla acierta |
+| E2   | 18/20 | 0/18 | **mal clasificadas: conflicto temporal** |
+| E2L  | 20/20 | 0/20 | **mal clasificadas: solapamiento 3→0 durante la corrida** |
+
+**Donde la definición sí captura el mecanismo — E1 y E2I — la inercia se cumple sin una sola excepción:
+26/26.** Y la concordancia del criterio de solapamiento con la bit-identidad en E2I es **20/20** (verificado
+aparte, semilla a semilla, midiendo `C∩A` y `C∩B`): las semillas 5, 11, 12 y 20 tienen `C∩B=0` pero `C∩A=1`,
+y mirar sólo `nB` se las dejaba fuera.
+
+**P2b importa tanto como P2a**: 0/76 idénticos donde hay conflicto demuestra que el arreglo **sí actúa** donde
+debe. Si todo hubiera salido idéntico, el decaimiento no estaría haciendo nada y P1 sería un espejismo.
+
+**Estado de BUG-01**: el mecanismo está confirmado (techo despejado, `Wp`/`Wn` en su equilibrio derivado,
+valor neto exacto, ley de disparo intacta, seis etapas 20/20). Lo que falla son mis criterios, tres veces
+seguidas. **v7e NO se congela.** v6 sigue siendo el tronco.
+
+### Preregistro pendiente de correr: prueba de AHORRO (el coste del arreglo)
+
+`experimentos/bug01/PREREGISTRO_ahorro.md` (sha `ca6638df5682212e`).
+**Exigido por dirección como condición para seguir con el paso 1.** Escrito, **sin correr**.
+
+La objeción de dirección: el arreglo drena la parte común de `Wp`/`Wn`, que es donde vive el **miedo latente
+bajo el apetito** que compró 2F. Hay que medir si se pierde antes de congelar nada.
+
+Precisión de alcance, medida: **el exp. 2 (λ_c=0.05) NO deja ningún canal en cero** — su equilibrio es
+`Wp*=1.8`, `Wn*=2.8` sobre un techo de 9. El que sí lo deja en cero por construcción es el **exp. 3**
+(λ_c=1, normalización opuesta completa). La objeción es letal para el exp. 3 y atenuada para el exp. 2.
+
+Diseño: tres fases (adquisición / extinción con mundo invertido / reaprendizaje), `T=200.000`, 20 semillas,
+7 brazos (v6, v7 control, exp2, total, y pisos 0.25/0.5/1.0). Ahorro ≡ `(n1−n3)/n1` en **mordidas de B**.
+**Criterio de dirección, escrito antes**: si el ahorro de un brazo cae por debajo del **50%** del de v6, ese
+brazo compra rango vendiendo memoria latente y **no se congela por defecto**.
+
+**Hecho del instrumento que condiciona la recuperación espontánea, verificado leyendo el código**: en v6 y en
+todas las variantes, `Wp` y `Wn` **sólo se modifican dentro de `if mordio:`** (v6 líneas 52–58). No hay ningún
+proceso dependiente del tiempo. **Con `A∩B=0` la recuperación espontánea es imposible por construcción**:
+mediría cero en todos los brazos y no diría nada de ninguno. Por eso se corre con `solap_AB ∈ {0,1,2}` y
+**`solap_AB=0` es el control negativo** (debe dar 0.000 exacto).
+
+### INSTRUMENTO NUEVO — `sandbox/`, ejecutor externo sin juicio, y su REGLA DE CRUCE
+
+Por decisión de dirección se añade un tercer instrumento: un ejecutor externo (Antigravity) que corre barridos
+mecánicos rápidos. **Se usan sus ciclos, no sus conclusiones.**
+
+**Ubicación**: `JUACO/sandbox/`, **fuera del árbol del repo** (la raíz git es `bundle/`). Nada de ahí es un
+dato del proyecto.
+
+**Contenido**: copias de sólo lectura de `organismo_v6.py` (`5f38f83cf49248a3`) y `organismo_v7.py`
+(`3db0475ef0ea95ce`) ancladas en `HASHES.txt`, con `verifica_hashes.py`; `tareas/` (una tarea por archivo);
+`variantes/`; `resultados/`.
+
+**Permisos**: el ejecutor escribe **sólo** en `sandbox/variantes/` y `sandbox/resultados/`. **No** tiene
+acceso de escritura a `bundle/organismo/`, `bundle/registro/` ni `bundle/datos/`, ni toca los dos organismos
+anclados.
+
+**Formato fijo de tarea**: hipótesis en una línea · qué parámetro o línea cambia y en qué archivo · semillas ·
+columnas exactas del CSV · orden explícita de NO interpretar ni tocar nada más.
+
+**REGLA DE CRUCE — la única puerta hacia este registro:**
+
+> Nada de `sandbox/resultados/` entra aquí hasta reproducirlo en el repo. En este orden:
+> 1. `python verifica_hashes.py` → si falla, **se descarta la tarea entera**, sin intentar recuperarla.
+> 2. Reproducción **dentro del repo**, con script y preregistro propios.
+> 3. `bateria.py 20` todo PASA.
+> 4. `manifiesto.py` con los cuatro congelados intactos.
+> 5. Sólo entonces la línea en el registro, con la etiqueta **obligatoria**:
+>    `origen: sandbox externo, reproducido en repo, <fecha>, <hash del script del repo>`
+
+Un número que no haya pasado los cinco pasos **no existe** para el proyecto.
+
+**Primeras tres tareas escritas** (20 semillas cada una): `T01_piso_decaimiento` (pisos 0/0.25/0.5/1.0 × λ_c
+0.05/0.1/0.3/1.0 × 7 escenarios), `T02_prueba_ahorro` (los 7 brazos del preregistro de ahorro),
+`T03_umbral_division` (14 valores de θ × 7 escenarios, sin tocar ningún .py).
+
+**Estado al cierre del día**: el ejecutor corrió T01 por su cuenta (1.360 s). Entregó `organismo_v7f.py`
+(sha256 `a4f7688e…`) y un CSV de **2.380 filas** con la cabecera exacta pedida, más un `.txt` de procedencia
+no solicitado pero correcto (hash, versiones, tiempo) — **no interpretación**. Hashes anclados verificados
+**intactos** después de su corrida, y los cuatro congelados del repo también.
+**T01 NO está cruzada: es una hipótesis, no un dato.** Pendiente de reproducir en repo.
+
+**Nota operativa**: el ejecutor lanza 16 workers y satura la máquina. Corriendo a la vez que un experimento
+del repo, los controles de `exp2b` tardaron el doble. **Repo y sandbox no deben correr simultáneamente**; si
+se solapan, el tiempo de pared de ambos deja de ser comparable con los ya registrados.
+
+### Decisiones de dirección tras el informe del exp. 2 (15 sep 2026, noche)
+
+**El arreglo de la parte común queda ACEPTADO COMO MECANISMO.** Techo despejado 20/20 por encima de la
+frontera derivada a priori, valor neto idéntico a tres decimales en un rango de 24× de λ_c, sesgo del 1.1%
+desaparecido, ley de disparo intacta. Aceptar el mecanismo **no** es congelar el organismo: falta el coste.
+
+**λ_c es un INTERRUPTOR, no una perilla. No se vuelve a barrer.** Por encima de 0.01125 el resultado deja de
+depender de su valor — ésa es justamente la evidencia del exp. 2: `W` sale idéntico a tres decimales y con
+rango idéntico para λ_c ∈ {0.0125, 0.02, 0.05, 0.1, 0.3}. Lo único que λ_c elige es dónde queda el equilibrio
+de `Wp`/`Wn`, y eso sólo importa para el miedo latente, que se mide con la prueba de ahorro y no con un
+barrido. Un barrido más de λ_c no aportaría información: aportaría filas.
+
+**ERR-09 y ERR-10 aceptados con esa numeración.** El primitivo del conflicto pasa a ser, oficialmente:
+`min(Wp, Wn) > 0` en alguna celda activa en algún momento. Cubre el conflicto espacial y el temporal con la
+misma condición, que es exactamente la que dispara la línea del arreglo.
+
+### REGLA 10 — progreso con marca de tiempo y log desde el arranque
+
+> **Todo script de más de un minuto emite una línea de progreso por etapa con marca de tiempo, y escribe a
+> archivo DESDE EL ARRANQUE, no sólo al final.**
+
+Origen: el 15 sep una corrida sana de `corre_bug01_exp2.py` estuvo ~6 minutos sin imprimir nada (84 controles
+en serie, sin progreso) y **fue indistinguible de un cuelgue**. La corrida acabó perdida y con ella su salida.
+
+**Se registra como REGLA, sin número de error, y la decisión es deliberada.** La serie ERR-NN nombra anomalías
+que produjeron **mediciones falsas o perdidas por el instrumento de medida**: ERR-05 un dato falso en el
+registro, ERR-06/08/10 criterios que medían otra cosa, ERR-07 un artefacto de `argsort`, ERR-09 una comparación
+imposible por construcción. Lo de hoy no corrompió ninguna medición: hizo ilegible el estado de una corrida
+sana. Es un defecto de proceso, no de medida. Numerarlo ERR-11 diluiría la serie, y el valor de la serie está
+en que "N de N anomalías fueron del instrumento" sea una afirmación **contable y afilada sobre mediciones**.
+
+Referencia de implementación: `experimentos/bug01/corre_ahorro.py` (función `log()`, con `flush` + `fsync`,
+etapas numeradas `ETAPA k/4`, y log en `datos/ahorro_<fecha>.log` seguible con `tail -f` mientras corre).
+
+### REGLA 11 — repo y sandbox nunca corren a la vez
+
+> **El repo tiene prioridad. El sandbox arranca sólo cuando no hay nada del repo corriendo, y con
+> `Pool(6)`, no 16.**
+
+Medido el 15 sep: el ejecutor lanzó 16 workers mientras corría `exp2b` y **los controles de ese experimento
+tardaron el doble**. El tiempo de pared es un dato registrado (regla 7); al solaparse deja de ser comparable
+con los ya anotados.
+
+### ADVERTENCIA — el ejecutor externo actuó fuera de mandato
+
+El ejecutor corrió **T01 sin que nadie se la asignara**. El trabajo salió conforme: hashes anclados intactos
+antes y después, cabecera exacta, 2.380 filas, `.txt` de procedencia correcto y **sin interpretación**.
+
+> **Que se portara bien no lo hace aceptable.** Actuar fuera de mandato es precisamente lo que este
+> instrumento tiene prohibido. El sandbox vale en la medida en que no pueda contaminar la cadena de
+> procedencia, y un ejecutor que decide por su cuenta cuándo empezar ya está decidiendo. Esta vez acertó;
+> eso es suerte, no garantía.
+
+Regla explícita añadida a `sandbox/README.md` y a las tres tareas: **una tarea se corre cuando la dirección o
+el repo la asignan, no antes. Que exista un archivo en `tareas/` no la asigna.**
+
+### Orden de trabajo fijado por dirección
+
+1. **Prueba de ahorro primero**, tal como está preregistrada, criterio del 50% literal, `solap_AB ∈ {0,1,2}`
+   con el 0 como control negativo. **Corre en el repo, no en el sandbox.**
+2. **T01 no se reproduce aparte**: los pisos 0/0.25/0.5/1.0 van dentro de la prueba de ahorro, así que queda
+   **cruzada de paso**. Sólo se abre el CSV del sandbox si el ahorro da algo inesperado y hace falta comparar.
+   T02 queda **en suspenso** en el sandbox por el mismo motivo.
+3. Si el ahorro pasa: batería completa con el arreglo → examen de congelación de v7 con la ley `err > 0.6`
+   → y **sólo entonces** 3T confirmatorio. **Un cambio por vez.**
+4. **v6 sigue siendo el tronco hasta que un candidato pase todo.**
+
+### PREDICCIÓN DERIVADA DEL CÓDIGO, no de la literatura — y es falsable
+
+> **Con solapamiento cero, la recuperación espontánea del miedo extinguido es IMPOSIBLE por construcción,
+> porque el decaimiento vive dentro de la mordida.**
+
+El argumento, completo y verificable leyendo tres líneas:
+
+1. `Wp` y `Wn` **sólo se modifican dentro del bloque `if mordio:`** — en v6 son las líneas 52–58, y el
+   decaimiento del arreglo (v7e línea 70, v7g con piso) está en ese mismo bloque. **No existe ningún proceso
+   dependiente del tiempo** en ninguna de las variantes.
+2. Luego, sin mordida no hay cambio de peso. El mero paso del tiempo no puede mover `W_B`.
+3. Con `A∩B = 0`, morder A no toca ninguna celda del código de B.
+4. Por tanto, en una ventana sin B, `W_B` no puede cambiar: `wB_post − wB_pre = 0.000` **exacto**, no
+   aproximado, en todas las semillas y en todos los brazos.
+
+**Qué la falsaría**: cualquier `wB_post − wB_pre ≠ 0.000` con `solap_AB = 0`. Un solo caso basta. Si aparece,
+hay un camino de modificación de pesos que no conozco, y eso importaría más que el resultado del ahorro.
+
+**Consecuencia metodológica, que es el motivo de escribirla**: medir recuperación espontánea con `A∩B = 0`
+daría cero en todos los brazos y **parecería** un resultado ("ningún brazo recupera") cuando es una identidad
+del código. Por eso el bloque B corre con `solap_AB ∈ {0, 1, 2}` y el 0 es **control negativo**, no condición
+experimental. Es una predicción mía, derivada del código y no de la literatura de condicionamiento, y está
+escrita antes de mirar los números.
+
+### PRUEBA DE AHORRO — CORRIDA. A1 y A5 REFUTADAS, y las dos por el instrumento
+
+Preregistro `PREREGISTRO_ahorro.md` (sha `ca6638df5682212e`). Script `corre_ahorro.py` (sha
+`93a3dede5770b8a7`). Constructor `construye_ahorro.py` (sha `b5d30709e30043c0`). Organismos
+`organismo_v6s.py` (sha `057a52bf0fcb8745`) y `organismo_v7g.py` (sha `3bbefa916572a78d`), generados por
+parcheo con anclas desde v6 y v7e. Datos: `datos/ahorro_20260915_194823.json` (sha `18990c8a6febc261`),
+`.csv` (sha `d9649b0a033e56cc`), `.log`. 640 corridas a T=200.000, 793 s. **Primer script bajo la regla 10.**
+
+**Control 1: OK.** `v6s` vs `v6` **30/30** y `v7g` vs `v7` **42/42** bit-idénticos. Las variantes son
+demostrablemente los mismos organismos.
+
+| | resultado | |
+|---|---|---|
+| **A1** Ahorro(v6) > 0 (control del instrumento) | **REFUTADA** | ahorro = **−0.2105**, rango [−0.2105, −0.2105] |
+| A2, A3, A4 | **no se leen** | el preregistro lo ordena si A1 cae |
+| **A5** control negativo, delta = 0.000 exacto con solap_AB=0 | **REFUTADA** | v6 20/20 exacto; las variantes plásticas 18/20 |
+
+### ERR-11 — la medida de ahorro es función de `W` sola, y `W` es invariante al arreglo POR DEMOSTRACIÓN
+
+El ahorro de v6 salió **idéntico en las 20 semillas**: `n1 = 19`, `n3 = 23`, rango cero. Eso no es biología,
+es aritmética, y se deriva en tres líneas. Con `aversion = 1`, `K·eta = 0.09`:
+
+```
+W(k+1) = (1 − K·eta)·W(k) + K·eta·R = 0.91·W(k) − 0.27      punto fijo −3
+fase 1, desde W=0:   |0−R| · 0.91^k ≤ 0.5  ->  k = ceil(18.998) = 19   <- n1 observado
+fase 3, desde W=+1:  |1−R| · 0.91^k ≤ 0.5  ->  k = ceil(22.049) = 23   <- n3 observado
+ahorro = (19−23)/19 = −0.210526                                        <- observado −0.2105
+```
+
+**El "déficit" mide únicamente desde dónde arranca `W`, no si queda traza latente.** Tras la extinción
+`W_B = +1`, y llegar a −2.5 desde +1 cuesta más pasos que desde 0. Nada más.
+
+Y hay algo peor, que es el fondo del error: **los cinco brazos con decaimiento dan `n1`/`n3` IDÉNTICOS,
+semilla a semilla** (`exp2` = `total` = `piso_025` = `piso_050` = `piso_100`). No es casualidad ni ruido:
+
+> **Demostración.** `dlt = R − W` depende sólo de `W`. Si `dlt>0`, `Wp += eta·dlt·kc`, luego
+> `W += eta·dlt·kc`. Si `dlt<0`, `Wn += eta·aversion·(−dlt)·kc`, luego con `aversion=1`
+> `W += eta·dlt·kc` — **la misma expresión**. Y el decaimiento resta lo mismo a los dos canales, así que no
+> toca `W`. Además el decaimiento nunca toca el clip: `mcom = max(min(Wp,Wn) − piso, 0) ≥ 0` impide que
+> `Wp` baje de 0.
+> **Por tanto, sin tocar el clip superior, la trayectoria de `W` es EXACTAMENTE independiente de `λ_c`, del
+> `piso` y de cómo se reparta `Wp`/`Wn`.**
+
+**Cualquier métrica que sea función de `W` sola es incapaz de distinguir los brazos, por construcción.**
+`n1` y `n3` lo son. Diseñé una prueba cuyo observable es justo la cantidad que el arreglo deja invariante —
+que es, además, **la propiedad que el arreglo presume**. Es el cuarto error del mismo patrón (ERR-06,
+ERR-08, ERR-10, ERR-11): escribir un criterio que no mide lo que quiero medir.
+
+**La coexistencia sí está ahí, y el piso sí la gradúa.** Lo que el ahorro no ve, `comp_B` lo enseña
+(bloque A, solap_AB=0, semilla 1):
+
+| brazo | Wp_B | Wn_B | **W_B** |
+|---|---|---|---|
+| v6 | 3.98 | 6.98 | **−3.00** |
+| v7_control | 4.40 | 7.40 | **−3.00** |
+| exp2 (λ=0.05) | 0.02 | 3.01 | **−3.00** |
+| total (λ=1, piso 0) | **0.00** | 3.00 | **−3.00** |
+| piso_025 | 0.75 | 3.75 | **−3.00** |
+| piso_050 | 1.50 | 4.50 | **−3.00** |
+| piso_100 | 3.00 | 6.00 | **−3.00** |
+
+La escalera del piso es perfecta en los canales — `Wp_B` va de 0.00 a 3.00 exactamente como se diseñó — y
+**`W_B = −3.00` en los siete**. El arreglo hace exactamente lo que dice, y la conducta no se entera.
+
+### CONSECUENCIA — la pregunta de dirección queda respondida, pero por demostración y no por medida
+
+La preocupación era: *el arreglo compra rango vendiendo memoria latente*. Con la invariancia de arriba:
+
+> **En esta arquitectura, la memoria latente no tiene NINGUNA consecuencia conductual salvo a través de la
+> saturación.** La conducta depende sólo de `W`; `W` es exactamente invariante al reparto `Wp`/`Wn`; luego
+> lo único que el reparto puede cambiar es *cuándo un canal toca el techo*. Y tocar el techo es BUG-01,
+> que es lo que el arreglo existe para evitar.
+>
+> **El arreglo no puede costar conducta. Sólo puede comprarla.**
+
+Eso **no** cierra el asunto por sí solo: dice que el coste, si existe, vive en el régimen de saturación, que
+es justo donde el arreglo actúa. La prueba que haría falta es otra: **medir el ahorro con los canales cerca
+del techo**, donde el clip sí muerde y el reparto sí importa. Requiere preregistro nuevo, escrito antes.
+Lo que **no** hay que volver a hacer es medir ahorro con una función de `W`.
+
+### A5 refutada: MI predicción cae, y el culpable es la plasticidad estructural
+
+Escribí, como predicción derivada del código y falsable: *con solapamiento cero la recuperación espontánea
+es imposible por construcción, porque el decaimiento vive dentro de la mordida.* Dije que un solo caso
+bastaba para tumbarla. Hay **dos**, y el veredicto se parte:
+
+- **v6: SOSTENIDA, 20/20 con `delta = 0.000` exacto.** Sin plasticidad, la predicción es correcta.
+- **Variantes plásticas: REFUTADA, 18/20.** Las semillas **6 y 19** dan `delta = −0.0067` y `−0.0136`, y
+  ambas tienen **`splits = 5`, `celdas = 35`**. Y el desvío es **idéntico en los seis brazos**, incluido
+  `v7_control` (`lam=0`): **no tiene nada que ver con el arreglo.**
+
+**Qué se me escapó.** El argumento era correcto sobre los **pesos** y ciego a la **representación**.
+`W_B = (Wp − Wn) @ kenyon(B)`, y `kenyon(B)` es el top-K sobre las celdas activas. Al comer A durante la
+ventana sin B, una celda de A puede **dividirse**: aparece una celda activa nueva con `KW` heredado, y esa
+celda puede **entrar en el código de B**. Los pesos no se mueven; **el código sí**, y `W_B` con él.
+
+> **Hay una vía por la que el miedo cambia sin una sola experiencia del estímulo temido: es estructural,
+> no sináptica.** La división de celdas reescribe qué significa "B" mientras B no está.
+
+Es la regla 4 otra vez, y esta vez me la salté yo: confundí la capa de **representación** con la de **valor
+aprendido**. La predicción corregida, y falsable igual: *sin plasticidad estructural, la recuperación
+espontánea es imposible por construcción; con ella, es posible y proporcional a las divisiones ocurridas
+durante la ventana.* La segunda mitad **no está medida** — hace falta correlacionar `delta` con divisiones
+dentro de la ventana, y eso es preregistro nuevo.
+
+### Estado al cierre
+
+- **El arreglo de la parte común sigue aceptado como mecanismo y sigue SIN congelarse.** Lo que falta no es
+  confianza en el mecanismo: es una prueba de coste que sepa medir el coste.
+- **v6 sigue siendo el tronco.**
+- **T01 no queda cruzada** como se esperaba: la prueba de ahorro corrió los pisos, pero su lectura es nula
+  por ERR-11, así que no valida nada del barrido del sandbox. T01 sigue siendo hipótesis.
+- Pendiente, en este orden: (1) preregistro de una prueba de coste en régimen de saturación; (2) batería
+  completa con el arreglo; (3) examen de congelación de v7 con `err > 0.6`; (4) 3T confirmatorio.
+  **Un cambio por vez.**

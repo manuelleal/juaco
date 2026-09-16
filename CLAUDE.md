@@ -12,6 +12,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - `organismo/organismo_v7c.py` — CANDIDATO v7 = v6 + 2L plasticidad estructural (212f0746d52577c7). `bateria_v7c.py` (21b97967e48ed971).
   Se congela como v7 SOLO si pasa `python3 bateria_v7c.py 20` en este repo.
 - `datos/` — CSV/JSON de cada experimento. `datos/baseline_v6.csv` es el baseline de referencia.
+- **`sandbox/` (fuera del repo, en `JUACO/sandbox/`) es de un ejecutor externo sin juicio; sus resultados son
+  hipótesis, nunca datos.** Regla de cruce completa en `sandbox/README.md` y en el registro: nada entra aquí
+  sin verificar hashes, reproducir en repo, pasar `bateria.py 20` y `manifiesto.py`, y etiquetar el origen.
 
 ## Reglas de trabajo (no negociables)
 1. Antes de tocar nada: `cd organismo && python3 bateria.py 6`. Debe salir todo PASA. Si no, detenerse.
@@ -28,6 +31,11 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 8. No declarar AGI, conciencia ni inteligencia general por ningún resultado. Vocabulario permitido: aprende, revierte,
    extingue, generaliza, transfiere — solo cuando el criterio preregistrado lo respalde.
 9. Preferencia del director: preguntarle y proyectar hacia adelante, no frenarlo; discrepar con datos, no con cautela genérica.
+10. **Todo script de más de un minuto: una línea de progreso por etapa con marca de tiempo, y salida a
+    archivo DESDE EL ARRANQUE, no sólo al final.** Un script sano que calla seis minutos es indistinguible
+    de uno colgado, y esa ambigüedad ya costó una salida entera (día 3). Referencia: `corre_ahorro.py`.
+11. **Repo y sandbox nunca corren a la vez; el repo tiene prioridad.** El sandbox arranca sólo con el repo
+    parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
 ## Estado (día 3 — repo en Claude Code, 15 sep 2026)
 - **Traspaso VALIDADO**: batería 20/20, baseline reproducido bit a bit (259/260 celdas; la única diferencia es
@@ -67,7 +75,27 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - 2K-bis redefinida por decisión del director: capacidad = nº de estímulos y celdas gastadas por estímulo.
 - Rama 2M (pulpo/distribución): refutada a 6 estímulos; especialización emerge. NO tocar salvo decisión explícita.
 - Bug de sincronía sensor-acción corregido en v6; cifras anteriores a v6 se reproducen aproximadamente, no exactamente.
-- Seis errores de instrumento documentados. Cuando algo se vea raro: primero el instrumento, siempre.
+- **BUG-01 exp. 2 (decaimiento de la parte común, `organismo_v7e.py`): mecanismo CONFIRMADO, criterios míos
+  refutados.** Techo despejado 20/20 con λ_c ≥ 0.0125 (frontera derivada a priori: 0.01125), `Wp`/`Wn` en
+  1.77/3.04 contra 1.8/2.8 predichos, `W_A=+1.000` y `W_B=−3.000` **exactos** (P3), ley de disparo intacta
+  (P4), seis etapas 20/20. **`W` sale idéntico a tres decimales para λ_c en un rango de 24×: el arreglo no
+  cuesta nada en valor neto.** P1 cae sólo por la dispersión de `W` (supuse mezcla 50/50; la fija la política).
+  **v7e NO se congela. v6 sigue siendo el tronco.**
+- **λ_c es un INTERRUPTOR, no una perilla** (decisión de dirección, 15 sep). Por encima de la frontera
+  derivada (0.01125) el resultado no depende de su valor: `W` sale idéntico a tres decimales en todo el
+  rango probado. **No se vuelve a barrer.** Lo único que elige λ_c es dónde queda el equilibrio de `Wp`/`Wn`,
+  y eso sólo importa para el miedo latente — que lo mide la prueba de ahorro, no un barrido.
+- **Prueba de AHORRO preregistrada y SIN correr** (`experimentos/bug01/PREREGISTRO_ahorro.md`): mide si el
+  arreglo vende el miedo latente que compró 2F. Exigida por dirección antes de congelar nada. Criterio: si el
+  ahorro cae bajo el 50% del de v6, no se congela por defecto. Ojo: `Wp`/`Wn` sólo cambian dentro de
+  `if mordio:`, así que **con `A∩B=0` la recuperación espontánea es imposible por construcción**.
+- **Diez errores de instrumento documentados** (ERR-09: la comprobación de inercia comparaba dicts que
+  incluían la clave `lam`, era `False` por construcción; ERR-10: "sin conflicto" definido como solapamiento
+  espacial final, ignora el conflicto temporal de E2 y el 3→0 de E2L). Diez de diez anomalías del proyecto
+  han sido del instrumento. Cuando algo se vea raro: primero el instrumento, siempre.
+- **El patrón que más caro sale, tres veces ya** (ERR-06, ERR-08, ERR-10): escribir un criterio que no dice lo
+  que quiero decir, y descubrirlo sólo al correrlo. Antes de correr, releer el criterio preguntando qué
+  escenario lo haría pasar por la razón equivocada.
 
 ## Comandos
 ```
