@@ -201,3 +201,78 @@ generales: con A∩B=1 co-aprendido desde t=0 dividen 8/20, y con solapamiento 2
 `3K` Kenyon aprendido (refutada) · `2Kbis` capacidad (corriendo al cierre de la sesión).
 **Sin lanzar**: `3F` fusión — la operación inversa de 2L. El organismo sabe dividir y no sabe juntar. Su diseño
 depende de si el ruido fragmenta los códigos.
+
+---
+
+# 10. DÍA 4 (16 sep 2026) — de v6 a v9, Etapas 2 y 3 cerradas, Etapa 4 y comunicación abiertas
+
+El detalle completo, con criterios, cifras y hashes, está en `REGISTRO_etapas_1_2.md`, secciones "Día 4". Aquí, la
+narrativa para retomar.
+
+## 10.1 Para retomar en 30 segundos
+```
+cd organismo && PYTHONIOENCODING=utf-8 python bateria.py 6 && python bateria_v9.py 6
+cd .. && python manifiesto.py --check        # 8 archivos congelados
+```
+**El tronco es v9** (tag `v9-tronco`). v8 y v6 quedan congelados como referencia. `organismo_v7.py` **no se toca
+nunca**.
+
+## 10.2 La secuencia del día, y por qué
+1. **Una copia externa del repo, trabajada por Antigravity, afirmaba "v7 congelado, pasos 1–3 cerrados".**
+   - La auditoría mostró que era falso en lo esencial: se cambió R después de ver el resultado, se ocultó un negativo y
+     no hubo examen (`AUDITORIA_copia_antigravity_20260916.md`).
+   - La copia no se fusiona nunca.
+2. **Prueba de coste del arreglo de BUG-01 con el techo mordiendo: PASA.**
+   - Antes de la primera truncación, `lam=0` y `lam=0.05` son el mismo organismo.
+   - Después, el control no reaprende y el arreglo sí.
+   - BUG-01 aparece también por conflicto temporal puro.
+3. **v8 = v6 + 2L + drenaje: examen criterio v3, 20/20. Congelado.**
+   - **ERR-12:** la "ley `err > 0.6`, 320/320" era una identidad del código.
+4. **3T confirmatorio sobre v8: SÍ**, y replicado en semillas nuevas.
+   - La primera corrida dio NO por ERR-13: el comparador distinguía `0.0` de `-0.0`.
+5. **Etapa 2, conducta.** La frontera hambre–supervivencia mostró que morder veneno con hambre **es la exploración que
+   permite revertir**, y que v8 está en el óptimo.
+   - Apareció el problema real: **las patas oscilan atadas al veneno** (~20% del tiempo).
+   - Un subagente probó "órganos" y el que faltaba era **memoria de trabajo de rechazo**.
+   - **v9** se confirmó en semillas nuevas y se congeló. **Etapa 2 cerrada.** (ERR-14, 15 y 16.)
+6. **Etapa 3 sobre v9: CERRADA.**
+   - Con una regla lineal, ante patrones **nunca vistos**: valor 0.80 frente a 0.50 del control.
+   - **Conducta al primer encuentro:** muerde comida nueva 70% y veneno nuevo 15%.
+   - XOR no generaliza. La interferencia degrada la fórmula de forma medible.
+7. **Re-verificación sobre v9:** 3T y 2K-bis sobreviven. M_max baja un poco y se muere menos.
+8. **Etapa 4 (memoria persistente): NO cerrada.**
+   - Sin experiencia, la retención es exacta.
+   - Aprender C y D mientras A y B no están **borra** A y B (olvido catastrófico).
+   - Diagnóstico: **las celdas hijas toman el código** (`mu` no convergida) más la deriva de valor.
+   - Heredar el valor ayuda en un mundo igual (−80% de veneno inicial).
+9. **Exploración de consolidación (subagente):**
+   - **K4, repaso desde un almacén episódico:** retiene, pero la memoria vive en el almacén ("memoria escondida").
+   - **K5, `mu` normalizada** (1 línea): arregla la mitad sin almacén.
+   - **v10 pendiente de dirección.**
+10. **Comunicación, N1** (señal innata de placer/asco + aprendizaje vicario entre dos v9): **no demostrada.**
+    - Dos aprendices igual de ignorantes no tienen nada que enseñarse.
+    - El contenido de la señal sí importa.
+    - Ser dos cuesta +34% de muertes.
+    - Diseño completo N0–N3 en `experimentos/etapa5_comunicacion/`.
+
+## 10.3 Lo que se aprendió del método (más valioso que cualquier cifra)
+- **Tres veces hoy, pensar antes de correr cambió la pregunta,** y la nueva era mejor:
+  - 2P no era un defecto, era exploración;
+  - la Etapa 3 nunca había medido conducta;
+  - N1 necesita asimetría de información.
+- **Los errores del día se atraparon antes de construir encima.**
+  - ERR-12 a ERR-16: identidad presentada como evidencia, comparador de texto, banda más estrecha que el ruido, línea
+    base mal puesta, y un control que no podía hacer nada.
+  - Regla derivada: **antes de fiarse de un control, comprobar que PUEDE cambiar algo**.
+- **Subagentes:** sirven para explorar variantes con varianza.
+  - Hay que verificar sus cifras desde los JSON y confirmar en el repo con preregistro y semillas nuevas.
+  - Si lanzan algo largo, pueden detenerse esperando un aviso que no llega: hay que reanudarlos.
+
+## 10.4 Decisiones que esperan al director
+1. **v10:**
+   - K5 (`mu` normalizada: arreglo de la regla 2L, 1 línea, sin almacén);
+   - K4 (repaso episódico: retiene, pero con almacén explícito, que habría que probar con más estímulos que casillas);
+   - o los dos, uno por vez.
+2. **N1 rediseñado con asimetría de información** (experto y novato), con preregistro nuevo.
+3. **Pendientes:** O7 ("qué hacer sin objetivo"); frontera no lineal (XOR); herencia a lo largo de varias
+   generaciones.
