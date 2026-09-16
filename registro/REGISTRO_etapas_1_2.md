@@ -1093,3 +1093,50 @@ dentro de la ventana, y eso es preregistro nuevo.
 - Pendiente, en este orden: (1) preregistro de una prueba de coste en régimen de saturación; (2) batería
   completa con el arreglo; (3) examen de congelación de v7 con `err > 0.6`; (4) 3T confirmatorio.
   **Un cambio por vez.**
+
+### APAGÓN tras el cierre — qué se perdió (nada) y qué demuestra del protocolo de escritura
+
+Se fue la luz la noche del 15 sep 2026, después de las 20:05. Al recuperar la máquina, el estado en disco
+reconstruye la sesión entera sin ambigüedad:
+
+| hora | evento |
+|---|---|
+| 20:01:36 (+793.0 s) | `corre_ahorro.py` termina limpio: las cuatro etapas en el log, los sha256 del JSON y del CSV escritos por el propio script, y la línea `VEREDICTO ahorro: A1=False A2=None A3=None A4=None A5=False` |
+| 20:05 | `REGISTRO_etapas_1_2.md` y `MANIFEST.txt` actualizados con ese resultado, hasta "Estado al cierre" |
+| — | corte de luz |
+
+Comprobado al volver: **cero procesos Python vivos, ningún archivo a medias, los cuatro congelados intactos
+(`manifiesto.py --check`), los dos organismos anclados del sandbox intactos (`verifica_hashes.py`), y
+`MANIFEST.txt` idéntico a disco en las 190/190 líneas.** **Lo único que faltaba era el commit**, hecho ya:
+`29a7dd2`, 19 archivos, árbol limpio.
+
+**Qué prueba esto y qué no**, que importa más que la anécdota:
+
+- **Sí prueba la mitad de escritura de las reglas 7 y 10.** El resultado, sus hashes y su lectura en el
+  registro estaban en disco **antes** del corte porque se escriben al terminar cada etapa, no al cerrar la
+  sesión. Un apagón encontró el trabajo guardado, no en memoria.
+- **No prueba la mitad de diagnóstico de la regla 10.** El corte **no cayó durante una corrida**, así que no
+  puso a prueba el caso que la regla 10 ataca de frente: distinguir un script sano de uno colgado, y dejar
+  rastro legible de por dónde iba. Eso sigue sin ensayarse en condiciones reales.
+- **La grieta que sí queda al descubierto es git.** Ocho horas de trabajo válido —exp. 2, exp. 2b y la prueba
+  de ahorro entera— vivieron sin commit desde las 13:14. El disco aguantó; el disco no siempre aguanta.
+  **Consecuencia operativa: se commitea al cerrar cada experimento, no al cerrar la jornada.**
+
+### DUPLICADO CONOCIDO en `sandbox/resultados/` — NO limpiar
+
+El ejecutor externo entregó T01 **triplicado bajo tres nombres**, con dos contenidos distintos y seis
+archivos. Verificado por hash, 15 sep 2026:
+
+| sha256 (16) | bytes | nombres |
+|---|---|---|
+| `ea40cb4bfd19c5ff` | 351.868 | `T01_piso_decaimiento.csv`, `T01_piso_decaimiento_2026-09-15.csv`, `T01_piso_decaimiento_20260915.csv` |
+| `d4368548c7ce3f0b` | 232 | `T01_piso_decaimiento.txt`, `T01_piso_decaimiento_2026-09-15.txt`, `T01_piso_decaimiento_20260915.txt` |
+
+> **No se borra ninguno.** Los tres nombres son parte de la procedencia de la entrega: documentan cómo nombró
+> sus artefactos el ejecutor externo, y esa forma de nombrar es un dato sobre el instrumento. Borrar dos
+> copias "por limpieza" destruiría la evidencia de que hubo tres, y con ella la posibilidad de detectar que el
+> ejecutor duplica salidas. **El contenido es bit a bit el mismo: no hay conflicto que resolver, hay un hecho
+> que conservar.**
+
+Recordatorio de estado: **T01 sigue sin cruzar.** Es hipótesis, no dato, y ninguno de estos seis archivos
+cuenta para el proyecto hasta pasar los cinco pasos de la REGLA DE CRUCE.
