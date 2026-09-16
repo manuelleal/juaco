@@ -1,0 +1,37 @@
+[16:42:40 +    0.0s] ARRANQUE Etapa 3 sobre v9. semillas 1..20, Pool(14).
+[16:42:40 +    0.0s] sha preregistro 5a2af284ee73ae76  script 2622b3097416a4fa  v9g e7021992c857d244  v9 d3b72fb8819fbe8e
+[16:42:40 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 3716:
+[16:42:40 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[16:42:40 +    0.3s]     3716 "C:\Python314\python.exe" experimentos/etapa3_v9/corre_etapa3_v9.py
+[16:42:40 +    0.5s] ETAPA 1/4 — K identidades (24)...
+[16:43:04 +   24.6s]   K AB: 21/21
+[16:43:04 +   24.6s]   K sonda: 3/3
+[16:43:04 +   24.6s] ETAPA 2/4 — 120 corridas (G: 3 reglas x 20, T=200k; VD: 3 escenarios x 20)...
+[16:43:44 +   64.5s]           30/120
+[16:44:05 +   85.4s]           60/120
+[16:44:18 +   99.0s]           90/120
+[16:44:31 +  111.7s]           120/120
+[16:44:31 +  111.7s] ETAPA 3/4 — analisis.
+[16:44:31 +  111.7s]   K cobertura de primer encuentro (20/20 con >=8 de 10, xor >=10 de 12): {'px0': 20, 'azar': 20, 'xor01': 20} -> OK
+[16:44:31 +  111.7s] 
+[16:44:31 +  111.7s]   VD residuo mediano E1  : 0.0067 [0.0000, 0.0179]   max E1 0.0202 [0.0095, 0.0392]
+[16:44:31 +  111.7s]   VD residuo mediano E2J : 0.2028 [0.1805, 0.4968]
+[16:44:31 +  111.7s]   VD residuo mediano E2K : 0.6342 [0.2079, 1.2063]
+[16:44:31 +  111.7s]   VD residuo mediano px0 : 1.4059 [0.3942, 3.1408]
+[16:44:31 +  111.7s]   VD1 E1 residuo max < 0.01 en 20/20: REFUTADA  (1/20)
+[16:44:31 +  111.7s]   VD2 E1<E2J en 20/20, E2J<E2K en 20/20 (>=15 cada una): SOSTENIDA
+[16:44:31 +  111.7s]   VD3 px0 > E2K en 18/20 (>=15): SOSTENIDA
+[16:44:31 +  111.8s]   truncaciones (n_techo mediana): E1 0, E2J 0, E2K 0, px0 0, azar 0, xor01 0
+[16:44:31 +  111.8s] 
+[16:44:31 +  111.8s]   px0   valor (signo) 0.800 [0.600, 1.000]   conducta BA_pb 0.798 [0.542, 0.993]   mordidas 1er encuentro: comida 0.70 (n=100), veneno 0.15 (n=100)   alcance W=0: 0.00   splits 30  muertes 266
+[16:44:31 +  111.8s]   azar  valor (signo) 0.500 [0.300, 1.000]   conducta BA_pb 0.497 [0.296, 0.912]   mordidas 1er encuentro: comida 0.48 (n=100), veneno 0.47 (n=100)   alcance W=0: 0.00   splits 56  muertes 293
+[16:44:31 +  111.8s]   xor01 valor (signo) 0.438 [0.188, 0.688]   conducta BA_pb 0.450 [0.143, 0.677]   mordidas 1er encuentro: comida 0.38 (n=160), veneno 0.49 (n=80)   alcance W=0: 0.00   splits 59  muertes 234
+[16:44:31 +  111.8s] 
+[16:44:31 +  111.8s]   G1 valor: px0 0.800 (>=0.65), azar 0.500 (en [0.35,0.65]), px0>azar 19/20 (>=14): SOSTENIDA
+[16:44:31 +  111.8s]   G2 conducta 1er encuentro: px0 0.798 (>=0.55), azar 0.497 (en [0.42,0.58]), px0>azar 18/20 (>=14): SOSTENIDA
+[16:44:31 +  111.8s]   G3 frontera XOR (sin voto): xor 0.438 (<=0.60), xor<px0 19/20 (>=14): SOSTENIDA
+[16:44:31 +  111.8s] 
+[16:44:31 +  111.8s] VEREDICTO etapa3_v9: K_identidad=True K_cobertura=True VD1=False VD2=True VD3=True G1=True G2=True G3_sin_voto=True ETAPA3_CERRADA=True
+[16:44:31 +  111.8s] ETAPA 4/4 — escritura.
+[16:44:31 +  111.9s] datos -> etapa3_v9_20260916_164240.json  sha256_16 = 526e6c0cac66975c
+[16:44:31 +  111.9s]          etapa3_v9_20260916_164240.csv  sha256_16 = cf6ad4072b6c9114

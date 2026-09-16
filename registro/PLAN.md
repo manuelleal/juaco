@@ -10,11 +10,13 @@
 > 5. ✅ **Etapa 2 CERRADA**, también en conducta: frontera hambre–supervivencia y **v9 = v8 + memoria de trabajo
 >    de rechazo** (confirmatorio en semillas 21–40 y examen 20/20; tag `v9-tronco`).
 >
-> **Siguiente, en la escalera del brief:** cerrar la **Etapa 3** sobre v9. Son dos partes:
-> - la versión dura, revisando antes su preregistro, que se escribió para v6;
-> - la generalización **en conducta** al primer encuentro.
+> 6. ✅ **Etapa 3 CERRADA sobre v9**, en valor y en **conducta al primer encuentro**, con una característica
+>    lineal. XOR no generaliza. La versión dura mide la degradación por interferencia.
 >
-> Después, la Etapa 4. Pendiente sobre v9: re-correr 3T y 2K-bis.
+> **Siguiente, en la escalera del brief: Etapa 4, memoria persistente** (borrar el mundo, matar el cuerpo,
+> reproducirse; memoria cero, parcial o heredada).
+>
+> Pendiente sobre v9: re-correr 3T y 2K-bis. Abierto: frontera no lineal (XOR) y O7.
 >
 > Cola, sin fecha: 2P (política bajo hambre); A5 corregida (recuperación espontánea estructural); versión dura
 > de Etapa 3; 3F (fusión).

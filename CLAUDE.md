@@ -82,8 +82,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     - Explora lo temido con hambre para poder revertir; la frontera está medida y `hb = 2` es el óptimo.
     - Ya no se queda atado a lo rechazado: memoria de trabajo, veneno 21% → 9.5%, menos muertes, confirmado en
       semillas 21–40.
-  - **3 generalización A MEDIAS:** falta la versión dura (preregistrada para v6; revisar para v9 antes de correr) y
-    la generalización en conducta al primer encuentro.
+  - **3 generalización CERRADA (día 4, v9)** (`experimentos/etapa3_v9/`, datos `etapa3_v9_20260916_164240`).
+    - Con una regla lineal, patrones nunca vistos: valor 0.80 frente a 0.50 del control.
+    - **Conducta al primer encuentro:** muerde comida nueva 70% y veneno nuevo 15% (control 48/47), 18–19/20
+      semillas.
+    - XOR no generaliza (0.44).
+    - La versión dura cuantifica la degradación por solapamiento (0.007 → 0.20 → 0.63 → 1.41).
   - 4 memoria persistente, parcial.
 - **ERR-14, 15 y 16 (día 4, tarde):**
   - ERR-14: banda de validación más estrecha que el ruido de Poisson.

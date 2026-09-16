@@ -1929,3 +1929,73 @@ lo largo de 100.000 pasos, y la mide "por visita". **La conducta al primer encue
 - **G2:** conducta `px0` ≥ 0.55 y por encima de `azar` en ≥ 14/20.
 
 G3 (XOR) y VD se reportan sin bloquear el cierre.
+
+### ETAPA 3 sobre v9 — CORRIDA. **G1 y G2 SOSTENIDAS: LA ETAPA 3 SE CIERRA** (en valor y en conducta)
+
+**Procedencia**
+- Instrumentos commiteados antes de correr (`eac1727`): `organismo_v9g.py` `e7021992c857d244`, derivado de v9
+  congelado.
+- Datos `datos/etapa3_v9_20260916_164240.json` (`526e6c0cac66975c`), `.csv` (`cf6ad4072b6c9114`) y `.log`.
+- 120 corridas más 24 controles.
+- Humo declarado: semilla 4, T=20000, fuera del diseño.
+
+**K (instrumento):** `v9g('AB')` ≡ v9 21/21; con sonda final 3/3; cobertura del primer encuentro 20/20 en los tres
+mundos.
+
+**Generalización, sobre los patrones de test, nunca vistos antes del primer encuentro:**
+
+| mundo | valor a priori (exactitud de signo) | **conducta al primer encuentro** (`BA_pb`) | mordidas reales al primer encuentro | pareado frente a `azar` |
+|---|---|---|---|---|
+| **`px0` (lineal)** | **0.800** [0.60, 1.00] | **0.798** [0.54, 0.99] | **comida 70% · veneno 15%** (n = 100 + 100) | valor **19/20**, conducta **18/20** |
+| `azar` (control) | 0.500 [0.30, 1.00] | 0.497 | comida 48% · veneno 47% | — |
+| `xor01` (no lineal) | **0.438** [0.19, 0.69] | 0.450 | comida 38% · veneno 49% | por debajo de `px0` en 19/20 |
+
+- **G1 SOSTENIDA:** 0.800 ≥ 0.65; `azar` 0.500 dentro de [0.35, 0.65]; 19/20.
+- **G2 SOSTENIDA:** 0.798 ≥ 0.55; `azar` 0.497 dentro de [0.42, 0.58]; 18/20.
+- **G3 (sin voto) SOSTENIDA:** XOR 0.438 ≤ 0.60 y por debajo de `px0` en 19/20.
+  - Además queda **por debajo del azar**: los vecinos por código de un patrón XOR tienden a tener la valencia
+    contraria. Es anti-generalización medible, no sólo ausencia.
+- Alcance (W = 0 exacto en test): 0 en los tres mundos. Truncaciones: 0 en todos.
+
+**Versión dura (preregistrada el día 3, adaptada a v9):**
+
+| escenario | residuo nominal mediano |
+|---|---|
+| E1 | 0.0067 |
+| E2J (D∩B = 1) | **0.203** |
+| E2K (D∩B = 2) | **0.634** |
+| mundo `px0` (10 estímulos) | **1.406** |
+
+- **VD2 SOSTENIDA:** E1 < E2J en 20/20 y E2J < E2K en 20/20.
+- **VD3 SOSTENIDA:** `px0` > E2K en 18/20.
+
+**Primera medida de cuánto degrada la interferencia la regla nominal de generalización:** crece ~×3 por cada celda
+compartida y ~×2 más con 10 estímulos.
+
+**VD1 REFUTADA (residuo máximo en E1 < 0.01: sólo 1/20), con la causa diagnosticada.**
+- En E1, el residuo máximo por semilla es **exactamente** `|W_B + 3|` (0.0095 a 0.0392). Con los `W` reales, la
+  fórmula es exacta (residuo máximo **4.4e-16**, la identidad del día 3).
+- La diferencia con el día 3 (v6: 5.9e-3) es que **en v9 `W_B` converge menos**: −2.96 a −2.99, mediana
+  `|W_B+3|` = 0.020. La memoria de rechazo hace que v9 muerda menos veneno, y hay menos muestras de B.
+- **Error de predicción mío:** arrastré el umbral de v6 sin considerar que el órgano nuevo cambia la exposición al
+  veneno. Es el patrón de ERR-06/08 ("asumir que todo se comporta igual"). No produjo ninguna medición falsa.
+- **No bloquea el cierre**, porque VD no decidía; VD2 y VD3, que miden la degradación, se sostienen.
+
+### ETAPA 3 — **CERRADA** con v9
+
+> **Con una característica lineal (un píxel), v9 asigna valor a patrones que nunca ha visto (acierto 0.80 frente
+> a 0.50 del control) y ACTÚA según ese valor en el primer encuentro: muerde la comida nueva el 70% de las veces y
+> el veneno nuevo el 15%, frente a 48% y 47% en el control.**
+> **Con una característica no lineal (XOR) no generaliza.** La generalización vive en el solapamiento de códigos
+> de una proyección aleatoria, y la interferencia la degrada de forma medible.
+
+Vocabulario (regla 8): "generaliza" con criterio preregistrado sostenido. **No** es abstracción, ni transferencia
+entre dominios, ni aprendizaje de reglas no lineales.
+
+**Etapas del brief:** 1 cerrada · **2 cerrada** (valor y conducta) · **3 cerrada** (valor y conducta, característica
+lineal) · 4 memoria persistente, parcial · 5 en adelante, pendientes.
+
+**Pendiente, dicho explícitamente:**
+- 3T y 2K-bis sobre v9;
+- la frontera no lineal (XOR) como problema abierto de representación;
+- O7.
