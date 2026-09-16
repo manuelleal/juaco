@@ -1908,3 +1908,24 @@ Etapa 2: **valor cerrado (día 2, 2G), conducta cerrada (día 4, v9).**
 - 3T y 2K-bis eran sobre v8 y **no se han re-corrido sobre v9**.
 - ERR-16 deja sin probar la duración mínima de la memoria.
 - El órgano O7 ("qué hacer sin objetivo") queda abierto.
+
+### PREREGISTRO — Etapa 3 sobre v9: versión dura y generalización EN CONDUCTA. Escrito, SIN correr
+
+`experimentos/etapa3_v9/PREREGISTRO_etapa3_v9.md`, **sha `5a2af284ee73ae76`**. Está commiteado antes de construir
+`organismo_v9g.py`.
+
+**Lo que se detectó al diseñar.** La "precisión 0.683" de 3K mezcla la generalización con lo aprendido después, a
+lo largo de 100.000 pasos, y la mide "por visita". **La conducta al primer encuentro nunca se midió.**
+
+**Diseño**
+- **Versión dura (VD):** residuo de la fórmula nominal en E1 (control), E2J, E2K y el mundo de 20 patrones.
+  Predicción: crece con el solapamiento.
+- **Generalización (G):** mundo de 20 patrones de peso 3 con reglas `px0` (lineal), `azar` (control) y `xor01`
+  (frontera). Se mide el valor a priori y la **probabilidad de morder al primer encuentro** con los patrones de
+  test.
+
+**Decide el cierre:**
+- **G1:** valor `px0` ≥ 0.65 y por encima de `azar` en ≥ 14/20.
+- **G2:** conducta `px0` ≥ 0.55 y por encima de `azar` en ≥ 14/20.
+
+G3 (XOR) y VD se reportan sin bloquear el cierre.
