@@ -1442,3 +1442,43 @@ construir `organismo_v8.py`.
 - **6:** la regresión de v6.
 
 **Si todo pasa, v8 se congela como tronco** (tag `v8-tronco`), por decisión de dirección tomada antes de correr.
+
+### EXAMEN DE CONGELACIÓN DE v8 — CORRIDO. **Cumple el criterio v3 completo. v8 SE CONGELA COMO TRONCO**
+
+**Procedencia**
+- Instrumentos commiteados antes de correr (`816014c`): `organismo_v8.py` `dca7d5c3a162f5d4`, `bateria_v8.py`
+  `8de16b2e97de8312` y `construye_v8.py` `bedccdfd4b3bcb11`.
+- `python bateria_v8.py 20 --log`: datos `datos/examen_v8_20260916_145204.json` (`3a469ca295f1d212`) y `.log`.
+- **Se declara:** antes hubo un ensayo de 2 semillas sin `--log`, sólo para cazar errores del script.
+
+| criterio | resultado |
+|---|---|
+| **5** identidad | `v8 ≡ v7e(lam=0.05)` **42/42**; `v8(lam=0) ≡ v7` **42/42** |
+| **1** científicos | **20/20 en las seis etapas** |
+| **2** `celdas ≤ 45` | 20/20 en las seis y en E2I-misma (máximo 39, en E2L) |
+| **3** control negativo | **0/20** lo pasan; `W_A` entre −2.09 y −1.52. Falla por identidad de códigos, no por colapso a 0 |
+| **4a** identidad, sin valor de evidencia | 140/140 |
+| **4b** sin conflicto no hay división | **SOSTENIDA**. Guardas: E1 sin conflicto 20/20, E2L con conflicto 20/20. 61 corridas dividen, **0 violaciones** |
+| **4c** C∩B=3, misma valencia | **SOSTENIDA**. Guarda 20/20; **0 divisiones en 20/20**; `W_C = −3.00` (mediana), con 17 mordidas de C en la segunda mitad |
+| **4d** disparo anclado a la causa | E1 sin divisiones 20/20; E2/E2I/E2J/E2K sólo en t ≥ 50k, 20/20; E2L termina antes de 25k, 20/20 |
+
+**Lectura honesta.**
+- **En las seis etapas v8 no trunca nunca: `techo = 0/20` en cada una.** Ahí v8 **es** v7, por la demostración de
+  ERR-11 y por S0. Este examen no distingue v8 de v7 salvo en 4b y 4c. **Lo que distingue a v8 es la prueba de
+  coste de esta mañana:** donde el techo muerde, v7 no reaprende y v8 sí.
+- **4c es la predicción pendiente del día 3**, que ahora sale sostenida. Tiene dos partes:
+  - el solapamiento total entre estímulos de **misma** valencia **no** dispara la división;
+  - C **hereda** el valor de B sin una sola experiencia propia: generalización por identidad de código, con W
+    exacto.
+- **4b:** en 61 corridas que dividen, ninguna lo hizo sin conflicto previo. La predicción era derivada y podía caer.
+  Queda **acotada a estas etapas** (ver su alcance en el preregistro).
+
+**Congelación (decisión de dirección tomada antes de correr, ejecutada tras la regresión posterior):**
+- `organismo_v8.py` y `bateria_v8.py` entran en `CONGELADOS` de `manifiesto.py`. Ahora son 6 archivos.
+- Tag git `v8-tronco`.
+- **v6 sigue congelado como referencia**, con `bateria.py`.
+- `organismo_v7.py` **no se toca**: sigue siendo la instrumentación inerte de la que dependen ocho archivos.
+
+**Regresión posterior (criterio 6):** `bateria.py 20` **PASA 20/20 en las cinco etapas** (429 s, 14:55–15:02).
+
+**v8 es el tronco desde el 16 sep 2026.** Sigue la **fase 4: 3T confirmatorio sobre v8.**

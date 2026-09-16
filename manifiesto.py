@@ -15,6 +15,9 @@ CONGELADOS = {
     './organismo/bateria.py':       '1add9e6f85e97978',
     './organismo/organismo_v7c.py': '212f0746d52577c7',
     './organismo/bateria_v7c.py':   '21b97967e48ed971',
+    # v8 = TRONCO desde el 16 sep 2026 (examen criterio v3 20/20, datos/examen_v8_20260916_145204.json)
+    './organismo/organismo_v8.py':  'dca7d5c3a162f5d4',
+    './organismo/bateria_v8.py':    '8de16b2e97de8312',
 }
 
 def h16(ruta):
@@ -49,4 +52,4 @@ if __name__ == '__main__':
     if roto:
         print('\n*** ALERTA: un archivo congelado cambio de hash. Detenerse y averiguar por que.')
         sys.exit(1)
-    print('\nLos 4 archivos congelados estan intactos.')
+    print(f'\nLos {len(CONGELADOS)} archivos congelados estan intactos.')

@@ -8,16 +8,20 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - `registro/REGISTRO_etapas_1_2.md` — historial completo, criterios preregistrados, resultados, errores. LEER PRIMERO.
 - `registro/HANDOFF.md` — narrativa completa de lo hecho y por qué.
 - `registro/PLAN.md` — qué sigue y cómo.
-- `organismo/organismo_v6.py` — organismo congelado (hash 5f38f83cf49248a3). `organismo/bateria.py` — regresión.
-- `organismo/organismo_v7c.py` — CANDIDATO v7 = v6 + 2L plasticidad estructural (212f0746d52577c7). `bateria_v7c.py` (21b97967e48ed971).
-  Se congela como v7 SOLO si pasa `python3 bateria_v7c.py 20` en este repo.
+- **`organismo/organismo_v8.py` — EL TRONCO desde el 16 sep 2026** (dca7d5c3a162f5d4, tag `v8-tronco`).
+  v8 = v6 + 2L plasticidad estructural + drenaje de la parte común de Wp/Wn (`lam=0.05`). Pasó la prueba de coste
+  y el examen criterio v3, 20/20. `organismo/bateria_v8.py` (8de16b2e97de8312) es su examen y su regresión.
+- `organismo/organismo_v6.py` — tronco anterior, congelado como referencia (5f38f83cf49248a3). `organismo/bateria.py`.
+- `organismo/organismo_v7.py` — instrumentación inerte de v7 (3db0475ef0ea95ce). **NO sobrescribir nunca**: de él
+  dependen bateria_v7/v7b, los controles de inercia de BUG-01 y el ancla del sandbox. v7c/bateria_v7c: históricos.
 - `datos/` — CSV/JSON de cada experimento. `datos/baseline_v6.csv` es el baseline de referencia.
 - **`sandbox/` (fuera del repo, en `JUACO/sandbox/`) es de un ejecutor externo sin juicio; sus resultados son
   hipótesis, nunca datos.** Regla de cruce completa en `sandbox/README.md` y en el registro: nada entra aquí
   sin verificar hashes, reproducir en repo, pasar `bateria.py 20` y `manifiesto.py`, y etiquetar el origen.
 
 ## Reglas de trabajo (no negociables)
-1. Antes de tocar nada: `cd organismo && python3 bateria.py 6`. Debe salir todo PASA. Si no, detenerse.
+1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v8.py 6` (tronco).
+   Debe salir todo PASA (y `manifiesto.py --check` intacto). Si no, detenerse.
 2. Un cambio por experimento. Cada experimento es una hipótesis con: qué cambia, predicción numérica,
    criterio de refutación y métricas — escritos ANTES de correr, en el registro.
 3. Nunca recalibrar un parámetro a posteriori para que el criterio pase. Si el criterio estaba mal, se registra
@@ -38,9 +42,17 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
 ## Estado (día 4 — 16 sep 2026). Manda sobre el bloque del día 3 cuando se contradigan
-- **v6 sigue siendo el tronco. v7 NO está congelado.** Hay una copia externa del repo
-  (`PROYECTOS/Nueva carpeta/bundle`) que dice lo contrario: es **falsa** y no se fusiona nunca
+- **v8 ES EL TRONCO (tag `v8-tronco`).** Pasos 2 y 3 fundidos por dirección: examen criterio v3 20/20
+  (`experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md`, datos `examen_v8_20260916_145204`).
+  - 4c: C∩B=3 de misma valencia → **0 divisiones**, y C hereda `W=−3.00` sin experiencia propia.
+  - 4b: sin conflicto no hay división, 61/61.
+  - En las seis etapas v8 no trunca nunca (ahí es v7); lo que lo distingue es la prueba de coste.
+- **v7 NO se congeló nunca como tronco y `organismo_v7.py` no se toca.** Hay una copia externa del repo
+  (`PROYECTOS/Nueva carpeta/bundle`) que afirma "v7 congelado": es **falsa** y no se fusiona nunca
   (`registro/AUDITORIA_copia_antigravity_20260916.md`).
+- **ERR-12:** "ley de disparo `err>0.6`, 320/320" era una **identidad del código** (la división compara la misma
+  cantidad), y "con solapamiento 0 no puede disparar" es **falso**: E2 divide con A∩B=0 por conflicto temporal.
+  No citar esa concordancia como evidencia.
 - **La prueba de AHORRO del día 3 SÍ corrió** y su lectura es nula por ERR-11.
 - **Paso 1, prueba de coste con el techo mordiendo: PASA**, con 14/14 predicciones preregistradas
   (`experimentos/bug01/PREREGISTRO_coste_techo.md`, datos `coste_techo_20260916_142116`).
@@ -51,8 +63,7 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   9/9 (derivado antes y medido 20/20).
 - **Corrección de 2K-bis:** el rango dinámico explica el colapso a W=0 y la capacidad útil (M_max 4 → 8), no el
   techo N* a 20k (igual en 19/20).
-- **Siguiente, en orden:** batería completa con el arreglo (cubierta en lo esencial por exp. 2b P2c) → examen
-  de congelación con `err > 0.6`, guardando `err_max` por corrida → 3T confirmatorio.
+- **Siguiente:** fase 4, **3T confirmatorio sobre v8**.
 - **Primitivo nuevo:** "mordida del techo" = **truncación** del clip, no el valor del canal. Tocar 3.0 no es morder.
 
 ## Estado (día 3 — repo en Claude Code, 15 sep 2026)
@@ -119,7 +130,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 ```
 # IMPORTANTE en Windows: la consola es cp1252 y revienta al imprimir ≈ → ∩ (UnicodeEncodeError).
 PYTHONIOENCODING=utf-8 python bateria.py 6     # (desde organismo/) regresión rápida
-PYTHONIOENCODING=utf-8 python bateria.py 20    # regresión completa
+PYTHONIOENCODING=utf-8 python bateria.py 20    # regresión completa de v6 (referencia)
+python bateria_v8.py 6                         # (desde organismo/) regresión rápida del TRONCO v8, ~2 min
+python bateria_v8.py 20 --log                  # examen completo de v8, log y json en datos/
 python organismo/bateria_v7.py 20              # examen de congelación de v7 (ya trae reconfigure utf-8)
 
 python experimentos/run_etapa.py --etapa E1 --semillas 20        # paralelo, ~13 s
