@@ -2265,3 +2265,40 @@ Diagnóstico desde el JSON (`scratchpad`, sin simular), regla 5:
   de B: v10 ≤ **la mitad** de v9 (pareado en recuento) y ≤ 9/20; (c) v10 peor por > 0.5 en ≤ **2/20**. Se corre sólo
   si dirección decide seguir; si pasa, v10 se congela.
 - Se declara que los datos de 21–40 se vieron antes de escribir (a)–(c).
+
+### JUACO-EVO — evolución del organismo guiada por LLM, con control ciego. GENERACIÓN 1
+
+**Origen.** Dirección pidió liberar al organismo: *"un sistema evolutivo de auto-crecimiento que nos deje el código de su
+evolución… usar técnicas de los LLM para que evolucione más rápido"*. Traducción operativa (decisión de Claude, delegada):
+el genoma es el código; un LLM propone mutaciones con hipótesis; un evaluador automático con currículo fijo y semillas
+retenidas selecciona; una rama ciega es el control. Antecedentes declarados: AlphaEvolve, Darwin Gödel Machine,
+ShinkaEvolve. Preregistro `experimentos/evo/PREREGISTRO_evo.md` (`684e5da82227e04d`, commit `e057b3a`), instrumentos
+commiteados antes de seleccionar (`1a6d177`), candidatos con hipótesis commiteados antes de evaluar (`d233b80`).
+
+**Padre (gen 0), `organismo_v10m`:** válido; retención R = 0.3 (semillas 1–10) y 0.4 (retenidas 11–20).
+
+**Generación 1** (4 mutaciones LLM en clases distintas + 4 ciegas; `experimentos/evo/LINAJE.md`):
+- **Ganador: `llm_2` (regla estructural).** Sustituye el disparo `err > θ` por **conflicto de signo** (una celda con
+  valor consolidado recibe refuerzo contrario), la hija nace **ciega fuera de los píxeles del patrón nuevo**, **la madre
+  no se mueve** y el valor se **fisiona** (la hija se lleva el signo nuevo, la madre conserva el viejo).
+  **R = 1.0 en 1–10 y 1.0 en 11–20** (padre 0.3 / 0.4), con E1 bit-idéntico al padre, E2 10/10, E2L en 3 divisiones,
+  C y D aprendidos 10/10, y sigue dividiendo en la ausencia (3–5). Predijo 0.8–0.9. Auditoría del diff: retiene por el
+  mecanismo declarado. **Es hipótesis del archivo, no tronco.**
+- `llm_3` (repaso por celda con puerta de edad) también R = 1.0, con estado nuevo declarado; perdió el empate por muertes.
+- `llm_1` retuvo 0.5 **a costa de no aprender D** (H3 la invalidó; su autor lo había declarado como razón equivocada).
+- `llm_4` sin efecto. Ciegas: 0.3–0.4.
+
+**ERR-18 — el evaluador podía ser explotado por constantes de constitución.** `ciega_4` subió la energía tras morir de
+0.6 a 1.06: muertes 127 → 96 (S 0.36 → 0.52) sin aprender nada distinto, y con R = 0.4 la regla mecánica lo aceptaba.
+Corregido antes de continuar (enmienda 1 del preregistro): operador ciego v1 con constitución y mundo protegidos,
+misma prohibición a los LLM, linaje ciego rehecho desde el padre original. Es el patrón del punto 15 del brief ("explotar
+el entorno"), esta vez atrapado por la auditoría y no por el criterio.
+
+**Lo que ya dice la generación 1 sobre las preguntas preregistradas:**
+- **P1 (aceleración):** el linaje LLM alcanzó R ≥ 0.8 en **una** generación; el linaje ciego se está corriendo (v1).
+- **P2 (interpretabilidad):** el ganador tenía mecanismo e hipótesis escritos antes; 12 líneas.
+- **P4 (hackeo):** dos razones equivocadas detectadas (una por criterio, una por auditoría).
+
+**Advertencia que viaja con esto:** que `llm_2` retenga 10/10 en un mundo de cuatro estímulos **no** dice qué pasa con
+veinte. Cada conflicto de signo fabrica una hija ciega; el pool de 90 celdas puede agotarse. Es la primera pregunta de
+la generación 2 y del futuro confirmatorio.

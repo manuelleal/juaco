@@ -95,3 +95,24 @@ preregistro va en el commit que lo introduce.
 **Precisión del operador ciego (v0, escrita antes de correr):** sólo escala constantes de coma flotante del cuerpo de
 `run()` por un factor `U(0.5, 2)`; la inversión de comparaciones queda para una versión posterior. Se declara para que
 el control no se lea como más débil o más fuerte de lo que es.
+
+---
+
+## ENMIENDA 1 (16 sep 2026, 18:58, tras la generación 1; ERR-18) — el texto de arriba no se modifica
+
+**Lo que pasó.** El candidato ciego `ciega_4` subió la energía tras morir de 0.6 a 1.06 y con eso bajó las muertes de
+E1 (S de 0.36 a 0.52) **sin cambiar nada del aprendizaje**. Con R=0.4 (una semilla más que el padre) la regla mecánica lo
+habría aceptado. Es un hueco del evaluador: **S depende de constantes de constitución y de mundo que los operadores
+podían mutar**.
+
+**Corrección, decidida antes de continuar:**
+1. `muta_ciega` pasa a **v1**: quedan protegidas las constantes de constitución y de mundo (`E=.6`, `E=1.0`, tope 1.5,
+   `costo`, renovación `.003`); base del RNG 8000. Los operadores LLM reciben la misma prohibición por escrito.
+2. **El linaje ciego v0 se anula** (sus cuatro candidatos quedan en `gen1/` y en `LINAJE.md` como registro) y **se
+   rehace desde el padre original** con v1: carpetas `gen{g}c/`, hasta 6 generaciones o R ≥ 0.8 (P1).
+3. El linaje LLM continúa desde `gen1/llm_2` (sin cambio: no tocó constitución).
+4. Se anota como intento de hackeo detectado (P4).
+
+**Precisión de la generación 2 en adelante (LLM):** con R saturado en 1.0, la regla §3 selecciona por `S + E − C`
+(≥ +0.05) manteniendo R = 1.0 y R en retenidas ≥ 0.9. Se declara que eso convierte a la generación 2 en una
+generación de **supervivencia y economía**, no de retención.

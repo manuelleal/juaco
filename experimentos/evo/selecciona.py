@@ -20,7 +20,7 @@ def log(msg=""):
 
 
 if __name__ == '__main__':
-    gen = int(sys.argv[1]); padre = os.path.abspath(sys.argv[2])
+    gen = sys.argv[1]; padre = os.path.abspath(sys.argv[2])   # etiqueta de generacion: '1', '2', '1c' (linaje ciego)...
     pt = json.load(open(sys.argv[3], encoding='utf-8')); ph = json.load(open(sys.argv[4], encoding='utf-8'))
     Rp, SECp, Rph = pt['R'], pt['SEC'], ph['R']
     log(f"gen{gen}: padre {os.path.basename(padre)} ({h16(padre)}) R={Rp} SEC={SECp} R_retenidas={Rph}")
