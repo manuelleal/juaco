@@ -8,9 +8,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - `registro/REGISTRO_etapas_1_2.md` — historial completo, criterios preregistrados, resultados, errores. LEER PRIMERO.
 - `registro/HANDOFF.md` — narrativa completa de lo hecho y por qué.
 - `registro/PLAN.md` — qué sigue y cómo.
-- **`organismo/organismo_v8.py` — EL TRONCO desde el 16 sep 2026** (dca7d5c3a162f5d4, tag `v8-tronco`).
-  v8 = v6 + 2L plasticidad estructural + drenaje de la parte común de Wp/Wn (`lam=0.05`). Pasó la prueba de coste
-  y el examen criterio v3, 20/20. `organismo/bateria_v8.py` (8de16b2e97de8312) es su examen y su regresión.
+- **`organismo/organismo_v9.py` — EL TRONCO desde el 16 sep 2026 (tarde)** (d3b72fb8819fbe8e, tag `v9-tronco`).
+  v9 = v8 + **memoria de trabajo de rechazo** (`memoria_rechazo=20`): lo que la boca acaba de rechazar deja de ser
+  objetivo de las patas durante 20 pasos. Pasó un confirmatorio en semillas nuevas (21–40) y el examen criterio v3,
+  20/20. `organismo/bateria_v9.py` (c6496196990f6774) es su examen y su regresión.
+- `organismo/organismo_v8.py` — tronco anterior, congelado como referencia (dca7d5c3a162f5d4, tag `v8-tronco`):
+  v6 + 2L + drenaje de la parte común de Wp/Wn (`lam=0.05`). `organismo/bateria_v8.py` (8de16b2e97de8312).
 - `organismo/organismo_v6.py` — tronco anterior, congelado como referencia (5f38f83cf49248a3). `organismo/bateria.py`.
 - `organismo/organismo_v7.py` — instrumentación inerte de v7 (3db0475ef0ea95ce). **NO sobrescribir nunca**: de él
   dependen bateria_v7/v7b, los controles de inercia de BUG-01 y el ancla del sandbox. v7c/bateria_v7c: históricos.
@@ -20,7 +23,7 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   sin verificar hashes, reproducir en repo, pasar `bateria.py 20` y `manifiesto.py`, y etiquetar el origen.
 
 ## Reglas de trabajo (no negociables)
-1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v8.py 6` (tronco).
+1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v9.py 6` (tronco).
    Debe salir todo PASA (y `manifiesto.py --check` intacto). Si no, detenerse.
 2. Un cambio por experimento. Cada experimento es una hipótesis con: qué cambia, predicción numérica,
    criterio de refutación y métricas — escritos ANTES de correr, en el registro.
@@ -73,9 +76,22 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     corregido **antes** de verlas: E 20/20 y 14/14, `sep` 3.99, `lift` 0.35.
   - **ERR-13 (el comparador distinguía `0.0` de `-0.0`) queda CERRADO:** el SÍ ya no depende de esa corrección.
   - Alcance: memoria de una mordida.
-- **Etapas del brief (punto 16):** 1 cerrada; 2 cerrada en valor (falta 2P, conducta bajo hambre);
-  **3 generalización A MEDIAS** (falta la versión dura, preregistrada para v6: hay que revisarla para v8 antes de
-  correr); 4 memoria persistente, parcial.
+- **Etapas del brief (punto 16):**
+  - 1 cerrada.
+  - **2 CERRADA en valor (día 2) y en conducta (día 4, v9).**
+    - Explora lo temido con hambre para poder revertir; la frontera está medida y `hb = 2` es el óptimo.
+    - Ya no se queda atado a lo rechazado: memoria de trabajo, veneno 21% → 9.5%, menos muertes, confirmado en
+      semillas 21–40.
+  - **3 generalización A MEDIAS:** falta la versión dura (preregistrada para v6; revisar para v9 antes de correr) y
+    la generalización en conducta al primer encuentro.
+  - 4 memoria persistente, parcial.
+- **ERR-14, 15 y 16 (día 4, tarde):**
+  - ERR-14: banda de validación más estrecha que el ruido de Poisson.
+  - ERR-15: línea de azar mal puesta (5% en vez de 9.2%) y "parado" que en realidad era oscilación.
+  - ERR-16: control τ=1 que no podía hacer nada por construcción.
+- **Pendiente sobre v9:** re-correr 3T y 2K-bis (eran de v8); O7 "qué hacer sin objetivo".
+- **Lectura de "órganos" (exploración, día 4):** el órgano que faltaba para decidir dónde ir era **memoria de
+  trabajo**. Vincular valor→movimiento, habituación y exploración por sorpresa no sirvieron tal como se probaron.
 - **Siguiente (sin fijar):** 2P, política bajo hambre; A5 corregida; Etapa 3 versión dura; 3F, fusión. Lo decide
   dirección.
 - **Primitivo nuevo:** "mordida del techo" = **truncación** del clip, no el valor del canal. Tocar 3.0 no es morder.
@@ -145,8 +161,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 # IMPORTANTE en Windows: la consola es cp1252 y revienta al imprimir ≈ → ∩ (UnicodeEncodeError).
 PYTHONIOENCODING=utf-8 python bateria.py 6     # (desde organismo/) regresión rápida
 PYTHONIOENCODING=utf-8 python bateria.py 20    # regresión completa de v6 (referencia)
-python bateria_v8.py 6                         # (desde organismo/) regresión rápida del TRONCO v8, ~2 min
-python bateria_v8.py 20 --log                  # examen completo de v8, log y json en datos/
+python bateria_v9.py 6                         # (desde organismo/) regresión rápida del TRONCO v9, ~2 min
+python bateria_v9.py 20 --log                  # examen completo de v9, log y json en datos/
+python bateria_v8.py 6                         # referencia v8
 python organismo/bateria_v7.py 20              # examen de congelación de v7 (ya trae reconfigure utf-8)
 
 python experimentos/run_etapa.py --etapa E1 --semillas 20        # paralelo, ~13 s

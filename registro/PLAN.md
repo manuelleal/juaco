@@ -7,8 +7,14 @@
 >    (tag `v8-tronco`).
 > 4. ✅ **3T confirmatorio sobre v8: SÍ, y REPLICADO en semillas 21–40.** ERR-13 cerrado.
 >
-> **Siguiente, en la escalera del brief:** cerrar la **Etapa 3 (versión dura)** sobre v8. Primero se revisa su
-> preregistro, escrito para v6, contra lo que v8 cambia, y **sólo después** se corre. Luego 2P y Etapa 4.
+> 5. ✅ **Etapa 2 CERRADA**, también en conducta: frontera hambre–supervivencia y **v9 = v8 + memoria de trabajo
+>    de rechazo** (confirmatorio en semillas 21–40 y examen 20/20; tag `v9-tronco`).
+>
+> **Siguiente, en la escalera del brief:** cerrar la **Etapa 3** sobre v9. Son dos partes:
+> - la versión dura, revisando antes su preregistro, que se escribió para v6;
+> - la generalización **en conducta** al primer encuentro.
+>
+> Después, la Etapa 4. Pendiente sobre v9: re-correr 3T y 2K-bis.
 >
 > Cola, sin fecha: 2P (política bajo hambre); A5 corregida (recuperación espontánea estructural); versión dura
 > de Etapa 3; 3F (fusión).

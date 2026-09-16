@@ -1,0 +1,35 @@
+[16:31:38 +   0.0s] === Batería v9 — CRITERIO v3, 20 semillas, Pool(14) ===
+[16:31:38 +   0.0s] sha organismo_v9 d3b72fb8819fbe8e  bateria_v9 c6496196990f6774  preregistro f68841597adb55d8
+[16:31:38 +   0.1s] ETAPA 1/3 — criterio 5, identidad de instrumentos (42 comparaciones)...
+[16:32:07 +  28.9s]           21/42  (21 idénticas)
+[16:32:21 +  43.4s]           42/42  (42 idénticas)
+[16:32:21 +  43.4s]   v9(memoria=0) == v8   : 42/42
+[16:32:21 +  43.4s] ETAPA 2/3 — 160 corridas (8 etapas x 20 semillas)...
+[16:32:42 +  64.0s]           40/160
+[16:33:03 +  84.6s]           80/160
+[16:33:23 + 104.8s]           120/160
+[16:33:41 + 122.8s]           160/160
+[16:33:41 + 122.8s] ETAPA 3/3 — criterios.
+[16:33:41 + 122.8s] 
+[16:33:41 + 122.8s]   PASA  1 E1        20/20  [venenoQ4<Q1:20/20 W_A≈+1:20/20 W_B≈-3:20/20]
+[16:33:41 + 122.8s]         splits=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  celdas_max=30  techo=0/20
+[16:33:41 + 122.8s]   PASA  1 E2        20/20  [W_A→-3:20/20 W_B→+1:20/20 come B Q4≥50:20/20]
+[16:33:41 + 122.8s]         splits=[6, 6, 5, 3, 5, 5, 3, 6, 3, 5, 3, 3, 5, 6, 6, 5, 5, 5, 6, 3]  celdas_max=36  techo=0/20
+[16:33:41 + 122.8s]   PASA  1 E2I       20/20  [W_C≤-2.5:20/20 W_A≈+1:20/20 W_B≤-2.8:20/20 tasaA Q4≥80%Q2:20/20]
+[16:33:41 + 122.8s]         splits=[0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 0, 0]  celdas_max=33  techo=0/20
+[16:33:41 + 122.8s]   PASA  1 E2J       20/20  [W_D≥0.85:20/20 W_B≤-2.7:20/20]
+[16:33:41 + 122.8s]         splits=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  celdas_max=30  techo=0/20
+[16:33:41 + 122.8s]   PASA  1 E2K       20/20  [W_D≥0.8:20/20 W_B≤-2.4:20/20]
+[16:33:41 + 122.8s]         splits=[5, 3, 3, 5, 2, 4, 3, 5, 4, 2, 2, 3, 5, 4, 4, 2, 3, 2, 2, 3]  celdas_max=35  techo=0/20
+[16:33:41 + 122.8s]   PASA  1 E2L       20/20  [W_A≈+1:20/20 W_B≈-3:20/20 solap→0:20/20]
+[16:33:41 + 122.8s]         splits=[6, 6, 6, 6, 6, 9, 6, 6, 6, 6, 6, 9, 6, 6, 9, 6, 6, 6, 6, 6]  celdas_max=39  techo=0/20
+[16:33:41 + 122.8s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[16:33:41 + 122.8s]   PASA  3 control negativo (A∩B=3 sin plasticidad): 0/20 lo pasan  W_A=[-1.98, -1.8, -1.69, -1.53]
+[16:33:41 + 122.9s]   OK    4a [identidad, NO evidencia] splits<=>err_max>0.6: 140/140  []
+[16:33:41 + 122.9s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 63, violaciones ninguna
+[16:33:41 + 122.9s]   PASA  4c C∩B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 9)
+[16:33:41 + 122.9s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[16:33:41 + 122.9s] 
+[16:33:41 + 122.9s] VEREDICTO bateria_v9: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[16:33:41 + 122.9s] *** v9 CUMPLE EL CRITERIO v3 con 20 semillas. Por el preregistro: CONGELAR v9 como tronco (si pasa tambien el confirmatorio).
+[16:33:41 + 123.0s] datos -> examen_v9_20260916_163138.json  sha256_16 = 9a2c0797bde6d0a5

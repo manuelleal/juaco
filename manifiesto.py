@@ -18,6 +18,9 @@ CONGELADOS = {
     # v8 = TRONCO desde el 16 sep 2026 (examen criterio v3 20/20, datos/examen_v8_20260916_145204.json)
     './organismo/organismo_v8.py':  'dca7d5c3a162f5d4',
     './organismo/bateria_v8.py':    '8de16b2e97de8312',
+    # v9 = TRONCO desde el 16 sep 2026 (confirmatorio semillas 21-40 M0-M6 y examen criterio v3 20/20)
+    './organismo/organismo_v9.py':  'd3b72fb8819fbe8e',
+    './organismo/bateria_v9.py':    'c6496196990f6774',
 }
 
 def h16(ruta):

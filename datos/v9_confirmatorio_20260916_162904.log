@@ -1,0 +1,36 @@
+[16:29:04 +    0.0s] ARRANQUE v9 confirmatorio, semillas 21..40, brazos ['v8', 'v9', 'C1', 'C2'], Pool(14).
+[16:29:04 +    0.0s] sha preregistro f68841597adb55d8  script f0f9d3023d0b291e  v9 d3b72fb8819fbe8e  v9c 8495dbe81e8b5749  v8 dca7d5c3a162f5d4  v8x 976bfe7061456b04
+[16:29:04 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 4728:
+[16:29:04 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[16:29:04 +    0.3s]     4728 "C:\Python314\python.exe" experimentos/v9_memoria_rechazo/corre_v9_confirmatorio.py
+[16:29:05 +    0.5s] ETAPA 1/4 — M0 identidades (54 comparaciones)...
+[16:29:59 +   54.5s]   v9_0_vs_v8  : 42/42
+[16:29:59 +   54.5s]   v9c_vs_v9   : 6/6
+[16:29:59 +   54.5s]   v9_vs_v8x   : 6/6
+[16:29:59 +   54.5s] ETAPA 2/4 — 160 corridas...
+[16:30:20 +   75.9s]           40/160
+[16:30:40 +   96.1s]           80/160
+[16:31:03 +  118.7s]           120/160
+[16:31:22 +  137.5s]           160/160
+[16:31:22 +  137.6s] ETAPA 3/4 — analisis.
+[16:31:22 +  137.6s] 
+[16:31:22 +  137.6s]   E1 v8  veneno  21.50% [16.29,25.12]  comida-sobre  0.31%  sin_obj  0.00%  muertes  143.5  E1ok 20/20  E2ok 0/20  comidaA 2a 156.0
+[16:31:22 +  137.6s]   E1 v9  veneno   9.60% [9.21,10.95]  comida-sobre  0.31%  sin_obj  1.92%  muertes  133.5  E1ok 20/20  E2ok 0/20  comidaA 2a 152.5
+[16:31:22 +  137.6s]   E1 C1  veneno  26.43% [22.79,31.09]  comida-sobre  0.31%  sin_obj  1.78%  muertes  149.0  E1ok 20/20  E2ok 0/20  comidaA 2a 154.5
+[16:31:22 +  137.6s]   E1 C2  veneno  21.50% [16.29,25.12]  comida-sobre  0.31%  sin_obj  0.00%  muertes  143.5  E1ok 20/20  E2ok 0/20  comidaA 2a 156.0
+[16:31:22 +  137.6s]   E2 v8  veneno  21.22% [17.42,28.85]  comida-sobre  1.14%  sin_obj  0.00%  muertes  148.0  E1ok 0/20  E2ok 19/20
+[16:31:22 +  137.6s]   E2 v9  veneno   9.21% [8.24,9.82]  comida-sobre  0.81%  sin_obj  1.93%  muertes  132.5  E1ok 0/20  E2ok 20/20
+[16:31:22 +  137.6s]   E2 C1  veneno  25.18% [20.91,32.13]  comida-sobre  1.36%  sin_obj  1.58%  muertes  150.0  E1ok 0/20  E2ok 19/20
+[16:31:22 +  137.6s]   E2 C2  veneno  21.22% [17.42,28.85]  comida-sobre  1.14%  sin_obj  0.00%  muertes  148.0  E1ok 0/20  E2ok 19/20
+[16:31:22 +  137.6s] 
+[16:31:22 +  137.6s]   M1 efecto (v8 en [16,24], v9 en [8,12], -6pp en >=18/20, E1 y E2): SOSTENIDA  {'E1': {'v8': 21.504, 'v9': 9.603000000000002, 'bajan6': 20, 'mediana_dif': -11.701999999999998}, 'E2': {'v8': 21.223, 'v9': 9.206, 'bajan6': 20, 'mediana_dif': -12.116}}
+[16:31:22 +  137.6s]   M2 muertes combinadas pareadas (mediana <0 y <=0 en >=14/20): SOSTENIDA  mediana -24.0, <=0 en 18/20
+[16:31:22 +  137.6s]   M3 comida E1 2a mitad pareada (mediana >=0): SOSTENIDA  mediana +3.0
+[16:31:22 +  137.6s]   M4 fallback (mediana <5%): SOSTENIDA  {'E1': 1.9249999999999998, 'E2': 1.934}
+[16:31:22 +  137.6s]   M5 no-regresion v9 (E1 >=18/20, E2 >=18/20): SOSTENIDA  E1 20/20, E2 20/20  (v8: E1 20/20, E2 19/20)
+[16:31:22 +  137.6s]   M6 controles (C2 > -2pp; C1 > -3pp; v9 al menos 4pp mas bajo que C1): SOSTENIDA  v9 -11.70, C1 +5.35, C2 +0.00
+[16:31:22 +  137.6s] 
+[16:31:22 +  137.6s] VEREDICTO v9_confirmatorio: M0=True M1=True M2=True M3=True M4=True M5=True M6=True PASA_CONFIRMATORIO=True
+[16:31:22 +  137.6s] ETAPA 4/4 — escritura.
+[16:31:22 +  137.7s] datos -> v9_confirmatorio_20260916_162904.json  sha256_16 = e7a4aaffeb40ab0c
+[16:31:22 +  137.7s]          v9_confirmatorio_20260916_162904.csv  sha256_16 = be479b0cdcf0340a

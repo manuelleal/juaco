@@ -1832,3 +1832,79 @@ trabajo** ("acabo de rechazar esto, busca otra cosa"). Encaja con la tabla de me
 **Después, examen de congelación** con el criterio v3 sin cambiar un umbral.
 
 **Si pasa todo:** v9 es el tronco y **la conducta de la Etapa 2 se cierra**.
+
+### v9 — CONFIRMATORIO (semillas 21–40) PASA M0–M6 · EXAMEN criterio v3 PASA 20/20 · **v9 SE CONGELA COMO TRONCO**
+
+**Procedencia**
+- Instrumentos commiteados antes de correr (`b7c4a82`): `organismo_v9.py` `d3b72fb8819fbe8e`, `bateria_v9.py`
+  `c6496196990f6774` (generada desde `bateria_v8.py` con sustituciones contadas; el diff demuestra que no cambia
+  ningún criterio ni umbral) y `organismo_v9c.py` `8495dbe81e8b5749`.
+- Confirmatorio: `datos/v9_confirmatorio_20260916_162904.json` (`e7a4aaffeb40ab0c`), `.csv` (`be479b0cdcf0340a`)
+  y `.log`.
+- Examen: `datos/examen_v9_20260916_163138.json` (`9a2c0797bde6d0a5`) y `.log`.
+- Humo declarado: semilla 2, T=20000, fuera de las semillas confirmatorias.
+
+**Confirmatorio, semillas nuevas 21–40:**
+
+| | v8 | **v9** | C1 (memoria al azar) | C2 (τ=1) |
+|---|---|---|---|---|
+| veneno E1, 2ª mitad | 21.50% [16.3, 25.1] | **9.60%** [9.2, 11.0] | 26.43% | 21.50% |
+| veneno E2 | 21.22% | **9.21%** [8.2, 9.8] | 25.18% | 21.22% |
+| sin objetivo | 0% | 1.9% | 1.8% | 0% |
+| muertes E1 / E2 | 143.5 / 148 | **133.5 / 132.5** | 149 / 150 | 143.5 / 148 |
+| criterios E1 / E2 | 20 / 19 | **20 / 20** | 20 / 19 | 20 / 19 |
+
+| | veredicto | cifra |
+|---|---|---|
+| M0 identidades | ✅ | `v9(0)` ≡ v8 42/42; `v9c` ≡ v9 6/6; **v9 ≡ variante exploratoria del agente 6/6** |
+| M1 efecto | ✅ | pareado **−11.7 pp (E1) y −12.1 pp (E2)**; ≤ −6 pp en **20/20** en los dos |
+| M2 muertes combinadas | ✅ | mediana **−24**, ≤ 0 en 18/20 |
+| M3 comida | ✅ | +3 |
+| M4 fallback | ✅ | 1.9% |
+| M5 no-regresión | ✅ | E1 20/20, E2 20/20 (v8 hace 19/20 en E2 con estas semillas) |
+| M6 controles | ✅ (C2 no informativo, ver ERR-16) | v9 −11.70 pp; **C1 +5.35 pp**; C2 +0.00 |
+
+**Examen de congelación de v9** (criterio v3, semillas 1–20): **8/8**.
+- identidad `v9(0)` ≡ v8 42/42;
+- científicos **20/20 en las seis etapas**;
+- `celdas ≤ 45`;
+- control negativo 0/20;
+- 4a 140/140;
+- **4b sostenida** (63 corridas dividen, 0 sin conflicto previo);
+- **4c sostenida** (0 divisiones, `W_C = −2.99`);
+- 4d 20/20.
+
+**Regresión:** `bateria_v8.py 6` cumple y `manifiesto.py --check` da los 6 congelados intactos.
+
+**ERR-16 — el control C2 (τ=1) era un no-op por construcción.**
+- La memoria se guarda como `_rech[pos] = t + τ` y se consulta como `_rech[x] > t` en el paso siguiente. Con τ = 1,
+  en `t+1` la condición es `t+1 > t+1`, falsa: **nunca filtra nada**.
+- C2 salió idéntico a v8 número por número. Por eso "pasó" su parte de M6: **por construcción, no por evidencia.**
+- **Qué queda en pie:** la conclusión se sostiene con M1 y con **C1**, que sí discrimina. Recordar un objeto al azar
+  en lugar del rechazado **empeora** el atasco (+5.35 pp).
+- **Qué no queda probado:** "la duración mínima necesaria". La dependencia de τ sólo tiene evidencia exploratoria
+  (20 → 9.8%, 50 → 12.9%, 150 → 16.9%, semillas 1–20).
+- Mismo patrón de siempre, en un control: **releer que el control pueda hacer algo antes de fiarse de que no lo haga.**
+
+**Congelación** (decisión de dirección tomada antes de correr):
+- `organismo_v9.py` y `bateria_v9.py` entran en `CONGELADOS`; ahora son 8 archivos.
+- Tag **`v9-tronco`**.
+- v8 y v6 quedan congelados como referencia.
+
+### ETAPA 2 — CONDUCTA: **CERRADA** con v9
+
+Las dos piezas que faltaban están ahora medidas y preregistradas:
+1. **Explora lo temido con hambre, y eso es lo que le permite revertir.**
+   - Sin esa exploración, 0/20 revierten.
+   - v8, y v9 que conserva la boca, está exactamente en el **óptimo medido** de supervivencia en un mundo estable y
+     en uno que cambia (frontera, `hb = 2.0`).
+2. **Ya no se queda atado a lo que rechaza.**
+   - Memoria de trabajo de rechazo: el tiempo sobre veneno pasa de ~21% a ~9.5%, en torno al azar corregido.
+   - Muere menos y revierte igual o mejor, confirmado en semillas no vistas.
+
+Etapa 2: **valor cerrado (día 2, 2G), conducta cerrada (día 4, v9).**
+
+**Pendiente, dicho explícitamente:**
+- 3T y 2K-bis eran sobre v8 y **no se han re-corrido sobre v9**.
+- ERR-16 deja sin probar la duración mínima de la memoria.
+- El órgano O7 ("qué hacer sin objetivo") queda abierto.
