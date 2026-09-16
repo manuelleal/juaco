@@ -1482,3 +1482,22 @@ construir `organismo_v8.py`.
 **Regresión posterior (criterio 6):** `bateria.py 20` **PASA 20/20 en las cinco etapas** (429 s, 14:55–15:02).
 
 **v8 es el tronco desde el 16 sep 2026.** Sigue la **fase 4: 3T confirmatorio sobre v8.**
+
+### PREREGISTRO — 3T confirmatorio sobre v8. Escrito, SIN correr
+
+`experimentos/3T_confirmatorio/PREREGISTRO_3T_confirmatorio.md`, **sha `a094838aaf31614c`**. Está commiteado
+antes de construir `mundo_temporal_v8.py`.
+
+**Se declara que los números del post-hoc PH3 se conocen.** Las predicciones que dependen de ellos van marcadas
+[PH] y no son independientes.
+
+**Lo nuevo es la predicción E, exacta.** Por la demostración de ERR-11 (medida hoy en S0/C0), si ni v8 (techo 3.0
+más drenaje) ni PH3 (techo 30, sin drenaje) truncan, son **el mismo organismo en valor y conducta**. v8 debe
+reproducir PH3 **semilla a semilla**. Controles:
+- **K1:** `lam=0` reproduce el mundo original;
+- **K2:** C2b ≡ C1;
+- **K3:** la referencia de hoy reproduce el JSON guardado de PH3;
+- **K4:** el drenaje actúa.
+
+Criterios 1–3 de C3 como en el original. **El criterio 4 queda corregido por ERR-3T-02:** el no-artefacto se
+mide en valor y conducta de C3C, no en `solap_A`.
