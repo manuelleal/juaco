@@ -1593,3 +1593,38 @@ drenaje, los canales de C3 llegan a 15–18 (K4); con el techo de v7 eso los con
    Aun así, **la decisión de aceptarla es de dirección**, y las dos lecturas están en el registro.
 3. **Alcance:** memoria de **una** mordida, dada como copia eferente. No son secuencias largas, ni orden abstracto,
    ni planificación.
+
+### RÉPLICA en semillas NUEVAS 21–40 — **SÍ**. ERR-13 CERRADO
+
+**Procedencia**
+- Preregistro `experimentos/3T_confirmatorio/PREREGISTRO_3T_replica.md` (sha `219aa43408de5393`), commiteado con
+  el único cambio del script (`--desde`, K3 "no aplica") **antes de correr** (`f2d9ce7`).
+- Script `dee7df55a813d8ec`. Datos `datos/3T_replica_s21-40_20260916_151902.json` (`c6c031a04b4a2b1f`),
+  `.csv` (`d2032874869f3e9d`) y `.log`.
+- *Nota de instrumento:* el encabezado del log imprime el sha del preregistro **original** (`a094838a…`), porque
+  el script lee ese archivo. El de la réplica es el de arriba.
+
+**Motivo, pedido por dirección:** quitar las dos dudas del SÍ de las semillas 1–20. Esta vez el comparador estaba
+corregido **antes** de ver los datos, y de las semillas 21–40 **no se conocía ningún número**, ni de v8 ni de PH3.
+
+| | resultado |
+|---|---|
+| K1 / K2 / K4 | 18/18 · 20/20 · 20/20 (K3 no aplica: PH3 no tiene esas semillas) |
+| **E [exacta]** | **C3 20/20 idénticas; C3C 14/14** (6 referencias truncan contra 30 y quedan excluidas) |
+| E-alcance | v8 no trunca en ningún brazo (0/120); la referencia C3, 0/20 |
+| 1 representación | mediana de `solap_A` = 1 [0, 1] |
+| 2 valor | mediana de `sep` = **+3.99** [+3.84, +4.00] |
+| 3 conducta | mediana de `lift_q4` = **+0.349** [+0.291, +0.374] |
+| 4 no artefacto (C3C) | `sep` +0.03 [−2.27, +1.02]; `lift_q4` −0.026 |
+| por semilla | `sep ≥ 2.8` 20/20; `lift ≥ 0.15` 20/20; 18 divisiones (mediana), la última antes de 25k en 20/20; C3C agota el pool 20/20 |
+
+**Conclusión.**
+> **El resultado de 3T queda REPLICADO en semillas no vistas y con el instrumento corregido antes de verlas.**
+> **ERR-13 queda CERRADO:** el SÍ ya no depende de la corrección hecha a la vista de la primera corrida.
+
+La advertencia de "no ciego" se reduce a que se conocían las **cifras agregadas** de PH3, no las de estas semillas.
+
+**Descriptivo, sin voto.** En la réplica, **C2** (el canal temporal cableado a mano) tiene una semilla débil:
+`sep` mínimo 2.12 y `lift` mínimo 0.010. **C3, que lo descubre solo, no tiene ninguna:** mínimo 3.84 y 0.291.
+Con estas 20 semillas, la versión que aprende la representación es **más robusta** que la cableada.
+**No se generaliza** más allá de esta muestra.

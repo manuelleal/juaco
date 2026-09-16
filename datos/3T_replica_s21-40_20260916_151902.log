@@ -1,0 +1,37 @@
+[15:19:02 +    0.0s] ARRANQUE 3T_replica_s21-40 sobre v8. semillas 21..40, Pool(14).
+[15:19:02 +    0.0s] sha preregistro a094838aaf31614c  script dee7df55a813d8ec  mundo_v8 ee7eac62ecab3313  mundo 1f447657faf00ef8  organismo_v8 dca7d5c3a162f5d4
+[15:19:02 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 4764:
+[15:19:02 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[15:19:02 +    0.3s]     4764 "C:\Python314\python.exe" experimentos/3T_confirmatorio/corre_3T_confirmatorio.py 20 --desde 21
+[15:19:02 +    0.5s] ETAPA 1/4 — K1: mundo_temporal_v8(lam=0) == mundo_temporal (18 comparaciones)...
+[15:19:25 +   23.2s]   K1: 18/18 -> OK
+[15:19:25 +   23.2s] ETAPA 2/4 — 160 corridas (v8: 6 brazos; referencia PH3 wclip=30: C3, C3C)...
+[15:19:46 +   44.2s]           40/160
+[15:20:07 +   65.3s]           80/160
+[15:20:29 +   87.0s]           120/160
+[15:20:48 +  105.7s]           160/160
+[15:20:48 +  105.7s] ETAPA 3/4 — analisis.
+[15:20:48 +  105.7s]   K2 C2b == C1 bajo v8: 20/20 -> OK
+[15:20:48 +  105.7s]   K3 NO APLICA: PH3 guardado no contiene las semillas 21..40 (la referencia se corre en vivo; K1 la avala)
+[15:20:48 +  105.7s]   K4 el drenaje actua (comp C3 v8 != referencia): 20/20 -> OK
+[15:20:48 +  105.7s]   E C3: elegibles 20/20, identicas 20/20
+[15:20:48 +  105.7s]   E C3C: elegibles 14/20, identicas 14/14
+[15:20:48 +  105.7s]   E-alcance: truncan v8 {'C1': 0, 'C1p': 0, 'C2': 0, 'C2b': 0, 'C3': 0, 'C3C': 0}; referencia (techo 30) {'C3': 0, 'C3C': 6} -> SOSTENIDA
+[15:20:48 +  105.7s] 
+[15:20:48 +  105.7s]   C1   sep +0.00 [+0.00, +0.00]  lift_q4 -0.024 [-0.079, +0.001]  solap_A +3 [+3, +3]  splits +0 [+0, +0]  celdas90 0/20  muertes +120 [+105, +132]  W_A|A -1.24 [-1.92, -0.13]
+[15:20:48 +  105.7s]   C1p  sep +0.00 [+0.00, +0.00]  lift_q4 -0.054 [-0.113, -0.002]  solap_A +3 [+3, +3]  splits +60 [+60, +60]  celdas90 20/20  muertes +119 [+94, +131]  W_A|A -1.25 [-1.89, -0.62]
+[15:20:48 +  105.7s]   C2   sep +3.99 [+2.12, +4.00]  lift_q4 +0.331 [+0.010, +0.390]  solap_A +0 [+0, +0]  splits +0 [+0, +0]  celdas90 0/20  muertes +114 [+79, +135]  W_A|A -2.99 [-3.00, -1.12]
+[15:20:48 +  105.7s]   C2b  sep +0.00 [+0.00, +0.00]  lift_q4 -0.024 [-0.079, +0.001]  solap_A +3 [+3, +3]  splits +0 [+0, +0]  celdas90 0/20  muertes +120 [+105, +132]  W_A|A -1.24 [-1.92, -0.13]
+[15:20:48 +  105.7s]   C3   sep +3.99 [+3.84, +4.00]  lift_q4 +0.349 [+0.291, +0.374]  solap_A +1 [+0, +1]  splits +18 [+11, +29]  celdas90 0/20  muertes +118 [+88, +132]  W_A|A -2.99 [-3.00, -2.85]
+[15:20:48 +  105.7s]   C3C  sep +0.03 [-2.27, +1.02]  lift_q4 -0.026 [-0.066, +0.015]  solap_A +0 [+0, +2]  splits +60 [+60, +60]  celdas90 20/20  muertes +111 [+99, +125]  W_A|A -1.43 [-1.96, -0.26]
+[15:20:48 +  105.7s] 
+[15:20:48 +  105.7s]   criterio 1_representacion  : CUMPLE
+[15:20:48 +  105.7s]   criterio 2_valor           : CUMPLE
+[15:20:48 +  105.7s]   criterio 3_conducta        : CUMPLE
+[15:20:48 +  105.8s]   criterio 4_no_artefacto    : CUMPLE
+[15:20:48 +  105.8s]   [PH] sep>=2.8 20/20; lift_q4>=0.15 20/20; splits mediana 17.5, ultima <25k 20/20; C3C agota pool 20/20
+[15:20:48 +  105.8s] 
+[15:20:48 +  105.8s] VEREDICTO 3T_replica_s21-40: SI  | K1=True K2=True K3=None K4=True E=True E_alcance=True 1_representacion=True 2_valor=True 3_conducta=True 4_no_artefacto=True PH_sep28=True PH_lift15=True PH_se_detiene=True PH_C3C_agota=True VEREDICTO_SI=True
+[15:20:48 +  105.8s] ETAPA 4/4 — escritura.
+[15:20:48 +  105.9s] datos -> 3T_replica_s21-40_20260916_151902.json  sha256_16 = c6c031a04b4a2b1f
+[15:20:48 +  105.9s]          3T_replica_s21-40_20260916_151902.csv  sha256_16 = d2032874869f3e9d

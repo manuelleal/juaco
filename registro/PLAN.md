@@ -5,8 +5,10 @@
 > 1. ✅ Prueba de coste del arreglo con el techo mordiendo: **PASA** (14/14).
 > 2. + 3. ✅ Fundidos por dirección. Examen de congelación, criterio v3: **PASA 20/20. v8 es el tronco**
 >    (tag `v8-tronco`).
-> 4. ✅ **3T confirmatorio sobre v8: SÍ**. Queda pendiente que dirección acepte ERR-13: la primera corrida dio
->    NO por un comparador de texto.
+> 4. ✅ **3T confirmatorio sobre v8: SÍ, y REPLICADO en semillas 21–40.** ERR-13 cerrado.
+>
+> **Siguiente, en la escalera del brief:** cerrar la **Etapa 3 (versión dura)** sobre v8. Primero se revisa su
+> preregistro, escrito para v6, contra lo que v8 cambia, y **sólo después** se corre. Luego 2P y Etapa 4.
 >
 > Cola, sin fecha: 2P (política bajo hambre); A5 corregida (recuperación espontánea estructural); versión dura
 > de Etapa 3; 3F (fusión).

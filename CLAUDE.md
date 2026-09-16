@@ -69,9 +69,13 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     no lo logra.
   - **Predicción exacta:** v8 reproduce PH3 del día 3 semilla a semilla (C3 20/20). El único bloqueo de 3T era
     BUG-01.
-  - **Advertencias:** no es ciego (PH3 se conocía), y la primera corrida dio NO por ERR-13 (el comparador
-    distinguía `0.0` de `-0.0`). El SÍ depende de aceptar esa corrección, **decisión de dirección**. Memoria de
-    una mordida.
+  - **REPLICADO en semillas nuevas 21–40** (`datos/3T_replica_s21-40_20260916_151902`), con el comparador
+    corregido **antes** de verlas: E 20/20 y 14/14, `sep` 3.99, `lift` 0.35.
+  - **ERR-13 (el comparador distinguía `0.0` de `-0.0`) queda CERRADO:** el SÍ ya no depende de esa corrección.
+  - Alcance: memoria de una mordida.
+- **Etapas del brief (punto 16):** 1 cerrada; 2 cerrada en valor (falta 2P, conducta bajo hambre);
+  **3 generalización A MEDIAS** (falta la versión dura, preregistrada para v6: hay que revisarla para v8 antes de
+  correr); 4 memoria persistente, parcial.
 - **Siguiente (sin fijar):** 2P, política bajo hambre; A5 corregida; Etapa 3 versión dura; 3F, fusión. Lo decide
   dirección.
 - **Primitivo nuevo:** "mordida del techo" = **truncación** del clip, no el valor del canal. Tocar 3.0 no es morder.
