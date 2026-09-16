@@ -75,12 +75,17 @@ def fm(t, d=2):
 if __name__ == '__main__':
     import multiprocessing as mp
     mp.set_start_method('spawn', force=True)
-    S = int(sys.argv[1]) if len(sys.argv) > 1 else 20
-    seeds = list(range(1, S + 1))
+    argv = sys.argv[1:]
+    DESDE = 1
+    if '--desde' in argv:                         # replica en semillas nuevas (PREREGISTRO_3T_replica.md)
+        i = argv.index('--desde'); DESDE = int(argv[i + 1]); del argv[i:i + 2]
+    S = int(argv[0]) if argv else 20
+    seeds = list(range(DESDE, DESDE + S))
     stamp = time.strftime('%Y%m%d_%H%M%S')
-    _log['f'] = open(os.path.join(RAIZ, 'datos', f'3T_confirmatorio_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
+    TAG = '3T_confirmatorio' if DESDE == 1 else f'3T_replica_s{DESDE}-{DESDE + S - 1}'
+    _log['f'] = open(os.path.join(RAIZ, 'datos', f'{TAG}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     pre = os.path.join(AQUI, 'PREREGISTRO_3T_confirmatorio.md')
-    log(f"ARRANQUE 3T confirmatorio sobre v8. {S} semillas, Pool({N_PARALELO}).")
+    log(f"ARRANQUE {TAG} sobre v8. semillas {seeds[0]}..{seeds[-1]}, Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_v8 {h16(os.path.join(AQUI, 'mundo_temporal_v8.py'))}"
         f"  mundo {h16(os.path.join(RAMA, 'mundo_temporal.py'))}  organismo_v8 {h16(os.path.join(RAIZ, 'organismo', 'organismo_v8.py'))}")
     try:
@@ -129,12 +134,16 @@ if __name__ == '__main__':
     # K3
     ph3 = json.load(open(os.path.join(RAMA, 'PH3_20260915_115229.json'), encoding='utf-8'))['corridas']
     k3 = {}
-    for arm in REF_ARMS:
-        viejo = {r['seed']: r for r in ph3 if r['arm'] == arm}
-        k3[arm] = sum(viejo.get(r['seed']) is not None and all(J(r[k]) == J(viejo[r['seed']][k]) for k in ('sep', 'splits', 'lift'))
-                      for r in G('ref', arm))
-    V['K3'] = all(v == S for v in k3.values())
-    log(f"  K3 referencia de hoy == PH3 guardado: {k3} -> {'OK' if V['K3'] else 'FALLA'}")
+    if all(any(r['seed'] == s for r in ph3) for s in seeds):
+        for arm in REF_ARMS:
+            viejo = {r['seed']: r for r in ph3 if r['arm'] == arm}
+            k3[arm] = sum(viejo.get(r['seed']) is not None and all(J(r[k]) == J(viejo[r['seed']][k]) for k in ('sep', 'splits', 'lift'))
+                          for r in G('ref', arm))
+        V['K3'] = all(v == S for v in k3.values())
+        log(f"  K3 referencia de hoy == PH3 guardado: {k3} -> {'OK' if V['K3'] else 'FALLA'}")
+    else:
+        V['K3'] = None                              # no aplica: PH3 guardado solo tiene semillas 1-20
+        log(f"  K3 NO APLICA: PH3 guardado no contiene las semillas {seeds[0]}..{seeds[-1]} (la referencia se corre en vivo; K1 la avala)")
 
     # K4
     # ERR-13: igualdad NUMERICA (el texto JSON distingue 0.0 de -0.0, que son el mismo numero)
@@ -191,11 +200,11 @@ if __name__ == '__main__':
         log(f"  criterio {k:18s}: {'CUMPLE' if V[k] else 'NO CUMPLE'}")
     log(f"  [PH] sep>=2.8 {PH['sep28']}/{S}; lift_q4>=0.15 {PH['lift15']}/{S}; splits mediana {PH['splits_med']}, "
         f"ultima <25k {PH['ultima25k']}/{S}; C3C agota pool {PH['c3c_agota']}/{S}")
-    K = V['K1'] and V['K2'] and V['K3'] and V['K4']
+    K = V['K1'] and V['K2'] and V['K3'] is not False and V['K4']    # K3 None = no aplica (replica)
     SI = bool(K and V['E'] and V['1_representacion'] and V['2_valor'] and V['3_conducta'] and V['4_no_artefacto'])
     V['VEREDICTO_SI'] = SI
     log()
-    log(f"VEREDICTO 3T confirmatorio: {'SI' if SI else 'NO'}  | " + " ".join(f"{k}={v}" for k, v in V.items()))
+    log(f"VEREDICTO {TAG}: {'SI' if SI else 'NO'}  | " + " ".join(f"{k}={v}" for k, v in V.items()))
 
     log("ETAPA 4/4 — escritura.")
     meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), semillas=S, veredictos=V, E=E_det, PH=PH, K3=k3,
@@ -206,9 +215,9 @@ if __name__ == '__main__':
                 sha_mundo_temporal=h16(os.path.join(RAMA, 'mundo_temporal.py')),
                 sha_organismo_v8=h16(os.path.join(RAIZ, 'organismo', 'organismo_v8.py')),
                 python=platform.python_version(), numpy=np.__version__, plataforma=platform.platform())
-    dj = os.path.join(RAIZ, 'datos', f'3T_confirmatorio_{stamp}.json')
+    dj = os.path.join(RAIZ, 'datos', f'{TAG}_{stamp}.json')
     json.dump(dict(meta=meta, K1=k1, corridas=res), open(dj, 'w', encoding='utf-8'), ensure_ascii=False, default=str)
-    dc = os.path.join(RAIZ, 'datos', f'3T_confirmatorio_{stamp}.csv')
+    dc = os.path.join(RAIZ, 'datos', f'{TAG}_{stamp}.csv')
     with open(dc, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow(['cual', 'arm', 'seed', 'sep', 'W_AA', 'W_AB', 'solap_A', 'lift_q4', 'splits', 'celdas', 'deaths', 'Rtot', 't_techo'])
