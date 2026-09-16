@@ -2133,3 +2133,45 @@ después**. Falta un órgano de **consolidación** (O6, dimensionado por escrito
 consolidado resista la sobrescritura, y que lo nuevo reclute celdas en vez de pisar las de otros.
 
 **La Etapa 4 NO se cierra.** Sostenido: M1, M3, H1, H5. Refutado: M2, H3 (por margen), H4.
+
+### EXPLORACIÓN — órgano de consolidación (subagente Fable, SIN valor confirmatorio)
+
+**Procedencia**
+- Carpeta `JUACO/exploracion/consolidacion_20260916/`: `INFORME.md` (`9d2e4b47c4df39c9`), `organismo_v9k.py`
+  (`846641af7297714d`) y datos R1 (`8aa6e1fc5b1ba8f2`), R2 (`90f5fe8c8a6316be`) y R3 (`09402c382b7e3f3d`).
+- ~1.020 corridas, semillas 1–20, bloque M de la Etapa 4. Identidad 21/21. `bundle/` y `sandbox/` sin tocar.
+- **Verificado por mí desde los JSON:** el control reproduce `W_B(100k)` del registro 20/20; K4 r=200 da 17/20
+  (`W_B`) y 20/20 (`W_A`); K4 r=100, 20/20 y 20/20; K4c r=200, 9/20 y 11/20; K5, 10/20 y 11/20.
+- El agente paró a mitad de la ronda 1 esperando un aviso que no llegó. Se lo reanudó sin tocar nada.
+
+**1. Diagnóstico refinado. Corrige lo que registré.**
+- La vía estructural es la catastrófica, y **no es "la madre se mueve": son las HIJAS las que toman el código de B**.
+  En 11 semillas, las 3 celdas del código de B en 100k son hijas, y B lee el valor de D (+0.99).
+- **Causa:** B·D = 2, y `mu` (EMA con tasa 0.02 que arranca en 0) **subestima** el patrón viejo. La hija no se aleja
+  de B.
+- **Predicción mía refutada:** "fijar la madre recupera la retención". K1 queda igual al control (7/20), **y rompe
+  E2L** (1/20). El agente la había refutado **por derivación, antes de correr**.
+
+**2. Variantes**
+
+| variante | retención (B / A) | aprende C y D | no-regresión | veredicto exploratorio |
+|---|---|---|---|---|
+| K1 madre fija | 7 / 11 | sí | **rompe E2L** | descartar |
+| K2 metaplasticidad (κ=50) | 4 / 10 | frena lo nuevo | E2 más lento | descartar sola |
+| K3 reclutamiento temprano | 3 / 12 | sí | 22 divisiones | descartar así |
+| **K4 repaso** (almacén episódico patrón → último R, repaso cada r pasos) | **17–20 / 20** | sí (r=100: `W_D` 20/20) | E1/E2/E2L 20/20 | **retiene, pero la memoria vive en el almacén** |
+| K4c (almacén borrado en cada fase) | 9 / 11 | sí | — | **control:** sin A y B en el almacén, cae al nivel del control |
+| **K5 `mu` normalizada** (1 línea, 0 parámetros) | 10 / 11 | sí | **E2 y E2L en 3 divisiones exactas, 20/20** | arregla la mitad de la vía estructural; ninguna vía **sin** almacén supera 11/20 |
+
+**3. Lectura (con cuidado; es la trampa "memoria escondida" del punto 15 del brief)**
+- **K4 es "memoria episódica de pocas casillas + repaso"**, no un endurecimiento de `Wp/Wn`.
+  - Funciona, tiene análogo biológico (el repaso del hipocampo) y el agente lo documentó con sus controles.
+  - Pero **cambia la naturaleza del organismo**: añade un almacén explícito. En un mundo con 4 estímulos, 4 casillas lo
+    guardan todo.
+  - Probarlo en serio exige un mundo con **más estímulos que casillas**.
+- **K5 es la corrección de un defecto de la regla 2L:** la dirección de división usaba una media que no había
+  convergido, algo que el preregistro de 3T ya había anticipado como modo de fallo.
+  - Es un cambio de una línea, sin parámetros, que además hace la plasticidad más económica.
+  - Por sí sola no cierra la Etapa 4.
+- **Propuesta del agente para v10:** K4 con r=100 y n=8, con cinco controles de artefacto, y K5 como brazo secundario.
+  **La decisión de cuál entra primero, o si van los dos, es de dirección.**
