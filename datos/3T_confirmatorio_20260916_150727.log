@@ -1,0 +1,37 @@
+[15:07:27 +    0.0s] ARRANQUE 3T confirmatorio sobre v8. 20 semillas, Pool(14).
+[15:07:27 +    0.0s] sha preregistro a094838aaf31614c  script d0df3f6d6ae76c8c  mundo_v8 ee7eac62ecab3313  mundo 1f447657faf00ef8  organismo_v8 dca7d5c3a162f5d4
+[15:07:28 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 17740:
+[15:07:28 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[15:07:28 +    0.3s]     17740 "C:\Python314\python.exe" experimentos/3T_confirmatorio/corre_3T_confirmatorio.py 20
+[15:07:28 +    0.5s] ETAPA 1/4 — K1: mundo_temporal_v8(lam=0) == mundo_temporal (18 comparaciones)...
+[15:07:51 +   23.7s]   K1: 18/18 -> OK
+[15:07:51 +   23.7s] ETAPA 2/4 — 160 corridas (v8: 6 brazos; referencia PH3 wclip=30: C3, C3C)...
+[15:08:12 +   44.8s]           40/160
+[15:08:33 +   66.0s]           80/160
+[15:08:55 +   87.5s]           120/160
+[15:09:14 +  106.5s]           160/160
+[15:09:14 +  106.5s] ETAPA 3/4 — analisis.
+[15:09:14 +  106.5s]   K2 C2b == C1 bajo v8: 20/20 -> OK
+[15:09:14 +  106.5s]   K3 referencia de hoy == PH3 guardado: {'C3': 20, 'C3C': 20} -> OK
+[15:09:14 +  106.5s]   K4 el drenaje actua (comp C3 v8 != referencia): 20/20 -> OK
+[15:09:14 +  106.5s]   E C3: elegibles 20/20, identicas 20/20
+[15:09:14 +  106.5s]   E C3C: elegibles 9/20, identicas 9/9
+[15:09:14 +  106.5s]   E-alcance: truncan v8 {'C1': 0, 'C1p': 0, 'C2': 0, 'C2b': 0, 'C3': 0, 'C3C': 0}; referencia (techo 30) {'C3': 0, 'C3C': 11} -> SOSTENIDA
+[15:09:14 +  106.5s] 
+[15:09:14 +  106.5s]   C1   sep +0.00 [+0.00, +0.00]  lift_q4 -0.036 [-0.083, +0.003]  solap_A +3 [+3, +3]  splits +0 [+0, +0]  celdas90 0/20  muertes +120 [+98, +137]  W_A|A -1.06 [-1.82, -0.62]
+[15:09:14 +  106.5s]   C1p  sep +0.00 [+0.00, +0.00]  lift_q4 -0.043 [-0.067, +0.016]  solap_A +3 [+3, +3]  splits +60 [+60, +60]  celdas90 20/20  muertes +118 [+101, +148]  W_A|A -1.16 [-1.60, -0.56]
+[15:09:14 +  106.5s]   C2   sep +3.99 [+3.89, +4.00]  lift_q4 +0.353 [+0.258, +0.384]  solap_A +0 [+0, +0]  splits +0 [+0, +0]  celdas90 0/20  muertes +113 [+97, +130]  W_A|A -2.99 [-3.00, -2.89]
+[15:09:14 +  106.5s]   C2b  sep +0.00 [+0.00, +0.00]  lift_q4 -0.036 [-0.083, +0.003]  solap_A +3 [+3, +3]  splits +0 [+0, +0]  celdas90 0/20  muertes +120 [+98, +137]  W_A|A -1.06 [-1.82, -0.62]
+[15:09:14 +  106.5s]   C3   sep +3.97 [+3.70, +4.00]  lift_q4 +0.341 [+0.240, +0.392]  solap_A +1 [+0, +2]  splits +16 [+10, +33]  celdas90 0/20  muertes +114 [+86, +140]  W_A|A -2.98 [-3.00, -2.85]
+[15:09:14 +  106.5s]   C3C  sep +0.44 [-1.38, +1.34]  lift_q4 -0.041 [-0.098, -0.004]  solap_A +0 [+0, +2]  splits +60 [+60, +60]  celdas90 20/20  muertes +112 [+83, +125]  W_A|A -1.58 [-2.39, -0.65]
+[15:09:14 +  106.6s] 
+[15:09:14 +  106.6s]   criterio 1_representacion  : CUMPLE
+[15:09:14 +  106.6s]   criterio 2_valor           : CUMPLE
+[15:09:14 +  106.6s]   criterio 3_conducta        : CUMPLE
+[15:09:14 +  106.6s]   criterio 4_no_artefacto    : CUMPLE
+[15:09:14 +  106.6s]   [PH] sep>=2.8 20/20; lift_q4>=0.15 20/20; splits mediana 15.5, ultima <25k 20/20; C3C agota pool 20/20
+[15:09:14 +  106.6s] 
+[15:09:14 +  106.6s] VEREDICTO 3T confirmatorio: SI  | K1=True K2=True K3=True K4=True E=True E_alcance=True 1_representacion=True 2_valor=True 3_conducta=True 4_no_artefacto=True PH_sep28=True PH_lift15=True PH_se_detiene=True PH_C3C_agota=True VEREDICTO_SI=True
+[15:09:14 +  106.6s] ETAPA 4/4 — escritura.
+[15:09:14 +  106.7s] datos -> 3T_confirmatorio_20260916_150727.json  sha256_16 = ae164a7118a228f9
+[15:09:14 +  106.7s]          3T_confirmatorio_20260916_150727.csv  sha256_16 = 6f65c77205453db7

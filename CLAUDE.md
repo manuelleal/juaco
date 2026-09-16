@@ -63,7 +63,17 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   9/9 (derivado antes y medido 20/20).
 - **Corrección de 2K-bis:** el rango dinámico explica el colapso a W=0 y la capacidad útil (M_max 4 → 8), no el
   techo N* a 20k (igual en 19/20).
-- **Siguiente:** fase 4, **3T confirmatorio sobre v8**.
+- **Fase 4, 3T confirmatorio sobre v8: SÍ** (`experimentos/3T_confirmatorio/`, datos
+  `3T_confirmatorio_20260916_150727`).
+  - Con v8, la regla 2L separa sola el canal temporal: `sep` 3.97 y `lift_q4` 0.34 en 20/20. El control de ruido
+    no lo logra.
+  - **Predicción exacta:** v8 reproduce PH3 del día 3 semilla a semilla (C3 20/20). El único bloqueo de 3T era
+    BUG-01.
+  - **Advertencias:** no es ciego (PH3 se conocía), y la primera corrida dio NO por ERR-13 (el comparador
+    distinguía `0.0` de `-0.0`). El SÍ depende de aceptar esa corrección, **decisión de dirección**. Memoria de
+    una mordida.
+- **Siguiente (sin fijar):** 2P, política bajo hambre; A5 corregida; Etapa 3 versión dura; 3F, fusión. Lo decide
+  dirección.
 - **Primitivo nuevo:** "mordida del techo" = **truncación** del clip, no el valor del canal. Tocar 3.0 no es morder.
 
 ## Estado (día 3 — repo en Claude Code, 15 sep 2026)

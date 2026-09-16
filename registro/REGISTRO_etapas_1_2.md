@@ -1543,3 +1543,53 @@ Es exactamente por qué el confirmatorio del día 3 dio NO.
 - Se vuelve a correr **el script completo** desde un commit, para que el veredicto lo produzca código commiteado y
   no un análisis a mano.
 - **Se reportan los dos veredictos.** El de esta corrida (NO por E) queda en el registro y no se borra.
+
+### 3T confirmatorio, SEGUNDA corrida (comparador corregido, commit `013a76e`) — **VEREDICTO: SÍ**
+
+**Procedencia.** Script `d0df3f6d6ae76c8c`. Datos `datos/3T_confirmatorio_20260916_150727.json`
+(`ae164a7118a228f9`) y `.log`. El `.csv` tiene **el mismo sha que la primera corrida** (`6f65c77205453db7`):
+las corridas son idénticas; sólo cambió la lectura de E y K4.
+
+| control / criterio | resultado |
+|---|---|
+| K1 `lam=0` = mundo original | 18/18 |
+| K2 C2b ≡ C1 | 20/20 |
+| K3 la referencia reproduce PH3 guardado | C3 20/20, C3C 20/20 |
+| K4 el drenaje actúa | 20/20 |
+| **E [exacta] v8 ≡ PH3 sin truncación** | **C3 20/20 idénticas; C3C 9/9** (11 semillas de la referencia truncan contra 30: excluidas, como estaba previsto) |
+| E-alcance | v8 no trunca en **ningún** brazo (0/120); la referencia C3 tampoco (0/20) |
+| **1** representación | mediana `solap_A` = **1** [0, 2] |
+| **2** valor | mediana `sep` = **+3.97** [+3.70, +4.00] |
+| **3** conducta | mediana `lift_q4` = **+0.341** [+0.240, +0.392] |
+| **4** no artefacto (C3C) | `sep` +0.44 [−1.38, +1.34]; `lift_q4` −0.041 [−0.098, −0.004] |
+| [PH] | `sep ≥ 2.8` 20/20; `lift_q4 ≥ 0.15` 20/20; 16 divisiones (mediana), la última antes de 25k en 20/20; C3C agota el pool en 20/20 |
+
+**Qué queda establecido, con el vocabulario permitido (regla 8).**
+> **Con el tronco v8, la regla local 2L separa sola el canal temporal y la conducta lo usa.** En un mundo donde
+> morder A es comida si antes se mordió B y veneno si antes se mordió A, el organismo parte de un código ciego al
+> orden. Divide 16 veces, **se detiene solo** y alcanza el techo de la versión cableada a mano (C2: `sep` 3.99,
+> `lift` 0.353).
+> El control con el canal temporal hecho ruido (C3C) divide sin parar, agota el pool y **no** obtiene ni valor ni
+> conducta.
+
+Composición temporal de **una** mordida (nivel 7 de la escala) pasa de post-hoc a **resultado confirmatorio sobre
+el tronco**.
+
+**Y E explica por qué el día 3 dio NO:** v8 con techo 3.0 **es** PH3 con techo 30, semilla a semilla, porque el
+drenaje deja `W` idéntico a no tener techo. **El único bloqueo de la composición temporal era BUG-01.** Sin
+drenaje, los canales de C3 llegan a 15–18 (K4); con el techo de v7 eso los congela.
+
+**Descriptivo, sin voto.**
+- **C1 bajo v8:** `W_A|A = −1.06` [−1.82, −0.62], **ya no 0.000 exacto**: el drenaje quita la saturación simétrica
+  que ERR-3T-01 había encontrado.
+- **C1:** `lift_q4 = −0.036`, negativo, como anticipaba el preregistro original: la energía sesga contra el orden.
+- **C1p:** agota el pool sin mejorar nada.
+
+**ADVERTENCIAS que viajan con este resultado. No se separan de él.**
+1. **No es ciego.** Los números de PH3 se conocían; las predicciones [PH] no son independientes. **Lo que no se
+   podía saber** era E, que es exacta y podía caer en una sola semilla.
+2. **El SÍ depende de aceptar ERR-13**, una corrección de instrumento hecha **después** de ver la primera corrida.
+   La corrección se limita a tratar `0.0` y `-0.0` como el mismo número, que es lo que el preregistro escribía.
+   Aun así, **la decisión de aceptarla es de dirección**, y las dos lecturas están en el registro.
+3. **Alcance:** memoria de **una** mordida, dada como copia eferente. No son secuencias largas, ni orden abstracto,
+   ni planificación.
