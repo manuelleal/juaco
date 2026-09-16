@@ -1813,3 +1813,22 @@ Con τ largo se rechazan los cuatro objetos, no queda objetivo y vuelve la polí
 **Lectura.** El órgano que falta para decidir dónde ir no está en el valor ni en la habituación: es **memoria de
 trabajo** ("acabo de rechazar esto, busca otra cosa"). Encaja con la tabla de mecanismos del HANDOFF, donde cada
 órgano lo pidió una falla medible.
+
+### PREREGISTRO — v9 = v8 + memoria de trabajo de rechazo. Escrito, SIN correr
+
+`experimentos/v9_memoria_rechazo/PREREGISTRO_v9.md`, **sha `f68841597adb55d8`**. Está commiteado antes de construir
+`organismo_v9.py`. **τ = 20 queda fijado y no se barre.**
+
+**Confirmatorio en semillas nuevas 21–40**, con cuatro brazos: v8, v9, C1 (memoria sobre un objeto al azar) y C2
+(τ = 1).
+- **M0:** identidades, incluida la de v9 con la variante del agente.
+- **M1:** el tiempo sobre veneno baja ≥6 pp en ≥18/20.
+- **M2:** las muertes combinadas no suben.
+- **M3:** no come menos.
+- **M4:** el fallback es < 5%.
+- **M5:** no-regresión de E1 y E2.
+- **M6:** C1 y C2 no reproducen el efecto.
+
+**Después, examen de congelación** con el criterio v3 sin cambiar un umbral.
+
+**Si pasa todo:** v9 es el tronco y **la conducta de la Etapa 2 se cierra**.
