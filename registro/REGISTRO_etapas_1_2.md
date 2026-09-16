@@ -1628,3 +1628,46 @@ La advertencia de "no ciego" se reduce a que se conocían las **cifras agregadas
 `sep` mínimo 2.12 y `lift` mínimo 0.010. **C3, que lo descubre solo, no tiene ninguna:** mínimo 3.84 y 0.291.
 Con estas 20 semillas, la versión que aprende la representación es **más robusta** que la cableada.
 **No se generaliza** más allá de esta muestra.
+
+---
+
+## Día 4, tarde — cerrar lo que falta de las Etapas 2 y 3 (orden de dirección)
+
+### Replanteamiento, escrito antes de diseñar nada
+
+Pensado antes de actuar, como pidió dirección. **Las dos etapas estaban planteadas de forma que podían "cerrarse"
+sin probar lo que importa.**
+
+**Etapa 2, 2P.** La fórmula de la boca, `σ((1.2·W + hb·h + 0.5)/0.3)`, muestra que `hambre_boca` **no cambia** la
+mordida de la comida conocida (0.9966) ni la de lo nuevo (0.841). **Sólo cambia cuánto se prueba lo temido**, y
+probar lo temido es la única vía para descubrir que el mundo cambió.
+- **Hipótesis:** la mordida de veneno con hambre es **exploración disparada por necesidad**, no un defecto.
+- **Riesgo:** optimizar sólo en E1 la "arreglaría" rompiendo la reversibilidad sin que E1 lo vea.
+- **Decisión:** el criterio es funcional, **muertes en E1 y E2 a la vez**. Con eso se cierra la pregunta abierta del
+  día 2 (tasa frente a conteo).
+
+**Etapa 3.**
+- La versión dura del día 3 prueba si la fórmula nominal se rompe con solapamiento. Eso es casi seguro y mide el
+  instrumento más que al organismo.
+- **Lo que falta de verdad lo dice el propio registro:** *"no prueba que el organismo ACTÚE según él"*. La
+  generalización demostrada es de valor, nunca de conducta.
+
+**Plan, un experimento por vez y cada uno preregistrado:**
+1. Frontera hambre–supervivencia en E1 y E2.
+2. Sólo si hace falta: la sorpresa como disparador de la exploración (candidato a v9).
+3. Etapa 3 versión dura sobre v8.
+4. Generalización **en conducta** al primer encuentro, con regla lineal y no lineal.
+
+### PREREGISTRO — frontera hambre–supervivencia (Etapa 2). Escrito, SIN correr
+
+`experimentos/etapa2_politica/PREREGISTRO_frontera_hambre.md`, **sha `902f1f0223ef597b`**. Está commiteado antes
+de construir `organismo_v8p.py`.
+
+**Diseño:** `hambre_boca ∈ {0, .5, 1, 1.5, 2, 2.5, 3}` × {E1, E2} × 20 semillas.
+
+**Predicciones derivadas:**
+- **F2:** la reversión cae con `hb = 1` (≤5/20) y se sostiene con `hb = 2` (≥18/20);
+- **F3:** sin exploración, en E2 se muere de hambre (≥1.5× muertes);
+- **F4:** en E1 la exploración cuesta poco (muertes ±10%);
+- **F5:** v8 está en el óptimo combinado;
+- **F6:** demasiada exploración también mata.
