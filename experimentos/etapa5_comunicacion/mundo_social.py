@@ -40,19 +40,23 @@ class Mundo:
 
 class Organismo:
     def __init__(self, rng, T, eta=.03, tau_e=.85, alpha=1.2, hambre_boca=2.0, aversion=1.0, costo=.002, plast=True,
-                 theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True):
+                 theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True, mu_norm=True, estado=None):
         self.rng = rng; self.T = T; self.eta = eta; self.tau_e = tau_e; self.alpha = alpha; self.hambre_boca = hambre_boca
         self.aversion = aversion; self.costo = costo; self.plast = plast; self.theta = theta; self.ema = ema; self.paso = paso
-        self.lam = lam; self.memoria_rechazo = memoria_rechazo; self.learn = learn
+        self.lam = lam; self.memoria_rechazo = memoria_rechazo; self.learn = learn; self.mu_norm = mu_norm
         self.Wl = rng.uniform(.1, .4, (2, 9)); self.KW = np.zeros((NKMAX, 6)); self.activa = np.zeros(NKMAX, bool)
         self.KW[:NK] = rng.uniform(0, 1, (NK, 6)); self.activa[:NK] = True
         while not (len(self.code(PAT['A']) & self.code(PAT['B'])) == 0):
             self.KW[0:NK] = rng.uniform(0, 1, (NK, 6))
         self.Wp = np.zeros(NKMAX); self.Wn = np.zeros(NKMAX); self.err = np.zeros(NKMAX); self.mu = np.zeros((NKMAX, 6))
         self.splits = 0; self.el = np.zeros_like(self.Wl); self.tr = np.zeros(9)
+        if estado is not None:   # herencia completa (experto): copias del estado de un progenitor; los contadores en cero
+            self.KW[:] = estado['KW']; self.activa[:] = estado['activa']; self.Wp[:] = estado['Wp']; self.Wn[:] = estado['Wn']
+            self.err[:] = estado['err']; self.mu[:] = estado['mu']; self.Wl[:] = estado['Wl']
         self.pos = 0; self.E = 1.0; self._rech = {}; self._prev_on = -1
         self.split_t = []; self.mord = {k: [0] * 4 for k in PAT}; self.vis = {k: [0] * 4 for k in PAT}; self.deaths = 0
         self.dq = [0] * 4; self.veneno_propio = {k: 0 for k in PAT}; self.n_crit = {}; self.vicarias = {k: 0 for k in PAT}
+        self.vicarias_signo = {k: [0, 0] for k in PAT}; self.avisos_B_antes_crit = 0; self.t_B_ok = None
         self.t_ext_B = None; self.R = 0.; self.Rp = 0.; self.hambre = 0.
 
     def q(self, t): return min(t // (self.T // 4), 3)
@@ -83,9 +87,12 @@ class Organismo:
                 self.n_crit[kk] = self.veneno_propio[kk]
         if invertir_en is not None and t >= invertir_en and self.t_ext_B is None and self.valor('B') >= 0:
             self.t_ext_B = t
+        if self.t_B_ok is None and self.valor('B') >= 0.5:
+            self.t_B_ok = t
 
     def fase_A(self, mundo, val, t, invertir_en):
-        """Percibir, mover, morder, aprender (boca y valor), gastar energia. Devuelve (pos, kk, signo) si mordio."""
+        """Percibir, mover, morder, aprender (boca y valor), gastar energia.
+        Devuelve None si no piso objeto; si lo piso, (pos, kk, mordio, R): la conducta visible de la visita."""
         rng = self.rng; objs = mundo.objs; emitida = None
         hambre = np.clip(1 - self.E, 0, 1); self.hambre = hambre; d, k, left = self.see(objs, t); pat = PAT[k]
         x = np.concatenate([pat * 1.2, [1.5 if left else 0, 0 if left else 1.5, 1.0 if d == 0 else 0.]]); noise = .15 + .5 * hambre
@@ -100,10 +107,11 @@ class Organismo:
             Vb = self.alpha * (Wb @ kc) + self.hambre_boca * hambre + .5; pb = 1 / (1 + np.exp(-Vb / .3)); mordio = rng.random() < pb
             self.vis[kk][self.q(t)] += 1
             if self.memoria_rechazo and not mordio: self._rech[self.pos] = t + self.memoria_rechazo
+            emitida = (self.pos, kk, bool(mordio), 0.)
             if mordio:
                 self.R = R_VAL[val[kk]]; self.E = min(self.E + E_VAL[val[kk]], 1.5); self.mord[kk][self.q(t)] += 1
                 if val[kk] == 'veneno': self.veneno_propio[kk] += 1
-                emitida = (self.pos, kk, 1 if self.R > 0 else -1)
+                emitida = (self.pos, kk, True, self.R)
                 del objs[self.pos]; mundo.spawn()
                 self._rech.pop(self.pos, None)
                 if self.learn:
@@ -123,7 +131,8 @@ class Organismo:
             self.mu[idx] = (1 - self.ema) * self.mu[idx] + self.ema * P
             for c in idx:
                 if self.err[c] > self.theta and (~self.activa).any():
-                    j = int(np.where(~self.activa)[0][0]); self.activa[j] = True; dist = P - self.mu[c]
+                    j = int(np.where(~self.activa)[0][0]); self.activa[j] = True
+                    dist = P - (self.mu[c] * (P.sum() / max(float(self.mu[c].sum()), 1e-9)) if self.mu_norm else self.mu[c])   # v10: mu normalizada
                     self.KW[j] = np.clip(self.KW[c] + self.paso * dist, 0, 5); self.KW[c] = np.clip(self.KW[c] - self.paso * dist, 0, 5)
                     self.Wp[j] = self.Wp[c]; self.Wn[j] = self.Wn[c]; self.mu[j] = self.mu[c].copy(); self.err[c] = self.err[j] = 0
                     self.splits += 1; self.split_t.append((t, kk))
@@ -133,8 +142,13 @@ class Organismo:
         if not self.learn: return
         kc = self.kenyon(PAT[kk]); Wb = self.Wp - self.Wn
         self._aprender(kk, kc, Wb, 1.0 if signo > 0 else -3.0, self.eta * f_vicaria, t, dividir=False)
-        self.vicarias[kk] += 1
+        self.vicarias[kk] += 1; self.vicarias_signo[kk][0 if signo > 0 else 1] += 1
+        if kk == 'B' and signo < 0 and 'B' not in self.n_crit: self.avisos_B_antes_crit += 1
         self._criterios(val, t, invertir_en)
+
+    def estado(self):
+        return dict(KW=self.KW.copy(), activa=self.activa.copy(), Wp=self.Wp.copy(), Wn=self.Wn.copy(), err=self.err.copy(),
+                    mu=self.mu.copy(), Wl=self.Wl.copy())
 
     def fase_B(self, t):
         if self.learn: self.Wl = np.clip(self.Wl + self.eta * (1 + 2 * self.hambre) * (max(self.R, 0) + self.Rp) * self.el, 0, 1.5)
@@ -145,12 +159,16 @@ class Organismo:
         comp = {k: (round(float(self.Wp @ self.kenyon(PAT[k])), 2), round(float(self.Wn @ self.kenyon(PAT[k])), 2)) for k in PAT}
         return dict(W=W, comp=comp, mord=self.mord, vis=self.vis, deaths=self.deaths, splits=self.splits, split_t=self.split_t,
                     celdas=int(self.activa.sum()), dq=self.dq, n_crit=self.n_crit, veneno_propio=self.veneno_propio,
-                    vicarias=self.vicarias, t_ext_B=self.t_ext_B)
+                    vicarias=self.vicarias, vicarias_signo=self.vicarias_signo, avisos_B_antes_crit=self.avisos_B_antes_crit,
+                    t_ext_B=self.t_ext_B, t_B_ok=self.t_B_ok)
 
 
-def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True, **kw_org):
+def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
+        estados=None, devolver_estado=False, **kw_org):
+    """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
+              | 'barajada' (como honesta, signo al azar) | 'barajada_conducta' (como conducta, signo al azar)."""
     rngs = [np.random.default_rng(seed + 100000 * i) for i in range(n)]
-    orgs = [Organismo(rngs[i], T, **kw_org) for i in range(n)]
+    orgs = [Organismo(rngs[i], T, estado=(estados[i] if estados else None), **kw_org) for i in range(n)]
     rng_mundo = rngs[0] if (n == 1 and compat) else np.random.default_rng(seed + 900000)
     rng_senal = np.random.default_rng(seed + 300000)
     val = {'A': 'comida', 'B': 'veneno'}
@@ -162,11 +180,15 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
         emitidas = []
         for i in orden:
             e = orgs[i].fase_A(mundo, val, t, invertir_en)
-            if e is not None:
-                emitidas.append((i, e)); senales_emitidas[i] += 1
+            if e is None: continue
+            px, kk, mordio, R = e
+            if senal in ('honesta', 'barajada'):
+                if mordio: emitidas.append((i, px, kk, 1 if R > 0 else -1)); senales_emitidas[i] += 1
+            elif senal in ('conducta', 'barajada_conducta'):
+                emitidas.append((i, px, kk, 1 if mordio else -1)); senales_emitidas[i] += 1
         if senal is not None and n > 1:
-            for i, (px, kk, signo) in emitidas:
-                s = signo if senal == 'honesta' else (1 if rng_senal.random() < .5 else -1)
+            for i, px, kk, signo in emitidas:
+                s = signo if senal in ('honesta', 'conducta') else (1 if rng_senal.random() < .5 else -1)
                 for j in range(n):
                     if j == i: continue
                     dl = (orgs[j].pos - px) % L; dist = min(dl, L - dl)
@@ -180,4 +202,5 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
     out = [o.resultado() for o in orgs]
     for i in range(n):
         out[i]['senales_emitidas'] = senales_emitidas[i]; out[i]['senales_recibidas'] = senales_recibidas[i]
+        if devolver_estado: out[i]['estado'] = orgs[i].estado()
     return out
