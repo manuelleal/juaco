@@ -2928,3 +2928,38 @@ sobre su promedio por estado (refuerzo menos línea base), para que la corriente
 mueva `Pq` la parte que depende del símbolo. Si tampoco emerge, la conclusión honesta es que **con percepción directa
 el código no paga lo bastante**, y el mundo que lo haría pagar es el de la Etapa 6 (novatos sucesivos, transmisión en
 cadena).
+
+
+### N2b — el bucle cierra a medias: **convención sí (14/20, arbitraria), significado débil (contraste ±0.4), beneficio −23 %**
+
+Preregistro `PREREGISTRO_N2b.md` (`3f73782a5d4c2812`, commit `77f5b3e`, escrito antes de correr). Datos
+`datos/N2b_s1-20_20260917_183004.json` (`7096226a18e31584`). K1 3/3 (con las perillas de N2b encendidas y sin señal, el
+organismo sigue siendo v13). K2: 10.823 símbolos.
+
+| condición | veneno del novato | veneno Q1 | muertes | venenos conocidos /10 | comidas /10 |
+|---|---|---|---|---|---|
+| SOLO | 319 | 128 | 266 | 8 | 9 |
+| N0 | 318 | 140 | 440 | 8 | 6 |
+| INNATO | 194 | 93 | 361 | 10 | 0 |
+| **CONV** | **246** [162, 1171] | 125 | 434 | 8 | 7 |
+| SHUF | **334** | 151 | 446 | 8 | 6 |
+
+| criterio | N2 | **N2b** | umbral |
+|---|---|---|---|
+| E1 convención en el emisor | 1/20 | **13/20** (consistencia Q4 0.99; símbolos distintos 14/20) | ≥ 15 → **refutada por 2** |
+| E2 decodificación (contraste) | 0.00 | **−0.42 / +0.36**, signo correcto; 2/20 | ≥ 15 con \|C\| ≥ 1 → **refutada** |
+| E3 arbitrariedad | desempate | **10/20** | 5–15 → **sostenida** |
+| E4 beneficio | 375 (peor) | **246 = 0.77 × N0**; pareado 12/20 | ≤ 0.70 y ≥ 14 → **refutada por poco** |
+| E5 barajar destruye | vacío | **real**: SHUF 334 frente a CONV 246; \|C\| < 1 en 20/20 | **sostenida** |
+
+Refuerzos del experto +37.916 / −444 pero `|Pq|` mediana **0.79** (no 3.00): la línea base cancela la corriente ciega y
+sólo queda la parte que depende del símbolo. Decodificaciones por la vía de valor: **0** (la puerta 1.0 nunca abrió):
+**todo el beneficio vino del sesgo del símbolo en la decisión** (`gamma · C ≈ ±0.5` sobre `Vb`).
+
+**Lectura.** Las dos correcciones de N2b hicieron exactamente lo que se predijo: hay gradiente y el código se forma.
+Lo que falta es **magnitud** en el receptor, y los datos señalan dos contaminaciones de `M`: (a) el estado del emisor
+es su **conducta**, y rechaza comida **por saciedad** → el símbolo de rechazo precede a comida a veces; (b) el experto
+**no conoce 2 de 10 venenos** y los muerde emitiendo "muerde" → el símbolo de mordida precede a veneno. **Es un fallo de
+pureza de la señal, no del bucle.** Por la letra del preregistro: **refutado**; el siguiente diseño (N2c: el estado del
+emisor es su valor y calla cuando no sabe; experto con 400k) va preregistrado aparte y se corre en la misma sesión
+(regla 12).

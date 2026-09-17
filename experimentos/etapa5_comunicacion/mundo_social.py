@@ -261,7 +261,7 @@ SIMBOLOS = ('simbolo', 'simbolo_barajado')
 
 
 def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
-        estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, **kw_org):
+        estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, estado_emisor='conducta', u_v=0.5, **kw_org):
     """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
               | 'barajada' (como honesta, signo al azar) | 'barajada_conducta' (como conducta, signo al azar)
               | 'simbolo' (N2: K_sim simbolos sin significado; el emisor aprende cual emitir, el receptor que significa)
@@ -296,15 +296,23 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
             if e is None: continue
             px, kk, mordio, R = e
             if senal in SIMBOLOS and n > 1:
-                st = 1 if mordio else 0
+                if estado_emisor == 'valor':   # N2c: el estado es lo que el emisor SABE; si no sabe, calla
+                    _v = orgs[i].valor(kk)
+                    if _v >= u_v: st = 1
+                    elif _v <= -u_v: st = 0
+                    else: st = None
+                else:
+                    st = 1 if mordio else 0
                 quedan = []
+                _c = 1 if mordio else 0   # la CONDUCTA del visitante es lo que resuelve las emisiones ajenas (acuerdo)
                 for p in pendientes:   # la visita de i resuelve emisiones ajenas sobre este patron (una por emision)
                     if p['i'] != i and p['kk'] == kk and t - p['t'] <= tau_s and not p.get('hecho'):
-                        orgs[p['i']].reforzar(p['st'], p['s'], +1 if st == p['st'] else -1); p['hecho'] = True
+                        orgs[p['i']].reforzar(p['st'], p['s'], +1 if _c == p['st'] else -1); p['hecho'] = True
                     if not p.get('hecho') and t - p['t'] <= tau_s: quedan.append(p)
                 pendientes = quedan
-                s = orgs[i].emitir(st, t); emitidas.append((i, px, kk, s)); senales_emitidas[i] += 1
-                pendientes.append(dict(i=i, kk=kk, st=st, s=s, t=t))
+                if st is not None:
+                    s = orgs[i].emitir(st, t); emitidas.append((i, px, kk, s)); senales_emitidas[i] += 1
+                    pendientes.append(dict(i=i, kk=kk, st=st, s=s, t=t))
             elif senal in ('honesta', 'barajada'):
                 if mordio: emitidas.append((i, px, kk, 1 if R > 0 else -1)); senales_emitidas[i] += 1
             elif senal in ('conducta', 'barajada_conducta'):

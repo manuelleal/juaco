@@ -18,8 +18,10 @@ _desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv e
 _n = int(sys.argv[sys.argv.index('--n') + 1]) if '--n' in sys.argv else 20
 SEEDS = list(range(_desde, _desde + _n)); T = 200000; REGLA = 'azar'
 VARIANTE = sys.argv[sys.argv.index('--variante') + 1] if '--variante' in sys.argv else 'a'
-VAR_KW = dict(gamma_sim=1.2, baseline_q=True, u_m=1.0) if VARIANTE == 'b' else dict()   # N2b: PREREGISTRO_N2b.md
-PREF = 'N2' if VARIANTE == 'a' else 'N2b'
+VAR_KW = {'a': dict(), 'b': dict(gamma_sim=1.2, baseline_q=True, u_m=1.0),   # N2b: PREREGISTRO_N2b.md
+          'c': dict(gamma_sim=1.2, baseline_q=True, u_m=1.0, estado_emisor='valor', u_v=0.5)}[VARIANTE]   # N2c: PREREGISTRO_N2c.md
+T_PROG = {'a': 200000, 'b': 200000, 'c': 400000}[VARIANTE]   # N2c: el experto es experto
+PREF = {'a': 'N2', 'b': 'N2b', 'c': 'N2c'}[VARIANTE]
 CONDS = {'SOLO': dict(n=1), 'N0': dict(n=2), 'INNATO': dict(n=2, senal='conducta'), 'CONV': dict(n=2, senal='simbolo'),
          'SHUF': dict(n=2, senal='simbolo_barajado')}
 N_PARALELO = 14
@@ -54,7 +56,7 @@ def tarea(args):
         return dict(tipo=tipo, seed=seed, identico=not dif, difieren=dif)
     if tipo == 'P':
         _, seed = args
-        r = ms.run(seed, n=1, T=T, mundo='regla', regla=REGLA, devolver_estado=True)[0]
+        r = ms.run(seed, n=1, T=T_PROG, mundo='regla', regla=REGLA, devolver_estado=True)[0]
         return dict(tipo=tipo, seed=seed, estado=r['estado'], W=r['W'])
     _, cond, seed, estado = args
     kw = CONDS[cond]
@@ -79,7 +81,7 @@ if __name__ == '__main__':
     mp.set_start_method('spawn', force=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
     _log['f'] = open(os.path.join(RAIZ, 'datos', f'{PREF}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
-    pre = os.path.join(AQUI, 'PREREGISTRO_N2.md' if VARIANTE == 'a' else 'PREREGISTRO_N2b.md')
+    pre = os.path.join(AQUI, {'a': 'PREREGISTRO_N2.md', 'b': 'PREREGISTRO_N2b.md', 'c': 'PREREGISTRO_N2c.md'}[VARIANTE])
     log(f"ARRANQUE {PREF} (significado emergente; variante {VARIANTE}, kw {VAR_KW}). semillas {SEEDS[0]}..{SEEDS[-1]}, T={T}, regla {REGLA}. Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_social {h16(os.path.join(AQUI, 'mundo_social.py'))}"
         f"  v13 {h16(os.path.join(RAIZ, 'organismo', 'organismo_v13.py'))}  v13g {h16(os.path.join(RAIZ, 'experimentos', 'v13_dos_vias', 'organismo_v13g.py'))}")
