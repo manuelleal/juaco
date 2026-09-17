@@ -19,7 +19,8 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(os.path.dirname(AQUI))
 sys.path[:0] = [AQUI, os.path.join(RAIZ, 'organismo')]
 _desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else 1   # replica: --desde 21
-SEEDS = list(range(_desde, _desde + 20)); T = 100000
+_n = int(sys.argv[sys.argv.index('--n') + 1]) if '--n' in sys.argv else 20   # regresion rapida (ERR-20): --n 6
+SEEDS = list(range(_desde, _desde + _n)); T = 100000
 _man = open(os.path.join(RAIZ, 'manifiesto.py'), encoding='utf-8').read()
 BASE = 'organismo_v13' if "'./organismo/organismo_v13.py'" in _man else 'organismo_v11'   # el tronco; mundo_social replica v13 por defecto
 KW_BASE = dict() if BASE == 'organismo_v13' else dict(eta_s=0.0, puerta=None)

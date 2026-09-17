@@ -2851,3 +2851,26 @@ la conducta, honesta por construcción, y el receptor la trata como una experien
 
 **Antes de escribir "Etapa 5 cerrada": réplica en semillas nuevas 21–40** con los mismos criterios (se corre a
 continuación; preregistrada por este mismo párrafo antes de correr, predicción: los seis criterios se sostienen).
+
+
+### Réplica de N1-asimétrico en semillas NUEVAS 21–40: **los seis criterios se sostienen. ETAPA 5 (transmisión N1) CERRADA**
+
+Datos `datos/N1asim_s21-40_20260917_175924.json` (`c7be2a06df98f52f`). K1 6/6; K2 mediana 35 (20/20); K3 OK.
+
+| criterio | semillas 1–20 | **semillas 21–40** |
+|---|---|---|
+| A1 veneno propio hasta el criterio, N1 frente a N0 | 7 frente a 19 | **8 frente a 19** |
+| A2 pareado N1 < N0 | 20/20 | **20/20** |
+| A3 la barajada no ayuda (es destructiva) | 704 | **715** |
+| A3b el experto no se degrada | 20/20 | **20/20** |
+| A4 coste de la confianza (novato N1 tarda más en INV) | 18/20 | **19/20** |
+| A5 simbiosis inversa (experto N1 extingue antes: 21.124 frente a 65.936) | 19/20 | **20/20** |
+
+**Etapa 5, peldaño N1 (transmisión por conducta visible, con asimetría de información): CERRADA sobre v13.**
+Vocabulario: *el novato aprende del rechazo visible del experto; el experto revierte antes gracias al novato.*
+Por ERR-20, la prueba entra a la regresión el mismo día: `corre_N1_asim.py --n 6 --desde 41` es la batería rápida de la
+Etapa 5 (K1 + A1–A5 en 6 semillas), y `--desde 21` (20 semillas) la completa. Queda escrito en `CLAUDE.md`.
+
+**Peldaños abiertos de la Etapa 5:** N2 (que el **significado** de la señal emerja, juego de señalización) y N3 (dos
+cuerpos con sentidos distintos resuelven lo que ninguno puede solo). Diseño en
+`experimentos/etapa5_comunicacion/DISENO_comunicacion_simbiotica.md`.

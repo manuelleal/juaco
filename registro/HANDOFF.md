@@ -338,6 +338,14 @@ premisa de una sola vía; v13 lo "pasaba" porque la lenta separa por píxeles. S
 0/20; 3'': la lenta separa, 20/20), **se escribió el criterio nuevo y se repitió el examen entero en 20 semillas nuevas**
 antes de congelar. Ésa es la forma honesta de cambiar un criterio después de ver un dato.
 
+## 11.3c Etapa 5, primer peldaño: enseñar y corregir (noche del día 5)
+Con v13 como base, el experimento que ayer falló (dos novatos iguales no tienen nada que decirse) pasó al cambiar la
+**asimetría**, no el mecanismo: un **experto** (hereda su estado) y un **novato** (en blanco), y la señal es la
+**conducta visible** (+ si muerde, − si rechaza), honesta por construcción. El novato aprende que B es veneno con
+**7–8 mordidas propias en vez de 19** (20/20 en dos lotes de semillas); la señal barajada no es neutra, es **destructiva**;
+y cuando el mundo se invierte, **el novato corrige al experto** (extingue su miedo tres veces antes) a cambio de un
+pequeño coste de confianza. Simbiosis en el tiempo, medida. **Etapa 5 N1 cerrada**; quedan N2 y N3.
+
 ## 11.4 Lo que queda abierto
 - ~~3T y capacidad sobre v13~~ — hecho: 3T sobrevive (T1–T6); capacidad cae de 50 a 35 de 60 (canje puerta/capacidad,
   predicho). ERR-22: la identidad C2b ≡ C1 no aplica a dos vías. Salida anotada: puerta que consulte la lenta sólo con
@@ -347,4 +355,5 @@ antes de congelar. Ésa es la forma honesta de cambiar un criterio después de v
 - **El candidato que sí podría romperlo** (una hija que fuga pero **deja de aprender al madurar**) queda anotado en la
   nota de diseño; **no se diseña todavía**.
 - **ERR-20 y su corrección:** la generalización entra a la regresión (ver registro).
-- Etapa 5 (comunicación), O7, y el techo real de capacidad de v11 (el mundo de 60 se le quedó corto en 3 semillas).
+- Etapa 5: **N2** (significado emergente, juego de señalización) y **N3** (sentidos complementarios / XOR entre dos).
+- O7 (qué hacer sin objetivo); techo de capacidad; la puerta que consulte la lenta sólo con la rápida vacía (rama).

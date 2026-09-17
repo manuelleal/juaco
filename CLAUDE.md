@@ -24,6 +24,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     dos vías (**ERR-22**). **Capacidad sobre v13: CAE** como se predijo (N\* 28 y 35 de 60; v11 43 y 50; v10 6 y 9): la
     puerta manda a la lenta los estímulos sin 3 celdas consolidadas. **Canje conocido: puerta contra capacidad.**
     Datos `reverificacion_v13_20260917_171603`.
+  - **Etapa 5, N1 (transmisión): CERRADA sobre v13.** Experto y novato; señal = conducta visible (+ muerde / − rechaza),
+    honesta por construcción; vicario por las dos vías. Novato aprende B con 7–8 mordidas propias en vez de 19 (20/20);
+    la señal barajada es destructiva (el contenido lo es todo); en el mundo invertido el novato corrige al experto
+    (extingue 3× antes, 19–20/20) al precio de un pequeño coste de confianza. Semillas 1–20 y réplica 21–40. Datos
+    `N1asim_20260917_175433`, `N1asim_s21-40_20260917_175924`. **Regresión (ERR-20):**
+    `python experimentos/etapa5_comunicacion/corre_N1_asim.py --n 6 --desde 41`. Abiertos: N2 (significado emergente), N3.
 - **`organismo/organismo_v11.py` — tronco del 17 sep 2026 (mañana a tarde)** (f69e24063be1b194, tag `v11-tronco`).
   v11 = v10 + **división por conflicto de signo**: una celda con valor consolidado (|Wp−Wn|>0.2) que recibe un refuerzo
   de signo contrario se divide en esa mordida; la hija nace **ciega fuera de los píxeles del patrón** que la dispara,
