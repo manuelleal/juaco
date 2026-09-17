@@ -20,7 +20,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   - **Criterio v3' (ERR-21):** el control negativo se desdobla: 3' la vía rápida sola sin plasticidad **falla** (0/20);
     3'' la lenta sin plasticidad **separa por píxeles** (20/20). Decidido y escrito ANTES de correr 101–120.
   - **Etapas 3 y 4 cerradas sobre el mismo tronco.** La lenta es lineal: **no** resuelve XOR (0.44), por diseño.
-  - **Pendientes y obligatorios antes de decir "todo sobrevive": 3T y capacidad sobre v13** (medidos sólo sobre v11).
+  - **3T sobre v13: SOBREVIVE** (T1–T6; `sep` 3.96; la lenta no lo resuelve por otra puerta). KT2 (C2b ≡ C1) no aplica a
+    dos vías (**ERR-22**). **Capacidad sobre v13: CAE** como se predijo (N\* 28 y 35 de 60; v11 43 y 50; v10 6 y 9): la
+    puerta manda a la lenta los estímulos sin 3 celdas consolidadas. **Canje conocido: puerta contra capacidad.**
+    Datos `reverificacion_v13_20260917_171603`.
 - **`organismo/organismo_v11.py` — tronco del 17 sep 2026 (mañana a tarde)** (f69e24063be1b194, tag `v11-tronco`).
   v11 = v10 + **división por conflicto de signo**: una celda con valor consolidado (|Wp−Wn|>0.2) que recibe un refuerzo
   de signo contrario se divide en esa mordida; la hija nace **ciega fuera de los píxeles del patrón** que la dispara,

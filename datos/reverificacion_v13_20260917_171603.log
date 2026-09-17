@@ -1,0 +1,58 @@
+[17:16:03 +    0.0s] ARRANQUE re-verificacion sobre v13 (3T + capacidad grande). semillas 41-60. Pool(14).
+[17:16:03 +    0.0s] sha preregistro e874add677bbb67b  script e11ff477898c1dff  mundo_temporal_v13 f9c3169b32f393d4  capD13 fd8e10435801646c  v13 cc8b16b492d4d324
+[17:16:03 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 29464
+[17:16:03 +    0.5s] ETAPA 1/4 — inercia (22)...
+[17:16:31 +   28.5s]   mundo_temporal_v13(0,None) == v11   : 18/18
+[17:16:31 +   28.5s]   capD13(0,None) == capD              : 4/4
+[17:16:31 +   28.5s] ETAPA 2/4 — 320 corridas (K: 80 largas primero; T: 240)...
+[17:24:45 +  522.4s]           20/320
+[17:29:02 +  778.7s]           40/320
+[17:30:28 +  865.2s]           60/320
+[17:31:59 +  956.0s]           80/320
+[17:32:16 +  973.3s]           100/320
+[17:32:34 +  991.0s]           120/320
+[17:32:52 + 1008.9s]           140/320
+[17:33:08 + 1025.1s]           160/320
+[17:33:17 + 1034.3s]           180/320
+[17:33:27 + 1044.4s]           200/320
+[17:33:38 + 1054.8s]           220/320
+[17:33:48 + 1065.3s]           240/320
+[17:33:59 + 1075.8s]           260/320
+[17:34:08 + 1085.5s]           280/320
+[17:34:20 + 1096.6s]           300/320
+[17:34:28 + 1105.4s]           320/320
+[17:34:28 + 1105.4s] ETAPA 3/4 — analisis.
+[17:34:28 + 1105.4s] 
+[17:34:28 + 1105.4s]   BLOQUE T (3T sobre v13)
+[17:34:28 + 1105.4s]    KT2 C2b == C1 bajo v13: 0/20
+[17:34:28 + 1105.4s]    v11  C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[17:34:28 + 1105.4s]    v11  C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[17:34:28 + 1105.4s]    v11  C2   sep +3.89 [+3.31,+3.97]  lift_q4 +0.382  solap_A 0  divisiones 0  muertes 100
+[17:34:28 + 1105.4s]    v11  C2b  sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[17:34:28 + 1105.4s]    v11  C3   sep +3.96 [+3.88,+3.98]  lift_q4 +0.388  solap_A 0  divisiones 6  muertes 100
+[17:34:28 + 1105.4s]    v11  C3C  sep -0.36 [-1.43,+1.37]  lift_q4 -0.038  solap_A 0  divisiones 7  muertes 100
+[17:34:28 + 1105.4s]    v13  C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.030  solap_A 3  divisiones 0  muertes 104
+[17:34:28 + 1105.4s]    v13  C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.030  solap_A 3  divisiones 0  muertes 104
+[17:34:28 + 1105.4s]    v13  C2   sep +3.88 [+3.55,+3.95]  lift_q4 +0.385  solap_A 0  divisiones 0  muertes 94
+[17:34:28 + 1105.4s]    v13  C2b  sep +0.00 [+0.00,+0.00]  lift_q4 -0.163  solap_A 3  divisiones 0  muertes 121
+[17:34:28 + 1105.4s]    v13  C3   sep +3.96 [+1.89,+3.98]  lift_q4 +0.376  solap_A 0  divisiones 6  muertes 99
+[17:34:28 + 1105.4s]    v13  C3C  sep -0.04 [-1.76,+1.18]  lift_q4 -0.025  solap_A 0  divisiones 6  muertes 90
+[17:34:28 + 1105.4s]    T1: SOSTENIDA
+[17:34:28 + 1105.4s]    T2: SOSTENIDA
+[17:34:28 + 1105.4s]    T3: SOSTENIDA
+[17:34:28 + 1105.4s]    T4: SOSTENIDA
+[17:34:28 + 1105.4s]    T5_no_inferioridad: SOSTENIDA
+[17:34:28 + 1105.4s]    T6_sin_otra_puerta: SOSTENIDA
+[17:34:28 + 1105.4s] 
+[17:34:28 + 1105.4s]   BLOQUE K (capacidad, mundo grande 10 px / 60 estimulos)
+[17:34:28 + 1105.4s]    20k v11 : N* 43.5 [6,60]  M_max 28.5 [24,38]  W=0 1/1200  agotan 20/20  celdas 90  divisiones 60  muertes 1617  no-familiares al final 16/60
+[17:34:28 + 1105.5s]    20k v13 : N* 28.0 [3,45]  M_max 25.0 [22,33]  W=0 3/1200  agotan 20/20  celdas 90  divisiones 60  muertes 1605  no-familiares al final 16/60
+[17:34:28 + 1105.5s]    60k v11 : N* 50.0 [31,60]  M_max 32.0 [27,41]  W=0 0/1200  agotan 20/20  celdas 90  divisiones 60  muertes 4849  no-familiares al final 14/60
+[17:34:28 + 1105.5s]    60k v13 : N* 35.0 [9,46]  M_max 29.5 [25,35]  W=0 2/1200  agotan 20/20  celdas 90  divisiones 60  muertes 4865  no-familiares al final 11/60
+[17:34:28 + 1105.5s]    K1: SOSTENIDA
+[17:34:28 + 1105.5s]    K2_no_inferioridad: REFUTADA
+[17:34:28 + 1105.5s]    K3_no_inferioridad: REFUTADA
+[17:34:28 + 1105.5s] 
+[17:34:28 + 1105.5s] VEREDICTO reverificacion_v13: INERCIA=True KT2=False T1=True T2=True T3=True T4=True T5_no_inferioridad=True T6_sin_otra_puerta=True K1=True K2_no_inferioridad=False K3_no_inferioridad=False 3T_SOBREVIVE=False CAPACIDAD_SOBREVIVE=False
+[17:34:28 + 1105.5s] ETAPA 4/4 — escritura.
+[17:34:29 + 1105.7s] datos -> reverificacion_v13_20260917_171603.json  sha256_16 = 9c9f52afffa36c79

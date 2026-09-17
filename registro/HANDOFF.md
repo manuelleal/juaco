@@ -339,7 +339,9 @@ premisa de una sola vía; v13 lo "pasaba" porque la lenta separa por píxeles. S
 antes de congelar. Ésa es la forma honesta de cambiar un criterio después de ver un dato.
 
 ## 11.4 Lo que queda abierto
-- **3T y capacidad sobre v13** (medidas sólo sobre v11): obligatorias antes de decir que todo sobrevive.
+- ~~3T y capacidad sobre v13~~ — hecho: 3T sobrevive (T1–T6); capacidad cae de 50 a 35 de 60 (canje puerta/capacidad,
+  predicho). ERR-22: la identidad C2b ≡ C1 no aplica a dos vías. Salida anotada: puerta que consulte la lenta sólo con
+  la rápida vacía (a preregistrar).
 - ~~v12: ceguera graduada~~ — hecho: mapa del canje, H sostenida; la hija madura, refutada. v13 lo rompió. Se preregistra como **mapa del canje**, no como
   solución: la predicción escrita es que **ningún valor logra a la vez** la retención de v11 y la generalización de v9.
 - **El candidato que sí podría romperlo** (una hija que fuga pero **deja de aprender al madurar**) queda anotado en la

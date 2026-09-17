@@ -2740,3 +2740,65 @@ de 81–100. Pasa el criterio (≥ 0.65) con margen, y es igual al v9 histórico
 quedan cerradas a la vez sobre el mismo organismo.** v11 pasa a tronco anterior.
 
 **Pendientes declarados, obligatorios antes de decir "todo sobrevive":** 3T (composición temporal) y capacidad sobre v13.
+
+
+### Re-verificación sobre v13: **3T sobrevive (T1–T6); la capacidad cae, como se predijo; KT2 no aplica (ERR-22)**
+
+Preregistro `experimentos/v13_reverificacion/PREREGISTRO_reverificacion_v13.md` (`e874add677bbb67b`, `01c47dc`);
+instrumentos `mundo_temporal_v13` (`bd3c64c0799ed8ce`) y `organismo_capD13` (`c93ba572bc783a05`), commiteados antes.
+Datos `datos/reverificacion_v13_20260917_171603.json` (`9c9f52afffa36c79`). Inercia: 18/18 y 4/4. Semillas 41–60.
+(Un primer lanzamiento se cayó en la etapa de inercia por un choque de nombres del instrumento —mi `valor(P)` pisó la
+`valor(kk, last)` del mundo temporal—; se renombró y se relanzó sin medir nada en medio.)
+
+#### 3T — composición temporal
+
+| brazo | C3 `sep` | C3 `lift_q4` | C3 `solap_A` | divisiones | C3C (control) | C2b | C1p |
+|---|---|---|---|---|---|---|---|
+| v11 | +3.96 | +0.388 | 0 | 6 | −0.36 | +0.00 | +0.00 |
+| **v13** | **+3.96** [+1.89, +3.98] | **+0.376** | 0 | 6 | −0.04 | +0.00 | +0.00 |
+
+**T1, T2, T3, T4, T5 (no-inferioridad) y T6 SOSTENIDAS.** T6 era el control nuevo para v13: con las columnas temporales
+a cero (C2b) o sin canal temporal (C1p), la vía lenta **no** resuelve 3T por otra puerta (`sep` 0.00 en ambos). La
+composición temporal vive en la vía rápida, que v13 no toca. Cautela: el rango de v13 en C3 baja a +1.89 en la peor
+semilla (v11: +3.88); mediana igual.
+
+**KT2 falla: C2b ≡ C1 bajo v13 en 0/20.** KT2 era el control **de instrumento** que garantizaba que "columnas
+temporales a cero = entrada temporal invisible". En v13 la vía lenta lee la entrada **directamente**, así que la
+entrada temporal existe para ella aunque las columnas de Kenyon estén a cero; C2b (12 entradas) y C1 (6) dejan de ser
+el mismo organismo (muertes 121 frente a 104, `lift` −0.163 frente a −0.030), **aunque ninguno resuelva 3T** (T6). Por la
+letra del preregistro, `3T_SOBREVIVE = False` porque incluía KT2. **Lectura honesta:** los seis criterios científicos
+pasan y el que falla es una identidad cuya premisa (una sola vía) v13 rompe por construcción.
+
+### ERR-22 — la identidad C2b ≡ C1 tiene la premisa de una sola vía (misma familia que ERR-21)
+
+Igual que el control negativo del examen: un control escrito para un organismo que sólo ve el mundo por Kenyon. Para
+un organismo de dos vías, la garantía que daba KT2 ("la lenta no ve el canal temporal") **es falsa y debe serlo**; lo que
+hay que garantizar es que **no lo usa para resolver la tarea**, y eso es T6, que se preregistró y pasa. No se anticipó
+al escribir el preregistro (se anticipó T6, no la caída de KT2). **Regla derivada, ya la segunda vez:** *al cambiar la
+arquitectura, revisar TODAS las identidades de instrumento, no sólo los criterios científicos.* Pendiente: KT2' para
+organismos de dos vías = C2b(`eta_s=0`) ≡ C1(`eta_s=0`) (la vía rápida sola), más T6.
+
+**Veredicto de 3T sobre v13, con la salvedad escrita: SOBREVIVE (T1–T6); KT2 no aplicable (ERR-22).**
+
+#### Capacidad — mundo grande (10 px, 60 estímulos)
+
+| paso | brazo | N\* | M_max | agotan el pool | no familiares al final |
+|---|---|---|---|---|---|
+| 20k | v11 | 43.5 [6, 60] | 28.5 | 20/20 | 16/60 |
+| 20k | **v13** | **28.0** [3, 45] | **25.0** | 20/20 | 16/60 |
+| 60k | v11 | 50.0 [31, 60] | 32.0 | 20/20 | 14/60 |
+| 60k | **v13** | **35.0** [9, 46] | **29.5** | 20/20 | 11/60 |
+
+**K1 sostenida; K2 y K3 (no-inferioridad) REFUTADAS**, exactamente en la dirección y magnitud predichas (se predijo
+`N*` 25–40): en un mundo abarrotado, los estímulos cuyo código no tiene las 3 celdas consolidadas (11–16 de 60 al
+final) van a la vía lenta, que es lineal y **no puede** ajustar 60 valencias alternadas. **Es el precio de la puerta en
+mundos abarrotados.** v13 sigue **muy por encima** de v10 (6 y 9) y conserva la degradación suave, pero **pierde ~15
+estímulos** frente a v11. Se registra como **canje nuevo: puerta contra capacidad**.
+
+**Salida anotada para preregistrar después (NO se recalibra aquí):** que la puerta consulte la lenta sólo cuando la
+rápida esté **vacía** (0 celdas consolidadas), y no cuando esté a medias; o una puerta graduada por número de celdas.
+Riesgo conocido: `puerta = 2` costó generalización (0.60–0.65) en la superficie de v13.
+
+**Estado del tronco v13, completo y honesto:** aprende, revierte, recuerda (20/20), generaliza (0.80–0.85), compone un
+paso de historia (3T 3.96) y sostiene 28–35 estímulos de 60 (v11: 43–50; v10: 6–9). Su costo conocido es la
+capacidad en mundos abarrotados, y su límite conocido es que la vía lenta es lineal.
