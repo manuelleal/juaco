@@ -2331,3 +2331,66 @@ la sesión** (HTTP 429, 16 sep ~19:10) antes de escribir nada; `gen2/` no existe
 **Pendiente antes de cualquier tronco:** `gen1/llm_2` es hipótesis del archivo. Necesita (1) confirmatorio en semillas nuevas
 21–40 con preregistro propio, (2) examen criterio v3 con 20 semillas, y (3) la prueba de capacidad (más estímulos que
 celdas), porque cada conflicto de signo fabrica una hija y el pool de 90 puede agotarse.
+
+## DÍA 5 (17 sep 2026) — v11: el primer órgano del tronco NACIDO POR EVOLUCIÓN GUIADA
+
+Preregistro `experimentos/v11_evo_division/PREREGISTRO_v11.md` (`a7c6a485718dab46`), commiteado con los instrumentos
+ANTES de correr (`210e821`). Datos: `datos/v11_confirmatorio_20260917_070339.json` (`497ec7075e304be2`) y
+`datos/examen_v11_20260917_071012.json` (`6a63bec1f637e35a`), con sus `.log`.
+
+**Semillas.** 1–20 las usó la selección de EVO; 21–40 las leyó el autor de la mutación para diagnosticar al padre (lo
+declaró). **Todo esto corre en 41–60, que nadie había visto.**
+
+**Q0 instrumentos:** `v11m` ≡ genoma evolucionado 12/12; `v11m(div_signo=False)` ≡ `v10m` 9/9; `caph11` ≡ `caph9` 12/12;
+`caph11(T,T)` ≡ v11 3/3. En la batería: `v11(mu_norm=False, div_signo=False)` ≡ v9 42/42 y `v11(div_signo=False)` ≡ v10 42/42.
+
+### Retención con interferencia (bloque M, semillas 41–60)
+
+| brazo | retención conjunta | W_B(100k) | W_A(100k) | aprende C y D | muerde B al volver | divisiones | celdas |
+|---|---|---|---|---|---|---|---|
+| v9 | **0/20** | +0.43 | −0.09 | sí | 15/20 | 8 | 38 |
+| v10 | **2/20** | −1.79 | −0.09 | sí | 7/20 | 4 | 34 |
+| **v11** | **20/20** | **−3.00** | **+1.00** | sí (20/20) | **0/20** | 5 | 35 |
+
+R1 (≥16/20) ✅ · R2 (v11−v10 ≥ +6): **+18** ✅ · R3 guarda (≥18/20): **20/20** ✅ · R4 mecanismo (códigos de A y B
+intactos de 50k a 100k, ≥14/20): **20/20** ✅. **La retención ocurre por el mecanismo declarado**, no por otra vía.
+
+### Capacidad (2K-bis, 20 estímulos, semillas 41–60)
+
+| paso | brazo | N\* | M_max | agotan el pool | celdas | divisiones |
+|---|---|---|---|---|---|---|
+| 20k | v10 | 5.0 [3, 8] | 7.0 | 1/20 | 78 | 48 |
+| 20k | **v11** | **20.0 [17, 20]** | **14.0** | **0/20** | **61** | 31 |
+| 60k | v10 | 8.5 [5, 16] | 11.0 | **12/20** | 90 | 60 |
+| 60k | **v11** | **20.0 [20, 20]** | **16.0** | **0/20** | **62** | 32 |
+
+K1 ✅ K2 ✅ K3 ✅. **No sólo no pierde capacidad: la multiplica**, con menos celdas y sin agotar el pool, mientras v10
+lo agota en 12 de 20 semillas a 60k. Muertes iguales (512 y ~1.555 en ambos brazos).
+
+**ADVERTENCIA, y es importante: el instrumento de capacidad se saturó.** `N* = 20` es el **techo de la prueba** (sólo
+existen 20 estímulos de peso 3 sobre 6 píxeles). No sabemos cuál es la capacidad real de v11, sólo que es ≥ 20. Hace
+falta un mundo con más estímulos (píxeles o pesos distintos) para encontrar su límite. Hasta entonces, **no se puede
+escribir "capacidad 20"; se escribe "≥ 20, techo del instrumento"**.
+
+### Examen y regresión
+`bateria_v11.py 20 --desde 41 --log`: criterio v3 **8/8**, seis etapas 20/20, control negativo 0/20, 4a' (identidad de
+contabilidad, declarada antes de correr en sustitución de la 4a de la regla `err>θ`), 4b, 4c y 4d pasan.
+`bateria_v9.py 6` cumple; 12 congelados intactos.
+
+### Réplica de v10 (ERR-17, criterio corregido escrito antes): **(b) FALLA**
+(a) v10 < v9 en 13/18 pares no empatados (≥70 %) ✅ · **(b) semillas con hija en el código de B: v9 17, v10 11; se pedía
+≤ la mitad y ≤ 9: ❌** · (c) peor por >0.5 en 2/20 ✅. **v10 no se congela como tronco**: se congela como **instrumento**
+(la identidad de v11 lo necesita). Su corrección de `mu` es real pero insuficiente por sí sola; **v11 la incluye**.
+
+### Decisión (por el preregistro, sin recalibrar nada)
+**v11 SE CONGELA COMO TRONCO** (tag `v11-tronco`; `organismo_v11.py` y `bateria_v11.py` a CONGELADOS, con v10 y
+`bateria_v10.py` como instrumentos). **Etapa 4 (memoria persistente): CERRADA en el mundo de 4 estímulos.**
+
+### Lo que esto significa, dicho con cuidado
+1. **Un órgano propuesto por un LLM, seleccionado por un evaluador automático y auditado por el protocolo, sobrevive en
+   semillas que nadie vio y mejora dos cosas a la vez** (retención y capacidad) sin romper ninguna de las seis etapas.
+2. **No es magia ni es inédito**: fisionar una traza ante un conflicto de signo tiene parientes en la literatura
+   (asignación de engramas, separación de patrones). Lo nuestro es que **apareció por búsqueda guiada** y está medido.
+3. **Riesgo abierto y no medido:** la hija nace **ciega fuera del patrón** que la dispara. Eso separa códigos… y podría
+   **destruir la generalización a patrones nuevos** (Etapa 3) y la composición temporal (3T), que se midieron sobre v9.
+   **Hasta re-verificarlas, v11 es mejor sólo en lo medido.** Es lo siguiente que se corre.

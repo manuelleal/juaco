@@ -1,0 +1,50 @@
+[07:03:39 +    0.0s] ARRANQUE v11 confirmatorio. semillas 41..60. Pool(14).
+[07:03:39 +    0.0s] sha preregistro a7c6a485718dab46  script 4e74d1329590693c  genoma f9cce63d371977ed  v11 f69e24063be1b194  v11m db2296b71caf5bf0  caph11 a34d3309221cc6c7  v10 219d5033fe15b5b9  v9 d3b72fb8819fbe8e
+[07:03:40 +    0.6s] REGLA 11 — procesos python vivos (2), este es pid 21756:
+[07:03:40 +    0.6s]     22080 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[07:03:40 +    0.6s]     21756 C:\Python314\python.exe experimentos/v11_evo_division/corre_v11.py
+[07:03:40 +    0.8s] ETAPA 1/4 — Q0 identidades (36)...
+[07:04:20 +   40.4s]   v11m == genoma gen1/llm_2       : 12/12
+[07:04:20 +   40.4s]   v11m(div_signo=False) == v10m   : 9/9
+[07:04:20 +   40.4s]   caph11(F,F) == caph9            : 12/12
+[07:04:20 +   40.4s]   caph11(T,T) == v11 (E1)         : 3/3
+[07:04:20 +   40.4s] ETAPA 2/4 — 140 corridas (K: 80 largas primero; M: 60)...
+[07:05:39 +  119.9s]           10/140
+[07:06:59 +  199.8s]           20/140
+[07:07:27 +  227.5s]           30/140
+[07:08:20 +  280.3s]           40/140
+[07:08:46 +  306.6s]           50/140
+[07:08:48 +  308.2s]           60/140
+[07:09:14 +  334.3s]           70/140
+[07:09:26 +  346.9s]           80/140
+[07:09:37 +  357.3s]           90/140
+[07:09:45 +  365.9s]           100/140
+[07:09:52 +  372.6s]           110/140
+[07:10:00 +  380.7s]           120/140
+[07:10:06 +  387.1s]           130/140
+[07:10:12 +  392.3s]           140/140
+[07:10:12 +  392.3s] ETAPA 3/4 — analisis.
+[07:10:12 +  392.3s] 
+[07:10:12 +  392.3s]   BLOQUE R (retencion, bloque M, semillas 41-60)
+[07:10:12 +  392.3s]    v9   conjunta  0/20  W_B>=... W_B<=-2  5  W_A>=0.5  5  W_B mediana +0.43  W_A -0.09  W_C -2.89  W_D +1.00  muerde B al volver 15  divisiones 8  celdas 38  muertes 196
+[07:10:12 +  392.3s]    v10  conjunta  2/20  W_B>=... W_B<=-2  9  W_A>=0.5  4  W_B mediana -1.79  W_A -0.09  W_C -2.90  W_D +1.00  muerde B al volver  7  divisiones 4  celdas 34  muertes 198
+[07:10:12 +  392.3s]    v11  conjunta 20/20  W_B>=... W_B<=-2 20  W_A>=0.5 20  W_B mediana -3.00  W_A +1.00  W_C -2.92  W_D +1.00  muerde B al volver  0  divisiones 5  celdas 35  muertes 202
+[07:10:12 +  392.3s]   R1 v11 conjunta 20/20 (>=16): SOSTENIDA
+[07:10:12 +  392.3s]   R2 v11 - v10 = +18 (>=+6): SOSTENIDA
+[07:10:12 +  392.3s]   R3 guarda W_C<=-2.5 y W_D>=0.85 20/20 (>=18): SOSTENIDA
+[07:10:12 +  392.3s]   R4 [mecanismo, vocabulario] codigos de A y B intactos 50k->100k 20/20 (>=14): SOSTENIDA
+[07:10:12 +  392.3s] 
+[07:10:12 +  392.3s]   V10 (replica ERR-17): (a) v10<v9 en 13/18 no empatados (>=70%): True; (b) hijas en B v9 17, v10 11 (<=mitad y <=9): False; (c) v10 peor por >0.5 en 2 (<=2): True
+[07:10:12 +  392.3s] 
+[07:10:12 +  392.3s]   BLOQUE K (capacidad 2K-bis, semillas 41-60)
+[07:10:12 +  392.3s]    20k v10 : N* 5.0 [3,8]  M_max 7.0 [5,14]  W=0 0/400  agotan 1/20  celdas 78  divisiones 48  muertes 512
+[07:10:12 +  392.3s]    20k v11 : N* 20.0 [17,20]  M_max 14.0 [12,18]  W=0 0/400  agotan 0/20  celdas 61  divisiones 31  muertes 512
+[07:10:12 +  392.3s]    60k v10 : N* 8.5 [5,16]  M_max 11.0 [8,14]  W=0 0/400  agotan 12/20  celdas 90  divisiones 60  muertes 1542
+[07:10:12 +  392.3s]    60k v11 : N* 20.0 [20,20]  M_max 16.0 [14,18]  W=0 0/400  agotan 0/20  celdas 62  divisiones 32  muertes 1568
+[07:10:12 +  392.3s]   K1: SOSTENIDA
+[07:10:12 +  392.3s]   K2: SOSTENIDA
+[07:10:12 +  392.3s]   K3: SOSTENIDA
+[07:10:12 +  392.3s] 
+[07:10:12 +  392.3s] VEREDICTO v11_confirmatorio: Q0=True R1=True R2=True R3=True R4_mecanismo=True V10a=True V10b=False V10c=True K1=True K2=True K3=True   (X1 y Q5 aparte)
+[07:10:12 +  392.3s] ETAPA 4/4 — escritura.
+[07:10:12 +  392.5s] datos -> v11_confirmatorio_20260917_070339.json  sha256_16 = 497ec7075e304be2

@@ -8,7 +8,17 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - `registro/REGISTRO_etapas_1_2.md` — historial completo, criterios preregistrados, resultados, errores. LEER PRIMERO.
 - `registro/HANDOFF.md` — narrativa completa de lo hecho y por qué.
 - `registro/PLAN.md` — qué sigue y cómo.
-- **`organismo/organismo_v9.py` — EL TRONCO desde el 16 sep 2026 (tarde)** (d3b72fb8819fbe8e, tag `v9-tronco`).
+- **`organismo/organismo_v11.py` — EL TRONCO desde el 17 sep 2026** (f69e24063be1b194, tag `v11-tronco`).
+  v11 = v10 + **división por conflicto de signo**: una celda con valor consolidado (|Wp−Wn|>0.2) que recibe un refuerzo
+  de signo contrario se divide en esa mordida; la hija nace **ciega fuera de los píxeles del patrón** que la dispara,
+  **la madre no se mueve** y el valor se **fisiona** (la hija se lleva el signo nuevo, la madre conserva el viejo).
+  **Es el primer órgano del tronco nacido por EVOLUCIÓN GUIADA** (JUACO-EVO, generación 1, operador LLM `gen1/llm_2`).
+  Confirmatorio en semillas nuevas 41–60: retención **20/20** (v10 2/20, v9 0/20), capacidad **N\* 20/20 estímulos**
+  (v10 5 y 8.5) usando **menos** celdas, examen criterio v3 **8/8** en 41–60. `organismo/bateria_v11.py`
+  (17179642ad02269c) es su examen y su regresión. Datos `v11_confirmatorio_20260917_070339`, `examen_v11_20260917_071012`.
+- **`organismo/organismo_v10.py`** (219d5033fe15b5b9): **NO es tronco** (ERR-17, y su réplica V10b falló). Congelado
+  como **instrumento**: la identidad de v11 lo usa. v10 = v9 + `mu` normalizada en la dirección de división.
+- **`organismo/organismo_v9.py` — tronco del 16 sep 2026 (tarde) hasta el 17 sep** (d3b72fb8819fbe8e, tag `v9-tronco`).
   v9 = v8 + **memoria de trabajo de rechazo** (`memoria_rechazo=20`): lo que la boca acaba de rechazar deja de ser
   objetivo de las patas durante 20 pasos. Pasó un confirmatorio en semillas nuevas (21–40) y el examen criterio v3,
   20/20. `organismo/bateria_v9.py` (c6496196990f6774) es su examen y su regresión.
@@ -23,7 +33,7 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   sin verificar hashes, reproducir en repo, pasar `bateria.py 20` y `manifiesto.py`, y etiquetar el origen.
 
 ## Reglas de trabajo (no negociables)
-1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v9.py 6` (tronco).
+1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v11.py 6` (tronco; `bateria_v9.py 6` como regresión).
    Debe salir todo PASA (y `manifiesto.py --check` intacto). Si no, detenerse.
 2. Un cambio por experimento. Cada experimento es una hipótesis con: qué cambia, predicción numérica,
    criterio de refutación y métricas — escritos ANTES de correr, en el registro.

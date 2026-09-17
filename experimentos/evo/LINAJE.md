@@ -43,3 +43,22 @@ R ≥ 0.8. **El linaje LLM llegó a R 1.0 / 1.0 en una generación.**
 padre) con el `S+E−C` guardado del padre (C respecto del abuelo). La mutación `0.0 → 0.0` tenía C = 0 y "mejoraba" 0.13.
 No cambió R ni el veredicto de P1 (el genoma es idéntico), pero es un hueco real del evaluador. Corregido: el SEC del
 padre se lee con C = 0. Se anota como intento de hackeo detectado (P4), esta vez por el propio control.
+
+## CONFIRMACIÓN del ganador de la generación 1 (17 sep 2026) — `gen1/llm_2` pasa a ser el tronco **v11**
+
+Preregistro `experimentos/v11_evo_division/PREREGISTRO_v11.md` (`a7c6a485718dab46`). Semillas **41–60** (las 1–20 las usó
+la selección; las 21–40 las leyó el autor de la mutación al diagnosticar al padre).
+
+| bloque | v9 | v10 | **v11** | criterio |
+|---|---|---|---|---|
+| retención conjunta (bloque M) | 0/20 | 2/20 | **20/20** | ≥16/20 ✅ |
+| aprende C y D (guarda) | sí | sí | **20/20** | ≥18/20 ✅ |
+| códigos de A y B intactos | — | — | **20/20** | ≥14/20 ✅ (mecanismo declarado) |
+| capacidad N\* 20k / 60k | — | 5.0 / 8.5 | **20 / 20 (techo del instrumento)** | ≥ v10 −1 ✅ |
+| agotan el pool a 60k | — | 12/20 | **0/20** | sin voto |
+| examen criterio v3 (41–60) | — | — | **8/8** | ✅ |
+
+**El órgano evolucionado sobrevivió al confirmatorio.** Es el primer órgano del tronco que no diseñó un humano ni yo:
+lo propuso un subagente LLM con una hipótesis escrita antes de evaluarlo, lo seleccionó un evaluador automático y lo
+auditó el protocolo. **Pendiente antes de llamarlo mejor en todo:** re-verificar generalización (Etapa 3) y composición
+temporal (3T) sobre v11; la hija ciega fuera del patrón podría costarle generalización.

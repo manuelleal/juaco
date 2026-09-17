@@ -21,6 +21,13 @@ CONGELADOS = {
     # v9 = TRONCO desde el 16 sep 2026 (confirmatorio semillas 21-40 M0-M6 y examen criterio v3 20/20)
     './organismo/organismo_v9.py':  'd3b72fb8819fbe8e',
     './organismo/bateria_v9.py':    'c6496196990f6774',
+    # v10: NO es tronco (ERR-17; replica V10b fallida el 17 sep). Se congela como INSTRUMENTO: la identidad de v11 lo usa.
+    './organismo/organismo_v10.py': '219d5033fe15b5b9',
+    './organismo/bateria_v10.py':   'd354813d3fa9d0f1',
+    # v11 = TRONCO desde el 17 sep 2026. Primer organo del tronco NACIDO POR EVOLUCION GUIADA (JUACO-EVO gen1/llm_2).
+    # Confirmatorio semillas 41-60 (R1-R4, K1-K3) y examen criterio v3 20/20 en 41-60.
+    './organismo/organismo_v11.py': 'f69e24063be1b194',
+    './organismo/bateria_v11.py':   '17179642ad02269c',
 }
 
 def h16(ruta):
