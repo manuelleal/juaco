@@ -37,12 +37,12 @@ def temporal():
     s = sust(s, "    Wp = np.zeros(nkmax); Wn = np.zeros(nkmax)\n",
              "    Wp = np.zeros(nkmax); Wn = np.zeros(nkmax)\n"
              "    Wps = np.zeros(NIN); Wns = np.zeros(NIN)   # v13: via LENTA lineal sobre la entrada completa (inerte si eta_s=0)\n"
-             "    def valor(P):   # v13: valor que usa la boca: suma (sin puerta) o la rapida si el patron le es familiar, si no la lenta\n"
+             "    def valor_tot(P):   # v13: valor que usa la boca: suma (sin puerta) o la rapida si el patron le es familiar, si no la lenta\n"
              "        _k = kenyon(P); _f = float((Wp - Wn) @ _k); _s = float((Wps - Wns) @ P)\n"
              "        return _f + _s if puerta is None else (_f if int((np.abs((Wp - Wn)[_k > 0]) > 0.2).sum()) >= puerta else _s)\n",
              etiqueta='estado lenta')
     s = sust(s, "                    W={f'{c}|{p}': round(float((Wp - Wn) @ kenyon(inp(c, p))), 3) for c, p in SIT})\n",
-             "                    W={f'{c}|{p}': round(valor(inp(c, p)), 3) for c, p in SIT})   # v13: valor total\n", etiqueta='snapshot W')
+             "                    W={f'{c}|{p}': round(valor_tot(inp(c, p)), 3) for c, p in SIT})   # v13: valor total\n", etiqueta='snapshot W')
     s = sust(s, "            P = inp(kk, prev_sent); kc = kenyon(P); Wb = Wp - Wn\n"
                 "            Vb = alpha * (Wb @ kc) + hambre_boca * hambre + .5\n",
              "            P = inp(kk, prev_sent); kc = kenyon(P); Wb = Wp - Wn; _wf = float(Wb @ kc); _ws = float((Wps - Wns) @ P)   # v13\n"
@@ -70,12 +70,12 @@ def capD13():
     ancla = "mu=np.zeros((NKMAX,D)); splits=0; el=np.zeros_like(Wl); tr=np.zeros(D+3)\n"
     s = sust(s, ancla, ancla +
              "    Wps=np.zeros(D); Wns=np.zeros(D)   # v13: via LENTA lineal sobre la retina (inerte si eta_s=0)\n"
-             "    def valor(P):   # v13\n"
+             "    def valor_tot(P):   # v13\n"
              "        _k=kenyon(P); _f=float((Wp-Wn)@_k); _s=float((Wps-Wns)@P)\n"
              "        return _f+_s if puerta is None else (_f if int((np.abs((Wp-Wn)[_k>0])>0.2).sum())>=puerta else _s)\n"
              "    def nofam(P): return int((np.abs((Wp-Wn)[kenyon(P)>0])>0.2).sum())<3   # v13: lectura\n", etiqueta='estado lenta')
     s = sust(s, "            W={n:round(float(Wb@kenyon(pats[n])),3) for n in vivos},\n",
-             "            W={n:round(valor(pats[n]),3) for n in vivos},   # v13: valor total\n", etiqueta='foto W')
+             "            W={n:round(valor_tot(pats[n]),3) for n in vivos},   # v13: valor total\n", etiqueta='foto W')
     s = sust(s, "            kk=objs[pos]; kc=kenyon(pats[kk]); Wb=Wp-Wn\n"
                 "            Vb=alpha*(Wb@kc)+hambre_boca*hambre+.5;",
              "            kk=objs[pos]; kc=kenyon(pats[kk]); Wb=Wp-Wn; _wf=float(Wb@kc); _ws=float((Wps-Wns)@pats[kk])   # v13\n"
@@ -89,7 +89,7 @@ def capD13():
              "                        if _ds>0: Wps=np.clip(Wps+eta_s*_ds*pats[kk],0,clip_s)\n"
              "                        else:     Wns=np.clip(Wns+eta_s*aversion*(-_ds)*pats[kk],0,clip_s)\n", etiqueta='error')
     s = sust(s, "    W={k:round(float((Wp-Wn)@kenyon(pats[k])),2) for k in pats}\n",
-             "    W={k:round(valor(pats[k]),2) for k in pats}   # v13: valor total\n"
+             "    W={k:round(valor_tot(pats[k]),2) for k in pats}   # v13: valor total\n"
              "    nofam_fin=sum(nofam(pats[n]) for n in tipos)   # v13: estimulos vivos que la puerta manda a la lenta al final\n", etiqueta='W final')
     s = sust(s, "n_techo=n_techo,mv_tot=mv_tot,mc_tot=mc_tot)", "n_techo=n_techo,mv_tot=mv_tot,mc_tot=mc_tot,nofam_fin=nofam_fin)", etiqueta='return')
     cab = ('"""organismo_capD13 = organismo_capD.py (85afad3f0769891f) + via lenta lineal sobre la retina + puerta de familiaridad\n'

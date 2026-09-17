@@ -97,7 +97,7 @@ def run(seed, arm='C1', T=100000, learn=True, eta=.03, tau_e=.85, alpha=1.2,
 
     Wp = np.zeros(nkmax); Wn = np.zeros(nkmax)
     Wps = np.zeros(NIN); Wns = np.zeros(NIN)   # v13: via LENTA lineal sobre la entrada completa (inerte si eta_s=0)
-    def valor(P):   # v13: valor que usa la boca: suma (sin puerta) o la rapida si el patron le es familiar, si no la lenta
+    def valor_tot(P):   # v13: valor que usa la boca: suma (sin puerta) o la rapida si el patron le es familiar, si no la lenta
         _k = kenyon(P); _f = float((Wp - Wn) @ _k); _s = float((Wps - Wns) @ P)
         return _f + _s if puerta is None else (_f if int((np.abs((Wp - Wn)[_k > 0]) > 0.2).sum()) >= puerta else _s)
     err = np.zeros(nkmax); mu = np.zeros((nkmax, NIN))
@@ -133,7 +133,7 @@ def run(seed, arm='C1', T=100000, learn=True, eta=.03, tau_e=.85, alpha=1.2,
                     w_inst_cod=round(wi_c, 3), w_temp_cod=round(wt_c, 3),
                     rho_cod=round(wt_c / (wt_c + wi_c), 4) if (wt_c + wi_c) > 0 else 0.0,
                     celdas=int(activa.sum()), splits=splits,
-                    W={f'{c}|{p}': round(valor(inp(c, p)), 3) for c, p in SIT})   # v13: valor total
+                    W={f'{c}|{p}': round(valor_tot(inp(c, p)), 3) for c, p in SIT})   # v13: valor total
 
     def see():
         best = None

@@ -54,7 +54,7 @@ def run(seed,T=100000,learn=True,plan=None,pats=None,chk=None,
     def kenyon(P): k=np.zeros(NKMAX); k[list(code(P))]=1; return k
     Wp=np.zeros(NKMAX); Wn=np.zeros(NKMAX); err=np.zeros(NKMAX); mu=np.zeros((NKMAX,D)); splits=0; el=np.zeros_like(Wl); tr=np.zeros(D+3)
     Wps=np.zeros(D); Wns=np.zeros(D)   # v13: via LENTA lineal sobre la retina (inerte si eta_s=0)
-    def valor(P):   # v13
+    def valor_tot(P):   # v13
         _k=kenyon(P); _f=float((Wp-Wn)@_k); _s=float((Wps-Wns)@P)
         return _f+_s if puerta is None else (_f if int((np.abs((Wp-Wn)[_k>0])>0.2).sum())>=puerta else _s)
     def nofam(P): return int((np.abs((Wp-Wn)[kenyon(P)>0])>0.2).sum())<3   # v13: lectura
@@ -81,7 +81,7 @@ def run(seed,T=100000,learn=True,plan=None,pats=None,chk=None,
         Wb=Wp-Wn; cods={n:code(pats[n]) for n in vivos}
         so=[len(cods[a]&cods[b]) for i,a in enumerate(vivos) for b in vivos[i+1:]]
         hist.append(dict(t=int(t),n=len(vivos),celdas=int(activa.sum()),splits=splits,
-            W={n:round(valor(pats[n]),3) for n in vivos},   # v13: valor total
+            W={n:round(valor_tot(pats[n]),3) for n in vivos},   # v13: valor total
             R={n:R_VAL[val[n]] for n in vivos},
             vis_int={n:visc[n]-visp[n] for n in vivos},mord_int={n:morc[n]-morp[n] for n in vivos},
             vis_ac={n:visc[n] for n in vivos},mord_ac={n:morc[n] for n in vivos},
@@ -165,7 +165,7 @@ def run(seed,T=100000,learn=True,plan=None,pats=None,chk=None,
         if E<=0: deaths+=1; E=.6; pos=int(rng.integers(L))
         if log_cada and t%log_cada==0: log.append((t,)+tuple(round(float((Wp-Wn)@kenyon(pats[k])),2) for k in sorted(pats)))
     foto(T)
-    W={k:round(valor(pats[k]),2) for k in pats}   # v13: valor total
+    W={k:round(valor_tot(pats[k]),2) for k in pats}   # v13: valor total
     nofam_fin=sum(nofam(pats[n]) for n in tipos)   # v13: estimulos vivos que la puerta manda a la lenta al final
     comp={k:(round(float(Wp@kenyon(pats[k])),2),round(float(Wn@kenyon(pats[k])),2)) for k in pats}
     nv=nombres[2] if len(nombres)>2 else None
