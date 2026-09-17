@@ -79,3 +79,39 @@ No es un intento de arreglar el canje. **Es su mapa.** El candidato que podría 
 - **H se refuta:** v12 con ese `beta` pasa a candidato a tronco, con confirmatorio propio en semillas nuevas, examen
   criterio v3 **y** `bateria_generaliza.py 20` (ERR-20).
 - **La fuga no sigue a `beta`:** se para; el instrumento no manipula lo que dice manipular.
+
+---
+
+## ENMIENDA 1 (17 sep, antes de construir y de correr) — controles de inercia y la rama de la hija madura
+
+**Pedido de dirección:** *"β=0 reproduce v10 bit a bit y β=1 reproduce v11 bit a bit. Verifícalo antes de mirar los
+puntos intermedios."*
+
+**Corrección, con la razón.** La perilla `beta` gradúa **sólo la ceguera** de la hija. `beta = 1` **no puede** ser v10,
+porque v10 difiere de v11 en tres cosas más, ninguna de ellas graduada aquí: (a) **cuándo** divide (`err > theta`
+frente a conflicto de signo), (b) **si la madre se mueve** (`KW[c] -= paso*dist` en v10; fija en v11), y (c) **qué
+hereda la hija** (v10 copia `Wp` y `Wn`; v11 **fisiona** el valor). Con `beta = 1` se obtiene "la regla de v11 sin
+ceguera", que es lo que interesa medir, no v10.
+
+**Los dos controles de inercia que SÍ existen, y se verifican antes de leer los puntos intermedios:**
+- **I1:** `v12(beta=0)` ≡ **v11** en todas las claves, 7 escenarios × semillas 1–3.
+- **I2:** `v12(div_signo=False)` ≡ **v10** en todas las claves, 7 escenarios × semillas 1–3.
+- Y las de instrumentación: `v12m(beta=0)` ≡ `v11m` y `v12g(beta=0)` ≡ `v11g`.
+**Si alguna falla, se para y se arregla el instrumento** (tal cual pidió dirección).
+
+## RAMA `hija-madura` (se lanza sin esperar a la superficie de v12)
+
+**Mecanismo:** la hija **no** es ciega (participa en códigos ajenos, `beta = 1`), pero **sus `Wp`/`Wn` se congelan al
+especializarse**: una vez que su propio valor se consolida (`|Wp − Wn| ≥ 1.0`, la única constante nueva, declarada y
+**no barrida** en esta rama), deja de aprender para siempre. Sólo se congelan las **hijas** (índice ≥ 30); las celdas
+de nacimiento y las madres siguen aprendiendo.
+
+**Predicción (una línea, de dirección):** *la retención se mantiene porque una hija congelada no se sobrescribe, y la
+generalización sube porque vuelve a fugar valor.*
+**Forma evaluable:** retención ≥ **16/20** equivalente (≥ 8/10 en las 10 semillas de la rama) **y** acierto en patrones
+nunca vistos ≥ **0.75**.
+**Refutación:** retención < 6/10 (sigue olvidando) **o** acierto < 0.70 (no generaliza).
+
+**Estatuto de rama:** 10 semillas **71–80**; si la predicción se sostiene, se re-mide en **semillas retenidas 81–90**
+antes de escribir nada fuerte. Etiqueta `rama-hija-madura`. Nada de esto es tronco sin confirmatorio propio, examen
+criterio v3 y `bateria_generaliza.py 20` (ERR-20).
