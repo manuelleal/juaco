@@ -2598,3 +2598,65 @@ el tronco; **v12 no se congela** (ningún punto mejora los dos ejes a la vez).
 **Lo que queda, con lo aprendido:** la salida ya no puede ser una perilla dentro de una sola vía. La propone la propia
 literatura (McClelland y otros, 1995) y ahora también nuestros datos: **dos vías** —una rápida y separada que recuerde,
 otra lenta y con fuga que generalice— y un modo de consultarlas. Es un cambio de arquitectura, no un parámetro.
+
+### v13 — DOS VÍAS: **el canje se rompe** (P4 confirmado en semillas 61–80, P5 sostenida)
+
+Preregistro `experimentos/v13_dos_vias/PREREGISTRO_v13.md` (`e9568fc0542d493e`) con **enmienda 1 escrita antes de
+correr** (`57ec024`). Datos `datos/v13_dos_vias_20260917_160541.json` (`01d1cdf0d4c1dbe5`). Instrumentos por anclas:
+`organismo_v13` `88c3574cf9cf38bf`, `v13m` `8b134cfd335e78e2`, `v13g` `2a80e125f8593bf2`. 2.100 corridas de superficie
++ 140 de confirmatorio.
+
+**Mecanismo.** Vía rápida = v11 sin tocar. Vía lenta = lectura **lineal directa de la retina** (dos canales `Wps`/`Wns`
+∈ ℝ⁶, tasa `eta_s`, mismo drenaje). Tres modos de combinarlas: `suma` (un solo error compartido, lo preregistrado),
+`puerta2` y `puerta3` (cada vía aprende de **su propio** error; la boca consulta la rápida sólo si ≥ K de las 3 celdas
+del código tienen valor consolidado —`|Wp−Wn| > 0.2`, el umbral que ya usa v11— y si no, la lenta).
+
+**P1 inercia:** `v13(eta_s=0)` ≡ v11 21/21; `v13m` ≡ `v11m` 9/9; `v13g` ≡ `v11g` 6/6.
+
+**Superficie completa (semillas 41–60; referencias: v11 = 20/20 y 0.600; v9 = 0/20 y 0.800; azar 0.50):**
+
+| brazo | eta_s | retención | aprende C,D | acierto nunca vistos | xor | conducta | E1 / E2 / E2L |
+|---|---|---|---|---|---|---|---|
+| suma | 0 (=v11) | 20/20 | 20/20 | 0.600 | 0.500 | 0.672 | 20 / 20 / 20 |
+| suma | 0.003 | 20/20 | 20/20 | 0.600 | 0.500 | 0.640 | 20 / 20 / 20 |
+| suma | 0.006 | 20/20 | 20/20 | 0.600 | 0.500 | 0.698 | 20 / 20 / 20 |
+| suma | 0.015 | 19/20 | 20/20 | 0.600 | 0.500 | 0.719 | 20 / 18 / 20 |
+| suma | 0.03 | **0/20** | 20/20 | 0.700 | 0.500 | 0.849 | 20 / 16 / 19 |
+| puerta2 | 0 | 20/20 | 20/20 | 0.600 | 0.500 | 0.682 | 20 / 20 / 20 |
+| puerta2 | 0.003 | 20/20 | 20/20 | 0.600 | 0.438 | 0.690 | 20 / 20 / 20 |
+| puerta2 | 0.006 | 20/20 | 20/20 | 0.650 | 0.438 | 0.728 | 20 / 20 / 20 |
+| puerta2 | 0.015 | 20/20 | 20/20 | 0.600 | 0.500 | 0.730 | 20 / 20 / 20 |
+| puerta2 | 0.03 | 19/20 | 14/20 | 0.600 | 0.500 | 0.712 | 20 / 20 / 20 |
+| puerta3 | 0 | 20/20 | 17/20 | 0.550 | 0.500 | 0.573 | 20 / 20 / 20 |
+| puerta3 | 0.003 | 20/20 | 15/20 | 0.750 | 0.438 | 0.697 | 20 / 20 / 20 |
+| puerta3 | 0.006 | 20/20 | 15/20 | 0.750 | 0.375 | 0.760 | 20 / 20 / 20 |
+| **puerta3** | **0.015** | **20/20** | 19/20 | **0.800** | 0.406 | 0.798 | 20 / 20 / 20 |
+| puerta3 | 0.03 | 20/20 | 11/20 | 0.800 | 0.406 | 0.883 | 20 / 20 / 20 |
+
+- **El brazo `suma` (un error compartido) NO rompe el canje**, como anticipó el humo: la rápida deja sin error a la
+  lenta; y con `eta_s = 0.03` la lenta se lleva tanto valor que **se pierde la retención por completo** (0/20). La
+  predicción P2 original falla por esa razón, declarada antes de correr.
+- **El brazo `puerta3` sí lo rompe.** Dos puntos cumplen en 41–60 (`eta_s` 0.015 y 0.03); por la regla escrita se lleva
+  **uno solo** (0.015: mejor guarda) al confirmatorio.
+
+**CONFIRMATORIO en semillas 61–80 (nunca usadas; el único que decide):**
+
+| condición | retención | guarda | W_B | acierto nunca vistos | xor | conducta | fuga | E1 / E2 / E2L | muerde B al volver |
+|---|---|---|---|---|---|---|---|---|---|
+| **puerta3, eta_s = 0.015** | **20/20** | 19/20 | −3.05 | **0.850** [0.60, 1.00] | 0.438 | **0.852** | 0.03 | **20 / 20 / 20** | 0 |
+
+**P4 [el canje se rompe]: CONFIRMADO. P5 [nada se rompe]: SOSTENIDA. XOR ≤ 0.60: sí (0.438).**
+
+**Lectura.** Por primera vez el organismo **recuerda como v11 (20/20) y generaliza mejor que v9 (0.85 frente a 0.80)**,
+sin romper aprender, revertir ni separar. El mecanismo es el que propone la teoría de sistemas complementarios y el que
+nuestros propios datos pedían: **dos vías**, una que separa (y recuerda) y otra que solapa (y generaliza), con **una
+puerta de familiaridad** que decide a cuál se le cree. Cuando la rápida "reconoce" el patrón (tres celdas consolidadas)
+manda ella; cuando no, manda la lenta, que ha aprendido la **regla** y no los casos.
+
+**Cautelas, escritas con el resultado caliente:**
+1. La vía lenta es **lineal**: generaliza lo lineal (`px0`) y **no** XOR (0.44, como se predijo). No es "la corteza";
+   es la vía lenta mínima.
+2. El punto se **eligió** entre 15 en 41–60 y se **confirmó** en 61–80: es un confirmatorio limpio, pero de **un** punto.
+3. Falta el confirmatorio completo de tronco: examen criterio v3 en 20 semillas nuevas, `bateria_generaliza.py 20`
+   (ERR-20) y la re-verificación 3T. **v13 es candidato, no tronco.**
+4. La guarda queda en 19/20 (una semilla no aprende del todo lo nuevo): por debajo del 20/20 de v11. Se vigila.
