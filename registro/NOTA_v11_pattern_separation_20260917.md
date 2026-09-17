@@ -43,3 +43,49 @@ proyecto hasta ahora.
 ## Fuente
 Estas referencias y la pregunta están también en la guía de sustento científico del proyecto ("Sustento científico
 de Juaco", sección de plasticidad/interferencia), con enlaces de acceso abierto donde existen.
+
+---
+
+## Adenda 2 (17 sep 2026, noche) — respuesta de NotebookLM a la pregunta, verificada en la sesión de diseño
+
+**Veredicto: el mecanismo de v11 TIENE precedente.** Dividir/comprometer una unidad nueva en el instante del
+conflicto, congelando la vieja, ya está descrito:
+- **ARTMAP — Carpenter, Grossberg & Reynolds (1991)**, *Neural Networks*. "Match tracking": ante un error de
+  predicción, la vigilancia ρ sube justo lo necesario para resetear la categoría activa y comprometer un nodo nuevo
+  inicializado en la entrada; el nodo viejo queda intacto. Reglas locales, sin backprop. Es el precedente más cercano
+  y ataca exactamente el "dilema estabilidad–plasticidad" (= olvido catastrófico).
+  [PDF](https://sites.bu.edu/steveg/files/2016/06/CarGroRey1991NN.pdf)
+- **Wynne-Jones (1991/1993)** — "Node splitting", *NIPS 4* / *Neural Computing & Applications*: una unidad oculta
+  cuyas actualizaciones de peso oscilan en direcciones contradictorias se divide en dos. Con gradientes (backprop),
+  no reglas locales. [NIPS](https://proceedings.neurips.cc/paper/1991/hash/0fcbc61acd0479dc77e3cccc0f5ffca7-Abstract.html)
+- **Neurogénesis dirigida por error**: Draelos et al. (2017) "Neurogenesis deep learning"
+  [arXiv](https://arxiv.org/abs/1612.03770); "Error driven synapse augmented neurogenesis" (*Frontiers in AI*, 2022)
+  [PubMed](https://pubmed.ncbi.nlm.nih.gov/36388403/). Revisión general del campo: Parisi et al. (2019), *Neural
+  Networks* [PDF](https://arxiv.org/pdf/1802.07569).
+
+**Consecuencia para la afirmación del proyecto** (regla del brief: lo defendible es la necesidad del mecanismo, no
+su descubrimiento): NO se puede decir "v11 inventó dividir al conflicto". SÍ se puede decir: (a) un organismo con
+consecuencias, sin backprop, NECESITÓ el mecanismo de ARTMAP y lo encontró un bucle evolutivo guiado por LLM con
+control ciego, no un diseñador; (b) la capacidad ×5 con degradación suave es una medida que ARTMAP no reporta en ese
+formato. Eso es lo publicable.
+
+**Costo predicho: el mismo.** ART lo llama "proliferación de categorías": con vigilancia alta se acerca a memorizar
+ejemplares y pierde generalización. Coincide con CLS. La re-verificación de Etapa 3 sobre v11 sigue siendo la prueba
+que decide; nada de lo que sigue se implementa antes de tener ese dato.
+
+**Tres salidas al costo, y cómo mapean a JUACO** (una por experimento, con preregistro propio):
+1. **Hija no ciega — dividir solo el readout** (weight sharing): la hija hereda el código Kenyon de la madre y solo
+   independiza `Wp/Wn`. Ataca directo el riesgo. Candidato a v12 SOLO si la generalización cae.
+2. **3F fusión** (split-and-merge): si madre e hija vuelven a coincidir en error, se funden. Ya estaba en la cola
+   del proyecto; NotebookLM llegó solo a lo mismo.
+3. **Repaso entrelazado offline** (consolidación tipo sueño, CLS): es K4, ya explorado y descartado por "memoria
+   escondida". Queda anotado que la biología lo usa; no se reabre sin decisión de dirección.
+
+**Advertencias de instrumento** — NotebookLM respondió desde la memoria del modelo, no desde las fuentes cargadas
+(ninguna de estas estaba en el notebook):
+- "Rao et al., 2022, Error-Driven Neurogenesis": la autoría NO verifica; el paper real de 2022 es el de *Frontiers*
+  de arriba. No citar "Rao".
+- Las ecuaciones que dio para "node splitting" (varianza de gradiente, corte g(x), perturbación ortogonal) y para
+  "EDN" (P(spawn) sigmoide, ortogonalidad estricta) son reconstrucciones plausibles, NO las de los papers. Las de
+  Fuzzy ARTMAP (función de elección T_j, test de vigilancia, match tracking) sí son correctas.
+- Regla: nada de esto entra al registro como cita hasta abrir el PDF correspondiente.

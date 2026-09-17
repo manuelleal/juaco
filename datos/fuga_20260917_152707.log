@@ -1,0 +1,24 @@
+[15:27:07 +    0.0s] ARRANQUE confirmacion de la fuga. semillas 41..60 (limpias 46..60). Pool(14).
+[15:27:07 +    0.0s] sha preregistro b8932958e3480afa  script 120e56f077833739  v11g 6c6b5eecc177c181
+[15:27:08 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 8732
+[15:27:08 +    0.4s] ETAPA 1/3 — 60 corridas (regla px0, T=200k)...
+[15:27:22 +   15.3s]           10/60
+[15:27:36 +   29.2s]           20/60
+[15:27:50 +   43.2s]           30/60
+[15:27:51 +   43.5s]           40/60
+[15:28:05 +   57.4s]           50/60
+[15:28:16 +   68.5s]           60/60
+[15:28:16 +   68.5s] ETAPA 2/3 — analisis.
+[15:28:16 +   68.5s] 
+[15:28:16 +   68.5s]    v9   fuga (hijas ajenas en el codigo de patrones NUEVOS, de 3) 1.00 [0.97, 1.00]  fuga en los ENTRENADOS 1.00  acierto 0.800  |W| 1.45  compartidas 2.80  divisiones 28
+[15:28:16 +   68.5s]    v10  fuga (hijas ajenas en el codigo de patrones NUEVOS, de 3) 0.65 [0.20, 0.93]  fuga en los ENTRENADOS 0.73  acierto 0.800  |W| 1.34  compartidas 2.55  divisiones 16
+[15:28:16 +   68.5s]    v11  fuga (hijas ajenas en el codigo de patrones NUEVOS, de 3) 0.08 [0.00, 0.33]  fuga en los ENTRENADOS 0.40  acierto 0.600  |W| 1.52  compartidas 2.40  divisiones 28
+[15:28:16 +   68.5s] 
+[15:28:16 +   68.5s]   D1 fuga mediana v9 1.00 (>=0.8) y v11 0.08 (<=0.3): SOSTENIDA
+[15:28:16 +   68.5s]   D2 Spearman(fuga, acierto) sobre 60 corridas: +0.601 (>=+0.5): SOSTENIDA
+[15:28:16 +   68.5s]   D3 Spearman dentro de v9: +0.328 (>=+0.3): SOSTENIDA   [v10 +0.466, v11 -0.104, sin voto]
+[15:28:16 +   68.5s]   D4 solo semillas limpias 46-60: fuga v9 1.00, v11 0.10, Spearman +0.579: SOSTENIDA
+[15:28:16 +   68.5s] 
+[15:28:16 +   68.5s] VEREDICTO fuga: D1=True D2=True D3=True D4=True FRASE_AL_HANDOFF=True
+[15:28:16 +   68.5s] ETAPA 3/3 — escritura.
+[15:28:16 +   68.5s] datos -> fuga_20260917_152707.json  sha256_16 = e9278cce6320f9f5

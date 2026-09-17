@@ -276,3 +276,57 @@ nunca**.
 2. **N1 rediseñado con asimetría de información** (experto y novato), con preregistro nuevo.
 3. **Pendientes:** O7 ("qué hacer sin objetivo"); frontera no lineal (XOR); herencia a lo largo de varias
    generaciones.
+
+---
+
+# 11. DÍA 5 (17 sep 2026) — v11 nace de la evolución, cierra la Etapa 4 y descubre el canje
+
+## 11.1 Para retomar en 30 segundos
+```
+cd organismo && PYTHONIOENCODING=utf-8 python bateria.py 6 && python bateria_v11.py 6
+cd .. && python manifiesto.py --check        # 12 archivos congelados
+```
+**El tronco es v11** (tag `v11-tronco`). v9 y v10 quedan congelados: v9 como tronco anterior, **v10 sólo como
+instrumento** (su réplica de ERR-17 falló en el subcriterio b).
+
+## 11.2 Qué pasó, en orden
+1. **JUACO-EVO, generación 1.** Cuatro subagentes LLM propusieron una mutación cada uno, con hipótesis escrita antes;
+   cuatro mutaciones ciegas hicieron de control. Ganó `llm_2`: **división por conflicto de signo** (una celda con valor
+   consolidado que recibe refuerzo contrario se divide en esa mordida; la hija nace **ciega fuera de los píxeles de su
+   patrón**, la madre no se mueve, el valor se **fisiona**).
+2. **El control ciego no llegó:** 24 mutaciones en 6 generaciones se quedaron en R 0.5/0.4; el linaje LLM llegó a
+   1.0/1.0 en **una** generación. **P1 (aceleración) sostenida**, con el límite declarado de que el operador ciego sólo
+   escala constantes.
+3. **Dos huecos del evaluador atrapados por la auditoría**, no por el criterio: **ERR-18** (una mutación ciega bajó las
+   muertes subiendo la energía tras morir: constitución, no aprendizaje) y **ERR-19** (una mutación **nula** ganaba por
+   un error de contabilidad del selector). Los dos corregidos y registrados.
+4. **v11 confirmado en semillas 41–60 y congelado:** retención **20/20** (v9 0/20, v10 2/20), examen criterio v3
+   **8/8**, y capacidad multiplicada. **Etapa 4 cerrada** en el mundo de 4 estímulos.
+5. **Mundo grande (10 píxeles, 60 estímulos):** v11 domina **50 de 60** (v10: 9), con menos celdas y sin colapsar.
+   **G3 refutada:** el límite **no** es quedarse sin celdas; al agotarlas **se degrada suavemente** (error 0.02 → 0.16)
+   en vez de caer por un precipicio.
+6. **La re-verificación encontró el precio.** 3T **sobrevive y mejora** (`sep` 3.96 con 6 divisiones frente a 3.91 con
+   16), pero la **Etapa 3 se cae**: ante patrones nunca vistos, el acierto de valor baja de **0.80** (v9 y v10) a
+   **0.60** (azar 0.50). **v11 es un canje, no una mejora universal.**
+
+## 11.3 El hallazgo del día (confirmado en 20 semillas, preregistrado)
+> **La generalización de v9 ERA su interferencia.**
+
+En v9, las celdas **hijas** ocupan **1.00 de cada 3** celdas del código de un patrón que nunca las entrenó: se cuelan
+en todas partes, y esa **fuga** es la que transporta el valor aprendido hacia lo nuevo. En v11, con la hija ciega, la
+fuga cae a **0.08** y la generalización se va con ella. Medido: `fuga` v9 1.00, v10 0.65, v11 0.08; Spearman entre
+fuga y acierto **+0.601** sobre 60 corridas, **+0.328 dentro de v9** (sin el brazo como confusor) y **+0.579** en las
+15 semillas que no se habían mirado (`PREREGISTRO_fuga.md`, datos `fuga_20260917_152707`, D1–D4 sostenidas).
+
+**Consecuencia:** no son dos propiedades, es una sola vista por los dos lados. Tapar la fuga cura el olvido y mata la
+generalización. Es la predicción de **complementary learning systems** (McClelland, McNaughton y O'Reilly, 1995);
+Sahay (2011) y Clelland (2009) describen separación **sin** ese costo, y en este sistema el costo existe y se puede
+señalar con el dedo: **una línea de código**.
+
+## 11.4 Lo que queda abierto
+- **v12: ceguera graduada** — la perilla entre recordar y generalizar. Se preregistra como **mapa del canje**, no como
+  solución: la predicción escrita es que **ningún valor logra a la vez** la retención de v11 y la generalización de v9.
+- **El candidato que sí podría romperlo** (una hija que fuga pero **deja de aprender al madurar**) queda anotado en la
+  nota de diseño; **no se diseña todavía**.
+- **ERR-20 y su corrección:** la generalización entra a la regresión (ver registro).
+- Etapa 5 (comunicación), O7, y el techo real de capacidad de v11 (el mundo de 60 se le quedó corto en 3 semillas).

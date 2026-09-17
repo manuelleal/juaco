@@ -2497,3 +2497,26 @@ en grande**: v11 recuerda y tiene capacidad, pero **generaliza al nivel del azar
 otro lento y entrelazado. Nuestro sistema lo plantea con una perilla: la ceguera de la hija es hoy **total**
 (`kj * (P > 0)`). Una ceguera **graduada** debería recorrer el canje entre recordar y generalizar. Es el candidato
 natural a v12 y se preregistrará como tal.
+
+### Confirmación de "generalización = interferencia" en 20 semillas: **D1–D4 SOSTENIDAS**
+
+Preregistro `experimentos/v11_generaliza/PREREGISTRO_fuga.md` (`b8932958e3480afa`), commiteado antes de correr
+(`f630bf6`). Datos `datos/fuga_20260917_152707.json` (`e9278cce6320f9f5`). Regla `px0`, T = 200.000, semillas 41–60,
+tres brazos con el mismo instrumento. Contaminación declarada en el preregistro: la hipótesis salió de las semillas
+41–45; por eso D4 repite todo sólo con las 15 no miradas.
+
+| brazo | fuga (hijas ajenas en el código de un patrón nuevo, de 3) | fuga en los entrenados | acierto | divisiones |
+|---|---|---|---|---|
+| v9 | **1.00** [0.97, 1.00] | 1.00 | 0.800 | 28 |
+| v10 | 0.65 [0.20, 0.93] | 0.73 | 0.800 | 16 |
+| **v11** | **0.08** [0.00, 0.33] | 0.40 | 0.600 | 28 |
+
+- **D1 SOSTENIDA** (1.00 ≥ 0.8 y 0.08 ≤ 0.3).
+- **D2 SOSTENIDA:** Spearman(fuga, acierto) = **+0.601** sobre las 60 corridas.
+- **D3 SOSTENIDA, y era la que podía fallar:** dentro de v9, sin el brazo como confusor, **+0.328** (se pedía ≥ +0.30).
+  Sin voto: v10 +0.466; v11 −0.104 (con la fuga en el suelo no hay varianza que correlacionar).
+- **D4 SOSTENIDA** en las semillas limpias 46–60: fuga 1.00 y 0.10, Spearman +0.579.
+
+**Por el preregistro, la frase entra al HANDOFF** (sección 11.3): *"la generalización de v9 era su interferencia"*.
+Queda anotado lo que **no** prueba: la relación es correlacional dentro de una arquitectura; la prueba causal es
+manipular la fuga y medir, que es exactamente lo que hará v12 con la ceguera graduada.
