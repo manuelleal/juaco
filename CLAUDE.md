@@ -16,6 +16,14 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   Confirmatorio en semillas nuevas 41–60: retención **20/20** (v10 2/20, v9 0/20), capacidad **N\* 20/20 estímulos**
   (v10 5 y 8.5) usando **menos** celdas, examen criterio v3 **8/8** en 41–60. `organismo/bateria_v11.py`
   (17179642ad02269c) es su examen y su regresión. Datos `v11_confirmatorio_20260917_070339`, `examen_v11_20260917_071012`.
+  - **ADVERTENCIA (17 sep, medido): v11 NO generaliza.** En patrones nunca vistos, el acierto de valor cae a **0.60**
+    (v9 y v10: 0.80; azar 0.50); la conducta al primer encuentro baja de 0.80 a 0.67. **3T sí sobrevive y mejora**
+    (`sep` 3.96 con 6 divisiones frente a 3.91 con 16). Datos `v11_generaliza_20260917_151145`.
+  - **Por qué, y es el hallazgo:** en v9 las hijas se colaban en el código de casi todos los patrones (1 de cada 3
+    celdas de un patrón nuevo); esa **fuga** llevaba valor a lo nuevo. **La generalización de v9 era su interferencia.**
+    v11 tapa la fuga y desaparecen las dos: el olvido y la generalización. Es la predicción de CLS (McClelland,
+    McNaughton y O'Reilly 1995), medida aquí con la línea exacta que la produce.
+  - **Candidato a v12:** ceguera **graduada** de la hija (hoy es total: `kj * (P > 0)`), para recorrer el canje.
 - **`organismo/organismo_v10.py`** (219d5033fe15b5b9): **NO es tronco** (ERR-17, y su réplica V10b falló). Congelado
   como **instrumento**: la identidad de v11 lo usa. v10 = v9 + `mu` normalizada en la dirección de división.
 - **`organismo/organismo_v9.py` — tronco del 16 sep 2026 (tarde) hasta el 17 sep** (d3b72fb8819fbe8e, tag `v9-tronco`).
