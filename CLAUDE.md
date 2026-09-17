@@ -86,6 +86,46 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 11. **Repo y sandbox nunca corren a la vez; el repo tiene prioridad.** El sandbox arranca sólo con el repo
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
+## Estado (día 5 — 17 sep 2026, noche). Manda sobre los bloques de los días 4 y 3 cuando se contradigan
+- **Tronco: v13** (`organismo/organismo_v13.py`, cc8b16b492d4d324, tag `v13-tronco`; examen `organismo/bateria_v13.py`,
+  criterio **v3'**). Linaje del día: v9 → v10 (sólo instrumento; ERR-17) → **v11** (tag `v11-tronco`; división por
+  conflicto de signo, **órgano nacido por evolución guiada**) → **v13** (v11 + vía lenta lineal de la retina + puerta de
+  familiaridad). **14 archivos congelados** (`manifiesto.py --check`).
+- **Etapas del brief:** 1 ✅ · 2 ✅ · **3 ✅ (v13: 0.80–0.90 en patrones nunca vistos)** · **4 ✅ (v11 → v13: retención
+  20/20)** · **5 N1 ✅** (transmisión experto → novato por conducta visible; réplica en 21–40) · **5 N2 EN CURSO**
+  (significado emergente; `experimentos/etapa5_comunicacion/PREREGISTRO_N2.md` y `corre_N2.py`; corriendo al escribir
+  esto: si hay `datos/N2_s1-20_*.json`, ya terminó y hay que registrarlo) · N3, 6, 7, 8 abiertas.
+- **Hallazgos del día, en orden:** (a) **JUACO-EVO**: 4 mutaciones LLM contra 24 ciegas; el LLM halló en **una**
+  generación un órgano que yo no diseñé (P1 sostenida; `experimentos/evo/LINAJE.md`). (b) v11 cerró la Etapa 4 y
+  **multiplicó la capacidad** (mundo grande: 50 de 60 frente a 9 de v10); el límite no es el pool de celdas: degrada
+  suave. (c) **"La generalización de v9 ERA su interferencia"**: las hijas de v9 se colaban en el código de todo patrón
+  nuevo (fuga 1.00 de 3) y v11 lo tapó (0.08): perdió la Etapa 3 (0.60). Confirmado con D1–D4 y Spearman +0.60/+0.33.
+  (d) **El canje es una perilla vista por dos lados**: v12 (ceguera graduada, superficie completa) no lo rompe; la hija
+  que madura tampoco. (e) **Dos vías + puerta de familiaridad lo rompen (v13)**: recuerda 20/20 y generaliza 0.85,
+  confirmado en 61–80 y examen en 101–120. (f) **Canje nuevo, medido: puerta contra capacidad** (v13 35 de 60; v11 50).
+  3T sobrevive sobre v13. (g) **Etapa 5 N1**: el novato aprende el veneno con 7–8 mordidas en vez de 19 mirando cómo el
+  experto lo rechaza; la señal barajada es destructiva; en el mundo invertido **el novato corrige al experto** (3× antes).
+- **Errores nuevos (ERR-17 a ERR-22):** 17 criterio Q3 de v10 mal escrito (empates contados como fallo); 18 evaluador
+  EVO explotable por constantes de constitución; 19 mutación nula ganaba por contabilidad; **20 una etapa cerrada sin
+  batería no está protegida** (→ `bateria_generaliza.py`, obligatoria antes de congelar); **21 el control negativo del
+  examen asumía una sola vía** (→ criterio v3': 3' la rápida sola sin plasticidad falla, 3'' la lenta separa);
+  22 la identidad C2b≡C1 de 3T, ídem. **Regla derivada:** al cambiar la arquitectura, revisar TODAS las identidades y
+  controles, no sólo los criterios científicos.
+- **Cómo se cambió un criterio de congelación sin trampa (ERR-21 → v3'):** se escribió el criterio nuevo, se justificó,
+  y **se repitió el examen ENTERO en 20 semillas nuevas (101–120) antes de congelar**. Si vuelve a pasar, es así.
+- **Regresión del tronco (regla 1):** `cd organismo && python bateria_v13.py 6 && python bateria_generaliza.py organismo_v13 10`
+  y `python experimentos/etapa5_comunicacion/corre_N1_asim.py --n 6 --desde 41`; `bateria_v11.py 6` y `bateria_v9.py 6`
+  como regresión histórica.
+- **Datos clave del día:** v11 `v11_confirmatorio_20260917_070339`, `examen_v11_20260917_071012`; mundo grande
+  `capacidad_grande_20260917_142455`; canje `v11_generaliza_20260917_151145`, `fuga_20260917_152707`,
+  `v12_superficie_20260917_154123`; v13 `v13_dos_vias_20260917_160541`, `examen_v13_20260917_165859`,
+  `regresion_generaliza_organismo_v13_20260917_170148`, `reverificacion_v13_20260917_171603`; N1
+  `N1asim_20260917_175433`, `N1asim_s21-40_20260917_175924`.
+- **Abierto:** N2 (en curso) y N3; una puerta que consulte la lenta sólo con la rápida **vacía** (rama, para recuperar
+  capacidad sin perder generalización); techo real de capacidad (el mundo de 60 se queda corto); O7; consolidación y
+  publicación (`registro/HORIZONTE_frontera.md`, `registro/REFLEXION_agi.md`). Dirección: *"avanzar más que frenar,
+  siguiendo el método; los modelos pueden hallar soluciones que la literatura no tiene"* (v11 lo demostró).
+
 ## Estado (día 4 — 16 sep 2026). Manda sobre el bloque del día 3 cuando se contradigan
 - **v8 ES EL TRONCO (tag `v8-tronco`).** Pasos 2 y 3 fundidos por dirección: examen criterio v3 20/20
   (`experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md`, datos `examen_v8_20260916_145204`).

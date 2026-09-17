@@ -1,6 +1,19 @@
 # PLAN — Traspaso a Claude Code y etapas siguientes
 
-> **ORDEN VIGENTE AL 16 SEP 2026 (día 4, tarde). Manda sobre todo lo de abajo.**
+> **ORDEN VIGENTE AL 17 SEP 2026 (día 5, noche). Manda sobre todo lo de abajo, incluido el bloque del día 4.**
+> **Tronco: v13** (`v13-tronco`). Etapas **1, 2, 3, 4 y 5-N1 CERRADAS**. Detalle en `CLAUDE.md` (bloque día 5) y
+> `HANDOFF.md` (sección 11).
+> 1. ✅ v11 (evolución guiada, JUACO-EVO gen 1) cierra la Etapa 4; capacidad ×5; **pero reabre la Etapa 3** (ERR-20).
+> 2. ✅ Diagnóstico confirmado: generalización = interferencia (fuga). Mapa del canje (v12): ninguna perilla lo rompe.
+> 3. ✅ **v13 = dos vías + puerta**: rompe el canje. Examen v3' 8/8 y generalización en 101–120. 3T sobrevive;
+>    capacidad cae a 35 de 60 (canje puerta/capacidad, ERR-22).
+> 4. ✅ Etapa 5 N1 (experto → novato por conducta visible) demostrada y replicada.
+> 5. ⏳ **Etapa 5 N2 (significado emergente): preregistrada y corriendo** (`PREREGISTRO_N2.md`, `corre_N2.py`).
+>    Si pasa E1–E5 → réplica en 21–40 → "N2 cerrado". Si falla → diagnosticar el eslabón, otro mundo, sin recalibrar.
+> 6. Después: N3 (sentidos complementarios / XOR entre dos); rama "puerta con rápida vacía" (capacidad); consolidación
+>    y publicación (`HORIZONTE_frontera.md`).
+>
+> **ORDEN VIGENTE AL 16 SEP 2026 (día 4, tarde). Histórico; lo manda el bloque de arriba.**
 > Los "Pasos" numerados de la sección "PLAN PARA LA PRÓXIMA SESIÓN" son **históricos**.
 > 1. ✅ Prueba de coste del arreglo con el techo mordiendo: **PASA** (14/14).
 > 2. + 3. ✅ Fundidos por dirección. Examen de congelación, criterio v3: **PASA 20/20. v8 es el tronco**

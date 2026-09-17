@@ -283,11 +283,13 @@ nunca**.
 
 ## 11.1 Para retomar en 30 segundos
 ```
-cd organismo && PYTHONIOENCODING=utf-8 python bateria.py 6 && python bateria_v11.py 6
-cd .. && python manifiesto.py --check        # 12 archivos congelados
+cd organismo && PYTHONIOENCODING=utf-8 python bateria.py 6 && python bateria_v13.py 6 && python bateria_generaliza.py organismo_v13 10
+cd .. && python manifiesto.py --check        # 14 archivos congelados
 ```
-**El tronco es v11** (tag `v11-tronco`). v9 y v10 quedan congelados: v9 como tronco anterior, **v10 sólo como
-instrumento** (su réplica de ERR-17 falló en el subcriterio b).
+**El tronco es v13** (tag `v13-tronco`): v11 (rápida, hallada por evolución) + vía lenta lineal + puerta de familiaridad.
+v11 es el tronco anterior (`v11-tronco`); v10 sólo instrumento (ERR-17). **Antes de congelar cualquier tronco nuevo:**
+examen `bateria_vN.py 20` en semillas nuevas **y** `bateria_generaliza.py 20` (ERR-20) **y** revisar todas las
+identidades de instrumento (ERR-21/22).
 
 ## 11.2 Qué pasó, en orden
 1. **JUACO-EVO, generación 1.** Cuatro subagentes LLM propusieron una mutación cada uno, con hipótesis escrita antes;
@@ -357,3 +359,18 @@ pequeño coste de confianza. Simbiosis en el tiempo, medida. **Etapa 5 N1 cerrad
 - **ERR-20 y su corrección:** la generalización entra a la regresión (ver registro).
 - Etapa 5: **N2** (significado emergente, juego de señalización) y **N3** (sentidos complementarios / XOR entre dos).
 - O7 (qué hacer sin objetivo); techo de capacidad; la puerta que consulte la lenta sólo con la rápida vacía (rama).
+
+## 11.5 Estado al cierre de la sesión (noche del 17 sep) y cómo retomar N2
+- **Lo que está corriendo o acaba de terminar:** `experimentos/etapa5_comunicacion/corre_N2.py` (N2, significado
+  emergente). Su preregistro es `PREREGISTRO_N2.md` (escrito antes; criterios E1–E5, K1–K2, predicciones y refutación).
+  Salida en `datos/N2_s1-20_<fecha>.log/.json`. **Nada de N2 está registrado todavía en `REGISTRO_etapas_1_2.md`.**
+- **Qué hacer con el resultado:** (1) leer el `VEREDICTO N2` del log; (2) registrarlo en `REGISTRO_etapas_1_2.md` con
+  la tabla (SOLO, N0, INNATO, CONV, SHUF: veneno del novato, consistencia y `Pq` del experto, `M` del novato);
+  (3) si E1–E5 pasan, correr `corre_N2.py --desde 21` y sólo entonces escribir "N2 cerrado"; si fallan, diagnosticar el
+  eslabón que no cerró (¿`Pq` no se separa? ¿`M` no se separa? ¿el novato aprende solo antes?) **sin recalibrar**, y
+  preregistrar otro mundo o refuerzo; (4) commit con los datos; (5) actualizar `CLAUDE.md` (bloque día 5) y este HANDOFF.
+- **Mecanismo de N2, en una línea:** el experto emite uno de dos símbolos sin significado según su propio estado
+  (muerde/rechaza), con preferencias que nacen al azar y se refuerzan si la conducta del receptor coincide con la suya;
+  el novato aprende qué predice cada símbolo sólo por sus propias consecuencias, y cuando ya cree saberlo, actualiza su
+  valor del patrón por las dos vías. Control: barajar los símbolos en la entrega debe destruir el código.
+- **Después de N2:** N3; rama de capacidad (puerta con la rápida vacía); consolidación y publicación.
