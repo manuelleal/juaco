@@ -40,3 +40,27 @@
 ## 4. Qué NO prueba
 
 Nada sobre XOR (sigue fallando por diseño), 3T ni capacidad. Ni que la vía lenta lineal sea la única posible.
+
+---
+
+## ENMIENDA 1 (17 sep, tras el examen en 81–100; ERR-21) — criterio 3 desdoblado y confirmatorio en semillas NUEVAS
+
+**Lo que pasó.** En 81–100 v13 pasó 7/8 y **falló el control negativo** (criterio 3): sin plasticidad separa A∩B=3
+igual, porque la vía lenta lee píxeles y A y B difieren en cuatro. Diagnóstico medido (`control3_v13_20260917_164836`):
+la vía rápida sola sin plasticidad **falla 0/20** (como v11); la lenta sola **pasa 20/20**. El criterio mezclaba dos
+preguntas. Decisión de dirección (delegada): **se adopta el criterio v3'** y **se repite el examen completo en
+semillas 101–120, nunca usadas, con el criterio ya fijado**. Sólo ese examen decide.
+
+**Criterio v3' = criterio v3 con el 3 desdoblado:**
+- **3' [la vía rápida necesita plasticidad]:** `CTRL` = `solap_AB=3, plast=False, eta_s=0, puerta=None` (literalmente el
+  control de v11): pasan E2L **≤ 1/20**.
+- **3'' [la vía lenta separa por píxeles]:** `CTRL2` = `solap_AB=3, plast=False` (lenta activa): pasan **≥ 19/20**.
+Todo lo demás (1, 2, 4a', 4b, 4c, 4d, 5) **sin tocar**.
+
+**Confirmatorio de congelación (101–120):** `bateria_v13.py 20 --desde 101 --log` **8/8 con v3'**, y
+`bateria_generaliza.py organismo_v13 20 --desde 101 --log` **G1 y G2 PASAN**, y regresiones (`bateria_v11.py 6`,
+`bateria_v9.py 6`, `manifiesto.py --check`).
+
+**Predicción:** 8/8 (3' 0/20, 3'' 20/20), G1 ≈ 0.85–0.90, G2 ≈ 0.85–0.92. **Si algo falla, v13 no se congela y se registra.**
+**Si pasa:** v13 = tronco (tag `v13-tronco`), CONGELADOS += `organismo_v13.py`, `bateria_v13.py`; Etapas 3 y 4 cerradas
+sobre el mismo tronco; pendientes declarados: 3T y capacidad sobre v13.

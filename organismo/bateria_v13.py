@@ -5,14 +5,16 @@
     --log  escribe datos/examen_v13_<fecha>.log y .json (regla 10: log desde el arranque)
 
 Preregistro: experimentos/v13_dos_vias/PREREGISTRO_tronco_v13.md.
-Criterio v3: experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md (sha d2924e69128fe0f6).
+Criterio v3': el v3 (experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md, d2924e69128fe0f6) con el criterio 3
+desdoblado (PREREGISTRO_tronco_v13.md, ENMIENDA 1, ERR-21).
 
   5. Identidad de instrumentos (primero; si falla, no se corre el examen):
        v13(eta_s=0, puerta=None) == v11 en claves de v11, y v13(eta_s=0, puerta=None, div_signo=False) == v10;
        7 escenarios x semillas 1..6 cada una.
   1. Criterios científicos heredados de v6/v7, 20/20 en E1, E2, E2I, E2J, E2K, E2L.
   2. celdas <= 45 en las seis etapas y en E2I-misma.
-  3. Control negativo: A∩B=3 sin plasticidad, <=1/20 pasa los criterios de E2L.
+  3. (v3', ERR-21) 3': A∩B=3 sin plasticidad y SIN via lenta (eta_s=0, puerta=None), <=1/20 pasa E2L;
+     3'': A∩B=3 sin plasticidad CON via lenta, >=19/20 pasa E2L (la lenta separa por pixeles).
   4a'. [IDENTIDAD, NO EVIDENCIA] cada division activa exactamente una celda: celdas == 30 + splits y
        len(split_t) == splits, con celdas<90. (La 4a de v8-v10, splits<=>err_max>0.6, era una identidad de la
        regla err>theta, que v11 ya no usa; se sustituye por la identidad de contabilidad, declarado en el
@@ -42,7 +44,8 @@ ETAPAS = {
     'E2J':       dict(nuevo='D', nuevo_val='comida', solap_B=1),
     'E2K':       dict(nuevo='D', nuevo_val='comida', solap_B=2),
     'E2L':       dict(solap_AB=3),
-    'CTRL':      dict(solap_AB=3, plast=False),
+    'CTRL':      dict(solap_AB=3, plast=False, eta_s=0.0, puerta=None),   # v3' 3': la via rapida sola (= control de v11) debe FALLAR
+    'CTRL2':     dict(solap_AB=3, plast=False),                         # v3' 3'': la via lenta activa separa por pixeles
     'E2I-misma': dict(nuevo='C', solap_B=3),
 }
 SEIS = ['E1', 'E2', 'E2I', 'E2J', 'E2K', 'E2L']
@@ -166,9 +169,11 @@ if __name__ == '__main__':
 
     # ---------- 3 ----------
     pasan = sum(abs(r['W']['A'] - 1) < .15 and abs(r['W']['B'] + 3) < .3 for r in R['CTRL'])
-    V['3_control'] = pasan <= 1
-    log(f"  {'PASA' if V['3_control'] else 'FALLA':5s} 3 control negativo (A∩B=3 sin plasticidad): {pasan}/{S} lo pasan"
+    pasan2 = sum(abs(r['W']['A'] - 1) < .15 and abs(r['W']['B'] + 3) < .3 for r in R['CTRL2'])
+    V['3_control'] = pasan <= 1 and pasan2 >= S - 1   # v3' (ERR-21): 3' y 3''
+    log(f"  {'PASA' if pasan <= 1 else 'FALLA':5s} 3' via rapida sola sin plasticidad (A∩B=3): {pasan}/{S} lo pasan (<=1)"
         f"  W_A={sorted(set(r['W']['A'] for r in R['CTRL']))[:4]}")
+    log(f"  {'PASA' if pasan2 >= S - 1 else 'FALLA':5s} 3'' via lenta activa sin plasticidad (A∩B=3): {pasan2}/{S} lo pasan (>={S-1})")
 
     # ---------- 4a ----------
     con_plast = [r for e in ETAPAS if e != 'CTRL' for r in R[e] if r['celdas'] < 90]
