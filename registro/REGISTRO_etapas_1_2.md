@@ -2433,3 +2433,67 @@ puede escribir que el límite sea el número de celdas: eso quedó refutado.
 
 **Pendiente:** encontrar el techo real de v11 (hace falta un mundo de más de 60 estímulos), y las dos re-verificaciones
 que siguen abiertas sobre v11: generalización (Etapa 3) y composición temporal (3T).
+
+### Re-verificación sobre v11: **3T sobrevive, la GENERALIZACIÓN NO.** v11 es un canje, y el canje tiene mecanismo
+
+Preregistro `experimentos/v11_generaliza/PREREGISTRO_v11_generaliza.md` (`f51cfd0f1f8a01c6`), commiteado con los
+instrumentos e hipótesis **antes** de correr (`9d55c44`). Marco de lectura fijado antes por dirección en
+`registro/NOTA_v11_pattern_separation_20260917.md` (CLS 1995 frente a Sahay 2011 / Clelland 2009).
+Datos `datos/v11_generaliza_20260917_151145.json` (`e3576c31509d51c1`). 420 corridas, semillas **41–60**, los tres
+brazos con **el mismo instrumento** (`organismo_v11g` `6c6b5eecc177c181`, `mundo_temporal_v11` `807f4b357f9eac1a`);
+identidades 33/33.
+
+#### Etapa 3 — generalización a patrones NUNCA VISTOS (regla `px0`)
+
+| brazo | valor (acierto de signo) | conducta al primer encuentro | control azar (valor) |
+|---|---|---|---|
+| v9 | **0.800** | 0.801 | 0.500 |
+| v10 | **0.800** | 0.760 | 0.500 |
+| **v11** | **0.600** | 0.672 | 0.500 |
+
+- **G1 REFUTADA** (0.600 < 0.65; `px0` > azar sólo en 12/20). **G3 (XOR) REFUTADA.** **G2 sostenida** (la conducta
+  sigue por encima del azar). **G4, no-inferioridad frente a v9: REFUTADA** (valor 0.600 frente a 0.800; conducta
+  0.672 frente a 0.801).
+- **La pérdida es atribuible a UNA línea:** v10 (con `mu` normalizada, sin la regla de signo) conserva 0.800. Lo que
+  cuesta generalización es **exactamente** la división por conflicto de signo con hija ciega.
+- **Mi predicción preregistrada (0.72–0.88 y "sobrevive con ventaja") queda REFUTADA.** Escribí que un patrón nuevo
+  caería en las celdas de los entrenados parecidos. Es falso, y el diagnóstico dice por qué.
+
+#### Diagnóstico (post-hoc, exploratorio, 5 semillas; declarado como tal)
+
+| | celdas hijas en el código de un patrón NUEVO (de 3) | celdas compartidas con el entrenamiento | \|W\| a priori | acierto |
+|---|---|---|---|---|
+| v9 | **1.00** | 2.90 | 1.96 | 0.76 |
+| v11 | **0.07** | 2.44 | 1.52 | 0.50 |
+
+**La explicación, y es el hallazgo de fondo:** en v9 las hijas **se metían en el código de casi todos los patrones**
+(una de cada tres celdas de un patrón nunca visto era una hija ajena). Esa **fuga** era la que llevaba valor aprendido
+a lo nuevo: **la generalización de v9 ERA la interferencia de v9**. v11 tapa la fuga —la hija nace ciega fuera de su
+patrón— y con ella desaparecen **las dos cosas a la vez**: el olvido catastrófico **y** la generalización.
+**No son dos propiedades: son la misma, vista desde los dos lados.**
+
+#### 3T — composición temporal: **SOBREVIVE, y mejora**
+
+| brazo | `sep` (C3) | `lift_q4` | `solap_A` | divisiones | control C3C |
+|---|---|---|---|---|---|
+| v9 | +3.91 | +0.382 | 1 | 16 | −0.35 |
+| **v11** | **+3.96** | **+0.388** | **0** | **6** | −0.36 |
+
+T1, T2, T3, T4 y T5 (no-inferioridad) **sostenidas**; KT2 20/20. v11 compone el paso de historia igual de bien con
+**menos de la mitad de divisiones** y separa el canal temporal por completo.
+
+#### Veredicto y lectura según el marco preregistrado
+
+**`ETAPA3_SOBREVIVE = False`; `3T_SOBREVIVE = True`.** Por el preregistro: **v11 es un canje, no una mejora
+universal**, y el resultado va **a favor de la predicción de McClelland, McNaughton y O'Reilly (1995)**: separar para
+no interferir **cuesta** generalización. Sahay/Clelland describen mejoras de separación sin ese costo; **aquí el costo
+existe y está medido**, con la ventaja de que podemos señalar la línea exacta que lo produce y el mecanismo (la fuga
+de las hijas).
+
+**v11 sigue siendo el tronco** (su congelación se decidió con otros criterios, ya cumplidos), **con esta advertencia
+en grande**: v11 recuerda y tiene capacidad, pero **generaliza al nivel del azar** en valor sobre patrones nuevos.
+
+**Lo que abre, y es lo interesante:** CLS propone exactamente la salida — **dos sistemas**, uno rápido y separado y
+otro lento y entrelazado. Nuestro sistema lo plantea con una perilla: la ceguera de la hija es hoy **total**
+(`kj * (P > 0)`). Una ceguera **graduada** debería recorrer el canje entre recordar y generalizar. Es el candidato
+natural a v12 y se preregistrará como tal.

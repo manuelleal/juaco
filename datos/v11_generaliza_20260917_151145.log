@@ -1,0 +1,71 @@
+[15:11:45 +    0.0s] ARRANQUE re-verificacion sobre v11 (Etapa 3 + 3T). semillas 41..60. Pool(14).
+[15:11:45 +    0.0s] sha preregistro f51cfd0f1f8a01c6  script 7ca978ba13849401  v11g 6c6b5eecc177c181  mundo_temporal_v11 807f4b357f9eac1a  v11 f69e24063be1b194  v9g e7021992c857d244
+[15:11:46 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 5656:
+[15:11:46 +    0.4s]     22080 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[15:11:46 +    0.4s]     5656 C:\Python314\python.exe experimentos/v11_generaliza/corre_v11_generaliza.py
+[15:11:46 +    0.6s] ETAPA 1/4 — identidades (33)...
+[15:12:21 +   35.7s]   v11g(mundo='AB') == v11           : 9/9
+[15:12:21 +   35.7s]   v11g(F,F) == v9g (mundo de regla) : 6/6
+[15:12:21 +   35.7s]   mundo_temporal_v11(F,F) == v9     : 18/18
+[15:12:21 +   35.7s] ETAPA 2/4 — 420 corridas (G: 3 brazos x 3 reglas x 20, T=200k; 3T: 2 x 6 x 20)...
+[15:12:49 +   64.1s]           20/420
+[15:13:05 +   79.4s]           40/420
+[15:13:33 +  108.0s]           60/420
+[15:13:49 +  123.7s]           80/420
+[15:14:16 +  150.8s]           100/420
+[15:14:31 +  165.6s]           120/420
+[15:14:47 +  181.5s]           140/420
+[15:15:14 +  208.3s]           160/420
+[15:15:29 +  223.8s]           180/420
+[15:15:42 +  236.5s]           200/420
+[15:15:51 +  245.8s]           220/420
+[15:16:00 +  255.0s]           240/420
+[15:16:13 +  267.8s]           260/420
+[15:16:22 +  276.7s]           280/420
+[15:16:35 +  289.9s]           300/420
+[15:16:43 +  298.2s]           320/420
+[15:16:57 +  311.8s]           340/420
+[15:17:06 +  320.7s]           360/420
+[15:17:16 +  330.7s]           380/420
+[15:17:28 +  342.5s]           400/420
+[15:17:37 +  351.6s]           420/420
+[15:17:37 +  351.6s] ETAPA 3/4 — analisis.
+[15:17:37 +  351.6s] 
+[15:17:37 +  351.7s]   BLOQUE G (Etapa 3, mundo de regla)   cobertura del primer encuentro (v11, px0): 20/20 (>=18)
+[15:17:37 +  351.7s]    v9   px0   valor 0.800 [0.500, 1.000]   conducta BA_pb 0.801 [0.447, 0.941]   divisiones 28  celdas 58  muertes 268
+[15:17:37 +  351.7s]    v9   azar  valor 0.500 [0.300, 0.700]   conducta BA_pb 0.389 [0.114, 0.738]   divisiones 59  celdas 89  muertes 271
+[15:17:37 +  351.7s]    v9   xor01 valor 0.531 [0.312, 0.750]   conducta BA_pb 0.563 [0.236, 0.799]   divisiones 54  celdas 84  muertes 234
+[15:17:37 +  351.7s]    v10  px0   valor 0.800 [0.400, 0.900]   conducta BA_pb 0.760 [0.564, 0.945]   divisiones 16  celdas 46  muertes 274
+[15:17:37 +  351.7s]    v10  azar  valor 0.500 [0.200, 0.600]   conducta BA_pb 0.479 [0.241, 0.652]   divisiones 48  celdas 78  muertes 279
+[15:17:37 +  351.7s]    v10  xor01 valor 0.500 [0.312, 0.688]   conducta BA_pb 0.550 [0.308, 0.840]   divisiones 35  celdas 65  muertes 234
+[15:17:37 +  351.7s]    v11  px0   valor 0.600 [0.400, 0.900]   conducta BA_pb 0.672 [0.302, 0.886]   divisiones 28  celdas 58  muertes 274
+[15:17:37 +  351.7s]    v11  azar  valor 0.500 [0.200, 0.600]   conducta BA_pb 0.560 [0.331, 0.695]   divisiones 30  celdas 60  muertes 274
+[15:17:37 +  351.7s]    v11  xor01 valor 0.500 [0.250, 0.625]   conducta BA_pb 0.481 [0.164, 0.604]   divisiones 36  celdas 66  muertes 252
+[15:17:37 +  351.7s]   G1 valor: px0 0.600 (>=0.65), azar 0.500 (en [0.35,0.65]), px0>azar 12/20 (>=14): REFUTADA
+[15:17:37 +  351.7s]   G2 conducta 1er encuentro: px0 0.672 (>=0.55), azar 0.560 (en [0.42,0.58]), px0>azar 15/20 (>=14): SOSTENIDA
+[15:17:37 +  351.7s]   G3 frontera XOR (sin voto): xor 0.500 (<=0.60), xor<px0 12/20 (>=14): REFUTADA
+[15:17:37 +  351.7s]   G4 no-inferioridad v11 vs v9: valor 0.600 vs 0.800 (>= 0.750), conducta 0.672 vs 0.801 (>= 0.771): REFUTADA
+[15:17:37 +  351.7s] 
+[15:17:37 +  351.7s]   BLOQUE T (3T, composicion temporal)
+[15:17:37 +  351.7s]    KT2 C2b == C1 con la regla de v11: 20/20
+[15:17:37 +  351.7s]    v9   C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[15:17:37 +  351.7s]    v9   C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.038  solap_A 3  divisiones 60  muertes 102
+[15:17:37 +  351.7s]    v9   C2   sep +3.89 [+3.31,+3.97]  lift_q4 +0.382  solap_A 0  divisiones 0  muertes 100
+[15:17:37 +  351.7s]    v9   C2b  sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[15:17:37 +  351.7s]    v9   C3   sep +3.91 [+3.50,+3.96]  lift_q4 +0.382  solap_A 1  divisiones 16  muertes 98
+[15:17:37 +  351.7s]    v9   C3C  sep -0.35 [-1.96,+1.98]  lift_q4 -0.027  solap_A 0  divisiones 60  muertes 96
+[15:17:37 +  351.7s]    v11  C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[15:17:37 +  351.7s]    v11  C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[15:17:37 +  351.7s]    v11  C2   sep +3.89 [+3.31,+3.97]  lift_q4 +0.382  solap_A 0  divisiones 0  muertes 100
+[15:17:37 +  351.7s]    v11  C2b  sep +0.00 [+0.00,+0.00]  lift_q4 -0.044  solap_A 3  divisiones 0  muertes 104
+[15:17:37 +  351.7s]    v11  C3   sep +3.96 [+3.88,+3.98]  lift_q4 +0.388  solap_A 0  divisiones 6  muertes 100
+[15:17:37 +  351.7s]    v11  C3C  sep -0.36 [-1.43,+1.37]  lift_q4 -0.038  solap_A 0  divisiones 7  muertes 100
+[15:17:37 +  351.7s]    T1: SOSTENIDA
+[15:17:37 +  351.7s]    T2: SOSTENIDA
+[15:17:37 +  351.7s]    T3: SOSTENIDA
+[15:17:37 +  351.7s]    T4: SOSTENIDA
+[15:17:37 +  351.7s]    T5_no_inferioridad: SOSTENIDA
+[15:17:37 +  351.7s] 
+[15:17:37 +  351.7s] VEREDICTO v11_generaliza: K_identidad=True K_cobertura=True G1=False G2=True G3_sin_voto=False G4_no_inferioridad=False KT2=True T1=True T2=True T3=True T4=True T5_no_inferioridad=True ETAPA3_SOBREVIVE=False 3T_SOBREVIVE=True
+[15:17:37 +  351.7s] ETAPA 4/4 — escritura.
+[15:17:37 +  351.8s] datos -> v11_generaliza_20260917_151145.json  sha256_16 = e3576c31509d51c1
