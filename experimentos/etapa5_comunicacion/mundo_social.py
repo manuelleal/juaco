@@ -40,19 +40,25 @@ class Mundo:
 
 class Organismo:
     def __init__(self, rng, T, eta=.03, tau_e=.85, alpha=1.2, hambre_boca=2.0, aversion=1.0, costo=.002, plast=True,
-                 theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True, mu_norm=True, estado=None):
+                 theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True, mu_norm=True, estado=None,
+                 div_signo=True, eta_s=0.015, clip_s=3.0, puerta=3):
+        """Replica linea a linea a organismo/organismo_v13.py (v11 + via lenta lineal + puerta de familiaridad).
+        Con div_signo=False, eta_s=0, puerta=None es v10; ademas mu_norm=False, v9."""
         self.rng = rng; self.T = T; self.eta = eta; self.tau_e = tau_e; self.alpha = alpha; self.hambre_boca = hambre_boca
         self.aversion = aversion; self.costo = costo; self.plast = plast; self.theta = theta; self.ema = ema; self.paso = paso
         self.lam = lam; self.memoria_rechazo = memoria_rechazo; self.learn = learn; self.mu_norm = mu_norm
+        self.div_signo = div_signo; self.eta_s = eta_s; self.clip_s = clip_s; self.puerta = puerta
         self.Wl = rng.uniform(.1, .4, (2, 9)); self.KW = np.zeros((NKMAX, 6)); self.activa = np.zeros(NKMAX, bool)
         self.KW[:NK] = rng.uniform(0, 1, (NK, 6)); self.activa[:NK] = True
         while not (len(self.code(PAT['A']) & self.code(PAT['B'])) == 0):
             self.KW[0:NK] = rng.uniform(0, 1, (NK, 6))
         self.Wp = np.zeros(NKMAX); self.Wn = np.zeros(NKMAX); self.err = np.zeros(NKMAX); self.mu = np.zeros((NKMAX, 6))
         self.splits = 0; self.el = np.zeros_like(self.Wl); self.tr = np.zeros(9)
+        self.Wps = np.zeros(6); self.Wns = np.zeros(6)   # v13: via lenta lineal sobre la retina
         if estado is not None:   # herencia completa (experto): copias del estado de un progenitor; los contadores en cero
             self.KW[:] = estado['KW']; self.activa[:] = estado['activa']; self.Wp[:] = estado['Wp']; self.Wn[:] = estado['Wn']
             self.err[:] = estado['err']; self.mu[:] = estado['mu']; self.Wl[:] = estado['Wl']
+            self.Wps[:] = estado.get('Wps', 0.); self.Wns[:] = estado.get('Wns', 0.)
         self.pos = 0; self.E = 1.0; self._rech = {}; self._prev_on = -1
         self.split_t = []; self.mord = {k: [0] * 4 for k in PAT}; self.vis = {k: [0] * 4 for k in PAT}; self.deaths = 0
         self.dq = [0] * 4; self.veneno_propio = {k: 0 for k in PAT}; self.n_crit = {}; self.vicarias = {k: 0 for k in PAT}
@@ -67,7 +73,15 @@ class Organismo:
     def kenyon(self, P):
         k = np.zeros(NKMAX); k[list(self.code(P))] = 1; return k
 
-    def valor(self, kk): return float((self.Wp - self.Wn) @ self.kenyon(PAT[kk]))
+    def _total(self, P, kc, Wb):
+        """v13: el valor que usa la boca. Sin puerta: rapida + lenta. Con puerta: la rapida si el patron le es familiar
+        (>= puerta celdas del codigo con |Wp-Wn|>0.2), si no la lenta."""
+        _wf = float(Wb @ kc); _ws = float((self.Wps - self.Wns) @ P)
+        if self.puerta is None: return _wf + _ws, _wf, _ws
+        return (_wf if int((np.abs(Wb[kc > 0]) > 0.2).sum()) >= self.puerta else _ws), _wf, _ws
+
+    def valor(self, kk):
+        kc = self.kenyon(PAT[kk]); return self._total(PAT[kk], kc, self.Wp - self.Wn)[0]
 
     def see(self, objs, t):
         best = None
@@ -104,7 +118,8 @@ class Organismo:
         self.R = 0.
         if self.pos in objs:
             kk = objs[self.pos]; kc = self.kenyon(PAT[kk]); Wb = self.Wp - self.Wn
-            Vb = self.alpha * (Wb @ kc) + self.hambre_boca * hambre + .5; pb = 1 / (1 + np.exp(-Vb / .3)); mordio = rng.random() < pb
+            _wt, _, _ = self._total(PAT[kk], kc, Wb)   # v13
+            Vb = self.alpha * _wt + self.hambre_boca * hambre + .5; pb = 1 / (1 + np.exp(-Vb / .3)); mordio = rng.random() < pb
             self.vis[kk][self.q(t)] += 1
             if self.memoria_rechazo and not mordio: self._rech[self.pos] = t + self.memoria_rechazo
             emitida = (self.pos, kk, bool(mordio), 0.)
@@ -115,22 +130,40 @@ class Organismo:
                 del objs[self.pos]; mundo.spawn()
                 self._rech.pop(self.pos, None)
                 if self.learn:
-                    self._aprender(kk, kc, Wb, self.R, self.eta, t, dividir=True)
+                    self._aprender(kk, kc, Wb, self.R, 1.0, t, dividir=True)
             self._criterios(val, t, invertir_en)
         self._prev_on = self.pos if self.pos in objs else -1
         self.E -= self.costo
         return emitida
 
-    def _aprender(self, kk, kc, Wb, R, eta, t, dividir):
-        dlt = R - Wb @ kc
+    def _aprender(self, kk, kc, Wb, R, factor, t, dividir):
+        """Una experiencia con refuerzo R sobre el patron kk (propia: factor 1; vicaria: factor f_vicaria, sin dividir).
+        Replica el bloque de aprendizaje de organismo_v13: cada via su error; division por conflicto de signo."""
+        P = PAT[kk]; eta = self.eta * factor
+        _wt, _wf, _ws = self._total(P, kc, Wb)
+        dlt = R - _wt if self.puerta is None else R - _wf   # v13
+        if self.eta_s:   # v13: via lenta
+            _ds = dlt if self.puerta is None else R - _ws
+            if self.lam: _mcs = np.minimum(self.Wps, self.Wns) * (P > 0); self.Wps = self.Wps - self.lam * _mcs; self.Wns = self.Wns - self.lam * _mcs
+            if _ds > 0: self.Wps = np.clip(self.Wps + self.eta_s * factor * _ds * P, 0, self.clip_s)
+            else:       self.Wns = np.clip(self.Wns + self.eta_s * factor * self.aversion * (-_ds) * P, 0, self.clip_s)
         if self.lam: ix = kc > 0; mcom = np.minimum(self.Wp[ix], self.Wn[ix]); self.Wp[ix] -= self.lam * mcom; self.Wn[ix] -= self.lam * mcom
         if dlt > 0: self.Wp = np.clip(self.Wp + eta * dlt * kc, 0, 3.)
         else:       self.Wn = np.clip(self.Wn + eta * self.aversion * (-dlt) * kc, 0, 3.)
         if dividir and self.plast:
-            P = PAT[kk]; idx = np.where(kc > 0)[0]; self.err[idx] = (1 - self.ema) * self.err[idx] + self.ema * abs(dlt)
+            idx = np.where(kc > 0)[0]; self.err[idx] = (1 - self.ema) * self.err[idx] + self.ema * abs(dlt)
             self.mu[idx] = (1 - self.ema) * self.mu[idx] + self.ema * P
             for c in idx:
-                if self.err[c] > self.theta and (~self.activa).any():
+                if self.div_signo:   # v11: conflicto de signo, hija ciega fuera de P, madre fija, fision del valor
+                    dist = P - (self.mu[c] * (P.sum() / max(float(self.mu[c].sum()), 1e-9)) if self.mu_norm else self.mu[c])
+                    kj = np.clip(self.KW[c] * (1 - 0.05) + self.paso * dist, 0, 5) * (P > 0)
+                    if Wb[c] * R < 0 and abs(float(Wb[c])) > 0.2 and float(kj @ P) > float(self.KW[c] @ P) and (~self.activa).any():
+                        j = int(np.where(~self.activa)[0][0]); self.activa[j] = True; self.KW[j] = kj
+                        if R > 0: self.Wp[j] = self.Wp[c]; self.Wn[j] = 0.; self.Wp[c] = 0.
+                        else:     self.Wn[j] = self.Wn[c]; self.Wp[j] = 0.; self.Wn[c] = 0.
+                        self.mu[j] = P * (float(self.mu[c].sum()) / P.sum()); self.err[c] = self.err[j] = 0
+                        self.splits += 1; self.split_t.append((t, kk))
+                elif self.err[c] > self.theta and (~self.activa).any():
                     j = int(np.where(~self.activa)[0][0]); self.activa[j] = True
                     dist = P - (self.mu[c] * (P.sum() / max(float(self.mu[c].sum()), 1e-9)) if self.mu_norm else self.mu[c])   # v10: mu normalizada
                     self.KW[j] = np.clip(self.KW[c] + self.paso * dist, 0, 5); self.KW[c] = np.clip(self.KW[c] - self.paso * dist, 0, 5)
@@ -141,23 +174,24 @@ class Organismo:
         """Aprendizaje vicario: la señal dice +/− del patron kk; escala innata + -> +1, − -> −3. Sin divisiones."""
         if not self.learn: return
         kc = self.kenyon(PAT[kk]); Wb = self.Wp - self.Wn
-        self._aprender(kk, kc, Wb, 1.0 if signo > 0 else -3.0, self.eta * f_vicaria, t, dividir=False)
+        self._aprender(kk, kc, Wb, 1.0 if signo > 0 else -3.0, f_vicaria, t, dividir=False)
         self.vicarias[kk] += 1; self.vicarias_signo[kk][0 if signo > 0 else 1] += 1
         if kk == 'B' and signo < 0 and 'B' not in self.n_crit: self.avisos_B_antes_crit += 1
         self._criterios(val, t, invertir_en)
 
     def estado(self):
         return dict(KW=self.KW.copy(), activa=self.activa.copy(), Wp=self.Wp.copy(), Wn=self.Wn.copy(), err=self.err.copy(),
-                    mu=self.mu.copy(), Wl=self.Wl.copy())
+                    mu=self.mu.copy(), Wl=self.Wl.copy(), Wps=self.Wps.copy(), Wns=self.Wns.copy())
 
     def fase_B(self, t):
         if self.learn: self.Wl = np.clip(self.Wl + self.eta * (1 + 2 * self.hambre) * (max(self.R, 0) + self.Rp) * self.el, 0, 1.5)
         if self.E <= 0: self.deaths += 1; self.E = .6; self.pos = int(self.rng.integers(L)); self.dq[self.q(t)] += 1
 
     def resultado(self):
-        W = {k: round(float((self.Wp - self.Wn) @ self.kenyon(PAT[k])), 2) for k in PAT}
+        W = {k: round(self.valor(k), 2) for k in PAT}   # v13: valor total
         comp = {k: (round(float(self.Wp @ self.kenyon(PAT[k])), 2), round(float(self.Wn @ self.kenyon(PAT[k])), 2)) for k in PAT}
-        return dict(W=W, comp=comp, mord=self.mord, vis=self.vis, deaths=self.deaths, splits=self.splits, split_t=self.split_t,
+        W_lenta = {k: round(float((self.Wps - self.Wns) @ PAT[k]), 3) for k in PAT}
+        return dict(W=W, comp=comp, W_lenta=W_lenta, mord=self.mord, vis=self.vis, deaths=self.deaths, splits=self.splits, split_t=self.split_t,
                     celdas=int(self.activa.sum()), dq=self.dq, n_crit=self.n_crit, veneno_propio=self.veneno_propio,
                     vicarias=self.vicarias, vicarias_signo=self.vicarias_signo, avisos_B_antes_crit=self.avisos_B_antes_crit,
                     t_ext_B=self.t_ext_B, t_B_ok=self.t_B_ok)

@@ -87,3 +87,18 @@ paso; el experto hereda el mundo viejo y está equivocado).
   que dirección pidió medir.
 - **Falla A1 o A3:** se registra y se diagnostica (alcance, tasa, tiempos). Nada se recalibra.
 - **A1 y A2 pasan pero A5 no:** hay enseñanza, no simbiosis. Se registra así.
+
+---
+
+## ENMIENDA 1 (17 sep, tarde; ANTES de correr) — base v13 y aprendizaje vicario en las dos vías
+
+- **Base: el tronco v13** (`organismo/organismo_v13.py`, `cc8b16b492d4d324`), no v10 ni v9. `mundo_social.py` pasa a
+  replicar v13 línea a línea (división por conflicto de signo, vía lenta lineal, puerta de familiaridad); con las
+  perillas apagadas sigue siendo v11/v10/v9. **K1** compara `mundo_social.run(s, n=1)` con `organismo_v13.run(s)`.
+- **Aprendizaje vicario:** una señal recibida sobre el patrón `kk` se trata **como una experiencia propia con refuerzo
+  R̂** (+1 si mordió, −3 si rechazó), a tasa `f_vicaria` en **las dos vías** (rápida y lenta, cada una con su error, como
+  en v13), **sin división** y sin comer. Se declara que la lenta también aprende de lo vicario: es lo que permitiría que
+  lo que enseña un experto sobre A y B se **generalice** en el novato a patrones parecidos (no se mide aquí; se anota).
+- **Por qué importa v13 aquí:** con v11 el novato no generalizaba (0.60) y el experto olvidaba poco; con v13 ambos
+  recuerdan y generalizan. Criterios, predicciones y refutación de A1–A5 **no cambian**.
+- El experto hereda **también** `Wps`/`Wns` (su vía lenta), porque son parte de su estado.

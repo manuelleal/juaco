@@ -20,8 +20,8 @@ RAIZ = os.path.dirname(os.path.dirname(AQUI))
 sys.path[:0] = [AQUI, os.path.join(RAIZ, 'organismo')]
 SEEDS = list(range(1, 21)); T = 100000
 _man = open(os.path.join(RAIZ, 'manifiesto.py'), encoding='utf-8').read()
-BASE = 'organismo_v10' if "'./organismo/organismo_v10.py'" in _man else 'organismo_v9'
-MU_NORM = BASE == 'organismo_v10'
+BASE = 'organismo_v13' if "'./organismo/organismo_v13.py'" in _man else 'organismo_v11'   # el tronco; mundo_social replica v13 por defecto
+KW_BASE = dict() if BASE == 'organismo_v13' else dict(eta_s=0.0, puerta=None)
 CONDS = {'NOV-SOLO': dict(n=1), 'PAR-N0': dict(n=2), 'PAR-N1': dict(n=2, senal='conducta'), 'PAR-BAR': dict(n=2, senal='barajada_conducta')}
 MUNDOS = {'E1': dict(), 'INV': dict(invertir_en=0)}
 N_PARALELO = 14
@@ -51,17 +51,17 @@ def tarea(args):
         import importlib
         base = importlib.import_module(BASE)
         kw = dict() if mundo == 'E1' else dict(invertir_en=50000)
-        a = base.run(seed, **kw); b = ms.run(seed, n=1, mu_norm=MU_NORM, **kw)[0]
+        a = base.run(seed, **kw); b = ms.run(seed, n=1, **KW_BASE, **kw)[0]
         claves = ['W', 'comp', 'mord', 'vis', 'deaths', 'splits', 'split_t', 'celdas']
         return dict(tipo=tipo, mundo=mundo, seed=seed, identico=all(N(a[k]) == N(b[k]) for k in claves), difieren=[k for k in claves if N(a[k]) != N(b[k])])
     if tipo == 'P':
         _, seed = args
-        r = ms.run(seed, n=1, T=T, mu_norm=MU_NORM, devolver_estado=True)[0]
+        r = ms.run(seed, n=1, T=T, devolver_estado=True, **KW_BASE)[0]
         return dict(tipo=tipo, seed=seed, estado=r['estado'], W=r['W'])
     _, cond, mundo, seed, estado = args
     kw = CONDS[cond]
     estados = None if kw['n'] == 1 else [None, estado]
-    out = ms.run(seed, T=T, mu_norm=MU_NORM, estados=estados, **kw, **MUNDOS[mundo])
+    out = ms.run(seed, T=T, estados=estados, **KW_BASE, **kw, **MUNDOS[mundo])
     for o in out:
         o.pop('estado', None)
     return dict(tipo='R', cond=cond, mundo=mundo, seed=seed, orgs=out)
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     stamp = time.strftime('%Y%m%d_%H%M%S')
     _log['f'] = open(os.path.join(RAIZ, 'datos', f'N1asim_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     pre = os.path.join(AQUI, 'PREREGISTRO_N1_asimetrico.md')
-    log(f"ARRANQUE N1-asimetrico. BASE={BASE} (mu_norm={MU_NORM}). Pool({N_PARALELO}).")
+    log(f"ARRANQUE N1-asimetrico. BASE={BASE} (kw {KW_BASE}). Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_social {h16(os.path.join(AQUI, 'mundo_social.py'))}"
         f"  base {h16(os.path.join(RAIZ, 'organismo', BASE + '.py'))}")
     try:
