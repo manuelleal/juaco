@@ -2963,3 +2963,31 @@ es su **conducta**, y rechaza comida **por saciedad** → el símbolo de rechazo
 pureza de la señal, no del bucle.** Por la letra del preregistro: **refutado**; el siguiente diseño (N2c: el estado del
 emisor es su valor y calla cuando no sabe; experto con 400k) va preregistrado aparte y se corre en la misma sesión
 (regla 12).
+
+
+### N2c — la pureza de la señal NO era el cuello: **refutado, y el eslabón real queda a la vista**
+
+Preregistro `PREREGISTRO_N2c.md` (commit `77f5b3e`+), datos `datos/N2c_s1-20_20260917_183901.json` (`c6a276d0a7bbe258`).
+K1 3/3 (perillas de N2c encendidas y sin señal: sigue siendo v13). Experto con 400k: conoce **7–8 de 10** venenos
+(criterio estricto), igual que a 200k.
+
+| criterio | N2b | **N2c** |
+|---|---|---|
+| E1 convención | 13/20 | **11/20** (consistencia 0.99; distintos 13/20) |
+| E2 contraste | −0.42 / +0.36 | **−0.35 / +0.20** (M crudo −2.70 / −1.85); 3/20 |
+| E3 arbitrariedad | 10/20 ✅ | **13/20 ✅** |
+| E4 veneno CONV / N0 | 0.77 | **0.92** (290 / 316) |
+| E5 barajar destruye | ✅ | ✅ (342 frente a 290) |
+
+**Mi predicción (que la pureza de la señal subiría la magnitud) queda REFUTADA.** Cláusula cumplida: el cuello está en
+el receptor. Y los números dicen cuál: aun con convención limpia en 13/20 semillas, **`M["positivo"]` = −1.85**: el
+símbolo positivo precede a mordidas de veneno. Fuente: los 2–3 venenos que el experto **no tiene consolidados en su vía
+rápida** los lee por la **vía lenta lineal**, que en el mundo `azar` devuelve valores arbitrarios; cuando el valor sale
+≥ +0.5 el experto dice "positivo" sobre un veneno **con confianza**, el novato (sesgado por el símbolo) lo muerde más, y
+el símbolo se envenena. **El canje puerta/capacidad de v13 reaparece como extrapolación confiada del emisor.** Es el
+mismo fenómeno de la re-verificación (35 de 60) visto desde la comunicación.
+
+**Decisión (regla 12):** N2d, preregistrado aparte: el emisor **habla sólo de lo que su vía rápida conoce por
+experiencia** (la misma prueba de familiaridad de la puerta, sin constante nueva) y calla de lo que sólo extrapola.
+Mismos umbrales. Si tampoco emerge en magnitud, **se cierra la línea N2 por hoy** con "emerge en signo, no en magnitud" y
+se sigue el plan del debate de niveles 5–10.

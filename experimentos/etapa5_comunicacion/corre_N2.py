@@ -19,9 +19,10 @@ _n = int(sys.argv[sys.argv.index('--n') + 1]) if '--n' in sys.argv else 20
 SEEDS = list(range(_desde, _desde + _n)); T = 200000; REGLA = 'azar'
 VARIANTE = sys.argv[sys.argv.index('--variante') + 1] if '--variante' in sys.argv else 'a'
 VAR_KW = {'a': dict(), 'b': dict(gamma_sim=1.2, baseline_q=True, u_m=1.0),   # N2b: PREREGISTRO_N2b.md
-          'c': dict(gamma_sim=1.2, baseline_q=True, u_m=1.0, estado_emisor='valor', u_v=0.5)}[VARIANTE]   # N2c: PREREGISTRO_N2c.md
-T_PROG = {'a': 200000, 'b': 200000, 'c': 400000}[VARIANTE]   # N2c: el experto es experto
-PREF = {'a': 'N2', 'b': 'N2b', 'c': 'N2c'}[VARIANTE]
+          'c': dict(gamma_sim=1.2, baseline_q=True, u_m=1.0, estado_emisor='valor', u_v=0.5),   # N2c: PREREGISTRO_N2c.md
+          'd': dict(gamma_sim=1.2, baseline_q=True, u_m=1.0, estado_emisor='valor_rapido', u_v=0.5)}[VARIANTE]   # N2d: PREREGISTRO_N2d.md
+T_PROG = {'a': 200000, 'b': 200000, 'c': 400000, 'd': 400000}[VARIANTE]   # N2c/d: el experto es experto
+PREF = {'a': 'N2', 'b': 'N2b', 'c': 'N2c', 'd': 'N2d'}[VARIANTE]
 CONDS = {'SOLO': dict(n=1), 'N0': dict(n=2), 'INNATO': dict(n=2, senal='conducta'), 'CONV': dict(n=2, senal='simbolo'),
          'SHUF': dict(n=2, senal='simbolo_barajado')}
 N_PARALELO = 14
@@ -81,7 +82,7 @@ if __name__ == '__main__':
     mp.set_start_method('spawn', force=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
     _log['f'] = open(os.path.join(RAIZ, 'datos', f'{PREF}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
-    pre = os.path.join(AQUI, {'a': 'PREREGISTRO_N2.md', 'b': 'PREREGISTRO_N2b.md', 'c': 'PREREGISTRO_N2c.md'}[VARIANTE])
+    pre = os.path.join(AQUI, {'a': 'PREREGISTRO_N2.md', 'b': 'PREREGISTRO_N2b.md', 'c': 'PREREGISTRO_N2c.md', 'd': 'PREREGISTRO_N2d.md'}[VARIANTE])
     log(f"ARRANQUE {PREF} (significado emergente; variante {VARIANTE}, kw {VAR_KW}). semillas {SEEDS[0]}..{SEEDS[-1]}, T={T}, regla {REGLA}. Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_social {h16(os.path.join(AQUI, 'mundo_social.py'))}"
         f"  v13 {h16(os.path.join(RAIZ, 'organismo', 'organismo_v13.py'))}  v13g {h16(os.path.join(RAIZ, 'experimentos', 'v13_dos_vias', 'organismo_v13g.py'))}")

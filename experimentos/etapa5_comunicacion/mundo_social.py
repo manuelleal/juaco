@@ -301,6 +301,12 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
                     if _v >= u_v: st = 1
                     elif _v <= -u_v: st = 0
                     else: st = None
+                elif estado_emisor == 'valor_rapido':   # N2d: habla solo de lo que su via RAPIDA conoce (familiar = la prueba de la puerta)
+                    _o = orgs[i]; _kc = _o.kenyon(_o.P_[kk]); _Wb = _o.Wp - _o.Wn
+                    _fam = int((np.abs(_Wb[_kc > 0]) > 0.2).sum()) >= 3; _v = float(_Wb @ _kc)
+                    if _fam and _v >= u_v: st = 1
+                    elif _fam and _v <= -u_v: st = 0
+                    else: st = None
                 else:
                     st = 1 if mordio else 0
                 quedan = []

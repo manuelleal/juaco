@@ -1,0 +1,32 @@
+[18:39:01 +    0.0s] ARRANQUE N2c (significado emergente; variante c, kw {'gamma_sim': 1.2, 'baseline_q': True, 'u_m': 1.0, 'estado_emisor': 'valor', 'u_v': 0.5}). semillas 1..20, T=200000, regla azar. Pool(14).
+[18:39:01 +    0.0s] sha preregistro 343dc4df793d70f0  script 35cfb628a8d7540e  mundo_social f65e3229b2d3082e  v13 cc8b16b492d4d324  v13g 2a80e125f8593bf2
+[18:39:01 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 28260
+[18:39:11 +   10.0s] ETAPA 1/4 — K1 mundo_social(n=1, regla) == organismo_v13g(regla, fase2_en=0): 3/3 -> OK
+[18:39:11 +   10.0s] ETAPA 2/4 — progenitores del experto (20, T=200000)...
+[18:40:04 +   63.2s]   progenitores: venenos conocidos (de 10) mediana 8 [5, 10]
+[18:40:04 +   63.2s] ETAPA 3/4 — 100 corridas...
+[18:40:37 +   96.4s]           20/100
+[18:41:34 +  153.2s]           40/100
+[18:42:30 +  209.7s]           60/100
+[18:43:47 +  285.9s]           80/100
+[18:44:44 +  343.5s]           100/100
+[18:44:44 +  343.5s] ETAPA 4/4 — analisis.
+[18:44:44 +  343.5s] 
+[18:44:44 +  343.5s]   cond    veneno total (novato)    veneno Q1  muertes  venenos conocidos/10  comidas/10  simbolos recibidos  decodificados 
+[18:44:44 +  343.5s]   SOLO       319 [ 164, 536]          128        266      8                     9              0                   0
+[18:44:44 +  343.5s]   N0         316 [ 228, 458]          147        473      8                     5              0                   0
+[18:44:44 +  343.5s]   INNATO     194 [ 142, 339]           97        370     10                     0              0                   0
+[18:44:44 +  343.5s]   CONV       290 [ 165, 696]          132        433      8                     7          10732                   0
+[18:44:44 +  343.5s]   SHUF       342 [ 203, 649]          147        462      8                     5          10840                   0
+[18:44:44 +  343.5s] 
+[18:44:44 +  343.5s]   K2 simbolos recibidos por el novato (CONV): mediana 10732 (>=1000): OK
+[18:44:44 +  343.5s]   E1 convencion en el emisor (simbolos distintos y consistencia Q4 >= 0.9): 11/20 (>=15): REFUTADA   consistencia Q4 mediana 0.99  distintos 13/20
+[18:44:44 +  343.5s]   E2 decodificacion en el receptor (M[s_rech]<=-1 y M[s_mord]>=+0.3): 3/20 (>=15): REFUTADA   contraste C[s_rech] mediana -0.35  C[s_mord] +0.20  (M crudo: -2.70 / -1.85)
+[18:44:44 +  343.5s]   E3 arbitrariedad: el simbolo 0 significa rechazo en 13/20 (entre 5 y 15): SOSTENIDA
+[18:44:44 +  343.5s]   E4 beneficio: veneno CONV 290 <= 0.7 x N0 316 = 221, pareado 12/20 (>=14): REFUTADA   (INNATO 194, SOLO 319)
+[18:44:44 +  343.5s]   E5 barajar destruye: |M|<1 en 20/20 (>=15) y veneno SHUF 342 >= 0.9 x N0 284: SOSTENIDA
+[18:44:44 +  343.5s]   E6 (sin voto) el individuo solo no tiene simbolos: SOLO recibe 0
+[18:44:44 +  343.5s]   refuerzos del experto (CONV) +/-: 37729 / 346;  Pq experto (mediana de |Pq|): 0.75
+[18:44:44 +  343.5s] 
+[18:44:44 +  343.5s] VEREDICTO N2c: K1=True K2=True E1=False E2=False E3=True E4=False E5=True N2_EMERGE=False
+[18:44:44 +  343.6s] datos -> N2c_s1-20_20260917_183901.json  sha256_16 = c6a276d0a7bbe258
