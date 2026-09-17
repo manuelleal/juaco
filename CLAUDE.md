@@ -83,6 +83,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 10. **Todo script de más de un minuto: una línea de progreso por etapa con marca de tiempo, y salida a
     archivo DESDE EL ARRANQUE, no sólo al final.** Un script sano que calla seis minutos es indistinguible
     de uno colgado, y esa ambigüedad ya costó una salida entera (día 3). Referencia: `corre_ahorro.py`.
+12. **Autonomía dentro del método (dirección, 17 sep 2026, noche).** Claude decide y ejecuta sin pedir permiso para
+    decisiones de diseño, criterios y siguiente paso; el director audita después con el registro. No frenar por
+    prudencia genérica ni esperar confirmación entre pasos. Método científico siempre (preregistro, controles, semillas
+    retenidas, registrar el fallo) **y** método exploratorio siempre: la literatura es para leer resultados, no para
+    limitar diseños; "si ya está escrito es que no funcionó aquí". Buscar más allá; cuando un mecanismo caiga, el
+    siguiente intento se preregistra y se corre en la misma sesión.
 11. **Repo y sandbox nunca corren a la vez; el repo tiene prioridad.** El sandbox arranca sólo con el repo
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
