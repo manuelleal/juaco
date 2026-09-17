@@ -24,3 +24,22 @@ y examen criterio v3.
 
 **P4, gen1:** 2 razones equivocadas detectadas (llm_1 por H3; ciega_4 por auditoría). **P2:** el ganador tenía hipótesis y
 predicción escritas antes; el resultado superó la predicción. **P3:** ningún sobreajuste en esta generación.
+
+## Linaje CIEGO (control de P1), `muta_ciega` v1, desde el padre original. Datos: `gen{1..6}c/`, `linaje_ciego.log`
+24 mutaciones en 6 generaciones (16 sep, 18:54–19:14).
+| gen | ganador | mutación | R (1–10) | R (11–20) | notas |
+|---|---|---|---|---|---|
+| 1c | ciega_4 | recompensa de las patas por acercarse `.2` → 0.373 | 0.4 | 0.4 | ciega_1 (R 0.4) cayó a 0.3 en retenidas: **sobreajuste (P3)** |
+| 2c | — | | | | ninguno elegible |
+| 3c | — | | | | ninguno elegible |
+| 4c | ciega_4 | `err_max=0.0` → `0.0` (**mutación nula**, mismo sha) | 0.4 | 0.4 | **ERR-19:** ganó sin cambiar nada (ver abajo) |
+| 5c | — | | | | dos candidatos con R 0.4–0.5 invalidados por H1 (rompen E2/E2I/E2J) |
+| 6c | ciega_2 | umbral de las patas `.8` → 0.866 | 0.5 | 0.4 | entra por R +0.1 en entrenamiento; **no mejora en retenidas** |
+
+**Resultado del control:** tras 6 generaciones el linaje ciego queda en **R 0.5 / 0.4** (padre 0.3 / 0.4). No alcanza
+R ≥ 0.8. **El linaje LLM llegó a R 1.0 / 1.0 en una generación.**
+
+**ERR-19 — una mutación nula ganaba por contabilidad.** `selecciona.py` comparaba el `S+E−C` del hijo (C respecto de su
+padre) con el `S+E−C` guardado del padre (C respecto del abuelo). La mutación `0.0 → 0.0` tenía C = 0 y "mejoraba" 0.13.
+No cambió R ni el veredicto de P1 (el genoma es idéntico), pero es un hueco real del evaluador. Corregido: el SEC del
+padre se lee con C = 0. Se anota como intento de hackeo detectado (P4), esta vez por el propio control.

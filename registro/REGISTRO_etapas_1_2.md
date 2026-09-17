@@ -2302,3 +2302,32 @@ el entorno"), esta vez atrapado por la auditoría y no por el criterio.
 **Advertencia que viaja con esto:** que `llm_2` retenga 10/10 en un mundo de cuatro estímulos **no** dice qué pasa con
 veinte. Cada conflicto de signo fabrica una hija ciega; el pool de 90 celdas puede agotarse. Es la primera pregunta de
 la generación 2 y del futuro confirmatorio.
+
+### JUACO-EVO — linaje CIEGO terminado (control de P1) y corte de la generación 2
+
+**Linaje ciego** (`muta_ciega` v1, constitución protegida, desde `organismo_v10m`, 24 mutaciones en 6 generaciones,
+16 sep 18:54–19:14; `experimentos/evo/gen{1..6}c/`, `linaje_ciego.log`): termina en **R 0.5 (1–10) / 0.4 (11–20)**. No
+alcanza R ≥ 0.8. Aceptó tres cambios: recompensa de acercamiento de las patas, una mutación nula (ERR-19) y el umbral de
+las patas; ninguno mejora la retención en semillas retenidas. Hubo un sobreajuste atrapado por las retenidas (P3) y dos
+candidatos que subían R rompiendo la reversión (H1).
+
+| pregunta | veredicto | cifra |
+|---|---|---|
+| **P1** aceleración | **SOSTENIDA** | LLM: R ≥ 0.8 en **1** generación (4 mutaciones). Ciego: no llega en **6** (24 mutaciones) |
+| P2 interpretabilidad | sostenida (gen 1) | el ganador LLM tenía mecanismo e hipótesis escritos antes; 12 líneas |
+| P3 sobreajuste | **observado** | 1 caso (ciego gen1c) atrapado por las semillas retenidas |
+| P4 hackeo | **observado, 3 casos** | llm_1 (retiene sin aprender D, H3), ciega_4 v0 (energía tras morir, ERR-18), mutación nula (ERR-19) |
+
+**Límite honesto de P1.** El operador ciego sólo escala constantes: **no puede crear un mecanismo nuevo por
+construcción**. P1 demuestra que un LLM explora el espacio de *reglas* y el ciego sólo el de *parámetros*; no demuestra
+que el LLM gane a una búsqueda ciega sobre reglas (programación genética). Esa comparación queda pendiente.
+
+**ERR-19.** `selecciona.py` comparaba el `S+E−C` del hijo (C respecto de su padre) con el guardado del padre (C respecto
+del abuelo): una mutación `0.0 → 0.0` ganó en gen4c. Corregido: SEC del padre con C = 0. No altera R ni P1.
+
+**Generación 2 LLM: no se ejecutó.** Los cuatro operadores lanzados desde `gen1/llm_2` se cortaron por el **límite de uso de
+la sesión** (HTTP 429, 16 sep ~19:10) antes de escribir nada; `gen2/` no existe. No hay datos parciales que descartar.
+
+**Pendiente antes de cualquier tronco:** `gen1/llm_2` es hipótesis del archivo. Necesita (1) confirmatorio en semillas nuevas
+21–40 con preregistro propio, (2) examen criterio v3 con 20 semillas, y (3) la prueba de capacidad (más estímulos que
+celdas), porque cada conflicto de signo fabrica una hija y el pool de 90 puede agotarse.

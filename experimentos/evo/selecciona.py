@@ -22,7 +22,10 @@ def log(msg=""):
 if __name__ == '__main__':
     gen = sys.argv[1]; padre = os.path.abspath(sys.argv[2])   # etiqueta de generacion: '1', '2', '1c' (linaje ciego)...
     pt = json.load(open(sys.argv[3], encoding='utf-8')); ph = json.load(open(sys.argv[4], encoding='utf-8'))
-    Rp, SECp, Rph = pt['R'], pt['SEC'], ph['R']
+    Rp, Rph = pt['R'], ph['R']
+    # ERR-19 (17 sep): el SEC del padre se lee con C=0 (el padre respecto de si mismo). Antes se usaba pt['SEC'], que
+    # arrastraba el C del padre respecto del ABUELO, y una mutacion nula (C=0) "mejoraba" SEC sin cambiar nada.
+    SECp = round(pt['S'] + pt['E'], 4)
     log(f"gen{gen}: padre {os.path.basename(padre)} ({h16(padre)}) R={Rp} SEC={SECp} R_retenidas={Rph}")
     cands = sorted(glob.glob(os.path.join(AQUI, f'gen{gen}', '*', 'organismo.py')))
     tabla = []

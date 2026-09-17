@@ -1,0 +1,100 @@
+[18:54:26] ARRANQUE linaje ciego: padre organismo_v10m.py, G=6, operador muta_ciega v1
+[18:54:26] gen1 ciega k1: 0.02 -> 0.02324 (x1.162) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha 19cf7a087183b05b
+[18:54:26] gen1 ciega k2: .15 -> 0.204055 (x1.36) en `x=np.concatenate([pat*1.2,[1.5 if left else 0,0 if left else`  sha b447e444452afb32
+[18:54:26] gen1 ciega k3: 0. -> 0.0 (x1.383) en `R=0.`  sha 515367bf0bc046e9
+[18:54:27] gen1 ciega k4: .2 -> 0.372653 (x1.863) en `pos=(pos+int(m[1]-m[0]))%L; d2,_,_=see(); Rp=.2 if d2<d else`  sha f640d31d23ac1c43
+[18:58:45]    [18:54:27] gen1c: padre organismo_v10m.py (c33253b850570308) R=0.3 SEC=1.0292 R_retenidas=0.4
+[18:58:45]    [18:54:27]   evaluando ciega_1 (19cf7a087183b05b)...
+[18:58:45]    [18:55:09]     valido=True H1=True H2=True H3=True R=0.4 S=0.3625 E=0.6667 C=0.1333 SEC=0.8958 W_B100=-1.7955870059949748 muertesE1=127.5 splitsE2L=3.0 elegible=True
+[18:58:45]    [18:55:09]   evaluando ciega_2 (b447e444452afb32)...
+[18:58:45]    [18:55:53]     valido=True H1=True H2=True H3=True R=0.3 S=0.2975 E=0.6667 C=0.1333 SEC=0.8308 W_B100=-1.9971736594600662 muertesE1=140.5 splitsE2L=3.0 elegible=False
+[18:58:45]    [18:55:53]   evaluando ciega_3 (515367bf0bc046e9)...
+[18:58:45]    [18:56:36]     valido=True H1=True H2=True H3=True R=0.3 S=0.3625 E=0.6667 C=0.1333 SEC=0.8958 W_B100=-1.2300229481572587 muertesE1=127.5 splitsE2L=3.0 elegible=False
+[18:58:45]    [18:56:36]   evaluando ciega_4 (f640d31d23ac1c43)...
+[18:58:45]    [18:57:20]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=True
+[18:58:45]    [18:57:20]   candidato a ganador ciega_1: evaluando en semillas retenidas 11-20...
+[18:58:45]    [18:58:02]     ciega_1 SOBREAJUSTADO o invalido en retenidas (R=0.3, valido=True): se descarta (P3)
+[18:58:45]    [18:58:02]   candidato a ganador ciega_4: evaluando en semillas retenidas 11-20...
+[18:58:45]    [18:58:45]   GANADOR gen1c: ciega_4 (R train 0.4, R retenidas 0.4)
+[18:58:45]    [18:58:45] gen1c terminada. ganador = ciega_4. -> gen1c/puntuaciones.json
+[18:58:45] gen1c: nuevo padre ciega_4 R=0.4
+[18:58:45] gen2 ciega k1: 0.372653 -> 0.319695 (x0.858) en `pos=(pos+int(m[1]-m[0]))%L; d2,_,_=see(); Rp=0.372653 if d2<`  sha 89049ff3a7fdaea4
+[18:58:45] gen2 ciega k2: 3.0 -> 5.776984 (x1.926) en `if dlt>0: _trunca=bool(((Wp[_ix]+eta*dlt)>3.0).any())`  sha cb5e5ea85b499d74
+[18:58:45] gen2 ciega k3: 1.5 -> 1.438289 (x0.959) en `if _ap: Wl=np.clip(Wl+eta*(1+2*hambre)*(max(R,0)+Rp)*el,0,1.`  sha 1bf57a44f174a8ed
+[18:58:46] gen2 ciega k4: 0. -> 0.0 (x1.922) en `x=np.concatenate([pat*1.2,[1.5 if left else 0,0 if left else`  sha a7dbb1837f84ab0d
+[19:01:36]    [18:58:46] gen2c: padre organismo.py (f640d31d23ac1c43) R=0.4 SEC=0.8383 R_retenidas=0.4
+[19:01:36]    [18:58:46]   evaluando ciega_1 (89049ff3a7fdaea4)...
+[19:01:36]    [18:59:28]     valido=True H1=True H2=True H3=True R=0.3 S=0.2775 E=0.6667 C=0.1333 SEC=0.8108 W_B100=-1.945104704322034 muertesE1=144.5 splitsE2L=3.0 elegible=False
+[19:01:36]    [18:59:28]   evaluando ciega_2 (cb5e5ea85b499d74)...
+[19:01:36]    [19:00:11]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:01:36]    [19:00:11]   evaluando ciega_3 (1bf57a44f174a8ed)...
+[19:01:36]    [19:00:54]     valido=True H1=True H2=True H3=True R=0.3 S=0.3275 E=0.6667 C=0.1333 SEC=0.8608 W_B100=-1.8032954992604155 muertesE1=134.5 splitsE2L=3.0 elegible=False
+[19:01:36]    [19:00:54]   evaluando ciega_4 (a7dbb1837f84ab0d)...
+[19:01:36]    [19:01:36]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:01:36]    [19:01:36] gen2c terminada. ganador = None. -> gen2c/puntuaciones.json
+[19:01:36] gen2c: sin ganador, el padre sigue (R=0.4)
+[19:01:37] gen3 ciega k1: 0.5 -> 0.864134 (x1.728) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha 8dde89516a29cc58
+[19:01:37] gen3 ciega k2: 0.05 -> 0.062628 (x1.253) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha e5a6e325bdc007d2
+[19:01:37] gen3 ciega k3: 2.0 -> 2.913812 (x1.457) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha 87faab0d61017842
+[19:01:37] gen3 ciega k4: .3 -> 0.419543 (x1.398) en `Vb=alpha*(Wb@kc)+hambre_boca*hambre+.5; pb=1/(1+np.exp(-Vb/.`  sha 89b7e0ed21d14f17
+[19:04:28]    [19:01:37] gen3c: padre organismo.py (f640d31d23ac1c43) R=0.4 SEC=0.8383 R_retenidas=0.4
+[19:04:28]    [19:01:37]   evaluando ciega_1 (8dde89516a29cc58)...
+[19:04:28]    [19:02:20]     valido=True H1=True H2=True H3=True R=0.3 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.2460945668597136 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:04:28]    [19:02:20]   evaluando ciega_2 (e5a6e325bdc007d2)...
+[19:04:28]    [19:03:03]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.821549251692304 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:04:28]    [19:03:03]   evaluando ciega_3 (87faab0d61017842)...
+[19:04:28]    [19:03:46]     valido=True H1=True H2=True H3=True R=0.3 S=0.365 E=0.6667 C=0.1333 SEC=0.8983 W_B100=-2.144943727883411 muertesE1=127.0 splitsE2L=3.0 elegible=False
+[19:04:28]    [19:03:46]   evaluando ciega_4 (89b7e0ed21d14f17)...
+[19:04:28]    [19:04:28]     valido=True H1=True H2=True H3=True R=0.4 S=0.325 E=0.6667 C=0.1333 SEC=0.8583 W_B100=-2.139784634331768 muertesE1=135.0 splitsE2L=3.0 elegible=False
+[19:04:28]    [19:04:28] gen3c terminada. ganador = None. -> gen3c/puntuaciones.json
+[19:04:28] gen3c: sin ganador, el padre sigue (R=0.4)
+[19:04:28] gen4 ciega k1: 2.0 -> 2.702359 (x1.351) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha b92f3b3aaf7c02ba
+[19:04:29] gen4 ciega k2: 0.05 -> 0.036409 (x0.728) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha b9fdd8b1b3f21aa1
+[19:04:29] gen4 ciega k3: 3.0 -> 5.149148 (x1.716) en `else:     _trunca=bool(((Wn[_ix]+eta*aversion*(-dlt))>3.0).a`  sha 7abec60c8bf2dbfe
+[19:04:29] gen4 ciega k4: 0.0 -> 0.0 (x1.09) en `err_max=0.0; t_conflicto=None; t_techo=None; n_techo=0   # i`  sha f640d31d23ac1c43
+[19:08:03]    [19:04:29] gen4c: padre organismo.py (f640d31d23ac1c43) R=0.4 SEC=0.8383 R_retenidas=0.4
+[19:08:03]    [19:04:29]   evaluando ciega_1 (b92f3b3aaf7c02ba)...
+[19:08:03]    [19:05:12]     valido=True H1=True H2=True H3=True R=0.3 S=0.375 E=0.6667 C=0.1333 SEC=0.9083 W_B100=-1.8569915677569733 muertesE1=125.0 splitsE2L=3.0 elegible=False
+[19:08:03]    [19:05:12]   evaluando ciega_2 (b9fdd8b1b3f21aa1)...
+[19:08:03]    [19:05:55]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:08:03]    [19:05:55]   evaluando ciega_3 (7abec60c8bf2dbfe)...
+[19:08:03]    [19:06:38]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.1333 SEC=0.8383 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:08:03]    [19:06:38]   evaluando ciega_4 (f640d31d23ac1c43)...
+[19:08:03]    [19:07:21]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.0 SEC=0.9717 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=True
+[19:08:03]    [19:07:21]   candidato a ganador ciega_4: evaluando en semillas retenidas 11-20...
+[19:08:03]    [19:08:03]   GANADOR gen4c: ciega_4 (R train 0.4, R retenidas 0.4)
+[19:08:03]    [19:08:03] gen4c terminada. ganador = ciega_4. -> gen4c/puntuaciones.json
+[19:08:03] gen4c: nuevo padre ciega_4 R=0.4
+[19:08:04] gen5 ciega k1: .3 -> 0.466383 (x1.555) en `Vb=alpha*(Wb@kc)+hambre_boca*hambre+.5; pb=1/(1+np.exp(-Vb/.`  sha 05d16d4313be35f4
+[19:08:04] gen5 ciega k2: .85 -> 1.046991 (x1.232) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha 830bfde1c4aa8b04
+[19:08:04] gen5 ciega k3: .7 -> 0.627664 (x0.897) en `tr=tr*.7+x`  sha 10decd31a167a600
+[19:08:04] gen5 ciega k4: 1.2 -> 1.377004 (x1.148) en `eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,cos`  sha a49ccfd6616a515c
+[19:10:50]    [19:08:04] gen5c: padre organismo.py (f640d31d23ac1c43) R=0.4 SEC=0.9717 R_retenidas=0.4
+[19:10:50]    [19:08:04]   evaluando ciega_1 (05d16d4313be35f4)...
+[19:10:50]    [19:08:47]     valido=True H1=True H2=True H3=True R=0.3 S=0.32 E=0.6667 C=0.1333 SEC=0.8533 W_B100=-0.9045142249793245 muertesE1=136.0 splitsE2L=3.0 elegible=False
+[19:10:50]    [19:08:47]   evaluando ciega_2 (830bfde1c4aa8b04)...
+[19:10:50]    [19:09:25]     valido=False H1=False H2=True H3=False R=0.4 S=0.0 E=0.6667 C=0.1333 SEC=0.5333 W_B100=-2.259571500131119 muertesE1=294.0 splitsE2L=3.0 elegible=False
+[19:10:50]    [19:09:25]   evaluando ciega_3 (10decd31a167a600)...
+[19:10:50]    [19:10:08]     valido=True H1=True H2=True H3=True R=0.3 S=0.33 E=0.6667 C=0.1333 SEC=0.8633 W_B100=-2.2732012548451492 muertesE1=134.0 splitsE2L=3.0 elegible=False
+[19:10:50]    [19:10:08]   evaluando ciega_4 (a49ccfd6616a515c)...
+[19:10:50]    [19:10:50]     valido=False H1=False H2=True H3=True R=0.5 S=0.3275 E=0.6667 C=0.1333 SEC=0.8608 W_B100=-2.0423125367604134 muertesE1=134.5 splitsE2L=3.0 elegible=False
+[19:10:50]    [19:10:50] gen5c terminada. ganador = None. -> gen5c/puntuaciones.json
+[19:10:50] gen5c: sin ganador, el padre sigue (R=0.4)
+[19:10:50] gen6 ciega k1: .3 -> 0.196636 (x0.655) en `Vb=alpha*(Wb@kc)+hambre_boca*hambre+.5; pb=1/(1+np.exp(-Vb/.`  sha 4c6ee4c89715ea46
+[19:10:51] gen6 ciega k2: .8 -> 0.865928 (x1.082) en `V=Wl@x; p=1/(1+np.exp(-(V-.8)/noise)); u=p+rng.normal(0,.3,2`  sha 1a9096b19ae199e1
+[19:10:51] gen6 ciega k3: .5 -> 0.671491 (x1.343) en `x=np.concatenate([pat*1.2,[1.5 if left else 0,0 if left else`  sha 176248bef2879b0d
+[19:10:51] gen6 ciega k4: 0.0 -> 0.0 (x1.037) en `err_max=0.0; t_conflicto=None; t_techo=None; n_techo=0   # i`  sha f640d31d23ac1c43
+[19:14:25]    [19:10:51] gen6c: padre organismo.py (f640d31d23ac1c43) R=0.4 SEC=0.9717 R_retenidas=0.4
+[19:14:25]    [19:10:51]   evaluando ciega_1 (4c6ee4c89715ea46)...
+[19:14:25]    [19:11:34]     valido=False H1=False H2=True H3=True R=0.5 S=0.3075 E=0.6667 C=0.1333 SEC=0.8408 W_B100=-1.906383713943161 muertesE1=138.5 splitsE2L=3.0 elegible=False
+[19:14:25]    [19:11:34]   evaluando ciega_2 (1a9096b19ae199e1)...
+[19:14:25]    [19:12:17]     valido=True H1=True H2=True H3=True R=0.5 S=0.31 E=0.6667 C=0.1333 SEC=0.8433 W_B100=-1.5826616422746684 muertesE1=138.0 splitsE2L=3.0 elegible=True
+[19:14:25]    [19:12:17]   evaluando ciega_3 (176248bef2879b0d)...
+[19:14:25]    [19:13:00]     valido=True H1=True H2=True H3=True R=0.3 S=0.3075 E=0.6667 C=0.1333 SEC=0.8408 W_B100=-1.2763726000155535 muertesE1=138.5 splitsE2L=3.0 elegible=False
+[19:14:25]    [19:13:00]   evaluando ciega_4 (f640d31d23ac1c43)...
+[19:14:25]    [19:13:42]     valido=True H1=True H2=True H3=True R=0.4 S=0.305 E=0.6667 C=0.0 SEC=0.9717 W_B100=-1.8215492516923044 muertesE1=139.0 splitsE2L=3.0 elegible=False
+[19:14:25]    [19:13:42]   candidato a ganador ciega_2: evaluando en semillas retenidas 11-20...
+[19:14:25]    [19:14:25]   GANADOR gen6c: ciega_2 (R train 0.5, R retenidas 0.4)
+[19:14:25]    [19:14:25] gen6c terminada. ganador = ciega_2. -> gen6c/puntuaciones.json
+[19:14:25] gen6c: nuevo padre ciega_2 R=0.5
+[19:14:25] FIN linaje ciego
