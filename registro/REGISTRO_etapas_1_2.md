@@ -2660,3 +2660,46 @@ manda ella; cuando no, manda la lenta, que ha aprendido la **regla** y no los ca
 3. Falta el confirmatorio completo de tronco: examen criterio v3 en 20 semillas nuevas, `bateria_generaliza.py 20`
    (ERR-20) y la re-verificación 3T. **v13 es candidato, no tronco.**
 4. La guarda queda en 19/20 (una semilla no aprende del todo lo nuevo): por debajo del 20/20 de v11. Se vigila.
+
+### Confirmatorio de congelación de v13: **X2 y X3 pasan; X1 falla en el control negativo → v13 NO se congela (por la letra)**
+
+Preregistro `experimentos/v13_dos_vias/PREREGISTRO_tronco_v13.md` (`ee204f281d04a329`, `9195f18`), instrumentos
+`organismo/organismo_v13.py` (`cc8b16b492d4d324`: el genoma explorado con `eta_s = 0.015`, `puerta = 3`) y
+`organismo/bateria_v13.py` (`38f07f95f76c31ae`), commiteados antes de correr (`7415536`). Datos
+`examen_v13_20260917_164031` (`f4fea3e841facfc8`), `regresion_generaliza_organismo_v13_20260917_164314`
+(`4bd6ce4221db5c8d`). Semillas **81–100**, nunca usadas.
+
+| bloque | resultado |
+|---|---|
+| Q0 identidades | `v13(eta_s=0, puerta=None)` ≡ v11 **42/42**; con `div_signo=False` ≡ v10 **42/42**; tronco ≡ genoma explorado 9/9 |
+| X1 examen criterio v3 | **7/8**: E1, E2, E2I, E2J, E2K, E2L **20/20**; celdas ≤ 45; 4a', 4b, 4c, 4d pasan. **Criterio 3 (control negativo) FALLA: 20/20 lo pasan** (`W_A` 0.99–1.00) |
+| **X2** `bateria_generaliza.py 20 --desde 81` | **G1 PASA 0.900** (azar 0.500, px0 > azar 20/20); **G2 PASA 0.916**; cobertura 20/20 → *"v13 CONSERVA la generalización de la Etapa 3"* |
+| X3 regresión | `bateria_v11.py 6` y `bateria_v9.py 6` cumplen; 12 congelados intactos |
+
+**Diagnóstico del control 3.** El control negativo dice: *con A∩B = 3 y sin plasticidad, el organismo no debe separar
+A de B* (así se demuestra que la separación de E2L la causa la división de celdas). Vale para v6–v11, que **sólo**
+leen el mundo a través de las celdas Kenyon: si A y B comparten las tres, son indistinguibles. **v13 tiene otra vía:**
+la lectura lineal de la retina, y A = `110100` y B = `101010` **difieren en cuatro píxeles**. Sin plasticidad, la vía
+rápida sigue sin poder separarlos, pero la lenta los separa sola, y la boca —al no reconocerlos como familiares en la
+rápida— consulta a la lenta. **El control no fue burlado; su premisa ("no hay otra vía") dejó de ser cierta.**
+
+**Decisión, por la letra del preregistro (regla 3): v13 NO se congela hoy. v11 sigue de tronco.** Nada se recalibra.
+
+### ERR-21 — un control negativo con la premisa de una sola vía
+
+**Qué pasó.** El criterio 3 del examen v3 asume que separar A∩B=3 exige plasticidad estructural porque la única lectura
+del mundo son las celdas Kenyon. Un organismo con **dos vías** puede separar por la otra. El criterio, tal como está
+escrito, **no puede fallar honestamente ni pasar honestamente** para v13: no distingue "burló el control" de "tiene
+otra vía". Es la familia de ERR-16 y ERR-20 (controles y coberturas cuya premisa no se revisó al cambiar la
+arquitectura), y **no se anticipó** al preregistrar (a diferencia de 4a', que sí se corrigió antes de correr).
+
+**Qué NO se hace:** no se quita el criterio 3 ni se relaja para que v13 pase.
+
+**Qué se propone, y se corre AHORA como diagnóstico (no decide nada):**
+- **3' [la vía rápida sigue necesitando plasticidad]:** `v13(plast=False, solap_AB=3, eta_s=0)` —la vía rápida sola—
+  debe **fallar** E2L en ≥ 19/20, exactamente como v11. Es el control 3 heredado, aplicado a la vía que lo motivó.
+- **3'' [la vía lenta separa por píxeles, y eso es lo que se espera de ella]:** `v13(plast=False, solap_AB=3)` con la
+  lenta activa **pasa** E2L en ≥ 19/20. Ya medido: 20/20. Deja de ser un "fallo" y pasa a ser una **propiedad medida**.
+- **Decisión sobre la congelación: la toma dirección**, porque cambiar un criterio de congelación después de ver el
+  resultado es exactamente lo que la regla 3 vigila, aunque aquí la razón sea estructural y esté a la vista. Se le
+  presenta con 3' medido.
