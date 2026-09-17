@@ -2520,3 +2520,33 @@ tres brazos con el mismo instrumento. Contaminación declarada en el preregistro
 **Por el preregistro, la frase entra al HANDOFF** (sección 11.3): *"la generalización de v9 era su interferencia"*.
 Queda anotado lo que **no** prueba: la relación es correlacional dentro de una arquitectura; la prueba causal es
 manipular la fuga y medir, que es exactamente lo que hará v12 con la ceguera graduada.
+
+### ERR-20 — una etapa cerrada que no está en ninguna batería no está protegida
+
+**Qué pasó.** La Etapa 3 (generalización) se cerró el 16 sep con v9 y **no quedó en ninguna batería**. El criterio v3
+—el examen que decide si un tronco se congela— cubre aprender, revertir, interferencia, control negativo y las
+identidades de la plasticidad, pero **no cubre generalización a patrones nunca vistos**. Resultado: **v11 pasó el examen
+8/8, se congeló como tronco el 17 sep, y la Etapa 3 quedó reabierta sin que ninguna prueba lo dijera**. Nos enteramos
+sólo porque la nota de dirección pidió re-verificarla a mano.
+
+**Por qué importa más que un fallo de número.** Los otros 19 errores eran de medición o de criterio: se veían corriendo
+algo. Éste es **de cobertura**: el sistema de protección tenía un agujero con forma de etapa entera. Un agente futuro
+(o yo mismo) podía congelar v12, v13 y v14 sin volver a mirar la generalización nunca más.
+
+**Familia:** la misma de ERR-11 y ERR-16 (un control que no puede fallar, un criterio que no mide lo que dice), pero a
+nivel del **conjunto de pruebas**, no de una prueba.
+
+**Corrección, hecha hoy.**
+1. **`organismo/bateria_generaliza.py`** (`105ce314d643cd08`): regresión de generalización para cualquier tronco.
+   Mide G1 (valor sobre patrones nunca vistos, regla `px0` contra control `azar`), G2 (conducta al primer encuentro) y
+   la cobertura, con **los umbrales del preregistro de la Etapa 3, sin tocar ninguno**. Cada tronco necesita su
+   instrumento de mundo de regla registrado en `INSTRUMENTOS` (mismas anclas para todos).
+2. **Entra a la regla 1 y a la lista de congelación:** ningún tronco nuevo se congela sin correrla con 20 semillas, y
+   el resultado se registra aunque falle.
+3. **Comprobada sobre v11 en semillas nuevas (61–66):** `G1 FALLA` (0.550), `G2 PASA`, cobertura 6/6 →
+   *"v11 NO CONSERVA la generalización de la Etapa 3"*. La batería hace visible, en dos minutos, lo que nos costó una
+   re-verificación entera descubrir.
+
+**Regla derivada, para el proyecto:** *cuando una etapa se declare cerrada, la prueba que la cerró entra a una batería
+el mismo día, o la etapa no está cerrada.* Pendiente: revisar si las Etapas 1 y 2 tienen la misma deuda (la 2 sí está
+en el criterio v3 vía E2/E2L; la 1 también vía E1).

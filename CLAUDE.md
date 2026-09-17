@@ -42,6 +42,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 
 ## Reglas de trabajo (no negociables)
 1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v11.py 6` (tronco; `bateria_v9.py 6` como regresión).
+   **Antes de congelar cualquier tronco nuevo, además: `python bateria_generaliza.py <tronco> 20 --log`** (ERR-20:
+   una etapa cerrada que no está en una batería no está protegida; así fue como v11 reabrió la Etapa 3 en silencio).
    Debe salir todo PASA (y `manifiesto.py --check` intacto). Si no, detenerse.
 2. Un cambio por experimento. Cada experimento es una hipótesis con: qué cambia, predicción numérica,
    criterio de refutación y métricas — escritos ANTES de correr, en el registro.
