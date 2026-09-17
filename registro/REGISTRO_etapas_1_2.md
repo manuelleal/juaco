@@ -2713,3 +2713,30 @@ arquitectura), y **no se anticipó** al preregistrar (a diferencia de 4a', que s
 **Lectura:** el criterio 3 original mezclaba dos preguntas que en v13 tienen respuestas distintas. Separadas, las dos
 salen como deben. **La congelación queda en manos de dirección**: aceptar 3'+3'' como criterio 3 del examen **v3'**
 (y con ello v13 pasa 8/8 con todo lo demás ya medido en 81–100), o mantener la letra y dejar v13 como candidato.
+
+
+### v13 CONGELADO COMO TRONCO — confirmatorio en semillas NUEVAS 101–120 con el criterio v3' fijado antes
+
+Enmienda 1 del preregistro de congelación (`6fc9873`), escrita **antes** de correr: criterio **v3'** (control 3
+desdoblado, ERR-21) y examen completo en 101–120. `bateria_v13.py` pasa a `1a027bcb37eb536e`. Datos
+`examen_v13_20260917_165859` (`4c12053554354f80`) y `regresion_generaliza_organismo_v13_20260917_170148`
+(`9483fb6f50af24c7`).
+
+| bloque (semillas 101–120) | resultado |
+|---|---|
+| identidades | 42/42 y 42/42 |
+| seis etapas | **20/20 las seis** |
+| 3' vía rápida sola sin plasticidad | **0/20** pasan (≤ 1) ✅ |
+| 3'' vía lenta sin plasticidad | **20/20** pasan (≥ 19) ✅ |
+| 2, 4a', 4b, 4c, 4d | ✅ |
+| **X2 generalización** | G1 **0.800** (azar 0.500, px0 > azar 18/20) ✅; G2 **0.892** ✅ |
+| X3 regresión | v11 y v9 cumplen; 12 congelados intactos |
+
+**Nota honesta sobre la predicción:** G1 dio 0.800, **por debajo** de lo que predije (0.85–0.90) y por debajo del 0.900
+de 81–100. Pasa el criterio (≥ 0.65) con margen, y es igual al v9 histórico; la variación entre lotes de semillas
+(0.85, 0.90, 0.80) es la que hay. Se anota para no vender 0.90 como el número.
+
+**Por el preregistro: v13 SE CONGELA COMO TRONCO** (tag `v13-tronco`; CONGELADOS pasa a 14). **Etapa 3 y Etapa 4
+quedan cerradas a la vez sobre el mismo organismo.** v11 pasa a tronco anterior.
+
+**Pendientes declarados, obligatorios antes de decir "todo sobrevive":** 3T (composición temporal) y capacidad sobre v13.

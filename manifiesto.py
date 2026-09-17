@@ -28,6 +28,10 @@ CONGELADOS = {
     # Confirmatorio semillas 41-60 (R1-R4, K1-K3) y examen criterio v3 20/20 en 41-60.
     './organismo/organismo_v11.py': 'f69e24063be1b194',
     './organismo/bateria_v11.py':   '17179642ad02269c',
+    # v13 = TRONCO desde el 17 sep 2026 (tarde). DOS VIAS: v11 (rapida, hallada por evolucion) + lectura lineal de la
+    # retina (lenta) con puerta de familiaridad. Examen criterio v3' 8/8 y bateria_generaliza en semillas 101-120.
+    './organismo/organismo_v13.py': 'cc8b16b492d4d324',
+    './organismo/bateria_v13.py':   '1a027bcb37eb536e',
 }
 
 def h16(ruta):

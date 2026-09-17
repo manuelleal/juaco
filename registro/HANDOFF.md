@@ -323,8 +323,24 @@ generalización. Es la predicción de **complementary learning systems** (McClel
 Sahay (2011) y Clelland (2009) describen separación **sin** ese costo, y en este sistema el costo existe y se puede
 señalar con el dedo: **una línea de código**.
 
+## 11.3b El canje se rompió: v13, dos vías (tarde del día 5)
+Lo que ninguna perilla ni la hija que madura lograron, lo logró un **cambio de arquitectura** que la teoría pedía y
+nuestros datos exigían: **dos vías**. La rápida es v11 (separa, recuerda; hallada por evolución). La lenta es una
+lectura **lineal de la retina** (solapa, generaliza). Cada una aprende de **su** error, y la boca consulta la rápida
+sólo cuando el patrón le es **familiar** (las tres celdas de su código consolidadas); si no, a la lenta. Un solo error
+compartido **no** sirve (la rápida deja sin error a la lenta): fue el primer brazo y falló, declarado antes.
+
+Resultado, todo en semillas que nadie había tocado: retención **20/20** y acierto en nunca vistos **0.85** (61–80);
+examen 8/8 y generalización 0.80 / 0.89 (101–120). **Etapas 3 y 4 cerradas sobre el mismo tronco.**
+
+**ERR-21, y cómo se resolvió sin trampa:** el control negativo del examen ("sin plasticidad no separa A∩B=3") tenía la
+premisa de una sola vía; v13 lo "pasaba" porque la lenta separa por píxeles. Se desdobló (3': la rápida sola debe fallar,
+0/20; 3'': la lenta separa, 20/20), **se escribió el criterio nuevo y se repitió el examen entero en 20 semillas nuevas**
+antes de congelar. Ésa es la forma honesta de cambiar un criterio después de ver un dato.
+
 ## 11.4 Lo que queda abierto
-- **v12: ceguera graduada** — la perilla entre recordar y generalizar. Se preregistra como **mapa del canje**, no como
+- **3T y capacidad sobre v13** (medidas sólo sobre v11): obligatorias antes de decir que todo sobrevive.
+- ~~v12: ceguera graduada~~ — hecho: mapa del canje, H sostenida; la hija madura, refutada. v13 lo rompió. Se preregistra como **mapa del canje**, no como
   solución: la predicción escrita es que **ningún valor logra a la vez** la retención de v11 y la generalización de v9.
 - **El candidato que sí podría romperlo** (una hija que fuga pero **deja de aprender al madurar**) queda anotado en la
   nota de diseño; **no se diseña todavía**.

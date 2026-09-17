@@ -8,7 +8,20 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - `registro/REGISTRO_etapas_1_2.md` — historial completo, criterios preregistrados, resultados, errores. LEER PRIMERO.
 - `registro/HANDOFF.md` — narrativa completa de lo hecho y por qué.
 - `registro/PLAN.md` — qué sigue y cómo.
-- **`organismo/organismo_v11.py` — EL TRONCO desde el 17 sep 2026** (f69e24063be1b194, tag `v11-tronco`).
+- **`organismo/organismo_v13.py` — EL TRONCO desde el 17 sep 2026 (tarde)** (cc8b16b492d4d324, tag `v13-tronco`).
+  **v13 = v11 + una VÍA LENTA y una PUERTA.** La vía rápida es v11 sin tocar (Kenyon + división por conflicto de signo,
+  hallada por evolución). La lenta es una lectura **lineal directa de la retina** (`Wps`/`Wns` ∈ ℝ⁶, `eta_s = 0.015`),
+  cada vía aprende de **su propio** error, y la boca consulta la rápida sólo si el patrón le es **familiar** (las 3
+  celdas de su código con `|Wp−Wn| > 0.2`, el umbral de v11; `puerta = 3`); si no, consulta la lenta, que aprende la
+  regla y no los casos. **Recuerda como v11 y generaliza mejor que v9: rompe el canje** (`v13_dos_vias_20260917_160541`,
+  confirmado en 61–80: retención 20/20, acierto en nunca vistos 0.850). Examen **criterio v3'** 8/8 y
+  `bateria_generaliza` (0.800 / 0.892) en semillas **101–120** (`examen_v13_20260917_165859`,
+  `regresion_generaliza_organismo_v13_20260917_170148`). `organismo/bateria_v13.py` (1a027bcb37eb536e) es su examen.
+  - **Criterio v3' (ERR-21):** el control negativo se desdobla: 3' la vía rápida sola sin plasticidad **falla** (0/20);
+    3'' la lenta sin plasticidad **separa por píxeles** (20/20). Decidido y escrito ANTES de correr 101–120.
+  - **Etapas 3 y 4 cerradas sobre el mismo tronco.** La lenta es lineal: **no** resuelve XOR (0.44), por diseño.
+  - **Pendientes y obligatorios antes de decir "todo sobrevive": 3T y capacidad sobre v13** (medidos sólo sobre v11).
+- **`organismo/organismo_v11.py` — tronco del 17 sep 2026 (mañana a tarde)** (f69e24063be1b194, tag `v11-tronco`).
   v11 = v10 + **división por conflicto de signo**: una celda con valor consolidado (|Wp−Wn|>0.2) que recibe un refuerzo
   de signo contrario se divide en esa mordida; la hija nace **ciega fuera de los píxeles del patrón** que la dispara,
   **la madre no se mueve** y el valor se **fisiona** (la hija se lleva el signo nuevo, la madre conserva el viejo).
@@ -41,7 +54,7 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   sin verificar hashes, reproducir en repo, pasar `bateria.py 20` y `manifiesto.py`, y etiquetar el origen.
 
 ## Reglas de trabajo (no negociables)
-1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v11.py 6` (tronco; `bateria_v9.py 6` como regresión).
+1. Antes de tocar nada: `cd organismo && python3 bateria.py 6` **y** `python bateria_v13.py 6` (tronco; `bateria_v11.py 6` y `bateria_v9.py 6` como regresión).
    **Antes de congelar cualquier tronco nuevo, además: `python bateria_generaliza.py <tronco> 20 --log`** (ERR-20:
    una etapa cerrada que no está en una batería no está protegida; así fue como v11 reabrió la Etapa 3 en silencio).
    Debe salir todo PASA (y `manifiesto.py --check` intacto). Si no, detenerse.
