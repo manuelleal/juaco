@@ -2991,3 +2991,22 @@ mismo fenómeno de la re-verificación (35 de 60) visto desde la comunicación.
 experiencia** (la misma prueba de familiaridad de la puerta, sin constante nueva) y calla de lo que sólo extrapola.
 Mismos umbrales. Si tampoco emerge en magnitud, **se cierra la línea N2 por hoy** con "emerge en signo, no en magnitud" y
 se sigue el plan del debate de niveles 5–10.
+
+### N2d — habla sólo de lo consolidado: **refutado en magnitud**, y un diagnóstico instrumentado encuentra la causa en el MUNDO
+
+Datos `datos/N2d_s1-20_20260917_184830.json` (`3ebd203bf1594284`). E1 13/20 (consistencia 0.99), E2 **1/20** (contraste
+−0.34 / +0.27), E3 12/20 ✅, **E4 pareado 15/20** (CONV 249 frente a N0 316; mediana 0.79 × N0, se pedía 0.70), E5 ✅.
+Mi hipótesis (extrapolación confiada del experto) queda **refutada**: hablar sólo de lo consolidado no subió la magnitud.
+
+**Diagnóstico instrumentado (semilla 4, `scratchpad/diag_n2d.py`, contadores sin tocar el mecanismo):** el experto
+emite **36.365** símbolos en estado "negativo" y **564** en "positivo"; el novato oye "negativo" sobre veneno 10.092 veces
+y "positivo" sobre comida **88**; y sólo muerde después de un "positivo" **8 veces** en 200.000 pasos (6 de ellas veneno,
+por sus propios errores). Con 8 muestras `M[positivo]` no converge. **Causa: el muestreo del mundo.** La comida se come y
+desaparece (una visita, una emisión); el veneno se rechaza y se queda, y se vuelve a pisar miles de veces. La
+convención es perfecta (1.00) y el receptor no tiene con qué aprenderla por consecuencias. Ninguno de los cuatro
+intentos podía verlo sin instrumentar.
+
+**Decisión (regla 12):** se **anula** la cláusula de cierre de N2d (escrita sin conocer esta causa) y se preregistra N2e:
+el significado también se aprende **por alineación con lo que el receptor ya conoce** (al oír `s` sobre un patrón
+familiar a su vía rápida, `M[s]` se acerca al valor propio de ese patrón). Miles de oídas en vez de 8 mordidas. Si N2e
+no sube E2, la línea se cierra con "emerge en signo, no en magnitud, por asimetría del muestreo del mundo".
