@@ -1,0 +1,39 @@
+[17:54:33 +    0.0s] ARRANQUE N1-asimetrico. BASE=organismo_v13 (kw {}). Pool(14).
+[17:54:33 +    0.0s] sha preregistro df387ef8ca41d3f9  script fec0272948d6ac1e  mundo_social 562293565b239821  base cc8b16b492d4d324
+[17:54:33 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 22088:
+[17:54:33 +    0.4s]     22080 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[17:54:33 +    0.4s]     22088 C:\Python314\python.exe experimentos/etapa5_comunicacion/corre_N1_asim.py
+[17:54:44 +   10.9s] ETAPA 1/4 — K1 mundo_social(n=1) == organismo_v13: 6/6 -> OK
+[17:54:44 +   10.9s] ETAPA 2/4 — progenitores del experto (20)...
+[17:54:57 +   23.4s]   W progenitores: W_A mediana +1.00, W_B -2.98
+[17:54:57 +   23.4s] ETAPA 3/4 — 160 corridas...
+[17:55:12 +   38.9s]           20/160
+[17:55:20 +   47.2s]           40/160
+[17:55:56 +   82.8s]           60/160
+[17:56:15 +  101.4s]           80/160
+[17:56:51 +  138.0s]           100/160
+[17:57:12 +  158.6s]           120/160
+[17:57:50 +  197.2s]           140/160
+[17:58:14 +  221.1s]           160/160
+[17:58:14 +  221.1s] ETAPA 4/4 — analisis.
+[17:58:14 +  221.1s]   K2 avisos '-' sobre B al novato antes de su criterio (PAR-N1, E1): mediana 38, >=5 en 20/20 -> OK
+[17:58:14 +  221.1s]   K3 senales recibidas por el novato: N0 0, N1 5168, BAR 5057 -> OK
+[17:58:14 +  221.1s] 
+[17:58:14 +  221.1s]   E1  NOV-SOLO NOVATO: crit B  19.0  veneno Q1  29.5  muertes  137.0  W_B fin -2.98  t_B_ok  100000
+[17:58:14 +  221.1s]   E1  PAR-N0   NOVATO: crit B  19.0  veneno Q1  40.0  muertes  181.5  W_B fin -3.00  t_B_ok  100000 | EXPERTO: W_B fin -3.00  mordidas B   58  muertes  171.5  t_ext_B  100000
+[17:58:14 +  221.1s]   E1  PAR-N1   NOVATO: crit B   7.0  veneno Q1  21.0  muertes  181.0  W_B fin -3.00  t_B_ok  100000 | EXPERTO: W_B fin -3.00  mordidas B   58  muertes  179.0  t_ext_B  100000
+[17:58:14 +  221.1s]   E1  PAR-BAR  NOVATO: crit B 704.5  veneno Q1 178.5  muertes  255.5  W_B fin -1.75  t_B_ok  100000 | EXPERTO: W_B fin -1.65  mordidas B  698  muertes  253.5  t_ext_B  100000
+[17:58:14 +  221.1s]   INV NOV-SOLO NOVATO: crit B   0.0  veneno Q1  30.5  muertes  136.0  W_B fin +1.00  t_B_ok     381
+[17:58:14 +  221.1s]   INV PAR-N0   NOVATO: crit B   0.0  veneno Q1  31.0  muertes  131.0  W_B fin +1.00  t_B_ok      93 | EXPERTO: W_B fin +1.00  mordidas B   94  muertes  284.0  t_ext_B   70142
+[17:58:14 +  221.1s]   INV PAR-N1   NOVATO: crit B   0.0  veneno Q1  19.0  muertes  163.0  W_B fin +1.00  t_B_ok     168 | EXPERTO: W_B fin +1.00  mordidas B  182  muertes  200.0  t_ext_B   21902
+[17:58:14 +  221.1s]   INV PAR-BAR  NOVATO: crit B   0.0  veneno Q1 168.0  muertes  241.0  W_B fin +0.83  t_B_ok     104 | EXPERTO: W_B fin +0.88  mordidas B  788  muertes  292.0  t_ext_B    9657
+[17:58:14 +  221.1s] 
+[17:58:14 +  221.1s]   A1 novato aprende del rechazo del experto: N1 7.0 <= 0.7 x N0 19.0 = 13.3: SOSTENIDA
+[17:58:14 +  221.1s]   A2 pareado N1<N0 en 20/20 (>=15): SOSTENIDA
+[17:58:14 +  221.1s]   A3 contenido: BAR 704.5 >= N0 19.0: SOSTENIDA
+[17:58:14 +  221.1s]   A3b (sin voto) el experto no se degrada en E1: 20/20
+[17:58:14 +  221.1s]   A4 INV coste de la confianza (novato N1 tarda mas) en 18/20 (>=13): SOSTENIDA
+[17:58:14 +  221.1s]   A5 INV simbiosis inversa (experto N1 extingue antes) en 19/20 (>=13): SOSTENIDA
+[17:58:14 +  221.1s] 
+[17:58:14 +  221.1s] VEREDICTO N1asim: K1=True K2=True K3=True A1=True A2=True A3=True A3b_sin_voto=True A4=True A5=True TRANSMISION=True SIMBIOSIS=True
+[17:58:14 +  221.1s] datos -> N1asim_20260917_175433.json  sha256_16 = 84469d93cf1891b0

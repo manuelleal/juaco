@@ -18,7 +18,8 @@ import numpy as np
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(os.path.dirname(AQUI))
 sys.path[:0] = [AQUI, os.path.join(RAIZ, 'organismo')]
-SEEDS = list(range(1, 21)); T = 100000
+_desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else 1   # replica: --desde 21
+SEEDS = list(range(_desde, _desde + 20)); T = 100000
 _man = open(os.path.join(RAIZ, 'manifiesto.py'), encoding='utf-8').read()
 BASE = 'organismo_v13' if "'./organismo/organismo_v13.py'" in _man else 'organismo_v11'   # el tronco; mundo_social replica v13 por defecto
 KW_BASE = dict() if BASE == 'organismo_v13' else dict(eta_s=0.0, puerta=None)
@@ -75,7 +76,7 @@ if __name__ == '__main__':
     import multiprocessing as mp
     mp.set_start_method('spawn', force=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
-    _log['f'] = open(os.path.join(RAIZ, 'datos', f'N1asim_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
+    _log['f'] = open(os.path.join(RAIZ, 'datos', f'N1asim_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     pre = os.path.join(AQUI, 'PREREGISTRO_N1_asimetrico.md')
     log(f"ARRANQUE N1-asimetrico. BASE={BASE} (kw {KW_BASE}). Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_social {h16(os.path.join(AQUI, 'mundo_social.py'))}"
@@ -155,7 +156,7 @@ if __name__ == '__main__':
     meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), base=BASE, semillas=SEEDS, veredictos=V, K1=k1, procesos_python=ps,
                 sha_preregistro=h16(pre), sha_script=h16(os.path.abspath(__file__)), sha_mundo_social=h16(os.path.join(AQUI, 'mundo_social.py')),
                 sha_base=h16(os.path.join(RAIZ, 'organismo', BASE + '.py')), python=platform.python_version(), numpy=np.__version__)
-    dj = os.path.join(RAIZ, 'datos', f'N1asim_{stamp}.json')
+    dj = os.path.join(RAIZ, 'datos', f'N1asim_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
     json.dump(dict(meta=meta, corridas=res), open(dj, 'w', encoding='utf-8'), ensure_ascii=False, default=str)
     log(f"datos -> {os.path.basename(dj)}  sha256_16 = {h16(dj)}")
     _log['f'].close()

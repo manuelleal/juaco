@@ -2802,3 +2802,52 @@ Riesgo conocido: `puerta = 2` costó generalización (0.60–0.65) en la superfi
 **Estado del tronco v13, completo y honesto:** aprende, revierte, recuerda (20/20), generaliza (0.80–0.85), compone un
 paso de historia (3T 3.96) y sostiene 28–35 estímulos de 60 (v11: 43–50; v10: 6–9). Su costo conocido es la
 capacidad en mundos abarrotados, y su límite conocido es que la vía lenta es lineal.
+
+
+## ETAPA 5 — N1-ASIMÉTRICO sobre v13: **transmisión por conducta visible y simbiosis en el tiempo, DEMOSTRADAS (semillas 1–20)**
+
+Preregistro `experimentos/etapa5_comunicacion/PREREGISTRO_N1_asimetrico.md` (`df387ef8ca41d3f9`; enmienda 1 escrita
+antes de correr: base v13, vicario en las dos vías). `mundo_social.py` (`562293565b239821`) replica v13 línea a línea;
+**K1**: con un organismo ≡ `organismo_v13` 6/6 (y con las perillas apagadas ≡ v11 y ≡ v9, en el humo). Datos
+`datos/N1asim_20260917_175433.json` (`84469d93cf1891b0`). Semillas 1–20, T = 100.000, experto = progenitor v13 que vivió
+E1 100.000 pasos (`W_A` +1.00, `W_B` −2.98) y hereda todo su estado; novato = nace en blanco.
+
+**Instrumento:** K2, el novato recibe avisos "−" sobre B **antes** de su propio criterio: mediana 38, ≥ 5 en 20/20 (el
+canal llega a tiempo). K3, la señal barajada llega en la misma cantidad (5057 frente a 5168).
+
+**Mundo estable (E1): el experto enseña**
+
+| condición | veneno propio hasta el criterio (novato) | veneno Q1 | muertes | W_B final | experto |
+|---|---|---|---|---|---|
+| NOV-SOLO | 19 | 29.5 | 137 | −2.98 | — |
+| PAR-N0 (dos, sin señal) | 19 | 40 | 181.5 | −3.00 | −3.00 |
+| **PAR-N1 (señal de conducta)** | **7** | **21** | 181 | −3.00 | −3.00 (20/20 intacto) |
+| PAR-BAR (barajada) | **704.5** | 178.5 | 255.5 | −1.75 | −1.65 |
+
+- **A1 SOSTENIDA:** 7 ≤ 0.7 × 19 = 13.3. **El novato aprende que B es veneno con un tercio de las mordidas**, mirando
+  cómo el experto lo rechaza. **A2 SOSTENIDA: 20/20 pareado.**
+- **A3 SOSTENIDA, y de forma brutal:** la señal barajada no es neutra, es **destructiva** (704 mordidas de veneno, 255
+  muertes, `W_B` −1.75): la mitad de los avisos al azar dicen "+" sobre B y el novato lo come. **El contenido lo es
+  todo**; "cualquier señal acelera" queda refutado en su forma más fuerte.
+- **A3b:** el experto no se degrada: `W_B` −3.00 en 20/20.
+
+**Mundo invertido (INV): el experto está equivocado y el novato lo corrige**
+
+| condición | novato `t_B_ok` (descubre que B es comida) | veneno Q1 (A) | experto `t_ext_B` (extingue su miedo a B) | mordidas de B del experto |
+|---|---|---|---|---|
+| PAR-N0 | 93 | 31 | **70.142** | 94 |
+| **PAR-N1** | 168 | 19 | **21.902** | 182 |
+| PAR-BAR | 104 | 168 | 9.657 | 788 |
+
+- **A4 SOSTENIDA (18/20):** el novato que escucha a un experto equivocado tarda **más** en descubrir que B es comida
+  (168 frente a 93 pasos): **el coste de la confianza**, pequeño y medido.
+- **A5 SOSTENIDA (19/20):** el experto que ve al novato morder B **extingue su miedo tres veces antes** (21.902 frente
+  a 70.142): **el que descubre corrige al que sabe.** (BAR extingue aún antes, 9.657, pero por la razón equivocada: los
+  "+" al azar le hacen morder B 788 veces; su `W_B` final queda en +0.88 y muere 292 veces.)
+
+**Veredicto: `TRANSMISION = True`, `SIMBIOSIS = True`.** Vocabulario permitido: *el novato **aprende** del rechazo
+visible del experto; el experto **revierte** antes gracias al novato.* Nada de "lenguaje": la señal es un reflejo de
+la conducta, honesta por construcción, y el receptor la trata como una experiencia propia atenuada.
+
+**Antes de escribir "Etapa 5 cerrada": réplica en semillas nuevas 21–40** con los mismos criterios (se corre a
+continuación; preregistrada por este mismo párrafo antes de correr, predicción: los seis criterios se sostienen).
