@@ -42,7 +42,8 @@ class Organismo:
     def __init__(self, rng, T, eta=.03, tau_e=.85, alpha=1.2, hambre_boca=2.0, aversion=1.0, costo=.002, plast=True,
                  theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True, mu_norm=True, estado=None,
                  div_signo=True, eta_s=0.015, clip_s=3.0, puerta=3, pats=None, mundo='AB',
-                 rng_q=None, K_sim=2, beta_q=2.0, eta_q=0.1, eta_m=0.1, tau_m=200, u_m=0.5):
+                 rng_q=None, K_sim=2, beta_q=2.0, eta_q=0.1, eta_m=0.1, tau_m=200, u_m=0.5,
+                 gamma_sim=0.0, baseline_q=False, rho_b=0.05):
         """Replica linea a linea a organismo/organismo_v13.py (v11 + via lenta lineal + puerta de familiaridad).
         Con div_signo=False, eta_s=0, puerta=None es v10; ademas mu_norm=False, v9.
         pats/mundo: 'AB' (A,B) o 'regla' (los 20 patrones de peso 3, como organismo_v13g). N2: simbolos aprendidos
@@ -62,6 +63,8 @@ class Organismo:
         self.Pq = rng_q.uniform(-0.1, 0.1, (2, K_sim)) if rng_q is not None else None
         self.M = np.zeros(K_sim); self.traza = {}; self.emis = np.zeros((2, K_sim), int); self.emis_q4 = np.zeros((2, K_sim), int)
         self.refuerzos = [0, 0]; self.simbolos_recibidos = 0; self.decodificados = 0
+        # N2b: el simbolo entra en la DECISION (gamma_sim * contraste, sin puerta) y el emisor aprende por VENTAJA (r - b[st])
+        self.gamma_sim = gamma_sim; self.baseline_q = baseline_q; self.rho_b = rho_b; self.b = np.zeros(2); self.ultimo = {}
         self.Wp = np.zeros(NKMAX); self.Wn = np.zeros(NKMAX); self.err = np.zeros(NKMAX); self.mu = np.zeros((NKMAX, 6))
         self.splits = 0; self.el = np.zeros_like(self.Wl); self.tr = np.zeros(9)
         self.Wps = np.zeros(6); self.Wns = np.zeros(6)   # v13: via lenta lineal sobre la retina
@@ -103,12 +106,14 @@ class Organismo:
 
     def reforzar(self, st, s, r):
         """Ganancia compartida operacionalizada: +1 si la conducta del receptor coincidio con el estado del emisor, -1 si no."""
-        self.Pq[st][s] = float(np.clip(self.Pq[st][s] + self.eta_q * r, -3, 3)); self.refuerzos[0 if r > 0 else 1] += 1
+        adv = r - float(self.b[st]) if self.baseline_q else r   # N2b: ventaja sobre la linea base del estado
+        if self.baseline_q: self.b[st] += self.rho_b * (r - self.b[st])
+        self.Pq[st][s] = float(np.clip(self.Pq[st][s] + self.eta_q * adv, -3, 3)); self.refuerzos[0 if r > 0 else 1] += 1
 
     def recibir_simbolo(self, kk, s, f_vicaria, val, t, invertir_en):
         """El receptor oye el simbolo s sobre un objeto de patron kk: deja traza y, si ya cree saber que significa s
         (|M[s]| >= u_m), actualiza su propio valor de kk con R = M[s] (las dos vias, sin dividir, sin comer)."""
-        self.traza[(s, kk)] = t; self.simbolos_recibidos += 1
+        self.traza[(s, kk)] = t; self.simbolos_recibidos += 1; self.ultimo[kk] = (s, t)
         # ENMIENDA 1 de N2: el significado es CONTRASTE, no magnitud. Con simbolos al azar cada M[s] tiende al promedio de
         # consecuencias (-1 con 10 venenos y 10 comidas) y el receptor devaluaria todo lo senalado; lo que informa es
         # cuanto se aparta un simbolo de la media de los simbolos.
@@ -163,6 +168,8 @@ class Organismo:
         if self.pos in objs:
             kk = objs[self.pos]; kc = self.kenyon(self.P_[kk]); Wb = self.Wp - self.Wn
             _wt, _, _ = self._total(self.P_[kk], kc, Wb)   # v13
+            if self.gamma_sim and kk in self.ultimo and t - self.ultimo[kk][1] <= self.tau_m:   # N2b: el simbolo sesga la decision
+                _wt = _wt + self.gamma_sim * float(self.M[self.ultimo[kk][0]] - self.M.mean())
             Vb = self.alpha * _wt + self.hambre_boca * hambre + .5; pb = 1 / (1 + np.exp(-Vb / .3)); mordio = rng.random() < pb
             self.vis[kk][self.q(t)] += 1
             if self.memoria_rechazo and not mordio: self._rech[self.pos] = t + self.memoria_rechazo
@@ -242,7 +249,7 @@ class Organismo:
             tot4 = int(self.emis_q4.sum()); cons = (int(self.emis_q4[0][pref[0]] + self.emis_q4[1][pref[1]]) / tot4) if tot4 else None
             sim = dict(Pq=[[round(float(x), 3) for x in fila] for fila in self.Pq], simbolo_rechazo=pref[0], simbolo_muerde=pref[1],
                        distintos=pref[0] != pref[1], consistencia_q4=cons, emis=self.emis.tolist(), emis_q4=self.emis_q4.tolist(),
-                       refuerzos=list(self.refuerzos))
+                       refuerzos=list(self.refuerzos), b=[round(float(x), 3) for x in self.b])
         return dict(W=W, comp=comp, W_lenta=W_lenta, mord=self.mord, vis=self.vis, deaths=self.deaths, splits=self.splits, split_t=self.split_t,
                     celdas=int(self.activa.sum()), dq=self.dq, n_crit=self.n_crit, veneno_propio=self.veneno_propio,
                     vicarias=self.vicarias, vicarias_signo=self.vicarias_signo, avisos_B_antes_crit=self.avisos_B_antes_crit,

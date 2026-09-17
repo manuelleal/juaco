@@ -17,6 +17,9 @@ sys.path[:0] = [AQUI, os.path.join(RAIZ, 'organismo'), os.path.join(RAIZ, 'exper
 _desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else 1
 _n = int(sys.argv[sys.argv.index('--n') + 1]) if '--n' in sys.argv else 20
 SEEDS = list(range(_desde, _desde + _n)); T = 200000; REGLA = 'azar'
+VARIANTE = sys.argv[sys.argv.index('--variante') + 1] if '--variante' in sys.argv else 'a'
+VAR_KW = dict(gamma_sim=1.2, baseline_q=True, u_m=1.0) if VARIANTE == 'b' else dict()   # N2b: PREREGISTRO_N2b.md
+PREF = 'N2' if VARIANTE == 'a' else 'N2b'
 CONDS = {'SOLO': dict(n=1), 'N0': dict(n=2), 'INNATO': dict(n=2, senal='conducta'), 'CONV': dict(n=2, senal='simbolo'),
          'SHUF': dict(n=2, senal='simbolo_barajado')}
 N_PARALELO = 14
@@ -56,7 +59,7 @@ def tarea(args):
     _, cond, seed, estado = args
     kw = CONDS[cond]
     estados = None if kw['n'] == 1 else [None, estado]
-    out = ms.run(seed, T=T, mundo='regla', regla=REGLA, estados=estados, **kw)
+    out = ms.run(seed, T=T, mundo='regla', regla=REGLA, estados=estados, **VAR_KW, **kw)
     import organismo_v13g as g
     vr = g.split_regla(seed, REGLA)[3]
     for o in out:
@@ -75,9 +78,9 @@ if __name__ == '__main__':
     import multiprocessing as mp
     mp.set_start_method('spawn', force=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
-    _log['f'] = open(os.path.join(RAIZ, 'datos', f'N2_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
-    pre = os.path.join(AQUI, 'PREREGISTRO_N2.md')
-    log(f"ARRANQUE N2 (significado emergente). semillas {SEEDS[0]}..{SEEDS[-1]}, T={T}, regla {REGLA}. Pool({N_PARALELO}).")
+    _log['f'] = open(os.path.join(RAIZ, 'datos', f'{PREF}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
+    pre = os.path.join(AQUI, 'PREREGISTRO_N2.md' if VARIANTE == 'a' else 'PREREGISTRO_N2b.md')
+    log(f"ARRANQUE {PREF} (significado emergente; variante {VARIANTE}, kw {VAR_KW}). semillas {SEEDS[0]}..{SEEDS[-1]}, T={T}, regla {REGLA}. Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_social {h16(os.path.join(AQUI, 'mundo_social.py'))}"
         f"  v13 {h16(os.path.join(RAIZ, 'organismo', 'organismo_v13.py'))}  v13g {h16(os.path.join(RAIZ, 'experimentos', 'v13_dos_vias', 'organismo_v13g.py'))}")
     try:
@@ -154,11 +157,11 @@ if __name__ == '__main__':
     log(f"  E6 (sin voto) el individuo solo no tiene simbolos: SOLO recibe {med([o['simbolos_recibidos'] for o in nov('SOLO')]):.0f}")
     log(f"  refuerzos del experto (CONV) +/-: {med([o['simbolos']['refuerzos'][0] for o in ex]):.0f} / {med([o['simbolos']['refuerzos'][1] for o in ex]):.0f};  Pq experto (mediana de |Pq|): {med([abs(x) for o in ex for fila in o['simbolos']['Pq'] for x in fila]):.2f}")
     V['N2_EMERGE'] = bool(V['K1'] and V['K2'] and V['E1'] and V['E2'] and V['E3'] and V['E4'] and V['E5'])
-    log(); log("VEREDICTO N2: " + " ".join(f"{k}={v}" for k, v in V.items()))
+    log(); log(f"VEREDICTO {PREF}: " + " ".join(f"{k}={v}" for k, v in V.items()))
     meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), semillas=SEEDS, T=T, regla=REGLA, veredictos=V, K1=k1, procesos_python=ps,
                 sha_preregistro=h16(pre), sha_script=h16(os.path.abspath(__file__)), sha_mundo_social=h16(os.path.join(AQUI, 'mundo_social.py')),
                 python=platform.python_version(), numpy=np.__version__)
-    dj = os.path.join(RAIZ, 'datos', f'N2_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
+    dj = os.path.join(RAIZ, 'datos', f'{PREF}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
     json.dump(dict(meta=meta, corridas=res), open(dj, 'w', encoding='utf-8'), ensure_ascii=False, default=str)
     log(f"datos -> {os.path.basename(dj)}  sha256_16 = {h16(dj)}")
     _log['f'].close()
