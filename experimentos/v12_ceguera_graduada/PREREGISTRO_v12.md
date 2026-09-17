@@ -115,3 +115,17 @@ nunca vistos ≥ **0.75**.
 **Estatuto de rama:** 10 semillas **71–80**; si la predicción se sostiene, se re-mide en **semillas retenidas 81–90**
 antes de escribir nada fuerte. Etiqueta `rama-hija-madura`. Nada de esto es tronco sin confirmatorio propio, examen
 criterio v3 y `bateria_generaliza.py 20` (ERR-20).
+
+## ENMIENDA 2 (17 sep, tras el humo de instrumentos y ANTES de correr) — el umbral de maduración es asimétrico
+
+**Humo declarado** (semillas 41–42, bloque M completo y mundo de regla): los controles I1, I2 y los de instrumentación
+salen idénticos; **la maduración actúa** (2 hijas congeladas en el bloque M, `t_cong` 52.218 y 74.131; 0 y 3 en el
+mundo de regla). Pero se ve un problema **de diseño, no de medida**: con `u_madura = 1.0`, **sólo pueden congelarse las
+hijas de veneno**. Una celda entrenada por comida vale ≈ 1/3 (el valor +1 se reparte entre las 3 celdas del código) y
+**nunca** alcanza 1.0; una de veneno vale ≈ −1. Tal como estaba escrito, la rama probaría un mecanismo **asimétrico por
+construcción**, y su fallo no diría nada sobre la idea.
+
+**Corrección, escrita antes de correr:** la rama se corre en **dos puntos**, `u_madura ∈ {1.0, 0.3}`, y **ambos se
+reportan**. `0.3` es el valor que permite congelar también a las hijas de comida (≈ 1/3). No es un barrido para elegir
+el mejor: es cubrir los dos lados de una asimetría que el humo dejó a la vista. La predicción y los criterios de
+refutación de la rama **no cambian**.
