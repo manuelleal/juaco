@@ -92,9 +92,11 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   conflicto de signo, **órgano nacido por evolución guiada**) → **v13** (v11 + vía lenta lineal de la retina + puerta de
   familiaridad). **14 archivos congelados** (`manifiesto.py --check`).
 - **Etapas del brief:** 1 ✅ · 2 ✅ · **3 ✅ (v13: 0.80–0.90 en patrones nunca vistos)** · **4 ✅ (v11 → v13: retención
-  20/20)** · **5 N1 ✅** (transmisión experto → novato por conducta visible; réplica en 21–40) · **5 N2 EN CURSO**
-  (significado emergente; `experimentos/etapa5_comunicacion/PREREGISTRO_N2.md` y `corre_N2.py`; corriendo al escribir
-  esto: si hay `datos/N2_s1-20_*.json`, ya terminó y hay que registrarlo) · N3, 6, 7, 8 abiertas.
+  20/20)** · **5 N1 ✅** (transmisión experto → novato por conducta visible; réplica en 21–40) · **5 N2 ❌ REFUTADO en
+  el primer intento** (`N2_s1-20_20260917_181950`: sin gradiente para el emisor y receptor que sólo actúa cuando ya
+  sabe; CONV peor que N0) · **N2b preregistrado** (`PREREGISTRO_N2b.md`: símbolo como sesgo en la decisión + refuerzo
+  menos línea base) · N3, 6, 7, 8 abiertas. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
+  mundo de 20 patrones deja 0/10 comidas conocidas).
 - **Hallazgos del día, en orden:** (a) **JUACO-EVO**: 4 mutaciones LLM contra 24 ciegas; el LLM halló en **una**
   generación un órgano que yo no diseñé (P1 sostenida; `experimentos/evo/LINAJE.md`). (b) v11 cerró la Etapa 4 y
   **multiplicó la capacidad** (mundo grande: 50 de 60 frente a 9 de v10); el límite no es el pool de celdas: degrada

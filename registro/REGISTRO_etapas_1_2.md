@@ -2874,3 +2874,57 @@ Etapa 5 (K1 + A1–A5 en 6 semillas), y `--desde 21` (20 semillas) la completa. 
 **Peldaños abiertos de la Etapa 5:** N2 (que el **significado** de la señal emerja, juego de señalización) y N3 (dos
 cuerpos con sentidos distintos resuelven lo que ninguno puede solo). Diseño en
 `experimentos/etapa5_comunicacion/DISENO_comunicacion_simbiotica.md`.
+
+
+## ETAPA 5, N2 (significado emergente) — **REFUTADO en el primer intento**, con diagnóstico limpio
+
+Preregistro `experimentos/etapa5_comunicacion/PREREGISTRO_N2.md` (`8286eb96e843a84d`; enmienda 1 —el significado es
+contraste— escrita tras el humo y antes de correr, `29ef4e5`). Datos `datos/N2_s1-20_20260917_181950.json`
+(`b201d7424b4855f5`). K1: `mundo_social(n=1, regla)` ≡ `organismo_v13g` (tronco, `fase2_en=0`) 3/3. Progenitores
+expertos: conocen 8 de 10 venenos (mediana). K2: 10.597 símbolos recibidos por el novato.
+
+| condición | veneno del novato (200k) | veneno Q1 | muertes | venenos conocidos /10 | comidas conocidas /10 | decodificados |
+|---|---|---|---|---|---|---|
+| SOLO | 319 | 128 | 266 | 8 | 9 | — |
+| N0 (dos, sin señal) | 318 | 140 | 440 | 8 | 6 | — |
+| INNATO (conducta, = N1) | **194** | 93 | 361 | **10** | **0** | — |
+| CONV (símbolos aprendidos) | **375** [235, 1805] | 190 | 429 | 9 | 7 | 149 |
+| SHUF (barajados) | 328 | 147 | 434 | 9 | 6 | 32 |
+
+| criterio | veredicto | cifra |
+|---|---|---|
+| E1 convención en el emisor | **REFUTADA** | 1/20; consistencia Q4 mediana **0.50** (azar); estados con símbolos distintos 6/20 |
+| E2 decodificación en el receptor | **REFUTADA** | 1/20; contraste mediana **+0.00 / +0.03** (M crudo −2.69 / −2.63: los dos símbolos predicen el promedio) |
+| E3 arbitrariedad | **REFUTADA** | "rechazo" = símbolo 0 en 19/20: no es convención, es el desempate del argmax con `Pq` empatado |
+| E4 beneficio | **REFUTADA** | CONV 375 frente a N0 318; CONV mejor en sólo 3/20. **Peor con símbolos que sin ellos** |
+| E5 barajar destruye | sostenida, **vacía** | no había código que destruir |
+
+**Diagnóstico (desde los números; no se recalibra nada):**
+1. **El emisor no recibe gradiente.** Refuerzos +37.088 / −692: el "acuerdo" del receptor es casi siempre positivo y,
+   sobre todo, **ciego al símbolo**: como la conducta del receptor no depende del símbolo, los dos símbolos de un mismo
+   estado reciben la misma corriente de refuerzo y saturan juntos (`|Pq|` mediana 3.00, empatados). Sin diferencia
+   entre símbolos no hay convención.
+2. **El receptor no actúa hasta tener significado, y no hay significado hasta que actúe.** `M` aprende el promedio de
+   consecuencias por símbolo; con emisiones al azar los dos promedios son iguales (−2.7), el contraste es 0 y la puerta
+   (`|C| ≥ 0.5`) casi nunca abre (149 decodificaciones en 200.000 pasos). Es el círculo que el preregistro declaró como
+   riesgo principal. En los juegos de señalización de Lewis/Skyrms el círculo se rompe porque el receptor **sólo** tiene
+   la señal para decidir; aquí el receptor ve el objeto y aprende su valor por su cuenta, así que el símbolo es
+   redundante hasta que ya no hace falta.
+3. **Por qué CONV es PEOR que N0:** las pocas veces que la puerta abre lo hace por ruido de muestreo (un símbolo que
+   por azar precedió a más venenos), con el signo que toque; en una semilla el novato terminó con 1.805 mordidas de
+   veneno. Un código a medio formar **hace daño**: es información con el signo al azar.
+
+**Observación lateral, importante para N1 (sin voto):** INNATO reduce el veneno un 39 % pero el novato termina con
+**0 de 10 comidas conocidas** (frente a 9/10 solo). La señal de conducta "−" (rechazo) también se emite cuando el experto
+rechaza **comida por saciedad**, y el novato la devalúa. En el mundo A/B no se notó; con 20 patrones sí. **La conducta
+visible no es una señal pura de valor: mezcla valor y hambre.** Queda anotado para el diseño de N2b y para el registro
+de N1 (no cambia su veredicto: allí se midió veneno y retención, y ambos pasaron).
+
+**Decisión:** N2 tal como se diseñó **no emerge**. Se registra como refutación de esta forma de refuerzo ("por
+acuerdo") con este receptor ("actúa sólo cuando ya sabe"). Siguiente intento, preregistrado aparte (`PREREGISTRO_N2b.md`):
+(a) el símbolo entra en la **decisión** del receptor desde el primer día, como un sesgo proporcional al contraste
+(sin puerta), para que la conducta dependa del símbolo aunque sea poco; (b) el emisor se refuerza por la **ventaja**
+sobre su promedio por estado (refuerzo menos línea base), para que la corriente ciega al símbolo se cancele y sólo
+mueva `Pq` la parte que depende del símbolo. Si tampoco emerge, la conclusión honesta es que **con percepción directa
+el código no paga lo bastante**, y el mundo que lo haría pagar es el de la Etapa 6 (novatos sucesivos, transmisión en
+cadena).

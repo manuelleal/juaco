@@ -360,7 +360,15 @@ pequeño coste de confianza. Simbiosis en el tiempo, medida. **Etapa 5 N1 cerrad
 - Etapa 5: **N2** (significado emergente, juego de señalización) y **N3** (sentidos complementarios / XOR entre dos).
 - O7 (qué hacer sin objetivo); techo de capacidad; la puerta que consulte la lenta sólo con la rápida vacía (rama).
 
-## 11.5 Estado al cierre de la sesión (noche del 17 sep) y cómo retomar N2
+## 11.5 N2: refutado en el primer intento; N2b en marcha
+N2 tal como se diseñó **no emerge** (`N2_s1-20_20260917_181950`): el refuerzo por acuerdo es ciego al símbolo mientras la
+conducta del receptor no dependa del símbolo, y el receptor no actúa sobre el símbolo hasta tener significado. Con
+símbolos a medio formar el novato comió **más** veneno (375 frente a 318). Diagnóstico completo en el registro. N2b
+(`PREREGISTRO_N2b.md`, `corre_N2.py --variante b`): el símbolo entra en la decisión como sesgo proporcional al contraste
+desde el primer día, y el emisor se refuerza por la ventaja sobre su promedio por estado. Si N2b también cae: el código
+no paga con percepción directa; el mundo que lo haría pagar es el de la Etapa 6 (novatos sucesivos).
+
+## 11.5-viejo Estado al cierre de la sesión (noche del 17 sep) y cómo retomar N2 (superado por lo de arriba)
 - **Lo que está corriendo o acaba de terminar:** `experimentos/etapa5_comunicacion/corre_N2.py` (N2, significado
   emergente). Su preregistro es `PREREGISTRO_N2.md` (escrito antes; criterios E1–E5, K1–K2, predicciones y refutación).
   Salida en `datos/N2_s1-20_<fecha>.log/.json`. **Nada de N2 está registrado todavía en `REGISTRO_etapas_1_2.md`.**
