@@ -2703,3 +2703,13 @@ arquitectura), y **no se anticipó** al preregistrar (a diferencia de 4a', que s
 - **Decisión sobre la congelación: la toma dirección**, porque cambiar un criterio de congelación después de ver el
   resultado es exactamente lo que la regla 3 vigila, aunque aquí la razón sea estructural y esté a la vista. Se le
   presenta con 3' medido.
+
+**Diagnóstico 3' / 3'' medido (semillas 81–100, `datos/control3_v13_20260917_164836.json`):**
+- **3' [vía rápida sola, sin plasticidad]: pasan E2L 0/20** (`W_A` −1.12, `W_B` −1.12: indistinguibles, como en v11).
+  **SOSTENIDA.** La vía rápida sigue necesitando la división para separar; el control heredado se cumple.
+- **3'' [vía lenta activa, sin plasticidad]: pasan 20/20** (`lenta_A` +1.00, `lenta_B` −2.97). **SOSTENIDA.** La lenta
+  separa por píxeles, que es exactamente lo que se le pide.
+
+**Lectura:** el criterio 3 original mezclaba dos preguntas que en v13 tienen respuestas distintas. Separadas, las dos
+salen como deben. **La congelación queda en manos de dirección**: aceptar 3'+3'' como criterio 3 del examen **v3'**
+(y con ello v13 pasa 8/8 con todo lo demás ya medido en 81–100), o mantener la letra y dejar v13 como candidato.
