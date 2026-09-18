@@ -4211,3 +4211,14 @@ patrón de PATC solo), celdas ≤ 45, 3' 0/20, 3'' 20/20, 4a–4d OK, identidad 
 dispersa + puerta por evidencia del código** (copia `organismo/organismo_v14_candidato_conjunto.py` = `organismo_v14c_on.py` en la
 rama `v14-candidato`). La sorpresa del mundo en la boca (dosis 5) sigue como candidato aparte: su composición con los otros dos
 no se ha medido (paquete en preparación). La decisión es del director.
+
+
+### Propuesta conjunta v14 (v13 + hija dispersa + puerta por código), protección extra antes de congelar (enmienda 2; 18 sep 04:22, con el director de vuelta: "prueba los dos"): **segunda serie limpia del examen 8/8 en 141–160 y generalización 1.000 / 0.95 en 121–140**
+
+`bateria_v14c.py 20 --desde 141 --log` → `examen_v14c_20260918_041824` (db6344e0f7982574): E1–E2L 20/20 × 6, celdas ≤ 45, 3' 0/20, 3''
+20/20, 4a–4d OK, identidad 5 OK → **8/8**. `bateria_generaliza_v14c.py organismo_v14c_on 20 --desde 121 --log` →
+`regresion_generaliza_organismo_v14c_on_20260918_042128` (b16214bb8cd00b56): K 20/20; G1 px0 **1.000** (azar 0.500; 20/20); G2 **0.950**
+(azar 0.464; 20/20). **Estado de la propuesta conjunta:** examen 7/8 (101–120, la semilla conocida de PATC), **8/8 (121–140), 8/8
+(141–160)**; generalización 1.000 / 0.94 (101–120) y 1.000 / 0.95 (121–140); capacidad `N*` 51 (41–60); composición 3T-k 0.237 con 53
+celdas (61–80); identidad 30/30. Cumple la regla de tronco (examen + baterías + réplica). Falta: gemelo compilado (en construcción),
+congelación (manifiesto, tag), regresión de la regla 1. **La decisión de congelar sigue siendo del director.**

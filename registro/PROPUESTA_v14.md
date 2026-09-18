@@ -75,5 +75,7 @@ Con hija dispersa + puerta por código ON a la vez: examen 7/8 (E2 19/20 en 101�
 generalización G1 1.000 / G2 0.94 (mejor que cualquiera solo); capacidad `N*` 51 (v13 35); composición 3T-k lift 0.237 (hija sola
 0.251; v13 0.137) con 53 celdas. Enmienda 1: réplica del examen compuesto en 121–140 → **8/8 (04:03; E2 20/20). PROPUESTA CONJUNTA: v14 = v13 + hija dispersa +
 puerta por evidencia del código** (`organismo/organismo_v14_candidato_conjunto.py` en la rama `v14-candidato`; C3 registrado tal cual:
-0.237 con 53 celdas, la puerta resta 0.014 a la hija sola). La sorpresa en la boca a dosis 5 va aparte hasta medir la composición
-de los tres (paquete en preparación). Datos `composicion_v14_20260918_033225`, `examen_v14c_20260918_035946`.
+0.237 con 53 celdas, la puerta resta 0.014 a la hija sola). **Protección extra (04:22): examen 8/8 también en 141–160 y generalización 1.000 / 0.95 en 121–140 → dos series 8/8 propias y dos
+de generalización.** La sorpresa en la boca a dosis 5 va aparte hasta medir la composición de los tres (paquete en preparación).
+Datos `composicion_v14_20260918_033225`, `examen_v14c_20260918_035946`, `examen_v14c_20260918_041824`,
+`regresion_generaliza_organismo_v14c_on_20260918_042128`.
