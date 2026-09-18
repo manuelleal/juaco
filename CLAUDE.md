@@ -99,9 +99,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   familiaridad). **14 archivos congelados** (`manifiesto.py --check`).
 - **Etapas del brief:** 1 ✅ · 2 ✅ · **3 ✅ (v13: 0.80–0.90 en patrones nunca vistos)** · **4 ✅ (v11 → v13: retención
   20/20)** · **5 N1 ✅** (transmisión experto → novato por conducta visible; réplica en 21–40) · **5 N2 ❌ REFUTADO en
-  el primer intento** (`N2_s1-20_20260917_181950`: sin gradiente para el emisor y receptor que sólo actúa cuando ya
-  sabe; CONV peor que N0) · **N2b preregistrado** (`PREREGISTRO_N2b.md`: símbolo como sesgo en la decisión + refuerzo
-  menos línea base) · N3, 6, 7, 8 abiertas. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
+  el primer intento y LÍNEA CERRADA por hoy tras cinco diseños (N2–N2e, 500 corridas)**: emerge una **convención**
+  de dos símbolos, arbitraria (13/20) y que muere al barajar, pero **sin magnitud útil** (contraste ±0.4) por la
+  asimetría del mundo (la comida desaparece al comerla; el veneno se queda y se señala 36.000 veces) y de la
+  recompensa (−3/+1). Reabrir sólo cambiando el mundo. Datos `N2*_s1-20_20260917_*`. · **Plan vigente: el del debate**
+  (`registro/investigacion/DEBATE_y_plan_5a10.md`): (1) 3T con k=2,3 → (2) tabla posición→código → (3) mundo social
+  con control de saciedad (N3) → (4) mundo largo con cambio, 4 brazos (niveles 8+9). · N3, 6, 7, 8 abiertas. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
   mundo de 20 patrones deja 0/10 comidas conocidas).
 - **Hallazgos del día, en orden:** (a) **JUACO-EVO**: 4 mutaciones LLM contra 24 ciegas; el LLM halló en **una**
   generación un órgano que yo no diseñé (P1 sostenida; `experimentos/evo/LINAJE.md`). (b) v11 cerró la Etapa 4 y

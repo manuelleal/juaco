@@ -3010,3 +3010,36 @@ intentos podía verlo sin instrumentar.
 el significado también se aprende **por alineación con lo que el receptor ya conoce** (al oír `s` sobre un patrón
 familiar a su vía rápida, `M[s]` se acerca al valor propio de ese patrón). Miles de oídas en vez de 8 mordidas. Si N2e
 no sube E2, la línea se cierra con "emerge en signo, no en magnitud, por asimetría del muestreo del mundo".
+
+
+### N2e — alineación con lo conocido: **también cae. LÍNEA N2 CERRADA POR HOY: emerge en signo, no en magnitud**
+
+Preregistro `PREREGISTRO_N2e.md`; datos `datos/N2e_s1-20_20260917_185950.json` (`c03f3603c83eaeea`). E1 **7/20**
+(consistencia 0.97; distintos 13/20), E2 2/20 (contraste **−0.11 / +0.05**; M crudo −3.15 / −2.96), E3 7/20 ✅, E4 CONV
+320 ≈ N0 316 (pareado 13/20), E5 ✅. Alineaciones: miles; no sirvieron.
+
+**Por qué (humo instrumentado de la semilla 4 y los cinco intentos juntos):** la alineación multiplica las muestras,
+pero cada "positivo" equivocado sobre un veneno se alinea a **−3** y cada acierto sobre comida a **+1**; con una
+convención imperfecta (0.70–0.97) bastan pocos errores para hundir `M[positivo]`. Es la misma asimetría de N2d:
+**recompensa asimétrica (−3 / +1) y muestreo asimétrico del mundo (la comida desaparece al comerla; el veneno se queda
+y se vuelve a señalar 36.000 veces)**. Con eso, ningún receptor razonable acumula significado positivo.
+
+**Balance de la línea N2 (cinco diseños preregistrados, 500 corridas):**
+
+| diseño | convención (E1) | arbitrariedad (E3) | contraste (E2) | beneficio (E4) | barajar destruye (E5) |
+|---|---|---|---|---|---|
+| N2 (refuerzo por acuerdo, puerta de valor) | 1/20 | no | 0.00 | peor | vacío |
+| N2b (+ sesgo en la decisión, ventaja) | **13/20** | **10/20** | ±0.42 | 0.77 × N0 | **real** |
+| N2c (+ estado = valor, experto 400k) | 11/20 | 13/20 | ±0.35 | 0.92 | real |
+| N2d (+ habla sólo de lo consolidado) | 13/20 | 12/20 | ±0.34 | 0.79, **pareado 15/20** | real |
+| N2e (+ alineación) | 7/20 | 7/20 | ±0.11 | 1.01 | real |
+
+**Lo que sí quedó demostrado (y se puede escribir):** con refuerzo por ventaja y el símbolo en la decisión, **entre dos
+organismos v13 emerge una convención de dos símbolos que ninguno tenía, arbitraria por semilla (el símbolo de rechazo
+es el 0 en ~la mitad de las semillas) y que muere al barajar** (E1 ≈ 13/20, E3, E5). Lo que **no**: que el receptor le
+asigne una magnitud útil (E2) ni que el beneficio llegue al 30 % (E4; llegó al 21–23 %, pareado 15/20 en N2d).
+**Vocabulario permitido:** *emerge una convención; transmite poco.* No "significado" a secas, no "lenguaje".
+
+**Lo que hay que cambiar para reabrirla (no hoy):** el **mundo**, no el receptor: equilibrar el muestreo (comida que
+no desaparezca al morderla, o veneno que sí) y/o la escala (+1/−3 → simétrica en la señal social). El debate de niveles
+5–10 la saca del camino crítico y propone volver a ella sólo si la composición social (N3) la necesita.
