@@ -1,0 +1,116 @@
+[
+ {
+  "brazo": "TRONCO",
+  "regla": "xor01",
+  "seed": 1,
+  "acc_lenta": 0.375,
+  "acc": 0.375,
+  "n_pre": 295,
+  "abiertos": [],
+  "config": {
+   "eta": 0.015,
+   "clip": 3.0,
+   "lam": 0.0,
+   "sel": null
+  },
+  "seg": 4.2
+ },
+ {
+  "brazo": "TRONCO",
+  "regla": "xor01",
+  "seed": 2,
+  "acc_lenta": 0.1875,
+  "acc": 0.1875,
+  "n_pre": 299,
+  "abiertos": [],
+  "config": {
+   "eta": 0.015,
+   "clip": 3.0,
+   "lam": 0.0,
+   "sel": null
+  },
+  "seg": 4.6
+ },
+ {
+  "brazo": "TRONCO",
+  "regla": "xor01",
+  "seed": 3,
+  "acc_lenta": 0.4375,
+  "acc": 0.375,
+  "n_pre": 323,
+  "abiertos": [],
+  "config": {
+   "eta": 0.015,
+   "clip": 3.0,
+   "lam": 0.0,
+   "sel": null
+  },
+  "seg": 4.7
+ },
+ {
+  "brazo": "GANADORA",
+  "regla": "xor01",
+  "seed": 1,
+  "acc_lenta": 0.625,
+  "acc": 0.5625,
+  "n_pre": 259,
+  "abiertos": [
+   6
+  ],
+  "config": {
+   "eta": 0.15,
+   "clip": 10.0,
+   "lam": 0.0,
+   "sel": "wta",
+   "theta": 0.3,
+   "rho": 0.02,
+   "cupo": 1,
+   "estad": "cond"
+  },
+  "seg": 4.3
+ },
+ {
+  "brazo": "GANADORA",
+  "regla": "xor01",
+  "seed": 2,
+  "acc_lenta": 0.4375,
+  "acc": 0.375,
+  "n_pre": 234,
+  "abiertos": [
+   6
+  ],
+  "config": {
+   "eta": 0.15,
+   "clip": 10.0,
+   "lam": 0.0,
+   "sel": "wta",
+   "theta": 0.3,
+   "rho": 0.02,
+   "cupo": 1,
+   "estad": "cond"
+  },
+  "seg": 5.4
+ },
+ {
+  "brazo": "GANADORA",
+  "regla": "xor01",
+  "seed": 3,
+  "acc_lenta": 0.5,
+  "acc": 0.5,
+  "n_pre": 194,
+  "abiertos": [
+   6
+  ],
+  "config": {
+   "eta": 0.15,
+   "clip": 10.0,
+   "lam": 0.0,
+   "sel": "wta",
+   "theta": 0.3,
+   "rho": 0.02,
+   "cupo": 1,
+   "estad": "cond"
+  },
+  "seg": 4.5
+ }
+]

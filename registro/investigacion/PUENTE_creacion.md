@@ -226,7 +226,85 @@ mecanismo**: la variante siguiente NO es afinar `θ` ni `ρ` (probé además el 
 frente del creador C (aprender sin morder) — porque A2.3 demuestra que **con el rasgo abierto y ejemplos de las
 cuatro clases el ajuste online ya llega a la solución exacta**.
 
-### A8. Archivos (sólo míos, nada original tocado, sin commits)
+### A9. CONTROL POSITIVO con gradiente exacto y retropropagación: **el cuello es el mundo, no la regla**
+
+Encargo del coordinador (frente único, organismo CON backprop de laboratorio). Método: `organismo_v13q5.py`
+(`fae9c32b146fdbb4`, por anclas desde `organismo_v13q4` `3cc732dd2b2519cd`) con perilla `lab=True` que **sólo graba**
+la secuencia ordenada `(t, patrón, R, residuo)` de cada actualización de la vía lenta. Como esa secuencia determina
+por completo la actualización, **fuera** del organismo se repite EL MISMO flujo — mismos encuentros, mismo muestreo
+real, mismos rasgos — con cualquier lector. **Identidad con `lab=False` y con `lab=True`: 16/16.**
+**Auto-comprobación del replay: la regla delta replicada reproduce el `acc_lenta` del organismo en 20/20 semillas
+(0 diferencias).** El banco no es una analogía: es el mismo cálculo.
+
+xor01, lectura cuadrática + constante, T = 100 000, **20 semillas**, mediana de eventos pre-sonda **299** [261, 459]:
+
+| lector sobre EL MISMO flujo | todas (20) | sólo las 14 con las 4 clases mordidas |
+|---|---|---|
+| **DELTA** (la regla local del tronco) | **0.438** [0.19, 0.62] | 0.438 [0.25, 0.62] |
+| DELTA sin tope (`clip_s` = ∞) | 0.438 [0.19, 0.62] | 0.438 [0.25, 0.62] |
+| **LSQ — mínimos cuadrados EXACTOS** (cota superior de todo lector lineal sobre esos rasgos) | **0.562** [0.25, 0.75] | 0.562 [0.25, 0.75] |
+| RIDGE (1e−3) | 0.562 [0.25, 0.75] | 0.562 [0.25, 0.75] |
+| **MLP con retropropagación** (6 px → 8 ocultas tanh → 1, lote completo; **no** limitado a mis rasgos) | **0.531** [0.13, 0.88] | 0.312 [0.13, 0.88] |
+
+**Mi predicción, escrita antes de mirar, se cumple: ni el gradiente exacto ni la retropropagación cruzan 0.75.**
+- Lo que compra un optimizador perfecto sobre la regla local: **+0.124** (0.438 → 0.562). Lo que falta hasta 1.000:
+  **0.44, y es del mundo**.
+- El backprop **no gana** al ajuste exacto lineal (0.531 < 0.562): con estos datos, más capacidad no ayuda.
+- 6/20 semillas no muerden alguna clase XOR; pero incluso en las 14 que sí, LSQ se queda en 0.562.
+
+### A9-bis. Con los rasgos del ORÁCULO el gradiente exacto **SÍ cruza** → **el cuello es la REGLA**, y aquí está por qué
+
+El coordinador puso el criterio: *si el gradiente exacto cruza 0.75, el cuello es la regla y mi banco tiene que
+explicar por qué la delta no llega*. **Cruza.** Mismo flujo real cosechado, lectura `oraculo01` + constante, 20
+semillas (14 con las cuatro clases mordidas), T = 100 000, mediana de 287 eventos pre-sonda:
+
+| lector sobre EL MISMO flujo | todas (20) | las 14 con las 4 clases mordidas |
+|---|---|---|
+| DELTA (la regla del tronco, `eta_s=0.015`, `clip_s=3`) | 0.625 | 0.656 [0.31, 0.88] |
+| DELTA sin tope | 0.625 | 0.656 |
+| **LSQ — gradiente exacto** | **1.000** [0.5, 1.0] | **1.000 [1.0, 1.0]** |
+| MLP con retropropagación (6 px crudos) | 0.531 | 0.344 |
+
+**ERRATA MÍA, la segunda y más grande: mi "techo de muestreo 0.75" era demasiado fuerte.** Lo medí con un perfil de
+muestreo **sintético** (las proporciones de una semilla del Agente C, con la clase `01` en cero exacto), no con los
+flujos reales. Con los flujos **reales cosechados**, **14 de 20 semillas muerden las cuatro clases** y ahí el
+gradiente exacto da **1.000 con mínimo 1.000**. El techo 0.75 existe, pero **sólo en las 6/20 degeneradas**.
+
+**Por qué la delta no llega (barrido sobre el mismo flujo, no sobre un modelo):**
+
+| `eta_s` \ `clip_s` | 3 (el del tronco) | 10 | ∞ |
+|---|---|---|---|
+| **0.015 (el del tronco)** | **0.656** | 0.656 | 0.656 |
+| 0.05 | 0.719 | 0.719 | 0.719 |
+| 0.15 | 0.750 | **1.000** | **1.000** |
+| 0.5 | 0.750 | **1.000** | **1.000** |
+| 1.0 | 0.500 | 0.500 | 0.500 (se desestabiliza) |
+
+**Son DOS números, y hacen falta los dos.** La solución exacta es `y = −3 + 4·P0 + 4·P1 − 8·P0·P1`: pide `|w| = 8`.
+Con `clip_s = 3` no cabe (techo 0.750 aunque η sea grande). Con `eta_s = 0.015` no da tiempo: cada actualización
+mueve `|Δw| ≈ η·|δ| ≈ 0.06`, y llegar a 8 pide del orden de 130 actualizaciones **alineadas** que el muestreo
+desalineado no da en 290. **Con `eta_s = 0.15` y `clip_s = 10` la misma regla local, sin un rasgo nuevo y sin
+gradiente, llega a 1.000.**
+
+**Exposiciones hasta criterio (≥0.75), mismo flujo, semillas con las 4 clases:** tronco (`0.015`/`3`) **nunca (>600)**
+· `0.15`/`10` **n\* = 150** · `0.5`/`∞` **n\* = 60**. Y el gradiente exacto: **n\* = 10, y 1.000 con 20**.
+
+### A10. EXPOSICIONES HASTA CRITERIO con la lectura CUADRÁTICA: **ahí repetir no sirve, y eso también es un número**
+
+Mismo flujo, cortado a los primeros `n` encuentros (mediana de 20 semillas):
+
+| lector | n=10 | 20 | 40 | 60 | 100 | 150 | 200 | 300 | 400 | 600 | n\* (≥0.65) | n\* (≥0.75) |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| DELTA | 0.500 | 0.500 | 0.500 | 0.500 | 0.406 | 0.375 | 0.438 | 0.438 | 0.438 | 0.438 | **>600** | **>600** |
+| LSQ | 0.469 | 0.562 | 0.562 | 0.562 | 0.562 | 0.562 | 0.562 | 0.562 | 0.562 | 0.562 | **>600** | **>600** |
+| MLP | 0.344 | 0.438 | 0.406 | 0.469 | 0.500 | 0.438 | 0.469 | 0.531 | 0.531 | 0.531 | **>600** | **>600** |
+
+**LSQ satura a los ~20 encuentros y no se mueve hasta los 600.** Es decir: *la repetición no compra nada en xor01*.
+Para el director, dicho al derecho: **el problema no es que al organismo le falten pasadas; es que las pasadas que
+tiene no contienen la información.** (Y la delta incluso empeora entre n = 60 y n = 150 — se asienta en la solución
+que memoriza lo visto.)
+
+### A11. Archivos (sólo míos, nada original tocado, sin commits)
 `experimentos/creacion_A/`: `identificabilidad_xor.py` · `sesgo_grado_xor.py` · `banco_sesgo.py` ·
 `regla_puerta_rasgo.py` · `regla_wta_conjuntiva.py` · `dinamica_oraculo.py` ·
 `dos_canales_es_valor_mas_conflicto.py` · `construye_largo_A.py` → `mundo_largo_A.py` (sha origen
@@ -236,7 +314,14 @@ cuatro clases el ajuste online ya llega a la solución exacta**.
 **`corre_vector_unico.py`** (`ee25f9ce9c3193b6`) · **`PREREGISTRO_vector_unico.md`** (+ sus `.json`).
 Los originales NO se tocaron, sólo se **importan** (`organismo_v13q` `0b59eb03858df3a8`, `organismo_v13q3`
 `aaebe073308a40c2`, `mundo_largo` `9f74ff6b5941e5a5`, `corre_mundo_largo`, `bateria_generaliza`).
-Identidades: `mundo_largo_A` **9/9** · `organismo_v13q4` **16/16** · instrumento de A-3 **2/2** en el humo.
+Frente único (18-sep): `construye_v13q5.py` (`e1eb48547b4f8131`) → **`organismo_v13q5.py`** (`fae9c32b146fdbb4`,
+perilla `lab`, sólo graba) · `cosecha_lab.py` (`abf7e51e757ec6a8`) → `lab_eventos_{cuadratica,oraculo01}_xor01.json`
+(20 semillas cada uno) · **`banco_lab.py`** (`d043870f88f5b9c8`, control positivo LSQ/RIDGE/MLP + exposiciones) ·
+**`meta_regla.py`** (`14494e58ef245602`, 888 configuraciones, búsqueda 1–10 / retenidas 11–20) ·
+`mini_prueba_A_ganadora.py` (+ `meta_regla_*.json`, `mini_ganadora.json`).
+Identidades: `mundo_largo_A` **9/9** · `organismo_v13q4` **16/16** · `organismo_v13q5` **16/16** (con `lab` apagada
+y encendida) · instrumento de A-3 **2/2** en el humo · **replay del banco ≡ organismo en 20/20 semillas, 0
+diferencias** (auto-comprobación del control positivo).
 Corridas de organismo: 25 de identidad (T ≤ 60 000) + 3 de calibración + **7 tandas de 3 corridas de T = 200 000**
 + 6 del humo de A-3 (T = 60 000). Nada de `Pool` por mi parte. Sin commits.
 
@@ -710,6 +795,62 @@ automodelo fue el instrumento que encontró dónde estaba la boca.* Y el resulta
 modelar en v13: 13–21 % del hueco del oráculo, banda derivada) **se sostiene solo como medida**, gane o pierda el
 mecanismo.
 
+### C8. Aprender sin morder por codificación predictiva (encargo del 18-sep, 05:10): REFUTADO como estaba escrito
+
+**Instrumento.** `experimentos/creacion_C/construye_codpred.py` → `organismo_v14pc.py` (sha `edfcb77a9ca91682`), **por
+anclas** desde `organismo/organismo_v14g.py` (`1f1318480cd34cde`, el mundo de regla sobre el tronco v14; se lee, no se
+toca). Identidades (`identidad_codpred.py`, px0 / xor01 / azar / AB × 3 semillas, T = 20 000): **K1 12/12** (todo
+apagado ≡ v14g) · **K2 12/12** (el predictor de ΔE encendido **sólo mide**) · **K3 12/12** (la sonda de exposiciones
+**sólo lee**).
+
+**Mecanismo probado.** El predictor de ΔE (el del bloque 6, entrenado sólo al morder sobre `E_VAL` nominal) pasa a ser
+el **maestro de la vía lenta en CADA ENCUENTRO**, muerda o no:
+`obj_R(P) = (R/E)·ΔE_pred(P)` con las constantes del propio mundo (+0.8→+1.0, −0.4→−3.0: **sin parámetro libre**),
+`eps = obj_R − (Wps−Wns)@P`, `Wps/Wns += eta_c·eps·CRÉDITO`, con el mismo drenaje y tope de la vía lenta.
+`eta_c = 0.015` = `eta_s`, no buscado; guarda `n_pred_min = 20` bocados antes de consolidar.
+**Cuatro canales de retorno:** `directo` (CRÉDITO = P, el gradiente exacto en una capa) · `transp` (KWᵀ·k(P), lo que
+haría backprop) · **`fa`** (B·k(P), B fija y aleatoria 6×90, RNG propio: *feedback alignment*) · `fa_shuf` (control:
+B·k(P_anterior), misma magnitud, emparejamiento código↔crédito equivocado).
+
+**Mini-prueba** (un proceso, **24 corridas de 100 000**, fase 2 en 50 000, sonda cada 2 000, criterio 0.90, semillas
+1–3; humo de la semilla 1 declarado **antes** de escribir las predicciones):
+
+| px0 | exposiciones (encuentros) | bocados | `acc_lenta_f2` |
+|---|---|---|---|
+| SOLO-BOCADOS (v14) | 2 298 / 995 / 555 — **mediana 995** | 157 / 104 / 88 — **104** | 1.0 / 1.0 / 1.0 |
+| CONSOL-**directo** | 1 703 / 3 507 / 226 — **1 703** | 165 / 230 / 61 — **165** | 1.0 / 1.0 / 1.0 |
+| CONSOL-transp | 2 276 / 443 / 631 — **631** | 193 / 82 / 101 | 0.8 / 1.0 / 1.0 |
+| CONSOL-**fa** | **censurada / 1 878 / censurada** | — | 0.4 / 0.7 / 0.75 — **0.70** |
+| CONSOL-fa_shuf (control) | 399 / censurada / 1 221 | — | 0.5 / 0.7 / 0.75 — **0.70** |
+
+- **MP-K1 (exposiciones ≤ 0.80 ×) REFUTADA:** mediana **1.71 ×**, mejor en 2/3 y peor en 1/3, con una varianza enorme
+  (226 a 3 507). **MP-K2 (bocados ≤ 0.80 ×) REFUTADA, y lo había predicho** (mediana 1.59 ×).
+- **MP-K3 (el canal aleatorio no compra) SOSTENIDA, y más fuerte de lo que pedía:** `fa` es **peor que la línea base en
+  3/3** (censurada en 2/3: nunca llega al criterio), **no se distingue de su control barajado** (mejor que `fa_shuf`
+  en 1/3) y **daña** la regla (`acc_lenta_f2` 0.70 contra 1.00). El crédito transpuesto sí funciona (mediana 631, sin
+  daño): **lo que falla es el retorno ALEATORIO, no el retorno.**
+- **MP-K4 (xor01 no se mueve) REFUTADA, y es el único cabo abierto:** base 0.25 → `directo` 0.375 → **`fa` 0.5625**
+  (0.75 / 0.5625 / 0.3125). Lejos del 0.75 que fija el criterio de parada, y con n = 3.
+- **MP-K5 (no daña) parcial:** `directo` no daña (1.0 en 3/3, igual que la base); los canales aleatorios sí (0.70).
+- **Corrección de mi propio análisis (ERR de lectura, mío):** comparaba las corridas **censuradas** (`None` = nunca
+  alcanza el criterio) **saltándolas** en vez de contarlas como peores. Corregido antes de escribir estas cifras; la
+  tabla ya lleva el recuento bueno.
+
+**Las dos razones, que son mecánicas y se pueden escribir sin más datos:**
+1. **En una lectura lineal de una capa, el crédito exacto ES la entrada `P`.** Un canal de retorno aleatorio no tiene
+   nada que comprar ahí, y encima destruye la estructura por píxeles que es la razón de ser de la vía lenta: por eso
+   px0 cae de 1.00 a 0.70 y se vuelve indistinguible de su propio control barajado. **Feedback alignment sólo tiene
+   sitio donde hay una capa oculta que entrenar — aquí eso son las celdas `KW`, no la vía lenta.**
+2. **La consolidación redistribuye lo que las mordidas ya enseñaron; no puede crear información.** Por eso no puede
+   bajar los bocados. Y en px0 casi no hay hueco: la vía lenta ya llega a 1.00 con ≈ 100 bocados.
+
+> **Lo que esto le dice al frente SIN/CON del director, en una línea:** *el cuello de "aprender sin morder" no está en
+> la regla de la vía lenta ni en el canal de retorno; está en que la única fuente de información del organismo son sus
+> propias mordidas.* El sitio donde un retorno asimétrico tendría algo que hacer es **`KW` (la capa oculta)** — que es
+> justo lo que la rama 3K refutó en su versión supervisada, y por eso es una pregunta distinta y todavía abierta. Y la
+> única fuente de información que **no** se paga con mordidas es **otro organismo**: el encargo (2), N2 por predicción.
+
+
 ## Preguntas para el explorador
 
 **B-1 (creador B).** ¿Hay literatura sobre una neurona nueva que nace con un campo receptivo **más disperso que el
@@ -841,9 +982,30 @@ Explorador: 3 respuestas (C), 6 fuentes web verificadas (Schmidhuber 1991 IEEE C
 
 Explorador: 8 puntos, 12 fuentes web verificadas (Whittington, Lillicrap, Nøkland NeurIPS, Lee arxiv, Menzel/Aso Drosophila, Kanerva/Kleyko survey, Najarro/Confavreux NeurIPS, VC theory, Kleyko arxiv 2111.06077, torchhd JMLR, github MIT).
 
+**C-Q4 (Creador C).** Codificación predictiva y retorno asimétrico, **en capas de una sola lectura lineal**:
+(a) ¿hay algún resultado que diga qué gana un canal de retorno **fijo y aleatorio** (Lillicrap et al. 2016) cuando el
+crédito exacto es la propia entrada, es decir **sin capa oculta**? Mi medida dice que no gana nada y además daña
+(px0 1.00 → 0.70, indistinguible de su control barajado); quiero saber si eso está escrito o si se me escapa un caso.
+(b) Whittington & Bogacz 2017 y Millidge et al. 2020 muestran que la codificación predictiva **aproxima** backprop:
+¿bajo qué condiciones exactas (número de iteraciones de relajación, tasa, precisión de los nodos de error) y qué pasa
+cuando se hace **una sola pasada por evento**, sin relajar, que es lo único que un organismo en línea puede hacer?
+(c) ¿Alguien ha medido **exposiciones hasta criterio** (no acierto final) comparando regla local contra backprop en el
+mismo muestreo? Es la medida que manda en este proyecto desde el 18-sep y no encuentro la comparación hecha así.
+(d) Aprendizaje en **un ensayo** en insectos (cuerpo fungiforme): ¿cuál es el mecanismo propuesto — plasticidad
+dependiente de meseta tipo BTSP, dopamina que abre una ventana, o codificación conjuntiva — y qué número de
+exposiciones se reporta?
+
 ## Propuestas para el coordinador
 
 ### A-1 (creador A) — **XOR: la receta completa son TRES piezas, y cada una está medida por separado**
+
+> **CORREGIDA el 18-sep por A-5 (control positivo con el flujo real). Léase junto a A-4 y A-5.** Mi pieza (i)
+> ("techo de muestreo ≈ 0.75, inamovible") estaba medida con un perfil de muestreo **sintético**; con los flujos
+> **reales** cosechados, 14 de 20 semillas muerden las cuatro clases y ahí el gradiente exacto sobre los rasgos
+> del oráculo da **1.000 [1.0, 1.0]**. El techo 0.75 vale sólo en las 6/20 degeneradas. La receta corregida es:
+> **(ii) abrir el rasgo conjuntivo + (iii') `eta_s` y `clip_s` que dejen recorrer `|w| = 8`**; la pieza (i) pasa
+> de "la que manda" a "la que limita 6 semillas de cada 20". El preregistro `PREREGISTRO_xor_3f.md` hay que
+> reescribirlo con esto antes de correrlo: su P1 y su cláusula del 0.75 ya no reflejan lo medido.
 
 - **Hipótesis.** `acc_lenta` en xor01 cruza 0.75 **si y sólo si** se quitan a la vez los tres techos que he medido, y
   ninguno de los tres solo alcanza: **(i) techo de MUESTREO ≈ 0.75** (medido: si una clase XOR no recibe
@@ -929,6 +1091,57 @@ todo el efecto. Por qué β tenía que ser grande: `m` tiene **semivida `ln2/lam
   explorador (A-Q2) confirma que la cascada de Fusi pide **≥ 2 constantes de tiempo propias** y que β = 50 es una
   prótesis; también confirma que **nadie ha publicado el coste en adquisición ni en recuperación tras cambio de regla**
   — o sea que esta mini-prueba mide un hueco abierto de la literatura, no sólo del proyecto.
+
+### A-4 (creador A) — **DOS NÚMEROS DE LA VÍA LENTA** (`eta_s`, `clip_s`) le cuestan al organismo la regla XOR
+
+- **Hipótesis.** Con los rasgos dados (oráculo), el organismo no aprende XOR **por dos parámetros, no por la regla**:
+  `clip_s = 3` no deja caber la solución (`|w| = 8`) y `eta_s = 0.015` no da tiempo a recorrerla en ~290 mordidas.
+  Con `eta_s = 0.15` y `clip_s = 10` la **misma** regla local alcanza el gradiente exacto.
+- **Mecanismo mínimo.** Ninguno nuevo: **dos valores de parámetro**. Memoria extra: cero. Código nuevo: cero.
+- **Instrumento.** `organismo_v13q5.py` (`fae9c32b146fdbb4`, por anclas desde `organismo_v13q4` `3cc732dd2b2519cd`
+  ← `organismo_v13q3` `aaebe073308a40c2`; **identidad 16/16 con `lab=False` y con `lab=True`**), más el banco
+  `banco_lab.py` que repite el flujo real cosechado por `cosecha_lab.py`.
+- **Predicción numérica** (20 semillas nuevas, `lectura='oraculo01'`, constante, delta con signo, T = 100 000):
+  `acc_lenta` mediana **≥ 0.90** con (`eta_s=0.15`, `clip_s=10`) contra **0.625** del tronco, y **> tronco en ≥ 15/20**;
+  en el subconjunto con las 4 clases mordidas, **1.000**. Exposiciones hasta ≥0.75: **n\* ≈ 150** contra **>600**.
+- **Control que puede fallar (y es el que me preocupa): `eta_s = 10×` toca el TRONCO.** La vía lenta con η grande
+  puede romper la generalización lineal ya cerrada. **Obligatorio en el mismo bloque:** `bateria_generaliza`
+  (G1 ≥ 0.80, G2 ≥ 0.85) y `bateria_v13/v14` con el η nuevo; si G1/G2 caen, la propuesta se queda **como perilla de
+  experimento, no del tronco**. Segundo control: `eta_s = 1.0` debe **empeorar** (medido: 0.500) — si no empeora, el
+  barrido no está midiendo lo que creo. Tercero: `azar` en [0.35, 0.65].
+- **Mini-prueba.** Barrido sobre el flujo real cosechado de 20 semillas (tabla de §A9-bis): (0.015, 3) → 0.656 ·
+  (0.15, 10) → **1.000** · (0.5, ∞) → 1.000 · (1.0, ·) → 0.500. `LSQ` exacto = 1.000 [1.0, 1.0]. Replay verificado
+  contra el organismo: **0 diferencias en 20/20**.
+
+### A-5 (creador A) — **CONTROL POSITIVO: qué compra un optimizador perfecto, y dónde** (resultado, no propuesta)
+
+- **Hipótesis (del coordinador).** Si el gradiente exacto no cruza 0.75 con el muestreo real, el cuello es el mundo;
+  si cruza, es la regla.
+- **Resultado, con los dos lectores y las dos lecturas, sobre EL MISMO flujo real (20 semillas):**
+
+| lectura | DELTA (regla local) | LSQ (gradiente exacto) | MLP (retropropagación) | quién manda |
+|---|---|---|---|---|
+| **cuadrática** (21 + 1 rasgos) | 0.438 | **0.562** | 0.531 | **la SELECCIÓN de rasgos**: ni el óptimo pasa de 0.562 |
+| **oráculo** {P0,P1,P0·P1,1} | 0.625 | **1.000** | 0.531 | **la REGLA**: el óptimo llega, la delta no (→ A-4) |
+
+- **Tres lecturas que me parecen las que valen.** (a) **La retropropagación no gana**: con ~290 encuentros, el MLP
+  sobre píxeles crudos (0.531) queda por debajo del ajuste lineal exacto sobre los rasgos correctos (1.000) y del
+  lineal exacto sobre los rasgos malos (0.562). *Más capacidad no compra nada aquí; los rasgos correctos lo compran
+  todo.* (b) El organismo CON backprop, en este mundo y a esta escala, **no es mejor que el organismo SIN backprop
+  con dos parámetros bien puestos**. (c) Lo que le falta al organismo no es un optimizador: es **abrir el rasgo**
+  (A-1 ii, ya construido: abre `P0·P1` en **3/3** semillas con la configuración de A-4) **y luego poder moverlo**.
+- **Meta-aprendizaje (encargo 2), honesto sobre el sobreajuste de la búsqueda.** Familia restringida a perillas que
+  el instrumento ya tiene (implantar = pasar parámetros, sin gradiente en ejecución): 888 configuraciones, búsqueda
+  en semillas 1–10, **reporte en 11–20 retenidas**. Tronco 0.375 → **ganadora 0.625 en la búsqueda pero 0.531 en las
+  retenidas**: la ganancia se reduce a **1/4** al cambiar de semillas, y cae **justo sobre el techo del gradiente
+  exacto (0.562)**. La ganadora es `eta_s=0.15, clip_s=10, WTA(θ=0.3, ρ=0.02, cupo 1, cond)` — **los mismos dos
+  números que A-4, hallados por otra vía**. Implantada en el organismo (3 semillas, T = 100 000): tronco 0.375 →
+  **ganadora 0.500**, y **abre `P0·P1` en 3/3** (antes 1/3). *El meta-aprendizaje recupera el hueco del optimizador
+  y ni un punto más: el techo sigue siendo los datos.*
+- **Exposiciones (encargo 3).** Cuadrática: **nadie** llega a 0.65 ni con 600 encuentros; LSQ satura en 0.562 a los
+  **20** y no se mueve. Oráculo: LSQ **≥0.75 con 10 encuentros y 1.000 con 20**; la delta del tronco **nunca**;
+  la delta con (0.15, 10) **150**; con (0.5, ∞) **60**. *Donde la información está, bastan 10–20 exposiciones; donde
+  no está, 600 no alcanzan.* Repetir no es la palanca.
 
 ### A-3 (creador A) — **LA VÍA LENTA PUEDE SER UN SOLO VECTOR CON SIGNO** (simplificación con identidad demostrada)
 
@@ -1186,3 +1399,50 @@ sube). El otro régimen candidato —la retención de lo ausente— lo cerró el
 retiene **más**). **Retiro la propuesta.** Lo dejo escrito porque una propuesta retirada con la razón puesta vale más
 que una propuesta viva sin falsador, y porque documenta que el puente funcionó: dos creadores mataron mi tercer frente
 antes de que gastara un preregistro.
+
+### C-P5 — Codificación predictiva y retorno aleatorio para aprender sin morder: **REFUTADA en mini-prueba**, con el sitio donde sí cabe (Creador C)
+
+**Hipótesis (la que se probó).** Si el predictor de ΔE enseña a la vía lenta en **cada encuentro** y no sólo en cada
+bocado, el organismo alcanza el criterio de generalización con **menos exposiciones y menos mordidas**; y un canal de
+retorno **fijo y aleatorio** (feedback alignment) basta para llevar el error del espacio de las celdas al de los
+píxeles.
+
+**Mecanismo mínimo (regla local; memoria que exige).** `obj_R(P) = (R_VAL/E_VAL)·ΔE_pred(P)` con las constantes del
+mundo (sin parámetro libre); `eps = obj_R − (Wps−Wns)@P`; `Wps/Wns += eta_c·eps·CRÉDITO`, mismo drenaje y tope que la
+vía lenta. **Memoria: 6 + 90 escalares** (el predictor, que ya existía) **+ 6×90 fijos** si el canal es aleatorio.
+Guarda: no consolida hasta 20 bocados del predictor. `eta_c = eta_s = 0.015`, no buscado.
+
+**Dónde se prueba (instrumento).** `experimentos/creacion_C/organismo_v14pc.py` (sha `edfcb77a9ca91682`), por anclas
+desde `organismo/organismo_v14g.py` (`1f1318480cd34cde`); identidades **K1/K2/K3 = 12/12** cada una. Medida nueva:
+**exposiciones hasta criterio** (encuentros y bocados de entrenamiento hasta que el acierto de signo balanceado de la
+vía lenta sobre los patrones **nunca vistos** cruza 0.90 **en dos sondas seguidas**).
+
+**Predicción numérica.** MP-K1 exposiciones ≤ 0.80 × · MP-K2 bocados ≤ 0.80 × · MP-K3 el canal aleatorio no compra ·
+MP-K4 xor01 no se mueve · MP-K5 no daña px0.
+
+**Control que puede fallar.** `fa_shuf` (mismo canal, emparejamiento código↔crédito equivocado) · `transp` (los pesos
+transpuestos) · `directo` (el gradiente exacto) · y la línea base SOLO-BOCADOS, que es el tronco v14.
+
+**Resultado de la mini-prueba** (semillas 1–3, T = 100 000, 24 corridas, un proceso): **MP-K1 REFUTADA** (mediana
+1.71 ×, 2/3 mejor y 1/3 peor, rango 226–3 507) · **MP-K2 REFUTADA** (1.59 ×; predicha como fallo) · **MP-K3
+SOSTENIDA**: `fa` peor que la base en 3/3 (censurada en 2/3), indistinguible de `fa_shuf` (mejor en 1/3) y **daña**
+(`acc_lenta_f2` 0.70 contra 1.00), mientras `transp` funciona sin dañar (mediana 631) · **MP-K4 REFUTADA**: xor01
+sube de 0.25 a 0.375 (`directo`) y a **0.5625** (`fa`) · **MP-K5 parcial**: `directo` no daña, los aleatorios sí.
+
+**Lo que propongo que se haga con esto (la decisión es del coordinador).**
+1. **No preregistrar esta versión.** Está refutada y la razón es mecánica: en una lectura lineal de una capa el crédito
+   exacto es `P`, así que un retorno aleatorio no tiene nada que comprar y sí mucho que romper.
+2. **Donde sí cabe el retorno asimétrico es `KW` (la capa oculta)**, que hoy es azar congelado. Hipótesis siguiente,
+   **sin mini-prueba todavía**: `KW[c] += eta_k · eps · b_c · P` con `b_c` **fijo y aleatorio por celda** (feedback
+   alignment de una capa), midiendo **exposiciones hasta criterio**; controles: `b_c` = `(Wp−Wn)[c]` (la transpuesta,
+   lo que haría backprop), `b_c` barajado entre celdas, y `eta_k = 0` (el tronco). Es la única versión de la propuesta
+   del director que no es degenerada, y choca de frente con la rama **3K** (aprender `KW` supervisado no mejoró la
+   generalización) — por eso la pregunta es si el **currículo** (qué error y cuándo) cambia esa respuesta.
+3. **El cabo de xor01** (0.25 → 0.5625 con el canal aleatorio) es real pero pequeño y con n = 3: **encaja con el
+   diagnóstico registrado de identificabilidad**, porque el canal aleatorio convierte la lectura lenta en función de
+   **códigos** y no de píxeles, y es la lectura por píxeles la que *anti*-generaliza en XOR (0.25 < 0.50). Si alguien
+   lo persigue, que sea con ese enunciado y con el criterio 0.75 sin tocar.
+4. **El encargo (2), N2 por predicción, sigue en pie y ahora con más razón:** la mini-prueba dice que el organismo no
+   puede bajar sus propias mordidas redistribuyendo lo que ya sabe. **La única información que no se paga con mordidas
+   viene de otro organismo.** Es el mismo mecanismo (predecir lo que voy a sentir) en el mundo social, y es donde
+   "exposiciones hasta asociar" puede bajar de verdad.

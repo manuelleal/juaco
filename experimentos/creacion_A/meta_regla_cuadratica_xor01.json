@@ -1,0 +1,152 @@
+{
+ "lectura": "cuadratica",
+ "regla": "xor01",
+ "busqueda": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10"
+ ],
+ "retenidas": [
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20"
+ ],
+ "top": [
+  {
+   "busq": 0.625,
+   "reten": 0.531,
+   "config": {
+    "eta": 0.15,
+    "clip": 10.0,
+    "lam": 0.0,
+    "sel": "wta",
+    "theta": 0.3,
+    "rho": 0.02,
+    "cupo": 1,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.625,
+   "reten": 0.594,
+   "config": {
+    "eta": 0.15,
+    "clip": 10.0,
+    "lam": 0.0,
+    "sel": "wta",
+    "theta": 1.0,
+    "rho": 0.15,
+    "cupo": 2,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.625,
+   "reten": 0.562,
+   "config": {
+    "eta": 0.15,
+    "clip": 10.0,
+    "lam": 0.002,
+    "sel": "wta",
+    "theta": 0.3,
+    "rho": 0.02,
+    "cupo": 1,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.625,
+   "reten": 0.531,
+   "config": {
+    "eta": 0.15,
+    "clip": 30.0,
+    "lam": 0.0,
+    "sel": "wta",
+    "theta": 0.3,
+    "rho": 0.02,
+    "cupo": 1,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.625,
+   "reten": 0.594,
+   "config": {
+    "eta": 0.15,
+    "clip": 30.0,
+    "lam": 0.0,
+    "sel": "wta",
+    "theta": 1.0,
+    "rho": 0.15,
+    "cupo": 2,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.625,
+   "reten": 0.562,
+   "config": {
+    "eta": 0.15,
+    "clip": 30.0,
+    "lam": 0.002,
+    "sel": "wta",
+    "theta": 0.3,
+    "rho": 0.02,
+    "cupo": 1,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.594,
+   "reten": 0.531,
+   "config": {
+    "eta": 0.15,
+    "clip": 3.0,
+    "lam": 0.0,
+    "sel": "wta",
+    "theta": 0.3,
+    "rho": 0.02,
+    "cupo": 2,
+    "estad": "cond"
+   }
+  },
+  {
+   "busq": 0.594,
+   "reten": 0.562,
+   "config": {
+    "eta": 0.15,
+    "clip": 3.0,
+    "lam": 0.0,
+    "sel": "wta",
+    "theta": 0.6,
+    "rho": 0.05,
+    "cupo": 2,
+    "estad": "cond"
+   }
+  }
+ ],
+ "ganadora": {
+  "eta": 0.15,
+  "clip": 10.0,
+  "lam": 0.0,
+  "sel": "wta",
+  "theta": 0.3,
+  "rho": 0.02,
+  "cupo": 1,
+  "estad": "cond"
+ }
+}

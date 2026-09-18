@@ -4301,3 +4301,28 @@ recalibrado. **Candidata a v15:** la sorpresa del mundo en la boca a dosis 5 (do
 8/8 + 7/8). Regla 1 (regresión) pasa a: `cd organismo && python bateria_v14.py 6 && python bateria_generaliza.py organismo_v14 20 --desde 101`
 (con 10 semillas 41–50 el control azar quedó en 0.40, fuera de la banda 0.42–0.58: n = 10 no basta para el control);
 `bateria_v13.py 6`, `bateria_v11.py 6` y `bateria_v9.py 6` como regresión histórica. v13 pasa a tronco anterior.
+
+
+### Frente "dos organismos", creador A (18 sep 05:40): **CONTROL POSITIVO — con el mismo flujo de encuentros, los mismos rasgos y el mismo muestreo real, el gradiente exacto llega a 1.000 en XOR con los rasgos correctos → el cuello es la REGLA (y los rasgos), no el mundo; la predicción del techo 0.75 queda refutada y corregida por su autor**
+
+Instrumento `experimentos/creacion_A/organismo_v13q5.py` (fae9c32b146fdbb4; por anclas desde v13q4 ← v13q3; perilla `lab` que sólo graba
+la secuencia (t, patrón, R, residuo) de cada actualización de la vía lenta; identidad 16/16 con `lab` apagado y encendido; replay
+≡ organismo en 20/20 semillas, 0 diferencias). Sobre ese flujo, 20 semillas, T = 100 000:
+
+| lectura | DELTA (regla local del tronco) | **LSQ (gradiente exacto, mismos datos)** | MLP 6px→8→1 (retropropagación sobre píxeles) |
+|---|---|---|---|
+| cuadrática (21 + 1 rasgos) | 0.438 | **0.562** | 0.531 |
+| oráculo {P0, P1, P0·P1, 1} | 0.625 | **1.000** (14/20 semillas con las cuatro clases) | 0.531 |
+
+**Lecturas:** (1) con los rasgos correctos la información está en los datos (LSQ 1.000 con **10 exposiciones**; el tronco no llega
+con 600): **repetir no es la palanca**; (2) la retropropagación sobre píxeles crudos NO gana (0.531): más capacidad no compra nada,
+los rasgos correctos lo compran todo; (3) por qué la delta no llega: `clip_s = 3` no deja caber la solución (`|w| = 8`) y
+`eta_s = 0.015` no la recorre en ~290 mordidas desalineadas; barrido sobre el mismo flujo: (0.015, 3) 0.656 · (0.15, 3) 0.750 ·
+**(0.15, 10) 1.000** · (1.0, ·) 0.500; (4) la predicción del propio creador (techo de muestreo 0.75) estaba mal: la midió con un
+perfil sintético; con los flujos reales 14/20 semillas muerden las cuatro clases (errata corregida en el puente).
+**Meta-aprendizaje de la regla** (888 configuraciones, búsqueda en 1–10, retenidas 11–20): ganadora `eta_s = 0.15, clip_s = 10,
+WTA(θ = 0.3, ρ = 0.02, cupo 1)`, 0.625 en búsqueda → **0.531 en retenidas** (justo el techo del gradiente exacto con rasgos
+cuadráticos); implantada en el organismo (3 semillas) 0.375 → 0.500 y abre `P0·P1` en 3/3. **Propuestas A-4 (dos números de la
+vía lenta; control que puede fallar: la generalización y la retención del tronco con `eta_s` ×10) y A-5 (este control positivo)**;
+paquete A-4 en preparación. Lo que esto dice del frente: el organismo CON (gradiente) sólo gana cuando le dan los rasgos; el
+siguiente cuello real es **construir los rasgos** (selección conjuntiva en pocas exposiciones), y eso es del organismo SIN.
