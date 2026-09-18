@@ -4774,3 +4774,27 @@ inclusive): todas pasan. Los pareados de la letra vieja (14/18/20; 11/20) siguen
 eso resuelve el XOR necesidad × estímulo en 11 exposiciones (dos series, 20/20); un valor único no puede; sobrevive más (muere un 28–41 %
 menos y la mitad por sed) y no atribuye valor a lo que no informa salvo cuando el código de tres celdas lo confunde con el veneno
 (alias)*. Instrumento y peldaño para la siguiente sesión (propósito y reproducción como medida). Bloque de la sal: corre ahora.
+
+
+### Bloque de la sal — ALIAS DE CÓDIGO (nivel 4; 18 sep 08:16; 9 semillas ALIAS y 9 LIMPIAS elegidas estructuralmente en 301–700): **CONFIRMADO — el valor espurio de un estímulo que no informa aparece sólo cuando su código de tres celdas coincide con el de un estímulo con valor consolidado (|W[sal]| 1.45 contra 0.0), el veneno paga (−1.45 contra −3.0), la evitación multiplica ×7 las exposiciones y no hay divisiones; NO depende de la sed (S-5: persiste sin sed, 1.62) y la puerta de v13 NO lo repara (S-6: 1.48)**
+
+Preregistro `experimentos/nivel11_mundo_vivo/PREREGISTRO_supersticion_sal.md` (b803b20128ade9ea; selección de semillas por diagnóstico estructural
+recalculada dentro del runner: coincide 9/9 y 9/9); runner `corre_sal.py` (bfdc00bb48656337; identidad 5/5); datos `sal_alias9_20260918_081346`
+(d521f569205ebcfd), 36 corridas, 2 min.
+
+| brazo (9 semillas) | |W[sal]| mediana | W[veneno] mediana | exposiciones a la sal | divisiones | muertes |
+|---|---|---|---|---|---|
+| S1-ALIAS (sal y veneno con el mismo código) | **1.45** | **−1.45** | 3 835 | 0 | 75 |
+| S1-LIMPIA (códigos distintos) | **0.0** | **−3.0** | 545 | 0 | 35 |
+| S2-SIN-SED (alias, una sola necesidad) | 1.62 | −1.62 | 3 814 | 0 | 75 |
+| S3-PUERTA (alias, puerta de v13 por celdas) | 1.48 | −1.71 | 2 895 | 0 | 69 |
+
+S-1 PASA (9/9 y 9/9), S-2 PASA (el veneno paga: 9/9 y 9/9), S-3 PASA (evitación ×7, 9/9), S-4 PASA (0 divisiones 9/9: la división por conflicto
+no puede actuar con R = 0). **S-5 NO por la letra** (±0.3 en 5/9; medianas 1.62 contra 1.45) **pero en la dirección que refuta la hipótesis del
+coordinador**: sin sed la superstición persiste igual o mayor — no es la necesidad, es el código. **S-6 NO:** la puerta por celdas de v13 no lo
+reduce (1/9) — la puerta por evidencia del código no es parte del bucle; basta el alias. **Lectura:** con K = 3 celdas de 90, dos estímulos
+pueden recibir el mismo código (2 de 20 semillas con cuatro estímulos); entonces el que no informa hereda el valor del que sí, y el que sí
+lo mata pierde la mitad del miedo, y como el organismo evita el código, nunca corrige. Es una **propiedad estructural del código del
+tronco** (v9–v14.1), invisible con dos estímulos y visible con cuatro: cabo abierto del nivel 4 (memoria/capacidad) para la siguiente sesión
+(desambiguar códigos: más celdas por código, K mayor, o un tercer canal que distinga estímulos con el mismo código). Nada entra al tronco.
+Vocabulario: *"cuando dos cosas se parecen tanto que reciben el mismo código, el organismo teme a las dos a medias"*.

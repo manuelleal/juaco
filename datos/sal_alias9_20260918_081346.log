@@ -1,0 +1,54 @@
+[08:13:46 +    0.0s] ARRANQUE SUPERSTICION DE LA SAL (nivel 4): brazos ['S1-ALIAS', 'S1-LIMPIA', 'S2-SIN-SED', 'S3-PUERTA'], ALIAS [326, 334, 343, 377, 446, 533, 549, 563, 670], LIMPIAS [307, 313, 316, 323, 325, 327, 333, 338, 342], T=100000. Pool(14).
+[08:13:46 +    0.0s] 9 semillas por brazo no cierran nada: confirman o refutan ESTA explicacion, y piden replica.
+[08:13:46 +    0.0s]     sha preregistro            b803b20128ade9ea
+[08:13:46 +    0.0s]     sha script                 bfdc00bb48656337
+[08:13:46 +    0.0s]     sha runner_mundo_vivo      0bce2ae090fcb0a7
+[08:13:46 +    0.0s]     sha diagnostico            02905c71a7ac3de8
+[08:13:46 +    0.0s]     sha constructor            03c83de17e34d9a0
+[08:13:46 +    0.0s]     sha instrumento            20c0961c79de8825
+[08:13:46 +    0.0s]     sha origen_organismo_v14   feefc88b1fd8d434
+[08:13:46 +    0.0s] SELECCION DE SEMILLAS (se recalcula: si no coincide con el preregistro, se para)
+[08:13:46 +    0.1s]     ALIAS recalculadas en 301-700: [326, 334, 343, 377, 446, 533, 549, 563, 670]  -> coinciden con el preregistro
+[08:13:46 +    0.1s]     LIMPIAS del preregistro con |D&B| = 0: 9/9
+[08:13:46 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 31868
+[08:13:46 +    0.6s] ETAPA 1/2 — IDENTIDAD interna (15 comprobaciones de 2 x 20000 pasos; el caso (M) DEBE fallar).
+[08:13:51 +    5.5s]     (A) vivo=0 == v14                                    3/3
+[08:13:51 +    5.5s]     (G) linaje v13 (mask_rel=0, puerta_pat=0)            3/3
+[08:13:51 +    5.5s]     (I) TODO encendido, 1 necesidad y 2 estimulos == v14 3/3
+[08:13:51 +    5.5s]     (J) lo mismo con inversion                           3/3
+[08:13:51 +    5.5s]     (M) 4 estimulos y 2 necesidades != v14 (DEBE fallar) 3/3
+[08:13:51 +    5.5s]   IDENTIDAD 15/15
+[08:13:51 +    5.5s] ETAPA 2/2 — principal: 36 corridas de 100000 pasos (4 brazos).
+[08:14:00 +   13.8s]           9/36
+[08:14:07 +   20.8s]           18/36
+[08:14:08 +   21.9s]           27/36
+[08:14:14 +   28.0s]           36/36
+[08:14:14 +   28.0s] 
+[08:14:14 +   28.0s] ANALISIS — umbrales EXACTOS de PREREGISTRO_supersticion_sal.md (ERR-31).
+[08:14:14 +   28.0s]    S1-ALIAS    n=9  |W[sal]| med 1.45  W[veneno] med -1.45  exposiciones sal med 3835.0  divisiones med 0.0  muertes med 75.0
+[08:14:14 +   28.0s]         |W[sal]| por semilla [1.8, 1.42, 1.86, 1.45, 1.51, 1.53, 1.32, 1.13, 1.15]
+[08:14:14 +   28.0s]         W[veneno] por semilla [-1.8, -1.42, -1.86, -1.45, -1.51, -1.53, -1.32, -1.13, -1.15]
+[08:14:14 +   28.0s]    S1-LIMPIA   n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exposiciones sal med 545.0  divisiones med 0.0  muertes med 35.0
+[08:14:14 +   28.0s]         |W[sal]| por semilla [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[08:14:14 +   28.0s]         W[veneno] por semilla [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]
+[08:14:14 +   28.1s]    S2-SIN-SED  n=9  |W[sal]| med 1.62  W[veneno] med -1.62  exposiciones sal med 3814.0  divisiones med 0.0  muertes med 75.0
+[08:14:14 +   28.1s]         |W[sal]| por semilla [1.98, 2.04, 1.62, 1.38, 1.58, 2.0, 1.41, 1.86, 1.48]
+[08:14:14 +   28.1s]         W[veneno] por semilla [-1.98, -2.04, -1.62, -1.38, -1.58, -2.0, -1.41, -1.86, -1.48]
+[08:14:14 +   28.1s]    S3-PUERTA   n=9  |W[sal]| med 1.48  W[veneno] med -1.71  exposiciones sal med 2895.0  divisiones med 0.0  muertes med 69.0
+[08:14:14 +   28.1s]         |W[sal]| por semilla [1.77, 1.38, 2.15, 0.0, 1.82, 1.71, 1.48, 1.13, 1.11]
+[08:14:14 +   28.1s]         W[veneno] por semilla [-1.77, -1.38, -2.15, -3.0, -1.82, -1.71, -1.48, -1.13, -1.11]
+[08:14:14 +   28.1s]    S-1 S1-ALIAS: |W[sal]| > 0.3 en >= 8/9 (mediana >= 1.0). S1-LIMPIA: |W[sal]| <= 0.3 en 9/9 (mediana 0.0)
+[08:14:14 +   28.1s]        ALIAS 9/9 (mediana 1.45)   LIMPIA 9/9 (mediana 0.0)   -> PASA
+[08:14:14 +   28.1s]    S-2 el veneno paga: W[veneno] >= -2.3 en >= 8/9 ALIAS y <= -2.8 en 9/9 LIMPIAS
+[08:14:14 +   28.1s]        ALIAS 9/9 (mediana -1.45)   LIMPIA 9/9 (mediana -3.0)   -> PASA
+[08:14:14 +   28.1s]    S-3 evitacion: exposiciones a la sal >= 3 x la mediana de las LIMPIAS, en >= 8/9 ALIAS
+[08:14:14 +   28.1s]        mediana LIMPIAS 545.0 -> umbral 1635.0; ALIAS mediana 3835.0, 9/9   -> PASA
+[08:14:14 +   28.1s]    S-4 divisiones = 0 en >= 8/9 ALIAS con la sal muda  ->  9/9   -> PASA
+[08:14:14 +   28.1s]    S-5 S2-SIN-SED ~ S1-ALIAS: |W[sal]| dentro de +-0.3 de S1-ALIAS, en >= 7/9
+[08:14:14 +   28.1s]        |W[sal]| sin sed mediana 1.62 contra ALIAS 1.45; dentro de +-0.3 en 5/9   -> NO
+[08:14:14 +   28.1s]        si esto NO pasa, gana la explicacion por co-ocurrencia con la necesidad y la del codigo cae
+[08:14:14 +   28.1s]    S-6 S3-PUERTA: |W[sal]| baja al menos 50 % respecto de S1-ALIAS en >= 7/9 (no se predice 0)
+[08:14:14 +   28.1s]        |W[sal]| con puerta de v13 mediana 1.48 contra ALIAS 1.45; baja >= 50 % en 1/9   -> NO
+[08:14:14 +   28.1s] 
+[08:14:14 +   28.1s] VEREDICTO: ALIAS DE CODIGO CONFIRMADO: el valor espurio de un estimulo que no informa aparece cuando su codigo coincide con el de un estimulo con valor consolidado, y no aparece cuando no coincide. El veneno paga el precio (S-2). La evitacion acumula el estimulo en el mundo (S-3). La division por conflicto de signo no se dispara con R = 0 (S-4). *** Quitar la sed LO CAMBIA: gana la explicacion por co-ocurrencia con la necesidad activa y la del codigo queda incompleta (S-5). La puerta no es parte del bucle: basta el alias (S-6). 9 semillas por brazo no cierran nada: piden replica con las ALIAS del rango siguiente.
+[08:14:14 +   28.1s] datos -> sal_alias9_20260918_081346.json  sha256_16 = d521f569205ebcfd
