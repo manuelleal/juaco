@@ -644,3 +644,89 @@ identidad y mini-prueba, 2 refutadores por paquete, un sintetizador → `registr
 esta madrugada por la letra: metaplasticidad (A-2), consolidación por predicción y retorno aleatorio en una capa (C), asociación
 por parecido (B, dos mundos), fisión como creadora de rasgos (criba). Errores nuevos: ERR-29 a ERR-35. Regresión de la regla 1
 sobre v14.1: `cd organismo && python bateria_v14.py 6 && python bateria_generaliza.py organismo_v14 20 --desde 101`.
+
+
+### 15.8 La mañana del 18 (07:15 → 08:30): XOR cerrada, mundo vivo, alias de código
+
+**15.8.1 Decisiones del director.** Tres decisiones ya tomadas enmarcan la mañana (`PLAN.md`, `REGISTRO_etapas_1_2.md`):
+04:55 "sí a todo" → v14 congelado; 06:05 "sí, mételas" → **v14.1** congelado (`eta_s` 0.15, `clip_s` 10); 07:10, **ERR-35**
+— el criterio de parada de XOR se reformula después de ver datos: la línea se cierra declarando el MÍNIMO de ejemplos con
+el que el organismo generaliza, no como fracaso ("es esperar que mi hijo haga pan solo con haberme visto dos veces"). El
+bloque 3/3 corre igual, con el mejor mecanismo de la sala de agentes que pase la criba (proponer `P0·P1` en ≥ 15/20) y
+`ntr = 14` como control obligatorio.
+
+**15.8.2 Bloques de la mañana**
+
+| bloque | nivel | veredicto | números clave | datos |
+|---|---|---|---|---|
+| 07:10–07:43 sala de agentes (enjambre, 4 mecanismos) | 3 (XOR) | M3 y M4 sobreviven; M1 y M2 refutados | M3 mediana 0.8125 (estricta 0.625), n\*=7; M1 0.500; M2 0.313 | `ENJAMBRE_xor_20260918.md` |
+| 07:43 bloque 3/3 XOR (M3, memoria de un golpe) | 3 | ✅ CRUZA — prior estructural | 1.000 registro y estricta, (0,1) 20/20, n\*=7 | `xor_7_s121-140_20260918_073918` |
+| 07:47 línea XOR, réplica 141–160 | 3 | ✅ REPLICA — LÍNEA CERRADA | 1.000/1.000, n\*=10, X1–X6 OK | `xor_7_s141-160_20260918_074208` |
+| 07:58 mundo vivo, primer bloque (181–200) | 8/9 | núcleo sostenido; P4′/P6/P7 no como se escribieron | xor01 1.0 (20/20) contra 0.5; tabla 2×4 en ~11 exp.; muertes 97 contra 135.5/152.5 | `vivo_s181-200_20260918_075215` |
+| 08:06 candidato v15c (memoria de pares en el TRONCO) | 3 | ❌ NO ENTRA — rompe generalización lineal | G1 px0 0.500/G2 0.513 (exigía ≥0.80/≥0.85); mundo de regla 0.812 estricta | `v15c_s121-140_20260918_075817` |
+| 08:10 ERR-37 y alias de código | 4 | hallazgo confirmado, no superstición | 2/20 semillas con `code(sal)∩code(veneno)`=3; mismo valor en veneno y sal | `PREREGISTRO_supersticion_sal.md` |
+| 08:20 mundo vivo, réplica 201–220 (enmienda 2) | 8/9 | ✅ REPLICA; P10 confirma el alias | P4″/P7′/P6′ pasan en las dos series; P10 `err_peor` 0.00 en 20/20 | `vivo_s201-220_20260918_080619` |
+| 08:16 bloque de la sal (9 ALIAS/9 LIMPIAS, 301–700) | 4 | ✅ CONFIRMADO — alias de código; S-5 refuta la hipótesis del coordinador (persiste sin sed); S-6 la puerta de v13 no repara | abs W[sal] 1.45 contra 0.0; veneno −1.45 contra −3.0; evitación ×7; sin sed 1.62; con puerta 1.48 | `sal_alias9_20260918_081346` |
+
+**15.8.3 La sala de agentes.** Workflow "enjambre": 5 investigadores de literatura 2019–2026, un jefe que eligió 4
+mecanismos (compartimentos M1, fisión estructural M2, memoria de un golpe M3 —BTSP 2017/Milstein 2024—, tabla
+meta-aprendida M4), 4 mini-equipos con identidad y mini-prueba (3 semillas, 1 proceso, sin `Pool`: no son series
+confirmatorias), 2 refutadores por paquete y un sintetizador; coste ≈ 3.45 M tokens de agentes en 19 agentes (dato del coordinador, del resultado del Workflow; no consta en el informe).
+**Qué cazaron los refutadores:** M1 REFUTADO — `cel_ganadora` se captura al FINAL de T, no en la sonda (`cg_ok=False`
+en 6/9 filas: el enrutamiento "3/3" medido donde importa es 2/3) y hay asimetría de mordidas 80/20 sin medir. M2
+REFUTADO — el piso `_FE=1e9` castiga a las hijas recién nacidas justo en la sonda y `fis_umbral=3` se fijó mirando la
+métrica de su propia refutación (sin ERR numerado). M3 NO refutado — 18/18 filas reproducidas exactas, ganador medido
+EN LA SONDA (el agujero que hundió a M1). M4 sin votos de refutación (llegaron truncados); el sintetizador verificó lo
+esencial: reproduce exacto, el top-10 comparte `rho = 0.02`. **Hallazgo propio del sintetizador:** el desempate por
+índice favorece (0,1) en empates exactos — sin corregirlo, la semilla insignia de M3 daría 0.375 en vez de 1.000; sobre
+20 semillas, empate en 1/20; con desempate al azar la mediana sigue en 1.000 pero ≥0.75 baja de 20/20 a 19/20.
+
+**15.8.4 Cierre de XOR.** Instrumento `organismo_g3A` (por anclas desde `organismo_g3` de la sala; perillas
+`mem_apriori`, `mem_desempate='azar'`; identidad 10/10 + 3/3). Mecanismo: 15 celdas de dos canales, una por par de
+píxeles, 4 casillas de valor; la primera mordida de una combinación escribe R **de un golpe**; cada celda lleva su
+error propio (EMA); la vía lenta lee sólo la celda de menor error; abstención en combinaciones nunca vistas.
+
+| n ejemplos de entrenamiento | acc_lenta (nunca vistos) | n\* (≥ 0.75) | mecanismo |
+|---|---|---|---|
+| 8, sin prior (REF) | 0.500 | > 600 | regla local con competencia — nadie selecciona el rasgo (9/15 hipótesis empatan) |
+| 8, con prior de pares (M3) | **1.000** (estricta 1.000) | **7–10** | memoria de un golpe por combinación — prior estructural |
+| 11, sin prior (NTR11) | 0.625 | 300 | regla local con competencia |
+| 14, sin prior (NTR14 / A-6) | 1.000 | 200 | regla local con competencia — ya no hace falta prior |
+| 14, con prior (M3_NTR14) | 1.000 | 7 | memoria de un golpe — prior redundante |
+
+Declaración de cierre (07:47, letra de ERR-35): **PRIOR ESTRUCTURAL, no "aprende XOR"** — guarda el valor de cada
+combinación la primera vez que la muerde y responde con el par que menos se equivoca; los nunca vistos se aciertan
+porque comparten la combinación con los vistos. Vocabulario permitido: *"con 8 ejemplos XOR exige un prior de pares, y
+con él bastan 7–10 exposiciones; con 14 ejemplos no hace falta prior"*. Prohibido: "aprende XOR", "entiende la
+combinación".
+
+**15.8.5 El mundo vivo.** Núcleo: dos necesidades (hambre, sed) con dos muertes, cuatro estímulos (los cuatro patrones
+ya existentes), consecuencia vectorial, sorpresa específica por necesidad, valor por estímulo y por necesidad. Primer
+bloque (181–200): `xor01` necesidad × estímulo, VIVO 1.0 (20/20) contra 0.5 de UNA_NEC, ESCALAR y BARAJA_CON; tabla
+2×4 exacta en ~11 exposiciones; muertes 97 [53.5 energía, 48 agua] contra 135.5 (UNA_NEC) y 152.5 (ESCALAR).
+Supervivencia con ERR-37: P4′, P7 y P6 fallaron por el umbral (pareado en la mediana del propio efecto, que parte la
+muestra por construcción; muertes no pareables por semilla; `max` sobre 40 lecturas), no por el efecto (A₁₂
+0.90/0.935/0.955; q75 VIVO 106 < q25 125/143); enmienda 2 (P4″, P7′, P6′, P10) escrita antes de 201–220. **Alias de
+código:** las dos únicas semillas con valor en la sal (182, 188) son exactamente las dos con el mismo código de Kenyon
+(`code(sal) ∩ code(veneno)` = 3 píxeles); `W_hambre[veneno] = W_hambre[sal]` en las dos (−1.83 y −1.34); la puerta
+presta la evidencia por código, la división por conflicto no repara (exige `R ≠ 0`, la sal da `R = 0`), la evitación
+cierra el bucle. Réplica 201–220: P4″/P7′/P6′ pasan en las dos series y **P10** —sin ninguna semilla con alias,
+`err_peor` debía ser 0.00 en 20/20— **PASA**: confirma el alias por predicción, no sólo por ajuste. Nivel 9 → **30 %**
+(allostasis mínima medida); nivel 8 recibe el primer mundo con más de una dimensión de valor (sigue en 40 %); nivel 4
+recibe el negativo del alias (sigue en 60 %, cabo nuevo); nivel 3 no se toca (se resuelve indexando la memoria, no
+leyendo mejor los píxeles).
+
+**15.8.6 Lo que no entró y lo pendiente.** **v15c** (08:06, memoria de pares en la vía lenta del TRONCO) **NO ENTRA**:
+rompe la generalización lineal (G1 px0 0.500, G2 0.513; exigía ≥ 0.80/≥ 0.85), aunque en el mundo de regla funciona
+(0.812 estricta); queda como órgano del mundo de regla, como A avisó antes de correr. **Pendiente para la siguiente
+sesión:** v15d sumar/enrutar (lineal + memoria, o enrutar por menor error, con abstención de la memoria en lo no visto
+— preregistrado 08:25 y corriendo desde 08:28; el resultado va en `REGISTRO_etapas_1_2.md`); **bloque de la sal CERRADO** (08:16: alias confirmado 9/9 contra 9/9; S-5 refutó la hipótesis del
+coordinador — persiste sin sed: es el código, no la necesidad; S-6: la puerta de v13 no lo repara; queda *desambiguar códigos*, nivel 4); propósito y reproducción sólo como medida
+(`descendientes_viables`, predicción VIVO > UNA_NEC > BARAJA_POL, sin mecanismo — exige población y `Pool`); gemelos —
+los instrumentos nuevos de la mañana (`organismo_g3A`, `organismo_vivo`, `organismo_v15c`) corrieron sin gemelo
+compilado (numba); el tronco v14.1 sí lo tiene.
+
+**15.8.7 Vamos bien o mal.** Vamos bien: XOR se cerró con dos series independientes y un prior declarado como tal, y
+el mundo vivo replicó su núcleo y confirmó el alias de código con una predicción que podía fallar limpio (P10) y no
+falló. Vamos mal: ningún candidato de la mañana entra al tronco, el cuello que más importa a la misión (construir el
+rasgo desde píxeles, sin prior) sigue sin mecanismo, y el alias de código queda confirmado pero sin reparación (nivel 4).

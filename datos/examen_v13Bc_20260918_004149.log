@@ -1,0 +1,36 @@
+[00:41:49 +   0.0s] === Batería v13 — CRITERIO v3, 2 semillas (101..102), Pool(14) ===
+[00:41:49 +   0.0s] sha organismo_v13 f96db73684946a79  bateria_v13 bed5ad9661ea7040  preregistro b46b59b0251ed417
+[00:41:50 +   0.3s] ETAPA 1/3 — criterio 5, identidad de instrumentos (84 comparaciones)...
+[00:43:09 +  79.7s]           21/84  (21 idénticas)
+[00:44:19 + 149.6s]           42/84  (42 idénticas)
+[00:44:59 + 189.6s]           63/84  (63 idénticas)
+[00:45:41 + 232.0s]           84/84  (84 idénticas)
+[00:45:41 + 232.0s]   v13(eta_s=0, puerta=None) == v11: 42/42
+[00:45:41 + 232.0s]   v13(eta_s=0, puerta=None, div_signo=False) == v10: 42/42
+[00:45:41 + 232.0s] ETAPA 2/3 — 18 corridas (9 etapas x 2 semillas)...
+[00:46:01 + 251.8s]           18/18
+[00:46:01 + 251.8s] ETAPA 3/3 — criterios.
+[00:46:01 + 251.8s] 
+[00:46:01 + 251.8s]   PASA  1 E1        2/2  [venenoQ4<Q1:2/2 W_A≈+1:2/2 W_B≈-3:2/2]
+[00:46:01 + 251.8s]         splits=[0, 0]  celdas_max=30  techo=0/2
+[00:46:01 + 251.8s]   PASA  1 E2        2/2  [W_A→-3:2/2 W_B→+1:2/2 come B Q4≥50:2/2]
+[00:46:01 + 251.8s]         splits=[0, 0]  celdas_max=30  techo=0/2
+[00:46:01 + 251.8s]   PASA  1 E2I       2/2  [W_C≤-2.5:2/2 W_A≈+1:2/2 W_B≤-2.8:2/2 tasaA Q4≥80%Q2:2/2]
+[00:46:01 + 251.8s]         splits=[1, 3]  celdas_max=33  techo=0/2
+[00:46:01 + 251.8s]   PASA  1 E2J       2/2  [W_D≥0.85:2/2 W_B≤-2.7:2/2]
+[00:46:01 + 251.8s]         splits=[3, 1]  celdas_max=33  techo=0/2
+[00:46:01 + 251.8s]   PASA  1 E2K       2/2  [W_D≥0.8:2/2 W_B≤-2.4:2/2]
+[00:46:01 + 251.8s]         splits=[4, 3]  celdas_max=34  techo=0/2
+[00:46:01 + 251.8s]   PASA  1 E2L       2/2  [W_A≈+1:2/2 W_B≈-3:2/2 solap→0:2/2]
+[00:46:01 + 251.8s]         splits=[3, 3]  celdas_max=33  techo=0/2
+[00:46:01 + 251.8s]   PASA  2 celdas<=45: {'E1': 2, 'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2, 'E2L': 2, 'E2I-misma': 2}
+[00:46:01 + 251.8s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/2 lo pasan (<=1)  W_A=[-1.26, -0.98]
+[00:46:01 + 251.8s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 2/2 lo pasan (>=1)
+[00:46:01 + 251.8s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 16/16  []
+[00:46:01 + 251.8s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 2/2, E2L con conflicto 2/2; corridas que dividen 8, violaciones ninguna
+[00:46:01 + 251.9s]   PASA  4c C∩B=3 misma valencia: guarda 2/2, splits==0 2/2, W_C<=-2.5 2/2  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 10)
+[00:46:01 + 251.9s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 2/2; t>=50k {'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2}; E2L termina <25k 2/2
+[00:46:01 + 251.9s] 
+[00:46:01 + 251.9s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[00:46:01 + 251.9s] *** v13 cumple el criterio v3 con 2 semillas. Congelar sólo con S>=20.
+[00:46:02 + 252.2s] datos -> examen_v13Bc_20260918_004149.json  sha256_16 = ddd44ab2c3275d73

@@ -1,0 +1,21 @@
+[08:12:11 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3). PREREGISTRO_supersticion_sal.md.
+[08:12:11 +    0.0s] Semillas 182 (ALIAS) y 181 (LIMPIA): las dos YA se gastaron en el mundo vivo. NINGUNA de 301-700 queda expuesta.
+[08:12:11 +    0.0s]     sha preregistro            b803b20128ade9ea
+[08:12:11 +    0.0s]     sha script                 72e0e21cb2365412
+[08:12:11 +    0.0s]     sha runner_mundo_vivo      0bce2ae090fcb0a7
+[08:12:11 +    0.0s]     sha diagnostico            02905c71a7ac3de8
+[08:12:11 +    0.0s]     sha constructor            03c83de17e34d9a0
+[08:12:11 +    0.0s]     sha instrumento            20c0961c79de8825
+[08:12:11 +    0.0s]     sha origen_organismo_v14   feefc88b1fd8d434
+[08:12:11 +    0.0s]     origen organismo_v14 -> OK
+[08:12:11 +    0.0s] 1/3 seleccion de semillas (diagnostico estructural, sin correr el organismo)
+[08:12:12 +    0.1s]     ALIAS recalculadas en 301-700: [326, 334, 343, 377, 446, 533, 549, 563, 670]  -> coinciden con el preregistro
+[08:12:12 +    0.1s]     LIMPIAS del preregistro con |D&B| = 0: 9/9
+[08:12:12 +    0.1s] 2/3 IDENTIDAD, 5 casos x 1 semilla, T=5000.
+[08:12:12 +    0.5s]     (A) vivo=0 == v14                                    OK
+[08:12:12 +    0.8s]     (G) linaje v13 (mask_rel=0, puerta_pat=0)            OK
+[08:12:13 +    1.2s]     (I) TODO encendido, 1 necesidad y 2 estimulos == v14 OK
+[08:12:13 +    1.6s]     (J) lo mismo con inversion                           OK
+[08:12:14 +    2.1s]     (M) 4 estimulos y 2 necesidades != v14 (DEBE fallar) OK
+[08:12:14 +    2.1s]   IDENTIDAD 5/5
+[08:12:14 +    2.1s] 3/3 UNA corrida por brazo con las semillas del humo, T=20000 (4 corridas).

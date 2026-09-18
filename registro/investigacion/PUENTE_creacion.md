@@ -465,6 +465,42 @@ mundo da 14 ejemplos distintos"*, no de una mejora del organismo.
 **Lo que NO se declara:** que el organismo "aprende XOR". Aprende XOR **con 14 ejemplos**; con 8 el límite es del
 mundo y es demostrable, no una conjetura.
 
+### A15. **M3 pasa la criba** — el bloque 3/3, montado — 18-sep
+
+Pasé M3 por la criba replicando su regla sobre **el mismo flujo real** (20 semillas), con **desempate al azar**:
+
+| mecanismo | gana `(0,1)` | acc | pasa |
+|---|---|---|---|
+| **M3 `combi`** | **19/20** | **1.000** | **SÍ** |
+| **M3 `combi1`** | **20/20** | **1.000** | **SÍ** |
+| residuo (cascade-correlation), estadístico ideal | 2/20 | 0.625 | no |
+| fisión de v11 (mi ruta) | 0/20 | 0.469 | no |
+| pureza / media del refuerzo | 10–12/20 | 0.625 | no |
+| **[control nulo] azar** | **0/20** | 0.500 | no |
+
+**Es el primer mecanismo que pasa con 8 patrones**, y con el control nulo en 0/20. Celdas empatadas en el mínimo:
+mediana **1** [1, 2] — el desempate por índice **apenas actúa**, pero cuando actúa le da la victoria a `(0,1)` en
+20/20 (el índice 0 de `_PAR` **es** (0,1)), así que el brazo con desempate al azar no es opcional. M4 no tiene la
+interfaz de la criba (no puntúa 15 candidatos); va a la serie como segundo brazo.
+
+**Lo que M3 es, dicho con precisión.** No abre un rasgo para la vía lenta: **sustituye la lectura por una tabla de
+4 casillas sobre el par ganador**. Generaliza a los nunca vistos porque comparten la combinación `(P0,P1)` con los
+vistos. Es **memoria tabular con un prior de pares** — exactamente lo que mi §A12 predijo que haría falta:
+*"ninguna regla puede elegir entre 9 hipótesis de residuo cero **salvo por un PRIOR**"*. M3 trae ese prior
+(candidatos = pares de píxeles) y por eso rompe el empate. **Si cruza con 8, se declara prior, no aprendizaje de la
+estructura**, y el control que lo separa de una fuga es `azar` ∈ [0.35, 0.65].
+
+**Paquete montado y probado:** `construye_g3A.py` → `organismo_g3A.py` (`6e7d80db210b1950`, por anclas desde
+`organismo_g3.py` `91eb167023cb37b7`; perillas `mem_apriori` — lectura de la memoria **en la sonda**, que el informe
+no tenía — y `mem_desempate='azar'`; **identidad con las dos apagadas ≡ g3: 10/10**) · `PREREGISTRO_xor_7.md` ·
+`corre_xor_7.py` (6 brazos × 3 reglas × 20 semillas 121–140, **dos puntuaciones siempre**, `n\*` como número
+principal, `--humo` y `--rapido`). Humo: identidad **3/3**, semilla 121 → M3 y M3_AZAR **1.000 registro y 1.000
+estricta**, ganadora (0,1), cobertura 4/4, **n\* = 10**; REF 0.500; SIN_SEL 0.562.
+
+**La entrada de cierre de §A14 queda en suspenso hasta la serie**: si `M3_AZAR` cruza 0.75 en 121–140 con
+`azar` en banda, la línea XOR **no** se cierra con "hacen falta 14 ejemplos" sino con *"con 8 hace falta un prior
+de pares, y con él bastan 10 exposiciones"*. Los dos enunciados son compatibles y los dos son resultados.
+
 ### A11. Archivos (sólo míos, nada original tocado, sin commits)
 `experimentos/creacion_A/`: `identificabilidad_xor.py` · `sesgo_grado_xor.py` · `banco_sesgo.py` ·
 `regla_puerta_rasgo.py` · `regla_wta_conjuntiva.py` · `dinamica_oraculo.py` ·

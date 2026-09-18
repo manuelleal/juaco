@@ -1,0 +1,2367 @@
+{
+ "meta": {
+  "fecha": "2026-09-18T02:23:37",
+  "semillas": 2,
+  "semilla_inicial": 101,
+  "veredictos": {
+   "5_identidad": true,
+   "1_cientificos": true,
+   "2_celdas": true,
+   "3_control": true,
+   "4a_identidad": true,
+   "4b_sin_conflicto_no_divide": true,
+   "4c_misma_valencia": true,
+   "4d_causa": true
+  },
+  "congelar": false,
+  "sha_organismo_v13": "ab8e3b0579edfc29",
+  "sha_bateria_v13": "bed81b870faf5da5",
+  "sha_preregistro": "b46b59b0251ed417",
+  "sha_organismo_v11": "f69e24063be1b194",
+  "sha_organismo_v10": "219d5033fe15b5b9",
+  "sha_criterio_v3": "d2924e69128fe0f6",
+  "python": "3.14.2",
+  "numpy": "2.4.3",
+  "plataforma": "Windows-11-10.0.26200-SP0"
+ },
+ "identidad": [
+  {
+   "cual": "v11",
+   "esc": "E1",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E1",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "BUG",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "BUG",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "BUG",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "BUG",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "BUG",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "BUG",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E1",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E1",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E1",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E1",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2J",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2K",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2K",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2K",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2J",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2J",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2K",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2I",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2I",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2I",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2I",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2I",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2I",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2K",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2L",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2K",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2J",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2J",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2J",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2L",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2L",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "BUG",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "BUG",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E1",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E1",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E1",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "BUG",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2L",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2L",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "BUG",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E1",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "BUG",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v11",
+   "esc": "E2L",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "BUG",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E1",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E1",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2I",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2I",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2I",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2I",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2J",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2J",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2J",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2J",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2K",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2J",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2K",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2K",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2K",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2I",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2L",
+   "seed": 1,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2L",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2I",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2K",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2J",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2L",
+   "seed": 3,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2L",
+   "seed": 5,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2K",
+   "seed": 2,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2L",
+   "seed": 6,
+   "identico": true,
+   "difieren": []
+  },
+  {
+   "cual": "v10",
+   "esc": "E2L",
+   "seed": 4,
+   "identico": true,
+   "difieren": []
+  }
+ ],
+ "corridas": [
+  {
+   "etapa": "E1",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -2.98,
+    "C": -0.4,
+    "D": -2.18
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.98
+    ],
+    "C": [
+     0.33,
+     0.0
+    ],
+    "D": [
+     0.33,
+     0.99
+    ]
+   },
+   "mord": {
+    "A": [
+     97,
+     89,
+     83,
+     84
+    ],
+    "B": [
+     36,
+     7,
+     6,
+     5
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     97,
+     89,
+     83,
+     84
+    ],
+    "B": [
+     2303,
+     2423,
+     2378,
+     2400
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 122,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "err_max": 0.442508,
+   "t_conflicto": null,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2I",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": -2.93,
+    "D": -2.97
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.0,
+     2.93
+    ],
+    "D": [
+     0.0,
+     2.97
+    ]
+   },
+   "mord": {
+    "A": [
+     133,
+     63,
+     67,
+     36
+    ],
+    "B": [
+     37,
+     3,
+     8,
+     9
+    ],
+    "C": [
+     0,
+     0,
+     30,
+     10
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     133,
+     63,
+     67,
+     36
+    ],
+    "B": [
+     2344,
+     3134,
+     1675,
+     1434
+    ],
+    "C": [
+     0,
+     0,
+     858,
+     1123
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 176,
+   "splits": 1,
+   "split_t": [
+    [
+     50216,
+     "C"
+    ]
+   ],
+   "celdas": 31,
+   "solap": {
+    "AB": 0,
+    "nB": 0
+   },
+   "err_max": 0.442536,
+   "t_conflicto": 50216,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2",
+   "seed": 101,
+   "W": {
+    "A": -2.96,
+    "B": 1.0,
+    "C": -0.3,
+    "D": 1.26
+   },
+   "comp": {
+    "A": [
+     0.09,
+     3.05
+    ],
+    "B": [
+     1.0,
+     0.0
+    ],
+    "C": [
+     0.03,
+     1.02
+    ],
+    "D": [
+     0.67,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     133,
+     63,
+     41,
+     9
+    ],
+    "B": [
+     37,
+     3,
+     137,
+     64
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     133,
+     63,
+     2480,
+     2481
+    ],
+    "B": [
+     2344,
+     3134,
+     168,
+     64
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 149,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "err_max": 0.827656,
+   "t_conflicto": 50043,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2",
+   "seed": 102,
+   "W": {
+    "A": -2.95,
+    "B": 1.0,
+    "C": -0.26,
+    "D": 1.23
+   },
+   "comp": {
+    "A": [
+     0.1,
+     3.05
+    ],
+    "B": [
+     1.0,
+     0.0
+    ],
+    "C": [
+     0.03,
+     1.02
+    ],
+    "D": [
+     0.37,
+     1.02
+    ]
+   },
+   "mord": {
+    "A": [
+     97,
+     89,
+     41,
+     6
+    ],
+    "B": [
+     36,
+     7,
+     135,
+     71
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     97,
+     89,
+     2239,
+     2295
+    ],
+    "B": [
+     2303,
+     2423,
+     145,
+     71
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 132,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "err_max": 0.817633,
+   "t_conflicto": 50085,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "CTRL",
+   "seed": 102,
+   "W": {
+    "A": -1.49,
+    "B": -1.49,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "comp": {
+    "A": [
+     1.67,
+     3.16
+    ],
+    "B": [
+     1.67,
+     3.16
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     237,
+     238,
+     182,
+     250
+    ],
+    "B": [
+     240,
+     210,
+     191,
+     239
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     999,
+     1188,
+     1163,
+     1201
+    ],
+    "B": [
+     1064,
+     1129,
+     1163,
+     1206
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 151,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 3,
+    "nB": null
+   },
+   "err_max": 0.0,
+   "t_conflicto": 6,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "CTRL",
+   "seed": 101,
+   "W": {
+    "A": -0.72,
+    "B": -0.72,
+    "C": 0.0,
+    "D": 0.0
+   },
+   "comp": {
+    "A": [
+     2.01,
+     2.73
+    ],
+    "B": [
+     2.01,
+     2.73
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     308,
+     196,
+     178,
+     171
+    ],
+    "B": [
+     285,
+     211,
+     205,
+     188
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     1267,
+     1117,
+     1012,
+     1201
+    ],
+    "B": [
+     1181,
+     1248,
+     1350,
+     1161
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 173,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 3,
+    "nB": null
+   },
+   "err_max": 0.0,
+   "t_conflicto": 52,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2K",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": 1.9,
+    "D": 1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.09,
+     1.0
+    ],
+    "D": [
+     1.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     112,
+     91,
+     74,
+     62
+    ],
+    "B": [
+     33,
+     7,
+     16,
+     3
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     88,
+     43
+    ]
+   },
+   "vis": {
+    "A": [
+     113,
+     91,
+     74,
+     62
+    ],
+    "B": [
+     2340,
+     2233,
+     2312,
+     2375
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     143,
+     44
+    ]
+   },
+   "deaths": 106,
+   "splits": 3,
+   "split_t": [
+    [
+     51085,
+     "D"
+    ],
+    [
+     51085,
+     "D"
+    ],
+    [
+     51437,
+     "D"
+    ]
+   ],
+   "celdas": 33,
+   "solap": {
+    "AB": 0,
+    "nB": 0
+   },
+   "err_max": 0.442508,
+   "t_conflicto": 51085,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2K",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": 1.86,
+    "D": 1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.42,
+     0.0
+    ],
+    "D": [
+     1.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     133,
+     63,
+     83,
+     72
+    ],
+    "B": [
+     37,
+     3,
+     18,
+     6
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     79,
+     78
+    ]
+   },
+   "vis": {
+    "A": [
+     133,
+     63,
+     84,
+     72
+    ],
+    "B": [
+     2344,
+     3134,
+     2458,
+     2339
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     113,
+     78
+    ]
+   },
+   "deaths": 124,
+   "splits": 4,
+   "split_t": [
+    [
+     50855,
+     "D"
+    ],
+    [
+     50855,
+     "D"
+    ],
+    [
+     53102,
+     "D"
+    ],
+    [
+     53378,
+     "D"
+    ]
+   ],
+   "celdas": 34,
+   "solap": {
+    "AB": 0,
+    "nB": 0
+   },
+   "err_max": 0.442508,
+   "t_conflicto": 50855,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2L",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": -0.42,
+    "D": -2.25
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     132,
+     75,
+     91,
+     74
+    ],
+    "B": [
+     35,
+     14,
+     5,
+     6
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     133,
+     75,
+     92,
+     74
+    ],
+    "B": [
+     2415,
+     2467,
+     2257,
+     2380
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 144,
+   "splits": 3,
+   "split_t": [
+    [
+     17,
+     "A"
+    ],
+    [
+     17,
+     "A"
+    ],
+    [
+     17,
+     "A"
+    ]
+   ],
+   "celdas": 33,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "err_max": 0.332967,
+   "t_conflicto": 6,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2J",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": 1.96,
+    "D": 1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.67,
+     0.0
+    ],
+    "D": [
+     1.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     116,
+     75,
+     68,
+     44
+    ],
+    "B": [
+     33,
+     10,
+     17,
+     8
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     80,
+     49
+    ]
+   },
+   "vis": {
+    "A": [
+     116,
+     76,
+     68,
+     44
+    ],
+    "B": [
+     2330,
+     2203,
+     2330,
+     2371
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     138,
+     49
+    ]
+   },
+   "deaths": 125,
+   "splits": 1,
+   "split_t": [
+    [
+     50931,
+     "D"
+    ]
+   ],
+   "celdas": 31,
+   "solap": {
+    "AB": 0,
+    "nB": 0
+   },
+   "err_max": 0.442508,
+   "t_conflicto": 50931,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E1",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -2.96,
+    "C": -0.36,
+    "D": -2.07
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.96
+    ],
+    "C": [
+     0.33,
+     0.0
+    ],
+    "D": [
+     0.0,
+     1.97
+    ]
+   },
+   "mord": {
+    "A": [
+     133,
+     63,
+     82,
+     67
+    ],
+    "B": [
+     37,
+     3,
+     4,
+     2
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     133,
+     63,
+     82,
+     67
+    ],
+    "B": [
+     2344,
+     3134,
+     2284,
+     2284
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 138,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "err_max": 0.442508,
+   "t_conflicto": null,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2J",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": 1.83,
+    "D": 1.0
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.51,
+     1.0
+    ],
+    "D": [
+     1.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     90,
+     89,
+     74,
+     65
+    ],
+    "B": [
+     39,
+     6,
+     9,
+     3
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     74,
+     56
+    ]
+   },
+   "vis": {
+    "A": [
+     90,
+     89,
+     74,
+     65
+    ],
+    "B": [
+     2473,
+     2618,
+     2322,
+     2319
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     114,
+     56
+    ]
+   },
+   "deaths": 101,
+   "splits": 3,
+   "split_t": [
+    [
+     51514,
+     "D"
+    ],
+    [
+     52159,
+     "D"
+    ],
+    [
+     52968,
+     "D"
+    ]
+   ],
+   "celdas": 33,
+   "solap": {
+    "AB": 0,
+    "nB": 0
+   },
+   "err_max": 0.442508,
+   "t_conflicto": 51514,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2I",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": -2.88,
+    "D": -3.01
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.0,
+     2.88
+    ],
+    "D": [
+     0.0,
+     3.01
+    ]
+   },
+   "mord": {
+    "A": [
+     97,
+     89,
+     73,
+     37
+    ],
+    "B": [
+     36,
+     7,
+     10,
+     8
+    ],
+    "C": [
+     0,
+     0,
+     29,
+     6
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     97,
+     89,
+     73,
+     37
+    ],
+    "B": [
+     2303,
+     2423,
+     1493,
+     1116
+    ],
+    "C": [
+     0,
+     0,
+     1033,
+     1314
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 155,
+   "splits": 3,
+   "split_t": [
+    [
+     50151,
+     "C"
+    ],
+    [
+     50240,
+     "C"
+    ],
+    [
+     50256,
+     "C"
+    ]
+   ],
+   "celdas": 33,
+   "solap": {
+    "AB": 0,
+    "nB": 0
+   },
+   "err_max": 0.442508,
+   "t_conflicto": 50151,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2L",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -2.99,
+    "C": -0.42,
+    "D": -2.25
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     2.99
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     112,
+     104,
+     74,
+     104
+    ],
+    "B": [
+     41,
+     7,
+     8,
+     4
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     112,
+     106,
+     74,
+     105
+    ],
+    "B": [
+     2375,
+     2396,
+     2574,
+     2473
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 115,
+   "splits": 3,
+   "split_t": [
+    [
+     276,
+     "A"
+    ],
+    [
+     276,
+     "A"
+    ],
+    [
+     276,
+     "A"
+    ]
+   ],
+   "celdas": 33,
+   "solap": {
+    "AB": 0,
+    "nB": null
+   },
+   "err_max": 0.741501,
+   "t_conflicto": 52,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "CTRL2",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -2.98,
+    "C": -0.5,
+    "D": -2.49
+   },
+   "comp": {
+    "A": [
+     1.37,
+     0.78
+    ],
+    "B": [
+     1.37,
+     0.78
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     178,
+     77,
+     86,
+     82
+    ],
+    "B": [
+     105,
+     15,
+     14,
+     13
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     472,
+     78,
+     87,
+     82
+    ],
+    "B": [
+     1971,
+     2524,
+     2192,
+     2278
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 142,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 3,
+    "nB": null
+   },
+   "err_max": 0.0,
+   "t_conflicto": 52,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "CTRL2",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -2.97,
+    "C": -0.49,
+    "D": -2.48
+   },
+   "comp": {
+    "A": [
+     1.33,
+     0.95
+    ],
+    "B": [
+     1.33,
+     0.95
+    ],
+    "C": [
+     0.0,
+     0.0
+    ],
+    "D": [
+     0.0,
+     0.0
+    ]
+   },
+   "mord": {
+    "A": [
+     161,
+     87,
+     83,
+     104
+    ],
+    "B": [
+     78,
+     15,
+     18,
+     17
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     213,
+     87,
+     83,
+     104
+    ],
+    "B": [
+     2313,
+     2293,
+     2325,
+     2495
+    ],
+    "C": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 128,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 3,
+    "nB": null
+   },
+   "err_max": 0.0,
+   "t_conflicto": 6,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2I-misma",
+   "seed": 101,
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": -3.0,
+    "D": -2.99
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.0,
+     3.0
+    ],
+    "D": [
+     0.0,
+     2.0
+    ]
+   },
+   "mord": {
+    "A": [
+     91,
+     58,
+     40,
+     38
+    ],
+    "B": [
+     40,
+     6,
+     7,
+     10
+    ],
+    "C": [
+     0,
+     0,
+     5,
+     8
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     91,
+     58,
+     40,
+     38
+    ],
+    "B": [
+     2479,
+     2513,
+     1476,
+     1520
+    ],
+    "C": [
+     0,
+     0,
+     1586,
+     1251
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 187,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 0,
+    "nB": 3
+   },
+   "err_max": 0.442508,
+   "t_conflicto": null,
+   "t_techo": null,
+   "n_techo": 0
+  },
+  {
+   "etapa": "E2I-misma",
+   "seed": 102,
+   "W": {
+    "A": 1.0,
+    "B": -3.0,
+    "C": -3.0,
+    "D": -3.15
+   },
+   "comp": {
+    "A": [
+     1.0,
+     0.0
+    ],
+    "B": [
+     0.0,
+     3.0
+    ],
+    "C": [
+     0.0,
+     3.0
+    ],
+    "D": [
+     0.0,
+     2.0
+    ]
+   },
+   "mord": {
+    "A": [
+     105,
+     91,
+     37,
+     38
+    ],
+    "B": [
+     37,
+     9,
+     12,
+     5
+    ],
+    "C": [
+     0,
+     0,
+     4,
+     12
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "vis": {
+    "A": [
+     105,
+     91,
+     37,
+     38
+    ],
+    "B": [
+     2631,
+     2491,
+     1488,
+     1323
+    ],
+    "C": [
+     0,
+     0,
+     975,
+     1291
+    ],
+    "D": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "deaths": 168,
+   "splits": 0,
+   "split_t": [],
+   "celdas": 30,
+   "solap": {
+    "AB": 0,
+    "nB": 3
+   },
+   "err_max": 0.442508,
+   "t_conflicto": null,
+   "t_techo": null,
+   "n_techo": 0
+  }
+ ]
+}

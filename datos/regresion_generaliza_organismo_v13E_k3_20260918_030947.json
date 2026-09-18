@@ -1,0 +1,65 @@
+{
+ "meta": {
+  "fecha": "2026-09-18T03:09:58",
+  "modulo": "organismo_v13E_k3",
+  "semillas": [
+   101,
+   102
+  ],
+  "veredictos": {
+   "K_cobertura": true,
+   "G1_valor": false,
+   "G2_conducta": false
+  },
+  "sha_bateria": "c5b25e165339c569",
+  "sha_organismo": "92a96be77bb66a74",
+  "python": "3.14.2",
+  "numpy": "2.4.3"
+ },
+ "corridas": [
+  {
+   "modulo": "organismo_v13E_k3",
+   "regla": "azar",
+   "seed": 102,
+   "acc": 0.30000000000000004,
+   "ba": 0.43012460587128365,
+   "cobertura": 10,
+   "splits": 27,
+   "celdas": 57,
+   "deaths": 312
+  },
+  {
+   "modulo": "organismo_v13E_k3",
+   "regla": "px0",
+   "seed": 101,
+   "acc": 0.7,
+   "ba": 0.7843137357770135,
+   "cobertura": 10,
+   "splits": 28,
+   "celdas": 58,
+   "deaths": 268
+  },
+  {
+   "modulo": "organismo_v13E_k3",
+   "regla": "azar",
+   "seed": 101,
+   "acc": 0.7,
+   "ba": 0.7968518361673924,
+   "cobertura": 10,
+   "splits": 41,
+   "celdas": 71,
+   "deaths": 278
+  },
+  {
+   "modulo": "organismo_v13E_k3",
+   "regla": "px0",
+   "seed": 102,
+   "acc": 0.6,
+   "ba": 0.5473555540640418,
+   "cobertura": 10,
+   "splits": 29,
+   "celdas": 59,
+   "deaths": 308
+  }
+ ]
+}
