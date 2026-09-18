@@ -188,8 +188,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   conjuntivo (WTA lo abre 11/20). **Bloque 2/3 (A-6, 06:05): quitar la constante no desbloquea (0.500); con 8 patrones no hay
   información para seleccionar el rasgo (estadístico ideal 3/20); con 14 patrones la regla local llega a 1.000 en los nunca vistos
   (200 exposiciones). **DECISIÓN DEL DIRECTOR 07:10 (ERR-35): la línea XOR se cierra declarando el mínimo de ejemplos con el
-  que generaliza — 14 sí (1.000), 11 no, 8 nadie puede (9 de 15 hipótesis empatadas); el bloque 3/3 se corre igual con el mejor
-  mecanismo de la sala y ntr = 14 de control (cruzar con 8 = prior declarado). Después, el mundo vivo (F).**
+  que generaliza — 14 sí (1.000), 11 no, 8 nadie puede (9 de 15 hipótesis empatadas); **BLOQUE 3/3 (07:43): M3 "memoria de un golpe por combinación" (sala de
+  agentes) cruza XOR con 8 ejemplos: 1.000 en los 12 nunca vistos (registro y estricta), n* = 7, desempate al azar, azar en banda,
+  con 14 patrones también 1.000 → PRIOR ESTRUCTURAL de pares (declarado, no "aprende la estructura"); réplica 141–160 en curso;
+  candidato a v15 cuando pase examen y baterías en el tronco. Después, el mundo vivo (F).**
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;

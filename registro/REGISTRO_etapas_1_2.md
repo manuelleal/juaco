@@ -4612,3 +4612,38 @@ Datos `n2pred_s141-160_20260918_063750` (301e5c4359382aca). N1 19/20 en 121–14
 *"refutado en la raíz: el receptor no aprende el significado"*. **Lectura honesta:** con el mundo fuera de banda (el receptor aprende solo) ni
 siquiera el aprendizaje del significado se puede afirmar; la línea N2 vuelve al estado de antes de la noche — cerrada con dos mundos —
 más lo aprendido sobre el instrumento (ERR-32, ERR-33, ERR-34, ERR-36 y el teorema de la retina de 6 px). Nada se declara.
+
+
+### BLOQUE 3 de 3 del criterio de parada (XOR; 18 sep 07:43; semillas 121–140): **M3 "memoria de un golpe por combinación" CRUZA con 8 ejemplos — 1.000 en los 12 nunca vistos (puntuación del registro Y estricta), abre (P0, P1) en la sonda 20/20, n* = 7 exposiciones, con desempate al azar (X4: índice 1.000 = azar 1.000), px0 = 1.000, azar 0.500, y con 14 patrones también 1.000 → se declara PRIOR ESTRUCTURAL (candidatos = pares de píxeles), no aprendizaje de la estructura. Réplica 141–160 en curso.**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_xor_7.md` (3ebde4f9d433b477; escrito antes de correr por el creador A sobre el ganador de
+la sala); instrumento `organismo_g3A` (6e7d80db210b1950; por anclas desde `organismo_g3` del mini-equipo 3 de la sala, 91eb167023cb37b7;
+perillas `mem_apriori` —lectura en la sonda— y `mem_desempate='azar'`; identidad 10/10 + 3/3 en el runner); datos
+`xor_7_s121-140_20260918_073918` (a7f65e09b47b25ae), 360 corridas, 4 min. Mecanismo: 15 celdas de dos canales, una por par de píxeles,
+con 4 casillas de valor (una por combinación de los dos píxeles); la primera mordida de una combinación escribe R de un golpe (sin
+tasa, sin tope); cada celda lleva su error propio (EMA); la vía lenta lee sólo la celda de menor error; abstención (0) en combinaciones
+nunca vistas. Memoria: 15 × (4 + 1) escalares. Señal: el refuerzo de la propia mordida y nada más. Constantes del tronco v14.1.
+
+| brazo (xor01, 8 tren / 12 nunca vistos) | registro | ESTRICTA (abstención = fallo) | gana (0,1) en la sonda | n* (≥ 0.75) | px0 / azar |
+|---|---|---|---|---|---|
+| M3 (desempate por índice, como la sala) | 1.000 | 1.000 | 20/20 | 10 | 1.000 / 0.500 |
+| **M3_AZAR (decide)** | **1.000** [0.81, 1.00] | **1.000** | **20/20** | **7** | 1.000 / 0.500 |
+| M3_NTR14 (control de prior: 14 tren / 6 test) | 1.000 | 1.000 | 20/20 | 7 | 1.000 / 0.500 |
+| M4 (tabla por grupos, búsqueda ciega) | 1.000 | 1.000 | — | — | 1.000 / 0.550 |
+| REF (v13q6 + WTA, el mejor local anterior) | 0.500 | 0.500 | 14/20 | > 600 | 1.000 / 0.500 |
+| SIN_SEL | 0.469 | 0.469 | 0/20 | > 600 | 1.000 / 0.500 |
+
+X1 OK (1.000 ≥ 0.75; > REF 20/20), X2 OK (estricta 1.000 ≥ 0.60), X3 OK (20/20), **X4 rigging OK** (|índice − azar| = 0), X5 OK (con 14: 1.000
+≥ 0.90), X6 OK (px0 1.000; azar 0.500 en banda). Cláusula de muestreo: 2/20 semillas sin una clase mordida (iguales en todos los brazos).
+Cobertura de la celda ganadora 4/4. La predicción del creador (≥ 0.94 registro, ≥ 0.75 estricta) se cumple con exceso.
+
+**Lectura (ERR-35, letra acordada):** con 8 ejemplos no se puede *seleccionar* el rasgo (9 de 15 hipótesis empatan); lo que M3 hace es
+**no elegir**: guarda el valor de cada combinación de cada par la primera vez que la muerde y responde con el par que menos se equivoca.
+Es un **prior estructural** (los rasgos que importan son pares de píxeles co-activos), declarado como tal, no "aprende XOR": los
+nunca vistos se aciertan porque comparten la combinación (P0, P1) con los vistos. Con ese prior bastan **7 exposiciones** (el gradiente
+exacto necesitaba 10 con los rasgos dados; el tronco, > 600). Dos grupos independientes de la sala (uno desde la plasticidad de un
+disparo, BTSP; otro desde una búsqueda ciega de 432 reglas con semillas retenidas) convergieron en "escribir de un golpe la primera
+vez". **Vocabulario:** *"con 8 ejemplos XOR exige un prior de pares, y con él bastan 7 exposiciones; con 14 ejemplos no hace falta
+prior (1.000 con la regla local y competencia, 200 exposiciones)"*. Los dos enunciados son compatibles y los dos son resultados.
+**Qué falta:** réplica 141–160 (en curso); llevar la memoria por pares a la vía lenta del tronco (copia por anclas de `organismo_v14`)
+con examen v3'' completo, generalización y recuperación intactas → candidato a **v15**, decisión del director.
