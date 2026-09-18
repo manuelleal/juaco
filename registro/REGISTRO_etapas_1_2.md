@@ -3509,3 +3509,45 @@ K 20/20, G1 px0 0.800 / azar 0.500 / px0 > azar 18/20, G2 px0 0.892 / azar 0.458
 método: mi primera comparación (semillas 41–60 contra el registro de 101–120) parecía una divergencia y no lo era —
 comparar siempre las mismas semillas antes de sospechar del gemelo. La batería acepta ahora el módulo
 `organismo_v13_rapido`; la regla 1 de `CLAUDE.md` puede correrse con él en segundos (con la identidad verificada).
+
+
+### Bloque 3d (día 7, 22:55): regla fusionada del trío (constante + vector con signo + decaimiento) — **REFUTADA (0.500); lo que queda es un problema de identificabilidad**
+
+Preregistro `experimentos/nivel7_xor_lectura/PREREGISTRO_xor_3d.md` (agente diseñador; `lam_lenta = 0.002` atado a T = 100 000 por
+~331 actualizaciones pre-sonda); instrumento `organismo_v13q3.py` (`b71bbe41a7326aaf`, knobs apagados ≡ `organismo_v13q`
+12/12); datos `xor_3d_s41-60_20260917_225535` (`3e2489b1b02d4f19`), 360 corridas.
+
+| brazo (xor01, nunca vistos) | `acc` | **`acc_lenta`** | `Ws(P0)` | `Ws(P1)` | `Ws(P0·P1)` |
+|---|---|---|---|---|---|
+| lineal (v13) | 0.375 | 0.344 | +0.03 | −0.45 | — |
+| cuadrática, dos canales (3b) | 0.562 | 0.500 | −0.11 | −0.39 | −1.16 |
+| **cuadrática + constante + delta con signo + decaimiento** | 0.500 | **0.500** [0.25, 0.81] | −0.00 | −0.29 | −0.83 |
+| lo mismo sin constante | 0.531 | 0.500 | −0.00 | −0.27 | −0.91 |
+| lineal + delta (control) | 0.406 | 0.406 | — | — | — |
+| random15 + delta (control) | 0.500 | 0.469 | — | — | — |
+
+Z1 **NO** (> dos canales sólo 5/20), Z2 OK, Z3 OK (px0 1.000 / azar 0.500 en todas las lecturas: la regla nueva no rompe lo
+lineal), Z4 1/20. Curva preregistrada: sin clases XOR sin morder (n = 17) la mediana sigue en 0.500 → **la cota de
+muestreo no es la causa principal**. Los marginales de P0 y P1 quedan en cero también con la regla delta con signo.
+
+**Lectura (con el informe del investigador `registro/investigacion/xor_mecanismos_locales_20260917.md`, mecanismo 3):**
+con 8–10 patrones de entrenamiento y 21–22 rasgos, la partición XOR está **indeterminada**: existen muchas soluciones que
+separan lo visto usando los otros píxeles y sus productos (rasgos espurios), y ninguna regla local que sólo ve el error
+puede preferir la que usa P0, P1 y P0·P1. No es la dimensión (random15), ni la puerta (3b), ni el reparto del error
+(3d): es **identificabilidad**. Diagnóstico decisivo, preregistrado como 3e: darle a la vía lenta sólo {P0, P1, P0·P1, 1}
+("oráculo"); si generaliza ≥ 0.80, el límite es de **selección de rasgos** (sesgo inductivo), no de la regla; si no,
+la regla tampoco puede con 4 rasgos y el problema es otro. Vocabulario: *XOR sigue sin generalizarse; tres reglas y tres
+lecturas refutadas; el candidato a causa es la identificabilidad, pendiente de 3e*.
+
+### Investigación del equipo (dos informes, Sonnet), integrados como dato
+
+- `registro/investigacion/xor_mecanismos_locales_20260917.md`: negative patterning en abejas/moscas resuelto por el cuerpo
+  fungiforme vía celdas conjuntivas ("unique cue", Deisig–Lachnit–Giurfa 2001; Devaud 2015) — sugiere probar la vía
+  RÁPIDA sola (`eta_s = 0`) y K = 5 en vez de 3; leaky-LMS (Widrow) da λ ≈ ln 2 / n_actualizaciones ≈ 0.0021, la misma
+  banda que el trío halló a tanteo; paridad es dura para expansiones aleatorias (Bengio–Delalleau–Le Roux 2006;
+  Daniely–Malach 2020): random15 = 0.50 no es accidente; currículo local por cuenta de mordidas por celda.
+- `registro/investigacion/exploracion_sin_atraccion_20260917.md`: cinco mecanismos sin atracción extra; el más limpio,
+  **olvido de `M` en ausencia** (`_Mset[pos] = False` si `t − t_visita > 4000`) combinado con la dosis barata de novedad
+  0.6; normalización divisiva (Louie–Khaw–Glimcher 2013) como control barato; "paradoja de exposición" (confirmar que un
+  sitio ya no es veneno exige acercarse, y el mapa lo impide) como límite compartido de 3 y 5. Dato de arquitectura
+  subrayado: `valor()` sólo cambia al morder; pisar sin morder no toca lo aprendido.
