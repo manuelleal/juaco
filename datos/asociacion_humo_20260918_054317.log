@@ -1,0 +1,47 @@
+[05:43:17 +    0.0s] HUMO asociación (un proceso, sin Pool). identidad (3 casos, T=20000) + 4x2x2 corridas de T=20000, semillas [101, 102].
+[05:43:17 +    0.0s] sha preregistro 6d9bcaed17893ffa  script 75933d719b792961  constructor 22893c8bef8a8440  organismo_v14gL 1d3bca2d54b7a064  identidad_v14gL 6b8112e84bd38e53  origen organismo_v14g (congelado) 1f1318480cd34cde  origen bateria_generaliza (congelada) 9d65c18e0237da97
+[05:43:29 +   11.8s]    identidad regla=px0    s101: IDENTICO
+[05:43:29 +   11.8s]    identidad regla=xor01  s101: IDENTICO
+[05:43:29 +   11.8s]    identidad regla=azar   s101: IDENTICO
+[05:43:29 +   11.8s]    identidad interna: 3/3
+[05:43:29 +   11.8s] corridas: 16 (T=20000, fase2_en=10000)...
+[05:43:31 +   13.9s]    1/16  v14        px0   s101  exp_hasta_semilla=4.0 (2/10 asociaron)  acc=0.700  ba=0.918  n_sem=0 n_des=0
+[05:43:33 +   16.0s]    2/16  v14        px0   s102  exp_hasta_semilla=2.5 (2/10 asociaron)  acc=0.800  ba=0.625  n_sem=0 n_des=0
+[05:43:35 +   18.0s]    3/16  v14        azar  s101  exp_hasta_semilla=4.0 (1/10 asociaron)  acc=0.700  ba=0.703  n_sem=0 n_des=0
+[05:43:38 +   20.1s]    4/16  v14        azar  s102  exp_hasta_semilla=4.0 (2/10 asociaron)  acc=0.500  ba=0.491  n_sem=0 n_des=0
+[05:43:40 +   22.2s]    5/16  via_lenta  px0   s101  exp_hasta_semilla=3.0 (1/10 asociaron)  acc=0.700  ba=0.883  n_sem=13 n_des=1
+[05:43:42 +   24.3s]    6/16  via_lenta  px0   s102  exp_hasta_semilla=2.0 (1/10 asociaron)  acc=0.900  ba=0.684  n_sem=16 n_des=4
+[05:43:44 +   26.4s]    7/16  via_lenta  azar  s101  exp_hasta_semilla=  n/a (0/10 asociaron)  acc=0.800  ba=0.779  n_sem=20 n_des=4
+[05:43:46 +   28.5s]    8/16  via_lenta  azar  s102  exp_hasta_semilla=4.0 (3/10 asociaron)  acc=0.500  ba=0.523  n_sem=22 n_des=6
+[05:43:48 +   30.7s]    9/16  HD         px0   s101  exp_hasta_semilla=2.5 (2/10 asociaron)  acc=0.600  ba=0.812  n_sem=15 n_des=4
+[05:43:51 +   33.2s]    10/16  HD         px0   s102  exp_hasta_semilla=2.0 (1/10 asociaron)  acc=0.900  ba=0.875  n_sem=14 n_des=5
+[05:43:52 +   35.0s]    11/16  HD         azar  s101  exp_hasta_semilla=3.5 (4/10 asociaron)  acc=0.600  ba=0.795  n_sem=24 n_des=4
+[05:43:55 +   37.3s]    12/16  HD         azar  s102  exp_hasta_semilla=1.0 (1/10 asociaron)  acc=0.500  ba=0.571  n_sem=17 n_des=8
+[05:43:57 +   39.4s]    13/16  grafo      px0   s101  exp_hasta_semilla=1.0 (2/10 asociaron)  acc=0.800  ba=0.932  n_sem=5 n_des=2
+[05:43:59 +   41.5s]    14/16  grafo      px0   s102  exp_hasta_semilla=3.0 (2/10 asociaron)  acc=0.600  ba=0.734  n_sem=4 n_des=2
+[05:44:01 +   43.8s]    15/16  grafo      azar  s101  exp_hasta_semilla=1.0 (1/10 asociaron)  acc=0.800  ba=0.783  n_sem=4 n_des=2
+[05:44:04 +   46.1s]    16/16  grafo      azar  s102  exp_hasta_semilla=1.0 (1/10 asociaron)  acc=0.500  ba=0.492  n_sem=16 n_des=4
+[05:44:04 +   46.1s] TABLA -- exp_hasta por brazo y mundo (mediana de medianas por semilla; censuradas excluidas).
+[05:44:04 +   46.1s]    px0   v14        exp_hasta 3.2  (n_ok=2/2, censuradas=0)   acc 0.750  ba 0.771
+[05:44:04 +   46.1s]    px0   via_lenta  exp_hasta 2.5  (n_ok=2/2, censuradas=0)   acc 0.800  ba 0.784
+[05:44:04 +   46.1s]    px0   HD         exp_hasta 2.2  (n_ok=2/2, censuradas=0)   acc 0.750  ba 0.844
+[05:44:04 +   46.1s]    px0   grafo      exp_hasta 2.0  (n_ok=2/2, censuradas=0)   acc 0.700  ba 0.833
+[05:44:04 +   46.1s]    azar  v14        exp_hasta 4.0  (n_ok=2/2, censuradas=0)   acc 0.600  ba 0.597
+[05:44:04 +   46.1s]    azar  via_lenta  exp_hasta 4.0  (n_ok=1/2, censuradas=1)   acc 0.650  ba 0.651
+[05:44:04 +   46.1s]    azar  HD         exp_hasta 2.2  (n_ok=2/2, censuradas=0)   acc 0.550  ba 0.683
+[05:44:04 +   46.1s]    azar  grafo      exp_hasta 1.0  (n_ok=2/2, censuradas=0)   acc 0.650  ba 0.638
+[05:44:04 +   46.1s] 
+[05:44:04 +   46.1s] px0 -- candidatos (baja >=30% Y pareo >= 2/2): ['HD']
+[05:44:04 +   46.1s]    via_lenta  exp 2.5 vs v14 3.2  baja30=False  pareo 2/2 OK
+[05:44:04 +   46.1s]    HD         exp 2.2 vs v14 3.2  baja30=True  pareo 2/2 OK
+[05:44:04 +   46.1s]    grafo      exp 2.0 vs v14 3.2  baja30=True  pareo 1/2 FALLA
+[05:44:04 +   46.1s] azar -- ningún brazo debe bajar >10% ni ganar sin que el engaño cueste: FALLA
+[05:44:04 +   46.1s]    via_lenta  exp 4.0 vs v14 4.0  no_baja10=True  engano_cuesta=True
+[05:44:04 +   46.1s]    HD         exp 2.2 vs v14 4.0  no_baja10=False  engano_cuesta=False
+[05:44:04 +   46.1s]    grafo      exp 1.0 vs v14 4.0  no_baja10=False  engano_cuesta=False
+[05:44:04 +   46.1s] G1 (v14, px0) = 0.750 (>= 0.8)  FALLA
+[05:44:04 +   46.1s] G2 (por brazo, px0) = {'via_lenta': '0.784', 'HD': '0.844', 'grafo': '0.833'} (>= 0.85)  FALLA
+[05:44:04 +   46.1s] 
+[05:44:04 +   46.1s] VEREDICTO: NO CONFIRMA HB4-regla: ['HD'] baja(n) >= 30% en px0, pero el contraste con azar falla (algún brazo también baja en azar, o el engaño no cuesta) -> asocia más rápido en general, no específicamente donde el parecido predice el valor.
+[05:44:04 +   46.1s] *** 2 semilla(s): NINGÚN criterio de §6-8 vale como evidencia (se preregistraron 20). Esto es diagnóstico de montaje.
+[05:44:04 +   46.1s] datos -> asociacion_humo_20260918_054317.json  sha256_16 = 24331fc730489909
