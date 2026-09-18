@@ -1,6 +1,53 @@
 # PLAN — Traspaso a Claude Code y etapas siguientes
 
-> **ORDEN VIGENTE AL 17 SEP 2026 (día 5, noche). Manda sobre todo lo de abajo, incluido el bloque del día 4.**
+> **ORDEN VIGENTE PARA EL DÍA 6 (escrito el 17 sep 2026, 20:30, al cierre del día 5). Manda sobre todo lo de abajo.**
+> **Tronco: v13** (`v13-tronco`). Etapas **1, 2, 3, 4, 5-N1, 5-N3 CERRADAS**; niveles 6 y 7 del brief con resultado replicado;
+> nivel 8/9 con hallazgos. Detalle: `CLAUDE.md` (bloque día 5), `HANDOFF.md` §11.6 y §12, `REGISTRO_etapas_1_2.md` (final).
+> Regla 12 vigente: decidir → preregistrar → commit → correr → registrar; el director audita después.
+>
+> **Bloque 0 — herramienta, antes de cualquier ciencia (≤ 1 h):** gemelo rápido del organismo.
+>   `pip install numba`; si hay rueda para Python 3.14, `organismo/organismo_v13_rapido.py` compilado con **identidad bit a
+>   bit** contra `organismo_v13.py` (todas las claves, 6 semillas × {base, invertir, nuevo} y las tres baterías). Si numba
+>   no existe para 3.14 o la identidad no es bit a bit: poda del bucle en Python puro (`see()`, `code()`, sesgo del mapa)
+>   con la misma identidad; meta 2–3×. **Un gemelo que no sea bit a bit sólo sirve para explorar, nunca para confirmar.**
+>
+> **Bloque 1 — cabos del plan del debate (cortos, en este orden):**
+>   1a. 3T-k con k = 4 y 5 (¿dónde se agota la composición?; celdas usadas: 35 → 41 → 58 con k = 1, 2, 3).
+>       Predicción: k = 4 compone (sep ≥ 1.5) y k = 5 no, por agotamiento del pool de 90 celdas. Control barajado igual.
+>   1b. Mundo largo guardando `W` por patrón: separar olvido de inversión en ausencia (R1). Predicción: los 6 primeros no
+>       invertidos ≥ 0.70 de signo correcto al final; los 4 invertidos ausentes ≈ 0 (no pueden saberlo: por construcción).
+>   1c. N3d sin emisor: tras 200 000 con señal, 50 000 más con el emisor mudo. Predicción: el receptor ciego por construcción
+>       cae a ≈ 0.50 (obedece, no aprende: su vista no puede saber). Variante con vista parcial (mundo de N3c) en la que
+>       la señal sí puede arrancar aprendizaje propio: predicción ≥ 0.80 sostenido sin emisor en ≥ 15/20.
+>
+> **Bloque 2 — nivel 8 propio: el canje exploración/explotación del mapa.** El mapa da de comer (490 vs 332) pero daña la
+>   adquisición de lo nuevo (0.70 vs 0.88). Órgano candidato: **curiosidad por progreso de error** (nivel8 §3, puntos 8–9:
+>   sesgo hacia el estímulo cuyo error cae más rápido, no el más alto ni el más bajo). Brazos: v13, +mapa, +mapa+curiosidad,
+>   +mapa+curiosidad con prioridad aleatoria (control). Predicción: +curiosidad recupera la adquisición de v13 (≥ 0.85 a
+>   ≤ 30 vistos) sin perder la comida del mapa (≥ 450 en Q4, pareado ≥ 15/20); el control aleatorio no lo hace.
+>
+> **Bloque 3 — apuesta de frontera: XOR como límite de LECTURA (Cover 1965).** Congelar Kenyon; cambiar sólo la lectura:
+>   vía lenta **cuadrática** (15 productos de pares de píxeles además de los 6 píxeles). Predicción: `xor01` en nunca vistos
+>   ≥ 0.80 si el límite era de lectura; ≤ 0.60 → el límite es de representación y se registra así. Controles: la vía
+>   cuadrática con productos barajados; `bateria_generaliza` (px0 y azar) sin caer.
+>
+> **Bloque 4 — decisión de tronco (sólo si pasa el bloque 2):** candidato **v14 = v13 + mapa + curiosidad** (y la vía
+>   cuadrática si pasa el bloque 3): examen criterio v3' en semillas nuevas + `bateria_generaliza 20` + regresión completa
+>   + 3T-k + mapa. Si no pasa el bloque 2, **v13 sigue siendo el tronco** y mapa/`gamma_soc` quedan como órganos de
+>   experimento validados en su mundo (registrados en `experimentos/evo/LINAJE.md`).
+>
+> **Bloque 5 — N2 reabierto donde el mundo lo permite:** N2b (símbolo como sesgo + ventaja) en el mundo con reaparición en
+>   sitio (`mundo_social_n3`, `regen = 50`), que equilibra visitas (la causa registrada del cierre). Predicción: contraste
+>   ≥ 0.5 en ≥ 10/20 y beneficio ≥ 1.2 × N0 en ≥ 15/20. Si cae, N2 queda cerrado con dos mundos.
+>
+> **Bloque 6 — exploratorio (rama, 5–10 semillas):** modelo de sí mismo mínimo = predictor de la propia energía
+>   (allostasis, nivel 9 §3): el organismo predice ΔE del próximo bocado con su propio valor y usa el **error de esa
+>   predicción** como señal de sorpresa que module `eta`. Sólo se mide; no se declara nada.
+>
+> Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
+> (lista de la noche del 17: canal simétrico, acierto sin balancear, mundo que se come la comida, sitios que se memorizan).
+>
+> **ORDEN DEL 17 SEP 2026 (día 5, noche). Histórico; lo manda el bloque del día 6 de arriba.**
 > **Tronco: v13** (`v13-tronco`). Etapas **1, 2, 3, 4 y 5-N1 CERRADAS**. Detalle en `CLAUDE.md` (bloque día 5) y
 > `HANDOFF.md` (sección 11).
 > 1. ✅ v11 (evolución guiada, JUACO-EVO gen 1) cierra la Etapa 4; capacidad ×5; **pero reabre la Etapa 3** (ERR-20).

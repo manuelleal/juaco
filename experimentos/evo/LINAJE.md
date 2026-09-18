@@ -62,3 +62,15 @@ la selección; las 21–40 las leyó el autor de la mutación al diagnosticar al
 lo propuso un subagente LLM con una hipótesis escrita antes de evaluarlo, lo seleccionó un evaluador automático y lo
 auditó el protocolo. **Pendiente antes de llamarlo mejor en todo:** re-verificar generalización (Etapa 3) y composición
 temporal (3T) sobre v11; la hija ciega fuera del patrón podría costarle generalización.
+
+
+## Órganos de experimento validados en su mundo, fuera del tronco (17 sep 2026, noche)
+
+| órgano | dónde vive | qué demostró (replicado) | por qué NO está en el tronco todavía |
+|---|---|---|---|
+| **Tabla `M`** (posición → último patrón visto; con la retina vacía suma por dirección el valor descontado de lo recordado) | `experimentos/nivel6_mapa/mundo_mapa.py` (`usa_M`, `gamma_M = 0.6`, `H = 20`, `disc = 0.9`) | elige el lado de la comida recordada fuera de la vista (0.81 / 0.80 contra 0.48 / 0.50; invertido 0.11) y come más (490 vs 332) | en el mundo largo **daña la adquisición de lo nuevo** (0.70 vs 0.88): explota y no explora. Candidato a v14 sólo con la curiosidad (plan día 6, bloque 2) y tras el examen v3' |
+| **`gamma_soc`** (la conducta ajena reciente sobre el mismo patrón sesga la decisión; `escucha` por organismo) | `experimentos/etapa5_comunicacion/mundo_social_n3.py` (`gamma_soc = 1.5`, `tau_soc = 400`) | un receptor ciego por construcción acierta con la conducta del que ve (0.52 → 0.82; barajada 0.48; emisor que no sabe 0.51; 20/20 ×2) | es un canal social, no un órgano del cuerpo: sólo tiene sentido con otro organismo presente. No se ha medido si el receptor aprende algo propio (plan día 6, 1c) |
+
+Los dos nacieron del plan del debate de niveles 5–10 (`registro/investigacion/DEBATE_y_plan_5a10.md`), no de JUACO-EVO.
+Mundos nuevos que quedan como instrumentos: `mundo_temporal_k` (historia de k pasos), `mundo_mapa` (visión limitada y
+sitios fijos), `mundo_largo` (50 patrones + cambio de regla), `mundo_social_n3` (máscaras, reaparición en sitio, parejas).

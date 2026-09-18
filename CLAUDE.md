@@ -116,7 +116,11 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   vista/valencia opuesta: receptor ciego 0.515 solo → 0.822 con la conducta del que ve; barajada 0.48; emisor que no
   sabe 0.51; 20/20 en los tres; `N3d_s61-80_20260917_200706`; réplica 81–100 igual: 0.811 contra 0.516 solo, barajada 0.487, emisor que no sabe 0.515, 20/20 en los tres (N3d_s81-100_20260917_201205, 454fb54abddb2146)).** · **(4) mundo largo (`nivel8_mundo_largo/`): compuesto ❌;
   v13 sigue aprendiendo hasta los 50 patrones (0.80), se recupera de la inversión en ~2 000 pasos (18/20), el mapa
-  daña la adquisición (0.70 vs 0.88)** (`largo_s1-20_20260917_200026`). · Resumen de la noche: HANDOFF 11.6. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
+  daña la adquisición (0.70 vs 0.88)** (`largo_s1-20_20260917_200026`). · Resumen de la noche: HANDOFF 11.6.
+- **PLAN DEL DÍA 6 (vigente): `registro/PLAN.md`, bloque de arriba.** Bloque 0 gemelo rápido con identidad bit a bit;
+  bloque 1 cabos (3T-k k=4,5; `W` por patrón en el mundo largo; N3d sin emisor); bloque 2 curiosidad por progreso de
+  error contra el canje del mapa; bloque 3 XOR como límite de lectura (vía lenta cuadrática); bloque 4 decisión v14
+  sólo si pasa el 2; bloque 5 N2b en el mundo con reaparición; bloque 6 rama allostasis. Tronco sigue siendo v13. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
   mundo de 20 patrones deja 0/10 comidas conocidas).
 - **Hallazgos del día, en orden:** (a) **JUACO-EVO**: 4 mutaciones LLM contra 24 ciegas; el LLM halló en **una**
   generación un órgano que yo no diseñé (P1 sostenida; `experimentos/evo/LINAJE.md`). (b) v11 cerró la Etapa 4 y

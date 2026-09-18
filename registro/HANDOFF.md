@@ -399,6 +399,18 @@ en el mundo largo para separar olvido de inversión (R1); (c) medir si las divis
 (e) XOR como límite de lectura (apuesta de frontera del debate). Instrumentos: `experimentos/nivel7_3T_k/`,
 `nivel6_mapa/`, `etapa5_comunicacion/{mundo_social_n3,corre_N3*}`, `nivel8_mundo_largo/`.
 
+## 12. Plan del día 6 (escrito al cierre del día 5; es el bloque vigente de `PLAN.md`)
+El orden y las predicciones están en `registro/PLAN.md` (bloque "ORDEN VIGENTE PARA EL DÍA 6"). En una línea cada uno:
+**0** gemelo rápido del organismo (numba o poda) con identidad bit a bit — sin eso, cada bloque tarda minutos que son de
+Python, no de ciencia; **1** cabos: 3T-k k=4,5 (¿dónde se agota?), `W` por patrón en el mundo largo, N3d sin emisor;
+**2** curiosidad por progreso de error contra el canje exploración/explotación del mapa (el nivel 8 real); **3** XOR como
+límite de lectura (vía lenta cuadrática, Kenyon congelado); **4** v14 sólo si pasa el 2; **5** N2b en el mundo con
+reaparición; **6** rama allostasis. **Estado de los órganos:** el tronco es v13; la tabla `M` (mapa) y `gamma_soc`
+(conducta ajena en la decisión) son **órganos de experimento validados en su mundo**, no del tronco: el mapa cobra la
+comida en exploración y todavía no se ha probado que no dañe retención/generalización en el examen. Todo está
+commiteado (`git log`) y respaldado en `JUACO/respaldo/juaco_bundle_20260917_*.bundle`; **no hay remoto**: crear uno
+(GitHub privado) es la primera decisión que espera al director.
+
 ## 11.5-viejo Estado al cierre de la sesión (noche del 17 sep) y cómo retomar N2 (superado por lo de arriba)
 - **Lo que está corriendo o acaba de terminar:** `experimentos/etapa5_comunicacion/corre_N2.py` (N2, significado
   emergente). Su preregistro es `PREREGISTRO_N2.md` (escrito antes; criterios E1–E5, K1–K2, predicciones y refutación).

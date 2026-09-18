@@ -140,3 +140,14 @@ auto-repaso quedan diseñados. Se retoman si un lector externo o un colaborador 
 - **A un año:** una réplica externa de un resultado cualquiera, o un cuerpo físico que aprenda.
 - **Lo que no va a pasar:** que JUACO cambie la IA. Lo que sí puede pasar: que sea el ejemplo que alguien use para
   enseñar cómo se hace ciencia con agentes sin engañarse. Eso ya sería mucho.
+
+
+## Dónde estamos en la escalera al cierre del día 5 (17 sep 2026, 20:30) — actualización honesta
+
+Niveles del brief con resultado replicado y controles: **5** (transferencia entre sensores por conducta, N3d), **6** en su
+forma mínima (elegir dirección hacia lo recordado, mapa), **7** (composición de 3 pasos de historia, 3T-k). Con hallazgo
+sin cerrar: **8** (sigue aprendiendo hasta el techo de la retina; el mapa cobra exploración) y **9** (se recupera de un
+cambio de regla en ~2 000 pasos). Sin tocar: **10**, y no se declara (regla 8). La comunicación semántica (N2) sigue
+cerrada por el mundo, no por el organismo. Lo que separa esto de "un ser": no hay modelo de sí mismo, no hay lenguaje,
+no hay dominio nuevo. El plan del día 6 (`PLAN.md`) ataca el canje exploración/explotación (nivel 8) y el límite de
+lectura (XOR); el modelo de sí mismo entra como rama exploratoria (bloque 6).
