@@ -5278,3 +5278,29 @@ emisor no puede avisar de lo que él mismo evita. **Siguiente (preregistro nuevo
 que sí descubre (por ejemplo, un emisor "voraz" o que recibió a su vez el aviso de un tercero: la cadena), misma letra en el receptor y
 en los controles, semillas 581–600 y réplica; y para la variante, el candidato de varias ganadoras (nodo por familia). Nivel 5 sigue en
 50 % hasta la serie válida.
+
+
+### BLOQUE 4b — el emisor que sí descubre (voraz = 1.0; ERR-51); tres series (18 sep 18:10, 18:15, 18:22; semillas 581–600, 601–620, 621–640): **NADA SE DECLARA por la letra — cada serie cayó en una puerta de montaje distinta (P-I3 por el brazo R-SIN-SAL, ERR-52; P-I5 en la dirección + por la puerta de familiaridad: 6/20 receptores ya leían por la vía rápida) — pero LA DIRECCIÓN IRREEMPLAZABLE (−: el receptor come a la primera el alimento que evitaba, sólo por el mensaje) pasa TODAS sus puertas en la tercera serie y replica en las tres: CANAL− 19/20, 17/18, 19/19 contra CORTADO− 3/20, 0/18, 2/19; emisor voraz avisa 20/20, 18/20, 19/20**
+
+Preregistro `PREREGISTRO_bloque4b_emisor.md` (86c08ed4e0ba9821 + ERR-52); instrumento `organismo_familias_b4b.py` (b3dd1d7e66a2d147; identidad 95/95 +
+18/18 por runner); datos `familias_b4b_s581-600_20260918_181001` (541f57d7711ae3e7), `familias_b4b_s601-620_20260918_181548` (e42c6a5e99dd5a86),
+`familias_b4b_s621-640_20260918_182209` (206665f9bd674335); 340 corridas por serie.
+
+| brazo (semillas con mensaje) | − come a la 1.ª lo que evitaba (3 series) | + evita a la 1.ª el veneno nunca mordido (3 series) |
+|---|---|---|
+| **CANAL** | **19/20 · 17/18 · 19/19** | 18/20 · 18/19 · 14/20 |
+| CORTADO (gemelo mudo) | 3/20 · 0/18 · 2/19 | 4/20 · 2/19 · 2/20 |
+| BAR-H (patrón de una hermana) | 12/18 · 14/19 (serie 2, 3) | 18/20 · 14/20 |
+| BAR-T (otro token) | 5/18 · 7/19 | 11/20 (serie 3) |
+| VALOR (sin referencia) | 3/18 · 3/19 | 1/20 |
+| PAR (dos variantes tras el mensaje) / PAR0 | 18/18 · 19/19 / 3/18 · 1/19 | — |
+
+Puertas: P-I2 (emisor avisa ≥ 18/20) pasa en las tres (+) y en la 1.ª y 3.ª (−) (18/20 en la 2.ª: regla 12); P-I3 cae en las series 1–2 sólo por
+OTRO (ERR-52) y pasa en la 3.ª; P-I4 pasa; **P-I5 (la boca lee la vía lenta ≥ 18/20): (−) 19/19 pasa, (+) 14/20 cae** — en 6 semillas el receptor
+ya tenía ≥ 5 mordidas del código del referente y leyó la vía rápida: el mensaje quedó escrito y no consultado (el segundo punto ciego, previsto
+en el protocolo de la sala 3 §2.7). Precio: `comH` 1.0 (la referencia es de familia; `n_H = 1`, errata del 4 §9.3). **Lectura honesta:** la
+comunicación con referencia de familia existe y es robusta en la única dirección donde el receptor no puede aprender solo; la dirección (+)
+compite con la vía rápida cuando el receptor ya conoce el referente. Por la letra del 4b (puertas conjuntas para las dos direcciones) nada se
+declara; **la declaración exige un preregistro con puertas POR DIRECCIÓN (ERR-53: montaje — las dos direcciones tienen puntos ciegos
+distintos y no pueden compartir puerta), semillas nuevas 641–660 y réplica 661–680, sólo brazos (−).** Escrito antes de correrlo (18:30).
+Nivel 5: 50 % → **65 %** (mensaje con referencia actuado sin experiencia propia, tres series; sin declarar).

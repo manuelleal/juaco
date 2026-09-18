@@ -360,3 +360,7 @@ medir.
 
 ## ERR-52 (coordinador, 18 sep 18:25; escrito ANTES de la serie 621–640)
 La puerta P-I3 exigía prefijo idéntico también a OTRO± (R-SIN-SAL), cuyo receptor vive en un mundo sin el referente: su gemelo no es CORTADO y el prefijo difiere por construcción (0/20 en las dos series, 20/20 en los once brazos restantes). Se excluye OTRO de P-I3; ningún otro umbral cambia; las series 581–600 y 601–620 se reportan como quedaron (nada declarado) y se corre una serie nueva 621–640 con la puerta corregida.
+
+
+## ERR-53 (coordinador, 18 sep 18:30; escrito ANTES de las series 641–660 y 661–680)
+Las dos direcciones tienen puntos ciegos distintos (−: el emisor no muerde lo que evita, resuelto con voraz; +: el receptor ya conoce el referente y lee la vía rápida, P-I5 14/20) y no pueden compartir puerta. Se corre SÓLO la dirección (−) (brazos CANAL−, CORTADO−, BAR-H−, BAR-T−, VALOR−, INM−, OTRO−, PAR−, PAR0−) con TODAS sus puertas (P-I2 ≥ 18/20, P-I3 sin OTRO, P-I4, P-I5 ≥ 18/20) y la letra del receptor sin cambios (CANAL ≥ 15/20 contra CORTADO ≤ 5/20; BAR-H se reporta como referencia de familia; VALOR y BAR-T ≤ CORTADO + 3). Semillas 641–660 y réplica 661–680. La dirección (+) queda para un preregistro con receptor sin familiaridad previa (deriva más tardía), no aquí.

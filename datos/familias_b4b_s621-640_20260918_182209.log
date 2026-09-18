@@ -1,0 +1,69 @@
+[18:22:09 +    0.0s] ARRANQUE BLOQUE 4b (emisor que SI descubre en la direccion ciega, voraz=1.0): brazos ['CANAL+', 'CORTADO+', 'BAR-H+', 'BAR-T+', 'VALOR+', 'INM+', 'OTRO+', 'CANAL-', 'CORTADO-', 'BAR-H-', 'BAR-T-', 'VALOR-', 'INM-', 'OTRO-', 'PAR-', 'PAR0-'], semillas 621-640, T=100000. Pool(14).
+[18:22:09 +    0.0s] El mundo y el CANAL son los del bloque 4, sin tocar. Lo nuevo: el emisor lleva `voraz` (ERR-51) y el brazo PAR sustituye el TOKEN por una HERMANA en la presentacion del receptor.
+[18:22:09 +    0.0s]     sha preregistro                af126f8f3c367024
+[18:22:09 +    0.0s]     sha script                     c82e89aab26d15d0
+[18:22:09 +    0.0s]     sha constructor                7e63562ac9034e4a
+[18:22:09 +    0.0s]     sha instrumento                b3dd1d7e66a2d147
+[18:22:09 +    0.0s]     sha arnes                      57d0334db104ae9d
+[18:22:09 +    0.0s]     sha origen_b4                  ff9946ee2ffe27e6
+[18:22:09 +    0.0s]     sha runner_bloque4             11eb44afc47679b7
+[18:22:09 +    0.0s]     sha preregistro_bloque4        9e67c09ffb35b67e
+[18:22:09 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[18:22:09 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[18:22:09 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[18:22:09 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 13060
+[18:22:10 +    0.5s] ETAPA 1/4 — IDENTIDAD (9 casos x 3 = 27). (K) DEBE fallar: sin el la etapa pasa por vacuidad.
+[18:22:23 +   14.3s]     (a) b4b apagado == organismo_familias_b3 (mundo=AB)          3/3
+[18:22:23 +   14.3s]     (g) b4b apagado == organismo_familias_b3 (el mundo del bloque 4) 3/3
+[18:22:23 +   14.3s]     (n) b4b apagado + mundo=AB == organismo_v14 (TRONCO)         3/3
+[18:22:23 +   14.3s]     (o) relevo ON + mundo=AB == organismo_v15f_on                3/3
+[18:22:23 +   14.3s]     (r) canal='emite' == canal=None (el emisor SOLO MIRA)        3/3
+[18:22:23 +   14.3s]     (w) exc_fija no toca el rng del mundo (n_exc=0)              3/3
+[18:22:23 +   14.3s]     (v) voraz=0.0 == el defecto (b4 bit a bit por la cadena)     3/3
+[18:22:23 +   14.3s]     (p) par_herm no toca el rng del mundo                        3/3
+[18:22:23 +   14.3s]     (K) CANAL+ != CORTADO+ (DEBE diferir)                        3/3
+[18:22:23 +   14.3s]   IDENTIDAD 27/27
+[18:22:23 +   14.3s] ETAPA 2/4 — DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[18:22:23 +   14.3s]     alias por par mediana 0.0151  semillas con algun par identico 20/20  U3 mediana 0.3377
+[18:22:23 +   14.3s] ETAPA 3/4 — EMISORES (20 corridas de 100000 pasos; de cada una salen los DOS mensajes).
+[18:22:48 +   39.1s]     (pos) emiten 20/20; sin mensaje (excluidas, P-I2): []; t_msg mediana 10123.0
+[18:22:48 +   39.1s]     (neg) emiten 19/20; sin mensaje (excluidas, P-I2): [640]; t_msg mediana 11218.0
+[18:22:48 +   39.1s] ETAPA 4/4 — RECEPTORES: 311 corridas de 100000 pasos (16 brazos)...
+[18:23:14 +   65.0s]           20/311
+[18:23:27 +   78.5s]           40/311
+[18:23:52 +  102.8s]           60/311
+[18:24:06 +  116.6s]           80/311
+[18:24:30 +  140.7s]           100/311
+[18:24:45 +  155.9s]           120/311
+[18:25:00 +  171.5s]           140/311
+[18:25:24 +  195.1s]           160/311
+[18:25:39 +  210.0s]           180/311
+[18:26:03 +  233.9s]           200/311
+[18:26:18 +  249.2s]           220/311
+[18:26:41 +  271.6s]           240/311
+[18:26:57 +  287.8s]           260/311
+[18:27:15 +  306.2s]           280/311
+[18:27:37 +  328.2s]           300/311
+[18:27:47 +  337.8s]           311/311
+[18:27:47 +  337.8s] 
+[18:27:47 +  337.9s] CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): IDENTICO campo a campo
+[18:27:47 +  337.9s] ANALISIS — medianas, cuartiles y los umbrales EXACTOS de la seccion 6 del preregistro.
+[18:27:47 +  337.9s]     CANAL+    evX 14/20  okX 14/20  evU 0.5  okU 0.8333  comH 1.0  esp 0.3333  ret2/3 10/14  nunca 1  muertes 26.0  via_rapida 6  mismo_bin 12.0
+[18:27:47 +  337.9s]     CORTADO+  evX 2/20  okX 2/20  evU 0.5  okU 0.8333  comH 1.0  esp -0.5  ret2/3 13/15  nunca 0  muertes 26.0  via_rapida 6  mismo_bin 12.0
+[18:27:47 +  337.9s]     BAR-H+    evX 14/20  okX 14/20  evU 0.5  okU 0.8333  comH 1.0  esp 0.4166  ret2/3 12/12  nunca 1  muertes 25.5  via_rapida 6  mismo_bin 12.0
+[18:27:47 +  337.9s]     BAR-T+    evX 11/20  okX 11/20  evU 0.5834  okU 0.8333  comH 1.0  esp 0.1667  ret2/3 10/13  nunca 0  muertes 28.0  via_rapida 6  mismo_bin 12.0
+[18:27:47 +  337.9s]     VALOR+    evX 1/20  okX 1/20  evU 0.5  okU 0.8333  comH 0.0  esp -0.5  ret2/3 13/12  nunca 1  muertes 28.5  via_rapida 6  mismo_bin 14.0
+[18:27:47 +  337.9s]     INM+      evX 2/20  okX 2/20  evU 0.5  okU 0.8333  comH 1.0  esp -0.5  ret2/3 14/15  nunca 0  muertes 26.5  via_rapida 5  mismo_bin 10.0
+[18:27:47 +  337.9s]     OTRO+     evX 1/20  okX 1/20  evU 0.5834  okU 0.8333  comH 1.0  esp -0.5834  ret2/3 14/13  nunca 0  muertes 29.0  via_rapida 7  mismo_bin 8.0
+[18:27:47 +  337.9s]     CANAL-    evX 0/19  okX 19/19  evU 0.5  okU 0.8333  comH 1.0  esp 0.5  ret2/3 9/12  nunca 0  muertes 27.0  via_rapida 0  mismo_bin 8.0
+[18:27:47 +  337.9s]     CORTADO-  evX 17/19  okX 2/19  evU 0.5  okU 0.8333  comH 0.0  esp -0.5  ret2/3 17/16  nunca 6  muertes 26.0  via_rapida 0  mismo_bin 8.0
+[18:27:47 +  337.9s]     BAR-H-    evX 5/19  okX 14/19  evU 0.5  okU 0.8333  comH 1.0  esp 0.5  ret2/3 11/14  nunca 1  muertes 26.0  via_rapida 0  mismo_bin 12.0
+[18:27:47 +  337.9s]     BAR-T-    evX 12/19  okX 7/19  evU 0.5  okU 0.6667  comH 0.0  esp -0.3333  ret2/3 14/15  nunca 3  muertes 25.0  via_rapida 0  mismo_bin 8.0
+[18:27:47 +  337.9s]     VALOR-    evX 16/19  okX 3/19  evU 0.5  okU 0.8333  comH 0.0  esp -0.3333  ret2/3 17/14  nunca 7  muertes 26.0  via_rapida 0  mismo_bin 12.0
+[18:27:47 +  337.9s]     INM-      evX 16/19  okX 3/19  evU 0.5  okU 0.8333  comH 0.3333  esp -0.5  ret2/3 16/18  nunca 7  muertes 25.0  via_rapida 1  mismo_bin 12.0
+[18:27:47 +  337.9s]     OTRO-     evX 10/19  okX 9/19  evU 0.6667  okU 0.8333  comH 0.0  esp 0.0  ret2/3 14/15  nunca 4  muertes 27.0  via_rapida 2  mismo_bin 8.0
+[18:27:47 +  337.9s]     PAR-      evX 0/19  okX 19/19  evU 0.5  okU 0.8333  comH 1.0  esp 0.5  ret2/3 11/12  nunca 0  muertes 25.0  via_rapida 0  mismo_bin 8.0
+[18:27:47 +  337.9s]     PAR0-     evX 18/19  okX 1/19  evU 0.5  okU 0.8333  comH 0.0  esp -0.5  ret2/3 15/14  nunca 5  muertes 29.0  via_rapida 0  mismo_bin 8.0
+[18:27:47 +  337.9s] 
+[18:27:47 +  337.9s] VEREDICTO: PI5 CAE -- es el INSTRUMENTO o el montaje. Nada se declara (preregistro 5.2).
+[18:27:47 +  338.0s] datos -> familias_b4b_s621-640_20260918_182209.json  sha256_16 = 206665f9bd674335
