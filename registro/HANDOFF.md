@@ -494,7 +494,7 @@ commiteado (`git log`) y respaldado en `JUACO/respaldo/juaco_bundle_20260917_*.b
 | **5 comunicación / transferencia** | N1 experto→novato (replicado); N3d transferencia entre sensores por conducta (**3 series**: 0.822/0.811/0.811, la tercera con el gemelo compilado); mudo = obedece, crea dependencia | **N2 cerrado con dos mundos** (6 diseños ❌; N2f v3 con montaje válido; INNATO 60 vs 278: el canal serviría con significado dado); que el receptor aprenda algo propio; XOR entre dos | 50 % |
 | **6 planificación** | mapa: elige la dirección hacia comida recordada fuera de la vista (3 series); **dos metas y rodeo: elige la más cercana y rodea el veneno recordado (2 series, subconjunto válido 14/14 y 16/16 pareado)** **2D (17×13, 4 direcciones, identidad 60/60 con el anillo): no rodea, se aleja (0/20); rodeo falso confirmado (0.05, se desvía sin motivo); encadena A→B si borra el sitio comido (0.95 contra 0.50, 18/20)** | horizonte 2 (H2 +0.475 donde discrimina; mundo sin potencia, 6/20), planificar de verdad exige otro mecanismo; `M` que se degrade; canje exploración/explotación cerrado como estructural (el mapa no entra al tronco) | 55 % |
 | **7 composición** | 3T-k: historia de hasta **3** pasos con distractores replicado (a 4: separa 20/20 pero la ventaja conductual no cruza 0.15 en la réplica); **el techo NO es el pool de celdas** (creación B: duplicar el pool a 180 no devuelve nada; lo que se agota es la evidencia por código); **hija dispersa** (la hija nace ciega a parte del patrón): compone mejor a k=4/5 (lift 0.25–0.33, > v13 18/20, > máscara al azar 16/20) con la mitad de celdas en mediana, ahorro 16/20 en 61–80 (cayó por la letra) y **19/20 en 81–100 (pasa la letra original)** → **REPLICADA: compone historias más profundas con la mitad de celdas**; **v13D NO REGRESIONA (examen v3' 8/8, G1 0.80 / G2 0.83, inerte en 6 px) → candidata a v14 (`registro/PROPUESTA_v14.md`, rama `v14-candidato`; decisión del director)** | composición de rasgos: **XOR no es límite de dimensión ni de puerta sino de la REGLA de la vía lenta** (3, 3b, trío); 3d pendiente; composición social (XOR entre dos) | 55 % |
-| **8 aprendizaje abierto** | **probar cuando no me reconozco (creación C): recuperación tras la inversión 0.26× v13 (20/20), controles de cantidad y momento vencidos, retención y generalización intactas; el sesgo no se apaga del todo (15/20 ×2); **REPLICADO en 61–80 (0.22×)**; **la sorpresa del mundo (ΔE) en la boca recupera 7× más rápido (0.14× ×2), se apaga sola y sin más veneno: candidato pendiente de baterías (serie 81–100; ERR-27)** · metaplasticidad por masa de conflicto (creación A) refutada en 41–60: retención de lo ausente 0.667 = base, +73 % muertes · sigue aprendiendo hasta el techo de la retina (50 patrones, 0.80); se recupera del cambio de regla (2–4k pasos, 18/20); el mapa cobra exploración | retención de lo ausente (0.67 = interferencia); **canje del mapa cerrado como estructural** (curiosidad ❌, novedad de sitio ❌ ×2, saturación ❌: la comida recordada atrae y el organismo deja de explorar); dominio distinto del anillo; olvido/fusión | 40 % |
+| **8 aprendizaje abierto** | **probar cuando no me reconozco (creación C): recuperación tras la inversión 0.26× v13 (20/20), controles de cantidad y momento vencidos, retención y generalización intactas; el sesgo no se apaga del todo (15/20 ×2); **REPLICADO en 61–80 (0.22×)**; **la sorpresa del mundo (ΔE) en la boca recupera 7× más rápido (0.14× ×2), se apaga sola y sin más veneno; **serie 81–100: pasa retención (≥ 19/20 × 6) y generalización (G1 0.90) → CANDIDATO A ÓRGANO con tres series** (`PROPUESTA_v14.md`, segundo candidato); el automodelo pasa todo en la tercera serie (apagado 17/20)** · metaplasticidad por masa de conflicto (creación A) refutada en 41–60: retención de lo ausente 0.667 = base, +73 % muertes · sigue aprendiendo hasta el techo de la retina (50 patrones, 0.80); se recupera del cambio de regla (2–4k pasos, 18/20); el mapa cobra exploración | retención de lo ausente (0.67 = interferencia); **canje del mapa cerrado como estructural** (curiosidad ❌, novedad de sitio ❌ ×2, saturación ❌: la comida recordada atrae y el organismo deja de explorar); dominio distinto del anillo; olvido/fusión | 40 % |
 | (9 autonomía) | recuperación medida ante cambio no avisado | allostasis (bloque 6), meta propia | 20 % |
 
 Los porcentajes son juicio mío, no medida: "100 %" sería el nivel cerrado con réplica y sin cabos abiertos en su fila.
@@ -512,3 +512,109 @@ Errores de la noche: KeyError del runner del bloque 2 (dos arranques sin datos),
 arnés de N2f que exige ruta (mi cadena no la pasó: se repitió aparte, 8/8). **Día 7:** ver `PLAN.md` (bloques 3d, 6;
 canje del mapa sólo si ataca la escala del recuerdo de veneno; nivel 6 dos metas y rodeo; N2 sólo con un mecanismo de
 significado por predicción).
+
+## 15. Cierre del día 7 y madrugada del 18 (17 sep 23:00 → 18 sep 01:40) — la célula de creación
+
+### 15.1 Qué se decidió y por qué
+
+Director ausente ~8 h desde las 23:00. Orden vigente (`registro/PLAN.md`, "Madrugada del 18"): *"un Pool a la vez,
+cada bloque con preregistro, identidad dentro del runner y registro al terminar"*; decisiones del coordinador,
+documentadas para que el director audite después (regla 12 de `CLAUDE.md`: autonomía dentro del método, sin pedir
+permiso, sin declarar nada fuera del protocolo). Por qué tanta disciplina sin supervisión: en `EQUIPO.md`, "el
+método manda sobre la misión — un resultado que no pasa por el protocolo no cuenta, aunque apunte hacia la misión".
+**Un Pool a la vez** (`EQUIPO.md`, regla 3 y "Coordinación de CPU"): los tres creadores y el explorador sólo corren
+mini-pruebas de un proceso, en copias por anclas (`experimentos/creacion_<X>/`), sin tocar originales ni commitear;
+el coordinador es el único con `Pool`, uno detrás de otro, revisando antes qué procesos python siguen vivos. Nada
+toca el tronco sin examen v3' + baterías + réplica; la decisión de v14 queda para el director.
+
+### 15.2 Bloques de la noche
+
+| bloque | nivel | veredicto | números clave | datos |
+|---|---|---|---|---|
+| Escala del mapa (2 ter) | 8, estructural | REFUTADA → canje CERRADO como estructural | `V13_adq` 0.8875 (ancla mal transcrita: 0.887); `MAPA_adq` 0.700 | `escala_s81-100_20260917_230039` |
+| 3e, oráculo de rasgos | 3 (XOR) | ❌ REFUTADO | `acc_lenta` 0.625 < 0.80 con {P0,P1,P0·P1,1} regalados | `xor_3e_s61-80_20260917_231444` |
+| 6, allostasis (rama) | 9 | P1 NO / P3 OK | recuperación 7159 contra 8360 (pareado 6/10); sorpresa 0.0→0.83 | `allostasis_s1-10_20260917_231652` |
+| Rodeo 41–60 y 61–80 + subconjunto | 6 | ✅ REPLICADO | R1 mediana 0.725/0.750; pareado del subconjunto 14/14 y 16/16 | `rodeo_s41-60_20260917_232338` · `s61-80_20260917_232711` |
+| N3d, tercera serie | 5 | ✅ TRANSFIERE ×3 | 0.822 / 0.811 / 0.811 | `N3d_s101-120_20260917_233033` |
+| Auditoría del día 7 (+ ERR-25, 00:35) | método | sin bloqueantes | K0 corregido (ancla mal copiada); puerta confunde no-aprendido/cancelado (`n_techo`=0 en el examen) | `AUDITORIA_dia7_20260917.md` |
+| B-1, 61–80 y 81–100 | 7 | ❌ por la letra → ✅ réplica | P1 (ahorro de celdas) 16/20 → 19/20; `lift_q4` mediana 0.251 → 0.352 | `hija_dispersa_s61-80_20260918_000202` · `s81-100_20260918_000954` |
+| A-2, metaplasticidad | 8 | ❌ REFUTADA | `ret_no_inv` 0.667 = base (7/20 pareado); muertes +73 % | `metaplasticidad_s41-60_20260918_000740` |
+| A-1/A-3, paquetes listos | 3 (XOR) / 4 | instrumento listo; 3f no se corre | identidad `v13q4` 16/16; humo de A-3 idéntico 3/3 | sin `Pool` todavía |
+| C-P1, 41–60 y 61–80 | 9 | ✅ SELF-TEST; dE-TEST candidato | recuperación 0.263×/0.221×; dE-TEST 0.143×/0.144× | `probar_si_mismo_s41-60_20260918_001756` · `s61-80_20260918_003640` |
+| A-3, vector único | 4 | ✅ CONFIRMADO | `acc` idéntica 60/60; `max\|ΔW\|` 3.3e−15 | `vector_unico_s101-120_20260918_003352` |
+| Auditoría de la madrugada (+ ERR-26/27/28) | método | sin bloqueantes | enmiendas sin ERR numerado a tiempo; import ambiguo sin consecuencia | `AUDITORIA_madrugada18_20260918.md` |
+| Nivel 6 en 2D | 6 | ❌ refutado, en la forma predicha | T1 0.000 (pareado 0/20); rodeo falso 0.05 | `2d_s21-40_20260918_010836` |
+
+### 15.3 Lo que aportó la célula de creación
+
+Tres creadores Opus (`registro/investigacion/PUENTE_creacion.md`) — **A** matemática del aprendizaje local, **B**
+representación y capacidad, **C** modelo de sí mismo y significado — más un explorador Haiku a demanda; todo en
+copias por anclas, identidad bit a bit antes de mirar números, mini-pruebas de un proceso, cero `Pool`, cero commits.
+
+**Cinco hallazgos que cambian el mapa:**
+- **El pool de celdas no es el techo** (B1, A5): duplicar 90→180 no devuelve nada (`lift_q4` 0.099 contra 0.112); el
+  pool lleno retiene MÁS que el libre (`corr` +0.24/+0.32, al revés de lo esperado) — se agota la evidencia por
+  código, no las celdas.
+- **Los dos canales son un valor con signo más una masa de conflicto** (A3): `(Wp,Wn)↔(W=Wp−Wn, m=min(Wp,Wn))` es
+  biyección exacta (`max|ΔW|` 2.5e−14); `lam` sólo olvida `m` — por eso la vía lenta lleva la mitad de la memoria sin
+  cambiar la conducta (A-3, 60/60).
+- **El suelo del sesgo de C-P1 es la cota de oráculo** (C7): predecir la propia acción tiene error mínimo `2p(1−p)` >
+  0 aun con predictor perfecto; predecir ΔE (constante determinista) da error 0 — SELF-TEST no se apaga del todo (P4
+  15/20 ×2), dE-TEST sí (20/20 ×2).
+- **La puerta confunde "no aprendido" con "cancelado"** (ERR-25, B4): el 100 % de lo que v13 manda a la vía lenta ya
+  se había mordido ≥5 veces — pregunta "¿tengo su valor sin repartir?", no "¿lo he visto?".
+- **Dónde entra la sorpresa importa más que cuál** (C1-ter, C7): el predictor de ΔE del bloque 6 puesto en `eta` no
+  sirve (0.856×, refutado); puesto en la boca (dE-TEST), recupera 7× más rápido (0.14×).
+
+**Lo refutado, con el mismo rigor:** ninguna geometría alternativa de la vía lenta (L1/Winnow, máximo margen,
+encogimiento por grado o frecuencia) llega a XOR (A1); que la fisión de v11 sea consolidación y el pool lleno retenga
+MENOS (A5/C5, su propio corolario) cae con datos ya existentes; la metaplasticidad por masa de conflicto no frena el
+olvido en 20 semillas (A-2); reciclar celdas por costo energético se retira sin preregistrar, porque B1 y A5 ya
+habían cerrado los dos regímenes candidatos (C-P3); y restar la cota de oráculo al automodelo de C-P1 empeora su
+suelo y pierde la prueba de latencia contra dE-TEST (adenda de C7).
+
+### 15.4 Candidatos a órgano y su estado
+
+| candidato | mecanismo | estado al cierre (01:40) |
+|---|---|---|
+| **Hija dispersa** (B-1) | la hija nace ciega a parte de `P`, no sólo fuera de él | REPLICADA (61–80 refutada por la letra, 81–100 pasa incluso el umbral original); **baterías de `organismo_v13D` EN CURSO** |
+| **dE-TEST** (C-P1) | la sorpresa del mundo (ΔE) puesta en la boca, no en `eta` | candidato pendiente de baterías; P1'/P7' limpios en dos series, P4' sólo en 61–80; **serie 81–100, enmienda 2, EN CURSO** |
+| **B-2** (puerta por código) | cuenta mordidas del código exacto en vez de celdas consolidadas | mini-prueba a escala reducida cierra el canje (`N*` v13 6 → 20, 3/3 semillas); **montaje completo 41–60 + baterías EN CURSO** |
+| **Vector único** (A-3) | la vía lenta como un solo vector con signo, sin canal doble | simplificación con identidad CONFIRMADA (60/60); no compra capacidad nueva, ahorra memoria |
+
+Ninguno entró al tronco esta noche; los tres primeros quedan donde el reloj los cortó —en curso, no decididos— para
+que el coordinador los complete con lo ya preregistrado: la decisión de v14 es del director.
+
+### 15.5 Errores nuevos y reglas derivadas
+
+| ERR | qué pasó | consecuencia medida |
+|---|---|---|
+| **ERR-25** (00:35) | la puerta de familiaridad no distingue "no aprendido" de "cancelado" | `n_techo`=0 en el examen de congelación (no se disparó ahí); riesgo no discutido al diseñar v13 |
+| **ERR-26** (B-1) | la "enmienda 1" que bajó P1 de ≥18/20 a ≥14/20 no era un subconjunto (regla 10): era una rebaja lisa del umbral, sin ERR en su momento | inerte — 81–100 pasó también el umbral original |
+| **ERR-27** (C-P1) | la forma relativa de P4' se escribió después de ver que la copia literal de P4 fallaba en los datos ya corridos de 41–60 | P4' cuenta como prueba limpia sólo en 61–80 (20/20); 41–60 se reporta como retroactivo |
+| **ERR-28** (01:15) | `experimentos/v13_dos_vias/organismo_v13.py` no es el tronco: sus valores por defecto difieren (`eta_s` 0.015→0.0, `puerta` 3→None) y con ellos cambia valor y conducta | sin consecuencia medida en los 70+ archivos que citan su sha; ninguno de los 24 sitios que importan `organismo_v13` a secas antepone esa carpeta |
+
+**Reglas derivadas en `EQUIPO.md`: regla 10** (auditoría del día 7) — un análisis sobre un subconjunto de semillas
+sólo vale con enmienda preregistrada ANTES de la serie nueva, calculado por script sobre los JSON (nunca en línea),
+con el conjunto completo reportado al lado; si una puerta de validez cae pero la cumple ≥60 % de las semillas, ese
+análisis se hace siempre. **Regla 11** (auditoría de la madrugada) — toda enmienda que cambie un umbral o la forma de
+un criterio lleva ERR numerado al escribirla, aunque sea antes de la serie nueva y resulte inerte; "candidato a
+órgano" sólo con retención y generalización medidas en el mismo brazo.
+
+### 15.6 Cómo retomar, y si vamos bien o mal
+
+**Qué correr primero (regla 1):** `cd organismo && python bateria.py 6 && python bateria_v13.py 6 && python
+bateria_generaliza.py organismo_v13 10`. **Qué leer, en orden:** este §15 → `CLAUDE.md` ("Estado día 7") →
+`PLAN.md` ("Madrugada del 18", lo que sigue sin marcar) → `PUENTE_creacion.md` ("Propuestas para el coordinador":
+B-2 y C-P2/C-P3 sin correr). **Qué completar, en este orden:** (1) baterías de `organismo_v13D` (`bateria_v13.py`
+8/8 + `bateria_generaliza.py` G1≥0.80/G2≥0.85), para que B-1 tenga retención y generalización medidas; (2) serie
+81–100 de C-P1 con `--baterias` para dE-TEST (M4/M6) y la prueba de latencia (la variante resta-cota del automodelo
+ya quedó refutada, adenda de C7: no repetirla); (3) B-2 a escala completa (semillas 41–60, montaje de
+`reverificacion_v13`) + baterías sobre la misma perilla. Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
+creador C); N2 sólo con significado por predicción (C-P2, sin instrumento en el mundo social); horizonte 2 del mapa
+(sin potencia, 6/20). Un `Pool` a la vez; nada entra a v14 sin examen v3' + baterías + réplica.
+
+**Vamos bien o mal, en dos frases:** Vamos bien: la célula entregó cinco hallazgos verificados con identidad y
+control, y dos auditorías que atraparon sus propios errores antes de declarar nada candidato. Vamos mal: ningún
+bloque cerró con examen completo —v13D, dE-TEST y B-2 llegan a las 01:40 con baterías pendientes— y XOR y N2 siguen
+sin un mecanismo que funcione con la dinámica actual del mundo.

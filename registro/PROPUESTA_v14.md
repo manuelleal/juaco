@@ -34,3 +34,21 @@ letra original). Muertes: REL 88–102 contra 78–79 de v13 en 3T-k (no era cri
 - Si el director prefiere la variante barata AZAR (memoria cero): fue peor que REL en 16/20 × 2; no se recomienda.
 - Si quiere ver primero el techo de capacidad con v13D en el mundo grande (60 estímulos): es un bloque de 45 min con el
   montaje de `reverificacion_v13`; no se corrió esta noche.
+
+
+## Segundo candidato (01:50): "la sorpresa del mundo en la boca" (v13 + predictor de ΔE del bloque 6 con `k_testE = 10`)
+
+| qué | resultado | datos |
+|---|---|---|
+| recuperación tras la inversión, tres series (41–60, 61–80, 81–100) | **0.143× / 0.144× / 0.141×** de v13, pareado 20/20 × 3 | probar_si_mismo_s41-60_20260918_001756, _s61-80_20260918_003640, _s81-100_20260918_012715 |
+| se apaga solo (P4' relativo) | 20/20 × 3 (41–60 retroactivo, ERR-27) | ídem |
+| seguridad (veneno post ≤ 4×, muertes ≤ 1.5×) | OK × 3 | ídem |
+| retención (seis etapas de `bateria_v13`, 81–100) | 20, 19, 20, 20, 20, 20 | probar_si_mismo_s81-100_20260918_012715 |
+| generalización (81–100) | K 20/20; G1 px0 0.90 (azar 0.50); G2 0.85 | ídem |
+| latencia del primer sesgo | 202 pasos, 1 bocado (el automodelo: 602, 1.5) | ídem |
+
+Memoria: una lectura lineal `ΔE_pred` (retina + código) + un escalar de estado. Mecanismo: `Vb += k_testE · s̄_E`, con
+`s̄_E` la sorpresa de ΔE promediada; no toca `eta` (donde el bloque 6 la puso y no servía: 0.856×). Falta para v14: el examen
+v3' **completo** (3', 3'', 4a–4d) sobre una copia del tronco con la perilla fija (como v13D), gemelo compilado, congelación.
+**Los dos candidatos son componibles** (uno actúa en el nacimiento de las hijas, el otro en la boca); si el director acepta
+ambos, se prueba primero la composición (identidad de cada uno con el otro apagado; examen v3' con los dos encendidos).

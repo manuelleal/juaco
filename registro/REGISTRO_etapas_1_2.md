@@ -4006,3 +4006,35 @@ historias más profundas con la mitad de celdas donde sí lo hay (B-1, dos serie
 replicado, controles de cantidad/forma (máscara al azar, slot equivocado), inercia, examen v3' y batería de
 generalización intactos. **Propuesta de v14 en `registro/PROPUESTA_v14.md` y rama `v14-candidato`** (copia, no toca `main`
 ni el tronco congelado). Faltan, si el director la acepta: gemelo compilado con arnés, congelación (manifiesto), tag.
+
+
+### Bloque C-P1, serie 3 (81–100) con la enmienda 2 (18 sep 01:48): **SELF-TEST pasa TODO, incluido el apagado (P4 17/20); dE-TEST pasa sus baterías (retención ≥ 19/20 × 6, G1 0.90) → "la sorpresa del mundo en la boca" es CANDIDATO A ÓRGANO con tres series; las variantes del automodelo (restar la cota, línea base lenta) quedan refutadas como el creador predijo**
+
+Datos `probar_si_mismo_s81-100_20260918_012715` (207c83061567ba45), 160 corridas + baterías para V13, SELF-TEST y dE-TEST;
+identidades J1–J6 (18/18 × 5, 6/6) en la copia principal y 11/11 dentro del runner.
+
+| brazo | recuperación | sesgo Q3 · razón Q2/Q3 | latencia del primer sesgo | veneno post | muertes | retención (6 etapas) | G1 px0 / G2 |
+|---|---|---|---|---|---|---|---|
+| V13 | 7 578 | 0 | — | 57.5 | 275 | 20/20 × 6 | 0.90 / 0.92 |
+| **SELF-TEST** | **2 492** (0.329×; 20/20) | 0.25 · 0.21 | 602 pasos (1.5 bocados) | 126.5 | 294.5 | 20/20 × 6 | 0.90 / 0.84 |
+| CONST-a / CONST-b | 6 589 / 5 178 | 0.17 / 0.31 · 1.0 | 8–10 | 71.5 / 87 | 270 / 263.5 | — | — |
+| MOMENTO | 7 836 | 0.07 · 3.9 | 614 | 150.5 | 293.5 | — | — |
+| **dE-TEST** | **1 071** (0.141×; 20/20) | 0.13 · **0.001** | **202 pasos (1 bocado)** | 62.5 | 280.5 | **20, 19, 20, 20, 20, 20** | **0.90 / 0.85** |
+| SELF-TEST-R (resta la cota) | 3 210 | 0.05 · 0.40 | 1 041 | 62 | 276.5 | — | — |
+| SELF-TEST-L (línea base lenta) | 3 617 | 0.08 · 0.29 | 1 604 | 73 | 294.5 | — | — |
+
+SELF-TEST: P1 OK, P2 OK (19/20, 19/20), P3 OK (20/20), **P4 OK (17/20)**, P5 OK, P6 OK, P7 OK. **Tres series:** P1 0.26× /
+0.22× / 0.33× (20/20 × 3); P2–P3 y P5–P7 en las tres; P4 15, 15, 17 de 20. dE-TEST (`analiza_dE.py`): P1' 0.141× 20/20, P4'
+20/20, P7' OK — **tres series** (0.143× / 0.144× / 0.141×; apagado 20/20 × 3; seguridad × 3) y **Q1' (enmienda 2) OK:
+retención ≥ 18/20 en las seis etapas y px0 ≥ 0.80**. Q2' (variantes): refutadas como estaba predicho (recuperan peor y no
+apagan mejor). Q3' (latencia): dE-TEST arranca en 202 pasos con un bocado; el automodelo tarda 602 y 1.5 bocados — la
+ventaja de densidad del automodelo no se cobra (el error de ΔE salta 1.2 en un solo bocado).
+
+**Declarable (vocabulario del preregistro y enmiendas):** (1) *cuando no se reconoce, prueba, y por eso se recupera antes de un
+cambio no avisado del mundo* — tres series, todos los controles; el apagado pasa en la tercera y queda 15–17/20 (límite
+conocido: la cota de oráculo de su propia política). (2) **"La sorpresa del mundo puesta en la boca"** (el predictor de ΔE
+del bloque 6 decidiendo si prueba, `k_testE = 10`): recupera **7× más rápido que v13** (0.14× en tres series, 20/20 × 3),
+sesgo tres veces menor que se apaga solo, sin más veneno ni muertes, y **no cobra retención ni generalización** → **candidato
+a órgano** (`registro/PROPUESTA_v14.md`, segundo candidato). Falta, si el director lo quiere en v14: el examen v3' completo
+(3', 3'', 4a–4d) sobre una copia del tronco con la perilla fija (como se hizo con v13D), gemelo y congelación. Lección de
+la línea: *el predictor de ΔE nunca fue el problema; lo era dónde entraba*.

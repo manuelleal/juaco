@@ -146,7 +146,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     intactas, sin más veneno ni muertes; sólo falla el apagado (15/20 ×2: el suelo es la cota de oráculo de su propia
     política). **Y el brazo dE-TEST — la sorpresa del mundo (ΔE, el predictor del bloque 6) en la boca — recupera 7× más
     rápido (0.14× ×2), se apaga sola (20/20 en 61–80; 41–60 retroactivo, ERR-27) y pasa seguridad: candidato PENDIENTE DE
-    BATERÍAS** (serie 81–100, enmienda 2; auditoría de la madrugada: ERR-26 y ERR-27 numerados, regla 11 en EQUIPO.md). Lección: el predictor de ΔE nunca fue el problema, lo era dónde entraba.
+    BATERÍAS** → **serie 81–100 (01:48): pasa retención (≥ 19/20 × 6) y generalización (G1 0.90): CANDIDATO A ÓRGANO con tres
+    series (0.14× × 3)**; el automodelo pasa todo en la tercera (apagado 17/20); sus variantes (restar la cota, línea base
+    lenta) refutadas como predijo C (auditoría de la madrugada: ERR-26 y ERR-27, regla 11 en EQUIPO.md). Lección: el predictor de ΔE nunca fue el problema, lo era dónde entraba.
     (`probar_si_mismo_s41-60_20260918_001756`, `probar_si_mismo_s61-80_20260918_003640`)
   · **A-3 CONFIRMADO**: la vía lenta de dos canales es exactamente un vector con signo (acc idéntica 60/60, |ΔW| 3e−15):
     simplificación candidata para v14 (mitad de memoria en la vía lenta; decisión del director).
