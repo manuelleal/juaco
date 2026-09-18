@@ -36,6 +36,7 @@ INSTRUMENTOS = {
     'organismo_v11': ('organismo_v11g', dict(mu_norm=True, div_signo=True)),
     'organismo_v13': ('organismo_v13g', dict(eta_s=0.015, puerta=3)),   # dos vias: el punto confirmado en 61-80
     'organismo_v13_rapido': ('organismo_v13q_rapido', dict(eta_s=0.015, puerta=3)),   # gemelo compilado del mundo de regla (identidad 81/81+243/243); mismo punto
+    'organismo_v14': ('organismo_v14g', dict(eta_s=0.015, puerta=3, mask_rel=2, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # TRONCO v14 (18 sep): hija dispersa + puerta por codigo, las DOS ON
 }
 sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'nivel7_xor_lectura'))
 sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))
@@ -85,7 +86,7 @@ if __name__ == '__main__':
         _log['f'] = open(os.path.join(RAIZ, 'datos', f'regresion_generaliza_{modulo}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     inst = INSTRUMENTOS[modulo][0]
     log(f"=== REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — {modulo}, {S} semillas ({seeds[0]}..{seeds[-1]}), Pool({N_PARALELO}) ===")
-    _dir = {'organismo_v11g': GEN, 'organismo_v13g': os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'),
+    _dir = {'organismo_v14g': AQUI, 'organismo_v11g': GEN, 'organismo_v13g': os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'),
             'organismo_v13q_rapido': os.path.join(RAIZ, 'experimentos', 'nivel7_xor_lectura')}.get(inst, os.path.join(RAIZ, 'experimentos', 'etapa3_v9'))
     log(f"instrumento {inst} {h16(os.path.join(_dir, inst + '.py'))}"
         f"  organismo {h16(os.path.join(AQUI, (modulo if modulo != 'organismo_v13_rapido' else 'organismo_v13') + '.py'))}  esta bateria {h16(os.path.abspath(__file__))}")

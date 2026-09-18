@@ -93,7 +93,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
 ## Estado (día 7 — 17 sep 2026, 23:00 → madrugada del 18; director ausente ~8 h, orden: "no parar", decidir, documentar, lo controversial a rama o copia). Manda sobre los bloques anteriores cuando se contradigan
-- **Tronco sigue siendo v13** (cc8b16b492d4d324). Nada entró al tronco hoy. v14 **no llevará el mapa** (canje
+- **TRONCO: v14 desde el 18 sep 05:05** (`organismo/organismo_v14.py` 9bab8ac0685b1f21, tag `v14-tronco`, examen `bateria_v14.py`,
+  16 congelados) = v13 + hija dispersa por relevancia + puerta por evidencia del código exacto; con las dos perillas apagadas es
+  v13 exacto. Evidencia: examen 8/8 ×3 rangos, generalización 1.000 / 0.95 ×3, capacidad 51, 3T-k 0.237 con 53 celdas; caso
+  conocido: semillas 117/133 (E2 42 bocados). Candidata a v15: la sorpresa del mundo en la boca a dosis 5. **Regla 1 pasa a:**
+  `cd organismo && python bateria_v14.py 6 && python bateria_generaliza.py organismo_v14 20 --desde 101` (histórica: v13, v11, v9).
+- v13 (cc8b16b492d4d324) queda como tronco anterior. v14 **no lleva el mapa** (canje
   exploración/explotación cerrado como estructural: curiosidad, novedad de sitio ×2 dosis y saturación refutadas;
   `escala_s81-100_20260917_230039`, 05a712ef734aba56).
 - **Resultados del día 7 (todos preregistrados, todos al final de `registro/REGISTRO_etapas_1_2.md`):**

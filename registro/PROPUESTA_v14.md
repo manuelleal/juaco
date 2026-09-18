@@ -1,4 +1,4 @@
-# Propuesta de v14 = v13 + hija dispersa por relevancia (18 sep 2026, 01:35; coordinador, director ausente)
+# v14 CONGELADO (18 sep 2026, 05:05) = v13 + hija dispersa por relevancia + puerta por evidencia del código — este documento fue la propuesta; la decisión está al final y en REGISTRO_etapas_1_2.md
 
 **No es una decisión: es la propuesta con su evidencia, para que el director decida al volver.** `main` no cambia; el tronco
 sigue siendo v13 (cc8b16b492d4d324). La rama `v14-candidato` contiene la copia lista (`organismo/organismo_v14_candidato.py`

@@ -4274,3 +4274,30 @@ conducta en el examen en algunos mundos*.
 por la semilla 117, caso conocido); generalización 1.000 / 0.94 (101–120), 1.000 / 0.95 (121–140), 1.000 / 0.95 (141–160); capacidad
 `N*` 51 (v13 35); composición 3T-k 0.237 con 53 celdas (v13 0.137 / 90); identidad de la copia 30/30; gemelo compilado 196/196
 (×52–82). Cumple con exceso la regla de tronco. **Se congela** (entrada de congelación a continuación).
+
+
+### v14 CONGELADO COMO TRONCO (18 sep 2026, 05:05; decisión del director "sí a todo", 04:55): **v14 = v13 + hija dispersa por relevancia + puerta de familiaridad por evidencia del código exacto**
+
+Archivos: `organismo/organismo_v14.py` (9bab8ac0685b1f21; = `organismo_v14c_on` 00e941c861896455, generado por anclas desde v13 con
+`construye_v14c.py`; con `mask_rel=0, puerta_pat=0` es v13 exacto), `organismo/organismo_v14g.py` (1f1318480cd34cde, mundo de regla),
+`organismo/bateria_v14.py` (101cba9177e8e5af; examen v3' completo, copia por anclas de `bateria_v13`), `bateria_generaliza.py` con el
+instrumento `organismo_v14` (perillas ON); `manifiesto.py` pasa a **16 congelados**; tag `v14-tronco`. Gemelo compilado
+`organismo_v14c_rapido.py` (196/196, ×52–82; el módulo con defaults ON `organismo_v14_rapido.py` en integración).
+
+| evidencia | resultado |
+|---|---|
+| examen v3' completo (criterio 5 intacto: apagando `eta_s`/`puerta` ≡ v11) | **8/8 en 121–140, 141–160 y 161–180**; 7/8 en 101–120 (semilla 117, `come B Q4` 42: caso conocido) |
+| generalización (K, G1, G2) | **1.000 / 0.94** (101–120), **1.000 / 0.95** (121–140), **1.000 / 0.95** (141–160); v13: 0.80 / 0.89 |
+| capacidad (mundo grande, 60 estímulos, paso 60 000) | `N*` **51** (v13 35; v11 50) |
+| composición temporal 3T-k, k = 5 | lift **0.237** con **53** celdas (v13 0.137 con 90; hija sola 0.251 con 48) |
+| identidades | copia ≡ v13 con perillas apagadas 30/30; cada órgano solo ≡ su candidato; gemelo 196/196 |
+| regresión regla 1 sobre las copias congeladas | examen 8/8 con 6 semillas (examen_v14_20260918_045742, 4c4e45d2dcf8f8f7); generalización K 20/20, G1 1.000 / G2 0.940 en 101–120 (regresion_generaliza_organismo_v14_20260918_045939, 0ae8fd144d801d93); gemelo organismo_v14_rapido ≡ organismo_v14 42/42 desde organismo/ |
+
+**Lo que v14 hace de más que v13:** compone historias de 4–5 pasos con distractores gastando la mitad de las celdas; recuerda
+50 de 60 patrones con valor (como v11) sin perder la generalización de v13 (y generaliza mejor: 1.000 / 0.95). **Lo que no
+cambia:** XOR, significado emergente (N2) y planificación en 2D siguen sin mecanismo. **Coste conocido:** en algunos mundos
+(semillas 117 y 133) la puerta reabre la vía rápida en el cuarto final y E2 queda en 42 bocados (< 50); registrado, no
+recalibrado. **Candidata a v15:** la sorpresa del mundo en la boca a dosis 5 (dos series sola; en compañía T2/T3 OK, examen
+8/8 + 7/8). Regla 1 (regresión) pasa a: `cd organismo && python bateria_v14.py 6 && python bateria_generaliza.py organismo_v14 20 --desde 101`
+(con 10 semillas 41–50 el control azar quedó en 0.40, fuera de la banda 0.42–0.58: n = 10 no basta para el control);
+`bateria_v13.py 6`, `bateria_v11.py 6` y `bateria_v9.py 6` como regresión histórica. v13 pasa a tronco anterior.

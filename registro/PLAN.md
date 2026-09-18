@@ -66,7 +66,8 @@
 >   propuesta. Lo que toque el tronco va a rama o copia; nada entra a v14 sin examen v3' + baterías + réplica.
 >
 > **DECISIÓN DEL DIRECTOR (18 sep 2026, 04:55; "sí a todo", "listo, de acuerdo") — ORDEN VIGENTE A PARTIR DE AQUÍ:**
->   (1) **Congelar v14** cuando terminen la composición de los tres órganos y el gemelo compilado: v14 = v13 + hija dispersa +
+>   (1) ✅ HECHO 05:05 — **v14 CONGELADO** (v13 + hija dispersa + puerta por código; la sorpresa a dosis 5 queda candidata a v15 porque la
+>   composición de los tres cayó por una semilla en la réplica del examen). Faltaba: v14 = v13 + hija dispersa +
 >   puerta por código (+ sorpresa del mundo en la boca a dosis 5 si la composición de los tres pasa T1–T3; si no, la sorpresa
 >   queda como candidata a v15). Antes del tag: tercer examen del organismo final en un rango virgen (161–180 o el siguiente
 >   libre), gemelo con arnés bit a bit, manifiesto a 15 archivos, `bateria_v14.py`, regresión de la regla 1.
