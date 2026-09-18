@@ -3834,3 +3834,37 @@ preregistro):** `bateria_v13.py` 8/8 y `bateria_generaliza.py` G1 ≥ 0.80 / G2 
 perilla (copia por anclas, identidad con la perilla apagada); la decisión de v14 es del director. Convergencia con B1/A5:
 el techo de la composición no era el pool de celdas (duplicarlo no devuelve nada) sino la evidencia por código; la hija
 dispersa cierra el conflicto de la madre con una sola hija por familia de rellenos.
+
+
+### Bloque C-P1 (célula de creación, creador C; 18 sep 00:28): "probar cuando no me reconozco" — la sorpresa sobre la propia acción entra en la boca, semillas 41–60 — **ACELERA LA RECUPERACIÓN 0.26× (20/20) y los controles de cantidad y de momento no; retención y generalización intactas; el sesgo no se apaga del todo (P4 15/20, se exigían 16/20) → réplica antes de declarar**
+
+Preregistro `experimentos/nivel9_probar_si_mismo/PREREGISTRO_probar_si_mismo.md` (escrito antes de correr); instrumentos
+`organismo_v13p.py` (0dbc2495efe44e60; linaje v13 cc8b16b492d4d324 → `creacion_C/organismo_v13s` 2eaba8dde27f05bd → v13p, por
+anclas) y `organismo_v13pg.py` (7ab4767d446ba797, mundo de regla); identidades J1–J4 18/18, 18/18, 18/18, 6/6 en la copia
+principal y 11/11 dentro del runner; datos `probar_si_mismo_s41-60_20260918_001756` (69651ffff5ea2abd), 120 corridas +
+baterías, 9.7 min. Mecanismo: una lectura logística por encuentro predice la propia acción (98 escalares + un escalar de
+estado `s̄_a`, EMA 0.05); `Vb += k_test·s̄_a` — la sorpresa sobre sí mismo decide **si prueba**, no la tasa de aprendizaje.
+
+| brazo | recuperación tras la inversión (pasos) | sesgo de boca por cuarto | veneno post | comida post | muertes post |
+|---|---|---|---|---|---|
+| V13 | 7 931 | 0 / 0 / 0 / 0 | 54.5 | 328 | 271 |
+| **SELF-TEST** | **2 089** (0.263×; pareado **20/20**) | 0.29 / 0.07 / 0.31 / 0.07 | 159.5 | 441.5 | 295.5 |
+| CONST-a (sesgo fijo 0.173) | 6 364 | 0.17 × 4 | 68 | 343 | 265.5 |
+| CONST-b (sesgo fijo 0.31) | 6 720 | 0.31 × 4 | 82.5 | 354 | 264.5 |
+| MOMENTO (misma traza rotada un cuarto) | 8 417 | 0.06 / 0.32 / 0.07 / 0.30 | 175.5 | 454 | 295.5 |
+| dE-TEST (sorpresa de ΔE en la boca; exploratorio) | **1 136** | 0.10 / 0.00 / 0.13 / 0.00 | 62.5 | 350.5 | 271.5 |
+
+P1 **OK** (0.263 ≤ 0.60; 20/20). P2 no es la cantidad **OK** (< CONST-a 19/20, < CONST-b 20/20; CONST-b iguala el sesgo de
+Q3: razón 1.011, control limpio). P3 es el momento **OK** (< MOMENTO 20/20; masa de la traza idéntica, G-d 0.0). **P4 NO:
+se apaga solo en 15/20** (Q2/Q4 ≤ 0.10 y Q3 ≥ 0.20; se exigían 16/20): el lazo sorpresa → morder → sorpresa deja un suelo
+(Q2/Q4 ≈ 0.07). P5 retención **20/20 en las seis etapas** (V13, SELF-TEST, CONST-b). P6 generalización **OK** (px0 G1 0.80
+= V13, G2 0.854; azar 0.50). P7 probar no es envenenarse **OK** (veneno post 159.5 ≤ 4 × 54.5; muertes 295.5 ≤ 1.5 × 271).
+Exploratorio, sin criterio: **la sorpresa del mundo (ΔE) en la boca recupera aún más rápido (1 136) con un sesgo tres
+veces menor y que sí se apaga** — el bloque 6 la había puesto en `eta` y no servía: lo que importa es DÓNDE entra.
+
+**Lectura honesta.** Es el primer mecanismo de la noche que gana con todos los controles de fondo (cantidad, momento,
+retención, generalización, seguridad) en 20 semillas; cae por una semilla en el criterio de apagado. No se declara órgano:
+**enmienda 1** (escrita ahora, antes de la serie nueva): réplica 61–80 con los mismos criterios (P4 sigue en 16/20) y
+**dE-TEST promovido a brazo con criterio**: P1' recuperación ≤ 0.60 × V13 y pareado ≥ 14/20, P7' igual que P7, calculado
+con un script sobre el JSON (regla 10). Vocabulario provisional (del preregistro): *cuando no se reconoce, prueba; y por
+eso se recupera antes de un cambio no avisado del mundo*. Prohibido: "curiosidad", "conciencia", "se conoce".

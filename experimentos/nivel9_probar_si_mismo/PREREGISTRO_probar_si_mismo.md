@@ -268,3 +268,15 @@ cambia el veredicto del bloque.
   que el diseñador ya vio entera en la mini-prueba: así **ninguna** de las semillas 41–60 del experimento queda
   expuesta antes de correrlo.
 - **Sin commits** (regla 7): el coordinador verifica identidad, integra, commitea y lanza.
+
+
+## Enmienda 1 (18 sep 2026, 00:35; escrita DESPUÉS de la serie 41–60 y ANTES de la serie 61–80; coordinador)
+
+En 41–60: P1 OK (0.263, 20/20), P2 OK (19/20, 20/20), P3 OK (20/20), **P4 NO (15/20; se exigían 16/20)**, P5 OK (20/20 × 6),
+P6 OK (px0 0.80), P7 OK. Serie nueva 61–80 (`--desde 61`), mismos brazos, mismos criterios (P4 sigue en 16/20; nada se
+recalibra sobre 41–60). Añadido declarado: **dE-TEST pasa de exploratorio a brazo con criterio** — P1' recuperación
+dE-TEST ≤ 0.60 × V13 en mediana y pareado ≥ 14/20; P7' veneno post ≤ 4 × V13 y muertes ≤ 1.5 × V13; P4' se apaga solo
+(mismos umbrales que P4) en ≥ 16/20. Se calcula con `analiza_dE.py` sobre el JSON (regla 10 de EQUIPO.md); el runner no
+cambia. Si SELF-TEST repite P1–P3 y P5–P7 y P4 vuelve a caer, el vocabulario es *"cuando no se reconoce, prueba, y se
+recupera antes; el impulso de probar no se apaga del todo"* (límite medido, no órgano completo). Si dE-TEST pasa P1', P4' y
+P7' en las dos series, es candidato por derecho propio: *"la sorpresa del mundo en la boca"*.
