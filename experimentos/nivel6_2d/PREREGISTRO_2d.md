@@ -1,6 +1,6 @@
-# BORRADOR — NO COMMITEADO. Nivel 6 en 2D: ¿rodea de verdad, mira más allá de un paso, encadena dos metas?
+# PREREGISTRO (commiteado el 18 sep 00:55, antes de correr). Nivel 6 en 2D: ¿rodea de verdad, mira más allá de un paso, encadena dos metas?
 
-**Escrito por el diseñador (agente) el 18 sep 2026, madrugada. Es un BORRADOR para el coordinador:** no se ha corrido
+**Escrito por el diseñador (agente) el 18 sep 2026, madrugada. Fue borrador para el coordinador y quedó preregistrado con la enmienda 0 (al final):** no se ha corrido
 ninguna serie, no hay declaración, y nada de esto entra al registro hasta que el coordinador lo convierta en bloque
 preregistrado (regla 7 de `registro/EQUIPO.md`). Continúa `experimentos/nivel6_mapa/PREREGISTRO_mapa.md` y
 `experimentos/nivel6_rodeo/PREREGISTRO_rodeo.md` (+ enmienda 1), y ataca exactamente lo que el anillo dejó abierto
