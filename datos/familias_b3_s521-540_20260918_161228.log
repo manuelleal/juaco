@@ -1,0 +1,60 @@
+[16:12:28 +    0.0s] ARRANQUE BLOQUE 3 (v15f en el mundo de familias): brazos ['G-LIN', 'G-REL', 'G-EXC', 'G-REXC', 'S-EXC', 'S-LIN', 'S-REL', 'S-REL0', 'S-RAZA', 'S-RAZA0', 'S-RBAR', 'S-RBAR0', 'V14', 'V15F'], semillas 521-540, T=100000. Pool(14).
+[16:12:28 +    0.0s] El mundo es el del bloque 2 SIN TOCAR. Lo unico que cambia entre brazos es `memoria_pares` (None|'relevo').
+[16:12:28 +    0.0s]     sha preregistro                7178e4479bf26a35
+[16:12:28 +    0.0s]     sha script                     8ad387790f145bab
+[16:12:28 +    0.0s]     sha constructor                06bd8d1709362ebe
+[16:12:28 +    0.0s]     sha instrumento                62a1e53b452b078e
+[16:12:28 +    0.0s]     sha arnes                      30cf2571ed0f76ff
+[16:12:28 +    0.0s]     sha origen_b2                  30200bea6a41c3c8
+[16:12:28 +    0.0s]     sha origen_v15f                96fc5c5262107850
+[16:12:28 +    0.0s]     sha origen_v15f_on             54d6efe0b564113c
+[16:12:28 +    0.0s]     sha runner_bloque2             c8fa05abaec88dac
+[16:12:28 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[16:12:28 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[16:12:28 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 24300
+[16:12:29 +    0.5s] ETAPA 1/3 — IDENTIDAD (7 casos x 3 = 21). (A) e (y) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[16:12:36 +    7.9s]     (a) memoria_pares=None == organismo_familias_b2 (AB)       3/3
+[16:12:36 +    7.9s]     (n) memoria_pares=None == organismo_familias_b2 (familias) 3/3
+[16:12:36 +    7.9s]     (o) relevo ON en mundo=AB == organismo_v15f_on             3/3
+[16:12:36 +    7.9s]     (l) apagada + mundo=AB == organismo_v14 (TRONCO)           3/3
+[16:12:36 +    7.9s]     (u) relevo ON: vira=8 == vira=-8 ANTES del cambio          3/3
+[16:12:36 +    7.9s]     (A) relevo ON: vira=8 != vira=-8 DESPUES (DEBE diferir)    3/3
+[16:12:36 +    7.9s]     (y) relevo != apagada en familias (DEBE diferir)           3/3
+[16:12:36 +    7.9s]   IDENTIDAD 21/21
+[16:12:36 +    7.9s] ETAPA 2/3 — DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[16:12:36 +    8.0s]     alias por par mediana 0.0151  semillas con algun par identico 20/20  U3 mediana 0.3312
+[16:12:36 +    8.0s] ETAPA 3/3 — principal: 280 corridas de 100000 pasos (14 brazos x 20 semillas)...
+[16:12:57 +   28.7s]           20/280
+[16:13:11 +   43.1s]           40/280
+[16:13:29 +   61.3s]           60/280
+[16:13:44 +   75.7s]           80/280
+[16:14:01 +   93.4s]           100/280
+[16:14:15 +  107.0s]           120/280
+[16:14:31 +  122.6s]           140/280
+[16:14:51 +  142.9s]           160/280
+[16:15:06 +  158.2s]           180/280
+[16:15:27 +  178.9s]           200/280
+[16:15:42 +  194.3s]           220/280
+[16:15:58 +  209.8s]           240/280
+[16:16:09 +  220.5s]           260/280
+[16:16:15 +  227.3s]           280/280
+[16:16:15 +  227.3s] 
+[16:16:15 +  227.4s] CRUCE cod0 contra escala_codigo (bloque 0): IDENTICO campo a campo
+[16:16:15 +  227.4s] ANALISIS — medianas y cuartiles por brazo, y los umbrales EXACTOS (la letra del bloque 2, importada).
+[16:16:15 +  227.4s]     G-LIN   muertes 24.5 q[20.0, 24.5, 34.5]  celdas 41.5  splits 11.5  exp_total 55.0  leen_tabla 0.0
+[16:16:15 +  227.4s]     G-REL   muertes 31.5 q[25.25, 31.5, 45.25]  celdas 41.0  splits 11.0  exp_total 268.0  leen_tabla 32.0
+[16:16:15 +  227.4s]     G-EXC   muertes 39.5 q[33.75, 39.5, 64.0]  celdas 57.0  splits 27.0  exp_total 189.5  leen_tabla 0.0
+[16:16:15 +  227.4s]     G-REXC  muertes 110.5 q[86.75, 110.5, 180.25]  celdas 57.0  splits 27.0  exp_total 651.5  leen_tabla 32.0
+[16:16:15 +  227.4s]     S-EXC   muertes 29.0 q[24.25, 29.0, 46.75]  celdas 61.5  splits 31.5  exp_total 67.0  leen_tabla 0.0
+[16:16:15 +  227.4s]     S-LIN   muertes 23.5 q[17.0, 23.5, 34.25]  celdas 43.0  splits 13.0  exp_total 55.0  leen_tabla 0.0
+[16:16:15 +  227.4s]     S-REL   muertes 39.5 q[33.25, 39.5, 61.5]  celdas 76.5  splits 46.5  exp_total 407.0  leen_tabla 32.0
+[16:16:15 +  227.4s]     S-REL0  muertes 29.5 q[19.5, 29.5, 44.5]  celdas 43.0  splits 13.0  exp_total 202.5  leen_tabla 32.0
+[16:16:15 +  227.4s]     S-RAZA  muertes 99.0 q[57.5, 99.0, 200.25]  celdas 90.0  splits 60.0  exp_total 570.0  leen_tabla 32.0
+[16:16:15 +  227.4s]     S-RAZA0 muertes 106.0 q[44.0, 106.0, 205.5]  celdas 81.5  splits 51.5  exp_total 529.5  leen_tabla 32.0
+[16:16:15 +  227.4s]     S-RBAR  muertes 300.5 q[177.75, 300.5, 344.5]  celdas 90.0  splits 60.0  exp_total 838.0  leen_tabla 32.0
+[16:16:15 +  227.4s]     S-RBAR0 muertes 289.5 q[158.5, 289.5, 336.5]  celdas 82.0  splits 52.0  exp_total 832.5  leen_tabla 32.0
+[16:16:15 +  227.4s]     V14     muertes 129.0 q[125.25, 129.0, 140.25]  celdas 30.0  splits 0.0  exp_total None  leen_tabla None
+[16:16:15 +  227.4s]     V15F    muertes 133.5 q[124.25, 133.5, 139.75]  celdas 30.0  splits 0.0  exp_total None  leen_tabla None
+[16:16:15 +  227.4s] 
+[16:16:15 +  227.4s] VEREDICTO: MECANISMO (diagnostico declarado, no prediccion): cobertura de la ganadora 4.0/4 (17/20 a 4), 32.0 de 32.0 estimulos leen la TABLA. CAPACIDAD 1: g1 v15f 0.875 contra v14.1 1.0 (REL<LIN en 11/20) -> PG1(v15f) pasa; PG4 v14 indeciso, v15f pasa. CAPACIDAD 2: v15f separa 7.0/8 (sep/apr 3.0) contra v14.1 4.0/8 -> PS2(v15f) indeciso; asimetria comida 1.0 contra veneno 0.75 -> PS3 pasa; dano a las hermanas v15f 0.0417 contra v14.1 0.0 -> PS4(v15f) REFUTA. RETENCION de la virada 0.625 -> prediccion del coordinador NO se cumple; del disenador no se cumple. Alias por par 0.0151 (20/20 semillas), covariable declarada. 20 semillas no cierran nada: replica en el rango siguiente (regla 12).
+[16:16:16 +  227.5s] datos -> familias_b3_s521-540_20260918_161228.json  sha256_16 = cf655980b21c429f

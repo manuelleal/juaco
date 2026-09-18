@@ -5226,3 +5226,28 @@ exactamente lo que v15f trae (se desdice en una mordida, E2 20/20): **siguiente 
 `memoria_pares='relevo'` contra v14.1, misma letra P-S2/P-S3/P-S6, semillas 501–520 y réplica**; predicción del coordinador escrita
 aquí antes: v15f separa ≥ 6/8 incluidas las que eran veneno, `sep/apr` ≤ 1.0, retención de la virada ≥ 0.8. Regla 12: P-G4 y P-S2 en el
 borde se resuelven con la réplica siguiente, no con más análisis.
+
+
+### BLOQUE 3 — v15f (memoria de pares con relevo) en el mundo de familias (18 sep 16:12 y réplica 16:16; semillas 501–520 y 521–540; 14 brazos × 20): **REPLICADO — v15f separa la variante que deja de comportarse igual en 7–7.5 de 8 (v14.1: 4 de 8), incluidas las que eran veneno (0.75–0.875 contra 0.0–0.125 de v14.1), y lee la variante nunca vista sin morderla (1.0 / 0.875; los 32 estímulos leen la TABLA, cobertura 4/4 en 17/20). Precio medido: un daño pequeño a las hermanas (0.042 contra 0.000) y retención de la virada 0.625–0.75 (ni la predicción del coordinador ≥ 0.8 ni la del diseñador ≤ 0.5). Nada se declara como capacidad cerrada: los tres puntos quedan en INDECISO/REFUTA por la letra y piden un candidato con más de una ganadora**
+
+Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque3_v15f.md` (7178e4479bf26a35); instrumento por dos cadenas de anclas
+`organismo_familias_b3.py` (62a1e53b452b078e; identidad **71/71**: apagado ≡ `organismo_familias_b2` 30/30, cadena hasta el tronco 9/9, `relevo`
+ON en `mundo='AB'` ≡ `organismo_v15f_on` 17/17 incluido el rng, 8 controles que deben fallar) + 21/21 en cada runner; runner
+`corre_familias_b3.py` (8ad387790f145bab; importa los umbrales del bloque 2, no los copia); datos `familias_b3_s501-520_20260918_160841`
+(dbe20b7bbb99c950) y `familias_b3_s521-540_20260918_161228` (cf655980b21c429f); 280 corridas por serie, 3.8 min.
+
+| medida | v14.1 (bloque 2, ×2) | **v15f** serie 1 | **v15f** réplica | letra |
+|---|---|---|---|---|
+| g1 variante nunca vista (1.ª exposición) | 0.875 / 0.875 | **1.0** | 0.875 | P-G1 pasa ×2 |
+| separa la variante que vira (de 8) | 4 / 4 | **7.5** (sep/apr 3.0) | **7.0** (3.0) | P-S2 INDECISO ×2 (separa más, no en menos exposiciones) |
+| de las que eran veneno | 0.0 / 0.0 | **0.875** | **0.75** | P-S3 REFUTA / pasa (la asimetría desaparece: eso era lo que se buscaba) |
+| daño a las hermanas (Δ 10 000) | 0.0 / 0.0 | 0.042 | 0.042 | P-S4 REFUTA ×2 (pequeño pero > 0) |
+| retención de la virada al final | 0.5 / 0.5 | 0.75 | 0.625 | ni ≥ 0.8 (coordinador) ni ≤ 0.5 (diseñador) |
+
+**Lectura honesta:** en el mundo de familias la tabla de pares SÍ comprime: los 32 estímulos se agrupan por familia en las 4 casillas de
+un par que parte los tokens por valencia, así que v15f lee la variante nunca vista con el R crudo exacto sin morderla y desaprende la
+que cambia casi siempre, también cuando era veneno — la mitad de la hipótesis del director que v14.1 no cumplía. El precio: una sola
+ganadora de 4 casillas para 32 estímulos deja un daño pequeño a las hermanas y una retención parcial. Predicciones: la del diseñador
+sobre velocidad acertó y sobre retención no; la del coordinador sobre cobertura acertó y sobre `sep/apr` y retención no. Por regla 3
+nada se recalibra: el siguiente candidato (preregistro nuevo) necesita **varias ganadoras o compuerta contra la lineal** (el nodo por
+familia), y el bloque 4 (canal con referencia por señalamiento) puede montarse sobre v15f tal cual, porque ya lee sin morder.
