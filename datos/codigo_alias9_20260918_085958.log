@@ -1,0 +1,115 @@
+[08:59:58 +    0.0s] ARRANQUE B-5 DESAMBIGUAR (nivel 4): brazos ['D0-ALIAS', 'D1-ALIAS', 'D0-LIMPIA', 'D1-LIMPIA', 'D1-SINSED', 'D0-VIVO', 'D1-VIVO'], ALIAS [326, 334, 343, 377, 446, 533, 549, 563, 670], LIMPIAS [307, 313, 316, 323, 325, 327, 333, 338, 342], T=100000.
+[08:59:58 +    0.0s]     sha preregistro                218b5eefbf2d552f
+[08:59:58 +    0.0s]     sha script                     cb91371b77c079d3
+[08:59:58 +    0.0s]     sha constructor                f94aa0a2f714c28d
+[08:59:58 +    0.0s]     sha identidad                  5ecb6992d46d2b57
+[08:59:58 +    0.0s]     sha organismo_v14_codigo       a4eeca90fb605c78
+[08:59:58 +    0.0s]     sha organismo_v14_codigo_on    2f7794d92e68cc89
+[08:59:58 +    0.0s]     sha organismo_v14g_codigo_on   7a1628b6e6a37f86
+[08:59:58 +    0.0s]     sha organismo_vivo_codigo      839fa71f9c84cb26
+[08:59:58 +    0.0s]     sha bateria_v14_codigo         875727174447b01a
+[08:59:58 +    0.0s]     sha bateria_generaliza_codigo  8669053f71fa76ef
+[08:59:58 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[08:59:58 +    0.0s]     sha origen_organismo_vivo      20c0961c79de8825
+[08:59:58 +    0.0s]     sha ref_sal                    d521f569205ebcfd
+[08:59:58 +    0.0s]     sha ref_examen                 ccb41783a4d6e4e9
+[08:59:58 +    0.0s]     sha ref_generaliza             6452fdf50352607e
+[08:59:59 +    0.1s]     ALIAS recalculadas en 301-700: [326, 334, 343, 377, 446, 533, 549, 563, 670] -> coinciden; LIMPIAS |D&B|=0: 9/9
+[08:59:59 +    0.6s] REGLA 11 — procesos python vivos (3), este es pid 34676
+[08:59:59 +    0.6s] ETAPA 1/5 — identidad interna (subproceso de un proceso).
+[08:59:59 +    0.6s]    -> SUBPROCESO (identidad): identidad_codigo.py 30000
+[09:02:59 +  181.0s]       |   [  165s]                V14: 1 necesidad, 2 estimulos s2: IDENTICO
+[09:02:59 +  181.0s]       |   [  167s]  SIN-SED: 1 necesidad, 4 estimulos, sal muda s1: IDENTICO
+[09:02:59 +  181.0s]       |   [  169s]  SIN-SED: 1 necesidad, 4 estimulos, sal muda s2: IDENTICO
+[09:02:59 +  181.0s]       |   [  171s]          NO_INFORMA: 2 necesidades, sal muda s1: IDENTICO
+[09:02:59 +  181.0s]       |   [  172s]          NO_INFORMA: 2 necesidades, sal muda s2: IDENTICO
+[09:02:59 +  181.0s]       |   [  174s]             VIVO: 2 necesidades, sal informa s1: IDENTICO
+[09:02:59 +  181.0s]       |   [  176s]             VIVO: 2 necesidades, sal informa s2: IDENTICO
+[09:02:59 +  181.0s]       | 
+[09:02:59 +  181.0s]       | IDENTIDAD exigida (I1+I2+I3+I4): 42/42
+[09:02:59 +  181.0s]       | INERCIA predicha en los mundos del tronco (I5, perilla ON): 30/30
+[09:02:59 +  181.0s]       | 
+[09:02:59 +  181.0s]       | --- I6: CONTROL QUE DEBE FALLAR (no vacuidad): NO_INFORMA, semilla ALIAS 326, on != off, T=40000 ---
+[09:02:59 +  181.0s]       |   [  180s] difieren: True (claves ['desambiguar', 'des_splits', 'des_t', 'sobre', 'llegadas', 'sin_objetivo']); des_splits on=6 off=0; W_nec hambre: off {'A': 1.0, 'B': -2.03, 'C': -0.12, 'D': -2.03}  on {'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': -0.0}
+[09:02:59 +  181.0s]       |   I6 DIFIERE (como debe)
+[09:02:59 +  181.0s]       | 
+[09:02:59 +  181.0s]       | VEREDICTO identidad_codigo: PASA  (42/42 exigidas; I5 30/30; I6 ok)
+[09:02:59 +  181.0s]       (180s)
+[09:02:59 +  181.0s] ETAPA 2/5 — T1: examen v3' con la perilla ENCENDIDA, 101-120 (subproceso; trae su Pool).
+[09:02:59 +  181.0s]    -> SUBPROCESO (T1 examen): bateria_v14_codigo.py 20 --desde 101 --log
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]         splits=[3, 1, 2, 1, 3, 1, 2, 1, 1, 2, 1, 1, 3, 1, 3, 1, 3, 2, 2, 2]  celdas_max=33  techo=0/20
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  1 E2K       20/20  [W_D≥0.8:20/20 W_B≤-2.4:20/20]
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]         splits=[4, 3, 3, 3, 3, 4, 3, 3, 3, 2, 2, 3, 3, 3, 4, 4, 3, 3, 3, 3]  celdas_max=34  techo=0/20
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  1 E2L       20/20  [W_A≈+1:20/20 W_B≈-3:20/20 solap→0:20/20]
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]         splits=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  celdas_max=33  techo=0/20
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/20 lo pasan (<=1)  W_A=[-2.07, -1.7, -1.52, -1.44]
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 20/20 lo pasan (>=19)
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  4c C∩B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 11)
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s] 
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[09:05:57 +  358.3s]       | [09:05:57 + 177.0s] *** v13 CUMPLE EL CRITERIO v3 con 20 semillas. Por el preregistro: CONGELAR v13 como tronco (si pasa tambien X2 y X3).
+[09:05:57 +  358.3s]       | [09:05:57 + 177.2s] datos -> examen_codigo_20260918_090300.json  sha256_16 = 1c9aa3a3d87173d6
+[09:05:57 +  358.3s]       (177s)
+[09:05:57 +  358.3s]    T1 examen v3' 8/8 en 101-120 con la perilla ON, y listas splits por etapa identicas a v14.1  -> 8/8: True; etapas con splits identicos a v14.1: 6/6  PASA
+[09:05:57 +  358.4s] ETAPA 3/5 — T2: generalizacion con la perilla ENCENDIDA, 101-120 (subproceso; trae su Pool).
+[09:05:57 +  358.4s]    -> SUBPROCESO (T2 generalizacion): bateria_generaliza_codigo.py organismo_v14_codigo_on 20 --desde 101 --log
+[09:06:42 +  403.9s]       | [09:05:57 +   0.0s] === REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — organismo_v14_codigo_on, 20 semillas (101..120), Pool(14) ===
+[09:06:42 +  403.9s]       | [09:05:57 +   0.0s] instrumento organismo_v14g_codigo_on 7a1628b6e6a37f86  organismo 2f7794d92e68cc89  esta bateria 8669053f71fa76ef
+[09:06:42 +  403.9s]       | [09:06:12 +  15.4s]           10/40
+[09:06:42 +  403.9s]       | [09:06:28 +  30.7s]           20/40
+[09:06:42 +  403.9s]       | [09:06:41 +  44.0s]           30/40
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s]           40/40
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s] 
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s]   OK    K  cobertura del primer encuentro: 20/20
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s]   PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.450, px0>azar 20/20
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s]   PASA  G2 conducta al primer encuentro: px0 0.967 (>=0.55), azar 0.437, px0>azar 20/20
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s]         divisiones 22  celdas 52  muertes 269
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s] 
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s] VEREDICTO bateria_generaliza (organismo_v14_codigo_on): K_cobertura=True G1_valor=True G2_conducta=True
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s] *** organismo_v14_codigo_on CONSERVA la generalización de la Etapa 3
+[09:06:42 +  403.9s]       | [09:06:42 +  45.3s] datos -> regresion_generaliza_codigo_organismo_v14_codigo_on_20260918_090557.json  sha256_16 = ed4d5d25e9eb2ad7
+[09:06:42 +  403.9s]       (46s)
+[09:06:42 +  403.9s]    T2 G1 >= 0.80, G2 >= 0.85, K 20/20, y acc/ba/splits/celdas/deaths identicos por semilla y regla a v14.1 (40/40)  -> {'K_cobertura': True, 'G1_valor': True, 'G2_conducta': True}; identicas a v14.1: 40/40  PASA
+[09:06:42 +  403.9s] ETAPA 4/5 — mundo vivo: 63 corridas de 100000 pasos (7 brazos). Pool(14) aqui.
+[09:06:52 +  413.4s]           9/63
+[09:07:01 +  422.1s]           18/63
+[09:07:01 +  422.4s]           27/63
+[09:07:09 +  431.0s]           36/63
+[09:07:17 +  438.5s]           45/63
+[09:07:19 +  440.3s]           54/63
+[09:07:26 +  447.2s]           63/63
+[09:07:26 +  447.2s] 
+[09:07:26 +  447.2s] ETAPA 5/5 — umbrales EXACTOS de PREREGISTRO_codigo.md (ERR-31).
+[09:07:26 +  447.2s]    D0-ALIAS   n=9  |W[sal]| med 1.45  W[veneno] med -1.45  exp sal med 3835.0  splits med 0.0 (R=0: 0.0)  celdas med 30.0  muertes med 75.0
+[09:07:26 +  447.2s]         |W[sal]| [1.8, 1.42, 1.86, 1.45, 1.51, 1.53, 1.32, 1.13, 1.15]   W[ven] [-1.8, -1.42, -1.86, -1.45, -1.51, -1.53, -1.32, -1.13, -1.15]   celdas [30, 30, 30, 30, 30, 30, 30, 30, 30]   des_splits [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[09:07:26 +  447.2s]    D1-ALIAS   n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exp sal med 517.0  splits med 7.0 (R=0: 7.0)  celdas med 37.0  muertes med 41.0
+[09:07:26 +  447.2s]         |W[sal]| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [36, 39, 37, 36, 38, 38, 36, 35, 38]   des_splits [6, 9, 7, 6, 8, 8, 6, 5, 8]
+[09:07:26 +  447.2s]    D0-LIMPIA  n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exp sal med 545.0  splits med 0.0 (R=0: 0.0)  celdas med 30.0  muertes med 35.0
+[09:07:26 +  447.2s]         |W[sal]| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [30, 30, 30, 30, 30, 30, 30, 30, 30]   des_splits [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[09:07:26 +  447.2s]    D1-LIMPIA  n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exp sal med 545.0  splits med 3.0 (R=0: 3.0)  celdas med 33.0  muertes med 35.0
+[09:07:26 +  447.2s]         |W[sal]| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [33, 33, 35, 30, 34, 31, 34, 35, 30]   des_splits [3, 3, 5, 0, 4, 1, 4, 5, 0]
+[09:07:26 +  447.2s]    D1-SINSED  n=9  |W[sal]| med 0.0  W[veneno] med -2.9  exp sal med 414.0  splits med 7.0 (R=0: 7.0)  celdas med 37.0  muertes med 42.0
+[09:07:26 +  447.2s]         |W[sal]| [0.0, 0.0, 0.02, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-2.88, -2.83, -2.91, -2.88, -2.91, -2.95, -2.93, -2.86, -2.9]   celdas [36, 37, 37, 36, 37, 38, 36, 35, 38]   des_splits [6, 7, 7, 6, 7, 8, 6, 5, 8]
+[09:07:26 +  447.2s]    D0-VIVO    n=9  |W[sal]| med 1.69  W[veneno] med -1.61  exp sal med 3833.0  splits med 3.0 (R=0: 0.0)  celdas med 33.0  muertes med 146.0
+[09:07:26 +  447.2s]         |W[sal]| [1.61, 1.6, 1.64, 2.15, 1.77, 1.82, 1.69, 1.51, 1.75]   W[ven] [-1.61, -1.4, -1.36, -0.85, -1.77, -1.82, -1.69, -1.51, -1.75]   celdas [31, 34, 33, 31, 33, 33, 33, 30, 33]   des_splits [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[09:07:26 +  447.2s]    D1-VIVO    n=9  |W[sal]| med 3.0  W[veneno] med -3.0  exp sal med 1936.0  splits med 10.0 (R=0: 9.0)  celdas med 40.0  muertes med 90.0
+[09:07:26 +  447.2s]         |W[sal]| [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [39, 41, 40, 41, 39, 36, 37, 40, 40]   des_splits [9, 10, 8, 11, 6, 3, 7, 10, 10]
+[09:07:26 +  447.2s]    G  D0-ALIAS y D0-LIMPIA identicos al JSON del bloque de la sal en w_sal, w_veneno, splits, celdas, deaths: 18/18  -> 18/18 PASA
+[09:07:26 +  447.2s]    C1 D1-ALIAS |W[sal]| <= 0.3 en >= 8/9, mediana <= 0.1  -> 9/9 (mediana 0.0)  PASA
+[09:07:26 +  447.2s]    C2 D1-ALIAS W_hambre[veneno] <= -2.8 en >= 8/9 y <= -2.5 en 9/9  -> 9/9 y 9/9 (mediana -3.0)  PASA
+[09:07:26 +  447.2s]    C3 exposiciones a la sal de D1-ALIAS <= 1.5 x la mediana de D1-LIMPIA en >= 8/9  -> limpias 545.0, alias 517.0, 9/9  PASA
+[09:07:26 +  447.2s]    C4 des_splits >= 1 en D1-ALIAS 9/9; la primera division por R=0 es en una mordida de D en >= 8/9  -> 9/9 y 7/9  NO
+[09:07:26 +  447.2s]    C5 D1-ALIAS y D1-LIMPIA celdas <= 45 en 18/18; mediana de celdas <= 40  -> 18/18, mediana 35.0, max 39  PASA
+[09:07:26 +  447.2s]    C6 D1-LIMPIA |W[sal]| <= 0.3 en 9/9 y W_hambre[veneno] <= -2.8 en 9/9  -> 9/9 y 9/9 (des_splits mediana 3.0)  PASA
+[09:07:26 +  447.2s]    C7 D1-SINSED cumple C1 (|W[sal]| <= 0.3) y C2 (W[veneno] <= -2.8) en >= 8/9 cada uno  -> 9/9 y 9/9  PASA
+[09:07:26 +  447.2s]    C8 tabla 2x2 en D1-VIVO: |W_h[sal]|<=0.3, W_s[sal]<=-2.5, W_h[ven]<=-2.8, |W_s[ven]|<=0.3 (las cuatro) en >= 7/9; en D0-VIVO falla en >= 7/9  -> ON exacta 9/9, OFF falla 9/9  PASA
+[09:07:26 +  447.2s]         [W_h[sal], W_s[sal], W_h[ven], W_s[ven]] ON: [[0.0, -3.0, -3.0, -0.0], [0.0, -3.0, -3.0, 0.0], [0.0, -3.0, -3.0, 0.0], [0.0, -3.0, -3.0, 0.0], [0.0, -3.0, -3.0, 0.0], [-0.0, -3.0, -3.0, -0.0], [0.0, -3.0, -3.0, 0.0], [0.0, -3.0, -3.0, 0.0], [-0.0, -3.0, -3.0, -0.0]]
+[09:07:26 +  447.2s]         OFF: [[-0.85, -2.15, -0.85, -2.15], [-1.61, -1.39, -1.61, -1.39], [-1.77, -1.23, -1.77, -1.23], [-1.36, -1.64, -1.36, -1.64], [-1.4, -1.6, -1.4, -1.6], [-1.82, -1.18, -1.82, -1.18], [-1.51, -1.49, -1.51, -1.49], [-1.75, -1.25, -1.75, -1.25], [-1.69, -1.31, -1.69, -1.31]]
+[09:07:26 +  447.2s]    C9 muertes D1-ALIAS <= 0.8 x D0-ALIAS (medianas; se reporta A12)  -> 41.0 contra 75.0 (razon 0.547, A12 1.0)  PASA
+[09:07:26 +  447.2s] 
+[09:07:26 +  447.2s] VEREDICTO: DESAMBIGUAR FUNCIONA: cuando una celda consolidada recibe R = 0 bajo una retina distinta y divide, el estimulo que no informa se queda sin valor y el veneno conserva el miedo. La evitacion desaparece (C3). Coste dentro del presupuesto (C5) y sin regresion en semillas limpias (C6). Vale en el tronco con cuatro estimulos (C7). La tabla 2x2 sal/veneno x hambre/sed sale exacta (C8). T1/T2/T3 se leen en sus logs: deben ser IDENTIDAD con v14.1. Nueve semillas por brazo piden replica.
+[09:07:26 +  447.3s] datos -> codigo_alias9_20260918_085958.json  sha256_16 = 369d784c65e036b1
