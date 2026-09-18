@@ -15,6 +15,7 @@ BASE = dict(T=200000, mundo='regla', eta_s=0.015, puerta=3)
 BRAZOS = {'LINEAL': dict(lectura='lineal'), 'CUADRATICA': dict(lectura='cuadratica'), 'RANDOM15': dict(lectura='random15')}
 REGLAS = ['xor01', 'px0', 'azar']
 N_PARALELO = 14
+RAPIDO = '--rapido' in sys.argv   # gemelo compilado organismo_v13q_rapido (81/81 + 243/243 + 81/81): solo si su etapa de identidad da 3/3
 _log = {'f': None, 't0': time.time()}
 
 
@@ -53,8 +54,18 @@ def tarea(args):
         a, b = a_.run(seed, **kw), b_.run(seed, lectura='lineal', **kw)
         dif = [kk for kk in a if N(a[kk]) != N(b[kk])]
         return dict(tipo=tipo, esc=regla, seed=seed, identico=not dif, difieren=dif)
+    if tipo == 'R':   # identidad del gemelo compilado contra el original vigente (cuadratica, xor01)
+        _, seed = args
+        import organismo_v13q as a_, organismo_v13q_rapido as b_
+        kw = dict(T=30000, mundo='regla', regla='xor01', eta_s=0.015, puerta=3, lectura='cuadratica')
+        a, b = a_.run(seed, **kw), b_.run(seed, **kw)
+        dif = [kk for kk in a if N(a[kk]) != N(b[kk])]
+        return dict(tipo=tipo, esc='rapido', seed=seed, identico=not dif, difieren=dif)
     _, brazo, regla, seed = args
-    import organismo_v13q as m
+    if RAPIDO:
+        import organismo_v13q_rapido as m
+    else:
+        import organismo_v13q as m
     kw = dict(BASE); kw.update(BRAZOS[brazo]); kw['regla'] = regla
     r = m.run(seed, **kw)
     vr = m.split_regla(seed, regla)[3]
@@ -95,6 +106,12 @@ if __name__ == '__main__':
         V['IDENTIDAD'] = all(x['identico'] for x in rc)
         if not V['IDENTIDAD']:
             log("*** IDENTIDAD FALLIDA: se para."); sys.exit(1)
+        if RAPIDO:
+            rr = pool.map(tarea, [('R', s) for s in (1, 2, 3)], chunksize=1)
+            log(f"  identidad gemelo compilado == original (cuadratica xor01, T=30000): {sum(x['identico'] for x in rr)}/3")
+            if not all(x['identico'] for x in rr):
+                log('*** GEMELO NO IDENTICO: se para (corre sin --rapido).'); sys.exit(1)
+            V['IDENTIDAD_RAPIDO'] = True
         tr = [('T', b, rg, s) for b in BRAZOS for rg in REGLAS for s in SEEDS]
         log(f"ETAPA 2/3 — {len(tr)} corridas...")
         res = []
