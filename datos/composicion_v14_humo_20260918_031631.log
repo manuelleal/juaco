@@ -1,0 +1,27 @@
+[03:16:31 +    0.0s] ARRANQUE composicion v14 (hija dispersa + puerta por codigo). HUMO (un proceso, sin Pool, sin subprocesos)
+[03:16:31 +    0.0s] sha preregistro=47e9bdee00afc5c9  script=647736fe3bfb2708  constructor=5f2f98d1ca57db79  identidad=2cea98f9ca647e90  organismo_v14c=649851c0f10c3cd6  organismo_v14c_on=00e941c861896455  organismo_v14gc=dcca1ab79d86289b  bateria_v14c=94d035c5bfffa2e1  bateria_generaliza_v14c=168a38f5adce396b  organismo_capBD=e215b0148bc2c4fc  mundo_composicion_v14=a9098933b1950e3d  origen organismo_v13 (congelado)=cc8b16b492d4d324  origen bateria_v13 (congelada)=1a027bcb37eb536e  origen bateria_generaliza=46772f5a582872c8  origen mundo_hija_dispersa=d305d53186fcbcd6  origen organismo_capB=8070351683837077
+[03:16:31 +    0.4s] REGLA 11 -- procesos python vivos (3), este es pid 28952
+[03:16:31 +    0.4s] 
+[03:16:31 +    0.4s] ETAPA humo 1/3 -- identidad en miniatura (perillas apagadas == organismo_v13, 2 semillas)...
+[03:16:32 +    0.6s]    s1: IDENTICO
+[03:16:32 +    0.9s]    s2: IDENTICO
+[03:16:32 +    0.9s]    -> True  (identidad completa: python identidad_v14c.py, 30/30 ya corrido)
+[03:16:32 +    0.9s] 
+[03:16:32 +    0.9s] ETAPA C1 -- SALTADA en modo humo (exige Pool via bateria_v14c.py; la corre el coordinador sin --humo).
+[03:16:32 +    0.9s] 
+[03:16:32 +    0.9s] ETAPA C2 -- SALTADA en modo humo (exige Pool via bateria_generaliza_v14c.py).
+[03:16:32 +    0.9s] 
+[03:16:32 +    0.9s] ETAPA C3 -- composicion temporal (3T-k, k=5), semillas 61-62, T=3000...
+[03:16:32 +    1.5s]    lift_q4 COMP mediana 0.134 (>= 0.25), > V13 en 1/2 (>= 15)  -> ok_lift=None  [HUMO: umbral no aplica]
+[03:16:32 +    1.5s]    celdas COMP<=0.75xV13 en 0/2 (>= 14)  celdas COMP=36 V13=38  -> ok_celdas=None  [HUMO: umbral no aplica]
+[03:16:32 +    1.5s]    referencia hija-dispersa-sola (registro, mismos seeds/k): lift_q4 0.251, celdas 48  -> COMP >= esa referencia: False
+[03:16:32 +    1.5s]    (HUMO: 2 semillas, T corto -- ningun criterio numerico vale; solo prueba que el montaje corre.)
+[03:16:32 +    1.5s] 
+[03:16:32 +    1.5s] ETAPA C4 -- capacidad en el mundo grande (organismo_capBD), semillas 41-42, D=10, n_est=8, pasos=(500,)...
+[03:16:33 +    2.2s]    v13   pt=   500  N* 1.0 [1,1]  celdas 40
+[03:16:33 +    2.2s]    COMP  pt=   500  N* 1.0 [1,1]  celdas 39
+[03:16:33 +    2.2s]    C4: N*(COMP) a pt=500 = 1.0  (umbral 48)  -> ok=None  [HUMO: umbral no aplica, pt de humo no es 60000]
+[03:16:33 +    2.2s]    (HUMO: 2 semillas, mundo chico -- ningun criterio numerico vale; solo prueba que el montaje corre.)
+[03:16:33 +    2.2s] 
+[03:16:33 +    2.2s] VEREDICTO: HUMO completo -- el montaje corre en un proceso, sin Pool (C1/C2 exigen Pool: quedan para el coordinador).
+[03:16:33 +    2.2s] datos -> composicion_v14_humo_20260918_031631.json  sha256_16 = 44e525433c5b2e1d
