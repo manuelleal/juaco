@@ -4839,8 +4839,8 @@ instrumentos por anclas desde v14.1: `organismo_v15d` (f2f0b06e31877e96; perilla
 bit a bit sin consumir rng), `organismo_v15d_on` (e57d0677cdff3906), `organismo_v15gd` (4720721d775eec29), `organismo_v15gd_on`
 (a1863e095fb5d1b5), `bateria_v15d` (707299a585572ce9; examina al candidato ENCENDIDO — corrige el defecto 1 de v15c),
 `bateria_generaliza_v15d` (ee4c9214310de717 tras ERR-38); runner `corre_v15d.py` (78d0a04c39c27a76); identidad **32/32** (I1 24/24, I2 rng
-no consumido 2/2, I3 6/6); datos `v15d_s121-140_20260918_082846` (e1ad17cfdb97512b), examen `examen_v15d_20260918_083108.log` (la batería
-congelada no escribe JSON cuando el examen falla: sólo log), V2a `regresion_generaliza_organismo_v15d_on_20260918_084412` (4b9a36a127a2c2ea).
+no consumido 2/2, I3 6/6); datos `v15d_s121-140_20260918_082846` (e1ad17cfdb97512b), examen `examen_v15d_20260918_083108.log` (sólo log: **ERR-42**, la batería copiada calculaba el sha de `organismo_v11.py` con la ruta de
+`creacion_A/` y lanzaba excepción después de escribir el veredicto; los conteos del log son válidos, el JSON por corrida se perdió), V2a `regresion_generaliza_organismo_v15d_on_20260918_084412` (4b9a36a127a2c2ea).
 
 | criterio (escrito antes) | resultado | veredicto |
 |---|---|---|
@@ -4858,7 +4858,8 @@ y como explica la recompensa desde la primera mordida, la vía rápida deja de r
 datos (§6). Siguiente candidato legítimo, con preregistro NUEVO: **tabla reescribible** (la casilla sigue a la última recompensa, o se
 borra cuando su error propio sube) — v15e, creador A. Notas de instrumento (sin ERR: no cambian ningún umbral): la etiqueta "perilla
 APAGADA" de la ETAPA 2/5 en el log del runner es texto heredado del runner de v15c (`bateria_v15d` importa `organismo_v15d_on`, líneas
-98 y 111); `bateria_v14` (congelada) no escribe el JSON del examen cuando el veredicto es negativo.
+98 y 111); el JSON del examen no se escribió por ERR-42 (ruta de `organismo_v11.py` en la batería copiada, corregida en
+`bateria_v15e`), no por la batería congelada — corrección del 18 sep 09:35 a la nota escrita a las 08:46.
 
 
 ### Bloque B-5 — DESAMBIGUAR CÓDIGOS (nivel 4; creador B; 18 sep 09:07; ALIAS 326–670 y LIMPIAS 307–342 del bloque de la sal): **8 de 9 criterios pasan — el alias se repara sin tocar el tronco (examen 8/8 y generalización IDÉNTICOS a v14.1); C4 (dónde cae la primera división) queda a una semilla del umbral (7/9) → réplica automática en semillas nuevas (regla 12)**
@@ -4980,3 +4981,16 @@ semillas 261–280, **ERR-40**: medida no ligada a la supervivencia): medida que
 descendientes con coste contados sólo si el cuerpo sigue vivo Y pasos después), CUELLO_MIN contra tercera necesidad contra VIVO,
 mismos controles. Nivel 9 sigue en 30 % (propósito medido como conducta, no como medida de reproducción). Sin ERR nuevo por el
 resultado (es una refutación, no un defecto).
+
+
+### ERR-41 (creador A, 18 sep 09:30) y ERR-42 (creador A, verificado por el coordinador 09:35): dos defectos de los instrumentos copiados de v15c/v15d
+
+**ERR-41 — el mundo de regla (V2b) de v15c y v15d corrió en configuración tipo v13, no v14.1:** `corre_v15c.py`/`corre_v15d.py` pasaban
+`eta_s=0.15, puerta=3` solos, y el gemelo g pone por defecto `clip_s=3.0, mask_rel=0, puerta_pat=0` (v14.1: 10, 2, 5). Los veredictos V2b
+(v15c 0.812; v15d `suma` 0.875 / `ruta` 0.844 estricta) valen como "mundo de regla en configuración v13 + memoria de pares", no como
+"tronco v14.1 + memoria". No se repiten: v15c y v15d ya no entran por V1. `corre_v15e.py` pasa los kwargs exactos del tronco (`KW14`).
+**ERR-42 — el JSON del examen de v15c/v15d no se escribió:** `bateria_v15c.py`/`bateria_v15d.py` (copias por anclas de `bateria_v14`)
+calculaban `h16(AQUI/organismo_v11.py)` con `AQUI = creacion_A/`, donde ese archivo no existe → excepción **después** de escribir las
+líneas del veredicto; los conteos del log (`examen_v15d_20260918_083108.log`) son válidos y el JSON por corrida se perdió. La nota del
+registro de las 08:46 que lo atribuía a la batería congelada queda corregida. `bateria_v15e` lee los sha desde `organismo/`. Regla 14
+ampliada: toda batería copiada pasa un humo que llegue a ESCRIBIR su JSON antes de la serie.

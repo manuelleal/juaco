@@ -47,7 +47,9 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
 14. **Entradas nuevas en baterías copiadas (ERR-38, 18 sep 08:44):** cuando una batería congelada se copia por anclas para un candidato,
     la entrada nueva se compara CAMPO A CAMPO con la entrada del tronco antes de correr; "por defecto" no existe cuando el módulo es un
     gemelo con sus propios defaults (el gemelo de generalización tiene `eta_s=0.0`, el tronco pasa `0.15`). Dos organismos distintos con
-    filas idénticas hasta el último decimal son señal de que una vía está apagada: se revisa el instrumento antes de leer el veredicto.
+    filas idénticas hasta el último decimal son señal de que una vía está apagada: se revisa el instrumento antes de leer el veredicto. Y toda batería copiada pasa un humo que llegue a ESCRIBIR su JSON
+    antes de la serie (ERR-42: una ruta mal copiada lanzó excepción después del veredicto y perdió el JSON del examen); los
+    corredores de mundo de regla de un candidato al tronco pasan los kwargs EXACTOS del tronco (ERR-41).
 
 ## Roles
 | rol | modelo | qué hace | entrega |
