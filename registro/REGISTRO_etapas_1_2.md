@@ -4512,3 +4512,21 @@ y CONV/PRED (n = 2) los 8: **el 0.515 de SOLO_R y el 0.822 de CONV de N3d están
 probablemente no cambia el veredicto (el receptor es ciego en los dos) pero invalida comparaciones de exposiciones entre brazos con
 `n` distinto. Pasa al auditor. Aprobado a C: los dos arreglos como perillas en `mundo_social_pred` (apagadas ≡ actual), tres
 humos con SOLO_R en banda y, sólo entonces, el preregistro con el mudo como predicción principal.
+
+
+### Mundo vivo (línea F; diseñador; 18 sep 06:55): **diseño e instrumento listos con ancla fuerte (37/37: con una necesidad y dos estímulos, TODA la maquinaria encendida es v14.1 bit a bit); mini-prueba: el organismo aprende la tabla exacta necesidad × estímulo (2 × 4) en 7/2/9/3 exposiciones y resuelve el "XOR natural" (1.00 contra 0.50 con una necesidad o con valor escalar) — NO se corre hasta el veredicto de XOR (revisión de rumbo de las 06:45)**
+
+`experimentos/nivel11_mundo_vivo/`: `construye_vivo.py` (03c83de17e34d9a0; 20 sustituciones por anclas desde `organismo/organismo_v14.py`
+v14.1 feefc88b1fd8d434), `organismo_vivo.py` (20c0961c79de8825), `identidad_vivo.py` (37/37; el control que debe fallar, falla),
+`mini_vivo.py`, `PREREGISTRO_mundo_vivo.md` (borrador + enmienda 1), informe `registro/investigacion/DISENO_mundo_vivo_20260918.md`.
+Diseño mínimo: dos necesidades (hambre, sed) con dos muertes, cuatro estímulos (los cuatro patrones que ya existen: comida,
+veneno, agua, sal), consecuencia vectorial, sorpresa específica por necesidad, valor por estímulo y necesidad. Mini-prueba (3
+semillas, T = 100 000): VIVO xor01(necesidad × estímulo) **1.00** 3/3, tabla exacta {hambre: A +1, B −3, C 0, D 0; sed: A 0, B 0,
+C +1, D −3} en 7/2/9/3 exposiciones, muertes 89 [52 energía, 37 agua]; UNA_NEC 0.50 (141 muertes, 97 de sed); ESCALAR 0.50 (160):
+**el valor escalar promedia lo que el mundo separa y le va peor que no tener la segunda necesidad**; BARAJA_CON 0.25; NO_INFORMA
+1.00 con sal que nunca cruza. Cuatro fallos declarados por el propio diseñador y corregidos antes de proponer (control barajado
+mal escrito; P4 refutada: un valor 0 no veta a la boca frente al impulso, fallo de política; trampa 3 confirmada: veneno 6.3×
+más encontrado que comida; primera cruzada transitoria). **Lectura del diseñador, que comparto:** el mundo vivo compra
+ESTRUCTURA, no regla — disuelve el XOR necesidad × estímulo porque lo mete en la forma de la memoria; el cuello de construir el
+rasgo desde píxeles sigue intacto; su valor es un criterio de éxito que no es un acierto sino estar vivo. Semillas cuando toque:
+181–200 (réplica 201–220). Queda en diseño hasta el veredicto de XOR.

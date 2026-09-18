@@ -1,7 +1,7 @@
 1b92a6f4b4256ef7 ./.gitattributes
 6e532fdf76b9b028 ./.gitignore
 44a446929d1d3b57 ./BRIEF_ORIGINAL_y_estado.md
-3f20e14b65cd4686 ./CLAUDE.md
+61e2e095f3d6b207 ./CLAUDE.md
 e63069a7697fb2c3 ./Historial..md
 e3b0c44298fc1c14 ./MANIFEST.txt
 833f42dc5a23de4b ./README.md
@@ -387,6 +387,8 @@ cf1c6e8578901ade ./datos/xor_6_humo_20260918_055602.json
 6ff45eee9440ca39 ./datos/xor_6_humo_20260918_055602.log
 61239d3e9bc1fee8 ./datos/xor_6_humo_20260918_055701.json
 2b953b77a89aead2 ./datos/xor_6_humo_20260918_055701.log
+25dd85e56c19ecc0 ./datos/xor_6_s101-120_20260918_055928.json
+a115145a9d0104f5 ./datos/xor_6_s101-120_20260918_055928.log
 b056086985dd26fc ./datos/xor_lectura_s1-20_20260917_213124.json
 bbd0c35e6433ff93 ./datos/xor_lectura_s1-20_20260917_213124.log
 7bfbe008fb64ccbc ./experimentos/analiza.py
@@ -445,6 +447,7 @@ dad369c122511275 ./experimentos/creacion_A/dos_canales_es_valor_mas_conflicto.py
 a61e4a3224746235 ./experimentos/creacion_A/dos_canales_valor_conflicto.json
 330eaec6089b5554 ./experimentos/creacion_A/identidad_v13q4.py
 3fafcd04795b4544 ./experimentos/creacion_A/identidad_v13q5_rapido.py
+ce35483142c63305 ./experimentos/creacion_A/identidad_v13q6_rapido.py
 89124e43edc91929 ./experimentos/creacion_A/identidad_v14_e015c10.py
 213f9118ac52c7b5 ./experimentos/creacion_A/identificabilidad_xor.json
 f89f9d326861fc97 ./experimentos/creacion_A/identificabilidad_xor.py
@@ -469,6 +472,7 @@ a3ded739a46b1c97 ./experimentos/creacion_A/mundo_largo_A.py
 fae9c32b146fdbb4 ./experimentos/creacion_A/organismo_v13q5.py
 87d48b8fec173907 ./experimentos/creacion_A/organismo_v13q5_rapido.py
 b37aa8124c89cc5f ./experimentos/creacion_A/organismo_v13q6.py
+55307bfcd08791ce ./experimentos/creacion_A/organismo_v13q6_rapido.py
 bbd1de8c0954e398 ./experimentos/creacion_A/organismo_v14_e015c10.py
 a622e9305781d233 ./experimentos/creacion_A/regla_puerta_rasgo.py
 1c696e6544f4bb9c ./experimentos/creacion_A/regla_wta_conjuntiva.json
@@ -522,7 +526,7 @@ e7f8d22b599a8f16 ./experimentos/creacion_B/mundo_k_B2.py
 4fa8eabff43fcf91 ./experimentos/creacion_B/organismo_capB.py
 d6d550aec83f775a ./experimentos/creacion_B/organismo_v14L.py
 22e5311cd01467a4 ./experimentos/creacion_C/construye_codpred.py
-959ff2237bbb1dc1 ./experimentos/creacion_C/construye_n2pred.py
+d12cfea11e7f1e25 ./experimentos/creacion_C/construye_n2pred.py
 27c91df159a1465b ./experimentos/creacion_C/construye_selfmodel.py
 48842ea7842665aa ./experimentos/creacion_C/identidad_codpred.py
 6e4de0ec2ba206ed ./experimentos/creacion_C/identidad_n2pred.py
@@ -537,7 +541,7 @@ b6d4493ceb077396 ./experimentos/creacion_C/mini_n2pred.py
 c765ccb2fbdabb7e ./experimentos/creacion_C/mini_n2pred_salida.json
 9a52771181c53c8e ./experimentos/creacion_C/mini_usos_sorpresa.py
 d259ef67292166c9 ./experimentos/creacion_C/mini_usos_sorpresa_salida.json
-fc306b8fcddabe15 ./experimentos/creacion_C/mundo_social_pred.py
+277b6978ad47a492 ./experimentos/creacion_C/mundo_social_pred.py
 d670fd65c53e4310 ./experimentos/creacion_C/mundo_vd.py
 2eaba8dde27f05bd ./experimentos/creacion_C/organismo_v13s.py
 edfcb77a9ca91682 ./experimentos/creacion_C/organismo_v14pc.py
@@ -759,11 +763,11 @@ dcca1ab79d86289b ./experimentos/nivel10_composicion_v14/organismo_v14gc.py
 9ffe024e6757ac98 ./experimentos/nivel10_composicion_v14/organismo_v14gt.py
 fc4a803019116a88 ./experimentos/nivel10_composicion_v14/organismo_v14t.py
 b2bcf9f5591efcfa ./experimentos/nivel10_composicion_v14/organismo_v14t_on.py
-c4e5bc6ce69f82d1 ./experimentos/nivel11_mundo_vivo/PREREGISTRO_mundo_vivo.md
+123c35a9b7013f3c ./experimentos/nivel11_mundo_vivo/PREREGISTRO_mundo_vivo.md
 03c83de17e34d9a0 ./experimentos/nivel11_mundo_vivo/construye_vivo.py
 2eb84108b8507096 ./experimentos/nivel11_mundo_vivo/identidad_vivo.py
 f3e86cbe6c17e6d7 ./experimentos/nivel11_mundo_vivo/mini_vivo.py
-91ec3defcd7b7b9b ./experimentos/nivel11_mundo_vivo/mini_vivo_salida.json
+0eafc6522ccc697f ./experimentos/nivel11_mundo_vivo/mini_vivo_salida.json
 20c0961c79de8825 ./experimentos/nivel11_mundo_vivo/organismo_vivo.py
 af37ac512d999d21 ./experimentos/nivel3_asociacion/PREREGISTRO_asociacion.md
 22893c8bef8a8440 ./experimentos/nivel3_asociacion/construye_v14gL.py
@@ -1049,16 +1053,17 @@ d43606ad55a75bc0 ./registro/EQUIPO.md
 4fed179409721f9f ./registro/HANDOFF.md
 167c2a35b22306fa ./registro/HORIZONTE_frontera.md
 8429068fe2ab029c ./registro/NOTA_v11_pattern_separation_20260917.md
-66777d68b5344e86 ./registro/PLAN.md
+a28693780d3bb702 ./registro/PLAN.md
 f12c7c63288d18af ./registro/PROPUESTA_v14.md
 93d958de2314e273 ./registro/REFLEXION_agi.md
-4f49c8d3924cb169 ./registro/REGISTRO_etapas_1_2.md
+e431fe4291c53552 ./registro/REGISTRO_etapas_1_2.md
 a8dd30b835fd8770 ./registro/investigacion/AUDITORIA_bloques_2_3_20260917.md
 3866077481633a0d ./registro/investigacion/AUDITORIA_dia7_20260917.md
 688ebc4c712a2a4b ./registro/investigacion/AUDITORIA_madrugada18_20260918.md
 e70aaf81c71de49f ./registro/investigacion/DEBATE_y_plan_5a10.md
 2b80ec5b187a07b3 ./registro/investigacion/DISENO_2d_20260917.md
-5f1671bfe45a2dda ./registro/investigacion/PUENTE_creacion.md
+481a4b5a980d921f ./registro/investigacion/DISENO_mundo_vivo_20260918.md
+e1a7cb02a487083f ./registro/investigacion/PUENTE_creacion.md
 6c5ba9e42d11552a ./registro/investigacion/PUENTE_xor.md
 a757a0c4fa867227 ./registro/investigacion/REPOS_cercanos.md
 7f145cee0eb8eaa5 ./registro/investigacion/exploracion_sin_atraccion_20260917.md
