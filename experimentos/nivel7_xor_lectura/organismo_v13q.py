@@ -83,6 +83,7 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     sobre={'veneno':[0]*4,'comida':[0]*4}; llegadas={'veneno':[0]*4,'comida':[0]*4}; sin_objetivo=[0]*4   # v9: lectura
     tipos=['A','B'] if mundo=='AB' else list(tren)
     W_apriori=None; codigos_f2=None; primer={}   # v13g: sonda y primer encuentro (lectura)
+    W_lenta_apriori=None; familiar_apriori=None   # 3b
     def spawn():
         while len(objs)<nobj:
             x=int(rng.integers(L))
@@ -107,6 +108,8 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
         if nuevo is not None and t==nuevo_en: tipos.append(nuevo); val[nuevo]=nuevo_val
         if mundo!='AB' and t==fase2_en:   # v13g: sonda a priori (valor TOTAL) y entrada de los de test
             W_apriori={_k:valor(P_[_k]) for _k in P_}
+            W_lenta_apriori={_k:float((Wps-Wns)@phi(P_[_k])) for _k in P_}   # 3b: la via lenta sola
+            familiar_apriori={_k:(bool(int((np.abs((Wp-Wn)[kenyon(P_[_k])>0])>0.2).sum())>=puerta) if puerta is not None else False) for _k in P_}   # 3b: ¿la puerta lee la rapida?
             codigos_f2={_k:sorted(int(_i) for _i in code(P_[_k])) for _k in P_}
             tipos.extend(test); primer={_k:None for _k in test}
         hambre=np.clip(1-E,0,1); d,k,left=see(contar=True); pat=P_[k]
@@ -180,4 +183,4 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     W_lenta={k:round(float((Wps-Wns)@phi(P_[k])),3) for k in P_}   # v13: lectura de la via lenta sola (xor: phi)
     comp={k:(round(float(Wp@kenyon(P_[k])),2),round(float(Wn@kenyon(P_[k])),2)) for k in P_}
     return dict(sobre=sobre,llegadas=llegadas,sin_objetivo=sin_objetivo,memoria_rechazo=memoria_rechazo,err_max=err_max,t_conflicto=t_conflicto,t_techo=t_techo,n_techo=n_techo,split_t=split_t,mord=mord,vis=vis,W=W,comp=comp,deaths=deaths,log=log,splits=splits,celdas=int(activa.sum()),
-                solap=None if mundo!='AB' else {'AB':len(code(P_['A'])&code(P_['B'])),'nB':len(code(P_[nuevo])&code(P_['B'])) if nuevo else None},W_lenta=W_lenta,Wps=[round(float(x),3) for x in Wps],Wns=[round(float(x),3) for x in Wns],mundo=mundo,regla=regla,tren=tren,test=test,W_apriori=W_apriori,codigos_f2=codigos_f2,primer=primer,W_final=({_k:valor(P_[_k]) for _k in P_} if mundo!='AB' else None),sonda=_sonda,codigos_fin=_cod_fin)
+                solap=None if mundo!='AB' else {'AB':len(code(P_['A'])&code(P_['B'])),'nB':len(code(P_[nuevo])&code(P_['B'])) if nuevo else None},W_lenta=W_lenta,Wps=[round(float(x),3) for x in Wps],Wns=[round(float(x),3) for x in Wns],mundo=mundo,regla=regla,tren=tren,test=test,W_apriori=W_apriori,W_lenta_apriori=W_lenta_apriori,familiar_apriori=familiar_apriori,codigos_f2=codigos_f2,primer=primer,W_final=({_k:valor(P_[_k]) for _k in P_} if mundo!='AB' else None),sonda=_sonda,codigos_fin=_cod_fin)

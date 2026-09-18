@@ -49,6 +49,15 @@ PARCHES = [
       "                        else:     Wns=np.clip(Wns+eta_s*aversion*(-_ds)*phi(P_[kk]),0,clip_s)"], 1, 'aprendizaje lenta'),
     (["    W_lenta={k:round(float((Wps-Wns)@P_[k]),3) for k in P_}   # v13: lectura de la via lenta sola"],
      ["    W_lenta={k:round(float((Wps-Wns)@phi(P_[k])),3) for k in P_}   # v13: lectura de la via lenta sola (xor: phi)"], 1, 'W_lenta'),
+    # 3b: lecturas puras en la sonda (no tocan ningun numero del organismo): la via lenta sola y si la puerta leeria la rapida
+    (["    W_apriori=None; codigos_f2=None; primer={}   # v13g: sonda y primer encuentro (lectura)"],
+     ["    W_apriori=None; codigos_f2=None; primer={}   # v13g: sonda y primer encuentro (lectura)",
+      "    W_lenta_apriori=None; familiar_apriori=None   # 3b"], 1, 'init 3b'),
+    (["            W_apriori={_k:valor(P_[_k]) for _k in P_}"],
+     ["            W_apriori={_k:valor(P_[_k]) for _k in P_}",
+      "            W_lenta_apriori={_k:float((Wps-Wns)@phi(P_[_k])) for _k in P_}   # 3b: la via lenta sola",
+      "            familiar_apriori={_k:(bool(int((np.abs((Wp-Wn)[kenyon(P_[_k])>0])>0.2).sum())>=puerta) if puerta is not None else False) for _k in P_}   # 3b: ¿la puerta lee la rapida?"], 1, 'sonda 3b'),
+    (["W_apriori=W_apriori,codigos_f2=codigos_f2,"], ["W_apriori=W_apriori,W_lenta_apriori=W_lenta_apriori,familiar_apriori=familiar_apriori,codigos_f2=codigos_f2,"], 1, 'return 3b'),
 ]
 
 if __name__ == '__main__':
