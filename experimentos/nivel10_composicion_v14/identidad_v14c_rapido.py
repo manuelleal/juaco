@@ -224,7 +224,8 @@ if __name__ == '__main__':
     else:
         hijo = json.loads(linea[0][len('###JSON###'):])
         print(f"  proceso nuevo: {t_sub:.1f}s en total, primer run del gemelo {hijo['t_primero']:.2f}s "
-              f"(si recompilara serian ~10s: la cache se leyo {'SI' if hijo['t_primero'] < 3.0 else 'NO'})")
+              f"(medido con la cache BORRADA el mismo primer run tarda ~18s: la cache se leyo "
+              f"{'SI' if hijo['t_primero'] < 3.0 else 'NO'})")
         for etiq, s, t, kw in HIJO:
             n += 1; cmp(aqui_res[etiq], hijo['res'][etiq], f"e/{etiq}", fallos)
 
