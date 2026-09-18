@@ -5042,3 +5042,44 @@ organismo con consecuencias no está reportado así); no desdecirse = tabla de m
 (necesidad medida + reparación con identidad bit a bit en el tronco) y un benchmark de método "ejemplos y exposiciones hasta asociar".
 **Errata:** la cita "Milstein et al. 2024" de `ENJAMBRE_xor_20260918.md` §1 no existe con esa autoría; es Wu & Maass 2025 (*Nat Commun*
 16:342); anotado al final del informe. Las demás citas del enjambre quedan sin verificar.
+
+
+### Mundo vivo, peldaño 2, BLOQUE 2 — crecimiento neto del linaje y lectura pesimista saciado (diseñador; 18 sep 09:43 y réplica 09:45; semillas 261–280 y 281–300): **8/8 predicciones en las dos series — DECLARADO: la medida `r = descendientes − muertes` ordena los brazos como la supervivencia (ERR-40 resuelto), y leer el MÍNIMO de las dos filas de valor cuando el cuerpo está saciado (CUELLO_MIN, sin memoria nueva) lleva el linaje al filo del reemplazo (r ≈ 0 en 9–11/20; VIVO −73/−75) por menos muertes y más ventanas; la "tercera necesidad" no aporta nada sobre eso y SE RETIRA (Occam)**
+
+Preregistro `experimentos/nivel11_mundo_vivo/PREREGISTRO_reproduccion_2.md` (1b18b471ee06397e; ERR-40: la ventana de viabilidad premiaba
+atracones que mueren más; candidatas comparadas por escrito — `desc/(muertes+1)` falla con el propio dato de 221–240; exclusión tras la
+muerte y coste no quitan el atracón — elegida `r = descendientes − muertes` por 100 000 pasos: una muerte financia a lo sumo una ventana,
+morir nunca suma; umbral con significado r = 0 = tasa de reemplazo); instrumento por anclas `organismo_vivo_rep2.py` (96feb4918dc5d694;
+perilla `rep2` de sólo lectura; apagada ≡ `organismo_vivo`); arnés `identidad_vivo_rep2.py` **60/60** (+ 15/15 en cada runner); runner
+`corre_vivo_rep2.py` (10ab45355883d98d); datos `vivo_rep2_s261-280_20260918_094126` (b557dc80e77a43e7) y réplica `vivo_rep2_s281-300_20260918_094323` (3674a46f92a26e9c);
+140 corridas de 100 000 pasos por serie; subconjunto limpio (alias estructurales 278 y 286 excluidos) con el mismo cuadro.
+
+| brazo (n = 20) | r serie 1 → réplica | descendientes | muertes | vida mediana | r ≥ 0 |
+|---|---|---|---|---|---|
+| VIVO (organismo_vivo) | −73 → −75 | 20 | 94.5 | 600 | 0/20, 0/20 |
+| **CUELLO_MIN (mínimo de las dos filas, saciado)** | **+3 → −3** | **68** | **65.5** | **827** | **11/20, 9/20** |
+| REP_SIN_COSTE (tercera necesidad) | −21.5 → −30.5 | 53.5 | 76 | 755 | 1/20, 0/20 |
+| UNA_NEC | −130 → −123 | 12 | 140.5 | 489 | 0 |
+| ESCALAR | −121 → −116 | 33.5 | 153 | 284 | 0 |
+| BARAJA_CON | −127 → −117.5 | 40 | 164.5 | 281 | 0 |
+| BARAJA_POL | −360.5 → −372.5 | 0 | 361.5 | 150 | 0 |
+
+| predicción (escrita antes) | serie 1 | réplica | veredicto |
+|---|---|---|---|
+| P2-1 r ordena como la supervivencia (A₁₂ ≥ 0.80 / 0.95) | 0.983 · 0.975 · 0.988 · 1.0 | 0.968 · 0.97 · 0.981 · 0.998 | PASA ×2 |
+| P2-2 medianas de r dentro del intervalo predicho (≥ 6/7) | 7/7 | 7/7 | PASA ×2 |
+| P2-3 mecanismo: r A₁₂(CUELLO_MIN > VIVO) ≥ 0.90, Δ ≥ 40; muertes; descendientes | 1.0, +76; 0.976; 1.0 | 0.965, +72; 0.917; 1.0 | PASA ×2 |
+| P2-4 Occam: A₁₂(REP_SIN_COSTE > CUELLO_MIN) ≤ 0.50 | 0.064 | 0.145 | PASA ×2 → la tercera fila se retira |
+| P2-5 reemplazo: CUELLO_MIN r ≥ 0 en 2–14/20; los demás 0/20 | 11/20; 0 | 9/20; 0 | PASA ×2 |
+| P2-6 saciado: sal VIVO ≥ 0.60; CUELLO_MIN sal y veneno ≤ 0.05 | 0.776; 0.001 / 0.001 | 0.795; 0.001 / 0.0 | PASA ×2 |
+| P2-7 diagnóstico de ERR-40: el regalo del renacer financia más ventanas en ESCALAR/BARAJA_CON | 1.0 / 1.0 | 0.968 / 0.983 | PASA ×2 |
+| P2-8 seguridad: xor01 1.0 y celdas 4/4 ≥ 18/20; exposiciones | 20/20; sal ×1.65, comida ×0.64 | 20/20; ×1.72, ×0.63 | PASA ×2 |
+
+**Declarable (nivel 9, propósito medido):** *con dos necesidades, el organismo que saciado lee la peor de sus dos filas de valor deja de
+morder lo que no informa y lo que envenena (sal 0.80 → 0.00), muere un tercio menos y triplica las ventanas de cuerpo lleno: su linaje,
+contado como descendientes menos muertes, queda en el filo del reemplazo (r ≈ 0) donde el tronco pierde 73–75 por cada 100 000 pasos;
+ninguna necesidad nueva hace falta para eso*. Lo que NO se declara: "quiere reproducirse", "tiene propósito" (es una lectura, no un
+impulso), ni herencia (no nace nadie todavía: la ventana es una medida). La medida r está validada por su propia cláusula en dos
+series y sustituye a la ventana de viabilidad (ERR-40). Nivel 9 → 45 %. Siguiente peldaño (preregistro nuevo): población con
+herencia (código/valor) y muerte real, con r como medida — exige mundo con varios cuerpos y Pool. Predicciones del diseñador
+cumplidas 8/8 ×2 (sus intervalos de P2-2 acertaron las siete medianas dos veces).
