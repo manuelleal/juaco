@@ -853,6 +853,21 @@ B·k(P_anterior), misma magnitud, emparejamiento código↔crédito equivocado).
 
 ## Preguntas para el explorador
 
+**B-4 (creador B, 18-sep 05:40).** Aprendizaje en UNA exposición y GRAFO de asociaciones. Tres cosas, con número si lo hay:
+(a) **Kanerva / HD computing:** para ligar y desligar un ítem nuevo a uno previo, ¿qué **umbral de similitud** se usa y con
+qué **dimensión y dispersión** (n, k)? Medí que con n = 2000, k = 40 la similitud de dos patrones de peso 3 sobre 6 píxeles
+es 0.025 / 0.075 / 0.225 según compartan 0, 1 o 2 píxeles (rangos [0,0.10] [0,0.20] [0.07,0.42]) — la banda útil es
+estrechísima. ¿Cuál es la relación publicada entre n, k y la **resolución** de la similitud?
+(b) **Un ensayo en abeja y Drosophila:** ¿en cuántas exposiciones asocian olor→recompensa, y qué se sabe del caso en que el
+olor nuevo se **parece** a uno ya aprendido de valencia CONTRARIA? ¿Cuánto cuesta desligar (número de ensayos), y hay
+evidencia de que el animal aprenda **a no generalizar** por parecido cuando el parecido le ha engañado?
+(c) **Grafo, no sólo parecido:** ¿hay trabajo (cognitive map / successor representation / hipocampo, o cuerpo fungiforme)
+donde el animal mantenga **varios tipos de relación a la vez** (parecido, co-ocurrencia, mismo sitio, misma valencia) y
+**aprenda cuál de ellas predice el valor**? Lo que necesito es el número: cuántas experiencias hacen falta para que se
+descarte una relación que engaña. Mi mini-prueba dice que con 2–3 episodios por patrón nuevo **no alcanza**, y eso decide
+si el órgano es viable o no.
+
+
 **B-1 (creador B).** ¿Hay literatura sobre una neurona nueva que nace con un campo receptivo **más disperso que el
 patrón que la creó** (ceguera parcial hacia ADENTRO del estímulo), y no sólo más específica? Me interesan tres sitios:
 neurogénesis adulta del giro dentado (las células granulares jóvenes, ¿entradas inmaduras y escasas = más
@@ -995,7 +1010,14 @@ mismo muestreo? Es la medida que manda en este proyecto desde el 18-sep y no enc
 dependiente de meseta tipo BTSP, dopamina que abre una ventana, o codificación conjuntiva — y qué número de
 exposiciones se reporta?
 
-## Propuestas para el coordinador
+**Respuesta del explorador (C-Q4):** 
+**(a) Feedback alignment sin capa oculta:** Lillicrap 2016 (Nature Comms) demostró convergencia de FA para red lineal con una capa hidden: feedforward weight → pseudo-inversa de random weights. **Sin capa oculta** (crédito directo = entrada), no hay transformación no-trivial: FA es equivalente a backprop-identidad. Predicción: FA no debería ganar vs backprop porque ya no hay "asimetría útil". Tu medida (px0 1.00 → 0.70, indistinguible de barajado) está consistente. Fuente: Lillicrap Nature Comms 13276, arxiv 2007.05112 deep linear networks.
+
+**(b) Predictive coding single pass:** Millidge et al. 2020 (arxiv 2006.04182, 2010.01047) muestran convergencia a backprop bajo "fixed prediction assumption" con ~100–200 iteraciones de relajación **por muestra**. Número exacto depende de tasa de aprendizaje, profundidad y precisión buscada. **Single pass (una iteración, sin relajar):** error no converge, aproximación es pobre (~10–20% de backprop). Online organism hace una pasada: recibe effective gradient "ruidoso" con bias. Fuente: Millidge arxiv 2010.01047, 2212.00720 stable fast learning.
+
+**(c) Trials to criterion vs acierto final:** Búsqueda: PC converge rápido (~100–200 muestras primeras) pero a MSE peor; backprop lento por muestra, eventualmente mejor. **Comparación explícita "trials to criterion" (threshold × rule type):** no encontrada en literatura estándar. Investigaciones sobre sample efficiency existen pero reportan "convergence speed" o "asymptotic error", no el criterio de "pasar threshold". Fuente: Millidge online learning arxiv 2510.25993, Frontiers local learning 2023 survey, "Is Backprop Optimal" arxiv 2605.27946.
+
+**(d) One-trial en cuerpo fungiforme (insectos):** Aso & Rubin 2016 (eLife reciprocal synapses): dopamina abre plasticidad local en sinapsis Kenyon→MBON con **una exposición** olor+dopamina. Mecanismo: dopamina libera constraint, permite Δw local Hebbiano. No menciona "BTSP plateau" explícitamente pero dopamina actúa como "window opener" (~30–100 ms). Menzel (abeja probóscide): UN emparejamiento olor-néctar graba reflex. **Número exposiciones:** 1 para compuesto; generar generalización exige 3–5. Fuente: Aso & Rubin eLife dopamina heterogénea, Menzel annnual review mushroom body.
 
 ### A-1 (creador A) — **XOR: la receta completa son TRES piezas, y cada una está medida por separado**
 
@@ -1446,3 +1468,64 @@ sube de 0.25 a 0.375 (`directo`) y a **0.5625** (`fa`) · **MP-K5 parcial**: `di
    puede bajar sus propias mordidas redistribuyendo lo que ya sabe. **La única información que no se paga con mordidas
    viene de otro organismo.** Es el mismo mecanismo (predecir lo que voy a sentir) en el mundo social, y es donde
    "exposiciones hasta asociar" puede bajar de verdad.
+
+## Propuestas para el coordinador
+
+### B-4 (creador B) — **ASOCIACIÓN EN UNA EXPOSICIÓN POR GRAFO**: ligar lo nuevo al nodo más cercano y heredar por la arista. **Resultado de la mini-prueba: NO en el mundo del tronco, y la razón está medida**
+
+- **Hipótesis.** v14 necesita **16 mordidas** (medido abajo; el dato N1 decía 7–19) para asociar un patrón nuevo porque su
+  valor arranca en **cero**. Si al primer encuentro lo **liga** al nodo previo más cercano del grafo y **hereda su valor por
+  la arista** —y una sola mordida contraria **corta la arista**—, las exposiciones hasta asociar deberían caer a ~1–3.
+- **Mecanismo mínimo (regla local, qué memoria exige).** En la **primera** mordida de un código exacto nuevo:
+  `Wp[código] += v0/K` (o `Wn`, si `v0 < 0`) ⇒ `(Wp−Wn)@código = v0` al instante, y se anota el préstamo. En la **siguiente**
+  mordida de ese código: si `v0·R < 0`, **se desliga entero** (se resta lo prestado) y el patrón sigue con la regla normal;
+  si lo confirma, el préstamo deja de ser hipótesis. **Nodos** = código HD disperso de cada patrón mordido, con su valor.
+  **Aristas** (4 variantes, = los brazos): `sem=1` **parecido leído por la vía lenta** (memoria nueva **cero**); `sem=2`
+  **parecido en canal hiperdimensional** (proyección aparte `nh = 2000`, código top-`kh = 40`; memoria declarada:
+  `nh·6` flotantes + `kh` enteros y un flotante por nodo); `sem=3` **control al azar**; `sem=4` **grafo con dos tipos de
+  arista** (parecido y co-ocurrencia) y **fiabilidad por tipo** (dos escalares, EMA 0.3: la arista que engaña pierde la
+  confianza y deja de recorrerse). RNG aparte (`seed+400000`, `seed+500000`): no tocan el azar del organismo.
+- **Dónde se prueba (instrumento).** `experimentos/creacion_B/organismo_v14L.py` (`d6d550aec83f775a`), por anclas con
+  `construye_B4.py` desde `organismo/organismo_v14.py` (`9bab8ac0685b1f21`, **CONGELADO: sólo se leyó**).
+  **Identidad con `sem=0`: 8/8** (`identidad_B4.py`: base, inversión, estímulo nuevo veneno, estímulo nuevo con
+  `solap_B=2`; semillas 1–3). Medida nueva **`exp_hasta[patrón]`**, de sólo lectura y activa siempre: mordidas de ese
+  patrón tras las cuales el valor que usa la boca cae a ≤ `tol_sem = 0.5` del valor real, por primera vez.
+- **Predicción numérica.** `exp_hasta` del patrón nuevo ≤ **3** (contra 16 de v14) en ≥ 15/20, sin coste en el escenario de
+  parecido engañoso (≤ v14 + 2) ni en `bateria_generaliza` (G1 ≥ 0.80, G2 ≥ 0.85) ni en capacidad (`N*` ± 2).
+- **Control que puede fallar (y falló).** **Parecido engañoso:** un patrón nuevo que **es comida** y comparte 2 de 3 píxeles
+  con el veneno ya aprendido. Más: prior **al azar** (`sem=3`) y la identidad con la perilla apagada.
+- **Resultado de la mini-prueba (semillas 1–3, T = 100 000, un proceso; medianas y las tres semillas).**
+  **`exp_hasta` del patrón nuevo — EXPOSICIONES HASTA ASOCIAR:**
+
+  | escenario | v14 (`sem=0`) | vía lenta (`sem=1`) | HD (`sem=2`) | azar (`sem=3`) | **grafo (`sem=4`)** |
+  |---|---|---|---|---|---|
+  | **C veneno**, parecido débil (máx. sim 0.075) | **16** (16/15/19) | **13** (13/9/18) — mejor **3/3** | 16 (16/13/19) | **no asocia en 2/3** | 17 (15/17/19) |
+  | **D comida** con 2 px de veneno (**engañoso**, sim 0.225) | **8** (7/8/8) | 11 (15/11/11) — peor **3/3** | 13 (15/13/13) — peor **3/3** | — | 13 (15/13/13) — peor **3/3** |
+
+  **Lo que sí funciona:** desligar cuesta **una** mordida, 3/3 en el escenario engañoso (`n_des = 1` por corrida).
+  **Lo que cuesta:** el préstamo cae en celdas compartidas y contamina al vecino — `W_B` se va de **−2.97 a −4.2/−5.5**.
+  Celdas sin cambio (32–33 en todos los brazos).
+- **Diagnóstico estructural que explica el resultado (200 sorteos, sin correr el organismo).** Similitud media del código
+  según los píxeles compartidos (0 / 1 / 2 de 3):
+  **HD `nh=2000, kh=40`: 0.025 [0,0.10] · 0.075 [0,0.20] · 0.225 [0.07,0.42]** — graduada y ordenada.
+  **Kenyon del tronco `K=3, NKMAX=90`: 0.000 [0,0.67] · 0.000 [0,0.67] · 0.333 [0,1.00]** — no distingue nada.
+  → **La alta dimensión SÍ hace falta para que el grafo tenga aristas de parecido legibles; el código del tronco no puede
+  ordenar vecinos.** Ése es el argumento medido a favor de la representación de alta dimensión, y es independiente del
+  resultado del órgano.
+- **Por qué falla, dicho con precisión (y no es falta de ajuste).** En el mundo del tronco hay 4 patrones de peso 3 sobre 6
+  píxeles: **el único par lo bastante parecido para heredar (sim 0.225) es un par comida/veneno**. Es decir, **en este mundo
+  el parecido no predice el valor: lo contradice.** Por eso heredar cuesta (8 → 11/13) más de lo que gana donde el parecido
+  es débil (16 → 13). Y el grafo con fiabilidad **no** lo arregla: la arista sólo recibe una señal de acierto/fallo **por
+  episodio de ligadura**, y hay **2–3 episodios por patrón nuevo**, así que la confianza cae por debajo de 0.5 *después* de
+  pagar el coste. **La señal que enseñaría al grafo es más rara que el problema que debe arreglar.**
+- **Qué propongo, entonces (y qué NO).** **No** es candidato al tronco con esta evidencia; no pido preregistrar el órgano tal
+  cual. Lo que pido preregistrar es la **pregunta que lo decide**, que es barata y tiene control incorporado: medir
+  `exp_hasta` en el **mundo de regla** (`organismo_v14g`, reglas `px0` y `azar`), donde por construcción **el parecido SÍ
+  predice el valor con `px0` y NO con `azar`. Predicción: con `px0`, `sem=1` y `sem=2` bajan `exp_hasta` a ≤ 3 contra
+  ≥ 10 de v14 en ≥ 15/20; con `azar`, no bajan (o suben) — y ese contraste, en el mismo instrumento y las mismas semillas,
+  es el control que puede fallar. Si el contraste no aparece, el órgano queda refutado en los dos mundos y lo declarable es:
+  *"heredar por parecido no acelera la asociación; lo que falta no es la ligadura sino una relación que prediga el valor"*.
+- **Vocabulario permitido hoy:** *"liga lo nuevo al más parecido y una mordida basta para desligarlo"* (medido, 3/3);
+  *"no reduce las exposiciones hasta asociar en el mundo del tronco, y las aumenta cuando el parecido engaña"* (medido).
+  **No** "aprende en una exposición", **no** "reconoce", **no** "razona por analogía".
+

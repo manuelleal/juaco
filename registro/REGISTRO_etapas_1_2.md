@@ -4351,3 +4351,27 @@ propia entrada, así que un retorno aleatorio no tiene nada que comprar y rompe 
 redistribuye lo que las mordidas ya enseñaron, no crea información. **Consecuencia para el frente:** "aprender sin morder"
 exige otra fuente de información — otro organismo (N2 por predicción, instrumento aprobado) o el mundo (predecir el estímulo
 siguiente, no sólo la energía) — y el retorno asimétrico, si sirve, es sobre las celdas KW (C-P5, sin mini-prueba).
+
+
+### Frente "dos organismos", creador B (18 sep 06:00): **órgano de asociación en una exposición (grafo con soporte de alta dimensión) — NO en el mundo del tronco, con la razón medida: aquí el parecido contradice el valor; la alta dimensión sí hace falta para que el grafo tenga aristas legibles**
+
+Instrumento `experimentos/creacion_B/organismo_v14L.py` (d6d550aec83f775a; por anclas desde el tronco congelado `organismo_v14`), identidad
+8/8 con la perilla apagada; medida nueva de sólo lectura `exp_hasta[patrón]` = exposiciones hasta asociar. Mini-prueba (semillas 1–3,
+T = 100 000, un proceso):
+
+| escenario | v14 | vía lenta (memoria 0) | HD (Kanerva) | azar | grafo con fiabilidad por arista |
+|---|---|---|---|---|---|
+| C veneno, parecido débil | 16 | **13** (mejor 3/3) | 16 | no asocia 2/3 | 17 |
+| D comida con 2 px de veneno (parecido engañoso) | **8** | 11 (peor 3/3) | 13 (peor 3/3) | — | 13 (peor 3/3) |
+
+Desligar cuesta una mordida (3/3), pero el préstamo cae en celdas compartidas y contamina al vecino (`W_B` −2.97 → −4.2/−5.5).
+**Diagnóstico estructural (200 sorteos, sin correr el organismo):** similitud del código por píxeles compartidos 0/1/2 → HD (n = 2 000,
+k = 40): 0.025 / 0.075 / 0.225 (graduada); Kenyon del tronco (K = 3 de 90): 0.000 / 0.000 / 0.333 (no distingue). Es decir, la
+alta dimensión hace falta para que un grafo de parecidos tenga aristas legibles — pero en el mundo del tronco (4 patrones de
+peso 3 sobre 6 px) el único par lo bastante parecido para heredar es comida/veneno: **el parecido no predice el valor, lo
+contradice**, y la señal que enseñaría al grafo (acierto/fallo por episodio de ligadura, 2–3 por patrón nuevo) es más rara que el
+problema que debe arreglar. **Lo que pide preregistrar (formato fijo en el puente):** no el órgano, sino la pregunta que lo decide:
+`exp_hasta` en el mundo de regla con `px0` (donde el parecido SÍ predice el valor) contra `azar` (donde no), mismo instrumento y
+semillas; si el contraste no aparece, refutado en los dos mundos. Coste en generalización y capacidad no medido (no es candidato).
+Pregunta B-4 al explorador (umbral de similitud n/k en HD; ensayos hasta asociar en abeja/Drosophila; animales que aprenden qué
+relación predice el valor).
