@@ -1,0 +1,64 @@
+[08:06:19 +    0.0s] ARRANQUE MUNDO VIVO (nivel 11): brazos ['V14', 'VIVO', 'UNA_NEC', 'ESCALAR', 'BARAJA_CON', 'NO_INFORMA', 'BARAJA_POL'], semillas 201-220, T=100000. Pool(14).
+[08:06:19 +    0.0s] 20 semillas no cierran un nivel del brief: cierran o refutan ESTE mecanismo, y piden replica en 201-220.
+[08:06:19 +    0.0s]     sha preregistro            f87cafa631a6b31c
+[08:06:19 +    0.0s]     sha script                 0bce2ae090fcb0a7
+[08:06:19 +    0.0s]     sha constructor            03c83de17e34d9a0
+[08:06:19 +    0.0s]     sha instrumento            20c0961c79de8825
+[08:06:19 +    0.0s]     sha arnes                  2eb84108b8507096
+[08:06:19 +    0.0s]     sha mini                   f3e86cbe6c17e6d7
+[08:06:19 +    0.0s]     sha origen_organismo_v14   feefc88b1fd8d434
+[08:06:19 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 25236
+[08:06:20 +    0.6s] ETAPA 1/2 — IDENTIDAD interna (5 casos x 3 semillas = 15 comprobaciones de 2 x 20000 pasos). El caso (M) DEBE fallar: sin el, la etapa pasa por vacuidad.
+[08:06:25 +    5.8s]     (A) vivo=0 == v14                                    3/3
+[08:06:25 +    5.8s]     (G) linaje v13 (mask_rel=0, puerta_pat=0)            3/3
+[08:06:25 +    5.8s]     (I) TODO encendido, 1 necesidad y 2 estimulos == v14 3/3
+[08:06:25 +    5.8s]     (J) lo mismo con inversion                           3/3
+[08:06:25 +    5.8s]     (M) 4 estimulos y 2 necesidades != v14 (DEBE fallar) 3/3
+[08:06:25 +    5.8s]     claves nuevas de solo lectura con vivo=1: ['W_nec', 'agua', 'estims', 'exp_hasta', 'exposiciones', 'muertes_nec', 'n_nec', 'sorp_nec', 'xor_enc', 'xor_mord']
+[08:06:25 +    5.8s]   IDENTIDAD 15/15
+[08:06:25 +    5.8s] ETAPA 2/2 — principal: 140 corridas de 100000 pasos (7 brazos x 20 semillas)...
+[08:06:39 +   20.3s]           20/140
+[08:06:50 +   30.5s]           40/140
+[08:07:03 +   44.1s]           60/140
+[08:07:14 +   54.7s]           80/140
+[08:07:28 +   69.3s]           100/140
+[08:07:39 +   79.5s]           120/140
+[08:07:52 +   92.6s]           140/140
+[08:07:52 +   92.7s] 
+[08:07:52 +   92.7s] ANALISIS — medianas por brazo y despues los umbrales EXACTOS del preregistro (ERR-31).
+[08:07:52 +   92.7s]    V14         n=20  xor01 0.5  celdas(estrictas) 2.0/4  exp_tabla None  peor error de casilla 2.5  muertes 132.5 [E 132.5, agua 0.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 4.0, '0xB': 2.0, '1xC': None, '1xD': None}   exposiciones {'A': 347.0, 'B': 7979.5, 'C': 0.0, 'D': 0.0}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.0, '0xB': 0.02, '0xC': 0.5, '0xD': 2.5, '1xA': None, '1xB': None, '1xC': None, '1xD': None}
+[08:07:52 +   92.7s]    VIVO        n=20  xor01 1.0  celdas(estrictas) 4.0/4  exp_tabla 11.5  peor error de casilla 0.0  muertes 94.0 [E 48.5, agua 43.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 4.5, '0xB': 2.0, '1xC': 6.5, '1xD': 4.0}   exposiciones {'A': 829.0, 'B': 5695.5, 'C': 858.5, 'D': 1976.5}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.0, '0xB': 0.0, '0xC': 0.0, '0xD': 0.0, '1xA': 0.0, '1xB': 0.0, '1xC': 0.0, '1xD': 0.0}
+[08:07:52 +   92.7s]    UNA_NEC     n=20  xor01 0.5  celdas(estrictas) 2.0/4  exp_tabla None  peor error de casilla 0.095  muertes 131.0 [E 47.5, agua 88.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 4.0, '0xB': 2.0, '1xC': None, '1xD': None}   exposiciones {'A': 307.0, 'B': 7393.0, 'C': 348.5, 'D': 392.5}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.0, '0xB': 0.095, '0xC': 0.0, '0xD': 0.0, '1xA': None, '1xB': None, '1xC': None, '1xD': None}
+[08:07:52 +   92.7s]    ESCALAR     n=20  xor01 0.5  celdas(estrictas) 2.0/4  exp_tabla None  peor error de casilla 1.93  muertes 160.0 [E 77.5, agua 81.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 4.0, '0xB': 2.0, '1xC': None, '1xD': None}   exposiciones {'A': 483.5, 'B': 4838.0, 'C': 503.0, 'D': 2820.5}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.235, '0xB': 1.315, '0xC': 0.28500000000000003, '0xD': 1.39, '1xA': 0.765, '1xB': 1.685, '1xC': 0.715, '1xD': 1.61}
+[08:07:52 +   92.7s]    BARAJA_CON  n=20  xor01 0.5  celdas(estrictas) 3.0/4  exp_tabla 10.0  peor error de casilla 1.5950000000000002  muertes 158.0 [E 82.0, agua 78.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 3.0, '0xB': 2.0, '1xC': 5.5, '1xD': 2.0}   exposiciones {'A': 503.5, 'B': 3742.0, 'C': 511.0, 'D': 3820.5}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.44, '0xB': 1.335, '0xC': 0.545, '0xD': 1.56, '1xA': 0.45499999999999996, '1xB': 1.335, '1xC': 0.53, '1xD': 1.56}
+[08:07:52 +   92.7s]    NO_INFORMA  n=20  xor01 1.0  celdas(estrictas) 3.0/4  exp_tabla None  peor error de casilla 0.0  muertes 41.0 [E 41.0, agua 0.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 4.0, '0xB': 2.0, '1xC': 3.5, '1xD': None}   exposiciones {'A': 425.5, 'B': 7205.0, 'C': 463.5, 'D': 524.5}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.0, '0xB': 0.0, '0xC': 0.0, '0xD': 0.0, '1xA': 0.0, '1xB': 0.0, '1xC': 0.0, '1xD': 0.0}
+[08:07:52 +   92.7s]    BARAJA_POL  n=20  xor01 1.0  celdas(estrictas) 4.0/4  exp_tabla 7.0  peor error de casilla 0.0  muertes 365.5 [E 184.0, agua 177.0]
+[08:07:52 +   92.7s]         exposiciones hasta criterio por casilla {'0xA': 4.0, '0xB': 2.0, '1xC': 7.0, '1xD': 3.0}   exposiciones {'A': 1796.0, 'B': 3424.0, 'C': 1818.0, 'D': 3415.0}
+[08:07:52 +   92.7s]         error por casilla de la tabla 2x4 {'0xA': 0.0, '0xB': 0.0, '0xC': 0.0, '0xD': 0.0, '1xA': 0.0, '1xB': 0.0, '1xC': 0.0, '1xD': 0.0}
+[08:07:52 +   92.7s]    P1 xor01 de VIVO >= 0.75 en >= 15/20 semillas (mediana >= 0.875)  ->  20/20, mediana 1.0  PASA
+[08:07:52 +   92.7s]    P2 xor01 de ESCALAR <= 0.60 y ESCALAR < VIVO en >= 16/20 (pareado)  ->  mediana 0.5, pareado 20/20  PASA
+[08:07:52 +   92.7s]    P3a nec_shuf=2 (contenido) -> xor01 <= 0.60 y por debajo de VIVO en >= 18/20  ->  mediana 0.5, pareado 20/20  PASA
+[08:07:52 +   92.7s]    P3b nec_shuf=1 (politica) -> muertes >= 2 x VIVO en >= 16/20; xor01 NO se predice que caiga  ->  razon 3.888, pareado 20/20, xor01 1.0 (sin criterio)  PASA
+[08:07:52 +   92.7s]    P4' muertes de VIVO <= 0.75 x UNA_NEC y <= 0.70 x ESCALAR, pareado >= 16/20; y muertes por agua de VIVO <= 0.5 x UNA_NEC  ->  razones 0.718 / 0.588 / agua 0.489, pareados 14/18 de 20  NO
+[08:07:52 +   92.7s]    P5 las 4 celdas informativas cruzan criterio en >= 18/20 (y terminan con el signo correcto, Enmienda 1.3), con exp_tabla <= 3 x las exposiciones que v14 necesita para su celda mas lenta (B)  ->  20/20 con 4/4 celdas estrictas, exp_tabla 11.5
+[08:07:52 +   92.7s]         letra   (celda 0xB de V14 = 2.0): umbral 6.0  NO
+[08:07:52 +   92.7s]         'mas lenta' (celda 0xA de V14 = 4.0): umbral 12.0  PASA   *** CONTRADICCION EN LA LETRA: decide el coordinador
+[08:07:52 +   92.7s]    P6 NO_INFORMA: la sal nunca cruza criterio (censurada 20/20) y |W| <= 0.3 en las dos necesidades  ->  censuradas 20/20, |W| maximo 0.0  PASA
+[08:07:52 +   92.7s]    P7 muertes por agua de UNA_NEC >= 2 x las de VIVO, pareado >= 16/20 (Enmienda 1.4)  ->  razon 2.047, pareado 11/20  NO
+[08:07:52 +   92.7s]    P9 VIVO <= 2 x UNA_NEC en exp_hasta[hambre][A], mediana de 20  ->  4.5 contra 4.0 (razon 1.125)  PASA
+[08:07:52 +   92.7s]    P8 regresion del tronco (bateria_v14 6 + bateria_generaliza 20 --desde 101) intacta: NO la corre este runner. El tronco no se toca: organismo_vivo es copia por anclas y su sha de origen se verifica al arrancar.
+[08:07:52 +   92.7s] 
+[08:07:52 +   92.7s] VEREDICTO: MUNDO VIVO SOSTENIDO en su nucleo: el organismo aprende un VALOR POR NECESIDAD que resuelve el XOR necesidad x estimulo (P1), un valor escalar no lo hace (P2) y barajar el contenido lo destruye (P3a). La ventaja en supervivencia NO se sostiene con la letra (P4'/P7): el valor se aprende y el cuerpo no lo cobra. El estimulo que no informa no se aprende (P6). El coste en exposiciones de la segunda necesidad se mantiene (P9). P5 queda ADJUDICADO AL COORDINADOR: la frase del preregistro nombra la celda B como la mas lenta de v14 y no lo es (0xA); letra NO, 'mas lenta' PASA. 20 semillas no cierran un nivel: piden replica en el rango siguiente (regla 12).
+[08:07:52 +   92.7s] datos -> vivo_s201-220_20260918_080619.json  sha256_16 = e1e932387b411a3e
