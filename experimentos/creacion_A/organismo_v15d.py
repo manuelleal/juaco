@@ -1,7 +1,7 @@
-"""organismo_v15c = organismo/organismo_v14.py (feefc88b1fd8d434, TRONCO v14.1 CONGELADO: solo se leyo) + perilla
-`memoria_pares` (M3 del grupo 3 llevado a la via lenta). Con memoria_pares=None es organismo_v14 EXACTO
-(identidad obligatoria: identidad_v15c.py; no se consume ni un numero del rng con la perilla apagada).
-Generado por experimentos/creacion_A/construye_v15c.py. NO editar a mano."""
+"""organismo_v15d = organismo/organismo_v14.py (feefc88b1fd8d434, TRONCO v14.1 CONGELADO: solo se leyo) + perilla
+`memoria_pares` = None | 'suma' | 'ruta'. La memoria de pares NO sustituye la lectura lineal: la SUMA o
+ELIGE entre las dos por su propio error. Con None es organismo_v14 EXACTO y no se consume ni un numero del
+rng (identidad: identidad_v15d.py). Generado por construye_v15d.py. NO editar a mano."""
 """v14.1 = TRONCO desde el 18 sep 2026 (05:55): v14 con eta_s 0.15 y clip_s 10 (bloque A-4: la regla local llega a 1.000 con rasgos dados, 150 exposiciones; examen 8/8 en 101-120 y 121-140, generalizacion 1.000/0.97). v14 (05:00) era: organismo_v13 (cc8b16b492d4d324) + HIJA DISPERSA por relevancia (mask_rel=2,
 del_s=del_c=0.25, ema_c=0.05: la hija nace ciega a parte de P) + PUERTA DE FAMILIARIDAD POR EVIDENCIA DEL CODIGO EXACTO
 (puerta_pat=5, pat_min=1: familiar si el codigo se mordio >= 5 veces Y tiene >= 1 celda consolidada). Generado por anclas
@@ -52,13 +52,17 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     def kenyon(P): k=np.zeros(NKMAX); k[list(code(P))]=1; return k
     Wp=np.zeros(NKMAX); Wn=np.zeros(NKMAX); err=np.zeros(NKMAX); mu=np.zeros((NKMAX,6)); splits=0; el=np.zeros_like(Wl); tr=np.zeros(9)
     Wps=np.zeros(6); Wns=np.zeros(6)   # v13: via LENTA, lineal sobre la retina (inerte si eta_s=0)
-    if memoria_pares not in (None,'combi','combi1'): raise ValueError(f"memoria_pares={memoria_pares!r}")   # v15c: perilla mal escrita no cae en silencio
-    _PARv=[(i,j) for i in range(6) for j in range(i+1,6)]   # v15c (M3): las 15 celdas = pares de pixeles
-    _MMv=np.zeros((15,4)); _MNv=np.zeros((15,4)); _MEv=np.full(15,1e9); _MGv=0   # v15c: valor, visitas, error propio, ganadora
-    def _lenta_v15(P):   # v15c: con la perilla APAGADA es literalmente la lectura de v14
-        if memoria_pares is None: return float((Wps-Wns)@P)
+    if memoria_pares not in (None,'suma','ruta'): raise ValueError(f"memoria_pares={memoria_pares!r}")   # v15d: perilla mal escrita no cae en silencio
+    _PARv=[(i,j) for i in range(6) for j in range(i+1,6)]   # v15d: las 15 celdas = pares de pixeles
+    _MMv=np.zeros((15,4)); _MNv=np.zeros((15,4)); _MEv=np.full(15,1e9); _MGv=0; _ELv=1e9   # v15d: valor, visitas, error por celda, ganadora, error de la LINEAL
+    def _tabla_v15(P):   # v15d: la lectura de la celda ganadora, con ABSTENCION explicita
         _i,_j=_PARv[_MGv]; _c=int(P[_i])*2+int(P[_j])
-        return float(_MMv[_MGv,_c]) if _MNv[_MGv,_c]>0 else 0.0   # abstencion explicita
+        return float(_MMv[_MGv,_c]) if _MNv[_MGv,_c]>0 else 0.0
+    def _lenta_v15(P):   # v15d: con la perilla APAGADA es literalmente la lectura de v14.1
+        if memoria_pares is None: return float((Wps-Wns)@P)
+        _l=float((Wps-Wns)@P)
+        if memoria_pares=='suma': return _l+_tabla_v15(P)   # SUMA: la lineal no se pierde
+        return _l if _ELv<=_MEv[_MGv] else _tabla_v15(P)   # RUTA: la de menor error propio
     ncod={}; _ord=[]   # B: evidencia del CODIGO EXACTO (mordidas por codigo) y orden de aparicion
     def _key(_k): return frozenset(np.flatnonzero(_k).tolist())
     def _ev(_k):   # evidencia que LEE la puerta: la propia, o (control) la del codigo vecino en el orden de aparicion
@@ -109,7 +113,7 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
         pos=(pos+int(m[1]-m[0]))%L; d2,_,_=see(); Rp=.2 if d2<d else 0.
         R=0.
         if pos in objs:
-            kk=objs[pos]; kc=kenyon(PAT[kk]); Wb=Wp-Wn; _wf=float(Wb@kc); _ws=_lenta_v15(PAT[kk])   # v13: las dos vias (v15c: la memoria de pares si la perilla esta encendida)
+            kk=objs[pos]; kc=kenyon(PAT[kk]); Wb=Wp-Wn; _wf=float(Wb@kc); _ws=_lenta_v15(PAT[kk])   # v13: las dos vias (v15d: lineal + tabla de pares si la perilla esta encendida)
             _wt=_wf+_ws if puerta is None else (_wf if _fam(kc) else _ws)   # v13: valor total (sin puerta: suma; con puerta: la rapida si le es familiar)
             Vb=alpha*_wt+hambre_boca*hambre+.5; pb=1/(1+np.exp(-Vb/.3)); mordio=rng.random()<pb
             vis[kk][q(t)]+=1
@@ -126,15 +130,17 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
                     dlt=R-_wt if puerta is None else R-_wf   # v13: sin puerta UN error compartido; con puerta cada via el suyo
                     if eta_s:   # v13: actualizacion de la via lenta (su tasa, mismo drenaje)
                         _ds=dlt if puerta is None else R-_ws
-                        if memoria_pares is not None:   # v15c (M3): las 15 celdas escriben; la primera vez, DE UN GOLPE
+                        if memoria_pares is not None:   # v15d: escriben las 15 celdas (la primera vez, DE UN GOLPE) y se lleva el error de la LINEAL
                             _Pv=PAT[kk]
+                            _plv=float((Wps-Wns)@_Pv); _elv=R-_plv
+                            _ELv=(_elv*_elv) if _ELv>=1e9 else (1-mem_rho)*_ELv+mem_rho*(_elv*_elv)
                             for _cv in range(15):
                                 _iv,_jv=_PARv[_cv]; _dv=int(_Pv[_iv])*2+int(_Pv[_jv])
                                 _pv=float(_MMv[_cv,_dv]) if _MNv[_cv,_dv]>0 else 0.0
                                 _erv=R-_pv; _prv=bool(_MNv[_cv].sum()==0)
                                 _MEv[_cv]=(_erv*_erv) if _prv else (1-mem_rho)*_MEv[_cv]+mem_rho*(_erv*_erv)
                                 if _MNv[_cv,_dv]==0: _MMv[_cv,_dv]=R
-                                elif memoria_pares=='combi': _MMv[_cv,_dv]+=mem_alfa*(R-_MMv[_cv,_dv])
+                                else: _MMv[_cv,_dv]+=mem_alfa*(R-_MMv[_cv,_dv])
                                 _MNv[_cv,_dv]+=1
                             _mnv=float(_MEv.min()); _empv=[int(_x) for _x in np.where(_MEv<=_mnv+1e-12)[0]]
                             _MGv=_empv[0] if len(_empv)==1 else int(_empv[int(rng.integers(len(_empv)))])   # desempate al azar; solo consume rng si HAY empate
@@ -184,5 +190,5 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     W={k:round(valor(PAT[k]),2) for k in PAT}   # v13: valor total
     W_lenta={k:round(float((Wps-Wns)@PAT[k]),3) for k in PAT}   # v13: lectura de la via lenta sola
     comp={k:(round(float(Wp@kenyon(PAT[k])),2),round(float(Wn@kenyon(PAT[k])),2)) for k in PAT}
-    return dict(memoria_pares=memoria_pares,mem_ganadora=(list(_PARv[_MGv]) if memoria_pares is not None else None),mem_tabla=([[float(_x) for _x in _f] for _f in _MMv] if memoria_pares is not None else None),mem_vistas=(int((_MNv>0).sum()) if memoria_pares is not None else None),mem_cobertura=(int((_MNv[_MGv]>0).sum()) if memoria_pares is not None else None),sobre=sobre,llegadas=llegadas,sin_objetivo=sin_objetivo,memoria_rechazo=memoria_rechazo,err_max=err_max,t_conflicto=t_conflicto,t_techo=t_techo,n_techo=n_techo,split_t=split_t,mord=mord,vis=vis,W=W,comp=comp,deaths=deaths,log=log,splits=splits,celdas=int(activa.sum()),puerta_pat=puerta_pat,pat_shuf=pat_shuf,pat_min=pat_min,n_cod=len(ncod),
+    return dict(memoria_pares=memoria_pares,mem_ganadora=(list(_PARv[_MGv]) if memoria_pares is not None else None),mem_tabla=([[float(_x) for _x in _f] for _f in _MMv] if memoria_pares is not None else None),mem_vistas=(int((_MNv>0).sum()) if memoria_pares is not None else None),mem_cobertura=(int((_MNv[_MGv]>0).sum()) if memoria_pares is not None else None),mem_err_lineal=(float(_ELv) if memoria_pares is not None else None),mem_err_tabla=(float(_MEv[_MGv]) if memoria_pares is not None else None),sobre=sobre,llegadas=llegadas,sin_objetivo=sin_objetivo,memoria_rechazo=memoria_rechazo,err_max=err_max,t_conflicto=t_conflicto,t_techo=t_techo,n_techo=n_techo,split_t=split_t,mord=mord,vis=vis,W=W,comp=comp,deaths=deaths,log=log,splits=splits,celdas=int(activa.sum()),puerta_pat=puerta_pat,pat_shuf=pat_shuf,pat_min=pat_min,n_cod=len(ncod),
                 solap={'AB':len(code(PAT['A'])&code(PAT['B'])),'nB':len(code(PAT[nuevo])&code(PAT['B'])) if nuevo else None},W_lenta=W_lenta,Wps=[round(float(x),3) for x in Wps],Wns=[round(float(x),3) for x in Wns])

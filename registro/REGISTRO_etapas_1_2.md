@@ -4798,3 +4798,6 @@ lo mata pierde la mitad del miedo, y como el organismo evita el código, nunca c
 tronco** (v9–v14.1), invisible con dos estímulos y visible con cuatro: cabo abierto del nivel 4 (memoria/capacidad) para la siguiente sesión
 (desambiguar códigos: más celdas por código, K mayor, o un tercer canal que distinga estímulos con el mismo código). Nada entra al tronco.
 Vocabulario: *"cuando dos cosas se parecen tanto que reciben el mismo código, el organismo teme a las dos a medias"*.
+
+
+### Nota a v15c (18 sep 08:25): defecto latente corregido — colisión de nombre `_ev` en `organismo_v15c` (con `puerta_pat > 0` y la memoria encendida lanzaría `TypeError`); la batería V2a de v15c completó sus 40 corridas con salida completa (acc, celdas, divisiones) y sin excepciones: su veredicto (G1 0.500) se mantiene. Constructores v15c/v15d reconstruidos con el arreglo (`_ev` → `_erv`). v15d (perilla `memoria_pares` = 'suma' | 'ruta'): examen CON la perilla encendida (corrige el segundo defecto de v15c); identidad 32/32 del creador; humo: 'suma' devuelve px0 a 1.000 (v15c 0.70–0.90) y xor01 0.875 estricta; avisos escritos antes de correr: `azar` con 'suma' 0.700 en una semilla (control que puede tumbarlo) y celdas 33 contra 62 (V4 probablemente cae).

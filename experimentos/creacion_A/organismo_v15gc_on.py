@@ -154,8 +154,8 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
                             for _cv in range(15):
                                 _iv,_jv=_PARv[_cv]; _dv=int(_Pv[_iv])*2+int(_Pv[_jv])
                                 _pv=float(_MMv[_cv,_dv]) if _MNv[_cv,_dv]>0 else 0.0
-                                _ev=R-_pv; _prv=bool(_MNv[_cv].sum()==0)
-                                _MEv[_cv]=(_ev*_ev) if _prv else (1-mem_rho)*_MEv[_cv]+mem_rho*(_ev*_ev)
+                                _erv=R-_pv; _prv=bool(_MNv[_cv].sum()==0)
+                                _MEv[_cv]=(_erv*_erv) if _prv else (1-mem_rho)*_MEv[_cv]+mem_rho*(_erv*_erv)
                                 if _MNv[_cv,_dv]==0: _MMv[_cv,_dv]=R
                                 elif memoria_pares=='combi': _MMv[_cv,_dv]+=mem_alfa*(R-_MMv[_cv,_dv])
                                 _MNv[_cv,_dv]+=1

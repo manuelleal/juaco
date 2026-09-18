@@ -1,0 +1,33 @@
+[08:21:38 +    0.0s] ARRANQUE v15d (HUMO, un proceso, sin Pool).
+[08:21:38 +    0.0s] sha preregistro db73a2ce827f9c08  script 78d0a04c39c27a76  construye_v15d f9331725de3ed6f5  organismo_v15d f2f0b06e31877e96  organismo_v15d_on e57d0677cdff3906  organismo_v15gd 4720721d775eec29  organismo_v15gd_on a1863e095fb5d1b5  bateria_v15d 707299a585572ce9  bateria_generaliza_v15d 2a36df3ac43b49bf  ORIGEN organismo_v14 feefc88b1fd8d434  organismo_v14g 1f1318480cd34cde
+[08:21:38 +    0.0s] ETAPA 1/3 — identidad corta (T=20000, un proceso).
+[08:21:38 +    0.0s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_v15d.py 20000
+[08:23:35 +  117.0s]       |                           regla/px0 lineal s1: IDENTICO
+[08:23:35 +  117.0s]       |                           regla/px0 lineal s2: IDENTICO
+[08:23:35 +  117.0s]       |                                regla/xor01 s1: IDENTICO
+[08:23:35 +  117.0s]       |                                regla/xor01 s2: IDENTICO
+[08:23:35 +  117.0s]       |                                 regla/azar s1: IDENTICO
+[08:23:35 +  117.0s]       |                                 regla/azar s2: IDENTICO
+[08:23:35 +  117.0s]       | 
+[08:23:35 +  117.0s]       | IDENTIDAD (I1+I2+I3): 32/32
+[08:23:35 +  117.0s]       | 
+[08:23:35 +  117.0s]       | --- I4 (NO es identidad): los dos modos honestos contra el SUSTITUTIVO de v15c, en px0 ---
+[08:23:35 +  117.0s]       |   s1 px0: v15c sustituye 0.700 | v15d suma 1.000 | v15d ruta 0.700 | v14.1 (off) 1.000
+[08:23:35 +  117.0s]       |   s2 px0: v15c sustituye 0.900 | v15d suma 1.000 | v15d ruta 0.900 | v14.1 (off) 0.800
+[08:23:35 +  117.0s]       |   s3 px0: v15c sustituye 0.800 | v15d suma 1.000 | v15d ruta 0.800 | v14.1 (off) 1.000
+[08:23:35 +  117.0s]       |   Lo que se busca: que `suma` y `ruta` NO bajen px0 respecto de la perilla apagada.
+[08:23:35 +  117.0s]       (117s)
+[08:23:35 +  117.0s] ETAPA 2/3 — mundo de regla, 1 semilla, memoria ON y OFF (pareado).
+[08:24:49 +  190.3s]    xor01  memoria=suma  s121: registro 0.875  ESTRICTA 0.875  ba 0.878  ganadora [0, 1]  cobertura 4/4  celdas 68  splits 38  muertes 233
+[08:24:49 +  190.3s]    xor01  memoria=ruta  s121: registro 0.875  ESTRICTA 0.875  ba 0.892  ganadora [0, 1]  cobertura 4/4  celdas 69  splits 39  muertes 224
+[08:24:49 +  190.3s]    xor01  memoria=None  s121: registro 0.375  ESTRICTA 0.375  ba 0.551  ganadora None  cobertura None/4  celdas 70  splits 40  muertes 244
+[08:24:49 +  190.3s]    px0    memoria=suma  s121: registro 1.000  ESTRICTA 1.000  ba 0.999  ganadora [0, 1]  cobertura 4/4  celdas 33  splits 3  muertes 285
+[08:24:49 +  190.3s]    px0    memoria=ruta  s121: registro 0.900  ESTRICTA 0.900  ba 0.865  ganadora [0, 4]  cobertura 4/4  celdas 63  splits 33  muertes 257
+[08:24:49 +  190.3s]    px0    memoria=None  s121: registro 0.900  ESTRICTA 0.900  ba 0.839  ganadora None  cobertura None/4  celdas 62  splits 32  muertes 269
+[08:24:49 +  190.3s]    azar   memoria=suma  s121: registro 0.700  ESTRICTA 0.700  ba 0.600  ganadora [3, 4]  cobertura 4/4  celdas 65  splits 35  muertes 303
+[08:24:49 +  190.3s]    azar   memoria=ruta  s121: registro 0.500  ESTRICTA 0.500  ba 0.405  ganadora [1, 3]  cobertura 4/4  celdas 61  splits 31  muertes 292
+[08:24:49 +  190.3s]    azar   memoria=None  s121: registro 0.400  ESTRICTA 0.400  ba 0.510  ganadora None  cobertura None/4  celdas 59  splits 29  muertes 244
+[08:24:49 +  190.3s] ETAPA 3/3 — las baterias NO se corren en el humo (traen su propio Pool). Comandos para el coordinador:
+[08:24:49 +  190.3s]    python experimentos/creacion_A/bateria_v15d.py 20 --desde 101 --log
+[08:24:49 +  190.3s]    python experimentos/creacion_A/bateria_generaliza_v15d.py organismo_v15d_on 20 --desde 101 --log
+[08:24:49 +  190.3s] datos -> v15d_humo_20260918_082138.json  sha256_16 = 5cd151d812eba2e1
