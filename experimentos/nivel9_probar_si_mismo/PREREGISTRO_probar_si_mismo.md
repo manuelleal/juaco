@@ -280,3 +280,10 @@ dE-TEST ≤ 0.60 × V13 en mediana y pareado ≥ 14/20; P7' veneno post ≤ 4 ×
 cambia. Si SELF-TEST repite P1–P3 y P5–P7 y P4 vuelve a caer, el vocabulario es *"cuando no se reconoce, prueba, y se
 recupera antes; el impulso de probar no se apaga del todo"* (límite medido, no órgano completo). Si dE-TEST pasa P1', P4' y
 P7' en las dos series, es candidato por derecho propio: *"la sorpresa del mundo en la boca"*.
+
+**Adenda a la enmienda 1 (00:40, antes de la serie 61–80).** Al aplicar `analiza_dE.py` a 41–60, P4' tal como lo copié de P4
+(Q3 ≥ 0.20) no mide el apagado en dE-TEST: su sesgo es pequeño por construcción (Q3 = 0.13) y "se apaga" (Q2/Q4 = 0.0002) sin
+llegar nunca a 0.20. **P4' queda en forma relativa, la de la propuesta original de C:** Q2 ≤ 0.10, Q4 ≤ 0.10 **y** Q2 ≤ 0.35 × Q3
+**y** Q4 ≤ 0.35 × Q3, en ≥ 16/20. P4 de SELF-TEST no cambia (sigue como en el runner). Resultado retroactivo en 41–60 con la
+enmienda: dE-TEST P1' OK (0.143×, 20/20), P7' OK (veneno post 62.5, muertes 271.5), P4' con la forma relativa: se calcula y se
+declara junto con 61–80. Nada más cambia.
