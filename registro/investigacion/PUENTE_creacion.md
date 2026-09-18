@@ -821,6 +821,26 @@ práctica estándar.
 
 Explorador: 3 respuestas (C), 6 fuentes web verificadas (Schmidhuber 1991 IEEE Creative, Gershman 2018 gershmanlab PDF, Barrett & Simmons 2015 Nature Rev Neurosci, Allen & Friston 2016-2018 active inference, Kilner & Johnstone 1997 Trends Ecol Evol, Song et al. 2010 Science, Fano inequality).
 
+### Guía del explorador — frente 'dos organismos' (18 sep 05:15)
+
+**Para el frente dos organismos** · **Codificación predictiva local aproxima backprop (Whittington & Bogacz 2017, Neural Comp.; Millidge et al. 2020/2022):** cada capa predice entrada de arriba; error predigo-real entrena pesos locales (Hebbiano). Exige error de predicción por neurona, enviable con constante de tiempo lenta (~0.1× timescale de datos). Profundidad: sin límite teórico en HD puro; con ruido, se degrada suavemente. Fuente: Whittington semantic scholar, Millidge arxiv.
+
+**Para el frente dos organismos** · **Feedback alignment (Lillicrap et al. 2016, Nat Comm; Nøkland 2016 NeurIPS DFA):** error via pesos fijos aleatorios, no transpuesta. Aprendizaje ≈85–90 % de backprop bajo ciertas condiciones; el ruido aleatorio actúa como regularizador. Límite de profundidad: ~4–6 capas antes de degradación severa. DFA agrega skip connections a cada capa. Fuente: Lillicrap Nature Comms 13276, Nøkland NeurIPS 2016.
+
+**Para el frente dos organismos** · **Target propagation / difference target propagation (Lee et al. 2015, ECML/PKDD):** propagar targets de activación, no errores; DTP sustrae error de reconstrucción acumulado para estabilidad. Exige invertibilidad aproximada de cada capa. Memoria: target + error acumulado. Única implementación exitosa: DTP. Fuente: Lee arxiv 1412.7525, NeurIPS 2020 Confavreux.
+
+**Para el frente dos organismos** · **Aprendizaje un ensayo en insectos (Menzel, probóscide abeja; Aso & Rubin 2016 Drosophila dopamina MB):** probóscis se extiende con UN emparejamiento olor-néctar, recuperable en 24h sin repetición. Drosophila: una exposición odor+dopamina graba valence exacta en ~10–30 Kenyon→MBON. Mecanismo: dopamina abre "synaptic tagging" sin backprop. Fuente: Menzel papers, Aso & Rubin eLife dopamina.
+
+**Para el frente dos organismos** · **Computación hiperdimensional (Kanerva 2009, Cognitive Computation; Kleyko et al. 2022 survey):** vectores aleatorios ~D dimensiones (D≥10k), binding Hadamard (circshift, multiplicación), unbinding conjugado. Un patrón nuevo se liga a uno previo en UNA exposición: v_new = binding(v_new, v_prev). Capacidad: crece con D y # vectores base, sin límite composición secuencial. Fuente: Kanerva springer, Kleyko arxiv 2111.06077.
+
+**Para el frente dos organismos** · **Meta-aprendizaje reglas de plasticidad (Najarro & Risi 2020 NeurIPS; Confavreux et al. 2020 NeurIPS):** parametrizar reglas Hebbianas (Volterra expansion: `Δw = α·pre·post + β·pre²·post²...`) y optimizar parámetros por task distribution. Red arranca aleatoria, se auto-organiza en task lifetime con reglas fijas. Familia: monomios actividad presináptica × postsináptica. Fuente: Najarro NeurIPS 2020 PDF, Confavreux bioRxiv/NeurIPS.
+
+**Para el frente dos organismos** · **"Exposiciones hasta criterio" como cota (sample efficiency, few-shot):** número ejemplos N para cruzar threshold (p. ej. 80 % acierto). Cota teórica: O(d/ε²) donde d=dimensión efectiva, ε=error margin (VC theory). Meta-learning reduce N via prior sobre task distribution (learns to learn). Fuente: Generalizing-Few-Shot survey arxiv 1904.05046, VC Littlestone 1988.
+
+**Para el frente dos organismos** · **Repositorios abiertos útiles (pytorch predictive coding, torchhd, feedback alignment):** Torchhd (JMLR 2023, arXiv 2205.09208): HDC/VSA en PyTorch, MIT. Torch2PC (github RobertRosenbaum): predictive coding training PyTorch. Predify: predictive networks PyTorch wrapper, MIT. Feedback-alignment-pytorch (github L0SG): FA implementation, MIT. BioTorch: biologically plausible learning (FA, local rules). Fuente: torchhd JMLR, Predify arxiv 2106.02749, github MIT.
+
+Explorador: 8 puntos, 12 fuentes web verificadas (Whittington, Lillicrap, Nøkland NeurIPS, Lee arxiv, Menzel/Aso Drosophila, Kanerva/Kleyko survey, Najarro/Confavreux NeurIPS, VC theory, Kleyko arxiv 2111.06077, torchhd JMLR, github MIT).
+
 ## Propuestas para el coordinador
 
 ### A-1 (creador A) — **XOR: la receta completa son TRES piezas, y cada una está medida por separado**
