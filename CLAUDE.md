@@ -202,7 +202,7 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   **réplica 201–220 con enmienda 2 (08:20): pasa las dos series (A₁₂ 0.90–1.00; agua 1.85–2.05×) y P10 confirma el ALIAS DE CÓDIGO** —
   la sal hereda el valor del veneno sólo cuando comparten el código K=3 (2/20 semillas; bloque de la sal 08:16, 9 ALIAS contra 9 LIMPIAS:
   |W[sal]| 1.45 contra 0.0, veneno −1.45 contra −3.0; persiste sin sed (S-5) y la puerta de v13 no lo repara (S-6)) → cabo nuevo del
-  nivel 4: desambiguar códigos. **v15d cerrado 08:46 (arriba); en diseño desde 08:40–08:50, sin Pool: v15e tabla reescribible (creador A), desambiguar códigos (creador B), propósito y reproducción (diseñador del mundo vivo).**
+  nivel 4: desambiguar códigos. **v15d cerrado 08:46 (arriba). Desambiguar códigos (B-5, 09:07): 8/9 criterios — el alias se repara (|W[sal]| 0.0, veneno −3.0, muertes 41 contra 75) sin tocar el tronco (examen y generalización IDÉNTICOS a v14.1); C4 7/9 → réplica en semillas nuevas (regla 12) antes de declarar. En diseño sin Pool: v15e tabla reescribible (creador A), propósito y reproducción (diseñador del mundo vivo).**
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;

@@ -182,3 +182,16 @@ primeras divisiones por `R = 0` caen **en la misma mordida de D** (t = 424), com
 para el hambre, código parcialmente compartido) y las dos siguientes de D otra vez (la fuga de la hija al código de B,
 resuelta). En la semilla limpia el valor no se mueve y cuesta 3 celdas. Con una semilla no se decide nada: la serie
 decide con los umbrales de §5 tal como están escritos.
+
+
+## Enmienda 1 (coordinador, 18 sep 09:12 — réplica automática por la regla 12; escrita ANTES de correrla; ningún umbral cambia)
+
+Serie 1 (`codigo_alias9_20260918_085958`): G 18/18, C1–C3 y C5–C9 pasan, T1–T3 identidad exacta con v14.1; **C4 7/9** (se exigía ≥ 8/9):
+a una semilla del umbral → réplica en semillas nuevas. Semillas elegidas estructuralmente antes de correr con
+`diagnostico_codigos.py --desde 701 --n 400 --alias 3`: **ALIAS** (las 9 primeras con `|code(D) & code(B)| = 3` en 701–1100) = 779, 796,
+822, 852, 895, 916, 917, 926, 944; **LIMPIAS** (las 9 primeras con `|D & B| = 0`) = 703, 712, 717, 725, 728, 744, 746, 751, 764. Mismos brazos,
+kwargs y umbrales (runner `corre_codigo_replica.py`, que reutiliza las funciones de `corre_codigo.py`). T1/T2 no se repiten (inercia
+exacta medida en la serie 1). La guarda G no aplica a semillas nuevas; en su lugar **G′**: D0-ALIAS `|W[sal]| > 0.3` en ≥ 8/9 y D0-LIMPIA
+`≤ 0.3` en 9/9 (si no, las semillas no reproducen el alias y no se interpreta). **Veredicto de la réplica:** PASA si G′ y C1, C2, C3, C5,
+C6, C7, C8, C9 pasan; C4 se reporta con su letra. Si la réplica pasa y C4 vuelve a quedar en 7/9, el mecanismo se declara con el
+vocabulario provisional y C4 se reescribe en un preregistro futuro como criterio de causa (no de dónde cae la primera división).

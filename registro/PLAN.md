@@ -113,7 +113,8 @@
 >   con 14 también 1.000 → PRIOR ESTRUCTURAL de pares, declarado; réplica 141–160 igual → **LÍNEA XOR CERRADA (07:47)**; siguiente: llevarlo al
 >   tronco como candidato a v15 (HECHO 08:06 / 08:38 / 08:46: v15c y v15d NO entran — **ERR-38**: su G1 0.500 era del instrumento (batería copiada sin eta_s/clip_s;
 >   corregida: G1 1.000 los dos); v15d cae en el examen encendido por REVERSIÓN (E2 0/20: la tabla de un golpe no se desdice) → siguiente
->   candidato con preregistro nuevo: v15e tabla reescribible, creador A) y el mundo vivo (F): **HECHO 07:58 — núcleo sostenido (valor por
+>   candidato con preregistro nuevo: v15e tabla reescribible, creador A); **desambiguar códigos (B-5) HECHO 09:07: 8/9 criterios, tronco intacto
+>   por inercia exacta; C4 7/9 → réplica en semillas nuevas (regla 12) antes de declarar** y el mundo vivo (F): **HECHO 07:58 — núcleo sostenido (valor por
 >   necesidad resuelve el XOR necesidad × estímulo 20/20; escalar no; barajar contenido lo destruye), supervivencia y sal no como se
 >   predijo (P4′, P6, P7) por el umbral (ERR-37); **réplica 201–220 con enmienda 2 HECHA 08:20: pasa, y P10 confirma el alias de código;
 >   bloque de la sal HECHO 08:16: alias confirmado 9/9 contra 9/9, persiste sin sed (S-5), la puerta no lo repara (S-6) → nivel 4: desambiguar códigos.**

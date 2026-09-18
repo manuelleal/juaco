@@ -4859,3 +4859,54 @@ datos (§6). Siguiente candidato legítimo, con preregistro NUEVO: **tabla reesc
 borra cuando su error propio sube) — v15e, creador A. Notas de instrumento (sin ERR: no cambian ningún umbral): la etiqueta "perilla
 APAGADA" de la ETAPA 2/5 en el log del runner es texto heredado del runner de v15c (`bateria_v15d` importa `organismo_v15d_on`, líneas
 98 y 111); `bateria_v14` (congelada) no escribe el JSON del examen cuando el veredicto es negativo.
+
+
+### Bloque B-5 — DESAMBIGUAR CÓDIGOS (nivel 4; creador B; 18 sep 09:07; ALIAS 326–670 y LIMPIAS 307–342 del bloque de la sal): **8 de 9 criterios pasan — el alias se repara sin tocar el tronco (examen 8/8 y generalización IDÉNTICOS a v14.1); C4 (dónde cae la primera división) queda a una semilla del umbral (7/9) → réplica automática en semillas nuevas (regla 12)**
+
+Mecanismo (uno, local, sin memoria ni constantes nuevas, rng intacto): la división por conflicto de v11 se dispara también cuando una
+celda consolidada (`|Wb[c]| > 0.2`), bajo una retina distinta (`kj@P > KW[c]@P`), recibe `R = 0`; la hija nace sin valor y la madre
+conserva el suyo. En los mundos del tronco `R ∈ {+1, −3}` → inerte por construcción. Perilla `desambiguar = 0 | 1`. Preregistro
+`experimentos/creacion_B/PREREGISTRO_codigo.md` (218b5eefbf2d552f); instrumentos por anclas (`construye_codigo.py` f94aa0a2f714c28d):
+`organismo_v14_codigo` (a4eeca90fb605c78) / `_on` (2f7794d92e68cc89), `organismo_v14g_codigo` (ae9231070a95c801) / `_on` (7a1628b6e6a37f86),
+`organismo_vivo_codigo` (839fa71f9c84cb26), `bateria_v14_codigo` (875727174447b01a; examina al `_on`), `bateria_generaliza_codigo`
+(8669053f71fa76ef; entrada campo a campo igual a la del tronco, regla 14); runner `corre_codigo.py` (cb91371b77c079d3); identidad
+**42/42** (I1 24/24 ≡ v14.1, I2 rng 2/2, I3 6/6 ≡ v14g, I4 10/10 ≡ `organismo_vivo`) + **I5 inercia con la perilla ON 30/30** + I6 (debe
+fallar) falla. Negativo estructural (`negativo_codigo.py`, semillas 1–200, sin simular): en el mundo de 4 estímulos algún par de
+estímulos comparte código en **18/200** semillas (9 %; B–D 5 %, C–D 4 %); en el mundo de regla (20 patrones) **170/200** semillas tienen
+algún par idéntico y en 135/200 un patrón nunca visto lee exactamente la celda de uno entrenado (291 fugas, 115 de valencia opuesta).
+Datos `codigo_alias9_20260918_085958` (369d784c65e036b1; 63 corridas, T = 100 000), examen `examen_codigo_20260918_090300`
+(1c9aa3a3d87173d6), generalización `regresion_generaliza_codigo_organismo_v14_codigo_on_20260918_090557` (ed4d5d25e9eb2ad7).
+
+| brazo (n = 9) | \|W[sal]\| | W[veneno] | exposiciones a la sal | divisiones (por R = 0) | celdas | muertes |
+|---|---|---|---|---|---|---|
+| D0-ALIAS (v14.1) | 1.45 | −1.45 | 3 835 | 0 | 30 | 75 |
+| **D1-ALIAS** | **0.0** | **−3.0** | **517** | 7 (7) | 37 | **41** |
+| D0-LIMPIA / D1-LIMPIA | 0.0 / 0.0 | −3.0 / −3.0 | 545 / 545 | 0 / 3 | 30 / 33 | 35 / 35 |
+| D1-SINSED (tronco, 4 estímulos) | 0.0 | −2.9 | 414 | 7 | 37 | 42 |
+| D0-VIVO / D1-VIVO (la sal informa la sed) | 1.69 / 3.0 (W_s) | −1.61 / −3.0 | 3 833 / 1 936 | 3 / 10 | 33 / 40 | 146 / 90 |
+
+| criterio | resultado | veredicto |
+|---|---|---|
+| G guardas: D0 ≡ JSON del bloque de la sal | 18/18 | PASA |
+| C1 D1-ALIAS \|W[sal]\| ≤ 0.3 en ≥ 8/9, mediana ≤ 0.1 | 9/9, mediana 0.0 | PASA |
+| C2 W_hambre[veneno] ≤ −2.8 en ≥ 8/9 y ≤ −2.5 en 9/9 | 9/9 y 9/9 (mediana −3.0) | PASA |
+| C3 evitación: exposiciones ≤ 1.5 × limpias en ≥ 8/9 | 517 contra 545, 9/9 (v14.1: ×7) | PASA |
+| C4 causa: `des_splits ≥ 1` 9/9 y primera división por R = 0 en una mordida de D en ≥ 8/9 | 9/9 y **7/9** | **NO (a una semilla)** |
+| C5 coste: celdas ≤ 45 en 18/18, mediana ≤ 40 | 18/18, mediana 35, máx. 39 | PASA |
+| C6 limpias sin regresión | 9/9 y 9/9 (3 divisiones por R = 0 de agua/sal, sin daño) | PASA |
+| C7 sin sed (tronco con 4 estímulos) | 9/9 y 9/9 | PASA |
+| C8 tabla 2×2 exacta con la perilla; falla sin ella | ON 9/9; OFF falla 9/9 | PASA |
+| C9 muertes ≤ 0.8 × D0-ALIAS | 41 contra 75 (0.547; A₁₂ 1.0) | PASA |
+| T1 examen v3′ 8/8 ON y `splits` por etapa idénticos a v14.1 | 8/8; 6/6 idénticas | PASA |
+| T2 generalización ON: G1 1.000, G2 0.967, K 20/20; filas idénticas a v14.1 | 40/40 idénticas | PASA |
+| T3 coste en el tronco | 0 % exacto (T1 y T2 son identidad) | PASA |
+
+**Lectura:** el alias se repara con una sola regla local que en el tronco no actúa nunca (inercia medida, no supuesta): el estímulo que
+no informa se queda sin valor, el veneno conserva el miedo, la evitación desaparece (×7 → ×1) y las muertes bajan a la mitad; en el
+mundo vivo con la sal informando la sed, la tabla 2×2 sale exacta 9/9. Lo que falla es sólo la LETRA de la causa: en 2/9 semillas la
+primera división por R = 0 ocurre en una mordida de agua/sal antes que en la de D. Por la regla 12 (a una semilla del umbral) se corre
+**réplica en semillas nuevas** elegidas estructuralmente antes de correr (enmienda 1: ALIAS 779, 796, 822, 852, 895, 916, 917, 926, 944;
+LIMPIAS 703, 712, 717, 725, 728, 744, 746, 751, 764; mismos umbrales; T1/T2 no se repiten por inercia exacta; guarda G′ en vez de G).
+**Nada se declara hasta la réplica.** Vocabulario provisional: *"cuando una celda con valor recibe nada bajo una retina distinta,
+divide: el código deja de prestar valor"*. Predicción de B cumplida en 8/9 (predijo C1–C2 9/9, C3 400–700, C6 9/9, C9 40–50, T1–T3
+identidad); C4 no como se escribió.
