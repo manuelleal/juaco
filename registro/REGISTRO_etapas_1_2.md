@@ -5304,3 +5304,20 @@ compite con la vía rápida cuando el receptor ya conoce el referente. Por la le
 declara; **la declaración exige un preregistro con puertas POR DIRECCIÓN (ERR-53: montaje — las dos direcciones tienen puntos ciegos
 distintos y no pueden compartir puerta), semillas nuevas 641–660 y réplica 661–680, sólo brazos (−).** Escrito antes de correrlo (18:30).
 Nivel 5: 50 % → **65 %** (mensaje con referencia actuado sin experiencia propia, tres series; sin declarar).
+
+
+### BLOQUE 4b, DIRECCIÓN (−) SOLA con puertas por dirección (ERR-53; 18 sep 18:38 y 18:42; semillas 641–660 y 661–680; 9 brazos): **NO SE DECLARA por la letra — el control BAR-T (mensaje con el patrón de OTRO token) queda por encima de CORTADO + 3 en las dos series (9/18 y 6/19 contra 2/18 y 0/19): la referencia del mensaje es PARCIAL. Reportado: el receptor come a la primera lo que evitaba, sólo por el mensaje, 17/18 y 16/19 contra 2/18 y 0/19 (quinta y sexta serie consecutivas); con el patrón de una hermana 15/18 y 13/19 (referencia de familia); sin referencia 5/18 y 4/19 (≈ CORTADO)**
+
+Runner `corre_familias_b4b.py --brazos` sólo (−) (con ERR-54: los datos crudos se guardan antes del análisis; el análisis cayó por KeyError 'CANAL+'
+con brazos de una sola dirección y el veredicto se calculó fuera del runner desde `familias_b4b_s641-660_20260918_183839_crudo.json` y
+`familias_b4b_s661-680_20260918_184155_crudo.json`, campos `B4`). Puertas (−): P-I2 emisor voraz avisa 18/20 y 19/20 (pasa; la primera en el
+borde, regla 12); P-I3 prefijo idéntico al gemelo 18/18 y 19/19 (pasa, OTRO excluido por ERR-52); P-I5 lee la vía lenta 17/18 (cae por una
+semilla) y 18/19 (pasa). Receptor: CANAL− 17/18 · 16/19 (≥ 15 ✓); CORTADO− 2/18 · 0/19 (≤ 5 ✓); VALOR− 5/18 · 4/19 (≤ CORTADO + 3: ✓ · ✗ por
+una); **BAR-T− 9/18 · 6/19 (✗ ✗)**; BAR-H− 15/18 · 13/19; PAR− 18/18 · 17/19 contra PAR0− 3/18 · 1/19; muertes iguales. **Lectura honesta:**
+seis series seguidas dicen lo mismo — un organismo actúa sin experiencia propia porque otro se lo dijo — y también dicen que la referencia
+no es limpia: el patrón de otro token arrastra la mitad del efecto (una sola ganadora de 2 bits reparte el mensaje entre familias que
+comparten casilla). No se declara "comunicación con referencia"; se declara, con vocabulario estricto: *"el mensaje (patrón + recompensa)
+cambia la conducta del receptor sin experiencia propia; la referencia es de familia y parcial"*. Nivel 5 se queda en 65 %. **Siguiente
+(H-4 de la sala 4): varias ganadoras — el nodo por familia — para que BAR-T caiga a CORTADO y BAR-H también; entonces sí se declara.**
+Cierre del día 18 sep a las 18:45: 15 bloques, 27 series, ERR-35..54, 0 entradas al tronco, dos declaraciones (desambiguar códigos;
+crecimiento del linaje con lectura pesimista) y una comunicación mínima medida seis veces sin poder firmarla.
