@@ -1,0 +1,66 @@
+[01:36:18 +    0.0s] ARRANQUE PUERTA POR CODIGO (propuesta B-2). mundo D=10 n_est=60 pasos=(20000, 60000) semillas 41-60, brazos ['v11', 'v13', 'PAT', 'PATC', 'PATSHUF']. Pool(14)
+[01:36:18 +    0.0s] sha preregistro cafbc9b57f4399c3  script beb97e43fe4b746c  constructor c6a1942f5bfcd8c5  organismo_capB 8070351683837077  organismo_v13B 59075fa17f034112  organismo_v13gB 94324c29af339673  bateria_generaliza_B e6e88077e6cf7252  bateria_v13B ef78a939fd9fd4f7  bateria_v13Bc bed5ad9661ea7040  origen organismo_v13 (congelado) cc8b16b492d4d324  origen capD13 fd8e10435801646c
+[01:36:19 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 24256
+[01:36:19 +    0.6s] ETAPA 1/4 — INERCIA (perillas apagadas == originales) (6)...
+[01:36:30 +   11.8s]           6/6
+[01:36:30 +   11.8s]   identicos: 6/6
+[01:36:30 +   11.8s] ETAPA 2/4 — BLOQUE K, capacidad (200 corridas largas) (200)...
+[01:45:17 +  538.6s]           20/200
+[01:50:00 +  821.3s]           40/200
+[01:59:09 + 1370.5s]           60/200
+[02:06:01 + 1782.5s]           80/200
+[02:11:06 + 2087.3s]           100/200
+[02:13:38 + 2239.6s]           120/200
+[02:15:39 + 2360.6s]           140/200
+[02:18:16 + 2517.7s]           160/200
+[02:20:41 + 2662.9s]           180/200
+[02:23:46 + 2847.3s]           200/200
+[02:23:46 + 2847.4s] ETAPA 3/4 — analisis del bloque K (criterios del preregistro, sin recalibrar).
+[02:23:46 + 2847.4s] 
+[02:23:46 + 2847.4s]   paso_t = 60000
+[02:23:46 + 2847.4s]    v11      N* 50.0 [31,60]  M_max 32.0  celdas 90  divisiones 60  a la lenta 0/60  mal ruteados 0  muertes 4849
+[02:23:46 + 2847.4s]    v13      N* 35.0 [9,46]  M_max 29.5  celdas 90  divisiones 60  a la lenta 11/60  mal ruteados 11  muertes 4865
+[02:23:46 + 2847.4s]    PAT      N* 49.5 [31,60]  M_max 32.0  celdas 90  divisiones 60  a la lenta 0/60  mal ruteados 0  muertes 4734
+[02:23:46 + 2847.4s]    PATC     N* 50.5 [33,60]  M_max 33.5  celdas 90  divisiones 60  a la lenta 0/60  mal ruteados 0  muertes 4755
+[02:23:46 + 2847.4s]    PATSHUF  N* 9.0 [6,13]  M_max 19.0  celdas 90  divisiones 60  a la lenta 26/60  mal ruteados 0  muertes 5030
+[02:23:46 + 2847.4s]    PAT: Q1 N*>=48 y >v13 en 19/20 OK | Q2 celdas/divisiones +-2 OK | Q3 a la lenta<=2 y 0 mal ruteados OK | S2 > PATSHUF en 20/20 OK
+[02:23:46 + 2847.4s]    PATC: Q1 N*>=48 y >v13 en 19/20 OK | Q2 celdas/divisiones +-2 OK | Q3 a la lenta<=2 y 0 mal ruteados OK | S2 > PATSHUF en 20/20 OK
+[02:23:46 + 2847.4s] 
+[02:23:46 + 2847.4s]   paso_t = 20000
+[02:23:46 + 2847.4s]    v11      N* 43.5 [6,60]  M_max 28.5  celdas 90  divisiones 60  a la lenta 0/60  mal ruteados 0  muertes 1617
+[02:23:46 + 2847.4s]    v13      N* 28.0 [3,45]  M_max 25.0  celdas 90  divisiones 60  a la lenta 16/60  mal ruteados 15  muertes 1605
+[02:23:46 + 2847.4s]    PAT      N* 41.0 [31,60]  M_max 28.0  celdas 90  divisiones 60  a la lenta 0/60  mal ruteados 0  muertes 1570
+[02:23:46 + 2847.5s]    PATC     N* 41.5 [31,60]  M_max 28.0  celdas 90  divisiones 60  a la lenta 0/60  mal ruteados 0  muertes 1572
+[02:23:46 + 2847.5s]    PATSHUF  N* 3.0 [3,7]  M_max 16.5  celdas 90  divisiones 60  a la lenta 27/60  mal ruteados 0  muertes 1730
+[02:23:46 + 2847.5s]    PAT: Q1 N*>=45 y >v13 en 19/20 NO | Q2 celdas/divisiones +-2 OK | Q3 a la lenta<=2 y 0 mal ruteados OK | S2 > PATSHUF en 20/20 OK
+[02:23:46 + 2847.5s]    PATC: Q1 N*>=45 y >v13 en 19/20 NO | Q2 celdas/divisiones +-2 OK | Q3 a la lenta<=2 y 0 mal ruteados OK | S2 > PATSHUF en 20/20 OK
+[02:23:46 + 2847.5s] 
+[02:23:46 + 2847.5s] ETAPA 4/4 — BLOQUE G: generalizacion y retencion (subprocesos secuenciales, fuera del Pool).
+[02:23:46 + 2847.5s]   -> generaliza PAT ...
+[02:24:35 + 2896.8s]      PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 19/20
+[02:24:35 + 2896.8s]      PASA  G2 conducta al primer encuentro: px0 0.960 (>=0.55), azar 0.478, px0>azar 20/20
+[02:24:35 + 2896.8s]      VEREDICTO bateria_generaliza (organismo_v13B_n5): K_cobertura=True G1_valor=True G2_conducta=True
+[02:24:35 + 2896.8s]      *** organismo_v13B_n5 CONSERVA la generalizaciÃ³n de la Etapa 3
+[02:24:35 + 2896.8s]   -> generaliza PATC ...
+[02:25:21 + 2943.2s]      PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 19/20
+[02:25:21 + 2943.2s]      PASA  G2 conducta al primer encuentro: px0 0.960 (>=0.55), azar 0.444, px0>azar 20/20
+[02:25:21 + 2943.2s]      VEREDICTO bateria_generaliza (organismo_v13B_n5c): K_cobertura=True G1_valor=True G2_conducta=True
+[02:25:21 + 2943.2s]      *** organismo_v13B_n5c CONSERVA la generalizaciÃ³n de la Etapa 3
+[02:25:21 + 2943.2s]   -> retencion PAT ...
+[02:28:43 + 3144.9s]      FALLA 3'' via lenta activa sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (>=19)
+[02:28:43 + 3144.9s]      PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[02:28:43 + 3144.9s]      PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 10)
+[02:28:43 + 3144.9s]      PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[02:28:43 + 3144.9s]      VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=False 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[02:28:43 + 3144.9s]      *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[02:28:43 + 3144.9s]   -> retencion PATC ...
+[02:31:52 + 3333.4s]      PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 20/20 lo pasan (>=19)
+[02:31:52 + 3333.4s]      PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[02:31:52 + 3333.4s]      PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 9)
+[02:31:52 + 3333.4s]      PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[02:31:52 + 3333.4s]      VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[02:31:52 + 3333.4s]      *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[02:31:52 + 3333.4s] 
+[02:31:52 + 3333.4s] VEREDICTO PUERTA_CODIGO — el bloque lo decide S1 (generalizacion) por encima de Q1 (capacidad):
+[02:31:52 + 3333.4s]   {"INERCIA": true, "PAT_60000": {"Q1": true, "Q1_n": 19, "Q1_umbral": 48, "Q2": true, "Q3": true, "S2_sobrevive_al_barajado": true, "S2_n": 20}, "PATC_60000": {"Q1": true, "Q1_n": 19, "Q1_umbral": 48, "Q2": true, "Q3": true, "S2_sobrevive_al_barajado": true, "S2_n": 20}, "PAT_20000": {"Q1": false, "Q1_n": 19, "Q1_umbral": 45, "Q2": true, "Q3": true, "S2_sobrevive_al_barajado": true, "S2_n": 20}, "PATC_20000": {"Q1": false, "Q1_n": 19, "Q1_umbral": 45, "Q2": true, "Q3": true, "S2_sobrevive_al_barajado": true, "S2_n": 20}}
+[02:31:52 + 3333.9s] datos -> puerta_codigo_s41-60_20260918_013618.json  sha256_16 = d6fa9e0c7bec62cf

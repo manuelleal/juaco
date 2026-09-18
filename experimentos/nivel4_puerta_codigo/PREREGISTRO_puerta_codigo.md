@@ -143,3 +143,14 @@ más la evidencia del código. `n0 = 5` y `pat_min = 1` quedan fijados aquí y *
   además de lo que creíamos. Si **ninguno de los dos** pasa S1 (generalización) o el examen v3', el bloque se cierra
   **sin tocar v13** y el canje puerta/capacidad queda como está.
 - **Brazos definitivos del bloque K:** `v11 · v13 · PAT · PATC · PATSHUF` (5 × 2 pasos × 20 semillas = 200 corridas).
+
+
+## Enmienda 2 (coordinador, 18 sep 2026, 02:45; escrita DESPUÉS de la serie 41–60 y ANTES de la réplica del examen)
+
+Resultado de 41–60: Q1 OK a 60 000 (PATC 50.5 ≥ 48, > v13 19/20), NO a 20 000 (41.5 < 45), Q2/Q3/S2 OK, S1 generalización OK
+(px0 1.000 / G2 0.96), retención: PATC pasa 3', 3'', celdas, 4a–4d y cinco etapas 20/20, **E2 19/20** (`come B Q4 ≥ 50`), PAT
+falla 3'' (como predijo la enmienda 1). **Réplica del examen v3' de PATC en semillas nuevas 121–140** (`bateria_v13Bc.py 20
+--desde 121 --log`), **misma letra** (8/8 exigidos; ningún umbral cambia). Si pasa, PATC entra a `PROPUESTA_v14.md` como
+tercer candidato; si E2 (u otra etapa) vuelve a caer, la puerta por código queda como órgano de experimento y la lectura
+registrada es: *recupera la capacidad y conserva la generalización, pero reabrir la vía rápida antes de tiempo cuesta una
+semilla de conducta en el examen*. El criterio Q1 a 20 000 no se retoca: se registra como no alcanzado.

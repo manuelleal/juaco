@@ -52,3 +52,12 @@ Memoria: una lectura lineal `ΔE_pred` (retina + código) + un escalar de estado
 v3' **completo** (3', 3'', 4a–4d) sobre una copia del tronco con la perilla fija (como v13D), gemelo compilado, congelación.
 **Los dos candidatos son componibles** (uno actúa en el nacimiento de las hijas, el otro en la boca); si el director acepta
 ambos, se prueba primero la composición (identidad de cada uno con el otro apagado; examen v3' con los dos encendidos).
+
+
+## Tercer candidato, condicionado (02:40): puerta de familiaridad por evidencia del código exacto (PATC = código ∧ 1 celda)
+
+Capacidad: `N*` 50.5 (= v11) contra 35 de v13 en el paso largo; 41.5 contra 28 en el corto (umbral 45 no alcanzado). Generalización
+intacta (px0 1.000, G2 0.96); barajar los contadores destruye la ganancia (20/20). Examen v3': todo pasa salvo **E2 19/20** (una
+semilla, subcriterio conductual `come B Q4 ≥ 50`). **Condición:** réplica del examen en 121–140 con la misma letra; si 8/8,
+entra a la propuesta; si no, órgano de experimento. Datos `puerta_codigo_s41-60_20260918_013618`. Componible con los otros dos
+(actúa en el ruteo, no en el aprendizaje ni en la boca).

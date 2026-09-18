@@ -4055,3 +4055,34 @@ sin pasar por `eta_s` ni `puerta`, así que apagar esas dos perillas no reduce v
 se reescribe (la reducción a v11 apaga también la perilla nueva), se justifica en `PREREGISTRO_v13E.md` y el examen entero
 se corre en semillas nuevas; si con las tres perillas apagadas v13E no es v11 bit a bit, el instrumento está mal y no se
 interpreta nada. Se anota aquí antes de correr el examen.
+
+
+### Bloque B-2 (célula de creación, creador B; 18 sep 02:32): puerta de familiaridad por evidencia del código exacto, semillas 41–60 — **recupera la capacidad en el paso largo (PATC `N*` 50.5 = v11, contra 35 de v13) con la generalización INTACTA (px0 1.000 / 0.96); en el paso corto mejora sin cruzar el umbral (41.5 contra 28; se exigía 45); el examen de retención cae por UNA semilla en E2 (19/20) → no entra al tronco tal como está**
+
+Preregistro `experimentos/nivel4_puerta_codigo/PREREGISTRO_puerta_codigo.md` (+ enmienda 1 escrita tras el humo y antes de
+la serie: brazo **PATC** = evidencia del código **y** ≥ 1 celda consolidada, porque la puerta de v13 también detecta
+conflicto y contar mordidas del código pierde el criterio 3''); instrumentos por anclas desde el tronco y los congelados:
+`organismo_v13B` (59075fa17f034112), `organismo_v13gB`, `organismo_capB` (desde `organismo_capD13`), `bateria_v13B/Bc`,
+`bateria_generaliza_B`; **identidad 21/21** en la copia principal y 6/6 (inercia) dentro del runner; datos
+`puerta_codigo_s41-60_20260918_013618` (d6fa9e0c7bec62cf), 200 corridas largas + 4 baterías, 56 min. Montaje exacto de
+`reverificacion_v13` (D = 10, 60 estímulos, pasos 20 000 y 60 000, semillas 41–60).
+
+| paso | v11 | v13 | PAT (código, n0 = 5) | **PATC** (código ∧ 1 celda) | PATSHUF (contadores barajados) |
+|---|---|---|---|---|---|
+| 60 000: `N*` mediana | 50.0 | 35.0 | 49.5 | **50.5** | 9.0 |
+| 20 000: `N*` mediana | 43.5 | 28.0 | 41.0 | **41.5** | 3.0 |
+| a la lenta / mal ruteados (60 000) | 0 / 0 | 11 / 11 | 0 / 0 | 0 / 0 | 26 / 0 |
+
+Q1 a 60 000 **OK** (≥ 48 y > v13 en 19/20) para PAT y PATC; **Q1 a 20 000 NO** (41–41.5 < 45, aunque > v13 en 19/20); Q2 celdas y
+divisiones sin cambio (90 / 60) **OK**; Q3 nada mal ruteado **OK**; **S2 barajar los contadores destruye la ganancia (20/20)**
+→ lo que actúa es la evidencia, no "abrir la puerta". **S1 generalización (`bateria_generaliza`, 101–120): PAT y PATC
+CONSERVAN la generalización** (K 20/20; G1 px0 1.000 / azar 0.500, 19/20; G2 0.960, 20/20): el canje puerta–capacidad **se
+rompe** en el paso largo sin pagar la generalización. **Retención (examen v3' completo):** PAT **falla 3''** (0/20; la
+predicción de la enmienda 1) y E2 19/20; PATC pasa 3' (0/20), **3'' (20/20)**, celdas, 4a–4d, E1/E2I–E2L 20/20 y **falla E2 por
+una semilla** (`come B Q4 ≥ 50`: 19/20; los pesos `W_A → −3`, `W_B → +1` 20/20). Por la cláusula del preregistro (retención
+8/8) **no entra al tronco**. Lectura honesta: el mecanismo hace lo que dice (desacopla "¿lo he visto?" de "¿tengo su valor
+sin repartir?", ERR-25) y cierra el canje en 60 000 sin tocar la generalización; el fallo de E2 es una semilla en un
+subcriterio conductual, con los pesos correctos en las 20 — puede ser muestreo o un coste real de reabrir la rápida antes
+de tiempo. **Sin recalibrar: réplica del examen v3' de PATC en semillas nuevas (121–140), misma letra**; si vuelve a caer
+E2, la puerta por código queda como órgano de experimento; si pasa 8/8, es el tercer candidato a v14. Vocabulario: *la
+puerta pregunta si lo ha visto, no si tiene el valor entero; con eso recuerda tanto como v11 y generaliza como v13*.
