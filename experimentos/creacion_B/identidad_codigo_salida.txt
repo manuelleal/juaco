@@ -1,0 +1,68 @@
+  sha organismo_v14 (TRONCO)       feefc88b1fd8d434
+  sha organismo_v14g               1f1318480cd34cde
+  sha organismo_vivo (nivel 11)    20c0961c79de8825
+  sha organismo_v14_codigo         a4eeca90fb605c78
+  sha organismo_v14g_codigo        ae9231070a95c801
+  sha organismo_vivo_codigo        839fa71f9c84cb26
+  modulos: v14 C:\Users\User\Documents\PROYECTOS\JUACO\bundle\organismo\organismo_v14.py
+           vivo C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\nivel11_mundo_vivo\organismo_vivo.py
+
+--- I1: organismo_v14_codigo(desambiguar=0) == organismo_v14 (v14.1), T=30000; I5: con desambiguar=1 (prediccion de inercia) ---
+  [    4s]                       AB por defecto s1: off IDENTICO   on IDENTICO (inerte)
+  [    7s]                       AB por defecto s2: off IDENTICO   on IDENTICO (inerte)
+  [   11s]                         AB invertido s1: off IDENTICO   on IDENTICO (inerte)
+  [   15s]                         AB invertido s2: off IDENTICO   on IDENTICO (inerte)
+  [   18s]                  AB + patron nuevo C s1: off IDENTICO   on IDENTICO (inerte)
+  [   22s]                  AB + patron nuevo C s2: off IDENTICO   on IDENTICO (inerte)
+  [   25s]                  AB solap_AB=3 (E2L) s1: off IDENTICO   on IDENTICO (inerte)
+  [   29s]                  AB solap_AB=3 (E2L) s2: off IDENTICO   on IDENTICO (inerte)
+  [   33s]                   AB sin plasticidad s1: off IDENTICO   on IDENTICO (inerte)
+  [   36s]                   AB sin plasticidad s2: off IDENTICO   on IDENTICO (inerte)
+  [   40s]                 AB via lenta apagada s1: off IDENTICO   on IDENTICO (inerte)
+  [   43s]                 AB via lenta apagada s2: off IDENTICO   on IDENTICO (inerte)
+  [   47s]                        AB sin puerta s1: off IDENTICO   on IDENTICO (inerte)
+  [   50s]                        AB sin puerta s2: off IDENTICO   on IDENTICO (inerte)
+  [   54s]            AB sin division por signo s1: off IDENTICO   on IDENTICO (inerte)
+  [   58s]            AB sin division por signo s2: off IDENTICO   on IDENTICO (inerte)
+  [   61s]                 AB sin hija dispersa s1: off IDENTICO   on IDENTICO (inerte)
+  [   65s]                 AB sin hija dispersa s2: off IDENTICO   on IDENTICO (inerte)
+  [   69s]             AB sin puerta por codigo s1: off IDENTICO   on IDENTICO (inerte)
+  [   72s]             AB sin puerta por codigo s2: off IDENTICO   on IDENTICO (inerte)
+  [   76s]          AB las dos perillas v14 off s1: off IDENTICO   on IDENTICO (inerte)
+  [   79s]          AB las dos perillas v14 off s2: off IDENTICO   on IDENTICO (inerte)
+  [   83s]          AB D comida solap_B=2 (E2K) s1: off IDENTICO   on IDENTICO (inerte)
+  [   87s]          AB D comida solap_B=2 (E2K) s2: off IDENTICO   on IDENTICO (inerte)
+
+--- I2: el rng NO se consume con la perilla apagada (T=120000) ---
+  [   96s] T=120000 s1: IDENTICO
+  [  106s] T=120000 s2: IDENTICO
+
+--- I3: organismo_v14g_codigo(0) == organismo_v14g (mundo de regla), T=30000; I5 con (1) ---
+  [  109s]                            regla/px0 s1: off IDENTICO   on IDENTICO (inerte)
+  [  113s]                            regla/px0 s2: off IDENTICO   on IDENTICO (inerte)
+  [  117s]                          regla/xor01 s1: off IDENTICO   on IDENTICO (inerte)
+  [  121s]                          regla/xor01 s2: off IDENTICO   on IDENTICO (inerte)
+  [  124s]                           regla/azar s1: off IDENTICO   on IDENTICO (inerte)
+  [  128s]                           regla/azar s2: off IDENTICO   on IDENTICO (inerte)
+
+--- I4: organismo_vivo_codigo(0) == organismo_vivo (nivel 11), T=20000 ---
+  [  130s]                             vivo=0 (apagado) s1: IDENTICO
+  [  131s]                             vivo=0 (apagado) s2: IDENTICO
+  [  133s]                V14: 1 necesidad, 2 estimulos s1: IDENTICO
+  [  134s]                V14: 1 necesidad, 2 estimulos s2: IDENTICO
+  [  136s]  SIN-SED: 1 necesidad, 4 estimulos, sal muda s1: IDENTICO
+  [  138s]  SIN-SED: 1 necesidad, 4 estimulos, sal muda s2: IDENTICO
+  [  140s]          NO_INFORMA: 2 necesidades, sal muda s1: IDENTICO
+  [  142s]          NO_INFORMA: 2 necesidades, sal muda s2: IDENTICO
+  [  143s]             VIVO: 2 necesidades, sal informa s1: IDENTICO
+  [  145s]             VIVO: 2 necesidades, sal informa s2: IDENTICO
+
+IDENTIDAD exigida (I1+I2+I3+I4): 42/42
+INERCIA predicha en los mundos del tronco (I5, perilla ON): 30/30
+
+--- I6: CONTROL QUE DEBE FALLAR (no vacuidad): NO_INFORMA, semilla ALIAS 326, on != off, T=40000 ---
+  [  149s] difieren: True (claves ['desambiguar', 'des_splits', 'des_t', 'sobre', 'llegadas', 'sin_objetivo']); des_splits on=6 off=0; W_nec hambre: off {'A': 1.0, 'B': -2.03, 'C': -0.12, 'D': -2.03}  on {'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': -0.0}
+  I6 DIFIERE (como debe)
+
+VEREDICTO identidad_codigo: PASA  (42/42 exigidas; I5 30/30; I6 ok)
+exit=0

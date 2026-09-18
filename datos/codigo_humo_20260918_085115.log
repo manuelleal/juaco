@@ -1,0 +1,52 @@
+[08:51:15 +    0.0s] HUMO del creador B, UN proceso, sin Pool (regla 3). PREREGISTRO_codigo.md ya escrito (sus umbrales no se tocan).
+[08:51:15 +    0.0s]     sha preregistro                5ec48730037d6e0d
+[08:51:15 +    0.0s]     sha script                     cb91371b77c079d3
+[08:51:15 +    0.0s]     sha constructor                f94aa0a2f714c28d
+[08:51:15 +    0.0s]     sha identidad                  5ecb6992d46d2b57
+[08:51:15 +    0.0s]     sha organismo_v14_codigo       a4eeca90fb605c78
+[08:51:15 +    0.0s]     sha organismo_v14_codigo_on    2f7794d92e68cc89
+[08:51:15 +    0.0s]     sha organismo_v14g_codigo_on   7a1628b6e6a37f86
+[08:51:15 +    0.0s]     sha organismo_vivo_codigo      839fa71f9c84cb26
+[08:51:15 +    0.0s]     sha bateria_v14_codigo         875727174447b01a
+[08:51:15 +    0.0s]     sha bateria_generaliza_codigo  8669053f71fa76ef
+[08:51:15 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[08:51:15 +    0.0s]     sha origen_organismo_vivo      20c0961c79de8825
+[08:51:15 +    0.0s]     sha ref_sal                    d521f569205ebcfd
+[08:51:15 +    0.0s]     sha ref_examen                 ccb41783a4d6e4e9
+[08:51:15 +    0.0s]     sha ref_generaliza             6452fdf50352607e
+[08:51:15 +    0.0s] 1/3 seleccion de semillas (diagnostico estructural, sin correr el organismo)
+[08:51:15 +    0.1s]     ALIAS recalculadas en 301-700: [326, 334, 343, 377, 446, 533, 549, 563, 670] -> coinciden; LIMPIAS |D&B|=0: 9/9
+[08:51:15 +    0.1s] 2/3 IDENTIDAD corta (T=20000, subproceso de un proceso)
+[08:51:15 +    0.1s]    -> SUBPROCESO (identidad): identidad_codigo.py 20000
+[08:54:06 +  171.0s]       |   [  156s]                V14: 1 necesidad, 2 estimulos s2: IDENTICO
+[08:54:06 +  171.0s]       |   [  158s]  SIN-SED: 1 necesidad, 4 estimulos, sal muda s1: IDENTICO
+[08:54:06 +  171.0s]       |   [  159s]  SIN-SED: 1 necesidad, 4 estimulos, sal muda s2: IDENTICO
+[08:54:06 +  171.0s]       |   [  161s]          NO_INFORMA: 2 necesidades, sal muda s1: IDENTICO
+[08:54:06 +  171.0s]       |   [  163s]          NO_INFORMA: 2 necesidades, sal muda s2: IDENTICO
+[08:54:06 +  171.0s]       |   [  165s]             VIVO: 2 necesidades, sal informa s1: IDENTICO
+[08:54:06 +  171.0s]       |   [  167s]             VIVO: 2 necesidades, sal informa s2: IDENTICO
+[08:54:06 +  171.0s]       | 
+[08:54:06 +  171.0s]       | IDENTIDAD exigida (I1+I2+I3+I4): 42/42
+[08:54:06 +  171.0s]       | INERCIA predicha en los mundos del tronco (I5, perilla ON): 30/30
+[08:54:06 +  171.0s]       | 
+[08:54:06 +  171.0s]       | --- I6: CONTROL QUE DEBE FALLAR (no vacuidad): NO_INFORMA, semilla ALIAS 326, on != off, T=40000 ---
+[08:54:06 +  171.0s]       |   [  171s] difieren: True (claves ['desambiguar', 'des_splits', 'des_t', 'sobre', 'llegadas', 'sin_objetivo']); des_splits on=6 off=0; W_nec hambre: off {'A': 1.0, 'B': -2.03, 'C': -0.12, 'D': -2.03}  on {'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': -0.0}
+[08:54:06 +  171.0s]       |   I6 DIFIERE (como debe)
+[08:54:06 +  171.0s]       | 
+[08:54:06 +  171.0s]       | VEREDICTO identidad_codigo: PASA  (42/42 exigidas; I5 30/30; I6 ok)
+[08:54:06 +  171.0s]       (171s)
+[08:54:06 +  171.0s] 3/3 SEIS corridas, T=100000: ALIAS 326 off/on, LIMPIA 307 off/on, SINSED 326 on, VIVO 326 on
+[08:54:11 +  175.8s]     D0-ALIAS   s326   4.71s  |W[sal]| 1.8 [-1.8, 0.0]  W[veneno] -1.8 [-1.8, 0.0]  exp sal 4009 (ven 3496)  splits 0 (R=0: 0)  celdas 30  muertes 90
+[08:54:15 +  180.4s]     D1-ALIAS   s326   4.64s  |W[sal]| 0.0 [-0.0, 0.0]  W[veneno] -3.0 [-3.0, -0.0]  exp sal 556 (ven 7551)  splits 6 (R=0: 6)  celdas 36  muertes 38
+[08:54:15 +  180.4s]                primeras divisiones por R=0: [(424, 'D'), (424, 'D'), (424, 'D'), (461, 'C'), (2098, 'D'), (2134, 'D')]
+[08:54:20 +  185.0s]     D0-LIMPIA  s307   4.63s  |W[sal]| 0.0 [-0.0, 0.0]  W[veneno] -3.0 [-3.0, -0.0]  exp sal 555 (ven 6879)  splits 0 (R=0: 0)  celdas 30  muertes 31
+[08:54:25 +  189.8s]     D1-LIMPIA  s307   4.72s  |W[sal]| 0.0 [-0.0, 0.0]  W[veneno] -3.0 [-3.0, -0.0]  exp sal 555 (ven 6879)  splits 3 (R=0: 3)  celdas 33  muertes 31
+[08:54:25 +  189.8s]                primeras divisiones por R=0: [(2970, 'D'), (2970, 'D'), (9051, 'D')]
+[08:54:29 +  194.0s]     D1-SINSED  s326   4.29s  |W[sal]| 0.0 [-0.0]  W[veneno] -2.88 [-2.88]  exp sal 374 (ven 7478)  splits 6 (R=0: 6)  celdas 36  muertes 41
+[08:54:29 +  194.1s]                primeras divisiones por R=0: [(424, 'D'), (424, 'D'), (424, 'D'), (461, 'C'), (1534, 'D'), (1541, 'D')]
+[08:54:34 +  199.0s]     D1-VIVO    s326   4.95s  |W[sal]| 3.0 [0.0, -3.0]  W[veneno] -3.0 [-3.0, 0.0]  exp sal 1567 (ven 6094)  splits 9 (R=0: 9)  celdas 39  muertes 83
+[08:54:34 +  199.0s]                primeras divisiones por R=0: [(361, 'D'), (361, 'D'), (361, 'D'), (365, 'B'), (365, 'B'), (370, 'C')]
+[08:54:34 +  199.0s]     guarda G: D0-ALIAS s326 REPRODUCE el bloque de la sal (S1-ALIAS)
+[08:54:34 +  199.0s]     guarda G: D0-LIMPIA s307 REPRODUCE el bloque de la sal (S1-LIMPIA)
+[08:54:34 +  199.0s] HUMO: n=1 por brazo, semillas ya vistas por el bloque de la sal. NO es evidencia: prueba que mide y calibra las predicciones.
+[08:54:34 +  199.0s] datos -> codigo_humo_20260918_085115.json  sha256_16 = 11aa92b347152063

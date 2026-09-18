@@ -1893,3 +1893,74 @@ regla local puede escribir una distinción en un código idéntico**. Por eso **
 cual**. Pido el mundo mínimo que la haría decidible: parejas con **vista parcialmente distinta** para el receptor
 (que pueda representar la diferencia aunque no pueda predecir la valencia sin ayuda), manteniendo intactas las puertas
 de validez de N3d. Con ese mundo, **N6 pasa a ser la predicción principal** y el resto queda como está.
+
+### B-5 (creador B, 18-sep 08:55) — **DESAMBIGUAR CÓDIGOS: división por AUSENCIA DE CONSECUENCIA bajo retina distinta** (nivel 4, cabo del alias de código). Instrumentos listos, identidad 42/42, preregistro escrito, humo en la dirección predicha. **Lo corre el coordinador: `python experimentos/creacion_B/corre_codigo.py`** (subprocesos secuenciales, nunca dos `Pool`; ≈ 10 min)
+
+- **Hipótesis.** La sal hereda el valor del veneno porque el único órgano que separa códigos —la división por conflicto de
+  signo de v11— exige `Wb[c]·R < 0`, y la ausencia de consecuencia (`R = 0`) no tiene signo. Si la celda consolidada lee "bajo
+  una retina distinta no pasó nada" como **desconfirmación** y divide, la hija (ciega fuera del patrón nuevo, nacida sin valor)
+  se lleva el código del estímulo mudo, el veneno conserva su celda y su miedo, y la evitación desaparece.
+- **Mecanismo mínimo (local; memoria nueva CERO; constantes nuevas CERO; rng intacto).** Una condición y una rama en la
+  línea de división: `divide si (Wb[c]·R < 0 **o R == 0**) y |Wb[c]| > 0.2 y kj@P > KW[c]@P`; con `R == 0` la hija nace
+  `Wp[j] = Wn[j] = 0` y la madre conserva su valor (en el mundo vivo hereda las otras necesidades como v14.1). `kj@P > KW[c]@P`
+  **es la discrepancia de retina** que v11 ya exige (con `P = mu[c]` no divide): por eso 4c (misma valencia, mismo código)
+  sigue sin dividir y una inversión pura tampoco dispara. **En los mundos del tronco `R ∈ {+1, −3}`: inerte por
+  construcción → v14.1 bit a bit con la perilla encendida** (medido: I5 30/30). Perilla `desambiguar = 0 | 1`.
+  Descarté los otros dos del encargo con argumento (preregistro §3): K+1 no separa (la regla delta sigue empujando las tres
+  celdas compartidas) y K-WTA con desempate no tiene qué desempatar (los códigos no empatan: son idénticos).
+- **Negativo del alias (`negativo_codigo.py`, semillas 1–200, sin simular, 0.1 s).** Tasa de colisión por par en el mundo de
+  4 estímulos con `cond()`: **B–D 5.0 % mismo código / 27 % dos de tres; C–D 4.0 % / 28.5 %**; B–C 1.0 % / 7.5 %; A–C 0 / 7 %;
+  A–D 0 / 0; A–B 0 (lo prohíbe `cond()`). **Algún par con el mismo código: 18/200 semillas (9 %)**; alguno con ≥ 2/3: 64 %.
+  Mundo de regla (20 patrones, sin `cond()`): 1.52 % de los 190 pares con el mismo código y 17.9 % con 2/3; **170/200
+  semillas tienen al menos un par idéntico**; **fuga px0** (un patrón de TEST con el código exacto de uno de TRAIN): 135/200
+  semillas, 291 fugas, 115 de valencia opuesta → parte de lo que `bateria_generaliza` mide (a favor y en contra) es alias.
+  El alias no es raro: es la regla en cuanto hay más de dos estímulos; con dos nunca se vio porque `cond()` lo prohíbe.
+- **Instrumentos (por anclas, `construye_codigo.py` f94aa0a2f714c28d; congelados sólo leídos; `manifiesto.py --check` 16/16):**
+  `organismo_v14_codigo.py` a4eeca90fb605c78 (← v14.1 feefc88b1fd8d434) · `_on` 2f7794d92e68cc89 · `organismo_v14g_codigo.py`
+  ae9231070a95c801 · `_on` 7a1628b6e6a37f86 (← v14g 1f1318480cd34cde) · `organismo_vivo_codigo.py` 839fa71f9c84cb26 (←
+  `organismo_vivo.py` 20c0961c79de8825) · `bateria_v14_codigo.py` 875727174447b01a (← bateria_v14 72216f5415de0c86, sobre `_on`)
+  · `bateria_generaliza_codigo.py` 8669053f71fa76ef (← 9cf72581ebae7dea; entrada nueva con `eta_s`/`clip_s` EXPLÍCITOS) ·
+  `identidad_codigo.py` 5ecb6992d46d2b57 · `corre_codigo.py` cb91371b77c079d3 · `PREREGISTRO_codigo.md` 218b5eefbf2d552f ·
+  `negativo_codigo.py` 2b19d83686f349e3 + `negativo_codigo_s1-200.json` 29df6ce017eb7389.
+- **Identidad (`identidad_codigo.py 30000`, un proceso, 149 s): 42/42 exigidas** (I1 24/24 ≡ v14.1 · I2 rng no consumido a
+  T = 120 000, 2/2 · I3 6/6 ≡ v14g · I4 10/10 ≡ `organismo_vivo` incluidos los montajes de 4 estímulos y 2 necesidades) ·
+  **I5 inercia predicha con la perilla ON: 30/30** · **I6 (debe fallar): falla como debe** (semilla alias 326, T = 40 000: OFF
+  veneno = sal = −2.03; ON −3.0 / −0.0, `des_splits` 6). Además, en un proceso: la etapa de identidad de la batería copiada
+  (v11 E2L, v10 E2J) idéntica con la perilla ON; E2I-misma s1 → 0 divisiones, W_C −2.98 (4c intacto); generalización px0 s101
+  con la perilla ON = los números guardados de v14.1 (acc 0.9, ba 0.8988689017812073, splits 19, celdas 49, muertes 246).
+- **Predicción numérica (preregistro §5–§6, escrita antes del humo).** D1-ALIAS: `|W[sal]| ≤ 0.3` en ≥ 8/9 (mediana 0.0),
+  `W[veneno] ≤ −2.8` en ≥ 8/9, exposiciones a la sal ≈ limpias (≤ 1.5 ×; v14.1 ×7), `des_splits` mediana 3–6, celdas 33–38,
+  muertes ≈ 40–50 (v14.1 75); D1-LIMPIA sin regresión 9/9 (con 2–8 divisiones por `R = 0`: agua y sal también dan `R = 0`);
+  D1-SINSED igual (el tronco con 4 estímulos); D1-VIVO tabla 2×2 {sal, veneno} × {hambre, sed} exacta ≥ 7/9;
+  **T1/T2/T3 = IDENTIDAD con v14.1** (8/8 con las listas `splits` idénticas; G1/G2 idénticos por semilla; coste 0 %).
+- **Control que puede fallar.** C6 (limpias): una sola semilla con el veneno dañado por divisiones espurias tumba el candidato
+  (coste > beneficio). C5: celdas > 45 si la cascada de fugas de la hija (B comparte 2 de los 3 píxeles de D) no converge.
+  C1 con ≥ 2/9: la separación no ocurre o la sal no se muerde a tiempo. **No hay variantes después de ver datos.**
+- **Humo (`corre_codigo.py --humo`, `datos/codigo_humo_20260918_085115` 11aa92b347152063; un proceso, T = 100 000; NO es la serie):**
+
+  | brazo | semilla | \|W[sal]\| (hambre, sed) | W[veneno] (hambre, sed) | exp. sal | divisiones (por R=0) | celdas | muertes |
+  |---|---|---|---|---|---|---|---|
+  | D0-ALIAS (v14.1) | 326 | **1.80** (−1.80, 0.0) | **−1.80** (−1.80, 0.0) | 4 009 | 0 (0) | 30 | 90 |
+  | **D1-ALIAS** | 326 | **0.00** | **−3.00** | **556** | 6 (6) | 36 | **38** |
+  | D0-LIMPIA (v14.1) | 307 | 0.00 | −3.00 | 555 | 0 (0) | 30 | 31 |
+  | D1-LIMPIA | 307 | 0.00 | −3.00 | 555 | 3 (3) | 33 | 31 |
+  | D1-SINSED (tronco, 4 estímulos) | 326 | 0.00 | −2.88 | 374 | 6 (6) | 36 | 41 |
+  | D1-VIVO (sal informa la sed) | 326 | W_h 0.0 · **W_s −3.0** | **W_h −3.0** · W_s 0.0 | 1 567 | 9 (9) | 39 | 83 |
+
+  Las guardas reproducen el bloque de la sal (D0 idéntico a S1 en las dos semillas). Las tres primeras divisiones por `R = 0`
+  caen en la misma mordida de D (t = 424), como estaba escrito; la sal muda queda en 0.0 exacto y el veneno en −3.0.
+- **Tres líneas honestas.** *Predigo:* la serie pasa C1–C9 con `des_splits` 3–6 y celdas 33–38 en las alias, y T1/T2 salen
+  idénticos a v14.1 porque el mecanismo no puede actuar donde R nunca es 0 — es decir, **el examen del tronco no mide este
+  candidato; lo mide el mundo vivo**, y eso hay que decirlo al congelar. *Me tumba:* una limpia con el veneno dañado (C6), o
+  celdas > 45 por fugas que no convergen (C5). *No pude hacer:* medir el alias con recompensa ruidosa (`R = 0` fortuito
+  dispararía divisiones: régimen que hoy no existe), ni el alias de magnitud con el mismo signo (no existe en el tronco),
+  ni correr la serie (regla 3).
+- **HALLAZGO DE INSTRUMENTO en `creacion_A/` (no lo toco; candidato a ERR para el coordinador).** `bateria_generaliza_v15c.py`
+  y `bateria_generaliza_v15d.py` registran su instrumento en `INSTRUMENTOS` **sin `eta_s`/`clip_s`**, y `organismo_v15gc_on` /
+  `organismo_v15gd_on` heredan de `organismo_v14g.py` los valores por defecto **`eta_s = 0.0, clip_s = 3.0`** (el comentario de
+  la entrada dice "por defecto = v14.1", y no es así: la entrada del tronco los pasa explícitos). Verificado con un número
+  (un proceso, semilla 101, px0, T = 40 000, los kwargs exactos de la batería): **`Wps = [0,0,0,0,0,0]` y `mem_vistas = 0`** —
+  la vía lenta está apagada y la memoria de pares nunca se escribe (su actualización vive dentro de `if eta_s:`); con
+  `eta_s = 0.15, clip_s = 10` explícitos, `mem_vistas = 60`. Consecuencia: **V2a de v15c (G1 0.500 / G2 0.513) y de v15d (G1/G2
+  FALSE a las 08:34) midieron la vía rápida sola, no al candidato**; el veredicto "no entra al tronco por generalización" está
+  sin medir. La corrección es una línea en la entrada de `INSTRUMENTOS` (mis copias la llevan explícita) y repetir V2a.
