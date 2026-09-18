@@ -741,3 +741,36 @@ compilado (numba); el tronco v14.1 sí lo tiene.
 el mundo vivo replicó su núcleo y confirmó el alias de código con una predicción que podía fallar limpio (P10) y no
 falló. Vamos mal: ningún candidato de la mañana entra al tronco, el cuello que más importa a la misión (construir el
 rasgo desde píxeles, sin prior) sigue sin mecanismo, y el alias de código queda confirmado pero sin reparación (nivel 4).
+
+
+### 15.9 Cambio de rumbo (18 sep 09:55)
+
+**DECISIÓN DEL DIRECTOR (18 sep 2026, 09:55) — CAMBIO DE RUMBO.** Tras la mañana (cinco bloques preregistrados por hora, dos
+resultados declarados, ningún candidato de capacidad al tronco; revisor de literatura: ningún mecanismo nuevo), el coordinador
+diagnosticó cuatro cosas mal planteadas y el director decidió: *"Perfecto, hagamos esa modificación y registra todo"*.
+Lo que cambia, y lo que no:
+1. **Se conserva el método** (preregistro → commit → correr → registrar; ERR numerados; réplica antes de cerrar; regla 12; reglas 1–14 de
+   EQUIPO). Es lo que nos salvó cinco veces hoy (ERR-38, 41, 42, 43; la medida de reproducción).
+2. **El mundo cambia por uno que obligue a representar:** estímulos compuestos (una "sal" y una "sal rosa": la variante como variable
+   del mismo token), más píxeles que 6, recursos que se agotan, veneno que cambia — un mundo donde 16 patrones no basten y donde
+   la tokenización, la variable y el desaprender sean necesarios para sobrevivir (ERR-35: el mundo de 16 patrones no contiene la
+   información para elegir XOR; no se le vuelve a preguntar lo que no puede responder).
+3. **La estructura crece por reglas locales:** el organismo recluta y divide celdas cuando la sorpresa se repite en la misma
+   combinación (conjunción por coactividad) y cuando un código con valor recibe otra consecuencia (B-5); ninguna capacidad nueva
+   entra como perilla diseñada a mano si puede entrar como crecimiento.
+4. **El criterio de tronco cambia:** el examen v3′ 8/8 deja de ser la puerta absoluta (selecciona "no cambies nada": v15d/v15e
+   murieron por detalles internos; sólo entró lo inerte). Un candidato nuevo se juzga por **sobrevivir y generalizar en el mundo
+   vivo** (muertes, r = descendientes − muertes, nunca vistos, reversión: se desdice, sin alias) con **no regresión CONDUCTUAL** del
+   examen (la conducta de cada escenario se conserva; los pesos internos no son puertas). El criterio v2 se escribe en
+   `registro/CRITERIO_TRONCO_v2.md` ANTES de juzgar a ningún candidato con él; **v15c/v15d/v15e no se rejuzgan** (regla: no
+   recalibrar después de ver datos); v14.1 sigue siendo el tronco hasta que un candidato cruce el criterio v2 en semillas nuevas.
+5. **Ejecución:** la SALA 2 (4 diagnósticos, 6 diseños, 12 refutadores, síntesis) entrega el diseño concreto del mundo y del
+   crecimiento; de ahí salen los bloques preregistrados, en este orden: (a) `CRITERIO_TRONCO_v2.md`; (b) el mundo que obliga (mundo
+   nuevo con v14.1 SIN cambios como control base: si el tronco ya sobrevive ahí, el mundo no obliga); (c) crecimiento estructural
+   por sorpresa repetida (crece_codigo) medido en ese mundo; (d) tokens y variables ("sal rosa" cuelga de "sal"; separación cuando
+   deja de comportarse igual); (e) población con herencia y muerte real (que viva). Una cosa a la vez en el Pool; réplica antes de
+   declarar; "llegar a la frontera es lo primero, que viva lo segundo".
+
+Estado al escribir esto: SALA 2 corriendo (síntesis en `registro/investigacion/SALA2_frontera_20260918.md`); v15f (creador A) en
+humo; Pool libre. Quien retome: leer primero `registro/CRITERIO_TRONCO_v2.md` (si existe) y la síntesis de la sala; nada de lo
+anterior se rejuzga.

@@ -102,6 +102,33 @@
 >   (descendientes viables), después como mecanismo (selección: la evolución del organismo entero). Entra como MUNDO NUEVO
 >   por anclas: con una necesidad y dos estímulos debe ser v14 bit a bit. Diseño primero (diseñador), sin correr nada grande.
 >
+> **DECISIÓN DEL DIRECTOR (18 sep 2026, 09:55) — CAMBIO DE RUMBO.** Tras la mañana (cinco bloques preregistrados por hora, dos
+> resultados declarados, ningún candidato de capacidad al tronco; revisor de literatura: ningún mecanismo nuevo), el coordinador
+> diagnosticó cuatro cosas mal planteadas y el director decidió: *"Perfecto, hagamos esa modificación y registra todo"*.
+> Lo que cambia, y lo que no:
+> 1. **Se conserva el método** (preregistro → commit → correr → registrar; ERR numerados; réplica antes de cerrar; regla 12; reglas 1–14 de
+>    EQUIPO). Es lo que nos salvó cinco veces hoy (ERR-38, 41, 42, 43; la medida de reproducción).
+> 2. **El mundo cambia por uno que obligue a representar:** estímulos compuestos (una "sal" y una "sal rosa": la variante como variable
+>    del mismo token), más píxeles que 6, recursos que se agotan, veneno que cambia — un mundo donde 16 patrones no basten y donde
+>    la tokenización, la variable y el desaprender sean necesarios para sobrevivir (ERR-35: el mundo de 16 patrones no contiene la
+>    información para elegir XOR; no se le vuelve a preguntar lo que no puede responder).
+> 3. **La estructura crece por reglas locales:** el organismo recluta y divide celdas cuando la sorpresa se repite en la misma
+>    combinación (conjunción por coactividad) y cuando un código con valor recibe otra consecuencia (B-5); ninguna capacidad nueva
+>    entra como perilla diseñada a mano si puede entrar como crecimiento.
+> 4. **El criterio de tronco cambia:** el examen v3′ 8/8 deja de ser la puerta absoluta (selecciona "no cambies nada": v15d/v15e
+>    murieron por detalles internos; sólo entró lo inerte). Un candidato nuevo se juzga por **sobrevivir y generalizar en el mundo
+>    vivo** (muertes, r = descendientes − muertes, nunca vistos, reversión: se desdice, sin alias) con **no regresión CONDUCTUAL** del
+>    examen (la conducta de cada escenario se conserva; los pesos internos no son puertas). El criterio v2 se escribe en
+>    `registro/CRITERIO_TRONCO_v2.md` ANTES de juzgar a ningún candidato con él; **v15c/v15d/v15e no se rejuzgan** (regla: no
+>    recalibrar después de ver datos); v14.1 sigue siendo el tronco hasta que un candidato cruce el criterio v2 en semillas nuevas.
+> 5. **Ejecución:** la SALA 2 (4 diagnósticos, 6 diseños, 12 refutadores, síntesis) entrega el diseño concreto del mundo y del
+>    crecimiento; de ahí salen los bloques preregistrados, en este orden: (a) `CRITERIO_TRONCO_v2.md`; (b) el mundo que obliga (mundo
+>    nuevo con v14.1 SIN cambios como control base: si el tronco ya sobrevive ahí, el mundo no obliga); (c) crecimiento estructural
+>    por sorpresa repetida (crece_codigo) medido en ese mundo; (d) tokens y variables ("sal rosa" cuelga de "sal"; separación cuando
+>    deja de comportarse igual); (e) población con herencia y muerte real (que viva). Una cosa a la vez en el Pool; réplica antes de
+>    declarar; "llegar a la frontera es lo primero, que viva lo segundo".
+> 
+>
 > **REVISIÓN DE RUMBO (06:45, a petición del director: "¿nos estamos yendo del camino?"): ligera dispersión, corregida así:**
 >   **Columna vertebral = XOR** (los tres bloques del criterio de parada, nada los adelanta en el Pool): A-4 (dos constantes de
 >   la vía lenta; HECHO 05:35: **bloque 1/3, XOR 0.625 — la regla ya llega a 1.000 con rasgos dados y no daña el tronco; el cuello son
