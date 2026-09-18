@@ -1,8 +1,8 @@
-"""bateria_generaliza_E = organismo/bateria_generaliza.py (46772f5a582872c8) con dos entradas mas en
-INSTRUMENTOS (organismo_v13p, dE-TEST apagado -> referencia, y organismo_v13E, dE-TEST fijo ON, cada una
-sobre su organismo_*g correspondiente) y las rutas corregidas por vivir fuera de organismo/. Los
-UMBRALES y los criterios G1/G2/K NO se tocan.
-Generado por construye_v13E.py. NO editar. La bateria original NO se modifico."""
+"""bateria_generaliza_E = organismo/bateria_generaliza.py (46772f5a582872c8) con CUATRO entradas mas en
+INSTRUMENTOS (organismo_v13p referencia; organismo_v13E dE-TEST k_testE=10; organismo_v13E_k3 y
+organismo_v13E_k5, DOSIS de PREREGISTRO_dosis_dE.md) y las rutas corregidas por vivir fuera de organismo/.
+Los UMBRALES y los criterios G1/G2/K NO se tocan.
+Generado por construye_v13E.py --k (las dos dosis siempre juntas). NO editar. La bateria original NO se modifico."""
 """REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — obligatoria para cualquier tronco, nuevo o viejo.
 
 Nace de ERR-20: la Etapa 3 se cerró el 16 sep y **no quedó en ninguna batería**, así que v11 la reabrió (acierto de
@@ -44,10 +44,12 @@ INSTRUMENTOS = {
     'organismo_v13_rapido': ('organismo_v13q_rapido', dict(eta_s=0.015, puerta=3)),   # gemelo compilado del mundo de regla (identidad 81/81+243/243); mismo punto
     'organismo_v13p': ('organismo_v13pg', dict(eta_s=0.015, puerta=3)),   # E: instrumento base, dE-TEST APAGADO -> debe dar lo mismo que organismo_v13
     'organismo_v13E': ('organismo_v13gE', dict(eta_s=0.015, puerta=3)),   # E: dE-TEST (sorpresa del mundo en la boca) FIJO ON
+    'organismo_v13E_k3': ('organismo_v13gE_k3', dict(eta_s=0.015, puerta=3)),   # DOSIS k_testE=3 (PREREGISTRO_dosis_dE.md)
+    'organismo_v13E_k5': ('organismo_v13gE_k5', dict(eta_s=0.015, puerta=3)),   # DOSIS k_testE=5 (PREREGISTRO_dosis_dE.md)
 }
 sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'nivel7_xor_lectura'))
 sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))
-sys.path.insert(0, _D)   # E: organismo_v13pg / organismo_v13gE
+sys.path.insert(0, _D)   # E: organismo_v13pg / organismo_v13gE / dosis k3,k5
 
 
 def log(msg=""):
@@ -95,7 +97,7 @@ if __name__ == '__main__':
     inst = INSTRUMENTOS[modulo][0]
     log(f"=== REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — {modulo}, {S} semillas ({seeds[0]}..{seeds[-1]}), Pool({N_PARALELO}) ===")
     _dir = {'organismo_v11g': GEN, 'organismo_v13g': os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'),
-            'organismo_v13pg': _D, 'organismo_v13gE': _D,
+            'organismo_v13pg': _D, 'organismo_v13gE': _D, 'organismo_v13gE_k3': _D, 'organismo_v13gE_k5': _D,
             'organismo_v13q_rapido': os.path.join(RAIZ, 'experimentos', 'nivel7_xor_lectura')}.get(inst, os.path.join(RAIZ, 'experimentos', 'etapa3_v9'))
     log(f"instrumento {inst} {h16(os.path.join(_dir, inst + '.py'))}"
         f"  organismo {h16(os.path.join(AQUI, 'organismo_v13.py') if modulo == 'organismo_v13_rapido' else (os.path.join(AQUI, modulo + '.py') if os.path.exists(os.path.join(AQUI, modulo + '.py')) else os.path.join(_D, modulo + '.py')))}  esta bateria {h16(os.path.abspath(__file__))}")

@@ -65,9 +65,25 @@ SHA_BATERIA_GENERALIZA = '46772f5a582872c8'
 DE_TEST_VIEJO = "eta_pred=0.0,clip_e=3.0,ema_pred=0.0,k_testE=0.0,"
 DE_TEST_NUEVO = "eta_pred=0.03,clip_e=3.0,ema_pred=0.05,k_testE=10.0,"
 
+# ---- DOSIS (PREREGISTRO_dosis_dE.md, 18 sep 2026): --k K genera ADEMAS organismo_v13E_kK.py / organismo_v13gE_kK.py
+# / bateria_v13E_kK.py (mismo patron que arriba, solo cambia la ganancia k_testE) y extiende bateria_generaliza_E.py
+# con las DOS dosis (k3 y k5, siempre juntas, para que valga sin importar en que orden se corra --k 3 / --k 5). SIN
+# --k, ningun caracter de los 4 pasos de arriba cambia (no se tocan; verificado por sha antes/despues).
+DOSIS_VALIDAS = (3, 5)
+
+
+def _dosis_arg():
+    if '--k' not in sys.argv:
+        return None
+    k = int(sys.argv[sys.argv.index('--k') + 1])
+    if k not in DOSIS_VALIDAS:
+        raise SystemExit(f"--k {k}: dosis no preregistrada. Validas: {DOSIS_VALIDAS} (PREREGISTRO_dosis_dE.md).")
+    return k
+
 
 if __name__ == '__main__':
     salidas = []
+    k_arg = _dosis_arg()
 
     # ---- 1) organismo_v13E: organismo_v13p con dE-TEST fijo ON (perilla unica: la firma) ----
     s = origen(os.path.join(AQUI, 'organismo_v13p.py'), SHA_V13P)
@@ -156,6 +172,101 @@ if __name__ == '__main__':
            'Generado por construye_v13E.py. NO editar. La bateria original NO se modifico."""\n')
     d = os.path.join(AQUI, 'bateria_generaliza_E.py'); open(d, 'w', encoding='utf-8', newline='\n').write(cab + s)
     salidas.append(d)
+
+    # ---- 5) DOSIS (solo si --k K): organismo_v13E_kK / organismo_v13gE_kK / bateria_v13E_kK, mas la extension de
+    # bateria_generaliza_E.py con las DOS dosis (k3 y k5) siempre juntas ------------------------------------------
+    if k_arg is not None:
+        K = k_arg
+        DE_TEST_NUEVO_K = f"eta_pred=0.03,clip_e=3.0,ema_pred=0.05,k_testE={K}.0,"
+
+        # 5a) organismo_v13E_k{K}: organismo_v13p con dE-TEST fijo ON a la dosis K (mismo patron que el paso 1)
+        s = origen(os.path.join(AQUI, 'organismo_v13p.py'), SHA_V13P)
+        s = sust(s, DE_TEST_VIEJO, DE_TEST_NUEVO_K, etiqueta=f'v13E_k{K}: firma (dE-TEST fijo ON, dosis k_testE={K})')
+        cab = (f'"""organismo_v13E_k{K} = organismo_v13p.py ({SHA_V13P}) + dE-TEST FIJO ON por defecto: eta_pred=0.03, ema_pred=0.05,\n'
+               f'k_testE={K}.0 -- DOSIS preregistrada en PREREGISTRO_dosis_dE.md (mismo mecanismo de organismo_v13E, ganancia\n'
+               f'menor). Generado por construye_v13E.py --k {K}. NO editar a mano. Con eta_pred=ema_pred=k_testE=0 es\n'
+               'organismo_v13p EXACTO (arnes: identidad_dosis.py)."""\n')
+        d = os.path.join(AQUI, f'organismo_v13E_k{K}.py'); open(d, 'w', encoding='utf-8', newline='\n').write(cab + s)
+        salidas.append(d)
+
+        # 5b) organismo_v13gE_k{K}: organismo_v13pg con dE-TEST fijo ON a la dosis K (mundo de regla; paso 2)
+        s = origen(os.path.join(AQUI, 'organismo_v13pg.py'), SHA_V13PG)
+        s = sust(s, DE_TEST_VIEJO, DE_TEST_NUEVO_K, etiqueta=f'v13gE_k{K}: firma (dE-TEST fijo ON, dosis k_testE={K})')
+        cab = (f'"""organismo_v13gE_k{K} = organismo_v13pg.py ({SHA_V13PG}) + dE-TEST FIJO ON por defecto: eta_pred=0.03, ema_pred=0.05,\n'
+               f'k_testE={K}.0 (las mismas constantes que organismo_v13E_k{K}). Mundo de regla, para bateria_generaliza_E.py.\n'
+               f'Generado por construye_v13E.py --k {K}. NO editar. Con eta_pred=ema_pred=k_testE=0 es organismo_v13pg EXACTO."""\n')
+        d = os.path.join(AQUI, f'organismo_v13gE_k{K}.py'); open(d, 'w', encoding='utf-8', newline='\n').write(cab + s)
+        salidas.append(d)
+
+        # 5c) bateria_v13E_k{K}: la bateria del tronco (CONGELADA: solo se LEE) apuntando a organismo_v13E_k{K}, con
+        # el MISMO parche del criterio 5 (ERR-30) que bateria_v13E.py -- k_testE=0.0 se pasa EXPLICITO en la llamada
+        # de reduccion (sobreescribe el default del modulo, sea 3, 5 o 10): no depende de la dosis (paso 3).
+        s = origen(os.path.join(RAIZ, 'organismo', 'bateria_v13.py'), SHA_BATERIA_V13)
+        s = sust(s, "AQUI = os.path.dirname(os.path.abspath(__file__))\nRAIZ = os.path.dirname(AQUI)\n"
+                    "sys.path[:0] = [AQUI, os.path.join(RAIZ, 'experimentos', 'bug01')]\n",
+                 "_D = os.path.dirname(os.path.abspath(__file__))   # esta copia vive fuera de organismo/\n"
+                 "AQUI = os.path.join(os.path.dirname(os.path.dirname(_D)), 'organismo')\n"
+                 "RAIZ = os.path.dirname(AQUI)\n"
+                 "sys.path[:0] = [_D, AQUI, os.path.join(RAIZ, 'experimentos', 'bug01')]\n",
+                 etiqueta=f'bateria_v13E_k{K}: rutas')
+        s = sust(s, "    import organismo_v13 as v13\n",
+                 f"    import organismo_v13E_k{K} as v13   # dE-TEST dosis k_testE={K} (PREREGISTRO_dosis_dE.md)\n",
+                 n=2, etiqueta=f'bateria_v13E_k{K}: import')
+        s = sust(s, "a, b = ref.run(seed, **ESC_ID[esc]), v13.run(seed, eta_s=0.0, puerta=None, **ESC_ID[esc])",
+                 "a, b = ref.run(seed, **ESC_ID[esc]), v13.run(seed, eta_s=0.0, puerta=None, k_testE=0.0, eta_pred=0.0, **ESC_ID[esc])   # ERR-30: v3'' (organos en la boca)",
+                 etiqueta=f'bateria_v13E_k{K}: ERR-30 criterio 5 vs v11')
+        s = sust(s, "a, b = ref.run(seed, **ESC_ID[esc]), v13.run(seed, eta_s=0.0, puerta=None, div_signo=False, **ESC_ID[esc])",
+                 "a, b = ref.run(seed, **ESC_ID[esc]), v13.run(seed, eta_s=0.0, puerta=None, div_signo=False, k_testE=0.0, eta_pred=0.0, **ESC_ID[esc])   # ERR-30: v3'' (organos en la boca)",
+                 etiqueta=f'bateria_v13E_k{K}: ERR-30 criterio 5 vs v10')
+        s = sust(s, "    for c, nombre in (('v11', 'v13(eta_s=0, puerta=None) == v11'), ('v10', 'v13(eta_s=0, puerta=None, div_signo=False) == v10')):\n",
+                 f"    for c, nombre in (('v11', \"v13E_k{K}(eta_s=0,puerta=None,k_testE=0,eta_pred=0) == v11  [v3'' ERR-30]\"), "
+                 f"('v10', \"v13E_k{K}(eta_s=0,puerta=None,div_signo=False,k_testE=0,eta_pred=0) == v10  [v3'' ERR-30]\")):\n",
+                 etiqueta=f'bateria_v13E_k{K}: ERR-30 etiquetas de log')
+        s = s.replace("h16(os.path.join(AQUI, 'organismo_v13.py'))", f"h16(os.path.join(_D, 'organismo_v13E_k{K}.py'))")
+        s = s.replace("f'examen_v13_{stamp}", f"f'examen_v13E_k{K}_{{stamp}}")
+        cab = (f'"""bateria_v13E_k{K} = organismo/bateria_v13.py (1a027bcb37eb536e, CONGELADO: solo se leyo) apuntando a\n'
+               f'organismo_v13E_k{K} (organismo_v13p + dE-TEST fijo ON, dosis k_testE={K}) en vez de organismo_v13. Las SEIS\n'
+               f'etapas, los CRIT importados y los umbrales del criterio v3\' quedan INTACTOS. Salida en\n'
+               f'datos/examen_v13E_k{K}_<fecha>. ERR-30: el CRITERIO 5 esta ADAPTADO igual que en bateria_v13E.py (v3\'\'\n'
+               'para organos en la boca): la reduccion a v11/v10 apaga TAMBIEN k_testE y eta_pred. Ver PREREGISTRO_dosis_dE.md.\n'
+               f'Generado por construye_v13E.py --k {K}. NO editar. La bateria original NO se modifico."""\n')
+        d = os.path.join(AQUI, f'bateria_v13E_k{K}.py'); open(d, 'w', encoding='utf-8', newline='\n').write(cab + s)
+        salidas.append(d)
+
+        # 5d) bateria_generaliza_E.py: se REGENERA desde CERO (misma base que el paso 4) con las DOS dosis SIEMPRE
+        # juntas (k3 y k5), sin importar cual K pidio --k esta vez -- asi --k 3 y --k 5 llegan al MISMO archivo
+        # final, sin pisarse. SIN --k esta rama no se ejecuta: el paso 4 ya dejo escrito el archivo de siempre.
+        s = origen(os.path.join(RAIZ, 'organismo', 'bateria_generaliza.py'), SHA_BATERIA_GENERALIZA)
+        s = sust(s, "AQUI = os.path.dirname(os.path.abspath(__file__))\nRAIZ = os.path.dirname(AQUI)\n",
+                 "AQUI = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'organismo')   # esta copia vive fuera de organismo/\n"
+                 "RAIZ = os.path.dirname(AQUI)\n", etiqueta='bateria_generaliza_E [dosis]: AQUI/RAIZ')
+        s = sust(s, "REGLAS = ['px0', 'azar']\n",
+                 "REGLAS = ['px0', 'azar']\n_D = os.path.join(RAIZ, 'experimentos', 'nivel9_probar_si_mismo')\n",
+                 etiqueta='bateria_generaliza_E [dosis]: _D')
+        s = sust(s, "    'organismo_v13_rapido': ('organismo_v13q_rapido', dict(eta_s=0.015, puerta=3)),   # gemelo compilado del mundo de regla (identidad 81/81+243/243); mismo punto\n",
+                 "    'organismo_v13_rapido': ('organismo_v13q_rapido', dict(eta_s=0.015, puerta=3)),   # gemelo compilado del mundo de regla (identidad 81/81+243/243); mismo punto\n"
+                 "    'organismo_v13p': ('organismo_v13pg', dict(eta_s=0.015, puerta=3)),   # E: instrumento base, dE-TEST APAGADO -> debe dar lo mismo que organismo_v13\n"
+                 "    'organismo_v13E': ('organismo_v13gE', dict(eta_s=0.015, puerta=3)),   # E: dE-TEST (sorpresa del mundo en la boca) FIJO ON\n"
+                 "    'organismo_v13E_k3': ('organismo_v13gE_k3', dict(eta_s=0.015, puerta=3)),   # DOSIS k_testE=3 (PREREGISTRO_dosis_dE.md)\n"
+                 "    'organismo_v13E_k5': ('organismo_v13gE_k5', dict(eta_s=0.015, puerta=3)),   # DOSIS k_testE=5 (PREREGISTRO_dosis_dE.md)\n",
+                 etiqueta='bateria_generaliza_E [dosis]: INSTRUMENTOS')
+        s = sust(s, "sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))\n",
+                 "sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))\n"
+                 "sys.path.insert(0, _D)   # E: organismo_v13pg / organismo_v13gE / dosis k3,k5\n", etiqueta='bateria_generaliza_E [dosis]: sys.path')
+        s = sust(s, "    _dir = {'organismo_v11g': GEN, 'organismo_v13g': os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'),\n",
+                 "    _dir = {'organismo_v11g': GEN, 'organismo_v13g': os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'),\n"
+                 "            'organismo_v13pg': _D, 'organismo_v13gE': _D, 'organismo_v13gE_k3': _D, 'organismo_v13gE_k5': _D,\n",
+                 etiqueta='bateria_generaliza_E [dosis]: _dir')
+        s = s.replace("h16(os.path.join(AQUI, (modulo if modulo != 'organismo_v13_rapido' else 'organismo_v13') + '.py'))",
+                      "h16(os.path.join(AQUI, 'organismo_v13.py') if modulo == 'organismo_v13_rapido' else (os.path.join(AQUI, modulo + '.py') if os.path.exists(os.path.join(AQUI, modulo + '.py')) else os.path.join(_D, modulo + '.py')))")
+        s = s.replace("sha_organismo=h16(os.path.join(AQUI, modulo + '.py')),",
+                      "sha_organismo=(h16(os.path.join(AQUI, modulo + '.py')) if os.path.exists(os.path.join(AQUI, modulo + '.py')) else h16(os.path.join(_D, modulo + '.py'))),")
+        cab = ('"""bateria_generaliza_E = organismo/bateria_generaliza.py (46772f5a582872c8) con CUATRO entradas mas en\n'
+               'INSTRUMENTOS (organismo_v13p referencia; organismo_v13E dE-TEST k_testE=10; organismo_v13E_k3 y\n'
+               'organismo_v13E_k5, DOSIS de PREREGISTRO_dosis_dE.md) y las rutas corregidas por vivir fuera de organismo/.\n'
+               'Los UMBRALES y los criterios G1/G2/K NO se tocan.\n'
+               'Generado por construye_v13E.py --k (las dos dosis siempre juntas). NO editar. La bateria original NO se modifico."""\n')
+        d = os.path.join(AQUI, 'bateria_generaliza_E.py'); open(d, 'w', encoding='utf-8', newline='\n').write(cab + s)
 
     for d in salidas:
         print(f"  {os.path.relpath(d, RAIZ):55s} {h16(d)}  {sum(1 for _ in open(d, encoding='utf-8'))} lineas")

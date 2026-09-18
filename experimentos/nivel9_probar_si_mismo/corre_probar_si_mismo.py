@@ -4,6 +4,11 @@ en eta, contra la inversion de regla en T/2. REGLA 10: log desde el arranque, co
     python experimentos/nivel9_probar_si_mismo/corre_probar_si_mismo.py [--desde N] [--sin-bateria] [--sin-generaliza]
     python experimentos/nivel9_probar_si_mismo/corre_probar_si_mismo.py --humo    (UN proceso, sin Pool: lo corre el disenador)
 
+DOSIS (PREREGISTRO_dosis_dE.md, 18 sep 2026): --brazos V13,dE3,dE5 fija QUE brazos pasan por 2/5 y 3/5 (por
+defecto, los ocho de siempre); --baterias V13,dE3,dE5 hace lo mismo para 4/5 y 5/5 (ya existia, ENMIENDA 2). Con
+--brazos reducido el veredicto generico P1-P7 no se calcula (harian falta brazos que no corrieron): se listan
+medianas/pareado crudos y el veredicto de la dosis lo calcula corre_dosis_dE.py con los umbrales del preregistro.
+
 Etapas con Pool (las corre el COORDINADOR, reglas 3 y 11):
   1/5 identidades J1 (apagado == v13), J2 (las lecturas SOLO MIDEN == v13), J3 (== v13s: continuidad con la
       mini-prueba) y J4 (modo regla == v13g). Si alguna no es 100 %, ABORTA.
@@ -47,9 +52,16 @@ BRAZOS = {
     'SELF-TEST-R': dict(eta_b=0.03, ema_auto=0.05, k_test=K_TEST, buf_auto=1000, n_traza=NT, resta_cota=True),
     'SELF-TEST-L': dict(eta_b=0.03, ema_auto=0.05, k_test=K_TEST, buf_auto=1000, n_traza=NT, resta_lenta=True),
 }
-SIN_TRAZA = [b for b in BRAZOS if b != 'MOMENTO']
+BRAZOS_ACTIVOS = list(BRAZOS)   # que brazos pasan por 2/5 (principal) y 3/5 (MOMENTO, si esta pedido); --brazos lo cambia
+# DOSIS (PREREGISTRO_dosis_dE.md, 18 sep 2026): mismo mecanismo de dE-TEST con ganancia menor (k_testE=3 / 5 en vez
+# de 10). NO entran en ninguna corrida salvo que se pidan por nombre con --brazos (el default de BRAZOS_ACTIVOS ya
+# quedo fijado arriba, ANTES de esta linea, con los ocho brazos de siempre: sin --brazos nada cambia).
+BRAZOS['dE3'] = dict(eta_pred=0.03, ema_pred=0.05, k_testE=3.0)
+BRAZOS['dE5'] = dict(eta_pred=0.03, ema_pred=0.05, k_testE=5.0)
+SIN_TRAZA = [b for b in BRAZOS_ACTIVOS if b != 'MOMENTO']
 BRAZOS_BAT = ['V13', 'SELF-TEST', 'CONST-b']     # preregistro, seccion 5: P5/P6 preguntan por la hipotesis
 # --baterias V13,dE-TEST,...   cambia que brazos pasan por retencion (4/5) y generalizacion (5/5). ENMIENDA 2.
+# --brazos V13,dE3,dE5,...     cambia que brazos pasan por 2/5 y 3/5 (DOSIS); ver BRAZOS_ACTIVOS y REQ_ANALISIS abajo.
 
 APAGADO = dict(eta_b=0.0, k_auto=0.0, k_test=0.0, test_fijo=0.0, eta_e=0.0, eta_pred=0.0, k_testE=0.0, n_traza=0)
 SOLO_MIDE = dict(eta_b=0.03, k_auto=0.0, ema_auto=0.05, k_test=0.0, test_fijo=0.0, eta_e=0.05, h_pred=100,
@@ -279,11 +291,21 @@ if __name__ == '__main__':
             raise SystemExit(f"--baterias: brazo(s) desconocido(s) {malos}. Validos: {list(BRAZOS)}")
         if 'MOMENTO' in BRAZOS_BAT:
             raise SystemExit("--baterias: MOMENTO no puede correr en las baterias (necesita una traza de ESTE mundo).")
+    if '--brazos' in sys.argv:                        # DOSIS (PREREGISTRO_dosis_dE.md): que brazos pasan por 2/5 y 3/5
+        BRAZOS_ACTIVOS = [b.strip() for b in sys.argv[sys.argv.index('--brazos') + 1].split(',') if b.strip()]
+        malos = [b for b in BRAZOS_ACTIVOS if b not in BRAZOS]
+        if malos:
+            raise SystemExit(f"--brazos: brazo(s) desconocido(s) {malos}. Validos: {list(BRAZOS)}")
+        if 'V13' not in BRAZOS_ACTIVOS:
+            raise SystemExit("--brazos: V13 es la referencia obligatoria (G-c, P1, P2 la necesitan).")
+        if 'MOMENTO' in BRAZOS_ACTIVOS and 'SELF-TEST' not in BRAZOS_ACTIVOS:
+            raise SystemExit("--brazos: MOMENTO necesita la traza de SELF-TEST en la misma corrida.")
+        SIN_TRAZA = [b for b in BRAZOS_ACTIVOS if b != 'MOMENTO']
     SEEDS = list(range(desde, desde + N_SEM))
     stamp = time.strftime('%Y%m%d_%H%M%S')
     _log['f'] = open(os.path.join(RAIZ, 'datos', f'probar_si_mismo_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'),
                      'w', encoding='utf-8', newline='\n')
-    log(f"ARRANQUE C-P1 'probar cuando no me reconozco': brazos {list(BRAZOS)}, semillas {SEEDS[0]}-{SEEDS[-1]}, "
+    log(f"ARRANQUE C-P1 'probar cuando no me reconozco': brazos {BRAZOS_ACTIVOS}, semillas {SEEDS[0]}-{SEEDS[-1]}, "
         f"T={T}, invertir_en={T_INV}, n_traza={NT}, desfase={DESFASE}. Pool({N_PARALELO}).")
     log("20 semillas no cierran un nivel del brief: cierran o refutan ESTE mecanismo, y piden replica en 61-80.")
     for k, v in SHAS().items():
@@ -330,13 +352,16 @@ if __name__ == '__main__':
             if i % 10 == 0 or i == len(tr):
                 log(f"          {i}/{len(tr)}")
 
-        # ---- 3/5 MOMENTO (necesita la traza de SELF-TEST de su misma semilla)
-        tm = [('M', s, trazas[s]) for s in SEEDS]
-        log(f"ETAPA 3/5 — MOMENTO: {len(tm)} corridas de {T} pasos con la traza de SELF-TEST desplazada {DESFASE} cubetas (= {DESFASE*T//NT} pasos)...")
-        for i, r in enumerate(pool.imap_unordered(tarea, tm, chunksize=1), 1):
-            res_T.append(r)
-            if i % 10 == 0 or i == len(tm):
-                log(f"          {i}/{len(tm)}")
+        # ---- 3/5 MOMENTO (necesita la traza de SELF-TEST de su misma semilla; se omite si no esta en --brazos)
+        if 'MOMENTO' in BRAZOS_ACTIVOS:
+            tm = [('M', s, trazas[s]) for s in SEEDS]
+            log(f"ETAPA 3/5 — MOMENTO: {len(tm)} corridas de {T} pasos con la traza de SELF-TEST desplazada {DESFASE} cubetas (= {DESFASE*T//NT} pasos)...")
+            for i, r in enumerate(pool.imap_unordered(tarea, tm, chunksize=1), 1):
+                res_T.append(r)
+                if i % 10 == 0 or i == len(tm):
+                    log(f"          {i}/{len(tm)}")
+        else:
+            log("ETAPA 3/5 — MOMENTO: omitida (no esta en --brazos).")
 
         # ---- 4/5 retencion
         if '--sin-bateria' not in sys.argv:
@@ -357,132 +382,185 @@ if __name__ == '__main__':
                     log(f"          {i}/{len(tg)}")
 
     # ---------------------------------------------------------------- analisis
-    log("ANALISIS — guardas primero (regla: una guarda caida anula el contraste, no lo reinterpreta).")
-    Gb = {b: {r['seed']: r for r in res_T if r['brazo'] == b} for b in BRAZOS}
-    for b in BRAZOS:
-        g = list(Gb[b].values())
-        log(f"   {b:10s} recuperacion {mediana([r['recup'] for r in g])}  censuradas {sum(r['censurado'] for r in g)}/{len(g)}"
-            f"  veneno_post {mediana([r['veneno_post'] for r in g])}  comida_post {mediana([r['comida_post'] for r in g])}"
-            f"  muertes(post) {mediana([r['deaths'] for r in g])}({mediana([r['deaths_post'] for r in g])})"
-            f"  bocados {mediana([sum(r['bocados_q']) for r in g])}")
-        log(f"        sesgo_boca por cuarto {[mediana([r['sesgo_boca'][q] for r in g]) for q in range(4)]}"
-            f"   sorpresa_auto {[mediana([r['sorpresa_auto'][q] for r in g]) for q in range(4)]}")
-        q2q3 = mediana([r['sesgo_boca'][1] / r['sesgo_boca'][2] for r in g
-                        if r['sesgo_boca'][1] is not None and r['sesgo_boca'][2]])
-        log(f"        [ENMIENDA 2] razon Q2/Q3 {None if q2q3 is None else round(q2q3,3)}"
-            f"   latencia del primer sesgo {mediana([r['latencia_sesgo'] for r in g])} pasos"
-            f"   (encuentros {mediana([r['enc_post_hasta_sesgo'] for r in g])}, bocados {mediana([r['mord_post_hasta_sesgo'] for r in g])})"
-            f"   sin sesgo nunca {sum(r['latencia_sesgo'] is None for r in g)}/{len(g)}")
+    # REQ_ANALISIS: brazos que P1-P7/M5/M6 referencian por NOMBRE (guardas G-b/G-d incluidas). Con --brazos
+    # completo (default) esto es True y el bloque de siempre corre SIN TOCAR; DOSIS (--brazos reducido) entra
+    # por la rama nueva, mas simple, que nunca inventa un veredicto P1-P7 con brazos que no corrieron.
+    REQ_ANALISIS = {'V13', 'SELF-TEST', 'CONST-a', 'CONST-b', 'MOMENTO', 'dE-TEST'}
+    if REQ_ANALISIS <= set(BRAZOS_ACTIVOS):
+        log("ANALISIS — guardas primero (regla: una guarda caida anula el contraste, no lo reinterpreta).")
+        Gb = {b: {r['seed']: r for r in res_T if r['brazo'] == b} for b in BRAZOS_ACTIVOS}
+        for b in BRAZOS_ACTIVOS:
+            g = list(Gb[b].values())
+            log(f"   {b:10s} recuperacion {mediana([r['recup'] for r in g])}  censuradas {sum(r['censurado'] for r in g)}/{len(g)}"
+                f"  veneno_post {mediana([r['veneno_post'] for r in g])}  comida_post {mediana([r['comida_post'] for r in g])}"
+                f"  muertes(post) {mediana([r['deaths'] for r in g])}({mediana([r['deaths_post'] for r in g])})"
+                f"  bocados {mediana([sum(r['bocados_q']) for r in g])}")
+            log(f"        sesgo_boca por cuarto {[mediana([r['sesgo_boca'][q] for r in g]) for q in range(4)]}"
+                f"   sorpresa_auto {[mediana([r['sorpresa_auto'][q] for r in g]) for q in range(4)]}")
+            q2q3 = mediana([r['sesgo_boca'][1] / r['sesgo_boca'][2] for r in g
+                            if r['sesgo_boca'][1] is not None and r['sesgo_boca'][2]])
+            log(f"        [ENMIENDA 2] razon Q2/Q3 {None if q2q3 is None else round(q2q3,3)}"
+                f"   latencia del primer sesgo {mediana([r['latencia_sesgo'] for r in g])} pasos"
+                f"   (encuentros {mediana([r['enc_post_hasta_sesgo'] for r in g])}, bocados {mediana([r['mord_post_hasta_sesgo'] for r in g])})"
+                f"   sin sesgo nunca {sum(r['latencia_sesgo'] is None for r in g)}/{len(g)}")
 
-    v13m = mediana([r['recup'] for r in Gb['V13'].values()])
-    stm = mediana([r['recup'] for r in Gb['SELF-TEST'].values()])
-    cens = sum(r['censurado'] for r in Gb['V13'].values())
-    V['G_c_MARGEN'] = bool(v13m is not None and 500 <= v13m <= T_INV - 1 and cens <= 4)
-    log(f"   G-c margen: V13 recuperacion mediana {v13m}, censuradas {cens}/{N_SEM} -> "
-        f"{'OK' if V['G_c_MARGEN'] else 'NO (M1 no sirve en este mundo; ERR y mundo nuevo)'}")
+        v13m = mediana([r['recup'] for r in Gb['V13'].values()])
+        stm = mediana([r['recup'] for r in Gb['SELF-TEST'].values()])
+        cens = sum(r['censurado'] for r in Gb['V13'].values())
+        V['G_c_MARGEN'] = bool(v13m is not None and 500 <= v13m <= T_INV - 1 and cens <= 4)
+        log(f"   G-c margen: V13 recuperacion mediana {v13m}, censuradas {cens}/{N_SEM} -> "
+            f"{'OK' if V['G_c_MARGEN'] else 'NO (M1 no sirve en este mundo; ERR y mundo nuevo)'}")
 
-    # G-b: la CANTIDAD de sesgo se mide, no se supone (razon de los sesgos de Q3 contra SELF-TEST)
-    q3 = {b: mediana([r['sesgo_boca'][2] for r in Gb[b].values()]) for b in BRAZOS}
-    rz = {b: razon(q3[b], q3['SELF-TEST']) for b in ('CONST-a', 'CONST-b', 'MOMENTO', 'dE-TEST')}
-    def lectura(x):
-        return 'limpio' if (x is not None and x >= 1.0) else 'valido' if (x is not None and x >= 0.95) else \
-               'inconcluso' if x is not None else 'sin dato'
-    V['G_b_sesgoQ3'], V['G_b_razon'] = q3, rz
-    V['G_b_LECTURA'] = {b: lectura(rz[b]) for b in rz}
-    log(f"   G-b sesgo_boca[Q3] por brazo {[(b, None if q3[b] is None else round(q3[b],4)) for b in BRAZOS]}")
-    log(f"        razon contra SELF-TEST {[(b, None if rz[b] is None else round(rz[b],3), V['G_b_LECTURA'][b]) for b in rz]}")
+        # G-b: la CANTIDAD de sesgo se mide, no se supone (razon de los sesgos de Q3 contra SELF-TEST)
+        q3 = {b: mediana([r['sesgo_boca'][2] for r in Gb[b].values()]) for b in BRAZOS_ACTIVOS}
+        rz = {b: razon(q3[b], q3['SELF-TEST']) for b in ('CONST-a', 'CONST-b', 'MOMENTO', 'dE-TEST')}
+        def lectura(x):
+            return 'limpio' if (x is not None and x >= 1.0) else 'valido' if (x is not None and x >= 0.95) else \
+                   'inconcluso' if x is not None else 'sin dato'
+        V['G_b_sesgoQ3'], V['G_b_razon'] = q3, rz
+        V['G_b_LECTURA'] = {b: lectura(rz[b]) for b in rz}
+        log(f"   G-b sesgo_boca[Q3] por brazo {[(b, None if q3[b] is None else round(q3[b],4)) for b in BRAZOS_ACTIVOS]}")
+        log(f"        razon contra SELF-TEST {[(b, None if rz[b] is None else round(rz[b],3), V['G_b_LECTURA'][b]) for b in rz]}")
 
-    # G-d: el desplazamiento circular conserva la masa exactamente
-    dmax = max([abs((r.get('traza_inyectada_suma') or 0) - (Gb['SELF-TEST'].get(r['seed'], {}).get('traza_suma') or 0))
-                for r in Gb['MOMENTO'].values()] or [None])
-    V['G_d_masa'] = bool(dmax is not None and dmax < 1e-9)
-    log(f"   G-d masa de la traza de MOMENTO == la de SELF-TEST: |dif| max {dmax} -> {'OK' if V['G_d_masa'] else 'NO (control mal construido, ERR)'}")
+        # G-d: el desplazamiento circular conserva la masa exactamente
+        dmax = max([abs((r.get('traza_inyectada_suma') or 0) - (Gb['SELF-TEST'].get(r['seed'], {}).get('traza_suma') or 0))
+                    for r in Gb['MOMENTO'].values()] or [None])
+        V['G_d_masa'] = bool(dmax is not None and dmax < 1e-9)
+        log(f"   G-d masa de la traza de MOMENTO == la de SELF-TEST: |dif| max {dmax} -> {'OK' if V['G_d_masa'] else 'NO (control mal construido, ERR)'}")
 
-    log("ANALISIS — predicciones preregistradas.")
-    p1n = pareado(Gb['SELF-TEST'], Gb['V13'], SEEDS, 'recup'); r1 = razon(stm, v13m)
-    P1 = bool(r1 is not None and r1 <= 0.60 and p1n >= 14)
-    log(f"   P1 recuperacion SELF-TEST/V13 = {None if r1 is None else round(r1,3)} (<=0.60) y pareado {p1n}/{N_SEM} (>=14)  -> {'OK' if P1 else 'NO'}")
+        log("ANALISIS — predicciones preregistradas.")
+        p1n = pareado(Gb['SELF-TEST'], Gb['V13'], SEEDS, 'recup'); r1 = razon(stm, v13m)
+        P1 = bool(r1 is not None and r1 <= 0.60 and p1n >= 14)
+        log(f"   P1 recuperacion SELF-TEST/V13 = {None if r1 is None else round(r1,3)} (<=0.60) y pareado {p1n}/{N_SEM} (>=14)  -> {'OK' if P1 else 'NO'}")
 
-    pa = pareado(Gb['SELF-TEST'], Gb['CONST-a'], SEEDS, 'recup')
-    pb_ = pareado(Gb['SELF-TEST'], Gb['CONST-b'], SEEDS, 'recup')
-    P2 = bool(pa >= 14 and pb_ >= 14)
-    log(f"   P2 no es la CANTIDAD: SELF-TEST < CONST-a {pa}/{N_SEM} y < CONST-b {pb_}/{N_SEM} (>=14 cada uno; medianas "
-        f"{mediana([r['recup'] for r in Gb['CONST-a'].values()])} / {mediana([r['recup'] for r in Gb['CONST-b'].values()])})  -> {'OK' if P2 else 'NO'}")
+        pa = pareado(Gb['SELF-TEST'], Gb['CONST-a'], SEEDS, 'recup')
+        pb_ = pareado(Gb['SELF-TEST'], Gb['CONST-b'], SEEDS, 'recup')
+        P2 = bool(pa >= 14 and pb_ >= 14)
+        log(f"   P2 no es la CANTIDAD: SELF-TEST < CONST-a {pa}/{N_SEM} y < CONST-b {pb_}/{N_SEM} (>=14 cada uno; medianas "
+            f"{mediana([r['recup'] for r in Gb['CONST-a'].values()])} / {mediana([r['recup'] for r in Gb['CONST-b'].values()])})  -> {'OK' if P2 else 'NO'}")
 
-    pm = pareado(Gb['SELF-TEST'], Gb['MOMENTO'], SEEDS, 'recup')
-    P3 = bool(pm >= 14)
-    log(f"   P3 es el MOMENTO: SELF-TEST < MOMENTO {pm}/{N_SEM} (>=14; mediana MOMENTO {mediana([r['recup'] for r in Gb['MOMENTO'].values()])})  -> {'OK' if P3 else 'NO'}")
+        pm = pareado(Gb['SELF-TEST'], Gb['MOMENTO'], SEEDS, 'recup')
+        P3 = bool(pm >= 14)
+        log(f"   P3 es el MOMENTO: SELF-TEST < MOMENTO {pm}/{N_SEM} (>=14; mediana MOMENTO {mediana([r['recup'] for r in Gb['MOMENTO'].values()])})  -> {'OK' if P3 else 'NO'}")
 
-    p4n = sum(1 for r in Gb['SELF-TEST'].values()
-              if r['sesgo_boca'][1] is not None and r['sesgo_boca'][2] is not None and r['sesgo_boca'][3] is not None
-              and r['sesgo_boca'][1] <= 0.10 and r['sesgo_boca'][3] <= 0.10 and r['sesgo_boca'][2] >= 0.20)
-    P4 = bool(p4n >= 16)
-    log(f"   P4 se apaga solo (Q2<=0.10, Q4<=0.10, Q3>=0.20) en {p4n}/{N_SEM} (>=16)  -> {'OK' if P4 else 'NO'}")
+        p4n = sum(1 for r in Gb['SELF-TEST'].values()
+                  if r['sesgo_boca'][1] is not None and r['sesgo_boca'][2] is not None and r['sesgo_boca'][3] is not None
+                  and r['sesgo_boca'][1] <= 0.10 and r['sesgo_boca'][3] <= 0.10 and r['sesgo_boca'][2] >= 0.20)
+        P4 = bool(p4n >= 16)
+        log(f"   P4 se apaga solo (Q2<=0.10, Q4<=0.10, Q3>=0.20) en {p4n}/{N_SEM} (>=16)  -> {'OK' if P4 else 'NO'}")
 
-    ret = {}
-    if res_B:
-        for b in BRAZOS_BAT:
-            ret[b] = {e: sum(1 for r in res_B if r['brazo'] == b and r['etapa'] == e and r['pasa']) for e in bv13.SEIS}
-            log(f"   M5 {b:10s} " + "  ".join(f"{e} {ret[b][e]}/{N_SEM}" for e in bv13.SEIS))
-        malas = [e for e in bv13.SEIS if ret['SELF-TEST'][e] < 18]
-        P5 = bool(not malas)
-        log(f"   P5 retencion: etapas por debajo de 18/{N_SEM} en SELF-TEST: {malas or 'ninguna'}  -> {'OK' if P5 else 'NO'}")
+        ret = {}
+        if res_B:
+            for b in BRAZOS_BAT:
+                ret[b] = {e: sum(1 for r in res_B if r['brazo'] == b and r['etapa'] == e and r['pasa']) for e in bv13.SEIS}
+                log(f"   M5 {b:10s} " + "  ".join(f"{e} {ret[b][e]}/{N_SEM}" for e in bv13.SEIS))
+            malas = [e for e in bv13.SEIS if ret['SELF-TEST'][e] < 18]
+            P5 = bool(not malas)
+            log(f"   P5 retencion: etapas por debajo de 18/{N_SEM} en SELF-TEST: {malas or 'ninguna'}  -> {'OK' if P5 else 'NO'}")
+        else:
+            P5 = None; log("   P5 retencion: NO CORRIDA (--sin-bateria)")
+
+        gen = {}
+        if res_G:
+            for b in BRAZOS_BAT:
+                gen[b] = {rg: dict(acc=mediana([r['acc'] for r in res_G if r['brazo'] == b and r['regla'] == rg]),
+                                   ba=mediana([r['ba'] for r in res_G if r['brazo'] == b and r['regla'] == rg]),
+                                   cob=mediana([r['cobertura'] for r in res_G if r['brazo'] == b and r['regla'] == rg])) for rg in REGLAS}
+                log(f"   M6 {b:10s} " + "  ".join(f"{rg}: G1 {gen[b][rg]['acc']} G2 {gen[b][rg]['ba']} cob {gen[b][rg]['cob']}" for rg in REGLAS))
+            a_s, a_v, a_z = gen['SELF-TEST']['px0']['acc'], gen['V13']['px0']['acc'], gen['SELF-TEST']['azar']['acc']
+            P6 = bool(a_s is not None and a_v is not None and a_z is not None and a_s >= 0.80 and a_s >= a_v - 0.10 and 0.35 <= a_z <= 0.65)
+            log(f"   P6 generalizacion: G1 px0 SELF-TEST {a_s} (>=0.80 y >= V13 {a_v} -0.10), azar {a_z} en [0.35,0.65]  -> {'OK' if P6 else 'NO'}")
+        else:
+            P6 = None; log("   P6 generalizacion: NO CORRIDA (--sin-generaliza)")
+
+        vs, vv = mediana([r['veneno_post'] for r in Gb['SELF-TEST'].values()]), mediana([r['veneno_post'] for r in Gb['V13'].values()])
+        ds, dv = mediana([r['deaths'] for r in Gb['SELF-TEST'].values()]), mediana([r['deaths'] for r in Gb['V13'].values()])
+        P7 = bool(vs is not None and vv is not None and ds is not None and dv is not None and vs <= 4 * vv and ds <= 1.50 * dv)
+        log(f"   P7 probar no es envenenarse: veneno_post {vs} <= 4x{vv} y muertes {ds} <= 1.50x{dv}  -> {'OK' if P7 else 'NO'}")
+
+        de_m = mediana([r['recup'] for r in Gb['dE-TEST'].values()])
+        log(f"   [exploratorio, sin criterio] dE-TEST recuperacion {de_m} con sesgo_boca[Q3] {None if q3['dE-TEST'] is None else round(q3['dE-TEST'],4)} "
+            f"contra SELF-TEST {stm} con {None if q3['SELF-TEST'] is None else round(q3['SELF-TEST'],4)}")
+
+        V.update(P1=P1, P2=P2, P3=P3, P4=P4, P5=P5, P6=P6, P7=P7, recup_V13=v13m, recup_SELF=stm,
+                 recup_CONST_a=mediana([r['recup'] for r in Gb['CONST-a'].values()]),
+                 recup_CONST_b=mediana([r['recup'] for r in Gb['CONST-b'].values()]),
+                 recup_MOMENTO=mediana([r['recup'] for r in Gb['MOMENTO'].values()]), recup_dE=de_m,
+                 pareado_vs_V13=p1n, pareado_vs_CONST_a=pa, pareado_vs_CONST_b=pb_, pareado_vs_MOMENTO=pm,
+                 retencion=ret, generaliza=gen)
+
+        if not V['G_c_MARGEN']:
+            ver = "NULO por G-c (no hay margen o la medida esta censurada): hace falta otro mundo. ERR."
+        elif not V['G_d_masa']:
+            ver = "NULO por G-d: el control MOMENTO no conserva la masa del sesgo. El control esta mal construido. ERR."
+        elif not P1:
+            ver = "REFUTADO: la sorpresa sobre si mismo en la boca no acelera la recuperacion tras la inversion."
+        elif not P7:
+            ver = "NULO por P7: 'probar' es 'envenenarse'; M1 no mide lo que dice."
+        elif not P2:
+            ver = "ACELERA, pero el sesgo constante tambien: lo que acelera es la CANTIDAD de sesgo, no la sorpresa."
+        elif not P3:
+            ver = "ACELERA y no es la cantidad, pero la traza DESPLAZADA hace lo mismo: es el NIVEL, no el momento."
+        elif P5 is False or P6 is False:
+            ver = "ACELERA y los controles no, pero a COSTA de retencion o generalizacion: canje medido, no mejora."
+        elif not P4:
+            ver = "ACELERA y los controles no, pero el sesgo NO se apaga solo (lazo sorpresa->morder->sorpresa): limite medido."
+        else:
+            ver = ("ACELERA, ningun control lo consigue, se apaga solo y no cobra retencion, generalizacion ni muertes. "
+                   "RAMA: pide replica preregistrada en semillas 61-80 antes de cualquier afirmacion.")
+        log(f"VEREDICTO (20 semillas; no cierra ningun nivel del brief): {ver}")
     else:
-        P5 = None; log("   P5 retencion: NO CORRIDA (--sin-bateria)")
+        log("ANALISIS SIMPLIFICADO (--brazos): faltan brazos que P1-P7/M5/M6 necesitan por nombre (SELF-TEST, "
+            "CONST-a, CONST-b, MOMENTO o dE-TEST no estan en --brazos/--baterias de esta corrida). Se listan "
+            "medianas y pareado<V13 por brazo activo, y M5/M6 crudos si corrieron; el veredicto de la DOSIS lo "
+            "calcula corre_dosis_dE.py sobre 'principal'/'retencion'/'generaliza' con los umbrales de "
+            "PREREGISTRO_dosis_dE.md (ERR-31: nunca los umbrales de una bateria reusada).")
+        Gb = {b: {r['seed']: r for r in res_T if r['brazo'] == b} for b in BRAZOS_ACTIVOS}
+        v13g = Gb.get('V13', {})
+        v13m = mediana([r['recup'] for r in v13g.values()])
+        cens = sum(r['censurado'] for r in v13g.values())
+        V['G_c_MARGEN'] = bool(v13m is not None and 500 <= v13m <= T_INV - 1 and cens <= 4)
+        log(f"   G-c margen: V13 recuperacion mediana {v13m}, censuradas {cens}/{len(v13g)} -> "
+            f"{'OK' if V['G_c_MARGEN'] else 'NO (M1 no sirve en este mundo; ERR y mundo nuevo)'}")
+        V['G_b_sesgoQ3'] = V['G_b_razon'] = V['G_b_LECTURA'] = None
+        V['G_d_masa'] = None
+        resumen_brazos = {}
+        for b in BRAZOS_ACTIVOS:
+            g = Gb.get(b, {})
+            rec = mediana([r['recup'] for r in g.values()])
+            par = pareado(g, v13g, SEEDS, 'recup') if b != 'V13' else None
+            resumen_brazos[b] = dict(n=len(g), recup=rec, razon_V13=razon(rec, v13m), pareado_lt_V13=par,
+                                      censuradas=sum(r['censurado'] for r in g.values()))
+            log(f"   {b:10s} n={len(g):<3d} recuperacion {rec}  razon/V13 {resumen_brazos[b]['razon_V13']}"
+                f"  pareado<V13 {par}  censuradas {resumen_brazos[b]['censuradas']}")
 
-    gen = {}
-    if res_G:
-        for b in BRAZOS_BAT:
-            gen[b] = {rg: dict(acc=mediana([r['acc'] for r in res_G if r['brazo'] == b and r['regla'] == rg]),
-                               ba=mediana([r['ba'] for r in res_G if r['brazo'] == b and r['regla'] == rg]),
-                               cob=mediana([r['cobertura'] for r in res_G if r['brazo'] == b and r['regla'] == rg])) for rg in REGLAS}
-            log(f"   M6 {b:10s} " + "  ".join(f"{rg}: G1 {gen[b][rg]['acc']} G2 {gen[b][rg]['ba']} cob {gen[b][rg]['cob']}" for rg in REGLAS))
-        a_s, a_v, a_z = gen['SELF-TEST']['px0']['acc'], gen['V13']['px0']['acc'], gen['SELF-TEST']['azar']['acc']
-        P6 = bool(a_s is not None and a_v is not None and a_z is not None and a_s >= 0.80 and a_s >= a_v - 0.10 and 0.35 <= a_z <= 0.65)
-        log(f"   P6 generalizacion: G1 px0 SELF-TEST {a_s} (>=0.80 y >= V13 {a_v} -0.10), azar {a_z} en [0.35,0.65]  -> {'OK' if P6 else 'NO'}")
-    else:
-        P6 = None; log("   P6 generalizacion: NO CORRIDA (--sin-generaliza)")
+        P1 = P2 = P3 = P4 = P7 = None
+        ret = {}
+        if res_B:
+            for b in BRAZOS_BAT:
+                ret[b] = {e: sum(1 for r in res_B if r['brazo'] == b and r['etapa'] == e and r['pasa']) for e in bv13.SEIS}
+                log(f"   M5 {b:10s} " + "  ".join(f"{e} {ret[b][e]}/{N_SEM}" for e in bv13.SEIS))
+        P5 = None
+        gen = {}
+        if res_G:
+            for b in BRAZOS_BAT:
+                gen[b] = {rg: dict(acc=mediana([r['acc'] for r in res_G if r['brazo'] == b and r['regla'] == rg]),
+                                   ba=mediana([r['ba'] for r in res_G if r['brazo'] == b and r['regla'] == rg]),
+                                   cob=mediana([r['cobertura'] for r in res_G if r['brazo'] == b and r['regla'] == rg])) for rg in REGLAS}
+                log(f"   M6 {b:10s} " + "  ".join(f"{rg}: G1 {gen[b][rg]['acc']} G2 {gen[b][rg]['ba']} cob {gen[b][rg]['cob']}" for rg in REGLAS))
+        P6 = None
 
-    vs, vv = mediana([r['veneno_post'] for r in Gb['SELF-TEST'].values()]), mediana([r['veneno_post'] for r in Gb['V13'].values()])
-    ds, dv = mediana([r['deaths'] for r in Gb['SELF-TEST'].values()]), mediana([r['deaths'] for r in Gb['V13'].values()])
-    P7 = bool(vs is not None and vv is not None and ds is not None and dv is not None and vs <= 4 * vv and ds <= 1.50 * dv)
-    log(f"   P7 probar no es envenenarse: veneno_post {vs} <= 4x{vv} y muertes {ds} <= 1.50x{dv}  -> {'OK' if P7 else 'NO'}")
-
-    de_m = mediana([r['recup'] for r in Gb['dE-TEST'].values()])
-    log(f"   [exploratorio, sin criterio] dE-TEST recuperacion {de_m} con sesgo_boca[Q3] {None if q3['dE-TEST'] is None else round(q3['dE-TEST'],4)} "
-        f"contra SELF-TEST {stm} con {None if q3['SELF-TEST'] is None else round(q3['SELF-TEST'],4)}")
-
-    V.update(P1=P1, P2=P2, P3=P3, P4=P4, P5=P5, P6=P6, P7=P7, recup_V13=v13m, recup_SELF=stm,
-             recup_CONST_a=mediana([r['recup'] for r in Gb['CONST-a'].values()]),
-             recup_CONST_b=mediana([r['recup'] for r in Gb['CONST-b'].values()]),
-             recup_MOMENTO=mediana([r['recup'] for r in Gb['MOMENTO'].values()]), recup_dE=de_m,
-             pareado_vs_V13=p1n, pareado_vs_CONST_a=pa, pareado_vs_CONST_b=pb_, pareado_vs_MOMENTO=pm,
-             retencion=ret, generaliza=gen)
-
-    if not V['G_c_MARGEN']:
-        ver = "NULO por G-c (no hay margen o la medida esta censurada): hace falta otro mundo. ERR."
-    elif not V['G_d_masa']:
-        ver = "NULO por G-d: el control MOMENTO no conserva la masa del sesgo. El control esta mal construido. ERR."
-    elif not P1:
-        ver = "REFUTADO: la sorpresa sobre si mismo en la boca no acelera la recuperacion tras la inversion."
-    elif not P7:
-        ver = "NULO por P7: 'probar' es 'envenenarse'; M1 no mide lo que dice."
-    elif not P2:
-        ver = "ACELERA, pero el sesgo constante tambien: lo que acelera es la CANTIDAD de sesgo, no la sorpresa."
-    elif not P3:
-        ver = "ACELERA y no es la cantidad, pero la traza DESPLAZADA hace lo mismo: es el NIVEL, no el momento."
-    elif P5 is False or P6 is False:
-        ver = "ACELERA y los controles no, pero a COSTA de retencion o generalizacion: canje medido, no mejora."
-    elif not P4:
-        ver = "ACELERA y los controles no, pero el sesgo NO se apaga solo (lazo sorpresa->morder->sorpresa): limite medido."
-    else:
-        ver = ("ACELERA, ningun control lo consigue, se apaga solo y no cobra retencion, generalizacion ni muertes. "
-               "RAMA: pide replica preregistrada en semillas 61-80 antes de cualquier afirmacion.")
-    log(f"VEREDICTO (20 semillas; no cierra ningun nivel del brief): {ver}")
+        V.update(P1=P1, P2=P2, P3=P3, P4=P4, P5=P5, P6=P6, P7=P7, recup_V13=v13m, resumen_brazos=resumen_brazos,
+                 retencion=ret, generaliza=gen)
+        ver = ("CORRIDA --brazos (DOSIS, parcial): sin veredicto generico P1-P7 (brazos de referencia no incluidos "
+               "en esta corrida). Datos crudos en 'principal'/'retencion'/'generaliza'; el veredicto de la dosis lo "
+               "calcula corre_dosis_dE.py con los umbrales de PREREGISTRO_dosis_dE.md.")
+        log(); log(f"VEREDICTO (parcial, --brazos): {ver}")
 
     for r in res_T:
         r.pop('traza_s', None)
-    meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), semillas=SEEDS, brazos=BRAZOS, T=T, invertir_en=T_INV,
+    meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), semillas=SEEDS,
+                brazos={b: BRAZOS[b] for b in BRAZOS_ACTIVOS}, T=T, invertir_en=T_INV,
                 n_traza=NT, desfase=DESFASE, k_test=K_TEST, brazos_bateria=BRAZOS_BAT,
                 veredicto=ver, veredictos=V, identidades=rc, procesos_python=ps, shas=SHAS(),
                 python=platform.python_version(), numpy=np.__version__)

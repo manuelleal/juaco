@@ -1,0 +1,97 @@
+{
+ "meta": {
+  "fecha": "2026-09-18T03:13:35",
+  "humo": true,
+  "desde_recuperacion": 121,
+  "desde_gen_examen": 101,
+  "n_semillas": 2,
+  "dosis": {
+   "dE3": 3,
+   "dE5": 5
+  },
+  "umbrales": {
+   "recup_razon": 0.6,
+   "recup_pareado": 14,
+   "apagado_p4": 16,
+   "G1_mediana": 0.8,
+   "G1_pareado": 15,
+   "G2_mediana": 0.85,
+   "K_completa": 20
+  },
+  "veredicto_dosis": {},
+  "veredicto": "HUMO: sin veredicto (faltan datos reales de 1/5 recuperacion y umbrales de 2/5-5/5 con solo 2 semillas).",
+  "shas": {
+   "preregistro": "526567fe43e74f97",
+   "preregistro_v13E": "fe50ccb6ffde9427",
+   "script": "1bf38a2a4f94e470",
+   "constructor_v13E": "2491ae7dd1d91f1a",
+   "identidad_dosis": "bdddc82beecb9d5e",
+   "corre_probar_si_mismo": "49ae078df2997776",
+   "bateria_generaliza_E": "c5b25e165339c569",
+   "organismo_v13p": "2dbed7ccac4dd736",
+   "organismo_v13pg": "910f1f5fb64453bb",
+   "origen_organismo_v13": "cc8b16b492d4d324",
+   "origen_organismo_v11": "f69e24063be1b194",
+   "origen_bateria_v13": "1a027bcb37eb536e",
+   "origen_bateria_generaliza": "46772f5a582872c8",
+   "organismo_v13E_k3": "92a96be77bb66a74",
+   "organismo_v13gE_k3": "d8a2ac39d5425db9",
+   "bateria_v13E_k3": "45c25a6f707861ea",
+   "organismo_v13E_k5": "39574b97b0f5f56c",
+   "organismo_v13gE_k5": "ee10589150a950ff",
+   "bateria_v13E_k5": "7635ef6ff83f6e03"
+  },
+  "procesos_python": [
+   "22080 \"C:\\Python314\\pythonw.exe\"  -m community_av sentinel",
+   "31152 C:\\Python314\\python.exe corre_dosis_dE.py --humo"
+  ],
+  "python": "3.14.2"
+ },
+ "resultados": {
+  "recuperacion": null,
+  "generalizacion": {
+   "dE3": {
+    "archivo": "regresion_generaliza_organismo_v13E_k3_20260918_030947.json",
+    "sha": "ee8050592fd907ee",
+    "nota": "HUMO: 2 semillas, ningun umbral vale"
+   },
+   "dE5": {
+    "archivo": "regresion_generaliza_organismo_v13E_k5_20260918_030959.json",
+    "sha": "ff56ec64b4826767",
+    "nota": "HUMO: 2 semillas, ningun umbral vale"
+   }
+  },
+  "examen": {
+   "dE3": {
+    "archivo": "examen_v13E_k3_20260918_031009.json",
+    "sha": "4379629a8c2a06d6",
+    "nota": "HUMO: 2 semillas, ningun umbral vale",
+    "veredictos": {
+     "5_identidad": true,
+     "1_cientificos": true,
+     "2_celdas": true,
+     "3_control": true,
+     "4a_identidad": true,
+     "4b_sin_conflicto_no_divide": true,
+     "4c_misma_valencia": true,
+     "4d_causa": true
+    }
+   },
+   "dE5": {
+    "archivo": "examen_v13E_k5_20260918_031151.json",
+    "sha": "765979bca886794d",
+    "nota": "HUMO: 2 semillas, ningun umbral vale",
+    "veredictos": {
+     "5_identidad": true,
+     "1_cientificos": true,
+     "2_celdas": true,
+     "3_control": true,
+     "4a_identidad": true,
+     "4b_sin_conflicto_no_divide": true,
+     "4c_misma_valencia": true,
+     "4d_causa": true
+    }
+   }
+  }
+ }
+}

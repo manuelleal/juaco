@@ -1,0 +1,95 @@
+[03:09:11 +    0.0s] ARRANQUE corre_dosis_dE.py HUMO (secuencial, min. Pool): dosis [3, 5] (k_testE) contra V13 y contra la referencia ya medida k_testE=10 (v13E, NO se repite).
+[03:09:11 +    0.0s] recuperacion: semillas 121-122   generalizacion/examen: semillas 101-102
+[03:09:11 +    0.0s]     sha preregistro                211b1149dbf57840
+[03:09:11 +    0.0s]     sha preregistro_v13E           fe50ccb6ffde9427
+[03:09:11 +    0.0s]     sha script                     1bf38a2a4f94e470
+[03:09:11 +    0.0s]     sha constructor_v13E           2491ae7dd1d91f1a
+[03:09:11 +    0.0s]     sha identidad_dosis            bdddc82beecb9d5e
+[03:09:11 +    0.0s]     sha corre_probar_si_mismo      041bf6146b0c2077
+[03:09:11 +    0.0s]     sha bateria_generaliza_E       c5b25e165339c569
+[03:09:11 +    0.0s]     sha organismo_v13p             2dbed7ccac4dd736
+[03:09:11 +    0.0s]     sha organismo_v13pg            910f1f5fb64453bb
+[03:09:11 +    0.0s]     sha origen_organismo_v13       cc8b16b492d4d324
+[03:09:11 +    0.0s]     sha origen_organismo_v11       f69e24063be1b194
+[03:09:11 +    0.0s]     sha origen_bateria_v13         1a027bcb37eb536e
+[03:09:11 +    0.0s]     sha origen_bateria_generaliza  46772f5a582872c8
+[03:09:11 +    0.0s]     sha organismo_v13E_k3          92a96be77bb66a74
+[03:09:11 +    0.0s]     sha organismo_v13gE_k3         d8a2ac39d5425db9
+[03:09:11 +    0.0s]     sha bateria_v13E_k3            45c25a6f707861ea
+[03:09:11 +    0.0s]     sha organismo_v13E_k5          39574b97b0f5f56c
+[03:09:11 +    0.0s]     sha organismo_v13gE_k5         ee10589150a950ff
+[03:09:11 +    0.0s]     sha bateria_v13E_k5            7635ef6ff83f6e03
+[03:09:11 +    0.0s] UMBRALES (PREREGISTRO_dosis_dE.md §6): {'recup_razon': 0.6, 'recup_pareado': 14, 'apagado_p4': 16, 'G1_mediana': 0.8, 'G1_pareado': 15, 'G2_mediana': 0.85, 'K_completa': 20}
+[03:09:12 +    0.4s] REGLA 11 -- procesos python vivos (4), este es pid 31152
+[03:09:12 +    0.4s] 
+[03:09:12 +    0.4s] 1/5 RECUPERACION -- HUMO: se usa el --humo YA EXISTENTE de corre_probar_si_mismo.py (semilla 1, SIN Pool). No ejercita --brazos (no se puede achicar de 20 semillas sin tocar umbrales absolutos de ESE script ya preregistrados); --brazos/--baterias se validaron aparte -- ver PREREGISTRO_dosis_dE.md, seccion 2 (nota de implementacion).
+[03:09:12 +    0.8s]     procesos python vivos antes: 4
+[03:09:12 +    0.8s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\corre_probar_si_mismo.py --humo
+[03:09:46 +   35.2s]       1/2 IDENTIDADES J1, J2, J3 (3 escenarios) y J4 (2 reglas), semilla 1, T=10000.
+[03:09:46 +   35.2s]     1/5 recuperacion (humo): terminado OK en 34.4s
+[03:09:46 +   35.2s] 
+[03:09:46 +   35.2s] 2/5 GENERALIZACION -- bateria_generaliza_E.py organismo_v13E_k3 2 --desde 101 --log (semillas 101-102)
+[03:09:47 +   35.5s]     procesos python vivos antes: 2
+[03:09:47 +   35.5s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_generaliza_E.py organismo_v13E_k3 2 --desde 101 --log
+[03:09:58 +   46.8s]       OK    K  cobertura del primer encuentro: 2/2
+[03:09:58 +   46.8s]       FALLA G1 valor en patrones nunca vistos: px0 0.650 (>=0.65), azar 0.500, px0>azar 1/2
+[03:09:58 +   46.8s]       FALLA G2 conducta al primer encuentro: px0 0.666 (>=0.55), azar 0.613, px0>azar 1/2
+[03:09:58 +   46.8s]       VEREDICTO bateria_generaliza (organismo_v13E_k3): K_cobertura=True G1_valor=False G2_conducta=False
+[03:09:58 +   46.8s]       *** organismo_v13E_k3 NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[03:09:58 +   46.8s]     2/5 generalizacion dE3: terminado OK en 11.2s
+[03:09:58 +   46.8s] 
+[03:09:58 +   46.8s] 3/5 GENERALIZACION -- bateria_generaliza_E.py organismo_v13E_k5 2 --desde 101 --log (semillas 101-102)
+[03:09:58 +   47.1s]     procesos python vivos antes: 2
+[03:09:58 +   47.1s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_generaliza_E.py organismo_v13E_k5 2 --desde 101 --log
+[03:10:08 +   57.1s]       OK    K  cobertura del primer encuentro: 2/2
+[03:10:08 +   57.1s]       FALLA G1 valor en patrones nunca vistos: px0 0.650 (>=0.65), azar 0.600, px0>azar 1/2
+[03:10:08 +   57.1s]       PASA  G2 conducta al primer encuentro: px0 0.822 (>=0.55), azar 0.538, px0>azar 2/2
+[03:10:08 +   57.1s]       VEREDICTO bateria_generaliza (organismo_v13E_k5): K_cobertura=True G1_valor=False G2_conducta=True
+[03:10:08 +   57.1s]       *** organismo_v13E_k5 NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[03:10:08 +   57.1s]     3/5 generalizacion dE5: terminado OK en 10.0s
+[03:10:08 +   57.1s] 
+[03:10:08 +   57.1s] 4/5 EXAMEN -- bateria_v13E_k3.py 2 --desde 101 --log (semillas 101-102)
+[03:10:09 +   57.5s]     procesos python vivos antes: 2
+[03:10:09 +   57.5s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_v13E_k3.py 2 --desde 101 --log
+[03:11:51 +  159.2s]       PASA  1 E1        2/2  [venenoQ4<Q1:2/2 W_Aâ‰ˆ+1:2/2 W_Bâ‰ˆ-3:2/2]
+[03:11:51 +  159.2s]       PASA  1 E2        2/2  [W_Aâ†’-3:2/2 W_Bâ†’+1:2/2 come B Q4â‰¥50:2/2]
+[03:11:51 +  159.2s]       PASA  1 E2I       2/2  [W_Câ‰¤-2.5:2/2 W_Aâ‰ˆ+1:2/2 W_Bâ‰¤-2.8:2/2 tasaA Q4â‰¥80%Q2:2/2]
+[03:11:51 +  159.2s]       PASA  1 E2J       2/2  [W_Dâ‰¥0.85:2/2 W_Bâ‰¤-2.7:2/2]
+[03:11:51 +  159.2s]       PASA  1 E2K       2/2  [W_Dâ‰¥0.8:2/2 W_Bâ‰¤-2.4:2/2]
+[03:11:51 +  159.2s]       PASA  1 E2L       2/2  [W_Aâ‰ˆ+1:2/2 W_Bâ‰ˆ-3:2/2 solapâ†’0:2/2]
+[03:11:51 +  159.2s]       PASA  2 celdas<=45: {'E1': 2, 'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2, 'E2L': 2, 'E2I-misma': 2}
+[03:11:51 +  159.2s]       PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/2 lo pasan (<=1)  W_A=[-1.2, -1.19]
+[03:11:51 +  159.2s]       PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 2/2 lo pasan (>=1)
+[03:11:51 +  159.2s]       OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 16/16  []
+[03:11:51 +  159.2s]       PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 2/2, E2L con conflicto 2/2; corridas que dividen 8, violaciones ninguna
+[03:11:51 +  159.2s]       PASA  4c Câˆ©B=3 misma valencia: guarda 2/2, splits==0 2/2, W_C<=-2.5 2/2  (W_C mediana -3.00, mordidas de C Q3+Q4 mediana 12)
+[03:11:51 +  159.2s]       PASA  4d disparo anclado a la causa: E1 sin divisiones 2/2; t>=50k {'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2}; E2L termina <25k 2/2
+[03:11:51 +  159.2s]       VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[03:11:51 +  159.2s]       *** v13 cumple el criterio v3 con 2 semillas. Congelar sÃ³lo con S>=20.
+[03:11:51 +  159.2s]     4/5 examen dE3: terminado OK en 101.7s
+[03:11:51 +  159.2s] 
+[03:11:51 +  159.2s] 5/5 EXAMEN -- bateria_v13E_k5.py 2 --desde 101 --log (semillas 101-102)
+[03:11:51 +  159.5s]     procesos python vivos antes: 2
+[03:11:51 +  159.5s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_v13E_k5.py 2 --desde 101 --log
+[03:13:35 +  263.6s]       PASA  1 E1        2/2  [venenoQ4<Q1:2/2 W_Aâ‰ˆ+1:2/2 W_Bâ‰ˆ-3:2/2]
+[03:13:35 +  263.6s]       PASA  1 E2        2/2  [W_Aâ†’-3:2/2 W_Bâ†’+1:2/2 come B Q4â‰¥50:2/2]
+[03:13:35 +  263.6s]       PASA  1 E2I       2/2  [W_Câ‰¤-2.5:2/2 W_Aâ‰ˆ+1:2/2 W_Bâ‰¤-2.8:2/2 tasaA Q4â‰¥80%Q2:2/2]
+[03:13:35 +  263.6s]       PASA  1 E2J       2/2  [W_Dâ‰¥0.85:2/2 W_Bâ‰¤-2.7:2/2]
+[03:13:35 +  263.6s]       PASA  1 E2K       2/2  [W_Dâ‰¥0.8:2/2 W_Bâ‰¤-2.4:2/2]
+[03:13:35 +  263.6s]       PASA  1 E2L       2/2  [W_Aâ‰ˆ+1:2/2 W_Bâ‰ˆ-3:2/2 solapâ†’0:2/2]
+[03:13:35 +  263.6s]       PASA  2 celdas<=45: {'E1': 2, 'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2, 'E2L': 2, 'E2I-misma': 2}
+[03:13:35 +  263.6s]       PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/2 lo pasan (<=1)  W_A=[-1.31, -0.89]
+[03:13:35 +  263.6s]       PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 2/2 lo pasan (>=1)
+[03:13:35 +  263.6s]       OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 16/16  []
+[03:13:35 +  263.6s]       PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 2/2, E2L con conflicto 2/2; corridas que dividen 8, violaciones ninguna
+[03:13:35 +  263.6s]       PASA  4c Câˆ©B=3 misma valencia: guarda 2/2, splits==0 2/2, W_C<=-2.5 2/2  (W_C mediana -3.00, mordidas de C Q3+Q4 mediana 9)
+[03:13:35 +  263.6s]       PASA  4d disparo anclado a la causa: E1 sin divisiones 2/2; t>=50k {'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2}; E2L termina <25k 2/2
+[03:13:35 +  263.6s]       VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[03:13:35 +  263.6s]       *** v13 cumple el criterio v3 con 2 semillas. Congelar sÃ³lo con S>=20.
+[03:13:35 +  263.6s]     5/5 examen dE5: terminado OK en 104.0s
+[03:13:35 +  263.6s] 
+[03:13:35 +  263.6s] VEREDICTO por dosis (los SEIS a la vez; PREREGISTRO_dosis_dE.md, seccion 6/7):
+[03:13:35 +  263.6s] 
+[03:13:35 +  263.6s] VEREDICTO: HUMO: sin veredicto (faltan datos reales de 1/5 recuperacion y umbrales de 2/5-5/5 con solo 2 semillas).
+[03:13:35 +  263.9s] datos -> dosis_dE_humo_20260918_030911.json  sha256_16 = eab41e90dd8baa6e
+[03:13:35 +  263.9s] TIEMPO TOTAL: 263.9s
