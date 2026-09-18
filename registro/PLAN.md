@@ -94,6 +94,13 @@
 >   nuevo con lo previo; representaciones de alta dimensión (código disperso, ligar/desligar) sólo como soporte del grafo,
 >   no como ruta lineal; se consulta a los expertos (explorador) y entra por el mismo método (identidad, preregistro, réplica). (D) Criterio de parada de la decisión de las 04:55 sin cambio: tres
 >   bloques; 0.75 en xor01. (E) Toda idea entra con copia y anclas; el tronco v14 no se toca.
+>   (F) **MUNDO VIVO (idea del director, 06:10): necesidades múltiples y estímulos múltiples.** El organismo como ser con varias
+>   necesidades (empezar por DOS: hambre y sed; después temperatura/seguridad, reproducción) y varios estímulos (empezar por
+>   CUATRO: comida, veneno, agua, sal/peligro), estado interno vectorial y sorpresa específica por necesidad. Lo que compra:
+>   cada encuentro informa varias necesidades a la vez (aprender con menos mordidas) y el significado depende del estado
+>   ("agua" vale con sed y nada sin sed): un XOR natural necesidad × estímulo. Propósito y reproducción primero como medida
+>   (descendientes viables), después como mecanismo (selección: la evolución del organismo entero). Entra como MUNDO NUEVO
+>   por anclas: con una necesidad y dos estímulos debe ser v14 bit a bit. Diseño primero (diseñador), sin correr nada grande.
 >
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
 > (lista de la noche del 17: canal simétrico, acierto sin balancear, mundo que se come la comida, sitios que se memorizan).
