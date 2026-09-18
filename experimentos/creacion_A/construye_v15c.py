@@ -144,8 +144,8 @@ if __name__ == '__main__':
         m = re.search(r"^ *'organismo_v14': \(.*$", srcg2, re.M)
         if not m: raise SystemExit('*** no encuentro la entrada organismo_v14 en INSTRUMENTOS')
         A = m.group(0)
-    B = (A + "\n    'organismo_v15c_on': ('organismo_v15gc_on', dict(puerta=3, mask_rel=2, del_s=0.25, del_c=0.25, "
-         "ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # v15c: la memoria de pares ENCENDIDA (eta_s/clip_s por defecto = v14.1)")
+    B = (A + "\n    'organismo_v15c_on': ('organismo_v15gc_on', dict(eta_s=0.15, clip_s=10.0, puerta=3, mask_rel=2, del_s=0.25, del_c=0.25, "
+         "ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # v15c: la memoria de pares ENCENDIDA (eta_s/clip_s de v14.1 EXPLICITOS (ERR-38: el gemelo g los tiene en 0.0/3.0 por defecto))")
     g = sust(srcg2, A, B, etq='gen: INSTRUMENTOS')
     g = sust(g, "RAIZ = os.path.dirname(AQUI)", "RAIZ = os.path.dirname(os.path.dirname(AQUI))   # v15c", etq='gen: RAIZ')
     g = sust(g, "f'regresion_generaliza_{modulo}_{stamp}.log'", "f'regresion_generaliza_v15c_{modulo}_{stamp}.log'", etq='gen: log')

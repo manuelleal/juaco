@@ -142,7 +142,7 @@ if __name__ == '__main__':
     m = re.search(r"^ *'organismo_v14': \(.*$", srcg2, re.M)
     if not m: raise SystemExit('*** no encuentro la entrada organismo_v14 en INSTRUMENTOS')
     A = m.group(0)
-    g = sust(srcg2, A, A + "\n    'organismo_v15d_on': ('organismo_v15gd_on', dict(puerta=3, mask_rel=2, del_s=0.25, "
+    g = sust(srcg2, A, A + "\n    'organismo_v15d_on': ('organismo_v15gd_on', dict(eta_s=0.15, clip_s=10.0, puerta=3, mask_rel=2, del_s=0.25, "
              "del_c=0.25, ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # v15d: lineal + tabla de pares (suma)",
              etq='gen: INSTRUMENTOS')
     g = sust(g, "RAIZ = os.path.dirname(AQUI)", "RAIZ = os.path.dirname(os.path.dirname(AQUI))   # v15d", etq='gen: RAIZ')

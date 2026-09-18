@@ -4729,6 +4729,11 @@ indexando la memoria, no leyendo mejor los píxeles). Réplica 201–220 con la 
 
 ### Candidato v15c — la memoria de un golpe por combinación en la vía lenta del TRONCO (18 sep 08:06): **NO ENTRA AL TRONCO — sustituye la lectura lineal y rompe la generalización lineal del tronco (batería de generalización con la memoria ON: G1 px0 0.500, G2 0.513; se exigían ≥ 0.80 / ≥ 0.85); en el mundo de regla sí hace lo suyo (xor01 0.812 estricta contra 0.438 sin memoria) → queda como ÓRGANO DEL MUNDO DE REGLA (cláusula §5), como A avisó antes de correr**
 
+**ENMIENDA (18 sep 08:46, ERR-38):** la V2a que sostenía "rompe la generalización lineal" corrió con la vía lenta lineal APAGADA
+(la batería copiada omitió `eta_s`/`clip_s`); repetida con la batería corregida: **G1 1.000 / G2 0.997 — v15c NO rompe la
+generalización lineal**. Su V1 nunca se midió con la perilla encendida (defecto 1 de A). Queda SUPERADO por v15d, cuyo examen
+encendido sí se midió y cae por reversión. El "no entra" se mantiene, pero por falta de medida válida, no por G1.
+
 Preregistro `experimentos/creacion_A/PREREGISTRO_v15c.md` (d6904b21e19905e3); instrumentos por anclas desde v14.1 `organismo_v15c` (0d2ae9c54a3a8c53;
 perilla `memoria_pares`; identidad 32/32 en la copia principal: 24/24 ≡ v14.1, el rng no se consume con la perilla apagada, 6/6 mundo
 de regla ≡ v14g), `organismo_v15c_on`, `organismo_v15gc`, `bateria_v15c`, `bateria_generaliza_v15c`; datos `v15c_s121-140_20260918_075817`
@@ -4801,3 +4806,54 @@ Vocabulario: *"cuando dos cosas se parecen tanto que reciben el mismo código, e
 
 
 ### Nota a v15c (18 sep 08:25): defecto latente corregido — colisión de nombre `_ev` en `organismo_v15c` (con `puerta_pat > 0` y la memoria encendida lanzaría `TypeError`); la batería V2a de v15c completó sus 40 corridas con salida completa (acc, celdas, divisiones) y sin excepciones: su veredicto (G1 0.500) se mantiene. Constructores v15c/v15d reconstruidos con el arreglo (`_ev` → `_erv`). v15d (perilla `memoria_pares` = 'suma' | 'ruta'): examen CON la perilla encendida (corrige el segundo defecto de v15c); identidad 32/32 del creador; humo: 'suma' devuelve px0 a 1.000 (v15c 0.70–0.90) y xor01 0.875 estricta; avisos escritos antes de correr: `azar` con 'suma' 0.700 en una semilla (control que puede tumbarlo) y celdas 33 contra 62 (V4 probablemente cae).
+
+
+### ERR-38 (coordinador, 18 sep 08:44): **la batería de generalización copiada por anclas para v15c y v15d omitió `eta_s=0.15` y `clip_s=10` — V2a corrió con la vía lenta lineal APAGADA; los G1/G2 de v15c y de v15d (0.500/0.513 los dos) se ANULAN; con la batería corregida los dos generalizan (G1 1.000)**
+
+La entrada nueva `'organismo_v15c_on'` / `'organismo_v15d_on'` de `bateria_generaliza_v15c/v15d.py` llevaba `dict(puerta=3, mask_rel=2, …)`
+con el comentario "eta_s/clip_s por defecto = v14.1"; pero el gemelo de generalización (`organismo_v14g` y sus copias `organismo_v15gc_on`,
+`organismo_v15gd_on`) tiene `eta_s=0.0, clip_s=3.0` por defecto — la entrada del tronco `'organismo_v14'` los pasa explícitos (0.15 / 10).
+Con `eta_s=0` la lectura lineal no aprende y el valor a priori en los nunca vistos queda al azar. **Cómo se detectó:** 6/40 filas de la
+V2a de v15d idénticas hasta el 16.º decimal a las de v15c (dos organismos distintos no dan lo mismo si la lineal contribuye) → revisión de
+las kw. **Corrección:** `construye_v15c.py` / `construye_v15d.py` (la entrada lleva `eta_s=0.15, clip_s=10.0`), baterías regeneradas
+(`bateria_generaliza_v15d` 2a36df3ac43b49bf → ee4c9214310de717; `bateria_generaliza_v15c` 644843ae9e3b625b → e28932bfbcb92eab; organismos y
+baterías de examen con el mismo sha). Datos anulados: `regresion_generaliza_organismo_v15c_on_20260918_080307`,
+`regresion_generaliza_organismo_v15d_on_20260918_083404` (se conservan como evidencia del error). Repetición (101–120, 20 semillas):
+
+| candidato (memoria ON) | G1 px0 | azar | px0 > azar | G2 px0 | azar | K | datos |
+|---|---|---|---|---|---|---|---|
+| v15d `suma` | **1.000** | 0.600 | 19/20 | **0.999** | 0.557 | 20/20 | `regresion_generaliza_organismo_v15d_on_20260918_084412` (4b9a36a127a2c2ea) |
+| v15c `sustituye` | **1.000** | 0.400 | 19/20 | **0.997** | 0.502 | 20/20 | `regresion_generaliza_organismo_v15c_on_20260918_084524` (820369ed5555ee73) |
+
+**Consecuencia:** la memoria de pares NO rompe la generalización lineal del tronco (cualquier par que contenga el píxel de la regla la
+generaliza); el veredicto de v15c queda enmendado (arriba) y superado por v15d. **Regla derivada (EQUIPO 14):** una entrada nueva en una
+batería copiada por anclas se compara campo a campo con la entrada del tronco; "por defecto" no existe cuando el módulo es un gemelo
+con sus propios defaults.
+
+### Candidato v15d — la memoria de pares que SUMA o ENRUTA (18 sep 08:38; V2a corregida 08:46): **NO ENTRA AL TRONCO — conserva la generalización lineal (V2a 1.000 / 0.999) y cruza XOR con 8 ejemplos (V2b 0.875 estricta), pero el EXAMEN cae: la tabla escrita de un golpe no se desdice cuando la regla cambia (E2 0/20: come B en Q4 en 1/20) y, al explicar la recompensa desde la primera mordida, deja a la vía rápida sin consolidar (E1 W_B ≈ −3 en 0/20 con conducta 17/20; E2L 10/20)**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_v15d.md` (87b18228df6cd222; enmienda 1 = ERR-38, sólo instrumento, umbrales intactos);
+instrumentos por anclas desde v14.1: `organismo_v15d` (f2f0b06e31877e96; perilla `memoria_pares = None | 'suma' | 'ruta'`, apagada ≡ v14.1
+bit a bit sin consumir rng), `organismo_v15d_on` (e57d0677cdff3906), `organismo_v15gd` (4720721d775eec29), `organismo_v15gd_on`
+(a1863e095fb5d1b5), `bateria_v15d` (707299a585572ce9; examina al candidato ENCENDIDO — corrige el defecto 1 de v15c),
+`bateria_generaliza_v15d` (ee4c9214310de717 tras ERR-38); runner `corre_v15d.py` (78d0a04c39c27a76); identidad **32/32** (I1 24/24, I2 rng
+no consumido 2/2, I3 6/6); datos `v15d_s121-140_20260918_082846` (e1ad17cfdb97512b), examen `examen_v15d_20260918_083108.log` (la batería
+congelada no escribe JSON cuando el examen falla: sólo log), V2a `regresion_generaliza_organismo_v15d_on_20260918_084412` (4b9a36a127a2c2ea).
+
+| criterio (escrito antes) | resultado | veredicto |
+|---|---|---|
+| V1 examen v3′ 8/8 en 101–120, perilla ON (`suma`) | E1 0/20 (W_B ≈ −3: 0/20; veneno Q4 < Q1: 17/20) · E2 0/20 (W_A → −3: 0/20; W_B → +1: 1/20; come B Q4 ≥ 50: 1/20) · E2L 10/20 · E2I/E2J/E2K 20/20 · 2, 3′, 3″, 4a–4d pasan | **FALLA** |
+| V2a generalización ON: G1 ≥ 0.80, G2 ≥ 0.85, K 20/20 | G1 1.000 (azar 0.600, 19/20) · G2 0.999 (azar 0.557, 20/20) · K 20/20 (tras ERR-38) | PASA |
+| V2b mundo de regla 121–140: xor01 estricta ≥ 0.75; px0 ≥ apagada; azar ∈ [0.35, 0.65] | xor01 `suma` 0.875 / `ruta` 0.844 / apagada 0.438 (gana (0,1) 20/20) · px0 1.000 / 0.900 / 0.900 · azar 0.500 / 0.450 / 0.500 | PASA |
+| V3 `n*` | no medible con los instrumentos de hoy (declarado en el runner) | — |
+| V4 coste ±10 % | celdas xor01 56 (`suma`) contra 68 (apagada): −18 %; muertes 246 contra 280 | NO (A lo avisó antes) |
+
+Cláusula §5/§6: si V1 o V2a caen, no entra → **no entra**. **Lectura honesta:** A acertó en lo que predijo (sumar conserva la lineal: V2a
+pasa una vez corregido el instrumento; `ruta` queda por debajo de `suma` en xor01) y su aviso de coste se cumplió; lo que nadie había
+escrito es la REVERSIÓN: una memoria de un golpe por combinación guarda la primera recompensa y no la corrige cuando el mundo cambia,
+y como explica la recompensa desde la primera mordida, la vía rápida deja de recibir error y no consolida (E1). Vocabulario permitido:
+*"la memoria de pares generaliza y cruza XOR con 8 ejemplos, pero no se desdice"*. Prohibido: buscar modos intermedios sobre estos
+datos (§6). Siguiente candidato legítimo, con preregistro NUEVO: **tabla reescribible** (la casilla sigue a la última recompensa, o se
+borra cuando su error propio sube) — v15e, creador A. Notas de instrumento (sin ERR: no cambian ningún umbral): la etiqueta "perilla
+APAGADA" de la ETAPA 2/5 en el log del runner es texto heredado del runner de v15c (`bateria_v15d` importa `organismo_v15d_on`, líneas
+98 y 111); `bateria_v14` (congelada) no escribe el JSON del examen cuando el veredicto es negativo.

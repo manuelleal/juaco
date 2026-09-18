@@ -44,6 +44,10 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
    creador, implementador, compilador, auditor, cronista, explorador— empieza con la misión del equipo: llegar a la AGI por este
    camino, con el método mandando sobre el cómo. No es un adorno: es el criterio con el que cada agente decide qué vale la pena
    construir y qué no.
+14. **Entradas nuevas en baterías copiadas (ERR-38, 18 sep 08:44):** cuando una batería congelada se copia por anclas para un candidato,
+    la entrada nueva se compara CAMPO A CAMPO con la entrada del tronco antes de correr; "por defecto" no existe cuando el módulo es un
+    gemelo con sus propios defaults (el gemelo de generalización tiene `eta_s=0.0`, el tronco pasa `0.15`). Dos organismos distintos con
+    filas idénticas hasta el último decimal son señal de que una vía está apagada: se revisa el instrumento antes de leer el veredicto.
 
 ## Roles
 | rol | modelo | qué hace | entrega |

@@ -192,14 +192,17 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   agentes) cruza XOR con 8 ejemplos: 1.000 en los 12 nunca vistos (registro y estricta), n* = 7, desempate al azar, azar en banda,
   con 14 patrones también 1.000 → PRIOR ESTRUCTURAL de pares (declarado, no "aprende la estructura"); **réplica 141–160 igual (1.000 / 1.000, n* = 10): LÍNEA XOR CERRADA** —
   vocabulario: "con 8 ejemplos XOR exige un prior de pares y con él bastan 7–10 exposiciones; con 14 no hace falta prior";
-  candidato v15c (08:06): NO entra al tronco — la memoria por pares sustituye la lectura lineal y rompe la generalización
-  (G1 0.500); queda como órgano del mundo de regla; variante sumar/enrutar lineal + memoria → preregistro nuevo. **Mundo vivo (F, 07:58, 181–200): núcleo sostenido — valor por necesidad resuelve el
+  candidatos v15c / v15d (08:06 / 08:38): NO entran al tronco — **ERR-38 (08:44): la batería de generalización copiada omitió eta_s/clip_s
+  y el G1 0.500 de los dos era del instrumento (corregida: G1 1.000 los dos — la memoria de pares NO rompe la generalización lineal)**;
+  v15d cae en el EXAMEN encendido: la tabla de un golpe no se desdice tras el cambio de regla (E2 0/20) y deja a la vía rápida sin
+  consolidar (E1 0/20) → "la memoria de pares generaliza y cruza XOR con 8 ejemplos, pero no se desdice"; siguiente candidato con
+  preregistro nuevo: tabla reescribible (v15e). **Mundo vivo (F, 07:58, 181–200): núcleo sostenido — valor por necesidad resuelve el
   XOR necesidad × estímulo (1.0, 20/20; tabla 2×4 exacta en 11 exposiciones), escalar 0.5, barajar el contenido lo destruye;
   supervivencia (P4′, P7) y sal (P6: |W| 1.83 en un estímulo que nunca informa = superstición) no como se predijo por el umbral (ERR-37), no por el efecto;
   **réplica 201–220 con enmienda 2 (08:20): pasa las dos series (A₁₂ 0.90–1.00; agua 1.85–2.05×) y P10 confirma el ALIAS DE CÓDIGO** —
   la sal hereda el valor del veneno sólo cuando comparten el código K=3 (2/20 semillas; bloque de la sal 08:16, 9 ALIAS contra 9 LIMPIAS:
   |W[sal]| 1.45 contra 0.0, veneno −1.45 contra −3.0; persiste sin sed (S-5) y la puerta de v13 no lo repara (S-6)) → cabo nuevo del
-  nivel 4: desambiguar códigos. **v15d** (vía lenta que SUMA o ENRUTA lectura lineal + memoria de pares) preregistrado 08:25, corriendo 08:28.**
+  nivel 4: desambiguar códigos. **v15d cerrado 08:46 (arriba); en diseño desde 08:40–08:50, sin Pool: v15e tabla reescribible (creador A), desambiguar códigos (creador B), propósito y reproducción (diseñador del mundo vivo).**
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;

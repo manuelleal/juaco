@@ -40,7 +40,7 @@ INSTRUMENTOS = {
     'organismo_v13': ('organismo_v13g', dict(eta_s=0.015, puerta=3)),   # dos vias: el punto confirmado en 61-80
     'organismo_v13_rapido': ('organismo_v13q_rapido', dict(eta_s=0.015, puerta=3)),   # gemelo compilado del mundo de regla (identidad 81/81+243/243); mismo punto
     'organismo_v14': ('organismo_v14g', dict(eta_s=0.15, clip_s=10.0, puerta=3, mask_rel=2, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # TRONCO v14 (18 sep): hija dispersa + puerta por codigo, las DOS ON
-    'organismo_v15c_on': ('organismo_v15gc_on', dict(puerta=3, mask_rel=2, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # v15c: la memoria de pares ENCENDIDA (eta_s/clip_s por defecto = v14.1)
+    'organismo_v15c_on': ('organismo_v15gc_on', dict(eta_s=0.15, clip_s=10.0, puerta=3, mask_rel=2, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)),   # v15c: la memoria de pares ENCENDIDA (eta_s/clip_s de v14.1 EXPLICITOS (ERR-38: el gemelo g los tiene en 0.0/3.0 por defecto))
 }
 sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'nivel7_xor_lectura'))
 sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))

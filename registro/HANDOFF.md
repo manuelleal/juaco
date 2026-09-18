@@ -663,7 +663,9 @@ bloque 3/3 corre igual, con el mejor mecanismo de la sala de agentes que pase la
 | 07:43 bloque 3/3 XOR (M3, memoria de un golpe) | 3 | ✅ CRUZA — prior estructural | 1.000 registro y estricta, (0,1) 20/20, n\*=7 | `xor_7_s121-140_20260918_073918` |
 | 07:47 línea XOR, réplica 141–160 | 3 | ✅ REPLICA — LÍNEA CERRADA | 1.000/1.000, n\*=10, X1–X6 OK | `xor_7_s141-160_20260918_074208` |
 | 07:58 mundo vivo, primer bloque (181–200) | 8/9 | núcleo sostenido; P4′/P6/P7 no como se escribieron | xor01 1.0 (20/20) contra 0.5; tabla 2×4 en ~11 exp.; muertes 97 contra 135.5/152.5 | `vivo_s181-200_20260918_075215` |
-| 08:06 candidato v15c (memoria de pares en el TRONCO) | 3 | ❌ NO ENTRA — rompe generalización lineal | G1 px0 0.500/G2 0.513 (exigía ≥0.80/≥0.85); mundo de regla 0.812 estricta | `v15c_s121-140_20260918_075817` |
+| 08:06 candidato v15c (memoria de pares en el TRONCO) | 3 | ❌ NO ENTRA — V1 medida apagada; su G1 0.500 era ERR-38 (corregida: 1.000); superado por v15d | mundo de regla 0.812 estricta | `v15c_s121-140_20260918_075817`, `regresion_generaliza_organismo_v15c_on_20260918_084524` |
+| 08:38 candidato v15d (suma/ruta; V2a corregida 08:46) | 3 | ❌ NO ENTRA — el examen cae por REVERSIÓN (E2 0/20) y la vía rápida no consolida (E1 0/20) | V2a G1 1.000 / G2 0.999; V2b xor01 0.875 estricta, px0 1.000, azar 0.500; celdas −18 % | `v15d_s121-140_20260918_082846`, `regresion_generaliza_organismo_v15d_on_20260918_084412` |
+| 08:44 ERR-38 (batería de generalización copiada sin `eta_s`/`clip_s`: vía lenta apagada en V2a) | instr. | G1/G2 de v15c y v15d ANULADOS; repetidos con la batería corregida: 1.000 los dos | 6/40 filas idénticas al 16.º decimal delataron el error | `regresion_generaliza_organismo_v15d_on_20260918_083404` (anulado) |
 | 08:10 ERR-37 y alias de código | 4 | hallazgo confirmado, no superstición | 2/20 semillas con `code(sal)∩code(veneno)`=3; mismo valor en veneno y sal | `PREREGISTRO_supersticion_sal.md` |
 | 08:20 mundo vivo, réplica 201–220 (enmienda 2) | 8/9 | ✅ REPLICA; P10 confirma el alias | P4″/P7′/P6′ pasan en las dos series; P10 `err_peor` 0.00 en 20/20 | `vivo_s201-220_20260918_080619` |
 | 08:16 bloque de la sal (9 ALIAS/9 LIMPIAS, 301–700) | 4 | ✅ CONFIRMADO — alias de código; S-5 refuta la hipótesis del coordinador (persiste sin sed); S-6 la puerta de v13 no repara | abs W[sal] 1.45 contra 0.0; veneno −1.45 contra −3.0; evitación ×7; sin sed 1.62; con puerta 1.48 | `sal_alias9_20260918_081346` |
@@ -716,11 +718,13 @@ cierra el bucle. Réplica 201–220: P4″/P7′/P6′ pasan en las dos series y
 recibe el negativo del alias (sigue en 60 %, cabo nuevo); nivel 3 no se toca (se resuelve indexando la memoria, no
 leyendo mejor los píxeles).
 
-**15.8.6 Lo que no entró y lo pendiente.** **v15c** (08:06, memoria de pares en la vía lenta del TRONCO) **NO ENTRA**:
-rompe la generalización lineal (G1 px0 0.500, G2 0.513; exigía ≥ 0.80/≥ 0.85), aunque en el mundo de regla funciona
-(0.812 estricta); queda como órgano del mundo de regla, como A avisó antes de correr. **Pendiente para la siguiente
-sesión:** v15d sumar/enrutar (lineal + memoria, o enrutar por menor error, con abstención de la memoria en lo no visto
-— preregistrado 08:25 y corriendo desde 08:28; el resultado va en `REGISTRO_etapas_1_2.md`); **bloque de la sal CERRADO** (08:16: alias confirmado 9/9 contra 9/9; S-5 refutó la hipótesis del
+**15.8.6 Lo que no entró y lo pendiente.** **v15c** (08:06, memoria de pares en la vía lenta del TRONCO) **NO ENTRA**, pero
+no por lo que se escribió a las 08:06: **ERR-38** (08:44) — la batería de generalización copiada omitió `eta_s`/`clip_s` y la vía
+lenta corrió apagada; repetida: G1 1.000 (v15c y v15d). Su V1 se midió con la perilla apagada; superado por **v15d** (08:38, V2a
+corregida 08:46): conserva la generalización lineal (G1 1.000 / G2 0.999) y cruza XOR con 8 ejemplos en el mundo de regla (0.875
+estricta), pero **el examen encendido cae por REVERSIÓN** (E2 0/20: la tabla de un golpe no se desdice; E1 0/20: la vía rápida no
+consolida; celdas −18 %) → *"la memoria de pares generaliza y cruza XOR con 8 ejemplos, pero no se desdice"*; siguiente candidato con
+preregistro nuevo: tabla reescribible (v15e, creador A, en diseño desde 08:50); **bloque de la sal CERRADO** (08:16: alias confirmado 9/9 contra 9/9; S-5 refutó la hipótesis del
 coordinador — persiste sin sed: es el código, no la necesidad; S-6: la puerta de v13 no lo repara; queda *desambiguar códigos*, nivel 4); propósito y reproducción sólo como medida
 (`descendientes_viables`, predicción VIVO > UNA_NEC > BARAJA_POL, sin mecanismo — exige población y `Pool`); gemelos —
 los instrumentos nuevos de la mañana (`organismo_g3A`, `organismo_vivo`, `organismo_v15c`) corrieron sin gemelo

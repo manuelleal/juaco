@@ -89,5 +89,8 @@ sorpresa del mundo en la boca (dosis 5) es **candidata a v15** con su composici�
 tercer examen en rango virgen 161–180 + generalización 141–160, gemelo compilado, manifiesto, tag.
 
 
-## Candidato v15c (18 sep 08:06): NO entra — la memoria por pares sustituye la lectura lineal y rompe la generalización del tronco (G1 0.500)
-Queda como órgano del mundo de regla (xor01 0.81 estricta). Variante para preregistro nuevo: sumar o enrutar lineal + memoria por error propio.
+## Candidato v15c (18 sep 08:06; enmendado 08:46, ERR-38): NO entra — superado por v15d; su G1 0.500 era del instrumento (batería corregida: G1 1.000 / G2 0.997)
+Queda como órgano del mundo de regla (xor01 0.81 estricta). Su V1 nunca se midió con la perilla encendida.
+
+## Candidato v15d (18 sep 08:38; V2a corregida 08:46): NO entra — el EXAMEN cae por REVERSIÓN (E2 0/20: la tabla de un golpe no se desdice; E1 0/20: la vía rápida no consolida), aunque conserva la generalización lineal (G1 1.000 / G2 0.999) y cruza XOR con 8 ejemplos (0.875 estricta); coste −18 % en celdas
+Vocabulario: "la memoria de pares generaliza y cruza XOR con 8 ejemplos, pero no se desdice". Siguiente candidato con preregistro nuevo: tabla reescribible (v15e). Detalle en `REGISTRO_etapas_1_2.md` (ERR-38 y v15d).

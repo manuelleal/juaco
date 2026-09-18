@@ -3,3 +3,81 @@
 [08:28:46 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 19652
 [08:28:46 +    0.4s] ETAPA 1/5 — identidad interna (subproceso).
 [08:28:46 +    0.4s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_v15d.py 30000
+[08:31:07 +  141.5s]       |                           regla/px0 lineal s1: IDENTICO
+[08:31:07 +  141.5s]       |                           regla/px0 lineal s2: IDENTICO
+[08:31:07 +  141.5s]       |                                regla/xor01 s1: IDENTICO
+[08:31:07 +  141.5s]       |                                regla/xor01 s2: IDENTICO
+[08:31:07 +  141.5s]       |                                 regla/azar s1: IDENTICO
+[08:31:07 +  141.5s]       |                                 regla/azar s2: IDENTICO
+[08:31:07 +  141.5s]       | 
+[08:31:07 +  141.5s]       | IDENTIDAD (I1+I2+I3): 32/32
+[08:31:07 +  141.5s]       | 
+[08:31:07 +  141.5s]       | --- I4 (NO es identidad): los dos modos honestos contra el SUSTITUTIVO de v15c, en px0 ---
+[08:31:07 +  141.5s]       |   s1 px0: v15c sustituye 0.700 | v15d suma 1.000 | v15d ruta 0.700 | v14.1 (off) 1.000
+[08:31:07 +  141.5s]       |   s2 px0: v15c sustituye 0.900 | v15d suma 1.000 | v15d ruta 0.900 | v14.1 (off) 0.800
+[08:31:07 +  141.5s]       |   s3 px0: v15c sustituye 0.800 | v15d suma 1.000 | v15d ruta 0.800 | v14.1 (off) 1.000
+[08:31:07 +  141.5s]       |   Lo que se busca: que `suma` y `ruta` NO bajen px0 respecto de la perilla apagada.
+[08:31:07 +  141.5s]       (141s)
+[08:31:07 +  141.5s] ETAPA 2/5 — V1: examen del criterio v3' con la perilla APAGADA (subproceso, trae su Pool).
+[08:31:07 +  141.5s]    -> SUBPROCESO (V1 examen): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_v15d.py 20 --desde 101 --log
+[08:34:04 +  318.1s]       | [08:34:04 + 176.4s]   PASA  1 E2K       20/20  [W_Dâ‰¥0.8:20/20 W_Bâ‰¤-2.4:20/20]
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]         splits=[0, 2, 0, 0, 0, 3, 3, 3, 2, 2, 2, 3, 0, 0, 2, 2, 0, 2, 0, 0]  celdas_max=33  techo=0/20
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   FALLA 1 E2L       10/20  [W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:10/20 solapâ†’0:20/20]
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]         splits=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  celdas_max=33  techo=0/20
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (<=1)  W_A=[-2.07, -1.7, -1.52, -1.44]
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 19/20 lo pasan (>=19)
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 46, violaciones ninguna
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -4.38, mordidas de C Q3+Q4 mediana 1)
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s] 
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[08:34:04 +  318.2s]       | [08:34:04 + 176.4s] *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[08:34:04 +  318.2s]       *** codigo 1; stderr: ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_v15d.py", line 93, in h16
+    return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
+                          ~~~~^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\PROYECTOS\\JUACO\\bundle\\experimentos\\creacion_A\\organismo_v11.py'
+
+[08:34:04 +  318.2s]       (177s)
+[08:34:04 +  318.2s] ETAPA 3/5 — V2a: generalizacion con la memoria ENCENDIDA (subproceso, trae su Pool).
+[08:34:04 +  318.2s]    -> SUBPROCESO (V2a generalizacion): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_generaliza_v15d.py organismo_v15d_on 20 --desde 101 --log
+[08:34:49 +  363.4s]       | [08:34:04 +   0.0s] instrumento organismo_v15gd_on a1863e095fb5d1b5  organismo e57d0677cdff3906  esta bateria 2a36df3ac43b49bf
+[08:34:49 +  363.4s]       | [08:34:20 +  15.3s]           10/40
+[08:34:49 +  363.4s]       | [08:34:35 +  30.7s]           20/40
+[08:34:49 +  363.4s]       | [08:34:48 +  43.5s]           30/40
+[08:34:49 +  363.4s]       | [08:34:49 +  45.0s]           40/40
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s] 
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s]   OK    K  cobertura del primer encuentro: 20/20
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s]   FALLA G1 valor en patrones nunca vistos: px0 0.500 (>=0.65), azar 0.500, px0>azar 4/20
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s]   FALLA G2 conducta al primer encuentro: px0 0.513 (>=0.55), azar 0.500, px0>azar 11/20
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s]         divisiones 29  celdas 59  muertes 273
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s] 
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s] VEREDICTO bateria_generaliza (organismo_v15d_on): K_cobertura=True G1_valor=False G2_conducta=False
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s] *** organismo_v15d_on NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[08:34:49 +  363.4s]       | [08:34:49 +  45.1s] datos -> regresion_generaliza_organismo_v15d_on_20260918_083404.json  sha256_16 = b202234c5a0e1809
+[08:34:49 +  363.4s]       (45s)
+[08:34:49 +  363.4s] ETAPA 4/5 — V2b: mundo de regla 121-140, memoria ON y OFF, 3 reglas.
+[08:35:33 +  407.0s]           30/180
+[08:36:02 +  436.2s]           60/180
+[08:36:32 +  465.7s]           90/180
+[08:37:01 +  495.0s]           120/180
+[08:37:31 +  524.6s]           150/180
+[08:37:59 +  553.1s]           180/180
+[08:37:59 +  553.1s]    xor01  memoria=suma   registro 0.875 [0.44,1.00]  ESTRICTA 0.875  ba 0.883  gana(0,1) 20/20  cobertura 4.0/4  celdas 56  muertes 246
+[08:37:59 +  553.1s]    xor01  memoria=ruta   registro 0.844 [0.69,1.00]  ESTRICTA 0.844  ba 0.874  gana(0,1) 20/20  cobertura 4.0/4  celdas 60  muertes 242
+[08:37:59 +  553.1s]    xor01  memoria=None   registro 0.438 [0.25,0.62]  ESTRICTA 0.438  ba 0.434  gana(0,1) 0/20  cobertura   n/a/4  celdas 68  muertes 280
+[08:37:59 +  553.1s]    px0    memoria=suma   registro 1.000 [0.60,1.00]  ESTRICTA 1.000  ba 0.999  gana(0,1) 3/20  cobertura 4.0/4  celdas 34  muertes 286
+[08:37:59 +  553.1s]    px0    memoria=ruta   registro 0.900 [0.70,1.00]  ESTRICTA 0.900  ba 0.920  gana(0,1) 6/20  cobertura 4.0/4  celdas 52  muertes 270
+[08:37:59 +  553.1s]    px0    memoria=None   registro 0.900 [0.60,1.00]  ESTRICTA 0.900  ba 0.934  gana(0,1) 0/20  cobertura   n/a/4  celdas 54  muertes 275
+[08:37:59 +  553.1s]    azar   memoria=suma   registro 0.500 [0.20,0.80]  ESTRICTA 0.500  ba 0.402  gana(0,1) 1/20  cobertura 4.0/4  celdas 62  muertes 324
+[08:37:59 +  553.1s]    azar   memoria=ruta   registro 0.450 [0.30,0.90]  ESTRICTA 0.450  ba 0.424  gana(0,1) 0/20  cobertura 4.0/4  celdas 62  muertes 292
+[08:37:59 +  553.1s]    azar   memoria=None   registro 0.500 [0.20,0.80]  ESTRICTA 0.500  ba 0.505  gana(0,1) 0/20  cobertura   n/a/4  celdas 60  muertes 310
+[08:37:59 +  553.1s] ETAPA 5/5 — umbrales del preregistro.
+[08:37:59 +  553.1s]    V2b xor01 ESTRICTA 0.875 >= .75 · px0 1.000 = 1.000 · azar 0.500 en [.35,.65]   OK
+[08:37:59 +  553.1s]    V4 (lo medible) celdas v14.1 68.0 vs v15d 56.0 (±10 %)                   NO
+[08:37:59 +  553.1s]    V1 y V2a: leer el veredicto de las dos baterias en sus propios logs (ETAPAS 2 y 3).
+[08:37:59 +  553.1s]    V3: NO MEDIBLE con los instrumentos de hoy (el mundo largo deriva de v13). Declarado en el preregistro §4.
+[08:37:59 +  553.1s] RECORDATORIO (clausula del preregistro §5): si V1 o V2a caen, la memoria por pares NO entra al tronco; queda como ORGANO DEL MUNDO DE REGLA.
+[08:37:59 +  553.1s] datos -> v15d_s121-140_20260918_082846.json  sha256_16 = e1ad17cfdb97512b

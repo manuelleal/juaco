@@ -117,3 +117,12 @@ V1 `bateria_v15d.py 20 --desde 101 --log` ≈ 15–20 min con `Pool(14)` · V2a 
 organismo_v15d_on 20 --desde 101 --log` ≈ 5–8 min · V2b 180 corridas del mundo de regla (3 modos × 3 reglas × 20
 semillas) ≈ 4–5 min. Identidad ~2 min en un proceso. El runner lanza las baterías como **subprocesos secuenciales**:
 nunca dos `Pool` a la vez.
+
+
+## Enmienda 1 (coordinador, 18 sep 08:44 — ERR-38: instrumento, ningún umbral cambia)
+
+La entrada `'organismo_v15d_on'` de `bateria_generaliza_v15d.py` no pasaba `eta_s=0.15, clip_s=10.0` (el gemelo `organismo_v15gd_on`
+tiene `eta_s=0.0` por defecto): V2a corrió con la vía lenta lineal apagada (G1 0.500 / G2 0.513, anulados). Constructor corregido y
+batería regenerada (`bateria_generaliza_v15d` → ee4c9214310de717); V2a repetida con los mismos umbrales y semillas: **G1 1.000 /
+G2 0.999 / K 20/20 → PASA**. Lo mismo para v15c (G1 1.000 / G2 0.997). Veredicto final de v15d: NO ENTRA por V1 (examen encendido:
+E1 0/20, E2 0/20, E2L 10/20), registrado en `registro/REGISTRO_etapas_1_2.md`.
