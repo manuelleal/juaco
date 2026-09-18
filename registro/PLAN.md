@@ -10,10 +10,12 @@
 > 4. ✅ Etapa 5 N1 (experto → novato por conducta visible) demostrada y replicada.
 > 5. ❌ **Etapa 5 N2 (significado emergente): cinco diseños refutados; línea cerrada por hoy.** Emerge una convención
 >    arbitraria que muere al barajar, sin magnitud útil (asimetría del mundo y de la recompensa). Reabrir sólo con otro mundo.
-> 6. ⏳ **Plan del debate de niveles 5–10** (`registro/investigacion/DEBATE_y_plan_5a10.md`): (1) 3T con k=2,3
->    (`experimentos/nivel7_3T_k/`, corriendo) → (2) tabla posición→código + teletransporte → (3) mundo social con
->    control de saciedad (N3) → (4) mundo largo con cambio, 4 brazos. Después: rama "puerta con rápida vacía";
->    consolidación y publicación (`HORIZONTE_frontera.md`).
+> 6. **Plan del debate de niveles 5–10, ejecutado** (`registro/investigacion/DEBATE_y_plan_5a10.md`; HANDOFF 11.6):
+>    (1) ✅ 3T-k compone hasta 3 pasos (replicado) · (2) ✅ mapa elige el lado de la comida recordada (replicado) ·
+>    (3) ❌ N3/N3b/N3c (ERR-23; montaje inválido); N3d = receptor ciego por construcción · (4) ❌ compuesto: v13 sigue
+>    aprendiendo hasta 50 patrones y se recupera de la inversión; el mapa daña la adquisición.
+> 7. Siguiente: cerrar N3d; guardar W por patrón en el mundo largo; coste en capacidad de 3T-k; exploración/explotación
+>    del mapa (nivel 8); XOR como límite de lectura. Rama "puerta con rápida vacía"; consolidación (`HORIZONTE_frontera.md`).
 >
 > **ORDEN VIGENTE AL 16 SEP 2026 (día 4, tarde). Histórico; lo manda el bloque de arriba.**
 > Los "Pasos" numerados de la sección "PLAN PARA LA PRÓXIMA SESIÓN" son **históricos**.

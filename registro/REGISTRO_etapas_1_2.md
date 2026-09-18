@@ -3176,3 +3176,29 @@ explotación/exploración del nivel 8, medido. **Caveat de la medida R1:** "rete
 patrones ya ausentes (los 4 iniciales se invirtieron sin poder verse): 0.50 no separa las dos cosas; para separarlas
 hay que guardar `W` por patrón (no se guardó) — pendiente, no urgente. **Vocabulario:** *sigue aprendiendo hasta el
 techo de la retina y se recupera del cambio; el mapa cobra la comida en exploración*. No "abierto", no "autónomo".
+
+
+### N3d (receptor ciego por construcción, semillas 61–80): **TRANSFIERE entre sensores por conducta** — réplica 81–100 igual: 0.811 contra 0.516 solo, barajada 0.487, emisor que no sabe 0.515, 20/20 en los tres (N3d_s81-100_20260917_201205, 454fb54abddb2146)
+
+Preregistro `PREREGISTRO_N3d.md`; instrumento `mundo_social_n3.py` (`42a7797c2dbccea7`, knob `tipos_fijos`; identidad
+6/6); datos `N3d_s61-80_20260917_200706` (`88261db047ba8129`). Mundo: 8 objetos = 4 parejas de patrones de peso 3 con la
+**misma vista en los píxeles 3–5 y valencia opuesta** (`px0` decide), reaparecen en su sitio a los 50 pasos. Receptor ve
+3–5 (ciego a `px0` por construcción), emisor ve 0–2 y no escucha; la conducta ajena reciente (≤ 400 pasos) sesga la
+boca del receptor (`gamma_soc = 1.5`). Acierto balanceado del receptor, último cuarto:
+
+| condición | acierto | veneno Q4 | muertes | lectura |
+|---|---|---|---|---|
+| TECHO / SOLO_E | 0.998 / 0.998 | 1 / 2 | 1 / 0 | la regla se aprende con `px0` a la vista |
+| **SOLO_R** | **0.515** [0.50, 0.53] | 332 | 86 | ciego por construcción: azar, como debía |
+| N0 (pareja sin señal) | 0.503 | 244 | 534 | la presencia sola no ayuda (y le quita comida) |
+| **CONV** (conducta honesta) | **0.822** [0.77, 0.85] | 331 | 80 | **acierta con la conducta del que ve** |
+| SHUF (conducta barajada) | 0.484 | 1 128 | 1 176 | sin contenido, sólo daño |
+| SACIEDAD (emisor con `alpha = 0`) | 0.508 | 1 270 | 308 | un emisor que no sabe no transfiere nada |
+
+S1 (≥ 0.80 y > SOLO_R **20/20**), S2 (> SHUF **20/20**), S3 (> SACIEDAD **20/20**), S4 (validez: emisor en CONV 0.998),
+S5 (N0 > SOLO_R 1/20): **todos pasan.** Es el nivel 5 del brief en su forma mínima: *un organismo que no puede saber usa
+la conducta reciente de otro que sí sabe, sobre el mismo objeto, y acierta*. Cuatro intentos hicieron falta (N3, N3b,
+N3c, N3d), y los tres fallos fueron **del instrumento, la medida o el mundo**, no del organismo: canal simétrico, acierto
+sin balancear, mundo que se come la comida, receptor que memoriza sitios. Cada uno está registrado.
+**Vocabulario:** *transfiere por conducta; no "comunica", no "entiende"*. Abierto: cuánto dura la transferencia sin el
+emisor presente (¿aprende algo propio o sólo obedece?: `W` del receptor), y XOR entre dos (composición social real).

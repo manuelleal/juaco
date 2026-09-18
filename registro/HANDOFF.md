@@ -378,6 +378,27 @@ Criterio de parada honesto: si 5–6 mecanismos compran capacidad con el mismo c
 de células. `REPOS_cercanos.md`: no hay repo público con los cinco ejes de JUACO; préstamos posibles: Roth–Erev
 (`demonstrator-game`) para N2, OpenEvolve/ShinkaEvolve como arnés para JUACO-EVO.
 
+## 11.6 El plan del debate, ejecutado en una noche (17 sep, 19:00–20:30): qué quedó y qué no
+
+Regla 12 en acto: cuatro experimentos preregistrados, construidos por anclas con identidad bit a bit, corridos y
+registrados sin pedir permiso; el director audita `REGISTRO_etapas_1_2.md` (entradas de esta noche, al final).
+
+| # | experimento | veredicto | lo que queda escrito |
+|---|---|---|---|
+| 1 | **3T-k** (nivel 7): historia de 1, 2 y 3 pasos con distractores | ✅ **compone hasta 3**, replicado 21–40 | sep 3.97 / 3.74 / 2.24; control barajado ≈ 0; 20/20 por k |
+| 2 | **Mapa** (nivel 6): tabla posición→patrón + teletransporte, mundo con `r_vis = 3` | ✅ **elige el lado de la comida recordada**, replicado | 0.81/0.80 contra 0.48/0.50; invertido 0.11 (huye); come 490 contra 332, 20/20. Premisa del informe corregida: la retina del tronco ve el objeto más cercano de todo el anillo |
+| 3 | **N3 sentidos complementarios** (nivel 5): receptor ciego a la regla + conducta del que la ve | ❌ N3, N3b (ERR-23), N3c (montaje inválido); **✅ N3d TRANSFIERE** (receptor ciego 0.515 → 0.822; controles 0.48/0.51; 20/20; réplica 81–100 igual: 0.811 contra 0.516 solo, barajada 0.487, emisor que no sabe 0.515, 20/20 en los tres (N3d_s81-100_20260917_201205, 454fb54abddb2146)) | la conducta ajena **gobierna** la boca del receptor (barajada 0.68, emisor que no sabe 0.69, 20/20) pero el mundo no dejaba probar comida (N3b) o el receptor no era ciego (N3c) |
+| 4 | **Mundo largo** (niveles 8+9): 50 patrones nuevos + inversión de regla | ❌ compuesto; **3 hallazgos** | v13 sigue aprendiendo hasta los 50 (0.80; predije 0.55–0.70); se recupera de la inversión en ~2 000 pasos (18/20); **el mapa daña la adquisición** (0.70 contra 0.88): explota lo recordado y explora menos |
+
+**Errores nuevos:** ERR-23 (canal social simétrico + acierto no balanceado; corregido en N3b con semillas nuevas).
+**Lecturas honestas:** no hay "planificación", "lenguaje" ni "autonomía": hay composición de 3 pasos, elección de
+dirección por memoria de lugar, recuperación ante cambio y aprendizaje sostenido hasta el techo de la retina (63
+patrones posibles). **Lo que sigue** (orden sugerido): (a) cerrar N3d y, si pasa, replicar; (b) guardar `W` por patrón
+en el mundo largo para separar olvido de inversión (R1); (c) medir si las divisiones extra de 3T-k cuestan capacidad;
+(d) el canje exploración/explotación del mapa como nivel 8 propio (curiosidad por progreso de error, nivel8 §3);
+(e) XOR como límite de lectura (apuesta de frontera del debate). Instrumentos: `experimentos/nivel7_3T_k/`,
+`nivel6_mapa/`, `etapa5_comunicacion/{mundo_social_n3,corre_N3*}`, `nivel8_mundo_largo/`.
+
 ## 11.5-viejo Estado al cierre de la sesión (noche del 17 sep) y cómo retomar N2 (superado por lo de arriba)
 - **Lo que está corriendo o acaba de terminar:** `experimentos/etapa5_comunicacion/corre_N2.py` (N2, significado
   emergente). Su preregistro es `PREREGISTRO_N2.md` (escrito antes; criterios E1–E5, K1–K2, predicciones y refutación).

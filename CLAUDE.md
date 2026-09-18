@@ -110,8 +110,13 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   (`experimentos/nivel6_mapa/`), v13 + tabla M elige la dirección hacia comida recordada fuera de la vista, replicado**
   (0.81/0.80 contra 0.48/0.50 sin mapa; invertido 0.11/0.13; come 490 contra 332, 20/20; `mapa_s1-20_20260917_192813`,
   `mapa_s21-40_20260917_193133`). Premisa corregida: la retina del tronco ve el objeto más cercano de todo el anillo,
-  el mundo del mapa necesita `r_vis=3`. · (3) en curso: N3 sentidos complementarios con control de saciedad
-  (`etapa5_comunicacion/PREREGISTRO_N3.md`, `mundo_social_n3.py`, `corre_N3.py`). · 8 abierta. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
+  el mundo del mapa necesita `r_vis=3`. · **(3) N3 sentidos complementarios: N3 ❌, N3b ❌ (ERR-23: canal simétrico y
+  acierto no balanceado), N3c montaje inválido (el receptor memoriza sus 8 objetos fijos); la conducta ajena SÍ gobierna
+  al receptor (barajada 0.68 / emisor que no sabe 0.69, 20/20). **N3d ✅ TRANSFIERE** (4 parejas misma
+  vista/valencia opuesta: receptor ciego 0.515 solo → 0.822 con la conducta del que ve; barajada 0.48; emisor que no
+  sabe 0.51; 20/20 en los tres; `N3d_s61-80_20260917_200706`; réplica 81–100 igual: 0.811 contra 0.516 solo, barajada 0.487, emisor que no sabe 0.515, 20/20 en los tres (N3d_s81-100_20260917_201205, 454fb54abddb2146)).** · **(4) mundo largo (`nivel8_mundo_largo/`): compuesto ❌;
+  v13 sigue aprendiendo hasta los 50 patrones (0.80), se recupera de la inversión en ~2 000 pasos (18/20), el mapa
+  daña la adquisición (0.70 vs 0.88)** (`largo_s1-20_20260917_200026`). · Resumen de la noche: HANDOFF 11.6. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
   mundo de 20 patrones deja 0/10 comidas conocidas).
 - **Hallazgos del día, en orden:** (a) **JUACO-EVO**: 4 mutaciones LLM contra 24 ciegas; el LLM halló en **una**
   generación un órgano que yo no diseñé (P1 sostenida; `experimentos/evo/LINAJE.md`). (b) v11 cerró la Etapa 4 y
