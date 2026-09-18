@@ -32,13 +32,25 @@ R_VAL = {'comida': 1.0, 'veneno': -3.0}; E_VAL = {'comida': +0.8, 'veneno': -0.4
 
 
 class Mundo:
-    def __init__(self, rng, nobj, tipos):
-        self.rng = rng; self.nobj = nobj; self.tipos = tipos; self.objs = {}
+    def __init__(self, rng, nobj, tipos, regen=None):
+        self.rng = rng; self.nobj = nobj; self.tipos = tipos; self.objs = {}; self.regen = regen; self.pend = {}   # N3c: regen
 
     def spawn(self):
-        while len(self.objs) < self.nobj:
+        while len(self.objs) + len(self.pend) < self.nobj:
             x = int(self.rng.integers(L))
-            if x not in self.objs: self.objs[x] = self.tipos[int(self.rng.integers(len(self.tipos)))]
+            if x not in self.objs and x not in self.pend: self.objs[x] = self.tipos[int(self.rng.integers(len(self.tipos)))]
+
+    def retirar(self, x, t):   # N3c: al morder (o al olvido) el objeto se va; con regen vuelve al MISMO sitio con el mismo tipo
+        kk = self.objs.pop(x)
+        if self.regen is not None:
+            self.pend[x] = (kk, t + self.regen)
+            if not self.objs:   # nunca vacio: si se agotaron todos, el pendiente mas antiguo vuelve ya (see() no admite mundo vacio)
+                x0 = min(self.pend, key=lambda y: self.pend[y][1]); kk0, _ = self.pend.pop(x0); self.objs[x0] = kk0
+        self.spawn()
+
+    def regenerar(self, t):
+        for x in [x for x, (kk, tt) in self.pend.items() if tt <= t]:
+            kk, _ = self.pend.pop(x); self.objs[x] = kk
 
 
 class Organismo:
@@ -189,7 +201,7 @@ class Organismo:
                 self.R = R_VAL[val[kk]]; self.E = min(self.E + E_VAL[val[kk]], 1.5); self.mord[kk][self.q(t)] += 1
                 if val[kk] == 'veneno': self.veneno_propio[kk] += 1
                 emitida = (self.pos, kk, True, self.R)
-                del objs[self.pos]; mundo.spawn()
+                mundo.retirar(self.pos, t)   # N3c (regen=None: identico a del + spawn)
                 self._rech.pop(self.pos, None)
                 if self.learn:
                     self._aprender(kk, kc, Wb, self.R, 1.0, t, dividir=True)
@@ -274,7 +286,7 @@ SIMBOLOS = ('simbolo', 'simbolo_barajado')
 
 def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
         estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, estado_emisor='conducta', u_v=0.5,
-        mascaras=None, kw_por_org=None, **kw_org):   # N3: mascara de retina y kwargs por organismo
+        mascaras=None, kw_por_org=None, regen=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen
     """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
               | 'barajada' (como honesta, signo al azar) | 'barajada_conducta' (como conducta, signo al azar)
               | 'simbolo' (N2: K_sim simbolos sin significado; el emisor aprende cual emitir, el receptor que significa)
@@ -297,12 +309,13 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
     rng_mundo = rngs[0] if (n == 1 and compat) else np.random.default_rng(seed + 900000)
     rng_senal = np.random.default_rng(seed + 300000)
     tipos = list(tren)
-    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos); mundo_.spawn()
+    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen); mundo_.spawn()   # N3c
     tipos.extend(test)   # como v13g con fase2_en=0: los de test entran en t=0, tras el sorteo inicial
     mundo = mundo_
     senales_emitidas = [0] * n; senales_recibidas = [0] * n
     pendientes = []   # N2: emisiones que esperan la conducta del receptor sobre el mismo patron (refuerzo del emisor)
     for t in range(T):
+        if mundo.pend: mundo.regenerar(t)   # N3c
         if invertir_en is not None and t == invertir_en and 'A' in val and 'B' in val: val = {'A': 'veneno', 'B': 'comida'}
         orden = range(n) if t % 2 == 0 else range(n - 1, -1, -1)
         emitidas = []
@@ -352,7 +365,7 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
                         elif orgs[j].escucha: orgs[j].recibir(kk, s, f_vicaria, val, t, invertir_en)   # N3b (ERR-23): el que no escucha no recibe
                         senales_recibidas[j] += 1
         if mundo.rng.random() < .003 and mundo.objs:
-            _dx = list(mundo.objs)[int(mundo.rng.integers(len(mundo.objs)))]; del mundo.objs[_dx]; mundo.spawn()
+            _dx = list(mundo.objs)[int(mundo.rng.integers(len(mundo.objs)))]; mundo.retirar(_dx, t)   # N3c
             for o in orgs: o._rech.pop(_dx, None)
         for i in orden:
             orgs[i].fase_B(t)

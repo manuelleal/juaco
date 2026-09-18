@@ -3114,3 +3114,19 @@ vista 3–5 que la predicción ya anunciaba: 0.55–0.70) · **N0 0.978** · CON
 Corrección preregistrada (`PREREGISTRO_N3b.md`, semillas nuevas 21–40): knob `escucha` (sólo el receptor escucha),
 **acierto balanceado** (½ · comida mordida/visitas a comida + ½ · veneno rechazado/visitas a veneno; rechazarlo todo
 = 0.50) y validez añadida: el emisor en CONV debe seguir ≥ 0.90. Sin recalibrar sobre 1–20.
+
+
+### N3b (tras ERR-23, semillas 21–40): **cae con la medida honesta; la señal cambia la conducta pero el mundo no deja probar comida**
+
+Preregistro `PREREGISTRO_N3b.md`; instrumento `mundo_social_n3.py` (`c0bcedd4f8c12e43`, knob `escucha`; identidad 6/6);
+datos `N3b_s21-40_20260917_194339` (`501d45749330eb13`). Acierto **balanceado** del receptor, último cuarto: TECHO 0.998 ·
+SOLO_E 0.994 · **SOLO_R 0.539** (con la medida balanceada, el ciego a la regla está en el azar, como debía) · N0 0.545 ·
+**CONV 0.561** · SHUF 0.533 · SACIEDAD 0.560. **Emisor en CONV 0.987** (ERR-23.1 corregido). S1 NO (13/20), S2 NO (14/20),
+S3 NO (10/20). **Refutado.**
+
+**Lo que sí muestran los datos (sin declararlo cerrado):** la conducta ajena **sí gobierna** al receptor: veneno mordido
+en Q4 = **21** con señal honesta, **1 542** con la señal barajada (2 530 muertes), 162 solo, 2 552 con el emisor que no
+sabe. La señal honesta le quita el veneno; lo que no le da es la comida, porque **casi no la encuentra**: en el humo de
+la semilla 22, 210 visitas a comida contra 9 617 a veneno (el emisor se la come en cuanto reaparece al azar; el veneno
+se queda). Es la asimetría de muestreo que cerró N2, por tercera vez. `PREREGISTRO_N3c.md` (escrito antes de ver este
+veredicto): mismo montaje en un mundo donde lo mordido **reaparece en el mismo sitio** (`regen = 50`), semillas 41–60.

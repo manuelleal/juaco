@@ -1,0 +1,24 @@
+[19:43:39 +    0.0s] ARRANQUE N3b (sentidos complementarios, tras ERR-23; acierto balanceado, solo el receptor escucha) sobre v13. condiciones ['TECHO', 'SOLO_E', 'SOLO_R', 'N0', 'CONV', 'SHUF', 'SACIEDAD'], semillas 21-40. Pool(14).
+[19:43:39 +    0.0s] sha preregistro b4d0ce1746bdb60e  script 5ebaee324866dcd3  mundo_social_n3 c0bcedd4f8c12e43  mundo_social 946ff1c71e375eba
+[19:43:40 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 9844
+[19:43:40 +    0.5s] ETAPA 1/3 — identidad gamma_soc=0 sin mascaras == mundo_social (6)...
+[19:43:57 +   18.0s]   identicos: 6/6
+[19:43:57 +   18.0s] ETAPA 2/3 — 140 corridas...
+[19:44:27 +   47.6s]           20/140
+[19:44:43 +   63.3s]           40/140
+[19:45:12 +   92.7s]           60/140
+[19:46:04 +  144.6s]           80/140
+[19:46:54 +  194.5s]           100/140
+[19:47:53 +  253.3s]           120/140
+[19:48:48 +  308.3s]           140/140
+[19:48:48 +  308.4s] ETAPA 3/3 — analisis (receptor = organismo 0, ultimo cuarto).
+[19:48:48 +  308.4s]    TECHO     acierto 0.998 [0.99,1.00]  veneno_q4 22  muertes 262  sesgos 0  recibidas 0  emisor nan
+[19:48:48 +  308.4s]    SOLO_E    acierto 0.994 [0.63,1.00]  veneno_q4 24  muertes 270  sesgos 0  recibidas 0  emisor nan
+[19:48:48 +  308.4s]    SOLO_R    acierto 0.539 [0.52,0.57]  veneno_q4 162  muertes 244  sesgos 0  recibidas 0  emisor nan
+[19:48:48 +  308.4s]    N0        acierto 0.545 [0.51,0.64]  veneno_q4 58  muertes 666  sesgos 0  recibidas 0  emisor 0.992
+[19:48:48 +  308.4s]    CONV      acierto 0.561 [0.51,0.62]  veneno_q4 21  muertes 575  sesgos 34422  recibidas 10926  emisor 0.987
+[19:48:48 +  308.4s]    SHUF      acierto 0.533 [0.51,0.58]  veneno_q4 1542  muertes 2530  sesgos 26984  recibidas 10146  emisor 0.987
+[19:48:48 +  308.4s]    SACIEDAD  acierto 0.560 [0.55,0.59]  veneno_q4 2552  muertes 899  sesgos 23518  recibidas 10256  emisor 0.500
+[19:48:48 +  308.4s]    S1 CONV>=.80 y >SOLO_R en 13/20 NO | S2 >SHUF en 14/20 NO | S3 >SACIEDAD en 10/20 NO | S4 validez OK | S5 N0>SOLO_R en 12/20 OK
+[19:48:48 +  308.4s] VEREDICTO N3b: NO (refutado o montaje invalido)
+[19:48:48 +  308.4s] datos -> N3b_s21-40_20260917_194339.json  sha256_16 = 501d45749330eb13
