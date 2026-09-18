@@ -1,0 +1,22 @@
+[19:28:13 +    0.0s] ARRANQUE nivel 6 (mapa) sobre v13. brazos ['MAPA', 'SINMAPA', 'CONGELADA', 'BARAJADO', 'SINCOMIDA', 'INVERTIDO'], semillas 1-20. Pool(14).
+[19:28:13 +    0.0s] sha preregistro c1da197f5296c07e  script 4259848c817fb1ec  mundo_mapa 207d6a1954336b18  v13 cc8b16b492d4d324
+[19:28:14 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 28108
+[19:28:14 +    0.5s] ETAPA 1/3 — identidad perillas apagadas == organismo_v13 (9)...
+[19:28:26 +   12.7s]   identicos: 9/9
+[19:28:26 +   12.7s] ETAPA 2/3 — 120 corridas...
+[19:28:48 +   34.6s]           20/120
+[19:28:57 +   43.9s]           40/120
+[19:29:10 +   56.5s]           60/120
+[19:29:35 +   81.2s]           80/120
+[19:29:54 +  100.5s]           100/120
+[19:30:12 +  119.1s]           120/120
+[19:30:12 +  119.1s] ETAPA 3/3 — analisis.
+[19:30:12 +  119.1s]    MAPA      acierto 0.812 [0.53,0.93]  >0.60 en 19/20  sin_mover 0/40  ciego 40/40  M_llenas 2  comida_q4 490  muertes 3  W {'A': 1.0, 'B': -1.13, 'C': 0.2, 'D': -0.41}
+[19:30:12 +  119.1s]    SINMAPA   acierto 0.475 [0.35,0.65]  >0.60 en 2/20  sin_mover 0/40  ciego 40/40  M_llenas 0  comida_q4 332  muertes 42  W {'A': 1.0, 'B': -2.85, 'C': -0.26, 'D': -1.77}
+[19:30:12 +  119.1s]    CONGELADA acierto 0.475 [0.35,0.65]  >0.60 en 2/20  sin_mover 0/40  ciego 40/40  M_llenas 0  comida_q4 332  muertes 42  W {'A': 1.0, 'B': -2.85, 'C': -0.26, 'D': -1.77}
+[19:30:12 +  119.1s]    BARAJADO  acierto 0.675 [0.23,0.80]  >0.60 en 13/20  sin_mover 0/40  ciego 40/40  M_llenas 2  comida_q4 490  muertes 3  W {'A': -0.01, 'B': -0.01, 'C': 0.39, 'D': 0.6}
+[19:30:12 +  119.1s]    SINCOMIDA acierto 0.534 [0.00,0.78]  >0.60 en 6/20  sin_mover 22/40  ciego 28/40  M_llenas 2  comida_q4 0  muertes 355  W {'A': -0.9, 'B': -2.97, 'C': -0.9, 'D': -1.8}
+[19:30:12 +  119.1s]    INVERTIDO acierto 0.114 [0.03,0.26]  >0.60 en 0/20  sin_mover 0/40  ciego 40/40  M_llenas 2  comida_q4 490  muertes 3  W {'A': -1.0, 'B': 1.13, 'C': -0.2, 'D': 0.41}
+[19:30:12 +  119.1s]    P1 MAPA>=.75 OK | C1 CONGELADA OK | C2 BARAJADO<=.60 NO (no decisivo, enmienda 1) | C3 SINCOMIDA OK | C4 SINMAPA OK | C5 INVERTIDO<=.40 OK | F1 comida_q4 MAPA>SINMAPA en 20/20 OK
+[19:30:12 +  119.1s] VEREDICTO mapa: ELIGE la direccion hacia comida recordada; funcional F1 OK
+[19:30:12 +  119.1s] datos -> mapa_s1-20_20260917_192813.json  sha256_16 = ca8657637e8c2292
