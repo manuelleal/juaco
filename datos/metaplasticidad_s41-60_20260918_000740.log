@@ -1,0 +1,27 @@
+[00:07:40 +    0.0s] ARRANQUE metaplasticidad (nivel 8, A-2). brazos ['BASE', 'B10', 'B50'], semillas 41-60, T=200000, T_nuevo=4000, inversion en 100000. Pool(14).
+[00:07:40 +    0.0s] sha preregistro 1b528822724bf553  script 9e4390b5305a7af2  instrumento mundo_largo_A a3ded739a46b1c97  origen mundo_largo 9f74ff6b5941e5a5  construye_largo_A 85ca7bb8c79198ca
+[00:07:40 +    0.4s] REGLA 11 -- procesos python vivos (4), este es pid 11492
+[00:07:40 +    0.4s] ETAPA 1/3 -- identidad mundo_largo_A(beta_m=None) == mundo_largo, s1-3, T=20000 (secuencial, sin Pool)...
+[00:07:42 +    2.2s]    identidad s1 T=20000: IDENTICO (29 claves)
+[00:07:44 +    4.0s]    identidad s2 T=20000: IDENTICO (29 claves)
+[00:07:46 +    6.2s]    identidad s3 T=20000: IDENTICO (29 claves)
+[00:07:46 +    6.2s]   identicos: 3/3
+[00:07:46 +    6.4s] ETAPA 2/3 -- 60 corridas...
+[00:08:03 +   23.0s]           10/60
+[00:08:19 +   38.9s]           20/60
+[00:08:36 +   55.6s]           30/60
+[00:08:52 +   72.3s]           40/60
+[00:08:53 +   72.9s]           50/60
+[00:09:07 +   87.2s]           60/60
+[00:09:07 +   87.2s] ETAPA 3/3 -- analisis.
+[00:09:07 +   87.2s]    BASE  ret_no_inv 0.667  ret_inv 0.250  adq_final 0.800  rec 2500  muertes 30  celdas 90  splits 60
+[00:09:07 +   87.2s]    B10   ret_no_inv 0.667  ret_inv 0.250  adq_final 0.800  rec 4000  muertes 37  celdas 90  splits 60
+[00:09:07 +   87.2s]    B50   ret_no_inv 0.667  ret_inv 0.250  adq_final 0.800  rec 4000  muertes 52  celdas 90  splits 60
+[00:09:07 +   87.2s]    P1 B50 ret_no_inv mediana 0.667 (>=0.80 NO), pareado>BASE 7/20 (>=14 NO) -> P1 NO
+[00:09:07 +   87.2s]    P2 adq_final BASE 0.800 B50 0.800 (no cae >0.05: OK)
+[00:09:07 +   87.2s]    P3 rec BASE 2500 B50 4000 (no empeora: NO)
+[00:09:07 +   87.2s]    P4 B10 ret_no_inv mediana 0.667, pareado>BASE 4/20 -> B10~=BASE OK -> P4 OK
+[00:09:07 +   87.2s]    C1 muertes BASE 30 B50 52 (limite 45) -> NO
+[00:09:07 +   87.2s]    C2 ret_inv BASE 0.250 B50 0.250 (no cae >0.05: OK)
+[00:09:07 +   87.2s] VEREDICTO metaplasticidad: REFUTA  (P1 NO P2 OK P3 NO P4 OK C1 NO C2 OK)
+[00:09:07 +   87.2s] datos -> metaplasticidad_s41-60_20260918_000740.json  sha256_16 = 6f9b82ae2f300ad9

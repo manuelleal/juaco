@@ -3755,3 +3755,26 @@ declarado como tal); si P1–P3 y R3 se repiten en 81–100, el vocabulario perm
 ciega a lo irrelevante compone historias más profundas con menos celdas"*; si P1 vuelve a caer, el mecanismo queda como
 *"compone mejor; el ahorro de celdas es mayoritario, no general"*. Nada toca el tronco (§6 del preregistro: baterías
 antes). Vocabulario prohibido sigue: "aprende a ignorar", "atiende", "selecciona".
+
+
+### Bloque A-2 (célula de creación, creador A; 18 sep 00:09): metaplasticidad por masa de conflicto en el mundo largo, semillas 41–60 — **REFUTADA (la retención de lo ausente no se mueve: 0.667 = base; recupera más lento y muere más)**
+
+Preregistro `experimentos/nivel8_metaplasticidad/PREREGISTRO_metaplasticidad.md` (1b528822724bf553, escrito antes de correr);
+instrumento `experimentos/creacion_A/mundo_largo_A.py` (a3ded739a46b1c97, por anclas desde `mundo_largo` 9f74ff6b5941e5a5;
+identidad 9/9 del creador y 3/3 dentro del runner, 29 claves); datos `metaplasticidad_s41-60_20260918_000740`
+(6f9b82ae2f300ad9), 60 corridas, 1.5 min. Mecanismo: `g_c = 1/(1 + beta_m·m_c)` sobre la tasa de la vía rápida, con
+`m_c = min(Wp, Wn)` (la masa de conflicto que el tronco ya tiene; memoria nueva cero).
+
+| brazo | `ret_no_inv` | `ret_inv` | `adq_final` | `rec` | muertes | celdas / divisiones |
+|---|---|---|---|---|---|---|
+| BASE | 0.667 | 0.250 | 0.800 | 2 500 | 30 | 90 / 60 |
+| B10 | 0.667 | 0.250 | 0.800 | 4 000 | 37 | 90 / 60 |
+| **B50** | **0.667** | 0.250 | 0.800 | **4 000** | **52** | 90 / 60 |
+
+P1 **NO** (mediana 0.667 < 0.80; pareado > BASE 7/20), P2 OK (adquisición intacta), P3 **NO** (recupera más lento),
+P4 OK (B10 ≈ BASE), **C1 NO** (muertes +73 %, límite +50 %: el mecanismo cobra supervivencia), C2 OK. La mini-prueba de
+3 semillas (0.833) no replica en 20. **Lectura:** volver lentas las celdas con evidencia contradictoria no protege lo
+ausente aquí — `m` tiene semivida ≈ 14 mordidas y vale 0.02–0.05 de media (lo dijo el propio creador y lo confirmó el
+explorador con la cascada de Fusi: hacen falta ≥ 2 constantes de tiempo propias, no una prótesis con β grande). Queda
+refutado el mecanismo con estado existente; una variable lenta nueva sería otra propuesta (con su memoria declarada).
+Vocabulario: *la masa de conflicto no sirve como freno de olvido*. Nada toca el tronco.
