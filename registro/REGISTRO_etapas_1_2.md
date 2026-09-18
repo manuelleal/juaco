@@ -4751,3 +4751,26 @@ lenta SUME lineal + memoria, o enrute por cuál tiene menos error (con abstenci�
 tronco conserva la lectura lineal donde basta y usa la tabla de pares donde no. También se anota: el runner corrió V1 con la perilla
 apagada (no mide al candidato) y el umbral px0 = 1.000 de V2b no lo cumple ni v14.1 en ese mundo (0.900): dos defectos de runner/umbral
 que no cambian el veredicto (V2a decide). v14.1 sigue de tronco.
+
+
+### MUNDO VIVO, réplica 201–220 con la enmienda 2 (18 sep 08:20): **el núcleo REPLICA (P1 20/20, P2 20/20, P3a 20/20, P3b ×3.9, P5 20/20, P9) y las predicciones de supervivencia corregidas (ERR-37) PASAN en las DOS series; P10 —la que podía fallar limpio— se cumple: sin semillas con alias de código, la sal vale 0 en 20/20 y el error de casilla es 0.00 en 20/20 → la explicación por alias de código queda confirmada por predicción**
+
+Datos `vivo_s201-220_20260918_080619` (e1e932387b411a3e), 140 corridas, 5 min; análisis `analiza_vivo_enm2.py` (ef7588acfa19535e; regla 10:
+lee los JSON de las dos series; salida `analiza_vivo_enm2_salida.json`).
+
+| predicción (enmienda 2) | 181–200 | 201–220 |
+|---|---|---|
+| P4″a muertes VIVO / UNA_NEC ≤ 0.85 y / ESCALAR ≤ 0.80 (razón de medianas) | 0.716 / 0.636 ✅ | 0.718 / 0.588 ✅ |
+| P4″b A₁₂ (probabilidad de que VIVO muera menos) ≥ 0.75 / 0.80 | 0.900 / 0.935 ✅ | 1.000 / 1.000 ✅ |
+| P4″c q75(VIVO) < q25 de los dos | 106 < 125 < 143 ✅ | 99.8 < 125.8 / 149.2 ✅ |
+| P7′a muertes por agua UNA_NEC / VIVO ≥ 1.6 y ≥ 1.5 en ≥ 16/20 | 1.854; 18/20 ✅ | 2.047; 19/20 ✅ |
+| P7′b cuartiles de agua | 50 < 84 ✅ | 50.2 < 79.2 ✅ |
+| P6′ sal sin valor en ≥ 18/20 (mediana ≤ 0.1; censurada 20/20) | 18/20 (máx 1.83 en las 2 alias) ✅ | **20/20, máx 0.0** ✅ |
+| P10 sin alias → err_peor 0.00 en 20/20 | n/a (2 alias) | **PASA** ✅ |
+
+Ambigüedades de la letra resueltas reportando las dos lecturas (razón de medianas y mediana de razones; cuartiles exclusive e
+inclusive): todas pasan. Los pareados de la letra vieja (14/18/20; 11/20) siguen siendo la moneda de ERR-37a, no una medida.
+**Declarable (línea F, nivel 8/9):** *en un mundo con dos necesidades el organismo aprende qué vale cada cosa para cada necesidad y con
+eso resuelve el XOR necesidad × estímulo en 11 exposiciones (dos series, 20/20); un valor único no puede; sobrevive más (muere un 28–41 %
+menos y la mitad por sed) y no atribuye valor a lo que no informa salvo cuando el código de tres celdas lo confunde con el veneno
+(alias)*. Instrumento y peldaño para la siguiente sesión (propósito y reproducción como medida). Bloque de la sal: corre ahora.
