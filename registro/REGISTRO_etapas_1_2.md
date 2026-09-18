@@ -4326,3 +4326,28 @@ cuadráticos); implantada en el organismo (3 semillas) 0.375 → 0.500 y abre `P
 vía lenta; control que puede fallar: la generalización y la retención del tronco con `eta_s` ×10) y A-5 (este control positivo)**;
 paquete A-4 en preparación. Lo que esto dice del frente: el organismo CON (gradiente) sólo gana cuando le dan los rasgos; el
 siguiente cuello real es **construir los rasgos** (selección conjuntiva en pocas exposiciones), y eso es del organismo SIN.
+
+
+### Frente "dos organismos", creador C (18 sep 05:50): **aprender sin morder por codificación predictiva sobre la vía lenta — REFUTADO como estaba escrito (no baja exposiciones ni mordidas); el retorno ALEATORIO daña en una capa (feedback alignment sólo tiene sitio donde hay capa oculta: las celdas KW); la única fuente de información del organismo son sus propias mordidas**
+
+Instrumento `experimentos/creacion_C/organismo_v14pc.py` (edfcb77a9ca91682; por anclas desde `organismo/organismo_v14g.py`), identidades K1
+(apagado ≡ v14g) 12/12, K2 (el predictor sólo mide) 12/12, K3 (la sonda de exposiciones sólo lee) 12/12. Mini-prueba (24 corridas
+de 100 000, semillas 1–3, criterio 0.90 en px0, `eta_c = eta_s = 0.015` no buscado; el humo de la semilla 1 declarado antes de las
+predicciones):
+
+| brazo | exposiciones hasta criterio (mediana; s1/s2/s3) | mordidas | `acc_lenta` fase 2 |
+|---|---|---|---|
+| sólo bocados (el actual) | **995** (2 298 / 995 / 555) | 104 | 1.00 |
+| consolidación por predicción, crédito directo | 1 703 (1 703 / 3 507 / 226) | 165 | — |
+| consolidación, retorno transpuesto | 631 | — | 1.00 (no daña) |
+| consolidación, retorno aleatorio (feedback alignment) | censurada / 1 878 / censurada | — | **0.70 (daña)** |
+| retorno aleatorio barajado (control) | 399 / censurada / 1 221 | — | — |
+
+MP-K1 (exposiciones ≤ 0.80×) **refutada** (1.71×); MP-K2 (mordidas ≤ 0.80×) **refutada** (1.59×, como el creador había predicho); MP-K3
+sostenida y más fuerte: el retorno aleatorio es peor que la base en 3/3 e indistinguible de su control barajado; MP-K4 (xor01 no
+se mueve) refutada en dirección contraria: 0.25 → 0.56 con `fa` (n = 3, cabo abierto). ERR propio corregido antes de publicar
+(las corridas censuradas se contaban saltándolas). **Mecánica:** en una lectura lineal de una capa el crédito exacto es la
+propia entrada, así que un retorno aleatorio no tiene nada que comprar y rompe la estructura por píxeles; la consolidación
+redistribuye lo que las mordidas ya enseñaron, no crea información. **Consecuencia para el frente:** "aprender sin morder"
+exige otra fuente de información — otro organismo (N2 por predicción, instrumento aprobado) o el mundo (predecir el estímulo
+siguiente, no sólo la energía) — y el retorno asimétrico, si sirve, es sobre las celdas KW (C-P5, sin mini-prueba).
