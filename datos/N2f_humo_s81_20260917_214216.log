@@ -1,0 +1,32 @@
+[21:42:16 +    0.0s] HUMO N2f (UN proceso, sin Pool). semilla 81, T=200000, regla azar, regen=50, kw {'gamma_sim': 1.2, 'baseline_q': True, 'u_m': 1.0}. pid 20304
+[21:42:16 +    0.0s]   sha_preregistro=a94efb31e27bd4a9  sha_script=66e58410dc81b4be  sha_mundo_social_n3=e6b3ee1ef5b8a4be  sha_mundo_social=946ff1c71e375eba  sha_v13=cc8b16b492d4d324  sha_v13g=2a80e125f8593bf2
+[21:42:49 +   33.1s]   K1a s81: IDENTICO
+[21:42:49 +   33.1s]   K1b s81: IDENTICO
+[21:42:49 +   33.1s]   progenitor del experto (n=1, sin regen, T=200000)...
+[21:43:02 +   46.1s]     venenos conocidos por el experto: 6/10
+[21:43:30 +   74.7s]   N0 listo en 29s
+[21:44:05 +  109.0s]   CONV listo en 34s
+[21:44:05 +  109.0s] 
+[21:44:05 +  109.0s]   cond    veneno tot  ven Q1  ven Q4  muert  ven.con/pres  com.con/pres  pat.pres  vis com/ven   simb.recib  decod 
+[21:44:05 +  109.0s]   N0          34          27       3      1     0/2          3/3             5    5482/19239          0      0
+[21:44:05 +  109.0s]   CONV       135          60      24      5     0/2          3/3             5    5664/19696       6621   6272
+[21:44:05 +  109.0s] 
+[21:44:05 +  109.0s]   K2 simbolos recibidos (CONV): mediana 6621 (>=1000): OK
+[21:44:05 +  109.0s]   K3 VALIDEZ queda algo que ensenar: veneno Q4 del novato en SOLO mediana nan (>=20): FALLA -> MONTAJE INVALIDO
+[21:44:05 +  109.0s]   K4 EQUILIBRIO emisiones del experto por estado: rechaza 19335 / muerde 5524  (razon 0.286, se pide >=0.200; N2d fue 0.016); oidas 'muerde' por el novato 1471 (>=500): OK
+[21:44:05 +  109.0s]   E1 convencion en el emisor: 1/1 (>=15): REFUTADA   consistencia Q4 mediana 1.00  distintos 1/1
+[21:44:05 +  109.0s]   E2 decodificacion (C[s_rech]<=-1 y C[s_mord]>=+0.3): 1/1 (>=15): REFUTADA   contraste mediana -1.28 / +1.28  (M crudo -1.56 / +1.00)
+[21:44:05 +  109.0s]   E3 arbitrariedad: 'rechazo' = simbolo 0 en 0/1 (5..15): REFUTADA
+[21:44:05 +  109.0s]   E4 beneficio: veneno CONV 135 <= 0.7 x N0 34 = 24, pareado 0/1 (>=14): REFUTADA   (INNATO nan, SOLO nan)
+[21:44:05 +  109.0s]   P1 (plan, progreso) |C|>=0.5 en 1/1 (>=10): False      P2 (plan) N0 >= 1.2 x CONV pareado 0/1 (>=15): False
+[21:44:05 +  109.0s]   refuerzos del experto +/-: 23911 / 238;  |Pq| mediana 1.94
+[21:44:05 +  109.0s] 
+[21:44:05 +  109.0s]   HUMO — EMISIONES POR ESTADO (experto): rechaza 19335  muerde 5524  emis=[[206, 19129], [5488, 36]]
+[21:44:05 +  109.0s]   HUMO — consistencia Q4 0.9993694829760403  Pq [[-1.13, 3.0], [2.752, -0.863]]  s_rech=1 s_mord=0 distintos=True
+[21:44:05 +  109.0s]   HUMO — M del novato [1.0, -1.565]  contraste C [1.282, -1.282]
+[21:44:05 +  109.0s]   HUMO — veneno mordido por el novato: CONV total 135 (Q1 60, Q4 24)
+[21:44:05 +  109.0s]   HUMO — visitas del experto comida/veneno 5499/19360; del novato 5664/19696
+[21:44:05 +  109.0s]   HUMO — patrones presentes (visitados) 5 de 20; venenos 2, comidas 3
+[21:44:05 +  109.0s]   HUMO — K3 (proxy, sin SOLO): veneno Q4 del novato en N0 = 3 (se pide >= 20 en SOLO);  venenos conocidos/presentes 0/2, comidas 3/3, muertes 1
+[21:44:05 +  109.0s]   HUMO — veredictos parciales (1 semilla, NO deciden nada): K2=True K3=None K4=True E1=False E2=False E3=False E4=False E5=None P1=False P2=False
+[21:44:05 +  109.1s] datos -> N2f_humo_s81_20260917_214216.json  sha256_16 = 0a8171eb466e2f89

@@ -3417,3 +3417,17 @@ Vocabulario: *XOR sigue sin generalizarse; tres mecanismos aislados refutados; l
   18 configuraciones × 10 semillas, 200k × 5, `learn=False` × 5); H1: `puerta` negativa explícita divergía del tronco (que la
   trata como 0) → el gemelo ahora la **rechaza** con `ValueError` (ningún experimento la usa); H4: `nuevo_val` inválido
   ahora falla en vez de callar. Cada gemelo queda integrado sólo tras repetir su arnés en la copia principal (en curso).
+
+
+### Novedad de sitio, dosis 1.8, semillas 81–100 (enmienda 1): **cae otra vez; línea cerrada en dos dosis, como estaba escrito**
+
+Datos `novedad_alta_s81-100_20260917_221523` (`20a8d18cdfd55406`); identidad 3/3. V13 0.887 · MAPA 0.700 · **MAPA + novedad
+1.8: 0.841** (> MAPA 17g/2e/1p; equidad de visitas 0.455 contra 0.139 del mapa y 0.710 de V13) · barajada 0.800 (10g/4e/6p
+contra MAPA: no supera) · constante 0.681. P1 **NO** (0.841 < 0.85), P2 **NO** (comida 918 contra 971: ≥ 0.9 × MAPA sólo en
+9/20), P3 OK, P4 OK. **Lectura honesta:** el mecanismo hace lo que dice (devuelve visitas y sube la adquisición 0.70 →
+0.84, distinguible del control barajado y del constante), pero **no llega al criterio y cobra comida en la mitad de las
+semillas**: el canje exploración/explotación se **desplaza**, no se rompe. Por el preregistro (enmienda 1: "si P1
+vuelve a fallar, refutada en dos dosis y no se prueba una tercera") la línea queda cerrada. Vocabulario: *la novedad de
+sitio mueve el canje; no lo resuelve*. El canje del mapa sigue abierto (nivel 8) y ya lleva dos candidatos refutados
+(curiosidad por progreso, novedad de sitio); el siguiente, si lo hay, debe atacar la **escala del recuerdo de veneno**
+(−3 pesa más que cualquier atracción de +0.6…+1.8), no otra atracción.

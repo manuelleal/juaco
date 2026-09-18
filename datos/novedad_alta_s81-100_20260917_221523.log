@@ -1,0 +1,27 @@
+[22:15:23 +    0.0s] ARRANQUE bloque 2 bis (NOVEDAD DE SITIO contra el canje del mapa), mundo largo. brazos ['V13', 'MAPA', 'MAPA_NOV', 'MAPA_NOV_BAR', 'MAPA_NOV_CTE'], semillas 81-100, T=200000. Pool(14).
+[22:15:23 +    0.0s]    criterio: ['V13', 'MAPA', 'MAPA_NOV', 'MAPA_NOV_BAR']; lectura (no deciden): ['MAPA_NOV_CTE']
+[22:15:23 +    0.0s] sha preregistro baa05f9f0df0bcef  script e6fcd8504f7279ef  constructor 0b64a47a35e2d086  mundo_largo_n f3e9ad0118f1d6c5  mundo_largo 9f74ff6b5941e5a5  v13 cc8b16b492d4d324
+[22:15:23 +    0.4s] REGLA 11 - procesos python vivos (5), este es pid 4480
+[22:15:24 +    0.6s] ETAPA 1/3 - identidad gamma_N=0 == mundo_largo, mundo completo con mapa (3)...
+[22:17:32 +  129.3s]   identicos: 3/3
+[22:17:32 +  129.3s] ETAPA 2/3 - 100 corridas...
+[22:18:13 +  170.0s]           20/100
+[22:20:53 +  330.2s]           40/100
+[22:22:20 +  416.7s]           60/100
+[22:24:51 +  567.8s]           80/100
+[22:26:19 +  655.8s]           100/100
+[22:26:19 +  655.8s] ETAPA 3/3 - analisis.
+[22:26:19 +  655.8s]    V13            adq(<=30) 0.887 [0.70,0.95]  adq(final) 0.800  ret_no_inv 0.75  comida_q4 834  muertes 30  recup 3000  celdas 90  M_llenas 0  | visitas 12115 eq 0.710 H 0.997 pisados 8  | sesgo_signo 0.40
+[22:26:19 +  655.8s]    MAPA           adq(<=30) 0.700 [0.50,0.82]  adq(final) 0.700  ret_no_inv 0.58  comida_q4 971  muertes 22  recup 0  celdas 79  M_llenas 8  | visitas 5064 eq 0.139 H 0.895 pisados 8  | sesgo_signo 0.45
+[22:26:19 +  655.8s]    MAPA_NOV       adq(<=30) 0.841 [0.70,0.90]  adq(final) 0.800  ret_no_inv 0.67  comida_q4 918  muertes 34  recup 3000  celdas 90  M_llenas 8  | visitas 13432 eq 0.455 H 0.987 pisados 8  | sesgo_signo 0.39
+[22:26:19 +  655.8s]    MAPA_NOV_BAR   adq(<=30) 0.800 [0.50,0.90]  adq(final) 0.700  ret_no_inv 0.67  comida_q4 957  muertes 26  recup 500  celdas 90  M_llenas 8  | visitas 7880 eq 0.122 H 0.898 pisados 8  | sesgo_signo 0.40
+[22:26:19 +  655.8s]    MAPA_NOV_CTE   adq(<=30) 0.681 [0.50,0.90]  adq(final) 0.700  ret_no_inv 0.67  comida_q4 985  muertes 18  recup 0  celdas 78  M_llenas 8  | visitas 5058 eq 0.084 H 0.853 pisados 8  | sesgo_signo 0.48
+[22:26:19 +  655.8s]    curva V13: 5:0.90 10:0.90 15:0.85 20:0.90 25:0.90 30:0.60 35:0.80 40:0.80 45:0.80 50:0.80
+[22:26:19 +  655.8s]    curva MAPA: 5:0.80 10:0.80 15:0.65 20:0.65 25:0.60 30:0.65 35:0.70 40:0.75 45:0.70 50:0.70
+[22:26:19 +  655.8s]    curva MAPA_NOV: 5:0.80 10:0.90 15:0.80 20:0.80 25:0.90 30:0.60 35:0.80 40:0.80 45:0.80 50:0.80
+[22:26:19 +  655.8s]    P1 NOV adq 0.841 (>=0.85) y >MAPA 17g/2e/1p -> NO
+[22:26:19 +  655.8s]    P2 comida_q4 >=0.9xMAPA en 9/20 -> NO   (referencia informativa 41-60: MAPA 968, V13 837; aqui MAPA 971, NOV 918)
+[22:26:19 +  655.8s]    P3 NOV>BARAJADA 14g/5e/1p [desempate] y BARAJADA>MAPA 10g/4e/6p (no debe pasar) -> OK
+[22:26:19 +  655.8s]    P4 (lectura) NOV>CONSTANTE 18g/1e/1p -> OK
+[22:26:19 +  655.8s] VEREDICTO novedad de sitio: NO (refutado o control caido)
+[22:26:19 +  655.8s] datos -> novedad_alta_s81-100_20260917_221523.json  sha256_16 = 20a8d18cdfd55406

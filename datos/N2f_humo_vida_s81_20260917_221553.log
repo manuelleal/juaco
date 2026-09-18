@@ -1,0 +1,24 @@
+[22:15:53 +    0.0s] HUMO N2f v3 (UN proceso, sin Pool). semilla 81, T=200000, regla azar, regen=50, regen_rota=True, vidas (50, 100, 200), kw {'gamma_sim': 1.2, 'baseline_q': True, 'u_m': 1.0}. pid 33080
+[22:15:53 +    0.0s]   sha_preregistro=212b6d90556a610a  sha_script=ae6466ec3e981194  sha_mundo_social_n3=ef227f833c5bf46a  sha_mundo_social=946ff1c71e375eba  sha_v13=cc8b16b492d4d324  sha_v13g=2a80e125f8593bf2
+[22:16:28 +   34.3s]   K1a s81: IDENTICO
+[22:16:28 +   34.3s]   K1b s81: IDENTICO
+[22:16:28 +   34.3s]   progenitor del experto (n=1, sin regen ni rotacion ni vida, T=200000)...
+[22:16:40 +   46.6s]     venenos conocidos por el experto: 6/10
+[22:16:40 +   46.6s]   --- vida = 50
+[22:17:09 +   75.4s]       N0 listo en 29s
+[22:17:44 +  110.2s]       CONV listo en 35s
+[22:17:44 +  110.2s]   --- vida = 100
+[22:18:24 +  150.8s]       N0 listo en 41s
+[22:19:10 +  196.6s]       CONV listo en 46s
+[22:19:10 +  196.6s]   --- vida = 200
+[22:19:52 +  238.7s]       N0 listo en 42s
+[22:20:40 +  287.0s]       CONV listo en 48s
+[22:20:40 +  287.0s] 
+[22:20:40 +  287.0s]   vida  pat.pres  rech/muerde (razon)        vis com/ven (experto)  por cuarto com/ven                 contraste C      decod  no_des  veneno novato CONV / N0  K3 prox  K5 prox  caduc  
+[22:20:40 +  287.0s]   50    20         13733/5038   (0.367)     5144/13627    1406/3402 1259/3066 1375/3807 1104/3352 -1.12/+1.12      176     465    582 / 691             259      NO          8651
+[22:20:40 +  287.0s]         consistencia Q4 1.000  distintos True  s_rech=1 s_mord=0  M [1.0, -1.24]   N0 veneno Q1->Q4 172->259, conocidos 6/10, muertes 38   K4: razon >= 0.200 OK
+[22:20:40 +  287.0s]   100   20         17657/4645   (0.263)     4909/17393    1292/4066 1244/4502 1190/4452 1183/4373 +0.23/+0.23        3       5    455 / 327             49       SI          6270
+[22:20:40 +  287.0s]         consistencia Q4 0.980  distintos False  s_rech=0 s_mord=0  M [0.318, -0.144]   N0 veneno Q1->Q4 167->49, conocidos 5/10, muertes 27   K4: razon >= 0.200 OK
+[22:20:40 +  287.0s]   200   20         24129/3146   (0.130)     3223/24052    899/5759 840/5977 733/6139 751/6177 -1.02/+1.02      645    2389    696 / 389             62       SI          4049
+[22:20:40 +  287.0s]         consistencia Q4 1.000  distintos True  s_rech=1 s_mord=0  M [0.639, -1.403]   N0 veneno Q1->Q4 174->62, conocidos 5/10, muertes 60   K4: razon >= 0.200 FALLA
+[22:20:41 +  287.0s] datos -> N2f_humo_vida_s81_20260917_221553.json  sha256_16 = 940fb8cf84ae6b36

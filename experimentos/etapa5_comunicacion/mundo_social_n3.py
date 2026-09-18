@@ -1,6 +1,9 @@
 """mundo_social_n3 = mundo_social.py (946ff1c71e375eba) + N3: mascaras de retina por organismo, kwargs por organismo y
 gamma_soc (la ultima senal honesta oida sobre el patron sesga la decision del receptor). Generado por construye_n3.py.
-NO editar. Con gamma_soc=0 y sin mascaras es mundo_social exacto (identidad obligatoria)."""
+NO editar. Con gamma_soc=0 y sin mascaras es mundo_social exacto (identidad obligatoria).
+N2f: + regen_rota (al reaparecer, el tipo se vuelve a sortear: mismo sitio Y flujo de patrones),
+escucha_si_no_sabe (el simbolo no reescribe un valor propio mas informado) y vida (el objeto caduca aunque
+nadie lo muerda: el veneno tambien sale). Las tres apagadas = N3c/N3d bit a bit."""
 """
 mundo_social.py — N organismos v9 en el MISMO anillo, compartiendo los objetos. Etapa 5 (comunicación), nivel N1.
 
@@ -32,26 +35,37 @@ R_VAL = {'comida': 1.0, 'veneno': -3.0}; E_VAL = {'comida': +0.8, 'veneno': -0.4
 
 
 class Mundo:
-    def __init__(self, rng, nobj, tipos, regen=None, fijos=None):
+    def __init__(self, rng, nobj, tipos, regen=None, fijos=None, regen_rota=False, vida=None):
         self.rng = rng; self.nobj = nobj; self.tipos = tipos; self.objs = {}; self.regen = regen; self.pend = {}   # N3c: regen
         self.fijos = list(fijos) if fijos else None   # N3d: tipos iniciales fijos (en orden), en vez de sortearlos
+        self.regen_rota = regen_rota   # N2f: al reaparecer, el tipo se vuelve a sortear (mismo sitio + FLUJO de patrones)
+        self.vida = vida; self.nace = {}; self.t = 0; self.caducados = 0   # N2f-v3: el objeto caduca a t_nace + vida (el veneno tambien sale del mundo)
+
+    def _reaparece(self, kk):   # N2f: con regen_rota=False devuelve el MISMO tipo -> N3c/N3d bit a bit, sin tocar el RNG
+        return self.tipos[int(self.rng.integers(len(self.tipos)))] if self.regen_rota else kk
 
     def spawn(self):
         while len(self.objs) + len(self.pend) < self.nobj:
             x = int(self.rng.integers(L))
-            if x not in self.objs and x not in self.pend: self.objs[x] = self.fijos.pop(0) if self.fijos else self.tipos[int(self.rng.integers(len(self.tipos)))]
+            if x not in self.objs and x not in self.pend:
+                self.objs[x] = self.fijos.pop(0) if self.fijos else self.tipos[int(self.rng.integers(len(self.tipos)))]
+                self.nace[x] = self.t   # N2f-v3: sello de nacimiento (con vida=None no se usa)
 
     def retirar(self, x, t):   # N3c: al morder (o al olvido) el objeto se va; con regen vuelve al MISMO sitio con el mismo tipo
         kk = self.objs.pop(x)
         if self.regen is not None:
             self.pend[x] = (kk, t + self.regen)
             if not self.objs:   # nunca vacio: si se agotaron todos, el pendiente mas antiguo vuelve ya (see() no admite mundo vacio)
-                x0 = min(self.pend, key=lambda y: self.pend[y][1]); kk0, _ = self.pend.pop(x0); self.objs[x0] = kk0
+                x0 = min(self.pend, key=lambda y: self.pend[y][1]); kk0, _ = self.pend.pop(x0); self.objs[x0] = self._reaparece(kk0); self.nace[x0] = self.t   # N2f / N2f-v3
         self.spawn()
 
     def regenerar(self, t):
         for x in [x for x, (kk, tt) in self.pend.items() if tt <= t]:
-            kk, _ = self.pend.pop(x); self.objs[x] = kk
+            kk, _ = self.pend.pop(x); self.objs[x] = self._reaparece(kk); self.nace[x] = t   # N2f / N2f-v3
+
+    def caducar(self, t):   # N2f-v3: lo que lleva `vida` pasos sin que nadie lo muerda se retira igual que si lo hubieran mordido
+        for x in [x for x in self.objs if t - self.nace.get(x, 0) >= self.vida]:
+            if x in self.objs: self.retirar(x, t); self.caducados += 1
 
 
 class Organismo:
@@ -59,7 +73,8 @@ class Organismo:
                  theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True, mu_norm=True, estado=None,
                  div_signo=True, eta_s=0.015, clip_s=3.0, puerta=3, pats=None, mundo='AB',
                  rng_q=None, K_sim=2, beta_q=2.0, eta_q=0.1, eta_m=0.1, tau_m=200, u_m=0.5,
-                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False, gamma_soc=0.0, tau_soc=400, escucha=True):   # N3 (+escucha: N3b, ERR-23)
+                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False, gamma_soc=0.0, tau_soc=400, escucha=True,
+                 escucha_si_no_sabe=False):   # N3 (+escucha: N3b, ERR-23); N2f: escucha_si_no_sabe
         """Replica linea a linea a organismo/organismo_v13.py (v11 + via lenta lineal + puerta de familiaridad).
         Con div_signo=False, eta_s=0, puerta=None es v10; ademas mu_norm=False, v9.
         pats/mundo: 'AB' (A,B) o 'regla' (los 20 patrones de peso 3, como organismo_v13g). N2: simbolos aprendidos
@@ -83,6 +98,7 @@ class Organismo:
         self.gamma_sim = gamma_sim; self.baseline_q = baseline_q; self.rho_b = rho_b; self.b = np.zeros(2); self.ultimo = {}
         self.alinea = alinea; self.alineaciones = 0   # N2e: el simbolo toma el valor de lo que el receptor ya conoce
         self.gamma_soc = gamma_soc; self.tau_soc = tau_soc; self.s_ult = {}; self.n_sesgo_soc = 0; self.escucha = escucha   # N3: ultima senal honesta oida por patron; N3b: si no escucha, no recibe nada
+        self.escucha_si_no_sabe = escucha_si_no_sabe; self.no_desensena = 0   # N2f: el simbolo no reescribe un valor propio MAS informado que el
         self.Wp = np.zeros(NKMAX); self.Wn = np.zeros(NKMAX); self.err = np.zeros(NKMAX); self.mu = np.zeros((NKMAX, 6))
         self.splits = 0; self.el = np.zeros_like(self.Wl); self.tr = np.zeros(9)
         self.Wps = np.zeros(6); self.Wns = np.zeros(6)   # v13: via lenta lineal sobre la retina
@@ -140,7 +156,11 @@ class Organismo:
         # consecuencias (-1 con 10 venenos y 10 comidas) y el receptor devaluaria todo lo senalado; lo que informa es
         # cuanto se aparta un simbolo de la media de los simbolos.
         R_hat = float(self.M[s] - self.M.mean())
-        if self.learn and abs(R_hat) >= self.u_m:
+        # N2f: el que ya sabe del patron mas de lo que el simbolo dice no se deja desensenar (cortocircuito: con la
+        # perilla apagada `valor(kk)` ni se evalua, y `valor`/`kenyon`/`code` no tocan estado ni RNG).
+        _sabe_mas = self.escucha_si_no_sabe and abs(self.valor(kk)) >= abs(R_hat)
+        if _sabe_mas and abs(R_hat) >= self.u_m: self.no_desensena += 1
+        if self.learn and abs(R_hat) >= self.u_m and not _sabe_mas:
             kc = self.kenyon(self.P_[kk]); Wb = self.Wp - self.Wn
             self._aprender(kk, kc, Wb, R_hat, f_vicaria, t, dividir=False)
             self.decodificados += 1; self.vicarias[kk] += 1; self.vicarias_signo[kk][0 if R_hat > 0 else 1] += 1
@@ -278,7 +298,7 @@ class Organismo:
         return dict(W=W, comp=comp, W_lenta=W_lenta, mord=self.mord, vis=self.vis, deaths=self.deaths, splits=self.splits, split_t=self.split_t, n_sesgo_soc=self.n_sesgo_soc,
                     celdas=int(self.activa.sum()), dq=self.dq, n_crit=self.n_crit, veneno_propio=self.veneno_propio,
                     vicarias=self.vicarias, vicarias_signo=self.vicarias_signo, avisos_B_antes_crit=self.avisos_B_antes_crit,
-                    t_ext_B=self.t_ext_B, t_B_ok=self.t_B_ok, M=[round(float(x), 3) for x in self.M], simbolos_recibidos=self.simbolos_recibidos,
+                    t_ext_B=self.t_ext_B, t_B_ok=self.t_B_ok, M=[round(float(x), 3) for x in self.M], simbolos_recibidos=self.simbolos_recibidos, no_desensena=self.no_desensena,
                     decodificados=self.decodificados, simbolos=sim)
 
 
@@ -287,7 +307,7 @@ SIMBOLOS = ('simbolo', 'simbolo_barajado')
 
 def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
         estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, estado_emisor='conducta', u_v=0.5,
-        mascaras=None, kw_por_org=None, regen=None, tipos_fijos=None, mudo_desde=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen; N3d: tipos_fijos; N3d-mudo: mudo_desde
+        mascaras=None, kw_por_org=None, regen=None, tipos_fijos=None, mudo_desde=None, regen_rota=False, vida=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen; N3d: tipos_fijos; N3d-mudo: mudo_desde; N2f: regen_rota; N2f-v3: vida
     """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
               | 'barajada' (como honesta, signo al azar) | 'barajada_conducta' (como conducta, signo al azar)
               | 'simbolo' (N2: K_sim simbolos sin significado; el emisor aprende cual emitir, el receptor que significa)
@@ -310,13 +330,15 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
     rng_mundo = rngs[0] if (n == 1 and compat) else np.random.default_rng(seed + 900000)
     rng_senal = np.random.default_rng(seed + 300000)
     tipos = list(tren)
-    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen, fijos=tipos_fijos); mundo_.spawn()   # N3c / N3d
+    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen, fijos=tipos_fijos, regen_rota=regen_rota, vida=vida); mundo_.spawn()   # N3c / N3d / N2f / N2f-v3
     tipos.extend(test)   # como v13g con fase2_en=0: los de test entran en t=0, tras el sorteo inicial
     mundo = mundo_
     senales_emitidas = [0] * n; senales_recibidas = [0] * n
     pendientes = []   # N2: emisiones que esperan la conducta del receptor sobre el mismo patron (refuerzo del emisor)
     for t in range(T):
+        mundo.t = t   # N2f-v3: reloj del mundo para el sello de nacimiento (con vida=None no cambia nada)
         if mundo.pend: mundo.regenerar(t)   # N3c
+        if mundo.vida is not None: mundo.caducar(t)   # N2f-v3
         if invertir_en is not None and t == invertir_en and 'A' in val and 'B' in val: val = {'A': 'veneno', 'B': 'comida'}
         orden = range(n) if t % 2 == 0 else range(n - 1, -1, -1)
         emitidas = []
@@ -372,6 +394,6 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
             orgs[i].fase_B(t)
     out = [o.resultado() for o in orgs]
     for i in range(n):
-        out[i]['senales_emitidas'] = senales_emitidas[i]; out[i]['senales_recibidas'] = senales_recibidas[i]
+        out[i]['senales_emitidas'] = senales_emitidas[i]; out[i]['senales_recibidas'] = senales_recibidas[i]; out[i]['caducados'] = mundo.caducados   # N2f-v3
         if devolver_estado: out[i]['estado'] = orgs[i].estado()
     return out
