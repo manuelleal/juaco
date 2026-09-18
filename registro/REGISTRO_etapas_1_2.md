@@ -3328,3 +3328,26 @@ M1/M2 no depende de eso. **(3)** el control de prioridad barajada permutaba sobr
 control permute sólo sobre celdas/sitios activos. **(4)** aceptado como práctica: listar en cada preregistro la
 puerta como causa candidata cuando el resultado depende del readout. **(5)** `None → 0.0/0.5` sin guardia y `med([])`
 en los runners: **aceptado**; se corrige en los runners nuevos. Las cuatro trampas: sin hallazgos nuevos.
+
+
+### Bloque 5 (N2f, diseño del agente diseñador): humo de un proceso antes de correr — **dos hallazgos que cambian el diseño; no se corre como estaba**
+
+Diseño entregado (en el worktree del agente; se integra con la versión 2): N2b letra por letra sobre `mundo_social_n3`
+con `regen = 50`, E1–E6 sin suavizar, puertas de validez nuevas K3 ("queda algo que enseñar": veneno Q4 del novato solo
+≥ 20) y K4 ("las visitas se equilibran": emisiones muerde ≥ 1/5 de rechaza). Humo (semilla 81, progenitor + N0 + CONV,
+identidades K1a/K1b idénticas con `regen = None`):
+1. **Por primera vez en la línea N2 hay magnitud:** contraste **−1.28 / +1.28** (serie N2 0.00 · N2b ±0.42 · N2c ±0.35 ·
+   N2d ±0.34 · N2e ±0.11), consistencia 0.9994, 6 272 decodificaciones. Las emisiones se equilibran ×18 (rechaza 19 335 /
+   muerde 5 524 = 0.29 contra 0.016 en N2d), aunque por objeto sigue ~7:1.
+2. **Pero el símbolo "desenseña" al que sabe:** el novato de CONV muerde **135** venenos contra **34** el de N0: sus
+   valores de veneno se quedan en −1.29/−1.36 (el valor del símbolo) en vez de −2.45/−2.34 (lo que aprende solo). El
+   empujón vicario arrastra el valor propio hacia la magnitud del símbolo, más grosera que lo ya sabido.
+3. **Fallo de validez del mundo con `regen`:** al reaparecer siempre el mismo tipo en el mismo sitio, los 8 objetos
+   iniciales se repiten 200 000 pasos y **los patrones de test nunca aparecen** (5 patrones presentes de 20) → K3 caería
+   (el mismo fallo S4 de N3c). En N3c/N3d era intencional (`tipos_fijos`); en N2 no.
+
+**Decisión (coordinador):** no correr; versión 2 con dos cambios en brazos separables: `regen_rota` (al regenerar, el
+tipo se vuelve a sortear: reaparición en sitio + flujo de patrones) y `escucha_si_no_sabe` (el empujón vicario sólo si
+|valor propio| < |valor del símbolo|). Brazos CONV (ambos), CONV_MUNDO (sólo el mundo), N0, SOLO, INNATO, SHUF.
+Predicción escrita: E2 pasa en CONV y CONV_MUNDO (la magnitud viene del mundo); E4 sólo en CONV. Vocabulario por
+ahora: *en el mundo con reaparición el símbolo adquiere magnitud; enseña al que no sabe y desenseña al que sabe*.
