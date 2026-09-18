@@ -60,6 +60,7 @@ ambos, se prueba primero la composición (identidad de cada uno con el otro apag
 
 Capacidad: `N*` 50.5 (= v11) contra 35 de v13 en el paso largo; 41.5 contra 28 en el corto (umbral 45 no alcanzado). Generalización
 intacta (px0 1.000, G2 0.96); barajar los contadores destruye la ganancia (20/20). Examen v3': todo pasa salvo **E2 19/20** (una
-semilla, subcriterio conductual `come B Q4 ≥ 50`). **Condición:** réplica del examen en 121–140 con la misma letra; si 8/8,
-entra a la propuesta; si no, órgano de experimento. Datos `puerta_codigo_s41-60_20260918_013618`. Componible con los otros dos
+semilla, subcriterio conductual `come B Q4 ≥ 50`). **Condición CUMPLIDA (02:41):** réplica del examen v3' en 121–140 con la misma letra → **8/8** (E2 20/20; 39/40 en dos
+series). Entra a la propuesta como tercer candidato (copia en la rama `v14-candidato`:
+`organismo/organismo_v14_candidato_puerta.py` = `experimentos/nivel4_puerta_codigo/organismo_v13Bn5c.py`). Datos `puerta_codigo_s41-60_20260918_013618`. Componible con los otros dos
 (actúa en el ruteo, no en el aprendizaje ni en la boca).

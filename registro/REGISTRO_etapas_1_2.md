@@ -4116,3 +4116,17 @@ una parte de la generalización de valor a la dosis probada*.
 ### ERR-31 (02:50): el runner `corre_baterias_v13E.py` decidía E2 con los umbrales de `bateria_generaliza` (0.65 / 0.55), no con los preregistrados (0.80 / 0.85)
 Consecuencia: veredicto impreso "NO REGRESIONA" contra un preregistro que dice lo contrario. Sin efecto en el registro (se
 sigue la letra); regla: el runner codifica los umbrales del preregistro, no los de la batería que reutiliza.
+
+
+### B-2, réplica del examen v3' de PATC en semillas nuevas 121–140 (enmienda 2; 18 sep 02:41): **8/8 — E2 20/20** → la puerta por evidencia del código (código ∧ 1 celda consolidada) es el **tercer candidato a v14**
+
+`bateria_v13Bc.py 20 --desde 121 --log`, misma letra; datos `examen_v13Bc_20260918_023737` (e1b50852bbf07fea), 3.1 min. E1–E2L
+**20/20 × 6** (E2 `come B Q4 ≥ 50` 20/20; en 101–120 había sido 19/20 → 39/40 en dos series), celdas ≤ 45, 3' 0/20, 3'' 20/20,
+4a–4d OK, identidad 5 OK. Con esto PATC tiene: capacidad de v11 en el paso largo (`N*` 50.5 contra 35 de v13; 20 000: 41.5
+contra 28, umbral 45 no alcanzado — se registra como no alcanzado), generalización intacta (px0 1.000 / G2 0.96, 101–120),
+contadores barajados destruyen la ganancia (20/20), examen v3' 8/8 en 121–140 (39/40 en E2 sobre dos series), identidad de la
+copia 21/21. Mecanismo: `familiar(P) ⟺ ncod[código(P)] ≥ 5 ∧ ≥ 1 celda consolidada`; memoria: un entero por código visto; no
+toca el aprendizaje, sólo el ruteo. **Entra a `registro/PROPUESTA_v14.md` como tercer candidato (condición cumplida); la
+decisión es del director.** Vocabulario: *la puerta pregunta si lo ha visto y si tiene al menos una celda que lo sostenga; con
+eso recuerda tanto como v11 y generaliza como v13*. Abierto: el paso corto (41.5 < 45) y la composición con los otros
+candidatos.

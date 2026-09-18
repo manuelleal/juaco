@@ -155,8 +155,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   · **ERR-25**: la puerta de v13 no distingue "no aprendido" de "cancelado" (verificado por el auditor); B-2 (puerta por
     evidencia del código exacto) CORRIDO 41–60 (02:32): PATC recupera la capacidad de v11 en el paso largo (`N*` 50.5
     contra 35 de v13; 20 000: 41.5 contra 28, umbral 45 no alcanzado) con la generalización intacta (px0 1.000 / 0.96) y
-    barajar los contadores la destruye (20/20); el examen v3' cae por una semilla en E2 (19/20) → réplica del examen en
-    121–140 (enmienda 2) antes de proponerlo; PAT (sin celda consolidada) falla 3'' como predijo B: la puerta también
+    barajar los contadores la destruye (20/20); el examen v3' cayó por una semilla en E2 (19/20) y **la réplica en 121–140 da
+    8/8 → tercer candidato a v14** (`PROPUESTA_v14.md`, rama `v14-candidato`); PAT (sin celda consolidada) falla 3'' como predijo B: la puerta también
     detecta conflicto. Tercer candidato condicionado en `PROPUESTA_v14.md`. **Examen v3'' completo de v13E (02:45): retención 8/8
     (criterio 5 adaptado, ERR-30) pero G1 px0 0.750 < 0.80 → la sorpresa del mundo en la boca queda FUERA de la propuesta a
     la dosis probada (coste 0.05 en generalización de valor; preregistrar dosis menor). ERR-31: el runner leyó los umbrales
