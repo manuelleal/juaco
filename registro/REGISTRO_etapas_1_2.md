@@ -4402,3 +4402,30 @@ pueden aprender nada propio por construcción; toda lectura anterior de N3d como
 línea al que ve* (ya era el vocabulario declarado; ahora con la causa). **Aprobado:** mundo mínimo decidible — parejas con vista
 PARCIALMENTE distinta para el receptor, puertas de validez de N3d, y el mudo (N6) como predicción principal (C-P6). Regla
 nueva del creador (anotada): toda predicción "≤ k × la base" necesita cláusula para cuando la base no alcanza el criterio.
+
+
+### Bloque A-4 = BLOQUE 1 de 3 del criterio de parada (XOR; 18 sep 05:35; semillas 81–100): **las dos constantes de la vía lenta (eta_s 0.15, clip_s 10) hacen que la regla local llegue a 1.000 con los rasgos correctos (150 exposiciones contra 400) sin dañar el tronco (examen 8/8, generalización 1.000 / 0.967) — pero con los rasgos propios del organismo XOR sigue en 0.50–0.63: el cuello que queda es CONSTRUIR el rasgo conjuntivo (V3 cae: 11/20)**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_xor_4.md` (b8f3a148041753cc; anula el borrador 3f); instrumento `organismo_v13q5`
+(fae9c32b146fdbb4; identidad 16/16 + 3/3 en el runner); datos `xor_4_s81-100_20260918_053016` (0e5722530398e651), 480 corridas, 4.6 min.
+
+| lectura | brazo | `acc_lenta` xor01 (mediana) | abre `P0·P1` | eventos | n* (≥ 0.75) |
+|---|---|---|---|---|---|
+| oráculo {P0,P1,P0·P1,1} | TRONCO (0.015, 3) | 0.625 | — | ~290 | 400 |
+| oráculo | **DOS_NUM (0.15, 10)** | **1.000** (> TRONCO 16/20) | — | 270 | **150** |
+| oráculo | DOS_NUM + WTA | 0.875 | 20/20 | 264 | 200 |
+| cuadrática (rasgos propios) | TRONCO | 0.500 | 0/20 | 292 | > 600 |
+| cuadrática | DOS_NUM | 0.500 | 0/20 | 231 | > 600 |
+| cuadrática | **DOS_NUM + WTA** | **0.625** | **11/20** | 214 | > 600 |
+| cualquiera | ETA_1 (1.0, 10) | 0.500 | — | **2–16** | — |
+
+V1 **OK** (oráculo 1.000, > TRONCO 16/20), V2 **OK** (cuadrática 0.500 ≤ 0.65: el techo son los rasgos), **V3 NO** (WTA abre `P0·P1` 11/20 < 15;
+`acc` 0.625), V4 OK por la letra pero **no comparable** (ETA_1 cambia la conducta: 2–16 eventos; cláusula §7 del preregistro escrita
+antes), V5 NO por ETA_1 (px0 0.500, misma causa). Veredicto del runner: *"las dos constantes no bastan"*. **Controles del tronco
+(§6):** `organismo_v14` con (0.15, 10): examen v3' **8/8** en 101–120 (`examen_v14_e015c10_*`), generalización **K 20/20, G1 1.000, G2 0.967**
+(`regresion_generaliza_organismo_v14_e015c10_*`) → las constantes no cuestan nada al tronco (identidad con las originales 16/16).
+**Lectura:** el cuello de la regla queda resuelto y medido (la regla local llega donde llega el gradiente exacto cuando le dan los
+rasgos, y aprende 2.7× más rápido en exposiciones); **el cuello que queda es construir el rasgo conjuntivo en pocas exposiciones**:
+la selección meta-aprendida lo abre en 11/20 y sube a 0.625, no a 0.75. **Bloque 1 de 3: XOR 0.625 (no cruza 0.75).** Propuesta
+derivada, sin ejecutar: v14.1 = v14 con (0.15, 10) (cambio de dos constantes del tronco congelado; decisión del director). Siguiente
+bloque (A-6): mecanismo local de construcción/selección de rasgos conjuntivos con `n*` como número principal.
