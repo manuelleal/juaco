@@ -26,6 +26,14 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
    segmenta sin traza: mataría a cada worker de `Pool`; hallado por el compilador de `mundo_temporal_k`); probar siempre
    un proceso NUEVO leyendo el cache antes de dar el gemelo por bueno.
 
+10. **Subconjuntos, enmiendas y anclas (auditoría del día 7):** un análisis sobre un subconjunto de semillas sólo vale si
+   (a) se preregistra por enmienda ANTES de la serie nueva, con el criterio de validez fijado antes de ver esos datos,
+   (b) lo ejecuta un script del repositorio (`analiza_*.py`) sobre los JSON — nunca en línea — y (c) el conjunto completo
+   se reporta al lado. Regla automática: si una puerta de validez cae por debajo de su umbral pero la cumplen ≥ 60 % de
+   las semillas, el análisis del subconjunto con los umbrales ORIGINALES del criterio se hace siempre y se reporta junto al
+   completo (deja de ser una decisión nueva cada vez). Las anclas de reproducción (K0 y similares) se copian del JSON de
+   precisión completa, nunca de un log impreso con redondeo.
+
 ## Roles
 | rol | modelo | qué hace | entrega |
 |---|---|---|---|

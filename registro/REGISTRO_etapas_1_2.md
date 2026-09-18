@@ -3558,9 +3558,12 @@ lecturas refutadas; el candidato a causa es la identificabilidad, pendiente de 3
 Preregistro `experimentos/nivel8_escala_mapa/PREREGISTRO_escala_mapa.md` (agente diseñador; `sat_M = 1.0 = R_VAL['comida']`, fijado
 antes de correr por la escala del mundo); instrumento `mundo_largo_e.py` (`d1398f0428b1739b`, perillas apagadas ≡ `mundo_largo`
 3/3 con el mundo completo); datos `escala_s81-100_20260917_230039` (`05a712ef734aba56`), semillas 81–100 (las mismas de la
-serie de novedad 1.8: la puerta K0 reprodujo V13 0.887 / MAPA 0.700 / comida 971 **exactamente** — el runner imprimió "NO:
-instrumento sospechoso" por una comparación de flotantes mal escrita (0.700 == 0.7 con redondeo); los valores son idénticos,
-no hay sospecha: defecto menor del runner, anotado).
+serie de novedad 1.8: la puerta K0 reprodujo MAPA 0.700 / comida 971 exactamente y V13 **0.8875** contra un ancla escrita
+como 0.887 — el runner imprimió "NO: instrumento sospechoso" porque el ancla se transcribió de la impresión a tres
+decimales del log anterior en vez del JSON de precisión completa. **Corrección (auditoría del día 7, hallazgo 1):** el
+diagnóstico que quedó escrito aquí primero ("comparación de flotantes mal escrita") era erróneo; los valores son
+idénticos, no hay sospecha; `corre_escala.py` lleva ahora el ancla 0.8875 (cambio posterior a la corrida, sin tocar datos;
+el JSON conserva `K0_esperado = 0.887`). Lección: las anclas de reproducción se copian del JSON, nunca de un log).
 
 | brazo | adquisición (≤ 30) | comida Q4 | visitas / equidad | celdas |
 |---|---|---|---|---|
@@ -3663,12 +3666,12 @@ V1 = `M` con los tres sitios):**
 
 | serie | válidas | R1 rodeo (mediana) | pareado MAPA > SINMAPA | R2 atajo | llega limpio | R1 en las NO válidas |
 |---|---|---|---|---|---|---|
-| 41–60 | 14/20 | **0.725** | **14/14** | 0.750 | 0.875 | 0.550 |
+| 41–60 | 14/20 | **0.725** | **14/14** | 0.750 | 0.875 | 0.600 |
 | 61–80 | 16/20 | **0.750** | **16/16** | 0.700 | 0.850 | 0.800 |
 
 Las dos series pasan la enmienda (≥ 12 válidas, R1 ≥ 0.70, pareado ≥ 75 %, R2 ≥ 0.70, llega ≥ 0.60) y también los cuatro
 criterios sobre el conjunto completo. Donde el mecanismo no predice rodeo (veneno recordado débil, 4–6 semillas) el
-resultado es indistinguible del azar en una serie y alto en la otra: consistente con que el rodeo lo produce la suma
+resultado es más bajo en una serie (0.600) y alto en la otra (0.800; 4–6 semillas, sin potencia): consistente con que el rodeo lo produce la suma
 descontada del valor recordado, no otra cosa (INVERTIDO 0.25 en ambas; SINMAPA = CONGELADA bit a bit 0.45–0.50).
 
 **Declarable (nivel 6, segundo peldaño):** *con dos comidas recordadas fuera de la vista, elige la más cercana cuando el
@@ -3686,3 +3689,19 @@ original en CONV (T = 30 000, 3 semillas) **3/3** e identidades de montaje 6/6 a
 (> SOLO_R 20/20; > SHUF 20/20; > SACIEDAD 20/20; N0 > SOLO_R 2/20, validez OK). SHUF 0.488, SACIEDAD 0.507, N0 0.504,
 SOLO_R 0.512, TECHO 0.998. `corre_N3d.py --rapido` queda enganchado (la serie con gemelo tarda minutos, no horas).
 Vocabulario sin cambio: *transfiere entre sensores por conducta*. Tres series independientes: se declara replicado ×3.
+
+
+### Auditoría del día 7 (agente auditor, Sonnet; `registro/investigacion/AUDITORIA_dia7_20260917.md`): **sin hallazgos bloqueantes; dos importantes corregidos**
+
+Revisó 3d/3e, escala del mapa, allostasis, rodeo y las réplicas con gemelos contra preregistro + instrumento + runner +
+JSON/log (no la prosa). Identidades 100 % en sus JSON, anclas con conteo exacto, acierto balanceado, ningún `humo()` con
+`Pool`, defensas contra las cuatro trampas implementadas de verdad, sin vocabulario inflado.
+**Hallazgo 1 (importante) — K0 del bloque 2 ter:** la causa real del "NO: instrumento sospechoso" fue un ancla transcrita
+a tres decimales (0.887 contra 0.8875 medido), no una comparación de flotantes; entrada corregida arriba y ancla
+corregida en `corre_escala.py`. **Hallazgo 2 (importante) — rodeo:** la enmienda 1 nunca entró en `corre_rodeo.py`; el
+análisis del subconjunto se hizo en línea. **Acción:** `experimentos/nivel6_rodeo/analiza_subconjunto.py` (lee los JSON,
+aplica la enmienda tal cual) reproduce los números registrados: 41–60 válidas 14/20, R1 0.725, pareado 14/14, R2 0.750,
+llega 0.875; 61–80 válidas 16/20, R1 0.750, pareado 16/16, R2 0.700, llega 0.850 → PASA en las dos. **Menores:** ERR-24
+(control SINCOMIDA con n efectivo bajo) debilita también las dos series anteriores del mapa (1–20 y 21–40), no sólo la de
+41–60 — queda anotado aquí: las dos "confirmaciones" previas de C3 no cuentan como replicación independiente de ese
+control; la comparación fuerte del mapa es MAPA contra SINMAPA/CONGELADA e INVERTIDO, no contra SINCOMIDA; y las "enmiendas de subconjunto" pasan a regla estándar (`EQUIPO.md`, regla 10).

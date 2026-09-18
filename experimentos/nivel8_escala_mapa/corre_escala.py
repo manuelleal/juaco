@@ -27,7 +27,7 @@ BRAZOS = {
 CRITERIO = ('V13', 'MAPA', 'MAPA_SAT', 'MAPA_SAT_BAR')
 # K0 (preregistro §2): con las perillas apagadas el instrumento es mundo_largo bit a bit, y estas semillas ya estan
 # medidas en novedad_alta_s81-100_20260917_221523 -> los brazos de referencia deben REPRODUCIRSE EXACTAMENTE.
-K0 = {'V13_adq': 0.887, 'MAPA_adq': 0.700, 'MAPA_comida_q4': 971.0}
+K0 = {'V13_adq': 0.8875, 'MAPA_adq': 0.700, 'MAPA_comida_q4': 971.0}   # 0.8875 del JSON (auditoria dia 7: el 0.887 venia del log a 3 decimales; corregido tras la corrida, sin tocar datos)
 N_PARALELO = 14
 _log = {'f': None, 't0': time.time()}
 
