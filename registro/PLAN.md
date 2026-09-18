@@ -102,6 +102,14 @@
 >   (descendientes viables), después como mecanismo (selección: la evolución del organismo entero). Entra como MUNDO NUEVO
 >   por anclas: con una necesidad y dos estímulos debe ser v14 bit a bit. Diseño primero (diseñador), sin correr nada grande.
 >
+> **REVISIÓN DE RUMBO (06:45, a petición del director: "¿nos estamos yendo del camino?"): ligera dispersión, corregida así:**
+>   **Columna vertebral = XOR** (los tres bloques del criterio de parada, nada los adelanta en el Pool): A-4 (dos constantes de
+>   la vía lenta; corriendo) → A-6 (construir los rasgos: selección conjuntiva en pocas exposiciones) → un tercero si hace falta.
+>   **Laterales, un bloque cada uno y se cierran:** B-5 (asociación por parecido en el mundo de regla, px0 contra azar) y C-P6
+>   (N2 por predicción en el mundo decidible, mudo como predicción principal). **Mundo vivo (F): sólo diseño y preregistro hasta
+>   el veredicto de XOR**; si XOR cruza 0.75 es el siguiente peldaño (significado por necesidad); si no cruza, el mundo vivo
+>   con reproducción es el cambio de paradigma ya escrito. Nada nuevo se abre sin cerrar uno de estos.
+>
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
 > (lista de la noche del 17: canal simétrico, acierto sin balancear, mundo que se come la comida, sitios que se memorizan).
 >
