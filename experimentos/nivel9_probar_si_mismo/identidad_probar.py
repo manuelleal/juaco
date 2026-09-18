@@ -3,7 +3,14 @@
 J1  organismo_v13p  con TODAS las perillas apagadas            == organismo_v13     (todas las claves de v13)
 J2  organismo_v13p  con las lecturas encendidas, sin usarlas   == organismo_v13     ("solo miden")
 J3  organismo_v13p  con el brazo SELF-TEST completo            == organismo_v13s    (continuidad con la mini-prueba)
+    EXCEPTO la clave de SOLO LECTURA `sesgo_boca`: organismo_v13s la acumulaba con el `s_barra` YA ACTUALIZADO de ese
+    encuentro, y organismo_v13p acumula el sesgo REALMENTE APLICADO a la boca (`_sg`, con el `s_barra` previo, que es
+    el causal). La CONDUCTA es identica bit a bit (J3 compara todas las demas claves); la diferencia en la media por
+    cuarto es del orden del ultimo decimal a T = 200 000 (medido: 0.3056 contra 0.3055 en una semilla de tres, e
+    identico en las otras dos), porque el EMA es insesgado en regimen. Se informa el maximo de la diferencia.
 J4  organismo_v13pg con TODAS las perillas apagadas            == organismo_v13g    (mundo de regla)
+J5  organismo_v13p  con resta_cota=True  y k_test=0            == organismo_v13     (la perilla es inerte sin k_test)
+J6  organismo_v13p  con resta_lenta=True y k_test=0            == organismo_v13     (idem)
 
 Uso:  python experimentos/nivel9_probar_si_mismo/identidad_probar.py [T]
 """
@@ -38,13 +45,16 @@ def main():
     T = int(sys.argv[1]) if len(sys.argv) > 1 else 10000
     print(f"IDENTIDAD C-P1 — T={T}, semillas {SEMILLAS[0]}-{SEMILLAS[-1]}")
     t0 = time.time()
-    tot = {k: [0, 0] for k in ('J1', 'J2', 'J3', 'J4')}
+    tot = {k: [0, 0] for k in ('J1', 'J2', 'J3', 'J4', 'J5', 'J6')}
+    maxsb = [0.0]
 
     for nom, kw0 in ESCENARIOS:
         kw = {k: (T // 2 if v is None else v) for k, v in kw0.items()}
         for s in SEMILLAS:
             ref = V13.run(s, T=T, **kw)
-            for et, extra in (('J1', APAGADO), ('J2', SOLO_MIDE)):
+            for et, extra in (('J1', APAGADO), ('J2', SOLO_MIDE),
+                              ('J5', dict(APAGADO, resta_cota=True)),
+                              ('J6', dict(APAGADO, resta_lenta=True))):
                 got = V13P.run(s, T=T, **kw, **extra)
                 d = dif(ref, {k: got[k] for k in ref}); tot[et][1] += 1
                 tot[et][0] += not d
@@ -52,7 +62,10 @@ def main():
                     print(f"  DIFIERE {et} {nom} s={s}: {d}")
             a = V13S.run(s, T=T, **kw, **SELF_TEST_v13s())
             b = V13P.run(s, T=T, **kw, **SELF_TEST)
-            d = dif(a, {k: b[k] for k in a}); tot['J3'][1] += 1
+            d = [k for k in dif(a, {k: b[k] for k in a}) if k != 'sesgo_boca']
+            dsb = max(abs(float(x) - float(y)) for x, y in zip(a['sesgo_boca'], b['sesgo_boca']))
+            maxsb[0] = max(maxsb[0], dsb)
+            tot['J3'][1] += 1
             tot['J3'][0] += not d
             if d:
                 print(f"  DIFIERE J3 {nom} s={s}: {d}")
@@ -67,9 +80,10 @@ def main():
             if d:
                 print(f"  DIFIERE J4 {regla} s={s}: {d}")
 
-    for et in ('J1', 'J2', 'J3', 'J4'):
+    for et in ('J1', 'J2', 'J3', 'J4', 'J5', 'J6'):
         ok, n = tot[et]
-        print(f"  {et}: {ok}/{n} {'OK' if ok == n else 'FALLA'}")
+        print(f"  {et}: {ok}/{n} {'OK' if ok == n else 'FALLA'}"
+              + (f"   (max |dif| en sesgo_boca, SOLO LECTURA: {maxsb[0]:.6f})" if et == 'J3' else ""))
     print(f"  ({round(time.time()-t0,1)} s)")
     return 0 if all(v[0] == v[1] for v in tot.values()) else 1
 

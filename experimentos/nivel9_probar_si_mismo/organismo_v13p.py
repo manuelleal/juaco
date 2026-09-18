@@ -1,7 +1,10 @@
 """organismo_v13p = organismo_v13s (2eaba8dde27f05bd) + predictor de dE del bloque 6 entrando en la BOCA
 (k_testE), traza temporal de la sorpresa sobre si mismo e inyeccion desplazada (control MOMENTO), y mord_post.
 Linaje: organismo_v13.py (cc8b16b492d4d324) -> organismo_v13s.py (2eaba8dde27f05bd) -> este.
-Con TODAS las perillas nuevas apagadas es v13s, y v13s con las suyas apagadas es v13, bit a bit (J1/J2/J3/J4).
+Con TODAS las perillas nuevas apagadas es v13s, y v13s con las suyas apagadas es v13, bit a bit (J1..J6).
+ENMIENDA 2: perillas resta_cota (excede la cota de oraculo 2b(1-b)) y resta_lenta (excede una linea base
+lenta de la propia sorpresa, ema_lento), y el campo
+t_primer_sesgo (latencia del primer sesgo > 0.05 tras la inversion; solo lectura).
 Preregistro: experimentos/nivel9_probar_si_mismo/PREREGISTRO_probar_si_mismo.md.
 Generado por experimentos/nivel9_probar_si_mismo/construye_probar.py. NO editar a mano.
 """
@@ -11,7 +14,7 @@ PAT={'A':np.array([1,1,0,1,0,0.]),'B':np.array([1,0,1,0,1,0.]),'C':np.array([0,1
 R_VAL={'comida':1.0,'veneno':-3.0}; E_VAL={'comida':+0.8,'veneno':-0.4}
 
 def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuevo_val='veneno',solap_B=None,
-        eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,lam=0.05,memoria_rechazo=20,mu_norm=True,div_signo=True,eta_s=0.015,clip_s=3.0,puerta=3,eta_b=0.0,k_auto=0.0,ema_auto=0.0,k_test=0.0,test_fijo=0.0,buf_auto=1000,clip_b=3.0,eta_e=0.0,h_pred=100,buf_e=200,eta_pred=0.0,clip_e=3.0,ema_pred=0.0,k_testE=0.0,n_traza=0,traza_ext=None,desfase=0,k_testM=0.0):
+        eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,lam=0.05,memoria_rechazo=20,mu_norm=True,div_signo=True,eta_s=0.015,clip_s=3.0,puerta=3,eta_b=0.0,k_auto=0.0,ema_auto=0.0,k_test=0.0,test_fijo=0.0,buf_auto=1000,clip_b=3.0,eta_e=0.0,h_pred=100,buf_e=200,eta_pred=0.0,clip_e=3.0,ema_pred=0.0,k_testE=0.0,n_traza=0,traza_ext=None,desfase=0,k_testM=0.0,resta_cota=False,resta_lenta=False,ema_lento=0.0025):
     rng=np.random.default_rng(seed)
     Wl=rng.uniform(.1,.4,(2,9)); KW=np.zeros((NKMAX,6)); activa=np.zeros(NKMAX,bool); KW[:NK]=rng.uniform(0,1,(NK,6)); activa[:NK]=True
     def code(P):
@@ -37,6 +40,9 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     Wpe=np.zeros(6); Wke=np.zeros(NKMAX); _sbarE=0.; _srE=0.   # v13p: predictor de dE (bloque 6, copiado). Aqui NO modula eta: entra en la BOCA
     _trzs=[0.]*max(n_traza,1); _trzn=[0]*max(n_traza,1); _sm=0.   # v13p: traza de s_barra por cubeta y sesgo inyectado (control MOMENTO)
     mord_post={'comida':0,'veneno':0}   # v13p: bocados tras la inversion (P6)
+    _fbar=0.; _fS=0.   # v13p (ENMIENDA 2): cota de oraculo 2b(1-b) y su EMA, con la MISMA ema_auto. Inerte si resta_cota=False
+    _sbarL=0.   # v13p (ENMIENDA 2): linea base LENTA de la propia sorpresa (ema_lento). Inerte si resta_lenta=False
+    t_primer_sesgo=None; _encps=0; _mordps=0   # v13p (ENMIENDA 2): latencia del primer sesgo > 0.05 tras la inversion (solo lectura)
     def valor(P):   # v13: el valor que usa la boca. Sin puerta: rapida+lenta (un error). Con puerta: la rapida si el patron le es FAMILIAR, si no la lenta
         _k=kenyon(P); _f=float((Wp-Wn)@_k); _s=float((Wps-Wns)@P)
         return _f+_s if puerta is None else (_f if int((np.abs((Wp-Wn)[_k>0])>0.2).sum())>=puerta else _s)   # familiar = >= puerta celdas del codigo con valor consolidado (|W|>0.2, el mismo umbral de v11)
@@ -94,9 +100,12 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
         if pos in objs:
             kk=objs[pos]; kc=kenyon(PAT[kk]); Wb=Wp-Wn; _wf=float(Wb@kc); _ws=float((Wps-Wns)@PAT[kk])   # v13: las dos vias
             _wt=_wf+_ws if puerta is None else (_wf if int((np.abs(Wb[kc>0])>0.2).sum())>=puerta else _ws)   # v13: valor total (sin puerta: suma; con puerta: la rapida si le es familiar)
-            Vb=alpha*_wt+hambre_boca*hambre+.5+(k_test*_sbar if k_test else 0.)+(k_testE*_sbarE if k_testE else 0.)+test_fijo+_sm   # v13p: GANAS DE PROBAR — la sorpresa (sobre si mismo o de dE) entra en la BOCA, no en eta
-            pb=1/(1+np.exp(-Vb/.3)); mordio=rng.random()<pb
-            _sa=0.
+            _sg=(k_test*(max(0.,_sbar-_fbar) if resta_cota else (max(0.,_sbar-_sbarL) if resta_lenta else _sbar)) if k_test else 0.)+(k_testE*_sbarE if k_testE else 0.)+test_fijo+_sm   # v13p: GANAS DE PROBAR — el sesgo de la boca. resta_cota: EXCESO sobre la cota de oraculo 2b(1-b)
+            Vb=alpha*_wt+hambre_boca*hambre+.5+_sg; pb=1/(1+np.exp(-Vb/.3)); mordio=rng.random()<pb
+            if invertir_en is not None and t>=invertir_en and t_primer_sesgo is None:   # v13p (ENMIENDA 2): latencia, solo lectura
+                _encps+=1; _mordps+=int(mordio)
+                if _sg>0.05: t_primer_sesgo=t
+            _sa=0.; _fS=0.
             if eta_b:   # v13s: AUTOMODELO — tres lecturas que SOLO MIDEN (no entran en la decision ni consumen el rng del organismo)
                 _hh=hambre
                 _bufh.append(hambre)
@@ -105,7 +114,7 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
                 _bS=1/(1+np.exp(-(float(Wbr@_Pb)+float(Wbk@kc)+Wbh*hambre+Wb0)/.3))
                 _bM=1/(1+np.exp(-(float(Wmr@_Pb)+float(Wmk@kc)+Wm0)/.3))
                 _bH=1/(1+np.exp(-(float(Whr@_Pb)+float(Whk@kc)+Whh*_hh+Wh0)/.3))
-                _y=1. if mordio else 0.; _sa=abs(_y-_bS); _bd=0 if (_BLO<=_wt<=_BHI) else 1; _cl=int(_y)
+                _y=1. if mordio else 0.; _sa=abs(_y-_bS); _bd=0 if (_BLO<=_wt<=_BHI) else 1; _cl=int(_y); _fS=2.*float(_bS)*(1.-float(_bS))
                 for _i,_bb in enumerate((_bS,_bM,_bH,pb)):   # el 4o es el ORACULO: la propia pb que genero la accion (log-loss irreducible)
                     _LL[_i,_bd]-=np.log(max(_bb if _y>0 else 1-_bb,1e-12)); _HIT[_i,_bd,_cl]+=int((_bb>.5)==(_y>0))
                 _NC[_bd,_cl]+=1; _aq[q(t)]+=_sa; _naq[q(t)]+=1
@@ -113,9 +122,9 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
                 Wbr=np.clip(Wbr+eta_b*_eS*_Pb,-clip_b,clip_b); Wbk=np.clip(Wbk+eta_b*_eS*kc,-clip_b,clip_b); Wbh=float(np.clip(Wbh+eta_b*_eS*hambre,-clip_b,clip_b)); Wb0=float(np.clip(Wb0+eta_b*_eS,-clip_b,clip_b))
                 Wmr=np.clip(Wmr+eta_b*_eM*_Pb,-clip_b,clip_b); Wmk=np.clip(Wmk+eta_b*_eM*kc,-clip_b,clip_b); Wm0=float(np.clip(Wm0+eta_b*_eM,-clip_b,clip_b))
                 Whr=np.clip(Whr+eta_b*_eH*_Pb,-clip_b,clip_b); Whk=np.clip(Whk+eta_b*_eH*kc,-clip_b,clip_b); Whh=float(np.clip(Whh+eta_b*_eH*_hh,-clip_b,clip_b)); Wh0=float(np.clip(Wh0+eta_b*_eH,-clip_b,clip_b))
-            if ema_auto: _sbar=(1.-ema_auto)*_sbar+ema_auto*_sa   # v13s: sorpresa media sobre si mismo — usa TODOS los encuentros, no solo los bocados
+            if ema_auto: _sbar=(1.-ema_auto)*_sbar+ema_auto*_sa; _fbar=(1.-ema_auto)*_fbar+ema_auto*_fS; _sbarL=(1.-ema_lento)*_sbarL+ema_lento*_sa   # v13s: sorpresa media sobre si mismo — usa TODOS los encuentros, no solo los bocados
             _eta=eta*(1.+k_auto*(_sbar if ema_auto else _sa)) if k_auto else eta   # v13s: CURRICULO POR EL CUERPO — la sorpresa sobre SI MISMO modula la tasa de la via rapida
-            _encq[q(t)]+=1; _tq[q(t)]+=(k_test*_sbar if k_test else 0.)+(k_testE*_sbarE if k_testE else 0.)+test_fijo+_sm
+            _encq[q(t)]+=1; _tq[q(t)]+=_sg
             vis[kk][q(t)]+=1
             sobre[val[kk]][q(t)]+=1; llegadas[val[kk]][q(t)]+=int(_prev_on!=pos)
             if memoria_rechazo and not mordio: _rech[pos]=t+memoria_rechazo   # v9: la boca rechazo -> no es objetivo por un tiempo
@@ -194,4 +203,5 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
                 W_auto=({k:round(float(1/(1+np.exp(-(float(Wbr@PAT[k])+float(Wbk@kenyon(PAT[k]))+Wb0)/.3))),3) for k in PAT} if eta_b else None),
                 Wbh=round(float(Wbh),4),Whh=round(float(Whh),4),Wb0=round(float(Wb0),4),Wm0=round(float(Wm0),4),
                 traza_s=([round(_trzs[i]/_trzn[i],6) if _trzn[i] else 0.0 for i in range(n_traza)] if n_traza else None),
-                mord_post=mord_post,sbarE=round(float(_sbarE),5))
+                mord_post=mord_post,sbarE=round(float(_sbarE),5),fbar=round(float(_fbar),6),sbarL=round(float(_sbarL),6),
+                t_primer_sesgo=t_primer_sesgo,enc_post_hasta_sesgo=_encps,mord_post_hasta_sesgo=_mordps)

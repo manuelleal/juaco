@@ -287,3 +287,117 @@ llegar nunca a 0.20. **P4' queda en forma relativa, la de la propuesta original 
 **y** Q4 ≤ 0.35 × Q3, en ≥ 16/20. P4 de SELF-TEST no cambia (sigue como en el runner). Resultado retroactivo en 41–60 con la
 enmienda: dE-TEST P1' OK (0.143×, 20/20), P7' OK (veneno post 62.5, muertes 271.5), P4' con la forma relativa: se calcula y se
 declara junto con 61–80. Nada más cambia.
+
+## Enmienda 2 (18 sep 2026; **escrita ANTES de la serie 81–100**; creador C, encargo del coordinador)
+
+**Estado del que parte.** Serie 41–60: SELF-TEST 2 089 contra 7 931 de V13 (**0.263 ×**, pareado 20/20), < CONST-a
+19/20, < CONST-b 20/20 con razón de sesgo en Q3 **1.011** (limpio), < MOMENTO 20/20, retención 20/20 × 6, px0 G1 0.80,
+P7 OK, **P4 15/20 (NO)**. **Réplica 61–80: confirma todo** — SELF-TEST 1 761 contra 7 969 (**0.221 ×**, 20/20),
+< CONST-a 20/20, < CONST-b 20/20, < MOMENTO 20/20, retención 20/20 × 6, px0 G1 0.80 (V13 0.85), P7 OK, **P4 otra vez
+15/20**. **dE-TEST con la enmienda 1: 41–60 0.143 × (20/20), se apaga 20/20, P7′ OK; 61–80 0.144 × (20/20), se apaga
+20/20, P7′ OK** (`probar_si_mismo_s61-80_20260918_003640`), registrado como **candidato a órgano a falta de sus
+baterías**. Lo que sigue es el paquete de la tercera serie.
+
+### E2.1 Instrumento: dos perillas nuevas, las dos inertes por defecto
+
+Construidas por anclas con `construye_probar.py` sobre `organismo_v13p.py` **y** `organismo_v13pg.py` (el del mundo de
+regla, que ya llevaba `k_testE`, así que dE-TEST puede correr sus baterías sin instrumento nuevo):
+
+```
+f       = 2*b*(1-b)                                   # cota de oraculo puntual del automodelo — identidad, no perilla
+f_barra <- (1-ema_auto)*f_barra + ema_auto*f          # misma constante de tiempo
+s_barraL<- (1-ema_lento)*s_barraL + ema_lento*s_a     # linea base LENTA de la propia sorpresa (ema_lento = 0.0025)
+sesgo   = k_test * ( max(0, s_barra - f_barra)   si resta_cota                                   # ENMIENDA 2 (a)
+                   | max(0, s_barra - s_barraL)  si resta_lenta                                  # ENMIENDA 2 (a')
+                   | s_barra )                        # como hasta ahora
+```
+
+**Memoria: +2 escalares** (`f_barra`, `s_barraL`). `resta_lenta` añade **una** constante (`ema_lento`, fijada en
+`ema_auto/20`); `resta_cota` **no añade ninguna** (`2b(1−b)` ya está calculado).
+
+**Campo nuevo de sólo lectura, para la prueba discriminante (c):** `t_primer_sesgo` = primer paso `t ≥ invertir_en` en
+un encuentro con sesgo aplicado > 0.05, con sus contadores `enc_post_hasta_sesgo` y `mord_post_hasta_sesgo`. No entra
+en ninguna decisión.
+
+**Identidades** (`identidad_probar.py`, 6 semillas × 3 escenarios, T = 5 000): **J1 18/18** · **J2 18/18** ·
+**J3 18/18** · **J4 6/6** · **J5 18/18** (`resta_cota=True` con `k_test=0` ≡ v13: la perilla es inerte) ·
+**J6 18/18** (`resta_lenta=True` ídem).
+
+**Corrección de reporte, declarada (no cambia ninguna conducta).** `sesgo_boca` pasa a acumular el sesgo **realmente
+aplicado** a la boca (`_sg`, con el `s̄_a` previo, que es el causal); antes acumulaba el `s̄_a` **ya actualizado** de ese
+mismo encuentro. **La conducta es idéntica bit a bit**: comprobado viejo-contra-nuevo en los **seis brazos × 3 semillas
+a T = 40 000** (15/18 idénticas en TODAS las claves; las 3 que difieren lo hacen **sólo** en `sesgo_boca`). A
+T = 200 000 la media por cuarto coincide hasta el cuarto decimal (0.3056 contra 0.3055 en una semilla de tres,
+idéntica en las otras dos), porque el EMA es insesgado en régimen. **Por eso P4 (15/20) en 41–60 y 61–80 NO es un
+artefacto del reporte**, y esos veredictos se mantienen tal como están registrados. En `identidad_probar.py`, J3 lista
+`sesgo_boca` como **clave de reporte** y compara conducta, informando el máximo de la diferencia.
+
+### E2.2 Humo de diseño, y REFUTACIÓN DE MI PROPIA PROPUESTA antes de preregistrarla
+
+**Cuándo y qué se vio.** Tras construir las perillas, tres corridas por forma del sesgo en las **semillas 1–3, que ya
+estaban expuestas** (mini-prueba de C-P1), T = 200 000, `invertir_en` = 100 000, `k_test` = 10 en las tres. **No se
+miró ninguna semilla ≥ 41.** Números observados, sin ajustar nada:
+
+| forma del sesgo | Q1 / Q2 / Q3 / Q4 (mediana) | **razón Q2/Q3** | recuperación (mediana) |
+|---|---|---|---|
+| `s̄_a` (SELF-TEST, la registrada) | 0.3055 / 0.0651 / **0.3130** / 0.0592 | **0.208** | **2 375** |
+| `max(0, s̄_a − f̄)` (**SELF-TEST-R**) | 0.0328 / 0.0205 / **0.0484** / 0.0169 | **0.424** | 4 614 |
+| `max(0, s̄_a − s̄_aL)` (**SELF-TEST-L**) | 0.0884 / 0.0211 / **0.0801** / 0.0184 | **0.263** | 3 246 |
+
+> **Mi predicción P4′ de C7 ("Q2/Q4 ≤ 0.02 y Q3 ≥ 0.20 en ≥ 18/20") queda refutada por mi propio humo, antes de
+> correr la serie.** El valor absoluto de Q2/Q4 sí baja a ≈ 0.02 — pero **porque baja TODO unas 6 ×**, no porque mejore
+> el contraste: la razón Q2/Q3 **empeora** en las dos variantes (0.208 → 0.424 y → 0.263) y la recuperación **empeora**
+> en las dos (2 375 → 4 614 y → 3 246).
+>
+> **Mecanismo, ahora claro y escribible:** el suelo y la señal **no son separables por una resta**, porque los mueve la
+> misma variable. Tras la inversión la lectura `b` se va hacia 0.5, y ahí `2b(1−b)` (la cota de oráculo) es **máxima**:
+> restarla se come justamente el pico de Q3. La línea base lenta hace lo mismo con retraso. *El suelo del automodelo no
+> es ruido aditivo que se pueda descontar: es la incertidumbre de su propia política, y esa incertidumbre es la señal.*
+
+### E2.3 La prueba discriminante de latencia: también refuta mi argumento
+
+Medida con el campo nuevo, semillas 1–3, mismo mundo:
+
+| brazo | latencia del primer sesgo > 0.05 | encuentros hasta él | bocados hasta él | recuperación |
+|---|---|---|---|---|
+| SELF-TEST | **839** pasos (344 / 2 106 / 839) | 70 | 7 | 2 375 |
+| **dE-TEST** | **335** pasos (24 / 335 / 387) | 35 | **2** | 745 |
+
+> **Refutado el único argumento que me quedaba a favor del automodelo.** Yo predije en C7 que el automodelo arrancaría
+> **antes** por aprender de cada encuentro (27 ×) y dE-TEST más tarde por necesitar bocados. Sale al revés: **dE-TEST
+> arranca en 335 pasos con DOS bocados** y el automodelo tarda 839 y necesita 7. La razón es de escala y estaba a la
+> vista: al invertir, el error de ΔE salta **1.2** en un solo bocado (de +0.8 a −0.4), mientras que el error sobre la
+> acción está acotado por 1 y el EMA sólo lo incorpora a razón de `ema_auto`. Y la ventaja de densidad **no se cobra**:
+> el automodelo tampoco cruza el umbral con rechazos solos — necesita 7 bocados igualmente.
+
+### E2.4 Qué propongo para la serie 81–100 (la decisión es del coordinador)
+
+1. **Lo que falta de verdad son las baterías de dE-TEST.** El runner acepta ahora `--baterias V13,dE-TEST,...`
+   (lista de brazos que pasan por retención 4/5 y generalización 5/5; por defecto la de siempre; `MOMENTO` está
+   prohibido ahí porque necesita una traza de este mundo). **Recomiendo `--baterias V13,SELF-TEST,dE-TEST`** y no
+   `SELF-TEST-R`: SELF-TEST tiene dos series confirmadas y es la referencia; SELF-TEST-R está refutado en humo y no
+   merece gastar 240 corridas de batería.
+2. **SELF-TEST-R y SELF-TEST-L van como brazos de DIAGNÓSTICO, sin criterio**, para que mi variante quede **refutada
+   con 20 semillas y registrada**, no abandonada en silencio.
+
+**Predicciones numéricas para 81–100, escritas ahora** (las de SELF-TEST-R/L predicen que mi propia variante falla):
+
+- **Q1′ [lo que decide]** dE-TEST pasa las SEIS etapas de retención en **≥ 18/20** cada una, y G1 px0 **≥ 0.80** y
+  ≥ mediana(V13) − 0.10, con `azar` en [0.35, 0.65]. **Si pasa, dE-TEST es órgano candidato con baterías**; si no,
+  es un acelerador que cobra retención o generalización, y se registra como canje.
+- **Q2′ [mi variante, predicha como fallo]** SELF-TEST-R: `sesgo_boca[Q2] ≤ 0.02` y `[Q4] ≤ 0.02` en ≥ 18/20 (predigo
+  que **sí**), **pero** mediana de la razón Q2/Q3 **≥ 0.35** (contra 0.21 de SELF-TEST) y mediana de recuperación
+  **≥ 1.5 ×** la de SELF-TEST. **Se refuta mi refutación si la razón Q2/Q3 baja de 0.21 y la recuperación no empeora**
+  — y entonces el humo de 1–3 era ruido y habría que mirarlo otra vez.
+- **Q3′ [latencia]** mediana de `latencia_sesgo` de **dE-TEST < la de SELF-TEST** en **≥ 14/20** pareado, y mediana de
+  `mord_post_hasta_sesgo` de dE-TEST **≤ 3** contra **≥ 5** del automodelo.
+- **P1–P3 no se tocan** y siguen aplicándose a SELF-TEST tal como están en §7.
+
+### E2.5 Lectura que dejo escrita, para que la serie pueda contradecirla
+
+Con lo medido en dos series confirmadas más este humo: **el órgano es la sorpresa del MUNDO puesta en la BOCA**
+(dE-TEST: 0.143 × y 0.144 ×, se apaga solo, arranca con dos bocados). **El automodelo fue el instrumento que encontró
+dónde estaba la boca, y no es el órgano**: su suelo es estructural (la cota de oráculo que él mismo mide), no se puede
+descontar sin borrar la señal, y su supuesta ventaja de densidad no aparece. Lo que **sí** queda en pie del automodelo
+es una **medida**: cuánto hay de sí mismo que modelar en v13 — el 13–21 % del hueco irreducible, dentro de una banda
+derivada de `hambre_boca/alpha`. Eso vale gane o pierda el mecanismo, y no depende de esta serie.

@@ -42,9 +42,14 @@ BRAZOS = {
     'CONST-b':   dict(test_fijo=0.31),
     'dE-TEST':   dict(eta_pred=0.03, ema_pred=0.05, k_testE=K_TEST),
     'MOMENTO':   dict(k_testM=K_TEST, desfase=DESFASE, n_traza=NT),   # + traza_ext, que se inyecta en la etapa 3/5
+    # ENMIENDA 2 (serie 81-100): dos formas de quitarle el suelo al sesgo del automodelo. Ver la enmienda: el humo de
+    # diseno REFUTA las dos (empeoran la razon Q2/Q3 y cuestan recuperacion); van como DIAGNOSTICO, sin criterio.
+    'SELF-TEST-R': dict(eta_b=0.03, ema_auto=0.05, k_test=K_TEST, buf_auto=1000, n_traza=NT, resta_cota=True),
+    'SELF-TEST-L': dict(eta_b=0.03, ema_auto=0.05, k_test=K_TEST, buf_auto=1000, n_traza=NT, resta_lenta=True),
 }
 SIN_TRAZA = [b for b in BRAZOS if b != 'MOMENTO']
 BRAZOS_BAT = ['V13', 'SELF-TEST', 'CONST-b']     # preregistro, seccion 5: P5/P6 preguntan por la hipotesis
+# --baterias V13,dE-TEST,...   cambia que brazos pasan por retencion (4/5) y generalizacion (5/5). ENMIENDA 2.
 
 APAGADO = dict(eta_b=0.0, k_auto=0.0, k_test=0.0, test_fijo=0.0, eta_e=0.0, eta_pred=0.0, k_testE=0.0, n_traza=0)
 SOLO_MIDE = dict(eta_b=0.03, k_auto=0.0, ema_auto=0.05, k_test=0.0, test_fijo=0.0, eta_e=0.05, h_pred=100,
@@ -108,6 +113,10 @@ def resumen_T(brazo, seed, r):
                 eta_media=r['eta_media'], bocados_q=r['bocados_q'], sbar=r['sbar'], sbarE=r['sbarE'],
                 auto_banda=r['auto_banda'], auto_n=r['auto_n'], auto_ll=r['auto_ll'], auto_ba=r['auto_ba'],
                 Wbh=r['Wbh'], Whh=r['Whh'], splits=r['splits'], celdas=r['celdas'],
+                t_primer_sesgo=r['t_primer_sesgo'],
+                latencia_sesgo=(None if r['t_primer_sesgo'] is None else r['t_primer_sesgo'] - T_INV),
+                enc_post_hasta_sesgo=r['enc_post_hasta_sesgo'], mord_post_hasta_sesgo=r['mord_post_hasta_sesgo'],
+                fbar=r['fbar'], sbarL=r['sbarL'],
                 traza_suma=(round(float(np.sum(r['traza_s'])), 6) if r['traza_s'] else None))
 
 
@@ -131,8 +140,14 @@ def tarea(args):
         st = dict(BRAZOS['SELF-TEST'])
         a = v13s.run(seed, T=Ti, **kw, **{k: v for k, v in st.items() if k != 'n_traza'})
         b = v13p.run(seed, T=Ti, **kw, **st)
-        dif = [k for k in a if N(a[k]) != N(b[k])]
-        return dict(tipo='J', cual='J3', esc=esc, seed=seed, identico=not dif, difieren=dif)
+        # ENMIENDA 2: `sesgo_boca` es clave de REPORTE, no de conducta. organismo_v13s la acumulaba con el s_barra YA
+        # actualizado de ese encuentro; v13p acumula el sesgo REALMENTE aplicado (el causal). J3 compara CONDUCTA e
+        # informa aparte el maximo de la diferencia de reporte.
+        REPORTE = ('sesgo_boca',)
+        dif = [k for k in a if k not in REPORTE and N(a[k]) != N(b[k])]
+        dsb = max(abs(float(x) - float(y)) for x, y in zip(a['sesgo_boca'], b['sesgo_boca']))
+        return dict(tipo='J', cual='J3', esc=esc, seed=seed, identico=not dif, difieren=dif,
+                    claves_reporte=list(REPORTE), max_dif_reporte=round(dsb, 6))
 
     if tipo == 'J4':                                  # modo regla: v13pg apagado == v13g
         _, regla, seed, Ti = args
@@ -216,7 +231,8 @@ def humo():
             x = tarea(('J', cual, esc, 1, Ti)); ident.append(x)
             log(f"    {cual} {esc:9s} {'IDENTICO' if x['identico'] else 'DIFIERE ' + str(x['difieren'])}")
         x = tarea(('J3', esc, 1, Ti)); ident.append(x)
-        log(f"    J3 {esc:9s} {'IDENTICO' if x['identico'] else 'DIFIERE ' + str(x['difieren'])}")
+        log(f"    J3 {esc:9s} {'IDENTICO en conducta' if x['identico'] else 'DIFIERE ' + str(x['difieren'])}"
+            f"   (clave de reporte {x['claves_reporte']}: max |dif| {x['max_dif_reporte']})")
     for regla in REGLAS:
         x = tarea(('J4', regla, 1, Ti)); ident.append(x)
         log(f"    J4 {regla:9s} {'IDENTICO' if x['identico'] else 'DIFIERE ' + str(x['difieren'])}")
@@ -256,6 +272,13 @@ if __name__ == '__main__':
     mp.set_start_method('spawn', force=True)
     import bateria_v13 as bv13
     desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else 41
+    if '--baterias' in sys.argv:                      # ENMIENDA 2: la lista de brazos que pasan por M5 y M6
+        BRAZOS_BAT = [b.strip() for b in sys.argv[sys.argv.index('--baterias') + 1].split(',') if b.strip()]
+        malos = [b for b in BRAZOS_BAT if b not in BRAZOS]
+        if malos:
+            raise SystemExit(f"--baterias: brazo(s) desconocido(s) {malos}. Validos: {list(BRAZOS)}")
+        if 'MOMENTO' in BRAZOS_BAT:
+            raise SystemExit("--baterias: MOMENTO no puede correr en las baterias (necesita una traza de ESTE mundo).")
     SEEDS = list(range(desde, desde + N_SEM))
     stamp = time.strftime('%Y%m%d_%H%M%S')
     _log['f'] = open(os.path.join(RAIZ, 'datos', f'probar_si_mismo_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'),
@@ -285,7 +308,9 @@ if __name__ == '__main__':
         rc = pool.map(tarea, ctrl, chunksize=1)
         for cual in ('J1', 'J2', 'J3', 'J4'):
             g = [x for x in rc if x['cual'] == cual]
-            log(f"    {cual}: {sum(x['identico'] for x in g)}/{len(g)}")
+            extra = ("   (clave de reporte ['sesgo_boca'] excluida; max |dif| "
+                     f"{max(x.get('max_dif_reporte', 0.0) for x in g)})" if cual == 'J3' else "")
+            log(f"    {cual}: {sum(x['identico'] for x in g)}/{len(g)}{extra}")
             for x in g:
                 if not x['identico']:
                     log(f"        DIFIERE {x['esc']} s{x['seed']}: {x['difieren']}")
@@ -342,6 +367,12 @@ if __name__ == '__main__':
             f"  bocados {mediana([sum(r['bocados_q']) for r in g])}")
         log(f"        sesgo_boca por cuarto {[mediana([r['sesgo_boca'][q] for r in g]) for q in range(4)]}"
             f"   sorpresa_auto {[mediana([r['sorpresa_auto'][q] for r in g]) for q in range(4)]}")
+        q2q3 = mediana([r['sesgo_boca'][1] / r['sesgo_boca'][2] for r in g
+                        if r['sesgo_boca'][1] is not None and r['sesgo_boca'][2]])
+        log(f"        [ENMIENDA 2] razon Q2/Q3 {None if q2q3 is None else round(q2q3,3)}"
+            f"   latencia del primer sesgo {mediana([r['latencia_sesgo'] for r in g])} pasos"
+            f"   (encuentros {mediana([r['enc_post_hasta_sesgo'] for r in g])}, bocados {mediana([r['mord_post_hasta_sesgo'] for r in g])})"
+            f"   sin sesgo nunca {sum(r['latencia_sesgo'] is None for r in g)}/{len(g)}")
 
     v13m = mediana([r['recup'] for r in Gb['V13'].values()])
     stm = mediana([r['recup'] for r in Gb['SELF-TEST'].values()])

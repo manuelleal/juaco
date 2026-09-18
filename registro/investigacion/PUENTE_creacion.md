@@ -618,6 +618,19 @@ C1-c 9 · ETA_FIJA 6 · C1-d 6+3 · C2-a 8 (T <= 150 000) · C2-b 4 (T = 100 000
 
 ### C7. Después de la corrida en 41–60 (18 sep): el suelo, la variante que lo quita, y quién es el órgano
 
+> **ADENDA (18 sep, 01:20) — mis dos predicciones de esta sección están REFUTADAS por mi propio humo, antes de
+> preregistrar la serie 81–100.** Detalle y números en `experimentos/nivel9_probar_si_mismo/PREREGISTRO_probar_si_mismo.md`,
+> **Enmienda 2**. (i) Restar la cota de oráculo **no** mejora el contraste: baja todo ≈ 6 × y la razón Q2/Q3 **empeora**
+> (0.208 → 0.424), y la recuperación también (2 375 → 4 614); la variante con línea base lenta, igual (0.263 / 3 246).
+> El suelo y la señal **no son separables por una resta**, porque tras la inversión `b` se va hacia 0.5 y ahí
+> `2b(1−b)` es máxima: restarla se come el pico de Q3. (ii) La prueba de latencia sale **al revés** de lo que predije:
+> **dE-TEST arranca en 335 pasos con DOS bocados** y el automodelo tarda 839 y necesita 7 — el error de ΔE salta 1.2 en
+> un solo bocado, y la ventaja de densidad del automodelo **no se cobra**. Con la réplica 61–80 confirmando dE-TEST
+> (0.144 ×, 20/20, se apaga 20/20), **la conclusión del punto (3) de abajo se refuerza: el órgano es la sorpresa del
+> mundo en la boca; el automodelo no lo es.** Lo que se sostiene del automodelo es la **medida** (13–21 % del hueco del
+> oráculo, banda derivada), no el mecanismo.
+
+
 **Lo que salió** (coordinador): SELF-TEST 2 089 contra 7 931 de V13 = **0.263 ×**, pareado 20/20; < CONST-a 19/20;
 < CONST-b 20/20 con la razón de sesgo en Q3 **1.011** (contraste *limpio*: el control recibió **más** y fue más lento);
 < MOMENTO 20/20; retención 20/20 en las seis; px0 G1 0.80 = V13; veneno 159.5 y muertes 295.5 dentro de P7.
