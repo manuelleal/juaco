@@ -8,9 +8,9 @@
 > **Bloque 0 — herramienta, antes de cualquier ciencia (≤ 1 h):** gemelo rápido del organismo.
 >   ✅ **HECHO el 17-sep 20:50:** numba 0.67 instalado (rueda cp314); `organismo/organismo_v13_rapido.py` = gemelo compilado del
 >   tronco, **bit a bit idéntico en 72/72** (12 configuraciones × 6 semillas, `organismo/identidad_rapido.py`) y **×78**
->   (100k pasos: 4.05 s → 0.05 s). Pendiente del bloque 0: gemelos de los MUNDOS (`mundo_temporal_k`, `mundo_mapa`,
->   `mundo_social_n3`, `mundo_largo`) con el mismo arnés, y que las baterías acepten `--rapido`. Regla: un gemelo que no sea
->   bit a bit sólo explora, nunca confirma.
+>   (100k pasos: 4.05 s → 0.05 s). **Gemelos de los mundos (equipo de compiladores, 17-sep 22:00–22:40):** 3T-k 146/146 ✅
+>   (`--rapido`), mapa 90/90 ✅ (`--rapido`), mundo de regla/XOR 81/81 ✅ (pendiente 3b + verificación), social y mundo largo
+>   en construcción; baterías con `--rapido` pendiente. Regla: un gemelo que no sea bit a bit sólo explora, nunca confirma.
 >
 > **Bloque 1 — cabos del plan del debate (cortos, en este orden):**
 >   1a. ✅ 3T-k k = 4 compone (sep 1.99, 20/20, celdas 72); k = 5 NO por T3 al filo (0.144) con el pool agotado (90/90).

@@ -117,9 +117,13 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   sabe 0.51; 20/20 en los tres; `N3d_s61-80_20260917_200706`; réplica 81–100 igual: 0.811 contra 0.516 solo, barajada 0.487, emisor que no sabe 0.515, 20/20 en los tres (N3d_s81-100_20260917_201205, 454fb54abddb2146)).** · **(4) mundo largo (`nivel8_mundo_largo/`): compuesto ❌;
   v13 sigue aprendiendo hasta los 50 patrones (0.80), se recupera de la inversión en ~2 000 pasos (18/20), el mapa
   daña la adquisición (0.70 vs 0.88)** (`largo_s1-20_20260917_200026`). · Resumen de la noche: HANDOFF 11.6.
-- **Gemelo compilado del tronco: `organismo/organismo_v13_rapido.py`** (numba; bit a bit idéntico a `organismo_v13.py`,
-  72/72 en `organismo/identidad_rapido.py`; ×78). Vale para confirmar SOLO mientras el arnés dé 100 %; correrlo tras
-  cualquier cambio de numpy/numba. Los mundos siguen en Python puro (pendiente del bloque 0).
+- **Gemelos compilados (numba), cada uno con su arnés de identidad bit a bit; valen para confirmar SOLO mientras el arnés
+  dé 100 % (repetirlo tras cualquier cambio de numpy/numba):** tronco `organismo/organismo_v13_rapido.py` (72/72 +
+  ampliada 180/180 del revisor; ×58–78) · 3T-k `experimentos/nivel7_3T_k/mundo_temporal_k_rapido.py` (146/146; ×45–74;
+  `corre_3T_k.py --rapido`) · mapa `experimentos/nivel6_mapa/mundo_mapa_rapido.py` (90/90 + 81/81; ×30 con mapa;
+  `corre_mapa.py --rapido`) · mundo de regla/XOR `organismo_v13q_rapido.py` (81/81 + 243/243 en el agente; pendiente de
+  las lecturas del 3b y de mi verificación) · social y mundo largo: en construcción. Regla 9 de `registro/EQUIPO.md`
+  (nunca recursión con `cache=True`; sumas por pares de NumPy; empates de argsort a NumPy).
 - **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 4 (k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
   0.67/0.50 (interferencia, no inversión; `largo_s21-40_20260917_204840`); N3d mudo 0.503 = obedece, no enseña
   (`N3dmudo_s61-80_20260917_205345`). Registro al final de `REGISTRO_etapas_1_2.md`.
