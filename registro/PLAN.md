@@ -79,6 +79,21 @@
 >   con px0 = 1.000 y azar en [0.35, 0.65], se acepta el techo de la arquitectura: se publica el organismo (v14) y el método tal
 >   como están, y se cambia de paradigma (evolución del organismo entero, no órganos diseñados) o se cierra. Sin recalibrar.
 >
+> **DECISIÓN DEL DIRECTOR (18 sep 2026, 05:10) — EL FRENTE ÚNICO, CON DOS ORGANISMOS Y TODO SE VALE (dentro del método):**
+>   (A) **Dos organismos en paralelo sobre v14, mismos mundos y mismas pruebas preregistradas:** `SIN` (reglas locales:
+>   codificación predictiva + retorno asimétrico tipo feedback alignment, el error de predicción de ΔE como señal común) y
+>   `CON` (backprop de laboratorio: gradiente fuera del organismo para descubrir la regla local, y como control positivo un
+>   lector entrenado con backprop en la misma vía lenta y el mismo muestreo). La comparación es el instrumento: si `CON`
+>   resuelve XOR con el muestreo real, el cuello es la regla; si tampoco, el cuello es el mundo. Nunca backprop dentro del
+>   tronco: copias y ramas.
+>   (B) **La repetición es el enemigo:** la medida que manda pasa a ser *cuántas exposiciones hacen falta* para asociar
+>   (una imagen → lo previo, salvo que el mundo diga otra cosa): aprender sin morder, asociación en pocas exposiciones,
+>   como en insectos (aprendizaje en un ensayo). Todo bloque reporta exposiciones-hasta-criterio, no sólo acierto final.
+>   (C) **Vectorización del aprendizaje:** representaciones de miles de dimensiones (código disperso / computación
+>   hiperdimensional, ligar y desligar) en vez de la ruta lineal; se consulta a los expertos (explorador) y entra por el
+>   mismo método (identidad, preregistro, réplica). (D) Criterio de parada de la decisión de las 04:55 sin cambio: tres
+>   bloques; 0.75 en xor01. (E) Toda idea entra con copia y anclas; el tronco v14 no se toca.
+>
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
 > (lista de la noche del 17: canal simétrico, acierto sin balancear, mundo que se come la comida, sitios que se memorizan).
 >
