@@ -1,0 +1,96 @@
+[09:41:26 +    0.0s] ARRANQUE REPRODUCCION BLOQUE 2 (r = desc - muertes): brazos ['VIVO', 'CUELLO_MIN', 'REP_SIN_COSTE', 'UNA_NEC', 'ESCALAR', 'BARAJA_CON', 'BARAJA_POL'], semillas 261-280, T=100000. Pool(14).
+[09:41:26 +    0.0s] 20 semillas no cierran nada: cierran o refutan ESTA medida y este mecanismo, y piden la replica (281-300).
+[09:41:26 +    0.0s]     sha preregistro                1b18b471ee06397e
+[09:41:26 +    0.0s]     sha script                     10ab45355883d98d
+[09:41:26 +    0.0s]     sha constructor                46d2bfaa74538759
+[09:41:26 +    0.0s]     sha instrumento                96feb4918dc5d694
+[09:41:26 +    0.0s]     sha arnes                      58579a431be16ea4
+[09:41:26 +    0.0s]     sha origen_organismo_vivo_rep  aa823d56c2d4213c
+[09:41:26 +    0.0s]     sha origen_organismo_vivo      20c0961c79de8825
+[09:41:26 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[09:41:26 +    0.0s]     sha corre_vivo_rep             d8ff689c6dd544d0
+[09:41:26 +    0.0s]     sha mini                       f3e86cbe6c17e6d7
+[09:41:26 +    0.0s] REGLA 10 — alias estructurales en 261-280: [278] (preregistro: 261-280 -> [278]; 281-300 -> [286])
+[09:41:27 +    0.4s] REGLA 11 — procesos python vivos (3), este es pid 16896
+[09:41:27 +    0.6s] ETAPA 1/2 — IDENTIDAD interna (15 comprobaciones de 2 x 20000 pasos). (E) DEBE fallar.
+[09:41:33 +    6.3s]     (A) apagada (reproduccion=0) == organismo_vivo VIVO                3/3
+[09:41:33 +    6.3s]     (B) cadena: rep2(vivo=0, n_nec=1) == organismo_v14                 3/3
+[09:41:33 +    6.3s]     (C) rep2=0 == organismo_vivo_rep (CUELLO_MIN, todas las claves)    3/3
+[09:41:33 +    6.3s]     (D) rep2=1: claves viejas == organismo_vivo_rep VIVO (solo lectura) 3/3
+[09:41:33 +    6.3s]     (E) CUELLO_MIN != organismo_vivo VIVO (DEBE fallar)                3/3
+[09:41:33 +    6.3s]   IDENTIDAD 15/15
+[09:41:33 +    6.3s] ETAPA 2/2 — principal: 140 corridas de 100000 pasos...
+[09:41:50 +   23.9s]           20/140
+[09:41:59 +   32.7s]           40/140
+[09:42:15 +   49.1s]           60/140
+[09:42:24 +   57.2s]           80/140
+[09:42:40 +   73.7s]           100/140
+[09:42:50 +   84.0s]           120/140
+[09:43:04 +   97.7s]           140/140
+[09:43:04 +   97.7s] 
+[09:43:04 +   97.7s] ANALISIS — medianas por brazo y la letra del preregistro (A12 sin parear, medianas, cuartiles).
+[09:43:04 +   97.7s] --- CONJUNTO COMPLETO: semillas 261-280 (n=20) ---
+[09:43:04 +   97.7s]    VIVO          n=20  r -73.0 [q25 -84.2, q75 -61.0] r>=0 en 0  desc 20.0  muertes 94.5 [E 48.0, agua 43.0]  vida mediana 600.0 max 6133.0  regalo 0.44 (8.5)
+[09:43:04 +   97.7s]         saciado sal 0.776 veneno 0.001  xor01 1.0  celdas 4.0/4  exposiciones {'A': 826.0, 'B': 5440.5, 'C': 864.0, 'D': 2067.0}
+[09:43:04 +   97.7s]    CUELLO_MIN    n=20  r 3.0 [q25 -10.5, q75 10.8] r>=0 en 11  desc 68.0  muertes 65.5 [E 33.5, agua 33.0]  vida mediana 826.75 max 7801.0  regalo 0.384 (26.0)
+[09:43:04 +   97.7s]         saciado sal 0.001 veneno 0.001  xor01 1.0  celdas 4.0/4  exposiciones {'A': 531.0, 'B': 4104.5, 'C': 536.0, 'D': 3413.0}
+[09:43:04 +   97.7s]    REP_SIN_COSTE n=20  r -21.5 [q25 -26.0, q75 -16.0] r>=0 en 1  desc 53.5  muertes 76.0 [E 33.0, agua 41.5]  vida mediana 754.75 max 7248.0  regalo 0.38 (20.5)
+[09:43:04 +   97.7s]         saciado sal 0.006 veneno 0.011  xor01 1.0  celdas 4.0/4  exposiciones {'A': 558.0, 'B': 4046.0, 'C': 550.5, 'D': 3513.5}
+[09:43:04 +   97.7s]    UNA_NEC       n=20  r -130.0 [q25 -140.0, q75 -117.0] r>=0 en 0  desc 12.0  muertes 140.5 [E 46.0, agua 94.5]  vida mediana 489.25 max 4303.0  regalo 0.639 (8.0)
+[09:43:04 +   97.7s]         saciado sal 0.683 veneno 0.001  xor01 0.5  celdas 2.0/4  exposiciones {'A': 336.0, 'B': 7317.5, 'C': 353.0, 'D': 412.0}
+[09:43:04 +   97.7s]    ESCALAR       n=20  r -121.0 [q25 -138.5, q75 -108.8] r>=0 en 0  desc 33.5  muertes 153.0 [E 76.5, agua 78.5]  vida mediana 284.25 max 3671.0  regalo 0.662 (23.0)
+[09:43:04 +   97.7s]         saciado sal 0.037 veneno 0.01  xor01 0.5  celdas 2.0/4  exposiciones {'A': 491.0, 'B': 4745.5, 'C': 517.0, 'D': 2811.0}
+[09:43:04 +   97.7s]    BARAJA_CON    n=20  r -127.0 [q25 -138.8, q75 -111.0] r>=0 en 0  desc 40.0  muertes 164.5 [E 84.5, agua 76.5]  vida mediana 280.75 max 4136.0  regalo 0.671 (25.5)
+[09:43:04 +   97.7s]         saciado sal 0.02 veneno 0.016  xor01 0.5  celdas 3.0/4  exposiciones {'A': 514.5, 'B': 3768.0, 'C': 512.5, 'D': 3743.5}
+[09:43:04 +   97.7s]    BARAJA_POL    n=20  r -360.5 [q25 -374.8, q75 -348.0] r>=0 en 0  desc 0.0  muertes 361.5 [E 181.0, agua 182.0]  vida mediana 150.25 max 2110.0  regalo 1.0 (0.0)
+[09:43:04 +   97.7s]         saciado sal 0.412 veneno 0.415  xor01 1.0  celdas 4.0/4  exposiciones {'A': 1808.0, 'B': 3434.5, 'C': 1817.0, 'D': 3465.0}
+[09:43:04 +   97.7s]    P2-1 la medida ordena como la supervivencia (r = desc - muertes): A12(VIVO > ESCALAR) >= 0.80; A12(VIVO > BARAJA_CON) >= 0.80; A12(VIVO > UNA_NEC) >= 0.80; A12(UNA_NEC > BARAJA_POL) >= 0.95 (cualquiera < 0.50: la medida se tira y la linea se cierra)
+        -> A12 VIVO>ESCALAR 0.983, VIVO>BARAJA_CON 0.975, VIVO>UNA_NEC 0.988, UNA_NEC>BARAJA_POL 1.0  PASA
+[09:43:04 +   97.7s]    P2-2 mediana de r por brazo dentro de su intervalo (>= 6/7): VIVO [-115,-45]; UNA_NEC [-160,-90]; ESCALAR [-150,-80]; BARAJA_CON [-155,-85]; BARAJA_POL [-430,-310]; REP_SIN_COSTE [-55,+15]; CUELLO_MIN [-50,+25]
+        -> VIVO -73.0, UNA_NEC -130.0, ESCALAR -121.0, BARAJA_CON -127.0, BARAJA_POL -360.5, REP_SIN_COSTE -21.5, CUELLO_MIN 3.0  (7/7)  PASA
+[09:43:04 +   97.7s]    P2-3 mecanismo: r A12(CUELLO_MIN > VIVO) >= 0.90 y diferencia de medianas >= 40; muertes A12(CUELLO_MIN < VIVO) >= 0.80; descendientes A12(CUELLO_MIN > VIVO) >= 0.90
+        -> r A12 1.0, diferencia 76.0; muertes A12 0.976; desc A12 1.0  PASA
+[09:43:04 +   97.7s]    P2-4 Occam (la tercera fila se retira): r A12(REP_SIN_COSTE > CUELLO_MIN) <= 0.50 (>= 0.65: hallazgo no explicado, replica antes de decir nada); y REP_SIN_COSTE sigue por encima de VIVO: A12 >= 0.85
+        -> A12(REP_SIN_COSTE > CUELLO_MIN) 0.064; A12(REP_SIN_COSTE > VIVO) 0.979  PASA (la tercera fila queda retirada)
+[09:43:04 +   97.7s]    P2-5 tasa de reemplazo: CUELLO_MIN r >= 0 en >= 2/20 y <= 14/20 (en el filo, no por encima); VIVO, UNA_NEC, ESCALAR, BARAJA_CON y BARAJA_POL r >= 0 en 0/20 cada uno; REP_SIN_COSTE <= 8/20
+        -> r >= 0 en {'VIVO': 0, 'CUELLO_MIN': 11, 'REP_SIN_COSTE': 1, 'UNA_NEC': 0, 'ESCALAR': 0, 'BARAJA_CON': 0, 'BARAJA_POL': 0}  PASA
+[09:43:04 +   97.7s]    P2-6 conducta saciado: mediana sac_tasa[D] VIVO >= 0.60; CUELLO_MIN sal <= 0.05 y veneno <= 0.05
+        -> VIVO sal 0.776; CUELLO_MIN sal 0.001 veneno 0.001  PASA
+[09:43:04 +   97.7s]    P2-7 diagnostico de ERR-40 (blanda, se reporta): frac_regalo = desc_regalo/desc: A12(ESCALAR > CUELLO_MIN) >= 0.75 y A12(BARAJA_CON > CUELLO_MIN) >= 0.75 (el regalo del renacer financia mas ventanas en los que mueren mas)
+        -> A12(ESCALAR > CUELLO_MIN) 1.0, A12(BARAJA_CON > CUELLO_MIN) 1.0  PASA
+[09:43:04 +   97.7s]    P2-8 seguridad y mundo: en CUELLO_MIN y REP_SIN_COSTE xor01 = 1.0 en >= 18/20 y celdas estrictas 4/4 en >= 18/20; exposiciones[D] CUELLO_MIN <= 3 x VIVO; exposiciones[A] CUELLO_MIN >= 0.6 x VIVO
+        -> CUELLO_MIN xor 20/20 celdas 20/20; REP_SIN_COSTE xor 20/20 celdas 20/20; sal x1.651, comida x0.643  PASA
+[09:43:04 +   97.7s] --- SUBCONJUNTO LIMPIAS (sin [278]; regla 10): semillas 261-280 (n=19) ---
+[09:43:04 +   97.7s]    VIVO          n=19  r -72.0 [q25 -82.0, q75 -61.0] r>=0 en 0  desc 20.0  muertes 91.0 [E 46.0, agua 43.0]  vida mediana 600.0 max 6235.0  regalo 0.435 (9.0)
+[09:43:04 +   97.7s]         saciado sal 0.775 veneno 0.001  xor01 1.0  celdas 4.0/4  exposiciones {'A': 827.0, 'B': 5464.0, 'C': 864.0, 'D': 2044.0}
+[09:43:04 +   97.7s]    CUELLO_MIN    n=19  r 3.0 [q25 -12.0, q75 11.0] r>=0 en 10  desc 69.0  muertes 66.0 [E 34.0, agua 33.0]  vida mediana 829.5 max 7757.0  regalo 0.388 (26.0)
+[09:43:04 +   97.7s]         saciado sal 0.001 veneno 0.0  xor01 1.0  celdas 4.0/4  exposiciones {'A': 530.0, 'B': 4114.0, 'C': 531.0, 'D': 3429.0}
+[09:43:04 +   97.7s]    REP_SIN_COSTE n=19  r -21.0 [q25 -26.0, q75 -16.0] r>=0 en 1  desc 54.0  muertes 76.0 [E 33.0, agua 41.0]  vida mediana 745.0 max 7325.0  regalo 0.37 (20.0)
+[09:43:04 +   97.7s]         saciado sal 0.006 veneno 0.011  xor01 1.0  celdas 4.0/4  exposiciones {'A': 558.0, 'B': 4059.0, 'C': 552.0, 'D': 3504.0}
+[09:43:04 +   97.7s]    UNA_NEC       n=19  r -129.0 [q25 -140.0, q75 -117.0] r>=0 en 0  desc 12.0  muertes 140.0 [E 46.0, agua 95.0]  vida mediana 494.5 max 4293.0  regalo 0.643 (8.0)
+[09:43:04 +   97.7s]         saciado sal 0.696 veneno 0.001  xor01 0.5  celdas 2.0/4  exposiciones {'A': 337.0, 'B': 7311.0, 'C': 355.0, 'D': 412.0}
+[09:43:04 +   97.7s]    ESCALAR       n=19  r -122.0 [q25 -139.0, q75 -111.0] r>=0 en 0  desc 33.0  muertes 154.0 [E 77.0, agua 80.0]  vida mediana 278.5 max 3581.0  regalo 0.667 (23.0)
+[09:43:04 +   97.7s]         saciado sal 0.037 veneno 0.011  xor01 0.5  celdas 2.0/4  exposiciones {'A': 493.0, 'B': 4729.0, 'C': 518.0, 'D': 2812.0}
+[09:43:04 +   97.7s]    BARAJA_CON    n=19  r -126.0 [q25 -138.0, q75 -111.0] r>=0 en 0  desc 40.0  muertes 163.0 [E 83.0, agua 76.0]  vida mediana 297.5 max 4149.0  regalo 0.667 (25.0)
+[09:43:04 +   97.7s]         saciado sal 0.02 veneno 0.016  xor01 0.5  celdas 3.0/4  exposiciones {'A': 511.0, 'B': 3784.0, 'C': 508.0, 'D': 3740.0}
+[09:43:04 +   97.7s]    BARAJA_POL    n=19  r -359.0 [q25 -375.0, q75 -347.0] r>=0 en 0  desc 0.0  muertes 361.0 [E 183.0, agua 180.0]  vida mediana 151.5 max 2103.0  regalo 1.0 (0.0)
+[09:43:04 +   97.7s]         saciado sal 0.412 veneno 0.414  xor01 1.0  celdas 4.0/4  exposiciones {'A': 1806.0, 'B': 3431.0, 'C': 1816.0, 'D': 3471.0}
+[09:43:04 +   97.7s]    P2-1 la medida ordena como la supervivencia (r = desc - muertes): A12(VIVO > ESCALAR) >= 0.80; A12(VIVO > BARAJA_CON) >= 0.80; A12(VIVO > UNA_NEC) >= 0.80; A12(UNA_NEC > BARAJA_POL) >= 0.95 (cualquiera < 0.50: la medida se tira y la linea se cierra)
+        -> A12 VIVO>ESCALAR 0.994, VIVO>BARAJA_CON 0.983, VIVO>UNA_NEC 0.994, UNA_NEC>BARAJA_POL 1.0  PASA
+[09:43:04 +   97.7s]    P2-2 mediana de r por brazo dentro de su intervalo (>= 6/7): VIVO [-115,-45]; UNA_NEC [-160,-90]; ESCALAR [-150,-80]; BARAJA_CON [-155,-85]; BARAJA_POL [-430,-310]; REP_SIN_COSTE [-55,+15]; CUELLO_MIN [-50,+25]
+        -> VIVO -72.0, UNA_NEC -129.0, ESCALAR -122.0, BARAJA_CON -126.0, BARAJA_POL -359.0, REP_SIN_COSTE -21.0, CUELLO_MIN 3.0  (7/7)  PASA
+[09:43:04 +   97.7s]    P2-3 mecanismo: r A12(CUELLO_MIN > VIVO) >= 0.90 y diferencia de medianas >= 40; muertes A12(CUELLO_MIN < VIVO) >= 0.80; descendientes A12(CUELLO_MIN > VIVO) >= 0.90
+        -> r A12 1.0, diferencia 75.0; muertes A12 0.974; desc A12 1.0  PASA
+[09:43:04 +   97.7s]    P2-4 Occam (la tercera fila se retira): r A12(REP_SIN_COSTE > CUELLO_MIN) <= 0.50 (>= 0.65: hallazgo no explicado, replica antes de decir nada); y REP_SIN_COSTE sigue por encima de VIVO: A12 >= 0.85
+        -> A12(REP_SIN_COSTE > CUELLO_MIN) 0.071; A12(REP_SIN_COSTE > VIVO) 0.976  PASA (la tercera fila queda retirada)
+[09:43:04 +   97.7s]    P2-5 tasa de reemplazo: CUELLO_MIN r >= 0 en >= 2/20 y <= 14/20 (en el filo, no por encima); VIVO, UNA_NEC, ESCALAR, BARAJA_CON y BARAJA_POL r >= 0 en 0/20 cada uno; REP_SIN_COSTE <= 8/20
+        -> r >= 0 en {'VIVO': 0, 'CUELLO_MIN': 10, 'REP_SIN_COSTE': 1, 'UNA_NEC': 0, 'ESCALAR': 0, 'BARAJA_CON': 0, 'BARAJA_POL': 0}  PASA
+[09:43:04 +   97.7s]    P2-6 conducta saciado: mediana sac_tasa[D] VIVO >= 0.60; CUELLO_MIN sal <= 0.05 y veneno <= 0.05
+        -> VIVO sal 0.775; CUELLO_MIN sal 0.001 veneno 0.0  PASA
+[09:43:04 +   97.7s]    P2-7 diagnostico de ERR-40 (blanda, se reporta): frac_regalo = desc_regalo/desc: A12(ESCALAR > CUELLO_MIN) >= 0.75 y A12(BARAJA_CON > CUELLO_MIN) >= 0.75 (el regalo del renacer financia mas ventanas en los que mueren mas)
+        -> A12(ESCALAR > CUELLO_MIN) 1.0, A12(BARAJA_CON > CUELLO_MIN) 1.0  PASA
+[09:43:04 +   97.7s]    P2-8 seguridad y mundo: en CUELLO_MIN y REP_SIN_COSTE xor01 = 1.0 en >= 18/20 y celdas estrictas 4/4 en >= 18/20; exposiciones[D] CUELLO_MIN <= 3 x VIVO; exposiciones[A] CUELLO_MIN >= 0.6 x VIVO
+        -> CUELLO_MIN xor 19/19 celdas 19/19; REP_SIN_COSTE xor 19/19 celdas 19/19; sal x1.678, comida x0.641  PASA
+[09:43:04 +   97.7s] 
+[09:43:04 +   97.7s] VEREDICTO: El crecimiento neto del linaje ORDENA como la supervivencia (P2-1) y las medianas caen donde se predijo (P2-2). La lectura pesimista saciado (CUELLO_MIN) sube r respecto de VIVO por menos muertes y mas ventanas (P2-3). La tercera fila queda RETIRADA: no supera a CUELLO_MIN (P2-4). CUELLO_MIN esta en el filo del reemplazo (r >= 0 en algunas semillas) y ningun otro llega (P2-5). Saciado: VIVO bebe su reserva (sal) y CUELLO_MIN no (P2-6). El regalo del renacer financia mas ventanas en los que mueren mas (P2-7). Tabla necesidad x estimulo intacta y el mundo no se llena de sal (P2-8). 20 semillas no cierran nada: piden la replica en 281-300 (regla 12).
+[09:43:04 +   97.8s] datos -> vivo_rep2_s261-280_20260918_094126.json  sha256_16 = b557dc80e77a43e7
