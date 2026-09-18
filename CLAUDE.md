@@ -123,7 +123,11 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 4 (k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
   0.67/0.50 (interferencia, no inversión; `largo_s21-40_20260917_204840`); N3d mudo 0.503 = obedece, no enseña
   (`N3dmudo_s61-80_20260917_205345`). Registro al final de `REGISTRO_etapas_1_2.md`.
-- **PLAN DEL DÍA 6 (vigente): `registro/PLAN.md`, bloque de arriba.** Bloque 0 gemelo rápido con identidad bit a bit (hecho para el tronco); bloque 1 hecho;
+- **Bloque 2 REFUTADO:** la curiosidad por progreso de error no devuelve la exploración al mapa (0.700 = mapa = barajada;
+  v13 0.900; comida intacta) (`curiosidad_s41-60_20260917_211739`). Siguiente candidato: novedad de sitio.
+- **EQUIPO de agentes (decisión del director, 17-sep 21:45): `registro/EQUIPO.md`** — misión, reglas y roles (coordinador,
+  compiladores de mundos, diseñador, auditor, cronista). Un solo `Pool` a la vez; los agentes no commitean.
+- **PLAN DEL DÍA 6 (vigente): `registro/PLAN.md`, bloque de arriba.** Bloque 0 gemelo rápido con identidad bit a bit (hecho para el tronco); bloque 1 hecho; bloque 2 refutado;
   bloque 1 cabos (3T-k k=4,5; `W` por patrón en el mundo largo; N3d sin emisor); bloque 2 curiosidad por progreso de
   error contra el canje del mapa; bloque 3 XOR como límite de lectura (vía lenta cuadrática); bloque 4 decisión v14
   sólo si pasa el 2; bloque 5 N2b en el mundo con reaparición; bloque 6 rama allostasis. Tronco sigue siendo v13. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el

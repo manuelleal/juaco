@@ -20,7 +20,8 @@
 >   1c. ✅ N3d mudo: 0.503 sin señal (= solo 0.515; con señal 0.822): obedece, no enseña; y crea dependencia (189 muertes).
 >       La variante "vista parcial que sí puede aprender" no tiene mundo todavía (N3c: ya sabe solo; N3b: no encuentra comida).
 >
-> **Bloque 2 — nivel 8 propio: el canje exploración/explotación del mapa.** El mapa da de comer (490 vs 332) pero daña la
+> **Bloque 2 — nivel 8 propio: el canje exploración/explotación del mapa.** ❌ **Curiosidad por progreso REFUTADA (0.700 = mapa
+>   0.704 = barajada 0.700; v13 0.900; comida intacta 974).** Siguiente candidato (escrito antes): novedad de sitio. El mapa da de comer (490 vs 332) pero daña la
 >   adquisición de lo nuevo (0.70 vs 0.88). Órgano candidato: **curiosidad por progreso de error** (nivel8 §3, puntos 8–9:
 >   sesgo hacia el estímulo cuyo error cae más rápido, no el más alto ni el más bajo). Brazos: v13, +mapa, +mapa+curiosidad,
 >   +mapa+curiosidad con prioridad aleatoria (control). Predicción: +curiosidad recupera la adquisición de v13 (≥ 0.85 a
