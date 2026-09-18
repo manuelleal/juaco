@@ -3315,3 +3315,16 @@ producto. **XOR es un límite de la REGLA de la vía lenta**, no de la dimensió
 puerta. Vocabulario: *v13 no generaliza XOR; la lectura cuadrática lo representa pero su regla no lo separa*. Siguiente
 (bloque 3c, lo diseña un trío de agentes con puente, `registro/investigacion/PUENTE_xor.md`): vía lenta con regla delta
 con signo, controles: la misma regla con lectura lineal (debe seguir en ≤ 0.6) y `px0`/`azar` sin caer.
+
+
+### Auditoría del equipo (agente auditor, Sonnet) sobre bloques 2, 3 y N3d mudo — `registro/investigacion/AUDITORIA_bloques_2_3_20260917.md`
+
+Sin hallazgos bloqueantes. Decisiones del coordinador sobre cada uno: **(1)** "la puerta enmascara la vía lenta" — el
+auditor leyó antes del bloque 3b, que ya lo **refutó** (familiar 0.33; vía lenta sola 0.50): superado. **(2)**
+`n_sesgo_soc` no tiene índice de cuarto, así que el chequeo secundario de N3d mudo ("≈ 0 en Q4") no es verificable desde
+el JSON: **aceptado**; se añadirá `n_sesgo_soc_q` (4 posiciones) al instrumento social antes de reusarlo; el veredicto
+M1/M2 no depende de eso. **(3)** el control de prioridad barajada permutaba sobre las 90 celdas, incluidas las inactivas
+(progreso 0): diluye el control (no lo infla); **aceptado** y transmitido al diseñador de "novedad de sitio" para que su
+control permute sólo sobre celdas/sitios activos. **(4)** aceptado como práctica: listar en cada preregistro la
+puerta como causa candidata cuando el resultado depende del readout. **(5)** `None → 0.0/0.5` sin guardia y `med([])`
+en los runners: **aceptado**; se corrige en los runners nuevos. Las cuatro trampas: sin hallazgos nuevos.
