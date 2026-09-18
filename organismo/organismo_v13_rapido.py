@@ -257,6 +257,10 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
         eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,lam=0.05,memoria_rechazo=20,mu_norm=True,div_signo=True,eta_s=0.015,clip_s=3.0,puerta=3):
     if log_cada:
         raise ValueError("organismo_v13_rapido: log_cada no esta compilado; usa organismo_v13 para eso")
+    if puerta is not None and puerta < 0:   # H1 del revisor: el centinela -1 es None; un puerta negativo explicito no se admite (el tronco lo trataria como 0)
+        raise ValueError("organismo_v13_rapido: puerta negativa no se admite (usa None o >= 0)")
+    if nuevo is not None and nuevo_val not in ('comida', 'veneno'):   # H4 del revisor: el tronco falla con KeyError; el gemelo no debe callar
+        raise ValueError("organismo_v13_rapido: nuevo_val debe ser comida o veneno")
     rng=np.random.default_rng(seed)
     # --- inicializacion: EXACTAMENTE las lineas del tronco (mismo flujo de azar) ---
     Wl=rng.uniform(.1,.4,(2,9)); KW=np.zeros((NKMAX,6)); activa=np.zeros(NKMAX,bool); KW[:NK]=rng.uniform(0,1,(NK,6)); activa[:NK]=True
