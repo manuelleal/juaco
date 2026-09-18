@@ -32,3 +32,13 @@ generalización (lo dice el debate y es trivialmente cierto).
   `solap_A` puede subir). **Refutación:** si k = 2 falla T2k/T5k, la composición de más de un paso **no** está al alcance
   de esta regla y el debate ya escribió la consecuencia: crecer celdas, gradiente local acotado o cambiar de mundo.
 - Réplica en 21–40 si pasa. Si pasa k = 2 y no k = 3, se escribe "compone hasta 2".
+
+## Enmienda 2 (18 sep 2026, escrita ANTES de correr): ¿dónde se agota? k = 4 y k = 5
+
+Resultado de k = 1, 2, 3 (replicado): sep 3.97 / 3.74 / 2.24, divisiones 5 / 11 / 28, celdas activas ~35 / 41 / 58 sobre un
+pool de 90. Cada nivel de profundidad cuesta más divisiones (más distractores que ignorar). Se corren **k = 4 y k = 5**
+con los mismos cinco brazos, semillas 1–20, mismos criterios T1k–T6k con **T2k: sep ≥ 1.5 (k = 4) y sep ≥ 1.0 (k = 5)**.
+**Predicción:** k = 4 **compone** (sep entre 1.5 y 2.2; divisiones 40–55; celdas 75–90) y k = 5 **no** (el pool de 90
+se agota antes de separar: sep < 1.0 o C3 − C3C < 1 en más de 5 semillas), con el control barajado en ≈ 0 en ambos.
+**Refutación de la lectura "se agota por celdas":** si k = 5 compone con celdas < 85, el límite no es el pool; si k = 4
+ya no compone con celdas < 70, el límite es otro (interferencia entre distractores), y se registra así.

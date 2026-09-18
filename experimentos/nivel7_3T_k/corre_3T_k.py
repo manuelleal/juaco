@@ -12,9 +12,9 @@ sys.path[:0] = [AQUI, os.path.join(RAIZ, 'experimentos', 'v13_reverificacion'), 
 _desde = int(sys.argv[sys.argv.index('--desde') + 1]) if '--desde' in sys.argv else 1
 SEEDS = list(range(_desde, _desde + 20))
 ARMS = ['C1', 'C1p', 'C2b', 'C3', 'C3C']
-KS = [1, 2, 3]
+KS = [int(v) for v in sys.argv[sys.argv.index('--ks') + 1].split(',')] if '--ks' in sys.argv else [1, 2, 3]   # enmienda 2: --ks 4,5
 V13 = dict(mu_norm=True, div_signo=True, eta_s=0.015, puerta=3)
-UMBRAL_SEP = {1: 1.0, 2: 3.0, 3: 2.0}
+UMBRAL_SEP = {1: 1.0, 2: 3.0, 3: 2.0, 4: 1.5, 5: 1.0}   # enmienda 2
 N_PARALELO = 14
 _log = {'f': None, 't0': time.time()}
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     import multiprocessing as mp
     mp.set_start_method('spawn', force=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
-    _log['f'] = open(os.path.join(RAIZ, 'datos', f'3T_k_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
+    _log['f'] = open(os.path.join(RAIZ, 'datos', f'3T_k{"".join(map(str, KS))}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     pre = os.path.join(AQUI, 'PREREGISTRO_3T_k.md')
     log(f"ARRANQUE 3T-k sobre v13. k en {KS}, brazos {ARMS}, semillas {SEEDS[0]}-{SEEDS[-1]}. Pool({N_PARALELO}).")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_temporal_k {h16(os.path.join(AQUI, 'mundo_temporal_k.py'))}  v13 {h16(os.path.join(RAIZ, 'organismo', 'organismo_v13.py'))}")
@@ -94,7 +94,7 @@ if __name__ == '__main__':
             g = list(G(k, a).values())
             log(f"   {a:4s} sep {med([r['sep'] for r in g])[0]:+.2f} [{med([r['sep'] for r in g])[1]:+.2f},{med([r['sep'] for r in g])[2]:+.2f}]"
                 f"  lift_q4 {med([r['lift'][3] if r['lift'][3] is not None else 0 for r in g])[0]:+.3f}  solap_A {med([r['solap_A'] for r in g])[0]:.2f}"
-                f"  divisiones {med([r['splits'] for r in g])[0]:.0f}  muertes {med([r['deaths'] for r in g])[0]:.0f}")
+                f"  divisiones {med([r['splits'] for r in g])[0]:.0f}  celdas {med([r['celdas'] if r['celdas'] is not None else 0 for r in g])[0]:.0f}  muertes {med([r['deaths'] for r in g])[0]:.0f}")
         c3 = G(k, 'C3'); c3c = G(k, 'C3C')
         t1 = med([c3[s]['solap_A'] for s in SEEDS])[0] <= 1 and sum(c3[s]['solap_A'] <= 1 for s in SEEDS) >= 15
         t2 = med([c3[s]['sep'] for s in SEEDS])[0] >= UMBRAL_SEP[k]
@@ -109,7 +109,7 @@ if __name__ == '__main__':
     meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), semillas=SEEDS, ks=KS, veredictos=V, identidades=rc, procesos_python=ps,
                 sha_preregistro=h16(pre), sha_script=h16(os.path.abspath(__file__)), sha_mundo=h16(os.path.join(AQUI, 'mundo_temporal_k.py')),
                 python=platform.python_version(), numpy=np.__version__)
-    dj = os.path.join(RAIZ, 'datos', f'3T_k_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
+    dj = os.path.join(RAIZ, 'datos', f'3T_k{"".join(map(str, KS))}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
     json.dump(dict(meta=meta, corridas=res), open(dj, 'w', encoding='utf-8'), ensure_ascii=False, default=str)
     log(f"datos -> {os.path.basename(dj)}  sha256_16 = {h16(dj)}")
     _log['f'].close()
