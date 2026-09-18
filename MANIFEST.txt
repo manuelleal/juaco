@@ -146,6 +146,8 @@ e9278cce6320f9f5 ./datos/fuga_20260917_152707.json
 9dacc568de4ec620 ./datos/fuga_20260917_152707.log
 5bf66496f11a6c2e ./datos/hija_dispersa_humo_s61-61_20260917_235946.json
 418d72a4c92f3b88 ./datos/hija_dispersa_humo_s61-61_20260917_235946.log
+dd86cdbb45041c37 ./datos/hija_dispersa_s61-80_20260918_000202.json
+9af2933f66ceb384 ./datos/hija_dispersa_s61-80_20260918_000202.log
 8301d0d3f1b343a9 ./datos/largo_s1-20_20260917_200026.json
 6f148cd742113bae ./datos/largo_s1-20_20260917_200026.log
 5738e6062d583294 ./datos/largo_s21-40_20260917_204840.json
@@ -237,6 +239,7 @@ c98776664cb80377 ./experimentos/capacidad_grande/PREREGISTRO_capacidad_grande.md
 85afad3f0769891f ./experimentos/capacidad_grande/organismo_capD.py
 d2924e69128fe0f6 ./experimentos/congelacion_v8/PREREGISTRO_congelacion_v8.md
 bedccdfd4b3bcb11 ./experimentos/congelacion_v8/construye_v8.py
+e7aec834bab450b6 ./experimentos/creacion_A/PREREGISTRO_xor_3f.md
 ff1ce577ef94336c ./experimentos/creacion_A/banco_sesgo.py
 85ca7bb8c79198ca ./experimentos/creacion_A/construye_largo_A.py
 c6faffcd21eaaf47 ./experimentos/creacion_A/construye_v13q4.py
@@ -253,7 +256,7 @@ bbf72b3ce671d4ce ./experimentos/creacion_A/mini_largo_10.json
 4712faf6286a1404 ./experimentos/creacion_A/mini_prueba_A_largo.py
 af9e3cd81737f0a0 ./experimentos/creacion_A/mini_prueba_A_seleccion.py
 58aa1ecd962c793a ./experimentos/creacion_A/mini_prueba_A_tope.py
-5d773e4fe395f529 ./experimentos/creacion_A/mini_seleccion.json
+f175e6c1af7cfbe4 ./experimentos/creacion_A/mini_seleccion.json
 148377b9f0aca731 ./experimentos/creacion_A/mini_tope.json
 a3ded739a46b1c97 ./experimentos/creacion_A/mundo_largo_A.py
 3cc732dd2b2519cd ./experimentos/creacion_A/organismo_v13q4.py
@@ -496,8 +499,16 @@ e45188aafa83bfa7 ./experimentos/evo/gen6c/ciega_3/train.json
 7a3c60c2c03a8747 ./experimentos/evo/gen6c/ciega_4/hipotesis.md
 f640d31d23ac1c43 ./experimentos/evo/gen6c/ciega_4/organismo.py
 3718aa5cd7ec26df ./experimentos/evo/gen6c/ciega_4/train.json
+6eeafe868e069e1c ./experimentos/nivel4_puerta_codigo/bateria_generaliza_B.py
+5470b9eeeb51d129 ./experimentos/nivel4_puerta_codigo/construye_puerta_codigo.py
+12bfe4f1858a772e ./experimentos/nivel4_puerta_codigo/identidad_v13B.py
+35acef762aba665e ./experimentos/nivel4_puerta_codigo/organismo_capB.py
+e814e70c0b759c16 ./experimentos/nivel4_puerta_codigo/organismo_v13B.py
+a5b898fae4d0e879 ./experimentos/nivel4_puerta_codigo/organismo_v13gB.py
 777c47da937df4da ./experimentos/nivel6_2d/construye_2d.py
 e7c7215c319a8a40 ./experimentos/nivel6_2d/identidad_2d.py
+9eae994723ae38fb ./experimentos/nivel6_2d/mini_2d.py
+727e10364432a50a ./experimentos/nivel6_2d/mini_M1.json
 683b45c743b589c3 ./experimentos/nivel6_2d/mundo_2d.py
 c1da197f5296c07e ./experimentos/nivel6_mapa/PREREGISTRO_mapa.md
 2442cd3af63744a3 ./experimentos/nivel6_mapa/construye_mapa.py
@@ -549,6 +560,8 @@ e4188dae2dcdea8d ./experimentos/nivel8_curiosidad/corre_curiosidad.py
 0d17848c7bfc6d99 ./experimentos/nivel8_escala_mapa/construye_escala.py
 a2823148dc318dd1 ./experimentos/nivel8_escala_mapa/corre_escala.py
 d1398f0428b1739b ./experimentos/nivel8_escala_mapa/mundo_largo_e.py
+1b528822724bf553 ./experimentos/nivel8_metaplasticidad/PREREGISTRO_metaplasticidad.md
+9e4390b5305a7af2 ./experimentos/nivel8_metaplasticidad/corre_metaplasticidad.py
 38c4cb46b0e25a95 ./experimentos/nivel8_mundo_largo/PREREGISTRO_mundo_largo.md
 4d30aa578f29b07e ./experimentos/nivel8_mundo_largo/construye_mundo_largo.py
 1b273b1f6b343e96 ./experimentos/nivel8_mundo_largo/corre_mundo_largo.py
@@ -564,6 +577,10 @@ bbfde62d59641b4d ./experimentos/nivel9_allostasis/construye_allostasis.py
 4f299c7021558711 ./experimentos/nivel9_allostasis/corre_allostasis.py
 cada8cd34539d15f ./experimentos/nivel9_allostasis/organismo_v13a.py
 c0faac23d8a56c0e ./experimentos/nivel9_allostasis/organismo_v13ag.py
+8a651d083d77d154 ./experimentos/nivel9_probar_si_mismo/construye_probar.py
+8f45a34f374a6264 ./experimentos/nivel9_probar_si_mismo/identidad_probar.py
+0dbc2495efe44e60 ./experimentos/nivel9_probar_si_mismo/organismo_v13p.py
+7ab4767d446ba797 ./experimentos/nivel9_probar_si_mismo/organismo_v13pg.py
 e162593221a22d8a ./experimentos/ramas/pulpo_2M.py
 a31d9811122bdb54 ./experimentos/ramas/2Kbis_capacidad/PREREGISTRO.md
 7efe02abd9a22247 ./experimentos/ramas/2Kbis_capacidad/a_datos.py
@@ -717,11 +734,11 @@ a52c9c93ef7bcbff ./registro/HANDOFF.md
 8429068fe2ab029c ./registro/NOTA_v11_pattern_separation_20260917.md
 ad73dfc18c96ed8f ./registro/PLAN.md
 93d958de2314e273 ./registro/REFLEXION_agi.md
-696e569a402ceaa3 ./registro/REGISTRO_etapas_1_2.md
+d61719a7fdb3954b ./registro/REGISTRO_etapas_1_2.md
 a8dd30b835fd8770 ./registro/investigacion/AUDITORIA_bloques_2_3_20260917.md
-e776d6af780ab5e4 ./registro/investigacion/AUDITORIA_dia7_20260917.md
+3866077481633a0d ./registro/investigacion/AUDITORIA_dia7_20260917.md
 e70aaf81c71de49f ./registro/investigacion/DEBATE_y_plan_5a10.md
-808f9961eef652c1 ./registro/investigacion/PUENTE_creacion.md
+86f79d8d5faa9eec ./registro/investigacion/PUENTE_creacion.md
 6c5ba9e42d11552a ./registro/investigacion/PUENTE_xor.md
 a757a0c4fa867227 ./registro/investigacion/REPOS_cercanos.md
 7f145cee0eb8eaa5 ./registro/investigacion/exploracion_sin_atraccion_20260917.md
