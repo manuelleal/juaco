@@ -2,6 +2,8 @@
 el receptor aprende que va a SENTIR a partir de la CONDUCTA VISIBLE del emisor (u[c], regla delta sobre su propia
 dE al morder) y con eso aprende el valor de un objeto SIN morderlo. Con eta_sym=0, gamma_pred=0 y theta_a=0 es
 mundo_social_n3 EXACTO. Mide exposiciones y mordidas del receptor hasta criterio (solo lectura).
+Perillas de montaje (apagadas por defecto): regen_en_fijos (ERR-33: el flujo sortea dentro de `fijos`) y
+nobj_total (ERR-34: el mismo numero de objetos en todos los brazos, no nobj_por_org*n).
 Generado por experimentos/creacion_C/construye_n2pred.py. NO editar. RAMA de creacion: no es tronco.
 """
 """
@@ -35,14 +37,17 @@ R_VAL = {'comida': 1.0, 'veneno': -3.0}; E_VAL = {'comida': +0.8, 'veneno': -0.4
 
 
 class Mundo:
-    def __init__(self, rng, nobj, tipos, regen=None, fijos=None, regen_rota=False, vida=None):
+    def __init__(self, rng, nobj, tipos, regen=None, fijos=None, regen_rota=False, vida=None, regen_en_fijos=False):
         self.rng = rng; self.nobj = nobj; self.tipos = tipos; self.objs = {}; self.regen = regen; self.pend = {}   # N3c: regen
         self.fijos = list(fijos) if fijos else None   # N3d: tipos iniciales fijos (en orden), en vez de sortearlos
+        self.pool = list(fijos) if fijos else None; self.regen_en_fijos = regen_en_fijos   # C (ERR-33): el conjunto fijo COMPLETO, que `fijos` se consume con pop(0)
         self.regen_rota = regen_rota   # N2f: al reaparecer, el tipo se vuelve a sortear (mismo sitio + FLUJO de patrones)
         self.vida = vida; self.nace = {}; self.t = 0; self.caducados = 0   # N2f-v3: el objeto caduca a t_nace + vida (el veneno tambien sale del mundo)
 
     def _reaparece(self, kk):   # N2f: con regen_rota=False devuelve el MISMO tipo -> N3c/N3d bit a bit, sin tocar el RNG
-        return self.tipos[int(self.rng.integers(len(self.tipos)))] if self.regen_rota else kk
+        if not self.regen_rota: return kk
+        _pool = self.pool if (self.regen_en_fijos and self.pool) else self.tipos   # C (ERR-33)
+        return _pool[int(self.rng.integers(len(_pool)))]
 
     def spawn(self):
         while len(self.objs) + len(self.pend) < self.nobj:
@@ -335,7 +340,7 @@ class Organismo:
 SIMBOLOS = ('simbolo', 'simbolo_barajado')
 
 
-def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
+def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True, nobj_total=None, regen_en_fijos=False,
         estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, estado_emisor='conducta', u_v=0.5,
         mascaras=None, kw_por_org=None, regen=None, tipos_fijos=None, mudo_desde=None, regen_rota=False, vida=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen; N3d: tipos_fijos; N3d-mudo: mudo_desde; N2f: regen_rota; N2f-v3: vida
     """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
@@ -360,7 +365,7 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
     rng_mundo = rngs[0] if (n == 1 and compat) else np.random.default_rng(seed + 900000)
     rng_senal = np.random.default_rng(seed + 300000)
     tipos = list(tren)
-    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen, fijos=tipos_fijos, regen_rota=regen_rota, vida=vida); mundo_.spawn()   # N3c / N3d / N2f / N2f-v3
+    mundo_ = Mundo(rng_mundo, (nobj_por_org * n if nobj_total is None else nobj_total), tipos, regen=regen, fijos=tipos_fijos, regen_rota=regen_rota, vida=vida, regen_en_fijos=regen_en_fijos); mundo_.spawn()   # N3c / N3d / N2f / N2f-v3
     tipos.extend(test)   # como v13g con fase2_en=0: los de test entran en t=0, tras el sorteo inicial
     mundo = mundo_
     senales_emitidas = [0] * n; senales_recibidas = [0] * n

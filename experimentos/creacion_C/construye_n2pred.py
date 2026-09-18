@@ -49,7 +49,9 @@ def sust(texto, viejo, nuevo, n=1, etiqueta=''):
 CAB = ('"""mundo_social_pred = experimentos/etapa5_comunicacion/mundo_social_n3.py (ef227f833c5bf46a) + N2 POR PREDICCION:' + NL +
        'el receptor aprende que va a SENTIR a partir de la CONDUCTA VISIBLE del emisor (u[c], regla delta sobre su propia' + NL +
        'dE al morder) y con eso aprende el valor de un objeto SIN morderlo. Con eta_sym=0, gamma_pred=0 y theta_a=0 es' + NL +
-       'mundo_social_n3 EXACTO. Mide exposiciones y mordidas del receptor hasta criterio (solo lectura).' + NL +
+       'mundo_social_n3 EXACTO. Mide exposiciones y mordidas del receptor hasta criterio (solo lectura).' + NL +\
+       'Perillas de montaje (apagadas por defecto): regen_en_fijos (ERR-33: el flujo sortea dentro de `fijos`) y' + NL +\
+       'nobj_total (ERR-34: el mismo numero de objetos en todos los brazos, no nobj_por_org*n).' + NL +
        'Generado por experimentos/creacion_C/construye_n2pred.py. NO editar. RAMA de creacion: no es tronco.' + NL + '"""' + NL)
 
 PERILLAS = ("eta_sym=0.0, gamma_pred=0.0, theta_a=0.0, tau_pred=400, win_crit=0, crit_rec=0.75")
@@ -146,7 +148,31 @@ def construye():
     # 5) recibir: la rama de prediccion
     txt = sust(txt, RECIBIR_VIEJO, RECIBIR_NUEVO, etiqueta='recibir')
 
-    # 6) salidas nuevas
+    # 6) ARREGLOS DE MONTAJE COMO PERILLAS (ERR-33 y ERR-34), apagadas por defecto
+    # (a) ERR-33: `regen_rota` sorteaba de `tipos` (los 20) y descartaba `tipos_fijos`. Con `regen_en_fijos=True`
+    #     el flujo sortea DENTRO del conjunto fijo: se puede tener flujo y conjunto controlado a la vez.
+    txt = sust(txt, "    def __init__(self, rng, nobj, tipos, regen=None, fijos=None, regen_rota=False, vida=None):",
+               "    def __init__(self, rng, nobj, tipos, regen=None, fijos=None, regen_rota=False, vida=None, regen_en_fijos=False):",
+               etiqueta='Mundo.firma')
+    txt = sust(txt, "        self.fijos = list(fijos) if fijos else None   # N3d: tipos iniciales fijos (en orden), en vez de sortearlos",
+               "        self.fijos = list(fijos) if fijos else None   # N3d: tipos iniciales fijos (en orden), en vez de sortearlos"
+               + NL + "        self.pool = list(fijos) if fijos else None; self.regen_en_fijos = regen_en_fijos   # C (ERR-33): el conjunto fijo COMPLETO, que `fijos` se consume con pop(0)",
+               etiqueta='Mundo.pool')
+    txt = sust(txt, "        return self.tipos[int(self.rng.integers(len(self.tipos)))] if self.regen_rota else kk",
+               "        if not self.regen_rota: return kk" + NL +
+               "        _pool = self.pool if (self.regen_en_fijos and self.pool) else self.tipos   # C (ERR-33)" + NL +
+               "        return _pool[int(self.rng.integers(len(_pool)))]",
+               etiqueta='Mundo._reaparece')
+    # (b) ERR-34: nobj = nobj_por_org * n hacia que la linea base (n=1) viera la MITAD de los objetos que los
+    #     brazos sociales (n=2). Con `nobj_total` se fija el numero de objetos IGUAL en todos los brazos.
+    txt = sust(txt, "def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,",
+               "def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True, nobj_total=None, regen_en_fijos=False,",
+               etiqueta='run.firma')
+    txt = sust(txt, "    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen, fijos=tipos_fijos, regen_rota=regen_rota, vida=vida)",
+               "    mundo_ = Mundo(rng_mundo, (nobj_por_org * n if nobj_total is None else nobj_total), tipos, regen=regen, fijos=tipos_fijos, regen_rota=regen_rota, vida=vida, regen_en_fijos=regen_en_fijos)",
+               etiqueta='run.Mundo')
+
+    # 7) salidas nuevas
     ancla_sal = "                    celdas=int(self.activa.sum()), dq=self.dq, n_crit=self.n_crit, veneno_propio=self.veneno_propio,"
     txt = sust(txt, ancla_sal, ancla_sal + NL + SALIDA, etiqueta='salida')
 
