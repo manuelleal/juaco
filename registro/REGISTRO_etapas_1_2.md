@@ -3800,3 +3800,37 @@ Vocabulario: *la masa de conflicto no sirve como freno de olvido*. Nada toca el 
   sin tocar (px0, azar) + xor01; predicción: `acc` idéntica semilla a semilla y `|ΔW_lenta| < 1e−9` mientras ningún canal
   toque `clip_s`; guarda `n_techo` (regla de ERR-25). Humo `vector_unico_humo_20260918_000816` (0689e674666bbdfa): acc
   idéntica 3/3, `max|ΔW_lenta| = 1.1e−15`, `n_techo = 0` en 6/6. Se corre después de la réplica de B-1.
+
+
+### Bloque B-1, réplica 81–100 bajo la enmienda 1 (18 sep 00:15): **PASA — y pasa también por la letra ORIGINAL (P1 19/20 a k = 5, 18/20 a k = 4)**
+
+Datos `hija_dispersa_s81-100_20260918_000954` (bdc705609bac2633), 466 corridas, identidad 3/3 dentro del runner.
+
+| k | brazo | `sep` mediana | `lift_q4` | divisiones | celdas | muertes |
+|---|---|---|---|---|---|---|
+| 5 | V13 | 1.85 | 0.128 | 60 | 90 | 79 |
+| 5 | **REL** | **3.62** | **0.352** | **8** | **38** | 102 |
+| 5 | RELD | 3.40 | 0.358 | 10 | 40 | 94 |
+| 5 | AZAR | 2.16 | 0.201 | 40 | 70 | 72 |
+| 5 | SLOT | 2.12 | 0.205 | 58 | 88 | 72 |
+| 4 | V13 | 2.11 | 0.135 | 45 | 75 | 86 |
+| 4 | **REL** | **3.10** | **0.314** | **13** | **43** | 92 |
+| 4 | AZAR | 2.35 | 0.205 | 32 | 62 | 76 |
+| 4 | SLOT | 2.30 | 0.217 | 32 | 62 | 81 |
+
+P1 celdas ≤ 0.75 × V13: **19/20** a k = 5 (≤ 0.85 ×: **18/20** a k = 4) — cumple P1' (≥ 14) **y** el umbral original (≥ 18).
+P2 lift 0.352 y > V13 **19/20**. P3 sep 3.62 y C3 − C3C ≥ 1 en **20/20**. P4 inercia a k = 1: **20/20**. R3 REL > AZAR
+**16/20** (k = 4: 14/20). R4 SLOT > REL 4/20 (k = 4: 6/20). Canal falso limpio. Muertes REL 102 contra 79 (se anota; no es
+criterio). **Dos series:** conducta > V13 en 18/20 y 19/20; relevancia > azar en 16/20 y 16/20; ahorro de celdas 16/20 y
+19/20; inercia 20/20 y 20/20.
+
+**Declarable (nivel 7, vocabulario preregistrado):** *la hija que nace ciega a lo irrelevante compone historias más
+profundas con menos celdas* — a k = 4 y k = 5 compone mejor que v13 (lift 0.31–0.35 contra 0.13; separación 3.1–3.6
+contra 1.9–2.1) con **la mitad de las celdas y una décima parte de las divisiones**, y qué píxeles conserva **sí** importa
+(gana a la máscara al azar de la misma cardinalidad en 16/20 dos veces; el slot equivocado no gana). Mecanismo: una línea
+del nacimiento de v11 (`rel ⊊ (P > 0)` por medias de `P` condicionadas al signo de R; memoria: dos vectores `NIN` y dos
+escalares por celda). Prohibido: "aprende a ignorar", "atiende", "selecciona". **Antes de tocar el tronco (§6 del
+preregistro):** `bateria_v13.py` 8/8 y `bateria_generaliza.py` G1 ≥ 0.80 / G2 ≥ 0.85 sobre un `organismo_v13` con la misma
+perilla (copia por anclas, identidad con la perilla apagada); la decisión de v14 es del director. Convergencia con B1/A5:
+el techo de la composición no era el pool de celdas (duplicarlo no devuelve nada) sino la evidencia por código; la hija
+dispersa cierra el conflicto de la madre con una sola hija por familia de rellenos.

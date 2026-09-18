@@ -136,3 +136,6 @@ k = 4)**. Justificación: el ahorro fue mayoritario (16/20) pero no general; el 
 semillas que no lo han visto. P2, P3, P4, R2, R3, R4 sin cambio. Nada se recalibra sobre 61–80; su veredicto (REFUTADA)
 queda. Vocabulario por resultado: si pasan P1'–P3 y R3 → el preregistrado ("compone historias más profundas con menos
 celdas"); si P1' cae → "compone mejor; el ahorro de celdas es mayoritario, no general".
+
+**Resultado de la serie 81–100 (18 sep 00:15):** P1 19/20 (k = 5) y 18/20 (k = 4) — cumple P1' y también el umbral original;
+P2 0.352 y 19/20; P3 3.62 y 20/20; P4 20/20; R3 16/20 (k = 4: 14/20); R4 4/20. Vocabulario: el preregistrado.
