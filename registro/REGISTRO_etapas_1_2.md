@@ -4038,3 +4038,20 @@ sesgo tres veces menor que se apaga solo, sin más veneno ni muertes, y **no cob
 a órgano** (`registro/PROPUESTA_v14.md`, segundo candidato). Falta, si el director lo quiere en v14: el examen v3' completo
 (3', 3'', 4a–4d) sobre una copia del tronco con la perilla fija (como se hizo con v13D), gemelo y congelación. Lección de
 la línea: *el predictor de ΔE nunca fue el problema; lo era dónde entraba*.
+
+
+### ERR-29 (18 sep 02:05; hallazgo del implementador del paquete v13E): **`corre_baterias_v13D.py` guardaba la generalización ON y la referencia OFF bajo la misma clave** — el veredicto registrado no cambia
+
+La corrida OFF (posterior) pisó en el JSON la entrada de la corrida ON antes de leerla; el veredicto `D2_generalizacion = True`
+se mantiene porque **las dos pasan** y los números ON están en el log registrado (`baterias_v13D_20260918_012145.log`:
+K 20/20, G1 px0 0.800 / azar 0.500, 19/20; G2 0.834 / 0.427, 19/20). Corrección: claves explícitas `D2` / `D2_ref` en el runner
+(sin volver a correr). Lección (regla 9 de los runners): cada etapa escribe bajo una clave propia; el veredicto se lee del
+JSON, no del recuerdo del proceso.
+
+### Examen v3' y órganos que actúan en la boca (02:05): **el criterio 5 (identidad: reducción a v11 apagando `eta_s` y `puerta`) no puede medir a v13E** → criterio 5 adaptado (v3'' para órganos en la boca), declarado antes de correr
+
+En el humo de `bateria_v13E` (2 semillas) el criterio 5 dio 0/84 y el examen abortó por su guarda: `k_testE·s̄_E` entra en la boca
+sin pasar por `eta_s` ni `puerta`, así que apagar esas dos perillas no reduce v13E a v11. Precedente ERR-21 → v3': el criterio
+se reescribe (la reducción a v11 apaga también la perilla nueva), se justifica en `PREREGISTRO_v13E.md` y el examen entero
+se corre en semillas nuevas; si con las tres perillas apagadas v13E no es v11 bit a bit, el instrumento está mal y no se
+interpreta nada. Se anota aquí antes de correr el examen.
