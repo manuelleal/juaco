@@ -2745,7 +2745,7 @@ quedan cerradas a la vez sobre el mismo organismo.** v11 pasa a tronco anterior.
 ### Re-verificación sobre v13: **3T sobrevive (T1–T6); la capacidad cae, como se predijo; KT2 no aplica (ERR-22)**
 
 Preregistro `experimentos/v13_reverificacion/PREREGISTRO_reverificacion_v13.md` (`e874add677bbb67b`, `01c47dc`);
-instrumentos `mundo_temporal_v13` (`bd3c64c0799ed8ce`) y `organismo_capD13` (`c93ba572bc783a05`), commiteados antes.
+instrumentos `mundo_temporal_v13` (`f9c3169b32f393d4`; el `bd3c64c0799ed8ce` que decía aquí era el sha anterior al renombre `valor_tot`, corregido el 17-sep noche) y `organismo_capD13` (`c93ba572bc783a05`), commiteados antes.
 Datos `datos/reverificacion_v13_20260917_171603.json` (`9c9f52afffa36c79`). Inercia: 18/18 y 4/4. Semillas 41–60.
 (Un primer lanzamiento se cayó en la etapa de inercia por un choque de nombres del instrumento —mi `valor(P)` pisó la
 `valor(kk, last)` del mundo temporal—; se renombró y se relanzó sin medir nada en medio.)

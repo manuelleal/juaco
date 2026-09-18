@@ -11,7 +11,7 @@ entrada; el control con canal falso (C3C) no lo logra (−0.36). Sólo se ha med
 **no cambia** en este experimento: se extiende el **mundo**, y por eso no hace falta re-verificar retención ni
 generalización (lo dice el debate y es trivialmente cierto).
 
-## 1. Mundo con profundidad k (instrumento `mundo_temporal_k.py`, desde `mundo_temporal_v13.py` `bd3c64c0799ed8ce`)
+## 1. Mundo con profundidad k (instrumento `mundo_temporal_k.py`, desde `mundo_temporal_v13.py` `f9c3169b32f393d4`)
 
 - La entrada del organismo es `[PAT[actual], PAT[h1], PAT[h2], …, PAT[hk]]` (`NIN = 6·(k+1)`), donde `h1` es el último
   estímulo mordido, `h2` el anterior, etc.
