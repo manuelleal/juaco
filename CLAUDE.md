@@ -181,8 +181,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - **DECISIÓN DEL DIRECTOR (18 sep 05:10): frente único con DOS organismos en paralelo** — `SIN` (reglas locales: codificación
   predictiva + retorno asimétrico, el error de predicción de ΔE como señal común) y `CON` (backprop de laboratorio para
   descubrir la regla y como control positivo; nunca dentro del tronco); la medida que manda es *exposiciones hasta asociar*
-  (aprender sin morder, pocos ensayos, como los insectos); representaciones de miles de dimensiones (código disperso /
-  hiperdimensional). Mismo criterio de parada (`registro/PLAN.md`).
+  (aprender sin morder, pocos ensayos, como los insectos); representación en GRAFO (nodos y relaciones entre lo aprendido;
+  la alta dimensión sólo como soporte). Mismo criterio de parada (`registro/PLAN.md`).
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;

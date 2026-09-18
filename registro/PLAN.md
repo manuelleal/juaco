@@ -89,9 +89,10 @@
 >   (B) **La repetición es el enemigo:** la medida que manda pasa a ser *cuántas exposiciones hacen falta* para asociar
 >   (una imagen → lo previo, salvo que el mundo diga otra cosa): aprender sin morder, asociación en pocas exposiciones,
 >   como en insectos (aprendizaje en un ensayo). Todo bloque reporta exposiciones-hasta-criterio, no sólo acierto final.
->   (C) **Vectorización del aprendizaje:** representaciones de miles de dimensiones (código disperso / computación
->   hiperdimensional, ligar y desligar) en vez de la ruta lineal; se consulta a los expertos (explorador) y entra por el
->   mismo método (identidad, preregistro, réplica). (D) Criterio de parada de la decisión de las 04:55 sin cambio: tres
+>   (C) **Representación en GRAFO (corrección del director, 05:25: "la palabra es grafo, no vectorización"):** lo aprendido
+>   como nodos (patrones, sitios, valores, contextos) y relaciones entre ellos, que el organismo recorre para asociar lo
+>   nuevo con lo previo; representaciones de alta dimensión (código disperso, ligar/desligar) sólo como soporte del grafo,
+>   no como ruta lineal; se consulta a los expertos (explorador) y entra por el mismo método (identidad, preregistro, réplica). (D) Criterio de parada de la decisión de las 04:55 sin cambio: tres
 >   bloques; 0.75 en xor01. (E) Toda idea entra con copia y anclas; el tronco v14 no se toca.
 >
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
