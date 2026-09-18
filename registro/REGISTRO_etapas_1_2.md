@@ -4938,3 +4938,45 @@ la evitación cae de ×7 a ×1 y las muertes a la mitad (18/18 semillas ALIAS en
 (examen y generalización idénticos a v14.1)*. Nivel 4 → 75 %. **Candidato a v15 ("división por R = 0", perilla `desambiguar`):
 la entrada al tronco la decide el director** (`registro/PROPUESTA_v14.md`). Pendiente de la línea: réplica con `R = 0` ruidoso
 y alias de magnitud (regímenes que hoy no existen), y el gemelo compilado.
+
+
+### Mundo vivo, peldaño 2 — PROPÓSITO Y REPRODUCCIÓN COMO MEDIDA (diseñador; 18 sep 09:16; semillas 221–240): **LA MEDIDA SE TIRA — `descendientes_viables` (ventana de 500 pasos con energía y agua ≥ 1) no ordena los brazos como la supervivencia: ESCALAR y BARAJA_CON hacen más "descendientes" que VIVO muriendo 1.5× más (P-R1 < 0.50, cláusula escrita antes). Nada más se declara. Lo reportado sin interpretar: la tercera necesidad ("reproducirse") cambia UNA conducta — saciado, deja de morder la sal (0.80 → 0.007) — y leer el mínimo de las dos filas existentes (CUELLO_MIN, sin memoria nueva) lo hace igual o mejor → la tercera fila SOBRA (Occam)**
+
+Preregistro `experimentos/nivel11_mundo_vivo/PREREGISTRO_reproduccion.md` (§1–10 antes del humo; enmienda 1 = **ERR-39**: el control de Occam
+CUELLO leía UNA fila y dejaba invisible el veneno — control de paja — y se añadió CUELLO_MIN antes del bloque, sin cambiar umbrales);
+instrumento por anclas `organismo_vivo_rep.py` (aa823d56c2d4213c; perilla maestra `reproduccion=0` ≡ `organismo_vivo` bit a bit; medida de
+sólo lectura; `rep_nec` = tercera fila de valor cuyo cuerpo es `min(E, Ag)`; `rep_coste` paga E y Ag por descendiente); arnés
+`identidad_vivo_rep.py` **52/52** (+ 15/15 dentro del runner); runner `corre_vivo_rep.py` (d8ff689c6dd544d0); datos
+`vivo_rep_s221-240_20260918_091428` (4a3096492a1ddcfc; 180 corridas, T = 100 000, 2 min con Pool(14)); subconjunto limpio n = 19 (alias
+estructural 236 excluido): mismo cuadro.
+
+| brazo (n = 20) | descendientes (mediana) | viable | muertes [E, agua] | xor01 | sac_tasa[D] (sal, saciado) |
+|---|---|---|---|---|---|
+| VIVO (organismo_vivo) | 20.0 | 0.356 | 100 [53.5, 49.5] | 1.0 | 0.797 |
+| REP_SIN_COSTE (tercera necesidad) | 55.0 | 0.549 | 75 [30, 44] | 1.0 | **0.007** |
+| REP (paga 0.4 / 0.4) | 54.5 | 0.495 | 107 [47, 60.5] | 1.0 | 0.007 |
+| CUELLO (una fila: control de paja, ERR-39) | 6.5 | 0.328 | 96.5 | 1.0 | 0.269 |
+| **CUELLO_MIN (mínimo de las dos filas, sin memoria nueva)** | **65.5** | 0.555 | 76 [32.5, 39] | 1.0 | **0.001** |
+| UNA_NEC | 13.0 | 0.231 | 137.5 | 0.5 | — |
+| ESCALAR | **36.0** | 0.468 | **149.5** | 0.5 | — |
+| BARAJA_CON | **39.5** | 0.486 | **159.5** | 0.5 | — |
+| BARAJA_POL | 1.0 | 0.378 | 372.5 | 1.0 | — |
+
+| predicción (escrita antes) | resultado | veredicto |
+|---|---|---|
+| P-R1 la medida ordena como la supervivencia (A₁₂ ≥ 0.70 en cuatro pares; < 0.50 → se tira) | VIVO > UNA_NEC 0.93 · UNA_NEC > BARAJA_POL 1.0 · **VIVO > ESCALAR 0.007** · **VIVO > BARAJA_CON 0.0** | **SE TIRA LA MEDIDA** |
+| P-R2 saciado veta la sal | VIVO 0.797 → REP 0.007 (A₁₂ 1.0) | pasa (reportado) |
+| P-R3 rinde sin pagar / P-R4 pagando | 55 contra 20 (A₁₂ 1.0; ×2.75); REP 0.99 × REP_SIN_COSTE | pasan (reportado) |
+| P-R5 / **P-R5b** Occam | CUELLO 6.5; **CUELLO_MIN 65.5 > 55 (A₁₂ 0.146)**, veta la sal 0.001, comida y agua A₁₂ 1.0 | **la tercera fila sobra** |
+| P-R6 seguridad (xor01, celdas, exposiciones, muertes) | 20/20, 20/20, ×1.0; muertes A₁₂ 0.966 | pasa (reportado) |
+| P-R7 tabla de la fila 2 | 12/20 y 16/20 (se exigían 18/20) | NO |
+| P-R8 coste en el mundo | sal ×1.9, comida ×0.69 | NO |
+
+**Lectura honesta:** la ventana de viabilidad cuenta "cuerpo lleno 500 pasos seguidos" y un organismo que se atraca y muere más la
+cumple más veces: no es una medida de reproducción ligada a la supervivencia, y el preregistro la mató solo (P-R1). Lo que sí se vio
+(sin declarar): valor por el cuello de botella `min(E, Ag)` = *saciado, no muerdas lo que no informa* (la sal cae de 0.80 a 0.00) — y
+no hace falta una necesidad nueva para tenerlo: CUELLO_MIN lo saca de las dos filas que ya existen. Siguiente (preregistro nuevo,
+semillas 261–280, **ERR-40**: medida no ligada a la supervivencia): medida que no pueda premiar morir (descendientes por vida, o
+descendientes con coste contados sólo si el cuerpo sigue vivo Y pasos después), CUELLO_MIN contra tercera necesidad contra VIVO,
+mismos controles. Nivel 9 sigue en 30 % (propósito medido como conducta, no como medida de reproducción). Sin ERR nuevo por el
+resultado (es una refutación, no un defecto).
