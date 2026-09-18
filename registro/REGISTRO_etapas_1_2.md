@@ -3065,3 +3065,30 @@ división por conflicto de signo aprende a mirar el slot que importa e ignorar l
 El canal falso divide más (60 con k = 3) sin separar: divide por ruido. **Vocabulario:** *compone hasta 3 pasos de
 historia con distractores*; no "planifica", no "razona". Abierto: k = 4, 5 (¿dónde se agota?), y si las divisiones extra
 cuestan capacidad (no se midió aquí: el organismo no cambió).
+
+
+### Nivel 6 (planificación mínima), experimento 2 del plan: **v13 + tabla M elige la dirección hacia comida recordada que no ve — replicado**
+
+Preregistro `experimentos/nivel6_mapa/PREREGISTRO_mapa.md` + enmienda 1 (control INVERTIDO, escrita tras el humo y antes
+de las 20 semillas); instrumento `mundo_mapa.py` (`207d6a1954336b18`, desde `organismo_v13.py` por anclas; **perillas
+apagadas ≡ v13, 9/9**). **Hallazgo de diseño (va contra el informe de nivel 6):** la retina del tronco **no es una
+ventana**: `see()` devuelve el objeto más cercano de todo el anillo con su lado; la prueba de "meta fuera de la vista"
+exige un mundo con visión limitada (`r_vis = 3`). Mundo: sitios fijos (comida en F, veneno enfrente) que reaparecen 50
+pasos después de morderlos. `M[pos]` = último patrón visto ahí; con la retina vacía la boca suma por dirección el valor
+descontado (`0.9^h`, `H = 20`) de lo recordado, con su propio `valor()` (dos vías y puerta, sin tocar); `gamma_M = 0.6`.
+Prueba: 40 teletransportes por semilla con la comida a 4–12 casillas (invisible) por un lado; dirección del **primer paso**.
+
+| brazo | acierto 1–20 (mediana; > 0.60) | acierto 21–40 | comida Q4 | muertes | lectura |
+|---|---|---|---|---|---|
+| **MAPA** | **0.812** (19/20) | **0.800** (20/20) | 490 | 3 | elige el lado de la comida recordada |
+| SINMAPA | 0.475 (2/20) | 0.500 (2/20) | 332 · 346 | 42 · 46 | azar; y muere 14 veces más |
+| CONGELADA (M nunca escrita) | 0.475 = SINMAPA **bit a bit** | 0.500 = SINMAPA | | | 0.50 por construcción, verificado |
+| BARAJADO (Wp/Wn permutados) | 0.675 | 0.550 | | | **no decisivo**: la masa positiva de la vía lenta sobrevive a la permutación (enmienda 1) |
+| SINCOMIDA (meta virtual) | 0.534 | 0.500 | 0 | 355 | sin sesgo motor |
+| **INVERTIDO** (`Wp ↔ Wn`, `Wps ↔ Wns` en la prueba) | **0.114** (0/20) | **0.128** (0/20) | | | **huye** de la comida recordada: la dirección corre por el valor |
+
+F1 (comida en Q4, MAPA > SINMAPA) **20/20 y 20/20**. Datos `mapa_s1-20_20260917_192813` (`ca8657637e8c2292`) y
+`mapa_s21-40_20260917_193133` (`82a31af5259389ba`). **Vocabulario:** *elige la dirección hacia comida recordada fuera de
+la vista, con el valor que ya tenía; y eso le da de comer*. No "planifica" (un paso de simulación, sin secuencia de
+acciones ni horizonte aprendido). Abierto: horizonte real (dos metas, rodeo por veneno), `M` que se degrade, y si el
+mismo mecanismo hacia ADELANTE (tabla) y hacia ATRÁS (3T-k) son la misma traza (nivel 6 ↔ 7, como propone el debate).
