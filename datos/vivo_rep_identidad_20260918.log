@@ -1,0 +1,54 @@
+# identidad_vivo_rep.py sobre la construccion final aa823d56c2d4213c (18 sep 2026, ~09:12; un proceso, T=20000, semillas 1-2)
+# la primera pasada (construccion v1 ed31d9b989b93307) dio 42/42; esta repite los 42 y anade E2 y H1-H4
+  sha organismo_v14 (TRONCO congelado)     feefc88b1fd8d434
+  sha organismo_vivo.py (origen)           20c0961c79de8825
+  sha construye_vivo_rep.py                693826b02c03b848
+  sha organismo_vivo_rep.py                aa823d56c2d4213c
+  T = 20000, semillas (1, 2), UN proceso
+
+APAGADA (reproduccion=0): organismo_vivo_rep == organismo_vivo, mismas claves
+  [   7.7s] (A1) VIVO                                                    2/2 IDENTICO
+  [  14.0s] (A2) UNA_NEC                                                 2/2 IDENTICO
+  [  21.6s] (A3) ESCALAR                                                 2/2 IDENTICO
+  [  29.0s] (A4) BARAJA_POL (rng propio del control)                     2/2 IDENTICO
+  [  35.0s] (A5) BARAJA_CON                                              2/2 IDENTICO
+  [  40.8s] (A6) NO_INFORMA (sal muda)                                   2/2 IDENTICO
+  [  47.2s] (A7) ancla V14 (1 necesidad, 2 estimulos)                    2/2 IDENTICO
+  [  53.6s] (A8) vivo=0 base                                             2/2 IDENTICO
+  [  60.1s] (A9) vivo=0 con inversion en 10k                             2/2 IDENTICO
+  [  67.7s] (A10) VIVO + predictor vectorial (eta_pred=0.05)             2/2 IDENTICO
+  [  73.9s] (A11) VIVO con TODAS las rep_* encendidas y la maestra apagada 2/2 IDENTICO
+  [  78.1s] (A12) vivo=0 linaje v13 (mask_rel=0, puerta_pat=0)           2/2 IDENTICO
+  [  82.1s] (A13) VIVO sin puerta (puerta=None)                          2/2 IDENTICO
+
+CADENA AL TRONCO: organismo_vivo_rep(vivo=0, n_nec=1) == organismo_v14 (clave por clave)
+  [  85.6s] (B1) rep(vivo=0) == organismo_v14                            2/2 IDENTICO
+  [  89.0s] (B2) lo mismo con inversion en 10k                           2/2 IDENTICO
+
+ENCENDIDA, SOLO LECTURA (reproduccion=1, rep_coste=0, sin tercera necesidad): claves viejas bit a bit + 7 nuevas
+  [  93.1s] (C1) VIVO + medida                                           2/2 IDENTICO
+  [  96.5s] (C2) UNA_NEC + medida                                        2/2 IDENTICO
+  [  99.9s] (C3) ancla V14 + medida                                      2/2 IDENTICO
+  [ 104.6s] (C4) BARAJA_POL + medida                                     2/2 IDENTICO
+        claves dependientes del rng identicas con la medida encendida: 9/9   descendientes(s1,T=20000) = 3, pasos_viables = 6255
+
+CONTROLES QUE DEBEN FALLAR (si no, el arnes pasaria por vacuidad)
+  [ 110.8s] (D) tercera necesidad (n_nec=3, rep_nec=1) != organismo_vivo VIVO 2/2 DIFIERE (como debe)
+  [ 114.8s] (E) control CUELLO (rep_cuello=1) != organismo_vivo VIVO     2/2 DIFIERE (como debe)
+  [ 118.9s] (E2) control CUELLO_MIN (rep_cuello=2) != organismo_vivo VIVO 2/2 DIFIERE (como debe)
+        CUELLO_MIN s1 T=20000: descendientes 13, viable 0.587, muertes 12 [5, 7], tasa saciado A/B/C/D {'A': 0.886, 'B': 0.005, 'C': 0.778, 'D': 0.002}
+        CUELLO_MIN s2 T=20000: descendientes 14, viable 0.581, muertes 14 [5, 9], tasa saciado A/B/C/D {'A': 0.8, 'B': 0.002, 'C': 0.769, 'D': 0.004}
+
+ENTRE CONSTRUCCIONES (H): la construccion final == la v1 del humo en los brazos que el humo corrio
+        v1: C:\Users\User\AppData\Local\Temp\claude\C--Users-User-Documents-ASIGNACION-SENA-CHRISTIAM-2026-FICHAS-PYTHON-JSON\0cc0e618-5704-4b6c-aed1-86ef90822ef1\scratchpad\organismo_vivo_rep_v1.py  sha ed31d9b989b93307
+  [ 125.0s] (H1) VIVO + medida                                           2/2 IDENTICO
+  [ 129.0s] (H2) REP_SIN_COSTE                                           2/2 IDENTICO
+  [ 133.0s] (H3) REP (coste 0.4)                                         2/2 IDENTICO
+  [ 137.2s] (H4) CUELLO (rep_cuello=1)                                   2/2 IDENTICO
+
+(F) informativo: con rep_coste=0.4 difiere de organismo_vivo si y solo si hubo >= 1 descendiente en T
+        semilla 1: descendientes 5, difiere True  -> coherente
+        semilla 2: descendientes 5, difiere True  -> coherente
+
+IDENTIDAD 52/52  -> el paquete puede correr.
+exit arnes 0

@@ -1,0 +1,43 @@
+[09:00:14 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3: 6 corridas de 100000). PREREGISTRO_reproduccion.md seccion 10.
+[09:00:14 +    0.0s] Semillas 1-2 (las de la mini-prueba): NINGUNA de las 221-260 del bloque queda expuesta.
+[09:00:14 +    0.0s]     sha preregistro            719b0c3167fe562b
+[09:00:14 +    0.0s]     sha script                 83ab75c5e7f58364
+[09:00:14 +    0.0s]     sha constructor            47f0763207894068
+[09:00:14 +    0.0s]     sha instrumento            ed31d9b989b93307
+[09:00:14 +    0.0s]     sha arnes                  bec4db12c98e478f
+[09:00:14 +    0.0s]     sha origen_organismo_vivo  20c0961c79de8825
+[09:00:14 +    0.0s]     sha origen_organismo_v14   feefc88b1fd8d434
+[09:00:14 +    0.0s]     sha mini                   f3e86cbe6c17e6d7
+[09:00:14 +    0.0s]     sha corre_vivo             0bce2ae090fcb0a7
+[09:00:14 +    0.0s]     origenes esperados v14 feefc88b1fd8d434 / vivo 20c0961c79de8825 -> OK
+[09:00:14 +    0.0s]     alias estructurales en 221-240: [236]; en 241-260: [260]
+[09:00:14 +    0.0s] 1/2 IDENTIDAD dentro del runner, 5 casos x 2 semillas, T=5000.
+[09:00:15 +    1.0s]     (A) apagada (reproduccion=0) == organismo_vivo VIVO                2/2
+[09:00:15 +    1.9s]     (B) cadena: rep(vivo=0, n_nec=1) == organismo_v14                  2/2
+[09:00:17 +    2.9s]     (C) medida de solo lectura: claves viejas == organismo_vivo VIVO   2/2
+[09:00:18 +    4.7s]     (D) tercera necesidad != organismo_vivo VIVO (DEBE fallar)         2/2
+[09:00:20 +    6.5s]     (E) CUELLO != organismo_vivo VIVO (DEBE fallar)                    2/2
+[09:00:20 +    6.5s]   IDENTIDAD 10/10
+[09:00:20 +    6.5s] 2/2 6 corridas de T=100000: [('VIVO', 1), ('REP_SIN_COSTE', 1), ('REP', 1), ('CUELLO', 1), ('VIVO', 2), ('REP_SIN_COSTE', 2)]
+[09:00:20 +    6.5s]     brazo         s     seg  desc  viable   muertes [E, agua]          saciado tasa A/B/C/D                            W fila 2  xor01  celdas  exposiciones A/B/C/D
+[09:00:29 +   15.3s]     VIVO          1     8.8    14   0.328         89 [58, 31]           1.00/0.00/0.84/0.78                                   -  1.00   4/4    778/5531/840/1922
+[09:00:29 +   15.3s]                     desc por cuarto [4, 4, 1, 5]   decisiones saciado {'A': 305, 'B': 2602, 'C': 333, 'D': 497}   tabla 2x4 error 0.0   sac_mord {'A': 305, 'B': 1, 'C': 280, 'D': 389}
+[09:00:38 +   23.9s]     REP_SIN_COSTE 1     8.6    60   0.574         68 [32, 36]           0.97/0.01/0.98/0.01         A+0.47 B-0.99 C+0.54 D-1.68  1.00   4/4    571/4354/562/2957
+[09:00:38 +   23.9s]                     desc por cuarto [18, 12, 16, 14]   decisiones saciado {'A': 246, 'B': 3238, 'C': 233, 'D': 2036}   tabla 2x4 error 0.0   sac_mord {'A': 239, 'B': 31, 'C': 228, 'D': 17}
+[09:00:46 +   32.6s]     REP           1     8.6    54   0.457        107 [40, 67]           0.97/0.01/0.94/0.01         A+0.49 B-1.30 C+0.39 D-1.72  1.00   4/4    541/4151/562/3585
+[09:00:46 +   32.6s]                     desc por cuarto [14, 15, 11, 14]   decisiones saciado {'A': 214, 'B': 2005, 'C': 199, 'D': 2367}   tabla 2x4 error 0.0   sac_mord {'A': 207, 'B': 23, 'C': 188, 'D': 17}
+[09:00:55 +   41.6s]     CUELLO        1     9.1     4   0.323         92 [30, 62]           0.91/0.27/0.93/0.26                                   -  1.00   4/4    969/3749/976/3865
+[09:00:55 +   41.6s]                     desc por cuarto [1, 1, 2, 0]   decisiones saciado {'A': 440, 'B': 1328, 'C': 442, 'D': 1385}   tabla 2x4 error 0.0   sac_mord {'A': 399, 'B': 353, 'C': 412, 'D': 360}
+[09:01:04 +   50.5s]     VIVO          2     8.9    17   0.334        103 [52, 51]           1.00/0.00/0.84/0.75                                   -  1.00   4/4    831/5096/843/2224
+[09:01:04 +   50.5s]                     desc por cuarto [4, 3, 4, 6]   decisiones saciado {'A': 324, 'B': 2441, 'C': 334, 'D': 551}   tabla 2x4 error 0.0   sac_mord {'A': 324, 'B': 4, 'C': 282, 'D': 411}
+[09:01:13 +   59.2s]     REP_SIN_COSTE 2     8.7    44   0.475         93 [43, 50]           0.94/0.01/0.98/0.01         A+0.75 B-1.87 C+0.56 D-1.81  1.00   4/4    520/4503/588/3068
+[09:01:13 +   59.2s]                     desc por cuarto [16, 9, 9, 10]   decisiones saciado {'A': 191, 'B': 2467, 'C': 203, 'D': 1973}   tabla 2x4 error 0.0   sac_mord {'A': 180, 'B': 26, 'C': 199, 'D': 22}
+[09:01:13 +   59.2s]    H1 desc de VIVO en [1, 150] en 2/2                                        -> SI
+[09:01:13 +   59.2s]    H2 desc REP_SIN_COSTE > VIVO en 2/2 (misma semilla)                       -> SI
+[09:01:13 +   59.2s]    H3 sac_tasa[D]: VIVO >= 0.60 y REP_SIN_COSTE <= 0.25 en 2/2               -> SI
+[09:01:13 +   59.2s]    H4 W_nec[2] de REP_SIN_COSTE con signos {A+, B-, C+, D-} y |W| >= 0.3 en 2/2 -> SI
+[09:01:13 +   59.2s]    H5 desc REP >= 0.5 x REP_SIN_COSTE (semilla 1)                            -> SI
+[09:01:13 +   59.2s]    H6 sac_tasa[D] de CUELLO entre REP_SIN_COSTE y VIVO (semilla 1)           -> SI
+[09:01:13 +   59.2s] ESTIMACION del bloque: 8x20 = 160 corridas de 100000 pasos, ~8.8 s/corrida en serie (maquina cargada con otro Pool) -> ~1.7 min de pared con Pool(14).
+[09:01:13 +   59.2s] HUMO: numeros observados, sin ajustar nada. n=1-2, semillas vistas: NO son evidencia.
+[09:01:13 +   59.2s] datos -> vivo_rep_humo_20260918_090014.json  sha256_16 = 8468c1681b346d22
