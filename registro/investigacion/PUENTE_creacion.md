@@ -70,20 +70,31 @@ Tres lecturas que me parecen las que valen:
 
 ### A2. Lo que el banco SÍ hace pasar: **selección, no encogimiento** (competencia entre rasgos conjuntivos)
 
-Idealización (matching pursuit = añadir de a un rasgo el más correlacionado con el **residuo**):
+**ERRATA MÍA (corregida el 18-sep tras releer el código; la versión anterior de esta tabla estaba MAL etiquetada):**
+en mi `phi` cuadrática los índices 0–5 son los píxeles, 6–20 los productos y **21** la constante. La fila que escribí
+como "6 px + constante" era en realidad `range(7)` = **6 px + `P0·P1`**, o sea el conjuntivo correcto **DADO**, no
+hallado. Lo rehice separando las dos cosas (`conjunto abierto` fijo, ajuste exacto por `pinv` contra la regla delta
+online sobre ese mismo conjunto, 20 semillas, xor01):
 
-| arranque | rasgos abiertos | xor01 | px0 | azar |
-|---|---|---|---|---|
-| vacío | 4 | 0.625 | 0.85 | 0.50 |
-| 6 px (sin constante) | 7 | 0.625 [0.19, 1.0] | 1.000 | 0.45 |
-| **6 px + constante** | **7 (o sea: los elementales + UN conjuntivo)** | **1.000 [0.5, 1.0]** | **1.000** | 0.40 |
+| conjunto abierto | exacto (pinv) | online η=0.015 | online η=0.15 | residuo online | \|w\|max |
+|---|---|---|---|---|---|
+| {6 px} | 0.406 | 0.344 | 0.375 | 2.49 | 3.04 |
+| {6 px + constante} | 0.406 | 0.344 | 0.375 | 2.47 | 2.97 |
+| **{6 px + `P0·P1`}** | **1.000** | **1.000** | **1.000** | **0.000** | **8.00** |
+| {6 px + cte + `P0·P1`} | 1.000 | 1.000 | 1.000 | 0.000 | 8.00 |
+| oráculo {P0,P1,P0·P1,1} | 1.000 | 1.000 | 1.000 | 0.000 | 8.00 |
 
-El conjuntivo que elige es `P0·P1` en **12/20** semillas, y la constante entra en 10/20 cuando se deja elegir libre.
-(Las semillas que quedan en 0.5 son las 6/20 sin una clase XOR en el tren — la cota de muestreo que midió el Agente C
-del puente XOR: es del mundo, no de la regla.) **La diferencia entre 0.562 y 1.000 no es la norma: es SELECCIÓN
-(abrir UN rasgo) contra ENCOGIMIENTO (repartir el residuo entre los 15).** Ningún regularizador convexo selecciona;
-para seleccionar hace falta **competencia** (inhibición lateral / ganador-se-lo-lleva) — y eso el organismo ya lo
-sabe hacer: el código Kenyon **es** un top-K.
+**Tres correcciones que esto obliga, y una es buena noticia:**
+1. **La constante NO aporta nada aquí** (0.406 con y sin ella). Razón algebraica: en este mundo todo patrón tiene
+   exactamente 3 píxeles activos, luego `1 = (1/3)·Σ_j P_j` — la constante **ya está en el span de los marginales**.
+   El argumento del Agente C (necesaria por álgebra) vale en el sub-bloque {P0,P1,P0·P1} aislado, no en la lectura
+   completa. (Su medida de que ayuda 0.25→0.375 sigue en pie como efecto de dinámica, no de expresividad.)
+2. **Matching pursuit NO encuentra el rasgo correcto por sí solo:** desde {6 px} añadiendo por correlación con el
+   residuo da 0.625, no 1.000; elige `P0·P1` en 12–13 de 20 y aun así no basta.
+3. **La buena noticia: una vez abierto el rasgo correcto, NO hay cuello de dinámica.** La regla delta online, con
+   η = 0.015 y sin trucos, llega a la solución **exacta** (residuo 0.000) y generaliza 1.000 — siempre que el tope
+   permita `|w| = 8`. **La selección y el ajuste son problemas separados: el ajuste está resuelto; lo que falta es
+   abrir el rasgo, y que el mundo dé ejemplos de las cuatro clases.**
 
 ### A3. Los dos canales no negativos y el drenaje `lam` SON un valor con signo más una masa de conflicto (frente 3)
 
@@ -186,14 +197,48 @@ dinámica **no** es el que manda.
 techo de muestreo 0.75 bajo el muestreo real; con los rasgos dados y el tope subido, la misma regla local llega a la
 solución exacta de XOR.* Es decir: **la regla local sí puede aprender XOR; el mundo no le da los ejemplos.**
 
-### A7. Archivos (sólo míos, nada original tocado, sin commits)
+### A7. El mecanismo (ii) EN EL ORGANISMO: construido, identidad 16/16, y **no alcanza** (lo digo con el número)
+
+Instrumento `organismo_v13q4.py` (`3cc732dd2b2519cd`), **por anclas** desde `organismo_v13q3.py`
+(`aaebe073308a40c2`, sólo leído) con `construye_v13q4.py`. Perilla `seleccion='wta'`: elementales siempre plásticos;
+cada conjuntivo lleva un escalar `e_i` + un bit; se abre UNO (cupo 1) si `|e_i| > sel_theta`; la vía lenta aprende
+sólo en lo abierto. `sel_estad='cond'` (media del residuo bajo el rasgo) o `'cov'` (correlación, cascade-correlation).
+**Identidad con `seleccion=None` ≡ v13q3: 16/16** (8 escenarios × 2 semillas, 38 claves, T = 30 000; incluye
+`lectura='oraculo01'`, `regla_lenta='delta_signo'`, mundo 'AB', inversión, `eta_s=0` y `random15`).
+
+Mini-prueba (mundo de regla, lectura cuadrática, `constante=True`, delta con signo, `lam_lenta=0`, `eta_s=0.05`,
+**`clip_s=10`**, `puerta=3`, T = 200 000, semillas 1–3, un proceso, tandas de 3):
+
+| brazo | `acc_lenta` s1/s2/s3 | mediana | abre `P0·P1` | qué abre |
+|---|---|---|---|---|
+| SIN selección (v13q3, tope subido) | 0.500 / 0.312 / 0.562 | **0.500** | — | — |
+| **COND** | 0.625 / 0.438 / 0.625 | **0.625** | **1/3** | 0x2, 3x5, **0x1** |
+| **COV** | 0.375 / 0.438 / 0.375 | 0.438 | **2/3** | **0x1**, **0x1**, ninguno |
+| COND · px0 (control) | 1.000 / 1.000 / 1.000 | **1.000** ✅ | — | abre un conjuntivo inútil y no estorba |
+| COND · azar (control) | 0.300 / 0.600 / 0.500 | **0.500** ✅ (en [0.35, 0.65]) | — | — |
+
+**Veredicto honesto: (ii) online NO alcanza.** Sube la mediana de 0.500 a 0.625 y **no rompe ningún control**, pero
+abre el conjuntivo correcto sólo **1 de 3** (`cond`) o **2 de 3** (`cov`), y cuando lo abre (COV s1, s2) el acierto
+**baja**. Coincide con el banco (12–13/20 de aperturas correctas y aun así 0.625). Con `clip_s = 10` el peso no llega
+ni a 3.1 de los 8 que hacen falta: el organismo no le da bastantes mordidas de la clase (1,1). **No fuerzo el
+mecanismo**: la variante siguiente NO es afinar `θ` ni `ρ` (probé además el "reajuste de los elementales al abrir",
+`w_elem *= γ` con γ ∈ {1, 0.5, 0.25, 0}: **0.625 en los cuatro**, ni un decimal), sino atacar el muestreo —
+frente del creador C (aprender sin morder) — porque A2.3 demuestra que **con el rasgo abierto y ejemplos de las
+cuatro clases el ajuste online ya llega a la solución exacta**.
+
+### A8. Archivos (sólo míos, nada original tocado, sin commits)
 `experimentos/creacion_A/`: `identificabilidad_xor.py` · `sesgo_grado_xor.py` · `banco_sesgo.py` ·
 `regla_puerta_rasgo.py` · `regla_wta_conjuntiva.py` · `dinamica_oraculo.py` ·
 `dos_canales_es_valor_mas_conflicto.py` · `construye_largo_A.py` → `mundo_largo_A.py` (sha origen
-`9f74ff6b5941e5a5`) · `mini_prueba_A_largo.py` · `mini_prueba_A_tope.py` (+ sus `.json`). Los originales NO se
-tocaron: se **importan** (`organismo_v13q`, `organismo_v13q3`, `mundo_largo`, `corre_mundo_largo`).
-Corridas de organismo gastadas en total: **9 de identidad** (T ≤ 40 000) + 3 de calibración + **4 tandas de 3
-corridas de T = 200 000** (3 en el mundo largo, 2 en el mundo de regla). Nada de `Pool`. Sin commits.
+`9f74ff6b5941e5a5`) · `mini_prueba_A_largo.py` · `mini_prueba_A_tope.py` ·
+`construye_v13q4.py` (`c6faffcd21eaaf47`) → **`organismo_v13q4.py`** (`3cc732dd2b2519cd`, origen
+`aaebe073308a40c2`) · `identidad_v13q4.py` · `mini_prueba_A_seleccion.py` · **`PREREGISTRO_xor_3f.md`** ·
+**`corre_vector_unico.py`** (`ee25f9ce9c3193b6`) · **`PREREGISTRO_vector_unico.md`** (+ sus `.json`).
+Los originales NO se tocaron, sólo se **importan** (`organismo_v13q` `0b59eb03858df3a8`, `organismo_v13q3`
+`aaebe073308a40c2`, `mundo_largo` `9f74ff6b5941e5a5`, `corre_mundo_largo`, `bateria_generaliza`).
+Identidades: `mundo_largo_A` **9/9** · `organismo_v13q4` **16/16** · instrumento de A-3 **2/2** en el humo.
+Corridas de organismo: 25 de identidad (T ≤ 60 000) + 3 de calibración + **7 tandas de 3 corridas de T = 200 000**
++ 6 del humo de A-3 (T = 60 000). Nada de `Pool` por mi parte. Sin commits.
 
 ## Creador B — física y computación de la representación (códigos, capacidad, dendritas, no convencional)
 
@@ -571,6 +616,87 @@ N2 el emisor nunca predijo al receptor. Va escrita como variante en C-P2.
 configuraciones a T <= 10 000) y **tandas de <= 3 corridas de T = 200 000**: C1-a 3 · diagnóstico 2×2 4 · C1-b 3 ·
 C1-c 9 · ETA_FIJA 6 · C1-d 6+3 · C2-a 8 (T <= 150 000) · C2-b 4 (T = 100 000). Un proceso, nada de `Pool`, sin commits.
 
+### C7. Después de la corrida en 41–60 (18 sep): el suelo, la variante que lo quita, y quién es el órgano
+
+**Lo que salió** (coordinador): SELF-TEST 2 089 contra 7 931 de V13 = **0.263 ×**, pareado 20/20; < CONST-a 19/20;
+< CONST-b 20/20 con la razón de sesgo en Q3 **1.011** (contraste *limpio*: el control recibió **más** y fue más lento);
+< MOMENTO 20/20; retención 20/20 en las seis; px0 G1 0.80 = V13; veneno 159.5 y muertes 295.5 dentro de P7.
+**P4 NO por una semilla** (15/20): Q2/Q4 se quedan en ≈ 0.07. Y **dE-TEST recupera en 1 136 con un sesgo tres veces
+menor (0.10 / 0.00 / 0.13 / 0.00) y sí se apaga.**
+
+**(1) Por qué el sesgo de sí mismo deja suelo y el de ΔE no. Sí: es exactamente la cota de oráculo.**
+El automodelo predice una **moneda**. Su objetivo es `mordio ~ Bernoulli(pb)`, así que **incluso un predictor
+perfecto** (`b = pb`, mi oráculo) tiene error absoluto esperado
+
+> `E|mordio − pb| = pb·(1−pb) + (1−pb)·pb = **2·pb·(1−pb)**  > 0  salvo en la saturación`
+
+El predictor de ΔE predice una **constante**: su objetivo es `E_VAL[valencia]`, determinista dado el patrón (el bloque
+6 eligió a propósito la ΔE **nominal** y no la realizada, justo para que no arrastrara el techo de `E`). Objetivo
+determinista ⇒ predictor perfecto ⇒ error **exactamente** cero: medido, `0.0000` en Q2 y `0.0002` en Q4.
+
+**El suelo no es un defecto del mecanismo: es la entropía de su propia política**, y su tamaño está predicho:
+`s̄_a` en régimen ≈ 0.0045–0.0068 (sesgo 0.045–0.068 con `k_test` = 10), que es el orden de `2·pb(1−pb)` promediado
+sobre encuentros cuando el 96 % están saturados. **Falsador de mi propia explicación, y cuesta una línea:** que el
+instrumento emita `E|mordio − pb|` por cuarto (el oráculo ya se calcula; hoy sólo se guarda su log-pérdida). Si ese
+número **no** coincide con el residuo de `s̄_a` en Q2/Q4, mi explicación está mal y hay que buscar otra.
+
+**(2) La variante mínima que lo apaga: restar la cota de oráculo, no una constante ajustada.**
+`2b(1−b)` es el error esperado del predictor perfecto *con esa misma probabilidad*, y **ya está calculado** (`b` es la
+lectura). Sólo hace falta promediarlo con la misma constante de tiempo y restarlo:
+
+```
+f    = 2*b*(1-b)                                 # cota de oraculo puntual — NO es una perilla: es una identidad
+s_a  = |mordio - b|
+s̄_a <- (1-ema_auto)*s̄_a + ema_auto*s_a
+f̄   <- (1-ema_auto)*f̄   + ema_auto*f            # UN escalar nuevo, misma ema, ninguna constante nueva
+Vb  += k_test * max(0, s̄_a - f̄)                  # "cuanto MAS me sorprendo de lo que se sorprenderia una version ideal de mi"
+```
+
+**Memoria: +1 escalar** (99 + 2 en total). **Se rectifica el PROMEDIO, no la muestra:** `max(0,·)` sobre `|y−b| − f`
+*por encuentro* dejaría sesgo positivo `b(1−b)(1−2b)`; sobre los dos EMA, casi nada.
+
+**Las tres cantidades están verificadas numéricamente** (400 000 muestras, sin organismo): `E|y−p| = 2p(1−p)` exacto
+(p = 0.02 → 0.03889 contra 0.03920; p = 0.3 → 0.41994 contra 0.42000); el sesgo de rectificar la muestra es
+`b(1−b)(1−2b)` exacto (b = 0.1 → 0.07175 contra 0.07200); y **rectificar el promedio con `ema_auto` = 0.05 deja
+0.01237 contra 0.09500 crudo, es decir el 13 %: baja el suelo un 87 %, NO lo anula.** El residuo es la varianza del
+propio EMA (ventana ≈ 20 encuentros), y lo digo antes de que lo diga el dato.
+
+**Predicción numérica para la serie futura, sin tocar P1–P3** (los números de 41–60 son la base):
+- **P4′** `sesgo_boca[Q2] ≤ 0.02` y `[Q4] ≤ 0.02` y `[Q3] ≥ 0.20`, en **≥ 18/20**. Cuenta: hoy Q2/Q4 ≈ 0.07 ⇒
+  `s̄_a` ≈ 0.007; al 13 % quedan ≈ 0.0009 ⇒ sesgo ≈ 0.009, con margen de 2 × hasta el criterio. Q3 = 0.366 hoy; en el
+  peor caso (que el suelo se reste entero) queda ≈ 0.30, muy por encima de 0.20. **Si P4′ falla, el arreglo NO es
+  subir `k_test`: es alargar la constante de tiempo de `f̄`** (y eso ya es otra perilla, así que otro preregistro).
+- **P1 sin cambiar** (≤ 0.60 ×, pareado ≥ 14/20): el impulso de Q3 baja ~18 % (0.366 → ≈ 0.30), no un orden de
+  magnitud, así que **no hay excusa de escala**: `k_test` sigue en 10 y no se toca.
+- **Refutación específica y la lectura que más me interesa:** si al quitar el suelo la recuperación se sale de 0.60 ×
+  **mientras Q3 sigue ≥ 0.20**, entonces la que trabajaba era la componente **tónica** — y eso chocaría de frente con
+  que CONST-a y CONST-b (tónicos puros, uno con MÁS sesgo en Q3) pierdan 19/20 y 20/20. Sería el resultado más
+  informativo de los dos posibles, y hay que registrarlo tal cual si sale.
+
+**(3) ¿Es dE-TEST el órgano y el automodelo el rodeo? Con lo medido hoy, sí, y lo digo sin adornos.**
+dE-TEST gana en **todos** los ejes que se midieron: recupera en **1 136** contra 2 089, con **tres veces menos sesgo**,
+y **se apaga solo** sin necesitar la variante de (2). Tiene además tres ventajas estructurales, no de gusto:
+objetivo determinista ⇒ detector fásico limpio; memoria más barata (96 escalares + 1, y sólo se actualiza al morder);
+y **rehabilita el bloque 6**: el predictor de ΔE nunca fue el problema — **lo era dónde entraba**. En `eta`: 0.856 ×,
+pareado 6/10, refutado. El **mismo** predictor en la boca: ≈ 0.14 ×. *Ese* es el hallazgo grande de esta línea y no es
+mío: es el predictor del bloque 6 más la pregunta "¿dónde?".
+
+Lo que **no** concede eso, y es lo único que defiendo: el automodelo tiene una propiedad que el predictor de ΔE **no
+puede tener por construcción** — aprende de **cada encuentro** (27 × más eventos), incluidos los rechazos, así que
+sigue teniendo señal **donde no hay bocados**. En este mundo eso no importa porque el organismo muerde. Importaría
+donde la tasa de bocados se desploma: tras una inversión que vuelva todo veneno, o con un receptor ciego (N3d).
+**Convertido en prueba discriminante, y cuesta cero corridas nuevas:** en los JSON de 41–60, medir la **latencia del
+primer sesgo posterior a `invertir_en`** por brazo — el automodelo debería arrancar en el primer **encuentro** y
+dE-TEST en el primer **bocado**; y la razón encuentros/bocados en Q3. Si la latencia de dE-TEST ya es mayor con
+≈ 1 bocado cada 170 pasos, se puede **predecir** cuánto crece en un mundo más pobre, y ahí se decide de verdad.
+
+**Mi recomendación, que la réplica puede tumbar:** promover dE-TEST a brazo con criterio (como ya decidiste), aplicar
+la variante de (2) al automodelo para que P4 deje de ser una excusa, y **quedarse con el automodelo sólo si gana esa
+prueba discriminante**. Si no la gana, la frase honesta es: *el órgano es la sorpresa del mundo puesta en la boca; el
+automodelo fue el instrumento que encontró dónde estaba la boca.* Y el resultado de C1 (cuánto hay de sí mismo que
+modelar en v13: 13–21 % del hueco del oráculo, banda derivada) **se sostiene solo como medida**, gane o pierda el
+mecanismo.
+
 ## Preguntas para el explorador
 
 **B-1 (creador B).** ¿Hay literatura sobre una neurona nueva que nace con un campo receptivo **más disperso que el
@@ -658,6 +784,8 @@ del mismo nivel; me falta el segundo: la misma traza desplazada en el tiempo —
 recuperación 0.315 × la del tronco con un sesgo **fásico que se apaga solo**, ganándole a dos controles de cantidad
 en 3/3.
 
+**Respuesta del explorador:** Schmidhuber 1991 ("Curious model-building control systems") propone exploración por curiosidad: recompensar por diferencia entre predicción y resultado (predictive error). Gershman 2018 ("Deconstructing the human algorithms for exploration", disponible en gershmanlab.com) separa incertidumbre en acción de incertidumbre en valor. **Gap crítico:** ninguno usa predicción de *propia conducta* como señal de exploración; ambos usan predicción del mundo. Frith & Blakemore (efference copy) no aparecen en literatura reciente de exploración. **Lazo probar→sorpresa→probar:** no reportado como mecanismo con autoamortiguación; la mayoría de modelos de curiosidad sufre "Aha! extinction"  en stochastic environments. Temporal credit / shifted-trace control como criterio estandarizado: no encontrado. De web: Schmidhuber IEEE Creative, Gershman gershmanlab PDF.
+
 **C-Q2 (Creador C).** Juegos de señalización donde el receptor aprende el significado por **predicción de su propio
 estado interno / homeostático** (lo que va a sentir) en vez de por recompensa: ¿existen? Interesa (a) si alguien
 compara las dos rutas **en el mismo mundo** y reporta la **magnitud** alcanzada por el símbolo, no sólo el acierto de
@@ -667,12 +795,18 @@ escasa, recompensa asimétrica, receptor que puede aprender solo); (c) sobre Ste
 seis diseños de N2 refutados con refuerzo (contraste final ±0.3 sobre una escala de −3/+1); la predicción de ΔE llega
 a la magnitud **exacta** (+0.800 / −0.400) en 14 mordidas.
 
+**Respuesta del explorador:** Barrett & Simmons 2015 (Nature Rev Neurosci) sobre interoceptive predictions: cerebro predice estado corporal y error es "significado somático". Allen & Friston 2016-2018 active inference: sistema minimiza prediction error sobre estado. **Gap central:** no existe comparación **en el mismo mundo** de rutas interoceptivas vs refuerzo con magnitud medida. Kilner & Johnstone 1997 (Trends Ecol Evol): begging en crías es señal de necesidad con costo honesto, pero no es un juego de comunicación ni mide magnitud de símbolo emergente. **Steels 2015 mutual model-of-mind:** requiere ambos prediciendo para emergencia (no existe versión unilateral publicada). **Gap abierto:** literatura no contrasta interoceptive learning vs reinforcement learning en tarea común, ni Steels abre monodireccional. De web verificada: Barrett Nature Rev, Kilner ScienceDirect, Song mobility (referencia indirecta).
+
 **C-Q3 (Creador C).** ¿Alguien ha medido el **techo** de la auto-predicción — cuánta varianza de la propia conducta es
 **irreducible** (ruido de la política) y cuánta la explica el **estado interno** frente al **estímulo**? Busco trabajos
 que reporten una **cota de oráculo** (la probabilidad generativa real que produjo la acción) junto al modelo ajustado,
 y no sólo acierto o log-verosimilitud sueltos. Motivo: con el oráculo puesto, mi automodelo cierra sólo el **13–21 %**
 del hueco disponible; sin esa cota ese número no se puede interpretar en absoluto, y me extraña no encontrarlo como
 práctica estándar.
+
+**Respuesta del explorador:** Song et al. 2010 (Science 327:1018–1021) sobre predictabilidad de movilidad humana: mide entropy de trayectorias y reporta 93 % predictabilidad usando Fano's inequality (cota inferior de entropía). **Ésta es la excepción**, no la regla. En neurociencia típicamente se reportan (a) acierto (no varianza), (b) log-verosimilitud suelto sin oráculo. **Noise ceiling** se usa en encoding models pero mide "máximo explicable dada la correlación sujeto-sujeto", no oráculo de política individual. Schoppe et al. 2016 (típicamente citan noise ceiling como "ceiling de varianza compartida") pero no como "cota de irreducibilidad de conducta". **Gap estándar:** auto-predicción en RL/psicología recibe score sin oráculo — imposible saber si 0.70 es "bueno" o "pobre". Song 2010 es patrón único en literatura de movilidad; merece ser copiado. De web: Song Science direct, Song PDF Cornell, Fano inequality.
+
+Explorador: 3 respuestas (C), 6 fuentes web verificadas (Schmidhuber 1991 IEEE Creative, Gershman 2018 gershmanlab PDF, Barrett & Simmons 2015 Nature Rev Neurosci, Allen & Friston 2016-2018 active inference, Kilner & Johnstone 1997 Trends Ecol Evol, Song et al. 2010 Science, Fano inequality).
 
 ## Propuestas para el coordinador
 
@@ -707,11 +841,25 @@ práctica estándar.
   4.22). **Mediana 0.625 en los dos brazos: el tope sesga pero NO es el cuello del organismo.** Otros controles: px0
   debe seguir en 1.000 y azar en [0.35, 0.65] en todas las variantes (hasta ahora sí, en todas). Y **subir el tope con
   la lectura cuadrática no debe cambiar nada**: medido 0.562 con `clip_s` = 3, 10, 30 y 100.
-- **Mini-prueba.** Banco: 20 semillas, tablas de A1/A2/A4 y `dinamica_oraculo.json`. Organismo: **6 corridas** de
-  T = 200 000 (2 tandas de 3), semillas 1–3, números arriba. Versión online de (ii) en el banco: **0.625** (sube desde
-  0.562, no rompe controles) abriendo el conjuntivo correcto en **2–6/20** contra **12/20** de la idealización.
+- **Mini-prueba.** Banco: 20 semillas, tablas de A1/A2/A6 y `dinamica_oraculo.json`. Organismo: **21 corridas** de
+  T = 200 000 (7 tandas de 3): 6 del tope (A6) y 15 de la selección (A7). **(ii) en el organismo con `clip_s = 10`:
+  mediana 0.625 (`cond`) contra 0.500 sin selección, abriendo el conjuntivo correcto 1/3 y 2/3; px0 1.000 y azar
+  0.500 (controles OK).** No alcanza 0.75: lo que falta es la pieza (i), el muestreo.
 
-### A-2 (creador A) — **METAPLASTICIDAD POR MASA DE CONFLICTO**: consolidar con estado que el tronco YA tiene
+### A-2 (creador A) — ~~METAPLASTICIDAD POR MASA DE CONFLICTO~~ · **REFUTADA en la serie 41-60 (18-sep)**
+
+> **CERRADA. No preregistrar de nuevo.** El coordinador la corrió en 20 semillas (`metaplasticidad_s41-60_20260918_000740`,
+> identidad 3/3): `beta_m=50` `ret_no_inv` **0.667 = BASE** (pareado 7/20), `rec` 4 000 contra 2 500, **muertes 52
+> contra 30 (+73 %)** — por encima del +50 % que yo mismo puse como límite; adquisición y `ret_inv` intactas;
+> `beta_m=10` ≈ BASE. **Mi 0.833 de 3 semillas NO replicó**: era ruido de muestra pequeña, y el control que escribí
+> como "el que puede fallar" (las muertes) es justo el que falló. Lo dejo escrito entero, sin retocar, porque el
+> valor está en el fallo: **la masa de conflicto `m` no sirve de freno del olvido con su semivida de ~14 mordidas**
+> (la predije yo mismo en §A5 y aun así aposté a que β = 50 la compensaba: no la compensa). Una variable lenta
+> nueva (dos constantes de tiempo, cascada de Fusi; ver A-Q2 del explorador) sería **otra** propuesta, con su
+> memoria extra declarada — ya no es "memoria cero", y ese era todo el atractivo de ésta.
+
+**Texto original (se conserva tal cual para el registro):**
+
 
 - **Hipótesis.** La retención de lo ausente (0.67 a 150 k pasos, interferencia por códigos compartidos) sube a ≥ 0.80
   si las celdas que han recibido evidencia **contradictoria** se vuelven lentas. No hace falta inventar la variable:
@@ -739,7 +887,12 @@ práctica estándar.
   | 10 | 0.500 / 0.667 / 0.667 | 0.667 | 0.8/0.8/0.9 | 0/0/1 000 | 73/133/50 |
   | **50** | 0.667 / 0.833 / 0.833 | **0.833** | 0.9/0.7/0.8 | **0/0/1 000** | 44/178/78 |
 
-  Por qué β tiene que ser grande: `m` tiene **semivida `ln2/lam ≈ 14` mordidas** y vale 0.015–0.048 de media. El
+  **REFUTADA el 18-sep en la serie de 20 semillas** (`metaplasticidad_s41-60_20260918_000740`): `beta_m=50` deja
+`ret_no_inv` en **0.667 = BASE** (pareado 7/20) y sube las muertes **+73 %** (52 contra 30), por encima del +50 %
+que yo mismo fijé como límite. **Mi humo de 3 semillas no replicó.** Lección que me llevo, escrita para no repetirla:
+con n = 3 y una medida que sólo toma 6 valores (0, 1/6, …, 1) **una mediana que salta de 0.667 a 0.833 es un solo
+patrón cambiando de signo** — no debí proponerla con esa resolución sin decir que el salto mínimo observable era
+todo el efecto. Por qué β tenía que ser grande: `m` tiene **semivida `ln2/lam ≈ 14` mordidas** y vale 0.015–0.048 de media. El
   explorador (A-Q2) confirma que la cascada de Fusi pide **≥ 2 constantes de tiempo propias** y que β = 50 es una
   prótesis; también confirma que **nadie ha publicado el coste en adquisición ni en recuperación tras cambio de regla**
   — o sea que esta mini-prueba mide un hueco abierto de la literatura, no sólo del proyecto.
@@ -763,8 +916,15 @@ práctica estándar.
   propuesta cae — pero entonces también cae la ablación del Agente B, que midió lo mismo desde el otro lado.
 - **Mini-prueba.** Equivalencia conducida con la misma secuencia de **200 000** deltas, 3 semillas: `max|ΔW| = 2.5e−14`,
   `max|Δm| = 1.6e−14`, el tope apretó 1 643–1 933 veces en el caso sintético (y **0** veces en el organismo real).
+  **Y ya en el organismo** (`corre_vector_unico.py --humo`, semilla 101, T = 60 000, un proceso, identidad del
+  instrumento 2/2; datos `vector_unico_humo_20260918_000816`, `0689e674666bbdfa`): `acc` **idéntica en 3/3** reglas
+  (px0 0.600 · azar 0.700 · xor01 0.312), **`max|ΔW_lenta| = 1.1e−15`**, `max|ΔWs| = 6.7e−16`, `celdas` y `splits`
+  iguales, `n_techo = 0` en las 6 corridas, `max(Wps,Wns)` 0.49–2.07 < `clip_s = 3`.
   **Corolario que vale aparte: esto DEMUESTRA la ablación del Agente B en `PUENTE_xor`** (`lam_lenta = 0` y
   `clip_s = 10` no movían ni un decimal): no fue casualidad, es identidad algebraica.
+- **Listo para el coordinador:** `experimentos/creacion_A/corre_vector_unico.py` (runner con `Pool(14)` sólo bajo
+  `__main__`, log desde el arranque, `--humo` secuencial, JSON en `datos/`) + `PREREGISTRO_vector_unico.md`,
+  semillas 101–120, montaje y umbrales G1/G2/K de `bateria_generaliza` sin tocar.
 
 ### B-1 (creador B) — **HIJA DISPERSA**: la hija nace ciega a parte del patrón, no sólo fuera de él
 
@@ -860,6 +1020,18 @@ práctica estándar.
   desconocidos al final habían sido mordidos ≥ 5 veces.**
 
 ### C-P1 — "Probar cuando no me reconozco": la sorpresa sobre sí mismo entra en la BOCA, no en `eta` (Creador C)
+
+> **PAQUETE LISTO PARA CORRER (18 sep 2026), a petición del coordinador.** `experimentos/nivel9_probar_si_mismo/`:
+> `PREREGISTRO_probar_si_mismo.md` · `construye_probar.py` → `organismo_v13p.py` (`0dbc2495efe44e60`) y
+> `organismo_v13pg.py` (`7ab4767d446ba797`) · `identidad_probar.py` (**J1 18/18 · J2 18/18 · J3 18/18 · J4 6/6**) ·
+> `corre_probar_si_mismo.py` (Pool(14) sólo bajo `__main__`; etapa de identidad que **aborta**; `--desde`; `--humo`).
+> Brazos: V13 · SELF-TEST · CONST-a (0.173) · CONST-b (0.31) · **MOMENTO** (la traza de SELF-TEST de la misma semilla,
+> desplazada un cuarto de corrida; masa conservada exactamente) · dE-TEST (exploratorio). Semillas **41–60**, T = 200 000,
+> `invertir_en` = 100 000. **Humo del diseñador (semilla 1, un proceso):** identidades 11/11; SELF-TEST **19.1 s/corrida**,
+> recuperación 2 375 con sesgo por cuarto `[0.527, 0.065, 0.366, 0.044]`; MOMENTO 18.0 s, recuperación 13 325 con el
+> mismo sesgo rotado `[0.063, 0.381, 0.045, 0.521]`, G-d `|dif| = 0.0`. Datos
+> `datos/probar_si_mismo_humo_20260918_000951.{log,json}`. **No lo corro yo: el coordinador verifica, commitea y lanza.**
+
 
 **Hipótesis.** Un organismo que predice su propia acción y usa el error de esa predicción para decidir **si prueba**
 —no para cambiar su tasa de aprendizaje— se recupera de un cambio no avisado de la regla del mundo en ≤ 0.70 × los
