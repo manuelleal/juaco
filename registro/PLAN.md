@@ -62,7 +62,7 @@
 >   candidato a v14 si pasa — la decisión de tronco es del director); (4) **A-1 XOR 3f** (tres piezas: selección por
 >   competencia, tope ≥ 10, muestreo) sólo si el instrumento de selección abre el conjuntivo correcto en la mini-prueba;
 >   (5) **A-3 vector único** (simplificación de la vía lenta con identidad; 101–120); (6) **mundo 2D** (nivel 6) según el
->   informe del diseñador; (7) **C** (modelo de sí mismo, aprender sin morder, significado por predicción) según su
+>   informe del diseñador — HECHO 01:30 (no rodea, se aleja; rodeo falso confirmado; borrar el sitio comido ayuda a encadenar; horizonte 2 sin potencia: rediseñar el mundo antes de replicar); (7) **C** (modelo de sí mismo, aprender sin morder, significado por predicción) según su
 >   propuesta. Lo que toque el tronco va a rama o copia; nada entra a v14 sin examen v3' + baterías + réplica.
 >
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo

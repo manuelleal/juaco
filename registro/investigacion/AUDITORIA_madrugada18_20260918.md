@@ -95,3 +95,34 @@ regla de lectura) pero esto no compromete P2 porque el criterio exige superar a 
 sección "Verificación adicional"): n_techo=0 en los seis escenarios del examen de congelación (mundo AB), riesgo no
 discutido al diseñar v13, y la regla derivada de guardar `n_techo` — que **ya se está cumpliendo** en el bloque
 nuevo (`vector_unico_s101-120...json`: `A4_n_techo_cero: true`, calculado y guardado). Sin hallazgo nuevo.
+
+## Verificación: organismo_v13 duplicado (01:10)
+
+**(a) Diff:** sólo docstring y **dos defaults de `run()`** cambian (`experimentos/v13_dos_vias/organismo_v13.py`
+línea 15 vs `organismo/organismo_v13.py`): `eta_s=0.015→0.0`, `puerta=3→None` (v13 "dos vías" queda como v11 puro).
+Resto byte a byte igual (20 líneas de diff, todas en la cabecera y esa firma). **Empírico** (scratchpad, 1 proceso,
+3 semillas, T=30000, todas las claves): con kwargs **por defecto**, DIFIEREN en `W`,`W_lenta`,`Wps`,`Wns` (y en
+semilla 1 también `mord`,`vis`,`deaths`,`comp` — la conducta se mueve, no sólo el valor); con `eta_s=0.015,puerta=3`
+explícitos, **idénticos 3/3**. Es justo lo que avisa B: conducta distinta sólo si el llamador confía en los defaults.
+**(b) Grep completo** (`import organismo_v13\b`, 24 sitios en todo el repo) cruzado con el orden de `sys.path`:
+**ninguno** de los archivos que importan `organismo_v13` a secas antepone `v13_dos_vias` (`identidad_v13B.py:25`,
+`identidad_v13D.py:20`, `corre_allostasis.py:95,149`, `corre_probar_si_mismo.py:129`, `identidad_probar.py:25`,
+`corre_rodeo.py:72`, `corre_mapa.py:49`, `bateria_v13.py:86,99`, etc. — todos con `organismo/` primero o sin
+`v13_dos_vias` en su `sys.path`). Los que SÍ anteponen `v13_dos_vias` (`corre_xor.py:11`, `corre_xor_3b.py:11`,
+`corre_xor_3d.py:17`, `corre_xor_3e.py:22`, `corre_N3*.py`/`mundo_social*.py` con un segundo `insert(0,…)` a mitad
+de archivo, `bateria_generaliza.py:41`/`_B.py:49`/`_D.py:48`) **no importan el nombre ambiguo**: los XOR sólo usan
+`organismo_v13q3`; `bateria_generaliza.py:58` usa `importlib.import_module(INSTRUMENTOS[modulo][0])`, que resuelve
+a `organismo_v13g`, nunca a `'organismo_v13'` a secas (verificado leyendo la función).
+**(c)** `grep -rl 88c3574cf9cf38bf datos/` → **sólo** `v13_dos_vias_20260917_160541.{json,log}` (2 archivos), la
+corrida histórica que congeló v13 — su runner (`experimentos/v13_dos_vias/corre_v13.py:66,72,76`) pasa
+`eta_s=eta_s, puerta=BRAZOS[brazo]` **explícitos siempre** (barre esos valores a propósito), así que no depende de
+los defaults: sus números siguen siendo válidos. El sha correcto (`cc8b16b492d4d324`) aparece 70 veces en el resto
+de `datos/`. Ningún otro archivo registrado cita el sha de la copia.
+**(d) Veredicto: trampa latente real, sin consecuencia medida en ningún dato registrado.** El patrón (varios
+runners anteponen `v13_dos_vias`) existe y es frágil — basta que alguien añada `import organismo_v13` a secas en
+uno de ellos para heredar los defaults viejos en silencio (el aviso de B, 3/6 de identidad, fue en su propio humo
+de `creacion_B`, un proceso sin `Pool` que por regla no escribe en `datos/`; no localicé el script exacto —no está
+aún en `PUENTE_creacion.md`— pero el mecanismo es consistente con lo medido aquí). Propongo **ERR-28** con esta
+etiqueta ("trampa de import, cero corridas afectadas") y dos arreglos: (i) alinear los defaults de
+`experimentos/v13_dos_vias/organismo_v13.py` con el tronco o marcar su cabecera "NO IMPORTAR SIN `eta_s`/`puerta`
+EXPLÍCITOS"; (ii) mover `organismo/` a la posición 0 en los `corre_xor*.py` (hoy inofensivo, pero frágil).

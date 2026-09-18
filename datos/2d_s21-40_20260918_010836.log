@@ -1,0 +1,69 @@
+[01:08:36 +    0.0s] ARRANQUE nivel 6 en 2D sobre v13. Mundos ['T1', 'T4', 'T3', 'T2'], semillas 21-40, rejilla 17x13, Pool(14).
+[01:08:36 +    0.0s]    sha preregistro a09c722d1b363a90  sha script 88a467b45a34d9b5  sha instrumento 24da4ab1644eb92a  sha constructor 9df4181fbc1379db  sha origen_rodeo 7ab34aed9acffaa0  sha origen_mapa 207d6a1954336b18  sha tronco_v13 cc8b16b492d4d324
+[01:08:37 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 32708
+[01:08:37 +    0.6s] ETAPA 1/3 — identidad: 8 comparaciones (alto=1 contra mundo_mapa, modo=rodeo contra mundo_mapa_rodeo, apagadas contra v13)...
+[01:08:43 +    6.8s]   identicas: 8/8
+[01:08:43 +    6.8s] ETAPA 2/3 — 480 corridas de 100000 pasos...
+[01:09:41 +   65.2s]           20/480
+[01:10:14 +   97.4s]           40/480
+[01:10:27 +  110.5s]           60/480
+[01:10:45 +  128.4s]           80/480
+[01:11:35 +  178.9s]           100/480
+[01:12:12 +  215.7s]           120/480
+[01:12:53 +  256.9s]           140/480
+[01:13:17 +  281.1s]           160/480
+[01:13:29 +  293.4s]           180/480
+[01:13:46 +  309.6s]           200/480
+[01:14:27 +  350.7s]           220/480
+[01:14:57 +  380.6s]           240/480
+[01:15:21 +  404.8s]           260/480
+[01:15:36 +  420.2s]           280/480
+[01:15:52 +  435.7s]           300/480
+[01:16:32 +  476.3s]           320/480
+[01:17:00 +  504.4s]           340/480
+[01:17:36 +  540.2s]           360/480
+[01:18:12 +  576.2s]           380/480
+[01:18:47 +  611.3s]           400/480
+[01:19:01 +  624.6s]           420/480
+[01:19:25 +  648.8s]           440/480
+[01:20:07 +  691.2s]           460/480
+[01:20:44 +  727.4s]           480/480
+[01:20:44 +  728.2s]    seguro: corridas crudas ya guardadas en 2d_s21-40_20260918_010836.json (se reescribe con los veredictos al final)
+[01:20:44 +  728.2s] ETAPA 3/3 — analisis (criterios del PREREGISTRO_2d.md seccion 5, tal cual).
+[01:20:44 +  728.2s]   T1 — M1 barrera   rodeo VERDADERO
+[01:20:44 +  728.3s]    MAPA        R 0.000 [0.00,0.00]  llega 0.000  limpio 0.000  come2 0.000  pisa 0.000  sigue_mec1 1.000  sin_mover 0/40  ciego 40/40  M 5  v_A 1.00  v_B -2.40  muertes 282
+[01:20:44 +  728.3s]    MAPA_h2     R 0.000 [0.00,0.00]  llega 0.000  limpio 0.000  come2 0.000  pisa 0.000  sigue_mec1 1.000  sin_mover 0/40  ciego 40/40  M 5  v_A 1.00  v_B -2.40  muertes 282
+[01:20:44 +  728.3s]    SINMAPA     R 0.525 [0.35,0.70]  llega 0.263  limpio 0.000  come2 0.000  pisa 0.663  sigue_mec1 na  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.77  muertes 34
+[01:20:44 +  728.3s]    CONGELADA   R 0.525 [0.35,0.70]  llega 0.263  limpio 0.000  come2 0.000  pisa 0.663  sigue_mec1 0.275  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.77  muertes 34
+[01:20:44 +  728.3s]    INVERTIDO   R 1.000 [1.00,1.00]  llega 0.650  limpio 0.000  come2 0.000  pisa 1.000  sigue_mec1 1.000  sin_mover 0/40  ciego 40/40  M 5  v_A -1.00  v_B 2.40  muertes 282
+[01:20:44 +  728.3s]    BARAJADO    R 0.362 [0.03,0.93]  llega 0.000  limpio 0.000  come2 0.000  pisa 0.087  sigue_mec1 0.450  sin_mover 0/40  ciego 40/40  M 5  v_A -0.09  v_B -0.10  muertes 282
+[01:20:44 +  728.3s]   T4 — M2 sombra    rodeo FALSO
+[01:20:44 +  728.3s]    MAPA        R 0.050 [0.00,0.12]  llega 1.000  limpio 1.000  come2 0.000  pisa 0.000  sigue_mec1 0.738  sin_mover 0/40  ciego 40/40  M 4  v_A 1.00  v_B -0.94  muertes 2
+[01:20:44 +  728.3s]    MAPA_h2     R 0.050 [0.00,0.10]  llega 1.000  limpio 1.000  come2 0.000  pisa 0.000  sigue_mec1 0.800  sin_mover 0/40  ciego 40/40  M 4  v_A 1.00  v_B -0.94  muertes 2
+[01:20:44 +  728.3s]    SINMAPA     R 0.237 [0.12,0.40]  llega 0.750  limpio 0.750  come2 0.000  pisa 0.025  sigue_mec1 na  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.62  muertes 14
+[01:20:44 +  728.3s]    CONGELADA   R 0.237 [0.12,0.40]  llega 0.750  limpio 0.750  come2 0.000  pisa 0.025  sigue_mec1 0.275  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.62  muertes 14
+[01:20:44 +  728.3s]    INVERTIDO   R 0.575 [0.30,0.90]  llega 0.863  limpio 0.750  come2 0.000  pisa 0.250  sigue_mec1 0.575  sin_mover 0/40  ciego 40/40  M 4  v_A -1.00  v_B 0.94  muertes 2
+[01:20:44 +  728.3s]    BARAJADO    R 0.538 [0.12,0.80]  llega 0.975  limpio 0.975  come2 0.000  pisa 0.025  sigue_mec1 0.538  sin_mover 0/40  ciego 40/40  M 4  v_A 0.26  v_B 0.34  muertes 2
+[01:20:44 +  728.3s]   T3 — M4 secuencia A->B
+[01:20:44 +  728.3s]    MAPA        R 0.875 [0.80,0.93]  llega 1.000  limpio 0.975  come2 0.500  pisa 0.025  sigue_mec1 0.875  sin_mover 0/40  ciego 40/40  M 3  v_A 1.00  v_B -0.94  muertes 1
+[01:20:44 +  728.3s]    SINMAPA     R 0.225 [0.12,0.47]  llega 0.613  limpio 0.387  come2 0.087  pisa 0.400  sigue_mec1 na  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.75  muertes 38
+[01:20:44 +  728.3s]    CONGELADA   R 0.225 [0.12,0.47]  llega 0.613  limpio 0.387  come2 0.087  pisa 0.400  sigue_mec1 0.225  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.75  muertes 38
+[01:20:44 +  728.3s]    INVERTIDO   R 0.000 [0.00,0.03]  llega 0.100  limpio 0.000  come2 0.000  pisa 0.950  sigue_mec1 0.587  sin_mover 0/40  ciego 40/40  M 3  v_A -1.00  v_B 0.94  muertes 1
+[01:20:44 +  728.3s]    BARAJADO    R 0.450 [0.03,0.85]  llega 0.637  limpio 0.188  come2 0.388  pisa 0.662  sigue_mec1 0.475  sin_mover 0/40  ciego 40/40  M 3  v_A 0.28  v_B 0.14  muertes 1
+[01:20:44 +  728.3s]    MAPA_borra  R 0.875 [0.80,0.93]  llega 1.000  limpio 0.962  come2 0.950  pisa 0.038  sigue_mec1 0.875  sin_mover 0/40  ciego 40/40  M 3  v_A 1.00  v_B -0.94  muertes 1
+[01:20:44 +  728.3s]   T2 — M3 flanco    HORIZONTE 2
+[01:20:44 +  728.3s]    MAPA        R 0.575 [0.05,0.90]  llega 0.625  limpio 0.625  come2 0.000  pisa 0.000  sigue_mec1 0.637  sin_mover 0/40  ciego 40/40  M 4  v_A 1.00  v_B -1.13  muertes 12
+[01:20:44 +  728.3s]    MAPA_h2     R 0.875 [0.55,0.97]  llega 0.925  limpio 0.925  come2 0.000  pisa 0.000  sigue_mec1 0.850  sin_mover 0/40  ciego 40/40  M 4  v_A 1.00  v_B -1.13  muertes 12
+[01:20:44 +  728.3s]    SINMAPA     R 0.263 [0.07,0.50]  llega 0.400  limpio 0.400  come2 0.000  pisa 0.412  sigue_mec1 na  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.94  muertes 93
+[01:20:44 +  728.3s]    CONGELADA   R 0.263 [0.07,0.50]  llega 0.400  limpio 0.400  come2 0.000  pisa 0.412  sigue_mec1 0.225  sin_mover 0/40  ciego 40/40  M 0  v_A 1.00  v_B -2.94  muertes 93
+[01:20:44 +  728.3s]    INVERTIDO   R 0.000 [0.00,0.07]  llega 0.000  limpio 0.000  come2 0.000  pisa 1.000  sigue_mec1 0.800  sin_mover 0/40  ciego 40/40  M 4  v_A -1.00  v_B 1.13  muertes 12
+[01:20:44 +  728.3s]    BARAJADO    R 0.312 [0.00,0.75]  llega 0.512  limpio 0.512  come2 0.000  pisa 0.312  sigue_mec1 0.475  sin_mover 0/40  ciego 40/40  M 4  v_A 0.28  v_B 0.12  muertes 12
+[01:20:44 +  728.3s]    P1 rodeo verdadero: R1 0.000 (SINMAPA 0.525, pareado 0/20) -> NO | alejarse 1.000 | flanco barato (mecanismo) 1.000  *** REFUTADO en la forma predicha: no rodea, se aleja
+[01:20:44 +  728.3s]    P2 horizonte 2: validas 6/20 (V-T2 1.37<r<2.74) NO (no discrimina) | subconjunto valido R2 0.138 -> 0.613 (dif 0.475, >=0.15 en 6/6) | sigue mec1 na / mec2 0.613 -> NO
+[01:20:44 +  728.3s]       conjunto completo (se reporta al lado): R2 0.575 -> 0.875  dif 0.350
+[01:20:44 +  728.3s]    P3 secuencia: come2 MAPA 0.500 -> borra_M 0.950 (pareado 20/20) | llega_A 1.000 / 1.000 -> NO
+[01:20:44 +  728.3s]    P4 rodeo falso: R4 0.063 (SINMAPA 0.487, indiferente = 0.50) -> OK
+[01:20:44 +  728.3s]    C1 INVERTIDO decisivo (T1b<=0.25 0.000 y R4>=0.60 1.000): OK | C2 CONGELADA==SINMAPA en conducta y M_llenas=0: OK | C3 BARAJADO (se reporta): {T1:0.362, T4:0.538, T3:0.450, T2:0.312}
+[01:20:44 +  728.3s]    validez: V1 M_llenas NO | V2 ciego 40/40 OK | V3 sin_mover<=2 OK | V4 v_A>0 y v_B<0 en >=18/20 {'T1': 20, 'T4': 20, 'T3': 20, 'T2': 20} OK
+[01:20:44 +  728.3s] VEREDICTO 2D: REFUTADO en la forma predicha: con el veneno recordado entre el y la comida NO RODEA, SE ALEJA; el mecanismo distingue el flanco barato y no lo usa  *** OJO: control o validez caidos, NO SE INTERPRETA
+[01:20:45 +  729.2s] datos -> 2d_s21-40_20260918_010836.json  sha256_16 = 94a82d9e25a66e57

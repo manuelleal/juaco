@@ -3937,3 +3937,50 @@ por diseño (la cantidad total la certifica G-d, limpia); el criterio A1 de A-3 
 tope nunca aprieta) se cumple — A-3 vale como identidad demostrada, no como prueba empírica independiente. **Regla
 derivada (se añade a EQUIPO.md, regla 4 bis):** toda enmienda que cambie un umbral o la forma de un criterio lleva ERR
 numerado en el momento de escribirla, aunque sea antes de la serie nueva.
+
+
+### Nivel 6 en 2D (diseñador; 18 sep 01:30; semillas 21–40): **no rodea, se aleja (refutación en la forma predicha); el rodeo falso queda confirmado y cuantificado; encadena dos metas mejor si borra el sitio comido; horizonte 2 sin potencia**
+
+Preregistro `experimentos/nivel6_2d/PREREGISTRO_2d.md` (+ enmienda 0 del coordinador, P3b pareado, escrita antes de correr);
+instrumento `mundo_2d.py` (24da4ab1644eb92a; por anclas desde `mundo_mapa_rodeo` 7ab34aed9acffaa0 ← `mundo_mapa`
+207d6a1954336b18; **identidad 60/60 en la copia principal**: `alto = 1` ≡ mundo_mapa 36/36, modo rodeo 9/9, perillas apagadas
+≡ v13 9/9, perilla barajar apagada ≡ ausente 6/6; 8/8 dentro del runner); datos `2d_s21-40_20260918_010836`
+(94a82d9e25a66e57), 480 corridas (4 mundos × 6 brazos × 20 semillas, T = 100 000), 20 min. Rejilla toroidal 17 × 13, 4
+direcciones, retina del objeto más cercano en distancia Manhattan, tabla `M` en 2D, el organismo sin cambios.
+
+| prueba | MAPA | SINMAPA (= CONGELADA en conducta) | INVERTIDO | lectura |
+|---|---|---|---|---|
+| T1 rodeo verdadero, `R1` (primer paso por el camino limpio) | **0.000** (pareado 0/20) | 0.525 | 1.000 | se aleja 1.000; distingue el flanco barato 1.000 |
+| T4 rodeo falso, `R4` (comida con veneno detrás frente a comida limpia) | **0.05** | 0.24 | 0.58 | indiferente sería 0.50: **se desvía sin motivo** |
+| T3 secuencia, `come2` (alcanza A y luego B) | 0.500 (MAPA) / **0.950** (MAPA_borra) | 0.225 | 0.000 | P3b dif ≥ 0.15 en **18/20**; llega_A 1.00 |
+| T2 horizonte 2, `R2` | 0.575 (H1) / 0.875 (H2) | 0.26 | 0.000 | ventana V-T2 **6/20** (se exigían 8): sin potencia; en las 6, H2 − H1 = +0.475 (6/6) |
+
+**C1 INVERTIDO decisivo OK** (T1b 0.000, R4 1.000: con el valor del revés va hacia el veneno), **C2 OK** (CONGELADA ≡
+SINMAPA en conducta, `M_llenas` = 0), C3 BARAJADO se reporta (0.31–0.54). Validez: V2, V3, V4 OK; **V1 cae en T2 (5/20 sin
+un sitio en `M`) y T4 (2/20)** → por la letra el bloque "no se interpreta"; **regla 10** (análisis automático del
+subconjunto válido con los umbrales originales, `analiza_2d.py`): T1 20/20 válidas, T3 20/20, T4 18/18 → R4 0.062,
+T2 15/15 → mismas medianas; nada cambia.
+
+**Lecturas (vocabulario del preregistro):** (1) *con el veneno recordado entre él y la comida no rodea: se aleja; el
+mecanismo distingue el flanco barato y no lo usa* — en 2D el sesgo de `M` es un voto global y el veneno no repele el
+camino, repele el acercamiento. Es la refutación predicha por el diseñador; ahora está medida. (2) **Rodeo falso
+confirmado**: con dos comidas limpias a la misma distancia elige en 0.05 la que tiene veneno detrás (indiferente = 0.50):
+*se desvía sin motivo*. (3) *Borrar el sitio comido de la tabla ayuda a encadenar dos metas (0.95 contra 0.50); sin
+borrarlo vuelve al sitio vacío la mitad de las veces* (P3 por la letra cae en el umbral de MAPA ≤ 0.20; P3b pasa 18/20).
+(4) Horizonte 2: sin potencia (6/20 en la ventana); lo que hay (6/6 a favor, +0.475) coincide con lo predicho y pide un
+mundo con más semillas dentro de la ventana antes de decir nada. **No se corre réplica ahora**: los resultados de T1 y T4
+son 0/20 y 0/18 (no hay ambigüedad que replicar); T2 necesita rediseño del mundo (declarado). Nivel 6 queda así: *el
+mecanismo actual del mapa elige direcciones por valor recordado descontado; no planifica en 2D, y en 2D esa carencia se
+ve* — la planificación real exige otro mecanismo (simular con `M`, H2, mostró +0.475 donde discrimina).
+
+
+### ERR-28 (18 sep 01:15; aviso del creador B, verificado por el auditor): **trampa latente — `experimentos/v13_dos_vias/organismo_v13.py` (88c3574cf9cf38bf) no es el tronco (cc8b16b492d4d324)**
+
+Diff real: docstring y dos valores por defecto (`eta_s` 0.015 → 0.0, `puerta` 3 → None). Empírico (scratchpad, 3 semillas):
+con los kwargs por defecto **difieren** en valor y conducta; con `eta_s`/`puerta` explícitos son idénticos 3/3. De los 24
+sitios que importan `organismo_v13` a secas, ninguno tiene esa carpeta delante de `organismo/`; los que sí la anteponen
+(XOR, N3*, `bateria_generaliza*`) nunca importan ese nombre ambiguo; en `datos/` el sha de la copia sólo aparece en la
+corrida histórica que congeló v13, cuyo runner pasa `eta_s`/`puerta` explícitos. **Sin consecuencia medida en 70+
+archivos.** Al creador B le costó un humo (identidad 3/6) hasta poner `organismo/` primero. **Regla derivada:** todo runner
+pone `organismo/` primero en `sys.path`; nunca se importa `organismo_v13` a secas con `experimentos/v13_dos_vias` delante;
+la copia histórica no se edita (documenta la congelación) pero queda señalada aquí.
