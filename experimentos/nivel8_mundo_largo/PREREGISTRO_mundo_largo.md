@@ -46,3 +46,13 @@ plan del debate (`DEBATE_y_plan_5a10.md` §3, punto 4), condicionado a que el ma
   regla; el mapa acelera la recuperación y la cobra en muertes*". No "abierto", no "autónomo". Refutación: A1 o C1
   fallan (no sigue aprendiendo, o no se recupera). Nada se recalibra después.
 - Coste: 3 brazos (V13, MAPA, RECICLADO-MAPA) × 20 semillas × 200 000 ≈ 4 min.
+
+
+## Enmienda 1 (18 sep 2026, escrita ANTES de correr; semillas NUEVAS 21–40): separar olvido de inversión (R1)
+
+R1 mezclaba dos cosas: los 4 patrones iniciales se **invierten en ausencia** (t = 100 000, ya desplazados; no pueden
+enterarse) y los 6 siguientes de los 10 primeros **nunca se invierten**. Se guarda `W` por patrón y se miden por separado:
+**R1a** = fracción con signo correcto, al final, de los patrones 5–10 vistos (nunca invertidos, ausentes desde hace
+≥ 150 000 pasos): predicción ≥ **0.70** en V13 y MAPA (retención real). **R1b** = la misma fracción para los 4 iniciales
+(invertidos en ausencia): predicción ≤ **0.25** (por construcción: conservan el signo viejo). Todo lo demás igual
+(A1–A3, C1–C2 se reportan como réplica en 21–40; A2 se deja como estaba escrita: predije 0.55–0.70 y salió 0.80).

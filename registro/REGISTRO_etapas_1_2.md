@@ -3202,3 +3202,22 @@ N3c, N3d), y los tres fallos fueron **del instrumento, la medida o el mundo**, n
 sin balancear, mundo que se come la comida, receptor que memoriza sitios. Cada uno está registrado.
 **Vocabulario:** *transfiere por conducta; no "comunica", no "entiende"*. Abierto: cuánto dura la transferencia sin el
 emisor presente (¿aprende algo propio o sólo obedece?: `W` del receptor), y XOR entre dos (composición social real).
+
+
+### Bloque 1a (día 6): 3T-k con k = 4 y 5 — **compone hasta 4; a 5 se agota el pool de celdas y la ventaja conductual cae al filo**
+
+Preregistro: `PREREGISTRO_3T_k.md` enmienda 2 (predicción: k = 4 compone, k = 5 no por agotamiento del pool de 90).
+Datos `3T_k45_s1-20_20260917_204451` (`66e4291b9b91f5a4`), semillas 1–20, identidad k = 1 18/18.
+
+| k | C3 `sep` | `lift_q4` | C3C `sep` | C3 − C3C ≥ 1 | divisiones | **celdas** | veredicto |
+|---|---|---|---|---|---|---|---|
+| 4 | **1.99** [1.71, 3.24] | 0.152 | +0.01 | **20/20** | 42 | **72** | **compone** (predicho: sep 1.5–2.2, divisiones 40–55 ✓) |
+| 5 | 1.94 [1.15, 2.23] | **0.144** | 0.00 | 19/20 | 60 | **90 / 90** | **NO** por T3 (0.144 < 0.15), con el pool agotado |
+
+**Lectura precisa:** a k = 5 el organismo ya no tiene celdas (60 divisiones = las 60 libres; 90/90), y la refutación
+que había escrito ("sep < 1.0 o pareado < 15/20") **no** ocurrió: la separación sobrevive (1.94, 19/20 pareado); lo que
+cae es la ventaja conductual en el último cuarto (0.144, al filo del 0.15). El control barajado divide igual (60) sin
+separar. **Vocabulario:** *compone hasta 4 pasos de historia con distractores; a 5 se agota el pool y la ventaja se
+diluye*. La causa del techo es el **presupuesto de celdas** (el criterio de parada del debate: "si el límite es el pool,
+la salida es crecer celdas o cambiar la lectura", no otra regla). Serie completa k = 1…5: sep 3.97 / 3.74 / 2.24 / 1.99 /
+1.94; celdas ~35 / 41 / 58 / 72 / 90.

@@ -82,8 +82,13 @@ def tarea(args):
     r = m.run(seed, **kw)
     cv = r['curva']
     hasta30 = [c[2] for c in cv if c[1] <= 30]; fin = cv[-1] if cv else (None, None, None, None)
+    vf = r['val_final']; vs = r['vistos']; W = r['W']
+    ok = lambda n: (W[n] > 0) == (vf[n] == 'comida')
+    ret_no_inv = float(np.mean([ok(n) for n in vs[4:10]])) if len(vs) >= 10 else None   # enmienda 1: nunca invertidos, ausentes
+    ret_inv = float(np.mean([ok(n) for n in vs[:4]]))                                    # enmienda 1: invertidos en ausencia
     return dict(tipo='T', brazo=brazo, seed=seed, curva=cv, n_vistos=len(r['vistos']), adq_hasta30=float(np.median(hasta30)) if hasta30 else None,
-                adq_final=fin[2], ret_final=fin[3], deaths=r['deaths'], celdas=r['celdas'], splits=r['splits'], **recuperacion(r['comida_bin'], r['muertes_bin']))
+                adq_final=fin[2], ret_final=fin[3], ret_no_inv=ret_no_inv, ret_inv=ret_inv, W=W, vistos=vs, val_final=vf,
+                deaths=r['deaths'], celdas=r['celdas'], splits=r['splits'], **recuperacion(r['comida_bin'], r['muertes_bin']))
 
 
 def med(xs):
@@ -142,10 +147,15 @@ if __name__ == '__main__':
     A2 = all(0.55 <= med([g[s]['adq_final'] for s in SEEDS])[0] <= 0.70 for g in (v13, mapa))
     A3 = all(med([g[s]['adq_final'] for s in SEEDS])[0] >= 0.85 for g in (rv, rm))
     R1 = all(med([g[s]['ret_final'] for s in SEEDS])[0] >= 0.70 for g in (v13, mapa))
+    R1a = all(med([g[s]['ret_no_inv'] for s in SEEDS])[0] >= 0.70 for g in (v13, mapa))   # enmienda 1
+    R1b = all(med([g[s]['ret_inv'] for s in SEEDS])[0] <= 0.25 for g in (v13, mapa))      # enmienda 1 (por construccion)
     c1n = sum(v13[s]['rec'] <= 10000 for s in SEEDS); C1 = c1n >= 15
     c2a = sum(mapa[s]['rec'] < v13[s]['rec'] for s in SEEDS); c2b = sum(mapa[s]['muertes_20k'] > v13[s]['muertes_20k'] for s in SEEDS)
     C2 = c2a >= 15 and c2b >= 15
-    V.update(A1=A1, A2=A2, A3=A3, R1=R1, C1=C1, C1_n=c1n, C2=C2, C2_rec=c2a, C2_muertes=c2b, SIGUE_Y_SE_RECUPERA=bool(A1 and C1))
+    V.update(A1=A1, A2=A2, A3=A3, R1=R1, R1a=R1a, R1b=R1b, C1=C1, C1_n=c1n, C2=C2, C2_rec=c2a, C2_muertes=c2b, SIGUE_Y_SE_RECUPERA=bool(A1 and C1))
+    for b in ('V13', 'MAPA'):
+        g = G(b); log(f"   {b}: retencion nunca invertidos (5-10) {med([g[s]['ret_no_inv'] for s in SEEDS])[0]:.2f} | invertidos en ausencia (1-4) {med([g[s]['ret_inv'] for s in SEEDS])[0]:.2f}")
+    log(f"   R1a no-invertidos >=.70 {'OK' if R1a else 'NO'} | R1b invertidos <=.25 {'OK' if R1b else 'NO'}")
     log(f"   A1 adq<=30 >=.75 {'OK' if A1 else 'NO'} | A2 adq final en [.55,.70] {'OK' if A2 else 'NO'} | A3 reciclado >=.85 {'OK' if A3 else 'NO'} | R1 retencion >=.70 {'OK' if R1 else 'NO'}"
         f" | C1 V13 recupera <=10k en {c1n}/20 {'OK' if C1 else 'NO'} | C2 MAPA recupera antes {c2a}/20 y muere mas {c2b}/20 {'OK' if C2 else 'NO'}")
     log(f"VEREDICTO largo: {'SIGUE APRENDIENDO y SE RECUPERA' if V['SIGUE_Y_SE_RECUPERA'] else 'NO'}; predicciones A2 {'OK' if A2 else 'NO'} A3 {'OK' if A3 else 'NO'} R1 {'OK' if R1 else 'NO'} C2 {'OK' if C2 else 'NO'}")

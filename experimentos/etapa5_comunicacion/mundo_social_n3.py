@@ -287,7 +287,7 @@ SIMBOLOS = ('simbolo', 'simbolo_barajado')
 
 def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
         estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, estado_emisor='conducta', u_v=0.5,
-        mascaras=None, kw_por_org=None, regen=None, tipos_fijos=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen; N3d: tipos_fijos
+        mascaras=None, kw_por_org=None, regen=None, tipos_fijos=None, mudo_desde=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen; N3d: tipos_fijos; N3d-mudo: mudo_desde
     """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
               | 'barajada' (como honesta, signo al azar) | 'barajada_conducta' (como conducta, signo al azar)
               | 'simbolo' (N2: K_sim simbolos sin significado; el emisor aprende cual emitir, el receptor que significa)
@@ -352,7 +352,7 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
                 if mordio: emitidas.append((i, px, kk, 1 if R > 0 else -1)); senales_emitidas[i] += 1
             elif senal in ('conducta', 'barajada_conducta'):
                 emitidas.append((i, px, kk, 1 if mordio else -1)); senales_emitidas[i] += 1
-        if senal is not None and n > 1:
+        if senal is not None and n > 1 and (mudo_desde is None or t < mudo_desde):   # N3d-mudo: desde mudo_desde no se entrega nada
             for i, px, kk, signo in emitidas:
                 if senal in SIMBOLOS:
                     s = signo if senal == 'simbolo' else int(rng_senal.integers(K_sim))
