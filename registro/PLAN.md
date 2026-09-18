@@ -111,7 +111,9 @@
 >   (14: sí, 1.000; 11: no; 8: nadie puede, 9 de 15 hipótesis empatadas). BLOQUE 3/3 HECHO 07:43: **M3 (memoria de un golpe por
 >   combinación, ganador de la sala) cruza con 8 ejemplos: 1.000 registro y estricta, n* = 7, desempate al azar, azar en banda,
 >   con 14 también 1.000 → PRIOR ESTRUCTURAL de pares, declarado; réplica 141–160 igual → **LÍNEA XOR CERRADA (07:47)**; siguiente: llevarlo al
->   tronco como candidato a v15 (examen + baterías, paquete en curso) y el mundo vivo (F), que ya puede correr.**
+>   tronco como candidato a v15 (examen + baterías; corriendo) y el mundo vivo (F): **HECHO 07:58 — núcleo sostenido (valor por
+>   necesidad resuelve el XOR necesidad × estímulo 20/20; escalar no; barajar contenido lo destruye), supervivencia y sal no como se
+>   predijo (P4′, P6, P7); réplica 201–220 y preregistro nuevo de supervivencia en la siguiente sesión.**
 >   **Laterales, un bloque cada uno y se cierran:** B-5 (HECHO 05:55: no confirma; la vía lenta asocia en 2 exposiciones en vez de 4.5
 >   pero también en azar; línea cerrada) y C-P6
 >   (HECHO 06:37: NULO para N6 — el mundo se aprende solo, SOLO_R 0.986 fuera de banda; ERR-36: el runner no guardó curva_rec;

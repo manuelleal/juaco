@@ -192,7 +192,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   agentes) cruza XOR con 8 ejemplos: 1.000 en los 12 nunca vistos (registro y estricta), n* = 7, desempate al azar, azar en banda,
   con 14 patrones también 1.000 → PRIOR ESTRUCTURAL de pares (declarado, no "aprende la estructura"); **réplica 141–160 igual (1.000 / 1.000, n* = 10): LÍNEA XOR CERRADA** —
   vocabulario: "con 8 ejemplos XOR exige un prior de pares y con él bastan 7–10 exposiciones; con 14 no hace falta prior";
-  candidato a v15 cuando pase examen y baterías en el tronco (paquete en curso). Después, el mundo vivo (F).**
+  candidato a v15 en examen (corriendo). **Mundo vivo (F, 07:58, 181–200): núcleo sostenido — valor por necesidad resuelve el
+  XOR necesidad × estímulo (1.0, 20/20; tabla 2×4 exacta en 11 exposiciones), escalar 0.5, barajar el contenido lo destruye;
+  supervivencia (P4′, P7) y sal (P6: |W| 1.83 en un estímulo que nunca informa = superstición) no como se predijo. Réplica 201–220
+  y preregistro de supervivencia pendientes.**
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;

@@ -4666,3 +4666,38 @@ exposiciones; con 14 ejemplos no hace falta prior"*. Prohibido: "aprende XOR", "
 **v15** (la memoria por pares en la vía lenta del tronco: examen, generalización y recuperación intactas; paquete en preparación)
 y el **mundo vivo** (línea F). Bloques de la línea XOR esta noche: 3, 3b, 3d, trío, 3e (día 7) · A-4, A-6, bloque 3 (madrugada) ·
 control positivo, criba y sala de 19 agentes. ERR de la línea: 30, 31, 35.
+
+
+### MUNDO VIVO (línea F; primer bloque; 18 sep 07:58; semillas 181–200): **el núcleo se sostiene — el organismo aprende un VALOR POR NECESIDAD que resuelve el XOR necesidad × estímulo (1.0, 20/20), un valor escalar no lo hace (0.5, 20/20) y barajar el contenido lo destruye (20/20); la tabla 2 × 4 se aprende con error 0 en ~11 exposiciones — pero las predicciones de supervivencia (P4′, P7) y la del estímulo que no informa (P6) NO se cumplen como estaban escritas**
+
+Preregistro `experimentos/nivel11_mundo_vivo/PREREGISTRO_mundo_vivo.md` (+ enmienda 1 del diseñador y aclaración del coordinador antes de
+correr: P5 se lee sobre la celda más lenta real de v14); instrumento `organismo_vivo` (20c0961c79de8825; por anclas desde v14.1 con 20
+sustituciones; **identidad 37/37** en la copia principal y 15/15 dentro del runner, incluido el control que debe fallar); runner
+`corre_vivo.py` (0bce2ae090fcb0a7; umbrales con la frase literal del preregistro); datos `vivo_s181-200_20260918_075215`
+(3d9a7d3b7c8a9c54), 140 corridas, T = 100 000, 5 min. Diseño: dos necesidades (hambre, sed) con dos muertes, cuatro estímulos
+(comida, veneno, agua, sal), consecuencia vectorial, sorpresa específica por necesidad, valor por estímulo y necesidad.
+
+| brazo | xor01 (necesidad × estímulo) | celdas estrictas | exposiciones hasta la tabla | peor error de casilla | muertes [energía, agua] |
+|---|---|---|---|---|---|
+| V14 (ancla: una necesidad) | 0.5 | 2/4 | — | 2.5 | 139 [139, 0] |
+| **VIVO** | **1.0** | **4/4** | **11** | **0.00** | **97 [53.5, 48]** |
+| UNA_NEC | 0.5 | 2/4 | — | 0.13 | 135.5 [43.5, 89] |
+| ESCALAR (valor promedio) | 0.5 | 2/4 | — | 1.90 | 152.5 [70, 83] |
+| BARAJA_CON (contenido barajado) | 0.5 | 3/4 | 10 | 1.72 | 157 [79.5, 78] |
+| BARAJA_POL (política barajada) | 1.0 | 4/4 | 7.5 | 0.00 | 364.5 [176.5, 186.5] |
+| NO_INFORMA (sal nunca informa) | 1.0 | 3/4 | — | 0.00 | 39.5 [39.5, 0] |
+
+P1 **PASA** (20/20, mediana 1.0); P2 **PASA** (ESCALAR 0.5, pareado 20/20); P3a **PASA** (contenido barajado 0.5, 20/20); P3b **PASA** (política
+barajada: muertes ×3.76, 18/20; xor intacto); P9 **PASA** (VIVO no paga en exposiciones: 4.0 = 4.0). **P5 PASA con la lectura aclarada**
+(celda más lenta real de v14 = A, 4 exposiciones → umbral 12; exp_tabla 11; 20/20 con las 4) y **falla con la letra** ("(B)" = 2 → umbral 6):
+error de redacción declarado antes de correr, no de criterio. **P4′ NO:** VIVO muere menos que UNA_NEC (0.72×) y que ESCALAR (0.64×) y la
+mitad por agua (0.54×) — las medianas cumplen, pero el pareado exige ≥ 16/20 en los tres y da 11 / 17 / 20. **P7 NO:** las muertes por agua
+de UNA_NEC son 1.85× las de VIVO (se exigía ≥ 2×; pareado 10/20). **P6 NO:** la sal nunca cruza criterio (censurada 20/20, como se
+predijo) pero |W| llega a 1.83 (se exigía ≤ 0.3): **el organismo asigna valor a un estímulo que nunca informa** — hallazgo, no ruido
+(superstición por co-ocurrencia con la necesidad activa; se estudia aparte). **Lectura honesta (regla 12: P4′ y P7 no están a ±1
+semilla; no hay réplica automática):** el mundo vivo hace lo que prometía en lo cognitivo — valor por necesidad, XOR natural, tabla
+exacta, en pocas exposiciones — y sus predicciones de supervivencia eran demasiado finas para 20 semillas (direcciones correctas,
+márgenes no). Lo que sigue: réplica del núcleo en 201–220 con la misma letra, y un preregistro nuevo para la supervivencia y la
+superstición de la sal (no una enmienda sobre estos datos). El organismo v14.1 no cambia; el mundo vivo queda como instrumento y
+peldaño (línea F) para la siguiente sesión. Vocabulario: *"en un mundo con dos necesidades el organismo aprende qué vale cada cosa
+para cada necesidad, y con eso resuelve el XOR necesidad × estímulo en 11 exposiciones; un valor único no puede"*.
