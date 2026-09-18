@@ -1,0 +1,52 @@
+[15:46:35 +    0.0s] ARRANQUE BLOQUE 2 (capacidad directa): brazos ['G-EXC', 'G-LIN', 'G-AZA', 'G-BAR', 'S-EXC', 'S-LIN', 'S-AZA', 'S-AZA0', 'S-BAR', 'S-BAR0', 'V14'], semillas 461-480, T=100000. Pool(14).
+[15:46:35 +    0.0s] NO hay organo nuevo: v14.1 tal cual. Lo nuevo son perillas del MUNDO (vira, exc_evita) y de REGISTRO (reg_b2).
+[15:46:35 +    0.0s] NK=30 NKMAX=90 K=3, D=12 (el alias se DECLARA por semilla, no se elimina: ERR-45).
+[15:46:35 +    0.0s]     sha preregistro                412538a907d802a0
+[15:46:35 +    0.0s]     sha script                     c8fa05abaec88dac
+[15:46:35 +    0.0s]     sha constructor                3bd6269999c944b8
+[15:46:35 +    0.0s]     sha instrumento                30200bea6a41c3c8
+[15:46:35 +    0.0s]     sha arnes                      c26ef17a10158668
+[15:46:35 +    0.0s]     sha origen_organismo_familias  b9dd561a0cf056b8
+[15:46:35 +    0.0s]     sha runner_bloque1             c21b3c38f36cb4c9
+[15:46:35 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[15:46:35 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[15:46:35 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 9176
+[15:46:35 +    0.5s] ETAPA 1/3 — IDENTIDAD, subconjunto critico (6 casos x 3 = 18). (v) y (x) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[15:46:41 +    6.4s]     (a) vira=0,exc_evita=-1,reg_b2=0 == organismo_familias (AB) 3/3
+[15:46:41 +    6.4s]     (k) mundo=AB == organismo_v14 (TRONCO)                   3/3
+[15:46:41 +    6.4s]     (f) mundo=familias del bloque 1 == organismo_familias    3/3
+[15:46:41 +    6.4s]     (q) GEMELO: vira=8 == vira=-8 ANTES del cambio (P-S1)    3/3
+[15:46:41 +    6.4s]     (v) vira=8 != vira=-8 DESPUES del cambio (DEBE diferir)  3/3
+[15:46:41 +    6.4s]     (x) mundo=familias != mundo=AB (DEBE diferir)            3/3
+[15:46:41 +    6.4s]   IDENTIDAD 18/18
+[15:46:41 +    6.4s] ETAPA 2/3 — DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[15:46:41 +    6.4s]     alias por par mediana 0.0131  semillas con algun par identico 19/20  U3 mediana 0.3116
+[15:46:41 +    6.4s] ETAPA 3/3 — principal: 220 corridas de 100000 pasos (11 brazos x 20 semillas)...
+[15:47:01 +   26.1s]           20/220
+[15:47:12 +   36.6s]           40/220
+[15:47:31 +   55.6s]           60/220
+[15:47:41 +   65.9s]           80/220
+[15:48:01 +   85.8s]           100/220
+[15:48:12 +   97.0s]           120/220
+[15:48:24 +  108.8s]           140/220
+[15:48:43 +  128.0s]           160/220
+[15:48:53 +  138.2s]           180/220
+[15:49:10 +  155.0s]           200/220
+[15:49:17 +  161.8s]           220/220
+[15:49:17 +  161.8s] 
+[15:49:17 +  161.8s] CRUCE cod0 (instrumento) contra escala_codigo (bloque 0): IDENTICO campo a campo
+[15:49:17 +  161.8s] ANALISIS — medianas y cuartiles por brazo, y despues los umbrales EXACTOS del preregistro (ERR-31).
+[15:49:17 +  161.8s]     G-EXC  muertes 40.5 q[35.0, 40.5, 58.75]  regalo 0.0304  celdas 59.5  splits 29.5  exp_total 143.0  razon_exp 1.005
+[15:49:17 +  161.8s]     G-LIN  muertes 28.5 q[17.75, 28.5, 36.0]  regalo 0.0214  celdas 42.0  splits 12.0  exp_total 55.0  razon_exp 1.004
+[15:49:17 +  161.8s]     G-AZA  muertes 53.0 q[30.5, 53.0, 100.0]  regalo 0.0398  celdas 62.0  splits 32.0  exp_total 163.0  razon_exp 1.0035
+[15:49:17 +  161.8s]     G-BAR  muertes 74.5 q[67.25, 74.5, 101.75]  regalo 0.0559  celdas 45.0  splits 15.0  exp_total 68.0  razon_exp 1.0015
+[15:49:17 +  161.8s]     S-EXC  muertes 32.0 q[26.75, 32.0, 44.0]  regalo 0.024  celdas 59.0  splits 29.0  exp_total 131.5  razon_exp 1.0005
+[15:49:17 +  161.8s]     S-LIN  muertes 26.0 q[21.75, 26.0, 28.75]  regalo 0.0195  celdas 43.5  splits 13.5  exp_total 60.5  razon_exp 0.9995
+[15:49:17 +  161.8s]     S-AZA  muertes 55.5 q[36.75, 55.5, 111.75]  regalo 0.0416  celdas 76.5  splits 46.5  exp_total 327.5  razon_exp 0.9615
+[15:49:17 +  161.8s]     S-AZA0 muertes 42.0 q[31.75, 42.0, 84.0]  regalo 0.0315  celdas 70.5  splits 40.5  exp_total 227.0  razon_exp 0.9525
+[15:49:17 +  161.8s]     S-BAR  muertes 84.0 q[64.5, 84.0, 115.25]  regalo 0.063  celdas 47.5  splits 17.5  exp_total 617.0  razon_exp 1.001
+[15:49:17 +  161.8s]     S-BAR0 muertes 79.5 q[57.75, 79.5, 133.75]  regalo 0.0596  celdas 46.5  splits 16.5  exp_total 70.5  razon_exp 1.0
+[15:49:17 +  161.8s]     V14    muertes 130.0 q[125.75, 130.0, 142.25]  regalo None  celdas 30.0  splits 0.0  exp_total None  razon_exp None
+[15:49:17 +  161.8s] 
+[15:49:17 +  161.8s] VEREDICTO: CAPACIDAD 1 (variante nunca vista): g1 LIN 1.0 (19/20 >= 0.75) -> PG1 pasa; azar 0.5; BAR 0.25 -> PG3 pasa; EXC 0.875 contra LIN (razon 0.875, 8/20) -> PG4 indeciso. CAPACIDAD 2 (la variante que deja de comportarse igual): separa 4.0 de 8, sep/apr 2.0 -> PS2 pasa; asimetria comida 1.0 contra veneno 0.0 -> PS3 pasa; dano a las hermanas 0.0 (6/20 > 0) -> PS4 REFUTA; especifico de familia -> PS5 NO. Retencion de la virada al final: 0.5. Alias por par 0.0131, semillas con alias 19/20 (covariable declarada, no puerta). 20 semillas no cierran nada: piden replica en el rango siguiente (regla 12).
+[15:49:17 +  161.9s] datos -> familias_b2_s461-480_20260918_154635.json  sha256_16 = fc3c00b1532cc7bb

@@ -5194,3 +5194,35 @@ corrige la medida una cuarta vez. La pregunta "¿el mundo obliga?" se reformula 
 organismo generaliza a una variante nunca vista de un token conocido, y separa la variante cuando deja de comportarse igual?* —
 preregistro nuevo, medidas C1–C5 de `DISENO_grafo_tokens`, brazos v14.1 / lineal / azar / barajado, semillas 461–480. La renovación
 simétrica y `dureza = 4` (31–53 muertes) se conservan como mundo. ERR-46..49 quedan como historial del instrumento fallido.
+
+
+### BLOQUE 2 — la hipótesis del director medida por conducta: variante nunca vista y variante que deja de comportarse igual (nivel 12; 18 sep 15:49 y réplica 15:52; semillas 461–480 y 481–500; 11 brazos × 20): **REPLICADO — (1) v14.1 sin cambios lee la variante nunca vista desde su token (0.875 en las dos series; lector lineal 1.000; azar 0.5; barajado 0.25–0.31): "sal rosa se marca como sal" es LINEALIDAD, no capacidad nueva; (2) cuando una variante deja de comportarse igual, la separa sólo a medias (4 de 8, y sólo las que ya mordía como comida) y SIN dañar a sus hermanas (daño 0.0 en 14/20 ×2: P-S4 refutada — no hay colateral que medir, el bloque 1 buscaba un fantasma)**
+
+Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque2_variante.md` (412538a907d802a0); instrumento por anclas `organismo_familias_b2.py`
+(30200bea6a41c3c8; perillas `vira`, `exc_evita`, `reg_b2`; apagadas ≡ `organismo_familias` ≡ v14.1 bit a bit; identidad **63/63** + 18/18 en cada
+runner; gemelo `vira=8` ≡ `vira=−8` bit a bit hasta el cambio: el control no puede ser de paja); runner `corre_familias_b2.py` (c8fa05abaec88dac);
+datos `familias_b2_s461-480_20260918_154635` (fc3c00b1532cc7bb) y `familias_b2_s481-500_20260918_154930` (0b8565c93055e78c); 220 corridas por
+serie, T = 100 000, 2.7 min; alias estructural declarado (19–20/20 semillas con algún par alias; covariable, no puerta).
+
+| predicción (escrita antes) | serie 1 | réplica | veredicto |
+|---|---|---|---|
+| P-G2 puerta: azar en [0.35, 0.65] | 0.5 | 0.5 | ok |
+| P-G1: LIN ≥ 0.75 en ≥ 15/20 | 1.0 (19/20) | 1.0 (20/20) | PASA ×2 |
+| P-G3: barajado ≤ 0.35 (la variante lleva la valencia del token siguiente) | 0.25 | 0.31 | PASA ×2 |
+| P-G4: v14.1 < LIN en ≥ 14/20 | 0.875 (8/20) | 0.875 (11/20) | INDECISO ×2 |
+| P-S1 gemelo idéntico hasta el cambio | 3/3 | 3/3 | ok |
+| P-S2: separa ≤ 5/8 y sep ≥ 2 × apr | 4/8, 2.0 | 4/8, 2.0 | PASA / INDECISO (en el borde exacto, avisado) |
+| P-S3: separa las que eran comida, no las que eran veneno | 1.0 contra 0.0 | 1.0 contra 0.0 | PASA ×2 |
+| P-S4: daño a las hermanas ≥ 0.10 | 0.0 (6/20 > 0) | 0.0 (6/20 > 0) | **REFUTA ×2** |
+| P-S5: daño específico de familia | NO | NO | NO ×2 |
+
+**Lectura honesta:** la primera mitad de la hipótesis del director ya la cumple el tronco, y por la razón más barata: el píxel de la
+variante nueva pesa cero en la vía lenta y la lectura sale del token (el barajado lo demuestra: 0.25). La segunda mitad —
+desaprender la variante que cambió — es donde v14.1 falla a medias: separa 4 de 8, sólo las que ya mordía como comida (la puerta sólo
+se abre con mordidas), y retiene la virada al final 0.5. Y no hay daño colateral: aprender que "sal rosa envenena" no estropea a "sal"
+ni a "sal gruesa" (daño 0.0). **El bloque 1 buscaba medir un colateral que no existe**; ERR-46..49 quedan explicados por eso. Lo que el
+mundo de familias SÍ obliga y v14.1 no hace: separar la variante que vira cuando era veneno (0/8) y desaprender de un golpe. Eso es
+exactamente lo que v15f trae (se desdice en una mordida, E2 20/20): **siguiente bloque: v15f en este mundo, brazos S-EXC con
+`memoria_pares='relevo'` contra v14.1, misma letra P-S2/P-S3/P-S6, semillas 501–520 y réplica**; predicción del coordinador escrita
+aquí antes: v15f separa ≥ 6/8 incluidas las que eran veneno, `sep/apr` ≤ 1.0, retención de la virada ≥ 0.8. Regla 12: P-G4 y P-S2 en el
+borde se resuelven con la réplica siguiente, no con más análisis.
