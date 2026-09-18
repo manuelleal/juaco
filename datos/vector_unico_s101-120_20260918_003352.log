@@ -1,0 +1,24 @@
+[00:33:52 +    0.0s] ARRANQUE A-3 (¿la via lenta puede ser un vector con signo?). brazos ['DOS_CANALES', 'VECTOR_UNICO'], reglas ['px0', 'azar', 'xor01'], semillas 101-120. Pool(14).
+[00:33:52 +    0.0s] BASE {'T': 200000, 'mundo': 'regla', 'lectura': 'lineal', 'eta_s': 0.015, 'puerta': 3, 'clip_s': 3.0}   (unico cambio entre brazos: la parametrizacion de la via lenta)
+[00:33:52 +    0.0s] sha preregistro 81a8919252313b73  script ee25f9ce9c3193b6  organismo_v13q3 aaebe073308a40c2  organismo_v13q 0b59eb03858df3a8  bateria_generaliza 46772f5a582872c8
+[00:33:52 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 27276
+[00:33:52 +    0.6s] ETAPA 1/3 — identidad: v13q3(dos_canales, lineal) == organismo_v13q (6 corridas, T=60000)...
+[00:33:59 +    7.5s]    identicos: 6/6   claves nuevas: ['Ws', 'Ws_apriori', 'regla_lenta', 'constante', 'lam_lenta']
+[00:33:59 +    7.5s] ETAPA 2/3 — 120 corridas de T=200000...
+[00:34:27 +   34.9s]           20/120
+[00:34:41 +   49.3s]           40/120
+[00:35:09 +   77.2s]           60/120
+[00:35:24 +   91.8s]           80/120
+[00:35:51 +  119.7s]           100/120
+[00:36:05 +  133.2s]           120/120
+[00:36:05 +  133.2s] ETAPA 3/3 — pareo y criterios.
+[00:36:05 +  133.2s] TABLA — G1/G2/K por brazo (montaje y umbrales de bateria_generaliza).
+[00:36:05 +  133.2s]    DOS_CANALES   G1 px0 0.800 azar 0.500 px0>azar 18/20  PASA  |  G2 px0 0.892 azar 0.458 20/20  PASA  |  K 20/20  OK
+[00:36:05 +  133.2s]    VECTOR_UNICO  G1 px0 0.800 azar 0.500 px0>azar 18/20  PASA  |  G2 px0 0.892 azar 0.458 20/20  PASA  |  K 20/20  OK
+[00:36:05 +  133.2s] CRITERIOS A-3 (los mios).
+[00:36:05 +  133.2s]    A1 acc identica semilla a semilla: 60/60   OK
+[00:36:05 +  133.2s]    A2 max|dW_lenta| = 3.331e-15 (< 1e-9 donde el tope no toca)   OK
+[00:36:05 +  133.2s]    A3 el tope nunca aprieta en la via lenta: max canal 2.812 < clip_s=3.0, max masa de conflicto 0.339   OK
+[00:36:05 +  133.2s]    A4 n_techo (via rapida) = 0 en todas: OK
+[00:36:05 +  133.2s] VEREDICTO A-3: LA VIA LENTA DE DOS CANALES ES, EXACTAMENTE, UN VECTOR CON SIGNO (y el drenaje lam no toca el valor)
+[00:36:05 +  133.2s] datos -> vector_unico_s101-120_20260918_003352.json  sha256_16 = b9b82486b2224480

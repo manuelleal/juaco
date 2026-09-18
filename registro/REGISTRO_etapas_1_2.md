@@ -3868,3 +3868,26 @@ retención, generalización, seguridad) en 20 semillas; cae por una semilla en e
 **dE-TEST promovido a brazo con criterio**: P1' recuperación ≤ 0.60 × V13 y pareado ≥ 14/20, P7' igual que P7, calculado
 con un script sobre el JSON (regla 10). Vocabulario provisional (del preregistro): *cuando no se reconoce, prueba; y por
 eso se recupera antes de un cambio no avisado del mundo*. Prohibido: "curiosidad", "conciencia", "se conoce".
+
+
+### Bloque A-3 (célula de creación, creador A; 18 sep 00:36): la vía lenta de dos canales ES un vector con signo — **CONFIRMADO con identidad numérica (60/60 corridas, |ΔW| 3.3e−15)**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_vector_unico.md` (81a8919252313b73); runner `corre_vector_unico.py`
+(ee25f9ce9c3193b6); instrumento `organismo_v13q3` (aaebe073308a40c2; identidad v13q3 dos canales lineal ≡ v13q 6/6 dentro
+del runner); datos `vector_unico_s101-120_20260918_003352` (b9b82486b2224480), 120 corridas (2 brazos × 3 reglas × 20
+semillas, T = 200 000). Álgebra (A3 del puente): `(Wp, Wn) ↔ (W = Wp − Wn, m = min(Wp, Wn))` es biyección; el drenaje `lam`
+sólo olvida `m`; mientras ningún canal toque `clip_s`, la regla delta con signo sobre un solo vector es la misma
+función.
+
+| brazo | G1 px0 / azar | px0 > azar | G2 px0 / azar | K |
+|---|---|---|---|---|
+| DOS_CANALES (v13) | 0.800 / 0.500 | 18/20 | 0.892 / 0.458 (20/20) | 20/20 |
+| VECTOR_UNICO | 0.800 / 0.500 | 18/20 | 0.892 / 0.458 (20/20) | 20/20 |
+
+A1 `acc` idéntica semilla a semilla **60/60**; A2 `max|ΔW_lenta| = 3.3e−15`; A3 el tope nunca aprieta en la vía lenta (máximo
+por canal 2.81 < 3.0; masa de conflicto máxima 0.34); A4 `n_techo` (vía rápida) = 0 en todas (regla de ERR-25: ya se
+guarda). **Consecuencias:** (1) la vía lenta puede llevar **la mitad de memoria** (un número por rasgo) sin cambiar ni un
+bit de conducta — simplificación candidata para v14 (decisión del director; no es capacidad nueva); (2) queda demostrada
+la ablación del Agente B del puente XOR (`lam_lenta = 0` y `clip_s = 10` no movían nada: identidad, no casualidad);
+(3) la vía RÁPIDA no admite la misma simplificación: la fisión de v11 lee `m`. Vocabulario: *la vía lenta es un vector con
+signo; el drenaje es el olvido de la evidencia contradictoria*.
