@@ -1,0 +1,68 @@
+[23:16:52 +    0.0s] ARRANQUE bloque 6 (RAMA): modelo de si mismo minimo. brazos ['V13', 'V13+PRED', 'V13+SORPRESA', 'V13+RUIDO'], semillas 1-10, T=200000, invertir_en=100000. Pool(14).
+[23:16:52 +    0.0s] RAMA exploratoria: 10 semillas no cierran nada. Solo se mide, no se declara (regla 6).
+[23:16:52 +    0.0s] sha preregistro f983ad5c793e8c58  script 4f299c7021558711  constructor bbfde62d59641b4d
+[23:16:52 +    0.0s] sha v13a cada8cd34539d15f  v13ag c0faac23d8a56c0e  v13 cc8b16b492d4d324  v13g 2a80e125f8593bf2  bateria_v13 1a027bcb37eb536e  bateria_generaliza 46772f5a582872c8
+[23:16:52 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 8036
+[23:16:52 +    0.6s] ETAPA 1/4 — identidades I1 (apagado == v13), I2 (predictor sin modular == v13) e I3 (modo regla == v13g): 42 comprobaciones...
+[23:17:51 +   59.3s]     I1: 18/18
+[23:17:51 +   59.3s]     I2: 18/18
+[23:17:51 +   59.3s]     I3: 6/6
+[23:17:51 +   59.3s] ETAPA 2/4 — experimento principal: 40 corridas de 200000 pasos...
+[23:18:06 +   74.1s]           10/40
+[23:18:21 +   89.3s]           20/40
+[23:18:35 +  103.6s]           30/40
+[23:18:36 +  104.6s]           40/40
+[23:18:36 +  104.6s] ETAPA 3/4 — retencion M4 (los SEIS de bateria_v13, sus criterios): 240 corridas de 100000 pasos...
+[23:18:59 +  127.5s]           40/240
+[23:19:22 +  150.3s]           80/240
+[23:19:45 +  173.1s]           120/240
+[23:20:09 +  197.0s]           160/240
+[23:20:32 +  220.0s]           200/240
+[23:20:53 +  241.2s]           240/240
+[23:20:53 +  241.2s] ETAPA 4/4 — generalizacion M5 (G1/G2 px0/azar, modo regla): 80 corridas de 200000 pasos...
+[23:21:23 +  271.9s]           20/80
+[23:21:40 +  288.1s]           40/80
+[23:22:09 +  317.0s]           60/80
+[23:22:24 +  332.2s]           80/80
+[23:22:24 +  332.2s] ANALISIS — guardas primero (regla: una guarda caida anula el contraste, no lo reinterpreta).
+[23:22:24 +  332.2s]    V13           recuperacion 8359.5  censuradas 0/10  veneno_post 55.5  comida_post 317.0  muertes(post) 273.5(138.5)  eta_post 1.0  sorpresa pre/post None/None
+[23:22:24 +  332.2s]         Q1  sorpresa_media None  error_pred None  eta_media 1.0  bocados 228.0
+[23:22:24 +  332.2s]         Q2  sorpresa_media None  error_pred None  eta_media 1.0  bocados 163.5
+[23:22:24 +  332.2s]         Q3  sorpresa_media None  error_pred None  eta_media 1.0  bocados 194.5
+[23:22:24 +  332.2s]         Q4  sorpresa_media None  error_pred None  eta_media 1.0  bocados 177.0
+[23:22:24 +  332.2s]    V13+PRED      recuperacion 8359.5  censuradas 0/10  veneno_post 55.5  comida_post 317.0  muertes(post) 273.5(138.5)  eta_post 1.0  sorpresa pre/post 0.0/0.7633
+[23:22:24 +  332.2s]         Q1  sorpresa_media 0.03505  error_pred 0.008400000000000001  eta_media 1.0  bocados 228.0
+[23:22:24 +  332.2s]         Q2  sorpresa_media 0.0  error_pred 0.0  eta_media 1.0  bocados 163.5
+[23:22:24 +  332.2s]         Q3  sorpresa_media 0.08224999999999999  error_pred 0.0  eta_media 1.0  bocados 194.5
+[23:22:24 +  332.2s]         Q4  sorpresa_media 5e-05  error_pred 0.0  eta_media 1.0  bocados 177.0
+[23:22:24 +  332.2s]    V13+SORPRESA  recuperacion 7158.5  censuradas 0/10  veneno_post 51.0  comida_post 309.5  muertes(post) 274.0(140.0)  eta_post 1.8342  sorpresa pre/post 0.0/0.8342
+[23:22:24 +  332.2s]         Q1  sorpresa_media 0.036  error_pred 0.0086  eta_media 1.036  bocados 222.0
+[23:22:24 +  332.2s]         Q2  sorpresa_media 0.0  error_pred 0.0  eta_media 1.0  bocados 171.0
+[23:22:24 +  332.2s]         Q3  sorpresa_media 0.08515  error_pred 0.0001  eta_media 1.08515  bocados 187.5
+[23:22:24 +  332.2s]         Q4  sorpresa_media 0.0002  error_pred -0.0001  eta_media 1.0002  bocados 162.5
+[23:22:24 +  332.2s]    V13+RUIDO     recuperacion 8316.5  censuradas 0/10  veneno_post 52.0  comida_post 311.5  muertes(post) 283.5(143.0)  eta_post 1.2968  sorpresa pre/post 0.0/0.7051000000000001
+[23:22:24 +  332.2s]         Q1  sorpresa_media 0.0348  error_pred 0.0083  eta_media 1.0539  bocados 230.0
+[23:22:24 +  332.2s]         Q2  sorpresa_media 0.0  error_pred 0.0  eta_media 1.0  bocados 164.5
+[23:22:24 +  332.2s]         Q3  sorpresa_media 0.08055  error_pred 5e-05  eta_media 1.0805500000000001  bocados 198.5
+[23:22:24 +  332.2s]         Q4  sorpresa_media 0.00015000000000000001  error_pred -0.0001  eta_media 1.00015  bocados 165.0
+[23:22:24 +  332.2s]    G-c margen: V13 recuperacion mediana 8359.5, censuradas 0/10 -> OK
+[23:22:24 +  332.2s]    G-b (ENMIENDA 1+2) eta_media[Q3] SORPRESA 1.08515 vs RUIDO 1.0805500000000001; razon del exceso 0.946 -> lectura del contraste: inconcluso
+[23:22:24 +  332.2s]         diagnostico de promptitud (ventana +-2000): eta_post SORPRESA 1.8342 vs RUIDO 1.2968  (NO es guarda: el retraso es justamente lo que el control introduce)
+[23:22:24 +  332.2s]    G-d: sorpresa_media Q2<Q1 en 10/10 -> OK
+[23:22:24 +  332.2s] ANALISIS — predicciones preregistradas.
+[23:22:24 +  332.2s]    P1 recuperacion SORPRESA/V13 = 0.856 (<=0.70) y pareado 6/10 (>=8)  -> NO
+[23:22:24 +  332.2s]    P2 RUIDO/V13 = 0.995 (>=0.85), pareado SORPRESA<RUIDO 3/10 (>=8), G-b inconcluso  -> NO
+[23:22:24 +  332.2s]    P3 (PRED) sorpresa_pre mediana 0.0 (<=0.25) y post>=max(0.20, 2xpre) en 10/10 (>=8)  -> OK
+[23:22:24 +  332.2s]    M4 V13           E1 10/10  E2 10/10  E2I 10/10  E2J 10/10  E2K 10/10  E2L 10/10
+[23:22:24 +  332.2s]    M4 V13+PRED      E1 10/10  E2 10/10  E2I 10/10  E2J 10/10  E2K 10/10  E2L 10/10
+[23:22:24 +  332.2s]    M4 V13+SORPRESA  E1 10/10  E2 10/10  E2I 10/10  E2J 10/10  E2K 10/10  E2L 10/10
+[23:22:24 +  332.2s]    M4 V13+RUIDO     E1 10/10  E2 10/10  E2I 10/10  E2J 10/10  E2K 10/10  E2L 10/10
+[23:22:24 +  332.2s]    P4 retencion: etapas que pierden mas de 1 semilla ninguna; E2I W_B<=-2.8 en 10/10 (>=9)  -> OK
+[23:22:24 +  332.2s]    M5 V13           px0: G1 0.9 G2 0.9150942947346341 cob 10.0  azar: G1 0.5 G2 0.4748917008755177 cob 10.0
+[23:22:24 +  332.2s]    M5 V13+PRED      px0: G1 0.9 G2 0.9150942947346341 cob 10.0  azar: G1 0.5 G2 0.4748917008755177 cob 10.0
+[23:22:24 +  332.2s]    M5 V13+SORPRESA  px0: G1 0.8 G2 0.873348495832129 cob 10.0  azar: G1 0.5 G2 0.4404103819429942 cob 10.0
+[23:22:24 +  332.2s]    M5 V13+RUIDO     px0: G1 0.9 G2 0.8617582273952366 cob 10.0  azar: G1 0.5 G2 0.5419632554458026 cob 10.0
+[23:22:24 +  332.2s]    P5 generalizacion: G1 px0 SORPRESA 0.8 (>=0.65 y >= V13 0.9 -0.10), azar 0.5 en [0.35,0.65]  -> OK
+[23:22:24 +  332.2s]    P6 no gana por pasividad: veneno_post 51.0 <= 55.5 y comida_post 309.5 >= 0.90x317.0  -> OK
+[23:22:24 +  332.2s] VEREDICTO (rama, 10 semillas, no cierra nada): REFUTADO: la sorpresa no acelera la recuperacion tras la inversion.
+[23:22:24 +  332.3s] datos -> allostasis_s1-10_20260917_231652.json  sha256_16 = edb069ba16367139

@@ -1,0 +1,13 @@
+[23:12:58 +    0.0s] HUMO de un proceso (sin Pool). Identidad 1 semilla (T=10000) + 2 corridas MAPA de 100000.
+[23:12:58 +    0.0s] sha mundo_mapa 207d6a1954336b18  mundo_mapa_rodeo 7ab34aed9acffaa0
+[23:13:10 +   11.8s]    DIFIERE v13:0 s1: ['tel', 'M_llenas']
+[23:13:10 +   11.8s]    DIFIERE v13:1 s1: ['tel', 'M_llenas']
+[23:13:10 +   11.8s]    DIFIERE v13:2 s1: ['tel', 'M_llenas']
+[23:13:10 +   11.8s]    identidad (6 brazos de corre_mapa + 3 escenarios de v13, semilla 1): 6/9
+[23:13:22 +   23.6s]    MAPA s41 (11.8s) orientacion 1 sitios {23: 'A', 28: 'B', 8: 'A'} g (5, 20, 15)
+[23:13:22 +   23.6s]       R1 1.0 (n 20)  R2 0.75 (n 20)  llega_limpio 0.975  llega 0.975  come F1/F2 0/39  pisa 0  sin_mover 0  ciego 40/40
+[23:13:22 +   23.6s]       v_A 1.0  v_B -1.589  V0 (v_B < -0.308*v_A) OK  mec_rodeo 1.0  mec_atajo 1.0  M_llenas 3  W {'A': 1.0, 'B': -1.59, 'C': 0.13, 'D': -0.62}  muertes 4
+[23:13:33 +   35.2s]    MAPA s42 (11.7s) orientacion -1 sitios {39: 'A', 34: 'B', 14: 'A'} g (5, 20, 15)
+[23:13:33 +   35.2s]       R1 0.9 (n 20)  R2 0.8 (n 20)  llega_limpio 0.95  llega 0.95  come F1/F2 0/38  pisa 0  sin_mover 0  ciego 40/40
+[23:13:33 +   35.2s]       v_A 1.0  v_B -1.45  V0 (v_B < -0.308*v_A) OK  mec_rodeo 1.0  mec_atajo 1.0  M_llenas 3  W {'A': 1.0, 'B': -1.45, 'C': 0.15, 'D': -0.56}  muertes 6
+[23:13:33 +   35.2s] HUMO hecho. Los numeros son de UNA semilla por orientacion: no son el resultado, y nada se recalibra con ellos.

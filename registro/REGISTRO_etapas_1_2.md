@@ -3604,3 +3604,27 @@ no), 3d (regla: no), trío (tres mecanismos aislados: no), 3e (identificabilidad
 pero no aprendible con la dinámica actual de muestreo y refuerzo**. Vocabulario: *XOR no se generaliza; el cuello está
 en cuántas veces y con qué error se actualiza la vía lenta, no en qué ve*. La línea pasa a la célula de creación
 (creador A: reglas y dinámica; creador C: aprender también sin morder, por predicción). No se corre 3f hoy.
+
+
+### Bloque 6 (día 7, 23:25; RAMA, 10 semillas, no cierra nada): modelo de sí mismo mínimo — **la sorpresa no acelera la recuperación; el predictor sí mide**
+
+Preregistro `experimentos/nivel9_allostasis/PREREGISTRO_allostasis.md` (+ enmiendas 1–2, del agente diseñador); instrumentos
+`organismo_v13a.py` (`cada8cd34539d15f`) y `organismo_v13ag.py` (`c0faac23d8a56c0e`), identidades I1 (`eta_pred = 0` ≡ v13) e
+I2 (`eta_pred > 0, k_sorpresa = 0` ≡ v13 **bit a bit**: el predictor no decide nada) 6/6; datos `allostasis_s1-10_20260917_231652`
+(`edb069ba16367139`). Mecanismo: tercera lectura lineal `ΔE_pred(P)` (retina + código) con regla delta a `eta_pred`;
+`sorpresa = |ΔE − ΔE_pred|` modula la vía rápida `eta_ef = eta·(1 + k·sorpresa)`; control RUIDO con la sorpresa barajada.
+
+| brazo | recuperación tras la inversión (pasos) | veneno post | comida post | `eta` medio Q3 | sorpresa pre / post |
+|---|---|---|---|---|---|
+| V13 | 8 360 | 55.5 | 317 | 1.00 | — |
+| V13 + predictor (sólo mide) | 8 360 (≡ V13) | 55.5 | 317 | 1.00 | 0.0 / 0.76 |
+| **V13 + sorpresa** | **7 159** | 51.0 | 309.5 | 1.085 | 0.0 / 0.83 |
+| V13 + ruido (control) | 8 317 | 52.0 | 311.5 | 1.081 | 0.0 / 0.71 |
+
+P1 **NO** (0.856 del tiempo de V13; pareado 6/10), P2 NO (exceso de `eta` casi igual en ruido: contraste inconcluso, escrito
+antes), **P3 OK** (la sorpresa es 0 en régimen y salta ≥ 0.20 justo al cambio, 10/10), P4 retención intacta (E1–E2L 10/10 en
+los cuatro brazos), P5 generalización intacta (px0 0.80–0.90, azar 0.50), P6 no gana por pasividad. **Lectura:** el
+predictor de la propia energía aprende exacto (error 0 en régimen) y detecta el cambio de mundo; usar esa sorpresa para
+acelerar el aprendizaje **no** ayuda aquí (la recuperación la limita cuántas veces muerde, no la tasa). Vocabulario:
+*el organismo predice su energía y se sorprende cuando el mundo cambia; esa sorpresa no le sirve todavía*. Queda como
+instrumento para la célula de creación (significado por predicción; modelo de sí mismo). No se declara nada.
