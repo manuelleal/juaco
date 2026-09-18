@@ -1,0 +1,19 @@
+[22:57:28 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3). Preregistro PREREGISTRO_allostasis.md, seccion 11.
+[22:57:28 +    0.0s] sha preregistro 11367de5e82b98be  constructor bbfde62d59641b4d  v13a cada8cd34539d15f  v13ag c0faac23d8a56c0e  v13 cc8b16b492d4d324  script 14bd069ee222c6a2
+[22:57:28 +    0.0s] 1/2 IDENTIDAD semilla 1, 3 escenarios, T=40000 (9 simulaciones = 360 000 pasos).
+[22:57:35 +    6.3s]     I1 base      IDENTICO
+[22:57:38 +    9.5s]     I2 base      IDENTICO
+[22:57:45 +   16.3s]     I1 invertir  IDENTICO
+[22:57:48 +   19.9s]     I2 invertir  IDENTICO
+[22:57:55 +   26.8s]     I1 nuevo     IDENTICO
+[22:57:59 +   30.4s]     I2 nuevo     IDENTICO
+[22:57:59 +   30.4s]   identicos 6/6
+[22:57:59 +   30.4s] 2/2 UNA corrida V13+SORPRESA con inversion: T=200000, invertir_en=100000, semilla 1 (200 000 pasos).
+[22:58:16 +   47.4s]     t_ext_B 107620  recuperacion 7620 pasos  censurado False
+[22:58:16 +   47.4s]     sorpresa_media por cuarto [0.0345, 0.0, 0.0836, 0.0002]   error_pred por cuarto [0.0082, -0.0, 0.0001, -0.0002]
+[22:58:16 +   47.4s]     eta_media por cuarto [1.0345, 1.0, 1.0836, 1.0002]   bocados por cuarto [232, 171, 191, 161]
+[22:58:16 +   47.4s]     ventana +-2000: sorpresa_pre 0.0 -> sorpresa_post 0.8294 | eta_pre 1.0 -> eta_post 1.8294 (n 9/12)
+[22:58:16 +   47.4s]     veneno_post 45  comida_post 307  muertes 276 (tras la inversion 127)
+[22:58:16 +   47.4s]     W {'A': -2.97, 'B': 1.0, 'C': -0.25, 'D': 1.2}   W_lenta {'A': -1.941, 'B': 0.954, 'C': -0.247, 'D': 1.201}   W_pred {'A': -0.399, 'B': 0.8, 'C': 0.206, 'D': 0.446}   celdas 30  divisiones 0
+[22:58:16 +   47.4s] HUMO: numeros observados, sin ajustar nada. No son evidencia de la hipotesis (n=1); sirven para ver que el instrumento mide.
+[22:58:16 +   47.4s] datos -> allostasis_humo_20260917_225728.json  sha256_16 = 894e784538e1e12c
