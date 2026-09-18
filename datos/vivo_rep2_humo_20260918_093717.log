@@ -1,0 +1,42 @@
+[09:37:17 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3: 6 corridas de 100000). PREREGISTRO_reproduccion_2.md.
+[09:37:17 +    0.0s] Semillas 1-2: NINGUNA de las 261-300 del bloque queda expuesta.
+[09:37:17 +    0.0s]     sha preregistro                1b81b3fc57194018
+[09:37:17 +    0.0s]     sha script                     10ab45355883d98d
+[09:37:17 +    0.0s]     sha constructor                46d2bfaa74538759
+[09:37:17 +    0.0s]     sha instrumento                96feb4918dc5d694
+[09:37:17 +    0.0s]     sha arnes                      58579a431be16ea4
+[09:37:17 +    0.0s]     sha origen_organismo_vivo_rep  aa823d56c2d4213c
+[09:37:17 +    0.0s]     sha origen_organismo_vivo      20c0961c79de8825
+[09:37:17 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[09:37:17 +    0.0s]     sha corre_vivo_rep             d8ff689c6dd544d0
+[09:37:17 +    0.0s]     sha mini                       f3e86cbe6c17e6d7
+[09:37:17 +    0.0s]     origenes -> OK;  alias estructurales 261-280: [278]; 281-300: [286]
+[09:37:17 +    0.0s] 1/2 IDENTIDAD dentro del runner, 5 casos x 2 semillas, T=5000.
+[09:37:18 +    1.0s]     (A) apagada (reproduccion=0) == organismo_vivo VIVO                2/2
+[09:37:19 +    1.9s]     (B) cadena: rep2(vivo=0, n_nec=1) == organismo_v14                 2/2
+[09:37:20 +    2.8s]     (C) rep2=0 == organismo_vivo_rep (CUELLO_MIN, todas las claves)    2/2
+[09:37:21 +    3.9s]     (D) rep2=1: claves viejas == organismo_vivo_rep VIVO (solo lectura) 2/2
+[09:37:22 +    5.0s]     (E) CUELLO_MIN != organismo_vivo VIVO (DEBE fallar)                2/2
+[09:37:22 +    5.0s]   IDENTIDAD 10/10
+[09:37:22 +    5.0s] 2/2 6 corridas de T=100000: [('VIVO', 1), ('ESCALAR', 1), ('CUELLO_MIN', 1), ('VIVO', 2), ('ESCALAR', 2), ('CUELLO_MIN', 2)]
+[09:37:22 +    5.0s]     brazo       s   seg     r desc regalo  muertes [E, agua]  vida med/max      saciado A/B/C/D  xor  exposiciones A/B/C/D
+[09:37:27 +   10.0s]     VIVO        1   5.0   -75   14      7        89 [58, 31]    600.0/6146  1.00/0.00/0.84/0.78 1.00     778/5531/840/1922
+[09:37:27 +   10.0s]                 coherencia: vidas 89 = muertes 89; desc por cuarto [4, 4, 1, 5]; frac_regalo 0.5; celdas 4/4; err_peor 0.0
+[09:37:32 +   14.8s]     ESCALAR     1   4.8  -126   34     22       160 [66, 94]    307.0/3142  0.98/0.01/0.90/0.02 0.50     426/5015/423/2472
+[09:37:32 +   14.8s]                 coherencia: vidas 160 = muertes 160; desc por cuarto [7, 12, 6, 9]; frac_regalo 0.647; celdas 1/4; err_peor 2.04
+[09:37:37 +   19.8s]     CUELLO_MIN  1   5.0     3   67     24        64 [29, 35]    756.0/8697  0.84/0.00/0.83/0.00 1.00     538/4262/615/3275
+[09:37:37 +   19.8s]                 coherencia: vidas 64 = muertes 64; desc por cuarto [14, 17, 16, 20]; frac_regalo 0.358; celdas 4/4; err_peor 0.0
+[09:37:42 +   24.9s]     VIVO        2   5.1   -86   17      7       103 [52, 51]    600.0/4427  1.00/0.00/0.84/0.75 1.00     831/5096/843/2224
+[09:37:42 +   24.9s]                 coherencia: vidas 103 = muertes 103; desc por cuarto [4, 3, 4, 6]; frac_regalo 0.412; celdas 4/4; err_peor 0.0
+[09:37:46 +   29.7s]     ESCALAR     2   4.8  -172   34     26      206 [99, 107]    214.0/3904  0.98/0.01/0.92/0.05 0.50     497/4942/524/2593
+[09:37:46 +   29.7s]                 coherencia: vidas 206 = muertes 206; desc por cuarto [14, 7, 6, 7]; frac_regalo 0.765; celdas 1/4; err_peor 1.9
+[09:37:51 +   34.6s]     CUELLO_MIN  2   4.9    -2   64     22        66 [30, 36]    857.0/6618  0.83/0.00/0.84/0.00 1.00     531/3864/549/3811
+[09:37:51 +   34.6s]                 coherencia: vidas 66 = muertes 66; desc por cuarto [18, 12, 17, 17]; frac_regalo 0.344; celdas 4/4; err_peor 0.0
+[09:37:51 +   34.6s]    H1 r(VIVO) > r(ESCALAR) en 2/2 (misma semilla)                              -> SI
+[09:37:51 +   34.6s]    H2 r(CUELLO_MIN) > r(VIVO) en 2/2                                           -> SI
+[09:37:51 +   34.6s]    H3 coherencia de los diagnosticos (vidas = muertes; suma = T; regalo <= desc) en 6/6 -> SI
+[09:37:51 +   34.6s]    H4 frac_regalo ESCALAR > CUELLO_MIN en 2/2 (blanda)                         -> SI
+[09:37:51 +   34.6s]    H5 CUELLO_MIN saciado: sal <= 0.05 y veneno <= 0.05 en 2/2                  -> SI
+[09:37:51 +   34.6s] ESTIMACION del bloque: 7x20 = 140 corridas de 100000, ~4.9 s/corrida -> ~0.8 min con Pool(14).
+[09:37:51 +   34.6s] HUMO: numeros observados, sin ajustar nada. n=1-2, semillas vistas: NO son evidencia.
+[09:37:51 +   34.6s] datos -> vivo_rep2_humo_20260918_093717.json  sha256_16 = fe29218dfcf798f7

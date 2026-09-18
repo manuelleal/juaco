@@ -1,0 +1,55 @@
+# identidad_vivo_rep2.py sobre organismo_vivo_rep2.py 96feb4918dc5d694 (18 sep 2026, 09:34; un proceso, T=20000, semillas 1-2)
+  sha organismo_v14 (TRONCO congelado)     feefc88b1fd8d434
+  sha organismo_vivo.py                    20c0961c79de8825
+  sha organismo_vivo_rep.py (origen)       aa823d56c2d4213c
+  sha construye_vivo_rep2.py               46d2bfaa74538759
+  sha organismo_vivo_rep2.py               96feb4918dc5d694
+  T = 20000, semillas (1, 2), UN proceso
+
+APAGADA (reproduccion=0): organismo_vivo_rep2 == organismo_vivo, mismas claves
+  [   7.5s] (A1) VIVO                                                      2/2 IDENTICO
+  [  13.5s] (A2) UNA_NEC                                                   2/2 IDENTICO
+  [  20.3s] (A3) ESCALAR                                                   2/2 IDENTICO
+  [  27.4s] (A4) BARAJA_POL                                                2/2 IDENTICO
+  [  34.6s] (A5) BARAJA_CON                                                2/2 IDENTICO
+  [  41.5s] (A6) NO_INFORMA                                                2/2 IDENTICO
+  [  47.8s] (A7) ancla V14 (1 necesidad, 2 estimulos)                      2/2 IDENTICO
+  [  53.9s] (A8) vivo=0 base                                               2/2 IDENTICO
+  [  60.0s] (A9) vivo=0 con inversion en 10k                               2/2 IDENTICO
+  [  67.2s] (A10) VIVO con TODAS las rep_* y rep2 encendidas, maestra apagada 2/2 IDENTICO
+  [  72.6s] (A11) vivo=0 linaje v13 (mask_rel=0, puerta_pat=0)             2/2 IDENTICO
+
+CADENA AL TRONCO: rep2(vivo=0, n_nec=1) == organismo_v14
+  [  78.5s] (B1) base                                                      2/2 IDENTICO
+  [  85.0s] (B2) inversion en 10k                                          2/2 IDENTICO
+
+REP (rep2=0): organismo_vivo_rep2 == organismo_vivo_rep, mismas claves, en los 7 brazos del bloque 2
+  [  92.4s] (C) VIVO (rep2=0)                                              2/2 IDENTICO
+  [  99.7s] (C) CUELLO_MIN (rep2=0)                                        2/2 IDENTICO
+  [ 106.8s] (C) REP_SIN_COSTE (rep2=0)                                     2/2 IDENTICO
+  [ 113.5s] (C) UNA_NEC (rep2=0)                                           2/2 IDENTICO
+  [ 120.9s] (C) ESCALAR (rep2=0)                                           2/2 IDENTICO
+  [ 127.9s] (C) BARAJA_CON (rep2=0)                                        2/2 IDENTICO
+  [ 137.2s] (C) BARAJA_POL (rep2=0)                                        2/2 IDENTICO
+
+ENCENDIDA (rep2=1): claves viejas == organismo_vivo_rep + 4 nuevas; coherencia de los diagnosticos
+  [ 144.6s] (D) VIVO + rep2                                                2/2 IDENTICO
+        VIVO         s1: deaths 21 = vidas 21; sum+final 20000 = T; desc 3 regalo 2  -> coherente
+        VIVO         s2: deaths 23 = vidas 23; sum+final 20000 = T; desc 4 regalo 2  -> coherente
+  [ 152.7s] (D) ESCALAR + rep2                                             2/2 IDENTICO
+        ESCALAR      s1: deaths 33 = vidas 33; sum+final 20000 = T; desc 6 regalo 5  -> coherente
+        ESCALAR      s2: deaths 37 = vidas 37; sum+final 20000 = T; desc 11 regalo 9  -> coherente
+  [ 160.3s] (D) CUELLO_MIN + rep2                                          2/2 IDENTICO
+        CUELLO_MIN   s1: deaths 12 = vidas 12; sum+final 20000 = T; desc 13 regalo 4  -> coherente
+        CUELLO_MIN   s2: deaths 14 = vidas 14; sum+final 20000 = T; desc 14 regalo 5  -> coherente
+  [ 167.2s] (D) BARAJA_POL + rep2                                          2/2 IDENTICO
+        BARAJA_POL   s1: deaths 77 = vidas 77; sum+final 20000 = T; desc 0 regalo 0  -> coherente
+        BARAJA_POL   s2: deaths 87 = vidas 87; sum+final 20000 = T; desc 0 regalo 0  -> coherente
+        claves dependientes del rng identicas con rep2 encendido: 9/9
+
+CONTROLES QUE DEBEN FALLAR
+  [ 175.7s] (E) CUELLO_MIN (rep2=1) != organismo_vivo VIVO                 2/2 DIFIERE (como debe)
+  [ 179.7s] (E) REP_SIN_COSTE (rep2=1) != organismo_vivo VIVO              2/2 DIFIERE (como debe)
+
+IDENTIDAD 60/60  -> el paquete puede correr.
+exit arnes 0
