@@ -1,0 +1,44 @@
+[06:42:48 +    0.0s] ARRANQUE mini_g3 (UN proceso, sin Pool). organismo_g3.py sha 91eb167023cb37b7. semillas [1, 2, 3], reglas ['xor01', 'px0', 'azar'], brazos ['combi', 'combi1'], BASE={'T': 100000, 'mundo': 'regla', 'lectura': 'cuadratica', 'regla_lenta': 'delta_signo', 'constante': True, 'eta_s': 0.15, 'clip_s': 10.0, 'puerta': 3, 'lab': True}
+[06:42:57 +    8.8s]   xor01 s1 combi  : acc_lenta 0.8125 (estricta 0.625)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 165  4clases_tren False  replay_ok True  (8.8s)
+[06:43:05 +   17.2s]   xor01 s2 combi  : acc_lenta 0.75 (estricta 0.5)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 239  4clases_tren False  replay_ok True  (8.4s)
+[06:43:14 +   25.7s]   xor01 s3 combi  : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 208  4clases_tren True  replay_ok True  (8.5s)
+[06:43:22 +   34.2s]   xor01 s1 combi1 : acc_lenta 0.8125 (estricta 0.625)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 165  4clases_tren False  replay_ok True  (8.5s)
+[06:43:31 +   42.8s]   xor01 s2 combi1 : acc_lenta 0.75 (estricta 0.5)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 239  4clases_tren False  replay_ok True  (8.6s)
+[06:43:39 +   51.5s]   xor01 s3 combi1 : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 208  4clases_tren True  replay_ok True  (8.7s)
+[06:43:48 +   60.1s]   px0   s1 combi  : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 2]  vistas_fin 60  eventos_pre 208  4clases_tren True  replay_ok True  (8.6s)
+[06:43:56 +   68.6s]   px0   s2 combi  : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 154  4clases_tren True  replay_ok True  (8.5s)
+[06:44:05 +   77.0s]   px0   s3 combi  : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 3]  vistas_fin 60  eventos_pre 209  4clases_tren True  replay_ok True  (8.4s)
+[06:44:13 +   85.6s]   px0   s1 combi1 : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 2]  vistas_fin 60  eventos_pre 208  4clases_tren True  replay_ok True  (8.6s)
+[06:44:22 +   94.3s]   px0   s2 combi1 : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 1]  vistas_fin 60  eventos_pre 154  4clases_tren True  replay_ok True  (8.7s)
+[06:44:31 +  103.1s]   px0   s3 combi1 : acc_lenta 1.0 (estricta 1.0)  ganadora_sonda [0, 3]  vistas_fin 60  eventos_pre 209  4clases_tren True  replay_ok True  (8.8s)
+[06:44:40 +  111.9s]   azar  s1 combi  : acc_lenta 0.5 (estricta 0.5)  ganadora_sonda [0, 2]  vistas_fin 60  eventos_pre 264  4clases_tren True  replay_ok True  (8.7s)
+[06:44:48 +  120.5s]   azar  s2 combi  : acc_lenta 0.2 (estricta 0.2)  ganadora_sonda [0, 3]  vistas_fin 60  eventos_pre 263  4clases_tren True  replay_ok True  (8.6s)
+[06:44:59 +  130.8s]   azar  s3 combi  : acc_lenta 0.5 (estricta 0.5)  ganadora_sonda [3, 4]  vistas_fin 60  eventos_pre 239  4clases_tren True  replay_ok True  (10.3s)
+[06:45:08 +  140.1s]   azar  s1 combi1 : acc_lenta 0.5 (estricta 0.5)  ganadora_sonda [2, 4]  vistas_fin 60  eventos_pre 160  4clases_tren True  replay_ok True  (9.3s)
+[06:45:17 +  149.1s]   azar  s2 combi1 : acc_lenta 0.2 (estricta 0.2)  ganadora_sonda [0, 3]  vistas_fin 60  eventos_pre 258  4clases_tren True  replay_ok True  (9.0s)
+[06:45:26 +  158.1s]   azar  s3 combi1 : acc_lenta 0.5 (estricta 0.5)  ganadora_sonda [3, 4]  vistas_fin 60  eventos_pre 215  4clases_tren True  replay_ok True  (9.0s)
+[06:45:26 +  158.1s] 
+=== TABLA: acc_lenta por regla x brazo (mediana [min,max] sobre 3 semillas) ===
+[06:45:26 +  158.1s]   xor01/combi  : acc_lenta 0.8125 [0.75,1.0]  estricta 0.625 [0.5,1.0]  >=0.75: 3/3 (estricta 1/3)  abre(0,1): 3/3  4clases_tren: 1/3
+[06:45:26 +  158.1s]   xor01/combi1 : acc_lenta 0.8125 [0.75,1.0]  estricta 0.625 [0.5,1.0]  >=0.75: 3/3 (estricta 1/3)  abre(0,1): 3/3  4clases_tren: 1/3
+[06:45:26 +  158.1s]   px0  /combi  : acc_lenta 1.0 [1.0,1.0]  estricta 1.0 [1.0,1.0]  >=0.75: 3/3 (estricta 3/3)  abre(0,1): 1/3  4clases_tren: 3/3
+[06:45:26 +  158.1s]   px0  /combi1 : acc_lenta 1.0 [1.0,1.0]  estricta 1.0 [1.0,1.0]  >=0.75: 3/3 (estricta 3/3)  abre(0,1): 1/3  4clases_tren: 3/3
+[06:45:26 +  158.1s]   azar /combi  : acc_lenta 0.5 [0.2,0.5]  estricta 0.5 [0.2,0.5]  >=0.75: 0/3 (estricta 0/3)  abre(0,1): 0/3  4clases_tren: 3/3
+[06:45:26 +  158.1s]   azar /combi1 : acc_lenta 0.5 [0.2,0.5]  estricta 0.5 [0.2,0.5]  >=0.75: 0/3 (estricta 0/3)  abre(0,1): 0/3  4clases_tren: 3/3
+[06:45:26 +  158.1s] 
+=== EXPOSICIONES: curva mediana (3 semillas) por regla x brazo; n* = primer n con mediana >= 0.75 ===
+[06:45:26 +  158.1s]   xor01/combi  : n*(>=0.75) = 7   1:0.56 2:0.62 3:0.62 4:0.72 5:0.72 6:0.72 7:0.81 8:0.81 9:0.81 10:0.81 12:0.81 14:0.81 16:0.81 20:0.81 25:0.81 30:0.81
+[06:45:26 +  158.1s]   xor01/combi1 : n*(>=0.75) = 7   1:0.56 2:0.62 3:0.62 4:0.72 5:0.72 6:0.72 7:0.81 8:0.81 9:0.81 10:0.81 12:0.81 14:0.81 16:0.81 20:0.81 25:0.81 30:0.81
+[06:45:26 +  158.1s]   px0  /combi  : n*(>=0.75) = 2   1:0.65 2:0.80 3:0.70 4:0.70 5:0.70 6:0.75 7:0.75 8:0.85 9:0.90 10:0.90 12:0.90 14:0.90 16:1.00 20:1.00 25:1.00 30:1.00
+[06:45:26 +  158.1s]   px0  /combi1 : n*(>=0.75) = 2   1:0.65 2:0.80 3:0.70 4:0.70 5:0.70 6:0.75 7:0.75 8:0.85 9:0.90 10:0.90 12:0.90 14:0.90 16:1.00 20:1.00 25:1.00 30:1.00
+[06:45:26 +  158.1s]   azar /combi  : n*(>=0.75) = >600   1:0.45 2:0.50 3:0.50 4:0.50 5:0.40 6:0.50 7:0.50 8:0.50 9:0.50 10:0.30 12:0.30 14:0.30 16:0.55 20:0.50 25:0.50 30:0.50
+[06:45:26 +  158.1s]   azar /combi1 : n*(>=0.75) = >600   1:0.45 2:0.50 3:0.50 4:0.50 5:0.40 6:0.50 7:0.50 8:0.50 9:0.50 10:0.30 12:0.30 14:0.30 16:0.30 20:0.50 25:0.30 30:0.50
+[06:45:26 +  158.1s] 
+=== CONTROLES: px0 debe ser 1.000 en todos; azar debe caer en [0.35,0.65] ===
+[06:45:26 +  158.1s]   px0: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]  -> OK 1.000 en todos
+[06:45:26 +  158.1s]   azar: [0.5, 0.2, 0.5, 0.5, 0.2, 0.5]  mediana 0.5  -> OK en [0.35,0.65]
+[06:45:26 +  158.1s] 
+VERIFICACION DEL REPLAY: 18/18 casos coinciden EXACTO con W_lenta_apriori del organismo (0 diferencias).
+[06:45:26 +  158.1s] 
+datos -> mini_g3_20260918_064248.json
+[06:45:26 +  158.1s] FIN mini_g3 (158.1s total)

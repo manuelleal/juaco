@@ -1,0 +1,759 @@
+{
+ "base": {
+  "T": 100000,
+  "mundo": "regla",
+  "puerta": 3,
+  "constante": true,
+  "regla_lenta": "delta_signo",
+  "lam_lenta": 0.0,
+  "lectura": "cuadratica",
+  "eta_s": 0.15,
+  "clip_s": 10.0,
+  "fision": "conflicto",
+  "fis_umbral": 3.0,
+  "fis_rho": 0.05,
+  "lab": true
+ },
+ "fis_umbral": 3.0,
+ "fis_rho": 0.05,
+ "rej": [
+  10,
+  20,
+  40,
+  60,
+  100,
+  150,
+  200,
+  300,
+  400,
+  600,
+  1000,
+  1500
+ ],
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "reglas": [
+  "xor01",
+  "px0",
+  "azar"
+ ],
+ "filas": [
+  {
+   "regla": "xor01",
+   "seed": 1,
+   "acc_lenta": 0.5,
+   "fis_ganadora": [
+    0,
+    1
+   ],
+   "fis_n": 12,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "abre_conjuntivo": true,
+   "splits": 33,
+   "celdas": 63,
+   "deaths": 115,
+   "n_pre": 257,
+   "expo": {
+    "10": 0.5,
+    "20": 0.5,
+    "40": 0.25,
+    "60": 0.5,
+    "100": 0.25,
+    "150": 0.25,
+    "200": 0.25,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": null,
+   "n65": null,
+   "grupo_ganador_replay_n_total": [
+    1
+   ],
+   "celdas_replay_n_total": 11,
+   "acc_replay_n_total": 0.5,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "xor01",
+   "seed": 2,
+   "acc_lenta": 0.1875,
+   "fis_ganadora": [
+    0,
+    1
+   ],
+   "fis_n": 12,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     0
+    ]
+   ],
+   "abre_conjuntivo": true,
+   "splits": 24,
+   "celdas": 54,
+   "deaths": 103,
+   "n_pre": 258,
+   "expo": {
+    "10": 0.1875,
+    "20": 0.5,
+    "40": 0.1875,
+    "60": 0.1875,
+    "100": 0.1875,
+    "150": 0.1875,
+    "200": 0.1875,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": null,
+   "n65": null,
+   "grupo_ganador_replay_n_total": [
+    0
+   ],
+   "celdas_replay_n_total": 10,
+   "acc_replay_n_total": 0.1875,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "xor01",
+   "seed": 3,
+   "acc_lenta": 0.3125,
+   "fis_ganadora": [
+    0,
+    1
+   ],
+   "fis_n": 12,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     4,
+     1
+    ]
+   ],
+   "abre_conjuntivo": true,
+   "splits": 43,
+   "celdas": 73,
+   "deaths": 110,
+   "n_pre": 275,
+   "expo": {
+    "10": 0.5,
+    "20": 0.375,
+    "40": 0.3125,
+    "60": 0.5,
+    "100": 0.3125,
+    "150": 0.3125,
+    "200": 0.5,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": null,
+   "n65": null,
+   "grupo_ganador_replay_n_total": [
+    2
+   ],
+   "celdas_replay_n_total": 12,
+   "acc_replay_n_total": 0.3125,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "px0",
+   "seed": 1,
+   "acc_lenta": 1.0,
+   "fis_ganadora": [
+    0
+   ],
+   "fis_n": 11,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     2,
+     0
+    ]
+   ],
+   "abre_conjuntivo": false,
+   "splits": 30,
+   "celdas": 60,
+   "deaths": 116,
+   "n_pre": 253,
+   "expo": {
+    "10": 1.0,
+    "20": 1.0,
+    "40": 1.0,
+    "60": 1.0,
+    "100": 1.0,
+    "150": 1.0,
+    "200": 1.0,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": 10,
+   "n65": 10,
+   "grupo_ganador_replay_n_total": [
+    0
+   ],
+   "celdas_replay_n_total": 11,
+   "acc_replay_n_total": 1.0,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "px0",
+   "seed": 2,
+   "acc_lenta": 1.0,
+   "fis_ganadora": [
+    0
+   ],
+   "fis_n": 11,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     4,
+     0
+    ]
+   ],
+   "abre_conjuntivo": false,
+   "splits": 23,
+   "celdas": 53,
+   "deaths": 131,
+   "n_pre": 283,
+   "expo": {
+    "10": 0.5,
+    "20": 0.5,
+    "40": 1.0,
+    "60": 1.0,
+    "100": 1.0,
+    "150": 1.0,
+    "200": 1.0,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": 40,
+   "n65": 40,
+   "grupo_ganador_replay_n_total": [
+    0
+   ],
+   "celdas_replay_n_total": 11,
+   "acc_replay_n_total": 1.0,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "px0",
+   "seed": 3,
+   "acc_lenta": 1.0,
+   "fis_ganadora": [
+    0
+   ],
+   "fis_n": 11,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     4,
+     0
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     3,
+     0
+    ]
+   ],
+   "abre_conjuntivo": false,
+   "splits": 26,
+   "celdas": 56,
+   "deaths": 149,
+   "n_pre": 300,
+   "expo": {
+    "10": 0.5,
+    "20": 1.0,
+    "40": 1.0,
+    "60": 1.0,
+    "100": 1.0,
+    "150": 1.0,
+    "200": 1.0,
+    "300": 1.0,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": 20,
+   "n65": 20,
+   "grupo_ganador_replay_n_total": [
+    0
+   ],
+   "celdas_replay_n_total": 11,
+   "acc_replay_n_total": 1.0,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "azar",
+   "seed": 1,
+   "acc_lenta": 0.4,
+   "fis_ganadora": [
+    1
+   ],
+   "fis_n": 12,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     5,
+     2
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     2,
+     1
+    ]
+   ],
+   "abre_conjuntivo": false,
+   "splits": 34,
+   "celdas": 64,
+   "deaths": 151,
+   "n_pre": 333,
+   "expo": {
+    "10": 0.30000000000000004,
+    "20": 0.6,
+    "40": 0.30000000000000004,
+    "60": 0.30000000000000004,
+    "100": 0.30000000000000004,
+    "150": 0.30000000000000004,
+    "200": 0.30000000000000004,
+    "300": 0.30000000000000004,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": null,
+   "n65": null,
+   "grupo_ganador_replay_n_total": [
+    5
+   ],
+   "celdas_replay_n_total": 12,
+   "acc_replay_n_total": 0.4,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "azar",
+   "seed": 2,
+   "acc_lenta": 0.8,
+   "fis_ganadora": [
+    5,
+    2
+   ],
+   "fis_n": 12,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     5,
+     2
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     4,
+     2
+    ]
+   ],
+   "abre_conjuntivo": true,
+   "splits": 29,
+   "celdas": 59,
+   "deaths": 140,
+   "n_pre": 298,
+   "expo": {
+    "10": 0.6,
+    "20": 0.5,
+    "40": 0.5,
+    "60": 0.8,
+    "100": 0.5,
+    "150": 0.8,
+    "200": 0.5,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": 60,
+   "n65": 60,
+   "grupo_ganador_replay_n_total": [
+    3
+   ],
+   "celdas_replay_n_total": 12,
+   "acc_replay_n_total": 0.8,
+   "replay_coincide_con_organismo": true
+  },
+  {
+   "regla": "azar",
+   "seed": 3,
+   "acc_lenta": 0.5,
+   "fis_ganadora": [
+    2,
+    3
+   ],
+   "fis_n": 12,
+   "fis_celdas": [
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     1,
+     4
+    ],
+    [
+     3,
+     2
+    ],
+    [
+     5,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     4,
+     5
+    ]
+   ],
+   "abre_conjuntivo": true,
+   "splits": 35,
+   "celdas": 65,
+   "deaths": 154,
+   "n_pre": 218,
+   "expo": {
+    "10": 0.5,
+    "20": 0.5,
+    "40": 0.5,
+    "60": 0.5,
+    "100": 0.5,
+    "150": 0.5,
+    "200": 0.5,
+    "300": null,
+    "400": null,
+    "600": null,
+    "1000": null,
+    "1500": null
+   },
+   "n75": null,
+   "n65": null,
+   "grupo_ganador_replay_n_total": [
+    4
+   ],
+   "celdas_replay_n_total": 12,
+   "acc_replay_n_total": 0.5,
+   "replay_coincide_con_organismo": true
+  }
+ ],
+ "segundos": 91.5
+}

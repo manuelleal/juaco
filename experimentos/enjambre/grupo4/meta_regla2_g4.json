@@ -1,0 +1,181 @@
+{
+ "fuente": "lab_eventos_cuadratica_xor01.json",
+ "busqueda": [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10"
+ ],
+ "retenidas": [
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20"
+ ],
+ "n_configs": 432,
+ "top": [
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.05,
+    "rho": 0.02,
+    "clip": 3.0,
+    "alpha": 0.3
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.05,
+    "rho": 0.02,
+    "clip": 3.0,
+    "alpha": 1.0
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.05,
+    "rho": 0.02,
+    "clip": 10.0,
+    "alpha": 0.3
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.05,
+    "rho": 0.02,
+    "clip": 10.0,
+    "alpha": 1.0
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.05,
+    "rho": 0.02,
+    "clip": 30.0,
+    "alpha": 0.3
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.05,
+    "rho": 0.02,
+    "clip": 30.0,
+    "alpha": 1.0
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.15,
+    "rho": 0.02,
+    "clip": 3.0,
+    "alpha": 0.3
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.15,
+    "rho": 0.02,
+    "clip": 3.0,
+    "alpha": 1.0
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.15,
+    "rho": 0.02,
+    "clip": 10.0,
+    "alpha": 0.3
+   }
+  },
+  {
+   "busq": 1.0,
+   "reten": 1.0,
+   "config": {
+    "g": 2,
+    "estad": "mse",
+    "modo": "dura",
+    "tau": 1.0,
+    "eta": 0.15,
+    "rho": 0.02,
+    "clip": 10.0,
+    "alpha": 1.0
+   }
+  }
+ ],
+ "ganadora": {
+  "g": 2,
+  "estad": "mse",
+  "modo": "dura",
+  "tau": 1.0,
+  "eta": 0.05,
+  "rho": 0.02,
+  "clip": 3.0,
+  "alpha": 0.3
+ },
+ "hipotesis_rank": 16
+}
