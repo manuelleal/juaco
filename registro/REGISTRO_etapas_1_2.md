@@ -4198,3 +4198,16 @@ apagado 20/20 × 2, generalización de valor igual a v13 en las dos (0.80), rete
 completo 8/8 (101–120); y a dosis 10, tres series más de recuperación (0.14×). Vocabulario: *la sorpresa del mundo puesta en la
 boca, a dosis 5, hace probar cuando el mundo cambia y por eso se recupera cuatro veces antes, sin cobrar retención ni
 generalización*. Falta sólo lo administrativo (gemelo, congelación) y la decisión del director.
+
+
+### Composición hija dispersa + puerta por código, réplica del examen compuesto en 121–140 (enmienda 1; 18 sep 04:03): **8/8 (E2 20/20) → los dos órganos NO interfieren: la composición entra a la propuesta como opción conjunta**
+
+`bateria_v14c.py 20 --desde 121 --log` (las dos perillas ON), misma letra; datos `examen_v14c_20260918_035946` (47bb21f5e8e3c06c),
+3.2 min. E1–E2L **20/20 × 6** (E2 `come B Q4 ≥ 50` 20/20; en 101–120 había sido 19/20 → 39/40 en dos series, exactamente el
+patrón de PATC solo), celdas ≤ 45, 3' 0/20, 3'' 20/20, 4a–4d OK, identidad 5 OK. Con esto la composición tiene: examen 8/8 en
+121–140 (7/8 en 101–120 por la semilla conocida), generalización **G1 1.000 / G2 0.94** (mejor que cualquiera solo), capacidad
+`N*` **51** (v13 35), composición temporal lift **0.237** con **53 celdas** (v13 0.137 / 90; hija sola 0.251 / 48: la puerta resta
+0.014 de ventaja conductual, registrado tal cual, no alcanza el 0.25 preregistrado). **Propuesta conjunta: v14 = v13 + hija
+dispersa + puerta por evidencia del código** (copia `organismo/organismo_v14_candidato_conjunto.py` = `organismo_v14c_on.py` en la
+rama `v14-candidato`). La sorpresa del mundo en la boca (dosis 5) sigue como candidato aparte: su composición con los otros dos
+no se ha medido (paquete en preparación). La decisión es del director.

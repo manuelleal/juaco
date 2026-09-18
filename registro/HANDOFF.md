@@ -611,7 +611,8 @@ serie 81–100 de C-P1 con baterías para dE-TEST (pasan) y latencia (dE arranca
 (41–60 + baterías + réplica del examen 121–140): tercer candidato; (4) HECHO 02:45 — examen v3'' de v13E: fuera a la dosis 10;
 (5) HECHO 03:32 — dosis de la sorpresa en la boca: k = 5 candidata (k = 3 no); (6) HECHO 03:55 — composición de los candidatos: por la letra no se
 proponen juntos (examen 7/8 por una semilla en E2; generalización 1.000/0.94 y capacidad 51 pasan; composición 0.237 < 0.25),
-réplica del examen compuesto en 121–140 EN CURSO; (7) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
+réplica del examen compuesto en 121–140 → 8/8 (04:03): **propuesta conjunta v14 = v13 + hija dispersa + puerta por código**;
+(7) composición de los tres (con la sorpresa en la boca a dosis 5) en preparación; (8) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
 creador C); N2 sólo con significado por predicción (C-P2, sin instrumento en el mundo social); horizonte 2 del mapa
 (sin potencia, 6/20). Un `Pool` a la vez; nada entra a v14 sin examen v3' + baterías + réplica.
 

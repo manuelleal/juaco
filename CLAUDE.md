@@ -165,7 +165,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     CANDIDATO a v14 a dosis 5 (`organismo_v14_candidato_sorpresa.py` en la rama); **réplica 141–160: 0.248× (20/20), retención
     20/20 × 6, G1 0.80** → dos series a dosis 5; k = 3 no (G2 0.842, examen 7/8).** · **Composición hija dispersa + puerta por código (03:55): examen 7/8 (E2 19/20 en
     101–120, la fragilidad de PATC solo), generalización 1.000 / 0.94, capacidad 51, composición 3T-k 0.237 (hija sola 0.251)
-    → por la letra no se proponen juntos; réplica del examen compuesto en 121–140 (enmienda 1) decide.** Auditoría del día 7 integrada
+    → réplica del examen compuesto en 121–140: **8/8 → PROPUESTA CONJUNTA v14 = v13 + hija dispersa + puerta por código**
+    (`organismo_v14_candidato_conjunto.py` en la rama `v14-candidato`; C3 0.237 registrado tal cual). La sorpresa en la boca
+    (dosis 5, dos series) va aparte hasta medir la composición de los tres.** Auditoría del día 7 integrada
     (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).
 - **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
   automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
