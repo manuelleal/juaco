@@ -1,0 +1,43 @@
+[17:22:12 +    0.0s] HUMO del disenador del bloque 4, UN proceso, sin Pool (regla 3, <= 6 corridas).
+[17:22:12 +    0.0s] PREREGISTRO_bloque4_canal.md + PROTOCOLO_canal_20260918.md (sala 3).
+[17:22:12 +    0.0s] Semillas 1-2: NINGUNA de las 541-580 del bloque queda expuesta.
+[17:22:12 +    0.0s]     sha preregistro                2c77b9fd6d45aadc
+[17:22:12 +    0.0s]     sha script                     0d93c286630d29db
+[17:22:12 +    0.0s]     sha constructor                542fb7dd917d56cc
+[17:22:12 +    0.0s]     sha instrumento                ff9946ee2ffe27e6
+[17:22:12 +    0.0s]     sha arnes                      77d1ae0a64e5eef6
+[17:22:12 +    0.0s]     sha origen_b3                  62a1e53b452b078e
+[17:22:12 +    0.0s]     sha runner_bloque3             8ad387790f145bab
+[17:22:12 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[17:22:12 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[17:22:12 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[17:22:13 +    0.0s]     origenes verificados -> OK
+[17:22:13 +    0.0s] 1/4 IDENTIDAD (subconjunto; el arnes completo, 92/92, va en identidad_familias_b4.py).
+[17:22:16 +    3.3s]     (a) canal=None == organismo_familias_b3 (mundo=AB)           2/2
+[17:22:21 +    8.9s]     (g) canal=None == organismo_familias_b3 (el mundo del bloque 4) 2/2
+[17:22:25 +   12.3s]     (n) canal=None + mundo=AB == organismo_v14 (TRONCO)          2/2
+[17:22:28 +   15.7s]     (o) relevo ON + mundo=AB == organismo_v15f_on                2/2
+[17:22:34 +   21.8s]     (r) canal='emite' == canal=None (el emisor SOLO MIRA)        2/2
+[17:22:34 +   21.9s]     (w) exc_fija no toca el rng del mundo (n_exc=0)              2/2
+[17:22:35 +   22.8s]     (K) CANAL- != CORTADO- (DEBE diferir)                        0/2   difieren ['sin mensaje (-)']
+[17:22:35 +   22.8s]   IDENTIDAD 12/14
+[17:22:35 +   22.8s] 2/4 DIAGNOSTICO ESTRUCTURAL (antes de simular): alias exacto por par y por semilla, U3.
+[17:22:35 +   22.8s]     semilla 1: alias_pares 0.00605  alias_semilla 1  U3 0.2919
+[17:22:35 +   22.8s]     semilla 2: alias_pares 0.04234  alias_semilla 1  U3 0.3621
+[17:22:35 +   22.8s] 3/4 EMISORES: 2 corridas de 100000 pasos (de cada una salen los DOS mensajes).
+[17:22:43 +   30.5s]     E s1 (pos)   7.7s  mensaje ('T0v2', -3.0, 't=10260', 'tras 1 exposiciones')
+[17:22:43 +   30.5s]     E s1 (neg)   7.7s  mensaje ('T1v2', 1.0, 't=10264', 'tras 3 exposiciones')
+[17:22:51 +   38.4s]     E s2 (pos)   7.9s  mensaje ('T0v2', -3.0, 't=10029', 'tras 1 exposiciones')
+[17:22:51 +   38.4s]     E s2 (neg)   7.9s  mensaje None
+[17:22:51 +   38.4s] 4/4 HUMO: 2 brazos x 2 semillas = 4 corridas de 100000 pasos.
+[17:22:59 +   46.3s]     CANAL-    s1   7.9s  entrega t=66866  T1v2 es comida  evX 0.0 (okX 1.0, via lenta)  evU 0.2857 okU 0.7143  comH 1.0  esp 0.2857  ret2/3 0.0/0.0  mord_ref 8  muertes 19
+[17:22:59 +   46.3s]               MECANISMO ganadora [2, 4] -> [1, 2] (variable False->False)  casilla 0  comparten 16/32  lag 0 pasos / 0 mordidas  prefijo 9c394fd0695ae005
+[17:22:59 +   46.3s]     CANAL-    s2  SIN MENSAJE en esa direccion: excluida (P-I2)
+[17:23:09 +   56.6s]     CORTADO-  s1  10.3s  entrega t=66866  T1v2 es comida  evX 1.0 (okX 0.0, via lenta)  evU 0.2857 okU 0.7143  comH 0.0  esp -0.7143  ret2/3 1.0/1.0  mord_ref 1  muertes 19
+[17:23:09 +   56.6s]               MECANISMO ganadora [2, 4] -> [2, 4] (variable False->False)  casilla 0  comparten 16/32  lag 0 pasos / 0 mordidas  prefijo 9c394fd0695ae005
+[17:23:09 +   56.6s]     CORTADO-  s2  SIN MENSAJE en esa direccion: excluida (P-I2)
+[17:23:09 +   56.6s]   GEMELO (P-I3) semilla 1, CANAL-/CORTADO-: ['9c394fd0695ae005', '9c394fd0695ae005'] -> IDENTICOS
+[17:23:09 +   56.6s]   CRUCE cod0 contra escala_codigo (bloque 0): *** DIFIERE en [(1, 'T0'), (1, 'T0v0'), (1, 'T0v1'), (1, 'T0v2'), (1, 'T1')]
+[17:23:09 +   56.6s] ESTIMACION del bloque: 300 corridas de 100000 pasos, ~8.4 s/corrida en serie -> ~3.0 min de pared con Pool(14).
+[17:23:09 +   56.6s] HUMO: numeros observados, sin ajustar nada. n<=2 y semillas vistas: NO son evidencia.
+[17:23:09 +   56.6s] datos -> familias_b4_humo_20260918_172212.json  sha256_16 = cef0b32ed72d5d88
