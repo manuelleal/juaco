@@ -36,6 +36,10 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
 11. **Toda enmienda que cambie un umbral o la forma de un criterio lleva ERR numerado al escribirla** (auditoría de la
    madrugada del 18: ERR-26 y ERR-27 se numeraron a posteriori), aunque se escriba antes de la serie nueva y aunque
    resulte inerte. "Candidato a órgano" sólo con retención y generalización medidas en el mismo brazo.
+12. **Semillas (18 sep, con el director):** un veredicto que dependa de UNA semilla en el umbral (k/20 a ±1 del criterio) dispara
+   réplica automática en un rango de semillas nuevo, con la misma letra; una semilla que falle el mismo subcriterio en dos
+   organismos distintos se documenta como caso conocido (p. ej. la 117 de 101–120 con la puerta por código), no como ruido;
+   con gemelo compilado, los efectos medidos menores de 0.05 se declaran sólo con series de 40 semillas; con 20 sólo los grandes.
 
 ## Roles
 | rol | modelo | qué hace | entrega |

@@ -4222,3 +4222,17 @@ no se ha medido (paquete en preparación). La decisión es del director.
 (141–160)**; generalización 1.000 / 0.94 (101–120) y 1.000 / 0.95 (121–140); capacidad `N*` 51 (41–60); composición 3T-k 0.237 con 53
 celdas (61–80); identidad 30/30. Cumple la regla de tronco (examen + baterías + réplica). Falta: gemelo compilado (en construcción),
 congelación (manifiesto, tag), regresión de la regla 1. **La decisión de congelar sigue siendo del director.**
+
+
+### Caso conocido — semilla 117 del rango 101–120 (18 sep 04:45; a petición del director: "¿cómo ves las semillas?")
+
+En los exámenes de 101–120 el único subcriterio que cae con la puerta por código es E2 `come B Q4 ≥ 50`, y cae **en la misma
+semilla y con el mismo valor** en dos organismos distintos: PATC solo (`examen_v13Bc_20260918_022843`: semilla **117**, 42 bocados de
+B en el último cuarto) y la composición hija + puerta (`examen_v14c_20260918_033226`: semilla **117**, 42). En 121–140 y 141–160
+(`examen_v14c_..._035946`, `_041824`) ninguna semilla baja de 50. No es azar: es un mundo concreto donde reabrir la vía rápida a
+un patrón ya visto (lo que la puerta por código hace por diseño) cuesta comida en el cuarto final. Queda como **caso conocido**
+del candidato v14, no como ruido; los pesos (`W_A → −3`, `W_B → +1`) están bien en esa semilla. **Lección de semillas (lo
+honesto):** 20 semillas es una resolución de un 5 % por semilla; cuatro veredictos de la noche se decidieron por una semilla en
+el umbral (ahorro 16/20 vs 18, E2 19/20 ×2, apagado 15/20 vs 16). El método los salvó con réplicas en rangos nuevos; la regla
+12 de EQUIPO.md lo hace automático. Los efectos pequeños (composición 0.237 vs 0.251; G1 0.75 vs 0.80) están en el límite de lo
+que 20 semillas distinguen: con el gemelo compilado, las series de efectos < 0.05 pasan a 40 semillas.
