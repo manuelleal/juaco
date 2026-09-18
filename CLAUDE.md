@@ -131,8 +131,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     celdas y una décima de las divisiones; gana a la máscara al azar 16/20 ×2; inerte a k = 1 (20/20 ×2). Serie 61–80
     cayó por la letra en el ahorro (16/20); enmienda 1 y serie 81–100 pasan incluso la letra original (19/20).
     Vocabulario: *"la hija que nace ciega a lo irrelevante compone historias más profundas con menos celdas"*.
-    **Candidata a órgano**: falta `organismo_v13D` (copia del tronco con la perilla) + baterías; **v14 lo decide el
-    director**. Hallazgo previo del creador B: el techo de la composición NO es el pool (duplicarlo a 180 no devuelve nada;
+    **v13D (copia del tronco con la perilla) NO REGRESIONA: examen v3' 8/8 en 101–120, G1 0.80 / G2 0.83, inerte en la
+    retina de 6 px → CANDIDATA A v14** (`registro/PROPUESTA_v14.md`, rama `v14-candidato`); **v14 lo decide el director**. Hallazgo previo del creador B: el techo de la composición NO es el pool (duplicarlo a 180 no devuelve nada;
     46–55 de 90 celdas sin valor legible): es la evidencia por código. (`hija_dispersa_s61-80_20260918_000202`,
     `hija_dispersa_s81-100_20260918_000954`)
   · **A-2 metaplasticidad por masa de conflicto (nivel 8) REFUTADA** en 41–60: retención de lo ausente 0.667 = base

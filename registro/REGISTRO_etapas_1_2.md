@@ -3984,3 +3984,25 @@ corrida histórica que congeló v13, cuyo runner pasa `eta_s`/`puerta` explícit
 archivos.** Al creador B le costó un humo (identidad 3/6) hasta poner `organismo/` primero. **Regla derivada:** todo runner
 pone `organismo/` primero en `sys.path`; nunca se importa `organismo_v13` a secas con `experimentos/v13_dos_vias` delante;
 la copia histórica no se edita (documenta la congelación) pero queda señalada aquí.
+
+
+### v13D — la hija dispersa en la copia del tronco: **NO REGRESIONA** (examen v3' 8/8 en 101–120, generalización G1 0.80 / G2 0.83, inercia total en la retina de 6 px) → **candidata a v14; la decisión es del director**
+
+Preregistro `experimentos/nivel7_hija_dispersa/PREREGISTRO_v13D.md` (b476d4ce8dbe8a04; prueba de NO regresión: en una retina de
+6 px con un solo objeto no hay nada irrelevante que ignorar, se predijo máscara inerte); instrumentos por anclas desde el
+tronco congelado: `organismo_v13D.py` (dd380dada0b72bac; perilla apagada ≡ v13, **identidad 16/16** en la copia principal),
+`organismo_v13Don.py` (1dd131dc0298307d, perilla fija ON), `organismo_v13gD.py`, `bateria_v13D.py` y `bateria_generaliza_D.py`
+(seis etapas, CRIT, G1/G2/K intactos); datos `baterias_v13D_20260918_012145` (cd35bca589962fcb), 5.2 min.
+
+| prueba (perilla ENCENDIDA) | resultado |
+|---|---|
+| D3 inercia (3 escenarios × 20 semillas) | divisiones 0 → 0, celdas 30 → 30, `W` idéntico 20/20 |
+| D1 retención, examen v3' completo (101–120) | E1, E2, E2I, E2J, E2K, E2L **20/20**; celdas ≤ 45; 3' 0/20 (≤ 1); 3'' **20/20**; 4a–4d OK → **8/8** |
+| D2 generalización | K 20/20; G1 px0 **0.800** (azar 0.500; 19/20); G2 px0 **0.834** (azar 0.427; 19/20) — con la perilla apagada 0.800 / 0.892 |
+
+**Lectura:** la hija dispersa no daña nada del tronco donde no hay nada que ignorar (inerte por construcción, D3) y compone
+historias más profundas con la mitad de celdas donde sí lo hay (B-1, dos series). Cumple lo que el método exige para un
+órgano: mecanismo de una línea con memoria declarada (dos vectores `NIN` y dos escalares por celda), preregistrado,
+replicado, controles de cantidad/forma (máscara al azar, slot equivocado), inercia, examen v3' y batería de
+generalización intactos. **Propuesta de v14 en `registro/PROPUESTA_v14.md` y rama `v14-candidato`** (copia, no toca `main`
+ni el tronco congelado). Faltan, si el director la acepta: gemelo compilado con arnés, congelación (manifiesto), tag.
