@@ -106,3 +106,7 @@ v14.2 (sin cambiar ningún número del tronco) o como parte de v15. Detalle: `RE
 
 ## Candidato v15e (18 sep 09:37): NO entra — se desdice (E2 20/20) y consolida (E1 W_B 20/20) y generaliza (G1 1.000), pero pierde XOR (0.500): la tabla que guarda el residuo hereda el fracaso de la lineal
 Siguiente: v15f (R crudo + sobrescritura + relevo a la lineal por abstención; cada vía con su error), preregistro nuevo del creador A. ERR-43: el runner leyó mal `azar` en V2a (la batería dice PASA).
+
+
+## Candidato v15f (18 sep 10:00): NO entra por el criterio v1 (E1 "veneno Q4 < Q1" 17/20, E2I W_C 17/20, splits +16 %), pero generaliza (G1 1.000), se desdice (E2 20/20), consolida (E1 W_B 20/20) y cruza XOR con 8 ejemplos en la configuración del tronco (1.000 contra 0.500) → PRIMER CANDIDATO PARA EL CRITERIO v2
+Se juzga con `registro/CRITERIO_TRONCO_v2.md` (una vez completado con la sala 2), preregistro nuevo, semillas nuevas, réplica. ERR-44: el subcriterio "veneno Q4 < Q1" no distingue aprender de un golpe de no aprender.

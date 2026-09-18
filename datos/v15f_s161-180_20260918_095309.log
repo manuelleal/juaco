@@ -1,0 +1,82 @@
+[09:53:09 +    0.0s] ARRANQUE v15f (semillas V2b 161-180; V1/V2a 101-120).
+[09:53:09 +    0.0s] sha preregistro df7348599aa68333  script 8eae63dc22913e2b  construye_v15f fbc886b7f9d36b08  organismo_v15f 96fc5c5262107850  organismo_v15f_on 54d6efe0b564113c  organismo_v15gf e4c4e0b00b1c20e3  organismo_v15gf_on 039eee1bba9ebdf0  bateria_v15f d63f5aee558eb6da  bateria_generaliza_v15f 0cd87d2632e0c66a  identidad_v15f 84431917ab1043b7  ORIGEN organismo_v14 feefc88b1fd8d434  organismo_v14g 1f1318480cd34cde  bateria_v14 72216f5415de0c86  bateria_generaliza 9cf72581ebae7dea  (comparador) organismo_v15e 5930c5ed2df1be1d organismo_v15ge e902fb3503655a47
+[09:53:09 +    0.0s] kwargs del mundo de regla (regla 14, = entrada 'organismo_v14' de bateria_generaliza): {'eta_s': 0.15, 'clip_s': 10.0, 'puerta': 3, 'mask_rel': 2, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'puerta_pat': 5, 'pat_shuf': 0, 'pat_min': 1}
+[09:53:09 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 5924
+[09:53:09 +    0.4s] ETAPA 1/5 — identidad interna (subproceso, un proceso).
+[09:53:09 +    0.4s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_v15f.py 30000
+[09:54:43 +   94.4s]       |   T=120000 s2: IDENTICO
+[09:54:43 +   94.4s]       | 
+[09:54:43 +   94.4s]       | --- I3: organismo_v15gf(memoria_pares=None) == organismo_v14g (kwargs exactos del tronco), T=30000 ---
+[09:54:43 +   94.4s]       |               regla/px0, kwargs del tronco s1: IDENTICO
+[09:54:43 +   94.4s]       |               regla/px0, kwargs del tronco s2: IDENTICO
+[09:54:43 +   94.4s]       |             regla/xor01, kwargs del tronco s1: IDENTICO
+[09:54:43 +   94.4s]       |             regla/xor01, kwargs del tronco s2: IDENTICO
+[09:54:43 +   94.4s]       |              regla/azar, kwargs del tronco s1: IDENTICO
+[09:54:43 +   94.4s]       |              regla/azar, kwargs del tronco s2: IDENTICO
+[09:54:43 +   94.4s]       | 
+[09:54:43 +   94.4s]       | IDENTIDAD (I1+I2+I3): 32/32
+[09:54:43 +   94.4s]       | 
+[09:54:43 +   94.4s]       | --- I4 (NO es identidad): la perilla ENCENDIDA corre con puerta_pat=5 y la via lenta lee R CRUDO exacto ---
+[09:54:43 +   94.4s]       |   s1 T=20000: W {'A': 1.0, 'B': -2.45, 'C': -0.5, 'D': -3.0}  W_lenta(lineal) {'A': 1.0, 'B': -2.999, 'C': -0.5, 'D': -2.499}  W_tabla(R crudo, None=no vista) {'A': 1.0, 'B': -3.0, 'C': None, 'D': -3.0}  ganadora [1, 2]  familiar {'A': True, 'B': True, 'C': False, 'D': False}  mordidas B [1, 0, 10, 7]  splits 0
+[09:54:43 +   94.4s]       |   s2 T=20000: W {'A': 1.0, 'B': -2.55, 'C': -0.5, 'D': -2.5}  W_lenta(lineal) {'A': 0.999, 'B': -2.998, 'C': -0.5, 'D': -2.499}  W_tabla(R crudo, None=no vista) {'A': 1.0, 'B': -3.0, 'C': None, 'D': None}  ganadora [2, 5]  familiar {'A': True, 'B': True, 'C': False, 'D': False}  mordidas B [2, 2, 9, 7]  splits 0
+[09:54:43 +   94.4s]       |   Lo que se busca: sin excepcion; W_tabla = +1.0 en A y -3.0 en B (R crudo); la lineal sigue aprendiendo aparte.
+[09:54:43 +   94.4s]       (94s)
+[09:54:43 +   94.4s] ETAPA 2/5 — V1: examen del criterio v3' con la perilla ENCENDIDA (subproceso, trae su Pool).
+[09:54:43 +   94.4s]    -> SUBPROCESO (V1 examen): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_v15f.py 20 --desde 101 --log
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]         splits=[3, 1, 2, 1, 3, 1, 2, 1, 1, 2, 1, 1, 3, 1, 3, 1, 3, 2, 2, 2]  celdas_max=33  techo=0/20
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  1 E2K       20/20  [W_D≥0.8:20/20 W_B≤-2.4:20/20]
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]         splits=[4, 3, 3, 3, 3, 4, 3, 3, 3, 2, 2, 3, 3, 3, 4, 4, 3, 3, 3, 3]  celdas_max=34  techo=0/20
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  1 E2L       20/20  [W_A≈+1:20/20 W_B≈-3:20/20 solap→0:20/20]
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]         splits=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  celdas_max=33  techo=0/20
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/20 lo pasan (<=1)  W_A=[-2.07, -1.7, -1.52, -1.44]
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 20/20 lo pasan (>=19)
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  4c C∩B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.98, mordidas de C Q3+Q4 mediana 11)
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s] 
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[09:57:44 +  275.0s]       | [09:57:43 + 180.3s] *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[09:57:44 +  275.0s]       | [09:57:44 + 180.4s] datos -> examen_v15f_20260918_095443.json  sha256_16 = c72c6ab10186fc7e
+[09:57:44 +  275.0s]       (181s)
+[09:57:44 +  275.0s]    V1 leido de examen_v15f_20260918_095443.json: congelar=False  {'5_identidad': True, '1_cientificos': False, '2_celdas': True, '3_control': True, '4a_identidad': True, '4b_sin_conflicto_no_divide': True, '4c_misma_valencia': True, '4d_causa': True}  detalle {'E1': {'venenoQ4<Q1': '17/20', 'W_A≈+1': '20/20', 'W_B≈-3': '20/20'}, 'E2': {'W_A→-3': '20/20', 'W_B→+1': '20/20', 'come B Q4≥50': '20/20'}, 'E2I': {'W_C≤-2.5': '17/20'}}
+[09:57:44 +  275.0s] ETAPA 3/5 — V2a: generalizacion con la memoria ENCENDIDA (subproceso, trae su Pool).
+[09:57:44 +  275.0s]    -> SUBPROCESO (V2a generalizacion): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_generaliza_v15f.py organismo_v15f_on 20 --desde 101 --log
+[09:58:29 +  320.7s]       | [09:57:44 +   0.0s] === REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — organismo_v15f_on, 20 semillas (101..120), Pool(14) ===
+[09:58:29 +  320.7s]       | [09:57:44 +   0.0s] instrumento organismo_v15gf_on 039eee1bba9ebdf0  organismo 54d6efe0b564113c  esta bateria 0cd87d2632e0c66a
+[09:58:29 +  320.7s]       | [09:57:59 +  15.2s]           10/40
+[09:58:29 +  320.7s]       | [09:58:14 +  29.9s]           20/40
+[09:58:29 +  320.7s]       | [09:58:29 +  44.9s]           30/40
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s]           40/40
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s] 
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s]   OK    K  cobertura del primer encuentro: 20/20
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s]   PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 20/20
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s]   PASA  G2 conducta al primer encuentro: px0 0.998 (>=0.55), azar 0.549, px0>azar 20/20
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s]         divisiones 18  celdas 48  muertes 268
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s] 
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s] VEREDICTO bateria_generaliza (organismo_v15f_on): K_cobertura=True G1_valor=True G2_conducta=True
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s] *** organismo_v15f_on CONSERVA la generalización de la Etapa 3
+[09:58:29 +  320.7s]       | [09:58:29 +  45.5s] datos -> regresion_generaliza_v15f_organismo_v15f_on_20260918_095744.json  sha256_16 = df042c2c27ce374f
+[09:58:29 +  320.7s]       (46s)
+[09:58:29 +  320.7s]    V2a leido de regresion_generaliza_v15f_organismo_v15f_on_20260918_095744.json: bateria {'K_cobertura': True, 'G1_valor': True, 'G2_conducta': True}  G1 1.000 (azar 0.500, px0>azar 20/20)  G2 0.998 (azar 0.549)  K 20/20
+[09:58:29 +  320.7s] ETAPA 4/5 — V2b: mundo de regla 161-180, memoria ON y OFF pareadas, 3 reglas, kwargs del tronco.
+[09:59:00 +  351.5s]           20/120
+[09:59:15 +  366.8s]           40/120
+[09:59:44 +  395.9s]           60/120
+[10:00:00 +  411.0s]           80/120
+[10:00:28 +  439.4s]           100/120
+[10:00:43 +  453.9s]           120/120
+[10:00:43 +  454.0s]    xor01  memoria=relevo  registro 1.000 [0.25,1.00]  ESTRICTA 1.000  ba 0.998  gana(0,1) 20/20  cobertura 4.0/4  celdas 62  splits 32  muertes 246
+[10:00:43 +  454.0s]    xor01  memoria=None    registro 0.500 [0.12,0.69]  ESTRICTA 0.500  ba 0.413  gana(0,1) 0/20  cobertura   n/a/4  celdas 58  splits 28  muertes 366
+[10:00:43 +  454.0s]    px0    memoria=relevo  registro 1.000 [0.70,1.00]  ESTRICTA 1.000  ba 0.998  gana(0,1) 2/20  cobertura 4.0/4  celdas 50  splits 20  muertes 278
+[10:00:43 +  454.0s]    px0    memoria=None    registro 1.000 [0.80,1.00]  ESTRICTA 1.000  ba 0.997  gana(0,1) 0/20  cobertura   n/a/4  celdas 54  splits 24  muertes 275
+[10:00:43 +  454.0s]    azar   memoria=relevo  registro 0.500 [0.20,0.70]  ESTRICTA 0.500  ba 0.500  gana(0,1) 1/20  cobertura 4.0/4  celdas 62  splits 32  muertes 328
+[10:00:43 +  454.0s]    azar   memoria=None    registro 0.450 [0.20,0.70]  ESTRICTA 0.450  ba 0.429  gana(0,1) 0/20  cobertura   n/a/4  celdas 60  splits 30  muertes 313
+[10:00:43 +  454.0s] ETAPA 5/5 — umbrales del preregistro (§5).
+[10:00:43 +  454.0s]    V1  examen v3' 8/8 ON (lo que mata: E1 W_B≈-3 y E2 reversion) — leido del JSON      NO
+[10:00:43 +  454.0s]    V2a G1 1.000 >= .80 (azar 0.500) · G2 0.998 >= .85 (azar 0.549) · K 20/20 — leido del JSON   OK
+[10:00:43 +  454.0s]    V2b xor01 ESTRICTA 1.000 >= .75 · px0 ON 1.000 >= OFF 1.000 (pareado ON>=OFF 18/20) · azar 0.500 en [.35,.65]   OK
+[10:00:43 +  454.0s]    V4  ±10 %: {'xor01_celdas': {'on': 62.5, 'off': 58.0, 'delta': 0.078}, 'xor01_splits': {'on': 32.5, 'off': 28.0, 'delta': 0.161}, 'px0_celdas': {'on': 50.5, 'off': 53.5, 'delta': -0.056}, 'px0_splits': {'on': 20.5, 'off': 23.5, 'delta': -0.128}}  dentro NO; por ARRIBA (+10 %, cuenta como coste) si
+[10:00:43 +  454.0s] VEREDICTO por la clausula §7: v15f NO ENTRA al tronco (cae V1, V2a o V2b). Sin modos intermedios.
+[10:00:43 +  454.0s] datos -> v15f_s161-180_20260918_095309.json  sha256_16 = b0c5e28e04c6f3e5

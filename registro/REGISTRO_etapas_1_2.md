@@ -5116,3 +5116,36 @@ sé qué estamos planteando mal, no sé qué debemos cambiar"*; el coordinador r
 capacidades diseñadas a mano; el examen selecciona "no cambies nada"; medimos una tarea, no una vida) y una recomendación
 (conservar el método, cambiar el mundo, dejar crecer la estructura, juzgar por sobrevivir y generalizar); el director: *"Perfecto,
 hagamos esa modificación y registra todo"*. Nada de lo medido hasta aquí cambia de veredicto.
+
+
+### Candidato v15f — tabla de pares con R CRUDO, sobrescritura y RELEVO a la lineal, cada vía con su error (creador A; 18 sep 10:00; V1/V2a 101–120, V2b 161–180 con los kwargs del tronco): **NO ENTRA por la letra del criterio v1 (cláusula §7) — pero es el primer organismo de la línea que GENERALIZA (G1 1.000 / G2 0.998), SE DESDICE (E2 reversión 20/20), CONSOLIDA (E1 W_B ≈ −3 20/20) y CRUZA XOR CON 8 EJEMPLOS EN LA CONFIGURACIÓN DEL TRONCO (xor01 estricta 1.000 contra 0.500 apagado, gana (0,1) 20/20, azar 0.500 en banda). Cae en dos subletras internas del examen (E1 "veneno Q4 < Q1" 17/20; E2I `W_C ≤ −2.5` 17/20) y en el coste de divisiones (+16 %). ERR-44 abajo. Candidato para el CRITERIO DE TRONCO v2 con preregistro nuevo y semillas nuevas**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_v15f.md` (df7348599aa68333; §1–§7 antes de medir); instrumentos por anclas `organismo_v15f`
+(96fc5c5262107850; perilla `memoria_pares = None | 'relevo'`, `mem_alfa = 1.0`; apagada ≡ v14.1 bit a bit) / `_on` (54d6efe0b564113c),
+`organismo_v15gf` / `_on`, `bateria_v15f` (d63f5aee558eb6da; sha desde `organismo/`: JSON siempre escrito), `bateria_generaliza_v15f`
+(0cd87d2632e0c66a; entrada campo a campo = tronco), runner `corre_v15f.py` (8eae63dc22913e2b; lee `meta.veredictos` de los JSON: ERR-43
+cerrado; kwargs del tronco en V2b: ERR-41 cerrado); identidad **32/32**; datos `v15f_s161-180_20260918_095309` (b0c5e28e04c6f3e5), examen
+`examen_v15f_20260918_095443` (c72c6ab10186fc7e), V2a `regresion_generaliza_v15f_organismo_v15f_on_20260918_095744` (df042c2c27ce374f).
+Mecanismo: tabla 15 pares × 4 casillas con R crudo, sobrescritura en cada mordida; la lenta lee la casilla de la celda ganadora si conoce
+la combinación y si no la lineal (relevo); rápida y lineal con su propio error; ganadora por menor error propio; desempate con el rng.
+
+| criterio (v1, escrito antes) | resultado | veredicto |
+|---|---|---|
+| V1 examen v3′ 8/8 ON | **E1 17/20** (W_A ≈ +1 20/20, **W_B ≈ −3 20/20**; "veneno Q4 < Q1" 17/20) · **E2 20/20** (reversión: W_A → −3, W_B → +1, come B Q4 ≥ 50) · **E2I 17/20** (`W_C ≤ −2.5` 17/20; conducta "tasa A Q4 ≥ 80 % Q2" 20/20) · E2J/E2K/E2L 20/20 · 2, 3′, 3″, 4a–4d pasan | 6/8: **NO** |
+| V2a G1 ≥ 0.80, G2 ≥ 0.85, K | G1 1.000 (azar 0.500, 20/20) · G2 0.998 (azar 0.549, 20/20) · K 20/20 | PASA |
+| V2b (kwargs del tronco, 161–180): xor01 estricta ≥ 0.75; px0 ON ≥ OFF; azar en banda | **xor01 1.000 [0.25, 1.00] contra 0.500** (gana (0,1) 20/20, cobertura 4/4) · px0 1.000 / 1.000 · azar 0.500 / 0.450 | **PASA** |
+| V4 ±10 % | xor01 celdas +7.8 %, **splits +16 %**; px0 −5.6 % / −? | NO (declarado por abajo; salió por arriba) |
+
+**Lectura:** la línea v15c → v15d → v15e → v15f cerró en cuatro pasos exactamente lo que cada refutación pedía: sustituir rompía la
+lineal (v15c, mal medido: ERR-38), el error compartido dejaba sin consolidar y sin desdecir (v15d), el residuo perdía la
+identificabilidad (v15e), y el R crudo con relevo lo junta todo: **el organismo que aprende una combinación de un golpe, la corrige de
+un golpe y sigue leyendo la lineal donde la tabla calla**. Lo que lo tumba en v1 son dos letras que no miden conducta: (a) *"veneno
+Q4 < Q1"* presupone aprendizaje gradual — un organismo que aprende el veneno en UNA mordida apenas muerde en Q1 (2 mordidas), la puerta
+se abre en Q2 y la rápida consolida después; el total de mordidas de veneno es MENOR que en v14.1 (41–45 contra 47–51 en el humo) pero la
+letra mide dónde caen; (b) `W_C ≤ −2.5` es un peso interno con la conducta intacta 20/20. Ninguna se recalibra aquí (regla 3): v15f NO
+entra por v1. **ERR-44 (coordinador, 10:05):** el subcriterio E1 "veneno Q4 < Q1" de la batería v3′ no puede distinguir "aprendió en una
+mordida" de "no aprendió": para candidatos que aprenden de un golpe hay que medir el total (o la tasa por trimestre contra el tronco),
+como hará el criterio v2 (T-E: conducta conservada; pesos internos reportados). **Siguiente:** v15f es el primer candidato que se juzga
+con `registro/CRITERIO_TRONCO_v2.md` — completado con la síntesis de la sala 2 — con preregistro nuevo, semillas nuevas y réplica
+(examen y generalización en 121–140, mundo vivo 301–320, mundo de regla 181–200). Vocabulario permitido hoy: *"la memoria de pares con
+R crudo y relevo generaliza, se desdice y cruza XOR con 8 ejemplos en el tronco"*; prohibido: "entra al tronco" (todavía no).
