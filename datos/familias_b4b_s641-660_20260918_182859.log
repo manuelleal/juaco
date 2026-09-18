@@ -1,0 +1,43 @@
+[18:28:59 +    0.0s] ARRANQUE BLOQUE 4b (emisor que SI descubre en la direccion ciega, voraz=1.0): brazos ['CANAL-', 'CORTADO-', 'BAR-H-', 'BAR-T-', 'VALOR-', 'INM-', 'OTRO-', 'PAR-', 'PAR0-'], semillas 641-660, T=100000. Pool(14).
+[18:28:59 +    0.0s] El mundo y el CANAL son los del bloque 4, sin tocar. Lo nuevo: el emisor lleva `voraz` (ERR-51) y el brazo PAR sustituye el TOKEN por una HERMANA en la presentacion del receptor.
+[18:28:59 +    0.0s]     sha preregistro                5d089937b10c7706
+[18:28:59 +    0.0s]     sha script                     c82e89aab26d15d0
+[18:28:59 +    0.0s]     sha constructor                7e63562ac9034e4a
+[18:28:59 +    0.0s]     sha instrumento                b3dd1d7e66a2d147
+[18:28:59 +    0.0s]     sha arnes                      57d0334db104ae9d
+[18:28:59 +    0.0s]     sha origen_b4                  ff9946ee2ffe27e6
+[18:28:59 +    0.0s]     sha runner_bloque4             11eb44afc47679b7
+[18:28:59 +    0.0s]     sha preregistro_bloque4        9e67c09ffb35b67e
+[18:28:59 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[18:28:59 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[18:28:59 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[18:28:59 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 27016
+[18:29:00 +    0.5s] ETAPA 1/4 — IDENTIDAD (9 casos x 3 = 27). (K) DEBE fallar: sin el la etapa pasa por vacuidad.
+[18:29:13 +   13.6s]     (a) b4b apagado == organismo_familias_b3 (mundo=AB)          3/3
+[18:29:13 +   13.6s]     (g) b4b apagado == organismo_familias_b3 (el mundo del bloque 4) 3/3
+[18:29:13 +   13.6s]     (n) b4b apagado + mundo=AB == organismo_v14 (TRONCO)         3/3
+[18:29:13 +   13.6s]     (o) relevo ON + mundo=AB == organismo_v15f_on                3/3
+[18:29:13 +   13.6s]     (r) canal='emite' == canal=None (el emisor SOLO MIRA)        3/3
+[18:29:13 +   13.6s]     (w) exc_fija no toca el rng del mundo (n_exc=0)              3/3
+[18:29:13 +   13.6s]     (v) voraz=0.0 == el defecto (b4 bit a bit por la cadena)     3/3
+[18:29:13 +   13.6s]     (p) par_herm no toca el rng del mundo                        3/3
+[18:29:13 +   13.6s]     (K) CANAL+ != CORTADO+ (DEBE diferir)                        3/3
+[18:29:13 +   13.6s]   IDENTIDAD 27/27
+[18:29:13 +   13.6s] ETAPA 2/4 — DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[18:29:13 +   13.6s]     alias por par mediana 0.0131  semillas con algun par identico 20/20  U3 mediana 0.3295
+[18:29:13 +   13.6s] ETAPA 3/4 — EMISORES (20 corridas de 100000 pasos; de cada una salen los DOS mensajes).
+[18:29:39 +   39.8s]     (pos) emiten 19/20; sin mensaje (excluidas, P-I2): [656]; t_msg mediana 10111.0
+[18:29:39 +   39.8s]     (neg) emiten 18/20; sin mensaje (excluidas, P-I2): [651, 656]; t_msg mediana 13062.5
+[18:29:39 +   39.8s] ETAPA 4/4 — RECEPTORES: 162 corridas de 100000 pasos (9 brazos)...
+[18:30:06 +   66.5s]           20/162
+[18:30:21 +   81.8s]           40/162
+[18:30:44 +  105.4s]           60/162
+[18:30:59 +  119.8s]           80/162
+[18:31:22 +  143.1s]           100/162
+[18:31:40 +  161.1s]           120/162
+[18:31:59 +  180.2s]           140/162
+[18:32:20 +  200.7s]           160/162
+[18:32:20 +  201.4s]           162/162
+[18:32:20 +  201.4s] 
+[18:32:20 +  201.5s] CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): IDENTICO campo a campo
+[18:32:20 +  201.5s] ANALISIS — medianas, cuartiles y los umbrales EXACTOS de la seccion 6 del preregistro.

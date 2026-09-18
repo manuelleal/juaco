@@ -774,8 +774,16 @@ if __name__ == '__main__':
     log(f"CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): "
         f"{'IDENTICO campo a campo' if not mal else '*** DIFIERE en ' + str(mal[:5])}")
     V['cruce_cod0_ok'] = (not mal)
+    # ERR-54: los datos crudos se guardan ANTES del analisis (dos series se perdieron por una excepcion en el analisis con --brazos)
+    dcr = os.path.join(RAIZ, 'datos', f'familias_b4b_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}_crudo.json')
+    with open(dcr, 'w', encoding='utf-8') as f:
+        json.dump(dict(semillas=SEEDS, brazos=BRAZOS_ACTIVOS, mensajes=N(msgs), diagnostico=diags, principal=res), f, ensure_ascii=False, default=str)
+    log(f"datos crudos -> {os.path.basename(dcr)}")
     log("ANALISIS — medianas, cuartiles y los umbrales EXACTOS de la seccion 6 del preregistro.")
-    V.update(veredicto(res, msgs, SEEDS, diags))
+    try:
+        V.update(veredicto(res, msgs, SEEDS, diags))
+    except Exception as e:   # ERR-54: el analisis no puede tumbar el registro de los datos
+        import traceback; log("*** ANALISIS CAYO (ERR-54): " + traceback.format_exc().splitlines()[-1]); V['brazos'] = V.get('brazos', {}); V['analisis_error'] = str(e)
     for b in ORDEN:
         d = V['brazos'].get(b)
         if not d:
