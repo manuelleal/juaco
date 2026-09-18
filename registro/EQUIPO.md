@@ -40,6 +40,10 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
    réplica automática en un rango de semillas nuevo, con la misma letra; una semilla que falle el mismo subcriterio en dos
    organismos distintos se documenta como caso conocido (p. ej. la 117 de 101–120 con la puerta por código), no como ruido;
    con gemelo compilado, los efectos medidos menores de 0.05 se declaran sólo con series de 40 semillas; con 20 sólo los grandes.
+13. **La misión va en cada encargo (director, 18 sep 05:00: "siempre recuérdales llegar a la AGI"):** todo prompt a un agente —
+   creador, implementador, compilador, auditor, cronista, explorador— empieza con la misión del equipo: llegar a la AGI por este
+   camino, con el método mandando sobre el cómo. No es un adorno: es el criterio con el que cada agente decide qué vale la pena
+   construir y qué no.
 
 ## Roles
 | rol | modelo | qué hace | entrega |
