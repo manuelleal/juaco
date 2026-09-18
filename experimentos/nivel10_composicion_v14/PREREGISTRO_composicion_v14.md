@@ -174,3 +174,11 @@ Resultado: C1 7/8 (E2 19/20, `come B Q4 ≥ 50`, la misma fragilidad de PATC sol
 juntos". **Réplica de C1 en semillas nuevas 121–140, misma letra (8/8)**: si pasa, la composición entra a la propuesta como opción
 conjunta con C3 registrado tal cual; si E2 (u otra etapa) vuelve a caer, los candidatos se proponen por separado. C3 no se
 recalibra ni se repite. Nada más cambia.
+
+
+## Enmienda 2 (coordinador, 18 sep 2026, 04:15; escrita ANTES de correr; decisión del director: "prueba los dos")
+
+Protección extra antes de congelar la propuesta conjunta: **segunda serie limpia del examen v3' compuesto en semillas nuevas
+141–160** (`bateria_v14c.py 20 --desde 141 --log`, misma letra, 8/8) **y generalización del compuesto en 121–140**
+(`bateria_generaliza_v14c.py organismo_v14c_on 20 --desde 121 --log`; G1 ≥ 0.80, G2 ≥ 0.85, K 20/20). Si las dos pasan, v14
+conjunto queda con dos series 8/8 propias y dos de generalización; si alguna cae, se registra y no se congela. Nada se recalibra.
