@@ -125,7 +125,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   (`N3dmudo_s61-80_20260917_205345`). Registro al final de `REGISTRO_etapas_1_2.md`.
 - **Bloque 3 REFUTADO como estaba escrito** (`xor_lectura_s1-20_20260917_213124`): la vía lenta cuadrática aprende XOR
   (W del producto P0·P1 = −2.65) pero el acierto en nunca vistos sigue en 0.438; hipótesis 3b: la puerta esconde la vía
-  lenta (familiar por solapamiento ≠ conocer). Regresión px0/azar intacta.
+  lenta (familiar por solapamiento ≠ conocer). Regresión px0/azar intacta. **3b: hipótesis de la puerta REFUTADA**
+  (`xor_3b_s21-40_20260917_213752`): la vía lenta cuadrática sola da 0.50 en XOR; los marginales de P0/P1 se drenan a
+  cero → el límite es la REGLA de la vía lenta (reparte el error por igual entre entradas activas), no la dimensión ni
+  la puerta. 3c (regla delta con signo) lo diseña un trío de agentes con puente (`registro/investigacion/PUENTE_xor.md`).
 - **Bloque 2 REFUTADO:** la curiosidad por progreso de error no devuelve la exploración al mapa (0.700 = mapa = barajada;
   v13 0.900; comida intacta) (`curiosidad_s41-60_20260917_211739`). Siguiente candidato: novedad de sitio.
 - **EQUIPO de agentes (decisión del director, 17-sep 21:45): `registro/EQUIPO.md`** — misión, reglas y roles (coordinador,

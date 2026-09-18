@@ -1,0 +1,20 @@
+[21:37:52 +    0.0s] ARRANQUE bloque 3b (¿la puerta esconde la via lenta?). brazos ['CUAD_P3', 'CUAD_SINP', 'LIN_P3'], reglas ['xor01', 'px0'], semillas 21-40. Pool(14).
+[21:37:52 +    0.0s] sha preregistro 675f703946252e65  script 2fa195f26ff9a19f  organismo_v13q 0b59eb03858df3a8  organismo_v13g 2a80e125f8593bf2
+[21:37:53 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 32316
+[21:37:53 +    0.6s] ETAPA 1/3 — identidad lectura=lineal == organismo_v13g (6)...
+[21:38:00 +    7.5s]   identicos: 6/6
+[21:38:00 +    7.6s] ETAPA 2/3 — 120 corridas...
+[21:38:43 +   51.0s]           30/120
+[21:39:15 +   82.5s]           60/120
+[21:39:47 +  115.2s]           90/120
+[21:40:17 +  144.8s]           120/120
+[21:40:17 +  144.8s] ETAPA 3/3 — analisis (acc = valor total a priori en nunca vistos; acc_lenta = via lenta sola; familiar = fraccion de test que la puerta lee en la rapida).
+[21:40:17 +  144.8s]    CUAD_P3   xor01 acc 0.500  acc_lenta 0.500 [0.31,0.75]  familiar 0.33  celdas 67  W_lenta(P0*P1) -2.68
+[21:40:17 +  144.8s]    CUAD_P3   px0   acc 0.900  acc_lenta 1.000 [0.60,1.00]  familiar 0.30  celdas 52  W_lenta(P0*P1) +0.55
+[21:40:17 +  144.8s]    CUAD_SINP xor01 acc 0.500  acc_lenta 0.438 [0.19,0.62]  familiar 0.00  celdas 62  W_lenta(P0*P1) -0.93
+[21:40:17 +  144.8s]    CUAD_SINP px0   acc 0.700  acc_lenta 0.950 [0.50,1.00]  familiar 0.00  celdas 48  W_lenta(P0*P1) +0.28
+[21:40:17 +  144.8s]    LIN_P3    xor01 acc 0.438  acc_lenta 0.375 [0.12,0.50]  familiar 0.33  celdas 68
+[21:40:17 +  144.8s]    LIN_P3    px0   acc 0.900  acc_lenta 1.000 [0.60,1.00]  familiar 0.35  celdas 55
+[21:40:17 +  144.8s]    Y1 lenta sabe XOR (acc_lenta>=.75, >lineal en 15/20) NO | Y2 la puerta tapa (lenta-acc>=.20 en 0/20, familiar>=.60) NO | Y3 sin puerta se ve (acc>=.65, >con puerta en 3/20, px0 ok) NO
+[21:40:17 +  144.8s] VEREDICTO 3b: NO (alguna de Y1-Y3 cayo: ver cual)
+[21:40:17 +  144.8s] datos -> xor_3b_s21-40_20260917_213752.json  sha256_16 = f2fb5920aba1231b

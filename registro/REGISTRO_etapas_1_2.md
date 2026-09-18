@@ -3291,3 +3291,27 @@ rápida (memoria de casos, engañosa en XOR porque el solapamiento de códigos n
 porque el solapamiento sí correlaciona con la regla. Nota de diseño: `phi` no tiene término constante; los patrones con
 `P0 = P1 = 0` (4 de 20) sólo pueden clasificarse por ruido → techo esperado de la lectura cuadrática ≈ 0.85–0.90.
 Vocabulario: *XOR no se generaliza en v13; la lectura cuadrática lo representa; falta saber si la puerta lo tapa*.
+
+
+### Bloque 3b (día 6): ¿la puerta esconde la vía lenta? — **NO: la vía lenta cuadrática sola tampoco sabe XOR (0.50). El límite es la regla de aprendizaje**
+
+Preregistro `PREREGISTRO_xor_lectura_3b.md`; instrumento `organismo_v13q.py` (`0b59eb03858df3a8`, lecturas puras
+`W_lenta_apriori` y `familiar_apriori`; identidad 6/6); datos `xor_3b_s21-40_20260917_213752` (`f2fb5920aba1231b`).
+
+| brazo | `xor01` acc | `xor01` **acc de la vía lenta sola** | familiar (puerta lee la rápida) | `px0` acc / lenta | `W_lenta(P0·P1)` |
+|---|---|---|---|---|---|
+| cuadrática, puerta 3 | 0.500 | **0.500** [0.31, 0.75] | 0.33 | 0.900 / 1.000 | −2.68 |
+| cuadrática, sin puerta | 0.500 | 0.438 | — | 0.700 / 0.950 | −0.93 |
+| lineal, puerta 3 | 0.438 | 0.375 | 0.33 | 0.900 / 1.000 | — |
+
+Y1 NO, Y2 NO (0/20), Y3 NO. **Mi hipótesis de la puerta queda refutada** (y bien: la puerta sólo lee la rápida en un
+tercio de los nunca vistos). La vía lenta cuadrática **representa** el producto (−2.68) pero **no clasifica** XOR: sus
+**marginales** de `P0` y `P1` quedan en cero. Diagnóstico (escrito después de ver los datos, así que es hipótesis para 3c,
+no resultado): la regla de la vía lenta reparte cada error por igual entre TODAS las entradas activas del patrón (dos
+canales no negativos `Wps/Wns` + drenaje de la parte común); cuando muerde `(1,1)` (veneno) empuja `Wns` en `P0`, `P1`
+y `P0·P1` a la vez, y el drenaje se lleva luego lo que `P0` y `P1` habían ganado como comida en `(1,0)` y `(0,1)`. Una
+regla delta con signo (LMS: un solo vector de pesos, error residual) pondría lo negativo sólo donde distingue, en el
+producto. **XOR es un límite de la REGLA de la vía lenta**, no de la dimensión (random15 = cuadrática = lineal) ni de la
+puerta. Vocabulario: *v13 no generaliza XOR; la lectura cuadrática lo representa pero su regla no lo separa*. Siguiente
+(bloque 3c, lo diseña un trío de agentes con puente, `registro/investigacion/PUENTE_xor.md`): vía lenta con regla delta
+con signo, controles: la misma regla con lectura lineal (debe seguir en ≤ 0.6) y `px0`/`azar` sin caer.
