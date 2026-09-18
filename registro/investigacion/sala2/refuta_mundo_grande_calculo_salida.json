@@ -1,0 +1,325 @@
+{
+ "1_json_entregado": {
+  "inten_1.0": {
+   "tokeniza": [
+    0.667,
+    0.658
+   ],
+   "exacto": [
+    0.125,
+    0.139
+   ],
+   "falsa": [
+    0.125,
+    0.138
+   ],
+   "ninguna": [
+    0.167,
+    0.204
+   ],
+   "alias_tok": 38,
+   "alias_any": 199,
+   "S": 200,
+   "D": 12,
+   "F": 8,
+   "NK": "30 (fijo en el script)"
+  },
+  "inten_0.5": {
+   "tokeniza": [
+    0.917,
+    0.895
+   ],
+   "exacto": [
+    0.375,
+    0.383
+   ],
+   "falsa": [
+    0.042,
+    0.057
+   ],
+   "ninguna": [
+    0.042,
+    0.048
+   ],
+   "alias_tok": 38,
+   "alias_any": 200,
+   "S": 200,
+   "D": 12,
+   "F": 8,
+   "NK": "30 (fijo en el script)"
+  }
+ },
+ "2_reimplementacion": [
+  {
+   "D": 12,
+   "V": 3,
+   "F": 8,
+   "NK": 30,
+   "S": 200,
+   "tokeniza": [
+    0.667,
+    0.658
+   ],
+   "tokeniza_estricto": [
+    0.417,
+    0.404
+   ],
+   "empate": [
+    0.25,
+    0.254
+   ],
+   "falsa": [
+    0.125,
+    0.138
+   ],
+   "ninguna": [
+    0.167,
+    0.204
+   ],
+   "exacto": [
+    0.125,
+    0.139
+   ],
+   "alias_tok": 38,
+   "alias_any": 199
+  },
+  {
+   "D": 12,
+   "V": 3,
+   "F": 8,
+   "NK": 60,
+   "S": 200,
+   "tokeniza": [
+    0.542,
+    0.539
+   ],
+   "tokeniza_estricto": [
+    0.417,
+    0.405
+   ],
+   "empate": [
+    0.125,
+    0.134
+   ],
+   "falsa": [
+    0.083,
+    0.095
+   ],
+   "ninguna": [
+    0.375,
+    0.366
+   ],
+   "exacto": [
+    0.083,
+    0.085
+   ],
+   "alias_tok": 18,
+   "alias_any": 190
+  },
+  {
+   "D": 12,
+   "V": 3,
+   "F": 8,
+   "NK": 90,
+   "S": 200,
+   "tokeniza": [
+    0.5,
+    0.481
+   ],
+   "tokeniza_estricto": [
+    0.375,
+    0.386
+   ],
+   "empate": [
+    0.083,
+    0.095
+   ],
+   "falsa": [
+    0.042,
+    0.074
+   ],
+   "ninguna": [
+    0.458,
+    0.445
+   ],
+   "exacto": [
+    0.042,
+    0.069
+   ],
+   "alias_tok": 12,
+   "alias_any": 179
+  },
+  {
+   "D": 9,
+   "V": 3,
+   "F": 4,
+   "NK": 30,
+   "S": 200,
+   "tokeniza": [
+    0.667,
+    0.669
+   ],
+   "tokeniza_estricto": [
+    0.458,
+    0.449
+   ],
+   "empate": [
+    0.167,
+    0.22
+   ],
+   "falsa": [
+    0.083,
+    0.092
+   ],
+   "ninguna": [
+    0.25,
+    0.24
+   ],
+   "exacto": [
+    0.167,
+    0.147
+   ],
+   "alias_tok": 23,
+   "alias_any": 183
+  }
+ ],
+ "2_nota": "NK=60/90 aqui son celdas UNIFORMES nuevas (rng.uniform), que es lo unico que el script puede hacer; en el tronco las celdas 31-90 nacen por fision: KW[j]=clip(KW[c]*0.95+paso*(P-mu[c]),0,5)*_rel, ciegas fuera de P y correlacionadas con el codigo de la madre. No son la misma poblacion; el 'techo baja al ganar celdas' no esta calculado sobre las celdas que el tronco crea.",
+ "3_P2_OFF_via_lenta": {
+  "token_veneno_excepcion_comida": {
+   "k_tok_entre=0": {
+    "mordidas_hasta_signo": 2,
+    "lectura_antes": -3.0,
+    "lectura_despues": 0.36,
+    "W_token_despues": -0.48
+   },
+   "k_tok_entre=1": {
+    "mordidas_hasta_signo": 9,
+    "lectura_antes": -3.0,
+    "lectura_despues": 0.068,
+    "W_token_despues": -2.361
+   },
+   "k_tok_entre=3": {
+    "mordidas_hasta_signo": 9,
+    "lectura_antes": -3.0,
+    "lectura_despues": 0.043,
+    "W_token_despues": -2.897
+   },
+   "k_tok_entre=10": {
+    "mordidas_hasta_signo": 9,
+    "lectura_antes": -3.0,
+    "lectura_despues": 0.073,
+    "W_token_despues": -2.999
+   }
+  },
+  "token_comida_excepcion_veneno": {
+   "k_tok_entre=0": {
+    "mordidas_hasta_signo": 1,
+    "lectura_antes": 1.0,
+    "lectura_despues": -1.4,
+    "W_token_despues": -0.8
+   },
+   "k_tok_entre=1": {
+    "mordidas_hasta_signo": 1,
+    "lectura_antes": 1.0,
+    "lectura_despues": -0.59,
+    "W_token_despues": 0.01
+   },
+   "k_tok_entre=3": {
+    "mordidas_hasta_signo": 2,
+    "lectura_antes": 1.0,
+    "lectura_despues": -0.347,
+    "W_token_despues": 0.718
+   },
+   "k_tok_entre=10": {
+    "mordidas_hasta_signo": 2,
+    "lectura_antes": 1.0,
+    "lectura_despues": -0.113,
+    "W_token_despues": 0.996
+   }
+  }
+ },
+ "3_nota": "P2 exige OFF mediana >= 4; el diseno deriva ese 4 de la puerta por codigo (5 mordidas), pero OFF lee la LENTA mientras el codigo de la variante no es familiar, y la lenta a eta_s=0.15 mueve 0.15*|R-W| por pixel en UNA mordida (el propio B5 del diseno lo dice). La 'mordida 1' de la tabla es la del descubrimiento; el signo se lee ANTES de la mordida siguiente.",
+ "4_residuo_en_la_puerta": {
+  "token_veneno_R=-3": {
+   "5_mordidas": {
+    "W_tok": -1.128,
+    "residuo_misma_valencia": 1.872,
+    "residuo_excepcion": 2.128
+   },
+   "6_mordidas": {
+    "W_tok": -1.296,
+    "residuo_misma_valencia": 1.704,
+    "residuo_excepcion": 2.296
+   },
+   "8_mordidas": {
+    "W_tok": -1.589,
+    "residuo_misma_valencia": 1.411,
+    "residuo_excepcion": 2.589
+   },
+   "10_mordidas": {
+    "W_tok": -1.832,
+    "residuo_misma_valencia": 1.168,
+    "residuo_excepcion": 2.832
+   },
+   "15_mordidas": {
+    "W_tok": -2.271,
+    "residuo_misma_valencia": 0.729,
+    "residuo_excepcion": 3.271
+   },
+   "20_mordidas": {
+    "W_tok": -2.545,
+    "residuo_misma_valencia": 0.455,
+    "residuo_excepcion": 3.545
+   },
+   "40_mordidas": {
+    "W_tok": -2.931,
+    "residuo_misma_valencia": 0.069,
+    "residuo_excepcion": 3.931
+   }
+  },
+  "token_comida_R=+1": {
+   "5_mordidas": {
+    "W_tok": 0.376,
+    "residuo_misma_valencia": 0.624,
+    "residuo_excepcion": 3.376
+   },
+   "6_mordidas": {
+    "W_tok": 0.432,
+    "residuo_misma_valencia": 0.568,
+    "residuo_excepcion": 3.432
+   },
+   "8_mordidas": {
+    "W_tok": 0.53,
+    "residuo_misma_valencia": 0.47,
+    "residuo_excepcion": 3.53
+   },
+   "10_mordidas": {
+    "W_tok": 0.611,
+    "residuo_misma_valencia": 0.389,
+    "residuo_excepcion": 3.611
+   },
+   "15_mordidas": {
+    "W_tok": 0.757,
+    "residuo_misma_valencia": 0.243,
+    "residuo_excepcion": 3.757
+   },
+   "20_mordidas": {
+    "W_tok": 0.848,
+    "residuo_misma_valencia": 0.152,
+    "residuo_excepcion": 3.848
+   },
+   "40_mordidas": {
+    "W_tok": 0.977,
+    "residuo_misma_valencia": 0.023,
+    "residuo_excepcion": 3.977
+   }
+  }
+ },
+ "4_nota": "umbral_exc=2.0: una variante de la MISMA valencia que su token escribe un nodo de excepcion falso si |R-W_tok|>2. Con puerta_pat=5 el token es 'familiar' (y por tanto 'token' para _tok) desde su 5a mordida; el residuo a esa altura se lee aqui.",
+ "5_barajado": {
+  "tokens_comida": 4,
+  "tokens_veneno": 4,
+  "p_valencia_distinta_si_toma_la_de_OTRO_token_al_azar": 0.571,
+  "nota": "P8 exige n_slots >= 0.8 x #variantes presentes en 'barajado'; un nodo solo se escribe si |R-W_tok|>2, es decir si la valencia difiere: esperado 4/7 = 0.571 < 0.8 salvo que 'otro token' se restrinja a valencia opuesta (no esta escrito)."
+ }
+}

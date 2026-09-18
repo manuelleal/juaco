@@ -1,0 +1,104 @@
+SALA 2 (grafo_tokens) — salidas de los diagnosticos estructurales, 18 sep 2026. Semillas 1201-1400. Sin Pool.
+Los tres scripts construyen KW como organismo_v14.run (sha feefc88b1fd8d434) y leen codigos sin simular; el primero incluye ademas
+la UNICA corrida de un proceso de este creador (organismo_v14.run(1201, T=50000), 2 s), transcrita aqui tal cual salio y NO repetida.
+
+===== diagnostico_variantes.py --desde 1201 --n 200 --corrida 1201 (transcripcion de la salida original) =====
+sha organismo_v14 feefc88b1fd8d434
+patrones de peso 3: 20; variantes a un movimiento (puras): 10 (5 de A, 5 de B); empates a distancia 2 de ambas: 8 ['111000', '110010', '101100', '100110', '011001', '010011', '001101', '000111']; lejanas (dist 4 de ambas o mas cerca de una a 4): 0 []
+   001011  fam B  dA 6 dB 2
+   001110  fam B  dA 4 dB 2
+   010101  fam A  dA 2 dB 6
+   010110  fam A  dA 2 dB 4
+   011010  fam B  dA 4 dB 2
+   011100  fam A  dA 2 dB 4
+   100011  fam B  dA 4 dB 2
+   100101  fam A  dA 2 dB 4
+   101001  fam B  dA 4 dB 2
+   110001  fam A  dA 2 dB 4
+
+semillas 1201-1400 (0.0 s), 2000 pares (variante, semilla):
+  arista a la base PROPIA (>=2 propia, <2 la otra): 0.316  (de las cuales codigo IDENTICO a la base: 0.026)
+  arista a la base EQUIVOCADA (>=2 la otra, <2 propia): 0.025  (identico a la otra: 0.000)
+  ambas >=2 (empate: abstenerse): 0.000   ninguna >=2 (sin arista -> via lenta): 0.658 (con 1 celda propia: 0.457)
+  variantes con el MISMO codigo entre si por semilla: 0.49
+  histograma (solap propia, solap otra): (3, 0):0.026, (2, 1):0.051, (2, 0):0.238, (1, 2):0.012, (1, 1):0.134, (1, 0):0.323, (0, 2):0.013, (0, 1):0.071, (0, 0):0.131
+  por variante (fraccion de semillas con arista propia / equivocada / ambas / ninguna):
+   001011 fam B: 0.36 / 0.01 / 0.00 / 0.64
+   001110 fam B: 0.23 / 0.03 / 0.00 / 0.74
+   010101 fam A: 0.35 / 0.00 / 0.00 / 0.65
+   010110 fam A: 0.23 / 0.03 / 0.00 / 0.74
+   011010 fam B: 0.29 / 0.03 / 0.00 / 0.69
+   011100 fam A: 0.33 / 0.03 / 0.00 / 0.65
+   100011 fam B: 0.38 / 0.04 / 0.00 / 0.58
+   100101 fam A: 0.30 / 0.03 / 0.00 / 0.67
+   101001 fam B: 0.36 / 0.04 / 0.00 / 0.60
+   110001 fam A: 0.33 / 0.04 / 0.00 / 0.64
+
+UNA corrida organismo_v14.run(1201, T=50000) — lectura de la via LENTA (Wps-Wns)@P para las variantes:
+  2.0 s; W={'A': 1.0, 'B': -2.91, 'C': -0.5, 'D': -2.5} W_lenta={'A': 1.0, 'B': -3.0, 'C': -0.5, 'D': -2.5} celdas=30 splits=0 muertes=62; Wps-Wns=[-0.5, 0.75, -1.25, 0.75, -1.25, 0.0]
+   001011 fam B (veneno): lenta -2.50  OK fuerte
+   001110 fam B (veneno): lenta -1.75  OK fuerte
+   010101 fam A (comida): lenta +1.50  OK fuerte
+   010110 fam A (comida): lenta +0.25  OK
+   011010 fam B (veneno): lenta -1.75  OK fuerte
+   011100 fam A (comida): lenta +0.25  OK
+   100011 fam B (veneno): lenta -1.75  OK fuerte
+   100101 fam A (comida): lenta +0.25  OK
+   101001 fam B (veneno): lenta -1.75  OK fuerte
+   110001 fam A (comida): lenta +0.25  OK
+  signo correcto 10/10; correcto y |v|>=0.5: 6/10
+
+===== diagnostico_familias4.py --desde 1201 --n 200 (re-ejecutado al guardar; estructural, sin corrida) =====
+patrones no base: 16; con familia unica: 3; empates: ['001101', '001110', '010011', '010101', '011010', '011100', '100011', '100110', '101001', '101100', '110001', '110010', '111000']
+  familia A (110100): ['010110', '100101']
+  familia B (101010): []
+  familia C (011001): []
+  familia D (001011): ['000111']
+
+== A+ B- C+ D-  (el mundo vivo con una necesidad): familias+bases linealmente separables: True
+   proxy via lenta (min. norma sobre las 4 bases): Wps-Wns=[-0.333, 1.667, -0.333, -0.333, -2.333, -0.333]; signo correcto en variantes 1/3; correcto y |v|>=0.5: 1/3
+     000111 fam D (-) dist 2: lenta -3.00 OK
+     010110 fam A (+) dist 2: lenta -1.00 MAL
+     100101 fam A (+) dist 2: lenta -1.00 MAL
+
+== A+ B- C- D+: familias+bases linealmente separables: True
+   proxy via lenta (min. norma sobre las 4 bases): Wps-Wns=[-1.667, -1.667, -3.667, 4.333, 2.333, 2.333]; signo correcto en variantes 3/3; correcto y |v|>=0.5: 3/3
+     000111 fam D (+) dist 2: lenta +9.00 OK
+     010110 fam A (+) dist 2: lenta +5.00 OK
+     100101 fam A (+) dist 2: lenta +5.00 OK
+
+== A+ B+ C- D-: familias+bases linealmente separables: True
+   proxy via lenta (min. norma sobre las 4 bases): Wps-Wns=[1.667, -0.333, -0.333, -0.333, -0.333, -2.333]; signo correcto en variantes 1/3; correcto y |v|>=0.5: 1/3
+     000111 fam D (-) dist 2: lenta -3.00 OK
+     010110 fam A (+) dist 2: lenta -1.00 MAL
+     100101 fam A (+) dist 2: lenta -1.00 MAL
+
+cobertura de la arista con g_sol=2 (semillas 1201-1400, 600 pares): padre PROPIO 0.237 (codigo identico 0.025) | padre de OTRA familia 0.067 | empate (abstiene) 0.067 | ninguno 0.630 | precision cuando hay arista 0.780
+
+cobertura de la arista con g_sol=1 (semillas 1201-1400, 600 pares): padre PROPIO 0.373 (codigo identico 0.025) | padre de OTRA familia 0.138 | empate (abstiene) 0.420 | ninguno 0.068 | precision cuando hay arista 0.730
+
+alias de codigo entre bases (fraccion de semillas con codigo identico): AB:0.000, AC:0.000, AD:0.000, BC:0.000, BD:0.040, CD:0.040
+
+===== diagnostico_mundo.py (re-ejecutado al guardar; estructural, sin corrida) =====
+(a) codigo de la variante respecto de su base (dos bases, semillas 1201-1400):
+   aten  : identico 0.403  comparte 2 0.508  comparte 1 0.085  comparte 0 0.003  | >=2 con la OTRA base y <2 con la propia 0.003
+   tinte : identico 0.318  comparte 2 0.554  comparte 1 0.122  comparte 0 0.007  | >=2 con la OTRA base y <2 con la propia 0.015
+   mov   : identico 0.026  comparte 2 0.290  comparte 1 0.469  comparte 0 0.215  | >=2 con la OTRA base y <2 con la propia 0.025
+
+(b) TRES bases A, B, C:
+   variantes puras a un movimiento: 6: 001101->C, 001110->B, 010011->C, 010110->A, 100011->B, 100101->A
+   valencias {'A': 1, 'B': -1, 'C': 1}: proxy lineal Wps-Wns=[-0.8, 1.2, -0.8, 0.6, -1.4, 0.6]; signo OK 6/6; OK y |v|>=0.5 2/6 :: 001101+0.40, 001110-1.60, 010011+0.40, 010110+0.40, 100011-1.60, 100101+0.40
+   valencias {'A': 1, 'B': -1, 'C': -1}: proxy lineal Wps-Wns=[0.0, -0.0, -2.0, 1.0, -1.0, -1.0]; signo OK 4/6; OK y |v|>=0.5 4/6 :: 001101-2.00, 001110-2.00, 010011-2.00, 010110-0.00(MAL), 100011-2.00, 100101-0.00(MAL)
+   valencias {'A': 1, 'B': 1, 'C': -1}: proxy lineal Wps-Wns=[1.2, -0.8, -0.8, 0.6, 0.6, -1.4]; signo OK 6/6; OK y |v|>=0.5 2/6 :: 001101-1.60, 001110+0.40, 010011-1.60, 010110+0.40, 100011+0.40, 100101+0.40
+   arista por CODIGO g_sol=2: propia 0.273 (identica 0.033) | otra 0.071 | empate 0.033 | ninguna 0.624
+   arista por CODIGO g_sol=1: propia 0.434 (identica 0.033) | otra 0.175 | empate 0.312 | ninguna 0.079
+   arista por IMAGEN (L1<=2): propia 1.000 por construccion; L1 a la segunda base mas cercana: min 4, asi que con radio 2 no hay empates ni aristas equivocadas
+   alias de codigo C==A o C==B: 0.000 de las semillas
+
+(c) contaminacion lineal (minima norma, dos bases):
+   Vf=010101 vuelto veneno: A lee +1.00; hermanos de A: 010110-2.00(MAL), 011100-2.00(MAL), 100101-2.00(MAL), 110001-2.00(MAL)
+   Vf=010110 vuelto veneno: A lee +1.00; hermanos de A: 010101-0.00(MAL), 011100-1.00(MAL), 100101+1.00, 110001+1.00
+   Vf=011100 vuelto veneno: A lee +1.00; hermanos de A: 010101-0.00(MAL), 010110-1.00(MAL), 100101+1.00, 110001+1.00
+   Vf=100101 vuelto veneno: A lee +1.00; hermanos de A: 010101-0.00(MAL), 010110+1.00, 011100+1.00, 110001-1.00(MAL)
+   Vf=110001 vuelto veneno: A lee +1.00; hermanos de A: 010101-0.00(MAL), 010110+1.00, 011100+1.00, 100101-1.00(MAL)
+   familia invertida (A:-3, B:+1): variantes de A leen 010101-2.50, 010110-1.75, 011100-1.75, 100101-1.75, 110001-1.75

@@ -1,0 +1,3930 @@
+{
+ "desde": 1101,
+ "n": 20,
+ "mordidas_por_corrida": 300,
+ "resumen": {
+  "siempre/crece": {
+   "acc_estricta_mediana": 1.0,
+   "acc_ge_075": 18,
+   "nodos_vivos_mediana": 1.0,
+   "vivo_01": 19,
+   "test_leidos_por_01_mediana": 12.0,
+   "test_leidos_por_nodo_mediana": 12.0,
+   "reclutas_mediana": 16.0,
+   "podas_mediana": 15.0,
+   "podas_a_6_mediana": 3.5,
+   "nacidos_con_GE_ge_EL_mediana": 3.5,
+   "nodos_que_leyeron_alguna_vez_mediana": 3.0,
+   "lecturas_nodo_mediana": 294.5,
+   "lecturas_lineal_mediana": 5.5,
+   "EL_final_mediana": 2.4575
+  },
+  "siempre/fijo15": {
+   "acc_estricta_mediana": 1.0,
+   "acc_ge_075": 18,
+   "nodos_vivos_mediana": 1.0,
+   "vivo_01": 20,
+   "test_leidos_por_01_mediana": 12.0,
+   "test_leidos_por_nodo_mediana": 12.0,
+   "reclutas_mediana": 0.0,
+   "podas_mediana": 14.0,
+   "podas_a_6_mediana": 9.0,
+   "nacidos_con_GE_ge_EL_mediana": 0.0,
+   "nodos_que_leyeron_alguna_vez_mediana": 4.0,
+   "lecturas_nodo_mediana": 297.0,
+   "lecturas_lineal_mediana": 3.0,
+   "EL_final_mediana": 2.4575
+  },
+  "boca/crece": {
+   "acc_estricta_mediana": 1.0,
+   "acc_ge_075": 12,
+   "nodos_vivos_mediana": 1.0,
+   "vivo_01": 14,
+   "test_leidos_por_01_mediana": 12.0,
+   "test_leidos_por_nodo_mediana": 12.0,
+   "reclutas_mediana": 11.5,
+   "podas_mediana": 10.0,
+   "podas_a_6_mediana": 5.5,
+   "nacidos_con_GE_ge_EL_mediana": 5.5,
+   "nodos_que_leyeron_alguna_vez_mediana": 2.0,
+   "lecturas_nodo_mediana": 293.5,
+   "lecturas_lineal_mediana": 6.5,
+   "EL_final_mediana": 0.1315
+  },
+  "boca/fijo15": {
+   "acc_estricta_mediana": 1.0,
+   "acc_ge_075": 18,
+   "nodos_vivos_mediana": 1.0,
+   "vivo_01": 20,
+   "test_leidos_por_01_mediana": 12.0,
+   "test_leidos_por_nodo_mediana": 12.0,
+   "reclutas_mediana": 0.0,
+   "podas_mediana": 14.0,
+   "podas_a_6_mediana": 10.5,
+   "nacidos_con_GE_ge_EL_mediana": 0.0,
+   "nodos_que_leyeron_alguna_vez_mediana": 3.0,
+   "lecturas_nodo_mediana": 297.0,
+   "lecturas_lineal_mediana": 3.0,
+   "EL_final_mediana": 0.14
+  }
+ },
+ "E1_aritmetica": {
+  "EL_antes": 0.05,
+  "el_mordida1": 9.0,
+  "el_mordida2": 2.7225,
+  "EL_al_nacer": 0.2789,
+  "GE_al_nacer": 2.7225,
+  "puede_leer_al_nacer": false,
+  "trayectoria_GN_GE_EL_lee": [
+   [
+    2,
+    2.668,
+    0.273,
+    false
+   ],
+   [
+    3,
+    2.615,
+    0.268,
+    false
+   ],
+   [
+    4,
+    2.562,
+    0.262,
+    false
+   ],
+   [
+    5,
+    2.511,
+    0.257,
+    false
+   ],
+   [
+    6,
+    2.461,
+    0.252,
+    false
+   ]
+  ],
+  "lectura": "el nodo nace con GE ~10x _EL; ambos decaen a 0.98 por mordida; nunca GE < _EL -> no lee nunca y muere en GN=6"
+ },
+ "filas": [
+  {
+   "seed": 1101,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 14,
+   "podas": 13,
+   "podas_a_6": 3,
+   "nacidos_con_GE_mayor_o_igual_EL": 3,
+   "nodos_que_leyeron_alguna_vez": 7,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 20,
+   "EL_final": 2.82,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 7.102,
+     "EL": 8.913,
+     "mordida": 3
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 7.102,
+     "EL": 8.913,
+     "mordida": 3
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 4.483,
+     "EL": 8.824,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.73,
+     "EL": 8.652,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 3.412,
+     "EL": 8.547,
+     "mordida": 7
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 5.587,
+     "EL": 8.178,
+     "mordida": 10
+    }
+   ]
+  },
+  {
+   "seed": 1102,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 29,
+   "podas": 28,
+   "podas_a_6": 27,
+   "nacidos_con_GE_mayor_o_igual_EL": 27,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 256,
+   "lecturas_lineal": 44,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 29,
+   "EL_final": 3.634,
+   "primeros_nacidos": [
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 6.075,
+     "EL": 1.46,
+     "mordida": 5
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 6.075,
+     "EL": 1.46,
+     "mordida": 5
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 7.369,
+     "EL": 1.578,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 7.369,
+     "EL": 1.578,
+     "mordida": 6
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 11.608,
+     "EL": 1.835,
+     "mordida": 12
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 7.993,
+     "EL": 1.95,
+     "mordida": 14
+    }
+   ]
+  },
+  {
+   "seed": 1103,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 42,
+   "podas": 41,
+   "podas_a_6": 39,
+   "nacidos_con_GE_mayor_o_igual_EL": 38,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 234,
+   "lecturas_lineal": 66,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 37,
+   "EL_final": 2.214,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 3.002,
+     "EL": 1.215,
+     "mordida": 3
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 3.002,
+     "EL": 1.215,
+     "mordida": 3
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 3.002,
+     "EL": 1.215,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 3.538,
+     "EL": 1.594,
+     "mordida": 10
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 3.538,
+     "EL": 1.594,
+     "mordida": 10
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 4.581,
+     "EL": 1.643,
+     "mordida": 12
+    }
+   ]
+  },
+  {
+   "seed": 1104,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 13,
+   "podas": 12,
+   "podas_a_6": 2,
+   "nacidos_con_GE_mayor_o_igual_EL": 2,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 292,
+   "lecturas_lineal": 8,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 18,
+   "EL_final": 0.865,
+   "primeros_nacidos": [
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 8.221,
+     "EL": 8.638,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 3.812,
+     "EL": 8.405,
+     "mordida": 7
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 1.69,
+     "EL": 8.271,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 1.69,
+     "EL": 8.271,
+     "mordida": 8
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 3.639,
+     "EL": 7.798,
+     "mordida": 12
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 7.921,
+     "EL": 7.467,
+     "mordida": 17
+    }
+   ]
+  },
+  {
+   "seed": 1105,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 13,
+   "podas": 12,
+   "podas_a_6": 3,
+   "nacidos_con_GE_mayor_o_igual_EL": 3,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 20,
+   "EL_final": 3.305,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 3.61,
+     "EL": 8.892,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 4.928,
+     "EL": 8.813,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.928,
+     "EL": 8.813,
+     "mordida": 3
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 7.298,
+     "EL": 8.221,
+     "mordida": 11
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 0.924,
+     "EL": 8.075,
+     "mordida": 12
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 0.924,
+     "EL": 8.075,
+     "mordida": 12
+    }
+   ]
+  },
+  {
+   "seed": 1106,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 44,
+   "podas": 43,
+   "podas_a_6": 40,
+   "nacidos_con_GE_mayor_o_igual_EL": 40,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 245,
+   "lecturas_lineal": 55,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 38,
+   "EL_final": 5.101,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.666,
+     "EL": 1.267,
+     "mordida": 3
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 8.853,
+     "EL": 1.478,
+     "mordida": 7
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 8.853,
+     "EL": 1.478,
+     "mordida": 7
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 2.678,
+     "EL": 1.502,
+     "mordida": 8
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 2.422,
+     "EL": 1.521,
+     "mordida": 9
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 2.422,
+     "EL": 1.521,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1107,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 41,
+   "podas": 40,
+   "podas_a_6": 39,
+   "nacidos_con_GE_mayor_o_igual_EL": 39,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 214,
+   "lecturas_lineal": 86,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 35,
+   "EL_final": 4.155,
+   "primeros_nacidos": [
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 4.206,
+     "EL": 1.27,
+     "mordida": 7
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 4.206,
+     "EL": 1.27,
+     "mordida": 7
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 4.206,
+     "EL": 1.27,
+     "mordida": 7
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 2.515,
+     "EL": 1.698,
+     "mordida": 12
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 2.515,
+     "EL": 1.698,
+     "mordida": 12
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 5.825,
+     "EL": 1.781,
+     "mordida": 13
+    }
+   ]
+  },
+  {
+   "seed": 1108,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 15,
+   "podas": 14,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 6,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 19,
+   "EL_final": 2.834,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 3.61,
+     "EL": 8.892,
+     "mordida": 2
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 9.734,
+     "EL": 8.909,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 7.552,
+     "EL": 8.641,
+     "mordida": 7
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 3.293,
+     "EL": 8.534,
+     "mordida": 8
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 11.515,
+     "EL": 7.913,
+     "mordida": 15
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 5.784,
+     "EL": 7.566,
+     "mordida": 20
+    }
+   ]
+  },
+  {
+   "seed": 1109,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 33,
+   "podas": 32,
+   "podas_a_6": 28,
+   "nacidos_con_GE_mayor_o_igual_EL": 27,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 253,
+   "lecturas_lineal": 47,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 27,
+   "EL_final": 2.639,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 4.003,
+     "EL": 1.406,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 5.082,
+     "EL": 1.479,
+     "mordida": 6
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 2.48,
+     "EL": 1.511,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 2.48,
+     "EL": 1.511,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 2.48,
+     "EL": 1.511,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 6.277,
+     "EL": 1.606,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1110,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 43,
+   "podas": 42,
+   "podas_a_6": 41,
+   "nacidos_con_GE_mayor_o_igual_EL": 37,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 216,
+   "lecturas_lineal": 84,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 40,
+   "EL_final": 1.956,
+   "primeros_nacidos": [
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 4.7,
+     "EL": 1.231,
+     "mordida": 7
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 4.7,
+     "EL": 1.231,
+     "mordida": 7
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.7,
+     "EL": 1.231,
+     "mordida": 7
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 4.721,
+     "EL": 1.582,
+     "mordida": 9
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 4.721,
+     "EL": 1.582,
+     "mordida": 9
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 4.721,
+     "EL": 1.582,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1111,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 4,
+   "podas": 3,
+   "podas_a_6": 1,
+   "nacidos_con_GE_mayor_o_igual_EL": 1,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 5,
+   "EL_final": 1.061,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 11.482,
+     "EL": 7.283,
+     "mordida": 16
+    }
+   ]
+  },
+  {
+   "seed": 1112,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 5,
+   "podas": 4,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 291,
+   "lecturas_lineal": 9,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 6,
+   "EL_final": 0.031,
+   "primeros_nacidos": [
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 2.994,
+     "EL": 8.452,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 2.994,
+     "EL": 8.452,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 2.994,
+     "EL": 8.452,
+     "mordida": 6
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 7.503,
+     "EL": 8.174,
+     "mordida": 9
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 4.094,
+     "EL": 7.963,
+     "mordida": 11
+    }
+   ]
+  },
+  {
+   "seed": 1113,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 0.625,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 24,
+   "podas": 23,
+   "podas_a_6": 3,
+   "nacidos_con_GE_mayor_o_igual_EL": 3,
+   "nodos_que_leyeron_alguna_vez": 9,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 6,
+   "test_leidos_por_01": 6,
+   "sorpresas": 34,
+   "EL_final": 0.053,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.41,
+     "EL": 8.908,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 4.326,
+     "EL": 8.817,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 1.409,
+     "EL": 8.489,
+     "mordida": 6
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 13.134,
+     "EL": 8.423,
+     "mordida": 8
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 13.134,
+     "EL": 8.423,
+     "mordida": 8
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 5.789,
+     "EL": 8.37,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1114,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 7,
+   "podas": 6,
+   "podas_a_6": 3,
+   "nacidos_con_GE_mayor_o_igual_EL": 3,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 7,
+   "EL_final": 2.431,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 2.598,
+     "EL": 8.679,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 14.471,
+     "EL": 8.637,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 14.471,
+     "EL": 8.637,
+     "mordida": 6
+    }
+   ]
+  },
+  {
+   "seed": 1115,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 18,
+   "podas": 17,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 10,
+   "nodos_que_leyeron_alguna_vez": 7,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 20,
+   "EL_final": 2.707,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 3.61,
+     "EL": 8.757,
+     "mordida": 3
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 3.661,
+     "EL": 8.755,
+     "mordida": 5
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 10.669,
+     "EL": 8.504,
+     "mordida": 8
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 10.669,
+     "EL": 8.504,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 9.493,
+     "EL": 8.524,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 9.493,
+     "EL": 8.524,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1116,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 0.375,
+   "nodos_vivos": 0,
+   "vivo_01": false,
+   "reclutas": 114,
+   "podas": 114,
+   "podas_a_6": 114,
+   "nacidos_con_GE_mayor_o_igual_EL": 114,
+   "nodos_que_leyeron_alguna_vez": 0,
+   "lecturas_nodo": 0,
+   "lecturas_lineal": 300,
+   "test_leidos_por_nodo": 0,
+   "test_leidos_por_01": 0,
+   "sorpresas": 89,
+   "EL_final": 1.853,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 5.336,
+     "EL": 1.281,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 4.781,
+     "EL": 1.351,
+     "mordida": 4
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 2.797,
+     "EL": 1.545,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 2.797,
+     "EL": 1.545,
+     "mordida": 6
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 6.531,
+     "EL": 1.631,
+     "mordida": 8
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 3.606,
+     "EL": 1.629,
+     "mordida": 11
+    }
+   ]
+  },
+  {
+   "seed": 1117,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 6,
+   "podas": 5,
+   "podas_a_6": 2,
+   "nacidos_con_GE_mayor_o_igual_EL": 1,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 6,
+   "EL_final": 2.237,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.41,
+     "EL": 8.908,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 8.14,
+     "EL": 8.433,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 3.692,
+     "EL": 7.865,
+     "mordida": 11
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 14.319,
+     "EL": 7.994,
+     "mordida": 12
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 7.131,
+     "EL": 7.776,
+     "mordida": 15
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 7.131,
+     "EL": 7.776,
+     "mordida": 15
+    }
+   ]
+  },
+  {
+   "seed": 1118,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 4,
+   "podas": 3,
+   "podas_a_6": 1,
+   "nacidos_con_GE_mayor_o_igual_EL": 1,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 5,
+   "EL_final": 4.534,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 3.488,
+     "EL": 8.755,
+     "mordida": 3
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 3.488,
+     "EL": 8.755,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 3.488,
+     "EL": 8.755,
+     "mordida": 3
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 13.248,
+     "EL": 8.634,
+     "mordida": 6
+    }
+   ]
+  },
+  {
+   "seed": 1119,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 4,
+   "podas": 3,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 1,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 5,
+   "EL_final": 2.484,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.41,
+     "EL": 8.908,
+     "mordida": 2
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 6.34,
+     "EL": 8.616,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 5.61,
+     "EL": 8.467,
+     "mordida": 7
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 5.61,
+     "EL": 8.467,
+     "mordida": 7
+    }
+   ]
+  },
+  {
+   "seed": 1120,
+   "regimen": "siempre",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 17,
+   "podas": 16,
+   "podas_a_6": 4,
+   "nacidos_con_GE_mayor_o_igual_EL": 4,
+   "nodos_que_leyeron_alguna_vez": 7,
+   "lecturas_nodo": 294,
+   "lecturas_lineal": 6,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 28,
+   "EL_final": 0.171,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 2.831,
+     "EL": 8.741,
+     "mordida": 3
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 6.889,
+     "EL": 8.055,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 6.889,
+     "EL": 8.055,
+     "mordida": 8
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 12.82,
+     "EL": 7.999,
+     "mordida": 10
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 5.126,
+     "EL": 7.942,
+     "mordida": 11
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 2.227,
+     "EL": 6.577,
+     "mordida": 26
+    }
+   ]
+  },
+  {
+   "seed": 1101,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.82,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1102,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 13,
+   "podas_a_6": 13,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 3.634,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1103,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.214,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1104,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 8,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.865,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1105,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 9,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 3.305,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1106,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 13,
+   "podas_a_6": 8,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 5.101,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1107,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 13,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 4.155,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1108,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 13,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 1,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.834,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1109,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.639,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1110,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 6,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 1.956,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1111,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 1.061,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1112,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 8,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.031,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1113,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 0.625,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 6,
+   "test_leidos_por_01": 6,
+   "sorpresas": 0,
+   "EL_final": 0.053,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1114,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.431,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1115,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 1,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.707,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1116,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 1.853,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1117,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 9,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.237,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1118,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 0.25,
+   "nodos_vivos": 3,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 12,
+   "podas_a_6": 6,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 0,
+   "sorpresas": 0,
+   "EL_final": 4.534,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1119,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 2.484,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1120,
+   "regimen": "siempre",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 300,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.171,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1101,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 1323,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 19,
+   "podas": 18,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 7,
+   "nodos_que_leyeron_alguna_vez": 8,
+   "lecturas_nodo": 294,
+   "lecturas_lineal": 6,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 26,
+   "EL_final": 0.85,
+   "primeros_nacidos": [
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 6.214,
+     "EL": 8.758,
+     "mordida": 4
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 3.538,
+     "EL": 8.654,
+     "mordida": 5
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 5.76,
+     "EL": 8.191,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 5.76,
+     "EL": 8.191,
+     "mordida": 9
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 10.557,
+     "EL": 8.079,
+     "mordida": 11
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 10.557,
+     "EL": 8.079,
+     "mordida": 11
+    }
+   ]
+  },
+  {
+   "seed": 1102,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 591,
+   "acc_estricta": 0.438,
+   "nodos_vivos": 0,
+   "vivo_01": false,
+   "reclutas": 33,
+   "podas": 33,
+   "podas_a_6": 33,
+   "nacidos_con_GE_mayor_o_igual_EL": 33,
+   "nodos_que_leyeron_alguna_vez": 0,
+   "lecturas_nodo": 0,
+   "lecturas_lineal": 300,
+   "test_leidos_por_nodo": 0,
+   "test_leidos_por_01": 0,
+   "sorpresas": 31,
+   "EL_final": 0.111,
+   "primeros_nacidos": [
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 2.512,
+     "EL": 1.244,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 11.57,
+     "EL": 1.37,
+     "mordida": 11
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 11.57,
+     "EL": 1.37,
+     "mordida": 11
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 3.5,
+     "EL": 1.412,
+     "mordida": 12
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 12.664,
+     "EL": 1.637,
+     "mordida": 13
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 8.078,
+     "EL": 1.766,
+     "mordida": 14
+    }
+   ]
+  },
+  {
+   "seed": 1103,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 556,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 19,
+   "podas": 18,
+   "podas_a_6": 18,
+   "nacidos_con_GE_mayor_o_igual_EL": 19,
+   "nodos_que_leyeron_alguna_vez": 1,
+   "lecturas_nodo": 277,
+   "lecturas_lineal": 23,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 16,
+   "EL_final": 0.144,
+   "primeros_nacidos": [
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 4.862,
+     "EL": 1.252,
+     "mordida": 3
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 5.276,
+     "EL": 1.331,
+     "mordida": 5
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 3.24,
+     "EL": 1.369,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 6.922,
+     "EL": 1.616,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 6.922,
+     "EL": 1.616,
+     "mordida": 9
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 10.787,
+     "EL": 1.799,
+     "mordida": 10
+    }
+   ]
+  },
+  {
+   "seed": 1104,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 887,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 7,
+   "podas": 6,
+   "podas_a_6": 2,
+   "nacidos_con_GE_mayor_o_igual_EL": 2,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 9,
+   "EL_final": 0.337,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 3.186,
+     "EL": 8.835,
+     "mordida": 3
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 5.607,
+     "EL": 8.77,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 4.666,
+     "EL": 8.688,
+     "mordida": 5
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.666,
+     "EL": 8.688,
+     "mordida": 5
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 5.488,
+     "EL": 7.227,
+     "mordida": 16
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 7.192,
+     "EL": 7.115,
+     "mordida": 18
+    }
+   ]
+  },
+  {
+   "seed": 1105,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 1002,
+   "acc_estricta": 0.438,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 11,
+   "podas": 9,
+   "podas_a_6": 4,
+   "nacidos_con_GE_mayor_o_igual_EL": 4,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 0,
+   "sorpresas": 14,
+   "EL_final": 0.44,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 3.61,
+     "EL": 8.892,
+     "mordida": 2
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 3.48,
+     "EL": 8.821,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 3.48,
+     "EL": 8.821,
+     "mordida": 4
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 6.249,
+     "EL": 8.77,
+     "mordida": 5
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 6.249,
+     "EL": 8.77,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 7.092,
+     "EL": 8.667,
+     "mordida": 7
+    }
+   ]
+  },
+  {
+   "seed": 1106,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 1001,
+   "acc_estricta": 0.562,
+   "nodos_vivos": 0,
+   "vivo_01": false,
+   "reclutas": 15,
+   "podas": 15,
+   "podas_a_6": 15,
+   "nacidos_con_GE_mayor_o_igual_EL": 15,
+   "nodos_que_leyeron_alguna_vez": 0,
+   "lecturas_nodo": 0,
+   "lecturas_lineal": 300,
+   "test_leidos_por_nodo": 0,
+   "test_leidos_por_01": 0,
+   "sorpresas": 13,
+   "EL_final": 0.013,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 2.524,
+     "EL": 1.412,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 2.524,
+     "EL": 1.412,
+     "mordida": 6
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 2.524,
+     "EL": 1.412,
+     "mordida": 6
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 2.586,
+     "EL": 1.435,
+     "mordida": 7
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 3.947,
+     "EL": 1.486,
+     "mordida": 8
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 3.947,
+     "EL": 1.486,
+     "mordida": 8
+    }
+   ]
+  },
+  {
+   "seed": 1107,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 681,
+   "acc_estricta": 0.375,
+   "nodos_vivos": 0,
+   "vivo_01": false,
+   "reclutas": 20,
+   "podas": 20,
+   "podas_a_6": 20,
+   "nacidos_con_GE_mayor_o_igual_EL": 20,
+   "nodos_que_leyeron_alguna_vez": 0,
+   "lecturas_nodo": 0,
+   "lecturas_lineal": 300,
+   "test_leidos_por_nodo": 0,
+   "test_leidos_por_01": 0,
+   "sorpresas": 20,
+   "EL_final": 0.022,
+   "primeros_nacidos": [
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 4.234,
+     "EL": 1.277,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 4.234,
+     "EL": 1.277,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 4.234,
+     "EL": 1.277,
+     "mordida": 5
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 4.505,
+     "EL": 2.031,
+     "mordida": 17
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 4.505,
+     "EL": 2.031,
+     "mordida": 17
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 19.952,
+     "EL": 2.287,
+     "mordida": 22
+    }
+   ]
+  },
+  {
+   "seed": 1108,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 730,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 11,
+   "podas": 10,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 7,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 11,
+   "EL_final": 0.328,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 3.61,
+     "EL": 8.892,
+     "mordida": 2
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 5.688,
+     "EL": 8.828,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 1.532,
+     "EL": 8.682,
+     "mordida": 4
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 8.69,
+     "EL": 8.682,
+     "mordida": 5
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 1.557,
+     "EL": 8.54,
+     "mordida": 6
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 9.652,
+     "EL": 8.498,
+     "mordida": 8
+    }
+   ]
+  },
+  {
+   "seed": 1109,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 653,
+   "acc_estricta": 0.688,
+   "nodos_vivos": 0,
+   "vivo_01": false,
+   "reclutas": 27,
+   "podas": 27,
+   "podas_a_6": 27,
+   "nacidos_con_GE_mayor_o_igual_EL": 27,
+   "nodos_que_leyeron_alguna_vez": 0,
+   "lecturas_nodo": 0,
+   "lecturas_lineal": 300,
+   "test_leidos_por_nodo": 0,
+   "test_leidos_por_01": 0,
+   "sorpresas": 24,
+   "EL_final": 0.042,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 5.418,
+     "EL": 1.297,
+     "mordida": 6
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 5.418,
+     "EL": 1.297,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 5.418,
+     "EL": 1.297,
+     "mordida": 6
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 4.197,
+     "EL": 1.472,
+     "mordida": 10
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 3.257,
+     "EL": 1.708,
+     "mordida": 14
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 11.964,
+     "EL": 1.832,
+     "mordida": 19
+    }
+   ]
+  },
+  {
+   "seed": 1110,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 572,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 30,
+   "podas": 29,
+   "podas_a_6": 23,
+   "nacidos_con_GE_mayor_o_igual_EL": 22,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 273,
+   "lecturas_lineal": 27,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 27,
+   "EL_final": 0.497,
+   "primeros_nacidos": [
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 4.66,
+     "EL": 1.469,
+     "mordida": 5
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 4.244,
+     "EL": 1.524,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 3.563,
+     "EL": 1.565,
+     "mordida": 7
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 3.563,
+     "EL": 1.565,
+     "mordida": 7
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 3.563,
+     "EL": 1.565,
+     "mordida": 7
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 4.268,
+     "EL": 1.619,
+     "mordida": 8
+    }
+   ]
+  },
+  {
+   "seed": 1111,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 553,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 3,
+   "vivo_01": true,
+   "reclutas": 5,
+   "podas": 2,
+   "podas_a_6": 1,
+   "nacidos_con_GE_mayor_o_igual_EL": 1,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 5,
+   "EL_final": 0.075,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      2
+     ],
+     "GE0": 7.503,
+     "EL": 8.26,
+     "mordida": 7
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 9.155,
+     "EL": 8.278,
+     "mordida": 8
+    }
+   ]
+  },
+  {
+   "seed": 1112,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 705,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 11,
+   "podas": 10,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 289,
+   "lecturas_lineal": 11,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 17,
+   "EL_final": 0.034,
+   "primeros_nacidos": [
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 3.641,
+     "EL": 8.224,
+     "mordida": 8
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 3.641,
+     "EL": 8.224,
+     "mordida": 8
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 3.641,
+     "EL": 8.224,
+     "mordida": 8
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 3.964,
+     "EL": 8.139,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 3.964,
+     "EL": 8.139,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 3.964,
+     "EL": 8.139,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1113,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 557,
+   "acc_estricta": 0.625,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 1,
+   "podas": 0,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 1,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 6,
+   "test_leidos_por_01": 6,
+   "sorpresas": 4,
+   "EL_final": 0.085,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.41,
+     "EL": 8.908,
+     "mordida": 2
+    }
+   ]
+  },
+  {
+   "seed": 1114,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 869,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 14,
+   "podas": 12,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 7,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 16,
+   "EL_final": 0.275,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 2.723,
+     "EL": 8.874,
+     "mordida": 2
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.944,
+     "EL": 8.28,
+     "mordida": 8
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 4.944,
+     "EL": 8.28,
+     "mordida": 8
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 10.695,
+     "EL": 7.414,
+     "mordida": 16
+    }
+   ]
+  },
+  {
+   "seed": 1115,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 671,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 7,
+   "podas": 5,
+   "podas_a_6": 2,
+   "nacidos_con_GE_mayor_o_igual_EL": 2,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 294,
+   "lecturas_lineal": 6,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 7,
+   "EL_final": 0.119,
+   "primeros_nacidos": [
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 3.949,
+     "EL": 8.603,
+     "mordida": 4
+    },
+    {
+     "par": [
+      2,
+      3
+     ],
+     "GE0": 3.949,
+     "EL": 8.603,
+     "mordida": 4
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 3.949,
+     "EL": 8.603,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 3.081,
+     "EL": 8.363,
+     "mordida": 7
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 15.077,
+     "EL": 8.448,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 15.077,
+     "EL": 8.448,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1116,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 497,
+   "acc_estricta": 0.5,
+   "nodos_vivos": 0,
+   "vivo_01": false,
+   "reclutas": 46,
+   "podas": 46,
+   "podas_a_6": 46,
+   "nacidos_con_GE_mayor_o_igual_EL": 46,
+   "nodos_que_leyeron_alguna_vez": 0,
+   "lecturas_nodo": 0,
+   "lecturas_lineal": 300,
+   "test_leidos_por_nodo": 0,
+   "test_leidos_por_01": 0,
+   "sorpresas": 38,
+   "EL_final": 0.109,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 3.386,
+     "EL": 1.242,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 5.603,
+     "EL": 1.329,
+     "mordida": 4
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 5.603,
+     "EL": 1.329,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 2.927,
+     "EL": 1.404,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 2.927,
+     "EL": 1.404,
+     "mordida": 6
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 16.652,
+     "EL": 1.778,
+     "mordida": 10
+    }
+   ]
+  },
+  {
+   "seed": 1117,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 647,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 10,
+   "podas": 8,
+   "podas_a_6": 2,
+   "nacidos_con_GE_mayor_o_igual_EL": 2,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 8,
+   "EL_final": 0.293,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.41,
+     "EL": 8.908,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 4.906,
+     "EL": 8.828,
+     "mordida": 3
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 4.012,
+     "EL": 8.737,
+     "mordida": 5
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 4.012,
+     "EL": 8.737,
+     "mordida": 5
+    },
+    {
+     "par": [
+      1,
+      3
+     ],
+     "GE0": 11.519,
+     "EL": 8.383,
+     "mordida": 9
+    },
+    {
+     "par": [
+      0,
+      3
+     ],
+     "GE0": 11.519,
+     "EL": 8.383,
+     "mordida": 9
+    }
+   ]
+  },
+  {
+   "seed": 1118,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 544,
+   "acc_estricta": 0.25,
+   "nodos_vivos": 1,
+   "vivo_01": false,
+   "reclutas": 9,
+   "podas": 8,
+   "podas_a_6": 4,
+   "nacidos_con_GE_mayor_o_igual_EL": 4,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 293,
+   "lecturas_lineal": 7,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 0,
+   "sorpresas": 9,
+   "EL_final": 0.611,
+   "primeros_nacidos": [
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 3.232,
+     "EL": 8.699,
+     "mordida": 5
+    },
+    {
+     "par": [
+      2,
+      4
+     ],
+     "GE0": 6.142,
+     "EL": 8.648,
+     "mordida": 6
+    },
+    {
+     "par": [
+      0,
+      2
+     ],
+     "GE0": 6.142,
+     "EL": 8.648,
+     "mordida": 6
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 2.289,
+     "EL": 8.521,
+     "mordida": 7
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 7.132,
+     "EL": 8.42,
+     "mordida": 9
+    },
+    {
+     "par": [
+      2,
+      5
+     ],
+     "GE0": 9.925,
+     "EL": 7.2,
+     "mordida": 19
+    }
+   ]
+  },
+  {
+   "seed": 1119,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 837,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 12,
+   "podas": 10,
+   "podas_a_6": 4,
+   "nacidos_con_GE_mayor_o_igual_EL": 4,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 13,
+   "EL_final": 0.055,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.41,
+     "EL": 8.908,
+     "mordida": 2
+    },
+    {
+     "par": [
+      1,
+      4
+     ],
+     "GE0": 4.326,
+     "EL": 8.817,
+     "mordida": 3
+    },
+    {
+     "par": [
+      0,
+      4
+     ],
+     "GE0": 1.951,
+     "EL": 8.634,
+     "mordida": 5
+    },
+    {
+     "par": [
+      3,
+      4
+     ],
+     "GE0": 8.244,
+     "EL": 7.389,
+     "mordida": 15
+    },
+    {
+     "par": [
+      3,
+      5
+     ],
+     "GE0": 8.244,
+     "EL": 7.389,
+     "mordida": 15
+    },
+    {
+     "par": [
+      4,
+      5
+     ],
+     "GE0": 8.244,
+     "EL": 7.389,
+     "mordida": 15
+    }
+   ]
+  },
+  {
+   "seed": 1120,
+   "regimen": "boca",
+   "brazo": "crece",
+   "mordidas": 300,
+   "encuentros": 615,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 3,
+   "podas": 2,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 1,
+   "lecturas_nodo": 293,
+   "lecturas_lineal": 7,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 3,
+   "EL_final": 0.331,
+   "primeros_nacidos": [
+    {
+     "par": [
+      0,
+      1
+     ],
+     "GE0": 4.212,
+     "EL": 8.625,
+     "mordida": 4
+    },
+    {
+     "par": [
+      1,
+      5
+     ],
+     "GE0": 4.212,
+     "EL": 8.625,
+     "mordida": 4
+    },
+    {
+     "par": [
+      0,
+      5
+     ],
+     "GE0": 4.212,
+     "EL": 8.625,
+     "mordida": 4
+    }
+   ]
+  },
+  {
+   "seed": 1101,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 588,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.568,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1102,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 615,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 295,
+   "lecturas_lineal": 5,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.287,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1103,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 648,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 12,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.05,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1104,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 645,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.067,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1105,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 587,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 13,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.076,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1106,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 540,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 13,
+   "podas_a_6": 12,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.067,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1107,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 603,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 13,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.094,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1108,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 640,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.213,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1109,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 613,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 12,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.52,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1110,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 578,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.536,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1111,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 869,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 0,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 6,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.073,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1112,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 584,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 8,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.076,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1113,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 567,
+   "acc_estricta": 0.625,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 6,
+   "test_leidos_por_01": 6,
+   "sorpresas": 0,
+   "EL_final": 0.082,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1114,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 764,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 6,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 5,
+   "lecturas_nodo": 298,
+   "lecturas_lineal": 2,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.155,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1115,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 651,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 7,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.125,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1116,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 638,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 8,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.316,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1117,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 769,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 9,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 4,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.452,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1118,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 526,
+   "acc_estricta": 0.25,
+   "nodos_vivos": 2,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 13,
+   "podas_a_6": 11,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 0,
+   "sorpresas": 0,
+   "EL_final": 0.707,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1119,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 810,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 13,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 3,
+   "lecturas_nodo": 297,
+   "lecturas_lineal": 3,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.053,
+   "primeros_nacidos": []
+  },
+  {
+   "seed": 1120,
+   "regimen": "boca",
+   "brazo": "fijo15",
+   "mordidas": 300,
+   "encuentros": 615,
+   "acc_estricta": 1.0,
+   "nodos_vivos": 1,
+   "vivo_01": true,
+   "reclutas": 0,
+   "podas": 14,
+   "podas_a_6": 10,
+   "nacidos_con_GE_mayor_o_igual_EL": 0,
+   "nodos_que_leyeron_alguna_vez": 2,
+   "lecturas_nodo": 296,
+   "lecturas_lineal": 4,
+   "test_leidos_por_nodo": 12,
+   "test_leidos_por_01": 12,
+   "sorpresas": 0,
+   "EL_final": 0.327,
+   "primeros_nacidos": []
+  }
+ ]
+}

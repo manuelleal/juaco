@@ -1,0 +1,102 @@
+{
+ "seed": 101,
+ "T": 50000,
+ "escenario": "E2L solap_AB=3",
+ "sha_v14": "feefc88b1fd8d434",
+ "segundos": 2.0,
+ "splits": 3,
+ "celdas": 33,
+ "W": {
+  "A": 1.0,
+  "B": -2.9,
+  "C": -0.5,
+  "D": -2.5
+ },
+ "W_lenta": {
+  "A": 1.0,
+  "B": -3.0,
+  "C": -0.5,
+  "D": -2.5
+ },
+ "solap": {
+  "AB": 0,
+  "nB": null
+ },
+ "n_visitas_no_familiar": 531,
+ "n_eventos_tok": 0,
+ "n_eventos_tok_signo_token_distinto_del_mundo": 0,
+ "n_eventos_tok_signo_lenta_correcto": 0,
+ "por_patron": {
+  "A": 0,
+  "B": 0
+ },
+ "primer_evento": null,
+ "ultimo_evento": null,
+ "fisiones": [
+  {
+   "t": 316,
+   "pat": "B",
+   "cod_viejo": [
+    0,
+    1,
+    2
+   ],
+   "cod_nuevo": [
+    0,
+    2,
+    30
+   ],
+   "solap": 2,
+   "madre": 0,
+   "hija": 30,
+   "madre_en_nuevo": true,
+   "hija_en_nuevo": true,
+   "Wb_madre": 0.262,
+   "Wb_hija": -0.169
+  },
+  {
+   "t": 316,
+   "pat": "B",
+   "cod_viejo": [
+    0,
+    1,
+    2
+   ],
+   "cod_nuevo": [
+    2,
+    30,
+    31
+   ],
+   "solap": 1,
+   "madre": 1,
+   "hija": 31,
+   "madre_en_nuevo": false,
+   "hija_en_nuevo": true,
+   "Wb_madre": 0.262,
+   "Wb_hija": -0.169
+  },
+  {
+   "t": 316,
+   "pat": "B",
+   "cod_viejo": [
+    0,
+    1,
+    2
+   ],
+   "cod_nuevo": [
+    30,
+    31,
+    32
+   ],
+   "solap": 0,
+   "madre": 2,
+   "hija": 32,
+   "madre_en_nuevo": false,
+   "hija_en_nuevo": true,
+   "Wb_madre": 0.262,
+   "Wb_hija": -0.169
+  }
+ ],
+ "fisiones_con_solap_K_1": 1,
+ "eventos_tok_muestra": []
+}

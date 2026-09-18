@@ -775,3 +775,16 @@ Lo que cambia, y lo que no:
 Estado al escribir esto: SALA 2 corriendo (síntesis en `registro/investigacion/SALA2_frontera_20260918.md`); v15f (creador A) en
 humo; Pool libre. Quien retome: leer primero `registro/CRITERIO_TRONCO_v2.md` (si existe) y la síntesis de la sala; nada de lo
 anterior se rejuzga.
+
+
+### 15.10 Interrupción por límite de sesión (18 sep ~10:10; se reanuda 13:50)
+
+La SALA 2 (workflow `sala2-frontera-juaco`, 23 agentes, 5.8 M tokens) terminó 18/23: los 4 diagnósticos (`registro/investigacion/sala2/DIAG_*.md`),
+los 6 diseños (`DISENO_*.md`) y 2 de 12 refutaciones escritas (`REFUTACION_dos_escalas_medibilidad.md`, `REFUTACION_vivir_localidad.md`;
+las demás refutaciones devolvieron sólo su veredicto estructurado, ver `journal.jsonl` del workflow) más sus scripts y JSON de apoyo.
+**La SÍNTESIS (`SALA2_frontera_20260918.md`) NO se escribió**: cayó por el límite de sesión, igual que 4 refutadores. El creador A murió
+al empezar el paquete de v15f para el criterio v2: sus 5 archivos en `experimentos/creacion_A/*vivo_relevo*`, `PREREGISTRO_v15f_v2.md`,
+`corre_v15f_v2.py` están SIN VERIFICAR (sin identidad, sin humo): se guardan como borrador, no como instrumento. Todo lo anterior a las
+10:00 está registrado y empujado (5a00089). **Al reanudar:** (1) leer los 4 DIAG y los 6 DISENO y escribir la síntesis (un agente,
+o el coordinador) → completar `CRITERIO_TRONCO_v2.md`; (2) reanudar al creador A sobre su borrador (identidad primero); (3) el Pool
+está libre; nada corre.
