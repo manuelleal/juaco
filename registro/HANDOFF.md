@@ -577,13 +577,13 @@ suelo y pierde la prueba de latencia contra dE-TEST (adenda de C7).
 
 | candidato | mecanismo | estado al cierre (01:40) |
 |---|---|---|
-| **Hija dispersa** (B-1) | la hija nace ciega a parte de `P`, no sólo fuera de él | REPLICADA (61–80 refutada por la letra, 81–100 pasa incluso el umbral original); **baterías de `organismo_v13D` EN CURSO** |
-| **dE-TEST** (C-P1) | la sorpresa del mundo (ΔE) puesta en la boca, no en `eta` | candidato pendiente de baterías; P1'/P7' limpios en dos series, P4' sólo en 61–80; **serie 81–100, enmienda 2, EN CURSO** |
-| **B-2** (puerta por código) | cuenta mordidas del código exacto en vez de celdas consolidadas | mini-prueba a escala reducida cierra el canje (`N*` v13 6 → 20, 3/3 semillas); **montaje completo 41–60 + baterías EN CURSO** |
+| **Hija dispersa** (B-1) | la hija nace ciega a parte de `P`, no sólo fuera de él | REPLICADA (61–80 refutada por la letra, 81–100 pasa incluso el umbral original); **v13D NO REGRESIONA (01:27): examen v3' 8/8 en 101–120, G1 0.80 / G2 0.83, inerte en 6 px → candidata a v14** (`PROPUESTA_v14.md`, rama `v14-candidato`) |
+| **dE-TEST** (C-P1) | la sorpresa del mundo (ΔE) puesta en la boca, no en `eta` | **serie 81–100 (01:48): pasa retención (≥ 19/20 × 6) y generalización (G1 0.90); tres series 0.14× (20/20 × 3), apagado 20/20 × 3 → candidato a órgano** (segundo en `PROPUESTA_v14.md`; falta el examen v3' completo sobre una copia del tronco); el automodelo pasa todo en la tercera serie (apagado 17/20) |
+| **B-2** (puerta por código) | cuenta mordidas del código exacto en vez de celdas consolidadas | mini-prueba a escala reducida cierra el canje (`N*` v13 6 → 20, 3/3 semillas); **montaje completo 41–60 + baterías EN CURSO desde la 01:36 (~60 min); el coordinador lo registra al terminar** |
 | **Vector único** (A-3) | la vía lenta como un solo vector con signo, sin canal doble | simplificación con identidad CONFIRMADA (60/60); no compra capacidad nueva, ahorra memoria |
 
-Ninguno entró al tronco esta noche; los tres primeros quedan donde el reloj los cortó —en curso, no decididos— para
-que el coordinador los complete con lo ya preregistrado: la decisión de v14 es del director.
+Ninguno entró al tronco esta noche: los dos primeros quedan como candidatos con evidencia completa salvo lo anotado, B-2 en
+curso; la decisión de v14 es del director (`registro/PROPUESTA_v14.md`).
 
 ### 15.5 Errores nuevos y reglas derivadas
 
@@ -606,15 +606,13 @@ un criterio lleva ERR numerado al escribirla, aunque sea antes de la serie nueva
 **Qué correr primero (regla 1):** `cd organismo && python bateria.py 6 && python bateria_v13.py 6 && python
 bateria_generaliza.py organismo_v13 10`. **Qué leer, en orden:** este §15 → `CLAUDE.md` ("Estado día 7") →
 `PLAN.md` ("Madrugada del 18", lo que sigue sin marcar) → `PUENTE_creacion.md` ("Propuestas para el coordinador":
-B-2 y C-P2/C-P3 sin correr). **Qué completar, en este orden:** (1) baterías de `organismo_v13D` (`bateria_v13.py`
-8/8 + `bateria_generaliza.py` G1≥0.80/G2≥0.85), para que B-1 tenga retención y generalización medidas; (2) serie
-81–100 de C-P1 con `--baterias` para dE-TEST (M4/M6) y la prueba de latencia (la variante resta-cota del automodelo
-ya quedó refutada, adenda de C7: no repetirla); (3) B-2 a escala completa (semillas 41–60, montaje de
-`reverificacion_v13`) + baterías sobre la misma perilla. Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
+B-2 y C-P2/C-P3 sin correr). **Qué completar, en este orden:** (1) HECHO 01:27 — baterías de `organismo_v13D` (8/8; G1 0.80 / G2 0.83); (2) HECHO 01:48 —
+serie 81–100 de C-P1 con baterías para dE-TEST (pasan) y latencia (dE arranca antes); (3) B-2 a escala completa (41–60 +
+baterías) EN CURSO al cerrar: registrar su veredicto; (4) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
 creador C); N2 sólo con significado por predicción (C-P2, sin instrumento en el mundo social); horizonte 2 del mapa
 (sin potencia, 6/20). Un `Pool` a la vez; nada entra a v14 sin examen v3' + baterías + réplica.
 
 **Vamos bien o mal, en dos frases:** Vamos bien: la célula entregó cinco hallazgos verificados con identidad y
 control, y dos auditorías que atraparon sus propios errores antes de declarar nada candidato. Vamos mal: ningún
-bloque cerró con examen completo —v13D, dE-TEST y B-2 llegan a las 01:40 con baterías pendientes— y XOR y N2 siguen
+candidato está en el tronco todavía (la decisión es del director), B-2 no había terminado al cerrar, y XOR y N2 siguen
 sin un mecanismo que funcione con la dinámica actual del mundo.
