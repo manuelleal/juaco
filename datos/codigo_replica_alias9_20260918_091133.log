@@ -1,0 +1,57 @@
+[09:11:33 +    0.0s] ARRANQUE B-5 REPLICA (regla 12; enmienda 1): brazos ['D0-ALIAS', 'D1-ALIAS', 'D0-LIMPIA', 'D1-LIMPIA', 'D1-SINSED', 'D0-VIVO', 'D1-VIVO'], ALIAS [779, 796, 822, 852, 895, 916, 917, 926, 944], LIMPIAS [703, 712, 717, 725, 728, 744, 746, 751, 764], T=100000.
+[09:11:33 +    0.0s]     sha preregistro                00e8147deeea71c4
+[09:11:33 +    0.0s]     sha script                     cb91371b77c079d3
+[09:11:33 +    0.0s]     sha constructor                f94aa0a2f714c28d
+[09:11:33 +    0.0s]     sha identidad                  5ecb6992d46d2b57
+[09:11:33 +    0.0s]     sha organismo_v14_codigo       a4eeca90fb605c78
+[09:11:33 +    0.0s]     sha organismo_v14_codigo_on    2f7794d92e68cc89
+[09:11:33 +    0.0s]     sha organismo_v14g_codigo_on   7a1628b6e6a37f86
+[09:11:33 +    0.0s]     sha organismo_vivo_codigo      839fa71f9c84cb26
+[09:11:33 +    0.0s]     sha bateria_v14_codigo         875727174447b01a
+[09:11:33 +    0.0s]     sha bateria_generaliza_codigo  8669053f71fa76ef
+[09:11:33 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[09:11:33 +    0.0s]     sha origen_organismo_vivo      20c0961c79de8825
+[09:11:33 +    0.0s]     sha ref_sal                    d521f569205ebcfd
+[09:11:33 +    0.0s]     sha ref_examen                 ccb41783a4d6e4e9
+[09:11:33 +    0.0s]     sha ref_generaliza             6452fdf50352607e
+[09:11:33 +    0.0s]     sha corre_codigo_replica    bbd520e9f79d7f4b
+[09:11:33 +    0.1s]     ALIAS |D&B|>=3: 9/9; LIMPIAS |D&B|=0: 9/9; primeras 9 del rango 701-1100 recalculadas: ALIAS [779, 796, 822, 852, 895, 916, 917, 926, 944] coinciden, LIMPIAS [703, 712, 717, 725, 728, 744, 746, 751, 764] coinciden
+[09:11:33 +    0.1s] ETAPA 1/2 — mundo vivo: 63 corridas de 100000 pasos (7 brazos). Pool(14) aqui. T1/T2 no se repiten (inercia exacta en la serie 1).
+[09:11:42 +    9.1s]           9/63
+[09:11:50 +   17.0s]           18/63
+[09:11:51 +   17.2s]           27/63
+[09:11:58 +   25.1s]           36/63
+[09:12:05 +   31.9s]           45/63
+[09:12:07 +   33.5s]           54/63
+[09:12:14 +   40.4s]           63/63
+[09:12:14 +   40.4s] 
+[09:12:14 +   40.4s] ETAPA 2/2 — umbrales EXACTOS de PREREGISTRO_codigo.md (ERR-31) con las funciones de corre_codigo.py; G' en vez de G.
+[09:12:14 +   40.4s]    D0-ALIAS   n=9  |W[sal]| med 1.72  W[veneno] med -1.72  exp sal med 3718.0  splits med 0.0 (R=0: 0.0)  celdas med 30.0  muertes med 77.0
+[09:12:14 +   40.4s]         |W[sal]| [1.23, 1.72, 1.75, 1.66, 2.16, 1.75, 2.05, 1.11, 1.39]   W[ven] [-1.23, -1.72, -1.75, -1.66, -2.16, -1.75, -2.05, -1.11, -1.39]   celdas [30, 30, 30, 30, 30, 30, 30, 30, 30]   des_splits [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[09:12:14 +   40.4s]    D1-ALIAS   n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exp sal med 475.0  splits med 7.0 (R=0: 7.0)  celdas med 37.0  muertes med 41.0
+[09:12:14 +   40.4s]         |W[sal]| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [38, 37, 38, 35, 37, 39, 36, 35, 35]   des_splits [8, 7, 8, 5, 7, 9, 6, 5, 5]
+[09:12:14 +   40.4s]    D0-LIMPIA  n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exp sal med 519.0  splits med 0.0 (R=0: 0.0)  celdas med 30.0  muertes med 37.0
+[09:12:14 +   40.4s]         |W[sal]| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [30, 30, 30, 30, 30, 30, 30, 30, 30]   des_splits [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[09:12:14 +   40.4s]    D1-LIMPIA  n=9  |W[sal]| med 0.0  W[veneno] med -3.0  exp sal med 522.0  splits med 4.0 (R=0: 4.0)  celdas med 34.0  muertes med 43.0
+[09:12:14 +   40.4s]         |W[sal]| [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [38, 32, 35, 33, 34, 33, 36, 34, 34]   des_splits [8, 2, 5, 3, 4, 3, 6, 4, 4]
+[09:12:14 +   40.4s]    D1-SINSED  n=9  |W[sal]| med 0.0  W[veneno] med -2.92  exp sal med 397.0  splits med 7.0 (R=0: 7.0)  celdas med 37.0  muertes med 47.0
+[09:12:14 +   40.4s]         |W[sal]| [0.0, 0.0, 0.0, 0.01, 0.0, 0.0, 0.0, 0.0, 0.01]   W[ven] [-2.87, -2.96, -2.96, -2.86, -2.94, -2.88, -2.92, -2.88, -2.92]   celdas [38, 38, 38, 36, 37, 37, 35, 37, 35]   des_splits [8, 8, 8, 6, 7, 7, 5, 7, 5]
+[09:12:14 +   40.4s]    D0-VIVO    n=9  |W[sal]| med 1.85  W[veneno] med -1.79  exp sal med 3685.0  splits med 2.0 (R=0: 0.0)  celdas med 32.0  muertes med 141.0
+[09:12:14 +   40.4s]         |W[sal]| [1.59, 1.85, 2.11, 2.01, 2.19, 1.79, 1.83, 1.71, 1.86]   W[ven] [-1.41, -1.85, -2.11, -0.99, -2.19, -1.79, -1.17, -1.71, -1.86]   celdas [33, 33, 33, 32, 32, 31, 32, 30, 30]   des_splits [0, 0, 0, 0, 0, 0, 0, 0, 0]
+[09:12:14 +   40.4s]    D1-VIVO    n=9  |W[sal]| med 3.0  W[veneno] med -3.0  exp sal med 1994.0  splits med 8.0 (R=0: 6.0)  celdas med 38.0  muertes med 91.0
+[09:12:14 +   40.4s]         |W[sal]| [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0]   W[ven] [-3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0, -3.0]   celdas [41, 42, 38, 35, 41, 42, 37, 35, 36]   des_splits [11, 11, 5, 5, 11, 11, 5, 5, 6]
+[09:12:14 +   40.4s]    C1 D1-ALIAS |W[sal]| <= 0.3 en >= 8/9, mediana <= 0.1  -> 9/9 (mediana 0.0)  PASA
+[09:12:14 +   40.4s]    C2 D1-ALIAS W_hambre[veneno] <= -2.8 en >= 8/9 y <= -2.5 en 9/9  -> 9/9 y 9/9 (mediana -3.0)  PASA
+[09:12:14 +   40.4s]    C3 exposiciones a la sal de D1-ALIAS <= 1.5 x la mediana de D1-LIMPIA en >= 8/9  -> limpias 522.0, alias 475.0, 9/9  PASA
+[09:12:14 +   40.5s]    C4 des_splits >= 1 en D1-ALIAS 9/9; la primera division por R=0 es en una mordida de D en >= 8/9  -> 9/9 y 4/9  NO
+[09:12:14 +   40.5s]    C5 D1-ALIAS y D1-LIMPIA celdas <= 45 en 18/18; mediana de celdas <= 40  -> 18/18, mediana 35.0, max 39  PASA
+[09:12:14 +   40.5s]    C6 D1-LIMPIA |W[sal]| <= 0.3 en 9/9 y W_hambre[veneno] <= -2.8 en 9/9  -> 9/9 y 9/9 (des_splits mediana 4.0)  PASA
+[09:12:14 +   40.5s]    C7 D1-SINSED cumple C1 (|W[sal]| <= 0.3) y C2 (W[veneno] <= -2.8) en >= 8/9 cada uno  -> 9/9 y 9/9  PASA
+[09:12:14 +   40.5s]    C8 tabla 2x2 en D1-VIVO: |W_h[sal]|<=0.3, W_s[sal]<=-2.5, W_h[ven]<=-2.8, |W_s[ven]|<=0.3 (las cuatro) en >= 7/9; en D0-VIVO falla en >= 7/9  -> ON exacta 9/9, OFF falla 9/9  PASA
+[09:12:14 +   40.5s]         [W_h[sal], W_s[sal], W_h[ven], W_s[ven]] ON: [[-0.0, -3.0, -3.0, -0.0], [0.0, -3.0, -3.0, 0.0], [0.0, -3.0, -3.0, 0.0], [-0.0, -3.0, -3.0, 0.0], [-0.0, -3.0, -3.0, -0.0], [0.0, -3.0, -3.0, 0.0], [-0.0, -3.0, -3.0, -0.0], [0.0, -3.0, -3.0, 0.0], [0.0, -3.0, -3.0, 0.0]]
+[09:12:14 +   40.5s]         OFF: [[-1.41, -1.59, -1.41, -1.59], [-2.11, -0.89, -2.11, -0.89], [-1.85, -1.15, -1.85, -1.15], [-2.19, -0.81, -2.19, -0.81], [-0.99, -2.01, -0.99, -2.01], [-1.79, -1.21, -1.79, -1.21], [-1.86, -1.14, -1.86, -1.14], [-1.17, -1.83, -1.17, -1.83], [-1.71, -1.29, -1.71, -1.29]]
+[09:12:14 +   40.5s]    C9 muertes D1-ALIAS <= 0.8 x D0-ALIAS (medianas; se reporta A12)  -> 41.0 contra 77.0 (razon 0.532, A12 1.0)  PASA
+[09:12:14 +   40.5s]    G' D0-ALIAS |W[sal]| > 0.3 en >= 8/9 y D0-LIMPIA |W[sal]| <= 0.3 en 9/9  -> 9/9 y 9/9  PASA
+[09:12:14 +   40.5s] 
+[09:12:14 +   40.5s] VEREDICTO: REPLICA PASA: G' ok; C1 ok, C2 ok, C3 ok, C5 ok, C6 ok, C7 ok, C8 ok, C9 ok; C4 (causa) 9/9 y 4/9 -> NO
+[09:12:14 +   40.5s] datos -> codigo_replica_alias9_20260918_091133.json  sha256_16 = 83577dbe1323bfbe

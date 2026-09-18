@@ -94,3 +94,11 @@ Queda como órgano del mundo de regla (xor01 0.81 estricta). Su V1 nunca se midi
 
 ## Candidato v15d (18 sep 08:38; V2a corregida 08:46): NO entra — el EXAMEN cae por REVERSIÓN (E2 0/20: la tabla de un golpe no se desdice; E1 0/20: la vía rápida no consolida), aunque conserva la generalización lineal (G1 1.000 / G2 0.999) y cruza XOR con 8 ejemplos (0.875 estricta); coste −18 % en celdas
 Vocabulario: "la memoria de pares generaliza y cruza XOR con 8 ejemplos, pero no se desdice". Siguiente candidato con preregistro nuevo: tabla reescribible (v15e). Detalle en `REGISTRO_etapas_1_2.md` (ERR-38 y v15d).
+
+
+## Candidato a v15 — "división por R = 0" (desambiguar códigos; creador B; 18 sep 09:12): DECLARADO en dos series, decide el director
+Perilla `desambiguar=1` en `experimentos/creacion_B/organismo_v14_codigo.py` (a4eeca90fb605c78; por anclas desde v14.1): la división por
+conflicto de v11 se dispara también cuando una celda consolidada recibe `R = 0` bajo una retina distinta; la hija nace sin valor. En los
+mundos del tronco no actúa nunca (examen 8/8 con `splits` idénticos a v14.1; generalización 40/40 idéntica): coste 0 % exacto. En el mundo
+vivo repara el alias de código (18/18 semillas ALIAS en dos series: |W[sal]| 0.0, veneno −3.0, muertes 41 contra 75–77). Entraría como
+v14.2 (sin cambiar ningún número del tronco) o como parte de v15. Detalle: `REGISTRO_etapas_1_2.md` (B-5 y réplica).

@@ -4910,3 +4910,31 @@ LIMPIAS 703, 712, 717, 725, 728, 744, 746, 751, 764; mismos umbrales; T1/T2 no s
 **Nada se declara hasta la réplica.** Vocabulario provisional: *"cuando una celda con valor recibe nada bajo una retina distinta,
 divide: el código deja de prestar valor"*. Predicción de B cumplida en 8/9 (predijo C1–C2 9/9, C3 400–700, C6 9/9, C9 40–50, T1–T3
 identidad); C4 no como se escribió.
+
+
+### Bloque B-5, RÉPLICA en semillas nuevas (18 sep 09:12; ALIAS 779–944 y LIMPIAS 703–764 elegidas estructuralmente antes de correr): **PASA — DECLARADO (nivel 4): "cuando una celda con valor recibe nada bajo una retina distinta, divide: el código deja de prestar valor". El alias de código se repara con una regla local que en el tronco no actúa nunca. C4 (dónde cae la primera división) 4/9: ese criterio estaba mal escrito como marca de causa**
+
+Runner `corre_codigo_replica.py` (reutiliza las funciones y umbrales de `corre_codigo.py`; enmienda 1 del preregistro, escrita antes);
+guarda estructural: las 9 primeras ALIAS y LIMPIAS del rango 701–1100 recalculadas coinciden; datos `codigo_replica_alias9_20260918_091133`
+(83577dbe1323bfbe; 63 corridas, T = 100 000, 40 s con Pool(14)). T1/T2 no se repiten (inercia exacta medida en la serie 1).
+
+| brazo (n = 9) | \|W[sal]\| serie 1 → réplica | W[veneno] | exposiciones a la sal | divisiones por R = 0 | celdas | muertes |
+|---|---|---|---|---|---|---|
+| D0-ALIAS (v14.1) | 1.45 → **1.72** | −1.45 → −1.72 | 3 835 → 3 718 | 0 → 0 | 30 → 30 | 75 → 77 |
+| **D1-ALIAS** | **0.0 → 0.0** | **−3.0 → −3.0** | **517 → 475** | 7 → 7 | 37 → 37 | **41 → 41** |
+| D1-LIMPIA | 0.0 → 0.0 | −3.0 → −3.0 | 545 → 522 | 3 → 4 | 33 → 34 | 35 → 43 |
+| D1-SINSED | 0.0 → 0.0 | −2.9 → −2.92 | 414 → 397 | 7 → 7 | 37 → 37 | 42 → 47 |
+| D0-VIVO / D1-VIVO | 1.69 / 3.0 (W_s) → 1.85 / 3.0 | −1.61 / −3.0 → −1.79 / −3.0 | 3 833 / 1 936 → 3 685 / 1 994 | 3 / 10 → 2 / 8 | 33 / 40 → 32 / 38 | 146 / 90 → 141 / 91 |
+
+Criterios en la réplica: G′ 9/9 y 9/9 · C1 9/9 (mediana 0.0) · C2 9/9 y 9/9 · C3 9/9 (475 contra 522) · **C4 9/9 y 4/9 (NO)** · C5 18/18
+(mediana 35, máx. 39) · C6 9/9 y 9/9 · C7 9/9 y 9/9 · C8 ON 9/9, OFF falla 9/9 · C9 41 contra 77 (0.532; A₁₂ 1.0). Veredicto por la
+letra de la enmienda 1: **PASA** (G′ y C1–C3, C5–C9). **Lectura de C4:** la primera división por `R = 0` cae en una mordida de agua o
+de sal indistintamente (4/9 en D; 7/9 en la serie 1): el criterio marcaba *dónde* cae la primera división, no *si* la división de la
+celda de la sal ocurre y deja el valor en 0 — eso sí ocurre 18/18 (C1). Queda anotado para reescribirlo como criterio de causa en el
+siguiente preregistro de esta línea (la división de la celda compartida por D precede a la caída de `|W[sal]|`). **Declarable:**
+*con K = 3 dos estímulos pueden compartir código; cuando una celda con valor consolidado recibe R = 0 bajo una retina distinta,
+divide, la hija nace sin valor y el código deja de prestar valor: el estímulo que no informa queda en 0.0, el veneno conserva −3.0,
+la evitación cae de ×7 a ×1 y las muertes a la mitad (18/18 semillas ALIAS en dos series); en el tronco la regla no actúa nunca
+(examen y generalización idénticos a v14.1)*. Nivel 4 → 75 %. **Candidato a v15 ("división por R = 0", perilla `desambiguar`):
+la entrada al tronco la decide el director** (`registro/PROPUESTA_v14.md`). Pendiente de la línea: réplica con `R = 0` ruidoso
+y alias de magnitud (regímenes que hoy no existen), y el gemelo compilado.
