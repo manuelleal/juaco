@@ -491,10 +491,24 @@ commiteado (`git log`) y respaldado en `JUACO/respaldo/juaco_bundle_20260917_*.b
 |---|---|---|---|
 | **3 generalización** | lineal: Etapa 3 cerrada (v9), recuperada en v13 tras ERR-20 (0.80–0.90 en nunca vistos; `bateria_generaliza` obligatoria) | no lineal (XOR 0.44): bloque 3 (límite de lectura) | 70 % |
 | **4 memoria persistente** | retención 20/20 (v11/v13), capacidad ×5 (50/60 v11; 35/60 v13 por la puerta), examen v3' | retención de lo **ausente** bajo interferencia (0.67 a 150k pasos); canje puerta/capacidad; olvido dirigido | 60 % |
-| **5 comunicación / transferencia** | N1 experto→novato (replicado); N3d transferencia entre sensores por conducta (replicado); mudo = obedece | N2 significado emergente (5 diseños ❌; bloque 5 en mundo con reaparición); que el receptor aprenda algo propio; XOR entre dos | 50 % |
+| **5 comunicación / transferencia** | N1 experto→novato (replicado); N3d transferencia entre sensores por conducta (replicado); mudo = obedece, crea dependencia | **N2 cerrado con dos mundos** (6 diseños ❌; N2f v3 con montaje válido; INNATO 60 vs 278: el canal serviría con significado dado); que el receptor aprenda algo propio; XOR entre dos | 50 % |
 | **6 planificación** | mapa: elige la dirección hacia comida recordada fuera de la vista (replicado; invertido huye); tras el cambio de regla muere menos | horizonte real (dos metas, rodeo), secuencia de acciones, `M` que se degrade; canje exploración/explotación (bloque 2) | 35 % |
-| **7 composición** | 3T-k: historia de hasta 4 pasos con distractores (control ≈ 0); techo = pool de celdas | composición de rasgos (XOR; bloque 3); composición social (XOR entre dos) | 55 % |
-| **8 aprendizaje abierto** | sigue aprendiendo hasta el techo de la retina (50 patrones, 0.80); se recupera del cambio de regla (2–4k pasos, 18/20); el mapa cobra exploración | retención de lo ausente; curiosidad (bloque 2); dominio distinto del anillo; órgano de olvido/fusión | 40 % |
+| **7 composición** | 3T-k: historia de hasta 4 pasos con distractores (control ≈ 0); techo = pool de celdas | composición de rasgos: **XOR no es límite de dimensión ni de puerta sino de la REGLA de la vía lenta** (3, 3b, trío); 3d pendiente; composición social (XOR entre dos) | 55 % |
+| **8 aprendizaje abierto** | sigue aprendiendo hasta el techo de la retina (50 patrones, 0.80); se recupera del cambio de regla (2–4k pasos, 18/20); el mapa cobra exploración | retención de lo ausente (0.67 = interferencia); **canje del mapa: curiosidad por progreso ❌ y novedad de sitio ❌ (dos dosis; lo desplaza, no lo rompe)**; dominio distinto del anillo; olvido/fusión | 40 % |
 | (9 autonomía) | recuperación medida ante cambio no avisado | allostasis (bloque 6), meta propia | 20 % |
 
 Los porcentajes son juicio mío, no medida: "100 %" sería el nivel cerrado con réplica y sin cabos abiertos en su fila.
+
+
+## 14. Cierre del día 6 (17 sep, 23:00) — con equipo
+
+Resultados de la segunda mitad de la noche (todo en `REGISTRO_etapas_1_2.md`, entradas del día 6): bloque 2 ❌ (curiosidad
+por progreso), bloque 2 bis ❌ en dos dosis (novedad de sitio: 0.800 y 0.841 contra 0.85; mueve el canje, no lo rompe),
+bloque 3 ❌ y 3b ❌ (XOR: la lectura cuadrática representa el producto, la regla de la vía lenta no lo separa; ni dimensión
+ni puerta), trío XOR → propuesta 3d firmada (hipótesis), bloque 5 ❌ con montaje válido (N2 cerrado con dos mundos).
+Instrumentos: gemelos compilados bit a bit del tronco, 3T-k, mapa, mundo de regla/XOR (integrados, con `--rapido`),
+social (en actualización), mundo largo (en construcción); regla 9 de `EQUIPO.md` (recursión + `cache=True` segmenta).
+Errores de la noche: KeyError del runner del bloque 2 (dos arranques sin datos), `/tmp` de Git Bash ≠ `/tmp` de Python,
+arnés de N2f que exige ruta (mi cadena no la pasó: se repitió aparte, 8/8). **Día 7:** ver `PLAN.md` (bloques 3d, 6;
+canje del mapa sólo si ataca la escala del recuerdo de veneno; nivel 6 dos metas y rodeo; N2 sólo con un mecanismo de
+significado por predicción).

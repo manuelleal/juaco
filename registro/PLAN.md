@@ -45,6 +45,10 @@
 >   sitio (`mundo_social_n3`, `regen = 50`), que equilibra visitas (la causa registrada del cierre). Predicción: contraste
 >   ≥ 0.5 en ≥ 10/20 y beneficio ≥ 1.2 × N0 en ≥ 15/20. Si cae, N2 queda cerrado con dos mundos.
 >
+> **Día 7, orden sugerido al cierre del día 6:** (1) 3d XOR con la regla fusionada del trío (instrumento único por anclas,
+>   gemelo XOR en segundos); (2) nivel 6: dos metas y rodeo con el gemelo del mapa; (3) canje del mapa: sólo un candidato que
+>   ataque la ESCALA del recuerdo de veneno; si cae, canje estructural y v14 sin mapa; (4) bloque 6; (5) N2 sólo con
+>   significado por predicción (el brazo INNATO mostró que el canal serviría con significado dado).
 > **Bloque 6 — exploratorio (rama, 5–10 semillas):** modelo de sí mismo mínimo = predictor de la propia energía
 >   (allostasis, nivel 9 §3): el organismo predice ΔE del próximo bocado con su propio valor y usa el **error de esa
 >   predicción** como señal de sorpresa que module `eta`. Sólo se mide; no se declara nada.

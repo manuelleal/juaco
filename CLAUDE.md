@@ -121,8 +121,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   dé 100 % (repetirlo tras cualquier cambio de numpy/numba):** tronco `organismo/organismo_v13_rapido.py` (72/72 +
   ampliada 180/180 del revisor; ×58–78) · 3T-k `experimentos/nivel7_3T_k/mundo_temporal_k_rapido.py` (146/146; ×45–74;
   `corre_3T_k.py --rapido`) · mapa `experimentos/nivel6_mapa/mundo_mapa_rapido.py` (90/90 + 81/81; ×30 con mapa;
-  `corre_mapa.py --rapido`) · mundo de regla/XOR `organismo_v13q_rapido.py` (81/81 + 243/243 en el agente; pendiente de
-  las lecturas del 3b y de mi verificación) · social y mundo largo: en construcción. Regla 9 de `registro/EQUIPO.md`
+  `corre_mapa.py --rapido`) · mundo de regla/XOR `experimentos/nivel7_xor_lectura/organismo_v13q_rapido.py` (81/81 +
+  243/243 + 81/81; ×68–113; `corre_xor*.py --rapido`; `bateria_generaliza.py organismo_v13_rapido`) · social
+  `mundo_social_n3_rapido.py` (84/84 en el agente, ×60; en actualización con las perillas de N2f v3) · mundo largo /
+  novedad: en construcción. Regla 9 de `registro/EQUIPO.md`
   (nunca recursión con `cache=True`; sumas por pares de NumPy; empates de argsort a NumPy).
 - **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 4 (k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
   0.67/0.50 (interferencia, no inversión; `largo_s21-40_20260917_204840`); N3d mudo 0.503 = obedece, no enseña
