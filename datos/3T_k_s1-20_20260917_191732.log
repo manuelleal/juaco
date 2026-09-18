@@ -1,0 +1,44 @@
+[19:17:32 +    0.0s] ARRANQUE 3T-k sobre v13. k en [1, 2, 3], brazos ['C1', 'C1p', 'C2b', 'C3', 'C3C'], semillas 1-20. Pool(14).
+[19:17:32 +    0.0s] sha preregistro cf38dfab9c90645d  script ed84e168356a96b4  mundo_temporal_k 68736baafe7c8cdb  v13 cc8b16b492d4d324
+[19:17:33 +    0.7s] REGLA 11 — procesos python vivos (2), este es pid 2316
+[19:17:33 +    0.9s] ETAPA 1/3 — identidad k=1 == mundo_temporal_v13 (18)...
+[19:18:01 +   28.5s]   identicos: 18/18
+[19:18:01 +   28.5s] ETAPA 2/3 — 300 corridas...
+[19:18:22 +   49.3s]           30/300
+[19:18:36 +   63.4s]           60/300
+[19:18:51 +   78.4s]           90/300
+[19:19:05 +   92.6s]           120/300
+[19:19:20 +  107.4s]           150/300
+[19:19:34 +  121.9s]           180/300
+[19:19:50 +  137.5s]           210/300
+[19:20:08 +  156.2s]           240/300
+[19:20:23 +  170.9s]           270/300
+[19:20:38 +  185.7s]           300/300
+[19:20:38 +  185.7s] ETAPA 3/3 — analisis.
+[19:20:38 +  185.7s] 
+[19:20:38 +  185.7s]   k = 1
+[19:20:38 +  185.7s]    C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.031  solap_A 3.00  divisiones 0  muertes 104
+[19:20:38 +  185.7s]    C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.031  solap_A 3.00  divisiones 0  muertes 104
+[19:20:38 +  185.7s]    C2b  sep +0.00 [+0.00,+0.00]  lift_q4 -0.166  solap_A 3.00  divisiones 0  muertes 122
+[19:20:38 +  185.7s]    C3   sep +3.97 [+1.55,+3.98]  lift_q4 +0.374  solap_A 0.00  divisiones 5  muertes 98
+[19:20:38 +  185.7s]    C3C  sep -0.24 [-1.53,+1.57]  lift_q4 -0.030  solap_A 0.00  divisiones 6  muertes 92
+[19:20:38 +  185.7s]    T1 solap<=1 OK | T2 sep>=1.0 OK | T3 lift>=.15 OK | T4 C3C OK | T5 C3-C3C>=1 en 20/20 OK | T6 C2b,C1p<1 OK  -> COMPONE a profundidad 1
+[19:20:38 +  185.7s] 
+[19:20:38 +  185.7s]   k = 2
+[19:20:38 +  185.7s]    C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.013  solap_A 3.00  divisiones 0  muertes 88
+[19:20:38 +  185.7s]    C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.013  solap_A 3.00  divisiones 0  muertes 88
+[19:20:38 +  185.7s]    C2b  sep +0.00 [+0.00,+1.66]  lift_q4 -0.121  solap_A 3.00  divisiones 0  muertes 115
+[19:20:38 +  185.7s]    C3   sep +3.74 [+1.47,+3.97]  lift_q4 +0.375  solap_A 0.00  divisiones 11  muertes 92
+[19:20:38 +  185.7s]    C3C  sep +0.08 [-0.92,+0.92]  lift_q4 -0.013  solap_A 0.00  divisiones 30  muertes 79
+[19:20:38 +  185.7s]    T1 solap<=1 OK | T2 sep>=3.0 OK | T3 lift>=.15 OK | T4 C3C OK | T5 C3-C3C>=1 en 20/20 OK | T6 C2b,C1p<1 OK  -> COMPONE a profundidad 2
+[19:20:38 +  185.7s] 
+[19:20:38 +  185.7s]   k = 3
+[19:20:38 +  185.7s]    C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.009  solap_A 3.00  divisiones 0  muertes 80
+[19:20:38 +  185.7s]    C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.009  solap_A 3.00  divisiones 0  muertes 80
+[19:20:38 +  185.7s]    C2b  sep +0.00 [+0.00,+1.97]  lift_q4 -0.100  solap_A 3.00  divisiones 0  muertes 116
+[19:20:38 +  185.7s]    C3   sep +2.24 [+1.48,+3.38]  lift_q4 +0.161  solap_A 0.00  divisiones 28  muertes 96
+[19:20:38 +  185.7s]    C3C  sep +0.11 [-0.50,+0.77]  lift_q4 -0.002  solap_A 0.00  divisiones 60  muertes 74
+[19:20:38 +  185.7s]    T1 solap<=1 OK | T2 sep>=2.0 OK | T3 lift>=.15 OK | T4 C3C OK | T5 C3-C3C>=1 en 20/20 OK | T6 C2b,C1p<1 OK  -> COMPONE a profundidad 3
+[19:20:38 +  185.7s] 
+[19:20:38 +  185.7s] VEREDICTO 3T_k: k1=COMPONE k2=COMPONE k3=COMPONE
+[19:20:38 +  185.7s] datos -> 3T_k_s1-20_20260917_191732.json  sha256_16 = 767bd661747cf568
