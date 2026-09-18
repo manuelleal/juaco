@@ -43,6 +43,20 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
 | **Auditor** | Sonnet | lee preregistros, instrumentos y resultados buscando las cuatro trampas, criterios inconsistentes, fugas de identidad, vocabulario inflado | informe con hallazgos numerados (candidatos a ERR) |
 | **Cronista** | Sonnet | a partir de log + JSON de una corrida, redacta la entrada de `REGISTRO_etapas_1_2.md` y la línea de `CLAUDE.md`/`HANDOFF.md` | texto para que el coordinador lo pegue y commitee |
 
+### Célula de creación (decisión del director, 17-sep 23:00)
+- **Tres creadores (Opus):** A matemática del aprendizaje local (reglas, identificabilidad, predicción); B representación y
+  computación (códigos, capacidad, dendritas); C sistemas vivos y mente (modelo de sí mismo, significado por predicción).
+  Libertad de consulta y de exploración; cada uno escribe SÓLO en su sección de `registro/investigacion/PUENTE_creacion.md`,
+  trabaja en copias por anclas en `experimentos/creacion_<X>/` (identidad bit a bit con perillas apagadas ANTES de mirar
+  números), mini-pruebas de un proceso, sin `Pool`, sin commits.
+- **Explorador ligero (Haiku), a demanda:** contesta preguntas numeradas del puente, corto y con fuente; también deja guía
+  no solicitada cuando el coordinador lo despacha. Pocos tokens.
+- **Salida de la célula:** "Propuestas para el coordinador" con el formato fijo (hipótesis · mecanismo mínimo y memoria ·
+  instrumento · predicción numérica · control que puede fallar · mini-prueba con números). El coordinador convierte en
+  bloques preregistrados (un implementador o el propio creador escribe preregistro + runner; el coordinador verifica la
+  identidad, commitea, corre el Pool, registra). Lo que toque el tronco va a rama o copia; la decisión de tronco es del
+  director.
+
 ## Coordinación de CPU
 Un solo experimento con `Pool` a la vez (regla 11). Antes de lanzar, el coordinador mira los procesos python vivos (los
 runners lo registran en el log). Los agentes que necesiten CPU para identidad lo hacen en un proceso y lo dicen en su informe.
