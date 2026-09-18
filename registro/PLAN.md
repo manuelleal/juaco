@@ -53,6 +53,17 @@
 > **Bloque 6 — exploratorio (rama, 5–10 semillas):** modelo de sí mismo mínimo = predictor de la propia energía
 >   (allostasis, nivel 9 §3): el organismo predice ΔE del próximo bocado con su propio valor y usa el **error de esa
 >   predicción** como señal de sorpresa que module `eta`. Sólo se mide; no se declara nada.
+> **Madrugada del 18 (célula de creación; el director ausente; decisiones del coordinador, documentadas), ORDEN VIGENTE
+>   — un Pool a la vez, cada bloque con preregistro, identidad dentro del runner y registro al terminar:**
+>   (1) **A-2 metaplasticidad por masa de conflicto** (nivel 8, retención de lo ausente 0.67 → ≥ 0.80; `mundo_largo_A`,
+>   memoria nueva cero; semillas 41–60; control: muertes y `ret_inv`); (2) **B-1 hija dispersa** (nivel 7, k = 4/5;
+>   `mundo_k_B3`; semillas 61–80; control decisivo: máscara al azar); (3) **B-2 puerta por evidencia del código exacto**
+>   (nivel 4, capacidad sin perder generalización; montaje de `reverificacion_v13` 41–60 + baterías sobre `organismo_v13B`;
+>   candidato a v14 si pasa — la decisión de tronco es del director); (4) **A-1 XOR 3f** (tres piezas: selección por
+>   competencia, tope ≥ 10, muestreo) sólo si el instrumento de selección abre el conjuntivo correcto en la mini-prueba;
+>   (5) **A-3 vector único** (simplificación de la vía lenta con identidad; 101–120); (6) **mundo 2D** (nivel 6) según el
+>   informe del diseñador; (7) **C** (modelo de sí mismo, aprender sin morder, significado por predicción) según su
+>   propuesta. Lo que toque el tronco va a rama o copia; nada entra a v14 sin examen v3' + baterías + réplica.
 >
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
 > (lista de la noche del 17: canal simétrico, acierto sin balancear, mundo que se come la comida, sitios que se memorizan).
