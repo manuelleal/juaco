@@ -1,0 +1,35 @@
+[07:50:13 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3). PREREGISTRO_mundo_vivo.md.
+[07:50:13 +    0.0s] Semillas 1-2 (las de la mini-prueba): NINGUNA de las 181-200 del bloque queda expuesta.
+[07:50:14 +    0.0s]     sha preregistro            a25825bdec5f964c
+[07:50:14 +    0.0s]     sha script                 4846d05e3edb3fe6
+[07:50:14 +    0.0s]     sha constructor            03c83de17e34d9a0
+[07:50:14 +    0.0s]     sha instrumento            20c0961c79de8825
+[07:50:14 +    0.0s]     sha arnes                  2eb84108b8507096
+[07:50:14 +    0.0s]     sha mini                   f3e86cbe6c17e6d7
+[07:50:14 +    0.0s]     sha origen_organismo_v14   feefc88b1fd8d434
+[07:50:14 +    0.0s]     origen organismo_v14 esperado feefc88b1fd8d434 -> OK
+[07:50:14 +    0.0s] 1/2 IDENTIDAD, 5 casos x 2 semillas, T=5000.
+[07:50:14 +    0.9s]     (A) vivo=0 == v14                                    2/2
+[07:50:15 +    1.7s]     (G) linaje v13 (mask_rel=0, puerta_pat=0)            2/2
+[07:50:16 +    2.5s]     (I) TODO encendido, 1 necesidad y 2 estimulos == v14 2/2
+[07:50:17 +    3.7s]     (J) lo mismo con inversion                           2/2
+[07:50:19 +    5.3s]     (M) 4 estimulos y 2 necesidades != v14 (DEBE fallar) 2/2
+[07:50:19 +    5.4s]   IDENTIDAD 10/10
+[07:50:19 +    5.4s] 2/2 UNA corrida por brazo, T=20000, semilla 1 (7 corridas).
+[07:50:20 +    6.7s]     V14          1.40 s  xor01 0.5  celdas(estrictas) 2/4  exp_tabla None  peor error 2.5  muertes 30 [30, 0]
+[07:50:20 +    6.7s]                 exp por casilla {'0xA': 4, '0xB': 3, '1xC': None, '1xD': None}   error por casilla {'0xA': 0.0, '0xB': 0.26, '0xC': 0.5, '0xD': 2.5, '1xA': None, '1xB': None, '1xC': None, '1xD': None}
+[07:50:22 +    8.5s]     VIVO         1.74 s  xor01 1.0  celdas(estrictas) 4/4  exp_tabla 9  peor error 0.0  muertes 21 [14, 7]
+[07:50:22 +    8.5s]                 exp por casilla {'0xA': 8, '0xB': 2, '1xC': 9, '1xD': 3}   error por casilla {'0xA': 0.0, '0xB': 0.0, '0xC': 0.0, '0xD': 0.0, '1xA': 0.0, '1xB': 0.0, '1xC': 0.0, '1xD': 0.0}
+[07:50:23 +    9.9s]     UNA_NEC      1.40 s  xor01 0.5  celdas(estrictas) 2/4  exp_tabla None  peor error 0.35  muertes 37 [14, 23]
+[07:50:23 +    9.9s]                 exp por casilla {'0xA': 5, '0xB': 2, '1xC': None, '1xD': None}   error por casilla {'0xA': 0.0, '0xB': 0.35, '0xC': 0.0, '0xD': 0.0, '1xA': None, '1xB': None, '1xC': None, '1xD': None}
+[07:50:25 +   11.5s]     ESCALAR      1.65 s  xor01 0.5  celdas(estrictas) 2/4  exp_tabla None  peor error 2.38  muertes 33 [10, 23]
+[07:50:25 +   11.5s]                 exp por casilla {'0xA': 2, '0xB': 1, '1xC': None, '1xD': None}   error por casilla {'0xA': 0.29, '0xB': 0.62, '0xC': 0.21, '0xD': 1.99, '1xA': 0.71, '1xB': 2.38, '1xC': 0.79, '1xD': 1.01}
+[07:50:27 +   13.2s]     BARAJA_CON   1.69 s  xor01 0.5  celdas(estrictas) 3/4  exp_tabla 7  peor error 1.61  muertes 21 [15, 6]
+[07:50:27 +   13.2s]                 exp por casilla {'0xA': 3, '0xB': 7, '1xC': 6, '1xD': 3}   error por casilla {'0xA': 0.61, '0xB': 1.35, '0xC': 0.42, '0xD': 1.61, '1xA': 0.61, '1xB': 1.35, '1xC': 0.42, '1xD': 1.61}
+[07:50:28 +   14.9s]     NO_INFORMA   1.65 s  xor01 1.0  celdas(estrictas) 3/4  exp_tabla None  peor error 0.65  muertes 5 [5, 0]
+[07:50:28 +   14.9s]                 exp por casilla {'0xA': 5, '0xB': 2, '1xC': 3, '1xD': None}   error por casilla {'0xA': 0.0, '0xB': 0.28, '0xC': 0.01, '0xD': 0.01, '1xA': 0.01, '1xB': 0.03, '1xC': 0.35, '1xD': 0.65}
+[07:50:30 +   16.9s]     BARAJA_POL   2.05 s  xor01 1.0  celdas(estrictas) 4/4  exp_tabla 9  peor error 0.0  muertes 77 [38, 39]
+[07:50:30 +   16.9s]                 exp por casilla {'0xA': 7, '0xB': 2, '1xC': 9, '1xD': 3}   error por casilla {'0xA': 0.0, '0xB': 0.0, '0xC': 0.0, '0xD': 0.0, '1xA': 0.0, '1xB': 0.0, '1xC': 0.0, '1xD': 0.0}
+[07:50:30 +   16.9s] ESTIMACION del bloque: 7x20 = 140 corridas de 100000 pasos, ~8.3 s/corrida en serie -> ~1.4 min de pared con Pool(14) (+ identidad: 15 comprobaciones de 2 x 20000 pasos).
+[07:50:30 +   17.0s] HUMO: numeros observados, sin ajustar nada. n=1, T corto y semilla vista: NO son evidencia.
+[07:50:30 +   17.0s] datos -> vivo_humo_20260918_075013.json  sha256_16 = ceb909ebd36997d4

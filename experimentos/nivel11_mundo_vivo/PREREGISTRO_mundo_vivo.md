@@ -267,3 +267,9 @@ UNA_NEC (160 contra 141 muertes): con dos necesidades, un valor escalar es **peo
 El veredicto de XOR ya está (línea cerrada 07:47), así que este bloque corre ahora con la enmienda 1 del diseñador tal cual (sus
 cuatro fallos corregidos antes de proponer) y sin ningún cambio de criterio. Semillas 181–200; réplica automática en 201–220 si
 algún veredicto queda a ±1 semilla del umbral (regla 12). Un `Pool` a la vez.
+
+**Aclaración del coordinador (07:55, ANTES de correr, sin cambiar umbrales):** P5 dice "su celda más lenta (B)"; la celda más lenta de V14 es A
+(4 exposiciones) y no B (3). Se lee P5 como "la celda más lenta de V14, sea cual sea" (= A); el runner calcula las dos lecturas y marca la
+contradicción; la lectura que decide es la de la celda más lenta real. Error de redacción, no de criterio. P8 (regresión del tronco) no la
+corre el runner porque el tronco no se toca (el sha de origen se verifica al arrancar). T = 100000 (el preregistro no fijaba T; los umbrales
+son razones entre brazos y cruces tempranos).
