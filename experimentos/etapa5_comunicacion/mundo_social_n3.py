@@ -46,7 +46,7 @@ class Organismo:
                  theta=0.6, ema=0.02, paso=0.5, lam=0.05, memoria_rechazo=20, learn=True, mu_norm=True, estado=None,
                  div_signo=True, eta_s=0.015, clip_s=3.0, puerta=3, pats=None, mundo='AB',
                  rng_q=None, K_sim=2, beta_q=2.0, eta_q=0.1, eta_m=0.1, tau_m=200, u_m=0.5,
-                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False, gamma_soc=0.0, tau_soc=400):   # N3
+                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False, gamma_soc=0.0, tau_soc=400, escucha=True):   # N3 (+escucha: N3b, ERR-23)
         """Replica linea a linea a organismo/organismo_v13.py (v11 + via lenta lineal + puerta de familiaridad).
         Con div_signo=False, eta_s=0, puerta=None es v10; ademas mu_norm=False, v9.
         pats/mundo: 'AB' (A,B) o 'regla' (los 20 patrones de peso 3, como organismo_v13g). N2: simbolos aprendidos
@@ -69,7 +69,7 @@ class Organismo:
         # N2b: el simbolo entra en la DECISION (gamma_sim * contraste, sin puerta) y el emisor aprende por VENTAJA (r - b[st])
         self.gamma_sim = gamma_sim; self.baseline_q = baseline_q; self.rho_b = rho_b; self.b = np.zeros(2); self.ultimo = {}
         self.alinea = alinea; self.alineaciones = 0   # N2e: el simbolo toma el valor de lo que el receptor ya conoce
-        self.gamma_soc = gamma_soc; self.tau_soc = tau_soc; self.s_ult = {}; self.n_sesgo_soc = 0   # N3: ultima senal honesta oida por patron
+        self.gamma_soc = gamma_soc; self.tau_soc = tau_soc; self.s_ult = {}; self.n_sesgo_soc = 0; self.escucha = escucha   # N3: ultima senal honesta oida por patron; N3b: si no escucha, no recibe nada
         self.Wp = np.zeros(NKMAX); self.Wn = np.zeros(NKMAX); self.err = np.zeros(NKMAX); self.mu = np.zeros((NKMAX, 6))
         self.splits = 0; self.el = np.zeros_like(self.Wl); self.tr = np.zeros(9)
         self.Wps = np.zeros(6); self.Wns = np.zeros(6)   # v13: via lenta lineal sobre la retina
@@ -349,7 +349,7 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
                     dl = (orgs[j].pos - px) % L; dist = min(dl, L - dl)
                     if dist <= d_senal:
                         if senal in SIMBOLOS: orgs[j].recibir_simbolo(kk, s, f_vicaria, val, t, invertir_en)
-                        else: orgs[j].recibir(kk, s, f_vicaria, val, t, invertir_en)
+                        elif orgs[j].escucha: orgs[j].recibir(kk, s, f_vicaria, val, t, invertir_en)   # N3b (ERR-23): el que no escucha no recibe
                         senales_recibidas[j] += 1
         if mundo.rng.random() < .003 and mundo.objs:
             _dx = list(mundo.objs)[int(mundo.rng.integers(len(mundo.objs)))]; del mundo.objs[_dx]; mundo.spawn()

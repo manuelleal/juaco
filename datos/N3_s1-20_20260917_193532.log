@@ -1,0 +1,24 @@
+[19:35:32 +    0.0s] ARRANQUE N3 (sentidos complementarios) sobre v13. condiciones ['TECHO', 'SOLO_E', 'SOLO_R', 'N0', 'CONV', 'SHUF', 'SACIEDAD'], semillas 1-20. Pool(14).
+[19:35:32 +    0.0s] sha preregistro 210653c9bb745b2e  script ab88be6a47a8af52  mundo_social_n3 1bc6dd2fb0a00224  mundo_social 946ff1c71e375eba
+[19:35:32 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 29052
+[19:35:32 +    0.5s] ETAPA 1/3 — identidad gamma_soc=0 sin mascaras == mundo_social (6)...
+[19:35:50 +   18.1s]   identicos: 6/6
+[19:35:50 +   18.1s] ETAPA 2/3 — 140 corridas...
+[19:36:20 +   48.0s]           20/140
+[19:36:35 +   63.3s]           40/140
+[19:37:05 +   93.3s]           60/140
+[19:37:57 +  145.2s]           80/140
+[19:38:48 +  196.5s]           100/140
+[19:39:50 +  258.1s]           120/140
+[19:40:45 +  313.5s]           140/140
+[19:40:45 +  313.6s] ETAPA 3/3 — analisis (receptor = organismo 0, ultimo cuarto).
+[19:40:45 +  313.6s]    TECHO     acierto 0.996 [0.99,1.00]  veneno_q4 20  muertes 268  sesgos 0  recibidas 0  emisor nan
+[19:40:45 +  313.6s]    SOLO_E    acierto 0.994 [0.88,1.00]  veneno_q4 32  muertes 262  sesgos 0  recibidas 0  emisor nan
+[19:40:45 +  313.6s]    SOLO_R    acierto 0.697 [0.65,0.76]  veneno_q4 164  muertes 239  sesgos 0  recibidas 0  emisor nan
+[19:40:45 +  313.6s]    N0        acierto 0.978 [0.96,0.99]  veneno_q4 55  muertes 667  sesgos 0  recibidas 0  emisor 0.995
+[19:40:45 +  313.6s]    CONV      acierto 0.696 [0.48,0.98]  veneno_q4 5  muertes 575  sesgos 34546  recibidas 10958  emisor 0.681
+[19:40:45 +  313.6s]    SHUF      acierto 0.704 [0.66,0.73]  veneno_q4 1464  muertes 1734  sesgos 25061  recibidas 10156  emisor 0.866
+[19:40:45 +  313.6s]    SACIEDAD  acierto 0.564 [0.54,0.58]  veneno_q4 2564  muertes 887  sesgos 23500  recibidas 10280  emisor 0.486
+[19:40:45 +  313.6s]    S1 CONV>=.80 y >SOLO_R en 10/20 NO | S2 >SHUF en 10/20 NO | S3 >SACIEDAD en 16/20 OK | S4 validez OK | S5 N0>SOLO_R en 20/20 NO
+[19:40:45 +  313.6s] VEREDICTO N3: NO (refutado o montaje invalido)
+[19:40:45 +  313.6s] datos -> N3_s1-20_20260917_193532.json  sha256_16 = ef73dcc2a1347581

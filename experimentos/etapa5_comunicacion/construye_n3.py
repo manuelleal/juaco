@@ -24,10 +24,12 @@ def sust(texto, viejo, nuevo, n=1, etiqueta=''):
 
 PARCHES = [
     (["                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False):"],
-     ["                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False, gamma_soc=0.0, tau_soc=400):   # N3"], 1, 'firma init'),
+     ["                 gamma_sim=0.0, baseline_q=False, rho_b=0.05, alinea=False, gamma_soc=0.0, tau_soc=400, escucha=True):   # N3 (+escucha: N3b, ERR-23)"], 1, 'firma init'),
     (["        self.alinea = alinea; self.alineaciones = 0   # N2e: el simbolo toma el valor de lo que el receptor ya conoce"],
      ["        self.alinea = alinea; self.alineaciones = 0   # N2e: el simbolo toma el valor de lo que el receptor ya conoce",
-      "        self.gamma_soc = gamma_soc; self.tau_soc = tau_soc; self.s_ult = {}; self.n_sesgo_soc = 0   # N3: ultima senal honesta oida por patron"], 1, 'init N3'),
+      "        self.gamma_soc = gamma_soc; self.tau_soc = tau_soc; self.s_ult = {}; self.n_sesgo_soc = 0; self.escucha = escucha   # N3: ultima senal honesta oida por patron; N3b: si no escucha, no recibe nada"], 1, 'init N3'),
+    (["                        else: orgs[j].recibir(kk, s, f_vicaria, val, t, invertir_en)"],
+     ["                        elif orgs[j].escucha: orgs[j].recibir(kk, s, f_vicaria, val, t, invertir_en)   # N3b (ERR-23): el que no escucha no recibe"], 1, 'escucha'),
     (["                _wt = _wt + self.gamma_sim * float(self.M[self.ultimo[kk][0]] - self.M.mean())"],
      ["                _wt = _wt + self.gamma_sim * float(self.M[self.ultimo[kk][0]] - self.M.mean())",
       "            if self.gamma_soc and kk in self.s_ult and t - self.s_ult[kk][1] <= self.tau_soc:   # N3: la conducta ajena reciente sesga la decision",

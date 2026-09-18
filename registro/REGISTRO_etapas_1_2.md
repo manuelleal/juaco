@@ -3092,3 +3092,25 @@ F1 (comida en Q4, MAPA > SINMAPA) **20/20 y 20/20**. Datos `mapa_s1-20_20260917_
 la vista, con el valor que ya tenía; y eso le da de comer*. No "planifica" (un paso de simulación, sin secuencia de
 acciones ni horizonte aprendido). Abierto: horizonte real (dos metas, rodeo por veneno), `M` que se degrade, y si el
 mismo mecanismo hacia ADELANTE (tabla) y hacia ATRÁS (3T-k) son la misma traza (nivel 6 ↔ 7, como propone el debate).
+
+
+### Etapa 5 N3 (sentidos complementarios), experimento 3 del plan: **cae tal como se diseñó, y destapa ERR-23 (instrumento y medida)**
+
+Preregistro `PREREGISTRO_N3.md` (regla `px0`; emisor ve píxeles 0–2, receptor ve 3–5; la conducta ajena reciente sesga
+la decisión del receptor, `gamma_soc = 1.5`; control de saciedad = emisor con `alpha = 0`). Instrumento
+`mundo_social_n3.py` (`1bc6dd2fb0a00224`, identidad con `mundo_social` 6/6). Datos `N3_s1-20_20260917_193532`
+(`ef73dcc2a1347581`). Receptor, último cuarto: TECHO 0.996 · SOLO_E 0.994 · SOLO_R **0.697** (el sesgo parcial de la
+vista 3–5 que la predicción ya anunciaba: 0.55–0.70) · **N0 0.978** · CONV 0.696 · SHUF 0.704 · SACIEDAD 0.564. S1 NO
+(10/20), S2 NO (10/20), S3 OK (16/20), S5 NO. **Refutado como estaba escrito.**
+
+**ERR-23 — dos fallos míos, visibles en los datos:**
+1. *Canal simétrico con sesgo en los dos.* `gamma_soc` fue por `kw_org` a ambos: el emisor que ve la regla escuchaba
+   al ciego (y aprendía vicariamente de él). Emisor solo 0.994 → emisor en CONV **0.681**; la señal que llegaba al
+   receptor ya venía contaminada. La pregunta ("¿le sirve al ciego la conducta del que ve?") no se llegó a hacer.
+2. *Acierto no balanceado.* Con "comida mordida + veneno rechazado / visitas", N0 dio 0.978 sin señal alguna: el emisor
+   se come la comida en cuanto aparece, el receptor visita casi sólo veneno, lo rechaza y **se muere de hambre (667
+   muertes)** "acertando". La medida premiaba no comer.
+
+Corrección preregistrada (`PREREGISTRO_N3b.md`, semillas nuevas 21–40): knob `escucha` (sólo el receptor escucha),
+**acierto balanceado** (½ · comida mordida/visitas a comida + ½ · veneno rechazado/visitas a veneno; rechazarlo todo
+= 0.50) y validez añadida: el emisor en CONV debe seguir ≥ 0.90. Sin recalibrar sobre 1–20.
