@@ -4825,6 +4825,8 @@ baterías de examen con el mismo sha). Datos anulados: `regresion_generaliza_org
 | v15d `suma` | **1.000** | 0.600 | 19/20 | **0.999** | 0.557 | 20/20 | `regresion_generaliza_organismo_v15d_on_20260918_084412` (4b9a36a127a2c2ea) |
 | v15c `sustituye` | **1.000** | 0.400 | 19/20 | **0.997** | 0.502 | 20/20 | `regresion_generaliza_organismo_v15c_on_20260918_084524` (820369ed5555ee73) |
 
+**Verificación independiente (creador B, 08:50, con los kwargs exactos de la batería, semilla 101, px0):** `Wps = [0, …, 0]` y
+`mem_vistas = 0` — con `eta_s = 0` ni la lineal aprende NI la tabla de pares se escribe: las V2a anuladas midieron la vía rápida sola.
 **Consecuencia:** la memoria de pares NO rompe la generalización lineal del tronco (cualquier par que contenga el píxel de la regla la
 generaliza); el veredicto de v15c queda enmendado (arriba) y superado por v15d. **Regla derivada (EQUIPO 14):** una entrada nueva en una
 batería copiada por anclas se compara campo a campo con la entrada del tronco; "por defecto" no existe cuando el módulo es un gemelo
