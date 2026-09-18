@@ -1,0 +1,25 @@
+[23:30:33 +    0.0s] ARRANQUE N3d (receptor ciego por construccion: 4 parejas misma vista 3-5 / valencia opuesta; regen=50; acierto balanceado; solo el receptor escucha) sobre v13. condiciones ['TECHO', 'SOLO_E', 'SOLO_R', 'N0', 'CONV', 'SHUF', 'SACIEDAD'], semillas 101-120. Pool(14).
+[23:30:33 +    0.0s] sha preregistro 9f87ddaf207313b4  script 2684190252a7bdfd  mundo_social_n3 ef227f833c5bf46a  mundo_social 946ff1c71e375eba
+[23:30:34 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 32112
+[23:30:34 +    0.5s] ETAPA 1/3 — identidad gamma_soc=0 sin mascaras == mundo_social (6)...
+[23:30:51 +   17.6s]   identicos: 6/6
+[23:30:57 +   23.5s]   identidad gemelo compilado == original (CONV, T=30000): 3/3
+[23:30:57 +   23.5s] ETAPA 2/3 — 140 corridas...
+[23:30:58 +   25.3s]           20/140
+[23:30:59 +   25.9s]           40/140
+[23:30:59 +   26.2s]           60/140
+[23:31:00 +   27.3s]           80/140
+[23:31:01 +   28.1s]           100/140
+[23:31:02 +   29.0s]           120/140
+[23:31:03 +   29.5s]           140/140
+[23:31:03 +   29.6s] ETAPA 3/3 — analisis (receptor = organismo 0, ultimo cuarto).
+[23:31:03 +   29.6s]    TECHO     acierto 0.998 [1.00,1.00]  veneno_q4 1  muertes 0  sesgos 0  recibidas 0  emisor nan
+[23:31:03 +   29.6s]    SOLO_E    acierto 0.998 [1.00,1.00]  veneno_q4 1  muertes 0  sesgos 0  recibidas 0  emisor nan
+[23:31:03 +   29.6s]    SOLO_R    acierto 0.512 [0.50,0.53]  veneno_q4 322  muertes 62  sesgos 0  recibidas 0  emisor nan
+[23:31:03 +   29.6s]    N0        acierto 0.504 [0.50,0.51]  veneno_q4 245  muertes 517  sesgos 0  recibidas 0  emisor 0.998
+[23:31:03 +   29.6s]    CONV      acierto 0.811 [0.76,0.84]  veneno_q4 310  muertes 80  sesgos 18824  recibidas 7047  emisor 0.998
+[23:31:03 +   29.6s]    SHUF      acierto 0.488 [0.46,0.51]  veneno_q4 1120  muertes 1142  sesgos 15466  recibidas 6198  emisor 0.998
+[23:31:03 +   29.6s]    SACIEDAD  acierto 0.507 [0.49,0.53]  veneno_q4 1237  muertes 276  sesgos 10093  recibidas 4797  emisor 0.512
+[23:31:03 +   29.6s]    S1 CONV>=.80 y >SOLO_R en 20/20 OK | S2 >SHUF en 20/20 OK | S3 >SACIEDAD en 20/20 OK | S4 validez OK | S5 N0>SOLO_R en 2/20 OK
+[23:31:03 +   29.6s] VEREDICTO N3d: TRANSFIERE entre sensores por conducta
+[23:31:03 +   29.6s] datos -> N3d_s101-120_20260917_233033.json  sha256_16 = cc5ca17e2e4bbf21

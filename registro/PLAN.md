@@ -47,7 +47,7 @@
 >
 > **Canje del mapa (17-sep 23:10): CERRADO COMO ESTRUCTURAL** (saturación refutada, tercer candidato); v14 no lleva el mapa.
 > **Día 7, orden sugerido al cierre del día 6:** (1) 3d XOR con la regla fusionada del trío (instrumento único por anclas,
->   gemelo XOR en segundos); (2) nivel 6: dos metas y rodeo con el gemelo del mapa; (3) canje del mapa: sólo un candidato que
+>   gemelo XOR en segundos); (2) ✅ nivel 6: dos metas y rodeo — HECHO y REPLICADO (23:30; rodeo 0.725/0.750 en el subconjunto válido preregistrado, pareado 14/14 y 16/16; invertido 0.25); (3) ✅ canje del mapa: sólo un candidato que
 >   ataque la ESCALA del recuerdo de veneno; si cae, canje estructural y v14 sin mapa; (4) bloque 6; (5) N2 sólo con
 >   significado por predicción (el brazo INNATO mostró que el canal serviría con significado dado).
 > **Bloque 6 — exploratorio (rama, 5–10 semillas):** modelo de sí mismo mínimo = predictor de la propia energía

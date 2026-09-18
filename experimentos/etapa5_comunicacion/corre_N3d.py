@@ -25,6 +25,7 @@ COND = {
 }
 IDENT = [dict(n=1, T=60000, mundo='regla', regla='px0'), dict(n=2, T=60000, mundo='regla', regla='px0', senal='conducta')]
 N_PARALELO = 14
+RAPIDO = '--rapido' in sys.argv   # gemelo compilado mundo_social_n3_rapido (135/135): solo si su etapa de identidad da 3/3
 _log = {'f': None, 't0': time.time()}
 
 
@@ -70,8 +71,21 @@ def tarea(args):
         a, b = a_.run(seed, **IDENT[i]), b_.run(seed, **IDENT[i])
         dif = [(j, kk) for j in range(len(a)) for kk in a[j] if N(a[j][kk]) != N(b[j][kk])]
         return dict(tipo=tipo, esc=f'ident{i}', seed=seed, identico=not dif, difieren=dif)
+    if tipo == 'R':   # identidad del gemelo compilado contra el original (CONV, parejas, T=30000)
+        _, seed = args
+        import mundo_social_n3 as a_, mundo_social_n3_rapido as b_
+        sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))
+        from organismo_v13g import split_regla
+        _, _, _, val = split_regla(seed, 'px0')
+        kw = dict(BASE); kw.update(COND['CONV']); kw['tipos_fijos'] = parejas(seed, val); kw['T'] = 30000
+        a, b = a_.run(seed, **kw), b_.run(seed, **kw)
+        dif = [(j, kk) for j in range(len(a)) for kk in a[j] if N(a[j][kk]) != N(b[j][kk])]
+        return dict(tipo=tipo, esc='rapido', seed=seed, identico=not dif, difieren=dif[:6])
     _, cond, seed = args
-    import mundo_social_n3 as m
+    if RAPIDO:
+        import mundo_social_n3_rapido as m
+    else:
+        import mundo_social_n3 as m
     sys.path.insert(0, os.path.join(RAIZ, 'experimentos', 'v13_dos_vias'))
     from organismo_v13g import split_regla
     _, _, _, val = split_regla(seed, 'px0')
@@ -115,6 +129,12 @@ if __name__ == '__main__':
         V['IDENTIDAD'] = all(x['identico'] for x in rc)
         if not V['IDENTIDAD']:
             log("*** IDENTIDAD FALLIDA: se para."); sys.exit(1)
+        if RAPIDO:
+            rr = pool.map(tarea, [('R', s) for s in (1, 2, 3)], chunksize=1)
+            log(f"  identidad gemelo compilado == original (CONV, T=30000): {sum(x['identico'] for x in rr)}/3")
+            if not all(x['identico'] for x in rr):
+                log('*** GEMELO NO IDENTICO: se para (corre sin --rapido).'); sys.exit(1)
+            V['IDENTIDAD_RAPIDO'] = True
         tr = [('T', c, s) for c in COND for s in SEEDS]
         log(f"ETAPA 2/3 — {len(tr)} corridas...")
         res = []

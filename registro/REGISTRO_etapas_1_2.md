@@ -3652,3 +3652,37 @@ análisis preregistrado sobre el **subconjunto válido** (semillas con V0 y V1):
 mediana del subconjunto y pareado ≥ 75 % del subconjunto; el conjunto completo se reporta igual. Sin recalibrar nada
 sobre 41–60. Vocabulario provisional: *elige entre dos comidas recordadas y se desvía por el lado largo cuando el veneno
 recordado pesa; no "planifica"*.
+
+
+### Nivel 6, dos metas y rodeo, serie 61–80 + análisis preregistrado del subconjunto válido (enmienda 1): **REPLICADO — elige entre dos comidas recordadas y se desvía por el lado largo cuando el veneno recordado pesa**
+
+Datos `rodeo_s61-80_20260917_232711` (`6e64975c0c14172c`), identidad 27/27. Conjunto completo: R1 **0.750** [0.40, 0.90] (pareado
+contra SINMAPA **19/20**), R2 0.700, R3 INVERTIDO 0.25, R4 llega sin pisar veneno 0.825; V0 16/20, V1 no en todas (como en 41–60).
+**Análisis del subconjunto válido (escrito en la enmienda 1 antes de esta serie; V0 = el mecanismo predice rodeo,
+V1 = `M` con los tres sitios):**
+
+| serie | válidas | R1 rodeo (mediana) | pareado MAPA > SINMAPA | R2 atajo | llega limpio | R1 en las NO válidas |
+|---|---|---|---|---|---|---|
+| 41–60 | 14/20 | **0.725** | **14/14** | 0.750 | 0.875 | 0.550 |
+| 61–80 | 16/20 | **0.750** | **16/16** | 0.700 | 0.850 | 0.800 |
+
+Las dos series pasan la enmienda (≥ 12 válidas, R1 ≥ 0.70, pareado ≥ 75 %, R2 ≥ 0.70, llega ≥ 0.60) y también los cuatro
+criterios sobre el conjunto completo. Donde el mecanismo no predice rodeo (veneno recordado débil, 4–6 semillas) el
+resultado es indistinguible del azar en una serie y alto en la otra: consistente con que el rodeo lo produce la suma
+descontada del valor recordado, no otra cosa (INVERTIDO 0.25 en ambas; SINMAPA = CONGELADA bit a bit 0.45–0.50).
+
+**Declarable (nivel 6, segundo peldaño):** *con dos comidas recordadas fuera de la vista, elige la más cercana cuando el
+camino está limpio y se desvía por el lado largo cuando el veneno recordado está en el corto, sin pisarlo (llega limpio
+0.83–0.88), con el mismo mecanismo del mapa (suma descontada por dirección del valor recordado) y sin ningún parámetro
+nuevo*. No "planifica" (un paso de simulación, sin secuencia). Diseño: agente diseñador (hallazgo: con sitios
+equidistantes el rodeo es geométricamente imposible; sitios asimétricos g = 5/20/15; desigualdad `v_B < −0.308·v_A`).
+Abierto: rodeo falso (veneno detrás de la comida corta: el mecanismo se desvía sin motivo) y secuencias de dos metas.
+
+
+### N3d, tercera serie (semillas 101–120) con el gemelo social compilado en producción: **TRANSFIERE (0.811); tres series 0.822 / 0.811 / 0.811**
+
+Datos `N3d_s101-120_20260917_233033` (`cc5ca17e2e4bbf21`). Etapa de identidad dentro del corredor: gemelo compilado ==
+original en CONV (T = 30 000, 3 semillas) **3/3** e identidades de montaje 6/6 antes de correr. CONV **0.811** [0.76, 0.84]
+(> SOLO_R 20/20; > SHUF 20/20; > SACIEDAD 20/20; N0 > SOLO_R 2/20, validez OK). SHUF 0.488, SACIEDAD 0.507, N0 0.504,
+SOLO_R 0.512, TECHO 0.998. `corre_N3d.py --rapido` queda enganchado (la serie con gemelo tarda minutos, no horas).
+Vocabulario sin cambio: *transfiere entre sensores por conducta*. Tres series independientes: se declara replicado ×3.
