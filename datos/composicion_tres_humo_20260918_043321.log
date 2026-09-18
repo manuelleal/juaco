@@ -1,0 +1,36 @@
+[04:33:21 +    0.0s] ARRANQUE composicion de TRES (hija dispersa + puerta por codigo + dE-TEST dosis 5). HUMO (un proceso, sin Pool, sin lanzar Pool en subprocesos)
+[04:33:21 +    0.0s] sha preregistro=0558a198017794f9  script=040088cfdbc13a26  constructor=fbc3e88ba28ae761  identidad=a9fb85c96a03d8c1  organismo_v14t=fc4a803019116a88  organismo_v14t_on=b2bcf9f5591efcfa  organismo_v14gt=9ffe024e6757ac98  bateria_v14t=fe5beafd90c1f4f0  bateria_generaliza_v14t=e2e4c2f9ddf2a8e6  corre_recuperacion_tres=b74012ae2bfe3994  origen organismo_v14c (composicion de dos)=649851c0f10c3cd6  origen bateria_v13 (congelada)=1a027bcb37eb536e  origen bateria_generaliza=46772f5a582872c8  origen construye_selfmodel=27c91df159a1465b  origen construye_probar=dd42e0170a014cbb
+[04:33:22 +    0.4s] REGLA 11 -- procesos python vivos (2), este es pid 10820
+[04:33:22 +    0.4s] 
+[04:33:22 +    0.4s] ETAPA humo 1/2 -- identidad en miniatura (perillas apagadas == organismo_v13, 2 semillas)...
+[04:33:22 +    0.7s]    s1: IDENTICO
+[04:33:22 +    0.9s]    s2: IDENTICO
+[04:33:22 +    0.9s]    -> True  (identidad completa: python identidad_v14t.py, 25/25 ya corrido)
+[04:33:22 +    0.9s] 
+[04:33:22 +    0.9s] ETAPA humo 2/2 -- T3 humo, delegado a corre_recuperacion_tres.py --humo (subproceso, sin Pool)...
+[04:33:23 +    1.8s]    ARRANQUE T3 recuperacion tras la inversion, LA TERCERA PIEZA EN COMPANIA (V13 vs TRES). HUMO (un proceso, sin Pool)  T=3000  invertir_en=1500  semillas 161-162
+[04:33:23 +    1.8s]    sha preregistro=0558a198017794f9  script=b74012ae2bfe3994  organismo_v14t=fc4a803019116a88  organismo_v14t_on=b2bcf9f5591efcfa  referencia_medida corre_probar_si_mismo=49ae078df2997776  referencia_criterio analiza_dE=6aef2c67b9a48276
+[04:33:23 +    1.8s]    
+[04:33:23 +    1.8s]    V13  recuperacion mediana 1500.0  censuradas 2/2
+[04:33:23 +    1.8s]    TRES recuperacion mediana 690.0  censuradas 0/2  razon TRES/V13 0.46
+[04:33:23 +    1.8s]    T3-P1' recuperacion TRES/V13 = 0.46 (<=0.6) y pareado 2/2 (>=14)  -> HUMO: no aplica
+[04:33:23 +    1.8s]    T3-P4' se apaga solo (forma relativa) en 0/2 (>=16)  -> HUMO: no aplica
+[04:33:23 +    1.8s]    T3-P7' (no bloqueante) veneno_post 16.5 <=4x10.0, muertes 2.5 <=1.5x5.0  -> HUMO: no aplica
+[04:33:23 +    1.8s]    
+[04:33:23 +    1.8s]    VEREDICTO T3: HUMO OK (montaje corre, ningun criterio numerico vale)
+[04:33:23 +    1.8s]    datos -> recuperacion_tres_humo_20260918_043322.json  sha256_16 = e703f3e444e8326e
+[04:33:23 +    1.8s] 
+[04:33:23 +    1.8s] ETAPA T1 -- SALTADA en modo humo (exige Pool via bateria_v14t.py; la corre el coordinador sin --humo).
+[04:33:23 +    1.8s] 
+[04:33:23 +    1.8s] ETAPA T2 -- SALTADA en modo humo (exige Pool via bateria_generaliza_v14t.py).
+[04:33:23 +    1.8s] 
+[04:33:23 +    1.8s] ETAPA T3 -- SALTADA en modo humo del orquestador (se midio aparte arriba, humo 2/2, sin Pool).
+[04:33:23 +    1.8s] 
+[04:33:23 +    1.8s] ETAPA T4 -- composicion temporal 3T-k (mundo_composicion_v14 + la tercera perilla): NO MEDIBLE.
+[04:33:23 +    1.8s]    mundo_composicion_v14.py es un instrumento YA CORRIDO en un estilo de codigo distinto (espacios
+[04:33:23 +    1.8s]    alrededor de operadores) del que usan las anclas de pon_dE(); extenderlo exige un cuarto
+[04:33:23 +    1.8s]    constructor con sus PROPIAS anclas verificadas una a una (fuera del alcance de este paquete).
+[04:33:23 +    1.8s]    Ver PREREGISTRO_composicion_tres.md, seccion 4. No se inventa ningun numero.
+[04:33:23 +    1.8s] 
+[04:33:23 +    1.8s] VEREDICTO: HUMO completo -- identidad en miniatura + T3 humo corren en proceso(s) sin Pool vivos a la vez (T1/T2 exigen Pool: quedan para el coordinador; T4 nunca es medible).
+[04:33:23 +    1.9s] datos -> composicion_tres_humo_20260918_043321.json  sha256_16 = b64659b415e8846c
