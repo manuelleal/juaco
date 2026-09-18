@@ -3778,3 +3778,25 @@ ausente aquí — `m` tiene semivida ≈ 14 mordidas y vale 0.02–0.05 de media
 explorador con la cascada de Fusi: hacen falta ≥ 2 constantes de tiempo propias, no una prótesis con β grande). Queda
 refutado el mecanismo con estado existente; una variable lenta nueva sería otra propuesta (con su memoria declarada).
 Vocabulario: *la masa de conflicto no sirve como freno de olvido*. Nada toca el tronco.
+
+
+### Paquetes A-1 y A-3 del creador A (18 sep 00:25): instrumento de selección por competencia listo con identidad; **3f NO se corre todavía** (la selección online no abre el conjuntivo correcto); vector único listo para correr
+
+- **A-1.** `experimentos/creacion_A/organismo_v13q4.py` (3cc732dd2b2519cd; por anclas desde `organismo_v13q3` aaebe073308a40c2,
+  constructor `construye_v13q4.py` c6faffcd21eaaf47): perilla `seleccion='wta'` — elementales siempre plásticos, cada conjuntivo
+  lleva un escalar `e_i` (correlación con el residuo) y un bit; se abre uno solo si `|e_i| > sel_theta`; la vía lenta
+  aprende sólo en lo abierto. **Identidad `seleccion=None` ≡ v13q3: 16/16** (8 escenarios × 2 semillas, 38 claves).
+  **Mini-prueba** (xor01, cuadrática, constante, delta con signo, `clip_s = 10`, T = 200 000, s1–3): sin selección 0.500;
+  COND **0.625** (abre `P0·P1` 1/3); COV 0.438 (abre 2/3); reajustar los elementales al abrir (γ ∈ {1, 0.5, 0.25, 0}) da
+  0.625 en los cuatro; px0 1.000/1.000/1.000, azar 0.500. **Decisión del coordinador (PLAN, orden de la madrugada, punto 4):
+  3f no se corre** hasta que exista la pieza (i) — aprender también sin morder (frente del creador C; A lo dimensiona:
+  5 740 encuentros con veneno `00` por corrida donde hoy no se aprende nada). Borrador `PREREGISTRO_xor_3f.md` guardado
+  (7 brazos × 3 reglas × 20 semillas; techo de muestreo 0.75 escrito como resultado posible). Errata corregida por el
+  propio creador en su banco: la tabla A2 decía "6 px + constante" y era "6 px + `P0·P1` dado"; con el rasgo correcto
+  abierto la regla delta online alcanza residuo 0.000 y acierto 1.000 con η = 0.015 → **el ajuste no es cuello; lo son la
+  selección y el muestreo**.
+- **A-3.** `corre_vector_unico.py` (ee25f9ce9c3193b6) + `PREREGISTRO_vector_unico.md`: brazos DOS_CANALES (v13q3) y
+  VECTOR_UNICO (`regla_lenta='delta_signo'`, `lam_lenta = 0`), semillas 101–120, montaje y umbrales de `bateria_generaliza`
+  sin tocar (px0, azar) + xor01; predicción: `acc` idéntica semilla a semilla y `|ΔW_lenta| < 1e−9` mientras ningún canal
+  toque `clip_s`; guarda `n_techo` (regla de ERR-25). Humo `vector_unico_humo_20260918_000816` (0689e674666bbdfa): acc
+  idéntica 3/3, `max|ΔW_lenta| = 1.1e−15`, `n_techo = 0` en 6/6. Se corre después de la réplica de B-1.

@@ -1,0 +1,15 @@
+[00:08:16 +    0.0s] HUMO A-3 (un proceso, sin Pool). identidad + 2x3 corridas de T=60000, semilla 101.
+[00:08:16 +    0.0s] sha organismo_v13q3 aaebe073308a40c2  organismo_v13q 0b59eb03858df3a8  script ee25f9ce9c3193b6
+[00:08:22 +    6.5s]    identidad px0/lineal   s101: IDENTICO  (claves nuevas: ['Ws', 'Ws_apriori', 'regla_lenta', 'constante', 'lam_lenta'])
+[00:08:22 +    6.5s]    identidad xor01/lineal s101: IDENTICO  (claves nuevas: ['Ws', 'Ws_apriori', 'regla_lenta', 'constante', 'lam_lenta'])
+[00:08:51 +   35.4s]    DOS_CANALES   px0    s101: acc 0.600  ba 0.762  cobertura 10  celdas 59  splits 29  n_techo 0  max(Wps,Wns) 2.066  max m 0.115
+[00:08:51 +   35.4s]    DOS_CANALES   azar   s101: acc 0.700  ba 0.860  cobertura 10  celdas 64  splits 34  n_techo 0  max(Wps,Wns) 1.592  max m 0.230
+[00:08:51 +   35.4s]    DOS_CANALES   xor01  s101: acc 0.312  ba 0.324  cobertura 12  celdas 70  splits 40  n_techo 0  max(Wps,Wns) 0.491  max m 0.210
+[00:08:51 +   35.4s]    VECTOR_UNICO  px0    s101: acc 0.600  ba 0.762  cobertura 10  celdas 59  splits 29  n_techo 0  max(Wps,Wns) 0.000  max m 0.000
+[00:08:51 +   35.5s]    VECTOR_UNICO  azar   s101: acc 0.700  ba 0.860  cobertura 10  celdas 64  splits 34  n_techo 0  max(Wps,Wns) 0.000  max m 0.000
+[00:08:51 +   35.5s]    VECTOR_UNICO  xor01  s101: acc 0.312  ba 0.324  cobertura 12  celdas 70  splits 40  n_techo 0  max(Wps,Wns) 0.000  max m 0.000
+[00:08:51 +   35.5s]    PAREO px0    s101: acc 0.600 vs 0.600 IGUAL   max|dW_lenta| 8.882e-16   max|dWs| 6.661e-16   tope toca: no   celdas/splits iguales: True/True
+[00:08:51 +   35.5s]    PAREO azar   s101: acc 0.700 vs 0.700 IGUAL   max|dW_lenta| 1.110e-15   max|dWs| 6.661e-16   tope toca: no   celdas/splits iguales: True/True
+[00:08:51 +   35.5s]    PAREO xor01  s101: acc 0.312 vs 0.312 IGUAL   max|dW_lenta| 2.220e-16   max|dWs| 2.220e-16   tope toca: no   celdas/splits iguales: True/True
+[00:08:51 +   35.5s] HUMO: acc igual en 3/3; max|dW_lenta| global 1.110e-15; tope toca en 0/3.
+[00:08:51 +   35.5s] datos -> vector_unico_humo_20260918_000816.json  sha256_16 = 0689e674666bbdfa
