@@ -399,6 +399,63 @@ en el mundo largo para separar olvido de inversión (R1); (c) medir si las divis
 (e) XOR como límite de lectura (apuesta de frontera del debate). Instrumentos: `experimentos/nivel7_3T_k/`,
 `nivel6_mapa/`, `etapa5_comunicacion/{mundo_social_n3,corre_N3*}`, `nivel8_mundo_largo/`.
 
+## 11.7 Día 6 (noche del 17-sep, 20:30–22:30): plan del debate ejecutado con equipo
+
+Regla 12 en acto, ahora con equipo (`registro/EQUIPO.md`): bloque 0 y bloque 1 del plan del día 6 (`registro/PLAN.md`)
+corridos y registrados; bloque 2 corrido y refutado; bloques 3 y 3b corridos y refutados (con diagnóstico).
+
+| bloque | veredicto | cifra que manda | dato |
+|---|---|---|---|
+| **0** — gemelo compilado del tronco | ✅ HECHO (tronco); pendiente (mundos) | bit a bit **72/72** (12 configuraciones × 6 semillas), **×78** (100k pasos: 4.05 s → 0.05 s) | `organismo/identidad_rapido.py` (sin log en `datos/`) |
+| **1a** — 3T-k, k = 4 y 5 | k=4 **COMPONE**; k=5 **NO** | k=4: sep 1.99 [1.71,3.24], 20/20, celdas 72 · k=5: lift_q4 **0.144 < 0.15**, celdas 90/90 (pool agotado) | `datos/3T_k45_s1-20_20260917_204451.log` / `.json` |
+| **1b** — mundo largo s21–40, `W` por patrón | Réplica sostenida; retención de lo ausente MALA | nunca invertidos: V13 **0.67** / MAPA **0.50** (predicción ≥0.70: NO) | `datos/largo_s21-40_20260917_204840.log` / `.json` |
+| **1c** — N3d mudo | **OBEDECE**, no aprende | CONV_MUDO 0.503 [0.50,0.51] ≈ SOLO_R 0.515 (Δ=0.012) contra CONV 0.822; muertes 189 contra 86 | `datos/N3dmudo_s61-80_20260917_205345.log` / `.json` |
+| **2** — curiosidad por progreso de error | ❌ **REFUTADA** | MAPA_CUR 0.700 = MAPA 0.704 = control barajado 0.700; P1 NO, P3 NO | `datos/curiosidad_s41-60_20260917_211739.log` / `.json` |
+| **3** — XOR como límite de lectura | ❌ **REFUTADO como estaba escrito** | cuadrática xor01 0.438 = lineal 0.438; random15 0.50; regresión px0/azar intacta; pero `W_lenta(P0·P1)` = −2.65 (la lectura representa XOR) | `datos/xor_lectura_s1-20_20260917_213124.log` / `.json` |
+| **3b** — ¿la puerta esconde la vía lenta? | ❌ **NO** | vía lenta sola 0.50 en xor01; familiar 0.33; sin puerta no mejora → el límite es la **regla** de la vía lenta (reparte el error por igual; marginales de P0/P1 drenados a cero) | `datos/xor_3b_s21-40_20260917_213752.log` / `.json` |
+
+**Del organismo:** los cuatro bloques cerrados miden límites, no capacidades nuevas. **Compone hasta 4** pasos de
+historia con distractores (sep 1.99 [1.71,3.24], 20/20); a profundidad 5 la separación sobrevive (1.94, 19/20) pero
+el pool de celdas se agota (90/90) y la ventaja conductual cae al filo (lift_q4 0.144 contra el criterio 0.15): el
+techo es presupuesto de celdas, no la composición en sí. En el mundo largo, replicado en semillas 21–40, v13 **no
+retiene** lo que deja de ver mientras aprende con las mismas celdas (nunca invertidos: 0.67 contra 0.50 del mapa,
+ambos bajo la predicción ≥0.70): es **interferencia por códigos compartidos** —la misma causa que "generalización =
+interferencia"— y **no es la inversión** que se había previsto medir. Con N3d mudo, el receptor ciego por
+construcción, al quitarle la señal, no cae al nivel de quien nunca escuchó (0.503 contra 0.515 solo; con señal
+0.822): **obedece, no aprende**, y la obediencia le **crea dependencia** (189 muertes contra 86). Y la curiosidad
+por progreso de error, candidata a devolverle al mapa la exploración que le cuesta, quedó **refutada**: el brazo con
+curiosidad (0.700) no se distingue del mapa solo (0.704) ni de su control barajado (0.700); el sesgo actúa sólo
+sobre sitios ya recordados, no explora.
+
+**Del método:** el día dejó errores de instrumento, no de organismo, y una regla nueva. El bloque de curiosidad tuvo
+**dos arranques abortados sin datos por un `KeyError` del runner** (commit `d4367e0`) antes de la corrida que sí
+completó las 80 (semillas 41–60); se cuenta porque el protocolo numera todo fallo de instrumento, no sólo los de
+mundo o medida. El gemelo compilado del tronco (`organismo_v13_rapido.py`, numba) llegó a identidad **bit a bit
+72/72** (12 configuraciones × 6 semillas) con **×78** de velocidad, y de ahí la regla que gobierna todo lo demás:
+**"un gemelo que no sea bit a bit sólo explora, nunca confirma"**; por eso los mundos (`mundo_temporal_k`,
+`mundo_mapa`, `mundo_social_n3`, `mundo_largo`) siguen en Python puro, y ninguna cifra de hoy se apoyó en un gemelo
+sin esa prueba.
+
+**Para el día 7** manda lo escrito en `PLAN.md`. El bloque 3 cerró: XOR no es un límite de dimensión (random15 =
+cuadrática = lineal) ni de la puerta (3b), sino de la **regla de la vía lenta**; el bloque 3c (regla delta con signo u otra)
+lo diseña un trío de agentes con puente (`registro/investigacion/PUENTE_xor.md`). El bloque 4 (decisión de tronco v14) queda sin objeto mientras el bloque 2 siga
+refutado: v13 sigue siendo el tronco y mapa/`gamma_soc` quedan como órganos de experimento validados en su mundo.
+Faltan el bloque 5 (N2b en el mundo con reaparición) y el bloque 6 (allostasis, rama exploratoria). En
+paralelo, según `EQUIPO.md`, siguen en curso los **compiladores de mundos** (gemelos numba de los mundos,
+pendientes desde el bloque 0), el diseño de **novedad de sitio** (siguiente candidato al canje exploración/
+explotación del mapa) y **N2f**; ninguno tiene todavía entrada en el registro.
+
+**Vocabulario permitido, por resultado** (copiado del registro; regla 6 `EQUIPO.md`: *"lo que se declara es lo que
+se midió, no 'planifica', 'entiende', 'lenguaje' sin la prueba"*):
+- **1a (3T-k):** "compone hasta 4 pasos de historia con distractores; a 5 se agota el pool y la ventaja se diluye."
+- **1b (mundo largo):** "no retiene [...] interferencia por códigos compartidos [...] No es la inversión."
+- **1c (N3d mudo):** "la conducta ajena gobierna la decisión; no enseña" — "obedece, no aprende" — "la obediencia
+  crea dependencia."
+- **2 (curiosidad):** "la curiosidad por progreso del error no explora" — "el canje exploración / explotación del
+  mapa sigue abierto."
+- **0:** sin vocabulario de conducta (resultado de instrumento: identidad bit a bit / velocidad).
+- **3 y 3b:** "XOR no se generaliza en v13; la lectura cuadrática lo representa pero su regla no lo separa."
+
 ## 12. Plan del día 6 (escrito al cierre del día 5; es el bloque vigente de `PLAN.md`)
 El orden y las predicciones están en `registro/PLAN.md` (bloque "ORDEN VIGENTE PARA EL DÍA 6"). En una línea cada uno:
 **0** gemelo rápido del organismo — **hecho para el tronco** (`organismo_v13_rapido.py`, bit a bit 72/72, ×78; faltan los

@@ -27,7 +27,9 @@
 >   +mapa+curiosidad con prioridad aleatoria (control). Predicción: +curiosidad recupera la adquisición de v13 (≥ 0.85 a
 >   ≤ 30 vistos) sin perder la comida del mapa (≥ 450 en Q4, pareado ≥ 15/20); el control aleatorio no lo hace.
 >
-> **Bloque 3 — apuesta de frontera: XOR como límite de LECTURA (Cover 1965).** Congelar Kenyon; cambiar sólo la lectura:
+> **Bloque 3 — apuesta de frontera: XOR como límite de LECTURA (Cover 1965).** ❌ **REFUTADO (3 y 3b):** ni dimensión ni puerta;
+>   la vía lenta cuadrática representa XOR (W del producto −2.65) pero su REGLA no lo separa (marginales drenados). 3c: regla
+>   delta con signo, diseño del trío con puente (`PUENTE_xor.md`). Texto original: congelar Kenyon; cambiar sólo la lectura:
 >   vía lenta **cuadrática** (15 productos de pares de píxeles además de los 6 píxeles). Predicción: `xor01` en nunca vistos
 >   ≥ 0.80 si el límite era de lectura; ≤ 0.60 → el límite es de representación y se registra así. Controles: la vía
 >   cuadrática con productos barajados; `bateria_generaliza` (px0 y azar) sin caer.
