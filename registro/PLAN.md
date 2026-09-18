@@ -6,10 +6,11 @@
 > Regla 12 vigente: decidir → preregistrar → commit → correr → registrar; el director audita después.
 >
 > **Bloque 0 — herramienta, antes de cualquier ciencia (≤ 1 h):** gemelo rápido del organismo.
->   `pip install numba`; si hay rueda para Python 3.14, `organismo/organismo_v13_rapido.py` compilado con **identidad bit a
->   bit** contra `organismo_v13.py` (todas las claves, 6 semillas × {base, invertir, nuevo} y las tres baterías). Si numba
->   no existe para 3.14 o la identidad no es bit a bit: poda del bucle en Python puro (`see()`, `code()`, sesgo del mapa)
->   con la misma identidad; meta 2–3×. **Un gemelo que no sea bit a bit sólo sirve para explorar, nunca para confirmar.**
+>   ✅ **HECHO el 17-sep 20:50:** numba 0.67 instalado (rueda cp314); `organismo/organismo_v13_rapido.py` = gemelo compilado del
+>   tronco, **bit a bit idéntico en 72/72** (12 configuraciones × 6 semillas, `organismo/identidad_rapido.py`) y **×78**
+>   (100k pasos: 4.05 s → 0.05 s). Pendiente del bloque 0: gemelos de los MUNDOS (`mundo_temporal_k`, `mundo_mapa`,
+>   `mundo_social_n3`, `mundo_largo`) con el mismo arnés, y que las baterías acepten `--rapido`. Regla: un gemelo que no sea
+>   bit a bit sólo explora, nunca confirma.
 >
 > **Bloque 1 — cabos del plan del debate (cortos, en este orden):**
 >   1a. 3T-k con k = 4 y 5 (¿dónde se agota la composición?; celdas usadas: 35 → 41 → 58 con k = 1, 2, 3).

@@ -401,8 +401,8 @@ en el mundo largo para separar olvido de inversión (R1); (c) medir si las divis
 
 ## 12. Plan del día 6 (escrito al cierre del día 5; es el bloque vigente de `PLAN.md`)
 El orden y las predicciones están en `registro/PLAN.md` (bloque "ORDEN VIGENTE PARA EL DÍA 6"). En una línea cada uno:
-**0** gemelo rápido del organismo (numba o poda) con identidad bit a bit — sin eso, cada bloque tarda minutos que son de
-Python, no de ciencia; **1** cabos: 3T-k k=4,5 (¿dónde se agota?), `W` por patrón en el mundo largo, N3d sin emisor;
+**0** gemelo rápido del organismo — **hecho para el tronco** (`organismo_v13_rapido.py`, bit a bit 72/72, ×78; faltan los
+mundos); **1** cabos: 3T-k k=4,5 (¿dónde se agota?), `W` por patrón en el mundo largo, N3d sin emisor;
 **2** curiosidad por progreso de error contra el canje exploración/explotación del mapa (el nivel 8 real); **3** XOR como
 límite de lectura (vía lenta cuadrática, Kenyon congelado); **4** v14 sólo si pasa el 2; **5** N2b en el mundo con
 reaparición; **6** rama allostasis. **Estado de los órganos:** el tronco es v13; la tabla `M` (mapa) y `gamma_soc`
