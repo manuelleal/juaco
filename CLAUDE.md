@@ -125,6 +125,26 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   Primeros hallazgos de A (23:30): banco analítico que reproduce 3b/3d sin correr el organismo; **los dos canales
   (Wp, Wn) son exactamente un valor con signo + una masa de conflicto `m = min(Wp, Wn)`; `lam` sólo olvida `m`; la
   fisión de v11 es consolidación** (predice que la retención cae cuando el pool se agota). Auditor del día 7 en curso.
+- **Madrugada del 18 (célula de creación → bloques preregistrados; `registro/PLAN.md` "orden vigente"):**
+  · **B-1 HIJA DISPERSA (nivel 7) REPLICADA** — la hija nace ciega a parte del patrón (por medias de `P` condicionadas al
+    signo de R): a k = 4/5 compone mejor que v13 (lift 0.31–0.35 contra 0.13; > v13 18/20 y 19/20) con la mitad de las
+    celdas y una décima de las divisiones; gana a la máscara al azar 16/20 ×2; inerte a k = 1 (20/20 ×2). Serie 61–80
+    cayó por la letra en el ahorro (16/20); enmienda 1 y serie 81–100 pasan incluso la letra original (19/20).
+    Vocabulario: *"la hija que nace ciega a lo irrelevante compone historias más profundas con menos celdas"*.
+    **Candidata a órgano**: falta `organismo_v13D` (copia del tronco con la perilla) + baterías; **v14 lo decide el
+    director**. Hallazgo previo del creador B: el techo de la composición NO es el pool (duplicarlo a 180 no devuelve nada;
+    46–55 de 90 celdas sin valor legible): es la evidencia por código. (`hija_dispersa_s61-80_20260918_000202`,
+    `hija_dispersa_s81-100_20260918_000954`)
+  · **A-2 metaplasticidad por masa de conflicto (nivel 8) REFUTADA** en 41–60: retención de lo ausente 0.667 = base
+    (pareado 7/20), recupera más lento, +73 % muertes (`metaplasticidad_s41-60_20260918_000740`).
+  · **A-1 selección por competencia (XOR)**: instrumento `organismo_v13q4` listo (identidad 16/16) pero la selección
+    online abre el conjuntivo correcto 1/3 → **3f no se corre** hasta tener la pieza de muestreo (aprender sin morder,
+    creador C). A-3 vector único (simplificación de la vía lenta con identidad algebraica) listo para correr.
+  · **C-P1 "probar cuando no me reconozco"** (nivel 9: la sorpresa sobre la propia acción entra en la boca, no en `eta`;
+    mini-prueba: recuperación 0.315× v13, 3/3): preregistrado y corriendo (41–60, seis brazos + baterías).
+  · **ERR-25**: la puerta de v13 no distingue "no aprendido" de "cancelado" (verificado por el auditor); B-2 (puerta por
+    evidencia del código exacto: mini-prueba `N*` 20 contra 6 de v13) en preparación. Auditoría del día 7 integrada
+    (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).
 - **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
   automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
 - **Lista de chequeo niveles 3–8: `registro/HANDOFF.md` §13** (3: 70 % · 5: 50 % · 6: 50 % · 7: compone hasta 3 ·
