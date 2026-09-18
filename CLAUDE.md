@@ -123,6 +123,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 4 (k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
   0.67/0.50 (interferencia, no inversión; `largo_s21-40_20260917_204840`); N3d mudo 0.503 = obedece, no enseña
   (`N3dmudo_s61-80_20260917_205345`). Registro al final de `REGISTRO_etapas_1_2.md`.
+- **Bloque 3 REFUTADO como estaba escrito** (`xor_lectura_s1-20_20260917_213124`): la vía lenta cuadrática aprende XOR
+  (W del producto P0·P1 = −2.65) pero el acierto en nunca vistos sigue en 0.438; hipótesis 3b: la puerta esconde la vía
+  lenta (familiar por solapamiento ≠ conocer). Regresión px0/azar intacta.
 - **Bloque 2 REFUTADO:** la curiosidad por progreso de error no devuelve la exploración al mapa (0.700 = mapa = barajada;
   v13 0.900; comida intacta) (`curiosidad_s41-60_20260917_211739`). Siguiente candidato: novedad de sitio.
 - **EQUIPO de agentes (decisión del director, 17-sep 21:45): `registro/EQUIPO.md`** — misión, reglas y roles (coordinador,

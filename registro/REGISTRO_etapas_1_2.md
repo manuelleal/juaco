@@ -3269,3 +3269,25 @@ retención de lo ausente sube a 0.83 con curiosidad y con su control (0.67 sin) 
 un efecto del progreso (el barajado lo comparte). **Siguiente candidato, ya escrito antes:** *novedad de sitio* (sesgo
 hacia el sitio que lleva más tiempo sin visitarse), no otra perilla de esta. Vocabulario: *el canje exploración /
 explotación del mapa sigue abierto*.
+
+
+### Bloque 3 (día 6): XOR como límite de lectura — **refutado como estaba escrito; la lectura cuadrática SÍ aprende XOR y la puerta la esconde (hipótesis, se prueba en 3b)**
+
+Preregistro `experimentos/nivel7_xor_lectura/PREREGISTRO_xor_lectura.md`; instrumento `organismo_v13q.py` (`f1c70d646f1820e7`,
+`lectura='lineal'` ≡ `organismo_v13g`, identidad 6/6); datos `xor_lectura_s1-20_20260917_213124` (`b056086985dd26fc`).
+
+| lectura | `xor01` acc (nunca vistos, a priori) | `xor01` ba (conducta) | `px0` acc | `azar` acc |
+|---|---|---|---|---|
+| lineal (v13) | **0.438** [0.12, 0.62] | 0.301 | 0.850 | 0.500 |
+| **cuadrática** | **0.438** [0.19, 0.62] · `W_lenta(P0·P1)` = **−2.65** | 0.415 | 0.800 | 0.500 |
+| random15 (control) | 0.500 | 0.402 | 0.700 | 0.500 |
+
+X0 OK, X1 **NO** (0.438; > lineal 8/20), X2 OK, X3 OK (la regresión lineal no cae), X4 NO. **Refutado como estaba escrito.**
+Pero el dato que no estaba previsto manda: la vía lenta cuadrática **aprendió la estructura de XOR** (el peso neto del
+producto `P0·P1` es −2.65, grande y del signo correcto) y el acierto total no se movió. Hipótesis escrita antes de
+probarla (`PREREGISTRO_xor_lectura_3b.md`): **la puerta de familiaridad esconde la vía lenta**: un patrón nunca visto
+cuyo código Kenyon comparte ≥ 3 celdas consolidadas con los entrenados cuenta como "familiar" y la boca lee la vía
+rápida (memoria de casos, engañosa en XOR porque el solapamiento de códigos no sigue la regla). En `px0` no se nota
+porque el solapamiento sí correlaciona con la regla. Nota de diseño: `phi` no tiene término constante; los patrones con
+`P0 = P1 = 0` (4 de 20) sólo pueden clasificarse por ruido → techo esperado de la lectura cuadrática ≈ 0.85–0.90.
+Vocabulario: *XOR no se generaliza en v13; la lectura cuadrática lo representa; falta saber si la puerta lo tapa*.

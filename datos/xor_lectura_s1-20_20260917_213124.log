@@ -1,0 +1,25 @@
+[21:31:24 +    0.0s] ARRANQUE bloque 3 (XOR como limite de lectura). brazos ['LINEAL', 'CUADRATICA', 'RANDOM15'], reglas ['xor01', 'px0', 'azar'], semillas 1-20. Pool(14).
+[21:31:24 +    0.0s] sha preregistro 8041b1ec9bbbb10e  script a1d9f235d0b43c5a  organismo_v13q f1c70d646f1820e7  organismo_v13g 2a80e125f8593bf2
+[21:31:25 +    0.5s] REGLA 11 — procesos python vivos (2), este es pid 612
+[21:31:25 +    0.7s] ETAPA 1/3 — identidad lectura=lineal == organismo_v13g (6)...
+[21:31:32 +    8.0s]   identicos: 6/6
+[21:31:32 +    8.0s] ETAPA 2/3 — 180 corridas...
+[21:32:19 +   54.1s]           30/180
+[21:32:50 +   85.3s]           60/180
+[21:33:19 +  115.0s]           90/180
+[21:33:49 +  145.0s]           120/180
+[21:34:19 +  174.9s]           150/180
+[21:34:49 +  204.7s]           180/180
+[21:34:49 +  204.7s] ETAPA 3/3 — analisis (acc = signo a priori en nunca vistos; ba = conducta al primer encuentro).
+[21:34:49 +  204.8s]    LINEAL     xor01 acc 0.438 [0.12,0.62]  ba 0.301  cobertura 12/10  celdas 67  muertes 240
+[21:34:49 +  204.8s]    LINEAL     px0   acc 0.850 [0.60,1.00]  ba 0.895  cobertura 10/10  celdas 58  muertes 270
+[21:34:49 +  204.8s]    LINEAL     azar  acc 0.500 [0.00,0.70]  ba 0.473  cobertura 10/10  celdas 62  muertes 271
+[21:34:49 +  204.8s]    CUADRATICA xor01 acc 0.438 [0.19,0.62]  ba 0.415  cobertura 12/10  celdas 68  muertes 248  W_lenta(P0*P1) -2.65
+[21:34:49 +  204.8s]    CUADRATICA px0   acc 0.800 [0.60,1.00]  ba 0.883  cobertura 10/10  celdas 58  muertes 270
+[21:34:49 +  204.8s]    CUADRATICA azar  acc 0.500 [0.10,0.70]  ba 0.500  cobertura 10/10  celdas 63  muertes 279
+[21:34:49 +  204.8s]    RANDOM15   xor01 acc 0.500 [0.25,0.69]  ba 0.402  cobertura 12/10  celdas 67  muertes 246
+[21:34:49 +  204.8s]    RANDOM15   px0   acc 0.700 [0.60,0.90]  ba 0.727  cobertura 10/10  celdas 58  muertes 267
+[21:34:49 +  204.8s]    RANDOM15   azar  acc 0.500 [0.30,0.70]  ba 0.464  cobertura 10/10  celdas 60  muertes 280
+[21:34:49 +  204.8s]    X0 LINEAL xor<=.60 OK | X1 CUADRATICA xor>=.80 y >LINEAL en 8/20 NO | X2 RANDOM15<=.60 OK | X3 regresion px0/azar OK | X4 conducta ba>=.55 y >LINEAL en 11/20 NO
+[21:34:49 +  204.8s] VEREDICTO xor_lectura: NO (refutado o control caido)
+[21:34:49 +  204.8s] datos -> xor_lectura_s1-20_20260917_213124.json  sha256_16 = b056086985dd26fc
