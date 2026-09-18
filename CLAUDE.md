@@ -171,6 +171,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     (en construcción) y congelación (decisión del director). La sorpresa en la boca (dosis 5, dos series) va aparte hasta
     medir la composición de los tres.** Auditoría del día 7 integrada
     (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).
+- **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
+  dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
+  **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;
+  si ninguno cruza 0.75 en xor01, se acepta el techo, se publica y se cambia de paradigma o se cierra (`registro/PLAN.md`).
 - **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
   automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
 - **Lista de chequeo niveles 3–8: `registro/HANDOFF.md` §13** (3: 70 % · 5: 50 % · 6: 50 % · 7: compone hasta 3 ·

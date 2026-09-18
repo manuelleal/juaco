@@ -65,6 +65,19 @@
 >   informe del diseñador — HECHO 01:30 (no rodea, se aleja; rodeo falso confirmado; borrar el sitio comido ayuda a encadenar; horizonte 2 sin potencia: rediseñar el mundo antes de replicar); (7) **C** (modelo de sí mismo, aprender sin morder, significado por predicción) según su
 >   propuesta. Lo que toque el tronco va a rama o copia; nada entra a v14 sin examen v3' + baterías + réplica.
 >
+> **DECISIÓN DEL DIRECTOR (18 sep 2026, 04:55; "sí a todo", "listo, de acuerdo") — ORDEN VIGENTE A PARTIR DE AQUÍ:**
+>   (1) **Congelar v14** cuando terminen la composición de los tres órganos y el gemelo compilado: v14 = v13 + hija dispersa +
+>   puerta por código (+ sorpresa del mundo en la boca a dosis 5 si la composición de los tres pasa T1–T3; si no, la sorpresa
+>   queda como candidata a v15). Antes del tag: tercer examen del organismo final en un rango virgen (161–180 o el siguiente
+>   libre), gemelo con arnés bit a bit, manifiesto a 15 archivos, `bateria_v14.py`, regresión de la regla 1.
+>   (2) **Escribir v14 como resultado cerrado** (REGISTRO, HANDOFF, CLAUDE.md, PROPUESTA → DECISIÓN).
+>   (3) **Un solo frente después: APRENDER SIN MORDER** — la pieza de muestreo de XOR (creador A: 5 740 encuentros con veneno `00`
+>   por corrida donde hoy no se aprende nada), que también toca a N2 (significado por predicción, creador C). Tres bloques
+>   preregistrados como máximo, cada uno con su mecanismo local, controles e identidad.
+>   (4) **Criterio de parada, fijado ahora:** si en esos tres bloques ningún mecanismo local cruza **0.75 en xor01 (nunca vistos)**
+>   con px0 = 1.000 y azar en [0.35, 0.65], se acepta el techo de la arquitectura: se publica el organismo (v14) y el método tal
+>   como están, y se cambia de paradigma (evolución del organismo entero, no órganos diseñados) o se cierra. Sin recalibrar.
+>
 > Siempre: semillas nuevas por intento, réplica antes de cerrar, ERR numerado por cada fallo de instrumento/medida/mundo
 > (lista de la noche del 17: canal simétrico, acierto sin balancear, mundo que se come la comida, sitios que se memorizan).
 >
