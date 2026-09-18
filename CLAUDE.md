@@ -126,7 +126,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   `mundo_social_n3_rapido.py` (84/84 en el agente, ×60; en actualización con las perillas de N2f v3) · mundo largo /
   novedad: en construcción. Regla 9 de `registro/EQUIPO.md`
   (nunca recursión con `cache=True`; sumas por pares de NumPy; empates de argsort a NumPy).
-- **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 4 (k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
+- **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 3 replicado (k=4: separa en dos series pero la ventaja conductual no cruza
+  0.15 en la réplica 41–60; k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
   0.67/0.50 (interferencia, no inversión; `largo_s21-40_20260917_204840`); N3d mudo 0.503 = obedece, no enseña
   (`N3dmudo_s61-80_20260917_205345`). Registro al final de `REGISTRO_etapas_1_2.md`.
 - **Bloque 5 (N2f v3) REFUTADO con montaje válido → N2 CERRADO CON DOS MUNDOS** (`N2f_s81-100_20260917_222744`):

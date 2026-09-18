@@ -13,8 +13,8 @@
 >   en construcción; baterías con `--rapido` pendiente. Regla: un gemelo que no sea bit a bit sólo explora, nunca confirma.
 >
 > **Bloque 1 — cabos del plan del debate (cortos, en este orden):**
->   1a. ✅ 3T-k k = 4 compone (sep 1.99, 20/20, celdas 72); k = 5 NO por T3 al filo (0.144) con el pool agotado (90/90).
->       Techo = presupuesto de celdas.
+>   1a. ✅/⚠ 3T-k: k = 4 dio "compone" en 1–20 (lift 0.152) pero **no replicó** en 41–60 (lift 0.140 < 0.15; separación sí, 20/20).
+>       Declarable: compone hasta 3; a 4–5 separa pero la ventaja conductual queda al filo; techo = presupuesto de celdas.
 >   1b. ✅ Mundo largo 21–40 con `W`: hallazgos replicados; retención de lo ausente 0.67 (V13) / 0.50 (mapa) → interferencia,
 >       no inversión; el mapa muere MENOS tras el cambio (predicción refutada en la dirección buena).
 >   1c. ✅ N3d mudo: 0.503 sin señal (= solo 0.515; con señal 0.822): obedece, no enseña; y crea dependencia (189 muertes).

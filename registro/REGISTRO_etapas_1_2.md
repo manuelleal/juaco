@@ -3465,3 +3465,18 @@ frena la boca, no como información. **Cierre:** *N2 cerrado con dos mundos* (cl
 Seis diseños (N2, N2b–e, N2f) y ~750 corridas. Vocabulario: *emerge una convención débil; no adquiere significado; el
 canal serviría con significado dado*. Reabrir sólo con un mecanismo de significado distinto (p. ej. que el receptor
 aprenda el símbolo por **predicción** de lo que va a sentir, no por refuerzo del emisor) — apunta al bloque 6.
+
+
+### 3T-k k = 4 y 5, réplica en semillas 41–60 con el gemelo compilado (día 7, 22:45): **k = 4 NO replica en la ventaja conductual → lo declarable es "compone hasta 3"**
+
+Datos `3T_k45_s41-60_20260917_224306` (`f06b95f81b49f5ca`); identidad k = 1 18/18 y gemelo ≡ original 3/3 (primera corrida
+confirmatoria con `--rapido`: 300 corridas en ~1 min). k = 4: `sep` **1.94** [1.54, 2.92] (T2 ≥ 1.5 ✅), C3 − C3C ≥ 1 en
+**20/20** ✅, `solap_A` 0.06 ✅, pero `lift_q4` **0.140 < 0.15** (T3 ❌; en 1–20 fue 0.152) → NO compone por el criterio
+conductual. k = 5: sep 1.87, T5 20/20, lift 0.133, celdas 90/90 → NO (como en 1–20).
+
+**Corrección de vocabulario (la réplica manda):** *compone hasta 3 pasos de historia con distractores (replicado); a 4 y 5
+la separación sobrevive en las dos series (≥ 1.9, 20/20 pareado) pero la ventaja conductual del último cuarto queda al
+filo del umbral (0.152 / 0.140 en k = 4; 0.144 / 0.133 en k = 5) con el pool de celdas agotándose (78–90/90)*. La
+composición representacional llega más lejos que la conductual; el umbral 0.15 de `lift_q4` es el de 3T (v8) y no se toca.
+Lección: sin la réplica habríamos escrito "hasta 4". El gemelo hace la réplica gratis: **toda serie confirmatoria se
+replica desde ahora**.
