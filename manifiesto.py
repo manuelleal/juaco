@@ -32,10 +32,10 @@ CONGELADOS = {
     # retina (lenta) con puerta de familiaridad. Examen criterio v3' 8/8 y bateria_generaliza en semillas 101-120.
     './organismo/organismo_v13.py': 'cc8b16b492d4d324',
     './organismo/bateria_v13.py':   '1a027bcb37eb536e',
-    # v14 = TRONCO desde el 18 sep 2026 (madrugada). v13 + HIJA DISPERSA por relevancia (nivel 7: compone a k=4/5 con la mitad
+    # v14.1 (05:55): v14 con eta_s 0.15 y clip_s 10 (A-4; examen 8/8 x2, generalizacion 1.000/0.97). v14 = TRONCO desde el 18 sep 2026 (madrugada). v13 + HIJA DISPERSA por relevancia (nivel 7: compone a k=4/5 con la mitad
     # de celdas) + PUERTA por evidencia del codigo exacto (nivel 4: capacidad de v11 sin perder la generalizacion de v13).
     # Examen v3' 8/8 en 121-140, 141-160 y 161-180; generalizacion 1.000/0.94-0.95 x3; identidad 30/30; gemelo 196/196.
-    './organismo/organismo_v14.py': '9bab8ac0685b1f21',
+    './organismo/organismo_v14.py': 'feefc88b1fd8d434',
     './organismo/bateria_v14.py':   '72216f5415de0c86',
 }
 

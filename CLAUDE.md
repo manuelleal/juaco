@@ -93,8 +93,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
 ## Estado (día 7 — 17 sep 2026, 23:00 → madrugada del 18; director ausente ~8 h, orden: "no parar", decidir, documentar, lo controversial a rama o copia). Manda sobre los bloques anteriores cuando se contradigan
-- **TRONCO: v14 desde el 18 sep 05:05** (`organismo/organismo_v14.py` 9bab8ac0685b1f21, tag `v14-tronco`, examen `bateria_v14.py`,
-  16 congelados) = v13 + hija dispersa por relevancia + puerta por evidencia del código exacto; con las dos perillas apagadas es
+- **TRONCO: v14.1 desde el 18 sep 06:05** (`organismo/organismo_v14.py` feefc88b1fd8d434, tag `v14.1-tronco`; = v14 con `eta_s` 0.15 y
+  `clip_s` 10, medido sin coste: examen 8/8 ×2, generalización 1.000 / 0.97–1.00; examen `bateria_v14.py`, 16 congelados; v14 05:05 = tag `v14-tronco`) = v13 + hija dispersa por relevancia + puerta por evidencia del código exacto; con las dos perillas apagadas es
   v13 exacto. Evidencia: examen 8/8 ×3 rangos, generalización 1.000 / 0.95 ×3, capacidad 51, 3T-k 0.237 con 53 celdas; caso
   conocido: semillas 117/133 (E2 42 bocados). Candidata a v15: la sorpresa del mundo en la boca a dosis 5. **Regla 1 pasa a:**
   `cd organismo && python bateria_v14.py 6 && python bateria_generaliza.py organismo_v14 20 --desde 101` (histórica: v13, v11, v9).

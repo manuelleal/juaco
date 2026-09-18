@@ -34,7 +34,7 @@ PAT = _G.PAT; R_VAL = _G.R_VAL; E_VAL = _G.E_VAL; NOMBRES = _G.NOMBRES; PATM = _
 
 
 def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuevo_val='veneno',solap_B=None,
-        eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,lam=0.05,memoria_rechazo=20,mu_norm=True,div_signo=True,eta_s=0.015,clip_s=3.0,puerta=3,mask_rel=2,del_s=0.25,del_c=0.25,ema_c=0.05,puerta_pat=5,pat_shuf=0,pat_min=1):
+        eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,lam=0.05,memoria_rechazo=20,mu_norm=True,div_signo=True,eta_s=0.15,clip_s=10.0,puerta=3,mask_rel=2,del_s=0.25,del_c=0.25,ema_c=0.05,puerta_pat=5,pat_shuf=0,pat_min=1):
     """La firma de organismo_v14c_on.run, con SUS defaults. El cuerpo es el gemelo de la composicion."""
     return _G.run(seed,T=T,learn=learn,invertir_en=invertir_en,nuevo=nuevo,nuevo_en=nuevo_en,nuevo_val=nuevo_val,solap_B=solap_B,
                   eta=eta,tau_e=tau_e,alpha=alpha,hambre_boca=hambre_boca,aversion=aversion,costo=costo,nobj=nobj,log_cada=log_cada,

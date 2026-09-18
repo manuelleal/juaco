@@ -105,7 +105,8 @@
 > **REVISIÓN DE RUMBO (06:45, a petición del director: "¿nos estamos yendo del camino?"): ligera dispersión, corregida así:**
 >   **Columna vertebral = XOR** (los tres bloques del criterio de parada, nada los adelanta en el Pool): A-4 (dos constantes de
 >   la vía lenta; HECHO 05:35: **bloque 1/3, XOR 0.625 — la regla ya llega a 1.000 con rasgos dados y no daña el tronco; el cuello son
->   los rasgos**) → A-6 (construir los rasgos: selección conjuntiva en pocas exposiciones; bloque 2/3) → un tercero si hace falta.
+>   los rasgos**; las dos constantes entraron al tronco como **v14.1** a las 06:05) → A-6 (construir los rasgos: selección
+>   conjuntiva en pocas exposiciones; bloque 2/3) → un tercero si hace falta.
 >   **Laterales, un bloque cada uno y se cierran:** B-5 (HECHO 05:55: no confirma; la vía lenta asocia en 2 exposiciones en vez de 4.5
 >   pero también en azar; línea cerrada) y C-P6
 >   (N2 por predicción en el mundo decidible, mudo como predicción principal). **Mundo vivo (F): sólo diseño y preregistro hasta

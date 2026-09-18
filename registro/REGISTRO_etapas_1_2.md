@@ -4451,3 +4451,13 @@ la asociación por parecido acelera un poco en todos los mundos y no cuesta nada
 hipótesis decía, y con 2–4 exposiciones de base no hay margen que valga un órgano. **Línea lateral cerrada** (revisión de rumbo de
 las 06:45): el hallazgo que queda es de representación (la alta dimensión da aristas legibles; el código de 3 celdas no), útil
 para el mundo vivo y para A-6, no un órgano.
+
+
+### v14.1 CONGELADO (18 sep 2026, 06:05; decisión del director "sí, mételas"): **v14 con `eta_s = 0.15` y `clip_s = 10` en la vía lenta**
+
+Cambio: dos constantes de `organismo/organismo_v14.py` (ahora feefc88b1fd8d434), el instrumento `organismo_v14` de `bateria_generaliza.py` (mismos
+valores) y los defaults del gemelo `organismo_v14_rapido.py`; manifiesto actualizado; tag `v14.1-tronco`. Evidencia (bloque A-4 y su
+control §6): con rasgos dados la regla local pasa de 0.625 a 1.000 y de 400 a 150 exposiciones; examen v3' **8/8 en 101–120 y 8/8 en
+121–140**; generalización **K 20/20, G1 1.000 / G2 0.967 (101–120) y 1.000 / 0.998 (121–140)**; identidad de la copia con las constantes
+originales 16/16. Regresión de la regla 1 sobre el tronco v14.1: examen 8/8 con 6 semillas (examen_v14_20260918_054720, c2331c253bab1681); generalización K 20/20, G1 1.000 / G2 0.967 en 101–120 (regresion_generaliza_organismo_v14_20260918_054926, 6452fdf50352607e); arnés del gemelo 42/42 (el bloque que compara con v13 pasa ahora también las constantes viejas). Lo que NO cambia: XOR con rasgos propios sigue en
+0.50–0.63 (el cuello son los rasgos; bloque A-6 en curso). v14 (05:05) queda como tronco anterior.

@@ -44,7 +44,7 @@ import organismo_v14_rapido as RAPIDO       # el gemelo que se examina aqui
 T = int(sys.argv[sys.argv.index('--T') + 1]) if '--T' in sys.argv else 30000
 T_LARGO = 200000
 N = lambda x: json.loads(json.dumps(x, default=str))
-APAG = dict(mask_rel=0, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=0, pat_shuf=0, pat_min=0)
+APAG = dict(mask_rel=0, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=0, pat_shuf=0, pat_min=0, eta_s=0.015, clip_s=3.0)   # v14.1: el punto de v13 exige tambien sus constantes viejas
 
 
 def escenarios(t):
