@@ -1,0 +1,61 @@
+[00:35:57 +    0.0s] ARRANQUE PUERTA POR CODIGO (propuesta B-2). mundo D=10 n_est=20 pasos=(4000,) semillas 41-42, brazos ['v11', 'v13', 'PAT', 'PATC', 'PATSHUF']. HUMO (un proceso, sin Pool)
+[00:35:57 +    0.0s] sha preregistro cafbc9b57f4399c3  script beb97e43fe4b746c  constructor b24282984a955a77  organismo_capB 8070351683837077  organismo_v13B 59075fa17f034112  organismo_v13gB 94324c29af339673  bateria_generaliza_B f1da3b0a1a4ee185  bateria_v13B ef78a939fd9fd4f7  bateria_v13Bc bed5ad9661ea7040  origen organismo_v13 (congelado) cc8b16b492d4d324  origen capD13 fd8e10435801646c
+[00:35:57 +    0.5s] REGLA 11 — procesos python vivos (17), este es pid 21076
+[00:35:57 +    0.5s] ETAPA 1/4 — INERCIA (perillas apagadas == originales) (6)...
+[00:36:38 +   41.5s]           5/6
+[00:36:53 +   56.7s]           6/6
+[00:36:53 +   56.7s]   identicos: 6/6
+[00:36:53 +   56.7s] ETAPA 2/4 — BLOQUE K, capacidad (10 corridas largas) (10)...
+[00:37:26 +   88.9s]           5/10
+[00:38:01 +  124.1s]           10/10
+[00:38:01 +  124.1s] ETAPA 3/4 — analisis del bloque K (criterios del preregistro, sin recalibrar).
+[00:38:01 +  124.1s] 
+[00:38:01 +  124.1s]   paso_t = 4000
+[00:38:01 +  124.2s]    v11      N* 1.0 [1,1]  M_max 8.0  celdas 69  divisiones 39  a la lenta 0/20  mal ruteados 0  muertes 104
+[00:38:01 +  124.2s]    v13      N* 1.0 [1,1]  M_max 8.0  celdas 67  divisiones 37  a la lenta 6/20  mal ruteados 5  muertes 95
+[00:38:01 +  124.2s]    PAT      N* 1.0 [1,1]  M_max 11.5  celdas 69  divisiones 39  a la lenta 2/20  mal ruteados 0  muertes 100
+[00:38:01 +  124.2s]    PATC     N* 1.0 [1,1]  M_max 10.5  celdas 66  divisiones 36  a la lenta 3/20  mal ruteados 0  muertes 104
+[00:38:01 +  124.2s]    PATSHUF  N* 1.0 [1,1]  M_max 2.5  celdas 65  divisiones 35  a la lenta 15/20  mal ruteados 0  muertes 110
+[00:38:01 +  124.2s]    PAT: Q1 N*>=0 y >v13 en 0/2 NO | Q2 celdas/divisiones +-2 OK | Q3 a la lenta<=2 y 0 mal ruteados OK | S2 > PATSHUF en 0/2 CAE
+[00:38:01 +  124.2s]    PATC: Q1 N*>=0 y >v13 en 0/2 NO | Q2 celdas/divisiones +-2 OK | Q3 a la lenta<=2 y 0 mal ruteados NO | S2 > PATSHUF en 0/2 CAE
+[00:38:01 +  124.2s] 
+[00:38:01 +  124.2s] ETAPA 4/4 — BLOQUE G: generalizacion y retencion (subprocesos secuenciales, fuera del Pool).
+[00:38:01 +  124.2s]   -> generaliza PAT ...
+[00:38:32 +  155.6s]      FALLA G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.700, px0>azar 2/2
+[00:38:32 +  155.6s]      FALLA G2 conducta al primer encuentro: px0 0.972 (>=0.55), azar 0.625, px0>azar 2/2
+[00:38:32 +  155.6s]      VEREDICTO bateria_generaliza (organismo_v13B_n5): K_cobertura=True G1_valor=False G2_conducta=False
+[00:38:32 +  155.6s]      *** organismo_v13B_n5 NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[00:38:32 +  155.6s]      *** codigo 1: e "C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\nivel4_puerta_codigo\bateria_generaliza_B.py", line 61, in h16
+    return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
+                          ~~~~^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\PROYECTOS\\JUACO\\bundle\\experimentos\\nivel4_puerta_codigo\\organismo_v13B_n5.py'
+
+[00:38:32 +  155.7s]   -> generaliza PATC ...
+[00:38:55 +  178.1s]      FALLA G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.700, px0>azar 2/2
+[00:38:55 +  178.1s]      FALLA G2 conducta al primer encuentro: px0 0.972 (>=0.55), azar 0.625, px0>azar 2/2
+[00:38:55 +  178.1s]      VEREDICTO bateria_generaliza (organismo_v13B_n5c): K_cobertura=True G1_valor=False G2_conducta=False
+[00:38:55 +  178.1s]      *** organismo_v13B_n5c NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[00:38:55 +  178.1s]      *** codigo 1:  "C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\nivel4_puerta_codigo\bateria_generaliza_B.py", line 61, in h16
+    return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
+                          ~~~~^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\User\\Documents\\PROYECTOS\\JUACO\\bundle\\experimentos\\nivel4_puerta_codigo\\organismo_v13B_n5c.py'
+
+[00:38:55 +  178.1s]   -> retencion PAT ...
+[00:41:49 +  352.3s]      FALLA 3'' via lenta activa sin plasticidad (Aâˆ©B=3): 0/2 lo pasan (>=1)
+[00:41:49 +  352.3s]      PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 2/2, E2L con conflicto 2/2; corridas que dividen 8, violaciones ninguna
+[00:41:49 +  352.3s]      PASA  4c Câˆ©B=3 misma valencia: guarda 2/2, splits==0 2/2, W_C<=-2.5 2/2  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 12)
+[00:41:49 +  352.3s]      PASA  4d disparo anclado a la causa: E1 sin divisiones 2/2; t>=50k {'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2}; E2L termina <25k 2/2
+[00:41:49 +  352.3s]      VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=False 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[00:41:49 +  352.3s]      *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[00:41:49 +  352.3s]   -> retencion PATC ...
+[00:46:02 +  605.0s]      PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 2/2 lo pasan (>=1)
+[00:46:02 +  605.0s]      PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 2/2, E2L con conflicto 2/2; corridas que dividen 8, violaciones ninguna
+[00:46:02 +  605.0s]      PASA  4c Câˆ©B=3 misma valencia: guarda 2/2, splits==0 2/2, W_C<=-2.5 2/2  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 10)
+[00:46:02 +  605.0s]      PASA  4d disparo anclado a la causa: E1 sin divisiones 2/2; t>=50k {'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2}; E2L termina <25k 2/2
+[00:46:02 +  605.0s]      VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[00:46:02 +  605.0s]      *** v13 cumple el criterio v3 con 2 semillas. Congelar sÃ³lo con S>=20.
+[00:46:02 +  605.0s] 
+[00:46:02 +  605.0s] VEREDICTO PUERTA_CODIGO — el bloque lo decide S1 (generalizacion) por encima de Q1 (capacidad):
+[00:46:02 +  605.0s]   {"INERCIA": true, "PAT_4000": {"Q1": false, "Q1_n": 0, "Q1_umbral": 0, "Q2": true, "Q3": true, "S2_sobrevive_al_barajado": false, "S2_n": 0}, "PATC_4000": {"Q1": false, "Q1_n": 0, "Q1_umbral": 0, "Q2": true, "Q3": false, "S2_sobrevive_al_barajado": false, "S2_n": 0}}
+[00:46:02 +  605.0s] (HUMO: 2 semillas, mundo reducido y baterias de 2 semillas — ningun umbral vale; solo prueba el montaje.)
+[00:46:02 +  605.1s] datos -> puerta_codigo_humo_s41-42_20260918_003557.json  sha256_16 = b4deabc188aff2ed

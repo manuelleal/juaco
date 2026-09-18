@@ -1,0 +1,47 @@
+[00:58:14 +    0.0s] ARRANQUE v13D (hija dispersa sobre el tronco): NO REGRESION. semillas 101-102. HUMO (un proceso)
+[00:58:14 +    0.0s] sha preregistro b476d4ce8dbe8a04  script c78d88f91c640bc1  constructor e85a494d96e00ba5  organismo_v13D dd380dada0b72bac  organismo_v13Don 1dd131dc0298307d  organismo_v13gD 0789c4010b8160b0  bateria_v13D c4467ed7838d027c  bateria_generaliza_D ebc6010ce8a16b50  origen organismo_v13 (congelado) cc8b16b492d4d324  origen bateria_v13 (congelada) 1a027bcb37eb536e
+[00:58:14 +    0.4s] REGLA 11 — procesos python vivos (4), este es pid 12888
+[00:58:14 +    0.4s] ETAPA 1/3 — IDENTIDAD (perilla apagada == organismo_v13) + D3 inercia (5)...
+[00:58:25 +   11.0s]           1/5
+[00:58:36 +   21.6s]           2/5
+[00:58:46 +   32.4s]           3/5
+[00:58:57 +   43.3s]           4/5
+[00:59:07 +   53.4s]           5/5
+[00:59:07 +   53.4s]   identidad: 3/3   (organismo_v13 desde C:\Users\User\Documents\PROYECTOS\JUACO\bundle\organismo\organismo_v13.py)
+[00:59:07 +   53.4s]   D3 inercia: divisiones 0 -> 0   celdas 30 -> 30   W identico en 2/2   -> OK (+-10%)
+[00:59:07 +   53.4s] 
+[00:59:07 +   53.4s] ETAPA 2/3 RETENCION  (criterio v3', perilla ENCENDIDA) ...
+[01:00:55 +  161.4s]    PASA  1 E1        2/2  [venenoQ4<Q1:2/2 W_Aâ‰ˆ+1:2/2 W_Bâ‰ˆ-3:2/2]
+[01:00:55 +  161.4s]    PASA  1 E2        2/2  [W_Aâ†’-3:2/2 W_Bâ†’+1:2/2 come B Q4â‰¥50:2/2]
+[01:00:55 +  161.4s]    PASA  1 E2I       2/2  [W_Câ‰¤-2.5:2/2 W_Aâ‰ˆ+1:2/2 W_Bâ‰¤-2.8:2/2 tasaA Q4â‰¥80%Q2:2/2]
+[01:00:55 +  161.4s]    PASA  1 E2J       2/2  [W_Dâ‰¥0.85:2/2 W_Bâ‰¤-2.7:2/2]
+[01:00:55 +  161.4s]    PASA  1 E2K       2/2  [W_Dâ‰¥0.8:2/2 W_Bâ‰¤-2.4:2/2]
+[01:00:55 +  161.4s]    PASA  1 E2L       2/2  [W_Aâ‰ˆ+1:2/2 W_Bâ‰ˆ-3:2/2 solapâ†’0:2/2]
+[01:00:55 +  161.4s]    PASA  2 celdas<=45: {'E1': 2, 'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2, 'E2L': 2, 'E2I-misma': 2}
+[01:00:55 +  161.4s]    PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/2 lo pasan (<=1)  W_A=[-1.26, -0.98]
+[01:00:55 +  161.4s]    PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 2/2 lo pasan (>=1)
+[01:00:55 +  161.4s]    OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 16/16  []
+[01:00:55 +  161.4s]    PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 2/2, E2L con conflicto 2/2; corridas que dividen 8, violaciones ninguna
+[01:00:55 +  161.4s]    PASA  4c Câˆ©B=3 misma valencia: guarda 2/2, splits==0 2/2, W_C<=-2.5 2/2  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 10)
+[01:00:55 +  161.4s]    PASA  4d disparo anclado a la causa: E1 sin divisiones 2/2; t>=50k {'E2': 2, 'E2I': 2, 'E2J': 2, 'E2K': 2}; E2L termina <25k 2/2
+[01:00:55 +  161.4s]    VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[01:00:55 +  161.4s]    *** v13 cumple el criterio v3 con 2 semillas. Congelar sÃ³lo con S>=20.
+[01:00:55 +  161.4s] 
+[01:00:55 +  161.4s] ETAPA 3/3 GENERALIZACION (G1/G2/K, perilla ENCENDIDA) ...
+[01:01:07 +  173.1s]    OK    K  cobertura del primer encuentro: 2/2
+[01:01:07 +  173.1s]    PASA  G1 valor en patrones nunca vistos: px0 0.700 (>=0.65), azar 0.550, px0>azar 2/2
+[01:01:07 +  173.1s]    PASA  G2 conducta al primer encuentro: px0 0.700 (>=0.55), azar 0.577, px0>azar 2/2
+[01:01:07 +  173.1s]    VEREDICTO bateria_generaliza (organismo_v13D_on): K_cobertura=True G1_valor=True G2_conducta=True
+[01:01:07 +  173.1s]    *** organismo_v13D_on CONSERVA la generalizaciÃ³n de la Etapa 3
+[01:01:07 +  173.1s] 
+[01:01:07 +  173.1s] ETAPA 3b/3 GENERALIZACION de referencia (perilla APAGADA) ...
+[01:01:19 +  185.1s]    OK    K  cobertura del primer encuentro: 2/2
+[01:01:19 +  185.1s]    FALLA G1 valor en patrones nunca vistos: px0 0.700 (>=0.65), azar 0.500, px0>azar 1/2
+[01:01:19 +  185.2s]    PASA  G2 conducta al primer encuentro: px0 0.890 (>=0.55), azar 0.559, px0>azar 2/2
+[01:01:19 +  185.2s]    VEREDICTO bateria_generaliza (organismo_v13D): K_cobertura=True G1_valor=False G2_conducta=True
+[01:01:19 +  185.2s]    *** organismo_v13D NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[01:01:19 +  185.2s] 
+[01:01:19 +  185.2s] VEREDICTO v13D: NO REGRESIONA: la hija dispersa no dana la retencion ni la generalizacion del tronco; y aqui casi no actua (D3 OK)
+[01:01:19 +  185.2s]   D1 retencion (criterio v3') = True   D2 generalizacion (G1/G2/K) = True   D3 inercia = True
+[01:01:19 +  185.2s] (HUMO: 2 semillas — ningun criterio vale; solo prueba que el montaje corre.)
+[01:01:19 +  185.2s] datos -> baterias_v13D_humo_20260918_005814.json  sha256_16 = 8d58c8dde12f0964
