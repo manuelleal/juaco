@@ -4603,3 +4603,12 @@ con la magnitud del mundo: u = +0.80 / −0.38, 19/20) y N4 (el canal sólo ense
 (no hoy):** bajar el techo de SOLO_R a la banda (más objetos que vistas-tiempo o menos pasos), leer G-c en SOLO_R y guardar `curva_rec`.
 Línea lateral cerrada (revisión de rumbo 06:45): N2 sigue sin mundo donde medir retención sin morder; lo que queda es el
 resultado de significado por predicción (N1) y el diseño del mundo que lo haría decidible.
+
+
+### C-P6, réplica automática 141–160 (regla 12; 18 sep 06:48): **lo que sobrevivía tampoco replica — N1 (significado) 13/20 (se exigían 15), N4 SACIEDAD 15/20 (se exigían 18); SOLO_R 0.983 otra vez fuera de banda → N2 por predicción queda SIN resultado firme en este mundo**
+
+Datos `n2pred_s141-160_20260918_063750` (301e5c4359382aca). N1 19/20 en 121–140 contra 13/20 en 141–160: la magnitud del significado
+(`u ≈ +0.80 / −0.38`) no es robusta entre rangos de semillas; N4 SHUF 18/20 se sostiene, SACIEDAD cae a 15/20. Veredicto del runner:
+*"refutado en la raíz: el receptor no aprende el significado"*. **Lectura honesta:** con el mundo fuera de banda (el receptor aprende solo) ni
+siquiera el aprendizaje del significado se puede afirmar; la línea N2 vuelve al estado de antes de la noche — cerrada con dos mundos —
+más lo aprendido sobre el instrumento (ERR-32, ERR-33, ERR-34, ERR-36 y el teorema de la retina de 6 px). Nada se declara.
