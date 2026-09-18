@@ -4530,3 +4530,15 @@ más encontrado que comida; primera cruzada transitoria). **Lectura del diseñad
 ESTRUCTURA, no regla — disuelve el XOR necesidad × estímulo porque lo mete en la forma de la memoria; el cuello de construir el
 rasgo desde píxeles sigue intacto; su valor es un criterio de éxito que no es un acierto sino estar vivo. Semillas cuando toque:
 181–200 (réplica 201–220). Queda en diseño hasta el veredicto de XOR.
+
+
+### Creador A (18 sep 07:00): criba previa al bloque 3 — **la fisión de v11 como creadora de rasgos está en el azar (P0·P1 nunca es el par más propuesto, 0/20; rango mediano 8 de 15); el estadístico de pureza (unique cue) también cae (mejor honesto 10/20, 0.625), tras un artefacto propio detectado y declarado** → no se gasta el bloque 3/3 en eso; los cuatro mecanismos de la sala pasarán por la criba (proponer P0·P1 en ≥ 15/20; 1.6 s con el gemelo) antes de preregistrar
+
+Criba con instrumento existente + gemelo (20 corridas, 1.6 s): de cada fisión salen los 3 pares del patrón que causó el conflicto;
+`P0·P1` es el par más propuesto en **0/20** semillas. Pureza del refuerzo bajo el par: primera medida 17/20 y 1.000 era un **artefacto**
+(con `nmin = 4` sólo 3 de 300 pares eran elegibles y el empate en −∞ daba la victoria al índice 0 = `0x1`; regla 5 en acto);
+con desempate al azar: pureza 0/20 (0.469), media de R 10/20 (0.625). **Mapa completo del mundo de 8 patrones, todo medido:**
+correlación con el residuo (estadístico ideal) 3/20 · fisión 0/20 · pureza/media 10/20 · normas ≤ 0.625 · gradiente exacto 0.562 ·
+retropropagación 0.531; razón estructural: 9 de 15 candidatos ajustan el tren con residuo 0. Recomendación del creador (pendiente
+de la decisión del director sobre el criterio, opción A/B): criba a los mecanismos del enjambre; si ninguno la pasa, cerrar con el
+mínimo `ntr` con el que el organismo generaliza (1.000 con 14 patrones, n* = 200).

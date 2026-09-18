@@ -359,6 +359,54 @@ prior afinado al régimen de 8, y hay que decirlo. Referencia ya medida: con la 
 > bien"*. Si el bloque 3 cruza 0.75 con 8 patrones, se declara **prior estructural** (con el control de `azar`), no
 > "aprende XOR", y entonces el criterio de parada se sustituye por el resultado del bloque 3.
 
+### A13. Bloque 3: **NO construyo el paquete de la ruta (2). La cribé y está en el azar** — 18-sep
+
+El coordinador me pidió el paquete de mi ruta (2) (la fisión de v11 como creadora de rasgos). Antes de construir
+nada la cribé con el instrumento que ya existe y el gemelo compilado (**20 corridas, 1.6 s**): de cada evento de
+fisión salen los 3 pares de píxeles del patrón que causó el conflicto; conté cuántas veces se propone cada par
+antes de la sonda.
+
+> **`P0·P1` es el par más propuesto en 0 de 20 semillas. Rango mediano 8 de 15 — exactamente el azar.**
+> (4–16 fisiones antes de la sonda por semilla.)
+
+**Mi propia ruta favorita queda refutada antes de escribir una línea de instrumento.** No la construyo: el método
+dice que un mecanismo que en la criba está en el azar no merece un preregistro.
+
+**Probé además el estadístico que me faltaba, y también cae — con un error de instrumento mío en medio, que declaro.**
+La idea era la "pureza" del refuerzo bajo el par (`var(R | par activo)`), que es el *unique cue* literal: `P0·P1` es
+veneno en las 4 veces que se activa. Primera medida: `nmin=4` daba **17/20 y acc 1.000**. **Era artefacto mío**: con
+`nmin=4` sólo **3 de 300** (par, semilla) tienen suficientes patrones de tren, así que casi todos los marcadores
+quedaban empatados en −∞ y `np.argsort` le daba la victoria al índice 0… **que es justamente `0x1`**. Con desempate
+al azar:
+
+| estadístico | `nmin` | semillas con algún candidato elegible | empatados (mediana) | `P0·P1` gana | acc |
+|---|---|---|---|---|---|
+| pureza | 1 | 20/20 | **8** | **0/20** | 0.469 |
+| pureza | 2 | 20/20 | 2 | 8/20 | 0.625 |
+| media de R | 2 | 20/20 | 1 | **10/20** | 0.625 |
+| pureza / media | 4 | **3/20** | 1 | 0/20 | 0.625 |
+
+Lo mejor honesto: **10/20 y 0.625**. (Regla 5 del proyecto en acto: ante la anomalía, la primera hipótesis fue el
+instrumento, y lo era. Cuatro de cuatro anomalías del proyecto, ya.)
+
+**Estado del mapa de mecanismos para los 8 patrones del mundo original, todo medido por mí:**
+
+| mecanismo | `P0·P1` elegido | acc |
+|---|---|---|
+| correlación con el residuo (cascade-correlation), estadístico **ideal** | 3/20 | 0.562 |
+| **fisión de v11 (mi ruta 2)** | **0/20** | — |
+| pureza / media del refuerzo bajo el par | 10/20 | 0.625 |
+| normas (L1, L2, margen, grado, frecuencia) | — | ≤ 0.625 |
+| **gradiente exacto** sobre esos rasgos | — | **0.562** |
+| retropropagación (MLP 6→8→1) | — | 0.531 |
+| **razón estructural** | **9 de 15 candidatos ajustan el tren con residuo 0** | |
+
+**Lo que recomiendo para el bloque 3, en una línea:** esperar el informe del enjambre
+(`ENJAMBRE_xor_20260918.md`, aún no está en el repo a las 06:05) y, si ninguno de sus cuatro mecanismos pasa la
+criba barata que dejo montada (proponer `P0·P1` en ≥ 15/20 **antes** de gastar un preregistro), cerrar la línea con
+el criterio de parada de mi §A12: **declarar el mínimo `ntr` con el que el organismo generaliza — 1.000 con 14
+patrones y n\* = 200 —** en vez de seguir buscando una regla que rompa un empate de 9.
+
 ### A11. Archivos (sólo míos, nada original tocado, sin commits)
 `experimentos/creacion_A/`: `identificabilidad_xor.py` · `sesgo_grado_xor.py` · `banco_sesgo.py` ·
 `regla_puerta_rasgo.py` · `regla_wta_conjuntiva.py` · `dinamica_oraculo.py` ·
