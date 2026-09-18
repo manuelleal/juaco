@@ -5182,3 +5182,15 @@ simétrica quita la trampa 3 (razón de exposiciones veneno/comida 0.99–1.02);
 separan "aprender la excepción a costa de los hermanos" de "no aprender nada" (AZA/BAR puntúan más colateral que EXC): se rediseñan y
 preregistran de nuevo (medida que ordene EXC > LIN y AZA/BAR abajo por construcción), con `n_exc = 8` y semillas 441–460. Ningún umbral
 de esta serie se recalibra.
+
+
+### BLOQUE 1, ENMIENDA 1 (18 sep 15:08; semillas 441–460; `n_exc` 8, `dureza` 4, medida `colateral_n` con ERR-46/47/48/49): **E3 CAE otra vez — nada se declara; la línea del "colateral" se CIERRA como instrumento: tres correcciones seguidas de la medida sin que separe familia real de familia falsa es recalibrar hasta que pase**
+
+Datos `familias_enm1_s441-460_20260918_150719` (507e3ee556e0d593; 100 corridas, 1.4 min); identidad 24/24. EXC: muertes 53, `colateral_n` 0.089
+(mediana; E2b exigía ≥ 0.20, refutaba ≤ 0.05: INDECISO), `n_valida` 2.0 (E3 exigía ≥ 4), `apr` 0.59; LIN: 33, 0.000, 3.5, 1.00; AZA: 58.5, 0.125,
+1.0; BAR: 83.5, 0.030, 0.0. Lectura honesta: v14.1 aprende sólo el 59 % de las excepciones y con 2 ventanas válidas por corrida la medida
+es ruido; el daño a los hermanos existe (0.089 contra 0.000 en LIN) pero pequeño y sin poder. **Decisión del coordinador (15:12):** no se
+corrige la medida una cuarta vez. La pregunta "¿el mundo obliga?" se reformula como CAPACIDAD directa (la hipótesis del director): *¿el
+organismo generaliza a una variante nunca vista de un token conocido, y separa la variante cuando deja de comportarse igual?* —
+preregistro nuevo, medidas C1–C5 de `DISENO_grafo_tokens`, brazos v14.1 / lineal / azar / barajado, semillas 461–480. La renovación
+simétrica y `dureza = 4` (31–53 muertes) se conservan como mundo. ERR-46..49 quedan como historial del instrumento fallido.
