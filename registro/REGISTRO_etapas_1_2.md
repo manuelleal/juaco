@@ -3221,3 +3221,28 @@ separar. **Vocabulario:** *compone hasta 4 pasos de historia con distractores; a
 diluye*. La causa del techo es el **presupuesto de celdas** (el criterio de parada del debate: "si el límite es el pool,
 la salida es crecer celdas o cambiar la lectura", no otra regla). Serie completa k = 1…5: sep 3.97 / 3.74 / 2.24 / 1.99 /
 1.94; celdas ~35 / 41 / 58 / 72 / 90.
+
+
+### Bloque 1b (día 6): mundo largo, semillas 21–40, `W` por patrón — **réplica de los hallazgos; la retención de lo ausente es mala (interferencia), no inversión**
+
+Enmienda 1 de `PREREGISTRO_mundo_largo.md`; datos `largo_s21-40_20260917_204840` (`5738e6062d583294`); identidad 3/3.
+Réplica: V13 adquisición 0.90 (≤ 30 vistos) / 0.80 (final); MAPA 0.70 / 0.70; reciclado 1.00; V13 recupera en 4 000
+pasos (18/20 ≤ 10 000); MAPA recupera antes (16/20) y **muere menos** (2 contra 8 en los 20 000 pasos posteriores; mi
+predicción decía "muere más": refutada en la dirección buena — el mapa usa el valor vivo, muerde una vez lo que ya no es
+comida y deja de ir).
+
+**Retención separada (lo nuevo de la enmienda):** patrones 5–10 vistos, **nunca invertidos**, ausentes ≥ 150 000 pasos:
+V13 **0.67**, MAPA **0.50** (predije ≥ 0.70: NO). Los 4 iniciales invertidos en ausencia: 0.38 / 0.25 (predije ≤ 0.25 por
+construcción: NO en V13 — sus valores se acercaron a cero y el signo es ruido). **Lectura:** v13 **no retiene** lo que
+deja de ver mientras aprende otras 40 cosas con las mismas celdas: interferencia por códigos compartidos (la misma
+causa de "generalización = interferencia"), peor con mapa (menos exploración, celdas 78 contra 90). No es la
+inversión. Queda como límite medido de nivel 8 (retención en ausencia) y del nivel 4.
+
+### Bloque 1c (día 6): N3d mudo — **la conducta ajena gobierna la decisión; no enseña**
+
+`PREREGISTRO_N3d_mudo.md`; instrumento `mundo_social_n3.py` (`e6b3ee1ef5b8a4be`, knob `mudo_desde`; identidad 6/6); datos
+`N3dmudo_s61-80_20260917_205345` (`ae5c451879848d1e`), mismas semillas 61–80 de N3d (los primeros 150 000 pasos son la
+misma trayectoria). Último cuarto sin señal: CONV_MUDO **0.503** [0.50, 0.51] contra CONV 0.822 (20/20 pareado) y SOLO_R
+0.515 (|Δ| = 0.012). **Predicción cumplida:** el receptor ciego por construcción obedece, no aprende (no puede: su vista
+no lleva la regla). Dato extra: muere **189** veces en el cuarto mudo contra 86 el que nunca escuchó: la obediencia
+crea **dependencia** (sin la señal está peor que solo). Vocabulario: *la conducta ajena gobierna la decisión; no enseña*.

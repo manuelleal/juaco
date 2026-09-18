@@ -13,13 +13,12 @@
 >   bit a bit sólo explora, nunca confirma.
 >
 > **Bloque 1 — cabos del plan del debate (cortos, en este orden):**
->   1a. 3T-k con k = 4 y 5 (¿dónde se agota la composición?; celdas usadas: 35 → 41 → 58 con k = 1, 2, 3).
->       Predicción: k = 4 compone (sep ≥ 1.5) y k = 5 no, por agotamiento del pool de 90 celdas. Control barajado igual.
->   1b. Mundo largo guardando `W` por patrón: separar olvido de inversión en ausencia (R1). Predicción: los 6 primeros no
->       invertidos ≥ 0.70 de signo correcto al final; los 4 invertidos ausentes ≈ 0 (no pueden saberlo: por construcción).
->   1c. N3d sin emisor: tras 200 000 con señal, 50 000 más con el emisor mudo. Predicción: el receptor ciego por construcción
->       cae a ≈ 0.50 (obedece, no aprende: su vista no puede saber). Variante con vista parcial (mundo de N3c) en la que
->       la señal sí puede arrancar aprendizaje propio: predicción ≥ 0.80 sostenido sin emisor en ≥ 15/20.
+>   1a. ✅ 3T-k k = 4 compone (sep 1.99, 20/20, celdas 72); k = 5 NO por T3 al filo (0.144) con el pool agotado (90/90).
+>       Techo = presupuesto de celdas.
+>   1b. ✅ Mundo largo 21–40 con `W`: hallazgos replicados; retención de lo ausente 0.67 (V13) / 0.50 (mapa) → interferencia,
+>       no inversión; el mapa muere MENOS tras el cambio (predicción refutada en la dirección buena).
+>   1c. ✅ N3d mudo: 0.503 sin señal (= solo 0.515; con señal 0.822): obedece, no enseña; y crea dependencia (189 muertes).
+>       La variante "vista parcial que sí puede aprender" no tiene mundo todavía (N3c: ya sabe solo; N3b: no encuentra comida).
 >
 > **Bloque 2 — nivel 8 propio: el canje exploración/explotación del mapa.** El mapa da de comer (490 vs 332) pero daña la
 >   adquisición de lo nuevo (0.70 vs 0.88). Órgano candidato: **curiosidad por progreso de error** (nivel8 §3, puntos 8–9:

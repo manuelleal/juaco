@@ -402,7 +402,8 @@ en el mundo largo para separar olvido de inversión (R1); (c) medir si las divis
 ## 12. Plan del día 6 (escrito al cierre del día 5; es el bloque vigente de `PLAN.md`)
 El orden y las predicciones están en `registro/PLAN.md` (bloque "ORDEN VIGENTE PARA EL DÍA 6"). En una línea cada uno:
 **0** gemelo rápido del organismo — **hecho para el tronco** (`organismo_v13_rapido.py`, bit a bit 72/72, ×78; faltan los
-mundos); **1** cabos: 3T-k k=4,5 (¿dónde se agota?), `W` por patrón en el mundo largo, N3d sin emisor;
+mundos); **1** ✅ cabos: 3T-k compone hasta 4 (a 5 se agota el pool); retención de lo ausente 0.67/0.50 = interferencia; N3d mudo
+0.503 = obedece, no enseña (y crea dependencia);
 **2** curiosidad por progreso de error contra el canje exploración/explotación del mapa (el nivel 8 real); **3** XOR como
 límite de lectura (vía lenta cuadrática, Kenyon congelado); **4** v14 sólo si pasa el 2; **5** N2b en el mundo con
 reaparición; **6** rama allostasis. **Estado de los órganos:** el tronco es v13; la tabla `M` (mapa) y `gamma_soc`
@@ -425,3 +426,18 @@ commiteado (`git log`) y respaldado en `JUACO/respaldo/juaco_bundle_20260917_*.b
   el novato aprende qué predice cada símbolo sólo por sus propias consecuencias, y cuando ya cree saberlo, actualiza su
   valor del patrón por las dos vías. Control: barajar los símbolos en la entrega debe destruir el código.
 - **Después de N2:** N3; rama de capacidad (puerta con la rápida vacía); consolidación y publicación.
+
+
+## 13. Lista de chequeo por nivel del brief (3 → 8), al 17-sep 21:00 — hecho / falta / estimación honesta
+
+| nivel | hecho (con dato) | falta | ~ |
+|---|---|---|---|
+| **3 generalización** | lineal: Etapa 3 cerrada (v9), recuperada en v13 tras ERR-20 (0.80–0.90 en nunca vistos; `bateria_generaliza` obligatoria) | no lineal (XOR 0.44): bloque 3 (límite de lectura) | 70 % |
+| **4 memoria persistente** | retención 20/20 (v11/v13), capacidad ×5 (50/60 v11; 35/60 v13 por la puerta), examen v3' | retención de lo **ausente** bajo interferencia (0.67 a 150k pasos); canje puerta/capacidad; olvido dirigido | 60 % |
+| **5 comunicación / transferencia** | N1 experto→novato (replicado); N3d transferencia entre sensores por conducta (replicado); mudo = obedece | N2 significado emergente (5 diseños ❌; bloque 5 en mundo con reaparición); que el receptor aprenda algo propio; XOR entre dos | 50 % |
+| **6 planificación** | mapa: elige la dirección hacia comida recordada fuera de la vista (replicado; invertido huye); tras el cambio de regla muere menos | horizonte real (dos metas, rodeo), secuencia de acciones, `M` que se degrade; canje exploración/explotación (bloque 2) | 35 % |
+| **7 composición** | 3T-k: historia de hasta 4 pasos con distractores (control ≈ 0); techo = pool de celdas | composición de rasgos (XOR; bloque 3); composición social (XOR entre dos) | 55 % |
+| **8 aprendizaje abierto** | sigue aprendiendo hasta el techo de la retina (50 patrones, 0.80); se recupera del cambio de regla (2–4k pasos, 18/20); el mapa cobra exploración | retención de lo ausente; curiosidad (bloque 2); dominio distinto del anillo; órgano de olvido/fusión | 40 % |
+| (9 autonomía) | recuperación medida ante cambio no avisado | allostasis (bloque 6), meta propia | 20 % |
+
+Los porcentajes son juicio mío, no medida: "100 %" sería el nivel cerrado con réplica y sin cabos abiertos en su fila.
