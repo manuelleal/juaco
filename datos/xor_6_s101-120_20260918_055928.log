@@ -1,0 +1,59 @@
+[05:59:28 +    0.0s] ARRANQUE bloque 6 (A-6: sobredeterminacion). brazos ['REF', 'SIN_CTE', 'NTR11', 'NTR14', 'SIN_CTE_NTR11', 'SIN_SEL'], lecturas ['cuadratica'], reglas ['xor01', 'px0', 'azar'], semillas 101-120. Pool(14).
+[05:59:28 +    0.0s] BASE {'T': 100000, 'mundo': 'regla', 'puerta': 3, 'regla_lenta': 'delta_signo', 'lam_lenta': 0.0, 'eta_s': 0.15, 'clip_s': 10.0}
+[05:59:28 +    0.0s]    brazo REF          {'constante': True, 'ntr': None, 'seleccion': 'wta', 'sel_theta': 0.3, 'sel_rho': 0.02, 'sel_cupo': 1, 'sel_estad': 'cond'}
+[05:59:28 +    0.0s]    brazo SIN_CTE      {'constante': False, 'ntr': None, 'seleccion': 'wta', 'sel_theta': 0.3, 'sel_rho': 0.02, 'sel_cupo': 1, 'sel_estad': 'cond'}
+[05:59:28 +    0.0s]    brazo NTR11        {'constante': True, 'ntr': (6, 5), 'seleccion': 'wta', 'sel_theta': 0.3, 'sel_rho': 0.02, 'sel_cupo': 1, 'sel_estad': 'cond'}
+[05:59:28 +    0.0s]    brazo NTR14        {'constante': True, 'ntr': (8, 6), 'seleccion': 'wta', 'sel_theta': 0.3, 'sel_rho': 0.02, 'sel_cupo': 1, 'sel_estad': 'cond'}
+[05:59:28 +    0.0s]    brazo SIN_CTE_NTR11 {'constante': False, 'ntr': (6, 5), 'seleccion': 'wta', 'sel_theta': 0.3, 'sel_rho': 0.02, 'sel_cupo': 1, 'sel_estad': 'cond'}
+[05:59:28 +    0.0s]    brazo SIN_SEL      {'constante': True, 'ntr': None}
+[05:59:28 +    0.0s] sha preregistro 0d6e368d820996f2  script 4fef4a361b819dc0  organismo_v13q6 b37aa8124c89cc5f  construye_v13q6 72e40d2ec661a61d  gemelo 87d48b8fec173907  organismo_v13q3 aaebe073308a40c2
+[05:59:28 +    0.5s] REGLA 11 — procesos python vivos (4), este es pid 31956
+[05:59:29 +    0.6s] ETAPA 1/4 — identidad 1a (v13q6 perillas apagadas == v13q3) y 1b (gemelo == interpretado) (9 corridas)...
+[05:59:36 +    8.4s]    identicos: 9/9   claves nuevas: ['ntr', 'lab', 'lenta_eventos', 'fase2_en', 'seleccion', 'sel_estad', 'sel_theta', 'sel_rho', 'sel_cupo', 'sel_abre', 'sel_abiertos', 'sel_e', 'sel_n']
+[05:59:36 +    8.4s] ETAPA 2/4 — 360 corridas de T=100000...
+[05:59:38 +   10.4s]           40/360
+[05:59:39 +   10.9s]           80/360
+[05:59:39 +   11.3s]           120/360
+[06:00:04 +   35.8s]           160/360
+[06:00:28 +   60.2s]           200/360
+[06:00:52 +   84.2s]           240/360
+[06:01:16 +  108.0s]           280/360
+[06:01:23 +  115.2s]           320/360
+[06:01:28 +  120.5s]           360/360
+[06:01:28 +  120.5s] ETAPA 3/4 — tabla. acc = valor total a priori en nunca vistos; acc_lenta = via lenta sola.
+[06:01:28 +  120.5s]    REF             xor01  tren  8/test 12 gemelo acc 0.500  acc_lenta 0.500 [0.19,0.88]  abre P0*P1 12/20  Ws(P0*P1) -1.01  max|Ws| 3.80  eventos 254  clases sin morder 2/20
+[06:01:28 +  120.5s]    REF             px0    tren 10/test 10 gemelo acc 0.900  acc_lenta 1.000 [1.00,1.00]  abre P0*P1 0/20  Ws(P0*P1) 0.00  max|Ws| 3.09  eventos 234  clases sin morder 0/20
+[06:01:28 +  120.5s]    REF             azar   tren 10/test 10 gemelo acc 0.500  acc_lenta 0.500 [0.10,0.80]  abre P0*P1 2/20  Ws(P0*P1) 0.00  max|Ws| 2.74  eventos 212  clases sin morder 3/20
+[06:01:28 +  120.5s]    SIN_CTE         xor01  tren  8/test 12 gemelo acc 0.562  acc_lenta 0.500 [0.06,1.00]  abre P0*P1 13/20  Ws(P0*P1) -1.73  max|Ws| 3.14  eventos 244  clases sin morder 2/20
+[06:01:28 +  120.5s]    SIN_CTE         px0    tren 10/test 10 gemelo acc 0.900  acc_lenta 1.000 [1.00,1.00]  abre P0*P1 0/20  Ws(P0*P1) 0.00  max|Ws| 2.97  eventos 240  clases sin morder 0/20
+[06:01:28 +  120.5s]    SIN_CTE         azar   tren 10/test 10 gemelo acc 0.500  acc_lenta 0.500 [0.30,0.80]  abre P0*P1 2/20  Ws(P0*P1) 0.00  max|Ws| 2.80  eventos 216  clases sin morder 2/20
+[06:01:28 +  120.5s]    NTR11           xor01  tren 11/test  9 interp acc 0.583  acc_lenta 0.625 [0.08,1.00]  abre P0*P1 15/20  Ws(P0*P1) -3.07  max|Ws| 3.62  eventos 266  clases sin morder 0/20
+[06:01:28 +  120.5s]    NTR11           px0    tren 11/test  9 interp acc 0.900  acc_lenta 1.000 [1.00,1.00]  abre P0*P1 0/20  Ws(P0*P1) 0.00  max|Ws| 3.10  eventos 256  clases sin morder 0/20
+[06:01:28 +  120.5s]    NTR11           azar   tren 11/test  9 interp acc 0.538  acc_lenta 0.550 [0.20,0.90]  abre P0*P1 2/20  Ws(P0*P1) 0.00  max|Ws| 2.45  eventos 272  clases sin morder 1/20
+[06:01:28 +  120.5s]    NTR14           xor01  tren 14/test  6 interp acc 0.688  acc_lenta 1.000 [0.12,1.00]  abre P0*P1 17/20  Ws(P0*P1) -4.88  max|Ws| 4.88  eventos 326  clases sin morder 0/20
+[06:01:28 +  120.5s]    NTR14           px0    tren 14/test  6 interp acc 1.000  acc_lenta 1.000 [1.00,1.00]  abre P0*P1 0/20  Ws(P0*P1) 0.00  max|Ws| 3.12  eventos 278  clases sin morder 0/20
+[06:01:28 +  120.5s]    NTR14           azar   tren 14/test  6 interp acc 0.438  acc_lenta 0.438 [0.00,0.88]  abre P0*P1 1/20  Ws(P0*P1) 0.00  max|Ws| 2.86  eventos 278  clases sin morder 0/20
+[06:01:28 +  120.5s]    SIN_CTE_NTR11   xor01  tren 11/test  9 interp acc 0.583  acc_lenta 0.667 [0.25,1.00]  abre P0*P1 16/20  Ws(P0*P1) -2.24  max|Ws| 3.95  eventos 244  clases sin morder 0/20
+[06:01:28 +  120.5s]    SIN_CTE_NTR11   px0    tren 11/test  9 interp acc 0.900  acc_lenta 1.000 [1.00,1.00]  abre P0*P1 0/20  Ws(P0*P1) 0.00  max|Ws| 2.98  eventos 275  clases sin morder 0/20
+[06:01:28 +  120.5s]    SIN_CTE_NTR11   azar   tren 11/test  9 interp acc 0.550  acc_lenta 0.488 [0.10,0.90]  abre P0*P1 1/20  Ws(P0*P1) 0.00  max|Ws| 2.70  eventos 236  clases sin morder 1/20
+[06:01:28 +  120.5s]    SIN_SEL         xor01  tren  8/test 12 gemelo acc 0.406  acc_lenta 0.438 [0.19,0.75]  abre P0*P1 0/20  Ws(P0*P1) -1.57  max|Ws| 1.64  eventos 196  clases sin morder 1/20
+[06:01:28 +  120.5s]    SIN_SEL         px0    tren 10/test 10 gemelo acc 0.900  acc_lenta 0.900 [0.70,1.00]  abre P0*P1 0/20  Ws(P0*P1) 0.62  max|Ws| 1.31  eventos 190  clases sin morder 0/20
+[06:01:28 +  120.5s]    SIN_SEL         azar   tren 10/test 10 gemelo acc 0.500  acc_lenta 0.500 [0.20,0.80]  abre P0*P1 0/20  Ws(P0*P1) -0.20  max|Ws| 1.82  eventos 200  clases sin morder 3/20
+[06:01:28 +  120.5s] EXPOSICIONES — acc_lenta con los primeros n encuentros (mediana); n* = primer n con mediana >= 0.75.
+[06:01:28 +  120.5s]    cuadratica:      10     20     40     60    100    150    200    300    400    600   n*(>=0.75) / n*(>=0.65)
+[06:01:28 +  120.5s]       REF           0.438  0.375  0.375  0.375  0.438  0.406  0.500  0.594    n/a    n/a   >600 / >600
+[06:01:28 +  120.5s]       SIN_CTE       0.438  0.438  0.312  0.375  0.500  0.438  0.500  0.500    n/a    n/a   >600 / >600
+[06:01:28 +  120.5s]       NTR11         0.500  0.458  0.250  0.417  0.417  0.500  0.583  0.917    n/a    n/a   300 / 300
+[06:01:28 +  120.5s]       NTR14         0.500  0.438  0.500  0.375  0.500  0.500  0.812  1.000  1.000    n/a   200 / 200
+[06:01:29 +  120.5s]       SIN_CTE_NTR11  0.500  0.500  0.375  0.417  0.417  0.500  0.667  0.833    n/a    n/a   300 / 200
+[06:01:29 +  120.5s]       SIN_SEL       0.500  0.406  0.375  0.438  0.438  0.438  0.438    n/a    n/a    n/a   >600 / >600
+[06:01:29 +  120.5s] ETAPA 4/4 — criterios del preregistro.
+[06:01:29 +  120.5s]    W1 (decide, y no toca el mundo) SIN_CTE > REF en 4/20 >= 14 y mediana 0.500 >= .625   NO
+[06:01:29 +  120.5s]    W2 NTR11 0.625 >= .75 y NTR14 1.000 >= .80 (CAMBIAN EL MUNDO)                       NO
+[06:01:29 +  120.5s]    W3 las dos palancas no se estorban: NTR11 > SIN_CTE_NTR11 en 6/20 (< 14)                OK
+[06:01:29 +  120.5s]    W4 abre P0*P1 ANTES de la sonda >= 15/20 en cada brazo con competencia: {'REF': 11, 'SIN_CTE': 12, 'NTR11': 15, 'NTR14': 17, 'SIN_CTE_NTR11': 16}                            NO
+[06:01:29 +  120.5s]    W5 px0 = 1.000, azar en [.35,.65], y SIN_SEL no gana a REF (7/20): NO — px0 SIN_SEL=0.900
+[06:01:29 +  120.5s]    clausula de muestreo — semillas con una clase XOR SIN MORDER, por brazo: {'REF': 2, 'SIN_CTE': 2, 'NTR11': 0, 'NTR14': 0, 'SIN_CTE_NTR11': 0, 'SIN_SEL': 1}
+[06:01:29 +  120.5s] VEREDICTO bloque 6: NO: la sobredeterminacion no explica el techo (mirar W1/W4/W5)
+[06:01:29 +  120.5s] RECORDATORIO: los brazos NTR* CAMBIAN EL MUNDO (sube el tren, baja el test): no son comparables numero a numero con los bloques 3-4, y por eso W1 (que no toca el mundo) es la que decide.
+[06:01:29 +  120.6s] datos -> xor_6_s101-120_20260918_055928.json  sha256_16 = 25dd85e56c19ecc0

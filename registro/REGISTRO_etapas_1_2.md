@@ -4461,3 +4461,33 @@ control §6): con rasgos dados la regla local pasa de 0.625 a 1.000 y de 400 a 1
 121–140**; generalización **K 20/20, G1 1.000 / G2 0.967 (101–120) y 1.000 / 0.998 (121–140)**; identidad de la copia con las constantes
 originales 16/16. Regresión de la regla 1 sobre el tronco v14.1: examen 8/8 con 6 semillas (examen_v14_20260918_054720, c2331c253bab1681); generalización K 20/20, G1 1.000 / G2 0.967 en 101–120 (regresion_generaliza_organismo_v14_20260918_054926, 6452fdf50352607e); arnés del gemelo 42/42 (el bloque que compara con v13 pasa ahora también las constantes viejas). Lo que NO cambia: XOR con rasgos propios sigue en
 0.50–0.63 (el cuello son los rasgos; bloque A-6 en curso). v14 (05:05) queda como tronco anterior.
+
+
+### Bloque A-6 = BLOQUE 2 de 3 del criterio de parada (XOR; 18 sep 06:05; semillas 101–120): **quitar la constante NO desbloquea (0.500, > REF 4/20); con 8 patrones de entrenamiento no hay información para seleccionar el rasgo ni con el estadístico ideal (3/20); si el mundo muestra 14 patrones, la misma regla local llega a 1.000 en los 6 nunca vistos (200 exposiciones) — XOR con rasgos propios sigue en 0.50 en el mundo original**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_xor_6.md` (0d6e368d820996f2); instrumento `organismo_v13q6` (b37aa8124c89cc5f; perilla `ntr`;
+identidad 8/8 + 5/5 en el runner; gemelo `organismo_v13q5_rapido` en los brazos sin `ntr`); datos `xor_6_s101-120_20260918_055928`
+(25dd85e56c19ecc0), 360 corridas, 6 min. Constantes del tronco v14.1 (eta_s 0.15, clip_s 10), lectura cuadrática (rasgos propios),
+selección WTA meta-aprendida (θ 0.3, ρ 0.02, cupo 1).
+
+| brazo (xor01) | tren / test | `acc_lenta` (mediana) | abre `P0·P1` antes de la sonda | n* (≥ 0.75) |
+|---|---|---|---|---|
+| REF (8 patrones, con constante) | 8 / 12 | 0.500 | 11/20 | > 600 |
+| **SIN_CTE** (decide: no toca el mundo) | 8 / 12 | **0.500** (> REF 4/20) | 12/20 | > 600 |
+| NTR11 (cambia el mundo) | 11 / 9 | 0.625 | 15/20 | 300 |
+| **NTR14 (cambia el mundo)** | 14 / 6 | **1.000** | 17/20 | **200** |
+| SIN_CTE_NTR11 | 11 / 9 | 0.667 | 16/20 | 300 |
+| SIN_SEL (sin competencia) | 8 / 12 | 0.438 | 0/20 | > 600 |
+
+W1 **NO** (la sobredeterminación no explica el techo), W2 NO (NTR11 0.625 < 0.75), W3 OK, W4 NO (11–12/20 en el mundo original), W5 NO
+(px0 de SIN_SEL 0.900). Cláusula de muestreo: 2/20 semillas sin una clase XOR en el mundo original, 0/20 con `ntr`. Análisis
+previo del creador (banco, sin organismo): el estadístico IDEAL de selección — el residuo del ajuste elemental exacto — pone `P0·P1`
+primero sólo en 3/20 semillas con 8 patrones, 7/20 con 11 y 12/20 con 14: **la información no está en 8 patrones**, y con el
+conjuntivo abierto son 8 rasgos contra 8 patrones (sistema exactamente determinado, signo frágil).
+**Lectura honesta:** (1) bloque 2/3: **XOR con rasgos propios en el mundo original sigue en 0.50** — no cruza 0.75; (2) pero la
+misma regla local, con competencia, **sí aprende XOR y generaliza a los nunca vistos cuando el mundo muestra 14 de los 20
+patrones** (1.000 en 6 nunca vistos, 200 exposiciones): el organismo no está incapacitado para la no linealidad; lo que le
+falta en el mundo original es información suficiente para seleccionar el rasgo con 8 ejemplos — y un mecanismo que la cree sin
+más ejemplos es precisamente lo que el tercer bloque tiene que aportar (la sala de agentes trabaja en eso); (3) el mundo de
+regla de 20 patrones con 8 de entrenamiento es un instrumento al límite de la identificabilidad: se anota como propiedad del
+instrumento, no se cambia el criterio (ERR-33 candidato: mundo con poca información para el rasgo — lo decide el auditor).
