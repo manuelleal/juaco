@@ -1,0 +1,49 @@
+[06:27:37 +    0.0s] ARRANQUE C-P6 (N2 por prediccion, mundo minimo decidible): brazos ['N0', 'SOLO_R', 'INNATO', 'PRED', 'SHUF', 'SACIEDAD'], semillas 121-140, T=200000, mudo desde 100000. Pool(14).
+[06:27:37 +    0.0s] Pregunta principal N6: con el emisor MUDO, ¿el receptor retiene lo aprendido o solo obedecia?
+[06:27:37 +    0.0s]     sha preregistro        36e077f8871dbbe6
+[06:27:37 +    0.0s]     sha script             c92d4792aa3c496f
+[06:27:37 +    0.0s]     sha constructor        d12cfea11e7f1e25
+[06:27:37 +    0.0s]     sha mundo_pred         277b6978ad47a492
+[06:27:37 +    0.0s]     sha mundo_vd           d670fd65c53e4310
+[06:27:37 +    0.0s]     sha identidad          6e4de0ec2ba206ed
+[06:27:37 +    0.0s]     sha mundo_social_n3    ef227f833c5bf46a
+[06:27:37 +    0.0s]     sha corre_N3d          2684190252a7bdfd
+[06:27:37 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 24796
+[06:27:38 +    0.6s] ETAPA 1/2 — identidades L1/L2/L3 sobre las 7 condiciones de N3d: 63 comprobaciones...
+[06:28:03 +   26.4s]     L1: 21/21
+[06:28:03 +   26.4s]     L2: 21/21
+[06:28:03 +   26.4s]     L3: 21/21
+[06:28:03 +   26.4s] ETAPA 2/2 — 240 corridas de 200000 pasos...
+[06:29:08 +   91.0s]           20/240
+[06:29:41 +  124.3s]           40/240
+[06:30:15 +  158.3s]           60/240
+[06:30:35 +  178.2s]           80/240
+[06:31:30 +  233.4s]           100/240
+[06:32:15 +  278.3s]           120/240
+[06:33:11 +  333.8s]           140/240
+[06:33:57 +  379.9s]           160/240
+[06:34:50 +  433.1s]           180/240
+[06:35:39 +  481.8s]           200/240
+[06:36:17 +  520.4s]           220/240
+[06:37:12 +  574.8s]           240/240
+[06:37:12 +  574.8s] ANALISIS — guardas primero.
+[06:37:12 +  574.8s]    G-b K3 (los 8 presentes en Q4 en todos los brazos): 20/20 -> OK
+[06:37:12 +  574.8s]    G-c banda de N0: 0.835 en (0.6, 0.85) -> OK
+[06:37:12 +  574.8s]    G-d el canal se usa: senales recibidas por PRED 7602.0 (>1000) -> OK
+[06:37:12 +  574.8s]           N0 hablando 0.8349311361352096  MUDO 0.8349311361352096  mord_crit 129.5  cens 0/20
+[06:37:12 +  574.8s]       SOLO_R hablando 0.9864360227168179  MUDO 0.9864360227168179  mord_crit 188.5  cens 0/20
+[06:37:12 +  574.8s]       INNATO hablando 0.9683344361769353  MUDO 0.9757206226528057  mord_crit 107.5  cens 0/20
+[06:37:12 +  574.8s]         PRED hablando 0.9554618327556774  MUDO 0.988243699434687  mord_crit 109.0  cens 0/20
+[06:37:12 +  574.8s]         SHUF hablando 0.7280638226657992  MUDO 0.9826198533785362  mord_crit 698.0  cens 2/20
+[06:37:12 +  574.8s]     SACIEDAD hablando 0.8002634609171858  MUDO 0.9972693627069088  mord_crit 504.0  cens 1/20
+[06:37:12 +  574.8s] ANALISIS — predicciones.
+[06:37:12 +  574.8s]    N6 (PRINCIPAL) PRED mudo 0.988 (>=0.65 y >= N0 mudo 0.835 +0.10), pareado 14/20 (>=14) -> OK
+[06:37:12 +  574.8s]    N6b INNATO mudo 0.976 (>=0.65) -> OK
+[06:37:12 +  574.8s]    N1 significado: 19/20 (>=15) -> OK
+[06:37:12 +  574.8s]    N2' mordidas hasta criterio PRED 109.0 contra N0 129.5 (<=0.70x), pareado 12/20 -> NO  [censura: None cuenta como peor]
+[06:37:12 +  574.8s]    N3 con canal: PRED 0.955 (>=0.85 y >= INNATO 0.968 -0.10) -> OK
+[06:37:12 +  574.8s]    N4 control SHUF: 19/20 (>=18); acierto 0.7280638226657992
+[06:37:12 +  574.8s]    N4 control SACIEDAD: 18/20 (>=18); acierto 0.8002634609171858
+[06:37:12 +  574.8s]    N5 coste del significado: PRED 109.0 >= INNATO 107.5 -> OK
+[06:37:12 +  574.8s] VEREDICTO (20 semillas; no cierra ningun nivel del brief): RETIENE, y el innato tambien: el mundo permite retener y lo que separa a PRED del innato es el COSTE en mordidas de aprender el significado (N5). Pide replica en semillas nuevas.
+[06:37:12 +  574.8s] datos -> n2pred_s121-140_20260918_062737.json  sha256_16 = 68f3b18377730b44
