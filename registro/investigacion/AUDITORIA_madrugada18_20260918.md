@@ -126,3 +126,26 @@ aún en `PUENTE_creacion.md`— pero el mecanismo es consistente con lo medido a
 etiqueta ("trampa de import, cero corridas afectadas") y dos arreglos: (i) alinear los defaults de
 `experimentos/v13_dos_vias/organismo_v13.py` con el tronco o marcar su cabecera "NO IMPORTAR SIN `eta_s`/`puerta`
 EXPLÍCITOS"; (ii) mover `organismo/` a la posición 0 en los `corre_xor*.py` (hoy inofensivo, pero frágil).
+
+## Verificación: mundo_social_n3 (ERR-33/34)
+
+**(a)** Confirmados los dos en código (`mundo_social_n3.py`, sha `ef227f833c5bf46a`, igual al citado). **ERR-33**
+real: `_reaparece` (líneas 44-45) sortea de `self.tipos` (no de `self.fijos`) cuando `regen_rota=True`. **No toca
+N3d**: `corre_N3d.py` nunca fija `regen_rota` (queda en el default `False`, línea 41 de `mundo_social_n3.py`), así
+que `_reaparece` siempre devuelve `kk` sin tocar el RNG — confirmado también porque `retirar()` (líneas 54-59) sólo
+llama `_reaparece` al reponer un pendiente, y con `regen_rota=False` es un no-op. **ERR-34** real: `spawn()`
+(líneas 47-51) consume `self.fijos` con `.pop(0)` y `nobj=nobj_por_org*n` (línea 308); `corre_N3d.py` no fija
+`nobj_por_org` (default 4) y `parejas()` da 8 nombres → SOLO_R (n=1, nobj=4) recibe los 4 primeros, CONV/SHUF/
+SACIEDAD (n=2, nobj=8) los 8.
+**(b)** Reproducido en el scratchpad (1 proceso, semillas 61–68, T=200000, sin tocar el repo): mis `acierto` de
+SOLO_R y CONV **coinciden dígito a dígito** con `N3d_s61-80_20260917_200706.json` (pipeline validado). Confirmado
+por semilla: los 4 objetos de SOLO_R son siempre un subconjunto exacto de los 8 de CONV (los 4 primeros de
+`parejas()`). Recalculando `acierto_q4` de CONV **restringido a esos 4 objetos comunes**: mediana **0.826** (contra
+0.819 sin restringir, y 0.512 de SOLO_R) — **CONV > SOLO_R sigue en 8/8** (igual que sin restringir), diferencia
+intacta (~0.31). S2/S3 (CONV vs SHUF/SACIEDAD) no los toca ERR-34: los tres brazos son n=2, mismos 8 objetos.
+**(c/d) Veredicto: ERR con defecto real y consecuencia MEDIDA CERO sobre el veredicto de N3d — no ERR-33, que es
+puramente latente.** "Transfiere entre sensores por conducta" sobrevive intacto en los tres datasets de N3d
+(61–80/81–100/101–120). **Basta una nota**, no reescribir la entrada: anotar ERR-34 en el registro de N3d con esta
+cifra de control, y añadir la advertencia ya escrita por C — cualquier comparación de **exposiciones/visitas**
+(no de `acierto`) entre brazos con `n` distinto (p. ej. SOLO_R contra CONV) no es válida hasta que se fije
+`nobj_por_org` por brazo. Eso sí bloquea el preregistro nuevo de C (`mundo_vd`), que depende de contar exposiciones.

@@ -4542,3 +4542,15 @@ correlación con el residuo (estadístico ideal) 3/20 · fisión 0/20 · pureza/
 retropropagación 0.531; razón estructural: 9 de 15 candidatos ajustan el tren con residuo 0. Recomendación del creador (pendiente
 de la decisión del director sobre el criterio, opción A/B): criba a los mecanismos del enjambre; si ninguno la pasa, cerrar con el
 mínimo `ntr` con el que el organismo generaliza (1.000 con 14 patrones, n* = 200).
+
+
+### ERR-33 y ERR-34 confirmados por el auditor (18 sep 07:05): **reales en código; ERR-34 con consecuencia medida CERO sobre N3d (CONV restringido a los 4 objetos comunes: 0.826 contra 0.512 de SOLO_R, gana 8/8) — el veredicto "transfiere entre sensores por conducta" sobrevive intacto; nota en N3d, no reescritura**
+
+`mundo_social_n3.py:44-45` (`_reaparece` sortea de `self.tipos`, no de `fijos`: `regen_rota` descarta `tipos_fijos`; **no toca N3d**, que nunca
+activa `regen_rota`) y `:47-51` (`nobj = nobj_por_org·n` y `spawn()` consume `fijos` en orden: SOLO_R con n = 1 recibe 4 de los 8 objetos
+que reciben CONV/SHUF/SACIEDAD con n = 2). El auditor reprodujo 8 semillas en el scratchpad (acierto idéntico dígito a dígito al JSON
+registrado) y recalculó CONV sólo sobre los 4 objetos comunes: mediana 0.826 contra 0.512 de SOLO_R, gana 8/8, como sin restringir.
+**Nota a las tres series de N3d (61–80, 81–100, 101–120):** los brazos con n distinto vieron conjuntos de objetos distintos (4 contra 8);
+el acierto compara bien (el receptor es ciego en los dos y el resultado se mantiene sobre los comunes); **las comparaciones de
+EXPOSICIONES entre brazos con n distinto quedan inválidas** hasta fijar `nobj_por_org` por brazo (perilla en `mundo_social_pred`, en
+curso por el creador C). Verificación: `AUDITORIA_madrugada18_20260918.md`, sección "mundo_social_n3 (ERR-33/34)".
