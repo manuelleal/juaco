@@ -112,7 +112,8 @@
 >   sala que pase la criba y con ntr = 14 de control (si cruza con 8 es prior declarado). Después: mundo vivo (F).**
 >   **Laterales, un bloque cada uno y se cierran:** B-5 (HECHO 05:55: no confirma; la vía lenta asocia en 2 exposiciones en vez de 4.5
 >   pero también en azar; línea cerrada) y C-P6
->   (N2 por predicción en el mundo decidible, mudo como predicción principal). **Mundo vivo (F): sólo diseño y preregistro hasta
+>   (HECHO 06:37: NULO para N6 — el mundo se aprende solo, SOLO_R 0.986 fuera de banda; ERR-36: el runner no guardó curva_rec;
+>   sobreviven N1 (significado con la magnitud del mundo, 19/20) y N4; línea cerrada). **Mundo vivo (F): sólo diseño y preregistro hasta
 >   el veredicto de XOR**; si XOR cruza 0.75 es el siguiente peldaño (significado por necesidad); si no cruza, el mundo vivo
 >   con reproducción es el cambio de paradigma ya escrito. Nada nuevo se abre sin cerrar uno de estos.
 >

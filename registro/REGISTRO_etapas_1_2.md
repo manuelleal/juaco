@@ -4573,3 +4573,33 @@ de agentes que pase la criba (proponer `P0·P1` en ≥ 15/20), y con `ntr = 14` 
 se declara **prior estructural** (con el control `azar` ∈ [0.35, 0.65] y `px0` = 1.000), no "aprende XOR"; si sube con 8 y no con 14,
 es un ajuste al régimen y se dice. Nada más se recalibra. Siguiente peldaño tras el bloque 3: el mundo vivo (línea F), donde el
 significado por necesidad da ejemplos distintos sin pedirlos.
+
+
+### Bloque C-P6 (lateral, un bloque; 18 sep 06:37; semillas 121–140): N2 por predicción en el mundo "decidible" — **NULO para la pregunta principal (N6) por la propia cláusula del creador: la banda G-c se leyó en N0 (0.835) cuando había que leerla en el brazo sin canal y sin competidor, SOLO_R = 0.986, fuera de banda por arriba: el mundo se aprende solo y el canal sólo ahorra mordidas (109 contra 188.5); N6′ (emparejada por mordidas) no calculable porque el runner no guardó `curva_rec` (ERR-36). Sobreviven N1 y N4. Línea lateral cerrada.**
+
+Preregistro `experimentos/creacion_C/PREREGISTRO_n2pred.md` (36e077f8871dbbe6); instrumento `mundo_social_pred` (277b6978ad47a492; perillas
+`regen_en_fijos`/`nobj_total` apagadas ≡ actual, identidad L1/L2/L3 63/63 en la copia principal y en el runner) + `mundo_vd`; datos
+`n2pred_s121-140_20260918_062737` (68f3b18377730b44), 240 corridas, 9.6 min; réplica 141–160 lanzada por la regla 12 (N6 cruda con pareado
+14/20 en el umbral) antes de conocer la nulidad: vale sólo como dato de N1/N4.
+
+| brazo | acierto hablando | acierto MUDO | mordidas hasta criterio |
+|---|---|---|---|
+| N0 (dos forrajeadores, sin canal) | 0.835 | 0.835 | 129.5 |
+| **SOLO_R (uno, sin canal)** | **0.986** | 0.986 | 188.5 |
+| INNATO | 0.968 | 0.976 | 107.5 |
+| PRED | 0.955 | 0.988 | **109.0** |
+| SHUF (control) | 0.728 | 0.983 | 850 (2 censuradas) |
+| SACIEDAD (control) | 0.800 | 0.997 | 541 (1) |
+
+Lo que el runner imprimió: N6 cruda OK (0.988 ≥ 0.835 + 0.10; 14/20), N6b INNATO 0.976, N1 **19/20**, N2′ NO (109 contra 129.5, ≤ 0.70× no;
+12/20), N3 OK, N4 **SHUF 19/20 y SACIEDAD 18/20**, N5 OK, G-e 1.20 ≤ 1.5 (el confuso del humo no se sostiene). **Lo que decide (`analiza_n6prima.py`,
+63aeb82daf5f0a83, escrito por el creador contra su propio bloque):** (1) N6′ no es calculable: `corre_n2pred.py` no devolvía `curva_rec`
+(**ERR-36**, instrumento; runner parcheado a 286a5bb2d71962b4 para el futuro; la réplica en curso tampoco la lleva); (2) SOLO_R 0.986 supera
+a N0 y a PRED (−0.031): el mundo se aprende solo; el canal sólo ahorra mordidas (−42 % frente al receptor solo, −16 % frente a N0);
+(3) N0 < SOLO_R sin canal en ninguno porque en N0 hay dos forrajeadores sobre 8 objetos (`nobj_total` arregló ERR-34 y creó "objetos
+distintos por organismo": dilema estructural, no ajuste); (4) G-c mal leída → **serie nula para N6**: con el receptor resolviendo solo,
+"retiene tras el silencio" no distingue aprender del canal de aprender solo. **Sobrevive:** N1 (el significado se aprende por predicción
+con la magnitud del mundo: u = +0.80 / −0.38, 19/20) y N4 (el canal sólo enseña cuando la conducta ajena informa). **Qué haría falta
+(no hoy):** bajar el techo de SOLO_R a la banda (más objetos que vistas-tiempo o menos pasos), leer G-c en SOLO_R y guardar `curva_rec`.
+Línea lateral cerrada (revisión de rumbo 06:45): N2 sigue sin mundo donde medir retención sin morder; lo que queda es el
+resultado de significado por predicción (N1) y el diseño del mundo que lo haría decidible.

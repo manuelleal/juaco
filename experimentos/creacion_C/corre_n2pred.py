@@ -111,6 +111,7 @@ def tarea(args):
                 presentes=sum(1 for k in r['vis'] if r['vis'][k][3] > 0),
                 expo_crit=r['expo_crit'], mord_crit=r['mord_crit'], expo=r['expo_rec'], mord=r['mord_rec'],
                 u=r['u'], n_u=r['n_u'], n_pred_vic=r['n_pred_vic'], deaths=r['deaths'],
+                curva_rec=r['curva_rec'],   # ERR mio: sin esto N6' (la prediccion PRINCIPAL) no se puede calcular
                 recibidas=r.get('senales_recibidas', 0))
 
 
@@ -205,8 +206,12 @@ if __name__ == '__main__':
     V['G_b_K3'] = pres_ok >= 18
     log(f"   G-b K3 (los 8 presentes en Q4 en todos los brazos): {pres_ok}/{N_SEM} -> {'OK' if V['G_b_K3'] else 'NO'}")
     n0 = mediana([r['acierto'] for r in Gh['N0'].values()])
-    V['G_c_BANDA'] = bool(n0 is not None and BANDA[0] <= n0 <= BANDA[1])
-    log(f"   G-c banda de N0: {None if n0 is None else round(n0,3)} en {BANDA} -> {'OK' if V['G_c_BANDA'] else 'NO (mundo no decidible; ERR)'}")
+    sr = mediana([r['acierto'] for r in Gh['SOLO_R'].values()])
+    # ERR mio: la banda hay que leerla en el brazo SIN canal y SIN competidor (SOLO_R). N0 lleva un segundo
+    # forrajeador que le come objetos, asi que su acierto baja por competencia y no por falta de canal.
+    V['G_c_BANDA'] = bool(n0 is not None and sr is not None and BANDA[0] <= n0 <= BANDA[1] and BANDA[0] <= sr <= BANDA[1])
+    V['G_c_SOLO_R'] = sr
+    log(f"   G-c banda: N0 {None if n0 is None else round(n0,3)} y SOLO_R {None if sr is None else round(sr,3)} en {BANDA} -> {'OK' if V['G_c_BANDA'] else 'NO (mundo no decidible; ERR)'}")
     rec = mediana([r['recibidas'] for r in Gh['PRED'].values()])
     V['G_d_CANAL'] = bool(rec is not None and rec > 1000)
     log(f"   G-d el canal se usa: senales recibidas por PRED {rec} (>1000) -> {'OK' if V['G_d_CANAL'] else 'NO'}")
