@@ -112,9 +112,10 @@
 >   combinación, ganador de la sala) cruza con 8 ejemplos: 1.000 registro y estricta, n* = 7, desempate al azar, azar en banda,
 >   con 14 también 1.000 → PRIOR ESTRUCTURAL de pares, declarado; réplica 141–160 igual → **LÍNEA XOR CERRADA (07:47)**; siguiente: llevarlo al
 >   tronco como candidato a v15 (HECHO 08:06: NO entra — la memoria por pares rompe la generalización lineal del tronco, G1 0.500; queda
->   como órgano del mundo de regla; variante sumar/enrutar lineal + memoria → preregistro nuevo, siguiente sesión) y el mundo vivo (F): **HECHO 07:58 — núcleo sostenido (valor por
+>   como órgano del mundo de regla; variante sumar/enrutar lineal + memoria = **v15d, preregistrado 08:25, corriendo 08:28**) y el mundo vivo (F): **HECHO 07:58 — núcleo sostenido (valor por
 >   necesidad resuelve el XOR necesidad × estímulo 20/20; escalar no; barajar contenido lo destruye), supervivencia y sal no como se
->   predijo (P4′, P6, P7); réplica 201–220 y preregistro nuevo de supervivencia en la siguiente sesión.**
+>   predijo (P4′, P6, P7) por el umbral (ERR-37); **réplica 201–220 con enmienda 2 HECHA 08:20: pasa, y P10 confirma el alias de código;
+>   bloque de la sal HECHO 08:16: alias confirmado 9/9 contra 9/9, persiste sin sed (S-5), la puerta no lo repara (S-6) → nivel 4: desambiguar códigos.**
 >   **Laterales, un bloque cada uno y se cierran:** B-5 (HECHO 05:55: no confirma; la vía lenta asocia en 2 exposiciones en vez de 4.5
 >   pero también en azar; línea cerrada) y C-P6
 >   (HECHO 06:37: NULO para N6 — el mundo se aprende solo, SOLO_R 0.986 fuera de banda; ERR-36: el runner no guardó curva_rec;

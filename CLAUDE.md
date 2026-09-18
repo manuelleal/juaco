@@ -195,14 +195,16 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   candidato v15c (08:06): NO entra al tronco — la memoria por pares sustituye la lectura lineal y rompe la generalización
   (G1 0.500); queda como órgano del mundo de regla; variante sumar/enrutar lineal + memoria → preregistro nuevo. **Mundo vivo (F, 07:58, 181–200): núcleo sostenido — valor por necesidad resuelve el
   XOR necesidad × estímulo (1.0, 20/20; tabla 2×4 exacta en 11 exposiciones), escalar 0.5, barajar el contenido lo destruye;
-  supervivencia (P4′, P7) y sal (P6: |W| 1.83 en un estímulo que nunca informa = superstición) no como se predijo. Réplica 201–220
-  y preregistro de supervivencia pendientes.**
+  supervivencia (P4′, P7) y sal (P6: |W| 1.83 en un estímulo que nunca informa = superstición) no como se predijo por el umbral (ERR-37), no por el efecto;
+  **réplica 201–220 con enmienda 2 (08:20): pasa las dos series (A₁₂ 0.90–1.00; agua 1.85–2.05×) y P10 confirma el ALIAS DE CÓDIGO** —
+  la sal hereda el valor del veneno sólo cuando comparten el código K=3 (2/20 semillas; bloque de la sal 08:16, 9 ALIAS contra 9 LIMPIAS:
+  |W[sal]| 1.45 contra 0.0, veneno −1.45 contra −3.0; persiste sin sed (S-5) y la puerta de v13 no lo repara (S-6)) → cabo nuevo del
+  nivel 4: desambiguar códigos. **v15d** (vía lenta que SUMA o ENRUTA lectura lineal + memoria de pares) preregistrado 08:25, corriendo 08:28.**
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;
   si ninguno cruza 0.75 en xor01, se acepta el techo, se publica y se cambia de paradigma o se cierra (`registro/PLAN.md`).
-- **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
-  automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
+- **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (al día; push tras cada bloque); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
 - **Lista de chequeo niveles 3–8: `registro/HANDOFF.md` §13** (3: 70 % · 5: 50 % · 6: 50 % · 7: compone hasta 3 ·
   8: canje estructural, retención de lo ausente 0.67). **Orden vigente: `registro/PLAN.md`** (día 7 y lo que sigue).
 - **Abierto tras el día 7:** XOR por dinámica (creación A); presupuesto de celdas en composición (creación B, dendrita
