@@ -1,0 +1,70 @@
+[04:39:21 +    0.0s] ARRANQUE composicion de TRES (hija dispersa + puerta por codigo + dE-TEST dosis 5). SOLO=['T1', 'T2', 'T3', 'T4']  subprocesos SECUENCIALES, un Pool a la vez
+[04:39:21 +    0.0s] sha preregistro=0558a198017794f9  script=040088cfdbc13a26  constructor=fbc3e88ba28ae761  identidad=a9fb85c96a03d8c1  organismo_v14t=fc4a803019116a88  organismo_v14t_on=b2bcf9f5591efcfa  organismo_v14gt=9ffe024e6757ac98  bateria_v14t=fe5beafd90c1f4f0  bateria_generaliza_v14t=e2e4c2f9ddf2a8e6  corre_recuperacion_tres=b74012ae2bfe3994  origen organismo_v14c (composicion de dos)=649851c0f10c3cd6  origen bateria_v13 (congelada)=1a027bcb37eb536e  origen bateria_generaliza=46772f5a582872c8  origen construye_selfmodel=27c91df159a1465b  origen construye_probar=dd42e0170a014cbb
+[04:39:21 +    0.4s] REGLA 11 -- procesos python vivos (3), este es pid 12712
+[04:39:21 +    0.4s] 
+[04:39:21 +    0.4s] ETAPA T1 -- examen v3'' completo (bateria_v14t, las TRES perillas ON), semillas 101-120...
+[04:42:32 +  191.4s]    PASA  1 E1        20/20  [venenoQ4<Q1:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20]
+[04:42:32 +  191.4s]    PASA  1 E2        20/20  [W_Aâ†’-3:20/20 W_Bâ†’+1:20/20 come B Q4â‰¥50:20/20]
+[04:42:32 +  191.4s]    PASA  1 E2I       20/20  [W_Câ‰¤-2.5:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰¤-2.8:20/20 tasaA Q4â‰¥80%Q2:20/20]
+[04:42:32 +  191.4s]    PASA  1 E2J       20/20  [W_Dâ‰¥0.85:20/20 W_Bâ‰¤-2.7:20/20]
+[04:42:32 +  191.4s]    PASA  1 E2K       20/20  [W_Dâ‰¥0.8:20/20 W_Bâ‰¤-2.4:20/20]
+[04:42:32 +  191.4s]    PASA  1 E2L       20/20  [W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20 solapâ†’0:20/20]
+[04:42:32 +  191.4s]    PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[04:42:32 +  191.4s]    PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (<=1)  W_A=[-2.31, -1.97, -1.88, -1.77]
+[04:42:32 +  191.4s]    PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 20/20 lo pasan (>=19)
+[04:42:32 +  191.4s]    PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[04:42:32 +  191.4s]    PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 11)
+[04:42:32 +  191.4s]    PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[04:42:33 +  191.4s]    VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[04:42:33 +  191.4s]    *** v13 CUMPLE EL CRITERIO v3 con 20 semillas. Por el preregistro: CONGELAR v13 como tronco (si pasa tambien X2 y X3).
+[04:42:33 +  191.4s]    T1 (101-120 o el rango pedido) = 8/8  ok=True
+[04:42:33 +  191.4s]    T1 paso 8/8 -> corre la REPLICA en semillas nuevas 121-140 (misma letra, sin recalibrar)...
+[04:45:43 +  381.7s]    PASA  1 E1        20/20  [venenoQ4<Q1:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20]
+[04:45:43 +  381.7s]    FALLA 1 E2        19/20  [W_Aâ†’-3:20/20 W_Bâ†’+1:20/20 come B Q4â‰¥50:19/20]
+[04:45:43 +  381.7s]    PASA  1 E2I       20/20  [W_Câ‰¤-2.5:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰¤-2.8:20/20 tasaA Q4â‰¥80%Q2:20/20]
+[04:45:43 +  381.7s]    PASA  1 E2J       20/20  [W_Dâ‰¥0.85:20/20 W_Bâ‰¤-2.7:20/20]
+[04:45:43 +  381.7s]    PASA  1 E2K       20/20  [W_Dâ‰¥0.8:20/20 W_Bâ‰¤-2.4:20/20]
+[04:45:43 +  381.7s]    PASA  1 E2L       20/20  [W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20 solapâ†’0:20/20]
+[04:45:43 +  381.7s]    PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[04:45:43 +  381.7s]    PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (<=1)  W_A=[-1.64, -1.56, -1.46, -1.38]
+[04:45:43 +  381.7s]    PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 19/20 lo pasan (>=19)
+[04:45:43 +  381.7s]    PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 71, violaciones ninguna
+[04:45:43 +  381.7s]    PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 13)
+[04:45:43 +  381.7s]    PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[04:45:43 +  381.7s]    VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[04:45:43 +  381.7s]    *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[04:45:43 +  381.7s]    T1 replica = 7/8  ok=False
+[04:45:43 +  381.7s]    T1 veredicto final: ok=False
+[04:45:43 +  381.7s] 
+[04:45:43 +  381.7s] ETAPA T2 -- generalizacion (bateria_generaliza_v14t, organismo_v14t_on), semillas 101-120...
+[04:46:30 +  428.7s]    OK    K  cobertura del primer encuentro: 20/20
+[04:46:30 +  428.7s]    PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 20/20
+[04:46:30 +  428.7s]    PASA  G2 conducta al primer encuentro: px0 0.930 (>=0.55), azar 0.494, px0>azar 20/20
+[04:46:30 +  428.7s]    VEREDICTO bateria_generaliza (organismo_v14t_on): K_cobertura=True G1_valor=True G2_conducta=True
+[04:46:30 +  428.8s]    G1 px0=1.000 (>=0.8) azar=0.500 px0>azar 20/20  -> True
+[04:46:30 +  428.8s]    G2 px0=0.9300422811772724  (>=0.85) azar=0.49358063516418427 px0>azar 20/20  -> True
+[04:46:30 +  428.8s]    K  cobertura>=6: 20/20  -> True   ==> T2 ok=True
+[04:46:30 +  428.8s] 
+[04:46:30 +  428.8s] ETAPA T3 -- recuperacion tras la inversion, LA TERCERA PIEZA EN COMPANIA (corre_recuperacion_tres.py), semillas 161-180...
+[04:47:18 +  476.5s]    ARRANQUE T3 recuperacion tras la inversion, LA TERCERA PIEZA EN COMPANIA (V13 vs TRES). REAL Pool(14)  T=200000  invertir_en=100000  semillas 161-180
+[04:47:18 +  476.5s]    sha preregistro=0558a198017794f9  script=b74012ae2bfe3994  organismo_v14t=fc4a803019116a88  organismo_v14t_on=b2bcf9f5591efcfa  referencia_medida corre_probar_si_mismo=49ae078df2997776  referencia_criterio analiza_dE=6aef2c67b9a48276
+[04:47:18 +  476.5s]    
+[04:47:18 +  476.5s]    V13  recuperacion mediana 8136.0  censuradas 0/20
+[04:47:18 +  476.5s]    TRES recuperacion mediana 1957.5  censuradas 0/20  razon TRES/V13 0.24059734513274336
+[04:47:18 +  476.5s]    T3-P1' recuperacion TRES/V13 = 0.24059734513274336 (<=0.6) y pareado 19/20 (>=14)  -> OK
+[04:47:18 +  476.5s]    T3-P4' se apaga solo (forma relativa) en 20/20 (>=16)  -> OK
+[04:47:18 +  476.5s]    T3-P7' (no bloqueante) veneno_post 60.0 <=4x57.0, muertes 267.5 <=1.5x265.0  -> OK
+[04:47:18 +  476.5s]    
+[04:47:18 +  476.5s]    VEREDICTO T3: CUMPLE
+[04:47:18 +  476.5s]    datos -> recuperacion_tres_20260918_044630.json  sha256_16 = 8b4ed6ca25aeaa16
+[04:47:18 +  476.5s]    T3 ok=True
+[04:47:18 +  476.5s] 
+[04:47:18 +  476.5s] ETAPA T4 -- composicion temporal 3T-k (mundo_composicion_v14 + la tercera perilla): NO MEDIBLE.
+[04:47:18 +  476.5s]    mundo_composicion_v14.py es un instrumento YA CORRIDO en un estilo de codigo distinto (espacios
+[04:47:18 +  476.5s]    alrededor de operadores) del que usan las anclas de pon_dE(); extenderlo exige un cuarto
+[04:47:18 +  476.5s]    constructor con sus PROPIAS anclas verificadas una a una (fuera del alcance de este paquete).
+[04:47:18 +  476.5s]    Ver PREREGISTRO_composicion_tres.md, seccion 4. No se inventa ningun numero.
+[04:47:18 +  476.5s] 
+[04:47:18 +  476.5s] VEREDICTO composicion_tres: LOS TRES ORGANOS NO VAN JUNTOS: T1 o T2 cayeron (clausula del preregistro).
+[04:47:18 +  476.5s]   T1=False  T2=True  T3=True  T4=None (no medible)
+[04:47:18 +  476.6s] datos -> composicion_tres_20260918_043921.json  sha256_16 = 99faae2f9bb50b90

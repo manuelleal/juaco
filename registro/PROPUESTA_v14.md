@@ -79,3 +79,11 @@ puerta por evidencia del código** (`organismo/organismo_v14_candidato_conjunto.
 de generalización.** La sorpresa en la boca a dosis 5 va aparte hasta medir la composición de los tres (paquete en preparación).
 Datos `composicion_v14_20260918_033225`, `examen_v14c_20260918_035946`, `examen_v14c_20260918_041824`,
 `regresion_generaliza_organismo_v14c_on_20260918_042128`.
+
+
+## DECISIÓN (18 sep 2026, 04:55 → 04:50 resultado de los tres): **v14 = v13 + hija dispersa + puerta por código**
+
+Composición de los tres (04:47): T1 8/8 en 101–120 pero 7/8 en la réplica 121–140 (E2, semilla 133, 42 bocados); T2 1.000 / 0.93;
+T3 0.24×. Por la cláusula y la decisión del director ("los tres si pasan; si no, los dos"), **v14 lleva los dos primeros**; la
+sorpresa del mundo en la boca (dosis 5) es **candidata a v15** con su composición ya medida (T2/T3 OK). Congelación de v14 en curso:
+tercer examen en rango virgen 161–180 + generalización 141–160, gemelo compilado, manifiesto, tag.

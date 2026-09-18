@@ -4236,3 +4236,30 @@ honesto):** 20 semillas es una resolución de un 5 % por semilla; cuatro veredic
 el umbral (ahorro 16/20 vs 18, E2 19/20 ×2, apagado 15/20 vs 16). El método los salvó con réplicas en rangos nuevos; la regla
 12 de EQUIPO.md lo hace automático. Los efectos pequeños (composición 0.237 vs 0.251; G1 0.75 vs 0.80) están en el límite de lo
 que 20 semillas distinguen: con el gemelo compilado, las series de efectos < 0.05 pasan a 40 semillas.
+
+
+### Composición de los TRES órganos (hija dispersa + puerta por código + sorpresa del mundo en la boca a dosis 5; 18 sep 04:47): **por la letra NO van juntos (T1 réplica 7/8: E2 19/20 en 121–140, semilla 133 con 42 bocados); T1 101–120 8/8, T2 1.000 / 0.93, T3 recuperación 0.24× (19/20) → v14 = los DOS primeros; la sorpresa sigue como candidata a v15 con su composición ya medida**
+
+Preregistro `experimentos/nivel10_composicion_v14/PREREGISTRO_composicion_tres.md` (0558a198017794f9; escrito antes de correr);
+instrumentos por anclas `organismo_v14t` (fc4a803019116a88; tres perillas apagadas ≡ v13), `organismo_v14t_on`, `organismo_v14gt`,
+`bateria_v14t` (criterio 5 con las cuatro perillas apagadas ≡ v11, ERR-30), `bateria_generaliza_v14t`; **identidad 25/25** en la
+copia principal (cada órgano solo ≡ su candidato); datos `composicion_tres_20260918_043921` (99faae2f9bb50b90) con
+`examen_v14t_20260918_043922` (101–120), `examen_v14t_20260918_044233` (121–140), `regresion_generaliza_organismo_v14t_on_20260918_044543`,
+`recuperacion_tres_20260918_044630` (8b4ed6ca25aeaa16); 8 min.
+
+| medida (las tres ON) | resultado | umbral | veredicto |
+|---|---|---|---|
+| T1 examen v3'' 101–120 | **8/8** (la semilla 117 pasa con las tres) | 8/8 | OK |
+| T1 réplica 121–140 | **7/8**: E2 19/20 (`come B Q4 ≥ 50`: semilla **133**, 42 bocados) | 8/8 | **NO** |
+| T2 generalización 101–120 | K 20/20; G1 **1.000** (20/20); G2 **0.930** (20/20) | ≥ 0.80 / ≥ 0.85 | OK |
+| T3 recuperación 161–180 | TRES 1 958 contra V13 8 136 (**0.241×**; pareado 19/20); se apaga 20/20; veneno 60 ≤ 228; muertes 267.5 ≤ 398 | ≤ 0.60×, ≥ 14/20, ≥ 16/20 | OK |
+| T4 composición 3T-k | no medible sin un cuarto constructor | — | — |
+
+**Lectura honesta.** La tercera pieza conserva su efecto en compañía (0.24×, el mismo que sola) y no toca la generalización
+(1.000 / 0.93); el único fallo es otra vez **una semilla en E2 con 42 bocados de B**, ahora la 133 (antes la 117 con la puerta sola y
+con las dos): el valor idéntico (42) en tres exámenes distintos apunta a un mundo-tipo donde la puerta reabre la vía rápida en
+el cuarto final, no a azar — se pasa al auditor como pregunta (¿por qué siempre 42?). Por la cláusula del preregistro y la
+decisión del director ("los tres si pasan; si no, los dos"): **v14 = v13 + hija dispersa + puerta por código**; la sorpresa
+del mundo en la boca a dosis 5 queda como **candidata a v15**, con dos series sola, examen 8/8 sola, y en compañía T2/T3 OK y
+T1 8/8 + 7/8. Vocabulario: *las tres piezas no se estorban en lo que cada una hace; la puerta sigue costando una semilla de
+conducta en el examen en algunos mundos*.

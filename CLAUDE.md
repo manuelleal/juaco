@@ -150,6 +150,8 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     series (0.14× × 3)**; el automodelo pasa todo en la tercera (apagado 17/20); sus variantes (restar la cota, línea base
     lenta) refutadas como predijo C (auditoría de la madrugada: ERR-26 y ERR-27, regla 11 en EQUIPO.md). Lección: el predictor de ΔE nunca fue el problema, lo era dónde entraba.
     (`probar_si_mismo_s41-60_20260918_001756`, `probar_si_mismo_s61-80_20260918_003640`)
+  · **Composición de los TRES (04:47): T1 8/8 + réplica 7/8 (E2, semilla 133, 42 bocados), T2 1.000 / 0.93, T3 0.24× → por la
+    letra no van juntos: v14 = v13 + hija dispersa + puerta por código; la sorpresa en la boca (dosis 5) es candidata a v15.**
   · **A-3 CONFIRMADO**: la vía lenta de dos canales es exactamente un vector con signo (acc idéntica 60/60, |ΔW| 3e−15):
     simplificación candidata para v14 (mitad de memoria en la vía lenta; decisión del director).
   · **ERR-25**: la puerta de v13 no distingue "no aprendido" de "cancelado" (verificado por el auditor); B-2 (puerta por
