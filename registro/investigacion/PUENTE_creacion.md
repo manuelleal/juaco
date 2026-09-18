@@ -851,6 +851,66 @@ B·k(P_anterior), misma magnitud, emparejamiento código↔crédito equivocado).
 > única fuente de información que **no** se paga con mordidas es **otro organismo**: el encargo (2), N2 por predicción.
 
 
+### C9. N2 POR PREDICCIÓN (encargo (2)): **el significado SÍ se aprende, y con la magnitud exacta; la retención no, y es imposible en este mundo**
+
+**Instrumento.** `experimentos/creacion_C/construye_n2pred.py` → `mundo_social_pred.py` (sha `fc306b8fcddabe15`), **por
+anclas** desde `experimentos/etapa5_comunicacion/mundo_social_n3.py` (`ef227f833c5bf46a`, sólo se lee).
+**Identidades** (`identidad_n2pred.py`, las **SIETE** condiciones de N3d — TECHO, SOLO_E, SOLO_R, N0, **CONV**,
+**SHUF**, **SACIEDAD** — × 3 semillas, T = 20 000, todas las claves de los n organismos): **L1 21/21** (perillas
+apagadas ≡ original) · **L2 21/21** (la sonda de exposiciones encendida: sólo lee) · **L3 21/21** (`u[c]` aprendiéndose
+pero sin usarse: sólo mide). 63 comparaciones.
+
+**Mecanismo (2 escalares de memoria).** Hoy N3d traduce la conducta ajena a R = +1 / −3 **por construcción**: el
+significado está **dado**. Aquí el receptor lo **aprende con su propio cuerpo**:
+`u[c] ← u[c] + eta_sym·(E_VAL[valencia] − u[c])` al morder un patrón del que oyó la conducta `c` hace ≤ `tau_pred`; y
+al oír `c` **sin morder**, aprende el valor con `R̂ = (R_VAL/E_VAL)·u[c]` (constantes del mundo, **sin parámetro
+libre**) y factor `gamma_pred = 1/3 = f_vicaria`. Puerta opcional `theta_a` (no escuchar si ya sabe).
+
+**Mini-prueba** (un proceso, 21 corridas de 100 000, montaje de N3d, ventana 400, criterio 0.75, semillas 1–3):
+
+| brazo | `acierto_q4` | **mordidas hasta criterio** | `u[0]` / `u[1]` (mundo: −0.4 / +0.8) |
+|---|---|---|---|
+| SOLO_R (sólo sus mordidas) | 0.520 / 0.504 / 0.525 | **nunca lo alcanza** (censurado a 1 347–2 437) | — |
+| INNATO (= CONV de N3d) | 0.821 / 0.828 / 0.783 | 230 / 126 / 92 | — (dado) |
+| **PRED** (lo aprende) | 0.838 / 0.764 / 0.805 | **117 / 159 / 153** | **−0.374…−0.381 / 0.800 exacto, 3/3** |
+| control **SHUF** (emisor barajado) | 0.481 / 0.499 / 0.484 | nunca | `u[1]−u[0]` = −0.067 / −0.099 / +0.157 |
+| control **SACIEDAD** (emisor que no sabe) | 0.493 / 0.499 / 0.518 | nunca | `u[1]−u[0]` = 0.052 / 0.137 / 0.176 |
+
+- **MP-N1 3/3 y es el resultado:** `u[1] = 0.800` **exacto** (el `E_VAL` del mundo) y `u[0] ≈ −0.38` (objetivo −0.4).
+  **El receptor aprende, con su propio cuerpo, qué va a sentir cuando el otro muerde o rechaza** — y `u[0]` sale de
+  sólo **53–64** mordidas propias tras oír "rechaza" (contra 1 450–1 703 tras oír "muerde"). Los **dos controles caen
+  a ≈ 0 en 3/3**: sin conducta informativa no hay significado. Es la primera vez en esta línea que el significado
+  aparece **con la magnitud del mundo** y no en ±0.3.
+- **MP-N3 OK:** aprenderlo no cuesta acierto (0.805 contra 0.821 del innato; SOLO_R 0.52).
+- **MP-N5, el número que el brazo INNATO no puede dar:** aprender el significado cuesta **≈ 27 mordidas más** en la
+  mediana (153 contra 126), PRED ≥ INNATO en 2/3.
+- **MP-N2 mal escrita, por mi culpa y por segunda vez:** pedí "≤ 0.70 × las mordidas de SOLO_R" y **SOLO_R nunca llega
+  al criterio** (censurado), así que la razón no existe. Lo que dice el dato es más fuerte que lo que pedí: *el
+  receptor ciego solo NO aprende esto nunca; con predicción asocia en ~150 mordidas.* Ya me pasó en C8 con las
+  corridas censuradas: **anoto la regla — toda predicción de la forma "≤ k × la base" necesita una cláusula para el
+  caso en que la base no termine.**
+
+**El control que decide, y sale NEGATIVO.** `acierto_q4` no distingue *aprender* de *obedecer* (el registro ya lo sabe:
+N3d mudo 0.503). Corrí el mudo (`mudo_desde = T/2`, el acierto se lee ya en silencio):
+
+| | s1 | s2 | s3 | mediana |
+|---|---|---|---|---|
+| INNATO_MUDO | 0.511 | 0.500 | 0.513 | 0.511 |
+| **PRED_MUDO** | 0.510 | 0.498 | 0.502 | **0.502** |
+
+**Los dos caen al azar.** El 0.805 de PRED es **obediencia en línea**, no valor propio.
+
+> **Y esto no es un fallo del mecanismo: es imposible en este mundo, y se deriva sin correr nada.** El montaje de N3d
+> hace las parejas agrupando por los píxeles 3–5 y la máscara del receptor es `[0,0,0,1,1,1]`: **los dos miembros de
+> una pareja tienen la MISMA retina para el receptor**, luego el mismo código de Kenyon y el mismo `valor(kk)`.
+> Ninguna regla local — vicaria o propia, innata o aprendida — puede escribir una distinción en un código que es
+> idéntico. **N3d no puede medir "aprender sin morder" como retención; sólo puede medir obediencia.** Es pariente del
+> ERR de montaje de N3c, y lo encuentro antes de gastar una serie de 20 semillas.
+
+**Lo que sí queda demostrado, y es separable:** el canal de **significado** funciona (magnitud exacta, dos controles a
+cero, 53 mordidas para el lado raro). Lo que falta es un mundo donde el receptor **pueda** guardar lo aprendido.
+
+
 ## Preguntas para el explorador
 
 **B-4 (creador B, 18-sep 05:40).** Aprendizaje en UNA exposición y GRAFO de asociaciones. Tres cosas, con número si lo hay:
@@ -1536,3 +1596,46 @@ sube de 0.25 a 0.375 (`directo`) y a **0.5625** (`fa`) · **MP-K5 parcial**: `di
   *"no reduce las exposiciones hasta asociar en el mundo del tronco, y las aumenta cuando el parecido engaña"* (medido).
   **No** "aprende en una exposición", **no** "reconoce", **no** "razona por analogía".
 
+### C-P6 — N2 por predicción: el receptor aprende qué va a SENTIR de la conducta ajena (Creador C)
+
+**Hipótesis.** Un receptor que aprende, con su propio cuerpo, **qué va a sentir** cuando el emisor muerde o rechaza
+(`u[c]`, regla delta sobre su propia ΔE) y usa esa predicción para valorar objetos **sin morderlos**, alcanza el
+criterio de conducta con **menos mordidas propias** que el mismo receptor solo, **sin** que el significado se le dé
+por construcción, y **sólo** cuando la conducta del emisor informa de verdad.
+
+**Mecanismo mínimo (regla local; memoria que exige).** `u[c] ← u[c] + eta_sym·(E_VAL[valencia] − u[c])` al morder un
+patrón del que oyó la conducta `c` hace ≤ `tau_pred`; al oír `c` sin morder, `R̂ = (R_VAL/E_VAL)·u[c]` (constantes del
+mundo, **sin parámetro libre**) y se aprende el valor con factor `gamma_pred`. Puerta `theta_a`: no escuchar si ya
+sabe. **Memoria: 2 escalares** (`u[0]`, `u[1]`) y una marca patrón → (conducta oída, paso).
+
+**Dónde se prueba (instrumento).** `experimentos/creacion_C/mundo_social_pred.py` (sha `fc306b8fcddabe15`), por anclas
+desde `mundo_social_n3.py` (`ef227f833c5bf46a`). Identidades **L1/L2/L3 = 21/21** cada una sobre las siete condiciones
+de N3d (CONV, SHUF y SACIEDAD incluidas) × 3 semillas. Medida nueva: **exposiciones y mordidas hasta criterio**
+(ventana móvil de 400 encuentros, acierto balanceado de conducta = la fórmula de `acierto_q4`, dos sondas seguidas).
+
+**Predicción numérica** (para una serie futura, semillas nuevas, T = 200 000):
+- **N1** `u[1] ≥ +0.5` y `u[0] ≤ −0.15` en ≥ 15/20 — *(mini-prueba: 0.800 exacto y −0.38, 3/3)*.
+- **N2′** (reescrita tras el fallo de la mini-prueba) el receptor solo (SOLO_R) **no alcanza** el criterio en ≥ 15/20,
+  y PRED **sí** lo alcanza en ≥ 15/20, con mediana ≤ 250 mordidas. *(La forma "≤ k × la base" no vale: la base no
+  termina.)*
+- **N3** `acierto_q4` de PRED ≥ 0.75 y ≥ INNATO − 0.10 — *(0.805 contra 0.821)*.
+- **N4** controles: SHUF y SACIEDAD con `u[1] − u[0]` ≤ 0.3 y sin alcanzar el criterio, en ≥ 18/20 — *(3/3 los dos)*.
+- **N5** coste del significado: mediana de mordidas de PRED ≥ la de INNATO — *(153 contra 126)*.
+- **N6 [el que decide, y hoy FALLA]** con el emisor mudo desde T/2, `acierto_q4` de PRED ≥ 0.65 — *(mini-prueba:
+  **0.502**, igual que el innato 0.511 y que el azar: **obedece, no aprende**)*.
+
+**Control que puede fallar.** SHUF (emisor barajado) · SACIEDAD (emisor que no sabe) · SOLO_R (sólo bocados) ·
+**MUDO** (el emisor calla: separa aprender de obedecer) · y las identidades L1–L3, que pueden refutar que las perillas
+apagadas sean el original.
+
+**Resultado de la mini-prueba** (semillas 1–3, T = 100 000, 21 corridas): **N1, N3, N4 y N5 pasan 3/3**; **N2 mal
+escrita** (la base está censurada: SOLO_R nunca llega, y eso es *más* fuerte que lo que pedí); **N6 FALLA: 0.502**.
+
+**Lectura honesta y lo que propongo.** El **canal de significado funciona**: el receptor aprende con su cuerpo la
+magnitud exacta del mundo (+0.800 / −0.38) y sólo cuando la conducta ajena informa. Lo que **no** se puede demostrar
+aquí es la retención — y **no por el mecanismo, sino por el mundo**: en el montaje de N3d los dos miembros de cada
+pareja tienen **la misma retina enmascarada** para el receptor, luego el mismo código y el mismo `valor`; **ninguna
+regla local puede escribir una distinción en un código idéntico**. Por eso **no pido preregistrar esta serie tal
+cual**. Pido el mundo mínimo que la haría decidible: parejas con **vista parcialmente distinta** para el receptor
+(que pueda representar la diferencia aunque no pueda predecir la valencia sin ayuda), manteniendo intactas las puertas
+de validez de N3d. Con ese mundo, **N6 pasa a ser la predicción principal** y el resto queda como está.

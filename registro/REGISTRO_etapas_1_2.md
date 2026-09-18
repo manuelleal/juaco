@@ -4375,3 +4375,30 @@ problema que debe arreglar. **Lo que pide preregistrar (formato fijo en el puent
 semillas; si el contraste no aparece, refutado en los dos mundos. Coste en generalización y capacidad no medido (no es candidato).
 Pregunta B-4 al explorador (umbral de similitud n/k en HD; ensayos hasta asociar en abeja/Drosophila; animales que aprenden qué
 relación predice el valor).
+
+
+### Frente "dos organismos", creador C (18 sep 06:40): **N2 por predicción — el significado se aprende con la magnitud exacta del mundo (u = +0.80 / −0.38; controles ≈ 0), pero el mudo lo delata: es obediencia en línea, y en el montaje de N3d NO PUEDE ser otra cosa (los dos miembros de cada pareja tienen la misma retina para el receptor) → ERR-32 de montaje, hallado antes de gastar 20 semillas**
+
+Instrumento `experimentos/creacion_C/mundo_social_pred.py` (fc306b8fcddabe15; por anclas desde `mundo_social_n3` ef227f833c5bf46a; perillas
+`eta_sym`/`gamma_pred`/`theta_a` y contador de exposiciones); identidad **63/63** (las siete condiciones de N3d × 3 semillas; L1 apagado ≡
+original, L2 el contador sólo lee, L3 `u[c]` se aprende sin usarse). Mecanismo, dos escalares: `u[c] ← u[c] + eta_sym·(E_VAL − u[c])` al
+morder un patrón del que oyó la conducta `c`; al oírla sin morder, `R̂ = (R_VAL/E_VAL)·u[c]·gamma_pred` (constantes del mundo, sin
+parámetro libre). Mini-prueba (21 corridas de 100 000, semillas 1–3, montaje N3d):
+
+| brazo | `u[1]` / `u[0]` (mundo: +0.8 / −0.4) | mordidas hasta criterio 0.75 | acierto Q4 | mudo desde T/2 |
+|---|---|---|---|---|
+| PRED (significado aprendido por predicción) | **0.800 / −0.38** en 3/3 | 117 / 159 / 153 | 0.805 | **0.502** |
+| INNATO (significado dado) | — | 230 / 126 / 92 | 0.821 | 0.511 |
+| SOLO_R | — | nunca (censurado 1 347–2 437) | 0.52 | — |
+| barajado / emisor que no sabe (controles) | ≈ 0 (−0.07…+0.18) | — | — | — |
+
+**Lectura:** por primera vez en la línea N2 el significado aparece con la magnitud del mundo y no en ±0.3, y cuesta ≈ 27 mordidas
+más que recibirlo dado. Pero el control que decide es negativo: con el emisor mudo PRED e INNATO caen a 0.50 (como el 0.503
+registrado de N3d): **obediencia en línea, no valor propio**. Y no es fallo del mecanismo sino del montaje: `parejas()` agrupa por
+los píxeles 3–5 y la máscara del receptor es [0,0,0,1,1,1] → los dos miembros de cada pareja tienen la misma retina para el
+receptor, el mismo código de Kenyon y el mismo `valor(kk)`: **ninguna regla local puede escribir una distinción en un código
+idéntico**. N3d mide obediencia, no retención (pariente del ERR de N3c). **ERR-32 (montaje):** los receptores "ciegos" de N3d no
+pueden aprender nada propio por construcción; toda lectura anterior de N3d como "transferencia" queda como *obediencia en
+línea al que ve* (ya era el vocabulario declarado; ahora con la causa). **Aprobado:** mundo mínimo decidible — parejas con vista
+PARCIALMENTE distinta para el receptor, puertas de validez de N3d, y el mudo (N6) como predicción principal (C-P6). Regla
+nueva del creador (anotada): toda predicción "≤ k × la base" necesita cláusula para cuando la base no alcanza el criterio.
