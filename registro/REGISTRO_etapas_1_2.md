@@ -3480,3 +3480,21 @@ filo del umbral (0.152 / 0.140 en k = 4; 0.144 / 0.133 en k = 5) con el pool de 
 composición representacional llega más lejos que la conductual; el umbral 0.15 de `lift_q4` es el de 3T (v8) y no se toca.
 Lección: sin la réplica habríamos escrito "hasta 4". El gemelo hace la réplica gratis: **toda serie confirmatoria se
 replica desde ahora**.
+
+
+### Mapa, tercera serie (41–60, gemelo compilado `--rapido`, identidad 9/9 + 3/3): **lo esencial replica por tercera vez; el control de sesgo motor es ruidoso → ERR-24**
+
+Datos `mapa_s41-60_20260917_224442` (`71ab7d3f6640c030`). MAPA **0.800** [0.65, 0.93], > 0.60 en **20/20** · SINMAPA 0.475 ·
+CONGELADA = SINMAPA bit a bit · BARAJADO 0.600 · **INVERTIDO 0.150** (huye) · comida Q4 491 contra 345, **F1 20/20** · muertes 2
+contra 41. P1, C1, C2, C4, C5, F1 pasan. **C3 (SINCOMIDA) cae: 0.621** (series anteriores 0.534 y 0.500) con **28/40
+teletransportes sin moverse** y 32/40 ciegos al llegar: el control cuenta sólo primeros pasos (~12 por semilla) y la meta
+virtual cae a veces dentro de la vista del veneno; la mediana salta entre series por ruido de muestreo, no por sesgo
+motor (SINMAPA, que sí tiene el mismo cuerpo y las mismas patas, se queda en 0.475–0.500 en las tres series).
+
+**ERR-24 (control, no organismo):** el control SINCOMIDA tal como está escrito no fija su n efectivo (no fuerza el
+movimiento ni excluye llegadas con veneno a la vista) y puede fallar o pasar por azar. Corrección para la próxima serie
+del mapa (protocolo, no organismo): en la prueba, contar sólo teletransportes ciegos al llegar y exigir ≥ 30 primeros
+pasos por semilla (subir `max_pasos` o bajar `E_test`), o sustituir el control por SINMAPA (mismo cuerpo, sin mapa),
+que es el que realmente mide el sesgo motor. El veredicto compuesto de esta serie es NO por C3; **lo que replica tres
+veces es la afirmación**: *elige la dirección hacia comida recordada fuera de la vista con el valor que ya tenía, y eso
+le da de comer*. Nada se recalibra: la corrección aplica a series nuevas.
