@@ -1,0 +1,37 @@
+[15:30:55 +    0.0s] HUMO del disenador del bloque 2, UN proceso, sin Pool (regla 3). PREREGISTRO_bloque2_variante.md.
+[15:30:55 +    0.0s] Semillas 1-2: NINGUNA de las 461-500 del bloque queda expuesta (E.14).
+[15:30:55 +    0.0s]     sha preregistro                67125d2e45b2ddf5
+[15:30:55 +    0.0s]     sha script                     d2d342061dedd38b
+[15:30:55 +    0.0s]     sha constructor                0e5523dff44c71b6
+[15:30:55 +    0.0s]     sha instrumento                85efe326f8d3c88b
+[15:30:55 +    0.0s]     sha arnes                      e0ac8be89028c59f
+[15:30:55 +    0.0s]     sha origen_organismo_familias  b9dd561a0cf056b8
+[15:30:55 +    0.0s]     sha runner_bloque1             c21b3c38f36cb4c9
+[15:30:55 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[15:30:55 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[15:30:55 +    0.0s]     origenes verificados -> OK
+[15:30:55 +    0.0s] 1/3 IDENTIDAD (subconjunto; el arnes completo dio 63/63 en identidad_familias_b2.py).
+[15:30:58 +    3.2s]     (a) vira=0,exc_evita=-1,reg_b2=0 == organismo_familias (AB) 2/2
+[15:31:01 +    6.4s]     (k) mundo=AB == organismo_v14 (TRONCO)                   2/2
+[15:31:06 +   10.7s]     (f) mundo=familias del bloque 1 == organismo_familias    2/2
+[15:31:06 +   11.4s]     (q) GEMELO: vira=8 == vira=-1 ANTES del cambio (P-S1)    2/2
+[15:31:11 +   15.6s]     (v) vira=8 != vira=-1 DESPUES del cambio (DEBE diferir)  2/2
+[15:31:14 +   19.3s]     (x) mundo=familias != mundo=AB (DEBE diferir)            2/2
+[15:31:14 +   19.3s]   IDENTIDAD 12/12
+[15:31:14 +   19.3s] 2/3 DIAGNOSTICO ESTRUCTURAL (antes de simular): alias exacto, U3 y las ventanas SEPARABLE/ALIAS.
+[15:31:14 +   19.3s]     semilla 1: alias_pares 0.00605  alias_semilla 1  U3 0.2919  retenidas {'T0v2': 'SEPARABLE', 'T1v2': 'SEPARABLE', 'T2v2': 'SEPARABLE', 'T3v2': 'SEPARABLE', 'T4v2': 'ALIAS', 'T5v2': 'ALIAS', 'T6v2': 'SEPARABLE', 'T7v2': 'SEPARABLE'}
+[15:31:14 +   19.3s]     semilla 2: alias_pares 0.04234  alias_semilla 1  U3 0.3621  retenidas {'T0v2': 'SEPARABLE', 'T1v2': 'SEPARABLE', 'T2v2': 'SEPARABLE', 'T3v2': 'SEPARABLE', 'T4v2': 'SEPARABLE', 'T5v2': 'SEPARABLE', 'T6v2': 'SEPARABLE', 'T7v2': 'SEPARABLE'}
+[15:31:14 +   19.3s] 3/3 HUMO: 6 corridas de 100000 pasos (regla 3: <= 6). Brazos v14.1 y LIN, semillas 1-2.
+[15:31:20 +   25.1s]     G-EXC  s1    5.8s  g1 0.875  g1_fuerte 0.875  g1_lenta 0.875  cond1 0.75  ruta1 0.0  hambre1 0.0  vistas 8/8  t_primera 66672 (retenida_ok True)  muertes 26  celdas 71
+[15:31:26 +   30.8s]     G-EXC  s2    5.7s  g1 1.0  g1_fuerte 0.9375  g1_lenta 1.0  cond1 1.0  ruta1 0.125  hambre1 0.0  vistas 8/8  t_primera 66668 (retenida_ok True)  muertes 45  celdas 61
+[15:31:32 +   36.7s]     G-LIN  s1    5.9s  g1 1.0  g1_fuerte 1.0  g1_lenta 1.0  cond1 1.0  ruta1 0.0  hambre1 0.0  vistas 8/8  t_primera 66669 (retenida_ok True)  muertes 31  celdas 41
+[15:31:38 +   42.6s]     G-LIN  s2    5.9s  g1 1.0  g1_fuerte 1.0  g1_lenta 1.0  cond1 1.0  ruta1 0.0  hambre1 0.0  vistas 8/8  t_primera 66680 (retenida_ok True)  muertes 17  celdas 43
+[15:31:43 +   48.4s]     S-EXC  s1    5.8s  n_sep 4/8  sep_med 2.0  apr_med 1.0  comida 4/4  veneno 0/4  muertes 36  celdas 57
+[15:31:44 +   48.4s]             ok_herm 0:1.0 2500:1.0 10000:1.0 25000:1.0 fin:1.0   ok_vir 0:0.0 2500:0.0 10000:0.125 25000:0.5 fin:0.5   prefijo f892008999374a11
+[15:31:49 +   54.3s]     S-LIN  s1    5.8s  n_sep 0/0  sep_med None  apr_med None  comida 0/0  veneno 0/0  muertes 27  celdas 39
+[15:31:49 +   54.3s]             ok_herm 0:None 2500:None 10000:None 25000:None fin:None   ok_vir 0:None 2500:None 10000:None 25000:None fin:None   prefijo f892008999374a11
+[15:31:49 +   54.3s]   GEMELO (P-S1) en la semilla 1: prefijos ['f892008999374a11', 'f892008999374a11'] -> IDENTICOS (S-EXC y S-LIN son la misma corrida hasta el cambio)
+[15:31:49 +   54.3s]   CRUCE cod0 (instrumento) contra escala_codigo (bloque 0): IDENTICO campo a campo
+[15:31:49 +   54.3s] ESTIMACION del bloque: 220 corridas de 100000 pasos, ~5.8 s/corrida en serie -> ~1.5 min de pared con Pool(14).
+[15:31:49 +   54.3s] HUMO: numeros observados, sin ajustar nada. n=2 y semillas vistas: NO son evidencia (E.14).
+[15:31:49 +   54.3s] datos -> familias_b2_humo_20260918_153055.json  sha256_16 = 7b39d0e4940a6951
