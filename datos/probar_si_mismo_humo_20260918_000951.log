@@ -1,0 +1,37 @@
+[00:09:51 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3). Preregistro PREREGISTRO_probar_si_mismo.md, seccion 11.
+[00:09:51 +    0.0s] Semilla 1 (ya vista en la mini-prueba): NINGUNA de las 41-60 del experimento queda expuesta.
+[00:09:51 +    0.0s]     sha preregistro              3f31a18c6fd2ebec
+[00:09:51 +    0.0s]     sha script                   201ca06416e137b1
+[00:09:51 +    0.0s]     sha constructor              8a651d083d77d154
+[00:09:51 +    0.0s]     sha constructor_automodelo   27c91df159a1465b
+[00:09:51 +    0.0s]     sha v13p                     0dbc2495efe44e60
+[00:09:51 +    0.0s]     sha v13pg                    7ab4767d446ba797
+[00:09:51 +    0.0s]     sha v13s                     2eaba8dde27f05bd
+[00:09:51 +    0.0s]     sha v13                      cc8b16b492d4d324
+[00:09:51 +    0.0s]     sha v13g                     2a80e125f8593bf2
+[00:09:51 +    0.0s]     sha bateria_v13              1a027bcb37eb536e
+[00:09:51 +    0.0s]     sha bateria_generaliza       46772f5a582872c8
+[00:09:51 +    0.0s] 1/2 IDENTIDADES J1, J2, J3 (3 escenarios) y J4 (2 reglas), semilla 1, T=10000.
+[00:09:52 +    1.0s]     J1 base      IDENTICO
+[00:09:53 +    2.0s]     J2 base      IDENTICO
+[00:09:54 +    3.4s]     J3 base      IDENTICO
+[00:09:56 +    5.0s]     J1 invertir  IDENTICO
+[00:09:58 +    6.7s]     J2 invertir  IDENTICO
+[00:10:00 +    8.7s]     J3 invertir  IDENTICO
+[00:10:01 +   10.1s]     J1 nuevo     IDENTICO
+[00:10:03 +   11.8s]     J2 nuevo     IDENTICO
+[00:10:05 +   13.8s]     J3 nuevo     IDENTICO
+[00:10:06 +   15.3s]     J4 px0       IDENTICO
+[00:10:08 +   16.8s]     J4 azar      IDENTICO
+[00:10:08 +   16.8s]   identicos 11/11   (16.8 s)
+[00:10:08 +   16.8s] 2/2 UNA corrida SELF-TEST + su MOMENTO: T=200000, invertir_en=100000, semilla 1 (2 x 200 000 pasos).
+[00:10:27 +   35.9s]     SELF-TEST  19.1 s/corrida   t_ext_B 102375  recuperacion 2375  censurado False
+[00:10:27 +   35.9s]         sesgo_boca por cuarto [np.float64(0.52668), np.float64(0.06514), np.float64(0.3656), np.float64(0.04371)]   sorpresa_auto [np.float64(0.0527), np.float64(0.0065), np.float64(0.0366), np.float64(0.0043)]   encuentros [4933, 5100, 5079, 5142]
+[00:10:27 +   35.9s]         veneno_post 208  comida_post 571  muertes 290 (post 133)
+[00:10:27 +   35.9s]         banda (-2.8333, 0.3333)  n [dentro,fuera] [[56, 95], [18619, 1484]]  ll dentro [S,M,H,ORACULO] [0.7333, 0.7019, 0.7036, 0.2812]
+[00:10:27 +   35.9s]         Wbh 0.8076  Whh(control) -0.0167  W {'A': -3.0, 'B': 1.0, 'C': -0.5, 'D': 1.5}  suma de la traza 49.500932
+[00:10:45 +   53.8s]     MOMENTO    18.0 s/corrida   t_ext_B 113325  recuperacion 13325  censurado False
+[00:10:45 +   53.8s]         sesgo_boca por cuarto [0.0629, 0.38097, 0.04517, 0.52143]   veneno_post 302  muertes 306
+[00:10:45 +   53.8s]     G-d masa de la traza: SELF-TEST 49.500932 vs inyectada 49.500932  |dif| 0.0  -> OK
+[00:10:45 +   53.8s] HUMO: numeros observados, sin ajustar nada. n=1 y semilla vista: NO son evidencia; sirven para ver que el instrumento mide.
+[00:10:45 +   53.9s] datos -> probar_si_mismo_humo_20260918_000951.json  sha256_16 = 1704b6f6c6835c37
