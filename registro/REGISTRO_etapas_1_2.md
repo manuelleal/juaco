@@ -3498,3 +3498,14 @@ pasos por semilla (subir `max_pasos` o bajar `E_test`), o sustituir el control p
 que es el que realmente mide el sesgo motor. El veredicto compuesto de esta serie es NO por C3; **lo que replica tres
 veces es la afirmación**: *elige la dirección hacia comida recordada fuera de la vista con el valor que ya tenía, y eso
 le da de comer*. Nada se recalibra: la corrección aplica a series nuevas.
+
+
+### Gemelo compilado del mundo de regla en la batería de generalización: **reproduce la batería registrada de v13 40/40 (semillas 101–120)**
+
+`bateria_generaliza.py organismo_v13_rapido 20 --desde 101 --log` → `regresion_generaliza_organismo_v13_rapido_20260917_224731`:
+K 20/20, G1 px0 0.800 / azar 0.500 / px0 > azar 18/20, G2 px0 0.892 / azar 0.458 / 20/20 — **idéntico semilla a semilla**
+(acc, ba, divisiones, celdas, muertes: 0 de 40 difieren) a la batería de congelación de v13
+(`regresion_generaliza_organismo_v13_20260917_170148`, semillas 101–120). Tiempo: **3.6 s** contra ~40 min·CPU. Nota de
+método: mi primera comparación (semillas 41–60 contra el registro de 101–120) parecía una divergencia y no lo era —
+comparar siempre las mismas semillas antes de sospechar del gemelo. La batería acepta ahora el módulo
+`organismo_v13_rapido`; la regla 1 de `CLAUDE.md` puede correrse con él en segundos (con la identidad verificada).
