@@ -92,6 +92,49 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 11. **Repo y sandbox nunca corren a la vez; el repo tiene prioridad.** El sandbox arranca sólo con el repo
     parado y con `Pool(6)`, no 16. El tiempo de pared es un dato y se contamina al solapar.
 
+## Estado (día 7 — 17 sep 2026, 23:00 → madrugada del 18; director ausente ~8 h, orden: "no parar", decidir, documentar, lo controversial a rama o copia). Manda sobre los bloques anteriores cuando se contradigan
+- **Tronco sigue siendo v13** (cc8b16b492d4d324). Nada entró al tronco hoy. v14 **no llevará el mapa** (canje
+  exploración/explotación cerrado como estructural: curiosidad, novedad de sitio ×2 dosis y saturación refutadas;
+  `escala_s81-100_20260917_230039`, 05a712ef734aba56).
+- **Resultados del día 7 (todos preregistrados, todos al final de `registro/REGISTRO_etapas_1_2.md`):**
+  · **3e XOR REFUTADO** (`xor_3e_s61-80_20260917_231444`, 9d1c5071fd2a97b6): con los rasgos exactos {P0, P1, P0·P1, 1}
+    la vía lenta da 0.625 (ruido 0.375) → la línea XOR queda **cerrada por hoy como cuello de DINÁMICA** (3, 3b, 3d, trío,
+    3e descartan dimensión, puerta, regla e identificabilidad): refuerzo sólo al morder, −3/+1, clases desiguales.
+  · **Nivel 6, dos metas y rodeo: HECHO y REPLICADO** (`rodeo_s41-60_20260917_232338`, `rodeo_s61-80_20260917_232711`;
+    enmienda 1 con análisis del subconjunto válido escrita antes de la segunda serie): rodeo 0.725/0.750, pareado 14/14 y
+    16/16, atajo ≥ 0.70, invertido 0.25, llega limpio ≥ 0.85. Vocabulario: *elige entre dos comidas recordadas y se desvía
+    por el lado largo cuando el veneno recordado pesa; no planifica* (un paso, sin secuencia). Nivel 6 → 50 %.
+  · **Bloque 6 allostasis (rama, 10 semillas) REFUTADO en su predicción** (`allostasis_s1-10_20260917_231652`,
+    edb069ba16367139): la sorpresa no acelera la recuperación (0.856, 6/10); el predictor de la propia energía **sí**
+    mide (error 0 en régimen, salta al cambio 10/10; retención y generalización intactas). Instrumento para la creación.
+  · **N3d tercera serie 101–120 con el gemelo social en producción: 0.811** (`N3d_s101-120_20260917_233033`,
+    cc5ca17e2e4bbf21; identidad 3/3 dentro del corredor) → replicado ×3 (0.822/0.811/0.811).
+  · **N2 CERRADO CON DOS MUNDOS** (N2f v3 con montaje válido; INNATO 60 contra 278: el canal serviría con significado
+    dado, aprenderlo por refuerzo no). Reabrir sólo con significado por predicción (célula de creación, creador C).
+- **Gemelos compilados (numba), TODOS con arnés de identidad bit a bit y `--rapido` en su corredor:** tronco
+  `organismo/organismo_v13_rapido.py` (72/72 + 180/180; ×58–78; `bateria_generaliza.py organismo_v13_rapido` 40/40
+  contra la batería guardada de v13 en 101–120) · 3T-k `mundo_temporal_k_rapido.py` (146/146) · mapa `mundo_mapa_rapido.py`
+  (90/90 + 81/81) · XOR `organismo_v13q_rapido.py` (81/81 + 243/243 + 81/81) · social `mundo_social_n3_rapido.py`
+  (135/135, con las perillas de N2f v3; `corre_N3d.py --rapido`) · mundo largo/novedad `mundo_largo_n_rapido.py`
+  (54/54 + 36/36 + 200k). Valen sólo mientras el arnés dé 100 % (repetir tras cambiar numpy/numba). Regla 9 de EQUIPO.md.
+- **Equipo (regla 12 + decisión del director 17-sep 23:00): `registro/EQUIPO.md`.** Célula de creación activa:
+  **tres creadores Opus** (A matemática del aprendizaje local; B representación y computación; C sistemas vivos y
+  mente) + **explorador ligero Haiku** a demanda, con puente `registro/investigacion/PUENTE_creacion.md` (secciones
+  propias; "Propuestas para el coordinador" en formato fijo; el coordinador convierte en bloques preregistrados; nada se
+  declara sin ese paso). Sus copias viven en `experimentos/creacion_A|B|C/` (no tocan originales, no commitean).
+  Primeros hallazgos de A (23:30): banco analítico que reproduce 3b/3d sin correr el organismo; **los dos canales
+  (Wp, Wn) son exactamente un valor con signo + una masa de conflicto `m = min(Wp, Wn)`; `lam` sólo olvida `m`; la
+  fisión de v11 es consolidación** (predice que la retención cae cuando el pool se agota). Auditor del día 7 en curso.
+- **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
+  automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
+- **Lista de chequeo niveles 3–8: `registro/HANDOFF.md` §13** (3: 70 % · 5: 50 % · 6: 50 % · 7: compone hasta 3 ·
+  8: canje estructural, retención de lo ausente 0.67). **Orden vigente: `registro/PLAN.md`** (día 7 y lo que sigue).
+- **Abierto tras el día 7:** XOR por dinámica (creación A); presupuesto de celdas en composición (creación B, dendrita
+  de dos ramas); retención de lo ausente (creación A, metaplasticidad por masa de conflicto, cero memoria nueva);
+  significado por predicción / modelo de sí mismo (creación C, `organismo_v13s`); nivel 6 horizonte > 1 (en un anillo
+  la dirección ya integra todo el horizonte: planificar de verdad exige un mundo 2D — decisión del director); rodeo
+  falso; N2 sólo con significado por predicción.
+
 ## Estado (día 5 — 17 sep 2026, noche). Manda sobre los bloques de los días 4 y 3 cuando se contradigan
 - **Tronco: v13** (`organismo/organismo_v13.py`, cc8b16b492d4d324, tag `v13-tronco`; examen `organismo/bateria_v13.py`,
   criterio **v3'**). Linaje del día: v9 → v10 (sólo instrumento; ERR-17) → **v11** (tag `v11-tronco`; división por
