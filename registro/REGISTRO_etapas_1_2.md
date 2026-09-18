@@ -3917,3 +3917,23 @@ proponerlo al director para v14: retención y generalización medidas en dE-TEST
 SELF-TEST y CONST-b) — serie 81–100 (enmienda 2, en preparación por el creador C) con `--baterias` para dE-TEST, la variante
 `resta_cota` del automodelo (P4′) y la prueba de latencia. Hallazgo de la línea: **el predictor de ΔE del bloque 6 nunca fue el
 problema; lo era dónde entraba** (en `eta`: 0.856×, refutado; en la boca: 0.14×).
+
+
+### Auditoría de la madrugada del 18 (agente auditor, Sonnet; `registro/investigacion/AUDITORIA_madrugada18_20260918.md`): **sin bloqueantes; dos ERR numerados a posteriori (regla 4) y una rebaja de vocabulario**
+
+Identidades 100 % en los cuatro JSON, ningún humo con `Pool`, fuga de identidad J2 limpia en código y en datos, ERR-25
+transcrito con exactitud. **ERR-26 (B-1, enmienda 1):** la enmienda que bajó P1 a ≥ 14/20 no es un análisis de subconjunto
+(regla 10) sino una rebaja lisa del umbral de aprobación escrita entre dos series; fue inerte (81–100 pasó el umbral
+original, 19/20) y nunca se implementó en el runner (`corre_hija_dispersa.py:163` sigue en 18), pero **cambió un criterio
+sin ERR numerado**. Queda numerada aquí; la declaración de B-1 se apoya en la letra original en 81–100 y en la conducta en
+las dos series. **ERR-27 (C-P1, adenda a la enmienda 1):** la forma relativa de P4' se decidió al ver, con `analiza_dE.py`,
+que la copia literal de P4 fallaba sobre los datos ya corridos de 41–60 — transparente y motivado (el criterio literal no
+podía medir el apagado de un sesgo pequeño por construcción), pero es un criterio escrito mirando datos de esa misma
+serie. **Consecuencia:** para dE-TEST valen como prueba limpia los criterios P1' y P7' en las dos series y P4' sólo en
+61–80 (20/20); 41–60 se reporta como retroactivo. **Vocabulario rebajado:** dE-TEST es *candidato pendiente de baterías*
+(retención y generalización no medidas: M5/M6 corrieron sólo para V13, SELF-TEST y CONST-b), no "candidato a órgano".
+Menores: la guarda G-b etiqueta a MOMENTO como "inconcluso" por comparar sólo Q3 cuando el control desplaza el pico a Q4
+por diseño (la cantidad total la certifica G-d, limpia); el criterio A1 de A-3 es casi tautológico una vez que A3 (el
+tope nunca aprieta) se cumple — A-3 vale como identidad demostrada, no como prueba empírica independiente. **Regla
+derivada (se añade a EQUIPO.md, regla 4 bis):** toda enmienda que cambie un umbral o la forma de un criterio lleva ERR
+numerado en el momento de escribirla, aunque sea antes de la serie nueva.

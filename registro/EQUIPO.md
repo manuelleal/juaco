@@ -33,6 +33,9 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
    las semillas, el análisis del subconjunto con los umbrales ORIGINALES del criterio se hace siempre y se reporta junto al
    completo (deja de ser una decisión nueva cada vez). Las anclas de reproducción (K0 y similares) se copian del JSON de
    precisión completa, nunca de un log impreso con redondeo.
+11. **Toda enmienda que cambie un umbral o la forma de un criterio lleva ERR numerado al escribirla** (auditoría de la
+   madrugada del 18: ERR-26 y ERR-27 se numeraron a posteriori), aunque se escriba antes de la serie nueva y aunque
+   resulte inerte. "Candidato a órgano" sólo con retención y generalización medidas en el mismo brazo.
 
 ## Roles
 | rol | modelo | qué hace | entrega |
