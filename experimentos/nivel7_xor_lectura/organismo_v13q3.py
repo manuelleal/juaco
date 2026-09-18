@@ -1,5 +1,6 @@
-"""organismo_v13q3 = organismo_v13q.py (0b59eb03858df3a8) + regla fusionada del trio XOR (bloque 3d):
-knobs regla_lenta='dos_canales'|'delta_signo', constante=False|True, lam_lenta (decaimiento por actualizacion).
+"""organismo_v13q3 = organismo_v13q.py (0b59eb03858df3a8) + regla fusionada del trio XOR (bloque 3d) +
+lecturas oraculo del bloque 3e. Knobs: regla_lenta='dos_canales'|'delta_signo', constante=False|True,
+lam_lenta (decaimiento por actualizacion), lectura=...|'oraculo01'|'oraculo01_ruido'.
 Generado por construye_xor_3d.py. NO editar. Con regla_lenta='dos_canales' y constante=False es organismo_v13q
 exacto en todas las claves del original (identidad obligatoria, ETAPA 1 de corre_xor_3d.py)."""
 """organismo_v13q = organismo_v13g.py (2a80e125f8593bf2) + knob lectura de la via lenta (lineal | cuadratica | random15).
@@ -55,6 +56,7 @@ def split_regla(seed, regla):
 def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuevo_val='veneno',solap_B=None,
         eta=.03,tau_e=.85,alpha=1.2,hambre_boca=2.0,aversion=1.0,costo=.002,nobj=4,log_cada=None,plast=True,theta=0.6,ema=0.02,paso=0.5,solap_AB=None,lam=0.05,memoria_rechazo=20,mu_norm=True,div_signo=True,eta_s=0.0,clip_s=3.0,puerta=None,mundo='AB',regla='px0',fase2_en=None,sonda_final=False,lectura='lineal',regla_lenta='dos_canales',constante=False,lam_lenta=0.002):   # xor: lectura de la via lenta; 3d: regla de la via lenta, termino constante y decaimiento
     if regla_lenta not in ('dos_canales','delta_signo'): raise ValueError(f"regla_lenta={regla_lenta!r}")   # 3d: un knob mal escrito NO puede caer en silencio al brazo original
+    if lectura not in ('lineal','cuadratica','random15','oraculo01','oraculo01_ruido'): raise ValueError(f"lectura={lectura!r}")   # 3e: idem para la lectura
     if mundo=='AB': P_=PAT; tren=['A','B']; test=[]   # v13g: con 'AB' es v13 exacto
     else: P_,tren,test,val_regla=split_regla(seed,regla); fase2_en=T//2 if fase2_en is None else fase2_en
     rng=np.random.default_rng(seed)
@@ -67,7 +69,7 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     while mundo=='AB' and not cond(): KW[objetivo_AB:NK]=rng.uniform(0,1,(NK-objetivo_AB,6))
     def kenyon(P): k=np.zeros(NKMAX); k[list(code(P))]=1; return k
     Wp=np.zeros(NKMAX); Wn=np.zeros(NKMAX); err=np.zeros(NKMAX); mu=np.zeros((NKMAX,6)); splits=0; el=np.zeros_like(Wl); tr=np.zeros(9)
-    _NF=(6 if lectura=='lineal' else 21)+(1 if constante else 0)   # xor: lineal = 6 px; cuadratica = 6 px + 15 productos de pares; random15 = 6 px + 15 bits al azar; 3d: +1 si constante
+    _NF=(6 if lectura=='lineal' else 3 if lectura in ('oraculo01','oraculo01_ruido') else 21)+(1 if constante else 0)   # xor: lineal = 6 px; cuadratica = 6 px + 15 productos; random15 = 6 px + 15 bits al azar; 3e: oraculo = 3 rasgos; 3d: +1 si constante
     Wps=np.zeros(_NF); Wns=np.zeros(_NF)   # v13: via LENTA sobre phi(P) (con lectura='lineal' es v13g exacto)
     Ws=np.zeros(_NF)   # 3d: vector con signo de la via lenta; solo se mueve/lee si regla_lenta=='delta_signo'
     _IJ=[(i,j) for i in range(6) for j in range(i+1,6)]
@@ -79,6 +81,8 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
     def phi(P):   # 3d: constante=True anade 1 entrada fija en 1.0 al final (phi' de C). Con constante=False devuelve exactamente lo de antes
         if lectura=='lineal': _b=P
         elif lectura=='cuadratica': _b=np.concatenate([P,[P[i]*P[j] for i,j in _IJ]])
+        elif lectura=='oraculo01': _b=np.array([P[0],P[1],P[0]*P[1]])   # 3e: la base EXACTA de xor01 (3 rasgos)
+        elif lectura=='oraculo01_ruido': _b=np.array([P[0],P[1],P[2]*P[3]])   # 3e: control, mismo tamano, el producto equivocado
         else: _b=np.concatenate([P,_R15[tuple(float(v) for v in P)]])
         return np.concatenate([_b,[1.0]]) if constante else _b
     def lenta(P):   # 3d: lectura de la via lenta sola segun regla_lenta ('dos_canales' = la formula original, exacta)

@@ -10,6 +10,13 @@ la Kenyon, la puerta ni la boca:
       'True' (C): phi'(P) = concat(phi(P), [1.0]) -> cuadratica 21->22 entradas, lineal 6->7, random15 21->22.
   lam_lenta=0.002   decaimiento por actualizacion; solo lo usa 'delta_signo' (con 'dos_canales' es inerte).
 
+ENMIENDA 3e (despues de que 3d saliera REFUTADO: CUAD_DELTA acc_lenta 0.500 = dos canales, marginales en cero, y la
+curva por clases sin morder no lo explica). Dos lecturas mas, para separar 'la regla no puede' de 'los rasgos no dejan':
+  lectura='oraculo01'        phi(P) = [P0, P1, P0*P1]   (3 entradas; 4 con constante=True) -> la base EXACTA de xor01
+  lectura='oraculo01_ruido'  phi(P) = [P0, P1, P2*P3]   (3 entradas; 4 con constante) -> control: mismo tamano, producto equivocado
+Son INERTES para todo lo de 3d: con lectura='lineal'|'cuadratica'|'random15' el organismo no cambia en nada (se verifica
+contra la copia del instrumento de 3d, sha b71bbe41a7326aaf, en el humo de 3e).
+
 Identidad obligatoria (arnes en corre_xor_3d.py, ETAPA 1): con regla_lenta='dos_canales', constante=False el organismo
 es organismo_v13q bit a bit en TODAS las claves del original (semillas 1-3, xor01 y px0, lecturas lineal y cuadratica).
 Sonda de fase2_en: sigue dando W_lenta_apriori (con 'delta_signo' = Ws @ phi') y familiar_apriori, y ANADE Ws_apriori
@@ -45,11 +52,12 @@ PARCHES = [
       "    if mundo=='AB': P_=PAT; tren=['A','B']; test=[]   # v13g: con 'AB' es v13 exacto"],
      ["puerta=None,mundo='AB',regla='px0',fase2_en=None,sonda_final=False,lectura='lineal',regla_lenta='dos_canales',constante=False,lam_lenta=0.002):   # xor: lectura de la via lenta; 3d: regla de la via lenta, termino constante y decaimiento",
       "    if regla_lenta not in ('dos_canales','delta_signo'): raise ValueError(f\"regla_lenta={regla_lenta!r}\")   # 3d: un knob mal escrito NO puede caer en silencio al brazo original",
+      "    if lectura not in ('lineal','cuadratica','random15','oraculo01','oraculo01_ruido'): raise ValueError(f\"lectura={lectura!r}\")   # 3e: idem para la lectura",
       "    if mundo=='AB': P_=PAT; tren=['A','B']; test=[]   # v13g: con 'AB' es v13 exacto"], 1, 'firma'),
     # 2) tamano de phi (con constante) y vector con signo Ws (inerte si regla_lenta='dos_canales')
     (["    _NF=6 if lectura=='lineal' else 21   # xor: lineal = 6 px; cuadratica = 6 px + 15 productos de pares; random15 = 6 px + 15 bits fijos al azar por patron",
       "    Wps=np.zeros(_NF); Wns=np.zeros(_NF)   # v13: via LENTA sobre phi(P) (con lectura='lineal' es v13g exacto)"],
-     ["    _NF=(6 if lectura=='lineal' else 21)+(1 if constante else 0)   # xor: lineal = 6 px; cuadratica = 6 px + 15 productos de pares; random15 = 6 px + 15 bits al azar; 3d: +1 si constante",
+     ["    _NF=(6 if lectura=='lineal' else 3 if lectura in ('oraculo01','oraculo01_ruido') else 21)+(1 if constante else 0)   # xor: lineal = 6 px; cuadratica = 6 px + 15 productos; random15 = 6 px + 15 bits al azar; 3e: oraculo = 3 rasgos; 3d: +1 si constante",
       "    Wps=np.zeros(_NF); Wns=np.zeros(_NF)   # v13: via LENTA sobre phi(P) (con lectura='lineal' es v13g exacto)",
       "    Ws=np.zeros(_NF)   # 3d: vector con signo de la via lenta; solo se mueve/lee si regla_lenta=='delta_signo'"], 1, 'NF y Ws'),
     # 3) phi' = phi + [1.0] (C) y las dos lecturas de la via lenta segun regla_lenta
@@ -60,6 +68,8 @@ PARCHES = [
      ["    def phi(P):   # 3d: constante=True anade 1 entrada fija en 1.0 al final (phi' de C). Con constante=False devuelve exactamente lo de antes",
       "        if lectura=='lineal': _b=P",
       "        elif lectura=='cuadratica': _b=np.concatenate([P,[P[i]*P[j] for i,j in _IJ]])",
+      "        elif lectura=='oraculo01': _b=np.array([P[0],P[1],P[0]*P[1]])   # 3e: la base EXACTA de xor01 (3 rasgos)",
+      "        elif lectura=='oraculo01_ruido': _b=np.array([P[0],P[1],P[2]*P[3]])   # 3e: control, mismo tamano, el producto equivocado",
       "        else: _b=np.concatenate([P,_R15[tuple(float(v) for v in P)]])",
       "        return np.concatenate([_b,[1.0]]) if constante else _b",
       "    def lenta(P):   # 3d: lectura de la via lenta sola segun regla_lenta ('dos_canales' = la formula original, exacta)",
@@ -104,8 +114,9 @@ if __name__ == '__main__':
     s = open(ORIGEN, encoding='utf-8').read()
     for viejo, nuevo, n, et in PARCHES:
         s = sust(s, NL.join(viejo), NL.join(nuevo), n, et)
-    cab = ('"""organismo_v13q3 = organismo_v13q.py (' + SHA_ORIGEN + ') + regla fusionada del trio XOR (bloque 3d):' + NL +
-           "knobs regla_lenta='dos_canales'|'delta_signo', constante=False|True, lam_lenta (decaimiento por actualizacion)." + NL +
+    cab = ('"""organismo_v13q3 = organismo_v13q.py (' + SHA_ORIGEN + ') + regla fusionada del trio XOR (bloque 3d) +' + NL +
+           "lecturas oraculo del bloque 3e. Knobs: regla_lenta='dos_canales'|'delta_signo', constante=False|True," + NL +
+           "lam_lenta (decaimiento por actualizacion), lectura=...|'oraculo01'|'oraculo01_ruido'." + NL +
            'Generado por construye_xor_3d.py. NO editar. Con regla_lenta=\'dos_canales\' y constante=False es organismo_v13q' + NL +
            'exacto en todas las claves del original (identidad obligatoria, ETAPA 1 de corre_xor_3d.py)."""' + NL)
     d = os.path.join(AQUI, 'organismo_v13q3.py')

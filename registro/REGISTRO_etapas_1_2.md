@@ -3551,3 +3551,32 @@ lecturas refutadas; el candidato a causa es la identificabilidad, pendiente de 3
   0.6; normalización divisiva (Louie–Khaw–Glimcher 2013) como control barato; "paradoja de exposición" (confirmar que un
   sitio ya no es veneno exige acercarse, y el mapa lo impide) como límite compartido de 3 y 5. Dato de arquitectura
   subrayado: `valor()` sólo cambia al morder; pisar sin morder no toca lo aprendido.
+
+
+### Bloque 2 ter (día 7, 23:10): escala del recuerdo (valor recordado saturado en la brújula del mapa) — **REFUTADA → el canje exploración/explotación del mapa se registra como ESTRUCTURAL; v14 no lleva el mapa**
+
+Preregistro `experimentos/nivel8_escala_mapa/PREREGISTRO_escala_mapa.md` (agente diseñador; `sat_M = 1.0 = R_VAL['comida']`, fijado
+antes de correr por la escala del mundo); instrumento `mundo_largo_e.py` (`d1398f0428b1739b`, perillas apagadas ≡ `mundo_largo`
+3/3 con el mundo completo); datos `escala_s81-100_20260917_230039` (`05a712ef734aba56`), semillas 81–100 (las mismas de la
+serie de novedad 1.8: la puerta K0 reprodujo V13 0.887 / MAPA 0.700 / comida 971 **exactamente** — el runner imprimió "NO:
+instrumento sospechoso" por una comparación de flotantes mal escrita (0.700 == 0.7 con redondeo); los valores son idénticos,
+no hay sospecha: defecto menor del runner, anotado).
+
+| brazo | adquisición (≤ 30) | comida Q4 | visitas / equidad | celdas |
+|---|---|---|---|---|
+| V13 | 0.887 | 834 | 12 115 / 0.710 | 90 |
+| MAPA | 0.700 | 971 | 5 064 / 0.139 | 79 |
+| **MAPA + saturación [−1, +1]** | **0.716** | 973 | 5 660 / 0.212 | 84 |
+| + saturación barajada por sitios (control) | 0.723 | 958 | 5 680 / 0.199 | 85 |
+| + atenuación κ = 0.5 (lectura) | 0.700 | 954 | 5 998 / 0.226 | 90 |
+
+P1 **NO** (0.716; > MAPA 11g/4e/5p), P2 OK (la comida no cae), P3 **NO** (saturación = barajada), P4 NO. **Lectura:** quitarle
+al veneno recordado su peso ×3 no redistribuye las visitas (equidad 0.21 contra 0.71 de V13): la brújula sigue diciendo
+"ve a la comida recordada", y el organismo acampa en los sitios de comida aunque el veneno ya no lo repela. La causa del
+canje **no es la escala del veneno**: es la **atracción de la comida recordada** misma — con mapa, el organismo deja de
+explorar porque ya sabe dónde comer. **Tres candidatos refutados** (curiosidad por progreso, novedad de sitio en dos
+dosis, saturación): por la cláusula (a) del preregistro, **el canje se registra como estructural**: *el mapa cobra
+exploración por construcción; v14 no lo lleva*. El mapa queda como órgano de experimento (nivel 6) con su canje escrito.
+Vocabulario: *el mapa da de comer y quita exploración; no hay perilla que lo arregle sin quitarle el mapa*. Si algún día
+se reabre, será por un mecanismo que haga que **la comida recordada deje de atraer** cuando el cuerpo no la necesita
+(saciedad como temperatura de la brújula: informe de exploración, mecanismo 4 y "paradoja de exposición"), en rama.

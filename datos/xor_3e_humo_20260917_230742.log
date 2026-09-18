@@ -1,0 +1,15 @@
+[23:07:42 +    0.0s] HUMO 3e (un proceso, sin Pool). identidad semilla 1 + ORACULO_DELTA y RUIDO_DELTA xor01 semilla 1, T=100000.
+[23:07:42 +    0.0s] sha organismo_v13q3 aaebe073308a40c2  organismo_v13q 0b59eb03858df3a8  construye 61c6c537a224dbea  script c1f01ac6c0e94fcf
+[23:08:29 +   47.4s]    identidad xor01/lineal       s1: IDENTICO
+[23:08:29 +   47.4s]    identidad xor01/cuadratica   s1: IDENTICO
+[23:08:29 +   47.4s]    identidad px0/lineal         s1: IDENTICO
+[23:08:29 +   47.4s]    identidad px0/cuadratica     s1: IDENTICO
+[23:08:29 +   47.4s]    identidad: 4/4 (T=60000)
+[23:08:40 +   58.4s]    ORACULO_DELTA  xor01 s1: acc 0.562  acc_lenta 0.625  ba 0.281  cobertura 12/12
+[23:08:40 +   58.4s]                     sonda: Ws(P0) +1.02  Ws(P1) -0.39  Ws(P0*P1) -0.39  Ws(cte) -0.42  max|Ws| 1.02 (clip_s=3)
+[23:08:40 +   58.4s]                     muestreo: {'00': 48, '01': 0, '10': 204, '11': 15}  clases sin morder 1/4
+[23:08:50 +   67.6s]    RUIDO_DELTA    xor01 s1: acc 0.188  acc_lenta 0.250  ba 0.224  cobertura 12/12
+[23:08:50 +   67.6s]                     sonda: Ws(P0) +0.98  Ws(P1) -0.50  Ws(P2*P3) -0.25  Ws(cte) -0.24  max|Ws| 0.98 (clip_s=3)
+[23:08:50 +   67.6s]                     muestreo: {'00': 45, '01': 0, '10': 206, '11': 15}  clases sin morder 1/4
+[23:08:50 +   67.6s]    (3d, mismas semillas 41-60: CUAD_DELTA xor01 acc_lenta mediana 0.500. Nada se ajusta con este humo.)
+[23:08:50 +   67.6s] datos -> xor_3e_humo_20260917_230742.json  sha256_16 = d687dfe9aa75344e
