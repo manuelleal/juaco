@@ -1,0 +1,56 @@
+[18:06:24 +    0.0s] HUMO del disenador del bloque 4b, UN proceso, sin Pool (regla 3, <= 6 corridas). voraz = 1.0.
+[18:06:24 +    0.0s] PREREGISTRO_bloque4b_emisor.md (ERR-51) + PROTOCOLO_canal_20260918.md (sala 3).
+[18:06:24 +    0.0s] Semillas 1-2: NINGUNA de las 581-620 del bloque queda expuesta.
+[18:06:24 +    0.0s]     sha preregistro                0e4bc91d251ba40b
+[18:06:24 +    0.0s]     sha script                     c6c0f803ec7e6c39
+[18:06:24 +    0.0s]     sha constructor                7e63562ac9034e4a
+[18:06:24 +    0.0s]     sha instrumento                b3dd1d7e66a2d147
+[18:06:24 +    0.0s]     sha arnes                      57d0334db104ae9d
+[18:06:24 +    0.0s]     sha origen_b4                  ff9946ee2ffe27e6
+[18:06:24 +    0.0s]     sha runner_bloque4             11eb44afc47679b7
+[18:06:24 +    0.0s]     sha preregistro_bloque4        9e67c09ffb35b67e
+[18:06:24 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[18:06:24 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[18:06:24 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[18:06:24 +    0.0s]     origenes verificados -> OK
+[18:06:24 +    0.0s] 1/4 IDENTIDAD (subconjunto; el arnes completo, 95/95, va en identidad_familias_b4b.py).
+[18:06:27 +    3.3s]     (a) b4b apagado == organismo_familias_b3 (mundo=AB)          2/2
+[18:06:33 +    8.8s]     (g) b4b apagado == organismo_familias_b3 (el mundo del bloque 4) 2/2
+[18:06:36 +   12.1s]     (n) b4b apagado + mundo=AB == organismo_v14 (TRONCO)         2/2
+[18:06:39 +   15.3s]     (o) relevo ON + mundo=AB == organismo_v15f_on                2/2
+[18:06:45 +   21.1s]     (r) canal='emite' == canal=None (el emisor SOLO MIRA)        2/2
+[18:06:45 +   21.2s]     (w) exc_fija no toca el rng del mundo (n_exc=0)              2/2
+[18:06:47 +   22.9s]     (v) voraz=0.0 == el defecto (b4 bit a bit por la cadena)     2/2
+[18:06:49 +   24.6s]     (p) par_herm no toca el rng del mundo                        2/2
+[18:07:02 +   37.8s]     (K) CANAL+ != CORTADO+ (DEBE diferir)                        2/2
+[18:07:02 +   37.8s]   IDENTIDAD 18/18
+[18:07:02 +   37.8s] 2/4 DIAGNOSTICO ESTRUCTURAL (antes de simular): alias exacto por par y por semilla, U3.
+[18:07:02 +   37.8s]     semilla 1: alias_pares 0.00605  alias_semilla 1  U3 0.2919
+[18:07:02 +   37.9s]     semilla 2: alias_pares 0.04234  alias_semilla 1  U3 0.3621
+[18:07:02 +   37.9s] 3/4 EMISORES: 2 corridas de 100000 pasos (de cada una salen los DOS mensajes).
+[18:07:09 +   45.4s]     E s1 (pos)   7.5s  mensaje ('T0v2', -3.0, 't=10101', 'tras 1 exposiciones')
+[18:07:09 +   45.4s]     E s1 (neg)   7.5s  mensaje ('T1v2', 1.0, 't=10102', 'tras 1 exposiciones')
+[18:07:17 +   53.1s]     E s2 (pos)   7.7s  mensaje ('T0v2', -3.0, 't=10078', 'tras 1 exposiciones')
+[18:07:17 +   53.1s]     E s2 (neg)   7.7s  mensaje ('T1v2', 1.0, 't=11247', 'tras 5 exposiciones')
+[18:07:17 +   53.1s] 4/4 HUMO: 4 brazos x 2 semillas = 8 corridas de 100000 pasos.
+[18:07:27 +   63.6s]     CANAL-    s1  10.5s  entrega t=66866  T1v2 es comida  evX 0.0 (okX 1.0, via lenta)  evU 0.3333 okU 0.8333  comH 1.0  esp 0.3333  ret2/3 0.0/0.0  mord_ref 8  muertes 19
+[18:07:27 +   63.6s]               MECANISMO ganadora [2, 4] -> [1, 2] (variable False->False)  casilla 0  comparten 16/32  lag 0 pasos / 0 mordidas  prefijo 9c394fd0695ae005
+[18:07:35 +   70.8s]     CANAL-    s2   7.2s  entrega t=66676  T1v2 es comida  evX 0.0 (okX 1.0, via lenta)  evU 0.1667 okU 0.6667  comH 0.0  esp 0.1667  ret2/3 1.0/1.0  mord_ref 1  muertes 33
+[18:07:35 +   70.8s]               MECANISMO ganadora [1, 5] -> [5, 9] (variable False->True)  casilla 2  comparten 12/32  lag 0 pasos / 0 mordidas  prefijo 4b2b5b850cb1cb89
+[18:07:42 +   78.2s]     CORTADO-  s1   7.4s  entrega t=66866  T1v2 es comida  evX 1.0 (okX 0.0, via lenta)  evU 0.3333 okU 0.8333  comH 0.0  esp -0.6667  ret2/3 1.0/1.0  mord_ref 1  muertes 19
+[18:07:42 +   78.2s]               MECANISMO ganadora [2, 4] -> [2, 4] (variable False->False)  casilla 0  comparten 16/32  lag 0 pasos / 0 mordidas  prefijo 9c394fd0695ae005
+[18:07:50 +   85.6s]     CORTADO-  s2   7.4s  entrega t=66676  T1v2 es comida  evX 1.0 (okX 0.0, via lenta)  evU 0.5 okU 1.0  comH 0.0  esp -0.5  ret2/3 1.0/1.0  mord_ref 3  muertes 26
+[18:07:50 +   85.6s]               MECANISMO ganadora [1, 5] -> [1, 5] (variable False->False)  casilla 2  comparten 12/32  lag 0 pasos / 0 mordidas  prefijo 4b2b5b850cb1cb89
+[18:07:57 +   93.5s]     PAR-      s1   7.9s  entrega t=66744  T1v2 es comida  evX 0.0 (okX 1.0, via lenta)  evU 0.1667 okU 0.6667  comH 1.0  esp 0.1667  ret2/3 0.0/0.0  mord_ref 202  muertes 21  | PAR hermana T1v0: dist 0.0 okP 0.0 lag 10
+[18:07:57 +   93.5s]               MECANISMO ganadora [4, 11] -> [4, 11] (variable True->True)  casilla 1  comparten 6/32  lag 0 pasos / 0 mordidas  prefijo bcb0e5230a100255
+[18:08:05 +  101.3s]     PAR-      s2   7.7s  entrega t=66823  T1v2 es comida  evX 0.0 (okX 1.0, via lenta)  evU 0.6667 okU 0.5  comH 1.0  esp 0.6667  ret2/3 0.0/0.0  mord_ref 266  muertes 21  | PAR hermana T1v0: dist 0.0 okP 0.0 lag 19
+[18:08:05 +  101.3s]               MECANISMO ganadora [1, 5] -> [1, 5] (variable False->False)  casilla 2  comparten 12/32  lag 0 pasos / 0 mordidas  prefijo f790efed3720afa8
+[18:08:14 +  110.2s]     PAR0-     s1   9.0s  entrega t=66744  T1v2 es comida  evX 0.0 (okX 1.0, via lenta)  evU 0.1667 okU 0.6667  comH 1.0  esp 0.1667  ret2/3 0.0/0.0  mord_ref 202  muertes 21  | PAR hermana T1v0: dist 0.0 okP 0.0 lag 10
+[18:08:14 +  110.2s]               MECANISMO ganadora [4, 11] -> [4, 11] (variable True->True)  casilla 1  comparten 6/32  lag 0 pasos / 0 mordidas  prefijo bcb0e5230a100255
+[18:08:22 +  117.7s]     PAR0-     s2   7.4s  entrega t=66823  T1v2 es comida  evX 1.0 (okX 0.0, via lenta)  evU 0.6667 okU 0.8333  comH 0.0  esp -0.3333  ret2/3 1.0/1.0  mord_ref 3  muertes 22  | PAR hermana T1v0: dist 0.0 okP 1.0 lag 32
+[18:08:22 +  117.7s]               MECANISMO ganadora [1, 5] -> [1, 5] (variable False->False)  casilla 2  comparten 12/32  lag 0 pasos / 0 mordidas  prefijo f790efed3720afa8
+[18:08:22 +  117.7s]   GEMELO (P-I3) semilla 1, CANAL-/CORTADO-: ['9c394fd0695ae005', '9c394fd0695ae005'] -> IDENTICOS
+[18:08:22 +  117.7s]   CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): IDENTICO campo a campo
+[18:08:22 +  117.7s] ESTIMACION del bloque: 340 corridas de 100000 pasos, ~8.0 s/corrida en serie -> ~3.2 min de pared con Pool(14).
+[18:08:22 +  117.7s] HUMO: numeros observados, sin ajustar nada. n<=2 y semillas vistas: NO son evidencia.
+[18:08:22 +  117.7s] datos -> familias_b4b_humo_20260918_180624.json  sha256_16 = 8ea2820bdf270b26

@@ -451,11 +451,18 @@ lenta** en los dos brazos):
    la 2.ª ni en la 3.ª exposición, y en 100 000 pasos lo muerde **una sola vez**. Con n = 1 esto no es evidencia; es
    la señal de que el montaje mide lo que dice medir.
 3. **La referencia, observada y no prometida: el techo de 2 bits aparece tal cual.** La casilla del referente la
-   comparten **16 de 32** estímulos, y el precio se ve en las hermanas: `comH` pasa de **0.0** (CORTADO: no muerde a
-   las tres hermanas venenosas, que es lo correcto) a **1.0** (CANAL: **se las come todas**). El mensaje `+1` sobre
-   `T1v2` **abre en canal toda la casilla del veneno**. `esp` pasa de −0.667 a +0.333: se mueve en la dirección
-   buena, pero muy lejos de 1. **Esto es exactamente lo que predice P-D, y no lo cambio ni lo suavizo.** Con n = 1
-   no decide nada.
+   comparten **16 de 32** estímulos, y el precio se ve en la hermana medible: `comH` pasa de **0.0** (CORTADO: no
+   muerde a la hermana venenosa, que es lo correcto) a **1.0** (CANAL: **se la come**). El mensaje `+1` sobre
+   `T1v2` **abre en canal la casilla del veneno**. `esp` pasa de −0.667 a +0.333: se mueve en la dirección buena,
+   pero muy lejos de 1. **Esto es exactamente lo que predice P-D, y no lo cambio ni lo suavizo.** Con n = 1 no
+   decide nada.
+   **CORRECCIÓN DE LECTURA (mía, y la digo aquí: la primera redacción de este punto decía "se las come todas",
+   en plural, y es FALSO).** `n_H = 1`, no 3: con `deriva(R) = T/3 + 1` la corrida sólo tiene **tres** fases y no
+   vuelve a la 0, así que después de la entrega (fase 2) las hermanas `T1v0` y `T1v1` **no reaparecen nunca**; la
+   única hermana que el receptor vuelve a ver es el **token** `T1`. **`comH` del bloque 4 descansa sobre UNA
+   hermana, y además sobre la más fácil de discriminar** (el token difiere de X en un solo píxel variable; una
+   hermana variante difiere en dos). Es un límite del montaje, no del canal, y es exactamente el que el brazo
+   **PAR** del bloque 4b viene a levantar.
 4. **La ganadora cambia con una sola entrega,** de `(2,4)` a `(1,2)` en CANAL− y **no** en CORTADO−: una sola
    entrega **reelige la celda que sirve a toda la vía lenta** (punto §5.5 del protocolo de la sala 3, hasta hoy sin
    medir). Ninguno de los dos pares usa un píxel variable, así que en esta semilla la tabla **no podía** distinguir
