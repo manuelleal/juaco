@@ -39,7 +39,9 @@
 >   + 3T-k + mapa. Si no pasa el bloque 2, **v13 sigue siendo el tronco** y mapa/`gamma_soc` quedan como órganos de
 >   experimento validados en su mundo (registrados en `experimentos/evo/LINAJE.md`).
 >
-> **Bloque 5 — N2 reabierto donde el mundo lo permite:** N2b (símbolo como sesgo + ventaja) en el mundo con reaparición en
+> **Bloque 5 — ❌ HECHO y REFUTADO (N2f v3, 17-sep 22:35):** montaje válido por primera vez (emisiones 0.23; K3/K4/K5 ok) y N2
+>   cae por sexta vez (E2 ±0.3, E4 sin beneficio, E5 no destruye). **N2 cerrado con dos mundos.** INNATO 60 contra 278: el canal
+>   serviría con significado dado; lo que falla es aprenderlo por refuerzo. Texto original: N2b (símbolo como sesgo + ventaja) en el mundo con reaparición en
 >   sitio (`mundo_social_n3`, `regen = 50`), que equilibra visitas (la causa registrada del cierre). Predicción: contraste
 >   ≥ 0.5 en ≥ 10/20 y beneficio ≥ 1.2 × N0 en ≥ 15/20. Si cae, N2 queda cerrado con dos mundos.
 >

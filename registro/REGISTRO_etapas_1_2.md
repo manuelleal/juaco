@@ -3431,3 +3431,37 @@ vuelve a fallar, refutada en dos dosis y no se prueba una tercera") la línea qu
 sitio mueve el canje; no lo resuelve*. El canje del mapa sigue abierto (nivel 8) y ya lleva dos candidatos refutados
 (curiosidad por progreso, novedad de sitio); el siguiente, si lo hay, debe atacar la **escala del recuerdo de veneno**
 (−3 pesa más que cualquier atracción de +0.6…+1.8), no otra atracción.
+
+
+### Bloque 5 — N2f v3 (semillas 81–100): **montaje VÁLIDO por primera vez, y N2 cae por sexta vez → N2 cerrado con dos mundos**
+
+Preregistro `PREREGISTRO_N2f.md` (v3 + enmiendas 1–2, del agente diseñador); instrumento `mundo_social_n3.py`
+(`ef227f833c5bf46a`: `regen = 50`, `regen_rota`, `vida = 100` fijado por las puertas K3/K4/K5 en el humo,
+`escucha_si_no_sabe`; identidad con las tres perillas apagadas **8/8** en mi copia contra la versión anterior
+`e6b3ee1ef5b8a4be`, N3c/N3d protegidos); datos `N2f_s81-100_20260917_222744` (`56902998e66b714e`).
+
+**Validez (todas pasan):** K2 símbolos recibidos 6 108; K3 queda algo que enseñar (veneno Q4 del novato solo 50 ≥ 20);
+K5 el mundo se aprende solo (veneno Q1 → Q4: 123 → 50, 19/20); **K4 equilibrio de emisiones: rechaza 18 216 / muerde
+4 198 = 0.23** (N2d: 0.016; ×14), 1 156 "muerde" oídas. Es el mundo que la clausura de N2 pedía.
+
+| condición | veneno total | veneno Q4 | muertes | símbolos recibidos | decodificados |
+|---|---|---|---|---|---|
+| SOLO | 278 | 50 | 10 | — | — |
+| N0 | 340 | 68 | 20 | 0 | 0 |
+| **INNATO** (mapa correcto dado) | **60** | 0 | 16 | 7 568 | — |
+| CONV (mundo + no desenseñar) | 314 | 57 | 18 | 6 108 | 50 |
+| CONV_MUNDO (sólo mundo) | 311 | 66 | 19 | 6 040 | 334 |
+| SHUF (símbolo barajado) | 177 | 28 | 12 | 6 021 | 0 |
+
+E1 convención 11/20 (consistencia 0.99, distintos 14/20) · **E2 contraste −0.29 / +0.32** (4/20) · E3 sostenida · **E4 sin
+beneficio** (314 contra 340; pareado 12/20) · **E5 barajar no destruye** (el receptor con símbolo barajado muerde *menos*
+veneno, 177) · A1/A2 no atribuibles. `N2f_EMERGE = False`.
+
+**Lectura:** ya no vale la excusa del mundo. Con visitas equilibradas y patrones que fluyen, el canal de dos símbolos
+sigue sin adquirir magnitud ni beneficio; y el brazo INNATO (60 venenos contra 278 solo) muestra que **el canal sí
+podría servir si el significado estuviera dado**: lo que no funciona es **aprender el significado** con refuerzo por
+ventaja y símbolo como sesgo. El barajado que "ayuda" (177) es el aviso de que el sesgo del símbolo actúa como ruido que
+frena la boca, no como información. **Cierre:** *N2 cerrado con dos mundos* (cláusula de refutación del preregistro).
+Seis diseños (N2, N2b–e, N2f) y ~750 corridas. Vocabulario: *emerge una convención débil; no adquiere significado; el
+canal serviría con significado dado*. Reabrir sólo con un mecanismo de significado distinto (p. ej. que el receptor
+aprenda el símbolo por **predicción** de lo que va a sentir, no por refuerzo del emisor) — apunta al bloque 6.

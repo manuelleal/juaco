@@ -127,6 +127,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
 - **Bloque 1 (día 6) HECHO:** 3T-k compone hasta 4 (k=5 agota el pool 90/90); retención de lo ausente en el mundo largo
   0.67/0.50 (interferencia, no inversión; `largo_s21-40_20260917_204840`); N3d mudo 0.503 = obedece, no enseña
   (`N3dmudo_s61-80_20260917_205345`). Registro al final de `REGISTRO_etapas_1_2.md`.
+- **Bloque 5 (N2f v3) REFUTADO con montaje válido → N2 CERRADO CON DOS MUNDOS** (`N2f_s81-100_20260917_222744`):
+  emisiones equilibradas 0.23, novato aprende solo, y aun así contraste ±0.3, sin beneficio, barajar no destruye; INNATO 60
+  contra 278 solo: el canal serviría con significado dado; aprenderlo por refuerzo no funciona. Bloques 2 (curiosidad) y
+  2 bis (novedad de sitio, dos dosis) refutados: el canje del mapa se desplaza, no se rompe.
 - **Bloque 3 REFUTADO como estaba escrito** (`xor_lectura_s1-20_20260917_213124`): la vía lenta cuadrática aprende XOR
   (W del producto P0·P1 = −2.65) pero el acierto en nunca vistos sigue en 0.438; hipótesis 3b: la puerta esconde la vía
   lenta (familiar por solapamiento ≠ conocer). Regresión px0/azar intacta. **3b: hipótesis de la puerta REFUTADA**

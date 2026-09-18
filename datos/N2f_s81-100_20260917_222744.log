@@ -1,0 +1,47 @@
+[22:27:44 +    0.0s] ARRANQUE N2f v3 (reaparicion con rotacion + vida + receptor que no se deja desensenar; regen=50, regen_rota=True, vida=100, kw {'gamma_sim': 1.2, 'baseline_q': True, 'u_m': 1.0}; brazos ['SOLO', 'N0', 'INNATO', 'CONV', 'CONV_MUNDO', 'SHUF']; decide CONV, atribuye CONV_MUNDO). semillas 81..100, T=200000, regla azar. Pool(14).
+[22:27:44 +    0.0s]   sha_preregistro=cf6d38815e7cc914  sha_script=6a8b4eee869852cc  sha_mundo_social_n3=ef227f833c5bf46a  sha_mundo_social=946ff1c71e375eba  sha_v13=cc8b16b492d4d324  sha_v13g=2a80e125f8593bf2
+[22:27:45 +    0.5s] REGLA 11 — procesos python vivos (4), este es pid 27284
+[22:28:05 +   20.8s] ETAPA 1/4 — K1a (tronco) y K1b (via de simbolos) con regen=None: 6/6 -> OK
+[22:28:05 +   20.8s] ETAPA 2/4 — progenitores del experto (20, T=200000, sin regen)...
+[22:28:36 +   52.0s]   progenitores: venenos conocidos (de 10) mediana 8 [6, 10]
+[22:28:36 +   52.0s] ETAPA 3/4 — 120 corridas (regen=50, regen_rota=True, vida=100)...
+[22:29:14 +   89.6s]           20/120
+[22:30:23 +  158.3s]           40/120
+[22:31:11 +  206.3s]           60/120
+[22:32:20 +  275.4s]           80/120
+[22:33:17 +  332.1s]           100/120
+[22:34:24 +  399.5s]           120/120
+[22:34:24 +  399.6s] ETAPA 4/4 — analisis.
+[22:34:24 +  399.6s] 
+[22:34:24 +  399.6s]   cond    veneno tot  ven Q1  ven Q4  muert  ven.con/pres  com.con/pres  pat.pres  vis com/ven   simb.recib  decod 
+[22:34:24 +  399.6s]   SOLO       278         123      50     10     5/10         9/10           20    3718/12502          0      0
+[22:34:24 +  399.6s]   N0         340         137      68     20     6/10         8/10           20    4368/18182          0      0
+[22:34:24 +  399.6s]   INNATO      60          49       0     16    10/10         6/10           20    7568/16941          0      0
+[22:34:24 +  399.6s]   CONV       314         117      57     18     6/10         9/10           20    4140/18574       6108     50
+[22:34:24 +  399.6s]   CONV_MUNDO    311         136      66     19     3/10         9/10           20    4182/18296       6040    334
+[22:34:24 +  399.6s]   SHUF       177         104      28     12     6/10         9/10           20    4165/18188       6021      0
+[22:34:24 +  399.6s] 
+[22:34:24 +  399.6s]   K2 simbolos recibidos (CONV): mediana 6108 (>=1000): OK
+[22:34:24 +  399.6s]   K3 VALIDEZ queda algo que ensenar: veneno Q4 del novato en SOLO mediana 50 (>=20): OK
+[22:34:24 +  399.6s]   K5 VALIDEZ de `vida` (el mundo se puede aprender solo): veneno Q4 < Q1 en SOLO 19/20 (>=15)   [Q1 123 -> Q4 50]: OK
+[22:34:24 +  399.6s]   K4 EQUILIBRIO emisiones del experto por estado: rechaza 18216 / muerde 4198  (razon 0.230, se pide >=0.200; N2d fue 0.016); oidas 'muerde' por el novato 1156 (>=500): OK
+[22:34:24 +  399.6s]   --- DECIDE CONV
+[22:34:24 +  399.6s]     E1 convencion: 11/20 (>=15): REFUTADA   consistencia Q4 mediana 0.99  distintos 14/20
+[22:34:24 +  399.6s]     E2 decodificacion (C[s_rech]<=-1 y C[s_mord]>=+0.3): 4/20 (>=15): REFUTADA   contraste mediana -0.29 / +0.32  (M crudo -0.28 / +0.86)
+[22:34:24 +  399.6s]     E3 arbitrariedad: 'rechazo' = simbolo 0 en 12/20 (5..15): SOSTENIDA
+[22:34:24 +  399.6s]     E4 beneficio: veneno 314 <= 0.7 x N0 340 = 238, pareado 12/20 (>=14): REFUTADA
+[22:34:24 +  399.6s]     P1 |C|>=0.5 en 9/20 (>=10): False   P2 N0 >= 1.2 x arm pareado 10/20 (>=15): False   decodificados 50  no_desensena 94
+[22:34:24 +  399.6s]     refuerzos del experto +/-: 16292 / 734;  |Pq| mediana 1.07
+[22:34:24 +  399.6s]   --- ATRIB  CONV_MUNDO
+[22:34:24 +  399.6s]     E1 convencion: 13/20 (>=15): REFUTADA   consistencia Q4 mediana 1.00  distintos 16/20
+[22:34:24 +  399.6s]     E2 decodificacion (C[s_rech]<=-1 y C[s_mord]>=+0.3): 8/20 (>=15): REFUTADA   contraste mediana -0.44 / +0.44  (M crudo -0.20 / +0.79)
+[22:34:24 +  399.6s]     E3 arbitrariedad: 'rechazo' = simbolo 0 en 10/20 (5..15): SOSTENIDA
+[22:34:24 +  399.6s]     E4 beneficio: veneno 311 <= 0.7 x N0 340 = 238, pareado 8/20 (>=14): REFUTADA
+[22:34:24 +  399.6s]     P1 |C|>=0.5 en 9/20 (>=10): False   P2 N0 >= 1.2 x arm pareado 7/20 (>=15): False   decodificados 334  no_desensena 0
+[22:34:24 +  399.6s]     refuerzos del experto +/-: 16270 / 956;  |Pq| mediana 1.17
+[22:34:24 +  399.6s]   --- referencias: INNATO 60   SOLO 278   N0 340
+[22:34:24 +  399.6s]   E5 barajar destruye: |C|<1 en 20/20 (>=15) y veneno SHUF 177 >= 0.9 x N0 306: REFUTADA
+[22:34:24 +  399.6s]   A1 la magnitud la da el MUNDO (E2 tambien en CONV_MUNDO): False      A2 el beneficio necesita la PUERTA (E4 en CONV y no en CONV_MUNDO): False
+[22:34:24 +  399.6s] 
+[22:34:24 +  399.6s] VEREDICTO N2f: K1=True K2=True K3=True K5=True K4=True E1=False E2=False E3=True E4=False P1=False P2=False E5=False A1_magnitud_del_mundo=False A2_beneficio_por_la_puerta=False MONTAJE_VALIDO=True N2f_EMERGE=False
+[22:34:24 +  399.7s] datos -> N2f_s81-100_20260917_222744.json  sha256_16 = 56902998e66b714e
