@@ -1,0 +1,13 @@
+[22:51:45 +    0.0s] HUMO 3d (un proceso, sin Pool). identidad semilla 1 + 1 corrida CUAD_DELTA xor01 semilla 1, T=100000.
+[22:51:45 +    0.0s] sha organismo_v13q3 b71bbe41a7326aaf  organismo_v13q 0b59eb03858df3a8  construye 1bd4264f155bf3d9  script bc868cab724c3a22
+[22:52:11 +   26.6s]    identidad xor01/lineal       s1: IDENTICO
+[22:52:11 +   26.6s]    identidad xor01/cuadratica   s1: IDENTICO
+[22:52:11 +   26.6s]    identidad px0/lineal         s1: IDENTICO
+[22:52:11 +   26.6s]    identidad px0/cuadratica     s1: IDENTICO
+[22:52:11 +   26.7s]    identidad: 4/4 (T=60000). claves NUEVAS en v13q3 (no cuentan): ['Ws', 'Ws_apriori', 'regla_lenta', 'constante', 'lam_lenta']
+[22:52:11 +   26.7s]    corrida CUAD_DELTA xor01 semilla 1 (T=100000, lam_lenta=0.002, constante=True)...
+[22:52:17 +   32.0s]    acc 0.312  acc_lenta 0.312  ba 0.304  cobertura 12/12  celdas 63  muertes 115
+[22:52:17 +   32.0s]    mecanismo EN LA SONDA: Ws(P0) +0.59  Ws(P1) -0.35  Ws(P0*P1) -0.35  Ws(cte) -0.21
+[22:52:17 +   32.0s]    muestreo: mordidas pre-sonda por clase {'00': 45, '01': 0, '10': 181, '11': 14}  clases sin morder 1/4
+[22:52:17 +   32.0s]    (referencia del piloto de C, misma semilla y lambda, copia exploratoria: acc_lenta 0.312. NO se ajusta nada con esto.)
+[22:52:17 +   32.0s] datos -> xor_3d_humo_20260917_225145.json  sha256_16 = 492abbfe008a866b
