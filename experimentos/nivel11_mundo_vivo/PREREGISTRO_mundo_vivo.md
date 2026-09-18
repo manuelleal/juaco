@@ -1,6 +1,6 @@
 # PREREGISTRO — MUNDO VIVO (nivel 11): dos necesidades, cuatro estímulos
 
-**BORRADOR del diseñador para el coordinador** (18 sep 2026). Nada de esto se ha corrido con `Pool` ni se declara.
+**PREREGISTRO (commiteado 18 sep 07:50, antes de correr; el veredicto de XOR ya está: línea cerrada) del diseñador para el coordinador** (18 sep 2026). Nada de esto se ha corrido con `Pool` ni se declara.
 Origen: `registro/PLAN.md`, decisión del director (F) del 18-sep 06:10. Misión: AGI por este camino; el método manda.
 Instrumento: `experimentos/nivel11_mundo_vivo/organismo_vivo.py`, construido **por anclas** desde el tronco congelado
 `organismo/organismo_v14.py` (**v14.1**, `feefc88b1fd8d434`, sólo lectura) por `construye_vivo.py`. Arnés:
@@ -260,3 +260,10 @@ UNA_NEC (160 contra 141 muertes): con dos necesidades, un valor escalar es **peo
    `R = 0` de cada bocado de agua y sal, que comparten píxeles con la comida en la vía lenta. **Predicción nueva
    para el bloque (P9):** ese coste se mantiene por debajo de 2 × (VIVO ≤ 2 × UNA_NEC en `exp_hasta[hambre][A]`,
    mediana de 20); si crece con el número de estímulos, el mundo vivo compra necesidades y paga en velocidad.
+
+
+## Nota del coordinador (18 sep 2026, 07:50; escrita ANTES de correr)
+
+El veredicto de XOR ya está (línea cerrada 07:47), así que este bloque corre ahora con la enmienda 1 del diseñador tal cual (sus
+cuatro fallos corregidos antes de proponer) y sin ningún cambio de criterio. Semillas 181–200; réplica automática en 201–220 si
+algún veredicto queda a ±1 semilla del umbral (regla 12). Un `Pool` a la vez.
