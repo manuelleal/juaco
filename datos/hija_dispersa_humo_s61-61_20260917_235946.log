@@ -1,0 +1,46 @@
+[23:59:46 +    0.0s] ARRANQUE HIJA DISPERSA (propuesta B-1). k en [4, 5], brazos ['V13', 'REL', 'RELD', 'AZAR', 'SLOT'], escenarios ['C3', 'C3C'], semillas 61-61, T=20000. HUMO (un proceso, sin Pool)
+[23:59:46 +    0.0s] sha preregistro a3c7af91453598ad  script 9d93a1e3ceee59ef  constructor fd82df7186ce8151  instrumento d305d53186fcbcd6  origen mundo_temporal_k 68736baafe7c8cdb  v13 cc8b16b492d4d324
+[23:59:46 +    0.5s] REGLA 11 — procesos python vivos (5), este es pid 22540
+[23:59:46 +    0.5s] ETAPA 1/3 — IDENTIDAD (perillas apagadas == mundo_temporal_k) (3)...
+[23:59:54 +    8.1s]           3/3
+[23:59:54 +    8.1s]   identicos: 3/3
+[23:59:54 +    8.1s] ETAPA 2/3 — serie (20)...
+[00:00:09 +   23.5s]           10/20
+[00:00:22 +   36.4s]           20/20
+[00:00:22 +   36.4s] ETAPA 2b/3 — P4 (inercia a k=1: REL == V13) (1)...
+[00:00:25 +   38.7s]           1/1
+[00:00:25 +   38.7s] ETAPA 3/3 — analisis (criterios y clausulas del preregistro, sin recalibrar).
+[00:00:25 +   38.7s] 
+[00:00:25 +   38.7s]   k = 4
+[00:00:25 +   38.7s]    V13   C3  sep +1.89 [+1.89,+1.89]  lift_q4 +0.146  solap_A 0.88  divisiones 22  celdas 52  muertes 8  Rtot -69
+[00:00:25 +   38.7s]    V13   C3C sep -0.50  lift_q4 -0.043  celdas 90   (control de canal falso)
+[00:00:25 +   38.7s]    REL   C3  sep +1.78 [+1.78,+1.78]  lift_q4 +0.060  solap_A 0.25  divisiones 22  celdas 52  muertes 19  Rtot -92
+[00:00:25 +   38.7s]    REL   C3C sep +0.34  lift_q4 +0.027  celdas 63   (control de canal falso)
+[00:00:25 +   38.7s]    RELD  C3  sep +1.79 [+1.79,+1.79]  lift_q4 +0.251  solap_A 1.00  divisiones 8  celdas 38  muertes 17  Rtot -42
+[00:00:25 +   38.7s]    RELD  C3C sep -0.34  lift_q4 +0.024  celdas 42   (control de canal falso)
+[00:00:25 +   38.7s]    AZAR  C3  sep +2.25 [+2.25,+2.25]  lift_q4 +0.178  solap_A 1.25  divisiones 17  celdas 47  muertes 21  Rtot -81
+[00:00:25 +   38.7s]    AZAR  C3C sep -0.08  lift_q4 -0.005  celdas 45   (control de canal falso)
+[00:00:25 +   38.7s]    SLOT  C3  sep +1.95 [+1.95,+1.95]  lift_q4 +0.329  solap_A 0.38  divisiones 35  celdas 65  muertes 14  Rtot -72
+[00:00:25 +   38.7s]    SLOT  C3C sep -0.17  lift_q4 +0.001  celdas 54   (control de canal falso)
+[00:00:25 +   38.7s]    P1 celdas<= 0.85xV13 en 0/1 NO | P2 lift med 0.060 (>=0.18) y >V13 en 0/1 - | P3 sep med 1.78 (>=2.2) y C3-C3C>=1 en 1/1 NO | canal falso OK
+[00:00:25 +   38.7s]    R3 REL>AZAR en 0/1 (umbral 1) | R4 SLOT>REL en 1/1 (umbral 1) | AZAR cumple P2: no
+[00:00:25 +   38.7s] 
+[00:00:25 +   38.7s]   k = 5
+[00:00:25 +   38.7s]    V13   C3  sep +1.83 [+1.83,+1.83]  lift_q4 +0.190  solap_A 0.88  divisiones 33  celdas 63  muertes 18  Rtot -103
+[00:00:25 +   38.7s]    V13   C3C sep -0.35  lift_q4 +0.029  celdas 90   (control de canal falso)
+[00:00:25 +   38.7s]    REL   C3  sep +2.61 [+2.61,+2.61]  lift_q4 +0.326  solap_A 0.00  divisiones 12  celdas 42  muertes 11  Rtot +12
+[00:00:25 +   38.7s]    REL   C3C sep -0.25  lift_q4 -0.018  celdas 52   (control de canal falso)
+[00:00:25 +   38.7s]    RELD  C3  sep +3.69 [+3.69,+3.69]  lift_q4 +0.353  solap_A 0.00  divisiones 3  celdas 33  muertes 14  Rtot +93
+[00:00:25 +   38.7s]    RELD  C3C sep -0.29  lift_q4 -0.003  celdas 45   (control de canal falso)
+[00:00:25 +   38.7s]    AZAR  C3  sep +1.53 [+1.53,+1.53]  lift_q4 +0.147  solap_A 1.38  divisiones 17  celdas 47  muertes 8  Rtot -71
+[00:00:25 +   38.7s]    AZAR  C3C sep +0.15  lift_q4 +0.102  celdas 49   (control de canal falso)
+[00:00:25 +   38.7s]    SLOT  C3  sep +1.59 [+1.59,+1.59]  lift_q4 +0.187  solap_A 1.75  divisiones 23  celdas 53  muertes 13  Rtot -67
+[00:00:25 +   38.7s]    SLOT  C3C sep +0.17  lift_q4 +0.002  celdas 56   (control de canal falso)
+[00:00:25 +   38.7s]    P1 celdas<= 0.75xV13 en 1/1 OK | P2 lift med 0.326 (>=0.18) y >V13 en 1/1 OK | P3 sep med 2.61 (>=2.2) y C3-C3C>=1 en 1/1 OK | canal falso OK
+[00:00:25 +   38.7s]    R3 REL>AZAR en 1/1 (umbral 1) | R4 SLOT>REL en 0/1 (umbral 1) | AZAR cumple P2: no
+[00:00:25 +   38.7s] 
+[00:00:25 +   38.7s] P4 (inercia a k=1, REL == V13 semilla a semilla): 1/1 OK
+[00:00:25 +   38.7s] 
+[00:00:25 +   38.7s] VEREDICTO HIJA_DISPERSA: HIJA DISPERSA POR RELEVANCIA: P1-P3 y REL>AZAR
+[00:00:25 +   38.7s] (HUMO: 1 semilla y T=20000 — los umbrales pareados NO valen; esto solo prueba que el montaje corre.)
+[00:00:25 +   38.7s] datos -> hija_dispersa_humo_s61-61_20260917_235946.json  sha256_16 = 5bf66496f11a6c2e
