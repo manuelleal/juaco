@@ -1964,3 +1964,95 @@ de validez de N3d. Con ese mundo, **N6 pasa a ser la predicción principal** y e
   `eta_s = 0.15, clip_s = 10` explícitos, `mem_vistas = 60`. Consecuencia: **V2a de v15c (G1 0.500 / G2 0.513) y de v15d (G1/G2
   FALSE a las 08:34) midieron la vía rápida sola, no al candidato**; el veredicto "no entra al tronco por generalización" está
   sin medir. La corrección es una línea en la entrada de `INSTRUMENTOS` (mis copias la llevan explícita) y repetir V2a.
+
+
+### A16 (Creador A). **v15e — la tabla de pares REESCRIBIBLE sin doble cuenta: arregla E1 y E2 y pierde XOR** — 18-sep, 09:35
+
+**Misión primero:** un organismo que generaliza y **se desdice cuando el mundo cambia**. v15d no se desdecía (E2 0/20) ni consolidaba
+(E1 0/20). v15e ataca exactamente eso; el humo dice que lo arregla y que el precio, tal como lo diseñé, es el prior de pares en XOR.
+
+**1. Diagnóstico mecánico de v15d (líneas de `organismo_v15d.py` f2f0b06e31877e96, modo `suma`).** L116 `_ws = lineal + tabla`;
+L132 `_ds = R − _ws` (la lineal aprende del error de la SUMA, calculado ANTES de que la tabla escriba); L142 `_MMv[c,d] = R` (la tabla
+escribe R de un golpe en la misma mordida); L147–149 la lectura lineal del patrón se mueve 0.45·_ds. **Primera mordida de un patrón
+nuevo → la vía lenta lee 1.45·R** (B: −4.35; medido: E2I-misma W_C mediana **−4.38**, y en el humo E1 −4.22 / −3.72 con la lineal
+congelada en −1.22 / −0.72). Con −4.35 en la boca (L118) `pb` cae 220 veces (1.1e−4 contra 0.025 a −3): **no hay más mordidas**, el
+exceso no se corrige nunca (W_B ≈ −3: 0/20 con conducta 17/20), y la rápida **no recibe MORDIDAS** — no "error": su error `dlt = R − _wf`
+(L130) nunca descontó la tabla; con 1–2 mordidas de B queda en Wn 0.27–0.52, sin consolidar y sin abrir la puerta. En E2, B (ya comida)
+sigue leyéndose −4.35 y nadie la muerde (come B Q4: 0); para A la tabla (EMA 0.3) y la lineal (error compartido, −4 de golpe) bajan
+**a la vez** y la suma se pasa de −3 y se congela. **La reescritura sola no lo arregla** (`mem_alfa = 1.0` sobre v15d: los mismos
+números exactos en el humo): el exceso nace en la PRIMERA escritura.
+
+**2. Mecanismo v15e (decidido antes de medir; `PREREGISTRO_v15e.md` §3).** Perilla `memoria_pares = None | 'suma'`, `mem_alfa = 1.0`.
+**D1** la rápida aprende de SU error (línea de v14.1 sin tocar). **D2** la lineal aprende de SU error `R − lineal(P)` (apagada: la misma
+expresión que `R − _ws`, bit a bit). **D3** las 15 celdas escriben **después** del paso de la lineal **el residuo `R − lineal_después(P)`**,
+por **sobrescritura**: la suma lee R exacto tras UNA mordida y **se desdice en UNA mordida**; abstención 0.0 en casillas no vistas. **D4**
+ganadora por menor error propio, desempate al azar con el rng del organismo (sólo consume rng si hay empate y la perilla está ON).
+135 números. Sin `ruta` (v15d mostró que enrutar ≡ sustituir). `None` ≡ v14.1 bit a bit sin consumir rng.
+
+**3. Instrumentos (por anclas; congelados sólo leídos; `manifiesto.py --check` 16/16; nada de v15c/v15d sobrescrito).**
+`construye_v15e.py` 05eba91594f4c2b2 → `organismo_v15e.py` **5930c5ed2df1be1d** (← v14.1 feefc88b1fd8d434) · `organismo_v15e_on.py`
+c576d0de467d7cca · `organismo_v15ge.py` e902fb3503655a47 / `_on` 7d638015ddce4f1c (← v14g 1f1318480cd34cde) · `bateria_v15e.py`
+d5039d16ce21920d (← bateria_v14 72216f5415de0c86, sobre `_on`) · `bateria_generaliza_v15e.py` b01142827847c7d7 (← 9cf72581ebae7dea;
+la entrada nueva la compara el constructor **campo a campo** con la del tronco, regla 14) · `identidad_v15e.py` 058e15147f05ef27 ·
+`corre_v15e.py` 18a588dcba5cf547 (identidad → V1 → V2a → V2b 141–160, subprocesos secuenciales; `--humo` de un proceso) ·
+`diagnostico_xor_v15e.py` · `PREREGISTRO_v15e.md`. **Identidad 32/32** (I1 24/24 ≡ v14.1 · I2 rng no consumido a T = 120 000, 2/2 ·
+I3 6/6 ≡ v14g con los kwargs exactos del tronco). Dos notas de instrumento: (a) **el examen de v15c/v15d no escribió su JSON** porque la
+batería copiada hace `h16(AQUI/organismo_v11.py)` con `AQUI = creacion_A/` (no existe → excepción tras el veredicto; no es que la
+congelada no escriba al fallar); `bateria_v15e` lo lee de `organismo/`. (b) **ERR-41 (propuesto por A, el número que dejó libre el
+coordinador):** el V2b de v15c/v15d corrió el mundo de regla con `eta_s=0.15, puerta=3` solamente (el gemelo dejaba `clip_s 3.0,
+mask_rel 0, puerta_pat 0`: configuración tipo v13, no v14.1); su ON/OFF pareado vale, pero `px0 ≥ apagada` y V4 se leyeron contra esa
+base. `corre_v15e.py` pasa los kwargs exactos del tronco (apagada ≡ v14.1). No cambia umbrales ni el veredicto de v15d (cayó por V1).
+
+**4. Humo (`datos/v15e_humo_20260918_091900`, json ed8c1f958d491d9b; un proceso, T ≤ 200 000, semillas 101, 102, 141; NO es la serie).**
+
+| escenario (T = 100 000) | organismo | W_A | W_B | lineal B | rápida B (Wp, Wn) | B familiar | mordidas B por trimestre | letra de la batería |
+|---|---|---|---|---|---|---|---|---|
+| E1 s101 / s102 | v14.1 (off) | +1.00 | −2.96 / −2.98 | −3.00 | (0, 2.96) / (0, 2.98) | sí | [27,11,8,1] / [27,9,7,8] | pasa |
+| E1 s101 / s102 | v15d `suma` α 0.3 **y** α 1.0 | +1.00 | **−4.22 / −3.72** | −1.22 / −0.72 | (0, **0.27**) / (0, 0.52) | **no** | **[1,0,0,0] / [1,0,1,0]** | **W_B ≈ −3 NO** |
+| E1 s101 / s102 | **v15e** | +1.00 | **−2.97 / −2.99** | −3.00 | (0, **2.97**) / (0, 2.99) | **sí** | **[15,20,5,9] / [30,8,9,11]** | **pasa** |
+| E2 s101 / s102 | v14.1 (off) | −2.95 / −2.90 | +1.00 | +1.00 | (1.0, 0) | sí | […, 96, **81**] / […, 84, **90**] | pasa |
+| E2 s101 / s102 | v15d `suma` α 0.3 (α 1.0) | **−3.75 (−3.99)** | **−4.92 (−4.55)** | −1.93 (−1.55) | (0, 0.27) | no | [1,0,0,**0**] | **NO / NO / NO** |
+| E2 s101 / s102 | **v15e** | **−2.87 / −2.92** | **+1.00 / +1.00** | +1.00 | (1.0, 0) | sí | [15,20,82,**95**] / [30,8,112,**81**] | **pasa las tres** |
+
+**E1 y E2 quedan arreglados:** la lenta lee −3.00 exacto (lineal −3.00 + residuo −0.00), la rápida recibe 49–58 mordidas (v14.1 47–51) y
+consolida; tras el cambio de regla la lenta se desdice y B se come 81–95 veces en Q4; α = 1.0 sobre v15d no cambia un decimal.
+
+| mundo de regla s141 (kwargs del tronco, T = 200 000) | ON registro / ESTRICTA | ba | ganadora en la sonda | OFF (= v14.1) | celdas ON/OFF | splits ON/OFF |
+|---|---|---|---|---|---|---|
+| **xor01** | **0.250 / 0.250** | 0.653 | **(2,4)** | 0.375 | 70 / 69 | 40 / 39 |
+| px0 | **1.000 / 1.000** | 0.998 | (0,4) | 1.000 | 57 / 51 | 27 / 21 |
+| azar | 0.600 | 0.582 | (2,5) | 0.800 | 66 / 62 | 36 / 32 |
+
+**5. El hallazgo (refutación (c) de mi §6, escrita antes):** xor01 ON 0.250 < OFF 0.375. `diagnostico_xor_v15e.py 141 xor01`
+(reproduce la sonda: T = 100 000, `fase2_en = 99 999`): en la sonda **gana (2,4), no (0,1)**, cobertura 4/4; en los 12 test la lectura
+= lineal(P_nuevo) + residuo del ÚLTIMO patrón de entrenamiento con esa combinación; la lineal no puede con XOR (`Wps−Wns` = [0.31, 0.84,
+0.54, −1.60, −1.04, 0.25]) → residuos de ±1.6 y 9/12 signos mal. **Causa:** con residuos, el error propio de la celda buena (0,1) deja
+de ser 0 y pasa a ser `lineal(P_último) − lineal(P_nuevo)` — la deriva de una lineal que oscila sobre XOR — del mismo orden que el
+error de confusión de las celdas malas: **el prior de pares pierde la identificabilidad que tenía con R crudo** (M3/v15c/v15d: (0,1)
+19–20/20). Donde la lineal ajusta (A/B, px0) el residuo es ≈ 0 y la ganadora da igual: por eso E1, E2 y px0 salen bien y XOR no.
+**Enunciado:** *una tabla que guarda lo que a la lineal le falta hereda el fracaso de la lineal: es exacta donde la lineal ya podía y
+ruido donde hacía falta la tabla.* Los criterios de §5 no se tocan; la serie decide; sin modos intermedios sobre estos datos (§7).
+
+**6. Tres líneas honestas.** *Predigo* (dicho tras el humo, no preregistrado): V1 8/8 y V2a G1 1.000 / G2 ≥ 0.97 pasan; **V2b xor01
+cae** (mediana 0.35–0.50) y por §7 **v15e no entra**; V4 por abajo en xor01 (declarado). *Me tumba* de lo bueno: que E1 "W_B ≈ −3"
+o la reversión de E2 den < 20/20 en 101–120 (una lenta exacta a la primera que mate de hambre a la rápida: sería un canje real de la
+arquitectura, a reportar). *No pude:* correr la serie (regla 3); medir V3 `n*`; probar con más de 3 semillas si el 0.25 es la mediana
+(el mecanismo dice que sí).
+
+**Propuesta para el coordinador (formato fijo) — v15f, preregistro NUEVO, no construido, no medido.**
+· **Hipótesis:** la exactitud a la primera y la reversión en una mordida (lo que v15e arregló) no dependen del residuo sino de que la
+  tabla escriba **después** de la lineal y **sobrescriba**; la identificabilidad de M3 depende de que la casilla guarde **R crudo**.
+· **Mecanismo mínimo y memoria:** tabla de 15 pares × 4 casillas con **R crudo** y sobrescritura; **relevo** en la lectura de la lenta:
+  la tabla si la casilla ganadora se vio, si no la lineal (abstención hacia la lineal, no hacia 0); **cada vía con su propio error**
+  (rápida `R − _wf`, lineal `R − lineal`, casilla ← R); ganadora por menor error de la casilla sola (el criterio de M3); mismos 135
+  números. Es un segundo relevo dentro de la vía lenta, simétrico a la puerta de v13 (exacto si lo conoce, regla si no).
+· **Instrumento:** `construye_v15f.py` (dos anclas cambian respecto de v15e: la lectura `_lenta` y la escritura de la casilla); las
+  mismas baterías copiadas y el mismo runner (kwargs del tronco); identidad ≡ v14.1 con la perilla apagada.
+· **Predicción numérica:** E1/E2 como v15e (exacto tras una mordida; se desdice en una); V2a G1 1.000 / G2 ≥ 0.97 (px0: casilla vista →
+  R correcto si la ganadora contiene el píxel 0; no vista → la lineal de v14.1); V2b xor01 estricta **0.80–0.88** (v15c 0.812, v15d
+  0.875, gana (0,1) ≥ 18/20), px0 ≥ OFF, azar 0.50 ± 0.05; V4 por abajo en xor01.
+· **Control que puede fallar:** `azar` fuera de [0.35, 0.65] (fuga); px0 < OFF si la ganadora no contiene el píxel 0 en ≥ 3/20 semillas
+  y la casilla vista tapa a la lineal (el precio del relevo frente a la suma; v15c-fixed dio 1.000 en 101–120 y 0.900 en 121–140).
+· **Mini-prueba con números:** la misma del humo de v15e (E1/E2 s101–102 pareados con v14.1 y v15d; mundo de regla s141 ON/OFF): se
+  espera E1 −3.00 / E2 +1.00 y **xor01 s141 ≥ 0.75 con ganadora (0,1)** (v15e: 0.250 con (2,4)). Lo construyo en cuanto el coordinador
+  lo pida; no antes, por la cláusula.
