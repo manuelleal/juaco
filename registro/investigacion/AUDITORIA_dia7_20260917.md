@@ -92,3 +92,30 @@ l. 3604) — no encontré declaraciones infladas. Ninguna de las cinco identidad
 origen) falló ni se relajó; ninguna "refutación" del día resultó ser, en la lectura de código, un fallo de
 instrumento disfrazado de fallo de hipótesis — salvo el matiz de K0 (hallazgo 1), que es al revés: un fallo de
 instrumento real que el registro descarta con el diagnóstico equivocado.
+
+## Verificación adicional (00:30): puerta y BUG-01
+
+Encargo del coordinador sobre `PUENTE_creacion.md` §"Creador C". Sólo lectura, sin correr ni editar.
+
+**(a) Qué es BUG-01 y cómo cerró.** `REGISTRO_etapas_1_2.md:469-483,818`: bajo refuerzo contradictorio sobre una
+celda compartida, `Wp` y `Wn` suben juntos hasta el tope **por celda** (3.0; "9.0" es la suma sobre las 3 celdas del
+código, no 9.0/celda — `REGISTRO_etapas_1_2.md:470`) y `Wp-Wn` se anula exacto, congelando esa celda. Se cerró con
+drenaje de la parte común (`lam`: decae `min(Wp,Wn)` tras cada mordida); "el mecanismo está confirmado (techo
+despejado...)" (l.818). El drenaje sigue vivo en el tronco: `organismo_v13.py:88`.
+
+**(b) ¿Cierto que desvía la puerta?** **Sí, confirmado en código.** `organismo_v13.py:34` (`puerta=3`) cuenta, de
+las 3 celdas del código, cuántas tienen `|Wp-Wn|>0.2` (el mismo umbral que v11 usa para "consolidado", l.9). Una
+celda en `Wp=Wn` (tope o no) da `|Wp-Wn|=0` → no cuenta; si las 3 están así, familiar=0<3 → la boca lee la vía
+lenta. Real, y no encontré que el preregistro de v13 lo discutiera como riesgo.
+
+**(c) ¿Afecta alguna declaración?** Para Etapa 3/examen v3' (mundo AB, `organismo_v13.py` puro): sin consecuencia
+medida — ver (d). Para el mundo de regla (XOR/`bateria_generaliza`, `organismo_v13g.py`/`v13q.py`, mismo campo
+heredado en `organismo_v13g.py:68,131,169`): se calcula pero **ningún runner lo imprime ni lo guarda**
+(`corre_xor_3d.py`, `organismo/bateria_generaliza.py`: cero referencias a `n_techo`) — la cifra que cita C ahí no es
+verificable en ningún artefacto existente; plausible, no confirmada por mí.
+
+**(d) Número medible.** `datos/examen_v13_20260917_165859.log` (criterio v3', semillas 101-120, la batería de
+congelación oficial): **`techo=0/20` en las 6 líneas/escenarios** — 0 celdas tocan el tope en 120 corridas del
+mundo AB (`bateria_v13.py:103` lo calcula e imprime). `datos/v13_dos_vias_20260917_160541.json` (la corrida que
+decidió v13) **no guarda `n_techo`** pese a que `run()` lo devuelve: se descarta al serializar. La cifra de C para
+el mundo de regla queda sin verificar por falta de dato guardado, no refutada.

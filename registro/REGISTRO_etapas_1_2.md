@@ -3705,3 +3705,18 @@ llega 0.875; 61–80 válidas 16/20, R1 0.750, pareado 16/16, R2 0.700, llega 0.
 (control SINCOMIDA con n efectivo bajo) debilita también las dos series anteriores del mapa (1–20 y 21–40), no sólo la de
 41–60 — queda anotado aquí: las dos "confirmaciones" previas de C3 no cuentan como replicación independiente de ese
 control; la comparación fuerte del mapa es MAPA contra SINMAPA/CONGELADA e INVERTIDO, no contra SINCOMIDA; y las "enmiendas de subconjunto" pasan a regla estándar (`EQUIPO.md`, regla 10).
+
+
+### ERR-25 (18 sep, 00:35; hallazgo colateral del creador C, verificado por el auditor en sólo lectura): **la puerta de familiaridad no distingue "no aprendido" de "cancelado"**
+
+`organismo_v13.py:34`: la puerta manda a la vía lenta cualquier celda con `|Wp − Wn| ≤ 0.2`, sea porque nunca aprendió o
+porque los dos canales subieron juntos y se cancelaron (el mecanismo de BUG-01, cerrado desde v7e/v8 por el drenaje de la
+parte común, `organismo_v13.py:88`, que sigue activo). En el examen de congelación (`examen_v13_20260917_165859`, semillas
+101–120) `n_techo = 0` en los seis escenarios, así que el caso literal no se disparó ahí; pero el riesgo **no se discutió
+al diseñar v13** y es la misma confusión que el creador B midió por otro lado (B4: el 100 % de los estímulos que la puerta
+declara desconocidos habían sido mordidos ≥ 5 veces — la puerta pregunta "¿tengo su valor sin repartir?" y no "¿lo he
+visto?"). Consecuencia medida: el canje puerta contra capacidad (v13 28/35 contra v11 43/50). Propuesta B-2 (puerta por
+evidencia del código exacto) lo ataca desacoplando las dos preguntas; se corre esta madrugada. **Regla derivada:** los
+runners del mundo de regla y las baterías deben **guardar `n_techo`** en el JSON (hoy se calcula y no se imprime ni se
+guarda: `corre_xor_3d.py`, `bateria_generaliza.py`), y todo preregistro que use la puerta declara qué pasa con las celdas
+canceladas. Verificación: `registro/investigacion/AUDITORIA_dia7_20260917.md`, sección "Verificación adicional".
