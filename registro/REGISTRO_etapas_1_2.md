@@ -4725,3 +4725,29 @@ del coordinador y puede tumbar la del diseñador: sin sed la superstición debe 
 8 recibe el primer mundo con más de una dimensión de valor; **nivel 9 sube a 30 %** (allostasis mínima medida; el organismo puede
 equivocarse de objetivo); nivel 4 recibe el negativo del alias de código; el XOR necesidad × estímulo no toca el nivel 3 (se resuelve
 indexando la memoria, no leyendo mejor los píxeles). Réplica 201–220 con la enmienda 2 → en cola tras v15c.
+
+
+### Candidato v15c — la memoria de un golpe por combinación en la vía lenta del TRONCO (18 sep 08:06): **NO ENTRA AL TRONCO — sustituye la lectura lineal y rompe la generalización lineal del tronco (batería de generalización con la memoria ON: G1 px0 0.500, G2 0.513; se exigían ≥ 0.80 / ≥ 0.85); en el mundo de regla sí hace lo suyo (xor01 0.812 estricta contra 0.438 sin memoria) → queda como ÓRGANO DEL MUNDO DE REGLA (cláusula §5), como A avisó antes de correr**
+
+Preregistro `experimentos/creacion_A/PREREGISTRO_v15c.md` (d6904b21e19905e3); instrumentos por anclas desde v14.1 `organismo_v15c` (0d2ae9c54a3a8c53;
+perilla `memoria_pares`; identidad 32/32 en la copia principal: 24/24 ≡ v14.1, el rng no se consume con la perilla apagada, 6/6 mundo
+de regla ≡ v14g), `organismo_v15c_on`, `organismo_v15gc`, `bateria_v15c`, `bateria_generaliza_v15c`; datos `v15c_s121-140_20260918_075817`
+(91091a293dd66192) con `regresion_generaliza_organismo_v15c_on_20260918_080307` (a634d0a770ff6401), 8 min.
+
+| medida | con memoria (ON) | sin memoria (v14.1) | umbral |
+|---|---|---|---|
+| V2a generalización del tronco (`bateria_generaliza`, 101–120): G1 px0 / G2 | **0.500 / 0.513** (px0 > azar 4/20) | 1.000 / 0.967 | ≥ 0.80 / ≥ 0.85 → **NO** |
+| V2b mundo de regla (121–140): xor01 registro / estricta | **0.812 / 0.812** (gana (0,1) 20/20) | 0.438 / 0.438 | ≥ 0.75 → sí |
+| V2b px0 | 0.900 | 0.900 | = 1.000 → NO (también sin memoria: umbral mal puesto para v15gc) |
+| V2b azar | 0.500 | 0.500 | en banda |
+| V4 celdas / divisiones | 62 | 68 | ±10 % → OK |
+| V1 examen v3' (corrido con la perilla apagada por el runner: sólo re-verifica v14.1) | — | 8/8 | no mide al candidato (defecto del runner, se anota) |
+
+**Lectura:** la memoria por pares responde con la casilla del par ganador y **abandona la lectura lineal**: en el mundo del tronco, donde
+las reglas son de un píxel, eso destruye la generalización (0.500 = azar). Es exactamente lo que A avisó en el humo (px0 0.90 → 0.80 con
+una semilla) y por la cláusula del preregistro **no entra al tronco**. El órgano vale en el mundo de regla (xor01 0.81 estricta en el
+tronco extendido; 1.000 en el instrumento de la sala). **La variante honesta es OTRO mecanismo, para un preregistro nuevo:** que la vía
+lenta SUME lineal + memoria, o enrute por cuál tiene menos error (con abstención de la memoria en combinaciones no vistas) — así el
+tronco conserva la lectura lineal donde basta y usa la tabla de pares donde no. También se anota: el runner corrió V1 con la perilla
+apagada (no mide al candidato) y el umbral px0 = 1.000 de V2b no lo cumple ni v14.1 en ese mundo (0.900): dos defectos de runner/umbral
+que no cambian el veredicto (V2a decide). v14.1 sigue de tronco.

@@ -87,3 +87,7 @@ Composición de los tres (04:47): T1 8/8 en 101–120 pero 7/8 en la réplica 12
 T3 0.24×. Por la cláusula y la decisión del director ("los tres si pasan; si no, los dos"), **v14 lleva los dos primeros**; la
 sorpresa del mundo en la boca (dosis 5) es **candidata a v15** con su composición ya medida (T2/T3 OK). Congelación de v14 en curso:
 tercer examen en rango virgen 161–180 + generalización 141–160, gemelo compilado, manifiesto, tag.
+
+
+## Candidato v15c (18 sep 08:06): NO entra — la memoria por pares sustituye la lectura lineal y rompe la generalización del tronco (G1 0.500)
+Queda como órgano del mundo de regla (xor01 0.81 estricta). Variante para preregistro nuevo: sumar o enrutar lineal + memoria por error propio.
