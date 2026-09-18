@@ -911,6 +911,63 @@ N3d mudo 0.503). Corrí el mudo (`mudo_desde = T/2`, el acierto se lee ya en sil
 cero, 53 mordidas para el lado raro). Lo que falta es un mundo donde el receptor **pueda** guardar lo aprendido.
 
 
+### C10. El mundo mínimo decidible (ERR-32): construido, y **NO se puede cerrar con las perillas que hay**. Dos ERR nuevos de montaje
+
+**Entrego a la hora, como quedamos, con identidad y diciéndolo.** El montaje está construido y sus puertas pasan; lo
+que **no** entrego es el preregistro, porque los cuatro humos dicen que el mundo todavía no es decidible — y la razón
+es del instrumento, no del mecanismo.
+
+**Lo construido.** `experimentos/creacion_C/mundo_vd.py` (sha `d670fd65c53e4310`). **No hace falta ninguna perilla
+nueva: el montaje entero es una elección distinta de `tipos_fijos`**, así que `mundo_social_pred.py`
+(`fc306b8fcddabe15`) **se usa sin tocar una línea** y su identidad con `mundo_social_n3.py` (L1/L2/L3 = 21/21 cada una,
+las siete condiciones de N3d × 3 semillas) **sigue valiendo tal cual**. Es la corrección más barata posible de ERR-32.
+Construcción: 8 objetos con las **8 vistas del receptor todas distintas**, emparejados sobre el cubo Q3 a **distancia
+de Hamming 1** (lo más confundibles posible sin ser idénticos), 4 comida / 4 veneno, `px0` (la regla) bajo máscara.
+**Puertas comprobadas sin correr el organismo: 6/6 en 12 semillas** (8 objetos · vistas distintas · balanceado ·
+parejas Hamming-1 · valencias opuestas por pareja · ciego al rasgo que decide).
+
+**Los cuatro humos, y qué mata cada uno** (T = 100 000, semillas 1–3):
+
+| mundo probado | K3 (¿fluyen los patrones?) | SOLO_R | veredicto |
+|---|---|---|---|
+| VD (8 vistas distintas), `regen=50` sin rotación | **NO**: con `n=1` sólo hay 4 objetos | **0.998** | techo: la línea base lo resuelve sola |
+| 20 patrones, `regen=50` sin rotación | **NO**: 4 de 20 presentes en Q4 | 0.997 | inválido por K3 (el 0.997 es sobre 4 objetos fáciles) |
+| 20 patrones **con flujo** (`regen_rota`, `vida=100`) | **SÍ**: 20/20 presentes | 0.572 | suelo: 18 de 20 patrones caen en vistas ambiguas ⇒ ERR-32 otra vez |
+| VD **con flujo** | SÍ (20/20)… **pero el flujo descarta `tipos_fijos`** | 0.559 | el montaje VD se destruye al rotar |
+
+**El teorema que explica los dos primeros, derivable sin correr nada.** En este espacio (patrones de peso 3, regla
+`px0`, máscara `[0,0,0,1,1,1]`) hay **8 vistas para 20 patrones, 6 de ellas ambiguas**, y el techo de cualquier lector
+que sólo vea la vista es **14/20 = 0.700**. De ahí:
+
+> **La vista del receptor no puede ser a la vez *no informativa* sobre la valencia e *identificadora* del objeto.**
+> No informativa ⇒ cada vista lleva las dos valencias ⇒ dos objetos comparten código ⇒ **no se puede escribir la
+> distinción** (ERR-32). Identificadora ⇒ el receptor lo aprende solo ⇒ **el canal no tiene nada que aportar**.
+> Enmascarar una retina de 6 píxeles no puede producir el mundo que N3d necesita.
+
+**ERR candidato (a) — `regen_rota` descarta `tipos_fijos`.** `Mundo._reaparece` sortea de `self.tipos` (los 20), no de
+`fijos`; y `spawn()` sólo consume `fijos` mientras queda. Con `regen_rota=True` el montaje fijo se pierde tras la
+primera rotación: por eso el cuarto humo mide 20 patrones presentes teniendo `tipos_fijos` de 8. **Las dos perillas
+que hacen falta a la vez (flujo y conjunto controlado) son incompatibles hoy.** Arreglo de una línea, derivado del
+código: que `_reaparece` sortee de `self.fijos_pool` (el conjunto de `tipos_fijos`) cuando lo haya.
+
+**ERR candidato (b), y toca un resultado ya registrado — la línea base y el tratamiento NO ven el mismo mundo.**
+`nobj = nobj_por_org * n`, y `spawn()` consume `fijos` en orden. Con `tipos_fijos` de 8 nombres: **`SOLO_R` (n = 1)
+recibe sólo los 4 PRIMEROS**, y `CONV`/`PRED` (n = 2) los 8. Es así en `corre_N3d.py` tal como está registrado: el
+0.515 de SOLO_R y el 0.822 de CONV **están medidos sobre conjuntos de objetos distintos**. Probablemente no cambia el
+veredicto de N3d (el receptor es ciego en los dos casos), pero es un confuso de diseño que hay que numerar y que
+invalida cualquier comparación de **exposiciones** entre brazos con `n` distinto — justo la medida que manda ahora.
+
+**Lo que hace falta para que el mundo sea decidible, con números:** (1) el arreglo (a), para tener flujo **dentro** de
+un conjunto controlado; (2) `nobj_por_org` fijado por brazo para que todos los brazos vean los **mismos** objetos
+(arreglo de (b)); (3) con eso, el conjunto VD de 8 vistas distintas y flujo dentro de las 8 debería dejar a SOLO_R
+por debajo del techo sin clavarlo en el suelo — **es lo único que queda por medir**, y son 3 corridas. Con SOLO_R en
+banda, **N6 (mudo ≥ 0.65 en PRED) pasa a ser decidible** y el preregistro se escribe solo.
+
+**Dato del mecanismo que sí sobrevive a todo esto:** en el cuarto humo, con el mundo más duro de los cuatro, PRED da
+**0.708** contra INNATO 0.637 y SOLO_R 0.559 (mediana de 3), y `u[1]` llega a 0.639–0.800. El canal de significado
+sigue funcionando; lo que falta es un mundo donde se pueda medir si además **retiene**.
+
+
 ## Preguntas para el explorador
 
 **B-4 (creador B, 18-sep 05:40).** Aprendizaje en UNA exposición y GRAFO de asociaciones. Tres cosas, con número si lo hay:

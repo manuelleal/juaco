@@ -4491,3 +4491,24 @@ falta en el mundo original es información suficiente para seleccionar el rasgo 
 más ejemplos es precisamente lo que el tercer bloque tiene que aportar (la sala de agentes trabaja en eso); (3) el mundo de
 regla de 20 patrones con 8 de entrenamiento es un instrumento al límite de la identificabilidad: se anota como propiedad del
 instrumento, no se cambia el criterio (ERR-33 candidato: mundo con poca información para el rasgo — lo decide el auditor).
+
+
+### Creador C (18 sep 06:30): el mundo social decidible NO existe todavía — teorema del instrumento y dos ERR candidatos en `mundo_social_n3` (ERR-33, ERR-34; verificación del auditor en curso)
+
+Construido `experimentos/creacion_C/mundo_vd.py` (d670fd65c53e4310): 8 objetos con las 8 vistas del receptor distintas, parejas a
+distancia de Hamming 1, 4 comida / 4 veneno; sin perilla nueva (es otra elección de `tipos_fijos` sobre `mundo_social_pred`, cuya
+identidad L1/L2/L3 sigue 21/21 cada una). Humos (T = 100 000, semillas 1–3): VD sin rotación → SOLO_R 0.998 (techo: la base lo
+resuelve sola); 20 patrones sin rotación → K3 falla (4 de 20 presentes); 20 patrones con flujo → SOLO_R 0.572 (suelo: 18 de 20 en
+vistas ambiguas, ERR-32 otra vez); VD con flujo → el flujo descarta `tipos_fijos` y el montaje se destruye. **Teorema (derivable):**
+con peso 3, regla `px0` y máscara [0,0,0,1,1,1] hay 8 vistas para 20 patrones, 6 ambiguas; el techo de un lector que sólo ve la
+vista es 14/20 = 0.700: **la vista del receptor no puede ser a la vez no informativa sobre la valencia e identificadora del objeto**
+— no informativa ⇒ código compartido ⇒ nada que escribir (ERR-32); identificadora ⇒ lo aprende solo ⇒ el canal no aporta.
+Enmascarar una retina de 6 píxeles no puede producir el mundo que N3d necesita. En el mundo más duro, PRED 0.708 contra INNATO
+0.637 y SOLO_R 0.559 (el canal de significado sigue funcionando; falta el mundo donde medir si retiene).
+**ERR-33 (candidato, instrumento):** `Mundo._reaparece` sortea de `self.tipos` (los 20) y no de `fijos` → `regen_rota=True` descarta
+`tipos_fijos`: flujo y conjunto controlado son incompatibles (arreglo de una línea, en copia). **ERR-34 (candidato, toca un resultado
+registrado):** `nobj = nobj_por_org · n` y `spawn()` consume `fijos` en orden → con 8 nombres, SOLO_R (n = 1) recibe sólo los 4 primeros
+y CONV/PRED (n = 2) los 8: **el 0.515 de SOLO_R y el 0.822 de CONV de N3d están medidos sobre conjuntos de objetos distintos**;
+probablemente no cambia el veredicto (el receptor es ciego en los dos) pero invalida comparaciones de exposiciones entre brazos con
+`n` distinto. Pasa al auditor. Aprobado a C: los dos arreglos como perillas en `mundo_social_pred` (apagadas ≡ actual), tres
+humos con SOLO_R en banda y, sólo entonces, el preregistro con el mudo como predicción principal.
