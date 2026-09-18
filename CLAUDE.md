@@ -187,7 +187,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   exposiciones) sin dañar el tronco (examen 8/8, G1 1.000); con rasgos propios XOR 0.50–0.63: el cuello es construir el rasgo
   conjuntivo (WTA lo abre 11/20). **Bloque 2/3 (A-6, 06:05): quitar la constante no desbloquea (0.500); con 8 patrones no hay
   información para seleccionar el rasgo (estadístico ideal 3/20); con 14 patrones la regla local llega a 1.000 en los nunca vistos
-  (200 exposiciones). Bloque 3/3: el mejor mecanismo de la sala de agentes (en curso).**
+  (200 exposiciones). **DECISIÓN DEL DIRECTOR 07:10 (ERR-35): la línea XOR se cierra declarando el mínimo de ejemplos con el
+  que generaliza — 14 sí (1.000), 11 no, 8 nadie puede (9 de 15 hipótesis empatadas); el bloque 3/3 se corre igual con el mejor
+  mecanismo de la sala y ntr = 14 de control (cruzar con 8 = prior declarado). Después, el mundo vivo (F).**
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;

@@ -4554,3 +4554,22 @@ registrado) y recalculó CONV sólo sobre los 4 objetos comunes: mediana 0.826 c
 el acierto compara bien (el receptor es ciego en los dos y el resultado se mantiene sobre los comunes); **las comparaciones de
 EXPOSICIONES entre brazos con n distinto quedan inválidas** hasta fijar `nobj_por_org` por brazo (perilla en `mundo_social_pred`, en
 curso por el creador C). Verificación: `AUDITORIA_madrugada18_20260918.md`, sección "mundo_social_n3 (ERR-33/34)".
+
+
+### ERR-35 — DECISIÓN DEL DIRECTOR (18 sep 2026, 07:10): **el criterio de parada de XOR se reformula después de ver datos (por eso lleva número): la línea XOR se cierra declarando el MÍNIMO de ejemplos con el que el organismo generaliza, no como fracaso**
+
+Motivo (medido, creador A, §A12–A13): con 8 patrones de entrenamiento, **9 de los 15 rasgos conjuntivos posibles ajustan los datos con
+residuo cero y sólo uno generaliza** — ningún aprendiz (local, con retropropagación o con gradiente exacto: 0.562 / 0.531 medidos) puede
+elegir entre nueve hipótesis empatadas salvo por un prior; con 14 patrones queda una sola. El criterio original (0.75 en xor01 con 8
+patrones) exigía adivinar una moneda; mantenerlo habría llevado a concluir "techo de la arquitectura" cuando el techo es del examen.
+Palabras del director: *"es esperar que mi hijo haga pan solo con haberme visto dos veces"*.
+
+**Criterio nuevo (firmado por el director):** la línea XOR se cierra declarando el mínimo número de ejemplos distintos con el que el
+organismo aprende XOR con reglas locales y lo generaliza a los nunca vistos. **Ya medido:** con **14** patrones de entrenamiento la
+regla local con competencia llega a **1.000** en los 6 nunca vistos con n* = **200** exposiciones (`xor_6_s101-120`); con 11, 0.625; con 8,
+0.500 (nadie puede). **Vocabulario:** *"XOR se aprende con reglas locales cuando el mundo da 14 ejemplos distintos; con 8 no lo aprende
+nadie, porque 9 de 15 hipótesis explican los datos igual de bien."* **El bloque 3/3 se corre igual**, con el mejor mecanismo de la sala
+de agentes que pase la criba (proponer `P0·P1` en ≥ 15/20), y con `ntr = 14` como control obligatorio: si cruza 0.75 con 8 patrones,
+se declara **prior estructural** (con el control `azar` ∈ [0.35, 0.65] y `px0` = 1.000), no "aprende XOR"; si sube con 8 y no con 14,
+es un ajuste al régimen y se dice. Nada más se recalibra. Siguiente peldaño tras el bloque 3: el mundo vivo (línea F), donde el
+significado por necesidad da ejemplos distintos sin pedirlos.
