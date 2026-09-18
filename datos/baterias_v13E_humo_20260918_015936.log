@@ -1,0 +1,35 @@
+[01:59:36 +    0.0s] ARRANQUE v13E ("la sorpresa del mundo en la boca", dE-TEST, sobre el tronco): NO REGRESION. semillas 101-102. HUMO (un proceso)
+[01:59:36 +    0.0s] sha preregistro 675a44784aa3bf88  script 99927c63015ec664  constructor_v13E 403ab420735db4c6  constructor_probar dd42e0170a014cbb  organismo_v13p 2dbed7ccac4dd736  organismo_v13pg 910f1f5fb64453bb  organismo_v13E ab8e3b0579edfc29  organismo_v13gE 882f32b4ae88b853  bateria_v13E bded47a8f1211df7  bateria_generaliza_E 9b213f803933a9e9  origen organismo_v13 (congelado) cc8b16b492d4d324  origen bateria_v13 (congelada) 1a027bcb37eb536e  origen bateria_generaliza (congelada) 46772f5a582872c8
+[01:59:36 +    0.7s] REGLA 11 -- procesos python vivos (18), este es pid 30696
+[01:59:36 +    0.7s] ETAPA 1/3 -- IDENTIDAD (organismo_v13p == organismo_v13) + E3 inercia (5)...
+[01:59:54 +   18.0s]           1/5
+[02:00:13 +   37.2s]           2/5
+[02:00:32 +   56.0s]           3/5
+[02:00:51 +   75.4s]           4/5
+[02:01:09 +   93.7s]           5/5
+[02:01:09 +   93.7s]   identidad: 3/3   (organismo_v13 desde C:\Users\User\Documents\PROYECTOS\JUACO\bundle\organismo\organismo_v13.py)
+[02:01:09 +   93.7s]   E3 inercia: divisiones 0 -> 0   celdas 30 -> 30   W identico en 0/2   -> OK (+-10%)
+[02:01:09 +   93.7s]   E3 sesgo de boca (perilla ON, sin inversion): sesgo_boca mediana por cuarto [0.175205, 0.0030099999999999997, 0.000225, 4e-05]   sbarE mediana final 0.00001   -> NO ES PEQUENO (>=0.05 en algun punto)   [diagnostico, NO es gate -- ver PREREGISTRO_v13E.md §6]
+[02:01:09 +   93.7s] 
+[02:01:09 +   93.7s] ETAPA E1 -- E1 RETENCION  (criterio v3' completo, perilla ENCENDIDA) ...
+[02:04:53 +  317.2s]    *** CRITERIO 5 FALLIDO: v13 no es el organismo que dice ser. No se corre el examen.
+[02:04:53 +  317.2s]    *** codigo 1: 
+[02:04:53 +  317.2s] 
+[02:04:53 +  317.2s] ETAPA E2 -- E2 GENERALIZACION (G1/G2/K, perilla ENCENDIDA) ...
+[02:05:21 +  345.0s]    OK    K  cobertura del primer encuentro: 2/2
+[02:05:21 +  345.0s]    FALLA G1 valor en patrones nunca vistos: px0 0.650 (>=0.65), azar 0.600, px0>azar 1/2
+[02:05:21 +  345.0s]    PASA  G2 conducta al primer encuentro: px0 0.740 (>=0.55), azar 0.458, px0>azar 2/2
+[02:05:21 +  345.0s]    VEREDICTO bateria_generaliza (organismo_v13E): K_cobertura=True G1_valor=False G2_conducta=True
+[02:05:21 +  345.0s]    *** organismo_v13E NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[02:05:21 +  345.0s] 
+[02:05:21 +  345.0s] ETAPA E2_ref -- GENERALIZACION de referencia (perilla APAGADA) ...
+[02:05:48 +  372.6s]    OK    K  cobertura del primer encuentro: 2/2
+[02:05:48 +  372.6s]    FALLA G1 valor en patrones nunca vistos: px0 0.700 (>=0.65), azar 0.500, px0>azar 1/2
+[02:05:48 +  372.6s]    PASA  G2 conducta al primer encuentro: px0 0.890 (>=0.55), azar 0.559, px0>azar 2/2
+[02:05:48 +  372.6s]    VEREDICTO bateria_generaliza (organismo_v13p): K_cobertura=True G1_valor=False G2_conducta=True
+[02:05:48 +  372.6s]    *** organismo_v13p NO CONSERVA la generalizaciÃ³n de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[02:05:48 +  372.6s] 
+[02:05:48 +  372.6s] VEREDICTO v13E: SE QUEDA COMO ORGANO DE EXPERIMENTO (clausula §6 de PREREGISTRO_v13E.md): cae la retencion y cae la generalizacion; NO entra al tronco. Nada se recalibra.
+[02:05:48 +  372.6s]   E1 retencion (criterio v3' completo, 8 veredictos) = False   E2 generalizacion (G1/G2/K) = False   E3 inercia/sesgo (diagnostico) = True/False
+[02:05:48 +  372.6s] (HUMO: 2 semillas -- ningun criterio vale; solo prueba que el montaje corre.)
+[02:05:48 +  372.6s] datos -> baterias_v13E_humo_20260918_015936.json  sha256_16 = 488ac25a9b4d28bd

@@ -121,12 +121,17 @@ if __name__ == '__main__':
         f"   -> {'OK (+-10%)' if V['D3']['ok'] else 'LA MASCARA SI ACTUA AQUI'}")
 
     env = dict(os.environ, PYTHONIOENCODING='utf-8')
+    # ERR-29 (hallazgo del implementador del paquete v13E, 18 sep 02:05): la clave se derivaba de
+    # etiq.split()[1], y las etapas 2/3 y 3b/3 colisionaban en 'GENERALIZACION' -- la de referencia (OFF, corre
+    # despues) pisaba el veredicto de la ON antes de leerlo. El veredicto YA REGISTRADO (D2_generalizacion=True en
+    # datos/baterias_v13D_20260918_012145.json) no cambia: los dos lados pasan (K 20/20, G1 0.800/19-20, G2
+    # 0.834/19-20 segun el log). Clave EXPLICITA por etapa; no se vuelve a correr.
     etapas = [
-        ('2/3 RETENCION  (criterio v3\', perilla ENCENDIDA)', [sys.executable, os.path.join(AQUI, 'bateria_v13D.py'), str(NSEM), '--desde', str(DESDE), '--log'], 'examen_v13D_'),
-        ('3/3 GENERALIZACION (G1/G2/K, perilla ENCENDIDA)', [sys.executable, os.path.join(AQUI, 'bateria_generaliza_D.py'), 'organismo_v13D_on', str(NSEM), '--desde', str(DESDE), '--log'], 'regresion_generaliza_organismo_v13D_on_'),
-        ('3b/3 GENERALIZACION de referencia (perilla APAGADA)', [sys.executable, os.path.join(AQUI, 'bateria_generaliza_D.py'), 'organismo_v13D', str(NSEM), '--desde', str(DESDE), '--log'], 'regresion_generaliza_organismo_v13D_'),
+        ('2/3 RETENCION  (criterio v3\', perilla ENCENDIDA)', [sys.executable, os.path.join(AQUI, 'bateria_v13D.py'), str(NSEM), '--desde', str(DESDE), '--log'], 'examen_v13D_', 'RETENCION'),
+        ('3/3 GENERALIZACION (G1/G2/K, perilla ENCENDIDA)', [sys.executable, os.path.join(AQUI, 'bateria_generaliza_D.py'), 'organismo_v13D_on', str(NSEM), '--desde', str(DESDE), '--log'], 'regresion_generaliza_organismo_v13D_on_', 'D2'),
+        ('3b/3 GENERALIZACION de referencia (perilla APAGADA)', [sys.executable, os.path.join(AQUI, 'bateria_generaliza_D.py'), 'organismo_v13D', str(NSEM), '--desde', str(DESDE), '--log'], 'regresion_generaliza_organismo_v13D_', 'D2_ref'),
     ]
-    for etiq, cmd, pref in etapas:
+    for etiq, cmd, pref, clave in etapas:
         log(); log(f"ETAPA {etiq} ...")
         p = subprocess.run(cmd, capture_output=True, text=True, env=env, cwd=os.path.join(RAIZ, 'organismo'))
         for l in [x.split('] ', 1)[-1].strip() for x in p.stdout.splitlines()
@@ -135,10 +140,10 @@ if __name__ == '__main__':
         if p.returncode != 0:
             log(f"   *** codigo {p.returncode}: {p.stderr[-500:]}")
         j = lee_json(pref)
-        V[etiq.split()[1]] = dict(returncode=p.returncode, veredictos=(j or {}).get('meta', {}).get('veredictos'))
+        V[clave] = dict(returncode=p.returncode, veredictos=(j or {}).get('meta', {}).get('veredictos'))
 
     ret = V.get('RETENCION', {}).get('veredictos') or {}
-    gen = V.get('GENERALIZACION', {}).get('veredictos') or {}
+    gen = V.get('D2', {}).get('veredictos') or {}
     D1 = bool(ret) and all(bool(v) for v in ret.values())
     D2 = bool(gen) and all(bool(v) for v in gen.values())
     V['D1_retencion'] = D1; V['D2_generalizacion'] = D2
