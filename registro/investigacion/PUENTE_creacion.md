@@ -304,6 +304,61 @@ Para el director, dicho al derecho: **el problema no es que al organismo le falt
 tiene no contienen la información.** (Y la delta incluso empeora entre n = 60 y n = 150 — se asienta en la solución
 que memoriza lo visto.)
 
+### A12. Lectura para el BLOQUE 3/3 (el «A10» que pidió el coordinador) — 18-sep
+
+**El número que lo decide, y es nuevo.** Pregunté si los 8 patrones de tren pueden siquiera *distinguir* entre los
+15 conjuntivos candidatos. Ajuste exacto sobre {6 px [+ cte]} + un producto, 20 semillas:
+
+| patrones de tren | candidatos que ajustan el tren con **residuo 0** | candidatos que generalizan ≥ 0.75 | acc del correcto |
+|---|---|---|---|
+| **4c+4v = 8 (el mundo original)** | **9 de 15** | **1 de 15** | 1.000 |
+| 6c+5v = 11 | 2 de 15 | 1 de 15 | 1.000 |
+| 8c+6v = 14 | **1 de 15** | 1 de 15 | 1.000 |
+
+Con 8 patrones, **nueve explicaciones distintas ajustan los datos perfectamente y sólo una generaliza**. Quitar la
+constante **no cambia el empate** (9/15 igual) — lo que corrige mi propia L1: por eso W1 salió NO (0.500, 4/20) y yo
+lo había razonado mal. Acertar entre las empatadas es 1/9 ≈ 0.11, y el estadístico **ideal** lo pone #1 en 3/20 =
+0.15: cuadra.
+
+**(a) Qué NO está en 8 patrones, y qué podría crearla.** No falta "señal": faltan **ejemplos que rompan el empate**.
+Ninguna regla — local, con retropropagación, con gradiente exacto — puede elegir entre 9 hipótesis de residuo cero
+**salvo por un PRIOR**. Lo mido así: el gradiente exacto sobre la lectura cuadrática da **0.562** y el MLP con
+retropropagación **0.531**; la cota de cualquier lector sobre esos rasgos y esos 8 ejemplos es ≈ 0.56.
+Por tanto, para el bloque 3 sólo veo cuatro rutas, y las ordeno por lo que creo que dan:
+
+1. **Prior estructural (la única que puede cruzar sin más ejemplos, y hay que declararla como prior).** P. ej. "los
+   rasgos que importan son conjunciones de píxeles co-activos con el refuerzo más *puro*". Prior ≠ aprendizaje: si
+   un mecanismo pasa de 0.562 con los mismos 8 pares (φ, R), **está metiendo información de fuera**, y eso es
+   legítimo si se dice. **El control que lo separa de una fuga es `azar`**: un prior sobre conjunciones de píxeles
+   no puede ayudar a una regla de valencias aleatorias. Si `azar` sube de [0.35, 0.65], es fuga, no prior.
+2. **La fisión de v11 como creadora de rasgos.** Es la ruta con sesgo *distinto*: la hija nace de un **conflicto de
+   signo** entre dos patrones concretos, no de la correlación con el residuo — que es justo el criterio que acabo de
+   refutar (ideal 3/20). No la he probado con splits activos; el banco sólo midió el código Kenyon **inicial**
+   (0.41–0.50, plano en K = 1…7). **Es lo que yo correría.**
+3. **Aprender de los encuentros sin morder.** Mi lectura honesta: antes de la sonda los otros 12 patrones **no
+   existen en el mundo** (`tipos.extend(test)` ocurre en `fase2_en`), así que no hay nada que observar de ellos; y
+   sin morder no hay `R`, luego no hay residuo. La sorpresa de `ΔE` informa del *estado propio*, no de qué conjunción
+   predice la valencia. **Predigo que no cruza**; si alguien lo corre y cruza, mi modelo está mal y quiero verlo.
+4. **Más repetición: descartada con número.** Mis curvas de exposición: el gradiente exacto **satura a los 20
+   encuentros y no se mueve hasta los 600**. La repetición está agotada.
+
+**(b) NTR como control del bloque 3.** Si un mecanismo cruza **0.75 en el mundo original (8 patrones)**, entonces
+con `ntr = 14` — donde el candidato correcto es el **único** con residuo 0 — **debe dar ≥ 0.90 y nunca menos que su
+propio valor a 8 patrones**. Si sube a 8 y **no** sube (o baja) a 14, no está aprendiendo: está acertando por un
+prior afinado al régimen de 8, y hay que decirlo. Referencia ya medida: con la regla local de siempre, `NTR14` da
+**1.000 con n\* = 200**. Segundo control obligatorio en el mismo bloque: **`azar` en [0.35, 0.65]** (ver (a)-1) y
+**`px0` = 1.000** — recuerdo que en el bloque 2 `SIN_SEL` lo rompió (px0 0.900), así que no es un control decorativo.
+
+**(c) Sí: el mundo de 8/12 está más allá de la identificabilidad, y no sólo para nuestra regla.** El número es
+**9 de 15 candidatos con residuo 0**. Criterio de parada que me parece honesto, y lo firmo:
+
+> **La línea XOR se cierra declarando el mínimo `ntr` con el que el organismo generaliza, no un fracaso.**
+> Ya está medido: **con 14 patrones de tren la regla local llega a 1.000 en los nunca vistos, con n\* = 200
+> exposiciones**; con 11 queda en 0.625 y con 8 en 0.50. Vocabulario: *"XOR se aprende con reglas locales cuando el
+> mundo da 14 ejemplos distintos; con 8 no lo aprende nadie, porque 9 de 15 hipótesis explican los datos igual de
+> bien"*. Si el bloque 3 cruza 0.75 con 8 patrones, se declara **prior estructural** (con el control de `azar`), no
+> "aprende XOR", y entonces el criterio de parada se sustituye por el resultado del bloque 3.
+
 ### A11. Archivos (sólo míos, nada original tocado, sin commits)
 `experimentos/creacion_A/`: `identificabilidad_xor.py` · `sesgo_grado_xor.py` · `banco_sesgo.py` ·
 `regla_puerta_rasgo.py` · `regla_wta_conjuntiva.py` · `dinamica_oraculo.py` ·
