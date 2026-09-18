@@ -106,7 +106,8 @@
 >   **Columna vertebral = XOR** (los tres bloques del criterio de parada, nada los adelanta en el Pool): A-4 (dos constantes de
 >   la vía lenta; HECHO 05:35: **bloque 1/3, XOR 0.625 — la regla ya llega a 1.000 con rasgos dados y no daña el tronco; el cuello son
 >   los rasgos**) → A-6 (construir los rasgos: selección conjuntiva en pocas exposiciones; bloque 2/3) → un tercero si hace falta.
->   **Laterales, un bloque cada uno y se cierran:** B-5 (asociación por parecido en el mundo de regla, px0 contra azar) y C-P6
+>   **Laterales, un bloque cada uno y se cierran:** B-5 (HECHO 05:55: no confirma; la vía lenta asocia en 2 exposiciones en vez de 4.5
+>   pero también en azar; línea cerrada) y C-P6
 >   (N2 por predicción en el mundo decidible, mudo como predicción principal). **Mundo vivo (F): sólo diseño y preregistro hasta
 >   el veredicto de XOR**; si XOR cruza 0.75 es el siguiente peldaño (significado por necesidad); si no cruza, el mundo vivo
 >   con reproducción es el cambio de paradigma ya escrito. Nada nuevo se abre sin cerrar uno de estos.

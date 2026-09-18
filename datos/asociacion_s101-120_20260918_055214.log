@@ -1,0 +1,41 @@
+[05:52:14 +    0.0s] ARRANQUE asociación en una exposición (propuesta B-4), mundo de regla px0 vs azar. brazos ['v14', 'via_lenta', 'HD', 'grafo'], mundos ['px0', 'azar'], semillas 101-120 (20). Pool(14). T=200000.
+[05:52:14 +    0.0s] TRUNK (perillas del tronco ON) {'eta_s': 0.015, 'puerta': 3, 'mask_rel': 2, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'puerta_pat': 5, 'pat_shuf': 0, 'pat_min': 1}
+[05:52:14 +    0.0s] sha preregistro af37ac512d999d21  script 75933d719b792961  constructor 22893c8bef8a8440  organismo_v14gL 1d3bca2d54b7a064  identidad_v14gL 6b8112e84bd38e53  origen organismo_v14g (congelado) 1f1318480cd34cde  origen bateria_generaliza (congelada) 9cf72581ebae7dea
+[05:52:14 +    0.4s] REGLA 11 -- procesos python vivos (4), este es pid 30132
+[05:52:14 +    0.6s] ETAPA 1/2 -- identidad interna: sem=0 == organismo_v14g, perillas ON (3 casos, T=20000)...
+[05:52:17 +    2.8s]    regla=px0    s101: IDENTICO
+[05:52:17 +    2.8s]    regla=xor01  s101: IDENTICO
+[05:52:17 +    2.8s]    regla=azar   s101: IDENTICO
+[05:52:17 +    2.8s]    identidad interna: 3/3
+[05:52:17 +    2.8s] ETAPA 2/2 -- 160 corridas de T=200000 (4 brazos x 2 mundos x 20 semillas)...
+[05:52:49 +   34.8s]           20/160
+[05:53:05 +   51.4s]           40/160
+[05:53:37 +   83.1s]           60/160
+[05:53:54 +  100.7s]           80/160
+[05:54:26 +  132.0s]           100/160
+[05:54:44 +  150.5s]           120/160
+[05:55:11 +  176.9s]           140/160
+[05:55:31 +  197.0s]           160/160
+[05:55:31 +  197.0s] TABLA -- exp_hasta por brazo y mundo (mediana de medianas por semilla; censuradas excluidas).
+[05:55:31 +  197.0s]    px0   v14        exp_hasta 4.5  (n_ok=20/20, censuradas=0)   acc 1.000  ba 0.940
+[05:55:31 +  197.0s]    px0   via_lenta  exp_hasta 2.0  (n_ok=20/20, censuradas=0)   acc 1.000  ba 0.917
+[05:55:31 +  197.0s]    px0   HD         exp_hasta 2.8  (n_ok=20/20, censuradas=0)   acc 1.000  ba 0.893
+[05:55:31 +  197.0s]    px0   grafo      exp_hasta 4.0  (n_ok=20/20, censuradas=0)   acc 1.000  ba 0.897
+[05:55:31 +  197.0s]    azar  v14        exp_hasta 8.0  (n_ok=20/20, censuradas=0)   acc 0.500  ba 0.508
+[05:55:31 +  197.0s]    azar  via_lenta  exp_hasta 7.8  (n_ok=20/20, censuradas=0)   acc 0.500  ba 0.486
+[05:55:31 +  197.0s]    azar  HD         exp_hasta 7.2  (n_ok=20/20, censuradas=0)   acc 0.500  ba 0.518
+[05:55:31 +  197.0s]    azar  grafo      exp_hasta 9.0  (n_ok=20/20, censuradas=0)   acc 0.500  ba 0.475
+[05:55:31 +  197.0s] 
+[05:55:31 +  197.0s] px0 -- candidatos (baja >=30% Y pareo >= 14/20): ['via_lenta']
+[05:55:31 +  197.0s]    via_lenta  exp 2.0 vs v14 4.5  baja30=True  pareo 14/20 OK
+[05:55:31 +  197.0s]    HD         exp 2.8 vs v14 4.5  baja30=True  pareo 12/20 FALLA
+[05:55:31 +  197.0s]    grafo      exp 4.0 vs v14 4.5  baja30=False  pareo 10/20 FALLA
+[05:55:31 +  197.0s] azar -- ningún brazo debe bajar >10% ni ganar sin que el engaño cueste: FALLA
+[05:55:31 +  197.0s]    via_lenta  exp 7.8 vs v14 8.0  no_baja10=True  engano_cuesta=False
+[05:55:31 +  197.0s]    HD         exp 7.2 vs v14 8.0  no_baja10=True  engano_cuesta=False
+[05:55:31 +  197.0s]    grafo      exp 9.0 vs v14 8.0  no_baja10=True  engano_cuesta=True
+[05:55:31 +  197.0s] G1 (v14, px0) = 1.000 (>= 0.8)  OK
+[05:55:31 +  197.0s] G2 (por brazo, px0) = {'via_lenta': '0.917', 'HD': '0.893', 'grafo': '0.897'} (>= 0.85)  OK
+[05:55:31 +  197.0s] 
+[05:55:31 +  197.0s] VEREDICTO: NO CONFIRMA HB4-regla: ['via_lenta'] baja(n) >= 30% en px0, pero el contraste con azar falla (algún brazo también baja en azar, o el engaño no cuesta) -> asocia más rápido en general, no específicamente donde el parecido predice el valor.
+[05:55:31 +  197.0s] datos -> asociacion_s101-120_20260918_055214.json  sha256_16 = 39bec0c57104b953

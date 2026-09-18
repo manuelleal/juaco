@@ -4429,3 +4429,25 @@ rasgos, y aprende 2.7× más rápido en exposiciones); **el cuello que queda es 
 la selección meta-aprendida lo abre en 11/20 y sube a 0.625, no a 0.75. **Bloque 1 de 3: XOR 0.625 (no cruza 0.75).** Propuesta
 derivada, sin ejecutar: v14.1 = v14 con (0.15, 10) (cambio de dos constantes del tronco congelado; decisión del director). Siguiente
 bloque (A-6): mecanismo local de construcción/selección de rasgos conjuntivos con `n*` como número principal.
+
+
+### Bloque B-5 (lateral, un bloque; 18 sep 05:55; semillas 101–120): asociación por parecido en el mundo de regla — **NO CONFIRMA como estaba escrito: la variante barata (vía lenta, memoria cero) baja las exposiciones hasta asociar de 4.5 a 2.0 en px0 (pareado 14/20) sin dañar la generalización, pero en azar no cuesta (7.8 contra 8.0): asocia más rápido en general, no sólo donde el parecido predice el valor**
+
+Preregistro `experimentos/nivel3_asociacion/PREREGISTRO_asociacion.md` (af37ac512d999d21); instrumento `organismo_v14gL` (1d3bca2d54b7a064; por
+anclas desde `organismo_v14g`, 2 anclas adaptadas y declaradas; identidad 12/12 en la copia y 3/3 en el runner); datos
+`asociacion_s101-120_20260918_055214` (39bec0c57104b953), 160 corridas, 3.3 min.
+
+| brazo | px0: exposiciones hasta asociar (mediana) | pareado < v14 | azar: exposiciones | G2 (px0) |
+|---|---|---|---|---|
+| v14 | 4.5 | — | 8.0 | 0.940 |
+| **vía lenta (memoria cero)** | **2.0** (−56 %) | **14/20** | 7.8 | 0.917 |
+| HD (Kanerva) | 2.8 (−38 %) | 12/20 | 7.2 | 0.893 |
+| grafo | 4.0 | 10/20 | 9.0 | 0.897 |
+
+Criterio: en px0 al menos un brazo baja ≥ 30 % con pareado ≥ 14/20 → **vía lenta cumple**; en azar ninguno baja > 10 % → cumple; **pero "el
+engaño cuesta" (exposiciones en azar ≥ v14) falla** para vía lenta y HD (7.8 y 7.2 contra 8.0): el contraste que decidía la hipótesis
+del creador B (que la asociación sirve sólo donde el parecido predice el valor) no aparece. G1 1.000 y G2 ≥ 0.89 en todos. **Lectura:**
+la asociación por parecido acelera un poco en todos los mundos y no cuesta nada donde el parecido engaña; no es el mecanismo que la
+hipótesis decía, y con 2–4 exposiciones de base no hay margen que valga un órgano. **Línea lateral cerrada** (revisión de rumbo de
+las 06:45): el hallazgo que queda es de representación (la alta dimensión da aristas legibles; el código de 3 celdas no), útil
+para el mundo vivo y para A-6, no un órgano.
