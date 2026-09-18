@@ -622,3 +622,24 @@ creador C); N2 sólo con significado por predicción (C-P2, sin instrumento en e
 control, y dos auditorías que atraparon sus propios errores antes de declarar nada candidato. Vamos mal: ningún
 candidato está en el tronco todavía (la decisión es del director), la sorpresa en la boca cobra generalización de valor a la
 dosis probada, y XOR y N2 siguen sin un mecanismo que funcione con la dinámica actual del mundo.
+
+
+### 15.7 Con el director de vuelta (18 sep, 04:10 → 07:15): lo decidido y lo congelado
+
+| hora | decisión / hecho |
+|---|---|
+| 04:55 | "Sí a todo": congelar v14, cerrarlo, un solo frente (aprender sin morder) con criterio de parada de tres bloques XOR |
+| 05:05 | **v14 congelado** = v13 + hija dispersa + puerta por código (tag `v14-tronco`; examen 8/8 en tres rangos; gemelo 196/196 + 42/42) |
+| 05:10 | dos organismos en paralelo (SIN reglas locales / CON backprop de laboratorio), exposiciones hasta asociar como medida, grafo |
+| 05:35 | bloque 1/3 (A-4): la regla local llega a 1.000 con rasgos dados y 150 exposiciones; el cuello son los rasgos |
+| 06:05 | **v14.1 congelado** = v14 con `eta_s` 0.15 y `clip_s` 10 (tag `v14.1-tronco`; examen 8/8 ×2, generalización 1.000 / 0.97–1.00) |
+| 06:05 | bloque 2/3 (A-6): con 8 patrones nadie puede seleccionar el rasgo (9 de 15 hipótesis empatadas); con 14, 1.000 en los nunca vistos |
+| 06:10 | línea F: mundo vivo (necesidades y estímulos múltiples) — diseño listo con ancla 37/37, no se corre hasta el veredicto de XOR |
+| 06:45 | revisión de rumbo: XOR columna vertebral; B-5 y N2 decidible laterales de un bloque; mundo vivo sólo diseño |
+| 07:10 | **ERR-35**: la línea XOR se cierra por el mínimo de ejemplos con el que generaliza (14 sí, 11 no, 8 nadie); bloque 3/3 con la sala de agentes y `ntr = 14` de control |
+
+Sala de agentes (workflow "enjambre"): 5 investigadores de literatura 2019–2026, un jefe que elige 4 mecanismos, 4 mini-equipos con
+identidad y mini-prueba, 2 refutadores por paquete, un sintetizador → `registro/investigacion/ENJAMBRE_xor_20260918.md`. Cerradas
+esta madrugada por la letra: metaplasticidad (A-2), consolidación por predicción y retorno aleatorio en una capa (C), asociación
+por parecido (B, dos mundos), fisión como creadora de rasgos (criba). Errores nuevos: ERR-29 a ERR-35. Regresión de la regla 1
+sobre v14.1: `cd organismo && python bateria_v14.py 6 && python bateria_generaliza.py organismo_v14 20 --desde 101`.
