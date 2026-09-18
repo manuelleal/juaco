@@ -1,0 +1,36 @@
+[23:14:44 +    0.0s] ARRANQUE bloque 3e (¿regla o seleccion de rasgos?). brazos ['ORACULO_2C', 'ORACULO_2C_CTE', 'ORACULO_DELTA', 'RUIDO_DELTA', 'CUAD_DELTA'], reglas ['xor01', 'px0'], semillas 61-80. Pool(14).
+[23:14:44 +    0.0s] BASE {'T': 100000, 'mundo': 'regla', 'eta_s': 0.015, 'puerta': 3, 'lam_lenta': 0.002}  (identica a 3d: el UNICO cambio entre ORACULO_DELTA y CUAD_DELTA son los rasgos de phi)
+[23:14:44 +    0.0s] sha preregistro 1e1982dd699ca4df  script 221c1715845c1611  construye 61c6c537a224dbea  organismo_v13q3 aaebe073308a40c2  organismo_v13q 0b59eb03858df3a8
+[23:14:44 +    0.4s] REGLA 11 — procesos python vivos (3), este es pid 5084
+[23:14:44 +    0.6s] ETAPA 1a/4 — identidad: v13q3(dos_canales, constante=False) == organismo_v13q (12 corridas, T=60000)...
+[23:14:53 +    9.5s]   identicos: 12/12   claves nuevas: ['Ws', 'Ws_apriori', 'regla_lenta', 'constante', 'lam_lenta']
+[23:14:53 +    9.5s] ETAPA 1b/4 — inercia de la enmienda 3e sobre los numeros ya publicados de 3d (CUAD_DELTA xor01, semillas (41, 42, 43))...
+[23:14:59 +   15.8s]       s41: 3d acc 0.562 lenta 0.625 | 3e acc 0.562 lenta 0.625  -> IGUAL
+[23:14:59 +   15.8s]       s42: 3d acc 0.562 lenta 0.562 | 3e acc 0.562 lenta 0.562  -> IGUAL
+[23:14:59 +   15.8s]       s43: 3d acc 0.562 lenta 0.625 | 3e acc 0.562 lenta 0.625  -> IGUAL
+[23:14:59 +   15.8s]       inerte: True  (contra xor_3d_s41-60_20260917_225535.json, instrumento de 3d b71bbe41a7326aaf)
+[23:14:59 +   15.8s] ETAPA 2/4 — 200 corridas de T=100000...
+[23:15:15 +   31.0s]           25/200
+[23:15:30 +   46.2s]           50/200
+[23:15:44 +   60.8s]           75/200
+[23:15:59 +   75.5s]           100/200
+[23:16:07 +   83.8s]           125/200
+[23:16:22 +   98.5s]           150/200
+[23:16:38 +  114.0s]           175/200
+[23:16:51 +  127.6s]           200/200
+[23:16:51 +  127.6s] ETAPA 3/4 — tabla. acc = valor total a priori en nunca vistos; acc_lenta = via lenta sola; Ws(.) = pesos EN LA SONDA.
+[23:16:51 +  127.6s]    ORACULO_2C      xor01 acc 0.625  acc_lenta 0.562 [0.50,0.94]  ba 0.554  cobertura 12  celdas 68  muertes 125  Ws(P0) +0.26  Ws(P1) +0.39  Ws(P0*P1) -1.32  Ws(cte)   n/a  max|Ws| 1.32
+[23:16:51 +  127.6s]    ORACULO_2C      px0   acc 0.800  acc_lenta 0.900 [0.50,1.00]  ba 0.680  cobertura 10  celdas 58  muertes 138  Ws(P0) +1.10  Ws(P1) -1.17  Ws(P0*P1) +0.70  Ws(cte)   n/a  max|Ws| 1.17
+[23:16:51 +  127.6s]    ORACULO_2C_CTE  xor01 acc 0.562  acc_lenta 0.625 [0.31,1.00]  ba 0.519  cobertura 12  celdas 67  muertes 122  Ws(P0) +0.19  Ws(P1) +0.33  Ws(P0*P1) -1.23  Ws(cte) +0.20  max|Ws| 1.23
+[23:16:51 +  127.6s]    ORACULO_2C_CTE  px0   acc 0.900  acc_lenta 1.000 [0.60,1.00]  ba 0.801  cobertura 10  celdas 58  muertes 134  Ws(P0) +1.61  Ws(P1) -0.83  Ws(P0*P1) +0.71  Ws(cte) -0.75  max|Ws| 1.61
+[23:16:51 +  127.6s]    ORACULO_DELTA   xor01 acc 0.562  acc_lenta 0.625 [0.31,0.88]  ba 0.506  cobertura 12  celdas 67  muertes 118  Ws(P0) +0.05  Ws(P1) +0.23  Ws(P0*P1) -0.91  Ws(cte) +0.16  max|Ws| 0.93
+[23:16:51 +  127.6s]    ORACULO_DELTA   px0   acc 0.900  acc_lenta 1.000 [0.60,1.00]  ba 0.790  cobertura 10  celdas 57  muertes 136  Ws(P0) +1.27  Ws(P1) -0.61  Ws(P0*P1) +0.54  Ws(cte) -0.50  max|Ws| 1.27
+[23:16:51 +  127.6s]    RUIDO_DELTA     xor01 acc 0.438  acc_lenta 0.375 [0.19,0.62]  ba 0.463  cobertura 12  celdas 68  muertes 118  Ws(P0) +0.01  Ws(P1) +0.08  Ws(P2*P3) +0.12  Ws(cte) +0.15  max|Ws| 0.56
+[23:16:51 +  127.6s]    RUIDO_DELTA     px0   acc 0.900  acc_lenta 1.000 [0.60,1.00]  ba 0.759  cobertura 10  celdas 58  muertes 137  Ws(P0) +1.33  Ws(P1) -0.39  Ws(P2*P3) -0.28  Ws(cte) -0.43  max|Ws| 1.33
+[23:16:51 +  127.7s]    CUAD_DELTA      xor01 acc 0.469  acc_lenta 0.438 [0.19,0.75]  ba 0.426  cobertura 12  celdas 67  muertes 124  Ws(P0) -0.11  Ws(P1) +0.01  Ws(P0*P1) -0.78  Ws(cte) -0.08  max|Ws| 0.87
+[23:16:51 +  127.7s]    CUAD_DELTA      px0   acc 0.800  acc_lenta 1.000 [0.70,1.00]  ba 0.829  cobertura 10  celdas 56  muertes 133  Ws(P0) +0.88  Ws(P1) -0.31  Ws(P0*P1) +0.34  Ws(cte) -0.17  max|Ws| 0.88
+[23:16:51 +  127.7s] ETAPA 4/4 — criterio.
+[23:16:51 +  127.7s]    O1 (UNICO criterio) ORACULO_DELTA xor01 acc_lenta 0.625 >= .80 y > RUIDO_DELTA en 13/20   NO
+[23:16:51 +  127.7s]    R1 (lectura obligatoria, NO decide) px0 acc_lenta 1.000 >= .65   OK
+[23:16:51 +  127.7s] VEREDICTO 3e: NO: con los rasgos exactos la regla TAMPOCO puede -> el cuello esta en la dinamica (mordidas, error, puerta)
+[23:16:51 +  127.7s] datos -> xor_3e_s61-80_20260917_231444.json  sha256_16 = 9d1c5071fd2a97b6

@@ -3580,3 +3580,27 @@ exploración por construcción; v14 no lo lleva*. El mapa queda como órgano de 
 Vocabulario: *el mapa da de comer y quita exploración; no hay perilla que lo arregle sin quitarle el mapa*. Si algún día
 se reabre, será por un mecanismo que haga que **la comida recordada deje de atraer** cuando el cuerpo no la necesita
 (saciedad como temperatura de la brújula: informe de exploración, mecanismo 4 y "paradoja de exposición"), en rama.
+
+
+### Bloque 3e (día 7, 23:15): oráculo de rasgos — **con los rasgos exactos {P0, P1, P0·P1, 1} la vía lenta TAMPOCO generaliza XOR (0.625) → el cuello es la DINÁMICA, no la representación, la lectura, la regla ni la identificabilidad**
+
+Preregistro `experimentos/nivel7_xor_lectura/PREREGISTRO_xor_3e.md`; instrumento `organismo_v13q3.py` (`aaebe073308a40c2`; knobs
+apagados ≡ v13q 12/12; inercia contra los datos publicados del 3d: idéntico en 3 semillas); datos `xor_3e_s61-80_20260917_231444`
+(`9d1c5071fd2a97b6`), 200 corridas.
+
+| brazo (xor01, nunca vistos) | `acc_lenta` | `Ws(P0)` | `Ws(P1)` | `Ws(P0·P1)` |
+|---|---|---|---|---|
+| oráculo, dos canales | 0.562 [0.50, 0.94] | +0.26 | +0.39 | −1.32 |
+| oráculo, dos canales + constante | 0.625 [0.31, 1.00] | +0.19 | +0.33 | −1.23 |
+| **oráculo + delta con signo + constante** | **0.625** [0.31, 0.88] | +0.05 | +0.23 | −0.91 |
+| ruido (P2·P3) + delta (control) | 0.375 | +0.01 | +0.08 | (P2·P3 +0.12) |
+| cuadrática + delta (referencia 3d) | 0.438 | −0.11 | +0.01 | −0.78 |
+
+O1 **NO** (0.625 < 0.80; > ruido sólo 13/20); R1 (px0) 1.000 en todos (P0 es px0: lectura, no control). **Lectura:** con los
+rasgos regalados la estructura aparece (marginales positivos, producto negativo: es la forma de XOR) pero la magnitud no
+alcanza para clasificar en ~330 actualizaciones con refuerzo sólo al morder, recompensa −3/+1 y clases desigualmente
+muestreadas (hasta 82 % de las mordidas de una sola clase). Serie completa de la línea XOR: 3 (dimensión: no), 3b (puerta:
+no), 3d (regla: no), trío (tres mecanismos aislados: no), 3e (identificabilidad: no) → **XOR es representable y legible
+pero no aprendible con la dinámica actual de muestreo y refuerzo**. Vocabulario: *XOR no se generaliza; el cuello está
+en cuántas veces y con qué error se actualiza la vía lenta, no en qué ve*. La línea pasa a la célula de creación
+(creador A: reglas y dinámica; creador C: aprender también sin morder, por predicción). No se corre 3f hoy.

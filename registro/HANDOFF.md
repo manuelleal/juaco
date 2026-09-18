@@ -489,7 +489,7 @@ commiteado (`git log`) y respaldado en `JUACO/respaldo/juaco_bundle_20260917_*.b
 
 | nivel | hecho (con dato) | falta | ~ |
 |---|---|---|---|
-| **3 generalización** | lineal: Etapa 3 cerrada (v9), recuperada en v13 tras ERR-20 (0.80–0.90 en nunca vistos; `bateria_generaliza` obligatoria) | no lineal (XOR 0.44): bloque 3 (límite de lectura) | 70 % |
+| **3 generalización** | lineal: Etapa 3 cerrada (v9), recuperada en v13 tras ERR-20 (0.80–0.90 en nunca vistos; `bateria_generaliza` obligatoria) | no lineal: **XOR representable y legible pero no aprendible con la dinámica actual** (3, 3b, 3d, trío, 3e: dimensión, puerta, regla, identificabilidad descartadas) → creación | 70 % |
 | **4 memoria persistente** | retención 20/20 (v11/v13), capacidad ×5 (50/60 v11; 35/60 v13 por la puerta), examen v3' | retención de lo **ausente** bajo interferencia (0.67 a 150k pasos); canje puerta/capacidad; olvido dirigido | 60 % |
 | **5 comunicación / transferencia** | N1 experto→novato (replicado); N3d transferencia entre sensores por conducta (replicado); mudo = obedece, crea dependencia | **N2 cerrado con dos mundos** (6 diseños ❌; N2f v3 con montaje válido; INNATO 60 vs 278: el canal serviría con significado dado); que el receptor aprenda algo propio; XOR entre dos | 50 % |
 | **6 planificación** | mapa: elige la dirección hacia comida recordada fuera de la vista (replicado; invertido huye); tras el cambio de regla muere menos | horizonte real (dos metas, rodeo), secuencia de acciones, `M` que se degrade; canje exploración/explotación (bloque 2) | 35 % |
