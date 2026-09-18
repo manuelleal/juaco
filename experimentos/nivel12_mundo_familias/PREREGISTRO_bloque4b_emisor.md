@@ -356,3 +356,7 @@ medir.
   línea y la del mundo vivo.
 - **Bloque 5 (la palabra)** sigue donde lo dejó el bloque 4 §11, y sigue **bloqueado por lo mismo**: con una celda
   ganadora de 2 bits no caben 8 palabras.
+
+
+## ERR-52 (coordinador, 18 sep 18:25; escrito ANTES de la serie 621–640)
+La puerta P-I3 exigía prefijo idéntico también a OTRO± (R-SIN-SAL), cuyo receptor vive en un mundo sin el referente: su gemelo no es CORTADO y el prefijo difiere por construcción (0/20 en las dos series, 20/20 en los once brazos restantes). Se excluye OTRO de P-I3; ningún otro umbral cambia; las series 581–600 y 601–620 se reportan como quedaron (nada declarado) y se corre una serie nueva 621–640 con la puerta corregida.

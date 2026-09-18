@@ -416,7 +416,7 @@ def veredicto(res, msgs, SEEDS, diags):
     V['PI3'] = {}
     for b in BRAZOS_ACTIVOS:
         sg = b[-1]; d = BRAZOS[b]['dir']; cor = 'PAR0-' if b.startswith('PAR') else 'CORTADO' + sg
-        if b == cor:
+        if b == cor or b.startswith('OTRO'):   # ERR-52: OTRO (R-SIN-SAL) vive en otro mundo; su gemelo no es CORTADO y el prefijo difiere por construccion
             continue
         k = 'prefijo_msg' if b.startswith('INM') else 'prefijo'
         pc = gg(cor, k)
