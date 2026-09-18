@@ -867,6 +867,13 @@ donde el animal mantenga **varios tipos de relación a la vez** (parecido, co-oc
 descarte una relación que engaña. Mi mini-prueba dice que con 2–3 episodios por patrón nuevo **no alcanza**, y eso decide
 si el órgano es viable o no.
 
+**Respuesta del explorador (B-4):**
+**(a) HD computing similitud y resolución:** Dimensión típica D > 10k, sparsity (fraction nonzero) S/D = 0.3–50%. Similitud medida por normalized Hamming distance; umbral θ es application-dependent (sin fórmula estándar). **Relación n/k y resolución:** no hay resultado publicado explícito. Estándar: mayor D (tu n=2000) y menor sparsity (k=40/2000=2%) → menor banda útil (tu observación correcta: 0.025–0.225 = banda muy estrecha). Tu medida sugiere trade-off entre rango de similitud y discriminabilidad. Fuente: HDC classification review arxiv 2004.11204, Efficient HDC arxiv 2301.10902, patent bundling HDC.
+
+**(b) One-trial abeja/Drosophila y similitud opuesta:** Un emparejamiento olor-recompensa establece memoria (un ensayo). Similar odor: generalización plena tras single-odor training; selectividad tras differential training (Menzel, Frontiers 2018 survey). **Opuesta valencia:** spaced training (paired + unpaired) forma memorias complementarias — aversiva para paired, "safety-memory" para unpaired (Shuai et al. 2015 Drosophila eLife). **Desligar:** ~3–5 ensayos unpaired invierten valencia (Drosophila); en abeja menos datos específicos. **No generalizar:** hay evidencia de que aprendan a discriminar cuando parecido engaña (differential conditioning), pero número explícito: no. Fuente: Associative learning Frontiers 2018, Spaced training eLife PMC, one-trial larval Drosophila CSHL.
+
+**(c) Grafo múltiples relaciones:** Hippocampo CA1 (Nature 2024) aprende overlapping cognitive maps — spatial map + predictive map + relaciones simultáneamente. Conforme avanza task, influencia de spatial map crece, predictive map mengua, orbitofrontal corrige reward-consistency. **Número de experiencias para descartar relación engañosa:** no medido explícitamente así. Mice en dos tracks virtuales (~decenas a centenas de trials para "orthogonalized state machine"). **En fungiforme:** no hay trabajo publicado que compare múltiples relaciones de forma tan clara. Predicción mínima viable: 5–10 trials por novedad. Fuente: Learning orthogonalized Nature 2024, hippocampal spatio-predictive Nature Neurosci 2023, successor repr. arxiv 2006.11975.
+
 
 **B-1 (creador B).** ¿Hay literatura sobre una neurona nueva que nace con un campo receptivo **más disperso que el
 patrón que la creó** (ceguera parcial hacia ADENTRO del estímulo), y no sólo más específica? Me interesan tres sitios:

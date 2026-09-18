@@ -1,0 +1,16 @@
+[05:22:35 +    0.0s] HUMO bloque 4 (un proceso, sin Pool). identidad + 4 brazos x 2 lecturas, xor01, semilla 81, T=100000.
+[05:22:35 +    0.0s] sha organismo_v13q5 fae9c32b146fdbb4  organismo_v13q4 3cc732dd2b2519cd  organismo_v13q3 aaebe073308a40c2  script 77fc5dc6e7de4a5c
+[05:22:51 +   15.9s]    identidad px0/lineal           s81: IDENTICO  (claves nuevas: ['lab', 'lenta_eventos', 'fase2_en', 'seleccion', 'sel_estad', 'sel_theta', 'sel_rho', 'sel_cupo', 'sel_abre', 'sel_abiertos', 'sel_e', 'sel_n'])
+[05:22:51 +   15.9s]    identidad xor01/cuadratica     s81: IDENTICO  (claves nuevas: ['lab', 'lenta_eventos', 'fase2_en', 'seleccion', 'sel_estad', 'sel_theta', 'sel_rho', 'sel_cupo', 'sel_abre', 'sel_abiertos', 'sel_e', 'sel_n'])
+[05:22:51 +   15.9s]    identidad xor01/oraculo01      s81: IDENTICO  (claves nuevas: ['lab', 'lenta_eventos', 'fase2_en', 'seleccion', 'sel_estad', 'sel_theta', 'sel_rho', 'sel_cupo', 'sel_abre', 'sel_abiertos', 'sel_e', 'sel_n'])
+[05:22:51 +   15.9s]    identidad: 3/3
+[05:23:26 +   50.9s]    oraculo01   TRONCO       s81: acc_lenta 0.500  acc 0.500  abre P0*P1 no  Ws(P0*P1) -1.00  max|Ws| 1.00  eventos 276  clases sin morder 0  n*(>=.75) 150
+[05:23:26 +   50.9s]    oraculo01   DOS_NUM      s81: acc_lenta 0.625  acc 0.562  abre P0*P1 no  Ws(P0*P1) -3.16  max|Ws| 3.16  eventos 215  clases sin morder 0  n*(>=.75) 60
+[05:23:26 +   50.9s]    oraculo01   DOS_NUM_WTA  s81: acc_lenta 1.000  acc 0.938  abre P0*P1 SI  Ws(P0*P1) -5.02  max|Ws| 5.02  eventos 356  clases sin morder 0  n*(>=.75) 300
+[05:23:26 +   50.9s]    oraculo01   ETA_1        s81: acc_lenta 0.500  acc 0.500  abre P0*P1 no  Ws(P0*P1) -4.00  max|Ws| 7.00  eventos 16  clases sin morder 0  n*(>=.75) >600
+[05:23:26 +   50.9s]    cuadratica  TRONCO       s81: acc_lenta 0.438  acc 0.438  abre P0*P1 no  Ws(P0*P1) -0.80  max|Ws| 1.28  eventos 353  clases sin morder 0  n*(>=.75) >600
+[05:23:26 +   50.9s]    cuadratica  DOS_NUM      s81: acc_lenta 0.375  acc 0.375  abre P0*P1 no  Ws(P0*P1) -1.92  max|Ws| 2.26  eventos 282  clases sin morder 0  n*(>=.75) >600
+[05:23:26 +   50.9s]    cuadratica  DOS_NUM_WTA  s81: acc_lenta 0.438  acc 0.312  abre P0*P1 no  Ws(P0*P1) 0.00  max|Ws| 1.77  eventos 126  clases sin morder 0  n*(>=.75) >600
+[05:23:26 +   50.9s]    cuadratica  ETA_1        s81: acc_lenta 0.500  acc 0.500  abre P0*P1 no  Ws(P0*P1) 0.00  max|Ws| 10.00  eventos 4  clases sin morder 2  n*(>=.75) >600
+[05:23:26 +   50.9s]    (referencia: TRONCO oraculo = 0.625 y cuadratica = 0.438 en el flujo cosechado de 20 semillas 1-20; nada se ajusta con este humo.)
+[05:23:26 +   50.9s] datos -> xor_4_humo_20260918_052235.json  sha256_16 = fc920658ea9cd6a4
