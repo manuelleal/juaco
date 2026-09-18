@@ -578,8 +578,8 @@ suelo y pierde la prueba de latencia contra dE-TEST (adenda de C7).
 | candidato | mecanismo | estado al cierre (01:40) |
 |---|---|---|
 | **Hija dispersa** (B-1) | la hija nace ciega a parte de `P`, no sólo fuera de él | REPLICADA (61–80 refutada por la letra, 81–100 pasa incluso el umbral original); **v13D NO REGRESIONA (01:27): examen v3' 8/8 en 101–120, G1 0.80 / G2 0.83, inerte en 6 px → candidata a v14** (`PROPUESTA_v14.md`, rama `v14-candidato`) |
-| **dE-TEST** (C-P1) | la sorpresa del mundo (ΔE) puesta en la boca, no en `eta` | **serie 81–100 (01:48): pasa retención (≥ 19/20 × 6) y generalización (G1 0.90); tres series 0.14× (20/20 × 3), apagado 20/20 × 3 → candidato a órgano** (segundo en `PROPUESTA_v14.md`; falta el examen v3' completo sobre una copia del tronco); el automodelo pasa todo en la tercera serie (apagado 17/20) |
-| **B-2** (puerta por código) | cuenta mordidas del código exacto en vez de celdas consolidadas | mini-prueba a escala reducida cierra el canje (`N*` v13 6 → 20, 3/3 semillas); **montaje completo 41–60 + baterías EN CURSO desde la 01:36 (~60 min); el coordinador lo registra al terminar** |
+| **dE-TEST** (C-P1) | la sorpresa del mundo (ΔE) puesta en la boca, no en `eta` | serie 81–100 (01:48): retención ≥ 19/20 × 6 y G1 0.90; tres series 0.14× (20/20 × 3), apagado 20/20 × 3; **examen v3'' completo (v13E, 02:45): retención 8/8 pero G1 0.750 < 0.80 → FUERA de la propuesta a la dosis 10 (coste 0.05 en generalización de valor; bloque de dosis en preparación)**; el automodelo pasa todo en la tercera serie (apagado 17/20) |
+| **B-2** (puerta por código) | cuenta mordidas del código exacto en vez de celdas consolidadas | **montaje completo 41–60 (02:32): `N*` 50.5 = v11 contra 35 de v13 en el paso largo (20 000: 41.5 contra 28, umbral 45 no alcanzado), generalización intacta (px0 1.000 / 0.96), contadores barajados destruyen la ganancia; examen v3' 19/20 en E2 y 8/8 en la réplica 121–140 → TERCER CANDIDATO a v14** (`PROPUESTA_v14.md`, rama `v14-candidato`) |
 | **Vector único** (A-3) | la vía lenta como un solo vector con signo, sin canal doble | simplificación con identidad CONFIRMADA (60/60); no compra capacidad nueva, ahorra memoria |
 
 Ninguno entró al tronco esta noche: los dos primeros quedan como candidatos con evidencia completa salvo lo anotado, B-2 en
@@ -607,12 +607,13 @@ un criterio lleva ERR numerado al escribirla, aunque sea antes de la serie nueva
 bateria_generaliza.py organismo_v13 10`. **Qué leer, en orden:** este §15 → `CLAUDE.md` ("Estado día 7") →
 `PLAN.md` ("Madrugada del 18", lo que sigue sin marcar) → `PUENTE_creacion.md` ("Propuestas para el coordinador":
 B-2 y C-P2/C-P3 sin correr). **Qué completar, en este orden:** (1) HECHO 01:27 — baterías de `organismo_v13D` (8/8; G1 0.80 / G2 0.83); (2) HECHO 01:48 —
-serie 81–100 de C-P1 con baterías para dE-TEST (pasan) y latencia (dE arranca antes); (3) B-2 a escala completa (41–60 +
-baterías) EN CURSO al cerrar: registrar su veredicto; (4) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
+serie 81–100 de C-P1 con baterías para dE-TEST (pasan) y latencia (dE arranca antes); (3) HECHO 02:41 — B-2 a escala completa
+(41–60 + baterías + réplica del examen 121–140): tercer candidato; (4) HECHO 02:45 — examen v3'' de v13E: fuera a la dosis 10;
+(5) bloque de dosis de la sorpresa en la boca (k_testE 3 y 5) en preparación; (6) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
 creador C); N2 sólo con significado por predicción (C-P2, sin instrumento en el mundo social); horizonte 2 del mapa
 (sin potencia, 6/20). Un `Pool` a la vez; nada entra a v14 sin examen v3' + baterías + réplica.
 
 **Vamos bien o mal, en dos frases:** Vamos bien: la célula entregó cinco hallazgos verificados con identidad y
 control, y dos auditorías que atraparon sus propios errores antes de declarar nada candidato. Vamos mal: ningún
-candidato está en el tronco todavía (la decisión es del director), B-2 no había terminado al cerrar, y XOR y N2 siguen
-sin un mecanismo que funcione con la dinámica actual del mundo.
+candidato está en el tronco todavía (la decisión es del director), la sorpresa en la boca cobra generalización de valor a la
+dosis probada, y XOR y N2 siguen sin un mecanismo que funcione con la dinámica actual del mundo.
