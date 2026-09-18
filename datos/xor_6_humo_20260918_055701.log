@@ -1,0 +1,16 @@
+[05:57:01 +    0.0s] HUMO bloque 6 (un proceso, sin Pool). identidad 1a + 1b + 6 brazos, xor01, semilla 101, T=100000.  --rapido SI (solo brazos sin `ntr`)
+[05:57:01 +    0.0s] sha organismo_v13q6 b37aa8124c89cc5f  construye_v13q6 72e40d2ec661a61d  organismo_v13q5 fae9c32b146fdbb4  gemelo 87d48b8fec173907  organismo_v13q3 aaebe073308a40c2  script 8e52508e46c705ab
+[05:57:21 +   19.9s]    identidad px0/lineal           s101: IDENTICO
+[05:57:21 +   19.9s]    identidad xor01/cuadratica     s101: IDENTICO
+[05:57:21 +   19.9s]    identidad gemelo caso0         s101: IDENTICO
+[05:57:21 +   19.9s]    identidad gemelo caso1         s101: IDENTICO
+[05:57:21 +   19.9s]    identidad gemelo caso2         s101: IDENTICO
+[05:57:21 +   19.9s]    identidad: 5/5 (1a original + 1b gemelo)
+[05:57:40 +   39.0s]    REF             s101: tren  8/test 12 gemelo  acc_lenta 0.500  acc 0.312  abre P0*P1 SI (TRAS la sonda)  Ws(P0*P1) 0.00  eventos 279  clases sin morder 1  n*(>=.75) >600
+[05:57:40 +   39.0s]    SIN_CTE         s101: tren  8/test 12 gemelo  acc_lenta 0.500  acc 0.500  abre P0*P1 SI (TRAS la sonda)  Ws(P0*P1) 0.00  eventos 275  clases sin morder 1  n*(>=.75) >600
+[05:57:40 +   39.0s]    NTR11           s101: tren 11/test  9 interp  acc_lenta 0.083  acc 0.083  abre P0*P1 no  Ws(P0*P1) 0.00  eventos 280  clases sin morder 0  n*(>=.75) >600
+[05:57:40 +   39.0s]    NTR14           s101: tren 14/test  6 interp  acc_lenta 0.625  acc 0.750  abre P0*P1 no  Ws(P0*P1) 0.00  eventos 230  clases sin morder 0  n*(>=.75) >600
+[05:57:40 +   39.0s]    SIN_CTE_NTR11   s101: tren 11/test  9 interp  acc_lenta 0.500  acc 0.167  abre P0*P1 SI  Ws(P0*P1) -2.22  eventos 288  clases sin morder 0  n*(>=.75) >600
+[05:57:40 +   39.0s]    SIN_SEL         s101: tren  8/test 12 gemelo  acc_lenta 0.375  acc 0.375  abre P0*P1 no  Ws(P0*P1) 0.00  eventos 139  clases sin morder 1  n*(>=.75) >600
+[05:57:40 +   39.0s]    (referencia del humo de 3 semillas: REF 0.500, SIN_CTE 0.625, NTR11 0.833, NTR14 0.500; nada se ajusta con esto.)
+[05:57:40 +   39.0s] datos -> xor_6_humo_20260918_055701.json  sha256_16 = 61239d3e9bc1fee8
