@@ -4155,3 +4155,29 @@ del preregistro se cumple para dE5 y falla en el detalle de dE3 (G1 sí, G2 no).
 director lo acepta: réplica de la recuperación en otra serie a dosis 5 (hoy: una serie a 5 y tres a 10), gemelo y congelación.
 Vocabulario: *la sorpresa del mundo puesta en la boca, a dosis 5, hace probar cuando el mundo cambia sin cobrar
 retención ni generalización*.
+
+
+### Composición de los dos candidatos aceptados (hija dispersa + puerta por código PATC) sobre el tronco (18 sep 03:55): **por la letra, "los órganos interfieren, no se proponen juntos" — C1 cae por UNA semilla en E2 (19/20, la misma fragilidad que PATC solo en 101–120), C2 y C4 pasan, C3 queda 0.013 por debajo de la hija sola**
+
+Preregistro `experimentos/nivel10_composicion_v14/PREREGISTRO_composicion_v14.md` (47e9bdee00afc5c9; escrito antes de correr);
+instrumentos por anclas sobre el tronco con los dos parches (colisión de la firma resuelta y declarada): `organismo_v14c`
+(649851c0f10c3cd6; perillas apagadas ≡ v13), `organismo_v14c_on` (00e941c861896455), `organismo_v14gc`, `organismo_capBD`,
+`mundo_composicion_v14`, `bateria_v14c`, `bateria_generaliza_v14c`; **identidad 30/30** en la copia principal (cada perilla sola
+≡ su candidato: v13Don 3/3, v13Bn5c 3/3); datos `composicion_v14_20260918_033225` (f9de95cb542342f7), 22 min.
+
+| medida (las dos perillas ON) | resultado | umbral | veredicto |
+|---|---|---|---|
+| C1 examen v3' completo (101–120) | E1, E2I–E2L 20/20; **E2 19/20** (`come B Q4 ≥ 50`); celdas ≤ 45; 3' 0/20; 3'' 20/20; 4a–4d OK → 7/8 | 8/8 | **NO** |
+| C2 generalización (101–120) | K 20/20; G1 px0 **1.000** (20/20); G2 **0.940** (20/20) | ≥ 0.80 / ≥ 0.85 | OK |
+| C3 composición 3T-k, k = 5 (61–80) | lift **0.237** (> V13 18/20; V13 0.137); sep 2.90 (V13 1.87); celdas **53** (V13 90; 19/20) | lift ≥ 0.25 y ≥ hija sola (0.251) | **NO** por 0.013 |
+| C4 capacidad, mundo grande (41–60) | `N*` **51.0** a 60 000 (v13 35.0); 44.0 a 20 000 (v13 28.0) | ≥ 48 | OK |
+
+**Lectura honesta.** El único fallo del examen es la misma semilla-subcriterio que PATC solo dio en 101–120 (19/20) y que pasó en la
+réplica 121–140 (8/8): con la letra del preregistro no se pueden proponer juntos; con los datos, no hay señal de interferencia
+más allá de esa fragilidad conocida de PATC, y la composición **suma**: generaliza mejor que cualquiera solo (1.000 / 0.94),
+recupera la capacidad (51) y compone historias profundas con la mitad de celdas (53), aunque la puerta le resta un poco de
+ventaja conductual a la hija dispersa (0.237 contra 0.251). **Enmienda 1 (escrita ahora, antes de correr, semillas nuevas):
+réplica del examen compuesto (C1) en 121–140 con la misma letra** (`bateria_v14c.py 20 --desde 121 --log`); si 8/8, la
+composición pasa a la propuesta como opción conjunta (C3 se reporta como está: no alcanza 0.25); si vuelve a caer E2, quedan
+como candidatos separados y el director elige. Vocabulario: *juntos generalizan y recuerdan como el mejor de los dos y componen
+casi como la hija sola; la puerta cuesta una semilla de conducta en el examen de 101–120*.

@@ -66,3 +66,12 @@ semilla, subcriterio conductual `come B Q4 ≥ 50`). **Condición CUMPLIDA (02:4
 series). Entra a la propuesta como tercer candidato (copia en la rama `v14-candidato`:
 `organismo/organismo_v14_candidato_puerta.py` = `experimentos/nivel4_puerta_codigo/organismo_v13Bn5c.py`). Datos `puerta_codigo_s41-60_20260918_013618`. Componible con los otros dos
 (actúa en el ruteo, no en el aprendizaje ni en la boca).
+
+
+## Composición de los candidatos (03:55): por la letra NO se proponen juntos todavía; réplica del examen compuesto en curso
+
+Con hija dispersa + puerta por código ON a la vez: examen 7/8 (E2 19/20 en 101–120, la misma semilla-subcriterio que PATC solo);
+generalización G1 1.000 / G2 0.94 (mejor que cualquiera solo); capacidad `N*` 51 (v13 35); composición 3T-k lift 0.237 (hija sola
+0.251; v13 0.137) con 53 celdas. Enmienda 1: réplica del examen compuesto en 121–140. **Si pasa, la propuesta conjunta es v14 =
+v13 + hija dispersa + puerta por código (+ sorpresa en la boca a dosis 5 por separado: su composición con los otros no se ha
+medido). Si no, el director elige entre candidatos separados.** Datos `composicion_v14_20260918_033225`.

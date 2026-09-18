@@ -162,7 +162,9 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     la dosis probada (coste 0.05 en generalización de valor). ERR-31: el runner leyó los umbrales de la batería y no los del
     preregistro; el registro sigue la letra. **Bloque de dosis (03:32): `k_testE = 5` cumple las seis condiciones a la vez
     (recuperación 0.267× en 121–140, 20/20; se apaga 20/20; G1 0.80; G2 0.857; K 20/20; examen v3'' 8/8) → SEGUNDO
-    CANDIDATO a v14 a dosis 5 (`organismo_v14_candidato_sorpresa.py` en la rama); k = 3 no (G2 0.842, examen 7/8).** Auditoría del día 7 integrada
+    CANDIDATO a v14 a dosis 5 (`organismo_v14_candidato_sorpresa.py` en la rama); k = 3 no (G2 0.842, examen 7/8).** · **Composición hija dispersa + puerta por código (03:55): examen 7/8 (E2 19/20 en
+    101–120, la fragilidad de PATC solo), generalización 1.000 / 0.94, capacidad 51, composición 3T-k 0.237 (hija sola 0.251)
+    → por la letra no se proponen juntos; réplica del examen compuesto en 121–140 (enmienda 1) decide.** Auditoría del día 7 integrada
     (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).
 - **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
   automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.

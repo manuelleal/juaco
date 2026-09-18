@@ -1,0 +1,45 @@
+[03:32:25 +    0.0s] ARRANQUE composicion v14 (hija dispersa + puerta por codigo). SOLO=['C1', 'C2', 'C3', 'C4']  Pool(14) por etapa, secuencial
+[03:32:25 +    0.0s] sha preregistro=47e9bdee00afc5c9  script=647736fe3bfb2708  constructor=5f2f98d1ca57db79  identidad=2cea98f9ca647e90  organismo_v14c=649851c0f10c3cd6  organismo_v14c_on=00e941c861896455  organismo_v14gc=dcca1ab79d86289b  bateria_v14c=94d035c5bfffa2e1  bateria_generaliza_v14c=168a38f5adce396b  organismo_capBD=e215b0148bc2c4fc  mundo_composicion_v14=a9098933b1950e3d  origen organismo_v13 (congelado)=cc8b16b492d4d324  origen bateria_v13 (congelada)=1a027bcb37eb536e  origen bateria_generaliza=46772f5a582872c8  origen mundo_hija_dispersa=d305d53186fcbcd6  origen organismo_capB=8070351683837077
+[03:32:26 +    0.4s] REGLA 11 -- procesos python vivos (2), este es pid 15372
+[03:32:26 +    0.4s] 
+[03:32:26 +    0.4s] ETAPA C1 -- examen v3' completo (bateria_v14c, las DOS perillas ON), semillas 101-120...
+[03:35:36 +  190.3s]    PASA  1 E1        20/20  [venenoQ4<Q1:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20]
+[03:35:36 +  190.3s]    FALLA 1 E2        19/20  [W_Aâ†’-3:20/20 W_Bâ†’+1:20/20 come B Q4â‰¥50:19/20]
+[03:35:36 +  190.3s]    PASA  1 E2I       20/20  [W_Câ‰¤-2.5:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰¤-2.8:20/20 tasaA Q4â‰¥80%Q2:20/20]
+[03:35:36 +  190.3s]    PASA  1 E2J       20/20  [W_Dâ‰¥0.85:20/20 W_Bâ‰¤-2.7:20/20]
+[03:35:36 +  190.3s]    PASA  1 E2K       20/20  [W_Dâ‰¥0.8:20/20 W_Bâ‰¤-2.4:20/20]
+[03:35:36 +  190.3s]    PASA  1 E2L       20/20  [W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20 solapâ†’0:20/20]
+[03:35:36 +  190.3s]    PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[03:35:36 +  190.3s]    PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (<=1)  W_A=[-2.07, -1.7, -1.52, -1.44]
+[03:35:36 +  190.3s]    PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 20/20 lo pasan (>=19)
+[03:35:36 +  190.3s]    PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[03:35:36 +  190.3s]    PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 9)
+[03:35:36 +  190.3s]    PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[03:35:36 +  190.3s]    VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[03:35:36 +  190.3s]    *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[03:35:36 +  190.3s]    C1 = 7/8  ok=False
+[03:35:36 +  190.3s] 
+[03:35:36 +  190.3s] ETAPA C2 -- generalizacion (bateria_generaliza_v14c, organismo_v14c_on), semillas 101-120...
+[03:36:22 +  236.6s]    OK    K  cobertura del primer encuentro: 20/20
+[03:36:22 +  236.6s]    PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 20/20
+[03:36:22 +  236.6s]    PASA  G2 conducta al primer encuentro: px0 0.940 (>=0.55), azar 0.508, px0>azar 20/20
+[03:36:22 +  236.6s]    VEREDICTO bateria_generaliza (organismo_v14c_on): K_cobertura=True G1_valor=True G2_conducta=True
+[03:36:22 +  236.6s]    G1 px0=1.000 (>=0.8) azar=0.500 px0>azar 20/20  -> True
+[03:36:22 +  236.6s]    G2 px0=0.9395237399134684  (>=0.85) azar=0.5082850955260554 px0>azar 20/20  -> True
+[03:36:22 +  236.6s]    K  cobertura>=6: 20/20  -> True   ==> C2 ok=True
+[03:36:22 +  236.6s] 
+[03:36:22 +  236.6s] ETAPA C3 -- composicion temporal (3T-k, k=5), semillas 61-80, T=100000...
+[03:36:46 +  260.8s]    lift_q4 COMP mediana 0.237 (>= 0.25), > V13 en 18/20 (>= 15)  -> ok_lift=False
+[03:36:46 +  260.8s]    celdas COMP<=0.75xV13 en 19/20 (>= 14)  celdas COMP=53 V13=90  -> ok_celdas=True
+[03:36:46 +  260.8s]    referencia hija-dispersa-sola (registro, mismos seeds/k): lift_q4 0.251, celdas 48  -> COMP >= esa referencia: False
+[03:36:46 +  260.8s] 
+[03:36:46 +  260.8s] ETAPA C4 -- capacidad en el mundo grande (organismo_capBD), semillas 41-60, D=10, n_est=60, pasos=(20000, 60000)...
+[03:54:43 + 1337.5s]    v13   pt= 20000  N* 28.0 [3,45]  celdas 90
+[03:54:43 + 1337.5s]    COMP  pt= 20000  N* 44.0 [11,60]  celdas 90
+[03:54:43 + 1337.5s]    v13   pt= 60000  N* 35.0 [9,46]  celdas 90
+[03:54:43 + 1337.5s]    COMP  pt= 60000  N* 51.0 [31,60]  celdas 90
+[03:54:43 + 1337.5s]    C4: N*(COMP) a pt=60000 = 51.0  (umbral 48)  -> ok=True
+[03:54:43 + 1337.5s] 
+[03:54:43 + 1337.5s] VEREDICTO composicion_v14: LOS ORGANOS INTERFIEREN: C1 o C2 cayeron -> no se proponen juntos (clausula del preregistro).
+[03:54:43 + 1337.5s]   C1=False  C2=True  C3=False  C4=True
+[03:54:43 + 1337.8s] datos -> composicion_v14_20260918_033225.json  sha256_16 = f9de95cb542342f7

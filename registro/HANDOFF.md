@@ -609,8 +609,9 @@ bateria_generaliza.py organismo_v13 10`. **Qué leer, en orden:** este §15 → 
 B-2 y C-P2/C-P3 sin correr). **Qué completar, en este orden:** (1) HECHO 01:27 — baterías de `organismo_v13D` (8/8; G1 0.80 / G2 0.83); (2) HECHO 01:48 —
 serie 81–100 de C-P1 con baterías para dE-TEST (pasan) y latencia (dE arranca antes); (3) HECHO 02:41 — B-2 a escala completa
 (41–60 + baterías + réplica del examen 121–140): tercer candidato; (4) HECHO 02:45 — examen v3'' de v13E: fuera a la dosis 10;
-(5) HECHO 03:32 — dosis de la sorpresa en la boca: k = 5 candidata (k = 3 no); (6) composición de los candidatos (hija dispersa +
-puerta por código) EN CURSO al cerrar; (7) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
+(5) HECHO 03:32 — dosis de la sorpresa en la boca: k = 5 candidata (k = 3 no); (6) HECHO 03:55 — composición de los candidatos: por la letra no se
+proponen juntos (examen 7/8 por una semilla en E2; generalización 1.000/0.94 y capacidad 51 pasan; composición 0.237 < 0.25),
+réplica del examen compuesto en 121–140 EN CURSO; (7) leer `PROPUESTA_v14.md` y decidir (director). Abierto sin tocar: XOR 3f (falta la pieza de muestreo,
 creador C); N2 sólo con significado por predicción (C-P2, sin instrumento en el mundo social); horizonte 2 del mapa
 (sin potencia, 6/20). Un `Pool` a la vez; nada entra a v14 sin examen v3' + baterías + réplica.
 

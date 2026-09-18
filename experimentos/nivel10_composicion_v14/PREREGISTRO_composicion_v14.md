@@ -165,3 +165,12 @@ sola corrida) y un implementador no corre `Pool` (regla 3 de EQUIPO.md) — C1/C
 `python experimentos/nivel10_composicion_v14/corre_composicion_v14.py --humo`, un proceso, sin `Pool`: identidad en
 miniatura + C3 (2 semillas, T=3000) + C4 (2 semillas, D=10, n_est=8, paso=500). Salida y tiempo en el mensaje final
 del implementador.
+
+
+## Enmienda 1 (coordinador, 18 sep 2026, 04:00; escrita DESPUÉS de la corrida 03:32 y ANTES de la réplica)
+
+Resultado: C1 7/8 (E2 19/20, `come B Q4 ≥ 50`, la misma fragilidad de PATC solo en 101–120 que pasó 8/8 en 121–140), C2 OK
+(1.000 / 0.94), C3 lift 0.237 (< 0.25; > V13 18/20; celdas 53 vs 90), C4 OK (51). Por la letra: "interfieren, no se proponen
+juntos". **Réplica de C1 en semillas nuevas 121–140, misma letra (8/8)**: si pasa, la composición entra a la propuesta como opción
+conjunta con C3 registrado tal cual; si E2 (u otra etapa) vuelve a caer, los candidatos se proponen por separado. C3 no se
+recalibra ni se repite. Nada más cambia.
