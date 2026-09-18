@@ -3351,3 +3351,69 @@ tipo se vuelve a sortear: reaparición en sitio + flujo de patrones) y `escucha_
 |valor propio| < |valor del símbolo|). Brazos CONV (ambos), CONV_MUNDO (sólo el mundo), N0, SOLO, INNATO, SHUF.
 Predicción escrita: E2 pasa en CONV y CONV_MUNDO (la magnitud viene del mundo); E4 sólo en CONV. Vocabulario por
 ahora: *en el mundo con reaparición el símbolo adquiere magnitud; enseña al que no sabe y desenseña al que sabe*.
+
+
+### Bloque 2 bis (día 6): novedad de sitio (diseño del agente diseñador) — **refutada a dosis 0.6; la dosis 1.8 (lectura) casi recupera la exploración sin cobrar la comida → serie confirmatoria**
+
+Preregistro `experimentos/nivel8_novedad_sitio/PREREGISTRO_novedad_sitio.md`; instrumento `mundo_largo_n.py`
+(`f3e9ad0118f1d6c5`, `gamma_N = 0` ≡ `mundo_largo` con el mundo completo, 3/3; reconstruido en la copia principal con el
+mismo sha); datos `novedad_s61-80_20260917_215405` (`6ccb7e1133333cd9`). Mecanismo: `t_visita[pos]` al pisar un sitio y,
+con la retina vacía, sesgo `gamma_N · Σ disc^h · min(1, (t − t_visita)/tau_N)` sobre los sitios que `M` conoce.
+
+| brazo | adquisición (≤ 30) | comida Q4 | muertes | visitas / equidad | celdas |
+|---|---|---|---|---|---|
+| V13 | 0.900 | 836 | 32 | 13 559 / 0.615 | 90 |
+| MAPA | 0.704 | 963 | 34 | 5 664 / 0.120 | 86 |
+| MAPA + novedad 0.6 (criterio) | **0.800** | 946 | 28 | 7 982 / 0.292 | 90 |
+| + novedad barajada | 0.741 | 974 | 26 | 6 633 / 0.145 | 88 |
+| + novedad constante (lectura) | 0.700 | 1 158 | 19 | 7 288 / 0.133 | 86 |
+| **+ novedad 1.8 (lectura, dosis)** | **0.874** | 929 | 36 | 13 515 / 0.518 | 90 |
+
+P1 NO (0.800; > MAPA 14g/5e/1p), P2 NO (14/20), P3 OK (13g/4e/3p; barajada no supera a MAPA), P4 OK (> constante 15/20).
+**Refutada como estaba escrita**, pero con la lectura que el preregistro reservaba: el mecanismo va en la dirección
+correcta y la diferencia con la barajada y con la constante es real; lo que no alcanza es la **escala** (novedad
+máxima +0.6 contra recuerdo de veneno −3). La dosis 1.8 recupera la equidad de visitas de V13 (0.518 contra 0.615) y casi
+su adquisición (0.874 contra 0.900) conservando la comida del mapa (929 contra 963). **Decisión (regla 12, cláusula (a)
+del preregistro):** serie confirmatoria con la dosis 1.8 en semillas nuevas 81–100, mismos criterios (enmienda 1). Nada
+se ajusta sobre 61–80. Vocabulario si pasa: *vuelve a los sitios que lleva tiempo sin pisar y por eso encuentra lo nuevo*.
+
+### N2f v2 (agente diseñador): la rotación de tipos arregla K3 y **destruye K4** — balance y flujo son incompatibles con retirada sólo al morder
+
+Humo v2 (semilla 81; `regen_rota`: al regenerar un sitio se vuelve a sortear el tipo): patrones presentes 20 ✅ (K3 ok),
+pero la razón rechaza/muerde vuelve a **36 201 / 794 = 0.022** (v1: 0.286; N2d: 0.016) y las visitas comida/veneno
+**decaen por cuarto** (0.037 → 0.018): **el mundo se absorbe en veneno**, porque un objeto sólo se retira al morderlo:
+la comida se muerde, rota y puede volver veneno; el veneno se rechaza y nunca sale. Contraste ±0.30, `decodificados = 0`
+→ la puerta vicaria nunca abre y la segunda perilla (`escucha_si_no_sabe`) no tiene ocasión (CONV ≡ CONV_MUNDO bit a
+bit). **Reinterpretación de la v1:** el reequilibrio ×18 lo daba la **congelación** del mundo (5 patrones), no la
+reaparición. Identidad con las dos perillas apagadas 8/8 (N3c/N3d protegidos). **Decisión:** no se corre; tercera
+perilla `vida` (caducidad por objeto: el veneno también sale) con puerta de validez propia, la construye el mismo agente;
+se corre el día 7. Sonda de dinámica sin organismos (razón comida/veneno): v1 0.366 · v2 0.015 · `vida = 200` 0.14 ·
+`vida = 50` **1.01**. Fallo de predicción del agente registrado por él mismo: acertó K3, falló K4.
+
+### Trío XOR (agentes A, B, C con puente `registro/investigacion/PUENTE_xor.md`): **propuesta única firmada, hipótesis para preregistrar (3d), no resultado**
+
+A (regla delta con signo, sin drenaje): **refutada** — `acc_lenta` en `xor01` 0.250 (peor que 0.50 de dos canales) aunque
+el producto aprende −2.2: sin regularizador las otras 20 entradas absorben correlación espuria de 8 patrones (sistema
+subdeterminado). B (drenaje `lam` y tope `clip_s`): **refutada por ablación** — ninguno mueve nada (24 corridas); el
+tope nunca actúa. C (lectura y muestreo): sin término constante el patrón `(0,0)` vale exactamente 0 (prueba algebraica);
+la constante sola sube la mediana de 0.25 a 0.375; **en 3 de 10 semillas una clase XOR entera no recibe ninguna
+mordida antes de la sonda** (límite del muestreo del mundo, no de la regla); ~331 actualizaciones de la vía lenta antes
+de la sonda. Propuesta fusionada (firmada por los tres): `phi' = phi + [1]`, vector con signo `Ws`, decaimiento
+multiplicativo `Ws·(1 − lam_lenta)` con `lam_lenta` ∈ [0.001, 0.003]; prueba exploratoria de C: 0.50 y 0.31 — no llega a
+0.75. **Decisión:** 3d se preregistra el día 7 con instrumento único por anclas (no tres copias), sonda `Ws_apriori`,
+controles lineal/random15/azar, y con la cota de muestreo escrita (mediana sobre 20 semillas, no 0.75 por semilla).
+Vocabulario: *XOR sigue sin generalizarse; tres mecanismos aislados refutados; la fusión es hipótesis*.
+
+### Gemelos compilados de los mundos (compiladores Opus) y revisión independiente del gemelo del tronco
+
+- `mundo_temporal_k_rapido.py` (3T-k): **146/146** idéntico (6 brazos × k = 1…5 × 3 semillas + 7 variantes), ×74; suma por
+  pares de NumPy reproducida bit a bit; **trampa hallada:** función recursiva + `cache=True` → el proceso que carga el
+  cache segmenta sin traza (habría matado a cada worker de `Pool`); resuelta con pila explícita; regla 9 de `EQUIPO.md`.
+- `organismo_v13q_rapido.py` (mundo de regla / XOR): **81/81 + 243/243 + 81/81** idéntico, ×67–77; pendiente añadir las
+  lecturas `W_lenta_apriori`/`familiar_apriori` del 3b (el gemelo se construyó sobre la versión previa).
+- `mundo_mapa_rapido.py`: **90/90** idéntico (los seis brazos de `corre_mapa` + 18 caminos de cobertura), ×30–38 con mapa
+  y ×52–120 sin mapa; regla 9 comprobada (proceso nuevo leyendo el cache).
+- Revisión del gemelo del tronco (Sonnet): **apto para confirmar**; 257/257 nuevas corridas idénticas (rejilla ampliada de
+  18 configuraciones × 10 semillas, 200k × 5, `learn=False` × 5); H1: `puerta` negativa explícita divergía del tronco (que la
+  trata como 0) → el gemelo ahora la **rechaza** con `ValueError` (ningún experimento la usa); H4: `nuevo_val` inválido
+  ahora falla en vez de callar. Cada gemelo queda integrado sólo tras repetir su arnés en la copia principal (en curso).

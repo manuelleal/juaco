@@ -25,6 +25,13 @@ BRAZOS = {
     'MAPA_NOV_ALTA': dict(usa_M=True, gamma_N=1.8, tau_N=4000.0),
 }
 CRITERIO = ('V13', 'MAPA', 'MAPA_NOV', 'MAPA_NOV_BAR')
+ALTA = '--alta' in sys.argv   # enmienda 1: serie CONFIRMATORIA de la dosis 1.8 (vista en el brazo exploratorio) en semillas nuevas; mismos criterios
+if ALTA:
+    SEEDS = list(range(_desde if '--desde' in sys.argv else 81, (_desde if '--desde' in sys.argv else 81) + 20))
+    BRAZOS = {'V13': dict(usa_M=False), 'MAPA': dict(usa_M=True),
+              'MAPA_NOV': dict(usa_M=True, gamma_N=1.8, tau_N=4000.0), 'MAPA_NOV_BAR': dict(usa_M=True, gamma_N=1.8, tau_N=4000.0, nov_barajada=True),
+              'MAPA_NOV_CTE': dict(usa_M=True, gamma_N=1.8, tau_N=4000.0, nov_cte=True)}
+
 N_PARALELO = 14
 _log = {'f': None, 't0': time.time()}
 
@@ -102,7 +109,7 @@ if __name__ == '__main__':
     import multiprocessing as mp
     mp.set_start_method('spawn', force=True)
     stamp = time.strftime('%Y%m%d_%H%M%S')
-    _log['f'] = open(os.path.join(RAIZ, 'datos', f'novedad_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
+    _log['f'] = open(os.path.join(RAIZ, 'datos', f'novedad{"_alta" if ALTA else ""}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     pre = os.path.join(AQUI, 'PREREGISTRO_novedad_sitio.md')
     log(f"ARRANQUE bloque 2 bis (NOVEDAD DE SITIO contra el canje del mapa), mundo largo. brazos {list(BRAZOS)}, semillas {SEEDS[0]}-{SEEDS[-1]}, T={T}. Pool({N_PARALELO}).")
     log(f"   criterio: {list(CRITERIO)}; lectura (no deciden): {[b for b in BRAZOS if b not in CRITERIO]}")
@@ -175,7 +182,7 @@ if __name__ == '__main__':
     log(f"   P2 comida_q4 >=0.9xMAPA en {p2n}/20 -> {'OK' if P2 else 'NO'}   (referencia informativa 41-60: MAPA 968, V13 837; aqui MAPA {med([CQ('MAPA', s) for s in SEEDS])[0]:.0f}, NOV {med([CQ('MAPA_NOV', s) for s in SEEDS])[0]:.0f})")
     log(f"   P3 NOV>BARAJADA {nb['gana']}g/{nb['empata']}e/{nb['pierde']}p{' [desempate]' if nb['por_desempate'] else ''} y BARAJADA>MAPA {bm['gana']}g/{bm['empata']}e/{bm['pierde']}p (no debe pasar) -> {'OK' if P3 else 'NO'}")
     log(f"   P4 (lectura) NOV>CONSTANTE {nc['gana']}g/{nc['empata']}e/{nc['pierde']}p{' [desempate]' if nc['por_desempate'] else ''} -> {'OK' if P4 else 'NO'}")
-    log(f"   dosis (exploratoria, NO decide): MAPA_NOV_ALTA adq {med([A('MAPA_NOV_ALTA', s) for s in SEEDS])[0]:.3f}  comida_q4 {med([CQ('MAPA_NOV_ALTA', s) for s in SEEDS])[0]:.0f}  muertes {med([r['deaths'] for r in GG['MAPA_NOV_ALTA'].values()])[0]:.0f}")
+    if 'MAPA_NOV_ALTA' in BRAZOS: log(f"   dosis (exploratoria, NO decide): MAPA_NOV_ALTA adq {med([A('MAPA_NOV_ALTA', s) for s in SEEDS])[0]:.3f}  comida_q4 {med([CQ('MAPA_NOV_ALTA', s) for s in SEEDS])[0]:.0f}  muertes {med([r['deaths'] for r in GG['MAPA_NOV_ALTA'].values()])[0]:.0f}")
     log(f"VEREDICTO novedad de sitio: {'DEVUELVE la exploracion sin cobrar la comida' if V['DEVUELVE_EXPLORACION'] else 'NO (refutado o control caido)'}"
         f"{'' if V['LIMPIO'] or not V['DEVUELVE_EXPLORACION'] else ' -- OJO: P4 (control de novedad constante) NO pasa: revisar si es sesgo extra'}")
     meta = dict(fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), semillas=SEEDS, T=T, T_nuevo=T_NUEVO, T_inv=T_INV, brazos=BRAZOS, brazos_criterio=list(CRITERIO),
@@ -183,7 +190,7 @@ if __name__ == '__main__':
                 sha_constructor=h16(os.path.join(AQUI, 'construye_novedad.py')), sha_mundo=h16(os.path.join(AQUI, 'mundo_largo_n.py')),
                 sha_mundo_largo=h16(os.path.join(RAIZ, 'experimentos', 'nivel8_mundo_largo', 'mundo_largo.py')),
                 python=platform.python_version(), numpy=np.__version__)
-    dj = os.path.join(RAIZ, 'datos', f'novedad_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
+    dj = os.path.join(RAIZ, 'datos', f'novedad{"_alta" if ALTA else ""}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.json')
     json.dump(dict(meta=meta, corridas=res), open(dj, 'w', encoding='utf-8'), ensure_ascii=False, default=str)
     log(f"datos -> {os.path.basename(dj)}  sha256_16 = {h16(dj)}")
     _log['f'].close()

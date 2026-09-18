@@ -1,0 +1,89 @@
+{
+ "meta": {
+  "fecha": "2026-09-17T21:47:27",
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "base": {
+   "T": 100000,
+   "mundo": "regla",
+   "lectura": "cuadratica",
+   "eta_s": 0.015,
+   "puerta": 3,
+   "regla_lenta": "delta"
+  },
+  "agente": "A",
+  "hipotesis": "delta_con_signo"
+ },
+ "identidad_ok": true,
+ "filas": [
+  {
+   "seed": 1,
+   "regla": "xor01",
+   "acc_lenta": 0.188,
+   "acc_total": 0.188,
+   "familiar": 0.08,
+   "splits": 34,
+   "celdas": 64,
+   "deaths": 97,
+   "Ws_prod01": -2.264
+  },
+  {
+   "seed": 2,
+   "regla": "xor01",
+   "acc_lenta": 0.25,
+   "acc_total": 0.25,
+   "familiar": 0.33,
+   "splits": 29,
+   "celdas": 59,
+   "deaths": 104,
+   "Ws_prod01": -2.116
+  },
+  {
+   "seed": 3,
+   "regla": "xor01",
+   "acc_lenta": 0.438,
+   "acc_total": 0.375,
+   "familiar": 0.42,
+   "splits": 40,
+   "celdas": 70,
+   "deaths": 102,
+   "Ws_prod01": -2.299
+  },
+  {
+   "seed": 1,
+   "regla": "px0",
+   "acc_lenta": 1.0,
+   "acc_total": 1.0,
+   "familiar": 0.0,
+   "splits": 31,
+   "celdas": 61,
+   "deaths": 138,
+   "Ws_prod01": 0.633
+  },
+  {
+   "seed": 2,
+   "regla": "px0",
+   "acc_lenta": 1.0,
+   "acc_total": 0.9,
+   "familiar": 0.4,
+   "splits": 20,
+   "celdas": 50,
+   "deaths": 132,
+   "Ws_prod01": 0.461
+  },
+  {
+   "seed": 3,
+   "regla": "px0",
+   "acc_lenta": 1.0,
+   "acc_total": 0.9,
+   "familiar": 0.5,
+   "splits": 27,
+   "celdas": 57,
+   "deaths": 138,
+   "Ws_prod01": 0.446
+  }
+ ]
+}

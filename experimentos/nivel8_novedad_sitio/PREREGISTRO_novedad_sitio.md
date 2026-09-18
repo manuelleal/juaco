@@ -154,3 +154,17 @@ con mapa. Ninguna constante, brazo ni criterio de §1–§4 se ha tocado con lo 
   referencia fue `mundo_largo`, que no trae `nov_diag`; medirlo habría costado una cuarta corrida y el límite acordado para
   un agente era tres. En la serie **todos** los brazos pasan por `mundo_largo_n`, así que la comparación de equilibrio de
   visitas MAPA vs MAPA+NOV — que es la lectura directa del mecanismo — sale sola.
+
+
+## Enmienda 1 (17 sep 2026, 22:20; escrita DESPUÉS de la serie 61–80 y ANTES de la serie nueva): dosis 1.8 en semillas 81–100
+
+Resultado de la serie 61–80 (`novedad_s61-80_20260917_215405`): P1 **NO** (MAPA_NOV 0.800 < 0.85; > MAPA 14g/5e/1p), P2 NO
+(14/20), P3 OK, P4 OK. El brazo de lectura **MAPA_NOV_ALTA** (`gamma_N = 1.8`, no decisorio) dio adquisición **0.874**,
+comida Q4 929 (MAPA 963, V13 837), muertes 36, visitas 13 515 con equidad 0.518 (MAPA 0.120; V13 0.615). Es la lectura
+de "escala" que la cláusula (a) de la refutación ya preveía: la novedad máxima a 0.6 no compite con el recuerdo de
+veneno (−3). **La decisión que esa cláusula reservaba al director se toma aquí (regla 12): serie confirmatoria con la
+dosis 1.8 en semillas NUEVAS 81–100, con los MISMOS criterios P1–P3** (P1 ≥ 0.85 y > MAPA ≥ 15/20 con desempate; P2
+comida ≥ 0.9 × MAPA en ≥ 15/20; P3 > barajada ≥ 15/20 y barajada no > MAPA) y P4 de lectura (> constante); brazos V13,
+MAPA, MAPA_NOV (1.8), MAPA_NOV_BAR (1.8), MAPA_NOV_CTE (1.8). **No es un ajuste sobre los datos de 61–80: es una serie
+nueva con la dosis fijada antes de verla.** Predicción: P1 pasa por poco (0.87 ± 0.03) y P2 pasa (929/963 = 0.96);
+P3 pasa. Si P1 vuelve a fallar, la novedad de sitio queda refutada en dos dosis y no se prueba una tercera.
