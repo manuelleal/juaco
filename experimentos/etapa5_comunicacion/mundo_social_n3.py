@@ -32,13 +32,14 @@ R_VAL = {'comida': 1.0, 'veneno': -3.0}; E_VAL = {'comida': +0.8, 'veneno': -0.4
 
 
 class Mundo:
-    def __init__(self, rng, nobj, tipos, regen=None):
+    def __init__(self, rng, nobj, tipos, regen=None, fijos=None):
         self.rng = rng; self.nobj = nobj; self.tipos = tipos; self.objs = {}; self.regen = regen; self.pend = {}   # N3c: regen
+        self.fijos = list(fijos) if fijos else None   # N3d: tipos iniciales fijos (en orden), en vez de sortearlos
 
     def spawn(self):
         while len(self.objs) + len(self.pend) < self.nobj:
             x = int(self.rng.integers(L))
-            if x not in self.objs and x not in self.pend: self.objs[x] = self.tipos[int(self.rng.integers(len(self.tipos)))]
+            if x not in self.objs and x not in self.pend: self.objs[x] = self.fijos.pop(0) if self.fijos else self.tipos[int(self.rng.integers(len(self.tipos)))]
 
     def retirar(self, x, t):   # N3c: al morder (o al olvido) el objeto se va; con regen vuelve al MISMO sitio con el mismo tipo
         kk = self.objs.pop(x)
@@ -286,7 +287,7 @@ SIMBOLOS = ('simbolo', 'simbolo_barajado')
 
 def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=1/3, nobj_por_org=4, compat=True,
         estados=None, devolver_estado=False, mundo='AB', regla='azar', tau_s=200, K_sim=2, estado_emisor='conducta', u_v=0.5,
-        mascaras=None, kw_por_org=None, regen=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen
+        mascaras=None, kw_por_org=None, regen=None, tipos_fijos=None, **kw_org):   # N3: mascara de retina y kwargs por organismo; N3c: regen; N3d: tipos_fijos
     """senal: None | 'honesta' (al morder: + comida, - veneno) | 'conducta' (en cada visita: + mordio, - rechazo)
               | 'barajada' (como honesta, signo al azar) | 'barajada_conducta' (como conducta, signo al azar)
               | 'simbolo' (N2: K_sim simbolos sin significado; el emisor aprende cual emitir, el receptor que significa)
@@ -309,7 +310,7 @@ def run(seed, n=1, T=100000, invertir_en=None, senal=None, d_senal=5, f_vicaria=
     rng_mundo = rngs[0] if (n == 1 and compat) else np.random.default_rng(seed + 900000)
     rng_senal = np.random.default_rng(seed + 300000)
     tipos = list(tren)
-    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen); mundo_.spawn()   # N3c
+    mundo_ = Mundo(rng_mundo, nobj_por_org * n, tipos, regen=regen, fijos=tipos_fijos); mundo_.spawn()   # N3c / N3d
     tipos.extend(test)   # como v13g con fase2_en=0: los de test entran en t=0, tras el sorteo inicial
     mundo = mundo_
     senales_emitidas = [0] * n; senales_recibidas = [0] * n

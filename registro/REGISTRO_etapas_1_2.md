@@ -3130,3 +3130,49 @@ sabe. La señal honesta le quita el veneno; lo que no le da es la comida, porque
 la semilla 22, 210 visitas a comida contra 9 617 a veneno (el emisor se la come en cuanto reaparece al azar; el veneno
 se queda). Es la asimetría de muestreo que cerró N2, por tercera vez. `PREREGISTRO_N3c.md` (escrito antes de ver este
 veredicto): mismo montaje en un mundo donde lo mordido **reaparece en el mismo sitio** (`regen = 50`), semillas 41–60.
+
+
+### N3c (mundo con reaparición en el mismo sitio, semillas 41–60): **montaje inválido, e informativo**
+
+Preregistro `PREREGISTRO_N3c.md` (escrito antes del veredicto de N3b); instrumento `mundo_social_n3.py`
+(`79e777ea57c649b4`, knob `regen`, mundo nunca vacío; identidad 6/6); datos `N3c_s41-60_20260917_195528`
+(`a1c447c45fdbadd2`). Con `regen = 50` las visitas se equilibran (semilla 42: 1 671 comida / 3 558 veneno contra 210 /
+9 617 en N3b) y las muertes caen de cientos a 2–4. Pero **S4 (validez) cae: SOLO_R = 0.997**. Con 8 objetos fijos que
+reaparecen donde estaban, el receptor que ve sólo 3–5 **memoriza las 8 vistas** y ya no necesita la regla (la vista 3–5
+lleva información parcial de `px0` y con 8 objetos casi siempre alcanza). No había nada que transferir.
+
+Lo que sí mide: la conducta ajena **gobierna** al receptor: CONV 0.957 contra SHUF **0.683** (888 venenos, 727 muertes)
+y SACIEDAD **0.689** (936 venenos), 20/20 pareados en ambos; N0 0.832 (la presencia del otro sin señal le quita comida).
+CONV no supera a SOLO_R (8/20): con un receptor que ya sabe, la señal sólo puede estorbar o empatar.
+
+Siguiente y último de hoy en esta línea: `PREREGISTRO_N3d.md` — los 8 objetos en **4 parejas con la misma vista 3–5 y
+valencia opuesta** (ciego por construcción; SOLO_R ≈ 0.50 por diseño, no por resultado), semillas 61–80.
+
+
+### Niveles 8 + 9, experimento 4 del plan (mundo largo con novedad y cambio de regla): **veredicto compuesto NO; tres hallazgos limpios**
+
+Preregistro `experimentos/nivel8_mundo_largo/PREREGISTRO_mundo_largo.md`; instrumento `mundo_largo.py`
+(`9f74ff6b5941e5a5`, desde `mundo_mapa.py`; **pool = None ≡ mapa, 3/3**). Mundo: `r_vis = 3`, 8 sitios fijos que
+reaparecen; 50 patrones (peso 2, 3 y 4; valencias al azar 25/25 por semilla); uno nuevo cada 4 000 pasos en el sitio más
+viejo (46 inyecciones, los 50 pasan); en t = 100 000 se invierte sin aviso la valencia de los 4 iniciales y de los
+presentes. Datos `largo_s1-20_20260917_200026` (`8301d0d3f1b343a9`), semillas 1–20.
+
+| brazo | adquisición (últimos 10, ≤ 30 vistos) | adquisición al final (50) | retención (10 primeros) | recuperación tras la inversión | muertes |
+|---|---|---|---|---|---|
+| V13 | **0.880** | **0.800** | 0.50 | **2 000 pasos** (≤ 10 000 en 18/20) | 30 |
+| V13 + mapa | 0.700 | 0.700 | 0.50 | 0 (19/20 hallada; 13/20 antes que V13) | 31 |
+| reciclado (V13 / mapa) | 1.00 / 1.00 | 1.00 / 1.00 | 1.00 / 1.00 | 3 000 / 1 000 | 9 / 12 |
+
+Curva de V13 por patrones vistos: 5: 1.00 · 10: 0.90 · 20: 0.90 · 30: 0.70 · 40: 0.80 · 50: 0.80. Mapa: 10: 0.80 · 30: 0.60 · 50: 0.60.
+A1 NO (por el mapa), **A2 NO en la dirección buena** (predije caída a 0.55–0.70; se quedó en 0.80), A3 OK, R1 NO, C1 OK,
+C2 NO.
+
+**Hallazgos:** (1) **v13 sigue aprendiendo lo nuevo** con presupuesto fijo, hasta agotar los 50 patrones que caben en
+la retina, en ~0.8 (con sólo 8 presentes a la vez no hay que saber 50 a la vez; la "capacidad" 35/60 era otro mundo).
+(2) **Se recupera de un cambio de regla sin aviso** en ~2 000 pasos (nivel 9 en su forma mínima: viabilidad ante cambio).
+(3) **El mapa daña la adquisición** (0.70 contra 0.88 a ≤ 30 vistos y 0.60 contra 0.80 al final) y no acelera la
+recuperación: el organismo con mapa vuelve a los sitios que recuerda y **explora menos**; es el canje
+explotación/exploración del nivel 8, medido. **Caveat de la medida R1:** "retención" mezcla olvido con la inversión de
+patrones ya ausentes (los 4 iniciales se invirtieron sin poder verse): 0.50 no separa las dos cosas; para separarlas
+hay que guardar `W` por patrón (no se guardó) — pendiente, no urgente. **Vocabulario:** *sigue aprendiendo hasta el
+techo de la retina y se recupera del cambio; el mapa cobra la comida en exploración*. No "abierto", no "autónomo".
