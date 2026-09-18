@@ -1,0 +1,49 @@
+[14:49:46 +    0.0s] ARRANQUE BLOQUE 1 (mundo de familias): brazos ['EXC', 'LIN', 'AZA', 'BAR', 'EXC-B5', 'LIN-B5', 'NEU', 'NEU-B5', 'V14'], semillas 401-420, T=100000. Pool(14).
+[14:49:46 +    0.0s] NK=30 NKMAX=90 K=3, D=12 (PREREGISTRO 2.6: los del TRONCO; el alias se DECLARA, no se elimina).
+[14:49:46 +    0.0s] NO hay organo nuevo. La unica perilla de organismo encendida en algun brazo es B-5, reparacion ya medida.
+[14:49:46 +    0.0s]     sha preregistro              f32da98d740e4b0a
+[14:49:46 +    0.1s]     sha script                   c21b3c38f36cb4c9
+[14:49:46 +    0.1s]     sha constructor              b488e3edce8f535f
+[14:49:46 +    0.1s]     sha instrumento              b9dd561a0cf056b8
+[14:49:46 +    0.1s]     sha arnes                    f24da0c025faa922
+[14:49:46 +    0.1s]     sha escala_codigo_bloque0    d8b8566bca77a0ae
+[14:49:46 +    0.1s]     sha origen_organismo_v14     feefc88b1fd8d434
+[14:49:46 +    0.1s]     sha origen_v14_codigo_on     2f7794d92e68cc89
+[14:49:46 +    0.6s] REGLA 11 — procesos python vivos (2), este es pid 4880
+[14:49:46 +    0.8s] ETAPA 1/3 — IDENTIDAD, subconjunto critico del arnes (8 casos x 3 semillas = 24). (L) y (M) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[14:49:59 +   13.1s]     (A) mundo=AB == v14                                  3/3
+[14:49:59 +   13.1s]     (G) linaje v13 (mask_rel=0, puerta_pat=0)            3/3
+[14:49:59 +   13.1s]     (I) rng no consumido: mundo=AB a T=120000            3/3
+[14:49:59 +   13.1s]     (J) perillas del mundo puestas, mundo=AB             3/3
+[14:49:59 +   13.1s]     (N) mundo=AB, desambiguar=1 == organismo_v14_codigo_on 3/3
+[14:49:59 +   13.1s]     (P) familias n_neu=0: B-5 INERTE (P7a)               3/3
+[14:49:59 +   13.1s]     (L) mundo=familias != v14 (DEBE diferir)             3/3
+[14:49:59 +   13.1s]     (M) mundo=AB con renov=1.0 != v14 (DEBE diferir)     3/3
+[14:49:59 +   13.1s]   IDENTIDAD 24/24
+[14:49:59 +   13.1s] ETAPA 2/3 — DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[14:49:59 +   13.1s]     alias por par mediana 0.0101  semillas con algun par identico 20/20  U3 mediana 0.2807
+[14:49:59 +   13.1s] ETAPA 3/3 — principal: 180 corridas de 100000 pasos (9 brazos x 20 semillas)...
+[14:50:17 +   31.3s]           20/180
+[14:50:26 +   40.6s]           40/180
+[14:50:44 +   58.2s]           60/180
+[14:50:54 +   68.2s]           80/180
+[14:51:10 +   84.9s]           100/180
+[14:51:21 +   95.3s]           120/180
+[14:51:32 +  106.2s]           140/180
+[14:51:48 +  122.1s]           160/180
+[14:51:55 +  129.1s]           180/180
+[14:51:55 +  129.1s] 
+[14:51:55 +  129.1s] CRUCE cod0 (instrumento) contra escala_codigo (bloque 0): IDENTICO campo a campo
+[14:51:55 +  129.1s] ANALISIS — medianas y cuartiles por brazo, y despues los umbrales EXACTOS del preregistro (ERR-31).
+[14:51:55 +  129.1s]     EXC     muertes 2.0 q[1.0, 2.0, 2.25]  regalo 0.006  celdas 52.0  splits 22.0  colateral 6.0  omision 22.5  w_var 0.0  exp_total 95.0  exp_clase {'token': 2.0, 'variante': 1.0, 'excepcion': 2.0, 'ventana': 1.5}  retencion 0.5
+[14:51:55 +  129.1s]     LIN     muertes 1.0 q[0.75, 1.0, 2.0]  regalo 0.003  celdas 46.5  splits 16.5  colateral 2.0  omision 4.0  w_var 0.0  exp_total 62.0  exp_clase {'token': 2.0, 'variante': 1.0, 'excepcion': None, 'ventana': 1.0}  retencion None
+[14:51:55 +  129.1s]     AZA     muertes 2.0 q[1.0, 2.0, 4.0]  regalo 0.006  celdas 61.0  splits 31.0  colateral 19.5  omision 75.5  w_var 0.1435  exp_total 319.0  exp_clase {'token': 2.25, 'variante': 2.0, 'excepcion': 2.0, 'ventana': 2.0}  retencion 0.75
+[14:51:55 +  129.1s]     BAR     muertes 4.0 q[3.0, 4.0, 10.5]  regalo 0.012  celdas 61.5  splits 31.5  colateral 17.0  omision 146.5  w_var 2.7885  exp_total 702.5  exp_clase {'token': 3.25, 'variante': 2.0, 'excepcion': 1.25, 'ventana': 1.5}  retencion 0.875
+[14:51:55 +  129.1s]     EXC-B5  muertes 2.0 q[1.0, 2.0, 2.25]  regalo 0.006  celdas 52.0  splits 22.0  colateral 6.0  omision 22.5  w_var 0.0  exp_total 95.0  exp_clase {'token': 2.0, 'variante': 1.0, 'excepcion': 2.0, 'ventana': 1.5}  retencion 0.5
+[14:51:55 +  129.1s]     LIN-B5  muertes 1.0 q[0.75, 1.0, 2.0]  regalo 0.003  celdas 46.5  splits 16.5  colateral 2.0  omision 4.0  w_var 0.0  exp_total 62.0  exp_clase {'token': 2.0, 'variante': 1.0, 'excepcion': None, 'ventana': 1.0}  retencion None
+[14:51:55 +  129.1s]     NEU     muertes 2.0 q[1.0, 2.0, 3.25]  regalo 0.006  celdas 53.0  splits 23.0  colateral 7.5  omision 14.0  w_var 0.0  exp_total 135.0  exp_clase {'token': 2.0, 'variante': 1.0, 'excepcion': 2.0, 'ventana': 2.0}  retencion 0.5
+[14:51:55 +  129.1s]     NEU-B5  muertes 2.0 q[1.0, 2.0, 3.25]  regalo 0.006  celdas 71.5  splits 41.5  colateral 9.0  omision 12.5  w_var 0.001  exp_total 170.5  exp_clase {'token': 2.0, 'variante': 1.0, 'excepcion': 3.5, 'ventana': 2.0}  retencion 0.5
+[14:51:55 +  129.1s]     V14     muertes 133.5 q[127.5, 133.5, 139.25]  regalo None  celdas 30.0  splits 0.0  colateral None  omision None  w_var None  exp_total None  exp_clase {'token': None, 'variante': None, 'excepcion': None, 'ventana': None}  retencion None
+[14:51:55 +  129.1s] 
+[14:51:55 +  129.1s] VEREDICTO: INDECISO en P2 (razon 3.0, A12 0.68, en la zona declarada): se endurece n_exc 4->8 con ERR-46 y se repite en 441-460. OJO: P5 cae -- las medidas no ordenan los cuatro mundos; primero el instrumento, nada se declara. B-5: inerte con n_neu=0 (P7a pasa); con estimulos que no informan no repara segun la letra (P7b). 20 semillas no cierran nada: piden replica en el rango siguiente (regla 12).
+[14:51:55 +  129.2s] datos -> familias_s401-420_20260918_144946.json  sha256_16 = 028e7b39f5461356

@@ -5154,3 +5154,31 @@ R crudo y relevo generaliza, se desdice y cruza XOR con 8 ejemplos en el tronco"
 ### BLOQUE 0 — escalar el código (nivel 12, mundo de familias; 18 sep ~14:30; cálculo estructural, 200 semillas por celda, sin simular): **NINGÚN (NK, K) con D = 12 deja el alias exacto por debajo del 1 % — el mejor es 8.5 % (NK 360, K 5), 4× por encima de NKMAX; a NK = 5 760 baja a 0.5 % pero el código ya no agrupa familias. ERR-45: la cláusula "NK/K escalados a alias < 1 %" del bloque 1 y del T-A propuesto es insatisfacible → la línea del alias pasa al ORGANISMO (B-5 y nodo indexado por código y retina), y el mundo de familias declara el alias por semilla en vez de prometer que no existe**
 
 Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque0_codigo.md` (§1–7 antes de calcular); `escala_codigo.py` (importa `organismo_v14` para NK/NKMAX/K; verificación P2 15/15 campos contra `DISENO_mundo_grande` §1.1); `escala_codigo_salida.json`. Rejilla NK ∈ {30, 60, 90, 180, 360} × K ∈ {2, 3, 4, 5}, catálogo 8 tokens × 3 variantes (32 estímulos): U1 (alias exacto < 1 %) 0/20 celdas; U2 (alias 2/3 acotado) 6/20; U3 (sim intra − inter ≥ 0.20) 20/20 — la estructura de familias SÍ se lee en el código (+0.31 en el tronco, 200/200). D = 6 tampoco (mejor 5.0 %). Cota optimista (celdas uniformes, sin `cond()`): con las celdas reales el alias sólo puede ser mayor. Predicciones del diseñador: 4/7 en pie, 2 refutadas (U3 no cayó; la similitud cayó 0.059, no 0.10), 1 acertada por la razón equivocada. Consecuencia para el bloque 1: brazos v14.1 y v14.1 + B-5 (`organismo_v14_codigo_on`), alias estructural declarado por semilla; la decisión pendiente del director sobre B-5 (v14.2) pasa a ser necesaria para la línea.
+
+
+### BLOQUE 1 — el mundo de familias con v14.1 sin cambios (nivel 12; 18 sep 14:52; semillas 401–420; 9 brazos × 20): **INDECISO en la predicción que decide y el INSTRUMENTO cae — nada se declara; ERR-46: las medidas se revisan antes de endurecer el mundo**
+
+Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque1_familias.md` (§1–10 congeladas a9d87b87f07b4826); instrumento por anclas
+`organismo_familias.py` (b9dd561a0cf056b8; `mundo='AB'` ≡ v14.1 + claves de B-5, valores bit a bit; D = 12, NK 30, K 3, alias declarado por
+semilla con el código del bloque 0); identidad 43/43 (+24/24 en el runner); runner `corre_familias.py` (c21b3c38f36cb4c9); datos
+`familias_s401-420_20260918_144946` (028e7b39f5461356; 180 corridas, T = 100 000, 2 min).
+
+| brazo | muertes | colateral | omisión | w_var | exp. total | celdas |
+|---|---|---|---|---|---|---|
+| EXC (v14.1, 4 excepciones) | 2 | 6.0 | 22.5 | 0.000 | 95 | 52 |
+| LIN (lector lineal de referencia) | 1 | 2.0 | 4.0 | 0.000 | 62 | 46.5 |
+| AZA (control: consecuencias al azar) | 2 | 19.5 | 75.5 | 0.14 | 319 | 61 |
+| BAR (barajado) | 4 | 17.0 | 146.5 | 2.79 | 702 | 61.5 |
+| EXC-B5 / LIN-B5 | = EXC / = LIN (B-5 inerte sin estímulos neutros: P7a pasa) | | | | | |
+| NEU / NEU-B5 (2 estímulos que no informan) | 2 / 2 | 7.5 / 9.0 | 14 / 12.5 | 0.0 / 0.001 | 135 / 170 | 53 / 71.5 |
+| V14 (anillo del tronco, referencia) | 133.5 | — | — | — | — | 30 |
+
+P2 (colateral EXC ≥ 2 × LIN y A₁₂ ≥ 0.75): razón **3.0** pero A₁₂ **0.68** → **INDECISO** (zona declarada: endurecer `n_exc` 4 → 8 en 441–460). P3
+(`w_var` ≥ 1.0): **NO** (0.000: la vía lenta drena los píxeles de variable, como el diseñador predijo). **P5 cae:** las medidas no ordenan
+los cuatro mundos (AZA y BAR tienen más colateral que EXC) → por la letra, primero el instrumento, nada se declara. P7a pasa (B-5
+inerte sin R = 0); P7b: con estímulos neutros B-5 no repara (`|W|` de los neutros no baja; celdas 71.5). Lo limpio: la renovación
+simétrica quita la trampa 3 (razón de exposiciones veneno/comida 0.99–1.02); el mundo casi no mata (1–2 muertes contra 133.5 del anillo):
+**T-A tendrá efecto suelo aquí** (avisado antes de correr). **ERR-46 (coordinador, 14:55):** las medidas `colateral`/`omision`/`w_var` no
+separan "aprender la excepción a costa de los hermanos" de "no aprender nada" (AZA/BAR puntúan más colateral que EXC): se rediseñan y
+preregistran de nuevo (medida que ordene EXC > LIN y AZA/BAR abajo por construcción), con `n_exc = 8` y semillas 441–460. Ningún umbral
+de esta serie se recalibra.
