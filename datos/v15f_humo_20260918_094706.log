@@ -1,0 +1,48 @@
+[09:47:06 +    0.0s] ARRANQUE v15f (HUMO, un proceso, sin Pool).
+[09:47:06 +    0.0s] sha preregistro 79d3d32ad7c8ad72  script 8eae63dc22913e2b  construye_v15f fbc886b7f9d36b08  organismo_v15f 96fc5c5262107850  organismo_v15f_on 54d6efe0b564113c  organismo_v15gf e4c4e0b00b1c20e3  organismo_v15gf_on 039eee1bba9ebdf0  bateria_v15f d63f5aee558eb6da  bateria_generaliza_v15f 0cd87d2632e0c66a  identidad_v15f 84431917ab1043b7  ORIGEN organismo_v14 feefc88b1fd8d434  organismo_v14g 1f1318480cd34cde  bateria_v14 72216f5415de0c86  bateria_generaliza 9cf72581ebae7dea  (comparador) organismo_v15e 5930c5ed2df1be1d organismo_v15ge e902fb3503655a47
+[09:47:06 +    0.0s] kwargs del mundo de regla (regla 14, = entrada 'organismo_v14' de bateria_generaliza): {'eta_s': 0.15, 'clip_s': 10.0, 'puerta': 3, 'mask_rel': 2, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'puerta_pat': 5, 'pat_shuf': 0, 'pat_min': 1}
+[09:47:06 +    0.0s] ETAPA 1/3 — identidad corta (T=20000, un proceso).
+[09:47:06 +    0.0s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_v15f.py 20000
+[09:48:23 +   76.4s]       |   T=120000 s2: IDENTICO
+[09:48:23 +   76.4s]       | 
+[09:48:23 +   76.4s]       | --- I3: organismo_v15gf(memoria_pares=None) == organismo_v14g (kwargs exactos del tronco), T=20000 ---
+[09:48:23 +   76.4s]       |               regla/px0, kwargs del tronco s1: IDENTICO
+[09:48:23 +   76.4s]       |               regla/px0, kwargs del tronco s2: IDENTICO
+[09:48:23 +   76.4s]       |             regla/xor01, kwargs del tronco s1: IDENTICO
+[09:48:23 +   76.4s]       |             regla/xor01, kwargs del tronco s2: IDENTICO
+[09:48:23 +   76.4s]       |              regla/azar, kwargs del tronco s1: IDENTICO
+[09:48:23 +   76.4s]       |              regla/azar, kwargs del tronco s2: IDENTICO
+[09:48:23 +   76.4s]       | 
+[09:48:23 +   76.4s]       | IDENTIDAD (I1+I2+I3): 32/32
+[09:48:23 +   76.4s]       | 
+[09:48:23 +   76.4s]       | --- I4 (NO es identidad): la perilla ENCENDIDA corre con puerta_pat=5 y la via lenta lee R CRUDO exacto ---
+[09:48:23 +   76.4s]       |   s1 T=20000: W {'A': 1.0, 'B': -2.45, 'C': -0.5, 'D': -3.0}  W_lenta(lineal) {'A': 1.0, 'B': -2.999, 'C': -0.5, 'D': -2.499}  W_tabla(R crudo, None=no vista) {'A': 1.0, 'B': -3.0, 'C': None, 'D': -3.0}  ganadora [1, 2]  familiar {'A': True, 'B': True, 'C': False, 'D': False}  mordidas B [1, 0, 10, 7]  splits 0
+[09:48:23 +   76.4s]       |   s2 T=20000: W {'A': 1.0, 'B': -2.55, 'C': -0.5, 'D': -2.5}  W_lenta(lineal) {'A': 0.999, 'B': -2.998, 'C': -0.5, 'D': -2.499}  W_tabla(R crudo, None=no vista) {'A': 1.0, 'B': -3.0, 'C': None, 'D': None}  ganadora [2, 5]  familiar {'A': True, 'B': True, 'C': False, 'D': False}  mordidas B [2, 2, 9, 7]  splits 0
+[09:48:23 +   76.4s]       |   Lo que se busca: sin excepcion; W_tabla = +1.0 en A y -3.0 en B (R crudo); la lineal sigue aprendiendo aparte.
+[09:48:23 +   76.4s]       (76s)
+[09:48:23 +   76.4s] ETAPA 2/3 — E1 y E2 a mano (T=100000), semillas (101, 102), tres organismos pareados.
+[09:48:27 +   80.4s]    E1 s101 v14.1 (off)  W_A  +1.00 W_B  -2.96 | lineal A  +1.00 B  -3.00 | tabla A   -- B   -- | rapida A (1.0, 0.0) B (0.0, 2.96) | familiar A True B True (ev 349,47) | mord A [107, 72, 80, 90] B [27, 11, 8, 1] | vis B [2550, 2288, 2460, 2537] | splits 0 muertes 127  => W_B≈-3:si W_A≈+1:si venQ4<Q1:si
+[09:48:31 +   84.4s]    E1 s101 v15e suma    W_A  +1.00 W_B  -2.97 | lineal A  +1.00 B  -3.00 | tabla A +0.00 B -0.00 | rapida A (1.0, 0.0) B (0.0, 2.97) | familiar A True B True (ev 351,49) | mord A [107, 102, 69, 73] B [15, 20, 5, 9] | vis B [2252, 2383, 2521, 2356] | splits 0 muertes 139  => W_B≈-3:si W_A≈+1:si venQ4<Q1:si
+[09:48:34 +   88.3s]    E1 s101 v15f relevo  W_A  +1.00 W_B  -2.94 | lineal A  +1.00 B  -3.00 | tabla A +1.00 B -3.00 | rapida A (1.0, 0.0) B (0.0, 2.94) | familiar A True B True (ev 339,41) | mord A [100, 75, 81, 83] B [2, 16, 14, 9] | vis B [2518, 2645, 2334, 2339] | splits 0 muertes 147  => W_B≈-3:si W_A≈+1:si venQ4<Q1:NO
+[09:48:38 +   92.3s]    E1 s102 v14.1 (off)  W_A  +1.00 W_B  -2.98 | lineal A  +1.00 B  -3.00 | tabla A   -- B   -- | rapida A (1.0, 0.0) B (0.0, 2.98) | familiar A True B True (ev 332,51) | mord A [94, 96, 74, 68] B [27, 9, 7, 8] | vis B [2308, 2317, 2304, 2300] | splits 0 muertes 132  => W_B≈-3:si W_A≈+1:si venQ4<Q1:si
+[09:48:43 +   96.4s]    E1 s102 v15e suma    W_A  +1.00 W_B  -2.99 | lineal A  +1.00 B  -3.00 | tabla A +0.00 B -0.00 | rapida A (1.0, 0.0) B (0.0, 2.99) | familiar A True B True (ev 311,58) | mord A [99, 73, 54, 85] B [30, 8, 9, 11] | vis B [2465, 2351, 2505, 2373] | splits 0 muertes 139  => W_B≈-3:si W_A≈+1:si venQ4<Q1:si
+[09:48:47 +  100.5s]    E1 s102 v15f relevo  W_A  +1.00 W_B  -2.96 | lineal A  +1.00 B  -3.00 | tabla A +1.00 B -3.00 | rapida A (1.0, 0.0) B (0.0, 2.96) | familiar A True B True (ev 390,45) | mord A [87, 122, 91, 90] B [11, 17, 8, 9] | vis B [2374, 2373, 2558, 2598] | splits 0 muertes 137  => W_B≈-3:si W_A≈+1:si venQ4<Q1:si
+[09:48:51 +  104.5s]    E2 s101 v14.1 (off)  W_A  -2.95 W_B  +1.00 | lineal A  -3.00 B  +1.00 | tabla A   -- B   -- | rapida A (0.1, 3.05) B (1.0, 0.0) | familiar A True B True (ev 225,215) | mord A [107, 72, 35, 11] B [27, 11, 96, 81] | vis B [2550, 2288, 277, 81] | splits 0 muertes 133  => W_A→-3:si W_B→+1:si comeB Q4≥50:si
+[09:48:55 +  108.5s]    E2 s101 v15e suma    W_A  -2.87 W_B  +1.00 | lineal A  -3.00 B  +1.00 | tabla A -0.00 B +0.00 | rapida A (0.17, 3.04) B (1.0, 0.0) | familiar A True B True (ev 245,212) | mord A [107, 102, 30, 6] B [15, 20, 82, 95] | vis B [2252, 2383, 352, 96] | splits 0 muertes 126  => W_A→-3:si W_B→+1:si comeB Q4≥50:si
+[09:48:59 +  112.5s]    E2 s101 v15f relevo  W_A  -2.82 W_B  +1.00 | lineal A  -3.00 B  +1.00 | tabla A -3.00 B +1.00 | rapida A (0.2, 3.03) B (1.0, 0.0) | familiar A True B True (ev 208,191) | mord A [100, 75, 5, 28] B [2, 16, 78, 95] | vis B [2518, 2645, 193, 96] | splits 0 muertes 157  => W_A→-3:si W_B→+1:si comeB Q4≥50:si
+[09:49:03 +  116.5s]    E2 s102 v14.1 (off)  W_A  -2.90 W_B  +1.00 | lineal A  -3.00 B  +1.00 | tabla A   -- B   -- | rapida A (0.15, 3.05) B (1.0, 0.0) | familiar A True B True (ev 229,210) | mord A [94, 96, 31, 8] B [27, 9, 84, 90] | vis B [2308, 2317, 567, 90] | splits 0 muertes 129  => W_A→-3:si W_B→+1:si comeB Q4≥50:si
+[09:49:07 +  120.5s]    E2 s102 v15e suma    W_A  -2.92 W_B  +1.00 | lineal A  -3.00 B  +1.00 | tabla A -0.00 B +0.00 | rapida A (0.14, 3.05) B (1.0, 0.0) | familiar A True B True (ev 213,231) | mord A [99, 73, 31, 10] B [30, 8, 112, 81] | vis B [2465, 2351, 358, 82] | splits 0 muertes 134  => W_A→-3:si W_B→+1:si comeB Q4≥50:si
+[09:49:11 +  124.6s]    E2 s102 v15f relevo  W_A  -2.87 W_B  +1.00 | lineal A  -3.00 B  +1.00 | tabla A -3.00 B +1.00 | rapida A (0.17, 3.04) B (1.0, 0.0) | familiar A True B True (ev 245,193) | mord A [87, 122, 21, 15] B [11, 17, 87, 78] | vis B [2374, 2373, 338, 78] | splits 0 muertes 119  => W_A→-3:si W_B→+1:si comeB Q4≥50:si
+[09:49:11 +  124.6s] ETAPA 3/3 — mundo de regla, semilla 141: v15f ON, OFF (= v14.1) y v15e ON, pareados, kwargs del tronco, T=200000.
+[09:49:19 +  132.7s]    xor01  organismo_v15gf memoria=relevo s141: registro 1.000  ESTRICTA 1.000  ba 0.999  ganadora [0, 1]  cobertura 4/4  celdas 55  splits 25  muertes 239
+[09:49:27 +  140.9s]    xor01  organismo_v15gf memoria=None   s141: registro 0.375  ESTRICTA 0.375  ba 0.382  ganadora None  cobertura None/4  celdas 69  splits 39  muertes 242
+[09:49:36 +  149.4s]    xor01  organismo_v15ge memoria=suma   s141: registro 0.250  ESTRICTA 0.250  ba 0.653  ganadora [0, 1]  cobertura 4/4  celdas 70  splits 40  muertes 217
+[09:49:43 +  157.3s]    px0    organismo_v15gf memoria=relevo s141: registro 1.000  ESTRICTA 1.000  ba 0.999  ganadora [0, 1]  cobertura 4/4  celdas 48  splits 18  muertes 309
+[09:49:51 +  165.3s]    px0    organismo_v15gf memoria=None   s141: registro 1.000  ESTRICTA 1.000  ba 0.994  ganadora None  cobertura None/4  celdas 51  splits 21  muertes 270
+[09:50:00 +  173.4s]    px0    organismo_v15ge memoria=suma   s141: registro 1.000  ESTRICTA 1.000  ba 0.998  ganadora [0, 4]  cobertura 4/4  celdas 57  splits 27  muertes 276
+[09:50:08 +  181.4s]    azar   organismo_v15gf memoria=relevo s141: registro 0.400  ESTRICTA 0.400  ba 0.401  ganadora [1, 3]  cobertura 4/4  celdas 67  splits 37  muertes 371
+[09:50:16 +  189.5s]    azar   organismo_v15gf memoria=None   s141: registro 0.800  ESTRICTA 0.800  ba 0.808  ganadora None  cobertura None/4  celdas 62  splits 32  muertes 324
+[09:50:24 +  197.6s]    azar   organismo_v15ge memoria=suma   s141: registro 0.600  ESTRICTA 0.600  ba 0.582  ganadora [2, 5]  cobertura 4/4  celdas 66  splits 36  muertes 388
+[09:50:24 +  197.6s] Las baterias NO se corren en el humo (traen su propio Pool). Comando para el coordinador (secuencial):
+[09:50:24 +  197.6s]    python experimentos/creacion_A/corre_v15f.py        (identidad -> V1 -> V2a -> V2b 161-180)
+[09:50:24 +  197.6s] datos -> v15f_humo_20260918_094706.json  sha256_16 = 84b79f7cd56f0088

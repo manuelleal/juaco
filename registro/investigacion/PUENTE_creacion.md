@@ -2056,3 +2056,56 @@ arquitectura, a reportar). *No pude:* correr la serie (regla 3); medir V3 `n*`; 
 · **Mini-prueba con números:** la misma del humo de v15e (E1/E2 s101–102 pareados con v14.1 y v15d; mundo de regla s141 ON/OFF): se
   espera E1 −3.00 / E2 +1.00 y **xor01 s141 ≥ 0.75 con ganadora (0,1)** (v15e: 0.250 con (2,4)). Lo construyo en cuanto el coordinador
   lo pida; no antes, por la cláusula.
+
+
+### A17 (Creador A). **v15f — R crudo + sobrescritura + relevo a la lineal: conserva lo de v15e (exacto a la primera, se desdice en una) y recupera XOR (s141: 1.000 contra 0.250); el precio que asoma es la letra "veneno Q4 < Q1"** — 18-sep, 10:00
+
+**Misión primero:** generalizar Y desdecirse. v15e (20 semillas, coordinador 09:37): E1 W_B ≈ −3 20/20, E2 reversión 20/20 (v15d 0/20),
+V2a 1.000/0.997, **xor01 0.500** → no entró por §7, como predije: la tabla de residuos hereda el fracaso de la lineal en XOR. v15f separa
+las dos cosas: la tabla guarda **R crudo** (lo que identificaba (0,1) en M3/v15c/v15d) y **sobrescribe** (lo que desdice), y la vía lenta
+**releva**: la casilla si conoce la combinación, la lineal si no. Cada vía con su propio error; la puerta de v14.1 intacta; 135 números.
+
+**Instrumentos (por anclas; congelados sólo leídos; `manifiesto.py --check` 16/16; nada de v15c/d/e sobrescrito):** `construye_v15f.py`
+fbc886b7f9d36b08 → `organismo_v15f.py` **96fc5c5262107850** (← v14.1 feefc88b1fd8d434) · `_on` 54d6efe0b564113c ·
+`organismo_v15gf.py` e4c4e0b00b1c20e3 / `_on` 039eee1bba9ebdf0 (← v14g 1f1318480cd34cde) · `bateria_v15f.py` d63f5aee558eb6da
+(← bateria_v14 72216f5415de0c86, sobre `_on`; sha v11/v10 desde `organismo/`) · `bateria_generaliza_v15f.py` 0cd87d2632e0c66a
+(← 9cf72581ebae7dea; entrada nueva verificada campo a campo, regla 14) · `identidad_v15f.py` 84431917ab1043b7 · `corre_v15f.py`
+8eae63dc22913e2b (identidad → V1 → V2a → V2b 161–180 con los kwargs exactos del tronco; **lee los veredictos y las corridas de los JSON de las
+baterías, no del log: ERR-43**; `--humo`) · `PREREGISTRO_v15f.md` df7348599aa68333 (§1–§7 antes de medir; §8 humo). **Identidad 32/32**
+(I1 24/24 ≡ v14.1 · I2 rng no consumido a T = 120 000, 2/2 · I3 6/6 ≡ v14g con los kwargs del tronco); criterio 5 de la batería copiada (v11/v10
+contra el `_on`) idéntico en 2/2 probados; una tarea de V2a en proceso (px0 s101 ON: acc 0.9, ba 0.983).
+
+**Humo (`datos/v15f_humo_20260918_094706`, json 84b79f7cd56f0088; un proceso, T ≤ 200 000, semillas 101, 102, 141; NO es la serie):**
+
+| escenario (T = 100 000) | organismo | W_A | W_B | tabla B | rápida B (Wp, Wn) | mordidas B por trimestre | letra de la batería |
+|---|---|---|---|---|---|---|---|
+| E1 s101 / s102 | v14.1 (off) | +1.00 | −2.96 / −2.98 | — | (0, 2.96) / (0, 2.98) | [27,11,8,1] / [27,9,7,8] | pasa |
+| E1 s101 / s102 | v15e | +1.00 | −2.97 / −2.99 | (residuo 0) | (0, 2.97) / (0, 2.99) | [15,20,5,9] / [30,8,9,11] | pasa |
+| E1 s101 / s102 | **v15f** | +1.00 | **−2.94 / −2.96** | **−3.00** | (0, 2.94) / (0, 2.96) | **[2,16,14,9]** / [11,17,8,9] | W_B ≈ −3 sí 2/2 · **veneno Q4 < Q1 NO en s101** |
+| E2 s101 / s102 | v14.1 (off) | −2.95 / −2.90 | +1.00 | — | (1.0, 0) | […, 96, **81**] / […, 84, **90**] | pasa |
+| E2 s101 / s102 | **v15f** | **−2.82 / −2.87** | **+1.00 / +1.00** | **+1.00** | (1.0, 0) | [2,16,78,**95**] / [11,17,87,**78**] | **pasa las tres, 2/2** |
+
+| mundo de regla s141 (kwargs del tronco) | **v15f ON** registro / ESTRICTA | ganadora | OFF (= v14.1) | v15e ON | celdas / splits ON · OFF |
+|---|---|---|---|---|---|
+| **xor01** | **1.000 / 1.000** | **(0,1)**, cobertura 4/4 | 0.375 | 0.250 | 55 / 25 · 69 / 39 |
+| px0 | **1.000 / 1.000** | (0,1) | 1.000 | 1.000 | 48 / 18 · 51 / 21 |
+| azar | 0.400 | (1,3) | 0.800 | 0.600 | 67 / 37 · 62 / 32 |
+
+**Lectura.** (i) Con R crudo la exactitud a la primera y la reversión en una mordida se conservan (tabla B −3.00; E2 +1.00 exacto; come B Q4
+78–95). (ii) **El prior de pares vuelve:** xor01 1.000 con (0,1) en la semilla donde v15e (residuos) daba 0.250 con (2,4). (iii) px0 = OFF;
+azar en banda. (iv) Coste en la dirección declarada (menos celdas y divisiones).
+
+**El aviso, más grande de lo que escribí en §6(d):** E1 s101 **"veneno Q4 < Q1" NO** (Q1 2, Q4 9). Mecanismo: con −3 exacto desde la PRIMERA
+mordida, Q1 casi no tiene mordidas; la puerta se abre en Q2 (5 mordidas a `pb` 0.025) y la rápida, leyendo −1.13, consolida en Q2–Q4 con las
+mordidas que v14.1 daba en Q1 (27). El total de mordidas de veneno es **menor** (41–45 contra 47–51) pero la letra mide **dónde caen**, y está
+escrita para un organismo que aprende en 5–27 mordidas. No la cambio (regla 3). **Predicción tras el humo (dicha, no preregistrada):** V1
+**cae por "veneno Q4 < Q1" (15–18/20)** con W_B ≈ −3 20/20 y E2 reversión 20/20; V2a pasa (G1 1.000 / G2 ≥ 0.97); V2b xor01 **0.85–0.95**, gana
+(0,1) ≥ 18/20, azar en banda, px0 = OFF. Si sale así, la decisión es de criterio, no de mecanismo, y es del coordinador y el director
+(**candidato a ERR-44**: *"un organismo que aprende el veneno en una mordida no puede morderlo más en Q1 que en Q4"*; la cantidad total de
+mordidas de veneno y W_B miden lo mismo que ese subcriterio quería medir, y las dos salen mejor).
+
+**Tres líneas honestas.** *Predigo:* lo de arriba — v15f hace lo que la misión pide (generaliza, cruza XOR con 8 ejemplos, se desdice en una
+mordida) y tropieza con un subcriterio de v6 que premia morder mucho al principio. *Me tumba* de verdad: xor01 < 0.75 en 161–180 (una semilla
+no es la serie; v15c/v15d con R crudo dieron 0.81–0.88 con la puerta por celdas: el techo por alias de la puerta puede comerse el 1.000),
+`azar` fuera de banda, o px0 < OFF (la ganadora sin píxel 0 tapando a la lineal). *No pude:* correr la serie; más de una semilla en xor01;
+medir `n*`.
