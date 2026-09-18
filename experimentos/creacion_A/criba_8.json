@@ -1,0 +1,58 @@
+{
+ "n_tren": 8,
+ "ntr": null,
+ "semillas": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
+ ],
+ "resultados": {
+  "residuo (cascade-correlation, estadistico IDEAL)": {
+   "gana": 2,
+   "acc": 0.625,
+   "empatados": 3.5,
+   "pasa": false
+  },
+  "fision de v11 (mi ruta 2)": {
+   "gana": 0,
+   "acc": 0.469,
+   "empatados": 1.0,
+   "pasa": false
+  },
+  "pureza del refuerzo bajo el par (unique cue), nmin=2": {
+   "gana": 10,
+   "acc": 0.625,
+   "empatados": 2.0,
+   "pasa": false
+  },
+  "media del refuerzo bajo el par, nmin=2": {
+   "gana": 12,
+   "acc": 0.625,
+   "empatados": 1.0,
+   "pasa": false
+  },
+  "[control] azar": {
+   "gana": 1,
+   "acc": 0.406,
+   "empatados": 1.0,
+   "pasa": false
+  }
+ }
+}

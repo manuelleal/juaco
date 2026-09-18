@@ -407,6 +407,64 @@ criba barata que dejo montada (proponer `P0·P1` en ≥ 15/20 **antes** de gasta
 el criterio de parada de mi §A12: **declarar el mínimo `ntr` con el que el organismo generaliza — 1.000 con 14
 patrones y n\* = 200 —** en vez de seguir buscando una regla que rompa un empate de 9.
 
+### A14. CRIBA montada y CIERRE de la línea XOR (ERR-35, reformulación firmada por el director) — 18-sep
+
+**La criba está lista y calibrada:** `experimentos/creacion_A/criba_mecanismo.py`. Un mecanismo es una función
+`f(ctx) → 15 marcadores`; `ctx` trae lo que el organismo tiene localmente (patrones de tren, `R`, residuo del ajuste
+elemental exacto, la secuencia real de encuentros grabada con `lab=True`, los eventos de fisión). **Desempate al
+azar obligatorio** — el empate resuelto por orden de índice ya me coló un 17/20 falso (§A13). Meter un mecanismo de
+la sala es un decorador: `@registra("nombre")`. Coste: ~2 s.
+
+**La criba discrimina por INFORMACIÓN, no por diseño — y lo demuestro con sus dos controles:**
+
+| mecanismo | 8 patrones (mundo original) | | 14 patrones (control) | |
+|---|---|---|---|---|
+| | gana `P0·P1` | acc | gana `P0·P1` | acc |
+| residuo (cascade-correlation), estadístico **ideal** | 2/20 | 0.625 | 12/20 | 1.000 |
+| **fisión de v11 (mi ruta 2)** | **0/20** | 0.469 | 0/20 | — |
+| pureza del refuerzo (unique cue) | 10/20 | 0.625 | 7/20 | 0.375 |
+| media del refuerzo bajo el par | 12/20 | 0.625 | **16/20 ✅ PASA** | **1.000** |
+| **[control nulo] azar** | 1/20 | 0.406 | 2/20 | 0.250 |
+
+**Ninguno pasa con 8. Con 14, uno pasa.** El control nulo se queda en 1–2/20 y el positivo cruza: la criba no está
+amañada contra los mecanismos, distingue cuándo la información está.
+**El informe de la sala (`ENJAMBRE_xor_20260918.md`) no está en el repo a las 06:10; en cuanto aparezca paso sus
+cuatro mecanismos por esta criba y digo cuáles la pasan.**
+
+---
+
+### ENTRADA DE CIERRE de la línea XOR (queda en firme si ninguno de los mecanismos de la sala pasa la criba)
+
+> **XOR se aprende con reglas locales cuando el mundo da 14 ejemplos distintos; con 8 no lo aprende nadie, porque
+> 9 de 15 hipótesis explican los datos igual de bien.**
+
+| patrones de tren | `acc_lenta` en los nunca vistos | exposiciones hasta ≥ 0.75 | hipótesis con residuo 0 |
+|---|---|---|---|
+| **8** (el mundo original) | **0.50** | **> 600** | **9 de 15** |
+| **11** | **0.625** | > 600 | 2 de 15 |
+| **14** | **1.000** | **n\* = 200** | **1 de 15** |
+
+**Con los rasgos DADOS (oráculo), el cuello era la regla y ya está resuelto** (bloque 4, ERR anterior): dos
+constantes de la vía lenta, `eta_s` 0.015 → 0.15 y `clip_s` 3 → 10, memoria y código nuevos **cero**, llevan de
+0.625 a **1.000** con `n\* = 150` contra 400; y **no le cuestan nada al tronco** (examen 8/8, G1 1.000, G2 0.967,
+K 20/20). **Con los rasgos PROPIOS del organismo el cuello no es la regla: es el conteo de ejemplos.**
+
+**Cotas que sostienen el "no lo aprende nadie" (todas medidas sobre el MISMO flujo real de encuentros, replay
+verificado contra el organismo 0 diferencias en 20/20):** gradiente exacto **0.562** · retropropagación (MLP 6→8→1)
+**0.531** · normas L1/L2/margen/grado/frecuencia ≤ 0.625 · vía rápida sola (Kenyon K = 1…7) 0.41–0.50, plana en K ·
+selección por residuo con estadístico **ideal** 3/20. Y la repetición está agotada: **el gradiente exacto satura a
+los 20 encuentros y no se mueve hasta los 600**.
+
+**Controles, declarados:** `px0` = 1.000 y `azar` ∈ [0.35, 0.65] en los brazos con competencia; `SIN_SEL` **rompió**
+px0 (0.900) en el bloque 2 y `ETA_1` quedó **no comparable** (2–16 eventos: cambió la conducta, no sólo el
+optimizador) en el bloque 1 — los dos están en el registro como tales, no barridos. Cláusula de muestreo: 2/20
+semillas sin una clase XOR mordida en el mundo original (6/20 sin ella en el tren). Y los brazos `ntr` **cambian el
+mundo** (suben el tren, bajan el test a 9 y 6): se declara, y por eso el enunciado del cierre habla de *"cuando el
+mundo da 14 ejemplos distintos"*, no de una mejora del organismo.
+
+**Lo que NO se declara:** que el organismo "aprende XOR". Aprende XOR **con 14 ejemplos**; con 8 el límite es del
+mundo y es demostrable, no una conjetura.
+
 ### A11. Archivos (sólo míos, nada original tocado, sin commits)
 `experimentos/creacion_A/`: `identificabilidad_xor.py` · `sesgo_grado_xor.py` · `banco_sesgo.py` ·
 `regla_puerta_rasgo.py` · `regla_wta_conjuntiva.py` · `dinamica_oraculo.py` ·
