@@ -6,6 +6,8 @@ salida y con el mismo consumo del generador aleatorio:
   REJILLA 2 (rodeo)        mundo_2d.run(seed, prueba=dict(modo='rodeo')) == mundo_mapa_rodeo.run(seed, ...)
   REJILLA 3 (tronco)       mundo_2d.run(seed) con las perillas apagadas == organismo_v13.run(seed) en las claves de v13
                            (v13 no trae 'tel' ni 'M_llenas'; se comprueba aparte que valgan None y 0)
+  REJILLA 4 (perilla nueva) en la rejilla 2D, con la perilla 'barajar' AUSENTE == con barajar=False: la perilla nueva
+                           del bloque modo='2d' tiene que ser INERTE cuando esta apagada (no toca el rng ni nada mas)
 Compara los diccionarios completos tras ida y vuelta por JSON (como identidad_mapa_rapido.py), no una metrica resumen.
 UN SOLO PROCESO, sin Pool (regla 3 de registro/EQUIPO.md). T corto por defecto (20000).
 
@@ -43,6 +45,7 @@ G1 = {
     'SINMAPA':         dict(MUNDO, usa_M=False, prueba=dict(PRUEBA)),             # mapa OFF, mismo mundo
     'CONGELADA':       dict(MUNDO, usa_M=True, escribe_M=False, prueba=dict(PRUEBA)),
     'BARAJADO':        dict(MUNDO, usa_M=True, prueba=dict(PRUEBA, barajar=True)),
+    'BARAJADO_inv':    dict(MUNDO, usa_M=True, prueba=dict(PRUEBA, barajar=True, invertir=True)),
     'INVERTIDO':       dict(MUNDO, usa_M=True, prueba=dict(PRUEBA, invertir=True)),
     'M_sin_sitios':    dict(r_vis=3, usa_M=True, nobj=6),                         # M con MUCHAS celdas: exige el mismo ORDEN DE SUMA
     'M_perillas':      dict(MUNDO, usa_M=True, prueba=dict(PRUEBA), H_M=7, disc_M=0.75, gamma_M=1.3, regen=17),
@@ -60,6 +63,15 @@ G3 = {
     'v13_base':   dict(),
     'v13_nuevo':  dict(nuevo='C', nuevo_en=T // 3),
     'v13_v11':    dict(eta_s=0.0, puerta=None),
+}
+# REJILLA 4: la perilla nueva ('barajar' dentro del bloque modo='2d') apagada tiene que ser INERTE.
+D2 = dict(ancho=17, alto=13, r_vis=3, sitios=('A', 'B', 'B', 'B', 'B'))
+P2D = dict(modo='2d', xy=((0, 0), (2, -2), (2, -1), (2, 0), (2, 1)), n_tel=20, max_pasos=60, E_test=0.3,
+           casos=({'et': 'rodeo', 'S': (6, 0), 'ok': (0, 3)},))
+G4 = {   # (kwargs sin la clave, kwargs con la clave en False)
+    '2d_MAPA':      (dict(D2, usa_M=True, prueba=dict(P2D)), dict(D2, usa_M=True, prueba=dict(P2D, barajar=False))),
+    '2d_INVERTIDO': (dict(D2, usa_M=True, prueba=dict(P2D, invertir=True)),
+                     dict(D2, usa_M=True, prueba=dict(P2D, invertir=True, barajar=False))),
 }
 
 
@@ -83,11 +95,30 @@ def rejilla(titulo, configs, ref, solo_claves_de_ref=False):
     return n, len(fallos)
 
 
+def rejilla_par(titulo, configs, tt):
+    """Las dos partes son mundo_2d con kwargs distintos (perilla ausente contra perilla apagada)."""
+    fallos = []; n = 0
+    print(f"--- {titulo} ({len(configs)} configuraciones x {len(SEEDS)} semillas, T={tt}) ---", flush=True)
+    for nombre, (kwa, kwb) in configs.items():
+        malas = 0
+        for s in SEEDS:
+            a = dos.run(s, T=tt, **kwa); b = dos.run(s, T=tt, **kwb)
+            dif = [k for k in sorted(set(a) | set(b)) if N(a.get(k)) != N(b.get(k))]
+            n += 1
+            if dif:
+                malas += 1; fallos.append((nombre, s, dif))
+                print(f"  DIFIERE {nombre} s{s}: {dif[:6]}", flush=True)
+        print(f"  {nombre:16s} {len(SEEDS) - malas}/{len(SEEDS)} identicas", flush=True)
+    return n, len(fallos)
+
+
 if __name__ == '__main__':
     t0 = time.time(); tot = mal = 0
     for tit, cfg, ref, solo in [('REJILLA 1  mundo_2d(alto=1) == mundo_mapa', G1, mapa, False),
                                 ('REJILLA 2  mundo_2d(alto=1,modo=rodeo) == mundo_mapa_rodeo', G2, rodeo, False),
                                 ('REJILLA 3  mundo_2d(perillas apagadas) == organismo_v13', G3, v13, True)]:
         a, b = rejilla(tit, cfg, ref, solo); tot += a; mal += b
+    a, b = rejilla_par('REJILLA 4  perilla nueva (barajar) APAGADA == ausente, en la rejilla 2D', G4, min(T, 20000))
+    tot += a; mal += b
     print(f"=> IDENTIDAD {tot - mal}/{tot} corridas identicas   ({time.time() - t0:.0f} s, un proceso)", flush=True)
     sys.exit(1 if mal else 0)

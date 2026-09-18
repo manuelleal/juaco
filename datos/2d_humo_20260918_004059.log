@@ -1,0 +1,20 @@
+[00:40:59 +    0.0s] HUMO de un proceso (sin Pool). Mundos ['T1', 'T4', 'T3', 'T2']. Identidad 1 semilla T=5000 + 1 corrida MAPA T=20000 por mundo.
+[00:40:59 +    0.0s] sha mundo_2d 447af72a1b6d4e29  mundo_mapa 207d6a1954336b18  mundo_mapa_rodeo 7ab34aed9acffaa0  v13 cc8b16b492d4d324
+[00:41:18 +   18.8s]    identidad (mundo_mapa x2, rodeo, v13; semilla 1): 4/4
+[00:41:42 +   43.3s]    T1 M1 barrera   rodeo VERDADERO  s21 (24.5s)  rejilla [17, 13]  orientacion 1  sitios {147: 'A', 115: 'B', 132: 'B', 149: 'B', 166: 'B'}
+[00:41:42 +   43.3s]       R 0.025 (n 40)  llega 0.0  limpio 0.0  come2 0.0  pisa 0.0  pasos 60.0  sigue_mec1 0.975  sin_mover 0  ciego 40/40
+[00:41:42 +   43.3s]       v_A -0.102  v_B -1.296  r na  V-T2 (1.37<r<2.74) fuera  M_llenas 5/5  W {'A': -0.1, 'B': -1.3, 'C': -0.2, 'D': -0.49}  muertes 64  mec1!=mec2 en 0/40
+[00:41:42 +   43.3s]       primer paso {-x:0.00, +x:0.97, -y:0.00, +y:0.03}   B1(ep0) [-1.8747, 0.0, -0.8727, -0.4593]
+[00:41:49 +   50.3s]    T4 M2 sombra    rodeo FALSO  s21 (7.0s)  rejilla [17, 13]  orientacion 1  sitios {147: 'A', 149: 'B', 150: 'B', 75: 'A'}
+[00:41:49 +   50.3s]       R 0.05 (n 40)  llega 1.0  limpio 0.975  come2 0.0  pisa 0.025  pasos 16.175  sigue_mec1 0.75  sin_mover 0  ciego 40/40
+[00:41:49 +   50.3s]       v_A 1.0  v_B -0.943  r 0.94  V-T2 (1.37<r<2.74) fuera  M_llenas 4/4  W {'A': 1.0, 'B': -0.94, 'C': 0.22, 'D': -0.35}  muertes 1  mec1!=mec2 en 0/40
+[00:41:49 +   50.3s]       primer paso {-x:0.12, +x:0.05, -y:0.75, +y:0.07}   B1(ep0) [0.0, -0.1775, 0.3937, 0.0]
+[00:42:17 +   77.6s]    T3 M4 secuencia A->B  s21 (27.3s)  rejilla [17, 13]  orientacion 1  sitios {147: 'A', 151: 'A', 211: 'B'}
+[00:42:17 +   77.6s]       R 0.85 (n 40)  llega 0.95  limpio 0.925  come2 0.95  pisa 0.075  pasos 80.0  sigue_mec1 0.85  sin_mover 0  ciego 40/40
+[00:42:17 +   77.6s]       v_A 1.0  v_B 0.213  r 0.21  V-T2 (1.37<r<2.74) fuera  M_llenas 3/3  W {'A': 1.0, 'B': 0.21, 'C': 0.3, 'D': -0.09}  muertes 1  mec1!=mec2 en 0/40
+[00:42:17 +   77.6s]       primer paso {-x:0.05, +x:0.85, -y:0.03, +y:0.07}   B1(ep0) [0.0, 0.6519, 0.0, 0.084]
+[00:42:39 +  100.0s]    T2 M3 flanco    HORIZONTE 2  s21 (22.4s)  rejilla [17, 13]  orientacion 1  sitios {151: 'A', 29: 'B', 11: 'B', 62: 'B'}
+[00:42:39 +  100.0s]       R 0.55 (n 40)  llega 0.95  limpio 0.925  come2 0.0  pisa 0.075  pasos 12.65  sigue_mec1 0.55  sin_mover 0  ciego 40/40
+[00:42:39 +  100.0s]       v_A 1.0  v_B 0.099  r 0.10  V-T2 (1.37<r<2.74) fuera  M_llenas 3/4  W {'A': 1.0, 'B': 0.1, 'C': 0.27, 'D': -0.18}  muertes 7  mec1!=mec2 en 0/40
+[00:42:39 +  100.0s]       primer paso {-x:0.07, +x:0.55, -y:0.12, +y:0.25}   B1(ep0) [0.0, 0.422, 0.035, 0.0283]
+[00:42:39 +  100.0s] HUMO hecho. Son 1 semilla y T=20000 (el bloque va a 100000): no son el resultado y nada se recalibra con ellos.

@@ -183,8 +183,11 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
         if log_cada and t%log_cada==0: log.append((t,)+tuple(round(valor(PAT[k]),2) for k in 'ABCD'))
     _tel=None
     if _d2 is not None:   # 2d: teletransportes por caso, SIN aprendizaje y SIN boca. El organismo NO cambia: decide _sesgo_M
+        if _d2.get('barajar'):   # control: el valor permutado entre celdas y entre pixeles (se reporta, no decide)
+            _pi=rng.permutation(NKMAX); Wp=Wp[_pi]; Wn=Wn[_pi]; _pj=rng.permutation(6); Wps=Wps[_pj]; Wns=Wns[_pj]
         if _d2.get('invertir'): Wp,Wn=Wn,Wp; Wps,Wns=Wns,Wps   # control: el valor con el signo cambiado (la puerta, |Wp-Wn|, no cambia)
         _IX={_c:_j for _j,_c in enumerate(_SIT)}; _q2=bool(_d2.get('h2',False)); _bm=bool(_d2.get('borra_M',False))
+        _M0=(_Mpat.copy(),_Mset.copy())   # 2d: los 40 teletransportes son pruebas INDEPENDIENTES, asi que el mapa se restaura como E, la traza y los sitios
         _vA=float(valor(PAT['A'])); _vB=float(valor(PAT['B']))   # el valor que la boca ya tenia (tras invertir, si toca)
         def _rel(_dx,_dy): return (_F0%_W+_o2*_dx)%_W+((_F0//_W+_o2*_dy)%_H)*_W   # 2d: coordenada relativa -> celda (con el espejo de la semilla)
         def _QM(_p):   # 2d: horizonte 1 = el mecanismo actual; horizonte 2 = simular UN paso con M y evaluar desde ahi (coste: 1+_NA llamadas a _sesgo_M por paso; memoria: la posicion simulada)
@@ -194,6 +197,7 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
         for _i in range(_d2.get('n_tel',40)):
             _cc=_d2['casos'][_i%len(_d2['casos'])]
             _ok=[(_a if _o2>0 else (_a^1)) for _a in _cc['ok']]   # 2d: con el mapa reflejado, la accion correcta se refleja (0<->1, 2<->3)
+            _Mpat[:]=_M0[0]; _Mset[:]=_M0[1]   # 2d: mapa restaurado (solo importa con borra_M, que lo modifica dentro del episodio)
             pos=_rel(*_cc['S']); E=_d2.get('E_test',0.3); tr=np.zeros(_NF); _rech.clear()
             for x in list(_pend): del _pend[x]
             spawn(); _dir=-1; _pisa=0; _come=[]; _b0=None; _s=-1
@@ -223,6 +227,7 @@ def run(seed,T=100000,learn=True,invertir_en=None,nuevo=None,nuevo_en=50000,nuev
                              B1=(None if _b0 is None else [round(float(_z),4) for _z in _b0[0]]),
                              B2=(None if _b0 is None else [round(float(_z),4) for _z in _b0[1]]),
                              come=[int(_z) for _z in _come],pisa=int(_pisa),pasos=int(_s+1)))
+        _Mpat[:]=_M0[0]; _Mset[:]=_M0[1]   # 2d: el mapa que se devuelve (M_llenas) es el del ENTRENAMIENTO, no el que borra_M dejo en el ultimo episodio
         def _fr(_et,_f):
             _v=[_f(_c) for _c in _cas if _c['et']==_et and _f(_c) is not None]
             return (round(sum(_v)/len(_v),3),len(_v)) if _v else (None,0)

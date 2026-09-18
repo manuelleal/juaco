@@ -29,7 +29,7 @@ Los humos declarados están al final (§Declaración); **ningún criterio sale d
    puerta manda a la vía lenta y ésta generaliza desde A). Cualquier prueba 2D cuya predicción dependa del cociente
    `r = |v_B|/v_A` tiene que fijar el mundo **y** declarar su ventana de validez por semilla (§5, V-T2).
 
-## 1. Instrumento: `experimentos/nivel6_2d/mundo_2d.py` (`683b45c743b589c3`, 320 líneas)
+## 1. Instrumento: `experimentos/nivel6_2d/mundo_2d.py` (`24da4ab1644eb92a`, 325 líneas)
 
 Generado por `construye_2d.py` **por anclas con conteo exacto** (12 parches, cada una exactamente una vez) desde
 `mundo_mapa_rodeo.py` (**sha `7ab34aed9acffaa0`**, que a su vez es `mundo_mapa.py` **`207d6a1954336b18`**; los dos shas
@@ -50,14 +50,15 @@ más cercano**, ahora en distancia toroidal Manhattan, y su lado se codifica com
   y el empate de lado va a `+x`/`+y` — que es justo lo que hace el `dl<dr` del tronco (con `dl == dr`, y también en
   contacto, v13 enciende el bit "derecha").
 
-**ANCLA DE IDENTIDAD — resultado: `identidad_2d.py` → 51/51 corridas idénticas** (T = 20 000, semillas 1–3, un proceso,
-337 s). Tres rejillas, comparando **todos los diccionarios de salida** tras ida y vuelta por JSON:
+**ANCLA DE IDENTIDAD — resultado: `identidad_2d.py` → 60/60 corridas idénticas** (T = 20 000, semillas 1–3, un proceso).
+Cuatro rejillas, comparando **todos los diccionarios de salida** tras ida y vuelta por JSON:
 
 | rejilla | qué compara | configuraciones | resultado |
 |---|---|---|---|
-| 1 | `mundo_2d(alto=1)` ≡ `mundo_mapa` | 11 (apagadas, apagadas+inversión, MAPA, SINMAPA, CONGELADA, BARAJADO, INVERTIDO, `M` sin sitios con muchas celdas, perillas `H_M/disc_M/gamma_M/regen`, divisiones vivas, sólo `r_vis`) × 3 semillas | **33/33** |
+| 1 | `mundo_2d(alto=1)` ≡ `mundo_mapa` | 12 (apagadas, apagadas+inversión, MAPA, SINMAPA, CONGELADA, BARAJADO, BARAJADO+INVERTIDO, INVERTIDO, `M` sin sitios con muchas celdas, perillas `H_M/disc_M/gamma_M/regen`, divisiones vivas, sólo `r_vis`) × 3 semillas | **36/36** |
 | 2 | `mundo_2d(alto=1, modo='rodeo')` ≡ `mundo_mapa_rodeo` | 3 (rodeo, rodeo invertido, otras `g/dps/aas`) × 3 | **9/9** |
 | 3 | `mundo_2d` con perillas apagadas ≡ `organismo_v13` | 3 (base, `nuevo='C'`, v11) × 3, claves de v13 + `tel=None`, `M_llenas=0` | **9/9** |
+| 4 | perilla nueva `barajar` del bloque 2D **apagada ≡ ausente** (inercia) | 2 (MAPA, INVERTIDO en la rejilla 17×13) × 3 | **6/6** |
 
 La identidad **sí** es alcanzable sin cambiar el orden de consumo del `rng`, y eso obligó a tres decisiones de diseño:
 `Wl` es `(_NA, _NF)` = `(2, 9)` con `alto=1` (mismo primer `uniform`); el ruido de la política es
@@ -73,7 +74,8 @@ relativas a un **origen azaroso por semilla** y **reflejados (punto de reflexió
 (V1). Después, **sin aprendizaje y sin boca**, 40 teletransportes por semilla; en cada uno se mide la **dirección del
 primer paso**, el vector de sesgo `B` completo de ese instante (y el de horizonte 2), si **llega** a una comida, si
 **pisa** veneno (más estricto que morderlo: no se consulta la boca) y cuántas comidas distintas alcanza. `E_test = 0.3`,
-traza y memoria de rechazo a cero, sitios repuestos antes de cada episodio. **En los cuatro casos todo sitio está a
+traza y memoria de rechazo a cero, sitios repuestos **y `M` restaurada** antes de cada episodio (los 40
+teletransportes son pruebas **independientes**; sólo `borra_M` modifica `M` dentro de un episodio). **En los cuatro casos todo sitio está a
 distancia ≥ 4 del punto de partida** (> `r_vis`): la retina arranca vacía y sólo `M` puede decidir; se verifica con
 `ciego_al_llegar = 40/40`.
 
@@ -82,7 +84,7 @@ distancia ≥ 4 del punto de partida** (> `r_vis`): la retina arranca vacía y s
 | **M1 barrera** | comida (0,0); veneno (2,−2),(2,−1),(2,0),(2,1) | **T1 rodeo VERDADERO** | (6,0) | camino limpio más corto = 10 pasos por arriba ⇒ **{−x, +y}**; el flanco barato es +y (por abajo son 12) |
 | **M2 sombra** | comida (0,0); veneno (2,0),(3,0); comida (−4,−4) | **T4 rodeo FALSO** | (−4,0) | las **dos** comidas están a 4 pasos limpios: +x (con veneno *detrás* de ella) y −y (limpia): son equivalentes |
 | **M3 flanco** | comida (4,0); veneno (1,6) *[el del flanco]*; veneno (0,5) y (0,−5) *[dieta: `Δx = 0`, no tocan ±x]* | **T2 HORIZONTE 2** | (0,0) | **{+x}** (4 pasos limpios; el veneno no está en el camino) |
-| **M4 secuencia** | comida (0,0); comida (4,0); veneno (−4,4) | **T3 SECUENCIA A→B** | (−4,0) | **{+x}**: A a 4 pasos, B 4 pasos más allá, todo limpio |
+| **M4 secuencia** | comida (0,0); comida (0,6); veneno (−4,4) | **T3 SECUENCIA A→B** | (−4,0) | **{+x}**: A a 4 pasos en +x; B a 6 pasos de A en +y, **fuera de la vista desde A** (6 > `r_vis`), todo limpio |
 
 **Qué pregunta cada una.**
 - **T1** — obstáculo (de veneno recordado, el único obstáculo que este organismo puede representar) entre él y la meta.
@@ -91,6 +93,9 @@ distancia ≥ 4 del punto de partida** (> `r_vis`): la retina arranca vacía y s
   paso** no es la mejor **a dos**. Los otros dos venenos están alineados en x con S (`Δx = 0`), así que **suman lo mismo
   a +x y a −x** (de hecho, nada) y sólo sirven de dieta para que `v_B` se aprenda (§0.5).
 - **T3** — encadenar: llegar a A, comérsela y seguir a B. La comida alcanzada **se consume** dentro del episodio.
+  B está **fuera de la vista desde A**: al comerse A el organismo vuelve a quedar ciego y sólo `M` puede llevarlo a B
+  (si B se viera desde A, la prueba mediría las patas y no la tabla — medido: con B a 4 casillas, `come2 = 0.95` sin
+  que `M` pinte nada; ver §Declaración 4).
 - **T4** — el veneno está **detrás** de la comida, donde nunca lo pisaría; la otra comida, idéntica y a la misma
   distancia, está limpia. Si prefiere la limpia, se desvía **sin motivo**.
 
@@ -107,7 +112,8 @@ distancia ≥ 4 del punto de partida** (> `r_vis`): la retina arranca vacía y s
   quieto": el máximo es sobre las 4 acciones.
 - **H3 — candidato mínimo para T3 (perilla `borra_M`):** *el mapa se corrige con lo que veo*: estando en una celda que
   `M` recuerda y que está **vacía**, se borra esa entrada. Una línea, sin memoria nueva. Sin él, `M` sigue diciendo
-  "aquí hay comida" después de habérsela comido.
+  "aquí hay comida" después de habérsela comido. El borrado vale **dentro del episodio**: `M` se restaura al empezar
+  cada teletransporte (§2), para que los 40 sean pruebas independientes y no una sola corrida acumulada.
 
 ## 4. Brazos (por mundo)
 
@@ -135,9 +141,19 @@ devuelve (`v_A = valor(PAT['A'])`, `v_B = valor(PAT['B'])`).
 | **T1c** | `B` del flanco corto > `B` del flanco largo (con el espejo de la semilla: +y / −y) | **1.00 de los episodios** | 1.00 | — |
 | **T2** | `R2` = primer paso +x | 0.65 / **0.40** / **0.14** | 0.91 / **0.84** / **0.67** | 0.25 |
 | **T3** | `llega_A` | 0.91 | 0.96 | ≤ 0.25 |
-| **T3b** | `come2` (alcanza A **y** B) | **≤ 0.10** (`M` no se borra: vuelve al sitio vacío) | ≤ 0.10 | ≤ 0.05 |
+| **T3b** | `come2` (alcanza A **y** B) | **≤ 0.20** (`M` no se borra: vuelve al sitio vacío) | ≤ 0.20 | ≤ 0.05 |
 | **T3b′** | `come2` con `borra_M` | **≥ 0.50** | — | — |
 | **T4** | `R4 = n(+x)/(n(+x)+n(−y))` (comida con veneno detrás frente a comida limpia, misma distancia) | 0.26 / 0.00 / **0.00** | 0.00 | **0.50** |
+
+
+**Riesgo declarado en T3 (humo, §Declaración 5):** con B a 6 casillas de A el organismo, al deambular tras comerse A,
+puede volver a VERLA (`r_vis = 3`) y llegar **sin** mapa; con `alto = 13` no se puede separar más (6 = `alto//2`).
+Humo de 3 semillas a T = 100 000: `come2(MAPA)` **0.475 / 0.225 / 0.300** (mediana 0.30, por encima del ≤ 0.20 del
+criterio) y `come2(borra_M)` **0.875 / 0.400 / 0.450** (mediana 0.45, por debajo del ≥ 0.50). **La diferencia pareada sí
+es consistente: +0.40 / +0.175 / +0.150, 3 de 3.** Es decir: P3 tal como está escrito se cae por los dos umbrales
+absolutos, y lo que el bloque mide de verdad es la diferencia pareada, que es la pregunta de mecanismo.
+**Decisión del coordinador ANTES de correr** (el diseñador no toca criterios): dejar P3 como está y leer la diferencia
+como dato, o añadir el criterio pareado `come2(borra) − come2(MAPA) ≥ 0.15` en ≥ 15/20 semillas.
 
 **Criterios (medianas sobre 20 semillas; `RODEA_2D` = P1 ∧ P2 ∧ P3 ∧ P4):**
 - **P1 (rodeo verdadero):** MAPA `R1 ≥ 0.50` **y** `> SINMAPA` pareado en ≥ 15/20 semillas.
@@ -159,7 +175,10 @@ devuelve (`v_A = valor(PAT['A'])`, `v_B = valor(PAT['B'])`).
   confirmado y cuantificado**. `R4 ∈ [0.40, 0.60]` lo refutaría (no habría desvío sin motivo).
 - **C1 (control decisivo):** INVERTIDO invierte T1b y T4 (`T1b ≤ 0.25`, `R4 ≥ 0.60`). Si INVERTIDO no cambia, la
   dirección no corre por el valor de lo recordado ⇒ **ERR numerado** y no se declara nada aunque P1–P4 pasen.
-- **C2:** CONGELADA ≡ SINMAPA **bit a bit** y `M_llenas = 0`. **C3:** BARAJADO se reporta, no decide.
+- **C2:** CONGELADA ≡ SINMAPA **bit a bit en toda la conducta** (primer paso, llegadas, pisadas, pasos, `sin_mover`,
+  `ciego_al_llegar`) y `M_llenas = 0`. *Precisión de cálculo (18 sep, antes de correr):* con `usa_M=False` el sesgo ni
+  se calcula, así que las claves de **registro del mecanismo** (`mec1/mec2/B1/B2/sigue_mec1`) no existen en SINMAPA y se
+  excluyen de la comparación; lo que tiene que salir idéntico bit a bit es la conducta. **C3:** BARAJADO se reporta, no decide.
 - **Validez general (si cae, no se interpreta):** V1 `M_llenas` = nº de sitios en MAPA/INVERTIDO · V2
   `ciego_al_llegar = 40/40` en todos los brazos · V3 `sin_mover ≤ 2/40` · V4 `v_A > 0` **y** `v_B < 0` en ≥ 18/20
   semillas (§0.5: en M3 el humo dio `v_B > 0` en 1 de 3; si eso se repite, ese mundo no mide lo que dice).
@@ -200,8 +219,9 @@ no lo usa"*. **No** se puede escribir "planifica" ni "no puede planificar": lo m
 ## 8. Coste y semillas
 
 Medido en el humo: **una corrida de 100 000 pasos en 17×13 ≈ 20–30 s** con mapa (~10 s sin mapa; `MAPA_h2` ≈ ×1.3).
-Bloque completo = 4 mundos × 5 brazos × 20 semillas = **400 corridas ≈ 2–3 h de CPU**, que con `Pool(6)` son
-**~30 min**. No hace falta gemelo compilado para esta serie.
+Bloque completo = 4 mundos × **6 brazos** (§4: MAPA, MAPA_h2 — MAPA_borra en T3 —, SINMAPA, CONGELADA, INVERTIDO,
+BARAJADO) × 20 semillas = **480 corridas ≈ 3–4 h de CPU**, que con `Pool(14)` son **~20 min**. No hace falta gemelo
+compilado para esta serie. Lo corre `experimentos/nivel6_2d/corre_2d.py` (`--desde 21`, réplica `--desde 41`).
 **Semillas: 21–40 la serie, 41–60 la réplica** (1–3 quedan quemadas por los humos).
 
 ## Declaración (regla 4): qué se corrió antes de escribir esto
@@ -221,5 +241,31 @@ Tres comprobaciones de **un proceso**, 6 corridas cada una, **T = 50 000, semill
    no de estos números**; lo que estos números dicen es que hace falta declarar la validez por semilla, y por eso está
    escrita.
 
-T3 (M4) **no se ha probado**: no depende de `r` (la pregunta es si `M` se borra), y su predicción es la aritmética de
-§5. Si el coordinador quiere un humo antes, son 2 corridas.
+5. **T3 (M4) a T = 100 000, semillas 1–3 (MAPA y MAPA_borra).** `M_llenas = 3/3` (a 50 000 era 1/3: el mundo necesita
+   los 100 000 pasos para que los tres sitios entren en `M`), `ciego 40/40`, muertes 1–3. `come2`: MAPA 0.475 / 0.225 /
+   0.300 contra **0.875** con `borra_M` en la semilla 1. De aquí sale el riesgo declarado de §5 (y el criterio no se
+   movió).
+6. **Dos defectos del INSTRUMENTO hallados con esos humos y corregidos antes de preregistrar** (no tocan ningún
+   criterio): (a) `borra_M` iba borrando `M` a lo largo de los 40 teletransportes, así que los episodios no eran
+   independientes → ahora `M` se restaura al empezar cada uno; (b) `M_llenas` devolvía el mapa que dejó el último
+   episodio → ahora se restaura también al terminar la prueba, y `M_llenas` vuelve a ser el del entrenamiento.
+
+4. **T3 (M4), humo del runner (T = 20 000, semilla 21).** Con B a 4 casillas de A, `come2 = 0.95` **sin mapa de por
+   medio**: desde A se VE B (4 > `r_vis` es falso: 4 − 4 = 0, B entraba en la retina en cuanto daba un paso), así que la
+   prueba medía las patas y no la tabla. **Se cambió el MUNDO antes de preregistrar nada** (B pasa a (0,6): 6 > `r_vis`,
+   ciego al comerse A). Es un cambio de mundo, no de criterio: `come2 ≥ 0.50` con `borra_M` y `≤ 0.20` sin él siguen
+   intactos. Declarado aquí igual que el caso de M3.
+
+
+## Enmienda 0 (coordinador, 18 sep 2026, 00:55; escrita ANTES de correr la serie 21–40, a partir de los humos en semillas 1–3, que quedan quemadas)
+
+El diseñador declaró que en los humos de T3 (3 semillas, T = 100 000) los dos umbrales absolutos de P3 (`come2 ≥ 0.50` en
+MAPA_borra y `≤ 0.20` en MAPA) se caen (MAPA 0.48/0.23/0.30; borra 0.88/0.40/0.45) mientras la diferencia pareada es
++0.40/+0.18/+0.15 (3/3), y que con `alto = 13` no se puede separar más la geometría. **P3 se mantiene tal como está escrito**
+y se añade, antes de correr, **P3b (pareado): `come2(MAPA_borra) − come2(MAPA) ≥ 0.15` en ≥ 15/20 semillas**. Vocabulario:
+si pasa P3 → el preregistrado; si cae P3 y pasa P3b → *"borrar el sitio comido de la tabla ayuda a encadenar dos metas;
+sin borrarlo vuelve al sitio vacío"* (como diferencia, no como umbral absoluto); si cae P3b → el cuello no es la tabla.
+También se acepta la redacción nueva de C2 (idéntico bit a bit en toda la conducta, excluidos los registros de mecanismo
+que SINMAPA no calcula) y los tres defectos de instrumento corregidos antes de correr (T3 medía las patas, `borra_M`
+consumía su propio mapa, `M_llenas` del último episodio). Instrumento `mundo_2d.py` 24da4ab1644eb92a (identidad 60/60 del
+diseñador; se repite en la copia principal antes de correr). Semillas 21–40; réplica 41–60. Nada más cambia.

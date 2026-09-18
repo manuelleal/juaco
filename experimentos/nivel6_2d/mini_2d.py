@@ -8,7 +8,7 @@ y reflejadas en las semillas pares):
   M2 sombra    F1 comida (0,0); veneno (2,0),(3,0); F2 comida (-4,-4)     -> T4 rodeo FALSO       S=(-4,0)
   M3 flanco    F1 comida (4,0); veneno (1,6) [el del flanco] + (0,5),(0,-5) [dieta: dx=0, no tocan +x/-x]
                                                                           -> T2 horizonte 2       S=(0,0)
-  M4 secuencia F1 comida (0,0); F2 comida (4,0); veneno (-4,4)            -> T3 secuencia A->B    S=(-4,0)
+  M4 secuencia F1 comida (0,0); F2 comida (0,6); veneno (-4,4)            -> T3 secuencia A->B    S=(-4,0)
 Acciones: 0=-x (izq), 1=+x (der), 2=-y (arriba), 3=+y (abajo).
 
 Uso: python experimentos/nivel6_2d/mini_2d.py [--mundo M1] [--T 50000] [--semillas 3] [--brazos MAPA,SINMAPA]
@@ -31,7 +31,7 @@ MUNDOS = {
                casos=({'et': 'falso', 'S': (-4, 0), 'ok': (1,)},), max_pasos=60),
     'M3': dict(sitios=('A', 'B', 'B', 'B'), xy=((4, 0), (1, 6), (0, 5), (0, -5)),
                casos=({'et': 'h2', 'S': (0, 0), 'ok': (1,)},), max_pasos=60),
-    'M4': dict(sitios=('A', 'A', 'B'), xy=((0, 0), (4, 0), (-4, 4)),
+    'M4': dict(sitios=('A', 'A', 'B'), xy=((0, 0), (0, 6), (-4, 4)),
                casos=({'et': 'sec', 'S': (-4, 0), 'ok': (1,), 'consume': True},), max_pasos=80),
 }
 BRAZOS = {  # perillas de cada brazo (sobre el mundo elegido)
