@@ -153,7 +153,12 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   · **A-3 CONFIRMADO**: la vía lenta de dos canales es exactamente un vector con signo (acc idéntica 60/60, |ΔW| 3e−15):
     simplificación candidata para v14 (mitad de memoria en la vía lenta; decisión del director).
   · **ERR-25**: la puerta de v13 no distingue "no aprendido" de "cancelado" (verificado por el auditor); B-2 (puerta por
-    evidencia del código exacto: mini-prueba `N*` 20 contra 6 de v13) en preparación. Auditoría del día 7 integrada
+    evidencia del código exacto) CORRIDO 41–60 (02:32): PATC recupera la capacidad de v11 en el paso largo (`N*` 50.5
+    contra 35 de v13; 20 000: 41.5 contra 28, umbral 45 no alcanzado) con la generalización intacta (px0 1.000 / 0.96) y
+    barajar los contadores la destruye (20/20); el examen v3' cae por una semilla en E2 (19/20) → réplica del examen en
+    121–140 (enmienda 2) antes de proponerlo; PAT (sin celda consolidada) falla 3'' como predijo B: la puerta también
+    detecta conflicto. Tercer candidato condicionado en `PROPUESTA_v14.md`. Examen v3'' completo de v13E (segundo
+    candidato) en curso (ERR-30: criterio 5 adaptado para órganos que actúan en la boca). Auditoría del día 7 integrada
     (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).
 - **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
   automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.
