@@ -3628,3 +3628,27 @@ predictor de la propia energía aprende exacto (error 0 en régimen) y detecta e
 acelerar el aprendizaje **no** ayuda aquí (la recuperación la limita cuántas veces muerde, no la tasa). Vocabulario:
 *el organismo predice su energía y se sorprende cuando el mundo cambia; esa sorpresa no le sirve todavía*. Queda como
 instrumento para la célula de creación (significado por predicción; modelo de sí mismo). No se declara nada.
+
+
+### Nivel 6, dos metas y rodeo (día 7, 23:25; semillas 41–60): **los cuatro criterios pasan, las puertas de validez del preregistro caen → no se declara; enmienda 1 y serie nueva**
+
+Preregistro `experimentos/nivel6_rodeo/PREREGISTRO_rodeo.md` (agente diseñador; hallazgo de diseño: con tres sitios equidistantes
+el rodeo es geométricamente imposible — la prueba usa sitios asimétricos g1 = 5, g2 = 20, g3 = 15 y la desigualdad de
+mecanismo `0.9^d2 > 0.9^d1 − |v_B/v_A|·0.9^dp`, exigente en dp = 4: `v_B < −0.308·v_A`); instrumento `mundo_mapa_rodeo.py`
+(`7ab34aed9acffaa0`; sin `modo='rodeo'` ≡ `mundo_mapa`, 27/27); datos `rodeo_s41-60_20260917_232338` (`53b0b62d68da4ffe`).
+
+| brazo | R1 rodeo (lado largo cuando el veneno está en el corto) | R2 atajo | llega sin pisar veneno | `v_B` |
+|---|---|---|---|---|
+| **MAPA** | **0.700** [0.45, 1.00], pareado contra SINMAPA **19/20** | 0.775 | 0.850 | −0.74 |
+| SINMAPA (= CONGELADA bit a bit) | 0.500 | 0.500 | 0.263 | −2.66 |
+| INVERTIDO | 0.250 | 0.150 | 0.025 | +0.74 |
+
+R1–R4 **pasan**. Validez: V0 (`v_B < −0.308·v_A`, mecanismo predice rodeo) sólo en **15/20** (se exigía 18): con mapa el
+organismo casi no muerde veneno y `v_B` queda en −0.74 (solo: −2.66), y en 5 semillas el veneno recordado no pesa lo
+bastante para que la suma descontada elija el lado largo; V1 (`M` con los 3 sitios) tampoco en todas. Por la letra del
+preregistro, **no se interpreta**. Lectura honesta: donde el mecanismo predice rodeo, rodea; donde no lo predice (veneno
+apenas conocido), no. **Enmienda 1 (escrita antes de la serie nueva):** semillas 61–80 con los mismos criterios y, además,
+análisis preregistrado sobre el **subconjunto válido** (semillas con V0 y V1): se exigen ≥ 12 semillas válidas, R1 ≥ 0.70 en
+mediana del subconjunto y pareado ≥ 75 % del subconjunto; el conjunto completo se reporta igual. Sin recalibrar nada
+sobre 41–60. Vocabulario provisional: *elige entre dos comidas recordadas y se desvía por el lado largo cuando el veneno
+recordado pesa; no "planifica"*.

@@ -130,3 +130,14 @@ teletransporte (ninguna comida falta nunca: trampa 3).
    orientación se invierte en la mitad de las semillas: no hay posición absoluta que memorizar.
 
 Coste: 4 brazos × 20 semillas = 80 corridas de 100 000 + identidad (27 comparaciones). Lo corre el coordinador con `Pool`.
+
+
+## Enmienda 1 (17 sep 2026, 23:30; escrita DESPUÉS de la serie 41–60 y ANTES de la serie 61–80)
+
+En 41–60 R1–R4 pasaron (R1 0.700, pareado 19/20; R2 0.775; R3 0.25; R4 0.85) pero V0 se cumplió en 15/20 (se exigían 18) y
+V1 no en todas: con mapa `v_B` ≈ −0.74 (muerde poco veneno) y en algunas semillas la desigualdad no predice rodeo. Serie
+nueva 61–80, mismos criterios, y **análisis adicional preregistrado sobre el subconjunto válido** (semillas con V0 y V1):
+válidas ≥ 12; R1 mediana ≥ 0.70 en el subconjunto y pareado (MAPA > SINMAPA) en ≥ 75 % del subconjunto; R2–R4 igual. El
+conjunto completo se reporta también. Si el subconjunto pasa y el completo no, el vocabulario es: *rodea cuando el
+veneno recordado pesa lo que el mecanismo exige; si no lo conoce, no rodea* (el mecanismo es el que es). Nada se
+recalibra sobre 41–60.
