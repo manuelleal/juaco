@@ -4086,3 +4086,33 @@ subcriterio conductual, con los pesos correctos en las 20 — puede ser muestreo
 de tiempo. **Sin recalibrar: réplica del examen v3' de PATC en semillas nuevas (121–140), misma letra**; si vuelve a caer
 E2, la puerta por código queda como órgano de experimento; si pasa 8/8, es el tercer candidato a v14. Vocabulario: *la
 puerta pregunta si lo ha visto, no si tiene el valor entero; con eso recuerda tanto como v11 y generaliza como v13*.
+
+
+### v13E — "la sorpresa del mundo en la boca" en la copia del tronco, examen v3'' completo (101–120; 18 sep 02:45): **retención 8/8 con el criterio 5 adaptado; la generalización de VALOR cae por debajo de la letra (G1 px0 0.750 < 0.80; referencia apagada 0.800) → por el preregistro NO entra al tronco tal cual; coste medido, dosis a preregistrar**
+
+Preregistro `experimentos/nivel9_probar_si_mismo/PREREGISTRO_v13E.md` (fe50ccb6ffde9427; E1 examen v3' completo 8/8, **E2 G1 ≥ 0.80
+y G2 ≥ 0.85 y K 20/20**, E3 diagnóstico; criterio 5 adaptado por ERR-30: la reducción a v11 apaga también `k_testE`/`eta_pred`);
+instrumentos por anclas `organismo_v13E` (ab8e3b0579edfc29; = `organismo_v13p` con `eta_pred = 0.03, ema_pred = 0.05, k_testE = 10`
+fijos), `organismo_v13gE`, `bateria_v13E` (bed81b870faf5da5), `bateria_generaliza_E`; **identidad 28/28** en la copia principal
+(incluida la reducción a v11 con las cuatro perillas apagadas, 3/3); datos `baterias_v13E_20260918_023210` (973c306b44f7f87b), 13 min.
+
+| prueba (perilla ENCENDIDA) | resultado |
+|---|---|
+| E1 examen v3' completo | E1–E2L **20/20 × 6**; celdas ≤ 45; 3' 0/20; 3'' 20/20; 4a–4d OK; criterio 5 (v3'') OK → **8/8** |
+| E2 generalización | K 20/20; **G1 px0 0.750** (azar 0.500; 18/20) — **< 0.80**; G2 0.870 (18/20) ≥ 0.85; referencia apagada G1 0.800 / G2 0.892 |
+| E3 inercia sin inversión | divisiones 0 → 0, celdas 30 → 30; sesgo de boca Q1 0.20 (transitorio del predictor) → Q2–Q4 ≈ 0; `W` no idéntico (actúa en Q1) |
+
+**Veredicto por la letra del preregistro: E2 cae (G1 0.750 < 0.80)** → *"se queda como órgano de experimento y no entra al
+tronco; nada se recalibra"*. El runner imprimió "NO REGRESIONA" porque su E2 leyó los umbrales de la batería (0.65 / 0.55) en
+vez de los preregistrados (**ERR-31**, defecto del runner; el registro sigue al preregistro). **Lectura:** con `k_testE = 10`
+el órgano recupera 7× más rápido de un cambio no avisado y conserva la retención entera, pero **cuesta 0.05 en la
+generalización de valor** (0.80 → 0.75; la conducta al primer encuentro se mantiene, 0.87) — el mismo mecanismo que hace
+probar cuando el mundo sorprende hace probar un poco en lo nunca visto. Es una **dosis**: `k_testE` se fijó por la
+mini-prueba de C, no por barrido. Camino declarado: preregistro nuevo con dosis menor (p. ej. `k_testE ∈ {3, 5}`) en semillas
+nuevas, exigiendo a la vez recuperación ≤ 0.60× y G1 ≥ 0.80; hasta entonces el segundo candidato queda **fuera de la
+propuesta de v14** con su coste anotado. Vocabulario: *la sorpresa del mundo en la boca acelera la recuperación a costa de
+una parte de la generalización de valor a la dosis probada*.
+
+### ERR-31 (02:50): el runner `corre_baterias_v13E.py` decidía E2 con los umbrales de `bateria_generaliza` (0.65 / 0.55), no con los preregistrados (0.80 / 0.85)
+Consecuencia: veredicto impreso "NO REGRESIONA" contra un preregistro que dice lo contrario. Sin efecto en el registro (se
+sigue la letra); regla: el runner codifica los umbrales del preregistro, no los de la batería que reutiliza.

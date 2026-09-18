@@ -48,8 +48,10 @@ letra original). Muertes: REL 88–102 contra 78–79 de v13 en 3T-k (no era cri
 | latencia del primer sesgo | 202 pasos, 1 bocado (el automodelo: 602, 1.5) | ídem |
 
 Memoria: una lectura lineal `ΔE_pred` (retina + código) + un escalar de estado. Mecanismo: `Vb += k_testE · s̄_E`, con
-`s̄_E` la sorpresa de ΔE promediada; no toca `eta` (donde el bloque 6 la puso y no servía: 0.856×). Falta para v14: el examen
-v3' **completo** (3', 3'', 4a–4d) sobre una copia del tronco con la perilla fija (como v13D), gemelo compilado, congelación.
+`s̄_E` la sorpresa de ΔE promediada; no toca `eta` (donde el bloque 6 la puso y no servía: 0.856×). **Examen v3'' completo en
+101–120 (v13E, 02:45): retención 8/8, pero G1 px0 0.750 < 0.80 (referencia 0.800) → por el preregistro NO entra tal cual:
+coste de 0.05 en generalización de valor a la dosis `k_testE = 10`. Queda FUERA de la propuesta hasta un preregistro de dosis
+(k_testE 3–5) que exija a la vez recuperación ≤ 0.60× y G1 ≥ 0.80.**
 **Los dos candidatos son componibles** (uno actúa en el nacimiento de las hijas, el otro en la boca); si el director acepta
 ambos, se prueba primero la composición (identidad de cada uno con el otro apagado; examen v3' con los dos encendidos).
 

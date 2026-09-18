@@ -1,0 +1,12 @@
+[02:05:21 +   0.0s] === REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — organismo_v13p, 2 semillas (101..102), Pool(14) ===
+[02:05:21 +   0.0s] instrumento organismo_v13pg 910f1f5fb64453bb  organismo 2dbed7ccac4dd736  esta bateria 9b213f803933a9e9
+[02:05:48 +  27.2s]           4/4
+[02:05:48 +  27.3s] 
+[02:05:48 +  27.3s]   OK    K  cobertura del primer encuentro: 2/2
+[02:05:48 +  27.3s]   FALLA G1 valor en patrones nunca vistos: px0 0.700 (>=0.65), azar 0.500, px0>azar 1/2
+[02:05:48 +  27.3s]   PASA  G2 conducta al primer encuentro: px0 0.890 (>=0.55), azar 0.559, px0>azar 2/2
+[02:05:48 +  27.3s]         divisiones 28  celdas 58  muertes 281
+[02:05:48 +  27.3s] 
+[02:05:48 +  27.3s] VEREDICTO bateria_generaliza (organismo_v13p): K_cobertura=True G1_valor=False G2_conducta=True
+[02:05:48 +  27.3s] *** organismo_v13p NO CONSERVA la generalización de la Etapa 3. No puede declararse la Etapa 3 cerrada con este tronco (ERR-20).
+[02:05:48 +  27.3s] datos -> regresion_generaliza_organismo_v13p_20260918_020521.json  sha256_16 = 9cb61aaacec74a41
