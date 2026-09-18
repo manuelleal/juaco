@@ -4263,3 +4263,14 @@ decisión del director ("los tres si pasan; si no, los dos"): **v14 = v13 + hija
 del mundo en la boca a dosis 5 queda como **candidata a v15**, con dos series sola, examen 8/8 sola, y en compañía T2/T3 OK y
 T1 8/8 + 7/8. Vocabulario: *las tres piezas no se estorban en lo que cada una hace; la puerta sigue costando una semilla de
 conducta en el examen en algunos mundos*.
+
+
+### v14 (dos órganos), tercer examen en rango virgen 161–180 y generalización en 141–160 (18 sep 04:52; decisión del director): **8/8 y 1.000 / 0.951 → tres exámenes 8/8 en rangos distintos y tres baterías de generalización**
+
+`bateria_v14c.py 20 --desde 161 --log` → `examen_v14c_20260918_044752` (7c18dc86a6168eba): E1–E2L 20/20 × 6, celdas ≤ 45, 3' 0/20, 3'' 20/20,
+4a–4d OK, identidad 5 OK → **8/8**. `bateria_generaliza_v14c.py organismo_v14c_on 20 --desde 141 --log` →
+`regresion_generaliza_organismo_v14c_on_20260918_045101` (7304564adde75dbd): K 20/20; G1 px0 **1.000** (20/20); G2 **0.951** (19/20).
+**Evidencia final de v14 = v13 + hija dispersa + puerta por código:** examen v3' 8/8 en 121–140, 141–160 y 161–180 (7/8 en 101–120
+por la semilla 117, caso conocido); generalización 1.000 / 0.94 (101–120), 1.000 / 0.95 (121–140), 1.000 / 0.95 (141–160); capacidad
+`N*` 51 (v13 35); composición 3T-k 0.237 con 53 celdas (v13 0.137 / 90); identidad de la copia 30/30; gemelo compilado 196/196
+(×52–82). Cumple con exceso la regla de tronco. **Se congela** (entrada de congelación a continuación).
