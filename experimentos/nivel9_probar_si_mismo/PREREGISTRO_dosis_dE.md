@@ -231,3 +231,12 @@ de la propuesta de v14, junto a la versión `k_testE=10` ya descartada, con el c
   el coste de cada una anotado en el registro.
 
 Nada de esto se decide DESPUÉS de leer los JSON de las tres medidas; esta sección fija el criterio ANTES de verlos.
+
+
+## Enmienda 1 (coordinador, 18 sep 2026, 03:45; escrita DESPUÉS del bloque de dosis y ANTES de la réplica)
+
+Resultado: dE5 cumple las seis condiciones (recuperación 0.267×, 20/20; apagado 20/20; G1 0.80, 17/20; G2 0.857; K 20/20; examen
+8/8); dE3 no (G2 0.842; examen 7/8). **Réplica de la recuperación a dosis 5 en semillas nuevas 141–160**, mismo runner
+(`corre_probar_si_mismo.py --desde 141 --brazos V13,dE5 --baterias V13,dE5`), **mismos criterios** (recuperación ≤ 0.60× V13 en
+mediana y pareado ≥ 14/20; apagado P4' ≥ 16/20; retención de las seis etapas ≥ 18/20; px0 G1 ≥ 0.80). Si replica, dE5 queda con dos
+series a su dosis (más tres a dosis 10); si no replica, se registra y el candidato vuelve a "pendiente". Nada se recalibra.
