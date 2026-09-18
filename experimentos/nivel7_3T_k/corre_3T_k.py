@@ -16,6 +16,7 @@ KS = [int(v) for v in sys.argv[sys.argv.index('--ks') + 1].split(',')] if '--ks'
 V13 = dict(mu_norm=True, div_signo=True, eta_s=0.015, puerta=3)
 UMBRAL_SEP = {1: 1.0, 2: 3.0, 3: 2.0, 4: 1.5, 5: 1.0}   # enmienda 2
 N_PARALELO = 14
+RAPIDO = '--rapido' in sys.argv   # gemelo compilado (mundo_temporal_k_rapido, identidad 146/146): solo si su etapa de identidad da 3/3
 _log = {'f': None, 't0': time.time()}
 
 
@@ -42,8 +43,17 @@ def tarea(args):
         a, b = a_.run(seed, arm=arm, **V13), b_.run(seed, arm=arm, kprof=1, **V13)
         dif = [kk for kk in a if N(a[kk]) != N(b[kk])]
         return dict(tipo=tipo, esc=arm, seed=seed, identico=not dif, difieren=dif)
+    if tipo == 'R':   # identidad del gemelo compilado contra el original (C3, k=3)
+        _, seed = args
+        import mundo_temporal_k as a_, mundo_temporal_k_rapido as b_
+        a, b = a_.run(seed, arm='C3', kprof=3, T=30000, **V13), b_.run(seed, arm='C3', kprof=3, T=30000, **V13)
+        dif = [kk for kk in a if N(a[kk]) != N(b[kk])]
+        return dict(tipo=tipo, esc='rapido', seed=seed, identico=not dif, difieren=dif)
     _, k, arm, seed = args
-    import mundo_temporal_k as m
+    if RAPIDO:
+        import mundo_temporal_k_rapido as m
+    else:
+        import mundo_temporal_k as m
     r = m.run(seed, arm=arm, kprof=k, **V13)
     return dict(tipo='T', k=k, arm=arm, seed=seed, W=r['W'], sep=r['sep'], solap_A=r['solap_A'], lift=r['lift'],
                 deaths=r['deaths'], splits=r['splits'], celdas=r.get('celdas'))
@@ -59,7 +69,7 @@ if __name__ == '__main__':
     stamp = time.strftime('%Y%m%d_%H%M%S')
     _log['f'] = open(os.path.join(RAIZ, 'datos', f'3T_k{"".join(map(str, KS))}_s{SEEDS[0]}-{SEEDS[-1]}_{stamp}.log'), 'w', encoding='utf-8', newline='\n')
     pre = os.path.join(AQUI, 'PREREGISTRO_3T_k.md')
-    log(f"ARRANQUE 3T-k sobre v13. k en {KS}, brazos {ARMS}, semillas {SEEDS[0]}-{SEEDS[-1]}. Pool({N_PARALELO}).")
+    log(f"ARRANQUE 3T-k sobre v13. k en {KS}, brazos {ARMS}, semillas {SEEDS[0]}-{SEEDS[-1]}. Pool({N_PARALELO}). {'GEMELO COMPILADO (--rapido)' if RAPIDO else 'Python puro'}")
     log(f"sha preregistro {h16(pre)}  script {h16(os.path.abspath(__file__))}  mundo_temporal_k {h16(os.path.join(AQUI, 'mundo_temporal_k.py'))}  v13 {h16(os.path.join(RAIZ, 'organismo', 'organismo_v13.py'))}")
     try:
         ps = subprocess.run(['powershell', '-NoProfile', '-Command',
@@ -79,6 +89,12 @@ if __name__ == '__main__':
         V['IDENTIDAD'] = all(x['identico'] for x in rc)
         if not V['IDENTIDAD']:
             log("*** IDENTIDAD FALLIDA: se para."); sys.exit(1)
+        if RAPIDO:
+            rr = pool.map(tarea, [('R', s) for s in (1, 2, 3)], chunksize=1)
+            log(f"  identidad gemelo compilado == original (C3, k=3, T=30000): {sum(x['identico'] for x in rr)}/3")
+            if not all(x['identico'] for x in rr):
+                log('*** GEMELO NO IDENTICO: se para (corre sin --rapido).'); sys.exit(1)
+            V['IDENTIDAD_RAPIDO'] = True
         tr = [('T', k, a, s) for k in KS for a in ARMS for s in SEEDS]
         log(f"ETAPA 2/3 — {len(tr)} corridas...")
         res = []
