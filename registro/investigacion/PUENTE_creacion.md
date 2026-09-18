@@ -313,6 +313,264 @@ corredores `mini_B1.py`, `mini_B2.py`, `mini_B3.py`, `mini_puerta.py` (+ sus `.j
 
 ## Creador C — sistemas vivos y mente (modelo de sí mismo, significado por predicción, desarrollo, evolución)
 
+**Resumen en tres líneas.** (1) Construí una medida de *modelo de sí mismo* que no se puede inflar, porque su techo y
+su banda de validez **se derivan de las constantes del tronco** antes de correr — y sale **pequeña**: el automodelo
+cierra el 13–21 % del hueco que deja el oráculo. (2) Ese mismo automodelo, **usado en la BOCA y no en `eta`**, baja la
+recuperación tras la inversión a **0.32 ×** la del tronco y gana a DOS controles de cantidad en 3/3. (3) Para reabrir
+N2: la predicción de *lo que voy a sentir* llega a la magnitud **exacta** (+0.800 / −0.400) en ≤ 14 mordidas, frente al
+±0.3 al que se quedó el símbolo por refuerzo en seis diseños.
+
+### C0. Instrumento único, por anclas, con identidades (nada original tocado, sin commits)
+
+`experimentos/creacion_C/construye_selfmodel.py` → `experimentos/creacion_C/organismo_v13s.py`
+(sha `2eaba8dde27f05bd`), **por anclas** desde el tronco `organismo/organismo_v13.py` (`cc8b16b492d4d324`: se lee, no se
+toca). Añade **sólo** lecturas y dos perillas de uso:
+
+- **Automodelo del acto** — cuatro lecturas que predicen la PROPIA ACCIÓN (morder / no morder) en **cada encuentro**,
+  con regla delta local sobre la acción realizada, todas en LA MISMA corrida y sobre LOS MISMOS encuentros
+  (comparación **pareada por construcción**):
+  - `SELF  = sig((Wbr·P + Wbk·kenyon(P) + Wbh·hambre + Wb0)/0.3)` — ve su estado interno
+  - `MUNDO = sig((Wmr·P + Wmk·kenyon(P) + Wm0)/0.3)` — **control**: sólo el estímulo
+  - `H_SHUF` — igual que SELF con el hambre **barajada** en el tiempo (Generator propio `seed+800000`)
+  - **ORÁCULO** = la propia `pb` que generó la acción, es decir la **log-pérdida irreducible**. Sin esa cota los otros
+    tres números no se pueden leer: no se sabría cuánto hueco había.
+- **Automodelo a h pasos** — predice `[dE , n_bocados]` de los próximos `h` pasos, con brazos CONST / MUNDO (retina) /
+  SELF (retina + hambre) / SELF_SHUF (hambre de OTRA ventana).
+- **Sorpresa sobre sí mismo** `s_a = |mordio − b_SELF|`, con EMA causal `s̄_a`, y **dos usos alternativos**:
+  `eta_ef = eta·(1 + k_auto·s̄_a)` (la tasa, como el bloque 6) y `Vb += k_test·s̄_a` (**ganas de probar**, en la boca).
+- `t_ext_B` con el criterio **exacto** del bloque 6, para poder compararse con él.
+
+**Identidades** (`identidad_selfmodel.py`, 6 semillas × 3 escenarios {base, invertido, nuevo C}, T = 5 000, **todas las
+claves de v13**): **I1** (todo apagado) 18/18 · **I2** (`eta_b`=0.1, lecturas encendidas) 18/18 · **I3** (además
+`eta_e`=0.05) 18/18. I2/I3 son lo que da derecho a decir *"sólo mide"*: con las lecturas encendidas la conducta es la
+de v13 **bit a bit**.
+
+### C1. La banda: la cantidad mínima, medible y NO inflable de "modelo de sí mismo"
+
+**Derivada de las constantes del tronco, escrita antes de correr.** La boca decide con
+`pb = sig((alpha·w + hambre_boca·h + 0.5)/0.3)`. El hambre sólo puede cambiar la decisión donde `pb` no está saturada
+(`sig(±3)` = 0.953/0.047), es decir donde `|alpha·w + hambre_boca·h + 0.5| <= 0.9` para algún `h` en [0,1]:
+
+> **banda sensible al hambre:  w en [ (−0.9−0.5−hambre_boca)/alpha , (0.9−0.5)/alpha ] = [−2.8333 , +0.3333]**
+
+**Fuera de la banda un automodelo NO PUEDE ganarle a un predictor del mundo; dentro, sí.** Ésa es la prueba con
+control que separa "modelo de sí mismo" de "predictor del mundo", y no es inflable: la banda no la elijo yo, la fija
+`hambre_boca/alpha`. Hay una segunda ancla igual de dura: **el parámetro que el automodelo debe recuperar se conoce en
+forma cerrada, `Wbh` → `hambre_boca` = 2.0.**
+
+**Mini-prueba C1-a** (`mini_automodelo.py`; un proceso; **1 tanda = 3 corridas de T = 200 000**, `invertir_en` = 100 000,
+semillas 1–3; `eta_b` = 0.03 = **el mismo eta del tronco**, no buscado):
+
+| | s1 | s2 | s3 |
+|---|---|---|---|
+| encuentros / bocados | 20 642 / 737 | 20 227 / 758 | 19 926 / 740 |
+| encuentros **dentro** de la banda | 6 154 | 3 842 | 5 107 |
+| log-pérdida dentro — **ORÁCULO** | 0.0452 | 0.0703 | 0.0570 |
+| log-pérdida dentro — **SELF** | 0.0643 | 0.1014 | 0.0789 |
+| log-pérdida dentro — **H_SHUF** | 0.0665 | 0.1054 | 0.0821 |
+| log-pérdida dentro — **MUNDO** | 0.0672 | 0.1078 | 0.0847 |
+| **MUNDO − SELF dentro** | 0.0029 | 0.0064 | 0.0058 |
+| **MUNDO − SELF fuera** | 0.0019 | 0.0017 | 0.0022 |
+| `Wbh` (verdadero = 2.0) | 0.788 | 0.828 | 0.881 |
+
+Criterios escritos antes: **MP-1** (>= 0.05 dentro y <= 0.01 fuera) **FALLA 0/3** · **MP-2** (H_SHUF >= SELF dentro)
+**3/3** · **MP-4** (ORÁCULO <= SELF <= MUNDO dentro) **3/3** · **MP-5** (encuentros >= 5 × bocados) **3/3, y por mucho:
+27 ×** · **MP-6** (la sorpresa sube de Q2 a Q3) **3/3** (0.006→0.021, 0.004→0.027, 0.005→0.027).
+
+**Lectura honesta.** El orden sale bien en 3/3 (**ORÁCULO < SELF < H_SHUF < MUNDO**) y la ventaja **existe y es
+pequeña**: el automodelo cierra el **13 / 17 / 21 %** del hueco que el oráculo deja abierto. Mi predicción de tamaño
+(0.05 nats) estaba mal por un orden de magnitud, y lo registro así.
+
+**Fallo de control hallado y corregido — candidato a ERR (familia "control demasiado débil").** Con
+`buf_auto = 10` encuentros (≈ 100 pasos) el control H_SHUF **aprende el hambre casi igual que SELF**: barajar dentro de
+una ventana **más corta que el tiempo de autocorrelación** de la variable *no la baraja*. Diagnóstico 2×2 (semilla 1,
+T = 200 000, 4 corridas):
+
+| `eta_b` | `buf_auto` | `Wbh` | `Whh` (debe ser ≈ 0) | ll MUNDO dentro | MUNDO − SELF dentro |
+|---|---|---|---|---|---|
+| 0.03 | 10 | 0.788 | **0.487** ✗ | 0.0672 | 0.0029 |
+| 0.03 | **1000** | 0.788 | **−0.003** ✓ | 0.0672 | 0.0029 |
+| 0.30 | 10 | 2.995 (topado en `clip_b`) | **0.896** ✗ | 0.0886 | 0.0150 |
+| 0.30 | **1000** | 2.995 (topado) | **−0.363** ✓ | 0.0886 | 0.0153 |
+
+**Regla de método que propongo, para que `eta_b` no se pueda ajustar a favor de la hipótesis: fijar `eta_b` por la
+pérdida del BRAZO DE CONTROL (MUNDO), nunca por la del brazo de la hipótesis.** Con esa regla gana 0.03 (ll_MUNDO
+0.0672 contra 0.0886). El canje está medido y es la razón de la regla: subir `eta_b` **agranda la diferencia
+SELF−MUNDO (×5)** y **empeora las dos lecturas** a la vez; quien elija `eta_b` mirando la diferencia está eligiendo el
+resultado.
+
+### C1-bis. El automodelo a h pasos da la MISMA respuesta por otro camino
+
+**Mini-prueba C1-b** (`mini_automodelo_h.py`; 1 tanda = 3 corridas de 200 000; `eta_e` = 0.05, `h` = 100 pasos —
+≈ 1/3 del intervalo medio entre bocados medido en C1-a (200 000/737 = 271), para que la ventana lleve 0 ó 1 bocado —,
+`buf_e` = 200 ventanas = 20 000 pasos; 1 999 ventanas por corrida):
+
+| objetivo | brazo | s1 | s2 | s3 |
+|---|---|---|---|---|
+| **n_bocados** (objetivo no trivial) | SELF | 0.0498 | 0.0522 | 0.1012 |
+| | MUNDO | 0.0480 | 0.0453 | 0.0894 |
+| | SELF_SHUF (control) | 0.0447 | 0.0456 | 0.0845 |
+| dE (informativo: lleva reversión a la media por el techo E<=1.5 y el reinicio E=0.6) | SELF | 0.196 | 0.180 | 0.209 |
+| | MUNDO | **−0.095** | **−0.100** | **−0.104** |
+| `W_hambre` [dE, bocados] | SELF | 0.91 / 0.84 | 0.87 / 0.72 | 0.96 / 0.77 |
+| | SELF_SHUF | −0.05 / 0.07 | −0.04 / −0.11 | 0.04 / 0.13 |
+
+**MP-H1** (r2 SELF >= 0.10 en bocados) **1/3** · **MP-H2** (SELF − MUNDO >= 0.05) **0/3** (0.002 / 0.007 / 0.012) ·
+**MP-H3** (el control no compra nada) **3/3** · **MP-H4** (signo de `W_hambre`) **3/3**.
+
+**Dos lecturas.** (i) Sobre su propia **conducta** el automodelo casi no añade nada al predictor del mundo (0.2–1.2
+puntos de r2): el mismo veredicto que la banda, por un camino independiente. (ii) Sobre su propia **energía** sí añade
+mucho (r2 0.18–0.21 contra **−0.10** del mundo, que es *peor que la constante*: la retina de un paso no dice nada de
+dE a 100 pasos y pagar por mirarla cuesta) — pero buena parte de eso es reversión a la media de una variable acotada,
+y por eso **no lo uso para sostener nada**.
+
+> **Afirmación que sí se puede escribir (es el resultado del frente 2):** *en v13, casi todo lo que un modelo de sí
+> mismo puede añadir a un modelo del mundo es el estado interoceptivo; ese estado es uno solo (el hambre), sólo decide
+> dentro de una banda derivable de `hambre_boca/alpha`, y su aporte medido es el 13–21 % del hueco irreducible.*
+> **Consecuencia de diseño, que es lo que vale:** un modelo de sí mismo empieza a valer cuando el organismo tiene
+> **un estado que cambia su conducta y que el estímulo no revela**. En v13 hay exactamente dos candidatos así y ninguno
+> está medido: la **memoria de trabajo de rechazo** (`_rech`, gobierna a las patas) y el **presupuesto de celdas**
+> (gobierna la división). Ése es el peldaño siguiente, no "más predicción".
+
+### C1-ter. ¿Qué sorpresa sirve? La del mundo contra la de sí mismo, a la misma ganancia
+
+**Mini-prueba C1-c** (`mini_usos_sorpresa.py`; 3 tandas de 3 corridas de 200 000, semillas 1–3, `invertir_en`=100 000).
+Tres brazos, los tres bit-a-bit idénticos al tronco con sus perillas apagadas: **V13** · **AUTO** (`eta_b`=0.03,
+`k_auto`=1.0, o sea `eta_ef = eta(1+|mordio−b_SELF|)`) · **dE** (`organismo_v13a` del bloque 6, `k_sorpresa`=1.0).
+
+| | s1 | s2 | s3 | mediana |
+|---|---|---|---|---|
+| recuperación `t_ext_B − inv` — **V13** | 13 746 | 3 704 | 7 531 | **7 531** |
+| — **AUTO** (sorpresa sobre sí mismo → `eta`) | 4 020 | 3 337 | 5 172 | **4 020** |
+| — **dE** (sorpresa del mundo → `eta`, bloque 6) | 7 620 | 9 070 | 6 503 | **7 620** |
+| `eta_media[Q3]` — AUTO | 1.276 | 1.216 | 1.261 | 1.261 |
+| `eta_media[Q3]` — dE | 1.084 | 1.085 | 1.077 | 1.084 |
+| sorpresa por cuarto — AUTO (s2) | | [0.0145, **0.0075**, **0.0185**, 0.0075] | | |
+| sorpresa por cuarto — dE (s2) | | [0.0365, **0.0000**, **0.0849**, 0.0002] | | |
+
+**Mis dos predicciones fallaron, y en la dirección contraria a la que escribí** (MP-C1a 0/3 en los dos brazos;
+MP-C1b 1/3). Lo que se ve, y es el número que el coordinador pedía:
+
+1. **A la MISMA ganancia k = 1, la sorpresa sobre sí mismo entrega 3.1 × más aprendizaje extra que la del mundo**
+   (exceso de `eta` en Q3: **0.26 contra 0.084**), porque su objetivo es una **moneda al aire** y nunca baja a cero:
+   tiene **suelo** (0.004–0.008 en régimen). La de dE es un detector **fásico limpio** (0.0000 → 0.085 → 0.0002).
+   Es decir: *la sorpresa del mundo dice **cuándo** cambió el mundo; la sorpresa sobre sí mismo dice **cuánto de mi
+   conducta no entiendo**, y eso nunca es cero.* Son dos señales distintas, no dos versiones de la misma.
+2. **La sorpresa está concentrada donde actúa:** la media sobre TODOS los encuentros es 0.020 (Q3) pero la media
+   **en los bocados** es 0.26 — **13 ×**. El organismo se sorprende de sí mismo justo cuando muerde.
+3. **Y aun así el control de cantidad la salva sólo a medias:** ETA_FIJA (`eta` constante × 1.22 = la mediana del
+   `eta_media[Q3]` de AUTO) da 6 046 / 6 594 / 7 796 (mediana 6 594) y × 1.15 da 7 256 / 7 719 / 10 697 (7 719);
+   **AUTO es más rápido que los dos en 3/3 pareado**. No es sólo la cantidad — pero tampoco es limpio, porque la
+   subida de `eta` de AUTO es **tónica** (1.19 / 1.07 / 1.28 / 1.06 por cuarto), no fásica. Por eso el uso bueno es
+   el otro.
+
+### C1-quater. El uso que NO es "subir `eta`" (lo que pidió el coordinador): ganas de PROBAR
+
+El cuello de la recuperación **no es la tasa: es cuántas veces muerde**. Así que la sorpresa sobre sí mismo entra en
+la **boca**, no en `eta`:
+
+> `Vb = alpha·w + hambre_boca·hambre + 0.5 + k_test · s̄_a`, con `s̄_a` = EMA **causal** de `|mordio − b_SELF|`
+> (`ema_auto` = 0.05; usa encuentros anteriores, nunca el actual).
+
+**Mini-prueba C1-d** (3 tandas de 3 corridas de 200 000, semillas 1–3; `k_test` = 10 fijado por la escala **medida** en
+C1-c — `s̄_a` ≈ 0.004 (Q2) → 0.020 (Q3) ⇒ el término vale ≈ 0.04 → 0.20 en unidades de `Vb`, que se divide por 0.3):
+
+| brazo | s1 | s2 | s3 | mediana | bocados | veneno tras la inversión | muertes |
+|---|---|---|---|---|---|---|---|
+| **V13** | 13 746 | 3 704 | 7 531 | **7 531** | 737 / 758 / 740 | 54 / 55 / 64 | 287 / 240 / 292 |
+| **PROBAR** (`k_test`=10) | **2 375** | **3 472** | **2 165** | **2 375** | 1 579 / 1 174 / 1 152 | **208 / 171 / 129** | 290 / 307 / 301 |
+| control **FIJO_media** (sesgo constante 0.173 = la media que PROBAR aplica) | 4 794 | 11 808 | 5 840 | 5 840 | 815 / 790 / 804 | 67 / 73 / 75 | 265 / 271 / 269 |
+| control **FIJO_Q3** (sesgo constante 0.31 = el NIVEL que PROBAR alcanza en Q3) | 5 308 | 7 632 | 5 912 | 5 912 | 911 / 778 / 898 | 87 / 91 / 82 | 257 / 299 / 259 |
+
+**MP-D1** (mediana <= 0.70 × V13 y pareado 3/3): **PASA**, mediana **0.315 ×**, pareado 3/3.
+**MP-D2** (más rápido que el control de cantidad): **PASA contra los DOS controles, 3/3 pareado cada uno.**
+**MP-D3** (no gana por pasividad): **PASA, y al revés de lo temido** — muerde **3–4 × más veneno** tras la inversión
+(208/171/129 contra 54/55/64): se recupera **probando**, y lo paga.
+
+**El sesgo aplicado es FÁSICO y se apaga solo** (por cuarto, semillas 1–3): `[0.53, 0.065, 0.366, 0.044]`,
+`[0.241, 0.063, 0.313, 0.059]`, `[0.306, 0.068, 0.260, 0.060]`. Sube al aprender (Q1) y al cambiar el mundo (Q3), y
+**vuelve a ≈ 0.05 cuando el organismo vuelve a reconocerse** (Q2, Q4). Es un mecanismo **con apagado propio**, al
+contrario de las tres atracciones ya refutadas del canje del mapa (curiosidad por progreso, novedad de sitio en dos
+dosis), que había que dosificar a mano.
+
+**Guarda que hay que vigilar, y que ya se ve en los datos:** el lazo *sorpresa → morder → sorpresa* puede
+autoamplificarse (PROBAR muerde 1.6–2.1 × más en total). En estas 3 semillas **se extingue solo** (Q2 y Q4 en 0.05),
+pero un preregistro tiene que **exigirlo como criterio**, no esperarlo.
+
+### C2. Significado por predicción: los dos números que justifican reabrir N2
+
+**Mini-prueba C2-a** (`organismo_v13a` del bloque 6, semilla 1, patrón NUEVO `C` = veneno inyectado en t = 50 000,
+`eta_pred` = 0.03, `k_sorpresa` = 0 ⇒ conducta = v13 bit a bit por I2; 8 corridas de T <= 150 000):
+
+| mordidas de C | 4 | 5 | 6 | **14** | 18 | 26 | 41 |
+|---|---|---|---|---|---|---|---|
+| `W_pred(C)` (objetivo **−0.400**) | −0.233 | −0.260 | −0.284 | **−0.374 (93.5 %)** | −0.388 (97 %) | −0.396 (99 %) | −0.397 |
+| `W(C)` por refuerzo (objetivo −3.00) | −1.61 | −1.74 | −1.85 | −2.46 (82 %) | −2.63 (88 %) | −2.82 (94 %) | −2.94 (98 %) |
+
+y en régimen `W_pred(A)` = **+0.800**, `W_pred(B)` = **−0.400**: **la magnitud exacta de `E_VAL`**, contra el
+**±0.29/±0.32** al que se quedó el símbolo por refuerzo en N2f v3 sobre una escala de −3/+1 (≈ 10 % de la magnitud).
+**MP-E1 (>= 90 % en <= 20 mordidas) PASA** (14 mordidas). **MP-E2** (la predicción es más rápida que el valor) pasa,
+pero flojo: 82 % contra 93.5 % a 14 mordidas ⇒ **la velocidad NO es el argumento; la magnitud sí.**
+
+**Mini-prueba C2-b — mi propio argumento mecánico, REFUTADO, y un hallazgo colateral.** Predije (MP-F1) que con código
+compartido y sin drenaje el **valor** caería en BUG-01 y la **predicción** no, lo que habría dado un argumento mecánico
+para que un símbolo (= código compartido por definición) lleve predicción y no refuerzo. Montaje `solap_AB = 3`,
+`plast = False`, `lam = 0`, semilla 1, T = 100 000 (4 corridas):
+
+| `lam` | `plast` | `comp A = (Wp, Wn)` | `W(A)` | `W(B)` | `W_pred(A)` | `W_pred(B)` |
+|---|---|---|---|---|---|---|
+| 0 | False | **(9.0, 9.0)** ← BUG-01 presente en las celdas | **1.00** | −2.88 | 0.800 | −0.399 |
+| 0 | True | (1.0, 0.0) | 1.00 | −2.98 | 0.800 | −0.400 |
+| 0.05 | False | (1.34, 1.05) | 1.00 | −2.95 | 0.800 | −0.400 |
+| 0.05 | True | (1.0, 0.0) | 1.00 | −2.98 | 0.800 | −0.400 |
+
+**MP-F1 REFUTADA en su primera mitad:** el valor **no** colapsa (|ΔW| = 3.88). **Por qué, y es un hallazgo colateral
+que no encuentro registrado: la PUERTA de familiaridad es también un desvío de BUG-01.** Cuando las celdas saturan a
+`Wp = Wn = 3.0`, `|Wp−Wn| = 0 < 0.2` ⇒ el patrón deja de ser *familiar* ⇒ la boca lee la **vía lenta**, que sí tiene
+el valor. Es derivable de las dos líneas de `valor()` y aquí queda medido. Lo que sí queda en pie para C2: la
+predicción de dE es **invariante** al estado del canal de refuerzo (0.800 / −0.400 en las cuatro configuraciones,
+incluida la saturada).
+
+### C3. Desarrollo (crecer / reciclar celdas): RETIRADA. El registro la refutaba y B ya corrió el censo
+
+Llegué con "crecer el pool cuando se agota" y lo retiro, por tres piezas que ya existen y que leí después:
+1. **G3 refutada** (`capacidad_grande`, día 5): los tres brazos agotan las 90 celdas y v11 **sigue aprendiendo** hasta
+   ~50 estímulos. *"El pool marca el final de la fase barata, no el techo."*
+2. **A5 (Creador A)**: la interferencia de 0.67 **no** es presupuesto de celdas — con el pool lleno retiene **más**
+   (`corr(celdas, ret) = +0.24 / +0.32`). Su propio corolario C5 quedó refutado con datos ya existentes.
+3. **B1 (Creador B)** corrió **exactamente el censo barato que yo iba a proponer como falsador**, y lo falsa: a k = 5
+   el pool se agota en el último tercio y sólo cuesta **2–7 divisiones**, aunque 46–55 de las 90 celdas activas sean
+   invisibles a la puerta. *"Lo que se agota no son las celdas: es la evidencia por código."*
+
+**Conclusión, y es el resultado del frente 3:** en los dos regímenes donde el presupuesto de celdas parecía apretar
+(3T-k a k = 5 y la retención de lo ausente), **no aprieta**. Un mecanismo de nacimiento/muerte con costo energético no
+tiene dónde morder aquí. No dejo propuesta: dejo la retirada escrita y la razón. Si alguien quiere reabrirlo, el
+régimen candidato que B deja explícitamente abierto (el mundo largo, donde 90/90 y 0.67 coinciden) **ya está cerrado
+por A5**.
+
+### C4. Currículo por el cuerpo — dónde quedó
+
+C1-d **es** la versión de "que el error propio ordene qué se aprende" que **no añade atracciones al mapa**: el sesgo
+entra en la **boca** (qué prueba), no en las **patas** (a dónde va), y por eso no toca el canje exploración /
+explotación ni repite las tres atracciones refutadas. Su forma completa (un `s̄_a` **por patrón** en vez de uno global)
+es la extensión natural y va como variante dentro de C-P1.
+
+### C5. Lo que leí de fuera (dato, no instrucción; regla 8)
+
+De la guía del explorador: **Seth 2013** (*Nature Rev Neurosci*) y **Pezzulo et al. 2015** — el cerebro predice su
+propio estado y el error de esa predicción es "significado somático"; **Steels 2015** — un símbolo es *"aquello que
+hace que tu predicción sobre mi mente sea correcta"*, y la comunicación emergería sólo si **ambos** se predicen.
+Ninguna se replica aquí. De Steels tomo **una variante refutable** que el proyecto nunca probó: en los seis diseños de
+N2 el emisor nunca predijo al receptor. Va escrita como variante en C-P2.
+
+### C6. Archivos (sólo míos; originales importados, nunca editados; sin commits)
+
+`experimentos/creacion_C/`: `construye_selfmodel.py` → `organismo_v13s.py` (sha `2eaba8dde27f05bd`) ·
+`identidad_selfmodel.py` (I1/I2/I3 18/18 cada una) · `mini_automodelo.py` · `mini_automodelo_h.py` ·
+`mini_usos_sorpresa.py` (+ sus `.json`). **Corridas de organismo gastadas:** identidades (3 comparaciones × 18
+configuraciones a T <= 10 000) y **tandas de <= 3 corridas de T = 200 000**: C1-a 3 · diagnóstico 2×2 4 · C1-b 3 ·
+C1-c 9 · ETA_FIJA 6 · C1-d 6+3 · C2-a 8 (T <= 150 000) · C2-b 4 (T = 100 000). Un proceso, nada de `Pool`, sin commits.
+
 ## Preguntas para el explorador
 
 **B-1 (creador B).** ¿Hay literatura sobre una neurona nueva que nace con un campo receptivo **más disperso que el
@@ -389,6 +647,32 @@ Motivo: acabo de medir que la solución XOR sobre {P0,P1,P0·P1,1} exige `|w| = 
 **Respuesta del explorador:** Clipping sesga hacia frontera |w|=C (bias hacia saturación), no hacia cero como L2. Constrained ERM (arXiv 2302.04729) trata proyección ortogonal sobre caja: si LMS sin restricción da w* fuera, proyección elige punto más cercano en frontera. Generalización: **no hay resultado general** sobre "dentro generaliza, fuera no" — depende de geometría del problema. Tu caso: w*=[−3,4,4,−8] tiene |·|∞=8 pero norma L2≠max; clipping a clip_s=3 proyecta hacia frontera, fuerza solución de menor norma L2 pero probablemente desproporcional (elige solo rasgos con |w_i|≤3). Verificado web: Constrained ERM arxiv, "weight clipping" deepRL 2024.
 
 Explorador: 3 respuestas, 6 fuentes verificadas en web (Fahlman & Lebiere NIPS 1989, Fusi et al. 2005 Nature/ScienceDirect, Benna & Fusi 2016 Nature Neurosci, Littlestone 1988 sparse signals, Constrained ERM 2302.04729, Weight Clipping deepRL 2024).
+
+**C-Q1 (Creador C).** Exploración dirigida por incertidumbre **sobre la propia acción** (no sobre el valor, ni sobre el
+estado del mundo): ¿existe un mecanismo publicado donde el agente **predice su propia conducta** y usa el error de esa
+predicción para decidir **si prueba**? Interesa (a) los modelos de comparador / copia eferente (Frith, Blakemore) y si
+alguno usa ese error como señal de **exploración** y no sólo de atribución de agencia; (b) cualquier resultado que
+separe con control **"cuánta exploración"** de **"cuándo"** (yo tengo el primero: sesgo constante de la misma media y
+del mismo nivel; me falta el segundo: la misma traza desplazada en el tiempo — ¿está estandarizado en algún sitio?);
+(c) si alguien reporta el lazo de autoamplificación *probar → sorprenderse → probar* y cómo lo apaga. Motivo: medí
+recuperación 0.315 × la del tronco con un sesgo **fásico que se apaga solo**, ganándole a dos controles de cantidad
+en 3/3.
+
+**C-Q2 (Creador C).** Juegos de señalización donde el receptor aprende el significado por **predicción de su propio
+estado interno / homeostático** (lo que va a sentir) en vez de por recompensa: ¿existen? Interesa (a) si alguien
+compara las dos rutas **en el mismo mundo** y reporta la **magnitud** alcanzada por el símbolo, no sólo el acierto de
+signo; (b) si hay una condición mínima conocida bajo la cual la ruta de predicción bate a la de refuerzo (p. ej. señal
+escasa, recompensa asimétrica, receptor que puede aprender solo); (c) sobre Steels 2015 y el *mutual model of mind*:
+¿hay alguna versión donde **sólo uno** de los dos predice al otro y aun así emerge la convención con magnitud? Motivo:
+seis diseños de N2 refutados con refuerzo (contraste final ±0.3 sobre una escala de −3/+1); la predicción de ΔE llega
+a la magnitud **exacta** (+0.800 / −0.400) en 14 mordidas.
+
+**C-Q3 (Creador C).** ¿Alguien ha medido el **techo** de la auto-predicción — cuánta varianza de la propia conducta es
+**irreducible** (ruido de la política) y cuánta la explica el **estado interno** frente al **estímulo**? Busco trabajos
+que reporten una **cota de oráculo** (la probabilidad generativa real que produjo la acción) junto al modelo ajustado,
+y no sólo acierto o log-verosimilitud sueltos. Motivo: con el oráculo puesto, mi automodelo cierra sólo el **13–21 %**
+del hueco disponible; sin esa cota ese número no se puede interpretar en absoluto, y me extraña no encontrarlo como
+práctica estándar.
 
 ## Propuestas para el coordinador
 
@@ -575,3 +859,125 @@ Explorador: 3 respuestas, 6 fuentes verificadas en web (Fahlman & Lebiere NIPS 1
   **con las mismas celdas**. Diagnóstico que lo explica: **el 100 % de los estímulos que la puerta de v13 declara
   desconocidos al final habían sido mordidos ≥ 5 veces.**
 
+### C-P1 — "Probar cuando no me reconozco": la sorpresa sobre sí mismo entra en la BOCA, no en `eta` (Creador C)
+
+**Hipótesis.** Un organismo que predice su propia acción y usa el error de esa predicción para decidir **si prueba**
+—no para cambiar su tasa de aprendizaje— se recupera de un cambio no avisado de la regla del mundo en ≤ 0.70 × los
+pasos que tarda v13, **sin** perder retención (`bateria_v13`) ni generalización (`bateria_generaliza`), y ganándole a
+un control de **cantidad** (sesgo constante del mismo tamaño) y a un control de **momento** (la misma traza de sesgo
+desplazada en el tiempo).
+
+**Mecanismo mínimo (regla local; memoria que exige).**
+- Una lectura logística por **encuentro** (no por bocado): `b = sig((Wbr·P + Wbk·kenyon(P) + Wbh·hambre + Wb0)/0.3)`,
+  con **regla delta sobre la acción realizada**: `e_b = mordio − b`; `W ← clip(W + eta_b·e_b·x, ±clip_b)`. Es local:
+  usa lo que la celda ya ve y un escalar de error. Nada de retropropagación.
+- **Memoria:** 6 + 90 + 2 = **98 escalares** (una lectura lineal del tamaño de la vía lenta más una copia sobre el
+  pool, más el peso del hambre y el sesgo) **+ un único escalar de estado** `s̄_a` (EMA, `ema_auto` = 0.05). Nada por
+  objeto, nada por sitio, nada episódico.
+- **Uso:** `Vb = alpha·w + hambre_boca·hambre + 0.5 + k_test·s̄_a`. No toca `eta`, ni `valor()`, ni las patas, ni el
+  mapa: **no añade ninguna atracción** (por eso no repite las tres candidatas ya refutadas del canje del mapa).
+
+**Dónde se prueba (instrumento).** `experimentos/creacion_C/organismo_v13s.py` (sha `2eaba8dde27f05bd`), **por anclas**
+desde el tronco `cc8b16b492d4d324`; identidades **I1 / I2 / I3 = 18/18** cada una (6 semillas × 3 escenarios, todas las
+claves de v13). Mundo: el del bloque 6 (T = 200 000, `invertir_en` = 100 000), medida `t_ext_B` con **su mismo
+criterio**. Retención: las SEIS etapas de `organismo/bateria_v13.py` con sus `CRIT` **importados tal cual**.
+Generalización: G1/G2 de `organismo/bateria_generaliza.py` (px0 / azar) — **falta construir** `organismo_v13sg` desde
+`experimentos/v13_dos_vias/organismo_v13g.py` con las mismas anclas (una línea del constructor).
+
+**Predicción numérica** (semillas 1–10; réplica en 11–20 sólo si pasa):
+- **P1** mediana de `t_ext_B − invertir_en` **≤ 0.70 ×** la de V13, y pareado ≥ **8/10**.
+- **P2 [cantidad]** más rápido que FIJO_media y que FIJO_Q3 (sesgo constante igual a la media y al nivel de Q3
+  **medidos en el propio brazo**), pareado ≥ **8/10** contra cada uno.
+- **P3 [momento — el control que me falta]** más rápido que FASE (la traza `k_test·s̄_a` del propio brazo, **desplazada
+  medio cuarto**, RNG propio), pareado ≥ **8/10**. Si P2 pasa y P3 no, lo que acelera es el nivel, no el momento, y se
+  registra así.
+- **P4 [se apaga solo]** `sesgo_boca[Q2]` y `[Q4]` ≤ **0.10** y ≤ **0.35 ×** `sesgo_boca[Q3]`, en ≥ 9/10.
+- **P5 [no daña]** las SEIS etapas de `bateria_v13` no pierden más de 1 semilla sobre 10 frente a V13; G1 px0 ≥ 0.65 y
+  ≥ mediana(V13) − 0.10; control `azar` en [0.35, 0.65].
+- **P6 [no gana por pasividad, ni por temeridad]** comida total ≥ **0.90 ×** V13 **y** muertes ≤ **1.25 ×** V13.
+
+**Control que puede fallar.** FIJO_media y FIJO_Q3 (cantidad) · FASE (momento) · P4 puede fallar si el lazo
+*sorpresa → morder → sorpresa* se autoamplifica · P5 puede fallar por el canje exploración / retención · P6 puede
+fallar **por los dos lados** (dejar de comer, o morir de tanto probar).
+
+**Resultado de la mini-prueba** (semillas **1–3**, **T = 200 000**, `invertir_en` = 100 000, `k_test` = 10,
+`ema_auto` = 0.05, `eta_b` = 0.03, `buf_auto` = 1000; un proceso, 3 tandas de 3):
+
+| | s1 | s2 | s3 | mediana |
+|---|---|---|---|---|
+| **PROBAR** | **2 375** | **3 472** | **2 165** | **2 375** |
+| V13 | 13 746 | 3 704 | 7 531 | 7 531 |
+| FIJO_media (0.173 constante) | 4 794 | 11 808 | 5 840 | 5 840 |
+| FIJO_Q3 (0.31 constante) | 5 308 | 7 632 | 5 912 | 5 912 |
+
+**0.315 ×** la mediana de V13, pareado **3/3**; más rápido que **los dos** controles de cantidad **3/3 cada uno**.
+Sesgo por cuarto fásico y con apagado: Q2 0.063–0.068 y Q4 0.044–0.060 contra Q3 0.260–0.366. No es pasividad: muerde
+**3–4 × más veneno** tras la inversión (208/171/129 contra 54/55/64) y las muertes son comparables (290/307/301 contra
+287/240/292). **NO medido todavía: P5 (retención y generalización) y P3 (el control FASE, que aún no existe).**
+
+---
+
+### C-P2 — Significado por predicción: el símbolo predice lo que voy a SENTIR, y lo escucha quien no se reconoce (Creador C)
+
+**Hipótesis.** En el mundo de N2f v3 —el único montaje que pasó las puertas de validez— un receptor que aprende de
+cada símbolo **una predicción de la energía que le rendirá su próximo bocado** (regla delta sobre su propia ΔE
+**sentida**, no sobre el refuerzo ni sobre la ventaja del emisor) y que **la consulta sólo cuando no se reconoce a sí
+mismo** obtiene beneficio conductual, con un contraste del símbolo ≥ 0.8 en unidades de `E_VAL`, y el barajado lo
+destruye. Es la única reapertura de N2 compatible con el cierre registrado: no es otro diseño de refuerzo.
+
+**Mecanismo mínimo (regla local; memoria que exige).**
+- Por símbolo `s` ∈ {0,1}: **UN escalar** `u_s`. Al morder tras oír `s`: `u_s ← u_s + eta_sym·(ΔE_sentida − u_s)`.
+  Honesto por construcción: el objetivo es lo que el receptor **siente**, no lo que el emisor reporta.
+- **Entrada por la puerta que YA existe:** si el patrón no es *familiar* (< `puerta` celdas consolidadas) **o**
+  `s̄_a > theta_a` (no se reconoce, C-P1), la boca añade `gamma_pred · u_s · (|R_VAL|max/|E_VAL|max)`. Si es familiar
+  **y** se reconoce, ignora el símbolo. El *"no sé"* deja de ser una perilla y pasa a ser **una cantidad medida en el
+  propio organismo**.
+- **Memoria: 2 escalares** (`u_0`, `u_1`) más el `s̄_a` de C-P1. Es la memoria más barata de toda la línea N2.
+- **Emisor: sin cambio** (el de N2f v3). *Variante Steels (sólo si la versión básica pasa E1–E3):* el emisor lleva un
+  predictor de la **acción del receptor** y emite el símbolo que minimiza su propio error de predicción.
+
+**Dónde se prueba.** `experimentos/etapa5_comunicacion/mundo_social_n3.py` (`ef227f833c5bf46a`: `regen`=50,
+`regen_rota`, `vida`=100) + su gemelo `mundo_social_n3_rapido.py`. Instrumento nuevo **por anclas**, con `eta_sym`,
+`gamma_pred` y `theta_a` apagadas ≡ la versión actual **bit a bit** (protege N3c/N3d, como hizo N2f v3 con 8/8).
+Puertas de validez **K2–K5 de N2f v3 sin tocar** (K4 equilibrio de emisiones ≥ 0.2 es la que invalidó cinco diseños).
+
+**Predicción numérica** (semillas **101–120**, nuevas):
+- **E1 [magnitud, en unidades de lo sentido]** `u_muerde − u_rechaza ≥ 0.8` (el rango de `E_VAL` es 1.2) en ≥ **15/20**
+  — contra el ±0.30 de N2f v3 sobre una escala de −3/+1.
+- **E2 [beneficio]** veneno total del receptor ≤ **0.80 ×** N0, pareado ≥ **15/20**. (INNATO dio 60 contra 278: pedir
+  0.80 es pedir poco, y por eso puede fallar de verdad.)
+- **E3 [el contenido lo es todo]** SHUF (símbolo barajado) **sin** beneficio (≥ 0.95 × N0) en ≥ 15/20.
+- **E4 [la puerta es la que abre el oído]** el brazo con `theta_a` = 0 (escucha siempre) **no** alcanza E2, o la
+  alcanza con más veneno que el brazo con puerta, en ≥ 13/20. Es el control que puede matar mi propia idea del oído.
+- **E5 [velocidad]** `|u_s − E_VAL|` < 0.04 en ≤ **20** bocados tras oír `s`, en ≥ 15/20.
+
+**Control que puede fallar.** SHUF (E3) · `theta_a`=0 (E4) · N0 y SOLO de N2f v3 sin tocar · las puertas K2–K5, que
+pueden anular el contraste entero antes de mirar ninguna predicción.
+
+**Resultado de la mini-prueba** (no en el mundo social —no hay instrumento todavía— sino en el del tronco, que es
+donde puedo correr hoy). `organismo_v13a` del bloque 6, **semilla 1**, patrón NUEVO `C` = veneno en t = 50 000,
+`eta_pred` = 0.03, `k_sorpresa` = 0 (conducta = v13 bit a bit), 8 corridas de **T ≤ 150 000**:
+
+| mordidas de C | 4 | 6 | **14** | 18 | 26 |
+|---|---|---|---|---|---|
+| `W_pred(C)`, objetivo **−0.400** | −0.233 | −0.284 | **−0.374 (93.5 %)** | −0.388 (97 %) | −0.396 (99 %) |
+| `W(C)` por refuerzo, objetivo −3.00 | −1.61 | −1.85 | −2.46 (82 %) | −2.63 (88 %) | −2.82 (94 %) |
+
+En régimen, `W_pred(A)` = **+0.800** y `W_pred(B)` = **−0.400**: la magnitud **exacta** de `E_VAL`. Y con
+`solap_AB = 3`, `lam = 0`, `plast = False` (BUG-01 presente: `comp A = (9.0, 9.0)`) la predicción sigue exacta
+(0.800 / −0.399). **Refutado de mi propia propuesta:** el argumento *"el símbolo por refuerzo colapsaría por BUG-01"*
+**no vale**, porque el valor no colapsa — **la puerta de familiaridad desvía a la vía lenta** (hallazgo colateral que
+no encuentro registrado). Lo que queda en pie es **magnitud exacta e invariancia al estado del canal de refuerzo**.
+
+---
+
+### C-P3 — RETIRADA antes de preregistrarla (Creador C)
+
+Iba a proponer **reciclaje local con costo energético** (muerte de la celda no consolidada y sin uso, nacimiento que
+cuesta energía) con un falsador barato: censar cuántas de las 90 celdas cumplen el criterio de muerte cuando el pool se
+agota a k = 5. **El Creador B ya corrió ese censo** (su B1) y el resultado lo mata: el pool se agota en el último
+tercio y cuesta **sólo 2–7 divisiones**; duplicar el pool a 180 no devuelve nada (usa 94–101 celdas y `lift_q4` no
+sube). El otro régimen candidato —la retención de lo ausente— lo cerró el **Creador A** (su A5: con el pool lleno
+retiene **más**). **Retiro la propuesta.** Lo dejo escrito porque una propuesta retirada con la razón puesta vale más
+que una propuesta viva sin falsador, y porque documenta que el puente funcionó: dos creadores mataron mi tercer frente
+antes de que gastara un preregistro.
