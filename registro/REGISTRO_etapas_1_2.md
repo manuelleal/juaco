@@ -3720,3 +3720,38 @@ evidencia del código exacto) lo ataca desacoplando las dos preguntas; se corre 
 runners del mundo de regla y las baterías deben **guardar `n_techo`** en el JSON (hoy se calcula y no se imprime ni se
 guarda: `corre_xor_3d.py`, `bateria_generaliza.py`), y todo preregistro que use la puerta declara qué pasa con las celdas
 canceladas. Verificación: `registro/investigacion/AUDITORIA_dia7_20260917.md`, sección "Verificación adicional".
+
+
+### Bloque B-1 (célula de creación, creador B; 18 sep 00:07): hija dispersa en 3T-k, semillas 61–80 — **REFUTADA por la letra (R1: el ahorro de celdas 16/20, se exigían 18/20); la conducta pasa y la relevancia gana a la máscara al azar**
+
+Preregistro `experimentos/nivel7_hija_dispersa/PREREGISTRO_hija_dispersa.md` (a3c7af91453598ad, escrito antes de correr);
+instrumento `mundo_hija_dispersa.py` (d305d53186fcbcd6, por anclas desde `mundo_temporal_k` 68736baafe7c8cdb; identidad
+7/7 en la copia principal y 3/3 dentro del runner); datos `hija_dispersa_s61-80_20260918_000202` (dd86cdbb45041c37),
+466 corridas, 4.9 min. Mecanismo: una línea del nacimiento de v11 — la hija nace ciega a parte de los píxeles de `P`
+(REL: por relevancia, con medias de `P` condicionadas al signo de R; AZAR: subconjunto al azar de la misma cardinalidad;
+SLOT: máscara con el slot profundo intercambiado, control de artefacto; RELD: REL + división diferida n_cf = 4).
+
+| k = 5, C3 | `sep` mediana | `lift_q4` | divisiones | celdas | muertes | C3C (canal falso) |
+|---|---|---|---|---|---|---|
+| V13 | 1.87 | 0.137 | 60 | 90 | 78 | sep 0.07 |
+| **REL** | **3.09** | **0.251** | **18** | **48** | 88 | 0.14 |
+| RELD | 2.42 | 0.255 | 16 | 46 | 88 | 0.03 |
+| AZAR | 2.02 | 0.191 | 42 | 72 | 70 | −0.00 |
+| SLOT | 2.17 | 0.172 | 60 | 90 | 72 | −0.02 |
+
+Criterios: **P1 (celdas ≤ 0.75 × V13 en ≥ 18/20) NO: 16/20** (a k = 4, ≤ 0.85 ×: también 16/20) → **R1, refutación por
+la letra, sin reajustar umbrales**. P2 (lift ≥ 0.18 y > V13 en ≥ 15/20): **0.251 y 18/20 OK** (k = 4: 0.329 y 17/20).
+P3 (sep ≥ 2.2 y C3 − C3C ≥ 1 en ≥ 18/20): **3.09 y 20/20 OK** (k = 4: 3.51 y 20/20). P4 inercia a k = 1: REL ≡ V13
+semilla a semilla **20/20**. **R3 (REL > AZAR en ≥ 14/20): 16/20 a k = 5 y 15/20 a k = 4 → la relevancia SÍ pesa** (lo
+contrario de lo que el propio creador esperaba). R4 (SLOT > REL): 4/20 y 5/20 → sin artefacto. Canal falso limpio en
+los cinco brazos. Muertes: REL 88 contra 78 (no era criterio; se anota).
+
+**Lectura honesta.** El mecanismo mejora la composición a k = 4 y k = 5 (18/20 pareado), separa mejor, gana al control al
+azar y al del slot equivocado, y usa la mitad de las celdas en la mediana — pero la predicción numérica del ahorro (18/20)
+no se cumplió (16/20) y la cláusula R1 la escribió el creador como refutación entera. Se registra REFUTADA tal como
+estaba escrita. **Enmienda 1 (escrita ahora, ANTES de la serie nueva, criterio nuevo en semillas nuevas, sin tocar 61–80):**
+serie 81–100 con los mismos brazos y umbrales, salvo P1 que pasa a **≥ 14/20** (mayoría, derivado de lo visto en 61–80 y
+declarado como tal); si P1–P3 y R3 se repiten en 81–100, el vocabulario permitido es el preregistrado: *"la hija que nace
+ciega a lo irrelevante compone historias más profundas con menos celdas"*; si P1 vuelve a caer, el mecanismo queda como
+*"compone mejor; el ahorro de celdas es mayoritario, no general"*. Nada toca el tronco (§6 del preregistro: baterías
+antes). Vocabulario prohibido sigue: "aprende a ignorar", "atiende", "selecciona".

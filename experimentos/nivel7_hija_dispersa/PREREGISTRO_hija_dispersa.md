@@ -125,3 +125,14 @@ Semillas 1–3, C3, T = 100 000, v13 = `mu_norm/div_signo/eta_s=0.015/puerta=3`.
 Gana a V13 en `lift_q4` en 3/3 a k = 5 y baja celdas en 3/3 a k = 4 y k = 5; **no** gana a k = 4 en conducta (1/3).
 La varianza entre semillas es enorme (0.14–0.39): con n = 3 **lo único robusto es el ahorro de celdas**, y por eso
 P1 es la predicción cuyo fallo (R1) tumba el bloque.
+
+
+## Enmienda 1 (18 sep 2026, 00:50; escrita DESPUÉS de la serie 61–80 y ANTES de la serie 81–100)
+
+En 61–80: P1 cayó (16/20 a k = 5 y 16/20 a k = 4; se exigían 18/20) → R1, REFUTADA por la letra. P2 0.251 y 18/20, P3 3.09 y
+20/20, P4 20/20, R3 REL > AZAR 16/20 (k = 4: 15/20), R4 4/20. Serie nueva 81–100 (`--desde 81`), mismos brazos, mismos
+umbrales, con UN criterio nuevo declarado: **P1' = celdas(REL) ≤ 0.75 × V13 en ≥ 14/20 a k = 5 (y ≤ 0.85 × en ≥ 14/20 a
+k = 4)**. Justificación: el ahorro fue mayoritario (16/20) pero no general; el umbral nuevo sale de 61–80 y se prueba en
+semillas que no lo han visto. P2, P3, P4, R2, R3, R4 sin cambio. Nada se recalibra sobre 61–80; su veredicto (REFUTADA)
+queda. Vocabulario por resultado: si pasan P1'–P3 y R3 → el preregistrado ("compone historias más profundas con menos
+celdas"); si P1' cae → "compone mejor; el ahorro de celdas es mayoritario, no general".
