@@ -1,0 +1,167 @@
+{
+ "meta": {
+  "fecha": "2026-09-18T03:32:22",
+  "humo": false,
+  "desde_recuperacion": 121,
+  "desde_gen_examen": 101,
+  "n_semillas": 20,
+  "dosis": {
+   "dE3": 3,
+   "dE5": 5
+  },
+  "umbrales": {
+   "recup_razon": 0.6,
+   "recup_pareado": 14,
+   "apagado_p4": 16,
+   "G1_mediana": 0.8,
+   "G1_pareado": 15,
+   "G2_mediana": 0.85,
+   "K_completa": 20
+  },
+  "veredicto_dosis": {
+   "dE3": {
+    "seis": {
+     "recuperacion": true,
+     "apagado": true,
+     "G1": true,
+     "G2": false,
+     "K": true,
+     "examen": false
+    },
+    "candidata": false
+   },
+   "dE5": {
+    "seis": {
+     "recuperacion": true,
+     "apagado": true,
+     "G1": true,
+     "G2": true,
+     "K": true,
+     "examen": true
+    },
+    "candidata": true
+   }
+  },
+  "veredicto": "CANDIDATA(S): ['dE5'] cumplen las seis condiciones a la vez (recuperacion rapida Y generalizacion de valor intacta). Camino declarado: preregistro de congelacion (gemelo + manifiesto.py), como marca PREREGISTRO_v13E.md seccion 7.",
+  "shas": {
+   "preregistro": "e58b9525eb0ee575",
+   "preregistro_v13E": "fe50ccb6ffde9427",
+   "script": "1bf38a2a4f94e470",
+   "constructor_v13E": "2491ae7dd1d91f1a",
+   "identidad_dosis": "bdddc82beecb9d5e",
+   "corre_probar_si_mismo": "49ae078df2997776",
+   "bateria_generaliza_E": "c5b25e165339c569",
+   "organismo_v13p": "2dbed7ccac4dd736",
+   "organismo_v13pg": "910f1f5fb64453bb",
+   "origen_organismo_v13": "cc8b16b492d4d324",
+   "origen_organismo_v11": "f69e24063be1b194",
+   "origen_bateria_v13": "1a027bcb37eb536e",
+   "origen_bateria_generaliza": "46772f5a582872c8",
+   "organismo_v13E_k3": "92a96be77bb66a74",
+   "organismo_v13gE_k3": "d8a2ac39d5425db9",
+   "bateria_v13E_k3": "45c25a6f707861ea",
+   "organismo_v13E_k5": "39574b97b0f5f56c",
+   "organismo_v13gE_k5": "ee10589150a950ff",
+   "bateria_v13E_k5": "7635ef6ff83f6e03"
+  },
+  "procesos_python": [
+   "22080 \"C:\\Python314\\pythonw.exe\"  -m community_av sentinel",
+   "23596 C:\\Python314\\python.exe experimentos/nivel9_probar_si_mismo/corre_dosis_dE.py"
+  ],
+  "python": "3.14.2"
+ },
+ "resultados": {
+  "recuperacion": {
+   "archivo": "probar_si_mismo_s121-140_20260918_031725.json",
+   "sha": "a50b8dd78264bbb0",
+   "dE3": {
+    "n": 20,
+    "v13_recup_mediana": 10125.5,
+    "recup_mediana": 4218.5,
+    "razon": 0.41662140141227594,
+    "pareado": 17,
+    "apagado_p4": 20,
+    "ok_recuperacion": true,
+    "ok_apagado": true
+   },
+   "dE5": {
+    "n": 20,
+    "v13_recup_mediana": 10125.5,
+    "recup_mediana": 2699.5,
+    "razon": 0.2666041183151449,
+    "pareado": 20,
+    "apagado_p4": 20,
+    "ok_recuperacion": true,
+    "ok_apagado": true
+   }
+  },
+  "generalizacion": {
+   "dE3": {
+    "archivo": "regresion_generaliza_organismo_v13E_k3_20260918_032430.json",
+    "sha": "2bf04bad9a84c514",
+    "n": 20,
+    "G1_mediana": 0.8500000000000001,
+    "G1_azar": 0.45,
+    "G1_pareado": 19,
+    "G2_mediana": 0.8416030917040119,
+    "G2_azar": 0.42320366323806335,
+    "G2_pareado": 18,
+    "K_cobertura": 20,
+    "ok_G1": true,
+    "ok_G2": false,
+    "ok_K": true
+   },
+   "dE5": {
+    "archivo": "regresion_generaliza_organismo_v13E_k5_20260918_032517.json",
+    "sha": "48bb55f4bd5bf1e6",
+    "n": 20,
+    "G1_mediana": 0.8,
+    "G1_azar": 0.5,
+    "G1_pareado": 17,
+    "G2_mediana": 0.8573295134361228,
+    "G2_azar": 0.44967549433625686,
+    "G2_pareado": 20,
+    "K_cobertura": 20,
+    "ok_G1": true,
+    "ok_G2": true,
+    "ok_K": true
+   }
+  },
+  "examen": {
+   "dE3": {
+    "archivo": "examen_v13E_k3_20260918_032604.json",
+    "sha": "f42db86db15ab3fb",
+    "veredictos": {
+     "5_identidad": true,
+     "1_cientificos": false,
+     "2_celdas": true,
+     "3_control": true,
+     "4a_identidad": true,
+     "4b_sin_conflicto_no_divide": true,
+     "4c_misma_valencia": true,
+     "4d_causa": true
+    },
+    "ok_examen": false,
+    "n_ok": 7,
+    "n": 8
+   },
+   "dE5": {
+    "archivo": "examen_v13E_k5_20260918_032913.json",
+    "sha": "49c4c6a9f9b4304b",
+    "veredictos": {
+     "5_identidad": true,
+     "1_cientificos": true,
+     "2_celdas": true,
+     "3_control": true,
+     "4a_identidad": true,
+     "4b_sin_conflicto_no_divide": true,
+     "4c_misma_valencia": true,
+     "4d_causa": true
+    },
+    "ok_examen": true,
+    "n_ok": 8,
+    "n": 8
+   }
+  }
+ }
+}

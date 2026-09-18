@@ -48,10 +48,12 @@ letra original). Muertes: REL 88–102 contra 78–79 de v13 en 3T-k (no era cri
 | latencia del primer sesgo | 202 pasos, 1 bocado (el automodelo: 602, 1.5) | ídem |
 
 Memoria: una lectura lineal `ΔE_pred` (retina + código) + un escalar de estado. Mecanismo: `Vb += k_testE · s̄_E`, con
-`s̄_E` la sorpresa de ΔE promediada; no toca `eta` (donde el bloque 6 la puso y no servía: 0.856×). **Examen v3'' completo en
-101–120 (v13E, 02:45): retención 8/8, pero G1 px0 0.750 < 0.80 (referencia 0.800) → por el preregistro NO entra tal cual:
-coste de 0.05 en generalización de valor a la dosis `k_testE = 10`. Queda FUERA de la propuesta hasta un preregistro de dosis
-(k_testE 3–5) que exija a la vez recuperación ≤ 0.60× y G1 ≥ 0.80.**
+`s̄_E` la sorpresa de ΔE promediada; no toca `eta` (donde el bloque 6 la puso y no servía: 0.856×). Examen v3'' completo en
+101–120 (v13E, 02:45): retención 8/8, pero G1 px0 0.750 < 0.80 a la dosis `k_testE = 10` → fuera a esa dosis. **Bloque de dosis
+(03:32, preregistrado): `k_testE = 5` cumple las seis condiciones a la vez — recuperación 0.267× (20/20, semillas nuevas 121–140),
+se apaga 20/20, G1 0.80 (17/20), G2 0.857, K 20/20, examen v3'' 8/8 → REINSTALADO como segundo candidato a dosis 5** (copia
+`organismo/organismo_v14_candidato_sorpresa.py` = `organismo_v13E_k5.py` en la rama `v14-candidato`). k = 3 no (G2 0.842, examen 7/8).
+Falta si se acepta: réplica de la recuperación a dosis 5 en otra serie, gemelo, congelación.
 **Los dos candidatos son componibles** (uno actúa en el nacimiento de las hijas, el otro en la boca); si el director acepta
 ambos, se prueba primero la composición (identidad de cada uno con el otro apagado; examen v3' con los dos encendidos).
 

@@ -4130,3 +4130,28 @@ toca el aprendizaje, sólo el ruteo. **Entra a `registro/PROPUESTA_v14.md` como 
 decisión es del director.** Vocabulario: *la puerta pregunta si lo ha visto y si tiene al menos una celda que lo sostenga; con
 eso recuerda tanto como v11 y generaliza como v13*. Abierto: el paso corto (41.5 < 45) y la composición con los otros
 candidatos.
+
+
+### Bloque de dosis de "la sorpresa del mundo en la boca" (`k_testE` ∈ {3, 5}; 18 sep 03:32): **k = 5 cumple las seis condiciones a la vez — recupera 0.27× (20/20), se apaga (20/20), G1 0.80, G2 0.857, K 20/20 y examen v3'' 8/8 → vuelve a la propuesta de v14 como segundo candidato, a dosis 5**
+
+Preregistro `experimentos/nivel9_probar_si_mismo/PREREGISTRO_dosis_dE.md` (e58b9525eb0ee575; escrito antes de correr; las seis
+condiciones deben cumplirse a la vez; predicción: dE5 cumple, dE3 recupera ≈ 0.40× con G1 = referencia); instrumentos por
+anclas `organismo_v13E_k3/k5` (+ mundo de regla y baterías por dosis, criterio 5 adaptado por ERR-30), **identidad 36/36** en la
+copia principal; orquestador `corre_dosis_dE.py` con los umbrales del preregistro (ERR-31); datos `dosis_dE_20260918_031724`
+(1c7c45a42a79e4a0) con `probar_si_mismo_s121-140_20260918_031725` (recuperación, semillas nuevas 121–140),
+`regresion_generaliza_organismo_v13E_k3/k5_20260918_0324xx` y `examen_v13E_k3/k5_20260918_032604/032913` (101–120); 15 min.
+
+| dosis | recuperación (V13 10 126) | pareado | se apaga (P4') | G1 px0 (pareado) | G2 | K | examen v3'' | veredicto |
+|---|---|---|---|---|---|---|---|---|
+| k = 3 | 4 219 (0.417×) | 17/20 | 20/20 | 0.85 (19/20) | **0.842 < 0.85** | 20/20 | **7/8** (una etapa científica) | no candidata |
+| **k = 5** | **2 700 (0.267×)** | **20/20** | **20/20** | **0.80 (17/20)** | **0.857** | **20/20** | **8/8** | **CANDIDATA** |
+| k = 10 (v13E, ya medido) | 0.14× ×3 | 20/20 ×3 | 20/20 ×3 | **0.75** | 0.87 | 20/20 | 8/8 | fuera (G1) |
+
+**Lectura:** es una dosis. A `k_testE = 5` el órgano conserva la recuperación rápida (0.27× de v13, 20/20 en semillas nuevas) y
+recupera la generalización de valor de v13 (0.80) con el examen completo 8/8; a 3 la ganancia de recuperación baja (0.42×) y
+cae otra cosa (G2 y una etapa del examen: no es monotónico, se anota sin interpretar); a 10 cuesta 0.05 de G1. La predicción
+del preregistro se cumple para dE5 y falla en el detalle de dE3 (G1 sí, G2 no). **Segundo candidato reinstalado en
+`registro/PROPUESTA_v14.md` a dosis 5** (copia `organismo_v14_candidato_sorpresa.py` en la rama `v14-candidato`); faltan, si el
+director lo acepta: réplica de la recuperación en otra serie a dosis 5 (hoy: una serie a 5 y tres a 10), gemelo y congelación.
+Vocabulario: *la sorpresa del mundo puesta en la boca, a dosis 5, hace probar cuando el mundo cambia sin cobrar
+retención ni generalización*.

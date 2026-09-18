@@ -1,0 +1,103 @@
+[03:17:24 +    0.0s] ARRANQUE corre_dosis_dE.py (real): dosis [3, 5] (k_testE) contra V13 y contra la referencia ya medida k_testE=10 (v13E, NO se repite).
+[03:17:24 +    0.0s] recuperacion: semillas 121-140   generalizacion/examen: semillas 101-120
+[03:17:24 +    0.0s]     sha preregistro                e58b9525eb0ee575
+[03:17:24 +    0.0s]     sha preregistro_v13E           fe50ccb6ffde9427
+[03:17:24 +    0.0s]     sha script                     1bf38a2a4f94e470
+[03:17:24 +    0.0s]     sha constructor_v13E           2491ae7dd1d91f1a
+[03:17:24 +    0.0s]     sha identidad_dosis            bdddc82beecb9d5e
+[03:17:24 +    0.0s]     sha corre_probar_si_mismo      49ae078df2997776
+[03:17:24 +    0.0s]     sha bateria_generaliza_E       c5b25e165339c569
+[03:17:24 +    0.0s]     sha organismo_v13p             2dbed7ccac4dd736
+[03:17:24 +    0.0s]     sha organismo_v13pg            910f1f5fb64453bb
+[03:17:24 +    0.0s]     sha origen_organismo_v13       cc8b16b492d4d324
+[03:17:24 +    0.0s]     sha origen_organismo_v11       f69e24063be1b194
+[03:17:24 +    0.0s]     sha origen_bateria_v13         1a027bcb37eb536e
+[03:17:24 +    0.0s]     sha origen_bateria_generaliza  46772f5a582872c8
+[03:17:24 +    0.0s]     sha organismo_v13E_k3          92a96be77bb66a74
+[03:17:24 +    0.0s]     sha organismo_v13gE_k3         d8a2ac39d5425db9
+[03:17:24 +    0.0s]     sha bateria_v13E_k3            45c25a6f707861ea
+[03:17:24 +    0.0s]     sha organismo_v13E_k5          39574b97b0f5f56c
+[03:17:24 +    0.0s]     sha organismo_v13gE_k5         ee10589150a950ff
+[03:17:24 +    0.0s]     sha bateria_v13E_k5            7635ef6ff83f6e03
+[03:17:24 +    0.0s] UMBRALES (PREREGISTRO_dosis_dE.md §6): {'recup_razon': 0.6, 'recup_pareado': 14, 'apagado_p4': 16, 'G1_mediana': 0.8, 'G1_pareado': 15, 'G2_mediana': 0.85, 'K_completa': 20}
+[03:17:24 +    0.4s] REGLA 11 -- procesos python vivos (2), este es pid 23596
+[03:17:24 +    0.4s] 
+[03:17:24 +    0.4s] 1/5 RECUPERACION -- corre_probar_si_mismo.py --desde 121 --brazos V13,dE3,dE5 --baterias V13,dE3,dE5 (semillas 121-140)
+[03:17:25 +    0.7s]     procesos python vivos antes: 2
+[03:17:25 +    0.7s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\corre_probar_si_mismo.py --desde 121 --brazos V13,dE3,dE5 --baterias V13,dE3,dE5
+[03:24:29 +  425.4s]       VEREDICTO (parcial, --brazos): CORRIDA --brazos (DOSIS, parcial): sin veredicto generico P1-P7 (brazos de referencia no incluidos en esta corrida). Datos crudos en 'principal'/'retencion'/'generaliza'; el veredicto de la dosis lo calcula corre_dosis_dE.py con los umbrales de PREREGISTRO_dosis_dE.md.
+[03:24:29 +  425.4s]     1/5 recuperacion: terminado OK en 424.7s
+[03:24:30 +  425.4s]     dE3: recup mediana 4218.5 (V13 10125.5)  razon 0.417 (<=0.6)  pareado 17/20 (>=14)  apagado(P4') 20/20 (>=16)  -> recuperacion OK  apagado OK
+[03:24:30 +  425.4s]     dE5: recup mediana 2699.5 (V13 10125.5)  razon 0.267 (<=0.6)  pareado 20/20 (>=14)  apagado(P4') 20/20 (>=16)  -> recuperacion OK  apagado OK
+[03:24:30 +  425.5s] 
+[03:24:30 +  425.5s] 2/5 GENERALIZACION -- bateria_generaliza_E.py organismo_v13E_k3 20 --desde 101 --log (semillas 101-120)
+[03:24:30 +  425.8s]     procesos python vivos antes: 3
+[03:24:30 +  425.8s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_generaliza_E.py organismo_v13E_k3 20 --desde 101 --log
+[03:25:16 +  472.3s]       OK    K  cobertura del primer encuentro: 20/20
+[03:25:16 +  472.3s]       PASA  G1 valor en patrones nunca vistos: px0 0.850 (>=0.65), azar 0.450, px0>azar 19/20
+[03:25:16 +  472.3s]       PASA  G2 conducta al primer encuentro: px0 0.842 (>=0.55), azar 0.423, px0>azar 18/20
+[03:25:16 +  472.3s]       VEREDICTO bateria_generaliza (organismo_v13E_k3): K_cobertura=True G1_valor=True G2_conducta=True
+[03:25:16 +  472.3s]       *** organismo_v13E_k3 CONSERVA la generalizaciÃ³n de la Etapa 3
+[03:25:16 +  472.3s]     2/5 generalizacion dE3: terminado OK en 46.4s
+[03:25:16 +  472.3s]     dE3: G1 px0 0.8500000000000001 (azar 0.45, >=0.8) pareado 19/20 (>=15)  G2 0.8416030917040119 (azar 0.42320366323806335, >=0.85)  K 20/20 (==20)  -> G1 OK  G2 NO  K OK
+[03:25:16 +  472.3s] 
+[03:25:16 +  472.3s] 3/5 GENERALIZACION -- bateria_generaliza_E.py organismo_v13E_k5 20 --desde 101 --log (semillas 101-120)
+[03:25:17 +  472.7s]     procesos python vivos antes: 3
+[03:25:17 +  472.7s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_generaliza_E.py organismo_v13E_k5 20 --desde 101 --log
+[03:26:03 +  519.1s]       OK    K  cobertura del primer encuentro: 20/20
+[03:26:03 +  519.1s]       PASA  G1 valor en patrones nunca vistos: px0 0.800 (>=0.65), azar 0.500, px0>azar 17/20
+[03:26:03 +  519.1s]       PASA  G2 conducta al primer encuentro: px0 0.857 (>=0.55), azar 0.450, px0>azar 20/20
+[03:26:03 +  519.1s]       VEREDICTO bateria_generaliza (organismo_v13E_k5): K_cobertura=True G1_valor=True G2_conducta=True
+[03:26:03 +  519.1s]       *** organismo_v13E_k5 CONSERVA la generalizaciÃ³n de la Etapa 3
+[03:26:03 +  519.1s]     3/5 generalizacion dE5: terminado OK en 46.4s
+[03:26:03 +  519.1s]     dE5: G1 px0 0.8 (azar 0.5, >=0.8) pareado 17/20 (>=15)  G2 0.8573295134361228 (azar 0.44967549433625686, >=0.85)  K 20/20 (==20)  -> G1 OK  G2 OK  K OK
+[03:26:03 +  519.1s] 
+[03:26:03 +  519.1s] 4/5 EXAMEN -- bateria_v13E_k3.py 20 --desde 101 --log (semillas 101-120)
+[03:26:04 +  519.5s]     procesos python vivos antes: 2
+[03:26:04 +  519.5s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_v13E_k3.py 20 --desde 101 --log
+[03:29:12 +  708.3s]       PASA  1 E1        20/20  [venenoQ4<Q1:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20]
+[03:29:12 +  708.3s]       FALLA 1 E2        19/20  [W_Aâ†’-3:20/20 W_Bâ†’+1:20/20 come B Q4â‰¥50:19/20]
+[03:29:12 +  708.3s]       PASA  1 E2I       20/20  [W_Câ‰¤-2.5:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰¤-2.8:20/20 tasaA Q4â‰¥80%Q2:20/20]
+[03:29:12 +  708.3s]       PASA  1 E2J       20/20  [W_Dâ‰¥0.85:20/20 W_Bâ‰¤-2.7:20/20]
+[03:29:12 +  708.3s]       PASA  1 E2K       20/20  [W_Dâ‰¥0.8:20/20 W_Bâ‰¤-2.4:20/20]
+[03:29:12 +  708.3s]       PASA  1 E2L       20/20  [W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20 solapâ†’0:20/20]
+[03:29:12 +  708.3s]       PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[03:29:12 +  708.3s]       PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (<=1)  W_A=[-2.0, -1.93, -1.83, -1.82]
+[03:29:12 +  708.3s]       PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 20/20 lo pasan (>=19)
+[03:29:12 +  708.3s]       OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[03:29:12 +  708.3s]       PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[03:29:12 +  708.3s]       PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 10)
+[03:29:12 +  708.3s]       PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[03:29:12 +  708.3s]       VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[03:29:12 +  708.3s]       *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[03:29:12 +  708.3s]     4/5 examen dE3: terminado OK en 188.8s
+[03:29:12 +  708.3s]     dE3: examen 7/8  -> NO   {'5_identidad': True, '1_cientificos': False, '2_celdas': True, '3_control': True, '4a_identidad': True, '4b_sin_conflicto_no_divide': True, '4c_misma_valencia': True, '4d_causa': True}
+[03:29:12 +  708.3s] 
+[03:29:12 +  708.3s] 5/5 EXAMEN -- bateria_v13E_k5.py 20 --desde 101 --log (semillas 101-120)
+[03:29:13 +  708.7s]     procesos python vivos antes: 2
+[03:29:13 +  708.7s]     $ ..\..\..\..\..\..\Python314\python.exe experimentos\nivel9_probar_si_mismo\bateria_v13E_k5.py 20 --desde 101 --log
+[03:32:22 +  897.6s]       PASA  1 E1        20/20  [venenoQ4<Q1:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20]
+[03:32:22 +  897.6s]       PASA  1 E2        20/20  [W_Aâ†’-3:20/20 W_Bâ†’+1:20/20 come B Q4â‰¥50:20/20]
+[03:32:22 +  897.6s]       PASA  1 E2I       20/20  [W_Câ‰¤-2.5:20/20 W_Aâ‰ˆ+1:20/20 W_Bâ‰¤-2.8:20/20 tasaA Q4â‰¥80%Q2:20/20]
+[03:32:22 +  897.6s]       PASA  1 E2J       20/20  [W_Dâ‰¥0.85:20/20 W_Bâ‰¤-2.7:20/20]
+[03:32:22 +  897.6s]       PASA  1 E2K       20/20  [W_Dâ‰¥0.8:20/20 W_Bâ‰¤-2.4:20/20]
+[03:32:22 +  897.6s]       PASA  1 E2L       20/20  [W_Aâ‰ˆ+1:20/20 W_Bâ‰ˆ-3:20/20 solapâ†’0:20/20]
+[03:32:22 +  897.6s]       PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[03:32:22 +  897.6s]       PASA  3' via rapida sola sin plasticidad (Aâˆ©B=3): 0/20 lo pasan (<=1)  W_A=[-2.31, -1.97, -1.88, -1.77]
+[03:32:22 +  897.6s]       PASA  3'' via lenta activa sin plasticidad (Aâˆ©B=3): 20/20 lo pasan (>=19)
+[03:32:22 +  897.6s]       OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[03:32:22 +  897.6s]       PASA  4b sin conflicto no hay divisiÃ³n: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 66, violaciones ninguna
+[03:32:22 +  897.6s]       PASA  4c Câˆ©B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 11)
+[03:32:22 +  897.6s]       PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[03:32:22 +  897.6s]       VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[03:32:22 +  897.6s]       *** v13 CUMPLE EL CRITERIO v3 con 20 semillas. Por el preregistro: CONGELAR v13 como tronco (si pasa tambien X2 y X3).
+[03:32:22 +  897.6s]     5/5 examen dE5: terminado OK en 188.9s
+[03:32:22 +  897.6s]     dE5: examen 8/8  -> OK (8/8)   {'5_identidad': True, '1_cientificos': True, '2_celdas': True, '3_control': True, '4a_identidad': True, '4b_sin_conflicto_no_divide': True, '4c_misma_valencia': True, '4d_causa': True}
+[03:32:22 +  897.6s] 
+[03:32:22 +  897.6s] VEREDICTO por dosis (los SEIS a la vez; PREREGISTRO_dosis_dE.md, seccion 6/7):
+[03:32:22 +  897.6s]    dE3 (k_testE=3): recuperacion=OK  apagado=OK  G1=OK  G2=NO  K=OK  examen=NO  -> no candidata
+[03:32:22 +  897.6s]    dE5 (k_testE=5): recuperacion=OK  apagado=OK  G1=OK  G2=OK  K=OK  examen=OK  -> CANDIDATA
+[03:32:22 +  897.6s] 
+[03:32:22 +  897.6s] VEREDICTO: CANDIDATA(S): ['dE5'] cumplen las seis condiciones a la vez (recuperacion rapida Y generalizacion de valor intacta). Camino declarado: preregistro de congelacion (gemelo + manifiesto.py), como marca PREREGISTRO_v13E.md seccion 7.
+[03:32:22 +  898.0s] datos -> dosis_dE_20260918_031724.json  sha256_16 = 1c7c45a42a79e4a0
+[03:32:22 +  898.0s] TIEMPO TOTAL: 898.0s

@@ -159,8 +159,10 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
     8/8 → tercer candidato a v14** (`PROPUESTA_v14.md`, rama `v14-candidato`); PAT (sin celda consolidada) falla 3'' como predijo B: la puerta también
     detecta conflicto. Tercer candidato condicionado en `PROPUESTA_v14.md`. **Examen v3'' completo de v13E (02:45): retención 8/8
     (criterio 5 adaptado, ERR-30) pero G1 px0 0.750 < 0.80 → la sorpresa del mundo en la boca queda FUERA de la propuesta a
-    la dosis probada (coste 0.05 en generalización de valor; preregistrar dosis menor). ERR-31: el runner leyó los umbrales
-    de la batería y no los del preregistro; el registro sigue la letra.** Auditoría del día 7 integrada
+    la dosis probada (coste 0.05 en generalización de valor). ERR-31: el runner leyó los umbrales de la batería y no los del
+    preregistro; el registro sigue la letra. **Bloque de dosis (03:32): `k_testE = 5` cumple las seis condiciones a la vez
+    (recuperación 0.267× en 121–140, 20/20; se apaga 20/20; G1 0.80; G2 0.857; K 20/20; examen v3'' 8/8) → SEGUNDO
+    CANDIDATO a v14 a dosis 5 (`organismo_v14_candidato_sorpresa.py` en la rama); k = 3 no (G2 0.842, examen 7/8).** Auditoría del día 7 integrada
     (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).
 - **Remoto:** `origin = https://github.com/manuelleal/juaco.git` (push pendiente por red desde las 23:00; reintento
   automático cada 5 min); respaldos locales `JUACO/respaldo/juaco_bundle_*.bundle`.

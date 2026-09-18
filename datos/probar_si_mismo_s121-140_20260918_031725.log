@@ -1,0 +1,58 @@
+[03:17:25 +    0.0s] ARRANQUE C-P1 'probar cuando no me reconozco': brazos ['V13', 'dE3', 'dE5'], semillas 121-140, T=200000, invertir_en=100000, n_traza=2000, desfase=500. Pool(14).
+[03:17:25 +    0.0s] 20 semillas no cierran un nivel del brief: cierran o refutan ESTE mecanismo, y piden replica en 61-80.
+[03:17:25 +    0.0s]     sha preregistro              0f1660fe2737df32
+[03:17:25 +    0.0s]     sha script                   49ae078df2997776
+[03:17:25 +    0.0s]     sha constructor              dd42e0170a014cbb
+[03:17:25 +    0.0s]     sha constructor_automodelo   27c91df159a1465b
+[03:17:25 +    0.0s]     sha v13p                     2dbed7ccac4dd736
+[03:17:25 +    0.0s]     sha v13pg                    910f1f5fb64453bb
+[03:17:25 +    0.0s]     sha v13s                     2eaba8dde27f05bd
+[03:17:25 +    0.0s]     sha v13                      cc8b16b492d4d324
+[03:17:25 +    0.0s]     sha v13g                     2a80e125f8593bf2
+[03:17:25 +    0.0s]     sha bateria_v13              1a027bcb37eb536e
+[03:17:25 +    0.0s]     sha bateria_generaliza       46772f5a582872c8
+[03:17:25 +    0.4s] REGLA 11 — procesos python vivos (3), este es pid 28952
+[03:17:26 +    0.5s] ETAPA 1/5 — identidades J1 (apagado == v13), J2 (las lecturas SOLO MIDEN), J3 (== v13s) y J4 (modo regla == v13g): 33 comprobaciones...
+[03:17:30 +    5.3s]     J1: 9/9
+[03:17:30 +    5.3s]     J2: 9/9
+[03:17:30 +    5.3s]     J3: 9/9   (clave de reporte ['sesgo_boca'] excluida; max |dif| 0.01404)
+[03:17:30 +    5.3s]     J4: 6/6
+[03:17:30 +    5.4s] ETAPA 2/5 — principal: 60 corridas de 200000 pasos (3 brazos x 20 semillas)...
+[03:17:46 +   20.9s]           10/60
+[03:18:01 +   36.1s]           20/60
+[03:18:16 +   51.1s]           30/60
+[03:18:17 +   51.7s]           40/60
+[03:18:32 +   67.3s]           50/60
+[03:18:43 +   77.9s]           60/60
+[03:18:43 +   77.9s] ETAPA 3/5 — MOMENTO: omitida (no esta en --brazos).
+[03:18:43 +   77.9s] ETAPA 4/5 — retencion M5 (los SEIS de bateria_v13, sus criterios), brazos ['V13', 'dE3', 'dE5']: 360 corridas de 100000 pasos...
+[03:19:07 +  101.9s]           40/360
+[03:19:30 +  124.8s]           80/360
+[03:19:54 +  149.1s]           120/360
+[03:20:17 +  172.5s]           160/360
+[03:20:40 +  195.5s]           200/360
+[03:21:02 +  217.5s]           240/360
+[03:21:22 +  237.3s]           280/360
+[03:21:45 +  259.9s]           320/360
+[03:22:07 +  281.9s]           360/360
+[03:22:07 +  281.9s] ETAPA 5/5 — generalizacion M6 (G1/G2 px0/azar), brazos ['V13', 'dE3', 'dE5']: 120 corridas de 200000 pasos...
+[03:22:38 +  313.3s]           20/120
+[03:23:03 +  338.0s]           40/120
+[03:23:27 +  361.8s]           60/120
+[03:23:49 +  383.9s]           80/120
+[03:24:13 +  408.4s]           100/120
+[03:24:29 +  424.4s]           120/120
+[03:24:29 +  424.4s] ANALISIS SIMPLIFICADO (--brazos): faltan brazos que P1-P7/M5/M6 necesitan por nombre (SELF-TEST, CONST-a, CONST-b, MOMENTO o dE-TEST no estan en --brazos/--baterias de esta corrida). Se listan medianas y pareado<V13 por brazo activo, y M5/M6 crudos si corrieron; el veredicto de la DOSIS lo calcula corre_dosis_dE.py sobre 'principal'/'retencion'/'generaliza' con los umbrales de PREREGISTRO_dosis_dE.md (ERR-31: nunca los umbrales de una bateria reusada).
+[03:24:29 +  424.5s]    G-c margen: V13 recuperacion mediana 10125.5, censuradas 0/20 -> OK
+[03:24:29 +  424.5s]    V13        n=20  recuperacion 10125.5  razon/V13 1.0  pareado<V13 None  censuradas 0
+[03:24:29 +  424.5s]    dE3        n=20  recuperacion 4218.5  razon/V13 0.41662140141227594  pareado<V13 17  censuradas 0
+[03:24:29 +  424.5s]    dE5        n=20  recuperacion 2699.5  razon/V13 0.2666041183151449  pareado<V13 20  censuradas 0
+[03:24:29 +  424.5s]    M5 V13        E1 20/20  E2 20/20  E2I 20/20  E2J 20/20  E2K 20/20  E2L 20/20
+[03:24:29 +  424.5s]    M5 dE3        E1 20/20  E2 19/20  E2I 20/20  E2J 20/20  E2K 20/20  E2L 20/20
+[03:24:29 +  424.5s]    M5 dE5        E1 20/20  E2 20/20  E2I 20/20  E2J 20/20  E2K 20/20  E2L 20/20
+[03:24:29 +  424.5s]    M6 V13        px0: G1 0.8 G2 0.86274667490697 cob 10.0  azar: G1 0.45 G2 0.46532657295123286 cob 10.0
+[03:24:29 +  424.5s]    M6 dE3        px0: G1 0.8 G2 0.8645384723520192 cob 10.0  azar: G1 0.4 G2 0.45854365178271617 cob 10.0
+[03:24:29 +  424.5s]    M6 dE5        px0: G1 0.9 G2 0.8691832476646395 cob 10.0  azar: G1 0.4 G2 0.49288558091278617 cob 10.0
+[03:24:29 +  424.5s] 
+[03:24:29 +  424.5s] VEREDICTO (parcial, --brazos): CORRIDA --brazos (DOSIS, parcial): sin veredicto generico P1-P7 (brazos de referencia no incluidos en esta corrida). Datos crudos en 'principal'/'retencion'/'generaliza'; el veredicto de la dosis lo calcula corre_dosis_dE.py con los umbrales de PREREGISTRO_dosis_dE.md.
+[03:24:29 +  424.5s] datos -> probar_si_mismo_s121-140_20260918_031725.json  sha256_16 = a50b8dd78264bbb0
