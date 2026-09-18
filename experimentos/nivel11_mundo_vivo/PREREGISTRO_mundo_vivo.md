@@ -273,3 +273,62 @@ algún veredicto queda a ±1 semilla del umbral (regla 12). Un `Pool` a la vez.
 contradicción; la lectura que decide es la de la celda más lenta real. Error de redacción, no de criterio. P8 (regresión del tronco) no la
 corre el runner porque el tronco no se toca (el sha de origen se verifica al arrancar). T = 100000 (el preregistro no fijaba T; los umbrales
 son razones entre brazos y cruces tempranos).
+
+---
+
+## 10. ENMIENDA 2 — **ERR-37** (escrita DESPUÉS de ver 181–200, ANTES de la réplica 201–220)
+
+**Se declara sin rodeos: estas predicciones salen de haber visto 181–200.** No son confirmatorias en ese rango; son
+la predicción para la réplica **201–220**, con semillas nuevas. **No se toca P1, P2, P3a, P3b, P5 ni P9**, que
+pasaron (P1 20/20 con `xor01` 1.0; P2 20/20; P3a 20/20; P3b ×3.76, 18/20; P5 con la lectura aclarada; P9 4.0 = 4.0).
+
+### ERR-37 — tres errores de MEDIDA, los tres míos, ninguno del mundo
+
+**ERR-37a — un umbral pareado puesto en la MEDIANA del efecto da ~10/20 midas lo que midas.** P4' exigía
+`muertes VIVO ≤ 0.75 × UNA_NEC` por semilla: la mediana de esa razón pareada resultó **0.739**. Un umbral colocado
+donde está la mediana parte la muestra por la mitad **por construcción**, y el resultado (11/20) no informa sobre el
+tamaño del efecto, que es grande: A₁₂ = P(VIVO < UNA_NEC) = **0.90**. Lo mismo, y peor, en P7: exigía `≥ 2 ×` y la
+mediana pareada es **1.99** → 10/20 exacto. Copié la razón central de una mini-prueba de 3 semillas y la convertí en
+una barra por semilla: eso no es una predicción, es una moneda.
+
+**ERR-37b — `muertes` no es pareable por semilla.** La semilla fija `KW`, los códigos y el flujo del rng, y por eso
+es un par legítimo para lo que se APRENDE (`xor01`, `exp_hasta`: P1/P2/P3a/P5/P9 pasaron con pareado). Pero las
+muertes son la integral de una trayectoria que **diverge desde el primer paso** en cuanto dos brazos toman
+decisiones distintas: la semilla no controla ese conteo. Para supervivencia hay que comparar **distribuciones**, no
+pares.
+
+**ERR-37c — `|W| ≤ 0.3` agregado con un MÁXIMO sobre 40 lecturas es un estadístico de extremos, no un criterio.**
+P6 se evaluó como `max` sobre 20 semillas × 2 necesidades. La mediana de |W[sal]| es **0.0** y **18/20 semillas dan
+exactamente 0.0**; el "1.83" son **dos** semillas. La letra de P6 no decía cómo agregar y elegí la agregación más
+dura que existe. (Que esas dos semillas existan es un hallazgo real y tiene su propio bloque:
+`PREREGISTRO_supersticion_sal.md`.)
+
+### Subconjunto PREREGISTRADO, con criterio de validez calculable ANTES de correr (regla 10 de `EQUIPO.md`)
+
+Las dos semillas que rompen P6 (182, 188) son **exactamente** las dos de 181–200 en las que
+`|code(D) ∩ code(B)| = 3`, es decir donde **la sal y el veneno tienen el mismo código** para la vía rápida. Esa
+condición **no depende de la corrida**: la calcula `diagnostico_codigos.py` construyendo `KW` y leyendo los códigos,
+sin simular un paso. Por tanto:
+
+- **Criterio de validez, fijado aquí:** una semilla es **ALIAS** si `|code(D) ∩ code(B)| = 3` y **LIMPIA** si no.
+- **Se reporta SIEMPRE el conjunto completo y, al lado, el subconjunto de semillas LIMPIAS**, con los mismos
+  umbrales. Lo ejecuta `diagnostico_codigos.py` sobre los JSON, nunca en línea.
+- **Dato ya calculado, antes de correr la réplica: 201–220 no tiene ninguna semilla ALIAS (0/20)** (181–200 tenía
+  2/20; 301–700 tiene 9/400). De ahí sale **P10**, abajo, que es la predicción más fuerte de esta enmienda porque
+  puede fallar limpiamente.
+
+### Predicciones para 201–220
+
+| # | predicción (201–220) | de dónde sale el margen | refutación |
+|---|---|---|---|
+| **P4''a** | **tamaño**: mediana de muertes VIVO / UNA_NEC **≤ 0.85** y / ESCALAR **≤ 0.80** | observado 0.72 y 0.64; el margen es holgado a propósito, no ajustado al filo | > 0.85 / > 0.80: la ventaja en supervivencia no replica |
+| **P4''b** | **consistencia**: A₁₂ = P(muertes VIVO < muertes UNA_NEC) **≥ 0.75** y contra ESCALAR **≥ 0.80** (400 comparaciones no pareadas, distribución libre) | observado 0.90 y 0.935 | por debajo: el efecto existe en la mediana pero no separa las distribuciones |
+| **P4''c** | **separación de cuartiles**: q75(muertes VIVO) < q25(muertes UNA_NEC) **y** < q25(ESCALAR) | observado 106 < 125 y 106 < 143 | si se solapan, la ventaja es de cola, no de distribución |
+| **P7'a** | muertes **por agua**: mediana UNA_NEC / VIVO **≥ 1.6**, y **≥ 1.5 en ≥ 16/20 semillas** (umbral por debajo de la mediana, no en ella: ERR-37a) | medianas 89 / 48 = 1.85; pareado ≥ 1.5 en **18/20** | < 1.6, o < 16/20: la segunda necesidad no compra supervivencia en el eje que la justifica |
+| **P7'b** | q75(agua VIVO) < q25(agua UNA_NEC) | observado 50 < 84 | se solapan: ídem |
+| **P6'** | `|W[sal]| ≤ 0.3` en las dos necesidades **en ≥ 18/20 semillas** (mediana ≤ 0.1), y censurada 20/20 | mediana 0.0, 18/20 exactamente 0.0, censurada 20/20 | < 18/20: hay una fuga que el alias de código no explica |
+| **P10** | **la que puede fallar limpiamente**: como 201–220 **no tiene semillas ALIAS**, `P6'` se cumple en **20/20** y el peor error de casilla de VIVO (`err_peor`) es **0.00 en 20/20** | en 181–200, `err_peor` de VIVO fue 0.00 en 18/20 y **1.62 / 1.68 exactamente en las dos ALIAS** | si aparece `err_peor > 0.3` en una semilla sin alias, **la explicación por código es falsa** y hay otra causa |
+
+**P8 sigue igual** (regresión del tronco; este runner no la corre: el tronco no se toca).
+**Vocabulario:** lo que se declara sigue siendo *valor por necesidad*, *XOR necesidad × estímulo*, *exposiciones
+hasta criterio* y *dos muertes*. Nada más.

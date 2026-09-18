@@ -115,3 +115,59 @@ condición mínima para que "propósito" signifique algo medible.
 P4 sustituida por P4' (supervivencia), P3 desdoblada en P3a/P3b, P5 endurecida y P7 a 2 × — todo en la Enmienda 1, ya
 escrita. **Orden sugerido:** correrlo *después* del bloque 2/3 del criterio de parada (aprender sin morder), no antes:
 el criterio de parada del director tiene prioridad y este bloque no lo toca.
+
+---
+
+# APÉNDICE (18 sep, tras correr 181–200): qué nivel mide este mundo y cómo queda la ficha
+
+## Resultado del bloque, en una línea
+
+**Núcleo sostenido, supervivencia y sal no como se predijo.** P1 20/20 (`xor01` 1.0), P2 20/20, P3a 20/20,
+P3b ×3.76 (18/20), P5 con la lectura aclarada, P9 4.0 = 4.0. P4′ y P7 caen **por cómo los escribí**, no por el
+efecto: puse los umbrales pareados *en la mediana* del efecto (0.75 contra una mediana pareada de 0.739; 2 × contra
+1.99), lo que parte la muestra por la mitad por construcción, mientras el efecto real es grande y consistente
+(A₁₂ = 0.90 contra UNA_NEC, 0.935 contra ESCALAR, 0.955 en muertes por agua; q75 de VIVO por debajo de q25 de los
+dos). P6 cae por un `max` sobre 40 lecturas cuando la mediana es 0.0 y 18/20 semillas dan 0.0 exacto. Los tres son
+**ERR-37**, y la Enmienda 2 del preregistro los sustituye para 201–220 con margen declarado.
+
+## Qué nivel del brief mide este mundo — respuesta honesta: **ninguno lo cierra; toca tres**
+
+- **No es nivel 5.** Nivel 5 es transmisión entre organismos. Aquí hay uno solo: "significado por necesidad" no es
+  comunicación, y llamarlo así sería vocabulario inflado (regla 6).
+- **Nivel 8 (aprendizaje abierto) es su casa principal, en la columna "hecho".** Es el primer mundo del proyecto con
+  más de una dimensión de valor: el estímulo deja de tener *un* valor y pasa a tener uno *por necesidad*, y el
+  organismo aprende la tabla 2 × 4 completa en 2–11 exposiciones por casilla, exacta en 18/20 semillas. El aporte es
+  mensurable y nuevo, pero **no mueve el porcentaje**: los cabos de esa fila (retención de lo ausente 0.67, canje del
+  mapa cerrado, dominio distinto del anillo) siguen intactos. **8 sigue en 40 %.**
+- **Nivel 9 (autonomía) es donde más cambia, y ahí sí propongo mover el número.** La fila decía "allostasis (bloque
+  6), meta propia" como lo que falta. La allostasis mínima ya está medida: dos necesidades que bajan solas, dos
+  muertes posibles, y una política que elige *cuál manda* (la de mayor déficit). El organismo puede, por primera
+  vez, **equivocarse de objetivo** — condición mínima para que "propósito" signifique algo medible — y se paga en
+  supervivencia (A₁₂ 0.90 contra el mismo cuerpo con una sola necesidad en la mente). **Propuesta: 9 de 20 % → 30 %.**
+- **Nivel 4 (memoria persistente) recibe un negativo nuevo y nítido**, que es el hallazgo más transferible del
+  bloque: con cuatro estímulos, dos pueden compartir código (2.5 % de las semillas), y entonces la puerta por
+  evidencia de código **presta** la evidencia de uno al otro, `div_signo` **no puede** repararlo cuando el estímulo
+  mudo da `R = 0`, y la evitación cierra el bucle. **El precio lo paga el veneno: su valor cae de −3.00 a −1.83 /
+  −1.34.** Es una grieta del tronco, no del mundo vivo: con dos estímulos `cond()` prohíbe el alias por
+  construcción, así que v14 nunca fue puesto a prueba en esto. **4 sigue en 60 %**, con un cabo nuevo.
+- **Nivel 3 (generalización) NO se toca.** El XOR necesidad × estímulo es paridad de verdad, pero se resuelve
+  *indexando la memoria*, no leyendo mejor los píxeles: no es el XOR de la línea 3 y sumarlo allí sería inflar.
+
+## Ficha para `HANDOFF.md` §13 (texto para pegar; los porcentajes son propuesta)
+
+> | **4 memoria persistente** | *(sin cambios)* | … + **con 4 estímulos dos pueden compartir código (2.5 % de semillas medidas): la puerta por evidencia de código presta la evidencia del vecino, `div_signo` no puede dispararse con `R = 0` y la evitación cierra el bucle; el estímulo mudo le quita al veneno el 40–55 % de su valor (−3.00 → −1.83/−1.34). `PREREGISTRO_supersticion_sal.md`** | 60 % |
+> | **8 aprendizaje abierto** | … + **mundo vivo (nivel 11, 181–200): dos necesidades y cuatro estímulos; el valor deja de ser un escalar y pasa a ser uno POR NECESIDAD; tabla 2 × 4 exacta en 18/20 semillas con 2–11 exposiciones por casilla; `xor01` necesidad × estímulo 1.00 (20/20) contra 0.50 del valor escalar (20/20) y 0.25 al barajar el contenido (20/20)** | … + **el contraste conductual por estímulo NO aparece (0.07): con `hambre_boca = 2.0` un valor de cero no puede vetar a la boca; sólo uno negativo la frena (fallo de política, no de aprendizaje)** | 40 % |
+> | **(9 autonomía)** | recuperación medida ante cambio no avisado · **allostasis mínima MEDIDA: dos necesidades con su descenso y su muerte, la activa manda, y la segunda necesidad se paga sola en supervivencia (A₁₂ 0.90 contra el mismo cuerpo con una sola necesidad en la mente; muertes por agua 48 contra 89)** | meta propia; propósito y reproducción sólo como medida (`descendientes_viables`), sin mecanismo | **30 %** |
+
+## Lo que yo haría ahora (recomendación, no decisión)
+
+1. **Réplica 201–220 con la Enmienda 2**, que es barata (~4 min) y trae **P10**, la predicción que puede fallar
+   limpiamente: 201–220 **no tiene ninguna semilla con alias de código** (calculado antes de correr con
+   `diagnostico_codigos.py`), así que P6′ debe salir 20/20 y el peor error de casilla de VIVO **0.00 en 20/20**. Si
+   aparece una semilla sucia sin alias, mi explicación de la superstición es falsa.
+2. **El bloque de la sal, después y sólo si hay hueco**: es nivel 4, no nivel 11, y su coste hoy es el 2.5 % de las
+   semillas. Lo que lo hace valioso no es el tamaño sino que **señala un órgano que falta**: una división que se
+   dispare por conflicto de *información* (`R = 0` sobre una celda consolidada) y no sólo por conflicto de *signo*.
+3. **Lo que NO haría:** declarar nivel 5 ni tocar el nivel 3. Y no arreglaría la política (el contraste conductual)
+   metiendo un coste de mordida: sería un mecanismo nuevo para salvar una predicción mía que ya está refutada y
+   sustituida por una medida mejor (supervivencia).

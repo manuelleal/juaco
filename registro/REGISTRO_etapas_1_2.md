@@ -4701,3 +4701,27 @@ márgenes no). Lo que sigue: réplica del núcleo en 201–220 con la misma letr
 superstición de la sal (no una enmienda sobre estos datos). El organismo v14.1 no cambia; el mundo vivo queda como instrumento y
 peldaño (línea F) para la siguiente sesión. Vocabulario: *"en un mundo con dos necesidades el organismo aprende qué vale cada cosa
 para cada necesidad, y con eso resuelve el XOR necesidad × estímulo en 11 exposiciones; un valor único no puede"*.
+
+
+### ERR-37 (diseñador del mundo vivo, 18 sep 08:10) y hallazgo de ALIAS DE CÓDIGO: **las tres predicciones caídas eran errores de medida (umbral pareado puesto en la mediana del efecto; muertes no pareables por semilla; `max` sobre 40 lecturas) y la "superstición de la sal" no es superstición: con K = 3 la sal y el veneno tienen el MISMO código en 2/20 semillas y el veneno paga el precio (−1.83 en vez de −3.00)**
+
+**ERR-37a:** P4′ exigía ≤ 0.75 y la mediana pareada es 0.739; P7 exigía ≥ 2× y la mediana pareada es 1.99: un umbral en la mediana parte la
+muestra por la mitad por construcción (11/20, 10/20 no miden nada). El efecto es grande: A₁₂ = 0.90 (VIVO contra UNA_NEC), 0.935 (contra
+ESCALAR), 0.955 (muertes por agua); q75(VIVO) 106 < q25(UNA_NEC) 125 < q25(ESCALAR) 143. **ERR-37b:** las muertes son la integral de una
+trayectoria que diverge desde el primer paso: la semilla fija KW y el flujo, no la supervivencia — pareado válido para lo aprendido,
+no para las muertes. **ERR-37c:** `|W| ≤ 0.3` con `max` sobre 40 lecturas es un estadístico de extremos (mediana 0.0; 18/20 semillas 0.0
+exacto). **Enmienda 2** (`PREREGISTRO_mundo_vivo.md` f87cafa631a6b31c; escrita después de 181–200 y antes de 201–220, declarándolo): P4″
+por medianas, A₁₂ y cuartiles; P7′ con umbral por debajo de la mediana observada; P6′ ≥ 18/20; y **P10, la que puede fallar limpio**: en
+201–220 no hay ninguna semilla con alias de código (calculado antes de correr con `diagnostico_codigos.py`), luego `err_peor` de VIVO debe
+ser 0.00 en 20/20.
+**Alias de código (hallazgo, `PREREGISTRO_supersticion_sal.md` b803b20128ade9ea):** las dos semillas con valor en la sal (182, 188) son
+exactamente las dos con `|code(sal) ∩ code(veneno)| = 3`: el mismo código de Kenyon; y el valor es el mismo número (`W_hambre[veneno] =
+W_hambre[sal] = −1.83` y −1.34). La puerta presta la evidencia por código, la división por conflicto no repara (exige `R ≠ 0` y la sal
+da `R = 0`; sal muda → 0 divisiones), la evitación cierra el bucle (exposiciones ×8). **Consecuencia:** un estímulo que no informa le
+quita al organismo el 40–55 % del miedo a lo que sí lo mata cuando comparten código. Las tres hipótesis del coordinador (co-ocurrencia
+con la necesidad, sorpresa específica, drenaje) quedan refutadas con el mismo dato (`W_sed[sal] = 0.0`; `eta_pred = 0`; `lam` sólo actúa al
+morder). Bloque aparte preregistrado: 9 semillas ALIAS y 9 LIMPIAS elegidas estructuralmente en 301–700, seis predicciones (S-5 es la
+del coordinador y puede tumbar la del diseñador: sin sed la superstición debe seguir igual). **Nivel del brief:** no cierra ninguno; nivel
+8 recibe el primer mundo con más de una dimensión de valor; **nivel 9 sube a 30 %** (allostasis mínima medida; el organismo puede
+equivocarse de objetivo); nivel 4 recibe el negativo del alias de código; el XOR necesidad × estímulo no toca el nivel 3 (se resuelve
+indexando la memoria, no leyendo mejor los píxeles). Réplica 201–220 con la enmienda 2 → en cola tras v15c.
