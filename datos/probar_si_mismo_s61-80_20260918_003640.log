@@ -1,0 +1,84 @@
+[00:36:40 +    0.0s] ARRANQUE C-P1 'probar cuando no me reconozco': brazos ['V13', 'SELF-TEST', 'CONST-a', 'CONST-b', 'dE-TEST', 'MOMENTO'], semillas 61-80, T=200000, invertir_en=100000, n_traza=2000, desfase=500. Pool(14).
+[00:36:40 +    0.0s] 20 semillas no cierran un nivel del brief: cierran o refutan ESTE mecanismo, y piden replica en 61-80.
+[00:36:40 +    0.0s]     sha preregistro              0fafc85b5f0a81d9
+[00:36:40 +    0.0s]     sha script                   201ca06416e137b1
+[00:36:40 +    0.0s]     sha constructor              8a651d083d77d154
+[00:36:40 +    0.0s]     sha constructor_automodelo   27c91df159a1465b
+[00:36:40 +    0.0s]     sha v13p                     0dbc2495efe44e60
+[00:36:40 +    0.0s]     sha v13pg                    7ab4767d446ba797
+[00:36:40 +    0.0s]     sha v13s                     2eaba8dde27f05bd
+[00:36:40 +    0.0s]     sha v13                      cc8b16b492d4d324
+[00:36:40 +    0.0s]     sha v13g                     2a80e125f8593bf2
+[00:36:40 +    0.0s]     sha bateria_v13              1a027bcb37eb536e
+[00:36:40 +    0.0s]     sha bateria_generaliza       46772f5a582872c8
+[00:36:41 +    0.5s] REGLA 11 — procesos python vivos (4), este es pid 34264
+[00:36:41 +    0.7s] ETAPA 1/5 — identidades J1 (apagado == v13), J2 (las lecturas SOLO MIDEN), J3 (== v13s) y J4 (modo regla == v13g): 33 comprobaciones...
+[00:36:46 +    5.9s]     J1: 9/9
+[00:36:46 +    5.9s]     J2: 9/9
+[00:36:46 +    5.9s]     J3: 9/9
+[00:36:46 +    5.9s]     J4: 6/6
+[00:36:46 +    5.9s] ETAPA 2/5 — principal: 100 corridas de 200000 pasos (5 brazos x 20 semillas)...
+[00:37:02 +   22.2s]           10/100
+[00:37:19 +   39.3s]           20/100
+[00:37:38 +   58.0s]           30/100
+[00:37:41 +   61.0s]           40/100
+[00:37:56 +   76.3s]           50/100
+[00:38:12 +   91.4s]           60/100
+[00:38:27 +  106.4s]           70/100
+[00:38:31 +  110.7s]           80/100
+[00:38:47 +  126.5s]           90/100
+[00:39:00 +  139.5s]           100/100
+[00:39:00 +  139.5s] ETAPA 3/5 — MOMENTO: 20 corridas de 200000 pasos con la traza de SELF-TEST desplazada 500 cubetas (= 50000 pasos)...
+[00:40:04 +  203.8s]           10/20
+[00:40:12 +  211.9s]           20/20
+[00:40:12 +  211.9s] ETAPA 4/5 — retencion M5 (los SEIS de bateria_v13, sus criterios), brazos ['V13', 'SELF-TEST', 'CONST-b']: 360 corridas de 100000 pasos...
+[00:41:08 +  268.0s]           40/360
+[00:41:36 +  296.3s]           80/360
+[00:42:06 +  325.5s]           120/360
+[00:42:40 +  359.6s]           160/360
+[00:43:21 +  401.1s]           200/360
+[00:44:03 +  442.8s]           240/360
+[00:44:40 +  480.0s]           280/360
+[00:45:17 +  516.4s]           320/360
+[00:45:50 +  550.1s]           360/360
+[00:45:50 +  550.1s] ETAPA 5/5 — generalizacion M6 (G1/G2 px0/azar), brazos ['V13', 'SELF-TEST', 'CONST-b']: 120 corridas de 200000 pasos...
+[00:46:27 +  587.4s]           20/120
+[00:46:47 +  606.7s]           40/120
+[00:47:24 +  643.4s]           60/120
+[00:47:51 +  670.7s]           80/120
+[00:48:16 +  695.8s]           100/120
+[00:48:40 +  719.8s]           120/120
+[00:48:40 +  719.8s] ANALISIS — guardas primero (regla: una guarda caida anula el contraste, no lo reinterpreta).
+[00:48:40 +  719.8s]    V13        recuperacion 7969.0  censuradas 0/20  veneno_post 56.0  comida_post 325.0  muertes(post) 265.0(137.5)  bocados 783.0
+[00:48:40 +  719.8s]         sesgo_boca por cuarto [0.0, 0.0, 0.0, 0.0]   sorpresa_auto [None, None, None, None]
+[00:48:40 +  719.8s]    SELF-TEST  recuperacion 1761.0  censuradas 0/20  veneno_post 147.0  comida_post 431.5  muertes(post) 303.5(147.5)  bocados 1285.5
+[00:48:40 +  719.8s]         sesgo_boca por cuarto [0.341095, 0.061985, 0.271135, 0.07798]   sorpresa_auto [0.03415, 0.00625, 0.02705, 0.00775]
+[00:48:40 +  719.8s]    CONST-a    recuperacion 6278.0  censuradas 0/20  veneno_post 71.5  comida_post 335.5  muertes(post) 268.5(135.0)  bocados 832.0
+[00:48:40 +  719.8s]         sesgo_boca por cuarto [0.173, 0.173, 0.173, 0.173]   sorpresa_auto [None, None, None, None]
+[00:48:40 +  719.8s]    CONST-b    recuperacion 5697.0  censuradas 0/20  veneno_post 86.0  comida_post 352.5  muertes(post) 258.5(133.5)  bocados 884.5
+[00:48:40 +  719.8s]         sesgo_boca por cuarto [0.31, 0.31, 0.31, 0.31]   sorpresa_auto [None, None, None, None]
+[00:48:40 +  719.8s]    dE-TEST    recuperacion 1151.5  censuradas 0/20  veneno_post 66.5  comida_post 334.0  muertes(post) 284.0(146.0)  bocados 785.0
+[00:48:40 +  719.8s]         sesgo_boca por cuarto [0.10306, 0.00015000000000000001, 0.12836999999999998, 0.000165]   sorpresa_auto [None, None, None, None]
+[00:48:40 +  719.8s]    MOMENTO    recuperacion 9304.5  censuradas 0/20  veneno_post 198.0  comida_post 469.5  muertes(post) 285.0(151.5)  bocados 1278.5
+[00:48:40 +  719.8s]         sesgo_boca por cuarto [0.06202, 0.260115, 0.08233, 0.346835]   sorpresa_auto [None, None, None, None]
+[00:48:40 +  719.8s]    G-c margen: V13 recuperacion mediana 7969.0, censuradas 0/20 -> OK
+[00:48:40 +  719.8s]    G-b sesgo_boca[Q3] por brazo [('V13', 0.0), ('SELF-TEST', 0.2711), ('CONST-a', 0.173), ('CONST-b', 0.31), ('dE-TEST', 0.1284), ('MOMENTO', 0.0823)]
+[00:48:40 +  719.8s]         razon contra SELF-TEST [('CONST-a', 0.638, 'inconcluso'), ('CONST-b', 1.143, 'limpio'), ('MOMENTO', 0.304, 'inconcluso'), ('dE-TEST', 0.473, 'inconcluso')]
+[00:48:40 +  719.8s]    G-d masa de la traza de MOMENTO == la de SELF-TEST: |dif| max 0.0 -> OK
+[00:48:40 +  719.8s] ANALISIS — predicciones preregistradas.
+[00:48:40 +  719.8s]    P1 recuperacion SELF-TEST/V13 = 0.221 (<=0.60) y pareado 20/20 (>=14)  -> OK
+[00:48:40 +  719.8s]    P2 no es la CANTIDAD: SELF-TEST < CONST-a 20/20 y < CONST-b 20/20 (>=14 cada uno; medianas 6278.0 / 5697.0)  -> OK
+[00:48:40 +  719.8s]    P3 es el MOMENTO: SELF-TEST < MOMENTO 20/20 (>=14; mediana MOMENTO 9304.5)  -> OK
+[00:48:40 +  719.8s]    P4 se apaga solo (Q2<=0.10, Q4<=0.10, Q3>=0.20) en 15/20 (>=16)  -> NO
+[00:48:40 +  719.8s]    M5 V13        E1 20/20  E2 20/20  E2I 20/20  E2J 20/20  E2K 20/20  E2L 20/20
+[00:48:40 +  719.8s]    M5 SELF-TEST  E1 20/20  E2 20/20  E2I 20/20  E2J 20/20  E2K 20/20  E2L 20/20
+[00:48:40 +  719.8s]    M5 CONST-b    E1 20/20  E2 20/20  E2I 20/20  E2J 20/20  E2K 20/20  E2L 20/20
+[00:48:40 +  719.8s]    P5 retencion: etapas por debajo de 18/20 en SELF-TEST: ninguna  -> OK
+[00:48:40 +  719.8s]    M6 V13        px0: G1 0.8500000000000001 G2 0.8520847501256027 cob 10.0  azar: G1 0.5 G2 0.43925666247956785 cob 10.0
+[00:48:40 +  719.8s]    M6 SELF-TEST  px0: G1 0.8 G2 0.8727795227528606 cob 10.0  azar: G1 0.4 G2 0.5023925566070648 cob 10.0
+[00:48:40 +  719.8s]    M6 CONST-b    px0: G1 0.8 G2 0.8005624095487458 cob 10.0  azar: G1 0.4 G2 0.5000893051735611 cob 10.0
+[00:48:40 +  719.8s]    P6 generalizacion: G1 px0 SELF-TEST 0.8 (>=0.80 y >= V13 0.8500000000000001 -0.10), azar 0.4 en [0.35,0.65]  -> OK
+[00:48:40 +  719.8s]    P7 probar no es envenenarse: veneno_post 147.0 <= 4x56.0 y muertes 303.5 <= 1.50x265.0  -> OK
+[00:48:40 +  719.8s]    [exploratorio, sin criterio] dE-TEST recuperacion 1151.5 con sesgo_boca[Q3] 0.1284 contra SELF-TEST 1761.0 con 0.2711
+[00:48:40 +  719.8s] VEREDICTO (20 semillas; no cierra ningun nivel del brief): ACELERA y los controles no, pero el sesgo NO se apaga solo (lazo sorpresa->morder->sorpresa): limite medido.
+[00:48:40 +  719.9s] datos -> probar_si_mismo_s61-80_20260918_003640.json  sha256_16 = 6eedf29fc48ac580

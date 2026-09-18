@@ -140,8 +140,16 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   · **A-1 selección por competencia (XOR)**: instrumento `organismo_v13q4` listo (identidad 16/16) pero la selección
     online abre el conjuntivo correcto 1/3 → **3f no se corre** hasta tener la pieza de muestreo (aprender sin morder,
     creador C). A-3 vector único (simplificación de la vía lenta con identidad algebraica) listo para correr.
-  · **C-P1 "probar cuando no me reconozco"** (nivel 9: la sorpresa sobre la propia acción entra en la boca, no en `eta`;
-    mini-prueba: recuperación 0.315× v13, 3/3): preregistrado y corriendo (41–60, seis brazos + baterías).
+  · **C-P1 "probar cuando no me reconozco" (nivel 9) REPLICADO ×2** (41–60 y 61–80): la sorpresa sobre la propia acción
+    puesta en la boca (no en `eta`) recupera de la inversión en 0.26×/0.22× de los pasos de v13 (pareado 20/20 ×2), gana a
+    los controles de cantidad (sesgo fijo) y de momento (traza rotada) 19–20/20, retención 20/20 × 6 y generalización
+    intactas, sin más veneno ni muertes; sólo falla el apagado (15/20 ×2: el suelo es la cota de oráculo de su propia
+    política). **Y el brazo dE-TEST — la sorpresa del mundo (ΔE, el predictor del bloque 6) en la boca — recupera 7× más
+    rápido (0.14× ×2), se apaga sola (20/20 ×2) y pasa seguridad: CANDIDATO A ÓRGANO**; faltan sus baterías (serie
+    81–100, enmienda 2). Lección: el predictor de ΔE nunca fue el problema, lo era dónde entraba.
+    (`probar_si_mismo_s41-60_20260918_001756`, `probar_si_mismo_s61-80_20260918_003640`)
+  · **A-3 CONFIRMADO**: la vía lenta de dos canales es exactamente un vector con signo (acc idéntica 60/60, |ΔW| 3e−15):
+    simplificación candidata para v14 (mitad de memoria en la vía lenta; decisión del director).
   · **ERR-25**: la puerta de v13 no distingue "no aprendido" de "cancelado" (verificado por el auditor); B-2 (puerta por
     evidencia del código exacto: mini-prueba `N*` 20 contra 6 de v13) en preparación. Auditoría del día 7 integrada
     (K0 del bloque escala re-diagnosticado; `analiza_subconjunto.py` para el rodeo; regla 10 en EQUIPO.md).

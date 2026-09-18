@@ -3891,3 +3891,29 @@ bit de conducta — simplificación candidata para v14 (decisión del director; 
 la ablación del Agente B del puente XOR (`lam_lenta = 0` y `clip_s = 10` no movían nada: identidad, no casualidad);
 (3) la vía RÁPIDA no admite la misma simplificación: la fisión de v11 lee `m`. Vocabulario: *la vía lenta es un vector con
 signo; el drenaje es el olvido de la evidencia contradictoria*.
+
+
+### Bloque C-P1, réplica 61–80 con la enmienda 1 (18 sep 00:44): **REPLICADO — SELF-TEST acelera 0.22× (20/20) con todos los controles; P4 vuelve a caer (15/20); dE-TEST ("la sorpresa del mundo en la boca") pasa P1', P4' y P7' en las DOS series → candidato por derecho propio**
+
+Datos `probar_si_mismo_s61-80_20260918_003640` (6eedf29fc48ac580), 120 corridas + baterías; identidades 11/11.
+
+| brazo | recuperación (pasos) | sesgo Q3 | veneno post | muertes | 41–60 (para comparar) |
+|---|---|---|---|---|---|
+| V13 | 7 969 | 0 | 56 | 265 | 7 931 |
+| **SELF-TEST** | **1 761** (0.221×; pareado 20/20) | 0.27 | 147 | 303.5 | 2 089 (0.263×) |
+| CONST-a / CONST-b | 6 278 / 5 697 | 0.17 / 0.31 | 71.5 / 86 | 268.5 / 258.5 | 6 364 / 6 720 |
+| MOMENTO | 9 305 | 0.08 (rotado) | 198 | 285 | 8 417 |
+| **dE-TEST** | **1 152** (0.144×; pareado 20/20) | 0.13 | 66.5 | 284 | 1 136 (0.143×) |
+
+SELF-TEST: P1 OK, P2 OK (20/20 y 20/20), P3 OK (20/20), **P4 NO (15/20 por segunda vez)**, P5 retención 20/20 × 6, P6 px0 G1 0.80
+(V13 0.85), azar 0.40, P7 OK. **dE-TEST con los criterios de la enmienda 1 (`analiza_dE.py`, forma relativa de P4'):**
+41–60 P1' 0.143× y 20/20, P4' se apaga **20/20**, P7' OK; 61–80 P1' 0.144× y 20/20, P4' **20/20**, P7' OK.
+
+**Declarable (vocabulario de la enmienda):** SELF-TEST → *cuando no se reconoce, prueba, y se recupera antes de un cambio no
+avisado del mundo; el impulso de probar no se apaga del todo* (límite medido: el suelo es la cota de oráculo de su propia
+política, C7 del puente). dE-TEST → *la sorpresa del mundo puesta en la boca* recupera 7× más rápido que v13, con un sesgo
+tres veces menor que se apaga solo y sin más veneno ni más muertes: **candidato a órgano**. Lo que falta antes de
+proponerlo al director para v14: retención y generalización medidas en dE-TEST (las baterías corrieron sólo para V13,
+SELF-TEST y CONST-b) — serie 81–100 (enmienda 2, en preparación por el creador C) con `--baterias` para dE-TEST, la variante
+`resta_cota` del automodelo (P4′) y la prueba de latencia. Hallazgo de la línea: **el predictor de ΔE del bloque 6 nunca fue el
+problema; lo era dónde entraba** (en `eta`: 0.856×, refutado; en la boca: 0.14×).
