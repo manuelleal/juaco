@@ -8,10 +8,12 @@
 > 3. ✅ **v13 = dos vías + puerta**: rompe el canje. Examen v3' 8/8 y generalización en 101–120. 3T sobrevive;
 >    capacidad cae a 35 de 60 (canje puerta/capacidad, ERR-22).
 > 4. ✅ Etapa 5 N1 (experto → novato por conducta visible) demostrada y replicada.
-> 5. ⏳ **Etapa 5 N2 (significado emergente): preregistrada y corriendo** (`PREREGISTRO_N2.md`, `corre_N2.py`).
->    Si pasa E1–E5 → réplica en 21–40 → "N2 cerrado". Si falla → diagnosticar el eslabón, otro mundo, sin recalibrar.
-> 6. Después: N3 (sentidos complementarios / XOR entre dos); rama "puerta con rápida vacía" (capacidad); consolidación
->    y publicación (`HORIZONTE_frontera.md`).
+> 5. ❌ **Etapa 5 N2 (significado emergente): cinco diseños refutados; línea cerrada por hoy.** Emerge una convención
+>    arbitraria que muere al barajar, sin magnitud útil (asimetría del mundo y de la recompensa). Reabrir sólo con otro mundo.
+> 6. ⏳ **Plan del debate de niveles 5–10** (`registro/investigacion/DEBATE_y_plan_5a10.md`): (1) 3T con k=2,3
+>    (`experimentos/nivel7_3T_k/`, corriendo) → (2) tabla posición→código + teletransporte → (3) mundo social con
+>    control de saciedad (N3) → (4) mundo largo con cambio, 4 brazos. Después: rama "puerta con rápida vacía";
+>    consolidación y publicación (`HORIZONTE_frontera.md`).
 >
 > **ORDEN VIGENTE AL 16 SEP 2026 (día 4, tarde). Histórico; lo manda el bloque de arriba.**
 > Los "Pasos" numerados de la sección "PLAN PARA LA PRÓXIMA SESIÓN" son **históricos**.

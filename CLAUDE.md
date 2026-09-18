@@ -104,7 +104,11 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
   asimetría del mundo (la comida desaparece al comerla; el veneno se queda y se señala 36.000 veces) y de la
   recompensa (−3/+1). Reabrir sólo cambiando el mundo. Datos `N2*_s1-20_20260917_*`. · **Plan vigente: el del debate**
   (`registro/investigacion/DEBATE_y_plan_5a10.md`): (1) 3T con k=2,3 → (2) tabla posición→código → (3) mundo social
-  con control de saciedad (N3) → (4) mundo largo con cambio, 4 brazos (niveles 8+9). · N3, 6, 7, 8 abiertas. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
+  con control de saciedad (N3) → (4) mundo largo con cambio, 4 brazos (niveles 8+9). · **(1) HECHO: 3T-k, v13
+  compone historias de 1, 2 y 3 pasos con distractores, replicado** (`3T_k_s1-20_20260917_191732`,
+  `3T_k_s21-40_20260917_192053`; sep 3.97/3.74/2.24, control barajado ≈ 0, ≥19/20 en cada k). · (2) en curso:
+  `experimentos/nivel6_mapa/` (tabla M + teletransporte; **premisa corregida: la retina del tronco ve el objeto más
+  cercano de todo el anillo, así que el mundo del mapa necesita `r_vis`**). · N3, 6, 8 abiertas. **Ojo N1:** la señal de conducta mezcla valor y saciedad (INNATO en el
   mundo de 20 patrones deja 0/10 comidas conocidas).
 - **Hallazgos del día, en orden:** (a) **JUACO-EVO**: 4 mutaciones LLM contra 24 ciegas; el LLM halló en **una**
   generación un órgano que yo no diseñé (P1 sostenida; `experimentos/evo/LINAJE.md`). (b) v11 cerró la Etapa 4 y

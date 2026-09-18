@@ -3043,3 +3043,25 @@ asigne una magnitud útil (E2) ni que el beneficio llegue al 30 % (E4; llegó al
 **Lo que hay que cambiar para reabrirla (no hoy):** el **mundo**, no el receptor: equilibrar el muestreo (comida que
 no desaparezca al morderla, o veneno que sí) y/o la escala (+1/−3 → simétrica en la señal social). El debate de niveles
 5–10 la saca del camino crítico y propone volver a ella sólo si la composición social (N3) la necesita.
+
+
+### Nivel 7 (composición temporal), experimento 1 del plan del debate: **v13 COMPONE historias de 1, 2 y 3 pasos — replicado**
+
+Preregistro `experimentos/nivel7_3T_k/PREREGISTRO_3T_k.md` (sha `cf38dfab9c90645d` al correr); instrumento
+`mundo_temporal_k.py` (`68736baafe7c8cdb`, desde `mundo_temporal_v13.py` `f9c3169b32f393d4`; **k = 1 idéntico bit a bit,
+18/18 claves × brazos**). El mundo pone en la entrada el estímulo actual y los k anteriores; **manda el más profundo**
+(A es comida si `h_k = B`); los intermedios son distractores. El organismo no cambia.
+
+| k | C3 `sep` (mediana [mín, máx]) | `lift_q4` | C3C (canal falso) `sep` | C3 − C3C ≥ 1 | divisiones C3 | veredicto |
+|---|---|---|---|---|---|---|
+| 1 | **3.97** [1.55, 3.98] · réplica 3.96 | 0.374 · 0.372 | −0.24 · +0.03 | 20/20 · 20/20 | 5 · 4 | compone |
+| 2 | **3.74** [1.47, 3.97] · réplica 3.81 | 0.375 · 0.379 | +0.08 · +0.29 | 20/20 · 19/20 | 11 · 10 | compone (predicho ≥ 3.0) |
+| 3 | **2.24** [1.48, 3.38] · réplica 2.56 | 0.161 · 0.202 | +0.11 · +0.04 | 20/20 · 20/20 | 28 · 24 | compone (predicho ≥ 2.0; T3 al filo: 0.161 vs 0.15) |
+
+Semillas 1–20 (`3T_k_s1-20_20260917_191732`, `767bd661747cf568`) y réplica 21–40 (`3T_k_s21-40_20260917_192053`,
+`2000670ed82ede42`). C1/C1p/C2b `sep` 0 en todos los k (sin canal o sin plasticidad no hay composición). **Lectura:** la
+división por conflicto de signo aprende a mirar el slot que importa e ignorar los distractores; cuesta más divisiones
+(5 → 11 → 28) y la separación baja con la profundidad (3.97 → 3.74 → 2.24), pero el control barajado se queda en cero.
+El canal falso divide más (60 con k = 3) sin separar: divide por ruido. **Vocabulario:** *compone hasta 3 pasos de
+historia con distractores*; no "planifica", no "razona". Abierto: k = 4, 5 (¿dónde se agota?), y si las divisiones extra
+cuestan capacidad (no se midió aquí: el organismo no cambió).

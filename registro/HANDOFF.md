@@ -360,13 +360,23 @@ pequeño coste de confianza. Simbiosis en el tiempo, medida. **Etapa 5 N1 cerrad
 - Etapa 5: **N2** (significado emergente, juego de señalización) y **N3** (sentidos complementarios / XOR entre dos).
 - O7 (qué hacer sin objetivo); techo de capacidad; la puerta que consulte la lenta sólo con la rápida vacía (rama).
 
-## 11.5 N2: refutado en el primer intento; N2b en marcha
-N2 tal como se diseñó **no emerge** (`N2_s1-20_20260917_181950`): el refuerzo por acuerdo es ciego al símbolo mientras la
-conducta del receptor no dependa del símbolo, y el receptor no actúa sobre el símbolo hasta tener significado. Con
-símbolos a medio formar el novato comió **más** veneno (375 frente a 318). Diagnóstico completo en el registro. N2b
-(`PREREGISTRO_N2b.md`, `corre_N2.py --variante b`): el símbolo entra en la decisión como sesgo proporcional al contraste
-desde el primer día, y el emisor se refuerza por la ventaja sobre su promedio por estado. Si N2b también cae: el código
-no paga con percepción directa; el mundo que lo haría pagar es el de la Etapa 6 (novatos sucesivos).
+## 11.5 N2 (significado emergente): línea CERRADA por hoy tras cinco diseños; plan del debate en marcha
+Cinco diseños preregistrados (N2, N2b, N2c, N2d, N2e; 500 corridas; `datos/N2*_s1-20_20260917_*`). **Lo que emerge:** con
+refuerzo por ventaja y el símbolo como sesgo en la decisión, entre dos v13 aparece una **convención de dos símbolos**
+que ninguno tenía, arbitraria por semilla (~13/20) y que **muere al barajar**. **Lo que no:** magnitud útil para el
+receptor (contraste ±0.4, luego ±0.1) ni beneficio del 30 % (llegó al 21–23 %, pareado 15/20 en N2d). **Causa,
+verificada con humo instrumentado:** el mundo muestrea asimétrico (la comida desaparece al comerla; el veneno se queda y
+se señala 36.000 veces contra 564) y la recompensa es asimétrica (−3/+1); ningún receptor acumula "positivo". Vocabulario
+permitido: *emerge una convención; transmite poco*. Reabrir sólo cambiando el mundo (equilibrar visitas y escala).
+
+**Después del cierre:** cinco agentes Sonnet investigaron los niveles 5–9 y un sexto los confrontó
+(`registro/investigacion/nivel5..9*.md`, `DEBATE_y_plan_5a10.md`). Orden adoptado (regla 12): **(1) 3T con historia de 2
+y 3 pasos** (`experimentos/nivel7_3T_k/`, preregistrado y corriendo al cierre; k=1 es bit a bit el 3T de siempre) →
+(2) tabla posición→código con teletransporte y control de barajado (nivel 6) → (3) mundo social con control de
+saciedad (cierra el nivel 5 y resuelve N3) → (4) mundo largo con cambio, 4 brazos (niveles 8+9). Se saltan XOR y N2.
+Criterio de parada honesto: si 5–6 mecanismos compran capacidad con el mismo canje, el límite es el presupuesto fijo
+de células. `REPOS_cercanos.md`: no hay repo público con los cinco ejes de JUACO; préstamos posibles: Roth–Erev
+(`demonstrator-game`) para N2, OpenEvolve/ShinkaEvolve como arnés para JUACO-EVO.
 
 ## 11.5-viejo Estado al cierre de la sesión (noche del 17 sep) y cómo retomar N2 (superado por lo de arriba)
 - **Lo que está corriendo o acaba de terminar:** `experimentos/etapa5_comunicacion/corre_N2.py` (N2, significado
