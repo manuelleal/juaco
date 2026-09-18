@@ -4994,3 +4994,51 @@ calculaban `h16(AQUI/organismo_v11.py)` con `AQUI = creacion_A/`, donde ese arch
 líneas del veredicto; los conteos del log (`examen_v15d_20260918_083108.log`) son válidos y el JSON por corrida se perdió. La nota del
 registro de las 08:46 que lo atribuía a la batería congelada queda corregida. `bateria_v15e` lee los sha desde `organismo/`. Regla 14
 ampliada: toda batería copiada pasa un humo que llegue a ESCRIBIR su JSON antes de la serie.
+
+
+### Candidato v15e — la tabla de pares REESCRIBIBLE, cada vía con su error (creador A; 18 sep 09:37; V1/V2a 101–120, V2b 141–160 con los kwargs exactos del tronco): **NO ENTRA (cláusula §7) — arregla lo que mató a v15d: se DESDICE (E2 reversión 20/20) y la vía rápida CONSOLIDA (E1 W_B ≈ −3 20/20), conserva la generalización lineal (G1 1.000 / G2 0.997), pero PIERDE XOR (0.500 estricta contra 0.438 apagada; se exigía ≥ 0.75), como A dejó escrito como refutación posible: una tabla que guarda lo que a la lineal le falta hereda el fracaso de la lineal**
+
+Diagnóstico de v15d (A, líneas de `organismo_v15d.py`): la lineal aprendía de `R − (lineal + tabla)` calculado ANTES de que la tabla
+escribiera `R` de un golpe → tras UNA mordida la vía lenta leía 1.45·R (−4.35; medido −4.22/−3.72), la probabilidad de morder caía 220×,
+no había más mordidas, el exceso no se corregía (E1) y tras el cambio nadie mordía B (E2); `mem_alfa = 1` sobre v15d da los mismos
+números — la reescritura sola no toca la primera escritura. **v15e:** rápida con su error; lineal con su error `R − lineal`; la tabla
+escribe DESPUÉS del paso de la lineal el residuo `R − lineal_después` por sobrescritura; abstención; ganadora por menor error propio.
+Preregistro `experimentos/creacion_A/PREREGISTRO_v15e.md` (8fb7ddcdeb086089; §1–§7 antes de medir); instrumentos por anclas
+`organismo_v15e` (5930c5ed2df1be1d) / `_on` (c576d0de467d7cca), `organismo_v15ge` / `_on`, `bateria_v15e` (d5039d16ce21920d), `bateria_generaliza_v15e`
+(b01142827847c7d7; entrada campo a campo = tronco, regla 14), runner `corre_v15e.py` (18a588dcba5cf547; kwargs del tronco en V2b: ERR-41);
+identidad **32/32**; datos `v15e_s141-160_20260918_092921` (90e851dff9cafeca), examen `examen_v15e_20260918_093053` (91c2127c0958781a; JSON
+escrito: ERR-42 corregido), V2a `regresion_generaliza_v15e_organismo_v15e_on_20260918_093352` (b9300ad10f01694b).
+
+| criterio | resultado | veredicto |
+|---|---|---|
+| V1 examen v3′ 8/8 ON | **E1 19/20** (venenoQ4<Q1 19/20; **W_B ≈ −3: 20/20**), **E2 20/20** (W_A → −3, W_B → +1, come B Q4 ≥ 50: 20/20 — la REVERSIÓN que v15d tenía en 0/20), **E2I 19/20** (W_C ≤ −2.5 19/20), E2J/E2K/E2L 20/20; 2, 3′, 3″, 4a–4d pasan | 6/8: **NO** (dos escenarios a una semilla) |
+| V2a G1 ≥ 0.80, G2 ≥ 0.85, K 20/20 | G1 1.000 (azar 0.450, 20/20) · G2 0.997 (azar 0.469, 20/20) · K 20/20 | PASA (veredicto de la batería; ver ERR-43) |
+| V2b mundo de regla 141–160 (kwargs del tronco): xor01 estricta ≥ 0.75; px0 ON ≥ OFF; azar en banda | **xor01 0.500 [0.06, 0.88] contra 0.438 apagada** (gana (0,1) 20/20, cobertura 4/4) · px0 1.000 / 1.000 · azar 0.500 / 0.500 | **NO** |
+| V4 ±10 % | xor01 celdas +9 %, splits +18 %; px0 −2 % / −5 % | NO (por arriba en xor01; A esperaba incumplir por abajo) |
+
+**Lectura:** v15e resuelve la reversión y la consolidación en 20 semillas — lo que ninguna memoria de pares había hecho — y lo hace
+exactamente por la razón que A escribió: cada vía con su error. Y pierde XOR por la razón que también escribió (§6c): con residuos,
+el error propio de la celda buena (0,1) ya no es 0 sino la deriva de una lineal que no puede con XOR, del mismo orden que la
+confusión de las celdas malas → el prior de pares pierde su identificabilidad. Vocabulario: *"una tabla que guarda lo que a la lineal
+le falta se desdice, pero hereda el fracaso de la lineal"*. Los dos escenarios a una semilla (E1, E2I 19/20) no se replican: v15e
+cae por V2b de todos modos. **Siguiente candidato legítimo (preregistro nuevo, A16 del PUENTE): v15f — R crudo en la tabla (no el
+residuo), sobrescritura, relevo a la lineal por abstención, cada vía con su error.** Encargado 09:45.
+
+**ERR-43 (coordinador, 09:40):** la ETAPA 5 de `corre_v15e.py` leyó el conteo K (20) como mediana de `azar` y declaró "V2a NO"; el
+veredicto de la batería (`K_cobertura=True G1_valor=True G2_conducta=True`, azar 0.450/0.469) es el que vale. Ningún umbral cambia; el
+runner de v15f debe leer los campos de la batería, no reconstruirlos del log.
+
+### Revisor de literatura (18 sep 09:45; `registro/investigacion/LITERATURA_novedad_20260918.md`): **ningún mecanismo nuevo; lo publicable es una nota técnica con código y datos**
+
+Veredictos, citas verificadas por ficha de editor (no por PDF): alias de código = colisión de un hash sensible a la localidad
+(Dasgupta, Stevens & Navlakha 2017) + generalización de la extinción (Rescorla 1976) + aliasing perceptual (Whitehead & Ballard 1991)
++ protección por evitación (Lovibond 2009) → **ya existe**; reparación por R = 0 = distinción útil (McCallum 1993) / match tracking
+de ARTMAP (Carpenter, Grossberg & Reynolds 1991) / neurogénesis → **ya existe**; identificabilidad de XOR con 8 = necesidad de sesgo
+(Mitchell 1980) → **ya existe**; prior de pares = unique cue / configural cue / tile coding → **ya existe**; memoria de un golpe por
+combinación = control episódico sobre BTSP (Bittner 2017; Wu & Maass 2025) → **existe en parte** (el ensamblaje con n* medido en un
+organismo con consecuencias no está reportado así); no desdecirse = tabla de máximos de MFEC (Blundell 2016) corregida por NEC
+(Pritzel 2017) → **ya existe**; valor por necesidad = RL homeostático (Keramati & Gutkin 2014), Cañamero 1997/2004, Senapati 2019 →
+**ya existe** (y recomienda no llamarlo "XOR": infla). **Aporte publicable:** nota técnica reproducible sobre la línea del alias
+(necesidad medida + reparación con identidad bit a bit en el tronco) y un benchmark de método "ejemplos y exposiciones hasta asociar".
+**Errata:** la cita "Milstein et al. 2024" de `ENJAMBRE_xor_20260918.md` §1 no existe con esa autoría; es Wu & Maass 2025 (*Nat Commun*
+16:342); anotado al final del informe. Las demás citas del enjambre quedan sin verificar.

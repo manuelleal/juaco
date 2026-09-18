@@ -148,3 +148,8 @@ retenidas que **reencontró la misma estructura** — pero le faltan rigging, pu
    de generalización con la perilla encendida (`eta_s`/`clip_s` salieron gratis en A-4, esto puede no salir); g=3 y los
    dos estimadores que M4 no implementó; y la pregunta abierta detrás de todo — **15 pares son 15, pero C(n,2) no lo
    es**: ninguno escala a una retina grande sin que la fisión de M2 (idea correcta, instrumento equivocado) vuelva.
+
+
+## Errata (coordinador, 18 sep 09:45, del revisor de literatura)
+La cita "Milstein et al. 2024" de §1 (memoria direccionable con sinapsis binarias y un disparo) no existe con esa autoría: la fuente
+es Wu & Maass 2025, *Nature Communications* 16:342. Las demás citas de §1 quedan sin verificar por PDF (`LITERATURA_novedad_20260918.md`).

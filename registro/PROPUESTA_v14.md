@@ -102,3 +102,7 @@ conflicto de v11 se dispara también cuando una celda consolidada recibe `R = 0`
 mundos del tronco no actúa nunca (examen 8/8 con `splits` idénticos a v14.1; generalización 40/40 idéntica): coste 0 % exacto. En el mundo
 vivo repara el alias de código (18/18 semillas ALIAS en dos series: |W[sal]| 0.0, veneno −3.0, muertes 41 contra 75–77). Entraría como
 v14.2 (sin cambiar ningún número del tronco) o como parte de v15. Detalle: `REGISTRO_etapas_1_2.md` (B-5 y réplica).
+
+
+## Candidato v15e (18 sep 09:37): NO entra — se desdice (E2 20/20) y consolida (E1 W_B 20/20) y generaliza (G1 1.000), pero pierde XOR (0.500): la tabla que guarda el residuo hereda el fracaso de la lineal
+Siguiente: v15f (R crudo + sobrescritura + relevo a la lineal por abstención; cada vía con su error), preregistro nuevo del creador A. ERR-43: el runner leyó mal `azar` en V2a (la batería dice PASA).
