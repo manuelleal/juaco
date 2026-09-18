@@ -4181,3 +4181,20 @@ réplica del examen compuesto (C1) en 121–140 con la misma letra** (`bateria_v
 composición pasa a la propuesta como opción conjunta (C3 se reporta como está: no alcanza 0.25); si vuelve a caer E2, quedan
 como candidatos separados y el director elige. Vocabulario: *juntos generalizan y recuerdan como el mejor de los dos y componen
 casi como la hija sola; la puerta cuesta una semilla de conducta en el examen de 101–120*.
+
+
+### Dosis 5 de "la sorpresa del mundo en la boca", réplica de la recuperación en semillas nuevas 141–160 (enmienda 1; 18 sep 04:05): **REPLICA — 0.248× (20/20), se apaga 20/20, retención 20/20 × 6, G1 0.80 = v13, G2 0.89, sin más veneno ni muertes**
+
+`corre_probar_si_mismo.py --desde 141 --brazos V13,dE5 --baterias V13,dE5`; datos `probar_si_mismo_s141-160_20260918_035504`
+(c51d159b83d9ec38); identidades 33/33 dentro del runner; 10 min.
+
+| brazo | recuperación | pareado | se apaga (P4') | veneno post | muertes | retención (6 etapas) | G1 px0 / G2 |
+|---|---|---|---|---|---|---|---|
+| V13 | 9 076 | — | — | 56 | 275 | 20/20 × 6 | 0.80 / 0.85 |
+| **dE5** | **2 249 (0.248×)** | **20/20** | **20/20** | 61 | 278.5 | **20/20 × 6** | **0.80 / 0.89** |
+
+Con esto el segundo candidato tiene, a dosis 5: dos series de recuperación (0.267× en 121–140 y 0.248× en 141–160, 20/20 × 2),
+apagado 20/20 × 2, generalización de valor igual a v13 en las dos (0.80), retención de las seis etapas 20/20 × 2 y el examen v3''
+completo 8/8 (101–120); y a dosis 10, tres series más de recuperación (0.14×). Vocabulario: *la sorpresa del mundo puesta en la
+boca, a dosis 5, hace probar cuando el mundo cambia y por eso se recupera cuatro veces antes, sin cobrar retención ni
+generalización*. Falta sólo lo administrativo (gemelo, congelación) y la decisión del director.

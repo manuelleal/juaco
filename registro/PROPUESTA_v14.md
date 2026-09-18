@@ -53,7 +53,8 @@ Memoria: una lectura lineal `ΔE_pred` (retina + código) + un escalar de estado
 (03:32, preregistrado): `k_testE = 5` cumple las seis condiciones a la vez — recuperación 0.267× (20/20, semillas nuevas 121–140),
 se apaga 20/20, G1 0.80 (17/20), G2 0.857, K 20/20, examen v3'' 8/8 → REINSTALADO como segundo candidato a dosis 5** (copia
 `organismo/organismo_v14_candidato_sorpresa.py` = `organismo_v13E_k5.py` en la rama `v14-candidato`). k = 3 no (G2 0.842, examen 7/8).
-Falta si se acepta: réplica de la recuperación a dosis 5 en otra serie, gemelo, congelación.
+**Réplica en 141–160 (04:05): 0.248× (20/20), se apaga 20/20, retención 20/20 × 6, G1 0.80 = v13, G2 0.89 → dos series a dosis 5.**
+Falta si se acepta: gemelo, congelación.
 **Los dos candidatos son componibles** (uno actúa en el nacimiento de las hijas, el otro en la boca); si el director acepta
 ambos, se prueba primero la composición (identidad de cada uno con el otro apagado; examen v3' con los dos encendidos).
 
