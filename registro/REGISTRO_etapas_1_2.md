@@ -4647,3 +4647,22 @@ vez". **Vocabulario:** *"con 8 ejemplos XOR exige un prior de pares, y con él b
 prior (1.000 con la regla local y competencia, 200 exposiciones)"*. Los dos enunciados son compatibles y los dos son resultados.
 **Qué falta:** réplica 141–160 (en curso); llevar la memoria por pares a la vía lenta del tronco (copia por anclas de `organismo_v14`)
 con examen v3'' completo, generalización y recuperación intactas → candidato a **v15**, decisión del director.
+
+
+### LÍNEA XOR CERRADA (18 sep 2026, 07:47) — réplica del bloque 3 en 141–160: **X1–X6 OK otra vez (1.000 registro y estricta; gana (0,1) 20/20; rigging 0; con 14, 1.000; px0 1.000; azar en banda; n* = 10)** → dos series independientes. Declaración final con la letra de ERR-35
+
+Datos `xor_7_s141-160_20260918_074208` (025029d3ea223a36). Cláusula de muestreo: 4/20 semillas sin una clase mordida en todos los brazos
+de M3 (5–6 en REF/SIN_SEL); no altera los criterios (se reporta).
+
+| enunciado (nivel 3, no lineal) | evidencia |
+|---|---|
+| **Con 8 ejemplos XOR exige un prior de pares, y con él bastan 7–10 exposiciones** | M3 (memoria de un golpe por combinación, desempate al azar): 1.000 / 1.000 en 121–140 y 141–160; n* = 7 y 10; abre (P0, P1) en la sonda 40/40; rigging 0; azar 0.50 |
+| **Con 14 ejemplos no hace falta prior: la regla local con competencia llega a 1.000 en los nunca vistos** | A-6: 1.000, n* = 200 (bloque 2); M3 con 14: 1.000, n* = 7–10 |
+| **Con 8 ejemplos no lo aprende nadie sin prior** | 9 de 15 hipótesis con residuo 0; estadístico ideal 3/20; gradiente exacto 0.562; retropropagación 0.531; fisión 0/20 (bloques 1–2 y criba) |
+| Las dos constantes de la vía lenta ya están en el tronco (v14.1) | 0.625 → 1.000 con rasgos dados; sin coste (examen 8/8 ×2, G1 1.000) |
+
+Vocabulario permitido: *"con 8 ejemplos XOR exige un prior de pares (candidatos = pares de píxeles co-activos), y con él bastan 7–10
+exposiciones; con 14 ejemplos no hace falta prior"*. Prohibido: "aprende XOR", "entiende la combinación". Lo que sigue: candidato a
+**v15** (la memoria por pares en la vía lenta del tronco: examen, generalización y recuperación intactas; paquete en preparación)
+y el **mundo vivo** (línea F). Bloques de la línea XOR esta noche: 3, 3b, 3d, trío, 3e (día 7) · A-4, A-6, bloque 3 (madrugada) ·
+control positivo, criba y sala de 19 agentes. ERR de la línea: 30, 31, 35.

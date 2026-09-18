@@ -1,0 +1,56 @@
+[07:42:08 +    0.0s] ARRANQUE bloque 3/3 (A-7). brazos ['M3', 'M3_AZAR', 'M3_NTR14', 'M4', 'REF', 'SIN_SEL'], reglas ['xor01', 'px0', 'azar'], semillas 141-160. Pool(14).  --rapido SI (solo REF/SIN_SEL)
+[07:42:08 +    0.0s] BASE {'T': 100000, 'mundo': 'regla', 'lectura': 'cuadratica', 'constante': True, 'regla_lenta': 'delta_signo', 'lam_lenta': 0.0, 'eta_s': 0.15, 'clip_s': 10.0, 'puerta': 3, 'lab': True}
+[07:42:08 +    0.0s]    brazo M3        {'mod': 'g3A', 'memoria': 'combi', 'mem_apriori': True, 'mem_desempate': 'indice'}
+[07:42:08 +    0.0s]    brazo M3_AZAR   {'mod': 'g3A', 'memoria': 'combi', 'mem_apriori': True, 'mem_desempate': 'azar'}
+[07:42:08 +    0.0s]    brazo M3_NTR14  {'mod': 'g3A', 'memoria': 'combi', 'mem_apriori': True, 'mem_desempate': 'azar', 'ntr': (8, 6)}
+[07:42:08 +    0.0s]    brazo M4        {'mod': 'g4', 'tabla_g': {'g': 2, 'crit': 'mse', 'lectura_g': 'dura', 'rho': 0.02, 'eta': 0.05, 'clip': 3.0, 'alpha': 0.3}}
+[07:42:08 +    0.0s]    brazo REF       {'mod': 'q6', 'seleccion': 'wta', 'sel_theta': 0.3, 'sel_rho': 0.02, 'sel_cupo': 1, 'sel_estad': 'cond'}
+[07:42:08 +    0.0s]    brazo SIN_SEL   {'mod': 'q6'}
+[07:42:09 +    0.0s] sha preregistro 3ebde4f9d433b477  script a720c114fd99add1  organismo_g3A 6e7d80db210b1950  organismo_g3 91eb167023cb37b7  organismo_g4 e150ed808c546895  organismo_v13q6 b37aa8124c89cc5f
+[07:42:09 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 31372
+[07:42:09 +    0.6s] ETAPA 1/4 — identidad (perillas apagadas == el original de cada grupo), 9 corridas...
+[07:42:20 +   12.0s]    identicos: 9/9
+[07:42:20 +   12.0s] ETAPA 2/4 — 360 corridas de T=100000...
+[07:42:42 +   33.9s]           40/360
+[07:43:04 +   55.7s]           80/360
+[07:43:25 +   77.0s]           120/360
+[07:43:47 +   98.1s]           160/360
+[07:44:08 +  119.8s]           200/360
+[07:44:25 +  136.3s]           240/360
+[07:44:26 +  137.1s]           280/360
+[07:44:26 +  137.7s]           320/360
+[07:44:30 +  141.6s]           360/360
+[07:44:30 +  141.7s] ETAPA 3/4 — tabla. DOS puntuaciones: registro (empate 0.5) y ESTRICTA (abstencion = fallo).
+[07:44:30 +  141.7s]    M3        xor01  tren  8/test 12 interp  registro 1.000 [0.75,1.00]  ESTRICTA 1.000  gana(0,1) 20/20  empates 1.0  cobertura 4.0/4  clases sin morder 4/20  muertes 122
+[07:44:30 +  141.7s]    M3        px0    tren 10/test 10 interp  registro 1.000 [0.80,1.00]  ESTRICTA 1.000  gana(0,1) 7/20  empates 1.0  cobertura 4.0/4  clases sin morder 1/20  muertes 136
+[07:44:30 +  141.7s]    M3        azar   tren 10/test 10 interp  registro 0.500 [0.20,0.70]  ESTRICTA 0.500  gana(0,1) 0/20  empates 1.0  cobertura 4.0/4  clases sin morder 3/20  muertes 140
+[07:44:30 +  141.7s]    M3_AZAR   xor01  tren  8/test 12 interp  registro 1.000 [0.75,1.00]  ESTRICTA 1.000  gana(0,1) 20/20  empates 1.0  cobertura 4.0/4  clases sin morder 4/20  muertes 120
+[07:44:30 +  141.7s]    M3_AZAR   px0    tren 10/test 10 interp  registro 1.000 [0.80,1.00]  ESTRICTA 1.000  gana(0,1) 6/20  empates 1.0  cobertura 4.0/4  clases sin morder 1/20  muertes 132
+[07:44:30 +  141.7s]    M3_AZAR   azar   tren 10/test 10 interp  registro 0.500 [0.20,0.70]  ESTRICTA 0.500  gana(0,1) 0/20  empates 1.0  cobertura 4.0/4  clases sin morder 3/20  muertes 144
+[07:44:30 +  141.7s]    M3_NTR14  xor01  tren 14/test  6 interp  registro 1.000 [0.75,1.00]  ESTRICTA 1.000  gana(0,1) 20/20  empates 1.0  cobertura 4.0/4  clases sin morder 4/20  muertes 120
+[07:44:30 +  141.7s]    M3_NTR14  px0    tren 14/test  6 interp  registro 1.000 [0.75,1.00]  ESTRICTA 1.000  gana(0,1) 6/20  empates 1.0  cobertura 4.0/4  clases sin morder 1/20  muertes 132
+[07:44:30 +  141.7s]    M3_NTR14  azar   tren 14/test  6 interp  registro 0.562 [0.00,0.88]  ESTRICTA 0.562  gana(0,1) 0/20  empates 1.0  cobertura 4.0/4  clases sin morder 3/20  muertes 144
+[07:44:30 +  141.7s]    M4        xor01  tren  8/test 12 interp  registro 1.000 [0.75,1.00]  ESTRICTA 1.000  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 4/20  muertes 125
+[07:44:30 +  141.7s]    M4        px0    tren 10/test 10 interp  registro 1.000 [0.80,1.00]  ESTRICTA 1.000  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 1/20  muertes 136
+[07:44:30 +  141.7s]    M4        azar   tren 10/test 10 interp  registro 0.500 [0.20,0.70]  ESTRICTA 0.500  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 3/20  muertes 148
+[07:44:30 +  141.7s]    REF       xor01  tren  8/test 12 gemelo  registro 0.500 [0.12,1.00]  ESTRICTA 0.500  gana(0,1) 14/20  empates   n/a  cobertura   n/a/4  clases sin morder 5/20  muertes 143
+[07:44:30 +  141.7s]    REF       px0    tren 10/test 10 gemelo  registro 1.000 [0.70,1.00]  ESTRICTA 1.000  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 1/20  muertes 132
+[07:44:30 +  141.7s]    REF       azar   tren 10/test 10 gemelo  registro 0.500 [0.20,0.90]  ESTRICTA 0.500  gana(0,1) 2/20  empates   n/a  cobertura   n/a/4  clases sin morder 5/20  muertes 156
+[07:44:30 +  141.7s]    SIN_SEL   xor01  tren  8/test 12 gemelo  registro 0.438 [0.12,0.75]  ESTRICTA 0.438  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 6/20  muertes 126
+[07:44:30 +  141.7s]    SIN_SEL   px0    tren 10/test 10 gemelo  registro 1.000 [0.70,1.00]  ESTRICTA 1.000  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 1/20  muertes 132
+[07:44:30 +  141.7s]    SIN_SEL   azar   tren 10/test 10 gemelo  registro 0.500 [0.20,0.80]  ESTRICTA 0.500  gana(0,1) 0/20  empates   n/a  cobertura   n/a/4  clases sin morder 6/20  muertes 153
+[07:44:30 +  141.7s] EXPOSICIONES (solo M3; replay de su regla sobre el flujo real). n* = primer n con mediana >= 0.75.
+[07:44:30 +  141.7s]    M3         0.469  0.562  0.938  1.000  1.000  1.000  1.000  1.000  1.000    n/a    n/a   n* = 10
+[07:44:30 +  141.7s]    M3_AZAR    0.453  0.609  0.859  1.000  1.000  1.000  1.000  1.000  1.000    n/a    n/a   n* = 10
+[07:44:30 +  141.7s]    M3_NTR14   0.438  0.688  0.875  1.000  1.000  1.000  1.000  1.000  1.000    n/a    n/a   n* = 10
+[07:44:30 +  141.7s] ETAPA 4/4 — criterios del preregistro.
+[07:44:30 +  141.7s]    X1 M3 (desempate AZAR) registro 1.000 >= .75 y > REF en 19/20 >= 15        OK
+[07:44:30 +  141.7s]    X2 M3 ESTRICTA 1.000 >= .60                                                  OK
+[07:44:30 +  141.7s]    X3 gana (0,1) EN LA SONDA en 20/20 >= 15                                     OK
+[07:44:30 +  141.7s]    X4 RIGGING: indice 1.000 vs azar 1.000 (|dif| <= .05)                     OK
+[07:44:30 +  141.7s]    X5 PRIOR: con 14 patrones 1.000 >= .90                                      OK
+[07:44:30 +  141.7s]    X6 px0 = 1.000 y azar en [.35,.65]: OK
+[07:44:30 +  141.7s]    clausula de muestreo (semillas con una clase sin morder): {'M3': 4, 'M3_AZAR': 4, 'M3_NTR14': 4, 'M4': 4, 'REF': 5, 'SIN_SEL': 6}
+[07:44:30 +  141.7s] VEREDICTO bloque 3/3: M3 CONSTRUYE EL RASGO CON 8 EJEMPLOS -> se declara PRIOR ESTRUCTURAL (candidatos = pares de pixeles), no aprendizaje de la estructura
+[07:44:30 +  141.7s] RECORDATORIO: cruzar con 8 ejemplos = PRIOR declarado. El control que lo separa de una fuga es `azar` en [0.35, 0.65] (X6); el que lo separa de un artefacto es el desempate AL AZAR (X4).
+[07:44:30 +  141.7s] datos -> xor_7_s141-160_20260918_074208.json  sha256_16 = 025029d3ea223a36
