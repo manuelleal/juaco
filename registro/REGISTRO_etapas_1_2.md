@@ -5251,3 +5251,30 @@ ganadora de 4 casillas para 32 estímulos deja un daño pequeño a las hermanas 
 sobre velocidad acertó y sobre retención no; la del coordinador sobre cobertura acertó y sobre `sep/apr` y retención no. Por regla 3
 nada se recalibra: el siguiente candidato (preregistro nuevo) necesita **varias ganadoras o compuerta contra la lineal** (el nodo por
 familia), y el bloque 4 (canal con referencia por señalamiento) puede montarse sobre v15f tal cual, porque ya lee sin morder.
+
+
+### BLOQUE 4 — canal con referencia por señalamiento, dos organismos v15f (18 sep 17:33 y 17:38; semillas 541–560 y 561–580; 14 brazos × 20): **NADA SE DECLARA por la letra (P-I2: el emisor tenía que anotar el referente en ≥ 18/20 y lo hizo en 15/20 y 16/20 en la dirección irreemplazable: el emisor comparte el punto ciego del receptor — lo que evita no lo muerde y no puede avisarlo) — pero LO REPORTADO, en las semillas con mensaje, es la señal más fuerte del día: el receptor come a la primera el alimento que evitaba SÓLO por el mensaje (15/15 y 16/16 contra 0/15 y 0/16 sin mensaje) y evita a la primera el veneno nunca mordido (16/20 y 18/20 contra 1/20 y 2/20); la referencia llega al nivel de la FAMILIA, no de la variante (barajado con la hermana funciona igual: 15–18/20; con otro token no: 6–8/20; valor solo no: 1/20)**
+
+Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque4_canal.md` (07bef3347a28866e; protocolo de la sala 3 incorporado: emisor
+simétrico, entrega por señalamiento, escritura en la tabla de pares como exposición sin consecuencia); instrumento `organismo_familias_b4.py`
+(ff9946ee2ffe27e6; identidad 92/92 + 21/21 en cada runner; gemelo mudo con prefijo idéntico); datos `familias_b4_s541-560_20260918_172836`
+(5fabb1518ee630d0) y `familias_b4_s561-580_20260918_173313` (8e65c7631b9ad377); 300 corridas por serie, 4.6 min.
+
+| brazo (semillas con mensaje) | + veneno nunca mordido: evita a la 1.ª | − alimento que evitaba: come a la 1.ª |
+|---|---|---|
+| **CANAL** (patrón de X + R cruda) | **16/20 · 18/20** | **15/15 · 16/16** |
+| CORTADO (gemelo mudo) | 1/20 · 2/20 | 0/15 · 0/16 |
+| BAR-H (patrón de una hermana) | 15/20 · 18/20 | 12/15 · 12/16 |
+| BAR-T (patrón de otro token) | 8/20 · 6/20 | 1/15 · 4/16 |
+| VALOR (sin referencia) | 1/20 · 1/20 | 1/15 · 2/16 |
+| INM (entrega inmediata) / OTRO | 3/20 · 3/20 / 4/20 · 3/20 | 4/15 · 3/16 / 5/15 · 4/16 |
+
+Precio: `comH` 1.0 en CANAL− (se come también a las hermanas venenosas: la referencia es de familia); muertes iguales. **Puerta P-I2:** emisores
+sin mensaje 5/20 y 4/20 en la dirección (−); el preregistro (ERR-50 reservado) manda PARAR y no corregir: es el montaje. Predicción del
+diseñador (P-D: llega el valor y la familia, no la variante; BAR-H ≈ CANAL) acertada; la del coordinador (`comH` ≥ 0.9, BAR ≈ CORTADO)
+refutada. **Lectura honesta:** el canal transmite "esta familia, este valor" y el receptor actúa sin experiencia propia — eso es
+comunicación con referencia en su forma mínima — pero con una sola ganadora de 2 bits la referencia no baja a la variante, y el
+emisor no puede avisar de lo que él mismo evita. **Siguiente (preregistro nuevo, ERR-51 = montaje del emisor):** bloque 4b con un emisor
+que sí descubre (por ejemplo, un emisor "voraz" o que recibió a su vez el aviso de un tercero: la cadena), misma letra en el receptor y
+en los controles, semillas 581–600 y réplica; y para la variante, el candidato de varias ganadoras (nodo por familia). Nivel 5 sigue en
+50 % hasta la serie válida.
