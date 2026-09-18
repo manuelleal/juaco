@@ -129,6 +129,8 @@
 >    declarar; "llegar a la frontera es lo primero, que viva lo segundo".
 > 
 >
+> **DECISIÓN DEL DIRECTOR (18 sep 2026, ~14:15) — PLAN APROBADO tras la síntesis de la SALA 2:** la misión sigue siendo llegar a la AGI por este camino ("si no la tenemos en la cabeza no llegamos"); con honestidad registrada de que estamos muy lejos. Plan: (1) bloque 0, escalar el código sin órgano nuevo (alias < 1 % con D = 12, cálculo estructural); (2) bloque 1, el mundo de familias que obliga a representar, medido primero con v14.1 sin cambios (si no se distingue de un lector lineal, el mundo se endurece); (3) después el órgano (v15f bajo el criterio v2, crecimiento por sorpresa) y al final población; (4) consolidar y publicar lo que hay (nota técnica reproducible del alias + banco de método) en paralelo, a un ritmo que no queme. Agentes en Opus; el coordinador verifica. Pendiente del director: B-5 como v14.2.
+>
 > **REVISIÓN DE RUMBO (06:45, a petición del director: "¿nos estamos yendo del camino?"): ligera dispersión, corregida así:**
 >   **Columna vertebral = XOR** (los tres bloques del criterio de parada, nada los adelanta en el Pool): A-4 (dos constantes de
 >   la vía lenta; HECHO 05:35: **bloque 1/3, XOR 0.625 — la regla ya llega a 1.000 con rasgos dados y no daña el tronco; el cuello son

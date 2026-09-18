@@ -229,6 +229,7 @@ Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
      deja de comportarse igual); (e) población con herencia y muerte real (que viva). Una cosa a la vez en el Pool; réplica antes de
      declarar; "llegar a la frontera es lo primero, que viva lo segundo".
   
+- **DECISIÓN DEL DIRECTOR (18 sep 2026, ~14:15) — PLAN APROBADO tras la síntesis de la SALA 2:** la misión sigue siendo llegar a la AGI por este camino ("si no la tenemos en la cabeza no llegamos"); con honestidad registrada de que estamos muy lejos. Plan: (1) bloque 0, escalar el código sin órgano nuevo (alias < 1 % con D = 12, cálculo estructural); (2) bloque 1, el mundo de familias que obliga a representar, medido primero con v14.1 sin cambios (si no se distingue de un lector lineal, el mundo se endurece); (3) después el órgano (v15f bajo el criterio v2, crecimiento por sorpresa) y al final población; (4) consolidar y publicar lo que hay (nota técnica reproducible del alias + banco de método) en paralelo, a un ritmo que no queme. Agentes en Opus; el coordinador verifica. Pendiente del director: B-5 como v14.2.
 - **DECISIÓN DEL DIRECTOR (18 sep 04:55):** congelar **v14** (v13 + hija dispersa + puerta por código, + sorpresa en la boca a
   dosis 5 si la composición de los tres pasa), escribirlo como resultado cerrado y dedicar después el equipo a UN frente:
   **aprender sin morder** (muestreo de XOR / significado por predicción). **Criterio de parada:** tres bloques preregistrados;
