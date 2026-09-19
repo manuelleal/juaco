@@ -388,6 +388,44 @@ después."* Se decide aquí:
 
 ---
 
+## ERR-71 (creador del bloque 6, 18 sep 2026, **antes** de la primera serie; avisado por el coordinador)
+
+**Qué pasó.** Al lanzar `corre_familias_b6.py --desde 721`, la guarda de identidad del runner paró en **30/33**.
+`(C)` y `(H)` quedaron 2/3, que es lo esperado y está cubierto por ERR-64b (los controles que DEBEN diferir piden
+≥ 2/3). Pero **`(d)` — "la DIRECCIÓN: 4 subcasillas OFF, 32 ON, y la hermana FUERA del grupo con sufijo" — quedó
+2/3**, y ese caso no es de los que deben diferir, así que la guarda paró la serie.
+
+**Qué era: el arnés, no el instrumento.** `(d)` pedía el mensaje a `emisor(seed, 60000)`, y **la semilla 3 no
+emite** (ya estaba medido y reportado: "emisores con mensaje (−): 2/3 → (1, 2)"). Sin mensaje no hay entrega, sin
+entrega el diagnóstico `canal_mismo_dir_k` es `None`, y el caso devolvía `ok=False` **sin haber comprobado nada**.
+Era **P-I2 disfrazada de guarda de identidad**: una propiedad del montaje colándose en una guarda del instrumento.
+Comprobado semilla a semilla: `(d)` da 1/1 en las semillas 1 y 2 (las que emiten) y 0/1 en la 3, con
+`difieren = ['sin mensaje (-)']`. La dirección **no falla en ninguna semilla**.
+
+**Por qué el diagnóstico apuntaba a `faltan [...]`:** el log imprimía el detalle de `g[0]`, la **primera** semilla
+del grupo, que era una de las que **pasaban** — no la que fallaba. Segundo defecto de reporte, del mismo caso.
+
+**Qué se cambia (sólo el arnés; ningún umbral, brazo, criterio ni puerta de la serie se toca):**
+
+1. **`(d)` deja de pasar por el emisor.** La dirección es una propiedad del **instrumento**, no del montaje, así
+   que el mensaje se construye con el catálogo del bloque 0: `ref = T1v2`, `P` = su patrón, `R = +1.0` (la
+   dirección (−)), `t = 10 000`. Esto es legítimo y no inventa nada: el caso **(W)** del arnés completo ya
+   demuestra que el receptor **no ve al emisor** (mismo `(t, ref, P, R)` sin pasar por E → corrida idéntica).
+   El caso queda **más fuerte**, no más laxo: ahora comprueba la dirección en las **tres** semillas en vez de en
+   las dos que emiten, y añade un fallo explícito si el canal no entrega (`'sin entrega mv=N'`).
+2. **El log del runner reporta la semilla que FALLA**, no `g[0]`.
+
+**Alcance:** no cambia `memoria_variante` ni una línea del organismo (`organismo_familias_b6.py` sigue en
+`b10cbd4ddd0c32a3`), ni `identidad_familias_b6.py` (**59/59**, sigue en `b74d9195d7f20106`), ni ningún umbral
+R1–R6, ni O-6, ni P-I2…P-I5, ni ERR-70. Sólo `corre_familias_b6.py`. Las semillas de las series no se tocan.
+
+**Resultado tras el arreglo:** subconjunto de identidad del runner **3/3 en `(d)` para las semillas 1, 2 y 3**;
+**11/11 casos pasan la guarda**, con un total bruto de **31/33** comparaciones. Las dos que faltan son `(C)` y
+`(H)` en la **semilla 3**, por `'sin mensaje (-)'`: son controles que DEBEN diferir y ERR-64b los da por buenos
+con ≥ 2/3, que es exactamente el caso para el que se escribió ERR-64b. La guarda ya no para.
+
+---
+
 ## 10. SERIES 721–740 y 741–760 — resultado
 
 *(lo rellena el coordinador tras correr; §0–§8 quedan como están)*

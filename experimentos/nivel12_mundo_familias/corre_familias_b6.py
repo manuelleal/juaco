@@ -286,15 +286,21 @@ def tarea(args):
             b = B6.run(seed, T=Tc, fam_seed=seed, k_ganadoras=3, memoria_variante=1, **k)
             salta = NUEVAS_B6
         elif ref == 'DIR':
-            m = emisor(seed, 60000)['neg']
-            if m is None:
-                return dict(tipo='ID', cual=cual, etiqueta=etiq, seed=seed, identico=False, debe_diferir=False,
-                            ok=False, difieren=['sin mensaje (-)'], faltan=[])
+            # ERR-71: este caso NO pasa por el EMISOR. La direccion es una propiedad del INSTRUMENTO, no del
+            # montaje: el mensaje se construye con el catalogo del bloque 0 (ref = T1v2, P = su patron, R = +1.0,
+            # la direccion (-)), que es exactamente lo que el caso (W) del arnes completo demuestra equivalente a
+            # pasar por E. Antes dependia de `emisor()` y en la semilla 3 (que no emite) devolvia 0/1 sin haber
+            # comprobado nada: era P-I2 disfrazada de guarda de identidad, y paraba la serie.
+            Q, H = PATS(seed), BAR['neg']['H']
+            m = dict(t=10000, ref=XNEG, P=[float(x) for x in Q[XNEG]], R=1.0, fam_seed=seed)
             k = B2R.resuelve(KW_R, 60000)
-            ok, Q, H = True, PATS(seed), BAR['neg']['H']
+            ok = True
             for mv in (0, 1):
                 r = B6.run(seed + SEM_R, T=60000, fam_seed=seed, canal=canal_de('CANAL-k3v%d' % mv, m, seed),
                            k_ganadoras=3, memoria_variante=mv, **k)
+                if not r['canal_entregado'] or r['canal_mismo_dir_k'] is None:
+                    return dict(tipo='ID', cual=cual, etiqueta=etiq, seed=seed, identico=False,
+                                debe_diferir=False, ok=False, difieren=['sin entrega mv=%d' % mv], faltan=[])
                 esp = sorted(n for n in Q if all(dir_fuera(g, Q[n], mv) == dir_fuera(g, Q[XNEG], mv)
                                                  for g in r['canal_gan_k_post']))
                 ok &= (r['memoria_slots'] == (4 << NVAR if mv else 4)
@@ -610,8 +616,11 @@ def humo(nk, ktop, nkmax, Tb, brazos):
         for s in sem:
             ident.append(tarea(('ID', cual, s, 6000)))
         g = [r for r in ident if r['cual'] == cual]
+        # ERR-71: se reporta la semilla que FALLA, no `g[0]`. Antes el log imprimia el detalle de la PRIMERA
+        # semilla (que podia ser la que pasaba) y el diagnostico apuntaba al sitio equivocado.
+        ml = next((r for r in g if not r['ok']), None)
         log(f"    {CASOS_ID[cual][0]:70s} {sum(r['ok'] for r in g)}/{len(g)}"
-            + ("" if all(r['ok'] for r in g) else f"   difieren {g[0]['difieren']}"))
+            + ("" if ml is None else f"   semilla {ml['seed']}: difieren {ml['difieren']} faltan {ml['faltan']}"))
     log(f"  IDENTIDAD {sum(r['ok'] for r in ident)}/{len(ident)}")
 
     log("2/4 DIAGNOSTICO ESTRUCTURAL (antes de simular, T = 0): alias, U3 y la resolucion CON y SIN sufijo.")
@@ -744,8 +753,10 @@ if __name__ == '__main__':
         rc = pool.map(tarea, ctrl, chunksize=1)
         for cual in CASOS_ID:
             g = [r for r in rc if r['cual'] == cual]
+            ml = next((r for r in g if not r['ok']), None)      # ERR-71: la semilla que FALLA, no `g[0]`
             log(f"    {CASOS_ID[cual][0]:70s} {sum(r['ok'] for r in g)}/{len(g)}"
-                + ("" if all(r['ok'] for r in g) else f"   difieren {g[0]['difieren']} faltan {g[0]['faltan']}"))
+                + ("" if ml is None else
+                   f"   semilla {ml['seed']}: difieren {ml['difieren']} faltan {ml['faltan']}"))
             # ERR-64b: los controles que DEBEN diferir prueban no-vacuidad con >= 2 de 3 semillas
             # ERR-64b (heredado del bloque 5): los controles que DEBEN diferir prueban no-vacuidad con >= 2 de 3
             V[f'ID_{cual}'] = (sum(r['ok'] for r in g) >= 2) if (g and g[0].get('debe_diferir')) else all(r['ok'] for r in g)
