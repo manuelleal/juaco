@@ -35,3 +35,7 @@ Q1 CAE (usa 65 %, no ≤ 40 %; eso sí, supera a TODO). Q2 CAE (+0.015). Q3 CAE 
 series.** Exploratorio, NO preregistrado: al final de la fase 2, J supera a R por +0.08 en las dos series y a TODO por +0.03.
 Candidato a un preregistro nuevo (métrica: acierto final tras el cambio). Instrumento: nadie se desdice en 3/8 a los 200
 (< 0.25): el cambio es demasiado lento de revertir con este lr; revisar antes de rejuzgar Q3.
+
+## EXO-2b — réplica corta de la señal exploratoria (preregistrada 22:40, ANTES de correr)
+Mismo código sin tocar. Semillas NUEVAS 21–30 y 31–40. Predicción: acierto final de la fase 2, J − R ≥ 0.05 y J − TODO ≥ 0.02,
+en las dos series. Refuta: J − R < 0.03 en cualquiera de las dos.
