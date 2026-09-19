@@ -37,6 +37,10 @@ CONGELADOS = {
     # Examen v3' 8/8 en 121-140, 141-160 y 161-180; generalizacion 1.000/0.94-0.95 x3; identidad 30/30; gemelo 196/196.
     './organismo/organismo_v14.py': 'feefc88b1fd8d434',
     './organismo/bateria_v14.py':   '72216f5415de0c86',
+    './organismo/organismo_v142.py': '17528d767fcebaf6',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
+    './organismo/organismo_v142g.py': '9e5f566cd6a7a4d2',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
+    './organismo/bateria_v142.py': '6375d90e531b06e6',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
+    './organismo/bateria_generaliza_v142.py': 'e5929942647756a5',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
 }
 
 def h16(ruta):

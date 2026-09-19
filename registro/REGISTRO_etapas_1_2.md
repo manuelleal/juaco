@@ -5457,3 +5457,14 @@ sostiene linajes mortales), la serie ALMA (el alma razonada no gana al azar; el 
 v14.1 + B-5) con identidad 62/62 y humo, a la espera de la regla 1 completa, manifiesto y tag; v15f bajo el criterio v2 (paquete verificado,
 33/33) a la espera de su serie; la línea lateral del exoesqueleto (`HIPOTESIS_exoesqueleto_20260918.md`). Decisiones del director: B-5 → v14.2
 (sí), v15f con v2 (sí), dE5 después (sí). Próximo candidato de la fase 5: tabla con dos ganadoras de tipo distinto (forma + variante).
+
+
+### CONGELACIÓN v14.2 (18 sep 21:25; decisión del director ~20:40: "córrelas recomendaciones") — **TRONCO = v14.1 + B-5 (división por R = 0)**
+Archivos nuevos (por anclas, `experimentos/creacion_B/construye_v142.py`, tripwire de sha en los orígenes): `organismo/organismo_v142.py` (17528d767fcebaf6;
+única diferencia con `organismo_v14_codigo.py`: `desambiguar=1` por defecto), `organismo_v142g.py` (9e5f566cd6a7a4d2), `bateria_v142.py`
+(6375d90e531b06e6), `bateria_generaliza_v142.py` (e5929942647756a5; entrada campo a campo = tronco). Identidad `organismo/identidad_v142.py` **62/62**
+(apagada ≡ v14.1 24/24; rng 2/2; ON ≡ `organismo_v14_codigo_on` 24/24; gemelos 12/12; inercia ON 30/30). **Regla 1 completa (21:20, Pool):** examen
+`bateria_v142.py 6`: 8/8 True; `bateria_generaliza_v142.py organismo_v142 20 --desde 101`: G1 1.000 (azar 0.450, 20/20), G2 0.967 (azar 0.437,
+20/20), K 20/20. Evidencia heredada de B-5 (bit a bit el mismo módulo): examen con `splits` idénticos a v14.1 6/6, generalización 40/40 idéntica,
+alias reparado 18/18 en dos series, coste 0 % exacto. Lo que v14.2 NO es: un candidato del criterio v2 (no mejora el tronco; le quita un defecto
+que sólo aparece fuera de él). Tag `v14.2-tronco`. v14.1 pasa a regresión histórica. 20 congelados.
