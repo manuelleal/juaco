@@ -5321,3 +5321,16 @@ cambia la conducta del receptor sin experiencia propia; la referencia es de fami
 (H-4 de la sala 4): varias ganadoras — el nodo por familia — para que BAR-T caiga a CORTADO y BAR-H también; entonces sí se declara.**
 Cierre del día 18 sep a las 18:45: 15 bloques, 27 series, ERR-35..54, 0 entradas al tronco, dos declaraciones (desambiguar códigos;
 crecimiento del linaje con lectura pesimista) y una comunicación mínima medida seis veces sin poder firmarla.
+
+
+### Simulación EXTERNA (ChatGPT, entregada por el director 18 sep 19:05): `registro/investigacion/externo/JUACO_MEMORY_FRONTIER_v3/` — **no es evidencia; lectura del coordinador: no discrimina nada, y confirma por otro camino la H-1 (sin calibrar la mortalidad, ninguna arquitectura de memoria se puede comparar)**
+
+Contenido: barrido de 7 arquitecturas de memoria (S resumen, E episodios, W trabajo, R replay, X sorpresa) en tres mundos, un "loop
+evolutivo" de 40 generaciones y una validación de 60 réplicas. Hechos: (1) en el primer barrido las SIETE arquitecturas dan números
+IDÉNTICOS (linaje medio 0.267 / 0.233 / 0.533; extinción 100 %): los módulos de memoria no tocaron la dinámica; (2) tras recalibrar el
+metabolismo (energía inicial 8 → 20, coste 0.7 → 0.35; declarado en `CALIBRATION_NOTE.md`), las diferencias son pequeñas (supervivencia
+media 4.5–8.3; linaje medio 0.15–0.43) y la extinción sigue en 100 % en todos; (3) el candidato final "S+E" valida con linaje mediano 0.0 y
+extinción 100 %; (4) las citas del texto son marcadores sin resolver ("citeturn0search0"). El propio documento dice "simulación
+hipotética". **Qué sirve:** llega, independiente de nosotros, a lo mismo que E-1/H-1 de la sala 4: si la población se extingue siempre,
+la memoria no se puede comparar; primero R₀ ≈ 1. **Qué no sirve:** ninguna conclusión sobre qué memoria es mejor. Se archiva como
+punto de vista externo; H-1 (la muerte que mata, con R₀ calibrado) ya está en diseño.
