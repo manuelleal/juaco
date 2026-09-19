@@ -1,0 +1,27 @@
+[19:31:32 +    0.0s] ARRANQUE BLOQUE 5 (VARIAS GANADORAS; H-4 de la sala 4, E-7): k = (1, 3, 5), brazos ['CANAL-k1', 'CORTADO-k1', 'BAR-H-k1', 'BAR-T-k1', 'VALOR-k1', 'INM-k1', 'OTRO-k1', 'PAR-k1', 'PAR0-k1', 'CANAL-k3', 'CORTADO-k3', 'BAR-H-k3', 'BAR-T-k3', 'VALOR-k3', 'INM-k3', 'OTRO-k3', 'PAR-k3', 'PAR0-k3', 'CANAL-k5', 'CORTADO-k5', 'BAR-H-k5', 'BAR-T-k5', 'VALOR-k5', 'INM-k5', 'OTRO-k5', 'PAR-k5', 'PAR0-k5'], semillas 701-720, T=100000. Pool(14).
+[19:31:32 +    0.0s] El mundo, el canal y el emisor son los del bloque 4b, sin tocar (el emisor es k = 1 = b4b bit a bit). Lo unico nuevo es CUANTAS celdas LEE la via lenta del RECEPTOR.
+[19:31:32 +    0.0s]     sha preregistro                1104a0df4f722ad5
+[19:31:32 +    0.0s]     sha script                     27826d0d6eda0827
+[19:31:32 +    0.0s]     sha constructor                b58e6025a648148d
+[19:31:32 +    0.0s]     sha instrumento                e0b6b90f6f92d5c1
+[19:31:32 +    0.0s]     sha arnes                      6fe98bf17b61a6c1
+[19:31:32 +    0.0s]     sha origen_b4b                 b3dd1d7e66a2d147
+[19:31:32 +    0.0s]     sha runner_bloque4b            b677f0fd8d1223be
+[19:31:32 +    0.0s]     sha preregistro_bloque4b       5d089937b10c7706
+[19:31:32 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[19:31:32 +    0.0s]     sha sala4_H4                   0f18d240b18771ee
+[19:31:32 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[19:31:32 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[19:31:32 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 12632
+[19:31:33 +    0.5s] ETAPA 1/4 — IDENTIDAD (9 casos x 3 = 27). (K) y (C) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[19:31:44 +   11.8s]     (a) k=1 == organismo_familias_b4b (mundo=AB)                   3/3
+[19:31:44 +   11.8s]     (g) k=1 == organismo_familias_b4b (el mundo del bloque 4)      3/3
+[19:31:44 +   11.8s]     (n) k=1 + mundo=AB == organismo_v14 (TRONCO)                   3/3
+[19:31:44 +   11.8s]     (o) relevo ON + mundo=AB == organismo_v15f_on                  3/3
+[19:31:44 +   11.8s]     (x) memoria_pares=None: k=5 == k=1 (la perilla es INERTE sin tabla) 3/3
+[19:31:44 +   11.8s]     (z) la 1.a de las k ES la ganadora de b4b, y son k sin repetir 3/3
+[19:31:44 +   11.8s]     (e) k mal escrito LANZA (0, -1, 2.5, '3', True)                3/3
+[19:31:44 +   11.8s]     (K) k=5 != k=1 con el relevo ON (DEBE diferir)                 3/3
+[19:31:44 +   11.8s]     (C) CANAL-k5 != CORTADO-k5 (DEBE diferir)                      2/3   difieren ['mem_ganadoras', 'canal_gan_k_post', 'canal_mismo_bin_k', 'canal_gan_post', 'primera_b4', 'mem_ganadora'] faltan []
+[19:31:44 +   11.8s]   IDENTIDAD 26/27
+[19:31:44 +   11.8s] *** GUARDA DE IDENTIDAD FALLIDA. Se para (P-I1).

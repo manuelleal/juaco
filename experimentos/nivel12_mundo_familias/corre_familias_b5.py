@@ -96,7 +96,7 @@ CASOS_ID = {   # subconjunto critico del arnes de identidad_familias_b5.py (106/
     'z': ("(z) la 1.a de las k ES la ganadora de b4b, y son k sin repetir", 'TOPK', 6000),
     'e': ("(e) k mal escrito LANZA (0, -1, 2.5, '3', True)", 'LANZA', 100),
     'K': ("(K) k=5 != k=1 con el relevo ON (DEBE diferir)", 'KDIF', 20000),
-    'C': ("(C) CANAL-k5 != CORTADO-k5 (DEBE diferir)", 'CAN', 30000),
+    'C': ("(C) CANAL-k5 != CORTADO-k5 (DEBE diferir)", 'CAN', 60000),   # ERR-64: a T=30000 el mensaje no llega en 1/3 semillas y el control de no-vacuidad caia sin motivo
 }
 
 # ---------------------------------------------------------------- UMBRALES: la LETRA del preregistro (seccion 6)

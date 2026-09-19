@@ -368,3 +368,5 @@ completa en **560 corridas de 100 000 pasos ≈ 5.2 min** de pared con `Pool(14)
 *(lo rellena el coordinador tras correr el `Pool`)*
 
 ## ERR-63 (coordinador, 18 sep 19:50; numeracion del hallazgo del creador): en corre_familias_b4.py y corre_familias_b4b.py las filas del emisor pasadas a cruza_cod0 no llevaban el campo mundo, y el cruce saltaba todas las filas: el 'IDENTICO campo a campo' de los bloques 4 y 4b no comparo nada. Consecuencia probable nula (el mismo cruce si corre en b2/b3 con el mismo codigo). En b5 la fila lleva mundo='familias' y el cruce se ejecuta.
+
+## ERR-64 (coordinador, 18 sep 19:55; ANTES de repetir): el control de no-vacuidad (C) del arnés del runner corría a T = 30 000 y en 1/3 semillas el mensaje aún no se había entregado (CANAL-k5 ≡ CORTADO-k5 por construcción, no por vacuidad): se sube la T del control a 60 000. Es un parámetro del control del instrumento; ningún umbral R1–R6 ni puerta P-I cambia.
