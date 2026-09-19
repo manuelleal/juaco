@@ -5370,3 +5370,32 @@ Esto reordena la escalera: **antes de población y evolución, hace falta que un
 golpe — v15f — y el mensaje del bloque 4 son exactamente eso), o un mundo menos letal para el recién nacido (dote, cuidado parental: mecanismos
 nuevos, preregistro nuevo). Coincide con la simulación externa (extinción 100 % en todas las memorias hasta calibrar el metabolismo). Nivel 9:
 45 % → **40 %** (la declaración del bloque 2 queda acotada: "al filo del reemplazo" sólo con renacer).
+
+
+### BLOQUE 5 — VARIAS GANADORAS (H-4; k ∈ {1, 3, 5}; 18 sep 19:42 y 19:50; semillas 681–700 y 701–720; 27 brazos): **NADA SE DECLARA por la letra (puerta P-I2: el emisor avisó en 20/20 y 18/20, se exigía ≥ 18/20; y R3 cae: la hermana sigue arrastrando), pero el RESULTADO es nítido y replica: con k = 3 el mensaje con el patrón de OTRO token cae de 7/20 a 2/20 y 4/18 (≤ CORTADO + 3 en las dos series) con el canal intacto (19/20, 16/18) y "sin referencia" ≈ mudo (4/20, 3/18): la referencia pasa de "alguna familia" a EXACTAMENTE ESTA FAMILIA; la hermana no baja (15/20, 13/18) porque el 100 % de las celdas de forma son ciegas a los 3 píxeles de variante (cálculo estructural del creador, escrito antes); k = 5 no mejora la referencia (7/20, 7/18) y rompe el cuerpo (muertes 199 y 152 contra 32–38)**
+
+Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque5_ganadoras.md` (b53d7eb0603d82d2 + ERR-63 cruce cod0 del emisor que no comparaba
+en b4/b4b + ERR-64/64b controles de no-vacuidad del arnés a T 60 000 y ≥ 2/3); instrumento `organismo_familias_b5.py` (e0b6b90f6f92d5c1; `k_ganadoras`
+= 1 ≡ b4b bit a bit; lectura = SUMA de las casillas conocidas de las k celdas de menor error propio, relevo por abstención; identidad 106/106 +
+26/27 en cada runner con el control (C) en 2/3 por ERR-64b); runner `corre_familias_b5.py` (27826d0d6eda0827); datos `familias_b5_s681-700_20260918_193337`
+(253e8ca83a72c114) y `familias_b5_s701-720_20260918_194259` (1119b2600eae25e0); 540 corridas por serie.
+
+| brazo (receptor come a la 1.ª lo que evitaba) | k = 1 (serie / réplica) | **k = 3** | k = 5 |
+|---|---|---|---|
+| CANAL (patrón de X + R) | 18/20 · 16/18 | **19/20 · 16/18** | 19/20 · 16/18 |
+| CORTADO (mudo) | 1/20 · 0/18 | 0/20 · 1/18 | 0/20 · 1/18 |
+| BAR-H (patrón de una hermana) | 13/20 · 12/18 | 15/20 · 13/18 | 16/20 · 13/18 |
+| **BAR-T (patrón de otro token)** | 7/20 · 4/18 | **2/20 · 4/18** | 7/20 · 7/18 |
+| VALOR (sin referencia) | 3/20 · 4/18 | 4/20 · 3/18 | 3/20 · 3/18 |
+| PAR / PAR0 | 19/20 · 15/18 / 3/20 · 0/18 | 19/20 · 16/18 / 1/20 · 0/18 | 19/20 · 16/18 / 0/20 · 1/18 |
+| muertes | 32.5 · 38.5 | 44.5 · 36.5 | **199.5 · 152** |
+
+R1 pasa ×2 (k = 3); **R2 (BAR-T ≤ CORTADO + 3) pasa ×2 con k = 3**, no con k = 5; R3 (BAR-H ≤ CORTADO + 5) NO ×2; R4 pasa; R6 coste ≤ 1.5× pasa con k = 3
+(×1.37, ×0.95), no con k = 5. Predicciones del creador cumplidas en todo (BAR-T cae, BAR-H no, k = 5 destruye): *"el techo no era sólo de bits:
+la referencia de variante está en la retina de 3 píxeles, no en cuántas celdas se leen"*. **Lectura honesta:** la comunicación con referencia
+de familia ya es exacta (k = 3: otro token no arrastra; sin referencia no arrastra; la familia correcta sí), en ocho series; lo que falta —
+distinguir "sal rosa" de "sal" en el mensaje — exige celdas que vean el píxel de variante (nodo con subíndice de variante: cuello A del encargo
+externo a Codex; H-4 cerrada como "no es k"). Por la letra (P-I2 en el borde y R3) no se declara; **vocabulario permitido: "el mensaje cambia la
+conducta del receptor sin experiencia propia y refiere a esta familia y no a otra (k = 3); no distingue la variante"**. Nivel 5: 65 % → **70 %**.
+Nota para el siguiente preregistro: la puerta P-I2 (emisor voraz ≥ 18/20) queda en el borde en cuatro de seis series; regla 12 la manda replicar
+o rebajarla con ERR, y se decidirá antes de la serie siguiente, no después.

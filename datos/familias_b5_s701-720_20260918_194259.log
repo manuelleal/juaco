@@ -1,0 +1,91 @@
+[19:42:59 +    0.0s] ARRANQUE BLOQUE 5 (VARIAS GANADORAS; H-4 de la sala 4, E-7): k = (1, 3, 5), brazos ['CANAL-k1', 'CORTADO-k1', 'BAR-H-k1', 'BAR-T-k1', 'VALOR-k1', 'INM-k1', 'OTRO-k1', 'PAR-k1', 'PAR0-k1', 'CANAL-k3', 'CORTADO-k3', 'BAR-H-k3', 'BAR-T-k3', 'VALOR-k3', 'INM-k3', 'OTRO-k3', 'PAR-k3', 'PAR0-k3', 'CANAL-k5', 'CORTADO-k5', 'BAR-H-k5', 'BAR-T-k5', 'VALOR-k5', 'INM-k5', 'OTRO-k5', 'PAR-k5', 'PAR0-k5'], semillas 701-720, T=100000. Pool(14).
+[19:42:59 +    0.0s] El mundo, el canal y el emisor son los del bloque 4b, sin tocar (el emisor es k = 1 = b4b bit a bit). Lo unico nuevo es CUANTAS celdas LEE la via lenta del RECEPTOR.
+[19:42:59 +    0.0s]     sha preregistro                94798d50a47eafc0
+[19:42:59 +    0.0s]     sha script                     60ce47ad28c7ccc6
+[19:42:59 +    0.0s]     sha constructor                b58e6025a648148d
+[19:42:59 +    0.0s]     sha instrumento                e0b6b90f6f92d5c1
+[19:42:59 +    0.0s]     sha arnes                      6fe98bf17b61a6c1
+[19:42:59 +    0.0s]     sha origen_b4b                 b3dd1d7e66a2d147
+[19:42:59 +    0.0s]     sha runner_bloque4b            b677f0fd8d1223be
+[19:42:59 +    0.0s]     sha preregistro_bloque4b       5d089937b10c7706
+[19:42:59 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[19:42:59 +    0.0s]     sha sala4_H4                   0f18d240b18771ee
+[19:42:59 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[19:42:59 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[19:43:00 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 25812
+[19:43:00 +    0.5s] ETAPA 1/4 — IDENTIDAD (9 casos x 3 = 27). (K) y (C) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[19:43:26 +   27.1s]     (a) k=1 == organismo_familias_b4b (mundo=AB)                   3/3
+[19:43:26 +   27.1s]     (g) k=1 == organismo_familias_b4b (el mundo del bloque 4)      3/3
+[19:43:26 +   27.1s]     (n) k=1 + mundo=AB == organismo_v14 (TRONCO)                   3/3
+[19:43:26 +   27.1s]     (o) relevo ON + mundo=AB == organismo_v15f_on                  3/3
+[19:43:26 +   27.1s]     (x) memoria_pares=None: k=5 == k=1 (la perilla es INERTE sin tabla) 3/3
+[19:43:26 +   27.1s]     (z) la 1.a de las k ES la ganadora de b4b, y son k sin repetir 3/3
+[19:43:26 +   27.1s]     (e) k mal escrito LANZA (0, -1, 2.5, '3', True)                3/3
+[19:43:26 +   27.1s]     (K) k=5 != k=1 con el relevo ON (DEBE diferir)                 3/3
+[19:43:26 +   27.1s]     (C) CANAL-k5 != CORTADO-k5 (DEBE diferir)                      2/3   difieren ['mem_ganadoras', 'canal_gan_k_post', 'canal_mismo_bin_k', 'canal_gan_post', 'primera_b4', 'mem_ganadora'] faltan []
+[19:43:26 +   27.1s]   IDENTIDAD 26/27
+[19:43:26 +   27.1s] ETAPA 2/4 — DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[19:43:26 +   27.1s]     alias por par mediana 0.0141  semillas con algun par identico 20/20  U3 mediana 0.3338
+[19:43:26 +   27.1s]     celdas de las 66 que NO distinguen el referente: BAR-T 0.4242 (solo forma 0.2778), BAR-H 0.6818 (solo forma 1.0); piso de forma 4.0/32
+[19:43:26 +   27.1s] ETAPA 3/4 — EMISORES (20 corridas de 100000 pasos; k = 1 = b4b bit a bit).
+[19:43:53 +   53.9s]     (neg) emiten 18/20; sin mensaje (excluidas, P-I2): [701, 720]; t_msg mediana 12580.0
+[19:43:53 +   53.9s] ETAPA 4/4 — RECEPTORES: 486 corridas de 100000 pasos (27 brazos)...
+[19:44:20 +   80.3s]           20/486
+[19:44:34 +   94.5s]           40/486
+[19:44:58 +  118.4s]           60/486
+[19:45:12 +  133.0s]           80/486
+[19:45:35 +  155.9s]           100/486
+[19:45:52 +  173.1s]           120/486
+[19:46:07 +  188.1s]           140/486
+[19:46:32 +  212.6s]           160/486
+[19:46:49 +  229.2s]           180/486
+[19:47:12 +  252.3s]           200/486
+[19:47:30 +  270.4s]           220/486
+[19:47:48 +  289.2s]           240/486
+[19:48:10 +  310.3s]           260/486
+[19:48:26 +  327.0s]           280/486
+[19:48:47 +  348.0s]           300/486
+[19:49:07 +  367.4s]           320/486
+[19:49:24 +  384.2s]           340/486
+[19:49:43 +  403.4s]           360/486
+[19:50:00 +  420.3s]           380/486
+[19:50:19 +  439.6s]           400/486
+[19:50:38 +  458.3s]           420/486
+[19:50:56 +  476.5s]           440/486
+[19:51:18 +  498.3s]           460/486
+[19:51:33 +  513.4s]           480/486
+[19:51:39 +  519.5s]           486/486
+[19:51:39 +  519.5s] 
+[19:51:39 +  519.5s] CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): IDENTICO campo a campo
+[19:51:39 +  519.7s] datos crudos -> familias_b5_s701-720_20260918_194259_crudo.json  sha256_16 = 3900878b40f36f18
+[19:51:39 +  519.7s] ANALISIS — medianas y los umbrales EXACTOS de la seccion 6 del preregistro.
+[19:51:39 +  519.7s]     CANAL-k1     com 16/18  okX 16/18  evU 0.5  okU 0.75  comH 1.0  ret2/3 11/15  nunca 0  muertes 38.5  celdas 49.0  via_rapida 0  mismo_bin 10.0  mismo_bin_k 12.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     CORTADO-k1   com 0/18  okX 0/18  evU 0.5  okU 0.8333  comH 0.0  ret2/3 16/17  nunca 7  muertes 34.5  celdas 45.5  via_rapida 0  mismo_bin 10.0  mismo_bin_k 10.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     BAR-H-k1     com 12/18  okX 12/18  evU 0.5834  okU 0.8333  comH 1.0  ret2/3 14/17  nunca 3  muertes 35.0  celdas 50.5  via_rapida 0  mismo_bin 12.0  mismo_bin_k 12.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     BAR-T-k1     com 4/18  okX 4/18  evU 0.5  okU 0.75  comH 0.0  ret2/3 12/14  nunca 5  muertes 32.5  celdas 48.5  via_rapida 0  mismo_bin 12.0  mismo_bin_k 12.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     VALOR-k1     com 4/18  okX 4/18  evU 0.5  okU 0.75  comH 0.0  ret2/3 13/18  nunca 3  muertes 36.5  celdas 46.0  via_rapida 0  mismo_bin 16.0  mismo_bin_k 15.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     INM-k1       com 2/18  okX 2/18  evU 0.5  okU 0.8333  comH 0.3333  ret2/3 13/13  nunca 7  muertes 29.0  celdas 49.0  via_rapida 1  mismo_bin 10.0  mismo_bin_k 16.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     OTRO-k1      com 3/18  okX 3/18  evU 0.5  okU 0.8333  comH 0.0  ret2/3 13/13  nunca 2  muertes 34.0  celdas 48.5  via_rapida 1  mismo_bin 8.0  mismo_bin_k 10.0  var_en_topk 0.0  dist 0/0
+[19:51:39 +  519.7s]     PAR-k1       com 15/18  okX 15/18  evU 0.5  okU 0.75  comH 1.0  ret2/3 7/8  nunca 0  muertes 26.5  celdas 48.0  via_rapida 1  mismo_bin 12.0  mismo_bin_k 12.0  var_en_topk 0.0  dist 5/18
+[19:51:39 +  519.7s]     PAR0-k1      com 0/18  okX 0/18  evU 0.5  okU 0.8333  comH 0.0  ret2/3 17/16  nunca 5  muertes 30.5  celdas 48.5  via_rapida 1  mismo_bin 12.0  mismo_bin_k 12.0  var_en_topk 0.0  dist 5/18
+[19:51:39 +  519.7s]     CANAL-k3     com 16/18  okX 16/18  evU 0.6667  okU 0.8333  comH 0.5  ret2/3 13/13  nunca 0  muertes 36.5  celdas 44.0  via_rapida 0  mismo_bin 8.0  mismo_bin_k 6.0  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     CORTADO-k3   com 1/18  okX 1/18  evU 0.6667  okU 0.8333  comH 0.0  ret2/3 16/16  nunca 10  muertes 42.0  celdas 40.5  via_rapida 0  mismo_bin 8.0  mismo_bin_k 4.0  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     BAR-H-k3     com 13/18  okX 13/18  evU 0.6667  okU 0.8333  comH 1.0  ret2/3 14/14  nunca 1  muertes 35.0  celdas 43.5  via_rapida 0  mismo_bin 13.5  mismo_bin_k 8.0  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     BAR-T-k3     com 4/18  okX 4/18  evU 0.6667  okU 0.6667  comH 0.0  ret2/3 15/18  nunca 6  muertes 37.5  celdas 44.5  via_rapida 0  mismo_bin 12.0  mismo_bin_k 4.0  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     VALOR-k3     com 3/18  okX 3/18  evU 0.6667  okU 0.75  comH 0.0  ret2/3 18/17  nunca 3  muertes 35.0  celdas 42.0  via_rapida 0  mismo_bin 16.0  mismo_bin_k 6.0  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     INM-k3       com 3/18  okX 3/18  evU 0.6667  okU 0.8333  comH 0.3333  ret2/3 14/15  nunca 4  muertes 37.0  celdas 47.0  via_rapida 0  mismo_bin 12.0  mismo_bin_k 8.0  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     OTRO-k3      com 2/18  okX 2/18  evU 0.6667  okU 0.6667  comH 0.0  ret2/3 12/15  nunca 9  muertes 45.0  celdas 39.0  via_rapida 0  mismo_bin 8.0  mismo_bin_k 3.0  var_en_topk 0.5  dist 0/0
+[19:51:39 +  519.7s]     PAR-k3       com 16/18  okX 16/18  evU 0.5  okU 0.8333  comH 1.0  ret2/3 10/14  nunca 0  muertes 40.0  celdas 43.5  via_rapida 0  mismo_bin 12.0  mismo_bin_k 6.0  var_en_topk 1.0  dist 8/18
+[19:51:39 +  519.7s]     PAR0-k3      com 0/18  okX 0/18  evU 0.6667  okU 0.8333  comH 0.0  ret2/3 18/18  nunca 7  muertes 41.5  celdas 44.5  via_rapida 0  mismo_bin 12.0  mismo_bin_k 4.0  var_en_topk 0.0  dist 2/18
+[19:51:39 +  519.7s]     CANAL-k5     com 16/18  okX 16/18  evU 0.8333  okU 0.6667  comH 1.0  ret2/3 7/12  nunca 0  muertes 152.0  celdas 36.5  via_rapida 0  mismo_bin 7.5  mismo_bin_k 2.0  var_en_topk 3.0  dist 0/0
+[19:51:39 +  519.7s]     CORTADO-k5   com 1/18  okX 1/18  evU 0.8333  okU 0.6667  comH 0.0  ret2/3 17/17  nunca 16  muertes 157.5  celdas 33.5  via_rapida 0  mismo_bin 7.5  mismo_bin_k 2.5  var_en_topk 1.0  dist 0/0
+[19:51:39 +  519.7s]     BAR-H-k5     com 13/18  okX 13/18  evU 0.8333  okU 0.6667  comH 1.0  ret2/3 9/11  nunca 2  muertes 179.0  celdas 35.5  via_rapida 0  mismo_bin 13.5  mismo_bin_k 2.5  var_en_topk 3.0  dist 0/0
+[19:51:39 +  519.7s]     BAR-T-k5     com 7/18  okX 7/18  evU 0.6667  okU 0.6667  comH 0.0  ret2/3 15/16  nunca 6  muertes 171.5  celdas 35.0  via_rapida 0  mismo_bin 6.0  mismo_bin_k 3.5  var_en_topk 2.5  dist 0/0
+[19:51:39 +  519.7s]     VALOR-k5     com 3/18  okX 3/18  evU 0.6667  okU 0.75  comH 0.0  ret2/3 14/16  nunca 12  muertes 153.0  celdas 34.5  via_rapida 0  mismo_bin 15.0  mismo_bin_k 2.0  var_en_topk 1.5  dist 0/0
+[19:51:39 +  519.7s]     INM-k5       com 5/18  okX 5/18  evU 0.75  okU 0.6667  comH 0.3333  ret2/3 14/16  nunca 10  muertes 111.0  celdas 35.0  via_rapida 0  mismo_bin 10.0  mismo_bin_k 3.5  var_en_topk 3.0  dist 0/0
+[19:51:39 +  519.7s]     OTRO-k5      com 7/18  okX 7/18  evU 0.6667  okU 0.6667  comH 0.0  ret2/3 15/17  nunca 7  muertes 45.5  celdas 34.0  via_rapida 0  mismo_bin 8.0  mismo_bin_k 0.5  var_en_topk 1.5  dist 0/0
+[19:51:39 +  519.7s]     PAR-k5       com 16/18  okX 16/18  evU 0.75  okU 0.6667  comH 0.0  ret2/3 7/12  nunca 0  muertes 120.5  celdas 35.0  via_rapida 0  mismo_bin 8.0  mismo_bin_k 3.0  var_en_topk 2.0  dist 10/18
+[19:51:39 +  519.7s]     PAR0-k5      com 1/18  okX 1/18  evU 0.8333  okU 0.6667  comH 0.0  ret2/3 17/17  nunca 13  muertes 128.0  celdas 34.5  via_rapida 0  mismo_bin 8.0  mismo_bin_k 2.0  var_en_topk 1.5  dist 1/18
+[19:51:39 +  519.7s] 
+[19:51:39 +  519.7s] VEREDICTO: PI2 CAE -- es el INSTRUMENTO o el montaje. Nada se declara (preregistro 5.2).
+[19:51:39 +  519.9s] datos -> familias_b5_s701-720_20260918_194259.json  sha256_16 = 1119b2600eae25e0
