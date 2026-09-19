@@ -1,0 +1,85 @@
+  sha organismo_v14.py (TRONCO CONGELADO)                      feefc88b1fd8d434  OK
+  sha organismo_v15f_on.py                                     54d6efe0b564113c  OK
+  sha organismo_familias_b5.py (bloque 5)                      e0b6b90f6f92d5c1  OK
+  sha organismo_familias_b6.py (bloque 6, ORIGEN de la copia)  b10cbd4ddd0c32a3  OK
+  sha organismo_familias_c1.py (junta fase 5, creador C)       6854bb683a610a68
+  T = 20000 (ancla del rng: 120000; canal: T = 60000), semillas (1, 2, 3), k = (1, 3), 8 hijas por casilla dividida, UN proceso
+
+  emisores con mensaje (-): 2/3 -> (1, 2)
+
+APAGADO (variante_hija=0): organismo_familias_c1 == organismo_familias_b6, para CUALQUIER k y sufijo
+  [  17.0s] (a) mundo=AB base | k=1, sufijo b6=0                                       2/2 IDENTICO
+  [  20.4s] (a) mundo=AB base | k=3, sufijo b6=0                                       2/2 IDENTICO
+  [  23.8s] (b) mundo=AB, inversion en T/2 | k=1, sufijo b6=0                          2/2 IDENTICO
+  [  27.2s] (b) mundo=AB, inversion en T/2 | k=3, sufijo b6=0                          2/2 IDENTICO
+  [  30.4s] (c) mundo=AB, sin puerta (las dos vias SUMAN) | k=1, sufijo b6=0           2/2 IDENTICO
+  [  33.6s] (c) mundo=AB, sin puerta (las dos vias SUMAN) | k=3, sufijo b6=0           2/2 IDENTICO
+  [  36.9s] (d) mundo=AB, linaje v13 | k=1, sufijo b6=0                                2/2 IDENTICO
+  [  40.3s] (d) mundo=AB, linaje v13 | k=3, sufijo b6=0                                2/2 IDENTICO
+  [  43.7s] (e) mundo=AB, B-5 encendido (desambiguar=1) | k=1, sufijo b6=0             2/2 IDENTICO
+  [  47.1s] (e) mundo=AB, B-5 encendido (desambiguar=1) | k=3, sufijo b6=0             2/2 IDENTICO
+  [  50.4s] (f) mundo=AB, relevo ENCENDIDO (v15f) | k=1, sufijo b6=0                   2/2 IDENTICO
+  [  54.5s] (f) mundo=AB, relevo ENCENDIDO (v15f) | k=1, sufijo b6=1                   2/2 IDENTICO
+  [  59.4s] (f) mundo=AB, relevo ENCENDIDO (v15f) | k=3, sufijo b6=0                   2/2 IDENTICO
+  [  64.8s] (f) mundo=AB, relevo ENCENDIDO (v15f) | k=3, sufijo b6=1                   2/2 IDENTICO
+  [  71.6s] (g) mundo=familias (bloque 1) | k=1, sufijo b6=0                           2/2 IDENTICO
+  [  78.4s] (g) mundo=familias (bloque 1) | k=1, sufijo b6=1                           2/2 IDENTICO
+  [  85.0s] (g) mundo=familias (bloque 1) | k=3, sufijo b6=0                           2/2 IDENTICO
+  [  91.8s] (g) mundo=familias (bloque 1) | k=3, sufijo b6=1                           2/2 IDENTICO
+  [  99.9s] (h) el mundo del bloque 4, EMISOR | k=1, sufijo b6=0                       2/2 IDENTICO
+  [ 108.5s] (h) el mundo del bloque 4, EMISOR | k=1, sufijo b6=1                       2/2 IDENTICO
+  [ 117.5s] (h) el mundo del bloque 4, EMISOR | k=3, sufijo b6=0                       2/2 IDENTICO
+  [ 126.8s] (h) el mundo del bloque 4, EMISOR | k=3, sufijo b6=1                       2/2 IDENTICO
+  [ 135.1s] (i) el mundo del bloque 4, RECEPTOR | k=1, sufijo b6=0                     2/2 IDENTICO
+  [ 143.4s] (i) el mundo del bloque 4, RECEPTOR | k=1, sufijo b6=1                     2/2 IDENTICO
+  [ 153.4s] (i) el mundo del bloque 4, RECEPTOR | k=3, sufijo b6=0                     2/2 IDENTICO
+  [ 164.1s] (i) el mundo del bloque 4, RECEPTOR | k=3, sufijo b6=1                     2/2 IDENTICO
+  [ 172.8s] (j) el mundo del bloque 4 con el emisor ANOTANDO | k=1, sufijo b6=0        2/2 IDENTICO
+  [ 181.4s] (j) el mundo del bloque 4 con el emisor ANOTANDO | k=1, sufijo b6=1        2/2 IDENTICO
+  [ 189.8s] (j) el mundo del bloque 4 con el emisor ANOTANDO | k=3, sufijo b6=0        2/2 IDENTICO
+  [ 199.1s] (j) el mundo del bloque 4 con el emisor ANOTANDO | k=3, sufijo b6=1        2/2 IDENTICO
+  [ 207.4s] (k) el emisor VORAZ del bloque 4b (voraz=1.0) | k=1, sufijo b6=0           2/2 IDENTICO
+  [ 217.0s] (k) el emisor VORAZ del bloque 4b (voraz=1.0) | k=1, sufijo b6=1           2/2 IDENTICO
+  [ 226.9s] (k) el emisor VORAZ del bloque 4b (voraz=1.0) | k=3, sufijo b6=0           2/2 IDENTICO
+  [ 237.2s] (k) el emisor VORAZ del bloque 4b (voraz=1.0) | k=3, sufijo b6=1           2/2 IDENTICO
+  [ 246.5s] (l) el brazo PAR del bloque 4b (par_herm=(1,0)) | k=1, sufijo b6=0         2/2 IDENTICO
+  [ 253.1s] (l) el brazo PAR del bloque 4b (par_herm=(1,0)) | k=1, sufijo b6=1         2/2 IDENTICO
+  [ 259.7s] (l) el brazo PAR del bloque 4b (par_herm=(1,0)) | k=3, sufijo b6=0         2/2 IDENTICO
+  [ 266.4s] (l) el brazo PAR del bloque 4b (par_herm=(1,0)) | k=3, sufijo b6=1         2/2 IDENTICO
+
+EL CANAL NO SE TOCA (apagado == b6 en los tres modos del canal)
+  [ 273.8s] (m) canal modo=sen | k=3, sufijo b6=1                                      2/2 IDENTICO
+  [ 281.1s] (m) canal modo=inm | k=3, sufijo b6=1                                      2/2 IDENTICO
+  [ 288.4s] (m) canal modo=mudo | k=3, sufijo b6=1                                     2/2 IDENTICO
+
+RNG NO CONSUMIDO (ancla larga)
+  [ 303.6s] (n) T = 120000, mundo de familias, k=1, sufijo b6=0                        1/1 IDENTICO
+  [ 318.3s] (n) T = 120000, mundo de familias, k=3, sufijo b6=0                        1/1 IDENTICO
+
+CADENA HASTA EL TRONCO (apagado)
+  [ 323.7s] (o) variante_hija=0, k=1, mundo=AB == organismo_v14 (TRONCO)               3/3 IDENTICO
+  [ 329.0s] (p) variante_hija=0, relevo ON, mundo=AB == organismo_v15f_on              3/3 IDENTICO
+
+INERCIA Y COMPOSICION
+  [ 333.7s] (q) memoria_pares=None: variante_hija=1 == variante_hija=0 (no hay tabla que dividir) 2/2 IDENTICO
+  [ 333.7s] (r) variante_hija=2 LANZA                                                  1/1 LANZA (como debe)
+  [ 333.7s] (r) variante_hija=-1 LANZA                                                 1/1 LANZA (como debe)
+  [ 333.7s] (r) variante_hija=0.5 LANZA                                                1/1 LANZA (como debe)
+  [ 333.7s] (r) variante_hija='1' LANZA                                                1/1 LANZA (como debe)
+  [ 333.7s] (r) variante_hija=True LANZA                                               1/1 LANZA (como debe)
+  [ 333.7s] (s) variante_hija=1 CON memoria_variante=1 LANZA (no se componen)          1/1 LANZA (como debe)
+  [ 333.7s] (t) vh_ev=0 LANZA                                                          1/1 LANZA (como debe)
+  [ 333.7s] (u) vh_umbral=0 LANZA                                                      1/1 LANZA (como debe)
+
+ESTRUCTURA: el mecanismo reimplementado FUERA, y lo que promete
+  [ 336.2s] (v) FUERA: al dividirse, NINGUNA hija nace vacia y NINGUNA lectura abstiene (fision del valor) 1/1 OK
+  [ 356.7s] (w) DENTRO: la casilla se divide (hijas > 0) y la via lenta sigue conociendo los 32 estimulos 1/1 OK  hijas 180/264, conocidos 32/32, cobertura de la ganadora c1 4/4 contra b6 12/32
+  [ 385.8s] (x) con la casilla dividida la HERMANA sale de la direccion del referente (y el referente no) 1/1 OK  grupo con hijas 3/32 (hermana dentro: False)
+
+CONTROLES QUE DEBEN FALLAR (sin ellos el arnes pasa por vacuidad; ERR-64b: >= 2 de 3)
+  [ 395.6s] (K) variante_hija=1 != variante_hija=0 con el relevo ON (DEBE diferir)     3/3 DIFIERE (como debe)
+  [ 415.9s] (C) CANAL-vh1 != CORTADO-vh1 (DEBE diferir: el mensaje hace algo)          2/3 DIFIERE (como debe)
+  [ 435.8s] (H) BAR-H-vh1 != CANAL-vh1 (DEBE diferir: es el brazo que decide)          2/3 DIFIERE (como debe)
+  [ 455.2s] (T) BAR-T-vh1 != CANAL-vh1 (DEBE diferir: el otro token no es el referente) 2/3 DIFIERE (como debe)
+
+IDENTIDAD 61/61   (455.2s)

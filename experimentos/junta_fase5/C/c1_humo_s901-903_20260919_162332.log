@@ -1,0 +1,91 @@
+[16:23:32 +    0.0s] HUMO del CREADOR C de la junta de la fase 5: `variante_hija` -- LA CASILLA QUE SE DIVIDE.
+[16:23:32 +    0.0s] UN proceso, sin Pool (regla 3). Semillas [901, 902, 903] (nave: 901-910), T = 100000, 21 brazos = 3 celdas x 7.
+[16:23:32 +    0.0s]     sha instrumento_c1           6854bb683a610a68
+[16:23:32 +    0.0s]     sha arnes_c1                 56a64fd637b66c0b
+[16:23:32 +    0.0s]     sha script                   f1c89b2b3c277376
+[16:23:32 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3  OK
+[16:23:32 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1  OK
+[16:23:32 +    0.0s]     sha runner_b6                88253f352d921c42
+[16:23:32 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434  OK
+[16:23:32 +    0.0s] 1/3 EMISORES (el del bloque 6 SIN TOCAR: mv = 0, k = 1 = b4b bit a bit): 3 corridas.
+[16:23:39 +    7.4s]     E s901   7.3s  mensaje ('T1v2', 1.0, 't=10634', 'tras 7 exposiciones')
+[16:23:46 +   14.3s]     E s902   7.0s  mensaje ('T1v2', 1.0, 't=10650', 'tras 7 exposiciones')
+[16:23:53 +   21.8s]     E s903   7.5s  mensaje ('T1v2', 1.0, 't=11837', 'tras 12 exposiciones')
+[16:23:53 +   21.8s] 2/3 ESTRUCTURA (T = 0, sin simular): en cuantas de las 66 celdas NO se distingue el referente.
+[16:23:53 +   21.8s]     s901: BAR-H 0.6818 (bin) -> 0.0 (con firma); BAR-T 0.4242 -> 0.4242; piso de forma 4/32 -> 1/32; px en que difieren referente y hermana [9, 11]
+[16:23:53 +   21.8s]     s902: BAR-H 0.6818 (bin) -> 0.0 (con firma); BAR-T 0.4242 -> 0.4242; piso de forma 4/32 -> 1/32; px en que difieren referente y hermana [9, 11]
+[16:23:53 +   21.8s]     s903: BAR-H 0.6818 (bin) -> 0.0 (con firma); BAR-T 0.4242 -> 0.4242; piso de forma 4/32 -> 1/32; px en que difieren referente y hermana [9, 11]
+[16:23:53 +   21.8s] 3/3 RECEPTORES: 63 corridas de 100000 pasos, un proceso.
+[16:24:02 +   30.0s]     CANAL-k3v0     s901   8.2s  entrega t=66729  comio 1 (via lenta)  dist None  okU 0.5  muertes 20  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:24:07 +   35.5s]     CANAL-k3v0     s902   5.5s  entrega t=66773  comio 1 (via lenta)  dist None  okU 0.6667  muertes 1326  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 3/32)
+[16:24:14 +   42.3s]     CANAL-k3v0     s903   6.7s  entrega t=67047  comio 1 (via lenta)  dist None  okU 0.5  muertes 462  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 2/32)
+[16:24:22 +   50.6s]     CORTADO-k3v0   s901   8.3s  entrega t=66729  comio 0 (via lenta)  dist None  okU 1.0  muertes 21  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:24:28 +   56.5s]     CORTADO-k3v0   s902   5.9s  entrega t=66773  comio 0 (via lenta)  dist None  okU 0.6667  muertes 936  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 1/32)
+[16:24:35 +   63.7s]     CORTADO-k3v0   s903   7.2s  entrega t=67047  comio 0 (via lenta)  dist None  okU 0.5  muertes 457  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 2/32)
+[16:24:43 +   71.9s]     BAR-H-k3v0     s901   8.2s  entrega t=66729  comio 1 (via lenta)  dist None  okU 0.5  muertes 19  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:24:49 +   77.5s]     BAR-H-k3v0     s902   5.6s  entrega t=66773  comio 1 (via lenta)  dist None  okU 0.6667  muertes 1317  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 3/32)
+[16:24:56 +   84.6s]     BAR-H-k3v0     s903   7.1s  entrega t=67047  comio 0 (via lenta)  dist None  okU 0.5  muertes 477  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 9/32 (bin 9/32)
+[16:25:04 +   92.7s]     BAR-T-k3v0     s901   8.1s  entrega t=66729  comio 1 (via lenta)  dist None  okU 0.8333  muertes 21  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:25:10 +   98.2s]     BAR-T-k3v0     s902   5.5s  entrega t=66773  comio 0 (via lenta)  dist None  okU 0.8333  muertes 1327  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 1/32)
+[16:25:17 +  105.1s]     BAR-T-k3v0     s903   6.9s  entrega t=67047  comio 0 (via lenta)  dist None  okU 0.5  muertes 472  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 1/32)
+[16:25:25 +  113.2s]     VALOR-k3v0     s901   8.1s  entrega t=66729  comio 0 (via lenta)  dist None  okU 0.6667  muertes 17  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 0/32 (bin 0/32)
+[16:25:30 +  118.8s]     VALOR-k3v0     s902   5.5s  entrega t=66773  comio 0 (via lenta)  dist None  okU 0.6667  muertes 1329  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 6/32 (bin 6/32)
+[16:25:37 +  125.9s]     VALOR-k3v0     s903   7.1s  entrega t=67047  comio 0 (via lenta)  dist None  okU 0.5  muertes 462  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 9/32 (bin 9/32)
+[16:25:46 +  134.3s]     PAR-k3v0       s901   8.5s  entrega t=66813  comio 1 (via lenta)  dist 0.0  okU 1.0  muertes 35  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:25:52 +  140.0s]     PAR-k3v0       s902   5.7s  entrega t=66856  comio 1 (via lenta)  dist 0.0  okU 0.6667  muertes 1325  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 4/32 (bin 4/32)
+[16:25:58 +  146.8s]     PAR-k3v0       s903   6.8s  entrega t=66721  comio 1 (via lenta)  dist 1.0  okU 0.5  muertes 520  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 2/32)
+[16:26:07 +  155.0s]     PAR0-k3v0      s901   8.1s  entrega t=66813  comio 0 (via lenta)  dist 0.0  okU 1.0  muertes 37  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:26:12 +  160.7s]     PAR0-k3v0      s902   5.8s  entrega t=66856  comio 0 (via lenta)  dist 0.0  okU 0.6667  muertes 964  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 8/32 (bin 8/32)
+[16:26:19 +  167.5s]     PAR0-k3v0      s903   6.7s  entrega t=66721  comio 0 (via lenta)  dist 1.0  okU 0.5  muertes 523  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 3/32)
+[16:26:26 +  174.8s]     CANAL-k3v1     s901   7.3s  entrega t=67276  comio 1 (via lenta)  dist None  okU 0.6667  muertes 51  hijas 0  k_conoce ref/herm/tok 3/1/3  dir_k 4/32 (bin 8/32)
+[16:26:35 +  183.0s]     CANAL-k3v1     s902   8.2s  entrega t=66726  comio 1 (via RAPIDA)  dist None  okU 0.5  muertes 41  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:26:44 +  192.6s]     CANAL-k3v1     s903   9.6s  entrega t=66686  comio 1 (via lenta)  dist None  okU 0.8333  muertes 88  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 5/32 (bin 15/32)
+[16:26:55 +  203.8s]     CORTADO-k3v1   s901  11.1s  entrega t=67276  comio 0 (via lenta)  dist None  okU 0.6667  muertes 54  hijas 0  k_conoce ref/herm/tok 2/2/3  dir_k 1/32 (bin 4/32)
+[16:27:08 +  216.6s]     CORTADO-k3v1   s902  12.8s  entrega t=66726  comio 1 (via RAPIDA)  dist None  okU 0.5  muertes 41  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 12/32)
+[16:27:20 +  228.7s]     CORTADO-k3v1   s903  12.1s  entrega t=66686  comio 1 (via lenta)  dist None  okU 0.8333  muertes 92  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 5/32 (bin 5/32)
+[16:27:30 +  238.9s]     BAR-H-k3v1     s901  10.3s  entrega t=67276  comio 1 (via lenta)  dist None  okU 0.6667  muertes 51  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 4/32 (bin 4/32)
+[16:27:42 +  250.8s]     BAR-H-k3v1     s902  11.9s  entrega t=66726  comio 1 (via RAPIDA)  dist None  okU 0.5  muertes 35  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 12/32)
+[16:27:54 +  262.3s]     BAR-H-k3v1     s903  11.5s  entrega t=66686  comio 1 (via lenta)  dist None  okU 0.8333  muertes 91  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 5/32 (bin 5/32)
+[16:28:04 +  272.3s]     BAR-T-k3v1     s901  10.0s  entrega t=67276  comio 1 (via lenta)  dist None  okU 0.6667  muertes 58  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 9/32)
+[16:28:15 +  283.5s]     BAR-T-k3v1     s902  11.2s  entrega t=66726  comio 1 (via RAPIDA)  dist None  okU 0.1667  muertes 51  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:28:28 +  296.6s]     BAR-T-k3v1     s903  13.1s  entrega t=66686  comio 1 (via lenta)  dist None  okU 0.8333  muertes 90  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 5/32 (bin 5/32)
+[16:28:39 +  307.3s]     VALOR-k3v1     s901  10.8s  entrega t=67276  comio 0 (via lenta)  dist None  okU 0.6667  muertes 58  hijas 0  k_conoce ref/herm/tok 3/1/3  dir_k 2/32 (bin 8/32)
+[16:28:50 +  318.8s]     VALOR-k3v1     s902  11.5s  entrega t=66726  comio 1 (via RAPIDA)  dist None  okU 0.3333  muertes 44  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 6/32 (bin 12/32)
+[16:29:01 +  329.9s]     VALOR-k3v1     s903  11.1s  entrega t=66686  comio 1 (via lenta)  dist None  okU 0.8333  muertes 95  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 4/32 (bin 12/32)
+[16:29:13 +  341.1s]     PAR-k3v1       s901  11.2s  entrega t=66918  comio 1 (via lenta)  dist 1.0  okU 1.0  muertes 37  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:29:25 +  353.6s]     PAR-k3v1       s902  12.5s  entrega t=66681  comio 0 (via RAPIDA)  dist 0.0  okU 0.5  muertes 21  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:29:37 +  365.0s]     PAR-k3v1       s903  11.4s  entrega t=66874  comio 1 (via lenta)  dist 1.0  okU 0.5  muertes 280  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:29:49 +  377.6s]     PAR0-k3v1      s901  12.7s  entrega t=66918  comio 1 (via lenta)  dist 1.0  okU 1.0  muertes 35  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 12/32)
+[16:29:59 +  387.6s]     PAR0-k3v1      s902  10.0s  entrega t=66681  comio 0 (via RAPIDA)  dist 0.0  okU 0.5  muertes 21  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:30:07 +  395.2s]     PAR0-k3v1      s903   7.6s  entrega t=66874  comio 0 (via lenta)  dist 1.0  okU 0.5  muertes 274  hijas 0  k_conoce ref/herm/tok 3/3/3  dir_k 6/32 (bin 12/32)
+[16:30:16 +  404.5s]     CANAL-k3h1     s901   9.3s  entrega t=66741  comio 0 (via RAPIDA)  dist None  okU 1.0  muertes 34  hijas 177  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 1/32)
+[16:30:26 +  414.1s]     CANAL-k3h1     s902   9.6s  entrega t=66968  comio 0 (via RAPIDA)  dist None  okU 0.6667  muertes 29  hijas 186  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:30:35 +  423.1s]     CANAL-k3h1     s903   9.0s  entrega t=66675  comio 1 (via lenta)  dist None  okU 1.0  muertes 25  hijas 148  k_conoce ref/herm/tok 3/3/3  dir_k 5/32 (bin 20/32)
+[16:30:44 +  432.2s]     CORTADO-k3h1   s901   9.1s  entrega t=66741  comio 0 (via RAPIDA)  dist None  okU 1.0  muertes 43  hijas 176  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 3/32)
+[16:30:54 +  442.2s]     CORTADO-k3h1   s902  10.0s  entrega t=66968  comio 0 (via RAPIDA)  dist None  okU 0.6667  muertes 31  hijas 177  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:31:02 +  450.7s]     CORTADO-k3h1   s903   8.5s  entrega t=66675  comio 0 (via lenta)  dist None  okU 0.6667  muertes 48  hijas 131  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 2/32)
+[16:31:12 +  460.0s]     BAR-H-k3h1     s901   9.3s  entrega t=66741  comio 0 (via RAPIDA)  dist None  okU 1.0  muertes 39  hijas 180  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 1/32)
+[16:31:21 +  469.3s]     BAR-H-k3h1     s902   9.3s  entrega t=66968  comio 0 (via RAPIDA)  dist None  okU 0.6667  muertes 33  hijas 186  k_conoce ref/herm/tok 3/3/3  dir_k 1/32 (bin 4/32)
+[16:31:30 +  478.0s]     BAR-H-k3h1     s903   8.7s  entrega t=66675  comio 0 (via lenta)  dist None  okU 0.6667  muertes 31  hijas 149  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 9/32)
+[16:31:38 +  486.9s]     BAR-T-k3h1     s901   8.9s  entrega t=66741  comio 0 (via RAPIDA)  dist None  okU 0.8333  muertes 37  hijas 183  k_conoce ref/herm/tok 3/3/3  dir_k 6/32 (bin 12/32)
+[16:31:48 +  496.2s]     BAR-T-k3h1     s902   9.4s  entrega t=66968  comio 0 (via RAPIDA)  dist None  okU 0.3333  muertes 28  hijas 195  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:31:57 +  505.0s]     BAR-T-k3h1     s903   8.7s  entrega t=66675  comio 1 (via lenta)  dist None  okU 0.5  muertes 27  hijas 168  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 6/32)
+[16:32:05 +  513.6s]     VALOR-k3h1     s901   8.6s  entrega t=66741  comio 0 (via RAPIDA)  dist None  okU 0.8333  muertes 39  hijas 157  k_conoce ref/herm/tok 3/3/3  dir_k 6/32 (bin 12/32)
+[16:32:14 +  522.5s]     VALOR-k3h1     s902   8.9s  entrega t=66968  comio 0 (via RAPIDA)  dist None  okU 0.6667  muertes 37  hijas 181  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:32:22 +  530.7s]     VALOR-k3h1     s903   8.2s  entrega t=66675  comio 0 (via lenta)  dist None  okU 0.8333  muertes 45  hijas 159  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 6/32)
+[16:32:31 +  539.6s]     PAR-k3h1       s901   8.9s  entrega t=66825  comio 0 (via RAPIDA)  dist 0.0  okU 0.6667  muertes 23  hijas 178  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 4/32)
+[16:32:40 +  548.5s]     PAR-k3h1       s902   8.8s  entrega t=66696  comio 1 (via lenta)  dist 1.0  okU 0.8333  muertes 40  hijas 187  k_conoce ref/herm/tok 3/3/3  dir_k 3/32 (bin 12/32)
+[16:32:49 +  557.2s]     PAR-k3h1       s903   8.7s  entrega t=66841  comio 1 (via lenta)  dist 1.0  okU 0.8333  muertes 30  hijas 153  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:32:57 +  565.9s]     PAR0-k3h1      s901   8.7s  entrega t=66825  comio 0 (via RAPIDA)  dist 0.0  okU 1.0  muertes 24  hijas 178  k_conoce ref/herm/tok 3/3/3  dir_k 12/32 (bin 12/32)
+[16:33:06 +  574.5s]     PAR0-k3h1      s902   8.6s  entrega t=66696  comio 0 (via lenta)  dist 0.0  okU 0.8333  muertes 38  hijas 187  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:33:15 +  583.0s]     PAR0-k3h1      s903   8.5s  entrega t=66841  comio 0 (via lenta)  dist 0.0  okU 0.8333  muertes 28  hijas 151  k_conoce ref/herm/tok 3/3/3  dir_k 2/32 (bin 8/32)
+[16:33:15 +  583.1s] CRUDO -> c1_humo_s901-903_20260919_162332_crudo.json  sha256_16 = 1966d8c3f65c5a40  (ERR-54: antes del analisis)
+[16:33:15 +  583.1s] 
+[16:33:15 +  583.1s] HUMO (n = 3/3 utilizables; sin mensaje [], excluidas por ERR-70 []). `com` = mordio en su PRIMERA exposicion de la vida al referente. NO es evidencia: 3 semillas no cierran nada.
+  celda   CANAL  CORT  BAR-H  BAR-T  VALOR  PARd  PAR0d  muert  hijas  k_conoce_ref  dir_k/32
+  k3v0        3     0      2      1      0     1      1  462.0    0.0           3.0       3.0
+  k3v1        3     2      3      3      2     2      2   51.0    0.0           3.0       4.0
+  k3h1        1     0      0      1      0     2      0   29.0  177.0           3.0       1.0
+
+[16:33:15 +  583.1s]   P-I3 (gemelo, prefijo exacto): {'CANAL-k3v0': 3, 'BAR-H-k3v0': 3, 'BAR-T-k3v0': 3, 'VALOR-k3v0': 3, 'PAR-k3v0': 3, 'CANAL-k3v1': 3, 'BAR-H-k3v1': 3, 'BAR-T-k3v1': 3, 'VALOR-k3v1': 3, 'PAR-k3v1': 3, 'CANAL-k3h1': 3, 'BAR-H-k3h1': 3, 'BAR-T-k3h1': 3, 'VALOR-k3h1': 3, 'PAR-k3h1': 3}
+[16:33:15 +  583.1s]   P-I5 (la boca lee la via LENTA en CORTADO): {'k3v0': 3, 'k3v1': 2, 'k3h1': 1}

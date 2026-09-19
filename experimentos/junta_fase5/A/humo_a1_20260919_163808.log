@@ -1,0 +1,136 @@
+[16:38:08 +    0.0s] HUMO del CREADOR A (junta fase 5): lectura por DOS TIPOS DE GANADORA. UN proceso, sin Pool (regla 3).
+[16:38:08 +    0.0s] celdas ['b5k3', 'b6suf', 'A1xm', 'A1x1', 'A1x', 'A1w']  brazos ['CANAL', 'CORTADO', 'BAR-H', 'BAR-T', 'VALOR', 'PAR', 'PAR0']  semillas [901, 902]  T = 30000
+[16:38:08 +    0.0s] Criterio de la MISION (sobre 20 semillas, no sobre esto): CANAL >= 15, CORTADO <= 5, BAR-H <= 5, BAR-T <= 5, PAR >= 15, VALOR <= 5.
+[16:38:08 +    0.0s]     sha script                   63868444c8eda7c5
+[16:38:08 +    0.0s]     sha constructor              1d6b136f0f9034e9
+[16:38:08 +    0.0s]     sha instrumento              ce954cf80a6aa3dc
+[16:38:08 +    0.0s]     sha arnes                    e217be2aae8d805e
+[16:38:08 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[16:38:08 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[16:38:08 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[16:38:08 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[16:38:08 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[16:38:08 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[16:38:08 +    0.0s]     origenes verificados -> OK
+[16:38:08 +    0.0s] 1/4 IDENTIDAD (subconjunto; el arnes completo, 68/68, es identidad_familias_a1.py)
+[16:38:10 +    1.7s]     semilla 901: apagado == b6 SI   |   encendido != b6 SI
+[16:38:11 +    3.2s]     semilla 902: apagado == b6 SI   |   encendido != b6 SI
+[16:38:11 +    3.2s]   IDENTIDAD DEL HUMO 4/4
+[16:38:11 +    3.2s] 2/4 DIAGNOSTICO ESTRUCTURAL (T = 0, sin simular): alias del mundo y resolucion de la referencia
+[16:38:11 +    3.2s]     semilla 901: alias_pares 0.01411  U3 0.2622  |  celdas que NO distinguen al referente: BAR-H 0.6818 (solo forma 1.0), BAR-T 0.4242 (solo forma 0.2778)  |  piso de forma 4/32
+[16:38:11 +    3.2s]                  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [1, 4, 5, 8]
+[16:38:11 +    3.2s]     semilla 902: alias_pares 0.02218  U3 0.4777  |  celdas que NO distinguen al referente: BAR-H 0.6818 (solo forma 1.0), BAR-T 0.4242 (solo forma 0.2778)  |  piso de forma 4/32
+[16:38:11 +    3.2s]                  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [1, 2, 5, 7]
+[16:38:11 +    3.2s] 3/4 EMISORES (los del bloque 6, sin tocar): 2 corridas de 30000 pasos
+[16:38:14 +    5.4s]     E s901   2.2s  mensaje ('T1v2', 1.0, 't=10634', 'tras 7 exp')
+[16:38:16 +    7.5s]     E s902   2.0s  mensaje ('T1v2', 1.0, 't=10650', 'tras 7 exp')
+[16:38:16 +    7.5s] 4/4 RECEPTORES: 84 corridas de 30000 pasos (6 celdas x 7 brazos)
+[16:38:18 +    9.8s]     CANAL-b5k3     s901   2.4s  entrega t=20064  comio 1  dist None  okU 1.0  via lenta  muertes 7  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:38:18 +    9.8s]                    MECANISMO b5k3: ganadoras forma None variante None  grupo del mensaje: CONJUNTO None/32, por DIRECCION k 4/32, por BIN k 4/32  hermana dentro None  pesos (1.0, 1.0)  cobertura 4
+[16:38:20 +   11.6s]     CANAL-b5k3     s902   1.7s  entrega t=20247  comio 1  dist None  okU 0.6667  via lenta  muertes 296  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:20 +   11.6s]                    MECANISMO b5k3: ganadoras forma None variante None  grupo del mensaje: CONJUNTO None/32, por DIRECCION k 2/32, por BIN k 2/32  hermana dentro None  pesos (1.0, 1.0)  cobertura 4
+[16:38:22 +   14.0s]     CORTADO-b5k3   s901   2.4s  entrega t=20064  comio 0  dist None  okU 1.0  via lenta  muertes 10  W(ref) -1.0 W(herm) -1.0 W(otro) -1.0
+[16:38:24 +   15.7s]     CORTADO-b5k3   s902   1.7s  entrega t=20247  comio 0  dist None  okU 0.6667  via lenta  muertes 280  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:26 +   18.0s]     BAR-H-b5k3     s901   2.3s  entrega t=20064  comio 1  dist None  okU 1.0  via lenta  muertes 6  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:28 +   19.7s]     BAR-H-b5k3     s902   1.7s  entrega t=20247  comio 1  dist None  okU 0.6667  via lenta  muertes 281  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:30 +   22.1s]     BAR-T-b5k3     s901   2.4s  entrega t=20064  comio 1  dist None  okU 0.8333  via lenta  muertes 7  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:32 +   23.8s]     BAR-T-b5k3     s902   1.7s  entrega t=20247  comio 0  dist None  okU 0.6667  via lenta  muertes 301  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:34 +   26.2s]     VALOR-b5k3     s901   2.4s  entrega t=20064  comio 0  dist None  okU 1.0  via lenta  muertes 10  W(ref) -1.0 W(herm) -9.0 W(otro) -1.0
+[16:38:36 +   27.9s]     VALOR-b5k3     s902   1.7s  entrega t=20247  comio 0  dist None  okU 0.6667  via lenta  muertes 288  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:38:38 +   30.2s]     PAR-b5k3       s901   2.3s  entrega t=20013  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 9  W(ref) -1.0 W(herm) -1.0 W(otro) -1.0
+[16:38:40 +   31.8s]     PAR-b5k3       s902   1.6s  entrega t=20135  comio 1  dist 1.0  okU 0.5  via lenta  muertes 395  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:42 +   34.2s]     PAR0-b5k3      s901   2.4s  entrega t=20013  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 7  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:44 +   35.8s]     PAR0-b5k3      s902   1.6s  entrega t=20135  comio 0  dist 0.0  okU 0.5  via lenta  muertes 397  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:46 +   38.1s]     CANAL-b6suf    s901   2.3s  entrega t=20280  comio 1  dist None  okU 0.5  via lenta  muertes 9  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:38:46 +   38.1s]                    MECANISMO b6suf: ganadoras forma None variante None  grupo del mensaje: CONJUNTO None/32, por DIRECCION k 2/32, por BIN k 8/32  hermana dentro None  pesos (1.0, 1.0)  cobertura 16
+[16:38:49 +   40.4s]     CANAL-b6suf    s902   2.3s  entrega t=20065  comio 1  dist None  okU 1.0  via lenta  muertes 11  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:38:49 +   40.4s]                    MECANISMO b6suf: ganadoras forma None variante None  grupo del mensaje: CONJUNTO None/32, por DIRECCION k 1/32, por BIN k 4/32  hermana dentro None  pesos (1.0, 1.0)  cobertura 16
+[16:38:51 +   42.5s]     CORTADO-b6suf  s901   2.2s  entrega t=20280  comio 0  dist None  okU 0.5  via lenta  muertes 14  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:38:53 +   44.8s]     CORTADO-b6suf  s902   2.3s  entrega t=20065  comio 0  dist None  okU 1.0  via lenta  muertes 12  W(ref) -5.0 W(herm) -5.0 W(otro) -5.0
+[16:38:55 +   47.1s]     BAR-H-b6suf    s901   2.3s  entrega t=20280  comio 0  dist None  okU 0.5  via lenta  muertes 16  W(ref) -9.0 W(herm) 3.0 W(otro) -9.0
+[16:38:58 +   49.4s]     BAR-H-b6suf    s902   2.3s  entrega t=20065  comio 0  dist None  okU 1.0  via lenta  muertes 9  W(ref) -5.0 W(herm) 3.0 W(otro) -9.0
+[16:39:00 +   51.6s]     BAR-T-b6suf    s901   2.2s  entrega t=20280  comio 1  dist None  okU 0.5  via lenta  muertes 11  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:39:02 +   53.9s]     BAR-T-b6suf    s902   2.3s  entrega t=20065  comio 0  dist None  okU 1.0  via lenta  muertes 10  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:39:04 +   56.1s]     VALOR-b6suf    s901   2.2s  entrega t=20280  comio 0  dist None  okU 0.5  via lenta  muertes 8  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:39:07 +   58.4s]     VALOR-b6suf    s902   2.3s  entrega t=20065  comio 0  dist None  okU 1.0  via lenta  muertes 12  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:39:09 +   60.6s]     PAR-b6suf      s901   2.2s  entrega t=20090  comio 1  dist 1.0  okU 0.6667  via lenta  muertes 15  W(ref) 3.0 W(herm) -9.0 W(otro) -9.0
+[16:39:11 +   62.9s]     PAR-b6suf      s902   2.3s  entrega t=20338  comio 1  dist 1.0  okU 0.6667  via lenta  muertes 14  W(ref) 3.0 W(herm) -9.0 W(otro) -9.0
+[16:39:13 +   65.1s]     PAR0-b6suf     s901   2.2s  entrega t=20090  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 19  W(ref) -6.0 W(herm) -9.0 W(otro) -6.0
+[16:39:16 +   67.3s]     PAR0-b6suf     s902   2.2s  entrega t=20338  comio 0  dist 0.0  okU 0.6667  via lenta  muertes 18  W(ref) -5.0 W(herm) -9.0 W(otro) -5.0
+[16:39:18 +   69.5s]     CANAL-A1xm     s901   2.2s  entrega t=20301  comio 1  dist None  okU 0.8333  via lenta  muertes 10  W(ref) -7.0 W(herm) -9.0 W(otro) -7.0
+[16:39:18 +   69.5s]                    MECANISMO A1xm: ganadoras forma [[0, 3], [2, 3], [0, 2]] variante [[0, 9], [0, 10], [5, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 6/32, por BIN k 6/32  hermana dentro False  pesos (1.0, 1.0)  cobertura 4
+[16:39:20 +   71.9s]     CANAL-A1xm     s902   2.4s  entrega t=20054  comio 1  dist None  okU 0.8333  via lenta  muertes 29  W(ref) 3.0 W(herm) 3.0 W(otro) -1.0
+[16:39:20 +   71.9s]                    MECANISMO A1xm: ganadoras forma [[6, 7], [2, 7], [3, 7]] variante [[0, 9], [0, 10], [0, 11]]  grupo del mensaje: CONJUNTO 2/32, por DIRECCION k 2/32, por BIN k 2/32  hermana dentro False  pesos (1.0, 1.0)  cobertura 4
+[16:39:22 +   74.0s]     CORTADO-A1xm   s901   2.1s  entrega t=20301  comio 0  dist None  okU 0.8333  via lenta  muertes 11  W(ref) -7.0 W(herm) -7.0 W(otro) -9.0
+[16:39:25 +   76.4s]     CORTADO-A1xm   s902   2.4s  entrega t=20054  comio 0  dist None  okU 0.6667  via lenta  muertes 34  W(ref) 3.0 W(herm) 3.0 W(otro) -9.0
+[16:39:27 +   78.5s]     BAR-H-A1xm     s901   2.1s  entrega t=20301  comio 1  dist None  okU 0.8333  via lenta  muertes 10  W(ref) -5.0 W(herm) -5.0 W(otro) -5.0
+[16:39:29 +   80.9s]     BAR-H-A1xm     s902   2.4s  entrega t=20054  comio 1  dist None  okU 0.8333  via lenta  muertes 32  W(ref) 3.0 W(herm) 3.0 W(otro) -9.0
+[16:39:31 +   83.1s]     BAR-T-A1xm     s901   2.2s  entrega t=20301  comio 0  dist None  okU 0.8333  via lenta  muertes 13  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:39:34 +   85.5s]     BAR-T-A1xm     s902   2.4s  entrega t=20054  comio 0  dist None  okU 0.6667  via lenta  muertes 31  W(ref) 3.0 W(herm) 3.0 W(otro) -9.0
+[16:39:36 +   87.7s]     VALOR-A1xm     s901   2.2s  entrega t=20301  comio 0  dist None  okU 0.8333  via lenta  muertes 13  W(ref) -7.0 W(herm) -7.0 W(otro) -9.0
+[16:39:38 +   90.0s]     VALOR-A1xm     s902   2.4s  entrega t=20054  comio 0  dist None  okU 0.8333  via lenta  muertes 34  W(ref) -3.0 W(herm) -3.0 W(otro) -7.0
+[16:39:40 +   92.2s]     PAR-A1xm       s901   2.1s  entrega t=20108  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 13  W(ref) -3.0 W(herm) -3.0 W(otro) -9.0
+[16:39:44 +   95.5s]     PAR-A1xm       s902   3.3s  entrega t=20006  comio 1  dist 0.0  okU 0.8333  via lenta  muertes 21  W(ref) 3.0 W(herm) 1.0 W(otro) -5.0
+[16:39:47 +   98.8s]     PAR0-A1xm      s901   3.3s  entrega t=20108  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 17  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:39:51 +  102.4s]     PAR0-A1xm      s902   3.6s  entrega t=20006  comio 0  dist 0.0  okU 0.6667  via lenta  muertes 12  W(ref) 3.0 W(herm) 1.0 W(otro) -1.0
+[16:39:54 +  106.1s]     CANAL-A1x1     s901   3.6s  entrega t=20031  comio 1  dist None  okU 0.3333  via lenta  muertes 8  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:39:54 +  106.1s]                    MECANISMO A1x1: ganadoras forma [[3, 6], [4, 7], [0, 7]] variante [[1, 9], [1, 10], [3, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 6/32, por BIN k 6/32  hermana dentro False  pesos (1.0, 1.0)  cobertura 4
+[16:39:57 +  108.9s]     CANAL-A1x1     s902   2.8s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 262  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:39:57 +  108.9s]                    MECANISMO A1x1: ganadoras forma [[4, 6], [0, 5], [4, 8]] variante [[5, 9], [5, 10], [5, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 1/32, por BIN k 1/32  hermana dentro False  pesos (1.0, 1.0)  cobertura 4
+[16:40:01 +  112.5s]     CORTADO-A1x1   s901   3.6s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 10  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:40:04 +  115.6s]     CORTADO-A1x1   s902   3.1s  entrega t=20091  comio 0  dist None  okU 0.5  via lenta  muertes 260  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:40:08 +  119.3s]     BAR-H-A1x1     s901   3.7s  entrega t=20031  comio 0  dist None  okU 0.8333  via lenta  muertes 7  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:10 +  122.2s]     BAR-H-A1x1     s902   2.9s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 263  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:14 +  126.0s]     BAR-T-A1x1     s901   3.8s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 6  W(ref) None W(herm) -9.0 W(otro) -5.0
+[16:40:17 +  129.1s]     BAR-T-A1x1     s902   3.1s  entrega t=20091  comio 0  dist None  okU 0.8333  via lenta  muertes 261  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:21 +  132.7s]     VALOR-A1x1     s901   3.6s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 5  W(ref) -9.0 W(herm) -9.0 W(otro) -1.0
+[16:40:24 +  135.6s]     VALOR-A1x1     s902   2.9s  entrega t=20091  comio 0  dist None  okU 0.8333  via lenta  muertes 269  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:40:27 +  139.1s]     PAR-A1x1       s901   3.5s  entrega t=20108  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 13  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:30 +  141.9s]     PAR-A1x1       s902   2.8s  entrega t=20088  comio 1  dist 1.0  okU 1.0  via lenta  muertes 270  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:33 +  144.9s]     PAR0-A1x1      s901   3.0s  entrega t=20108  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 17  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:36 +  147.5s]     PAR0-A1x1      s902   2.6s  entrega t=20088  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 273  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:39 +  151.0s]     CANAL-A1x      s901   3.4s  entrega t=20031  comio 1  dist None  okU 0.5  via lenta  muertes 10  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:40:39 +  151.0s]                    MECANISMO A1x: ganadoras forma [[3, 6], [0, 7], [2, 7]] variante [[1, 9], [1, 10], [3, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 12/32, por BIN k 12/32  hermana dentro False  pesos (1.0, 1.0)  cobertura 4
+[16:40:42 +  154.0s]     CANAL-A1x      s902   3.0s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 258  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:40:42 +  154.0s]                    MECANISMO A1x: ganadoras forma [[4, 6], [0, 5], [4, 8]] variante [[0, 9], [5, 10], [0, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 4/32, por BIN k 4/32  hermana dentro False  pesos (1.0, 1.0)  cobertura 4
+[16:40:46 +  157.9s]     CORTADO-A1x    s901   3.9s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 10  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:40:49 +  160.9s]     CORTADO-A1x    s902   3.0s  entrega t=20091  comio 0  dist None  okU 0.5  via lenta  muertes 260  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:40:53 +  164.4s]     BAR-H-A1x      s901   3.5s  entrega t=20031  comio 0  dist None  okU 1.0  via lenta  muertes 7  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:40:56 +  167.3s]     BAR-H-A1x      s902   2.9s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 260  W(ref) -5.0 W(herm) -5.0 W(otro) -5.0
+[16:40:59 +  171.0s]     BAR-T-A1x      s901   3.7s  entrega t=20031  comio 0  dist None  okU 0.5  via lenta  muertes 9  W(ref) -5.0 W(herm) -5.0 W(otro) -1.0
+[16:41:02 +  174.2s]     BAR-T-A1x      s902   3.2s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 258  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:41:06 +  177.8s]     VALOR-A1x      s901   3.6s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 9  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:41:09 +  180.9s]     VALOR-A1x      s902   3.1s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 260  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:41:12 +  184.2s]     PAR-A1x        s901   3.3s  entrega t=20108  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 19  W(ref) -5.0 W(herm) -9.0 W(otro) -9.0
+[16:41:15 +  187.2s]     PAR-A1x        s902   3.0s  entrega t=20088  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 268  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:41:19 +  190.7s]     PAR0-A1x       s901   3.5s  entrega t=20108  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 17  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:41:22 +  193.6s]     PAR0-A1x       s902   2.9s  entrega t=20088  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 273  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:41:26 +  197.3s]     CANAL-A1w      s901   3.7s  entrega t=20031  comio 1  dist None  okU 0.5  via lenta  muertes 10  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:41:26 +  197.3s]                    MECANISMO A1w: ganadoras forma [[3, 6], [0, 7], [2, 7]] variante [[1, 9], [1, 10], [3, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 12/32, por BIN k 12/32  hermana dentro False  pesos (1.7163, 0.2837)  cobertura 4
+[16:41:29 +  200.4s]     CANAL-A1w      s902   3.1s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 258  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:41:29 +  200.4s]                    MECANISMO A1w: ganadoras forma [[4, 6], [0, 5], [4, 8]] variante [[0, 9], [5, 10], [0, 11]]  grupo del mensaje: CONJUNTO 1/32, por DIRECCION k 4/32, por BIN k 4/32  hermana dentro False  pesos (1.1489, 0.8511)  cobertura 4
+[16:41:32 +  204.1s]     CORTADO-A1w    s901   3.7s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 10  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:41:36 +  207.5s]     CORTADO-A1w    s902   3.4s  entrega t=20091  comio 0  dist None  okU 0.5  via lenta  muertes 260  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:41:40 +  211.4s]     BAR-H-A1w      s901   3.9s  entrega t=20031  comio 0  dist None  okU 1.0  via lenta  muertes 7  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:41:43 +  214.5s]     BAR-H-A1w      s902   3.1s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 260  W(ref) -5.0 W(herm) -5.0 W(otro) -5.0
+[16:41:47 +  218.6s]     BAR-T-A1w      s901   4.1s  entrega t=20031  comio 0  dist None  okU 0.5  via lenta  muertes 9  W(ref) -5.0 W(herm) -5.0 W(otro) -1.0
+[16:41:50 +  221.9s]     BAR-T-A1w      s902   3.3s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 258  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:41:54 +  225.5s]     VALOR-A1w      s901   3.6s  entrega t=20031  comio 0  dist None  okU 0.6667  via lenta  muertes 9  W(ref) -9.0 W(herm) -9.0 W(otro) -5.0
+[16:41:57 +  228.6s]     VALOR-A1w      s902   3.2s  entrega t=20091  comio 1  dist None  okU 0.6667  via lenta  muertes 260  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:42:00 +  232.2s]     PAR-A1w        s901   3.5s  entrega t=20108  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 19  W(ref) -5.0 W(herm) -9.0 W(otro) -9.0
+[16:42:03 +  235.2s]     PAR-A1w        s902   3.0s  entrega t=20088  comio 1  dist 1.0  okU 0.8333  via lenta  muertes 268  W(ref) -5.0 W(herm) -5.0 W(otro) -9.0
+[16:42:07 +  238.7s]     PAR0-A1w       s901   3.5s  entrega t=20108  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 17  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:42:10 +  241.7s]     PAR0-A1w       s902   2.9s  entrega t=20088  comio 0  dist 0.0  okU 0.8333  via lenta  muertes 273  W(ref) -9.0 W(herm) -9.0 W(otro) -9.0
+[16:42:10 +  241.7s] CRUDO -> humo_a1_20260919_163808_crudo.json  sha256_16 = ed10c54cec99dfc4  (ERR-54: antes del analisis)
+[16:42:10 +  241.7s] 
+[16:42:10 +  241.7s] TABLA (com = comio a la 1.a exposicion de la VIDA al referente / n; dist = trata distinto a la hermana)
+[16:42:10 +  241.7s] celda      CANAL  CORTADO    BAR-H    BAR-T    VALOR      PAR     PAR0   dist(PAR)  dist(PAR0)  muertes  okU
+[16:42:10 +  241.7s] b5k3       2/2      0/2      2/2      1/2      0/2      2/2      0/2     2/2      0/2       151.5     0.8334
+[16:42:10 +  241.7s] b6suf      2/2      0/2      0/2      1/2      0/2      2/2      0/2     2/2      0/2       10.0     0.75
+[16:42:10 +  241.7s] A1xm       2/2      0/2      2/2      0/2      0/2      2/2      0/2     1/2      0/2       19.5     0.8333
+[16:42:10 +  241.7s] A1x1       2/2      0/2      1/2      0/2      0/2      2/2      0/2     2/2      0/2       135.0     0.5
+[16:42:10 +  241.7s] A1x        2/2      0/2      1/2      1/2      1/2      2/2      0/2     2/2      0/2       134.0     0.5834
+[16:42:10 +  241.7s] A1w        2/2      0/2      1/2      1/2      1/2      2/2      0/2     2/2      0/2       134.0     0.5834
+[16:42:10 +  241.7s] 
+[16:42:10 +  241.7s] LECTURA (humo, 2-3 semillas: NO es evidencia). Lo que hay que mirar: (1) CANAL alto y CORTADO bajo en A1; (2) BAR-T y BAR-H a la vez bajos -- eso es lo que ninguna celda anterior consiguio; (3) dist(PAR) alto con dist(PAR0) bajo; (4) muertes de A1 <= 1.5 x las de b5k3 (R6, la puerta que mato a k = 5).
+[16:42:10 +  241.7s] datos -> humo_a1_20260919_163808.json  sha256_16 = c443dab127a9cb4c

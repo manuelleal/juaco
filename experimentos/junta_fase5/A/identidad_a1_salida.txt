@@ -1,0 +1,112 @@
+  sha organismo_v14.py (TRONCO CONGELADO)          feefc88b1fd8d434  OK
+  sha organismo_v15f_on.py                         54d6efe0b564113c  OK
+  sha organismo_familias.py (bloque 1)             b9dd561a0cf056b8  OK
+  sha organismo_familias_b4b.py (bloque 4b)        b3dd1d7e66a2d147  OK
+  sha organismo_familias_b5.py (bloque 5)          e0b6b90f6f92d5c1  OK
+  sha organismo_familias_b6.py (bloque 6)          b10cbd4ddd0c32a3  OK
+  sha construye_familias_a1.py                     fe023157ea34b62c
+  sha organismo_familias_a1.py                     8833e1dcfb62f26d
+  T = 20000 (ancla del rng: 120000; canal: 60000), semillas (1, 2, 3), k = (1, 3), tipos: 36 forma + 27 mixtas (+3 puras FUERA) = 66, UN proceso
+
+  emisores con mensaje (-): 2/3 -> (1, 2)
+
+APAGADO (dos_tipos=0): organismo_familias_a1 == organismo_familias_b6, para CUALQUIER k y sufijo
+  [  16.2s] (a) mundo=AB base                                                          2/2 IDENTICO
+  [  19.4s] (a) k=1 sufijo=1 mundo=AB base                                             2/2 IDENTICO
+  [  22.6s] (a) k=3 sufijo=0 mundo=AB base                                             2/2 IDENTICO
+  [  25.8s] (a) k=3 sufijo=1 mundo=AB base                                             2/2 IDENTICO
+  [  29.0s] (b) mundo=AB, relevo ENCENDIDO (v15f)                                      2/2 IDENTICO
+  [  32.2s] (b) k=1 sufijo=1 mundo=AB, relevo ENCENDIDO (v15f)                         2/2 IDENTICO
+  [  35.3s] (b) k=3 sufijo=0 mundo=AB, relevo ENCENDIDO (v15f)                         2/2 IDENTICO
+  [  38.6s] (b) k=3 sufijo=1 mundo=AB, relevo ENCENDIDO (v15f)                         2/2 IDENTICO
+  [  41.6s] (c) mundo=AB, linaje v13                                                   2/2 IDENTICO
+  [  44.8s] (c) k=1 sufijo=1 mundo=AB, linaje v13                                      2/2 IDENTICO
+  [  47.9s] (c) k=3 sufijo=0 mundo=AB, linaje v13                                      2/2 IDENTICO
+  [  51.0s] (c) k=3 sufijo=1 mundo=AB, linaje v13                                      2/2 IDENTICO
+  [  55.3s] (d) mundo=familias (bloque 1)                                              2/2 IDENTICO
+  [  59.5s] (d) k=1 sufijo=1 mundo=familias (bloque 1)                                 2/2 IDENTICO
+  [  63.8s] (d) k=3 sufijo=0 mundo=familias (bloque 1)                                 2/2 IDENTICO
+  [  68.2s] (d) k=3 sufijo=1 mundo=familias (bloque 1)                                 2/2 IDENTICO
+  [  73.8s] (e) el mundo del bloque 4, EMISOR                                          2/2 IDENTICO
+  [  79.7s] (e) k=1 sufijo=1 el mundo del bloque 4, EMISOR                             2/2 IDENTICO
+  [  90.0s] (e) k=3 sufijo=0 el mundo del bloque 4, EMISOR                             2/2 IDENTICO
+  [ 105.2s] (e) k=3 sufijo=1 el mundo del bloque 4, EMISOR                             2/2 IDENTICO
+  [ 120.9s] (f) el mundo del bloque 4, RECEPTOR                                        2/2 IDENTICO
+  [ 135.3s] (f) k=1 sufijo=1 el mundo del bloque 4, RECEPTOR                           2/2 IDENTICO
+  [ 148.1s] (f) k=3 sufijo=0 el mundo del bloque 4, RECEPTOR                           2/2 IDENTICO
+  [ 158.9s] (f) k=3 sufijo=1 el mundo del bloque 4, RECEPTOR                           2/2 IDENTICO
+  [ 169.3s] (g) el emisor VORAZ anotando (voraz=1.0)                                   2/2 IDENTICO
+  [ 182.6s] (g) k=1 sufijo=1 el emisor VORAZ anotando (voraz=1.0)                      2/2 IDENTICO
+  [ 193.0s] (g) k=3 sufijo=0 el emisor VORAZ anotando (voraz=1.0)                      2/2 IDENTICO
+  [ 202.8s] (g) k=3 sufijo=1 el emisor VORAZ anotando (voraz=1.0)                      2/2 IDENTICO
+  [ 213.8s] (h) el brazo PAR del bloque 4b (par_herm=(1,0))                            2/2 IDENTICO
+  [ 224.8s] (h) k=1 sufijo=1 el brazo PAR del bloque 4b (par_herm=(1,0))               2/2 IDENTICO
+  [ 235.0s] (h) k=3 sufijo=0 el brazo PAR del bloque 4b (par_herm=(1,0))               2/2 IDENTICO
+  [ 247.6s] (h) k=3 sufijo=1 el brazo PAR del bloque 4b (par_herm=(1,0))               2/2 IDENTICO
+  ...y con el CANAL ENCENDIDO en sus tres modos (el canal NO se toca)
+  [ 286.0s] (i) canal sen, k = 3                                                       2/2 IDENTICO
+  [ 331.1s] (j) canal inm, k = 3                                                       2/2 IDENTICO
+  [ 367.6s] (k) canal mudo, k = 3                                                      2/2 IDENTICO
+
+RNG NO CONSUMIDO por la perilla apagada (ancla larga)
+  [ 414.0s] (l1) mundo=AB a T = 120000, relevo ENCENDIDO, k = 1                        2/2 IDENTICO
+  [ 458.1s] (l3) mundo=AB a T = 120000, relevo ENCENDIDO, k = 3                        2/2 IDENTICO
+
+CADENA COMPLETA (se comprueba hasta el TRONCO, no se supone)
+  [ 469.2s] (m) apagado == organismo_familias_b5 (mundo del bloque 4, k = 3)           2/2 IDENTICO
+  [ 482.6s] (n) apagado == organismo_familias_b4b (mundo del bloque 4, emisor voraz)   2/2 IDENTICO
+  [ 493.6s] (o) apagado + mundo=AB == organismo_v14 (TRONCO CONGELADO)                 3/3 IDENTICO
+  [ 504.4s] (p) relevo ON + mundo=AB == organismo_v15f_on                              3/3 IDENTICO
+  [ 511.1s] (q) apagado + mundo=familias == organismo_familias (bloque 1)              2/2 IDENTICO
+
+INERCIA: las perillas de LECTURA no existen sin `dos_tipos` (y `msg_elige`=1 es b6 literal)
+  [ 525.6s] (r0) dos_tipos=0: combina/dentro/exige_dir son INERTES (== b6, mundo del receptor, k = 3) 2/2 IDENTICO
+  [ 569.2s] (r3) MEDIDO INERTE: `dentro`='min' == 'suma' en el brazo BAR-H tras el mensaje -- las ganadoras de un MISMO tipo, elegidas por error propio, no discrepan entre si (por eso el candidato NO lo lleva) 2/2 IDENTICO
+  [ 581.9s] (r2) con combina='min' los pesos de tipo son INERTES (el minimo no los usa) 2/2 IDENTICO
+  [ 593.5s] (r1) dos_tipos=1 con pesos/eta_w: `eta_w` es INERTE sin `pesos_tipo` (== pesos_tipo=0) 2/2 IDENTICO
+
+INERCIA: con memoria_pares=None NO hay tabla que leer -> `dos_tipos` no existe
+  [ 603.9s] (r) memoria_pares=None: dos_tipos=1 == dos_tipos=0 (mundo=AB)              3/3 IDENTICO
+  [ 618.6s] (s) memoria_pares=None: dos_tipos=1 == dos_tipos=0 (mundo de familias)     3/3 IDENTICO
+
+ESTRUCTURA de los dos tipos (la particion de las 66 celdas, reimplementada FUERA)
+  [ 635.2s] (A) la particion de dentro == la de fuera (36 forma + 27 mixtas; 3 puras FUERA) 1/1 OK
+  [ 635.2s] (B) las ganadoras de FORMA son pares de dos px de forma, sin repetir (ciegas a la variante) 1/1 OK
+  [ 635.2s] (C) las ganadoras de VARIANTE son mixtas y cubren UN pixel de variante cada una 1/1 OK
+  [ 635.2s] (D) la eleccion de ganadoras es DETERMINISTA (misma semilla -> mismas ganadoras) 1/1 OK
+
+EL MECANISMO HACE LO QUE DICE (diagnostico estructural de la direccion CONJUNTA, no conducta)
+  [ 652.1s] (E) la direccion CONJUNTA de dentro == la reimplementada FUERA (funcion solo de la retina) 1/1 OK
+  [ 652.1s] (F) el grupo CONJUNTO es subconjunto del grupo por BIN de k = 3 (los tipos solo pueden afinar) 1/1 OK
+  [ 652.1s] (G) con dos_tipos=1 la HERMANA NUNCA comparte la direccion conjunta del referente 1/1 OK
+  [ 652.1s] (H) el referente esta SIEMPRE en su propia direccion conjunta (escritura y lectura coinciden) 1/1 OK
+        s1: por BIN k3 4/32 -> CONJUNTA 1/32 (hermana en el BIN: True)  s2: por BIN k3 2/32 -> CONJUNTA 2/32 (hermana en el BIN: False)
+
+PESOS POR TIPO (la regla multiplicativa normalizada)
+  [ 663.6s] (I) con pesos_tipo=0 los dos pesos valen 1.0 EXACTO al final (la perilla no se mueve sola) 1/1 OK
+  [ 663.6s] (J) con pesos_tipo=1 los pesos siguen normalizados (media 1) y positivos   1/1 OK
+
+PERILLA MAL ESCRITA (no cae en silencio)
+  [ 663.6s] (K) dos_tipos=2 lanza                                                      1/1 LANZA (como debe)
+  [ 663.6s] (L) dos_tipos=True lanza (un bool no es una perilla)                       1/1 LANZA (como debe)
+  [ 663.6s] (M) dos_tipos='1' lanza                                                    1/1 LANZA (como debe)
+  [ 663.6s] (N) k_forma=0 lanza                                                        1/1 LANZA (como debe)
+  [ 663.6s] (O) k_var=-1 lanza                                                         1/1 LANZA (como debe)
+  [ 663.6s] (P) var_cubre=2 lanza                                                      1/1 LANZA (como debe)
+  [ 663.6s] (Q) pesos_tipo=0.5 lanza                                                   1/1 LANZA (como debe)
+  [ 663.6s] (R) eta_w=-1 lanza                                                         1/1 LANZA (como debe)
+  [ 663.6s] (S) dos_tipos=1 con fam_nvar=0 lanza (no hay tipo VARIANTE)                1/1 LANZA (como debe)
+  [ 663.6s] (S2) combina='suma' lanza (no es una de las dos)                           1/1 LANZA (como debe)
+  [ 663.6s] (S3) dentro='media' lanza                                                  1/1 LANZA (como debe)
+  [ 663.6s] (S4) exige_dir=2 lanza                                                     1/1 LANZA (como debe)
+  [ 663.6s] (S5) msg_elige=True lanza (un bool no es una perilla)                      1/1 LANZA (como debe)
+
+CONTROLES QUE DEBEN FALLAR (sin ellos el arnes pasaria por vacuidad; ERR-64b: >= 2 de 3)
+  [ 681.9s] (T) dos_tipos=1 cambia la corrida con el relevo ON (DEBE diferir)          3/3 DIFIERE (como debe)
+  [ 701.2s] (U) pesos_tipo=1 cambia la corrida con combina='media' (DEBE diferir)      3/3 DIFIERE (como debe)
+  [ 734.5s] (T2) msg_elige=0 cambia la corrida CON canal (DEBE diferir: el mensaje ya no re-elige) 2/2 DIFIERE (como debe)
+  [ 773.0s] (V) CANAL != CORTADO con dos_tipos=1 (DEBE diferir)                        2/2 DIFIERE (como debe)
+  [ 810.9s] (W) el patron de la HERMANA != CANAL con dos_tipos=1 (DEBE diferir: es el brazo que decide) 2/2 DIFIERE (como debe)
+  [ 836.9s] (X) el patron de OTRO TOKEN != CANAL con dos_tipos=1 (DEBE diferir)        2/2 DIFIERE (como debe)
+
+IDENTIDAD 77/77  -> el paquete puede correr.

@@ -1,0 +1,22 @@
+[17:41:49 +    0.0s] SERIE A1 (creador A, junta fase 5): celdas ['A1'], brazos ['CANAL', 'CORTADO', 'BAR-H', 'BAR-T', 'VALOR', 'PAR', 'PAR0'], semillas 901-902, T=6000, Pool(2).
+[17:41:49 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla.
+[17:41:49 +    0.0s]     sha script                   f9a7c9d0af371b98
+[17:41:49 +    0.0s]     sha constructor              fe023157ea34b62c
+[17:41:49 +    0.0s]     sha instrumento              8833e1dcfb62f26d
+[17:41:49 +    0.0s]     sha arnes                    e0999d33d882c5c7
+[17:41:49 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[17:41:49 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[17:41:49 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[17:41:49 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[17:41:49 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[17:41:49 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[17:41:49 +    0.3s] ETAPA 1/3 - DIAGNOSTICO ESTRUCTURAL (T = 0, 2 semillas)
+[17:41:49 +    0.4s]     alias por par mediana 0.0181  piso de forma 4.0/32
+[17:41:49 +    0.4s] ETAPA 2/3 - EMISORES (2 corridas de 6000 pasos; son los del bloque 6 bit a bit)
+[17:41:50 +    1.4s]     emiten 0/2; sin mensaje (se EXCLUYEN, P-I2): [901, 902]
+[17:41:50 +    1.4s] ETAPA 3/3 - RECEPTORES: 0 corridas de 6000 pasos...
+[17:41:51 +    1.5s] CRUDO -> serie_a1_s901-902_20260919_174149_crudo.json  sha256_16 = 2089182e96252594  (ERR-54)
+[17:41:51 +    1.5s] 
+[17:41:51 +    1.5s] celda      CANAL  CORTADO    BAR-H    BAR-T    VALOR      PAR     PAR0   dist(PAR)  dist(PAR0)  muertes  okU
+[17:41:51 +    1.5s] A1         0/0      0/0      0/0      0/0      0/0      0/0      0/0     0/0      0/0       None     None
+[17:41:51 +    1.5s]   [A1] R1 CANAL 0/0 >= 15 y CORTADO 0 <= 5: CAE; R2 BAR-T 0 <= CORTADO+3: pasa; R3 BAR-H 0 <= CORTADO+5: pasa; R4 VALOR 0 <= CORTADO+3: pasa; R5 dist 0/0 >= 12 y >= gemelo+5 (0): CAE  |  MISION (BAR-T <= 5 Y PAR >= 15): no

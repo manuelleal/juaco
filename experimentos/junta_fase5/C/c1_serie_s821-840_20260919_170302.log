@@ -1,0 +1,36 @@
+[17:03:02 +    0.0s] CONFIRMACION -- CREADOR C, junta de la fase 5: `variante_hija` (LA CASILLA QUE SE DIVIDE).
+[17:03:02 +    0.0s] Semillas 821-840, T = 100000, 27 brazos = 3 celdas x 9. Pool(14). Direccion (-) sola (ERR-53).
+[17:03:02 +    0.0s] La letra y las exclusiones estan en UMBRALES (escritas ANTES de correr; P-I5 segun la decision del coordinador del 19-sep: puerta de VALIDEZ, exclusion por semilla declarada, mismo trato para la linea base).
+[17:03:02 +    0.0s]     sha instrumento_c1           6854bb683a610a68
+[17:03:02 +    0.0s]     sha arnes_c1                 56a64fd637b66c0b
+[17:03:02 +    0.0s]     sha script                   a1349fb8bcd0babf
+[17:03:02 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3  OK
+[17:03:02 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1  OK
+[17:03:02 +    0.0s]     sha runner_b6                88253f352d921c42
+[17:03:02 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434  OK
+[17:03:02 +    0.5s] REGLA 11 - procesos python vivos (37), este es pid 2432
+[17:03:04 +    1.8s] ETAPA 1/3 - IDENTIDAD, P-I1 (9 casos x 3 = 27). (K), (C) y (H) DEBEN diferir: sin ellos la etapa pasa por vacuidad. El arnes completo (61/61) es identidad_c1.py.
+[17:03:50 +   48.4s]     (a) vh=0, k=3 == organismo_familias_b6 (el mundo del bloque 4, RECEPTOR)       3/3
+[17:03:50 +   48.4s]     (b) vh=0, k=3, sufijo b6=1 == organismo_familias_b6 (el brazo k3v1 es b6 BIT A BIT) 3/3
+[17:03:50 +   48.4s]     (n) vh=0, k=1, mundo=AB == organismo_v14 (TRONCO)                              3/3
+[17:03:50 +   48.4s]     (x) memoria_pares=None: vh=1 == vh=0 (la perilla es INERTE sin tabla)          3/3
+[17:03:50 +   48.4s]     (e) perilla mal escrita LANZA (2, -1, 0.5, '1', True, y vh=1 con mv=1)         3/3
+[17:03:50 +   48.4s]     (d) la DIVISION: la HERMANA sale de la direccion del referente y el referente sigue dentro 3/3
+[17:03:50 +   48.4s]     (K) vh=1 != vh=0 con el relevo ON (DEBE diferir)                               3/3
+[17:03:50 +   48.4s]     (C) CANAL-k3h1 != CORTADO-k3h1 (DEBE diferir)                                  2/3   semilla 3: difieren ['sin mensaje (-)']
+[17:03:50 +   48.4s]     (H) BAR-H-k3h1 != CANAL-k3h1 (DEBE diferir: es el brazo que decide)            2/3   semilla 3: difieren ['sin mensaje (-)']
+[17:03:50 +   48.4s]   IDENTIDAD 25/27
+[17:03:50 +   48.4s] ETAPA 2/3 - EMISORES (20 corridas de 100000; mv = 0, k = 1 = b4b bit a bit, sin tocar).
+[17:04:28 +   86.7s]     emiten 19/20; sin mensaje (excluidas, P-I2): [828]
+[17:04:28 +   86.7s] ETAPA 3/3 - RECEPTORES: 513 corridas de 100000 pasos...
+[17:05:45 +  162.7s]           40/513
+[17:06:47 +  225.0s]           80/513
+[17:07:46 +  283.9s]           120/513
+[17:08:44 +  341.9s]           160/513
+[17:09:50 +  408.7s]           200/513
+[17:10:52 +  470.4s]           240/513
+[17:11:51 +  528.8s]           280/513
+[17:12:59 +  597.7s]           320/513
+[17:14:00 +  658.0s]           360/513
+[17:15:09 +  727.3s]           400/513
+[17:16:17 +  794.8s]           440/513

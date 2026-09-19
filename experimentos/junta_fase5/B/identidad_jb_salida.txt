@@ -1,0 +1,125 @@
+  sha organismo_v14.py (TRONCO CONGELADO)          feefc88b1fd8d434  OK
+  sha organismo_familias_b5.py (bloque 5)          e0b6b90f6f92d5c1  OK
+  sha organismo_familias_b6.py (bloque 6, ORIGEN)  b10cbd4ddd0c32a3  OK
+  sha construye_familias_jb.py                     ee017b4511a8eb38
+  sha organismo_familias_jb.py                     312a68054dbae7f6
+  T = 20000 (ancla del rng: 120000; canal: 60000), semillas (1, 2, 3), k = (1, 3), mem_marginal = (1, 2, 3), UN proceso
+
+  emisores con mensaje (-): 2/3 -> (1, 2)
+
+APAGADO (mem_marginal=0): organismo_familias_jb == organismo_familias_b6, con el sufijo ON y OFF
+  [  17.3s] (a) mundo=AB base  [k=1, sufijo=0]                                       2/2 IDENTICO
+  [  20.8s] (a) mundo=AB base  [k=1, sufijo=1]                                       2/2 IDENTICO
+  [  24.2s] (a) mundo=AB base  [k=3, sufijo=0]                                       2/2 IDENTICO
+  [  27.7s] (a) mundo=AB base  [k=3, sufijo=1]                                       2/2 IDENTICO
+  [  31.1s] (b) mundo=AB, relevo de pares ENCENDIDO (v15f)  [k=1, sufijo=0]          2/2 IDENTICO
+  [  34.5s] (b) mundo=AB, relevo de pares ENCENDIDO (v15f)  [k=1, sufijo=1]          2/2 IDENTICO
+  [  37.9s] (b) mundo=AB, relevo de pares ENCENDIDO (v15f)  [k=3, sufijo=0]          2/2 IDENTICO
+  [  41.4s] (b) mundo=AB, relevo de pares ENCENDIDO (v15f)  [k=3, sufijo=1]          2/2 IDENTICO
+  [  46.0s] (c) mundo=familias (bloque 1)  [k=1, sufijo=0]                           2/2 IDENTICO
+  [  50.6s] (c) mundo=familias (bloque 1)  [k=1, sufijo=1]                           2/2 IDENTICO
+  [  55.3s] (c) mundo=familias (bloque 1)  [k=3, sufijo=0]                           2/2 IDENTICO
+  [  60.0s] (c) mundo=familias (bloque 1)  [k=3, sufijo=1]                           2/2 IDENTICO
+  [  66.2s] (d) escenario S del bloque 2/3 (vira=8, relevo)  [k=1, sufijo=0]         2/2 IDENTICO
+  [  72.7s] (d) escenario S del bloque 2/3 (vira=8, relevo)  [k=1, sufijo=1]         2/2 IDENTICO
+  [  79.1s] (d) escenario S del bloque 2/3 (vira=8, relevo)  [k=3, sufijo=0]         2/2 IDENTICO
+  [  85.5s] (d) escenario S del bloque 2/3 (vira=8, relevo)  [k=3, sufijo=1]         2/2 IDENTICO
+  [  91.5s] (e) el mundo del bloque 4, EMISOR  [k=1, sufijo=0]                       2/2 IDENTICO
+  [  97.9s] (e) el mundo del bloque 4, EMISOR  [k=1, sufijo=1]                       2/2 IDENTICO
+  [ 104.3s] (e) el mundo del bloque 4, EMISOR  [k=3, sufijo=0]                       2/2 IDENTICO
+  [ 111.0s] (e) el mundo del bloque 4, EMISOR  [k=3, sufijo=1]                       2/2 IDENTICO
+  [ 117.2s] (f) el mundo del bloque 4, RECEPTOR  [k=1, sufijo=0]                     2/2 IDENTICO
+  [ 123.5s] (f) el mundo del bloque 4, RECEPTOR  [k=1, sufijo=1]                     2/2 IDENTICO
+  [ 129.8s] (f) el mundo del bloque 4, RECEPTOR  [k=3, sufijo=0]                     2/2 IDENTICO
+  [ 136.5s] (f) el mundo del bloque 4, RECEPTOR  [k=3, sufijo=1]                     2/2 IDENTICO
+  [ 142.5s] (g) el emisor VORAZ del bloque 4b anotando  [k=1, sufijo=0]              2/2 IDENTICO
+  [ 148.7s] (g) el emisor VORAZ del bloque 4b anotando  [k=1, sufijo=1]              2/2 IDENTICO
+  [ 154.8s] (g) el emisor VORAZ del bloque 4b anotando  [k=3, sufijo=0]              2/2 IDENTICO
+  [ 161.3s] (g) el emisor VORAZ del bloque 4b anotando  [k=3, sufijo=1]              2/2 IDENTICO
+  ...y con el CANAL ENCENDIDO en sus tres modos (el canal NO se toca)
+  [ 179.3s] (h) canal sen, k = 3, sufijo=0                                           2/2 IDENTICO
+  [ 199.9s] (h) canal sen, k = 3, sufijo=1                                           2/2 IDENTICO
+  [ 218.1s] (i) canal inm, k = 3, sufijo=0                                           2/2 IDENTICO
+  [ 238.6s] (i) canal inm, k = 3, sufijo=1                                           2/2 IDENTICO
+  [ 256.3s] (j) canal mudo, k = 3, sufijo=0                                          2/2 IDENTICO
+  [ 276.4s] (j) canal mudo, k = 3, sufijo=1                                          2/2 IDENTICO
+
+RNG NO CONSUMIDO por la perilla apagada (ancla larga)
+  [ 296.6s] (k1) mundo=AB a T = 120000, relevo ON, sufijo ON, k = 1                  2/2 IDENTICO
+  [ 316.7s] (k3) mundo=AB a T = 120000, relevo ON, sufijo ON, k = 3                  2/2 IDENTICO
+
+INERTE CON EL SUFIJO APAGADO: memoria_variante=0 -> mem_marginal NO PUEDE HACER NADA
+  (la marginal de un bin de UNA subcasilla es esa misma subcasilla: la configuracion que no usa mi
+   mecanismo es BIT A BIT la del bloque 6, y por su cadena la del bloque 5 y la del TRONCO)
+  [ 334.7s] (l1m1) mv=0, k=1, mem_marginal=1 == b6 (el mundo del RECEPTOR, con canal sen) 2/2 IDENTICO
+  [ 339.3s] (m1m1) mv=0, k=1, mem_marginal=1 == b6 (mundo de familias, sin canal)    2/2 IDENTICO
+  [ 357.2s] (l3m1) mv=0, k=3, mem_marginal=1 == b6 (el mundo del RECEPTOR, con canal sen) 2/2 IDENTICO
+  [ 361.7s] (m3m1) mv=0, k=3, mem_marginal=1 == b6 (mundo de familias, sin canal)    2/2 IDENTICO
+  [ 379.8s] (l1m2) mv=0, k=1, mem_marginal=2 == b6 (el mundo del RECEPTOR, con canal sen) 2/2 IDENTICO
+  [ 384.4s] (m1m2) mv=0, k=1, mem_marginal=2 == b6 (mundo de familias, sin canal)    2/2 IDENTICO
+  [ 402.2s] (l3m2) mv=0, k=3, mem_marginal=2 == b6 (el mundo del RECEPTOR, con canal sen) 2/2 IDENTICO
+  [ 406.7s] (m3m2) mv=0, k=3, mem_marginal=2 == b6 (mundo de familias, sin canal)    2/2 IDENTICO
+  [ 424.6s] (l1m3) mv=0, k=1, mem_marginal=3 == b6 (el mundo del RECEPTOR, con canal sen) 2/2 IDENTICO
+  [ 429.0s] (m1m3) mv=0, k=1, mem_marginal=3 == b6 (mundo de familias, sin canal)    2/2 IDENTICO
+  [ 446.7s] (l3m3) mv=0, k=3, mem_marginal=3 == b6 (el mundo del RECEPTOR, con canal sen) 2/2 IDENTICO
+  [ 452.5s] (m3m3) mv=0, k=3, mem_marginal=3 == b6 (mundo de familias, sin canal)    2/2 IDENTICO
+
+INERTE CON k = 1: con UNA sola ganadora, la CONJUNCION y la DISYUNCION son la misma regla
+  [ 460.9s] (j0) k=1, mem_conj=1 == mem_conj=0 (sufijo=0, el mundo del RECEPTOR)     2/2 IDENTICO
+  [ 469.5s] (j1) k=1, mem_conj=1 == mem_conj=0 (sufijo=1, el mundo del RECEPTOR)     2/2 IDENTICO
+
+INERCIA: con memoria_pares=None no hay tabla que leer
+  [ 475.6s] (n1) memoria_pares=None: mem_marginal=1 == 0 (mundo de familias, k = 3, sufijo ON) 2/2 IDENTICO
+  [ 481.7s] (n2) memoria_pares=None: mem_marginal=2 == 0 (mundo de familias, k = 3, sufijo ON) 2/2 IDENTICO
+  [ 487.8s] (n3) memoria_pares=None: mem_marginal=3 == 0 (mundo de familias, k = 3, sufijo ON) 2/2 IDENTICO
+
+CADENA (se comprueba hasta el TRONCO, no se supone)
+  [ 492.3s] (o) apagado + mundo=AB == organismo_v14 (TRONCO CONGELADO)               2/2 IDENTICO
+  [ 496.8s] (p) relevo ON + mundo=AB == organismo_v15f_on                            2/2 IDENTICO
+  [ 505.8s] (q0) sufijo OFF + mem_marginal=0 == organismo_familias_b5 (el mundo del RECEPTOR, k = 3) 2/2 IDENTICO
+  [ 514.7s] (q1) sufijo OFF + mem_marginal=1 == organismo_familias_b5 (el mundo del RECEPTOR, k = 3) 2/2 IDENTICO
+  [ 523.7s] (q2) sufijo OFF + mem_marginal=2 == organismo_familias_b5 (el mundo del RECEPTOR, k = 3) 2/2 IDENTICO
+  [ 532.8s] (q3) sufijo OFF + mem_marginal=3 == organismo_familias_b5 (el mundo del RECEPTOR, k = 3) 2/2 IDENTICO
+  [ 539.7s] (r) sufijo OFF + k=1 == organismo_familias_b4b (el mundo del bloque 4, emisor voraz) 2/2 IDENTICO
+
+PERILLA MAL ESCRITA (no cae en silencio)
+  [ 539.7s] (s) mem_marginal=4 lanza                                                 1/1 LANZA (como debe)
+  [ 539.7s] (t) mem_marginal=-1 lanza                                                1/1 LANZA (como debe)
+  [ 539.7s] (u) mem_marginal=0.5 lanza                                               1/1 LANZA (como debe)
+  [ 539.7s] (v) mem_marginal='1' lanza                                               1/1 LANZA (como debe)
+  [ 539.7s] (w) mem_marginal=True lanza (un bool no es una perilla)                  1/1 LANZA (como debe)
+  [ 539.7s] (w2) mem_canales=3 lanza                                                 1/1 LANZA (como debe)
+  [ 539.7s] (w3) mem_conj=2 lanza                                                    1/1 LANZA (como debe)
+  [ 539.7s] (w4) mem_kvar=0 lanza                                                    1/1 LANZA (como debe)
+  [ 539.7s] (w5) mem_canales=1 con fam_nvar=0 lanza (un canal vacio)                 1/1 LANZA (como debe)
+
+ESTRUCTURA: la marginal REIMPLEMENTADA FUERA del organismo == la de dentro
+  [ 569.4s] (x) lectura de dentro (`W_tabla`) == lectura reimplementada FUERA, estimulo a estimulo 1/1 OK
+  [ 569.4s] (y) la DIRECCION exportada == la reimplementada fuera (funcion solo de la retina presente) 1/1 OK
+  [ 569.4s] (z) sobre LA MISMA tabla, quien abstiene con relevo abstiene tambien sin el (el relevo solo QUITA abstencion) 1/1 OK
+        abstenciones sobre la misma tabla (semilla, b6 -> relevo, de 32): 1: 16->0  2: 16->0  3: 16->0
+
+EL MECANISMO HACE LO QUE DICE (estructural; no es conducta)
+  [ 652.0s] (A) con el relevo la HERMANA sigue FUERA de la direccion del mensaje (el sufijo no se diluye) 1/1 OK
+  [ 652.0s] (B) el referente sigue SIEMPRE en su propia direccion (escritura y lectura coinciden) 1/1 OK
+  [ 652.0s] (C) el diagnostico por direccion existe en las semillas que emiten       1/1 OK
+        (s, mem_marginal, grupo por DIRECCION /32, estimulos con las 3 celdas EXACTAS /32, estimulos que ABSTIENEN /32): (1, 0, 3, 32, 0)  (1, 1, 2, 23, 0)  (1, 2, 2, 23, 0)  (1, 3, 2, 23, 0)  (2, 0, 1, 31, 0)  (2, 1, 3, 29, 0)  (2, 2, 3, 29, 0)  (2, 3, 3, 29, 0)
+
+CONTROLES QUE DEBEN FALLAR (sin ellos el arnes pasaria por vacuidad; ERR-64b: >= 2 de 3)
+  [ 671.2s] (D1) con el sufijo ON, mem_marginal=1 CAMBIA la corrida, k = 3 (DEBE diferir) 3/3 DIFIERE (como debe)
+  [ 689.6s] (D2) con el sufijo ON, mem_marginal=2 CAMBIA la corrida, k = 3 (DEBE diferir) 3/3 DIFIERE (como debe)
+  [ 704.1s] (D3) con el sufijo ON, mem_marginal=3 CAMBIA la corrida, k = 3 (DEBE diferir) 3/3 DIFIERE (como debe)
+  [ 725.5s] (D-c1) mem_canales=1 CAMBIA la corrida, k = 3 (DEBE diferir)             3/3 DIFIERE (como debe)
+  [ 740.6s] (D-c2) mem_canales=2 CAMBIA la corrida, k = 3 (DEBE diferir)             3/3 DIFIERE (como debe)
+  [ 754.8s] (D-j) mem_conj=1 CAMBIA la corrida con el sufijo ON, k = 3 (DEBE diferir) 3/3 DIFIERE (como debe)
+  [ 781.3s] (E) CANAL != CORTADO con sufijo ON y relevo ON, k = 3 (DEBE diferir)     2/2 DIFIERE (como debe)
+  [ 827.6s] (F) el patron de la HERMANA != CANAL, relevo ON, k = 3 (DEBE diferir)    2/2 DIFIERE (como debe)
+  [ 874.7s] (G) el patron de OTRO TOKEN != CANAL, relevo ON, k = 3 (DEBE diferir)    2/2 DIFIERE (como debe)
+
+EL MONTAJE E -> R (ERR-71: la direccion se comprueba SIN pasar por el emisor)
+  [1084.5s] (H) P-I3: CANAL y CORTADO comparten el prefijo EXACTO hasta la entrega, en los 3 modos 1/1 OK
+  [1084.5s] (I) P-I4: el receptor NUNCA habia visto el referente antes de la entrega, en los 3 modos 1/1 OK
+  [1112.2s] (J) el mensaje es el MISMO objeto que en b6 (el emisor no cambia)        1/1 OK
+  [1159.6s] (K) el receptor NO ve al emisor: mismo (t, ref, P, R) sin pasar por E -> identico 1/1 OK
+
+IDENTIDAD 88/88  -> el instrumento puede medir.

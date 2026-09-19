@@ -798,3 +798,26 @@ dE5 después; (4) la fase 5 pide un candidato con dos ganadoras de tipo distinto
 aprenda en menos de una vida (nodo leído por relevancia; conexión desde el nacimiento como mecanismo; reproducción desacoplada de la saciedad).
 Regla para el coordinador (de esta noche): todo parche propio se compila y pasa el arnés en una semilla antes del Pool; lo que sea instrumento
 lo hace un creador con arnés y humo.
+
+### 15.12 Junta de la fase 5 (19-sep-2026, tres creadores Opus con exoesqueleto y nave)
+Pedido del director: tres Opus con memoria por consecuencia (bitácora compartida `experimentos/junta_fase5/BITACORA_CONSECUENCIAS.md`),
+calibración (rápido / preguntar / razonar) y una "nave" (copias propias, identidad bit a bit obligatoria, humo en 901-910,
+confirmación en 821-860 corrida SÓLO por el coordinador). Misión y criterio: `experimentos/junta_fase5/MISION.md` —
+una tabla que refiera a familia Y variante a la vez (BAR-T ≤ 5/20 y PAR ≥ 15/20, con las puertas del bloque 6).
+- **C (sistemas vivos)** — `C/organismo_familias_c1.py`, identidad 61/61: la casilla **se divide** por conflicto de signo sólo
+  donde la distinción de familia falla, hijas con el valor de la madre (fisión). Diagnóstico propio: el techo de b6 fue la
+  DILUCIÓN, no la firma. Predicción firmada: BAR-T 4 (2-6) y PAR 15 (13-18); muertes 35 contra 462 de la base. Declaró un
+  riesgo propio y lo volvió medible: *"el que aprende mejor el mundo deja de escuchar"* (V1: vacuas P-I5 6/20 contra 1/20 de
+  la base; V2: las vacuas tienen menos celdas de Kenyon). Candidato aparte y NO corrido: `C/PREREGISTRO_oreja.md`.
+- **B (representación)** — `B/`, identidad 88/88: la lectura de b5/b6 es una DISYUNCIÓN (la unión de las k direcciones; por eso
+  una celda alcanzada por azar decide sola y BAR-T sube de 5 a 11). Candidato: lectura **CONJUNTIVA** (`mem_conj=1`): contesta
+  sólo si las k celdas conocen su dirección → la referencia pasa a ser la intersección = el referente solo. Predicción firmada:
+  BAR-T 2/20 (0-5) y PAR 15/20 (13-18). Dos ideas propias refutadas y registradas.
+- **A (matemática local)** — propuesta escrita 17:29; midió su propio mecanismo favorito (`combina='min'`, `dentro='min'`) como
+  INERTE y lo retiró del candidato por Occam, con la predicción propia declarada refutada en la bitácora.
+- **Decisiones del coordinador (mismas para los tres):** P-I5 y la vacuidad se leen como puerta de VALIDEZ, no de calidad: la
+  semilla vacua sale del numerador y del denominador de todos los brazos de esa celda, declarada con sus números y con el
+  mismo trato para la línea base; nada de cambiar criterios después de ver datos; toda idea nueva entra como candidato aparte
+  con preregistro propio. **ERR-85 (nuevo, 17:19): un agente de otro proyecto mató procesos python sin verificar el cmdline y
+  tumbó dos corridas; regla nueva: ningún agente mata procesos — sólo el coordinador, y verificando el comando.**
+  **ERR-86: Pool(14) con otras corridas en curso → BrokenPipeError en Windows; el tamaño del Pool se fija por `JUACO_POOL`.**

@@ -1,0 +1,91 @@
+HUMO creador B (REGLAS DE LECTURA: conjuncion / marginal / canales) -- NO ES EVIDENCIA. T = 30000, semillas [901, 902, 903], celdas ['k3v0m0c0j0', 'k3v1m0c0j0', 'k3v1m0c0j1', 'k3v0m0c0j1', 'k3v1m1c0j0'], 7 brazos, un proceso
+  sha instrumento    312a68054dbae7f6
+  sha constructor    ee017b4511a8eb38
+  sha arnes          b577f6925af1a655
+  sha runner         8a1b0ec9e7cd30f4
+  sha origen_b6      b10cbd4ddd0c32a3
+  sha origen_b5      e0b6b90f6f92d5c1
+  sha tronco_v14     feefc88b1fd8d434
+
+  [   3.4s] emisor semilla 901: ref T1v2 R +1.0 t 10634 tras 7 exposiciones
+  [   6.3s] emisor semilla 902: ref T1v2 R +1.0 t 10650 tras 7 exposiciones
+  [  10.7s] emisor semilla 903: ref T1v2 R +1.0 t 11837 tras 12 exposiciones
+  P-I2: emisores con mensaje 3/3 -> [901, 902, 903]
+
+  [  20.5s] CANAL    k3v0m0c0j0: com [1.0, 1.0, 1.0]  dist [None, None, None]  muertes [7, 296, 393]  abstienen [0, 0, 0]/32
+  [  32.1s] CORTADO  k3v0m0c0j0: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [10, 280, 394]  abstienen [0, 0, 0]/32
+  [  42.7s] BAR-H    k3v0m0c0j0: com [1.0, 1.0, 1.0]  dist [None, None, None]  muertes [6, 281, 393]  abstienen [0, 0, 0]/32
+  [  51.5s] BAR-T    k3v0m0c0j0: com [1.0, 0.0, 1.0]  dist [None, None, None]  muertes [7, 301, 391]  abstienen [0, 0, 0]/32
+  [  63.5s] VALOR    k3v0m0c0j0: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [10, 288, 394]  abstienen [0, 0, 0]/32
+  [  77.4s] PAR      k3v0m0c0j0: com [1.0, 1.0, 1.0]  dist [1.0, 1.0, 1.0]  muertes [9, 395, 137]  abstienen [0, 0, 0]/32
+  [  93.2s] PAR0     k3v0m0c0j0: com [0.0, 0.0, 1.0]  dist [0.0, 0.0, 1.0]  muertes [7, 397, 137]  abstienen [0, 0, 0]/32
+  [ 109.8s] CANAL    k3v1m0c0j0: com [1.0, 1.0, 1.0]  dist [None, None, None]  muertes [9, 11, 36]  abstienen [0, 0, 0]/32
+  [ 126.9s] CORTADO  k3v1m0c0j0: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [14, 12, 36]  abstienen [0, 0, 0]/32
+  [ 142.7s] BAR-H    k3v1m0c0j0: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [16, 9, 35]  abstienen [0, 0, 0]/32
+  [ 157.4s] BAR-T    k3v1m0c0j0: com [1.0, 0.0, 1.0]  dist [None, None, None]  muertes [11, 10, 36]  abstienen [0, 0, 0]/32
+  [ 172.9s] VALOR    k3v1m0c0j0: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [8, 12, 33]  abstienen [0, 0, 0]/32
+  [ 187.0s] PAR      k3v1m0c0j0: com [1.0, 1.0, 1.0]  dist [1.0, 1.0, 1.0]  muertes [15, 14, 161]  abstienen [2, 0, 5]/32
+  [ 202.6s] PAR0     k3v1m0c0j0: com [0.0, 0.0, 0.0]  dist [0.0, 0.0, 0.0]  muertes [19, 18, 162]  abstienen [1, 0, 5]/32
+  [ 218.4s] CANAL    k3v1m0c0j1: com [1.0, 0.0, 1.0]  dist [None, None, None]  muertes [9, 17, 22]  abstienen [1, 2, 2]/32
+  [ 234.6s] CORTADO  k3v1m0c0j1: com [0.0, 0.0, 1.0]  dist [None, None, None]  muertes [5, 16, 22]  abstienen [1, 1, 2]/32
+  [ 249.5s] BAR-H    k3v1m0c0j1: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [4, 16, 18]  abstienen [0, 1, 2]/32
+  [ 264.2s] BAR-T    k3v1m0c0j1: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [3, 22, 20]  abstienen [0, 1, 1]/32
+  [ 277.5s] VALOR    k3v1m0c0j1: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [10, 15, 28]  abstienen [1, 1, 4]/32
+  [ 292.4s] PAR      k3v1m0c0j1: com [1.0, 1.0, 1.0]  dist [1.0, 1.0, 1.0]  muertes [6, 14, 32]  abstienen [4, 0, 5]/32
+  [ 307.3s] PAR0     k3v1m0c0j1: com [0.0, 0.0, 1.0]  dist [0.0, 0.0, 1.0]  muertes [8, 18, 31]  abstienen [0, 3, 5]/32
+  [ 320.6s] CANAL    k3v0m0c0j1: com [1.0, 1.0, 1.0]  dist [None, None, None]  muertes [14, 137, 7]  abstienen [0, 0, 0]/32
+  [ 335.0s] CORTADO  k3v0m0c0j1: com [0.0, 0.0, 1.0]  dist [None, None, None]  muertes [17, 142, 7]  abstienen [0, 0, 0]/32
+  [ 351.3s] BAR-H    k3v0m0c0j1: com [0.0, 0.0, 1.0]  dist [None, None, None]  muertes [12, 144, 7]  abstienen [0, 0, 0]/32
+  [ 369.1s] BAR-T    k3v0m0c0j1: com [0.0, 0.0, 1.0]  dist [None, None, None]  muertes [18, 138, 7]  abstienen [0, 0, 3]/32
+  [ 387.2s] VALOR    k3v0m0c0j1: com [0.0, 0.0, 1.0]  dist [None, None, None]  muertes [22, 137, 2]  abstienen [0, 0, 0]/32
+  [ 403.9s] PAR      k3v0m0c0j1: com [1.0, 1.0, 1.0]  dist [1.0, 1.0, 1.0]  muertes [9, 396, 11]  abstienen [0, 0, 3]/32
+  [ 417.5s] PAR0     k3v0m0c0j1: com [0.0, 1.0, 1.0]  dist [0.0, 1.0, 1.0]  muertes [7, 396, 11]  abstienen [0, 0, 3]/32
+  [ 433.4s] CANAL    k3v1m1c0j0: com [1.0, 0.0, 1.0]  dist [None, None, None]  muertes [107, 14, 7]  abstienen [0, 0, 0]/32
+  [ 446.7s] CORTADO  k3v1m1c0j0: com [0.0, 0.0, 0.0]  dist [None, None, None]  muertes [104, 11, 6]  abstienen [0, 0, 0]/32
+  [ 460.4s] BAR-H    k3v1m1c0j0: com [1.0, 0.0, 1.0]  dist [None, None, None]  muertes [106, 11, 11]  abstienen [0, 0, 0]/32
+  [ 476.0s] BAR-T    k3v1m1c0j0: com [0.0, 0.0, 1.0]  dist [None, None, None]  muertes [106, 14, 16]  abstienen [0, 0, 0]/32
+  [ 490.4s] VALOR    k3v1m1c0j0: com [1.0, 0.0, 0.0]  dist [None, None, None]  muertes [104, 11, 13]  abstienen [0, 0, 0]/32
+  [ 506.8s] PAR      k3v1m1c0j0: com [1.0, 1.0, 1.0]  dist [1.0, 1.0, 1.0]  muertes [13, 11, 7]  abstienen [0, 0, 0]/32
+  [ 521.3s] PAR0     k3v1m1c0j0: com [0.0, 0.0, 1.0]  dist [0.0, 0.0, 1.0]  muertes [10, 9, 8]  abstienen [0, 0, 0]/32
+
+  crudos en experimentos\junta_fase5\B\jb_humo_s901-903_20260919_173050_crudo.json
+
+  P-I3 k3v0m0c0j0: prefijo identico al gemelo hasta la entrega -> OK   |   P-I4 utilizables 3/3 -> [901, 902, 903]
+  P-I3 k3v1m0c0j0: prefijo identico al gemelo hasta la entrega -> OK   |   P-I4 utilizables 3/3 -> [901, 902, 903]
+  P-I3 k3v1m0c0j1: prefijo identico al gemelo hasta la entrega -> OK   |   P-I4 utilizables 3/3 -> [901, 902, 903]
+  P-I3 k3v0m0c0j1: prefijo identico al gemelo hasta la entrega -> OK   |   P-I4 utilizables 3/3 -> [901, 902, 903]
+  P-I3 k3v1m1c0j0: prefijo identico al gemelo hasta la entrega -> OK   |   P-I4 utilizables 3/3 -> [901, 902, 903]
+
+================================================================================================================
+BRAZOS (com = la boca mordio en su PRIMERA exposicion de la VIDA al referente, tras la entrega; n = 3)
+================================================================================================================
+  brazo             k3v0m0c0j0        k3v1m0c0j0        k3v1m0c0j1        k3v0m0c0j1        k3v1m1c0j0
+  ----------------------------------------------------------------------------------------------------
+  CANAL                  3.0/3             3.0/3             2.0/3             3.0/3             2.0/3
+  CORTADO                0.0/3             0.0/3             1.0/3             1.0/3             0.0/3
+  BAR-H                  3.0/3             0.0/3             0.0/3             1.0/3             2.0/3
+  BAR-T                  2.0/3             2.0/3             0.0/3             1.0/3             1.0/3
+  VALOR                  0.0/3             0.0/3             0.0/3             1.0/3             1.0/3
+  PAR       3.0/3 (dist 3.0/3)3.0/3 (dist 3.0/3)3.0/3 (dist 3.0/3)3.0/3 (dist 3.0/3)3.0/3 (dist 3.0/3)
+  PAR0      1.0/3 (dist 1.0/3)0.0/3 (dist 0.0/3)1.0/3 (dist 1.0/3)2.0/3 (dist 2.0/3)1.0/3 (dist 1.0/3)
+
+  muertes (mediana)                              296                11                17                14                14
+  okU (control de valor)                       0.722             0.778             0.778             0.722             0.778
+  cobertura de la ganadora                         4                16                15                 4                15
+  estimulos que ABSTIENEN /32                      0                 0                 2                 0                 0
+  estimulos con las k EXACTAS /32                 30                32                30                32                27
+  grupo por DIRECCION /32                          2                 1                 2                 3                 4
+  grupo por BIN /32                                2                 4                 8                 3                 7
+
+  (las filas de arriba son del brazo CANAL; `abstienen` y `exactas` son del FINAL de la corrida)
+
+  QUE LEE LA VIA LENTA PARA EL REFERENTE EN EL PASO DE LA ENTREGA  [mediana del valor, celdas EXACTAS de k]  -- el MECANISMO, no la conducta
+  CANAL            +3.00 ex3/3       +3.00 ex3/3       +3.00 ex3/3       +3.00 ex3/3       +3.00 ex3/3
+  CORTADO          -9.00 ex3/3       -9.00 ex3/3       +0.00 ex3/3       -5.00 ex3/3       -9.00 ex0/3
+  BAR-H            -1.00 ex3/3       -1.00 ex3/3       -9.00 ex3/3       -5.00 ex3/3       +3.00 ex1/3
+  BAR-T            +2.00 ex3/3       +2.00 ex3/3       -1.00 ex3/3       -1.00 ex3/3       +2.88 ex1/3
+  VALOR            -5.00 ex3/3       -5.00 ex3/3       -1.00 ex3/3       -5.00 ex3/3       -1.00 ex0/3
+  PAR              +3.00 ex3/3       +3.00 ex3/3       +3.00 ex3/3       +3.00 ex3/3       +3.00 ex3/3
+  PAR0             -3.00 ex3/3       +0.00 ex0/3       +0.00 ex3/3       +0.00 ex3/3       -5.00 ex2/3
+  crudos: experimentos\junta_fase5\B\jb_humo_s901-903_20260919_173050_crudo.json
+  pared: 521.3 s
