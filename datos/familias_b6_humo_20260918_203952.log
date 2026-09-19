@@ -1,0 +1,84 @@
+[20:39:52 +    0.0s] HUMO del creador del bloque 6 (SUFIJO DE VARIANTE), UN proceso, sin Pool (regla 3). celdas ['k3v0', 'k3v1'].
+[20:39:52 +    0.0s] PREREGISTRO_bloque6_sufijo.md (E-8; completa el cuello A del creador externo Codex).
+[20:39:52 +    0.0s] Semillas 1-2: NINGUNA de las 721-760 del bloque queda expuesta.
+[20:39:52 +    0.0s]     sha preregistro                6bec70e2a6e360d2
+[20:39:52 +    0.0s]     sha script                     aa53c3d299865378
+[20:39:52 +    0.0s]     sha constructor                7d72a23ae12217e1
+[20:39:52 +    0.0s]     sha instrumento                b10cbd4ddd0c32a3
+[20:39:52 +    0.0s]     sha arnes                      b74d9195d7f20106
+[20:39:52 +    0.0s]     sha origen_b5                  e0b6b90f6f92d5c1
+[20:39:52 +    0.0s]     sha origen_b4b                 b3dd1d7e66a2d147
+[20:39:52 +    0.0s]     sha runner_bloque5             60ce47ad28c7ccc6
+[20:39:52 +    0.0s]     sha preregistro_bloque5        94798d50a47eafc0
+[20:39:52 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[20:39:52 +    0.0s]     sha externo_codex              be7208136d43fb71
+[20:39:52 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[20:39:52 +    0.0s]     origenes verificados -> OK
+[20:39:52 +    0.0s] 1/4 IDENTIDAD (subconjunto; el arnes completo, 59/59, va en identidad_familias_b6.py).
+[20:39:55 +    3.3s]     (a) sufijo OFF == organismo_familias_b5 (mundo=AB, k=3)                2/2
+[20:40:01 +    9.3s]     (g) sufijo OFF == organismo_familias_b5 (el mundo del bloque 4, k=3)   2/2
+[20:40:07 +   15.1s]     (b) sufijo OFF + k=1 == organismo_familias_b4b (el mundo del bloque 4) 2/2
+[20:40:10 +   18.4s]     (n) sufijo OFF + k=1 + mundo=AB == organismo_v14 (TRONCO)              2/2
+[20:40:13 +   21.6s]     (o) relevo ON + mundo=AB == organismo_v15f_on                          2/2
+[20:40:18 +   26.6s]     (x) memoria_pares=None: sufijo ON == sufijo OFF (la perilla es INERTE sin tabla) 2/2
+[20:40:47 +   54.9s]     (d) la DIRECCION: 4 subcasillas OFF, 32 ON, y la hermana FUERA del grupo con sufijo 2/2
+[20:40:47 +   54.9s]     (e) memoria_variante mal escrita LANZA (2, -1, 0.5, '1', True)         2/2
+[20:40:53 +   61.0s]     (K) sufijo ON != sufijo OFF con el relevo ON (DEBE diferir)            2/2
+[20:41:22 +   89.9s]     (C) CANAL-k3v1 != CORTADO-k3v1 (DEBE diferir)                          2/2
+[20:41:50 +  118.3s]     (H) BAR-H-k3v1 != CANAL-k3v1 (DEBE diferir: es el brazo que decide)    2/2
+[20:41:50 +  118.3s]   IDENTIDAD 22/22
+[20:41:50 +  118.3s] 2/4 DIAGNOSTICO ESTRUCTURAL (antes de simular, T = 0): alias, U3 y la resolucion CON y SIN sufijo.
+[20:41:50 +  118.3s]     semilla 1: alias_pares 0.00605  U3 0.2919  |  celdas que NO distinguen: BAR-H 0.6818 -> 0.0 (con sufijo), BAR-T 0.6818 -> 0.6818, VALOR 0.4242 -> 0.0
+[20:41:50 +  118.3s]                  piso de forma 4/32 -> 1/32 con sufijo  |  px en que difieren referente y hermana: [9, 11] (variante = [9, 10, 11])
+[20:41:50 +  118.3s]     semilla 2: alias_pares 0.04234  U3 0.3621  |  celdas que NO distinguen: BAR-H 0.6818 -> 0.0 (con sufijo), BAR-T 0.4242 -> 0.4242, VALOR 0.4242 -> 0.0
+[20:41:50 +  118.3s]                  piso de forma 4/32 -> 1/32 con sufijo  |  px en que difieren referente y hermana: [9, 11] (variante = [9, 10, 11])
+[20:41:50 +  118.3s] 3/4 EMISORES (mv = 0, k = 1 = b4b bit a bit): 2 corridas de 30000 pasos.
+[20:41:52 +  120.5s]     E s1 (neg)   2.2s  mensaje ('T1v2', 1.0, 't=10102', 'tras 1 exposiciones')
+[20:41:54 +  122.7s]     E s2 (neg)   2.2s  mensaje ('T1v2', 1.0, 't=11247', 'tras 5 exposiciones')
+[20:41:54 +  122.7s] 4/4 HUMO: 10 brazos x 2 semillas = 20 corridas de 30000 pasos.
+[20:41:57 +  124.8s]     CANAL-k3v0     s1   2.1s  entrega t=20193  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist None  evU 0.8333 okU 0.6667  ret2/3 0.0/0.0  muertes 29
+[20:41:57 +  124.8s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[4, 11], [1, 8], [0, 8]]  con px variable 1/3  comparten LAS k DIRECCIONES 1/32 (por BIN 1/32)  hermana dentro: False  cobertura 3/4  lag 0 pasos / 0 mordidas
+[20:41:59 +  126.9s]     CANAL-k3v0     s2   2.1s  entrega t=20600  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist None  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 28
+[20:41:59 +  126.9s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[1, 11], [3, 11], [8, 11]]  con px variable 3/3  comparten LAS k DIRECCIONES 1/32 (por BIN 1/32)  hermana dentro: False  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:01 +  128.9s]     CORTADO-k3v0   s1   2.1s  entrega t=20193  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 0.8333 okU 0.6667  ret2/3 1.0/1.0  muertes 31
+[20:42:01 +  128.9s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[4, 11], [0, 11], [3, 11]]  con px variable 3/3  comparten LAS k DIRECCIONES 3/32 (por BIN 3/32)  hermana dentro: False  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:03 +  131.0s]     CORTADO-k3v0   s2   2.1s  entrega t=20600  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 18
+[20:42:03 +  131.1s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[1, 11], [3, 11], [8, 11]]  con px variable 3/3  comparten LAS k DIRECCIONES 1/32 (por BIN 1/32)  hermana dentro: False  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:05 +  133.1s]     BAR-H-k3v0     s1   2.0s  entrega t=20193  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 0.8333 okU 0.6667  ret2/3 1.0/1.0  muertes 44
+[20:42:05 +  133.1s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[0, 11], [3, 11], [0, 9]]  con px variable 3/3  comparten LAS k DIRECCIONES 5/32 (por BIN 5/32)  hermana dentro: True  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:07 +  135.3s]     BAR-H-k3v0     s2   2.2s  entrega t=20600  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 17
+[20:42:07 +  135.3s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[1, 11], [3, 11], [8, 11]]  con px variable 3/3  comparten LAS k DIRECCIONES 3/32 (por BIN 3/32)  hermana dentro: True  cobertura 3/4  lag 0 pasos / 0 mordidas
+[20:42:09 +  137.5s]     PAR-k3v0       s1   2.1s  entrega t=20013  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist 1.0  evU 0.6667 okU 0.5  ret2/3 0.0/0.0  muertes 7
+[20:42:09 +  137.5s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[2, 10], [0, 10], [3, 10]]  con px variable 3/3  comparten LAS k DIRECCIONES 15/32 (por BIN 15/32)  hermana dentro: True  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:11 +  139.7s]     PAR-k3v0       s2   2.2s  entrega t=20124  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist 1.0  evU 0.8333 okU 0.6667  ret2/3 0.0/0.0  muertes 7
+[20:42:11 +  139.7s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[1, 11], [3, 11], [8, 11]]  con px variable 3/3  comparten LAS k DIRECCIONES 1/32 (por BIN 1/32)  hermana dentro: False  cobertura 3/4  lag 0 pasos / 0 mordidas
+[20:42:14 +  141.8s]     PAR0-k3v0      s1   2.1s  entrega t=20013  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist 1.0  evU 0.8333 okU 0.6667  ret2/3 1.0/1.0  muertes 20
+[20:42:14 +  141.8s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[4, 11], [2, 4], [0, 4]]  con px variable 1/3  comparten LAS k DIRECCIONES 3/32 (por BIN 3/32)  hermana dentro: False  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:16 +  144.0s]     PAR0-k3v0      s2   2.2s  entrega t=20124  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist 0.0  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 6
+[20:42:16 +  144.0s]                    MECANISMO k=3 sufijo=0 (4 subcasillas)  ganadoras [[1, 11], [3, 11], [8, 11]]  con px variable 3/3  comparten LAS k DIRECCIONES 1/32 (por BIN 1/32)  hermana dentro: False  cobertura 4/4  lag 0 pasos / 0 mordidas
+[20:42:18 +  146.4s]     CANAL-k3v1     s1   2.4s  entrega t=20017  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist None  evU 0.1667 okU 0.6667  ret2/3 0.0/0.0  muertes 8
+[20:42:18 +  146.4s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[0, 1], [1, 3], [2, 7]]  con px variable 0/3  comparten LAS k DIRECCIONES 1/32 (por BIN 4/32)  hermana dentro: False  cobertura 16/32  lag 0 pasos / 0 mordidas
+[20:42:21 +  148.7s]     CANAL-k3v1     s2   2.3s  entrega t=20242  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist None  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 9
+[20:42:21 +  148.7s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[1, 5], [1, 6], [1, 9]]  con px variable 1/3  comparten LAS k DIRECCIONES 2/32 (por BIN 6/32)  hermana dentro: False  cobertura 11/32  lag 0 pasos / 0 mordidas
+[20:42:23 +  151.2s]     CORTADO-k3v1   s1   2.5s  entrega t=20017  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 0.3333 okU 0.8333  ret2/3 1.0/1.0  muertes 7
+[20:42:23 +  151.2s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[2, 4], [1, 2], [0, 1]]  con px variable 0/3  comparten LAS k DIRECCIONES 1/32 (por BIN 4/32)  hermana dentro: False  cobertura 12/32  lag 0 pasos / 0 mordidas
+[20:42:25 +  153.5s]     CORTADO-k3v1   s2   2.3s  entrega t=20242  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 12
+[20:42:25 +  153.5s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[1, 5], [1, 6], [1, 9]]  con px variable 1/3  comparten LAS k DIRECCIONES 2/32 (por BIN 6/32)  hermana dentro: False  cobertura 10/32  lag 0 pasos / 0 mordidas
+[20:42:28 +  156.0s]     BAR-H-k3v1     s1   2.5s  entrega t=20017  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 0.3333 okU 0.8333  ret2/3 1.0/1.0  muertes 4
+[20:42:28 +  156.0s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[1, 2], [0, 1], [1, 3]]  con px variable 0/3  comparten LAS k DIRECCIONES 3/32 (por BIN 12/32)  hermana dentro: True  cobertura 12/32  lag 0 pasos / 0 mordidas
+[20:42:30 +  158.3s]     BAR-H-k3v1     s2   2.3s  entrega t=20242  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist None  evU 1.0 okU 0.5  ret2/3 1.0/1.0  muertes 12
+[20:42:30 +  158.3s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[3, 8], [1, 5], [5, 9]]  con px variable 1/3  comparten LAS k DIRECCIONES 1/32 (por BIN 1/32)  hermana dentro: True  cobertura 10/32  lag 0 pasos / 0 mordidas
+[20:42:33 +  160.8s]     PAR-k3v1       s1   2.4s  entrega t=20170  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist 1.0  evU 0.5 okU 1.0  ret2/3 1.0/1.0  muertes 11
+[20:42:33 +  160.8s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[2, 4], [4, 6], [4, 8]]  con px variable 0/3  comparten LAS k DIRECCIONES 2/32 (por BIN 8/32)  hermana dentro: False  cobertura 16/32  lag 0 pasos / 0 mordidas
+[20:42:35 +  163.2s]     PAR-k3v1       s2   2.5s  entrega t=20200  T1v2 es comida  comio 1 (okX 1.0, via lenta)  dist 1.0  evU 0.3333 okU 0.8333  ret2/3 0.0/0.0  muertes 9
+[20:42:35 +  163.2s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[2, 6], [1, 2], [3, 5]]  con px variable 0/3  comparten LAS k DIRECCIONES 2/32 (por BIN 8/32)  hermana dentro: False  cobertura 15/32  lag 0 pasos / 0 mordidas
+[20:42:37 +  165.6s]     PAR0-k3v1      s1   2.4s  entrega t=20170  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist 0.0  evU 0.3333 okU 0.8333  ret2/3 1.0/1.0  muertes 13
+[20:42:37 +  165.6s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[2, 4], [0, 2], [2, 3]]  con px variable 0/3  comparten LAS k DIRECCIONES 3/32 (por BIN 12/32)  hermana dentro: False  cobertura 16/32  lag 0 pasos / 0 mordidas
+[20:42:40 +  168.1s]     PAR0-k3v1      s2   2.5s  entrega t=20200  T1v2 es comida  comio 0 (okX 0.0, via lenta)  dist 0.0  evU 0.3333 okU 0.8333  ret2/3 1.0/1.0  muertes 10
+[20:42:40 +  168.1s]                    MECANISMO k=3 sufijo=1 (32 subcasillas)  ganadoras [[2, 4], [2, 6], [1, 2]]  con px variable 0/3  comparten LAS k DIRECCIONES 1/32 (por BIN 4/32)  hermana dentro: False  cobertura 11/32  lag 0 pasos / 0 mordidas
+[20:42:40 +  168.1s]   GEMELO (P-I3) semilla 1, CANAL-k3v0/CORTADO-k3v0: ['8660e7367cadbbbd', '8660e7367cadbbbd'] -> IDENTICOS
+[20:42:40 +  168.1s]   GEMELO (P-I3) semilla 1, CANAL-k3v1/CORTADO-k3v1: ['d37ac76b15376723', 'd37ac76b15376723'] -> IDENTICOS
+[20:42:40 +  168.1s]   CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): IDENTICO campo a campo
+[20:42:40 +  168.1s] ESTIMACION del bloque: 740 corridas de 100000 pasos, ~7.5 s/corrida en serie -> ~6.6 min de pared con Pool(14).
+[20:42:40 +  168.1s] HUMO: numeros observados, sin ajustar nada. n<=2 y semillas vistas: NO son evidencia.
+[20:42:40 +  168.1s] datos -> familias_b6_humo_20260918_203952.json  sha256_16 = ef6ec5296f00bcb4
