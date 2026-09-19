@@ -1,0 +1,100 @@
+[19:24:23 +    0.0s] ARRANQUE H-1 (la muerte que mata; R0 = descendientes por vida): brazos ['RENACE_CM', 'RENACE_VIVO', 'NADA_CM', 'NADA_VIVO', 'M1_CM', 'M1_VIVO', 'PARES_CM', 'PARES_VIVO', 'BARAJA_CM', 'BARAJA_VIVO', 'RD03_NADA', 'RD03_M1', 'RD09_NADA', 'RD09_M1', 'RX250_NADA', 'RX250_M1', 'RN8_NADA', 'RN8_M1', 'RC05_NADA', 'RC05_M1'], semillas 721-740, T=100000. Pool(14).
+[19:24:23 +    0.0s] MISION: llegar a la AGI por este camino. Hoy: que la muerte mate de verdad, para que el linaje signifique algo.
+[19:24:23 +    0.0s] 20 semillas no cierran nada: cierran o refutan ESTA hipotesis y piden la replica (721-740).
+[19:24:23 +    0.0s]     sha preregistro                  f35f6d061b023d38
+[19:24:23 +    0.0s]     sha script                       34c8cd4d264a7a66
+[19:24:23 +    0.0s]     sha constructor                  07da8128adc82f4e
+[19:24:23 +    0.0s]     sha instrumento                  9e99ff87b5e2db1e
+[19:24:23 +    0.0s]     sha arnes                        b78676baa60837e2
+[19:24:23 +    0.0s]     sha origen_organismo_vivo_rep2   96feb4918dc5d694
+[19:24:23 +    0.0s]     sha origen_organismo_vivo_rep    aa823d56c2d4213c
+[19:24:23 +    0.0s]     sha origen_organismo_vivo        20c0961c79de8825
+[19:24:23 +    0.0s]     sha origen_organismo_v14         feefc88b1fd8d434
+[19:24:23 +    0.0s]     sha corre_vivo_rep2              10ab45355883d98d
+[19:24:23 +    0.0s]     sha corre_vivo_rep               d8ff689c6dd544d0
+[19:24:23 +    0.0s]     sha mini                         f3e86cbe6c17e6d7
+[19:24:23 +    0.0s]     ERR-38 RENACE_VIVO  vs bloque 2 VIVO         -> IDENTICO campo a campo
+[19:24:23 +    0.0s]     ERR-38 RENACE_CM    vs bloque 2 CUELLO_MIN   -> IDENTICO campo a campo
+[19:24:23 +    0.0s] REGLA 10 — alias estructurales en 721-740: [] (preregistro: 701-720 -> [715]; 721-740 -> [])
+[19:24:23 +    0.4s] REGLA 11 — procesos python vivos (4), este es pid 5752
+[19:24:23 +    0.6s] ETAPA 1/2 — IDENTIDAD interna (15 comprobaciones de 2 x 20000 pasos). (D) y (E) DEBEN fallar.
+[19:24:30 +    7.2s]     (A) apagada (muerte_real=0, h1=0) == organismo_vivo_rep2 CUELLO_MIN            3/3
+[19:24:30 +    7.2s]     (B) cadena: h1(vivo=0, n_nec=1) == organismo_v14 (TRONCO)                      3/3
+[19:24:30 +    7.2s]     (C) h1=1 con muerte_real=0: claves viejas == organismo_vivo_rep2               3/3
+[19:24:30 +    7.2s]     (D) MUERE-NADA != RENACE (DEBE fallar)                                         3/3
+[19:24:30 +    7.2s]     (E) MUERE-M1 != MUERE-NADA (DEBE fallar: si la herencia es inerte, el instrumento esta roto) 3/3
+[19:24:30 +    7.2s]   IDENTIDAD 15/15
+[19:24:30 +    7.2s] ETAPA 2/2 — principal: 400 corridas de 100000 pasos...
+[19:24:58 +   35.0s]           40/400
+[19:25:25 +   62.5s]           80/400
+[19:25:53 +   90.4s]           120/400
+[19:26:21 +  118.7s]           160/400
+[19:26:49 +  146.2s]           200/400
+[19:27:16 +  173.6s]           240/400
+[19:27:39 +  196.4s]           280/400
+[19:28:10 +  227.1s]           320/400
+[19:28:43 +  260.5s]           360/400
+[19:29:11 +  288.0s]           400/400
+[19:29:11 +  288.2s] ERR-54 — CRUDO guardado ANTES del analisis -> vivo_h1_s721-740_20260918_192423_crudo.json  sha256_16 = ba78da53dbb1c971
+[19:29:11 +  288.2s] 
+[19:29:11 +  288.2s] ANALISIS — medianas por brazo y la letra del preregistro (A12 sin parear, medianas, cuartiles).
+[19:29:11 +  288.2s] --- CONJUNTO COMPLETO: semillas 721-740 (n=20) ---
+[19:29:11 +  288.2s]    RENACE_CM     n=20  R0 0.976 [q25 0.8, q75 1.0]  r -0.5 (r>=0 en 10)  desc 66.5  muertes 68.5  cuerpos 69.5  vida 798.0 (fund 798.0 / her None)
+[19:29:11 +  288.2s]         fundaciones 0.0 (1.a en None)  heredados 0.0 (R0_her None)  regalo 0.376 / fund 0.0  saciado sal 0.001  xor01 1.0 (se reporta)  coherentes 20/20  exposiciones {'A': 542.0, 'B': 4044.5, 'C': 542.0, 'D': 3471.0}
+[19:29:11 +  288.2s]    RENACE_VIVO   n=20  R0 0.239 [q25 0.2, q75 0.3]  r -71.0 (r>=0 en 0)  desc 23.0  muertes 92.5  cuerpos 93.5  vida 600.0 (fund 600.0 / her None)
+[19:29:11 +  288.2s]         fundaciones 0.0 (1.a en None)  heredados 0.0 (R0_her None)  regalo 0.408 / fund 0.0  saciado sal 0.788  xor01 1.0 (se reporta)  coherentes 20/20  exposiciones {'A': 861.0, 'B': 5437.5, 'C': 892.5, 'D': 1892.5}
+[19:29:11 +  288.2s]    NADA_CM       n=20  R0 0.14 [q25 0.1, q75 0.2]  r -205.0 (r>=0 en 0)  desc 33.5  muertes 239.5  cuerpos 240.5  vida 102.5 (fund 118.0 / her 58.25)
+[19:29:11 +  288.2s]         fundaciones 205.0 (1.a en 718.0)  heredados 33.5 (R0_her 0.083)  regalo 0.646 / fund 0.606  saciado sal 0.053  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 802.0, 'B': 3848.5, 'C': 874.0, 'D': 3289.0}
+[19:29:11 +  288.2s]    NADA_VIVO     n=20  R0 0.111 [q25 0.1, q75 0.1]  r -224.0 (r>=0 en 0)  desc 27.5  muertes 248.5  cuerpos 249.5  vida 93.0 (fund 109.75 / her 49.0)
+[19:29:11 +  288.2s]         fundaciones 224.0 (1.a en 677.0)  heredados 27.5 (R0_her 0.07)  regalo 0.794 / fund 0.705  saciado sal 0.143  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 893.0, 'B': 4141.0, 'C': 1001.5, 'D': 2876.5}
+[19:29:11 +  288.2s]    M1_CM         n=20  R0 0.17 [q25 0.1, q75 0.2]  r -190.5 (r>=0 en 0)  desc 37.0  muertes 231.5  cuerpos 232.5  vida 132.0 (fund 99.5 / her 263.25)
+[19:29:11 +  288.2s]         fundaciones 190.5 (1.a en 718.0)  heredados 37.0 (R0_her 0.272)  regalo 0.72 / fund 0.494  saciado sal 0.045  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 756.0, 'B': 3852.0, 'C': 829.5, 'D': 3320.5}
+[19:29:11 +  288.2s]    M1_VIVO       n=20  R0 0.126 [q25 0.1, q75 0.1]  r -209.0 (r>=0 en 0)  desc 30.5  muertes 241.0  cuerpos 242.0  vida 121.5 (fund 93.75 / her 372.0)
+[19:29:11 +  288.2s]         fundaciones 209.0 (1.a en 677.0)  heredados 30.5 (R0_her 0.203)  regalo 0.821 / fund 0.643  saciado sal 0.124  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 853.0, 'B': 4237.5, 'C': 944.5, 'D': 2919.5}
+[19:29:11 +  288.2s]    PARES_CM      n=20  R0 0.165 [q25 0.1, q75 0.2]  r -201.5 (r>=0 en 0)  desc 39.5  muertes 240.5  cuerpos 241.5  vida 112.0 (fund 104.0 / her 148.0)
+[19:29:11 +  288.2s]         fundaciones 201.5 (1.a en 718.0)  heredados 39.5 (R0_her 0.191)  regalo 0.7 / fund 0.573  saciado sal 0.05  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 794.5, 'B': 3771.5, 'C': 860.0, 'D': 3344.5}
+[19:29:11 +  288.2s]    PARES_VIVO    n=20  R0 0.105 [q25 0.1, q75 0.1]  r -223.0 (r>=0 en 0)  desc 27.0  muertes 252.0  cuerpos 253.0  vida 111.5 (fund 96.75 / her 195.5)
+[19:29:11 +  288.2s]         fundaciones 223.0 (1.a en 677.0)  heredados 27.0 (R0_her 0.139)  regalo 0.78 / fund 0.659  saciado sal 0.125  xor01 0.5 (se reporta)  coherentes 20/20  exposiciones {'A': 870.0, 'B': 4123.0, 'C': 956.0, 'D': 2993.5}
+[19:29:11 +  288.2s]    BARAJA_CM     n=20  R0 0.139 [q25 0.1, q75 0.2]  r -210.5 (r>=0 en 0)  desc 36.0  muertes 246.0  cuerpos 247.0  vida 102.0 (fund 115.0 / her 74.25)
+[19:29:11 +  288.2s]         fundaciones 211.0 (1.a en 718.0)  heredados 36.0 (R0_her 0.121)  regalo 0.718 / fund 0.621  saciado sal 0.051  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 795.5, 'B': 3816.0, 'C': 885.0, 'D': 3211.5}
+[19:29:11 +  288.2s]    BARAJA_VIVO   n=20  R0 0.117 [q25 0.1, q75 0.1]  r -219.5 (r>=0 en 0)  desc 28.0  muertes 250.0  cuerpos 251.0  vida 96.5 (fund 110.75 / her 63.5)
+[19:29:11 +  288.2s]         fundaciones 219.5 (1.a en 677.0)  heredados 28.0 (R0_her 0.106)  regalo 0.772 / fund 0.689  saciado sal 0.127  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 888.5, 'B': 4046.5, 'C': 977.5, 'D': 2989.5}
+[19:29:11 +  288.2s]    RD03_NADA     n=20  R0 0.061 [q25 0.1, q75 0.1]  r -496.0 (r>=0 en 0)  desc 32.0  muertes 529.0  cuerpos 530.0  vida 19.0 (fund 19.5 / her 16.5)
+[19:29:11 +  288.2s]         fundaciones 496.0 (1.a en 718.0)  heredados 32.0 (R0_her 0.013)  regalo 0.589 / fund 0.571  saciado sal 0.06  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 816.0, 'B': 3749.5, 'C': 885.5, 'D': 3219.5}
+[19:29:11 +  288.2s]    RD03_M1       n=20  R0 0.063 [q25 0.1, q75 0.1]  r -499.5 (r>=0 en 0)  desc 34.5  muertes 530.0  cuerpos 531.0  vida 20.0 (fund 19.0 / her 27.25)
+[19:29:11 +  288.2s]         fundaciones 499.5 (1.a en 718.0)  heredados 34.5 (R0_her 0.116)  regalo 0.657 / fund 0.562  saciado sal 0.058  xor01 0.5 (se reporta)  coherentes 20/20  exposiciones {'A': 813.0, 'B': 3747.0, 'C': 863.0, 'D': 3251.0}
+[19:29:11 +  288.2s]    RD09_NADA     n=20  R0 0.182 [q25 0.2, q75 0.2]  r -146.5 (r>=0 en 0)  desc 33.0  muertes 180.0  cuerpos 181.0  vida 482.25 (fund 518.0 / her 158.0)
+[19:29:11 +  288.2s]         fundaciones 146.5 (1.a en 786.5)  heredados 33.0 (R0_her 0.151)  regalo 0.727 / fund 0.6  saciado sal 0.051  xor01 0.625 (se reporta)  coherentes 20/20  exposiciones {'A': 769.0, 'B': 3869.5, 'C': 849.0, 'D': 3277.5}
+[19:29:11 +  288.2s]    RD09_M1       n=20  R0 0.219 [q25 0.2, q75 0.3]  r -130.5 (r>=0 en 0)  desc 39.0  muertes 163.5  cuerpos 164.5  vida 540.5 (fund 511.0 / her 573.75)
+[19:29:11 +  288.2s]         fundaciones 131.0 (1.a en 762.0)  heredados 39.0 (R0_her 0.246)  regalo 0.783 / fund 0.576  saciado sal 0.046  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 701.0, 'B': 3953.5, 'C': 769.0, 'D': 3330.0}
+[19:29:11 +  288.2s]    RX250_NADA    n=20  R0 0.29 [q25 0.3, q75 0.3]  r -230.5 (r>=0 en 0)  desc 98.5  muertes 325.5  cuerpos 326.5  vida 97.5 (fund 125.75 / her 64.5)
+[19:29:11 +  288.2s]         fundaciones 230.5 (1.a en 498.5)  heredados 97.5 (R0_her 0.239)  regalo 0.829 / fund 0.627  saciado sal 0.069  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 962.5, 'B': 3673.0, 'C': 1058.5, 'D': 3256.5}
+[19:29:11 +  288.2s]    RX250_M1      n=20  R0 0.38 [q25 0.3, q75 0.4]  r -183.5 (r>=0 en 0)  desc 114.0  muertes 298.5  cuerpos 299.5  vida 175.5 (fund 107.75 / her 292.0)
+[19:29:11 +  288.2s]         fundaciones 184.0 (1.a en 505.5)  heredados 113.5 (R0_her 0.466)  regalo 0.865 / fund 0.44  saciado sal 0.043  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 882.0, 'B': 3970.0, 'C': 946.0, 'D': 3161.5}
+[19:29:11 +  288.2s]    RN8_NADA      n=20  R0 0.099 [q25 0.1, q75 0.1]  r -363.5 (r>=0 en 0)  desc 38.5  muertes 399.0  cuerpos 400.0  vida 35.0 (fund 37.0 / her 24.25)
+[19:29:11 +  288.2s]         fundaciones 363.5 (1.a en 754.5)  heredados 38.5 (R0_her 0.028)  regalo 0.847 / fund 0.812  saciado sal 0.04  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 1190.0, 'B': 7216.0, 'C': 1327.5, 'D': 6527.5}
+[19:29:11 +  288.2s]    RN8_M1        n=20  R0 0.111 [q25 0.1, q75 0.1]  r -330.5 (r>=0 en 0)  desc 40.5  muertes 371.0  cuerpos 372.0  vida 42.75 (fund 38.5 / her 72.25)
+[19:29:11 +  288.2s]         fundaciones 330.5 (1.a en 754.5)  heredados 40.5 (R0_her 0.14)  regalo 0.853 / fund 0.718  saciado sal 0.036  xor01 1.0 (se reporta)  coherentes 20/20  exposiciones {'A': 1141.5, 'B': 7593.5, 'C': 1241.0, 'D': 6272.5}
+[19:29:11 +  288.2s]    RC05_NADA     n=20  R0 0.314 [q25 0.3, q75 0.3]  r -121.5 (r>=0 en 0)  desc 56.0  muertes 180.0  cuerpos 181.0  vida 117.0 (fund 166.75 / her 68.0)
+[19:29:11 +  288.2s]         fundaciones 121.5 (1.a en 1225.5)  heredados 56.0 (R0_her 0.254)  regalo 0.839 / fund 0.625  saciado sal 0.046  xor01 0.75 (se reporta)  coherentes 20/20  exposiciones {'A': 700.5, 'B': 3857.0, 'C': 764.5, 'D': 3319.5}
+[19:29:11 +  288.2s]    RC05_M1       n=20  R0 0.453 [q25 0.4, q75 0.5]  r -86.5 (r>=0 en 0)  desc 69.5  muertes 159.0  cuerpos 160.0  vida 343.0 (fund 128.75 / her 587.25)
+[19:29:11 +  288.2s]         fundaciones 87.5 (1.a en 1239.5)  heredados 68.5 (R0_her 0.631)  regalo 0.835 / fund 0.311  saciado sal 0.029  xor01 1.0 (se reporta)  coherentes 20/20  exposiciones {'A': 605.5, 'B': 4055.0, 'C': 647.0, 'D': 3356.0}
+[19:29:11 +  288.2s]    H1-1 ANCLA DEL CONTROL (RENACE tiene que reproducir el bloque 2): mediana R0 RENACE_CM en [0.70, 1.40] y RENACE_VIVO en [0.12, 0.32]; mediana r RENACE_CM en [-50, +25] y RENACE_VIVO en [-115, -45]; frac_regalo RENACE_CM en [0.20, 0.55]. Si cae, el instrumento se movio y NO SE LEE NADA MAS
+        -> R0 CM 0.976 / VIVO 0.239; r -0.5 / -71.0; regalo 0.376  PASA (el control ancla)
+[19:29:11 +  288.2s]    H1-2 LA MUERTE MATA: mediana R0(NADA_CM) <= 0.35 y R0(NADA_VIVO) <= 0.20; A12(RENACE_CM > NADA_CM) >= 0.90 y A12(RENACE_VIVO > NADA_VIVO) >= 0.85; vida mediana NADA_CM <= 0.60 x RENACE_CM. REFUTA: R0(NADA_CM) >= 0.90 -> borrar la memoria no cambia el linaje: el regalo era energia, no memoria
+        -> R0 NADA_CM 0.14, NADA_VIVO 0.111; A12 1.0 / 0.978; vida x0.128  PASA (la muerte mata)
+[19:29:11 +  288.2s]    H1-3 LA HERENCIA PAGA: R0(M1_CM) >= 1.30 x R0(NADA_CM) y A12(M1_CM > NADA_CM) >= 0.80 (esto DECIDE, ERR-61); el conteo pareado k/20 >= 15 se reporta AL LADO y no decide. REFUTA: A12 <= 0.60 -> heredar el vector de valores no compra nada
+        -> A12 0.748; razon de medianas x1.214; pareado 16/20 (se reporta, no decide: ERR-61)  NO
+[19:29:11 +  288.2s]    H1-4 LA PREDICCION QUE DECIDE — BARAJA ~ NADA: |R0(BARAJA_CM) - R0(NADA_CM)| <= 0.10 y 0.35 <= A12(BARAJA_CM > NADA_CM) <= 0.65. REFUTA (a): BARAJA ~ M1 (A12(BARAJA > NADA) >= 0.80 y |R0(BARAJA) - R0(M1)| <= 0.10) -> lo heredable es la MAGNITUD (una cautela), no el contenido: ERR y se dice. REFUTA (b): A12(BARAJA > NADA) <= 0.20 -> heredar valores en los pixeles equivocados es PEOR que no heredar
+        -> A12(BARAJA > NADA) 0.555; |R0 BARAJA - NADA| 0.001; |R0 BARAJA - M1| 0.031  PASA: lo que se hereda es el CONTENIDO (la baraja lo destruye)
+[19:29:11 +  288.2s]    H1-5 ¿EL VECTOR O EL TOKEN? (H-7): A12(PARES_CM > M1_CM) >= 0.65 y R0(PARES_CM) >= R0(M1_CM). Si A12 <= 0.50 -> el token NO aporta sobre el vector: lo portable entre cuerpos es el VECTOR (las dos direcciones se declaran)
+        -> A12(PARES > M1) 0.426; R0 0.165 contra 0.17  lo portable entre cuerpos es el VECTOR (el token no aporta)
+[19:29:11 +  288.2s]    H1-6 CLAUSULA DE CIERRE DE H-1: algun brazo con muerte real (principal o rampa) alcanza mediana R0 >= 0.90 con mediana fundadores <= 2 y con su NADA pareado por debajo de 1.0. Si NINGUNO lo alcanza: ERR-62 — este mundo NO SOSTIENE LINAJES MORTALES con estas cuatro perillas, y la linea de evolucion no se corre hasta cambiar el MUNDO (no el umbral). Si alguno lo alcanza, NO se declara aqui: la rampa es busqueda, no evidencia -> bloque nuevo con semillas nuevas
+        -> brazos con muerte real y R0 >= 0.9 y fundaciones <= 2: NINGUNO  -> ERR-62: ESTE MUNDO NO SOSTIENE LINAJES MORTALES con estas cuatro perillas
+[19:29:11 +  288.2s]    H1-7 SIN EL REGALO (obligatorio): frac_fund = desc_fund/descendientes, mediana <= 0.15 en los cuatro brazos MUERE_CM; frac_regalo se reporta en los diez principales. REFUTA: frac_fund > 0.35 en algun MUERE -> el regalo del renacer sigue financiando las ventanas y la medida no esta limpia
+        -> frac_fund {'NADA_CM': 0.606, 'M1_CM': 0.494, 'PARES_CM': 0.573, 'BARAJA_CM': 0.621}  REFUTADA: el regalo sigue financiando
+[19:29:11 +  288.2s]    H1-8 SEGURIDAD Y CONTABILIDAD: coherencia contable 20/20 en los veinte brazos; cola_desborde 0 en 20/20; exposiciones[A] NADA_CM >= 0.50 x RENACE_CM. xor01 se REPORTA sin puerta en los brazos MUERE (la tabla es de un MOSAICO de cuerpos, no de un individuo: usarla de puerta seria vocabulario inflado)
+        -> coherentes min 20/20; desbordes 0; comida x1.48  PASA
+[19:29:11 +  288.2s] 
+[19:29:11 +  288.2s] VEREDICTO: Con la muerte que BORRA la memoria del individuo, el linaje no se reemplaza: R0 cae muy por debajo de 1 (H1-2). H1-3 no concluyente. BARAJA ~ NADA: lo que se hereda es el CONTENIDO del vector, no su magnitud (H1-4, la prediccion que decide). Lo portable entre cuerpos es el VECTOR: el token no aporta (H1-5). NINGUNA de las cuatro perillas lleva el linaje mortal a R0 ~ 1: ERR-62 — este mundo NO SOSTIENE LINAJES MORTALES y la linea de evolucion no se corre hasta cambiar el MUNDO. H1-7 cae: el regalo sigue financiando, la medida no esta limpia. Contabilidad y mundo intactos (H1-8). 20 semillas no cierran nada: piden la replica en 721-740 (regla 12).
+[19:29:11 +  288.3s] datos -> vivo_h1_s721-740_20260918_192423.json  sha256_16 = 1a6561be332aec0d

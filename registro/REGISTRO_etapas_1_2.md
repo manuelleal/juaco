@@ -5344,3 +5344,29 @@ de dos brazos con dos medias), el pareado es por semilla y no por trayectoria, e
 esto entra en la escalera de JUACO. Lo que sí sirve: (1) la memoria es exactamente inerte sin acción y paga con una acción cuya contingencia
 se pueda registrar, y quien lo sostiene es el control barajado; (2) R₀ ≈ 1 se calibra con una sola perilla (comida) en un mundo de juguete;
 en el mundo vivo real, H-1 (corriendo) dirá si el organismo mortal se sostiene. SHA de los ZIP en `experimentos/externo_mundo_minimo/*/SHA256.txt`.
+
+
+### H-1 — QUE LA MUERTE MATE (mundo vivo; 18 sep 19:24 y réplica 19:28; semillas 701–720 y 721–740; 20 brazos × 20): **REPLICADO — con la muerte que borra la memoria del individuo, el linaje NO se reemplaza: R₀ cae de 0.87–0.98 (control inmortal, idéntico al bloque 2 campo a campo) a 0.14–0.17 en TODOS los modos de herencia (nada 0.148/0.140; valores 0.160/0.170; valores + tabla 0.153/0.165; barajado 0.146/0.139); la vida mediana cae de ~700–800 a ~100–130 pasos. ERR-62 (cláusula de cierre escrita antes): ESTE MUNDO NO SOSTIENE LINAJES MORTALES con ninguna herencia ni con las rampas de dote, umbral, objetos o coste. El "filo del reemplazo" del bloque 2 era el de un inmortal subsidiado**
+
+Preregistro `experimentos/nivel11_mundo_vivo/PREREGISTRO_h1_muerte.md` (f35f6d061b023d38; ERR-60 semillas de hijos sin colisión; ERR-61 A₁₂ sin
+parear; ERR-62 reservado y ejecutado); instrumento `organismo_vivo_h1.py` (9e99ff87b5e2db1e; `muerte_real=0` ≡ rep2 bit a bit; identidad
+62/62); runner `corre_vivo_h1.py` (34c8cd4d264a7a66); datos `vivo_h1_s701-720_20260918_191939` (bfaca3d00f58eecd) y `vivo_h1_s721-740_20260918_192423`
+(1a6561be332aec0d); 400 corridas por serie, T = 100 000.
+
+| brazo (CUELLO_MIN) | R₀ serie 1 / réplica | r | muertes | vida mediana |
+|---|---|---|---|---|
+| RENACE (control, como hoy) | 0.874 / 0.976 | −8.5 / −0.5 | 74.5 / 68.5 | 711 / 798 |
+| MUERE, hereda nada | 0.148 / 0.140 | −210 / −205 | 249 / 239.5 | 96.5 / 102.5 |
+| MUERE, hereda valores (M1) | 0.160 / 0.170 | −201 / −190.5 | 237 / 231.5 | 126.5 / 132 |
+| MUERE, hereda valores + tabla | 0.153 / 0.165 | −202.5 / −201.5 | 238 / 240.5 | 121 / 112 |
+| MUERE, hereda barajado | 0.146 / 0.139 | −203 / −210.5 | 242 / 246 | 104.5 / 102 |
+
+H1-1 ancla del control: pasa (idéntico al bloque 2). **H1-2 la muerte mata: PASA ×2** (A₁₂ 1.0). H1-3 la herencia paga (≥ 1.30 × nada): NO (×1.08–1.21). **H1-4
+barajado ≈ nada: pasa** (el control es limpio: la pequeña ventaja de heredar valores es real pero no alcanza). H1-5 el token no aporta sobre el
+vector. **H1-6 → ERR-62.** H1-7: más de la mitad de las ventanas de los mortales las paga todavía el regalo de la fundación (R₀ medido es cota
+superior). **Lectura honesta:** el organismo actual no puede reemplazarse a sí mismo si de verdad muere: aprende demasiado despacio (≈ 25
+mordidas para consolidar; el hijo nace vacío y muere antes de aprender), y heredar los valores le da un 10–20 %, no el 500 % que le falta.
+Esto reordena la escalera: **antes de población y evolución, hace falta que un cuerpo nuevo aprenda en menos de una vida** (aprender de un
+golpe — v15f — y el mensaje del bloque 4 son exactamente eso), o un mundo menos letal para el recién nacido (dote, cuidado parental: mecanismos
+nuevos, preregistro nuevo). Coincide con la simulación externa (extinción 100 % en todas las memorias hasta calibrar el metabolismo). Nivel 9:
+45 % → **40 %** (la declaración del bloque 2 queda acotada: "al filo del reemplazo" sólo con renacer).
