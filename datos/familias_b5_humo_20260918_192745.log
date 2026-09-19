@@ -1,0 +1,64 @@
+[19:27:45 +    0.0s] HUMO del creador del bloque 5 (VARIAS GANADORAS), UN proceso, sin Pool (regla 3). k = (1, 3, 5).
+[19:27:45 +    0.0s] PREREGISTRO_bloque5_ganadoras.md (H-4 de la sala 4; E-7) + PROTOCOLO_canal_20260918.md (sala 3).
+[19:27:45 +    0.0s] Semillas 1-2: NINGUNA de las 681-720 del bloque queda expuesta.
+[19:27:45 +    0.0s]     sha preregistro                775becf1dc85e0be
+[19:27:45 +    0.0s]     sha script                     27826d0d6eda0827
+[19:27:45 +    0.0s]     sha constructor                b58e6025a648148d
+[19:27:45 +    0.0s]     sha instrumento                e0b6b90f6f92d5c1
+[19:27:45 +    0.0s]     sha arnes                      6fe98bf17b61a6c1
+[19:27:45 +    0.0s]     sha origen_b4b                 b3dd1d7e66a2d147
+[19:27:45 +    0.0s]     sha runner_bloque4b            b677f0fd8d1223be
+[19:27:45 +    0.0s]     sha preregistro_bloque4b       5d089937b10c7706
+[19:27:45 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[19:27:45 +    0.0s]     sha sala4_H4                   0f18d240b18771ee
+[19:27:45 +    0.0s]     sha protocolo_sala3            cb98415646b8717b
+[19:27:45 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[19:27:45 +    0.0s]     origenes verificados -> OK
+[19:27:45 +    0.0s] 1/4 IDENTIDAD (subconjunto; el arnes completo, 106/106, va en identidad_familias_b5.py).
+[19:27:52 +    6.4s]     (a) k=1 == organismo_familias_b4b (mundo=AB)                   2/2
+[19:28:05 +   19.5s]     (g) k=1 == organismo_familias_b4b (el mundo del bloque 4)      2/2
+[19:28:11 +   26.1s]     (n) k=1 + mundo=AB == organismo_v14 (TRONCO)                   2/2
+[19:28:19 +   33.1s]     (o) relevo ON + mundo=AB == organismo_v15f_on                  2/2
+[19:28:28 +   42.9s]     (x) memoria_pares=None: k=5 == k=1 (la perilla es INERTE sin tabla) 2/2
+[19:28:34 +   48.3s]     (z) la 1.a de las k ES la ganadora de b4b, y son k sin repetir 2/2
+[19:28:34 +   48.3s]     (e) k mal escrito LANZA (0, -1, 2.5, '3', True)                2/2
+[19:28:45 +   59.2s]     (K) k=5 != k=1 con el relevo ON (DEBE diferir)                 2/2
+[19:29:10 +   84.8s]     (C) CANAL-k5 != CORTADO-k5 (DEBE diferir)                      2/2
+[19:29:10 +   84.8s]   IDENTIDAD 18/18
+[19:29:10 +   84.8s] 2/4 DIAGNOSTICO ESTRUCTURAL (antes de simular, T = 0): alias, U3 y la resolucion de las 66 celdas.
+[19:29:10 +   84.8s]     semilla 1: alias_pares 0.00605  alias_semilla 1  U3 0.2919  |  celdas que NO distinguen: BAR-T 0.6818 (forma 0.5833), BAR-H 0.6818 (forma 1.0), VALOR 0.4242; piso de forma 4/32
+[19:29:10 +   84.8s]     semilla 2: alias_pares 0.04234  alias_semilla 1  U3 0.3621  |  celdas que NO distinguen: BAR-T 0.4242 (forma 0.2778), BAR-H 0.6818 (forma 1.0), VALOR 0.4242; piso de forma 4/32
+[19:29:10 +   84.8s] 3/4 EMISORES (k = 1 = b4b bit a bit): 2 corridas de 30000 pasos.
+[19:29:13 +   87.5s]     E s1 (neg)   2.7s  mensaje ('T1v2', 1.0, 't=10102', 'tras 1 exposiciones')
+[19:29:15 +   89.9s]     E s2 (neg)   2.3s  mensaje ('T1v2', 1.0, 't=11247', 'tras 5 exposiciones')
+[19:29:15 +   89.9s] 4/4 HUMO: 6 brazos x 2 semillas = 12 corridas de 30000 pasos.
+[19:29:18 +   92.3s]     CANAL-k1     s1   2.4s  entrega t=20019  T1v2 es comida  comio 1 (okX 1.0, via lenta)  evU 0.3333 okU 0.8333  comH 1.0  ret2/3 1.0/1.0  muertes 7  celdas 47
+[19:29:18 +   92.3s]                  MECANISMO k=1 ganadoras [[9, 10]]  con pixel variable 1/1  comparten LAS k casillas 16/32 (una sola: 16/32)  lag 0 pasos / 0 mordidas  prefijo aaf01cdf07eb6610
+[19:29:20 +   94.6s]     CANAL-k1     s2   2.3s  entrega t=20274  T1v2 es comida  comio 1 (okX 1.0, via lenta)  evU 0.0 okU 0.5  comH 0.0  ret2/3 1.0/1.0  muertes 17  celdas 47
+[19:29:20 +   94.6s]                  MECANISMO k=1 ganadoras [[4, 5]]  con pixel variable 0/1  comparten LAS k casillas 12/32 (una sola: 12/32)  lag 0 pasos / 0 mordidas  prefijo 6083383e15434a1d
+[19:29:22 +   96.9s]     CORTADO-k1   s1   2.4s  entrega t=20019  T1v2 es comida  comio 0 (okX 0.0, via lenta)  evU 0.5 okU 1.0  comH 0.0  ret2/3 1.0/1.0  muertes 7  celdas 48
+[19:29:22 +   96.9s]                  MECANISMO k=1 ganadoras [[2, 4]]  con pixel variable 0/1  comparten LAS k casillas 16/32 (una sola: 16/32)  lag 0 pasos / 0 mordidas  prefijo aaf01cdf07eb6610
+[19:29:25 +   99.3s]     CORTADO-k1   s2   2.4s  entrega t=20274  T1v2 es comida  comio 0 (okX 0.0, via lenta)  evU 0.8333 okU 0.3333  comH 0.0  ret2/3 1.0/1.0  muertes 8  celdas 45
+[19:29:25 +   99.3s]                  MECANISMO k=1 ganadoras [[1, 5]]  con pixel variable 0/1  comparten LAS k casillas 12/32 (una sola: 12/32)  lag 0 pasos / 0 mordidas  prefijo 6083383e15434a1d
+[19:29:27 +  101.6s]     BAR-T-k1     s1   2.3s  entrega t=20019  T1v2 es comida  comio 0 (okX 0.0, via lenta)  evU 0.1667 okU 0.6667  comH 0.0  ret2/3 1.0/1.0  muertes 8  celdas 45
+[19:29:27 +  101.6s]                  MECANISMO k=1 ganadoras [[5, 6]]  con pixel variable 0/1  comparten LAS k casillas 16/32 (una sola: 16/32)  lag 0 pasos / 0 mordidas  prefijo aaf01cdf07eb6610
+[19:29:29 +  103.9s]     BAR-T-k1     s2   2.3s  entrega t=20274  T1v2 es comida  comio 1 (okX 1.0, via lenta)  evU 0.5 okU 0.3333  comH 0.0  ret2/3 1.0/1.0  muertes 12  celdas 47
+[19:29:29 +  103.9s]                  MECANISMO k=1 ganadoras [[5, 9]]  con pixel variable 1/1  comparten LAS k casillas 21/32 (una sola: 12/32)  lag 0 pasos / 0 mordidas  prefijo 6083383e15434a1d
+[19:29:32 +  106.3s]     CANAL-k5     s1   2.4s  entrega t=20123  T1v2 es comida  comio 1 (okX 1.0, via lenta)  evU 0.6667 okU 0.8333  comH 1.0  ret2/3 0.0/1.0  muertes 8  celdas 40
+[19:29:32 +  106.3s]                  MECANISMO k=5 ganadoras [[4, 6], [6, 8], [4, 8], [8, 9], [1, 8]]  con pixel variable 1/5  comparten LAS k casillas 6/32 (una sola: 16/32)  lag 0 pasos / 0 mordidas  prefijo 49b3858a923b24ee
+[19:29:34 +  108.5s]     CANAL-k5     s2   2.2s  entrega t=20422  T1v2 es comida  comio 1 (okX 1.0, via lenta)  evU 1.0 okU 0.5  comH 0.0  ret2/3 0.0/0.0  muertes 20  celdas 36
+[19:29:34 +  108.5s]                  MECANISMO k=5 ganadoras [[1, 11], [3, 11], [8, 11], [6, 11], [5, 11]]  con pixel variable 5/5  comparten LAS k casillas 1/32 (una sola: 7/32)  lag 0 pasos / 0 mordidas  prefijo 0d79c99a61f4f347
+[19:29:36 +  110.9s]     CORTADO-k5   s1   2.3s  entrega t=20123  T1v2 es comida  comio 0 (okX 0.0, via lenta)  evU 0.6667 okU 0.8333  comH 0.0  ret2/3 1.0/1.0  muertes 9  celdas 38
+[19:29:36 +  110.9s]                  MECANISMO k=5 ganadoras [[2, 4], [0, 8], [3, 8], [2, 5], [2, 7]]  con pixel variable 0/5  comparten LAS k casillas 4/32 (una sola: 16/32)  lag 0 pasos / 0 mordidas  prefijo 49b3858a923b24ee
+[19:29:38 +  113.1s]     CORTADO-k5   s2   2.2s  entrega t=20422  T1v2 es comida  comio 0 (okX 0.0, via lenta)  evU 1.0 okU 0.5  comH 0.0  ret2/3 1.0/1.0  muertes 32  celdas 34
+[19:29:38 +  113.1s]                  MECANISMO k=5 ganadoras [[5, 11], [1, 11], [0, 11], [3, 11], [8, 11]]  con pixel variable 5/5  comparten LAS k casillas 1/32 (una sola: 7/32)  lag 0 pasos / 0 mordidas  prefijo 0d79c99a61f4f347
+[19:29:41 +  115.5s]     BAR-T-k5     s1   2.4s  entrega t=20123  T1v2 es comida  comio 1 (okX 1.0, via lenta)  evU 0.6667 okU 0.8333  comH 1.0  ret2/3 0.0/1.0  muertes 9  celdas 49
+[19:29:41 +  115.5s]                  MECANISMO k=5 ganadoras [[5, 8], [4, 6], [6, 8], [4, 8], [8, 9]]  con pixel variable 1/5  comparten LAS k casillas 9/32 (una sola: 16/32)  lag 0 pasos / 0 mordidas  prefijo 49b3858a923b24ee
+[19:29:43 +  117.7s]     BAR-T-k5     s2   2.2s  entrega t=20422  T1v2 es comida  comio 0 (okX 0.0, via lenta)  evU 1.0 okU 0.5  comH 0.0  ret2/3 1.0/1.0  muertes 13  celdas 36
+[19:29:43 +  117.7s]                  MECANISMO k=5 ganadoras [[1, 11], [8, 11], [4, 11], [2, 11], [5, 11]]  con pixel variable 5/5  comparten LAS k casillas 1/32 (una sola: 7/32)  lag 0 pasos / 0 mordidas  prefijo 0d79c99a61f4f347
+[19:29:43 +  117.7s]   GEMELO (P-I3) semilla 1, CANAL-k1/CORTADO-k1: ['aaf01cdf07eb6610', 'aaf01cdf07eb6610'] -> IDENTICOS
+[19:29:43 +  117.7s]   GEMELO (P-I3) semilla 1, CANAL-k5/CORTADO-k5: ['49b3858a923b24ee', '49b3858a923b24ee'] -> IDENTICOS
+[19:29:43 +  117.7s]   CRUCE cod0 del EMISOR contra escala_codigo (bloque 0): IDENTICO campo a campo
+[19:29:43 +  117.7s] ESTIMACION del bloque: 560 corridas de 100000 pasos, ~7.8 s/corrida en serie -> ~5.2 min de pared con Pool(14).
+[19:29:43 +  117.7s] HUMO: numeros observados, sin ajustar nada. n<=2 y semillas vistas: NO son evidencia.
+[19:29:43 +  117.7s] datos -> familias_b5_humo_20260918_192745.json  sha256_16 = a7154ce5981a2f67
