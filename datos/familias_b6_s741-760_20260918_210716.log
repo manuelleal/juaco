@@ -1,0 +1,56 @@
+[21:07:16 +    0.0s] ARRANQUE BLOQUE 6 (SUFIJO DE VARIANTE; E-8): celdas ['k1v0', 'k1v1', 'k3v0', 'k3v1'], 36 brazos, semillas 741-760, T=100000. Pool(14).
+[21:07:16 +    0.0s] El mundo, el canal y el emisor son los del bloque 4b/5, sin tocar (el emisor es mv=0, k=1 = b4b bit a bit). Lo unico nuevo es DONDE escribe y lee cada celda de la tabla del RECEPTOR.
+[21:07:16 +    0.0s]     sha preregistro                a927e60810eacab2
+[21:07:16 +    0.0s]     sha script                     88253f352d921c42
+[21:07:16 +    0.0s]     sha constructor                7d72a23ae12217e1
+[21:07:16 +    0.0s]     sha instrumento                b10cbd4ddd0c32a3
+[21:07:16 +    0.0s]     sha arnes                      b74d9195d7f20106
+[21:07:16 +    0.0s]     sha origen_b5                  e0b6b90f6f92d5c1
+[21:07:16 +    0.0s]     sha origen_b4b                 b3dd1d7e66a2d147
+[21:07:16 +    0.0s]     sha runner_bloque5             60ce47ad28c7ccc6
+[21:07:16 +    0.0s]     sha preregistro_bloque5        94798d50a47eafc0
+[21:07:16 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[21:07:16 +    0.0s]     sha externo_codex              be7208136d43fb71
+[21:07:16 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[21:07:16 +    0.4s] REGLA 11 - procesos python vivos (12), este es pid 26008
+[21:07:17 +    0.5s] ETAPA 1/4 - IDENTIDAD (11 casos x 3 = 33). (K), (C) y (H) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[21:07:41 +   24.8s]     (a) sufijo OFF == organismo_familias_b5 (mundo=AB, k=3)                3/3
+[21:07:41 +   24.8s]     (g) sufijo OFF == organismo_familias_b5 (el mundo del bloque 4, k=3)   3/3
+[21:07:41 +   24.9s]     (b) sufijo OFF + k=1 == organismo_familias_b4b (el mundo del bloque 4) 3/3
+[21:07:41 +   24.9s]     (n) sufijo OFF + k=1 + mundo=AB == organismo_v14 (TRONCO)              3/3
+[21:07:41 +   24.9s]     (o) relevo ON + mundo=AB == organismo_v15f_on                          3/3
+[21:07:41 +   24.9s]     (x) memoria_pares=None: sufijo ON == sufijo OFF (la perilla es INERTE sin tabla) 3/3
+[21:07:41 +   24.9s]     (d) la DIRECCION: 4 subcasillas OFF, 32 ON, y la hermana FUERA del grupo con sufijo 3/3
+[21:07:41 +   24.9s]     (e) memoria_variante mal escrita LANZA (2, -1, 0.5, '1', True)         3/3
+[21:07:41 +   24.9s]     (K) sufijo ON != sufijo OFF con el relevo ON (DEBE diferir)            3/3
+[21:07:41 +   24.9s]     (C) CANAL-k3v1 != CORTADO-k3v1 (DEBE diferir)                          2/3   semilla 3: difieren ['sin mensaje (-)'] faltan []
+[21:07:41 +   24.9s]     (H) BAR-H-k3v1 != CANAL-k3v1 (DEBE diferir: es el brazo que decide)    2/3   semilla 3: difieren ['sin mensaje (-)'] faltan []
+[21:07:41 +   24.9s]   IDENTIDAD 31/33
+[21:07:41 +   24.9s] ETAPA 2/4 - DIAGNOSTICO ESTRUCTURAL, ANTES de simular (20 semillas, T = 0).
+[21:07:41 +   24.9s]     alias por par mediana 0.0121  U3 mediana 0.3242
+[21:07:41 +   24.9s]     celdas de las 66 que NO distinguen el referente, SIN sufijo -> CON sufijo: BAR-H 0.6818 -> 0.0; BAR-T 0.4242 -> 0.4242; piso de forma 4.0/32 -> 1.0/32
+[21:07:41 +   24.9s]     semillas en que referente y hermana difieren en ALGUN pixel de FORMA (0-8): 0/20 (si no es 0, el sufijo de 3 px no puede separarlas del todo)
+[21:07:41 +   24.9s] ETAPA 3/4 - EMISORES (20 corridas de 100000 pasos; mv = 0, k = 1 = b4b bit a bit).
+[21:08:02 +   46.5s]     (neg) emiten 18/20; sin mensaje (excluidas, P-I2): [745, 751]; t_msg mediana 10917.0
+[21:08:02 +   46.5s] ETAPA 4/4 - RECEPTORES: 648 corridas de 100000 pasos (36 brazos)...
+[21:08:42 +   85.8s]           40/648
+[21:09:19 +  123.0s]           80/648
+[21:09:55 +  159.4s]           120/648
+[21:10:31 +  195.4s]           160/648
+[21:11:10 +  233.8s]           200/648
+[21:11:46 +  270.5s]           240/648
+[21:12:21 +  305.3s]           280/648
+[21:12:57 +  341.1s]           320/648
+[21:13:34 +  378.0s]           360/648
+[21:14:10 +  413.6s]           400/648
+[21:14:46 +  449.8s]           440/648
+[21:15:21 +  484.9s]           480/648
+[21:16:00 +  523.6s]           520/648
+[21:16:37 +  561.4s]           560/648
+[21:17:15 +  599.1s]           600/648
+[21:17:52 +  636.4s]           640/648
+[21:17:58 +  642.3s]           648/648
+[21:17:58 +  642.5s] CRUDO -> familias_b6_s741-760_20260918_210716_crudo.json  sha256_16 = 7522e085744c46cc  (ERR-54: guardado ANTES del analisis)
+[21:17:58 +  642.5s] 
+[21:17:58 +  642.5s] PI5 CAE -- es el INSTRUMENTO o el montaje. Nada se declara (preregistro 5.2).
+[21:17:59 +  642.7s] datos -> familias_b6_s741-760_20260918_210716.json  sha256_16 = 75b9a0e40d4ada96

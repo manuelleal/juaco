@@ -5425,3 +5425,35 @@ porque no está en el menú: el hijo nace vacío y muere a los ~100 pasos si no 
 de codificación en el buzón, para la próxima serie. **Hipótesis que deja para el método (sin alma, preregistro nuevo):** nodo central leído por
 relevancia y no por recencia (las lecciones expiraban); conexión al nodo desde el nacimiento como mecanismo (no como curita) contra barajado;
 y la reproducción desacoplada de la saciedad. Nivel 9 sigue en 40 %.
+
+
+### BLOQUE 6 — SUFIJO DE VARIANTE (mecanismo de Codex completado; factorial k × sufijo; 18 sep 21:07 y réplica 21:20; semillas 721–740 y 741–760; 36 brazos): **REPLICADO — la firma de los 3 píxeles de variante en la tabla de pares lleva la referencia del mensaje hasta la VARIANTE (el receptor distingue "sal rosa" de "sal": 15/20 y 15/18 contra 12/20 y 9/18 sin sufijo; la hermana cae de 13–14 a 5–6 de 20) al precio de perder parte de la especificidad de familia (otro token sube de 4–5 a 10–11) y subir la base sin mensaje (0 → 4–6): con 4 casillas por par no caben familia y variante a la vez. NADA SE DECLARA por la letra (puerta P-I2 en el borde, R2 cae) — pero la fase 5 queda con dos lecturas replicadas: k = 3 da familia exacta; el sufijo da variante; el organismo necesita las dos y hoy sólo puede una**
+
+Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque6_sufijo.md` (ERR-70 P-I4 por exclusión; ERR-64b heredado; ERR-71 el caso (d)
+del arnés pasaba por el emisor); instrumento `organismo_familias_b6.py` (b10cbd4ddd0c32a3; identidad 59/59, cadena hasta el tronco); runner
+`corre_familias_b6.py` (88253f352d921c42); crudos `familias_b6_s721-740_20260918_205401_crudo` (31f01bf3f16bb09b) y `familias_b6_s741-760_20260918_210716_crudo`
+(7522e085744c46cc); 720 corridas por serie; los brazos se calcularon desde los crudos (ERR-54) porque el análisis del runner se detuvo en la puerta P-I2.
+
+| receptor come a la 1.ª lo que evitaba (serie / réplica) | k1 sin sufijo | k3 sin sufijo | k1 con sufijo | **k3 con sufijo** |
+|---|---|---|---|---|
+| CANAL | 19/20 · 18/18 | 19/20 · 17/18 | 19/20 · 17/18 | **20/20 · 15/18** |
+| CORTADO (mudo) | 2/20 · 5/18 | 0/20 · 0/18 | 1/20 · 2/18 | 6/20 · 4/18 |
+| BAR-H (hermana) | 14/20 · 15/18 | 13/20 · 14/18 | 9/20 · 10/18 | **6/20 · 5/18** |
+| BAR-T (otro token) | 12/20 · 8/18 | **5/20 · 4/18** | 11/20 · 9/18 | 11/20 · 10/18 |
+| VALOR (sin referencia) | 5/20 · 8/18 | 2/20 · 1/18 | 3/20 · 4/18 | 4/20 · 4/18 |
+| PAR: distingue X de su hermana | 5/20 · 6/18 | 12/20 · 9/18 | 16/20 · 15/18 | **15/20 · 15/18** |
+
+**Lectura honesta:** el mecanismo de Codex funciona para lo que se diseñó (la variante entra en la dirección: PAR 15/18 contra 6/18; la hermana
+deja de arrastrar) y cobra exactamente el precio que el creador calculó antes (tabla 8× más dispersa; una sola ganadora reparte entre familias:
+BAR-T vuelve a 10/18). La predicción del creador (BAR-H 0–5, BAR-T 0–4 con k3v1) acertó en la hermana y falló en el otro token. Lo que la fase
+5 necesita ahora es una tabla que codifique familia Y variante (dos ganadoras de distinto tipo: una de forma y una de variante, sumadas), y
+eso es un candidato nuevo con preregistro nuevo. Vocabulario permitido: *"el mensaje puede referir a la familia exacta (k = 3) o a la
+variante (sufijo), no a las dos con la misma tabla"*. Nivel 5: 70 % → **75 %**.
+
+### CIERRE DEL 18 SEP (21:30). Estado para el siguiente chat
+Corrido y registrado hoy: 18 bloques, 33 series, ERR-35..ERR-84, dos declaraciones (desambiguar códigos; crecimiento del linaje con lectura
+pesimista), la comunicación mínima medida en diez series (familia exacta con k = 3; variante con sufijo), H-1 (la muerte mata: el mundo no
+sostiene linajes mortales), la serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido). Preparado y pendiente: v14.2 (=
+v14.1 + B-5) con identidad 62/62 y humo, a la espera de la regla 1 completa, manifiesto y tag; v15f bajo el criterio v2 (paquete verificado,
+33/33) a la espera de su serie; la línea lateral del exoesqueleto (`HIPOTESIS_exoesqueleto_20260918.md`). Decisiones del director: B-5 → v14.2
+(sí), v15f con v2 (sí), dE5 después (sí). Próximo candidato de la fase 5: tabla con dos ganadoras de tipo distinto (forma + variante).

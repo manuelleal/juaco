@@ -788,3 +788,13 @@ al empezar el paquete de v15f para el criterio v2: sus 5 archivos en `experiment
 10:00 está registrado y empujado (5a00089). **Al reanudar:** (1) leer los 4 DIAG y los 6 DISENO y escribir la síntesis (un agente,
 o el coordinador) → completar `CRITERIO_TRONCO_v2.md`; (2) reanudar al creador A sobre su borrador (identidad primero); (3) el Pool
 está libre; nada corre.
+
+
+### 15.11 Cierre de la noche del 18 (21:30)
+Ver la entrada "CIERRE DEL 18 SEP" al final de `REGISTRO_etapas_1_2.md`. Quien retome: (1) `CLAUDE.md` bloque Estado y la decisión del
+director de las 09:55 (cambio de rumbo) y de las ~14:15 (plan aprobado); (2) `registro/CRITERIO_TRONCO_v2.md`; (3) lo pendiente con paquete
+verificado: v14.2 (`experimentos/creacion_B/CONGELA_v142.md`, aplicar tras la regla 1), v15f-v2 (`python experimentos/creacion_A/corre_v15f_v2.py`),
+dE5 después; (4) la fase 5 pide un candidato con dos ganadoras de tipo distinto (forma + variante); (5) la fase 9 pide que un cuerpo nuevo
+aprenda en menos de una vida (nodo leído por relevancia; conexión desde el nacimiento como mecanismo; reproducción desacoplada de la saciedad).
+Regla para el coordinador (de esta noche): todo parche propio se compila y pasa el arnés en una semilla antes del Pool; lo que sea instrumento
+lo hace un creador con arnés y humo.
