@@ -1,0 +1,37 @@
+{
+  "n": 1,
+  "nivel": 5,
+  "menu": [
+    {
+      "id": "a",
+      "nombre": "SUBIR GANADORAS",
+      "que_toca": "k_ganadoras <- min(k_ganadoras+1, 3)"
+    },
+    {
+      "id": "b",
+      "nombre": "REFERENCIA POR HERMANA",
+      "que_toca": "par_herm <- ('A','C') para la proxima vida"
+    },
+    {
+      "id": "c",
+      "nombre": "VORAZ",
+      "que_toca": "voraz <- 1.0"
+    },
+    {
+      "id": "d",
+      "nombre": "NADA",
+      "que_toca": "no toca nada"
+    }
+  ],
+  "contexto": {
+    "vida": 1,
+    "seed": 1001,
+    "com": 1,
+    "com_racha": 1,
+    "knobs": {
+      "k_ganadoras": 1,
+      "par_herm": null,
+      "voraz": 0.0
+    }
+  }
+}

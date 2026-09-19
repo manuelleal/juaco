@@ -1,0 +1,34 @@
+[2026-09-18 20:20:57] MISION: llegar a la AGI por este camino. corre_eras.py nivel=5 alma=razonada vidas=10 seed=1
+[2026-09-18 20:20:58] nivel5 vida=1 seed=1001 com=1 racha=1 knobs={'k_ganadoras': 1, 'par_herm': None, 'voraz': 0.0}
+[2026-09-18 20:20:58] ALMA (razonada): escrita alma_pregunta_1.json -- esperando alma_respuesta_1.json en .
+[2026-09-18 20:21:04]   curita elegida: d (com=1 desde la primera vida (letra del nivel 5 ya resuelta sin alma); no tocar nada antes de ver si se sostiene sola)
+[2026-09-18 20:21:05] nivel5 vida=2 seed=1002 com=1 racha=2 knobs={'k_ganadoras': 1, 'par_herm': None, 'voraz': 0.0}
+[2026-09-18 20:21:05] ALMA (razonada): escrita alma_pregunta_2.json -- esperando alma_respuesta_2.json en .
+[2026-09-18 20:21:09]   curita elegida: d (racha=2, estable; seguir sin tocar)
+[2026-09-18 20:21:10] nivel5 vida=3 seed=1003 com=1 racha=3 knobs={'k_ganadoras': 1, 'par_herm': None, 'voraz': 0.0}
+[2026-09-18 20:21:10] ALMA (razonada): escrita alma_pregunta_3.json -- esperando alma_respuesta_3.json en .
+[2026-09-18 20:21:15]   curita elegida: a (racha=3 estable; primera perturbacion controlada (subir k_ganadoras) para probar robustez, no porque haga falta)
+[2026-09-18 20:21:15] nivel5 vida=4 seed=1004 com=1 racha=4 knobs={'k_ganadoras': 2, 'par_herm': None, 'voraz': 0.0}
+[2026-09-18 20:21:15] ALMA (razonada): escrita alma_pregunta_4.json -- esperando alma_respuesta_4.json en .
+[2026-09-18 20:21:19]   curita elegida: d (com=1 con k_ganadoras=2, la perturbacion no rompio nada; volver a NADA)
+[2026-09-18 20:21:20] nivel5 vida=5 seed=1005 com=1 racha=5 knobs={'k_ganadoras': 2, 'par_herm': None, 'voraz': 0.0}
+[2026-09-18 20:21:20] ALMA (razonada): escrita alma_pregunta_5.json -- esperando alma_respuesta_5.json en .
+[2026-09-18 20:21:25]   curita elegida: c (racha=5 muy estable; segunda perturbacion controlada (voraz) para cubrir el menu)
+[2026-09-18 20:21:26] nivel5 vida=6 seed=1006 com=1 racha=6 knobs={'k_ganadoras': 2, 'par_herm': None, 'voraz': 1.0}
+[2026-09-18 20:21:26] ALMA (razonada): escrita alma_pregunta_6.json -- esperando alma_respuesta_6.json en .
+[2026-09-18 20:21:31]   curita elegida: b (com=1 con voraz=1.0 tampoco rompio nada; tercera perturbacion controlada (referencia por hermana) para cubrir el resto del menu)
+[2026-09-18 20:21:32] nivel5 vida=7 seed=1007 com=1 racha=7 knobs={'k_ganadoras': 2, 'par_herm': ('A', 'C'), 'voraz': 1.0}
+[2026-09-18 20:21:32] ALMA (razonada): escrita alma_pregunta_7.json -- esperando alma_respuesta_7.json en .
+[2026-09-18 20:21:39]   curita elegida: d (las tres perturbaciones controladas (a,c,b) no rompieron com=1; cerrar el resto del humo en NADA, ya cubrimos el menu)
+[2026-09-18 20:21:40] nivel5 vida=8 seed=1008 com=1 racha=8 knobs={'k_ganadoras': 2, 'par_herm': ('A', 'C'), 'voraz': 1.0}
+[2026-09-18 20:21:40] ALMA (razonada): escrita alma_pregunta_8.json -- esperando alma_respuesta_8.json en .
+[2026-09-18 20:21:45]   curita elegida: d (racha=8, NADA)
+[2026-09-18 20:21:46] nivel5 vida=9 seed=1009 com=1 racha=9 knobs={'k_ganadoras': 2, 'par_herm': ('A', 'C'), 'voraz': 1.0}
+[2026-09-18 20:21:46] ALMA (razonada): escrita alma_pregunta_9.json -- esperando alma_respuesta_9.json en .
+[2026-09-18 20:21:51]   curita elegida: d (racha=9, NADA)
+[2026-09-18 20:21:51] nivel5 vida=10 seed=1010 com=1 racha=10 knobs={'k_ganadoras': 2, 'par_herm': ('A', 'C'), 'voraz': 1.0}
+[2026-09-18 20:21:51] ALMA (razonada): escrita alma_pregunta_10.json -- esperando alma_respuesta_10.json en .
+[2026-09-18 20:21:56]   curita elegida: d (racha=10 de 10, com=1 en las diez vidas del humo; NADA; cierre del humo)
+[2026-09-18 20:21:56] JSON escrito: .\salida_eras_nivel5_razonada_seed1_20260918_202156.json
+[2026-09-18 20:21:56] sha16 de corre_eras.py: 7623721fbb06c11b
+[2026-09-18 20:21:56] RESULTADO: nivel=5 promovio=False en_vida=None

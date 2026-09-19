@@ -1,0 +1,142 @@
+{
+  "nivel": 5,
+  "promovio": false,
+  "en_vida": null,
+  "filas": [
+    {
+      "vida": 1,
+      "seed": 1001,
+      "com": 1,
+      "curita": "d",
+      "motivo": "com=1 desde la primera vida (letra del nivel 5 ya resuelta sin alma); no tocar nada antes de ver si se sostiene sola",
+      "knobs_tras_curita": {
+        "k_ganadoras": 1,
+        "par_herm": null,
+        "voraz": 0.0
+      }
+    },
+    {
+      "vida": 2,
+      "seed": 1002,
+      "com": 1,
+      "curita": "d",
+      "motivo": "racha=2, estable; seguir sin tocar",
+      "knobs_tras_curita": {
+        "k_ganadoras": 1,
+        "par_herm": null,
+        "voraz": 0.0
+      }
+    },
+    {
+      "vida": 3,
+      "seed": 1003,
+      "com": 1,
+      "curita": "a",
+      "motivo": "racha=3 estable; primera perturbacion controlada (subir k_ganadoras) para probar robustez, no porque haga falta",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": null,
+        "voraz": 0.0
+      }
+    },
+    {
+      "vida": 4,
+      "seed": 1004,
+      "com": 1,
+      "curita": "d",
+      "motivo": "com=1 con k_ganadoras=2, la perturbacion no rompio nada; volver a NADA",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": null,
+        "voraz": 0.0
+      }
+    },
+    {
+      "vida": 5,
+      "seed": 1005,
+      "com": 1,
+      "curita": "c",
+      "motivo": "racha=5 muy estable; segunda perturbacion controlada (voraz) para cubrir el menu",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": null,
+        "voraz": 1.0
+      }
+    },
+    {
+      "vida": 6,
+      "seed": 1006,
+      "com": 1,
+      "curita": "b",
+      "motivo": "com=1 con voraz=1.0 tampoco rompio nada; tercera perturbacion controlada (referencia por hermana) para cubrir el resto del menu",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": [
+          "A",
+          "C"
+        ],
+        "voraz": 1.0
+      }
+    },
+    {
+      "vida": 7,
+      "seed": 1007,
+      "com": 1,
+      "curita": "d",
+      "motivo": "las tres perturbaciones controladas (a,c,b) no rompieron com=1; cerrar el resto del humo en NADA, ya cubrimos el menu",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": [
+          "A",
+          "C"
+        ],
+        "voraz": 1.0
+      }
+    },
+    {
+      "vida": 8,
+      "seed": 1008,
+      "com": 1,
+      "curita": "d",
+      "motivo": "racha=8, NADA",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": [
+          "A",
+          "C"
+        ],
+        "voraz": 1.0
+      }
+    },
+    {
+      "vida": 9,
+      "seed": 1009,
+      "com": 1,
+      "curita": "d",
+      "motivo": "racha=9, NADA",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": [
+          "A",
+          "C"
+        ],
+        "voraz": 1.0
+      }
+    },
+    {
+      "vida": 10,
+      "seed": 1010,
+      "com": 1,
+      "curita": "d",
+      "motivo": "racha=10 de 10, com=1 en las diez vidas del humo; NADA; cierre del humo",
+      "knobs_tras_curita": {
+        "k_ganadoras": 2,
+        "par_herm": [
+          "A",
+          "C"
+        ],
+        "voraz": 1.0
+      }
+    }
+  ]
+}
