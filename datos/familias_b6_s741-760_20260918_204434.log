@@ -1,0 +1,29 @@
+[20:44:34 +    0.0s] ARRANQUE BLOQUE 6 (SUFIJO DE VARIANTE; E-8): celdas ['k1v0', 'k1v1', 'k3v0', 'k3v1'], 36 brazos, semillas 741-760, T=100000. Pool(14).
+[20:44:34 +    0.0s] El mundo, el canal y el emisor son los del bloque 4b/5, sin tocar (el emisor es mv=0, k=1 = b4b bit a bit). Lo unico nuevo es DONDE escribe y lee cada celda de la tabla del RECEPTOR.
+[20:44:34 +    0.0s]     sha preregistro                1ccc8a2e2482e807
+[20:44:34 +    0.0s]     sha script                     aa53c3d299865378
+[20:44:34 +    0.0s]     sha constructor                7d72a23ae12217e1
+[20:44:34 +    0.0s]     sha instrumento                b10cbd4ddd0c32a3
+[20:44:34 +    0.0s]     sha arnes                      b74d9195d7f20106
+[20:44:34 +    0.0s]     sha origen_b5                  e0b6b90f6f92d5c1
+[20:44:34 +    0.0s]     sha origen_b4b                 b3dd1d7e66a2d147
+[20:44:34 +    0.0s]     sha runner_bloque5             60ce47ad28c7ccc6
+[20:44:34 +    0.0s]     sha preregistro_bloque5        94798d50a47eafc0
+[20:44:34 +    0.0s]     sha escala_codigo_bloque0      d8b8566bca77a0ae
+[20:44:34 +    0.0s]     sha externo_codex              be7208136d43fb71
+[20:44:34 +    0.0s]     sha origen_organismo_v14       feefc88b1fd8d434
+[20:44:34 +    0.4s] REGLA 11 - procesos python vivos (19), este es pid 27264
+[20:44:35 +    0.6s] ETAPA 1/4 - IDENTIDAD (11 casos x 3 = 33). (K), (C) y (H) DEBEN fallar: sin ellos la etapa pasa por vacuidad.
+[20:45:01 +   26.8s]     (a) sufijo OFF == organismo_familias_b5 (mundo=AB, k=3)                3/3
+[20:45:01 +   26.8s]     (g) sufijo OFF == organismo_familias_b5 (el mundo del bloque 4, k=3)   3/3
+[20:45:01 +   26.8s]     (b) sufijo OFF + k=1 == organismo_familias_b4b (el mundo del bloque 4) 3/3
+[20:45:01 +   26.8s]     (n) sufijo OFF + k=1 + mundo=AB == organismo_v14 (TRONCO)              3/3
+[20:45:01 +   26.8s]     (o) relevo ON + mundo=AB == organismo_v15f_on                          3/3
+[20:45:01 +   26.8s]     (x) memoria_pares=None: sufijo ON == sufijo OFF (la perilla es INERTE sin tabla) 3/3
+[20:45:01 +   26.8s]     (d) la DIRECCION: 4 subcasillas OFF, 32 ON, y la hermana FUERA del grupo con sufijo 2/3   difieren [] faltan []
+[20:45:01 +   26.8s]     (e) memoria_variante mal escrita LANZA (2, -1, 0.5, '1', True)         3/3
+[20:45:01 +   26.8s]     (K) sufijo ON != sufijo OFF con el relevo ON (DEBE diferir)            3/3
+[20:45:01 +   26.8s]     (C) CANAL-k3v1 != CORTADO-k3v1 (DEBE diferir)                          2/3   difieren ['mem_ganadoras', 'primera_b4', 'mem_ganadora', 'mem_tabla', 'mem_err_tabla', 'W_tabla'] faltan []
+[20:45:01 +   26.8s]     (H) BAR-H-k3v1 != CANAL-k3v1 (DEBE diferir: es el brazo que decide)    2/3   difieren ['canal_mismo_dir_k', 'mem_ganadoras', 'canal_gan_k_post', 'canal_mismo_bin_k', 'canal_gan_post', 'primera_b4'] faltan []
+[20:45:01 +   26.8s]   IDENTIDAD 30/33
+[20:45:01 +   26.8s] *** GUARDA DE IDENTIDAD FALLIDA. Se para (P-I1).

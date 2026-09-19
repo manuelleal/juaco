@@ -391,3 +391,5 @@ después."* Se decide aquí:
 ## 10. SERIES 721–740 y 741–760 — resultado
 
 *(lo rellena el coordinador tras correr; §0–§8 quedan como están)*
+
+## ERR-64b aplicado al bloque 6 (coordinador, 20:52; ANTES de repetir): los controles del arnés que DEBEN diferir exigen >= 2 de 3 (una semilla sin mensaje entregado no es vacuidad); la identidad sigue en 3/3. Ningún umbral cambia.
