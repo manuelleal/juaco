@@ -1,0 +1,32 @@
+[20:52:34 +    0.0s] ARRANQUE v15f bajo el CRITERIO v2 (HUMO, un proceso, sin Pool).
+[20:52:34 +    0.0s] sha preregistro adfcfd7ac058c47a  script 303a47dfdeecc5bd  construye_vivo_relevo 6942d42461832404  organismo_vivo_relevo 3b2cb0ca4c334779  identidad_vivo_relevo 90187f3c114500c1  bateria_v15f d63f5aee558eb6da  bateria_generaliza_v15f 0cd87d2632e0c66a  organismo_v15f_on 54d6efe0b564113c  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_vivo 20c0961c79de8825  organismo_v14 feefc88b1fd8d434  bateria_v14 72216f5415de0c86  corre_sal bfdc00bb48656337  corre_vivo_rep2 10ab45355883d98d  mini_vivo f3e86cbe6c17e6d7
+[20:52:34 +    0.0s] ETAPA 1/4 — identidad (subproceso, T=20000): 28 identidades + 5 controles que deben fallar.
+[20:52:34 +    0.0s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_vivo_relevo.py 20000
+[20:53:50 +   76.3s]       |                           M1 relevo ON != rep2 VIVO s1: DIFIERE (ok, el control fallo como debe)
+[20:53:50 +   76.3s]       |                            M2 v15g != v15f (ALIAS 326): DIFIERE (ok, el control fallo como debe)  |W[sal]| v15f 1.67 / v15g 0.0
+[20:53:50 +   76.3s]       |               M3 invertir_vivo_en=T//2 != rep2 VIVO s1: DIFIERE (ok, el control fallo como debe)
+[20:53:50 +   76.3s]       |                         M4 paja: CUELLO_MIN != VIVO s1: DIFIERE (ok, el control fallo como debe)
+[20:53:50 +   76.3s]       |          M5 memoria_pares mal escrita lanza ValueError: DIFIERE (ok, el control fallo como debe)  memoria_pares='xxx'
+[20:53:50 +   76.3s]       | 
+[20:53:50 +   76.3s]       | CONTROLES (M1-M5): 5/5 fallan como deben
+[20:53:50 +   76.3s]       | ARNES TOTAL: 33/33
+[20:53:50 +   76.3s]       | 
+[20:53:50 +   76.3s]       | --- I8 (NO es comprobacion): semilla ALIAS 326, sal muda, T=20000: apagada / v15f (relevo en la lenta) / v15g (casilla antes de la puerta) ---
+[20:53:50 +   76.3s]       |   apagada            |W[sal]| 1.58 por nec [-1.58, 0.0]  W[veneno] -1.58 por nec [-1.58, 0.0]  exp sal 727 veneno 644  splits 0 celdas 30 muertes 19  tabla None  ganadora None
+[20:53:50 +   76.3s]       |   v15f relevo        |W[sal]| 1.67 por nec [-1.67, 0.0]  W[veneno] -1.67 por nec [-1.67, 0.0]  exp sal 595 veneno 940  splits 0 celdas 30 muertes 20  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]  ganadora [[3, 5], [1, 3]]
+[20:53:50 +   76.3s]       |   v15g relevo_boca   |W[sal]| 0.0 por nec [0.0, 0.0]  W[veneno] -3.0 por nec [-3.0, 0.0]  exp sal 92 veneno 1346  splits 0 celdas 30 muertes 8  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]  ganadora [[0, 4], [0, 1]]
+[20:53:50 +   76.3s]       |   Lo que se busca: sin excepcion; la tabla de hambre lee 0.0 en la sal y -3.0 en el veneno; v15f la sabe pero la puerta lee la rapida.
+[20:53:50 +   76.3s]       (76s)
+[20:53:50 +   76.3s] ETAPA 2/4 — T-D humo: semilla ALIAS 326 (sal muda), apagada / v15f / v15g.
+[20:54:09 +   95.9s]    OFF   s326  |W[sal]| 1.8 [-1.8, 0.0]  W[veneno] -1.8 [-1.8, 0.0]  exp sal 4009 veneno 3496  splits 0 celdas 30 muertes 90  tabla None
+[20:54:09 +   95.9s]    v15f  s326  |W[sal]| 1.54 [-1.54, 0.0]  W[veneno] -1.54 [-1.54, 0.0]  exp sal 3614 veneno 3866  splits 0 celdas 30 muertes 78  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]
+[20:54:09 +   95.9s]    v15g  s326  |W[sal]| 0.0 [0.0, 0.0]  W[veneno] -3.0 [-3.0, 0.0]  exp sal 459 veneno 7443  splits 0 celdas 30 muertes 39  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]
+[20:54:09 +   95.9s] ETAPA 3/4 — T-A humo (una semilla, NO es la puerta): mundo vivo rep2, brazo VIVO, semilla 301, apagada / v15f / v15g: r = descendientes - muertes.
+[20:54:33 +  119.7s]    OFF   s301  r -79  descendientes 16  muertes 95 [57, 38]  exposiciones {'A': 854, 'B': 5226, 'C': 936, 'D': 2010}  celdas 32 splits 2  tabla None
+[20:54:33 +  119.7s]    v15f  s301  r -66  descendientes 25  muertes 91 [49, 42]  exposiciones {'A': 831, 'B': 5754, 'C': 926, 'D': 1855}  celdas 32 splits 2  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': -3.0}]
+[20:54:33 +  119.7s]    v15g  s301  r -60  descendientes 21  muertes 81 [42, 39]  exposiciones {'A': 801, 'B': 5481, 'C': 868, 'D': 2008}  celdas 32 splits 2  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': -3.0}]
+[20:54:33 +  119.7s] ETAPA 4/4 — T-C (ii) humo: reversion en el mundo vivo (invertir_vivo_en=50000), semilla 321, apagada / v15f / v15g.
+[20:55:00 +  146.9s]    OFF   s321  rev +67  mord A [156, 176, 135, 176]  mord B [133, 138, 172, 243]  muertes 102  W_nec [{'A': -3.0, 'B': 1.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': -0.0, 'C': 1.0, 'D': -3.0}]  tabla None
+[20:55:00 +  146.9s]    v15f  s321  rev +30  mord A [195, 249, 160, 125]  mord B [158, 189, 201, 155]  muertes 83  W_nec [{'A': -3.0, 'B': 1.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': -3.0}]  tabla [{'A': -3.0, 'B': 1.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': -3.0}]
+[20:55:00 +  146.9s]    v15g  s321  rev +49  mord A [237, 225, 164, 177]  mord B [148, 189, 215, 226]  muertes 83  W_nec [{'A': -3.0, 'B': 1.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': -3.0}]  tabla [{'A': -3.0, 'B': 1.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': -3.0}]
+[20:55:00 +  146.9s] datos -> v15f_v2_humo_20260918_205234.json  sha256_16 = 9f603f5d0cd10c7f
