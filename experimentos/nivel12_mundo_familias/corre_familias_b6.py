@@ -611,8 +611,7 @@ def humo(nk, ktop, nkmax, Tb, brazos):
             ident.append(tarea(('ID', cual, s, 6000)))
         g = [r for r in ident if r['cual'] == cual]
         log(f"    {CASOS_ID[cual][0]:70s} {sum(r['ok'] for r in g)}/{len(g)}"
-            # ERR-64b (heredado del bloque 5): los controles que DEBEN diferir prueban no-vacuidad con >= 2 de 3
-            V[f'ID_{cual}'] = (sum(r['ok'] for r in g) >= 2) if (g and g[0].get('debe_diferir')) else all(r['ok'] for r in g)
+            + ("" if all(r['ok'] for r in g) else f"   difieren {g[0]['difieren']}"))
     log(f"  IDENTIDAD {sum(r['ok'] for r in ident)}/{len(ident)}")
 
     log("2/4 DIAGNOSTICO ESTRUCTURAL (antes de simular, T = 0): alias, U3 y la resolucion CON y SIN sufijo.")
@@ -748,6 +747,7 @@ if __name__ == '__main__':
             log(f"    {CASOS_ID[cual][0]:70s} {sum(r['ok'] for r in g)}/{len(g)}"
                 + ("" if all(r['ok'] for r in g) else f"   difieren {g[0]['difieren']} faltan {g[0]['faltan']}"))
             # ERR-64b: los controles que DEBEN diferir prueban no-vacuidad con >= 2 de 3 semillas
+            # ERR-64b (heredado del bloque 5): los controles que DEBEN diferir prueban no-vacuidad con >= 2 de 3
             V[f'ID_{cual}'] = (sum(r['ok'] for r in g) >= 2) if (g and g[0].get('debe_diferir')) else all(r['ok'] for r in g)
         V['G_IDENTIDAD'] = bool(all(V[f'ID_{c}'] for c in CASOS_ID))
         log(f"  IDENTIDAD {sum(r['ok'] for r in rc)}/{len(rc)}")
