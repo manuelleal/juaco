@@ -53,3 +53,18 @@ M5 caracteres de contexto (≈ tokens); M6 latencia media; M7 respuestas inváli
 La familia viene explícita en el texto (la clave de JUACO está regalada; el mundo no mide descubrir familias). El RAG es
 léxico, no de embeddings. Un solo LLM (Haiku). Mundo de juguete: si C gana, sólo dice que el mecanismo funciona en el caso
 fácil; si pierde aquí, cae en serio. J puede igualar a C: eso diría que en este mundo el LLM no razona nada útil.
+
+## RESULTADO (22:37; `datos/exo1_s901-903_*`, `datos/exo1_s904-906_*`, logs `log_901-903.txt`, `log_904-906.txt`)
+| brazo | d3 variante | d4 cambiadas | d2–5 | errores repetidos | vuelve a la vieja |
+|---|---|---|---|---|---|
+| A | 0.33 / 0.21 | 0.28 / 0.22 | 0.26 / 0.27 | 36 / 28 | 3 / 1 |
+| B | 0.50 / 0.75 | 0.22 / 0.33 | 0.44 / 0.67 | 19 / 3 | 2 / 5 |
+| Bf | 1.00 / 0.96 | 0.22 / 0.22 | 0.84 / 0.82 | 1 / 2 | 3 / 5 |
+| C | 1.00 / 1.00 | 0.28 / 0.28 | 0.86 / 0.82 | 0 / 0 | 0 / 0 |
+| Cx | 0.00 / 0.00 | 0.11 / 0.28 | 0.03 / 0.07 | 21 / 28 | 1 / 0 |
+| J | 1.00 / 1.00 | 0.11 / 0.56 | 0.83 / 0.93 | 0 / 0 | 3 / 0 |
+P1: C−B ≥ 0.15 SÍ (0.50, 0.25); C−Bf ≥ 0.10 NO (0.00, 0.04). P2: vuelta a la vieja C 0 contra 2–5 SÍ; acierto d4 cambiadas
+C > Bf por 0.056 (1 caso de 18) — nominal. P3 SÍ. P4 SÍ. Control Cx SÍ (se hunde: Haiku obedece la memoria aunque mienta).
+**Forma FUERTE REFUTADA ×2** (C ≈ Bf en variante y en cambio). **Forma débil (contra RAG léxico) SOSTENIDA ×2.**
+Constante en las dos series: C nunca repite un daño ni vuelve a la herramienta vieja (0/0). En la réplica la tabla sola (J)
+supera a C (0.93 contra 0.82; cambio 0.56 contra 0.28): en este mundo el LLM no suma razonamiento y a veces resta.
