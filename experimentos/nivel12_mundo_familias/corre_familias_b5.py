@@ -661,7 +661,8 @@ if __name__ == '__main__':
             g = [r for r in rc if r['cual'] == cual]
             log(f"    {CASOS_ID[cual][0]:62s} {sum(r['ok'] for r in g)}/{len(g)}"
                 + ("" if all(r['ok'] for r in g) else f"   difieren {g[0]['difieren']} faltan {g[0]['faltan']}"))
-            V[f'ID_{cual}'] = all(r['ok'] for r in g)
+            # ERR-64b: los controles que DEBEN diferir prueban no-vacuidad con >= 2 de 3 semillas (una semilla sin mensaje entregado no es vacuidad)
+            V[f'ID_{cual}'] = (sum(r['ok'] for r in g) >= 2) if (g and g[0].get('debe_diferir')) else all(r['ok'] for r in g)
         V['G_IDENTIDAD'] = bool(all(V[f'ID_{c}'] for c in CASOS_ID))
         log(f"  IDENTIDAD {sum(r['ok'] for r in rc)}/{len(rc)}")
         if not V['G_IDENTIDAD']:
