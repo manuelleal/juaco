@@ -1,0 +1,56 @@
+{
+ "A0": {
+  "R0": 0.9415,
+  "descendants_per_founder": 1.243,
+  "extinction_rate": 0.078,
+  "lineage_survival": 0.714,
+  "mean_final_population": 2.978,
+  "mean_memory_episodes_per_seed": 0.0,
+  "mean_survival_time": 125.96391661671662,
+  "n_seeds": 1000,
+  "number_of_generations": 1.226
+ },
+ "E": {
+  "R0": 0.9415,
+  "descendants_per_founder": 1.243,
+  "extinction_rate": 0.078,
+  "lineage_survival": 0.714,
+  "mean_final_population": 2.978,
+  "mean_memory_episodes_per_seed": 537.351,
+  "mean_survival_time": 125.96391661671662,
+  "n_seeds": 1000,
+  "number_of_generations": 1.226
+ },
+ "comparacion_pareada": {
+  "campos_comparados": [
+   "R0_seed",
+   "children_founder_0",
+   "children_founder_1",
+   "descendants_founder_0",
+   "descendants_founder_1",
+   "final_population",
+   "extinct",
+   "total_organisms",
+   "lineage_0_survives",
+   "lineage_1_survives",
+   "mean_survival_time",
+   "number_of_generations",
+   "_genealogy"
+  ],
+  "delta_R0": 0.0,
+  "delta_extinction_rate": 0.0,
+  "delta_mean_final_population": 0.0,
+  "discrepancias": [],
+  "identidad_exacta_semilla_a_semilla": true,
+  "seeds_comparadas": 1000,
+  "seeds_con_alguna_discrepancia": 0,
+  "seeds_con_genealogia_identica": 1000
+ },
+ "memory_usage": {
+  "A0_no_tiene_memoria": true,
+  "episodios_registrados_media_por_semilla": 537.351,
+  "memory_cap_por_organismo": 20
+ },
+ "prediccion_preregistrada": "A0 == E en todas las metricas, semilla a semilla, porque en este mundo no hay accion que la memoria pueda informar. Si difieren es un error de implementacion (PRNG), no un efecto.",
+ "veredicto": "IDENTIDAD CONFIRMADA: E no cambia nada, como estaba predicho. No es un exito de la memoria; es la prueba de que este mundo no puede testear la memoria."
+}

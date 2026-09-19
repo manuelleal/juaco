@@ -1,0 +1,232 @@
+{
+ "principal_seeds_0_999": {
+  "agregados": {
+   "A0-P": {
+    "R0": 0.9555,
+    "R0_sem": 0.02268886366776738,
+    "descendants_per_founder": 1.285,
+    "extinction_rate": 0.087,
+    "extinction_rate_sem": 0.00891240708226459,
+    "lineage_survival": 0.708,
+    "mean_final_population": 3.012,
+    "mean_memory_episodes_per_seed": 0.0,
+    "mean_rich_patch_fraction": 0.4983615273458839,
+    "mean_survival_time": 125.2137590992341,
+    "n_seeds": 1000,
+    "number_of_generations": 1.267
+   },
+   "BARAJA-P": {
+    "R0": 0.924,
+    "R0_sem": 0.022264764084079576,
+    "descendants_per_founder": 1.237,
+    "extinction_rate": 0.092,
+    "extinction_rate_sem": 0.00913980306133562,
+    "lineage_survival": 0.707,
+    "mean_final_population": 2.923,
+    "mean_memory_episodes_per_seed": 536.316,
+    "mean_rich_patch_fraction": 0.4969977698994231,
+    "mean_survival_time": 125.3528705960706,
+    "n_seeds": 1000,
+    "number_of_generations": 1.256
+   },
+   "E-P": {
+    "R0": 1.8625,
+    "R0_sem": 0.030996847493810636,
+    "descendants_per_founder": 3.2555,
+    "extinction_rate": 0.008,
+    "extinction_rate_sem": 0.0028170906978654416,
+    "lineage_survival": 0.9085,
+    "mean_final_population": 7.623,
+    "mean_memory_episodes_per_seed": 818.456,
+    "mean_rich_patch_fraction": 0.7430830390828516,
+    "mean_survival_time": 100.5152342552872,
+    "n_seeds": 1000,
+    "number_of_generations": 2.124
+   }
+  },
+  "pareados": {
+   "BARAJA-P_vs_A0-P": {
+    "R0_fraccion_mejor_entre_discordantes": 0.47301136363636365,
+    "R0_fraccion_mejor_sobre_todas": 0.333,
+    "R0_fraccion_no_peor_sobre_todas": 0.629,
+    "R0_semillas_iguales": 296,
+    "R0_semillas_mejor": 333,
+    "R0_semillas_peor": 371,
+    "R0_test_signos_p": 0.16312268613747227,
+    "comparacion": "BARAJA-P contra A0-P",
+    "extincion_solo_A0-P": 66,
+    "extincion_solo_BARAJA-P": 71,
+    "n_semillas": 1000,
+    "poblacion_final_semillas_mejor": 379,
+    "poblacion_final_semillas_peor": 425
+   },
+   "E-P_vs_A0-P": {
+    "R0_fraccion_mejor_entre_discordantes": 0.8398576512455516,
+    "R0_fraccion_mejor_sobre_todas": 0.708,
+    "R0_fraccion_no_peor_sobre_todas": 0.865,
+    "R0_semillas_iguales": 157,
+    "R0_semillas_mejor": 708,
+    "R0_semillas_peor": 135,
+    "R0_test_signos_p": 1.78513887985045e-94,
+    "comparacion": "E-P contra A0-P",
+    "extincion_solo_A0-P": 86,
+    "extincion_solo_E-P": 7,
+    "n_semillas": 1000,
+    "poblacion_final_semillas_mejor": 865,
+    "poblacion_final_semillas_peor": 75
+   },
+   "E-P_vs_BARAJA-P": {
+    "R0_fraccion_mejor_entre_discordantes": 0.8619489559164734,
+    "R0_fraccion_mejor_sobre_todas": 0.743,
+    "R0_fraccion_no_peor_sobre_todas": 0.881,
+    "R0_semillas_iguales": 138,
+    "R0_semillas_mejor": 743,
+    "R0_semillas_peor": 119,
+    "R0_test_signos_p": 5.705388697464601e-111,
+    "comparacion": "E-P contra BARAJA-P",
+    "extincion_solo_BARAJA-P": 90,
+    "extincion_solo_E-P": 6,
+    "n_semillas": 1000,
+    "poblacion_final_semillas_mejor": 874,
+    "poblacion_final_semillas_peor": 78
+   }
+  },
+  "seeds": {
+   "count": 1000,
+   "first": 0,
+   "last": 999
+  }
+ },
+ "recalibracion_A0-P": {
+  "R0_A0-P": 0.9555,
+  "R0_A0-P_sem": 0.02268886366776738,
+  "R0_mundo_congelado_un_parche": 0.9415,
+  "desviacion_en_errores_estandar": -1.9613146189960273,
+  "desviacion_respecto_de_1": -0.044499999999999984,
+  "desviacion_respecto_del_mundo_congelado": 0.014000000000000012,
+  "extincion_A0-P": 0.087,
+  "extincion_mundo_congelado": 0.078,
+  "fraccion_parche_rico_A0-P": 0.4983615273458839,
+  "pregunta": "R0(A0-P) ~ 1 con la media de comida 0.32?",
+  "veredicto": "A0-P queda por debajo de 1 en la misma medida que el mundo congelado (misma probabilidad marginal 0.32). Se reporta la desviacion y NO se mueve ningun parametro."
+ },
+ "replica_seeds_1000_1999": {
+  "agregados": {
+   "A0-P": {
+    "R0": 0.9215,
+    "R0_sem": 0.02241852672100333,
+    "descendants_per_founder": 1.2405,
+    "extinction_rate": 0.07,
+    "extinction_rate_sem": 0.008068457101577725,
+    "lineage_survival": 0.701,
+    "mean_final_population": 2.932,
+    "mean_memory_episodes_per_seed": 0.0,
+    "mean_rich_patch_fraction": 0.4986518168432336,
+    "mean_survival_time": 125.43017804279054,
+    "n_seeds": 1000,
+    "number_of_generations": 1.273
+   },
+   "BARAJA-P": {
+    "R0": 0.9165,
+    "R0_sem": 0.02218715889923764,
+    "descendants_per_founder": 1.238,
+    "extinction_rate": 0.101,
+    "extinction_rate_sem": 0.009528850927577786,
+    "lineage_survival": 0.6915,
+    "mean_final_population": 2.884,
+    "mean_memory_episodes_per_seed": 531.092,
+    "mean_rich_patch_fraction": 0.4971572496813356,
+    "mean_survival_time": 124.94940517538018,
+    "n_seeds": 1000,
+    "number_of_generations": 1.242
+   },
+   "E-P": {
+    "R0": 1.9255,
+    "R0_sem": 0.03213615537805483,
+    "descendants_per_founder": 3.3055,
+    "extinction_rate": 0.007,
+    "extinction_rate_sem": 0.0026364749192814255,
+    "lineage_survival": 0.9205,
+    "mean_final_population": 7.699,
+    "mean_memory_episodes_per_seed": 828.283,
+    "mean_rich_patch_fraction": 0.7498663595488295,
+    "mean_survival_time": 100.16496325480075,
+    "n_seeds": 1000,
+    "number_of_generations": 2.159
+   }
+  },
+  "pareados": {
+   "BARAJA-P_vs_A0-P": {
+    "R0_fraccion_mejor_entre_discordantes": 0.5,
+    "R0_fraccion_mejor_sobre_todas": 0.35,
+    "R0_fraccion_no_peor_sobre_todas": 0.65,
+    "R0_semillas_iguales": 300,
+    "R0_semillas_mejor": 350,
+    "R0_semillas_peor": 350,
+    "R0_test_signos_p": 1.0,
+    "comparacion": "BARAJA-P contra A0-P",
+    "extincion_solo_A0-P": 45,
+    "extincion_solo_BARAJA-P": 76,
+    "n_semillas": 1000,
+    "poblacion_final_semillas_mejor": 389,
+    "poblacion_final_semillas_peor": 401
+   },
+   "E-P_vs_A0-P": {
+    "R0_fraccion_mejor_entre_discordantes": 0.8587830080367393,
+    "R0_fraccion_mejor_sobre_todas": 0.748,
+    "R0_fraccion_no_peor_sobre_todas": 0.877,
+    "R0_semillas_iguales": 129,
+    "R0_semillas_mejor": 748,
+    "R0_semillas_peor": 123,
+    "R0_test_signos_p": 6.158251177807985e-110,
+    "comparacion": "E-P contra A0-P",
+    "extincion_solo_A0-P": 67,
+    "extincion_solo_E-P": 4,
+    "n_semillas": 1000,
+    "poblacion_final_semillas_mejor": 872,
+    "poblacion_final_semillas_peor": 68
+   },
+   "E-P_vs_BARAJA-P": {
+    "R0_fraccion_mejor_entre_discordantes": 0.8563084112149533,
+    "R0_fraccion_mejor_sobre_todas": 0.733,
+    "R0_fraccion_no_peor_sobre_todas": 0.877,
+    "R0_semillas_iguales": 144,
+    "R0_semillas_mejor": 733,
+    "R0_semillas_peor": 123,
+    "R0_test_signos_p": 2.0238769983076855e-106,
+    "comparacion": "E-P contra BARAJA-P",
+    "extincion_solo_BARAJA-P": 98,
+    "extincion_solo_E-P": 4,
+    "n_semillas": 1000,
+    "poblacion_final_semillas_mejor": 866,
+    "poblacion_final_semillas_peor": 95
+   }
+  },
+  "seeds": {
+   "count": 1000,
+   "first": 1000,
+   "last": 1999
+  }
+ },
+ "veredicto": {
+  "control_BARAJA-P_vs_A0-P": {
+   "delta_R0": -0.03149999999999997,
+   "delta_extincion": 0.0050000000000000044,
+   "fraccion_semillas_mejor": 0.333,
+   "test_signos_p": 0.16312268613747227
+  },
+  "criterio_estricto_>=0.60_semillas_con_R0_mayor": {
+   "cumple_principal": true,
+   "cumple_replica": true,
+   "principal": 0.708,
+   "replica": 0.748
+  },
+  "direccion_del_efecto": {
+   "delta_R0_principal": 0.907,
+   "delta_R0_replica": 1.004,
+   "delta_extincion_principal": -0.07899999999999999,
+   "delta_extincion_replica": -0.063
+  },
+  "prediccion": "E-P sube R0 y baja la extincion respecto de A0-P en >= 60 % de las semillas pareadas; BARAJA-P ~ A0-P (control con la contingencia accion<->recompensa rota)."
+ }
+}

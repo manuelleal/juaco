@@ -1,0 +1,55 @@
+{
+ "arms": {
+  "A0-P": "elige parche al azar (uniforme)",
+  "BARAJA-P": "control: igual que E-P pero permutando las ETIQUETAS DE ACCION de la memoria antes de decidir (barajar solo el orden seria un no-op: la media es invariante al orden)",
+  "E-P": "memoria <= 20 episodios; elige el parche de mejor recompensa media reciente; epsilon = 0.1"
+ },
+ "base_engine_sha256": "de80b70e6591fb2b7cedaa12c9aae334c9b1c09322cf792d53ea8cf288d04b7a",
+ "changed_mechanism": "UNA sola modificacion: dos parches de comida (0.42 y 0.22, media 0.32) y una accion por ronda (elegir parche). Nada mas cambia.",
+ "engine": "variante_parches/mundo_parches.py",
+ "engine_sha256": "b9f4e415fad389fe364d38ca3bccd447bdbfe3a64e7b897b415d73385900d801",
+ "engine_version": "1.0.0",
+ "epsilon_declarado": 0.1,
+ "experiment": "variante_parches_A0P_EP_BARAJAP",
+ "frozen_world_resto": {
+  "food_energy": 1.0,
+  "food_probability": 0.32,
+  "founders": 2,
+  "initial_energy": 10.0,
+  "max_population": 12,
+  "metabolic_cost": 0.35,
+  "newborn_initial_energy": 7.5,
+  "reproduction_cost": 2.0,
+  "reproduction_probability": 0.02,
+  "reproduction_threshold": 9.0,
+  "rounds": 180
+ },
+ "memory_cap": 20,
+ "memory_schema": [
+  "state (energia al decidir)",
+  "action (parche)",
+  "reward (comida recibida)",
+  "outcome"
+ ],
+ "patches": {
+  "mean": 0.32,
+  "poor": 0.22,
+  "rich": 0.42
+ },
+ "prediccion_preregistrada": "E-P sube R0 y baja la extincion respecto de A0-P en >= 60 % de las semillas pareadas; BARAJA-P ~ A0-P (control con la contingencia accion<->recompensa rota).",
+ "prng": {
+  "mundo": "random.Random(seed)",
+  "nota": "dos flujos declarados para que la dinamica del mundo consuma el PRNG en el mismo orden en los tres brazos; sin multiprocessing",
+  "politica": "random.Random(seed + 1000000)"
+ },
+ "seeds_principal": {
+  "count": 1000,
+  "first": 0,
+  "last": 999
+ },
+ "seeds_replica": {
+  "count": 1000,
+  "first": 1000,
+  "last": 1999
+ }
+}

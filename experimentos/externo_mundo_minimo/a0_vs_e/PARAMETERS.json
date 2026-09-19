@@ -1,0 +1,32 @@
+{
+ "arms": {
+  "A0": "sin memoria",
+  "E": "A0 + memoria episodica minima {state, action, reward, outcome}, local, <= 20 episodios, solo registra"
+ },
+ "changed_mechanism": "una sola modificacion: se anade memoria episodica a E",
+ "engine": "mundo_minimo.py",
+ "engine_sha256": "de80b70e6591fb2b7cedaa12c9aae334c9b1c09322cf792d53ea8cf288d04b7a",
+ "engine_version": "1.0.0",
+ "experiment": "A0_vs_E_mundo_congelado",
+ "frozen": true,
+ "frozen_world": {
+  "food_energy": 1.0,
+  "food_probability": 0.32,
+  "founders": 2,
+  "initial_energy": 10.0,
+  "max_population": 12,
+  "metabolic_cost": 0.35,
+  "newborn_initial_energy": 7.5,
+  "reproduction_cost": 2.0,
+  "reproduction_probability": 0.02,
+  "reproduction_threshold": 9.0,
+  "rounds": 180
+ },
+ "prediccion_preregistrada": "A0 == E en todas las metricas, semilla a semilla, porque en este mundo no hay accion que la memoria pueda informar. Si difieren es un error de implementacion (PRNG), no un efecto.",
+ "prng": "random.Random(seed), uno por semilla; E no consume PRNG extra",
+ "seeds": {
+  "count": 1000,
+  "first": 0,
+  "last": 999
+ }
+}

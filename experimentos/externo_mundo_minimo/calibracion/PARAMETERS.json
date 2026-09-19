@@ -1,0 +1,40 @@
+{
+ "decisiones_de_implementacion": {
+  "D1": "pasos 2..6 organismo por organismo en el orden mezclado",
+  "D2": "el recien nacido no actua en la ronda en que nace",
+  "D3": "la tirada de reproduccion solo se consume si hay espacio y umbral",
+  "D4": "un organismo que muere no tira reproduccion"
+ },
+ "engine": "mundo_minimo.py",
+ "engine_sha256": "de80b70e6591fb2b7cedaa12c9aae334c9b1c09322cf792d53ea8cf288d04b7a",
+ "engine_version": "1.0.0",
+ "experiment": "calibracion_barrido_food_probability",
+ "frozen": true,
+ "frozen_world": {
+  "food_energy": 1.0,
+  "food_probability": 0.32,
+  "founders": 2,
+  "initial_energy": 10.0,
+  "max_population": 12,
+  "metabolic_cost": 0.35,
+  "newborn_initial_energy": 7.5,
+  "reproduction_cost": 2.0,
+  "reproduction_probability": 0.02,
+  "reproduction_threshold": 9.0,
+  "rounds": 180
+ },
+ "prng": "random.Random(seed), uno por semilla, sin multiprocessing",
+ "seeds": {
+  "count": 1000,
+  "first": 0,
+  "last": 999
+ },
+ "sweep_food_probability": [
+  0.29,
+  0.3,
+  0.31,
+  0.32,
+  0.33,
+  0.34
+ ]
+}

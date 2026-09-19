@@ -1,0 +1,119 @@
+{
+ "comparacion_con_referencia": {
+  "diferencias": {
+   "R0": -0.025000000000000022,
+   "extinction_rate": -0.0040000000000000036,
+   "mean_final_population": -0.04999999999999982
+  },
+  "referencia_externa": {
+   "R0": 0.9665,
+   "extinction_rate": 0.082,
+   "food_probability": 0.32,
+   "mean_final_population": 3.028,
+   "sha256_reporte_externo": "4af8d5eea3d6309b16851202c7c24f12584f2f1076fbc28777f0139afcb1d833"
+  },
+  "reproducido": {
+   "R0": 0.9415,
+   "extinction_rate": 0.078,
+   "mean_final_population": 2.978
+  },
+  "veredicto": "REPRODUCIDA en lo cualitativo y dentro de ~1-2 errores estandar en extincion y poblacion; R0 queda por debajo de la referencia (ver SUMMARY.md)",
+  "z_scores_vs_nuestro_error_estandar": {
+   "R0": -1.102335960296139,
+   "extinction_rate": -0.4716797476083857,
+   "mean_final_population": -0.7465179809770164
+  }
+ },
+ "por_food_probability": {
+  "0.29": {
+   "R0": 0.5335,
+   "R0_sd": 0.4968647951149534,
+   "R0_sem": 0.015712244417161562,
+   "descendants_per_founder": 0.607,
+   "extinction_rate": 0.406,
+   "extinction_rate_sem": 0.015529455882290275,
+   "lineage_survival": 0.364,
+   "mean_final_population": 1.031,
+   "mean_final_population_sem": 0.037382301112109675,
+   "mean_memory_episodes_per_seed": 0.0,
+   "mean_survival_time": 118.67230714285714,
+   "n_seeds": 1000,
+   "number_of_generations": 0.8
+  },
+  "0.30": {
+   "R0": 0.6255,
+   "R0_sd": 0.548452869944675,
+   "R0_sem": 0.017343602582812794,
+   "descendants_per_founder": 0.7755,
+   "extinction_rate": 0.261,
+   "extinction_rate_sem": 0.013888088421377507,
+   "lineage_survival": 0.4815,
+   "mean_final_population": 1.571,
+   "mean_final_population_sem": 0.04939026623129702,
+   "mean_memory_episodes_per_seed": 0.0,
+   "mean_survival_time": 123.39257504717506,
+   "n_seeds": 1000,
+   "number_of_generations": 0.943
+  },
+  "0.31": {
+   "R0": 0.7575,
+   "R0_sd": 0.638632602989858,
+   "R0_sem": 0.0201953361349001,
+   "descendants_per_founder": 0.97,
+   "extinction_rate": 0.153,
+   "extinction_rate_sem": 0.011383804285035824,
+   "lineage_survival": 0.5905,
+   "mean_final_population": 2.119,
+   "mean_final_population_sem": 0.0556591136916223,
+   "mean_memory_episodes_per_seed": 0.0,
+   "mean_survival_time": 126.60134787157287,
+   "n_seeds": 1000,
+   "number_of_generations": 1.075
+  },
+  "0.32": {
+   "R0": 0.9415,
+   "R0_sd": 0.7171764720709207,
+   "R0_sem": 0.022679111360282445,
+   "descendants_per_founder": 1.243,
+   "extinction_rate": 0.078,
+   "extinction_rate_sem": 0.008480330182251162,
+   "lineage_survival": 0.714,
+   "mean_final_population": 2.978,
+   "mean_final_population_sem": 0.066977623143868,
+   "mean_memory_episodes_per_seed": 0.0,
+   "mean_survival_time": 125.96391661671662,
+   "n_seeds": 1000,
+   "number_of_generations": 1.226
+  },
+  "0.33": {
+   "R0": 1.12,
+   "R0_sd": 0.7656279685239994,
+   "R0_sem": 0.024211282208635426,
+   "descendants_per_founder": 1.5655,
+   "extinction_rate": 0.037,
+   "extinction_rate_sem": 0.005969170796685248,
+   "lineage_survival": 0.801,
+   "mean_final_population": 3.835,
+   "mean_final_population_sem": 0.07627314463553074,
+   "mean_memory_episodes_per_seed": 0.0,
+   "mean_survival_time": 123.89506338245089,
+   "n_seeds": 1000,
+   "number_of_generations": 1.406
+  },
+  "0.34": {
+   "R0": 1.313,
+   "R0_sd": 0.8385906237457191,
+   "R0_sem": 0.026518563954977547,
+   "descendants_per_founder": 1.9545,
+   "extinction_rate": 0.02,
+   "extinction_rate_sem": 0.004427188724235731,
+   "lineage_survival": 0.869,
+   "mean_final_population": 4.896,
+   "mean_final_population_sem": 0.0892813259038818,
+   "mean_memory_episodes_per_seed": 0.0,
+   "mean_survival_time": 119.83468873348873,
+   "n_seeds": 1000,
+   "number_of_generations": 1.596
+  }
+ }
+}

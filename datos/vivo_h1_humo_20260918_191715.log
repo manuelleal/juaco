@@ -1,0 +1,46 @@
+[19:17:15 +    0.0s] HUMO del disenador, UN proceso, sin Pool (regla 3: 4 corridas de 100000). PREREGISTRO_h1_muerte.md §8.
+[19:17:15 +    0.0s] MISION: llegar a la AGI por este camino. Hoy: que la muerte mate de verdad, para que el linaje signifique algo.
+[19:17:15 +    0.0s] Semillas 1-2: NINGUNA de las 701-740 del bloque queda expuesta.
+[19:17:15 +    0.0s]     sha preregistro                  9f3f78ce4f28dfee
+[19:17:15 +    0.0s]     sha script                       34c8cd4d264a7a66
+[19:17:15 +    0.0s]     sha constructor                  07da8128adc82f4e
+[19:17:15 +    0.0s]     sha instrumento                  9e99ff87b5e2db1e
+[19:17:15 +    0.0s]     sha arnes                        b78676baa60837e2
+[19:17:15 +    0.0s]     sha origen_organismo_vivo_rep2   96feb4918dc5d694
+[19:17:15 +    0.0s]     sha origen_organismo_vivo_rep    aa823d56c2d4213c
+[19:17:15 +    0.0s]     sha origen_organismo_vivo        20c0961c79de8825
+[19:17:15 +    0.0s]     sha origen_organismo_v14         feefc88b1fd8d434
+[19:17:15 +    0.0s]     sha corre_vivo_rep2              10ab45355883d98d
+[19:17:15 +    0.0s]     sha corre_vivo_rep               d8ff689c6dd544d0
+[19:17:15 +    0.0s]     sha mini                         f3e86cbe6c17e6d7
+[19:17:15 +    0.0s]     origenes -> OK
+[19:17:15 +    0.0s]     ERR-38 RENACE_VIVO  vs bloque 2 VIVO         -> IDENTICO campo a campo
+[19:17:15 +    0.0s]     ERR-38 RENACE_CM    vs bloque 2 CUELLO_MIN   -> IDENTICO campo a campo
+[19:17:15 +    0.0s]     ERR-38 (campo a campo) -> OK
+[19:17:15 +    0.0s]     alias estructurales 701-720: [715]; 721-740: []
+[19:17:15 +    0.0s] 1/2 IDENTIDAD dentro del runner, 5 casos x 2 semillas, T=5000.
+[19:17:16 +    1.0s]     (A) apagada (muerte_real=0, h1=0) == organismo_vivo_rep2 CUELLO_MIN            2/2
+[19:17:17 +    1.9s]     (B) cadena: h1(vivo=0, n_nec=1) == organismo_v14 (TRONCO)                      2/2
+[19:17:18 +    3.0s]     (C) h1=1 con muerte_real=0: claves viejas == organismo_vivo_rep2               2/2
+[19:17:20 +    4.6s]     (D) MUERE-NADA != RENACE (DEBE fallar)                                         2/2
+[19:17:21 +    5.7s]     (E) MUERE-M1 != MUERE-NADA (DEBE fallar: si la herencia es inerte, el instrumento esta roto) 2/2
+[19:17:21 +    5.7s]   IDENTIDAD 10/10
+[19:17:21 +    5.7s] 2/2 4 corridas de T=100000: [('RENACE_CM', 1), ('NADA_CM', 1), ('RENACE_CM', 2), ('NADA_CM', 2)]
+[19:17:21 +    5.7s]     brazo       s   seg     R0     r desc muertes cuerpos       vida med (f/h)  fund  regalo/fund  coh
+[19:17:29 +   13.7s]     RENACE_CM   1   7.9  1.031     3   67      64      65   756.0 (756.0/None)     0    0.358/0.0 True
+[19:17:29 +   13.7s]                 desc por cuarto [14, 17, 16, 20]; 1.a fundacion en t=None; heredados 0 (R0_her None); saciado sal 0.0; xor01 1.0 (se reporta); coherencia {'nac': True, 'largos': True, 'vidas': True, 'desc': True, 'fund': True, 'topes': True}
+[19:17:37 +   21.6s]     NADA_CM     1   7.9  0.182  -188   42     230     231   125.0 (174.0/75.0)   188   0.69/0.571 True
+[19:17:37 +   21.6s]                 desc por cuarto [10, 11, 11, 10]; 1.a fundacion en t=349; heredados 42 (R0_her 0.1429); saciado sal 0.053; xor01 1.0 (se reporta); coherencia {'nac': True, 'largos': True, 'vidas': True, 'desc': True, 'fund': True, 'topes': True}
+[19:17:44 +   29.0s]     RENACE_CM   2   7.4  0.955    -2   64      66      67   857.0 (857.0/None)     0    0.344/0.0 True
+[19:17:44 +   29.0s]                 desc por cuarto [18, 12, 17, 17]; 1.a fundacion en t=None; heredados 0 (R0_her None); saciado sal 0.001; xor01 1.0 (se reporta); coherencia {'nac': True, 'largos': True, 'vidas': True, 'desc': True, 'fund': True, 'topes': True}
+[19:17:52 +   36.5s]     NADA_CM     2   7.5  0.159  -190   36     226     227  119.0 (102.0/162.0)   190  0.611/0.583 True
+[19:17:52 +   36.5s]                 desc por cuarto [7, 14, 8, 7]; 1.a fundacion en t=119; heredados 36 (R0_her 0.0833); saciado sal 0.041; xor01 0.75 (se reporta); coherencia {'nac': True, 'largos': True, 'vidas': True, 'desc': True, 'fund': True, 'topes': True}
+[19:17:52 +   36.5s]    HH1 r(RENACE_CM) > r(NADA_CM) en 2/2 (misma semilla)                                                           -> SI
+[19:17:52 +   36.5s]    HH2 R0(NADA_CM) < 1 en 2/2 y R0(RENACE_CM) > R0(NADA_CM) en 2/2                                                -> SI
+[19:17:52 +   36.5s]    HH3 coherencia contable en 4/4 (nacimientos = muertes; suma(vidas_h1) = T; suma(desc_por_vida) = desc; fundaciones + 1 = origenes 0) -> SI
+[19:17:52 +   36.5s]    HH4 vida mediana NADA_CM < RENACE_CM en 2/2                                                                    -> SI
+[19:17:52 +   36.5s]    HH5 fundadores(NADA_CM) >= 1 en 2/2 (el linaje se extingue al menos una vez)                                   -> SI
+[19:17:52 +   36.5s]    HH6 (blanda) frac_fund(NADA_CM) <= 0.35 en 2/2                                                                 -> NO
+[19:17:52 +   36.5s] ESTIMACION del bloque: 20x20 = 400 corridas de 100000, ~7.7 s/corrida -> ~3.7 min con Pool(14).
+[19:17:52 +   36.5s] HUMO: numeros observados, sin ajustar nada. n = 1-2 y semillas ya vistas: NO son evidencia.
+[19:17:52 +   36.5s] datos -> vivo_h1_humo_20260918_191715.json  sha256_16 = 9c5ce2fd6d84667e
