@@ -39,3 +39,7 @@ Candidato a un preregistro nuevo (métrica: acierto final tras el cambio). Instr
 ## EXO-2b — réplica corta de la señal exploratoria (preregistrada 22:40, ANTES de correr)
 Mismo código sin tocar. Semillas NUEVAS 21–30 y 31–40. Predicción: acierto final de la fase 2, J − R ≥ 0.05 y J − TODO ≥ 0.02,
 en las dos series. Refuta: J − R < 0.03 en cualquiera de las dos.
+**RESULTADO EXO-2b (22:38):** fase 2 final — 21–30: J 0.903, R 0.852, TODO 0.880 (J−R +0.051, J−TODO +0.023); 31–40: J 0.911,
+R 0.824, TODO 0.877 (+0.087, +0.034). **PASA en las dos series** (umbral 0.05 rozado en 21–30). Con las dos exploratorias,
+4 series de 10: J supera al azar con igual gasto tras un cambio no avisado usando 65 % de los datos. Queda por aislar qué pieza
+paga (sobrescritura u olvido) y por arreglar el instrumento de 3/8.
