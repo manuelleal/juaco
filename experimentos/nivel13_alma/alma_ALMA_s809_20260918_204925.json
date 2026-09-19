@@ -1,0 +1,1536 @@
+{
+ "meta": {
+  "bloque": "nivel13_alma",
+  "brazo": "ALMA",
+  "elige": "interfaz",
+  "semilla": 809,
+  "muertes": 20,
+  "T": 100000,
+  "espera": 900.0,
+  "kwargs": {
+   "vivo": 1,
+   "estims": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "costo": 0.001,
+   "costo_a": 0.001,
+   "n_nec": 2,
+   "rep_cuello": 2,
+   "reproduccion": 1,
+   "rep_mide": 1,
+   "rep_X": 500,
+   "rep_umbral": 1.0,
+   "rep_coste": 0.0,
+   "rep2": 1,
+   "rep2_regalo": 600,
+   "h1": 1,
+   "muerte_real": 1,
+   "hereda": "nada",
+   "dote": 0.6,
+   "alma_muertes": 20,
+   "menu": "abcdef",
+   "nodo": 1,
+   "conectado": 0,
+   "nodo_baraja": 0
+  },
+  "sha_origenes": {
+   "v14": "feefc88b1fd8d434",
+   "vivo": "20c0961c79de8825",
+   "rep": "aa823d56c2d4213c",
+   "rep2": "96feb4918dc5d694",
+   "h1": "9e99ff87b5e2db1e",
+   "alma": "7c09cec391daa879"
+  },
+  "sha_instrumento": "4fd616aeaf535e61",
+  "sha_constructor": "b8c0291fb694133c",
+  "sha_menu": "1c2119cfbac14280",
+  "sha_preregistro": "a5a397330c314e21",
+  "invalidas": [],
+  "python": "3.14.2",
+  "numpy": "2.4.3",
+  "fecha": "20260918_204925",
+  "segundos": 547.15
+ },
+ "crudo": {
+  "sobre": {
+   "veneno": [
+    755,
+    0,
+    0,
+    0
+   ],
+   "comida": [
+    42,
+    0,
+    0,
+    0
+   ],
+   "agua": [
+    49,
+    0,
+    0,
+    0
+   ],
+   "sal": [
+    259,
+    0,
+    0,
+    0
+   ]
+  },
+  "llegadas": {
+   "veneno": [
+    544,
+    0,
+    0,
+    0
+   ],
+   "comida": [
+    42,
+    0,
+    0,
+    0
+   ],
+   "agua": [
+    49,
+    0,
+    0,
+    0
+   ],
+   "sal": [
+    232,
+    0,
+    0,
+    0
+   ]
+  },
+  "sin_objetivo": [
+   244,
+   0,
+   0,
+   0
+  ],
+  "memoria_rechazo": 20,
+  "err_max": 0.16868460283180292,
+  "t_conflicto": 45,
+  "t_techo": null,
+  "n_techo": 0,
+  "split_t": [
+   [
+    7553,
+    "C"
+   ],
+   [
+    7553,
+    "C"
+   ]
+  ],
+  "mord": {
+   "A": [
+    42,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    48,
+    0,
+    0,
+    0
+   ],
+   "C": [
+    49,
+    0,
+    0,
+    0
+   ],
+   "D": [
+    49,
+    0,
+    0,
+    0
+   ]
+  },
+  "vis": {
+   "A": [
+    42,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    755,
+    0,
+    0,
+    0
+   ],
+   "C": [
+    49,
+    0,
+    0,
+    0
+   ],
+   "D": [
+    259,
+    0,
+    0,
+    0
+   ]
+  },
+  "W": {
+   "A": 0.77,
+   "B": -1.09,
+   "C": 0.08,
+   "D": -1.64
+  },
+  "comp": {
+   "A": [
+    0.0,
+    0.0
+   ],
+   "B": [
+    0.0,
+    0.0
+   ],
+   "C": [
+    0.0,
+    0.0
+   ],
+   "D": [
+    0.0,
+    0.0
+   ]
+  },
+  "deaths": 20,
+  "log": [],
+  "splits": 2,
+  "celdas": 30,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "n_cod": 0,
+  "solap": {
+   "AB": 0,
+   "nB": null
+  },
+  "W_lenta": {
+   "A": 0.774,
+   "B": -1.087,
+   "C": 0.078,
+   "D": -1.643
+  },
+  "Wps": [
+   0.26,
+   0.78,
+   0.854,
+   0.0,
+   0.245,
+   0.67
+  ],
+  "Wns": [
+   0.127,
+   0.065,
+   1.069,
+   0.075,
+   1.25,
+   1.093
+  ],
+  "n_nec": 2,
+  "estims": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "agua": 0.75,
+  "muertes_nec": [
+   11,
+   9
+  ],
+  "exp_hasta": [
+   {
+    "A": 6,
+    "B": 4,
+    "C": null,
+    "D": null
+   },
+   {
+    "A": null,
+    "B": null,
+    "C": 20,
+    "D": 19
+   }
+  ],
+  "exposiciones": {
+   "A": 42,
+   "B": 544,
+   "C": 49,
+   "D": 232
+  },
+  "W_nec": [
+   {
+    "A": 0.07,
+    "B": -1.78,
+    "C": 0.64,
+    "D": -0.04
+   },
+   {
+    "A": 0.77,
+    "B": -1.09,
+    "C": 0.08,
+    "D": -1.64
+   }
+  ],
+  "xor_mord": [
+   [
+    27,
+    21,
+    35,
+    39
+   ],
+   [
+    15,
+    27,
+    14,
+    10
+   ]
+  ],
+  "xor_enc": [
+   [
+    27,
+    477,
+    35,
+    134
+   ],
+   [
+    15,
+    67,
+    14,
+    98
+   ]
+  ],
+  "sorp_nec": [
+   0.0,
+   0.0
+  ],
+  "descendientes": 3,
+  "pasos_viables": 3531,
+  "desc_q": [
+   3,
+   0,
+   0,
+   0
+  ],
+  "t_desc": [
+   6296,
+   6800,
+   7359
+  ],
+  "sac_mord": {
+   "A": 14,
+   "B": 9,
+   "C": 12,
+   "D": 7
+  },
+  "sac_dec": {
+   "A": 14,
+   "B": 314,
+   "C": 12,
+   "D": 115
+  },
+  "rep": {
+   "mide": 1,
+   "X": 500,
+   "umbral": 0.8,
+   "coste": 0.0,
+   "nec": 0,
+   "cuello": 2
+  },
+  "desc_regalo": 3,
+  "vidas": [
+   619,
+   86,
+   641,
+   109,
+   301,
+   1014,
+   121,
+   536,
+   457,
+   891,
+   191,
+   729,
+   603,
+   529,
+   543,
+   1075,
+   96,
+   25,
+   144,
+   702
+  ],
+  "vida_final": 90588,
+  "rep2": {
+   "regalo": 600
+  },
+  "muerte_real": 1,
+  "hereda": "M1",
+  "dote": 0.75,
+  "nacimientos": 20,
+  "fundadores": 17,
+  "desc_fund": 1,
+  "desc_por_vida": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "vidas_h1": [
+   619,
+   86,
+   641,
+   109,
+   301,
+   1014,
+   121,
+   536,
+   457,
+   891,
+   191,
+   729,
+   603,
+   529,
+   543,
+   1075,
+   96,
+   25,
+   144,
+   702,
+   90588
+  ],
+  "origen_cuerpo": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "suma_vidas": 9412,
+  "cola_final": 0,
+  "cola_desborde": 0,
+  "t_fund": [
+   619,
+   705,
+   1346,
+   1455,
+   1756,
+   2770,
+   2891,
+   3427,
+   3884,
+   4775,
+   4966,
+   5695,
+   8445,
+   8541,
+   8566,
+   8710,
+   9412
+  ],
+  "baraja_identidad": 0,
+  "h1": {
+   "cola_max": 200,
+   "sem_hijo": "700000+1000000*seed+k",
+   "sem_baraja": "800000+1000000*seed"
+  },
+  "alma_muertes": 20,
+  "curitas": [
+   [
+    1,
+    "d",
+    "Fundador muere sin reproducirse (0 hijos) tras 619 pasos por hambre. rep_umbral=1.0 es muy alto: la ventana de reproducción nunca se abrio. Bajar umbral a 0.9 permite que el siguiente cuerpo se reproduzca antes de agotar energia, asegurando",
+    0.6,
+    0.9,
+    "nada",
+    0,
+    9,
+    "energia",
+    619,
+    0
+   ],
+   [
+    2,
+    "c",
+    "Cuerpo 2 vive solo 86 pasos (muy corto) y muere sin reproducirse (0 hijos). dote=0.6 insuficiente: energía agotada antes de alcanzar rep_umbral=0.9. Subir dote a 0.7 proporciona mas recursos iniciales para que el cuerpo 3 viva lo suficiente",
+    0.7,
+    0.9,
+    "nada",
+    0,
+    14,
+    "energia",
+    86,
+    0
+   ],
+   [
+    3,
+    "b",
+    "Cuerpo 3 vive 641 pasos pero muere sin reproducirse (0 hijos). Las ultimas mordidas repetidas en B (t=1335,1346) con R=-3 agotan energia en momentos criticos. Escribir el miedo al patrón B/R=-3 en el nodo permite que el cuerpo 4 reconozca e",
+    0.7,
+    0.9,
+    "nada",
+    0,
+    39,
+    "energia",
+    641,
+    0
+   ],
+   [
+    4,
+    "e",
+    "Cuerpo 4 muere joven (109 pasos) por thirst, no reproduccion. Dos D-bites con R=-3 (t=1410,1455) causan daño grave. Heredar los W/Wps del padre permite que el cuerpo 5 comience con pesos ya adaptados a las consecuencias, reduciendo prueba-e",
+    0.7,
+    0.9,
+    "M1",
+    0,
+    49,
+    "agua",
+    109,
+    0
+   ],
+   [
+    5,
+    "a",
+    "Cuerpo 5 vive 301 pasos (mejora con herencia M1) pero aun muere sin reproducirse. conectado=0 significa no accede al nodo. Conectar permite que el cuerpo 6 nazca leyendo los 59 mensajes del nodo (ultimas mordidas de todos) sin costo, aprend",
+    0.7,
+    0.9,
+    "M1",
+    1,
+    59,
+    "energia",
+    301,
+    0
+   ],
+   [
+    6,
+    "d",
+    "Cuerpo 6 vive 1014 pasos (mejora tremenda con conexion nodo + herencia) pero AAAAUN 0 hijos. conectado=1 funciona pero threshold 0.9 sigue siendo demasiado alto: el cuerpo nunca alcanza suficiente satiation simultanea para abrir ventana. Ba",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    64,
+    "energia",
+    1014,
+    0
+   ],
+   [
+    7,
+    "b",
+    "Cuerpo 7 muere por thirst tras solo 121 pasos (REGRESION desde 1014). Ultimas mordidas: D con R=-3 repetidas (t=2878,2891). El threshold 0.8 no ayudo - el problema es el dano causado por D. Escribir el miedo al patron D/R=-3 evita que el cu",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    74,
+    "agua",
+    121,
+    0
+   ],
+   [
+    8,
+    "f",
+    "Cuerpo 8 (energia, 536 pasos, 0 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    78,
+    "energia",
+    536,
+    0
+   ],
+   [
+    9,
+    "f",
+    "Cuerpo 9 (agua, 457 pasos, 0 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    79,
+    "agua",
+    457,
+    0
+   ],
+   [
+    10,
+    "f",
+    "Cuerpo 10 (energia, 891 pasos, 0 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    88,
+    "energia",
+    891,
+    0
+   ],
+   [
+    11,
+    "b",
+    "Cuerpo 11 vive 191 pasos sin reproduccion. Ultimas mordidas muestran dano repetido (R<0). Escribir miedo del patron evita dano en cuerpo siguiente.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    97,
+    "energia",
+    191,
+    0
+   ],
+   [
+    12,
+    "f",
+    "Cuerpo 12 (agua, 729 pasos, 0 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    114,
+    "agua",
+    729,
+    0
+   ],
+   [
+    13,
+    "f",
+    "Cuerpo 13 (agua, 603 pasos, 1 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    131,
+    "agua",
+    603,
+    1
+   ],
+   [
+    14,
+    "f",
+    "Cuerpo 14 (agua, 529 pasos, 1 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    139,
+    "agua",
+    529,
+    1
+   ],
+   [
+    15,
+    "f",
+    "Cuerpo 15 (energia, 543 pasos, 1 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    152,
+    "energia",
+    543,
+    1
+   ],
+   [
+    16,
+    "f",
+    "Cuerpo 16 (agua, 1075 pasos, 0 hijos). Menú agotado: probar sin intervención.",
+    0.7,
+    0.8,
+    "M1",
+    1,
+    169,
+    "agua",
+    1075,
+    0
+   ],
+   [
+    17,
+    "c",
+    "Cuerpo 17 muere joven (96 pasos, 0 hijos). Dote insuficiente (0.7). Subir dote proporciona mas recursos iniciales.",
+    0.75,
+    0.8,
+    "M1",
+    1,
+    177,
+    "energia",
+    96,
+    0
+   ],
+   [
+    18,
+    "d",
+    "Cuerpo 18 muere sin reproduccion (0 hijos). Rep_umbral 0.8 aun demasiado alto. Bajar permite ventana de reproduccion mas accesible.",
+    0.75,
+    0.8,
+    "M1",
+    1,
+    179,
+    "agua",
+    25,
+    0
+   ],
+   [
+    19,
+    "c",
+    "Cuerpo 19 muere joven (144 pasos, 0 hijos). Dote insuficiente (0.75). Subir dote proporciona mas recursos iniciales.",
+    0.75,
+    0.8,
+    "M1",
+    1,
+    188,
+    "energia",
+    144,
+    0
+   ],
+   [
+    20,
+    "f",
+    "Cuerpo 20 (agua, 702 pasos, 0 hijos). Menú agotado: probar sin intervención.",
+    0.75,
+    0.8,
+    "M1",
+    1,
+    201,
+    "agua",
+    702,
+    0
+   ]
+  ],
+  "nodo_n": 201,
+  "conectado_final": 1,
+  "dote_final": 0.75,
+  "umbral_final": 0.8,
+  "hereda_final": "M1",
+  "T_efectivo": 9413,
+  "miedo_inerte": 0,
+  "vidas_cuerpo": [
+   619,
+   86,
+   641,
+   109,
+   301,
+   1014,
+   121,
+   536,
+   457,
+   891,
+   191,
+   729,
+   603,
+   529,
+   543,
+   1075,
+   96,
+   25,
+   144,
+   702
+  ],
+  "desc_cuerpo": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "nodo_cola": [
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ]
+  ],
+  "alma_cfg": {
+   "nodo": 1,
+   "nodo_k": 20,
+   "nodo_lee": 50,
+   "miedo_n": 5,
+   "miedo_R": -3.0,
+   "d_dote": 0.1,
+   "d_umbral": 0.1,
+   "conectado_ini": 0
+  },
+  "alma2": {
+   "menu": "abcdef",
+   "nodo_baraja": 0,
+   "baraja_nodo_identidad": 0,
+   "sem_baraja_nodo": "860000+1000000*seed"
+  },
+  "_segundos": 547.15
+ }
+}

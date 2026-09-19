@@ -1,0 +1,1609 @@
+{
+ "meta": {
+  "bloque": "nivel13_alma",
+  "brazo": "SIN_NODO",
+  "elige": "interfaz",
+  "semilla": 806,
+  "muertes": 20,
+  "T": 100000,
+  "espera": 900.0,
+  "kwargs": {
+   "vivo": 1,
+   "estims": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "costo": 0.001,
+   "costo_a": 0.001,
+   "n_nec": 2,
+   "rep_cuello": 2,
+   "reproduccion": 1,
+   "rep_mide": 1,
+   "rep_X": 500,
+   "rep_umbral": 1.0,
+   "rep_coste": 0.0,
+   "rep2": 1,
+   "rep2_regalo": 600,
+   "h1": 1,
+   "muerte_real": 1,
+   "hereda": "nada",
+   "dote": 0.6,
+   "alma_muertes": 20,
+   "menu": "cdef",
+   "nodo": 1,
+   "conectado": 0,
+   "nodo_baraja": 0
+  },
+  "sha_origenes": {
+   "v14": "feefc88b1fd8d434",
+   "vivo": "20c0961c79de8825",
+   "rep": "aa823d56c2d4213c",
+   "rep2": "96feb4918dc5d694",
+   "h1": "9e99ff87b5e2db1e",
+   "alma": "7c09cec391daa879"
+  },
+  "sha_instrumento": "4fd616aeaf535e61",
+  "sha_constructor": "b8c0291fb694133c",
+  "sha_menu": "1c2119cfbac14280",
+  "sha_preregistro": "a5a397330c314e21",
+  "invalidas": [
+   [
+    4,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    5,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    6,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    7,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    8,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    9,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    10,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    11,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    12,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    13,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    14,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    15,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    16,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    17,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    18,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    19,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ],
+   [
+    20,
+    "JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)"
+   ]
+  ],
+  "python": "3.14.2",
+  "numpy": "2.4.3",
+  "fecha": "20260918_205239",
+  "segundos": 594.16
+ },
+ "crudo": {
+  "sobre": {
+   "veneno": [
+    331,
+    0,
+    0,
+    0
+   ],
+   "comida": [
+    62,
+    0,
+    0,
+    0
+   ],
+   "agua": [
+    78,
+    0,
+    0,
+    0
+   ],
+   "sal": [
+    355,
+    0,
+    0,
+    0
+   ]
+  },
+  "llegadas": {
+   "veneno": [
+    295,
+    0,
+    0,
+    0
+   ],
+   "comida": [
+    62,
+    0,
+    0,
+    0
+   ],
+   "agua": [
+    77,
+    0,
+    0,
+    0
+   ],
+   "sal": [
+    300,
+    0,
+    0,
+    0
+   ]
+  },
+  "sin_objetivo": [
+   74,
+   0,
+   0,
+   0
+  ],
+  "memoria_rechazo": 20,
+  "err_max": 0.27734733824621816,
+  "t_conflicto": 98,
+  "t_techo": null,
+  "n_techo": 0,
+  "split_t": [
+   [
+    156,
+    "C"
+   ],
+   [
+    156,
+    "C"
+   ],
+   [
+    977,
+    "C"
+   ]
+  ],
+  "mord": {
+   "A": [
+    60,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    52,
+    0,
+    0,
+    0
+   ],
+   "C": [
+    68,
+    0,
+    0,
+    0
+   ],
+   "D": [
+    48,
+    0,
+    0,
+    0
+   ]
+  },
+  "vis": {
+   "A": [
+    62,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    331,
+    0,
+    0,
+    0
+   ],
+   "C": [
+    78,
+    0,
+    0,
+    0
+   ],
+   "D": [
+    355,
+    0,
+    0,
+    0
+   ]
+  },
+  "W": {
+   "A": 0.0,
+   "B": 0.0,
+   "C": 0.0,
+   "D": 0.0
+  },
+  "comp": {
+   "A": [
+    0.0,
+    0.0
+   ],
+   "B": [
+    0.0,
+    0.0
+   ],
+   "C": [
+    0.0,
+    0.0
+   ],
+   "D": [
+    0.0,
+    0.0
+   ]
+  },
+  "deaths": 20,
+  "log": [],
+  "splits": 3,
+  "celdas": 30,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "n_cod": 0,
+  "solap": {
+   "AB": 0,
+   "nB": null
+  },
+  "W_lenta": {
+   "A": 0.0,
+   "B": 0.0,
+   "C": 0.0,
+   "D": 0.0
+  },
+  "Wps": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Wns": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "n_nec": 2,
+  "estims": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "agua": 0.6,
+  "muertes_nec": [
+   11,
+   9
+  ],
+  "exp_hasta": [
+   {
+    "A": 3,
+    "B": 2,
+    "C": null,
+    "D": null
+   },
+   {
+    "A": null,
+    "B": null,
+    "C": 6,
+    "D": 2
+   }
+  ],
+  "exposiciones": {
+   "A": 62,
+   "B": 295,
+   "C": 77,
+   "D": 300
+  },
+  "W_nec": [
+   {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   },
+   {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   }
+  ],
+  "xor_mord": [
+   [
+    49,
+    24,
+    51,
+    35
+   ],
+   [
+    11,
+    28,
+    17,
+    13
+   ]
+  ],
+  "xor_enc": [
+   [
+    51,
+    246,
+    57,
+    252
+   ],
+   [
+    11,
+    49,
+    20,
+    48
+   ]
+  ],
+  "sorp_nec": [
+   0.0,
+   0.0
+  ],
+  "descendientes": 7,
+  "pasos_viables": 5795,
+  "desc_q": [
+   7,
+   0,
+   0,
+   0
+  ],
+  "t_desc": [
+   1529,
+   2265,
+   2913,
+   4398,
+   5005,
+   5594,
+   6297
+  ],
+  "sac_mord": {
+   "A": 28,
+   "B": 11,
+   "C": 27,
+   "D": 11
+  },
+  "sac_dec": {
+   "A": 30,
+   "B": 253,
+   "C": 36,
+   "D": 277
+  },
+  "rep": {
+   "mide": 1,
+   "X": 500,
+   "umbral": 0.8,
+   "coste": 0.0,
+   "nec": 0,
+   "cuello": 2
+  },
+  "desc_regalo": 6,
+  "vidas": [
+   1530,
+   28,
+   196,
+   518,
+   682,
+   146,
+   42,
+   111,
+   7,
+   213,
+   954,
+   654,
+   591,
+   117,
+   511,
+   840,
+   29,
+   879,
+   26,
+   129
+  ],
+  "vida_final": 91797,
+  "rep2": {
+   "regalo": 600
+  },
+  "muerte_real": 1,
+  "hereda": "M1",
+  "dote": 0.6,
+  "nacimientos": 20,
+  "fundadores": 13,
+  "desc_fund": 3,
+  "desc_por_vida": [
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "vidas_h1": [
+   1530,
+   28,
+   196,
+   518,
+   682,
+   146,
+   42,
+   111,
+   7,
+   213,
+   954,
+   654,
+   591,
+   117,
+   511,
+   840,
+   29,
+   879,
+   26,
+   129,
+   91797
+  ],
+  "origen_cuerpo": [
+   0,
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "suma_vidas": 8203,
+  "cola_final": 0,
+  "cola_desborde": 0,
+  "t_fund": [
+   1558,
+   1754,
+   3100,
+   3142,
+   3253,
+   3260,
+   3473,
+   5789,
+   7140,
+   7169,
+   8048,
+   8074,
+   8203
+  ],
+  "baraja_identidad": 0,
+  "h1": {
+   "cola_max": 200,
+   "sem_hijo": "700000+1000000*seed+k",
+   "sem_baraja": "800000+1000000*seed"
+  },
+  "alma_muertes": 20,
+  "curitas": [
+   [
+    1,
+    "d",
+    "Fundador murió energía (t=1530, solo 1 hijo). Bajar rep_umbral 1.0→0.9 facilita reproducción siguiente: menos saciedad requerida = más descendientes para aprender.",
+    0.6,
+    0.9,
+    "nada",
+    0,
+    20,
+    "energia",
+    1530,
+    1
+   ],
+   [
+    2,
+    "e",
+    "Cuerpo 2 murió agua joven (edad=28, 0 hijos, R=-3.0 final). Sin nodo, heredar valores (e) transmite pesos aprendidos al hijo: única forma de propagar conocimiento.",
+    0.6,
+    0.9,
+    "M1",
+    0,
+    22,
+    "agua",
+    28,
+    0
+   ],
+   [
+    3,
+    "d",
+    "Cuerpo 3 heredó M1, vivió 196 vs anterior 28, pero 0 hijos (R0 cae 0.333). Umbral 0.9 aún alto. Bajar 0.9→0.8 (d) facilita reproducción: próximo cuerpo alcanzará saciedad más fácil.",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    38,
+    "energia",
+    196,
+    0
+   ],
+   [
+    4,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    54,
+    "energia",
+    518,
+    1
+   ],
+   [
+    5,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    71,
+    "energia",
+    682,
+    1
+   ],
+   [
+    6,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    79,
+    "agua",
+    146,
+    0
+   ],
+   [
+    7,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    83,
+    "agua",
+    42,
+    0
+   ],
+   [
+    8,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    87,
+    "energia",
+    111,
+    0
+   ],
+   [
+    9,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    89,
+    "energia",
+    7,
+    0
+   ],
+   [
+    10,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    90,
+    "agua",
+    213,
+    0
+   ],
+   [
+    11,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    110,
+    "agua",
+    954,
+    1
+   ],
+   [
+    12,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    124,
+    "energia",
+    654,
+    1
+   ],
+   [
+    13,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    135,
+    "agua",
+    591,
+    1
+   ],
+   [
+    14,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    139,
+    "agua",
+    117,
+    0
+   ],
+   [
+    15,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    153,
+    "agua",
+    511,
+    1
+   ],
+   [
+    16,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    173,
+    "energia",
+    840,
+    0
+   ],
+   [
+    17,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    179,
+    "energia",
+    29,
+    0
+   ],
+   [
+    18,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    199,
+    "energia",
+    879,
+    0
+   ],
+   [
+    19,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    201,
+    "energia",
+    26,
+    0
+   ],
+   [
+    20,
+    "f",
+    "INVALIDA (excepcion al leer la respuesta) -> (f) NADA",
+    0.6,
+    0.8,
+    "M1",
+    0,
+    203,
+    "agua",
+    129,
+    0
+   ]
+  ],
+  "nodo_n": 203,
+  "conectado_final": 0,
+  "dote_final": 0.6,
+  "umbral_final": 0.8,
+  "hereda_final": "M1",
+  "T_efectivo": 8204,
+  "miedo_inerte": 0,
+  "vidas_cuerpo": [
+   1530,
+   28,
+   196,
+   518,
+   682,
+   146,
+   42,
+   111,
+   7,
+   213,
+   954,
+   654,
+   591,
+   117,
+   511,
+   840,
+   29,
+   879,
+   26,
+   129
+  ],
+  "desc_cuerpo": [
+   1,
+   0,
+   0,
+   1,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "nodo_cola": [
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    1.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     0.0
+    ],
+    1.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    0.0,
+    1
+   ],
+   [
+    [
+     0.0,
+     1.0,
+     1.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     1.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    -3.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    0.0,
+    0
+   ],
+   [
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0,
+     1.0,
+     1.0
+    ],
+    -3.0,
+    1
+   ]
+  ],
+  "alma_cfg": {
+   "nodo": 1,
+   "nodo_k": 20,
+   "nodo_lee": 50,
+   "miedo_n": 5,
+   "miedo_R": -3.0,
+   "d_dote": 0.1,
+   "d_umbral": 0.1,
+   "conectado_ini": 0
+  },
+  "alma2": {
+   "menu": "cdef",
+   "nodo_baraja": 0,
+   "baraja_nodo_identidad": 0,
+   "sem_baraja_nodo": "860000+1000000*seed"
+  },
+  "_segundos": 594.16
+ }
+}

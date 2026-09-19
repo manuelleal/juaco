@@ -5399,3 +5399,29 @@ externo a Codex; H-4 cerrada como "no es k"). Por la letra (P-I2 en el borde y R
 conducta del receptor sin experiencia propia y refiere a esta familia y no a otra (k = 3); no distingue la variante"**. Nivel 5: 65 % → **70 %**.
 Nota para el siguiente preregistro: la puerta P-I2 (emisor voraz ≥ 18/20) queda en el borde en cuatro de seis series; regla 12 la manda replicar
 o rebajarla con ERR, y se decidirá antes de la serie siguiente, no después.
+
+
+### BLOQUE ALMA — curitas guiadas por 20 almas Haiku y nodo central (18 sep 21:20; semillas 802–811; 6 brazos × 10 linajes × 20 muertes, muerte real): **EL ALMA RAZONADA NO LE GANA A LAS CURITAS AL AZAR (R-1 refuta: A₁₂(ALMA > AZAR) 0.525, se exigía > 0.60) — lo que paga es el CONTENIDO DEL NODO (nodo bien emparejado contra nodo barajado: R₀ 0.275 contra 0.175, A₁₂ 0.88, P-3 pasa) y abaratar el mundo (dote y umbral); ningún linaje mortal llega a R₀ 0.9 (mejor mediana 0.40; H-1 sigue en pie)**
+
+Preregistro `experimentos/nivel13_alma/PREREGISTRO_alma.md` (a5a397330c314e21); instrumentos `organismo_alma.py` (7c09cec391daa879) y `organismo_alma2.py`
+(4fd616aeaf535e61; identidad 114/114); runner `corre_alma.py` (77803beb86756ed8); almas = 20 agentes Haiku por la interfaz de archivos (`alma_io/`),
+un linaje cada uno; controles automáticos; crudos por linaje en `experimentos/nivel13_alma/alma_<brazo>_s<sem>_*.json`.
+
+| brazo | R₀ mediana (10 linajes) | vida mediana | A₁₂ contra ALMA |
+|---|---|---|---|
+| **ALMA** (alma Haiku, menú completo, nodo) | **0.40** [0.15, 0.55] | — | — |
+| AZAR (curita al azar, nodo) | 0.35 | 470 | 0.525 (ALMA no gana) |
+| CIEGO (nodo bien emparejado, curitas al azar sin conectar) | 0.275 | 594 | 0.52 |
+| BARAJA (nodo con recompensas permutadas) | 0.175 | 226 | 0.835 |
+| SIN_NODO (alma Haiku sin nodo; 7 de 10 reportados) | 0.30 | — | 0.65 |
+| NINGUNA (= H-1 hereda nada) | 0.225 | 125 | 0.75 |
+
+**Lectura honesta:** (1) el alma que razona no aporta sobre elegir curitas al azar del mismo menú: P-5 (A₁₂ ≥ 0.85 contra NADA, ≥ 0.75 contra
+AZAR) cae; lo que las almas hicieron bien fue lo que el azar también hace: bajar el umbral y subir la dote (abaratar el mundo) y conectar al
+nodo. (2) El nodo transmite CONTENIDO, no cautela genérica: el barajado es el peor brazo (0.175, vidas 226) y el nodo ciego lo dobla en vida
+(594). (3) Con muerte real ningún brazo se acerca al reemplazo (0.9): H-1 y ERR-62 siguen en pie; el alma no encontró la curita que falta,
+porque no está en el menú: el hijo nace vacío y muere a los ~100 pasos si no está conectado; conectado vive 5×, pero se reproduce poco
+(saciedad y umbral). (4) Defecto de instrumento en 1 linaje (810): respuestas con caracteres no ASCII no aplicaron (a)/(b): ERR-84, tolerancia
+de codificación en el buzón, para la próxima serie. **Hipótesis que deja para el método (sin alma, preregistro nuevo):** nodo central leído por
+relevancia y no por recencia (las lecciones expiraban); conexión al nodo desde el nacimiento como mecanismo (no como curita) contra barajado;
+y la reproducción desacoplada de la saciedad. Nivel 9 sigue en 40 %.

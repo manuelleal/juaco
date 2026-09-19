@@ -1,0 +1,835 @@
+{
+ "meta": {
+  "bloque": "nivel13_alma",
+  "brazo": "NINGUNA",
+  "elige": "fija_f",
+  "semilla": 806,
+  "muertes": 20,
+  "T": 100000,
+  "espera": 600.0,
+  "kwargs": {
+   "vivo": 1,
+   "estims": [
+    "A",
+    "B",
+    "C",
+    "D"
+   ],
+   "costo": 0.001,
+   "costo_a": 0.001,
+   "n_nec": 2,
+   "rep_cuello": 2,
+   "reproduccion": 1,
+   "rep_mide": 1,
+   "rep_X": 500,
+   "rep_umbral": 1.0,
+   "rep_coste": 0.0,
+   "rep2": 1,
+   "rep2_regalo": 600,
+   "h1": 1,
+   "muerte_real": 1,
+   "hereda": "nada",
+   "dote": 0.6,
+   "alma_muertes": 20,
+   "menu": "f",
+   "nodo": 0,
+   "conectado": 0,
+   "nodo_baraja": 0
+  },
+  "sha_origenes": {
+   "v14": "feefc88b1fd8d434",
+   "vivo": "20c0961c79de8825",
+   "rep": "aa823d56c2d4213c",
+   "rep2": "96feb4918dc5d694",
+   "h1": "9e99ff87b5e2db1e",
+   "alma": "7c09cec391daa879"
+  },
+  "sha_instrumento": "4fd616aeaf535e61",
+  "sha_constructor": "b8c0291fb694133c",
+  "sha_menu": "1c2119cfbac14280",
+  "sha_preregistro": "a5a397330c314e21",
+  "invalidas": [],
+  "python": "3.14.2",
+  "numpy": "2.4.3",
+  "fecha": "20260918_203937",
+  "segundos": 0.75
+ },
+ "crudo": {
+  "sobre": {
+   "veneno": [
+    707,
+    0,
+    0,
+    0
+   ],
+   "comida": [
+    87,
+    0,
+    0,
+    0
+   ],
+   "agua": [
+    93,
+    0,
+    0,
+    0
+   ],
+   "sal": [
+    507,
+    0,
+    0,
+    0
+   ]
+  },
+  "llegadas": {
+   "veneno": [
+    622,
+    0,
+    0,
+    0
+   ],
+   "comida": [
+    87,
+    0,
+    0,
+    0
+   ],
+   "agua": [
+    92,
+    0,
+    0,
+    0
+   ],
+   "sal": [
+    418,
+    0,
+    0,
+    0
+   ]
+  },
+  "sin_objetivo": [
+   80,
+   0,
+   0,
+   0
+  ],
+  "memoria_rechazo": 20,
+  "err_max": 0.2758912002107362,
+  "t_conflicto": 98,
+  "t_techo": null,
+  "n_techo": 0,
+  "split_t": [
+   [
+    156,
+    "C"
+   ],
+   [
+    156,
+    "C"
+   ],
+   [
+    977,
+    "C"
+   ],
+   [
+    2380,
+    "C"
+   ],
+   [
+    3371,
+    "C"
+   ],
+   [
+    3371,
+    "C"
+   ],
+   [
+    3786,
+    "C"
+   ]
+  ],
+  "mord": {
+   "A": [
+    73,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    59,
+    0,
+    0,
+    0
+   ],
+   "C": [
+    87,
+    0,
+    0,
+    0
+   ],
+   "D": [
+    61,
+    0,
+    0,
+    0
+   ]
+  },
+  "vis": {
+   "A": [
+    87,
+    0,
+    0,
+    0
+   ],
+   "B": [
+    707,
+    0,
+    0,
+    0
+   ],
+   "C": [
+    93,
+    0,
+    0,
+    0
+   ],
+   "D": [
+    507,
+    0,
+    0,
+    0
+   ]
+  },
+  "W": {
+   "A": 0.0,
+   "B": 0.0,
+   "C": 0.0,
+   "D": 0.0
+  },
+  "comp": {
+   "A": [
+    0.0,
+    0.0
+   ],
+   "B": [
+    0.0,
+    0.0
+   ],
+   "C": [
+    0.0,
+    0.0
+   ],
+   "D": [
+    0.0,
+    0.0
+   ]
+  },
+  "deaths": 20,
+  "log": [],
+  "splits": 7,
+  "celdas": 30,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "n_cod": 0,
+  "solap": {
+   "AB": 0,
+   "nB": null
+  },
+  "W_lenta": {
+   "A": 0.0,
+   "B": 0.0,
+   "C": 0.0,
+   "D": 0.0
+  },
+  "Wps": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "Wns": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "n_nec": 2,
+  "estims": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "agua": 0.6,
+  "muertes_nec": [
+   12,
+   8
+  ],
+  "exp_hasta": [
+   {
+    "A": 3,
+    "B": 2,
+    "C": null,
+    "D": null
+   },
+   {
+    "A": null,
+    "B": null,
+    "C": 6,
+    "D": 2
+   }
+  ],
+  "exposiciones": {
+   "A": 87,
+   "B": 622,
+   "C": 92,
+   "D": 418
+  },
+  "W_nec": [
+   {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   },
+   {
+    "A": 0.0,
+    "B": 0.0,
+    "C": 0.0,
+    "D": 0.0
+   }
+  ],
+  "xor_mord": [
+   [
+    66,
+    35,
+    63,
+    46
+   ],
+   [
+    7,
+    24,
+    24,
+    15
+   ]
+  ],
+  "xor_enc": [
+   [
+    78,
+    498,
+    67,
+    347
+   ],
+   [
+    9,
+    124,
+    25,
+    71
+   ]
+  ],
+  "sorp_nec": [
+   0.0,
+   0.0
+  ],
+  "descendientes": 5,
+  "pasos_viables": 7474,
+  "desc_q": [
+   5,
+   0,
+   0,
+   0
+  ],
+  "t_desc": [
+   1529,
+   7882,
+   8979,
+   11434,
+   13569
+  ],
+  "sac_mord": {
+   "A": 32,
+   "B": 6,
+   "C": 29,
+   "D": 11
+  },
+  "sac_dec": {
+   "A": 44,
+   "B": 413,
+   "C": 34,
+   "D": 300
+  },
+  "rep": {
+   "mide": 1,
+   "X": 500,
+   "umbral": 1.0,
+   "coste": 0.0,
+   "nec": 0,
+   "cuello": 2
+  },
+  "desc_regalo": 3,
+  "vidas": [
+   1530,
+   28,
+   196,
+   1260,
+   132,
+   22,
+   46,
+   2851,
+   32,
+   55,
+   591,
+   29,
+   22,
+   1233,
+   2089,
+   103,
+   1320,
+   1186,
+   69,
+   784
+  ],
+  "vida_final": 86422,
+  "rep2": {
+   "regalo": 600
+  },
+  "muerte_real": 1,
+  "hereda": "nada",
+  "dote": 0.6,
+  "nacimientos": 20,
+  "fundadores": 15,
+  "desc_fund": 2,
+  "desc_por_vida": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   1,
+   0,
+   0,
+   1,
+   0
+  ],
+  "vidas_h1": [
+   1530,
+   28,
+   196,
+   1260,
+   132,
+   22,
+   46,
+   2851,
+   32,
+   55,
+   591,
+   29,
+   22,
+   1233,
+   2089,
+   103,
+   1320,
+   1186,
+   69,
+   784,
+   86422
+  ],
+  "origen_cuerpo": [
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   1,
+   0,
+   0,
+   1
+  ],
+  "suma_vidas": 13578,
+  "cola_final": 0,
+  "cola_desborde": 0,
+  "t_fund": [
+   1558,
+   1754,
+   3014,
+   3146,
+   3168,
+   3214,
+   6065,
+   6097,
+   6152,
+   6743,
+   6772,
+   6794,
+   10219,
+   12725,
+   12794
+  ],
+  "baraja_identidad": 0,
+  "h1": {
+   "cola_max": 200,
+   "sem_hijo": "700000+1000000*seed+k",
+   "sem_baraja": "800000+1000000*seed"
+  },
+  "alma_muertes": 20,
+  "curitas": [
+   [
+    1,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    1530,
+    1
+   ],
+   [
+    2,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    28,
+    0
+   ],
+   [
+    3,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    196,
+    0
+   ],
+   [
+    4,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    1260,
+    0
+   ],
+   [
+    5,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    132,
+    0
+   ],
+   [
+    6,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    22,
+    0
+   ],
+   [
+    7,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    46,
+    0
+   ],
+   [
+    8,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    2851,
+    0
+   ],
+   [
+    9,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    32,
+    0
+   ],
+   [
+    10,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    55,
+    0
+   ],
+   [
+    11,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    591,
+    0
+   ],
+   [
+    12,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    29,
+    0
+   ],
+   [
+    13,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    22,
+    0
+   ],
+   [
+    14,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    1233,
+    1
+   ],
+   [
+    15,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    2089,
+    1
+   ],
+   [
+    16,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    103,
+    0
+   ],
+   [
+    17,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    1320,
+    1
+   ],
+   [
+    18,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    1186,
+    0
+   ],
+   [
+    19,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "agua",
+    69,
+    0
+   ],
+   [
+    20,
+    "f",
+    "control: sin curita",
+    0.6,
+    1.0,
+    "nada",
+    0,
+    0,
+    "energia",
+    784,
+    1
+   ]
+  ],
+  "nodo_n": 0,
+  "conectado_final": 0,
+  "dote_final": 0.6,
+  "umbral_final": 1.0,
+  "hereda_final": "nada",
+  "T_efectivo": 13579,
+  "miedo_inerte": 0,
+  "vidas_cuerpo": [
+   1530,
+   28,
+   196,
+   1260,
+   132,
+   22,
+   46,
+   2851,
+   32,
+   55,
+   591,
+   29,
+   22,
+   1233,
+   2089,
+   103,
+   1320,
+   1186,
+   69,
+   784
+  ],
+  "desc_cuerpo": [
+   1,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   1,
+   0,
+   1,
+   0,
+   0,
+   1
+  ],
+  "nodo_cola": [],
+  "alma_cfg": {
+   "nodo": 0,
+   "nodo_k": 20,
+   "nodo_lee": 50,
+   "miedo_n": 5,
+   "miedo_R": -3.0,
+   "d_dote": 0.1,
+   "d_umbral": 0.1,
+   "conectado_ini": 0
+  },
+  "alma2": {
+   "menu": "f",
+   "nodo_baraja": 0,
+   "baraja_nodo_identidad": 0,
+   "sem_baraja_nodo": "860000+1000000*seed"
+  },
+  "_segundos": 0.75
+ }
+}
