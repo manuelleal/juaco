@@ -5,9 +5,9 @@ dote 0.6) mirado cuerpo a cuerpo: es el 0.148 de R0 contra el que todo lo demas 
 supera, no hay nada que contar.
 
 Corre SOLO, un proceso, sin Pool:
-    python experimentos/nivel13_alma/alma_ninguna.py [--sem 801] [--muertes 10] [--T 100000]
+    python experimentos/nivel13_alma/alma_ninguna.py [--semilla 801] [--muertes 10] [--T 100000]
 
-Es corre_alma.py --alma ninguna: la curita es siempre (f) NADA y el runner apaga el nodo (`nodo=0`), asi que ni
+Es corre_alma.py --brazo NINGUNA: la curita es siempre (f) NADA y el runner apaga el nodo (`nodo=0`), asi que ni
 se llena ni se lee. La UNICA diferencia con organismo_vivo_h1 es que la corrida para en la muerte `--muertes` y
 que se registran las vidas y los hijos cuerpo a cuerpo (solo lectura).
 """
@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import corre_alma
 
 if __name__ == '__main__':
-    if '--alma' in sys.argv:
-        raise SystemExit('alma_ninguna.py fija --alma ninguna: no se pasa')
-    sys.argv += ['--alma', 'ninguna']
+    if '--brazo' in sys.argv or '--alma' in sys.argv:
+        raise SystemExit('alma_ninguna.py fija --brazo NINGUNA: no se pasa')
+    sys.argv += ['--brazo', 'NINGUNA']
     sys.exit(corre_alma.main())

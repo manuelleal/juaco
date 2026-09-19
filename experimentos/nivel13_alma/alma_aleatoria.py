@@ -4,9 +4,9 @@ MISION: llegar a la AGI por este camino. Este control existe para que "el alma s
 hecho de que ALGUIEN toque perillas: si tocar al azar da lo mismo, el alma no aporta nada y la hipotesis cae.
 
 Corre SOLO, un proceso, sin Pool:
-    python experimentos/nivel13_alma/alma_aleatoria.py [--sem 801] [--muertes 10] [--T 100000]
+    python experimentos/nivel13_alma/alma_aleatoria.py [--semilla 801] [--muertes 10] [--T 100000]
 
-Es exactamente corre_alma.py --alma aleatoria: el rng de la eleccion es PROPIO (850000 + 1000000*sem) y no toca
+Es exactamente corre_alma.py --brazo AZAR: el rng de la eleccion es PROPIO (850000 + 1000000*sem) y no toca
 el rng del mundo, igual que SEM_HIJO y SEM_BARAJA de H-1 (ERR-60).
 """
 import os, sys
@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import corre_alma
 
 if __name__ == '__main__':
-    if '--alma' in sys.argv:
-        raise SystemExit('alma_aleatoria.py fija --alma aleatoria: no se pasa')
-    sys.argv += ['--alma', 'aleatoria']
+    if '--brazo' in sys.argv or '--alma' in sys.argv:
+        raise SystemExit('alma_aleatoria.py fija --brazo AZAR: no se pasa')
+    sys.argv += ['--brazo', 'AZAR']
     sys.exit(corre_alma.main())
