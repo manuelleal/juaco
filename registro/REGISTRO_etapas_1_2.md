@@ -5334,3 +5334,13 @@ extinción 100 %; (4) las citas del texto son marcadores sin resolver ("citeturn
 hipotética". **Qué sirve:** llega, independiente de nosotros, a lo mismo que E-1/H-1 de la sala 4: si la población se extingue siempre,
 la memoria no se puede comparar; primero R₀ ≈ 1. **Qué no sirve:** ninguna conclusión sobre qué memoria es mejor. Se archiva como
 punto de vista externo; H-1 (la muerte que mata, con R₀ calibrado) ya está en diseño.
+
+
+### LÍNEA EXTERNA — mundo mínimo (protocolo de ChatGPT) reproducido en el repo (18 sep 19:40; `experimentos/externo_mundo_minimo/`; un proceso; ZIP reproducibles byte a byte): **calibración reproducida (0.32 → R₀ 0.9415 ± 0.023, extinción 0.078, población 2.98; referencia externa 0.9665 / 0.082 / 3.03, dentro del ruido); A0 ≡ E semilla a semilla (0 discrepancias en 1000 semillas, 12 métricas, 1000/1000 genealogías): la predicción del coordinador se cumplió — ese mundo no puede probar ninguna memoria porque no hay acción; con dos parches (0.42 / 0.22, media 0.32) y una acción por ronda, la memoria episódica sube R₀ de 0.96 a 1.86, baja la extinción de 8.7 % a 0.8 %, pareado 70.8 % (réplica 74.8 %); la memoria BARAJADA (etiquetas de acción permutadas) ≈ A0 (p 0.16), como estaba predicho**
+
+Calibración: barrido 0.29–0.34 (R₀ 0.53 → 1.31; extinción 0.41 → 0.02); mundo congelado en 0.32 con sha del motor. Decisiones no fijadas por
+el protocolo declaradas (D1–D4). Lectura honesta del implementador (Opus): la variante de parches era predecible con aritmética (un bandido
+de dos brazos con dos medias), el pareado es por semilla y no por trayectoria, el tope de 12 satura (R₀ censurado por arriba), y NADA de
+esto entra en la escalera de JUACO. Lo que sí sirve: (1) la memoria es exactamente inerte sin acción y paga con una acción cuya contingencia
+se pueda registrar, y quien lo sostiene es el control barajado; (2) R₀ ≈ 1 se calibra con una sola perilla (comida) en un mundo de juguete;
+en el mundo vivo real, H-1 (corriendo) dirá si el organismo mortal se sostiene. SHA de los ZIP en `experimentos/externo_mundo_minimo/*/SHA256.txt`.
