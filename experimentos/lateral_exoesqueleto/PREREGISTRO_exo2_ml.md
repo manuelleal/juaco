@@ -24,3 +24,14 @@ fracción de imágenes usadas.
 ## Refuta
 J ≈ R (|Δ| < 0.03 en Q2 y < 0.10 en Q3) → la capa no aporta sobre el azar con igual gasto. Nota: seleccionar por
 incertidumbre es aprendizaje activo conocido; el aporte posible es la combinación local (escribir/sobrescribir/olvidar).
+
+## RESULTADO (22:20, series 1–10 y 11–20; `datos/exo2_s1-10_*`, `exo2_s11-20_*`)
+| | fase 1 | 3/8 tras 100 | fase 2 final | usa |
+|---|---|---|---|---|
+| TODO | 0.856 / 0.866 | 0.12 / 0.14 | 0.873 / 0.875 | 100 % |
+| J | 0.882 / 0.886 | 0.10 / 0.06 | 0.907 / 0.910 | 65 % |
+| R | 0.867 / 0.872 | 0.05 / 0.05 | 0.828 / 0.834 | 65 % |
+Q1 CAE (usa 65 %, no ≤ 40 %; eso sí, supera a TODO). Q2 CAE (+0.015). Q3 CAE (+0.04 / +0.01). **Refutada por la letra en las dos
+series.** Exploratorio, NO preregistrado: al final de la fase 2, J supera a R por +0.08 en las dos series y a TODO por +0.03.
+Candidato a un preregistro nuevo (métrica: acierto final tras el cambio). Instrumento: nadie se desdice en 3/8 a los 200
+(< 0.25): el cambio es demasiado lento de revertir con este lr; revisar antes de rejuzgar Q3.
