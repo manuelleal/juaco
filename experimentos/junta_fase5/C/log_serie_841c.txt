@@ -1,0 +1,56 @@
+[17:55:43 +    0.0s] CONFIRMACION -- CREADOR C, junta de la fase 5: `variante_hija` (LA CASILLA QUE SE DIVIDE).
+[17:55:43 +    0.0s] Semillas 841-860, T = 100000, 27 brazos = 3 celdas x 9. Pool(5). Direccion (-) sola (ERR-53).
+[17:55:43 +    0.0s] La letra y las exclusiones estan en UMBRALES (escritas ANTES de correr; P-I5 segun la decision del coordinador del 19-sep: puerta de VALIDEZ, exclusion por semilla declarada, mismo trato para la linea base).
+[17:55:43 +    0.0s]     sha instrumento_c1           6854bb683a610a68
+[17:55:43 +    0.0s]     sha arnes_c1                 56a64fd637b66c0b
+[17:55:43 +    0.0s]     sha script                   7b0460e6d8f7775b
+[17:55:43 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3  OK
+[17:55:43 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1  OK
+[17:55:43 +    0.0s]     sha runner_b6                88253f352d921c42
+[17:55:43 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434  OK
+[17:55:44 +    0.5s] REGLA 11 - procesos python vivos (3), este es pid 35188
+[17:55:45 +    1.4s] ETAPA 1/3 - IDENTIDAD, P-I1 (9 casos x 3 = 27). (K), (C) y (H) DEBEN diferir: sin ellos la etapa pasa por vacuidad. El arnes completo (61/61) es identidad_c1.py.
+[17:56:28 +   44.6s]     (a) vh=0, k=3 == organismo_familias_b6 (el mundo del bloque 4, RECEPTOR)       3/3
+[17:56:28 +   44.6s]     (b) vh=0, k=3, sufijo b6=1 == organismo_familias_b6 (el brazo k3v1 es b6 BIT A BIT) 3/3
+[17:56:28 +   44.6s]     (n) vh=0, k=1, mundo=AB == organismo_v14 (TRONCO)                              3/3
+[17:56:28 +   44.6s]     (x) memoria_pares=None: vh=1 == vh=0 (la perilla es INERTE sin tabla)          3/3
+[17:56:28 +   44.6s]     (e) perilla mal escrita LANZA (2, -1, 0.5, '1', True, y vh=1 con mv=1)         3/3
+[17:56:28 +   44.6s]     (d) la DIVISION: la HERMANA sale de la direccion del referente y el referente sigue dentro 3/3
+[17:56:28 +   44.6s]     (K) vh=1 != vh=0 con el relevo ON (DEBE diferir)                               3/3
+[17:56:28 +   44.6s]     (C) CANAL-k3h1 != CORTADO-k3h1 (DEBE diferir)                                  2/3   semilla 3: difieren ['sin mensaje (-)']
+[17:56:28 +   44.6s]     (H) BAR-H-k3h1 != CANAL-k3h1 (DEBE diferir: es el brazo que decide)            2/3   semilla 3: difieren ['sin mensaje (-)']
+[17:56:28 +   44.6s]   IDENTIDAD 25/27
+[17:56:28 +   44.6s] ETAPA 2/3 - EMISORES (20 corridas de 100000; mv = 0, k = 1 = b4b bit a bit, sin tocar).
+[17:57:09 +   85.9s]     emiten 18/20; sin mensaje (excluidas, P-I2): [847, 850]
+[17:57:09 +   85.9s] ETAPA 3/3 - RECEPTORES: 486 corridas de 100000 pasos...
+[17:58:35 +  171.6s]           40/486
+[17:59:55 +  252.0s]           80/486
+[18:01:27 +  343.7s]           120/486
+[18:02:35 +  412.2s]           160/486
+[18:03:52 +  489.2s]           200/486
+[18:05:08 +  564.7s]           240/486
+[18:06:33 +  649.4s]           280/486
+[18:07:46 +  722.9s]           320/486
+[18:09:05 +  802.1s]           360/486
+[18:10:23 +  879.9s]           400/486
+[18:11:43 +  959.8s]           440/486
+[18:12:58 + 1034.5s]           480/486
+[18:13:09 + 1045.4s]           486/486
+[18:13:09 + 1045.4s] CRUDO -> c1_serie_s841-860_20260919_175543_crudo.json  sha256_16 = ee5a1c3f66b3c972  (ERR-54: antes del analisis)
+[18:13:09 + 1045.4s] 
+[18:13:09 + 1045.4s] DIRECCION (-) SOLA (ERR-53). `com` = mordio en su PRIMERA exposicion de la vida al referente.
+  semillas 20; con mensaje 18 (sin mensaje [847, 850]); excluidas por ERR-70 [858]; base 17.
+  P-I5 (decision del coordinador: puerta de VALIDEZ). Semillas VACUAS (la boca leyo la via RAPIDA, el mensaje quedo escrito y no consultado), por celda: k3v0: 0 []; k3v1: 2 [843, 860]; k3h1: 1 [854]. Interseccion valida en las tres celdas: 14.
+  --- PRINCIPAL (exclusion por celda)
+  celda    n  CANAL  CORT  BAR-H  BAR-T  VALOR  PARd  PAR0d   muert  R1  R2  R3  R4  R5  O-C
+  k3v0    17     17     0     13      2      1     6      3    92.0  si  si  NO  si  NO   NO
+  k3v1    15     15     2      4      7      2    13      3    42.0  si  NO  si  si  si   NO
+  k3h1    16     16     0      9      3      2     9      5    41.0  si  si  NO  si  NO   NO
+  --- SECUNDARIA (pareada, interseccion)
+  celda    n  CANAL  CORT  BAR-H  BAR-T  VALOR  PARd  PAR0d   muert  R1  R2  R3  R4  R5  O-C
+  k3v0    14     14     0     11      2      1     5      3   105.0  si  si  NO  si  NO   NO
+  k3v1    14     14     2      4      6      2    13      3    37.5  si  NO  si  si  si   NO
+  k3h1    14     14     0      9      3      2     7      5    46.5  si  si  NO  si  NO   NO
+  --- HALLAZGO (predicho antes de correr): vacuas k3h1 1 contra k3v0 0 y k3v1 2 -> contraste +1 (V1 CAE); celdas de Kenyon en k3h1, vacuas 68.0 contra validas 50.0 (V2 CAE).
+  20 semillas no cierran nada: replica en el rango siguiente (regla 12).
+[18:13:09 + 1045.4s]   P-I3 (gemelo, prefijo exacto): {'CANAL-k3v0': 17, 'BAR-H-k3v0': 17, 'BAR-T-k3v0': 17, 'VALOR-k3v0': 17, 'INM-k3v0': 17, 'PAR-k3v0': 17, 'CANAL-k3v1': 17, 'BAR-H-k3v1': 17, 'BAR-T-k3v1': 17, 'VALOR-k3v1': 17, 'INM-k3v1': 17, 'PAR-k3v1': 17, 'CANAL-k3h1': 17, 'BAR-H-k3h1': 17, 'BAR-T-k3h1': 17, 'VALOR-k3h1': 17, 'INM-k3h1': 17, 'PAR-k3h1': 17}

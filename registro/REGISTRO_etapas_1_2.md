@@ -5468,3 +5468,24 @@ Archivos nuevos (por anclas, `experimentos/creacion_B/construye_v142.py`, tripwi
 20/20), K 20/20. Evidencia heredada de B-5 (bit a bit el mismo módulo): examen con `splits` idénticos a v14.1 6/6, generalización 40/40 idéntica,
 alias reparado 18/18 en dos series, coste 0 % exacto. Lo que v14.2 NO es: un candidato del criterio v2 (no mejora el tronco; le quita un defecto
 que sólo aparece fuera de él). Tag `v14.2-tronco`. v14.1 pasa a regresión histórica. 20 congelados.
+
+### JUNTA DE LA FASE 5 (19-sep-2026, 16:00 → 19:35; tres creadores Opus con exoesqueleto y nave; el coordinador corrió las series)
+Objetivo: una tabla que refiera a FAMILIA Y VARIANTE a la vez (BAR-T ≤ 5/20 **y** PAR ≥ 15/20), con las puertas del bloque 6.
+Confirmaciones en semillas nuevas 821–840 y 841–860, corridas por el coordinador (Pool 5, `JUACO_POOL`/`--pool` tras ERR-86).
+
+| candidato | identidad | serie 821–840 | serie 841–860 | misión |
+|---|---|---|---|---|
+| **C** división por conflicto donde falla la familia | 61/61 | BAR-T 3 ✅ · BAR-H 12 ✗ · PAR 8 ✗ | BAR-T 3 ✅ · BAR-H 9 ✗ · PAR 9 ✗ | **NO (refutado ×2)** |
+| **B** lectura CONJUNTIVA (intersección en vez de unión) | 88/88 | BAR-H 9 ✗ · BAR-T 7 ✗ · (5 de 7 puertas) | BAR-H 7 ✗ · BAR-T 5 ✗ · PAR 14 · CANAL 15 | **NO (cae ×2, el más cerca en variante)** |
+| **A** dos ganadoras de distinto tipo + mínimo entre tipos | 77/77 | R2 BAR-T 9 CAE · R3 BAR-H 10 CAE · PAR 13 | **R1–R5 TODAS pasan** (BAR-T 5, BAR-H 7, VALOR 6, dist 13) | **NO (sin réplica; PAR 13 < 15)** |
+
+**Lectura honesta:** ninguno cierra la fase 5. El canje sigue vivo, pero se movió: C recupera la familia y pierde la variante;
+B recupera la variante y casi la familia; A pasa todas las puertas preregistradas en UNA de las dos series. La fase 5 queda en
+75 % y el siguiente candidato debería combinar la conjunción de B con las dos ganadoras de A (nadie lo probó junto).
+**Hallazgos del bloque, medidos y registrados aunque el candidato caiga:** (1) la lectura de b5/b6 es una DISYUNCIÓN —la unión
+de las k direcciones—, por eso una celda alcanzada por azar decide sola (B); (2) el precio del sufijo es de DENSIDAD, no de
+bits: subdivide en vez de multiplicar particiones (A y C coinciden); (3) fuga del mensaje re-eligiendo la ganadora hacia celdas
+"+1 en todas partes", presente en b4/b4b/b5/b6 y no medida hasta hoy (A, `msg_elige`); (4) predicciones propias refutadas y
+registradas por sus autores: pesos de tipo y mínimo dentro del tipo inertes (A), relevo marginal y dos canales con veto (B),
+"el que aprende mejor deja de escuchar" V1/V2 (C, cae en las dos series).
+**ERR-85** (agente mató procesos sin verificar cmdline) y **ERR-86** (Pool(14) con otras corridas → BrokenPipe) en HANDOFF 15.12.

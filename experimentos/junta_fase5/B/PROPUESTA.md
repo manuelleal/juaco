@@ -192,6 +192,32 @@ python experimentos/junta_fase5/B/corre_jb_serie.py --desde 841
   crudos, puertas, tabla y veredicto. **No gasta ninguna semilla de 821–860.**
 - Si se cae a mitad, el crudo ya tiene todo lo corrido: el análisis se rehace sin repetir la serie.
 
+## 5 ter. VACUIDAD — la decisión del coordinador aplicada a mi brazo (escrito ANTES de la serie)
+
+**LA LÍNEA:** en mi candidato `fam1 = 1` es **VACUIDAD, no conducta** — la semilla sale del numerador **y** del
+denominador de **todos los brazos de esa celda**, y se aplica **igual a la línea base b6**, declarando cuántas y
+cuáles.
+
+Por qué es el primer caso de los dos y no el segundo, en una frase de mecanismo: `fam1` lo fija **la puerta de
+familiaridad del tronco** (`_fam`/`puerta_pat`, de v13), que se evalúa **antes** que la vía lenta; con `fam1 = 1`
+la boca devuelve la vía **rápida** y `_lenta_v15f` **no se llama**, así que el mensaje quedó escrito y **nunca se
+leyó**: la medida no pudo depender de él. **Mi abstención es otra cosa y NO se excluye:** cuando mi conjunción no
+contesta, la vía lenta **sí** fue consultada y **sí** contestó — releva a la lineal y ese valor entra en la boca.
+Eso es conducta, es parte del resultado, y se ve por separado en `abst`, `exactas` y `canal_lee_post`.
+
+**Lectura principal:** exclusión por celda (la de arriba). **Lectura secundaria, reportada al lado:**
+**intersección pareada** — sólo las semillas utilizables en **todas** las celdas del factorial, que es la que
+protege del sesgo de selección si mi celda resulta tener más vacuas que su línea base.
+
+**Predicción de vacuidad (para que el riesgo se mida en la misma corrida, no se discuta después):** espero
+**1–4 de 20** semillas vacuas en `k3v1j1` y **0–2 de 20** en la línea base `k3v1j0`. Base empírica: en el humo
+(901–903) `fam1 = 1` apareció en **1 de 3** semillas (la 902, en 5 de sus 7 brazos) en mi celda y en **0 de 3**
+en b5 y b6. Y lo declaro ahora para no decidirlo después de ver los brazos: **si `vacuas(j1) − vacuas(j0) > 4/20`
+en cualquiera de las dos series, la lectura principal pasa a ser la intersección pareada**, porque entonces la
+exclusión ya no sería una limpieza del montaje sino una selección a mi favor. El diagnóstico de C (un candidato
+que mejora la vía lenta hace que la puerta se cierre antes) es exactamente el mecanismo por el que eso podría
+pasar; mi candidato empuja en la dirección contraria (contesta **menos**), pero no lo doy por hecho.
+
 ## 6. Predicción numérica para 821–860 (escrita antes de la serie)
 
 **Lo que la junta pide, en una línea, y lo firmo: `BAR-T ≤ 5/20` Y `PAR ≥ 15/20` A LA VEZ, en las dos series.**
@@ -251,11 +277,10 @@ comparte los bins de forma). Sin ese control, un BAR-H bajo no se puede atribuir
    literal "dos ganadoras de distinto tipo"?
 2. **¿Contra quién se mide R6?** El bloque 6 lo medía contra `CANAL-k1v0`. En mis semillas de humo `k3v0` (b5)
    muere 296 veces y `k3v1` 11: la referencia importa mucho. ¿`k1v0` como en el bloque 6?
-3. **P-I5 con un candidato que abstiene más.** ¿Se mantiene "la boca usa la vía LENTA en ≥ 18/20" tal cual?
-   Con la conjunción, abstener **es** el mecanismo funcionando (releva a la lineal), y en el gemelo CORTADO va a
-   abstener casi siempre. Propongo: P-I5 se mide **en el brazo CANAL** (donde el mensaje sí escribió) y se
-   reporta por brazo; las semillas con `fam1 = 1` se **excluyen y se reportan**, como P-I2/P-I4 (ERR-70). Es una
-   decisión de criterio y la pido por escrito **antes** de la serie, no después.
+3. ~~P-I5 con un candidato que abstiene más~~ — **RESUELTA por el coordinador (19-sep)**: la exclusión por
+   vacuidad se aplica sólo cuando la medida no pudo depender del mensaje. Mi caso es ése y está escrito en
+   §5 ter, con la lectura secundaria y la predicción de cuántas vacuas espero contra la línea base. El runner ya
+   imprime **P-I5 por brazo** (semillas con `fam1 = 1`), así que se mide en la misma corrida.
 4. **¿Factorial o candidato solo?** Recomiendo el 2 × 2 de §6 (28 brazos por serie con los 7 brazos que uso);
    cuesta CPU pero deja el control del sufijo dentro de la misma serie.
 5. **El instrumento lleva tres perillas nuevas** (una candidata y dos refutadas, todas inertes por defecto y con

@@ -50,6 +50,14 @@ Formato por línea: `[creador] idea → prueba (semillas) → resultado → lecc
   5/20): a T = 30 000 y n = 3 los brazos no se pueden comparar entre sí. Lo que el humo sí decide es el **mecanismo**
   (qué lee la vía lenta en el paso de la entrega) y el montaje (P-I2 3/3, P-I3 OK, P-I4 3/3).
   **Lección:** pedir siempre el diagnóstico de la entrega; sin él, las tres ideas de arriba habrían parecido iguales.
+- [B] **Vacuidad (decision del coordinador aplicada)**: en mi candidato `fam1 = 1` es VACUIDAD -- la puerta de
+  familiaridad del tronco se evalua ANTES que la via lenta, asi que con `fam1 = 1` `_lenta_v15f` ni se llama y
+  el mensaje no se leyo. Mi ABSTENCION es otra cosa (la via lenta si fue consultada y relevo a la lineal): es
+  conducta y no se excluye. Principal = exclusion por celda (tambien en la linea base); secundaria =
+  interseccion pareada. Predigo 1-4/20 vacuas en j1 contra 0-2/20 en j0 (humo: 1/3 contra 0/3), y declaro
+  ANTES que si la diferencia pasa de 4/20 la lectura principal pasa a la interseccion pareada.
+  **Leccion:** la puerta del tronco puede volver vacua la medida de cualquier candidato que toque la via
+  lenta; hay que predecir cuantas semillas se pierden, no descubrirlo al leer los brazos.
 - [B] **Entrega al coordinador**: `corre_jb_serie.py` con `Pool` por variable de entorno `JUACO_POOL`
   (default 6) y `--pool N`; el Pool se abre UNA vez y los crudos los escribe el proceso PADRE tras cada
   resultado (por el BrokenPipe de hoy con Pool(14)). Probado de punta a punta con `--desde 901 --n 2
@@ -141,3 +149,18 @@ Formato por línea: `[creador] idea → prueba (semillas) → resultado → lecc
 - [A] `dentro='min'` (mínimo escalado dentro del tipo) → arnés (1,2) y humo (901-903) → idéntico a la suma en TODOS los
   casos → lección: las ganadoras de un mismo tipo, elegidas por error propio, no discrepan entre sí; la perilla se
   documenta como inerte medida y se retira del candidato. Un control que no difiere también es un dato (no se fuerza).
+- [A] resolución del coordinador (19-sep, antes de la confirmatoria): `msg_elige=0` NO viola "el canal no se toca"
+  (protege al emisor y al canal, no a la regla de LECTURA del receptor) → queda DENTRO del candidato A1, y la fuga
+  (el mensaje re-elige la ganadora hacia celdas que dicen "+1 en todas partes") se reporta como hallazgo del bloque
+  gane o no A1 → lección/regla aceptada: si A1-e (con re-elección) empata en la confirmatoria, la perilla que no
+  paga se retira (Occam al revés); el empate se lee como "no paga", no como "me quedo con la mía".
+- [A] vacuidad declarada antes de correr: VACUA (fuera del numerador Y del denominador, mismo trato para la línea
+  base) = emisor sin mensaje, `evX is None`, `t_X != t_entrega` (P-I4/ERR-70) o `fam1 == 1` (P-I5, leyó por la vía
+  rápida); NO vacua, es CONDUCTA = la abstención de la tabla por `exige_dir` (pudo leer y no contestó por esa vía).
+  Mi `tabla()` NO aplica (c) ni (d): la exclusión se calcula desde el crudo, por celda, con la fórmula de PROPUESTA
+  §6bis → lección: prefiero entregar el runner estable y que la exclusión la haga el análisis antes que meter código
+  sin arnés en el camino de la confirmatoria (ERR-71).
+- [A] decisiones propias con la lectura que MENOS favorece al candidato, escritas antes de los datos: el relevo sigue
+  siendo "no sé → la lineal" (las mordidas de la semilla hambrienta cuentan en mi contra); R6 se juzga contra
+  CANAL-k1v0 (principal, la letra del bloque 6) y contra k3v0 sólo como covariable declarada; no pido semillas de
+  humo nuevas (me quedo con 901-903, con sus dos mundos hambrientos); las perillas inertes se reportan, no se borran.

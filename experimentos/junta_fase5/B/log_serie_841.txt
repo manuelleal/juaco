@@ -1,0 +1,62 @@
+SERIE JB (LECTURA CONJUNTIVA) semillas 841-860, T = 100000, celdas ['k3v0m0c0j0', 'k3v1m0c0j0', 'k3v1m0c0j1', 'k3v0m0c0j1'], 7 brazos, Pool(5)
+  sha instrumento    312a68054dbae7f6
+  sha constructor    ee017b4511a8eb38
+  sha arnes          b577f6925af1a655
+  sha runner_humo    8a1b0ec9e7cd30f4
+  sha runner         61c0f82379206205
+  sha propuesta      a65b26db2d1e4d33
+  sha origen_b6      b10cbd4ddd0c32a3
+  sha origen_b5      e0b6b90f6f92d5c1
+  sha tronco_v14     feefc88b1fd8d434
+  [   33.4s] P-I2: emisores con mensaje 18/20 (>= 18/20 exige la letra); sin mensaje: [847, 850]
+  [   33.4s] 504 corridas de 100000 pasos...
+  [   99.5s]   40/504
+  [  161.4s]   80/504
+  [  223.3s]   120/504
+  [  287.6s]   160/504
+  [  351.9s]   200/504
+  [  415.1s]   240/504
+  [  480.5s]   280/504
+  [  546.3s]   320/504
+  [  612.7s]   360/504
+  [  675.8s]   400/504
+  [  734.3s]   440/504
+  [  794.6s]   480/504
+  [  830.5s] crudos en datos\jb_serie_s841-860_20260919_183515_crudo.json
+  P-I3 k3v0m0c0j0: OK   |   P-I4 utilizables 17/18  (excluidas: [858])
+       P-I5 por brazo (semillas con fam1 = 1, o sea el mensaje escrito y NO consultado): {'CANAL': 0, 'CORTADO': 0, 'BAR-H': 0, 'BAR-T': 0, 'VALOR': 0, 'PAR': 2, 'PAR0': 2}
+  P-I3 k3v1m0c0j0: OK   |   P-I4 utilizables 17/18  (excluidas: [858])
+       P-I5 por brazo (semillas con fam1 = 1, o sea el mensaje escrito y NO consultado): {'CANAL': 2, 'CORTADO': 2, 'BAR-H': 2, 'BAR-T': 2, 'VALOR': 2, 'PAR': 2, 'PAR0': 2}
+  P-I3 k3v1m0c0j1: OK   |   P-I4 utilizables 17/18  (excluidas: [858])
+       P-I5 por brazo (semillas con fam1 = 1, o sea el mensaje escrito y NO consultado): {'CANAL': 3, 'CORTADO': 3, 'BAR-H': 3, 'BAR-T': 3, 'VALOR': 3, 'PAR': 2, 'PAR0': 2}
+  P-I3 k3v0m0c0j1: OK   |   P-I4 utilizables 17/18  (excluidas: [858])
+       P-I5 por brazo (semillas con fam1 = 1, o sea el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 0, 'PAR0': 0}
+
+====================================================================================================
+BRAZOS (com = la boca mordio en su PRIMERA exposicion de la VIDA al referente)
+====================================================================================================
+  brazo         k3v0m0c0j0    k3v1m0c0j0    k3v1m0c0j1    k3v0m0c0j1
+  ------------------------------------------------------------------
+  CANAL              17/17         16/17         15/17         16/17
+  CORTADO             0/17          3/17          2/17          1/17
+  BAR-H              13/17          4/17          7/17         12/17
+  BAR-T               2/17          8/17          5/17          2/17
+  VALOR               1/17          2/17          4/17          2/17
+  PAR          15/17 d6/17  16/17 d14/17  15/17 d14/17   17/17 d7/17
+  PAR0          2/17 d3/17    4/17 d3/17    1/17 d2/17    0/17 d0/17
+  muertes (mediana)            92            34            31            34
+  okU                0.647         0.578         0.784         0.755
+  abstienen /32             0             0             0             0
+  k EXACTAS /32            32            31            32            32
+
+  LA LETRA en k3v1m0c0j1 (umbrales de PROPUESTA.md 6, escritos antes de la serie):
+    PASA  CANAL >= 15/20                 15/17
+    PASA  CORTADO <= 5/20                2/17
+    CAE   BAR-H <= 5/20                  7/17
+    CAE   BAR-T <= 5/20                  5/17
+    PASA  VALOR <= 5/20                  4/17
+    PASA  dist(PAR) >= 15/20             14/17
+    PASA  dist(PAR) >= dist(PAR0) + 5    14 contra 2
+
+  VEREDICTO DEL CANDIDATO: CAE (la declaracion exige las DOS series, 821-840 y 841-860)
+  pared: 830.6 s   |   crudos: datos\jb_serie_s841-860_20260919_183515_crudo.json

@@ -105,9 +105,19 @@ def _tabla_dos(P):
 | **regla 3 / ERR-37** | recalibrar tras ver datos | cada cambio de la lectura fue por un diagnóstico escrito en la bitácora, con su ablación; nada de mover umbrales |
 | **el precedente del bloque 6** | "la predicción acertó en la hermana y falló en el otro token" | **mido BAR-T siempre**, y la ablación A1-c dice qué regla lo sostiene |
 
-**Riesgo que asumo y declaro:** `msg_elige=0` toca el bloque del canal (no lo que se escribe, sino si ese
-escrito cuenta como evidencia para elegir lectora). Si el coordinador considera que eso rompe "el canal no se
-toca", el candidato se corre con `msg_elige=1` (celda A1-e del humo, que en 3 semillas no se distingue de A1).
+**RESUELTO POR EL COORDINADOR (19-sep, ANTES de la confirmatoria):** `msg_elige=0` **no** viola "el canal no se
+toca" — la regla protege al EMISOR y al canal (qué se emite y cómo viaja), no la regla de LECTURA del receptor, y
+la identidad 77/77 demuestra que apagado es b6 bit a bit. En consecuencia, declarado aquí antes de medir:
+
+* **`msg_elige=0` forma parte del candidato A1**, no es un ajuste posterior: las cuatro reglas del candidato son
+  las de §1 (dos tipos con cobertura · conjunción `min` · dirección completa · el mensaje no re-elige).
+* **La fuga es un hallazgo del bloque, gane o no el candidato**: *tras un mensaje de +1, la actualización del
+  error propio re-elige la ganadora hacia celdas que dicen "+1 en todas partes", y por ahí entra la hermana.*
+  Está en b4, b4b, b5 y b6, está medida (descomposición en el paso exacto de la entrega, semillas 901 y 902, en
+  la bitácora) y se reporta aunque A1 caiga. La celda `b5k3e` del runner la mide sobre el propio bloque 5.
+* **Occam al revés (regla del coordinador, aceptada y declarada antes):** si `A1-e` (con re-elección) empata con
+  A1 en la confirmatoria, la perilla que no paga **se retira** y el candidato se queda con `msg_elige=1`. El
+  empate se lee como "no paga", no como "da igual, me quedo con la mía".
 
 ## 4. Humo (901–903, T = 30 000, UN proceso; **no es evidencia**, son 3 semillas)
 
@@ -176,9 +186,10 @@ Con la celda A1 (`dos_tipos=1, k_forma=3, var_cubre=1, combina='min', exige_dir=
 
 ```bash
 cd <bundle>
-# Pool configurable por variable de entorno (por defecto 6) o por --pool. BrokenPipe del 17:19: usar 5-6.
-JUACO_POOL=6 python -u experimentos/junta_fase5/A/corre_familias_a1.py --serie --desde 821         --celdas b5k3,b6suf,A1,A1-e
-JUACO_POOL=6 python -u experimentos/junta_fase5/A/corre_familias_a1.py --serie --desde 841         --celdas b5k3,b6suf,A1,A1-e
+# LA LINEA DE LA COLA (PowerShell: --pool, no variable de entorno; B avisó de que $env: no pasa al hijo):
+python -u experimentos/junta_fase5/A/corre_familias_a1.py --serie --desde 821 --celdas b5k3,b6suf,A1,A1-e --pool 5
+python -u experimentos/junta_fase5/A/corre_familias_a1.py --serie --desde 841 --celdas b5k3,b6suf,A1,A1-e --pool 5
+# (`--pool N` manda sobre JUACO_POOL, que sólo sirve en bash. Con Pool(5): 15-19 min por serie.)
 ```
 
 * **Tiempo estimado por serie: 12–16 min de pared con Pool(6)** (580 corridas de T = 100 000: 20 emisores +
@@ -191,7 +202,54 @@ JUACO_POOL=6 python -u experimentos/junta_fase5/A/corre_familias_a1.py --serie -
 * Comprobado el *plumbing* del Pool (spawn, tareas picklables, crudo y tabla) con un ensayo corto
   `--serie --desde 901 --n 2 --T 6000 --celdas A1 --pool 2`; **yo no he corrido ninguna serie** (reglas 3 y 11).
 
-## 6. Preguntas al coordinador (exoesqueleto, punto 3: no adivino el criterio)
+## 6bis. RESPUESTAS (coordinador 19-sep + lo que decido yo, con la opción que MENOS me favorece)
+
+**(1) `msg_elige=0`: resuelto, ver §3.** Entra en el candidato; la fuga se reporta como hallazgo del bloque; si
+`A1-e` empata, la perilla se retira (Occam al revés).
+
+**(2) VACUIDAD contra ABSTENCIÓN, en una línea, antes de que corra el coordinador:** *es **VACUA** (sale del
+numerador **y** del denominador de todos los brazos de esa celda, y de la línea base con el mismo trato) la
+semilla en la que la boca no llegó a consultar la vía del mensaje — (a) el emisor no emitió (P-I2: no hay
+`msgs[s]['neg']`, el brazo ni se corre), (b) `B4.evX is None` (no hubo primera exposición de la vida al referente
+registrada), (c) `B4.t_X != t_entrega` (P-I4 / ERR-70: ya había visto el referente antes del mensaje) y (d)
+`B4.fam1 == 1` (P-I5: leyó por la vía RÁPIDA, el mensaje quedó escrito y no consultado); **y NO es vacua, es
+CONDUCTA y se queda dentro, la abstención de la tabla** (`exige_dir`: las ganadoras no conocen la dirección
+completa, la tabla calla y releva a la lineal — el organismo pudo leer y decidió no contestar por esa vía).*
+
+Aviso de instrumento, para que no se lea de más: **la tabla que imprime mi runner NO aplica las exclusiones (c) y
+(d)** — cuenta `com` sobre los brazos con `evX is not None`. Todo lo necesario está en el crudo por corrida
+(`B4.t_X`, `t_entrega`, `B4.fam1`, `B4.evX`, `B4.dist`, `seed`, `cel`), así que la exclusión por semilla se
+calcula desde él (ERR-54) con la regla de arriba, aplicada **por celda y con el mismo trato para `b5k3`/`b6suf`**:
+`val = {s : t_X(CORTADO-celda, s) == t_entrega(CORTADO-celda, s) y fam1(CORTADO-celda, s) == 0}`, y todos los
+brazos de esa celda se cuentan sólo sobre `val`. Si el coordinador prefiere que lo haga el script, es un parche
+de 6 líneas en `tabla()`, pero **no lo toco ahora**: prefiero entregar el runner estable y que la exclusión la
+haga el análisis, a meter código sin arnés en el camino de la confirmatoria (ERR-71).
+
+**(3) Las demás, decididas por mí con la lectura que menos me favorece (declarado antes de los datos):**
+
+* *¿Qué manda cuando la tabla calla?* **Se queda como está: "no sé" → releva a la lineal del tronco**, sin
+  protección añadida. No cambio el relevo a "no sé → no muerdo", que es justo lo que salvaría a mi candidato en
+  la semilla hambrienta: **las mordidas que vengan de ahí cuentan en mi contra** en BAR-H, BAR-T y VALOR.
+* *¿R6 contra qué referencia?* **Lectura principal: R6 contra `CANAL-k1v0` (b4b), la letra del bloque 6** — la
+  que me refuta, porque toda la línea k = 3 muere más que k = 1. Lectura secundaria, declarada y **no puerta**:
+  el mismo cociente contra `CANAL-k3v0` (b5k3), su propia familia, como covariable para el registro. Si R6 cae
+  contra k1v0 y pasa contra k3v0, **el veredicto es que A1 NO pasa R6**, y el coste queda declarado como el
+  cuello del candidato.
+* *¿Más semillas de humo?* **No.** Me quedo con 901–903 tal como están, con sus dos mundos hambrientos, y no
+  pido 904–906: cambiar el humo después de ver el resultado es elegir el suelo que me conviene.
+* *Occam / perillas inertes:* `pesos_tipo` y `dentro='min'` **se reportan en el registro como dos predicciones
+  mías que el instrumento refutó** (medidas inertes: el mínimo no usa pesos; las ganadoras de un mismo tipo no
+  discrepan), y **no entran en el candidato**. No se borran.
+* *Empate en la confirmatoria:* si A1 empata con `b6suf` en PAR y con `b5k3` en BAR-T sin ganar a ninguno en el
+  otro brazo, **el candidato no aporta y se dice así**; el hallazgo que sobrevive es la fuga de la re-elección.
+
+**(4) `--pool`: confirmado.** `--pool N` existe y manda sobre `JUACO_POOL` (`arg('--pool', int(os.environ.get(
+'JUACO_POOL', 6)))`), probado con `--pool 2` en el ensayo de plumbing. Con PowerShell, la línea de la cola es
+exactamente la tuya, sin variable de entorno:
+`python -u experimentos/junta_fase5/A/corre_familias_a1.py --serie --desde 821 --celdas b5k3,b6suf,A1,A1-e --pool 5`
+(y `--desde 841` para la réplica). Con Pool(5) el tiempo estimado sube a **15–19 min por serie**.
+
+## 6. Preguntas al coordinador (exoesqueleto, punto 3: no adivino el criterio) — RESPONDIDAS en §6bis
 
 1. **¿`msg_elige=0` viola "el canal no se toca"?** El mensaje se escribe exactamente igual; lo que quito es que
    ese escrito cuente como error propio y re-elija la lectora. **Lo medí y es una fuga real del bloque 4/4b/5/6:**

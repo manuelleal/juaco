@@ -1,0 +1,42 @@
+[18:49:18 +    0.0s] SERIE A1 (creador A, junta fase 5): celdas ['b5k3', 'b6suf', 'A1', 'A1-e'], brazos ['CANAL', 'CORTADO', 'BAR-H', 'BAR-T', 'VALOR', 'PAR', 'PAR0'], semillas 821-840, T=100000, Pool(5).
+[18:49:18 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla.
+[18:49:18 +    0.0s]     sha script                   f9a7c9d0af371b98
+[18:49:18 +    0.0s]     sha constructor              fe023157ea34b62c
+[18:49:18 +    0.0s]     sha instrumento              8833e1dcfb62f26d
+[18:49:18 +    0.0s]     sha arnes                    e0999d33d882c5c7
+[18:49:18 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[18:49:18 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[18:49:18 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[18:49:18 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[18:49:18 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[18:49:18 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[18:49:18 +    0.4s] ETAPA 1/3 - DIAGNOSTICO ESTRUCTURAL (T = 0, 20 semillas)
+[18:49:18 +    0.5s]     alias por par mediana 0.0141  piso de forma 4.0/32
+[18:49:18 +    0.5s] ETAPA 2/3 - EMISORES (20 corridas de 100000 pasos; son los del bloque 6 bit a bit)
+[18:49:49 +   31.4s]     emiten 19/20; sin mensaje (se EXCLUYEN, P-I2): [828]
+[18:49:49 +   31.4s] ETAPA 3/3 - RECEPTORES: 532 corridas de 100000 pasos...
+[18:50:49 +   91.6s]           40/532
+[18:51:50 +  152.3s]           80/532
+[18:52:52 +  214.0s]           120/532
+[18:53:55 +  277.1s]           160/532
+[18:54:56 +  338.2s]           200/532
+[18:56:00 +  401.9s]           240/532
+[18:57:02 +  464.2s]           280/532
+[18:58:05 +  526.7s]           320/532
+[18:59:05 +  587.5s]           360/532
+[19:00:08 +  650.4s]           400/532
+[19:01:08 +  710.4s]           440/532
+[19:02:10 +  771.8s]           480/532
+[19:03:11 +  832.8s]           520/532
+[19:03:31 +  853.5s]           532/532
+[19:03:31 +  853.5s] CRUDO -> serie_a1_s821-840_20260919_184918_crudo.json  sha256_16 = 00c03b04e794e998  (ERR-54)
+[19:03:31 +  853.5s] 
+[19:03:31 +  853.5s] celda      CANAL  CORTADO    BAR-H    BAR-T    VALOR      PAR     PAR0   dist(PAR)  dist(PAR0)  muertes  okU
+[19:03:31 +  853.5s] b5k3      18/19     0/19    13/19     3/19     4/19    17/19     1/19    7/19      2/19       37.0     0.6667
+[19:03:31 +  853.5s] b6suf     17/19     1/19    10/19    12/19     4/19    17/19     4/19    15/19      5/19       30.0     0.6667
+[19:03:31 +  853.5s] A1        18/19     4/19    10/19     9/19     7/19    18/19     2/19    13/19      2/19       28.0     0.8333
+[19:03:31 +  853.5s] A1-e      18/19     4/19    11/19    10/19     8/19    18/19     2/19    14/19      2/19       25.0     0.6667
+[19:03:31 +  853.5s]   [b5k3] R1 CANAL 18/19 >= 15 y CORTADO 0 <= 5: pasa; R2 BAR-T 3 <= CORTADO+3: pasa; R3 BAR-H 13 <= CORTADO+5: CAE; R4 VALOR 4 <= CORTADO+3: CAE; R5 dist 7/19 >= 12 y >= gemelo+5 (2): CAE  |  MISION (BAR-T <= 5 Y PAR >= 15): no
+[19:03:31 +  853.5s]   [b6suf] R1 CANAL 17/19 >= 15 y CORTADO 1 <= 5: pasa; R2 BAR-T 12 <= CORTADO+3: CAE; R3 BAR-H 10 <= CORTADO+5: CAE; R4 VALOR 4 <= CORTADO+3: pasa; R5 dist 15/19 >= 12 y >= gemelo+5 (5): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): no
+[19:03:31 +  853.5s]   [A1] R1 CANAL 18/19 >= 15 y CORTADO 4 <= 5: pasa; R2 BAR-T 9 <= CORTADO+3: CAE; R3 BAR-H 10 <= CORTADO+5: CAE; R4 VALOR 7 <= CORTADO+3: pasa; R5 dist 13/19 >= 12 y >= gemelo+5 (2): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): no
+[19:03:31 +  853.5s]   [A1-e] R1 CANAL 18/19 >= 15 y CORTADO 4 <= 5: pasa; R2 BAR-T 10 <= CORTADO+3: CAE; R3 BAR-H 11 <= CORTADO+5: CAE; R4 VALOR 8 <= CORTADO+3: CAE; R5 dist 14/19 >= 12 y >= gemelo+5 (2): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): no

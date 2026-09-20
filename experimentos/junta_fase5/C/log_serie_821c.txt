@@ -28,3 +28,29 @@
 [17:37:44 +  519.7s]           120/513
 [17:39:44 +  639.5s]           160/513
 [17:41:49 +  764.7s]           200/513
+[17:43:29 +  865.1s]           240/513
+[17:45:28 +  983.5s]           280/513
+[17:47:12 + 1087.2s]           320/513
+[17:49:19 + 1214.7s]           360/513
+[17:51:18 + 1333.6s]           400/513
+[17:53:07 + 1442.8s]           440/513
+[17:54:31 + 1526.6s]           480/513
+[17:55:43 + 1598.3s]           513/513
+[17:55:43 + 1598.4s] CRUDO -> c1_serie_s821-840_20260919_172904_crudo.json  sha256_16 = 96b84f54215728a4  (ERR-54: antes del analisis)
+[17:55:43 + 1598.4s] 
+[17:55:43 + 1598.4s] DIRECCION (-) SOLA (ERR-53). `com` = mordio en su PRIMERA exposicion de la vida al referente.
+  semillas 20; con mensaje 19 (sin mensaje [828]); excluidas por ERR-70 [838]; base 18.
+  P-I5 (decision del coordinador: puerta de VALIDEZ). Semillas VACUAS (la boca leyo la via RAPIDA, el mensaje quedo escrito y no consultado), por celda: k3v0: 0 []; k3v1: 1 [840]; k3h1: 0 []. Interseccion valida en las tres celdas: 17.
+  --- PRINCIPAL (exclusion por celda)
+  celda    n  CANAL  CORT  BAR-H  BAR-T  VALOR  PARd  PAR0d   muert  R1  R2  R3  R4  R5  O-C
+  k3v0    18     18     0     13      3      4     6      2    40.0  si  si  NO  NO  NO   NO
+  k3v1    17     17     1     10     12      4    14      4    28.0  si  NO  NO  si  si   NO
+  k3h1    18     18     1     12      3      2     8      2    44.0  si  si  NO  si  NO   NO
+  --- SECUNDARIA (pareada, interseccion)
+  celda    n  CANAL  CORT  BAR-H  BAR-T  VALOR  PARd  PAR0d   muert  R1  R2  R3  R4  R5  O-C
+  k3v0    17     17     0     12      3      3     5      1    43.0  si  si  NO  si  NO   NO
+  k3v1    17     17     1     10     12      4    14      4    28.0  si  NO  NO  si  si   NO
+  k3h1    17     17     1     11      3      2     7      1    44.0  si  si  NO  si  NO   NO
+  --- HALLAZGO (predicho antes de correr): vacuas k3h1 0 contra k3v0 0 y k3v1 1 -> contraste +0 (V1 CAE); celdas de Kenyon en k3h1, vacuas None contra validas 45.0 (V2 CAE).
+  20 semillas no cierran nada: replica en el rango siguiente (regla 12).
+[17:55:43 + 1598.4s]   P-I3 (gemelo, prefijo exacto): {'CANAL-k3v0': 18, 'BAR-H-k3v0': 18, 'BAR-T-k3v0': 18, 'VALOR-k3v0': 18, 'INM-k3v0': 18, 'PAR-k3v0': 18, 'CANAL-k3v1': 18, 'BAR-H-k3v1': 18, 'BAR-T-k3v1': 18, 'VALOR-k3v1': 18, 'INM-k3v1': 18, 'PAR-k3v1': 18, 'CANAL-k3h1': 18, 'BAR-H-k3h1': 18, 'BAR-T-k3h1': 18, 'VALOR-k3h1': 18, 'INM-k3h1': 18, 'PAR-k3h1': 18}
