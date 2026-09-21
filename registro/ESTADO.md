@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 20:15** (coordinador; CIERRE DEL DÍA: 11 series, 2 líneas cerradas, 1 declaración, ERR-87..92, junta, necesidades). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 22:50** (coordinador; CIERRE FINAL: 18 series, fase 9 declarada, 5 líneas cerradas, ERR-87..93, v3 no utilizable). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -46,12 +46,10 @@ solo lectura), `juaco-cronista` (Sonnet), `probador-haiku`, `explorador-haiku`. 
 `/juaco-err`, `/veredicto`, `/encargo`. Ninguno corre Pool, commitea ni mata procesos: sólo el coordinador. Coordinación de CPU: mirar los
 procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
-## Decisiones del director (21-sep-2026, 16:30: "llena las 3 de una vez, manda grupos de agentes" → las tres tomadas con la recomendación)
-1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Registrada (HANDOFF 15.16).
-2. **CERRADA** la línea BA/BA-v bajo ERR-90: P6 cae en las tres series (961–980, 981–1000, 2101–2120), márgenes 2, 1 y 4 semillas; patrón,
-   no ruido. Registrada (HANDOFF 15.22).
-3. **Fase 9 corrida (1501–1520, réplica 1521–1540, tercera 1621–1640 bajo ERR-92): DECLARADO el núcleo del bloque 1** con dos series válidas
-   (rechazo al primer encuentro sin dejar de comer, vida ~6.3–6.4×, relevancia > recencia/azar, reproducción desacoplada sube R₀; H-1 en pie);
-   sin declarar F9-4 y F9-7 (negativos ×3). **Propuesta del coordinador: nivel 9 a 40 % (decide el director).** Bloque 2 en construcción. HANDOFF 15.23.
-Además: **dE5 bajo el criterio v2 corrido: NO ENTRA** (ver Pendiente, ítem 2). Observación transversal: v15f y dE5 caen T-A y T-C (ii) con A₁₂ 0.4–0.55, indistinguibles del tronco; posible ERR de criterio, no ahora.
-Hoy: 11 series corridas (todas ✅ registradas). **Mañana, en orden:** calibración del criterio v3 (placebo) → bloque 2 de la fase 9 (C-F9B′ + F9-4bis + CAUTELA + ORÁCULO) → con gemelo numba si su arnés es bit a bit.
+## Decisiones del director (las tres de las 16:30 tomadas y ejecutadas; pendientes al cierre de las 22:50)
+1. **Nivel 9: fijar el porcentaje.** Propuesta del coordinador: **50 %** (la pregunta central del nivel, "aprende en menos de una vida", declarada con cuatro series; lo que falta es que un linaje mortal se sostenga, y eso es del mundo).
+2. **Criterio de tronco:** retirar v3 (la réplica no repite) y escribir v4 con ERR-94 (T-C ii n = 80 o margen 15; CAL-4 n = 80 o placebo sin tocar el rng). Hasta entonces, candidatos con v2 y v3 lado a lado.
+3. **Dos Pools en paralelo como regla** (hoy 7 + 6 sin ERR-86; ninguna puerta mide tiempo de pared).
+4. **Fase 5:** correr V-5 (C, 25 %) o dejarla en 75 %.
+Hoy: 18 series, 2 declaraciones (fase 9 bloque 1 en parte y luego completa), 5 líneas cerradas, ERR-87..93, junta, necesidades, gemelos numba.
+**Mañana:** v4 del criterio → fase 9 bloque 3 (cambiar el mundo) con gemelo y series de 40 → alefast Fase 3 en su repo.

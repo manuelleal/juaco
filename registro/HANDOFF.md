@@ -949,3 +949,19 @@ inaceptable; `BA-vM` también cae (dist 14, muertes 259). Las tres celdas BA-* m
 Predicciones de B: acierta dirección (dist, PAR0), falla valor (BAR-T, BAR-H, VALOR) y coste, la puerta que él mismo señaló (35 %). Con esto BA, BA-v,
 BA-vm y BA-vM quedan cerrados hoy; nivel 5 sigue en 75 %; V-5 (C) único preregistro disponible. Datos `serie_bavm_s1541-1560_20260921_171821`
 (`44cdfc90dd199621`); `4557e96`, `f8f1287`.
+
+### Cierre final del 21-sep-2026 (22:50; segunda ventana de dos horas del director: "corre lo que haga falta y registra todo")
+**Corrido en la segunda ventana (7 series más, dos Pools en paralelo por primera vez):** calibración del criterio v3 + réplica (NO repite: v3 no
+utilizable, v4 pendiente); nivel 6 "rodeo obligado" (CAE 5/10); BA-vm/BA-vM (CAE, línea cerrada); fase 9 bloque 2 serie + réplica (**F9-4bis
+replicado ×2 → la fase 9, bloque 1, se DECLARA completa**; C-F9B′ cae; ni el oráculo cruza R₀ 0.9 ×2). **Total del día: 18 series.**
+**Declarado hoy:** un cuerpo recién nacido que lee el nodo de su linaje por relevancia viva aprende en menos de una vida lo que mató a su linaje:
+rechaza lo malo al primer encuentro sin dejar de comer, vive ~6× el cuerpo vacío, y es el contenido del nodo, no cautela genérica (cuatro series).
+**Negativo estratégico replicado:** ni un nodo con la tabla verdadera cruza R₀ 0.9: H-1 es del mundo, no de la herencia.
+**Cerrado hoy:** v15c–v15g; BA, BA-v, BA-vm, BA-vM (fase 5 en 75 % con V-5 como único preregistro); dE5 como candidato; C-F9B′; nivel 6 rodeo obligado.
+**Instrumentos nuevos:** gemelo numba de la fase 9 (×46, bit a bit) y del bloque 2 (×51); mundo muralla con geometría sorteada; runner de criterio
+con placebo. **ERR-87..93.** **Junta** (SINTESIS.md) y **necesidades** (NECESIDADES_20260921.md).
+**Decisiones pendientes del director:** (1) nivel 9: propuesta **50 %**; (2) criterio: retirar v3 y escribir v4 (ERR-94: T-C ii n = 80 o margen 15;
+CAL-4 n = 80 o placebo sin tocar el rng); (3) dos Pools en paralelo como regla (hoy funcionó sin ERR-86); (4) fase 5: correr V-5 o dejarla en 75 %.
+**Mañana, en orden:** (a) v4 del criterio y su calibración con el gemelo; (b) fase 9 bloque 3: cambiar el mundo (mapa del nivel 6 en el mundo vivo,
+o más de un cuerpo a la vez) con el gemelo numba y series de 40; (c) alefast Fase 3 (número contra Mem0) en su repo, antes de vender nada.
+Quien retome: `registro/ESTADO.md`, luego esta sección, luego "DECLARACIÓN DE LA FASE 9" en el registro.
