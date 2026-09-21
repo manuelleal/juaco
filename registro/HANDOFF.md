@@ -937,3 +937,9 @@ el placebo cae T-C (ii) bajo v3 (LI −11.93). Por la letra, **v3 no se declara 
 n = 80 o placebo que no toque el rng; decisión del director). Lo que se sostiene en dos series: v2 rechaza al propio tronco (0.285 / 0.297) y las dos
 letras rechazan al peor por 20. Hasta v4, cualquier candidato se juzga con v2 y v3 lado a lado, declarándolo. Datos `critv3_rep_20260921_170812`
 (`fd10cce51f4cdc53`); `b9626d1`.
+**15.27 (21-sep 17:30–17:47): fase 9, bloque 2, serie 1581–1600 (Pool 7, 560 corridas, en paralelo con BA-vm).** El candidato C-F9B′ (`nodo_via=2`)
+**CAE por la letra**: no vive más que REL (0.989×, A₁₂ 0.492) y DOSIS lo iguala (0.951×). Se reproduce el hallazgo de C con `nodo_via=1` (0.36×: la
+puerta sustituye). Lo que pasa: **F9-4bis** (ERR-93, J = p1 + c1 − 1): el nodo por relevancia discrimina contenido (J 0.96) donde ni el barajado (0.137)
+ni NADA (0.175) ni CAUTELA (0.187) lo hacen; con esto las cuatro puertas centrales del cuerpo nuevo pasan juntas por primera vez en una serie. B2-5: ni
+el nodo ORÁCULO cruza R₀ 0.90 (0.508): H-1 en pie con la cota más alta medida; el próximo bloque cambia el mundo, no el nodo. Nivel 9 sigue en
+propuesta 40 % hasta la réplica 1601–1620 (en marcha). Datos `f9b2_s1581-1600_20260921_173047` (`96f49d2b921b625e` / `5dfc03643949c5d8`); `6b2e51b`, `8d6ad65`.

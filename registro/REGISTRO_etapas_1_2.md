@@ -5976,3 +5976,51 @@ Diagnóstico por brazo (réplica): T-A ENTERA v3 n = 40 **0.898** / v2 0.297; T-
 **Vocabulario permitido:** *"en dos series independientes, el criterio v2 rechaza al propio tronco presentado como candidato (T-A 0.285 y 0.297); el criterio v3 lo deja pasar en T-A al borde de su estándar (0.974 y 0.898) y falla en T-C (ii) (0.789 y 0.652), y su puerta de validez cae en un marginal en la réplica; por la letra, v3 no se declara utilizable y corresponde escribir v4 con ERR"*. Prohibido: "v3 se confirma"; "v3 reemplaza a v2"; "la réplica repite"; "CAL-4 pasa"; rejuzgar candidatos con v3.
 
 **Qué queda.** v14.2 sigue como tronco. Propuesta para **v4** (ERR-94 cuando se escriba; decisión del director): T-C (ii) con n = 80 o margen 15; CAL-4 con n = 80 o un placebo que no consuma sorteos del generador del organismo; T-A como está. Hasta v4, ningún candidato nuevo se juzga por T-A / T-C (ii) con v3 sola: se juzga con v2 y v3 lado a lado, declarándolo, y con la advertencia registrada de que v2 rechaza al propio tronco (ERR-91).
+
+### FASE 9, BLOQUE 2 — "leer llena la memoria; morder abre la puerta" (C-F9B′) + F9-4bis (J balanceado, ERR-93), serie 1581–1600 (21-sep-2026, 17:30–17:47; Pool 7; 14 brazos × 2 niveles de `rep_acum` × 20 = 560 corridas): **12 de 14 puertas PASAN — CAEN B2-1 y B2-3: el candidato REL2b (`nodo_via=2`) no vive más que REL (0.989×, A₁₂ 0.492) y DOSIS lo iguala (0.951×); F9-4bis PASA con el índice balanceado (J REL 0.96 contra REL_BAR 0.137, NADA 0.175 y CAUTELA 0.187: contenido, no cautela genérica), junto con las nueve heredadas: primera vez que F9-2, F9-3, F9-4→4bis y F9-9 pasan juntas en UNA serie; B2-4 REPRODUCE el hundimiento de `nodo_via=1` (0.36×); B2-5: ni el nodo ORÁCULO cruza R₀ 0.90 (0.508 con acum = 1): el muro es el mundo. Réplica 1601–1620 en marcha**
+
+Preregistro `experimentos/nivel09_cuerpo_nuevo_b2/PREREGISTRO_bloque2.md` (`cfb933749a92d796`; **ERR-93**: (a) F9-4bis con J = p1 + c1 − 1 por corrida, F9-4 original no se rejuzga; (b) ancla F9-1 recalibrada por unión de las cinco series: vida NADA [66, 170], R₀ NADA [0.097, 0.22], R₀ RENACE [0.60, 1.40], r RENACE [−50, 25]; (c) F9-7 retirada, refutada ×3). Instrumento `organismo_f9c.py` (`9dd1fb91ecec35ae`, 9 anclas desde `organismo_f9.py` `3a821884394d66c9` con `organismo_f9b.py` `6a57e9fa9514099b`; arnés **109/109**; el ORÁCULO tenía un confound de pool de 48 mensajes hallado en el humo y corregido a 400 antes de correr, sin tocar umbrales). Runner `corre_bloque2.py` (`d6e86be50163119f`); regla 14 OK en las 8 celdas heredadas; identidad interna 5/5. Crudo `datos/f9b2_s1581-1600_20260921_173047.json` (`96f49d2b921b625e`); veredicto (`5dfc03643949c5d8`). 1045 s. Commits `6b2e51b` (paquete, antes de correr), `8d6ad65` (crudos). Sin ERR nuevo.
+
+| puerta | letra | medido | veredicto |
+|---|---|---|---|
+| F9-1 (ANCLA, rango ERR-93) | R₀ NADA ∈ [0.097, 0.22]; vida ∈ [66, 170]; RENACE R₀ ∈ [0.60, 1.40], r ∈ [−50, 25] | 0.142; 94.25; 0.866; −9.0 | PASA |
+| F9-2 | vida(REL) ≥ 2.5× NADA, A₁₂ ≥ 0.85 | 6.33×; 1.0 | PASA |
+| F9-3 | p1 ≥ 0.60, dif ≥ 0.30, A₁₂ ≥ 0.85; c1 y sac no caen | 0.962 vs 0.185; 1.0; c1 1.0; sac 0.512 vs 0.504 | PASA |
+| **F9-4bis** | A₁₂(J REL > REL_BAR) ≥ 0.85; J(REL_BAR) ≤ J(NADA) + 0.10; A₁₂(vida) ≥ 0.80 | J REL 0.96; J REL_BAR 0.137 ≤ 0.275; A₁₂ 1.0 y 1.0 | **PASA** |
+| F9-5 | A₁₂(REL > REC) ≥ 0.65, R₀ ≥ 1.15× | 0.97; 1.556× | PASA |
+| F9-6 | A₁₂(REL > REL_AZAR) ≥ 0.65 | 0.99 | PASA |
+| F9-8 | razón acum ≥ 1.30, Spearman ≥ 0.80; H1-6 | 1.577×; 0.978; ninguno cruza 0.9 | PASA |
+| F9-9 | seguridad + 3 pruebas del mecanismo | 560/360 ok; via_msg REL2b 7304; fam_nac REL2b 0; fam_nac REL2 2.59; frac_pa REL2b 0.087 | PASA |
+| F9-10 | REL_FIJO | p1 0.979; 1.419×; A₁₂(sac) 1.0 | PASA |
+| B2-1 | vida(REL2b) ≥ 1.10× REL; J ≥ J(REL) − 0.03 | **0.989×** (A₁₂ 0.492); J 0.959 vs 0.96 | **CAE** |
+| B2-2 | R₀(REL2b, acum 1) ≥ 0.50 | **0.528**; no cruza 0.90 | PASA |
+| B2-3 | A₁₂(REL2b > DOSIS) ≥ 0.70; R₀ ≥ 1.10× DOSIS (condicional a B2-1) | 0.343; 0.951× (DOSIS vida 600.5, J 0.978, R₀ 0.447) | **CAE** |
+| B2-4 | vida(REL2)/REL ∈ [0.25, 0.55]; J(REL2) ≤ J(REL) − 0.10 | **0.36**; J 0.75 | PASA |
+| B2-5 | (i) cordura del oráculo; (ii) reportada: R₀(ORÁCULO, acum 1) ≥ 0.90 | (i) 0.431 ≥ 0.405, vida 597.5; (ii) **0.508, NO cruza** | PASA (H1-6 en pie con la cota más alta medida) |
+
+Reportadas: **B2-CAUT** (c* = −1.3 válida: c1 CAUTELA 0.579 vs REL_BAR 0.585; vida 202.0 vs 154.0 = 1.31×, fuera de ±0.25; J 0.187 vs 0.137, dentro): **el diagnóstico de C "REL_BAR es cautela genérica" queda refutado por la cláusula de vida**, no por la de J. **B2-2bBAR**: REL2b_BAR vida 167, J 0.174 (el contenido del candidato también es el nodo). F9-7 no se corre (refutada ×3).
+
+| brazo (acum 0) | R₀ | vida | p1 | c1 | J | sac |
+|---|---|---|---|---|---|---|
+| RENACE | 0.866 (acum 1: 1.289) | 689.0 | — | — | — | 0.569 |
+| NADA | 0.142 | 94.25 | 0.185 | 0.989 | 0.175 | 0.504 |
+| M1 | 0.162 | 131.5 | 0.266 | 0.993 | 0.258 | 0.498 |
+| REC | 0.248 | 407.75 | 0.781 | 0.984 | 0.768 | 0.507 |
+| **REL** | 0.386 (acum 1: 0.479) | **596.75** | 0.962 | 1.0 | **0.96** | 0.512 |
+| **REL2b** (candidato) | 0.425 (acum 1: **0.528**) | **590.25** | 0.965 | 1.0 | 0.959 | 0.514 |
+| REL2 (via = 1) | 0.316 | **214.75** | 0.755 | 0.993 | 0.75 | 0.585 |
+| REL2b_BAR | 0.18 | 167.25 | 0.565 | 0.604 | 0.174 | 0.473 |
+| REL_BAR | 0.166 | 154.0 | 0.563 | 0.585 | **0.137** | 0.463 |
+| CAUTELA | 0.228 | 202.0 | 0.607 | 0.579 | 0.187 | 0.356 |
+| DOSIS | **0.447** | 600.5 | 0.978 | 1.0 | 0.978 | 0.524 |
+| ORÁCULO | 0.431 (acum 1: **0.508**) | 597.5 | 0.985 | 1.0 | 0.984 | 0.517 |
+| REL_FIJO | 0.272 | 600.0 | 0.979 | 0.852 | 0.838 | 0.355 |
+| REL_AZAR | 0.243 | 397.25 | 0.738 | 0.991 | 0.72 | 0.519 |
+
+**Predicciones (§5, firmadas antes de correr):** B2-1 (C: vida 1.0–1.7×; coordinador: 0.95–1.20×, 25 % de pasar) → 0.989×: cayó; la de C refutada, la escéptica acertó el sentido. B2-2 (R₀ [0.42, 0.62], 5 % de cruzar 0.90) → 0.528, acertada. B2-3 ("predigo que cae") → acertada en el sentido (A₁₂ 0.343 quedó por debajo del rango [0.40, 0.70]). B2-4 ([0.30, 0.50]) → 0.36, acertada. B2-5 (ii) (no cruza; [0.45, 0.70]; 5 %) → 0.508, acertada (voto de A en la junta). B2-CAUT ("reproduce", 60 %) → **la llamada cualitativa refutada** (razón de vida 1.31×) aunque los dos intervalos puntuales cayeran dentro.
+
+**Lectura honesta.** Por la letra, el candidato C-F9B′ CAE: no vive más que REL y DOSIS lo iguala; lo que paga no son las dos vías. El hallazgo de C (la puerta de v14 sustituye cuando la lectura cuenta como evidencia) se reproduce en semillas nuevas con via = 1 (0.36×) y se evita con via = 2, pero evitar el fallo no es ganar. Lo que sí queda medido con letra balanceada: **F9-4bis pasa**: el nodo por relevancia discrimina contenido (J 0.96) donde ni el barajado (0.137) ni la ausencia de nodo (0.175) ni la cautela genérica calibrada (0.187) lo hacen; con esto, las cuatro puertas que la frase completa del bloque 1 exigía pasan juntas por primera vez en una serie; falta la réplica para declararlo. **B2-5: ni el nodo con la tabla verdadera cruza R₀ 0.90**: en este mundo ningún linaje mortal se sostiene aunque el contenido leído sea perfecto; H-1 y ERR-62 siguen en pie con la cota más alta medida; el siguiente bloque cambia el mundo (dónde: nivel 6; o más de un cuerpo a la vez), no el nodo.
+
+**Vocabulario permitido:** *"con una serie sin replicar, el nodo por relevancia produce contenido que discrimina (J 0.96) donde el nodo barajado (0.137), la ausencia de nodo (0.175) y una cautela genérica calibrada para igualar al barajado (0.187) no lo hacen; es la primera vez que las cuatro puertas del cuerpo nuevo pasan juntas en una serie; el candidato que evita que la lectura cuente como evidencia no se hunde como el que sí lo hace (0.36×, reproducido), pero tampoco vive más ni supera a duplicar el aprendizaje; ni un nodo con la tabla verdadera cruza R₀ 0.90: el muro es el mundo, no la herencia"*. Prohibido: "F9-4bis se declara"; "el bloque 2 pasa"; "el candidato entra"; "el diagnóstico de C se refuta" sin decir que es por la cláusula de vida; "población", "generación", "evoluciona", "enseña".
+
+**Qué queda.** Réplica 1601–1620 en marcha. Si repite F9-4bis con F9-2, F9-3 y F9-9, se declara el conjunto y la propuesta de nivel 9 sube a **50 %**; si no, sigue en 40 %. C-F9B′ no se declara candidato (B2-1 y B2-3 caen con margen, no piden réplica). Siguiente bloque de la fase 9: cambiar el mundo (mapa / más de un cuerpo), con el gemelo numba (×46) para series de 40 semillas.

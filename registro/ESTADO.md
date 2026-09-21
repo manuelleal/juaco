@@ -17,7 +17,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | 6 (mapa, dos metas y rodeo) | 50 % (consenso de la junta): elige entre dos comidas recordadas y rodea el veneno recordado (replicado); no planifica; **bloque "rodeo obligado" (21-sep, mundo muralla con geometría sorteada): CAE 5/10, el campo difundido come 2.46× y muere 0.38× pero rodea limpio sólo 0.35 y huye 0.425**; instrumento disponible, sin candidato | 21-sep |
 | 7 (composición, XOR) | 70 % (consenso de la junta): 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
 | 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |
-| 9 (autonomía / modelo de sí mismo) | **propuesta 40 % (decide el director; hoy 30 %)**: dos series válidas por la letra (1501–1520 y 1621–1640) declaran que el cuerpo nuevo rechaza lo malo al primer encuentro sin dejar de comer, vive ~6.3–6.4× el cuerpo vacío, relevancia > recencia/azar, reproducción desacoplada sube R₀ sin reordenar (H-1 en pie); NO declarado: F9-4 (cautela genérica del nodo barajado, cae ×3) y F9-7 (conectarse tarde no cuesta, negativo ×3); bloque 2 (F9-4bis/CAUTELA, C-F9B′) en construcción | 21-sep |
+| 9 (autonomía / modelo de sí mismo) | **propuesta 40 % (decide el director; 50 % si la réplica del bloque 2 repite F9-4bis)**: bloque 1 declarado en parte con dos series válidas (rechaza lo malo al primer encuentro sin dejar de comer, vida ~6.3×, relevancia > recencia/azar); **bloque 2 (1581–1600): F9-4bis PASA con J balanceado (contenido 0.96 vs barajado 0.14 vs cautela 0.19), el candidato C-F9B′ cae (no vive más que REL), ni el nodo ORÁCULO cruza R₀ 0.9: el muro es el mundo**; réplica en marcha | 21-sep |
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
 
 ## Pendiente con paquete verificado (correr en este orden, un Pool a la vez)
@@ -33,7 +33,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
    de la saciedad). Sin preregistro todavía.
 
 ## Errores
-Último: **ERR-92**. ERR-91 (v2 rechaza al propio tronco) **confirmado en dos series** (T-A 0.285 / 0.297). **La réplica de la calibración de v3 NO repite** (CAL-1 0.898 por 0.002; CAL-4 un marginal 0.627 fuera; T-C ii v3 cae en la realización): **v3 no se declara utilizable**; propuesta v4 (ERR-94: T-C ii n = 80 o margen 15; CAL-4 n = 80 o placebo sin tocar el rng), decisión del director. Hasta v4, candidatos con v2 y v3 lado a lado. Siguiente libre: **ERR-93** (bloque 2 fase 9). Regla 15.
+Último: **ERR-92**. ERR-91 (v2 rechaza al propio tronco) **confirmado en dos series** (T-A 0.285 / 0.297). **La réplica de la calibración de v3 NO repite** (CAL-1 0.898 por 0.002; CAL-4 un marginal 0.627 fuera; T-C ii v3 cae en la realización): **v3 no se declara utilizable**; propuesta v4 (ERR-94: T-C ii n = 80 o margen 15; CAL-4 n = 80 o placebo sin tocar el rng), decisión del director. Hasta v4, candidatos con v2 y v3 lado a lado. ERR-93 usado por el bloque 2 (F9-4bis, ancla con cinco series, F9-7 retirada). Siguiente libre: **ERR-94** (propuesta v4 del criterio). Regla 15.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos
