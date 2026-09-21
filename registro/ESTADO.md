@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 17:20** (coordinador; BA-v serie 1 registrada, fase 9 corriendo, dE5-v2 en cola). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 17:45** (coordinador; fase 9 serie 1 registrada, dE5-v2 corriendo, réplicas BA-v y fase 9 en cola). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -17,7 +17,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | 6 (mapa, dos metas y rodeo) | replicado: elige entre dos comidas recordadas y rodea el veneno recordado; no planifica; canje del mapa estructural, v14 sin mapa | 17-sep |
 | 7 (composición, XOR) | 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
 | 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |
-| 9 (autonomía / modelo de sí mismo) | 30 %: allostasis mínima medida; r = descendientes − muertes ordena como la supervivencia; H-1: la muerte real no sostiene linajes | 18-sep |
+| 9 (autonomía / modelo de sí mismo) | 30 %: allostasis mínima medida; r = descendientes − muertes ordena como la supervivencia; H-1: la muerte real no sostiene linajes; **fase 9 bloque 1 (1501–1520): 8/10 puertas pasan (ancla exacta; el recién nacido rechaza lo malo al primer encuentro sin dejar de comer), CAEN F9-4 (control barajado con cautela genérica) y F9-7 (conectarse tarde no cuesta); H-1 en pie; sin réplica** | 21-sep |
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
 
 ## Pendiente con paquete verificado (correr en este orden, un Pool a la vez)
@@ -48,6 +48,8 @@ procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 2. **BA-v como candidato aparte (ERR-90, puertas absolutas): serie 961–980 corrida, CAE P6** (dist(PAR) 13/19 < 15, 2 semillas) y pasa las
    otras siete, incluida R6 con base b4b (única celda que la pasa). Misión cruda 2/3 series, letra 0/1. Réplica 981–1000 en cola después de dE5-v2;
    si cae P6 otra vez, BA-v se cierra. HANDOFF 15.17.
-3. **Fase 9 abierta ahora**: primer bloque "cuerpo nuevo aprende en menos de una vida" en diseño (creador, `experimentos/nivel09_cuerpo_nuevo/`).
+3. **Fase 9 corrida (1501–1520)**: 8 de 10 puertas pasan (ancla exacta, "menos de una vida" sin costo en comida ni saciedad, relevancia > recencia
+   y > azar, reproducción desacoplada); CAEN F9-4 (nodo barajado también alarga la vida, con cautela genérica) y F9-7 (conectarse tarde no cuesta).
+   Nada se declara con la letra completa. Réplica 1521–1540 en cola tras dE5-v2 y la réplica de BA-v. HANDOFF 15.18.
 Además: paquete **dE5 bajo el criterio v2** en construcción (creador, `experimentos/tronco_v15_dE5/`), decisión previa del director del 18-sep.
 Orden de corrida (un Pool a la vez): BA-v 961–980 ✅ → fase 9 1501–1520 (corriendo desde 15:16) → dE5-v2 → réplica BA-v 981–1000.

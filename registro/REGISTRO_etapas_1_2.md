@@ -5647,3 +5647,42 @@ Preregistro `experimentos/nivel05_familia_variante_BAv/PREREGISTRO_bav.md` (§0�
 Vocabulario permitido: *"BA-v cumple la misión cruda en dos de tres series, pero bajo el criterio propio ERR-90 cae en la única serie medida, por P6 (13/19 < 15, margen de 2 semillas); es la única de las seis celdas que pasa R6 completo contra la base b4b; el control barajado confirma que la lectura es referencial"*. Prohibido: "BA-v entra"; "BA-v es candidato"; "R6 refuta la línea"; tratar el margen de 2 semillas como réplica automática; "BA-v cae siempre".
 
 **Decisión del coordinador (delegada por el director, "llena las 3"):** la réplica 981–1000 del preregistro SE CORRE, después de dE5-v2 (un Pool a la vez): el preregistro la fijó antes de ver datos, el coste es sólo CPU, y con dos series bajo ERR-90 la fase 5 queda decidida limpia en cualquier dirección. Si la réplica también cae P6, BA-v se cierra con la frase "cumple la misión cruda en 2 de 4 series y la letra absoluta en 0 de 2". Nivel 5 sigue en **75 %**.
+
+### FASE 9, BLOQUE 1 — el cuerpo nuevo (21-sep-2026, 15:14–15:22; semillas 1501–1520; 9 brazos × 2 niveles de `rep_acum` × 20 = 360 corridas de T = 100 000): **NO PASA por la letra (2 de 10 puertas caen: F9-4 y F9-7) — pero el ancla es exacta (F9-1: NADA reproduce NADA_CM de H-1) y la pregunta central pasa con efecto grande: el recién nacido rechaza lo malo en su primer encuentro (p1 REL 0.962 contra 0.194 de NADA) sin dejar de comer (c1 1.0 contra 0.992, saciedad 0.521 contra 0.489); la relevancia le gana a la recencia y al azar sobre el mismo nodo; la reproducción desacoplada de la saciedad sube R₀ 1.674× sin cambiar el orden entre mecanismos y NINGÚN brazo llega a R₀ 0.9 — H-1 y ERR-62 SIGUEN EN PIE**
+
+Preregistro `experimentos/nivel09_cuerpo_nuevo/PREREGISTRO_cuerpo_nuevo.md` (sha `2c2f557b7e38c4ac`; H-F9, diez puertas §5, arnés 99/99 §9, humo 5/5 §10). Instrumento por anclas: `organismo_f9.py` (`3a821884394d66c9`, 11 anclas desde `organismo_alma2.py` `4fd616aeaf535e61` ← cadena hasta `organismo/organismo_v14.py` v14.1 `feefc88b1fd8d434`), `construye_f9.py` (`d603607b4f94ee83`), `identidad_f9.py` (`d04f79d95d4d1649`), runner `corre_f9.py` (`3c0f1c4e6d101c83`). Identidad dentro del runner (3 chequeos × 2 semillas, OK: NADA con alma nula == `organismo_alma2` = NADA_CM de H-1; REL ≠ REC; `rep_acum` 1 ≠ 0). Crudos `datos/f9_cuerpo_nuevo_s1501-1520_20260921_151405.log` y `.json`; veredicto `..._veredicto_20260921_151405.json` (sha `fadb7bcee33d7f54`). Commits `e38c841` (paquete) y `893dd3a` (datos). 475.8 s.
+
+| puerta | letra (umbral) | medido | veredicto |
+|---|---|---|---|
+| F9-1 | ANCLA bloqueante: R₀(NADA) ∈ [0.10, 0.22], vida(NADA) ∈ [90, 170], R₀(RENACE) ∈ [0.70, 1.40], r(RENACE) ∈ [−50, +25] | R₀ 0.141, vida 94.0, R₀ RENACE 0.804, r −15.5 | **PASA** |
+| F9-2 | vida(REL) ≥ 2.5× vida(NADA) y A₁₂ ≥ 0.85 | 598.5 / 94.0 = 6.37×, A₁₂ 1.0 | **PASA** |
+| F9-3 | p1(REL) ≥ 0.60, dif ≥ 0.30, A₁₂ ≥ 0.85; balance: c1(REL) ≥ c1(NADA) − 0.10, sac(REL) ≥ 0.95× sac(NADA) | p1 0.962 vs 0.194 (dif 0.768), A₁₂ 1.0; c1 1.0 vs 0.992; sac 0.521 vs 0.489 | **PASA** |
+| F9-4 | A₁₂(vida REL > REL_BAR) ≥ 0.80 y p1(REL_BAR) ≤ p1(NADA) + 0.15 | A₁₂ 1.0 (pasa la mitad); p1(REL_BAR) 0.568 > 0.344 (cae la mitad) | **CAE** |
+| F9-5 | A₁₂(vida REL > REC) ≥ 0.65 y R₀(REL) ≥ 1.15× R₀(REC) | A₁₂ 0.985, razón 1.53 | **PASA** |
+| F9-6 | A₁₂(vida REL > REL_AZAR) ≥ 0.65 | A₁₂ 0.985 | **PASA** |
+| F9-7 | A₁₂(vida REL > REL_TARDE) ≥ 0.65 y, dentro del brazo, cuerpos ≥ 5 viven ≥ 2× cuerpos 1–4 en ≥ 15/20 | A₁₂ 0.426, contraste interno 9/20 | **CAE** |
+| F9-8 | R₀(NADA, acum1)/R₀(NADA, acum0) ≥ 1.30 y Spearman ≥ 0.80; cláusula H1-6 (algún brazo R₀ ≥ 0.90 con fundadores ≤ 2) | razón 1.674, Spearman 0.933; NINGÚN brazo cruza 0.90 (mejor: REL acum1 0.494) | **PASA** (H1-6 sigue negativa) |
+| F9-9 | contabilidad 360/360, frac_div(REL) ≥ 0.50, lect_div(REC) = 0, exposiciones A ≥ 0.50× NADA | 360/360, frac_div 1.0, lect_div 0.0, ninguna celda pobre | **PASA** |
+| F9-10 | p1(REL_FIJO) ≥ 0.60; R₀(REL) ≥ 1.15× R₀(REL_FIJO); A₁₂(sac REL > REL_FIJO) ≥ 0.65 | p1 0.976; razón 1.306; A₁₂ 1.0 | **PASA** |
+
+Nota de forma (sin ERR): el rótulo del log dice "LAS NUEVE PUERTAS" pero imprime las diez con letra y detalle; ninguna puerta preregistrada queda sin juez.
+
+| brazo (mediana, rep_acum = 0) | R₀ | vida | p1 | c1 | saciedad |
+|---|---|---|---|---|---|
+| RENACE | 0.804 | 656.0 | — | — | 0.565 |
+| NADA | 0.141 | 94.0 | 0.194 | 0.992 | 0.489 |
+| M1 | 0.175 | 136.75 | 0.291 | 0.992 | 0.497 |
+| REC | 0.251 | 434.25 | 0.799 | 0.99 | 0.506 |
+| **REL** | **0.384** | **598.5** | **0.962** | **1.0** | **0.521** |
+| REL_FIJO | 0.294 | 600.0 | 0.976 | 0.862 | 0.363 |
+| REL_BAR | 0.172 | 154.5 | 0.568 | 0.598 | 0.471 |
+| REL_AZAR | 0.243 | 381.0 | 0.728 | 0.985 | 0.514 |
+| REL_TARDE | 0.4 | 606.5 | 0.959 | 1.0 | 0.53 |
+
+**Lectura honesta.** Por la letra, el bloque no pasa: 2 de 10 puertas caen y ninguna caída está a una semilla del umbral (regla 12 no dispara: F9-4 falla por 0.224 sobre el margen; F9-7 por 0.224 de A₁₂ y 6 semillas de contraste). El ancla F9-1 reproduce NADA_CM de H-1 (R₀ 0.141, vida 94.0; H-1: 0.148/0.140) y RENACE reproduce el inmortal (0.804): el instrumento no se movió. La pregunta central (F9-3) pasa con efecto grande, igual que F9-2, F9-5, F9-6 y F9-10; nada se declara consolidado sin la réplica en semillas nuevas. **F9-4 es media puerta y se reporta tal cual, sin recalibrar**: el nodo barajado (REL_BAR) sí compra vida frente a NADA (154.5 contra 94.0) pero muy por debajo de REL (598.5, A₁₂ 1.0), y su p1 0.568 excede NADA + 0.15 = 0.344 mientras su c1 se hunde a 0.598: el nodo barajado produce **cautela genérica** que también rechaza lo bueno; es la trampa 2 del preregistro apareciendo en el control, no en el candidato. **F9-7 es un negativo limpio**: conectarse tarde no cuesta (A₁₂ 0.426, contraste interno 9/20); refuta la predicción del creador de que "conectarse desde el nacimiento" es parte del mecanismo. **H-1 sigue en pie**: con `rep_acum=0` ningún brazo supera R₀ 0.4 (mejor: REL 0.384); con `rep_acum=1` el mejor es REL 0.494, dentro del rango predicho [0.45, 1.10] y sin cruzar H1-6.
+
+**Predicciones del creador (§5, §7/§8, antes de correr).** Acertadas: F9-1 (los cuatro rangos); F9-2 (598.5 ∈ [300, 900]); F9-3 (p1 0.962, por encima del rango [0.60, 0.95], acertada en dirección); F9-8 (R₀ acum1 0.494 ∈ [0.45, 1.10], no cruza 0.90; el creador dio ~30 % a cruzar); F9-10 (REL_FIJO sube p1 y hunde c1 y saciedad, como predijo). Refutada, con autor: F9-7 "conexión desde el nacimiento como mecanismo" (A₁₂ 0.426, 9/20). F9-5: el creador dio ~40 % a que cayera; pasó con A₁₂ 0.985.
+
+**Vocabulario permitido:** *"el ancla del mundo vivo se sostiene; en una sola serie sin réplica, el cuerpo nuevo que lee el nodo por relevancia viva rechaza lo malo en su primer encuentro sin dejar de comer y vive varias veces más que el cuerpo vacío, y no es sólo por el acceso (gana a la recencia y al azar sobre el mismo nodo); el nodo barajado alarga algo la vida pero produce cautela genérica que también rechaza lo bueno; conectarse tarde no cuesta; la reproducción desacoplada de la saciedad sube R₀ sin cambiar el orden entre mecanismos, y H-1 sigue en pie"*. La frase completa del preregistro ("aprende en menos de una vida sin dejar de comer") exige F9-2, F9-3, F9-4 y F9-9 juntas; como F9-4 cae, **no queda autorizada**. Prohibido: "el bloque pasa"; "F9-4 pasa"; "la fase 9 cierra"; "aprende en menos de una vida"; "H-1 se resuelve"; "el linaje se sostiene"; "población", "generación", "evoluciona", "cultura", "enseña", "recuerda su vida pasada", "quiere".
+
+**Qué queda.** Réplica **1521–1540** (alias estructurales precalculados: `D&C` en 1522, `C&B` en 1525) en cola detrás de dE5-v2 y de la réplica de BA-v (decisión del coordinador). Nivel 9 sigue en **30 %**: aporte exploratorio de una serie, con dos puertas caídas por la letra.

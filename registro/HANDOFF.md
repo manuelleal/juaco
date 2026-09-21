@@ -862,3 +862,12 @@ caen okU por la cuantización de 1/6 predicha), pero cae P6 (dist(PAR) 13/19 < 1
 Control barajado `BA-v-sh` funciona (CANAL 2/19, dist 0/19). Predicción del creador "ninguna celda k=3 pasa R6" refutada. BA-v acumula misión
 cruda 2/3 series y letra absoluta 0/1. Decisión del coordinador (delegada): la réplica 981–1000 se corre después de dE5-v2; si cae P6 otra vez,
 BA-v se cierra. Nivel 5 sigue en 75 %. Commits `20d9656` (paquete), `e02b139` (crudo).
+**15.18 (21-sep 15:14–15:22): Fase 9, bloque 1 "cuerpo nuevo", serie 1501–1520.** Instrumento por anclas sobre v14.1 (`organismo_f9.py`, 11 anclas
+desde `organismo_alma2`; identidad 99/99 en el arnés, inline OK en la corrida). El ancla F9-1 reproduce NADA_CM y RENACE_CM de H-1: el instrumento no
+se movió. Por la letra, 8 de 10 puertas pasan y 2 caen (F9-4, F9-7); ninguna caída está a una semilla del umbral. La pregunta central (F9-3, "menos
+de una vida") pasa con efecto grande: el recién nacido que lee el nodo por relevancia rechaza el veneno en su primer encuentro (p1 0.962 contra
+0.194) sin dejar de comer. F9-4 cae por mitad: el nodo barajado también alarga algo la vida pero produce cautela genérica que hunde c1 a 0.598
+(la trampa 2 del preregistro en el control, no en el candidato), así que la frase completa del preregistro sigue sin desbloquearse. F9-7 refuta la
+predicción del creador: conectarse tarde no cuesta (A₁₂ 0.426). F9-8: la reproducción desacoplada sube R₀ sin reordenar y NINGÚN brazo cruza
+H1-6: H-1 y ERR-62 siguen en pie. Nivel 9 sigue en 30 % hasta la réplica 1521–1540 (en cola tras dE5-v2 y la réplica de BA-v). Datos
+`f9_cuerpo_nuevo_s1501-1520_20260921_151405` (veredicto `fadb7bcee33d7f54`); commits `e38c841`, `893dd3a`.
