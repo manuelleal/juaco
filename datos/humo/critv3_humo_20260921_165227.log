@@ -1,0 +1,41 @@
+[16:52:27 +    0.0s] ARRANQUE A-CAL — calibracion del CRITERIO DE TRONCO (HUMO, un proceso, sin Pool). JUACO_POOL=7
+[16:52:27 +    0.0s] sha preregistro 6e9ddcdec5435f65  criterio_v3 b8393694c9f3890c  script 7f93eca0e45e167b  construye 8b3821434d2352fc  identidad 1356458f34134c83  umbrales 8ad6b7b472f12eb2  organismo_v3cal 148014f68cb01785  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_v142 17528d767fcebaf6
+[16:52:27 +    0.0s] brazos: OFF placebo=0 | PLACEBO placebo=1 | PEOR costo=costo_a=0.0015 (m=1.5)
+[16:52:27 +    0.0s] semillas: T-A 2161-2200 (n=40)  T-C ii 2121-2160 (n=40)
+[16:52:27 +    0.0s] letra v2: v2 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y A12(r) >= 0.50 pareado | v2 T-C (ii): A12(rev cand > tronco) >= 0.75 pareado
+[16:52:27 +    0.0s] letra v3: v3 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en r (LI > -10). SIN clausula A12. | v3 T-C (ii): NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en rev (LI > -10). La exigencia de GANAR se traslada a T-G.
+[16:52:27 +    0.0s] HUMO 0/3 — identidad (subproceso, T=20000): 47 identidades + 7 controles que DEBEN fallar.
+[16:52:27 +    0.0s]    -> SUBPROCESO (identidad): identidad_criterio_v3.py 20000
+[16:55:22 +  174.9s]       | ARNES A-CAL (criterio v3) — T=20000. instrumento organismo_v3cal
+[16:55:22 +  174.9s]       | --- I1: organismo_v3cal(vivo=0,n_nec=1,placebo=0) == organismo_v142 (TRONCO v14.2), 9 escenarios x 3 semillas
+[16:55:22 +  174.9s]       | --- I2: organismo_v3cal(desambiguar=0,placebo=0) == organismo_vivo_rep2 (rep2 VIVO/CUELLO_MIN, mini VIVO)
+[16:55:22 +  174.9s]       | --- I3: B-5 INERTE en los mundos del tronco: desambiguar=1 == desambiguar=0 (prediccion de v14.2)
+[16:55:22 +  174.9s]       | --- I4: placebo=0 == el defecto (no pasar la perilla)
+[16:55:22 +  174.9s]       | --- I5: invertir_vivo_en > T es INERTE
+[16:55:22 +  174.9s]       | --- I6: rango de muertes con placebo=1 dentro del rango con placebo=0 (6 semillas; SE REPORTA, no es puerta)
+[16:55:22 +  174.9s]       |     muertes placebo=0 [10, 16, 16, 17, 23, 26]  mediana 17
+[16:55:22 +  174.9s]       |     muertes placebo=1 [14, 17, 17, 21, 24, 24]  mediana 21
+[16:55:22 +  174.9s]       |     (T=20000: es una LECTURA, no una puerta; la puerta es la serie de 40 semillas)
+[16:55:22 +  174.9s]       | --- CONTROLES QUE DEBEN FALLAR (M1..M7)
+[16:55:22 +  174.9s]       | IDENTIDADES 47/47   CONTROLES QUE FALLAN COMO DEBEN 7/7   (174.6s)
+[16:55:22 +  174.9s]       | ARNES TOTAL: 54/54
+[16:55:22 +  174.9s]       | datos -> identidad_v3cal_20260921_165522.json
+[16:55:22 +  174.9s]       (175s)
+[16:55:22 +  174.9s]       JSON leido por prefijo+sello: identidad_v3cal_20260921_165522.json  sha256_16 = 51ae6c518d87388e
+[16:55:22 +  174.9s]    ARNES TOTAL: 54/54   (esperado ARNES TOTAL: 54/54)
+[16:55:22 +  174.9s] HUMO 1/3 — T-A, brazo VIVO, semilla 2161, T=100000: OFF / PLACEBO / PEOR(m=1.25) / PEOR(m=1.50) (4 corridas).
+[16:55:31 +  183.6s]    OFF     m=None  s2161  r -100  descendientes 19  muertes 119 [62, 57]  celdas 32 splits 2 des_splits 1  placebo 0
+[16:55:39 +  192.2s]    PLACEBO m=None  s2161  r -59  descendientes 21  muertes 80 [46, 34]  celdas 33 splits 3 des_splits 2  placebo 1
+[16:55:48 +  200.8s]    PEOR    m=1.25  s2161  r -117  descendientes 3  muertes 120 [79, 41]  celdas 32 splits 2 des_splits 1  placebo 0
+[16:55:57 +  210.3s]    PEOR    m=1.5   s2161  r -173  descendientes 2  muertes 175 [114, 61]  celdas 32 splits 2 des_splits 1  placebo 0
+[16:55:57 +  210.3s]    *** la REGLA declarada (PREREGISTRO §6): m = el menor de (1.25, 1.50) con delta_r <= -20 en esta semilla; si ninguno, m = 1.50 y se declara que PEOR es mas suave de lo pedido.
+[16:55:57 +  210.3s]        delta_r(m=1.25) = -17
+[16:55:57 +  210.3s]        delta_r(m=1.5) = -73
+[16:55:57 +  210.3s]    *** m FIJADO POR EL HUMO = 1.5. Se escribe en umbrales_v3.PEOR['m'] y en el preregistro §10, y NO se vuelve a tocar.
+[16:55:57 +  210.3s]    AVISO: delta_r de UNA semilla no es el delta_r de la serie (sd de r ~ 11-19). La serie lo mide con n=40.
+[16:55:57 +  210.3s] HUMO 2/3 — T-C (ii), semilla 2121, invertir_vivo_en=50000: OFF / PLACEBO (2 corridas).
+[16:56:15 +  227.6s]    OFF     s2121  rev 69  mordB [168, 125, 197, 238] (visB [1605, 1747, 468, 239])  mordA [223, 173, 151, 169] (visA [226, 175, 1349, 1692])  muertes 114 [64, 50]  celdas 40 splits 10  placebo 0
+[16:56:15 +  227.6s]    PLACEBO s2121  rev 35  mordB [198, 120, 173, 211] (visB [1436, 1847, 201, 217])  mordA [231, 156, 132, 176] (visA [236, 160, 1230, 1721])  muertes 107 [50, 57]  celdas 40 splits 10  placebo 1
+[16:56:15 +  227.6s] HUMO 3/3 — el PLACEBO difiere del tronco en la trayectoria pero NO en la ley (una semilla no lo prueba: lo prueba la serie).
+[16:56:15 +  227.6s]    OFF r -100 muertes 119  |  PLACEBO r -59 muertes 80  |  identicos: False (DEBE ser False)
+[16:56:15 +  227.7s] datos -> critv3_humo_20260921_165227.json  sha256_16 = 09c5ab623112f16a

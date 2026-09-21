@@ -33,7 +33,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
    de la saciedad). Sin preregistro todavía.
 
 ## Errores
-Último: **ERR-92** (21-sep: ERR-91 criterio v2 sin placebo → criterio v3 en construcción; ERR-92 rango del ancla F9-1 → enmienda). Siguiente libre: **ERR-93**. Regla 15 de EQUIPO.
+Último: **ERR-92**. ERR-91 (criterio v2 rechaza al tronco) **confirmado empíricamente** por la calibración con placebo (v2 0.285 vs v3 0.974 en T-A; ambos rechazan 1.000 al peor); réplica en marcha; T-C (ii) v3 débil (0.789), enmienda pendiente del director. Siguiente libre: **ERR-93** (reservado al bloque 2 de la fase 9). Regla 15 de EQUIPO.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos

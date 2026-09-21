@@ -920,3 +920,9 @@ CAL-1..CAL-5 pase; (3) autorizar dos Pools en paralelo (ninguna puerta mide tiem
 (`nivel09_cuerpo_nuevo_b2/`: C-F9B′ + F9-4bis con J + CAUTELA + ORÁCULO); (c) gemelo numba de la fase 9 (`organismo_f9_rapido.py`, arnés antes de usarlo
 para confirmar); (d) alefast Fase 3 (número contra Mem0) es de su propio repo. Quien retome: `registro/ESTADO.md`, luego esta sección, luego las cinco
 últimas entradas del registro. Los paquetes de (a), (b) y (c) llegaron o llegan al cierre; se commitean con la nota "verificado" o "borrador" según su arnés.
+**15.24 (21-sep 16:56–17:10): calibración del CRITERIO DE TRONCO v3 por placebo, bloque A-CAL, 2121–2200 (Pool 7).** CAL-1..CAL-5 acertadas las cinco: el
+placebo (el tronco consumiendo y descartando un sorteo por paso, identidad 54/54) pasa T-A bajo v3 con 0.974 (n = 40) y bajo v2 con 0.285: **ERR-91
+confirmado con corridas reales nuevas**; v3 rechaza con 1.000 a un candidato desplazado −20, igual que v2; el brazo PEOR (coste ×1.5) cae T-A con las
+dos letras. Punto débil declarado sin recalibrar: T-C (ii) bajo v3 sólo 0.789 a n = 40 (0.548 a n = 20): con sd ≈ 27 y margen 10, ≥ 0.95 pide n ≈ 80 o
+margen 15 → candidato a enmienda para el director. Réplica 2281–2360 en marcha; **v3 no se declara utilizable hasta que repita**; nada juzgado bajo v2
+se rejuzga. Datos `critv3_20260921_165615` (`c031c9585242d850`); commits `10da31b`, `4ead270`.

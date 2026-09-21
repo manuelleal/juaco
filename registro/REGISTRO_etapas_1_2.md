@@ -5874,3 +5874,38 @@ Preregistro `experimentos/nivel09_cuerpo_nuevo/PREREGISTRO_cuerpo_nuevo.md` (sha
 **Vocabulario permitido:** *"con dos series independientes válidas por la letra, el cuerpo nuevo que lee el nodo por relevancia viva rechaza lo malo en su primer encuentro sin dejar de comer y vive alrededor de 6.3 a 6.4 veces más que el cuerpo vacío; la relevancia le gana a la recencia y al azar sobre el mismo nodo; el ranking calculado una sola vez también evita pero deja de comer, el vivo no; la reproducción desacoplada de la saciedad sube R₀ sin cambiar el orden entre mecanismos, y ningún brazo cruza R₀ 0.90: H-1 y ERR-62 siguen en pie; el nodo barajado produce cautela genérica que también rechaza lo bueno (×3); conectarse tarde no acorta la vida, y no se confirma que los cuerpos conectados vivan más dentro del mismo brazo (negativo ×3)"*. Prohibido: "el bloque pasa completo"; "F9-4 pasa"; "la fase 9 cierra"; "aprende en menos de una vida" como frase completa; "H-1 se resuelve"; "el linaje se sostiene"; "población", "generación", "evoluciona", "enseña", "recuerda su vida pasada", "quiere".
 
 **Qué queda.** Bloque 2 (en construcción, `experimentos/nivel09_cuerpo_nuevo_b2/`): **C-F9B′** ("leer llena la memoria; morder abre la puerta", hallazgo de la junta: leer por las dos vías acorta la vida 0.38× porque la puerta de v14 sustituye; identidad 66/66), **F9-4bis** (J = p1 + c1 − 1, brazo CAUTELA; ERR-93), nodo ORÁCULO como cota (A), semillas nuevas; gemelo numba de la fase 9 (compilador). Nivel 9: **propuesta 40 %** (hoy 30 %; decide el director).
+
+### CALIBRACIÓN del CRITERIO DE TRONCO v3 por placebo — bloque A-CAL (ERR-91), semillas 2121–2200 (21-sep-2026, 16:56–17:10, Pool 7; corrida por el coordinador): **PASA — CAL-1..CAL-5 ACERTADAS, ningún gatillo de refutación del §6 se disparó: v3 deja pasar al placebo (T-A ENTERA, n = 40: 0.974) donde v2 lo rechaza (0.285), y v3 rechaza con probabilidad 1.000 a un candidato desplazado −20 (v2 también). ERR-91 queda CONFIRMADO con corridas nuevas del tronco. Punto débil declarado, sin recalibrar: T-C (ii) v3 con n = 40 sólo llega a 0.789 — candidato a enmienda para el director. Réplica 2281–2360 en marcha: v3 no se declara utilizable hasta que repita CAL-1..CAL-5**
+
+Preregistro `experimentos/criterio_v3/PREREGISTRO_calibracion_v3.md` (`6e9ddcdec5435f65`). Letra: `registro/CRITERIO_TRONCO_v3.md` (`b8393694c9f3890c`). Instrumento por anclas: `corre_criterio_v3.py` (`7f93eca0e45e167b`), `construye_criterio_v3.py` (`8b3821434d2352fc`), `identidad_criterio_v3.py` (`1356458f34134c83`), `umbrales_v3.py` (`8ad6b7b472f12eb2`), `organismo_v3cal.py` (`148014f68cb01785`) sobre `organismo_vivo_rep2` (`96feb4918dc5d694`) y B-5/`organismo_v142` (`17528d767fcebaf6`). Arnés **54/54** (47 identidades + 7 controles que fallan como deben). Regla 14: OK (PLACEBO difiere de OFF sólo en `placebo=1`; PEOR sólo en `costo`/`costo_a`, m = 1.5 fijado por el humo según §6: costo ×1.25 dio Δr −17, ×1.5 dio −73; declarado por el creador: PEOR resultó mucho más duro que el δ = −20 pedido, así que CAL-3 se juzga con el reparto exacto CAL-3a). Crudos `datos/critv3_20260921_165615.log` / `.json` (`c031c9585242d850`), `_crudo_TA.json` (240 corridas), `_crudo_TCii.json` (120). 687 s. Commits `10da31b` (paquete), `4ead270` (serie).
+
+| serie | brazo | letra v2 | letra v3 |
+|---|---|---|---|
+| T-C (ii) 2121–2160 | PLACEBO | A₁₂(rev) 0.575, rev 44.0 vs 37.5, expB_Q4 204/204 → **NO** | media d 3.125 (sd 27.4, EE 4.33) LI −4.0 > −10 → **PASA** |
+| T-C (ii) 2121–2160 | PEOR (costo ×1.5) | A₁₂ 0.6, rev 50 vs 37.5, muertes 161/96 → **NO** | media d 6.8, LI 0.03 → PASA |
+| T-A VIVO 2161–2200 | PLACEBO | muertes 1.0×, Δr +2.0, A₁₂(r) 0.537 → PASA | NI media 1.7 (sd 19.0) LI −3.25 → **PASA** |
+| T-A CUELLO_MIN | PLACEBO | 0.98×, Δr +0.5, A₁₂ 0.5 → PASA | NI media −1.0, LI −5.64 → **PASA** |
+| T-A VIVO | PEOR | 1.636×, Δr −76.5, A₁₂ 0.0 → **NO** | LI −81.9 → **NO** |
+| T-A CUELLO_MIN | PEOR | 1.791×, Δr −113.5, A₁₂ 0.0 → **NO** | LI −118.3 → **NO** |
+
+Puerta entera: PLACEBO v2 T-A PASA · T-C ii NO · **juntas NO**; PLACEBO v3 T-A PASA · T-C ii PASA · **juntas PASA**; PEOR v2 juntas NO; PEOR v3 juntas NO (T-A lo tumba).
+
+**Calibración por reparto del nulo (80 corridas = 40 OFF + 40 PLACEBO, misma ley, B = 4000):**
+
+| id | qué mide | predicción firmada | medido | veredicto |
+|---|---|---|---|---|
+| CAL-1 | PLACEBO pasa T-A v3 (n = 40, margen 10) | 0.90–0.98 | **0.974** | ACERTADA |
+| CAL-2 | PLACEBO pasa T-A v2 (n = 20, A₁₂ ≥ 0.50) | 0.25–0.40 (A: 0.316) | **0.337** | ACERTADA |
+| CAL-3 | v3 rechaza δ = −20 | ≤ 0.05 | **0.000** | ACERTADA |
+| CAL-4 | A₁₂ no pareado PLACEBO vs tronco, 6 comparaciones | [0.40, 0.60] | 0.57, 0.528, 0.5, 0.516, 0.552, 0.521 | ACERTADA |
+| CAL-5 | PLACEBO pasa T-C (ii) v2 (n = 20) | 0.01–0.05 | **0.015** | ACERTADA |
+
+Diagnóstico por brazo suelto (no puerta): T-A VIVO v3 n = 40 0.993 / v2 0.527; CUELLO_MIN 0.981 / 0.523; T-A ENTERA v3 n = 40 0.974 / v2 0.285 / v3 n = 20 0.744 / v2 n = 20 0.337; **T-C (ii) v3 n = 40 0.789 / v2 0.001 / v3 n = 20 0.548 / v2 0.015**; δ = −20: 0.000 en todos.
+
+**Predicciones de acompañamiento (§5):** "el PLACEBO pasa T-A v3 y T-C ii v3 en la serie" acertada; "Δr(PEOR) ≤ −20" acertada (−76.5, −113.5); "PEOR cae en las dos letras" acertada en T-A y **refutada en T-C (ii) bajo v3** (PEOR pasa, LI 0.03: el coste de vida ×1.5 no empeora la reversión; autor: creador A-CAL); no cambia el veredicto conjunto.
+
+**Lectura honesta.** ERR-91 confirmado con corridas reales nuevas: el criterio v2 aplicado al reparto del propio nulo rechaza al tronco (T-A entera 0.285 con n = 40; T-A y T-C ii juntas ~0.000; en la serie real el placebo cae T-C ii bajo v2 con A₁₂ 0.575); v3 lo deja pasar (0.974) y rechaza con probabilidad 1.000 a un candidato peor por 20 puntos; las cinco predicciones firmadas acertaron. Punto débil **declarado, sin recalibrar**: T-C (ii) bajo v3 deja pasar al placebo sólo 0.789 con n = 40 (0.548 con n = 20); con sd(d) ≈ 27.4 y margen 10, alcanzar ≥ 0.95 exige n ≈ 80 o margen ≈ 15; la letra se queda como está y el punto va al director como candidato a enmienda. El pareado por semilla sigue nominal en el mundo vivo (ERR-91). **v3 no se declara utilizable hasta que la réplica repita CAL-1..CAL-5**; nada juzgado bajo v2 se rejuzga.
+
+**Vocabulario permitido:** *"el criterio v3, calibrado contra su propio placebo con corridas nuevas del tronco, deja pasar al tronco presentado como candidato con probabilidad 0.974 en T-A y rechaza con probabilidad 1.000 a un candidato peor por 20 puntos; bajo la misma calibración el criterio v2 rechaza al propio tronco (0.285); T-C (ii) bajo v3 queda con menos margen (0.789) y se anota como candidato a enmienda; la letra no se toca y la réplica está en marcha"*. Prohibido: "v3 aprobado"; "v3 reemplaza a v2 en firme"; rejuzgar v15f, dE5, v15c–v15g, BA o BA-v con esta letra.
+
+**Qué queda.** Réplica 2281–2320 (T-A) / 2321–2360 (T-C ii) corriendo. Si repite, v3 utilizable para candidatos futuros y la enmienda de T-C (ii) (n = 80 o margen 15) a decisión del director; si no, v3 se retira y se escribe v4 con ERR (§6.2 del preregistro).
