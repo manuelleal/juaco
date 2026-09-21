@@ -77,3 +77,13 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
 ## Coordinación de CPU
 Un solo experimento con `Pool` a la vez (regla 11). Antes de lanzar, el coordinador mira los procesos python vivos (los
 runners lo registran en el log). Los agentes que necesiten CPU para identidad lo hacen en un proceso y lo dicen en su informe.
+
+## Herramientas fijas del equipo (21-sep-2026)
+Los roles de arriba existen como agentes de Claude Code en `C:\Users\User\.claude\agents\` (fuera del repo porque `.claude/` está en el
+`.gitignore`; valen desde cualquier carpeta): `juaco-creador` (Opus), `juaco-compilador` (Opus), `juaco-auditor` (Sonnet, solo lectura),
+`juaco-cronista` (Sonnet), `probador-haiku` y `explorador-haiku` (Haiku). Cada uno lleva la misión (regla 13) y las prohibiciones (Pool, commits,
+matar procesos, congelados) en su definición. Skills del coordinador en `~/.claude/skills`: `/juaco-estado` (abrir sesión), `/encargo` (delegar),
+`/juaco-bloque` (correr un preregistro de punta a punta), `/juaco-err` (numerar un error), `/veredicto` (reportar), `/juaco-cierre` (cerrar el
+día: registro + `ESTADO.md` + commit + push + memoria). Convención para carpetas nuevas de `experimentos/`: `nivelN_<tema>_<candidato>`;
+humos de runners nuevos en `datos/humo/`.
+

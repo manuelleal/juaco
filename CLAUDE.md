@@ -1,5 +1,9 @@
 # Proyecto: Organismo artificial mínimo (Artificial Life)
 
+> **ESTADO VIVO (desde el 21-sep-2026): `registro/ESTADO.md`** — una página con tronco, niveles, pendientes, último ERR y decisiones; se
+> reescribe en cada cierre. Los bloques "Estado (día N)" de abajo son historia y mandan sólo si `ESTADO.md` no los contradice.
+> Índice de experimentos: `experimentos/INDICE.md`. Agentes y skills del equipo: sección "Herramientas" de `registro/EQUIPO.md`.
+
 Investigación reproducible sobre si un organismo artificial simple, con reglas locales y sin backpropagation,
 puede aprender, desaprender, generalizar y (más adelante) transmitir conocimiento. Dirección: Christiam Puentes.
 Colaborador técnico: Claude. Todo corre en CPU con Python 3 + NumPy.
