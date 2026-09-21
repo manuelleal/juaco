@@ -1,0 +1,83 @@
+FASE 9 — CUERPO NUEVO · 2026-09-21 16:24:10 · semillas 1621-1640 · 9 brazos x 2 niveles de rep_acum x 20 = 360 corridas de T=100000
+  organismo_f9.py sha 3a821884394d66c9 · runner sha 62f39314ea9b1dcf
+  Pool 8 (ERR-86: --pool o JUACO_POOL; nunca un Pool grande con otras corridas vivas)
+
+ETAPA 1/3 — identidad dentro del runner (regla 14, ERR-38)
+  OK   (1) NADA con alma nula == organismo_alma2 (alma=None) = NADA_CM de H-1   falta [] dif [] extra []
+  OK   (2) REL != REC (DEBE diferir: si no, la relevancia es inerte, ERR-38)   lect_div REL 37/37 · REC 0
+  OK   (3) rep_acum=1 != rep_acum=0 en NADA (DEBE diferir)   desc 8 -> 14
+  OK   (1) NADA con alma nula == organismo_alma2 (alma=None) = NADA_CM de H-1   falta [] dif [] extra []
+  OK   (2) REL != REC (DEBE diferir: si no, la relevancia es inerte, ERR-38)   lect_div REL 39/39 · REC 0
+  OK   (3) rep_acum=1 != rep_acum=0 en NADA (DEBE diferir)   desc 6 -> 12
+
+ETAPA 2/3 — series
+  [  41.4s] 18/360
+  [  59.0s] 36/360
+  [  76.9s] 54/360
+  [  94.5s] 72/360
+  [ 119.5s] 90/360
+  [ 137.8s] 108/360
+  [ 155.1s] 126/360
+  [ 173.1s] 144/360
+  [ 196.5s] 162/360
+  [ 216.9s] 180/360
+  [ 239.0s] 198/360
+  [ 257.5s] 216/360
+  [ 278.0s] 234/360
+  [ 304.8s] 252/360
+  [ 333.3s] 270/360
+  [ 359.1s] 288/360
+  [ 376.1s] 306/360
+  [ 396.7s] 324/360
+  [ 420.7s] 342/360
+  [ 444.3s] 360/360
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\f9_cuerpo_nuevo_s1621-1640_20260921_162410.json (sha 572ce73d783a7a22)
+
+ETAPA 3/3 — LAS NUEVE PUERTAS (ERR-89: una linea por puerta del preregistro)
+  F9-1  PASA  ANCLA (BLOQUEANTE): el instrumento no se movio -- NADA reproduce NADA_CM de H-1 y RENACE reproduce el inmortal del bloque 2
+          R0_NADA 0.142 en [0.1, 0.22] · vida_NADA 95.5 en [70.0, 170.0] · R0_RENACE 0.92 en [0.7, 1.4] · r_RENACE -5.0 en [-50.0, 25.0]
+  F9-2  PASA  EL NODO POR RELEVANCIA ALARGA LA VIDA DEL CUERPO NUEVO
+          vida REL 604.0 / NADA 95.5 = 6.325 (>= 2.5) · A12 1.0 (>= 0.85)
+  F9-3  PASA  MENOS DE UNA VIDA (la pregunta): el recien nacido RECHAZA lo malo en su PRIMER encuentro, y NO a costa de dejar de comer (p1 y c1 juntos, trampa 2)
+          p1 REL 0.968 vs NADA 0.194 (>= 0.6, dif >= 0.3, A12 1.0 >= 0.85) · BALANCE (trampa 2): c1 REL 1.0 vs NADA 0.989 (>= NADA-0.1) y saciedad REL 0.523 vs NADA 0.506 (>= 0.95x): si · t_ok REL 39.5 vs NADA 22.75 (se REPORTA: el que muerde todo llega antes a su primera comida; t_ok solo no mide aprender) · exposiciones A REL 568.0 vs NADA 800.5
+  F9-4  CAE   CONTENIDO, NO CAUTELA GENERICA: el nodo barajado no compra la vida
+          A12(vida REL > REL_BAR) 1.0 (>= 0.8) · p1 REL_BAR 0.544 (<= NADA 0.194 + 0.15) · vida REL_BAR 157.5
+  F9-5  PASA  RELEVANCIA > RECENCIA (la lecciones no expiran)
+          A12(vida REL > REC) 0.993 (>= 0.65) · R0 REL 0.4 / REC 0.245 = 1.633 (>= 1.15)
+  F9-6  PASA  RANKEAR, NO SOLO ACCEDER: la relevancia le gana al azar sobre el mismo nodo
+          A12(vida REL > REL_AZAR) 0.98 (>= 0.65) · vida REL_AZAR 401.0
+  F9-7  CAE   CONEXION DESDE EL NACIMIENTO: conectarse tarde cuesta, y dentro del mismo brazo los cuerpos conectados viven mas que los cuerpos 1..4
+          A12(vida REL > REL_TARDE) 0.626 (>= 0.65) · DENTRO del brazo: cuerpos >= 5 viven >= 2.0x los cuerpos 1..4 en 5/20 (>= 15)
+  F9-8  PASA  REPRODUCCION DESACOPLADA DE LA SACIEDAD (perilla APARTE): sube R0 en todos los brazos sin cambiar el orden entre mecanismos
+          R0 NADA acum1 0.218 / acum0 0.142 = 1.535 (>= 1.3) · Spearman del orden entre niveles 0.933 (>= 0.8) · CLAUSULA H1-6 (R0 >= 0.9 con fundadores <= 2): NINGUN brazo -- H-1 y ERR-62 siguen en pie
+  F9-9  PASA  SEGURIDAD: contabilidad, la perilla NO es inerte (ERR-38) y el mundo no se comio la comida
+          contabilidad 360/360 · listas por cuerpo OK 360/360 · frac_div REL 1.0 (>= 0.5; 0 = perilla INERTE, ERR-38) · lect_div REC 0.0 (= 0) · exposiciones A (ref NADA 800.5, exentos ('REL_FIJO',)) pobres ninguna · REL_FIJO se REPORTA: 386.0
+  F9-10  PASA  LA RELEVANCIA VIVA NO ES MIEDO A TODO: el ranking calculado UNA sola vez (REL_FIJO) sube p1 y HUNDE c1; el vivo no
+          REL_FIJO p1 0.977 (>= 0.6: el ranking congelado TAMBIEN evita) pero R0 REL 0.4 / REL_FIJO 0.269 = 1.487 (>= 1.15) y A12(saciedad REL > REL_FIJO) 1.0 (>= 0.65) · exposiciones A REL 568.0 vs REL_FIJO 386.0
+
+TABLA (mediana por celda; acum = reproduccion desacoplada de la saciedad)
+  brazo      ac      R0       r     vida cuerpos     p1     c1    t_ok    sac   expA   fund    div
+  RENACE     0     0.92    -5.0   769.25    73.0   None   None    None  0.569  527.5    0.0   None
+  RENACE     1    1.308    22.5   769.25    73.0   None   None    None  0.569  527.5    0.0   None
+  NADA       0    0.142  -208.5     95.5   246.0  0.194  0.989   22.75  0.506  800.5  209.0   None
+  NADA       1    0.218  -219.0    95.75   280.5   0.19  0.988    22.0  0.453  891.0  219.0   None
+  M1         0    0.179  -181.5   134.25   225.5    0.3  0.992   25.25  0.513  754.0  181.5   None
+  M1         1    0.254  -193.0    156.0   257.5  0.336  0.994    25.5  0.463  819.0  193.5   None
+  REC        0    0.245  -130.0   449.25   172.5  0.781   0.98    33.0  0.504  640.0  130.0    0.0
+  REC        1    0.362  -121.0   438.75   192.0  0.787  0.992    33.0  0.464  688.0  121.5    0.0
+  REL        0      0.4   -87.0    604.0   144.5  0.968    1.0    39.5  0.523  568.0   87.5    1.0
+  REL        1    0.479   -85.0    597.5   165.0  0.954    1.0    38.5  0.485  595.5   87.0    1.0
+  REL_FIJO   0    0.269   -93.5    600.0   128.5  0.977  0.827    63.0  0.353  386.0   93.5  0.966
+  REL_FIJO   1    0.342   -89.5    600.0   138.5  0.978  0.831   61.25  0.316  397.5   89.5  0.967
+  REL_BAR    0    0.158  -193.0    157.5   227.5  0.544  0.587    41.0  0.457  799.5  193.5    1.0
+  REL_BAR    1    0.236  -193.0   151.75   253.0  0.587  0.592    42.5  0.419  850.0  193.0    1.0
+  REL_AZAR   0    0.249  -129.5    401.0   174.0  0.723  0.984   31.75  0.519  663.0  129.5  0.976
+  REL_AZAR   1    0.333  -137.0   334.25   208.5  0.726  0.992    31.0  0.471  707.0  137.5  0.979
+  REL_TARDE  0     0.39   -93.0    597.5   152.0  0.954    1.0    39.0  0.524  565.0   93.0    1.0
+  REL_TARDE  1    0.479   -83.5    590.0   161.5  0.961    1.0    37.0  0.482  597.0   84.0    1.0
+
+PUERTAS QUE PASAN: ['F9-1', 'F9-2', 'F9-3', 'F9-5', 'F9-6', 'F9-8', 'F9-9', 'F9-10']
+PUERTAS QUE CAEN : ['F9-4', 'F9-7']
+VEREDICTO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\f9_cuerpo_nuevo_s1621-1640_veredicto_20260921_162410.json (sha c908a720d3de3fb9)
+
+Terminado en 444.4s
