@@ -1,0 +1,33 @@
+[17:14:16 +    0.0s] HUMO del candidato BA-vm (nivel 5, criterio ERR-90 SIN TOCAR). UN proceso, sin Pool.
+[17:14:16 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla,
+[17:14:16 +    0.0s] y el CRITERIO: puertas ABSOLUTAS (ERR-90), nunca relativas a CORTADO.
+[17:14:16 +    0.0s] celdas ['BA-vm']  brazos ['CANAL']  semillas [918, 919, 920]  T = 100000 (<= 6 corridas, <= 200 000 pasos)
+[17:14:16 +    0.0s]     sha script                   0364c2d64970c96c
+[17:14:16 +    0.0s]     sha constructor              0803238682b187df
+[17:14:16 +    0.0s]     sha instrumento              501f55b5a179e5aa
+[17:14:16 +    0.0s]     sha arnes                    cc024ddd448592e7
+[17:14:16 +    0.0s]     sha preregistro              383c2b8e88abc991
+[17:14:16 +    0.0s]     sha preregistro_criterio     f2f6b320b5f43d67
+[17:14:16 +    0.0s]     sha origen_bav               2dca0a3e239481f0
+[17:14:16 +    0.0s]     sha runner_bav               4453754a9921e349
+[17:14:16 +    0.0s]     sha origen_ba                1f196ee786b2040d
+[17:14:16 +    0.0s]     sha runner_ba                f511d1bbe34887af
+[17:14:16 +    0.0s]     sha origen_a1                8833e1dcfb62f26d
+[17:14:16 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[17:14:16 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[17:14:16 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[17:14:16 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[17:14:16 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[17:14:16 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[17:14:16 +    0.0s]     origenes verificados -> OK
+[17:14:16 +    0.0s]     plan (celda, brazo): [('BA-vm', 'CANAL')]
+[17:14:16 +    0.0s]     corridas previstas: 3 emisor(es) + 3 receptores = 6  (limite de la regla 3: 6)
+[17:14:16 +    0.0s] 1/4 DIAGNOSTICO ESTRUCTURAL (T = 0, sin simular)
+[17:14:16 +    0.1s]     semilla 918: alias_pares 0.01411  piso de forma 4/32  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [0, 4, 5, 8]
+[17:14:16 +    0.1s]     semilla 919: alias_pares 0.02419  piso de forma 4/32  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [1, 3]
+[17:14:16 +    0.1s]     semilla 920: alias_pares 0.01008  piso de forma 4/32  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [0, 1]
+[17:14:16 +    0.1s] 2/4 EMISORES (los del bloque 6, sin tocar)
+[17:14:36 +   19.5s]     E s918  19.5s  mensaje ('T1v2', 1.0, 't=58550', 'tras 135 exp')
+[17:14:49 +   32.8s]     E s919  13.3s  mensaje None
+[17:15:03 +   46.7s]     E s920  13.9s  mensaje ('T1v2', 1.0, 't=11064', 'tras 7 exp')
+[17:15:03 +   46.7s] *** P-I2: alguna semilla del humo no emite. Se para (no hay nada que leer).

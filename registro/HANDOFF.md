@@ -950,6 +950,14 @@ Predicciones de B: acierta dirección (dist, PAR0), falla valor (BAR-T, BAR-H, V
 BA-vm y BA-vM quedan cerrados hoy; nivel 5 sigue en 75 %; V-5 (C) único preregistro disponible. Datos `serie_bavm_s1541-1560_20260921_171821`
 (`44cdfc90dd199621`); `4557e96`, `f8f1287`.
 
+**15.29 (21-sep 17:48–18:05): réplica de la fase 9, bloque 2, 1601–1620 (Pool 7) — DECLARACIÓN DEL BLOQUE 1 COMPLETO.** F9-4bis se replica ×2 (J REL
+0.96/0.963 contra REL_BAR 0.137/0.181, NADA 0.175/0.168, CAUTELA 0.187/0.191). Con esto F9-2, F9-3, F9-4bis y F9-9 pasan juntas en las dos series del
+bloque 2 y F9-2, F9-3, F9-9 en las dos válidas del bloque 1: **se declara la fase 9, bloque 1, completa** ("rechaza lo malo al primer encuentro sin dejar
+de comer, vive ~6×, es el contenido del nodo"). C-F9B′ **se cierra** (vida 0.989× / 1.001×; R₀ 0.528 / 0.484; DOSIS lo iguala). B2-4 reproduce el
+hundimiento de via = 1 (0.36× / 0.345×). B2-5: ni el ORÁCULO cruza R₀ 0.90 en ninguna serie (0.508 / 0.557): H-1 y ERR-62 en pie, y su causa es el mundo.
+B2-CAUT refutada ×2 por la cláusula de vida. **Propuesta: nivel 9 de 30 a 50 %** (decide el director). Siguiente: bloque 3, cambiar el mundo, con el
+gemelo numba. Datos `f9b2_s1601-1620_20260921_174849` (`6d4d94707ac5e4ce` / `29d87b642537ce3c`); `42da0e9`.
+
 ### Cierre final del 21-sep-2026 (22:50; segunda ventana de dos horas del director: "corre lo que haga falta y registra todo")
 **Corrido en la segunda ventana (7 series más, dos Pools en paralelo por primera vez):** calibración del criterio v3 + réplica (NO repite: v3 no
 utilizable, v4 pendiente); nivel 6 "rodeo obligado" (CAE 5/10); BA-vm/BA-vM (CAE, línea cerrada); fase 9 bloque 2 serie + réplica (**F9-4bis

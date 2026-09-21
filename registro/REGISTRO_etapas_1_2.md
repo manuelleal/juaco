@@ -6051,3 +6051,55 @@ Régimen de hambre (semillas con muertes ≥ 200 de 20): b4b 0, b5k3 5, b6suf 3,
 **Vocabulario permitido:** *"BA-vm cae por la letra en tres puertas; es la primera celda que cruza la puerta de dirección del mensaje bajo el criterio absoluto, pero morir 9.6 veces la base con 12 de 20 semillas en régimen de hambre lo descarta; la ablación con el mismo mínimo en los dos tipos tampoco entra; el control barajado confirma que la lectura es referencial; la predicción del creador de que el coste lo mataba se cumplió"*. Prohibido: "BA-vm entra"; "la fase 5 avanza"; tratar el cruce de P6 como si bastara sin el coste.
 
 **Qué queda.** Línea BA-vm / BA-vM **cerrada**. Con esto la fase 5 queda con **BA, BA-v, BA-vm y BA-vM cerrados hoy**; nivel 5 sigue en **75 %**; queda `V-5` (C: B-5 trasplantado a la tabla de referencia, 25 %) como único preregistro disponible, sin correr. v14.2 sigue como tronco.
+
+### FASE 9, BLOQUE 2 — RÉPLICA (regla 12) de C-F9B′ + F9-4bis, semillas 1601–1620 (21-sep-2026, 17:48–18:05; Pool 7; 560 corridas): **F9-4bis REPLICADO ×2 (J REL 0.963 contra REL_BAR 0.181, NADA 0.168 y CAUTELA 0.191): pasan las nueve heredadas más F9-4bis, B2-4 y B2-5. CAEN B2-1 (vida REL2b 601.0 ≈ REL 600.5), B2-2 (R₀ acum 1 0.484 < 0.50) y B2-3. El candidato C-F9B′ se CIERRA. Con F9-4bis ×2, las cuatro puertas centrales del bloque 1 pasan juntas en DOS series independientes: declaración en la entrada siguiente**
+
+Mismo preregistro (`cfb933749a92d796`), instrumento (`9dd1fb91ecec35ae`) y runner (`d6e86be50163119f`) que la serie. Regla 14 OK (8 celdas); identidad interna 5/5 × 2 semillas. Crudo `datos/f9b2_s1601-1620_20260921_174849.json` (`6d4d94707ac5e4ce`); veredicto (`29d87b642537ce3c`). 1007.5 s. Commit `42da0e9`. Sin ERR nuevo.
+
+| puerta | serie 1581–1600 | réplica 1601–1620 | s / r |
+|---|---|---|---|
+| F9-1 (ANCLA ERR-93) | 0.142; 94.25; 0.866; −9.0 | 0.138; 96.5; 0.84; −11.5 | PASA / PASA |
+| F9-2 | 6.33×; A₁₂ 1.0 | 6.22×; 1.0 | PASA / PASA |
+| F9-3 | p1 0.962 vs 0.185; c1 1.0 | p1 0.964 vs 0.182; c1 1.0 vs 0.993; sac 0.532 vs 0.5 | PASA / PASA |
+| **F9-4bis** | J REL 0.96; J REL_BAR 0.137 ≤ 0.275; A₁₂ 1.0 | **J REL 0.963; J REL_BAR 0.181 ≤ 0.268; A₁₂(J) 1.0; A₁₂(vida) 1.0** | **PASA / PASA** |
+| F9-5 | 0.97; 1.556× | 0.96; 1.667× | PASA / PASA |
+| F9-6 | 0.99 | 1.0 | PASA / PASA |
+| F9-8 | 1.577×; Spearman 0.978 | 1.609×; 0.96; ninguno cruza | PASA / PASA |
+| F9-9 | 560/560; fam_nac REL2b 0 | 560/560; via_msg 7105.5; fam_nac REL2b 0; REL2 2.598 | PASA / PASA |
+| F9-10 | 0.979; 1.419× | 0.974; 1.391× | PASA / PASA |
+| B2-1 | 0.989× (A₁₂ 0.492) | **1.001× (A₁₂ 0.481)**; J 0.96 vs 0.963 | CAE / CAE |
+| B2-2 | 0.528 PASA | **0.484 CAE** (RENACE acum 1 1.16) | PASA / **CAE** |
+| B2-3 (condicionada a B2-1) | 0.343; 0.951× | 0.414; 0.993× (DOSIS 603.75, J 0.965) | CAE / CAE |
+| B2-4 | 0.36×; J 0.75 | **0.345×; J 0.757** | PASA / PASA |
+| B2-5 | (i) sí; (ii) 0.508 no cruza | (i) 0.458 ≥ 0.406; (ii) **0.557, NO cruza** | PASA / PASA |
+
+Reportadas: B2-CAUT válida (c1 0.572 vs 0.62) pero vida 236 vs 182 (1.30×, fuera de ±0.25), J 0.191 vs 0.181: **el diagnóstico de C ("REL_BAR es cautela genérica") queda refutado ×2 por la cláusula de vida**. B2-2bBAR: REL2b_BAR vida 172.5, J 0.172. F9-7 no se corre.
+
+| brazo (réplica, acum 0) | R₀ | vida | p1 | c1 | J |
+|---|---|---|---|---|---|
+| NADA | 0.138 | 96.5 | 0.182 | 0.993 | 0.168 |
+| **REL** | 0.395 (acum 1: 0.483) | **600.5** | 0.964 | 1.0 | **0.963** |
+| REL2b | 0.426 (acum 1: 0.484) | 601.0 | 0.964 | 1.0 | 0.96 |
+| REL2 (via 1) | 0.324 | **207.0** | 0.765 | 0.993 | 0.757 |
+| REL_BAR | 0.165 | 182.0 | 0.568 | 0.62 | **0.181** |
+| CAUTELA | 0.205 | 236.25 | 0.613 | 0.572 | 0.191 |
+| DOSIS | 0.429 | 603.75 | 0.974 | 1.0 | 0.965 |
+| ORÁCULO | 0.458 (acum 1: **0.557**) | 604.75 | 0.982 | 1.0 | 0.979 |
+
+**Predicciones (§5, en las dos series):** B2-1 (C 1.0–1.7×) cayó ×2; la escéptica del coordinador (25 %) acertó el sentido ×2. B2-2 ([0.42, 0.62], 45 % de ≥ 0.50, 5 % de cruzar) dentro del rango ×2, pasa 1/2, ninguna cruza. B2-3 "cae" acertada ×2. B2-4 [0.30, 0.50] acertada ×2 (0.36, 0.345). B2-5 (ii) acertada ×2 (0.508, 0.557). B2-CAUT (60 %) refutada ×2 por la cláusula de vida.
+
+**Lectura honesta.** F9-4bis se repite número a número: el nodo por relevancia discrimina contenido donde el barajado, la ausencia de nodo y una cautela genérica calibrada no lo hacen, dos veces seguidas. El candidato no se salva por la réplica: iguala la vida de REL (1.001×) sin llegar al 1.10× pedido, su R₀ queda en el borde (0.528 / 0.484), y DOSIS lo iguala las dos veces. El nodo ORÁCULO tampoco cruza R₀ 0.90 en ninguna serie (0.508, 0.557).
+
+**Vocabulario permitido:** *"en dos series independientes, el nodo por relevancia produce contenido que discrimina (J 0.96 / 0.963) donde el barajado, la ausencia de nodo y una cautela genérica calibrada no lo hacen; el candidato que evita que la lectura cuente como evidencia no vive más que el mecanismo del bloque 1 y un control de más cantidad de aprendizaje lo iguala; ni un nodo con la tabla verdadera cruza R₀ 0.90: el muro es el mundo, no la herencia"*. Prohibido: "el candidato entra"; "F9-4bis se confirma" sin "replicado ×2"; "el diagnóstico de C se sostiene"; "población", "generación", "evoluciona", "enseña".
+
+### DECLARACIÓN DE LA FASE 9, BLOQUE 1 COMPLETO + BLOQUE 2 (21-sep-2026, 18:05, tras la réplica 1601–1620)
+
+**Se declara.** Con F9-4bis replicado ×2 (letra balanceada ERR-93), las **cuatro** puertas que la frase completa del preregistro del bloque 1 exigía (F9-2, F9-3, F9-4 → 4bis, F9-9) pasan **juntas en dos series independientes del bloque 2**, y F9-2, F9-3 y F9-9 además en las **dos series válidas del bloque 1** (1501–1520, 1621–1640). Se declara la **fase 9, bloque 1, completa**, con la letra exacta: *"un cuerpo recién nacido que lee el nodo de su linaje por relevancia viva aprende en menos de una vida lo que mató a su linaje: rechaza lo malo en su primer encuentro sin dejar de comer, vive ~6× el cuerpo vacío, y es el contenido del nodo (no una cautela genérica) lo que lo hace; la relevancia le gana a la recencia y al azar; el ranking vivo no es miedo a todo; la reproducción desacoplada sube R₀ sin reordenar los mecanismos"*.
+
+**Se declara también, como negativo replicado ×2:** ni siquiera el nodo ORÁCULO (la tabla verdadera) cruza R₀ 0.90 (0.508 y 0.557) → con este mundo, **ningún linaje mortal se sostiene aunque el conocimiento heredado sea perfecto**: H-1 y ERR-62 siguen en pie, y su causa es el **mundo**, no la calidad de la herencia. El siguiente bloque cambia el mundo (dónde: mapa, nivel 6; o más de un cuerpo a la vez), no el nodo.
+
+**No se declara:** F9-7 (refutada ×3, no se rejuzga); C-F9B′ (se cierra: 0.989× / 1.001× de vida, R₀ 0.528 / 0.484, DOSIS lo iguala); R₀ ≥ 0.9 con fundadores ≤ 2 (no cruza en ningún brazo de ninguna serie, ni con el oráculo).
+
+**Vocabulario permitido:** *"con dos series válidas del bloque 1 y dos del bloque 2, un cuerpo recién nacido que lee el nodo de su linaje por relevancia viva rechaza lo malo en su primer encuentro sin dejar de comer, vive alrededor de seis veces lo que vive el cuerpo vacío, y es el contenido del nodo, no una cautela genérica calibrada para imitarlo, lo que produce ese rechazo; la relevancia le gana a la recencia y al azar; el ranking calculado una sola vez también evita pero deja de comer, el vivo no; la reproducción desacoplada sube R₀ sin reordenar; y ni siquiera un nodo con la tabla verdadera hace que un linaje mortal se sostenga en este mundo: el muro es el mundo, no la calidad de la herencia"*. Prohibido: "la fase 9 cierra"; "H-1 se resuelve"; "el linaje se sostiene"; "C-F9B′ entra"; "población", "generación", "evoluciona", "enseña", "recuerda su vida pasada", "quiere", "planifica".
+
+**Qué queda.** Bloque 3 de la fase 9 (por escribir): **cambiar el mundo**, no el nodo (mapa del nivel 6 en el mundo vivo, o más de un cuerpo a la vez), con el gemelo numba (×46, arnés antes de usarlo) para series de 40 semillas. F9-7 y C-F9B′ cerrados. Nivel 9: propuesta del coordinador de **30 % a 50 %** (decide el director).
