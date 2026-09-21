@@ -100,7 +100,7 @@ ACUM = [0, 1]
 UMBRALES = {
     'F9-1': dict(frase="ANCLA (BLOQUEANTE): el instrumento no se movio -- NADA reproduce NADA_CM de H-1 y "
                        "RENACE reproduce el inmortal del bloque 2",
-                 R0_NADA=(0.10, 0.22), vida_NADA=(90.0, 170.0), R0_RENACE=(0.70, 1.40), r_RENACE=(-50.0, 25.0)),
+                 R0_NADA=(0.10, 0.22), vida_NADA=(float(os.environ.get('F9_VIDA_NADA_MIN', '90.0')), 170.0), R0_RENACE=(0.70, 1.40), r_RENACE=(-50.0, 25.0)  # ERR-92: minimo por F9_VIDA_NADA_MIN (ENMIENDA_ERR92_ancla.md); 90.0 = letra original),
     'F9-2': dict(frase="EL NODO POR RELEVANCIA ALARGA LA VIDA DEL CUERPO NUEVO",
                  razon_vida=2.5, A12_vida=0.85),
     'F9-3': dict(frase="MENOS DE UNA VIDA (la pregunta): el recien nacido RECHAZA lo malo en su PRIMER "

@@ -884,3 +884,8 @@ réplica **no confirma** el bloque 1: nada se declara. Exploratorio: las mismas 
 casi idénticas (REL vida 598.5 → 589.0, p1 0.962 → 0.966; REL_BAR p1 0.568 en las dos). El rango [90, 170] se calibró con dos series de H-1 (125/119)
 y hoy hay cuatro (125, 119, 94.0, 88.5): candidato a ERR de rango de ancla. Nivel 9 sigue en 30 %. Datos `f9_cuerpo_nuevo_s1521-1540_20260921_155801`
 (veredicto `db58916c2b15b57b`); commit `a743704`.
+**15.21 (21-sep 18:20–19:05): junta de tres creadores y dos ERR de criterio.** Voto unánime: el criterio v2 rechaza al propio tronco (placebo pasa T-A
+0.316, T-A y T-C ii juntas 0.006) → **ERR-91**, CRITERIO_TRONCO_v3 con placebo en construcción (creador A), sólo para candidatos futuros. **ERR-92:** el
+rango del ancla F9-1 se calibró con dos series y hoy hay cuatro → enmienda (rango [70, 170], `F9_VIDA_NADA_MIN`), tercera serie 1621–1640 con
+predicción escrita. Síntesis y decisiones en `experimentos/junta_20260921/SINTESIS.md`. Regla 15 de EQUIPO. En construcción para mañana: gemelo numba
+de la fase 9 (compilador) y el informe de necesidades reales donde vender el sistema (`registro/investigacion/NECESIDADES_20260921.md`).

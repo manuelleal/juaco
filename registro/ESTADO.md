@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 18:40** (coordinador; réplicas de BA-v y fase 9 registradas, tercera serie BA-v corriendo, junta en curso). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 19:10** (coordinador; junta sintetizada, ERR-91/92, tercera serie BA-v y tercera serie fase 9 en marcha). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -14,8 +14,8 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 |---|---|---|
 | 1–4 (asociación, desaprender, generalizar, capacidad) | cerrados; nivel 4 con el negativo del alias reparado por B-5 (v14.2) | 18-sep |
 | 5 (comunicación / transmisión) | **75 %**: N1 cerrado; referencia de FAMILIA exacta (k = 3) o de VARIANTE (sufijo), no ambas con la misma tabla; junta del 19-sep no cerró (C refutado ×2, B cae ×2, A pasa R1–R5 en una serie sin réplica, PAR 13 < 15) | 19-sep |
-| 6 (mapa, dos metas y rodeo) | replicado: elige entre dos comidas recordadas y rodea el veneno recordado; no planifica; canje del mapa estructural, v14 sin mapa | 17-sep |
-| 7 (composición, XOR) | 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
+| 6 (mapa, dos metas y rodeo) | 50 % (consenso de la junta): replicado: elige entre dos comidas recordadas y rodea el veneno recordado; no planifica; canje del mapa estructural, v14 sin mapa | 17-sep |
+| 7 (composición, XOR) | 70 % (consenso de la junta): 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
 | 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |
 | 9 (autonomía / modelo de sí mismo) | 30 %: allostasis mínima medida; r = descendientes − muertes ordena como la supervivencia; H-1: la muerte real no sostiene linajes; **fase 9 bloque 1: serie 1501–1520 con 8/10 puertas y réplica 1521–1540 con el mismo patrón (7 pasan, 2 caen), pero CAE el ancla bloqueante F9-1 en la réplica (vida NADA 88.5 fuera de [90,170] por 1.5): nada se declara por la letra; ERR del rango del ancla pendiente** | 21-sep |
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
@@ -32,7 +32,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
    de la saciedad). Sin preregistro todavía.
 
 ## Errores
-Último: **ERR-90** (21-sep: criterio absoluto de BA-v). Siguiente libre: **ERR-91**; candidatos en cola: criterio v2 sin placebo (junta, A y B) y rango del ancla F9-1.
+Último: **ERR-92** (21-sep: ERR-91 criterio v2 sin placebo → criterio v3 en construcción; ERR-92 rango del ancla F9-1 → enmienda). Siguiente libre: **ERR-93**. Regla 15 de EQUIPO.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos

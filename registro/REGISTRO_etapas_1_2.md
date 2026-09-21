@@ -5753,3 +5753,34 @@ Nota de forma (sin ERR): la frase impresa junto a F9-1 ("el instrumento no se mo
 **Vocabulario permitido:** *"en una segunda serie independiente, con el ancla bloqueante caída por la letra, los mismos siete resultados positivos y los mismos dos negativos se reproducen número a número; por la letra esto no cuenta como confirmación: la fase 9 sigue sin poder declarar 'aprende en menos de una vida', y el ancla queda con una cláusula de cuatro fuera de rango por un margen pequeño"*. Prohibido: "la fase 9 replica"; "F9-1 pasa"; "el bloque se confirma"; "el instrumento se movió"; "aprende en menos de una vida"; "población", "generación", "evoluciona", "enseña".
 
 **Qué queda.** Nivel 9 sigue en **30 %**. Decisión del coordinador (delegada): (a) ERR del rango del ancla, recalculado sobre las cuatro series de NADA, y tercera serie en semillas nuevas con el ancla corregida; (b) el bloque 2 hereda el ancla corregida y añade la letra F9-4b balanceada (índice J = p1 + c1 − 1) propuesta por el creador A en la junta.
+
+### ERR-91 (21-sep-2026, 18:50; hallado por los tres creadores de la junta, cada uno por su lado; verificado por el coordinador con la binomial)
+**Qué se observó:** el CRITERIO DE TRONCO v2 exige en T-A `A₁₂(r) ≥ 0.50` pareado por semilla y en T-C (ii) `A₁₂(rev) ≥ 0.75`, con n = 20.
+`A₁₂` pareado es una prueba de signo: para un candidato IDÉNTICO al tronco (p = 0.5), `P(A₁₂ ≥ 0.50) = P(Bin(20, 0.5) ≥ 10) = 0.588` por brazo y
+tiende a 0.5 cuando n crece; `P(A₁₂ ≥ 0.75) = 0.021`. Con las 40 corridas OFF reales del tronco (v15f-v2 301–320 y dE5-v2 2021–2040, mismo organismo,
+mismo mundo) repartidas al azar en dos brazos (placebo perfecto): T-A completa pasa **0.316**; T-A y T-C (ii) juntas **0.006**; sin la cláusula A₁₂,
+las dos medianas declaradas pasan 0.909 (`experimentos/junta_20260921/A/analiza_potencia_Q1.py`, salida pegada). Además ρ(ON, OFF) por semilla en
+el mundo vivo está entre −0.47 y +0.38: el pareado no reduce ruido allí. **El criterio v2 nunca corrió su propio control negativo: el tronco,
+presentado como candidato, no entraría al tronco.** **Causa:** criterio (umbral puesto en el valor de la hipótesis nula; capacidad exigida en una
+puerta llamada "sobrevive" / "se desdice"). **Veredictos registrados que toca: NINGUNO** (regla 3): v15f cae además por T-D y T-E, dE5 por T-E y
+T-G; ninguno habría entrado con otra letra. **Corrección:** CRITERIO_TRONCO_v3 (en construcción, creador A, `experimentos/criterio_v3/`): T-A y
+T-C (ii) por no inferioridad con el margen que la letra ya declara (r ≥ tronco − 10; rev con margen 10), sin A₁₂ en el nulo; capacidad sólo en
+T-G con control barajado/CONST; toda tasa de acierto balanceada; n = 40 en el mundo vivo; brazo PLACEBO obligatorio; calibración CAL-1..CAL-5
+(el placebo debe pasar ≥ 0.90 y un candidato peor por 20 debe caer ≥ 0.80) ANTES de juzgar a ningún candidato. **Regla derivada (EQUIPO, 15):**
+ninguna puerta usa un umbral igual al valor del nulo; toda puerta declara antes de correr su nulo, su margen y la n que da 0.95 bajo el nulo;
+todo criterio corre su placebo antes de juzgar. Observación transversal registrada en 15.19 → cerrada como ERR.
+
+### ERR-92 (21-sep-2026, 19:05; hallado por el cronista al registrar la réplica de la fase 9; verificado por el coordinador)
+**Qué se observó:** el ancla bloqueante F9-1 fija `vida_NADA ∈ [90, 170]` con las dos series de H-1 (125, 119); con las dos de hoy (94.0, 88.5) la
+variación natural del propio tronco no cabe en el rango, y la réplica 1521–1540 cayó por 1.5 en esa cláusula con las otras tres en rango. **Causa:**
+criterio (rango de ancla calibrado con menos series de las que existen; misma forma que ERR-91). **Veredictos que toca: ninguno**: la réplica sigue
+registrada como "cae el ancla, nada se declara"; no se rejuzga. **Corrección:** `experimentos/nivel09_cuerpo_nuevo/ENMIENDA_ERR92_ancla.md`
+(rango [70, 170], variable `F9_VIDA_NADA_MIN`, semillas nuevas 1621–1640, predicción escrita antes de correr). **Regla derivada:** todo rango de
+ancla se calibra con todas las series existentes de esa cantidad y se reescribe con ERR cuando aparezcan más.
+
+### JUNTA DEL 21-sep-2026 (tres creadores Opus, 18:20–19:00) — síntesis en `experimentos/junta_20260921/SINTESIS.md`
+Voto unánime en Q1 (criterio v2 calibrado sobre la nula → ERR-91, criterio v3 con placebo). Q2: dos votos por cerrar la fase 5 en 75 % si la tercera
+serie de BA-v cae; B explica BAR-H por una colisión estructural (una de tres ganadoras de variante comparte casilla con la hermana, 37/37 semillas;
+predijo BAR-H 6/4 contra 7/4 medidos) y deja BA-vm como preregistro; C deja V-5. Q3: F9-4 con índice J = p1 + c1 − 1 y brazo CAUTELA; hallazgo de C
+refutando su propia hipótesis (leer el nodo por las dos vías acorta la vida 0.38× porque la puerta de v14 sustituye, no suma) → bloque 2 C-F9B′
+("leer llena la memoria; morder abre la puerta", identidad 66/66, 15 %). Porcentajes por nivel consensuados: 5 → 75, 6 → 50, 7 → 70, 8 → 40, 9 → 30.

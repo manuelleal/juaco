@@ -51,6 +51,10 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
     antes de la serie (ERR-42: una ruta mal copiada lanzó excepción después del veredicto y perdió el JSON del examen); los
     corredores de mundo de regla de un candidato al tronco pasan los kwargs EXACTOS del tronco (ERR-41).
 
+15. **Todo criterio corre su placebo (ERR-91, 21 sep):** ninguna puerta usa un umbral igual al valor de la hipótesis nula; toda puerta declara
+    antes de correr su nulo, su margen y la n que la deja pasar ≥ 0.95 bajo el nulo; toda tasa de acierto se reporta balanceada (J = p1 + c1 − 1);
+    los rangos de ancla se calibran con todas las series existentes de esa cantidad (ERR-92).
+
 ## Roles
 | rol | modelo | qué hace | entrega |
 |---|---|---|---|
