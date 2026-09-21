@@ -1,0 +1,92 @@
+ARNES organismo_f9b — 2026-09-21 16:10:08 · T=20000 · semillas (1, 2) · UN proceso
+  organismo_f9b.py  sha 6a57e9fa9514099b
+  organismo_f9.py   sha 3a821884394d66c9  (origen, solo lectura)
+  organismo_v14.py  sha feefc88b1fd8d434  (TRONCO v14.1)
+
+(A) APAGADA (nodo_via=0) == organismo_f9 BIT A BIT — 9 brazos x 2 semillas x 2 rep_acum
+  OK   (A) RENACE acum=0 s=1   falta [] dif [] extra []
+  OK   (A) RENACE acum=0 s=2   falta [] dif [] extra []
+  OK   (A) RENACE acum=1 s=1   falta [] dif [] extra []
+  OK   (A) RENACE acum=1 s=2   falta [] dif [] extra []
+  OK   (A) NADA acum=0 s=1   falta [] dif [] extra []
+  OK   (A) NADA acum=0 s=2   falta [] dif [] extra []
+  OK   (A) NADA acum=1 s=1   falta [] dif [] extra []
+  OK   (A) NADA acum=1 s=2   falta [] dif [] extra []
+  OK   (A) M1 acum=0 s=1   falta [] dif [] extra []
+  OK   (A) M1 acum=0 s=2   falta [] dif [] extra []
+  OK   (A) M1 acum=1 s=1   falta [] dif [] extra []
+  OK   (A) M1 acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REC acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REC acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REC acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REC acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=1 s=2   falta [] dif [] extra []
+
+(B) CADENA: nodo_via=0, vivo=0, n_nec=1 == organismo_v14 (TRONCO CONGELADO)
+  OK   (B) v14 s=1 []   falta [] dif [] extra []
+  OK   (B) v14 s=1 ['nuevo', 'solap_B']   falta [] dif [] extra []
+  OK   (B) v14 s=1 ['invertir_en']   falta [] dif [] extra []
+  OK   (B) v14 s=2 []   falta [] dif [] extra []
+  OK   (B) v14 s=2 ['nuevo', 'solap_B']   falta [] dif [] extra []
+  OK   (B) v14 s=2 ['invertir_en']   falta [] dif [] extra []
+
+(C) LA MAESTRA: con alma=None la perilla se apaga sola
+  OK   (C) alma=None s=1   falta [] dif [] extra []
+  OK   (C) alma=None s=2   falta [] dif [] extra []
+
+(D) NINGUNA CLAVE NUEVA con nodo_via=0 (el dict es el de organismo_f9)
+  OK   (D) claves nuevas s=1   claves nuevas presentes: []
+  OK   (D) claves nuevas s=2   claves nuevas presentes: []
+
+(E) DEBEN DIFERIR (si no, la perilla es INERTE, ERR-38)
+  OK   (E) REL 1 != 0 s=1   claves que cambian: 46
+  OK   (E) REL 1 != 0 s=2   claves que cambian: 45
+  OK   (E) REC 1 != 0 s=1   claves que cambian: 42
+  OK   (E) REC 1 != 0 s=2   claves que cambian: 45
+  OK   (E) REL_BAR 1 != 0 s=1   claves que cambian: 44
+  OK   (E) REL_BAR 1 != 0 s=2   claves que cambian: 42
+  OK   (E) REL_AZAR 1 != 0 s=1   claves que cambian: 45
+  OK   (E) REL_AZAR 1 != 0 s=2   claves que cambian: 45
+  OK   (E) REL_TARDE 1 != 0 s=1   claves que cambian: 41
+  OK   (E) REL_TARDE 1 != 0 s=2   claves que cambian: 44
+
+(F) LA PUERTA SE ABRE: via_msg > 0 y max(fam_nac) > 0 en REL con nodo_via=1
+  OK   (F) REL s=1   via_msg 1915 · fam_nac max 4 media 2.49 · n_cod 7
+  OK   (F) REL s=2   via_msg 2053 · fam_nac max 4 media 2.37 · n_cod 4
+
+(G) ANTES DE LA PRIMERA LECTURA (T = paso de la primera muerte): 1 == 0
+  OK   (G) T=349 s=1   dif []
+  OK   (G) T=119 s=2   dif []
+
+(H) SI NADIE LEE (nodo=1, conectado=0, sin con_desde): 1 == 0 a T completo
+  OK   (H) nadie lee s=1   dif []
+  OK   (H) nadie lee s=2   dif []
+
+(I) GUARDIAS (deben abortar)
+  OK   (I) nodo_via=2   F9B: nodo_via es 0 (solo la via lenta, como el bloque 1) o 1 (las DOS 
+  OK   (I) nodo_via=1 con nodo=0   F9B: nodo_via exige nodo=1 (no hay nodo que leer)
+
+(J) DETERMINISMO
+  OK   (J) REL s=1   dif []
+  OK   (J) REL s=2   dif []
+
+TOTAL 66/66 en 225.5s

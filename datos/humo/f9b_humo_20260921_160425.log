@@ -1,0 +1,32 @@
+FASE 9 BLOQUE 2 (creador C) — HUMO · 2026-09-21 16:04:25 · T=100000 · semillas 1 y 2 (YA VISTAS) · 6 corridas · UN PROCESO, sin Pool
+  organismo_f9b.py sha 6a57e9fa9514099b · organismo_f9.py sha 3a821884394d66c9 (origen)
+  runner sha b23e36561a500046
+
+ETAPA 1/3 — identidad DENTRO del runner (regla 14, ERR-38)
+  OK   (1) nodo_via=0 == organismo_f9 REL   dif []
+  OK   (2) nodo_via=1 != 0 (si no, INERTE: ERR-38)   claves que cambian 47 · via_msg 1915
+  OK   (1) nodo_via=0 == organismo_f9 REL   dif []
+  OK   (2) nodo_via=1 != 0 (si no, INERTE: ERR-38)   claves que cambian 46 · via_msg 2053
+
+ETAPA 2/3 — 6 corridas (una a una, un proceso)
+  [   25.4s] REL   s=1 acum=1  R0 0.423  r  -104  vida 549.5  p1 0.9595  c1 1.0  J 0.9595  sac 0.483  expA 561  via_msg None  fam None  coh True
+  [   40.3s] REL2  s=1 acum=1  R0 0.415  r  -133  vida 209.0  p1 0.7523  c1 0.9857  J 0.738  sac 0.554  expA 745  via_msg 11265  fam 2.623  coh True
+  [   52.6s] REL   s=2 acum=1  R0 0.484  r   -79  vida 601.0  p1 0.96  c1 0.9739  J 0.9339  sac 0.483  expA 614  via_msg None  fam None  coh True
+  [   66.7s] REL2  s=2 acum=1  R0 0.450  r  -115  vida 208.0  p1 0.7707  c1 1.0  J 0.7707  sac 0.579  expA 764  via_msg 10426  fam 2.443  coh True
+  [   78.5s] REL   s=1 acum=0  R0 0.408  r   -92  vida 598.0  p1 0.9603  c1 1.0  J 0.9603  sac 0.523  expA 631  via_msg None  fam None  coh True
+  [   92.7s] REL2  s=1 acum=0  R0 0.305  r  -145  vida 201.5  p1 0.7313  c1 0.9918  J 0.7231  sac 0.59  expA 637  via_msg 10315  fam 2.545  coh True
+
+ETAPA 3/3 — LAS SEIS PREDICCIONES DEL HUMO (escritas antes de lanzarlo)
+  HB1: 0/2  NO
+  HB2: 0/2  NO
+  HB3: 0/2  NO
+  HB4: 3/3  SI
+  HB5: 6/6  SI
+  HB6: 0/1  NO
+  ANCLA HB6 medida: REL acum=0 s=1 -> R0 0.4076 vida 598.0 p1 0.9603 c1 1.0 (bloque 1: 0.408 / 598 / 0.960 / 1.000)
+
+  R0(acum=1): REL s1 0.423 · REL2 s1 0.415 · REL s2 0.484 · REL2 s2 0.450
+  Umbral de H-1 (H1-6): R0 >= 0.90. El humo NO lo decide (n=2, semillas ya vistas).
+
+  JSON C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\humo\f9b_humo_20260921_160425.json (sha 6c4c454abac0eb0e)
+Terminado en 92.7s
