@@ -1,0 +1,176 @@
+[17:18:21 +    0.0s] SERIE del candidato BA-vm (nivel 5, criterio ERR-90 SIN TOCAR), Pool(6).
+[17:18:21 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla,
+[17:18:21 +    0.0s] y el CRITERIO: puertas ABSOLUTAS (ERR-90), nunca relativas a CORTADO.
+[17:18:21 +    0.0s] celdas ['b4b', 'b5k3', 'b6suf', 'A1', 'BA-v', 'BA-vm', 'BA-vM', 'BA-vm-sh']  brazos ['CANAL', 'CORTADO', 'BAR-H', 'BAR-T', 'VALOR', 'PAR', 'PAR0']  semillas 1541-1560  T = 100000 
+[17:18:21 +    0.0s]     sha script                   213cd784fe2fa690
+[17:18:21 +    0.0s]     sha constructor              0803238682b187df
+[17:18:21 +    0.0s]     sha instrumento              501f55b5a179e5aa
+[17:18:21 +    0.0s]     sha arnes                    cc024ddd448592e7
+[17:18:21 +    0.0s]     sha preregistro              383c2b8e88abc991
+[17:18:21 +    0.0s]     sha preregistro_criterio     f2f6b320b5f43d67
+[17:18:21 +    0.0s]     sha origen_bav               2dca0a3e239481f0
+[17:18:21 +    0.0s]     sha runner_bav               4453754a9921e349
+[17:18:21 +    0.0s]     sha origen_ba                1f196ee786b2040d
+[17:18:21 +    0.0s]     sha runner_ba                f511d1bbe34887af
+[17:18:21 +    0.0s]     sha origen_a1                8833e1dcfb62f26d
+[17:18:21 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[17:18:21 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[17:18:21 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[17:18:21 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[17:18:21 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[17:18:21 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[17:18:21 +    0.0s]     origenes verificados -> OK
+[17:18:22 +    0.8s] ETAPA 1/4 - DIAGNOSTICO ESTRUCTURAL (T = 0, 20 semillas)
+[17:18:22 +    0.9s]     alias por par mediana 0.0151  piso de forma 4.0/32
+[17:18:22 +    0.9s] ETAPA 2/4 - EMISORES (20 corridas de 100000 pasos; son los del bloque 6 bit a bit)
+[17:19:22 +   60.2s]     emiten 20/20; sin mensaje (se EXCLUYEN, P-I2): []
+[17:19:22 +   60.2s] ETAPA 3/4 - REGLA 14: la ENTRADA, campo a campo contra el bloque 6
+[17:19:22 +   60.3s]     REGLA 14 - entrada campo a campo contra el bloque 6: 33 campos comunes, IDENTICOS
+[17:19:22 +   60.3s]        campos: ['T', 'cambio', 'canal', 'costo', 'crit_exp', 'deriva', 'desambiguar', 'exc_fija', 'fam_D', 'fam_F', 'fam_V', 'fam_nvar', 'fam_seed', 'fam_val', 'k_ganadoras', 'ktop', 'largo', 'log_cada', 'memoria_pares', 'memoria_variante', 'mundo', 'n_exc', 'n_neu', 'nk', 'nkmax', 'nobj', 'par_herm', 'reg_b2', 'reg_b4', 'renov', 'seed', 'vent', 'vira']
+[17:19:22 +   60.3s]        perillas de celda (las UNICAS que pueden diferir): ['baraja_msg', 'combina', 'conj_tipo', 'dentro', 'dos_tipos', 'eta_w', 'exige_dir', 'k_forma', 'k_ganadoras', 'k_var', 'memoria_variante', 'msg_elige', 'pesos_tipo', 'var_cubre']
+[17:19:22 +   60.3s] ETAPA 4/4 - RECEPTORES: 1120 corridas de 100000 pasos...
+[17:20:54 +  152.5s]           40/1120
+[17:22:15 +  233.7s]           80/1120
+[17:23:32 +  310.2s]           120/1120
+[17:24:56 +  394.8s]           160/1120
+[17:26:22 +  480.1s]           200/1120
+[17:27:48 +  566.5s]           240/1120
+[17:29:13 +  651.4s]           280/1120
+[17:30:46 +  744.1s]           320/1120
+[17:32:24 +  842.6s]           360/1120
+[17:34:11 +  949.3s]           400/1120
+[17:35:52 + 1050.3s]           440/1120
+[17:37:27 + 1145.6s]           480/1120
+[17:39:03 + 1241.2s]           520/1120
+[17:40:39 + 1337.6s]           560/1120
+[17:42:05 + 1423.5s]           600/1120
+[17:43:32 + 1510.4s]           640/1120
+[17:45:00 + 1598.9s]           680/1120
+[17:46:25 + 1683.1s]           720/1120
+[17:47:48 + 1766.4s]           760/1120
+[17:49:05 + 1843.2s]           800/1120
+[17:50:28 + 1926.3s]           840/1120
+[17:51:56 + 2014.7s]           880/1120
+[17:53:26 + 2104.2s]           920/1120
+[17:54:55 + 2193.8s]           960/1120
+[17:56:25 + 2283.5s]           1000/1120
+[17:57:49 + 2367.1s]           1040/1120
+[17:59:17 + 2455.5s]           1080/1120
+[18:00:44 + 2542.2s]           1120/1120
+[18:00:44 + 2542.3s] CRUDO -> serie_bavm_s1541-1560_20260921_171821_crudo.json  sha256_16 = 44cdfc90dd199621  (ERR-54)
+[18:00:44 + 2542.3s]     P-I5 en b4b       (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 3, 'CORTADO': 3, 'BAR-H': 3, 'BAR-T': 3, 'VALOR': 3, 'PAR': 2, 'PAR0': 2}  -> [1543, 1547, 1557]
+[18:00:44 + 2542.3s]     P-I5 en b5k3      (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 2, 'PAR0': 2}  -> [1543, 1557]
+[18:00:44 + 2542.3s]     P-I5 en b6suf     (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 1, 'PAR0': 1}  -> [1543, 1558]
+[18:00:44 + 2542.3s]     P-I5 en A1        (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 1, 'PAR0': 1}  -> [1557]
+[18:00:44 + 2542.3s]     P-I5 en BA-v      (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 1, 'PAR0': 1}  -> [1547]
+[18:00:44 + 2542.3s]     P-I5 en BA-vm     (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 1, 'PAR0': 1}  -> [1543, 1547]
+[18:00:44 + 2542.3s]     P-I5 en BA-vM     (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 0, 'CORTADO': 0, 'BAR-H': 0, 'BAR-T': 0, 'VALOR': 0, 'PAR': 1, 'PAR0': 1}  -> [1543]
+[18:00:44 + 2542.3s]     P-I5 en BA-vm-sh  (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 1, 'CORTADO': 1, 'BAR-H': 1, 'BAR-T': 1, 'VALOR': 1, 'PAR': 1, 'PAR0': 1}  -> [1543, 1547]
+[18:00:44 + 2542.3s] 
+[18:00:44 + 2542.3s] celda        CANAL  CORTADO    BAR-H    BAR-T    VALOR      PAR     PAR0   dist(PAR)  dist(PAR0)  muertes  okU   >=200  mord_com  mord_ven  regalo
+[18:00:44 + 2542.3s] b4b         19/20     5/20    18/20    10/20     5/20    19/20     1/20    11/20      4/20       32.0     0.8333   0     5616.0      51.0      0.024
+[18:00:44 + 2542.3s] b5k3        20/20     1/20    15/20     9/20     2/20    20/20     2/20    6/20      5/20       26.5     0.8333   5     5663.0      45.5      0.0199
+[18:00:44 + 2542.3s] b6suf       19/20     8/20    11/20    16/20     9/20    20/20     6/20    19/20      5/20       30.0     0.6667   3     5642.5      50.5      0.0225
+[18:00:44 + 2542.3s] A1          19/20     5/20     8/20     9/20     6/20    20/20     3/20    15/20      3/20       47.0     0.8333   7     4066.0      9.0      0.0353
+[18:00:44 + 2542.3s] BA-v        20/20     2/20     9/20     7/20     6/20    20/20     3/20    16/20      2/20       322.0     0.75   10     2713.0      6.0      0.2415
+[18:00:44 + 2542.3s] BA-vm       20/20     2/20     8/20    10/20     7/20    20/20     1/20    16/20      0/20       308.5     0.6667   12     1350.0      6.0      0.2314
+[18:00:44 + 2542.3s] BA-vM       20/20     1/20     8/20     6/20     3/20    20/20     1/20    14/20      0/20       259.0     0.6667   11     1754.0      5.0      0.1943
+[18:00:44 + 2542.3s] BA-vm-sh     2/20     2/20     2/20     2/20     2/20     1/20     1/20    0/20      0/20       441.0     0.5834   14     1212.5      4.0      0.3307
+[18:00:44 + 2542.3s] 
+[18:00:44 + 2542.3s] LETRA DEL CRITERIO PROPIO (ERR-90): puertas ABSOLUTAS. Ninguna depende de CORTADO.
+[18:00:44 + 2542.3s]   [b4b]
+[18:00:44 + 2542.3s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.3s]      P1 CANAL     19 >= 15: pasa
+[18:00:44 + 2542.3s]      P2 CORTADO   5 <= 5: pasa
+[18:00:44 + 2542.3s]      P3 BAR-T     10 <= 5: CAE
+[18:00:44 + 2542.3s]      P4 VALOR     5 <= 5: pasa
+[18:00:44 + 2542.3s]      P5 BAR-H     18 <= 10: CAE
+[18:00:44 + 2542.3s]      P6 dist(PAR) 11/20 >= 15 y dist(PAR0) 4 <= 5: CAE
+[18:00:44 + 2542.3s]      P7 R6        muertes 32.0 / 32.0(b4b) = 1.00x <= 1.50x: pasa  |  okU 0.8333 - 0.8333 = +0.0000 >= -0.10: pasa
+[18:00:44 + 2542.3s]         (diagnostico de R6, NO es la puerta: 0/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 0)
+[18:00:44 + 2542.3s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.3s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 CAE; R4 VALOR<=CORTADO+3 pasa; R5 dist>=12 y >=gemelo+5 CAE
+[18:00:44 + 2542.3s]   [b5k3]
+[18:00:44 + 2542.3s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.3s]      P1 CANAL     20 >= 15: pasa
+[18:00:44 + 2542.3s]      P2 CORTADO   1 <= 5: pasa
+[18:00:44 + 2542.3s]      P3 BAR-T     9 <= 5: CAE
+[18:00:44 + 2542.3s]      P4 VALOR     2 <= 5: pasa
+[18:00:44 + 2542.3s]      P5 BAR-H     15 <= 10: CAE
+[18:00:44 + 2542.3s]      P6 dist(PAR) 6/20 >= 15 y dist(PAR0) 5 <= 5: CAE
+[18:00:44 + 2542.3s]      P7 R6        muertes 26.5 / 32.0(b4b) = 0.83x <= 1.50x: pasa  |  okU 0.8333 - 0.8333 = +0.0000 >= -0.10: pasa
+[18:00:44 + 2542.3s]         (diagnostico de R6, NO es la puerta: 8/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 5)
+[18:00:44 + 2542.3s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.3s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 CAE; R4 VALOR<=CORTADO+3 pasa; R5 dist>=12 y >=gemelo+5 CAE
+[18:00:44 + 2542.3s]   [b6suf]
+[18:00:44 + 2542.3s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.3s]      P1 CANAL     19 >= 15: pasa
+[18:00:44 + 2542.3s]      P2 CORTADO   8 <= 5: CAE
+[18:00:44 + 2542.3s]      P3 BAR-T     16 <= 5: CAE
+[18:00:44 + 2542.3s]      P4 VALOR     9 <= 5: CAE
+[18:00:44 + 2542.3s]      P5 BAR-H     11 <= 10: CAE
+[18:00:44 + 2542.3s]      P6 dist(PAR) 19/20 >= 15 y dist(PAR0) 5 <= 5: pasa
+[18:00:44 + 2542.3s]      P7 R6        muertes 30.0 / 32.0(b4b) = 0.94x <= 1.50x: pasa  |  okU 0.6667 - 0.8333 = -0.1666 >= -0.10: CAE
+[18:00:44 + 2542.3s]         (diagnostico de R6, NO es la puerta: 5/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 3)
+[18:00:44 + 2542.3s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.3s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 pasa; R4 VALOR<=CORTADO+3 pasa; R5 dist>=12 y >=gemelo+5 pasa
+[18:00:44 + 2542.3s]   [A1]
+[18:00:44 + 2542.3s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.3s]      P1 CANAL     19 >= 15: pasa
+[18:00:44 + 2542.3s]      P2 CORTADO   5 <= 5: pasa
+[18:00:44 + 2542.3s]      P3 BAR-T     9 <= 5: CAE
+[18:00:44 + 2542.3s]      P4 VALOR     6 <= 5: CAE
+[18:00:44 + 2542.3s]      P5 BAR-H     8 <= 10: pasa
+[18:00:44 + 2542.3s]      P6 dist(PAR) 15/20 >= 15 y dist(PAR0) 3 <= 5: pasa
+[18:00:44 + 2542.3s]      P7 R6        muertes 47.0 / 32.0(b4b) = 1.47x <= 1.50x: pasa  |  okU 0.8333 - 0.8333 = +0.0000 >= -0.10: pasa
+[18:00:44 + 2542.3s]         (diagnostico de R6, NO es la puerta: 10/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 7)
+[18:00:44 + 2542.4s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.4s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 pasa; R4 VALOR<=CORTADO+3 pasa; R5 dist>=12 y >=gemelo+5 pasa
+[18:00:44 + 2542.4s]   [BA-v]
+[18:00:44 + 2542.4s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.4s]      P1 CANAL     20 >= 15: pasa
+[18:00:44 + 2542.4s]      P2 CORTADO   2 <= 5: pasa
+[18:00:44 + 2542.4s]      P3 BAR-T     7 <= 5: CAE
+[18:00:44 + 2542.4s]      P4 VALOR     6 <= 5: CAE
+[18:00:44 + 2542.4s]      P5 BAR-H     9 <= 10: pasa
+[18:00:44 + 2542.4s]      P6 dist(PAR) 16/20 >= 15 y dist(PAR0) 2 <= 5: pasa
+[18:00:44 + 2542.4s]      P7 R6        muertes 322.0 / 32.0(b4b) = 10.06x <= 1.50x: CAE  |  okU 0.75 - 0.8333 = -0.0833 >= -0.10: pasa
+[18:00:44 + 2542.4s]         (diagnostico de R6, NO es la puerta: 15/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 10)
+[18:00:44 + 2542.4s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.4s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 CAE; R4 VALOR<=CORTADO+3 CAE; R5 dist>=12 y >=gemelo+5 pasa
+[18:00:44 + 2542.4s]   [BA-vm]
+[18:00:44 + 2542.4s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.4s]      P1 CANAL     20 >= 15: pasa
+[18:00:44 + 2542.4s]      P2 CORTADO   2 <= 5: pasa
+[18:00:44 + 2542.4s]      P3 BAR-T     10 <= 5: CAE
+[18:00:44 + 2542.4s]      P4 VALOR     7 <= 5: CAE
+[18:00:44 + 2542.4s]      P5 BAR-H     8 <= 10: pasa
+[18:00:44 + 2542.4s]      P6 dist(PAR) 16/20 >= 15 y dist(PAR0) 0 <= 5: pasa
+[18:00:44 + 2542.4s]      P7 R6        muertes 308.5 / 32.0(b4b) = 9.64x <= 1.50x: CAE  |  okU 0.6667 - 0.8333 = -0.1666 >= -0.10: CAE
+[18:00:44 + 2542.4s]         (diagnostico de R6, NO es la puerta: 17/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 12)
+[18:00:44 + 2542.4s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.4s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 CAE; R4 VALOR<=CORTADO+3 CAE; R5 dist>=12 y >=gemelo+5 pasa
+[18:00:44 + 2542.4s]   [BA-vM]
+[18:00:44 + 2542.4s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.4s]      P1 CANAL     20 >= 15: pasa
+[18:00:44 + 2542.4s]      P2 CORTADO   1 <= 5: pasa
+[18:00:44 + 2542.4s]      P3 BAR-T     6 <= 5: CAE
+[18:00:44 + 2542.4s]      P4 VALOR     3 <= 5: pasa
+[18:00:44 + 2542.4s]      P5 BAR-H     8 <= 10: pasa
+[18:00:44 + 2542.4s]      P6 dist(PAR) 14/20 >= 15 y dist(PAR0) 0 <= 5: CAE
+[18:00:44 + 2542.4s]      P7 R6        muertes 259.0 / 32.0(b4b) = 8.09x <= 1.50x: CAE  |  okU 0.6667 - 0.8333 = -0.1666 >= -0.10: CAE
+[18:00:44 + 2542.4s]         (diagnostico de R6, NO es la puerta: 15/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 11)
+[18:00:44 + 2542.4s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.4s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 CAE; R3 BAR-H<=CORTADO+5 CAE; R4 VALOR<=CORTADO+3 pasa; R5 dist>=12 y >=gemelo+5 pasa
+[18:00:44 + 2542.4s]   [BA-vm-sh]
+[18:00:44 + 2542.4s]      P0 montaje   N (semillas validas del brazo CANAL) = 20 >= 18: pasa
+[18:00:44 + 2542.4s]      P1 CANAL     2 >= 15: CAE
+[18:00:44 + 2542.4s]      P2 CORTADO   2 <= 5: pasa
+[18:00:44 + 2542.4s]      P3 BAR-T     2 <= 5: pasa
+[18:00:44 + 2542.4s]      P4 VALOR     2 <= 5: pasa
+[18:00:44 + 2542.4s]      P5 BAR-H     2 <= 10: pasa
+[18:00:44 + 2542.4s]      P6 dist(PAR) 0/20 >= 15 y dist(PAR0) 0 <= 5: CAE
+[18:00:44 + 2542.4s]      P7 R6        muertes 441.0 / 32.0(b4b) = 13.78x <= 1.50x: CAE  |  okU 0.5834 - 0.8333 = -0.2499 >= -0.10: CAE
+[18:00:44 + 2542.4s]         (diagnostico de R6, NO es la puerta: 14/20 semillas mueren > 1.5x su propia base; semillas en regimen de hambre (>=200): 14)
+[18:00:44 + 2542.4s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[18:00:44 + 2542.4s]      [referencia historica, NO decide] bloque 6: R2 BAR-T<=CORTADO+3 pasa; R3 BAR-H<=CORTADO+5 pasa; R4 VALOR<=CORTADO+3 pasa; R5 dist>=12 y >=gemelo+5 CAE
