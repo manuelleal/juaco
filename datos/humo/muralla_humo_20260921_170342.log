@@ -1,0 +1,22 @@
+[17:03:42] RODEO OBLIGADO (nivel 6) — rejilla 11x9 r_vis=1 T=20000 n_tel=40 semillas 1701-1701 brazos 4 pool=0 pid=23736
+[17:03:44]   1/4  CIEGO s1701  limpio {'rodeo': 0.15, 'atajo': 0.1}  huye {'rodeo': 0.8, 'atajo': 0.3}  pasos {'rodeo': 54.25, 'atajo': 57.25}  comida 39 muertes 40  M 0/1 0/10  2.2s
+[17:03:58]   2/4  MAPA s1701  limpio {'rodeo': 0.2, 'atajo': 0.0}  huye {'rodeo': 0.55, 'atajo': 0.0}  pasos {'rodeo': 50.65, 'atajo': 60.0}  comida 5 muertes 66  M 1/1 10/10  13.5s
+[17:04:01]   3/4  CAMINO s1701  limpio {'rodeo': 0.45, 'atajo': 0.25}  huye {'rodeo': 0.1, 'atajo': 0.1}  pasos {'rodeo': 38.75, 'atajo': 49.8}  comida 72 muertes 29  M 1/1 10/10  3.0s
+[17:04:04]   4/4  BARAJADO s1701  limpio {'rodeo': 0.45, 'atajo': 0.55}  huye {'rodeo': 0.2, 'atajo': 0.15}  pasos {'rodeo': 39.8, 'atajo': 41.65}  comida 72 muertes 29  M 1/1 10/10  2.9s
+[17:04:04] --- 4 corridas en 21.8 s ---
+[17:04:04]   CIEGO      limpio(rodeo) 0.15  recto(atajo) 0.0  huye(rodeo) 0.8  pisa(rodeo) 0.6  pasos_c 54.25  comida 39  muertes 40
+[17:04:04]   MAPA       limpio(rodeo) 0.2  recto(atajo) 0.0  huye(rodeo) 0.55  pisa(rodeo) 0.15  pasos_c 50.65  comida 5  muertes 66
+[17:04:04]   CAMINO     limpio(rodeo) 0.45  recto(atajo) 0.0  huye(rodeo) 0.1  pisa(rodeo) 0.5  pasos_c 38.75  comida 72  muertes 29
+[17:04:04]   BARAJADO   limpio(rodeo) 0.45  recto(atajo) 0.0  huye(rodeo) 0.2  pisa(rodeo) 0.55  pasos_c 39.8  comida 72  muertes 29
+[17:04:04] PUERTAS (una linea por puerta, umbral al lado):
+[17:04:04]   [CAE ] R-1a rodea (limpio|rodeo) CAMINO >= abs              0.45  (umbral 0.6) CIEGO 0.15 MAPA 0.2 BARAJADO 0.45 PLACEBO None
+[17:04:04]   [CAE ] R-1b margen sobre max(CIEGO,BARAJADO)                0.0  (umbral 0.25) 
+[17:04:04]   [PASA] R-2a no es huida (huye|rodeo) <=                     0.1  (umbral 0.2) 
+[17:04:04]   [CAE ] R-2b balanceada J = p1(rodeo)+c1(atajo)-1 >=         -0.55  (umbral 0.5) p1 0.45 c1 0.0
+[17:04:04]   [CAE ] R-3 pasos censurados CAMINO/CIEGO <=                 0.714  (umbral 0.7) CAMINO 38.75 CIEGO 54.25 BARAJADO 39.8
+[17:04:04]   [PASA] R-4 comida CAMINO/CIEGO (mundo muralla) >=           1.846  (umbral 0.9) 
+[17:04:04]   [PASA] R-5 muertes CAMINO/CIEGO <=                          0.725  (umbral 1.25) 
+[17:04:04]   [CAE ] C1 INVERTIDO decisivo (limpio|rodeo) <=              None  (umbral 0.2) pisa None
+[17:04:04]   [PASA] V1 validez: comida y muralla ENTERA en M (1/1)       1.0  (umbral 1.0) 
+[17:04:04] VEREDICTO 4/9  (HUMO: no es la serie, no se interpreta)
+[17:04:04] JSON datos\humo\muralla_humo_20260921_170342.json  sha 8893c69e31ccb2eb

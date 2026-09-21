@@ -1,0 +1,26 @@
+[17:02:08] RODEO OBLIGADO (nivel 6) — rejilla 11x9 r_vis=2 T=20000 n_tel=40 semillas 1701-1701 brazos 6 pool=0 pid=18672
+[17:02:10]   1/6  CIEGO s1701  limpio {'rodeo': 0.0, 'atajo': 0.05}  huye {'rodeo': 0.4, 'atajo': 0.1}  pasos {'rodeo': 60.0, 'atajo': 59.1}  comida 76 muertes 24  M 0/1 0/10  1.9s
+[17:02:22]   2/6  MAPA s1701  limpio {'rodeo': 0.2, 'atajo': 0.0}  huye {'rodeo': 0.65, 'atajo': 0.0}  pasos {'rodeo': 49.95, 'atajo': 60.0}  comida 96 muertes 44  M 1/1 10/10  11.8s
+[17:02:25]   3/6  CAMINO s1701  limpio {'rodeo': 0.0, 'atajo': 0.05}  huye {'rodeo': 0.35, 'atajo': 0.2}  pasos {'rodeo': 60.0, 'atajo': 57.5}  comida 156 muertes 13  M 1/1 10/10  2.8s
+[17:02:27]   4/6  BARAJADO s1701  limpio {'rodeo': 0.0, 'atajo': 0.05}  huye {'rodeo': 0.25, 'atajo': 0.2}  pasos {'rodeo': 60.0, 'atajo': 57.85}  comida 156 muertes 13  M 1/1 10/10  2.9s
+[17:02:31]   5/6  INVERTIDO s1701  limpio {'rodeo': 0.0, 'atajo': 0.05}  huye {'rodeo': 0.5, 'atajo': 0.2}  pasos {'rodeo': 60.0, 'atajo': 57.85}  comida 156 muertes 13  M 1/1 10/10  3.8s
+[17:02:34]   6/6  PLACEBO s1701  limpio {'rodeo': 0.0, 'atajo': 0.15}  huye {'rodeo': 0.5, 'atajo': 0.2}  pasos {'rodeo': 60.0, 'atajo': 55.15}  comida 156 muertes 13  M 1/1 10/10  3.0s
+[17:02:34] --- 6 corridas en 26.3 s ---
+[17:02:34]   CIEGO      limpio(rodeo) 0.0  recto(atajo) 0.0  huye(rodeo) 0.4  pisa(rodeo) 1.0  pasos_c 60.0  comida 76  muertes 24
+[17:02:34]   MAPA       limpio(rodeo) 0.2  recto(atajo) 0.0  huye(rodeo) 0.65  pisa(rodeo) 0.4  pasos_c 49.95  comida 96  muertes 44
+[17:02:34]   CAMINO     limpio(rodeo) 0.0  recto(atajo) 0.05  huye(rodeo) 0.35  pisa(rodeo) 1.0  pasos_c 60.0  comida 156  muertes 13
+[17:02:34]   BARAJADO   limpio(rodeo) 0.0  recto(atajo) 0.0  huye(rodeo) 0.25  pisa(rodeo) 1.0  pasos_c 60.0  comida 156  muertes 13
+[17:02:34]   INVERTIDO  limpio(rodeo) 0.0  recto(atajo) 0.0  huye(rodeo) 0.5  pisa(rodeo) 1.0  pasos_c 60.0  comida 156  muertes 13
+[17:02:34]   PLACEBO    limpio(rodeo) 0.0  recto(atajo) 0.0  huye(rodeo) 0.5  pisa(rodeo) 1.0  pasos_c 60.0  comida 156  muertes 13
+[17:02:34] PUERTAS (una linea por puerta, umbral al lado):
+[17:02:34]   [CAE ] R-1a rodea (limpio|rodeo) CAMINO >= abs              0.0  (umbral 0.6) CIEGO 0.0 MAPA 0.2 BARAJADO 0.0 PLACEBO 0.0
+[17:02:34]   [CAE ] R-1b margen sobre max(CIEGO,BARAJADO)                0.0  (umbral 0.25) 
+[17:02:34]   [CAE ] R-2a no es huida (huye|rodeo) <=                     0.35  (umbral 0.2) 
+[17:02:34]   [CAE ] R-2b balanceada J = p1(rodeo)+c1(atajo)-1 >=         -0.95  (umbral 0.5) p1 0.0 c1 0.05
+[17:02:34]   [CAE ] R-3 pasos censurados CAMINO/CIEGO <=                 1.0  (umbral 0.7) CAMINO 60.0 CIEGO 60.0 BARAJADO 60.0
+[17:02:34]   [PASA] R-4 comida CAMINO/CIEGO (mundo muralla) >=           2.053  (umbral 0.9) 
+[17:02:34]   [PASA] R-5 muertes CAMINO/CIEGO <=                          0.542  (umbral 1.25) 
+[17:02:34]   [PASA] C1 INVERTIDO decisivo (limpio|rodeo) <=              0.0  (umbral 0.2) pisa 1.0
+[17:02:34]   [PASA] V1 validez: comida y muralla ENTERA en M (1/1)       1.0  (umbral 1.0) 
+[17:02:34] VEREDICTO 4/9  (HUMO: no es la serie, no se interpreta)
+[17:02:34] JSON datos\humo\muralla_humo_20260921_170208.json  sha cad376dffbf3604d
