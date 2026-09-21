@@ -895,3 +895,12 @@ que P0 cae para las seis celdas. `BA-v` cae además P3 (BAR-T 6) y P6 (dist(PAR)
 la explicación estructural de B (una de tres ganadoras de variante comparte casilla con la hermana, 37/37) cierra la cuenta. La dirección del mensaje es
 exacta (1/32, hermana fuera del grupo); lo que falla es el valor. Nada se rejuzga; `BA-vm` (B) y `V-5` (C) quedan preregistrados sin correr. Nivel 5
 sigue en 75 %. Entrada "LÍNEA CERRADA: BA / BA-v (fase 5)" en el registro. Commit `84e5247`.
+**15.23 (21-sep 16:24–16:32): tercera serie de la fase 9, bloque 1, bajo la ENMIENDA 1 (ERR-92), 1621–1640, Pool 8 — DECLARACIÓN.** El ancla F9-1
+**PASA** (vida NADA 95.5), incluso bajo la letra original [90, 170]: la enmienda no fue necesaria esta vez, pero fue la corrección correcta. Con dos series
+válidas por la letra (1501–1520 y 1621–1640) que repiten las mismas ocho puertas positivas y las mismas dos negativas número a número, el coordinador
+**declara** el núcleo del bloque 1 (el recién nacido rechaza lo malo al primer encuentro sin dejar de comer; vida ~6.3–6.4× el cuerpo vacío; relevancia >
+recencia y > azar; el ranking congelado evita pero deja de comer y el vivo no; la reproducción desacoplada sube R₀ sin reordenar; H-1 sigue en pie) y
+**deja sin declarar** F9-4 (cautela genérica del nodo barajado, cae ×3) y F9-7 (conectarse tarde no cuesta, negativo ×3, el contraste interno empeora
+9 → 10 → 5/20). Predicciones de la enmienda: siete de ocho acertadas; la banda de A₁₂(REL > REL_TARDE) [0.35, 0.55] quedó corta (0.626), parcialmente
+refutada con el coordinador como autor. **Propuesta: nivel 9 de 30 a 40 %** (decide el director). Bloque 2 en construcción (F9-4bis con J y CAUTELA,
+C-F9B′, ORÁCULO; `nivel09_cuerpo_nuevo_b2/`); gemelo numba en construcción. Datos `f9_cuerpo_nuevo_s1621-1640_20260921_162410` (`c908a720d3de3fb9`); `8888b9b`.

@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 19:35** (coordinador; línea BA/BA-v cerrada, tercera serie de la fase 9 corriendo). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 20:05** (coordinador; fase 9 bloque 1 declarado en parte; bloque 2, gemelo y criterio v3 en construcción). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -17,7 +17,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | 6 (mapa, dos metas y rodeo) | 50 % (consenso de la junta): replicado: elige entre dos comidas recordadas y rodea el veneno recordado; no planifica; canje del mapa estructural, v14 sin mapa | 17-sep |
 | 7 (composición, XOR) | 70 % (consenso de la junta): 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
 | 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |
-| 9 (autonomía / modelo de sí mismo) | 30 %: allostasis mínima medida; r = descendientes − muertes ordena como la supervivencia; H-1: la muerte real no sostiene linajes; **fase 9 bloque 1: serie 1501–1520 con 8/10 puertas y réplica 1521–1540 con el mismo patrón (7 pasan, 2 caen), pero CAE el ancla bloqueante F9-1 en la réplica (vida NADA 88.5 fuera de [90,170] por 1.5): nada se declara por la letra; ERR del rango del ancla pendiente** | 21-sep |
+| 9 (autonomía / modelo de sí mismo) | **propuesta 40 % (decide el director; hoy 30 %)**: dos series válidas por la letra (1501–1520 y 1621–1640) declaran que el cuerpo nuevo rechaza lo malo al primer encuentro sin dejar de comer, vive ~6.3–6.4× el cuerpo vacío, relevancia > recencia/azar, reproducción desacoplada sube R₀ sin reordenar (H-1 en pie); NO declarado: F9-4 (cautela genérica del nodo barajado, cae ×3) y F9-7 (conectarse tarde no cuesta, negativo ×3); bloque 2 (F9-4bis/CAUTELA, C-F9B′) en construcción | 21-sep |
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
 
 ## Pendiente con paquete verificado (correr en este orden, un Pool a la vez)
@@ -50,8 +50,8 @@ procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Registrada (HANDOFF 15.16).
 2. **CERRADA** la línea BA/BA-v bajo ERR-90: P6 cae en las tres series (961–980, 981–1000, 2101–2120), márgenes 2, 1 y 4 semillas; patrón,
    no ruido. Registrada (HANDOFF 15.22).
-3. **Fase 9 corrida (1501–1520 y réplica 1521–1540)**: 8 de 10 puertas pasan y el patrón se repite en la réplica, pero el ancla F9-1 cae en la réplica por 1.5 (HANDOFF 15.20); (ancla exacta, "menos de una vida" sin costo en comida ni saciedad, relevancia > recencia
-   y > azar, reproducción desacoplada); CAEN F9-4 (nodo barajado también alarga la vida, con cautela genérica) y F9-7 (conectarse tarde no cuesta).
-   Nada se declara con la letra completa. Réplica 1521–1540 en cola tras dE5-v2 y la réplica de BA-v. HANDOFF 15.18.
+3. **Fase 9 corrida (1501–1520, réplica 1521–1540, tercera 1621–1640 bajo ERR-92): DECLARADO el núcleo del bloque 1** con dos series válidas
+   (rechazo al primer encuentro sin dejar de comer, vida ~6.3–6.4×, relevancia > recencia/azar, reproducción desacoplada sube R₀; H-1 en pie);
+   sin declarar F9-4 y F9-7 (negativos ×3). **Propuesta del coordinador: nivel 9 a 40 % (decide el director).** Bloque 2 en construcción. HANDOFF 15.23.
 Además: **dE5 bajo el criterio v2 corrido: NO ENTRA** (ver Pendiente, ítem 2). Observación transversal: v15f y dE5 caen T-A y T-C (ii) con A₁₂ 0.4–0.55, indistinguibles del tronco; posible ERR de criterio, no ahora.
 Orden de corrida (un Pool a la vez): BA-v 961–980 ✅ → fase 9 1501–1520 ✅ → dE5-v2 ✅ → réplica BA-v 981–1000 (corriendo desde 15:52) → réplica fase 9 1521–1540.

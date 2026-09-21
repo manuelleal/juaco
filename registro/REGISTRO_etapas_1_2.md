@@ -5831,3 +5831,46 @@ Preregistro `experimentos/nivel05_familia_variante_BAv/PREREGISTRO_bav.md` (sha 
 **Predicciones del creador de BA-v (§5, antes de la primera serie; misma letra en las tres):** P0 19 (18–20) acertada ×2, refutada en la tercera (cae el emisor, no el candidato); P1, P2, P4, P5 acertadas ×3; P3 3 (1–6) acertada ×2 y en el borde en la tercera (6, cae la letra); **P6 dist 16 (13–19, 60 %) refutada** (13, 14, 11: la letra ≥ 15 cae las tres); P7 R6 1.4× (0.8–2.6×, 45 %) acertada ×3 y la letra pasa las tres; MISIÓN (55 %) y TODO (20 %) refutadas ×3. El creador acertó el mecanismo grueso y erró sistemáticamente en un solo número, dist(PAR), justo el que la colisión de B explica.
 
 **Qué queda.** Nivel 5 sigue en **75 %**. `v14.2` sigue como tronco. Commits: `20d9656`, `e02b139`, `022ff09`, `84e5247`, `9519dfc` (BA-vm), `5e1b22f` (V-5), `94fcf2b` (síntesis).
+
+### FASE 9, BLOQUE 1 — tercera serie del cuerpo nuevo bajo la ENMIENDA 1 (ERR-92), semillas 1621–1640 (21-sep-2026, 16:24–16:32; Pool 8; 360 corridas de T = 100 000): **ANCLA F9-1 PASA (vida NADA 95.5, dentro también de la letra ORIGINAL [90, 170]: la enmienda no hizo falta esta vez) — con DOS series válidas por la letra (1501–1520 y 1621–1640) se DECLARA el núcleo del bloque 1 y se deja sin declarar F9-4 y F9-7, replicadas ×3 como negativos**
+
+Preregistro `experimentos/nivel09_cuerpo_nuevo/PREREGISTRO_cuerpo_nuevo.md` (sha `2c2f557b7e38c4ac`, sin cambios) + `ENMIENDA_ERR92_ancla.md` (F9-1 con `vida_NADA ∈ [70, 170]` vía `F9_VIDA_NADA_MIN=70`; predicción escrita antes de correr; `94fcf2b`). Instrumento sin cambios (`organismo_f9.py` `3a821884394d66c9`). Runner `corre_f9.py` con la lectura de la variable (`62f39314ea9b1dcf`; `94fcf2b` + arreglo de forma `d142104`: un paréntesis que el comentario de ERR-92 se comió, `py_compile` limpio, sin cambio de conducta, nunca corrió roto). Identidad inline OK. Crudos `datos/f9_cuerpo_nuevo_s1621-1640_20260921_162410.log` / `.json` (`572ce73d783a7a22`); veredicto (`c908a720d3de3fb9`). Commit `8888b9b`. 444.4 s.
+
+| puerta | letra | 1501–1520 | 1521–1540 (exploratoria) | 1621–1640 | veredicto |
+|---|---|---|---|---|---|
+| F9-1 (ANCLA) | R₀(NADA) ∈ [0.10, 0.22]; vida(NADA) ∈ [70, 170] (original [90, 170]); R₀(RENACE) ∈ [0.70, 1.40]; r(RENACE) ∈ [−50, +25] | 0.141, 94.0, 0.804, −15.5 | 0.13, **88.5**, 1.0, 1.0 | 0.142, **95.5 (dentro de las dos letras)**, 0.92, −5.0 | PASA / CAE / **PASA** |
+| F9-2 | vida(REL) ≥ 2.5× NADA, A₁₂ ≥ 0.85 | 6.367×, 1.0 | 6.655×, 1.0 | 6.325×, 1.0 | PASA ×3 |
+| F9-3 | p1 ≥ 0.60, dif ≥ 0.30, A₁₂ ≥ 0.85; c1 y saciedad no caen | 0.962 vs 0.194; c1 1.0; sac 0.521 vs 0.489 | 0.966 vs 0.203; 1.0; 0.521 vs 0.49 | 0.968 vs 0.194 (dif 0.774); 1.0 vs 0.989; 0.523 vs 0.506 | PASA ×3 |
+| F9-4 | A₁₂(vida REL > REL_BAR) ≥ 0.80 y p1(REL_BAR) ≤ p1(NADA) + 0.15 | 1.0; 0.568 > 0.344 | 1.0; 0.568 > 0.353 | 1.0; 0.544 > 0.344 | CAE ×3 |
+| F9-5 | A₁₂(REL > REC) ≥ 0.65, R₀ ≥ 1.15× | 0.985, 1.530× | 0.99, 1.637× | 0.993, 1.633× | PASA ×3 |
+| F9-6 | A₁₂(REL > REL_AZAR) ≥ 0.65 | 0.985 | 1.0 | 0.98 | PASA ×3 |
+| F9-7 | A₁₂(REL > REL_TARDE) ≥ 0.65 y contraste interno ≥ 15/20 | 0.426, 9/20 | 0.424, 10/20 | 0.626, 5/20 | CAE ×3 |
+| F9-8 | razón acum ≥ 1.30, Spearman ≥ 0.80; H1-6 | 1.674×, 0.933; ninguno cruza (REL ac1 0.494) | 1.846×, 0.967 (0.472) | 1.535×, 0.933 (0.479) | PASA ×3 (H1-6 negativa ×3) |
+| F9-9 | seguridad | 360/360, 1.0, 0.0 | igual | igual | PASA ×3 |
+| F9-10 | REL_FIJO: p1 ≥ 0.60; R₀ ≥ 1.15×; A₁₂(sac) ≥ 0.65 | 0.976; 1.306×; 1.0 | 0.976; 1.442×; 1.0 | 0.977; 1.487×; 1.0 | PASA ×3 |
+
+| brazo (mediana, rep_acum = 0) | R₀ (serie / réplica / tercera) | vida | p1 | c1 | saciedad |
+|---|---|---|---|---|---|
+| RENACE | 0.804 / 1.0 / 0.92 | 656.0 / 838.5 / 769.25 | — | — | 0.565 / 0.575 / 0.569 |
+| NADA | 0.141 / 0.13 / 0.142 | 94.0 / 88.5 / 95.5 | 0.194 / 0.203 / 0.194 | 0.992 / 0.986 / 0.989 | 0.489 / 0.49 / 0.506 |
+| M1 | 0.175 / 0.172 / 0.179 | 136.75 / 135.25 / 134.25 | 0.291 / 0.294 / 0.3 | 0.992 / 0.985 / 0.992 | 0.497 / 0.502 / 0.513 |
+| REC | 0.251 / 0.245 / 0.245 | 434.25 / 422.5 / 449.25 | 0.799 / 0.78 / 0.781 | 0.99 / 0.992 / 0.98 | 0.506 / 0.5 / 0.504 |
+| **REL** | **0.384 / 0.401 / 0.4** | **598.5 / 589.0 / 604.0** | **0.962 / 0.966 / 0.968** | **1.0 / 1.0 / 1.0** | **0.521 / 0.521 / 0.523** |
+| REL_FIJO | 0.294 / 0.278 / 0.269 | 600.0 / 600.0 / 600.0 | 0.976 / 0.976 / 0.977 | 0.862 / 0.848 / 0.827 | 0.363 / 0.349 / 0.353 |
+| REL_BAR | 0.172 / 0.171 / 0.158 | 154.5 / 157.0 / 157.5 | 0.568 / 0.568 / 0.544 | 0.598 / 0.591 / 0.587 | 0.471 / 0.468 / 0.457 |
+| REL_AZAR | 0.243 / 0.232 / 0.249 | 381.0 / 372.0 / 401.0 | 0.728 / 0.737 / 0.723 | 0.985 / 0.988 / 0.984 | 0.514 / 0.51 / 0.519 |
+| REL_TARDE | 0.4 / 0.384 / 0.39 | 606.5 / 602.5 / 597.5 | 0.959 / 0.956 / 0.954 | 1.0 / 1.0 / 1.0 | 0.53 / 0.514 / 0.524 |
+
+**DECLARACIÓN DE LA FASE 9, BLOQUE 1** (por la letra, con las dos series válidas 1501–1520 y 1621–1640; la 1521–1540 queda como apoyo exploratorio):
+
+**Se declara:** un cuerpo nuevo que lee el nodo del linaje por **relevancia viva** desde su primer paso (a) **rechaza lo malo en su primer encuentro sin dejar de comer** (p1 0.962/0.968 contra NADA 0.194; c1 1.0 en las dos; saciedad dentro del 95 %); (b) vive **~6.3–6.4×** lo que vive el cuerpo vacío; (c) la relevancia le gana a la **recencia** (A₁₂ 0.985/0.993) y al **azar sobre el mismo nodo** (0.985/0.98): no es sólo el acceso, es el orden; (d) el **ranking congelado** (REL_FIJO) también evita pero **deja de comer** (c1 0.827–0.862), y el ranking **vivo** no paga ese precio (F9-10 ×2); (e) la **reproducción desacoplada** de la saciedad sube R₀ en todos los brazos (1.535×–1.674×, Spearman 0.933) sin reordenar, y **ningún brazo cruza R₀ 0.90**: **H-1 y ERR-62 siguen en pie**.
+
+**No se declara:** (F9-4) que el nodo produzca sólo "contenido, no cautela genérica": el nodo barajado alarga algo la vida (154.5–157.5) pero su p1 (0.544–0.568) excede NADA + 0.15 en las **tres** series y su c1 cae a 0.59: el control produce cautela genérica que también rechaza lo bueno; cae de forma idéntica las tres veces. (F9-7) que "conectarse desde el nacimiento" sea parte del mecanismo: **negativo replicado ×3** (A₁₂ 0.426 / 0.424 / 0.626, siempre < 0.65; contraste interno 9/20 → 10/20 → 5/20, peor en la tercera). La frase completa del preregistro ("aprende en menos de una vida sin dejar de comer") **sigue sin desbloquearse**: exige F9-4.
+
+**Predicciones de la ENMIENDA 1** (coordinador, antes de correr): acertadas F9-1 (95.5 ∈ [85, 130]), las siete positivas, F9-4 con p1(REL_BAR) ∈ [0.50, 0.65] (0.544), F9-7 cae. **Parcialmente refutada, con autor (coordinador):** A₁₂(REL > REL_TARDE) predicho en [0.35, 0.55], medido 0.626, fuera por arriba; el veredicto se acertó, la magnitud no; se anota sin recalibrar.
+
+**Lectura honesta.** El ancla que cayó en la réplica por 1.5 pasa hoy con margen, e incluso bajo la letra original: la variación de `vida_NADA` entre series del mismo tronco (94.0, 88.5, 95.5; más 125 y 119 de H-1) es más ancha de lo que cualquiera de las dos letras fijó a solas, y la enmienda fue la corrección correcta para no perder una serie válida por una cifra al borde. Las ocho puertas positivas y las dos negativas se sostienen número a número en las tres series. Nada reabre F9-4: cae por la misma razón las tres veces, y el preregistro es explícito en que no se rejuzga.
+
+**Vocabulario permitido:** *"con dos series independientes válidas por la letra, el cuerpo nuevo que lee el nodo por relevancia viva rechaza lo malo en su primer encuentro sin dejar de comer y vive alrededor de 6.3 a 6.4 veces más que el cuerpo vacío; la relevancia le gana a la recencia y al azar sobre el mismo nodo; el ranking calculado una sola vez también evita pero deja de comer, el vivo no; la reproducción desacoplada de la saciedad sube R₀ sin cambiar el orden entre mecanismos, y ningún brazo cruza R₀ 0.90: H-1 y ERR-62 siguen en pie; el nodo barajado produce cautela genérica que también rechaza lo bueno (×3); conectarse tarde no acorta la vida, y no se confirma que los cuerpos conectados vivan más dentro del mismo brazo (negativo ×3)"*. Prohibido: "el bloque pasa completo"; "F9-4 pasa"; "la fase 9 cierra"; "aprende en menos de una vida" como frase completa; "H-1 se resuelve"; "el linaje se sostiene"; "población", "generación", "evoluciona", "enseña", "recuerda su vida pasada", "quiere".
+
+**Qué queda.** Bloque 2 (en construcción, `experimentos/nivel09_cuerpo_nuevo_b2/`): **C-F9B′** ("leer llena la memoria; morder abre la puerta", hallazgo de la junta: leer por las dos vías acorta la vida 0.38× porque la puerta de v14 sustituye; identidad 66/66), **F9-4bis** (J = p1 + c1 − 1, brazo CAUTELA; ERR-93), nodo ORÁCULO como cota (A), semillas nuevas; gemelo numba de la fase 9 (compilador). Nivel 9: **propuesta 40 %** (hoy 30 %; decide el director).
