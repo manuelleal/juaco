@@ -1,0 +1,70 @@
+{
+ "sello": "20260921_151405",
+ "crudo": "f9_cuerpo_nuevo_s1501-1520_20260921_151405.json",
+ "puertas": {
+  "F9-1": {
+   "pasa": true,
+   "detalle": "R0_NADA 0.141 en [0.1, 0.22] · vida_NADA 94.0 en [90.0, 170.0] · R0_RENACE 0.804 en [0.7, 1.4] · r_RENACE -15.5 en [-50.0, 25.0]",
+   "frase": "ANCLA (BLOQUEANTE): el instrumento no se movio -- NADA reproduce NADA_CM de H-1 y RENACE reproduce el inmortal del bloque 2"
+  },
+  "F9-2": {
+   "pasa": true,
+   "detalle": "vida REL 598.5 / NADA 94.0 = 6.367 (>= 2.5) · A12 1.0 (>= 0.85)",
+   "frase": "EL NODO POR RELEVANCIA ALARGA LA VIDA DEL CUERPO NUEVO"
+  },
+  "F9-3": {
+   "pasa": true,
+   "detalle": "p1 REL 0.962 vs NADA 0.194 (>= 0.6, dif >= 0.3, A12 1.0 >= 0.85) · BALANCE (trampa 2): c1 REL 1.0 vs NADA 0.992 (>= NADA-0.1) y saciedad REL 0.521 vs NADA 0.489 (>= 0.95x): si · t_ok REL 39.5 vs NADA 22.25 (se REPORTA: el que muerde todo llega antes a su primera comida; t_ok solo no mide aprender) · exposiciones A REL 557.0 vs NADA 795.0",
+   "frase": "MENOS DE UNA VIDA (la pregunta): el recien nacido RECHAZA lo malo en su PRIMER encuentro, y NO a costa de dejar de comer (p1 y c1 juntos, trampa 2)"
+  },
+  "F9-4": {
+   "pasa": false,
+   "detalle": "A12(vida REL > REL_BAR) 1.0 (>= 0.8) · p1 REL_BAR 0.568 (<= NADA 0.194 + 0.15) · vida REL_BAR 154.5",
+   "frase": "CONTENIDO, NO CAUTELA GENERICA: el nodo barajado no compra la vida"
+  },
+  "F9-5": {
+   "pasa": true,
+   "detalle": "A12(vida REL > REC) 0.985 (>= 0.65) · R0 REL 0.384 / REC 0.251 = 1.53 (>= 1.15)",
+   "frase": "RELEVANCIA > RECENCIA (la lecciones no expiran)"
+  },
+  "F9-6": {
+   "pasa": true,
+   "detalle": "A12(vida REL > REL_AZAR) 0.985 (>= 0.65) · vida REL_AZAR 381.0",
+   "frase": "RANKEAR, NO SOLO ACCEDER: la relevancia le gana al azar sobre el mismo nodo"
+  },
+  "F9-7": {
+   "pasa": false,
+   "detalle": "A12(vida REL > REL_TARDE) 0.426 (>= 0.65) · DENTRO del brazo: cuerpos >= 5 viven >= 2.0x los cuerpos 1..4 en 9/20 (>= 15)",
+   "frase": "CONEXION DESDE EL NACIMIENTO: conectarse tarde cuesta, y dentro del mismo brazo los cuerpos conectados viven mas que los cuerpos 1..4"
+  },
+  "F9-8": {
+   "pasa": true,
+   "detalle": "R0 NADA acum1 0.236 / acum0 0.141 = 1.674 (>= 1.3) · Spearman del orden entre niveles 0.933 (>= 0.8) · CLAUSULA H1-6 (R0 >= 0.9 con fundadores <= 2): NINGUN brazo -- H-1 y ERR-62 siguen en pie",
+   "frase": "REPRODUCCION DESACOPLADA DE LA SACIEDAD (perilla APARTE): sube R0 en todos los brazos sin cambiar el orden entre mecanismos"
+  },
+  "F9-9": {
+   "pasa": true,
+   "detalle": "contabilidad 360/360 · listas por cuerpo OK 360/360 · frac_div REL 1.0 (>= 0.5; 0 = perilla INERTE, ERR-38) · lect_div REC 0.0 (= 0) · exposiciones A (ref NADA 795.0, exentos ('REL_FIJO',)) pobres ninguna · REL_FIJO se REPORTA: 397.0",
+   "frase": "SEGURIDAD: contabilidad, la perilla NO es inerte (ERR-38) y el mundo no se comio la comida"
+  },
+  "F9-10": {
+   "pasa": true,
+   "detalle": "REL_FIJO p1 0.976 (>= 0.6: el ranking congelado TAMBIEN evita) pero R0 REL 0.384 / REL_FIJO 0.294 = 1.306 (>= 1.15) y A12(saciedad REL > REL_FIJO) 1.0 (>= 0.65) · exposiciones A REL 557.0 vs REL_FIJO 397.0",
+   "frase": "LA RELEVANCIA VIVA NO ES MIEDO A TODO: el ranking calculado UNA sola vez (REL_FIJO) sube p1 y HUNDE c1; el vivo no"
+  }
+ },
+ "pasan": [
+  "F9-1",
+  "F9-2",
+  "F9-3",
+  "F9-5",
+  "F9-6",
+  "F9-8",
+  "F9-9",
+  "F9-10"
+ ],
+ "caen": [
+  "F9-4",
+  "F9-7"
+ ]
+}
