@@ -1,0 +1,28 @@
+HUMO FASE 9 — cuerpo nuevo · 2026-09-21 14:46:06 · UN proceso, sin Pool (regla 3)
+  organismo_f9.py sha 3a821884394d66c9 · origen alma2 4fd616aeaf535e61 (se espera 4fd616aeaf535e61)
+  python 3.14.2 · T=100000 · 6 corridas (3 brazos x 2 semillas YA VISTAS 1,2)
+
+ETAPA 1/3 — identidad dentro del runner (regla 14, ERR-38)
+  OK   (1) NADA con alma nula == organismo_alma2 (alma=None) = NADA_CM de H-1   falta [] dif [] extra []
+  OK   (2) REL != REC (DEBE diferir: si no, la relevancia es inerte, ERR-38)   lect_div REL 37/37 · REC 0
+  OK   (3) rep_acum=1 != rep_acum=0 en NADA (DEBE diferir)   desc 8 -> 14
+
+ETAPA 2/3 — 6 corridas (NADA, REC, REL x semillas 1, 2)
+  [  13.5s] NADA       s1  R0 0.1818  r -188   vida 125.0    cuerpos 231   p1 0.2159 c1 0.9864 t_ok 21.5 div None fund 188 coh True
+  [  20.0s] REC        s1  R0 0.2262  r -129   vida 417.5    cuerpos 168   p1 0.8841 c1 0.9739 t_ok 39.0 div 0.0 fund 129 coh True
+  [  29.2s] REL        s1  R0 0.4076  r -92    vida 598.0    cuerpos 157   p1 0.9603 c1 1.0 t_ok 36.0 div 1.0 fund 92 coh True
+  [  35.4s] NADA       s2  R0 0.1586  r -190   vida 119.0    cuerpos 227   p1 0.2027 c1 0.9921 t_ok 30.0 div None fund 190 coh True
+  [  41.7s] REC        s2  R0 0.212   r -144   vida 420.0    cuerpos 184   p1 0.7778 c1 0.9754 t_ok 29.0 div 0.0 fund 144 coh True
+  [  51.0s] REL        s2  R0 0.3444  r -98    vida 533.0    cuerpos 151   p1 0.9589 c1 0.991 t_ok 40.5 div 1.0 fund 98 coh True
+
+ETAPA 3/3 — predicciones del humo (HH1..HH5; escritas en el PREREGISTRO ANTES de correrlo)
+  HH1: SI
+  HH2: SI
+  HH3: SI
+  HH4: SI
+  HH5: SI
+  Solo HH3 y HH4 BLOQUEAN (son el instrumento). HH1, HH2 y HH5 son la HIPOTESIS: si fallan se escriben
+  en el preregistro y la serie corre con esta letra. NINGUN umbral se cambia despues del humo (regla 4).
+
+JSON  C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\humo\f9_humo_20260921_144606.json  (sha 32490c65c0d0bf26)
+HUMO terminado en 51.1s
