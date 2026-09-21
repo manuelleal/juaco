@@ -5712,3 +5712,44 @@ Preregistro `experimentos/tronco_v15_dE5/PREREGISTRO_dE5_v2.md` (sha `a5c1185303
 **Vocabulario permitido:** *"dE5 recupera un cambio no avisado 3.23× más rápido que el tronco, con pareado y apagado perfectos, y el control sin información no lo iguala: es la información del predictor, no el empujón; pero cobra veneno de más tras el cambio y muerde más veneno que el tronco en los seis escenarios del examen; no sobrevive de forma pareada en VIVO ni se desdice más rápido en el mundo vivo; B-5 sigue reparando el alias con la sorpresa encendida"*. Prohibido: "dE5 entra"; "4–7× más rápido"; "sin coste conductual"; "T-G pasa"; "aprende a manejar la sorpresa sin pagar nada".
 
 **Qué queda.** v14.2 sigue siendo el tronco; nada se rejuzga. dE5 queda como **órgano medido** (capacidad de recuperación real con coste conductual declarado), no como candidato; reabrir sólo con preregistro nuevo (dosis menor, o sorpresa activa sólo después del cambio) y semillas nuevas.
+
+### FASE 9, BLOQUE 1 — réplica (regla 12 / diseño del preregistro) del cuerpo nuevo, semillas 1521–1540 (21-sep-2026, 15:58–16:06; Pool 8; 360 corridas de T = 100 000): **CAE EL ANCLA BLOQUEANTE F9-1 — POR LA LETRA, NADA SE DECLARA. La vida mediana(NADA) 88.5 queda fuera de [90, 170] por 1.5, aunque R₀(NADA) 0.13, R₀(RENACE) 1.0 y r(RENACE) 1.0 caen dentro de sus rangos. Exploratorio: las mismas siete puertas de la serie vuelven a pasar y las mismas dos vuelven a caer, número a número**
+
+Preregistro `experimentos/nivel09_cuerpo_nuevo/PREREGISTRO_cuerpo_nuevo.md` (sha `2c2f557b7e38c4ac`, sin cambios desde la serie; F9-1 marcada ANCLA/BLOQUEANTE: "si cae, el instrumento se movió y no se lee nada más"). Mismo instrumento y runner que la serie (`organismo_f9.py` `3a821884394d66c9`, `corre_f9.py` `3c0f1c4e6d101c83`); identidad inline OK (3 chequeos × 2 semillas). Crudos `datos/f9_cuerpo_nuevo_s1521-1540_20260921_155801.log` / `.json` (sha `b78123a281daccfc`); veredicto `..._veredicto_20260921_155801.json` (`db58916c2b15b57b`). Commit `a743704`. 483.8 s.
+
+**Origen del rango del ancla:** §5 del preregistro lo fijó con las dos series de H-1 (NADA_CM vida 125/119, `PREREGISTRO_h1_muerte.md`). Hoy hay cuatro series de la misma cantidad: 125, 119, 94.0, 88.5. El límite inferior 90 queda por encima de dos de las cuatro observaciones.
+
+| puerta | letra | serie 1501–1520 | réplica 1521–1540 | veredicto serie / réplica |
+|---|---|---|---|---|
+| F9-1 (ANCLA) | R₀(NADA) ∈ [0.10, 0.22], vida(NADA) ∈ [90, 170], R₀(RENACE) ∈ [0.70, 1.40], r(RENACE) ∈ [−50, +25] | 0.141, 94.0, 0.804, −15.5 | 0.13, **88.5 (fuera por 1.5)**, 1.0, 1.0 | **PASA / CAE** |
+| F9-2 | vida(REL) ≥ 2.5× NADA, A₁₂ ≥ 0.85 | 6.367×, A₁₂ 1.0 | 6.655×, A₁₂ 1.0 | PASA / PASA |
+| F9-3 | p1 ≥ 0.60, dif ≥ 0.30, A₁₂ ≥ 0.85; balance c1 y saciedad | 0.962 vs 0.194; c1 1.0; sac 0.521 vs 0.489 | 0.966 vs 0.203; c1 1.0; sac 0.521 vs 0.49 | PASA / PASA |
+| F9-4 | A₁₂(vida REL > REL_BAR) ≥ 0.80 y p1(REL_BAR) ≤ p1(NADA) + 0.15 | A₁₂ 1.0; p1 0.568 > 0.344 | A₁₂ 1.0; p1 0.568 > 0.353 | CAE / CAE |
+| F9-5 | A₁₂(REL > REC) ≥ 0.65, R₀ ≥ 1.15× | 0.985, 1.530 | 0.99, 1.637 | PASA / PASA |
+| F9-6 | A₁₂(REL > REL_AZAR) ≥ 0.65 | 0.985 | 1.0 | PASA / PASA |
+| F9-7 | A₁₂(REL > REL_TARDE) ≥ 0.65 y contraste interno ≥ 15/20 | 0.426, 9/20 | 0.424, 10/20 | CAE / CAE |
+| F9-8 | razón acum ≥ 1.30, Spearman ≥ 0.80; H1-6 | 1.674, 0.933; ninguno cruza 0.90 (REL 0.494) | 1.846, 0.967; ninguno cruza (REL 0.472) | PASA / PASA |
+| F9-9 | seguridad | 360/360, frac_div 1.0 | 360/360, frac_div 1.0 | PASA / PASA |
+| F9-10 | REL_FIJO: p1 ≥ 0.60; R₀ REL ≥ 1.15×; A₁₂ sac ≥ 0.65 | 0.976; 1.306; 1.0 | 0.976; 1.442; 1.0 | PASA / PASA |
+
+| brazo (mediana, rep_acum = 0) | R₀ serie / réplica | vida | p1 | c1 | saciedad |
+|---|---|---|---|---|---|
+| RENACE | 0.804 / 1.0 | 656.0 / 838.5 | — | — | 0.565 / 0.575 |
+| NADA | 0.141 / 0.13 | 94.0 / 88.5 | 0.194 / 0.203 | 0.992 / 0.986 | 0.489 / 0.49 |
+| M1 | 0.175 / 0.172 | 136.75 / 135.25 | 0.291 / 0.294 | 0.992 / 0.985 | 0.497 / 0.502 |
+| REC | 0.251 / 0.245 | 434.25 / 422.5 | 0.799 / 0.78 | 0.99 / 0.992 | 0.506 / 0.5 |
+| **REL** | **0.384 / 0.401** | **598.5 / 589.0** | **0.962 / 0.966** | **1.0 / 1.0** | **0.521 / 0.521** |
+| REL_FIJO | 0.294 / 0.278 | 600.0 / 600.0 | 0.976 / 0.976 | 0.862 / 0.848 | 0.363 / 0.349 |
+| REL_BAR | 0.172 / 0.171 | 154.5 / 157.0 | 0.568 / 0.568 | 0.598 / 0.591 | 0.471 / 0.468 |
+| REL_AZAR | 0.243 / 0.232 | 381.0 / 372.0 | 0.728 / 0.737 | 0.985 / 0.988 | 0.514 / 0.51 |
+| REL_TARDE | 0.4 / 0.384 | 606.5 / 602.5 | 0.959 / 0.956 | 1.0 / 1.0 | 0.53 / 0.514 |
+
+Nota de forma (sin ERR): la frase impresa junto a F9-1 ("el instrumento no se movió") es texto fijo por puerta y no cambia con el veredicto; el campo `pasa` del JSON es el que manda y dice `false`.
+
+**Lectura honesta.** Por la letra, el ancla bloqueante cae en la réplica: no por R₀(NADA), R₀(RENACE) ni r(RENACE), los tres en rango, sino por un solo número, la vida mediana de NADA, 1.5 por debajo del límite inferior. Con la cláusula escrita, **la réplica no cuenta como confirmación de nada**. Dicho eso, y marcado como exploratorio: las nueve cifras que definían las siete puertas positivas se reproducen dentro de un margen pequeño (REL vida 598.5 → 589.0, p1 0.962 → 0.966, R₀ 0.384 → 0.401; REL_BAR p1 0.568 → 0.568 idéntico), y las dos negativas también (F9-4 por el mismo margen; F9-7 A₁₂ 0.426 → 0.424). El patrón es el mismo dos veces seguidas; lo que falta es la letra que lo autorice a contar. Sobre el ancla: el rango [90, 170] se fijó con dos series de H-1 (125/119) sin ver las dos de hoy (94.0/88.5); la variación entre series del propio tronco (88.5–125) no cabe en él. **Candidato a ERR** (rango de ancla calibrado con menos series de las que existen; misma forma que el defecto del criterio v2 señalado hoy por la junta: una letra que no se contrastó contra la variación natural del propio tronco). Nada se rejuzga; no hay evidencia de que el instrumento se haya movido, sólo de que el rango de una cláusula no cubre esta observación.
+
+**Predicciones del creador:** el preregistro aplica la misma letra a las dos series y no fija predicción separada para la réplica ni qué hacer si el ancla cae sólo en la réplica (ausencia, no invención).
+
+**Vocabulario permitido:** *"en una segunda serie independiente, con el ancla bloqueante caída por la letra, los mismos siete resultados positivos y los mismos dos negativos se reproducen número a número; por la letra esto no cuenta como confirmación: la fase 9 sigue sin poder declarar 'aprende en menos de una vida', y el ancla queda con una cláusula de cuatro fuera de rango por un margen pequeño"*. Prohibido: "la fase 9 replica"; "F9-1 pasa"; "el bloque se confirma"; "el instrumento se movió"; "aprende en menos de una vida"; "población", "generación", "evoluciona", "enseña".
+
+**Qué queda.** Nivel 9 sigue en **30 %**. Decisión del coordinador (delegada): (a) ERR del rango del ancla, recalculado sobre las cuatro series de NADA, y tercera serie en semillas nuevas con el ancla corregida; (b) el bloque 2 hereda el ancla corregida y añade la letra F9-4b balanceada (índice J = p1 + c1 − 1) propuesta por el creador A en la junta.

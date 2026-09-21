@@ -878,3 +878,9 @@ el apagado, razón 1.281×; pero el veneno tras el cambio sube 1.128× sobre 1.1
 el alias con la dosis encendida) y T-F. El creador firmó ~40 % y avisó en el humo que T-A iba peor; se confirmó. Comparado con v15f-v2, dE5 invierte
 T-D y T-G; los dos caen T-A y T-C (ii) con A₁₂ 0.4–0.55, indistinguibles del tronco en el mundo vivo pareado: observación transversal para el
 director, sin recalibrar. Tronco v14.2; dE5 queda como órgano medido con coste, no candidato. Sin ERR nuevos. Commits `9ac631c`, `2a35577`.
+**15.20 (21-sep 15:58–16:06): réplica de la fase 9, bloque 1, semillas 1521–1540 (Pool 8).** El ancla bloqueante F9-1 **CAE**: tres cláusulas en rango
+(R₀ NADA 0.13, R₀ RENACE 1.0, r RENACE 1.0) pero la vida mediana de NADA sale a 88.5, 1.5 por debajo del límite inferior 90. Por la letra, la
+réplica **no confirma** el bloque 1: nada se declara. Exploratorio: las mismas siete puertas vuelven a pasar y las mismas dos vuelven a caer con cifras
+casi idénticas (REL vida 598.5 → 589.0, p1 0.962 → 0.966; REL_BAR p1 0.568 en las dos). El rango [90, 170] se calibró con dos series de H-1 (125/119)
+y hoy hay cuatro (125, 119, 94.0, 88.5): candidato a ERR de rango de ancla. Nivel 9 sigue en 30 %. Datos `f9_cuerpo_nuevo_s1521-1540_20260921_155801`
+(veredicto `db58916c2b15b57b`); commit `a743704`.

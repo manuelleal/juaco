@@ -2,7 +2,7 @@
 
 > **ESTADO VIVO (desde el 21-sep-2026): `registro/ESTADO.md`** — una página con tronco, niveles, pendientes, último ERR y decisiones; se
 > reescribe en cada cierre. Los bloques "Estado (día N)" de abajo son historia y mandan sólo si `ESTADO.md` no los contradice.
-> 21-sep-2026: v15f-v2 NO ENTRA (4 puertas de 7); BA cumple la misión cruda de la fase 5 ×2 pero no la letra R1–R5; LÍNEA CERRADA de memoria de pares en la vía lenta (v15c–v15g); BA-v bajo ERR-90 cae P6 en 961–980 (réplica en cola); fase 9 bloque 1 (1501–1520): 8 de 10 puertas pasan, ancla exacta de H-1, caen F9-4 y F9-7, H-1 en pie, réplica en cola; dE5 bajo el criterio v2 NO ENTRA (recupera 3.23× más rápido, pero muerde más veneno: cae T-A, T-C, T-E, T-G); ERR-87..90. Detalle en `registro/ESTADO.md`.
+> 21-sep-2026: v15f-v2 NO ENTRA (4 puertas de 7); BA cumple la misión cruda de la fase 5 ×2 pero no la letra R1–R5; LÍNEA CERRADA de memoria de pares en la vía lenta (v15c–v15g); BA-v bajo ERR-90 cae P6 en 961–980 (réplica en cola); fase 9 bloque 1 (1501–1520): 8 de 10 puertas pasan, ancla exacta de H-1, caen F9-4 y F9-7, H-1 en pie; réplica 1521–1540 repite el patrón pero cae el ancla F9-1 por 1.5, nada se declara; dE5 bajo el criterio v2 NO ENTRA (recupera 3.23× más rápido, pero muerde más veneno: cae T-A, T-C, T-E, T-G); ERR-87..90. Detalle en `registro/ESTADO.md`.
 > Índice de experimentos: `experimentos/INDICE.md`. Agentes y skills del equipo: sección "Herramientas" de `registro/EQUIPO.md`.
 
 Investigación reproducible sobre si un organismo artificial simple, con reglas locales y sin backpropagation,
