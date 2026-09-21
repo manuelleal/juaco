@@ -2,6 +2,7 @@
 
 > **ESTADO VIVO (desde el 21-sep-2026): `registro/ESTADO.md`** — una página con tronco, niveles, pendientes, último ERR y decisiones; se
 > reescribe en cada cierre. Los bloques "Estado (día N)" de abajo son historia y mandan sólo si `ESTADO.md` no los contradice.
+> 21-sep-2026: v15f-v2 NO ENTRA (4 puertas de 7); BA cumple la misión cruda de la fase 5 ×2 pero no la letra R1–R5; ERR-87..89. Detalle en `registro/ESTADO.md`.
 > Índice de experimentos: `experimentos/INDICE.md`. Agentes y skills del equipo: sección "Herramientas" de `registro/EQUIPO.md`.
 
 Investigación reproducible sobre si un organismo artificial simple, con reglas locales y sin backpropagation,

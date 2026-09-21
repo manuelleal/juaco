@@ -836,3 +836,17 @@ skills fijos del equipo (EQUIPO.md, "Herramientas"), candidato B+A de la fase 5 
 **15.14 (21-sep 15:45): ERR-88** (`dentro` de A1 es código muerto; "inerte" era "no conectada"; ningún veredicto cambia) y **candidato BA lanzado**
 (conjunción de B por tipo sobre las dos ganadoras de A; identidad 56/56; el propio creador refuta en su humo la mitad de variante y baja su apuesta a
 ≈10–15 %; se corre igual en 921–940 con celdas b5k3,b6suf,A1,BA,BA-v; réplica 941–960 sólo si algo pasa).
+**15.15 (21-sep 13:09–13:51): confirmación del candidato BA.** Serie 921–940 (`13f3bdb70928e9f5`) y réplica automática por regla 12 en 941–960
+(`4dcdffb3d724154d`), Pool 8. `BA-v` (la variante incompleta sí vota) cumple la MISIÓN cruda (BAR-T ≤ 5 y PAR ≥ 15) en las dos series pero no cruza
+la letra R1–R5 en ninguna (cae R4 en la primera, R2+R3 en la réplica); `BA` cumple la misión cruda ×2 pero cae BAR-H (14/15, la variante, como
+predijo su creador) y VALOR (8/6). `A1` pasa R1–R5 en 3 de las 4 series medidas hasta hoy y la misión cruda en 1 de 4. **ERR-89:** R6 (coste) queda
+INCOMPLETO — el runner no la juzga y la celda base `b4b` no se corrió; dato exploratorio: `BA-v` muere 104 en la réplica contra 37–50 del resto.
+Nada entra; nivel 5 sigue en 75 %. Decisión del director: preregistrar `BA-v` con criterio propio y `b4b` en la serie, o cerrar la línea BA/BA-v.
+
+### Cierre del 21-sep-2026 (16:15)
+Corrido y registrado hoy: v15f-v2 (NO ENTRA, 4 puertas de 7), BA serie + réplica (misión cruda ×2, letra no, R6 incompleto). ERR-87, ERR-88, ERR-89.
+Organización: `registro/ESTADO.md` (página viva), `experimentos/INDICE.md`, agentes y skills fijos (EQUIPO.md "Herramientas"), humos huérfanos en
+`datos/humo_no_registrado/`. Decisiones tomadas por el coordinador y documentadas: correr v15f-v2 (decisión previa del director del 18-sep), correr BA
+en 921–940 por la colisión de semillas, réplica por regla 12. **Decisiones pendientes del director:** (1) cerrar la línea de memoria de pares en la
+vía lenta (v15d/v15e/v15f) o preregistrar v15g; (2) BA-v con criterio propio y `b4b`, o cerrar BA; (3) abrir la fase 9 ahora o esperar. Quien
+retome: `registro/ESTADO.md` primero, luego esta sección, luego las tres últimas entradas del registro.
