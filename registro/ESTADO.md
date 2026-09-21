@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 20:05** (coordinador; fase 9 bloque 1 declarado en parte; bloque 2, gemelo y criterio v3 en construcción). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 20:15** (coordinador; CIERRE DEL DÍA: 11 series, 2 líneas cerradas, 1 declaración, ERR-87..92, junta, necesidades). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -54,4 +54,4 @@ procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
    (rechazo al primer encuentro sin dejar de comer, vida ~6.3–6.4×, relevancia > recencia/azar, reproducción desacoplada sube R₀; H-1 en pie);
    sin declarar F9-4 y F9-7 (negativos ×3). **Propuesta del coordinador: nivel 9 a 40 % (decide el director).** Bloque 2 en construcción. HANDOFF 15.23.
 Además: **dE5 bajo el criterio v2 corrido: NO ENTRA** (ver Pendiente, ítem 2). Observación transversal: v15f y dE5 caen T-A y T-C (ii) con A₁₂ 0.4–0.55, indistinguibles del tronco; posible ERR de criterio, no ahora.
-Orden de corrida (un Pool a la vez): BA-v 961–980 ✅ → fase 9 1501–1520 ✅ → dE5-v2 ✅ → réplica BA-v 981–1000 (corriendo desde 15:52) → réplica fase 9 1521–1540.
+Hoy: 11 series corridas (todas ✅ registradas). **Mañana, en orden:** calibración del criterio v3 (placebo) → bloque 2 de la fase 9 (C-F9B′ + F9-4bis + CAUTELA + ORÁCULO) → con gemelo numba si su arnés es bit a bit.

@@ -904,3 +904,19 @@ recencia y > azar; el ranking congelado evita pero deja de comer y el vivo no; l
 9 → 10 → 5/20). Predicciones de la enmienda: siete de ocho acertadas; la banda de A₁₂(REL > REL_TARDE) [0.35, 0.55] quedó corta (0.626), parcialmente
 refutada con el coordinador como autor. **Propuesta: nivel 9 de 30 a 40 %** (decide el director). Bloque 2 en construcción (F9-4bis con J y CAUTELA,
 C-F9B′, ORÁCULO; `nivel09_cuerpo_nuevo_b2/`); gemelo numba en construcción. Datos `f9_cuerpo_nuevo_s1621-1640_20260921_162410` (`c908a720d3de3fb9`); `8888b9b`.
+
+### Cierre del 21-sep-2026 (20:15, ventana de dos horas del director "dale candela")
+**Corrido y registrado hoy (11 series, un Pool a la vez):** v15f-v2 (NO ENTRA) · BA 921–940 + 941–960 · BA-v 961–980 + 981–1000 + 2101–2120 (línea
+BA/BA-v CERRADA) · fase 9 bloque 1: 1501–1520, 1521–1540 (exploratoria, ancla caída), 1621–1640 (ERR-92) → **DECLARADO en parte** · dE5-v2 (NO ENTRA).
+**Líneas cerradas hoy:** memoria de pares en la vía lenta (v15c–v15g); BA/BA-v (fase 5). **Declarado hoy:** el cuerpo nuevo que lee el nodo por
+relevancia viva rechaza lo malo al primer encuentro sin dejar de comer y vive ~6.3× (dos series válidas). **ERR-87..92** (dos de instrumento, uno de
+código muerto, uno de puerta sin juez, dos de criterio: el v2 rechaza al propio tronco; el rango del ancla). **Junta** de tres creadores (SINTESIS.md):
+voto unánime en el criterio. **Organización:** ESTADO.md, INDICE.md, agentes y skills fijos, regla 15. **Necesidades:** NECESIDADES_20260921.md (una
+sola: la invalidación de lecciones por consecuencia; ranking daño repetido > lección que muere > deriva).
+**Decisiones del director tomadas hoy (delegadas, "llena las 3"):** cerrar v15; BA-v como candidato aparte → cerrado tras tres series; fase 9 abierta.
+**Decisiones pendientes del director:** (1) fijar el nivel 9 (propuesta 40 %); (2) aprobar CRITERIO_TRONCO_v3 con placebo cuando la calibración
+CAL-1..CAL-5 pase; (3) autorizar dos Pools en paralelo (ninguna puerta mide tiempo de pared).
+**Para mañana, en orden:** (a) calibración del criterio v3 (placebo; paquete en `experimentos/criterio_v3/`); (b) bloque 2 de la fase 9
+(`nivel09_cuerpo_nuevo_b2/`: C-F9B′ + F9-4bis con J + CAUTELA + ORÁCULO); (c) gemelo numba de la fase 9 (`organismo_f9_rapido.py`, arnés antes de usarlo
+para confirmar); (d) alefast Fase 3 (número contra Mem0) es de su propio repo. Quien retome: `registro/ESTADO.md`, luego esta sección, luego las cinco
+últimas entradas del registro. Los paquetes de (a), (b) y (c) llegaron o llegan al cierre; se commitean con la nota "verificado" o "borrador" según su arnés.
