@@ -1,0 +1,114 @@
+{
+ "sello": "20260921_174849",
+ "crudo": "f9b2_s1601-1620_20260921_174849.json",
+ "puertas": {
+  "F9-1": {
+   "pasa": true,
+   "detalle": "R0_NADA 0.138 en [0.097, 0.22] · vida_NADA 96.5 en [66.0, 170.0] · R0_RENACE 0.84 en [0.6, 1.4] · r_RENACE -11.5 en [-50.0, 25.0]",
+   "frase": "ANCLA (BLOQUEANTE): el instrumento no se movio -- NADA reproduce NADA_CM de H-1 y RENACE reproduce el inmortal del bloque 2 (rango recalibrado con las CINCO series, ERR-92/93)"
+  },
+  "F9-2": {
+   "pasa": true,
+   "detalle": "vida REL 600.5 / NADA 96.5 = 6.223 (>= 2.5) · A12 1.0 (>= 0.85)",
+   "frase": "EL NODO POR RELEVANCIA ALARGA LA VIDA DEL CUERPO NUEVO (heredada, misma letra)"
+  },
+  "F9-3": {
+   "pasa": true,
+   "detalle": "p1 REL 0.964 vs NADA 0.182 (>= 0.6, dif >= 0.3, A12 1.0 >= 0.85) · BALANCE: c1 1.0 vs 0.993 (>= NADA-0.1) y saciedad 0.532 vs 0.5 (>= 0.95x): si",
+   "frase": "MENOS DE UNA VIDA: el recien nacido RECHAZA lo malo en su PRIMER encuentro y NO a costa de dejar de comer (heredada, misma letra)"
+  },
+  "F9-4bis": {
+   "pasa": true,
+   "detalle": "J REL 0.963 · J REL_BAR 0.181 (<= J NADA 0.168 + 0.1) · A12(J REL > REL_BAR) 1.0 (>= 0.85) · A12(vida REL > REL_BAR) 1.0 (>= 0.8) · p1/c1 REL_BAR 0.568/0.62 (la cautela generica sube p1 y hunde c1)",
+   "frase": "CONTENIDO, NO CAUTELA GENERICA -- con el indice BALANCEADO J = p1 + c1 - 1 (ERR-93; F9-4 original NO se rejuzga)"
+  },
+  "F9-5": {
+   "pasa": true,
+   "detalle": "A12(vida REL > REC) 0.96 (>= 0.65) · R0 REL 0.395 / REC 0.237 = 1.667 (>= 1.15)",
+   "frase": "RELEVANCIA > RECENCIA (las lecciones no expiran) (heredada, misma letra)"
+  },
+  "F9-6": {
+   "pasa": true,
+   "detalle": "A12(vida REL > REL_AZAR) 1.0 (>= 0.65) · vida REL_AZAR 330.0",
+   "frase": "RANKEAR, NO SOLO ACCEDER (heredada, misma letra)"
+  },
+  "F9-8": {
+   "pasa": true,
+   "detalle": "R0 NADA acum1 0.222 / acum0 0.138 = 1.609 (>= 1.3) · Spearman del orden entre niveles 0.96 (>= 0.8, 14 brazos) · CLAUSULA H1-6 (R0 >= 0.9 con fundadores <= 2): NINGUN brazo -- H-1 y ERR-62 siguen en pie",
+   "frase": "REPRODUCCION DESACOPLADA DE LA SACIEDAD (perilla APARTE) (heredada, misma letra)"
+  },
+  "F9-9": {
+   "pasa": true,
+   "detalle": "contabilidad 560/560 · listas por cuerpo OK 560/560 · frac_div REL 1.0 (>= 0.5) · lect_div REC 0.0 (= 0) · exposiciones A (ref NADA 801.0, exentos ('REL_FIJO', 'CAUTELA')) pobres ninguna · MECANISMO NUEVO: via_msg REL2b 7105.5 (> 0) · fam_nac_max REL2b 0.0 (= 0: LEER NO ABRE LA PUERTA) · fam_nac REL2 2.598 (> 0: con evidencia SI la abre) · frac_pa REL2b 0.106 (> 0: MORDER SI la abre) -> si",
+   "frase": "SEGURIDAD: contabilidad, las perillas NO son inertes (ERR-38) y el mundo no se comio la comida (heredada + las tres pruebas del mecanismo nuevo)"
+  },
+  "F9-10": {
+   "pasa": true,
+   "detalle": "REL_FIJO p1 0.974 (>= 0.6) pero R0 REL 0.395 / REL_FIJO 0.284 = 1.391 (>= 1.15) y A12(saciedad REL > REL_FIJO) 1.0 (>= 0.65)",
+   "frase": "LA RELEVANCIA VIVA NO ES MIEDO A TODO (heredada, misma letra)"
+  },
+  "B2-1": {
+   "pasa": false,
+   "detalle": "vida REL2b 601.0 / REL 600.5 = 1.001 (>= 1.1) · J REL2b 0.96 vs J REL 0.963 (>= REL - 0.03) · A12(vida REL2b > REL) 0.481 (se reporta) · p1/c1 REL2b 0.964/1.0 · saciedad 0.522 vs REL 0.532",
+   "frase": "LEER LLENA LA MEMORIA, MORDER ABRE LA PUERTA: el candidato vive mas que REL y NO pierde discriminacion (no volvio la sustitucion)"
+  },
+  "B2-2": {
+   "pasa": false,
+   "detalle": "R0 REL2b acum=1 0.484 (>= 0.5; rango predicho (0.5, 0.8)) · acum=0 0.426 · r acum=1 -82.5 · fundadores 82.5 · CLAUSULA H1-6 (R0 >= 0.9 con fundadores <= 2): NO cruza -- H-1 y ERR-62 SIGUEN EN PIE · techo del mundo: RENACE acum=1 1.16",
+   "frase": "R0 DEL LINAJE con la reproduccion desacoplada: el candidato con acum=1"
+  },
+  "B2-3": {
+   "pasa": false,
+   "detalle": "A12(vida REL2b > DOSIS) 0.414 (>= 0.7) · R0 REL2b 0.426 / DOSIS 0.429 = 0.993 (>= 1.1) · vida DOSIS 603.75 · J DOSIS 0.965 · LECTURA CONDICIONADA (preregistro sec. 5): B2-1 CAYO -> B2-3 se REPORTA y NO se interpreta",
+   "frase": "DOSIS (REL con eta_s al DOBLE) NO iguala al candidato: lo que paga son las DOS VIAS, no la cantidad de aprendizaje (SOLO SE LEE si B2-1 pasa)"
+  },
+  "B2-4": {
+   "pasa": true,
+   "detalle": "vida REL2 207.0 / REL 600.5 = 0.345 (en (0.25, 0.55); C midio 0.38x en su humo) · J REL2 0.757 (<= J REL 0.963 - 0.1) · p1/c1 REL2 0.765/0.993 · fam_nac REL2 2.598 (la puerta se abre AL NACER) · exposiciones A REL2 698.5 vs REL 565.0 (come MAS y vive MENOS)",
+   "frase": "EL FALLO MEDIDO SE REPRODUCE EN SEMILLAS NUEVAS: nodo_via=1 (REL2) acorta la vida a ~0.38x REL y hunde J (la puerta de v14 SUSTITUYE, no suma)"
+  },
+  "B2-5": {
+   "pasa": true,
+   "detalle": "(i) CORDURA DE LA COTA: R0 ORACULO acum=0 0.458 >= R0 REL2b 0.426 - 0.02 y vida ORACULO 604.75 >= 0.95x vida REL2b 601.0 -> si · (ii) EL MURO: R0 ORACULO acum=1 0.557 (fundadores 65.5) -> NO cruza 0.9 -> EL MURO ES EL MUNDO, no la herencia (H-1 y ERR-62 en pie) · p1/c1/J ORACULO 0.982/1.0/0.979",
+   "frase": "NODO ORACULO como COTA SUPERIOR (voto de A): (i) cordura de la cota; (ii) se REPORTA si ni el oraculo cruza R0 0.9 -- entonces el muro es el MUNDO, no la herencia"
+  },
+  "B2-CAUT": {
+   "pasa": null,
+   "detalle": "calibracion c*=-1.3 (rejilla (-1.2, -2.0), humo): c1 CAUTELA 0.572 vs REL_BAR 0.62 (|dif| <= 0.1): VALIDA · vida CAUTELA 236.25 vs REL_BAR 182.0 · J CAUTELA 0.191 vs REL_BAR 0.181 · p1 CAUTELA 0.613 · VEREDICTO DEL DIAGNOSTICO: NO reproduce -> lo que REL_BAR aporta NO es solo cautela: el diagnostico de C queda REFUTADO",
+   "frase": "B2-CAUT (REPORTADA, no es puerta): el brazo que puede refutar el diagnostico de F9-4bis"
+  },
+  "B2-2bBAR": {
+   "pasa": null,
+   "detalle": "vida REL2b_BAR 172.5 vs REL2b 601.0 · J 0.172 vs 0.96 · A12(vida REL2b > REL2b_BAR) 1.0 · p1/c1 0.573/0.602",
+   "frase": "CONTENIDO DEL CANDIDATO (REPORTADA): el candidato con el nodo barajado"
+  },
+  "F9-7": {
+   "pasa": null,
+   "detalle": "NO se corre REL_TARDE: F9-7 cayo en las TRES series del bloque 1 (A12 0.426 / 0.53 / 0.626; contraste interno 9/20, 7/20, 5/20). Queda declarada REFUTADA por el bloque 1 y no se rejuzga (regla 3).",
+   "frase": "F9-7 (REFUTADA x3 en el bloque 1; no es puerta de este bloque)"
+  }
+ },
+ "pasan": [
+  "F9-1",
+  "F9-2",
+  "F9-3",
+  "F9-4bis",
+  "F9-5",
+  "F9-6",
+  "F9-8",
+  "F9-9",
+  "F9-10",
+  "B2-4",
+  "B2-5"
+ ],
+ "caen": [
+  "B2-1",
+  "B2-2",
+  "B2-3"
+ ],
+ "reportadas": [
+  "B2-CAUT",
+  "B2-2bBAR",
+  "F9-7"
+ ]
+}

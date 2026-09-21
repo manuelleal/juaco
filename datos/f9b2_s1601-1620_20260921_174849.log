@@ -1,0 +1,123 @@
+FASE 9 — BLOQUE 2 · 2026-09-21 17:48:49 · semillas 1601-1620 · 14 brazos x 2 niveles de rep_acum x 20 = 560 corridas de T=100000
+  organismo_f9c.py sha 9dd1fb91ecec35ae · runner sha d6e86be50163119f
+  CAUTELA c* = -1.3 (calibrado en el humo; rejilla (-1.2, -2.0)) · DOSIS eta_s = 0.3
+  Pool 7 (ERR-86: --pool o JUACO_POOL; nunca un Pool grande con otras corridas vivas)
+
+ETAPA 1/4 — REGLA 14 (campo a campo contra corre_f9.BRAZOS)
+  OK   regla14 RENACE     17 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 NADA       25 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 M1         25 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REC        26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL        26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL_BAR    27 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL_FIJO   26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL_AZAR   26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+
+ETAPA 2/4 — identidad dentro del runner (regla 14, ERR-38)
+  OK   (1) apagado == organismo_f9 BIT A BIT (brazo REL)   dif []
+  OK   (2) nodo_via=1 == organismo_f9b BIT A BIT (salvo pa/pn, SOLO LECTURA)   dif ['f9'] f9 [] extra []
+  OK   (3) REL2b != REL y REL2b != REL2 (DEBEN diferir, ERR-38)   via_msg 1606 · fam_nac max REL2b 0 (debe ser 0) · REL2 4 (> 0) · pa/pn REL2b 367/2204
+  OK   (4) CAUTELA != NADA, DOSIS != REL, ORACULO != REL2b (DEBEN diferir)   mordidas CAUTELA 253 vs NADA 614
+  OK   (5) rep_acum=1 != rep_acum=0 en REL2b (DEBE diferir)   desc 14 -> 12
+  OK   (1) apagado == organismo_f9 BIT A BIT (brazo REL)   dif []
+  OK   (2) nodo_via=1 == organismo_f9b BIT A BIT (salvo pa/pn, SOLO LECTURA)   dif ['f9'] f9 [] extra []
+  OK   (3) REL2b != REL y REL2b != REL2 (DEBEN diferir, ERR-38)   via_msg 1729 · fam_nac max REL2b 0 (debe ser 0) · REL2 4 (> 0) · pa/pn REL2b 132/2221
+  OK   (4) CAUTELA != NADA, DOSIS != REL, ORACULO != REL2b (DEBEN diferir)   mordidas CAUTELA 213 vs NADA 576
+  OK   (5) rep_acum=1 != rep_acum=0 en REL2b (DEBE diferir)   desc 11 -> 15
+
+ETAPA 3/4 — series
+  [  87.5s] 28/560
+  [ 128.8s] 56/560
+  [ 170.3s] 84/560
+  [ 213.2s] 112/560
+  [ 255.5s] 140/560
+  [ 306.0s] 168/560
+  [ 363.6s] 196/560
+  [ 422.4s] 224/560
+  [ 484.2s] 252/560
+  [ 557.7s] 280/560
+  [ 633.4s] 308/560
+  [ 704.9s] 336/560
+  [ 754.3s] 364/560
+  [ 785.3s] 392/560
+  [ 825.7s] 420/560
+  [ 867.3s] 448/560
+  [ 907.3s] 476/560
+  [ 940.1s] 504/560
+  [ 973.1s] 532/560
+  [1007.4s] 560/560
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\f9b2_s1601-1620_20260921_174849.json (sha 6d4d94707ac5e4ce)
+
+ETAPA 4/4 — LAS PUERTAS (ERR-89: una linea por puerta del preregistro)
+  F9-1     PASA  ANCLA (BLOQUEANTE): el instrumento no se movio -- NADA reproduce NADA_CM de H-1 y RENACE reproduce el inmortal del bloque 2 (rango recalibrado con las CINCO series, ERR-92/93)
+          R0_NADA 0.138 en [0.097, 0.22] · vida_NADA 96.5 en [66.0, 170.0] · R0_RENACE 0.84 en [0.6, 1.4] · r_RENACE -11.5 en [-50.0, 25.0]
+  F9-2     PASA  EL NODO POR RELEVANCIA ALARGA LA VIDA DEL CUERPO NUEVO (heredada, misma letra)
+          vida REL 600.5 / NADA 96.5 = 6.223 (>= 2.5) · A12 1.0 (>= 0.85)
+  F9-3     PASA  MENOS DE UNA VIDA: el recien nacido RECHAZA lo malo en su PRIMER encuentro y NO a costa de dejar de comer (heredada, misma letra)
+          p1 REL 0.964 vs NADA 0.182 (>= 0.6, dif >= 0.3, A12 1.0 >= 0.85) · BALANCE: c1 1.0 vs 0.993 (>= NADA-0.1) y saciedad 0.532 vs 0.5 (>= 0.95x): si
+  F9-4bis  PASA  CONTENIDO, NO CAUTELA GENERICA -- con el indice BALANCEADO J = p1 + c1 - 1 (ERR-93; F9-4 original NO se rejuzga)
+          J REL 0.963 · J REL_BAR 0.181 (<= J NADA 0.168 + 0.1) · A12(J REL > REL_BAR) 1.0 (>= 0.85) · A12(vida REL > REL_BAR) 1.0 (>= 0.8) · p1/c1 REL_BAR 0.568/0.62 (la cautela generica sube p1 y hunde c1)
+  F9-5     PASA  RELEVANCIA > RECENCIA (las lecciones no expiran) (heredada, misma letra)
+          A12(vida REL > REC) 0.96 (>= 0.65) · R0 REL 0.395 / REC 0.237 = 1.667 (>= 1.15)
+  F9-6     PASA  RANKEAR, NO SOLO ACCEDER (heredada, misma letra)
+          A12(vida REL > REL_AZAR) 1.0 (>= 0.65) · vida REL_AZAR 330.0
+  F9-8     PASA  REPRODUCCION DESACOPLADA DE LA SACIEDAD (perilla APARTE) (heredada, misma letra)
+          R0 NADA acum1 0.222 / acum0 0.138 = 1.609 (>= 1.3) · Spearman del orden entre niveles 0.96 (>= 0.8, 14 brazos) · CLAUSULA H1-6 (R0 >= 0.9 con fundadores <= 2): NINGUN brazo -- H-1 y ERR-62 siguen en pie
+  F9-9     PASA  SEGURIDAD: contabilidad, las perillas NO son inertes (ERR-38) y el mundo no se comio la comida (heredada + las tres pruebas del mecanismo nuevo)
+          contabilidad 560/560 · listas por cuerpo OK 560/560 · frac_div REL 1.0 (>= 0.5) · lect_div REC 0.0 (= 0) · exposiciones A (ref NADA 801.0, exentos ('REL_FIJO', 'CAUTELA')) pobres ninguna · MECANISMO NUEVO: via_msg REL2b 7105.5 (> 0) · fam_nac_max REL2b 0.0 (= 0: LEER NO ABRE LA PUERTA) · fam_nac REL2 2.598 (> 0: con evidencia SI la abre) · frac_pa REL2b 0.106 (> 0: MORDER SI la abre) -> si
+  F9-10    PASA  LA RELEVANCIA VIVA NO ES MIEDO A TODO (heredada, misma letra)
+          REL_FIJO p1 0.974 (>= 0.6) pero R0 REL 0.395 / REL_FIJO 0.284 = 1.391 (>= 1.15) y A12(saciedad REL > REL_FIJO) 1.0 (>= 0.65)
+  B2-1     CAE   LEER LLENA LA MEMORIA, MORDER ABRE LA PUERTA: el candidato vive mas que REL y NO pierde discriminacion (no volvio la sustitucion)
+          vida REL2b 601.0 / REL 600.5 = 1.001 (>= 1.1) · J REL2b 0.96 vs J REL 0.963 (>= REL - 0.03) · A12(vida REL2b > REL) 0.481 (se reporta) · p1/c1 REL2b 0.964/1.0 · saciedad 0.522 vs REL 0.532
+  B2-2     CAE   R0 DEL LINAJE con la reproduccion desacoplada: el candidato con acum=1
+          R0 REL2b acum=1 0.484 (>= 0.5; rango predicho (0.5, 0.8)) · acum=0 0.426 · r acum=1 -82.5 · fundadores 82.5 · CLAUSULA H1-6 (R0 >= 0.9 con fundadores <= 2): NO cruza -- H-1 y ERR-62 SIGUEN EN PIE · techo del mundo: RENACE acum=1 1.16
+  B2-3     CAE   DOSIS (REL con eta_s al DOBLE) NO iguala al candidato: lo que paga son las DOS VIAS, no la cantidad de aprendizaje (SOLO SE LEE si B2-1 pasa)
+          A12(vida REL2b > DOSIS) 0.414 (>= 0.7) · R0 REL2b 0.426 / DOSIS 0.429 = 0.993 (>= 1.1) · vida DOSIS 603.75 · J DOSIS 0.965 · LECTURA CONDICIONADA (preregistro sec. 5): B2-1 CAYO -> B2-3 se REPORTA y NO se interpreta
+  B2-4     PASA  EL FALLO MEDIDO SE REPRODUCE EN SEMILLAS NUEVAS: nodo_via=1 (REL2) acorta la vida a ~0.38x REL y hunde J (la puerta de v14 SUSTITUYE, no suma)
+          vida REL2 207.0 / REL 600.5 = 0.345 (en (0.25, 0.55); C midio 0.38x en su humo) · J REL2 0.757 (<= J REL 0.963 - 0.1) · p1/c1 REL2 0.765/0.993 · fam_nac REL2 2.598 (la puerta se abre AL NACER) · exposiciones A REL2 698.5 vs REL 565.0 (come MAS y vive MENOS)
+  B2-5     PASA  NODO ORACULO como COTA SUPERIOR (voto de A): (i) cordura de la cota; (ii) se REPORTA si ni el oraculo cruza R0 0.9 -- entonces el muro es el MUNDO, no la herencia
+          (i) CORDURA DE LA COTA: R0 ORACULO acum=0 0.458 >= R0 REL2b 0.426 - 0.02 y vida ORACULO 604.75 >= 0.95x vida REL2b 601.0 -> si · (ii) EL MURO: R0 ORACULO acum=1 0.557 (fundadores 65.5) -> NO cruza 0.9 -> EL MURO ES EL MUNDO, no la herencia (H-1 y ERR-62 en pie) · p1/c1/J ORACULO 0.982/1.0/0.979
+  B2-CAUT  ----  B2-CAUT (REPORTADA, no es puerta): el brazo que puede refutar el diagnostico de F9-4bis
+          calibracion c*=-1.3 (rejilla (-1.2, -2.0), humo): c1 CAUTELA 0.572 vs REL_BAR 0.62 (|dif| <= 0.1): VALIDA · vida CAUTELA 236.25 vs REL_BAR 182.0 · J CAUTELA 0.191 vs REL_BAR 0.181 · p1 CAUTELA 0.613 · VEREDICTO DEL DIAGNOSTICO: NO reproduce -> lo que REL_BAR aporta NO es solo cautela: el diagnostico de C queda REFUTADO
+  B2-2bBAR ----  CONTENIDO DEL CANDIDATO (REPORTADA): el candidato con el nodo barajado
+          vida REL2b_BAR 172.5 vs REL2b 601.0 · J 0.172 vs 0.96 · A12(vida REL2b > REL2b_BAR) 1.0 · p1/c1 0.573/0.602
+  F9-7     ----  F9-7 (REFUTADA x3 en el bloque 1; no es puerta de este bloque)
+          NO se corre REL_TARDE: F9-7 cayo en las TRES series del bloque 1 (A12 0.426 / 0.53 / 0.626; contraste interno 9/20, 7/20, 5/20). Queda declarada REFUTADA por el bloque 1 y no se rejuzga (regla 3).
+
+TABLA (mediana por celda; acum = reproduccion desacoplada de la saciedad)
+  brazo      ac      R0       r     vida  cuerp     p1     c1       J    sac   expA   fund   div     via  famn    pa
+  RENACE     0     0.84   -11.5   713.75   79.0   None   None    None  0.553  527.0    0.0  None    None  None  None
+  RENACE     1     1.16    13.5   713.75   79.0   None   None    None  0.553  527.0    0.0  None    None  None  None
+  NADA       0    0.138  -206.5     96.5  243.5  0.182  0.993   0.168    0.5  801.0  206.5  None    None  None 0.076
+  NADA       1    0.222  -218.5     90.5  282.0  0.193  0.985   0.174  0.457  874.5  218.5  None    None  None 0.056
+  M1         0     0.17  -189.5    134.0  233.5  0.289  0.992   0.278  0.506  753.5  189.5  None    None  None 0.062
+  M1         1     0.25  -193.0   136.25  261.0  0.334  0.994   0.323   0.46  796.5  193.5  None    None  None 0.042
+  REC        0    0.237  -136.0    438.0  176.5  0.784  0.991   0.769  0.504  632.0  136.0   0.0    None  None 0.054
+  REC        1    0.367  -121.5   480.75  191.5  0.768  0.985   0.755  0.472  693.5  121.5   0.0    None  None 0.054
+  REL        0    0.395   -90.5    600.5  149.5  0.964    1.0   0.963  0.532  565.0   90.5   1.0    None  None 0.049
+  REL        1    0.483   -85.0   600.25  163.0  0.967    1.0   0.964  0.484  589.5   85.0   1.0    None  None  0.03
+  REL2b      0    0.426   -82.0    601.0  144.5  0.964    1.0    0.96  0.522  554.5   82.5   1.0  7105.5   0.0 0.106
+  REL2b      1    0.484   -82.5   590.25  158.5  0.966    1.0    0.96  0.482  581.5   82.5   1.0  7831.0   0.0 0.094
+  REL2       0    0.324  -139.5    207.0  208.5  0.765  0.993   0.757  0.591  698.5  139.5   1.0 10280.0 2.598 0.827
+  REL2       1    0.412  -131.5    246.5  226.0  0.757    1.0   0.748  0.567  740.0  131.5   1.0 11127.5  2.59 0.815
+  REL2b_BAR  0    0.178  -173.5    172.5  214.0  0.573  0.602   0.172  0.466  807.5  173.5   1.0 10549.5   0.0 0.073
+  REL2b_BAR  1    0.262  -175.0    181.0  239.0  0.578  0.601   0.172  0.436  866.0  175.0   1.0 11771.5   0.0 0.056
+  REL_BAR    0    0.165  -175.0    182.0  212.5  0.568   0.62   0.181  0.468  794.5  175.0   1.0    None  None 0.053
+  REL_BAR    1    0.246  -184.0    161.0  248.0  0.568  0.597   0.164  0.422  859.0  184.0   1.0    None  None 0.036
+  CAUTELA    0    0.205   -78.0   236.25  102.0  0.613  0.572   0.191  0.336  728.0   79.5  None    None  None 0.042
+  CAUTELA    1     0.39   -76.0    209.0  128.5  0.611  0.591   0.196  0.312  806.0   76.5  None    None  None 0.029
+  DOSIS      0    0.429   -85.0   603.75  147.0  0.974    1.0   0.965  0.514  599.5   85.0   1.0    None  None 0.062
+  DOSIS      1    0.499   -76.0   600.25  157.5   0.98    1.0   0.977  0.468  617.5   76.0   1.0    None  None 0.058
+  ORACULO    0    0.458   -76.0   604.75  144.5  0.982    1.0   0.979  0.525  550.5   76.5   1.0  7175.0   0.0 0.105
+  ORACULO    1    0.557   -65.5   617.25  148.5  0.986    1.0   0.982  0.484  578.0   65.5   1.0  7375.0   0.0 0.108
+  REL_FIJO   0    0.284   -96.5   576.25  135.0  0.974  0.845   0.806  0.355  401.5   96.5 0.972    None  None 0.021
+  REL_FIJO   1    0.363   -89.5    600.0  135.5  0.977  0.836   0.806  0.327  417.5   89.5 0.973    None  None 0.013
+  REL_AZAR   0    0.257  -135.5    330.0  180.5  0.721  0.988   0.707  0.524  651.5  135.5 0.978    None  None 0.058
+  REL_AZAR   1    0.344  -136.0   332.75  211.0  0.732   0.99   0.723   0.48  713.0  136.0 0.983    None  None 0.046
+
+PUERTAS QUE PASAN: ['F9-1', 'F9-2', 'F9-3', 'F9-4bis', 'F9-5', 'F9-6', 'F9-8', 'F9-9', 'F9-10', 'B2-4', 'B2-5']
+PUERTAS QUE CAEN : ['B2-1', 'B2-2', 'B2-3']
+REPORTADAS       : ['B2-CAUT', 'B2-2bBAR', 'F9-7']
+VEREDICTO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\f9b2_s1601-1620_veredicto_20260921_174849.json (sha 29d87b642537ce3c)
+
+Terminado en 1007.5s
