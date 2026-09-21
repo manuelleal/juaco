@@ -1,0 +1,93 @@
+[16:56:15 +    0.0s] ARRANQUE A-CAL — calibracion del CRITERIO DE TRONCO (serie). JUACO_POOL=7
+[16:56:15 +    0.0s] sha preregistro 6e9ddcdec5435f65  criterio_v3 b8393694c9f3890c  script 7f93eca0e45e167b  construye 8b3821434d2352fc  identidad 1356458f34134c83  umbrales 8ad6b7b472f12eb2  organismo_v3cal 148014f68cb01785  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_v142 17528d767fcebaf6
+[16:56:15 +    0.0s] brazos: OFF placebo=0 | PLACEBO placebo=1 | PEOR costo=costo_a=0.0015 (m=1.5)
+[16:56:15 +    0.0s] semillas: T-A 2161-2200 (n=40)  T-C ii 2121-2160 (n=40)
+[16:56:15 +    0.0s] letra v2: v2 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y A12(r) >= 0.50 pareado | v2 T-C (ii): A12(rev cand > tronco) >= 0.75 pareado
+[16:56:15 +    0.0s] letra v3: v3 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en r (LI > -10). SIN clausula A12. | v3 T-C (ii): NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en rev (LI > -10). La exigencia de GANAR se traslada a T-G.
+[16:56:15 +    0.4s] REGLA 11 — procesos python vivos (5), este es pid 1152
+[16:56:15 +    0.4s] ETAPA 1/6 — identidad (subproceso, un proceso): 47 identidades + 7 controles que DEBEN fallar.
+[16:56:15 +    0.4s]    -> SUBPROCESO (identidad): identidad_criterio_v3.py 20000
+[16:59:18 +  183.0s]       | ARNES A-CAL (criterio v3) — T=20000. instrumento organismo_v3cal
+[16:59:18 +  183.0s]       | --- I1: organismo_v3cal(vivo=0,n_nec=1,placebo=0) == organismo_v142 (TRONCO v14.2), 9 escenarios x 3 semillas
+[16:59:18 +  183.0s]       | --- I2: organismo_v3cal(desambiguar=0,placebo=0) == organismo_vivo_rep2 (rep2 VIVO/CUELLO_MIN, mini VIVO)
+[16:59:18 +  183.0s]       | --- I3: B-5 INERTE en los mundos del tronco: desambiguar=1 == desambiguar=0 (prediccion de v14.2)
+[16:59:18 +  183.0s]       | --- I4: placebo=0 == el defecto (no pasar la perilla)
+[16:59:18 +  183.0s]       | --- I5: invertir_vivo_en > T es INERTE
+[16:59:18 +  183.0s]       | --- I6: rango de muertes con placebo=1 dentro del rango con placebo=0 (6 semillas; SE REPORTA, no es puerta)
+[16:59:18 +  183.0s]       |     muertes placebo=0 [10, 16, 16, 17, 23, 26]  mediana 17
+[16:59:18 +  183.0s]       |     muertes placebo=1 [14, 17, 17, 21, 24, 24]  mediana 21
+[16:59:18 +  183.0s]       |     (T=20000: es una LECTURA, no una puerta; la puerta es la serie de 40 semillas)
+[16:59:18 +  183.0s]       | --- CONTROLES QUE DEBEN FALLAR (M1..M7)
+[16:59:18 +  183.0s]       | IDENTIDADES 47/47   CONTROLES QUE FALLAN COMO DEBEN 7/7   (182.4s)
+[16:59:18 +  183.0s]       | ARNES TOTAL: 54/54
+[16:59:18 +  183.0s]       | datos -> identidad_v3cal_20260921_165918.json
+[16:59:18 +  183.0s]       (183s)
+[16:59:18 +  183.0s]       JSON leido por prefijo+sello: identidad_v3cal_20260921_165918.json  sha256_16 = 9b1d29c51121be08
+[16:59:18 +  183.0s] ETAPA 2/6 — regla 14: los kwargs de cada brazo, CAMPO A CAMPO contra el montaje del tronco.
+[16:59:18 +  183.0s]    -> SUBPROCESO (regla 14): regla14_campo_a_campo.py
+[16:59:18 +  183.2s]       | 
+[16:59:18 +  183.2s]       | T-C (ii) / arm PEOR   (5 campos en el tronco)
+[16:59:18 +  183.2s]       |   campo                  tronco          brazo   igual
+[16:59:18 +  183.2s]       |   vivo                        1              1   SI
+[16:59:18 +  183.2s]       |   estims           ('A', 'B', 'C', 'D') ('A', 'B', 'C', 'D')   SI
+[16:59:18 +  183.2s]       |   costo                   0.001         0.0015   DECLARADO (§4 del preregistro)
+[16:59:18 +  183.2s]       |   costo_a                 0.001         0.0015   DECLARADO (§4 del preregistro)
+[16:59:18 +  183.2s]       |   n_nec                       2              2   SI
+[16:59:18 +  183.2s]       |   campos de MAS: desambiguar=1, invertir_vivo_en=50000, placebo=0
+[16:59:18 +  183.2s]       | 
+[16:59:18 +  183.2s]       | el brazo PEOR difiere de OFF SOLO en ['costo', 'costo_a'] y por el factor declarado m = 1.5: True
+[16:59:18 +  183.2s]       | el brazo PLACEBO difiere de OFF SOLO en ['placebo'] y vale k = 1: True
+[16:59:18 +  183.2s]       | 
+[16:59:18 +  183.2s]       | REGLA 14: OK
+[16:59:18 +  183.2s]       (0s)
+[16:59:18 +  183.2s] ETAPA 3/6 — T-C (ii) reversion en el mundo vivo (invertir_vivo_en=50000), 2121-2160 x ['OFF', 'PLACEBO', 'PEOR'] (Pool aqui).
+[16:59:46 +  211.2s]           T-C ii 20/120
+[17:00:14 +  238.8s]           T-C ii 40/120
+[17:00:43 +  268.4s]           T-C ii 60/120
+[17:01:11 +  296.1s]           T-C ii 80/120
+[17:01:39 +  324.3s]           T-C ii 100/120
+[17:02:07 +  351.9s]           T-C ii 120/120
+[17:02:07 +  351.9s]    CRUDO (120 corridas) -> critv3_20260921_165615_crudo_TCii.json  sha256_16 = 5cd335dcaf6e3dd1
+[17:02:07 +  351.9s]    PUERTA T-C (ii) [PLACEBO] v2 [v2 T-C (ii): A12(rev cand > tronco) >= 0.75 pareado] -> A12 0.575  rev 44.0 vs 37.5  expB_Q4 204.0/204.0 (trampa 3)  muertes 97.0/96.0 -> NO
+[17:02:07 +  351.9s]    PUERTA T-C (ii) [PLACEBO] v3 [v3 T-C (ii): NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en rev (LI > -10). La exigencia de GANAR se traslada a T-G.] -> media d 3.125 (sd 27.398, EE 4.332, n 40)  LI -4.001 > -10.0 -> PASA
+[17:02:07 +  351.9s]    PUERTA T-C (ii) [PEOR] v2 [v2 T-C (ii): A12(rev cand > tronco) >= 0.75 pareado] -> A12 0.6  rev 50.0 vs 37.5  expB_Q4 245.0/204.0 (trampa 3)  muertes 161.0/96.0 -> NO
+[17:02:07 +  351.9s]    PUERTA T-C (ii) [PEOR] v3 [v3 T-C (ii): NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en rev (LI > -10). La exigencia de GANAR se traslada a T-G.] -> media d 6.8 (sd 26.046, EE 4.118, n 40)  LI 0.026 > -10.0 -> PASA
+[17:02:07 +  351.9s] ETAPA 4/6 — T-A supervivencia (rep2, T=100000), brazos ['VIVO', 'CUELLO_MIN'] x ['OFF', 'PLACEBO', 'PEOR'], semillas 2161-2200 (Pool aqui).
+[17:02:35 +  380.5s]           T-A 20/240
+[17:03:03 +  408.6s]           T-A 40/240
+[17:03:32 +  437.3s]           T-A 60/240
+[17:04:02 +  467.4s]           T-A 80/240
+[17:04:29 +  494.5s]           T-A 100/240
+[17:04:56 +  520.7s]           T-A 120/240
+[17:05:13 +  538.6s]           T-A 140/240
+[17:05:37 +  562.3s]           T-A 160/240
+[17:06:03 +  587.8s]           T-A 180/240
+[17:06:27 +  611.7s]           T-A 200/240
+[17:06:53 +  637.8s]           T-A 220/240
+[17:07:23 +  668.5s]           T-A 240/240
+[17:07:24 +  668.6s]    CRUDO (240 corridas) -> critv3_20260921_165615_crudo_TA.json  sha256_16 = 5fb4f95d5848e484
+[17:07:24 +  668.6s]       T-A VIVO       [PLACEBO] muertes 93.5 vs 93.5 (razon 1.0 <= 1.1)  r -73.0 vs -75.0 (delta 2.0 >= -10.0)  A12 0.537  NI media 1.7 sd 19.048 LI -3.254  celdas 37.0 splits 7.0 (trampa 4)
+[17:07:24 +  668.6s]       T-A VIVO       [PEOR] muertes 153.0 vs 93.5 (razon 1.636 <= 1.1)  r -151.5 vs -75.0 (delta -76.5 >= -10.0)  A12 0.0  NI media -77.6 sd 16.503 LI -81.892  celdas 37.0 splits 7.0 (trampa 4)
+[17:07:24 +  668.6s]       T-A CUELLO_MIN [PLACEBO] muertes 72.5 vs 74.0 (razon 0.98 <= 1.1)  r -5.0 vs -5.5 (delta 0.5 >= -10.0)  A12 0.5  NI media -1.025 sd 17.755 LI -5.643  celdas 36.5 splits 6.5 (trampa 4)
+[17:07:24 +  668.6s]       T-A CUELLO_MIN [PEOR] muertes 132.5 vs 74.0 (razon 1.791 <= 1.1)  r -119.0 vs -5.5 (delta -113.5 >= -10.0)  A12 0.0  NI media -113.4 sd 18.964 LI -118.332  celdas 37.0 splits 7.0 (trampa 4)
+[17:07:24 +  668.6s]    PUERTA T-A [PLACEBO] v2 [v2 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y A12(r) >= 0.50 pareado] -> PASA
+[17:07:24 +  668.6s]    PUERTA T-A [PLACEBO] v3 [v3 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en r (LI > -10). SIN clausula A12.] -> PASA
+[17:07:24 +  668.6s]    PUERTA T-A [PEOR] v2 [v2 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y A12(r) >= 0.50 pareado] -> NO
+[17:07:24 +  668.6s]    PUERTA T-A [PEOR] v3 [v3 T-A: muertes <= 1.10 x tronco (mediana) y r >= tronco - 10 (mediana) y NO INFERIORIDAD pareada de una cola al 95 % (z = 1.645) con margen 10 en r (LI > -10). SIN clausula A12.] -> NO
+[17:07:24 +  668.6s] ETAPA 5/6 — veredicto de LAS DOS LETRAS sobre los mismos numeros.
+[17:07:24 +  668.6s]    PLACEBO  v2: T-A PASA · T-C ii NO · juntas NO
+[17:07:24 +  668.6s]    PLACEBO  v3: T-A PASA · T-C ii PASA · juntas PASA
+[17:07:24 +  668.6s]    PEOR     v2: T-A NO · T-C ii NO · juntas NO
+[17:07:24 +  668.6s]    PEOR     v3: T-A NO · T-C ii PASA · juntas NO
+[17:07:24 +  668.6s] ETAPA 6/6 — CALIBRACION por REPARTO del nulo (80 corridas = 40 OFF + 40 PLACEBO, misma ley), B=4000.
+[17:07:28 +  673.5s]    CAL T-A VIVO       (brazo suelto, diagnostico; nulo 80 corridas)  v3 n=40 0.993 | v2 n=40 0.527 | v3 n=20 0.881 | v2 n=20 0.558 || delta=-20: v3 0.000 v2 0.000
+[17:07:33 +  678.2s]    CAL T-A CUELLO_MIN (brazo suelto, diagnostico; nulo 80 corridas)  v3 n=40 0.981 | v2 n=40 0.523 | v3 n=20 0.836 | v2 n=20 0.564 || delta=-20: v3 0.000 v2 0.000
+[17:07:41 +  685.8s]    CAL T-A ENTERA (los dos brazos)  v3 n=40 0.974 | v2 n=40 0.285 | v3 n=20 0.744 | v2 n=20 0.337 || delta=-20: v3 0.000 v2 0.000
+[17:07:42 +  687.4s]    CAL T-C ii            (nulo 80 corridas)  v3 n=40 0.789 | v2 n=40 0.001 | v3 n=20 0.548 | v2 n=20 0.015 || delta=-20: v3 0.000 v2 0.000
+[17:07:42 +  687.4s]    CAL-1 [el PLACEBO pasa T-A v3 (n = 40, margen 10) con probabilidad 0.90-0.98] -> 0.974 -> ACERTADA
+[17:07:42 +  687.4s]    CAL-2 [el PLACEBO pasa T-A v2 (n = 20, con A12 >= 0.50) con probabilidad 0.25-0.40] -> 0.337 -> ACERTADA
+[17:07:42 +  687.4s]    CAL-3 [v3 RECHAZA un candidato desplazado delta = -20 puntos de r: pasa <= 0.05] -> 0.0 -> ACERTADA
+[17:07:42 +  687.4s]    CAL-4 [marginales PLACEBO vs tronco: A12 NO pareado en [0.40, 0.60] en las 6 comparaciones] -> {'r_VIVO': 0.57, 'muertes_VIVO': 0.528, 'r_CUELLO_MIN': 0.5, 'muertes_CUELLO_MIN': 0.516, 'rev': 0.552, 'muertes_rev': 0.521} -> ACERTADA
+[17:07:42 +  687.4s]    CAL-5 [el PLACEBO pasa T-C (ii) v2 (A12 >= 0.75, n = 20) con probabilidad 0.01-0.05] -> 0.015 -> ACERTADA
+[17:07:42 +  687.4s]    CAL-3b (perilla real): el brazo PEOR, juzgado arriba. Su delta_r MEDIDO se reporta; si |delta_r| < 20 el brazo PEOR es mas suave que el desplazamiento exacto y CAL-3 se lee solo de CAL-3a.
+[17:07:42 +  687.4s] datos -> critv3_20260921_165615.json  sha256_16 = c031c9585242d850
