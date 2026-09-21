@@ -823,3 +823,13 @@ una tabla que refiera a familia Y variante a la vez (BAR-T ≤ 5/20 y PAR ≥ 15
   **ERR-86: Pool(14) con otras corridas en curso → BrokenPipeError en Windows; el tamaño del Pool se fija por `JUACO_POOL`.**
   **ERR-87 (21 sep, coordinador): `lee_json` por `startswith` en los runners v13D/v13E leía el JSON de la ON (o de k5) como referencia;
   ningún veredicto cambia (verificado contra los JSON); corregido con prefijo + sello exacto en los dos. Detalle en el registro.**
+
+### 15.13 Cierre de v15f-v2 (21-sep-2026, 12:37–12:54; serie completa, 1002 s, Pool 10 vía `JUACO_POOL`)
+El paquete verificado 33/33 se corrió entero: v15f **NO ENTRA** al tronco bajo el CRITERIO DE TRONCO v2 — cae T-A (sobrevive; A₁₂(r) < 0.50 pareado
+en los dos brazos aunque las medianas de muertes y r cumplan), T-C (se desdice; A₁₂(rev) 0.55 contra 0.75 en el mundo vivo; la conducta del examen
+sí se desdice 20/20), T-D (sin alias; la puerta de v14.1 lee la vía rápida antes que la tabla en las 9 ALIAS, como predijo el creador A) y T-E
+(no regresión conductual; sólo 1 de 6 escenarios conserva la conducta). Pasa T-B (G1 1.0 / G2 0.999), T-F (coste ≤ 1.02×) y T-G (xor01 estricta
+1.000 ON contra 0.531 OFF). El brazo exploratorio `v15g` cruza C1/C2 de T-D pero cae igual en T-C(ii). El tronco sigue siendo v14.2; nada se
+rejuzga; sin ERR nuevos. Patrón: v15d, v15e y v15f caen los tres por reversión o conducta del examen → recomendación del coordinador: cerrar la
+línea de memoria de pares en la vía lenta (decisión del director). Mismo día: ERR-87, `registro/ESTADO.md`, `experimentos/INDICE.md`, agentes y
+skills fijos del equipo (EQUIPO.md, "Herramientas"), candidato B+A de la fase 5 en diseño por `juaco-creador`.

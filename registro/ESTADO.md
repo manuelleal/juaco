@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 13:45** (coordinador). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 15:10** (coordinador). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -21,8 +21,8 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
 
 ## Pendiente con paquete verificado (correr en este orden, un Pool a la vez)
-1. **v15f bajo el criterio v2** — `python experimentos/creacion_A/corre_v15f_v2.py` (arnés 33/33; esqueleto de 9 etapas corre entero y da INCOMPLETO
-   sin puertas medidas, `datos/v15f_v2_20260918_205648`). Decisión del director del 18-sep: sí.
+1. ~~v15f bajo el criterio v2~~ — **corrido y cerrado el 21-sep 12:37–12:54: NO ENTRA** (cae T-A, T-C, T-D, T-E; pasa T-B, T-F, T-G);
+   `datos/v15f_v2_20260921_123755.json` (`58538f00d49d0f8e`), detalle en el registro y HANDOFF 15.13. Patrón v15d/v15e/v15f: recomendado cerrar la línea.
 2. **dE5** (sorpresa del mundo en la boca a dosis 5) — después de v15f. Decisión del director: sí.
 3. **Fase 5, candidato B+A** (lectura conjuntiva de B + dos ganadoras de tipo distinto de A) — en diseño por `juaco-creador` desde el 21-sep
    en `experimentos/junta_fase5/BA/`. Nadie lo había probado junto.
@@ -44,5 +44,5 @@ solo lectura), `juaco-cronista` (Sonnet), `probador-haiku`, `explorador-haiku`. 
 procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
 ## Decisiones que le tocan al director
-1. Orden de corrida entre v15f-v2 y el candidato B+A cuando el paquete BA esté verificado (recomendado: v15f-v2 primero).
+1. Cerrar la línea de memoria de pares en la vía lenta (v15d/v15e/v15f caen por reversión; recomendado) o preregistrar v15g con sus siete puertas.
 2. Si la fase 9 se abre ahora con un creador o espera a que la fase 5 cierre.

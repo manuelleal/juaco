@@ -1,0 +1,130 @@
+[12:37:55 +    0.0s] ARRANQUE v15f bajo el CRITERIO v2 (serie).
+[12:37:55 +    0.0s] sha preregistro f3ad71467197a531  script c2d118ec603d01c6  construye_vivo_relevo 6942d42461832404  organismo_vivo_relevo 3b2cb0ca4c334779  identidad_vivo_relevo 90187f3c114500c1  bateria_v15f d63f5aee558eb6da  bateria_generaliza_v15f 0cd87d2632e0c66a  organismo_v15f_on 54d6efe0b564113c  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_vivo 20c0961c79de8825  organismo_v14 feefc88b1fd8d434  bateria_v14 72216f5415de0c86  corre_sal bfdc00bb48656337  corre_vivo_rep2 10ab45355883d98d  mini_vivo f3e86cbe6c17e6d7
+[12:37:56 +    0.4s] REGLA 11 — procesos python vivos (3), este es pid 9596
+[12:37:56 +    0.4s] ETAPA 1/9 — identidad (subproceso, un proceso): 28 identidades + 5 controles que DEBEN fallar.
+[12:37:56 +    0.4s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_vivo_relevo.py 20000
+[12:39:19 +   84.2s]       |                           M1 relevo ON != rep2 VIVO s1: DIFIERE (ok, el control fallo como debe)
+[12:39:19 +   84.2s]       |                            M2 v15g != v15f (ALIAS 326): DIFIERE (ok, el control fallo como debe)  |W[sal]| v15f 1.67 / v15g 0.0
+[12:39:19 +   84.2s]       |               M3 invertir_vivo_en=T//2 != rep2 VIVO s1: DIFIERE (ok, el control fallo como debe)
+[12:39:19 +   84.2s]       |                         M4 paja: CUELLO_MIN != VIVO s1: DIFIERE (ok, el control fallo como debe)
+[12:39:19 +   84.2s]       |          M5 memoria_pares mal escrita lanza ValueError: DIFIERE (ok, el control fallo como debe)  memoria_pares='xxx'
+[12:39:19 +   84.2s]       | 
+[12:39:19 +   84.2s]       | CONTROLES (M1-M5): 5/5 fallan como deben
+[12:39:19 +   84.2s]       | ARNES TOTAL: 33/33
+[12:39:19 +   84.2s]       | 
+[12:39:19 +   84.2s]       | --- I8 (NO es comprobacion): semilla ALIAS 326, sal muda, T=20000: apagada / v15f (relevo en la lenta) / v15g (casilla antes de la puerta) ---
+[12:39:19 +   84.2s]       |   apagada            |W[sal]| 1.58 por nec [-1.58, 0.0]  W[veneno] -1.58 por nec [-1.58, 0.0]  exp sal 727 veneno 644  splits 0 celdas 30 muertes 19  tabla None  ganadora None
+[12:39:19 +   84.2s]       |   v15f relevo        |W[sal]| 1.67 por nec [-1.67, 0.0]  W[veneno] -1.67 por nec [-1.67, 0.0]  exp sal 595 veneno 940  splits 0 celdas 30 muertes 20  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]  ganadora [[3, 5], [1, 3]]
+[12:39:19 +   84.2s]       |   v15g relevo_boca   |W[sal]| 0.0 por nec [0.0, 0.0]  W[veneno] -3.0 por nec [-3.0, 0.0]  exp sal 92 veneno 1346  splits 0 celdas 30 muertes 8  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]  ganadora [[0, 4], [0, 1]]
+[12:39:19 +   84.2s]       |   Lo que se busca: sin excepcion; la tabla de hambre lee 0.0 en la sal y -3.0 en el veneno; v15f la sabe pero la puerta lee la rapida.
+[12:39:19 +   84.2s]       (84s)
+[12:39:19 +   84.2s] ETAPA 2/9 — T-B generalizacion del candidato (121-140; subproceso con su Pool).
+[12:39:19 +   84.2s]    -> SUBPROCESO (T-B): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_generaliza_v15f.py organismo_v15f_on 20 --desde 121 --log
+[12:40:08 +  132.5s]       | [12:39:20 +   0.0s] instrumento organismo_v15gf_on 039eee1bba9ebdf0  organismo 54d6efe0b564113c  esta bateria 0cd87d2632e0c66a
+[12:40:08 +  132.5s]       | [12:39:36 +  16.7s]           10/40
+[12:40:08 +  132.5s]       | [12:39:52 +  32.8s]           20/40
+[12:40:08 +  132.5s]       | [12:40:07 +  47.5s]           30/40
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s]           40/40
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s] 
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s]   OK    K  cobertura del primer encuentro: 20/20
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s]   PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 20/20
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s]   PASA  G2 conducta al primer encuentro: px0 0.999 (>=0.55), azar 0.436, px0>azar 20/20
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s]         divisiones 20  celdas 50  muertes 279
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s] 
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s] VEREDICTO bateria_generaliza (organismo_v15f_on): K_cobertura=True G1_valor=True G2_conducta=True
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s] *** organismo_v15f_on CONSERVA la generalización de la Etapa 3
+[12:40:08 +  132.5s]       | [12:40:08 +  48.1s] datos -> regresion_generaliza_v15f_organismo_v15f_on_20260921_123920.json  sha256_16 = 1e3c21e332b0a4e1
+[12:40:08 +  132.5s]       (48s)
+[12:40:08 +  132.5s]    T-B {'medido': True, 'json': 'regresion_generaliza_v15f_organismo_v15f_on_20260921_123920.json', 'G1': 1.0, 'G1_azar': 0.5, 'G2': 0.998568713657896, 'G2_azar': 0.43623750833855923, 'K': 20, 'bateria': {'K_cobertura': True, 'G1_valor': True, 'G2_conducta': True}, 'pasa': True}
+[12:40:08 +  132.5s] ETAPA 3/9 — examen v3' del candidato en 121-140 (subproceso con su Pool): T-C (i), T-E, T-F.
+[12:40:08 +  132.5s]    -> SUBPROCESO (examen candidato): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\bateria_v15f.py 20 --desde 121 --log
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]         splits=[3, 3, 4, 3, 4, 3, 3, 4, 2, 2, 2, 3, 3, 3, 3, 2, 4, 3, 3, 3]  celdas_max=34  techo=0/20
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  1 E2L       20/20  [W_A≈+1:20/20 W_B≈-3:20/20 solap→0:20/20]
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]         splits=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  celdas_max=33  techo=0/20
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/20 lo pasan (<=1)  W_A=[-1.88, -1.65, -1.57, -1.55]
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 20/20 lo pasan (>=19)
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 71, violaciones ninguna
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  4c C∩B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.98, mordidas de C Q3+Q4 mediana 9)
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s] 
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[12:43:47 +  351.7s]       | [12:43:47 + 218.8s] *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[12:43:47 +  351.7s]       | [12:43:47 + 219.0s] datos -> examen_v15f_20260921_124008.json  sha256_16 = c0493a7764b787dd
+[12:43:47 +  351.7s]       (219s)
+[12:43:47 +  351.7s] ETAPA 4/9 — examen v3' del tronco en 121-140: JSON existente o subproceso.
+[12:43:47 +  351.7s]    -> SUBPROCESO (examen tronco): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\organismo\bateria_v14.py 20 --desde 121 --log
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]         splits=[3, 3, 4, 3, 4, 3, 3, 4, 2, 2, 2, 3, 3, 3, 3, 2, 4, 3, 3, 3]  celdas_max=34  techo=0/20
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  1 E2L       20/20  [W_A≈+1:20/20 W_B≈-3:20/20 solap→0:20/20]
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]         splits=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  celdas_max=33  techo=0/20
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/20 lo pasan (<=1)  W_A=[-1.88, -1.65, -1.57, -1.55]
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 20/20 lo pasan (>=19)
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 71, violaciones ninguna
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  4c C∩B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.99, mordidas de C Q3+Q4 mediana 10)
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s] 
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=True 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[12:47:44 +  588.5s]       | [12:47:43 + 236.3s] *** v13 CUMPLE EL CRITERIO v3 con 20 semillas. Por el preregistro: CONGELAR v13 como tronco (si pasa tambien X2 y X3).
+[12:47:44 +  588.5s]       | [12:47:44 + 236.5s] datos -> examen_v14_20260921_124347.json  sha256_16 = 163d0f3edc7cc814
+[12:47:44 +  588.5s]       (237s)
+[12:47:44 +  588.5s]    T-E E1   13/20 NO  {'veneno B total <= 1.10 x tronco': 17, 'come A Q4 >= 0.8 x tronco': 16}  pesos {'W_B≈-3': 20}  veneno total med cand/tronco (51.0, 52.0)
+[12:47:44 +  588.5s]    T-E E2   3/20 NO  {'come B Q4 >= 50 (T-C i)': 20, 'muerde A Q4 <= 1.10 x tronco': 3}  pesos {'W_A→-3 y W_B→+1': 20}  veneno total med cand/tronco (203.5, 210.0)
+[12:47:44 +  588.5s]    T-E E2I  19/20 PASA  {'veneno C total <= 1.10 x tronco': 19, 'tasaA Q4 >= 80% Q2': 20}  pesos {'W_C≤-2.5': 19}  veneno total med cand/tronco (45.0, 46.5)
+[12:47:44 +  588.5s]    T-E E2J  16/20 NO  {'come D Q4 >= 0.8 x tronco': 19, 'veneno B total <= 1.10 x tronco': 17}  pesos {'W_D≥0.85': 20}  veneno total med cand/tronco (47.5, 48.0)
+[12:47:44 +  588.5s]    T-E E2K  14/20 NO  {'come D Q4 >= 0.8 x tronco': 16, 'veneno B total <= 1.10 x tronco': 18}  pesos {'W_D≥0.8': 20}  veneno total med cand/tronco (46.0, 49.5)
+[12:47:44 +  588.5s]    T-E E2L  16/20 NO  {'veneno B total <= 1.10 x tronco': 18, 'come A Q4 >= 0.8 x tronco': 18}  pesos {'W_B≈-3': 20}  veneno total med cand/tronco (49.0, 51.5)
+[12:47:44 +  588.5s]    T-C (i) come B Q4 >= 50: {'medido': True, 'comeB_Q4': 20, 'pasa': True}
+[12:47:44 +  588.5s]    T-F examen: {'celdas': {'cand': 32.0, 'tronco': 32.0, 'razon': 1.0, 'pasa': True}, 'splits': {'cand': 2.0, 'tronco': 2.0, 'razon': 1.0, 'pasa': True}, 'deaths': {'cand': 132.0, 'tronco': 129.5, 'razon': 1.019, 'pasa': True}}
+[12:47:44 +  588.5s] ETAPA 5/9 — T-D bloque de la sal con organismo_vivo_relevo: 9 ALIAS + 9 LIMPIAS x {OFF, v15f, v15g} (Pool aqui).
+[12:48:03 +  608.3s]           T-D 18/54
+[12:48:23 +  628.4s]           T-D 36/54
+[12:48:42 +  646.9s]           T-D 54/54
+[12:48:42 +  647.0s]    CRUDO (54 corridas) -> v15f_v2_20260921_123755_crudo_TD.json  sha256_16 = bb8549a18b892983
+[12:48:42 +  647.0s]    T-D letra (importada de creacion_B/corre_codigo.UMBRALES): {'C1': 'D1-ALIAS |W[sal]| <= 0.3 en >= 8/9, mediana <= 0.1', 'C2': 'D1-ALIAS W_hambre[veneno] <= -2.8 en >= 8/9 y <= -2.5 en 9/9', 'C6': 'D1-LIMPIA |W[sal]| <= 0.3 en 9/9 y W_hambre[veneno] <= -2.8 en 9/9'}
+[12:48:42 +  647.0s]    T-D OFF   C1 {'n': 0, 'med': 1.45, 'pasa': False}  C2 {'n28': 0, 'n25': 0, 'med': -1.45, 'pasa': False}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 3835.0  muertes alias/limpias 75.0/35.0  -> NO
+[12:48:42 +  647.0s]    T-D v15f  C1 {'n': 0, 'med': 1.56, 'pasa': False}  C2 {'n28': 0, 'n25': 0, 'med': -1.56, 'pasa': False}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 3614.0  muertes alias/limpias 76.0/39.0  -> NO
+[12:48:42 +  647.0s]    T-D v15g  C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 459.0  muertes alias/limpias 37.0/31.0  -> PASA
+[12:48:42 +  647.0s] ETAPA 6/9 — T-C (ii) reversion en el mundo vivo (invertir_vivo_en=50000), semillas 321-340 x {OFF, v15f, v15g} (Pool aqui).
+[12:49:05 +  670.3s]           T-C ii 18/60
+[12:49:28 +  692.6s]           T-C ii 36/60
+[12:49:49 +  713.6s]           T-C ii 54/60
+[12:49:51 +  715.9s]           T-C ii 60/60
+[12:49:51 +  715.9s]    CRUDO (60 corridas) -> v15f_v2_20260921_123755_crudo_TCii.json  sha256_16 = 33100bee7a14d904
+[12:49:51 +  715.9s]    T-C (ii) v15f  A12(rev ON > OFF) 0.55  rev med 44.5 (OFF 37.5)  come B Q4 201.5  muerde A Q4 166.0  muertes 99.0/96.0  -> NO
+[12:49:51 +  715.9s]    T-C (ii) v15g  A12(rev ON > OFF) 0.55  rev med 43.0 (OFF 37.5)  come B Q4 189.5  muerde A Q4 150.0  muertes 93.5/96.0  -> NO
+[12:49:51 +  715.9s] ETAPA 7/9 — T-A supervivencia en el mundo vivo (rep2, T=100000, costo=0.001), brazos ['VIVO', 'CUELLO_MIN'] x ['OFF', 'v15f'], semillas 301-320 (Pool aqui).
+[12:49:51 +  715.9s]    letra: muertes <= 1.10 x tronco (mediana) y r = descendientes - muertes >= tronco - 10; pareado por semilla A12 >= 0.50  (el 'tronco' de cada brazo es ese mismo brazo con la perilla APAGADA = organismo_vivo_rep2 bit a bit)
+[12:50:11 +  735.6s]           T-A 18/80
+[12:50:31 +  755.7s]           T-A 36/80
+[12:50:51 +  775.6s]           T-A 54/80
+[12:51:11 +  796.0s]           T-A 72/80
+[12:51:15 +  800.0s]           T-A 80/80
+[12:51:15 +  800.0s]    CRUDO (80 corridas) -> v15f_v2_20260921_123755_crudo_TA.json  sha256_16 = 193d8009af2a9d2c
+[12:51:15 +  800.0s]    T-A VIVO       v15f  muertes 92.5 vs tronco 95.0 (razon 0.974 <= 1.1)  r -73.5 vs -73.0 (delta -0.5 >= -10.0)  A12(r) 0.425 >= 0.5  A12(menos muertes) 0.5  desc 20.0/18.5  celdas 33.0/33.0  splits 3.0/3.0  -> NO
+[12:51:15 +  800.0s]    T-A CUELLO_MIN v15f  muertes 78.5 vs tronco 72.0 (razon 1.09 <= 1.1)  r -11.5 vs -8.5 (delta -3.0 >= -10.0)  A12(r) 0.45 >= 0.5  A12(menos muertes) 0.45  desc 65.0/65.0  celdas 33.0/33.0  splits 3.0/3.0  -> NO
+[12:51:15 +  800.0s]    T-A -> NO
+[12:51:15 +  800.0s] ETAPA 8/9 — T-G capacidad nueva: mundo de REGLA (T=200000) con los kwargs del tronco, reglas ['xor01', 'px0', 'azar'], semillas 181-200, ON/OFF pareado (Pool aqui).
+[12:51:15 +  800.0s]    letra: xor01 ESTRICTA >= 0.75 con 8 ejemplos, kwargs del tronco; azar en [0.35, 0.65]; px0 ON >= OFF   kwargs del tronco (importados de corre_v15f.KW14, ERR-41): {'eta_s': 0.15, 'clip_s': 10.0, 'puerta': 3, 'mask_rel': 2, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'puerta_pat': 5, 'pat_shuf': 0, 'pat_min': 1}
+[12:51:49 +  834.3s]           T-G 18/120
+[12:52:23 +  868.0s]           T-G 36/120
+[12:52:57 +  901.5s]           T-G 54/120
+[12:53:28 +  932.6s]           T-G 72/120
+[12:53:45 +  950.1s]           T-G 90/120
+[12:54:19 +  984.1s]           T-G 108/120
+[12:54:37 + 1002.0s]           T-G 120/120
+[12:54:37 + 1002.1s]    CRUDO (120 corridas) -> v15f_v2_20260921_123755_crudo_TG.json  sha256_16 = 609c1727d1d7c858
+[12:54:37 + 1002.1s]    T-G xor01 ESTRICTA ON 1.000 (OFF 0.531; pareado ON>OFF 18/20; gana(0,1) 20/20)  px0 ON 1.000 / OFF 1.000 (pareado 17/20)  azar 0.600  -> PASA
+[12:54:37 + 1002.1s] ETAPA 9/9 — veredicto de las siete puertas del CRITERIO DE TRONCO v2.
+[12:54:37 + 1002.1s]    T-A: NO
+[12:54:37 + 1002.1s]    T-B: PASA
+[12:54:37 + 1002.1s]    T-C: NO
+[12:54:37 + 1002.1s]    T-D: NO
+[12:54:37 + 1002.1s]    T-E: NO
+[12:54:37 + 1002.1s]    T-F: PASA
+[12:54:37 + 1002.1s]    T-G: PASA
+[12:54:37 + 1002.1s]    Brazo exploratorio v15g (NO candidato): T-D PASA, T-C(ii) NO
+[12:54:37 + 1002.1s] VEREDICTO: v15f NO ENTRA — cae T-A, T-C, T-D, T-E. Una sola puerta caida basta (regla 2 de v2), sin modos intermedios.
+[12:54:37 + 1002.1s] datos -> v15f_v2_20260921_123755.json  sha256_16 = 58538f00d49d0f8e

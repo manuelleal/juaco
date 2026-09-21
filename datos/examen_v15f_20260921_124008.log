@@ -1,0 +1,40 @@
+[12:40:08 +   0.0s] === Batería v13 — CRITERIO v3, 20 semillas (121..140), Pool(14) ===
+[12:40:08 +   0.0s] sha organismo_v13 54d6efe0b564113c  bateria_v13 d63f5aee558eb6da  preregistro b46b59b0251ed417
+[12:40:08 +   0.2s] ETAPA 1/3 — criterio 5, identidad de instrumentos (84 comparaciones)...
+[12:40:41 +  33.4s]           21/84  (21 idénticas)
+[12:40:59 +  51.0s]           42/84  (42 idénticas)
+[12:41:30 +  82.6s]           63/84  (63 idénticas)
+[12:41:48 +  99.8s]           84/84  (84 idénticas)
+[12:41:48 +  99.8s]   v13(eta_s=0, puerta=None) == v11: 42/42
+[12:41:48 +  99.8s]   v13(eta_s=0, puerta=None, div_signo=False) == v10: 42/42
+[12:41:48 +  99.8s] ETAPA 2/3 — 180 corridas (9 etapas x 20 semillas)...
+[12:42:15 + 127.2s]           40/180
+[12:42:42 + 153.9s]           80/180
+[12:43:06 + 178.7s]           120/180
+[12:43:31 + 203.2s]           160/180
+[12:43:47 + 218.8s]           180/180
+[12:43:47 + 218.8s] ETAPA 3/3 — criterios.
+[12:43:47 + 218.8s] 
+[12:43:47 + 218.8s]   FALLA 1 E1        16/20  [venenoQ4<Q1:16/20 W_A≈+1:20/20 W_B≈-3:20/20]
+[12:43:47 + 218.8s]         splits=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  celdas_max=30  techo=0/20
+[12:43:47 + 218.8s]   PASA  1 E2        20/20  [W_A→-3:20/20 W_B→+1:20/20 come B Q4≥50:20/20]
+[12:43:47 + 218.8s]         splits=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]  celdas_max=30  techo=0/20
+[12:43:47 + 218.8s]   FALLA 1 E2I       19/20  [W_C≤-2.5:19/20 W_A≈+1:20/20 W_B≤-2.8:20/20 tasaA Q4≥80%Q2:20/20]
+[12:43:47 + 218.8s]         splits=[3, 3, 0, 3, 1, 3, 0, 0, 0, 0, 0, 1, 3, 2, 3, 2, 0, 0, 3, 0]  celdas_max=33  techo=0/20
+[12:43:47 + 218.8s]   PASA  1 E2J       20/20  [W_D≥0.85:20/20 W_B≤-2.7:20/20]
+[12:43:47 + 218.8s]         splits=[3, 2, 2, 3, 3, 2, 3, 1, 3, 3, 3, 3, 1, 3, 3, 3, 3, 3, 2, 3]  celdas_max=33  techo=0/20
+[12:43:47 + 218.8s]   PASA  1 E2K       20/20  [W_D≥0.8:20/20 W_B≤-2.4:20/20]
+[12:43:47 + 218.8s]         splits=[3, 3, 4, 3, 4, 3, 3, 4, 2, 2, 2, 3, 3, 3, 3, 2, 4, 3, 3, 3]  celdas_max=34  techo=0/20
+[12:43:47 + 218.8s]   PASA  1 E2L       20/20  [W_A≈+1:20/20 W_B≈-3:20/20 solap→0:20/20]
+[12:43:47 + 218.8s]         splits=[3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]  celdas_max=33  techo=0/20
+[12:43:47 + 218.8s]   PASA  2 celdas<=45: {'E1': 20, 'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20, 'E2L': 20, 'E2I-misma': 20}
+[12:43:47 + 218.8s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/20 lo pasan (<=1)  W_A=[-1.88, -1.65, -1.57, -1.55]
+[12:43:47 + 218.8s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 20/20 lo pasan (>=19)
+[12:43:47 + 218.8s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 160/160  []
+[12:43:47 + 218.8s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 20/20, E2L con conflicto 20/20; corridas que dividen 71, violaciones ninguna
+[12:43:47 + 218.8s]   PASA  4c C∩B=3 misma valencia: guarda 20/20, splits==0 20/20, W_C<=-2.5 20/20  (W_C mediana -2.98, mordidas de C Q3+Q4 mediana 9)
+[12:43:47 + 218.8s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 20/20; t>=50k {'E2': 20, 'E2I': 20, 'E2J': 20, 'E2K': 20}; E2L termina <25k 20/20
+[12:43:47 + 218.8s] 
+[12:43:47 + 218.8s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=True 4d_causa=True
+[12:43:47 + 218.8s] *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[12:43:47 + 219.0s] datos -> examen_v15f_20260921_124008.json  sha256_16 = c0493a7764b787dd
