@@ -871,3 +871,10 @@ de una vida") pasa con efecto grande: el recién nacido que lee el nodo por rele
 predicción del creador: conectarse tarde no cuesta (A₁₂ 0.426). F9-8: la reproducción desacoplada sube R₀ sin reordenar y NINGÚN brazo cruza
 H1-6: H-1 y ERR-62 siguen en pie. Nivel 9 sigue en 30 % hasta la réplica 1521–1540 (en cola tras dE5-v2 y la réplica de BA-v). Datos
 `f9_cuerpo_nuevo_s1501-1520_20260921_151405` (veredicto `fadb7bcee33d7f54`); commits `e38c841`, `893dd3a`.
+**15.19 (21-sep 15:22–15:37): cierre de dE5 bajo el CRITERIO DE TRONCO v2, semillas 2001–2080.** Paquete 68/68 corrido entero: dE5 **NO ENTRA** — cae
+T-A (A₁₂(r) 0.4 en VIVO aunque muertes y r cumplan), T-C (ii: A₁₂(rev) 0.5, revierte menos, no más), T-E (los seis escenarios, siempre mordiendo más
+veneno que el tronco) y T-G (recupera 3.23× más rápido con pareado 20/20 y apagado 20/20, y el control `CONST` sin información recupera más lento que
+el apagado, razón 1.281×; pero el veneno tras el cambio sube 1.128× sobre 1.10 y esa cláusula tumba la puerta). Pasa T-B, T-C (i), T-D (B-5 repara
+el alias con la dosis encendida) y T-F. El creador firmó ~40 % y avisó en el humo que T-A iba peor; se confirmó. Comparado con v15f-v2, dE5 invierte
+T-D y T-G; los dos caen T-A y T-C (ii) con A₁₂ 0.4–0.55, indistinguibles del tronco en el mundo vivo pareado: observación transversal para el
+director, sin recalibrar. Tronco v14.2; dE5 queda como órgano medido con coste, no candidato. Sin ERR nuevos. Commits `9ac631c`, `2a35577`.

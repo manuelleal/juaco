@@ -1,0 +1,30 @@
+[14:54:17 +    0.0s] ARRANQUE dE5 bajo el CRITERIO DE TRONCO v2 (HUMO, un proceso, sin Pool). JUACO_POOL=14
+[14:54:17 +    0.0s] sha preregistro 83058970f935105f  script eba87816bec5379b  construye f3c2fb1f8e65a3d3  identidad ad87ee341d84b119  organismo_v15_dE5 7e2c9aed98047fee  _on 00aaa9563c30247b  g 70739b19cbe4c32b  g_on 094413aa2cefbc79  bateria_v15_dE5 f59b3a7711858a47  bateria_generaliza_v15_dE5 5da24990763da402  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_v142 17528d767fcebaf6  organismo_v142g 9e5f566cd6a7a4d2  bateria_v142 6375d90e531b06e6  bateria_generaliza_v142 e5929942647756a5
+[14:54:17 +    0.0s] dosis dE5 = {'eta_pred': 0.03, 'ema_pred': 0.05, 'clip_e': 3.0, 'k_sorp': 5.0};  control de CANTIDAD C = 0.0 (se fija en el humo, §7 del preregistro)
+[14:54:17 +    0.0s] HUMO 1/4 — identidad (subproceso, T=20000): 61 identidades + 7 controles que DEBEN fallar.
+[14:54:17 +    0.0s]    -> SUBPROCESO (identidad): identidad_v15_dE5.py 20000
+[14:58:28 +  250.9s]       | ARNES dE5 — T=20000. candidato organismo_v15_dE5 / organismo_v15_dE5g
+[14:58:28 +  250.9s]       | --- I1: organismo_v15_dE5(vivo=0,n_nec=1,dosis OFF) == organismo_v142 (TRONCO v14.2), 9 escenarios x 3 semillas
+[14:58:28 +  250.9s]       | --- I2: organismo_v15_dE5(desambiguar=0,dosis OFF) == organismo_vivo_rep2 (mundo vivo, sal, mini_vivo)
+[14:58:28 +  250.9s]       | --- I3: organismo_v15_dE5g(dosis OFF) == organismo_v142g (mundo de regla px0/azar y mundo AB)
+[14:58:28 +  250.9s]       | --- I4: B-5 INERTE en los mundos del tronco: desambiguar=1 == desambiguar=0 (prediccion de v14.2)
+[14:58:28 +  250.9s]       | --- I5: el predictor SOLO MIDE (eta_pred=0.03, k_sorp=0) == apagado por completo
+[14:58:28 +  250.9s]       | --- I6: organismo_v15_dE5g(mundo='AB', DOSIS ON) == organismo_v15_dE5(vivo=0,n_nec=1, DOSIS ON) en claves comunes
+[14:58:28 +  250.9s]       | --- I7: invertir_vivo_en > T es INERTE
+[14:58:28 +  250.9s]       | --- CONTROLES QUE DEBEN FALLAR (M1..M7)
+[14:58:28 +  250.9s]       | IDENTIDADES 61/61   CONTROLES QUE FALLAN COMO DEBEN 7/7   (250.5s)
+[14:58:28 +  250.9s]       | ARNES TOTAL: 68/68
+[14:58:28 +  250.9s]       (251s)
+[14:58:28 +  250.9s]    ARNES TOTAL: 68/68   (esperado ARNES TOTAL: 68/68)
+[14:58:28 +  250.9s] HUMO 2/4 — T-G: RECUPERACION, semilla 2061, T=200000, invertir_en=100000: OFF / dE5 (2 corridas).
+[14:59:00 +  282.2s]    OFF   s2061  recup   4356 (t_ext_B 104356, censurado False)  veneno tras el cambio 54  muertes 263/126  sesgo_q [0.0, 0.0, 0.0, 0.0]  se apaga sola True  W {'A': -2.98, 'B': 1.0, 'C': -0.5, 'D': 1.5}
+[14:59:00 +  282.2s]    dE5   s2061  recup   1097 (t_ext_B 101097, censurado False)  veneno tras el cambio 51  muertes 263/117  sesgo_q [0.103238, 0.000139, 0.114829, 0.000238]  se apaga sola True  W {'A': -2.97, 'B': 1.0, 'C': -0.5, 'D': 1.5}
+[14:59:00 +  282.2s]    razon dE5/OFF en esta semilla = 0.252  (4.0x mas rapido). NO ES LA PUERTA.
+[14:59:00 +  282.2s]    *** C (control de CANTIDAD, brazo CONST) = media del sesgo de dE5 en Q3-Q4 = 0.058. Se escribe en el preregistro §10 y se pasa a la serie con JUACO_CONST=0.058.
+[14:59:00 +  282.2s] HUMO 3/4 — T-A: mundo vivo rep2, brazo VIVO, semilla 2021: OFF / dE5 (2 corridas).
+[14:59:18 +  300.4s]    OFF   s2021  r -64  descendientes 25  muertes 89 [49, 40]  celdas 30 splits 0 des_splits 0  sesgo_q [0.0, 0.0, 0.0, 0.0]
+[14:59:18 +  300.4s]    dE5   s2021  r -88  descendientes 18  muertes 106 [54, 52]  celdas 30 splits 0 des_splits 0  sesgo_q [0.040242, 0.0, 0.0, 0.0]
+[14:59:18 +  300.4s] HUMO 4/4 — T-D: bloque de la sal (sal muda), semilla ALIAS 326: OFF / dE5 (2 corridas).
+[14:59:33 +  315.6s]    OFF   s326  |W[sal]| 0.0 [-0.0, 0.0]  W[veneno] -3.0 [-3.0, -0.0]  exp sal 556 veneno 7551  des_splits 6  splits 6 celdas 36 muertes 38
+[14:59:33 +  315.6s]    dE5   s326  |W[sal]| 0.0 [-0.0, 0.0]  W[veneno] -3.0 [-3.0, -0.0]  exp sal 546 veneno 6915  des_splits 5  splits 5 celdas 35 muertes 33
+[14:59:33 +  315.6s] datos -> dE5_v2_humo_20260921_145417.json  sha256_16 = 4f5e1f08c2bd5d6b
