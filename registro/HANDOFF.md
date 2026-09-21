@@ -850,3 +850,9 @@ Organización: `registro/ESTADO.md` (página viva), `experimentos/INDICE.md`, ag
 en 921–940 por la colisión de semillas, réplica por regla 12. **Decisiones pendientes del director:** (1) cerrar la línea de memoria de pares en la
 vía lenta (v15d/v15e/v15f) o preregistrar v15g; (2) BA-v con criterio propio y `b4b`, o cerrar BA; (3) abrir la fase 9 ahora o esperar. Quien
 retome: `registro/ESTADO.md` primero, luego esta sección, luego las tres últimas entradas del registro.
+**15.16 (21-sep 16:30): CIERRE de la línea de memoria de pares en la vía lenta.** Decisión del director, delegada al coordinador con su
+recomendación. Cinco candidatos y un brazo exploratorio en tres mecanismos (v15c sustituye la lineal, medido inválido por ERR-38; v15d
+suma/enruta, cae por reversión E2 0/20; v15e reescribe el residuo, se desdice 20/20 pero pierde XOR 0.500; v15f con R crudo y relevo,
+cruza XOR 1.000 bajo v1 pero bajo v2 cae T-A, T-C, T-D y T-E; v15g invierte el orden de las puertas y cruza el alias pero cae T-C igual)
+no entran al tronco. Ninguno se rejuzga; v14.2 sigue de tronco. Sigue disponible: XOR como prior estructural declarado (`xor_7`) y `v15g`
+como reapertura posible SOLO con preregistro propio y siete puertas. Entrada "LÍNEA CERRADA: memoria de pares en la vía lenta" en el registro.

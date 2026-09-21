@@ -5586,3 +5586,43 @@ Vocabulario permitido: *"BA y BA-v cumplen el criterio numérico crudo de la mis
 
 ### ERR-89 (21-sep-2026, 14:05; hallado por el cronista al registrar las series BA; verificado por el coordinador)
 **Qué se observó:** el preregistro de BA fija R6 (coste: muertes ≤ 1.5× y okU ≥ −0.10 contra la celda base `b4b`/k1v0) como puerta que "puede matar al candidato", pero `corre_familias_ba.py` no la calcula ni la imprime, y `b4b` no estaba entre las celdas de la serie. **Causa:** instrumento (puerta preregistrada sin juez). **Veredictos que toca: ninguno** (nada se declaró; R6 queda INCOMPLETO en vez de PASA/CAE). **Corrección:** cualquier serie futura de BA/BA-v incluye `b4b` en `--celdas` y el runner imprime R6 con su letra. **Regla derivada (para creadores):** toda puerta del preregistro tiene una línea del runner que la juzga, y el humo la muestra; una puerta que el runner no imprime no existe.
+
+### LÍNEA CERRADA: memoria de pares en la vía lenta (v15c–v15g), 21-sep-2026 (decisión del director, 16:30, delegada al coordinador con su recomendación: "llena las 3 de una vez" → cierre tomado)
+
+Cinco candidatos y un brazo exploratorio, cuatro mecanismos de tabla de pares distintos, dos criterios de tronco (v1 y v2), ninguno
+entra. El origen de la línea (`xor_7`, bloque 3 XOR, 18 sep 07:43 y su réplica 07:47) sigue en pie sin cambios: con 8 ejemplos el
+organismo no puede *seleccionar* el rasgo XOR (9 de 15 hipótesis empatan con residuo 0) pero una memoria de un golpe por combinación
+de pares co-activos generaliza a los 12 nunca vistos con **1.000 registro y estricta en dos series independientes** (semillas 121–140
+y 141–160; n* = 7 y 10; gana (0,1) 40/40; rigging 0; azar en banda), declarado **prior estructural**, no "aprende XOR". Ese resultado
+motivó llevar la memoria de pares a la vía lenta del tronco. Los cinco intentos siguientes de hacerlo, cerrados hoy:
+
+| candidato | mecanismo (una frase) | qué ganó | por qué cayó | entrada del registro |
+|---|---|---|---|---|
+| **v15c** | sustituye la lectura lineal por la casilla del par ganador (`memoria_pares`) | xor01 **0.812** estricta (contra 0.438 sin memoria), gana (0,1) 20/20; tras ERR-38 conserva la generalización lineal (**G1 1.000 / G2 0.997**, 101–120) | su V1 (examen v3′) **nunca se midió con la perilla encendida**: "no entra" se sostiene por falta de medida válida; superado por v15d | "Candidato v15c" (18 sep 08:06) + ENMIENDA ERR-38 (08:44/08:46) |
+| **v15d** | la casilla del par ganador SUMA o ENRUTA con la lineal | conserva la generalización lineal (**G1 1.000 / G2 0.999**, 101–120); cruza XOR con 8 ejemplos (**0.875** estricta `suma`, 121–140) | el examen cae por **REVERSIÓN**: no se desdice (**E2 0/20**) y la vía rápida no consolida (**E1 0/20**), 121–140 | "Candidato v15d" (18 sep 08:38; V2a corregida 08:46) |
+| **v15e** | tabla REESCRIBIBLE: sobrescribe el residuo `R − lineal` después del paso de la lineal | **SE DESDICE** (E2 **20/20**) y la rápida **CONSOLIDA** (E1 **20/20**), 141–160; conserva generalización (**G1 1.000 / G2 0.997**) | **PIERDE XOR** (xor01 **0.500** contra 0.438 apagada; se exigía ≥ 0.75), 141–160: el residuo hereda la deriva de la lineal | "Candidato v15e" (18 sep 09:37) |
+| **v15f** (criterio v1) | tabla con **R CRUDO**, sobrescritura y **RELEVO** a la lineal cuando no conoce la combinación | **GENERALIZA** (G1 1.000 / G2 0.998), **SE DESDICE** (E2 20/20), **CONSOLIDA** (E1 20/20), **CRUZA XOR** (**1.000** contra 0.500), 161–180 | cae por la LETRA de v1: subcriterios que presuponen aprendizaje gradual (**ERR-44**: "veneno Q4<Q1" 17/20, `W_C ≤ −2.5` 17/20) y coste (splits +16 %) | "Candidato v15f" (18 sep 10:00) |
+| **v15f** (criterio v2, semillas nuevas) | mismo mecanismo, siete puertas de `CRITERIO_TRONCO_v2.md` | **T-B** G1 1.0 / G2 0.999 (121–140); **T-F** celdas ×1.0, splits ×1.0, muertes ×1.019; **T-G** xor01 estricta ON 1.0, pareado 18/20 contra OFF 0.531 | cae **T-A** (A₁₂(r) 0.425 / 0.45 < 0.50); **T-C** (A₁₂(rev) **0.55 < 0.75**, 321–340); **T-D** (la puerta de v14.1 lee la rápida ANTES que la tabla: C1 0/9 mediana 1.56); **T-E** (E1 13/20, E2 **3/20**, E2J 16, E2K 14, E2L 16; sólo E2I 19/20) | "Candidato v15f bajo el CRITERIO DE TRONCO v2" (21-sep, `58538f00d49d0f8e`) |
+| **v15g** (brazo exploratorio, nunca candidato) | mismo instrumento, la casilla decide ANTES que la puerta de v14.1 (`relevo_boca=1`) | cruza **T-D** (C1 9/9 mediana 0.0, C2 9/9 mediana −3.0): el orden de las puertas, no la tabla, causaba la caída de v15f en T-D | cae **T-C (ii)** igual que v15f (A₁₂(rev) **0.55**); sin preregistro propio con siete puertas | misma entrada que v15f-v2; "NO candidato" en `PREREGISTRO_v15f_v2.md` §2 |
+
+**Lo que se declara.** Vocabulario permitido: *"con 8 ejemplos XOR exige un prior de pares, y con él bastan 7–10 exposiciones"*
+(xor_7, sostenido); *"la tabla de pares en la vía lenta generaliza y cruza XOR con 8 ejemplos en la configuración del tronco, pero no
+se desdice (v15d), o se desdice y pierde XOR (v15e), o generaliza, se desdice y cruza XOR sin encarecer el examen y aun así no
+sobrevive de forma pareada, no se desdice en el mundo vivo ni conserva la conducta del examen (v15f bajo el criterio v2)"*; *"en el
+alias de código el orden de las puertas decide: cuando la casilla consulta ANTES que la puerta de v14.1 (v15g) el alias se repara;
+después (v15f), no"*. Prohibido: "la memoria de pares entra al tronco"; "v15f entra"; "v15g es candidato"; "cae sólo por el orden de
+las puertas"; "aprende XOR", "entiende la combinación" (ERR-35).
+
+**Por qué es patrón y no ruido.** Tres mecanismos distintos de la misma familia (suma/enruta; residuo reescribible; R crudo con relevo)
+caen los tres por la misma clase de fallo, reversión o conducta del examen, en rangos de semillas distintos (121–140; 101–120 y
+141–160; 121–140 y 321–340). Cada candidato corrigió exactamente lo que refutó al anterior y el siguiente encontró un cuello nuevo:
+una tabla que escribe de un golpe la primera consecuencia de una combinación termina o no consolidando la vía rápida, o perdiendo la
+identificabilidad del prior de pares, o fallando la conducta pareada bajo el criterio más exigente.
+
+**Lo que NO se cierra.** XOR como capacidad sigue disponible, medida y declarada, como el prior estructural de `xor_7` (dos series,
+1.000/1.000). `v15g` puede reabrirse únicamente con preregistro propio, semillas nuevas y las siete puertas completas.
+
+**Qué queda de instrumento (no congelado, no tronco).** Los cinco paquetes verificados quedan en `experimentos/creacion_A/`
+(`PREREGISTRO_v15c/d/e/f.md`, `PREREGISTRO_v15f_v2.md`, `organismo_v15c/d/e/f.py` con `_on` y gemelos `organismo_v15gc/gd/ge/gf.py`,
+`organismo_vivo_relevo.py`, `construye_*`, `identidad_*` (33/33 en el último), `bateria_*`, `corre_v15c/d/e/f.py`, `corre_v15f_v2.py`).
+Nada de esta línea queda en borrador. `v14.2` sigue siendo el tronco; nada se rejuzga.

@@ -15,7 +15,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | 1–4 (asociación, desaprender, generalizar, capacidad) | cerrados; nivel 4 con el negativo del alias reparado por B-5 (v14.2) | 18-sep |
 | 5 (comunicación / transmisión) | **75 %**: N1 cerrado; referencia de FAMILIA exacta (k = 3) o de VARIANTE (sufijo), no ambas con la misma tabla; junta del 19-sep no cerró (C refutado ×2, B cae ×2, A pasa R1–R5 en una serie sin réplica, PAR 13 < 15) | 19-sep |
 | 6 (mapa, dos metas y rodeo) | replicado: elige entre dos comidas recordadas y rodea el veneno recordado; no planifica; canje del mapa estructural, v14 sin mapa | 17-sep |
-| 7 (composición, XOR) | 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco | 18-sep |
+| 7 (composición, XOR) | 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
 | 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |
 | 9 (autonomía / modelo de sí mismo) | 30 %: allostasis mínima medida; r = descendientes − muertes ordena como la supervivencia; H-1: la muerte real no sostiene linajes | 18-sep |
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
@@ -44,7 +44,7 @@ solo lectura), `juaco-cronista` (Sonnet), `probador-haiku`, `explorador-haiku`. 
 procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
 ## Decisiones del director (21-sep-2026, 16:30: "llena las 3 de una vez, manda grupos de agentes" → las tres tomadas con la recomendación)
-1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Cierre en redacción (cronista).
+1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Registrada (HANDOFF 15.16).
 2. **BA-v pasa a candidato aparte** con criterio propio absoluto (ERR-90), `b4b` en la serie para R6 y diagnóstico de las 104 muertes. Paquete en construcción
    (creador, `experimentos/nivel05_familia_variante_BAv/`).
 3. **Fase 9 abierta ahora**: primer bloque "cuerpo nuevo aprende en menos de una vida" en diseño (creador, `experimentos/nivel09_cuerpo_nuevo/`).
