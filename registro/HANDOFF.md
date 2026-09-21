@@ -889,3 +889,9 @@ y hoy hay cuatro (125, 119, 94.0, 88.5): candidato a ERR de rango de ancla. Nive
 rango del ancla F9-1 se calibró con dos series y hoy hay cuatro → enmienda (rango [70, 170], `F9_VIDA_NADA_MIN`), tercera serie 1621–1640 con
 predicción escrita. Síntesis y decisiones en `experimentos/junta_20260921/SINTESIS.md`. Regla 15 de EQUIPO. En construcción para mañana: gemelo numba
 de la fase 9 (compilador) y el informe de necesidades reales donde vender el sistema (`registro/investigacion/NECESIDADES_20260921.md`).
+**15.22 (21-sep 16:06–16:24): tercera serie de `BA-v` bajo ERR-90, 2101–2120 — CIERRE de la línea BA/BA-v.** N = 16 (cuatro emisores sin mensaje), así
+que P0 cae para las seis celdas. `BA-v` cae además P3 (BAR-T 6) y P6 (dist(PAR) 11/16, margen de 4 semillas contra 2 y 1 antes); pasa P1, P2, P4, P5 y R6
+(1.40×). Tres series ERR-90, tres caídas de P6 (13/19, 14/18, 11/16): patrón, no ruido (bajo el modelo de tasa única de A, fallar las tres ≈ 0.5 %);
+la explicación estructural de B (una de tres ganadoras de variante comparte casilla con la hermana, 37/37) cierra la cuenta. La dirección del mensaje es
+exacta (1/32, hermana fuera del grupo); lo que falla es el valor. Nada se rejuzga; `BA-vm` (B) y `V-5` (C) quedan preregistrados sin correr. Nivel 5
+sigue en 75 %. Entrada "LÍNEA CERRADA: BA / BA-v (fase 5)" en el registro. Commit `84e5247`.

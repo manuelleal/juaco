@@ -5784,3 +5784,50 @@ serie de BA-v cae; B explica BAR-H por una colisión estructural (una de tres ga
 predijo BAR-H 6/4 contra 7/4 medidos) y deja BA-vm como preregistro; C deja V-5. Q3: F9-4 con índice J = p1 + c1 − 1 y brazo CAUTELA; hallazgo de C
 refutando su propia hipótesis (leer el nodo por las dos vías acorta la vida 0.38× porque la puerta de v14 sustituye, no suma) → bloque 2 C-F9B′
 ("leer llena la memoria; morder abre la puerta", identidad 66/66, 15 %). Porcentajes por nivel consensuados: 5 → 75, 6 → 50, 7 → 70, 8 → 40, 9 → 30.
+
+### LÍNEA CERRADA: BA / BA-v (fase 5), 21-sep-2026 (decisión del director, delegada al coordinador; la tercera serie 2101–2120 confirma la tercera caída de P6 bajo ERR-90)
+
+Preregistro `experimentos/nivel05_familia_variante_BAv/PREREGISTRO_bav.md` (sha `f2f6b320b5f43d67` en los tres logs). Instrumento por anclas: `corre_familias_bav.py` (`4453754a9921e349`), `construye_familias_bav.py` (`944cafb8fc5687d8`), `organismo_familias_bav.py` (`2dca0a3e239481f0`), `identidad_familias_bav.py` (**61/61**). Tres series bajo el criterio propio **ERR-90** (puertas ABSOLUTAS): `961–980` (crudo `198f08856aeaf607`, `e02b139`), réplica `981–1000` (`d1a796485d8d5fd4`, `022ff09`), tercera por regla 12 `2101–2120` (`86258b1f27093f9a`, `84e5247`). Celdas `b4b,b5k3,b6suf,A1,BA-v,BA-v-sh`; T = 100 000. Regla 14: 33 campos idénticos al bloque 6 en las tres. P-I2 (emisor): 19/20, 18/20 (989, 993 excluidas) y **16/20 en 2101–2120** (2105, 2108, 2111, 2116: cuatro emisores sin mensaje): con N = 16 < 18, **P0 cae para las seis celdas** de esa serie; el resto de puertas no depende de N.
+
+**Réplica 981–1000 (N = 18):**
+
+| celda | P0 | P1 CANAL ≥ 15 | P2 CORTADO ≤ 5 | P3 BAR-T ≤ 5 | P4 VALOR ≤ 5 | P5 BAR-H ≤ 10 | P6 dist ≥ 15 y PAR0 ≤ 5 | P7 R6 | MISIÓN |
+|---|---|---|---|---|---|---|---|---|---|
+| b4b | 18 pasa | 17 | 0 | 6 CAE | 2 | 12 CAE | dist 9, PAR0 7 CAE | 1.00× · +0.0000 pasa | no |
+| b5k3 | 18 pasa | 18 | 0 | 7 CAE | 3 | 15 CAE | dist 8, PAR0 3 CAE | 1.07× · −0.0833 pasa | no |
+| b6suf | 18 pasa | 18 | 4 | 12 CAE | 3 | 7 | dist 18, PAR0 6 CAE | 0.89× · −0.0833 pasa | no |
+| A1 | 18 pasa | 18 | 0 | 6 CAE | 1 | 4 | dist 15, PAR0 1 pasa | 1.36× · −0.1666 CAE | no |
+| **BA-v** | 18 pasa | 18 | 0 | 4 | 4 | 4 | dist **14**, PAR0 2 **CAE** | **1.50× exacto** · −0.0833 pasa | **no** |
+| BA-v-sh | 18 pasa | **1 CAE** | 0 | 2 | 1 | 2 | dist 4 CAE | 2.78× CAE | no |
+
+**Tercera serie 2101–2120 (N = 16):**
+
+| celda | P0 | P1 | P2 | P3 | P4 | P5 | P6 | P7 R6 | MISIÓN |
+|---|---|---|---|---|---|---|---|---|---|
+| b4b | 16 CAE | 13 CAE | 0 | 2 | 3 | 10 | dist 6 CAE | 1.00× pasa | no |
+| b5k3 | 16 CAE | 15 | 1 | 2 | 4 | 10 | dist 5 CAE | 1.35× pasa | no |
+| b6suf | 16 CAE | 13 CAE | 1 | 4 | 4 | 2 | dist 14 CAE | 1.27× · −0.1666 CAE | no |
+| A1 | 16 CAE | 15 | 2 | 4 | 3 | 5 | dist 13 CAE | 1.71× CAE | no |
+| **BA-v** | 16 CAE | 15 | 1 | **6 CAE** | 3 | 9 | dist **11** CAE | 1.40× pasa | **no** |
+| BA-v-sh | 16 CAE | **3 CAE** | 1 | 2 | 3 | 3 | dist 3 CAE | 1.47× pasa | no |
+
+**Cuadro completo de `BA-v` en las cinco series:**
+
+| | 921–940 (relativa) | 941–960 (relativa) | 961–980 (ERR-90) | 981–1000 (ERR-90) | 2101–2120 (ERR-90) |
+|---|---|---|---|---|---|
+| dist(PAR) | **18/19** | **17/19** | 13/19 | 14/18 | 11/16 |
+| BAR-T | 2 | 4 | 4 | 4 | **6** |
+| CORTADO | 0 | 0 | 0 | 0 | 1 |
+| BAR-H | 4 | 7 | 7 | 4 | 9 |
+| muertes | 46.0 | 104.0 | 41.0 | 54.0 | 38.5 |
+| misión cruda / letra | SÍ (R4 cae) | SÍ (R2+R3 caen) | no, P6 (margen 2) | no, P6 (margen 1) | no, P0+P3+P6 (margen 4) |
+
+**Lo que se declara.** La **dirección** del mensaje alcanza 1 de los 32 estímulos y la hermana queda **fuera del grupo** en 19/19 semillas (`junta_20260921/B/salida_estructura_q2.txt`); el **valor falla por la colisión estructural** que describió B: con `var_cubre=1` el tipo VARIANTE son tres pares mixtos y **exactamente una de las tres ganadoras de variante comparte casilla con la hermana** en 37/37 semillas: el mensaje escribe su +R dentro del propio canal que tenía que vetarlo, y por eso `dist(PAR)` no cruza 15 aunque BAR-T y BAR-H queden bajos; **el control barajado no lleva el mensaje** (`BA-v-sh` CANAL 2/19, 1/18, 3/16); **R6 pasa contra `b4b`** en las tres series (1.4643×, 1.50×, 1.40×). Vocabulario permitido: *"BA-v cumple el número crudo de la misión bajo el criterio relativo del bloque 6 (18/19 y 17/19), pero bajo su propio criterio absoluto cae P6 en las tres series medidas (13/19, 14/18, 11/16); la dirección del mensaje ya es exacta y lo que falla es el valor, por una colisión estructural en la que una de las tres ganadoras de variante comparte casilla con la hermana; el control barajado confirma que la lectura es referencial; R6 pasa contra la base"*. Prohibido: "BA-v entra"; "BA-v es candidato"; "la fase 5 avanza"; "R6 refuta la línea"; tratar el margen de una semilla como excepción del patrón.
+
+**Por qué es patrón y no ruido.** Las tres caídas de P6 quedan a márgenes 2, 1 y 4 semillas y no se agrupan en el borde: la tercera se aleja. El modelo de tasa única del creador A (agregado 48/57 = 0.842 en las tres primeras series, χ² 5.54 < 5.99) daba una caída aislada de cada 5.9 series; fallar las tres ERR-90 seguidas bajo ese modelo tiene probabilidad conjunta del orden de 0.5 % (cuenta del cronista, no de script). La explicación estructural de B, con una predicción de BAR-H que acertó (6.0 / 7 y 4.0 / 4), cierra la cuenta: hay una casilla que siempre puede prestarle valor a la hermana.
+
+**Lo que NO se cierra.** La referencia de **familia exacta (k = 3) O de variante (sufijo)** sigue declarada (bloque 6). `BA-vm` (B, `junta_20260921/B/PREREGISTRO_bavm.md`: la variante vota con su peor casilla, `dentro='minv'`, memoria nueva cero, 18 %, R6 al 35 % de riesgo) y `V-5` (C, §6: B-5 trasplantado a la tabla de referencia, 25 %) quedan como **preregistros disponibles, no en cola**.
+
+**Predicciones del creador de BA-v (§5, antes de la primera serie; misma letra en las tres):** P0 19 (18–20) acertada ×2, refutada en la tercera (cae el emisor, no el candidato); P1, P2, P4, P5 acertadas ×3; P3 3 (1–6) acertada ×2 y en el borde en la tercera (6, cae la letra); **P6 dist 16 (13–19, 60 %) refutada** (13, 14, 11: la letra ≥ 15 cae las tres); P7 R6 1.4× (0.8–2.6×, 45 %) acertada ×3 y la letra pasa las tres; MISIÓN (55 %) y TODO (20 %) refutadas ×3. El creador acertó el mecanismo grueso y erró sistemáticamente en un solo número, dist(PAR), justo el que la colisión de B explica.
+
+**Qué queda.** Nivel 5 sigue en **75 %**. `v14.2` sigue como tronco. Commits: `20d9656`, `e02b139`, `022ff09`, `84e5247`, `9519dfc` (BA-vm), `5e1b22f` (V-5), `94fcf2b` (síntesis).

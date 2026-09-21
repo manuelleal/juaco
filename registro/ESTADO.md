@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 19:10** (coordinador; junta sintetizada, ERR-91/92, tercera serie BA-v y tercera serie fase 9 en marcha). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 19:35** (coordinador; línea BA/BA-v cerrada, tercera serie de la fase 9 corriendo). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -26,8 +26,9 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 2. ~~dE5 bajo el criterio v2~~ — **corrido y cerrado el 21-sep 15:22–15:37: NO ENTRA** (cae T-A, T-C ii, T-E, T-G; pasa T-B, T-C i, T-D, T-F);
    recupera 3.23× más rápido (pareado 20/20; el control sin información recupera más lento que el apagado) pero muerde más veneno en los seis
    escenarios de T-E y 1.128× tras el cambio. `datos/dE5_v2_20260921_152224.json` (`ea74d601313d4ee9`); HANDOFF 15.19. Órgano medido, no candidato.
-3. ~~Fase 5, candidato BA~~ — **corrido 921–940 + réplica 941–960 (21-sep): misión cruda cumplida ×2 con BA y BA-v, pero ninguno pasa las
-   cinco puertas relativas del bloque 6; BA-v muere 104 en la réplica; R6 incompleto (ERR-89).** Nada se declara; nivel 5 sigue en 75 %.
+3. ~~Fase 5, línea BA/BA-v~~ — **CERRADA (21-sep): BA-v cae P6 en las tres series bajo ERR-90 (13/19, 14/18, 11/16); la dirección del mensaje es
+   exacta (1/32, hermana fuera del grupo) y el valor falla por una colisión estructural (una de tres ganadoras de variante comparte casilla con la
+   hermana, 37/37); R6 pasa contra b4b en las tres.** `BA-vm` y `V-5` quedan preregistrados, no en cola. Nivel 5 sigue en 75 %. HANDOFF 15.22.
 4. **Fase 9**: cuerpo nuevo que aprende en menos de una vida (nodo leído por relevancia; conexión desde el nacimiento; reproducción desacoplada
    de la saciedad). Sin preregistro todavía.
 
@@ -47,9 +48,8 @@ procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
 ## Decisiones del director (21-sep-2026, 16:30: "llena las 3 de una vez, manda grupos de agentes" → las tres tomadas con la recomendación)
 1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Registrada (HANDOFF 15.16).
-2. **BA-v como candidato aparte (ERR-90, puertas absolutas): serie 961–980 corrida, CAE P6** (dist(PAR) 13/19 < 15, 2 semillas) y pasa las
-   otras siete, incluida R6 con base b4b (única celda que la pasa). Misión cruda 2/3 series, letra 0/1. Réplica 981–1000 en cola después de dE5-v2;
-   si cae P6 otra vez, BA-v se cierra. HANDOFF 15.17.
+2. **CERRADA** la línea BA/BA-v bajo ERR-90: P6 cae en las tres series (961–980, 981–1000, 2101–2120), márgenes 2, 1 y 4 semillas; patrón,
+   no ruido. Registrada (HANDOFF 15.22).
 3. **Fase 9 corrida (1501–1520 y réplica 1521–1540)**: 8 de 10 puertas pasan y el patrón se repite en la réplica, pero el ancla F9-1 cae en la réplica por 1.5 (HANDOFF 15.20); (ancla exacta, "menos de una vida" sin costo en comida ni saciedad, relevancia > recencia
    y > azar, reproducción desacoplada); CAEN F9-4 (nodo barajado también alarga la vida, con cautela genérica) y F9-7 (conectarse tarde no cuesta).
    Nada se declara con la letra completa. Réplica 1521–1540 en cola tras dE5-v2 y la réplica de BA-v. HANDOFF 15.18.
