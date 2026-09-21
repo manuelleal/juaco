@@ -6024,3 +6024,30 @@ Reportadas: **B2-CAUT** (c* = −1.3 válida: c1 CAUTELA 0.579 vs REL_BAR 0.585;
 **Vocabulario permitido:** *"con una serie sin replicar, el nodo por relevancia produce contenido que discrimina (J 0.96) donde el nodo barajado (0.137), la ausencia de nodo (0.175) y una cautela genérica calibrada para igualar al barajado (0.187) no lo hacen; es la primera vez que las cuatro puertas del cuerpo nuevo pasan juntas en una serie; el candidato que evita que la lectura cuente como evidencia no se hunde como el que sí lo hace (0.36×, reproducido), pero tampoco vive más ni supera a duplicar el aprendizaje; ni un nodo con la tabla verdadera cruza R₀ 0.90: el muro es el mundo, no la herencia"*. Prohibido: "F9-4bis se declara"; "el bloque 2 pasa"; "el candidato entra"; "el diagnóstico de C se refuta" sin decir que es por la cláusula de vida; "población", "generación", "evoluciona", "enseña".
 
 **Qué queda.** Réplica 1601–1620 en marcha. Si repite F9-4bis con F9-2, F9-3 y F9-9, se declara el conjunto y la propuesta de nivel 9 sube a **50 %**; si no, sigue en 40 %. C-F9B′ no se declara candidato (B2-1 y B2-3 caen con margen, no piden réplica). Siguiente bloque de la fase 9: cambiar el mundo (mapa / más de un cuerpo), con el gemelo numba (×46) para series de 40 semillas.
+
+### LÍNEA CERRADA: BA-vm / BA-vM (fase 5), 21-sep-2026 (decisión del director, delegada al coordinador): **CAE por la letra (P3, P4, R6) — primera vez que una celda cruza P6 bajo ERR-90 (dist(PAR) 16/20), al precio de morir 9.6× la base con 12 de 20 semillas en régimen de hambre; la ablación BA-vM tampoco entra; con esto la fase 5 queda con BA, BA-v, BA-vm y BA-vM cerrados hoy — nivel 5 sigue en 75 %**
+
+Preregistro `experimentos/junta_20260921/B/PREREGISTRO_bavm.md` (`dentro='minv'`: la variante vota con su peor casilla escalada, sólo en el tipo VARIANTE; ablación `dentro='min'` en los dos tipos; memoria nueva cero; criterio ERR-90 sin tocar). Instrumento por anclas sobre `organismo_familias_bav.py` (`2dca0a3e239481f0`; la perilla `dentro` que ERR-88 halló muerta en A1, ahora conectada): `construye_familias_bavm.py` (`0803238682b187df`), `organismo_familias_bavm.py` (`501f55b5a179e5aa`), `identidad_familias_bavm.py` (**62/62**: apagado ≡ BA-v y ≡ organismo_v14; reimplementación externa ≡ `W_tabla` 32/32 para `minv` y `min`; BA-vm ≠ BA-v ≠ BA-vM; barajado difiere), `corre_familias_bavm.py` (`213cd784fe2fa690`; regla 14: 33 campos idénticos al bloque 6). Semillas 1541–1560 (réplica 1561–1580 no corrida: cae por la letra). Crudos `experimentos/junta_20260921/B/serie_bavm_s1541-1560_20260921_171821.log` / `_crudo.json` (`44cdfc90dd199621`). 2542 s (Pool 6, en paralelo). Commits `4557e96` (paquete, antes de correr), `f8f1287` (crudos).
+
+| celda | P1 CANAL | P2 CORTADO | P3 BAR-T | P4 VALOR | P5 BAR-H | P6 dist / PAR0 | P7 R6 (muertes / okU) | MISIÓN |
+|---|---|---|---|---|---|---|---|---|
+| b4b | 19 | 5 | **10 CAE** | 5 | **18 CAE** | 11 **CAE** | 1.00× pasa | no |
+| b5k3 | 20 | 1 | **9 CAE** | 2 | **15 CAE** | 6 **CAE** | 0.83× pasa | no |
+| b6suf | 19 | **8 CAE** | **16 CAE** | **9 CAE** | **11 CAE** | 19 pasa | 0.94× · okU −0.17 CAE | no |
+| A1 | 19 | 5 | **9 CAE** | **6 CAE** | 8 | 15 pasa | 1.47× pasa | no |
+| BA-v | 20 | 2 | **7 CAE** | **6 CAE** | 9 | 16 pasa | **10.06× CAE** | no |
+| **BA-vm** | 20 | 2 | **10 CAE** | **7 CAE** | 8 | **16 pasa** (PAR0 0) | **9.64× CAE** · okU −0.17 | **no** |
+| BA-vM | 20 | 1 | **6 CAE** | 3 | 8 | 14 **CAE** | **8.09× CAE** | no |
+| BA-vm-sh | **2 CAE** | 2 | 2 | 2 | 2 | 0 **CAE** | 13.78× CAE | no |
+
+Régimen de hambre (semillas con muertes ≥ 200 de 20): b4b 0, b5k3 5, b6suf 3, A1 7, BA-v 10, **BA-vm 12**, BA-vM 11, barajado 14. Muertes: BA-v 322.0, BA-vm 308.5, BA-vM 259.0 contra 26–47 en las bases. La serie 1541–1560 es la más hambrienta medida (BA-v en las cinco series previas: 46, 104, 41, 54, 38.5). El régimen de hambre es de la semilla y del tipo de lectura, no de una celda aislada.
+
+**Lo que se declara.** BA-vm cae por la letra en tres puertas (BAR-T, VALOR, R6). Es la **primera vez que una celda cruza P6 bajo ERR-90** (16/20, el mismo número que BA-v en la misma serie), pero al precio de morir 9.64× la base con 12 de 20 semillas en hambre. BA-vM (mínimo en los dos tipos, la intención literal de A) tampoco entra: dist 14, BAR-T 6, R6 8.09×. El control barajado confirma que la lectura es referencial (CANAL 2/20, dist 0/20).
+
+**Predicciones del creador B (§5):** CANAL 18 (15–19) → 20, una unidad por encima de la banda (la puerta pasa); CORTADO 0 (0–2) → 2, acertada; **BAR-T 2 (0–5) → 10, refutada**; **VALOR 2 (0–5) → 7, refutada**; **BAR-H 1 (0–4) → 8, refutada** (la puerta ≤ 10 pasa); dist(PAR) 17 (15–19) → 16, acertada; PAR0 1 (0–3) → 0, acertada; **R6 1.6× (1.1–2.4×) → 9.64×, refutada**, y cae como el propio creador señaló que era lo más probable (35 %); MISIÓN (65 %) refutada. Su modelo de un parámetro acertó la dirección del mensaje (dist, PAR0) y falló en el valor (BAR-T, BAR-H, VALOR) y en el coste.
+
+**Candidato a ERR sin numerar (sólo se anota):** `muertes` en la tabla del runner es la mediana del brazo CANAL; con 12/20 semillas en hambre la mediana ya cae dentro del régimen alto; el preregistro no previó el caso.
+
+**Vocabulario permitido:** *"BA-vm cae por la letra en tres puertas; es la primera celda que cruza la puerta de dirección del mensaje bajo el criterio absoluto, pero morir 9.6 veces la base con 12 de 20 semillas en régimen de hambre lo descarta; la ablación con el mismo mínimo en los dos tipos tampoco entra; el control barajado confirma que la lectura es referencial; la predicción del creador de que el coste lo mataba se cumplió"*. Prohibido: "BA-vm entra"; "la fase 5 avanza"; tratar el cruce de P6 como si bastara sin el coste.
+
+**Qué queda.** Línea BA-vm / BA-vM **cerrada**. Con esto la fase 5 queda con **BA, BA-v, BA-vm y BA-vM cerrados hoy**; nivel 5 sigue en **75 %**; queda `V-5` (C: B-5 trasplantado a la tabla de referencia, 25 %) como único preregistro disponible, sin correr. v14.2 sigue como tronco.

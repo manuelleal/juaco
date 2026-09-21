@@ -13,7 +13,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | nivel | estado | última evidencia |
 |---|---|---|
 | 1–4 (asociación, desaprender, generalizar, capacidad) | cerrados; nivel 4 con el negativo del alias reparado por B-5 (v14.2) | 18-sep |
-| 5 (comunicación / transmisión) | **75 %**: N1 cerrado; referencia de FAMILIA exacta (k = 3) o de VARIANTE (sufijo), no ambas con la misma tabla; junta del 19-sep no cerró (C refutado ×2, B cae ×2, A pasa R1–R5 en una serie sin réplica, PAR 13 < 15) | 19-sep |
+| 5 (comunicación / transmisión) | **75 %**: N1 cerrado; referencia de FAMILIA exacta (k = 3) o de VARIANTE (sufijo), no ambas con la misma tabla; **cerrados el 21-sep: BA, BA-v (tres series ERR-90), BA-vm y BA-vM** (BA-vm cruza dist 16/20 pero muere 9.6× la base); la dirección del mensaje es exacta, el valor falla por colisión estructural; queda V-5 (C) preregistrado sin correr | 21-sep |
 | 6 (mapa, dos metas y rodeo) | 50 % (consenso de la junta): elige entre dos comidas recordadas y rodea el veneno recordado (replicado); no planifica; **bloque "rodeo obligado" (21-sep, mundo muralla con geometría sorteada): CAE 5/10, el campo difundido come 2.46× y muere 0.38× pero rodea limpio sólo 0.35 y huye 0.425**; instrumento disponible, sin candidato | 21-sep |
 | 7 (composición, XOR) | 70 % (consenso de la junta): 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
 | 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |

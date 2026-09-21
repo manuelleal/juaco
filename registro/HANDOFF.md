@@ -943,3 +943,9 @@ puerta sustituye). Lo que pasa: **F9-4bis** (ERR-93, J = p1 + c1 − 1): el nodo
 ni NADA (0.175) ni CAUTELA (0.187) lo hacen; con esto las cuatro puertas centrales del cuerpo nuevo pasan juntas por primera vez en una serie. B2-5: ni
 el nodo ORÁCULO cruza R₀ 0.90 (0.508): H-1 en pie con la cota más alta medida; el próximo bloque cambia el mundo, no el nodo. Nivel 9 sigue en
 propuesta 40 % hasta la réplica 1601–1620 (en marcha). Datos `f9b2_s1581-1600_20260921_173047` (`96f49d2b921b625e` / `5dfc03643949c5d8`); `6b2e51b`, `8d6ad65`.
+**15.28 (21-sep 17:18–18:01): serie de `BA-vm`/`BA-vM` bajo ERR-90, 1541–1560 (Pool 6) — CIERRE de la línea.** `BA-vm` cae P3 (BAR-T 10), P4 (VALOR 7) y R6
+(muertes 308.5 = 9.64× b4b; 12/20 semillas en régimen de hambre); es la primera celda que cruza P6 bajo el criterio absoluto (dist 16/20) pero a un coste
+inaceptable; `BA-vM` también cae (dist 14, muertes 259). Las tres celdas BA-* mueren 259–322 mientras las bases 26–47: la serie más hambrienta medida.
+Predicciones de B: acierta dirección (dist, PAR0), falla valor (BAR-T, BAR-H, VALOR) y coste, la puerta que él mismo señaló (35 %). Con esto BA, BA-v,
+BA-vm y BA-vM quedan cerrados hoy; nivel 5 sigue en 75 %; V-5 (C) único preregistro disponible. Datos `serie_bavm_s1541-1560_20260921_171821`
+(`44cdfc90dd199621`); `4557e96`, `f8f1287`.
