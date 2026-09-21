@@ -42,7 +42,7 @@ SEEDS_TA = list(range(301, 321))     # T-A  (NUEVAS: 301-320)
 SEEDS_TG = list(range(181, 201))     # T-G  (NUEVAS: 181-200; la medida de 161-180 se repite aqui)
 BRAZOS_TA = ('VIVO', 'CUELLO_MIN')
 SHA_TRONCO = 'feefc88b1fd8d434'
-N_PARALELO = 14
+N_PARALELO = int(os.environ.get('JUACO_POOL', 14))  # ERR-86: el tamano del Pool se fija por JUACO_POOL (21 sep, coordinador)
 ARMS = {'OFF': dict(memoria_pares=None), 'v15f': dict(memoria_pares='relevo'), 'v15g': dict(memoria_pares='relevo', relevo_boca=1)}
 ARMS_TA = ('OFF', 'v15f')            # T-A: "con y sin relevo" (el brazo exploratorio v15g no es candidato)
 # --- umbrales de T-A (letra de CRITERIO_TRONCO_v2.md, tabla T-A) y de T-G (capacidad nueva del preregistro de v15f)
