@@ -856,3 +856,9 @@ suma/enruta, cae por reversión E2 0/20; v15e reescribe el residuo, se desdice 2
 cruza XOR 1.000 bajo v1 pero bajo v2 cae T-A, T-C, T-D y T-E; v15g invierte el orden de las puertas y cruza el alias pero cae T-C igual)
 no entran al tronco. Ninguno se rejuzga; v14.2 sigue de tronco. Sigue disponible: XOR como prior estructural declarado (`xor_7`) y `v15g`
 como reapertura posible SOLO con preregistro propio y siete puertas. Entrada "LÍNEA CERRADA: memoria de pares en la vía lenta" en el registro.
+**15.17 (21-sep 14:50–15:13): serie de `BA-v` bajo ERR-90 (puertas absolutas), 961–980 (`198f08856aeaf607`), Pool 8.** `BA-v` pasa P0–P5 y P7
+(R6 completo con base `b4b` por primera vez: muertes 1.4643× ≤ 1.50, okU igual; la única de las seis celdas que lo pasa entero; `b5k3`/`b6suf`/`A1`
+caen okU por la cuantización de 1/6 predicha), pero cae P6 (dist(PAR) 13/19 < 15, margen de 2 semillas) y por eso la misión cruda de esta serie.
+Control barajado `BA-v-sh` funciona (CANAL 2/19, dist 0/19). Predicción del creador "ninguna celda k=3 pasa R6" refutada. BA-v acumula misión
+cruda 2/3 series y letra absoluta 0/1. Decisión del coordinador (delegada): la réplica 981–1000 se corre después de dE5-v2; si cae P6 otra vez,
+BA-v se cierra. Nivel 5 sigue en 75 %. Commits `20d9656` (paquete), `e02b139` (crudo).

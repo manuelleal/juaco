@@ -2,7 +2,7 @@
 
 > **ESTADO VIVO (desde el 21-sep-2026): `registro/ESTADO.md`** — una página con tronco, niveles, pendientes, último ERR y decisiones; se
 > reescribe en cada cierre. Los bloques "Estado (día N)" de abajo son historia y mandan sólo si `ESTADO.md` no los contradice.
-> 21-sep-2026: v15f-v2 NO ENTRA (4 puertas de 7); BA cumple la misión cruda de la fase 5 ×2 pero no la letra R1–R5; LÍNEA CERRADA de memoria de pares en la vía lenta (v15c–v15g); ERR-87..89; fase 9 abierta. Detalle en `registro/ESTADO.md`.
+> 21-sep-2026: v15f-v2 NO ENTRA (4 puertas de 7); BA cumple la misión cruda de la fase 5 ×2 pero no la letra R1–R5; LÍNEA CERRADA de memoria de pares en la vía lenta (v15c–v15g); BA-v bajo ERR-90 cae P6 en 961–980 (réplica en cola); ERR-87..90; fase 9 abierta y corriendo. Detalle en `registro/ESTADO.md`.
 > Índice de experimentos: `experimentos/INDICE.md`. Agentes y skills del equipo: sección "Herramientas" de `registro/EQUIPO.md`.
 
 Investigación reproducible sobre si un organismo artificial simple, con reglas locales y sin backpropagation,

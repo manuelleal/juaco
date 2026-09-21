@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 16:35** (coordinador; tres decisiones tomadas, cuatro agentes en marcha). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 17:20** (coordinador; BA-v serie 1 registrada, fase 9 corriendo, dE5-v2 en cola). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -45,8 +45,9 @@ procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
 ## Decisiones del director (21-sep-2026, 16:30: "llena las 3 de una vez, manda grupos de agentes" → las tres tomadas con la recomendación)
 1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Registrada (HANDOFF 15.16).
-2. **BA-v pasa a candidato aparte** con criterio propio absoluto (ERR-90), `b4b` en la serie para R6 y diagnóstico de las 104 muertes. Paquete en construcción
-   (creador, `experimentos/nivel05_familia_variante_BAv/`).
+2. **BA-v como candidato aparte (ERR-90, puertas absolutas): serie 961–980 corrida, CAE P6** (dist(PAR) 13/19 < 15, 2 semillas) y pasa las
+   otras siete, incluida R6 con base b4b (única celda que la pasa). Misión cruda 2/3 series, letra 0/1. Réplica 981–1000 en cola después de dE5-v2;
+   si cae P6 otra vez, BA-v se cierra. HANDOFF 15.17.
 3. **Fase 9 abierta ahora**: primer bloque "cuerpo nuevo aprende en menos de una vida" en diseño (creador, `experimentos/nivel09_cuerpo_nuevo/`).
 Además: paquete **dE5 bajo el criterio v2** en construcción (creador, `experimentos/tronco_v15_dE5/`), decisión previa del director del 18-sep.
-Orden de corrida cuando los paquetes estén verificados (un Pool a la vez): dE5-v2 → BA-v → fase 9.
+Orden de corrida (un Pool a la vez): BA-v 961–980 ✅ → fase 9 1501–1520 (corriendo desde 15:16) → dE5-v2 → réplica BA-v 981–1000.
