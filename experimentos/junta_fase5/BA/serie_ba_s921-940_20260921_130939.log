@@ -1,0 +1,56 @@
+[13:09:39 +    0.0s] SERIE del candidato BA (junta fase 5), Pool(8).
+[13:09:39 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla.
+[13:09:39 +    0.0s] celdas ['b5k3', 'b6suf', 'A1', 'BA', 'BA-v']  brazos ['CANAL', 'CORTADO', 'BAR-H', 'BAR-T', 'VALOR', 'PAR', 'PAR0']  semillas 921-940  T = 100000 
+[13:09:39 +    0.0s]     sha script                   f511d1bbe34887af
+[13:09:39 +    0.0s]     sha constructor              503ada31c3da9a3b
+[13:09:39 +    0.0s]     sha instrumento              1f196ee786b2040d
+[13:09:39 +    0.0s]     sha arnes                    c01162c2e46d5de2
+[13:09:39 +    0.0s]     sha preregistro              2769cd34e262c5f8
+[13:09:39 +    0.0s]     sha origen_a1                8833e1dcfb62f26d
+[13:09:39 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[13:09:39 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[13:09:39 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[13:09:39 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[13:09:39 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[13:09:39 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[13:09:39 +    0.0s]     origenes verificados -> OK
+[13:09:39 +    0.7s] ETAPA 1/4 - DIAGNOSTICO ESTRUCTURAL (T = 0, 20 semillas)
+[13:09:39 +    0.7s]     alias por par mediana 0.0161  piso de forma 4.0/32
+[13:09:39 +    0.7s] ETAPA 2/4 - EMISORES (20 corridas de 100000 pasos; son los del bloque 6 bit a bit)
+[13:10:11 +   31.8s]     emiten 19/20; sin mensaje (se EXCLUYEN, P-I2): [934]
+[13:10:11 +   31.8s] ETAPA 3/4 - REGLA 14: la ENTRADA, campo a campo contra el bloque 6
+[13:10:11 +   31.8s]     REGLA 14 - entrada campo a campo contra el bloque 6: 33 campos comunes, IDENTICOS
+[13:10:11 +   31.8s]        campos: ['T', 'cambio', 'canal', 'costo', 'crit_exp', 'deriva', 'desambiguar', 'exc_fija', 'fam_D', 'fam_F', 'fam_V', 'fam_nvar', 'fam_seed', 'fam_val', 'k_ganadoras', 'ktop', 'largo', 'log_cada', 'memoria_pares', 'memoria_variante', 'mundo', 'n_exc', 'n_neu', 'nk', 'nkmax', 'nobj', 'par_herm', 'reg_b2', 'reg_b4', 'renov', 'seed', 'vent', 'vira']
+[13:10:11 +   31.8s]        perillas de celda (las UNICAS que pueden diferir): ['combina', 'conj_tipo', 'dentro', 'dos_tipos', 'eta_w', 'exige_dir', 'k_forma', 'k_ganadoras', 'k_var', 'memoria_variante', 'msg_elige', 'pesos_tipo', 'var_cubre']
+[13:10:11 +   31.8s] ETAPA 4/4 - RECEPTORES: 665 corridas de 100000 pasos...
+[13:11:07 +   88.3s]           40/665
+[13:12:05 +  146.2s]           80/665
+[13:13:06 +  207.6s]           120/665
+[13:14:08 +  269.6s]           160/665
+[13:15:09 +  330.4s]           200/665
+[13:16:11 +  392.2s]           240/665
+[13:17:10 +  451.7s]           280/665
+[13:18:17 +  518.4s]           320/665
+[13:19:28 +  588.9s]           360/665
+[13:20:43 +  664.5s]           400/665
+[13:21:58 +  739.0s]           440/665
+[13:23:09 +  810.0s]           480/665
+[13:24:25 +  886.5s]           520/665
+[13:25:39 +  960.3s]           560/665
+[13:26:47 + 1028.6s]           600/665
+[13:28:09 + 1110.3s]           640/665
+[13:28:47 + 1148.5s]           665/665
+[13:28:47 + 1148.6s] CRUDO -> serie_ba_s921-940_20260921_130939_crudo.json  sha256_16 = 13f3bdb70928e9f5  (ERR-54)
+[13:28:47 + 1148.6s]     P-I5 por brazo en BA-v (semillas con fam1 = 1: el mensaje escrito y NO consultado): {'CANAL': 0, 'CORTADO': 0, 'BAR-H': 0, 'BAR-T': 0, 'VALOR': 0, 'PAR': 1, 'PAR0': 1}
+[13:28:47 + 1148.6s] 
+[13:28:47 + 1148.6s] celda      CANAL  CORTADO    BAR-H    BAR-T    VALOR      PAR     PAR0   dist(PAR)  dist(PAR0)  muertes  okU
+[13:28:47 + 1148.6s] b5k3      16/19     2/19    12/19     7/19     3/19    16/19     1/19    9/19      1/19       36.0     0.8333
+[13:28:47 + 1148.6s] b6suf     16/19     6/19     4/19    12/19     5/19    17/19     7/19    19/19      7/19       38.0     0.6667
+[13:28:47 + 1148.6s] A1        16/19     4/19     7/19     6/19     5/19    16/19     4/19    15/19      3/19       48.0     0.6667
+[13:28:47 + 1148.6s] BA        16/19     2/19    14/19     4/19     8/19    16/19     1/19    16/19      2/19       46.0     0.6667
+[13:28:47 + 1148.6s] BA-v      16/19     0/19     4/19     2/19     4/19    16/19     1/19    18/19      0/19       46.0     0.6667
+[13:28:47 + 1148.6s]   [b5k3] R1 CANAL 16/19 >= 15 y CORTADO 2 <= 5: pasa; R2 BAR-T 7 <= CORTADO+3: CAE; R3 BAR-H 12 <= CORTADO+5: CAE; R4 VALOR 3 <= CORTADO+3: pasa; R5 dist 9/19 >= 12 y >= gemelo+5 (1): CAE  |  MISION (BAR-T <= 5 Y PAR >= 15): no
+[13:28:47 + 1148.6s]   [b6suf] R1 CANAL 16/19 >= 15 y CORTADO 6 <= 5: CAE; R2 BAR-T 12 <= CORTADO+3: CAE; R3 BAR-H 4 <= CORTADO+5: pasa; R4 VALOR 5 <= CORTADO+3: pasa; R5 dist 19/19 >= 12 y >= gemelo+5 (7): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): no
+[13:28:47 + 1148.6s]   [A1] R1 CANAL 16/19 >= 15 y CORTADO 4 <= 5: pasa; R2 BAR-T 6 <= CORTADO+3: pasa; R3 BAR-H 7 <= CORTADO+5: pasa; R4 VALOR 5 <= CORTADO+3: pasa; R5 dist 15/19 >= 12 y >= gemelo+5 (3): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): no
+[13:28:47 + 1148.6s]   [BA] R1 CANAL 16/19 >= 15 y CORTADO 2 <= 5: pasa; R2 BAR-T 4 <= CORTADO+3: pasa; R3 BAR-H 14 <= CORTADO+5: CAE; R4 VALOR 8 <= CORTADO+3: CAE; R5 dist 16/19 >= 12 y >= gemelo+5 (2): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): SI
+[13:28:47 + 1148.6s]   [BA-v] R1 CANAL 16/19 >= 15 y CORTADO 0 <= 5: pasa; R2 BAR-T 2 <= CORTADO+3: pasa; R3 BAR-H 4 <= CORTADO+5: pasa; R4 VALOR 4 <= CORTADO+3: CAE; R5 dist 18/19 >= 12 y >= gemelo+5 (0): pasa  |  MISION (BAR-T <= 5 Y PAR >= 15): SI
