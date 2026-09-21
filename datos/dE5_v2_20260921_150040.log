@@ -1,0 +1,28 @@
+[15:00:40 +    0.0s] ARRANQUE dE5 bajo el CRITERIO DE TRONCO v2 (serie). JUACO_POOL=14
+[15:00:40 +    0.0s] sha preregistro 273d1e72aa880d95  script c042de285398a333  construye f3c2fb1f8e65a3d3  identidad ad87ee341d84b119  organismo_v15_dE5 7e2c9aed98047fee  _on 00aaa9563c30247b  g 70739b19cbe4c32b  g_on 094413aa2cefbc79  bateria_v15_dE5 f59b3a7711858a47  bateria_generaliza_v15_dE5 5da24990763da402  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_v142 17528d767fcebaf6  organismo_v142g 9e5f566cd6a7a4d2  bateria_v142 6375d90e531b06e6  bateria_generaliza_v142 e5929942647756a5
+[15:00:40 +    0.0s] dosis dE5 = {'eta_pred': 0.03, 'ema_pred': 0.05, 'clip_e': 3.0, 'k_sorp': 5.0};  control de CANTIDAD C = 0.058 (se fija en el humo, §7 del preregistro)
+[15:00:40 +    0.5s] REGLA 11 — procesos python vivos (12), este es pid 26516
+[15:00:40 +    0.5s] ETAPA 1/9 — identidad (subproceso, un proceso): 61 identidades + 7 controles que DEBEN fallar.
+[15:00:40 +    0.5s]    -> SUBPROCESO (identidad): identidad_v15_dE5.py 20000
+[15:03:44 +  184.2s]       | ARNES dE5 — T=20000. candidato organismo_v15_dE5 / organismo_v15_dE5g
+[15:03:44 +  184.2s]       | --- I1: organismo_v15_dE5(vivo=0,n_nec=1,dosis OFF) == organismo_v142 (TRONCO v14.2), 9 escenarios x 3 semillas
+[15:03:44 +  184.2s]       | --- I2: organismo_v15_dE5(desambiguar=0,dosis OFF) == organismo_vivo_rep2 (mundo vivo, sal, mini_vivo)
+[15:03:44 +  184.2s]       | --- I3: organismo_v15_dE5g(dosis OFF) == organismo_v142g (mundo de regla px0/azar y mundo AB)
+[15:03:44 +  184.2s]       | --- I4: B-5 INERTE en los mundos del tronco: desambiguar=1 == desambiguar=0 (prediccion de v14.2)
+[15:03:44 +  184.2s]       | --- I5: el predictor SOLO MIDE (eta_pred=0.03, k_sorp=0) == apagado por completo
+[15:03:44 +  184.2s]       | --- I6: organismo_v15_dE5g(mundo='AB', DOSIS ON) == organismo_v15_dE5(vivo=0,n_nec=1, DOSIS ON) en claves comunes
+[15:03:44 +  184.2s]       | --- I7: invertir_vivo_en > T es INERTE
+[15:03:44 +  184.2s]       | --- CONTROLES QUE DEBEN FALLAR (M1..M7)
+[15:03:44 +  184.2s]       | IDENTIDADES 61/61   CONTROLES QUE FALLAN COMO DEBEN 7/7   (183.4s)
+[15:03:44 +  184.2s]       | ARNES TOTAL: 68/68
+[15:03:44 +  184.2s]       (184s)
+[15:03:44 +  184.2s] ETAPA 9/9 — veredicto de las SIETE puertas del CRITERIO DE TRONCO v2.
+[15:03:44 +  184.2s]    T-A: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s]    T-B: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s]    T-C: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s]    T-D: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s]    T-E: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s]    T-F: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s]    T-G: NO  (NO MEDIDA en esta corrida)
+[15:03:44 +  184.2s] VEREDICTO: INCOMPLETO — faltan puertas por medir: T-A, T-B, T-C, T-D, T-E, T-F, T-G
+[15:03:44 +  184.2s] datos -> dE5_v2_20260921_150040.json  sha256_16 = a64915a2f55e5744

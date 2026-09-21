@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "fecha": "2026-09-21T14:41:34",
+  "modulo": "organismo_v15_dE5_on",
+  "semillas": [
+   2001
+  ],
+  "veredictos": {
+   "K_cobertura": true,
+   "G1_valor": true,
+   "G2_conducta": true
+  },
+  "sha_bateria": "5da24990763da402",
+  "sha_organismo": "00aaa9563c30247b",
+  "python": "3.14.2",
+  "numpy": "2.4.3"
+ },
+ "corridas": [
+  {
+   "modulo": "organismo_v15_dE5_on",
+   "regla": "px0",
+   "seed": 2001,
+   "acc": 1.0,
+   "ba": 0.9978801294472397,
+   "cobertura": 10,
+   "splits": 29,
+   "celdas": 59,
+   "deaths": 261
+  },
+  {
+   "modulo": "organismo_v15_dE5_on",
+   "regla": "azar",
+   "seed": 2001,
+   "acc": 0.5,
+   "ba": 0.42068665108205405,
+   "cobertura": 10,
+   "splits": 30,
+   "celdas": 60,
+   "deaths": 286
+  }
+ ]
+}
