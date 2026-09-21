@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 16:15** (coordinador; cierre del día). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 16:35** (coordinador; tres decisiones tomadas, cuatro agentes en marcha). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -43,8 +43,10 @@ solo lectura), `juaco-cronista` (Sonnet), `probador-haiku`, `explorador-haiku`. 
 `/juaco-err`, `/veredicto`, `/encargo`. Ninguno corre Pool, commitea ni mata procesos: sólo el coordinador. Coordinación de CPU: mirar los
 procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
-## Decisiones que le tocan al director
-1. Cerrar la línea de memoria de pares en la vía lenta (v15d/v15e/v15f caen por reversión; recomendado) o preregistrar v15g con sus siete puertas.
-2. BA-v: preregistrar como candidato aparte con criterio propio (que no castigue CORTADO 0 con umbrales relativos), `b4b` en la serie para medir R6 y
-   una explicación de las 104 muertes (recomendado: sí, es la única fila que ha cumplido la misión cruda dos veces), o cerrar la línea BA.
-3. Si la fase 9 se abre ahora con un creador o espera a que la fase 5 cierre.
+## Decisiones del director (21-sep-2026, 16:30: "llena las 3 de una vez, manda grupos de agentes" → las tres tomadas con la recomendación)
+1. **CERRADA** la línea de memoria de pares en la vía lenta (v15c–v15g); v15g sólo se reabre con preregistro propio y siete puertas. Cierre en redacción (cronista).
+2. **BA-v pasa a candidato aparte** con criterio propio absoluto (ERR-90), `b4b` en la serie para R6 y diagnóstico de las 104 muertes. Paquete en construcción
+   (creador, `experimentos/nivel05_familia_variante_BAv/`).
+3. **Fase 9 abierta ahora**: primer bloque "cuerpo nuevo aprende en menos de una vida" en diseño (creador, `experimentos/nivel09_cuerpo_nuevo/`).
+Además: paquete **dE5 bajo el criterio v2** en construcción (creador, `experimentos/tronco_v15_dE5/`), decisión previa del director del 18-sep.
+Orden de corrida cuando los paquetes estén verificados (un Pool a la vez): dE5-v2 → BA-v → fase 9.
