@@ -1,0 +1,30 @@
+[20:56:48 +    0.0s] ARRANQUE v15f bajo el CRITERIO v2 (serie).
+[20:56:48 +    0.0s] sha preregistro 4cc15be29a3bbdf4  script 303a47dfdeecc5bd  construye_vivo_relevo 6942d42461832404  organismo_vivo_relevo 3b2cb0ca4c334779  identidad_vivo_relevo 90187f3c114500c1  bateria_v15f d63f5aee558eb6da  bateria_generaliza_v15f 0cd87d2632e0c66a  organismo_v15f_on 54d6efe0b564113c  ORIGEN organismo_vivo_rep2 96feb4918dc5d694  organismo_vivo 20c0961c79de8825  organismo_v14 feefc88b1fd8d434  bateria_v14 72216f5415de0c86  corre_sal bfdc00bb48656337  corre_vivo_rep2 10ab45355883d98d  mini_vivo f3e86cbe6c17e6d7
+[20:56:49 +    0.9s] REGLA 11 — procesos python vivos (20), este es pid 26068
+[20:56:49 +    1.0s] ETAPA 1/9 — identidad (subproceso, un proceso): 28 identidades + 5 controles que DEBEN fallar.
+[20:56:49 +    1.0s]    -> SUBPROCESO (identidad): C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\creacion_A\identidad_vivo_relevo.py 20000
+[20:59:14 +  145.9s]       |                           M1 relevo ON != rep2 VIVO s1: DIFIERE (ok, el control fallo como debe)
+[20:59:14 +  145.9s]       |                            M2 v15g != v15f (ALIAS 326): DIFIERE (ok, el control fallo como debe)  |W[sal]| v15f 1.67 / v15g 0.0
+[20:59:14 +  145.9s]       |               M3 invertir_vivo_en=T//2 != rep2 VIVO s1: DIFIERE (ok, el control fallo como debe)
+[20:59:14 +  145.9s]       |                         M4 paja: CUELLO_MIN != VIVO s1: DIFIERE (ok, el control fallo como debe)
+[20:59:14 +  145.9s]       |          M5 memoria_pares mal escrita lanza ValueError: DIFIERE (ok, el control fallo como debe)  memoria_pares='xxx'
+[20:59:14 +  145.9s]       | 
+[20:59:14 +  145.9s]       | CONTROLES (M1-M5): 5/5 fallan como deben
+[20:59:14 +  145.9s]       | ARNES TOTAL: 33/33
+[20:59:14 +  145.9s]       | 
+[20:59:14 +  145.9s]       | --- I8 (NO es comprobacion): semilla ALIAS 326, sal muda, T=20000: apagada / v15f (relevo en la lenta) / v15g (casilla antes de la puerta) ---
+[20:59:14 +  145.9s]       |   apagada            |W[sal]| 1.58 por nec [-1.58, 0.0]  W[veneno] -1.58 por nec [-1.58, 0.0]  exp sal 727 veneno 644  splits 0 celdas 30 muertes 19  tabla None  ganadora None
+[20:59:14 +  145.9s]       |   v15f relevo        |W[sal]| 1.67 por nec [-1.67, 0.0]  W[veneno] -1.67 por nec [-1.67, 0.0]  exp sal 595 veneno 940  splits 0 celdas 30 muertes 20  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]  ganadora [[3, 5], [1, 3]]
+[20:59:14 +  145.9s]       |   v15g relevo_boca   |W[sal]| 0.0 por nec [0.0, 0.0]  W[veneno] -3.0 por nec [-3.0, 0.0]  exp sal 92 veneno 1346  splits 0 celdas 30 muertes 8  tabla [{'A': 1.0, 'B': -3.0, 'C': 0.0, 'D': 0.0}, {'A': 0.0, 'B': 0.0, 'C': 1.0, 'D': 0.0}]  ganadora [[0, 4], [0, 1]]
+[20:59:14 +  145.9s]       |   Lo que se busca: sin excepcion; la tabla de hambre lee 0.0 en la sal y -3.0 en el veneno; v15f la sabe pero la puerta lee la rapida.
+[20:59:14 +  145.9s]       (145s)
+[20:59:14 +  145.9s] ETAPA 9/9 — veredicto de las siete puertas del CRITERIO DE TRONCO v2.
+[20:59:14 +  145.9s]    T-A: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s]    T-B: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s]    T-C: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s]    T-D: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s]    T-E: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s]    T-F: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s]    T-G: NO  (NO MEDIDA en esta corrida)
+[20:59:14 +  145.9s] VEREDICTO: INCOMPLETO — faltan puertas por medir: T-A, T-B, T-C, T-D, T-E, T-F, T-G
+[20:59:14 +  145.9s] datos -> v15f_v2_20260918_205648.json  sha256_16 = e7b57b4c5c92ce8c

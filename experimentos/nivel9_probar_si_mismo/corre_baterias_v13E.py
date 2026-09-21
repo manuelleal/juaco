@@ -16,7 +16,7 @@ que NO se predice inerte (ver PREREGISTRO_v13E.md §1), si importaria. Aqui cada
 Uso:  python experimentos/nivel9_probar_si_mismo/corre_baterias_v13E.py [--desde 101] [--n 20] [--humo]
       --humo = un proceso, sin Pool propio, 2 semillas; solo prueba que el montaje corre.
 """
-import sys, os, json, time, hashlib, platform, subprocess
+import sys, os, re, json, time, hashlib, platform, subprocess
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 import numpy as np
 
@@ -64,9 +64,14 @@ def tarea(args):
 
 
 def lee_json(pref):
-    """Ultimo datos/<pref>*.json escrito (las baterias lo dejan con --log)."""
+    """Ultimo datos/<pref><AAAAMMDD_HHMMSS>.json escrito (las baterias lo dejan con --log).
+    ERR-87 (21 sep 2026): con startswith() el prefijo 'regresion_generaliza_organismo_v13E_' casaba tambien
+    '..._v13E_k3_*' y '..._v13E_k5_*' (existen desde el 18 sep 03:09/03:24) y por orden de nombre ('k' > digito)
+    devolvia el de k5. La corrida registrada (baterias_v13E_20260918_023210, 02:37) es ANTERIOR a esos archivos:
+    no la afecta (verificado). Ahora exige prefijo + sello de tiempo exacto, igual que corre_baterias_v13D.py."""
     d = os.path.join(RAIZ, 'datos')
-    c = sorted([f for f in os.listdir(d) if f.startswith(pref) and f.endswith('.json')])
+    pat = re.compile(r'^' + re.escape(pref) + r'\d{8}_\d{6}\.json$')
+    c = sorted(f for f in os.listdir(d) if pat.match(f))
     return json.load(open(os.path.join(d, c[-1]), encoding='utf-8')) if c else None
 
 

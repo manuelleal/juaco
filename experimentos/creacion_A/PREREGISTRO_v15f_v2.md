@@ -117,7 +117,7 @@ criterio v2 ahora**, con el mundo vivo de `organismo_vivo_rep2` (brazos VIVO y C
 bloque 2) y con la capacidad nueva de v15f (xor01 ≥ 0.75 estricta con 8 ejemplos, repetida en 181–200).
 
 **Ningún umbral cambia** — los de T-A y T-G ya estaban escritos en §3 y en `registro/CRITERIO_TRONCO_v2.md`, y se copian tal cual:
-por eso esta enmienda **no lleva ERR** (los ERR libres siguen desde ERR-100). Lo único que cambia es que dejan de estar en espera.
+por eso esta enmienda **no lleva ERR** (el siguiente ERR libre al 21 sep es ERR-87; el ERR-100 que decia aqui era una cifra inventada, corregida por el coordinador). Lo único que cambia es que dejan de estar en espera.
 
 **Qué se verificó del borrador de A (nada de esto estaba comprobado cuando murió):**
 
@@ -167,9 +167,11 @@ comprobar que `tarea_vivo`, `tarea_xor`, los volcados crudos y los dos veredicto
 T-G xor01 estricta **0.938 ON contra 0.312 OFF** (gana (0,1) 3/3, azar 0.40) y T-A **ajustado** (razón de muertes ≈ 1.11 y A₁₂(r) 0.33
 en esas tres semillas). Ninguno de los dos números decide nada: la puerta son las 20 semillas.
 
-**Lo que NO queda verificado (honestidad, para el coordinador):** (1) la corrida de esqueleto `--solo NADA` (las nueve etapas con
-todas saltadas) se **abortó a mitad**: a las 20:54 otro bloque del repo arrancó su `Pool(14)` y mi proceso se quedó sin CPU; se paró
-para no contaminar su tiempo de pared (regla 11). El bloque `__main__` sí quedó ejercitado de punta a punta por `--humo` (log, JSON,
-sha, subproceso de identidad) y las ETAPAS 7 y 8 por la prueba estructural de 3 semillas. (2) La prueba estructural abrió un `Pool(6)`
-mientras ese otro bloque corría: **fue una violación de la regla 11 por mi parte**, se declara aquí; no afecta a ningún número de
-puerta (nada de lo medido allí decide nada) pero sí pudo contaminar el tiempo de pared del bloque vecino.
+**Corrida de esqueleto y honestidad (para el coordinador):** `corre_v15f_v2.py --solo NADA` (las nueve etapas, todas las puertas
+saltadas) **completó en 146 s**: arnés 33/33, ETAPA 9 con las siete puertas marcadas "NO MEDIDA" y veredicto **INCOMPLETO** —
+`datos/v15f_v2_20260918_205648.log` / `.json` (e7b57b4c5c92ce8c). Es la prueba de que el esqueleto de nueve etapas corre entero y
+de que el runner NO puede declarar un veredicto con puertas sin medir. Lo que sí hay que declarar: la prueba estructural de las
+ETAPAS 7 y 8 (3 semillas) abrió un `Pool(6)` mientras otro bloque del repo corría su `Pool(14)` — **violación de la regla 11 por
+mi parte**; no afecta a ningún número de puerta (nada de lo medido allí decide nada) pero pudo contaminar el tiempo de pared del
+bloque vecino. Corrección de una lectura mía anterior: creí que la corrida de esqueleto se había quedado colgada y la di por
+abortada; el log en disco muestra que había terminado bien.

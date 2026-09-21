@@ -8,7 +8,7 @@ lanzan como subprocesos secuenciales, cada una con su propio Pool(14)).
 Uso:  python experimentos/nivel7_hija_dispersa/corre_baterias_v13D.py [--desde 101] [--n 20] [--humo]
       --humo = un proceso, sin Pool propio, 2 semillas; solo prueba que el montaje corre.
 """
-import sys, os, json, time, hashlib, platform, subprocess
+import sys, os, re, json, time, hashlib, platform, subprocess
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 import numpy as np
 
@@ -56,10 +56,16 @@ def tarea(args):
 
 
 def lee_json(pref):
-    """Ultimo datos/<pref>*.json escrito (las baterias lo dejan con --log)."""
+    """Ultimo datos/<pref><AAAAMMDD_HHMMSS>.json escrito (las baterias lo dejan con --log). Devuelve (json, nombre).
+    El prefijo va seguido DIRECTAMENTE del sello de tiempo. Con startswith() no bastaba (auditoria de ERR-29, 18 sep):
+    'regresion_generaliza_organismo_v13D_' es prefijo literal de '..._v13D_on_...' y al ordenar por nombre 'o' > digito,
+    asi que la etapa de referencia (OFF) leia el JSON de la ON."""
     d = os.path.join(RAIZ, 'datos')
-    c = sorted([f for f in os.listdir(d) if f.startswith(pref) and f.endswith('.json')])
-    return json.load(open(os.path.join(d, c[-1]), encoding='utf-8')) if c else None
+    pat = re.compile(r'^' + re.escape(pref) + r'\d{8}_\d{6}\.json$')
+    c = sorted(f for f in os.listdir(d) if pat.match(f))
+    if not c:
+        return None, None
+    return json.load(open(os.path.join(d, c[-1]), encoding='utf-8')), c[-1]
 
 
 if __name__ == '__main__':
@@ -126,6 +132,11 @@ if __name__ == '__main__':
     # despues) pisaba el veredicto de la ON antes de leerlo. El veredicto YA REGISTRADO (D2_generalizacion=True en
     # datos/baterias_v13D_20260918_012145.json) no cambia: los dos lados pasan (K 20/20, G1 0.800/19-20, G2
     # 0.834/19-20 segun el log). Clave EXPLICITA por etapa; no se vuelve a correr.
+    # ERR-87 (auditoria de ERR-29, 18 sep tarde; numerado el 21 sep): segundo defecto en la misma linea -- lee_json('regresion_generaliza_organismo_v13D_')
+    # con startswith() tambien casaba los archivos '..._v13D_on_...' y, por orden de nombre, devolvia el de la ON. En la
+    # corrida registrada la etapa 3b releyo por eso el JSON de la ON (012533) y el de la OFF (012617) nunca entro a V.
+    # Verificado contra los dos JSON: ON y OFF dan {K,G1,G2}=True las dos; el veredicto no cambia. Ahora lee_json exige
+    # prefijo + sello, y cada etapa guarda el archivo y el modulo que leyo.
     etapas = [
         ('2/3 RETENCION  (criterio v3\', perilla ENCENDIDA)', [sys.executable, os.path.join(AQUI, 'bateria_v13D.py'), str(NSEM), '--desde', str(DESDE), '--log'], 'examen_v13D_', 'RETENCION'),
         ('3/3 GENERALIZACION (G1/G2/K, perilla ENCENDIDA)', [sys.executable, os.path.join(AQUI, 'bateria_generaliza_D.py'), 'organismo_v13D_on', str(NSEM), '--desde', str(DESDE), '--log'], 'regresion_generaliza_organismo_v13D_on_', 'D2'),
@@ -133,14 +144,18 @@ if __name__ == '__main__':
     ]
     for etiq, cmd, pref, clave in etapas:
         log(); log(f"ETAPA {etiq} ...")
+        t_ini = time.strftime('%Y%m%d_%H%M%S')
         p = subprocess.run(cmd, capture_output=True, text=True, env=env, cwd=os.path.join(RAIZ, 'organismo'))
         for l in [x.split('] ', 1)[-1].strip() for x in p.stdout.splitlines()
                   if ('PASA' in x or 'FALLA' in x or 'OK ' in x or 'VEREDICTO' in x or '***' in x)]:
             log(f"   {l}")
         if p.returncode != 0:
             log(f"   *** codigo {p.returncode}: {p.stderr[-500:]}")
-        j = lee_json(pref)
-        V[clave] = dict(returncode=p.returncode, veredictos=(j or {}).get('meta', {}).get('veredictos'))
+        j, arch = lee_json(pref)
+        if arch and arch[len(pref):len(pref) + 15] < t_ini:
+            log(f"   *** el JSON leido ({arch}) es ANTERIOR al arranque de la etapa: la bateria no escribio el suyo")
+        V[clave] = dict(returncode=p.returncode, archivo=arch, modulo=(j or {}).get('meta', {}).get('modulo'),
+                        veredictos=(j or {}).get('meta', {}).get('veredictos'))
 
     ret = V.get('RETENCION', {}).get('veredictos') or {}
     gen = V.get('D2', {}).get('veredictos') or {}

@@ -821,3 +821,5 @@ una tabla que refiera a familia Y variante a la vez (BAR-T ≤ 5/20 y PAR ≥ 15
   con preregistro propio. **ERR-85 (nuevo, 17:19): un agente de otro proyecto mató procesos python sin verificar el cmdline y
   tumbó dos corridas; regla nueva: ningún agente mata procesos — sólo el coordinador, y verificando el comando.**
   **ERR-86: Pool(14) con otras corridas en curso → BrokenPipeError en Windows; el tamaño del Pool se fija por `JUACO_POOL`.**
+  **ERR-87 (21 sep, coordinador): `lee_json` por `startswith` en los runners v13D/v13E leía el JSON de la ON (o de k5) como referencia;
+  ningún veredicto cambia (verificado contra los JSON); corregido con prefijo + sello exacto en los dos. Detalle en el registro.**

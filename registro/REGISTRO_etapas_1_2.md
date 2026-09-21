@@ -5489,3 +5489,23 @@ bits: subdivide en vez de multiplicar particiones (A y C coinciden); (3) fuga de
 registradas por sus autores: pesos de tipo y mínimo dentro del tipo inertes (A), relevo marginal y dos canales con veto (B),
 "el que aprende mejor deja de escuchar" V1/V2 (C, cae en las dos series).
 **ERR-85** (agente mató procesos sin verificar cmdline) y **ERR-86** (Pool(14) con otras corridas → BrokenPipe) en HANDOFF 15.12.
+
+### ERR-87 (21-sep-2026, 13:30; hallado el 18 sep por un auditor externo, verificado hoy por el coordinador y un segundo auditor Sonnet)
+**Qué se observó:** en `experimentos/nivel7_hija_dispersa/corre_baterias_v13D.py` y `experimentos/nivel9_probar_si_mismo/corre_baterias_v13E.py`,
+`lee_json(pref)` elegía el último `datos/<pref>*.json` por `startswith` + orden de nombre. Como `regresion_generaliza_organismo_v13D_` es
+prefijo literal de `..._v13D_on_` (y `..._v13E_` lo es de `..._v13E_k3_`/`_k5_`) y `'o'`/`'k'` > dígito, la etapa de referencia (OFF) releía
+el JSON de la ON. Es un segundo defecto en la misma línea que ERR-29 (1e2d7a6), no cubierto por aquella corrección.
+**Causa:** instrumento (lectura de resultados). **Veredictos registrados que toca: NINGUNO** — verificado contra los JSON, no asumido:
+v13D `regresion_generaliza_organismo_v13D_on_20260918_012533` y `..._v13D_20260918_012617` dan `{K,G1,G2}=True` los dos lados, así que
+`D2_generalizacion=True` en `baterias_v13D_20260918_012145` es correcto sea cual sea el archivo leído; v13E `baterias_v13E_20260918_023210`
+(02:37) es anterior a los archivos k3/k5 (03:09/03:24), así que no pudo leerlos.
+**Corrección:** `lee_json` exige `prefijo + AAAAMMDD_HHMMSS.json` exacto (regex) en los dos runners; en v13D cada etapa guarda además el
+archivo y el módulo leídos y avisa si el JSON es anterior al arranque de la etapa. Verificación mecánica (sin Pool): la función nueva sobre
+`datos/` real devuelve `012533` para el prefijo ON y `012617` para el OFF; `py_compile` limpio en los dos. No se vuelve a correr nada.
+**Regla derivada (para creadores e implementadores):** todo runner que lea "el último JSON de un prefijo" lo hace con prefijo + sello de
+tiempo exacto, nunca con `startswith`; y registra en su JSON qué archivo leyó cada etapa.
+También se corrige `experimentos/creacion_A/PREREGISTRO_v15f_v2.md:120`, que decía "los ERR libres siguen desde ERR-100": cifra inventada
+por el agente; el último real era ERR-86. Crudos de la junta de la fase 5 (`jb_serie_s821-840_20260919_181958`, `jb_serie_s841-860_20260919_183515`)
+añadidos al repo en este commit; el segundo auditor recalculó desde ellos BAR-H 9/18 · BAR-T 7/18 · PAR 14/18 y BAR-H 7/17 · BAR-T 5/17 · PAR 14/17 ·
+CANAL 15/17, idénticos a la tabla registrada. Siete archivos de humo sin dueño en el registro (b4b, enm1 ×3, b5 ×2 con guarda fallida,
+jb 901-902) se mueven a `datos/humo_no_registrado/` y NO entran a git.
