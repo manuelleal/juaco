@@ -5533,3 +5533,26 @@ Brazo exploratorio `v15g` (`relevo_boca=1`, la casilla decide antes que la puert
 Vocabulario permitido: *"la memoria de pares con relevo generaliza y no encarece el examen, pero bajo el criterio v2 no sobrevive de forma pareada, no se desdice en el mundo vivo ni conserva la conducta del examen; en el alias la puerta de v14.1 lee la vía rápida antes que la tabla, y v15g, que invierte ese orden, cruza el alias pero no la reversión"*. Prohibido: "v15f entra"; "cae sólo por el orden de las puertas"; llamar a v15g "candidato".
 
 **Qué queda:** v14.2 sigue siendo el tronco; nada se rejuzga. `v15g` entra como candidato aparte únicamente si alguien escribe su preregistro con las siete puertas y semillas nuevas. Decisión pendiente del director: cerrar la línea de memoria de pares en la vía lenta (recomendado) o preregistrar v15g.
+
+### ERR-88 (21-sep-2026, 15:40; hallado por el creador BA al construir por anclas desde A1; verificado por el coordinador)
+**Qué se observó:** en `experimentos/junta_fase5/A/organismo_familias_a1.py:234` la perilla `dentro` sólo asigna `_DMv = int(dentro == 'min')`
+y `_DMv` no vuelve a usarse en el módulo (una sola aparición, `grep -n _DMv`): la perilla es código muerto. En la junta del 19-sep el creador A
+declaró "mi mecanismo favorito (`combina='min'`, `dentro='min'`) medido como INERTE y retirado por Occam": lo medido era que `dentro` no estaba
+conectada, no que el mecanismo no mueva nada. **Causa:** instrumento. **Veredictos registrados que toca: ninguno** — la fila de A en la junta
+(R1–R5 en 841–860, cae en 821–840, PAR 13) se midió con `combina='min'` entre tipos, que sí está conectada (arnés BA: la regla reimplementada
+fuera coincide con `W_tabla` en los 32 estímulos); la predicción "dentro inerte" queda como NO MEDIDA, no como refutada. **Corrección:** no se
+toca A1 (es el ancla de BA y de la junta registrada); si alguien quiere medir `dentro='min'`, va como candidato aparte con la perilla conectada
+y arnés. **Regla derivada:** "inerte" sólo se declara con un control que DEBE diferir cuando la perilla se enciende (el arnés BA lo hace con 7).
+
+### Candidato BA (fase 5: lectura conjuntiva de B por TIPO sobre las dos ganadoras de A) — paquete verificado, serie lanzada (21-sep-2026 15:45)
+Diseño del creador BA (`experimentos/junta_fase5/BA/PREREGISTRO_ba.md`): una perilla `conj_tipo`, cero memoria nueva, construido por anclas desde
+`organismo_familias_a1.py` (6 anclas + 8 postcondiciones; `construye_familias_ba.py`); **identidad 56/56** (`identidad_ba_salida.txt`: apagado ≡ A1
+bit a bit, cadena ≡ b6 ≡ b5 ≡ b4b ≡ organismo_v14; 7 controles que DEBEN diferir, todos difieren); humo de un proceso con JSON
+(`humo_ba_20260921_130458_crudo.json`); regla 14: 33 campos idénticos al bloque 6. **Predicción firmada en §5 antes del humo: 25 % (BA) / 40 % (BA-v)
+a la misión; el propio humo del creador refuta su mecanismo en BAR-H** (con la variante completa la lectura sigue en +3: las celdas mixtas tienen
+valor propio positivo, `min(+3,+3)=+3`; la lección de B, "ningún combinador de valores veta al mensaje, sólo la dirección", no aplicada a fondo);
+estimación post-humo declarada por el creador: ≈10 % / ≈15 %. Predicción neta del creador para la serie: BA pasa la mitad de familia (BAR-T ≤ 5,
+CORTADO, VALOR, CANAL) y falla la de variante (BAR-H, PAR ≥ 15). Hallazgo del arnés: `exige_dir` calla en 16/32 estímulos, todos por el tipo
+VARIANTE (origen medido del CORTADO 4 de A1). Decisión del coordinador: se corre igual (preregistrado, cero memoria nueva, cierra una opción con
+mecanismo declarado); **semillas 921–940 (réplica 941–960)** en vez de 861–880 por la colisión con `C/PREREGISTRO_oreja.md`; celdas
+`b5k3,b6suf,A1,BA,BA-v`, Pool 8. ERR-88 nace de este paquete.

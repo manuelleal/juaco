@@ -833,3 +833,6 @@ sí se desdice 20/20), T-D (sin alias; la puerta de v14.1 lee la vía rápida an
 rejuzga; sin ERR nuevos. Patrón: v15d, v15e y v15f caen los tres por reversión o conducta del examen → recomendación del coordinador: cerrar la
 línea de memoria de pares en la vía lenta (decisión del director). Mismo día: ERR-87, `registro/ESTADO.md`, `experimentos/INDICE.md`, agentes y
 skills fijos del equipo (EQUIPO.md, "Herramientas"), candidato B+A de la fase 5 en diseño por `juaco-creador`.
+**15.14 (21-sep 15:45): ERR-88** (`dentro` de A1 es código muerto; "inerte" era "no conectada"; ningún veredicto cambia) y **candidato BA lanzado**
+(conjunción de B por tipo sobre las dos ganadoras de A; identidad 56/56; el propio creador refuta en su humo la mitad de variante y baja su apuesta a
+≈10–15 %; se corre igual en 921–940 con celdas b5k3,b6suf,A1,BA,BA-v; réplica 941–960 sólo si algo pasa).

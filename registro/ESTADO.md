@@ -1,6 +1,6 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 15:10** (coordinador). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **21-sep-2026, 15:45** (coordinador). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
@@ -24,13 +24,13 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 1. ~~v15f bajo el criterio v2~~ — **corrido y cerrado el 21-sep 12:37–12:54: NO ENTRA** (cae T-A, T-C, T-D, T-E; pasa T-B, T-F, T-G);
    `datos/v15f_v2_20260921_123755.json` (`58538f00d49d0f8e`), detalle en el registro y HANDOFF 15.13. Patrón v15d/v15e/v15f: recomendado cerrar la línea.
 2. **dE5** (sorpresa del mundo en la boca a dosis 5) — después de v15f. Decisión del director: sí.
-3. **Fase 5, candidato B+A** (lectura conjuntiva de B + dos ganadoras de tipo distinto de A) — en diseño por `juaco-creador` desde el 21-sep
-   en `experimentos/junta_fase5/BA/`. Nadie lo había probado junto.
+3. **Fase 5, candidato BA** (`experimentos/junta_fase5/BA/`, identidad 56/56, humo con JSON) — **serie 921–940 lanzada el 21-sep 15:45**
+   (celdas b5k3,b6suf,A1,BA,BA-v, Pool 8). El creador predice que pasa familia y falla variante; réplica 941–960 sólo si algo pasa.
 4. **Fase 9**: cuerpo nuevo que aprende en menos de una vida (nodo leído por relevancia; conexión desde el nacimiento; reproducción desacoplada
    de la saciedad). Sin preregistro todavía.
 
 ## Errores
-Último: **ERR-87** (21-sep: `lee_json` por `startswith` en los runners v13D/v13E; ningún veredicto cambia). Siguiente libre: **ERR-88**.
+Último: **ERR-88** (21-sep: la perilla `dentro` de A1 es código muerto; "inerte" era "no conectada"; ningún veredicto cambia). Siguiente libre: **ERR-89**.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos

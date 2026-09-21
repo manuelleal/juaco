@@ -1,0 +1,89 @@
+  sha organismo_v14.py (TRONCO CONGELADO)            feefc88b1fd8d434  OK
+  sha organismo_v15f_on.py                           54d6efe0b564113c  OK
+  sha organismo_familias.py (bloque 1)               b9dd561a0cf056b8  OK
+  sha organismo_familias_b4b.py (bloque 4b)          b3dd1d7e66a2d147  OK
+  sha organismo_familias_b5.py (bloque 5)            e0b6b90f6f92d5c1  OK
+  sha organismo_familias_b6.py (bloque 6)            b10cbd4ddd0c32a3  OK
+  sha organismo_familias_a1.py (creador A, ORIGEN)   8833e1dcfb62f26d  OK
+  sha construye_familias_ba.py                       503ada31c3da9a3b
+  sha organismo_familias_ba.py                       1f196ee786b2040d
+  T = 20000 (ancla del rng: 120000; canal: 60000), semillas (1, 2, 3), k = (1, 3), UN proceso
+
+  emisores con mensaje (-): 2/3 -> (1, 2)
+
+APAGADO (conj_tipo=0): organismo_familias_ba == organismo_familias_a1, con TODAS las perillas de A
+  [  19.2s] (a) k=1 sufijo=0 mundo=AB base                                                 2/2 IDENTICO
+  [  22.7s] (a) k=3 sufijo=1 mundo=AB base                                                 2/2 IDENTICO
+  [  26.6s] (b) k=1 sufijo=0 mundo=AB, relevo ENCENDIDO (v15f)                             2/2 IDENTICO
+  [  30.6s] (b) k=3 sufijo=1 mundo=AB, relevo ENCENDIDO (v15f)                             2/2 IDENTICO
+  [  34.5s] (c) k=1 sufijo=0 mundo=AB, linaje v13                                          2/2 IDENTICO
+  [  38.4s] (c) k=3 sufijo=1 mundo=AB, linaje v13                                          2/2 IDENTICO
+  [  43.1s] (d) k=1 sufijo=0 mundo=familias (bloque 1)                                     2/2 IDENTICO
+  [  48.8s] (d) k=3 sufijo=1 mundo=familias (bloque 1)                                     2/2 IDENTICO
+  [  55.4s] (e) k=1 sufijo=0 el mundo del bloque 4, EMISOR                                 2/2 IDENTICO
+  [  62.1s] (e) k=3 sufijo=1 el mundo del bloque 4, EMISOR                                 2/2 IDENTICO
+  [  68.4s] (f) k=1 sufijo=0 el mundo del bloque 4, RECEPTOR                               2/2 IDENTICO
+  [  75.8s] (f) k=3 sufijo=1 el mundo del bloque 4, RECEPTOR                               2/2 IDENTICO
+  [  82.2s] (g) k=1 sufijo=0 el emisor VORAZ anotando (voraz=1.0)                          2/2 IDENTICO
+  [  90.2s] (g) k=3 sufijo=1 el emisor VORAZ anotando (voraz=1.0)                          2/2 IDENTICO
+  [  97.5s] (h) k=1 sufijo=0 el brazo PAR del bloque 4b (par_herm=(1,0))                   2/2 IDENTICO
+  [ 105.5s] (h) k=3 sufijo=1 el brazo PAR del bloque 4b (par_herm=(1,0))                   2/2 IDENTICO
+  ...y con las perillas de LECTURA de A encendidas (conj_tipo=0 tiene que ser inerte con TODAS)
+  [ 111.8s] (a2) A1 (dos tipos + min + exige_dir + msg_elige=0)                            2/2 IDENTICO
+  [ 118.3s] (a3) A1-d (dos tipos + min, sin exige_dir)                                     2/2 IDENTICO
+  [ 126.2s] (a4) A1-c (dos tipos + media + exige_dir)                                      2/2 IDENTICO
+  [ 132.4s] (a5) A1-e (dos tipos + min + exige_dir, el mensaje SI re-elige)                2/2 IDENTICO
+  [ 138.2s] (a6) dos tipos + dentro='min' + pesos_tipo=1                                   2/2 IDENTICO
+  ...y con el CANAL ENCENDIDO en sus tres modos (el canal NO se toca)
+  [ 157.5s] (i) canal sen, A1 encendido                                                    2/2 IDENTICO
+  [ 178.5s] (j) canal inm, A1 encendido                                                    2/2 IDENTICO
+  [ 199.4s] (k) canal mudo, A1 encendido                                                   2/2 IDENTICO
+
+RNG NO CONSUMIDO por la perilla apagada (ancla larga)
+  [ 222.5s] (l) mundo=AB a T = 120000, relevo ENCENDIDO, k = 3                             2/2 IDENTICO
+  [ 245.5s] (l2) mundo=AB a T = 120000, dos tipos ENCENDIDOS (A1), k = 3                   2/2 IDENTICO
+
+CADENA COMPLETA (se comprueba hasta el TRONCO, no se supone)
+  [ 251.6s] (m) apagado == organismo_familias_b6 (mundo del receptor, k = 3, sufijo ON)    2/2 IDENTICO
+  [ 258.4s] (n) apagado == organismo_familias_b5 (mundo del bloque 4, k = 3)               2/2 IDENTICO
+  [ 264.6s] (o) apagado == organismo_familias_b4b (mundo del bloque 4, emisor voraz)       2/2 IDENTICO
+  [ 270.9s] (p) apagado + mundo=AB == organismo_v14 (TRONCO CONGELADO)                     3/3 IDENTICO
+  [ 276.5s] (q) relevo ON + mundo=AB == organismo_v15f_on                                  3/3 IDENTICO
+  [ 281.2s] (r) apagado + mundo=familias == organismo_familias (bloque 1)                  2/2 IDENTICO
+
+INERCIA: sin tabla no hay lectura que cambiar
+  [ 287.0s] (s) memoria_pares=None: conj_tipo=1 == conj_tipo=0 (mundo=AB)                  3/3 IDENTICO
+  [ 294.5s] (s2) memoria_pares=None: conj_tipo=1 == conj_tipo=0 (mundo de familias)        3/3 IDENTICO
+  [ 299.6s] (s3) `dentro` es una perilla MUERTA (heredada de A): la corrida es IDENTICA salvo la clave que la repite -- no es una medida del mecanismo 2/2 IDENTICO
+  [ 299.6s] (s4) ...y se ve en el fuente: `_DMv` aparece UNA sola vez (su definicion) en organismo_familias_ba.py y en organismo_familias_a1.py -> codigo muerto, no mecanismo medido 1/1 OK
+
+ESTRUCTURA: la regla REIMPLEMENTADA FUERA, y las TRES reglas SOBRE LA MISMA TABLA (leccion de B)
+  [ 304.6s] (A) la particion y las ganadoras de A siguen intactas (36 forma + 27 mixtas; 1 mixta por px variante) 1/1 OK
+  [ 304.6s] (B) la regla de BA reimplementada FUERA coincide con `W_tabla` en los 32 estimulos 1/1 OK
+  [ 304.6s] (C) sobre LA MISMA tabla: habla(A1) <= habla(BA) = habla(BA-v) <= habla(A1-d) -- BA abstiene MENOS que A1 y las dos variantes de BA callan en los mismos estimulos 1/1 OK
+        s1: habla A1 16/32, BA 32/32, A1-d 32/32; el tipo VARIANTE esta incompleto en 16/32  s2: habla A1 16/32, BA 32/32, A1-d 32/32; el tipo VARIANTE esta incompleto en 16/32  s3: habla A1 16/32, BA 32/32, A1-d 32/32; el tipo VARIANTE esta incompleto en 16/32
+
+EL MECANISMO HACE LO QUE DICE (estructural sobre el catalogo; ERR-71: NO pasa por el emisor)
+  [ 308.5s] (D) el referente esta SIEMPRE en su propia direccion conjunta (escritura y lectura coinciden) 1/1 OK
+  [ 308.5s] (E) la HERMANA NUNCA comparte la direccion conjunta del referente (la puerta del mecanismo) 1/1 OK
+
+PERILLA MAL ESCRITA (no cae en silencio)
+  [ 308.5s] (F) conj_tipo=3 lanza (solo 0, 1 y 2 existen)                                  1/1 LANZA (como debe)
+  [ 308.5s] (G) conj_tipo=True lanza (un bool no es una perilla)                           1/1 LANZA (como debe)
+  [ 308.5s] (H) conj_tipo='1' lanza                                                        1/1 LANZA (como debe)
+  [ 308.5s] (I) conj_tipo=1 SIN dos_tipos lanza (no hay tipos que conjugar)                1/1 LANZA (como debe)
+  [ 308.5s] (J) conj_tipo=1 CON exige_dir=1 lanza (dos reglas de abstencion no se componen) 1/1 LANZA (como debe)
+  [ 308.5s] (K) conj_tipo=1 con fam_nvar=0 lanza (no hay tipo VARIANTE)                    1/1 LANZA (como debe)
+  [ 308.5s] (L) las perillas de A siguen lanzando: dos_tipos=2                             1/1 LANZA (como debe)
+  [ 308.5s] (M) las perillas de A siguen lanzando: combina='suma'                          1/1 LANZA (como debe)
+
+CONTROLES QUE DEBEN DIFERIR (sin ellos el arnes pasaria por vacuidad; ERR-64b: >= 2 de 3)
+  [ 316.9s] (N) BA != A1 (`exige_dir`) en el mundo del receptor (DEBE diferir: es el cambio que se propone) 3/3 DIFIERE (como debe)
+  [ 325.6s] (O) BA != A1-d (sin regla de abstencion) (DEBE diferir: la conjuncion de la FORMA hace algo) 3/3 DIFIERE (como debe)
+  [ 334.3s] (O2) BA (conj_tipo=1) != BA-v (conj_tipo=2) (DEBE diferir: la variante incompleta vota o no vota) 3/3 DIFIERE (como debe)
+  [ 344.6s] (P) BA != b5 k=3 (la linea base de familia) (DEBE diferir)                     3/3 DIFIERE (como debe)
+  [ 364.9s] (Q) CANAL != CORTADO con conj_tipo=1 (DEBE diferir)                            2/2 DIFIERE (como debe)
+  [ 385.0s] (R) el patron de la HERMANA != CANAL con conj_tipo=1 (DEBE diferir: es el brazo que decide) 2/2 DIFIERE (como debe)
+  [ 404.5s] (S) el patron de OTRO TOKEN != CANAL con conj_tipo=1 (DEBE diferir)            2/2 DIFIERE (como debe)
+
+IDENTIDAD 56/56  -> el paquete puede correr.

@@ -1,0 +1,38 @@
+[13:04:58 +    0.0s] HUMO del candidato BA (junta fase 5). UN proceso, sin Pool (regla 3).
+[13:04:58 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla.
+[13:04:58 +    0.0s] celdas ['BA']  brazos ['CANAL', 'CORTADO', 'BAR-H', 'BAR-T', 'PAR']  semillas [911]  T = 100000 (<= 6 corridas, <= 200 000 pasos)
+[13:04:58 +    0.0s]     sha script                   f511d1bbe34887af
+[13:04:58 +    0.0s]     sha constructor              503ada31c3da9a3b
+[13:04:58 +    0.0s]     sha instrumento              1f196ee786b2040d
+[13:04:58 +    0.0s]     sha arnes                    c01162c2e46d5de2
+[13:04:58 +    0.0s]     sha preregistro              d8274bc419a8e02a
+[13:04:58 +    0.0s]     sha origen_a1                8833e1dcfb62f26d
+[13:04:58 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[13:04:58 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[13:04:58 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[13:04:58 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[13:04:58 +    0.0s]     sha preregistro_bloque6      a927e60810eacab2
+[13:04:58 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[13:04:58 +    0.0s]     origenes verificados -> OK
+[13:04:58 +    0.0s]     corridas previstas: 1 emisor(es) + 5 receptores = 6  (limite de la regla 3: 6)
+[13:04:58 +    0.0s] 1/4 DIAGNOSTICO ESTRUCTURAL (T = 0, sin simular)
+[13:04:58 +    0.0s]     semilla 911: alias_pares 0.01008  piso de forma 4/32  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [0, 1, 3, 8]
+[13:04:58 +    0.0s] 2/4 EMISORES (los del bloque 6, sin tocar)
+[13:05:05 +    7.6s]     E s911   7.6s  mensaje ('T1v2', 1.0, 't=11565', 'tras 16 exp')
+[13:05:05 +    7.6s] 3/4 REGLA 14 - la ENTRADA, campo a campo contra el bloque 6
+[13:05:05 +    7.6s]     REGLA 14 - entrada campo a campo contra el bloque 6: 33 campos comunes, IDENTICOS
+[13:05:05 +    7.6s]        campos: ['T', 'cambio', 'canal', 'costo', 'crit_exp', 'deriva', 'desambiguar', 'exc_fija', 'fam_D', 'fam_F', 'fam_V', 'fam_nvar', 'fam_seed', 'fam_val', 'k_ganadoras', 'ktop', 'largo', 'log_cada', 'memoria_pares', 'memoria_variante', 'mundo', 'n_exc', 'n_neu', 'nk', 'nkmax', 'nobj', 'par_herm', 'reg_b2', 'reg_b4', 'renov', 'seed', 'vent', 'vira']
+[13:05:05 +    7.6s]        perillas de celda (las UNICAS que pueden diferir): ['combina', 'conj_tipo', 'dentro', 'dos_tipos', 'eta_w', 'exige_dir', 'k_forma', 'k_ganadoras', 'k_var', 'memoria_variante', 'msg_elige', 'pesos_tipo', 'var_cubre']
+[13:05:05 +    7.6s] 4/4 RECEPTORES
+[13:05:12 +   14.8s]     CANAL-BA     s911   7.2s  entrega t=66700  comio 1  dist None  okU 1.0  via lenta  muertes 460  LEE(ref) [3.0, True, 3, 3]  abstiene 0/32
+[13:05:20 +   22.0s]     CORTADO-BA   s911   7.2s  entrega t=66700  comio 0  dist None  okU 1.0  via lenta  muertes 457  LEE(ref) [-9.0, True, 3, 3]  abstiene 0/32
+[13:05:27 +   29.1s]     BAR-H-BA     s911   7.1s  entrega t=66700  comio 1  dist None  okU 1.0  via lenta  muertes 462  LEE(ref) [3.0, True, 3, 3]  abstiene 0/32
+[13:05:34 +   36.9s]     BAR-T-BA     s911   7.8s  entrega t=66700  comio 0  dist None  okU 0.8333  via lenta  muertes 456  LEE(ref) [-9.0, True, 3, 3]  abstiene 0/32
+[13:05:42 +   44.6s]     PAR-BA       s911   7.7s  entrega t=66738  comio 1  dist 0.0  okU 0.8333  via lenta  muertes 458  LEE(ref) [3.0, True, 3, 3]  abstiene 0/32
+[13:05:42 +   44.6s] CRUDO -> humo_ba_20260921_130458_crudo.json  sha256_16 = 96d61e26386a2041  (ERR-54/ERR-42: el humo ESCRIBE su JSON)
+[13:05:42 +   44.6s] 
+[13:05:42 +   44.6s] celda      CANAL  CORTADO    BAR-H    BAR-T      PAR   dist(PAR)  dist(PAR0)  muertes  okU
+[13:05:42 +   44.6s] BA         1/1      0/1      1/1      0/1      1/1     0/1      0/0       460.0     1.0
+[13:05:42 +   44.6s] datos -> humo_ba_20260921_130458.json  sha256_16 = 3e99c62de744c204
+[13:05:42 +   44.6s] 
+[13:05:42 +   44.6s] LECTURA (1 semilla: NO es evidencia; con n = 1 ni la linea base se reproduce). Lo que el humo SI decide es el MECANISMO: `LEE(ref)` = [valor, habla, exactas de FORMA, exactas de VARIANTE] en el paso de la entrega. Lo que hay que ver: CANAL positivo con 3/3 y 3/3; BAR-H y BAR-T negativos o sin las 3 de FORMA; CORTADO negativo.
