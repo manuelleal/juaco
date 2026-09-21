@@ -1,0 +1,29 @@
+Referente X = T1v2   Hermana H = T1v0   Otro token TK = T3v2
+pares de FORMA: 36   pares MIXTOS (tipo VARIANTE): 27   px de variante: [9, 10, 11]
+
+seed   dist  dHam(X,H) px_var=   mixtas_col forma_col    ganadoras VARIANTE (par: col?)
+961    1.0   2         10        9/27       36/36        (7, 9):separa (7, 10):COLISIONA (3, 11):separa
+962    1.0   2         10        9/27       36/36        (5, 9):separa (5, 10):COLISIONA (7, 11):separa
+963    1.0   2         10        9/27       36/36        (2, 9):separa (2, 10):COLISIONA (8, 11):separa
+964    0.0   2         10        9/27       36/36        (6, 9):separa (2, 10):COLISIONA (2, 11):separa
+965    0.0   2         10        9/27       36/36        (1, 9):separa (0, 10):COLISIONA (1, 11):separa
+966    1.0   2         10        9/27       36/36        (2, 9):separa (6, 10):COLISIONA (8, 11):separa
+967    0.0   2         10        9/27       36/36        (7, 9):separa (7, 10):COLISIONA (4, 11):separa
+968    0.0   2         10        9/27       36/36        (8, 9):separa (8, 10):COLISIONA (8, 11):separa
+969    1.0   2         10        9/27       36/36        (6, 9):separa (6, 10):COLISIONA (6, 11):separa
+971    1.0   2         10        9/27       36/36        (3, 9):separa (3, 10):COLISIONA (3, 11):separa
+972    0.0   2         10        9/27       36/36        (3, 9):separa (3, 10):COLISIONA (4, 11):separa
+973    1.0   2         10        9/27       36/36        (6, 9):separa (6, 10):COLISIONA (6, 11):separa
+974    1.0   2         10        9/27       36/36        (7, 9):separa (6, 10):COLISIONA (2, 11):separa
+975    1.0   2         10        9/27       36/36        (1, 9):separa (1, 10):COLISIONA (1, 11):separa
+976    0.0   2         10        9/27       36/36        (7, 9):separa (7, 10):COLISIONA (7, 11):separa
+977    1.0   2         10        9/27       36/36        (2, 9):separa (2, 10):COLISIONA (7, 11):separa
+978    1.0   2         10        9/27       36/36        (3, 9):separa (7, 10):COLISIONA (8, 11):separa
+979    1.0   2         10        9/27       36/36        (8, 9):separa (8, 10):COLISIONA (8, 11):separa
+980    1.0   2         10        9/27       36/36        (5, 9):separa (5, 10):COLISIONA (5, 11):separa
+
+--- CRUCE: cuantas de las 3 ganadoras de VARIANTE le dan a X y a H LA MISMA casilla ---
+  1 ganadora(s) que COLISIONAN: n = 19  dist = 13/19   semillas [961, 962, 963, 964, 965, 966, 967, 968, 969, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980]
+
+--- Lo mismo con el SUFIJO encendido (b6suf: direccion = bin x firma de 3 px): control ---
+  semillas donde la FIRMA de 3 px de X y H coincide (y el sufijo tampoco separaria): 0/19

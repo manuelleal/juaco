@@ -1,0 +1,19 @@
+====================================================================================================
+Q2 -- MODELO DE UN PARAMETRO (p) DEL DEFICIT DE BA-v.  Se AJUSTA con dist(PAR), se PREDICE BAR-H.
+====================================================================================================
+serie      celda    dist(PAR)    p        BAR-H predicho BAR-H medido   dist con min (pred)
+961-980    BA-v     13/19        0.827    6.0            7              18.4/19         
+981-1000   BA-v     14/18        0.882    4.0            4              17.7/18         
+
+====================================================================================================
+Q1 -- POTENCIA DE LA PUERTA A12 >= 0.50 PAREADA (candidato INDISTINGUIBLE del tronco, sin empates)
+====================================================================================================
+n      P(pasa 1 brazo)  P(falla 1 brazo) P(falla T-A = 2 brazos indep.)
+18     0.593            0.407            0.649                   
+19     0.500            0.500            0.750                   
+20     0.588            0.412            0.654                   
+40     0.563            0.437            0.683                   
+60     0.551            0.449            0.696                   
+
+Banda de la nula (desviacion tipica de A12 pareado bajo indistinguibilidad): 0.112 con n = 20
+Umbral que dejaria pasar al 95 % de los candidatos inertes con n = 20: A12 >= 0.32
