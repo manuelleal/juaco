@@ -1,0 +1,227 @@
+============================================================================================================
+1) LO OBSERVADO  (pares por semilla; A12 = P(ON>OFF) + 0.5 P(=), exactamente la formula del runner)
+============================================================================================================
+caso                     n    A12 umbral      G/E/P   med ON  med OFF   med d    sd d  sd OFF  r(ON,OFF)  sd_d/(V2 sdOFF)
+------------------------------------------------------------------------------------------------------------
+v15f  T-A  VIVO         20  0.425   0.50     8/1/11    -73.5    -73.0    -5.5   17.56   10.91     -0.466            1.138
+v15f  T-A  CUELLO_MIN   20  0.450   0.50     9/0/11    -11.5     -8.5    -1.0   11.02    9.17      0.378            0.850
+dE5   T-A  VIVO         20  0.400   0.50     8/0/12    -75.0    -71.5    -5.0   17.83   13.31     -0.074            0.947
+dE5   T-A  CUELLO_MIN   20  0.500   0.50    10/0/10    -10.0     -5.5     0.5   19.46   12.42     -0.274            1.108
+v15f  T-C ii (rev)      20  0.550   0.75     11/0/9     44.5     37.5     3.5   26.83   14.01     -0.187            1.354
+v15g  T-C ii (rev)      20  0.550   0.75     11/0/9     43.0     37.5     5.5   23.36   14.01      0.133            1.179
+dE5   T-C ii (rev)      20  0.500   0.75    10/0/10     44.0     45.5    -1.0   29.55   17.80     -0.071            1.174
+
+  Lectura de la ultima columna: 1.00 = la semilla NO controla nada (ON y OFF son dos tiradas
+  independientes); < 1 = el pareado reduce ruido. rho(ON,OFF) mide lo mismo por el otro lado.
+
+============================================================================================================
+2) POTENCIA EXACTA DE LA LETRA  (modelo de signo sin empates: #ganadas ~ Bin(n, p), p = P(ON>OFF))
+============================================================================================================
+
+  regla: A12 >= 0.50     (T-A usa 0.50; T-C(ii) usa 0.75)
+  p verdadero ->    0.20  0.30  0.35  0.40  0.45  0.50  0.55  0.60  0.65  0.70  0.75  0.80  0.85  0.90
+    n = 20         0.003 0.048 0.122 0.245 0.409 0.588 0.751 0.872 0.947 0.983 0.996 0.999 1.000 1.000
+    n = 40         0.000 0.006 0.036 0.130 0.316 0.563 0.787 0.926 0.983 0.998 1.000 1.000 1.000 1.000
+    n = 80         0.000 0.000 0.004 0.044 0.215 0.544 0.844 0.973 0.998 1.000 1.000 1.000 1.000 1.000
+    n = 200        0.000 0.000 0.000 0.003 0.089 0.528 0.932 0.998 1.000 1.000 1.000 1.000 1.000 1.000
+    n -> inf       0.000 0.000 0.000 0.000 0.000 0.500 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+
+  regla: A12 >= 0.75     (T-A usa 0.50; T-C(ii) usa 0.75)
+  p verdadero ->    0.20  0.30  0.35  0.40  0.45  0.50  0.55  0.60  0.65  0.70  0.75  0.80  0.85  0.90
+    n = 20         0.000 0.000 0.000 0.002 0.006 0.021 0.055 0.126 0.245 0.416 0.617 0.804 0.933 0.989
+    n = 40         0.000 0.000 0.000 0.000 0.000 0.001 0.007 0.035 0.121 0.309 0.584 0.839 0.970 0.999
+    n = 80         0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.004 0.037 0.198 0.560 0.893 0.994 1.000
+    n = 200        0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.002 0.070 0.538 0.966 1.000 1.000
+    n -> inf       0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.500 1.000 1.000 1.000
+
+  p = 0.50 es "el candidato ES el tronco". Leer esa columna:
+    A12 >= 0.50:  n=20 -> 0.588   n=40 -> 0.563   n=80 -> 0.544   n->inf -> 0.500
+    A12 >= 0.75:  n=20 -> 0.021   n=40 -> 0.001   n=80 -> 0.000   n->inf -> 0.000
+
+  Efecto minimo detectable (p tal que la regla PASA con probabilidad 0.80):
+    A12 >= 0.50, n = 20  -> p* = 0.568  (el candidato tiene que ganar al tronco en el 57 % de las semillas)
+    A12 >= 0.50, n = 40  -> p* = 0.554  (el candidato tiene que ganar al tronco en el 55 % de las semillas)
+    A12 >= 0.50, n = 80  -> p* = 0.541  (el candidato tiene que ganar al tronco en el 54 % de las semillas)
+    A12 >= 0.75, n = 20  -> p* = 0.799  (el candidato tiene que ganar al tronco en el 80 % de las semillas)
+    A12 >= 0.75, n = 40  -> p* = 0.791  (el candidato tiene que ganar al tronco en el 79 % de las semillas)
+    A12 >= 0.75, n = 80  -> p* = 0.782  (el candidato tiene que ganar al tronco en el 78 % de las semillas)
+
+============================================================================================================
+3) POTENCIA CON EL RUIDO REAL  (remuestreo de la nube observada, simetrizada = nulo exacto,
+   mas un desplazamiento delta en las unidades del criterio; n = 20; 200 000 repeticiones)
+============================================================================================================
+
+  v15f  T-A  VIVO   (umbral 0.50; sd de la diferencia 17.56)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        1.000   0.996   0.915   0.751   0.591   0.410   0.177   0.014   0.000
+
+  v15f  T-A  CUELLO_MIN   (umbral 0.50; sd de la diferencia 11.02)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        1.000   0.995   0.829   0.816   0.546   0.323   0.255   0.009   0.000
+
+  dE5   T-A  VIVO   (umbral 0.50; sd de la diferencia 17.83)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        1.000   0.997   0.947   0.641   0.587   0.457   0.122   0.007   0.000
+
+  dE5   T-A  CUELLO_MIN   (umbral 0.50; sd de la diferencia 19.46)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        1.000   0.991   0.872   0.588   0.588   0.586   0.245   0.027   0.000
+
+  v15f  T-C ii (rev)   (umbral 0.75; sd de la diferencia 26.83)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        0.516   0.126   0.055   0.021   0.020   0.021   0.006   0.001   0.000
+
+  v15g  T-C ii (rev)   (umbral 0.75; sd de la diferencia 23.36)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        0.879   0.418   0.245   0.085   0.021   0.003   0.000   0.000   0.000
+
+  dE5   T-C ii (rev)   (umbral 0.75; sd de la diferencia 29.55)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    P(la letra PASA)        0.716   0.179   0.054   0.021   0.021   0.021   0.007   0.001   0.000
+
+  3b) BANDA DE OPERACION de la letra, en unidades naturales (delta donde PASA con prob. 0.80
+      y delta donde CAE con prob. 0.80; entre los dos la letra es un volado):
+      v15f  T-A  VIVO        PASA-80% en delta >=   +2.5   CAE-80% en delta <=   -4.5   (banda ciega de  7.0 puntos)
+      v15f  T-A  CUELLO_MIN  PASA-80% en delta >=   +1.0   CAE-80% en delta <=   -6.0   (banda ciega de  7.0 puntos)
+      dE5   T-A  VIVO        PASA-80% en delta >=   +3.0   CAE-80% en delta <=   -4.0   (banda ciega de  7.0 puntos)
+      dE5   T-A  CUELLO_MIN  PASA-80% en delta >=   +2.5   CAE-80% en delta <=   -6.5   (banda ciega de  9.0 puntos)
+      v15f  T-C ii (rev)     PASA-80% en delta >=  +21.5   CAE-80% en delta <=  +11.5   (banda ciega de 10.0 puntos)
+      v15g  T-C ii (rev)     PASA-80% en delta >=  +18.5   CAE-80% en delta <=   +3.5   (banda ciega de 15.0 puntos)
+      dE5   T-C ii (rev)     PASA-80% en delta >=  +23.0   CAE-80% en delta <=  +11.0   (banda ciega de 12.0 puntos)
+
+  delta = 0 es "identico al tronco"; delta = -10 es exactamente el margen que el propio T-A
+  declara tolerable ("r >= tronco - 10"). Si las dos columnas dan casi lo mismo, la letra no
+  distingue "igual" de "peor en todo el margen declarado".
+
+============================================================================================================
+4) TAMANO DE MUESTRA PARA UNA PRUEBA DE NO INFERIORIDAD HONESTA (margen = 10 puntos de r)
+============================================================================================================
+   n = (z_0.95 + z_0.80)^2 * sd_d^2 / margen^2   (t pareada, efecto verdadero 0, potencia 0.80)
+   v15f  T-A  VIVO        sd_d  17.56  margen   10 -> n =   20 semillas pareadas
+   v15f  T-A  VIVO        sd_d  17.56  margen   15 -> n =    9 semillas pareadas
+   v15f  T-A  VIVO        sd_d  17.56  margen   20 -> n =    5 semillas pareadas
+   v15f  T-A  CUELLO_MIN  sd_d  11.02  margen   10 -> n =    8 semillas pareadas
+   v15f  T-A  CUELLO_MIN  sd_d  11.02  margen   15 -> n =    4 semillas pareadas
+   v15f  T-A  CUELLO_MIN  sd_d  11.02  margen   20 -> n =    2 semillas pareadas
+   dE5   T-A  VIVO        sd_d  17.83  margen   10 -> n =   20 semillas pareadas
+   dE5   T-A  VIVO        sd_d  17.83  margen   15 -> n =    9 semillas pareadas
+   dE5   T-A  VIVO        sd_d  17.83  margen   20 -> n =    5 semillas pareadas
+   dE5   T-A  CUELLO_MIN  sd_d  19.46  margen   10 -> n =   24 semillas pareadas
+   dE5   T-A  CUELLO_MIN  sd_d  19.46  margen   15 -> n =   11 semillas pareadas
+   dE5   T-A  CUELLO_MIN  sd_d  19.46  margen   20 -> n =    6 semillas pareadas
+
+   Con el signo (no parametrico, sin supuesto de normalidad) la n sube ~1.05-1.5x sobre la de arriba.
+
+   Lo mismo exigiendo que un candidato IDENTICO al tronco pase el 95 % de las veces
+   (n = (z_0.95 + z_0.95)^2 * sd_d^2 / margen^2):
+   v15f  T-A  VIVO        sd_d  17.56 ->  margen 10: n =  34  margen 15: n =  15  margen 20: n =   9
+   v15f  T-A  CUELLO_MIN  sd_d  11.02 ->  margen 10: n =  14  margen 15: n =   6  margen 20: n =   4
+   dE5   T-A  VIVO        sd_d  17.83 ->  margen 10: n =  35  margen 15: n =  16  margen 20: n =   9
+   dE5   T-A  CUELLO_MIN  sd_d  19.46 ->  margen 10: n =  42  margen 15: n =  19  margen 20: n =  11
+
+============================================================================================================
+5) LOS DATOS YA MEDIDOS, LEIDOS CON EL INSTRUMENTO CORRECTO  (DIAGNOSTICO DEL INSTRUMENTO,
+   NO VEREDICTO: regla 3, ningun candidato se rejuzga; v15f y dE5 siguen FUERA)
+============================================================================================================
+
+caso                      A12      IC90 de p (signo)  media d     EE     IC90 de la media d   no-inferior a margen 10?
+------------------------------------------------------------------------------------------------------------
+v15f  T-A  VIVO         0.425           [0.22, 0.61]    -1.65   3.93            [-8.4, 5.1]        SI  (LI -8.4 > -10)
+v15f  T-A  CUELLO_MIN   0.450           [0.26, 0.65]     0.05   2.46            [-4.2, 4.3]        SI  (LI -4.2 > -10)
+dE5   T-A  VIVO         0.400           [0.22, 0.61]    -0.55   3.99            [-7.4, 6.3]        SI  (LI -7.4 > -10)
+dE5   T-A  CUELLO_MIN   0.500           [0.30, 0.70]    -2.10   4.35            [-9.6, 5.4]        SI  (LI -9.6 > -10)
+v15f  T-C ii (rev)      0.550           [0.35, 0.74]     6.25   6.00           [-4.1, 16.6] n/a (T-C ii no declara margen)
+v15g  T-C ii (rev)      0.550           [0.35, 0.74]     2.75   5.22           [-6.3, 11.8] n/a (T-C ii no declara margen)
+dE5   T-C ii (rev)      0.500           [0.30, 0.70]     7.45   6.61           [-4.0, 18.9] n/a (T-C ii no declara margen)
+
+  El IC90 del signo de CADA caso contiene 0.50: con n = 20 ninguno de los cuatro T-A medidos
+  hoy puede separar "igual al tronco" (p = 0.50) de "peor" (p = 0.35).
+
+============================================================================================================
+6) LA MISMA PATOLOGIA EN LAS PUERTAS DE CONTEO k/n  (Q2: P6 de BA-v, dist(PAR) >= 15 de 19)
+============================================================================================================
+   BA-v, dist(PAR) en las tres series registradas: 18/19, 17/19, 13/19  (agrupado 48/57 = 0.842)
+   Si el mecanismo tiene UN solo p verdadero, la puerta 15/19 se cruza con probabilidad:
+   p verdadero ->     0.70   0.75   0.80   0.84   0.85   0.90   0.95
+   P(dist >= 15)     0.282  0.465  0.673  0.830  0.856  0.965  0.998
+
+   Homogeneidad de las tres series bajo p = 0.842 (chi2 de 2 gl, esperado 16.0 por serie):
+     chi2 = 5.54  (critico 5.99 al 5 %)  ->  las tres series son compatibles con UN solo p
+   Con p = 0.842, P(cruzar 15/19) = 0.830: una serie de cada 5.9 cae por la letra aunque el mecanismo no cambie.
+   IC90 exacto de p con 48/57: (0.741, 0.915)
+
+============================================================================================================
+7) LA LETRA PROPUESTA (v3): NO INFERIORIDAD en unidades naturales, con el MISMO n = 20
+============================================================================================================
+   Regla: PASA si el limite inferior del IC 95 % de una cola de la diferencia pareada (ON - OFF)
+          queda POR ENCIMA de -margen. margen = 10 puntos de r (el que T-A ya declara).
+
+  v15f  T-A  VIVO   (margen 10; sd_d 17.56)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             1.000   1.000   0.983   0.909   0.790   0.617   0.330   0.051   0.000
+    v2  P(PASA)             1.000   0.996   0.917   0.751   0.585   0.406   0.176   0.013   0.000
+
+  v15f  T-A  CUELLO_MIN   (margen 10; sd_d 11.02)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             1.000   1.000   1.000   1.000   0.995   0.948   0.627   0.050   0.000
+    v2  P(PASA)             1.000   0.995   0.828   0.814   0.543   0.318   0.256   0.009   0.000
+
+  dE5   T-A  VIVO   (margen 10; sd_d 17.83)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             1.000   0.999   0.970   0.889   0.780   0.616   0.341   0.049   0.000
+    v2  P(PASA)             1.000   0.997   0.946   0.641   0.593   0.461   0.124   0.008   0.000
+
+  dE5   T-A  CUELLO_MIN   (margen 10; sd_d 19.46)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             1.000   0.998   0.958   0.854   0.729   0.568   0.303   0.052   0.000
+    v2  P(PASA)             1.000   0.992   0.873   0.594   0.590   0.589   0.245   0.028   0.000
+
+  v15f  T-C ii (rev)   (margen 10; sd_d 26.83)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             1.000   0.956   0.785   0.618   0.488   0.353   0.198   0.049   0.001
+    v2  P(PASA)             0.515   0.124   0.053   0.020   0.022   0.021   0.006   0.001   0.000
+
+  v15g  T-C ii (rev)   (margen 10; sd_d 23.36)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             1.000   0.982   0.879   0.729   0.594   0.450   0.245   0.049   0.000
+    v2  P(PASA)             0.874   0.416   0.246   0.087   0.021   0.003   0.000   0.000   0.000
+
+  dE5   T-C ii (rev)   (margen 10; sd_d 29.55)
+    delta (ON - OFF) ->       +20     +10      +5      +2      +0      -2      -5     -10     -20
+    v3  P(PASA)             0.995   0.886   0.696   0.541   0.425   0.319   0.184   0.051   0.001
+    v2  P(PASA)             0.715   0.181   0.054   0.020   0.021   0.020   0.007   0.001   0.000
+
+   Lectura: en delta = 0 ("identico al tronco") v3 PASA casi siempre y v2 es un volado;
+   en delta = -20 ("dos veces peor que el margen declarado") las dos CAEN.
+
+============================================================================================================
+8) EL NULO MEDIDO CON DATOS REALES DEL TRONCO (sin simular nada)
+============================================================================================================
+   Los brazos OFF de v15f-v2 (semillas 301-320) y de dE5-v2 (2021-2040) son EL MISMO organismo:
+   v14.2 con la perilla apagada (identidad bit a bit en los dos paquetes), el mismo mundo
+   (corre_vivo_rep2.BRAZOS), el mismo T = 100 000 y el mismo runner. Son dos muestras
+   independientes de la MISMA ley. Emparejarlas da un candidato-placebo PERFECTO: "el tronco
+   contra el tronco". Es el control negativo que el CRITERIO v2 nunca corrio.
+
+medida (tronco vs tronco)    med A   med B  A12 no par.  A12(1 orden)  P(pasa) a) reordenar  P(pasa) b) repartir 40
+------------------------------------------------------------------------------------------------------------
+T-A  VIVO        (r)         -71.5   -73.0        0.511         0.500                 0.681                   0.568
+T-A  CUELLO_MIN  (r)          -5.5    -8.5        0.608         0.550                 0.986                   0.561
+T-A  VIVO  (-muertes)        -92.0   -95.0        0.554         0.425                 0.873                   0.558
+T-C ii  (rev)                 45.5    37.5        0.534         0.450                 0.000                   0.018
+
+   8b) LA LETRA COMPLETA sobre el placebo perfecto (40 corridas reales del tronco repartidas al
+       azar en dos brazos de 20; cada semilla lleva sus dos mundos juntos, como en el runner):
+       unidades disponibles: 40 semillas del tronco con sus dos mundos
+       VIVO         muertes<=1.10x 0.993   r>=tronco-10 0.985   A12>=0.50 0.567   brazo entero 0.567
+       CUELLO_MIN   muertes<=1.10x 0.951   r>=tronco-10 0.954   A12>=0.50 0.561   brazo entero 0.558
+       >>> T-A ENTERA sobre el placebo perfecto: PASA 0.316  (CAE 0.684)
+       >>> sin la clausula A12 (solo las dos medianas declaradas): PASA 0.909
+       >>> T-A y T-C (ii) juntas (independientes): PASA ~ 0.0057
+
+   "A12 no pareado" ~ 0.50 confirma que las dos muestras son de la misma ley (no hay efecto de serie).
+   Columna b) = probabilidad REAL de que la letra deje pasar al tronco disfrazado de candidato,
+   con corridas reales del tronco: T-A ~ 0.6 (un volado) y T-C (ii) ~ 0.02 (el tronco no se desdice
+   mejor que el tronco). Columna a) es la version condicionada a las dos muestras observadas.
+
+(salida escrita en C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\junta_20260921\A\salida_analiza_potencia_Q1.txt)
