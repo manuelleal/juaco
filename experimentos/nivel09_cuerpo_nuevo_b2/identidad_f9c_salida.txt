@@ -1,0 +1,145 @@
+ARNES organismo_f9c — 2026-09-21 17:20:40 · T=20000 · semillas (1, 2) · UN proceso, sin Pool
+  organismo_f9c.py  sha 9dd1fb91ecec35ae
+  organismo_f9.py   sha 3a821884394d66c9  (origen, solo lectura)
+  organismo_f9b.py  sha 6a57e9fa9514099b  (ancla del bloque 2, solo lectura)
+  organismo_v14.py  sha feefc88b1fd8d434  (TRONCO v14.1)
+
+(A) APAGADAS == organismo_f9 BIT A BIT — 9 brazos x 2 rep_acum x 2 semillas
+  OK   (A) RENACE acum=0 s=1   falta [] dif [] extra []
+  OK   (A) RENACE acum=0 s=2   falta [] dif [] extra []
+  OK   (A) RENACE acum=1 s=1   falta [] dif [] extra []
+  OK   (A) RENACE acum=1 s=2   falta [] dif [] extra []
+  OK   (A) NADA acum=0 s=1   falta [] dif [] extra []
+  OK   (A) NADA acum=0 s=2   falta [] dif [] extra []
+  OK   (A) NADA acum=1 s=1   falta [] dif [] extra []
+  OK   (A) NADA acum=1 s=2   falta [] dif [] extra []
+  OK   (A) M1 acum=0 s=1   falta [] dif [] extra []
+  OK   (A) M1 acum=0 s=2   falta [] dif [] extra []
+  OK   (A) M1 acum=1 s=1   falta [] dif [] extra []
+  OK   (A) M1 acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REC acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REC acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REC acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REC acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_FIJO acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_BAR acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_AZAR acum=1 s=2   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=0 s=1   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=0 s=2   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=1 s=1   falta [] dif [] extra []
+  OK   (A) REL_TARDE acum=1 s=2   falta [] dif [] extra []
+
+(B) CADENA: apagadas con vivo=0, n_nec=1 == organismo_v14 (TRONCO CONGELADO)
+  OK   (B) v14 s=1 []   falta [] dif [] extra []
+  OK   (B) v14 s=1 ['nuevo', 'solap_B']   falta [] dif [] extra []
+  OK   (B) v14 s=1 ['invertir_en']   falta [] dif [] extra []
+  OK   (B) v14 s=2 []   falta [] dif [] extra []
+  OK   (B) v14 s=2 ['nuevo', 'solap_B']   falta [] dif [] extra []
+  OK   (B) v14 s=2 ['invertir_en']   falta [] dif [] extra []
+
+(C) ANCLA DEL BLOQUE 2: nodo_via=1 == organismo_f9b BIT A BIT (salvo pa/pn, SOLO LECTURA)
+  OK   (C) REL s=1   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL s=2   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REC s=1   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REC s=2   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL_BAR s=1   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL_BAR s=2   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL_AZAR s=1   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL_AZAR s=2   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL_TARDE s=1   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+  OK   (C) REL_TARDE s=2   dif [] f9dif [] extra_f9 [] (pa/pn declaradas)
+
+(D) LA MAESTRA: con alma=None las cuatro perillas se apagan solas
+  OK   (D) alma=None s=1   falta [] dif [] extra []
+  OK   (D) alma=None s=2   falta [] dif [] extra []
+
+(E) NINGUNA CLAVE NUEVA con todo apagado (el dict es el de organismo_f9)
+  OK   (E) claves nuevas s=1   claves nuevas presentes: []
+  OK   (E) claves nuevas s=2   claves nuevas presentes: []
+
+(F) DEBEN DIFERIR (>= 7 controles; si no, la perilla es INERTE, ERR-38)
+  OK   (F) REL2b != REL s=1   claves que cambian: 44 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2b != REL s=2   claves que cambian: 42 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2b != REL2 s=1   claves que cambian: 45 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2b != REL2 s=2   claves que cambian: 45 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2b_BAR != REL2b s=1   claves que cambian: 47 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2b_BAR != REL2b s=2   claves que cambian: 45 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) CAUTELA != NADA s=1   claves que cambian: 43 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) CAUTELA != NADA s=2   claves que cambian: 43 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) DOSIS != REL s=1   claves que cambian: 46 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) DOSIS != REL s=2   claves que cambian: 43 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) ORACULO != REL2b s=1   claves que cambian: 45 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) ORACULO != REL2b s=2   claves que cambian: 43 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) ORACULO != REL s=1   claves que cambian: 44 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) ORACULO != REL s=2   claves que cambian: 42 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2 != REL s=1   claves que cambian: 46 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) REL2 != REL s=2   claves que cambian: 45 ['sobre', 'llegadas', 'sin_objetivo']
+  OK   (F) rep_acum 1 != 0 en REL2b s=1   desc 14 -> 12
+  OK   (F) rep_acum 1 != 0 en REL2b s=2   desc 11 -> 15
+
+(G) EL MECANISMO, MEDIDO: leer NO abre la puerta con nodo_via=2; morder SI
+  OK   (G1) fam_nac == 0 en TODOS los nacimientos con nodo_via=2 s=1   nacimientos 35 max 0
+  OK   (G2) fam_nac > 0 con nodo_via=1 (la evidencia SI abre la puerta) s=1   max 4 media 2.49
+  OK   (G3) en la PRIMERA lectura via_msg es IGUAL en nodo_via 1 y 2 s=1   T=350 · via_msg 2 -> 11 · 1 -> 11 · fam_nac 0 vs 0 · a T completo divergen (2 -> 1606, 1 -> 1915): trayectorias distintas, no un fallo
+  OK   (G4) pa > 0 con nodo_via=2 (MORDER abre la puerta) s=1   pa 367 / pn 2204
+  OK   (G1) fam_nac == 0 en TODOS los nacimientos con nodo_via=2 s=2   nacimientos 36 max 0
+  OK   (G2) fam_nac > 0 con nodo_via=1 (la evidencia SI abre la puerta) s=2   max 4 media 2.37
+  OK   (G3) en la PRIMERA lectura via_msg es IGUAL en nodo_via 1 y 2 s=2   T=120 · via_msg 2 -> 11 · 1 -> 11 · fam_nac 0 vs 0 · a T completo divergen (2 -> 1729, 1 -> 2053): trayectorias distintas, no un fallo
+  OK   (G4) pa > 0 con nodo_via=2 (MORDER abre la puerta) s=2   pa 132 / pn 2221
+
+(H) ANTES DE LA PRIMERA LECTURA (T = paso de la primera muerte): nodo_via=2 == 0
+  OK   (H) T=349 s=1   dif []
+  OK   (H) T=119 s=2   dif []
+
+(I) SI NADIE LEE (nodo=1, conectado=0): nodo_via=2 y nodo_or=1 == apagado, a T completo
+  OK   (I) nadie lee nodo_via=2 s=1   dif []
+  OK   (I) nadie lee nodo_or=1 s=1   dif []
+  OK   (I) nadie lee nodo_via=2 s=2   dif []
+  OK   (I) nadie lee nodo_or=1 s=2   dif []
+
+(J) EL ORACULO LEE LA TABLA VERDADERA: con nodo_lee=400 (8x50) la via lenta del recien nacido
+    converge a la fila EXACTA de su necesidad -- hambre A=+1 B=-3 C=D=0, o sed C=+1 D=-3 A=B=0
+  OK   (J) oraculo s=1   ORACULO W_lenta {'A': 0.952, 'B': -2.934, 'C': 0.059, 'D': -0.031} (fila HAMBRE exacta) · REL (mismo T, nodo real) {'A': 0.203, 'B': -0.632, 'C': 0.268, 'D': -0.15} · via_msg 400 lecturas 1
+  OK   (J) oraculo s=2   ORACULO W_lenta {'A': 0.054, 'B': -0.042, 'C': 0.961, 'D': -2.947} (fila SED exacta) · REL (mismo T, nodo real) {'A': 0.078, 'B': -0.219, 'C': -1.082, 'D': -1.23} · via_msg 400 lecturas 1
+
+(K) f9c ES SOLO LECTURA: f9c=1 == f9c=0 salvo {pa, pn}
+  OK   (K) REL s=1   dif [] f9dif [] extra ['pa', 'pn']
+  OK   (K) REL s=2   dif [] f9dif [] extra ['pa', 'pn']
+  OK   (K) REL2b s=1   dif [] f9dif [] extra ['pa', 'pn']
+  OK   (K) REL2b s=2   dif [] f9dif [] extra ['pa', 'pn']
+  OK   (K) ORACULO s=1   dif [] f9dif [] extra ['pa', 'pn']
+  OK   (K) ORACULO s=2   dif [] f9dif [] extra ['pa', 'pn']
+
+(L) CAUTELA ES UN EMPUJON: sesgo_fijo=0 == NADA; sesgo_fijo<0 muerde ESTRICTAMENTE menos
+  OK   (L1) sesgo_fijo=0 == NADA s=1   dif [] extra []
+  OK   (L2) sesgo_fijo=-2.0 muerde menos que NADA s=1   mordidas 135 < 614
+  OK   (L1) sesgo_fijo=0 == NADA s=2   dif [] extra []
+  OK   (L2) sesgo_fijo=-2.0 muerde menos que NADA s=2   mordidas 138 < 576
+
+(M) GUARDIAS (deben abortar)
+  OK   (M) nodo_via=3   F9C: nodo_via es 0 (solo la via lenta = organismo_f9), 1 (las DOS vias CON evide
+  OK   (M) nodo_via=2 con nodo=0   F9C: nodo_via exige nodo=1 (no hay nodo que leer)
+  OK   (M) nodo_or=1 con nodo=0   F9C: nodo_or exige nodo=1 (el oraculo sustituye el CONTENIDO del nodo, no el can
+
+(N) DETERMINISMO
+  OK   (N) REL2b s=1   dif []
+  OK   (N) REL2b s=2   dif []
+  OK   (N) ORACULO s=1   dif []
+  OK   (N) ORACULO s=2   dif []
+  OK   (N) CAUTELA s=1   dif []
+  OK   (N) CAUTELA s=2   dif []
+
+TOTAL 109/109 en 364.6s

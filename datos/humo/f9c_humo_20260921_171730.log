@@ -1,0 +1,43 @@
+HUMO FASE 9 BLOQUE 2 · 2026-09-21 17:17:30 · UN proceso, sin Pool (regla 3)
+  organismo_f9c.py sha f40336f05a787be8 · origen f9 3a821884394d66c9 (se espera 3a821884394d66c9) · f9b 6a57e9fa9514099b (se espera 6a57e9fa9514099b)
+  python 3.14.2 · T=100000 · 6 corridas (semillas 1-2 YA VISTAS)
+
+ETAPA 1/4 — REGLA 14 (campo a campo contra corre_f9.BRAZOS)
+  OK   regla14 RENACE     17 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 NADA       25 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 M1         25 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REC        26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL        26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL_BAR    27 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL_FIJO   26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+  OK   regla14 REL_AZAR   26 campos identicos a corre_f9.BRAZOS   falta [] dif [] extra [] perillas encendidas []
+
+ETAPA 2/4 — identidad dentro del runner (regla 14, ERR-38)
+  OK   (1) apagado == organismo_f9 BIT A BIT (brazo REL)   dif []
+  OK   (2) nodo_via=1 == organismo_f9b BIT A BIT (salvo pa/pn, SOLO LECTURA)   dif ['f9'] f9 [] extra []
+  OK   (3) REL2b != REL y REL2b != REL2 (DEBEN diferir, ERR-38)   via_msg 1606 · fam_nac max REL2b 0 (debe ser 0) · REL2 4 (> 0) · pa/pn REL2b 367/2204
+  OK   (4) CAUTELA != NADA, DOSIS != REL, ORACULO != REL2b (DEBEN diferir)   mordidas CAUTELA 223 vs NADA 614
+  OK   (5) rep_acum=1 != rep_acum=0 en REL2b (DEBE diferir)   desc 14 -> 12
+
+ETAPA 3/4 — 6 corridas (REL2b x2 · REL_BAR · CAUTELA x2 de rejilla · ORACULO)
+  [  32.2s] REL2b      s1 acum1                        R0 0.5294  r -71    vida 631.0    cuerpos 153   p1 0.966 c1 0.9908 J 0.9568 sac 0.49 expA 579 via 7456 famnac 0.0/0 pa 0.096 fund 71 coh True
+  [  45.1s] REL2b      s2 acum1                        R0 0.5427  r -74    vida 599.0    cuerpos 164   p1 0.962 c1 0.9832 J 0.9452 sac 0.527 expA 667 via 8079 famnac 0.0/0 pa 0.105 fund 79 coh True
+  [  64.3s] REL_BAR    s1 acum1                        R0 0.2292  r -194   vida 180.0    cuerpos 253   p1 0.6098 c1 0.5897 J 0.1995 sac 0.406 expA 797 via None famnac None/None pa 0.03 fund 194 coh True
+  [  74.7s] CAUTELA    s1 acum1 {'sesgo_fijo': -1.2}   R0 0.3923  r -78    vida 600.0    cuerpos 130   p1 0.5748 c1 0.6596 J 0.2344 sac 0.324 expA 760 via None famnac None/None pa 0.024 fund 79 coh True
+  [  84.3s] CAUTELA    s1 acum1 {'sesgo_fijo': -2.0}   R0 0.1419  r -132   vida 200.0    cuerpos 155   p1 0.9067 c1 0.1161 J 0.0228 sac 0.176 expA 1179 via None famnac None/None pa 0.02 fund 132 coh True
+  [  95.7s] ORACULO    s1 acum1                        R0 0.4115  r -112   vida 436.0    cuerpos 192   p1 0.8533 c1 1.0 J 0.8533 sac 0.473 expA 681 via 9168 famnac 0.0/0 pa 0.09 fund 112 coh True
+
+ETAPA 4/4 — predicciones del humo (HC1..HC6, escritas en el PREREGISTRO ANTES de correrlo) y calibracion
+  HC1: SI
+  HC2: SI
+  HC3: SI
+  HC4: SI
+  HC5: SI
+  HC6: SI
+  Solo HC1, HC2 y HC3 BLOQUEAN (son el instrumento). HC4 y HC5 son la HIPOTESIS: si fallan se escriben
+  en el preregistro y la serie corre con esta letra. NINGUN umbral se cambia despues del humo (regla 4).
+  CALIBRACION: c1(REL_BAR) 0.5897 BRACKETEADO por 0.6596 (c=-1.2) y 0.1161 (c=-2.0) -> c* = -1.3 (interpolacion lineal, regla del preregistro)
+  -> escribir C_CAUT = -1.3 en corre_bloque2.py ANTES de la serie (con la cita de este JSON)
+
+JSON  C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\humo\f9c_humo_20260921_171730.json  (sha 49297b630c9ae46f)
+HUMO terminado en 95.7s
