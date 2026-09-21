@@ -931,3 +931,9 @@ relajación local (la tabla M leída como bloqueo) **CAE por la letra en 5 de 10
 margen (0.15 contra 0.25: la cláusula de refutación que el propio creador fijó), huye el 42.5 %, J −0.4, pasos 0.781. Pasan comida (2.46×), muertes
 (0.38×), el control INVERTIDO y el placebo. Coherente con nivel6_2d: mejora comida y supervivencia sin rodeo fiable. Mundo muralla con geometría sorteada
 queda como instrumento; port a v14.2 no escrito. Nivel 6 sigue en 50 %; réplica no se corre. Datos `muralla_s1702-1721_20260921_170652`; `a9fc850`, `0925beb`.
+**15.26 (21-sep 17:08–17:20): réplica de la calibración del criterio v3, 2281–2360 (Pool 7) — NO REPITE.** CAL-1 refutada por 0.002 (T-A v3 0.898) y
+CAL-4 refutada (muertes_VIVO 0.627 fuera de [0.40, 0.60], el gatillo que declara el instrumento roto); CAL-2, CAL-3 y CAL-5 repiten; en la realización
+el placebo cae T-C (ii) bajo v3 (LI −11.93). Por la letra, **v3 no se declara utilizable**: se propone v4 con ERR (T-C ii n = 80 o margen 15; CAL-4 con
+n = 80 o placebo que no toque el rng; decisión del director). Lo que se sostiene en dos series: v2 rechaza al propio tronco (0.285 / 0.297) y las dos
+letras rechazan al peor por 20. Hasta v4, cualquier candidato se juzga con v2 y v3 lado a lado, declarándolo. Datos `critv3_rep_20260921_170812`
+(`fd10cce51f4cdc53`); `b9626d1`.

@@ -5943,3 +5943,36 @@ Preregistro `experimentos/nivel06_rodeo_obligado/PREREGISTRO_rodeo_obligado.md` 
 **Vocabulario permitido:** *"la lectura de la tabla como campo difundido hace que el organismo coma más y muera menos en un mundo que obliga a rodear, pero no produce rodeo fiable: rodea limpio en un tercio de los episodios y huye en dos de cinco"*. Prohibido: "rodea" sin calificar, "planifica", "el mapa sirve para rodear".
 
 **Qué queda.** Nivel 6 sigue en **50 %**, sin candidato. El bloque (mundo muralla con geometría sorteada, primer instrumento del nivel que mata la trampa de sitios fijos) queda como instrumento para reabrir con mecanismo distinto y sobre v14.2 (el constructor sobre v14.2 no está escrito, §12). Réplica no se corre.
+
+### RÉPLICA de la CALIBRACIÓN del CRITERIO DE TRONCO v3 por placebo — bloque A-CAL (ERR-91), semillas 2281–2360 (21-sep-2026, 17:08–17:20; Pool 7): **NO REPITE — CAL-1 REFUTADA por 0.002 (T-A ENTERA v3 n = 40: 0.898, banda 0.90–0.98) y CAL-4 REFUTADA (muertes_VIVO 0.627 fuera de [0.40, 0.60]; los otros cinco dentro); CAL-2, CAL-3, CAL-5 acertadas. En la realización única, T-C (ii) v3 PLACEBO también CAE (media d −3.9, sd 30.9, LI −11.93 < −10). Por la letra (§6: CAL-4 fuera de rango → instrumento roto, no se lee nada; "qué queda" de la serie: si no repite, v3 se retira y se escribe v4 con ERR): v3 NO se declara utilizable**
+
+Mismo preregistro (`6e9ddcdec5435f65`), letra (`b8393694c9f3890c`) e instrumento que la serie (sin cambios). Arnés **54/54** repetido (`datos/humo/identidad_v3cal_20260921_171114.json`). Regla 14 OK. Crudos `datos/critv3_rep_20260921_170812.log` / `.json` (`fd10cce51f4cdc53`), `_crudo_TA.json` (`f4edb9ded868ab45`), `_crudo_TCii.json` (`d3e23a8fee406698`). 720.5 s. Commit `b9626d1`.
+
+| brazo | letra | serie 2121–2200 | réplica 2281–2360 | s / r |
+|---|---|---|---|---|
+| T-C (ii) PLACEBO | v2 | A₁₂ 0.575 → NO | A₁₂ 0.5, rev 38.0/43.0 → NO | NO / NO |
+| T-C (ii) PLACEBO | v3 | media d 3.125, LI −4.0 → PASA | media d −3.9 (sd 30.862), LI −11.927 → **NO** | PASA / **CAE** |
+| T-C (ii) PEOR | v2 / v3 | NO / PASA | A₁₂ 0.45 → NO / LI −8.589 → PASA | igual |
+| T-A VIVO PLACEBO | v2 / v3 | PASA / PASA (LI −3.25) | 0.964×, Δr +3.5, A₁₂ 0.6 → PASA / LI −0.064 → PASA | PASA / PASA |
+| T-A CUELLO_MIN PLACEBO | v2 / v3 | PASA / PASA (LI −5.64) | 0.974×, Δr +5.5, A₁₂ 0.562 → PASA / LI −1.96 → PASA | PASA / PASA |
+| T-A PEOR (los dos brazos) | v2 / v3 | NO / NO | 1.609× y 1.821×, Δr −74.5 y −112.0 → NO / NO | NO / NO |
+
+Puerta entera: PLACEBO v2 juntas NO en las dos series; PLACEBO v3 juntas **PASA en la serie, NO en la réplica**; PEOR juntas NO en las dos letras y las dos series.
+
+| id | qué mide | firmado | serie | réplica | s / r |
+|---|---|---|---|---|---|
+| CAL-1 | PLACEBO pasa T-A v3 (n = 40) | 0.90–0.98 | 0.974 | **0.898** | ACERTADA / **REFUTADA (0.002)** |
+| CAL-2 | PLACEBO pasa T-A v2 (n = 20) | 0.25–0.40 | 0.337 | 0.326 | ACERTADA ×2 |
+| CAL-3 | v3 rechaza δ = −20 | ≤ 0.05 | 0.000 | 0.001 | ACERTADA ×2 |
+| CAL-4 | 6 marginales A₁₂ no pareado | [0.40, 0.60] | las 6 dentro | r_VIVO 0.594, **muertes_VIVO 0.627**, 0.562, 0.537, 0.456, 0.51 | ACERTADA / **REFUTADA** |
+| CAL-5 | PLACEBO pasa T-C ii v2 (n = 20) | 0.01–0.05 | 0.015 | 0.02 | ACERTADA ×2 |
+
+Diagnóstico por brazo (réplica): T-A ENTERA v3 n = 40 **0.898** / v2 0.297; T-C (ii) v3 n = 40 **0.652** / v2 0.002; δ = −20 → 0.000–0.001 en todas.
+
+**Predicciones de acompañamiento (§5):** "el PLACEBO pasa T-A y T-C ii bajo v3 en la realización": acertada en la serie, refutada a la mitad en la réplica. "PEOR cae en las dos letras": refutada en T-C (ii) bajo v3 en las dos series (autor: creador A-CAL). "Δr(PEOR) ≤ −20": acertada ×2.
+
+**Lectura honesta.** La réplica no repite. El gatillo 3 del §6 (CAL-4 fuera de rango → instrumento roto) se dispara por un marginal de seis (muertes_VIVO 0.627, fuera por 0.027); y CAL-1 cae por 0.002. Con eso y la regla escrita antes de correr, **v3 no se declara utilizable**. No se decide aquí si el marginal es azar (A₁₂ no pareado 40 contra 40 tiene sd ≈ 0.065) o real (el placebo consume un sorteo y desplaza muertes): la serie dio 0.528 en ese marginal y la réplica 0.627, más que el ruido de una repetición; queda como duda del instrumento para v4. Lo que se sostiene en las dos series: **v2 rechaza al tronco presentado como candidato** (T-A entera 0.285 / 0.297; T-C ii 0.001 / 0.002); v3 en T-A queda al borde de su estándar (0.974 / 0.898); v3 en T-C (ii) es la pieza floja (0.789 / 0.652; con sd(d) 27–31 y margen 10, n = 40 no puede pasar de ~0.7); las dos letras rechazan con 1.000 al peor por 20. Nada juzgado bajo v2 se rejuzga; v3 no reemplaza a v2 hoy.
+
+**Vocabulario permitido:** *"en dos series independientes, el criterio v2 rechaza al propio tronco presentado como candidato (T-A 0.285 y 0.297); el criterio v3 lo deja pasar en T-A al borde de su estándar (0.974 y 0.898) y falla en T-C (ii) (0.789 y 0.652), y su puerta de validez cae en un marginal en la réplica; por la letra, v3 no se declara utilizable y corresponde escribir v4 con ERR"*. Prohibido: "v3 se confirma"; "v3 reemplaza a v2"; "la réplica repite"; "CAL-4 pasa"; rejuzgar candidatos con v3.
+
+**Qué queda.** v14.2 sigue como tronco. Propuesta para **v4** (ERR-94 cuando se escriba; decisión del director): T-C (ii) con n = 80 o margen 15; CAL-4 con n = 80 o un placebo que no consuma sorteos del generador del organismo; T-A como está. Hasta v4, ningún candidato nuevo se juzga por T-A / T-C (ii) con v3 sola: se juzga con v2 y v3 lado a lado, declarándolo, y con la advertencia registrada de que v2 rechaza al propio tronco (ERR-91).
