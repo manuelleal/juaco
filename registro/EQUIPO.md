@@ -78,6 +78,9 @@ no pasa por el protocolo no cuenta, aunque apunte hacia la misión.
   identidad, commitea, corre el Pool, registra). Lo que toque el tronco va a rama o copia; la decisión de tronco es del
   director.
 
+## Manifiesto
+El chequeo de los congelados es `python manifiesto.py --check`; sin bandera, `manifiesto.py` REESCRIBE `MANIFEST.txt` (pasó dos veces el 21-sep; se restaura con `git checkout -- MANIFEST.txt`).
+
 ## Coordinación de CPU
 Un solo experimento con `Pool` a la vez (regla 11). Antes de lanzar, el coordinador mira los procesos python vivos (los
 runners lo registran en el log). Los agentes que necesiten CPU para identidad lo hacen en un proceso y lo dicen en su informe.
