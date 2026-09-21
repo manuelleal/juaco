@@ -5909,3 +5909,37 @@ Diagnóstico por brazo suelto (no puerta): T-A VIVO v3 n = 40 0.993 / v2 0.527; 
 **Vocabulario permitido:** *"el criterio v3, calibrado contra su propio placebo con corridas nuevas del tronco, deja pasar al tronco presentado como candidato con probabilidad 0.974 en T-A y rechaza con probabilidad 1.000 a un candidato peor por 20 puntos; bajo la misma calibración el criterio v2 rechaza al propio tronco (0.285); T-C (ii) bajo v3 queda con menos margen (0.789) y se anota como candidato a enmienda; la letra no se toca y la réplica está en marcha"*. Prohibido: "v3 aprobado"; "v3 reemplaza a v2 en firme"; rejuzgar v15f, dE5, v15c–v15g, BA o BA-v con esta letra.
 
 **Qué queda.** Réplica 2281–2320 (T-A) / 2321–2360 (T-C ii) corriendo. Si repite, v3 utilizable para candidatos futuros y la enmienda de T-C (ii) (n = 80 o margen 15) a decisión del director; si no, v3 se retira y se escribe v4 con ERR (§6.2 del preregistro).
+
+### NIVEL 6, BLOQUE "RODEO OBLIGADO" — serie 1702–1721 (21-sep-2026, 17:07–17:14; Pool 6; 120 corridas de T = 100 000): **CAE (5/10) — R-1a, R-1b, R-2a, R-2b y R-3 caen; PASA R-4, R-5, C1, V1 y la puerta de validez PLACEBO; réplica NO se corre (cae por la letra en cinco puertas, ninguna a un margen de una semilla); nivel 6 sigue en 50 %**
+
+Preregistro `experimentos/nivel06_rodeo_obligado/PREREGISTRO_rodeo_obligado.md` (`06a15feaf0ca945c`; mundo 2D toroidal 11×9 con muralla de veneno recordado y un solo hueco, geometría sorteada por semilla, casos *rodeo*/*atajo* balanceados 20/20; mecanismo: la tabla `M` leída como campo de valor difundido por relajación local, memoria nueva persistente cero; organismo v13 dentro de `mundo_2d`, línea del mapa; §10 declara dos defectos de instrumento ANTES de correr: `r_vis=1, d_ini=5` fijados tras dos humos, y `recto(atajo)` mal definido, no usado como puerta: candidato a ERR sin numerar). Instrumento por anclas desde `nivel6_2d/mundo_2d.py` (`24da4ab1644eb92a`) ← `mundo_mapa_rodeo` ← `mundo_mapa` ← `organismo_v13` (`cc8b16b492d4d324`): `construye_muralla.py` (`009590a4001af3b0`), `corre_muralla.py` (`89601c6a2105898c`), `mundo_muralla.py` (`6e515713c86d8bf4`). Arnés `identidad_muralla.py`: **21/21** (12 identidades bit a bit + 9 controles que deben diferir). Crudos `datos/muralla_s1702-1721_20260921_170652.log` / `.json` (`99dc2e86b833fc29`). 467 s. Commits `a9fc850` (paquete), `0925beb` (crudos).
+
+| puerta | qué mide | umbral | medido | veredicto |
+|---|---|---|---|---|
+| R-1a | rodea: `limpio(rodeo)` CAMINO | ≥ 0.60 | **0.35** (CIEGO 0.10, MAPA 0.0, BARAJADO 0.20, PLACEBO 0.40) | CAE |
+| R-1b | y es el mapa: CAMINO − max(CIEGO, BARAJADO) | ≥ 0.25 | **0.15** | CAE |
+| R-2a | no es huida: `huye(rodeo)` | ≤ 0.20 | **0.425** | CAE |
+| R-2b | balanceada J = limpio(rodeo) + limpio(atajo) − 1 | ≥ 0.50 | **−0.4** (p1 0.35, c1 0.25) | CAE |
+| R-3 | pasos censurados CAMINO/CIEGO | ≤ 0.70 | **0.781** (43.9 / 56.2) | CAE |
+| R-4 | comida CAMINO/CIEGO | ≥ 0.90 | **2.463×** | PASA |
+| R-5 | muertes CAMINO/CIEGO | ≤ 1.25 | **0.382×** | PASA |
+| C1 | INVERTIDO no rodea | ≤ 0.20 | 0.10 (pisa 0.9) | PASA |
+| PLACEBO | validez: |CAMINO − PLACEBO| | ≤ 0.15 | 0.05 | PASA |
+| V1 | comida y muralla en `M` | 20/20 | 20/20 | PASA |
+
+| brazo | limpio(rodeo) | huye(rodeo) | pisa(rodeo) | pasos_cens | comida | muertes |
+|---|---|---|---|---|---|---|
+| CIEGO | 0.10 | 0.75 | 0.6 | 56.2 | 281.0 | 99.5 |
+| MAPA (H1, la refutada) | 0.0 | 0.15 | 0.2 | 60.0 | 35.5 | 301.0 |
+| **CAMINO** | **0.35** | **0.425** | 0.65 | 43.875 | 692.0 | 38.0 |
+| BARAJADO | 0.20 | 0.65 | 0.55 | 50.9 | 692.0 | 38.0 |
+| INVERTIDO | 0.10 | 0.575 | 0.9 | 54.5 | 692.0 | 38.0 |
+| PLACEBO | 0.40 | 0.4 | 0.55 | 42.0 | 692.0 | 38.0 |
+
+**Predicciones del creador (§5, antes de correr):** CAMINO limpio 0.60–0.85 **refutada** (0.35); CIEGO 0.05–0.25 acertada (0.10); MAPA 0.05–0.30 acertada (0.0); BARAJADO 0.10–0.40 acertada (0.20); CAMINO huye 0.05–0.20 **refutada** (0.425); J 0.50–0.75 **refutada** (−0.4); pasos 0.55–0.75 **refutada** (0.781, justo por encima); comida 1.2–2.5× acertada (2.46); muertes 0.5–0.9× **refutada** (0.38, mejor de lo previsto); C1 acertada. El control que el creador señaló en §6 como refutación de la hipótesis se dispara: `limpio(CAMINO) − limpio(BARAJADO)` = 0.15 < 0.25 → "lo que el campo aporta es geometría de bloqueo, no el contenido del mapa". El riesgo §10(c) (BARAJADO ≈ CAMINO) no se confirmó del todo: 0.35 contra 0.20, sin empate, pero sin el margen.
+
+**Lectura honesta.** Por la letra el bloque cae: cinco puertas, ninguna a una semilla (brechas de 0.08 a 0.90). Lo que sí se mide: el campo difundido hace que el organismo coma más y muera menos en un mundo que obliga a rodear (2.46× y 0.38× contra el ciego), y el placebo confirma que no es cantidad de sorteos. Pero no produce rodeo fiable: rodea limpio en un tercio de los episodios contra 0.10 del ciego y 0.20 del barajado, y huye dos de cada cinco veces. Coherente con `nivel6_2d` (18-sep): con un mecanismo distinto (campo difundido en vez de voto global), el organismo mejora comida y supervivencia pero sigue prefiriendo alejarse a rodear.
+
+**Vocabulario permitido:** *"la lectura de la tabla como campo difundido hace que el organismo coma más y muera menos en un mundo que obliga a rodear, pero no produce rodeo fiable: rodea limpio en un tercio de los episodios y huye en dos de cinco"*. Prohibido: "rodea" sin calificar, "planifica", "el mapa sirve para rodear".
+
+**Qué queda.** Nivel 6 sigue en **50 %**, sin candidato. El bloque (mundo muralla con geometría sorteada, primer instrumento del nivel que mata la trampa de sitios fijos) queda como instrumento para reabrir con mecanismo distinto y sobre v14.2 (el constructor sobre v14.2 no está escrito, §12). Réplica no se corre.

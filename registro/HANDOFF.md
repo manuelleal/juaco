@@ -926,3 +926,8 @@ confirmado con corridas reales nuevas**; v3 rechaza con 1.000 a un candidato des
 dos letras. Punto débil declarado sin recalibrar: T-C (ii) bajo v3 sólo 0.789 a n = 40 (0.548 a n = 20): con sd ≈ 27 y margen 10, ≥ 0.95 pide n ≈ 80 o
 margen 15 → candidato a enmienda para el director. Réplica 2281–2360 en marcha; **v3 no se declara utilizable hasta que repita**; nada juzgado bajo v2
 se rejuzga. Datos `critv3_20260921_165615` (`c031c9585242d850`); commits `10da31b`, `4ead270`.
+**15.25 (21-sep 17:07–17:14): nivel 6, bloque "rodeo obligado", serie 1702–1721 (Pool 6, en paralelo con la calibración v3).** El campo difundido por
+relajación local (la tabla M leída como bloqueo) **CAE por la letra en 5 de 10 puertas**: rodea limpio el 35 % (umbral 60), no supera a BARAJADO por el
+margen (0.15 contra 0.25: la cláusula de refutación que el propio creador fijó), huye el 42.5 %, J −0.4, pasos 0.781. Pasan comida (2.46×), muertes
+(0.38×), el control INVERTIDO y el placebo. Coherente con nivel6_2d: mejora comida y supervivencia sin rodeo fiable. Mundo muralla con geometría sorteada
+queda como instrumento; port a v14.2 no escrito. Nivel 6 sigue en 50 %; réplica no se corre. Datos `muralla_s1702-1721_20260921_170652`; `a9fc850`, `0925beb`.
