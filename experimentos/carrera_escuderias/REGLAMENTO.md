@@ -111,6 +111,26 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
   de la fase 10).
 
+## ENMIENDA 3 (22-sep-2026, coordinador, ANTES de la ronda 1 oficial) — monocultivo y SOLO
+
+**Auditoría de carros:** S1 LEGÍTIMO; H1 LEGÍTIMO (control de ruido); O1 LEGÍTIMO CON RESERVAS:
+- Contra FABRICA, O1 queda "casi inmortal" (0 muertes; R0 48 = cola de hijos que nunca nacen). Con ERR-99 no es evaluable.
+- `resultado(res)` entrega a todos el efecto determinista. En O1, "aprender la valencia" es memorizar tras una mordida (vocabulario: "memoriza", no "aprende bajo incertidumbre").
+- La evidencia real de O1 es el mundo de 9 O1 (1–2 semillas de práctica), sin réplica.
+
+**Series de la ronda 1**, todas en la pista escalada con olvido corregido, T = 100000 y semillas 4003–4022:
+1. **Oficial:** O1, S1, H1 + 6 FABRICA. Se juzga con la letra de la ENMIENDA 2.
+2. **Monocultivo O1:** 9 O1. Criterio: **cruza el monocultivo** si (i) la mediana del R0 sobre los linajes-semilla **evaluables**
+   (≥ 5 muertes) es ≥ 0.90, (ii) ≥ 75 % de los linajes-semilla evaluables tienen **0 fundadores después de t = 10000** y (iii) ≥ 120 de 180
+   linajes-semilla son evaluables.
+3. **SOLO O1:** N = 1, la misma pista con olvido escalado. Control: predicción de que **NO** cruza (mediana < 0.90).
+Lectura permitida si (2) cruza y (3) no: *"en esta pista, un linaje O1 se sostiene cuando comparte el mundo con otros O1 y no cuando está solo"*.
+Prohibido: "coopera", "población", "evoluciona". El mecanismo (limpieza compartida) se mide aparte antes de nombrarlo.
+El juez tiene que exponer `t_fund` por linaje, los nacimientos reales, los evaluables y la bandera de cruce. Hasta que lo haga, estas series no se corren.
+
+**Predicciones firmadas del coordinador:** monocultivo O1 cruza con probabilidad 0.55. SOLO O1 no cruza con probabilidad 0.90. En la oficial,
+O1 queda "casi inmortal" en ≥ 10/20 semillas con probabilidad 0.75 (entonces no puede ganar por la letra). S1 no cruza (0.95).
+
 ## ENMIENDA 2 (22-sep-2026, coordinador, ANTES de la ronda 1 oficial) — la métrica no se degenera (ERR-99)
 
 **ERR-99**: R0 = descendientes / (muertes + 1) **se degenera** cuando un cuerpo casi no muere: con 0 muertes, R0 = número de hijos, aunque
