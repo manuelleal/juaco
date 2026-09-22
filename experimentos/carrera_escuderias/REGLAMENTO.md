@@ -111,6 +111,25 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
   de la fase 10).
 
+## AUDITORÍA DE LA SERIE SELLADA (22-sep-2026): SE SOSTIENE CON RESERVAS. ERR-100 y ERR-101
+
+**Letra declarable (ENMIENDA 4), sin cambios:** *"en la pista escalada, un linaje O1 mortal sostiene R0 ≥ 0.9 cuando comparte el mundo con otros O1;
+replicado en semillas selladas; y la limpieza compartida es necesaria"*. Sobre S-SOLO-GRANDE solo se puede decir *"no se puede separar la
+compañía de la abundancia"*. Primer cruce de H-1 en JUACO **por la métrica preregistrada**, que es la misma con la que se midió el muro.
+
+- **ERR-100 (el R0 cuenta hijos no nacidos):** R0 = descendientes / (muertes + 1), y descendientes = nacimientos reales + `cola_final` (hijos que
+  esperan en la fila al cortar en T). En S-MONO, la mediana de `cola_final/descendientes` es 0.417. **Con solo nacimientos reales, la mediana de R0
+  es 0.941** (y no 1.565): el criterio (i) sigue pasando, pero con +4.5 % y no +74 %. Con un cuerpo vivo por linaje, el R0 de nacimientos reales es
+  < 1 por construcción: cerca de 1 quiere decir "casi ninguna extinción", no crecimiento. El veredicto no cambia (el criterio escrito no se
+  recalibra). Desde ahora el juez reporta siempre el R0 de nacimientos reales al lado del preregistrado. La misma métrica valía en la fase 9
+  (ORÁCULO 0.46–0.56); su versión de nacimientos reales se recalcula aparte.
+- **ERR-101 (la memoria sobrevive a la extinción):** cuando se pone un fundador, la tabla del linaje de O1 no se borra (`O1.py:148-153`,
+  `pista.py:328-336`; lo había avisado O1 en su bitácora). 60/180 linajes-semilla tuvieron ≥ 1 fundador antes de t = 10000 y el criterio no los
+  cuenta. **Control pendiente** antes de construir encima: `CTRL_O1_FUNDBORRA` (O1 con la memoria borrada en cada fundador), en semillas
+  selladas nuevas.
+- Otros datos auditados: mediana de 25 cuerpos que se suceden por linaje-semilla (11–43). S-SIN-LIMPIEZA muere de hambre y sed (vida 600) con el
+  mundo en 78 % de pasos sin nada bueno: es un colapso real del recurso común, no un error. S-SOLO-GRANDE es abundancia (≤ 1.3 % de pasos sin nada bueno).
+
 ## ENMIENDA 4 (22-sep-2026, coordinador, ANTES de la serie sellada) — confirmar el cruce del monocultivo O1 y separar sus causas
 
 **Resultado que motiva esta enmienda (ronda 1, semillas 4003–4022):** el monocultivo de 9 O1 CRUZA (mediana 1.615; 151/180; 20/20 semillas) y
