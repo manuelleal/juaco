@@ -1,0 +1,34 @@
+[13:21:55 +   0.0s] FANIN = 2  HUMO = True  T = 12000  Pool = no (un proceso)
+[13:21:55 +   0.0s] === Batería v13 — CRITERIO v3, 1 semillas (6001..6001), Pool(6) ===
+[13:21:55 +   0.0s] sha organismo_v13 a1d97a02bdf9dec9  bateria_v13 5e3e5b3878881ddf  preregistro b46b59b0251ed417
+[13:21:55 +   0.0s] ETAPA 1/3 — criterio 5, identidad de instrumentos (1 comparaciones)...
+[13:21:56 +   1.0s]           1/1  (1 idénticas)
+[13:21:56 +   1.0s]   v13(eta_s=0, puerta=None) == v11: 1/1
+[13:21:56 +   1.0s]   v13(eta_s=0, puerta=None, div_signo=False) == v10: 0/0
+[13:21:56 +   1.0s] ETAPA 2/3 — 9 corridas (9 etapas x 1 semillas)...
+[13:22:02 +   6.9s]           9/9
+[13:22:02 +   6.9s] ETAPA 3/3 — criterios.
+[13:22:02 +   6.9s] 
+[13:22:02 +   6.9s]   FALLA 1 E1        0/1  [venenoQ4<Q1:1/1 W_A≈+1:1/1 W_B≈-3:0/1]
+[13:22:02 +   6.9s]         splits=[0]  celdas_max=30  techo=0/1
+[13:22:02 +   6.9s]   FALLA 1 E2        0/1  [W_A→-3:0/1 W_B→+1:0/1 come B Q4≥50:0/1]
+[13:22:02 +   6.9s]         splits=[0]  celdas_max=30  techo=0/1
+[13:22:02 +   6.9s]   FALLA 1 E2I       0/1  [W_C≤-2.5:0/1 W_A≈+1:1/1 W_B≤-2.8:0/1 tasaA Q4≥80%Q2:1/1]
+[13:22:02 +   6.9s]         splits=[0]  celdas_max=30  techo=0/1
+[13:22:02 +   6.9s]   FALLA 1 E2J       0/1  [W_D≥0.85:0/1 W_B≤-2.7:0/1]
+[13:22:02 +   6.9s]         splits=[0]  celdas_max=30  techo=0/1
+[13:22:02 +   6.9s]   FALLA 1 E2K       0/1  [W_D≥0.8:0/1 W_B≤-2.4:1/1]
+[13:22:02 +   6.9s]         splits=[0]  celdas_max=30  techo=0/1
+[13:22:02 +   6.9s]   PASA  1 E2L       1/1  [W_A≈+1:1/1 W_B≈-3:1/1 solap→0:1/1]
+[13:22:02 +   6.9s]         splits=[3]  celdas_max=33  techo=0/1
+[13:22:02 +   6.9s]   PASA  2 celdas<=45: {'E1': 1, 'E2': 1, 'E2I': 1, 'E2J': 1, 'E2K': 1, 'E2L': 1, 'E2I-misma': 1}
+[13:22:02 +   6.9s]   PASA  3' via rapida sola sin plasticidad (A∩B=3): 0/1 lo pasan (<=1)  W_A=[-0.78]
+[13:22:02 +   6.9s]   PASA  3'' via lenta activa sin plasticidad (A∩B=3): 1/1 lo pasan (>=0)
+[13:22:02 +   6.9s]   OK    4a' [identidad, NO evidencia] celdas==30+splits y len(split_t)==splits: 8/8  []
+[13:22:02 +   6.9s]   PASA  4b sin conflicto no hay división: guarda E1 sin conflicto 1/1, E2L con conflicto 1/1; corridas que dividen 1, violaciones ninguna
+[13:22:02 +   6.9s]   FALLA 4c C∩B=3 misma valencia: guarda 0/1, splits==0 1/1, W_C<=-2.5 1/1  (W_C mediana -2.74, mordidas de C Q3+Q4 mediana 0)
+[13:22:02 +   6.9s]   PASA  4d disparo anclado a la causa: E1 sin divisiones 1/1; t>=50k {'E2': 1, 'E2I': 1, 'E2J': 1, 'E2K': 1}; E2L termina <25k 1/1
+[13:22:02 +   6.9s] 
+[13:22:02 +   6.9s] VEREDICTO bateria_v13: 5_identidad=True 1_cientificos=False 2_celdas=True 3_control=True 4a_identidad=True 4b_sin_conflicto_no_divide=True 4c_misma_valencia=False 4d_causa=True
+[13:22:02 +   6.9s] *** v13 NO cumple el criterio v3. No se congela; v11 sigue siendo el tronco. No recalibrar (regla 3).
+[13:22:02 +   7.0s] datos -> examen_v142_fanin2_humo_20260922_132155.json  sha256_16 = c4565ffa99a04e64

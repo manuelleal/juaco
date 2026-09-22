@@ -1,0 +1,45 @@
+{
+ "meta": {
+  "fanin": 2,
+  "humo": true,
+  "T": 40000,
+  "fecha": "2026-09-22T13:22:06",
+  "modulo": "organismo_v142_fanin",
+  "semillas": [
+   6001
+  ],
+  "veredictos": {
+   "K_cobertura": true,
+   "G1_valor": false,
+   "G2_conducta": false
+  },
+  "sha_bateria": "df13a4e65335ff10",
+  "sha_organismo": "a1d97a02bdf9dec9",
+  "python": "3.14.2",
+  "numpy": "2.4.3"
+ },
+ "corridas": [
+  {
+   "modulo": "organismo_v142_fanin",
+   "regla": "px0",
+   "seed": 6001,
+   "acc": 1.0,
+   "ba": 0.996732443654185,
+   "cobertura": 10,
+   "splits": 29,
+   "celdas": 59,
+   "deaths": 57
+  },
+  {
+   "modulo": "organismo_v142_fanin",
+   "regla": "azar",
+   "seed": 6001,
+   "acc": 0.3,
+   "ba": 0.353035527075514,
+   "cobertura": 10,
+   "splits": 20,
+   "celdas": 50,
+   "deaths": 76
+  }
+ ]
+}
