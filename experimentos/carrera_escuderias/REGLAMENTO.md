@@ -111,6 +111,35 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
   de la fase 10).
 
+## ENMIENDA 4 (22-sep-2026, coordinador, ANTES de la serie sellada) — confirmar el cruce del monocultivo O1 y separar sus causas
+
+**Resultado que motiva esta enmienda (ronda 1, semillas 4003–4022):** el monocultivo de 9 O1 CRUZA (mediana 1.615; 151/180; 20/20 semillas) y
+O1 SOLO no cruza (0.681). **No se declara todavía**, por dos motivos:
+1. **Confusor de tamaño de mundo.** El SOLO corrió con N = 1 (L = 40, 4 objetos), donde el 85 % de los pasos no hay **ningún** objeto bueno en el
+   mundo. El monocultivo corrió con L = 360 y 36 objetos, donde eso pasa el 35 % de los pasos. Por cuerpo, los recursos medios son iguales,
+   pero compartir un mundo grande **reduce la varianza**. Puede ser ese amortiguamiento y no lo que hacen los otros O1.
+2. **Falta la serie sellada** que exige el §6.
+
+**Series (todas con T = 100000, pista escalada con olvido corregido y semillas SELLADAS 5001–5020, que nunca se usaron):**
+- **S-MONO:** 9 O1. Criterio de la ENMIENDA 3. Es la réplica que decide si se declara.
+- **S-SOLO-GRANDE:** 1 O1 en un mundo del tamaño del de 9 (L = 360, 36 objetos, el olvido del de 9). Tiene 9 veces más recursos por cuerpo:
+  es una cota superior de "solo".
+- **S-SIN-LIMPIEZA:** 9 copias de O1 con la limpieza apagada (`carros/CTRL_O1_SINLIMPIA.py`, que construye el organizador con un diff mínimo auditado).
+  Prueba si el mecanismo es un bien público: los que muerden lo malo hacen que el mundo reponga.
+- **S-FAB:** 9 FABRICA en las mismas semillas selladas, como piso.
+- CANAL MUDO: **inerte por construcción** (O1 no lee ni escribe la pizarra, auditado). No se corre y se declara.
+
+**Qué se declara:**
+- S-MONO cruza → *"en la pista escalada, un linaje O1 mortal sostiene R0 ≥ 0.9 cuando comparte el mundo con otros O1; replicado en semillas selladas"*.
+  Es el **primer cruce de H-1 en JUACO**, con esa letra y no más.
+- Y además S-SIN-LIMPIEZA no cruza → se puede agregar *"y la limpieza compartida es necesaria"*.
+- Y además S-SOLO-GRANDE no cruza (con R0 evaluable) → *"no alcanza con más recursos por cuerpo: hace falta la compañía"*.
+  Si S-SOLO-GRANDE cruza o queda casi inmortal, no se puede separar la compañía de la abundancia y se dice así.
+- Prohibido: "coopera", "población", "evoluciona", "altruismo".
+
+**Predicciones firmadas del coordinador:** S-MONO cruza con probabilidad 0.75. S-SOLO-GRANDE cruza o queda casi inmortal con probabilidad 0.60.
+S-SIN-LIMPIEZA no cruza con probabilidad 0.50. S-FAB no cruza con probabilidad 0.97.
+
 ## ENMIENDA 3 (22-sep-2026, coordinador, ANTES de la ronda 1 oficial) — monocultivo y SOLO
 
 **Auditoría de carros:** S1 LEGÍTIMO; H1 LEGÍTIMO (control de ruido); O1 LEGÍTIMO CON RESERVAS:
