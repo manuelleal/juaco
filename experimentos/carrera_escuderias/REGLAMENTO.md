@@ -111,6 +111,27 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
   de la fase 10).
 
+## ENMIENDA 6 (22-sep-2026, coordinador, ANTES de cualquier serie oficial de los equipos O2, O3 y O4) — ERR-102: la métrica premia morir
+
+**ERR-102:** con un cuerpo vivo por linaje y fundador limpio, R0 real = (d − F)/(d + 1) solo sube si el cuerpo **muere**: un hijo nace
+únicamente cuando su padre muere. Por eso:
+(a) un linaje estable y casi inmortal (menos de 5 muertes) **no es evaluable y no puede ganar**. Es el caso de O2 v3, que hace lo que pide la meta y
+pierde por la letra;
+(b) una **muerte programada** con hijos en la cola (TERMINAL de O3) sube el R0 real sin que el linaje sea más estable. Es optimizar contra la métrica.
+Los equipos lo descubrieron y lo declararon (O2 rechazó M3 por esa razón; O3 declaró TERMINAL).
+
+**Letra, fijada antes de las series oficiales:**
+1. El criterio de la ENMIENDA 5 **se mantiene** como estaba escrito (no hay recalibración) y se reporta.
+2. **Criterio co-principal, PERSISTENCIA** (lo que mide "estabilizar el bicho"): un linaje-semilla **persiste** si tiene **0 fundadores después
+   de t = 10000** y **≥ 5 nacimientos reales** en T = 100000 (hay recambio de generaciones: no es un inmortal). Un equipo **estabiliza** en una
+   semilla si persiste más de la mitad de sus linajes; **estabiliza la ronda** si lo hace en ≥ 15/20 semillas oficiales, en monocultivo y en
+   pista con FABRICA.
+3. La **muerte programada** es legal (en biología existe la semelparidad), pero se **declara y se mide**: por equipo, qué fracción de las muertes
+   son voluntarias (según la telemetría del carro o una clasificación física que el juez pueda hacer). Con la muerte programada **no** se puede
+   decir "estabiliza" sin agregar *"con muerte programada"*.
+4. **Predicciones firmadas del coordinador para PERSISTENCIA:** O2 estabiliza en mono con probabilidad 0.45 y en fab con probabilidad 0.15 (en
+   fab casi no muere y no llega a 5 nacimientos). O3 estabiliza en mono con 0.50. O4 estabiliza en mono con 0.35. O1 (rival) con 0.55.
+
 ## ENMIENDA 5 (22-sep-2026, pedido del director) — RONDA 2: solo Opus en combos, "estabilizar el bicho"
 
 **Antecedentes:** el cruce de O1 se sostiene sin la memoria del fundador (S-FUNDBORRA: R0 real 0.941, 148/180), pero con poco margen en la
