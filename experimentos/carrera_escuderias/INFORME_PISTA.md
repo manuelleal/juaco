@@ -137,3 +137,26 @@
   - La rama `imap_unordered` existe y el archivo tiene la guarda `__main__`.
   - Una tarea real (4003, T = 2000) da L = 360 y 56 olvidos (esperados ≈54).
 - Prueba mínima para el coordinador: `python experimentos/carrera_escuderias/juez.py --ronda poolcheck --desde 4003 --n 2 --T 5000 --pool 2`.
+
+## v5: juez para la ronda 1 (ENMIENDAS 2 y 3; solo medición e interfaz; pista y carros intactos)
+- **Alineaciones:**
+  - `--carros O1,S1,H1,FABRICA*6` (acepta `X*k`).
+  - Atajos `--ronda 1` (O1, S1, H1 + 6 FABRICA), `1mono` (9 O1) y `1solo` (O1, N = 1). `--ronda 0` sigue siendo 9 FABRICA.
+  - `revisa_carro` corre sobre cada carro distinto.
+- **ERR-99 por linaje-semilla, solo desde la física:**
+  - `evaluable` (≥ 5 muertes) / `casi_inmortal`, `R0_eval`, `t_fund` (en `telem`), `fund_post10k` y `cruza`.
+  - `nac_reales` (hijos que llegan a vivir = cuerpos con origen en la cola), `cola_final`, fundadores por 10⁵ pasos y fracción que muere sin parir.
+  - Si `t_fund` se trunca (tope 200), los fundadores que faltan cuentan como posteriores a t = 10000 y se marcan.
+- **Resúmenes:**
+  - Por escudería: cruzan, evaluables, casi inmortales, semillas que cruza y «gana» si cruza en ≥ 15/20. H1 contra FABRICA como control de ruido.
+  - Monocultivo y SOLO con los tres criterios de la ENMIENDA 3 → CRUZA / NO CRUZA.
+  - Las predicciones firmadas se imprimen al lado de lo medido.
+- **`--recalcula <crudo viejo>`:**
+  - Reconstruye `t_fund` y la cola final desde la telemetría por cuerpo (vidas + hijos) y lo verifica contra `fundadores` y `cola_final`.
+  - En corridas nuevas la reconstrucción se compara con la física: 19/19 en los humos.
+  - Auditoría 9 O1 (s4161, T = 30000): 9/9 verificados; el monocultivo CRUZA en esa semilla (mediana 1.452, 8/9 evaluables, 6/8 sin fundadores tras t = 10000). A título informativo: T = 30000 y una semilla.
+  - Ronda 0 oficial: 180/180 verificados; 0/180 cruzan (mediana 0.332).
+- **Pruebas:**
+  - Identidad 40/40 y `test_tramposo` 30/30.
+  - Humos n = 1, T = 5000: `carrera_ronda1_s4001-4001_20260922_143636`, `carrera_ronda1mono_..._143645` y `carrera_ronda1solo_..._143659`, todos con crudo, pizarra y resumen.
+- **Bug mío en el parche:** `cola_final` salía duplicada en el resumen. El arnés lo detectó (TypeError) antes de cualquier corrida válida; corregido.

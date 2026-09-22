@@ -1,0 +1,43 @@
+JUEZ · ronda1solo_s4001-4001 · 2026-09-22 14:36:59 · python 3.14.2 · pool NO (un proceso)
+  pista.py d2a4b219059478eb · juez.py f2aeb20651969126 · carros {'O1': '99436afa2715f028'}
+  carros (orden = indice de linaje): ['O1'] · semillas 4001-4001 · T=5000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO O1: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [    1.2s] semilla 4001 (0.3s) R0 pista 0.8 · R0 por linaje [0.8]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda1solo_s4001-4001_20260922_143659.json (sha 5e6343e56e8e665c)
+
+RESUMEN · ronda1solo_s4001-4001 · semillas [4001] · T=5000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O1               0.8                  [0.8]  1205.0    4.0   4.0   1.0   0.0   1.0   33.0  0.493  0/1/2/1 (0%/25%/50%/25%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.8 · por semilla [0.8]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.714, 0.911, 0.638, 0.931] · L 40 nobj 4
+  DIAGNOSTICO (mediana sobre 1 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 0.0 · perdidas por olvido 0.0 · B/D tras robo None vs tras olvido None vs base 0.37 · A/C tras robo None vs base 0.51
+    distancia media al bueno mas cercano 8.835 · frac pasos sin bueno en el mundo 0.728 · frac pasos sin NINGUN objeto a <= 20 0.0 (max 0.0)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones     24 mordidas     21 tasa 0.875 · deficit medio al decidir 0.208 al morder 0.237
+    AS: decisiones      9 mordidas      8 tasa 0.889 · deficit medio al decidir 0.445 al morder 0.500
+    BH: decisiones    269 mordidas      9 tasa 0.033 · deficit medio al decidir 0.505 al morder 0.093
+    BS: decisiones     13 mordidas     10 tasa 0.769 · deficit medio al decidir 0.461 al morder 0.515
+    CH: decisiones     16 mordidas     14 tasa 0.875 · deficit medio al decidir 0.324 al morder 0.308
+    CS: decisiones      8 mordidas      8 tasa 1.000 · deficit medio al decidir 0.442 al morder 0.442
+    DH: decisiones     25 mordidas     17 tasa 0.680 · deficit medio al decidir 0.407 al morder 0.388
+    DS: decisiones     11 mordidas      1 tasa 0.091 · deficit medio al decidir 0.300 al morder 0.014
+    deficit en mordidas B/D (bins de 0.1) [10, 3, 2, 4, 6, 5, 4, 2, 1, 0] (media ~0.358) · en mordidas A/C [20, 5, 0, 4, 3, 6, 6, 1, 3, 3] (media ~0.350)
+    mordidas B/D con un robo en los 50 pasos previos 0.0 vs pasos cubiertos asi 0.0 · deficit en B/D con robo previo None vs sin 0.341
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 10/13 · veneno con HAMBRE 9/23 · sal con HAMBRE 17/25 · sal con SED 1/11
+  contabilidad fisica coherente: 1/1 · t_fund reconstruible desde telem == fisica: 1/1
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=4) por semilla [{'A': 0.587, 'B': 1.4276, 'C': 0.2186, 'D': 1.7668}] · olvidos [14]
+  mordidas totales por tipo por semilla [{'A': 29, 'B': 19, 'C': 22, 'D': 18}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo solo
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir  gana
+  O1               1      0       0        1        None            0/1        3.0          0.0       0.5  no
+  SOLO (criterio ENMIENDA 3): (i) mediana R0 evaluables None >= 0.9: no · (ii) evaluables sin fundadores tras t=10000 0.0 >= 0.75: no · (iii) evaluables 0/1 (>= 0.667): no -> NO CRUZA
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    - SOLO O1 NO cruza: mediana < 0.90 (p 0.90)  ->  medido: NO CRUZA (mediana R0 evaluables None)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda1solo_s4001-4001_20260922_143659_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda1solo_s4001-4001_20260922_143659_resumen.json
+
+Terminado en 1.3s

@@ -5,6 +5,10 @@ calcula por linaje, con la definicion de H-1 (corre_f9.py:193-207):
   R0 = descendientes / (muertes + 1) · vida mediana (vidas_h1, la ultima truncada en T, como corre_f9)
   muertes · descendientes · fundadores · causas de muerte (hambre / sed / veneno / sal; veneno = murio por
   energia habiendo mordido B en sus ultimos W_CAUSA=400 pasos; sal = idem por agua con D) · p1/c1 (F9)
+  · ERR-99 (ENMIENDA 2): evaluable (>= 5 muertes) / casi inmortal, R0 evaluable, t_fund, fundadores tras t = 10000,
+  nacimientos reales, cruza (R0 >= 0.90 y 0 fundadores tras t = 10000); por escuderia: cruzan, evaluables, casi inmortales,
+  semillas que cruza y "gana" (>= 15/20); monocultivo y SOLO con el criterio de la ENMIENDA 3; predicciones firmadas al lado.
+    python .../juez.py --ronda 1 | 1mono | 1solo   (atajos; o --carros O1,S1,H1,FABRICA*6)   ·   --recalcula <crudo viejo>
   · exposiciones a A y C · escrituras por linaje (hasta 3000 en la telemetria). La pizarra COMPLETA se guarda
   aparte en <prefijo>_pizarra.jsonl.gz (una linea [semilla, t, id, contenido] por escritura publicada).
 Y de la pista: R0_pista = sum(descendientes) / (sum(muertes) + n_linajes) · composicion del mundo por cuarto de T.
@@ -38,6 +42,23 @@ REF_REL = dict(R0=0.395, R0_acum1=0.483, fuente='bloque 2, replica 1601-1620, un
 PRED_RONDA0 = {0: (0.15, 0.35),   # prediccion firmada del organizador, pista SIN escalar (REGLAMENTO sec. 1)
                1: (0.35, 0.55)}   # ENMIENDA 1: pista escalada L=40N, nobj=4N (firmada por el coordinador)
 T_DEF = 100000
+# ---- ENMIENDA 2 (ERR-99) y ENMIENDA 3 (REGLAMENTO), letra fijada ANTES de la ronda 1
+MIN_MUERTES = 5          # R0 evaluable solo con >= 5 muertes; si no, "casi inmortal" (no cuenta ni a favor ni en contra)
+R0_CRUCE = 0.90          # cruza: R0 evaluable >= 0.90 Y 0 fundadores despues de T_CORTE
+T_CORTE = 10000
+GANA_FRAC = 0.75         # gana la ronda: cruza en >= 15/20 semillas
+MONO_FRAC_SIN_FUND = 0.75  # monocultivo (ii): >= 75 % de los evaluables sin fundadores tras T_CORTE
+MONO_FRAC_EVAL = 120 / 180  # monocultivo (iii): >= 120 de 180 linajes-semilla evaluables
+# ---- alineaciones por linea de comandos (--ronda); --carros explicito manda sobre el atajo
+ALINEACIONES = {'0': ['FABRICA'] * 9, '1': ['O1', 'S1', 'H1'] + ['FABRICA'] * 6, '1mono': ['O1'] * 9, '1solo': ['O1']}
+PRED_ENM = {   # predicciones FIRMADAS del coordinador (ENMIENDAS 2 y 3), se imprimen al lado de lo medido
+    'oficial': ["H1: R0 mediano dentro de +-0.10 de la mediana de los FABRICA", "FABRICA: R0 mediano 0.28-0.45",
+                "O1: cruza en >= 10/20 semillas (p 0.55); gana la ronda >= 15/20 (p 0.30)",
+                "al menos un linaje O1-semilla 'casi inmortal' (p 0.80); O1 'casi inmortal' en >= 10/20 (p 0.75)",
+                "S1 no cruza (p 0.95)"],
+    'mono': ["monocultivo O1 CRUZA (p 0.55)"],
+    'solo': ["SOLO O1 NO cruza: mediana < 0.90 (p 0.90)"],
+}
 
 
 def med(xs):
@@ -65,7 +86,8 @@ def identidad_corta():
 
 
 FISICAS = ('descendientes', 'deaths', 'vidas_h1', 'fundadores', 'muertes_nec', 'exposiciones', 'mord', 'pasos_viables',
-           'T_efectivo', 'cola_final', 'desc_por_vida', 'nacimientos', 'origen_cuerpo', 'xor_mord', 'xor_enc', '_carrera')
+           'T_efectivo', 'cola_final', 'desc_por_vida', 'nacimientos', 'origen_cuerpo', 'xor_mord', 'xor_enc', 't_fund',
+           'cola_desborde', '_carrera')
 
 
 def resumen_linaje(d, seed):
@@ -85,7 +107,38 @@ def resumen_linaje(d, seed):
                 mord={k: sum(x) for k, x in f['mord'].items()}, pasos_viables=f['pasos_viables'],
                 sac_frac=round(f['pasos_viables'] / f['T_efectivo'], 4), cola_final=f['cola_final'],
                 escrituras=c['escrituras'], vetos=c['vetos'], diag=c.get('diag'), xor_mord=f['xor_mord'], xor_enc=f['xor_enc'],
-                telem=dict(vidas=v, desc_por_vida=f['desc_por_vida'], causa_cuerpo=c['causa_cuerpo'], escr=c['escr']))
+                telem=dict(vidas=v, desc_por_vida=f['desc_por_vida'], causa_cuerpo=c['causa_cuerpo'], escr=c['escr'],
+                           t_fund=f['t_fund'], origen=f['origen_cuerpo']),
+                **err99(mu, f['fundadores'], f['t_fund'], f['descendientes'], f['T_efectivo'], v, f['desc_por_vida'],
+                        nac_reales=sum(f['origen_cuerpo']), cola_final=f['cola_final']))
+
+
+def t_fund_reconstruido(vidas, dpv, cola_max=200):
+    """Reconstruye EXACTAMENTE los instantes de fundacion (y la cola final) desde la telemetria por cuerpo: el cuerpo i
+    muere en sum(vidas[:i+1]); sus hijos entran a la cola antes de su muerte; al morir nace el primero de la cola, o un
+    FUNDADOR si esta vacia. Sirve para recalcular crudos viejos sin t_fund; en los nuevos se VERIFICA contra t_fund."""
+    q = 0; t = 0; tf = []; nr = 0
+    for i in range(len(vidas) - 1):
+        q = min(q + dpv[i], cola_max); t += vidas[i]
+        if q > 0: q -= 1; nr += 1
+        else: tf.append(t)
+    return tf, min(q + dpv[-1], cola_max), nr
+
+
+def err99(mu, fund, tf, desc, T, vidas, dpv, nac_reales, cola_final, t_fund_fuente='fisica'):
+    """ENMIENDA 2 / ERR-99 por linaje-semilla (SOLO fisica). Si t_fund se trunco (tope 200 de la pista) y el ultimo
+    registrado es <= T_CORTE, los que faltan se cuentan como POSTERIORES (conservador contra el cruce) y se marca."""
+    pre = sum(1 for x in tf if x <= T_CORTE); post = fund - pre
+    incierto = len(tf) < fund and (not tf or tf[-1] <= T_CORTE)
+    ev = mu >= MIN_MUERTES
+    R0 = round(desc / (mu + 1), 4)
+    muertos = dpv[:-1]
+    return dict(evaluable=ev, casi_inmortal=not ev, R0_eval=(R0 if ev else None), fund_post10k=post,
+                fund_post_incierto=bool(incierto), cruza=bool(ev and R0 >= R0_CRUCE and post == 0),
+                nac_reales=nac_reales, t_fund_fuente=t_fund_fuente,   # cola_final ya esta en el resumen (no se duplica)
+                fund_por_1e5=round(fund / T * 1e5, 2),
+                frac_muere_sin_parir=(round(sum(1 for x in muertos if x == 0) / len(muertos), 4) if muertos else None),
+                t_fund_n=len(tf))
 
 
 def tarea(args):
@@ -94,6 +147,9 @@ def tarea(args):
     r = P.run(seed, carros, T=T, pizarra=pizarra, rep_acum=rep_acum, escala=escala)
     L = [resumen_linaje(d, seed) for d in r['linajes']]
     sd = sum(x['descendientes'] for x in L); sm = sum(x['muertes'] for x in L)
+    for x in L:   # la reconstruccion de t_fund (para crudos viejos) se VERIFICA contra la fisica en cada corrida nueva
+        tf, qf, nr = t_fund_reconstruido(x['telem']['vidas'], x['telem']['desc_por_vida'])
+        x['t_fund_rec_ok'] = bool(tf[:200] == x['telem']['t_fund'] and qf == x['cola_final'] and nr == x['nac_reales'])
     return dict(seed=seed, seg=round(time.time() - t0, 1), linajes=L, pista=r['pista'],
                 R0_pista=round(sd / (sm + len(L)), 4), pizarra_log=r['pizarra_log'])
 
@@ -158,7 +214,8 @@ def informe(R, meta, log):
         xe = [[sum(l['xor_enc'][n][j] for c in R for l in c['linajes']) for j in range(4)] for n in range(2)]
         log(f"    formato H-BOCA (mordidas / exposiciones): veneno con SED {xm[1][1]}/{xe[1][1]} · veneno con HAMBRE {xm[0][1]}/{xe[0][1]} · "
             f"sal con HAMBRE {xm[0][3]}/{xe[0][3]} · sal con SED {xm[1][3]}/{xe[1][3]}")
-    log(f"  contabilidad fisica coherente: {sum(l['coherente'] for c in R for l in c['linajes'])}/{sum(len(c['linajes']) for c in R)}")
+    log(f"  contabilidad fisica coherente: {sum(l['coherente'] for c in R for l in c['linajes'])}/{sum(len(c['linajes']) for c in R)} · "
+        f"t_fund reconstruible desde telem == fisica: {sum(l.get('t_fund_rec_ok', False) for c in R for l in c['linajes'])}/{sum(len(c['linajes']) for c in R)}")
     log(f"  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj={R[0]['pista']['nobj']}) por semilla "
         f"{[c['pista']['comp_mundo'] for c in R]} · olvidos {[c['pista']['olvidos'] for c in R]}")
     ms = [{k: sum(l['mord'][k] for l in c['linajes']) for k in 'ABCD'} for c in R]
@@ -167,11 +224,134 @@ def informe(R, meta, log):
     return tab, r0p
 
 
+def etiqueta_de(ident):
+    return ident.split('#')[0]
+
+
+def modo_de(ids):
+    et = [etiqueta_de(c) for c in ids]
+    if len(et) == 1: return 'solo'
+    if len(set(et)) == 1 and len(et) == 9 and et[0] != 'FABRICA': return 'mono'
+    if sorted(set(et)) == ['FABRICA', 'H1', 'O1', 'S1']: return 'oficial'
+    return 'otro'
+
+
+def criterio_mono(xs):
+    """ENMIENDA 3: (i) mediana del R0 sobre evaluables >= 0.90; (ii) >= 75 % de evaluables sin fundadores tras t=10000;
+    (iii) >= 120/180 (= 2/3) de los linajes-semilla evaluables. Se aplica igual al SOLO (con sus n linajes-semilla)."""
+    ev = [x for x in xs if x['evaluable']]
+    m = med([x['R0_eval'] for x in ev])
+    fs = (sum(1 for x in ev if x['fund_post10k'] == 0) / len(ev)) if ev else 0.0
+    fe = len(ev) / len(xs) if xs else 0.0
+    c = dict(i=bool(m is not None and m >= R0_CRUCE), ii=bool(fs >= MONO_FRAC_SIN_FUND), iii=bool(fe >= MONO_FRAC_EVAL - 1e-12))
+    return dict(mediana_R0_eval=m, frac_eval_sin_fund=round(fs, 4), evaluables=len(ev), n=len(xs), frac_eval=round(fe, 4),
+                condiciones=c, cruza=all(c.values()), casi_inmortales=sum(1 for x in xs if x['casi_inmortal']),
+                cruzan_linajes=sum(1 for x in xs if x['cruza']))
+
+
+def resumen_err99(R, log):
+    """Por escuderia (ENMIENDA 2), monocultivo y SOLO (ENMIENDA 3), con las predicciones firmadas al lado."""
+    ns = len(R); ids = R[0]['pista']['ids'] if 'pista' in R[0] else [l['id'] for l in R[0]['linajes']]; modo = modo_de(ids)
+    esc = {}
+    for c in R:
+        for l in c['linajes']: esc.setdefault(etiqueta_de(l['id']), []).append(l)
+    log(f"\nERR-99 / ENMIENDA 2 (evaluable = >= {MIN_MUERTES} muertes; cruza = R0 >= {R0_CRUCE} y 0 fundadores tras t = {T_CORTE}) · modo {modo}")
+    log(f"  {'escuderia':10s} {'lin-sem':>7} {'cruzan':>6} {'evaluab':>7} {'casi inm':>8} {'R0 eval med':>11} {'sem. que cruza':>14} "
+        f"{'nac reales':>10} {'fund>10k med':>12} {'sin parir':>9}  gana")
+    out = {}
+    for e, xs in esc.items():
+        por_sem = {}
+        for x in xs: por_sem.setdefault(x['seed'], []).append(x['cruza'])
+        sem_cruza = sum(1 for v in por_sem.values() if any(v))
+        uno = all(len(v) == 1 for v in por_sem.values())
+        gana = (sem_cruza >= GANA_FRAC * ns) if uno else None
+        inc = sum(1 for x in xs if x['fund_post_incierto'])
+        o = dict(linajes_semilla=len(xs), cruzan=sum(x['cruza'] for x in xs), evaluables=sum(x['evaluable'] for x in xs),
+                 casi_inmortales=sum(x['casi_inmortal'] for x in xs), R0_eval_med=med([x['R0_eval'] for x in xs]),
+                 R0_med_todos=med([x['R0'] for x in xs]), semillas_que_cruza=sem_cruza, semillas=ns, gana=gana,
+                 nac_reales_med=med([x['nac_reales'] for x in xs]), fund_post_med=med([x['fund_post10k'] for x in xs]),
+                 sin_parir_med=med([x['frac_muere_sin_parir'] for x in xs]), fund_post_incierto=inc,
+                 casi_inmortal_semillas=len({x['seed'] for x in xs if x['casi_inmortal']}))
+        out[e] = o
+        log(f"  {e:10s} {o['linajes_semilla']:7d} {o['cruzan']:6d} {o['evaluables']:7d} {o['casi_inmortales']:8d} {str(o['R0_eval_med']):>11} "
+            f"{str(sem_cruza) + '/' + str(ns):>14} {str(o['nac_reales_med']):>10} {str(o['fund_post_med']):>12} {str(o['sin_parir_med']):>9}  "
+            f"{('SI' if gana else 'no') if gana is not None else '-- (varios linajes por semilla)'}"
+            f"{'  [t_fund truncado e incierto en ' + str(inc) + ']' if inc else ''}")
+    todos = [l for c in R for l in c['linajes']]
+    res = dict(modo=modo, escuderias=out)
+    if modo in ('mono', 'solo'):
+        cm = criterio_mono(todos); res['criterio_enm3'] = cm
+        log(f"  {'MONOCULTIVO' if modo == 'mono' else 'SOLO'} (criterio ENMIENDA 3): (i) mediana R0 evaluables {cm['mediana_R0_eval']} >= {R0_CRUCE}: "
+            f"{'si' if cm['condiciones']['i'] else 'no'} · (ii) evaluables sin fundadores tras t={T_CORTE} {cm['frac_eval_sin_fund']} >= "
+            f"{MONO_FRAC_SIN_FUND}: {'si' if cm['condiciones']['ii'] else 'no'} · (iii) evaluables {cm['evaluables']}/{cm['n']} "
+            f"(>= {MONO_FRAC_EVAL:.3f}): {'si' if cm['condiciones']['iii'] else 'no'} -> {'CRUZA' if cm['cruza'] else 'NO CRUZA'}")
+    log("  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:")
+    if modo == 'oficial':
+        fab = out.get('FABRICA', {}); h1 = out.get('H1', {}); o1 = out.get('O1', {}); s1 = out.get('S1', {})
+        fm = fab.get('R0_med_todos'); hm = h1.get('R0_med_todos')
+        med_ = [
+            f"H1 {hm} vs FABRICA {fm} (diferencia {round(hm - fm, 3) if hm is not None and fm is not None else None}; "
+            f"{'dentro' if hm is not None and fm is not None and abs(hm - fm) <= 0.10 else 'FUERA'} de +-0.10)",
+            f"FABRICA {fm} ({'dentro' if fm is not None and 0.28 <= fm <= 0.45 else 'FUERA'} de 0.28-0.45)",
+            f"O1 cruza en {o1.get('semillas_que_cruza')}/{ns} ({'>= 10' if (o1.get('semillas_que_cruza') or 0) >= 10 * ns / 20 else '< 10'} por 20); "
+            f"gana: {'SI' if o1.get('gana') else 'no'}",
+            f"O1 casi inmortal en {o1.get('casi_inmortal_semillas')}/{ns} semillas ({'>= 1' if o1.get('casi_inmortales') else 'ninguno'}; "
+            f"{'>= 10' if (o1.get('casi_inmortal_semillas') or 0) >= 10 * ns / 20 else '< 10'} por 20)",
+            f"S1 cruza en {s1.get('semillas_que_cruza')}/{ns} ({'NO cruza' if not s1.get('cruzan') else 'CRUZA en alguna'})"]
+        for p_, m_ in zip(PRED_ENM['oficial'], med_): log(f"    - {p_}  ->  medido: {m_}")
+        res['predicciones'] = list(zip(PRED_ENM['oficial'], med_))
+    elif modo in ('mono', 'solo'):
+        cm = res['criterio_enm3']
+        m_ = f"{'CRUZA' if cm['cruza'] else 'NO CRUZA'} (mediana R0 evaluables {cm['mediana_R0_eval']})"
+        log(f"    - {PRED_ENM[modo][0]}  ->  medido: {m_}"); res['predicciones'] = [(PRED_ENM[modo][0], m_)]
+    else:
+        log("    (esta alineacion no tiene prediccion firmada)")
+    return res
+
+
+def recalcula(ruta, log=print):
+    """Aplica la letra de ERR-99 a un CRUDO viejo (sin t_fund): reconstruye t_fund y la cola final desde telem y
+    VERIFICA contra fundadores y cola_final del crudo. Si no verifica, lo dice y no inventa."""
+    d = json.load(open(ruta, encoding='utf-8'))
+    T = d['meta']['T']; R = d['corridas']; nover = 0
+    for c in R:
+        for l in c['linajes']:
+            te = l.get('telem') or {}
+            if 'vidas' not in te or 'desc_por_vida' not in te:
+                raise SystemExit(f"RECALCULA: {ruta} no guarda vidas/desc_por_vida por cuerpo: NO se puede aplicar ERR-99")
+            tf, qf, nr = t_fund_reconstruido(te['vidas'], te['desc_por_vida'])
+            ok = (len(tf) == l['fundadores'] and qf == l['cola_final'])
+            nover += int(not ok)
+            l.update(err99(l['muertes'], l['fundadores'], tf, l['descendientes'], T, te['vidas'], te['desc_por_vida'],
+                           nac_reales=nr, cola_final=l['cola_final'], t_fund_fuente='reconstruido' + ('' if ok else ' SIN VERIFICAR')))
+            l['t_fund_rec'] = tf
+    nt = sum(len(c['linajes']) for c in R)
+    log(f"RECALCULO ERR-99 de {os.path.basename(ruta)} · T={T} · carros {d['meta']['carros']} · semillas {d['meta']['semillas']}")
+    log(f"  t_fund reconstruido desde telem (vidas + hijos por cuerpo): verificado contra fundadores y cola_final en {nt - nover}/{nt} linajes-semilla")
+    for c in R:
+        for l in c['linajes']:
+            log(f"  s{c['seed']} {l['id']:8s} muertes {l['muertes']:3d} desc {l['descendientes']:3d} R0 {l['R0']:<7} evaluable {int(l['evaluable'])} "
+                f"fund {l['fundadores']} t_fund {l['t_fund_rec']} fund>10k {l['fund_post10k']} nac reales {l['nac_reales']} cola {l['cola_final']} "
+                f"-> cruza {int(l['cruza'])}")
+    if T != T_DEF: log(f"  OJO: T = {T} (no {T_DEF}): la letra de ERR-99 esta escrita para T = {T_DEF}; se aplica igual, a titulo informativo")
+    return resumen_err99(R, log)
+
+
+def parse_carros(txt):
+    out = []
+    for tok in (x.strip() for x in txt.split(',') if x.strip()):
+        if '*' in tok:
+            a, k = tok.split('*'); out += [a.strip()] * int(k)
+        else: out.append(tok)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--humo', action='store_true')
     ap.add_argument('--ronda', default='0')
-    ap.add_argument('--carros', default=','.join(['FABRICA'] * 9))
+    ap.add_argument('--carros', default=None)   # p. ej. O1,S1,H1,FABRICA*6 ; si falta, el atajo de --ronda (ALINEACIONES)
+    ap.add_argument('--recalcula', default=None)   # ruta de un crudo viejo: aplica ERR-99 y termina
     ap.add_argument('--desde', type=int, default=4001)
     ap.add_argument('--n', type=int, default=20)
     ap.add_argument('--T', type=int, default=T_DEF)
@@ -180,7 +360,9 @@ def main():
     ap.add_argument('--escala', type=int, default=1)   # ENMIENDA 1
     ap.add_argument('--pool', type=int, default=int(os.environ.get('JUACO_POOL', 0)))
     a = ap.parse_args()
-    carros = [c for c in a.carros.split(',') if c]
+    if a.recalcula:
+        recalcula(a.recalcula); return 0
+    carros = parse_carros(a.carros) if a.carros else list(ALINEACIONES.get(a.ronda, ['FABRICA'] * 9))
     if a.humo:
         semillas = [4001, 4002]; pool = 0; etiqueta = f"humo_ronda{a.ronda}"
     else:
@@ -232,6 +414,7 @@ def main():
     json.dump(dict(meta=meta, corridas=R), open(crudo, 'w', encoding='utf-8'), ensure_ascii=False)
     log(f"  CRUDO {crudo} (sha {P.h16(crudo)})")
     tab, r0p = informe(R, meta, log)
+    e99 = resumen_err99(R, log)
     log(f"  PIZARRA completa {piz}")
     if carros == ['FABRICA'] * 9:
         todos = [l['R0'] for c in R for l in c['linajes']]
@@ -240,7 +423,7 @@ def main():
             f"la mediana del R0 por linaje cae en {lo}-{hi}. Medido: mediana de los {len(todos)} linajes-semilla {mr} "
             f"(min {min(todos)}, max {max(todos)}) -> {'DENTRO del rango' if lo <= mr <= hi else ('DEBAJO del rango' if mr < lo else 'ENCIMA del rango')}")
     res = os.path.join(DATOS, pre + '_resumen.json')
-    json.dump(dict(meta=meta, tabla=tab, R0_pista=r0p), open(res, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    json.dump(dict(meta=meta, tabla=tab, R0_pista=r0p, err99=e99), open(res, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     log(f"  RESUMEN {res}")
     log(f"\nTerminado en {time.time()-t0:.1f}s")
     return 0
