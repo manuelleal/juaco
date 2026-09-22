@@ -120,6 +120,9 @@ class Linaje:
         # DIAGNOSTICO (SOLO LECTURA, sin rng): objetivo bueno de la necesidad activa al inicio del paso, perdidas y mordidas
         self.g = None; self.robos = []; self.perd_olv = []; self.t_bd = []; self.t_ac = []
         self.dg_sum = 0; self.dg_n = 0; self.sin_bueno = 0; self.sin20 = 0
+        # MECANISMO (ENMIENDA 4, SOLO LECTURA): mordidas malas A SABIENDAS (letra ya mordida antes por el linaje) cuyo golpe
+        # cae en la necesidad MAS LLENA (= la 'limpieza' de O1, medida desde la fisica) y lo bueno que reaparece por ellas
+        self.limp = 0; self.limp_buenos = 0; self.malas = 0; self.malas_buenos = 0; self.E0 = 1.0; self.A0 = 1.0
         # HAMBRE -> BOCA (SOLO LECTURA): por (letra, necesidad activa): [decisiones, mordidas, suma deficit en decisiones,
         # suma deficit en mordidas]; histograma del deficit de la necesidad activa en mordidas malas (B/D) y buenas (A/C)
         self.boca = {}; self.hist_bd = [0] * 10; self.hist_ac = [0] * 10; self.lev_bd = []
@@ -138,9 +141,11 @@ def _valida_escritura(x):
     return tuple(out)
 
 
-def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem=True, diag=1):
+def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem=True, diag=1, mundo_n=None):
     """carros: lista de IDs (str) de carros/<ID>.py, o de pares (etiqueta, modulo_con_crea).
     escala=1 (ENMIENDA 1): L = 40*N, nobj = 4*N; escala=0: el mundo sin escalar (L=40, nobj=4) para cualquier N.
+    mundo_n=M (ENMIENDA 4, MUNDO FORZADO): N carros en el mundo dimensionado para M: L = 40*M, nobj = 4*M y M sorteos de
+    olvido por paso (ERR-98). Con M = N (y escala=1) es IDENTICO a mundo_n=None (arnes (N)).
     Devuelve dict(linajes=[dict por linaje], pista=dict, pizarra_log=[...])."""
     n = len(carros)
     if not 1 <= n <= N_MAX: raise SystemExit(f"PISTA: entre 1 y {N_MAX} carros (hay {n})")
@@ -149,7 +154,9 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
     if rep_acum not in (0, 1): raise SystemExit("PISTA: rep_acum es 0 o 1")
     CF = cfg_fabrica(); kw = CF['kw']
     VAL_VIVO, EFECTO = CF['VAL_VIVO'], CF['EFECTO']
-    esc = n if escala else 1
+    if mundo_n is not None and (int(mundo_n) != mundo_n or not 1 <= mundo_n <= N_MAX):
+        raise SystemExit(f"PISTA: mundo_n entre 1 y {N_MAX} (hay {mundo_n})")
+    esc = int(mundo_n) if mundo_n is not None else (n if escala else 1)
     L = CF['L'] * esc
     M = dict(nobj=kw['nobj'] * esc, costo=kw['costo'], costo_a=kw['costo_a'], A_ini=kw['A_ini'], rep_X=kw['rep_X'],
              rep_umbral=kw['rep_umbral'], dote=kw['dote'], cola_max=kw['cola_max'], rep2_regalo=kw['rep2_regalo'],
@@ -195,6 +202,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
     tiene_vn = [hasattr(c, 'valor_nec') for c in cars]
     orden = list(range(n))
     olv_n = 0
+    sin_bueno_mundo = 0                    # SOLO LECTURA (ENMIENDA 4): pasos sin NINGUN objeto bueno (A ni C) en el mundo
     comp = {k: 0 for k in TIPOS}           # SOLO LECTURA: composicion del mundo al inicio de cada paso
     comp_q = [{k: 0 for k in TIPOS} for _ in range(4)]   # idem por cuarto de T (composicion EN EL TIEMPO)
     for t in range(T):
@@ -204,6 +212,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         foto = tuple((l.id, l.pos, objs.get(l.pos), l.ult_mordida) for l in lin)
         if diag:   # SOLO LECTURA: objetivo bueno (A con hambre, C con sed) mas cercano de cada cuerpo, al INICIO del paso
             pA = [x for x, v in objs.items() if v == 'A']; pC = [x for x, v in objs.items() if v == 'C']; pT = list(objs)
+            if not pA and not pC: sin_bueno_mundo += 1
             for l in lin:
                 hb = min(max(1 - l.E, 0), 1); sd = min(max(1 - l.Ag, 0), 1)
                 PP = pC if sd > hb else pA
@@ -217,6 +226,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         # ---------------- fase A
         for i in orden:
             l = lin[i]; c = cars[i]; o = obs[i]
+            l.E0 = l.E; l.A0 = l.Ag
             o['t'] = t; o['pos'] = l.pos; o['E'] = l.E; o['Ag'] = l.Ag; o['cuerpos'] = foto; o['pizarra'] = piz_t
             hambre = np.clip(1 - l.E, 0, 1); _dfa = np.clip(1 - l.Ag, 0, 1); _na = 1 if _dfa > hambre else 0
             _sac = l.E >= M['rep_umbral'] and l.Ag >= M['rep_umbral']
@@ -260,6 +270,9 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                     if kk == 'B': l.tB = t
                     elif kk == 'D': l.tD = t
                     l.ult_mordida = kk
+                    if diag and kk in ('B', 'D'):
+                        antes = set(objs); antes.discard(pos)
+                        limp = (sum(l.mord[kk]) > 1) and ((l.E0 >= l.A0) if kk == 'B' else (l.A0 >= l.E0))
                     if diag:
                         (l.t_bd if kk in ('B', 'D') else l.t_ac).append(t)
                         for o2 in lin:
@@ -267,6 +280,10 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                                 if o2 is not l: o2.robos.append(t)
                                 o2.g = None
                     del objs[pos]; spawn()
+                    if diag and kk in ('B', 'D'):
+                        nb = sum(1 for x in objs if x not in antes and objs[x] in ('A', 'C'))
+                        l.malas += 1; l.malas_buenos += nb
+                        if limp: l.limp += 1; l.limp_buenos += nb
                     res['mordio'] = True; res['dS'] = tuple(_dS)
             c.resultado(res)
             l.prev_on = pos if pos in objs else -1
@@ -372,7 +389,8 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         out.append(d)
     return dict(linajes=out, pizarra_log=piz_log,
                 pista=dict(seed=seed, T=T, n=n, ids=ids, compat=int(compat), pizarra=int(pizarra),
-                           rep_acum=int(rep_acum), escala=int(escala), L=L, nobj=M['nobj'], olvidos=olv_n,
+                           rep_acum=int(rep_acum), escala=int(escala), L=L, nobj=M['nobj'], olvidos=olv_n, mundo_n=mundo_n,
+                           frac_sin_bueno_mundo=(round(sin_bueno_mundo / T, 4) if diag else None),
                            comp_mundo={k: round(comp[k] / T, 4) for k in TIPOS},
                            comp_mundo_q=[{k: round(cq[k] / max(1, (T // 4 if j < 3 else T - 3 * (T // 4))), 4) for k in TIPOS}
                                          for j, cq in enumerate(comp_q)],
@@ -413,7 +431,9 @@ def _diag(l, T):
                 bd_tras_olvido=ventana(l.t_bd, l.perd_olv), ac_tras_olvido=ventana(l.t_ac, l.perd_olv),
                 bd_base=round(len(l.t_bd) / T * W_DIAG, 4), ac_base=round(len(l.t_ac) / T * W_DIAG, 4),
                 dist_bueno_media=(round(l.dg_sum / l.dg_n, 3) if l.dg_n else None),
-                frac_sin_bueno=round(l.sin_bueno / T, 4), frac_sin_obj20=round(l.sin20 / T, 4), **_boca(l, T))
+                frac_sin_bueno=round(l.sin_bueno / T, 4), frac_sin_obj20=round(l.sin20 / T, 4),
+                limpiezas=l.limp, limpiezas_por_cuerpo=round(l.limp / (len(l.vh) + 1), 4), buenos_por_limpieza=l.limp_buenos,
+                mordidas_malas=l.malas, buenos_por_mala=l.malas_buenos, **_boca(l, T))
 
 
 def _boca(l, T):

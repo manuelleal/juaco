@@ -160,3 +160,28 @@
   - Identidad 40/40 y `test_tramposo` 30/30.
   - Humos n = 1, T = 5000: `carrera_ronda1_s4001-4001_20260922_143636`, `carrera_ronda1mono_..._143645` y `carrera_ronda1solo_..._143659`, todos con crudo, pizarra y resumen.
 - **Bug mío en el parche:** `cola_final` salía duplicada en el resumen. El arnés lo detectó (TypeError) antes de cualquier corrida válida; corregido.
+
+## v6: ENMIENDA 4 (serie sellada con controles) — solo instrumento; no se corrió ninguna semilla sellada
+- **Mundo forzado:**
+  - `pista.run(..., mundo_n=M)` y `juez.py --mundo_N M`: L = 40·M, nobj = 4·M y M sorteos de olvido por paso.
+  - Arnés (N): `mundo_n = N` es idéntico bit a bit (N = 1 y N = 9). Con 1 carro y `mundo_n = 9`: L = 360, 36 objetos, 2735 olvidos (esperados ~2700).
+- **`carros/CTRL_O1_SINLIMPIA.py`** (sha be029b0a1b8d6634; `revisa_carro` PASA). El diff contra O1 (99436afa2715f028) tiene dos partes:
+  - el docstring de cabecera;
+  - la línea 100, `limpia = mejor is None and min(lev) < self.U + MARGEN`, pasa a `limpia = False`.
+  - Con `limpia` falsa, sin tocar ninguna otra línea: nunca hay blanco `sucio` y `_quiere(..., limpia=False)` no muerde lo malo conocido. Sin nada útil, va a una letra por probar o al centro del hueco más grande (su regla de espera).
+  - Se escribió preservando los fines de línea de O1 (el primer intento los cambió y el diff marcaba todo el archivo; se rehizo).
+- **Prueba de la limpieza** (s4001, T = 5000, 9 carros):
+  - O1: 165 limpiezas (16/22/6/13/26/14/33/20/15). CTRL: 0.
+  - La medida física coincide linaje por linaje con el contador que declara O1.
+- **Medida física de la limpieza** (juez, sin leer el carro): mordida de B/D **a sabiendas** (letra ya mordida por el linaje) con el golpe en la necesidad **más llena**. Para O1 es exactamente su rama de limpieza. En FABRICA cuenta también mordidas malas por hambre (448 en el humo): no es «limpieza» intencional, y así se lee.
+- **Otras medidas del mecanismo:**
+  - Objetos buenos que reaparecen por esas mordidas: en el humo ≈0.49 por mordida, la tasa esperada de 2 de 4 tipos.
+  - Fracción de pasos sin ningún objeto bueno en el mundo: `pista['frac_sin_bueno_mundo']`, solo diagnóstico.
+- **Atajos:**
+  - `--ronda sellada_mono | sellada_sologrande | sellada_sinlimpia | sellada_fab`, con semillas 5001–5020 por defecto y el criterio de la ENMIENDA 3.
+  - Las predicciones de la ENMIENDA 4 se imprimen con SE CUMPLE / NO se cumple.
+  - SOLO-GRANDE informa los casi inmortales y si hacen caer (iii). Así operacionalicé «queda casi inmortal»: más de 1/3 de los linajes-semilla casi inmortales. **Revisar.**
+- **Pruebas:**
+  - Arnés **43/43** (40 + N1 ×2 + N2). La 1.ª corrida dio 40/43: (L) no excluía el nuevo campo de diagnóstico `frac_sin_bueno_mundo`, que es None con diag = 0. Linajes, pizarra y rng eran idénticos (verificado aparte); corregido y declarado.
+  - `test_tramposo` 30/30.
+  - Humos de los 4 atajos con s4001, T = 5000: el pipeline escribe crudo, pizarra y resumen; contabilidad y reconstrucción de `t_fund` coherentes en todos. Sus veredictos a T = 5000 no significan nada.

@@ -137,6 +137,9 @@ O1 SOLO no cruza (0.681). **No se declara todavía**, por dos motivos:
   Si S-SOLO-GRANDE cruza o queda casi inmortal, no se puede separar la compañía de la abundancia y se dice así.
 - Prohibido: "coopera", "población", "evoluciona", "altruismo".
 
+**Precisión fijada antes de correr (coordinador):** en S-SOLO-GRANDE, "queda casi inmortal" = más de 1/3 de los linajes-semilla casi
+inmortales (< 5 muertes), que es cuando cae el criterio (iii) de la ENMIENDA 3. CTRL_O1_SINLIMPIA difiere de O1 (sha 99436afa2715f028) en una
+sola línea (`limpia = False`); sha be029b0a1b8d6634. Humo: 0 limpiezas contra 165 de O1.
 **Predicciones firmadas del coordinador:** S-MONO cruza con probabilidad 0.75. S-SOLO-GRANDE cruza o queda casi inmortal con probabilidad 0.60.
 S-SIN-LIMPIEZA no cruza con probabilidad 0.50. S-FAB no cruza con probabilidad 0.97.
 

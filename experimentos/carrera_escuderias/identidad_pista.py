@@ -22,6 +22,7 @@ numero de la carrera. Un proceso, sin Pool.
       y contabilidad coherente.
   (L) El DIAGNOSTICO (objetivo robado, perdidas, distancias) es SOLO LECTURA: diag=1 == diag=0.
   (M) ERR-98: la tasa de olvido POR OBJETO con N = 9 (escala) es la de N = 1.
+  (N) ENMIENDA 4 (mundo forzado): mundo_n = N identico bit a bit; 1 carro con mundo_n = 9 -> L 360, 36 objetos, olvido x9.
   (J) H-4: cfg_fabrica = firma de organismo_f9c.run + BRAZOS['REL']; una rama no portada aborta; la
       constante derivada se usa (eta distinta -> corrida distinta).
 Desde ERR-96 la salida tiene dos espacios de nombres: se compara pista.plano(d) (fisica + d['carro']).
@@ -212,6 +213,9 @@ def main():
                    ('N=9 sin escala', dict(carros=['FABRICA'] * 9, escala=0))):
         a = P.run(2, T=3000, diag=1, **kw); b = P.run(2, T=3000, diag=0, **kw)
         for d in a['linajes']: d['_carrera'].pop('diag')
+        # ENMIENDA 4: pista['frac_sin_bueno_mundo'] es tambien SOLO del diagnostico (None con diag=0). 1a corrida del arnes
+        # tras agregarlo: 40/43 por no excluirlo aqui; linajes, pizarra y rng eran identicos (verificado aparte).
+        a['pista'].pop('frac_sin_bueno_mundo'); b['pista'].pop('frac_sin_bueno_mundo')
         di(f"(L) {et}", N(a) == N(b), f"rng mundo {a['pista']['rng_mundo_estado']}/{b['pista']['rng_mundo_estado']}")
     out("\n(M) ERR-98: la tasa de OLVIDO POR OBJETO con N = 9 (escala) es la de N = 1 (0.003/4 = 0.00075 por objeto y paso)")
     tas = {}
@@ -224,6 +228,16 @@ def main():
        all(z[n] < 4 for n in z) and 0.85 <= tas[9][1] / tas[1][1] <= 1.15,
        f"N=1 {tas[1][0]} olvidos -> {tas[1][1]:.6f} (z {z[1]:.2f}) · N=9 {tas[9][0]} olvidos -> {tas[9][1]:.6f} (z {z[9]:.2f}) · "
        f"razon {tas[9][1]/tas[1][1]:.3f} · SIN la correccion N=9 daria ~{esp/9:.6f}")
+    out("\n(N) ENMIENDA 4, MUNDO FORZADO: mundo_n = N es IDENTICO a no pasarlo (bit a bit); mundo_n = 9 con 1 carro da L 360 / 36 objetos")
+    for et, cs in (('N=1 FABRICA', ['FABRICA']), ('N=9 FABRICA', ['FABRICA'] * 9)):
+        a = P.run(4001, cs, T=3000); b = P.run(4001, cs, T=3000, mundo_n=len(cs))
+        pa = {k: v for k, v in a['pista'].items() if k != 'mundo_n'}; pb = {k: v for k, v in b['pista'].items() if k != 'mundo_n'}
+        di(f"(N1) {et}: mundo_n={len(cs)} == sin mundo_n", N(a['linajes']) == N(b['linajes']) and N(pa) == N(pb) and N(a['pizarra_log']) == N(b['pizarra_log']),
+           f"rng mundo {pa['rng_mundo_estado']}/{pb['rng_mundo_estado']}")
+    r = P.run(4001, [('W', mod_escritor())], T=100000, pizarra=0, mundo_n=9, diag=0)
+    di('(N2) 1 carro con mundo_n=9: L 360, nobj 36, olvido POR OBJETO 0.00075 (9 sorteos por paso)',
+       r['pista']['L'] == 360 and r['pista']['nobj'] == 36 and abs(r['pista']['olvidos'] - 2700) < 4 * 2700 ** .5,
+       f"L {r['pista']['L']} nobj {r['pista']['nobj']} olvidos {r['pista']['olvidos']} (esperados ~2700)")
     out("\n(J) H-4: las constantes de FABRICA se DERIVAN de BRAZOS['REL'] y una rama no portada ABORTA")
     cf = P.cfg_fabrica(); kw = cf['kw']
     di('(J1) cfg_fabrica = firma de organismo_f9c.run + corre_bloque2.BRAZOS[REL]',
