@@ -15,6 +15,8 @@ calcula por linaje, con la definicion de H-1 (corre_f9.py:193-207):
   'cruza_real' (SOLO se reporta; el criterio no cambia). ERR-101: --ronda sellada_fundborra (9 CTRL_O1_FUNDBORRA, 5021-5040).
   ENMIENDA 5 (ronda 2): --ronda r2mono --equipo X | r2mix3 | r2fab --equipo X | r2o1mono; fundador limpio; 9101-9120 (replica --desde 9121);
   cruza = R0 de NACIMIENTOS REALES >= 0.90 y 0 fundadores tras t=10000; gana = cruza en >= 15/20 semillas. Humos: humo_equipo.py.
+  ENMIENDA 6 / ERR-102 (co-principal): PERSISTENCIA (0 fundadores tras t=10000 y >= 5 nacimientos reales; estabiliza > 1/2 de los
+  linajes por semilla, >= 15/20 semillas) y MUERTES VOLUNTARIAS fisicas por equipo (lo que declara el carro solo se muestra).
   · exposiciones a A y C · escrituras por linaje (hasta 3000 en la telemetria). La pizarra COMPLETA se guarda
   aparte en <prefijo>_pizarra.jsonl.gz (una linea [semilla, t, id, contenido] por escritura publicada).
 Y de la pista: R0_pista = sum(descendientes) / (sum(muertes) + n_linajes) · composicion del mundo por cuarto de T.
@@ -49,6 +51,7 @@ PRED_RONDA0 = {0: (0.15, 0.35),   # prediccion firmada del organizador, pista SI
                1: (0.35, 0.55)}   # ENMIENDA 1: pista escalada L=40N, nobj=4N (firmada por el coordinador)
 T_DEF = 100000
 # ---- ENMIENDA 2 (ERR-99) y ENMIENDA 3 (REGLAMENTO), letra fijada ANTES de la ronda 1
+MIN_NAC_PERSISTE = 5     # ENMIENDA 6: persiste = 0 fundadores tras T_CORTE y >= 5 nacimientos reales (hay recambio)
 MIN_MUERTES = 5          # R0 evaluable solo con >= 5 muertes; si no, "casi inmortal" (no cuenta ni a favor ni en contra)
 R0_CRUCE = 0.90          # cruza: R0 evaluable >= 0.90 Y 0 fundadores despues de T_CORTE
 T_CORTE = 10000
@@ -145,6 +148,9 @@ def resumen_linaje(d, seed):
                 mord={k: sum(x) for k, x in f['mord'].items()}, pasos_viables=f['pasos_viables'],
                 sac_frac=round(f['pasos_viables'] / f['T_efectivo'], 4), cola_final=f['cola_final'],
                 escrituras=c['escrituras'], vetos=c['vetos'], diag=c.get('diag'), xor_mord=f['xor_mord'], xor_enc=f['xor_enc'],
+                muertes_vol=c.get('muertes_vol'),   # ENMIENDA 6: FISICA (la que cuenta); None en crudos anteriores
+                carro_declara=({k: d['carro'][k] for k in ('cuerpos_term', 'senescentes') if isinstance(d.get('carro'), dict) and k in d['carro']}
+                               or None),   # SOLO SE MUESTRA (ERR-96: no puntua); con fundador limpio es solo la ULTIMA instancia
                 telem=dict(vidas=v, desc_por_vida=f['desc_por_vida'], causa_cuerpo=c['causa_cuerpo'], escr=c['escr'],
                            t_fund=f['t_fund'], origen=f['origen_cuerpo']),
                 **err99(mu, f['fundadores'], f['t_fund'], f['descendientes'], f['T_efectivo'], v, f['desc_por_vida'],
@@ -172,7 +178,8 @@ def err99(mu, fund, tf, desc, T, vidas, dpv, nac_reales, cola_final, t_fund_fuen
     R0 = round(desc / (mu + 1), 4)
     muertos = dpv[:-1]
     R0r = round(nac_reales / (mu + 1), 4)   # ERR-100: R0 de NACIMIENTOS REALES (sin los hijos que esperan en la cola)
-    return dict(evaluable=ev, casi_inmortal=not ev, R0_eval=(R0 if ev else None), fund_post10k=post,
+    persiste = bool(post == 0 and nac_reales >= MIN_NAC_PERSISTE)   # ENMIENDA 6: PERSISTENCIA (sin exigir >= 5 muertes)
+    return dict(evaluable=ev, casi_inmortal=not ev, R0_eval=(R0 if ev else None), fund_post10k=post, persiste=persiste,
                 R0_real=R0r, R0_real_eval=(R0r if ev else None), cruza_real=bool(ev and R0r >= R0_CRUCE and post == 0),
                 fund_post_incierto=bool(incierto), cruza=bool(ev and R0 >= R0_CRUCE and post == 0),
                 nac_reales=nac_reales, t_fund_fuente=t_fund_fuente,   # cola_final ya esta en el resumen (no se duplica)
@@ -416,7 +423,52 @@ def resumen_r2(R, log, ronda):
                        f"{'SE CUMPLE (cruza)' if out.get('O1', {}).get('gana') else 'no cruza'}"}.get(ronda.split('_')[0], '')
     for p_ in PRED_R2: log(f"    - {p_}")
     log(f"    medido en esta serie: {txt}")
-    return dict(ronda=ronda, equipos=out, regla_semilla=R2_SEMILLA, medido=txt)
+    per = persistencia_r2(R, log, ronda)
+    return dict(ronda=ronda, equipos=out, regla_semilla=R2_SEMILLA, medido=txt, persistencia=per)
+
+
+PRED_E6 = {('O2', 'mono'): 0.45, ('O2', 'fab'): 0.15, ('O3', 'mono'): 0.50, ('O4', 'mono'): 0.35, ('O1', 'mono'): 0.55}
+
+
+def persistencia_r2(R, log, ronda):
+    """ENMIENDA 6 / ERR-102, co-principal: un linaje-semilla PERSISTE si 0 fundadores tras t=10000 y >= 5 nacimientos reales;
+    un equipo ESTABILIZA en una semilla si persiste MAS DE LA MITAD de sus linajes; ESTABILIZA LA RONDA con >= 15/20 semillas.
+    Muertes voluntarias FISICAS (la que cuenta): muere en el paso en que mordio una letra mala ya mordida por su linaje y cuyo efecto
+    cae en la necesidad por la que muere. Lo que declara el carro se muestra al lado y no cuenta."""
+    ns = len(R); esc = {}
+    for c in R:
+        for l in c['linajes']: esc.setdefault(etiqueta_de(l['id']), {}).setdefault(c['seed'], []).append(l)
+    base = ronda.split('_')[0]; modo = {'r2mono': 'mono', 'r2o1mono': 'mono', 'r2fab': 'fab', 'r2mix3': 'mix'}.get(base, base)
+    log(f"\nPERSISTENCIA / ENMIENDA 6 (co-principal; persiste = 0 fundadores tras t = {T_CORTE} y >= {MIN_NAC_PERSISTE} nacimientos reales; "
+        f"estabiliza en una semilla si persiste > 1/2 de sus linajes; estabiliza la ronda con >= {int(GANA_FRAC * 20)}/20)")
+    log(f"  {'equipo':10s} {'lin-sem':>7} {'persisten':>9} {'nac reales med':>14} {'sem estabiliza':>14}  estabiliza   "
+        f"muertes voluntarias FISICAS (fraccion)   declaradas por el carro (no cuentan)")
+    out = {}
+    for e, por in esc.items():
+        xs = [x for v in por.values() for x in v]
+        se = sum(1 for v in por.values() if sum(x['persiste'] for x in v) * 2 > len(v))
+        mv = [x.get('muertes_vol') for x in xs]; mu = sum(x['muertes'] for x in xs)
+        vol = (sum(mv) if all(v is not None for v in mv) else None)
+        dec = {}
+        for x in xs:
+            for k, v in (x.get('carro_declara') or {}).items(): dec[k] = dec.get(k, 0) + v
+        o = dict(persisten=sum(x['persiste'] for x in xs), linajes_semilla=len(xs), nac_reales_med=med([x['nac_reales'] for x in xs]),
+                 semillas_estabiliza=se, estabiliza=bool(se >= GANA_FRAC * ns), muertes=mu, muertes_vol=vol,
+                 frac_vol=(round(vol / mu, 4) if vol is not None and mu else None), carro_declara=dec or None)
+        out[e] = o
+        log(f"  {e:10s} {o['linajes_semilla']:7d} {o['persisten']:9d} {str(o['nac_reales_med']):>14} {str(se) + '/' + str(ns):>14}  "
+            f"{'SI' if o['estabiliza'] else 'no':10s}  {str(vol) + '/' + str(mu) if vol is not None else 'no disponible (crudo anterior)'} "
+            f"({o['frac_vol']})   {dec or '-'}{'  (FABRICA: piso)' if e == 'FABRICA' else ''}"
+            f"{'  -> con muerte programada' if o['estabiliza'] and o['frac_vol'] else ''}")
+    log("  PREDICCIONES FIRMADAS (ENMIENDA 6, persistencia) y lo medido en esta serie:")
+    hay = False
+    for (eq, md_), p_ in PRED_E6.items():
+        if md_ == modo and eq in out:
+            hay = True
+            log(f"    - {eq} estabiliza en {md_} (p {p_})  ->  medido: {'ESTABILIZA' if out[eq]['estabiliza'] else 'NO estabiliza'} "
+                f"({out[eq]['semillas_estabiliza']}/{ns} semillas)")
+    if not hay: log("    (ninguna prediccion de persistencia para esta alineacion)")
+    return out
 
 
 def recalcula(ruta, log=print):
@@ -444,7 +496,9 @@ def recalcula(ruta, log=print):
                 f"fund {l['fundadores']} t_fund {l['t_fund_rec']} fund>10k {l['fund_post10k']} nac reales {l['nac_reales']} cola {l['cola_final']} "
                 f"R0 real {l['R0_real']} -> cruza {int(l['cruza'])} · cruza_real {int(l['cruza_real'])}")
     if T != T_DEF: log(f"  OJO: T = {T} (no {T_DEF}): la letra de ERR-99 esta escrita para T = {T_DEF}; se aplica igual, a titulo informativo")
-    return resumen_err99(R, log, d['meta'].get('ronda'))
+    e = resumen_err99(R, log, d['meta'].get('ronda'))
+    if (d['meta'].get('ronda') or '').startswith('r2'): e['ronda2'] = resumen_r2(R, log, d['meta']['ronda'])
+    return e
 
 
 def parse_carros(txt):

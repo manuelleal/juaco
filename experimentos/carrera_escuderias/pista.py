@@ -117,6 +117,9 @@ class Linaje:
         self.causas = {'hambre': 0, 'sed': 0, 'veneno': 0, 'sal': 0}; self.causa_cuerpo = []
         self.tB = -10 ** 9; self.tD = -10 ** 9
         self.ult_mordida = None; self.escrituras = 0; self.escr = []; self.vetos = 0
+        # ENMIENDA 6 (SOLO LECTURA): muerte 'por mordida sabiendo que mata' = muere en el paso en que mordio una letra que su
+        # linaje YA habia mordido y cuyo efecto NEGATIVO cae en la necesidad por la que muere (B -> energia, D -> agua)
+        self.vol_kk = None; self.muertes_vol = 0
         # DIAGNOSTICO (SOLO LECTURA, sin rng): objetivo bueno de la necesidad activa al inicio del paso, perdidas y mordidas
         self.g = None; self.robos = []; self.perd_olv = []; self.t_bd = []; self.t_ac = []
         self.dg_sum = 0; self.dg_n = 0; self.sin_bueno = 0; self.sin20 = 0
@@ -233,7 +236,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         # ---------------- fase A
         for i in orden:
             l = lin[i]; c = cars[i]; o = obs[i]
-            l.E0 = l.E; l.A0 = l.Ag
+            l.E0 = l.E; l.A0 = l.Ag; l.vol_kk = None
             o['t'] = t; o['pos'] = l.pos; o['E'] = l.E; o['Ag'] = l.Ag; o['cuerpos'] = foto; o['pizarra'] = piz_t
             hambre = np.clip(1 - l.E, 0, 1); _dfa = np.clip(1 - l.Ag, 0, 1); _na = 1 if _dfa > hambre else 0
             _sac = l.E >= M['rep_umbral'] and l.Ag >= M['rep_umbral']
@@ -277,6 +280,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                     if kk == 'B': l.tB = t
                     elif kk == 'D': l.tD = t
                     l.ult_mordida = kk
+                    if kk in ('B', 'D') and sum(l.mord[kk]) > 1: l.vol_kk = kk   # ENMIENDA 6: letra mala YA mordida por el linaje
                     if diag and kk in ('B', 'D'):
                         antes = set(objs); antes.discard(pos)
                         limp = (sum(l.mord[kk]) > 1) and ((l.E0 >= l.A0) if kk == 'B' else (l.A0 >= l.E0))
@@ -316,6 +320,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                 _causa = ('energia' if por_E else 'agua')
                 cz = (('veneno' if t - l.tB < W_CAUSA else 'hambre') if por_E else ('sal' if t - l.tD < W_CAUSA else 'sed'))
                 l.causas[cz] += 1
+                if l.vol_kk == ('B' if por_E else 'D'): l.muertes_vol += 1   # ENMIENDA 6: la mordida de ESTE paso lo mato
                 if len(l.causa_cuerpo) < 2000: l.causa_cuerpo.append(cz)
                 l.deaths += 1; l.mnec[0 if por_E else 1] += 1; l.E = .6; l.Ag = .6
                 l.pos = int(rngs_muerte[i].integers(L))
@@ -392,7 +397,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                  T_efectivo=T, vidas_cuerpo=[int(x) for x in l.vh], desc_cuerpo=[int(x) for x in l.dpv])
         if rep_acum: d['rep_acum'] = 1
         d['_carrera'] = dict(id=l.id, indice=i, causas=dict(l.causas), causa_cuerpo=list(l.causa_cuerpo),
-                             escrituras=l.escrituras, escr=l.escr, vetos=l.vetos, instancias=instancias[i],
+                             escrituras=l.escrituras, escr=l.escr, vetos=l.vetos, instancias=instancias[i], muertes_vol=l.muertes_vol,
                              p1=[int(x) for x in l.p1], c1=[int(x) for x in l.c1], t_ok=[int(x) for x in l.tok])
         if diag: d['_carrera']['diag'] = _diag(l, T)
         d['carro'] = dict(c.salida()) if hasattr(c, 'salida') else {}   # ERR-96: SOLO aqui; nadie lo lee como verdad

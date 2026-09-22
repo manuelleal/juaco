@@ -1,0 +1,55 @@
+{
+ "modo": "r2",
+ "escuderias": {
+  "O1": {
+   "linajes_semilla": 180,
+   "cruzan": 153,
+   "evaluables": 180,
+   "casi_inmortales": 0,
+   "R0_eval_med": 2.419,
+   "R0_med_todos": 2.419,
+   "semillas_que_cruza": 20,
+   "semillas": 20,
+   "gana": null,
+   "nac_reales_med": 17.0,
+   "fund_post_med": 0.0,
+   "sin_parir_med": 0.333,
+   "fund_post_incierto": 0,
+   "casi_inmortal_semillas": 0,
+   "R0_real_eval_med": 0.941,
+   "cruzan_real": 144
+  }
+ },
+ "ronda2": {
+  "ronda": "r2o1mono",
+  "equipos": {
+   "O1": {
+    "linajes_semilla": 180,
+    "cruzan": 144,
+    "evaluables": 180,
+    "casi_inmortales": 0,
+    "R0_real_eval_med": 0.941,
+    "R0_eval_med": 2.419,
+    "semillas_cruza_mayoria": 20,
+    "semillas_cruza_todos": 1,
+    "semillas": 20,
+    "gana": true
+   }
+  },
+  "regla_semilla": "mayoria",
+  "medido": "O1 con fundador limpio en monocultivo: cruza en 20/20 semillas -> SE CUMPLE (cruza)",
+  "persistencia": {
+   "O1": {
+    "persisten": 155,
+    "linajes_semilla": 180,
+    "nac_reales_med": 17.0,
+    "semillas_estabiliza": 20,
+    "estabiliza": true,
+    "muertes": 9538,
+    "muertes_vol": null,
+    "frac_vol": null,
+    "carro_declara": null
+   }
+  }
+ }
+}

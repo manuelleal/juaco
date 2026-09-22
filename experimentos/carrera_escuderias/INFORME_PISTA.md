@@ -243,3 +243,22 @@
   - Escribe JSON, log y pizarra.
   - Probado con los guardias (semilla fuera del tercio, T > 30000, carro faltante, mix sin los tres, equipo no permitido). La prueba completa usó un equipo temporal `ZZ` (copia de FABRICA, s4001), incluido el tope. Ese equipo se borró.
   - Bug mío corregido: un humo rechazado dejaba la carpeta vacía del equipo.
+
+## v9: ENMIENDA 6 / ERR-102 (persistencia y muertes voluntarias) — aplicado después de que terminó el Pool r2o1mono
+- **Persistencia**, en todas las salidas de la ronda 2 y en `--recalcula`:
+  - Un linaje-semilla persiste con 0 fundadores tras t = 10000 y ≥ 5 nacimientos reales.
+  - El equipo estabiliza en una semilla si persiste más de la mitad de sus linajes, y estabiliza la ronda con ≥ 15/20 semillas.
+  - Se imprimen las predicciones de la ENMIENDA 6. El bloque de la ENMIENDA 5 sigue igual.
+- **Muertes voluntarias físicas** (`pista.py`, solo lectura; `_carrera['muertes_vol']`): el cuerpo muere en el paso en que mordió una letra mala que su linaje ya había mordido, y cuyo efecto negativo cae en la necesidad por la que muere (B → energía, D → agua).
+  - Se reporta por equipo como fracción de muertes.
+  - Al lado va lo que declara el carro: O3 `cuerpos_term`, O4 `senescentes`. No cuenta, y con fundador limpio solo cubre la última instancia.
+  - Con muerte programada, «estabiliza» lleva la marca «con muerte programada».
+- **Recálculo de la serie oficial `r2o1mono` (9101–9120)** con el juez nuevo:
+  - El bloque ENMIENDA 5 es **idéntico** al del juez viejo: 144/180 cruzan, R0 real 0.941, R0 preregistrado 2.419, 20/20 semillas por mayoría, 1/20 con todos, gana.
+  - Persistencia: 155/180 persisten, 20/20 semillas → **O1 ESTABILIZA** (predicción 0.55).
+  - Muertes voluntarias: no disponibles, porque el crudo es anterior al cambio de la pista.
+- **Humo s4001, T = 20000, monocultivos:**
+  - O3: 22/45 muertes voluntarias físicas (0.49); declara 25 `cuerpos_term`.
+  - O4: 29/202 (0.14); declara 30 `senescentes`.
+  - O1: 0/137.
+- **Pruebas:** identidad 50/50; `test_tramposo` 30/30.
