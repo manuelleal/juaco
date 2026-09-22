@@ -91,7 +91,16 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   de nombres aparte. Además, todo carro pasa un chequeo estático de tokens prohibidos (`sys._getframe`, `inspect`, `gc`, `globals`, acceso a frames
   o a módulos de la pista) y la revisión del auditor antes de cada ronda: no hay sandbox (H-5), así que las prohibiciones del §4 se cumplen por revisión.
 
-## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada (ERR-95)
+- **ERR-97**: el **motivo** escrito en la ENMIENDA 1 ("la causa medida fue la escasez") **no se sostiene**. El SOLO en la pista, con N = 1, semillas
+  4001–4002, ya tiene el mundo en ~88–92 % veneno + sal en todos los cuartos de T
+  (`datos/carrera_humo_ronda0_SOLO_escalada_N1_20260922_131228.json`). El cuerpo come A y C, y B y D solo salen por olvido. Lo que cambia con
+  9 cuerpos en L = 40 es que cada linaje muerde ≈40 % más veneno y sal y vive unas 3 veces menos; el porqué no está medido y se mide antes de la
+  ronda 1. La escala de la enmienda se mantiene: compara la interacción a la misma densidad y con los mismos recursos por cuerpo.
+- **Decisión sobre la percepción** (coordinador, delegada por el director: "las otras tú decides"): **opción A**. FABRICA toma L de la pista y sigue
+  viendo el mundo entero. Con N = 1 es idéntico (debe pasar su propio arnés). La diferencia declarada: en ~1 % de los pasos, con L grande, no hay
+  ningún objeto a 20 celdas o menos y va a uno más lejano. La visión local (opción B) queda para la prueba de escala del criterio v4, no para esta carrera.
+
+## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada (ERR-95; motivo corregido en ERR-97)
 
 **Motivo.** El humo de la ronda 0 (9 FABRICA en L = 40, `nobj = 4`; `datos/carrera_humo_ronda0_20260922_124440.json`) dio R0 por linaje
 0.272 contra 0.44–0.52 de un carro SOLO, y la causa medida fue la **escasez**: con 9 cuerpos, la comida y el agua se agotan y el mundo queda

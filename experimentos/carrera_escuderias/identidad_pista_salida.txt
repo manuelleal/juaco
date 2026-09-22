@@ -1,0 +1,61 @@
+IDENTIDAD DE LA PISTA · 2026-09-22 13:07:30 · UN proceso, sin Pool · python 3.14.2 · numpy 2.4.3
+  pista.py sha c2b8c453134fb687 · carros/FABRICA.py sha 9ef0ca62af327a6c
+
+(0) SHA DEL ORIGEN
+  OK    organismo_f9c.py   9dd1fb91ecec35ae (se espera 9dd1fb91ecec35ae)
+
+(A) ANCLA: 1 FABRICA, pizarra 0, compat 1 == organismo_f9c REL (rep_acum 0) · T=20000 · 6 semillas
+  OK    (A) s=1 T=20000    claves 76 · falta [] dif [] extra [] · R0 0.3421/0.3421 desc 13/13 muertes 37/37 vidas 38/38 fund 24/24 · rng mundo 4c9b8d5275d7eb99/4c9b8d5275d7eb99 · rng hijos 37/37 · 1.2s monolito / 1.5s pista
+  OK    (A) s=2 T=20000    claves 76 · falta [] dif [] extra [] · R0 0.2/0.2 desc 8/8 muertes 39/39 vidas 40/40 fund 31/31 · rng mundo d50e29a562955be3/d50e29a562955be3 · rng hijos 39/39 · 1.7s monolito / 2.2s pista
+  OK    (A) s=3 T=20000    claves 76 · falta [] dif [] extra [] · R0 0.2917/0.2917 desc 7/7 muertes 23/23 vidas 24/24 fund 17/17 · rng mundo 087c22f936b21fc7/087c22f936b21fc7 · rng hijos 23/23 · 1.6s monolito / 1.9s pista
+  OK    (A) s=4 T=20000    claves 76 · falta [] dif [] extra [] · R0 0.2/0.2 desc 7/7 muertes 34/34 vidas 35/35 fund 28/28 · rng mundo 95261b46f759e43d/95261b46f759e43d · rng hijos 34/34 · 1.6s monolito / 1.8s pista
+  OK    (A) s=5 T=20000    claves 76 · falta [] dif [] extra [] · R0 0.3793/0.3793 desc 11/11 muertes 28/28 vidas 29/29 fund 17/17 · rng mundo 2e2907fd7d89af74/2e2907fd7d89af74 · rng hijos 28/28 · 1.7s monolito / 1.6s pista
+  OK    (A) s=6 T=20000    claves 76 · falta [] dif [] extra [] · R0 0.4/0.4 desc 14/14 muertes 34/34 vidas 35/35 fund 20/20 · rng mundo 1e69061e695a6618/1e69061e695a6618 · rng hijos 34/34 · 2.0s monolito / 2.3s pista
+
+(B) ANCLA a T=100000 · 2 semillas (replica del bloque 2)
+  OK    (B) s=1601 T=100000    claves 76 · falta [] dif [] extra [] · R0 0.3216/0.3216 desc 55/55 muertes 170/170 vidas 171/171 fund 115/115 · rng mundo bc9517c31ff60902/bc9517c31ff60902 · rng hijos 170/170 · 10.9s monolito / 13.9s pista
+  OK    (B) s=1602 T=100000    claves 76 · falta [] dif [] extra [] · R0 0.4354/0.4354 desc 64/64 muertes 146/146 vidas 147/147 fund 82/82 · rng mundo 5156b731914d33e7/5156b731914d33e7 · rng hijos 146/146 · 11.3s monolito / 12.8s pista
+
+(C) ANCLA con rep_acum=1 · T=20000
+  OK    (C) s=1 T=20000 {'rep_acum': 1}   claves 77 · falta [] dif [] extra [] · R0 0.359/0.359 desc 14/14 muertes 38/38 vidas 39/39 fund 24/24 · rng mundo 6cc1710c122fc801/6cc1710c122fc801 · rng hijos 38/38 · 1.6s monolito / 2.6s pista
+  OK    (C) s=2 T=20000 {'rep_acum': 1}   claves 77 · falta [] dif [] extra [] · R0 0.375/0.375 desc 15/15 muertes 39/39 vidas 40/40 fund 24/24 · rng mundo b3baf3a3ebea1c06/b3baf3a3ebea1c06 · rng hijos 39/39 · 1.7s monolito / 2.4s pista
+
+(D) EL CANAL NO TOCA NADA si nadie escribe (compat 0)
+  OK    (D) n=1 pizarra 1 == 0 (linajes + pista salvo el eco 'pizarra')   R0 linaje 0 3/16 · rng mundo 8d9725b74bad367b/8d9725b74bad367b
+  OK    (D) n=3 pizarra 1 == 0 (linajes + pista salvo el eco 'pizarra')   R0 linaje 0 2/16 · rng mundo acacd9d5326142e9/acacd9d5326142e9
+
+(E) DEBEN DIFERIR (ERR-38)
+  OK    (E1) compat 0 != compat 1 (rng separados)   muertes 37 vs 33
+  OK    (E2) linaje 0 con 3 cuerpos != solo (la comida compartida no es inerte)   exposiciones A solo 132 vs con 3 121
+
+(F) DETERMINISMO
+  OK    (F) 9 FABRICA T=3000 dos veces   muertes [3, 10, 12, 3, 13, 3, 23, 10, 9]
+
+(G) GUARDIAS (deben abortar)
+  OK    (G) compat con 2 carros   PISTA: compat=1 es SOLO el ancla de identidad (un carro)
+  OK    (G) compat con pizarra   PISTA: compat=1 exige pizarra=0 (el ancla es con la pizarra apagada)
+  OK    (G) 10 carros   PISTA: entre 1 y 9 carros (hay 10)
+  OK    (G) escritura invalida   PISTA: escritura invalida (solo numeros finitos): ('x',)
+  OK    (G) mov invalido   PISTA: X mov=2 (solo -1, 0, +1)
+  OK    (G) carro inexistente   PISTA: no existe el carro C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\car
+
+(H) EL CANAL LLEGA
+  OK    (H1) lo escrito en t se lee en t+1, nunca en t   t=5 lee (0, 0, 1, 1, 2, 2, 3, 3, 4, 4)
+  OK    (H2) cupo 16 FIFO   max leido 16 · final 16 · escrituras [40, 40]
+  OK    (H3) pizarra=0: nada se lee, todo se descarta   descartadas 40
+
+(I) ENMIENDA 1 (escala): con N = 1, escala=1 == escala=0 (la pista original)
+  OK    (I1) N=1: escala 1 == escala 0 (linajes + pista salvo el eco)   L 40 nobj 4
+  OK    (I2) N=9 escala 1: L = 360, nobj = 36, siempre 36 objetos en el mundo   L 360 nobj 36 comp {'A': 10.0, 'B': 9.0, 'C': 9.0, 'D': 8.0} · pos max vista 358
+  OK    (I3) la pizarra COMPLETA se guarda aparte (pizarra_log = todas las escrituras, sin tope)   1800 entradas (9 x 200); primera [0, 'W#0', [0.0, 0.0]]
+  OK    (I4) CONDICION TECNICA: FABRICA ABORTA en la pista escalada (depende de L; no se adapta)   FABRICA: escrito para L=40 (ve el anillo entero); la pista tiene L=360. No se adapta sin d
+
+(J) H-4: las constantes de FABRICA se DERIVAN de BRAZOS['REL'] y una rama no portada ABORTA
+  OK    (J1) cfg_fabrica = firma de organismo_f9c.run + corre_bloque2.BRAZOS[REL]   83 perillas · costo 0.001 · rep_X 500 · nodo_lee 50 · motivo 'fase 9: sin alma, el mecanismo es el nodo'
+  OK    (J2) nodo_rel=2 -> FABRICA aborta   FABRICA: ramas no portadas {'nodo_rel': (2, 1)}
+  OK    (J2) nodo_via=2 -> FABRICA aborta   FABRICA: ramas no portadas {'nodo_via': (2, 0)}
+  OK    (J2) puerta_pat=0 -> FABRICA aborta   FABRICA: ramas no portadas {'puerta_pat': (0, 5)}
+  OK    (J2) eta_pred=0.1 -> FABRICA aborta   FABRICA: ramas no portadas {'eta_pred': (0.1, 0.0)}
+  OK    (J3) la constante derivada SE USA: eta 0.06 cambia la corrida (ERR-38)   splits 0 vs 6
+
+TOTAL 35/35 en 108.4s

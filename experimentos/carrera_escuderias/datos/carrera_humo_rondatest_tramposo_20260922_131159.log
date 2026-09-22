@@ -1,0 +1,8 @@
+JUEZ · humo_rondatest_tramposo · 2026-09-22 13:11:59 · python 3.14.2 · pool NO (un proceso)
+  pista.py c2b8c453134fb687 · juez.py 48ce357ec271cf12 · carros {'_TRAMPOSO_TEST': '39fa170792751676'}
+  carros (orden = indice de linaje): ['_TRAMPOSO_TEST'] · semillas 4001-4002 · T=100000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO _TRAMPOSO_TEST: RECHAZADO
+     T _TRAMPOSO_TEST:4 prohibido /sys\._getframe/: return sys._getframe(1)
+     T _TRAMPOSO_TEST:4 prohibido /_getframe/: return sys._getframe(1)
+     I _TRAMPOSO_TEST:3 import sys fuera de la lista blanca
+  UN CARRO NO PASA EL CHEQUEO ESTATICO (ERR-96) -> la ronda NO se corre.
