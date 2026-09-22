@@ -46,7 +46,15 @@ solo lectura), `juaco-cronista` (Sonnet), `probador-haiku`, `explorador-haiku`. 
 `/juaco-err`, `/veredicto`, `/encargo`. Ninguno corre Pool, commitea ni mata procesos: sólo el coordinador. Coordinación de CPU: mirar los
 procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 
-## Decisiones del director (las tres de las 16:30 tomadas y ejecutadas; pendientes al cierre de las 22:50)
+## Decisiones tomadas el 22-sep-2026 (el director: "opción A y las otras tú decides, basado en el objetivo")
+- **Nivel 9: 50 %.** La pregunta central ("aprende en menos de una vida") está declarada con cuatro series; lo que falta es del mundo.
+- **Criterio de tronco:** v3 retirado; **v4 en construcción** (rama `criterio-v4`, worktree `PROYECTOS\JUACO\criterio`). Hasta que v4 esté calibrado, v2 y v3 lado a lado.
+- **Dos Pools en paralelo: SÍ**, con un máximo de 2 Pools y 14 procesos entre los dos (8 núcleos, 16 lógicos). Antes de lanzar se miran los procesos python vivos (ERR-85/86). Nunca tres.
+- **Fase 5 / V-5: no por ahora.** Queda en 75 %; no está en el camino del muro de R0.
+- **Carrera de escuderías** (rama `carrera-escuderias`, worktree `PROYECTOS\JUACO\carrera`): reglamento aprobado + ENMIENDA 1 (pista escalada L = 40·N, `nobj` = 4·N).
+- **Rama de entradas por celda** (6 / 3 / 2; rama `rama-fanin`, worktree `PROYECTOS\JUACO\fanin`): preregistro con predicción de costo del director.
+
+## Decisiones del director (las tres de las 16:30 tomadas y ejecutadas; pendientes al cierre de las 22:50 — resueltas arriba el 22-sep)
 1. **Nivel 9: fijar el porcentaje.** Propuesta del coordinador: **50 %** (la pregunta central del nivel, "aprende en menos de una vida", declarada con cuatro series; lo que falta es que un linaje mortal se sostenga, y eso es del mundo).
 2. **Criterio de tronco:** retirar v3 (la réplica no repite) y escribir v4 con ERR-94 (T-C ii n = 80 o margen 15; CAL-4 n = 80 o placebo sin tocar el rng). Hasta entonces, candidatos con v2 y v3 lado a lado.
 3. **Dos Pools en paralelo como regla** (hoy 7 + 6 sin ERR-86; ninguna puerta mide tiempo de pared).
