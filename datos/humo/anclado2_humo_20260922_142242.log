@@ -1,0 +1,17 @@
+MUNDO ANCLADO v2 · HUMO v2 (semilla 1, ya vista; identidad tox=1 + 6 corridas) · 2026-09-22 14:22:42 · T=100000
+  organismo_anclado e689c2952b1991a4 (esperado e689c2952b1991a4)
+  OK   regla14 NADA           = corre_bloque2.BRAZOS['NADA'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 REL            = corre_bloque2.BRAZOS['REL'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 ORACULO        = corre_bloque2.BRAZOS['ORACULO'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 REL_BAR        = corre_bloque2.BRAZOS['REL_BAR'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 ORACULO_CIEGO  = corre_bloque2.BRAZOS['ORACULO'] + ['anc_mide', 'olv_ciego', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 NADA_CIEGO     = corre_bloque2.BRAZOS['NADA'] + ['anc_mide', 'olv_ciego', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 RENACE         = corre_bloque2.BRAZOS['RENACE'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   identidad: tabla(1.0) == EFECTO (ORACULO s1 h=0.003 T=20000, dict completo)
+    NADA           s1 tox=1.25 h=0.006  R0=0.613  vida=113.5  f_mala=0.7526  J=0.1606  (9.7s)
+    ORACULO        s1 tox=1.25 h=0.006  R0=2.673  vida=871.0  f_mala=0.7691  J=0.9591  (10.2s)
+    NADA           s1 tox=1.5 h=0.006  R0=0.194  vida=24.0  f_mala=0.7115  J=0.2198  (8.7s)
+    ORACULO        s1 tox=1.5 h=0.006  R0=1.153  vida=115.0  f_mala=0.7588  J=0.9878  (9.6s)
+    NADA           s1 tox=2.0 h=0.012  R0=0.240  vida=26.0  f_mala=0.6173  J=0.161  (9.3s)
+    ORACULO        s1 tox=2.0 h=0.012  R0=2.231  vida=652.0  f_mala=0.6383  J=0.96  (9.7s)
+  crudo -> C:\Users\User\Documents\PROYECTOS\JUACO\anclado\datos\humo\anclado2_humo_20260922_142242.json (sha 18b8aaf07a1ae6eb)
