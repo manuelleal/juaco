@@ -127,6 +127,10 @@ compañía de la abundancia"*. Primer cruce de H-1 en JUACO **por la métrica pr
   `pista.py:328-336`; lo había avisado O1 en su bitácora). 60/180 linajes-semilla tuvieron ≥ 1 fundador antes de t = 10000 y el criterio no los
   cuenta. **Control pendiente** antes de construir encima: `CTRL_O1_FUNDBORRA` (O1 con la memoria borrada en cada fundador), en semillas
   selladas nuevas.
+- **Serie S-FUNDBORRA (fijada antes de correr):** 9 `CTRL_O1_FUNDBORRA` (O1 con la tabla del linaje borrada en cada fundador; el único cambio),
+  semillas selladas **5021–5040**, T = 100000, criterio de la ENMIENDA 3, más el R0 de nacimientos reales. **Predicciones firmadas del coordinador:**
+  cruza por la letra con probabilidad 0.55; la mediana del R0 de nacimientos reales es ≥ 0.90 con probabilidad 0.35. Si no cruza, la frase
+  declarable del cruce agrega *"con la memoria del linaje conservada a través de las extinciones"*.
 - Otros datos auditados: mediana de 25 cuerpos que se suceden por linaje-semilla (11–43). S-SIN-LIMPIEZA muere de hambre y sed (vida 600) con el
   mundo en 78 % de pasos sin nada bueno: es un colapso real del recurso común, no un error. S-SOLO-GRANDE es abundancia (≤ 1.3 % de pasos sin nada bueno).
 
