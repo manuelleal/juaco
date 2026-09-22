@@ -48,7 +48,51 @@
 - Lo que sí distingue: con 9 cuerpos cada linaje muerde ≈40 % más B y D con las mismas A y C, y vive ≈3× menos. El mecanismo de eso **no está medido**.
 - Consecuencia: el motivo escrito en la ENMIENDA 1 («la causa medida fue la escasez») venía de mi inferencia y no se sostiene. Escalar L y nobj mantiene la densidad por cuerpo, pero no cambia la composición. Sugiero corregir el texto (ERR nuevo, lo decide el coordinador).
 
+## v3: opción A implementada, humo escalado y diagnóstico (22-sep, tarde)
+**Veredicto v3: NO. Escalar la pista no devuelve el R0 del SOLO.** La predicción firmada (0.35–0.55) cae.
+
+- **Opción A:** FABRICA toma `ctx['L']` y sigue viendo el mundo entero. Arnés **39/39**:
+  - Los 35 de antes con los mismos números.
+  - (K1) con N = 9 y L = 360 la boca decide sobre la celda real: 2455 decisiones, 0 desajustes.
+  - (K2) determinista y contabilidad 9/9.
+  - (L) el diagnóstico es solo lectura en 3 configuraciones.
+  - Además, a T = 100000, el humo sin escalar con diagnóstico reproduce el 0.272 bit a bit.
+- **Pasos sin ningún objeto a ≤ 20 celdas con N = 9:** mediana **4.4 %**, máximo 5.2 %. La estimación estática era 1.0 %: la medida es 4× mayor.
+
+| 9 FABRICA, 4001–4002, T = 100000 | R0 por linaje (mediana, mín–máx) | R0 pista | B+D del mundo por cuarto de T | causas (veneno/sal) | vida | saciedad |
+|---|---|---|---|---|---|---|
+| **escalada** L = 360, nobj = 36 (`..._escalada_20260922_131931`) | **0.269** (0.219–0.322), 0/18 ≥ 0.9 | 0.267 / 0.268 | 0.853 / 0.850 / 0.854 / 0.855 · 0.837 / 0.862 / 0.850 / 0.842 | 42 % / 58 % (hambre 2, sed 0) | ≈192 | 0.45 |
+| sin escalar L = 40 (`..._sin_escalar_diag_20260922_132544`) | 0.272 (0.234–0.359) | 0.268 / 0.288 | 0.863 / 0.868 / 0.871 / 0.862 · 0.846 / 0.858 / 0.868 / 0.860 | 44 % / 56 % | ≈185 | 0.45 |
+| SOLO N = 1 (`..._SOLO_diag_20260922_133041`) | 0.5154 / 0.4366 | — | 0.911 / 0.914 / 0.905 / 0.883 · 0.883 / 0.918 / 0.906 / 0.914 | 43 % / 57 % | 600–646 | 0.55 |
+
+**Diagnóstico** (solo medida, nada arreglado; mediana por linaje-semilla):
+- Definiciones:
+  - «Objetivo» = el objeto bueno más cercano para la necesidad activa (A con hambre, C con sed) al inicio del paso. Es un proxy: FABRICA en realidad va al objeto más cercano de cualquier tipo que no haya rechazado.
+  - «Robo» = otro cuerpo lo muerde en ese paso.
+  - Ventana = 50 pasos.
+
+| | pérdidas de objetivo por 100k pasos (robo + olvido) | B/D en 50 pasos tras robo | tras olvido | tasa de base de B/D | A/C tras robo / base | distancia al bueno más cercano | pasos sin bueno en el mundo |
+|---|---|---|---|---|---|---|---|
+| SOLO | 0 + 16 | — | 1.01 | **0.42** | — / 0.57 | 10.2 | 83 % |
+| 9, L = 40 | **3808** + 17 | 0.69 | 0.66 | **0.57** | 0.73 / 0.59 | 10.3 | 76 % |
+| 9, L = 360 | **1612** + 6 | 0.59 | 0.60 | **0.57** | 0.40 / 0.58 | 61.6 | 7 % |
+
+- **Lo medido:**
+  - Rodeado de otros, un cuerpo muerde B/D a una tasa de base +36 % (0.57 contra 0.42), igual con o sin escala.
+  - Pierde su objetivo bueno cientos de veces más a menudo (1600–3800 robos contra 16 olvidos).
+  - Tras perderlo, sube su tasa de B/D (L = 40: 0.69 contra 0.57). Pero un robo no pesa más que un olvido (0.69 contra 0.66), y en L = 360 casi no hay efecto (0.59 contra 0.57).
+  - La saciedad baja de 0.55 a 0.45.
+- **Hipótesis, no medida:** robos frecuentes → más hambre → la boca, empujada por `hambre_boca`, muerde lo que tenga delante. Lo que queda sin medir es el vínculo hambre→B/D en el momento de morder.
+- La distancia en L = 360 (61.6) no es comparable: allí casi siempre existe un bueno, pero lejos. En L = 40 muchas veces no existe ninguno (76–83 % de los pasos).
+- **Observación de escala (no corregida):** el olvido es de 0.003 por paso para TODO el mundo, así que con nobj = 36 cada objeto se olvida 9× menos que en L = 40. La ENMIENDA 1 no lo escaló. Lo decide el coordinador.
+
+## Comando de la serie de la ronda 0 (solo el coordinador)
+`python experimentos/carrera_escuderias/juez.py --ronda 0 --desde 4003 --n 20 --pool 6`
+- Valores por defecto: 9 FABRICA, `escala=1`, `pizarra=1`, `rep_acum=0`, `T=100000`.
+- Tiempo: ≈180 s por semilla en un proceso. Son 4 tandas con Pool 6: **≈12–16 min**.
+- La ruta con Pool no la probé (regla 3).
+
 ## Qué queda
-- Decidir A/B/C y, con esa decisión, correr el humo escalado de la ronda 0 contra la predicción 0.35–0.55.
-- Medir por qué un cuerpo rodeado de otros muerde más B y D, antes de la ronda 1.
-- Gemelo numba: plan sin cambios (v1). Solo sirve para carros de fábrica.
+- Decidir si la serie se corre así, dado que el humo ya cae por debajo de la predicción.
+- Medir el vínculo hambre→B/D en el momento de morder.
+- Decidir si el olvido se escala con N.

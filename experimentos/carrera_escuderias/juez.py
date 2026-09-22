@@ -84,7 +84,7 @@ def resumen_linaje(d, seed):
                 exp_A=f['exposiciones']['A'], exp_C=f['exposiciones']['C'],
                 mord={k: sum(x) for k, x in f['mord'].items()}, pasos_viables=f['pasos_viables'],
                 sac_frac=round(f['pasos_viables'] / f['T_efectivo'], 4), cola_final=f['cola_final'],
-                escrituras=c['escrituras'], vetos=c['vetos'],
+                escrituras=c['escrituras'], vetos=c['vetos'], diag=c.get('diag'),
                 telem=dict(vidas=v, desc_por_vida=f['desc_por_vida'], causa_cuerpo=c['causa_cuerpo'], escr=c['escr']))
 
 
@@ -128,6 +128,15 @@ def informe(R, meta, log):
     for c in R:
         fq = [round((q['B'] + q['D']) / max(1e-9, sum(q.values())), 3) for q in c['pista']['comp_mundo_q']]
         log(f"  semilla {c['seed']}: fraccion B+D del mundo por cuarto de T {fq} · L {c['pista']['L']} nobj {c['pista']['nobj']}")
+    dg = [l['diag'] for c in R for l in c['linajes'] if l.get('diag')]
+    if dg:
+        def md(k): return med([x[k] for x in dg])
+        log(f"  DIAGNOSTICO (mediana sobre {len(dg)} linajes-semilla; ventana {dg[0]['W']} pasos tras perder el objetivo bueno):")
+        log(f"    robos por linaje {md('robos')} · perdidas por olvido {md('perdidas_olvido')} · "
+            f"B/D tras robo {md('bd_tras_robo')} vs tras olvido {md('bd_tras_olvido')} vs base {md('bd_base')} · "
+            f"A/C tras robo {md('ac_tras_robo')} vs base {md('ac_base')}")
+        log(f"    distancia media al bueno mas cercano {md('dist_bueno_media')} · frac pasos sin bueno en el mundo {md('frac_sin_bueno')} · "
+            f"frac pasos sin NINGUN objeto a <= 20 {md('frac_sin_obj20')} (max {max(x['frac_sin_obj20'] for x in dg)})")
     log(f"  contabilidad fisica coherente: {sum(l['coherente'] for c in R for l in c['linajes'])}/{sum(len(c['linajes']) for c in R)}")
     log(f"  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj={R[0]['pista']['nobj']}) por semilla "
         f"{[c['pista']['comp_mundo'] for c in R]} · olvidos {[c['pista']['olvidos'] for c in R]}")

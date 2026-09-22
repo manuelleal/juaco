@@ -100,6 +100,17 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   viendo el mundo entero. Con N = 1 es idéntico (debe pasar su propio arnés). La diferencia declarada: en ~1 % de los pasos, con L grande, no hay
   ningún objeto a 20 celdas o menos y va a uno más lejano. La visión local (opción B) queda para la prueba de escala del criterio v4, no para esta carrera.
 
+- **ERR-98**: la escala de la ENMIENDA 1 quedó **incompleta**. El olvido de objetos es de 0.003 por paso para **todo el mundo**, así que con
+  `nobj` = 36 cada objeto se olvida 9 veces más despacio que en L = 40, y la pista no es equivalente por cuerpo, como pedía la enmienda. Corrección:
+  la tasa de olvido se escala con N (misma tasa **por objeto**). Con N = 1 no cambia nada (la identidad se mantiene).
+  **La predicción firmada de la ronda 0 escalada (0.35–0.55) quedó REFUTADA en el humo con el olvido sin escalar: 0.269 (0.219–0.322),
+  0/18** (`datos/carrera_humo_ronda0_escalada_20260922_131931.json`). Ese resultado queda registrado tal cual. La serie de la ronda 0 se corre
+  con la pista corregida y **la misma predicción, sin reajustarla**.
+  Medido en el humo, sin preregistrar: con 9 cuerpos cada linaje vive ≈192 pasos contra 600–646 del SOLO y muerde veneno y sal un 36 % más,
+  aunque el mundo no esté más sucio (85 % contra 88–92 % del SOLO). Pierde su objetivo cientos de veces más a menudo. Hipótesis para medir
+  antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
+  de la fase 10).
+
 ## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada (ERR-95; motivo corregido en ERR-97)
 
 **Motivo.** El humo de la ronda 0 (9 FABRICA en L = 40, `nobj = 4`; `datos/carrera_humo_ronda0_20260922_124440.json`) dio R0 por linaje

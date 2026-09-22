@@ -53,6 +53,8 @@ TIPOS = ('A', 'B', 'C', 'D')
 OLVIDO = 0.003   # literal del monolito (rng.random()<.003), no es kwarg
 N_MAX = 9
 CUPO = 16; ANCHO = 8
+W_DIAG = 50      # diagnostico: ventana (pasos) tras perder el objetivo bueno
+VISTA_ORIG = 20  # la mayor distancia posible en el anillo del monolito (L = 40)
 W_CAUSA = 400    # causa de muerte: 'veneno'/'sal' si mordio B/D en los ultimos 400 pasos (= |0.4| / costo)
 ETQ = dict(mundo=11, cuerpo=12, hijo=13, muerte=14, pista=15)
 MAX_ESCRITURAS_TELEM = 3000   # tope por linaje en la telemetria; la pizarra COMPLETA va en pizarra_log
@@ -115,6 +117,9 @@ class Linaje:
         self.causas = {'hambre': 0, 'sed': 0, 'veneno': 0, 'sal': 0}; self.causa_cuerpo = []
         self.tB = -10 ** 9; self.tD = -10 ** 9
         self.ult_mordida = None; self.escrituras = 0; self.escr = []; self.vetos = 0
+        # DIAGNOSTICO (SOLO LECTURA, sin rng): objetivo bueno de la necesidad activa al inicio del paso, perdidas y mordidas
+        self.g = None; self.robos = []; self.perd_olv = []; self.t_bd = []; self.t_ac = []
+        self.dg_sum = 0; self.dg_n = 0; self.sin_bueno = 0; self.sin20 = 0
 
     def q(self, t): return min(t // (self.T // 4), 3)
 
@@ -130,7 +135,7 @@ def _valida_escritura(x):
     return tuple(out)
 
 
-def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem=True):
+def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem=True, diag=1):
     """carros: lista de IDs (str) de carros/<ID>.py, o de pares (etiqueta, modulo_con_crea).
     escala=1 (ENMIENDA 1): L = 40*N, nobj = 4*N; escala=0: el mundo sin escalar (L=40, nobj=4) para cualquier N.
     Devuelve dict(linajes=[dict por linaje], pista=dict, pizarra_log=[...])."""
@@ -194,6 +199,17 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         for v in objs.values(): comp[v] += 1; cq[v] += 1
         if rng_pista is not None and n > 1: orden = [int(z) for z in rng_pista.permutation(n)]
         foto = tuple((l.id, l.pos, objs.get(l.pos), l.ult_mordida) for l in lin)
+        if diag:   # SOLO LECTURA: objetivo bueno (A con hambre, C con sed) mas cercano de cada cuerpo, al INICIO del paso
+            pA = [x for x, v in objs.items() if v == 'A']; pC = [x for x, v in objs.items() if v == 'C']; pT = list(objs)
+            for l in lin:
+                hb = min(max(1 - l.E, 0), 1); sd = min(max(1 - l.Ag, 0), 1)
+                PP = pC if sd > hb else pA
+                if PP:
+                    dmin, l.g = min((min((l.pos - x) % L, (x - l.pos) % L), x) for x in PP)
+                    l.dg_sum += dmin; l.dg_n += 1
+                else:
+                    l.g = None; l.sin_bueno += 1
+                if min(min((l.pos - x) % L, (x - l.pos) % L) for x in pT) > VISTA_ORIG: l.sin20 += 1
         pend = []
         # ---------------- fase A
         for i in orden:
@@ -234,6 +250,12 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                     if kk == 'B': l.tB = t
                     elif kk == 'D': l.tD = t
                     l.ult_mordida = kk
+                    if diag:
+                        (l.t_bd if kk in ('B', 'D') else l.t_ac).append(t)
+                        for o2 in lin:
+                            if o2.g == pos:
+                                if o2 is not l: o2.robos.append(t)
+                                o2.g = None
                     del objs[pos]; spawn()
                     res['mordio'] = True; res['dS'] = tuple(_dS)
             c.resultado(res)
@@ -245,6 +267,9 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         olv = ()
         if rng.random() < M['olvido'] and objs:
             _dx = list(objs)[int(rng.integers(len(objs)))]; del objs[_dx]; spawn(); olv = (_dx,); olv_n += 1
+            if diag:
+                for o2 in lin:
+                    if o2.g == _dx: o2.perd_olv.append(t); o2.g = None
         # ---------------- fase B
         for i in orden:
             l = lin[i]; c = cars[i]
@@ -329,6 +354,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         d['_carrera'] = dict(id=l.id, indice=i, causas=dict(l.causas), causa_cuerpo=list(l.causa_cuerpo),
                              escrituras=l.escrituras, escr=l.escr, vetos=l.vetos,
                              p1=[int(x) for x in l.p1], c1=[int(x) for x in l.c1], t_ok=[int(x) for x in l.tok])
+        if diag: d['_carrera']['diag'] = _diag(l, T)
         d['carro'] = dict(c.salida()) if hasattr(c, 'salida') else {}   # ERR-96: SOLO aqui; nadie lo lee como verdad
         out.append(d)
     return dict(linajes=out, pizarra_log=piz_log,
@@ -359,6 +385,22 @@ def plano(d):
     if f9 is not None:
         f9 = dict(f9); f9.update(p1=d['_carrera']['p1'], c1=d['_carrera']['c1'], t_ok=d['_carrera']['t_ok']); p['f9'] = f9
     return p
+
+
+def _diag(l, T):
+    """Diagnostico de 'por que un cuerpo rodeado muerde mas B/D' (SOLO LECTURA). Para cada perdida del objetivo
+    bueno (ROBO: otro cuerpo se lo comio en el mismo paso; OLVIDO: el mundo lo retiro), cuantas mordidas de B/D y
+    de A/C hace el cuerpo en los W_DIAG pasos siguientes, contra su tasa de base (mordidas / T * W_DIAG)."""
+    import bisect
+    def ventana(ts, ev):
+        if not ev: return None
+        return round(sum(bisect.bisect_right(ts, e + W_DIAG) - bisect.bisect_right(ts, e) for e in ev) / len(ev), 4)
+    return dict(W=W_DIAG, robos=len(l.robos), perdidas_olvido=len(l.perd_olv),
+                bd_tras_robo=ventana(l.t_bd, l.robos), ac_tras_robo=ventana(l.t_ac, l.robos),
+                bd_tras_olvido=ventana(l.t_bd, l.perd_olv), ac_tras_olvido=ventana(l.t_ac, l.perd_olv),
+                bd_base=round(len(l.t_bd) / T * W_DIAG, 4), ac_base=round(len(l.t_ac) / T * W_DIAG, 4),
+                dist_bueno_media=(round(l.dg_sum / l.dg_n, 3) if l.dg_n else None),
+                frac_sin_bueno=round(l.sin_bueno / T, 4), frac_sin_obj20=round(l.sin20 / T, 4))
 
 
 def _estado(r):

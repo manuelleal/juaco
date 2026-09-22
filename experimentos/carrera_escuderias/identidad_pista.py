@@ -17,11 +17,14 @@ numero de la carrera. Un proceso, sin Pool.
   (H) EL CANAL LLEGA: un carro de prueba que escribe; lo escrito en t aparece en la pizarra de t+1 (no en t),
       cupo 16 FIFO, y con pizarra=0 se descarta.
   (I) ENMIENDA 1: con N = 1, escala=1 == escala=0; con N = 9, L = 360 y nobj = 36; la pizarra COMPLETA se
-      guarda aparte; FABRICA ABORTA en la pista escalada (condicion tecnica: depende de L).
+      guarda aparte.
+  (K) OPCION A: FABRICA toma L de la pista; con N = 9 la boca decide siempre sobre la celda real; determinista
+      y contabilidad coherente.
+  (L) El DIAGNOSTICO (objetivo robado, perdidas, distancias) es SOLO LECTURA: diag=1 == diag=0.
   (J) H-4: cfg_fabrica = firma de organismo_f9c.run + BRAZOS['REL']; una rama no portada aborta; la
       constante derivada se usa (eta distinta -> corrida distinta).
 Desde ERR-96 la salida tiene dos espacios de nombres: se compara pista.plano(d) (fisica + d['carro']).
-(D), (E2), (F) y (G) con varios FABRICA usan escala=0: FABRICA no corre en la pista escalada.
+(D), (E2), (F) y (G) con varios FABRICA usan escala=0 (el mundo sin escalar, como en su primera version).
 Uso:  python experimentos/carrera_escuderias/identidad_pista.py   (escribe identidad_pista_salida.txt)
 """
 import json, os, sys, time, types
@@ -186,8 +189,29 @@ def main():
        f"L {r['pista']['L']} nobj {r['pista']['nobj']} comp {r['pista']['comp_mundo']} · pos max vista {max(c[1] for c in g[0].vistos)}")
     di('(I3) la pizarra COMPLETA se guarda aparte (pizarra_log = todas las escrituras, sin tope)',
        r['pista']['pizarra_n'] == 1800 == len(r['pizarra_log']), f"{len(r['pizarra_log'])} entradas (9 x 200); primera {r['pizarra_log'][0]}")
-    ok, msg = aborta(lambda: P.run(1, ['FABRICA'] * 9, T=10, escala=1))
-    di('(I4) CONDICION TECNICA: FABRICA ABORTA en la pista escalada (depende de L; no se adapta)', ok, msg)
+    out("\n(K) OPCION A: FABRICA toma L de la pista (N = 1: L = 40 -> las anclas A/B/C de arriba siguen bit a bit)")
+    FAB0 = P.carga_carro('FABRICA')
+    class Espia(FAB0.Carro):
+        """SOLO del arnes: comprueba que la celda donde el carro decidio la boca es la celda donde la pista lo puso."""
+        malas = 0; decis = 0
+        def resultado(self, res):
+            if res['letra'] is not None:
+                Espia.decis += 1; Espia.malas += int(self._enc is None or self._enc[0] != res['pos'])
+            super().resultado(res)
+    r9 = P.run(4001, [('FABRICA', types.SimpleNamespace(crea=lambda ctx: Espia(ctx)))] * 9, T=3000, escala=1)
+    di('(K1) N=9, L=360: la boca decide SIEMPRE sobre la celda real (0 desajustes de L)', Espia.decis > 0 and Espia.malas == 0,
+       f"decisiones de boca {Espia.decis} · desajustes {Espia.malas} · L {r9['pista']['L']}")
+    import juez as J
+    coh = [J.resumen_linaje(d, 4001)['coherente'] for d in r9['linajes']]
+    r9b = P.run(4001, [('FABRICA', types.SimpleNamespace(crea=lambda ctx: Espia(ctx)))] * 9, T=3000, escala=1)
+    di('(K2) N=9 escala 1: determinista y contabilidad fisica coherente 9/9', N(r9) == N(r9b) and all(coh),
+       f"muertes {[d['deaths'] for d in r9['linajes']]} · mordidas {[sum(sum(v) for v in d['mord'].values()) for d in r9['linajes']]}")
+    out("\n(L) EL DIAGNOSTICO ES SOLO LECTURA: diag=1 == diag=0 salvo _carrera['diag']")
+    for et, kw in (('N=1 compat', dict(carros=['FABRICA'], compat=1, pizarra=0)), ('N=9 escala', dict(carros=['FABRICA'] * 9, escala=1)),
+                   ('N=9 sin escala', dict(carros=['FABRICA'] * 9, escala=0))):
+        a = P.run(2, T=3000, diag=1, **kw); b = P.run(2, T=3000, diag=0, **kw)
+        for d in a['linajes']: d['_carrera'].pop('diag')
+        di(f"(L) {et}", N(a) == N(b), f"rng mundo {a['pista']['rng_mundo_estado']}/{b['pista']['rng_mundo_estado']}")
     out("\n(J) H-4: las constantes de FABRICA se DERIVAN de BRAZOS['REL'] y una rama no portada ABORTA")
     cf = P.cfg_fabrica(); kw = cf['kw']
     di('(J1) cfg_fabrica = firma de organismo_f9c.run + corre_bloque2.BRAZOS[REL]',

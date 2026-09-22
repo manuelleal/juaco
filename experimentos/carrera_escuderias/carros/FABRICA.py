@@ -11,9 +11,10 @@ organismo_f9c.run + corre_bloque2.BRAZOS['REL'] + L/NK/NKMAX/K/PAT del monolito,
 ejecucion). Las lineas son las del monolito SOLO en las ramas vivas del brazo REL; si una perilla de rama no
 tiene el valor portado, crea() ABORTA (RAMAS) en vez de correr otra cosa en silencio.
 
-ENMIENDA 1 (condicion tecnica): este carro fue escrito para el anillo del monolito (L = cfg['L'] = 40) y ve
-TODOS los objetos del mundo (see() busca el mas cercano sobre el anillo entero). En una pista escalada
-(ctx['L'] != 40) ABORTA: no se adapta sin decision aparte (ver INFORME_PISTA.md).
+ENMIENDA 1, OPCION A (REGLAMENTO, decision del coordinador tras ERR-97): el anillo es el de la PISTA (ctx['L'],
+= 40 con N = 1 -> identico al monolito) y el carro sigue viendo TODOS los objetos (see() busca el mas cercano
+sobre el anillo entero). Con N = 9 (L = 360, 36 objetos) puede ir a un objeto a mas de 20 celdas, cosa imposible
+en L = 40: la pista mide esa fraccion de pasos (diag 'frac_sin_obj20').
 
 INTERFAZ DE CARRO (la misma para las nueve escuderias):
   crea(ctx) -> objeto con
@@ -44,10 +45,8 @@ class Carro:
         cf = ctx['fabrica']; kw = cf['kw']
         mal = {k: (kw.get(k), v) for k, v in RAMAS.items() if kw.get(k) != v}
         if mal: raise SystemExit(f"FABRICA: ramas no portadas {mal}")
-        if ctx['L'] != cf['L']:
-            raise SystemExit(f"FABRICA: escrito para L={cf['L']} (ve el anillo entero); la pista tiene L={ctx['L']}. "
-                             "No se adapta sin decision aparte (ENMIENDA 1, condicion tecnica).")
-        self.L = cf['L']; self.NK = cf['NK']; self.NKMAX = cf['NKMAX']; self.K = cf['K']; self.PAT = cf['PAT']
+        self.L = ctx['L']   # OPCION A (ERR-97, decision del coordinador): L de la pista; sigue viendo el mundo ENTERO
+        self.NK = cf['NK']; self.NKMAX = cf['NKMAX']; self.K = cf['K']; self.PAT = cf['PAT']
         self.ETA = kw['eta']; self.TAU_E = kw['tau_e']; self.ALPHA = kw['alpha']; self.HAMBRE_BOCA = kw['hambre_boca']
         self.AVERSION = kw['aversion']; self.EMA = kw['ema']; self.PASO = kw['paso']; self.LAM = kw['lam']
         self.MEMORIA_RECHAZO = kw['memoria_rechazo']; self.ETA_S = kw['eta_s']; self.CLIP_S = kw['clip_s']
