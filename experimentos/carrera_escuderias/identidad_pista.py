@@ -21,6 +21,7 @@ numero de la carrera. Un proceso, sin Pool.
   (K) OPCION A: FABRICA toma L de la pista; con N = 9 la boca decide siempre sobre la celda real; determinista
       y contabilidad coherente.
   (L) El DIAGNOSTICO (objetivo robado, perdidas, distancias) es SOLO LECTURA: diag=1 == diag=0.
+  (M) ERR-98: la tasa de olvido POR OBJETO con N = 9 (escala) es la de N = 1.
   (J) H-4: cfg_fabrica = firma de organismo_f9c.run + BRAZOS['REL']; una rama no portada aborta; la
       constante derivada se usa (eta distinta -> corrida distinta).
 Desde ERR-96 la salida tiene dos espacios de nombres: se compara pista.plano(d) (fisica + d['carro']).
@@ -212,6 +213,17 @@ def main():
         a = P.run(2, T=3000, diag=1, **kw); b = P.run(2, T=3000, diag=0, **kw)
         for d in a['linajes']: d['_carrera'].pop('diag')
         di(f"(L) {et}", N(a) == N(b), f"rng mundo {a['pista']['rng_mundo_estado']}/{b['pista']['rng_mundo_estado']}")
+    out("\n(M) ERR-98: la tasa de OLVIDO POR OBJETO con N = 9 (escala) es la de N = 1 (0.003/4 = 0.00075 por objeto y paso)")
+    tas = {}
+    for n in (1, 9):   # carros que NO muerden: los objetos solo salen por olvido
+        r = P.run(12, [('W', mod_escritor())] * n, T=100000, pizarra=0, escala=1, diag=0)
+        tas[n] = (r['pista']['olvidos'], r['pista']['olvidos'] / (100000 * r['pista']['nobj']))
+    esp = 0.003 / 4
+    z = {n: abs(tas[n][0] - esp * 100000 * 4 * n) / (esp * 100000 * 4 * n) ** .5 for n in tas}
+    di('(M) tasa por objeto N=9 = N=1 (cada una a < 4 sigma de 0.00075; razon en 0.85-1.15)',
+       all(z[n] < 4 for n in z) and 0.85 <= tas[9][1] / tas[1][1] <= 1.15,
+       f"N=1 {tas[1][0]} olvidos -> {tas[1][1]:.6f} (z {z[1]:.2f}) · N=9 {tas[9][0]} olvidos -> {tas[9][1]:.6f} (z {z[9]:.2f}) · "
+       f"razon {tas[9][1]/tas[1][1]:.3f} · SIN la correccion N=9 daria ~{esp/9:.6f}")
     out("\n(J) H-4: las constantes de FABRICA se DERIVAN de BRAZOS['REL'] y una rama no portada ABORTA")
     cf = P.cfg_fabrica(); kw = cf['kw']
     di('(J1) cfg_fabrica = firma de organismo_f9c.run + corre_bloque2.BRAZOS[REL]',

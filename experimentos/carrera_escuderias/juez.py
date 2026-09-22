@@ -65,7 +65,7 @@ def identidad_corta():
 
 
 FISICAS = ('descendientes', 'deaths', 'vidas_h1', 'fundadores', 'muertes_nec', 'exposiciones', 'mord', 'pasos_viables',
-           'T_efectivo', 'cola_final', 'desc_por_vida', 'nacimientos', 'origen_cuerpo', '_carrera')
+           'T_efectivo', 'cola_final', 'desc_por_vida', 'nacimientos', 'origen_cuerpo', 'xor_mord', 'xor_enc', '_carrera')
 
 
 def resumen_linaje(d, seed):
@@ -84,7 +84,7 @@ def resumen_linaje(d, seed):
                 exp_A=f['exposiciones']['A'], exp_C=f['exposiciones']['C'],
                 mord={k: sum(x) for k, x in f['mord'].items()}, pasos_viables=f['pasos_viables'],
                 sac_frac=round(f['pasos_viables'] / f['T_efectivo'], 4), cola_final=f['cola_final'],
-                escrituras=c['escrituras'], vetos=c['vetos'], diag=c.get('diag'),
+                escrituras=c['escrituras'], vetos=c['vetos'], diag=c.get('diag'), xor_mord=f['xor_mord'], xor_enc=f['xor_enc'],
                 telem=dict(vidas=v, desc_por_vida=f['desc_por_vida'], causa_cuerpo=c['causa_cuerpo'], escr=c['escr']))
 
 
@@ -137,6 +137,27 @@ def informe(R, meta, log):
             f"A/C tras robo {md('ac_tras_robo')} vs base {md('ac_base')}")
         log(f"    distancia media al bueno mas cercano {md('dist_bueno_media')} · frac pasos sin bueno en el mundo {md('frac_sin_bueno')} · "
             f"frac pasos sin NINGUN objeto a <= 20 {md('frac_sin_obj20')} (max {max(x['frac_sin_obj20'] for x in dg)})")
+    if dg and 'boca' in dg[0]:
+        tot = {}
+        for x in dg:
+            for k, v in x['boca'].items():
+                t_ = tot.setdefault(k, [0, 0, 0.0, 0.0]); t_[0] += v['dec']; t_[1] += v['mord']
+                t_[2] += (v['def_dec'] or 0) * v['dec']; t_[3] += (v['def_mord'] or 0) * v['mord']
+        log("  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):")
+        for k in ('AH', 'AS', 'BH', 'BS', 'CH', 'CS', 'DH', 'DS'):
+            if k in tot:
+                d_, m_, sd, sm = tot[k]
+                log(f"    {k}: decisiones {d_:6d} mordidas {m_:6d} tasa {m_/d_ if d_ else 0:.3f} · deficit medio al decidir {sd/d_ if d_ else 0:.3f} "
+                    f"al morder {sm/m_ if m_ else 0:.3f}")
+        hb = [sum(x['hist_def_bd'][i] for x in dg) for i in range(10)]; ha = [sum(x['hist_def_ac'][i] for x in dg) for i in range(10)]
+        mb = sum((i + .5) / 10 * h for i, h in enumerate(hb)) / max(1, sum(hb)); ma = sum((i + .5) / 10 * h for i, h in enumerate(ha)) / max(1, sum(ha))
+        log(f"    deficit en mordidas B/D (bins de 0.1) {hb} (media ~{mb:.3f}) · en mordidas A/C {ha} (media ~{ma:.3f})")
+        log(f"    mordidas B/D con un robo en los {dg[0]['W']} pasos previos {md('bd_con_robo_prev')} vs pasos cubiertos asi {md('pasos_con_robo_prev')} · "
+            f"deficit en B/D con robo previo {md('def_bd_con_robo')} vs sin {md('def_bd_sin_robo')}")
+        xm = [[sum(l['xor_mord'][n][j] for c in R for l in c['linajes']) for j in range(4)] for n in range(2)]
+        xe = [[sum(l['xor_enc'][n][j] for c in R for l in c['linajes']) for j in range(4)] for n in range(2)]
+        log(f"    formato H-BOCA (mordidas / exposiciones): veneno con SED {xm[1][1]}/{xe[1][1]} · veneno con HAMBRE {xm[0][1]}/{xe[0][1]} · "
+            f"sal con HAMBRE {xm[0][3]}/{xe[0][3]} · sal con SED {xm[1][3]}/{xe[1][3]}")
     log(f"  contabilidad fisica coherente: {sum(l['coherente'] for c in R for l in c['linajes'])}/{sum(len(c['linajes']) for c in R)}")
     log(f"  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj={R[0]['pista']['nobj']}) por semilla "
         f"{[c['pista']['comp_mundo'] for c in R]} · olvidos {[c['pista']['olvidos'] for c in R]}")

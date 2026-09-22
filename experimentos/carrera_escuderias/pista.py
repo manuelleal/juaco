@@ -120,6 +120,9 @@ class Linaje:
         # DIAGNOSTICO (SOLO LECTURA, sin rng): objetivo bueno de la necesidad activa al inicio del paso, perdidas y mordidas
         self.g = None; self.robos = []; self.perd_olv = []; self.t_bd = []; self.t_ac = []
         self.dg_sum = 0; self.dg_n = 0; self.sin_bueno = 0; self.sin20 = 0
+        # HAMBRE -> BOCA (SOLO LECTURA): por (letra, necesidad activa): [decisiones, mordidas, suma deficit en decisiones,
+        # suma deficit en mordidas]; histograma del deficit de la necesidad activa en mordidas malas (B/D) y buenas (A/C)
+        self.boca = {}; self.hist_bd = [0] * 10; self.hist_ac = [0] * 10; self.lev_bd = []
 
     def q(self, t): return min(t // (self.T // 4), 3)
 
@@ -229,6 +232,13 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
             l.ult_mordida = None
             if pos in objs:
                 kk = objs[pos]; mordio = bool(a.get('muerde', False)); q = l.q(t)
+                if diag:
+                    lev = float(_dfa if _na else hambre); bk = l.boca.setdefault(kk + 'HS'[_na], [0, 0, 0.0, 0.0])
+                    bk[0] += 1; bk[2] += lev
+                    if mordio:
+                        bk[1] += 1; bk[3] += lev
+                        (l.hist_bd if kk in ('B', 'D') else l.hist_ac)[min(int(lev * 10), 9)] += 1
+                        if kk in ('B', 'D'): l.lev_bd.append((t, lev))
                 l.vis[kk][q] += 1
                 if _sac: l.dsac[kk] += 1
                 l.sobre[VAL_VIVO[kk]][q] += 1; l.llegadas[VAL_VIVO[kk]][q] += int(l.prev_on != pos)
@@ -263,13 +273,16 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
         # ---------------- costos
         for l in lin:
             l.E -= M['costo']; l.Ag -= M['costo_a']
-        # ---------------- olvido del mundo (una vez por paso)
-        olv = ()
-        if rng.random() < M['olvido'] and objs:
-            _dx = list(objs)[int(rng.integers(len(objs)))]; del objs[_dx]; spawn(); olv = (_dx,); olv_n += 1
-            if diag:
-                for o2 in lin:
-                    if o2.g == _dx: o2.perd_olv.append(t); o2.g = None
+        # ---------------- olvido del mundo: ERR-98 -> esc sorteos por paso (con escala=1, N; si no, 1), cada uno con p=0.003:
+        #                  la tasa POR OBJETO es la de L=40 (0.003/4). Con N = 1 es UN sorteo: el monolito exacto.
+        olv = []
+        for _o in range(esc):
+            if rng.random() < M['olvido'] and objs:
+                _dx = list(objs)[int(rng.integers(len(objs)))]; del objs[_dx]; spawn(); olv.append(_dx); olv_n += 1
+                if diag:
+                    for o2 in lin:
+                        if o2.g == _dx: o2.perd_olv.append(t); o2.g = None
+        olv = tuple(olv)
         # ---------------- fase B
         for i in orden:
             l = lin[i]; c = cars[i]
@@ -400,7 +413,29 @@ def _diag(l, T):
                 bd_tras_olvido=ventana(l.t_bd, l.perd_olv), ac_tras_olvido=ventana(l.t_ac, l.perd_olv),
                 bd_base=round(len(l.t_bd) / T * W_DIAG, 4), ac_base=round(len(l.t_ac) / T * W_DIAG, 4),
                 dist_bueno_media=(round(l.dg_sum / l.dg_n, 3) if l.dg_n else None),
-                frac_sin_bueno=round(l.sin_bueno / T, 4), frac_sin_obj20=round(l.sin20 / T, 4))
+                frac_sin_bueno=round(l.sin_bueno / T, 4), frac_sin_obj20=round(l.sin20 / T, 4), **_boca(l, T))
+
+
+def _boca(l, T):
+    """HAMBRE -> BOCA (SOLO LECTURA). Tasa de mordida por decision de boca, por (letra, necesidad activa: H hambre, S sed),
+    y el deficit medio de la necesidad activa cuando decide y cuando muerde. Y si los ROBOS anteceden a las mordidas malas:
+    fraccion de mordidas B/D con un robo en los W_DIAG pasos previos, contra la fraccion de TODOS los pasos cubiertos asi."""
+    import bisect
+    tab = {k: dict(dec=v[0], mord=v[1], tasa=round(v[1] / v[0], 4) if v[0] else None,
+                   def_dec=round(v[2] / v[0], 4) if v[0] else None, def_mord=round(v[3] / v[1], 4) if v[1] else None)
+           for k, v in sorted(l.boca.items())}
+    rb = l.robos
+    def con_robo(t): i = bisect.bisect_left(rb, t); return i > 0 and t - rb[i - 1] <= W_DIAG
+    cub = 0; fin = -1
+    for r in rb:
+        a, b = max(r + 1, fin + 1), min(r + W_DIAG, T - 1)
+        if b >= a: cub += b - a + 1; fin = b
+    bd_r = [lev for t, lev in l.lev_bd if con_robo(t)]; bd_n = [lev for t, lev in l.lev_bd if not con_robo(t)]
+    return dict(boca=tab, hist_def_bd=list(l.hist_bd), hist_def_ac=list(l.hist_ac),
+                bd_con_robo_prev=(round(len(bd_r) / len(l.lev_bd), 4) if l.lev_bd else None),
+                pasos_con_robo_prev=round(cub / T, 4),
+                def_bd_con_robo=(round(sum(bd_r) / len(bd_r), 4) if bd_r else None),
+                def_bd_sin_robo=(round(sum(bd_n) / len(bd_n), 4) if bd_n else None))
 
 
 def _estado(r):
