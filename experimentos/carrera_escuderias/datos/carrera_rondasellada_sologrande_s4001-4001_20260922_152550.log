@@ -1,0 +1,46 @@
+JUEZ · rondasellada_sologrande_s4001-4001 · 2026-09-22 15:25:50 · python 3.14.2 · pool NO (un proceso)
+  pista.py fb0ba16ada56eabc · juez.py 9621e095000aaa1a · carros {'O1': '99436afa2715f028'}
+  carros (orden = indice de linaje): ['O1'] · semillas 4001-4001 · T=5000 · pizarra 1 · rep_acum 0 · escala 1 · mundo_N 9
+  CHEQUEO ESTATICO O1: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [    2.0s] semilla 4001 (1.1s) R0 pista 9.0 · R0 por linaje [9.0]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_sologrande_s4001-4001_20260922_152550.json (sha 15c9e5a7d963e846)
+
+RESUMEN · rondasellada_sologrande_s4001-4001 · semillas [4001] · T=5000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O1               9.0                  [9.0]  5000.0    0.0   9.0   0.0  None  None   38.0  0.924  0/0/0/0 (0%/0%/0%/0%)  1/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 9.0 · por semilla [9.0]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.577, 0.562, 0.561, 0.658] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 1 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 0.0 · perdidas por olvido 1.0 · B/D tras robo None vs tras olvido 0.0 vs base 0.02 · A/C tras robo None vs base 0.48
+    distancia media al bueno mas cercano 24.637 · frac pasos sin bueno en el mundo 0.0 · frac pasos sin NINGUN objeto a <= 20 0.0 (max 0.0)
+  MECANISMO (ENMIENDA 4; desde la fisica: 'limpieza' = mordida de B/D A SABIENDAS -letra ya mordida por el linaje- con el golpe en la necesidad MAS llena):
+    limpiezas por linaje-semilla (mediana) 0.0 · por cuerpo 0.0 · total 0 · objetos buenos que reaparecen por ellas 0 (None por limpieza)
+    todas las mordidas malas 2 -> buenos que reaparecen 1 · fraccion de pasos SIN ningun objeto bueno en el mundo por semilla [0.0] (mediana 0.0)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones     30 mordidas     21 tasa 0.700 · deficit medio al decidir 0.057 al morder 0.081
+    AS: decisiones      8 mordidas      3 tasa 0.375 · deficit medio al decidir 0.272 al morder 0.262
+    BH: decisiones    312 mordidas      0 tasa 0.000 · deficit medio al decidir 0.003 al morder 0.000
+    BS: decisiones      7 mordidas      1 tasa 0.143 · deficit medio al decidir 0.125 al morder 0.022
+    CH: decisiones     22 mordidas     16 tasa 0.727 · deficit medio al decidir 0.019 al morder 0.026
+    CS: decisiones      8 mordidas      8 tasa 1.000 · deficit medio al decidir 0.265 al morder 0.265
+    DH: decisiones     28 mordidas      1 tasa 0.036 · deficit medio al decidir 0.058 al morder 0.000
+    DS: decisiones      4 mordidas      0 tasa 0.000 · deficit medio al decidir 0.333 al morder 0.000
+    deficit en mordidas B/D (bins de 0.1) [2, 0, 0, 0, 0, 0, 0, 0, 0, 0] (media ~0.050) · en mordidas A/C [30, 7, 3, 6, 2, 0, 0, 0, 0, 0] (media ~0.131)
+    mordidas B/D con un robo en los 50 pasos previos 0.0 vs pasos cubiertos asi 0.0 · deficit en B/D con robo previo None vs sin 0.011
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 1/7 · veneno con HAMBRE 0/30 · sal con HAMBRE 1/28 · sal con SED 0/4
+  contabilidad fisica coherente: 1/1 · t_fund reconstruible desde telem == fisica: 1/1
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 7.9958, 'B': 9.9542, 'C': 6.776, 'D': 11.274}] · olvidos [129]
+  mordidas totales por tipo por semilla [{'A': 24, 'B': 1, 'C': 24, 'D': 1}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo sellada_sologrande
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir  gana
+  O1               1      0       0        1        None            0/1        0.0          0.0      None  no
+  SELLADA_SOLOGRANDE (criterio ENMIENDA 3): (i) mediana R0 evaluables None >= 0.9: no · (ii) evaluables sin fundadores tras t=10000 0.0 >= 0.75: no · (iii) evaluables 0/1 (>= 0.667): no -> NO CRUZA
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    - S-SOLO-GRANDE cruza o queda casi inmortal (p 0.60)  ->  medido: NO CRUZA (mediana R0 evaluables None; evaluables 0/1; casi inmortales 1/1; 'queda casi inmortal' = los casi inmortales hacen caer (iii) (> 1/3): SI) -> la prediccion SE CUMPLE
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_sologrande_s4001-4001_20260922_152550_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_sologrande_s4001-4001_20260922_152550_resumen.json
+
+Terminado en 2.0s

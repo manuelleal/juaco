@@ -1,0 +1,56 @@
+JUEZ · rondasellada_fab_s4001-4001 · 2026-09-22 15:26:04 · python 3.14.2 · pool NO (un proceso)
+  pista.py fb0ba16ada56eabc · juez.py 9621e095000aaa1a · carros {'FABRICA': '2ebee3e99ea5a33a'}
+  carros (orden = indice de linaje): ['FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · semillas 4001-4001 · T=5000 · pizarra 1 · rep_acum 0 · escala 1 · mundo_N N (el de los carros)
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [    7.4s] semilla 4001 (6.6s) R0 pista 0.1888 · R0 por linaje [0.2857, 0.0769, 0.3077, 0.0323, 1.0, 0.3077, 0.2727, 0.1053, 0.125]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_fab_s4001-4001_20260922_152604.json (sha 8d3b3f2ca7769a97)
+
+RESUMEN · rondasellada_fab_s4001-4001 · semillas [4001] · T=5000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  FABRICA#0      0.286               [0.2857]   179.0   13.0   4.0   9.0 0.667 0.714   52.0  0.523  0/0/7/6 (0%/0%/54%/46%)  0/1
+  FABRICA#1      0.077               [0.0769]   131.0   12.0   1.0  11.0   0.7   1.0   30.0  0.415  0/0/6/6 (0%/0%/50%/50%)  0/1
+  FABRICA#2      0.308               [0.3077]   107.0   12.0   4.0   9.0 0.833 0.667   32.0  0.648  0/0/8/4 (0%/0%/67%/33%)  0/1
+  FABRICA#3      0.032               [0.0323]   118.0   30.0   1.0  30.0 0.828   1.0   30.0  0.115  0/0/12/18 (0%/0%/40%/60%)  0/1
+  FABRICA#4        1.0                  [1.0]   831.0    4.0   5.0   3.0  0.25   1.0   41.0  0.673  0/0/4/0 (0%/0%/100%/0%)  1/1
+  FABRICA#5      0.308               [0.3077]    41.0   12.0   4.0   9.0 0.333   1.0   37.0  0.638  0/0/6/6 (0%/0%/50%/50%)  0/1
+  FABRICA#6      0.273               [0.2727]   199.0   10.0   3.0   9.0   0.7   1.0   37.0  0.578  0/0/5/5 (0%/0%/50%/50%)  0/1
+  FABRICA#7      0.105               [0.1053]   111.0   18.0   2.0  16.0 0.529   1.0   35.0  0.375  0/0/7/11 (0%/0%/39%/61%)  0/1
+  FABRICA#8      0.125                [0.125]   127.5   23.0   3.0  20.0 0.682 0.889   45.0  0.369  0/0/11/12 (0%/0%/48%/52%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.189 · por semilla [0.1888]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.757, 0.823, 0.819, 0.81] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 88.0 · perdidas por olvido 5.0 · B/D tras robo 0.514 vs tras olvido 0.5 vs base 0.6 · A/C tras robo 0.516 vs base 0.73
+    distancia media al bueno mas cercano 50.963 · frac pasos sin bueno en el mundo 0.056 · frac pasos sin NINGUN objeto a <= 20 0.054 (max 0.0838)
+  MECANISMO (ENMIENDA 4; desde la fisica: 'limpieza' = mordida de B/D A SABIENDAS -letra ya mordida por el linaje- con el golpe en la necesidad MAS llena):
+    limpiezas por linaje-semilla (mediana) 41.0 · por cuerpo 3.154 · total 448 · objetos buenos que reaparecen por ellas 221 (0.493 por limpieza)
+    todas las mordidas malas 593 -> buenos que reaparecen 297 · fraccion de pasos SIN ningun objeto bueno en el mundo por semilla [0.0] (mediana 0.0)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones    276 mordidas    259 tasa 0.938 · deficit medio al decidir 0.161 al morder 0.170
+    AS: decisiones     65 mordidas     63 tasa 0.969 · deficit medio al decidir 0.488 al morder 0.502
+    BH: decisiones   1969 mordidas     94 tasa 0.048 · deficit medio al decidir 0.195 al morder 0.579
+    BS: decisiones    379 mordidas    193 tasa 0.509 · deficit medio al decidir 0.447 al morder 0.613
+    CH: decisiones    302 mordidas    272 tasa 0.901 · deficit medio al decidir 0.151 al morder 0.168
+    CS: decisiones     88 mordidas     74 tasa 0.841 · deficit medio al decidir 0.473 al morder 0.471
+    DH: decisiones    982 mordidas    243 tasa 0.247 · deficit medio al decidir 0.136 al morder 0.482
+    DS: decisiones    297 mordidas     63 tasa 0.212 · deficit medio al decidir 0.523 al morder 0.607
+    deficit en mordidas B/D (bins de 0.1) [65, 12, 25, 9, 187, 46, 30, 13, 145, 61] (media ~0.564) · en mordidas A/C [383, 20, 23, 17, 99, 31, 9, 11, 51, 24] (media ~0.263)
+    mordidas B/D con un robo en los 50 pasos previos 0.567 vs pasos cubiertos asi 0.572 · deficit en B/D con robo previo 0.597 vs sin 0.509
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 193/348 · veneno con HAMBRE 94/1521 · sal con HAMBRE 243/781 · sal con SED 63/250
+  contabilidad fisica coherente: 9/9 · t_fund reconstruible desde telem == fisica: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 3.1584, 'B': 18.1708, 'C': 3.9604, 'D': 10.7104}] · olvidos [129]
+  mordidas totales por tipo por semilla [{'A': 322, 'B': 287, 'C': 346, 'D': 306}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo sellada_fab
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir  gana
+  FABRICA          9      0       8        1       0.199            0/1        2.0          0.0       0.9  -- (varios linajes por semilla)
+  SELLADA_FAB (criterio ENMIENDA 3): (i) mediana R0 evaluables 0.199 >= 0.9: no · (ii) evaluables sin fundadores tras t=10000 1.0 >= 0.75: si · (iii) evaluables 8/9 (>= 0.667): si -> NO CRUZA
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    - S-FAB NO cruza (p 0.97)  ->  medido: NO CRUZA (mediana R0 evaluables 0.199; evaluables 8/9; casi inmortales 1/9) -> la prediccion SE CUMPLE
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_fab_s4001-4001_20260922_152604_pizarra.jsonl.gz
+
+  PREDICCION FIRMADA (ENMIENDA 1, pista escalada): con 9 FABRICA la mediana del R0 por linaje cae en 0.35-0.55. Medido: mediana de los 9 linajes-semilla 0.273 (min 0.0323, max 1.0) -> DEBAJO del rango
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_fab_s4001-4001_20260922_152604_resumen.json
+
+Terminado en 7.5s

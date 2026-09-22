@@ -1,0 +1,148 @@
+{
+ "meta": {
+  "etiqueta": "rondasellada_sologrande_s5001-5020",
+  "ronda": "sellada_sologrande",
+  "sello": "20260922_152752",
+  "semillas": [
+   5001,
+   5002,
+   5003,
+   5004,
+   5005,
+   5006,
+   5007,
+   5008,
+   5009,
+   5010,
+   5011,
+   5012,
+   5013,
+   5014,
+   5015,
+   5016,
+   5017,
+   5018,
+   5019,
+   5020
+  ],
+  "T": 100000,
+  "pizarra": 1,
+  "rep_acum": 0,
+  "carros": [
+   "O1"
+  ],
+  "sha_carros": {
+   "O1": "99436afa2715f028"
+  },
+  "escala": 1,
+  "mundo_N": 9,
+  "chequeo_estatico": {
+   "O1": []
+  },
+  "sha_pista": "fb0ba16ada56eabc",
+  "sha_juez": "9621e095000aaa1a",
+  "sha_f9c": "9dd1fb91ecec35ae",
+  "identidad_corta": {
+   "sha_f9c": "9dd1fb91ecec35ae",
+   "sha_ok": true,
+   "dif": [],
+   "ok": true
+  },
+  "W_CAUSA": 400,
+  "CUPO": 16,
+  "ANCHO": 8,
+  "ref": {
+   "R0": 0.395,
+   "R0_acum1": 0.483,
+   "fuente": "bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)"
+  }
+ },
+ "tabla": [
+  {
+   "id": "O1",
+   "R0_med": 178.0,
+   "R0": [
+    177.0,
+    90.0,
+    178.0,
+    180.0,
+    181.0,
+    178.0,
+    178.0,
+    178.0,
+    179.0,
+    178.0,
+    180.0,
+    178.0,
+    177.0,
+    180.0,
+    180.0,
+    178.0,
+    180.0,
+    178.0,
+    180.0,
+    177.0
+   ],
+   "vida_med": 100000.0,
+   "muertes": 0.0,
+   "descendientes": 178.0,
+   "fundadores": 0.0,
+   "p1": 0.0,
+   "c1": 0.0,
+   "exp_A": 603.5,
+   "sac_frac": 0.898,
+   "causas": {
+    "hambre": 1,
+    "sed": 0,
+    "veneno": 0,
+    "sal": 0
+   },
+   "cruza_09": 20,
+   "n": 20
+  }
+ ],
+ "R0_pista": 178.0,
+ "err99": {
+  "modo": "sellada_sologrande",
+  "escuderias": {
+   "O1": {
+    "linajes_semilla": 20,
+    "cruzan": 0,
+    "evaluables": 0,
+    "casi_inmortales": 20,
+    "R0_eval_med": null,
+    "R0_med_todos": 178.0,
+    "semillas_que_cruza": 0,
+    "semillas": 20,
+    "gana": false,
+    "nac_reales_med": 0.0,
+    "fund_post_med": 0.0,
+    "sin_parir_med": 1.0,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 20
+   }
+  },
+  "criterio_enm3": {
+   "mediana_R0_eval": null,
+   "frac_eval_sin_fund": 0.0,
+   "evaluables": 0,
+   "n": 20,
+   "frac_eval": 0.0,
+   "condiciones": {
+    "i": false,
+    "ii": false,
+    "iii": false
+   },
+   "cruza": false,
+   "casi_inmortales": 20,
+   "cruzan_linajes": 0,
+   "casi_inmortal_grupo": true
+  },
+  "predicciones": [
+   [
+    "S-SOLO-GRANDE cruza o queda casi inmortal (p 0.60)",
+    "NO CRUZA (mediana R0 evaluables None; evaluables 0/20; casi inmortales 20/20; 'queda casi inmortal' = los casi inmortales hacen caer (iii) (> 1/3): SI) -> la prediccion SE CUMPLE"
+   ]
+  ]
+ }
+}
