@@ -23,6 +23,8 @@ numero de la carrera. Un proceso, sin Pool.
   (L) El DIAGNOSTICO (objetivo robado, perdidas, distancias) es SOLO LECTURA: diag=1 == diag=0.
   (M) ERR-98: la tasa de olvido POR OBJETO con N = 9 (escala) es la de N = 1.
   (N) ENMIENDA 4 (mundo forzado): mundo_n = N identico bit a bit; 1 carro con mundo_n = 9 -> L 360, 36 objetos, olvido x9.
+  (O) ENMIENDA 5 (fundador limpio): sin la opcion identico; con ella cada fundador es una instancia NUEVA con memoria vacia
+      (FABRICA: nodo vacio; O1: tabla vacia), sin nace(); sin la opcion el fundador hereda (control); contabilidad y determinismo.
   (J) H-4: cfg_fabrica = firma de organismo_f9c.run + BRAZOS['REL']; una rama no portada aborta; la
       constante derivada se usa (eta distinta -> corrida distinta).
 Desde ERR-96 la salida tiene dos espacios de nombres: se compara pista.plano(d) (fisica + d['carro']).
@@ -238,6 +240,40 @@ def main():
     di('(N2) 1 carro con mundo_n=9: L 360, nobj 36, olvido POR OBJETO 0.00075 (9 sorteos por paso)',
        r['pista']['L'] == 360 and r['pista']['nobj'] == 36 and abs(r['pista']['olvidos'] - 2700) < 4 * 2700 ** .5,
        f"L {r['pista']['L']} nobj {r['pista']['nobj']} olvidos {r['pista']['olvidos']} (esperados ~2700)")
+    out("\n(O) ENMIENDA 5, FUNDADOR LIMPIO: sin la opcion, identico bit a bit; con ella, cada fundador es una instancia NUEVA con memoria vacia")
+    a = P.run(4001, ['FABRICA'] * 9, T=3000); b = P.run(4001, ['FABRICA'] * 9, T=3000, fundador_limpio=0)
+    di('(O1) fundador_limpio=0 == sin la opcion (N=9 FABRICA)', N(a) == N(b), f"rng mundo {a['pista']['rng_mundo_estado']}/{b['pista']['rng_mundo_estado']}")
+    for et, mem in (('FABRICA', lambda c: len(c._nodo)), ('O1', lambda c: len(c.n))):
+        M_ = P.carga_carro(et)
+        for fl in (0, 1):
+            reg = []
+            class Esp(M_.Carro):
+                def __init__(self, ctx):
+                    super().__init__(ctx); self._visto = False
+                def actua(self, o):
+                    if not self._visto: reg.append(('inst', o['t'], mem(self))); self._visto = True
+                    return super().actua(o)
+                def nace(self, info):
+                    super().nace(info)
+                    if info['fundador']: reg.append(('nace_fund', info['t'], mem(self)))
+            r = P.run(4001, [(et, types.SimpleNamespace(crea=lambda ctx: Esp(ctx)))], T=30000, pizarra=0, fundador_limpio=fl)
+            d = r['linajes'][0]; fu = d['fundadores']; ins = d['_carrera']['instancias']
+            nuevas = [x for x in reg if x[0] == 'inst' and x[1] > 0]; nf = [x for x in reg if x[0] == 'nace_fund']
+            if fl:
+                ok = fu > 0 and ins == 1 + fu and len(nuevas) == fu and all(x[2] == 0 for x in nuevas) and not nf
+                di(f"(O2) {et} con fundador limpio: {fu} fundadores = {ins - 1} instancias nuevas, todas con memoria vacia al arrancar, sin nace()",
+                   ok, f"memoria al arrancar {[x[2] for x in nuevas][:8]}")
+            else:
+                ok = fu > 0 and ins == 1 and any(x[2] > 0 for x in nf)
+                di(f"(O3) {et} SIN la opcion (control que debe diferir): el fundador HEREDA la memoria del objeto viejo", ok,
+                   f"{fu} fundadores; memoria al nacer {[x[2] for x in nf][:8]}")
+    for fl in (0, 1):
+        r = P.run(4001, ['O1'] * 9, T=5000, fundador_limpio=fl)
+        import juez as J
+        coh = [J.resumen_linaje(d_, 4001)['coherente'] for d_ in r['linajes']]
+        if fl: r2 = P.run(4001, ['O1'] * 9, T=5000, fundador_limpio=1)
+        di(f"(O4) 9 O1 fundador_limpio={fl}: contabilidad fisica 9/9" + (" y determinista" if fl else ''), all(coh) and (N(r) == N(r2) if fl else True),
+           f"fundadores {[d_['fundadores'] for d_ in r['linajes']]} · instancias {[d_['_carrera']['instancias'] for d_ in r['linajes']]}")
     out("\n(J) H-4: las constantes de FABRICA se DERIVAN de BRAZOS['REL'] y una rama no portada ABORTA")
     cf = P.cfg_fabrica(); kw = cf['kw']
     di('(J1) cfg_fabrica = firma de organismo_f9c.run + corre_bloque2.BRAZOS[REL]',

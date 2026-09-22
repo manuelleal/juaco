@@ -133,6 +133,10 @@ cuenta estricta. El camino A mostró que la bacteria que aprende no descubre la 
 6. Cada equipo tiene un tope de **12 humos** de un proceso con T ≤ 30000. Su bitácora registra quién propuso cada cambio (diseñador, biólogo o
    crítico), qué se predijo y qué salió.
 
+7. **Precisión fijada antes de cualquier serie oficial:** en una semilla con varios linajes del mismo equipo (9 en monocultivo, 3 en mixta), el
+   equipo **cruza en esa semilla si más de la mitad de sus linajes cruzan** (R0 real ≥ 0.90, 0 fundadores después de t = 10000 y ≥ 5 muertes).
+   Como lectura se reporta también la cuenta con "todos cruzan".
+
 **Predicciones firmadas del coordinador (antes de lanzar a los equipos):**
 - Al menos un equipo gana la ronda 2 en monocultivo: probabilidad 0.50.
 - En pista mixta con 6 FABRICA gana alguno: 0.25.

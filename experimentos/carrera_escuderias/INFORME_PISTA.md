@@ -216,3 +216,30 @@
   - Dato de humo, no de serie: con N = 9 y T = 20000, CTRL tuvo 122 fundadores contra 6 de O1.
 - **Atajo** `--ronda sellada_fundborra`: 9 CTRL, semillas 5021–5040 por defecto, T = 100000, criterio de la ENMIENDA 3 y R0 real. Imprime las dos predicciones firmadas con SE CUMPLE / NO se cumple. Humo s4001, T = 5000: el pipeline escribe todo.
 - **Pruebas:** identidad 43/43; `test_tramposo` 30/30.
+
+## v8: ENMIENDA 5 (ronda 2) — solo instrumento; no se tocó 9001–9140
+- **Fundador limpio** (`pista.run(..., fundador_limpio=1)`, `juez --fundador_limpio 1`):
+  - Cuando el linaje se extingue, el fundador es una **instancia nueva**: `crea(ctx)` otra vez, con el mismo rng de cuerpo del linaje en su estado avanzado.
+  - **No** se llama a `nace()`, porque el primer fundador de la corrida tampoco lo recibe. Nada del objeto viejo pasa.
+  - Los hijos de la cola nacen como siempre.
+  - `_carrera['instancias']` cuenta las instancias. `d['carro']` es la salida de la última instancia.
+  - Con compat = 1 se rechaza.
+- **Arnés 50/50** (43 + 7 del caso (O)):
+  - Sin la opción, idéntico bit a bit.
+  - Con la opción, FABRICA (64 fundadores) y O1 (13) arrancan cada instancia nueva con memoria vacía: nodo 0, tabla 0.
+  - Sin la opción, el fundador hereda: FABRICA nodo 20–104, O1 tabla 2–4. Es el control que debe diferir.
+  - 9 O1 con la opción: contabilidad 9/9 y determinista.
+- **`test_tramposo`** 30/30.
+- **Criterio de la ronda 2** (bloque «RONDA 2 / ENMIENDA 5» del juez):
+  - Un linaje-semilla cruza con `cruza_real`: R0 de nacimientos reales ≥ 0.90, 0 fundadores tras t = 10000 y ≥ 5 muertes. El requisito de muertes es ERR-99, que no se derogó: un casi inmortal no cuenta.
+  - **Regla por semilla (la ENMIENDA 5 no la fija, decidí yo; revisar):** un equipo cruza en una semilla si más de la mitad de sus linajes en esa semilla cruzan. También se reporta «todos».
+  - Gana si cruza en ≥ 15/20 semillas. El R0 preregistrado viejo se reporta al lado.
+- **Atajos:**
+  - `--ronda r2mono --equipo X`, `r2mix3`, `r2fab --equipo X` y `r2o1mono`, con fundador limpio forzado, T = 100000 y 9101–9120 por defecto (réplica con `--desde 9121`).
+  - Si falta un carro, error claro y no corre nada. `--fundador_limpio 0` en ronda 2 se rechaza.
+  - Humos s4001, T = 5000 de `r2o1mono`, `r2fab --equipo O1` y `r2mono --equipo O1`: todo escrito y coherente 9/9.
+- **`humo_equipo.py`:**
+  - Impone equipo ∈ {O2, O3, O4}, semilla en su tercio, T ≤ 30000, tope de 12 humos (cuenta los JSON en `datos/humos_r2/X/`), `revisa_carro` y fundador limpio.
+  - Escribe JSON, log y pizarra.
+  - Probado con los guardias (semilla fuera del tercio, T > 30000, carro faltante, mix sin los tres, equipo no permitido). La prueba completa usó un equipo temporal `ZZ` (copia de FABRICA, s4001), incluido el tope. Ese equipo se borró.
+  - Bug mío corregido: un humo rechazado dejaba la carpeta vacía del equipo.

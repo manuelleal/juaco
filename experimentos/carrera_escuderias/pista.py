@@ -141,17 +141,22 @@ def _valida_escritura(x):
     return tuple(out)
 
 
-def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem=True, diag=1, mundo_n=None):
+def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem=True, diag=1, mundo_n=None, fundador_limpio=0):
     """carros: lista de IDs (str) de carros/<ID>.py, o de pares (etiqueta, modulo_con_crea).
     escala=1 (ENMIENDA 1): L = 40*N, nobj = 4*N; escala=0: el mundo sin escalar (L=40, nobj=4) para cualquier N.
     mundo_n=M (ENMIENDA 4, MUNDO FORZADO): N carros en el mundo dimensionado para M: L = 40*M, nobj = 4*M y M sorteos de
     olvido por paso (ERR-98). Con M = N (y escala=1) es IDENTICO a mundo_n=None (arnes (N)).
+    fundador_limpio=1 (ENMIENDA 5): cuando el linaje se extingue, el fundador es una INSTANCIA NUEVA del carro: crea(ctx) otra vez,
+    con el MISMO rng de cuerpo del linaje en el estado en que este (avanzado: lo que la instancia nueva sortee al nacer sale de ahi,
+    como el primer fundador de la corrida) y SIN llamar a nace() (el primer fundador tampoco la recibe). Nada del objeto viejo pasa.
+    Los hijos de la cola nacen como siempre (nace() con la memoria del padre). Con 0 (por defecto): identico a antes (arnes (O)).
     Devuelve dict(linajes=[dict por linaje], pista=dict, pizarra_log=[...])."""
     n = len(carros)
     if not 1 <= n <= N_MAX: raise SystemExit(f"PISTA: entre 1 y {N_MAX} carros (hay {n})")
     if compat and n != 1: raise SystemExit("PISTA: compat=1 es SOLO el ancla de identidad (un carro)")
     if compat and pizarra: raise SystemExit("PISTA: compat=1 exige pizarra=0 (el ancla es con la pizarra apagada)")
     if rep_acum not in (0, 1): raise SystemExit("PISTA: rep_acum es 0 o 1")
+    if compat and fundador_limpio: raise SystemExit("PISTA: compat=1 (el ancla) no admite fundador_limpio (el rng del cuerpo ES el del mundo)")
     CF = cfg_fabrica(); kw = CF['kw']
     VAL_VIVO, EFECTO = CF['VAL_VIVO'], CF['EFECTO']
     if mundo_n is not None and (int(mundo_n) != mundo_n or not 1 <= mundo_n <= N_MAX):
@@ -182,11 +187,13 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
     objs = {}; vista = types.MappingProxyType(objs)
     lin = [Linaje(i, ids[i], T, M, rep_acum) for i in range(n)]
     cars = []
+    def ctx_de(i):
+        return dict(id=ids[i], indice=i, n_linajes=n, T=T, L=L, PAT={k: v.copy() for k, v in CF['PAT'].items()},
+                    rng=rngs_cuerpo[i], dote=M['dote'], rep_umbral=M['rep_umbral'], costo=M['costo'],
+                    costo_a=M['costo_a'], rep_X=M['rep_X'], cupo=CUPO, ancho=ANCHO, fabrica=cfg_fabrica())
     for i, (e, mod) in enumerate(mods):   # los cerebros nacen ANTES del primer spawn (como en el monolito)
-        ctx = dict(id=ids[i], indice=i, n_linajes=n, T=T, L=L, PAT={k: v.copy() for k, v in CF['PAT'].items()},
-                   rng=rngs_cuerpo[i], dote=M['dote'], rep_umbral=M['rep_umbral'], costo=M['costo'],
-                   costo_a=M['costo_a'], rep_X=M['rep_X'], cupo=CUPO, ancho=ANCHO, fabrica=cfg_fabrica())
-        cars.append(mod.crea(ctx))
+        cars.append(mod.crea(ctx_de(i)))
+    instancias = [1] * n
     if rng_pista is not None:
         for l in lin: l.pos = int(rng_pista.integers(L))
 
@@ -332,8 +339,11 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                     if len(l.tfund) < 200: l.tfund.append(t)
                 l.E = (_m['dote'] if _m is not None else M['dote']); l.Ag = l.E; l.prev_on = -1
                 l.tB = l.tD = -10 ** 9
-                c.nace(dict(t=t, k=l.nac, fundador=l.esfund, memoria=(_m['mem'] if _m is not None else None),
-                            rng_hijo=hijo(i, l.nac)))
+                if l.esfund and fundador_limpio:   # ENMIENDA 5: instancia NUEVA, sin nada del objeto viejo; sin nace()
+                    cars[i] = mods[i][1].crea(ctx_de(i)); c = cars[i]; instancias[i] += 1
+                else:
+                    c.nace(dict(t=t, k=l.nac, fundador=l.esfund, memoria=(_m['mem'] if _m is not None else None),
+                                rng_hijo=hijo(i, l.nac)))
                 if len(l.vidas) < 400: l.vidas.append(t - l.tmu)
                 l.tmu = t
             # ventana de viabilidad (reproduccion)
@@ -382,7 +392,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
                  T_efectivo=T, vidas_cuerpo=[int(x) for x in l.vh], desc_cuerpo=[int(x) for x in l.dpv])
         if rep_acum: d['rep_acum'] = 1
         d['_carrera'] = dict(id=l.id, indice=i, causas=dict(l.causas), causa_cuerpo=list(l.causa_cuerpo),
-                             escrituras=l.escrituras, escr=l.escr, vetos=l.vetos,
+                             escrituras=l.escrituras, escr=l.escr, vetos=l.vetos, instancias=instancias[i],
                              p1=[int(x) for x in l.p1], c1=[int(x) for x in l.c1], t_ok=[int(x) for x in l.tok])
         if diag: d['_carrera']['diag'] = _diag(l, T)
         d['carro'] = dict(c.salida()) if hasattr(c, 'salida') else {}   # ERR-96: SOLO aqui; nadie lo lee como verdad
@@ -390,6 +400,7 @@ def run(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escala=1, telem
     return dict(linajes=out, pizarra_log=piz_log,
                 pista=dict(seed=seed, T=T, n=n, ids=ids, compat=int(compat), pizarra=int(pizarra),
                            rep_acum=int(rep_acum), escala=int(escala), L=L, nobj=M['nobj'], olvidos=olv_n, mundo_n=mundo_n,
+                           fundador_limpio=int(fundador_limpio),
                            frac_sin_bueno_mundo=(round(sin_bueno_mundo / T, 4) if diag else None),
                            comp_mundo={k: round(comp[k] / T, 4) for k in TIPOS},
                            comp_mundo_q=[{k: round(cq[k] / max(1, (T // 4 if j < 3 else T - 3 * (T // 4))), 4) for k in TIPOS}

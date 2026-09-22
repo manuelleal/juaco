@@ -13,6 +13,8 @@ calcula por linaje, con la definicion de H-1 (corre_f9.py:193-207):
   (semillas 5001-5020 por defecto) · mecanismo: limpiezas por cuerpo, buenos que reaparecen por ellas, pasos sin ningun bueno.
   ERR-100: al lado del R0 preregistrado, el R0 de NACIMIENTOS REALES = nac_reales / (muertes + 1), su mediana sobre evaluables y
   'cruza_real' (SOLO se reporta; el criterio no cambia). ERR-101: --ronda sellada_fundborra (9 CTRL_O1_FUNDBORRA, 5021-5040).
+  ENMIENDA 5 (ronda 2): --ronda r2mono --equipo X | r2mix3 | r2fab --equipo X | r2o1mono; fundador limpio; 9101-9120 (replica --desde 9121);
+  cruza = R0 de NACIMIENTOS REALES >= 0.90 y 0 fundadores tras t=10000; gana = cruza en >= 15/20 semillas. Humos: humo_equipo.py.
   · exposiciones a A y C · escrituras por linaje (hasta 3000 en la telemetria). La pizarra COMPLETA se guarda
   aparte en <prefijo>_pizarra.jsonl.gz (una linea [semilla, t, id, contenido] por escritura publicada).
 Y de la pista: R0_pista = sum(descendientes) / (sum(muertes) + n_linajes) · composicion del mundo por cuarto de T.
@@ -69,6 +71,24 @@ PRED_ENM4 = {'sellada_mono': [("S-MONO cruza (p 0.75)", lambda cm: cm['cruza'])]
                                    ("S-FUNDBORRA: mediana del R0 de NACIMIENTOS REALES sobre evaluables >= 0.90 (p 0.35)",
                                     lambda cm: cm['mediana_R0_real_eval'] is not None and cm['mediana_R0_real_eval'] >= R0_CRUCE)]}
 DESDE_ATAJO = {'sellada_fundborra': 5021}
+# ---- ENMIENDA 5 (RONDA 2): fundador limpio impuesto por la pista; decide el R0 de NACIMIENTOS REALES
+EQUIPOS_R2 = ('O2', 'O3', 'O4')
+DESDE_R2 = 9101           # serie oficial 9101-9120; replica sellada con --desde 9121
+def alineacion_r2(ronda, equipo):
+    """Atajos de la ronda 2 (todos con --fundador_limpio). Devuelve la lista de carros o aborta con un error claro."""
+    if ronda in ('r2mono', 'r2fab') and not equipo:
+        raise SystemExit(f"JUEZ: --ronda {ronda} exige --equipo X (O2, O3, O4 u O1)")
+    al = {'r2mono': [equipo] * 9, 'r2mix3': ['O2'] * 3 + ['O3'] * 3 + ['O4'] * 3,
+          'r2fab': [equipo] * 3 + ['FABRICA'] * 6, 'r2o1mono': ['O1'] * 9}[ronda]
+    falta = sorted({c for c in al if not os.path.exists(os.path.join(P.CARROS, c + '.py'))})
+    if falta:
+        raise SystemExit(f"JUEZ: la ronda {ronda} necesita {', '.join('carros/' + c + '.py' for c in falta)} y NO EXISTE "
+                         f"(el equipo todavia no entrego su carro). No se corre nada.")
+    return al
+PRED_R2 = ["al menos un equipo gana la ronda 2 en monocultivo (p 0.50)",
+           "en pista mixta con 6 FABRICA gana alguno (p 0.25)",
+           "O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)"]
+R2_SEMILLA = 'mayoria'   # un equipo cruza EN UNA SEMILLA si MAS DE LA MITAD de sus linajes en esa semilla cruzan (ver resumen_r2)
 PRED_ENM = {   # predicciones FIRMADAS del coordinador (ENMIENDAS 2 y 3), se imprimen al lado de lo medido
     'oficial': ["H1: R0 mediano dentro de +-0.10 de la mediana de los FABRICA", "FABRICA: R0 mediano 0.28-0.45",
                 "O1: cruza en >= 10/20 semillas (p 0.55); gana la ronda >= 15/20 (p 0.30)",
@@ -163,8 +183,9 @@ def err99(mu, fund, tf, desc, T, vidas, dpv, nac_reales, cola_final, t_fund_fuen
 
 def tarea(args):
     seed, carros, T, pizarra, rep_acum, escala = args[:6]; mundo_n = args[6] if len(args) > 6 else None
+    fl = args[7] if len(args) > 7 else 0
     t0 = time.time()
-    r = P.run(seed, carros, T=T, pizarra=pizarra, rep_acum=rep_acum, escala=escala, mundo_n=mundo_n)
+    r = P.run(seed, carros, T=T, pizarra=pizarra, rep_acum=rep_acum, escala=escala, mundo_n=mundo_n, fundador_limpio=fl)
     L = [resumen_linaje(d, seed) for d in r['linajes']]
     sd = sum(x['descendientes'] for x in L); sm = sum(x['muertes'] for x in L)
     for x in L:   # la reconstruccion de t_fund (para crudos viejos) se VERIFICA contra la fisica en cada corrida nueva
@@ -287,7 +308,7 @@ def resumen_err99(R, log, ronda=None):
     """Por escuderia (ENMIENDA 2), monocultivo y SOLO (ENMIENDA 3), con las predicciones firmadas al lado.
     Series SELLADAS (ENMIENDA 4): criterio de la ENMIENDA 3 y predicciones de la ENMIENDA 4."""
     ns = len(R); ids = R[0]['pista']['ids'] if 'pista' in R[0] else [l['id'] for l in R[0]['linajes']]
-    modo = ronda if ronda in PRED_ENM4 else modo_de(ids)
+    modo = ronda if ronda in PRED_ENM4 else ('r2' if (ronda or '').startswith('r2') else modo_de(ids))
     esc = {}
     for c in R:
         for l in c['linajes']: esc.setdefault(etiqueta_de(l['id']), []).append(l)
@@ -354,9 +375,48 @@ def resumen_err99(R, log, ronda=None):
         cm = res['criterio_enm3']
         m_ = f"{'CRUZA' if cm['cruza'] else 'NO CRUZA'} (mediana R0 evaluables {cm['mediana_R0_eval']})"
         log(f"    - {PRED_ENM[modo][0]}  ->  medido: {m_}"); res['predicciones'] = [(PRED_ENM[modo][0], m_)]
+    elif modo == 'r2':
+        log("    (ronda 2: el criterio y las predicciones que deciden estan en el bloque RONDA 2 / ENMIENDA 5 de abajo)")
     else:
         log("    (esta alineacion no tiene prediccion firmada)")
     return res
+
+
+def resumen_r2(R, log, ronda):
+    """ENMIENDA 5. Un LINAJE-semilla cruza si su R0 de NACIMIENTOS REALES >= 0.90 y 0 fundadores tras t=10000 (= cruza_real; sigue
+    exigiendo >= 5 muertes: ERR-99 no se derogo, un casi inmortal no cuenta ni a favor ni en contra). Un EQUIPO cruza en una
+    SEMILLA si mas de la mitad de sus linajes en esa semilla cruzan (R2_SEMILLA='mayoria'; la ENMIENDA 5 no fija la regla por
+    semilla con varios linajes del mismo equipo: se reporta tambien 'todos'). GANA si cruza en >= 15/20 semillas."""
+    ns = len(R); esc = {}
+    for c in R:
+        for l in c['linajes']: esc.setdefault(etiqueta_de(l['id']), {}).setdefault(c['seed'], []).append(l)
+    log(f"\nRONDA 2 / ENMIENDA 5 (fundador limpio {'SI' if R[0]['pista'].get('fundador_limpio') else 'NO (!)'}; cruza = R0 de NACIMIENTOS REALES "
+        f">= {R0_CRUCE} y 0 fundadores tras t = {T_CORTE}, con >= {MIN_MUERTES} muertes) · {ronda}")
+    log(f"  {'equipo':10s} {'lin-sem':>7} {'cruzan':>6} {'evaluab':>7} {'casi inm':>8} {'R0 REAL eval med':>16} {'R0 prereg med':>13} "
+        f"{'sem cruza (mayoria)':>19} {'(todos)':>8}  gana")
+    out = {}
+    for e, por in esc.items():
+        xs = [x for v in por.values() for x in v]
+        sm = sum(1 for v in por.values() if sum(x['cruza_real'] for x in v) * 2 > len(v))
+        st_ = sum(1 for v in por.values() if all(x['cruza_real'] for x in v))
+        o = dict(linajes_semilla=len(xs), cruzan=sum(x['cruza_real'] for x in xs), evaluables=sum(x['evaluable'] for x in xs),
+                 casi_inmortales=sum(x['casi_inmortal'] for x in xs), R0_real_eval_med=med([x['R0_real_eval'] for x in xs]),
+                 R0_eval_med=med([x['R0_eval'] for x in xs]), semillas_cruza_mayoria=sm, semillas_cruza_todos=st_, semillas=ns,
+                 gana=bool(sm >= GANA_FRAC * ns))
+        out[e] = o
+        log(f"  {e:10s} {o['linajes_semilla']:7d} {o['cruzan']:6d} {o['evaluables']:7d} {o['casi_inmortales']:8d} {str(o['R0_real_eval_med']):>16} "
+            f"{str(o['R0_eval_med']):>13} {str(sm) + '/' + str(ns):>19} {str(st_) + '/' + str(ns):>8}  {'SI' if o['gana'] else 'no'}"
+            f"{'  (FABRICA: piso, no compite)' if e == 'FABRICA' else ''}")
+    log("  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:")
+    eq = [e for e in out if e != 'FABRICA']
+    txt = {'r2mono': f"monocultivo de {eq}: gana {'SI' if any(out[e]['gana'] for e in eq) else 'no'}",
+           'r2fab': f"pista con 6 FABRICA, equipo {eq}: gana {'SI' if any(out[e]['gana'] for e in eq) else 'no'}",
+           'r2mix3': f"pista mixta O2/O3/O4: ganan {[e for e in eq if out[e]['gana']] or 'ninguno'}",
+           'r2o1mono': f"O1 con fundador limpio en monocultivo: cruza en {out.get('O1', {}).get('semillas_cruza_mayoria')}/{ns} semillas -> "
+                       f"{'SE CUMPLE (cruza)' if out.get('O1', {}).get('gana') else 'no cruza'}"}.get(ronda.split('_')[0], '')
+    for p_ in PRED_R2: log(f"    - {p_}")
+    log(f"    medido en esta serie: {txt}")
+    return dict(ronda=ronda, equipos=out, regla_semilla=R2_SEMILLA, medido=txt)
 
 
 def recalcula(ruta, log=print):
@@ -404,6 +464,8 @@ def main():
     ap.add_argument('--recalcula', default=None)   # ruta de un crudo viejo: aplica ERR-99 y ERR-100 y termina
     ap.add_argument('--recalcula_json', default=None)   # opcional: escribe el resumen del recalculo
     ap.add_argument('--desde', type=int, default=None)   # por defecto 4001; en las series sellada_* 5001 (SELLADAS)
+    ap.add_argument('--fundador_limpio', type=int, default=None)   # ENMIENDA 5; los atajos r2* lo ponen en 1
+    ap.add_argument('--equipo', default=None)   # para --ronda r2mono / r2fab
     ap.add_argument('--mundo_N', type=int, default=None)   # ENMIENDA 4: mundo dimensionado para M carros (L=40M, nobj=4M, olvido xM)
     ap.add_argument('--n', type=int, default=20)
     ap.add_argument('--T', type=int, default=T_DEF)
@@ -416,9 +478,14 @@ def main():
         res = recalcula(a.recalcula)
         if a.recalcula_json: json.dump(res, open(a.recalcula_json, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         return 0
+    if a.ronda.startswith('r2') and not a.carros: a.carros = ','.join(alineacion_r2(a.ronda, a.equipo))
+    if a.fundador_limpio is None: a.fundador_limpio = 1 if a.ronda.startswith('r2') else 0
+    if a.ronda.startswith('r2') and not a.fundador_limpio: raise SystemExit('JUEZ: la ronda 2 exige --fundador_limpio 1 (ENMIENDA 5)')
+    if a.ronda.startswith('r2') and a.equipo: a.ronda = f"{a.ronda}_{a.equipo}" if a.ronda in ('r2mono', 'r2fab') else a.ronda
     carros = parse_carros(a.carros) if a.carros else list(ALINEACIONES.get(a.ronda, ['FABRICA'] * 9))
     if a.mundo_N is None: a.mundo_N = MUNDO_ATAJO.get(a.ronda)
-    if a.desde is None: a.desde = DESDE_ATAJO.get(a.ronda, DESDE_SELLADA if a.ronda.startswith('sellada') else 4001)
+    if a.desde is None: a.desde = (DESDE_R2 if a.ronda.startswith('r2') else
+                                   DESDE_ATAJO.get(a.ronda, DESDE_SELLADA if a.ronda.startswith('sellada') else 4001))
     if a.humo:
         semillas = [4001, 4002]; pool = 0; etiqueta = f"humo_ronda{a.ronda}"
     else:
@@ -434,7 +501,7 @@ def main():
     shas = {c: P.h16(os.path.join(P.CARROS, c + '.py')) for c in sorted(set(carros))}
     log(f"JUEZ · {etiqueta} · {time.strftime('%Y-%m-%d %H:%M:%S')} · python {platform.python_version()} · pool {pool or 'NO (un proceso)'}")
     log(f"  pista.py {P.h16(os.path.join(AQUI,'pista.py'))} · juez.py {P.h16(os.path.abspath(__file__))} · carros {shas}")
-    log(f"  carros (orden = indice de linaje): {carros} · semillas {semillas[0]}-{semillas[-1]} · T={a.T} · pizarra {a.pizarra} · rep_acum {a.rep_acum} · escala {a.escala} · mundo_N {a.mundo_N or 'N (el de los carros)'}")
+    log(f"  carros (orden = indice de linaje): {carros} · semillas {semillas[0]}-{semillas[-1]} · T={a.T} · pizarra {a.pizarra} · rep_acum {a.rep_acum} · escala {a.escala} · mundo_N {a.mundo_N or 'N (el de los carros)'} · fundador_limpio {a.fundador_limpio}")
     rv = {c: RC.revisa(c) for c in sorted(set(carros))}
     for c, v in rv.items():
         log(f"  CHEQUEO ESTATICO {c}: {'PASA' if not v else 'RECHAZADO'}" + ''.join(chr(10) + '     ' + x for x in v))
@@ -445,7 +512,7 @@ def main():
         f"(s=1, T=5000): {'OK' if not ide['dif'] else 'FALLA ' + str(ide['dif'][:5])}")
     if not ide['ok']:
         log("  IDENTIDAD FALLA -> la ronda NO se corre."); return 1
-    tareas = [(s, carros, a.T, a.pizarra, a.rep_acum, a.escala, a.mundo_N) for s in semillas]
+    tareas = [(s, carros, a.T, a.pizarra, a.rep_acum, a.escala, a.mundo_N, a.fundador_limpio) for s in semillas]
     R = []
     if pool and pool > 1:
         from multiprocessing import Pool
@@ -463,7 +530,7 @@ def main():
         for x in R:
             for e in x.pop('pizarra_log'): fz.write(json.dumps([x['seed']] + e) + chr(10))
     meta = dict(etiqueta=etiqueta, ronda=a.ronda, sello=sel, semillas=semillas, T=a.T, pizarra=a.pizarra, rep_acum=a.rep_acum,
-                carros=carros, sha_carros=shas, escala=a.escala, mundo_N=a.mundo_N, chequeo_estatico=rv, sha_pista=P.h16(os.path.join(AQUI, 'pista.py')),
+                carros=carros, sha_carros=shas, escala=a.escala, mundo_N=a.mundo_N, fundador_limpio=a.fundador_limpio, chequeo_estatico=rv, sha_pista=P.h16(os.path.join(AQUI, 'pista.py')),
                 sha_juez=P.h16(os.path.abspath(__file__)), sha_f9c=ide['sha_f9c'], identidad_corta=ide,
                 W_CAUSA=P.W_CAUSA, CUPO=P.CUPO, ANCHO=P.ANCHO, ref=REF_REL)
     crudo = os.path.join(DATOS, pre + '.json')     # ERR-54: el crudo ANTES de resumir
@@ -471,6 +538,7 @@ def main():
     log(f"  CRUDO {crudo} (sha {P.h16(crudo)})")
     tab, r0p = informe(R, meta, log)
     e99 = resumen_err99(R, log, a.ronda)
+    if a.ronda.startswith('r2'): e99['ronda2'] = resumen_r2(R, log, a.ronda)
     log(f"  PIZARRA completa {piz}")
     if carros == ['FABRICA'] * 9:
         todos = [l['R0'] for c in R for l in c['linajes']]
