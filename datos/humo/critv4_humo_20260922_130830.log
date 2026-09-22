@@ -1,0 +1,109 @@
+[13:08:30 +    0.0s] ARRANQUE V4-CAL — calibracion del CRITERIO DE TRONCO v4 (HUMO, un proceso, sin Pool)
+[13:08:30 +    0.0s] shas {'preregistro': '443570bcabab79b7', 'criterio_v4': 'c529c48f63734426', 'script': 'c70d1c643e78ee88', 'umbrales': '881e2a07245566bb', 'identidad_v4': 'ab3bf0453c23a8c8', 'regla14': 'd31958b997a763aa', 'anclas': {'experimentos\\criterio_v3\\organismo_v3cal.py': '148014f68cb01785', 'experimentos\\criterio_v3\\identidad_criterio_v3.py': '1356458f34134c83', 'experimentos\\criterio_v3\\corre_criterio_v3.py': '7f93eca0e45e167b', 'experimentos\\nivel11_mundo_vivo\\corre_vivo_rep2.py': '10ab45355883d98d', 'experimentos\\nivel11_mundo_vivo\\mini_vivo.py': 'f3e86cbe6c17e6d7', 'experimentos\\nivel11_mundo_vivo\\organismo_vivo_rep2.py': '96feb4918dc5d694', 'organismo\\organismo_v142.py': '17528d767fcebaf6'}}
+[13:08:30 +    0.0s] brazos: OFF {'placebo': 0} | TRONCO_B {'placebo': 0} semilla+100000 | PLACEBO {'placebo': 1} | PEOR {'placebo': 0, 'costo': 0.0015, 'costo_a': 0.0015}
+[13:08:30 +    0.0s] letra v4: v4 T-A: en VIVO y en CUELLO_MIN: mediana de muertes <= 1.10 x tronco, mediana de r >= tronco - 10, y NO INFERIORIDAD de una cola al 95 % (z = 1.645) en r con margen 10 (LI > -10). n = 80 por brazo. || v4 T-C (ii): NO INFERIORIDAD de una cola al 95 % (z = 1.645) en rev con margen 12.5 (LI > -12.5). n = 80. || v4 T-F (parte del mundo vivo): medianas de muertes, celdas y splits <= 1.25 x tronco (divisor max(tronco, 1))
+[13:08:30 +    0.0s]    opcion ERR-94 v3 (n40, m10)                P(pasa|nulo) T-A 0.928  T-C ii 0.707  juntas 0.656
+[13:08:30 +    0.0s]    opcion ERR-94 solo n = 80 (m10)            P(pasa|nulo) T-A 0.999  T-C ii 0.931  juntas 0.93
+[13:08:30 +    0.0s]    opcion ERR-94 solo margen 15 (n40)         P(pasa|nulo) T-A 0.928  T-C ii 0.95  juntas 0.882
+[13:08:30 +    0.0s]    opcion ERR-94 ELEGIDA: n = 80 y m_TC 12.5  P(pasa|nulo) T-A 0.999  T-C ii 0.987  juntas 0.986
+[13:08:30 +    0.0s]    opcion ERR-94 n = 80 y m_TC 15 (reserva)   P(pasa|nulo) T-A 0.999  T-C ii 0.999  juntas 0.998
+[13:08:30 +    0.0s] HUMO 0/3 — identidad (v3 54/54 + v4) y regla 14, en subprocesos de UN proceso.
+[13:08:30 +    0.0s]    -> SUBPROCESO (identidad v3 (instrumento reusado)): identidad_criterio_v3.py 20000
+[13:11:03 +  153.8s]       | --- I2: organismo_v3cal(desambiguar=0,placebo=0) == organismo_vivo_rep2 (rep2 VIVO/CUELLO_MIN, mini VIVO)
+[13:11:03 +  153.8s]       | --- I3: B-5 INERTE en los mundos del tronco: desambiguar=1 == desambiguar=0 (prediccion de v14.2)
+[13:11:03 +  153.8s]       | --- I4: placebo=0 == el defecto (no pasar la perilla)
+[13:11:03 +  153.8s]       | --- I5: invertir_vivo_en > T es INERTE
+[13:11:03 +  153.8s]       | --- I6: rango de muertes con placebo=1 dentro del rango con placebo=0 (6 semillas; SE REPORTA, no es puerta)
+[13:11:03 +  153.8s]       |     muertes placebo=0 [10, 16, 16, 17, 23, 26]  mediana 17
+[13:11:03 +  153.8s]       |     muertes placebo=1 [14, 17, 17, 21, 24, 24]  mediana 21
+[13:11:03 +  153.8s]       |     (T=20000: es una LECTURA, no una puerta; la puerta es la serie de 40 semillas)
+[13:11:03 +  153.8s]       | --- CONTROLES QUE DEBEN FALLAR (M1..M7)
+[13:11:03 +  153.8s]       | IDENTIDADES 47/47   CONTROLES QUE FALLAN COMO DEBEN 7/7   (153.5s)
+[13:11:03 +  153.8s]       | ARNES TOTAL: 54/54
+[13:11:03 +  153.8s]       | datos -> identidad_v3cal_20260922_131103.json
+[13:11:03 +  153.8s]       (154s)
+[13:11:03 +  153.8s]       JSON por prefijo+sello: identidad_v3cal_20260922_131103.json  sha256_16 = bb0671744181e9f5
+[13:11:03 +  153.8s]    -> SUBPROCESO (identidad v4 (lo nuevo)): identidad_v4.py 20000
+[13:11:24 +  174.1s]       | --- J3/J4: el montaje de T-C (ii)
+[13:11:24 +  174.1s]       |   OK  J3 T-C ii: OFF del runner == tronco (mord, vis, deaths, celdas, splits)
+[13:11:24 +  174.1s]       |   OK  J4 T-C ii: TRONCO_B == tronco en s+100000
+[13:11:24 +  174.1s]       | --- J5 / K4 / K5: el juez (listas sinteticas de 80, sin simulacion)
+[13:11:24 +  174.1s]       |   OK  J5 T-A v4 (x, x) PASA
+[13:11:24 +  174.1s]       |   OK  J5 T-C ii v4 (x, x) PASA
+[13:11:24 +  174.1s]       |   OK  J5 T-F (x, x) PASA
+[13:11:24 +  174.1s]       |   OK  K4 T-A v4 con delta = -40 CAE
+[13:11:24 +  174.1s]       |   OK  K4 T-C ii v4 con delta = -40 CAE
+[13:11:24 +  174.1s]       |   OK  K5 T-F con muertes x1.5 CAE
+[13:11:24 +  174.1s]       | ARNES V4 TOTAL: 16/16 OK  (20.1 s)
+[13:11:24 +  174.1s]       | datos -> identidad_v4_20260922_131124.json
+[13:11:24 +  174.1s]       (20s)
+[13:11:24 +  174.2s]       JSON por prefijo+sello: identidad_v4_20260922_131124.json  sha256_16 = 6f6d1e94202bcd8e
+[13:11:24 +  174.2s]    -> SUBPROCESO (regla 14 v4): regla14_v4.py
+[13:11:24 +  174.4s]       |   vivo                      1             1   SI
+[13:11:24 +  174.4s]       |   estims           ('A', 'B', 'C', 'D')    ('A', 'B', 'C', 'D')   SI
+[13:11:24 +  174.4s]       |   costo                 0.001 ->     0.0015   DECLARADO
+[13:11:24 +  174.4s]       |   costo_a               0.001 ->     0.0015   DECLARADO
+[13:11:24 +  174.4s]       |   n_nec                     2             2   SI
+[13:11:24 +  174.4s]       |   campos de mas: {'desambiguar': 1, 'invertir_vivo_en': 50000, 'placebo': 0}
+[13:11:24 +  174.4s]       | 
+[13:11:24 +  174.4s]       | VIVO: TRONCO_B == OFF campo a campo: True | PLACEBO difiere solo en placebo=1: True | PEOR solo en costo/costo_a x1.5: True | semilla TRONCO_B = s+100000: True
+[13:11:24 +  174.4s]       | 
+[13:11:24 +  174.4s]       | CUELLO_MIN: TRONCO_B == OFF campo a campo: True | PLACEBO difiere solo en placebo=1: True | PEOR solo en costo/costo_a x1.5: True | semilla TRONCO_B = s+100000: True
+[13:11:24 +  174.4s]       | 
+[13:11:24 +  174.4s]       | REGLA 14 v4: OK
+[13:11:24 +  174.4s]       (0s)
+[13:11:24 +  174.4s]    identidad: ARNES TOTAL: 54/54 | ARNES V4 TOTAL: 16/16 OK  (20.1 s) | regla 14 OK -> OK
+[13:11:24 +  174.4s] HUMO 1/3 — 6 corridas de T=30000 (180 000 pasos): T-A VIVO semilla 2921 x 4 brazos; T-C ii semilla 2922 x OFF/TRONCO_B.
+[13:11:32 +  182.6s]    T-A VIVO OFF      s2921 (real 2921)  r -30  desc 7  muertes 37  celdas 39 splits 9  placebo 0  1.88 s
+[13:11:32 +  182.6s]    T-A VIVO TRONCO_B s2921 (real 102921)  r -17  desc 7  muertes 24  celdas 36 splits 6  placebo 0  2.03 s
+[13:11:32 +  182.6s]    T-A VIVO PLACEBO  s2921 (real 2921)  r -31  desc 4  muertes 35  celdas 39 splits 9  placebo 1  2.3 s
+[13:11:32 +  182.6s]    T-A VIVO PEOR     s2921 (real 2921)  r -42  desc 2  muertes 44  celdas 36 splits 6  placebo 0  1.94 s
+[13:11:37 +  187.8s]    T-C ii  OFF      s2922 (real 2922)  rev 16  visB [312, 651, 81, 62]  muertes 31  2.69 s
+[13:11:37 +  187.8s]    T-C ii  TRONCO_B s2922 (real 102922)  rev 7  visB [390, 556, 89, 72]  muertes 34  2.56 s
+[13:11:37 +  187.8s]    TRONCO_B difiere de OFF en la trayectoria: True (DEBE ser True) | PLACEBO difiere: True (DEBE ser True)
+[13:11:37 +  187.8s]    DURACION: 2.04 s/corrida T-A y 2.62 s/corrida T-C a T=30000 -> x3.33 a T=100000 (lineal, supuesto) -> 7147 s de CPU; con Pool 6 ~ 19.9 min + identidad 2.9 min + reparto ~1 min = ~24 min por serie (sin contencion de CPU)
+[13:11:37 +  187.8s] HUMO 2/3 — CABLEADO de las etapas 5-6 con crudos SINTETICOS (n = 80, cuatro brazos; B = 400). NO son evidencia.
+[13:11:37 +  187.8s] ETAPA 5/6 — veredicto de v4 (v3 y v2 al lado) sobre TRONCO_B, PLACEBO y PEOR.
+[13:11:38 +  187.8s]    T-A VIVO       [TRONCO_B] muertes 92.83838261151416/93.43764908500192 (<= 1.1x) r -73.9869386705555/-72.63206042254951 (>= -10.0)  NI media -0.568 sd 15.578 LI -3.433 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 0.713 (lectura, no puerta)
+[13:11:38 +  187.8s]    T-F VIVO       [TRONCO_B] deaths 92.83838261151416/93.43764908500192 (0.994 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 8.0/7.0 (1.143 <= 1.25) -> PASA
+[13:11:38 +  187.8s]    T-A CUELLO_MIN [TRONCO_B] muertes 92.41999907177248/92.84289791452426 (<= 1.1x) r -8.150170200057932/-8.32647303688385 (>= -10.0)  NI media -0.802 sd 22.586 LI -4.956 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.6) PASA  | fraccion de semillas con d >= -10: 0.637 (lectura, no puerta)
+[13:11:38 +  187.8s]    T-F CUELLO_MIN [TRONCO_B] deaths 92.41999907177248/92.84289791452426 (0.995 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:11:38 +  187.8s]    T-C ii       [TRONCO_B] rev 39.884666591670566/42.2226640373696  NI media 0.493 sd 27.553 LI -4.574 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.6) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[13:11:38 +  187.8s]    >>> TRONCO_B: v4 (T-A, T-C ii, T-F vivo) PASA
+[13:11:38 +  187.8s]    T-A VIVO       [PLACEBO ] muertes 92.1138782056045/93.43764908500192 (<= 1.1x) r -74.34867477805605/-72.63206042254951 (>= -10.0)  NI media -0.188 sd 16.685 LI -3.257 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.45) NO  | fraccion de semillas con d >= -10: 0.725 (lectura, no puerta)
+[13:11:38 +  187.8s]    T-F VIVO       [PLACEBO ] deaths 92.1138782056045/93.43764908500192 (0.986 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:11:38 +  187.8s]    T-A CUELLO_MIN [PLACEBO ] muertes 93.63615374049297/92.84289791452426 (<= 1.1x) r -7.738219936126375/-8.32647303688385 (>= -10.0)  NI media 1.365 sd 19.215 LI -2.169 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 0.725 (lectura, no puerta)
+[13:11:38 +  187.8s]    T-F CUELLO_MIN [PLACEBO ] deaths 93.63615374049297/92.84289791452426 (1.009 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:11:38 +  187.8s]    T-C ii       [PLACEBO ] rev 41.14216319871514/42.2226640373696  NI media 0.411 sd 25.129 LI -4.21 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.6) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[13:11:38 +  187.8s]    >>> PLACEBO: v4 (T-A, T-C ii, T-F vivo) PASA
+[13:11:38 +  187.8s]    T-A VIVO       [PEOR    ] muertes 154.74632474629047/93.43764908500192 (<= 1.1x) r -149.4462471300006/-72.63206042254951 (>= -10.0)  NI media -76.035 sd 15.525 LI -78.89 > -10.0 -> v4 NO | v3(n40) NO | v2(n20, A12 0.0) NO  | fraccion de semillas con d >= -10: 0.0 (lectura, no puerta)
+[13:11:38 +  187.8s]    T-F VIVO       [PEOR    ] deaths 154.74632474629047/93.43764908500192 (1.656 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 8.0/7.0 (1.143 <= 1.25) -> NO
+[13:11:38 +  187.8s]    T-A CUELLO_MIN [PEOR    ] muertes 153.90902412614366/92.84289791452426 (<= 1.1x) r -83.50794238720418/-8.32647303688385 (>= -10.0)  NI media -75.779 sd 14.983 LI -78.535 > -10.0 -> v4 NO | v3(n40) NO | v2(n20, A12 0.0) NO  | fraccion de semillas con d >= -10: 0.0 (lectura, no puerta)
+[13:11:38 +  187.9s]    T-F CUELLO_MIN [PEOR    ] deaths 153.90902412614366/92.84289791452426 (1.658 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> NO
+[13:11:38 +  187.9s]    T-C ii       [PEOR    ] rev 44.30355841998484/42.2226640373696  NI media 2.644 sd 29.454 LI -2.773 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.6) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[13:11:38 +  187.9s]    >>> PEOR: v4 (T-A, T-C ii, T-F vivo) NO PASA
+[13:11:38 +  187.9s] ETAPA 6/6 — CALIBRACION por REPARTO del nulo OFF + TRONCO_B (ley identica por construccion), B=400.
+[13:11:38 +  188.8s]    reparto v4               {'juntas': 0.9801, 'TA': 0.99, 'TC': 0.99}
+[13:11:38 +  188.8s]    reparto v3               {'juntas': 0.7098, 'TA': 0.91, 'TC': 0.78}
+[13:11:38 +  188.8s]    reparto v2_TA_n20        0.3725
+[13:11:38 +  188.8s]    reparto v2_TC_n20        0.0125
+[13:11:38 +  188.8s]    reparto v4_delta20       {'TA': 0.0, 'TC': 0.0}
+[13:11:38 +  188.8s]    reparto v4_delta_margen  {'TA': 0.005, 'TC': 0.0475}
+[13:11:38 +  188.8s]    marginales TRONCO_B (A12 no pareado vs OFF; banda Bonferroni [0.379, 0.621], NO puerta): {'r_VIVO': 0.473, 'muertes_VIVO': 0.523, 'r_CUELLO_MIN': 0.479, 'muertes_CUELLO_MIN': 0.544, 'rev': 0.503, 'muertes_rev': 0.523}  dentro 6/6
+[13:11:38 +  188.8s]    marginales PLACEBO  (A12 no pareado vs OFF; banda Bonferroni [0.379, 0.621], NO puerta): {'r_VIVO': 0.494, 'muertes_VIVO': 0.54, 'r_CUELLO_MIN': 0.528, 'muertes_CUELLO_MIN': 0.507, 'rev': 0.502, 'muertes_rev': 0.46}  dentro 6/6
+[13:11:38 +  188.8s]    V4-1 [REPARTO del nulo (OFF + TRONCO_B, ley identica por construccion): P(T-A v4 y T-C ii v4 pasan) >= 0.95] -> 0.9801 -> CUMPLE
+[13:11:38 +  188.8s]    V4-2 [TRONCO_B (el tronco en semillas s+100000, sin perilla) PASA T-A, T-C ii y T-F vivo bajo v4 en la realizacion] -> True -> CUMPLE
+[13:11:38 +  188.8s]    V4-3 [PLACEBO (candidato inerte, placebo = 1) PASA T-A, T-C ii y T-F vivo bajo v4 en la realizacion] -> True -> CUMPLE
+[13:11:38 +  188.8s]    V4-4 [PEOR (coste de vida x1.5, conocido malo x2 series) CAE v4 en la realizacion] -> False -> CUMPLE
+[13:11:38 +  188.8s]    V4-5 [desplazamiento exacto por reparto: delta = -20 pasa <= 0.05 en T-A y en T-C ii, y delta = -margen pasa <= 0.15 en cada puerta (por construccion ~0.05; 0.15 deja lugar al error de estimacion del reparto)] -> {'delta20': {'TA': 0.0, 'TC': 0.0}, 'delta_margen': {'TA': 0.005, 'TC': 0.0475}} -> CUMPLE
+[13:11:38 +  188.8s]    >>> v4 CUMPLE sus cinco condiciones en esta serie (utilizable sólo si la replica tambien las cumple)
+[13:11:38 +  188.8s]    P-1 [V4-1 (reparto del nulo, las dos puertas juntas)] firmado 0.965-1.0 -> 0.9801 -> ACERTADA
+[13:11:38 +  188.8s]    P-2 [T-C (ii) sola por reparto] firmado 0.97-1.0 -> 0.99 -> ACERTADA
+[13:11:38 +  188.8s]    P-3 [T-A entera sola por reparto] firmado 0.985-1.0 -> 0.99 -> ACERTADA
+[13:11:38 +  188.8s]    P-4 [v2 sobre el mismo nulo (T-A, n = 20) sigue rechazando al tronco] firmado 0.2-0.45 -> 0.3725 -> ACERTADA
+[13:11:38 +  188.8s]    P-5 [v3 sobre el mismo nulo (n = 40, T-A y T-C ii juntas)] firmado 0.55-0.8 -> 0.7098 -> ACERTADA
+[13:11:38 +  188.8s]    P-6 [marginales dentro de la banda de Bonferroni: TRONCO_B 6/6; PLACEBO >= 5/6] firmado - -> {'TRONCO_B': 6, 'PLACEBO': 6} -> ACERTADA
+[13:11:38 +  188.8s]    P-7 [PEOR: delta_r mediano <= -60 en los dos brazos de T-A (medido -74..-114)] firmado - -> [-76.81418670745107, -75.18146935032033] -> ACERTADA
+[13:11:38 +  188.8s]    cableado: {'TRONCO_B': True, 'PLACEBO': True, 'PEOR': False, 'reparto_v4': {'juntas': 0.9801, 'TA': 0.99, 'TC': 0.99}, 'delta20': {'TA': 0.0, 'TC': 0.0}} -> OK (PEOR sintetico DEBE caer; el reparto DEBE salir)
+[13:11:38 +  188.8s] HUMO 3/3 — JSON.
+[13:11:38 +  188.8s] datos -> critv4_humo_20260922_130830.json  sha256_16 = e244b3588381f3d0
