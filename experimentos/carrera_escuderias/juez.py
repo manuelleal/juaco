@@ -11,6 +11,8 @@ calcula por linaje, con la definicion de H-1 (corre_f9.py:193-207):
     python .../juez.py --ronda 1 | 1mono | 1solo   (atajos; o --carros O1,S1,H1,FABRICA*6)   ·   --recalcula <crudo viejo>
   ENMIENDA 4: --mundo_N M (N carros en el mundo de M) · --ronda sellada_mono | sellada_sologrande | sellada_sinlimpia | sellada_fab
   (semillas 5001-5020 por defecto) · mecanismo: limpiezas por cuerpo, buenos que reaparecen por ellas, pasos sin ningun bueno.
+  ERR-100: al lado del R0 preregistrado, el R0 de NACIMIENTOS REALES = nac_reales / (muertes + 1), su mediana sobre evaluables y
+  'cruza_real' (SOLO se reporta; el criterio no cambia). ERR-101: --ronda sellada_fundborra (9 CTRL_O1_FUNDBORRA, 5021-5040).
   · exposiciones a A y C · escrituras por linaje (hasta 3000 en la telemetria). La pizarra COMPLETA se guarda
   aparte en <prefijo>_pizarra.jsonl.gz (una linea [semilla, t, id, contenido] por escritura publicada).
 Y de la pista: R0_pista = sum(descendientes) / (sum(muertes) + n_linajes) · composicion del mundo por cuarto de T.
@@ -55,13 +57,18 @@ MONO_FRAC_EVAL = 120 / 180  # monocultivo (iii): >= 120 de 180 linajes-semilla e
 ALINEACIONES = {'0': ['FABRICA'] * 9, '1': ['O1', 'S1', 'H1'] + ['FABRICA'] * 6, '1mono': ['O1'] * 9, '1solo': ['O1'],
                 # ENMIENDA 4: serie SELLADA (semillas 5001-5020 por defecto), todas con el criterio de la ENMIENDA 3
                 'sellada_mono': ['O1'] * 9, 'sellada_sologrande': ['O1'], 'sellada_sinlimpia': ['CTRL_O1_SINLIMPIA'] * 9,
-                'sellada_fab': ['FABRICA'] * 9}
+                'sellada_fab': ['FABRICA'] * 9, 'sellada_fundborra': ['CTRL_O1_FUNDBORRA'] * 9}
 MUNDO_ATAJO = {'sellada_sologrande': 9}   # MUNDO FORZADO: 1 O1 en el mundo dimensionado para 9 (L=360, 36 objetos, olvido x9)
 DESDE_SELLADA = 5001
-PRED_ENM4 = {'sellada_mono': ("S-MONO cruza (p 0.75)", lambda cm: cm['cruza']),
-             'sellada_sologrande': ("S-SOLO-GRANDE cruza o queda casi inmortal (p 0.60)", lambda cm: cm['cruza'] or cm['casi_inmortal_grupo']),
-             'sellada_sinlimpia': ("S-SIN-LIMPIEZA NO cruza (p 0.50)", lambda cm: not cm['cruza']),
-             'sellada_fab': ("S-FAB NO cruza (p 0.97)", lambda cm: not cm['cruza'])}
+PRED_ENM4 = {'sellada_mono': [("S-MONO cruza (p 0.75)", lambda cm: cm['cruza'])],
+             'sellada_sologrande': [("S-SOLO-GRANDE cruza o queda casi inmortal (p 0.60)", lambda cm: cm['cruza'] or cm['casi_inmortal_grupo'])],
+             'sellada_sinlimpia': [("S-SIN-LIMPIEZA NO cruza (p 0.50)", lambda cm: not cm['cruza'])],
+             'sellada_fab': [("S-FAB NO cruza (p 0.97)", lambda cm: not cm['cruza'])],
+             # AUDITORIA DE LA SERIE SELLADA (ERR-101): S-FUNDBORRA, semillas selladas NUEVAS 5021-5040
+             'sellada_fundborra': [("S-FUNDBORRA cruza por la letra (ENMIENDA 3) (p 0.55)", lambda cm: cm['cruza']),
+                                   ("S-FUNDBORRA: mediana del R0 de NACIMIENTOS REALES sobre evaluables >= 0.90 (p 0.35)",
+                                    lambda cm: cm['mediana_R0_real_eval'] is not None and cm['mediana_R0_real_eval'] >= R0_CRUCE)]}
+DESDE_ATAJO = {'sellada_fundborra': 5021}
 PRED_ENM = {   # predicciones FIRMADAS del coordinador (ENMIENDAS 2 y 3), se imprimen al lado de lo medido
     'oficial': ["H1: R0 mediano dentro de +-0.10 de la mediana de los FABRICA", "FABRICA: R0 mediano 0.28-0.45",
                 "O1: cruza en >= 10/20 semillas (p 0.55); gana la ronda >= 15/20 (p 0.30)",
@@ -144,7 +151,9 @@ def err99(mu, fund, tf, desc, T, vidas, dpv, nac_reales, cola_final, t_fund_fuen
     ev = mu >= MIN_MUERTES
     R0 = round(desc / (mu + 1), 4)
     muertos = dpv[:-1]
+    R0r = round(nac_reales / (mu + 1), 4)   # ERR-100: R0 de NACIMIENTOS REALES (sin los hijos que esperan en la cola)
     return dict(evaluable=ev, casi_inmortal=not ev, R0_eval=(R0 if ev else None), fund_post10k=post,
+                R0_real=R0r, R0_real_eval=(R0r if ev else None), cruza_real=bool(ev and R0r >= R0_CRUCE and post == 0),
                 fund_post_incierto=bool(incierto), cruza=bool(ev and R0 >= R0_CRUCE and post == 0),
                 nac_reales=nac_reales, t_fund_fuente=t_fund_fuente,   # cola_final ya esta en el resumen (no se duplica)
                 fund_por_1e5=round(fund / T * 1e5, 2),
@@ -265,7 +274,11 @@ def criterio_mono(xs):
     fs = (sum(1 for x in ev if x['fund_post10k'] == 0) / len(ev)) if ev else 0.0
     fe = len(ev) / len(xs) if xs else 0.0
     c = dict(i=bool(m is not None and m >= R0_CRUCE), ii=bool(fs >= MONO_FRAC_SIN_FUND), iii=bool(fe >= MONO_FRAC_EVAL - 1e-12))
+    mr = med([x['R0_real_eval'] for x in ev])
+    cr = dict(c, i=bool(mr is not None and mr >= R0_CRUCE))
     return dict(mediana_R0_eval=m, frac_eval_sin_fund=round(fs, 4), evaluables=len(ev), n=len(xs), frac_eval=round(fe, 4),
+                mediana_R0_real_eval=mr, cruza_con_R0_real=all(cr.values()), cruzan_real_linajes=sum(1 for x in xs if x['cruza_real']),
+                cola_sobre_desc_med=med([x['cola_final'] / x['descendientes'] for x in xs if x['descendientes']]),
                 condiciones=c, cruza=all(c.values()), casi_inmortales=sum(1 for x in xs if x['casi_inmortal']),
                 cruzan_linajes=sum(1 for x in xs if x['cruza']))
 
@@ -280,7 +293,7 @@ def resumen_err99(R, log, ronda=None):
         for l in c['linajes']: esc.setdefault(etiqueta_de(l['id']), []).append(l)
     log(f"\nERR-99 / ENMIENDA 2 (evaluable = >= {MIN_MUERTES} muertes; cruza = R0 >= {R0_CRUCE} y 0 fundadores tras t = {T_CORTE}) · modo {modo}")
     log(f"  {'escuderia':10s} {'lin-sem':>7} {'cruzan':>6} {'evaluab':>7} {'casi inm':>8} {'R0 eval med':>11} {'sem. que cruza':>14} "
-        f"{'nac reales':>10} {'fund>10k med':>12} {'sin parir':>9}  gana")
+        f"{'nac reales':>10} {'fund>10k med':>12} {'sin parir':>9} {'R0 REAL eval med':>16} {'cruzan real':>11}  gana")
     out = {}
     for e, xs in esc.items():
         por_sem = {}
@@ -294,10 +307,12 @@ def resumen_err99(R, log, ronda=None):
                  R0_med_todos=med([x['R0'] for x in xs]), semillas_que_cruza=sem_cruza, semillas=ns, gana=gana,
                  nac_reales_med=med([x['nac_reales'] for x in xs]), fund_post_med=med([x['fund_post10k'] for x in xs]),
                  sin_parir_med=med([x['frac_muere_sin_parir'] for x in xs]), fund_post_incierto=inc,
-                 casi_inmortal_semillas=len({x['seed'] for x in xs if x['casi_inmortal']}))
+                 casi_inmortal_semillas=len({x['seed'] for x in xs if x['casi_inmortal']}),
+                 R0_real_eval_med=med([x['R0_real_eval'] for x in xs]), cruzan_real=sum(x['cruza_real'] for x in xs))
         out[e] = o
         log(f"  {e:10s} {o['linajes_semilla']:7d} {o['cruzan']:6d} {o['evaluables']:7d} {o['casi_inmortales']:8d} {str(o['R0_eval_med']):>11} "
-            f"{str(sem_cruza) + '/' + str(ns):>14} {str(o['nac_reales_med']):>10} {str(o['fund_post_med']):>12} {str(o['sin_parir_med']):>9}  "
+            f"{str(sem_cruza) + '/' + str(ns):>14} {str(o['nac_reales_med']):>10} {str(o['fund_post_med']):>12} {str(o['sin_parir_med']):>9} "
+            f"{str(o['R0_real_eval_med']):>16} {o['cruzan_real']:>11}  "
             f"{('SI' if gana else 'no') if gana is not None else '-- (varios linajes por semilla)'}"
             f"{'  [t_fund truncado e incierto en ' + str(inc) + ']' if inc else ''}")
     todos = [l for c in R for l in c['linajes']]
@@ -309,6 +324,9 @@ def resumen_err99(R, log, ronda=None):
             f"{'si' if cm['condiciones']['i'] else 'no'} · (ii) evaluables sin fundadores tras t={T_CORTE} {cm['frac_eval_sin_fund']} >= "
             f"{MONO_FRAC_SIN_FUND}: {'si' if cm['condiciones']['ii'] else 'no'} · (iii) evaluables {cm['evaluables']}/{cm['n']} "
             f"(>= {MONO_FRAC_EVAL:.3f}): {'si' if cm['condiciones']['iii'] else 'no'} -> {'CRUZA' if cm['cruza'] else 'NO CRUZA'}")
+        log(f"    ERR-100 (SOLO SE REPORTA; el criterio preregistrado no cambia): mediana del R0 de NACIMIENTOS REALES sobre evaluables "
+            f"{cm['mediana_R0_real_eval']} · con esa mediana en (i) el grupo {'CRUZARIA' if cm['cruza_con_R0_real'] else 'NO cruzaria'} · "
+            f"linajes-semilla que cruzan con R0 real {cm['cruzan_real_linajes']}/{cm['n']} · mediana cola_final/descendientes {cm['cola_sobre_desc_med']}")
     log("  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:")
     if modo == 'oficial':
         fab = out.get('FABRICA', {}); h1 = out.get('H1', {}); o1 = out.get('O1', {}); s1 = out.get('S1', {})
@@ -325,12 +343,13 @@ def resumen_err99(R, log, ronda=None):
         for p_, m_ in zip(PRED_ENM['oficial'], med_): log(f"    - {p_}  ->  medido: {m_}")
         res['predicciones'] = list(zip(PRED_ENM['oficial'], med_))
     elif modo in PRED_ENM4:
-        cm = res['criterio_enm3']; txt, f = PRED_ENM4[modo]
-        m_ = (f"{'CRUZA' if cm['cruza'] else 'NO CRUZA'} (mediana R0 evaluables {cm['mediana_R0_eval']}; evaluables {cm['evaluables']}/{cm['n']}; "
-              f"casi inmortales {cm['casi_inmortales']}/{cm['n']}"
-              + (f"; 'queda casi inmortal' = los casi inmortales hacen caer (iii) (> 1/3): {'SI' if cm['casi_inmortal_grupo'] else 'no'}" if modo == 'sellada_sologrande' else '')
-              + f") -> la prediccion {'SE CUMPLE' if f(cm) else 'NO se cumple'}")
-        log(f"    - {txt}  ->  medido: {m_}"); res['predicciones'] = [(txt, m_)]
+        cm = res['criterio_enm3']; res['predicciones'] = []
+        for txt, f in PRED_ENM4[modo]:
+            m_ = (f"{'CRUZA' if cm['cruza'] else 'NO CRUZA'} (mediana R0 evaluables {cm['mediana_R0_eval']}; R0 REAL {cm['mediana_R0_real_eval']}; "
+                  f"evaluables {cm['evaluables']}/{cm['n']}; casi inmortales {cm['casi_inmortales']}/{cm['n']}"
+                  + (f"; 'queda casi inmortal' = los casi inmortales hacen caer (iii) (> 1/3): {'SI' if cm['casi_inmortal_grupo'] else 'no'}" if modo == 'sellada_sologrande' else '')
+                  + f") -> la prediccion {'SE CUMPLE' if f(cm) else 'NO se cumple'}")
+            log(f"    - {txt}  ->  medido: {m_}"); res['predicciones'].append((txt, m_))
     elif modo in ('mono', 'solo'):
         cm = res['criterio_enm3']
         m_ = f"{'CRUZA' if cm['cruza'] else 'NO CRUZA'} (mediana R0 evaluables {cm['mediana_R0_eval']})"
@@ -363,9 +382,9 @@ def recalcula(ruta, log=print):
         for l in c['linajes']:
             log(f"  s{c['seed']} {l['id']:8s} muertes {l['muertes']:3d} desc {l['descendientes']:3d} R0 {l['R0']:<7} evaluable {int(l['evaluable'])} "
                 f"fund {l['fundadores']} t_fund {l['t_fund_rec']} fund>10k {l['fund_post10k']} nac reales {l['nac_reales']} cola {l['cola_final']} "
-                f"-> cruza {int(l['cruza'])}")
+                f"R0 real {l['R0_real']} -> cruza {int(l['cruza'])} · cruza_real {int(l['cruza_real'])}")
     if T != T_DEF: log(f"  OJO: T = {T} (no {T_DEF}): la letra de ERR-99 esta escrita para T = {T_DEF}; se aplica igual, a titulo informativo")
-    return resumen_err99(R, log)
+    return resumen_err99(R, log, d['meta'].get('ronda'))
 
 
 def parse_carros(txt):
@@ -382,7 +401,8 @@ def main():
     ap.add_argument('--humo', action='store_true')
     ap.add_argument('--ronda', default='0')
     ap.add_argument('--carros', default=None)   # p. ej. O1,S1,H1,FABRICA*6 ; si falta, el atajo de --ronda (ALINEACIONES)
-    ap.add_argument('--recalcula', default=None)   # ruta de un crudo viejo: aplica ERR-99 y termina
+    ap.add_argument('--recalcula', default=None)   # ruta de un crudo viejo: aplica ERR-99 y ERR-100 y termina
+    ap.add_argument('--recalcula_json', default=None)   # opcional: escribe el resumen del recalculo
     ap.add_argument('--desde', type=int, default=None)   # por defecto 4001; en las series sellada_* 5001 (SELLADAS)
     ap.add_argument('--mundo_N', type=int, default=None)   # ENMIENDA 4: mundo dimensionado para M carros (L=40M, nobj=4M, olvido xM)
     ap.add_argument('--n', type=int, default=20)
@@ -393,10 +413,12 @@ def main():
     ap.add_argument('--pool', type=int, default=int(os.environ.get('JUACO_POOL', 0)))
     a = ap.parse_args()
     if a.recalcula:
-        recalcula(a.recalcula); return 0
+        res = recalcula(a.recalcula)
+        if a.recalcula_json: json.dump(res, open(a.recalcula_json, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        return 0
     carros = parse_carros(a.carros) if a.carros else list(ALINEACIONES.get(a.ronda, ['FABRICA'] * 9))
     if a.mundo_N is None: a.mundo_N = MUNDO_ATAJO.get(a.ronda)
-    if a.desde is None: a.desde = DESDE_SELLADA if a.ronda.startswith('sellada') else 4001
+    if a.desde is None: a.desde = DESDE_ATAJO.get(a.ronda, DESDE_SELLADA if a.ronda.startswith('sellada') else 4001)
     if a.humo:
         semillas = [4001, 4002]; pool = 0; etiqueta = f"humo_ronda{a.ronda}"
     else:

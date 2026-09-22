@@ -185,3 +185,34 @@
   - Arnés **43/43** (40 + N1 ×2 + N2). La 1.ª corrida dio 40/43: (L) no excluía el nuevo campo de diagnóstico `frac_sin_bueno_mundo`, que es None con diag = 0. Linajes, pizarra y rng eran idénticos (verificado aparte); corregido y declarado.
   - `test_tramposo` 30/30.
   - Humos de los 4 atajos con s4001, T = 5000: el pipeline escribe crudo, pizarra y resumen; contabilidad y reconstrucción de `t_fund` coherentes en todos. Sus veredictos a T = 5000 no significan nada.
+
+## v7: ERR-100 (R0 de nacimientos reales) y ERR-101 (control S-FUNDBORRA) — solo instrumento; no se tocó 5021–5040
+- **ERR-100 en el juez:**
+  - Por linaje-semilla: `R0_real = nac_reales/(muertes+1)`, `R0_real_eval` y `cruza_real` (R0 real ≥ 0.90 y 0 fundadores tras t = 10000).
+  - En las tablas: la mediana del R0 real sobre evaluables y cuántos cruzan con él.
+  - En monocultivo, SOLO y selladas: mediana del R0 real, si el grupo cruzaría con ella en (i), y mediana de `cola_final/descendientes`.
+  - **Solo se reporta; el criterio preregistrado no cambia.**
+- **Recálculo** con `--recalcula` de las 8 series corridas: t_fund y nacimientos reales reconstruidos desde la telemetría y verificados en 1160/1160 linajes-semilla. Los resúmenes quedan en `datos/recalculo_err100_*.json`.
+
+| serie | R0 preregistrado (mediana evaluables) | R0 de nacimientos reales (mediana evaluables) | cruzan / cruzan real | cola/desc (mediana) | veredicto por la letra |
+|---|---|---|---|---|---|
+| ronda 0 (9 FAB, 4003–4022) | 0.332 | 0.330 | 0/180 · 0/180 | — | no cruza |
+| ronda 1 oficial: O1 / S1 / H1 / FAB | — (20/20 casi inmortal) / 0.345 / 0.293 / 0.309 | — / 0.344 / 0.293 / 0.304 | 0 · 0 | — | nadie gana |
+| ronda 1 mono (9 O1) | 1.615 | **0.947** | 151/180 · 128/180 | 0.423 | CRUZA (con R0 real también cruzaría) |
+| ronda 1 solo (O1) | 0.681 | 0.657 | 1/20 · 1/20 | 0.06 | NO |
+| **S-MONO** (5001–5020) | 1.565 | **0.941** | 141/180 · 117/180 | 0.417 | CRUZA (con R0 real también cruzaría) |
+| S-SOLO-GRANDE | — (20/20 casi inmortal) | — | 0 · 0 | 1.0 | NO (casi inmortal) |
+| S-SIN-LIMPIEZA | 0.218 | 0.216 | 0 · 0 | 0.0 | NO |
+| S-FAB | 0.340 | 0.339 | 0 · 0 | 0.0 | NO |
+
+- **`carros/CTRL_O1_FUNDBORRA.py`** (sha 8106a9200ea3ad4d; `revisa_carro` PASA). El diff contra O1 (99436afa2715f028) tiene dos partes:
+  - el docstring de cabecera;
+  - una línea agregada en `nace()`, tras la línea 148: `if info.get('fundador'): self.suma = {}; self.n = {}`.
+  - El fundador arranca sin tabla, igual que el primero de la corrida; los hijos de la cola heredan igual que en O1.
+  - Fines de línea de O1 preservados.
+- **Humo de FUNDBORRA** (s4001, no sellada):
+  - O1: sus fundadores nacen con tabla (4 letras).
+  - CTRL: 13 fundadores con N = 1 y 122 con N = 9, **todos sin tabla**. Los hijos de la cola nacen con 4 letras.
+  - Dato de humo, no de serie: con N = 9 y T = 20000, CTRL tuvo 122 fundadores contra 6 de O1.
+- **Atajo** `--ronda sellada_fundborra`: 9 CTRL, semillas 5021–5040 por defecto, T = 100000, criterio de la ENMIENDA 3 y R0 real. Imprime las dos predicciones firmadas con SE CUMPLE / NO se cumple. Humo s4001, T = 5000: el pipeline escribe todo.
+- **Pruebas:** identidad 43/43; `test_tramposo` 30/30.

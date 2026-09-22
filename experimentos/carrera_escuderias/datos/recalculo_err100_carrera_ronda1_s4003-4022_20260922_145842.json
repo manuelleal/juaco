@@ -1,0 +1,99 @@
+{
+ "modo": "oficial",
+ "escuderias": {
+  "O1": {
+   "linajes_semilla": 20,
+   "cruzan": 0,
+   "evaluables": 0,
+   "casi_inmortales": 20,
+   "R0_eval_med": null,
+   "R0_med_todos": 154.0,
+   "semillas_que_cruza": 0,
+   "semillas": 20,
+   "gana": false,
+   "nac_reales_med": 0.0,
+   "fund_post_med": 0.0,
+   "sin_parir_med": 1.0,
+   "fund_post_incierto": 0,
+   "casi_inmortal_semillas": 20,
+   "R0_real_eval_med": null,
+   "cruzan_real": 0
+  },
+  "S1": {
+   "linajes_semilla": 20,
+   "cruzan": 0,
+   "evaluables": 20,
+   "casi_inmortales": 0,
+   "R0_eval_med": 0.345,
+   "R0_med_todos": 0.345,
+   "semillas_que_cruza": 0,
+   "semillas": 20,
+   "gana": false,
+   "nac_reales_med": 75.0,
+   "fund_post_med": 129.0,
+   "sin_parir_med": 0.757,
+   "fund_post_incierto": 0,
+   "casi_inmortal_semillas": 0,
+   "R0_real_eval_med": 0.344,
+   "cruzan_real": 0
+  },
+  "H1": {
+   "linajes_semilla": 20,
+   "cruzan": 0,
+   "evaluables": 20,
+   "casi_inmortales": 0,
+   "R0_eval_med": 0.293,
+   "R0_med_todos": 0.293,
+   "semillas_que_cruza": 0,
+   "semillas": 20,
+   "gana": false,
+   "nac_reales_med": 73.0,
+   "fund_post_med": 154.5,
+   "sin_parir_med": 0.783,
+   "fund_post_incierto": 0,
+   "casi_inmortal_semillas": 0,
+   "R0_real_eval_med": 0.293,
+   "cruzan_real": 0
+  },
+  "FABRICA": {
+   "linajes_semilla": 120,
+   "cruzan": 0,
+   "evaluables": 120,
+   "casi_inmortales": 0,
+   "R0_eval_med": 0.309,
+   "R0_med_todos": 0.309,
+   "semillas_que_cruza": 0,
+   "semillas": 20,
+   "gana": null,
+   "nac_reales_med": 73.0,
+   "fund_post_med": 147.0,
+   "sin_parir_med": 0.779,
+   "fund_post_incierto": 0,
+   "casi_inmortal_semillas": 0,
+   "R0_real_eval_med": 0.304,
+   "cruzan_real": 0
+  }
+ },
+ "predicciones": [
+  [
+   "H1: R0 mediano dentro de +-0.10 de la mediana de los FABRICA",
+   "H1 0.293 vs FABRICA 0.309 (diferencia -0.016; dentro de +-0.10)"
+  ],
+  [
+   "FABRICA: R0 mediano 0.28-0.45",
+   "FABRICA 0.309 (dentro de 0.28-0.45)"
+  ],
+  [
+   "O1: cruza en >= 10/20 semillas (p 0.55); gana la ronda >= 15/20 (p 0.30)",
+   "O1 cruza en 0/20 (< 10 por 20); gana: no"
+  ],
+  [
+   "al menos un linaje O1-semilla 'casi inmortal' (p 0.80); O1 'casi inmortal' en >= 10/20 (p 0.75)",
+   "O1 casi inmortal en 20/20 semillas (>= 1; >= 10 por 20)"
+  ],
+  [
+   "S1 no cruza (p 0.95)",
+   "S1 cruza en 0/20 (NO cruza)"
+  ]
+ ]
+}
