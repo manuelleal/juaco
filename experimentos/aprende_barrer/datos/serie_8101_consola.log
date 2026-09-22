@@ -1,0 +1,168 @@
+CORRE_APRENDE · aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427 · python 3.14.2 · pool 6
+  pista.py fb0ba16ada56eabc · juez.py 9621e095000aaa1a · corre_aprende.py 9b8f6b3fdb923190 · carros {'APR': '4402aa5142065c72', 'APR_SIN_HERENCIA': '7c5ca65079a70383', 'FABRICA': '2ebee3e99ea5a33a', 'O1': '99436afa2715f028'}
+  series ['apr', 'fab', 'o1', 'sinher'] · semillas 8101-8120 · T 100000 · APR_AZAR.P_AZAR = None
+  CHEQUEO ESTATICO APR: PASA
+  CHEQUEO ESTATICO APR_SIN_HERENCIA: PASA
+  CHEQUEO ESTATICO FABRICA: PASA
+  CHEQUEO ESTATICO O1: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  IDENTIDAD CORTA APR: OPCION 0 == FABRICA (N 9, s 8001, T 2000): OK
+  [  147.8s] apr semilla 8105 (142.4s) R0 pista 0.3902
+  [  148.9s] apr semilla 8101 (143.6s) R0 pista 0.3839
+  [  150.0s] apr semilla 8102 (144.7s) R0 pista 0.3858
+  [  152.7s] apr semilla 8103 (147.4s) R0 pista 0.3782
+  [  153.0s] apr semilla 8106 (147.6s) R0 pista 0.3799
+  [  154.4s] apr semilla 8104 (149.1s) R0 pista 0.383
+  [  291.7s] apr semilla 8107 (143.9s) R0 pista 0.3762
+  [  296.9s] apr semilla 8109 (146.8s) R0 pista 0.3979
+  [  297.5s] apr semilla 8110 (144.8s) R0 pista 0.4035
+  [  300.4s] apr semilla 8108 (151.5s) R0 pista 0.3786
+  [  301.7s] apr semilla 8112 (147.4s) R0 pista 0.3987
+  [  301.8s] apr semilla 8111 (148.8s) R0 pista 0.3879
+  [  443.7s] apr semilla 8113 (152.1s) R0 pista 0.3933
+  [  446.4s] apr semilla 8114 (149.5s) R0 pista 0.3697
+  [  447.4s] apr semilla 8115 (149.9s) R0 pista 0.3957
+  [  451.3s] apr semilla 8116 (150.9s) R0 pista 0.3723
+  [  451.4s] apr semilla 8118 (149.5s) R0 pista 0.3676
+  [  451.6s] apr semilla 8117 (149.9s) R0 pista 0.3752
+  [  580.4s] apr semilla 8120 (134.0s) R0 pista 0.4049
+  [  581.7s] apr semilla 8119 (138.0s) R0 pista 0.3817
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427_apr.json (sha 33b29f4175891074) · escrituras en la pizarra 0
+
+== SERIE apr (APR x9) · 20 semillas 8101-8120 · T 100000
+  R0 por linaje-semilla: mediana 0.3866 · R0 de la pista (mediana por semilla) 0.3835 · vida mediana 200.0
+  ENMIENDA 3: (i) mediana R0 evaluables 0.387 · (ii) sin fundadores tras 10000 0.0 · (iii) evaluables 180/180 · casi inmortales 0 · linajes que cruzan 0 -> NO CRUZA
+  causas de muerte hambre/sed/veneno/sal 79/15/11980/20337 (0%/0%/37%/63%)
+  fraccion de pasos SIN ningun objeto bueno en el mundo: mediana 0.0113 (por semilla [0.0124, 0.0107, 0.0117, 0.0153, 0.0125, 0.011, 0.0167, 0.01, 0.0065, 0.0106, 0.0135, 0.0102, 0.0132, 0.0121, 0.0119, 0.0082, 0.0145, 0.0068, 0.0087, 0.0108])
+  limpieza FISICA (juez: B/D a sabiendas con el golpe en la necesidad mas llena): por cuerpo 4.4215 · por linaje-semilla 806.0 · mordidas B+D por linaje-semilla 860.5
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180
+  OPCION (telemetria del carro, no puntua): oportunidades 1595246 · mordidas 153276 · tasa 0.0961 · por cuarto de T [0.1117, 0.0917, 0.0913, 0.0901] · ULTIMO CUARTO 0.0901 (-> P_AZAR de APR_AZAR si serie apr)
+    tasa por EDAD del cuerpo (cortes [50, 100, 200, 400, 800, 1600]): [0.2061, 0.2302, 0.2003, 0.0694, 0.053, 0.0565, 0.0442]
+    tasa por INDICE DEL CUERPO en el linaje (cortes [1, 5, 20, 50, 100, 200, 400]): [0.1027, 0.1201, 0.1224, 0.1031, 0.092, 0.091, 0.0932, None] (oportunidades [10222, 27701, 113757, 257079, 458545, 715619, 12323, 0])
+    CUANDO: tasa con algun bueno en el mundo 0.098 vs SIN ningun bueno 0.0795 (oportunidades [1433126, 162120])
+    por min(E,Ag) predicho tras morder (cortes [0.0, 0.3, 0.6, 1.0]): con bueno [0.1404, 0.2121, 0.2005, 0.0257, 0.0031] · sin bueno [0.1265, 0.1752, 0.1621, 0.02, 0.0019]
+    DESVIO respecto de la boca de FABRICA (por oportunidad): ANADIDAS (limpia donde FABRICA no) por cuarto [0.0012, 0.0001, 0.0001, 0.0001] · QUITADAS (se contiene donde FABRICA morderia) por cuarto [0.0575, 0.0546, 0.0541, 0.0533]
+      anadidas con bueno / SIN bueno [0.0004, 0.0004] · quitadas con / sin [0.0546, 0.0573] · anadidas por edad [0.0001, 0.0003, 0.0004, 0.0005, 0.0007, 0.0004, 0.0003] · por indice del cuerpo [0.0131, 0.0022, 0.0015, 0.0005, 0.0002, 0.0001, 0.0001, None]
+      QUITADAS por edad [0.1089, 0.0774, 0.0597, 0.0256, 0.0392, 0.0494, 0.0628] · por INDICE DEL CUERPO en el linaje [0.0082, 0.0613, 0.0694, 0.0545, 0.0542, 0.0536, 0.0475, None]
+    FABRICA habria mordido 0.1505 de esas oportunidades · p media 0.0961 · |delta TD| medio 0.0426
+    Q final (mediana por linaje-semilla; rasgos [1, u, u_tras, sin_bueno, dist]): no morder [-0.79, -0.2805, 0.0653, 0.0562, -0.1646, 0.381] · morder [-0.9288, -0.5541, 0.3407, 0.0558, -0.1278, -0.0373]
+    correccion final al logit de la boca de FABRICA, BETA*(Q1-Q0) (mediana; > 0 = limpia mas): {'g0=0 post=-0.2': -2.453, 'g0=0 post=0.1': -2.3675, 'g0=0 post=0.4': -2.3475, 'g0=0 post=0.8': -2.312, 'g0=0 post=1.2': -1.774, 'g0=1 post=-0.2': -2.1035, 'g0=1 post=0.1': -2.1255, 'g0=1 post=0.4': -2.0795, 'g0=1 post=0.8': -2.0605, 'g0=1 post=1.2': -1.555}
+  [  742.5s] fab semilla 8104 (160.2s) R0 pista 0.3304
+  [  743.1s] fab semilla 8106 (160.8s) R0 pista 0.3332
+  [  743.7s] fab semilla 8105 (161.4s) R0 pista 0.3385
+  [  743.9s] fab semilla 8101 (161.6s) R0 pista 0.3227
+  [  744.3s] fab semilla 8103 (162.0s) R0 pista 0.3262
+  [  744.9s] fab semilla 8102 (162.6s) R0 pista 0.3373
+  [  905.1s] fab semilla 8110 (161.2s) R0 pista 0.3405
+  [  905.9s] fab semilla 8109 (162.2s) R0 pista 0.341
+  [  905.9s] fab semilla 8111 (161.6s) R0 pista 0.3443
+  [  906.0s] fab semilla 8108 (162.9s) R0 pista 0.3329
+  [  906.3s] fab semilla 8107 (163.8s) R0 pista 0.3206
+  [  910.9s] fab semilla 8112 (166.0s) R0 pista 0.3291
+  [ 1074.0s] fab semilla 8113 (168.9s) R0 pista 0.3194
+  [ 1076.2s] fab semilla 8115 (170.3s) R0 pista 0.3261
+  [ 1077.3s] fab semilla 8114 (171.5s) R0 pista 0.3228
+  [ 1077.6s] fab semilla 8116 (171.6s) R0 pista 0.3332
+  [ 1078.2s] fab semilla 8117 (172.0s) R0 pista 0.3147
+  [ 1078.5s] fab semilla 8118 (167.6s) R0 pista 0.3456
+  [ 1219.4s] fab semilla 8119 (145.4s) R0 pista 0.335
+  [ 1222.1s] fab semilla 8120 (145.9s) R0 pista 0.3275
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427_fab.json (sha d42f062fe1e8f0c5) · escrituras en la pizarra 0
+
+== SERIE fab (FABRICA x9) · 20 semillas 8101-8120 · T 100000
+  R0 por linaje-semilla: mediana 0.3348 · R0 de la pista (mediana por semilla) 0.3317 · vida mediana 200.0
+  ENMIENDA 3: (i) mediana R0 evaluables 0.335 · (ii) sin fundadores tras 10000 0.0 · (iii) evaluables 180/180 · casi inmortales 0 · linajes que cruzan 0 -> NO CRUZA
+  causas de muerte hambre/sed/veneno/sal 8/1/16499/24842 (0%/0%/40%/60%)
+  fraccion de pasos SIN ningun objeto bueno en el mundo: mediana 0.0038 (por semilla [0.0035, 0.0056, 0.0025, 0.0042, 0.002, 0.0021, 0.004, 0.0053, 0.0059, 0.0027, 0.0068, 0.004, 0.0009, 0.0023, 0.0037, 0.004, 0.0025, 0.0035, 0.0039, 0.0058])
+  limpieza FISICA (juez: B/D a sabiendas con el golpe en la necesidad mas llena): por cuerpo 4.3956 · por linaje-semilla 1014.5 · mordidas B+D por linaje-semilla 1124.0
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180
+  [ 1473.5s] o1 semilla 8104 (250.9s) R0 pista 1.9897
+  [ 1475.0s] o1 semilla 8106 (252.4s) R0 pista 1.7742
+  [ 1475.0s] o1 semilla 8101 (252.4s) R0 pista 1.7536
+  [ 1478.0s] o1 semilla 8105 (255.4s) R0 pista 1.7379
+  [ 1478.5s] o1 semilla 8102 (255.9s) R0 pista 2.139
+  [ 1478.8s] o1 semilla 8103 (256.3s) R0 pista 1.1875
+  [ 1725.6s] o1 semilla 8109 (250.6s) R0 pista 1.8462
+  [ 1727.7s] o1 semilla 8107 (254.1s) R0 pista 1.6619
+  [ 1729.7s] o1 semilla 8108 (254.7s) R0 pista 2.178
+  [ 1731.6s] o1 semilla 8112 (252.7s) R0 pista 1.6564
+  [ 1733.0s] o1 semilla 8111 (254.5s) R0 pista 1.5374
+  [ 1734.5s] o1 semilla 8110 (256.5s) R0 pista 1.5043
+  [ 1972.6s] o1 semilla 8113 (247.0s) R0 pista 1.7547
+  [ 1976.2s] o1 semilla 8114 (248.6s) R0 pista 1.7929
+  [ 1976.6s] o1 semilla 8115 (247.0s) R0 pista 1.6667
+  [ 1983.3s] o1 semilla 8116 (251.8s) R0 pista 1.5938
+  [ 1984.6s] o1 semilla 8118 (250.1s) R0 pista 1.8814
+  [ 1986.8s] o1 semilla 8117 (253.7s) R0 pista 1.4978
+  [ 2191.0s] o1 semilla 8119 (218.4s) R0 pista 1.9179
+  [ 2196.5s] o1 semilla 8120 (220.2s) R0 pista 1.4829
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427_o1.json (sha 0226a4c98182aeda) · escrituras en la pizarra 0
+
+== SERIE o1 (O1 x9) · 20 semillas 8101-8120 · T 100000
+  R0 por linaje-semilla: mediana 1.729 · R0 de la pista (mediana por semilla) 1.7458 · vida mediana 2904.5
+  ENMIENDA 3: (i) mediana R0 evaluables 1.729 · (ii) sin fundadores tras 10000 0.8056 · (iii) evaluables 180/180 · casi inmortales 0 · linajes que cruzan 145 -> CRUZA
+  causas de muerte hambre/sed/veneno/sal 1428/1397/645/641 (35%/34%/16%/16%)
+  fraccion de pasos SIN ningun objeto bueno en el mundo: mediana 0.0474 (por semilla [0.0416, 0.0474, 0.0586, 0.0446, 0.0499, 0.0486, 0.051, 0.0406, 0.0416, 0.0484, 0.0487, 0.0425, 0.0509, 0.0447, 0.0471, 0.0503, 0.0621, 0.0473, 0.0456, 0.0461])
+  limpieza FISICA (juez: B/D a sabiendas con el golpe en la necesidad mas llena): por cuerpo 16.5742 · por linaje-semilla 389.0 · mordidas B+D por linaje-semilla 391.0
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180
+  [ 2365.1s] sinher semilla 8101 (168.2s) R0 pista 0.291
+  [ 2366.5s] sinher semilla 8105 (169.5s) R0 pista 0.2959
+  [ 2367.3s] sinher semilla 8104 (170.4s) R0 pista 0.2961
+  [ 2369.2s] sinher semilla 8103 (172.2s) R0 pista 0.2876
+  [ 2369.6s] sinher semilla 8106 (172.7s) R0 pista 0.2795
+  [ 2369.8s] sinher semilla 8102 (172.8s) R0 pista 0.281
+  [ 2534.5s] sinher semilla 8109 (167.1s) R0 pista 0.3012
+  [ 2537.0s] sinher semilla 8108 (170.5s) R0 pista 0.2835
+  [ 2537.0s] sinher semilla 8111 (167.4s) R0 pista 0.2872
+  [ 2539.0s] sinher semilla 8107 (173.9s) R0 pista 0.281
+  [ 2540.8s] sinher semilla 8110 (171.6s) R0 pista 0.2875
+  [ 2541.2s] sinher semilla 8112 (171.4s) R0 pista 0.2823
+  [ 2701.5s] sinher semilla 8114 (164.5s) R0 pista 0.2796
+  [ 2702.7s] sinher semilla 8113 (168.2s) R0 pista 0.2935
+  [ 2704.0s] sinher semilla 8115 (166.9s) R0 pista 0.2811
+  [ 2706.6s] sinher semilla 8116 (167.6s) R0 pista 0.3081
+  [ 2708.5s] sinher semilla 8117 (167.7s) R0 pista 0.2748
+  [ 2711.2s] sinher semilla 8118 (170.0s) R0 pista 0.2719
+  [ 2849.7s] sinher semilla 8119 (148.1s) R0 pista 0.282
+  [ 2852.4s] sinher semilla 8120 (149.7s) R0 pista 0.307
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427_sinher.json (sha 15743e9a1ca32f8f) · escrituras en la pizarra 0
+
+== SERIE sinher (APR_SIN_HERENCIA x9) · 20 semillas 8101-8120 · T 100000
+  R0 por linaje-semilla: mediana 0.2935 · R0 de la pista (mediana por semilla) 0.2853 · vida mediana 200.0
+  ENMIENDA 3: (i) mediana R0 evaluables 0.294 · (ii) sin fundadores tras 10000 0.0 · (iii) evaluables 180/180 · casi inmortales 0 · linajes que cruzan 0 -> NO CRUZA
+  causas de muerte hambre/sed/veneno/sal 11/4/16325/24477 (0%/0%/40%/60%)
+  fraccion de pasos SIN ningun objeto bueno en el mundo: mediana 0.0029 (por semilla [0.0032, 0.0018, 0.0036, 0.0015, 0.0029, 0.0025, 0.0042, 0.0016, 0.0029, 0.0029, 0.0017, 0.0016, 0.002, 0.0032, 0.0046, 0.004, 0.0028, 0.0032, 0.0037, 0.0015])
+  limpieza FISICA (juez: B/D a sabiendas con el golpe en la necesidad mas llena): por cuerpo 4.5831 · por linaje-semilla 1045.5 · mordidas B+D por linaje-semilla 1171.5
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180
+  OPCION (telemetria del carro, no puntua): oportunidades 1495957 · mordidas 210846 · tasa 0.1409 · por cuarto de T [0.1494, 0.1378, 0.1394, 0.1374] · ULTIMO CUARTO 0.1374 (-> P_AZAR de APR_AZAR si serie apr)
+    tasa por EDAD del cuerpo (cortes [50, 100, 200, 400, 800, 1600]): [0.2815, 0.2723, 0.2143, 0.0707, 0.0868, 0.1018, 0.1144]
+    tasa por INDICE DEL CUERPO en el linaje (cortes [1, 5, 20, 50, 100, 200, 400]): [0.0984, 0.1704, 0.1701, 0.144, 0.1378, 0.1389, 0.1375, None] (oportunidades [11999, 19049, 82970, 195127, 338244, 665525, 183043, 0])
+    CUANDO: tasa con algun bueno en el mundo 0.1419 vs SIN ningun bueno 0.1239 (oportunidades [1419596, 76361])
+    por min(E,Ag) predicho tras morder (cortes [0.0, 0.3, 0.6, 1.0]): con bueno [0.2095, 0.3062, 0.3221, 0.0547, 0.0109] · sin bueno [0.1921, 0.2873, 0.3053, 0.0469, 0.0118]
+    DESVIO respecto de la boca de FABRICA (por oportunidad): ANADIDAS (limpia donde FABRICA no) por cuarto [0.0095, 0.0099, 0.0096, 0.0097] · QUITADAS (se contiene donde FABRICA morderia) por cuarto [0.0037, 0.0024, 0.0025, 0.0025]
+      anadidas con bueno / SIN bueno [0.0096, 0.0118] · quitadas con / sin [0.0028, 0.0031] · anadidas por edad [0.0003, 0.0017, 0.0023, 0.0038, 0.015, 0.0181, 0.0198] · por indice del cuerpo [0.0123, 0.0097, 0.0105, 0.0094, 0.0097, 0.0097, 0.0094, None]
+      QUITADAS por edad [0.0015, 0.0042, 0.0055, 0.0026, 0.0018, 0.0023, 0.0033] · por INDICE DEL CUERPO en el linaje [0.0088, 0.0079, 0.0047, 0.0029, 0.0024, 0.0025, 0.0025, None]
+    FABRICA habria mordido 0.1341 de esas oportunidades · p media 0.1411 · |delta TD| medio 0.0868
+    Q final (mediana por linaje-semilla; rasgos [1, u, u_tras, sin_bueno, dist]): no morder [-0.0062, -0.0244, -0.0226, 0.0, -0.0069, -0.0011] · morder [-0.0016, -0.0022, -0.0011, 0.0, -0.0008, 0.0]
+    correccion final al logit de la boca de FABRICA, BETA*(Q1-Q0) (mediana; > 0 = limpia mas): {'g0=0 post=-0.2': 0.023, 'g0=0 post=0.1': 0.091, 'g0=0 post=0.4': 0.126, 'g0=0 post=0.8': 0.197, 'g0=0 post=1.2': 0.2475, 'g0=1 post=-0.2': 0.0375, 'g0=1 post=0.1': 0.0975, 'g0=1 post=0.4': 0.156, 'g0=1 post=0.8': 0.2605, 'g0=1 post=1.2': 0.2995}
+
+PAREADOS (por semilla: mediana del R0 de los 9 linajes; gana = semillas en que la primera supera a la segunda)
+  apr vs fab: gana 20/20 · diferencia mediana 0.0513 · {8101: 0.0665, 8102: 0.0407, 8103: 0.1073, 8104: 0.0887, 8105: 0.0323, 8106: 0.0357, 8107: 0.0052, 8108: 0.034, 8109: 0.0484, 8110: 0.0609, 8111: 0.0091, 8112: 0.1292, 8113: 0.0898, 8114: 0.0843, 8115: 0.0657, 8116: 0.0542, 8117: 0.0702, 8118: 0.0226, 8119: 0.0289, 8120: 0.0409}
+  apr vs sinher: gana 20/20 · diferencia mediana 0.0941 · {8101: 0.0843, 8102: 0.1029, 8103: 0.0978, 8104: 0.1037, 8105: 0.0905, 8106: 0.1038, 8107: 0.0612, 8108: 0.0646, 8109: 0.0869, 8110: 0.1048, 8111: 0.0767, 8112: 0.1681, 8113: 0.1164, 8114: 0.1129, 8115: 0.1136, 8116: 0.0637, 8117: 0.118, 8118: 0.0845, 8119: 0.078, 8120: 0.0674}
+  sinher vs fab: gana 1/20 · diferencia mediana -0.0414 · {8101: -0.0178, 8102: -0.0622, 8103: 0.0095, 8104: -0.015, 8105: -0.0582, 8106: -0.0681, 8107: -0.056, 8108: -0.0306, 8109: -0.0385, 8110: -0.0439, 8111: -0.0676, 8112: -0.0389, 8113: -0.0266, 8114: -0.0286, 8115: -0.0479, 8116: -0.0095, 8117: -0.0478, 8118: -0.0619, 8119: -0.0491, 8120: -0.0265}
+
+PREDICCIONES FIRMADAS (PREREGISTRO_aprende.md) y lo medido
+  P1 APR NO cruza por la ENMIENDA 3 (p 0.97) -> SE CUMPLE
+  P2 APR: mediana del R0 de los linajes-semilla en 0.32-0.45 -> SE CUMPLE
+  P3 FABRICA NO cruza y su mediana cae en 0.28-0.40 (sellada 5001-5020: 0.34) -> SE CUMPLE
+  P4 O1 CRUZA (p 0.85; sellada 5001-5020: 1.565) -> SE CUMPLE
+  P5 APR NO DESCUBRE la limpieza (p 0.93): anadidas en el ultimo cuarto < 0.02 por oportunidad O correccion(sin bueno) - correccion(con bueno) < 0.5 logit -> SE CUMPLE
+  P6 APR aprende a CONTENERSE (p 0.85): quitadas en el ultimo cuarto >= 0.03 por oportunidad -> SE CUMPLE
+  P7 APR > FABRICA en >= 15/20 semillas con diferencia mediana >= 0.03 (p 0.55) -> SE CUMPLE
+  P8 APR > APR_SIN_HERENCIA en >= 15/20 semillas con diferencia mediana >= 0.03 (p 0.45) -> SE CUMPLE
+  P9 APR > APR_AZAR en >= 15/20 semillas con diferencia mediana >= 0.03 (p 0.70) -> sin la serie
+  P10 APR_SIN_HERENCIA y APR_AZAR NO cruzan (p 0.97) -> SE CUMPLE
+  P11 APR: fraccion de pasos sin ningun bueno en el mundo 0.003-0.03 (el mundo no se ensucia; O1 ~0.05) -> SE CUMPLE
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427_resumen.json
+Terminado en 2852.6s
