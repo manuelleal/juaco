@@ -111,6 +111,33 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
   de la fase 10).
 
+## ENMIENDA 5 (22-sep-2026, pedido del director) — RONDA 2: solo Opus en combos, "estabilizar el bicho"
+
+**Antecedentes:** el cruce de O1 se sostiene sin la memoria del fundador (S-FUNDBORRA: R0 real 0.941, 148/180), pero con poco margen en la
+cuenta estricta. El camino A mostró que la bacteria que aprende no descubre la limpieza (es un bien público) y que el problema de FABRICA es
+**cuándo** muerde (lo malo lo muerde 2.6 veces más que O1).
+
+**Equipos:** O2, O3 y O4, cada uno un **combo de 3 Opus**: diseñador, biólogo y crítico-probador. Rival: **O1**, con las mismas reglas nuevas.
+
+**Reglas nuevas (las impone la pista, no la buena fe):**
+1. **Fundador limpio:** cuando un linaje se extingue, el fundador es una **instancia nueva** del carro, sin nada de la memoria del linaje (opción
+   `--fundador_limpio` de la pista). Los hijos que nacen de la cola heredan como siempre.
+2. **Métrica que decide:** R0 de **nacimientos reales**. Un linaje-semilla cruza si su R0 real ≥ 0.90 y tiene 0 fundadores después de t = 10000.
+   El R0 preregistrado viejo se reporta al lado.
+3. **Un equipo gana la ronda 2** si cruza en ≥ 15/20 semillas selladas en **las dos** pistas:
+   (a) monocultivo (9 carros del equipo) y (b) **pista mixta** (3 de cada uno de O2, O3 y O4; en otra serie, 3 del equipo + 6 FABRICA).
+   Con las dos se sabe si se sostiene sin depender de vecinos iguales.
+4. Prohibiciones del §4 intactas. `revisa_carro` y la auditoría de cada carro antes de correr. Los carros de un equipo no leen los de otro.
+5. **Semillas:** práctica de los equipos **9001–9099**, cada uno en su tercio (O2 9001–9033, O3 9034–9066, O4 9067–9099); serie oficial
+   **9101–9120**; réplica sellada **9121–9140**.
+6. Cada equipo tiene un tope de **12 humos** de un proceso con T ≤ 30000. Su bitácora registra quién propuso cada cambio (diseñador, biólogo o
+   crítico), qué se predijo y qué salió.
+
+**Predicciones firmadas del coordinador (antes de lanzar a los equipos):**
+- Al menos un equipo gana la ronda 2 en monocultivo: probabilidad 0.50.
+- En pista mixta con 6 FABRICA gana alguno: 0.25.
+- O1 con fundador limpio cruza en monocultivo con R0 real: 0.60 (S-FUNDBORRA ya lo sugiere).
+
 ## AUDITORÍA DE LA SERIE SELLADA (22-sep-2026): SE SOSTIENE CON RESERVAS. ERR-100 y ERR-101
 
 **Letra declarable (ENMIENDA 4), sin cambios:** *"en la pista escalada, un linaje O1 mortal sostiene R0 ≥ 0.9 cuando comparte el mundo con otros O1;
