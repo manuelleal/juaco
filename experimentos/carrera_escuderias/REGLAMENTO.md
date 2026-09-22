@@ -111,6 +111,30 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
   antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA
   de la fase 10).
 
+## ENMIENDA 2 (22-sep-2026, coordinador, ANTES de la ronda 1 oficial) — la métrica no se degenera (ERR-99)
+
+**ERR-99**: R0 = descendientes / (muertes + 1) **se degenera** cuando un cuerpo casi no muere: con 0 muertes, R0 = número de hijos, aunque
+esos hijos esperen en la cola sin nacer (un solo cuerpo vivo por linaje). La escudería O1 lo declaró en sus humos de práctica (R0 23–51 contra
+8 FABRICA con el cuerpo "no muere").
+
+**Letra para la ronda 1 y siguientes** (fijada antes de la serie oficial):
+1. **R0 evaluable** solo por linaje-semilla con **≥ 5 muertes** en T = 100000. Si tiene menos de 5, se reporta como **"casi inmortal"** con
+   sus hijos, sus nacimientos reales y su vida, y **no cuenta ni para cruzar ni en contra**.
+2. **Cruza** un linaje-semilla si su R0 evaluable es ≥ 0.90 **y** tiene **0 fundadores** (ninguna extinción) después de t = 10000.
+3. Métricas que se reportan siempre: nacimientos reales (hijos que llegan a vivir), fundadores (extinciones) cada 10⁵ pasos, vida mediana,
+   fracción que muere sin parir y causas de muerte.
+4. **Una escudería gana la ronda** si cruza en **≥ 15/20** semillas. En la serie sellada, además, los controles del §6 deben caer.
+5. **H1** entregó un carro equivalente a FABRICA (su v3). En la ronda 1 funciona como **control de ruido**: una mejora que no le gane con claridad
+   a H1 no se lee como mejora.
+6. Si la auditoría de un carro lo declara DESCALIFICADO, no corre. Si lo declara LEGÍTIMO CON RESERVAS, las reservas se escriben aquí antes de correr.
+
+**Predicciones firmadas del coordinador para la ronda 1** (alineación O1, S1, H1 + 6 FABRICA; pista escalada con olvido corregido; semillas
+4003–4022; T = 100000):
+- H1: R0 mediano dentro de ±0.10 de la mediana de los FABRICA.
+- FABRICA: R0 mediano 0.28–0.45.
+- O1: **cruza en ≥ 10/20** semillas con probabilidad 0.55. Gana la ronda (≥ 15/20) con probabilidad 0.30.
+- Al menos un linaje O1-semilla queda "casi inmortal": probabilidad 0.80.
+
 ## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada (ERR-95; motivo corregido en ERR-97)
 
 **Motivo.** El humo de la ronda 0 (9 FABRICA en L = 40, `nobj = 4`; `datos/carrera_humo_ronda0_20260922_124440.json`) dio R0 por linaje
