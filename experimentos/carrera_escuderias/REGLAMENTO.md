@@ -82,6 +82,26 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
 - Los equipos Haiku pueden no alcanzar a diseñar. Eso también es un dato.
 - Si se cae la API de Opus (como el 21-sep), la ronda se repite completa, sin medias rondas.
 
+## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada
+
+**Motivo.** El humo de la ronda 0 (9 FABRICA en L = 40, `nobj = 4`; `datos/carrera_humo_ronda0_20260922_124440.json`) dio R0 por linaje
+0.272 contra 0.44–0.52 de un carro SOLO, y la causa medida fue la **escasez**: con 9 cuerpos, la comida y el agua se agotan y el mundo queda
+~86 % veneno y sal. Así, la carrera mediría escasez y no interacción.
+
+**Cambio.** Con N carros, la pista usa **L = 40·N y `nobj` = 4·N**: la misma densidad y los mismos recursos por cuerpo que el mundo de un
+solo cuerpo. Con N = 1 es exactamente la pista original, así que la identidad con `organismo_f9c` se conserva (el arnés debe volver a pasar).
+Todo lo demás del reglamento queda igual (costos, aparición de objetos, reproducción, recompensas).
+
+**Condición técnica.** Si la percepción o el movimiento del carro de fábrica dependen de L o de `nobj` (por ejemplo, si ve el anillo entero y
+recibe 9 veces más objetos), se reporta **antes** de correr y se decide aparte. No se adapta el carro sin avisar.
+
+**Predicción firmada (coordinador, antes de correr).** Ronda 0 en la pista escalada, 9 FABRICA: R0 por linaje con mediana **0.35–0.55**, es
+decir, cerca del SOLO. Si baja de 0.30, queda un efecto de competencia que no es escasez y se estudia antes de la ronda 1. Si pasa de 0.60,
+la sola presencia de otros cuerpos ayuda (se verifica con el control SOLO en la misma pista).
+
+**Además, fijado:** `rep_acum = 0` (la referencia 0.395). El control SOLO se corre **en la pista**, no con el original. La pizarra se guarda
+completa aparte de la telemetría.
+
 ## 9. Plan de construcción
 
 1. Pista para varios cuerpos + arnés de identidad con un carro (creador Opus + compilador para el gemelo).
