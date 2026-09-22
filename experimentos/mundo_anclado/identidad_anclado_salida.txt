@@ -1,0 +1,26 @@
+IDENTIDAD ANCLADO · organismo_f9c (sha 9dd1fb91ecec35ae) vs organismo_anclado (sha e689c2952b1991a4) · brazos = corre_bloque2.BRAZOS · T=20000
+A. perillas apagadas (olv_mal=0, anc_mide=0): dict completo identico
+  OK   NADA     s1 acum=0  claves=76  difs=[]  muertes=55 desc=8
+  OK   NADA     s2 acum=0  claves=76  difs=[]  muertes=48 desc=6
+  OK   NADA     s1 acum=1  claves=77  difs=[]  muertes=66 desc=14
+  OK   REL      s1 acum=0  claves=76  difs=[]  muertes=37 desc=13
+  OK   REL      s2 acum=1  claves=77  difs=[]  muertes=39 desc=15
+  OK   ORACULO  s1 acum=0  claves=76  difs=[]  muertes=30 desc=11
+  OK   ORACULO  s2 acum=1  claves=77  difs=[]  muertes=34 desc=19
+  OK   REL_BAR  s1 acum=0  claves=76  difs=[]  muertes=63 desc=8
+  OK   RENACE   s1 acum=0  claves=61  difs=[]  muertes=12 desc=13
+  OK   RENACE   s1 acum=1  claves=62  difs=[]  muertes=12 desc=19
+B. solo medida (anc_mide=1): claves viejas identicas + una clave nueva 'anclado'
+  OK   NADA     s1 acum=0  extra=['anclado']  difs=[]  pasos=20000
+  OK   ORACULO  s1 acum=0  extra=['anclado']  difs=[]  pasos=20000
+  OK   RENACE   s1 acum=1  extra=['anclado']  difs=[]  pasos=20000
+A'. T=100000 (ORACULO s1 acum=0), perillas apagadas
+  OK   ORACULO  s1 T=100000  difs=[]  muertes=144 desc=54
+C. ERR-38: la perilla NO es inerte (NADA s1, T=20000, olv_mal=0.004)
+  OK   olv_mal cambia la corrida
+  OK   ciego != selectiva
+  OK   f_mala baja con la dilucion (0.847 -> 0.793); ciego 0.803
+  OK   selectiva solo quita B/D: rem={'D': 125, 'B': 128}
+  OK   ciego quita tambien A/C: rem={'B': 116, 'D': 115, 'C': 14, 'A': 9}
+
+TODO PASA en 82.4s
