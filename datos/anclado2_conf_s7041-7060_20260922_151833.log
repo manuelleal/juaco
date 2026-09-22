@@ -1,0 +1,22 @@
+MUNDO ANCLADO v2 · CONFIRMACION v2 7041-7060 tox=1.25 h=0.003 brazos ['NADA', 'ORACULO', 'REL', 'REL_BAR', 'ORACULO_CIEGO', 'NADA_CIEGO', 'RENACE'] · 2026-09-22 15:18:33 · T=100000
+  organismo_anclado e689c2952b1991a4 (esperado e689c2952b1991a4)
+  PREREGISTRO v2 sha 8404b03e172acf6f
+  OK   regla14 NADA           = corre_bloque2.BRAZOS['NADA'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 REL            = corre_bloque2.BRAZOS['REL'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 ORACULO        = corre_bloque2.BRAZOS['ORACULO'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 REL_BAR        = corre_bloque2.BRAZOS['REL_BAR'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 ORACULO_CIEGO  = corre_bloque2.BRAZOS['ORACULO'] + ['anc_mide', 'olv_ciego', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 NADA_CIEGO     = corre_bloque2.BRAZOS['NADA'] + ['anc_mide', 'olv_ciego', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 RENACE         = corre_bloque2.BRAZOS['RENACE'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  crudo -> C:\Users\User\Documents\PROYECTOS\JUACO\anclado\datos\anclado2_conf_s7041-7060_20260922_151833.json (sha 8bc6d6fe0526906d)
+
+  medianas: NADA R0=0.3034 vida=100.0 f_mala=0.7874 J=0.2129  ORACULO R0=1.1612 vida=670.75 f_mala=0.8339 J=0.9751  REL R0=0.9478 vida=649.5 f_mala=0.8314 J=0.9407  REL_BAR R0=0.3706 vida=105.0 f_mala=0.786 J=0.1473  ORACULO_CIEGO R0=0.9228 vida=633.0 f_mala=0.8452 J=0.9779  NADA_CIEGO R0=0.2456 vida=90.0 f_mala=0.8002 J=0.1755  RENACE R0=3.9697 vida=1403.5 f_mala=0.8443 J=None
+  ANC-1  NADA no sostiene: R0 mediana 0.3034 en [0.1, 0.3] -> CAE
+  ANC-2  ORACULO sostiene: R0 mediana 1.1612 >= 1.0 -> PASA
+  REL    (se MIDE, no se calibra): R0 0.9478; posicion en el espacio NADA-ORACULO = 0.751  (prediccion P3: 0.55-0.90)
+  CTL-1  BARAJA (contenido): REL_BAR posicion 0.078 <= 0.35 y A12(REL>REL_BAR) 1.0 >= 0.75 -> PASA
+  CTL-2  PLACEBO (dilucion ciega, misma dosis): ORACULO_CIEGO R0 0.9228 < 1.0 y A12(ORACULO>CIEGO) 0.912 >= 0.70 -> PASA  (si CAE: lo que ancla es el RECAMBIO, no el TIPO)
+  REP-1  NADA_CIEGO R0 0.2456 (se reporta)
+  REP-2  RENACE (inmortal subsidiado) R0 3.9697 (se reporta)
+  REP-3  mundo que se come la comida: f_mala NADA 0.7874 ORACULO 0.8339 REL 0.8314 (se reporta; f_mala < 0.25 en ORACULO = el mundo ya casi no tiene nada que discriminar, se declara)
+  P-REL (v2): REL R0 0.9478 (prediccion firmada en el preregistro v2, sec. 7)
