@@ -1,0 +1,74 @@
+IDENTIDAD mundo_fase10  (sha 48b11724a4e70842; este arnes 93ee2dd48f1f664f)
+  sha 3a821884394d66c9  organismo_f9.py (origen)
+  sha 17528d767fcebaf6  organismo_v142.py (TRONCO)
+  sha feefc88b1fd8d434  organismo_v14.py (v14.1)
+  sha 207d6a1954336b18  mundo_mapa.py
+  sha 839fa71f9c84cb26  organismo_vivo_codigo.py
+  T = 20000 · semillas (1, 2) · un proceso, sin Pool
+
+(I7) REGLA 14 -- campo a campo. CUERPO de este arnes vs corre_f9.CUERPO:
+  diferencias: NINGUNA   CUERPO = {"costo": 0.001, "costo_a": 0.001, "dote": 0.6, "estims": ["A", "B", "C", "D"], "h1": 1, "hereda": "nada", "muerte_real": 1, "n_nec": 2, "rep2": 1, "rep2_regalo": 600, "rep_X": 500, "rep_coste": 0.0, "rep_cuello": 2, "rep_mide": 1, "rep_umbral": 1.0, "reproduccion": 1, "vivo": 1}
+  MUNDO 10 (perillas del mundo, no del cuerpo) = {"L10": null, "cambio10": 12500, "desambiguar": 1, "estims": null, "f10": 1, "flip10": 1, "mundo10": 1, "nfam10": 4, "npx": 9, "nsit10": 6, "nvar10": 2, "r_vis": 8, "regen10": 50, "stock10": 25}   MAPA = {'usa_M': 1, 'nodo_sitio': 1, 'escribe_M': 1, 'gamma_M': 0.6, 'H_M': 20, 'disc_M': 0.9}
+  I2 usa la letra de identidad_v142.ESC (12 escenarios): ['AB por defecto', 'AB invertido', 'AB + patron nuevo C', 'AB solap_AB=3 (E2L)', 'AB sin plasticidad', 'AB via lenta apagada', 'AB sin puerta', 'AB sin division por signo', 'AB sin hija dispersa', 'AB sin puerta por codigo', 'AB las dos perillas v14 off', 'AB D comida solap_B=2 (E2K)']
+
+(I1) APAGADA: mundo_fase10 == organismo_f9 en los 9 brazos de corre_f9 (claves viejas; nuevas solo B-5 de solo lectura)
+  [   4.4s] (I1) RENACE                                                                          2/2 IDENTICO
+  [   8.8s] (I1) NADA                                                                            2/2 IDENTICO
+  [  13.3s] (I1) M1                                                                              2/2 IDENTICO
+  [  20.1s] (I1) REC                                                                             2/2 IDENTICO
+  [  27.6s] (I1) REL                                                                             2/2 IDENTICO
+  [  33.6s] (I1) REL_FIJO                                                                        2/2 IDENTICO
+  [  42.8s] (I1) REL_BAR                                                                         2/2 IDENTICO
+  [  50.1s] (I1) REL_AZAR                                                                        2/2 IDENTICO
+  [  58.2s] (I1) REL_TARDE                                                                       2/2 IDENTICO
+
+(I2) TRONCO: mundo_fase10(vivo=0, n_nec=1, desambiguar=1) == organismo_v142 en los 12 escenarios de identidad_v142 (TODAS las claves)
+  [  63.7s] (I2) AB por defecto                                                                  2/2 IDENTICO
+  [  68.8s] (I2) AB invertido                                                                    2/2 IDENTICO
+  [  74.1s] (I2) AB + patron nuevo C                                                             2/2 IDENTICO
+  [  79.4s] (I2) AB solap_AB=3 (E2L)                                                             2/2 IDENTICO
+  [  84.8s] (I2) AB sin plasticidad                                                              2/2 IDENTICO
+  [  89.9s] (I2) AB via lenta apagada                                                            2/2 IDENTICO
+  [  94.8s] (I2) AB sin puerta                                                                   2/2 IDENTICO
+  [ 100.0s] (I2) AB sin division por signo                                                       2/2 IDENTICO
+  [ 105.3s] (I2) AB sin hija dispersa                                                            2/2 IDENTICO
+  [ 110.0s] (I2) AB sin puerta por codigo                                                        2/2 IDENTICO
+  [ 115.1s] (I2) AB las dos perillas v14 off                                                     2/2 IDENTICO
+  [ 120.7s] (I2) AB D comida solap_B=2 (E2K)                                                     2/2 IDENTICO
+
+(I3) el rng NO se consume: T=120000 == organismo_v142
+  [ 136.8s] (I3) T=120000 s1                                                                     1/1 IDENTICO
+
+(I4) PREDICCION: el mapa con vision ilimitada es INERTE en el mundo vivo del tronco (usa_M=1, r_vis=None == usa_M=0)
+  [ 143.2s] (I4) NADA vivo usa_M=1 r_vis=None == usa_M=0                                         2/2 IDENTICO
+
+(I5) SIN_HERENCIA == NADA en el mundo 10 salvo las claves del nodo (el nodo se escribe, nadie lo lee)
+  [ 150.2s] (I5) SIN_HERENCIA == NADA (mundo 10)                                                 2/2 IDENTICO
+
+(I6) DETERMINISMO: dos llamadas iguales (MAPA, mundo 10)
+  [ 166.9s] (I6) MAPA == MAPA                                                                    2/2 IDENTICO
+
+(D) CONTROLES QUE DEBEN DIFERIR (mundo 10)
+  [ 173.2s] (D1) mundo10=1 != mundo10=0 (NADA)                                                   2/2 DIFIERE (como debe)
+  [ 179.5s] (D2) cambio10=12500 != cambio10=0 (MUNDO_FIJO)                                       2/2 DIFIERE (como debe)
+  [ 186.1s] (D3) REL != NADA                                                                     2/2 DIFIERE (como debe)
+  [ 197.8s] (D4) NODO_BARAJADO != REL                                                            2/2 DIFIERE (como debe)
+  [ 205.2s] (D5) ORACULO_SIN_MAPA != REL                                                         2/2 DIFIERE (como debe)
+  [ 217.6s] (D6) MAPA != REL (sin mapa)                                                          2/2 DIFIERE (como debe)
+  [ 232.6s] (D7) MAPA_SIN_TABLA != MAPA                                                          2/2 DIFIERE (como debe)
+  [ 249.2s] (D8) SITIO_BARAJADO != MAPA                                                          2/2 DIFIERE (como debe)
+  [ 256.8s] (D9) PLACEBO (placebo=1) != tronco (NADA mundo 10)                                   2/2 DIFIERE (como debe)
+  [ 264.0s] (D10) INMORTAL != NADA                                                               2/2 DIFIERE (como debe)
+  [ 271.7s] (D11) desambiguar=1 != 0 en el mundo 10 (B-5 actua)                                  2/2 DIFIERE (como debe)
+  [ 277.4s] (D12) s1: lect_div REL 9/9 · sitios leidos MAPA 695 · M llenas al final 6 · des_splits NADA(B-5) 18
+  [ 286.1s] (D12) s2: lect_div REL 28/28 · sitios leidos MAPA 2279 · M llenas al final 11 · des_splits NADA(B-5) 13
+
+(G) GUARDIAS -> SystemExit
+  OK    guardia: mundo10 con vivo=0
+  OK    guardia: mundo10 con estims
+  OK    guardia: nodo_sitio sin usa_M
+  OK    guardia: usa_M sin r_vis en el mundo 10
+  OK    guardia: nodo_tabla=0 sin nodo_sitio
+
+ARNES identidad_mundo_fase10: 79/79 en 288s
+VEREDICTO identidad_mundo_fase10: PASA

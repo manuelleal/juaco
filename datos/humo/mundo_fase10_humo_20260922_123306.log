@@ -1,0 +1,59 @@
+HUMO MUNDO FASE 10 · 2026-09-22 12:33:06 · UN proceso, sin Pool (regla 3) · 6 corridas de T=100000
+  mundo_fase10.py sha 84e97674f709a900 · runner sha 4a6b31d97a0025dd · origen f9 3a821884394d66c9 · python 3.14.2 numpy 2.4.3
+  MUNDO: r_vis=8, usa_M=1, escribe_M=1, olvida_M=1, parches=6, cap=25, regen=50, vida_parche=8000, cambia_cada=12500, cambia_fam=4, f10=1, desambiguar=1 · 16 tipos en 10 pixeles
+
+ETAPA 1/3 — identidad dentro del runner (regla 14, ERR-38)
+  OK   (0) regla 14: CUERPO y NODO campo a campo == corre_f9   17 + 6 campos
+  OK   (1) mundo del tronco: NADA (desambiguar=0) == organismo_f9 NADA (= NADA_CM de H-1)   dif []
+  OK   (2) mundo del tronco: perillas apagadas == organismo_v142 (TRONCO v14.2), todas las claves   dif []
+  OK   (3) mundo F10: REL != NADA y REL != NODO_BARAJADO (DEBEN diferir, ERR-38)   lect_div REL 80/80 · R0 REL 10/81 NADA 17/65
+  OK   (4) mundo F10: el mapa actua (REL != REL_SIN_MAPA) y el mundo cambia (n_cambios > 0)   n_cambios 1 · M_llenas 2
+
+ETAPA 2/3 — 6 corridas: [('RENACE', 5), ('RENACE', 6), ('NADA', 5), ('NADA', 6), ('ORACULO', 5), ('ORACULO_SIN_MAPA', 5)]
+  [  33.4s] RENACE            s5  R0 0.3059  desc 52   muertes 169  fund 0 vida 200.0   mnec [80, 89] cob1 0.688 cob5 0.812 expl1 0.375 expl5 0.031 rz 0.083 enc1/5 1049.0/9.5 causas {'alias': 1, 'limpio': 129, 'drenaje': 39} pmax 8000 cambios 7 alias t 0.8/0.159 coh None f10 True
+  [  52.5s] RENACE            s6  R0 0.2143  desc 48   muertes 223  fund 0 vida 200.0   mnec [60, 163] cob1 0.562 cob5 0.562 expl1 0.094 expl5 0.0 rz 0.0 enc1/5 265.0/6.5 causas {'alias': 0, 'limpio': 151, 'drenaje': 72} pmax 8000 cambios 7 alias t 1.0/0.165 coh None f10 True
+  [  61.5s] NADA              s5  R0 0.1457  desc 59   muertes 404  fund 345 vida 81.0    mnec [240, 164] cob1 0.688 cob5 0.5 expl1 0.281 expl5 0.062 rz 0.221 enc1/5 592.0/5.0 causas {'alias': 28, 'limpio': 363, 'drenaje': 13} pmax 8000 cambios 7 alias t 0.564/0.427 coh True f10 True
+  [  70.3s] NADA              s6  R0 0.1503  desc 52   muertes 345  fund 300 vida 76.0    mnec [188, 157] cob1 0.625 cob5 0.25 expl1 0.094 expl5 0.0 rz 0.0 enc1/5 397.0/2.5 causas {'alias': 41, 'limpio': 296, 'drenaje': 8} pmax 8000 cambios 7 alias t 0.387/0.346 coh True f10 True
+  [  94.6s] ORACULO           s5  R0 0.188   desc 50   muertes 265  fund 215 vida 171.0   mnec [123, 142] cob1 0.625 cob5 0.625 expl1 0.188 expl5 0.031 rz 0.165 enc1/5 170.0/11.5 causas {'alias': 21, 'limpio': 218, 'drenaje': 26} pmax 8000 cambios 7 alias t 0.308/0.3 coh True f10 True
+  [ 111.7s] ORACULO_SIN_MAPA  s5  R0 0.2649  desc 71   muertes 267  fund 203 vida 109.5   mnec [159, 108] cob1 0.688 cob5 0.812 expl1 0.281 expl5 0.125 rz 0.445 enc1/5 592.0/142.5 causas {'alias': 32, 'limpio': 226, 'drenaje': 9} pmax 8000 cambios 7 alias t 0.42/0.264 coh True f10 True
+
+ETAPA 3/3 — predicciones del humo (ENMIENDA 1, PREREGISTRO §12: HH1, HH2, HH6 del instrumento; HA-NADA, HA-RENACE del ancla)
+  HH1: SI
+  HH2: SI
+  HH6: SI
+  HA-NADA: SI
+  HA-RENACE: NO
+  ANCLA: NO
+  ANCLA §2.1.6: mediana R0 NADA 0.148 (s5 [0.1457, 0.1503]) en [0.1, 0.3] · mediana R0 RENACE 0.26 (s5,s6 [0.3059, 0.2143]) en [0.8, 1.3] -> NO CONSERVA el ancla
+  H-MAPA (n = 1, direccion): ORACULO (tabla + mapa) R0 0.188 vs ORACULO_SIN_MAPA 0.265
+  Solo HH1, HH2 y HH6 BLOQUEAN el instrumento. El ANCLA decide si la ENMIENDA 1 sirve: si NO la conserva, la serie NO se corre con esta
+  calibracion y NO se recalibra con estas semillas (regla 3): va a ERR y a decision del director.
+
+PUERTAS sobre el humo (orientativo: n = 1-2 semillas, sin valor de veredicto)
+  V-6    CAE   ANCLA (BLOQUEANTE): el coste de vida conserva el ancla del mundo vivo -- R0 NADA en [0.10, 0.30] y R0 RENACE en [0.80, 1.30]
+          R0_NADA 0.148 en [0.1, 0.3] · R0_RENACE 0.26 en [0.8, 1.3] · vida NADA 78.5 · vida RENACE 200.0 · muertes_nec NADA [[240, 164], [188, 157]]
+  V-1    PASA  RECURSOS QUE SE AGOTAN Y SE MUEVEN: ningun parche se queda mas de T/4 en su sitio (todos los brazos salvo MUNDO_FIJO, que DEBE fallar)
+          estancia maxima de un parche <= 25000: violaciones ninguna en 4 brazos · MUNDO_FIJO (debe fallar) []
+  V-2    REPORTA  SABER DONDE VALE TANTO COMO SABER QUE: R0(ORACULO_SIN_MAPA) < 1 y R0(MAPA_SIN_TABLA) < 1 y R0(ORACULO) >= 1 (medianas)
+          R0 ORACULO_SIN_MAPA 0.265 (< 1) · MAPA_SIN_TABLA None (< 1) · ORACULO 0.188 (>= 1) · vidas 109.5 / None / 171.0 · REL_SIN_MAPA R0 None · muertes_nec ORACULO [[123, 142]]
+  V-3    REPORTA  EL ALIAS CUESTA VIDAS: sin desambiguar (REL_D0), tasa de mordida de lo malo CON alias >= 2x la de lo malo SIN alias (mordidas/exposiciones agregadas; exposiciones reportadas, trampa 3)
+          REL_D0: tasa de mordida de lo malo CON alias None (0/0) vs SIN alias None (0/0) -> razon None (>= 2.0) · REL (B-5): None vs None · muertes por causa REL_D0 []
+  V-4    REPORTA  UNA VIDA NO ALCANZA, UN LINAJE SI: cobertura de la tabla al morir, mediana de SIN_HERENCIA < 0.50; cuerpos 5..12 de REL > 0.80
+          cobertura al morir (signo): SIN_HERENCIA todos los cuerpos None (< 0.5) · REL cuerpos 5..12 None (> 0.8) · REL con criterio |v|>=0.5 None · NADA 0.5 · NODO_BARAJADO 5..12 None · ORACULO 5..12 0.625
+  V-5    REPORTA  MAS DE UN CUERPO A LA VEZ: opcion DECLARADA (cola de descendientes, un cuerpo vivo); no se mide ni se nombra hasta medirla
+          opcion declarada en el preregistro (cola FIFO de descendientes, un cuerpo vivo a la vez); nada medido, nada nombrado
+  M10-1  REPORTA  SOSTEN: REL cruza R0 >= 1.0 con fundadores <= 2 en >= 15/20 semillas; NADA < 0.5; NODO_BARAJADO < 0.5 (medianas)
+          REL: R0 >= 1.0 con fundadores <= 2 en 0/0 (>= 15) · mediana R0 REL None fund None vida None · NADA 0.148 (< 0.5) · NODO_BARAJADO None (< 0.5) · SIN_HERENCIA None · REL_SIN_MAPA None · ORACULO 0.188
+  M10-2  REPORTA  ACUMULACION: combinaciones (tipo x cuarto) explotadas por los cuerpos 5..12 >= 2x las del cuerpo 1, pareado por semilla (mediana de razones >= 2.0 y A12 pareado >= 0.85, n >= 15); NODO_BARAJADO <= 1.2x
+          REL: razon explotadas cuerpos 5..12 / cuerpo 1: mediana None (>= 2.0), n 0 (>= 15), A12 pareado None (>= 0.85) · expl1 None expl5 None · exposiciones cuerpo 1 None vs 5..12 None (trampa 3) · vidas None vs None · NODO_BARAJADO razon None (<= 1.2) · NADA 0.111 · SIN_HERENCIA None · ORACULO 0.165
+  M10-3  REPORTA  NO ES EL MUNDO BLANDO: en MUNDO_FIJO la razon cuerpos 5..12 / cuerpo 1 <= 1.2x
+          MUNDO_FIJO: razon 5..12 / 1 None (<= 1.2) · R0 None vida None cob 5..12 None · (razon 5..12 / 2..4 se reporta como M10-3': no calculada aqui, ver crudo)
+  M10-4  REPORTA  NO REGRESION: perillas apagadas == tronco v14.2 BIT A BIT y el mapa INERTE sin r_vis (identidad_mundo_fase10.py, pegado en el preregistro); las baterias las corre el coordinador; coste 1.00x por identidad
+          identidad y coste por arnes (identidad_mundo_fase10.py, pegado en el preregistro); bateria_v142 y bateria_generaliza_v142 las corre el coordinador
+  M10-5  REPORTA  REPRESENTACION (se reporta, no es puerta): celdas al morir, divisiones B-5, pares alias (bueno,malo) al nacer y al morir
+          celdas al morir REL None vs NADA 30.0 vs RENACE 57.0 · divisiones B-5 (suma) REL None REL_D0 None · pares alias (bueno,malo) al nacer None al morir None sep None · RENACE sep 0.0
+  PLAC   REPORTA  VALIDEZ DEL NULO: |R0 PLACEBO - R0 REL| <= 0.15 y A12(R0 PLACEBO vs REL) en [0.35, 0.65]; razon M10-2 de PLACEBO en [0.8, 1.25] x la de REL
+          |R0 PLACEBO - REL| None (<= 0.15) · A12 None en [0.35, 0.65] · razon M10-2 PLACEBO/REL None en [0.8, 1.25] · PLACEBO pasa M10-1 como REL: 0/0
+
+JSON  C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\humo\mundo_fase10_humo_20260922_123306.json  (sha 340d9414b4822ed8)
+HUMO terminado en 111.7s

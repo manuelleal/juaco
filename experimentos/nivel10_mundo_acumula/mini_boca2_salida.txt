@@ -1,0 +1,23 @@
+ARNES + MINI boca2 · 2026-09-22 12:40:15 · un proceso · mundo_fase10 84e97674f709a900 · organismo_boca2 871ff11c4b763698 · este script 235fd4a468a84d36
+  [    3s] OK    B1 tronco AB por defecto boca2=0  IDENTICO
+  [    6s] OK    B1 tronco AB invertido boca2=0  IDENTICO
+  [    8s] OK    B1 tronco AB solap_AB=3 (E2L) boca2=0  IDENTICO
+  [   11s] OK    B2 vivo fase 9 RENACE boca2=0  IDENTICO
+  [   14s] OK    B2 vivo fase 9 REL boca2=0  IDENTICO
+  [   20s] OK    B3 F10 enmienda REL boca2=0  IDENTICO
+  [   23s] OK    B4 INERCIA n_nec=1 AB por defecto boca2=1 == 0  IDENTICO (inerte)
+  [   27s] OK    B4 INERCIA n_nec=1 AB invertido boca2=1 == 0  IDENTICO (inerte)
+  [   30s] OK    B4 INERCIA n_nec=1 AB solap_AB=3 (E2L) boca2=1 == 0  IDENTICO (inerte)
+  [   33s] OK    C1 vivo fase 9 RENACE boca2=1 != 0 (DEBE diferir)  
+  [   38s] OK    C2 F10 enmienda RENACE boca2=1 != 0 (DEBE diferir)  
+ARNES boca2: PASA 11/11
+
+MINI-PRUEBA boca2=1 (los OFF son los del diagnostico y del humo del repo)
+  [   40s] M1_vivo_f9_RENACE s1: R0 ON 0.0455 vs OFF 1.1538 · muertes 21 [10, 11] · veneno con SED [2, 224] (OFF [63, 84]) · sal con HAMBRE [15, 543] (OFF [77, 487]) · comida con HAMBRE [23, 23] · agua con SED [11, 11]
+  [   43s] M2_F10_calibF0_RENACE s1: R0 ON 0.0278 vs OFF 0.0645 · muertes 35 [21, 14] · veneno con SED [1, 20] (OFF [60, 68]) · sal con HAMBRE [19, 415] (OFF [44, 101]) · comida con HAMBRE [3, 8] · agua con SED [3, 3]
+  [   45s] M3_F10_enm1_RENACE s1: R0 ON 0.6 vs OFF 0.4828 · muertes 19 [12, 7] · veneno con SED [0, 61] (OFF [18, 27]) · sal con HAMBRE [6, 412] (OFF [121, 353]) · comida con HAMBRE [91, 101] · agua con SED [3, 3]
+  [   63s] M4_F10_enm1_RENACE s5: R0 ON 0.4783 vs OFF 0.3059 · muertes 114 [42, 72] · veneno con SED [12, 207] (OFF None) · sal con HAMBRE [0, 0] (OFF None) · comida con HAMBRE [267, 381] · agua con SED [0, 0]
+  [   75s] M5_F10_enm1_RENACE s6: R0 ON 0.1728 vs OFF 0.2143 · muertes 161 [76, 85] · veneno con SED [0, 0] (OFF None) · sal con HAMBRE [0, 0] (OFF None) · comida con HAMBRE [35, 143] · agua con SED [0, 0]
+  [   83s] M6_F10_enm1_NADA s5: R0 ON 0.2152 vs OFF 0.1457 · muertes 301 [220, 81] · veneno con SED [100, 469] (OFF None) · sal con HAMBRE [0, 0] (OFF None) · comida con HAMBRE [381, 468] · agua con SED [0, 0]
+JSON C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\humo\mini_boca2_20260922_124015.json (sha 09dd2c8c075e3d86) · 83s
+exit 0

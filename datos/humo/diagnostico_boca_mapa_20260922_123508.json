@@ -1,0 +1,605 @@
+{
+ "bloque": "diagnostico_boca_mapa",
+ "sello": "20260922_123508",
+ "corridas": [
+  {
+   "etq": "D1_tronco_vivo_RENACE",
+   "seed": 1,
+   "T": 20000,
+   "seg": 1.0,
+   "R0": 1.1538,
+   "desc": 15,
+   "muertes": 12,
+   "muertes_nec": [
+    4,
+    8
+   ],
+   "tipos_cambiados": [],
+   "n_cambios": null,
+   "tabla": {
+    "exacta": {
+     "HAMBRExcomida": [
+      82,
+      88
+     ],
+     "HAMBRExveneno": [
+      2,
+      763
+     ],
+     "HAMBRExagua": [
+      96,
+      102
+     ],
+     "HAMBRExsal": [
+      77,
+      487
+     ],
+     "SEDxcomida": [
+      24,
+      24
+     ],
+     "SEDxveneno": [
+      63,
+      84
+     ],
+     "SEDxagua": [
+      25,
+      29
+     ],
+     "SEDxsal": [
+      4,
+      128
+     ]
+    },
+    "aprox_val_inicial": {
+     "HAMBRExcomida": [
+      82,
+      88
+     ],
+     "HAMBRExveneno": [
+      2,
+      763
+     ],
+     "HAMBRExagua": [
+      96,
+      102
+     ],
+     "HAMBRExsal": [
+      77,
+      487
+     ],
+     "SEDxcomida": [
+      24,
+      24
+     ],
+     "SEDxveneno": [
+      63,
+      84
+     ],
+     "SEDxagua": [
+      25,
+      29
+     ],
+     "SEDxsal": [
+      4,
+      128
+     ]
+    }
+   },
+   "vida_med": 1582.0
+  },
+  {
+   "etq": "D2_F10_calibF0_RENACE",
+   "seed": 1,
+   "T": 20000,
+   "seg": 3.3,
+   "R0": 0.0645,
+   "desc": 4,
+   "muertes": 61,
+   "muertes_nec": [
+    22,
+    39
+   ],
+   "tipos_cambiados": [
+    "C1",
+    "C3",
+    "D",
+    "D1"
+   ],
+   "n_cambios": 3,
+   "tabla": {
+    "exacta": {
+     "HAMBRExcomida": [
+      41,
+      46
+     ],
+     "HAMBRExveneno": [
+      6,
+      174
+     ],
+     "HAMBRExagua": [
+      46,
+      51
+     ],
+     "HAMBRExsal": [
+      44,
+      101
+     ],
+     "SEDxcomida": [
+      44,
+      44
+     ],
+     "SEDxveneno": [
+      60,
+      68
+     ],
+     "SEDxagua": [
+      4,
+      4
+     ],
+     "SEDxsal": [
+      6,
+      122
+     ]
+    },
+    "aprox_val_inicial": {
+     "HAMBRExcomida": [
+      41,
+      46
+     ],
+     "HAMBRExveneno": [
+      6,
+      174
+     ],
+     "HAMBRExagua": [
+      66,
+      88
+     ],
+     "HAMBRExsal": [
+      84,
+      156
+     ],
+     "SEDxcomida": [
+      44,
+      44
+     ],
+     "SEDxveneno": [
+      60,
+      68
+     ],
+     "SEDxagua": [
+      9,
+      19
+     ],
+     "SEDxsal": [
+      7,
+      196
+     ]
+    }
+   },
+   "vida_med": 200.0
+  },
+  {
+   "etq": "D3_F10_calibF0_sin_cambios_RENACE",
+   "seed": 1,
+   "T": 20000,
+   "seg": 3.8,
+   "R0": 0.0784,
+   "desc": 4,
+   "muertes": 50,
+   "muertes_nec": [
+    27,
+    23
+   ],
+   "tipos_cambiados": [],
+   "n_cambios": 0,
+   "tabla": {
+    "exacta": {
+     "HAMBRExcomida": [
+      52,
+      61
+     ],
+     "HAMBRExveneno": [
+      13,
+      268
+     ],
+     "HAMBRExagua": [
+      79,
+      86
+     ],
+     "HAMBRExsal": [
+      102,
+      324
+     ],
+     "SEDxcomida": [
+      34,
+      35
+     ],
+     "SEDxveneno": [
+      71,
+      79
+     ],
+     "SEDxagua": [
+      14,
+      14
+     ],
+     "SEDxsal": [
+      8,
+      239
+     ]
+    },
+    "aprox_val_inicial": {
+     "HAMBRExcomida": [
+      52,
+      61
+     ],
+     "HAMBRExveneno": [
+      13,
+      268
+     ],
+     "HAMBRExagua": [
+      79,
+      86
+     ],
+     "HAMBRExsal": [
+      102,
+      324
+     ],
+     "SEDxcomida": [
+      34,
+      35
+     ],
+     "SEDxveneno": [
+      71,
+      79
+     ],
+     "SEDxagua": [
+      14,
+      14
+     ],
+     "SEDxsal": [
+      8,
+      239
+     ]
+    }
+   },
+   "vida_med": 182.0
+  },
+  {
+   "etq": "D4_F10_enmienda1_RENACE",
+   "seed": 1,
+   "T": 20000,
+   "seg": 3.0,
+   "R0": 0.4828,
+   "desc": 14,
+   "muertes": 28,
+   "muertes_nec": [
+    8,
+    20
+   ],
+   "tipos_cambiados": [
+    "A3",
+    "B"
+   ],
+   "n_cambios": 1,
+   "tabla": {
+    "exacta": {
+     "HAMBRExcomida": [
+      14,
+      16
+     ],
+     "HAMBRExveneno": [
+      5,
+      469
+     ],
+     "HAMBRExagua": [
+      155,
+      163
+     ],
+     "HAMBRExsal": [
+      121,
+      353
+     ],
+     "SEDxcomida": [
+      11,
+      11
+     ],
+     "SEDxveneno": [
+      18,
+      27
+     ],
+     "SEDxagua": [
+      32,
+      32
+     ],
+     "SEDxsal": [
+      5,
+      47
+     ]
+    },
+    "aprox_val_inicial": {
+     "HAMBRExcomida": [
+      81,
+      93
+     ],
+     "HAMBRExveneno": [
+      5,
+      475
+     ],
+     "HAMBRExagua": [
+      155,
+      163
+     ],
+     "HAMBRExsal": [
+      121,
+      353
+     ],
+     "SEDxcomida": [
+      19,
+      19
+     ],
+     "SEDxveneno": [
+      18,
+      27
+     ],
+     "SEDxagua": [
+      32,
+      32
+     ],
+     "SEDxsal": [
+      5,
+      47
+     ]
+    }
+   },
+   "vida_med": 212.0
+  },
+  {
+   "etq": "D5_F10_enmienda1_REL",
+   "seed": 5,
+   "T": 100000,
+   "seg": 22.0,
+   "R0": 0.1018,
+   "desc": 28,
+   "muertes": 274,
+   "muertes_nec": [
+    106,
+    168
+   ],
+   "tipos_cambiados": [
+    "A",
+    "A3",
+    "B",
+    "B3",
+    "C",
+    "C1",
+    "C2",
+    "C3",
+    "D",
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "n_cambios": 7,
+   "tabla": {
+    "exacta": {
+     "HAMBRExcomida": [
+      145,
+      238
+     ],
+     "HAMBRExveneno": [
+      54,
+      366
+     ],
+     "HAMBRExagua": [
+      0,
+      0
+     ],
+     "HAMBRExsal": [
+      0,
+      0
+     ],
+     "SEDxcomida": [
+      108,
+      110
+     ],
+     "SEDxveneno": [
+      135,
+      169
+     ],
+     "SEDxagua": [
+      0,
+      0
+     ],
+     "SEDxsal": [
+      0,
+      0
+     ]
+    },
+    "aprox_val_inicial": {
+     "HAMBRExcomida": [
+      274,
+      571
+     ],
+     "HAMBRExveneno": [
+      209,
+      984
+     ],
+     "HAMBRExagua": [
+      672,
+      882
+     ],
+     "HAMBRExsal": [
+      460,
+      1109
+     ],
+     "SEDxcomida": [
+      208,
+      211
+     ],
+     "SEDxveneno": [
+      249,
+      324
+     ],
+     "SEDxagua": [
+      119,
+      216
+     ],
+     "SEDxsal": [
+      94,
+      450
+     ]
+    }
+   },
+   "vida_med": 198.0,
+   "p1": 1.0,
+   "c1": 1.0,
+   "lect_div": 274
+  },
+  {
+   "etq": "D6_F10_enmienda1_REL_SIN_MAPA",
+   "seed": 5,
+   "T": 100000,
+   "seg": 14.8,
+   "R0": 0.2218,
+   "desc": 61,
+   "muertes": 274,
+   "muertes_nec": [
+    160,
+    114
+   ],
+   "tipos_cambiados": [
+    "A1",
+    "A3",
+    "B1",
+    "B2",
+    "B3",
+    "C",
+    "C1",
+    "C2",
+    "C3",
+    "D",
+    "D1",
+    "D2",
+    "D3"
+   ],
+   "n_cambios": 7,
+   "tabla": {
+    "exacta": {
+     "HAMBRExcomida": [
+      304,
+      406
+     ],
+     "HAMBRExveneno": [
+      67,
+      544
+     ],
+     "HAMBRExagua": [
+      0,
+      0
+     ],
+     "HAMBRExsal": [
+      0,
+      0
+     ],
+     "SEDxcomida": [
+      149,
+      154
+     ],
+     "SEDxveneno": [
+      101,
+      117
+     ],
+     "SEDxagua": [
+      0,
+      0
+     ],
+     "SEDxsal": [
+      0,
+      0
+     ]
+    },
+    "aprox_val_inicial": {
+     "HAMBRExcomida": [
+      583,
+      819
+     ],
+     "HAMBRExveneno": [
+      358,
+      1978
+     ],
+     "HAMBRExagua": [
+      793,
+      1047
+     ],
+     "HAMBRExsal": [
+      480,
+      1262
+     ],
+     "SEDxcomida": [
+      276,
+      283
+     ],
+     "SEDxveneno": [
+      311,
+      365
+     ],
+     "SEDxagua": [
+      115,
+      206
+     ],
+     "SEDxsal": [
+      85,
+      256
+     ]
+    }
+   },
+   "vida_med": 128.0,
+   "p1": 1.0,
+   "c1": 1.0,
+   "lect_div": 274
+  }
+ ],
+ "H_BOCA": {
+  "reproducida": true,
+  "por_corrida": {
+   "D1_tronco_vivo_RENACE": {
+    "ok": true,
+    "veneno_SED": 0.75,
+    "veneno_HAMBRE": 0.002621231979030144,
+    "sal_HAMBRE": 0.15811088295687886,
+    "sal_SED": 0.03125
+   },
+   "D2_F10_calibF0_RENACE": {
+    "ok": true,
+    "veneno_SED": 0.8823529411764706,
+    "veneno_HAMBRE": 0.034482758620689655,
+    "sal_HAMBRE": 0.43564356435643564,
+    "sal_SED": 0.04918032786885246
+   },
+   "D3_F10_calibF0_sin_cambios_RENACE": {
+    "ok": true,
+    "veneno_SED": 0.8987341772151899,
+    "veneno_HAMBRE": 0.048507462686567165,
+    "sal_HAMBRE": 0.3148148148148148,
+    "sal_SED": 0.03347280334728033
+   },
+   "D4_F10_enmienda1_RENACE": {
+    "ok": true,
+    "veneno_SED": 0.6666666666666666,
+    "veneno_HAMBRE": 0.010660980810234541,
+    "sal_HAMBRE": 0.34277620396600567,
+    "sal_SED": 0.10638297872340426
+   }
+  }
+ },
+ "H_MAPA": {
+  "R0_REL": 0.1018,
+  "R0_REL_SIN_MAPA": 0.2218,
+  "mapa_no_ayuda": true
+ },
+ "sha_mundo": "84e97674f709a900",
+ "sha_runner": "4a6b31d97a0025dd",
+ "sha_script": "3fcbf5783eb42b88",
+ "seg": 48.0
+}

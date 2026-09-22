@@ -1,0 +1,42 @@
+DIAGNOSTICO boca/mapa · 2026-09-22 12:35:08 · UN proceso, 6 corridas · mundo_fase10 sha 84e97674f709a900 · runner sha 4a6b31d97a0025dd · este script sha 3fcbf5783eb42b88
+  MUNDO (enmienda 1): {'r_vis': 8, 'usa_M': 1, 'escribe_M': 1, 'olvida_M': 1, 'parches': 6, 'cap': 25, 'regen': 50, 'vida_parche': 8000, 'cambia_cada': 12500, 'cambia_fam': 4, 'f10': 1, 'desambiguar': 1}
+  MUNDO_F0 (literal F0): {'r_vis': 8, 'usa_M': 1, 'escribe_M': 1, 'olvida_M': 1, 'parches': 6, 'cap': 5, 'regen': 30, 'vida_parche': 8000, 'cambia_cada': 5000, 'cambia_fam': 4, 'f10': 1, 'desambiguar': 1}
+
+[   1.0s] D1_tronco_vivo_RENACE s1 T=20000: R0 1.1538 (desc 15, muertes 12, muertes_nec [4, 8]) vida_med 1582.0 cambios None tipos cambiados 0
+   exacta mordidas/exposiciones  HAMBRExcomida 82/88  HAMBRExveneno 2/763  HAMBRExagua 96/102  HAMBRExsal 77/487  SEDxcomida 24/24  SEDxveneno 63/84  SEDxagua 25/29  SEDxsal 4/128
+   aprox  mordidas/exposiciones  HAMBRExcomida 82/88  HAMBRExveneno 2/763  HAMBRExagua 96/102  HAMBRExsal 77/487  SEDxcomida 24/24  SEDxveneno 63/84  SEDxagua 25/29  SEDxsal 4/128
+   H-BOCA: veneno con SED 63/84 vs veneno con HAMBRE 2/763 · sal con HAMBRE 77/487 vs sal con SED 4/128
+
+[   4.4s] D2_F10_calibF0_RENACE s1 T=20000: R0 0.0645 (desc 4, muertes 61, muertes_nec [22, 39]) vida_med 200.0 cambios 3 tipos cambiados 4
+   exacta mordidas/exposiciones  HAMBRExcomida 41/46  HAMBRExveneno 6/174  HAMBRExagua 46/51  HAMBRExsal 44/101  SEDxcomida 44/44  SEDxveneno 60/68  SEDxagua 4/4  SEDxsal 6/122
+   aprox  mordidas/exposiciones  HAMBRExcomida 41/46  HAMBRExveneno 6/174  HAMBRExagua 66/88  HAMBRExsal 84/156  SEDxcomida 44/44  SEDxveneno 60/68  SEDxagua 9/19  SEDxsal 7/196
+   H-BOCA: veneno con SED 60/68 vs veneno con HAMBRE 6/174 · sal con HAMBRE 44/101 vs sal con SED 6/122
+
+[   8.2s] D3_F10_calibF0_sin_cambios_RENACE s1 T=20000: R0 0.0784 (desc 4, muertes 50, muertes_nec [27, 23]) vida_med 182.0 cambios 0 tipos cambiados 0
+   exacta mordidas/exposiciones  HAMBRExcomida 52/61  HAMBRExveneno 13/268  HAMBRExagua 79/86  HAMBRExsal 102/324  SEDxcomida 34/35  SEDxveneno 71/79  SEDxagua 14/14  SEDxsal 8/239
+   aprox  mordidas/exposiciones  HAMBRExcomida 52/61  HAMBRExveneno 13/268  HAMBRExagua 79/86  HAMBRExsal 102/324  SEDxcomida 34/35  SEDxveneno 71/79  SEDxagua 14/14  SEDxsal 8/239
+   H-BOCA: veneno con SED 71/79 vs veneno con HAMBRE 13/268 · sal con HAMBRE 102/324 vs sal con SED 8/239
+
+[  11.2s] D4_F10_enmienda1_RENACE s1 T=20000: R0 0.4828 (desc 14, muertes 28, muertes_nec [8, 20]) vida_med 212.0 cambios 1 tipos cambiados 2
+   exacta mordidas/exposiciones  HAMBRExcomida 14/16  HAMBRExveneno 5/469  HAMBRExagua 155/163  HAMBRExsal 121/353  SEDxcomida 11/11  SEDxveneno 18/27  SEDxagua 32/32  SEDxsal 5/47
+   aprox  mordidas/exposiciones  HAMBRExcomida 81/93  HAMBRExveneno 5/475  HAMBRExagua 155/163  HAMBRExsal 121/353  SEDxcomida 19/19  SEDxveneno 18/27  SEDxagua 32/32  SEDxsal 5/47
+   H-BOCA: veneno con SED 18/27 vs veneno con HAMBRE 5/469 · sal con HAMBRE 121/353 vs sal con SED 5/47
+
+[  33.2s] D5_F10_enmienda1_REL s5 T=100000: R0 0.1018 (desc 28, muertes 274, muertes_nec [106, 168]) vida_med 198.0 cambios 7 tipos cambiados 12
+   exacta mordidas/exposiciones  HAMBRExcomida 145/238  HAMBRExveneno 54/366  HAMBRExagua 0/0  HAMBRExsal 0/0  SEDxcomida 108/110  SEDxveneno 135/169  SEDxagua 0/0  SEDxsal 0/0
+   aprox  mordidas/exposiciones  HAMBRExcomida 274/571  HAMBRExveneno 209/984  HAMBRExagua 672/882  HAMBRExsal 460/1109  SEDxcomida 208/211  SEDxveneno 249/324  SEDxagua 119/216  SEDxsal 94/450
+   H-BOCA: veneno con SED 135/169 vs veneno con HAMBRE 54/366 · sal con HAMBRE 0/0 vs sal con SED 0/0
+
+[  48.0s] D6_F10_enmienda1_REL_SIN_MAPA s5 T=100000: R0 0.2218 (desc 61, muertes 274, muertes_nec [160, 114]) vida_med 128.0 cambios 7 tipos cambiados 13
+   exacta mordidas/exposiciones  HAMBRExcomida 304/406  HAMBRExveneno 67/544  HAMBRExagua 0/0  HAMBRExsal 0/0  SEDxcomida 149/154  SEDxveneno 101/117  SEDxagua 0/0  SEDxsal 0/0
+   aprox  mordidas/exposiciones  HAMBRExcomida 583/819  HAMBRExveneno 358/1978  HAMBRExagua 793/1047  HAMBRExsal 480/1262  SEDxcomida 276/283  SEDxveneno 311/365  SEDxagua 115/206  SEDxsal 85/256
+   H-BOCA: veneno con SED 101/117 vs veneno con HAMBRE 67/544 · sal con HAMBRE 0/0 vs sal con SED 0/0
+  H-BOCA D1_tronco_vivo_RENACE: REPRODUCE · veneno SED 0.75 vs HAMBRE 0.003 · sal HAMBRE 0.158 vs SED 0.031
+  H-BOCA D2_F10_calibF0_RENACE: REPRODUCE · veneno SED 0.882 vs HAMBRE 0.034 · sal HAMBRE 0.436 vs SED 0.049
+  H-BOCA D3_F10_calibF0_sin_cambios_RENACE: REPRODUCE · veneno SED 0.899 vs HAMBRE 0.049 · sal HAMBRE 0.315 vs SED 0.033
+  H-BOCA D4_F10_enmienda1_RENACE: REPRODUCE · veneno SED 0.667 vs HAMBRE 0.011 · sal HAMBRE 0.343 vs SED 0.106
+
+H-BOCA en el diagnostico: REPRODUCIDA (criterio: D1 y al menos una de D2..D4)
+H-MAPA (n = 1, solo direccion): REL con mapa R0 0.1018 vs REL_SIN_MAPA 0.2218 -> el mapa NO ayuda (consistente con H-MAPA)
+JSON C:\Users\User\Documents\PROYECTOS\JUACO\bundle\datos\humo\diagnostico_boca_mapa_20260922_123508.json (sha 299352724963a791) · 48s
+exit 0

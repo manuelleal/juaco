@@ -1,0 +1,112 @@
+  sha organismo_v142 (TRONCO)    17528d767fcebaf6
+  sha organismo_f9 (origen)      3a821884394d66c9
+  sha organismo_f9c              9dd1fb91ecec35ae
+  sha organismo_vivo_codigo      839fa71f9c84cb26
+  sha organismo_v3cal            148014f68cb01785
+  sha mundo_mapa                 207d6a1954336b18
+  sha mundo_fase10 (DESTINO)     84e97674f709a900
+  sha corre_mundo_fase10         b59e3f7b0ba1ee80
+  sha este arnes                 04dd7aadf8e5057f
+
+--- I10 regla 14: CUERPO / NODO del runner == corre_f9 ---
+  [    0s] OK    I10 CUERPO (17 campos) y NODO campo a campo == corre_f9  17 campos
+
+--- I1: mundo del tronco, perillas apagadas == organismo_v142 (12 escenarios x 2 semillas, T=30000) ---
+  [    2s] OK    I1                 AB por defecto s1  IDENTICO
+  [    6s] OK    I1                 AB por defecto s2  IDENTICO
+  [    9s] OK    I1                   AB invertido s1  IDENTICO
+  [   13s] OK    I1                   AB invertido s2  IDENTICO
+  [   17s] OK    I1            AB + patron nuevo C s1  IDENTICO
+  [   21s] OK    I1            AB + patron nuevo C s2  IDENTICO
+  [   25s] OK    I1            AB solap_AB=3 (E2L) s1  IDENTICO
+  [   29s] OK    I1            AB solap_AB=3 (E2L) s2  IDENTICO
+  [   33s] OK    I1             AB sin plasticidad s1  IDENTICO
+  [   36s] OK    I1             AB sin plasticidad s2  IDENTICO
+  [   39s] OK    I1           AB via lenta apagada s1  IDENTICO
+  [   43s] OK    I1           AB via lenta apagada s2  IDENTICO
+  [   46s] OK    I1                  AB sin puerta s1  IDENTICO
+  [   49s] OK    I1                  AB sin puerta s2  IDENTICO
+  [   52s] OK    I1      AB sin division por signo s1  IDENTICO
+  [   55s] OK    I1      AB sin division por signo s2  IDENTICO
+  [   58s] OK    I1           AB sin hija dispersa s1  IDENTICO
+  [   62s] OK    I1           AB sin hija dispersa s2  IDENTICO
+  [   65s] OK    I1       AB sin puerta por codigo s1  IDENTICO
+  [   69s] OK    I1       AB sin puerta por codigo s2  IDENTICO
+  [   71s] OK    I1    AB las dos perillas v14 off s1  IDENTICO
+  [   75s] OK    I1    AB las dos perillas v14 off s2  IDENTICO
+  [   79s] OK    I1    AB D comida solap_B=2 (E2K) s1  IDENTICO
+  [   82s] OK    I1    AB D comida solap_B=2 (E2K) s2  IDENTICO
+
+--- I2: el rng NO se consume (T=120000, semilla 1) ---
+  [   97s] OK    I2 T=120000 s1  IDENTICO
+
+--- I3: desambiguar=0 == organismo_f9 en los 9 brazos de corre_f9 (T=20000) ---
+  [  100s] OK    I3     RENACE s1  IDENTICO
+  [  103s] OK    I3     RENACE s2  IDENTICO
+  [  106s] OK    I3       NADA s1  IDENTICO
+  [  108s] OK    I3       NADA s2  IDENTICO
+  [  111s] OK    I3         M1 s1  IDENTICO
+  [  114s] OK    I3         M1 s2  IDENTICO
+  [  117s] OK    I3        REC s1  IDENTICO
+  [  119s] OK    I3        REC s2  IDENTICO
+  [  122s] OK    I3        REL s1  IDENTICO
+  [  125s] OK    I3        REL s2  IDENTICO
+  [  128s] OK    I3   REL_FIJO s1  IDENTICO
+  [  130s] OK    I3   REL_FIJO s2  IDENTICO
+  [  133s] OK    I3    REL_BAR s1  IDENTICO
+  [  137s] OK    I3    REL_BAR s2  IDENTICO
+  [  140s] OK    I3   REL_AZAR s1  IDENTICO
+  [  143s] OK    I3   REL_AZAR s2  IDENTICO
+  [  146s] OK    I3  REL_TARDE s1  IDENTICO
+  [  149s] OK    I3  REL_TARDE s2  IDENTICO
+
+--- I4: mundo vivo + B-5 == organismo_vivo_codigo (desambiguar=1, sin reproduccion) ---
+  [  152s] OK    I4 vivo desambiguar=1 s1  IDENTICO
+  [  155s] OK    I4 vivo desambiguar=0 s1  IDENTICO
+  [  159s] OK    I4 vivo desambiguar=1 s2  IDENTICO
+  [  162s] OK    I4 vivo desambiguar=0 s2  IDENTICO
+
+--- I5: rep2 + PLACEBO == organismo_v3cal (placebo=1, desambiguar=1) ---
+  [  164s] OK    I5 placebo=0 s1  IDENTICO
+  [  167s] OK    I5 placebo=1 s1  IDENTICO
+  [  171s] OK    I5 placebo=0 s2  IDENTICO
+  [  174s] OK    I5 placebo=1 s2  IDENTICO
+
+--- I6: ORACULO == organismo_f9c (nodo_or=1, nodo_via=0), desambiguar=0 ---
+  [  178s] OK    I6 ORACULO s1  IDENTICO
+  [  182s] OK    I6 ORACULO s2  IDENTICO
+
+--- I7: INERCIA del mapa sin r_vis (usa_M=1, olvida_M=1) ---
+  [  186s] OK    I7 tronco s1  IDENTICO
+  [  189s] OK    I7 vivo REL s1  IDENTICO
+  [  194s] OK    I7 tronco s2  IDENTICO
+  [  198s] OK    I7 vivo REL s2  IDENTICO
+
+--- I8 / I9: f10 solo agrega 'f10'; determinismo (mundo F10, brazo REL, T=20000) ---
+  [  206s] OK    I8 f10=1 vs f10=0 (menos la clave f10)  IDENTICO
+  [  209s] OK    I9 determinismo REL  IDENTICO
+
+--- D1..D12: controles que DEBEN diferir (mundo F10 salvo donde se dice, T=20000, semilla 1) ---
+  [  212s] OK    D1 r_vis=8 != r_vis=None (cuerpo REL, mundo vivo del tronco)  DIFIERE (debe) 
+  [  218s] OK    D2 usa_M=1 != usa_M=0 (r_vis=8, mundo vivo del tronco)  DIFIERE (debe) 
+  [  220s] OK    D3 olvida_M=1 != olvida_M=0 (mundo F10)  DIFIERE (debe) 
+  [  223s] OK    D4 parches=6 != parches=0 (mundo vivo, r_vis=8)  DIFIERE (debe) 
+  [  227s] OK    D5 cambia_cada=5000 != 0 (mundo F10)  DIFIERE (debe) cambios 3
+  [  230s] OK    D6 placebo=1 != 0 (mundo F10)  DIFIERE (debe) 
+  [  235s] OK    D7 ORACULO != REL (mundo F10)  DIFIERE (debe) 
+  [  238s] OK    D8 desambiguar=1 != 0 (mundo F10: B-5 actua)  DIFIERE (debe) des_splits REL 16
+  [  241s] OK    D9 pats 16 tipos != pats del tronco  DIFIERE (debe) 
+  [  246s] OK    D10a NODO_BARAJADO != REL  DIFIERE (debe) baraja_identidad 0
+  [  246s] OK    D10b NADA != REL  DIFIERE (debe) lect_div REL 51/51
+  [  248s] OK    D11 MUNDO_FIJO != REL  DIFIERE (debe) 
+  [  252s] OK    D12 MAPA_SIN_TABLA != SIN_HERENCIA  DIFIERE (debe) 
+  [  254s] OK    D13 REL_SIN_MAPA != REL  DIFIERE (debe) 
+
+--- GUARDIAS ---
+  [  254s] OK    G1 nodo_or sin nodo  F10: nodo_or exige nodo=1 (el oraculo sustituye el CONTENIDO del nodo,
+  [  254s] OK    G2 olvida_M sin usa_M  F10: olvida_M exige usa_M=1 (no hay mapa que olvidar)
+  [  254s] OK    G3 parches sin vivo  F10: parches exige vivo=1 (el mundo de la fase 10 es el mundo vivo)
+  [  254s] OK    G4 f10 sin h1  F10: f10=1 exige h1=1 y rep2=1 (las medidas del cuerpo usan su nacimie
+  [  254s] OK    G5 vals incompletos  F10: vals debe dar la valencia de TODOS los tipos de pats
+
+VEREDICTO identidad_mundo_fase10: PASA  79/79   (254s, un proceso)

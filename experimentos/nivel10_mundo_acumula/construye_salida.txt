@@ -1,0 +1,74 @@
+ESCRITO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\nivel10_mundo_acumula\mundo_fase10.py
+  origen  organismo_f9.py   sha 3a821884394d66c9   -> destino mundo_fase10.py sha 84e97674f709a900
+  cadena verificada: 7 shas hasta el TRONCO v14.1 · donantes verificados: 7
+  anclas del origen 48 (en linea 27) · lineas 540 -> 667
+  guardias: rng DEL ORGANISMO OK (2 excepciones declaradas) · lineas del origen intactas OK · compila OK
+
+  DOCUMENTACION DE ANCLAS (etiqueta | primera linea del ancla | tipo)
+    donante D1_v142              | return dict(desambiguar=desambiguar,des_splits=_ndes,des_t=_des_t,sobre=sobre,             | copiado de organismo_v142.py 17528d767fcebaf6
+    donante D2_vivo_codigo       | if (Wb[c]*R<0 or (desambiguar and R==0)) and abs(float(Wb[c]))>0.2 and float(kj@P)>float(K | copiado de organismo_vivo_codigo.py 839fa71f9c84cb26
+    donante D2_vivo_codigo       | elif R<0: Wn[_nm,j]=Wn[_nm,c]; Wp[_nm,j]=0.; Wn[_nm,c]=0.                                  | copiado de organismo_vivo_codigo.py 839fa71f9c84cb26
+    donante D3_f9c               | if nodo_or:   # F9C: NODO ORACULO (cota superior, voto del creador A). El contenido NO es  | copiado de organismo_f9c.py 9dd1fb91ecec35ae
+    donante D4_mundo_mapa        | if r_vis is not None and min((pos-x)%L,(x-pos)%L)>r_vis: continue   # mapa: fuera de la vi | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | if r_vis is not None and min((pos-x)%L,(x-pos)%L)>r_vis: continue   # mapa: fuera de la vi | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | return best if best is not None else (None,'vacio',None)   # mapa: nada a la vista         | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | _Mpat=np.zeros((L,6)); _Mset=np.zeros(L,bool); _VACIO=np.zeros(6)   # mapa: tabla posicion | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | def _sesgo_M():   # mapa: con la retina vacia, valor recordado por direccion, descontado p | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | pat=PAT[k] if k!='vacio' else _VACIO                                                       | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | x=np.concatenate([pat*1.2,[1.5 if left else 0,1.5 if left is False else 0,1.0 if d==0 else | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | if usa_M and k=='vacio': u=u+_sesgo_M()   # mapa: solo desempata sin senal directa         | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | Rp=.2 if (d is not None and d2 is not None and d2<d) else 0.                               | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | if usa_M and escribe_M: _Mpat[pos]=PAT[objs[pos]]; _Mset[pos]=True   # mapa: recuerda lo q | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D4_mundo_mapa        | if _pend:   # mapa: reaparecen en su sitio los objetos maduros                             | copiado de mundo_mapa.py 207d6a1954336b18
+    donante D5_v3cal             | for _ in range(placebo): rng.random()   # PLACEBO (criterio v3, A-CAL): consume k sorteos  | copiado de organismo_v3cal.py 148014f68cb01785
+    donante D5_v3cal             | placebo=int(placebo)                                                                       | copiado de organismo_v3cal.py 148014f68cb01785
+    donante D6_familias          | _D=len(next(iter(PAT.values())))   # FAMILIAS: tamano de la retina (6 con los patrones del | copiado de organismo_familias.py b9dd561a0cf056b8
+    donante D7_muralla           | _rg=np.random.default_rng(1000003*int(seed)+7)                                             | copiado de mundo_muralla.py 6e515713c86d8bf4
+    PAT_GLOBAL                   | PAT={'A':np.array([1,1,0,1,0,0.]),'B':np.array([1,0,1,0,1,0.]),'C':np.array([0,1,1,0,0,1.] | insercion
+    FIRMA                        | d_dote=0.1,d_umbral=0.1,menu='abcdef',nodo_baraja=0,nodo_rel=0,con_desde=0,rep_acum=0,f9=0 | en linea
+    GUARDIAS                     | if f9 and not (h1 and rep2): raise SystemExit('F9: f9=1 exige h1=1 y rep2=1 (las medidas d | insercion
+    PATRONES_DEL_MUNDO           | rng=np.random.default_rng(seed)                                                            | insercion
+    RETINA_KW                    | Wl=rng.uniform(.1,.4,(2,9)); KW=np.zeros((NKMAX,6)); activa=np.zeros(NKMAX,bool); KW[:NK]= | en linea
+    RETINA_COND_FUNDADOR         | while not cond(): KW[objetivo_AB:NK]=rng.uniform(0,1,(NK-objetivo_AB,6))                   | en linea
+    RETINA_COND_HIJO             | while not cond(): KW[objetivo_AB:NK]=_rh.uniform(0,1,(NK-objetivo_AB,6))                   | en linea
+    RETINA_MU_TR+B5_INIT         | Wp=np.zeros((n_nec,NKMAX)); Wn=np.zeros((n_nec,NKMAX)); err=np.zeros(NKMAX); mu=np.zeros(( | en linea
+    RETINA_WPS                   | Wps=np.zeros((n_nec,6)); Wns=np.zeros((n_nec,6))   # v13: via LENTA, lineal sobre la retin | en linea
+    RETINA_WPE                   | Wpe=np.zeros((n_nec,6)); Wke=np.zeros((n_nec,NKMAX)); _sbE=np.zeros(n_nec)   # VIVO: predi | en linea
+    TABLA_NEC_X_ESTIMULO         | _mnec=[0,0]; _bxor=[[0]*4 for _ in range(n_nec)]; _exor=[[0]*4 for _ in range(n_nec)]   #  | en linea
+    IDX_TIPOS                    | _IDX={_k2:_i2 for _i2,_k2 in enumerate('ABCD')}                                            | en linea
+    INIT_MAPA_PARCHES_F10        | _p1=[]; _c1=[]; _tok=[]; _ncu=[]   # F9: por cuerpo que muere -- rechazo lo malo a la 1a / | insercion
+    RETINA_MUP                   | mup=np.zeros((NKMAX,6)); mun=np.zeros((NKMAX,6)); zp=np.zeros(NKMAX); zn=np.zeros(NKMAX)   | en linea
+    VALENCIAS_INICIALES          | pos=0; E=1.0; Ag=A_ini; objs={}; val=(dict(VAL_VIVO) if vivo else {'A':'comida','B':'venen | en linea
+    SPAWN_PARCHES                | def spawn():                                                                               | en linea
+    PARCHES_INICIALES            | spawn()                                                                                    | insercion
+    MEDIDAS_F10_Y_SESGO_M        | def spawn():                                                                               | insercion
+    VISION_LIMITADA_1            | if memoria_rechazo and _rech.get(x,-1)>t: continue   # v9: rechazado hace poco, no es obje | insercion
+    VISION_LIMITADA_2            | for x,k in objs.items():                                                                   | insercion
+    RETINA_VACIA                 | return best                                                                                | en linea
+    GENERACION_AL_PARTO          | return _m                                                                                  | insercion
+    NONLOCAL_GEN                 | nonlocal E,Ag,_prev_on,_nbar                                                               | en linea
+    NACE_WL_Y_MAPA               | Wl[:]=_rh.uniform(.1,.4,(2,9)); el[:]=0; tr[:]=0   # la politica de locomocion NO se hered | en linea
+    NACE_KW                      | KW[:]=0; activa[:]=False; KW[:NK]=_rh.uniform(0,1,(NK,6)); activa[:NK]=True                | en linea
+    NACE_BARAJA                  | _pm=_rb.permutation(6); _nbar+=int(bool((_pm==np.arange(6)).all()))   # misma magnitud, pi | en linea
+    NACE_GENERACION              | E=(_m['dote'] if _m is not None else dote); Ag=E   # nace con su dote; el fundador de repu | insercion
+    PLACEBO_PARCHES_CAMBIOS      | for t in range(T):                                                                         | insercion
+    OLVIDA_M                     | hambre=np.clip(1-E,0,1)                                                                    | insercion
+    PAT_VACIO                    | d,k,left=see(contar=True); pat=PAT[k]                                                      | en linea
+    X_SIN_LADO                   | x=np.concatenate([pat*1.2,[1.5 if left else 0,0 if left else 1.5,1.0 if d==0 else 0.]]); n | en linea
+    SESGO_M_EN_U                 | if u.max()>.5: m[np.argmax(u)]=1                                                           | insercion
+    RP_SIN_OBJETIVO              | pos=(pos+int(m[1]-m[0]))%L; d2,_,_=see(); Rp=.2 if d2<d else 0.                            | en linea
+    ESCRIBE_M                    | if pos in objs:                                                                            | insercion
+    EXPOSICIONES_F10             | if vivo and _prev_on!=pos:   # VIVO: EXPOSICIONES (llegadas) y EXPOSICIONES HASTA CRITERIO | insercion
+    MORDIDAS_F10                 | mord[kk][q(t)]+=1                                                                          | insercion
+    PARCHE_SE_GASTA              | del objs[pos]; spawn()                                                                     | insercion
+    B5_DIVISION                  | if Wb[c]*R<0 and abs(float(Wb[c]))>0.2 and float(kj@P)>float(KW[c]@P) and (~activa).any(): | en linea
+    B5_HIJA_SIN_VALOR            | else:   Wn[_nm,j]=Wn[_nm,c]; Wp[_nm,j]=0.; Wn[_nm,c]=0.                                    | en linea
+    OLVIDO_DEL_MUNDO             | _dx=list(objs)[int(rng.integers(len(objs)))]; del objs[_dx]; spawn(); _rech.pop(_dx,None)  | en linea
+    RESUMEN_DEL_CUERPO           | if h1:   # H1: se cierra el cuerpo que muere: su vida SIN tope, su origen y sus descendien | insercion
+    P1_VALENCIA_ACTUAL           | _mal9=[_x9 for _x9 in _exph if _x9[1]==('B' if _x9[2]==0 else 'D')]                        | en linea
+    C1_VALENCIA_ACTUAL           | _bue9=[_x9 for _x9 in _exph if _x9[1]==('A' if _x9[2]==0 else 'C')]                        | en linea
+    ALIAS_AL_NACER               | _nace(_nac,_m)                                                                             | insercion
+    NODO_ORACULO                 | elif nodo_rel==2: _msg=[_nodo[_i9] for _i9 in sorted(int(_z9) for _z9 in _rrel.choice(len( | insercion
+    LOG_TIPOS                    | if log_cada and t%log_cada==0: log.append((t,)+tuple(round(valor(PAT[k]),2) for k in 'ABCD | en linea
+    SALIDA_F10                   | if rep_acum: _ext.update(rep_acum=1)   # F9: perilla DEL MUNDO (vale con alma=None); con r | insercion
+    SALIDA_B5                    | return dict(sobre=sobre,                                                                   | en linea
