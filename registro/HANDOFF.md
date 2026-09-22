@@ -973,3 +973,12 @@ CAL-4 n = 80 o placebo sin tocar el rng); (3) dos Pools en paralelo como regla (
 **Mañana, en orden:** (a) v4 del criterio y su calibración con el gemelo; (b) fase 9 bloque 3: cambiar el mundo (mapa del nivel 6 en el mundo vivo,
 o más de un cuerpo a la vez) con el gemelo numba y series de 40; (c) alefast Fase 3 (número contra Mem0) en su repo, antes de vender nada.
 Quien retome: `registro/ESTADO.md`, luego esta sección, luego "DECLARACIÓN DE LA FASE 9" en el registro.
+
+### Nota de última hora (21-sep 23:55): resultado externo del encargo de la fase 10
+Tres brazos fuera del repo (`PROYECTOS\JUACO-EXO\equiposase10\`, documento `_evaluacion\PARA_JUACO_mundo_fase10.md`) resolvieron el encargo del
+mundo de la fase 10 y declaran arneses 79/79, 15 shas verificados y una desviación de la regla 3. Su hallazgo central (hipótesis, no dato, hasta
+que el repo lo reproduzca): el conocimiento heredado llega al recién nacido y no se usa porque la boca decide con la fila de la necesidad activa;
+candidato al tronco "la boca lee las dos filas"; el mapa del nivel 6 no sirve como canal del dónde. El coordinador validó el prompt de integración
+con tres correcciones (externo = hipótesis; juzgar con v2 y v3 lado a lado; calibración de F1 con ERR antes del humo). Se ejecuta en la sesión
+siguiente, sin Pool primero: copia a `experimentos/nivel10_mundo_acumula/`, tripwire, identidad, humo con ancla, ERR de los defectos de letra,
+tabla de decisiones para el director. Detalle en la memoria del coordinador (`juaco-fase10-externo`).

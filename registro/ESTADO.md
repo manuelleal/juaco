@@ -52,4 +52,4 @@ procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
 3. **Dos Pools en paralelo como regla** (hoy 7 + 6 sin ERR-86; ninguna puerta mide tiempo de pared).
 4. **Fase 5:** correr V-5 (C, 25 %) o dejarla en 75 %.
 Hoy: 18 series, 2 declaraciones (fase 9 bloque 1 en parte y luego completa), 5 líneas cerradas, ERR-87..93, junta, necesidades, gemelos numba.
-**Mañana:** v4 del criterio → fase 9 bloque 3 (cambiar el mundo) con gemelo y series de 40 → alefast Fase 3 en su repo.
+**Mañana:** (0) integrar el resultado externo de la fase 10 con tres correcciones (HANDOFF, nota de última hora) y relanzar la carrera de bacterias → v4 del criterio → fase 9 bloque 3 (candidato 'la boca lee las dos filas') → alefast Fase 3.
