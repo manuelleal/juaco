@@ -82,7 +82,16 @@ Se declara solo si R0 ≥ 0.90 en ≥ 15/20 selladas y los controles caen como s
 - Los equipos Haiku pueden no alcanzar a diseñar. Eso también es un dato.
 - Si se cae la API de Opus (como el 21-sep), la ronda se repite completa, sin medias rondas.
 
-## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada
+## ERR de la carrera (numerados por el coordinador el 22-sep; ERR-94 queda reservado para la v4 del criterio de tronco)
+- **ERR-95**: la ENMIENDA 1 de abajo cambia la escala de la pista y la predicción de la ronda 0 **después** de ver el humo sin escalar
+  (auditoría de la pista, H-2). No es retroactiva, porque el 0.272 queda como dato de la pista sin escalar y la predicción nueva es para una serie no corrida, pero lleva número según la regla 11 de EQUIPO.md.
+- **ERR-96**: telemetría falsificable (auditoría de la pista, H-1, CRÍTICO). `pista.py` hacía `d.update(c.salida())` sin filtrar, así que un carro
+  podía pisar `descendientes`, `deaths`, `vidas_h1` y `fundadores` y fabricar su R0. Se demostró con un carro tramposo (999999 hijos con 0 reales).
+  Arreglo obligatorio antes de la ronda 1: el juez calcula todo **solo** desde la verdad física de la pista, y lo que devuelve el carro va en un espacio
+  de nombres aparte. Además, todo carro pasa un chequeo estático de tokens prohibidos (`sys._getframe`, `inspect`, `gc`, `globals`, acceso a frames
+  o a módulos de la pista) y la revisión del auditor antes de cada ronda: no hay sandbox (H-5), así que las prohibiciones del §4 se cumplen por revisión.
+
+## ENMIENDA 1 (22-sep-2026, decisión del director: "opción A") — pista escalada (ERR-95)
 
 **Motivo.** El humo de la ronda 0 (9 FABRICA en L = 40, `nobj = 4`; `datos/carrera_humo_ronda0_20260922_124440.json`) dio R0 por linaje
 0.272 contra 0.44–0.52 de un carro SOLO, y la causa medida fue la **escasez**: con 9 cuerpos, la comida y el agua se agotan y el mundo queda
