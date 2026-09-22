@@ -1,0 +1,45 @@
+IDENTIDAD APR · 2026-09-22 16:28:56 · UN proceso, sin Pool · python 3.14.2 · numpy 2.4.3
+  pista.py fb0ba16ada56eabc · FABRICA 2ebee3e99ea5a33a · APR 4402aa5142065c72 · APR_SIN_HERENCIA 7c5ca65079a70383 · APR_AZAR 14b5ecee1a4862f4
+
+(0) ORIGEN Y CONSTRUCCION
+  OK    FABRICA.py sha fijado   2ebee3e99ea5a33a
+  OK    APR.py en disco == construye_apr (aprende, P_AZAR None)   
+  OK    APR_SIN_HERENCIA.py en disco == construye_apr (sin_herencia, P_AZAR None)   
+  OK    APR_AZAR.py en disco == construye_apr (azar, P_AZAR None)   
+
+(A) APR con OPCION = 0 == FABRICA bit a bit · N = 1, compat 1, pizarra 0, T = 20000
+  OK    (A) s=1   R0 13/38 vs 13/38 · rng mundo 4c9b8d5275d7eb99/4c9b8d5275d7eb99 · 'apr' en carro: False
+  OK    (A) s=2   R0 8/40 vs 8/40 · rng mundo d50e29a562955be3/d50e29a562955be3 · 'apr' en carro: False
+  OK    (A) s=3   R0 7/24 vs 7/24 · rng mundo 087c22f936b21fc7/087c22f936b21fc7 · 'apr' en carro: False
+
+(A2) APR con OPCION = 0 == organismo_f9c.run(**REL) (monolito), s = 1, T = 5000
+  OK    (A2) monolito == APR(OPCION 0)   claves 76 · dif [] · sha f9c 9dd1fb91ecec35ae
+
+(B) N = 9, pista escalada (L 360, 36 objetos, pizarra 1): variantes con OPCION = 0 == 9 FABRICA · s 8001, T = 3000
+  OK    (B) APR   muertes [5, 7, 13, 8, 14, 0, 4, 14, 3] · rng fb4fd091957f2fd9/fb4fd091957f2fd9
+  OK    (B) APR_SIN_HERENCIA   muertes [5, 7, 13, 8, 14, 0, 4, 14, 3] · rng fb4fd091957f2fd9/fb4fd091957f2fd9
+  OK    (B) APR_AZAR   muertes [5, 7, 13, 8, 14, 0, 4, 14, 3] · rng fb4fd091957f2fd9/fb4fd091957f2fd9
+
+(C) DEBE DIFERIR: APR con OPCION = 1 != FABRICA, y la opcion decide
+  OK    (C) OPCION 1 cambia la corrida   oportunidades por linaje [276, 238, 205, 259, 253, 256, 222, 238, 222] · mordidas [20, 18, 39, 46, 28, 34, 33, 60, 21]
+
+(C2) v3: con OPCION = 1 y el aprendizaje CONGELADO (ALFA_Q = 0 -> Q1 = Q0 = 0) APR muerde EXACTAMENTE como FABRICA
+  OK    (C2) fisica + telemetria de FABRICA identicas; la opcion decidio y coincidio con la boca de FABRICA   oportunidades 1946 · mordidas 347 = FABRICA habria 347
+
+(D) DETERMINISMO con OPCION = 1
+  OK    (D) dos corridas iguales   
+
+(E) LA OPCION ACTUA SOLO SOBRE LETRAS MALAS; el carro no lee la tabla verdadera ni el rng del mundo
+  OK    (E1) toda decision de la opcion es sobre B o D (letras con algun efecto negativo)   decisiones 2126 · sobre letras malas 2126 · por letra {'A': 0, 'B': 1461, 'C': 0, 'D': 665}
+  OK    (E2) los carros APR no nombran VAL_VIVO / EFECTO / el rng del mundo   []
+  OK    (E3) revisa_carro PASA APR, APR_SIN_HERENCIA, APR_AZAR   {'APR': 0, 'APR_SIN_HERENCIA': 0, 'APR_AZAR': 0}
+
+(F) HERENCIA del valor de la opcion al cuerpo siguiente del linaje
+  OK    (F) APR: |Q| al nacer mayor que 0   nacimientos 59 · |Q| al nacer (2a mitad) min 0.5215 max 1.5635
+  OK    (F) APR_SIN_HERENCIA: |Q| al nacer 0   nacimientos 53 · |Q| al nacer (2a mitad) min 0.0000 max 0.0000
+
+(G) APR_AZAR
+  OK    (G1) sin P_AZAR aborta al crearse   APR_AZAR: P_AZAR sin fijar (construye_apr.py --p_azar)
+  OK    (G2) con P_AZAR = 0.3 muerde el 0.3 de las oportunidades (+- 4 sigma)   523/1722 = 0.304
+
+TOTAL 21/21 en 55.8s

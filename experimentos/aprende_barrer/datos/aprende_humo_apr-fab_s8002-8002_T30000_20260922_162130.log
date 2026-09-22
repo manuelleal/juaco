@@ -1,0 +1,41 @@
+CORRE_APRENDE · aprende_humo_apr-fab_s8002-8002_T30000_20260922_162130 · python 3.14.2 · pool NO (un proceso)
+  pista.py fb0ba16ada56eabc · juez.py 9621e095000aaa1a · corre_aprende.py d68db32a9c935167 · carros {'APR': 'fc3f9de9b9671c89', 'FABRICA': '2ebee3e99ea5a33a'}
+  series ['apr', 'fab'] · semillas 8002-8002 · T 30000 · APR_AZAR.P_AZAR = None
+  CHEQUEO ESTATICO APR: PASA
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  IDENTIDAD CORTA APR: OPCION 0 == FABRICA (N 9, s 8001, T 2000): OK
+  ENTRADA campo a campo (regla 14): corre_aprende.tarea == juez.tarea (9 FABRICA, s 8001, T 2000): OK
+  [   53.3s] apr semilla 8002 (43.0s) R0 pista 0.0053 · R0 por linaje [0.0, 0.0, 0.0, 0.0, 0.0, 0.0139, 0.0, 0.0159, 0.0149]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_humo_apr-fab_s8002-8002_T30000_20260922_162130_apr.json (sha 68dfdc0da071b19d) · escrituras en la pizarra 0
+
+== SERIE apr (APR x9) · 1 semillas 8002-8002 · T 30000
+  R0 por linaje-semilla: mediana 0.0 · R0 de la pista (mediana por semilla) 0.0053 · vida mediana 222.0
+  ENMIENDA 3: (i) mediana R0 evaluables 0.0 · (ii) sin fundadores tras 10000 0.0 · (iii) evaluables 9/9 · casi inmortales 0 · linajes que cruzan 0 -> NO CRUZA
+  causas de muerte hambre/sed/veneno/sal 0/0/291/270 (0%/0%/52%/48%)
+  fraccion de pasos SIN ningun objeto bueno en el mundo: mediana 0.0008 (por semilla [0.0008])
+  limpieza FISICA (juez: B/D a sabiendas con el golpe en la necesidad mas llena): por cuerpo 4.5938 · por linaje-semilla 302.0 · mordidas B+D por linaje-semilla 521.0
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9
+  OPCION (telemetria del carro, no puntua): oportunidades 18880 · mordidas 4781 · tasa 0.2532 · por cuarto de T [0.2117, 0.2325, 0.2836, 0.2915] · ULTIMO CUARTO 0.2915 (-> P_AZAR de APR_AZAR si serie apr)
+    tasa por EDAD del cuerpo (cortes [50, 100, 200, 400, 800, 1600]): [0.2083, 0.2421, 0.2532, 0.2677, 0.2573, 0.2637, 0.258]
+    tasa por INDICE DEL CUERPO en el linaje (cortes [1, 5, 20, 50, 100, 200, 400]): [0.2582, 0.1776, 0.2242, 0.2634, 0.2846, None, None, None] (oportunidades [244, 1019, 4706, 9060, 3851, 0, 0, 0])
+    CUANDO: tasa con algun bueno en el mundo 0.254 vs SIN ningun bueno 0.2055 (oportunidades [18588, 292])
+    por min(E,Ag) predicho tras morder (cortes [0.0, 0.3, 0.6, 1.0]): con bueno [0.1617, 0.2163, 0.2542, 0.3003, 0.3321] · sin bueno [0.2143, 0.2083, 0.2143, 0.2264, 0.1556]
+    FABRICA habria mordido 0.3231 de esas oportunidades · p media 0.2503 · |delta TD| medio 0.0777
+    Q final (mediana por linaje-semilla; rasgos [1, u, u_tras, sin_bueno, dist]): no morder [-0.683, -0.5811, -0.1252, -0.008, -0.2059, -0.0643] · morder [-0.8025, -0.6773, 0.0541, -0.0165, -0.2001, -0.053]
+    politica final (mediana): {'g0=0 post=-0.2': 0.149, 'g0=0 post=0.1': 0.193, 'g0=0 post=0.4': 0.247, 'g0=0 post=0.8': 0.329, 'g0=0 post=1.2': 0.474, 'g0=1 post=-0.2': 0.152, 'g0=1 post=0.1': 0.165, 'g0=1 post=0.4': 0.178, 'g0=1 post=0.8': 0.291, 'g0=1 post=1.2': 0.471}
+  PREDICCION FIRMADA: APR NO cruza por la ENMIENDA 3 (p 0.93); mediana del R0 de los linajes-semilla 0.30-0.60 -> medido NO CRUZA, mediana 0.0 -> NO se cumple
+  [   95.3s] fab semilla 8002 (42.0s) R0 pista 0.3333 · R0 por linaje [0.3117, 0.2763, 0.3968, 0.4717, 0.3559, 0.3651, 0.3286, 0.241, 0.3243]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_humo_apr-fab_s8002-8002_T30000_20260922_162130_fab.json (sha f088e1cfb6dedffb) · escrituras en la pizarra 0
+
+== SERIE fab (FABRICA x9) · 1 semillas 8002-8002 · T 30000
+  R0 por linaje-semilla: mediana 0.3286 · R0 de la pista (mediana por semilla) 0.3333 · vida mediana 182.0
+  ENMIENDA 3: (i) mediana R0 evaluables 0.329 · (ii) sin fundadores tras 10000 0.0 · (iii) evaluables 9/9 · casi inmortales 0 · linajes que cruzan 0 -> NO CRUZA
+  causas de muerte hambre/sed/veneno/sal 0/0/232/377 (0%/0%/38%/62%)
+  fraccion de pasos SIN ningun objeto bueno en el mundo: mediana 0.005 (por semilla [0.005])
+  limpieza FISICA (juez: B/D a sabiendas con el golpe en la necesidad mas llena): por cuerpo 4.2075 · por linaje-semilla 286.0 · mordidas B+D por linaje-semilla 338.0
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9
+  PREDICCION FIRMADA: FABRICA NO cruza; mediana 0.28-0.40 (sellada 5001-5020: 0.34) -> medido NO CRUZA, mediana 0.3286 -> SE CUMPLE
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\aprende\experimentos\aprende_barrer\datos\aprende_humo_apr-fab_s8002-8002_T30000_20260922_162130_resumen.json
+Terminado en 95.3s

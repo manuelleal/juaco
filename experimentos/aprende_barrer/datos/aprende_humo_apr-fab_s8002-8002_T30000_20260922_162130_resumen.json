@@ -1,0 +1,222 @@
+{
+ "series": {
+  "apr": {
+   "serie": "apr",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.0,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 9,
+    "n": 9,
+    "frac_eval": 1.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.0,
+   "R0_pista_med": 0.0053,
+   "vida_med": 222.0,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 291,
+    "sal": 270
+   },
+   "frac_sin_bueno_mundo_med": 0.0008,
+   "limpiezas_fisicas_por_cuerpo_med": 4.5938,
+   "limpiezas_fisicas_por_linaje_med": 302.0,
+   "mord_BD_por_linaje_med": 521.0,
+   "coherente": "9/9",
+   "t_fund_rec": "9/9",
+   "apr": {
+    "oportunidades": 18880,
+    "mordidas": 4781,
+    "tasa_global": 0.2532,
+    "tasa_por_cuarto": [
+     0.2117,
+     0.2325,
+     0.2836,
+     0.2915
+    ],
+    "tasa_ultimo_cuarto": 0.2915,
+    "tasa_por_edad": [
+     0.2083,
+     0.2421,
+     0.2532,
+     0.2677,
+     0.2573,
+     0.2637,
+     0.258
+    ],
+    "bin_edad": [
+     50,
+     100,
+     200,
+     400,
+     800,
+     1600
+    ],
+    "tasa_por_indice_cuerpo": [
+     0.2582,
+     0.1776,
+     0.2242,
+     0.2634,
+     0.2846,
+     null,
+     null,
+     null
+    ],
+    "bin_gen": [
+     1,
+     5,
+     20,
+     50,
+     100,
+     200,
+     400
+    ],
+    "opp_por_indice_cuerpo": [
+     244,
+     1019,
+     4706,
+     9060,
+     3851,
+     0,
+     0,
+     0
+    ],
+    "tasa_sin_bueno_vs_con": {
+     "con_bueno": 0.254,
+     "sin_bueno": 0.2055,
+     "opp": [
+      18588,
+      292
+     ]
+    },
+    "tasa_por_post": {
+     "con_bueno": [
+      0.1617,
+      0.2163,
+      0.2542,
+      0.3003,
+      0.3321
+     ],
+     "sin_bueno": [
+      0.2143,
+      0.2083,
+      0.2143,
+      0.2264,
+      0.1556
+     ],
+     "bin_post": [
+      0.0,
+      0.3,
+      0.6,
+      1.0
+     ],
+     "opp": [
+      [
+       2436,
+       5326,
+       3682,
+       4196,
+       2948
+      ],
+      [
+       42,
+       96,
+       56,
+       53,
+       45
+      ]
+     ]
+    },
+    "fabrica_habria_mordido": 0.3231,
+    "acuerdo_mordidas": 1496,
+    "p_media": 0.2503,
+    "td_abs_medio": 0.0777,
+    "w_mediana": [
+     [
+      -0.683,
+      -0.5811,
+      -0.1252,
+      -0.008,
+      -0.2059,
+      -0.0643
+     ],
+     [
+      -0.8025,
+      -0.6773,
+      0.0541,
+      -0.0165,
+      -0.2001,
+      -0.053
+     ]
+    ],
+    "politica_mediana": {
+     "g0=0 post=-0.2": 0.149,
+     "g0=0 post=0.1": 0.193,
+     "g0=0 post=0.4": 0.247,
+     "g0=0 post=0.8": 0.329,
+     "g0=0 post=1.2": 0.474,
+     "g0=1 post=-0.2": 0.152,
+     "g0=1 post=0.1": 0.165,
+     "g0=1 post=0.4": 0.178,
+     "g0=1 post=0.8": 0.291,
+     "g0=1 post=1.2": 0.471
+    }
+   },
+   "prediccion": {
+    "texto": "APR NO cruza por la ENMIENDA 3 (p 0.93); mediana del R0 de los linajes-semilla 0.30-0.60",
+    "se_cumple": false
+   }
+  },
+  "fab": {
+   "serie": "fab",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.329,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 9,
+    "n": 9,
+    "frac_eval": 1.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3286,
+   "R0_pista_med": 0.3333,
+   "vida_med": 182.0,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 232,
+    "sal": 377
+   },
+   "frac_sin_bueno_mundo_med": 0.005,
+   "limpiezas_fisicas_por_cuerpo_med": 4.2075,
+   "limpiezas_fisicas_por_linaje_med": 286.0,
+   "mord_BD_por_linaje_med": 338.0,
+   "coherente": "9/9",
+   "t_fund_rec": "9/9",
+   "prediccion": {
+    "texto": "FABRICA NO cruza; mediana 0.28-0.40 (sellada 5001-5020: 0.34)",
+    "se_cumple": true
+   }
+  }
+ },
+ "semillas": [
+  8002
+ ],
+ "T": 30000,
+ "humo": true,
+ "P_AZAR": null
+}
