@@ -1,0 +1,19 @@
+BACTERIA C — EJECUCION 1 (diagnostico). Un proceso, sin Pool.
+  gemelo organismo_f9_rapido.py sha 93955a5315ce5f17 (arnes 138/138 x45)
+  tronco organismo_f9.py        sha 3a821884394d66c9
+  brazos y resumen de corre_f9.py sha 62f39314ea9b1dcf (no se copian)
+  RENACE   s3201  R0 0.947  vida   669.5  t_ok None  sac 0.564  mu(hambre/sed) 37/38  0.65s
+  RENACE   s3202  R0 0.742  vida   600.0  t_ok None  sac 0.517  mu(hambre/sed) 34/54  0.07s
+  RENACE   s3203  R0 0.401  vida   214.0  t_ok None  sac 0.503  mu(hambre/sed) 65/81  0.07s
+  NADA     s3201  R0 0.148  vida   107.0  t_ok 21.0  sac 0.518  mu(hambre/sed) 122/120  0.44s
+  NADA     s3202  R0 0.160  vida    94.0  t_ok 23.0  sac 0.525  mu(hambre/sed) 135/120  0.11s
+  NADA     s3203  R0 0.098  vida    77.0  t_ok 22.0  sac 0.492  mu(hambre/sed) 114/141  0.11s
+  M1       s3201  R0 0.196  vida   135.5  t_ok 27.5  sac 0.541  mu(hambre/sed) 101/102  0.10s
+  M1       s3202  R0 0.162  vida   174.0  t_ok 25.5  sac 0.493  mu(hambre/sed) 115/118  0.11s
+  M1       s3203  R0 0.228  vida   187.5  t_ok 22.0  sac 0.514  mu(hambre/sed) 93/112  0.10s
+  REL      s3201  R0 0.400  vida   657.5  t_ok 41.0  sac 0.523  mu(hambre/sed) 58/81  0.11s
+  REL      s3202  R0 0.383  vida   604.0  t_ok 33.0  sac 0.514  mu(hambre/sed) 56/84  0.11s
+  REL      s3203  R0 0.412  vida   600.0  t_ok 43.0  sac 0.513  mu(hambre/sed) 89/70  0.12s
+[P-C0] ANCLA: el instrumento no se movio (NADA, RENACE y REL de la fase 9) -> PASA  {"R0_NADA": 0.1481, "vida_NADA": 94.0, "R0_RENACE": 0.7416, "R0_REL": 0.4, "vida_REL": 604.0}
+[P-C1] DIAGNOSTICO: el que ya sabe que comer muere por no conseguir recurso (hambre Y sed), y pierde pasos antes de su primera mordida buena -> PASA  {"t_ok_REL": 41.0, "t_ok_frac_vida": 0.0624, "frac_sed_REL": 0.5827, "t_ok_NADA": 22.0, "sac_REL": 0.514, "sac_RENACE": 0.517}
+JSON: C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\carrera_fase10\C\C_E1_diagnostico_20260921_201846.json  (2.1s)

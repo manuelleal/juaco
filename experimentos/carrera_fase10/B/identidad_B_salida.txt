@@ -1,0 +1,95 @@
+organismo_B.py  sha 23109ff65ff91ee2
+  OK  ancla f9 sha 3a821884394d66c9
+  OK  ancla f9c sha 9dd1fb91ecec35ae
+
+(A) IDENTIDAD BIT A BIT con las perillas nuevas apagadas (T=12000, semillas (3101, 3102))
+    A1 — 14 brazos de corre_bloque2 x rep_acum(0,1) contra organismo_f9c
+  OK  A1 RENACE acum=0 s=3101
+  OK  A1 RENACE acum=1 s=3101
+  OK  A1 NADA acum=0 s=3101
+  OK  A1 NADA acum=1 s=3101
+  OK  A1 M1 acum=0 s=3101
+  OK  A1 M1 acum=1 s=3101
+  OK  A1 REC acum=0 s=3101
+  OK  A1 REC acum=1 s=3101
+  OK  A1 REL acum=0 s=3101
+  OK  A1 REL acum=1 s=3101
+  OK  A1 REL2b acum=0 s=3101
+  OK  A1 REL2b acum=1 s=3101
+  OK  A1 REL2 acum=0 s=3101
+  OK  A1 REL2 acum=1 s=3101
+  OK  A1 REL2b_BAR acum=0 s=3101
+  OK  A1 REL2b_BAR acum=1 s=3101
+  OK  A1 REL_BAR acum=0 s=3101
+  OK  A1 REL_BAR acum=1 s=3101
+  OK  A1 CAUTELA acum=0 s=3101
+  OK  A1 CAUTELA acum=1 s=3101
+  OK  A1 DOSIS acum=0 s=3101
+  OK  A1 DOSIS acum=1 s=3101
+  OK  A1 ORACULO acum=0 s=3101
+  OK  A1 ORACULO acum=1 s=3101
+  OK  A1 REL_FIJO acum=0 s=3101
+  OK  A1 REL_FIJO acum=1 s=3101
+  OK  A1 REL_AZAR acum=0 s=3101
+  OK  A1 REL_AZAR acum=1 s=3101
+    A2 — 9 brazos de corre_f9 contra organismo_f9 (la cadena)
+  OK  A2 RENACE acum=0 s=3101
+  OK  A2 RENACE acum=1 s=3101
+  OK  A2 NADA acum=0 s=3101
+  OK  A2 NADA acum=1 s=3101
+  OK  A2 M1 acum=0 s=3101
+  OK  A2 M1 acum=1 s=3101
+  OK  A2 REC acum=0 s=3101
+  OK  A2 REC acum=1 s=3101
+  OK  A2 REL acum=0 s=3101
+  OK  A2 REL acum=1 s=3101
+  OK  A2 REL_FIJO acum=0 s=3101
+  OK  A2 REL_FIJO acum=1 s=3101
+  OK  A2 REL_BAR acum=0 s=3101
+  OK  A2 REL_BAR acum=1 s=3101
+  OK  A2 REL_AZAR acum=0 s=3101
+  OK  A2 REL_AZAR acum=1 s=3101
+  OK  A2 REL_TARDE acum=0 s=3101
+  OK  A2 REL_TARDE acum=1 s=3101
+    A3 — segunda semilla, los tres brazos que mas mueven el estado
+  OK  A3 REL2b s=3102
+  OK  A3 ORACULO s=3102
+  OK  A3 REL_AZAR s=3102
+
+(B) SOLO LECTURA: bB=1 es bB=0 salvo las claves nuevas
+  OK  B1 claves nuevas presentes s=3101
+  OK  B2 el resto es identico s=3101
+  OK  B1 claves nuevas presentes s=3102
+  OK  B2 el resto es identico s=3102
+
+(C) INERTE DONDE DEBE
+  OK  C1 sin conexion nunca se lee: nodo_via=3 == nodo_via=2 en TODO el dict
+  OK  C2 cambia_en > T es inerte
+  OK  C3 retina=6 explicita == retina=0 (v14 exacto)
+  OK  C4 en el mundo de ABCD (4 codigos disjuntos) leer casi no divide: div_lectura pequeno
+
+(D) CONTROLES QUE DEBEN DIFERIR (>= 7)
+  OK  D D1 mundoB=6 != mundo de ABCD (DEBE diferir)
+  OK  D D2 vira=1 != vira=0 (la trampa existe) (DEBE diferir)
+  OK  D D3 nodo_via=3 != nodo_via=2 (leer hace crecer) (DEBE diferir)
+  OK  D D4 nodo_via=3 != nodo_via=0 (via lenta sola) (DEBE diferir)
+  OK  D D5 nodo_baraja=1 != contenido intacto (DEBE diferir)
+  OK  D D6 cambia_en=2000 != mundo fijo (DEBE diferir)
+  OK  D D7 NADA != REL2b en el mundo B (DEBE diferir)
+  OK  D8 semilla distinta -> variante virante distinta (trampa 4)
+
+(E) CORDURA DEL MUNDO B
+  OK  E1 F*F estimulos y 2F pixeles
+  OK  E2 ejes: F/2 familias de energia (comida/veneno) y F/2 de agua (agua/sal)
+  OK  E3 hay las cuatro valencias en el mundo
+  OK  E4 exactamente F combinaciones viradas
+  OK  E5 con vira=0 no hay ninguna virada (mundo llano)
+  OK  E6 el rng del mundo es propio (sem_mundo declarada)
+
+(F) ERR-38: LA PERILLA NO ES INERTE
+  OK  F1 nodo_via=3 dispara divisiones AL LEER (div_lectura > 0)
+  OK  F2 nodo_via=2 no tiene div_lectura
+  OK  F3 la seleccion por relevancia difiere de la recencia (lect_div > 0)
+  OK  F4 hay generaciones > 1 (la cola transmite la generacion)
+
+77/77  (115.9 s)

@@ -1,0 +1,61 @@
+ARNES DE IDENTIDAD — organismo_f9_rapido vs organismo_f9   (T=4000, semillas [1501, 1502, 1503])
+compilacion / carga del cache de numba: 1.0s   (proceso NUEVO: al repetir el arnes debe caer a ~1s)
+
+IDENTIDAD: 138/138 corridas identicas (46 configuraciones x 3 semillas, T=4000, todas las claves)
+   tiempo total: tronco 43.5s, gemelo 1.3s -> x33.9 sobre el arnes entero
+
+TESTIGOS (semilla 1501, rep_acum=0): valor del TRONCO, con = si el gemelo da el mismo
+   brazo         muertes      nacim       fund       desc         R0   vida_med   nodo_esc       lect        div         p1         c1
+   RENACE            = 8        = 0        = 0        = 2     = 0.25    = 444.4     = None     = None     = None     = None     = None
+   NADA              = 6        = 6        = 5        = 1   = 0.1667    = 571.4        = 0        = 0        = 0    = 0.167      = 1.0
+   M1                = 8        = 8        = 6        = 2     = 0.25    = 444.4        = 0        = 0        = 0    = 0.375      = 1.0
+   REC              = 10       = 10        = 7        = 3      = 0.3    = 363.6       = 94       = 10        = 0      = 0.7      = 1.0
+   REL              = 11       = 11        = 8        = 3   = 0.2727    = 333.3      = 104       = 11       = 11    = 0.636      = 1.0
+   REL_FIJO          = 8        = 8        = 7        = 1    = 0.125    = 444.4       = 70        = 8        = 2     = 0.75      = 1.0
+   REL_BAR          = 14       = 14       = 11        = 3   = 0.2143    = 266.7      = 105       = 14       = 14    = 0.231      = 1.0
+   REL_AZAR         = 13       = 13       = 12        = 1   = 0.0769    = 285.7      = 103       = 13        = 7     = 0.75      = 1.0
+   REL_TARDE         = 9        = 9        = 7        = 2   = 0.2222    = 400.0       = 77        = 5        = 5    = 0.444      = 1.0
+   (= : tronco y gemelo dan el MISMO valor; discrepancias: 0)
+   caminos forzados (tienen que ser > 0 para que el caso pruebe algo): muertes_max=62, splits_max=6, nodo_max=233, cola_desborde=0, miedo_inerte=24, fundadores=952, desc=243, lect_div=568, curitas=934
+
+
+CONTROLES QUE DEBEN DIFERIR (si alguno sale IGUAL, el gemelo no distingue nada):
+   REL != REC                   -> DIFIERE (bien)
+   REL != REL_BAR               -> DIFIERE (bien)
+   REL != REL_AZAR              -> DIFIERE (bien)
+   REL != REL_FIJO              -> DIFIERE (bien)
+   REL != REL_TARDE             -> DIFIERE (bien)
+   NADA != M1                   -> DIFIERE (bien)
+   NADA != RENACE               -> DIFIERE (bien)
+   NADA rep_acum 1 != 0         -> DIFIERE (bien)
+   REL rep_acum 1 != 0          -> DIFIERE (bien)
+   REL semilla vecina           -> DIFIERE (bien)
+   ALMA_CICLO != alma nula      -> DIFIERE (bien)
+   gemelo REL != tronco REC     -> DIFIERE (bien)
+
+GUARDIAS (el gemelo aborta donde aborta el original):
+   nodo_rel=4             tronco SystemExit     gemelo SystemExit     OK
+   nodo_rel sin nodo      tronco SystemExit     gemelo SystemExit     OK
+   con_desde sin nodo     tronco SystemExit     gemelo SystemExit     OK
+   con_desde y conectado  tronco SystemExit     gemelo SystemExit     OK
+   f9 sin h1              tronco SystemExit     gemelo SystemExit     OK
+   dote >= rep_umbral     tronco SystemExit     gemelo SystemExit     OK
+   menu vacio             tronco SystemExit     gemelo SystemExit     OK
+FUERA DE ALCANCE (el gemelo avisa en vez de callar):
+   log_cada               gemelo ValueError     OK
+   nec_shuf               gemelo ValueError     OK
+   eta_pred               gemelo ValueError     OK
+   k_sorp                 gemelo ValueError     OK
+   hereda pares           gemelo ValueError     OK
+   hereda baraja          gemelo ValueError     OK
+
+DETERMINISMO: dos llamadas iguales del gemelo -> MISMO dict (OK)
+
+ACELERACION a T=100000 (un proceso, sin Pool):
+   NADA      tronco   7.66s  gemelo  0.117s  -> x 65.7   identidad a 100k: OK
+   REL       tronco  10.50s  gemelo  0.235s  -> x 44.7   identidad a 100k: OK
+   REL_AZAR  tronco   8.24s  gemelo  0.230s  -> x 35.9   identidad a 100k: OK
+   TOTAL     tronco  26.39s  gemelo  0.581s  -> x 45.4
+   una serie de 360 corridas de T=100000: tronco ~53 min de CPU, gemelo ~1.2 min de CPU
+
+VEREDICTO: identidad 138/138 · controles que deben diferir 12/12 · guardias 13/13 · testigos todos iguales · determinismo OK
