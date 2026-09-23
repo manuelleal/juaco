@@ -1,0 +1,355 @@
+{
+ "meta": {
+  "etiqueta": "ronda1_s4001-4001",
+  "ronda": "1",
+  "sello": "20260922_143636",
+  "semillas": [
+   4001
+  ],
+  "T": 5000,
+  "pizarra": 1,
+  "rep_acum": 0,
+  "carros": [
+   "O1",
+   "S1",
+   "H1",
+   "FABRICA",
+   "FABRICA",
+   "FABRICA",
+   "FABRICA",
+   "FABRICA",
+   "FABRICA"
+  ],
+  "sha_carros": {
+   "FABRICA": "2ebee3e99ea5a33a",
+   "H1": "d62906a245a5c50d",
+   "O1": "99436afa2715f028",
+   "S1": "eb168195f83958b7"
+  },
+  "escala": 1,
+  "chequeo_estatico": {
+   "FABRICA": [],
+   "H1": [],
+   "O1": [],
+   "S1": []
+  },
+  "sha_pista": "d2a4b219059478eb",
+  "sha_juez": "f2aeb20651969126",
+  "sha_f9c": "9dd1fb91ecec35ae",
+  "identidad_corta": {
+   "sha_f9c": "9dd1fb91ecec35ae",
+   "sha_ok": true,
+   "dif": [],
+   "ok": true
+  },
+  "W_CAUSA": 400,
+  "CUPO": 16,
+  "ANCHO": 8,
+  "ref": {
+   "R0": 0.395,
+   "R0_acum1": 0.483,
+   "fuente": "bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)"
+  }
+ },
+ "tabla": [
+  {
+   "id": "O1",
+   "R0_med": 3.5,
+   "R0": [
+    3.5
+   ],
+   "vida_med": 2500.0,
+   "muertes": 1.0,
+   "descendientes": 7.0,
+   "fundadores": 1.0,
+   "p1": 0.0,
+   "c1": 1.0,
+   "exp_A": 83.0,
+   "sac_frac": 0.7,
+   "causas": {
+    "hambre": 0,
+    "sed": 1,
+    "veneno": 0,
+    "sal": 0
+   },
+   "cruza_09": 1,
+   "n": 1
+  },
+  {
+   "id": "S1",
+   "R0_med": 0.429,
+   "R0": [
+    0.4286
+   ],
+   "vida_med": 809.0,
+   "muertes": 6.0,
+   "descendientes": 3.0,
+   "fundadores": 3.0,
+   "p1": 0.833,
+   "c1": 1.0,
+   "exp_A": 50.0,
+   "sac_frac": 0.561,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 3,
+    "sal": 3
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "H1",
+   "R0_med": 0.1,
+   "R0": [
+    0.1
+   ],
+   "vida_med": 165.0,
+   "muertes": 19.0,
+   "descendientes": 2.0,
+   "fundadores": 17.0,
+   "p1": 0.737,
+   "c1": 1.0,
+   "exp_A": 48.0,
+   "sac_frac": 0.393,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 6,
+    "sal": 13
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "FABRICA#3",
+   "R0_med": 0.1,
+   "R0": [
+    0.1
+   ],
+   "vida_med": 96.5,
+   "muertes": 19.0,
+   "descendientes": 2.0,
+   "fundadores": 17.0,
+   "p1": 0.667,
+   "c1": 1.0,
+   "exp_A": 28.0,
+   "sac_frac": 0.296,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 4,
+    "sal": 15
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "FABRICA#4",
+   "R0_med": 0.062,
+   "R0": [
+    0.0625
+   ],
+   "vida_med": 173.0,
+   "muertes": 15.0,
+   "descendientes": 1.0,
+   "fundadores": 14.0,
+   "p1": 0.667,
+   "c1": 1.0,
+   "exp_A": 40.0,
+   "sac_frac": 0.294,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 3,
+    "sal": 12
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "FABRICA#5",
+   "R0_med": 0.091,
+   "R0": [
+    0.0909
+   ],
+   "vida_med": 111.5,
+   "muertes": 21.0,
+   "descendientes": 2.0,
+   "fundadores": 19.0,
+   "p1": 0.65,
+   "c1": 1.0,
+   "exp_A": 45.0,
+   "sac_frac": 0.349,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 5,
+    "sal": 16
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "FABRICA#6",
+   "R0_med": 0.05,
+   "R0": [
+    0.05
+   ],
+   "vida_med": 147.0,
+   "muertes": 19.0,
+   "descendientes": 1.0,
+   "fundadores": 18.0,
+   "p1": 0.842,
+   "c1": 1.0,
+   "exp_A": 34.0,
+   "sac_frac": 0.379,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 4,
+    "sal": 15
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "FABRICA#7",
+   "R0_med": 0.625,
+   "R0": [
+    0.625
+   ],
+   "vida_med": 164.0,
+   "muertes": 7.0,
+   "descendientes": 5.0,
+   "fundadores": 4.0,
+   "p1": 0.429,
+   "c1": 1.0,
+   "exp_A": 65.0,
+   "sac_frac": 0.69,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 4,
+    "sal": 3
+   },
+   "cruza_09": 0,
+   "n": 1
+  },
+  {
+   "id": "FABRICA#8",
+   "R0_med": 0.118,
+   "R0": [
+    0.1176
+   ],
+   "vida_med": 153.0,
+   "muertes": 16.0,
+   "descendientes": 2.0,
+   "fundadores": 14.0,
+   "p1": 0.867,
+   "c1": 1.0,
+   "exp_A": 49.0,
+   "sac_frac": 0.283,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 7,
+    "sal": 9
+   },
+   "cruza_09": 0,
+   "n": 1
+  }
+ ],
+ "R0_pista": 0.189,
+ "err99": {
+  "modo": "oficial",
+  "escuderias": {
+   "O1": {
+    "linajes_semilla": 1,
+    "cruzan": 0,
+    "evaluables": 0,
+    "casi_inmortales": 1,
+    "R0_eval_med": null,
+    "R0_med_todos": 3.5,
+    "semillas_que_cruza": 0,
+    "semillas": 1,
+    "gana": false,
+    "nac_reales_med": 0.0,
+    "fund_post_med": 0.0,
+    "sin_parir_med": 1.0,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 1
+   },
+   "S1": {
+    "linajes_semilla": 1,
+    "cruzan": 0,
+    "evaluables": 1,
+    "casi_inmortales": 0,
+    "R0_eval_med": 0.429,
+    "R0_med_todos": 0.429,
+    "semillas_que_cruza": 0,
+    "semillas": 1,
+    "gana": false,
+    "nac_reales_med": 3.0,
+    "fund_post_med": 0.0,
+    "sin_parir_med": 0.5,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 0
+   },
+   "H1": {
+    "linajes_semilla": 1,
+    "cruzan": 0,
+    "evaluables": 1,
+    "casi_inmortales": 0,
+    "R0_eval_med": 0.1,
+    "R0_med_todos": 0.1,
+    "semillas_que_cruza": 0,
+    "semillas": 1,
+    "gana": false,
+    "nac_reales_med": 2.0,
+    "fund_post_med": 0.0,
+    "sin_parir_med": 0.895,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 0
+   },
+   "FABRICA": {
+    "linajes_semilla": 6,
+    "cruzan": 0,
+    "evaluables": 6,
+    "casi_inmortales": 0,
+    "R0_eval_med": 0.095,
+    "R0_med_todos": 0.095,
+    "semillas_que_cruza": 0,
+    "semillas": 1,
+    "gana": null,
+    "nac_reales_med": 2.0,
+    "fund_post_med": 0.0,
+    "sin_parir_med": 0.9,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 0
+   }
+  },
+  "predicciones": [
+   [
+    "H1: R0 mediano dentro de +-0.10 de la mediana de los FABRICA",
+    "H1 0.1 vs FABRICA 0.095 (diferencia 0.005; dentro de +-0.10)"
+   ],
+   [
+    "FABRICA: R0 mediano 0.28-0.45",
+    "FABRICA 0.095 (FUERA de 0.28-0.45)"
+   ],
+   [
+    "O1: cruza en >= 10/20 semillas (p 0.55); gana la ronda >= 15/20 (p 0.30)",
+    "O1 cruza en 0/1 (< 10 por 20); gana: no"
+   ],
+   [
+    "al menos un linaje O1-semilla 'casi inmortal' (p 0.80); O1 'casi inmortal' en >= 10/20 (p 0.75)",
+    "O1 casi inmortal en 1/1 semillas (>= 1; >= 10 por 20)"
+   ],
+   [
+    "S1 no cruza (p 0.95)",
+    "S1 cruza en 0/1 (NO cruza)"
+   ]
+  ]
+ }
+}

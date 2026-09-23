@@ -1,0 +1,84 @@
+JUEZ · ronda0_s4003-4022 · 2026-09-22 14:13:16 · python 3.14.2 · pool 6
+  pista.py d2a4b219059478eb · juez.py 797fe37f69176b87 · carros {'FABRICA': '2ebee3e99ea5a33a'}
+  carros (orden = indice de linaje): ['FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · semillas 4003-4022 · T=100000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [  200.5s] semilla 4004 (199.1s) R0 pista 0.3356
+  [  202.7s] semilla 4003 (201.3s) R0 pista 0.3403
+  [  202.8s] semilla 4006 (201.4s) R0 pista 0.333
+  [  202.9s] semilla 4007 (201.5s) R0 pista 0.3257
+  [  203.7s] semilla 4008 (202.2s) R0 pista 0.338
+  [  206.1s] semilla 4005 (204.7s) R0 pista 0.3237
+  [  388.4s] semilla 4009 (187.8s) R0 pista 0.3486
+  [  393.3s] semilla 4011 (190.5s) R0 pista 0.3304
+  [  393.8s] semilla 4012 (190.9s) R0 pista 0.3216
+  [  395.8s] semilla 4010 (193.1s) R0 pista 0.3243
+  [  399.0s] semilla 4013 (195.3s) R0 pista 0.3237
+  [  401.7s] semilla 4014 (195.6s) R0 pista 0.3152
+  [  577.1s] semilla 4015 (188.7s) R0 pista 0.3216
+  [  579.5s] semilla 4016 (186.2s) R0 pista 0.3377
+  [  580.0s] semilla 4017 (186.3s) R0 pista 0.3351
+  [  581.4s] semilla 4018 (185.6s) R0 pista 0.3418
+  [  588.0s] semilla 4019 (189.1s) R0 pista 0.3349
+  [  588.1s] semilla 4020 (186.4s) R0 pista 0.3438
+  [  753.2s] semilla 4021 (176.2s) R0 pista 0.333
+  [  757.8s] semilla 4022 (178.3s) R0 pista 0.3359
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda0_s4003-4022_20260922_141316.json (sha 68fd6aa581dda157)
+
+RESUMEN · ronda0_s4003-4022 · semillas [4003, 4004, 4005, 4006, 4007, 4008, 4009, 4010, 4011, 4012, 4013, 4014, 4015, 4016, 4017, 4018, 4019, 4020, 4021, 4022] · T=100000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  FABRICA#0      0.353 [0.4565, 0.3151, 0.3093, 0.346, 0.2563, 0.4355, 0.3607, 0.3788, 0.326, 0.3756, 0.2946, 0.3109, 0.378, 0.3632, 0.3291, 0.3234, 0.3973, 0.3894, 0.2186, 0.378]   200.0  224.0  75.5 139.5  0.97 0.996  697.0   0.49  1/0/1789/2667 (0%/0%/40%/60%)  0/20
+  FABRICA#1      0.343 [0.2886, 0.2936, 0.3791, 0.372, 0.3575, 0.292, 0.4343, 0.3423, 0.3033, 0.321, 0.3099, 0.3442, 0.2948, 0.4256, 0.3305, 0.2706, 0.3495, 0.3803, 0.35, 0.3785]   200.0  220.0  75.5 144.0 0.967   1.0  704.0  0.483  1/0/1720/2743 (0%/0%/39%/61%)  0/20
+  FABRICA#2      0.355 [0.3738, 0.3319, 0.3109, 0.3086, 0.2741, 0.3537, 0.3347, 0.3568, 0.4118, 0.3653, 0.3744, 0.3632, 0.3773, 0.2951, 0.4028, 0.2903, 0.3649, 0.2988, 0.478, 0.321]   196.0  227.0  80.0 147.0 0.968   1.0  703.0  0.504  1/0/1808/2728 (0%/0%/40%/60%)  0/20
+  FABRICA#3      0.312 [0.4271, 0.319, 0.3514, 0.318, 0.2817, 0.2669, 0.3732, 0.2896, 0.2391, 0.2561, 0.4146, 0.243, 0.3054, 0.3185, 0.2902, 0.3364, 0.2771, 0.283, 0.3581, 0.37]  192.75  241.5  74.5 166.5 0.968   1.0  684.5  0.471  0/0/1845/2932 (0%/0%/39%/61%)  0/20
+  FABRICA#4      0.316 [0.2863, 0.3176, 0.344, 0.3453, 0.399, 0.433, 0.3012, 0.3318, 0.4106, 0.25, 0.308, 0.2823, 0.3172, 0.3695, 0.3086, 0.3143, 0.2814, 0.3084, 0.3864, 0.2941]   200.0  229.0  75.0 157.5 0.967 0.996  680.5  0.471  0/0/1790/2828 (0%/0%/39%/61%)  0/20
+  FABRICA#5      0.345 [0.3038, 0.3854, 0.3833, 0.2769, 0.3623, 0.3403, 0.4038, 0.2846, 0.3, 0.3687, 0.3276, 0.3913, 0.3333, 0.3266, 0.3259, 0.3394, 0.3628, 0.3687, 0.4, 0.3502]   197.5  224.0  77.5 144.5 0.965   1.0  710.0  0.495  1/0/1779/2746 (0%/0%/39%/61%)  0/20
+  FABRICA#6      0.331 [0.2789, 0.3347, 0.3347, 0.3593, 0.3756, 0.3184, 0.3333, 0.3305, 0.3273, 0.3305, 0.2691, 0.2846, 0.2824, 0.3092, 0.3732, 0.445, 0.3264, 0.3768, 0.3043, 0.399]  198.75  235.0  78.0 157.5 0.971 0.996  686.5  0.483  0/0/1883/2777 (0%/0%/40%/60%)  0/20
+  FABRICA#7      0.329 [0.3431, 0.3816, 0.251, 0.3699, 0.3319, 0.3013, 0.3304, 0.3071, 0.3272, 0.2375, 0.3575, 0.3176, 0.3278, 0.3476, 0.3365, 0.4456, 0.2806, 0.3902, 0.2695, 0.2421]   189.5  232.0  74.5 154.5 0.968 0.996  696.0  0.487  0/0/1867/2786 (0%/0%/40%/60%)  0/20
+  FABRICA#8      0.333 [0.3578, 0.3543, 0.2761, 0.3182, 0.3374, 0.3519, 0.303, 0.3178, 0.372, 0.4472, 0.2932, 0.3333, 0.2955, 0.3133, 0.3348, 0.3553, 0.4049, 0.3246, 0.3049, 0.3319]   185.5  231.5  77.5 154.0 0.966   1.0  693.5  0.489  0/0/1840/2799 (0%/0%/40%/60%)  0/20
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.334 · por semilla [0.3403, 0.3356, 0.3237, 0.333, 0.3257, 0.338, 0.3486, 0.3243, 0.3304, 0.3216, 0.3237, 0.3152, 0.3216, 0.3377, 0.3351, 0.3418, 0.3349, 0.3438, 0.333, 0.3359]
+  semilla 4003: fraccion B+D del mundo por cuarto de T [0.816, 0.827, 0.834, 0.832] · L 360 nobj 36
+  semilla 4004: fraccion B+D del mundo por cuarto de T [0.819, 0.829, 0.825, 0.82] · L 360 nobj 36
+  semilla 4005: fraccion B+D del mundo por cuarto de T [0.813, 0.826, 0.835, 0.835] · L 360 nobj 36
+  semilla 4006: fraccion B+D del mundo por cuarto de T [0.826, 0.832, 0.828, 0.832] · L 360 nobj 36
+  semilla 4007: fraccion B+D del mundo por cuarto de T [0.825, 0.824, 0.838, 0.833] · L 360 nobj 36
+  semilla 4008: fraccion B+D del mundo por cuarto de T [0.814, 0.84, 0.838, 0.829] · L 360 nobj 36
+  semilla 4009: fraccion B+D del mundo por cuarto de T [0.823, 0.83, 0.828, 0.829] · L 360 nobj 36
+  semilla 4010: fraccion B+D del mundo por cuarto de T [0.823, 0.839, 0.834, 0.827] · L 360 nobj 36
+  semilla 4011: fraccion B+D del mundo por cuarto de T [0.83, 0.829, 0.829, 0.838] · L 360 nobj 36
+  semilla 4012: fraccion B+D del mundo por cuarto de T [0.828, 0.827, 0.832, 0.833] · L 360 nobj 36
+  semilla 4013: fraccion B+D del mundo por cuarto de T [0.829, 0.827, 0.826, 0.834] · L 360 nobj 36
+  semilla 4014: fraccion B+D del mundo por cuarto de T [0.811, 0.835, 0.834, 0.833] · L 360 nobj 36
+  semilla 4015: fraccion B+D del mundo por cuarto de T [0.814, 0.836, 0.833, 0.832] · L 360 nobj 36
+  semilla 4016: fraccion B+D del mundo por cuarto de T [0.812, 0.826, 0.824, 0.833] · L 360 nobj 36
+  semilla 4017: fraccion B+D del mundo por cuarto de T [0.823, 0.83, 0.833, 0.829] · L 360 nobj 36
+  semilla 4018: fraccion B+D del mundo por cuarto de T [0.806, 0.837, 0.829, 0.836] · L 360 nobj 36
+  semilla 4019: fraccion B+D del mundo por cuarto de T [0.812, 0.825, 0.828, 0.829] · L 360 nobj 36
+  semilla 4020: fraccion B+D del mundo por cuarto de T [0.826, 0.842, 0.834, 0.836] · L 360 nobj 36
+  semilla 4021: fraccion B+D del mundo por cuarto de T [0.823, 0.837, 0.83, 0.823] · L 360 nobj 36
+  semilla 4022: fraccion B+D del mundo por cuarto de T [0.815, 0.824, 0.837, 0.833] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 180 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 1665.0 · perdidas por olvido 67.0 · B/D tras robo 0.593 vs tras olvido 0.586 vs base 0.558 · A/C tras robo 0.456 vs base 0.658
+    distancia media al bueno mas cercano 57.156 · frac pasos sin bueno en el mundo 0.052 · frac pasos sin NINGUN objeto a <= 20 0.038 (max 0.0465)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones 101226 mordidas  94670 tasa 0.935 · deficit medio al decidir 0.173 al morder 0.185
+    AS: decisiones  24495 mordidas  24185 tasa 0.987 · deficit medio al decidir 0.524 al morder 0.529
+    BH: decisiones 785472 mordidas  11582 tasa 0.015 · deficit medio al decidir 0.198 al morder 0.662
+    BS: decisiones 128216 mordidas  84362 tasa 0.658 · deficit medio al decidir 0.497 al morder 0.623
+    CH: decisiones 101463 mordidas  94236 tasa 0.929 · deficit medio al decidir 0.172 al morder 0.185
+    CS: decisiones  24390 mordidas  23938 tasa 0.981 · deficit medio al decidir 0.524 al morder 0.528
+    DH: decisiones 470281 mordidas  94601 tasa 0.201 · deficit medio al decidir 0.139 al morder 0.554
+    DS: decisiones 134562 mordidas  10230 tasa 0.076 · deficit medio al decidir 0.543 al morder 0.710
+    deficit en mordidas B/D (bins de 0.1) [8257, 7211, 7979, 8790, 52116, 24305, 13356, 10117, 41146, 27498] (media ~0.601) · en mordidas A/C [127489, 9568, 7681, 7475, 32875, 13000, 6387, 4366, 17418, 10770] (media ~0.282)
+    mordidas B/D con un robo en los 50 pasos previos 0.579 vs pasos cubiertos asi 0.551 · deficit en B/D con robo previo 0.607 vs sin 0.584
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 84362/120799 · veneno con HAMBRE 11582/604443 · sal con HAMBRE 94601/380095 · sal con SED 10230/109578
+  contabilidad fisica coherente: 180/180
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 3.1564, 'B': 17.4944, 'C': 3.0596, 'D': 12.2896}, {'A': 3.2006, 'B': 17.2971, 'C': 3.165, 'D': 12.3372}, {'A': 3.1492, 'B': 17.9063, 'C': 3.0718, 'D': 11.8726}, {'A': 3.0968, 'B': 17.5745, 'C': 3.0463, 'D': 12.2823}, {'A': 3.0777, 'B': 17.4655, 'C': 3.0504, 'D': 12.4064}, {'A': 3.1151, 'B': 17.8434, 'C': 2.9961, 'D': 12.0454}, {'A': 3.1069, 'B': 17.7147, 'C': 3.1077, 'D': 12.0708}, {'A': 3.1266, 'B': 17.3982, 'C': 2.9607, 'D': 12.5145}, {'A': 3.0697, 'B': 17.812, 'C': 3.0004, 'D': 12.118}, {'A': 3.0175, 'B': 18.2733, 'C': 3.1035, 'D': 11.6057}, {'A': 3.1258, 'B': 18.0615, 'C': 3.0311, 'D': 11.7816}, {'A': 3.1793, 'B': 17.787, 'C': 3.0014, 'D': 12.0323}, {'A': 3.1012, 'B': 17.4191, 'C': 3.0646, 'D': 12.4152}, {'A': 3.2091, 'B': 17.9074, 'C': 3.1366, 'D': 11.7469}, {'A': 3.0818, 'B': 17.7517, 'C': 3.0851, 'D': 12.0814}, {'A': 3.1107, 'B': 17.7663, 'C': 3.1128, 'D': 12.0101}, {'A': 3.2366, 'B': 17.3379, 'C': 3.1189, 'D': 12.3066}, {'A': 2.9017, 'B': 18.438, 'C': 3.0567, 'D': 11.6036}, {'A': 3.0638, 'B': 17.7785, 'C': 3.1182, 'D': 12.0396}, {'A': 3.1155, 'B': 17.5746, 'C': 3.1036, 'D': 12.2063}] · olvidos [2679, 2709, 2616, 2759, 2661, 2727, 2729, 2676, 2679, 2676, 2756, 2656, 2715, 2591, 2717, 2722, 2683, 2722, 2685, 2647]
+  mordidas totales por tipo por semilla [{'A': 5954, 'B': 4868, 'C': 5985, 'D': 5247}, {'A': 6014, 'B': 4815, 'C': 5984, 'D': 5146}, {'A': 5949, 'B': 4939, 'C': 5890, 'D': 5323}, {'A': 6021, 'B': 4875, 'C': 5881, 'D': 5268}, {'A': 5951, 'B': 4778, 'C': 5896, 'D': 5209}, {'A': 6035, 'B': 4742, 'C': 5864, 'D': 5251}, {'A': 5936, 'B': 4772, 'C': 6045, 'D': 5183}, {'A': 6010, 'B': 4827, 'C': 5853, 'D': 5338}, {'A': 5895, 'B': 4679, 'C': 5810, 'D': 5215}, {'A': 5833, 'B': 4774, 'C': 5874, 'D': 5231}, {'A': 5947, 'B': 4852, 'C': 5902, 'D': 5328}, {'A': 6056, 'B': 5017, 'C': 5882, 'D': 5364}, {'A': 5854, 'B': 4826, 'C': 5978, 'D': 5347}, {'A': 5951, 'B': 4787, 'C': 5949, 'D': 5158}, {'A': 5814, 'B': 4703, 'C': 5813, 'D': 5138}, {'A': 5908, 'B': 4680, 'C': 5849, 'D': 5112}, {'A': 6185, 'B': 4919, 'C': 6042, 'D': 5386}, {'A': 5661, 'B': 4648, 'C': 5788, 'D': 5080}, {'A': 5912, 'B': 4750, 'C': 6019, 'D': 5181}, {'A': 5969, 'B': 4693, 'C': 5870, 'D': 5326}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda0_s4003-4022_20260922_141316_pizarra.jsonl.gz
+
+  PREDICCION FIRMADA (ENMIENDA 1, pista escalada): con 9 FABRICA la mediana del R0 por linaje cae en 0.35-0.55. Medido: mediana de los 180 linajes-semilla 0.332 (min 0.2186, max 0.478) -> DEBAJO del rango
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda0_s4003-4022_20260922_141316_resumen.json
+
+Terminado en 757.9s

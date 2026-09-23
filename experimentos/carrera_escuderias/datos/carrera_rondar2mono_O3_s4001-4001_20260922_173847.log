@@ -1,0 +1,68 @@
+JUEZ · rondar2mono_O3_s4001-4001 · 2026-09-22 17:38:47 · python 3.14.2 · pool NO (un proceso)
+  pista.py 9f47c65e438e0ff4 · juez.py 6a68f640a7832f12 · carros {'O3': '0442c2884fcb0e11'}
+  carros (orden = indice de linaje): ['O3', 'O3', 'O3', 'O3', 'O3', 'O3', 'O3', 'O3', 'O3'] · semillas 4001-4001 · T=20000 · pizarra 1 · rep_acum 0 · escala 1 · mundo_N N (el de los carros) · fundador_limpio 1
+  CHEQUEO ESTATICO O3: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [   49.7s] semilla 4001 (48.8s) R0 pista 1.6296 · R0 por linaje [1.5, 1.5, 1.5, 1.6, 1.6, 1.6667, 1.8333, 2.0, 1.6667]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondar2mono_O3_s4001-4001_20260922_173847.json (sha a039e26d0065d3df)
+
+RESUMEN · rondar2mono_O3_s4001-4001 · semillas [4001] · T=20000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O3#0             1.5                  [1.5]  3022.0    5.0   9.0   1.0   1.0   0.8  125.0    0.5  0/2/2/1 (0%/40%/40%/20%)  1/1
+  O3#1             1.5                  [1.5]  2069.0    9.0  15.0   0.0   1.0 0.889  139.0  0.561  0/2/4/3 (0%/22%/44%/33%)  1/1
+  O3#2             1.5                  [1.5]  3752.5    5.0   9.0   0.0   1.0   0.8  112.0  0.565  2/1/2/0 (40%/20%/40%/0%)  1/1
+  O3#3             1.6                  [1.6]  3323.0    4.0   8.0   0.0  0.75  0.75  130.0  0.479  0/0/2/2 (0%/0%/50%/50%)  1/1
+  O3#4             1.6                  [1.6]  1677.0    4.0   8.0   0.0   1.0  0.75  124.0  0.629  0/2/2/0 (0%/50%/50%/0%)  1/1
+  O3#5           1.667               [1.6667]  2906.5    5.0  10.0   0.0   1.0   0.8  135.0  0.536  1/1/1/2 (20%/20%/20%/40%)  1/1
+  O3#6           1.833               [1.8333]  2641.0    5.0  11.0   0.0   1.0   0.8  133.0  0.595  0/0/4/1 (0%/0%/80%/20%)  1/1
+  O3#7             2.0                  [2.0]  3398.0    3.0   8.0   0.0   1.0 0.667  123.0  0.511  0/1/0/2 (0%/33%/0%/67%)  1/1
+  O3#8           1.667               [1.6667]  2903.0    5.0  10.0   0.0   1.0   0.8  146.0  0.577  0/1/2/2 (0%/20%/40%/40%)  1/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 1.63 · por semilla [1.6296]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.929, 0.934, 0.911, 0.882] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 354.0 · perdidas por olvido 13.0 · B/D tras robo 0.291 vs tras olvido 0.286 vs base 0.265 · A/C tras robo 0.341 vs base 0.415
+    distancia media al bueno mas cercano 66.928 · frac pasos sin bueno en el mundo 0.188 · frac pasos sin NINGUN objeto a <= 20 0.024 (max 0.0398)
+  MECANISMO (ENMIENDA 4; desde la fisica: 'limpieza' = mordida de B/D A SABIENDAS -letra ya mordida por el linaje- con el golpe en la necesidad MAS llena):
+    limpiezas por linaje-semilla (mediana) 104.0 · por cuerpo 17.333 · total 936 · objetos buenos que reaparecen por ellas 480 (0.513 por limpieza)
+    todas las mordidas malas 955 -> buenos que reaparecen 489 · fraccion de pasos SIN ningun objeto bueno en el mundo por semilla [0.0209] (mediana 0.021)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones   1030 mordidas    576 tasa 0.559 · deficit medio al decidir 0.128 al morder 0.214
+    AS: decisiones    204 mordidas    140 tasa 0.686 · deficit medio al decidir 0.378 al morder 0.419
+    BH: decisiones   5959 mordidas    166 tasa 0.028 · deficit medio al decidir 0.116 al morder 0.005
+    BS: decisiones   1565 mordidas    302 tasa 0.193 · deficit medio al decidir 0.421 al morder 0.394
+    CH: decisiones    793 mordidas    419 tasa 0.528 · deficit medio al decidir 0.118 al morder 0.180
+    CS: decisiones    311 mordidas    306 tasa 0.984 · deficit medio al decidir 0.355 al morder 0.350
+    DH: decisiones   7053 mordidas    487 tasa 0.069 · deficit medio al decidir 0.114 al morder 0.232
+    DS: decisiones   1767 mordidas      0 tasa 0.000 · deficit medio al decidir 0.417 al morder 0.000
+    deficit en mordidas B/D (bins de 0.1) [436, 95, 71, 90, 69, 64, 37, 58, 23, 12] (media ~0.262) · en mordidas A/C [645, 134, 101, 114, 148, 110, 56, 66, 43, 24] (media ~0.271)
+    mordidas B/D con un robo en los 50 pasos previos 0.66 vs pasos cubiertos asi 0.618 · deficit en B/D con robo previo 0.251 vs sin 0.181
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 302/1560 · veneno con HAMBRE 166/5467 · sal con HAMBRE 487/6459 · sal con SED 0/1764
+  contabilidad fisica coherente: 9/9 · t_fund reconstruible desde telem == fisica: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 1.6461, 'B': 15.0738, 'C': 1.4522, 'D': 17.828}] · olvidos [563]
+  mordidas totales por tipo por semilla [{'A': 716, 'B': 468, 'C': 725, 'D': 487}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo r2
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir R0 REAL eval med cruzan real  gana
+  O3               9      6       6        3       1.583            1/1        5.0          0.0       0.0            0.833           1  -- (varios linajes por semilla)
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    (ronda 2: el criterio y las predicciones que deciden estan en el bloque RONDA 2 / ENMIENDA 5 de abajo)
+
+RONDA 2 / ENMIENDA 5 (fundador limpio SI; cruza = R0 de NACIMIENTOS REALES >= 0.9 y 0 fundadores tras t = 10000, con >= 5 muertes) · r2mono_O3
+  equipo     lin-sem cruzan evaluab casi inm R0 REAL eval med R0 prereg med sem cruza (mayoria)  (todos)  gana
+  O3               9      1       6        3            0.833         1.583                 0/1      0/1  no
+  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:
+    - al menos un equipo gana la ronda 2 en monocultivo (p 0.50)
+    - en pista mixta con 6 FABRICA gana alguno (p 0.25)
+    - O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)
+    medido en esta serie: monocultivo de ['O3']: gana no
+
+PERSISTENCIA / ENMIENDA 6 (co-principal; persiste = 0 fundadores tras t = 10000 y >= 5 nacimientos reales; estabiliza en una semilla si persiste > 1/2 de sus linajes; estabiliza la ronda con >= 15/20)
+  equipo     lin-sem persisten nac reales med sem estabiliza  estabiliza   muertes voluntarias FISICAS (fraccion)   declaradas por el carro (no cuentan)
+  O3               9         5            5.0            1/1  SI          22/45 (0.4889)   {'cuerpos_term': 25}  -> con muerte programada
+  PREDICCIONES FIRMADAS (ENMIENDA 6, persistencia) y lo medido en esta serie:
+    - O3 estabiliza en mono (p 0.5)  ->  medido: ESTABILIZA (1/1 semillas)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondar2mono_O3_s4001-4001_20260922_173847_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondar2mono_O3_s4001-4001_20260922_173847_resumen.json
+
+Terminado en 49.7s

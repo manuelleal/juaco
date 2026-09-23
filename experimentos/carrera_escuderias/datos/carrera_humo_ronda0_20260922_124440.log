@@ -1,0 +1,28 @@
+JUEZ · humo_ronda0 · 2026-09-22 12:44:40 · python 3.14.2 · pool NO (un proceso)
+  pista.py 6a146b7c64f10d4f · juez.py 572c836fa14c34bb · carros {'FABRICA': '9c95fbdff403d548'}
+  carros (orden = indice de linaje): ['FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · semillas 4001-4002 · T=100000 · pizarra 1 · rep_acum 0
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [  117.7s] semilla 4001 (116.9s) R0 pista 0.2676 · R0 por linaje [0.317, 0.2614, 0.2703, 0.2347, 0.2664, 0.2342, 0.2603, 0.2833, 0.2941]
+  [  223.9s] semilla 4002 (106.2s) R0 pista 0.2881 · R0 por linaje [0.318, 0.2574, 0.2414, 0.29, 0.2614, 0.3017, 0.3106, 0.2743, 0.3589]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_20260922_124440.json (sha e9f9e708a898c998)
+
+RESUMEN · humo_ronda0 · semillas [4001, 4002] · T=100000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  FABRICA#0      0.318         [0.317, 0.318]   182.5  230.5  73.5 157.5 0.962   1.0  634.0  0.469  1/0/185/275 (0%/0%/40%/60%)  0/2
+  FABRICA#1      0.259       [0.2614, 0.2574]  187.75  255.5  66.5 189.0  0.97   1.0  611.5   0.43  0/0/243/268 (0%/0%/48%/52%)  0/2
+  FABRICA#2      0.256       [0.2703, 0.2414]   188.0  240.5  61.5 180.0 0.967 0.996  612.0  0.429  0/0/215/266 (0%/0%/45%/55%)  0/2
+  FABRICA#3      0.262         [0.2347, 0.29]   178.5  253.0  66.0 187.0 0.976 0.988  585.5  0.421  0/0/215/291 (0%/0%/42%/58%)  0/2
+  FABRICA#4      0.264       [0.2664, 0.2614]  172.75  253.0  67.0 186.0 0.986 0.993  615.0  0.429  0/0/230/276 (0%/0%/45%/55%)  0/2
+  FABRICA#5      0.268       [0.2342, 0.3017]   198.0  254.5  68.0 187.5 0.965 0.992  620.0  0.445  0/0/200/309 (0%/0%/39%/61%)  0/2
+  FABRICA#6      0.285       [0.2603, 0.3106]   189.5  237.5  68.0 169.5  0.98 0.989  624.0  0.447  0/0/208/267 (0%/0%/44%/56%)  0/2
+  FABRICA#7      0.279       [0.2833, 0.2743]   193.0  237.5  66.5 172.0 0.972 0.992  595.5  0.447  0/0/207/268 (0%/0%/44%/56%)  0/2
+  FABRICA#8      0.327       [0.2941, 0.3589]   183.0  222.5  72.5 150.0 0.966   1.0  630.5  0.482  0/0/198/247 (0%/0%/44%/56%)  0/2
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.278 · por semilla [0.2676, 0.2881]
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=4) por semilla [{'A': 0.264, 'B': 2.3006, 'C': 0.2724, 'D': 1.163}, {'A': 0.2889, 'B': 2.202, 'C': 0.2787, 'D': 1.2304}] · olvidos [289, 323]
+  mordidas totales por tipo por semilla [{'A': 5141, 'B': 5060, 'C': 5199, 'D': 5218}, {'A': 5526, 'B': 5306, 'C': 5356, 'D': 5267}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+  PREDICCION FIRMADA (organizador): con 9 FABRICA el R0 por linaje BAJA respecto a 0.395 (esperado 0.15-0.35). Medido: mediana de los 18 linajes-semilla 0.272 (min 0.2342, max 0.3589) -> BAJA y cae en el rango
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_20260922_124440_resumen.json
+
+Terminado en 223.9s

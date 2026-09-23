@@ -1,0 +1,41 @@
+TEST TRAMPOSO (ERR-96) · 2026-09-22 17:44:34 · pista 9f47c65e438e0ff4 · juez 6a68f640a7832f12 · revisa_carro 1c8a789f7427ab96
+
+(1) SALIDA FALSA (descendientes=999999, deaths=0, ...) · T=20000 · semillas (4001, 4002)
+  OK    (1a) s=4001 juez(tramposo) == juez(honesto)   R0 0.36 (honesto 0.36) · desc 9 · muertes 24 · coherente True
+  OK    (1b) s=4001 la verdad fisica del tramposo == la del honesto; lo falso esta SOLO en d['carro']   d['carro']['descendientes'] = 999999 (no lo lee nadie)
+  OK    (1c) s=4001 plano() DETECTA el choque de claves   PLANO: el carro devolvio claves FISICAS ['descendientes', 'deaths', 'vidas_h1', 'fundadores', 'desc_
+  OK    (1a) s=4002 juez(tramposo) == juez(honesto)   R0 0.3103 (honesto 0.3103) · desc 9 · muertes 28 · coherente True
+  OK    (1b) s=4002 la verdad fisica del tramposo == la del honesto; lo falso esta SOLO en d['carro']   d['carro']['descendientes'] = 999999 (no lo lee nadie)
+  OK    (1c) s=4002 plano() DETECTA el choque de claves   PLANO: el carro devolvio claves FISICAS ['descendientes', 'deaths', 'vidas_h1', 'fundadores', 'desc_
+
+(2) MUTAR obs / res / info / objs
+  OK    (2) s=4001 verdad fisica intacta y objs no se puede escribir   R0 0.36 (honesto 0.36) · escribio objs False
+  OK    (2) s=4002 verdad fisica intacta y objs no se puede escribir   R0 0.3103 (honesto 0.3103) · escribio objs False
+
+(3) CHEQUEO ESTATICO
+  OK    (3a) FABRICA PASA   []
+  OK    (3b) RECHAZA sys._getframe   T sys._getframe:4 prohibido /sys\._getframe/: return sys._getframe(1)
+  OK    (3b) RECHAZA inspect   T inspect:1 prohibido /\binspect\b/: import inspect
+  OK    (3b) RECHAZA gc   T gc:1 prohibido /\bgc\b/: import gc
+  OK    (3b) RECHAZA globals()   T globals():1 prohibido /\bglobals\s*\(/: def crea(ctx): return globals()
+  OK    (3b) RECHAZA __builtins__   T __builtins__:1 prohibido /__builtins__/: def crea(ctx): return __builtins__
+  OK    (3b) RECHAZA f_back   T f_back:3 prohibido /\bf_back\b/: except Exception as e: return e.__traceback__.tb_frame.
+  OK    (3b) RECHAZA f_locals   T f_locals:1 prohibido /\bf_locals\b/: def crea(ctx): return ctx.f_locals
+  OK    (3b) RECHAZA importlib   T importlib:1 prohibido /\bimportlib\b/: import importlib
+  OK    (3b) RECHAZA import pista   I import pista:1 import pista fuera de la lista blanca
+  OK    (3b) RECHAZA from juez import   I from juez import:1 from juez import ... fuera de la lista blanca
+  OK    (3b) RECHAZA import organismo_f9c   I import organismo_f9c:1 import organismo_f9c fuera de la lista blanca
+  OK    (3b) RECHAZA np.random global   T np.random global:3 prohibido /\b(np|numpy)\s*\.\s*random\b/: np.random.seed(1)
+  OK    (3b) RECHAZA from numpy import random   I from numpy import random:1 from numpy import ... fuera de la lista blanca
+  OK    (3b) RECHAZA exec(   T exec(:2 prohibido /\bexec\s*\(/: exec('x=1')
+  OK    (3b) RECHAZA eval(   T eval(:2 prohibido /\beval\s*\(/: return eval('1')
+  OK    (3b) RECHAZA open(w)   T open(w):2 prohibido /\bopen\s*\(/: open('x.txt', 'w')
+  OK    (3b) RECHAZA np.save   A np.save:3 llamada de escritura .save(...)
+  OK    (3b) RECHAZA getattr(sys,...)   T getattr(sys,...):3 prohibido /\bgetattr\s*\(/: return getattr(math, 'pi')
+  OK    (3b) RECHAZA x.__dict__   T x.__dict__:2 prohibido /__dict__/: return ctx.__dict__
+  OK    (3b) RECHAZA import os   I import os:1 import os fuera de la lista blanca
+
+(4) EL JUEZ ABORTA una ronda con un carro rechazado
+  OK    (4) juez.main() devuelve 1 sin correr   rc 1 · archivo temporal borrado True
+
+TOTAL 30/30 en 17.0s

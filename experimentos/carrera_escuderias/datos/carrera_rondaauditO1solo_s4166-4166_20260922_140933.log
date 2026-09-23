@@ -1,0 +1,36 @@
+JUEZ · rondaauditO1solo_s4166-4166 · 2026-09-22 14:09:33 · python 3.14.2 · pool NO (un proceso)
+  pista.py d2a4b219059478eb · juez.py 797fe37f69176b87 · carros {'O1': '99436afa2715f028'}
+  carros (orden = indice de linaje): ['O1'] · semillas 4166-4166 · T=30000 · pizarra 0 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO O1: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [    4.3s] semilla 4166 (3.1s) R0 pista 0.6957 · R0 por linaje [0.6957]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondaauditO1solo_s4166-4166_20260922_140933.json (sha 9b996e67420a0ba3)
+
+RESUMEN · rondaauditO1solo_s4166-4166 · semillas [4166] · T=30000 · pizarra 0 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O1             0.696               [0.6957]  1001.0   22.0  16.0   8.0 0.812   1.0  112.0  0.411  12/7/2/1 (55%/32%/9%/5%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.696 · por semilla [0.6957]
+  semilla 4166: fraccion B+D del mundo por cuarto de T [0.92, 0.843, 0.896, 0.875] · L 40 nobj 4
+  DIAGNOSTICO (mediana sobre 1 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 0.0 · perdidas por olvido 8.0 · B/D tras robo None vs tras olvido 0.0 vs base 0.22 · A/C tras robo None vs base 0.338
+    distancia media al bueno mas cercano 8.716 · frac pasos sin bueno en el mundo 0.844 · frac pasos sin NINGUN objeto a <= 20 0.0 (max 0.0)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones     79 mordidas     77 tasa 0.975 · deficit medio al decidir 0.233 al morder 0.239
+    AS: decisiones    120 mordidas     29 tasa 0.242 · deficit medio al decidir 0.383 al morder 0.448
+    BH: decisiones     84 mordidas     17 tasa 0.202 · deficit medio al decidir 0.171 al morder 0.001
+    BS: decisiones     68 mordidas     56 tasa 0.824 · deficit medio al decidir 0.363 al morder 0.336
+    CH: decisiones     72 mordidas     70 tasa 0.972 · deficit medio al decidir 0.242 al morder 0.232
+    CS: decisiones     27 mordidas     27 tasa 1.000 · deficit medio al decidir 0.416 al morder 0.416
+    DH: decisiones    276 mordidas     59 tasa 0.214 · deficit medio al decidir 0.375 al morder 0.264
+    DS: decisiones    121 mordidas      0 tasa 0.000 · deficit medio al decidir 0.460 al morder 0.000
+    deficit en mordidas B/D (bins de 0.1) [58, 5, 6, 14, 22, 15, 4, 5, 1, 2] (media ~0.283) · en mordidas A/C [87, 7, 7, 21, 23, 26, 8, 16, 6, 2] (media ~0.312)
+    mordidas B/D con un robo en los 50 pasos previos 0.0 vs pasos cubiertos asi 0.0 · deficit en B/D con robo previo None vs sin 0.261
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 56/66 · veneno con HAMBRE 17/73 · sal con HAMBRE 59/120 · sal con SED 0/31
+  contabilidad fisica coherente: 1/1
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=4) por semilla [{'A': 0.2258, 'B': 1.4296, 'C': 0.2403, 'D': 2.1043}] · olvidos [97]
+  mordidas totales por tipo por semilla [{'A': 106, 'B': 73, 'C': 97, 'D': 59}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondaauditO1solo_s4166-4166_20260922_140933_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondaauditO1solo_s4166-4166_20260922_140933_resumen.json
+
+Terminado en 4.3s

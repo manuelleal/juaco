@@ -1,0 +1,60 @@
+JUEZ · ronda1_s4001-4001 · 2026-09-22 14:36:36 · python 3.14.2 · pool NO (un proceso)
+  pista.py d2a4b219059478eb · juez.py f2aeb20651969126 · carros {'FABRICA': '2ebee3e99ea5a33a', 'H1': 'd62906a245a5c50d', 'O1': '99436afa2715f028', 'S1': 'eb168195f83958b7'}
+  carros (orden = indice de linaje): ['O1', 'S1', 'H1', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · semillas 4001-4001 · T=5000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO FABRICA: PASA
+  CHEQUEO ESTATICO H1: PASA
+  CHEQUEO ESTATICO O1: PASA
+  CHEQUEO ESTATICO S1: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [    8.5s] semilla 4001 (7.6s) R0 pista 0.1894 · R0 por linaje [3.5, 0.4286, 0.1, 0.1, 0.0625, 0.0909, 0.05, 0.625, 0.1176]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda1_s4001-4001_20260922_143636.json (sha 55e1794a42ed423a)
+
+RESUMEN · ronda1_s4001-4001 · semillas [4001] · T=5000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O1               3.5                  [3.5]  2500.0    1.0   7.0   1.0   0.0   1.0   83.0    0.7  0/1/0/0 (0%/100%/0%/0%)  1/1
+  S1             0.429               [0.4286]   809.0    6.0   3.0   3.0 0.833   1.0   50.0  0.561  0/0/3/3 (0%/0%/50%/50%)  0/1
+  H1               0.1                  [0.1]   165.0   19.0   2.0  17.0 0.737   1.0   48.0  0.393  0/0/6/13 (0%/0%/32%/68%)  0/1
+  FABRICA#3        0.1                  [0.1]    96.5   19.0   2.0  17.0 0.667   1.0   28.0  0.296  0/0/4/15 (0%/0%/21%/79%)  0/1
+  FABRICA#4      0.062               [0.0625]   173.0   15.0   1.0  14.0 0.667   1.0   40.0  0.294  0/0/3/12 (0%/0%/20%/80%)  0/1
+  FABRICA#5      0.091               [0.0909]   111.5   21.0   2.0  19.0  0.65   1.0   45.0  0.349  0/0/5/16 (0%/0%/24%/76%)  0/1
+  FABRICA#6       0.05                 [0.05]   147.0   19.0   1.0  18.0 0.842   1.0   34.0  0.379  0/0/4/15 (0%/0%/21%/79%)  0/1
+  FABRICA#7      0.625                [0.625]   164.0    7.0   5.0   4.0 0.429   1.0   65.0   0.69  0/0/4/3 (0%/0%/57%/43%)  0/1
+  FABRICA#8      0.118               [0.1176]   153.0   16.0   2.0  14.0 0.867   1.0   49.0  0.283  0/0/7/9 (0%/0%/44%/56%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.189 · por semilla [0.1894]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.717, 0.732, 0.789, 0.821] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 83.0 · perdidas por olvido 3.0 · B/D tras robo 0.704 vs tras olvido 0.5 vs base 0.84 · A/C tras robo 0.527 vs base 0.76
+    distancia media al bueno mas cercano 49.492 · frac pasos sin bueno en el mundo 0.031 · frac pasos sin NINGUN objeto a <= 20 0.056 (max 0.0894)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones    342 mordidas    265 tasa 0.775 · deficit medio al decidir 0.133 al morder 0.170
+    AS: decisiones    119 mordidas    114 tasa 0.958 · deficit medio al decidir 0.494 al morder 0.493
+    BH: decisiones   1453 mordidas     71 tasa 0.049 · deficit medio al decidir 0.173 al morder 0.500
+    BS: decisiones    383 mordidas    222 tasa 0.580 · deficit medio al decidir 0.453 al morder 0.559
+    CH: decisiones    346 mordidas    247 tasa 0.714 · deficit medio al decidir 0.101 al morder 0.139
+    CS: decisiones     97 mordidas     79 tasa 0.814 · deficit medio al decidir 0.525 al morder 0.531
+    DH: decisiones   1102 mordidas    268 tasa 0.243 · deficit medio al decidir 0.145 al morder 0.505
+    DS: decisiones    399 mordidas     76 tasa 0.190 · deficit medio al decidir 0.456 al morder 0.625
+    deficit en mordidas B/D (bins de 0.1) [60, 41, 25, 11, 188, 63, 33, 24, 121, 71] (media ~0.547) · en mordidas A/C [365, 34, 27, 24, 111, 41, 16, 8, 55, 24] (media ~0.279)
+    mordidas B/D con un robo en los 50 pasos previos 0.49 vs pasos cubiertos asi 0.53 · deficit en B/D con robo previo 0.561 vs sin 0.508
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 222/367 · veneno con HAMBRE 71/1194 · sal con HAMBRE 268/953 · sal con SED 76/339
+  contabilidad fisica coherente: 9/9 · t_fund reconstruible desde telem == fisica: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 4.1198, 'B': 15.0186, 'C': 4.357, 'D': 12.5046}] · olvidos [131]
+  mordidas totales por tipo por semilla [{'A': 379, 'B': 293, 'C': 326, 'D': 344}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo oficial
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir  gana
+  O1               1      0       0        1        None            0/1        0.0          0.0       1.0  no
+  S1               1      0       1        0       0.429            0/1        3.0          0.0       0.5  no
+  H1               1      0       1        0         0.1            0/1        2.0          0.0     0.895  no
+  FABRICA          6      0       6        0       0.095            0/1        2.0          0.0       0.9  -- (varios linajes por semilla)
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    - H1: R0 mediano dentro de +-0.10 de la mediana de los FABRICA  ->  medido: H1 0.1 vs FABRICA 0.095 (diferencia 0.005; dentro de +-0.10)
+    - FABRICA: R0 mediano 0.28-0.45  ->  medido: FABRICA 0.095 (FUERA de 0.28-0.45)
+    - O1: cruza en >= 10/20 semillas (p 0.55); gana la ronda >= 15/20 (p 0.30)  ->  medido: O1 cruza en 0/1 (< 10 por 20); gana: no
+    - al menos un linaje O1-semilla 'casi inmortal' (p 0.80); O1 'casi inmortal' en >= 10/20 (p 0.75)  ->  medido: O1 casi inmortal en 1/1 semillas (>= 1; >= 10 por 20)
+    - S1 no cruza (p 0.95)  ->  medido: S1 cruza en 0/1 (NO cruza)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda1_s4001-4001_20260922_143636_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_ronda1_s4001-4001_20260922_143636_resumen.json
+
+Terminado en 8.5s

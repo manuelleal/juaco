@@ -1,0 +1,264 @@
+# INFORME — la pista de la carrera de escuderías · 22-sep-2026 (v2, tras la auditoría y la ENMIENDA 1)
+
+**Veredicto: HAY ALGO MODESTO.** ERR-96 está cerrado con test (30/30), el chequeo estático está en el juez y la identidad da 35/35. La ENMIENDA 1 está implementada en la pista, pero **el humo escalado NO se corrió**: FABRICA depende de L (condición técnica) y hace falta una decisión aparte. Además, **la explicación que di de la ronda 0 queda refutada**: el mundo de un carro SOLO ya es 88–92 % veneno y sal.
+
+## Qué cambió (v2)
+- **ERR-96:**
+  - La salida de un linaje tiene dos espacios de nombres. En el primer nivel está SOLO la verdad física que escribe `pista.py`; lo que devuelve `salida()` va en `d['carro']`.
+  - `juez.resumen_linaje` lee una lista cerrada de claves físicas y verifica que la contabilidad física cierre (`coherente`).
+  - `pista.plano()` (solo para el arnés) aborta si el carro intenta usar una clave física.
+- **`revisa_carro.py`:**
+  - Tokens prohibidos, en el texto crudo: `_getframe`, `inspect`, `gc`, `globals(`/`locals(`/`vars(`, dunders, frames, `importlib`, `exec(`/`eval(`/`compile(`, `open(`, `getattr(`, `np.random`, `default_rng`.
+  - Lista blanca de imports: numpy, math, collections, itertools, functools, heapq, bisect, statistics, copy, dataclasses, typing, enum y operator.
+  - Prohíbe métodos de escritura de archivos y exige `crea()`.
+  - El juez lo corre antes de cada ronda y aborta si un carro no pasa.
+- **H-4:** `pista.cfg_fabrica()` deriva en tiempo de ejecución toda la configuración (firma de `organismo_f9c.run` + `BRAZOS['REL']` + L/NK/PAT/EFECTO del monolito). FABRICA no tiene ninguna constante escrita a mano, y aborta si una perilla de rama no tiene el valor portado (`RAMAS`).
+- **ENMIENDA 1:** `escala=1` por defecto (L = 40·N, nobj = 4·N). Con N = 1 es idéntico a la pista original (arnés I1).
+- **Pizarra completa aparte:** `pizarra_log` sin tope; el juez la escribe en `<prefijo>_pizarra.jsonl.gz`.
+- **Composición del mundo** registrada por cuarto de T.
+
+## Pruebas
+- `identidad_pista_salida.txt`: **35/35**.
+  - Los 25 de antes con los mismos números (6+2+2 anclas bit a bit contra organismo_f9c con el mismo estado final del rng).
+  - (I) escala: N = 1 igual; N = 9 da L = 360 y nobj = 36; pizarra completa (1800/1800); FABRICA aborta en la pista escalada.
+  - (J) H-4: la configuración derivada coincide; 4 ramas ajenas abortan; `eta` distinta cambia la corrida.
+- `test_tramposo_salida.txt`: **30/30**.
+  - Un carro que declara 999999 hijos saca en el juez exactamente el R0 del honesto (0.36 y 0.3103).
+  - Mutar `obs`/`res`/`info` no cambia la física, y `objs` no se puede escribir.
+  - Se rechazan 20 fuentes tramposas y FABRICA pasa.
+  - El juez aborta la ronda con un carro rechazado. Queda un log `datos/carrera_humo_rondatest_tramposo_*.log`.
+
+## Condición técnica de la ENMIENDA 1: FABRICA SÍ depende de L y de nobj (no se adaptó)
+- `carros/FABRICA.py` usa `L` en `see()` (distancias `% L`) y en la posición tras moverse (`(pos + mov) % L`). Con L = 360 calcularía mal las distancias y mordería donde no está.
+- `see()` recorre TODOS los objetos: con N = 9 vería 36, no 4.
+- Hoy aborta si `ctx['L'] != 40`.
+- Opciones para decidir aparte (todas dan identidad con N = 1):
+  - **A.** FABRICA toma L de `ctx` (un cambio) y conserva la visión global. Con la misma densidad, el objeto más cercano se comporta casi igual. La diferencia: el 1.0 % de los pasos no hay ningún objeto a ≤ 20 celdas (estimación estática C(319,36)/C(360,36)), y el carro iría a uno más lejano, cosa imposible en L = 40.
+  - **B.** La pista entrega solo los objetos a ≤ 20 celdas (el campo del original) y FABRICA usa `ctx['L']`. Necesita una regla para la ventana vacía (~1 % de los pasos, en que `see()` fallaría). Si la regla es «el más cercano fuera de la ventana», B = A salvo en el filtro de rechazo.
+  - **C.** No escalar: la ronda 0 queda en 0.272 con L = 40 y nobj = 4.
+- Recomiendo **A** (mínima y transparente), declarada como un cambio del carro de fábrica con su propio arnés. El director decide.
+
+## SOLO en la pista escalada, N = 1 (`datos/carrera_humo_ronda0_SOLO_escalada_N1_20260922_131228.*`)
+- R0 0.5154 / 0.4366: idéntico al SOLO anterior.
+- **Fracción B+D del mundo por cuarto de T:** 0.911 / 0.914 / 0.905 / 0.883 (s=4001) y 0.883 / 0.918 / 0.906 / 0.914 (s=4002).
+- Causas: 0–2 muertes de hambre; el resto veneno (≈43 %) y sal (≈57 %).
+
+## Predicción mía refutada (declarada)
+- En v1 escribí que el 86 % de B/D con 9 cuerpos era «el mundo se come la comida» por la competencia. **Falso.** Un cuerpo solo deja el mundo en ~90 % B/D: come A y C, el spawn repone un tipo al azar y B y D solo salen por olvido. La composición **no** distingue SOLO de carrera.
+- Lo que sí distingue: con 9 cuerpos cada linaje muerde ≈40 % más B y D con las mismas A y C, y vive ≈3× menos. El mecanismo de eso **no está medido**.
+- Consecuencia: el motivo escrito en la ENMIENDA 1 («la causa medida fue la escasez») venía de mi inferencia y no se sostiene. Escalar L y nobj mantiene la densidad por cuerpo, pero no cambia la composición. Sugiero corregir el texto (ERR nuevo, lo decide el coordinador).
+
+## v3: opción A implementada, humo escalado y diagnóstico (22-sep, tarde)
+**Veredicto v3: NO. Escalar la pista no devuelve el R0 del SOLO.** La predicción firmada (0.35–0.55) cae.
+
+- **Opción A:** FABRICA toma `ctx['L']` y sigue viendo el mundo entero. Arnés **39/39**:
+  - Los 35 de antes con los mismos números.
+  - (K1) con N = 9 y L = 360 la boca decide sobre la celda real: 2455 decisiones, 0 desajustes.
+  - (K2) determinista y contabilidad 9/9.
+  - (L) el diagnóstico es solo lectura en 3 configuraciones.
+  - Además, a T = 100000, el humo sin escalar con diagnóstico reproduce el 0.272 bit a bit.
+- **Pasos sin ningún objeto a ≤ 20 celdas con N = 9:** mediana **4.4 %**, máximo 5.2 %. La estimación estática era 1.0 %: la medida es 4× mayor.
+
+| 9 FABRICA, 4001–4002, T = 100000 | R0 por linaje (mediana, mín–máx) | R0 pista | B+D del mundo por cuarto de T | causas (veneno/sal) | vida | saciedad |
+|---|---|---|---|---|---|---|
+| **escalada** L = 360, nobj = 36 (`..._escalada_20260922_131931`) | **0.269** (0.219–0.322), 0/18 ≥ 0.9 | 0.267 / 0.268 | 0.853 / 0.850 / 0.854 / 0.855 · 0.837 / 0.862 / 0.850 / 0.842 | 42 % / 58 % (hambre 2, sed 0) | ≈192 | 0.45 |
+| sin escalar L = 40 (`..._sin_escalar_diag_20260922_132544`) | 0.272 (0.234–0.359) | 0.268 / 0.288 | 0.863 / 0.868 / 0.871 / 0.862 · 0.846 / 0.858 / 0.868 / 0.860 | 44 % / 56 % | ≈185 | 0.45 |
+| SOLO N = 1 (`..._SOLO_diag_20260922_133041`) | 0.5154 / 0.4366 | — | 0.911 / 0.914 / 0.905 / 0.883 · 0.883 / 0.918 / 0.906 / 0.914 | 43 % / 57 % | 600–646 | 0.55 |
+
+**Diagnóstico** (solo medida, nada arreglado; mediana por linaje-semilla):
+- Definiciones:
+  - «Objetivo» = el objeto bueno más cercano para la necesidad activa (A con hambre, C con sed) al inicio del paso. Es un proxy: FABRICA en realidad va al objeto más cercano de cualquier tipo que no haya rechazado.
+  - «Robo» = otro cuerpo lo muerde en ese paso.
+  - Ventana = 50 pasos.
+
+| | pérdidas de objetivo por 100k pasos (robo + olvido) | B/D en 50 pasos tras robo | tras olvido | tasa de base de B/D | A/C tras robo / base | distancia al bueno más cercano | pasos sin bueno en el mundo |
+|---|---|---|---|---|---|---|---|
+| SOLO | 0 + 16 | — | 1.01 | **0.42** | — / 0.57 | 10.2 | 83 % |
+| 9, L = 40 | **3808** + 17 | 0.69 | 0.66 | **0.57** | 0.73 / 0.59 | 10.3 | 76 % |
+| 9, L = 360 | **1612** + 6 | 0.59 | 0.60 | **0.57** | 0.40 / 0.58 | 61.6 | 7 % |
+
+- **Lo medido:**
+  - Rodeado de otros, un cuerpo muerde B/D a una tasa de base +36 % (0.57 contra 0.42), igual con o sin escala.
+  - Pierde su objetivo bueno cientos de veces más a menudo (1600–3800 robos contra 16 olvidos).
+  - Tras perderlo, sube su tasa de B/D (L = 40: 0.69 contra 0.57). Pero un robo no pesa más que un olvido (0.69 contra 0.66), y en L = 360 casi no hay efecto (0.59 contra 0.57).
+  - La saciedad baja de 0.55 a 0.45.
+- **Hipótesis, no medida:** robos frecuentes → más hambre → la boca, empujada por `hambre_boca`, muerde lo que tenga delante. Lo que queda sin medir es el vínculo hambre→B/D en el momento de morder.
+- La distancia en L = 360 (61.6) no es comparable: allí casi siempre existe un bueno, pero lejos. En L = 40 muchas veces no existe ninguno (76–83 % de los pasos).
+- **Observación de escala (no corregida):** el olvido es de 0.003 por paso para TODO el mundo, así que con nobj = 36 cada objeto se olvida 9× menos que en L = 40. La ENMIENDA 1 no lo escaló. Lo decide el coordinador.
+
+## Comando de la serie de la ronda 0 (solo el coordinador)
+`python experimentos/carrera_escuderias/juez.py --ronda 0 --desde 4003 --n 20 --pool 6`
+- Valores por defecto: 9 FABRICA, `escala=1`, `pizarra=1`, `rep_acum=0`, `T=100000`.
+- Tiempo: ≈180 s por semilla en un proceso. Son 4 tandas con Pool 6: **≈12–16 min**.
+- La ruta con Pool no la probé (regla 3).
+
+## Qué queda
+- Decidir si la serie se corre así, dado que el humo ya cae por debajo de la predicción.
+- Medir el vínculo hambre→B/D en el momento de morder.
+- Decidir si el olvido se escala con N.
+
+## v4: ERR-98 (olvido escalado), humo corregido y hambre → boca (22-sep, tarde)
+**Veredicto v4: HAY ALGO MODESTO.** Con el olvido corregido, R0 por linaje sube de 0.269 a **0.349**. La predicción (0.35–0.55, sin reajustar) **no se cumple por muy poco**: 0.349 queda justo por debajo.
+
+- **ERR-98:**
+  - `esc` sorteos de olvido por paso (N con `escala=1`), cada uno con p = 0.003. La tasa por objeto queda igual que en L = 40, y con N = 1 hay un solo sorteo, como en el monolito.
+  - Arnés **40/40**. Caso nuevo (M): tasa por objeto con N = 1 de 0.000742 y con N = 9 de 0.000767, razón 1.034, ambas a < 1.3 σ de 0.00075.
+  - `test_tramposo` sigue 30/30.
+- **Humo** (`datos/carrera_humo_ronda0_escalada_olvido98_20260922_134156.*`; 9 FABRICA, L = 360, nobj = 36, 4001–4002):
+  - R0 por linaje mediana 0.349 (0.284–0.409), 0/18 ≥ 0.9; R0 de la pista 0.343 / 0.350.
+  - Sin la corrección era 0.269; el SOLO da 0.5154 / 0.4366.
+  - Vida ≈195 (SOLO 600–646).
+  - B+D por cuarto de T: 0.818 / 0.841 / 0.829 / 0.834 y 0.820 / 0.832 / 0.841 / 0.834.
+  - Causas: veneno 39 %, sal 61 %, 0 de hambre o sed.
+  - Contabilidad 18/18. Hay 3.7 % de pasos sin ningún objeto a ≤ 20 celdas.
+- **Hambre → boca.** Decisión = un paso sobre un objeto; déficit = el de la necesidad activa; H = manda el hambre, S = manda la sed.
+
+| | SOLO (`..._SOLO_boca_*`) | 9 cuerpos, escalada |
+|---|---|---|
+| tasa de mordida de B con SED / con HAMBRE | 0.517 / 0.012 | **0.650** / 0.015 |
+| tasa de mordida de D con HAMBRE / con SED | 0.109 / 0.063 | **0.196** / 0.073 |
+| déficit al decidir sobre B con sed / D con hambre | 0.363 / 0.073 | **0.486 / 0.138** |
+| déficit medio en mordidas B/D contra A/C | ~0.50 contra ~0.34 | **~0.60** contra ~0.28 |
+| formato H-BOCA: veneno con SED · con HAMBRE · sal con HAMBRE · con SED | 701/1236 (0.57) · 109/7086 (0.015) · 742/5521 (0.13) · 130/1659 (0.08) | 8491/12272 (0.69) · 1164/59258 (0.02) · 9241/38254 (0.24) · 997/11120 (0.09) |
+| mordidas B/D con un robo en los 50 pasos previos contra los pasos cubiertos así | — | 0.584 contra 0.560 (×1.04) |
+| déficit en B/D con robo previo / sin robo previo | — | 0.604 / 0.585 |
+
+- **Respuestas:**
+  1. **Sí:** con 9 cuerpos las mordidas malas ocurren con más necesidad acumulada (déficit 0.60 contra 0.50), y los cuerpos llegan a las decisiones más necesitados (0.49 contra 0.36 con B y sed).
+  2. **No:** los robos casi no anteceden a esos picos. Solo ×1.04 sobre el azar, con 0.02 más de déficit.
+- **Relación con H-BOCA:** el mecanismo es el mismo que en la fase 10. La boca decide con la fila de la necesidad activa: el veneno se muerde con sed (la fila de la sed nunca aprende que B es malo) y la sal con hambre. Con 9 cuerpos, el término `hambre_boca·déficit` es mayor y esas tasas suben (0.57 → 0.69 y 0.13 → 0.24). Lo que la competencia añade es **necesidad acumulada**, no robos puntuales. De dónde sale esa necesidad (más distancia, menos saciedad) no está aislado.
+
+## Comando final de la serie (solo el coordinador; usa ya ERR-98, porque `escala=1` es el valor por defecto)
+`python experimentos/carrera_escuderias/juez.py --ronda 0 --desde 4003 --n 20 --pool 6`
+- ≈195 s por semilla en un proceso (con Pools ajenos corriendo): 4 tandas → **≈13–17 min**.
+- **Ruta con Pool NO corrida por mí.** Mis reglas duras prohíben cualquier Pool, también `--pool 2`. Verificado sin Pool:
+  - `tarea` y su resultado se pueden pasar con pickle.
+  - `juez` se importa limpio desde otra cwd.
+  - La rama `imap_unordered` existe y el archivo tiene la guarda `__main__`.
+  - Una tarea real (4003, T = 2000) da L = 360 y 56 olvidos (esperados ≈54).
+- Prueba mínima para el coordinador: `python experimentos/carrera_escuderias/juez.py --ronda poolcheck --desde 4003 --n 2 --T 5000 --pool 2`.
+
+## v5: juez para la ronda 1 (ENMIENDAS 2 y 3; solo medición e interfaz; pista y carros intactos)
+- **Alineaciones:**
+  - `--carros O1,S1,H1,FABRICA*6` (acepta `X*k`).
+  - Atajos `--ronda 1` (O1, S1, H1 + 6 FABRICA), `1mono` (9 O1) y `1solo` (O1, N = 1). `--ronda 0` sigue siendo 9 FABRICA.
+  - `revisa_carro` corre sobre cada carro distinto.
+- **ERR-99 por linaje-semilla, solo desde la física:**
+  - `evaluable` (≥ 5 muertes) / `casi_inmortal`, `R0_eval`, `t_fund` (en `telem`), `fund_post10k` y `cruza`.
+  - `nac_reales` (hijos que llegan a vivir = cuerpos con origen en la cola), `cola_final`, fundadores por 10⁵ pasos y fracción que muere sin parir.
+  - Si `t_fund` se trunca (tope 200), los fundadores que faltan cuentan como posteriores a t = 10000 y se marcan.
+- **Resúmenes:**
+  - Por escudería: cruzan, evaluables, casi inmortales, semillas que cruza y «gana» si cruza en ≥ 15/20. H1 contra FABRICA como control de ruido.
+  - Monocultivo y SOLO con los tres criterios de la ENMIENDA 3 → CRUZA / NO CRUZA.
+  - Las predicciones firmadas se imprimen al lado de lo medido.
+- **`--recalcula <crudo viejo>`:**
+  - Reconstruye `t_fund` y la cola final desde la telemetría por cuerpo (vidas + hijos) y lo verifica contra `fundadores` y `cola_final`.
+  - En corridas nuevas la reconstrucción se compara con la física: 19/19 en los humos.
+  - Auditoría 9 O1 (s4161, T = 30000): 9/9 verificados; el monocultivo CRUZA en esa semilla (mediana 1.452, 8/9 evaluables, 6/8 sin fundadores tras t = 10000). A título informativo: T = 30000 y una semilla.
+  - Ronda 0 oficial: 180/180 verificados; 0/180 cruzan (mediana 0.332).
+- **Pruebas:**
+  - Identidad 40/40 y `test_tramposo` 30/30.
+  - Humos n = 1, T = 5000: `carrera_ronda1_s4001-4001_20260922_143636`, `carrera_ronda1mono_..._143645` y `carrera_ronda1solo_..._143659`, todos con crudo, pizarra y resumen.
+- **Bug mío en el parche:** `cola_final` salía duplicada en el resumen. El arnés lo detectó (TypeError) antes de cualquier corrida válida; corregido.
+
+## v6: ENMIENDA 4 (serie sellada con controles) — solo instrumento; no se corrió ninguna semilla sellada
+- **Mundo forzado:**
+  - `pista.run(..., mundo_n=M)` y `juez.py --mundo_N M`: L = 40·M, nobj = 4·M y M sorteos de olvido por paso.
+  - Arnés (N): `mundo_n = N` es idéntico bit a bit (N = 1 y N = 9). Con 1 carro y `mundo_n = 9`: L = 360, 36 objetos, 2735 olvidos (esperados ~2700).
+- **`carros/CTRL_O1_SINLIMPIA.py`** (sha be029b0a1b8d6634; `revisa_carro` PASA). El diff contra O1 (99436afa2715f028) tiene dos partes:
+  - el docstring de cabecera;
+  - la línea 100, `limpia = mejor is None and min(lev) < self.U + MARGEN`, pasa a `limpia = False`.
+  - Con `limpia` falsa, sin tocar ninguna otra línea: nunca hay blanco `sucio` y `_quiere(..., limpia=False)` no muerde lo malo conocido. Sin nada útil, va a una letra por probar o al centro del hueco más grande (su regla de espera).
+  - Se escribió preservando los fines de línea de O1 (el primer intento los cambió y el diff marcaba todo el archivo; se rehizo).
+- **Prueba de la limpieza** (s4001, T = 5000, 9 carros):
+  - O1: 165 limpiezas (16/22/6/13/26/14/33/20/15). CTRL: 0.
+  - La medida física coincide linaje por linaje con el contador que declara O1.
+- **Medida física de la limpieza** (juez, sin leer el carro): mordida de B/D **a sabiendas** (letra ya mordida por el linaje) con el golpe en la necesidad **más llena**. Para O1 es exactamente su rama de limpieza. En FABRICA cuenta también mordidas malas por hambre (448 en el humo): no es «limpieza» intencional, y así se lee.
+- **Otras medidas del mecanismo:**
+  - Objetos buenos que reaparecen por esas mordidas: en el humo ≈0.49 por mordida, la tasa esperada de 2 de 4 tipos.
+  - Fracción de pasos sin ningún objeto bueno en el mundo: `pista['frac_sin_bueno_mundo']`, solo diagnóstico.
+- **Atajos:**
+  - `--ronda sellada_mono | sellada_sologrande | sellada_sinlimpia | sellada_fab`, con semillas 5001–5020 por defecto y el criterio de la ENMIENDA 3.
+  - Las predicciones de la ENMIENDA 4 se imprimen con SE CUMPLE / NO se cumple.
+  - SOLO-GRANDE informa los casi inmortales y si hacen caer (iii). Así operacionalicé «queda casi inmortal»: más de 1/3 de los linajes-semilla casi inmortales. **Revisar.**
+- **Pruebas:**
+  - Arnés **43/43** (40 + N1 ×2 + N2). La 1.ª corrida dio 40/43: (L) no excluía el nuevo campo de diagnóstico `frac_sin_bueno_mundo`, que es None con diag = 0. Linajes, pizarra y rng eran idénticos (verificado aparte); corregido y declarado.
+  - `test_tramposo` 30/30.
+  - Humos de los 4 atajos con s4001, T = 5000: el pipeline escribe crudo, pizarra y resumen; contabilidad y reconstrucción de `t_fund` coherentes en todos. Sus veredictos a T = 5000 no significan nada.
+
+## v7: ERR-100 (R0 de nacimientos reales) y ERR-101 (control S-FUNDBORRA) — solo instrumento; no se tocó 5021–5040
+- **ERR-100 en el juez:**
+  - Por linaje-semilla: `R0_real = nac_reales/(muertes+1)`, `R0_real_eval` y `cruza_real` (R0 real ≥ 0.90 y 0 fundadores tras t = 10000).
+  - En las tablas: la mediana del R0 real sobre evaluables y cuántos cruzan con él.
+  - En monocultivo, SOLO y selladas: mediana del R0 real, si el grupo cruzaría con ella en (i), y mediana de `cola_final/descendientes`.
+  - **Solo se reporta; el criterio preregistrado no cambia.**
+- **Recálculo** con `--recalcula` de las 8 series corridas: t_fund y nacimientos reales reconstruidos desde la telemetría y verificados en 1160/1160 linajes-semilla. Los resúmenes quedan en `datos/recalculo_err100_*.json`.
+
+| serie | R0 preregistrado (mediana evaluables) | R0 de nacimientos reales (mediana evaluables) | cruzan / cruzan real | cola/desc (mediana) | veredicto por la letra |
+|---|---|---|---|---|---|
+| ronda 0 (9 FAB, 4003–4022) | 0.332 | 0.330 | 0/180 · 0/180 | — | no cruza |
+| ronda 1 oficial: O1 / S1 / H1 / FAB | — (20/20 casi inmortal) / 0.345 / 0.293 / 0.309 | — / 0.344 / 0.293 / 0.304 | 0 · 0 | — | nadie gana |
+| ronda 1 mono (9 O1) | 1.615 | **0.947** | 151/180 · 128/180 | 0.423 | CRUZA (con R0 real también cruzaría) |
+| ronda 1 solo (O1) | 0.681 | 0.657 | 1/20 · 1/20 | 0.06 | NO |
+| **S-MONO** (5001–5020) | 1.565 | **0.941** | 141/180 · 117/180 | 0.417 | CRUZA (con R0 real también cruzaría) |
+| S-SOLO-GRANDE | — (20/20 casi inmortal) | — | 0 · 0 | 1.0 | NO (casi inmortal) |
+| S-SIN-LIMPIEZA | 0.218 | 0.216 | 0 · 0 | 0.0 | NO |
+| S-FAB | 0.340 | 0.339 | 0 · 0 | 0.0 | NO |
+
+- **`carros/CTRL_O1_FUNDBORRA.py`** (sha 8106a9200ea3ad4d; `revisa_carro` PASA). El diff contra O1 (99436afa2715f028) tiene dos partes:
+  - el docstring de cabecera;
+  - una línea agregada en `nace()`, tras la línea 148: `if info.get('fundador'): self.suma = {}; self.n = {}`.
+  - El fundador arranca sin tabla, igual que el primero de la corrida; los hijos de la cola heredan igual que en O1.
+  - Fines de línea de O1 preservados.
+- **Humo de FUNDBORRA** (s4001, no sellada):
+  - O1: sus fundadores nacen con tabla (4 letras).
+  - CTRL: 13 fundadores con N = 1 y 122 con N = 9, **todos sin tabla**. Los hijos de la cola nacen con 4 letras.
+  - Dato de humo, no de serie: con N = 9 y T = 20000, CTRL tuvo 122 fundadores contra 6 de O1.
+- **Atajo** `--ronda sellada_fundborra`: 9 CTRL, semillas 5021–5040 por defecto, T = 100000, criterio de la ENMIENDA 3 y R0 real. Imprime las dos predicciones firmadas con SE CUMPLE / NO se cumple. Humo s4001, T = 5000: el pipeline escribe todo.
+- **Pruebas:** identidad 43/43; `test_tramposo` 30/30.
+
+## v8: ENMIENDA 5 (ronda 2) — solo instrumento; no se tocó 9001–9140
+- **Fundador limpio** (`pista.run(..., fundador_limpio=1)`, `juez --fundador_limpio 1`):
+  - Cuando el linaje se extingue, el fundador es una **instancia nueva**: `crea(ctx)` otra vez, con el mismo rng de cuerpo del linaje en su estado avanzado.
+  - **No** se llama a `nace()`, porque el primer fundador de la corrida tampoco lo recibe. Nada del objeto viejo pasa.
+  - Los hijos de la cola nacen como siempre.
+  - `_carrera['instancias']` cuenta las instancias. `d['carro']` es la salida de la última instancia.
+  - Con compat = 1 se rechaza.
+- **Arnés 50/50** (43 + 7 del caso (O)):
+  - Sin la opción, idéntico bit a bit.
+  - Con la opción, FABRICA (64 fundadores) y O1 (13) arrancan cada instancia nueva con memoria vacía: nodo 0, tabla 0.
+  - Sin la opción, el fundador hereda: FABRICA nodo 20–104, O1 tabla 2–4. Es el control que debe diferir.
+  - 9 O1 con la opción: contabilidad 9/9 y determinista.
+- **`test_tramposo`** 30/30.
+- **Criterio de la ronda 2** (bloque «RONDA 2 / ENMIENDA 5» del juez):
+  - Un linaje-semilla cruza con `cruza_real`: R0 de nacimientos reales ≥ 0.90, 0 fundadores tras t = 10000 y ≥ 5 muertes. El requisito de muertes es ERR-99, que no se derogó: un casi inmortal no cuenta.
+  - **Regla por semilla (la ENMIENDA 5 no la fija, decidí yo; revisar):** un equipo cruza en una semilla si más de la mitad de sus linajes en esa semilla cruzan. También se reporta «todos».
+  - Gana si cruza en ≥ 15/20 semillas. El R0 preregistrado viejo se reporta al lado.
+- **Atajos:**
+  - `--ronda r2mono --equipo X`, `r2mix3`, `r2fab --equipo X` y `r2o1mono`, con fundador limpio forzado, T = 100000 y 9101–9120 por defecto (réplica con `--desde 9121`).
+  - Si falta un carro, error claro y no corre nada. `--fundador_limpio 0` en ronda 2 se rechaza.
+  - Humos s4001, T = 5000 de `r2o1mono`, `r2fab --equipo O1` y `r2mono --equipo O1`: todo escrito y coherente 9/9.
+- **`humo_equipo.py`:**
+  - Impone equipo ∈ {O2, O3, O4}, semilla en su tercio, T ≤ 30000, tope de 12 humos (cuenta los JSON en `datos/humos_r2/X/`), `revisa_carro` y fundador limpio.
+  - Escribe JSON, log y pizarra.
+  - Probado con los guardias (semilla fuera del tercio, T > 30000, carro faltante, mix sin los tres, equipo no permitido). La prueba completa usó un equipo temporal `ZZ` (copia de FABRICA, s4001), incluido el tope. Ese equipo se borró.
+  - Bug mío corregido: un humo rechazado dejaba la carpeta vacía del equipo.
+
+## v9: ENMIENDA 6 / ERR-102 (persistencia y muertes voluntarias) — aplicado después de que terminó el Pool r2o1mono
+- **Persistencia**, en todas las salidas de la ronda 2 y en `--recalcula`:
+  - Un linaje-semilla persiste con 0 fundadores tras t = 10000 y ≥ 5 nacimientos reales.
+  - El equipo estabiliza en una semilla si persiste más de la mitad de sus linajes, y estabiliza la ronda con ≥ 15/20 semillas.
+  - Se imprimen las predicciones de la ENMIENDA 6. El bloque de la ENMIENDA 5 sigue igual.
+- **Muertes voluntarias físicas** (`pista.py`, solo lectura; `_carrera['muertes_vol']`): el cuerpo muere en el paso en que mordió una letra mala que su linaje ya había mordido, y cuyo efecto negativo cae en la necesidad por la que muere (B → energía, D → agua).
+  - Se reporta por equipo como fracción de muertes.
+  - Al lado va lo que declara el carro: O3 `cuerpos_term`, O4 `senescentes`. No cuenta, y con fundador limpio solo cubre la última instancia.
+  - Con muerte programada, «estabiliza» lleva la marca «con muerte programada».
+- **Recálculo de la serie oficial `r2o1mono` (9101–9120)** con el juez nuevo:
+  - El bloque ENMIENDA 5 es **idéntico** al del juez viejo: 144/180 cruzan, R0 real 0.941, R0 preregistrado 2.419, 20/20 semillas por mayoría, 1/20 con todos, gana.
+  - Persistencia: 155/180 persisten, 20/20 semillas → **O1 ESTABILIZA** (predicción 0.55).
+  - Muertes voluntarias: no disponibles, porque el crudo es anterior al cambio de la pista.
+- **Humo s4001, T = 20000, monocultivos:**
+  - O3: 22/45 muertes voluntarias físicas (0.49); declara 25 `cuerpos_term`.
+  - O4: 29/202 (0.14); declara 30 `senescentes`.
+  - O1: 0/137.
+- **Pruebas:** identidad 50/50; `test_tramposo` 30/30.

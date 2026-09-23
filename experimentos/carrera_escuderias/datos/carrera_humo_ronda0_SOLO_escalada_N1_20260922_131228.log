@@ -1,0 +1,23 @@
+JUEZ · humo_ronda0_SOLO_escalada_N1 · 2026-09-22 13:12:28 · python 3.14.2 · pool NO (un proceso)
+  pista.py c2b8c453134fb687 · juez.py 98e6fcf153a68f40 · carros {'FABRICA': '9ef0ca62af327a6c'}
+  carros (orden = indice de linaje): ['FABRICA'] · semillas 4001-4002 · T=100000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [   11.2s] semilla 4001 (10.5s) R0 pista 0.5154 · R0 por linaje [0.5154]
+  [   23.3s] semilla 4002 (12.1s) R0 pista 0.4366 · R0 por linaje [0.4366]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_SOLO_escalada_N1_20260922_131228.json (sha 75a2b02a4adcbef1)
+
+RESUMEN · humo_ronda0_SOLO_escalada_N1 · semillas [4001, 4002] · T=100000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  FABRICA        0.476       [0.5154, 0.4366]   623.5  135.0  64.5  71.0 0.966   1.0  585.5  0.554  3/0/113/154 (1%/0%/42%/57%)  0/2
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.476 · por semilla [0.5154, 0.4366]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.911, 0.914, 0.905, 0.883] · L 40 nobj 4
+  semilla 4002: fraccion B+D del mundo por cuarto de T [0.883, 0.918, 0.906, 0.914] · L 40 nobj 4
+  contabilidad fisica coherente: 2/2
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=4) por semilla [{'A': 0.1918, 'B': 1.9428, 'C': 0.1949, 'D': 1.6705}, {'A': 0.1964, 'B': 2.009, 'C': 0.1826, 'D': 1.612}] · olvidos [304, 329]
+  mordidas totales por tipo por semilla [{'A': 568, 'B': 395, 'C': 586, 'D': 451}, {'A': 570, 'B': 415, 'C': 553, 'D': 421}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_SOLO_escalada_N1_20260922_131228_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_SOLO_escalada_N1_20260922_131228_resumen.json
+
+Terminado en 23.3s

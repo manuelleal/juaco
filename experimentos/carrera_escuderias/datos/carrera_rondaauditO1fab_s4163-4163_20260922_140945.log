@@ -1,0 +1,45 @@
+JUEZ · rondaauditO1fab_s4163-4163 · 2026-09-22 14:09:45 · python 3.14.2 · pool NO (un proceso)
+  pista.py d2a4b219059478eb · juez.py 797fe37f69176b87 · carros {'FABRICA': '2ebee3e99ea5a33a', 'O1': '99436afa2715f028'}
+  carros (orden = indice de linaje): ['O1', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · semillas 4163-4163 · T=30000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO FABRICA: PASA
+  CHEQUEO ESTATICO O1: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [   58.7s] semilla 4163 (57.3s) R0 pista 0.3662 · R0 por linaje [48.0, 0.2785, 0.2949, 0.3286, 0.253, 0.2143, 0.2658, 0.3651, 0.3333]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondaauditO1fab_s4163-4163_20260922_140945.json (sha d083b0e3b69a1818)
+
+RESUMEN · rondaauditO1fab_s4163-4163 · semillas [4163] · T=30000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O1              48.0                 [48.0] 30000.0    0.0  48.0   0.0  None  None  351.0  0.816  0/0/0/0 (0%/0%/0%/0%)  1/1
+  FABRICA#1      0.279               [0.2785]   194.0   78.0  22.0  57.0 0.889 0.971  183.0  0.464  0/0/30/48 (0%/0%/38%/62%)  0/1
+  FABRICA#2      0.295               [0.2949]   157.0   77.0  23.0  54.0 0.932 0.973  199.0  0.479  0/0/23/54 (0%/0%/30%/70%)  0/1
+  FABRICA#3      0.329               [0.3286]   178.0   69.0  23.0  47.0 0.879   1.0  232.0  0.519  0/0/26/43 (0%/0%/38%/62%)  0/1
+  FABRICA#4      0.253                [0.253]   156.0   82.0  21.0  62.0 0.896 0.979  226.0  0.459  0/0/28/54 (0%/0%/34%/66%)  0/1
+  FABRICA#5      0.214               [0.2143]   172.5   83.0  18.0  65.0 0.922   1.0  214.0  0.415  0/0/29/54 (0%/0%/35%/65%)  0/1
+  FABRICA#6      0.266               [0.2658]   193.0   78.0  21.0  57.0 0.986   1.0  217.0   0.49  0/0/29/49 (0%/0%/37%/63%)  0/1
+  FABRICA#7      0.365               [0.3651]   200.0   62.0  23.0  41.0 0.915   1.0  186.0  0.495  0/0/24/38 (0%/0%/39%/61%)  0/1
+  FABRICA#8      0.333               [0.3333]   200.0   71.0  24.0  47.0 0.897   1.0  207.0  0.518  0/0/26/45 (0%/0%/37%/63%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.366 · por semilla [0.3662]
+  semilla 4163: fraccion B+D del mundo por cuarto de T [0.8, 0.82, 0.843, 0.833] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 473.0 · perdidas por olvido 16.0 · B/D tras robo 0.657 vs tras olvido 0.643 vs base 0.575 · A/C tras robo 0.469 vs base 0.65
+    distancia media al bueno mas cercano 55.243 · frac pasos sin bueno en el mundo 0.064 · frac pasos sin NINGUN objeto a <= 20 0.045 (max 0.0553)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones   1677 mordidas   1339 tasa 0.798 · deficit medio al decidir 0.150 al morder 0.188
+    AS: decisiones    398 mordidas    376 tasa 0.945 · deficit medio al decidir 0.488 al morder 0.495
+    BH: decisiones  10360 mordidas    174 tasa 0.017 · deficit medio al decidir 0.153 al morder 0.580
+    BS: decisiones   1878 mordidas   1139 tasa 0.606 · deficit medio al decidir 0.491 al morder 0.633
+    CH: decisiones   1658 mordidas   1318 tasa 0.795 · deficit medio al decidir 0.128 al morder 0.158
+    CS: decisiones    402 mordidas    390 tasa 0.970 · deficit medio al decidir 0.510 al morder 0.515
+    DH: decisiones   8069 mordidas   1325 tasa 0.164 · deficit medio al decidir 0.113 al morder 0.530
+    DS: decisiones   2129 mordidas    212 tasa 0.100 · deficit medio al decidir 0.549 al morder 0.691
+    deficit en mordidas B/D (bins de 0.1) [160, 97, 105, 124, 755, 334, 177, 134, 593, 371] (media ~0.592) · en mordidas A/C [1841, 153, 103, 149, 480, 176, 87, 66, 238, 130] (media ~0.274)
+    mordidas B/D con un robo en los 50 pasos previos 0.568 vs pasos cubiertos asi 0.541 · deficit en B/D con robo previo 0.605 vs sin 0.576
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 1139/1767 · veneno con HAMBRE 174/8354 · sal con HAMBRE 1325/6650 · sal con SED 212/1806
+  contabilidad fisica coherente: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 3.14, 'B': 16.1403, 'C': 3.197, 'D': 13.5227}] · olvidos [836]
+  mordidas totales por tipo por semilla [{'A': 1715, 'B': 1313, 'C': 1708, 'D': 1537}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondaauditO1fab_s4163-4163_20260922_140945_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondaauditO1fab_s4163-4163_20260922_140945_resumen.json
+
+Terminado en 58.7s

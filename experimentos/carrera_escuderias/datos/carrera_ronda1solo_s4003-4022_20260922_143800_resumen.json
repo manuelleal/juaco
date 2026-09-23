@@ -1,0 +1,146 @@
+{
+ "meta": {
+  "etiqueta": "ronda1solo_s4003-4022",
+  "ronda": "1solo",
+  "sello": "20260922_143800",
+  "semillas": [
+   4003,
+   4004,
+   4005,
+   4006,
+   4007,
+   4008,
+   4009,
+   4010,
+   4011,
+   4012,
+   4013,
+   4014,
+   4015,
+   4016,
+   4017,
+   4018,
+   4019,
+   4020,
+   4021,
+   4022
+  ],
+  "T": 100000,
+  "pizarra": 1,
+  "rep_acum": 0,
+  "carros": [
+   "O1"
+  ],
+  "sha_carros": {
+   "O1": "99436afa2715f028"
+  },
+  "escala": 1,
+  "chequeo_estatico": {
+   "O1": []
+  },
+  "sha_pista": "d2a4b219059478eb",
+  "sha_juez": "f2aeb20651969126",
+  "sha_f9c": "9dd1fb91ecec35ae",
+  "identidad_corta": {
+   "sha_f9c": "9dd1fb91ecec35ae",
+   "sha_ok": true,
+   "dif": [],
+   "ok": true
+  },
+  "W_CAUSA": 400,
+  "CUPO": 16,
+  "ANCHO": 8,
+  "ref": {
+   "R0": 0.395,
+   "R0_acum1": 0.483,
+   "fuente": "bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)"
+  }
+ },
+ "tabla": [
+  {
+   "id": "O1",
+   "R0_med": 0.681,
+   "R0": [
+    0.7581,
+    0.6912,
+    0.5802,
+    0.4337,
+    0.4737,
+    0.803,
+    0.8833,
+    0.5238,
+    0.7059,
+    0.6618,
+    0.7692,
+    1.5319,
+    0.5455,
+    0.8451,
+    0.6712,
+    0.7534,
+    0.8983,
+    0.6667,
+    0.6438,
+    0.6184
+   ],
+   "vida_med": 600.0,
+   "muertes": 68.5,
+   "descendientes": 47.5,
+   "fundadores": 24.0,
+   "p1": 0.783,
+   "c1": 1.0,
+   "exp_A": 342.5,
+   "sac_frac": 0.42,
+   "causas": {
+    "hambre": 747,
+    "sed": 287,
+    "veneno": 166,
+    "sal": 177
+   },
+   "cruza_09": 1,
+   "n": 20
+  }
+ ],
+ "R0_pista": 0.681,
+ "err99": {
+  "modo": "solo",
+  "escuderias": {
+   "O1": {
+    "linajes_semilla": 20,
+    "cruzan": 1,
+    "evaluables": 20,
+    "casi_inmortales": 0,
+    "R0_eval_med": 0.681,
+    "R0_med_todos": 0.681,
+    "semillas_que_cruza": 1,
+    "semillas": 20,
+    "gana": false,
+    "nac_reales_med": 44.5,
+    "fund_post_med": 22.5,
+    "sin_parir_med": 0.691,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 0
+   }
+  },
+  "criterio_enm3": {
+   "mediana_R0_eval": 0.681,
+   "frac_eval_sin_fund": 0.05,
+   "evaluables": 20,
+   "n": 20,
+   "frac_eval": 1.0,
+   "condiciones": {
+    "i": false,
+    "ii": false,
+    "iii": true
+   },
+   "cruza": false,
+   "casi_inmortales": 0,
+   "cruzan_linajes": 1
+  },
+  "predicciones": [
+   [
+    "SOLO O1 NO cruza: mediana < 0.90 (p 0.90)",
+    "NO CRUZA (mediana R0 evaluables 0.681)"
+   ]
+  ]
+ }
+}

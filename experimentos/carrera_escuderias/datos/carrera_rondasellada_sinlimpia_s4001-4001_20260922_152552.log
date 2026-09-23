@@ -1,0 +1,54 @@
+JUEZ · rondasellada_sinlimpia_s4001-4001 · 2026-09-22 15:25:52 · python 3.14.2 · pool NO (un proceso)
+  pista.py fb0ba16ada56eabc · juez.py 9621e095000aaa1a · carros {'CTRL_O1_SINLIMPIA': 'be029b0a1b8d6634'}
+  carros (orden = indice de linaje): ['CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA', 'CTRL_O1_SINLIMPIA'] · semillas 4001-4001 · T=5000 · pizarra 1 · rep_acum 0 · escala 1 · mundo_N N (el de los carros)
+  CHEQUEO ESTATICO CTRL_O1_SINLIMPIA: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [   12.1s] semilla 4001 (11.3s) R0 pista 0.2683 · R0 por linaje [0.1667, 0.25, 0.1667, 0.125, 0.3333, 0.3333, 0.3333, 0.6667, 0.5]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_sinlimpia_s4001-4001_20260922_152552.json (sha ce3c37e49484b2b3)
+
+RESUMEN · rondasellada_sinlimpia_s4001-4001 · semillas [4001] · T=5000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  CTRL_O1_SINLIMPIA#0   0.167               [0.1667]   600.0    5.0   1.0   4.0   1.0   1.0   14.0    0.1  4/1/0/0 (80%/20%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#1    0.25                 [0.25]  1243.0    3.0   1.0   2.0 0.667   1.0    9.0  0.207  3/0/0/0 (100%/0%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#2   0.167               [0.1667]   600.0    5.0   1.0   4.0   1.0  0.75   18.0    0.1  1/4/0/0 (20%/80%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#3   0.125                [0.125]   600.0    7.0   1.0   6.0 0.857  0.25    9.0    0.1  6/1/0/0 (86%/14%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#4   0.333               [0.3333]   600.0    5.0   2.0   3.0   0.8   1.0   12.0  0.242  4/1/0/0 (80%/20%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#5   0.333               [0.3333]  1626.0    2.0   1.0   1.0   0.5   1.0   15.0   0.29  0/2/0/0 (0%/100%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#6   0.333               [0.3333]  1330.0    2.0   1.0   1.0   0.5   1.0   20.0   0.17  1/1/0/0 (50%/50%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#7   0.667               [0.6667]  1727.0    2.0   2.0   0.0   0.5   1.0   23.0  0.404  1/1/0/0 (50%/50%/0%/0%)  0/1
+  CTRL_O1_SINLIMPIA#8     0.5                  [0.5]  2500.0    1.0   1.0   0.0   0.0   1.0   11.0  0.277  0/1/0/0 (0%/100%/0%/0%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.268 · por semilla [0.2683]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.895, 0.979, 0.991, 0.978] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 46.0 · perdidas por olvido 1.0 · B/D tras robo 0.018 vs tras olvido 0.0 vs base 0.02 · A/C tras robo 0.167 vs base 0.19
+    distancia media al bueno mas cercano 73.51 · frac pasos sin bueno en el mundo 0.645 · frac pasos sin NINGUN objeto a <= 20 0.004 (max 0.0332)
+  MECANISMO (ENMIENDA 4; desde la fisica: 'limpieza' = mordida de B/D A SABIENDAS -letra ya mordida por el linaje- con el golpe en la necesidad MAS llena):
+    limpiezas por linaje-semilla (mediana) 0.0 · por cuerpo 0.0 · total 0 · objetos buenos que reaparecen por ellas 0 (None por limpieza)
+    todas las mordidas malas 18 -> buenos que reaparecen 8 · fraccion de pasos SIN ningun objeto bueno en el mundo por semilla [0.5156] (mediana 0.516)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones     99 mordidas     63 tasa 0.636 · deficit medio al decidir 0.255 al morder 0.320
+    AS: decisiones     33 mordidas     14 tasa 0.424 · deficit medio al decidir 0.505 al morder 0.443
+    BH: decisiones   1323 mordidas      7 tasa 0.005 · deficit medio al decidir 0.400 al morder 0.005
+    BS: decisiones    315 mordidas      2 tasa 0.006 · deficit medio al decidir 0.613 al morder 0.241
+    CH: decisiones    147 mordidas     53 tasa 0.361 · deficit medio al decidir 0.179 al morder 0.357
+    CS: decisiones     33 mordidas     25 tasa 0.758 · deficit medio al decidir 0.493 al morder 0.437
+    DH: decisiones   1500 mordidas      8 tasa 0.005 · deficit medio al decidir 0.391 al morder 0.215
+    DS: decisiones    748 mordidas      1 tasa 0.001 · deficit medio al decidir 0.581 al morder 0.004
+    deficit en mordidas B/D (bins de 0.1) [13, 0, 0, 0, 5, 0, 0, 0, 0, 0] (media ~0.161) · en mordidas A/C [57, 6, 4, 4, 34, 12, 8, 11, 7, 12] (media ~0.380)
+    mordidas B/D con un robo en los 50 pasos previos 0.5 vs pasos cubiertos asi 0.356 · deficit en B/D con robo previo 0.227 vs sin 0.0
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 2/232 · veneno con HAMBRE 7/788 · sal con HAMBRE 8/1131 · sal con SED 1/503
+  contabilidad fisica coherente: 9/9 · t_fund reconstruible desde telem == fisica: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 0.6702, 'B': 12.875, 'C': 0.7428, 'D': 21.712}] · olvidos [129]
+  mordidas totales por tipo por semilla [{'A': 77, 'B': 9, 'C': 78, 'D': 9}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo sellada_sinlimpia
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir  gana
+  CTRL_O1_SINLIMPIA       9      0       4        5       0.167            0/1        1.0          0.0     0.667  -- (varios linajes por semilla)
+  SELLADA_SINLIMPIA (criterio ENMIENDA 3): (i) mediana R0 evaluables 0.167 >= 0.9: no · (ii) evaluables sin fundadores tras t=10000 1.0 >= 0.75: si · (iii) evaluables 4/9 (>= 0.667): no -> NO CRUZA
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    - S-SIN-LIMPIEZA NO cruza (p 0.50)  ->  medido: NO CRUZA (mediana R0 evaluables 0.167; evaluables 4/9; casi inmortales 5/9) -> la prediccion SE CUMPLE
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_sinlimpia_s4001-4001_20260922_152552_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_sinlimpia_s4001-4001_20260922_152552_resumen.json
+
+Terminado en 12.1s

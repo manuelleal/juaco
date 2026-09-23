@@ -1,0 +1,36 @@
+JUEZ · humo_ronda0_escalada · 2026-09-22 13:19:31 · python 3.14.2 · pool NO (un proceso)
+  pista.py 9af852a1378b9600 · juez.py 66f3c53c3c8bfdb9 · carros {'FABRICA': '2ebee3e99ea5a33a'}
+  carros (orden = indice de linaje): ['FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · semillas 4001-4002 · T=100000 · pizarra 1 · rep_acum 0 · escala 1
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [  181.6s] semilla 4001 (180.8s) R0 pista 0.2667 · R0 por linaje [0.2481, 0.2199, 0.2972, 0.254, 0.3222, 0.2191, 0.2702, 0.2767, 0.313]
+  [  356.4s] semilla 4002 (174.8s) R0 pista 0.2675 · R0 por linaje [0.2662, 0.2716, 0.2609, 0.3008, 0.2383, 0.3042, 0.2745, 0.2685, 0.2288]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_escalada_20260922_131931.json (sha 03311d0929f373de)
+
+RESUMEN · humo_ronda0_escalada · semillas [4001, 4002] · T=100000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  FABRICA#0      0.257       [0.2481, 0.2662]  167.25  263.5  68.0 195.5 0.973 0.996  623.0  0.453  0/0/218/309 (0%/0%/41%/59%)  0/2
+  FABRICA#1      0.246       [0.2199, 0.2716]  193.25  261.5  64.0 197.5 0.974 0.988  611.0  0.429  1/0/230/292 (0%/0%/44%/56%)  0/2
+  FABRICA#2      0.279       [0.2972, 0.2609]   198.0  250.0  70.0 180.5 0.969   1.0  610.0   0.45  0/0/226/274 (0%/0%/45%/55%)  0/2
+  FABRICA#3      0.277        [0.254, 0.3008]   192.5  248.0  69.0 179.0 0.972   1.0  620.5  0.449  0/0/209/287 (0%/0%/42%/58%)  0/2
+  FABRICA#4       0.28       [0.3222, 0.2383]  190.25  246.5  69.0 178.0 0.979   1.0  631.0  0.452  0/0/199/294 (0%/0%/40%/60%)  0/2
+  FABRICA#5      0.262       [0.2191, 0.3042]   195.0  260.5  67.5 193.5 0.959   1.0  602.0  0.438  1/0/239/281 (0%/0%/46%/54%)  0/2
+  FABRICA#6      0.272       [0.2702, 0.2745]   192.0  250.5  68.5 182.0 0.965 0.996  604.5  0.441  0/0/222/279 (0%/0%/44%/56%)  0/2
+  FABRICA#7      0.273       [0.2767, 0.2685]   193.0  254.0  69.5 187.0 0.962 0.996  619.0  0.452  0/0/220/288 (0%/0%/43%/57%)  0/2
+  FABRICA#8      0.271        [0.313, 0.2288]   189.5  249.5  67.0 182.5  0.95   1.0  593.0  0.442  0/0/202/297 (0%/0%/40%/60%)  0/2
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.267 · por semilla [0.2667, 0.2675]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.853, 0.85, 0.854, 0.855] · L 360 nobj 36
+  semilla 4002: fraccion B+D del mundo por cuarto de T [0.837, 0.862, 0.85, 0.842] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 18 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 1612.5 · perdidas por olvido 6.0 · B/D tras robo 0.593 vs tras olvido 0.6 vs base 0.573 · A/C tras robo 0.401 vs base 0.581
+    distancia media al bueno mas cercano 61.572 · frac pasos sin bueno en el mundo 0.07 · frac pasos sin NINGUN objeto a <= 20 0.044 (max 0.0516)
+  contabilidad fisica coherente: 18/18
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 2.7197, 'B': 19.646, 'C': 2.5748, 'D': 11.0594}, {'A': 2.7485, 'B': 20.3561, 'C': 2.7343, 'D': 10.1611}] · olvidos [305, 333]
+  mordidas totales por tipo por semilla [{'A': 5217, 'B': 5038, 'C': 5137, 'D': 5301}, {'A': 5330, 'B': 5115, 'C': 5264, 'D': 5235}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_escalada_20260922_131931_pizarra.jsonl.gz
+
+  PREDICCION FIRMADA (ENMIENDA 1, pista escalada): con 9 FABRICA la mediana del R0 por linaje cae en 0.35-0.55. Medido: mediana de los 18 linajes-semilla 0.269 (min 0.2191, max 0.3222) -> DEBAJO del rango
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_humo_ronda0_escalada_20260922_131931_resumen.json
+
+Terminado en 356.4s

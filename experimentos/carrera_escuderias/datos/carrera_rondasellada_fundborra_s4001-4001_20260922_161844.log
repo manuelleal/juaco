@@ -1,0 +1,56 @@
+JUEZ · rondasellada_fundborra_s4001-4001 · 2026-09-22 16:18:44 · python 3.14.2 · pool NO (un proceso)
+  pista.py fb0ba16ada56eabc · juez.py 8b57874cbee2946f · carros {'CTRL_O1_FUNDBORRA': '8106a9200ea3ad4d'}
+  carros (orden = indice de linaje): ['CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA', 'CTRL_O1_FUNDBORRA'] · semillas 4001-4001 · T=5000 · pizarra 1 · rep_acum 0 · escala 1 · mundo_N N (el de los carros)
+  CHEQUEO ESTATICO CTRL_O1_FUNDBORRA: PASA
+  IDENTIDAD CORTA: sha f9c 9dd1fb91ecec35ae (OK) · FABRICA solo == organismo_f9c REL (s=1, T=5000): OK
+  [    9.9s] semilla 4001 (9.1s) R0 pista 0.5952 · R0 por linaje [5.0, 1.0, 4.0, 2.0, 0.0556, 2.0, 1.0, 0.0769, 3.0]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_fundborra_s4001-4001_20260922_161844.json (sha 0426444209a327f5)
+
+RESUMEN · rondasellada_fundborra_s4001-4001 · semillas [4001] · T=5000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  CTRL_O1_FUNDBORRA#0     5.0                  [5.0]  5000.0    0.0   5.0   0.0  None  None   38.0  0.756  0/0/0/0 (0%/0%/0%/0%)  1/1
+  CTRL_O1_FUNDBORRA#1     1.0                  [1.0]  2500.0    1.0   2.0   0.0   0.0   1.0   33.0  0.452  0/1/0/0 (0%/100%/0%/0%)  1/1
+  CTRL_O1_FUNDBORRA#2     4.0                  [4.0]  5000.0    0.0   4.0   0.0  None  None   28.0  0.579  0/0/0/0 (0%/0%/0%/0%)  1/1
+  CTRL_O1_FUNDBORRA#3     2.0                  [2.0]  2500.0    1.0   4.0   0.0   0.0   1.0   21.0  0.444  1/0/0/0 (100%/0%/0%/0%)  1/1
+  CTRL_O1_FUNDBORRA#4   0.056               [0.0556]   200.0   17.0   1.0  16.0 0.667  0.25   21.0  0.164  0/1/4/12 (0%/6%/24%/71%)  0/1
+  CTRL_O1_FUNDBORRA#5     2.0                  [2.0]  5000.0    0.0   2.0   0.0  None  None   47.0  0.703  0/0/0/0 (0%/0%/0%/0%)  1/1
+  CTRL_O1_FUNDBORRA#6     1.0                  [1.0]  1399.0    2.0   3.0   0.0   0.5   1.0   21.0  0.537  0/0/2/0 (0%/0%/100%/0%)  1/1
+  CTRL_O1_FUNDBORRA#7   0.077               [0.0769]   200.0   12.0   1.0  11.0 0.583 0.167   29.0  0.108  2/0/4/6 (17%/0%/33%/50%)  0/1
+  CTRL_O1_FUNDBORRA#8     3.0                  [3.0]  5000.0    0.0   3.0   0.0  None  None   38.0  0.641  0/0/0/0 (0%/0%/0%/0%)  1/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.595 · por semilla [0.5952]
+  semilla 4001: fraccion B+D del mundo por cuarto de T [0.859, 0.958, 0.95, 0.897] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 70.0 · perdidas por olvido 2.0 · B/D tras robo 0.177 vs tras olvido 0.4 vs base 0.18 · A/C tras robo 0.3 vs base 0.37
+    distancia media al bueno mas cercano 63.316 · frac pasos sin bueno en el mundo 0.253 · frac pasos sin NINGUN objeto a <= 20 0.019 (max 0.0462)
+  MECANISMO (ENMIENDA 4; desde la fisica: 'limpieza' = mordida de B/D A SABIENDAS -letra ya mordida por el linaje- con el golpe en la necesidad MAS llena):
+    limpiezas por linaje-semilla (mediana) 16.0 · por cuerpo 9.0 · total 149 · objetos buenos que reaparecen por ellas 67 (0.45 por limpieza)
+    todas las mordidas malas 167 -> buenos que reaparecen 73 · fraccion de pasos SIN ningun objeto bueno en el mundo por semilla [0.0532] (mediana 0.053)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones    235 mordidas    123 tasa 0.523 · deficit medio al decidir 0.132 al morder 0.199
+    AS: decisiones     50 mordidas     20 tasa 0.400 · deficit medio al decidir 0.478 al morder 0.401
+    BH: decisiones   1508 mordidas     39 tasa 0.026 · deficit medio al decidir 0.247 al morder 0.104
+    BS: decisiones    451 mordidas     40 tasa 0.089 · deficit medio al decidir 0.580 al morder 0.449
+    CH: decisiones    205 mordidas    101 tasa 0.493 · deficit medio al decidir 0.135 al morder 0.176
+    CS: decisiones     60 mordidas     48 tasa 0.800 · deficit medio al decidir 0.485 al morder 0.384
+    DH: decisiones   1677 mordidas     87 tasa 0.052 · deficit medio al decidir 0.173 al morder 0.310
+    DS: decisiones    528 mordidas      1 tasa 0.002 · deficit medio al decidir 0.562 al morder 0.004
+    deficit en mordidas B/D (bins de 0.1) [64, 10, 5, 4, 45, 15, 9, 11, 2, 2] (media ~0.321) · en mordidas A/C [153, 15, 16, 22, 26, 15, 17, 17, 5, 6] (media ~0.258)
+    mordidas B/D con un robo en los 50 pasos previos 0.524 vs pasos cubiertos asi 0.504 · deficit en B/D con robo previo 0.248 vs sin 0.218
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 40/434 · veneno con HAMBRE 39/1372 · sal con HAMBRE 87/1526 · sal con SED 1/525
+  contabilidad fisica coherente: 9/9 · t_fund reconstruible desde telem == fisica: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 1.6016, 'B': 15.8186, 'C': 1.4164, 'D': 17.1634}] · olvidos [130]
+  mordidas totales por tipo por semilla [{'A': 143, 'B': 79, 'C': 149, 'D': 88}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo sellada_fundborra
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir R0 REAL eval med cruzan real  gana
+  CTRL_O1_FUNDBORRA       9      0       2        7       0.066            0/1        1.0          0.0       0.0            0.066           0  -- (varios linajes por semilla)
+  SELLADA_FUNDBORRA (criterio ENMIENDA 3): (i) mediana R0 evaluables 0.066 >= 0.9: no · (ii) evaluables sin fundadores tras t=10000 1.0 >= 0.75: si · (iii) evaluables 2/9 (>= 0.667): no -> NO CRUZA
+    ERR-100 (SOLO SE REPORTA; el criterio preregistrado no cambia): mediana del R0 de NACIMIENTOS REALES sobre evaluables 0.066 · con esa mediana en (i) el grupo NO cruzaria · linajes-semilla que cruzan con R0 real 0/9 · mediana cola_final/descendientes 0.75
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    - S-FUNDBORRA cruza por la letra (ENMIENDA 3) (p 0.55)  ->  medido: NO CRUZA (mediana R0 evaluables 0.066; R0 REAL 0.066; evaluables 2/9; casi inmortales 7/9) -> la prediccion NO se cumple
+    - S-FUNDBORRA: mediana del R0 de NACIMIENTOS REALES sobre evaluables >= 0.90 (p 0.35)  ->  medido: NO CRUZA (mediana R0 evaluables 0.066; R0 REAL 0.066; evaluables 2/9; casi inmortales 7/9) -> la prediccion NO se cumple
+  PIZARRA completa C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_fundborra_s4001-4001_20260922_161844_pizarra.jsonl.gz
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\carrera_rondasellada_fundborra_s4001-4001_20260922_161844_resumen.json
+
+Terminado en 9.9s

@@ -1,0 +1,49 @@
+{
+ "modo": "solo",
+ "escuderias": {
+  "O1": {
+   "linajes_semilla": 20,
+   "cruzan": 1,
+   "evaluables": 20,
+   "casi_inmortales": 0,
+   "R0_eval_med": 0.681,
+   "R0_med_todos": 0.681,
+   "semillas_que_cruza": 1,
+   "semillas": 20,
+   "gana": false,
+   "nac_reales_med": 44.5,
+   "fund_post_med": 22.5,
+   "sin_parir_med": 0.691,
+   "fund_post_incierto": 0,
+   "casi_inmortal_semillas": 0,
+   "R0_real_eval_med": 0.657,
+   "cruzan_real": 1
+  }
+ },
+ "criterio_enm3": {
+  "mediana_R0_eval": 0.681,
+  "frac_eval_sin_fund": 0.05,
+  "evaluables": 20,
+  "n": 20,
+  "frac_eval": 1.0,
+  "mediana_R0_real_eval": 0.657,
+  "cruza_con_R0_real": false,
+  "cruzan_real_linajes": 1,
+  "cola_sobre_desc_med": 0.06,
+  "condiciones": {
+   "i": false,
+   "ii": false,
+   "iii": true
+  },
+  "cruza": false,
+  "casi_inmortales": 0,
+  "cruzan_linajes": 1,
+  "casi_inmortal_grupo": false
+ },
+ "predicciones": [
+  [
+   "SOLO O1 NO cruza: mediana < 0.90 (p 0.90)",
+   "NO CRUZA (mediana R0 evaluables 0.681)"
+  ]
+ ]
+}

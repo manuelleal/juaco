@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "etiqueta": "rondasellada_sologrande_s4001-4001",
+  "ronda": "sellada_sologrande",
+  "sello": "20260922_152550",
+  "semillas": [
+   4001
+  ],
+  "T": 5000,
+  "pizarra": 1,
+  "rep_acum": 0,
+  "carros": [
+   "O1"
+  ],
+  "sha_carros": {
+   "O1": "99436afa2715f028"
+  },
+  "escala": 1,
+  "mundo_N": 9,
+  "chequeo_estatico": {
+   "O1": []
+  },
+  "sha_pista": "fb0ba16ada56eabc",
+  "sha_juez": "9621e095000aaa1a",
+  "sha_f9c": "9dd1fb91ecec35ae",
+  "identidad_corta": {
+   "sha_f9c": "9dd1fb91ecec35ae",
+   "sha_ok": true,
+   "dif": [],
+   "ok": true
+  },
+  "W_CAUSA": 400,
+  "CUPO": 16,
+  "ANCHO": 8,
+  "ref": {
+   "R0": 0.395,
+   "R0_acum1": 0.483,
+   "fuente": "bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)"
+  }
+ },
+ "tabla": [
+  {
+   "id": "O1",
+   "R0_med": 9.0,
+   "R0": [
+    9.0
+   ],
+   "vida_med": 5000.0,
+   "muertes": 0.0,
+   "descendientes": 9.0,
+   "fundadores": 0.0,
+   "p1": null,
+   "c1": null,
+   "exp_A": 38.0,
+   "sac_frac": 0.924,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 0,
+    "sal": 0
+   },
+   "cruza_09": 1,
+   "n": 1
+  }
+ ],
+ "R0_pista": 9.0,
+ "err99": {
+  "modo": "sellada_sologrande",
+  "escuderias": {
+   "O1": {
+    "linajes_semilla": 1,
+    "cruzan": 0,
+    "evaluables": 0,
+    "casi_inmortales": 1,
+    "R0_eval_med": null,
+    "R0_med_todos": 9.0,
+    "semillas_que_cruza": 0,
+    "semillas": 1,
+    "gana": false,
+    "nac_reales_med": 0.0,
+    "fund_post_med": 0.0,
+    "sin_parir_med": null,
+    "fund_post_incierto": 0,
+    "casi_inmortal_semillas": 1
+   }
+  },
+  "criterio_enm3": {
+   "mediana_R0_eval": null,
+   "frac_eval_sin_fund": 0.0,
+   "evaluables": 0,
+   "n": 1,
+   "frac_eval": 0.0,
+   "condiciones": {
+    "i": false,
+    "ii": false,
+    "iii": false
+   },
+   "cruza": false,
+   "casi_inmortales": 1,
+   "cruzan_linajes": 0,
+   "casi_inmortal_grupo": true
+  },
+  "predicciones": [
+   [
+    "S-SOLO-GRANDE cruza o queda casi inmortal (p 0.60)",
+    "NO CRUZA (mediana R0 evaluables None; evaluables 0/1; casi inmortales 1/1; 'queda casi inmortal' = los casi inmortales hacen caer (iii) (> 1/3): SI) -> la prediccion SE CUMPLE"
+   ]
+  ]
+ }
+}

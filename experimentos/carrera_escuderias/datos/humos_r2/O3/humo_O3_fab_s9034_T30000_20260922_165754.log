@@ -1,0 +1,49 @@
+HUMO RONDA 2 · equipo O3 · modo fab · semilla 9034 · T=30000 · fundador limpio · humo 3/12
+  carros ['O3', 'O3', 'O3', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA', 'FABRICA'] · sha {'FABRICA': '2ebee3e99ea5a33a', 'O3': 'a3476bf748d08866'} · pista c96d723fe2c6eaba · juez b776b52e515a2fac · chequeo estatico PASA
+
+RESUMEN · humo O3 fab · semillas [9034] · T=30000 · pizarra 1 · rep_acum 0
+  linaje        R0 med         R0 por semilla    vida  muert  desc  fund    p1    c1   expA    sac  causas (hambre/sed/veneno/sal)  >=0.9
+  O3#0             2.0                  [2.0]  1413.0   19.0  40.0   0.0   1.0 0.947  400.0  0.788  0/0/8/11 (0%/0%/42%/58%)  1/1
+  O3#1            2.05                 [2.05]  1330.0   19.0  41.0   0.0   1.0 0.947  386.0  0.809  0/0/9/10 (0%/0%/47%/53%)  1/1
+  O3#2             2.0                  [2.0]  1389.0   20.0  42.0   0.0   1.0  0.95  392.0  0.836  0/0/14/6 (0%/0%/70%/30%)  1/1
+  FABRICA#3      0.086               [0.0857]    56.0  139.0  12.0 127.0 0.181 0.978  270.0  0.427  0/0/71/68 (0%/0%/51%/49%)  0/1
+  FABRICA#4      0.102               [0.1019]    57.0  156.0  16.0 142.0 0.119   1.0  242.0  0.429  0/0/85/71 (0%/0%/54%/46%)  0/1
+  FABRICA#5      0.284                [0.284]    80.0   80.0  23.0  58.0  0.32   1.0  277.0  0.531  0/0/34/46 (0%/0%/42%/57%)  0/1
+  FABRICA#6      0.151               [0.1509]    53.5  105.0  16.0  91.0 0.139 0.971  235.0  0.521  0/0/62/43 (0%/0%/59%/41%)  0/1
+  FABRICA#7      0.136               [0.1364]    86.5  109.0  15.0  94.0 0.123 0.979  253.0  0.451  0/0/69/40 (0%/0%/63%/37%)  0/1
+  FABRICA#8       0.17               [0.1696]    71.5  111.0  19.0  92.0 0.233 0.976  265.0  0.525  0/0/55/56 (0%/0%/50%/50%)  0/1
+  R0 de la pista (mediana por semilla de sum desc / (sum muertes + n)): 0.292 · por semilla [0.292]
+  semilla 9034: fraccion B+D del mundo por cuarto de T [0.776, 0.758, 0.796, 0.782] · L 360 nobj 36
+  DIAGNOSTICO (mediana sobre 9 linajes-semilla; ventana 50 pasos tras perder el objetivo bueno):
+    robos por linaje 424.0 · perdidas por olvido 17.0 · B/D tras robo 0.722 vs tras olvido 0.429 vs base 0.682 · A/C tras robo 0.531 vs base 0.8
+    distancia media al bueno mas cercano 50.931 · frac pasos sin bueno en el mundo 0.025 · frac pasos sin NINGUN objeto a <= 20 0.048 (max 0.0678)
+  MECANISMO (ENMIENDA 4; desde la fisica: 'limpieza' = mordida de B/D A SABIENDAS -letra ya mordida por el linaje- con el golpe en la necesidad MAS llena):
+    limpiezas por linaje-semilla (mediana) 264.0 · por cuerpo 2.704 · total 2200 · objetos buenos que reaparecen por ellas 1120 (0.509 por limpieza)
+    todas las mordidas malas 3124 -> buenos que reaparecen 1589 · fraccion de pasos SIN ningun objeto bueno en el mundo por semilla [0.0002] (mediana 0.0)
+  HAMBRE -> BOCA (suma de todos los linajes-semilla; H = manda el hambre, S = manda la sed; deficit = el de la necesidad activa):
+    AH: decisiones   2444 mordidas   1511 tasa 0.618 · deficit medio al decidir 0.104 al morder 0.160
+    AS: decisiones    393 mordidas    346 tasa 0.880 · deficit medio al decidir 0.432 al morder 0.443
+    BH: decisiones   9770 mordidas    853 tasa 0.087 · deficit medio al decidir 0.107 al morder 0.522
+    BS: decisiones   1707 mordidas    740 tasa 0.434 · deficit medio al decidir 0.399 al morder 0.574
+    CH: decisiones   2672 mordidas   1468 tasa 0.549 · deficit medio al decidir 0.105 al morder 0.165
+    CS: decisiones    481 mordidas    421 tasa 0.875 · deficit medio al decidir 0.433 al morder 0.433
+    DH: decisiones   8115 mordidas   1133 tasa 0.140 · deficit medio al decidir 0.099 al morder 0.463
+    DS: decisiones   1479 mordidas    398 tasa 0.269 · deficit medio al decidir 0.390 al morder 0.608
+    deficit en mordidas B/D (bins de 0.1) [451, 117, 92, 95, 861, 220, 128, 116, 843, 201] (media ~0.539) · en mordidas A/C [2118, 195, 124, 131, 568, 159, 62, 43, 285, 61] (media ~0.248)
+    mordidas B/D con un robo en los 50 pasos previos 0.521 vs pasos cubiertos asi 0.495 · deficit en B/D con robo previo 0.542 vs sin 0.507
+    formato H-BOCA (mordidas / exposiciones): veneno con SED 740/1525 · veneno con HAMBRE 853/8124 · sal con HAMBRE 1133/6846 · sal con SED 398/1303
+  contabilidad fisica coherente: 9/9 · t_fund reconstruible desde telem == fisica: 9/9
+  mundo: objetos medios por tipo (A comida, B veneno, C agua, D sal; nobj=36) por semilla [{'A': 3.8615, 'B': 15.4343, 'C': 4.1378, 'D': 12.5664}] · olvidos [781]
+  mordidas totales por tipo por semilla [{'A': 1857, 'B': 1593, 'C': 1889, 'D': 1531}]
+  referencia UN cuerpo a la vez: REL 0.395 (acum 1: 0.483) -- bloque 2, replica 1601-1620, un cuerpo a la vez (REGLAMENTO sec. 1)
+
+RONDA 2 / ENMIENDA 5 (fundador limpio SI; cruza = R0 de NACIMIENTOS REALES >= 0.9 y 0 fundadores tras t = 10000, con >= 5 muertes) · r2fab
+  equipo     lin-sem cruzan evaluab casi inm R0 REAL eval med R0 prereg med sem cruza (mayoria)  (todos)  gana
+  O3               3      3       3        0             0.95           2.0                 1/1      1/1  SI
+  FABRICA          6      0       6        0            0.134         0.144                 0/1      0/1  no  (FABRICA: piso, no compite)
+  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:
+    - al menos un equipo gana la ronda 2 en monocultivo (p 0.50)
+    - en pista mixta con 6 FABRICA gana alguno (p 0.25)
+    - O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)
+    medido en esta serie: pista con 6 FABRICA, equipo ['O3']: gana SI
+  JSON C:\Users\User\Documents\PROYECTOS\JUACO\carrera\experimentos\carrera_escuderias\datos\humos_r2\O3\humo_O3_fab_s9034_T30000_20260922_165754.json · 54.9s · te quedan 9 humos
