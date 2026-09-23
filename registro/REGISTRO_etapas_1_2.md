@@ -6420,3 +6420,24 @@ Pareado APR vs FABRICA: gana 20/20, diferencia mediana 0.0486 (rango 0.007–0.1
 ### ERR-114 y ERR-115 (23-sep-2026, auditorías de los paquetes subida_n5..n10)
 - **ERR-114** (regla 11, `experimentos/subida_n9/PREREGISTRO_n9.md` §10): la Enmienda 1 fija el tope de la lectura V-M en 0.10 después de ver el humo 13391 (un primer tope de 0.15 quedaba justo encima del valor del humo, 0.149, y se descartó por ajustado al dato). Se escribió antes de la serie y V-M sólo se imprime (no es puerta; P1–P7 y §5–§6 no cambian), pero toda enmienda que cambia un umbral lleva ERR. Numerado por el coordinador al detectarlo el auditor.
 - **ERR-115** (procedimiento): los runners de JUACO parsean `sys.argv` a mano y no rechazan banderas desconocidas; el auditor de `subida_n5` corrió `corre_v5.py --serie … --help` esperando ayuda y lanzó una serie real con Pool (abortada en 40/840, no es dato, log en `datos/humo_no_registrado/`). Regla derivada: los agentes de solo lectura no ejecutan runners con `--serie` en ninguna forma; los runners nuevos abortan ante banderas desconocidas.
+
+---
+
+### SUBIDA N10 — familias heredan vivas (el nodo viaja en el parto), serie 12301–12320 (23-sep-2026, 16:14–16:48; Pool 6; preregistro `experimentos/subida_n10/PREREGISTRO_n10.md` commiteado en `b9836ab`): **NO SE LEE — cae V-ANCLA: la mediana de R0 de nacidos de NADA da 0.110, fuera de [0.00, 0.10]; réplica no se corre**
+
+Arnés `identidad_familia.py` 26/26 antes de lanzar. JSON `experimentos/subida_n10/datos/n10_serie_s12301-12320_T100000_20260923_161438.json` (`bbc9291c9a1059e6`), 1975 s.
+
+| brazo (monocultivo, pista v2 + quimiostato) | R0 nacidos | vida nacidos | tamaño carro | gen máx | persiste carro |
+|---|---|---|---|---|---|
+| NADA (FABRICA sin canal) | 0.110 | 95.0 | 9.65 | 3 | 0/20 |
+| PARTO (nodo del padre vivo al hijo) | 0.158 | 111.5 | 9.74 | 4 | 0/20 |
+| BAR (canal con contenido barajado) | 0.139 | 101.5 | 9.63 | 3 | 0/20 |
+| ORACULO (techo) | 0.553 | 206.5 | 11.04 | 9 | 0/20 |
+
+Puertas por la letra: V-ANCLA **False** (0.110 > 0.10) · V-TECHO True · F-1 PARTO > NADA 16/20 True · **F-2 PARTO > BAR 11/20 False** · F-3 (MIX) 17/20 True · **F-4 (MIX) PARTO > BAR 13/20 False** · C-BAR False.
+
+**Lectura honesta (descriptiva, no puntúa).** Con el ancla fuera nada se declara. Aunque se hubiera leído, F-2 y F-4 caen: el hijo que recibe el nodo del padre vive más que el que no recibe nada (18/20), pero no le gana en R0 al que recibe un nodo barajado; la herencia ayuda como canal, no se ve que sea por el contenido. Y ni el ORÁCULO pasa de 0.553 en la pista v2 con quimiostato: el muro H-1 sigue en este mundo, como en H-MURO.
+
+**ERR-116** (instrumento/predicción): el ancla V-ANCLA [0.00, 0.10] y P1 (NADA 0.020) se fijaron sin calibrar FABRICA-sin-canal en la pista v2 con T=100000; el valor real es 0.110. La siguiente tanda del nivel 10 usa esta serie como calibración declarada del ancla y preregistra un ancla nueva antes de correr semillas nuevas.
+
+**Vocabulario permitido:** *"la serie no se lee (el ancla no se reprodujo); descriptivamente, heredar el nodo alarga la vida de los hijos pero no se distingue de heredar un nodo barajado"*. Ningún nivel cambia.

@@ -14,7 +14,15 @@
   Cola de series (un paquete por Pool, máx. 2 Pools/14 procesos): n10 (corriendo) → n8 → **n9** → n6 → n7 → n5; comandos en `INFORME_nN.md`.
 - **Decisión del director (23-sep):** *"esperamos al 9 antes de fijar el 65; tiene que subir a 90"*; *"adelanta el 9 después del 8 y dale dos tandas"*.
   Nivel 9 sigue en 50 % hasta el resultado de `subida_n9`; meta del director: 90 %. Segunda tanda del equipo 9 en diseño (`experimentos/subida_n9b/`).
-- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **115**.
+- **Meta del director (23-sep, antes de salir):** *"si puedes llegar a 100 en todos, fabuloso, ese es el objetivo"*; mínimo leído por el coordinador: **80 %** en
+  cada nivel 5–10 (a confirmar con el director). Delegación: *"si hay una decisión difícil tómala, y me dejas comentado por qué la tomaste"*.
+
+## Decisiones del coordinador en ausencia del director (23-sep; cada una con su porqué)
+- **16:50 — subida_n10 NO SE LEE y NO se corre su réplica.** Alternativa descartada: correr la réplica o leer la serie con el ancla movida
+  a 0.12. Por qué: mover el ancla después de ver el dato es justo lo que prohíbe la regla 11 (ERR-114 fue lo mismo en pequeño); y aunque se
+  leyera, F-2/F-4 caen (PARTO no le gana a BAR), así que lo máximo sería "modesto sin contenido" (+1 punto). Las 2 h de CPU de la réplica
+  valen más en los niveles 8 y 9. Se registra ERR-116 y el nivel 10 va a una segunda tanda con el ancla calibrada sobre esta serie.
+- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **116**.
 
 ## AL 22-SEP-2026, 21:15 (cierre; manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.30 y en la cola del REGISTRO)
 - **Primer cruce de H-1 en JUACO** (carrera de escuderías, monocultivo de O1, que limpia): R0 de nacimientos reales 0.941, replicado en semillas
@@ -51,7 +59,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 5. Fase 9, bloque 3 ("cambiar el mundo"): lo cubren la carrera de escuderías, generaciones que conviven y `subida_n9` (modelo de sí).
 
 ## Errores
-Último: **ERR-115** (23-sep: 114 enmienda V-M de subida_n9, 115 runners aceptan banderas desconocidas) · rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-116**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
+Último: **ERR-116** (23-sep: 114 enmienda V-M de subida_n9, 115 runners aceptan banderas desconocidas, 116 ancla de subida_n10 sin calibrar en v2) · rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-117**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos
