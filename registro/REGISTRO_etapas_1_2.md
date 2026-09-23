@@ -6441,3 +6441,31 @@ Puertas por la letra: V-ANCLA **False** (0.110 > 0.10) · V-TECHO True · F-1 PA
 **ERR-116** (instrumento/predicción): el ancla V-ANCLA [0.00, 0.10] y P1 (NADA 0.020) se fijaron sin calibrar FABRICA-sin-canal en la pista v2 con T=100000; el valor real es 0.110. La siguiente tanda del nivel 10 usa esta serie como calibración declarada del ancla y preregistra un ancla nueva antes de correr semillas nuevas.
 
 **Vocabulario permitido:** *"la serie no se lee (el ancla no se reprodujo); descriptivamente, heredar el nodo alarga la vida de los hijos pero no se distingue de heredar un nodo barajado"*. Ningún nivel cambia.
+
+---
+
+### SUBIDA N8 — aprendizaje abierto con 90 celdas fijas, serie 12601–12620 y réplica 12621–12640 (23-sep-2026, 16:48–16:56; Pool 6; preregistro `experimentos/subida_n8/PREREGISTRO_n8.md` commiteado en `d876595`): **HAY ALGO MODESTO — el tronco v14.2 sigue aprendiendo la comida entre 200 estímulos nuevos (2.2× sus celdas) por encima del a priori en las dos series (P2, P6), pero en la réplica cae más de 0.10 después de agotar las celdas (P3 falla: −0.187); la fusión de celdas no ayuda**
+
+Arnés `identidad_n8.py` 26/26 antes de lanzar. Mismo runner en las dos (`corre_n8` `1d78fd3ad1113eec`). JSON: serie `n8_serie_…_s12601-12620_20260923_164801.json` (`2d6e45e313ed0401`), réplica `…_s12621-12640_20260923_165205.json` (`14c26e9c1e4f48d1`).
+
+| predicción (medianas, 20 semillas) | serie 12601 | réplica 12621 |
+|---|---|---|
+| P1 BASE ADQ_tarde en 0.66–0.82 | 0.68 ✓ | 0.66 ✓ |
+| P2 comida aprendida > a priori (≥16/20, dif ≥0.15) | 20/20, 0.20 ✓ | 19/20, 0.20 ✓ |
+| **P3 no cae tras agotar celdas (≥ −0.10)** — *la que podía fallar* | −0.02 ✓ | **−0.187 ✗** |
+| P4 olvida lo ausente (RET40 ≤ 0.65) | 0.625 ✓ | 0.625 ✓ |
+| P5 RECIC > BASE (≥18/20) y ≥ 0.90 | 20/20, 0.96 ✓ | 20/20, 1.00 ✓ |
+| P6 BASE > NULO (≥15/20) | 20/20 (0.68 vs 0.51) ✓ | 20/20 (0.66 vs 0.50) ✓ |
+| P7 conducta en 0.01–0.15 | 0.049 ✓ | 0.066 ✓ |
+| P8 FUS no gana y FUS < BASE en ≥13/20 | FUS gana 6/20 (13 pierde) ✓ | FUS gana 8/20, empata 3 (9 pierde) ✗ |
+| P9 FUS y FUS_AZAR no se separan | ✓ | ✓ |
+| P10 la fusión no compra memoria (RET40 FUS−BASE ≤ +0.05) | −0.075 ✓ | −0.075 ✓ |
+| P11 agota las 90 celdas, estímulo 35–90 | 74.5 ✓ | 78.0 ✓ |
+
+**Criterio §6:** FUNCIONA exige P2, P3, P5 y P6 en las dos; P3 cae en la réplica → **HAY ALGO MODESTO** (P2 y P6 en las dos, P3 falla sin llegar al a priori).
+
+**Lectura honesta.** Con celdas fijas, el tronco sigue aprendiendo lo nuevo por encima de lo que cree a priori, en las dos series, y olvida lo ausente (RET40 0.625). Lo que no se sostiene con réplica es que no pierda nada al agotar las celdas: en la réplica la comida aprendida cae 0.19 al final. La fusión de celdas (el órgano que proponía el documento del nivel) no ayuda y empata con la fusión al azar: la línea "fusión" queda medida en negativo.
+
+**Vocabulario permitido:** *"con 90 celdas fijas, el tronco sigue aprendiendo estímulos nuevos por encima del a priori, replicado, pero pierde parte de lo aprendido cuando se le acaban las celdas; fusionar celdas no lo arregla"*. Prohibido: "aprendizaje abierto", "aprende indefinidamente", "acumula".
+
+**Qué queda.** Pieza "liberar celdas sin pagar con memoria": la fusión no sirve; siguiente candidato en la tanda 2 del nivel 8. Nivel 8: propuesta del preregistro **+5** (40 → 45, o 45 → 50 si el director fija el 45 de aprende_barrer) — decide el director.

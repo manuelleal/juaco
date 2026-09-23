@@ -7,6 +7,8 @@
 ## AL 23-SEP-2026 (manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.31 y en la cola del REGISTRO)
 - **Aprende a barrer, réplica 8121–8140: HAY ALGO MODESTO replicado.** APR 0.385 vs FABRICA 0.336 (mediana R0), APR gana 20/20 (dif. 0.049),
   no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8 (gana a APR_SIN_HERENCIA 20/20) se midió en la serie original; la réplica sólo corrió APR y FABRICA. Nivel 8: propuesta 45 %.
+- **Subida n8 (serie + réplica): HAY ALGO MODESTO** — sigue aprendiendo con 90 celdas fijas (P2, P6 ×2) pero cae tras agotarlas en la réplica (P3 −0.187); la fusión no ayuda. Propuesta +5.
+- **Subida n10: NO SE LEE** (ancla 0.110 > 0.10, ERR-116); tanda 2 en diseño.
 - **Generaciones que conviven:** monocultivos 10101–10120 corriendo (Pool 6); faltan mixta H y réplica 10121 (`experimentos/generaciones/INFORME_CONVIVE.md`).
 - **Subida de niveles 5–10 (pedido del director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"):** seis equipos
   (explorador Haiku → creador Opus → auditor Sonnet) dejaron paquetes preregistrados en `experimentos/subida_nN/` con arnés de identidad y humo; ninguno
