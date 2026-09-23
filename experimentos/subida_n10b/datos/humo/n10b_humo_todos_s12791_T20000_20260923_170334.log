@@ -1,0 +1,66 @@
+corre_n10b · n10b_humo_todos_s12791_T20000 · 20260923_170334 · python 3.14.2 · corre_n10b.py b7808bbb83fb038e · PREREGISTRO_n10b.md 100f83f74446a973
+shas: pista2.py=4d2bee16e7961261 motor_convive.py=d10cb9021f5d0f41 corre_convive.py=e6dadfdad9c379cd FABRICA.py=2ebee3e99ea5a33a FAMB_NADA.py=6635a04063fe7317 FAMB_RES.py=2addb7ca5b9d031d FAMB_RES1.py=766807733fb620e2 FAMB_BAR.py=dfcb2efbf5ec8d2b FAMB_ORACULO.py=c1ee88844650a78e
+  NADA     s12791    20.4 s · NADA: R0nac 0.3061 vida nac 81.0 nac 98 tam 9.48 gen 2
+  RES      s12791    29.9 s · RES: R0nac 0.6667 vida nac 324.5 nac 130 tam 16.39 gen 9 tele {'n': 130, 'claves_med': 6.0, 'frac_B_mala': 0.9, 'frac_D_mala': 0.6769, 'frac_A_mala': 0.0, 'frac_C_mala': 0.0, 'frac_completa': 0.0077}
+  RES1     s12791    22.4 s · RES1: R0nac 0.3333 vida nac 121.5 nac 105 tam 9.69 gen 2 tele {'n': 105, 'claves_med': 6.0, 'frac_B_mala': 0.4667, 'frac_D_mala': 0.2762, 'frac_A_mala': 0.0, 'frac_C_mala': 0.0, 'frac_completa': 0.0571}
+  BAR      s12791    22.0 s · BAR: R0nac 0.1739 vida nac 126.0 nac 93 tam 9.51 gen 2 tele {'n': 93, 'claves_med': 6.0, 'frac_B_mala': 0.1828, 'frac_D_mala': 0.0538, 'frac_A_mala': 0.2258, 'frac_C_mala': 0.2043, 'frac_completa': 0.1183}
+  ORACULO  s12791    25.5 s · ORACULO: R0nac 0.7049 vida nac 252.0 nac 131 tam 11.8 gen 10
+  MIX      s12791    21.5 s · BAR: R0nac 0.3571 vida nac 132.0 nac 35 tam 3.4 gen 3 tele {'n': 35, 'claves_med': 6.0, 'frac_B_mala': 0.3714, 'frac_D_mala': 0.1429, 'frac_A_mala': 0.1714, 'frac_C_mala': 0.1714, 'frac_completa': 0.0571} · NADA: R0nac 0.0 vida nac 73.0 nac 27 tam 3.14 gen 2 · RES: R0nac 0.2308 vida nac 192.0 nac 26 tam 3.18 gen 2 tele {'n': 26, 'claves_med': 6.0, 'frac_B_mala': 0.8077, 'frac_D_mala': 0.1923, 'frac_A_mala': 0.0, 'frac_C_mala': 0.0, 'frac_completa': 0.0385}
+
+AGREGADO (medianas por semilla) · 1 semillas · 142 s de pared
+  NADA     {'tam_carro': 9.48, 'exceso': 0.48, 'nac': 98.0, 'fundadores': 510.0, 'linajes_sin_ext': 0.0, 'persisten': 0.0, 'R0_nacidos': 0.3061, 'R0_fund': 0.1779, 'vida_nacidos': 81.0, 'vida_fund': 99.5, 'frac_mala_nacidos': 1.0, 'gen_max': 2.0, 'semillas': 1, 'persiste_carro': 0, 'bloqueados': 0, 'sem_R0nac_ge_090': 0}
+  RES      {'tam_carro': 16.39, 'exceso': 7.39, 'nac': 130.0, 'fundadores': 595.0, 'linajes_sin_ext': 2.0, 'persisten': 2.0, 'R0_nacidos': 0.6667, 'R0_fund': 0.1014, 'vida_nacidos': 324.5, 'vida_fund': 110.0, 'frac_mala_nacidos': 0.8525, 'gen_max': 9.0, 'semillas': 1, 'persiste_carro': 1, 'bloqueados': 0, 'sem_R0nac_ge_090': 0, 'tele': {'n': 130.0, 'claves_med': 6.0, 'frac_B_mala': 0.9, 'frac_D_mala': 0.6769, 'frac_A_mala': 0.0, 'frac_C_mala': 0.0, 'frac_completa': 0.0077}}
+  RES1     {'tam_carro': 9.69, 'exceso': 0.69, 'nac': 105.0, 'fundadores': 470.0, 'linajes_sin_ext': 0.0, 'persisten': 0.0, 'R0_nacidos': 0.3333, 'R0_fund': 0.1967, 'vida_nacidos': 121.5, 'vida_fund': 100.5, 'frac_mala_nacidos': 0.9902, 'gen_max': 2.0, 'semillas': 1, 'persiste_carro': 0, 'bloqueados': 0, 'sem_R0nac_ge_090': 0, 'tele': {'n': 105.0, 'claves_med': 6.0, 'frac_B_mala': 0.4667, 'frac_D_mala': 0.2762, 'frac_A_mala': 0.0, 'frac_C_mala': 0.0, 'frac_completa': 0.0571}}
+  BAR      {'tam_carro': 9.51, 'exceso': 0.51, 'nac': 93.0, 'fundadores': 469.0, 'linajes_sin_ext': 0.0, 'persisten': 0.0, 'R0_nacidos': 0.1739, 'R0_fund': 0.1878, 'vida_nacidos': 126.0, 'vida_fund': 113.0, 'frac_mala_nacidos': 1.0, 'gen_max': 2.0, 'semillas': 1, 'persiste_carro': 0, 'bloqueados': 0, 'sem_R0nac_ge_090': 0, 'tele': {'n': 93.0, 'claves_med': 6.0, 'frac_B_mala': 0.1828, 'frac_D_mala': 0.0538, 'frac_A_mala': 0.2258, 'frac_C_mala': 0.2043, 'frac_completa': 0.1183}}
+  ORACULO  {'tam_carro': 11.8, 'exceso': 2.8, 'nac': 131.0, 'fundadores': 453.0, 'linajes_sin_ext': 0.0, 'persisten': 0.0, 'R0_nacidos': 0.7049, 'R0_fund': 0.1189, 'vida_nacidos': 252.0, 'vida_fund': 93.0, 'frac_mala_nacidos': 0.9845, 'gen_max': 10.0, 'semillas': 1, 'persiste_carro': 0, 'bloqueados': 0, 'sem_R0nac_ge_090': 0}
+  _brecha_RES {'mediana': 0.9042, 'n': 1}
+PAREADOS (monocultivo, por semilla):
+  {'par': 'RES-NADA', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.3606, 'p_signo': 1.0}
+  {'par': 'RES-NADA', 'clave': 'vida_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 243.5, 'p_signo': 1.0}
+  {'par': 'RES-NADA', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 6.91, 'p_signo': 1.0}
+  {'par': 'RES-NADA', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 32.0, 'p_signo': 1.0}
+  {'par': 'RES-NADA', 'clave': 'gen_max', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 7.0, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.4928, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'vida_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 198.5, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 6.88, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 37.0, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'gen_max', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 7.0, 'p_signo': 1.0}
+  {'par': 'RES-RES1', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.3334, 'p_signo': 1.0}
+  {'par': 'RES-RES1', 'clave': 'vida_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 203.0, 'p_signo': 1.0}
+  {'par': 'RES-RES1', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 6.7, 'p_signo': 1.0}
+  {'par': 'RES-RES1', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 25.0, 'p_signo': 1.0}
+  {'par': 'RES-RES1', 'clave': 'gen_max', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 7.0, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'R0_nacidos', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -0.1322, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'vida_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 45.0, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.03, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'nac', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -5.0, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'gen_max', 'n': 1, 'gana': 0, 'pierde': 0, 'empata': 1, 'dif_med': 0.0, 'p_signo': 1.0}
+  {'par': 'RES1-NADA', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.0272, 'p_signo': 1.0}
+  {'par': 'RES1-NADA', 'clave': 'vida_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 40.5, 'p_signo': 1.0}
+  {'par': 'RES1-NADA', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.21, 'p_signo': 1.0}
+  {'par': 'RES1-NADA', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 7.0, 'p_signo': 1.0}
+  {'par': 'RES1-NADA', 'clave': 'gen_max', 'n': 1, 'gana': 0, 'pierde': 0, 'empata': 1, 'dif_med': 0.0, 'p_signo': 1.0}
+  {'par': 'ORACULO-RES', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.0382, 'p_signo': 1.0}
+  {'par': 'ORACULO-RES', 'clave': 'vida_nacidos', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -72.5, 'p_signo': 1.0}
+  {'par': 'ORACULO-RES', 'clave': 'exceso', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -4.59, 'p_signo': 1.0}
+  {'par': 'ORACULO-RES', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 1.0, 'p_signo': 1.0}
+  {'par': 'ORACULO-RES', 'clave': 'gen_max', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 1.0, 'p_signo': 1.0}
+  {'par': 'ORACULO-NADA', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.3988, 'p_signo': 1.0}
+  {'par': 'ORACULO-NADA', 'clave': 'vida_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 171.0, 'p_signo': 1.0}
+  {'par': 'ORACULO-NADA', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 2.32, 'p_signo': 1.0}
+  {'par': 'ORACULO-NADA', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 33.0, 'p_signo': 1.0}
+  {'par': 'ORACULO-NADA', 'clave': 'gen_max', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 8.0, 'p_signo': 1.0}
+PAREADOS (MIX, dentro del mismo mundo):
+  {'par': 'RES-NADA', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.2308, 'p_signo': 1.0}
+  {'par': 'RES-NADA', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.04, 'p_signo': 1.0}
+  {'par': 'RES-NADA', 'clave': 'nac', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -1.0, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'R0_nacidos', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -0.1263, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'exceso', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -0.22, 'p_signo': 1.0}
+  {'par': 'RES-BAR', 'clave': 'nac', 'n': 1, 'gana': 0, 'pierde': 1, 'empata': 0, 'dif_med': -9.0, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'R0_nacidos', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.3571, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'exceso', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 0.26, 'p_signo': 1.0}
+  {'par': 'BAR-NADA', 'clave': 'nac', 'n': 1, 'gana': 1, 'pierde': 0, 'empata': 0, 'dif_med': 8.0, 'p_signo': 1.0}
+VEREDICTO por la letra (PREREGISTRO_n10b.md sec. 6):
+  VEREDICTO: HUMO: no hay veredicto (una semilla de practica)
+
+escrito: C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n10b\datos\humo\n10b_humo_todos_s12791_T20000_20260923_170334.json (65661d311cccbb3f) · crudo C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n10b\datos\humo\n10b_humo_todos_s12791_T20000_20260923_170334_crudo.json.gz

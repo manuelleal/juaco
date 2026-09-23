@@ -1,0 +1,51 @@
+identidad_familia_b.py 070e6524f79e3cc4
+(0) origen y construccion
+  OK  sha FABRICA.py 2ebee3e99ea5a33a (esperado 2ebee3e99ea5a33a)
+  OK  sha pista2.py 4d2bee16e7961261 (esperado 4d2bee16e7961261)
+  OK  sha motor_convive.py d10cb9021f5d0f41 (esperado d10cb9021f5d0f41)
+  OK  sha corre_convive.py e6dadfdad9c379cd (esperado e6dadfdad9c379cd)
+  OK  sha FAMILIA_NADA.py f7ae98715f170153 (esperado f7ae98715f170153)
+  OK  sha FAMILIA_ORACULO.py 55df592f57671b54 (esperado 55df592f57671b54)
+  OK  FAMB_NADA.py == construccion por anclas 6635a04063fe7317
+  OK  FAMB_RES.py == construccion por anclas 2addb7ca5b9d031d
+  OK  FAMB_RES1.py == construccion por anclas 766807733fb620e2
+  OK  FAMB_BAR.py == construccion por anclas dfcb2efbf5ec8d2b
+  OK  FAMB_ORACULO.py == construccion por anclas c1ee88844650a78e
+(I) perilla apagada: FAMB_NADA == FABRICA en toda la salida
+  OK  I s12791 T6000 {'solapadas': 1, 'diag': 0, 'reposicion': 'fija'} bca742547501b96a bca742547501b96a nacimientos 28
+  OK  I s12792 T6000 {'solapadas': 1, 'diag': 0, 'reposicion': 'fija'} dbe268a6305ebd58 dbe268a6305ebd58 nacimientos 29
+  OK  I s12793 T4000 {'solapadas': 1, 'diag': 0, 'reposicion': 'inmediata'} e811f6a1376325a6 e811f6a1376325a6 nacimientos 20
+  OK  I s12791 T4000 {'solapadas': 0, 'diag': 1} 0b59fcc977cb44d8 0b59fcc977cb44d8 nacimientos 103
+  OK  I s12792 T3000 {'solapadas': 0, 'diag': 1, 'compat': 0, 'fundador_limpio': 1} d1d9daf015c50712 d1d9daf015c50712 nacimientos 100
+  OK  I v1 compat=1 (1 carro) ab38298854e0e75c ab38298854e0e75c
+  OK  I FAMB_NADA == FAMILIA_NADA (tanda 1), v2 a4b354febe85aaae a4b354febe85aaae
+(O) techo = tanda 1: FAMB_ORACULO == FAMILIA_ORACULO en toda la salida (con partos)
+  OK  O s12791 T8000 v2 fija 37d6e53b78d6a5a7 37d6e53b78d6a5a7 nacimientos 49
+  OK  O s12793 T8000 v2 fija 3d3b0e1a51a6b733 3d3b0e1a51a6b733 nacimientos 48
+(P) antes del primer parto los cinco modos son identicos en la fisica
+  OK  P fisica NADA==RES==RES1==BAR==ORACULO (T=450, 0 partos) {'NADA': '8ed5498740ebd009', 'RES': '8ed5498740ebd009', 'RES1': '8ed5498740ebd009', 'BAR': '8ed5498740ebd009', 'ORACULO': '8ed5498740ebd009'}
+(B) el canal, por unidad
+  OK  B1 RES = vivido mas reciente + heredado no vivido {('A', 0): 1.0, ('B', 0): -3.0, ('C', 0): 0.0, ('D', 0): 0.0, ('C', 1): 1.0}
+  OK  B1 RES orden del ORACULO (necesidad, letra) 
+  OK  B1 RES1 = solo lo vivido {('A', 0): 1.0, ('C', 0): 0.0, ('D', 0): 0.0, ('C', 1): 1.0}
+  OK  B1 BAR entrega lo mismo que RES (el barajado es al nacer) 
+  OK  B1 NADA al_parir = None 
+  OK  B1 RES: lo vivido pisa lo heredado 
+  OK  B2 BAR mismas claves y dosis que RES 
+  OK  B2 BAR misma multiset de R 
+  OK  B2 BAR destruye la asociacion (alguna R cambia de sitio) [1.0, -3.0, 0.0, 0.0, 1.0] -> [-3.0, 0.0, 0.0, 1.0, 1.0]
+  OK  B2 BAR no consume rng: mismos Wl/KW y mismo estado de rng_hijo que RES y NADA 
+  OK  B3 RES con la tabla COMPLETA == ORACULO: mismo nodo y misma via lenta len 400 400
+  OK  B4 la lectura cambia la via lenta en RES y no en NADA 
+(D)/(C) determinismo y canal en marcha (v2, T=8000)
+  OK  D RES determinista 0be50e8972a3c191
+  OK  C hubo partos en la prueba nacimientos 47
+  OK  C con partos, RES se separa de NADA en la fisica 
+  OK  C telemetria: una tabla instalada por hijo nacido tablas 47 nacidos 47 claves [3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
+(R) runner: lista blanca (ERR-115) y semillas; nunca se ejecuta --serie
+  OK  R parsea aborta en los 13 casos malos []
+  OK  R parsea acepta humo y serie bien formados 
+  OK  R semillas: acepta 12701-12720 y 12721-12740; rechaza 12301 (tanda 1), 12791 (practica), 12711+20 
+  OK  R subproceso con bandera desconocida: codigo != 0 y no escribe nada codigo 1 · : ['--T', '--brazo', '--desde', '--humo', '--n', '--pool', '--serie']) -> ABORTA (ERR-115)
+  OK  R shas de corre_n10b.SHAS == carros construidos 
+RESULTADO: 42/42  (126 s)
