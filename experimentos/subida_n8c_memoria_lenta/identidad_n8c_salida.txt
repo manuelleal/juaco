@@ -1,0 +1,32 @@
+identidad_n8c  2026-09-23 18:43:45
+  [OK ] (0a) origen organismo_flujo sha 14afed5aa16e09bf
+  [OK ] (0b) tronco organismo_v142 sha 
+  [OK ] (0c) organismo_repaso en disco == construye_n8c y == sha del runner 1dce42830f4230bc
+  [OK ] (0d) mundo_n8 sha (importado de solo lectura) 
+  [OK ] (A) s1 repaso=0 == organismo_flujo, retina 6, T 20000, 31 claves muertes 30
+  [OK ] (A) s2 repaso=0 == organismo_flujo, retina 6, T 20000, 31 claves muertes 29
+  [OK ] (A1) s1 flujo, retina 12, 40 estimulos, fotos, dosis=1: == organismo_flujo todas las claves splits 39 celdas 69 fotos 40
+  [OK ] (A1) s2 flujo, retina 12, 40 estimulos, fotos, dosis=10: == organismo_flujo todas las claves splits 34 celdas 64 fotos 40
+  [OK ] (A2) s1 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.74, 'C': -0.5, 'D': -2.5}
+  [OK ] (A2) s2 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.79, 'C': -0.5, 'D': -2.5}
+  [OK ] (A2) s3 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.82, 'C': -0.5, 'D': -2.5}
+  [OK ] (A3) BASE s12601 T 200000 == JSON de la serie de subida_n8 (2d6e45e313ed0401) en 21 medidas comunes distintas [] RET40 0.525
+  [OK ] (B1) repaso=1 dosis=1: repasa (n_rep 329) <= dosis x mordidas (1x329) y >= 90 %, + y - suman 
+  [OK ] (B1) repaso=1 dosis=10: repasa (n_rep 3430) <= dosis x mordidas (10x343) y >= 90 %, + y - suman 
+  [OK ] (B1) repaso=2 dosis=10: repasa (n_rep 2990) <= dosis x mordidas (10x299) y >= 90 %, + y - suman 
+  [OK ] (B1) repaso=3 dosis=10: repasa (n_rep 3130) <= dosis x mordidas (10x313) y >= 90 %, + y - suman 
+  [OK ] (B2) el organo cambia la vida (W final distinto de la base) en los 4 brazos 
+  [OK ] (B3) los 4 brazos con organo difieren entre si 
+  [OK ] (B4) determinismo: rep10 dos veces == identico 
+  [OK ] (B5) BARAJ10 conserva la proporcion de objetivos positivos de REP10 (+-0.15) 0.801 vs 0.799
+  [OK ] (F1) _repasa no asigna mu/mup/mun/zp/zn/ncod/KW/activa/Wps/Wns/E/err/splits 
+  [OK ] (F2) _repasa no llama al rng del organismo (solo _rngr) 
+  [OK ] (F3) el organo no lee valencias del mundo (val, R_VAL, objs) 
+  [OK ] (F4) toda linea nueva lleva la marca n8c y hay exactamente 4 4
+  [OK ] (G) regla 14: entrada campo a campo contra organismo_v142 125 campos, 0 distintos
+  [OK ] (H) 11 invocaciones malas abortan (rc != 0) y no escriben nada en datos/ rc [2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]
+  [OK ] (I1) la letra: FUNCIONA / HAY ALGO MODESTO / NO / NO SE LEE sobre sinteticos [True, True, True, True]
+  [OK ] (I2) --veredicto: rc 0 y ultima linea "VEREDICTO: HAY ALGO MODESTO" VEREDICTO: HAY ALGO MODESTO
+  [OK ] (I3) --veredicto rechaza un JSON de humo 
+TOTAL 29/29 en 91.8s
+RESULTADO: 29/29

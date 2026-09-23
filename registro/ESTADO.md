@@ -8,6 +8,7 @@
 - **Aprende a barrer, réplica 8121–8140: HAY ALGO MODESTO replicado.** APR 0.385 vs FABRICA 0.336 (mediana R0), APR gana 20/20 (dif. 0.049),
   no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8 (gana a APR_SIN_HERENCIA 20/20) se midió en la serie original; la réplica sólo corrió APR y FABRICA. Nivel 8: propuesta 45 %.
 - **Subida n8 (serie + réplica): HAY ALGO MODESTO** — sigue aprendiendo con 90 celdas fijas (P2, P6 ×2) pero cae tras agotarlas en la réplica (P3 −0.187); la fusión no ayuda. Propuesta +5.
+- **Subida n7 (serie + réplica): FUNCIONA** — el tronco v14.2 no compone (K_max 1 ×2, regresión); la reparación N compone hasta 8 ×2; canal falso 0. Entra al v14.3 (decisión del director). Propuesta 70 → 78 % (80 % si entra al tronco).
 - **Subida n6 (serie + réplica): HAY ALGO MODESTO por la letra** — rodea limpio por el hueco sin pisar el veneno recordado (1.0 / 0.925, controles 0), cae V1 (memoria incompleta en 1 y 5 semillas); subconjunto regla 10: 11/11 ×2. Propuesta 50 → 60 % (70–75 si el director acepta la regla 10).
 - **Subida n10: NO SE LEE** (ancla 0.110 > 0.10, ERR-116); tanda 2 en diseño.
 - **Generaciones que conviven, monocultivos 10101–10120: NO** — ningún carro persiste en ≥15/20 con flujo fijo de comida (O1 14/20, O4 3/20, O2/O3 0/20); el cruce de H-1 de ayer

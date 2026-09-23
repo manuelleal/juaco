@@ -6527,3 +6527,27 @@ Arnés `identidad_subida.py` 42/42 antes de lanzar. JSON serie `subida_s6601-662
 - **ERR-118** (criterio): en la pista v2 (generaciones que conviven), cuando un linaje se extingue el mundo repone un fundador ingenuo; "persiste el carro" mide entonces cuánto les ganan los descendientes a esos fundadores repuestos, no sólo la calidad del linaje. O1 persiste 14/20 porque sus fundadores no son viables (R0 fundadores 0.019, R0 nacidos 0.897); O3 0/20 porque sus fundadores son casi tan buenos como sus hijos (0.560 vs 0.743) y los linajes derivan. Consecuencia: el 14/20 de O1 en el monocultivo **no** es una señal de que limpiar esté cerca de sostener un linaje. Hay que redefinir "persiste" antes de usarlo como criterio del 100 % del nivel 9.
 
 **Corrección a la entrada SUBIDA N6 (23-sep, 18:45, hallazgo del creador de subida_n6b al releer la réplica sellada):** V1 no es sólo validez del instrumento. En las semillas 6629, 6632 y 6639 de la réplica, GF rodeó **0.0** porque el campo se escapa por la muralla que la memoria no registró; la mediana (0.925) lo tapaba. Se retira la frase "en ninguna semilla el organismo falla el rodeo por leer mal un mapa completo" como argumento a favor del subconjunto: la lectura por la letra (HAY ALGO MODESTO, propuesta 60 %) queda más justificada, y la pieza que falta es completar el mapa (explorar). Lo ataca `subida_n6b`.
+
+---
+
+### SUBIDA N7 — composición 3T-k sobre el tronco v14.2, serie 7701–7720 y réplica 7721–7740 (23-sep-2026, 17:46–18:31; Pool 6; preregistro `experimentos/subida_n7/PREREGISTRO_n7.md` commiteado en `b9836ab`, arnés re-corrido 114/114 con el runner actual en `f5f6bea`): **FUNCIONA — el tronco v14.2 NO compone (K_max = 1 en las dos series: regresión no registrada hasta hoy) y la reparación N (norm_lenta, cero memoria nueva) compone hasta K_max = 8 en las dos; el canal falso NC3C no compone en ningún k (K_max 0)**
+
+JSON serie `n7_serie_s7701-7720_T100000_20260923_174554.json` (`2de815c50f5d10e9`), réplica `n7_serie_s7721-7740_T100000_20260923_180727.json` (`19c9e3d34bb0198f`).
+
+| brazo | K_max serie | K_max réplica | qué es |
+|---|---|---|---|
+| T142 (tronco v14.2) | **1** | **1** | lift_q4 0.000 en k = 3…8 en las dos |
+| **N** (candidato) | **8** | **8** | T5 (N − canal falso ≥ 1.0) 20/20 en cada k |
+| L015 (vía lenta de v14.0, control que puede ganar) | 8 | 8 | empata con N, como predecía P4 |
+| N141 (N sin B-5) | 8 | 7 | |
+| NAZAR (máscara al azar) | 4 | 4 | |
+| NSH (sin hija dispersa) | 6 | 6 | |
+| NC3C (canal falso) | 0 | 0 | P6 limpio |
+
+Criterio §6: FUNCIONA = P1 (el tronco no compone para k = 3…8) y P2 (N compone con K_max ≥ 5) en serie y réplica, con P6 limpio → **se cumple**. Predicciones refutadas: P2 daba K_max(N) en {5, 6, 7} y P3 esperaba techo a k = 8; N compone a 8 (refutada hacia arriba). P4 (N y L015 no se distinguen) se cumple: lo que repara es devolver a la vía lenta un paso chico, no un órgano nuevo.
+
+**Lectura honesta.** El tronco vigente perdió la composición que tenían v14.0/v14c: con eta_s 0.15 y clip_s 10 (A-4, v14.1) la vía lenta satura y no compone más allá de 1. Todo lo declarado del nivel 7 ("3T-k compone hasta 3") estaba medido en organismos que ya no son el tronco. La reparación N (normalización lenta, M0 = 3.0, cero memoria nueva) la devuelve hasta 8, replicado; L015 hace lo mismo, así que el mérito es "paso chico en la vía lenta", no una pieza específica de N.
+
+**Vocabulario permitido:** *"el tronco v14.2 no compone en 3T-k; normalizar la vía lenta lo repara hasta k = 8, replicado; volver al paso chico de v14.0 da lo mismo"*. Prohibido: "razona", "compone conceptos".
+
+**Qué queda.** Decisión del director (18:35): la reparación entra al **v14.3** (por anclas, congelada). Nivel 7: propuesta del preregistro **70 → 78 %**, **80 %** si entra al tronco bajo el criterio v4. Lo que falta para el 100 %: composición en otros dominios y XOR entre dos (línea cerrada en la vía lenta).
