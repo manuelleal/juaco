@@ -1,4 +1,4 @@
-# CRITERIO DE TRONCO v4 — BORRADOR para candidatos NUEVOS (ERR-94; decisión del director 22-sep: retirar v3, escribir v4)
+# CRITERIO DE TRONCO v4 — VIGENTE (UTILIZABLE desde el 22-sep-2026) para candidatos NUEVOS (ERR-94; decisión del director 22-sep: retirar v3, escribir v4)
 
 **Qué sustituye:** `registro/CRITERIO_TRONCO_v3.md` (21-sep), **retirado**: su réplica de calibración no repitió (CAL-1
 0.898 por 0.002; CAL-4 disparado por un marginal, 0.627; el placebo cayó T-C (ii) en la realización, LI −11.93). v2 y v3
@@ -6,8 +6,9 @@ quedan como historia y como las letras con las que se juzgó a quien se juzgó.
 **Qué NO hace — regla 3, lo primero:** **no rejuzga a nadie.** v15c–v15g, dE5, BA, BA-v, BA-vm, BA-vM y B-5 conservan
 exactamente su veredicto. v14.2 sigue siendo el tronco hasta que un candidato cruce **esta** letra en semillas nuevas con
 réplica. La justificación de cada cambio es el **nulo** (el tronco contra sí mismo, 320 corridas reales), no qué candidato cayó.
-**Estado:** borrador **no utilizable** hasta que su calibración V4-CAL (§4) cumpla V4-1..V4-5 en serie **y** réplica.
-Hasta entonces, cualquier candidato se juzga con v2 y v3 lado a lado, declarándolo (como hoy).
+**Estado (23-sep-2026):** **UTILIZABLE.** La calibración V4-CAL (§4) cumplió V4-1..V4-5 en la serie 2841–2920 **y** en la réplica
+2361–2440 (22-sep, REGISTRO "CRITERIO DE TRONCO v4 — calibración y réplica"). v3 retirado. *Historia del borrador:* hasta esa
+calibración el texto decía "no utilizable" y los candidatos se juzgaban con v2 y v3 lado a lado.
 
 ---
 

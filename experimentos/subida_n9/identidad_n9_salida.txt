@@ -1,0 +1,30 @@
+ARNES identidad_n9 · 2026-09-23 15:52:30 · T=12000 · semillas (13392, 13393, 13394)
+(0) shas y construccion
+  [OK] sha experimentos\carrera_escuderias\pista.py · 9f47c65e438e0ff4 (fijado 9f47c65e438e0ff4)
+  [OK] sha experimentos\carrera_escuderias\juez.py · 6a68f640a7832f12 (fijado 6a68f640a7832f12)
+  [OK] sha experimentos\carrera_escuderias\revisa_carro.py · 1c8a789f7427ab96 (fijado 1c8a789f7427ab96)
+  [OK] sha experimentos\carrera_escuderias\carros\O3.py · 0442c2884fcb0e11 (fijado 0442c2884fcb0e11)
+  [OK] sha experimentos\nivel09_cuerpo_nuevo_b2\organismo_f9c.py · 9dd1fb91ecec35ae (fijado 9dd1fb91ecec35ae)
+  [OK] carros en disco == construye_n9.py · {'O3': '0442c2884fcb0e11', 'O3_LES_OFF': 'c404f52b6210066f', 'O3_LES_SI': 'b1d2f442db838a34', 'O3_LES_COLA': '05be23a6fad273a8', 'CTRL_O3_SINTERM': '7bb2fff33017e559', 'O3_TERM_CIEGO': '853d5c8b53952253', 'FABRICA': '2ebee3e99ea5a33a'}
+(E) chequeo estatico (revisa_carro)
+  [OK] revisa O3 · PASA
+  [OK] revisa O3_LES_SI · PASA
+  [OK] revisa O3_TERM_CIEGO · PASA
+  [OK] revisa CTRL_O3_SINTERM · PASA
+  [OK] revisa O3_LES_OFF · PASA
+  [OK] revisa O3_LES_COLA · PASA
+(F) identidad corta del juez
+  [OK] FABRICA solo == organismo_f9c REL (s=1, T=5000) · sha f9c 9dd1fb91ecec35ae dif []
+(I) O3_LES_OFF == O3 bit a bit (salida completa de pista.run, fundador limpio)
+  [OK] mono s13392 · muertes 25 nac 25
+  [OK] mono s13393 · muertes 18 nac 18
+  [OK] mono s13394 · muertes 25 nac 25
+  [OK] mixta 4 O3 + 5 O3_LES_OFF == 9 O3 (s13392)
+  [OK] TERMINAL se disparo en el arnes (camino de muerte declarada cubierto) · cuerpos_term (ultima instancia) 49
+(N) no inerte y (M) marginal
+  [OK] O3_TERM_CIEGO difiere de O3 en la fisica (s13392) · muertes 41 vs 25 · cuerpos_term (ultima instancia) 29
+  [OK] O3_LES_SI difiere de O3 en la fisica (s13392) · muertes 108 vs 25
+  [OK] O3_LES_SI marginal (media usada ~ real) · E 1.012/0.976 Ag 1.077/1.043 cola 0.39/0.39 · |dlev| medio 0.789 · |dcola| medio 0.00 · TERMINAL real/usado/cambiado 0/0/0 (pasos, ultima instancia; usado/real None) · pasos 15145
+  [OK] O3_LES_COLA difiere de O3 en la fisica (s13392) · muertes 26 vs 25
+  [DESCARTADA -- no cuenta] O3_LES_COLA marginal (TERMINAL usado/real en [0.8, 1.25]) · E 1.062/1.062 Ag 1.055/1.055 cola 2.22/1.92 · |dlev| medio 0.000 · |dcola| medio 0.54 · TERMINAL real/usado/cambiado 10627/3464/7163 (pasos, ultima instancia; usado/real 0.326) · pasos 102593
+RESULTADO: 22/22 · 407.5s

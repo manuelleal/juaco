@@ -1,8 +1,18 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **21-sep-2026, 22:50** (coordinador; CIERRE FINAL: 18 series, fase 9 declarada, 5 líneas cerradas, ERR-87..93, v3 no utilizable). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
+> Última reescritura: **23-sep-2026** (coordinador; revisión de todos los .md por el auditor de documentos + réplica de aprende_barrer + paquetes subida_n5..n10). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
-> Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
+> Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: **este archivo** (bloque más reciente) y `HANDOFF.md` §15.x; `PLAN.md` es bitácora hasta el 18-sep. Reglas: `EQUIPO.md` y `CLAUDE.md`.
+
+## AL 23-SEP-2026 (manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.31 y en la cola del REGISTRO)
+- **Aprende a barrer, réplica 8121–8140: HAY ALGO MODESTO replicado.** APR 0.385 vs FABRICA 0.336 (mediana R0), APR gana 20/20 (dif. 0.049),
+  no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8/P9 (vs APR_SIN_HERENCIA/APR_AZAR) sin serie. Nivel 8: propuesta 45 %.
+- **Generaciones que conviven:** monocultivos 10101–10120 corriendo (Pool 6); faltan mixta H y réplica 10121 (`experimentos/generaciones/INFORME_CONVIVE.md`).
+- **Subida de niveles 5–10 (pedido del director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"):** seis equipos
+  (explorador Haiku → creador Opus → auditor Sonnet) dejaron paquetes preregistrados en `experimentos/subida_nN/` con arnés de identidad y humo; ninguno
+  tiene serie todavía, ningún nivel cambia. Auditoría: n5, n6, n7, n9 LISTO CON CORRECCIONES; n10 LISTO PARA SERIE; n8 en construcción (el explorador falló).
+  Cola de series (un paquete por Pool, máx. 2 Pools/14 procesos): ver `INFORME_nN.md` de cada carpeta.
+- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **113**.
 
 ## AL 22-SEP-2026, 21:15 (cierre; manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.30 y en la cola del REGISTRO)
 - **Primer cruce de H-1 en JUACO** (carrera de escuderías, monocultivo de O1, que limpia): R0 de nacimientos reales 0.941, replicado en semillas
@@ -31,20 +41,15 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 | 9 (autonomía / modelo de sí mismo) | **propuesta 50 % (decide el director; hoy 30 %)**: **bloque 1 DECLARADO COMPLETO** con cuatro series (dos del bloque 1, dos del bloque 2): el cuerpo nuevo rechaza lo malo al primer encuentro sin dejar de comer, vive ~6×, y F9-4bis ×2 muestra que es el contenido del nodo, no cautela; **ni el nodo ORÁCULO cruza R₀ 0.9 en ninguna serie: el muro es el mundo** (H-1 en pie); C-F9B′ cerrado; bloque 3 = cambiar el mundo, con gemelo numba ×46 | 21-sep |
 | 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
 
-## Pendiente con paquete verificado (correr en este orden, un Pool a la vez)
-1. ~~v15f bajo el criterio v2~~ — **corrido y cerrado el 21-sep 12:37–12:54: NO ENTRA** (cae T-A, T-C, T-D, T-E; pasa T-B, T-F, T-G);
-   `datos/v15f_v2_20260921_123755.json` (`58538f00d49d0f8e`), detalle en el registro y HANDOFF 15.13. Patrón v15d/v15e/v15f: recomendado cerrar la línea.
-2. ~~dE5 bajo el criterio v2~~ — **corrido y cerrado el 21-sep 15:22–15:37: NO ENTRA** (cae T-A, T-C ii, T-E, T-G; pasa T-B, T-C i, T-D, T-F);
-   recupera 3.23× más rápido (pareado 20/20; el control sin información recupera más lento que el apagado) pero muerde más veneno en los seis
-   escenarios de T-E y 1.128× tras el cambio. `datos/dE5_v2_20260921_152224.json` (`ea74d601313d4ee9`); HANDOFF 15.19. Órgano medido, no candidato.
-3. ~~Fase 5, línea BA/BA-v~~ — **CERRADA (21-sep): BA-v cae P6 en las tres series bajo ERR-90 (13/19, 14/18, 11/16); la dirección del mensaje es
-   exacta (1/32, hermana fuera del grupo) y el valor falla por una colisión estructural (una de tres ganadoras de variante comparte casilla con la
-   hermana, 37/37); R6 pasa contra b4b en las tres.** `BA-vm` y `V-5` quedan preregistrados, no en cola. Nivel 5 sigue en 75 %. HANDOFF 15.22.
-4. **Fase 9**: cuerpo nuevo que aprende en menos de una vida (nodo leído por relevancia; conexión desde el nacimiento; reproducción desacoplada
-   de la saciedad). Sin preregistro todavía.
+## Pendiente con paquete verificado (al 23-sep; historia de los ítems cerrados en el REGISTRO)
+1. Generaciones que conviven: mixta H 10101 y réplica 10121 (monocultivos y mixta).
+2. Paquetes `experimentos/subida_n5..n10/`: aplicar las correcciones del auditor y correr serie + réplica de cada uno (comandos en su INFORME).
+3. Aprende a barrer: brazos APR_SIN_HERENCIA y APR_AZAR (P8–P10) si se quiere pasar de MODESTO.
+4. Mundo anclado v2: fila tox 2.0 (7021–7040). Fase 10 externa: semillas 2441–2840.
+5. Fase 9, bloque 3 ("cambiar el mundo"): lo cubren la carrera de escuderías, generaciones que conviven y `subida_n9` (modelo de sí).
 
 ## Errores
-Último: **ERR-92**. ERR-91 (v2 rechaza al propio tronco) **confirmado en dos series** (T-A 0.285 / 0.297). **La réplica de la calibración de v3 NO repite** (CAL-1 0.898 por 0.002; CAL-4 un marginal 0.627 fuera; T-C ii v3 cae en la realización): **v3 no se declara utilizable**; propuesta v4 (ERR-94: T-C ii n = 80 o margen 15; CAL-4 n = 80 o placebo sin tocar el rng), decisión del director. Hasta v4, candidatos con v2 y v3 lado a lado. ERR-93 usado por el bloque 2 (F9-4bis, ancla con cinco series, F9-7 retirada). Siguiente libre: **ERR-94** (propuesta v4 del criterio). Regla 15.
+Último: **ERR-113** (rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-114**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos

@@ -1,5 +1,8 @@
 # PLAN — Traspaso a Claude Code y etapas siguientes
 
+> **Nota del 23-sep-2026:** este archivo es la bitácora de órdenes hasta el 18-sep (tronco v13 → v14.2). El orden vigente desde el
+> 21-sep está en `registro/ESTADO.md` (bloque más reciente) y en `registro/HANDOFF.md` §15.x. Nada de lo de abajo manda sobre eso.
+
 > **ORDEN VIGENTE PARA EL DÍA 6 (escrito el 17 sep 2026, 20:30, al cierre del día 5). Manda sobre todo lo de abajo.**
 > **Tronco: v13** (`v13-tronco`). Etapas **1, 2, 3, 4, 5-N1, 5-N3 CERRADAS**; niveles 6 y 7 del brief con resultado replicado;
 > nivel 8/9 con hallazgos. Detalle: `CLAUDE.md` (bloque día 5), `HANDOFF.md` §11.6 y §12, `REGISTRO_etapas_1_2.md` (final).

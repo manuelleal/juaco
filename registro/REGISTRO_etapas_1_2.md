@@ -6397,3 +6397,22 @@ Preregistro `experimentos/generaciones/PREREGISTRO_convive.md`. Instrumento `con
 **Qué queda.** Series de T=100000 (monocultivos de 6 carros + réplica + pista mixta H) preparadas y no corridas — comandos en `experimentos/generaciones/INFORME_CONVIVE.md` §"v2 (tras la §9 del coordinador)". Estimado ≈2.5–3 h de CPU con Pool 6 para monocultivos, ≈20–25 min para la mixta. Ningún nivel del brief cambia por esta entrada (no hay dato, sólo instrumento).
 
 ---
+
+---
+
+### APRENDE A BARRER — réplica 8121–8140 (23-sep-2026, 15:17–15:45; Pool 6, preregistro `experimentos/aprende_barrer/PREREGISTRO_aprende.md` commiteado el 22-sep): **HAY ALGO MODESTO, REPLICADO — APR gana a FABRICA en 20/20 semillas (diferencia mediana 0.049 ≥ 0.03), ninguno cruza; P7 se cumple en serie y réplica**
+
+Arneses antes de lanzar: `identidad_apr.py` 21/21, identidad corta del juez OK. Resumen `experimentos/aprende_barrer/datos/aprende_apr-fab_s8121-8140_T100000_20260923_151745_resumen.json` (`6c56d4546e72acba`), 1689 s.
+
+| carro (x9, T=100000, 20 semillas) | mediana R0 linaje-semilla | R0 pista | cruza (ENMIENDA 3) | muertes veneno/sal |
+|---|---|---|---|---|
+| APR | 0.385 | 0.376 | NO (0/180) | 36 % / 63 % |
+| FABRICA | 0.336 | 0.335 | NO (0/180) | 39 % / 61 % |
+
+Pareado APR vs FABRICA: gana 20/20, diferencia mediana 0.0486 (rango 0.007–0.116). Predicciones: P1, P2, P3, P5, P6, P7, P11 se cumplen; P4, P8, P9, P10 sin serie (brazos O1, APR_SIN_HERENCIA, APR_AZAR no corridos).
+
+**Lectura honesta.** Lo que el preregistro llama HAY ALGO MODESTO queda replicado: APR aprende a contenerse (quita mordidas malas) y por eso rinde un poco más que FABRICA, pero no descubre la limpieza y queda lejos de 0.9. Sin P8/P9 no se sabe si la ventaja viene de la herencia o de cualquier ruido en la política.
+
+**Vocabulario permitido:** *"aprende a contenerse y rinde algo más que la fábrica, replicado; no descubre la limpieza"*. Prohibido: "aprende a limpiar", "cruza".
+
+**Qué queda.** Brazos APR_SIN_HERENCIA y APR_AZAR. Nivel 8: propuesta 40 → 45 % — decide el director.

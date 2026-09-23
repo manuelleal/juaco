@@ -1000,3 +1000,15 @@ tabla de decisiones para el director. Detalle en la memoria del coordinador (`ju
 ---
 
 **Exploratorio de la noche (sin protocolo, no es dato), rama `escuela-exploratoria` integrada a main:** "tesoro" (`experimentos/tesoro/`): plano 20×20 con 5 estaciones de bits (AND, XOR, OR, SUMA, XNOR), 12 bacterias, 20 semillas: sin canal llegan 2/12 (mediana), con canal (pizarra de respuestas) 12/12, mejor en 20/20 semillas que sin canal y que con canal ruidoso; falta el examen sin pizarra (copiar no es aprender). Idea del director para el 23-sep: visualización animada (repetición) de la carrera y del tesoro.
+
+### 15.31 Jornada del 23-sep-2026 (en curso)
+- **Réplica de aprende a barrer (8121–8140): HAY ALGO MODESTO replicado** (APR 0.385 vs FABRICA 0.336, 20/20). Entrada en el REGISTRO.
+- **Generaciones que conviven:** monocultivos 10101–10120 corriendo con Pool 6.
+- **Subida de niveles 5–10** (director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"): workflow de seis equipos
+  explorador (Haiku) → creador (Opus) → auditor (Sonnet). Paquetes en `experimentos/subida_n5..n10/` (preregistro + instrumento + identidad + humo +
+  INFORME), sin series. Veredictos de auditoría: n5/n6/n7/n9 LISTO CON CORRECCIONES, n10 LISTO PARA SERIE, n8 relanzado (el explorador Haiku falló al
+  devolver JSON). Incidentes: el auditor de n5 lanzó por error `corre_v5.py --serie … --help` (el runner no reconoce `--help`); el proceso ya no
+  estaba vivo y no dejó datos. `MANIFEST.txt` apareció regenerado (algún agente corrió `manifiesto.py` en modo escritura); restaurado con git, ningún
+  congelado cambió. Candidato a ERR-114: los runners deben rechazar banderas desconocidas.
+- **Revisión de todos los .md** (auditor de documentos): corregidos ESTADO (sello, Errores decía ERR-92, pendiente viejo), CRITERIO_TRONCO_v4 (decía
+  borrador tras declararse utilizable), PLAN (marcado bitácora), INDICE (faltaban 25 carpetas).

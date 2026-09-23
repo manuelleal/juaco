@@ -1,0 +1,87 @@
+[15:52:42 +    0.0s] HUMO del candidato V-5 (nivel 5, subida_n5, criterio ERR-90). UN proceso, sin Pool (regla 3).
+[15:52:42 +    0.0s] El mundo, el canal y el EMISOR son los del bloque 6, SIN TOCAR. Lo unico nuevo es COMO LEE la tabla,
+[15:52:42 +    0.0s] y el CRITERIO: puertas ABSOLUTAS (ERR-90), nunca relativas a CORTADO.
+[15:52:42 +    0.0s] celdas ['BA-v5', 'BA-v5-sh', 'BA-v']  brazos ['CANAL', 'PAR', 'BAR-T']  semillas [25791]  T = 100000 (<= 6 corridas, <= 200 000 pasos)
+[15:52:42 +    0.0s]     sha script                   a543f997f6133764
+[15:52:42 +    0.0s]     sha constructor              09df2ad401dc797d
+[15:52:42 +    0.0s]     sha instrumento              b6138d31e232b896
+[15:52:42 +    0.0s]     sha arnes                    33a2491aedeb4113
+[15:52:42 +    0.0s]     sha preregistro              2b23362be0537860
+[15:52:42 +    0.0s]     sha origen_bav               2dca0a3e239481f0
+[15:52:42 +    0.0s]     sha runner_bav               4453754a9921e349
+[15:52:42 +    0.0s]     sha origen_ba                1f196ee786b2040d
+[15:52:42 +    0.0s]     sha origen_a1                8833e1dcfb62f26d
+[15:52:42 +    0.0s]     sha origen_b6                b10cbd4ddd0c32a3
+[15:52:42 +    0.0s]     sha origen_b5                e0b6b90f6f92d5c1
+[15:52:42 +    0.0s]     sha origen_b4b               b3dd1d7e66a2d147
+[15:52:42 +    0.0s]     sha runner_bloque6           88253f352d921c42
+[15:52:42 +    0.0s]     sha origen_organismo_v14     feefc88b1fd8d434
+[15:52:42 +    0.0s]     origenes verificados -> OK
+[15:52:42 +    0.0s]     plan (celda, brazo): [('BA-v5', 'CANAL'), ('BA-v5', 'PAR'), ('BA-v5', 'BAR-T'), ('BA-v5-sh', 'CANAL'), ('BA-v', 'PAR')]
+[15:52:42 +    0.0s]     corridas previstas: 1 emisor(es) + 5 receptores = 6  (limite de la regla 3: 6)
+[15:52:42 +    0.0s] 1/4 DIAGNOSTICO ESTRUCTURAL (T = 0, sin simular)
+[15:52:42 +    0.0s]     semilla 25791: alias_pares 0.00605  piso de forma 4/32  px en que difieren referente y hermana [9, 11] (variante = [9, 10, 11]); referente y otro token [0, 2, 3, 4, 6, 8]
+[15:52:42 +    0.0s] 2/4 EMISORES (los del bloque 6, sin tocar)
+[15:52:53 +   10.7s]     E s25791  10.6s  mensaje ('T1v2', 1.0, 't=42635', 'tras 102 exp')
+[15:52:53 +   10.7s] 3/4 REGLA 14 - la ENTRADA, campo a campo contra el bloque 6
+[15:52:53 +   10.7s]     REGLA 14 - entrada campo a campo contra el bloque 6: 33 campos comunes, IDENTICOS
+[15:52:53 +   10.7s]        campos: ['T', 'cambio', 'canal', 'costo', 'crit_exp', 'deriva', 'desambiguar', 'exc_fija', 'fam_D', 'fam_F', 'fam_V', 'fam_nvar', 'fam_seed', 'fam_val', 'k_ganadoras', 'ktop', 'largo', 'log_cada', 'memoria_pares', 'memoria_variante', 'mundo', 'n_exc', 'n_neu', 'nk', 'nkmax', 'nobj', 'par_herm', 'reg_b2', 'reg_b4', 'renov', 'seed', 'vent', 'vira']
+[15:52:53 +   10.7s]        perillas de celda (las UNICAS que pueden diferir): ['baraja_msg', 'combina', 'conj_tipo', 'dentro', 'dos_tipos', 'eta_w', 'exige_dir', 'k_forma', 'k_ganadoras', 'k_var', 'memoria_variante', 'msg_elige', 'pesos_tipo', 'v5', 'var_cubre']
+[15:52:53 +   10.7s] 4/4 RECEPTORES
+[15:53:05 +   22.6s]     CANAL-BA-v5      s25791  12.0s  entrega t=66719  comio 1  dist None  okU 0.5  via lenta  muertes 86  LEE(ref) [3.0, True, 3, 3]  abstiene 0/32  mord 4142 (com 4056, ven 86)  regalo 0.0645
+[15:53:05 +   22.6s]         V-5: v5=1  partos msg/bocado 45/344 (1.o en t=134)  subcasillas 389  lee(hermana) tras el mensaje None  1.a exposicion de la hermana [t, valor, o, fam, mordio, ...] None
+[15:53:17 +   34.7s]     PAR-BA-v5        s25791  12.0s  entrega t=66697  comio 1  dist 1.0  okU 0.5  via lenta  muertes 81  LEE(ref) [3.0, True, 3, 3]  abstiene 0/32  mord 3643 (com 3631, ven 12)  regalo 0.0607
+[15:53:17 +   34.7s]         V-5: v5=1  partos msg/bocado 45/295 (1.o en t=134)  subcasillas 340  lee(hermana) tras el mensaje [-9.0, True]  1.a exposicion de la hermana [t, valor, o, fam, mordio, ...] [66717, -9.0, -1.0, 0, 0, 0.06, -9.0, 20, 2]
+[15:53:29 +   46.6s]     BAR-T-BA-v5      s25791  11.9s  entrega t=66719  comio 0  dist None  okU 0.3333  via lenta  muertes 96  LEE(ref) [-9.0, True, 3, 2]  abstiene 0/32  mord 3317 (com 3287, ven 30)  regalo 0.072
+[15:53:29 +   46.6s]         V-5: v5=1  partos msg/bocado 36/367 (1.o en t=134)  subcasillas 403  lee(hermana) tras el mensaje None  1.a exposicion de la hermana [t, valor, o, fam, mordio, ...] None
+[15:53:41 +   58.7s]     CANAL-BA-v5-sh   s25791  12.0s  entrega t=66719  comio 0  dist None  okU 0.5  via lenta  muertes 113  LEE(ref) [-5.0, True, 3, 2]  abstiene 0/32  mord 2916 (com 2906, ven 10)  regalo 0.0847
+[15:53:41 +   58.7s]         V-5: v5=1  partos msg/bocado 40/289 (1.o en t=134)  subcasillas 329  lee(hermana) tras el mensaje None  1.a exposicion de la hermana [t, valor, o, fam, mordio, ...] None
+[15:53:54 +   71.8s]     PAR-BA-v         s25791  13.1s  entrega t=66710  comio 1  dist 0.0  okU 1.0  via lenta  muertes 34  LEE(ref) [3.0, True, 3, 3]  abstiene 0/32  mord 5627 (com 5616, ven 11)  regalo 0.0255
+[15:53:54 +   71.8s]         V-5: v5=0  partos msg/bocado 0/0 (1.o en t=None)  subcasillas None  lee(hermana) tras el mensaje [3.0, True]  1.a exposicion de la hermana [t, valor, o, fam, mordio, ...] [66903, 3.0, -1.0, 0, 1, 0.0, 3.0, 193, 14]
+[15:53:54 +   71.8s] CRUDO -> humo_v5_20260923_155242_crudo.json  sha256_16 = 710e201cf3490025  (ERR-54/ERR-42: el humo ESCRIBE su JSON)
+[15:53:54 +   71.8s] 
+[15:53:54 +   71.8s] celda        CANAL      PAR    BAR-T   dist(PAR)  dist(PAR0)  muertes  okU   >=200  mord_com  mord_ven  regalo
+[15:53:54 +   71.8s] BA-v5        1/1      1/1      0/1     1/1      0/0       86.0     0.5   0     4056.0      86.0      0.0645
+[15:53:54 +   71.8s] BA-v5-sh     0/1      0/0      0/0     0/0      0/0       113.0     0.5   0     2906.0      10.0      0.0847
+[15:53:54 +   71.8s] BA-v         0/0      1/1      0/0     0/1      0/0       None     None   0     None      None      None
+[15:53:54 +   71.8s] 
+[15:53:54 +   71.8s] LETRA DEL CRITERIO PROPIO (ERR-90): puertas ABSOLUTAS. Ninguna depende de CORTADO.
+[15:53:54 +   71.8s]   [BA-v5]
+[15:53:54 +   71.8s]      P0 montaje   N (semillas validas del brazo CANAL) = 1 >= 18: CAE
+[15:53:54 +   71.8s]      P1 CANAL     1 >= 15: CAE
+[15:53:54 +   71.8s]      P2 CORTADO   n/d <= 5: n/d
+[15:53:54 +   71.8s]      P3 BAR-T     0 <= 5: pasa
+[15:53:54 +   71.8s]      P4 VALOR     n/d <= 5: n/d
+[15:53:54 +   71.8s]      P5 BAR-H     n/d <= 10: n/d
+[15:53:54 +   71.8s]      P6 dist(PAR) 1/1 >= 15 y dist(PAR0) 0 <= 5: CAE
+[15:53:54 +   71.8s]      P7 R6        n/d: falta la celda base `b4b` en esta corrida (ERR-89). NO se lee coste.
+[15:53:54 +   71.8s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[15:53:54 +   71.8s]   [BA-v5-sh]
+[15:53:54 +   71.8s]      P0 montaje   N (semillas validas del brazo CANAL) = 1 >= 18: CAE
+[15:53:54 +   71.8s]      P1 CANAL     0 >= 15: CAE
+[15:53:54 +   71.8s]      P2 CORTADO   n/d <= 5: n/d
+[15:53:54 +   71.8s]      P3 BAR-T     0 <= 5: pasa
+[15:53:54 +   71.8s]      P4 VALOR     n/d <= 5: n/d
+[15:53:54 +   71.8s]      P5 BAR-H     n/d <= 10: n/d
+[15:53:54 +   71.8s]      P6 dist(PAR) 0/0 >= 15 y dist(PAR0) 0 <= 5: n/d
+[15:53:54 +   71.8s]      P7 R6        n/d: falta la celda base `b4b` en esta corrida (ERR-89). NO se lee coste.
+[15:53:54 +   71.8s]      MISION (BAR-T <= 5 Y PAR >= 15): n/d
+[15:53:54 +   71.8s]   [BA-v]
+[15:53:54 +   71.8s]      P0 montaje   N (semillas validas del brazo CANAL) = 0 >= 18: CAE
+[15:53:54 +   71.8s]      P1 CANAL     0 >= 15: CAE
+[15:53:54 +   71.8s]      P2 CORTADO   n/d <= 5: n/d
+[15:53:54 +   71.8s]      P3 BAR-T     0 <= 5: pasa
+[15:53:54 +   71.8s]      P4 VALOR     n/d <= 5: n/d
+[15:53:54 +   71.8s]      P5 BAR-H     n/d <= 10: n/d
+[15:53:54 +   71.8s]      P6 dist(PAR) 0/1 >= 15 y dist(PAR0) 0 <= 5: CAE
+[15:53:54 +   71.8s]      P7 R6        n/d: falta la celda base `b4b` en esta corrida (ERR-89). NO se lee coste.
+[15:53:54 +   71.8s]      MISION (BAR-T <= 5 Y PAR >= 15): no
+[15:53:54 +   71.8s] 
+[15:53:54 +   71.8s] CONTRASTES V-5 (misma serie, mismas semillas; preregistro 5):
+[15:53:54 +   71.8s]   K1 dist(PAR): BA-v5 1/1 contra BA-v 0/1 -> diferencia +1 (se pide >= +3): CAE
+[15:53:54 +   71.8s]   K3 BAR-T: BA-v5 0 contra BA-v 0 (se pide BA-v5 <= BA-v + 2): pasa
+[15:53:54 +   71.8s]   K2 BARAJADA: CANAL(BA-v5-sh) 0 (sin CORTADO de la celda en esta corrida: n/d)
+[15:53:54 +   71.8s]   I2 instrumento BA-v: dist 0/1 (previas 13/19, 14/18, 11/16)
+[15:53:54 +   71.8s] datos -> humo_v5_20260923_155242.json  sha256_16 = 9aae6fa69f35d71e
+[15:53:54 +   71.8s] 
+[15:53:54 +   71.8s] LECTURA (1 semilla: NO es evidencia; con n = 1 ni la linea base se reproduce). Lo que el humo SI decide es el MONTAJE (P-I2/P-I3/P-I4, la regla 14, que R6 tenga base y que las siete puertas se impriman) y el MECANISMO: `LEE(ref)` = [valor, habla, exactas de FORMA, exactas de VARIANTE]. Lo que hay que ver: BA-v CANAL positivo con 3/3 y 3/3 y comiendo; BA-v-sh CANAL SIN leer al referente (la baraja le quita la direccion) y pareciendose a CORTADO.

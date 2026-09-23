@@ -1,0 +1,33 @@
+[15:37:53] SUBIDA N6 — mundos {'P': {'ancho': 11, 'alto': 11, 'cierre': 5, 'd_ini': 4}, 'E': {'ancho': 15, 'alto': 13, 'cierre': 6, 'd_ini': 5}} r_vis=1 T=20000 n_tel=40 semillas 6641-6641 brazos 6 pool=0 pid=20300 mundo_subida 484e34db8f2150da
+[15:37:53]   regla 14 CIEGO  : 13 campos del 21-sep; difieren ['alto', 'prueba.cierre', 'prueba.d_ini'] (todas declaradas en PREREGISTRO §3)
+[15:37:53]   regla 14 CAMINO : 13 campos del 21-sep; difieren ['alto', 'prueba.cierre', 'prueba.d_ini'] (todas declaradas en PREREGISTRO §3)
+[15:37:57]   1/6  CIEGO     s6641  limpio {'rodeo': 0.0, 'atajo': 0.0}  pisa {'rodeo': 1.0, 'atajo': 1.0}  huye {'rodeo': 0.9, 'atajo': 0.25}  pasos {'rodeo': 60.0, 'atajo': 60.0}  comida 113 muertes 22  vA 1.0 vB -2.853  M 0/1 0/21  4.1s
+[15:38:02]   2/6  CAMINO    s6641  limpio {'rodeo': 0.0, 'atajo': 0.0}  pisa {'rodeo': 1.0, 'atajo': 1.0}  huye {'rodeo': 0.65, 'atajo': 0.35}  pasos {'rodeo': 60.0, 'atajo': 60.0}  comida 161 muertes 15  vA 1.0 vB -2.765  M 1/1 21/21  5.3s
+[15:38:08]   3/6  GF        s6641  limpio {'rodeo': 0.95, 'atajo': 0.9}  pisa {'rodeo': 0.05, 'atajo': 0.1}  huye {'rodeo': 0.0, 'atajo': 0.0}  pasos {'rodeo': 16.8, 'atajo': 14.1}  comida 365 muertes 6  vA 1.0 vB -2.12  M 1/1 21/21  5.4s
+[15:38:14]   4/6  BRUJULA   s6641  limpio {'rodeo': 0.0, 'atajo': 0.1}  pisa {'rodeo': 1.0, 'atajo': 0.9}  huye {'rodeo': 0.0, 'atajo': 0.0}  pasos {'rodeo': 60.0, 'atajo': 54.75}  comida 367 muertes 6  vA 1.0 vB -2.12  M 1/1 21/21  6.1s
+[15:38:18]   5/6  BARAJADO  s6641  limpio {'rodeo': 0.0, 'atajo': 0.0}  pisa {'rodeo': 1.0, 'atajo': 1.0}  huye {'rodeo': 0.85, 'atajo': 0.3}  pasos {'rodeo': 60.0, 'atajo': 60.0}  comida 365 muertes 6  vA -0.419 vB 0.065  M 1/1 21/21  4.8s
+[15:38:23]   6/6  INVERTIDO s6641  limpio {'rodeo': 0.0, 'atajo': 0.0}  pisa {'rodeo': 1.0, 'atajo': 1.0}  huye {'rodeo': 0.8, 'atajo': 0.3}  pasos {'rodeo': 60.0, 'atajo': 60.0}  comida 365 muertes 6  vA -1.0 vB 2.12  M 1/1 21/21  4.7s
+[15:38:23] --- 6 corridas en 30.4 s ---
+[15:38:23]   CIEGO      limpio(rodeo) 0.0  limpio(atajo) 0.0  huye(rodeo) 0.9  pisa(rodeo) 1.0  pasos_c 60.0  comida 113  muertes 22
+[15:38:23]   CAMINO     limpio(rodeo) 0.0  limpio(atajo) 0.0  huye(rodeo) 0.65  pisa(rodeo) 1.0  pasos_c 60.0  comida 161  muertes 15
+[15:38:23]   GF         limpio(rodeo) 0.95  limpio(atajo) 0.9  huye(rodeo) 0.0  pisa(rodeo) 0.05  pasos_c 16.8  comida 365  muertes 6
+[15:38:23]   BRUJULA    limpio(rodeo) 0.0  limpio(atajo) 0.1  huye(rodeo) 0.0  pisa(rodeo) 1.0  pasos_c 60.0  comida 367  muertes 6
+[15:38:23]   BARAJADO   limpio(rodeo) 0.0  limpio(atajo) 0.0  huye(rodeo) 0.85  pisa(rodeo) 1.0  pasos_c 60.0  comida 365  muertes 6
+[15:38:23]   INVERTIDO  limpio(rodeo) 0.0  limpio(atajo) 0.0  huye(rodeo) 0.8  pisa(rodeo) 1.0  pasos_c 60.0  comida 365  muertes 6
+[15:38:23] PUERTAS (una linea por puerta, umbral al lado):
+[15:38:23]   [PASA] R-1a rodea: limpio(rodeo) GF >=                            0.95  (umbral 0.6) CIEGO 0.0 CAMINO 0.0 GRAD None FILTRO None BARAJADO 0.0 BRUJULA 0.0
+[15:38:23]   [PASA] R-1b es el mapa: GF - max(CIEGO,BARAJADO) >=               0.95  (umbral 0.25) 
+[15:38:23]   [PASA] R-1c es el VENENO recordado: GF - BRUJULA >=               0.95  (umbral 0.25) pisa(rodeo) BRUJULA 1.0
+[15:38:23]   [PASA] R-2a no es huida: huye(rodeo) GF <=                        0.0  (umbral 0.2) 
+[15:38:23]   [PASA] R-2b balanceada: J = limpio(rodeo)+limpio(atajo)-1 >=      0.85  (umbral 0.5) p1 0.95 c1 0.9  [recto(atajo) reportado, no es puerta: 0.7]
+[15:38:23]   [PASA] R-3 cuesta menos: pasos_cens(rodeo) GF/CIEGO <=            0.28  (umbral 0.7) GF 16.8 CIEGO 60.0
+[15:38:23]   [PASA] R-4 no regresion: comida GF/CIEGO >=                       3.23  (umbral 0.9) GF 365 CIEGO 113 CAMINO 161
+[15:38:23]   [PASA] R-5 muertes GF/CIEGO <=                                    0.273  (umbral 1.25) GF 6 CIEGO 22 CAMINO 15
+[15:38:23]   [PASA] C1 INVERTIDO decisivo: limpio(rodeo) <=                    0.0  (umbral 0.2) pisa 1.0
+[15:38:23]   [CAE ] PLACEBO validez: |GF - PLACEBO| <= (si no, NO se lee)      None  (umbral 0.15) 
+[15:38:23]   [PASA] V1 validez: comida y las DOS murallas enteras en M (1/1)   1.0  (umbral 1.0) 
+[15:38:23]   [CAE ] E-1 (secundaria) escala 15x13: limpio(rodeo) GF_E >=       None  (umbral 0.6) CIEGO_E None
+[15:38:23]   [CAE ] E-2 (secundaria) escala: GF_E - CIEGO_E >=                 None  (umbral 0.25) 
+[15:38:23]   pareado (reportado): GF > BRUJULA en 1/1; GF > CIEGO en 1/1
+[15:38:23] RESUMEN 10/11 principales, 0/2 secundarias -> NUCLEO (R-1a, R-1c, R-2b) PASA, alguna principal cae: HAY ALGO MODESTO  (HUMO: no es la serie, no se interpreta)
+[15:38:23] JSON experimentos\subida_n6\datos\humo\subida_humo_20260923_153753.json  sha ce1249637262520a

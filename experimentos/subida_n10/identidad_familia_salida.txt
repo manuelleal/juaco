@@ -1,0 +1,34 @@
+identidad_familia.py 0fdd2599832e7e2c
+(0) origen y construccion
+  OK  sha FABRICA.py 2ebee3e99ea5a33a (esperado 2ebee3e99ea5a33a)
+  OK  sha pista2.py 4d2bee16e7961261 (esperado 4d2bee16e7961261)
+  OK  sha motor_convive.py d10cb9021f5d0f41 (esperado d10cb9021f5d0f41)
+  OK  sha corre_convive.py e6dadfdad9c379cd (esperado e6dadfdad9c379cd)
+  OK  FAMILIA_NADA.py == construccion por anclas f7ae98715f170153
+  OK  FAMILIA_PARTO.py == construccion por anclas e8aeb6efd6307162
+  OK  FAMILIA_BAR.py == construccion por anclas 46c09162e6d1ab55
+  OK  FAMILIA_ORACULO.py == construccion por anclas 55df592f57671b54
+(I) perilla apagada: FAMILIA_NADA == FABRICA en toda la salida
+  OK  I s12391 T6000 {'solapadas': 1, 'diag': 0, 'reposicion': 'fija'} 40281f494ccb620a 40281f494ccb620a nacimientos 26
+  OK  I s12392 T6000 {'solapadas': 1, 'diag': 0, 'reposicion': 'fija'} f66b944f17283ca9 f66b944f17283ca9 nacimientos 22
+  OK  I s12393 T4000 {'solapadas': 1, 'diag': 0, 'reposicion': 'inmediata'} edeed476bdc6042e edeed476bdc6042e nacimientos 15
+  OK  I s12391 T4000 {'solapadas': 0, 'diag': 1} 36ed3956c1dd39c5 36ed3956c1dd39c5 nacimientos 97
+  OK  I s12392 T3000 {'solapadas': 0, 'diag': 1, 'compat': 0, 'fundador_limpio': 1} c2509c2737638575 c2509c2737638575 nacimientos 111
+  OK  I v1 compat=1 (1 carro) 39612bc345b8b023 39612bc345b8b023
+(P) antes del primer parto los cuatro modos son identicos en la fisica
+  OK  P fisica NADA==PARTO==BAR==ORACULO (T=450, 0 partos) {'NADA': 'd01067bc346018a8', 'PARTO': 'd01067bc346018a8', 'BAR': 'd01067bc346018a8', 'ORACULO': 'd01067bc346018a8'}
+(B) el canal, por unidad
+  OK  B1 PARTO al_parir = heredado + ultimas NODO_K len 22
+  OK  B1 NADA al_parir = None 
+  OK  B2 BAR conserva patrones y necesidades 
+  OK  B2 BAR conserva la multiset de R 
+  OK  B2 BAR destruye la asociacion (alguna R cambia de sitio) 
+  OK  B2 BAR no consume rng: mismos Wl/KW y mismo estado de rng_hijo que PARTO 
+  OK  B3 ORACULO = tabla verdadera x NODO_LEE {('A', 0): 1.0, ('B', 0): -3.0, ('C', 0): 0.0, ('D', 0): 0.0, ('A', 1): 0.0, ('B', 1): 0.0, ('C', 1): 1.0, ('D', 1): -3.0}
+  OK  B4 la lectura cambia la via lenta en PARTO y no en NADA 
+(D)/(C) determinismo y canal en marcha (v2, T=8000)
+  OK  D PARTO determinista 3245776b9da64c02
+  OK  C hubo partos en la prueba nacimientos 37
+  OK  C con partos, PARTO se separa de NADA en la fisica 
+  (telemetria: n10.recibido del ultimo cuerpo registrado por linaje: [-1, -1, -1, -1, -1, -1, -1, -1, -1])
+RESULTADO: 26/26  (113 s)
