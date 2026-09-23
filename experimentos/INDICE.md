@@ -1,6 +1,6 @@
 # Índice de `experimentos/`
 
-> Foto al **21-sep-2026** (redactado por el cronista Sonnet desde los `PREREGISTRO_*.md` / `PROPUESTA*.md` / `README.md` de cada carpeta,
+> Foto al **21-sep-2026**, **actualizado al 23-sep-2026** (filas del 21–23-sep añadidas por el cronista y revisadas por el coordinador) (redactado por el cronista Sonnet desde los `PREREGISTRO_*.md` / `PROPUESTA*.md` / `README.md` de cada carpeta,
 > `registro/REGISTRO_etapas_1_2.md` y `registro/HANDOFF.md`; revisado por el coordinador). Se actualiza en cada `/juaco-cierre` cuando
 > nace o cierra una carpeta. Fechas por sello de archivo. "Sin registro" = no hay entrada que cite la carpeta o su instrumento en
 > REGISTRO ni HANDOFF; no es lo mismo que "no corrió". Los números de línea (L) son del REGISTRO al 21-sep y se desplazan al añadir.
@@ -56,6 +56,30 @@
 | `nivel13_alma` | nivel 13 (ALMA: curitas guiadas y nodo) | 18-sep | 20 almas Haiku vs azar / nodo barajado; borrador "eras" | **El alma razonada NO gana al azar** (0.525); el contenido del nodo sí (0.88); ningún linaje llega a R₀ 0.9 | REGISTRO L5404 | cerrado; `PREREGISTRO_eras.md` con humo de 1 semilla, sin serie |
 | `externo_mundo_minimo` | — (réplica del mundo mínimo de ChatGPT) | 18-sep | ¿Soporta memoria episódica? | Calibración reproducida; sin acción no prueba memoria (predicción cumplida); con acción R₀ 0.96 → 1.86 | REGISTRO L5339 | cerrado |
 | `lateral_exoesqueleto` | — (línea lateral: exoesqueleto de un LLM) | 18-sep | EXO-1 y EXO-2, humos 901–906 | Sin registro aquí: la línea salió a su **propio repo `PROYECTOS\JUACO-EXO` (alefast)** el 19-sep, con sus resultados | REGISTRO L5458; commit 40dba2e | cerrado aquí (vive en alefast) |
+| `aprende_barrer` | fase 9, bloque 3 (camino A) | 22–23-sep | APR (boca aprendida, heredada) vs FABRICA vs APR_SIN_HERENCIA vs APR_AZAR; serie 8101–8120, réplica 8121–8140 (sólo APR y FABRICA) | **HAY ALGO MODESTO, REPLICADO** — APR gana a FABRICA 20/20 en las dos series (+0.051 / +0.049); en la serie gana a APR_SIN_HERENCIA 20/20 (+0.094); no descubre la limpieza; no cruza (0.387 / 0.385) | REGISTRO L6330 y entrada del 23-sep | cerrado (modesto replicado) |
+| `carrera_escuderias` | — (transversal; alimenta nivel 9) | 22-sep | reglamento (9 escuderías 3O/3S/3H, meta R0 ≥ 0.90); rondas 0, 1 (sellada) y 2 (combos Opus, sellada) | ronda 0 sin ganador (0.332); ronda 1 **primer cruce de H-1** replicado en sellada (R0 real 0.941); ronda 2 **O3 y O4 ganan y estabilizan con muerte programada declarada, replicado**; O2 estabiliza sin ganar | REGISTRO L6159, L6303, L6355 | cerrado (ronda 2) |
+| `carrera_fase10` | — (carrera nocturna A/B/C del 21-sep) | 21-sep | tres caminos independientes hacia el mundo de fase 10 | Sin registro propio; lo integrado va en `nivel10_mundo_acumula` | Sin registro | sin cerrar |
+| `criterio_v3` | — (criterio de tronco v3) | 21-sep | calibración CAL-1..CAL-5 y réplica | calibración PASA; réplica NO REPITE → v3 no utilizable | REGISTRO L5878, L5947 | retirado el 22-sep |
+| `criterio_v4` | — (criterio de tronco v4, ERR-94) | 22-sep | V4-1..V4-5, serie 2841–2920 y réplica 2361–2440 | **UTILIZABLE** en serie y réplica; v3 retirado | REGISTRO L6217 | criterio vigente |
+| `diagnostico_muro` | fase 9 (H-MURO) | 22-sep | P1–P4, semillas 2941–2946 | **H-MURO SE SOSTIENE**; el pastoreo selectivo existe pero no es la causa principal | REGISTRO L6135 | cerrado |
+| `escuela` | — (EXPLORATORIO, escuela de abejas) | 22-sep | sin preregistro ni arnés | **EXPLORATORIO, no es dato** — aprende XOR sólo con detector de pares; la sabia ayuda por copia (muleta) | HANDOFF §15.30 | exploratorio |
+| `generaciones` | fase 9/10 (generaciones que conviven, pista v2) | 22–23-sep | pista v2 + quimiostato; monocultivos 10101–10120 | 22-sep: instrumento (37/37), ERR-104; 23-sep: monocultivos **en curso** | REGISTRO L6379; HANDOFF §15.31 | en curso |
+| `junta_20260921` | nivel 5 (BA-vm / BA-vM) | 21-sep | junta de tres creadores Opus | **CAE por la letra** (P3, P4, R6); BA-vm cruza P6 pero muere 9.6× la base | REGISTRO L6028; HANDOFF §15.12 | cerrado |
+| `mundo_anclado` | fase 9 (toxicidad + dilución) | 22-sep | v1 y v2: calibración, confirmación, réplica | v1 **NO**; v2 **HAY ALGO MODESTO** (se sostiene con reservas, ERR-111..113) | REGISTRO L6243, L6266 | cerrado con reservas; pendiente fila tox 2.0 |
+| `nivel05_familia_variante_BAv` | nivel 5 | 21-sep | BA-v en tres series bajo ERR-90 | **CAE P6 en las tres** (13/19, 14/18, 11/16); colisión estructural con la hermana | REGISTRO L5630; HANDOFF §15.22 | cerrado |
+| `nivel06_rodeo_obligado` | nivel 6 | 21-sep | mundo muralla, serie 1702–1721 | **CAE (5/10)**; réplica no se corre | REGISTRO L5913 | cerrado; lo retoma `subida_n6` |
+| `nivel07_fanin_expansion` | nivel 7 (fanin 6/3/2) | 22-sep | serie 6021–6040, réplica 6041–6060 | **CAE la hipótesis del director**, replicado; la conjunción mejora con menos entradas (no predicho) | REGISTRO L6185 | cerrado |
+| `nivel09_cuerpo_nuevo` | fase 9, bloque 1 | 21-sep | F9-1..F9-10; series 1501–1520, 1521–1540, 1621–1640 | **núcleo del bloque 1 DECLARADO** con dos series válidas; ni el ORÁCULO cruza R0 0.9 | REGISTRO L5651, L5716, L5835, L6095 | declarado |
+| `nivel09_cuerpo_nuevo_b2` | fase 9, bloque 2 | 21-sep | 14 puertas; serie 1581–1600, réplica 1601–1620 | **F9-4bis replicado ×2**; C-F9B′ cerrado | REGISTRO L5980, L6055, L6095 | declarado |
+| `nivel10_mundo_acumula` | nivel 10 (mundo de fase 10) | 22-sep | integración del instrumento (F0 79/79, sonda 11/11) | sin dato, instrumento listo | REGISTRO L6109 | instrumento listo |
+| `tesoro` | — (EXPLORATORIO, bits con pizarra) | 22-sep | sin protocolo | **EXPLORATORIO, no es dato** — con pizarra 12/12, sin ella 2/12; falta examen sin pizarra | HANDOFF §15.30 | exploratorio |
+| `tronco_v15_dE5` | nivel 9 (dE5 bajo criterio v2) | 21-sep | T-A..T-G, semillas 2001–2080 | **NO ENTRA** (caen T-A, T-C ii, T-E, T-G) | REGISTRO L5690; HANDOFF §15.19 | cerrado |
+| `subida_n5` | nivel 5 (V-5: familia Y variante en la misma tabla) | 23-sep | arnés 33/33; humo 25791 | preparado, sin serie (un arranque accidental del auditor se abortó en 40/840; log en `datos/humo_no_registrado/`, no es dato) | HANDOFF §15.31 | preparado (LISTO CON CORRECCIONES) |
+| `subida_n6` | nivel 6 (mundo que sí obliga a rodear) | 23-sep | arnés 42/42; humo 6641 | preparado, sin serie | HANDOFF §15.31 | preparado (LISTO CON CORRECCIONES) |
+| `subida_n7` | nivel 7 (3T-k sobre el tronco v14.2) | 23-sep | arnés 114/114; mini-prueba: el tronco no compone a k≥3 (posible regresión) | preparado, sin serie | HANDOFF §15.31 | preparado (LISTO CON CORRECCIONES) |
+| `subida_n8` | nivel 8 (aprendizaje abierto con 90 celdas) | 23-sep | arnés 26/26; humos 12690–12691 | preparado, sin serie; en auditoría | HANDOFF §15.31 | preparado |
+| `subida_n9` | nivel 9 (¿O3 cruza porque se lee a sí mismo?) | 23-sep | arnés 22/22; lesiones H-SI / H-RES | preparado, sin serie | HANDOFF §15.31 | preparado (LISTO CON CORRECCIONES) |
+| `subida_n10` | niveles 10–13 (el nodo viaja en el parto, pista v2) | 23-sep | arnés 26/26; humo 12391 | serie 12301–12320 **en curso** | HANDOFF §15.31 | en curso (LISTO PARA SERIE) |
 
 ## Borradores y huérfanos (sin preregistro o sin corrida ni entrada)
 - `v11_consolidacion`: sólo una especificación; nunca se convirtió en preregistro.

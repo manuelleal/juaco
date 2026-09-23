@@ -6409,9 +6409,9 @@ Arneses antes de lanzar: `identidad_apr.py` 21/21, identidad corta del juez OK. 
 | APR | 0.385 | 0.376 | NO (0/180) | 36 % / 63 % |
 | FABRICA | 0.336 | 0.335 | NO (0/180) | 39 % / 61 % |
 
-Pareado APR vs FABRICA: gana 20/20, diferencia mediana 0.0486 (rango 0.007–0.116). Predicciones: P1, P2, P3, P5, P6, P7, P11 se cumplen; P4, P8, P9, P10 sin serie (brazos O1, APR_SIN_HERENCIA, APR_AZAR no corridos).
+Pareado APR vs FABRICA: gana 20/20, diferencia mediana 0.0486 (rango 0.007–0.116). Predicciones: P1, P2, P3, P5, P6, P7, P11 se cumplen; P4, P8, P9, P10 no se evalúan en esta réplica (brazos O1, APR_SIN_HERENCIA, APR_AZAR no corridos; en la serie 8101–8120 P8 se cumplió: APR gana a SIN_HERENCIA 20/20, +0.094).
 
-**Lectura honesta.** Lo que el preregistro llama HAY ALGO MODESTO queda replicado: APR aprende a contenerse (quita mordidas malas) y por eso rinde un poco más que FABRICA, pero no descubre la limpieza y queda lejos de 0.9. Sin P8/P9 no se sabe si la ventaja viene de la herencia o de cualquier ruido en la política.
+**Lectura honesta.** Lo que el preregistro llama HAY ALGO MODESTO queda replicado: APR aprende a contenerse (quita mordidas malas) y por eso rinde un poco más que FABRICA, pero no descubre la limpieza y queda lejos de 0.9. La serie original ya mostró que la ventaja depende de heredar lo aprendido (APR > SIN_HERENCIA 20/20); falta replicar ese brazo.
 
 **Vocabulario permitido:** *"aprende a contenerse y rinde algo más que la fábrica, replicado; no descubre la limpieza"*. Prohibido: "aprende a limpiar", "cruza".
 

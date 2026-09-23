@@ -6,7 +6,7 @@
 
 ## AL 23-SEP-2026 (manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.31 y en la cola del REGISTRO)
 - **Aprende a barrer, réplica 8121–8140: HAY ALGO MODESTO replicado.** APR 0.385 vs FABRICA 0.336 (mediana R0), APR gana 20/20 (dif. 0.049),
-  no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8/P9 (vs APR_SIN_HERENCIA/APR_AZAR) sin serie. Nivel 8: propuesta 45 %.
+  no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8 (gana a APR_SIN_HERENCIA 20/20) se midió en la serie original; la réplica sólo corrió APR y FABRICA. Nivel 8: propuesta 45 %.
 - **Generaciones que conviven:** monocultivos 10101–10120 corriendo (Pool 6); faltan mixta H y réplica 10121 (`experimentos/generaciones/INFORME_CONVIVE.md`).
 - **Subida de niveles 5–10 (pedido del director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"):** seis equipos
   (explorador Haiku → creador Opus → auditor Sonnet) dejaron paquetes preregistrados en `experimentos/subida_nN/` con arnés de identidad y humo; ninguno
@@ -44,7 +44,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 ## Pendiente con paquete verificado (al 23-sep; historia de los ítems cerrados en el REGISTRO)
 1. Generaciones que conviven: mixta H 10101 y réplica 10121 (monocultivos y mixta).
 2. Paquetes `experimentos/subida_n5..n10/`: aplicar las correcciones del auditor y correr serie + réplica de cada uno (comandos en su INFORME).
-3. Aprende a barrer: brazos APR_SIN_HERENCIA y APR_AZAR (P8–P10) si se quiere pasar de MODESTO.
+3. Aprende a barrer: replicar los brazos APR_SIN_HERENCIA y APR_AZAR (P8–P10) si se quiere pasar de MODESTO.
 4. Mundo anclado v2: fila tox 2.0 (7021–7040). Fase 10 externa: semillas 2441–2840.
 5. Fase 9, bloque 3 ("cambiar el mundo"): lo cubren la carrera de escuderías, generaciones que conviven y `subida_n9` (modelo de sí).
 
