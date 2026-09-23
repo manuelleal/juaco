@@ -21,6 +21,16 @@
 - **Meta del director (23-sep, antes de salir):** *"si puedes llegar a 100 en todos, fabuloso, ese es el objetivo"*; mínimo leído por el coordinador: **80 %** en
   cada nivel 5–10 (a confirmar con el director). Delegación: *"si hay una decisión difícil tómala, y me dejas comentado por qué la tomaste"*.
 
+## Pedidos del director (23-sep, tarde) y lo lanzado
+- *"arranca el v14.3; la idea es que logremos lo que ayer hicimos, superándolo"* → equipo de 3 en `experimentos/tronco_v14_3/`: tronco v14.2 + mapa (n6) + boca aprendida
+  (aprende_barrer) + limpieza aprendida, en la pista de la carrera de ayer, contra O1; luego examen con el criterio v4.
+- *"soltar el bicho real en un ambiente gigante"* → JUACO-ECO (idea del 21-sep): equipo de 3 en `experimentos/juaco_eco/` (diseño e instrumento; la corrida larga no se lanza aún).
+- *"lanza este además"* (memoria lenta con repaso) → tanda en `experimentos/subida_n8c_memoria_lenta/`.
+- *"haz un Frankenstein con todo… como prototipo y lo sueltas en el mundo"* → `experimentos/frankenstein/`, **EXPLORATORIO, no es dato**
+  (mapa + curiosidad con presupuesto + modelo de sí + memoria lenta + herencia + interruptor explorar/explotar).
+- Principio de crecimiento del tronco (respondido al director): una pieza a la vez con memoria declarada, reglas locales, por límite medido,
+  lesión que duela, entra por el criterio v4 con réplica. Hallazgo del día: el límite del nivel 8 no es cantidad de memoria sino muestreo.
+
 ## Decisiones del coordinador en ausencia del director (23-sep; cada una con su porqué)
 - **17:50 — subida_n6 se declara por la letra (HAY ALGO MODESTO), no por el subconjunto de la regla 10.** Por qué: el §10 pide 11/11 principales y V1 es principal; leer el subconjunto como FUNCIONA sería elegir la lectura tras ver el dato. Se deja la propuesta 60 % y la alternativa 70–75 % para el director.
 - **17:50 — subida_n9c (tanda 3 del nivel 9) va al FINAL de la cola.** Por qué: su propio creador espera NO (p 0.97) y el auditor coincide en prioridad baja; lo valioso ya salió sin correr: ERR-118 (el 14/20 de O1 no era buena señal). La tanda 4 del nivel 9 necesita otro diseño.
