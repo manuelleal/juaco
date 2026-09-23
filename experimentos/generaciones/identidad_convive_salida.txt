@@ -1,4 +1,4 @@
-IDENTIDAD PISTA v2 (generaciones solapadas) · 2026-09-22 20:14:22
+IDENTIDAD PISTA v2 (generaciones solapadas) · 2026-09-22 20:25:20
   [OK ] (0) origen pista.py sha fijado · 9f47c65e438e0ff4
   [OK ] (0) pista2.py == construccion por anclas desde el origen · pista2 4d2bee16e7961261 · motor d10cb9021f5d0f41
 (I) solapadas=0 == pista v1 (HEAD a170746) en TODA la salida
@@ -33,6 +33,7 @@ IDENTIDAD PISTA v2 (generaciones solapadas) · 2026-09-22 20:14:22
   [OK ] (H) 9 O3 inmediata s=10010 T=4000: la memoria del padre llega al hijo (tabla no vacia) · 13/13
   [OK ] (K) CTRL_O3_SINTERM pasa el chequeo estatico y tiene TERMINAL = False
   [OK ] (K) CTRL_O3_SINTERM == O3 bit a bit en la fisica mientras TERMINAL no puede dispararse (9 cuerpos, T=1500) · nacimientos 9
+  [OK ] (M) mixta 3 O2 + 3 O3 + 3 O4 solapadas=1 (s=10015, T=2500): determinista y tamano por estrategia == total de la pista · final 18 · {'O2': (5.2308, 1), 'O3': (7.3077, 1), 'O4': (6.9231, 1)}
   [OK ] (T) tope 12 (9 O2 inmediata s=10011 T=3000): max vivos <= 12, bloqueados > 0, t_tope marcado · max 12 · bloqueados 25 · t_tope 1220
   [OK ] (G) solapadas=1 con compat=1 aborta
   [OK ] (G) solapadas=1 con diag=1 aborta
@@ -40,4 +41,4 @@ IDENTIDAD PISTA v2 (generaciones solapadas) · 2026-09-22 20:14:22
   [OK ] (G) tope < n aborta
   [OK ] (G) reposicion desconocida aborta
 
-RESULTADO: 36/36 · 136.9s
+RESULTADO: 37/37 · 177.9s

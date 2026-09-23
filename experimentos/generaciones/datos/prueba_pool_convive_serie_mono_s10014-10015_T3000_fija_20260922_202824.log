@@ -1,0 +1,59 @@
+CONVIVE · serie_mono_s10014-10015_T3000_fija · 2026-09-22 20:28:24 · python 3.14.2 · pool 2
+  pista2 4d2bee16e7961261 · motor d10cb9021f5d0f41 · juez 039439d5cdc43bf5 · carros {'FABRICA': '2ebee3e99ea5a33a', 'O1': '99436afa2715f028', 'O2': '34d0bbac36a02521', 'O3': '0442c2884fcb0e11', 'O4': '75fd196ccbc1347e', 'CTRL_O3_SINTERM': '7bb2fff33017e559'}
+  9 fundadores por carro · semillas 10014-10015 · T=3000 · reposicion fija · r_rep 0.03 · tope 300
+  CHEQUEO ESTATICO FABRICA: PASA
+  CHEQUEO ESTATICO O1: PASA
+  CHEQUEO ESTATICO O2: PASA
+  CHEQUEO ESTATICO O3: PASA
+  CHEQUEO ESTATICO O4: PASA
+  CHEQUEO ESTATICO CTRL_O3_SINTERM: PASA
+  IDENTIDAD CORTA solapadas=0 == pista v1 (1 FABRICA compat, T=3000): OK
+  [     3.0s] FABRICA s10014 (2.0s) persisten 0/9 · cuerpos max 11 · (tam_carro, persiste_carro) {'FABRICA': (9.4667, 1)}
+  [     3.2s] FABRICA s10015 (2.1s) persisten 0/9 · cuerpos max 11 · (tam_carro, persiste_carro) {'FABRICA': (9.4667, 1)}
+  [    13.9s] O1 s10014 (10.8s) persisten 1/9 · cuerpos max 22 · (tam_carro, persiste_carro) {'O1': (19.4, 1)}
+  [    14.3s] O1 s10015 (11.1s) persisten 2/9 · cuerpos max 27 · (tam_carro, persiste_carro) {'O1': (21.2, 1)}
+  [    20.2s] O2 s10014 (6.3s) persisten 1/9 · cuerpos max 16 · (tam_carro, persiste_carro) {'O2': (14.6, 1)}
+  [    22.2s] O2 s10015 (7.9s) persisten 0/9 · cuerpos max 20 · (tam_carro, persiste_carro) {'O2': (17.2667, 1)}
+  [    30.2s] O3 s10014 (10.0s) persisten 0/9 · cuerpos max 21 · (tam_carro, persiste_carro) {'O3': (18.6667, 1)}
+  [    30.5s] O3 s10015 (8.3s) persisten 0/9 · cuerpos max 17 · (tam_carro, persiste_carro) {'O3': (14.2, 1)}
+  [    41.6s] O4 s10014 (11.4s) persisten 1/9 · cuerpos max 22 · (tam_carro, persiste_carro) {'O4': (19.4, 1)}
+  [    43.0s] O4 s10015 (12.5s) persisten 2/9 · cuerpos max 27 · (tam_carro, persiste_carro) {'O4': (21.2, 1)}
+  [    51.2s] CTRL_O3_SINTERM s10015 (8.1s) persisten 0/9 · cuerpos max 17 · (tam_carro, persiste_carro) {'CTRL_O3_SINTERM': (14.2, 1)}
+  [    51.4s] CTRL_O3_SINTERM s10014 (9.8s) persisten 0/9 · cuerpos max 21 · (tam_carro, persiste_carro) {'CTRL_O3_SINTERM': (18.6667, 1)}
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\convive\experimentos\generaciones\datos\convive_serie_mono_s10014-10015_T3000_fija_20260922_202824.json (sha 4ff989140712e9b3)
+
+  CRITERIO PRINCIPAL (sec. 9): persiste el carro (>= 1 linaje sin fundadores tras t = 10000) · tamano del carro (media t >= T/2)
+  FABRICA          persiste el carro 2/2 -> ESTABILIZA (con >= 5 nac: 0) · tamano del carro (mediana por semilla) 9.467
+  O1               persiste el carro 2/2 -> ESTABILIZA (con >= 5 nac: 2) · tamano del carro (mediana por semilla) 20.3
+  O2               persiste el carro 2/2 -> ESTABILIZA (con >= 5 nac: 1) · tamano del carro (mediana por semilla) 15.933
+  O3               persiste el carro 2/2 -> ESTABILIZA (con >= 5 nac: 0) · tamano del carro (mediana por semilla) 16.433
+  O4               persiste el carro 2/2 -> ESTABILIZA (con >= 5 nac: 2) · tamano del carro (mediana por semilla) 20.3
+  CTRL_O3_SINTERM  persiste el carro 2/2 -> ESTABILIZA (con >= 5 nac: 0) · tamano del carro (mediana por semilla) 16.433
+
+  carro   | persisten/lin | sin ext | sem estab (con >=1 lin) | R0_coh (cens) | R0_compl | R0_muertos | tam media/min/final | gen max | vida | vol decl/muertes | cuerpos (max) | bloq | s/semilla
+  FABRICA |   0/ 18 |  18 |  0/2 (0) | 0.183 (0.0) | 0.127 | 0.067 | 1.032/1.0/1.0 | 1.0 | 145.5 | 0/177 (0.0) | None (11) | 0 | 2.05
+  O1      |   3/ 18 |  18 |  0/2 (2) | 1.0 (0.333) | 0.0 | 0.0 | 1.806/1.0/2.0 | 1.0 | 600.0 | 0/104 (0.0) | None (27) | 0 | 10.95
+  O2      |   1/ 18 |  18 |  0/2 (1) | 0.5 (0.333) | 0.0 | 0.0 | 1.21/1.0/1.0 | 1.0 | 856.0 | 0/36 (0.0) | None (20) | 0 | 7.1
+  O3      |   0/ 18 |  18 |  0/2 (0) | 0.5 (0.5) | 0.75 | 0.5 | 1.452/1.0/1.5 | 1.0 | 1224.25 | 0/23 (0.0) | None (21) | 0 | 9.15
+  O4      |   3/ 18 |  18 |  0/2 (2) | 1.0 (0.333) | 0.0 | 0.0 | 1.806/1.0/2.0 | 1.0 | 600.0 | 0/104 (0.0) | None (27) | 0 | 11.95
+  CTRL_O3_SINTERM |   0/ 18 |  18 |  0/2 (0) | 0.5 (0.5) | 0.75 | 0.5 | 1.452/1.0/1.5 | 1.0 | 1224.25 | 0/23 (0.0) | None (21) | 0 | 8.95
+
+  PREDICCIONES FIRMADAS DEL COORDINADOR (PREREGISTRO sec. 9)
+   - O2 persiste como carro en monocultivo en >= 15/20 (p 0.70): 2/2 -> SE CUMPLE
+   - O3 persiste como carro en monocultivo en >= 15/20 (p 0.70): 2/2 -> SE CUMPLE
+   - O4 persiste como carro en monocultivo en >= 15/20 (p 0.70): 2/2 -> SE CUMPLE
+   - FABRICA persiste como carro en >= 15/20 (p 0.20): 2/2 -> OCURRE
+
+  PREDICCIONES DEL CREADOR (PREREGISTRO sec. 5; H-b sigue como estaba)
+
+  PREDICCIONES FIRMADAS (PREREGISTRO_convive.md)
+   - LECTURA sec. 5 (NO decide; H se evalua en la MIXTA, sec. 9): O2 >= O3 - 15 y >= O4 - 15 linajes persistentes en monocultivo: NO EVALUABLE (ningun carro llega a 10 linajes persistentes)
+   - H-b (mecanismo): la muerte programada no da ventaja: O3 <= CTRL_O3_SINTERM + 15 y O4 <= O1 + 15 (persisten, de 180): NO EVALUABLE (ningun carro llega a 10 linajes persistentes)
+   - FABRICA: persisten 0 en (0, 5): SI · tam medio 1.032 en (0.9, 1.2): SI · semillas con >= 1 linaje persistente 0 en (0, 2): SI
+   - O1: persisten 3 en (0, 30): SI · tam medio 1.806 en (1.1, 2.2): SI · semillas con >= 1 linaje persistente 2 en (8, 20): NO
+   - O2: persisten 1 en (5, 45): NO · tam medio 1.21 en (1.1, 2.2): SI · semillas con >= 1 linaje persistente 1 en (12, 20): NO
+   - O3: persisten 0 en (10, 60): NO · tam medio 1.452 en (1.2, 2.5): SI · semillas con >= 1 linaje persistente 0 en (15, 20): NO
+   - O4: persisten 3 en (5, 50): NO · tam medio 1.806 en (1.0, 2.0): SI · semillas con >= 1 linaje persistente 2 en (12, 20): NO
+   - CTRL_O3_SINTERM: persisten 0 en (10, 60): NO · tam medio 1.452 en (1.2, 2.5): SI · semillas con >= 1 linaje persistente 0 en (15, 20): NO
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\convive\experimentos\generaciones\datos\convive_serie_mono_s10014-10015_T3000_fija_20260922_202824_resumen.json
+Terminado en 51.5s

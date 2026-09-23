@@ -94,3 +94,24 @@ python experimentos/generaciones/corre_convive.py --serie --desde 10121 --n 20 -
 1. **Aprobar o no el quimiostato (P7).** El pedido decía «los mismos objetos y el mismo olvido por objeto»: eso se cumple. La reposición inmediata, en cambio, no regula. Propongo un ERR para el «mundo bomba» de v1: con un cuerpo por linaje era invisible, pero es la misma raíz de «la limpieza compartida es un bien público» (ENMIENDA 4).
 2. Con 9 linajes del mismo carro, la persistencia por linaje queda dominada por la deriva. Para la letra de H quizá conviene la mezcla O2*3+O3*3+O4*3 (competencia directa en el mismo mundo). El juez no la corre todavía.
 3. O3 y O4 casi no disparan su muerte programada en v2. H se prueba con los carros tal cual; H-b separa el mecanismo.
+
+## v2 (tras la §9 del coordinador) — juez con el criterio principal y la pista mixta
+- **Juez `corre_convive.py`** (e6dadfdad9c379cd):
+  - **Criterio principal por semilla:** *persiste el carro* = ≥ 1 linaje sin fundadores tras t = 10000 (se reporta también la variante con ≥ 5 nacimientos). *Tamaño del carro* = cuerpos vivos, media de las muestras con t ≥ T/2. El carro *estabiliza* con ≥ 15/20 semillas.
+  - La persistencia por linaje se sigue reportando y no decide.
+  - Imprime las 4 predicciones de la §9.
+  - `--mix`: 3 O2 + 3 O3 + 3 O4 con el quimiostato. Por semilla da el tamaño y la persistencia de cada estrategia. Compara O2−O3 y O2−O4 en pares (gana, pierde, empata, diferencia mediana, prueba de signo bilateral exacta). **H se sostiene** si O2 no queda por debajo en ≥ 15/20 contra ninguna de las dos.
+  - Con T ≤ 10000 avisa que «persiste el carro» es trivial.
+- **Arnés 37/37:** los 36 de antes + (M), la mixta con `solapadas=1`, determinista y con el tamaño por estrategia igual al total de la pista. La mixta con `solapadas=0` ya estaba en (I).
+- **Pool 2** (prueba de ruta, T = 3000, 10014–10015): monocultivo 6 carros en 52 s y mixta en 10 s. Escriben crudo, log, pizarra y resumen (`datos/prueba_pool_*`). Números sin valor.
+- **Tiempos a T = 100000:**
+  - mixta ≈ 300 s por semilla → **≈ 20–25 min** con Pool 6;
+  - monocultivos (6 carros) ≈ 2400 s de CPU por semilla → **≈ 2.5–3 h** con Pool 6.
+
+```
+python experimentos/generaciones/identidad_convive.py                                             # 37/37
+python experimentos/generaciones/corre_convive.py --serie --desde 10101 --n 20 --pool 6           # monocultivos: FABRICA, O1, O2, O3, O4, CTRL_O3_SINTERM
+python experimentos/generaciones/corre_convive.py --serie --mix --desde 10101 --n 20 --pool 6     # mixta (H)
+python experimentos/generaciones/corre_convive.py --serie --desde 10121 --n 20 --pool 6           # replica monocultivos
+python experimentos/generaciones/corre_convive.py --serie --mix --desde 10121 --n 20 --pool 6     # replica mixta
+```

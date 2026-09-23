@@ -17,6 +17,7 @@ MISION: llegar a la AGI por este camino.
   (H) HERENCIA: crea/nace por cuerpo (espia): crea = fundadores + nacimientos (+9 iniciales), nace = nacimientos, la memoria
       del padre llega (O1: tabla no vacia en los hijos); quiere_parir recibe cola == vivos_linaje - 1.
   (K) CONTROL CTRL_O3_SINTERM: pasa el chequeo, TERMINAL = False, y == O3 bit a bit mientras TERMINAL no puede dispararse.
+  (M) MIXTA (sec. 9) con solapadas=1: determinista y el tamano por estrategia del juez suma el total (la mixta con solapadas=0 ya esta en (I)).
   (T) TOPE DE SEGURIDAD: con tope 12 nunca hay mas de 12 vivos; bloqueados > 0 y t_tope marcado.
   (G) GUARDIAS.
 Uso: python experimentos/generaciones/identidad_convive.py   (escribe identidad_convive_salida.txt)
@@ -184,6 +185,15 @@ def main():
     for d in a['linajes'] + b['linajes']: d.pop('carro')
     di("(K) CTRL_O3_SINTERM == O3 bit a bit en la fisica mientras TERMINAL no puede dispararse (9 cuerpos, T=1500)", a == b,
        f"nacimientos {sum(l['nacimientos'] for l in b['linajes'])}")
+    # (M) pista MIXTA (sec. 9) con solapadas=1: determinismo y el tamano por estrategia del juez suma el total de la pista
+    import corre_convive as CC
+    mx = ['O2'] * 3 + ['O3'] * 3 + ['O4'] * 3
+    a = N(P2.run(10015, mx, T=2500, diag=0, solapadas=1)); b = N(P2.run(10015, mx, T=2500, diag=0, solapadas=1))
+    x = CC.tarea((10015, 'MIX', 2500, 'fija', 300, 0.03))
+    tot = sum(x['crudo'][j]['tam'][-1] for j in range(9))
+    ok_e = sorted(x['estr']) == ['O2', 'O3', 'O4'] and sum(v['tam_final'] for v in x['estr'].values()) == tot == a['pista']['tam_total'][-1]
+    di("(M) mixta 3 O2 + 3 O3 + 3 O4 solapadas=1 (s=10015, T=2500): determinista y tamano por estrategia == total de la pista",
+       a == b and ok_e, f"final {tot} · {CC._estr_txt(x)}")
     # (T)
     r = P2.run(10011, ['O2'] * 9, T=3000, diag=0, solapadas=1, reposicion='inmediata', tope_cuerpos=12)
     ps = r['pista']
