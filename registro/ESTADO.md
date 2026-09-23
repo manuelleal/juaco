@@ -28,6 +28,8 @@
 - *"lanza este además"* (memoria lenta con repaso) → tanda en `experimentos/subida_n8c_memoria_lenta/`.
 - *"haz un Frankenstein con todo… como prototipo y lo sueltas en el mundo"* → `experimentos/frankenstein/`, **EXPLORATORIO, no es dato**
   (mapa + curiosidad con presupuesto + modelo de sí + memoria lenta + herencia + interruptor explorar/explotar).
+- *"mete la reparación del 7 en el v14.3, congelando siempre"* (18:35) → la reparación N de `subida_n7` (norm_lenta, cero memoria nueva) entra al
+  v14.3 **si la réplica 7721–7740 repite** (regla del proyecto); v14.3 se construye por anclas desde v14.2 y se congela con manifiesto; v14.2 no se toca.
 - Principio de crecimiento del tronco (respondido al director): una pieza a la vez con memoria declarada, reglas locales, por límite medido,
   lesión que duela, entra por el criterio v4 con réplica. Hallazgo del día: el límite del nivel 8 no es cantidad de memoria sino muestreo.
 
