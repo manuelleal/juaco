@@ -1,0 +1,36 @@
+[13:07:37 +   0.0s] === IDENTIDAD FANIN (fanin=6 == tronco, bit a bit) ===
+[13:07:37 +   0.0s]   sha 17528d767fcebaf6  organismo_v142.py
+[13:07:37 +   0.0s]   sha 9e5f566cd6a7a4d2  organismo_v142g.py
+[13:07:37 +   0.0s]   sha e5929942647756a5  bateria_generaliza_v142.py
+[13:07:37 +   0.0s]   sha a1d97a02bdf9dec9  organismo_v142_fanin.py
+[13:07:37 +   0.0s]   sha 71e9b247ec1e91fc  organismo_v142g_fanin.py
+[13:07:37 +   0.0s]   sha 5e6719576adde66a  identidad_fanin.py
+[13:07:37 +   0.0s]   numpy 2.4.3  python 3.14.2
+[13:07:37 +   0.0s]   kwargs del tronco (bateria_generaliza_v142, entrada organismo_v142): {'eta_s': 0.15, 'clip_s': 10.0, 'puerta': 3, 'mask_rel': 2, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'puerta_pat': 5, 'pat_shuf': 0, 'pat_min': 1}
+[13:07:37 +   0.0s] A. organismo_v142_fanin(fanin=6) vs organismo_v142, T=100000
+[13:07:48 +  10.6s]   IDENTICO BUG  semilla 1 diag=False claves 28  splits 0/0  W {'A': 1.0, 'B': -3.0, 'C': -0.5, 'D': -2.5}
+[13:08:00 +  22.5s]   IDENTICO BUG  semilla 2 diag=False claves 28  splits 0/0  W {'A': 1.0, 'B': -3.0, 'C': -0.5, 'D': -2.5}
+[13:08:11 +  33.5s]   IDENTICO E1   semilla 1 diag=False claves 28  splits 0/0  W {'A': 1.0, 'B': -2.98, 'C': -0.5, 'D': -2.5}
+[13:08:22 +  45.3s]   IDENTICO E1   semilla 2 diag=False claves 28  splits 0/0  W {'A': 1.0, 'B': -2.96, 'C': -0.5, 'D': -2.5}
+[13:08:34 +  57.1s]   IDENTICO E2   semilla 1 diag=False claves 28  splits 0/0  W {'A': -2.92, 'B': 1.0, 'C': -0.5, 'D': 1.5}
+[13:08:46 +  69.0s]   IDENTICO E2   semilla 2 diag=False claves 28  splits 0/0  W {'A': -2.92, 'B': 1.0, 'C': -0.5, 'D': 1.5}
+[13:08:59 +  82.0s]   IDENTICO E2I  semilla 1 diag=False claves 28  splits 0/0  W {'A': 1.0, 'B': -3.47, 'C': -2.87, 'D': -2.87}
+[13:09:13 +  95.8s]   IDENTICO E2I  semilla 2 diag=False claves 28  splits 1/1  W {'A': 1.0, 'B': -3.5, 'C': -2.87, 'D': -4.15}
+[13:09:25 + 108.1s]   IDENTICO E2J  semilla 1 diag=False claves 28  splits 2/2  W {'A': 1.0, 'B': -2.96, 'C': 2.78, 'D': 1.0}
+[13:09:39 + 121.9s]   IDENTICO E2J  semilla 2 diag=False claves 28  splits 3/3  W {'A': 1.0, 'B': -2.97, 'C': 2.79, 'D': 1.0}
+[13:09:51 + 134.4s]   IDENTICO E2K  semilla 1 diag=False claves 28  splits 3/3  W {'A': 1.0, 'B': -2.98, 'C': 2.88, 'D': 1.0}
+[13:10:04 + 146.8s]   IDENTICO E2K  semilla 2 diag=False claves 28  splits 2/2  W {'A': 1.0, 'B': -2.98, 'C': 2.94, 'D': 1.0}
+[13:10:18 + 160.6s]   IDENTICO E2L  semilla 1 diag=False claves 28  splits 3/3  W {'A': 1.0, 'B': -2.96, 'C': -0.5, 'D': -2.5}
+[13:10:32 + 174.6s]   IDENTICO E2L  semilla 2 diag=False claves 28  splits 3/3  W {'A': 1.0, 'B': -2.98, 'C': -0.5, 'D': -2.5}
+[13:10:45 + 187.9s]   IDENTICO E1   semilla 1 diag=True  claves 28  splits 0/0  W {'A': 1.0, 'B': -2.98, 'C': -0.5, 'D': -2.5}
+[13:10:58 + 200.6s]   IDENTICO E2L  semilla 1 diag=True  claves 28  splits 3/3  W {'A': 1.0, 'B': -2.96, 'C': -0.5, 'D': -2.5}
+[13:10:58 + 200.6s] B. organismo_v142g_fanin(fanin=6) vs organismo_v142g, mundo de regla, T=200000, kwargs del tronco
+[13:11:25 + 228.0s]   IDENTICO px0   semilla 1 diag=False claves 38  splits 29/29  W_apriori[0:3] [1.3591496707889277, 0.9972272198907961, 0.9739703200963908]
+[13:11:51 + 253.5s]   IDENTICO px0   semilla 2 diag=False claves 38  splits 24/24  W_apriori[0:3] [0.9878590798903135, 0.9792261749691129, 1.0007214370163342]
+[13:12:19 + 282.0s]   IDENTICO azar  semilla 1 diag=False claves 38  splits 20/20  W_apriori[0:3] [5.6968571218082715, -2.7803294356213413, 1.1163232444502558]
+[13:12:46 + 309.4s]   IDENTICO azar  semilla 2 diag=False claves 38  splits 28/28  W_apriori[0:3] [-2.3309002648668073, -2.7686294147061425, 0.9982633204307196]
+[13:13:15 + 337.9s]   IDENTICO xor01 semilla 1 diag=False claves 38  splits 20/20  W_apriori[0:3] [-2.4815365161411407, -2.5504701226830506, -3.050857966486307]
+[13:13:44 + 367.0s]   IDENTICO xor01 semilla 2 diag=False claves 38  splits 37/37  W_apriori[0:3] [4.9273948720599945, 4.3603783737651165, 4.354142826642194]
+[13:14:12 + 395.0s]   IDENTICO px0   semilla 1 diag=True  claves 38  splits 29/29  W_apriori[0:3] [1.3591496707889277, 0.9972272198907961, 0.9739703200963908]
+[13:14:12 + 395.0s] 
+[13:14:12 + 395.0s] IDENTIDAD 23/23 -- TODO IDENTICO: fanin=6 es el tronco bit a bit (y diag es inerte)

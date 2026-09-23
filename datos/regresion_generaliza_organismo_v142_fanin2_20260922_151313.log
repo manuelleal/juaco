@@ -1,0 +1,16 @@
+[15:13:13 +   0.0s] FANIN = 2  HUMO = False  T = 200000  Pool = 6
+[15:13:13 +   0.0s] === REGRESIÓN DE GENERALIZACIÓN (Etapa 3) — organismo_v142_fanin, 20 semillas (6041..6060), Pool(6) ===
+[15:13:13 +   0.0s] instrumento organismo_v142g_fanin 71e9b247ec1e91fc  organismo a1d97a02bdf9dec9  esta bateria df13a4e65335ff10
+[15:13:40 +  27.3s]           10/40
+[15:14:06 +  52.9s]           20/40
+[15:14:21 +  68.2s]           30/40
+[15:14:48 +  95.1s]           40/40
+[15:14:48 +  95.1s] 
+[15:14:48 +  95.1s]   OK    K  cobertura del primer encuentro: 20/20
+[15:14:48 +  95.1s]   PASA  G1 valor en patrones nunca vistos: px0 1.000 (>=0.65), azar 0.500, px0>azar 20/20
+[15:14:48 +  95.1s]   PASA  G2 conducta al primer encuentro: px0 0.997 (>=0.55), azar 0.499, px0>azar 20/20
+[15:14:48 +  95.1s]         divisiones 26  celdas 56  muertes 266
+[15:14:48 +  95.1s] 
+[15:14:48 +  95.1s] VEREDICTO bateria_generaliza (organismo_v142_fanin): K_cobertura=True G1_valor=True G2_conducta=True
+[15:14:48 +  95.1s] *** organismo_v142_fanin CONSERVA la generalización de la Etapa 3
+[15:14:48 +  95.2s] datos -> regresion_generaliza_organismo_v142_fanin2_20260922_151313.json  sha256_16 = c976a88f7eb299e2
