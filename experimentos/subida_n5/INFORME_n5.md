@@ -26,7 +26,7 @@
 - **Predicción de mecanismo que no hice:** V-5 parte casillas sobre todo por la **experiencia propia** (295–405
   partos por bocado, ~340–424 subcasillas), no sólo por el mensaje.
 - **Riesgo de coste mayor que el firmado:** en el humo BA-v5 muere 81–96 contra 34 de BA-v y come menos
-  (3 631–4 056 contra 5 616 bocados de comida). Mis predicciones **K4 (1.0×, 0.7–1.5×)** y **P7 (1.2×, 0.8–2.0×)**
+  (3 287–4 056 contra 5 616 bocados de comida; corregido por el coordinador el 23-sep: BAR-T 3 287 quedaba fuera del rango citado). Mis predicciones **K4 (1.0×, 0.7–1.5×)** y **P7 (1.2×, 0.8–2.0×)**
   quedan en riesgo alto (2.4× aquí, n = 1). No recalibré nada (§9.3 escrito antes de la serie).
 - Toqué sin querer `MANIFEST.txt` al correr `python manifiesto.py` (lo regenera) y lo restauré con
   `git checkout -- MANIFEST.txt`. **Al cierre aparece otra vez modificado y no fui yo** (no volví a correrlo):

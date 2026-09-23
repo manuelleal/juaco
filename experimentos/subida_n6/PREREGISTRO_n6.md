@@ -179,7 +179,7 @@ conteos y pesos, no como semillas.
   - GF: 0.95 / 0.90 (rodeo / atajo), `huye` 0.0, pasos 16.8.
   - BRÚJULA: 0.0 / 0.1, `pisa(rodeo)` 1.0.
   - CIEGO, CAMINO, BARAJADO e INVERTIDO: 0.0.
-  - Comida GF / CIEGO: 365 / 113. V1: 21/21.
+  - Comida GF / CIEGO: 365 / 113. V1: 21/21 (unidad: 21 venenos recordados en M de 21, UNA corrida de humo, semilla 6641; aclaración de unidad del coordinador, 23-sep, sin cambio de letra).
   - PLACEBO, GRAD, FILTRO y el mundo E no se corrieron (tope de 6).
 
 ## 10. Criterio y vocabulario (propuesta de puntos; decide el director)
