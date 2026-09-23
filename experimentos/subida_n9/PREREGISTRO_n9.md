@@ -94,7 +94,7 @@ Serie **13301–13320** · réplica **13321–13340** · humo **13391** · arné
 - HAY ALGO MODESTO sólo con H-RES: +5.
 - NO: 0, y recomiendo que la propuesta de 65 % baje a 55 %: el cruce sería de la política escrita a mano, no de un modelo de sí.
 
-## 10. Enmienda 1 (tras el humo 13391, ANTES de cualquier serie; toca la LECTURA de H-SI, no una puerta ni una predicción)
+## 10. Enmienda 1 — **ERR-114** (tras el humo 13391, ANTES de cualquier serie; toca la LECTURA de H-SI, no una puerta ni una predicción)
 En el humo (T = 12000) los linajes de O3_LES_SI mueren rápido y cada fundador limpio empieza con el anillo vacío: los estados
 pasados que lee quedan por debajo de los reales (E 0.795 usada / 0.944 real; Ag 0.754 / 0.856). En el arnés (s13392) estaban
 igualados (0.976 / 1.012). Por eso la frase "misma distribución" no está garantizada en el régimen de colapso.

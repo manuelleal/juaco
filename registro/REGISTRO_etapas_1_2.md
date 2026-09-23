@@ -6416,3 +6416,7 @@ Pareado APR vs FABRICA: gana 20/20, diferencia mediana 0.0486 (rango 0.007–0.1
 **Vocabulario permitido:** *"aprende a contenerse y rinde algo más que la fábrica, replicado; no descubre la limpieza"*. Prohibido: "aprende a limpiar", "cruza".
 
 **Qué queda.** Brazos APR_SIN_HERENCIA y APR_AZAR. Nivel 8: propuesta 40 → 45 % — decide el director.
+
+### ERR-114 y ERR-115 (23-sep-2026, auditorías de los paquetes subida_n5..n10)
+- **ERR-114** (regla 11, `experimentos/subida_n9/PREREGISTRO_n9.md` §10): la Enmienda 1 fija el tope de la lectura V-M en 0.10 después de ver el humo 13391 (un primer tope de 0.15 quedaba justo encima del valor del humo, 0.149, y se descartó por ajustado al dato). Se escribió antes de la serie y V-M sólo se imprime (no es puerta; P1–P7 y §5–§6 no cambian), pero toda enmienda que cambia un umbral lleva ERR. Numerado por el coordinador al detectarlo el auditor.
+- **ERR-115** (procedimiento): los runners de JUACO parsean `sys.argv` a mano y no rechazan banderas desconocidas; el auditor de `subida_n5` corrió `corre_v5.py --serie … --help` esperando ayuda y lanzó una serie real con Pool (abortada en 40/840, no es dato, log en `datos/humo_no_registrado/`). Regla derivada: los agentes de solo lectura no ejecutan runners con `--serie` en ninguna forma; los runners nuevos abortan ante banderas desconocidas.

@@ -11,8 +11,10 @@
 - **Subida de niveles 5–10 (pedido del director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"):** seis equipos
   (explorador Haiku → creador Opus → auditor Sonnet) dejaron paquetes preregistrados en `experimentos/subida_nN/` con arnés de identidad y humo; ninguno
   tiene serie todavía, ningún nivel cambia. Auditoría: n5, n6, n7, n9 LISTO CON CORRECCIONES; n10 LISTO PARA SERIE; n8 en construcción (el explorador falló).
-  Cola de series (un paquete por Pool, máx. 2 Pools/14 procesos): ver `INFORME_nN.md` de cada carpeta.
-- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **113**.
+  Cola de series (un paquete por Pool, máx. 2 Pools/14 procesos): n10 (corriendo) → n8 → **n9** → n6 → n7 → n5; comandos en `INFORME_nN.md`.
+- **Decisión del director (23-sep):** *"esperamos al 9 antes de fijar el 65; tiene que subir a 90"*; *"adelanta el 9 después del 8 y dale dos tandas"*.
+  Nivel 9 sigue en 50 % hasta el resultado de `subida_n9`; meta del director: 90 %. Segunda tanda del equipo 9 en diseño (`experimentos/subida_n9b/`).
+- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **115**.
 
 ## AL 22-SEP-2026, 21:15 (cierre; manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.30 y en la cola del REGISTRO)
 - **Primer cruce de H-1 en JUACO** (carrera de escuderías, monocultivo de O1, que limpia): R0 de nacimientos reales 0.941, replicado en semillas
@@ -49,7 +51,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 5. Fase 9, bloque 3 ("cambiar el mundo"): lo cubren la carrera de escuderías, generaciones que conviven y `subida_n9` (modelo de sí).
 
 ## Errores
-Último: **ERR-113** (rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-114**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
+Último: **ERR-115** (23-sep: 114 enmienda V-M de subida_n9, 115 runners aceptan banderas desconocidas) · rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-116**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos
