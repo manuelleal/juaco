@@ -1,0 +1,32 @@
+[18:31:10] SUBIDA N6B — mundos {'D': {'ancho': 11, 'alto': 11, 'cierre': 5, 'd_ini': 4, 'metas2': True, 'min_salidas': 3, 'margen': 2, 'p_max': 18}, 'P': {'ancho': 11, 'alto': 11, 'cierre': 5, 'd_ini': 4}} r_vis=1 T=100000 n_tel=40 semillas 14641-14641 brazos 6 pool=0 pid=23072 mundo_subida_b 214d5763758473fa
+[18:31:10]   tronco v14.2 (inspect, difiere del defecto del mundo): {'eta_s': 0.15, 'clip_s': 10.0, 'mask_rel': 2, 'puerta_pat': 5, 'desambiguar': 1}
+[18:31:10]   regla 14 CIEGO   vs subida_n6 CIEGO: 14 campos; difieren ['clip_s', 'desambiguar', 'eta_s', 'mask_rel', 'prueba.margen', 'prueba.metas2', 'prueba.min_salidas', 'prueba.p_max', 'puerta_pat'] (todas declaradas)
+[18:31:10]   regla 14 GF      vs subida_n6 GF   : 16 campos; difieren ['clip_s', 'desambiguar', 'eta_s', 'mask_rel', 'prueba.margen', 'prueba.metas2', 'prueba.min_salidas', 'prueba.p_max', 'puerta_pat'] (todas declaradas)
+[18:31:10]   regla 14 GFX     vs subida_n6 GF   : 16 campos; difieren ['clip_s', 'desambiguar', 'eta_s', 'explora', 'mask_rel', 'prueba.margen', 'prueba.metas2', 'prueba.min_salidas', 'prueba.p_max', 'puerta_pat'] (todas declaradas)
+[18:31:10]   regla 14 UNA     vs subida_n6 GF   : 16 campos; difieren ['clip_s', 'desambiguar', 'eta_s', 'explora', 'mask_rel', 'puerta_pat'] (todas declaradas)
+[18:31:10]   regla 14 GFX_13  vs subida_n6 GF   : 16 campos; difieren ['explora', 'prueba.margen', 'prueba.metas2', 'prueba.min_salidas', 'prueba.p_max'] (todas declaradas)
+[18:31:27]   1/6  CIEGO     s14641  limpio {'cruza': 0.0, 'desvia': 0.05}  elige {'cruza': 0.5, 'desvia': 0.2}  otra {'cruza': 0.0, 'desvia': 0.3}  pisa {'cruza': 1.0, 'desvia': 0.95}  comida 1240 muertes 6  vA 1.0 vB -2.765  M 0/2 0/21  salidas {'cruza': 5, 'desvia': 12}  17.6s
+[18:31:40]   2/6  GF        s14641  limpio {'cruza': 1.0, 'desvia': 0.75}  elige {'cruza': 1.0, 'desvia': 1.0}  otra {'cruza': 0.0, 'desvia': 0.0}  pisa {'cruza': 0.0, 'desvia': 0.25}  comida 1953 muertes 2  vA 1.0 vB -2.089  M 1/2 18/21  salidas {'cruza': 5, 'desvia': 12}  12.6s
+[18:32:24]   3/6  GFX       s14641  limpio {'cruza': 1.0, 'desvia': 0.95}  elige {'cruza': 1.0, 'desvia': 1.0}  otra {'cruza': 0.0, 'desvia': 0.0}  pisa {'cruza': 0.0, 'desvia': 0.05}  comida 685 muertes 2  vA 1.0 vB -2.545  M 2/2 21/21  salidas {'cruza': 5, 'desvia': 12}  43.8s
+[18:33:22]   4/6  BRUJULA   s14641  limpio {'cruza': 0.0, 'desvia': 0.0}  elige {'cruza': 1.0, 'desvia': 0.0}  otra {'cruza': 0.0, 'desvia': 1.0}  pisa {'cruza': 1.0, 'desvia': 1.0}  comida 701 muertes 2  vA 1.0 vB -2.5  M 2/2 21/21  salidas {'cruza': 5, 'desvia': 12}  57.8s
+[18:34:10]   5/6  INVERTIDO s14641  limpio {'cruza': 0.0, 'desvia': 0.0}  elige {'cruza': 0.2, 'desvia': 0.0}  otra {'cruza': 0.0, 'desvia': 0.4}  pisa {'cruza': 1.0, 'desvia': 1.0}  comida 685 muertes 2  vA -1.0 vB 2.545  M 2/2 21/21  salidas {'cruza': 5, 'desvia': 12}  48.0s
+[18:34:59]   6/6  UNA       s14641  limpio {'rodeo': 1.0, 'atajo': 0.95}  elige {}  otra {}  pisa {'rodeo': 0.0, 'atajo': 0.05}  comida 601 muertes 3  vA 1.0 vB -2.545  M 1/1 21/21  salidas None  49.3s
+[18:34:59] --- 6 corridas en 229.0 s ---
+[18:34:59] PUERTAS (una linea por puerta, umbral al lado):
+[18:34:59]   [PASA] D-1a cruza (elige la del otro lado y rodea): limpio GFX >=   1.0  (umbral 0.6) CIEGO 0.0/0.05  GF 1.0/0.75  BRUJULA 0.0/0.0
+[18:34:59]   [PASA] D-1b desvia (elige la del mismo lado): limpio GFX >=         0.95  (umbral 0.6) a_la_otra(desvia) BRUJULA 1.0 [la trampa funciona si es alto]
+[18:34:59]   [PASA] D-2 balanceada: J = limpio(cruza)+limpio(desvia)-1 >=        0.95  (umbral 0.5) 
+[18:34:59]   [PASA] D-3 es el VENENO recordado: media GFX - BRUJULA >=           0.975  (umbral 0.25) pisa BRUJULA 1.0/1.0
+[18:34:59]   [PASA] D-4 es el mapa: media GFX - max(CIEGO, BARAJADO) >=          0.95  (umbral 0.25) CIEGO 0.025 BARAJADO None
+[18:34:59]   [PASA] D-5 no es huida: huye(cruza) GFX <=                          0.0  (umbral 0.2) 
+[18:34:59]   [CAE ] R-4 no regresion: comida GFX/CIEGO >=                        0.552  (umbral 0.9) GFX 685 CIEGO 1240 GF 1953
+[18:34:59]   [PASA] R-5 muertes GFX/max(CIEGO,1) <=                              0.333  (umbral 1.25) GFX 2 CIEGO 6
+[18:34:59]   [PASA] C1 INVERTIDO decisivo: media limpio <=                       0.0  (umbral 0.2) 
+[18:34:59]   [CAE ] PLACEBO validez: |GFX - PLACEBO| (media) <= (si no, NO se lee) None  (umbral 0.15) 
+[18:34:59]   [PASA] V1 memoria COMPLETA: las 2 comidas y las 2 murallas en M de GFX (1/1) 1.0  (umbral 1.0) GF 0/1  UNA 1/1
+[18:34:59]   [PASA] PORT-a v14.2 en el mundo de subida_n6: limpio(rodeo) UNA >=  1.0  (umbral 0.6) 
+[18:34:59]   [PASA] PORT-b v14.2 en el mundo de subida_n6: J UNA >=              0.95  (umbral 0.5) 
+[18:34:59]   pareado (reportado): GFX > BRUJULA en 1/1; GFX > GF en 1/1
+[18:34:59] RESUMEN 11/13 principales -> NO SE LEE (PLACEBO cae)  (HUMO: una semilla y 6 brazos; NO es la serie, no se interpreta)
+[18:34:59] JSON experimentos\subida_n6b\datos\humo\subida_b_humo_20260923_183110.json  sha 0377b2a258056ea2
+[18:34:59] VEREDICTO POR LA LETRA (esta corrida sola): HUMO: no hay veredicto (una semilla, 6 de 11 brazos)
