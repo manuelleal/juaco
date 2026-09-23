@@ -1,0 +1,29 @@
+EXPLORATORIO, no es dato
+regla brazo            b1    b5  bfin t90med  fin 00/01/10/11         llegan90
+RW    SOLA           0.80  0.93  0.93     76  0.91/0.94/0.92/0.87     3/3
+      examen final sin sabia: 1.00
+RW    SABIA          0.85  0.93  0.93     67  0.93/0.94/0.92/0.88     3/3
+RW    MENTIROSA      0.83  0.95  0.95     68  0.87/0.90/0.92/0.93     3/3
+RW    SABIA_RETIRO   0.85  0.93  0.93     67  0.93/0.94/0.92/0.88     3/3
+      retiro: acierto 100 antes=0.93 | 100 despues=0.96 | examen sin sabia al irse=1.00 | examen final=1.00
+      examen al irse por combo: 0+0=1.00 0+1=1.00 1+0=1.00 1+1=1.00
+IND   SOLA           0.54  0.84  0.84  218.5  0.76/0.94/0.92/0.38     2/3
+      examen final sin sabia: 0.92
+IND   SABIA          0.65  0.93  0.93    173  0.85/0.94/0.92/0.66     3/3
+IND   MENTIROSA      0.61  0.88  0.88  219.5  0.49/0.81/0.86/0.91     2/3
+IND   SABIA_RETIRO   0.65  0.93  0.93    173  0.85/0.94/0.92/0.64     3/3
+      retiro: acierto 100 antes=0.85 | 100 despues=0.90 | examen sin sabia al irse=0.92 | examen final=1.00
+      examen al irse por combo: 0+0=1.00 0+1=1.00 1+0=1.00 1+1=0.67
+LIN   SOLA           0.51  0.86  0.86    223  0.77/0.82/0.80/0.71     3/3
+      examen final sin sabia: 0.92
+LIN   SABIA          0.83  0.93  0.93     71  0.92/0.94/0.92/0.87     3/3
+LIN   MENTIROSA      0.60  0.88  0.88    141  0.73/0.70/0.87/0.77     3/3
+LIN   SABIA_RETIRO   0.83  0.86  0.86     71  0.86/0.91/0.89/0.80     3/3
+      retiro: acierto 100 antes=0.93 | 100 despues=0.84 | examen sin sabia al irse=0.83 | examen final=0.83
+      examen al irse por combo: 0+0=1.00 0+1=0.67 1+0=0.67 1+1=1.00
+HIJA RW   hereda 0.0 de la madre SOLA: acierto primeros 100=0.72
+HIJA RW   hereda 0.5 de la madre SOLA: acierto primeros 100=0.93
+HIJA RW   hereda 1.0 de la madre SOLA: acierto primeros 100=0.93
+HIJA IND  hereda 0.0 de la madre SOLA: acierto primeros 100=0.47
+HIJA IND  hereda 0.5 de la madre SOLA: acierto primeros 100=0.85
+HIJA IND  hereda 1.0 de la madre SOLA: acierto primeros 100=0.85

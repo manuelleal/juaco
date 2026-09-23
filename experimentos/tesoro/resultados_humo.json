@@ -1,0 +1,137 @@
+{
+ "EXPLORATORIO": "no es dato",
+ "parametros": {
+  "L": 20,
+  "E0": 30.0,
+  "C_MOV": 0.25,
+  "C_INT": 0.3,
+  "R_OK": 0.15,
+  "R_MAL": -0.4,
+  "R_EST": 6.0,
+  "RACHA": 4,
+  "ETA": 0.2,
+  "EPS": 0.1
+ },
+ "resumen": [
+  {
+   "brazo": "SIN",
+   "semillas": 2,
+   "semillas_con_llegada": 1,
+   "llegan_mediana": 1.0,
+   "llegan_rango": [
+    0,
+    2
+   ],
+   "primera_mediana": 120,
+   "estacion_mediana": 2.75,
+   "intentos_mediana": 72.25,
+   "sigue_piz_tardias": null,
+   "confia_final": 0.0
+  },
+  {
+   "brazo": "CANAL",
+   "semillas": 2,
+   "semillas_con_llegada": 2,
+   "llegan_mediana": 12.0,
+   "llegan_rango": [
+    12,
+    12
+   ],
+   "primera_mediana": 105.0,
+   "estacion_mediana": 5.0,
+   "intentos_mediana": 50.25,
+   "sigue_piz_tardias": 0.835,
+   "confia_final": 0.998
+  },
+  {
+   "brazo": "RUIDO",
+   "semillas": 2,
+   "semillas_con_llegada": 2,
+   "llegan_mediana": 2.5,
+   "llegan_rango": [
+    2,
+    3
+   ],
+   "primera_mediana": 128.5,
+   "estacion_mediana": 3.5,
+   "intentos_mediana": 78.0,
+   "sigue_piz_tardias": 0.498,
+   "confia_final": 0.427
+  }
+ ],
+ "pareado": {
+  "canal_gana_a_sin": 2,
+  "empates_sin": 0,
+  "canal_gana_a_ruido": 2,
+  "empates_ruido": 0,
+  "n": 2
+ },
+ "corridas": [
+  {
+   "brazo": "SIN",
+   "semilla": 7101,
+   "llegan": 0,
+   "primera": null,
+   "est_mediana": 2.5,
+   "intentos_med": 71.0,
+   "usos_piz_tardias": null,
+   "sigue_piz_tardias": null,
+   "confia_final": 0.0
+  },
+  {
+   "brazo": "SIN",
+   "semilla": 7102,
+   "llegan": 2,
+   "primera": 120,
+   "est_mediana": 3.0,
+   "intentos_med": 73.5,
+   "usos_piz_tardias": 0,
+   "sigue_piz_tardias": null,
+   "confia_final": 0.0
+  },
+  {
+   "brazo": "CANAL",
+   "semilla": 7101,
+   "llegan": 12,
+   "primera": 107,
+   "est_mediana": 5.0,
+   "intentos_med": 51.5,
+   "usos_piz_tardias": 45.72727272727273,
+   "sigue_piz_tardias": 0.8130586488442048,
+   "confia_final": 0.9983005965096317
+  },
+  {
+   "brazo": "CANAL",
+   "semilla": 7102,
+   "llegan": 12,
+   "primera": 103,
+   "est_mediana": 5.0,
+   "intentos_med": 49.0,
+   "usos_piz_tardias": 38.72727272727273,
+   "sigue_piz_tardias": 0.857671077141698,
+   "confia_final": 0.9984181804864981
+  },
+  {
+   "brazo": "RUIDO",
+   "semilla": 7101,
+   "llegan": 2,
+   "primera": 144,
+   "est_mediana": 3.5,
+   "intentos_med": 76.5,
+   "usos_piz_tardias": 70,
+   "sigue_piz_tardias": 0.5714285714285714,
+   "confia_final": 0.4052326482220923
+  },
+  {
+   "brazo": "RUIDO",
+   "semilla": 7102,
+   "llegan": 3,
+   "primera": 113,
+   "est_mediana": 3.5,
+   "intentos_med": 79.5,
+   "usos_piz_tardias": 76.5,
+   "sigue_piz_tardias": 0.4246411483253588,
+   "confia_final": 0.44880920210348524
+  }
+ ]
+}

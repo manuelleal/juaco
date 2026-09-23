@@ -1,0 +1,29 @@
+EXPLORATORIO, no es dato. TAREA=CLASES
+regla brazo            b1    b5  bfin t85med  fin 00/01/10/11         llegan85
+RW    SOLA           0.81  0.94  0.94   68.5  0.94/0.94/0.93/0.94     30/30
+      examen final sin sabia: 1.00
+RW    SABIA          0.86  0.94  0.94   56.0  0.94/0.94/0.93/0.94     30/30
+RW    MENTIROSA      0.81  0.92  0.93   70.0  0.93/0.93/0.93/0.94     30/30
+RW    SABIA_RETIRO   0.86  0.94  0.94   56.0  0.94/0.94/0.93/0.94     30/30
+      retiro: acierto 100 antes=0.94 | 100 despues=0.94 | examen sin sabia al irse=1.00 | examen final=1.00
+      examen al irse por combo: 0+0=1.00 0+1=1.00 1+0=1.00 1+1=1.00
+IND   SOLA           0.57  0.90  0.94  241.5  0.94/0.94/0.93/0.94     30/30
+      examen final sin sabia: 1.00
+IND   SABIA          0.63  0.93  0.94  177.0  0.94/0.94/0.93/0.94     30/30
+IND   MENTIROSA      0.55  0.83  0.93  232.5  0.93/0.93/0.93/0.94     30/30
+IND   SABIA_RETIRO   0.63  0.93  0.94  177.0  0.94/0.94/0.93/0.94     30/30
+      retiro: acierto 100 antes=0.94 | 100 despues=0.94 | examen sin sabia al irse=1.00 | examen final=1.00
+      examen al irse por combo: 0+0=1.00 0+1=1.00 1+0=1.00 1+1=1.00
+LIN   SOLA           0.60  0.87  0.87  155.0  0.80/0.93/0.93/0.81     30/30
+      examen final sin sabia: 0.93
+LIN   SABIA          0.83  0.94  0.94   64.5  0.94/0.94/0.93/0.94     30/30
+LIN   MENTIROSA      0.60  0.82  0.84  165.5  0.78/0.90/0.89/0.78     30/30
+LIN   SABIA_RETIRO   0.83  0.94  0.87   64.5  0.80/0.93/0.92/0.81     30/30
+      retiro: acierto 100 antes=0.94 | 100 despues=0.83 | examen sin sabia al irse=0.85 | examen final=0.93
+      examen al irse por combo: 0+0=1.00 0+1=0.70 1+0=0.70 1+1=1.00
+HIJA RW   hereda 0.0 de la madre SOLA: acierto primeros 100=0.78
+HIJA RW   hereda 0.5 de la madre SOLA: acierto primeros 100=0.93
+HIJA RW   hereda 1.0 de la madre SOLA: acierto primeros 100=0.93
+HIJA IND  hereda 0.0 de la madre SOLA: acierto primeros 100=0.55
+HIJA IND  hereda 0.5 de la madre SOLA: acierto primeros 100=0.92
+HIJA IND  hereda 1.0 de la madre SOLA: acierto primeros 100=0.93
