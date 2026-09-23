@@ -1,0 +1,62 @@
+IDENTIDAD_N9B · 2026-09-23 16:47:05 · identidad_n9b.py ff61425c5b8fa09f · corre_n9b.py 4dd094bd8ef9223f
+(0) shas de origen
+  [OK ] sha experimentos\carrera_escuderias\pista.py · 9f47c65e438e0ff4 (fijado 9f47c65e438e0ff4)
+  [OK ] sha experimentos\carrera_escuderias\juez.py · 6a68f640a7832f12 (fijado 6a68f640a7832f12)
+  [OK ] sha experimentos\carrera_escuderias\revisa_carro.py · 1c8a789f7427ab96 (fijado 1c8a789f7427ab96)
+  [OK ] sha experimentos\carrera_escuderias\carros\APR.py · 4402aa5142065c72 (fijado 4402aa5142065c72)
+  [OK ] sha experimentos\carrera_escuderias\carros\FABRICA.py · 2ebee3e99ea5a33a (fijado 2ebee3e99ea5a33a)
+  [OK ] sha experimentos\nivel09_cuerpo_nuevo_b2\organismo_f9c.py · 9dd1fb91ecec35ae (fijado 9dd1fb91ecec35ae)
+(1) construccion por anclas
+  [OK ] carros en disco == construye_n9b.construye() · {'APR': '4402aa5142065c72', 'FABRICA': '2ebee3e99ea5a33a', 'APR_LES_OFF': '513c2457d6d353b1', 'APR_LES_PLANA': 'da8b22798986b52a', 'APR_LES_CRUZ': '25503342098d2bf8', 'APR_LES_MUNDO': '349bc6061ce1fe60'}
+  [OK ] APR copia verbatim (mismo sha que el origen)
+(2) chequeo estatico (revisa_carro de la carrera)
+  [OK ] revisa APR · PASA
+  [OK ] revisa FABRICA · PASA
+  [OK ] revisa APR_LES_OFF · PASA
+  [OK ] revisa APR_LES_PLANA · PASA
+  [OK ] revisa APR_LES_CRUZ · PASA
+  [OK ] revisa APR_LES_MUNDO · PASA
+(3) identidad corta del juez
+  [OK ] FABRICA solo == organismo_f9c REL (s 1, T 5000) · dif []
+(4) APR (copia) con OPCION 0 == FABRICA (N 9, s 13592, T 3000)
+  [OK ] APR OPCION 0 == FABRICA en toda la salida
+(5) APR_LES_OFF == APR BIT A BIT (toda la salida de pista.run, N 9, T 8000)
+  [OK ] s 13592: APR_LES_OFF == APR · decisiones de la opcion 5648 · sin clave 'lesion' en OFF: True
+  [OK ] s 13593: APR_LES_OFF == APR · decisiones de la opcion 6115 · sin clave 'lesion' en OFF: True
+(6) con ALFA_Q = 0 (Q no aprende) las tres lesiones == APR: la lesion solo entra por lo aprendido
+  [OK ] ALFA_Q 0: APR_LES_PLANA == APR (sin los contadores agrupados por el rasgo lesionado)
+  [OK ] ALFA_Q 0: APR_LES_CRUZ == APR (sin los contadores agrupados por el rasgo lesionado)
+  [OK ] ALFA_Q 0: APR_LES_MUNDO == APR (sin los contadores agrupados por el rasgo lesionado)
+(7) lesiones NO inertes con Q aprendido (s 13594, T 8000) y cada una toca SOLO lo suyo
+  [OK ] APR_LES_PLANA difiere de APR y toca solo 'post' · decisiones 6015 · cambia post 5227 (0.869) · cambia mundo 0 (0.000) · post real 0.628 / usado 0.937 · caida real 0.869 / usada 0.000
+  [OK ] determinismo APR_LES_PLANA (dos corridas iguales)
+  [OK ] APR_LES_CRUZ difiere de APR y toca solo 'post' · decisiones 5836 · cambia post 5183 (0.888) · cambia mundo 0 (0.000) · post real 0.574 / usado 0.589 · caida real 0.849 / usada 0.822
+  [OK ] APR_LES_MUNDO difiere de APR y toca solo 'mundo' · decisiones 5920 · cambia post 0 (0.000) · cambia mundo 5863 (0.990) · post real 0.609 / usado 0.609 · caida real 0.871 / usada 0.871
+(8) runner: entrada campo a campo y mini identidad
+  ENTRADA campo a campo (regla 14): corre_n9b.tarea == juez.tarea (9 FABRICA, s 13599, T 2000): OK
+  [OK ] corre_n9b.tarea == juez.tarea (regla 14)
+  MINI IDENTIDAD APR_LES_OFF == APR (N 9, s 13599, T 2000, toda la salida de pista.run): OK
+  [OK ] corre_n9b.mini_identidad (APR_LES_OFF == APR, s 13599)
+(9) parser del runner (ERR-115): lo malo ABORTA sin correr; lo valido parsea (solo se parsea, NO se corre)
+  [OK ] aborta ['--help'] · corre_n9b: bandera desconocida '--help' (validas: ['--T', '--brazos', '--desde', '--humo',
+  [OK ] aborta ['-h'] · corre_n9b: bandera desconocida '-h' (validas: ['--T', '--brazos', '--desde', '--humo', '--
+  [OK ] aborta ['--humo', '--help'] · corre_n9b: bandera desconocida '--help' (validas: ['--T', '--brazos', '--desde', '--humo',
+  [OK ] aborta ['--se'] · corre_n9b: bandera desconocida '--se' (validas: ['--T', '--brazos', '--desde', '--humo', '
+  [OK ] aborta ['--serie', '--desde', '13501', '--n', '20', '--pool=6'] · corre_n9b: bandera desconocida '--pool=6' (validas: ['--T', '--brazos', '--desde', '--humo
+  [OK ] aborta ['--serie', '--desde', '13501', '--n', '20', '--pool', '6', '--help'] · corre_n9b: bandera desconocida '--help' (validas: ['--T', '--brazos', '--desde', '--humo',
+  [OK ] aborta ['--serie', '--desde', '13501', '--n', '20'] · corre_n9b: --serie exige --pool N explicito (N >= 1) -> ABORTA
+  [OK ] aborta ['--humo', '--pool', '6'] · corre_n9b: --humo es de UN proceso (sin --pool) -> ABORTA
+  [OK ] aborta ['--humo', '--desde', '13501'] · corre_n9b: --humo solo con semillas de practica 13581-13598 -> ABORTA
+  [OK ] aborta ['--humo', '--n', '3', '--T', '30000'] · corre_n9b: humo de 15 corridas x T 30000 excede 6 corridas / 200000 pasos -> ABORTA
+  [OK ] aborta ['--serie', '--desde', '13301', '--n', '20', '--pool', '6'] · corre_n9b: --serie solo --desde 13501 --n 20 (serie) o --desde 13521 --n 20 (replica) -> A
+  [OK ] aborta ['--humo', '--humo'] · corre_n9b: bandera repetida '--humo' -> ABORTA (ERR-115)
+  [OK ] aborta ['--foo'] · corre_n9b: bandera desconocida '--foo' (validas: ['--T', '--brazos', '--desde', '--humo', 
+  [OK ] aborta [] · corre_n9b: hace falta exactamente uno de --humo / --serie / --veredicto (hay []) -> ABORTA
+  [OK ] aborta ['--humo', '--brazos', 'apr,xyz'] · corre_n9b: --brazos 'apr,xyz' invalido (validos ['apr', 'fab', 'plana', 'cruz', 'mundo']) 
+  [OK ] aborta ['--serie', '--desde', '13501', '--n', '20', '--pool', '6', '--T', '5000'] · corre_n9b: --serie con T = 100000 (preregistrado) -> ABORTA
+  [OK ] parsea ['--humo']
+  [OK ] parsea ['--humo', '--desde', '13591', '--n', '1', '--T', '20000']
+  [OK ] parsea ['--serie', '--desde', '13501', '--n', '20', '--pool', '6']
+  [OK ] parsea ['--serie', '--desde', '13521', '--n', '20', '--pool', '6']
+  [OK ] parsea ['--veredicto', 'a.json,b.json']
+RESULTADO: 48/48 en 144.6s

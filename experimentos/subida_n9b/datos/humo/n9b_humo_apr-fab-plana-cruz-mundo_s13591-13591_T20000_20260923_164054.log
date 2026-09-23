@@ -1,0 +1,80 @@
+CORRE_N9B · n9b_humo_apr-fab-plana-cruz-mundo_s13591-13591_T20000_20260923_164054 · python 3.14.2 · pool NO (un proceso) · corre_n9b.py 4dd094bd8ef9223f
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 (fijado 9f47c65e438e0ff4) OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 (fijado 6a68f640a7832f12) OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 (fijado 1c8a789f7427ab96) OK
+  sha experimentos\carrera_escuderias\carros\APR.py 4402aa5142065c72 (fijado 4402aa5142065c72) OK
+  sha experimentos\carrera_escuderias\carros\FABRICA.py 2ebee3e99ea5a33a (fijado 2ebee3e99ea5a33a) OK
+  sha experimentos\nivel09_cuerpo_nuevo_b2\organismo_f9c.py 9dd1fb91ecec35ae (fijado 9dd1fb91ecec35ae) OK
+  construccion por anclas == carros en disco: OK {'APR': '4402aa5142065c72', 'FABRICA': '2ebee3e99ea5a33a', 'APR_LES_OFF': '513c2457d6d353b1', 'APR_LES_PLANA': 'da8b22798986b52a', 'APR_LES_CRUZ': '25503342098d2bf8', 'APR_LES_MUNDO': '349bc6061ce1fe60'}
+  CHEQUEO ESTATICO APR: PASA
+  CHEQUEO ESTATICO APR_LES_CRUZ: PASA
+  CHEQUEO ESTATICO APR_LES_MUNDO: PASA
+  CHEQUEO ESTATICO APR_LES_OFF: PASA
+  CHEQUEO ESTATICO APR_LES_PLANA: PASA
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  MINI IDENTIDAD APR_LES_OFF == APR (N 9, s 13599, T 2000, toda la salida de pista.run): OK
+  ENTRADA campo a campo (regla 14): corre_n9b.tarea == juez.tarea (9 FABRICA, s 13599, T 2000): OK
+  [   48.6s] apr semilla 13591 (34.1s) R0 pista 0.2655 · R0 por linaje [0.1837, 0.44, 0.1228, 0.3256, 0.3548, 0.3191, 0.3095, 0.193, 0.3243]
+  [   82.1s] fab semilla 13591 (33.4s) R0 pista 0.2778 · R0 por linaje [0.1915, 0.2273, 0.3095, 0.2222, 0.4595, 0.2979, 0.2182, 0.3409, 0.2955]
+  [  114.7s] plana semilla 13591 (32.6s) R0 pista 0.2946 · R0 por linaje [0.2444, 0.5152, 0.2745, 0.4706, 0.2821, 0.2826, 0.3556, 0.2, 0.1803]
+  [  147.4s] cruz semilla 13591 (32.7s) R0 pista 0.3436 · R0 por linaje [0.2895, 0.3659, 0.2826, 0.2609, 0.5926, 0.4412, 0.2895, 0.3333, 0.35]
+  [  180.8s] mundo semilla 13591 (33.4s) R0 pista 0.2849 · R0 por linaje [0.1702, 0.3871, 0.4545, 0.2955, 0.0896, 0.4375, 0.3333, 0.4516, 0.234]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n9b\datos\humo\n9b_humo_apr-fab-plana-cruz-mundo_s13591-13591_T20000_20260923_164054_crudo.json (sha 1f78aa63675eaae1)   <- ERR-54: escrito ANTES de resumir
+
+== apr (APR x9) · 1 semillas · T 20000
+  R0 por linaje-semilla: mediana 0.3191 · R0 pista (mediana por semilla) 0.2655 · vida mediana 200.0 · muertes mediana 42.0
+  ENMIENDA 3: mediana R0 eval 0.319 · R0 real eval 0.243 · sin fund tras 10000 0.0 · evaluables 9/9 -> NO CRUZA
+  causas h/s/v/sal 0/0/150/229 (40% veneno, 60% sal) · sin bueno en el mundo 0.0034 · coherente [9, 9] · t_fund [9, 9] · escrituras 0
+  opcion (no puntua): oportunidades 15462 · tasa 0.1226 (FABRICA habria 0.1834) · quitadas ult. cuarto 0.059 · Q mediana no/morder [[-0.6353, -0.2769, 0.013, 0.0327, -0.1666, 0.1332], [-0.8426, -0.3495, 0.1512, 0.0114, -0.2207, -0.026]]
+
+== fab (FABRICA x9) · 1 semillas · T 20000
+  R0 por linaje-semilla: mediana 0.2955 · R0 pista (mediana por semilla) 0.2778 · vida mediana 196.0 · muertes mediana 43.0
+  ENMIENDA 3: mediana R0 eval 0.295 · R0 real eval 0.262 · sin fund tras 10000 0.0 · evaluables 9/9 -> NO CRUZA
+  causas h/s/v/sal 0/0/169/236 (42% veneno, 58% sal) · sin bueno en el mundo 0.0007 · coherente [9, 9] · t_fund [9, 9] · escrituras 0
+
+== plana (APR_LES_PLANA x9) · 1 semillas · T 20000
+  R0 por linaje-semilla: mediana 0.2821 · R0 pista (mediana por semilla) 0.2946 · vida mediana 200.0 · muertes mediana 44.0
+  ENMIENDA 3: mediana R0 eval 0.282 · R0 real eval 0.275 · sin fund tras 10000 0.0 · evaluables 9/9 -> NO CRUZA
+  causas h/s/v/sal 0/0/161/234 (41% veneno, 59% sal) · sin bueno en el mundo 0.0073 · coherente [9, 9] · t_fund [9, 9] · escrituras 0
+  opcion (no puntua): oportunidades 15194 · tasa 0.1245 (FABRICA habria 0.1934) · quitadas ult. cuarto 0.0627 · Q mediana no/morder [[-0.6163, -0.1811, -0.1811, 0.0226, -0.1737, 0.2194], [-0.7304, -0.2266, -0.2266, 0.0139, -0.2082, -0.0219]]
+  lesion (no puntua): decisiones 15194 · post real 0.5501 / usado 0.8682 · cambia post 0.879 · caida predicha real 0.879 / usada 0.0 · cambia mundo 0.0 · V-M (|usado-real| <= 0.1) NO se cumple
+
+== cruz (APR_LES_CRUZ x9) · 1 semillas · T 20000
+  R0 por linaje-semilla: mediana 0.3333 · R0 pista (mediana por semilla) 0.3436 · vida mediana 198.0 · muertes mediana 39.0
+  ENMIENDA 3: mediana R0 eval 0.333 · R0 real eval 0.289 · sin fund tras 10000 0.1111 · evaluables 9/9 -> NO CRUZA
+  causas h/s/v/sal 3/0/127/219 (36% veneno, 63% sal) · sin bueno en el mundo 0.0163 · coherente [9, 9] · t_fund [9, 9] · escrituras 0
+  opcion (no puntua): oportunidades 15421 · tasa 0.1025 (FABRICA habria 0.1725) · quitadas ult. cuarto 0.0662 · Q mediana no/morder [[-0.6242, -0.2998, -0.0358, 0.0184, -0.1692, 0.1738], [-0.7847, -0.2606, -0.0765, -0.0291, -0.2138, -0.0382]]
+  lesion (no puntua): decisiones 15421 · post real 0.5937 / usado 0.6059 · cambia post 0.8621 · caida predicha real 0.8867 / usada 0.8649 · cambia mundo 0.0 · V-M (|usado-real| <= 0.1) SE CUMPLE
+
+== mundo (APR_LES_MUNDO x9) · 1 semillas · T 20000
+  R0 por linaje-semilla: mediana 0.3333 · R0 pista (mediana por semilla) 0.2849 · vida mediana 200.0 · muertes mediana 32.0
+  ENMIENDA 3: mediana R0 eval 0.333 · R0 real eval 0.295 · sin fund tras 10000 0.0 · evaluables 9/9 -> NO CRUZA
+  causas h/s/v/sal 0/1/141/214 (40% veneno, 60% sal) · sin bueno en el mundo 0.0036 · coherente [9, 9] · t_fund [9, 9] · escrituras 0
+  opcion (no puntua): oportunidades 15430 · tasa 0.116 (FABRICA habria 0.1712) · quitadas ult. cuarto 0.057 · Q mediana no/morder [[-0.6068, -0.3154, 0.0005, 0.0476, -0.1061, 0.1165], [-0.7325, -0.3364, 0.1242, 0.0019, -0.1899, -0.0374]]
+  lesion (no puntua): decisiones 15430 · post real 0.5741 / usado 0.5741 · cambia post 0.0 · caida predicha real 0.8822 / usada 0.8822 · cambia mundo 0.9944 · V-M (|usado-real| <= 0.1) SE CUMPLE
+
+PAREADOS (por semilla: mediana del R0 de los 9 linajes; gana = semillas en que la primera supera a la segunda)
+  apr vs fab: gana 1/1 · dif. mediana 0.0236 · {'13591': 0.0236}
+  apr vs plana: gana 1/1 · dif. mediana 0.037 · {'13591': 0.037}
+  apr vs cruz: gana 0/1 · dif. mediana -0.0142 · {'13591': -0.0142}
+  apr vs mundo: gana 0/1 · dif. mediana -0.0142 · {'13591': -0.0142}
+  plana vs fab: gana 0/1 · dif. mediana -0.0134 · {'13591': -0.0134}
+  cruz vs fab: gana 1/1 · dif. mediana 0.0378 · {'13591': 0.0378}
+  mundo vs fab: gana 1/1 · dif. mediana 0.0378 · {'13591': 0.0378}
+  fraccion de la ganancia APR-FABRICA que pierde plana: mediana 1.5678 (1 semillas con APR-FAB > 0.005)
+  fraccion de la ganancia APR-FABRICA que pierde cruz: mediana -0.6017 (1 semillas con APR-FAB > 0.005)
+  fraccion de la ganancia APR-FABRICA que pierde mundo: mediana -0.6017 (1 semillas con APR-FAB > 0.005)
+
+VEREDICTO DE ESTA SERIE (el final exige serie Y replica, --veredicto): {'ancla': False, 'pierde_plana': False, 'pierde_cruz': False, 'pierde_mundo': False, 'instrumento_ok': True}  -- HUMO: sin valor
+PREDICCIONES FIRMADAS (PREREGISTRO_n9b.md sec. 5) -- HUMO: T y semillas de practica, NO cuentan
+  P1 (ancla) APR > FABRICA en >= 15/20 con dif. mediana >= 0.03; APR mediana R0 en [0.36, 0.42], FABRICA en [0.30, 0.37] (p 0.85) -> NO se cumple
+  P2 APR_LES_PLANA pierde (p 0.35; el creador la da por REFUTADA con p 0.65) -> NO se cumple
+  P3 APR_LES_CRUZ pierde (p 0.30) -> NO se cumple
+  P4 (control) APR_LES_MUNDO NO pierde (p 0.80) -> SE CUMPLE
+  P5 APR_LES_PLANA > FABRICA en >= 15/20 (p 0.70) -> NO se cumple
+  P6 ningun brazo cruza la ENMIENDA 3 (p 0.97) -> SE CUMPLE
+  P7 fraccion mediana de la ganancia que pierde PLANA en [0.0, 0.5] (p 0.65) -> NO se cumple
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n9b\datos\humo\n9b_humo_apr-fab-plana-cruz-mundo_s13591-13591_T20000_20260923_164054_resumen.json
+Terminado en 180.9s
