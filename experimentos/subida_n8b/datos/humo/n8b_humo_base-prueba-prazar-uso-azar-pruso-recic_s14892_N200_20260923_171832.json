@@ -1,0 +1,3040 @@
+{
+ "pref": "n8b_humo_base-prueba-prazar-uso-azar-pruso-recic_s14892_N200_20260923_171832",
+ "humo": true,
+ "semillas": [
+  14892
+ ],
+ "brazos": [
+  "base",
+  "prueba",
+  "prazar",
+  "uso",
+  "azar",
+  "pruso",
+  "recic"
+ ],
+ "n_est": 200,
+ "T": 200000,
+ "ventana": 8,
+ "p_viejo": 0.25,
+ "N_RET": 40,
+ "tramo_tarde": [
+  140,
+  190
+ ],
+ "tramo_medio": [
+  140,
+  190
+ ],
+ "tramo_temprano": [
+  10,
+  40
+ ],
+ "perillas_v142": {
+  "plast": true,
+  "lam": 0.05,
+  "memoria_rechazo": 20,
+  "mu_norm": true,
+  "div_signo": true,
+  "eta_s": 0.15,
+  "clip_s": 10.0,
+  "puerta": 3,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "mask_rel": 2,
+  "del_s": 0.25,
+  "del_c": 0.25,
+  "ema_c": 0.05
+ },
+ "d_pix": 13,
+ "peso": 4,
+ "shas": {
+  "organismo_n8b": "f9f3b56b498f6fc7",
+  "mundo_n8b": "74e6127ee3e36814",
+  "organismo_v142": "17528d767fcebaf6",
+  "corre_n8b": "c7ee96df94d8d6f8"
+ },
+ "entrada_campo_a_campo": [
+  [
+   "base",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "base",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "base",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "base",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "base",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "base",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "base",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "base",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "base",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "base",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "base",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "base",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "base",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "base",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "base",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "base",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "base",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "base",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "prueba",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "prueba",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "prueba",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "prueba",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "prueba",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "prueba",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "prueba",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "prueba",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "prueba",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "prueba",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "prueba",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "prueba",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "prueba",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "prueba",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "prueba",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "prueba",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "prueba",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "prueba",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "prueba",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "prueba",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "prueba",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "prueba",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "prueba",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "prueba",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "prueba",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "prazar",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "prazar",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "prazar",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "prazar",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "prazar",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "prazar",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "prazar",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "prazar",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "prazar",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "prazar",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "prazar",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "prazar",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "prazar",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "prazar",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "prazar",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "prazar",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "prazar",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "prazar",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "prazar",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "prazar",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "prazar",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "prazar",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "prazar",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "prazar",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "prazar",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "uso",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "uso",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "uso",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "uso",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "uso",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "uso",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "uso",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "uso",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "uso",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "uso",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "uso",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "uso",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "uso",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "uso",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "uso",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "uso",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "uso",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "uso",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "uso",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "uso",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "uso",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "uso",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "uso",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "uso",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "uso",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "azar",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "azar",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "azar",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "azar",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "azar",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "azar",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "azar",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "azar",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "azar",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "azar",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "azar",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "azar",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "azar",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "azar",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "azar",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "azar",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "azar",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "azar",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "azar",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "azar",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "azar",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "azar",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "azar",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "azar",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "azar",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "pruso",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "pruso",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "pruso",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "pruso",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "pruso",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "pruso",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "pruso",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "pruso",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "pruso",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "pruso",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "pruso",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "pruso",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "pruso",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "pruso",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "pruso",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "pruso",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "pruso",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "pruso",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "pruso",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "pruso",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "pruso",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "pruso",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "pruso",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "pruso",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "pruso",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "recic",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "recic",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "recic",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "recic",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "recic",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "recic",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "recic",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "recic",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "recic",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "recic",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "recic",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "recic",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "recic",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "recic",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "recic",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "recic",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "recic",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "recic",
+   "pat_min",
+   "1",
+   "1"
+  ]
+ ],
+ "pared_s": 106.0,
+ "resultados": [
+  {
+   "semilla": 14892,
+   "brazo": "base",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 17.1,
+   "ADQ_tarde": 0.6,
+   "ADQ_medio": 0.6,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.56,
+   "ADQ_tarde_com": 0.2,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.2,
+   "ADQ_temprano_com": 0.4667,
+   "PRIOR_tarde_com": 0.08,
+   "PRIOR_tarde_ven": 0.92,
+   "RET40": 0.525,
+   "RET40_com": 0.1,
+   "RET_todo": 0.57,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.7,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    0.5,
+    0.7,
+    0.5,
+    0.8,
+    0.7,
+    0.7,
+    0.7,
+    0.5,
+    0.6,
+    0.6,
+    0.6,
+    0.5,
+    0.7
+   ],
+   "curva_com_bloques10": [
+    0.8,
+    0.4,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.0,
+    0.4,
+    0.0,
+    0.6,
+    0.4,
+    0.4,
+    0.4,
+    0.0,
+    0.2,
+    0.2,
+    0.2,
+    0.0,
+    0.4
+   ],
+   "curva_final_bloques10": [
+    0.5,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.7,
+    0.5,
+    0.7,
+    0.6,
+    0.6,
+    0.6,
+    0.6,
+    0.7,
+    0.6,
+    0.5,
+    0.5,
+    0.6,
+    0.5
+   ],
+   "cond_ult_cuarto": 0.0021,
+   "muertes": 473,
+   "splits": 60,
+   "celdas": 90,
+   "t_agot": 67460,
+   "est_agot": 68,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "n_cod": 177,
+   "mv_tot": 244,
+   "mc_tot": 430
+  },
+  {
+   "semilla": 14892,
+   "brazo": "prueba",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 16.9,
+   "ADQ_tarde": 0.7,
+   "ADQ_medio": 0.7,
+   "ADQ_temprano": 0.9333,
+   "PRIOR_tarde": 0.38,
+   "NULO_tarde": 0.54,
+   "ADQ_tarde_com": 0.4,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.4,
+   "ADQ_temprano_com": 0.9333,
+   "PRIOR_tarde_com": 0.12,
+   "PRIOR_tarde_ven": 0.64,
+   "RET40": 0.65,
+   "RET40_com": 0.4,
+   "RET_todo": 0.56,
+   "curva_ADQ_bloques10": [
+    1.0,
+    1.0,
+    0.9,
+    0.9,
+    0.7,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.8,
+    0.7,
+    0.7,
+    0.8,
+    0.6,
+    0.7,
+    0.7,
+    0.9,
+    0.5,
+    0.7
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.4,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.6,
+    0.4,
+    0.4,
+    0.6,
+    0.2,
+    0.4,
+    0.4,
+    0.8,
+    0.0,
+    0.4
+   ],
+   "curva_final_bloques10": [
+    0.6,
+    0.9,
+    0.6,
+    0.5,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.7,
+    0.4,
+    0.5,
+    0.5,
+    0.6,
+    0.4,
+    0.5,
+    0.5,
+    0.5,
+    0.7,
+    0.6
+   ],
+   "cond_ult_cuarto": 0.2082,
+   "muertes": 295,
+   "splits": 60,
+   "celdas": 90,
+   "t_agot": 41222,
+   "est_agot": 42,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 1100,
+   "frac_nofam": 0.0539,
+   "n_cod": 219,
+   "mv_tot": 1039,
+   "mc_tot": 1411
+  },
+  {
+   "semilla": 14892,
+   "brazo": "prazar",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 15.0,
+   "ADQ_tarde": 0.78,
+   "ADQ_medio": 0.78,
+   "ADQ_temprano": 0.9333,
+   "PRIOR_tarde": 0.46,
+   "NULO_tarde": 0.5,
+   "ADQ_tarde_com": 0.56,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.56,
+   "ADQ_temprano_com": 0.9333,
+   "PRIOR_tarde_com": 0.2,
+   "PRIOR_tarde_ven": 0.72,
+   "RET40": 0.575,
+   "RET40_com": 0.35,
+   "RET_todo": 0.58,
+   "curva_ADQ_bloques10": [
+    1.0,
+    1.0,
+    0.9,
+    0.9,
+    0.8,
+    0.9,
+    0.6,
+    0.9,
+    0.7,
+    1.0,
+    0.8,
+    0.8,
+    1.0,
+    0.7,
+    0.8,
+    0.5,
+    1.0,
+    0.8,
+    0.8
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.6,
+    0.8,
+    0.4,
+    1.0,
+    0.4,
+    1.0,
+    0.6,
+    0.6,
+    1.0,
+    0.4,
+    0.6,
+    0.0,
+    1.0,
+    0.6,
+    0.6
+   ],
+   "curva_final_bloques10": [
+    0.5,
+    0.8,
+    0.6,
+    0.4,
+    0.6,
+    0.6,
+    0.4,
+    0.5,
+    0.7,
+    0.6,
+    0.5,
+    0.4,
+    0.6,
+    0.6,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.7,
+    1.0
+   ],
+   "cond_ult_cuarto": 0.3062,
+   "muertes": 428,
+   "splits": 60,
+   "celdas": 90,
+   "t_agot": 34489,
+   "est_agot": 35,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 3738,
+   "frac_nofam": 0.1623,
+   "n_cod": 211,
+   "mv_tot": 2997,
+   "mc_tot": 3337
+  },
+  {
+   "semilla": 14892,
+   "brazo": "uso",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 13.9,
+   "ADQ_tarde": 0.7,
+   "ADQ_medio": 0.7,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.38,
+   "NULO_tarde": 0.54,
+   "ADQ_tarde_com": 0.48,
+   "ADQ_tarde_ven": 0.92,
+   "ADQ_medio_com": 0.48,
+   "ADQ_temprano_com": 0.4667,
+   "PRIOR_tarde_com": 0.08,
+   "PRIOR_tarde_ven": 0.68,
+   "RET40": 0.525,
+   "RET40_com": 0.2,
+   "RET_todo": 0.595,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.7,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    0.6,
+    0.8,
+    0.7,
+    0.6,
+    0.6,
+    0.8,
+    0.8,
+    0.5,
+    0.5,
+    0.8,
+    0.7,
+    0.6,
+    0.9
+   ],
+   "curva_com_bloques10": [
+    0.8,
+    0.4,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.2,
+    0.6,
+    0.4,
+    0.2,
+    0.2,
+    0.6,
+    0.6,
+    0.0,
+    0.4,
+    0.6,
+    0.4,
+    0.2,
+    0.8
+   ],
+   "curva_final_bloques10": [
+    0.6,
+    0.7,
+    0.3,
+    0.5,
+    0.8,
+    0.5,
+    0.4,
+    0.5,
+    0.7,
+    0.5,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.5,
+    0.7,
+    0.5,
+    0.7,
+    0.8,
+    0.6
+   ],
+   "cond_ult_cuarto": 0.0435,
+   "muertes": 380,
+   "splits": 132,
+   "celdas": 90,
+   "t_agot": 67460,
+   "est_agot": 68,
+   "n_rec": 72,
+   "rec_rel_mediana": 0.0643,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "n_cod": 197,
+   "mv_tot": 334,
+   "mc_tot": 623
+  },
+  {
+   "semilla": 14892,
+   "brazo": "azar",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 13.0,
+   "ADQ_tarde": 0.66,
+   "ADQ_medio": 0.66,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.48,
+   "NULO_tarde": 0.58,
+   "ADQ_tarde_com": 0.32,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.32,
+   "ADQ_temprano_com": 0.4667,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.8,
+   "RET40": 0.55,
+   "RET40_com": 0.1,
+   "RET_todo": 0.525,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.7,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    0.6,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.7,
+    0.7,
+    0.6,
+    0.9,
+    0.8,
+    0.6,
+    0.5,
+    0.5
+   ],
+   "curva_com_bloques10": [
+    0.8,
+    0.4,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.2,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.4,
+    0.4,
+    0.2,
+    0.8,
+    0.6,
+    0.2,
+    0.0,
+    0.0
+   ],
+   "curva_final_bloques10": [
+    0.6,
+    0.6,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.4,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.7
+   ],
+   "cond_ult_cuarto": 0.0,
+   "muertes": 431,
+   "splits": 115,
+   "celdas": 90,
+   "t_agot": 67460,
+   "est_agot": 68,
+   "n_rec": 55,
+   "rec_rel_mediana": 0.3199,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "n_cod": 77,
+   "mv_tot": 248,
+   "mc_tot": 481
+  },
+  {
+   "semilla": 14892,
+   "brazo": "pruso",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 16.1,
+   "ADQ_tarde": 0.72,
+   "ADQ_medio": 0.72,
+   "ADQ_temprano": 0.9667,
+   "PRIOR_tarde": 0.36,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.44,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.44,
+   "ADQ_temprano_com": 1.0,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.56,
+   "RET40": 0.7,
+   "RET40_com": 0.4,
+   "RET_todo": 0.6,
+   "curva_ADQ_bloques10": [
+    1.0,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    0.8,
+    0.5,
+    0.7,
+    0.8,
+    0.7,
+    0.8,
+    0.6,
+    0.7,
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.6,
+    0.7
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.6,
+    0.2,
+    0.4,
+    0.6,
+    0.4,
+    0.6,
+    0.2,
+    0.4,
+    0.8,
+    0.6,
+    0.6,
+    0.4,
+    0.2,
+    0.4
+   ],
+   "curva_final_bloques10": [
+    0.7,
+    0.8,
+    0.7,
+    0.6,
+    0.4,
+    0.8,
+    0.5,
+    0.5,
+    0.8,
+    0.5,
+    0.6,
+    0.5,
+    0.4,
+    0.5,
+    0.8,
+    0.6,
+    0.6,
+    0.7,
+    0.5,
+    0.5
+   ],
+   "cond_ult_cuarto": 0.0902,
+   "muertes": 315,
+   "splits": 483,
+   "celdas": 90,
+   "t_agot": 41222,
+   "est_agot": 42,
+   "n_rec": 423,
+   "rec_rel_mediana": 0.0844,
+   "n_prueba": 1346,
+   "frac_nofam": 0.0659,
+   "n_cod": 227,
+   "mv_tot": 940,
+   "mc_tot": 1308
+  },
+  {
+   "semilla": 14892,
+   "brazo": "recic",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 13.9,
+   "ADQ_tarde": 0.96,
+   "ADQ_medio": 0.96,
+   "ADQ_temprano": 0.8333,
+   "PRIOR_tarde": 0.96,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.92,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.92,
+   "ADQ_temprano_com": 0.6667,
+   "PRIOR_tarde_com": 0.92,
+   "PRIOR_tarde_ven": 1.0,
+   "RET40": 0.95,
+   "RET40_com": 0.9,
+   "RET_todo": 0.95,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.7,
+    0.9,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0
+   ],
+   "curva_com_bloques10": [
+    0.8,
+    0.4,
+    0.8,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0
+   ],
+   "curva_final_bloques10": [
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9
+   ],
+   "cond_ult_cuarto": 0.1611,
+   "muertes": 287,
+   "splits": 28,
+   "celdas": 58,
+   "t_agot": null,
+   "est_agot": null,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "n_cod": 42,
+   "mv_tot": 155,
+   "mc_tot": 692
+  }
+ ],
+ "resumen": {
+  "base": {
+   "ADQ_tarde": 0.6,
+   "ADQ_medio": 0.6,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.56,
+   "ADQ_tarde_com": 0.2,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.2,
+   "ADQ_temprano_com": 0.4667,
+   "PRIOR_tarde_com": 0.08,
+   "PRIOR_tarde_ven": 0.92,
+   "RET40": 0.525,
+   "RET40_com": 0.1,
+   "RET_todo": 0.57,
+   "cond_ult_cuarto": 0.0021,
+   "muertes": 473,
+   "splits": 60,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "mc_tot": 430,
+   "mv_tot": 244,
+   "est_agot": 68,
+   "dur_s": 17.1,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.12,
+   "dif_tarde_temprano_com_mediana": -0.2667,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    0.9,
+    0.7,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    0.5,
+    0.7,
+    0.5,
+    0.8,
+    0.7,
+    0.7,
+    0.7,
+    0.5,
+    0.6,
+    0.6,
+    0.6,
+    0.5,
+    0.7
+   ],
+   "curva_com_mediana": [
+    0.8,
+    0.4,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.0,
+    0.4,
+    0.0,
+    0.6,
+    0.4,
+    0.4,
+    0.4,
+    0.0,
+    0.2,
+    0.2,
+    0.2,
+    0.0,
+    0.4
+   ]
+  },
+  "prueba": {
+   "ADQ_tarde": 0.7,
+   "ADQ_medio": 0.7,
+   "ADQ_temprano": 0.9333,
+   "PRIOR_tarde": 0.38,
+   "NULO_tarde": 0.54,
+   "ADQ_tarde_com": 0.4,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.4,
+   "ADQ_temprano_com": 0.9333,
+   "PRIOR_tarde_com": 0.12,
+   "PRIOR_tarde_ven": 0.64,
+   "RET40": 0.65,
+   "RET40_com": 0.4,
+   "RET_todo": 0.56,
+   "cond_ult_cuarto": 0.2082,
+   "muertes": 295,
+   "splits": 60,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 1100,
+   "frac_nofam": 0.0539,
+   "mc_tot": 1411,
+   "mv_tot": 1039,
+   "est_agot": 42,
+   "dur_s": 16.9,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.28,
+   "dif_tarde_temprano_com_mediana": -0.5333,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    1.0,
+    1.0,
+    0.9,
+    0.9,
+    0.7,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.8,
+    0.7,
+    0.7,
+    0.8,
+    0.6,
+    0.7,
+    0.7,
+    0.9,
+    0.5,
+    0.7
+   ],
+   "curva_com_mediana": [
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.4,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.6,
+    0.4,
+    0.4,
+    0.6,
+    0.2,
+    0.4,
+    0.4,
+    0.8,
+    0.0,
+    0.4
+   ]
+  },
+  "prazar": {
+   "ADQ_tarde": 0.78,
+   "ADQ_medio": 0.78,
+   "ADQ_temprano": 0.9333,
+   "PRIOR_tarde": 0.46,
+   "NULO_tarde": 0.5,
+   "ADQ_tarde_com": 0.56,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.56,
+   "ADQ_temprano_com": 0.9333,
+   "PRIOR_tarde_com": 0.2,
+   "PRIOR_tarde_ven": 0.72,
+   "RET40": 0.575,
+   "RET40_com": 0.35,
+   "RET_todo": 0.58,
+   "cond_ult_cuarto": 0.3062,
+   "muertes": 428,
+   "splits": 60,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 3738,
+   "frac_nofam": 0.1623,
+   "mc_tot": 3337,
+   "mv_tot": 2997,
+   "est_agot": 35,
+   "dur_s": 15.0,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.36,
+   "dif_tarde_temprano_com_mediana": -0.3733,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    1.0,
+    1.0,
+    0.9,
+    0.9,
+    0.8,
+    0.9,
+    0.6,
+    0.9,
+    0.7,
+    1.0,
+    0.8,
+    0.8,
+    1.0,
+    0.7,
+    0.8,
+    0.5,
+    1.0,
+    0.8,
+    0.8
+   ],
+   "curva_com_mediana": [
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.6,
+    0.8,
+    0.4,
+    1.0,
+    0.4,
+    1.0,
+    0.6,
+    0.6,
+    1.0,
+    0.4,
+    0.6,
+    0.0,
+    1.0,
+    0.6,
+    0.6
+   ]
+  },
+  "uso": {
+   "ADQ_tarde": 0.7,
+   "ADQ_medio": 0.7,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.38,
+   "NULO_tarde": 0.54,
+   "ADQ_tarde_com": 0.48,
+   "ADQ_tarde_ven": 0.92,
+   "ADQ_medio_com": 0.48,
+   "ADQ_temprano_com": 0.4667,
+   "PRIOR_tarde_com": 0.08,
+   "PRIOR_tarde_ven": 0.68,
+   "RET40": 0.525,
+   "RET40_com": 0.2,
+   "RET_todo": 0.595,
+   "cond_ult_cuarto": 0.0435,
+   "muertes": 380,
+   "splits": 132,
+   "n_rec": 72,
+   "rec_rel_mediana": 0.0643,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "mc_tot": 623,
+   "mv_tot": 334,
+   "est_agot": 68,
+   "dur_s": 13.9,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.4,
+   "dif_tarde_temprano_com_mediana": 0.0133,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    0.9,
+    0.7,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    0.6,
+    0.8,
+    0.7,
+    0.6,
+    0.6,
+    0.8,
+    0.8,
+    0.5,
+    0.5,
+    0.8,
+    0.7,
+    0.6,
+    0.9
+   ],
+   "curva_com_mediana": [
+    0.8,
+    0.4,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.2,
+    0.6,
+    0.4,
+    0.2,
+    0.2,
+    0.6,
+    0.6,
+    0.0,
+    0.4,
+    0.6,
+    0.4,
+    0.2,
+    0.8
+   ]
+  },
+  "azar": {
+   "ADQ_tarde": 0.66,
+   "ADQ_medio": 0.66,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.48,
+   "NULO_tarde": 0.58,
+   "ADQ_tarde_com": 0.32,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.32,
+   "ADQ_temprano_com": 0.4667,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.8,
+   "RET40": 0.55,
+   "RET40_com": 0.1,
+   "RET_todo": 0.525,
+   "cond_ult_cuarto": 0.0,
+   "muertes": 431,
+   "splits": 115,
+   "n_rec": 55,
+   "rec_rel_mediana": 0.3199,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "mc_tot": 481,
+   "mv_tot": 248,
+   "est_agot": 68,
+   "dur_s": 13.0,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.16,
+   "dif_tarde_temprano_com_mediana": -0.1467,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    0.9,
+    0.7,
+    0.6,
+    0.8,
+    0.8,
+    0.8,
+    0.6,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.7,
+    0.7,
+    0.6,
+    0.9,
+    0.8,
+    0.6,
+    0.5,
+    0.5
+   ],
+   "curva_com_mediana": [
+    0.8,
+    0.4,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.2,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.4,
+    0.4,
+    0.2,
+    0.8,
+    0.6,
+    0.2,
+    0.0,
+    0.0
+   ]
+  },
+  "pruso": {
+   "ADQ_tarde": 0.72,
+   "ADQ_medio": 0.72,
+   "ADQ_temprano": 0.9667,
+   "PRIOR_tarde": 0.36,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.44,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.44,
+   "ADQ_temprano_com": 1.0,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.56,
+   "RET40": 0.7,
+   "RET40_com": 0.4,
+   "RET_todo": 0.6,
+   "cond_ult_cuarto": 0.0902,
+   "muertes": 315,
+   "splits": 483,
+   "n_rec": 423,
+   "rec_rel_mediana": 0.0844,
+   "n_prueba": 1346,
+   "frac_nofam": 0.0659,
+   "mc_tot": 1308,
+   "mv_tot": 940,
+   "est_agot": 42,
+   "dur_s": 16.1,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.28,
+   "dif_tarde_temprano_com_mediana": -0.56,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    1.0,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    0.8,
+    0.5,
+    0.7,
+    0.8,
+    0.7,
+    0.8,
+    0.6,
+    0.7,
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.6,
+    0.7
+   ],
+   "curva_com_mediana": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.8,
+    0.6,
+    0.2,
+    0.4,
+    0.6,
+    0.4,
+    0.6,
+    0.2,
+    0.4,
+    0.8,
+    0.6,
+    0.6,
+    0.4,
+    0.2,
+    0.4
+   ]
+  },
+  "recic": {
+   "ADQ_tarde": 0.96,
+   "ADQ_medio": 0.96,
+   "ADQ_temprano": 0.8333,
+   "PRIOR_tarde": 0.96,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.92,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.92,
+   "ADQ_temprano_com": 0.6667,
+   "PRIOR_tarde_com": 0.92,
+   "PRIOR_tarde_ven": 1.0,
+   "RET40": 0.95,
+   "RET40_com": 0.9,
+   "RET_todo": 0.95,
+   "cond_ult_cuarto": 0.1611,
+   "muertes": 287,
+   "splits": 28,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_prueba": 0,
+   "frac_nofam": null,
+   "mc_tot": 692,
+   "mv_tot": 155,
+   "est_agot": null,
+   "dur_s": 13.9,
+   "n": 1,
+   "com_sobre_prior_com": 0,
+   "dif_com_prior_mediana": 0.0,
+   "dif_tarde_temprano_com_mediana": 0.2533,
+   "tarde_sobre_nulo": 1,
+   "agota": 0,
+   "curva_mediana": [
+    0.9,
+    0.7,
+    0.9,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0
+   ],
+   "curva_com_mediana": [
+    0.8,
+    0.4,
+    0.8,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0
+   ]
+  },
+  "pareados": {
+   "prueba-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.1
+   },
+   "prueba-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.2
+   },
+   "prueba-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.125
+   },
+   "prueba-base:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.3
+   },
+   "prueba-base:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.01
+   },
+   "prueba-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -178
+   },
+   "prueba-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.2061
+   },
+   "prueba-prazar:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.08
+   },
+   "prueba-prazar:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.16
+   },
+   "prueba-prazar:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.075
+   },
+   "prueba-prazar:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.05
+   },
+   "prueba-prazar:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.02
+   },
+   "prueba-prazar:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -133
+   },
+   "prueba-prazar:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.098
+   },
+   "prazar-prueba:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.08
+   },
+   "prazar-prueba:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.16
+   },
+   "prazar-prueba:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.075
+   },
+   "prazar-prueba:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.05
+   },
+   "prazar-prueba:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.02
+   },
+   "prazar-prueba:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 133
+   },
+   "prazar-prueba:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.098
+   },
+   "prazar-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.18
+   },
+   "prazar-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.36
+   },
+   "prazar-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.05
+   },
+   "prazar-base:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.25
+   },
+   "prazar-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.01
+   },
+   "prazar-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -45
+   },
+   "prazar-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.3041
+   },
+   "base-prueba:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.1
+   },
+   "base-prueba:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.2
+   },
+   "base-prueba:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.125
+   },
+   "base-prueba:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.3
+   },
+   "base-prueba:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.01
+   },
+   "base-prueba:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 178
+   },
+   "base-prueba:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.2061
+   },
+   "uso-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.1
+   },
+   "uso-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.28
+   },
+   "uso-base:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "uso-base:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.1
+   },
+   "uso-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.025
+   },
+   "uso-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -93
+   },
+   "uso-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.0414
+   },
+   "base-uso:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.1
+   },
+   "base-uso:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.28
+   },
+   "base-uso:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "base-uso:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.1
+   },
+   "base-uso:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.025
+   },
+   "base-uso:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 93
+   },
+   "base-uso:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.0414
+   },
+   "uso-azar:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.04
+   },
+   "uso-azar:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.16
+   },
+   "uso-azar:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.025
+   },
+   "uso-azar:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.1
+   },
+   "uso-azar:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.07
+   },
+   "uso-azar:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -51
+   },
+   "uso-azar:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.0435
+   },
+   "azar-uso:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.04
+   },
+   "azar-uso:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.16
+   },
+   "azar-uso:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.025
+   },
+   "azar-uso:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.1
+   },
+   "azar-uso:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.07
+   },
+   "azar-uso:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 51
+   },
+   "azar-uso:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.0435
+   },
+   "azar-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.06
+   },
+   "azar-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.12
+   },
+   "azar-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.025
+   },
+   "azar-base:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "azar-base:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.045
+   },
+   "azar-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -42
+   },
+   "azar-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.0021
+   },
+   "pruso-prueba:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.02
+   },
+   "pruso-prueba:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.04
+   },
+   "pruso-prueba:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.05
+   },
+   "pruso-prueba:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "pruso-prueba:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.04
+   },
+   "pruso-prueba:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 20
+   },
+   "pruso-prueba:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.118
+   },
+   "prueba-pruso:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.02
+   },
+   "prueba-pruso:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.04
+   },
+   "prueba-pruso:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.05
+   },
+   "prueba-pruso:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "prueba-pruso:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.04
+   },
+   "prueba-pruso:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -20
+   },
+   "prueba-pruso:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.118
+   },
+   "pruso-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.12
+   },
+   "pruso-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.24
+   },
+   "pruso-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.175
+   },
+   "pruso-base:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.3
+   },
+   "pruso-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.03
+   },
+   "pruso-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -158
+   },
+   "pruso-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.0881
+   },
+   "recic-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.36
+   },
+   "recic-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.72
+   },
+   "recic-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.425
+   },
+   "recic-base:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.8
+   },
+   "recic-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.38
+   },
+   "recic-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -186
+   },
+   "recic-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.159
+   }
+  }
+ },
+ "predicciones": {
+  "P1": [
+   false,
+   "BASE comida tarde > a priori 1/1, dif 0.12 (>=16/20 y >=0.15)"
+  ],
+  "P2": [
+   true,
+   "BASE cae tras agotar: tarde-temprano comida -0.2667 (< -0.10)"
+  ],
+  "P3": [
+   true,
+   "BASE olvida lo ausente: RET40 0.525 (<= 0.65)"
+  ],
+  "P4": [
+   true,
+   "BASE agota las 90 celdas 1/1, estimulo mediano 68"
+  ],
+  "P10": [
+   true,
+   "RECIC > BASE y >= 0.90 (la medida ve la novedad): {'n': 1, 'gana': 1, 'empata': 0, 'pierde': 0, 'dif_mediana': 0.36}, RECIC 0.96"
+  ],
+  "P12": [
+   true,
+   "BASE > NULO 1/1"
+  ]
+ }
+}

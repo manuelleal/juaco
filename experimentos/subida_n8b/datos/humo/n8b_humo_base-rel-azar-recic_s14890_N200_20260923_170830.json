@@ -1,0 +1,1634 @@
+{
+ "pref": "n8b_humo_base-rel-azar-recic_s14890_N200_20260923_170830",
+ "humo": true,
+ "semillas": [
+  14890
+ ],
+ "brazos": [
+  "base",
+  "rel",
+  "azar",
+  "recic"
+ ],
+ "n_est": 200,
+ "T": 200000,
+ "ventana": 8,
+ "p_viejo": 0.25,
+ "N_RET": 40,
+ "tramo_tarde": [
+  140,
+  190
+ ],
+ "tramo_medio": [
+  140,
+  190
+ ],
+ "tramo_temprano": [
+  10,
+  40
+ ],
+ "perillas_v142": {
+  "plast": true,
+  "lam": 0.05,
+  "memoria_rechazo": 20,
+  "mu_norm": true,
+  "div_signo": true,
+  "eta_s": 0.15,
+  "clip_s": 10.0,
+  "puerta": 3,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "mask_rel": 2,
+  "del_s": 0.25,
+  "del_c": 0.25,
+  "ema_c": 0.05
+ },
+ "d_pix": 13,
+ "peso": 4,
+ "shas": {
+  "organismo_n8b": "405dd57a84ba6328",
+  "mundo_n8b": "74e6127ee3e36814",
+  "organismo_v142": "17528d767fcebaf6",
+  "corre_n8b": "ab1dd820ee863f79"
+ },
+ "entrada_campo_a_campo": [
+  [
+   "base",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "base",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "base",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "base",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "base",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "base",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "base",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "base",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "base",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "base",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "base",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "base",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "base",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "base",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "base",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "base",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "base",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "base",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "rel",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "rel",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "rel",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "rel",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "rel",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "rel",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "rel",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "rel",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "rel",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "rel",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "rel",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "rel",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "rel",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "rel",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "rel",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "rel",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "rel",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "rel",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "rel",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "rel",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "rel",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "rel",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "rel",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "rel",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "rel",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "azar",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "azar",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "azar",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "azar",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "azar",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "azar",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "azar",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "azar",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "azar",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "azar",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "azar",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "azar",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "azar",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "azar",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "azar",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "azar",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "azar",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "azar",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "azar",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "azar",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "azar",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "azar",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "azar",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "azar",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "azar",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "recic",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "recic",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "recic",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "recic",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "recic",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "recic",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "recic",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "recic",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "recic",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "recic",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "recic",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "recic",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "recic",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "recic",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "recic",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "recic",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "recic",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "recic",
+   "pat_min",
+   "1",
+   "1"
+  ]
+ ],
+ "pared_s": 65.4,
+ "resultados": [
+  {
+   "semilla": 14890,
+   "brazo": "base",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 16.3,
+   "ADQ_tarde": 0.6,
+   "ADQ_medio": 0.6,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.56,
+   "ADQ_tarde_com": 0.2,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.2,
+   "ADQ_temprano_com": 0.4,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.84,
+   "RET40": 0.625,
+   "RET40_com": 0.25,
+   "RET_todo": 0.56,
+   "curva_ADQ_bloques10": [
+    1.0,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.9,
+    0.7,
+    0.7,
+    0.6,
+    0.7,
+    0.9,
+    0.7,
+    0.8,
+    0.5,
+    0.6,
+    0.8,
+    0.5,
+    0.5,
+    0.6
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.8,
+    0.4,
+    0.4,
+    0.2,
+    0.4,
+    0.8,
+    0.4,
+    0.6,
+    0.0,
+    0.2,
+    0.6,
+    0.0,
+    0.0,
+    0.2
+   ],
+   "curva_final_bloques10": [
+    0.7,
+    0.6,
+    0.6,
+    0.6,
+    0.5,
+    0.6,
+    0.7,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.6,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.5,
+    0.6
+   ],
+   "cond_ult_cuarto": 0.021,
+   "muertes": 415,
+   "splits": 60,
+   "celdas": 90,
+   "t_agot": 67503,
+   "est_agot": 68,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_cod": 171,
+   "mv_tot": 268,
+   "mc_tot": 432
+  },
+  {
+   "semilla": 14890,
+   "brazo": "rel",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 16.7,
+   "ADQ_tarde": 0.7,
+   "ADQ_medio": 0.7,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.52,
+   "NULO_tarde": 0.5,
+   "ADQ_tarde_com": 0.4,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.4,
+   "ADQ_temprano_com": 0.4,
+   "PRIOR_tarde_com": 0.24,
+   "PRIOR_tarde_ven": 0.8,
+   "RET40": 0.5,
+   "RET40_com": 0.05,
+   "RET_todo": 0.57,
+   "curva_ADQ_bloques10": [
+    1.0,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.9,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.6,
+    0.8,
+    0.5,
+    0.8,
+    0.7,
+    0.7
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.8,
+    0.4,
+    0.2,
+    0.4,
+    0.6,
+    0.6,
+    0.4,
+    0.6,
+    0.4,
+    0.6,
+    0.0,
+    0.6,
+    0.4,
+    0.4
+   ],
+   "curva_final_bloques10": [
+    0.6,
+    0.5,
+    0.5,
+    0.4,
+    0.4,
+    0.5,
+    0.5,
+    0.5,
+    0.7,
+    0.7,
+    0.5,
+    0.6,
+    0.7,
+    0.5,
+    0.5,
+    0.5,
+    0.7,
+    0.7,
+    0.7,
+    0.7
+   ],
+   "cond_ult_cuarto": 0.0588,
+   "muertes": 351,
+   "splits": 125,
+   "celdas": 90,
+   "t_agot": 67503,
+   "est_agot": 68,
+   "n_rec": 65,
+   "rec_rel_mediana": 0.0429,
+   "n_cod": 113,
+   "mv_tot": 296,
+   "mc_tot": 555
+  },
+  {
+   "semilla": 14890,
+   "brazo": "azar",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 15.7,
+   "ADQ_tarde": 0.58,
+   "ADQ_medio": 0.58,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.48,
+   "NULO_tarde": 0.54,
+   "ADQ_tarde_com": 0.2,
+   "ADQ_tarde_ven": 0.96,
+   "ADQ_medio_com": 0.2,
+   "ADQ_temprano_com": 0.4,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.8,
+   "RET40": 0.525,
+   "RET40_com": 0.05,
+   "RET_todo": 0.535,
+   "curva_ADQ_bloques10": [
+    1.0,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.9,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.4,
+    0.6,
+    0.6,
+    0.7,
+    0.6,
+    0.4
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.8,
+    0.4,
+    0.2,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.6,
+    0.0,
+    0.2,
+    0.2,
+    0.4,
+    0.2,
+    0.0
+   ],
+   "curva_final_bloques10": [
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.4,
+    0.7,
+    0.4,
+    0.5,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.5,
+    0.6,
+    0.5,
+    0.7,
+    0.6,
+    0.5,
+    0.6
+   ],
+   "cond_ult_cuarto": 0.0408,
+   "muertes": 376,
+   "splits": 125,
+   "celdas": 90,
+   "t_agot": 67503,
+   "est_agot": 68,
+   "n_rec": 65,
+   "rec_rel_mediana": 0.199,
+   "n_cod": 90,
+   "mv_tot": 335,
+   "mc_tot": 556
+  },
+  {
+   "semilla": 14890,
+   "brazo": "recic",
+   "n_est": 200,
+   "T": 200000,
+   "dur_s": 16.8,
+   "ADQ_tarde": 0.92,
+   "ADQ_medio": 0.92,
+   "ADQ_temprano": 0.8333,
+   "PRIOR_tarde": 0.92,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.84,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.84,
+   "ADQ_temprano_com": 0.6667,
+   "PRIOR_tarde_com": 0.84,
+   "PRIOR_tarde_ven": 1.0,
+   "RET40": 0.9,
+   "RET40_com": 0.8,
+   "RET_todo": 0.9,
+   "curva_ADQ_bloques10": [
+    1.0,
+    0.7,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0
+   ],
+   "curva_com_bloques10": [
+    1.0,
+    0.4,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0
+   ],
+   "curva_final_bloques10": [
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8
+   ],
+   "cond_ult_cuarto": 0.0823,
+   "muertes": 330,
+   "splits": 31,
+   "celdas": 61,
+   "t_agot": null,
+   "est_agot": null,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "n_cod": 48,
+   "mv_tot": 135,
+   "mc_tot": 572
+  }
+ ],
+ "resumen": {
+  "base": {
+   "ADQ_tarde": 0.6,
+   "ADQ_medio": 0.6,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.56,
+   "ADQ_tarde_com": 0.2,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.2,
+   "ADQ_temprano_com": 0.4,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.84,
+   "RET40": 0.625,
+   "RET40_com": 0.25,
+   "RET_todo": 0.56,
+   "cond_ult_cuarto": 0.021,
+   "muertes": 415,
+   "splits": 60,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "est_agot": 68,
+   "dur_s": 16.3,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.04,
+   "dif_tarde_temprano_com_mediana": -0.2,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    1.0,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.9,
+    0.7,
+    0.7,
+    0.6,
+    0.7,
+    0.9,
+    0.7,
+    0.8,
+    0.5,
+    0.6,
+    0.8,
+    0.5,
+    0.5,
+    0.6
+   ],
+   "curva_com_mediana": [
+    1.0,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.8,
+    0.4,
+    0.4,
+    0.2,
+    0.4,
+    0.8,
+    0.4,
+    0.6,
+    0.0,
+    0.2,
+    0.6,
+    0.0,
+    0.0,
+    0.2
+   ]
+  },
+  "rel": {
+   "ADQ_tarde": 0.7,
+   "ADQ_medio": 0.7,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.52,
+   "NULO_tarde": 0.5,
+   "ADQ_tarde_com": 0.4,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.4,
+   "ADQ_temprano_com": 0.4,
+   "PRIOR_tarde_com": 0.24,
+   "PRIOR_tarde_ven": 0.8,
+   "RET40": 0.5,
+   "RET40_com": 0.05,
+   "RET_todo": 0.57,
+   "cond_ult_cuarto": 0.0588,
+   "muertes": 351,
+   "splits": 125,
+   "n_rec": 65,
+   "rec_rel_mediana": 0.0429,
+   "est_agot": 68,
+   "dur_s": 16.7,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.16,
+   "dif_tarde_temprano_com_mediana": 0.0,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    1.0,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.9,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.6,
+    0.8,
+    0.5,
+    0.8,
+    0.7,
+    0.7
+   ],
+   "curva_com_mediana": [
+    1.0,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.8,
+    0.4,
+    0.2,
+    0.4,
+    0.6,
+    0.6,
+    0.4,
+    0.6,
+    0.4,
+    0.6,
+    0.0,
+    0.6,
+    0.4,
+    0.4
+   ]
+  },
+  "azar": {
+   "ADQ_tarde": 0.58,
+   "ADQ_medio": 0.58,
+   "ADQ_temprano": 0.7,
+   "PRIOR_tarde": 0.48,
+   "NULO_tarde": 0.54,
+   "ADQ_tarde_com": 0.2,
+   "ADQ_tarde_ven": 0.96,
+   "ADQ_medio_com": 0.2,
+   "ADQ_temprano_com": 0.4,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.8,
+   "RET40": 0.525,
+   "RET40_com": 0.05,
+   "RET_todo": 0.535,
+   "cond_ult_cuarto": 0.0408,
+   "muertes": 376,
+   "splits": 125,
+   "n_rec": 65,
+   "rec_rel_mediana": 0.199,
+   "est_agot": 68,
+   "dur_s": 15.7,
+   "n": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.04,
+   "dif_tarde_temprano_com_mediana": -0.2,
+   "tarde_sobre_nulo": 1,
+   "agota": 1,
+   "curva_mediana": [
+    1.0,
+    0.7,
+    0.6,
+    0.8,
+    0.6,
+    0.9,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.4,
+    0.6,
+    0.6,
+    0.7,
+    0.6,
+    0.4
+   ],
+   "curva_com_mediana": [
+    1.0,
+    0.4,
+    0.2,
+    0.6,
+    0.2,
+    0.8,
+    0.4,
+    0.2,
+    0.4,
+    0.6,
+    0.6,
+    0.6,
+    0.6,
+    0.0,
+    0.2,
+    0.2,
+    0.4,
+    0.2,
+    0.0
+   ]
+  },
+  "recic": {
+   "ADQ_tarde": 0.92,
+   "ADQ_medio": 0.92,
+   "ADQ_temprano": 0.8333,
+   "PRIOR_tarde": 0.92,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.84,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_medio_com": 0.84,
+   "ADQ_temprano_com": 0.6667,
+   "PRIOR_tarde_com": 0.84,
+   "PRIOR_tarde_ven": 1.0,
+   "RET40": 0.9,
+   "RET40_com": 0.8,
+   "RET_todo": 0.9,
+   "cond_ult_cuarto": 0.0823,
+   "muertes": 330,
+   "splits": 31,
+   "n_rec": 0,
+   "rec_rel_mediana": null,
+   "est_agot": null,
+   "dur_s": 16.8,
+   "n": 1,
+   "com_sobre_prior_com": 0,
+   "dif_com_prior_mediana": 0.0,
+   "dif_tarde_temprano_com_mediana": 0.1733,
+   "tarde_sobre_nulo": 1,
+   "agota": 0,
+   "curva_mediana": [
+    1.0,
+    0.7,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0,
+    0.8,
+    1.0
+   ],
+   "curva_com_mediana": [
+    1.0,
+    0.4,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0,
+    0.6,
+    1.0
+   ]
+  },
+  "pareados": {
+   "rel-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.1
+   },
+   "rel-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.2
+   },
+   "rel-base:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.125
+   },
+   "rel-base:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.2
+   },
+   "rel-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.01
+   },
+   "rel-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -64
+   },
+   "azar-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.02
+   },
+   "azar-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "azar-base:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.1
+   },
+   "azar-base:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.2
+   },
+   "azar-base:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.025
+   },
+   "azar-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -39
+   },
+   "rel-azar:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.12
+   },
+   "rel-azar:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.2
+   },
+   "rel-azar:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.025
+   },
+   "rel-azar:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "rel-azar:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.035
+   },
+   "rel-azar:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -25
+   },
+   "azar-rel:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.12
+   },
+   "azar-rel:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.2
+   },
+   "azar-rel:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.025
+   },
+   "azar-rel:RET40_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 0,
+    "dif_mediana": 0.0
+   },
+   "azar-rel:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.035
+   },
+   "azar-rel:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 25
+   },
+   "base-rel:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.1
+   },
+   "base-rel:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.2
+   },
+   "base-rel:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.125
+   },
+   "base-rel:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.2
+   },
+   "base-rel:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -0.01
+   },
+   "base-rel:muertes": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 64
+   },
+   "recic-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.32
+   },
+   "recic-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.64
+   },
+   "recic-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.275
+   },
+   "recic-base:RET40_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.55
+   },
+   "recic-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "dif_mediana": 0.34
+   },
+   "recic-base:muertes": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "dif_mediana": -85
+   }
+  }
+ },
+ "predicciones": {
+  "P1": [
+   false,
+   "BASE comida tarde > a priori 1/1, dif 0.04 (>=16/20 y >=0.15)"
+  ],
+  "P2": [
+   true,
+   "BASE cae tras agotar: tarde-temprano comida -0.2 (< -0.10)"
+  ],
+  "P3": [
+   true,
+   "BASE olvida lo ausente: RET40 0.625 (<= 0.65)"
+  ],
+  "P4": [
+   true,
+   "BASE agota las 90 celdas 1/1, estimulo mediano 68"
+  ],
+  "P5": [
+   true,
+   "REL > BASE en comida tarde: {'n': 1, 'gana': 1, 'empata': 0, 'pierde': 0, 'dif_mediana': 0.2}"
+  ],
+  "P6": [
+   true,
+   "REL no cae tras agotar: tarde-temprano comida 0.0 (>= -0.10)"
+  ],
+  "P7": [
+   false,
+   "REL no paga con memoria: RET40 0.5 vs BASE 0.625 (>= BASE-0.05 y BASE no gana: {'n': 1, 'gana': 1, 'empata': 0, 'pierde': 0, 'dif_mediana': 0.125})"
+  ],
+  "P9": [
+   false,
+   "REL retiene lo ausente: RET40 0.5 (> 0.65)"
+  ],
+  "P11": [
+   true,
+   "REL comida tarde > a priori 1/1, dif 0.16"
+  ],
+  "P8": [
+   true,
+   "REL > AZAR en comida tarde: {'n': 1, 'gana': 1, 'empata': 0, 'pierde': 0, 'dif_mediana': 0.2}"
+  ],
+  "P10": [
+   true,
+   "RECIC > BASE y >= 0.90 (la medida ve la novedad): {'n': 1, 'gana': 1, 'empata': 0, 'pierde': 0, 'dif_mediana': 0.32}, RECIC 0.92"
+  ],
+  "P12": [
+   true,
+   "BASE > NULO 1/1"
+  ]
+ }
+}

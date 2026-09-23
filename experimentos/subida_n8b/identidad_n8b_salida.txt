@@ -1,0 +1,53 @@
+identidad_n8b  2026-09-23 17:27:24
+  [OK ] (0a) origen organismo_flujo sha 14afed5aa16e09bf
+  [OK ] (0b) origen mundo_n8 sha b0b57d7ff02afe4e
+  [OK ] (0c) tronco organismo_v142 sha 
+  [OK ] (0d) organismo_n8b en disco == construye_n8b y == sha del runner f9f3b56b498f6fc7
+  [OK ] (0e) mundo_n8b en disco == construye_n8b y == sha del runner 74e6127ee3e36814
+  [OK ] (A) s1 retina 6, T 20000, recicla=0 == organismo_flujo, 31 claves muertes 30
+  [OK ] (A) s2 retina 6, T 20000, recicla=0 == organismo_flujo, 31 claves muertes 29
+  [OK ] (A1) mundo n8 (12 px, peso 3), 80 estimulos, ventana 8, fusion=0, pool agotado: recicla=0 == organismo_flujo t_agot 53997 fus 0
+  [OK ] (A1) mundo n8 (12 px, peso 3), 80 estimulos, ventana 8, fusion=1, pool agotado: recicla=0 == organismo_flujo t_agot 53997 fus 32
+  [OK ] (A2) mundo n8b (13 px, peso 4), 60 estimulos, ventana 8: recicla=0 == organismo_flujo splits 44 celdas 74
+  [OK ] (A3) s1 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.74, 'C': -0.5, 'D': -2.5}
+  [OK ] (A3) s2 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.79, 'C': -0.5, 'D': -2.5}
+  [OK ] (A3) s3 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.82, 'C': -0.5, 'D': -2.5}
+  [OK ] (B) recicla=1 sin agotar el pool == recicla 0 (t_agot None, celdas 36) 
+  [OK ] (B) recicla=2 sin agotar el pool == recicla 0 (t_agot None, celdas 36) 
+  [OK ] (B) recicla=3 sin agotar el pool == recicla 0 (t_agot None, celdas 36) 
+  [OK ] (C1) recicla 1, 2 y 3 reciclan (n_rec > 0) con el pool agotado rel 48 azar 28 uso 38 base t_agot 53997
+  [OK ] (C2) todo reciclaje ocurre con el pool ya agotado (t >= t_agot) 
+  [OK ] (C3) celdas <= 90 al final [90, 90, 90, 90]
+  [OK ] (C4) relevancia, uso y azar liberan celdas distintas 
+  [OK ] (C5) hasta el primer reciclaje, rel == uso == azar == base (mismo t_agot, mismas divisiones) 
+  [OK ] (C6) la relevancia liberada por rel es menor que la liberada al azar (mediana |Wp-Wn|) rel 0.05485 azar 0.21785
+  [OK ] (D) determinismo recicla 1 
+  [OK ] (D) determinismo recicla 3 
+  [OK ] (P1) prueba=0: contadores en cero 
+  [OK ] (P2) prueba=1: lectura neutra EXACTAMENTE en los encuentros no reconocidos, y cambia la trayectoria 243/2999
+  [OK ] (P3) prueba=2: tasa de lecturas neutras al azar == su propia tasa de no reconocidos (+-0.05) neutras 0.218 no reconocidos 0.209 (prueba=1: 0.081)
+  [OK ] (P4) determinismo prueba 2 
+  [OK ] (P5) la prueba no lee valencias, R_VAL, el plan ni E; no toca dlt, Wp/Wn ni valor_tot 4 lineas
+  [OK ] (E0) mundo_n8b(12 px, peso 3, 200) == mundo_n8 (flujo y reciclado, semillas 1-40) 
+  [OK ] (E1) mundo largo: valencias 5/5 en cada bloque de 10 (500 estimulos, semillas 1-40) 
+  [OK ] (E2) 500 patrones distintos de peso 4 sobre 13 pixeles; T = 500 000 
+  [OK ] (E3) el mundo del humo (200) es el PREFIJO del de la serie (500): mismo orden, patrones y valencias 
+  [OK ] (E4) RECICLADO: 20 primeros == FLUJO; despues solo repeticiones con la misma valencia 
+  [OK ] (F1) llamadas al rng principal: las mismas que el origen; _rngr y _rngp solo en 2 lineas cada uno 
+  [OK ] (F2) el organo no lee valencias, R_VAL, el plan ni los patrones (sin canal hacia la respuesta) 19 lineas
+  [OK ] (G) entrada campo a campo contra organismo_v142: 175 campos, 0 distintos []
+  [OK ] (H1) corre_n8b.py --bogus aborta con error de argparse rc 2
+  [OK ] (H1) corre_n8b.py --hum aborta con error de argparse rc 2
+  [OK ] (H1) corre_n8b.py --humo --semila_humo 14890 aborta con error de argparse rc 2
+  [OK ] (H1) corre_n8b.py (sin modo) aborta con error de argparse rc 2
+  [OK ] (H2) --humo --pool 6 aborta antes de correr rc 1
+  [OK ] (H3) ninguna de esas llamadas escribio datos 
+  [OK ] (H4) plan_de_corrida aborta en 6 combinaciones malas (brazo mal escrito, semilla ajena, n != 20, sin pool, humo con semilla de serie, humo con --n) 6/6
+  [OK ] (H5) la combinacion buena de la replica da 7 brazos x 20 semillas 14821-14840, 500 estimulos 
+  [OK ] (I1) sintetico favorable en las dos -> FUNCIONA (piezas 1 +5, 4 +5, 3 entera +15 = +25) ('FUNCIONA', 'pieza 1 completa (+5); pieza 4 completa en su lectura "elige que muestrear" (+5); pieza 3 entera (+15)', 25)
+  [OK ] (I2) sintetico sin efecto -> no FUNCIONA ('HAY ALGO MODESTO', 'pieza 1 completa (+5)', 5)
+  [OK ] (I3) RECIC no ve la novedad en una serie -> NO SE LEE ('NO SE LEE', 'V1 (RECIC ve la novedad) o V2 (BASE > NULO) cae en alguna de las dos series', 0)
+  [OK ] (I4) favorable en una serie y no en la otra -> no FUNCIONA ('HAY ALGO MODESTO', 'pieza 1 completa (+5)', 5)
+  [OK ] (I5) --veredicto lee dos JSON, no corre nada, y su ULTIMA linea es la letra VEREDICTO (serie + replica, PREREGISTRO_n8b §6): FUNCIONA -- pieza 1 completa (+5); pieza 
+TOTAL 50/50 en 94.5s
+RESULTADO: 50/50
