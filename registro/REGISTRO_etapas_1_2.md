@@ -6103,3 +6103,297 @@ Reportadas: B2-CAUT válida (c1 0.572 vs 0.62) pero vida 236 vs 182 (1.30×, fue
 **Vocabulario permitido:** *"con dos series válidas del bloque 1 y dos del bloque 2, un cuerpo recién nacido que lee el nodo de su linaje por relevancia viva rechaza lo malo en su primer encuentro sin dejar de comer, vive alrededor de seis veces lo que vive el cuerpo vacío, y es el contenido del nodo, no una cautela genérica calibrada para imitarlo, lo que produce ese rechazo; la relevancia le gana a la recencia y al azar; el ranking calculado una sola vez también evita pero deja de comer, el vivo no; la reproducción desacoplada sube R₀ sin reordenar; y ni siquiera un nodo con la tabla verdadera hace que un linaje mortal se sostenga en este mundo: el muro es el mundo, no la calidad de la herencia"*. Prohibido: "la fase 9 cierra"; "H-1 se resuelve"; "el linaje se sostiene"; "C-F9B′ entra"; "población", "generación", "evoluciona", "enseña", "recuerda su vida pasada", "quiere", "planifica".
 
 **Qué queda.** Bloque 3 de la fase 9 (por escribir): **cambiar el mundo**, no el nodo (mapa del nivel 6 en el mundo vivo, o más de un cuerpo a la vez), con el gemelo numba (×46, arnés antes de usarlo) para series de 40 semillas. F9-7 y C-F9B′ cerrados. Nivel 9: propuesta del coordinador de **30 % a 50 %** (decide el director).
+
+### FASE 10 EXTERNA — integración del resultado externo de JUACO-EXO (22-sep-2026, ~12:15–12:59): **la calibración de F1 CAE sobre el instrumento de F0 (RENACE 0.26, fuera de 0.8–1.3) — no se corre la serie con esta letra. Exploratorio: H-BOCA se reproduce en dirección 4/4 (con sed, la boca muerde el veneno que ya sabe malo); el veto "boca lee las dos filas" quita el mordisco pero hunde al inmortal del mundo del tronco (R₀ 1.154 → 0.045) porque también corta la exposición a lo bueno (243 → 73 encuentros)**
+
+Preregistro `experimentos/nivel10_mundo_acumula/PREREGISTRO_mundo_fase10.md` (sha `d48d48dde674e8de`; ENMIENDA 1 sellada antes del humo, sha `29cb585e1156b198`: cambia `cap` 5→25, `regen` 30→50, `cambia_cada` 5000→12500). Instrumento copiado por rutas relativas desde JUACO-EXO con tripwire de 15 shas (origen `mundo_fase10.py` regenerado byte a byte, `84e97674f709a900`); arnés `identidad_mundo_fase10.py` **79/79** con la letra de F0 y **79/79** con la ENMIENDA 1 (`identidad_mundo_fase10_salida_F0calib.txt` sha `1d58c38149726fbf`, `..._enmienda1.txt` sha `039e777d379a95c2`). Sonda `organismo_boca2.py` por anclas (arnés 11/11). Informe `experimentos/nivel10_mundo_acumula/INFORME_INTEGRACION.md` (sha `744fa4ee020470f0`). Sin Pool, sin serie con letra oficial. Commit `c93d5a5`.
+
+| paso | medido | fuente |
+|---|---|---|
+| Humo ENMIENDA 1 (6 corridas, 1 proceso) | NADA 0.146/0.150 (mediana 0.148, dentro de 0.10–0.30); RENACE 0.306/0.214 (mediana 0.26, **fuera** de 0.80–1.30) | `datos/humo/mundo_fase10_humo_20260922_123306.json` (`340d9414b4822ed8`) |
+| Diagnóstico H-BOCA (6 corridas) | veneno con SED 0.75–0.90 (mundo vivo del tronco 0.75; F0 letra 0.88; F0 sin cambios 0.90; ENMIENDA 1 0.67) contra veneno con HAMBRE 0.003–0.05 en las cuatro corridas; sal con HAMBRE 0.16–0.44 contra sal con SED 0.02–0.05 | `datos/humo/diagnostico_boca_mapa_20260922_123508.json` (`299352724963a791`) |
+| Sonda boca2 (veto, n = 1) | veneno con SED cae de 63/84 a 2/224 exposiciones; inmortal del mundo del tronco: R₀ 1.154 → **0.045**; exposiciones a lo bueno 243 → 73; en la ENMIENDA 1 el veto sí ayuda (0.48→0.60, 0.31→0.48) pero no llega al ancla (mediana 0.33) | `ESBOZO_PREREGISTRO_boca_dos_filas.md` (`518e5ca1099f2f19`), `datos/humo/mini_boca2_20260922_124015.json` (`09dd2c8c075e3d86`) |
+
+**Predicciones propias del creador externo refutadas (declaradas):** R₀ ≥ 1.154 con el veto (70 %) → salió 0.045; R₀ con veto mayor que sin veto (80 %) → 0.028 contra 0.065; R₀ entre 0.4 y 1.3 → salió 0.173.
+
+**ERR redactados en el Anexo B del informe, numerados hoy por el coordinador:**
+- **ERR-105** (B-1): M10-2 está sesgada contra la acumulación — el "cuerpo 1" (fundador) nace con dote completa antes del primer cambio y vive ~6× más que los cuerpos 5..12; corrección M10-2′ (pareada 5..12 contra 2..4), semillas 2481–2520, no corrida.
+- **ERR-106** (B-2): M10-3 mide "leer el nodo", no "acumular por el cambio", porque el cuerpo 1 nunca lee; corrección M10-3′ análoga.
+- **ERR-107** (B-3): la cobertura de M10-2 sale degenerada (mediana 0.0 en 4 de 12 corridas); corrección: cobertura por ventana entre viradas, acotada a ≤ 1.
+- **ERR-108** (B-4): `cob_s` acierta el signo por azar (~0.5) porque la vía lenta generaliza por píxeles compartidos; corrección: leer con `cob_c` (|v| ≥ 0.5) contra el nulo de NADA.
+- **ERR-109** (B-5): la calibración externa de F1 (regla 3) se importó sin volver a medir su ancla en el instrumento del repo; hoy, con la medición, no se transfiere.
+- **ERR-110** (B-6): la ENMIENDA 1 (recalibración tras ver caer V-6 en el humo de F0) es admisible por procedimiento, pero **el ancla no se conserva**: no hay enmienda 2 con estas semillas.
+
+**Lectura honesta.** Lo externo era hipótesis, no dato, y así se trató: se verificó el instrumento (tripwire + arnés) antes de mirar cualquier número. El hallazgo central de JUACO-EXO (la boca decide con la fila de la necesidad activa y por eso el conocimiento heredado "llega y no se usa") se reproduce en dirección con el instrumento del repo, 4 de 4 corridas. Pero la calibración que ese mismo equipo propuso para el mundo (F1) no conserva el ancla del instrumento de F0 cuando se mide aquí, y el candidato al tronco ("la boca lee las dos filas") no rescata al inmortal: lo malo rechazado se queda ocupando sitio y también le tapa lo bueno. No hay serie con letra oficial hoy.
+
+**Vocabulario permitido:** *"un hallazgo externo, tratado como hipótesis, se reprodujo en dirección con el instrumento propio: con sed la boca muerde el veneno que ya sabe malo; la calibración que ese mismo equipo eligió para el mundo no conserva el ancla del instrumento verificado aquí, y un candidato que le impide morder lo rechazado no le devuelve la vida al inmortal porque también le corta el acceso a lo bueno; queda como diagnóstico de una sola corrida, no como candidato preregistrado"*. Prohibido: "el candidato entra"; "la boca lee las dos filas se confirma"; tratar cualquier número de JUACO-EXO como medido en el repo sin decir "externo".
+
+**Qué queda.** Semillas 2441–2840 asignadas y no corridas (detalle en el informe §5). Decisión pendiente del director: exploración con retina vacía antes que la boca, e instrumento F1 entero o calibración propia del mundo. Niveles 10–13 (exploratorio, mundo vivo): sin cambio de porcentaje; propuesta pendiente del coordinador de subir el rango de ~10 a 15 % sumando este hallazgo, el diagnóstico del muro y el mundo anclado (ver entradas siguientes) — decide el director.
+
+---
+
+### DIAGNÓSTICO DEL MURO — H-MURO, "pastoreo selectivo" (22-sep-2026, ~13:00–13:39; semillas 2941–2946, T=100000): **H-MURO SE SOSTIENE (P1, P2, P3 y P4 pasan 6/6 o 18/18) — pero con una corrección a la premisa: NADA no "limpia" el mundo, su propio mundo ya es 84.6 % malo; discriminar mejor sólo suma ~6 puntos más (REL 0.90, ORÁCULO 0.91); el pastoreo selectivo existe pero NO es la causa principal del muro**
+
+Preregistro `experimentos/diagnostico_muro/PREREGISTRO_diag_muro.md` (sha `aad01f6e3fd70bf2`), escrito tras un humo exploratorio (T=5000/20000, semillas ya vistas) y antes de la serie declarada. Instrumento `organismo_f9c_muro.py` (sha `72f1e5da62216d23`) por 5 anclas aditivas desde `organismo_f9c.py` (`9dd1fb91ecec35ae`, sólo leído); arnés `identidad_muro.py` bit a bit en NADA/REL/ORÁCULO/RENACE (T=20000) y en REL a T=100000 (156/156 muertes registradas) — **PASA**. Brazos = `corre_bloque2.BRAZOS` importado (regla 14 trivial, verificado OK en las tres celdas). Runner `diag_muro.py` (sha `29bf01d749d1871b`). Crudo `datos/humo/diagmuro_s2941-2946_20260922_132032.json` (sha `f374daaa92d15379`). 18 corridas, un proceso, sin Pool, 208 s de CPU. Informe `experimentos/diagnostico_muro/INFORME_DIAG_MURO.md`. Commit `90cfb09`. Sin ERR nuevo (reserva declarada: una corrida previa idéntica no mencionada en el informe, 0 diferencias en 18×53 campos).
+
+| # | medida | NADA | REL | ORÁCULO | umbral | veredicto |
+|---|---|---|---|---|---|---|
+| P1 | f_mala medida (presencia) | 0.8458 | 0.9027 | 0.9056 | ORÁCULO/REL > NADA en ≥ 5/6 semillas | **PASA 6/6 y 6/6** |
+| P2 | \|medida − predicha por la fórmula del estacionario\| | 0.0033 | 0.0034 | 0.0026 | ≤ 0.10 en las 18 celdas | **PASA 18/18** (máx. 0.0081) |
+| P3 | f_mala en los 200 pasos antes de morir | 0.9225 | 0.9685 | 0.9630 | pre-muerte > global en ≥ 5/6 | **PASA 6/6** |
+| P4 | q0 (muere sin parir) domina sobre la fecundidad extra | 0.87 vs ~0.002 | 0.65 vs 0.042 | 0.61 vs 0.060 | q0 domina | **PASA 6/6** |
+| — | R0 medido (mediana) | 0.132 | 0.383 | 0.460 | contexto | — |
+
+**Elasticidad aritmética (ORÁCULO, sobre la tabla de vida reconstruida, sin correr nada nuevo):** si nadie muriera antes de su primer parto (q0→0), ΔR0 = **+0.607**, R0 pasaría de 0.46 a **1.06** — la palanca con más margen (~16×) es la supervivencia hasta el primer parto, no la velocidad de esa reproducción ni "limpiar" el mundo. Mecanismo: el recién nacido necesita 500 pasos consecutivos saciado (`rep_acum=0`) para su primer parto, y en un mundo ~90 % malo esas rachas casi no se completan (q0 61–87 %).
+
+**Predicciones propias refutadas (declaradas por el creador):** la premisa "NADA muerde de todo y limpia" (parte fuerte del encargo) queda **REFUTADA tal cual** — el mundo de NADA ya es 84.6 % malo, no ~25 %; lo que sobrevive es la versión comparativa (P1). La elasticidad (c) (f_mala de ORÁCULO fuera la de NADA) queda declarada **NO INTERPRETABLE**: con sólo 3 brazos, un f_mala bajo viene empaquetado con discriminación pésima, y la recta de 2 puntos da pendiente positiva (lo opuesto de lo que H-MURO sugeriría si f_mala variara sola).
+
+**Lectura honesta.** El pastoreo selectivo es real y medido (P1–P3 pasan con la fórmula del estacionario ajustando a menos de 0.01 de error), pero es un mecanismo pequeño: el salto de discriminar no es de 0.25 a 0.90, es de 0.85 a 0.91. El muro de R0 no se explica principalmente por "el mundo se pone sucio al aprender a evitar lo malo": se explica más por la supervivencia hasta el primer parto en un mundo que ya es mayormente malo desde el arranque (aprendizaje aversivo dentro de una sola vida, sin nodo ni linaje).
+
+**Vocabulario permitido:** *"el mundo ya es mayormente malo incluso sin ningún cuerpo que discrimine (84.6 %), y discriminar mejor lo empeora sólo unos 6 puntos más; las muertes van precedidas de ventanas peores que el promedio, y la mayoría de los cuerpos muere sin haber parido nunca; la palanca aritmética más grande para subir R0 es que el primer parto se consiga, no que el mundo esté más limpio ni que la primera reproducción sea más rápida"*. Prohibido: "el mundo se limpia solo con NADA"; "el pastoreo selectivo es la causa del muro" sin la cifra comparativa; "H-MURO explica el muro".
+
+**Qué queda.** Falta variar `rep_X`/`rep_acum`/dote directamente sobre ORÁCULO para confirmar que la palanca (a) es explotable de verdad, y un control que mantenga f_mala fija para separar "mundo malo" de "cuerpo bueno". Niveles 10–13: ver nota de la entrada anterior (propuesta conjunta).
+
+---
+
+### CARRERA DE ESCUDERÍAS — reglamento y ronda 0: refutada la escasez, corregida la escala (22-sep-2026, 12:23–14:26; branch `carrera-escuderias`, integrada a main en `983f404`): **REGLAMENTO aprobado por el director ("córrelo"); ronda 0 sin escalar REFUTADA (0.272 contra SOLO 0.44–0.52, 86 % mundo malo) → ENMIENDA 1 (opción A del director: pista L=40·N, nobj=4·N); el humo de la pista escalada también REFUTÓ la predicción por un defecto de instrumento (ERR-98, olvido sin escalar); corregido, la ronda 0 oficial da mediana R0 0.332, 0/180 cruzan, DENTRO de lo esperado tras la corrección — nadie gana la ronda 0, línea base para la ronda 1**
+
+Reglamento `experimentos/carrera_escuderias/REGLAMENTO.md` (sha `c25bb979dd49781d`, se reescribe con cada enmienda, referencia aquí a la versión al cierre del día). Pista con identidad bit a bit a `organismo_f9c` (arnés 35/35 → 40/40 tras el juez de la ENMIENDA 2). Sha del organismo de fábrica `9dd1fb91ecec35ae`. Semillas de práctica 4001–4199; oficial 4003–4022; T=100000.
+
+| hito | qué pasó | veredicto |
+|---|---|---|
+| Reglamento | 9 escuderías (3 Opus, 3 Sonnet, 3 Haiku), meta R0 ≥ 0.90, pizarra pública, 5 rondas + sellada | aprobado 12:23 |
+| **ERR-96 (CRÍTICO)** | un carro podía falsificar su R0 vía `salida()` (`d.update(c.salida())` sin filtrar); demostrado con un carro tramposo (999999 hijos con 0 reales) | corregido antes de cualquier serie: el juez calcula todo sólo desde la verdad física; chequeo estático de tokens prohibidos |
+| **ERR-95** | la ENMIENDA 1 se escribió después de ver el humo sin escalar (H-2 de la auditoría); no retroactiva | declarada |
+| Humo ronda 0 sin escalar (L=40, nobj=4, 9 FABRICA) | R0 por linaje 0.272 contra SOLO 0.44–0.52; mundo 86 % veneno+sal | REFUTA la escasez como explicación única → **ENMIENDA 1** |
+| **ERR-97** | el motivo escrito para la ENMIENDA 1 ("la causa fue la escasez") no se sostiene: el SOLO con N=1 ya tiene el mundo en 88–92 % veneno+sal | declarada, la escala se mantiene por otra razón (compara a igual densidad) |
+| Humo ronda 0 escalada (L=40·N, nobj=4·N) | R0 0.269 (0.219–0.322), 0/18 — **REFUTA** la predicción firmada 0.35–0.55 | **ERR-98**: el olvido (0.003/paso) no estaba escalado por N; corregido escalando por objeto |
+| Ronda 0 oficial (9 FABRICA, olvido corregido, 4003–4022) | R0 por linaje mediana **0.332** (0.219–0.478), **0/180 cruzan**; SOLO en la misma pista 0.44–0.52 | dentro del rango tras la corrección; contabilidad física 180/180 |
+
+**Medido sin preregistrar (humo):** con 9 cuerpos, veneno con sed 0.69 (SOLO 0.57) y sal con hambre sube de ~0.50 a ~0.60 el déficit al morder; los robos puntuales no anteceden a esas mordidas (×1.04): la competencia agrega necesidad acumulada, mismo mecanismo que H-BOCA de la fase 10 (nota cruzada con la entrada anterior).
+
+**Decisión del director sobre percepción** (delegada, "las otras tú decides"): **opción A** — FABRICA toma L de la pista y sigue viendo el mundo entero; con N=1 es idéntico (pasa su propio arnés).
+
+**Lectura honesta.** La ronda 0 no declara ganador ni lo pretende: es línea base. Lo que sí queda medido dos veces (con y sin escalar) es que la sola presencia de otros cuerpos, a igual densidad de recursos, baja R0 por debajo de estar solo — la pregunta de la carrera (¿la interacción compensa esa baja?) queda abierta para la ronda 1.
+
+**Vocabulario permitido:** *"a la misma densidad de recursos por cuerpo, compartir el mundo con ocho más baja el R0 mediano por debajo de estar solo (0.33 contra 0.44–0.52); la ronda 0 no declara ganador, es la línea base contra la que se miden las escuderías"*. Prohibido: "la carrera cruza"; "coopera"; "población"; "evoluciona".
+
+**Qué queda.** Ronda 1 con las 9 escuderías + FABRICA (siguiente entrada). Nivel 9 (autonomía, bloque 3 "más de un cuerpo a la vez"): en construcción, sin cambio todavía.
+
+---
+
+### FANIN — entradas por celda de la expansión Kenyon, nivel 7 (22-sep-2026, 13:23–15:15; semillas 6021–6040, réplica 6041–6060, T=200000; branch `rama-fanin`, integrada en `b9c30f5`): **CAE la hipótesis del director por la letra del preregistro (PREREGISTRO:144) en las dos series — ninguna comparación concluyente pasa la puerta de mejora; el placebo pasa 0/4 y los controles están en su sitio; hallazgo no predicho y replicado: la conjunción mejora con menos entradas por celda (+0.16 / +0.125), pero queda fuera de la familia de mejora del cableado**
+
+Preregistro `experimentos/nivel07_fanin_expansion/PREREGISTRO_fanin.md` (sha `4548279ff9e634c5`), sellado con las seis correcciones del coordinador. Instrumentos por anclas desde `organismo_v142.py` (`17528d767fcebaf6`): `organismo_v142_fanin.py` (`a1d97a02bdf9dec9`), `organismo_v142g_fanin.py` (`71e9b247ec1e91fc`), baterías v3' y de generalización (`5e3e5b3878881ddf`, `df13a4e65335ff10`). Identidad bit a bit **23/23** con fanin=6. Crudo serie `datos/fanin_s6021-6040_20260922_132314.json` (sha `30ec6c202e464851`); réplica `datos/fanin_s6041-6060_20260922_142620.json` (sha `75c45096aec87620`). Commits `7a8db2f` (preregistro), `56fd6fe` (serie), `7130bb8` (réplica).
+
+| prueba | brazo | serie 6021–6040 | réplica 6041–6060 | veredicto (6a) |
+|---|---|---|---|---|
+| patrón negativo (np) | F3 | +0.047, 12/20, p Holm 0.71 | −0.078, 3/20 | NO CONCLUYENTE (validez/pool) |
+| | F2 | +0.031, 11/20 | +0.031, 12/20 | NO CONCLUYENTE |
+| XOR | F3 | −0.031, 7/20 | +0.031, 11/20 | NO CONCLUYENTE |
+| | F2 | +0.016, 10/20 | +0.047, 11/20 | MEJORA no |
+| paridad-3 | F3 | +0.000, 9/20 | +0.000, 9/20 | NO CONCLUYENTE |
+| | F2 | +0.000, 7/20 | +0.031, 11/20 | NO CONCLUYENTE |
+| conjunción (control) | F3 | +0.031, 12/20 | +0.125, 14/20 | fuera de la familia de mejora |
+| | F2 | **+0.156**, 13/20 | **+0.125**, 13/20 | fuera de la familia de mejora |
+| media de las 4 | F3 | +0.033, 14/20, p 0.058 (Bonf. ×2) | −0.016, 9/20 | MEJORA no (no repite) |
+| | F2 | +0.053, 15/20, p 0.021 | +0.056, 14/20, p 0.058 | MEJORA no (**no se repite en la réplica**) |
+| COSTO Etapa 3 (px0) | F3 | +0.000, baja 5/20 | +0.000, baja 5/20 | BAJA no (predicción del director refutada ×2) |
+| | F2 | +0.000, baja 4/20 | +0.000, baja 4/20 | BAJA no (refutada ×2) |
+| solapamiento (sonda, mecanismo) | F3−F6 | −0.034, baja 17/20 | −0.056, baja 17/20 | baja ×2 (el mecanismo ocurre, no cuesta) |
+| | F2−F6 | −0.052, baja 18/20 | −0.062, baja 19/20 | baja ×2 |
+| placebo (F6 s vs s+1) | 4 pruebas | 0/4 pasa | 0/4 pasa | controles OK ×2 |
+
+Puerta de validez (6b) y de pool (6c): la mayoría de las celdas F3/F2 quedan **NO CONCLUYENTES** (vía rápida < 0.30 en la sonda, o pool lleno antes de T/2 en paridad-3 y en parte de "azar"); F6 llega a 79–90 celdas, F2 se llena antes en paridad-3 y "azar". Secundario `acc_rapida` (6d, decidido hoy): 0/6 sube en ninguna prueba, en ninguna de las dos series. Controles del tronco: `bateria_v142_fanin` PASA 6/6 arneses (F6, F3, F2 × serie y réplica), salvo `fanin6` en la réplica que **NO cumple el criterio v3'** (identidad y control OK; "1_científicos=False"; no se recalibra, v11 sigue de tronco, regla 3 respetada).
+
+**Lectura honesta.** La hipótesis textual del director (2–3 entradas por celda mejoran patrón negativo, XOR y la media) no sobrevive a la réplica: la única mejora que había pasado el umbral en la primera serie (media de las 4, F2, +0.053) se arrastraba por la conjunción — un control que no debía cambiar — y cae por debajo del umbral en la réplica (14/20, p 0.058). El costo del director (menos entradas bajan la generalización) también queda refutado dos veces: lo que baja, en las dos series, es el solapamiento de códigos, sin que eso cueste acierto en la Etapa 3.
+
+**Vocabulario permitido:** *"con 6 pixeles por celda, reducir las entradas a 2 o 3 no mejora de forma concluyente ni el patrón negativo, ni la XOR, ni la paridad de tres, en ninguna de dos series; la mayoría de las comparaciones son no concluyentes por la puerta de validez o de capacidad, no refutaciones; la conjunción mejora con menos entradas de forma no predicha y replicada, pero es un control, no una de las pruebas centrales; el mecanismo de menor solapamiento de códigos ocurre y se repite, pero no le cuesta acierto al organismo"*. Prohibido: "el cableado mejora la generalización"; "cae el cuello de crecimiento" (sólo queda como hipótesis viva, no refutada); "F3/F2 generalizan mejor".
+
+**Qué queda.** Línea cerrada por hoy: entradas por celda (fanin 6/3/2) no mejora el organismo de 6 píxeles. Siguiente pregunta declarada: la versión de retina grande (~50 entradas). Nivel 7 (composición, XOR) **sigue en 70 %, no sube** (resultado negativo replicado).
+
+---
+
+### CRITERIO DE TRONCO v4 — calibración y réplica (ERR-94) (22-sep-2026, 13:25–14:30; semillas 2841–2920, réplica 2361–2440, Pool 5): **v4 CUMPLE sus cinco condiciones de validación (V4-1..V4-5) en la serie Y en la réplica — UTILIZABLE; v3 queda RETIRADO (sobre el mismo nulo da 0.709 / 0.732, confirma ERR-94); P-1..P-7 acertadas ×2**
+
+Preregistro `experimentos/criterio_v4/PREREGISTRO_calibracion_v4.md` (sha `2646dd7a8c42891b`). Letra en `registro/CRITERIO_TRONCO_v4.md` (sha `c529c48f63734426`). Instrumento: `corre_criterio_v4.py` (`c70d1c643e78ee88`), `umbrales_v4.py` (`881e2a07245566bb`), `identidad_v4.py` (`ab3bf0453c23a8c8`, arnés **16/16**), `regla14_v4.py` (`d31958b997a763aa`); reusa por import `organismo_v3cal.py` (`148014f68cb01785`, arnés v3 **54/54**). Crudos: serie `datos/critv4_20260922_132544.json` (sha `639c5773fed2e84f`); réplica `datos/critv4_rep_20260922_135746.json` (sha `3aad00160381b9f7`). 960 corridas por serie (640 T-A + 320 T-C ii). Commits `038ff0d` (preregistro/letra), `cc52105` (calibración+réplica), `319a93b` (integración a main, v3 retirado).
+
+| condición | serie 2841–2920 | réplica 2361–2440 |
+|---|---|---|
+| V4-1 (reparto del nulo, las dos puertas juntas ≥ 0.95) | **0.9952** | **0.9962** |
+| V4-2 (TRONCO_B pasa T-A, T-C ii, T-F en la realización) | PASA | PASA |
+| V4-3 (PLACEBO pasa las tres) | PASA | PASA |
+| V4-4 (PEOR cae) | CAE (correcto) | CAE (correcto) |
+| V4-5 (δ=−20 pasa ≤ 0.05; δ=−margen ≤ 0.15) | TA 0.0 / TC 0.0; margen TA 0.0027 / TC 0.058 | TA 0.0 / TC 0.0; margen TA 0.0027 / TC 0.0558 |
+| v3 sobre el mismo nulo (juntas) | 0.7088 | 0.7321 |
+| v2 (T-A, n=20) sobre el mismo nulo | 0.323 | 0.3147 |
+
+**Nota declarada:** T-C (ii) sola no atrapa a PEOR en la serie (v4 marca PASA con rev PEOR 47.0/43.0, LI −3.478 > −12.5); es T-A quien lo atrapa (LI −83.457 y −118.218). En la réplica, T-C (ii) sí atrapa a PEOR (LI −14.518 < −12.5): las dos puertas juntas son necesarias, ninguna sola basta siempre.
+
+**Predicciones firmadas (P-1..P-7), acertadas en las dos series:** P-1 reparto conjunto 0.9952/0.9962 (banda 0.965–1.0); P-2 T-C sola 0.996/0.998 (0.97–1.0); P-3 T-A sola 0.9992/0.9982 (0.985–1.0); P-4 v2 sigue rechazando 0.323/0.3147 (0.20–0.45); P-5 v3 0.7088/0.7321 (0.55–0.80); P-6 marginales TRONCO_B 6/6 y PLACEBO 6/6 dentro de Bonferroni las dos veces; P-7 PEOR Δr mediano −74.5…−115.5 (≤ −60).
+
+**Lectura honesta.** v4 no es un candidato al tronco: es el instrumento con el que se van a juzgar los candidatos de aquí en adelante. Pasa exactamente lo que tenía que pasar (el propio tronco contra sí mismo, y un candidato inerte) y rechaza exactamente lo que tenía que rechazar (un coste de vida ×1.5 conocido malo, y un desplazamiento exacto de −20), en dos series independientes. v3 se retira porque, con el mismo nulo, su probabilidad de dejar pasar al tronco (0.71–0.73) es demasiado baja para ser el criterio de aceptación de un candidato honesto.
+
+**Vocabulario permitido:** *"el criterio v4, calibrado con n=80 y margen 12.5 en T-C (ii), deja pasar al propio tronco y a un candidato inerte con probabilidad mayor a 0.99 sobre el nulo, y rechaza con probabilidad 1.0 a un candidato desplazado −20 y a un coste de vida conocido malo, replicado en dos series independientes; v3, sobre el mismo nulo, sólo llega a 0.71–0.73: se retira"*. Prohibido: "v4 declara un candidato"; usar v4 para rejuzgar algo evaluado con v2/v3 sin decirlo.
+
+**Qué queda.** De aquí en adelante, cualquier candidato a tronco se juzga con v4. No toca ningún nivel del brief directamente (es infraestructura de juicio).
+
+---
+
+### MUNDO ANCLADO v1 (22-sep-2026, ~13:50–14:21; branch `mundo-anclado`, integrada en `d46beb1`): **NO — una perilla de dilución de lo malo (quimiostato) sube a NADA y a ORÁCULO en la misma proporción; la razón se queda en 3.0–3.2 y las anclas piden ≥ 3.33; el mejor punto (h=0.0015) da ORÁCULO 1.000 y NADA 0.314, fuera por 0.014; por la regla preregistrada no se amplía la rejilla**
+
+Preregistro `experimentos/mundo_anclado/PREREGISTRO_mundo_anclado.md` (sha `ea380602eb25b4af`). Instrumento `organismo_anclado.py` (sha `e689c2952b1991a4`) por 4 anclas desde `organismo_f9c.py` (`9dd1fb91ecec35ae`); perilla `olv_mal` = h (dilución de lo malo por objeto y paso, rng propio); placebo `olv_ciego` (misma dosis, objeto al azar). Arnés `identidad_anclado.py`: **TODO PASA** (10 pares de brazos, dict completo). Crudo `datos/anclado_cal_s7001-7020_20260922_135510.json` (sha `2a380d83d1915adc`). Semillas 7001–7020, T=100000, rep_acum=0. Commit `afcc7e9`.
+
+| h (por objeto y paso) | R0 NADA | R0 ORÁCULO | razón | ORÁCULO ≥ 1 | NADA ≤ 0.30 |
+|---|---|---|---|---|---|
+| 0 (referencia, bloque 2) | 0.14 | 0.43–0.46 | 3.0–3.3 | 0/20 | — |
+| 0.0005 | 0.197 | 0.610 | 3.09 | 0/20 | 20/20 |
+| 0.001 | 0.253 | 0.752 | 2.97 | 0/20 | 19/20 |
+| **0.0015** | **0.314** | **1.000** | 3.18 | 11/20 | 7/20 |
+
+J (acierto balanceado) no se mueve con la perilla: NADA 0.18–0.20, ORÁCULO 0.98 en todos los puntos — el cuerpo es el mismo, sólo cambia el nivel de recurso.
+
+**Predicciones propias refutadas:** P1 (existe un punto que ancla en h≈0.001) y P2 (ORÁCULO 1.10–1.80 en ese punto) — en h=0.001 ORÁCULO dio 0.75, no ancló.
+
+**Lectura honesta.** Diluir sube el nivel de R0 para todos por igual, no la separación entre saber y no saber: la razón (lo que las anclas exigen) prácticamente no se mueve (3.0→3.2). El error de diseño fue elegir una perilla que sube el nivel esperando que también abriera la razón.
+
+**Vocabulario permitido:** *"diluir lo malo por objeto sube el R0 de todos los brazos casi en la misma proporción; la separación entre no saber y saber perfecto no se abre (razón 3.0–3.2), y el mejor punto medido queda a 0.014 del umbral que las anclas exigen; con esta única perilla, no existe un mundo anclado en la rejilla preregistrada"*. Prohibido: "el mundo anclado existe"; "REL se mide en un mundo anclado" (no hubo punto).
+
+**Qué queda.** Humo exploratorio (no resultado): con toxicidad ×2 la razón sube a ~10. Candidato preregistrado a continuación: dos perillas (toxicidad + dilución).
+
+---
+
+### MUNDO ANCLADO v2 — toxicidad + dilución (22-sep-2026, 14:48–15:39; branch `mundo-anclado`): **veredicto oficial por la letra del §6 del preregistro v2: HAY ALGO MODESTO (auditado: SE SOSTIENE CON RESERVAS) — las anclas pasan en UNA de las dos series de confirmación (ANC-1 cae por 0.003 en la primera, pasa en la réplica); REL cubre 0.73–0.75 del espacio NADA–ORÁCULO en las dos series y es su contenido (REL_BAR A₁₂ = 1.0) lo que lo hace; NO se puede declarar que REL cruce el umbral, porque la mediana ≥ 0.9 es en gran parte aritmética de la regla de elección**
+
+Preregistro `experimentos/mundo_anclado/PREREGISTRO_mundo_anclado_v2.md` (sha `8404b03e172acf6f`). Mismo instrumento `organismo_anclado.py` (`e689c2952b1991a4`), extendido con el kwarg `tabla` (toxicidad) ya existente; `corre_anclado_v2.py` (sha `fc3d6754d86b29af`), regla 14 OK en 7 brazos. Calibración: `datos/anclado2_cal_s7021-7040_fila0_20260922_143838.json` (`6162f1216b7c147b`) y `..._fila1_20260922_142433.json` (`e8c95e0721edb38a`). Confirmación 7041–7060: `datos/anclado2_conf_s7041-7060_20260922_151833.json` (sha `8bc6d6fe0526906d`); réplica 7061–7080: `datos/anclado2_conf_s7061-7080_20260922_152235.json` (sha `50f4f45811b5b82c`). T=100000, rep_acum=0. Commits `94ab930` (calibración), `3f8a10b` (elección por la regla 5c), `8d9a2d8` (confirmación+réplica), `5551e9c` (CIERRE del coordinador tras auditoría).
+
+**Calibración (medianas de 20 semillas):**
+
+| tox (daño ×) | h (por objeto y paso) | R0 NADA | R0 ORÁCULO | razón | ancla (regla 5b) |
+|---|---|---|---|---|---|
+| 1.25 | 0.003 | 0.291 | 1.078 | 3.71 | SÍ |
+| 1.5 | 0.003 | 0.107 | 0.677 | 6.35 | no |
+| 1.5 | 0.006 | 0.247 | 1.517 | 6.14 | SÍ |
+| 2.0 | 0.003/0.006/0.012 | ancla sólo con h=0.012 (ORÁCULO 2.50) | | | |
+
+Por la regla 5c (el ORÁCULO más bajo que ancle ≥ 1.0), **elegido: tox 1.25 / h 0.003**, con riesgo declarado (NADA a 0.009 del borde).
+
+**Confirmación y réplica en el punto elegido:**
+
+| serie | NADA | ORÁCULO | REL | posición REL en [NADA,ORÁCULO] | REL ≥ 0.9 / ≥ 1.0 (por semilla) | REL_BAR | ORÁCULO_CIEGO |
+|---|---|---|---|---|---|---|---|
+| confirmación 7041–7060 | **0.3034 (ANC-1 CAE por 0.003)** | 1.161 | 0.948 | 0.751 | 13/20 · 5/20 | 0.371 (A₁₂ REL>BAR 1.0) | 0.923 (PASA placebo, A₁₂ 0.912) |
+| réplica 7061–7080 | 0.2777 (**ANC-1 PASA**) | 1.171 | 0.926 | 0.726 | 12/20 · 6/20 | 0.390 (A₁₂ 1.0) | 0.886 (PASA, A₁₂ 0.968) |
+
+**Predicciones propias:** Q1 refutada en parte (tox 1.25 SÍ ancla, contra lo que el creador predijo); Q2 parcial (NADA y razón dentro, ORÁCULO 1.517 fuera de 1.00–1.40 en la fila descartada); P3/Q3 (REL 0.55–0.90 del espacio, luego 0.80±0.15) **acertada ×2** (0.751, 0.726).
+
+**Hallazgos de la auditoría, numerados hoy:**
+- **ERR-111** (H-1): el informe del creador no traía veredicto final actualizado; el coordinador lo completó en el CIERRE.
+- **ERR-112** (H-3): el runner imprime la predicción P3 de la v1 (0.55–0.90) en vez de la Q3 propia de la v2 (0.80; rango 0.65–0.95); no cambia el resultado de esta vez, pero es un defecto del instrumento.
+- **ERR-113** (H-4): `--elige` no archiva su salida; el auditor tuvo que reconstruir la regla 5c a mano (dio el mismo punto).
+
+**Lectura honesta.** Existe un mundo casi anclado con dos perillas: la ignorancia no se sostiene (NADA falla el ancla por 0.003 en una de dos series) y el conocimiento perfecto sí. En ese mundo, el nodo por relevancia cubre 0.73–0.75 del espacio entre no saber y saber todo, y es el contenido —no el simple recambio de memoria— lo que produce esa cobertura (el placebo de dilución ciega queda por debajo del ORÁCULO, A₁₂ 0.91–0.97). Lo que NO se puede decir es que REL "cruce" R0 0.9: esa cifra sale en gran parte de cómo se eligió el punto (el ORÁCULO más bajo que ancla), y por semilla sólo el 60–65 % de REL supera 0.9.
+
+**Vocabulario permitido:** *"con toxicidad y dilución de lo malo calibradas juntas, existe un mundo casi anclado donde la ignorancia no se sostiene y el conocimiento perfecto sí, aunque el margen de la ignorancia es estrecho (falla por 0.003 en una de dos series); en ese mundo el nodo por relevancia cubre tres cuartas partes del espacio entre no saber nada y saberlo todo, y es su contenido, no el mero recambio, lo que lo logra; no se puede decir que ese nodo cruce el umbral de sostenibilidad de un linaje, porque la cifra depende de cómo se eligió el punto de anclaje"*. Prohibido: "REL cruza R0 0.9"; "el mundo anclado está cerrado" (el punto tox 2.0 nunca se completó); "el mundo anclado confirma H-1".
+
+**Qué queda.** Fila tox 2.0 sin completar (presupuesto de CPU). Niveles 10–13 (exploratorio): propuesta pendiente del coordinador de subir de ~10 a 15 % sumando esta entrada, el diagnóstico del muro y la fase 10 externa — decide el director.
+
+---
+
+### CARRERA DE ESCUDERÍAS — ronda 1, ENMIENDA 4, serie sellada y auditoría: PRIMER CRUCE DE H-1 EN JUACO POR LA LETRA PREREGISTRADA (22-sep-2026, 14:06–16:35; semillas 4003–4022 y 5001–5040): **el monocultivo de 9 O1 CRUZA por la letra de la ENMIENDA 3 en la ronda 1 y se REPLICA en la serie sellada 5001–5020 (mediana R0 evaluables 1.615 / 1.565; 151/180 y 141/180 linajes-semilla cruzan; 20/20 semillas); ERR-100 corrige el R0 (con nacimientos reales, la mediana es 0.941, no 1.565: cruza por +4.5 %, no +74 %); ERR-101 (la memoria del linaje sobrevive a la extinción) queda DESCARTADO como causa por S-FUNDBORRA sellada (5021–5040): CRUZA igual (R0 real 0.941, 148/180) sin la memoria del fundador**
+
+Instrumento: pista multicuerpo con identidad bit a bit a `organismo_f9c` (`9dd1fb91ecec35ae`); `sha_pista` `fb0ba16ada56eabc`, `sha_juez` `9621e095000aaa1a` (recalculado a `8b57874cbee2946f` tras ERR-100); carro O1 (`99436afa2715f028`, LEGÍTIMO CON RESERVAS); `CTRL_O1_SINLIMPIA` (`be029b0a1b8d6634`, diff de una línea: `limpia=False`); `CTRL_O1_FUNDBORRA` (`8106a9200ea3ad4d`, el fundador nace sin tabla). Crudos: ronda1 monocultivo `datos/carrera_ronda1mono_s4003-4022_20260922_143838.json` (sha `2e60a9345aa92832`); serie sellada S-MONO `datos/carrera_rondasellada_mono_s5001-5020_20260922_152750.json` (sha `9376c45903e6aa97`); S-FUNDBORRA `datos/carrera_rondasellada_fundborra_s5021-5040_20260922_161938.json` (sha `ec13bd5951dcdb46`). Commits `e9ceafb`/`7124152` (ENMIENDA 2/3), `6449508` (ronda 1), `655010a`/`d07aac6` (ENMIENDA 4), `ff250a9` (serie sellada), `2bd1d3b`/`bfa8ccd` (auditoría, ERR-100/101), `2716398`/`dfb1a48` (S-FUNDBORRA).
+
+| serie | brazo | R0 evaluables (mediana) | R0 nacimientos reales (mediana, ERR-100) | linajes-semilla cruzan | sin fundadores tras t=10000 | veredicto |
+|---|---|---|---|---|---|---|
+| ronda 1 (4003–4022) | monocultivo 9×O1 | 1.615 | — (recalculado después) | 151/180 | 83.9 % | **CRUZA** |
+| ronda 1 | SOLO O1 (N=1) | 0.681 | — | — | — | NO CRUZA |
+| ronda 1 oficial (O1,S1,H1+6 FAB) | — | O1 casi inmortal 20/20 (no evaluable); S1 0.345; H1 0.293 | — | 0 | — | nadie gana |
+| **S-MONO sellada (5001–5020)** | 9×O1 | **1.565** | **0.941** | **141/180** | 78.3 % | **CRUZA** (replica la ronda 1) |
+| S-SOLO-GRANDE (1×O1, mundo de 9) | O1 | 178.0 (casi inmortal, 20/20) | — | 0 (no evaluable) | — | casi inmortal: no separa compañía de abundancia |
+| S-SIN-LIMPIEZA (9×`CTRL_O1_SINLIMPIA`) | — | 0.218 | — | 0/180 | — | NO CRUZA: la limpieza compartida es necesaria |
+| S-FAB (9×FABRICA, piso) | — | 0.34 | — | 0/180 | — | NO CRUZA (piso) |
+| **S-FUNDBORRA sellada (5021–5040)** | 9×`CTRL_O1_FUNDBORRA` | 2.667 | **0.941** | 157/180 (real: 148/180) | ~87 % | **CRUZA igual sin memoria del fundador** |
+
+**Predicciones firmadas, todas cumplidas:** monocultivo O1 cruza (p 0.55, ronda 1) y en la sellada (p 0.75); SOLO no cruza (p 0.90); S-SOLO-GRANDE casi inmortal (p 0.60); S-SIN-LIMPIEZA no cruza (p 0.50); S-FAB no cruza (p 0.97); S-FUNDBORRA cruza (p 0.55) y R0 real ≥ 0.90 (p 0.35).
+
+**ERR de la carrera declarados hoy (ya numerados en el REGLAMENTO):** **ERR-95** (ENMIENDA 1 escrita tras ver el humo), **ERR-96** (CRÍTICO: telemetría falsificable, corregida antes de correr nada oficial), **ERR-97** (el motivo de la ENMIENDA 1 no se sostenía), **ERR-98** (olvido sin escalar por objeto), **ERR-99** (el R0 se degenera con 0 muertes: "casi inmortal" no cuenta), **ERR-100** (R0 cuenta hijos no nacidos en la cola; desde ahora se reporta también el R0 de nacimientos reales), **ERR-101** (la memoria del linaje sobrevive a la extinción del fundador; **descartado como causa** por S-FUNDBORRA).
+
+**Lectura honesta.** Es el primer cruce de H-1 (R0 ≥ 0.9) en todo el proyecto por una letra preregistrada, y se sostiene en dos frentes de auditoría: (1) con la métrica corregida de nacimientos reales, el cruce es más modesto de lo que parecía (+4.5 %, no +74 %) pero sigue siendo un cruce; (2) no depende de un artefacto de instrumento (la memoria del fundador). Lo que se puede declarar con letra exacta es acotado: un linaje O1 mortal sostiene R0 ≥ 0.9 cuando comparte el mundo con otros O1 de su misma escuadra, la limpieza compartida es necesaria (sin ella, colapsa a 0.218), y no se puede separar todavía la compañía de la abundancia (S-SOLO-GRANDE quedó casi inmortal, no evaluable).
+
+**Vocabulario permitido:** *"en la pista escalada, un linaje O1 mortal sostiene R0 mayor o igual a 0.9 cuando comparte el mundo con otros O1 de su escuadra; replicado en semillas selladas y con la memoria del fundador borrada; la limpieza compartida es necesaria para ese cruce; con la cuenta de nacimientos reales, el margen sobre el umbral es de apenas 4.5 puntos, no de 74; todavía no se puede separar si es la compañía o sólo la abundancia de un mundo más grande lo que sostiene al linaje solo"*. Prohibido: "coopera"; "población"; "evoluciona"; "altruismo"; citar el R0 de 1.565/1.615 sin decir también el de nacimientos reales (0.941) al lado.
+
+**Qué queda.** Ronda 2 (combos de Opus, siguiente entrada). Nivel 9 (autonomía, bloque 3): propuesta pendiente del coordinador de subir de 50 a 65 % — decide el director, con la ronda 2 (siguiente entrada) como evidencia adicional.
+
+---
+
+### APRENDE A BARRER — camino A, fase 9 bloque 3 (22-sep-2026, 16:33–17:22; branch `aprende-barrer`, integrada en `9ce84d9`; semillas 8101–8120, T=100000): **HAY ALGO MODESTO, pendiente de réplica (no corrida hoy) — APR (corrección de la boca aprendida por TD, heredada) NO CRUZA (mediana R0 evaluables 0.387) y NO descubre la limpieza (P5 se cumple), pero gana a FABRICA 20/20 semillas (+0.051 mediana) y a APR_SIN_HERENCIA 20/20 (+0.094): aprender sólo le sirve al linaje si se hereda**
+
+Preregistro `experimentos/aprende_barrer/PREREGISTRO_aprende.md` (sha `f2d2812a0ef830e0`), escrito después de los humos de práctica (8001–8002, ninguna semilla de la serie) y antes de correr. Carros por anclas desde `FABRICA.py` (sha `2ebee3e99ea5a33a`): `APR.py` (`4402aa5142065c72`), `APR_SIN_HERENCIA.py` (`7c5ca65079a70383`); arnés `identidad_apr.py` **21/21**. Runner `corre_aprende.py` (`9b8f6b3fdb923190`), `sha_pista` `fb0ba16ada56eabc`, `sha_juez` `9621e095000aaa1a`. Crudos: `datos/aprende_apr-fab-o1-sinher_s8101-8120_T100000_20260922_163427_{apr,fab,o1,sinher}.json` (shas `33b29f4175891074`, `d42f062fe1e8f0c5`, `0226a4c98182aeda`, `15743e9a1ca32f8f`). Commits `bc7437d` (preregistro), `960faeb` (serie).
+
+| carro | R0 evaluables (mediana) | vida mediana | cruza (ENMIENDA 3) | causas de muerte veneno/sal | limpieza física por cuerpo |
+|---|---|---|---|---|---|
+| APR | 0.3866 | 200.0 | NO CRUZA (0/180) | 37 % / 63 % | 4.42 |
+| FABRICA (piso) | 0.3348 | 200.0 | NO CRUZA (0/180) | 40 % / 60 % | 4.40 |
+| O1 (techo) | 1.729 | 2904.5 | **CRUZA** (145/180) | 16 % / 16 % (35 % hambre, 34 % sed) | 16.57 |
+| APR_SIN_HERENCIA | 0.2935 | 200.0 | NO CRUZA (0/180) | 40 % / 60 % | 4.58 |
+
+**Pareados por semilla (mediana del R0 de los 9 linajes):** APR vs FABRICA gana **20/20**, diferencia mediana **+0.0513**; APR vs SIN_HERENCIA gana **20/20**, diferencia **+0.0941**; SIN_HERENCIA vs FABRICA gana sólo **1/20**, diferencia **−0.0414**.
+
+**Qué aprendió APR (telemetría, no puntúa el veredicto):** corrección al logit de morder, negativa en todo el rango de u tras morder (−1.55 a −2.45); "añadidas" (limpia donde FABRICA no) 0.0001–0.0012 por oportunidad; "quitadas" (se contiene donde FABRICA mordería) 0.053–0.058 por oportunidad, diez veces más que SIN_HERENCIA (0.0024–0.0037). Aprendió a **contenerse**, no a limpiar.
+
+**Predicciones firmadas, las once evaluables se cumplen** (P1 no cruza p 0.97; P2 mediana 0.32–0.45; P3 FABRICA no cruza, 0.28–0.40; P4 O1 cruza; P5 no descubre la limpieza; P6 aprende a contenerse; P7 APR>FABRICA ≥15/20; P8 APR>SIN_HERENCIA ≥15/20; P10 SIN_HERENCIA no cruza; P11 fracción sin bueno 0.003–0.03); **P9 (APR>APR_AZAR) queda sin evaluar** — el carro placebo de "cuándo" no se corrió hoy (tope de 6 humos).
+
+**Lectura honesta.** El resultado central del preregistro para esta serie es "HAY ALGO MODESTO" (P7 se cumple: APR le gana a FABRICA sin cruzar), pero el propio preregistro exige, para declarar esa frase, que se repita en la réplica 8121–8140 — y esa réplica **no se corrió hoy**. Lo que sí se puede decir ya, porque compara dentro de la misma serie: la corrección aprendida por TD sólo mejora al linaje cuando se hereda (SIN_HERENCIA pierde contra el propio FABRICA en 19 de 20 semillas), y lo que el organismo aprende es a contenerse frente al costo privado de morder lo malo, no a descubrir la limpieza como bien público (que requeriría selección entre linajes, no aprendizaje dentro de una vida).
+
+**Vocabulario permitido:** *"un organismo que corrige por refuerzo, dentro de su propia vida, cuándo conviene morder lo que ya sabe malo, no cruza el umbral de sostenibilidad, pero supera de forma reproducible al organismo sin esa corrección en las 20 semillas medidas, y esa ventaja depende de que la corrección se transmita al cuerpo siguiente del linaje; lo que aprende es a contenerse frente al costo privado, no a limpiar el mundo compartido; falta la réplica para declarar esto con letra firme"*. Prohibido: "APR descubre la limpieza" (P5 lo prohíbe explícitamente); "el aprendizaje individual resuelve el bien público"; declarar "HAY ALGO MODESTO" como cierre sin la palabra "pendiente de réplica".
+
+**Qué queda.** Réplica 8121–8140 (carros apr y fab) sin correr; humo de APR_AZAR (P9) sin correr. Nivel 8 (aprendizaje abierto): propuesta pendiente del coordinador de subir de 40 a 45 % **condicionada a que la réplica confirme P7** — decide el director; **no se sube hoy** porque no hay réplica.
+
+---
+
+### CARRERA DE ESCUDERÍAS — ronda 2 (combos de Opus) y réplica sellada: EL BICHO SE ESTABILIZA (22-sep-2026, 16:35–20:41; semillas de práctica 9001–9099, oficial 9101–9120, réplica sellada 9121–9140): **O3 y O4 GANAN por la ENMIENDA 5 (R0 real ≥ 0.90) y ESTABILIZAN por la ENMIENDA 6 (persistencia) en monocultivo y en pista con FABRICA, CON MUERTE PROGRAMADA declarada, REPLICADO en la sellada 9121–9140; O2 ESTABILIZA en monocultivo sin muerte programada (persistencia real, no artefacto) pero NO GANA por la ENMIENDA 5; en la pista mixta O2/O3/O4, los tres persisten y O3+O4 ganan**
+
+ENMIENDA 5 (fundador limpio, R0 de nacimientos reales, gana con ≥15/20 en mono y mixta) y ENMIENDA 6 (**ERR-102**: la métrica R0 real premia morir — un linaje casi inmortal, sin 5 muertes, no es evaluable y no puede ganar; criterio co-principal **PERSISTENCIA**: ≥1 linaje con 0 fundadores tras t=10000 y ≥5 nacimientos reales; la muerte programada se declara y se mide, no se prohíbe). `sha_pista` `9f47c65e438e0ff4`, `sha_juez` `6a68f640a7832f12`; carros O2 (`34d0bbac36a02521`), O3 (`0442c2884fcb0e11`), O4 (`75fd196ccbc1347e`). **ERR-103**: la bandera "con muerte programada" se activa con cualquier muerte física voluntaria (incluida O2, 1/1352 = 0.07 %) y no discrimina; vale la cifra declarada por el carro (O3: TERMINAL; O4: senescencia). Crudos oficiales: mono O2/O3/O4 `..._s9101-9120_...` (shas `592017ade4ecb259`, `7e429aff97cc5216`, `11c09fa78c7eade2`); fab O2/O3/O4 (shas `d1bae576938e5580`, `c1620e8af9e90b95`, `dbe204fd1c620053`); mix3 (sha `b06663d93b98da41`). Réplica sellada: mono O2/O3/O4 (shas `1c50245edcb15d23`, `701ad05431cb4e6f`, `153bd86fa75af860`); fab O3/O4 (shas `75650fc761573aeb`, `a75cd6b65b11370c`). Commits `8aa31f6`/`2192b3c`/`3b3c58e` (ENMIENDA 5), `8cb7f9f`/`a49b156`/`a170746` (ENMIENDA 6 y oficial), `4478d77` (réplica sellada, confirmación).
+
+| equipo | pista | oficial 9101–9120: gana (ENM.5) | oficial: R0 real (mediana) | oficial: estabiliza (ENM.6, persistencia) | oficial: fracción muertes voluntarias | réplica sellada 9121–9140: gana | réplica: estabiliza |
+|---|---|---|---|---|---|---|---|
+| O2 | monocultivo | **no** (7/20 mayoría) | 0.867 | **SÍ** (18/20 semillas, 161/180 persisten) — sin muerte programada | 8.9 % | **no** (5/20) | **SÍ** (20/20, 174/180) |
+| O3 | monocultivo | **SÍ** (20/20) | 0.968 | **SÍ** (20/20, 178/180) — con muerte programada (TERMINAL, 4696 cuerpos) | 79.7 % | **SÍ** (20/20) | **SÍ** (20/20, 178/180) |
+| O4 | monocultivo | **SÍ** (20/20) | 0.973 | **SÍ** (20/20, 159/180) — con muerte programada (senescencia, 4008 cuerpos) | 38.7 % | **SÍ** (20/20) | **SÍ** (20/20, 152/180) |
+| O2 | +6 FABRICA | **no** (0/20; casi inmortal 56/60) | 0.845 | **no** (0/20, 4/60 persisten) | 0 % | — | — |
+| O3 | +6 FABRICA | **SÍ** (20/20) | 0.986 | **SÍ** (20/20, 60/60) — con muerte programada | 94.2 % | **SÍ** (20/20) | **SÍ** (20/20, 60/60) |
+| O4 | +6 FABRICA | **SÍ** (20/20) | 0.970 | **SÍ** (20/20, 60/60) — con muerte programada | 91.7 % | **SÍ (19/20 por ENM.5, 20/20 por persistencia)** | **SÍ** (20/20, 60/60) |
+| O2/O3/O4 | mixta (3+3+3) | ganan **O3 y O4** | O2 0.938 · O3 0.972 · O4 0.970 | los **tres** persisten (20/20 cada uno, 60/60 linajes) | O2 0.07 % · O3 77.6 % · O4 85.6 % | (no repetida en sellada) | — |
+
+**Predicciones firmadas de la ENMIENDA 6 (PERSISTENCIA), cumplidas:** O2 estabiliza en mono (predicho 0.45) → **SÍ**; O2 en fab (predicho 0.15) → **no**; O3 en mono (predicho 0.50) → **SÍ**; O4 en mono (predicho 0.35) → **SÍ**. Predicciones de la ENMIENDA 5: al menos un equipo gana la ronda en mono (predicho 0.50) → **SÍ (dos)**; en mixta con 6 FABRICA (predicho 0.25) → **SÍ (dos)**.
+
+**Lectura honesta.** Este es el segundo hito grande del día y el primero **replicado en semillas selladas**: dos escuderías (O3, O4) sostienen R0 real ≥ 0.90 Y renuevan generaciones de verdad (persistencia, no un inmortal disfrazado), en monocultivo y compartiendo mundo con FABRICA, y lo hacen dos veces seguidas con números casi idénticos (O3: 0.968→0.968; O4: 0.973→0.973). Lo hacen con una muerte que el propio carro programa y declara — legal por el reglamento, pero hay que decirlo siempre junto con el resultado. El hallazgo más limpio, porque no depende de ninguna muerte programada, es O2: estabiliza el bicho (persiste, renueva) sin jugar la carta de morir a propósito, aunque no alcanza el umbral estricto de R0 real para "ganar".
+
+**Vocabulario permitido:** *"dos escuderías de Opus sostienen R0 real de nacimientos ≥ 0.90 con recambio genuino de generaciones (no un inmortal disfrazado), en monocultivo y compartiendo mundo con el carro de fábrica, replicado en una serie sellada independiente; ambas lo hacen con una muerte que el propio carro programa y declara; una tercera escudería logra el recambio de generaciones sin morir a propósito, pero no alcanza el umbral estricto de nacimientos reales; en la pista mixta, las tres conviven y persisten a la vez"*. Prohibido: "estabiliza" sin la coletilla "con muerte programada" cuando corresponde; "coopera"; "población"; "evoluciona"; "el bicho está resuelto" (es una pista con fundador limpio y reglas específicas, no el mundo general de la fase 9).
+
+**Qué queda.** ERR-103 (el clasificador de muerte voluntaria no discrimina) sin corregir; queda como reserva declarada. Nivel 9 (autonomía, bloque 3, "más de un cuerpo a la vez"): con el primer cruce de H-1 (entrada anterior) y esta réplica sellada de dos escuderías que estabilizan, **propuesta del coordinador: subir de 50 a 65 %** — decide el director.
+
+---
+
+### GENERACIONES QUE CONVIVEN — pista v2 preparada, sin series corridas (22-sep-2026, 20:20–20:30; branch `generaciones-conviven`, integrada en `bc2f78d`): **HAY ALGO MODESTO por construcción — la pista v2 con partos reales y solapamiento de generaciones está construida y verificada (arnés 36/36, luego 37/37), pero el mundo de v1 NO TIENE CAPACIDAD DE CARGA cuando las generaciones conviven (morder lo malo repone al instante y fabrica comida): hizo falta un quimiostato con reposición fija; NINGUNA SERIE de T=100000 se corrió hoy — queda para el 23-sep**
+
+Preregistro `experimentos/generaciones/PREREGISTRO_convive.md`. Instrumento `construye_pista2.py` (4 anclas sobre `carrera_escuderias/pista.py`, sha `9f47c65e438e0ff4`) → `pista2.py` (sha `4d2bee16e7961261`); con `solapadas=0` es la pista v1 bit a bit. `CTRL_O3_SINTERM` por anclas (`TERMINAL=False`, diff de una línea). Juez `corre_convive.py` (sha `e6dadfdad9c379cd`), criterio: *persiste el carro* (≥1 linaje sin fundadores tras t=10000) y *tamaño del carro*; estabiliza con ≥15/20. Arnés `identidad_convive.py` **37/37** (informe: sha del documento `691a9734819bfaff`). Único dato: humo de un proceso, semilla de práctica **10012**, T=20000, reposición fija (`datos/convive_humo_cinco_s10012_T20000_fija_20260922_200435*`, no es serie). Commits `e79f81a` (pista v2 + preregistro + ERR-104), `66fb45f` (juez v2 + pista mixta).
+
+**ERR-104 (declarado hoy):** en el mundo v1, morder un objeto malo (B/D) repone al instante una letra al azar en su lugar; con generaciones solapadas eso significa que limpiar fabrica en promedio ~0.5 objetos buenos por mordida, y el flujo de comida **crece** con el número de cuerpos — lo opuesto de "el mundo se come la comida". Con reposición inmediata, 9 O2 pasaron de 9 a **128 cuerpos en 5000 pasos** y seguían creciendo, sin techo. **Reserva declarada sobre el primer cruce de H-1** (entrada anterior): es la misma raíz que "la limpieza compartida es un bien público" (ENMIENDA 4 de la carrera), invisible allí porque había un solo cuerpo por linaje.
+
+| carro (humo, s10012, T=20000, quimiostato) | persisten/9 | R0 cohorte | tamaño medio del linaje | cuerpos del carro (media/máx) | generaciones (máx) | muertes voluntarias declaradas | fundadores |
+|---|---|---|---|---|---|---|---|
+| FABRICA | 0 | 0.158 | 1.05 | 9.5 / 13 | 1 | 0/572 | 476 |
+| O1 | 1 | 0.133 | 1.49 | 25.3 / 35 | 3 | 0/527 | 400 |
+| O2 | 2 | 0.600 | 1.36 | 16.6 / 24 | 3 | 0/142 | 50 |
+| O3 | 4 | 1.000 | 1.74 | 15.0 / 22 | 3 | 3/85 | 25 |
+| O4 | 4 | 0.857 | 1.15 | 20.9 / 29 | 6 | 14/413 | 304 |
+
+**Lectura honesta.** Es una sola semilla de humo, no una serie: sólo sirve para ver que el instrumento corre y que la corrección de capacidad (quimiostato) era necesaria, no opcional. Con esa corrección, O3 y O4 (los mismos que ganan la ronda 2 de la carrera) también aparecen arriba en persistencia y R0 de cohorte en este humo de una semilla — consistente en dirección, sin ningún valor probatorio todavía.
+
+**Vocabulario permitido:** *"la pista con generaciones solapadas está construida y su identidad con la pista de un cuerpo por linaje está verificada; el mundo original no tiene capacidad de carga cuando conviven varias generaciones, porque limpiar repone comida al instante; con un quimiostato que fija el flujo de recursos, un humo de una sola semilla es consistente en dirección con los resultados de la carrera de escuderías, pero no es una serie ni prueba nada todavía"*. Prohibido: cualquier cifra de la tabla del humo citada como si fuera una serie declarada; "las generaciones conviven: FUNCIONA/NO"; "coopera"; "población".
+
+**Qué queda.** Series de T=100000 (monocultivos de 6 carros + réplica + pista mixta H) preparadas y no corridas — comandos en `experimentos/generaciones/INFORME_CONVIVE.md` §"v2 (tras la §9 del coordinador)". Estimado ≈2.5–3 h de CPU con Pool 6 para monocultivos, ≈20–25 min para la mixta. Ningún nivel del brief cambia por esta entrada (no hay dato, sólo instrumento).
+
+---

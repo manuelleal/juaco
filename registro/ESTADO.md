@@ -4,6 +4,17 @@
 > `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: `PLAN.md`. Reglas: `EQUIPO.md` y `CLAUDE.md`.
 
+## AL 22-SEP-2026, 21:15 (cierre; manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.30 y en la cola del REGISTRO)
+- **Primer cruce de H-1 en JUACO** (carrera de escuderías, monocultivo de O1, que limpia): R0 de nacimientos reales 0.941, replicado en semillas
+  selladas y sin la memoria del fundador. Reserva ERR-104: en ese mundo, morder repone al instante una letra al azar.
+- **Ronda 2** (combos Opus): O3 y O4 estabilizan en monocultivo y con FABRICA, **replicado en sellada**, con muerte programada declarada. O2
+  estabiliza en monocultivo sin muerte programada. La pista de un cuerpo por linaje obliga a morir para parir (ERR-102). Siguiente mundo:
+  generaciones que conviven (quimiostato, rama integrada, sin series).
+- **Criterio de tronco v4 UTILIZABLE** (v3 retirado). Mundo anclado v2: HAY ALGO MODESTO. Fanin: CAE. Aprende a barrer: HAY ALGO MODESTO sin réplica.
+- **Propuestas de nivel pendientes del director:** 8 de 40 a 45 %, 9 de 50 a 65 %, 10–13 de ~10 a 15 %. Último ERR: **113**.
+- **Mañana (23-sep):** series de generaciones que conviven (`experimentos/generaciones/INFORME_CONVIVE.md`) → Escuela de abejas con protocolo
+  y visualización animada → JUACO-ECO.
+
 ## Tronco
 **v14.2** (tag `v14.2-tronco`, 18-sep 21:25) = v14.1 + B-5 (división por conflicto disparada por R = 0 bajo retina distinta; repara el alias de
 código). 20 archivos congelados (`python manifiesto.py` desde la raíz los verifica). Regla 1 en `CLAUDE.md`. Criterio para candidatos nuevos:
