@@ -1,0 +1,682 @@
+{
+ "series": {
+  "apr": {
+   "serie": "apr",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.387,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3866,
+   "R0_pista_med": 0.3835,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 79,
+    "sed": 15,
+    "veneno": 11980,
+    "sal": 20337
+   },
+   "frac_sin_bueno_mundo_med": 0.0113,
+   "limpiezas_fisicas_por_cuerpo_med": 4.4215,
+   "limpiezas_fisicas_por_linaje_med": 806.0,
+   "mord_BD_por_linaje_med": 860.5,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "apr": {
+    "oportunidades": 1595246,
+    "mordidas": 153276,
+    "tasa_global": 0.0961,
+    "tasa_por_cuarto": [
+     0.1117,
+     0.0917,
+     0.0913,
+     0.0901
+    ],
+    "tasa_ultimo_cuarto": 0.0901,
+    "tasa_por_edad": [
+     0.2061,
+     0.2302,
+     0.2003,
+     0.0694,
+     0.053,
+     0.0565,
+     0.0442
+    ],
+    "bin_edad": [
+     50,
+     100,
+     200,
+     400,
+     800,
+     1600
+    ],
+    "tasa_por_indice_cuerpo": [
+     0.1027,
+     0.1201,
+     0.1224,
+     0.1031,
+     0.092,
+     0.091,
+     0.0932,
+     null
+    ],
+    "bin_gen": [
+     1,
+     5,
+     20,
+     50,
+     100,
+     200,
+     400
+    ],
+    "opp_por_indice_cuerpo": [
+     10222,
+     27701,
+     113757,
+     257079,
+     458545,
+     715619,
+     12323,
+     0
+    ],
+    "tasa_sin_bueno_vs_con": {
+     "con_bueno": 0.098,
+     "sin_bueno": 0.0795,
+     "opp": [
+      1433126,
+      162120
+     ]
+    },
+    "tasa_por_post": {
+     "con_bueno": [
+      0.1404,
+      0.2121,
+      0.2005,
+      0.0257,
+      0.0031
+     ],
+     "sin_bueno": [
+      0.1265,
+      0.1752,
+      0.1621,
+      0.02,
+      0.0019
+     ],
+     "bin_post": [
+      0.0,
+      0.3,
+      0.6,
+      1.0
+     ],
+     "opp": [
+      [
+       168247,
+       316775,
+       183573,
+       459711,
+       304820
+      ],
+      [
+       16630,
+       34004,
+       22199,
+       58899,
+       30388
+      ]
+     ]
+    },
+    "anadidas_por_cuarto": [
+     0.0012,
+     0.0001,
+     0.0001,
+     0.0001
+    ],
+    "quitadas_por_cuarto": [
+     0.0575,
+     0.0546,
+     0.0541,
+     0.0533
+    ],
+    "anadidas_con_vs_sin_bueno": [
+     0.0004,
+     0.0004
+    ],
+    "quitadas_con_vs_sin_bueno": [
+     0.0546,
+     0.0573
+    ],
+    "anadidas_por_edad": [
+     0.0001,
+     0.0003,
+     0.0004,
+     0.0005,
+     0.0007,
+     0.0004,
+     0.0003
+    ],
+    "anadidas_por_indice_cuerpo": [
+     0.0131,
+     0.0022,
+     0.0015,
+     0.0005,
+     0.0002,
+     0.0001,
+     0.0001,
+     null
+    ],
+    "quitadas_por_edad": [
+     0.1089,
+     0.0774,
+     0.0597,
+     0.0256,
+     0.0392,
+     0.0494,
+     0.0628
+    ],
+    "quitadas_por_indice_cuerpo": [
+     0.0082,
+     0.0613,
+     0.0694,
+     0.0545,
+     0.0542,
+     0.0536,
+     0.0475,
+     null
+    ],
+    "fabrica_habria_mordido": 0.1505,
+    "acuerdo_mordidas": 152642,
+    "p_media": 0.0961,
+    "td_abs_medio": 0.0426,
+    "w_mediana": [
+     [
+      -0.79,
+      -0.2805,
+      0.0653,
+      0.0562,
+      -0.1646,
+      0.381
+     ],
+     [
+      -0.9288,
+      -0.5541,
+      0.3407,
+      0.0558,
+      -0.1278,
+      -0.0373
+     ]
+    ],
+    "politica_mediana": {
+     "g0=0 post=-0.2": -2.453,
+     "g0=0 post=0.1": -2.3675,
+     "g0=0 post=0.4": -2.3475,
+     "g0=0 post=0.8": -2.312,
+     "g0=0 post=1.2": -1.774,
+     "g0=1 post=-0.2": -2.1035,
+     "g0=1 post=0.1": -2.1255,
+     "g0=1 post=0.4": -2.0795,
+     "g0=1 post=0.8": -2.0605,
+     "g0=1 post=1.2": -1.555
+    }
+   }
+  },
+  "fab": {
+   "serie": "fab",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.335,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3348,
+   "R0_pista_med": 0.3317,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 8,
+    "sed": 1,
+    "veneno": 16499,
+    "sal": 24842
+   },
+   "frac_sin_bueno_mundo_med": 0.0038,
+   "limpiezas_fisicas_por_cuerpo_med": 4.3956,
+   "limpiezas_fisicas_por_linaje_med": 1014.5,
+   "mord_BD_por_linaje_med": 1124.0,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180"
+  },
+  "o1": {
+   "serie": "o1",
+   "criterio_enm3": {
+    "mediana_R0_eval": 1.729,
+    "frac_eval_sin_fund": 0.8056,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "condiciones": {
+     "i": true,
+     "ii": true,
+     "iii": true
+    },
+    "cruza": true,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 145
+   },
+   "R0_med_todos": 1.729,
+   "R0_pista_med": 1.7458,
+   "vida_med": 2904.5,
+   "causas": {
+    "hambre": 1428,
+    "sed": 1397,
+    "veneno": 645,
+    "sal": 641
+   },
+   "frac_sin_bueno_mundo_med": 0.0474,
+   "limpiezas_fisicas_por_cuerpo_med": 16.5742,
+   "limpiezas_fisicas_por_linaje_med": 389.0,
+   "mord_BD_por_linaje_med": 391.0,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180"
+  },
+  "sinher": {
+   "serie": "sinher",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.294,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.2935,
+   "R0_pista_med": 0.2853,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 11,
+    "sed": 4,
+    "veneno": 16325,
+    "sal": 24477
+   },
+   "frac_sin_bueno_mundo_med": 0.0029,
+   "limpiezas_fisicas_por_cuerpo_med": 4.5831,
+   "limpiezas_fisicas_por_linaje_med": 1045.5,
+   "mord_BD_por_linaje_med": 1171.5,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "apr": {
+    "oportunidades": 1495957,
+    "mordidas": 210846,
+    "tasa_global": 0.1409,
+    "tasa_por_cuarto": [
+     0.1494,
+     0.1378,
+     0.1394,
+     0.1374
+    ],
+    "tasa_ultimo_cuarto": 0.1374,
+    "tasa_por_edad": [
+     0.2815,
+     0.2723,
+     0.2143,
+     0.0707,
+     0.0868,
+     0.1018,
+     0.1144
+    ],
+    "bin_edad": [
+     50,
+     100,
+     200,
+     400,
+     800,
+     1600
+    ],
+    "tasa_por_indice_cuerpo": [
+     0.0984,
+     0.1704,
+     0.1701,
+     0.144,
+     0.1378,
+     0.1389,
+     0.1375,
+     null
+    ],
+    "bin_gen": [
+     1,
+     5,
+     20,
+     50,
+     100,
+     200,
+     400
+    ],
+    "opp_por_indice_cuerpo": [
+     11999,
+     19049,
+     82970,
+     195127,
+     338244,
+     665525,
+     183043,
+     0
+    ],
+    "tasa_sin_bueno_vs_con": {
+     "con_bueno": 0.1419,
+     "sin_bueno": 0.1239,
+     "opp": [
+      1419596,
+      76361
+     ]
+    },
+    "tasa_por_post": {
+     "con_bueno": [
+      0.2095,
+      0.3062,
+      0.3221,
+      0.0547,
+      0.0109
+     ],
+     "sin_bueno": [
+      0.1921,
+      0.2873,
+      0.3053,
+      0.0469,
+      0.0118
+     ],
+     "bin_post": [
+      0.0,
+      0.3,
+      0.6,
+      1.0
+     ],
+     "opp": [
+      [
+       158468,
+       288835,
+       161375,
+       431917,
+       379001
+      ],
+      [
+       7372,
+       13666,
+       8551,
+       27348,
+       19424
+      ]
+     ]
+    },
+    "anadidas_por_cuarto": [
+     0.0095,
+     0.0099,
+     0.0096,
+     0.0097
+    ],
+    "quitadas_por_cuarto": [
+     0.0037,
+     0.0024,
+     0.0025,
+     0.0025
+    ],
+    "anadidas_con_vs_sin_bueno": [
+     0.0096,
+     0.0118
+    ],
+    "quitadas_con_vs_sin_bueno": [
+     0.0028,
+     0.0031
+    ],
+    "anadidas_por_edad": [
+     0.0003,
+     0.0017,
+     0.0023,
+     0.0038,
+     0.015,
+     0.0181,
+     0.0198
+    ],
+    "anadidas_por_indice_cuerpo": [
+     0.0123,
+     0.0097,
+     0.0105,
+     0.0094,
+     0.0097,
+     0.0097,
+     0.0094,
+     null
+    ],
+    "quitadas_por_edad": [
+     0.0015,
+     0.0042,
+     0.0055,
+     0.0026,
+     0.0018,
+     0.0023,
+     0.0033
+    ],
+    "quitadas_por_indice_cuerpo": [
+     0.0088,
+     0.0079,
+     0.0047,
+     0.0029,
+     0.0024,
+     0.0025,
+     0.0025,
+     null
+    ],
+    "fabrica_habria_mordido": 0.1341,
+    "acuerdo_mordidas": 196363,
+    "p_media": 0.1411,
+    "td_abs_medio": 0.0868,
+    "w_mediana": [
+     [
+      -0.0062,
+      -0.0244,
+      -0.0226,
+      0.0,
+      -0.0069,
+      -0.0011
+     ],
+     [
+      -0.0016,
+      -0.0022,
+      -0.0011,
+      0.0,
+      -0.0008,
+      0.0
+     ]
+    ],
+    "politica_mediana": {
+     "g0=0 post=-0.2": 0.023,
+     "g0=0 post=0.1": 0.091,
+     "g0=0 post=0.4": 0.126,
+     "g0=0 post=0.8": 0.197,
+     "g0=0 post=1.2": 0.2475,
+     "g0=1 post=-0.2": 0.0375,
+     "g0=1 post=0.1": 0.0975,
+     "g0=1 post=0.4": 0.156,
+     "g0=1 post=0.8": 0.2605,
+     "g0=1 post=1.2": 0.2995
+    }
+   }
+  }
+ },
+ "pareados": {
+  "apr_vs_fab": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.0513,
+   "por_semilla": {
+    "8101": 0.0665,
+    "8102": 0.0407,
+    "8103": 0.1073,
+    "8104": 0.0887,
+    "8105": 0.0323,
+    "8106": 0.0357,
+    "8107": 0.0052,
+    "8108": 0.034,
+    "8109": 0.0484,
+    "8110": 0.0609,
+    "8111": 0.0091,
+    "8112": 0.1292,
+    "8113": 0.0898,
+    "8114": 0.0843,
+    "8115": 0.0657,
+    "8116": 0.0542,
+    "8117": 0.0702,
+    "8118": 0.0226,
+    "8119": 0.0289,
+    "8120": 0.0409
+   }
+  },
+  "apr_vs_sinher": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.0941,
+   "por_semilla": {
+    "8101": 0.0843,
+    "8102": 0.1029,
+    "8103": 0.0978,
+    "8104": 0.1037,
+    "8105": 0.0905,
+    "8106": 0.1038,
+    "8107": 0.0612,
+    "8108": 0.0646,
+    "8109": 0.0869,
+    "8110": 0.1048,
+    "8111": 0.0767,
+    "8112": 0.1681,
+    "8113": 0.1164,
+    "8114": 0.1129,
+    "8115": 0.1136,
+    "8116": 0.0637,
+    "8117": 0.118,
+    "8118": 0.0845,
+    "8119": 0.078,
+    "8120": 0.0674
+   }
+  },
+  "sinher_vs_fab": {
+   "semillas": 20,
+   "gana": 1,
+   "dif_med": -0.0414,
+   "por_semilla": {
+    "8101": -0.0178,
+    "8102": -0.0622,
+    "8103": 0.0095,
+    "8104": -0.015,
+    "8105": -0.0582,
+    "8106": -0.0681,
+    "8107": -0.056,
+    "8108": -0.0306,
+    "8109": -0.0385,
+    "8110": -0.0439,
+    "8111": -0.0676,
+    "8112": -0.0389,
+    "8113": -0.0266,
+    "8114": -0.0286,
+    "8115": -0.0479,
+    "8116": -0.0095,
+    "8117": -0.0478,
+    "8118": -0.0619,
+    "8119": -0.0491,
+    "8120": -0.0265
+   }
+  }
+ },
+ "predicciones": [
+  {
+   "texto": "P1 APR NO cruza por la ENMIENDA 3 (p 0.97)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P2 APR: mediana del R0 de los linajes-semilla en 0.32-0.45",
+   "se_cumple": true
+  },
+  {
+   "texto": "P3 FABRICA NO cruza y su mediana cae en 0.28-0.40 (sellada 5001-5020: 0.34)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P4 O1 CRUZA (p 0.85; sellada 5001-5020: 1.565)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P5 APR NO DESCUBRE la limpieza (p 0.93): anadidas en el ultimo cuarto < 0.02 por oportunidad O correccion(sin bueno) - correccion(con bueno) < 0.5 logit",
+   "se_cumple": true
+  },
+  {
+   "texto": "P6 APR aprende a CONTENERSE (p 0.85): quitadas en el ultimo cuarto >= 0.03 por oportunidad",
+   "se_cumple": true
+  },
+  {
+   "texto": "P7 APR > FABRICA en >= 15/20 semillas con diferencia mediana >= 0.03 (p 0.55)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P8 APR > APR_SIN_HERENCIA en >= 15/20 semillas con diferencia mediana >= 0.03 (p 0.45)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P9 APR > APR_AZAR en >= 15/20 semillas con diferencia mediana >= 0.03 (p 0.70)",
+   "se_cumple": null
+  },
+  {
+   "texto": "P10 APR_SIN_HERENCIA y APR_AZAR NO cruzan (p 0.97)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P11 APR: fraccion de pasos sin ningun bueno en el mundo 0.003-0.03 (el mundo no se ensucia; O1 ~0.05)",
+   "se_cumple": true
+  }
+ ],
+ "semillas": [
+  8101,
+  8102,
+  8103,
+  8104,
+  8105,
+  8106,
+  8107,
+  8108,
+  8109,
+  8110,
+  8111,
+  8112,
+  8113,
+  8114,
+  8115,
+  8116,
+  8117,
+  8118,
+  8119,
+  8120
+ ],
+ "T": 100000,
+ "humo": false,
+ "P_AZAR": null
+}
