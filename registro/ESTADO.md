@@ -9,7 +9,8 @@
   no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8 (gana a APR_SIN_HERENCIA 20/20) se midió en la serie original; la réplica sólo corrió APR y FABRICA. Nivel 8: propuesta 45 %.
 - **Subida n8 (serie + réplica): HAY ALGO MODESTO** — sigue aprendiendo con 90 celdas fijas (P2, P6 ×2) pero cae tras agotarlas en la réplica (P3 −0.187); la fusión no ayuda. Propuesta +5.
 - **Subida n10: NO SE LEE** (ancla 0.110 > 0.10, ERR-116); tanda 2 en diseño.
-- **Generaciones que conviven:** monocultivos 10101–10120 corriendo (Pool 6); faltan mixta H y réplica 10121 (`experimentos/generaciones/INFORME_CONVIVE.md`).
+- **Generaciones que conviven, monocultivos 10101–10120: NO** — ningún carro persiste en ≥15/20 con flujo fijo de comida (O1 14/20, O4 3/20, O2/O3 0/20); el cruce de H-1 de ayer
+  depende de la reposición inmediata (ERR-104). Mixta H y réplica en cola tras los paquetes de nivel.
 - **Subida de niveles 5–10 (pedido del director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"):** seis equipos
   (explorador Haiku → creador Opus → auditor Sonnet) dejaron paquetes preregistrados en `experimentos/subida_nN/` con arnés de identidad y humo; ninguno
   tiene serie todavía, ningún nivel cambia. Auditoría: n5, n6, n7, n9 LISTO CON CORRECCIONES; n10 LISTO PARA SERIE; n8 en construcción (el explorador falló).
@@ -20,6 +21,10 @@
   cada nivel 5–10 (a confirmar con el director). Delegación: *"si hay una decisión difícil tómala, y me dejas comentado por qué la tomaste"*.
 
 ## Decisiones del coordinador en ausencia del director (23-sep; cada una con su porqué)
+- **17:05 — la mixta H y la réplica de generaciones que conviven van DESPUÉS de los paquetes de nivel (6, 7, 5, 10b).** Por qué: la meta del
+  director es subir niveles; la mixta no mueve ningún nivel por sí sola y el monocultivo ya dio NO claro.
+- **17:05 — la tanda 3 del nivel 9 se centra en persistir con capacidad de carga.** Por qué: el monocultivo de convivencia muestra que
+  el cruce de H-1 no sobrevive a un flujo fijo de comida; sin eso el nivel 9 no pasa de ~68 %.
 - **16:50 — subida_n10 NO SE LEE y NO se corre su réplica.** Alternativa descartada: correr la réplica o leer la serie con el ancla movida
   a 0.12. Por qué: mover el ancla después de ver el dato es justo lo que prohíbe la regla 11 (ERR-114 fue lo mismo en pequeño); y aunque se
   leyera, F-2/F-4 caen (PARTO no le gana a BAR), así que lo máximo sería "modesto sin contenido" (+1 punto). Las 2 h de CPU de la réplica

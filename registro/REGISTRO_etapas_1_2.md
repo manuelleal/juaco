@@ -6469,3 +6469,26 @@ Arnés `identidad_n8.py` 26/26 antes de lanzar. Mismo runner en las dos (`corre_
 **Vocabulario permitido:** *"con 90 celdas fijas, el tronco sigue aprendiendo estímulos nuevos por encima del a priori, replicado, pero pierde parte de lo aprendido cuando se le acaban las celdas; fusionar celdas no lo arregla"*. Prohibido: "aprendizaje abierto", "aprende indefinidamente", "acumula".
 
 **Qué queda.** Pieza "liberar celdas sin pagar con memoria": la fusión no sirve; siguiente candidato en la tanda 2 del nivel 8. Nivel 8: propuesta del preregistro **+5** (40 → 45, o 45 → 50 si el director fija el 45 de aprende_barrer) — decide el director.
+
+---
+
+### GENERACIONES QUE CONVIVEN — monocultivos 10101–10120 (23-sep-2026, 15:17–17:22; Pool 6; T=100000, quimiostato r_rep 0.03, tope 300; preregistro `experimentos/generaciones/PREREGISTRO_convive.md` §9): **NO — ningún carro estabiliza (persiste en ≥ 15/20); lo más cerca es O1 (14/20); O3 y O2 no persisten en ninguna semilla aunque su R0 de cohorte sea el más alto (0.778 / 0.676); la muerte programada no da ventaja (O3 = CTRL_O3_SINTERM)**
+
+Arnés 37/37 antes de lanzar; chequeos estáticos 6/6; identidad corta con la pista v1 OK. Crudo `experimentos/generaciones/datos/convive_serie_mono_s10101-10120_T100000_fija_20260923_151743.json` (`6289126525058479`), 7446 s.
+
+| carro | persiste el carro (semillas) | linajes persistentes /180 | R0 cohorte | tamaño medio del linaje | gen máx | vida mediana | cuerpos (media) |
+|---|---|---|---|---|---|---|---|
+| FABRICA | 0/20 | 0 | 0.163 | 1.07 | 2 | 105 | 9.6 |
+| **O1** | **14/20** | 14 | 0.153 | 1.69 | 8 | 200 | 24.0 |
+| O2 | 0/20 | 0 | 0.676 | 1.91 | 7 | 1509 | 17.6 |
+| O3 | 0/20 | 0 | 0.778 | 1.93 | 8 | 2076 | 17.2 |
+| O4 | 3/20 | 3 | 0.281 | 2.39 | 14 | 200 | 22.5 |
+| CTRL_O3_SINTERM | 0/20 | 0 | 0.758 | 1.94 | 8 | 1938 | 17.6 |
+
+Predicciones del coordinador (§9): O2, O3, O4 persisten en ≥ 15/20 → **las tres NO** (0, 0, 3). H-b (la muerte programada no da ventaja: O3 ≤ CTRL + 15) **se cumple**. Rangos del creador: FABRICA y O1 dentro; O2, O3, O4 y CTRL fuera por abajo.
+
+**Lectura honesta.** El cruce de H-1 de ayer (pista v1: un cuerpo por linaje, morder repone comida al instante — reserva ERR-104) **no se transfiere** a un mundo con flujo fijo de comida y generaciones que compiten. Los carros que ganaron la ronda 2 (O3, O4) viven mucho y tienen el R0 de cohorte más alto, pero ningún linaje sobrevive a sus fundadores; el que más se acerca es O1, el que limpia, con linajes chicos. Esto acota la declaración del 22-sep: *"cruza H-1 en el mundo de un cuerpo por linaje con reposición inmediata"*, no en un mundo con capacidad de carga. La muerte programada de O3 es inerte (idéntico a su control sin terminal).
+
+**Vocabulario permitido:** *"en el mundo con flujo fijo de comida ningún carro sostiene un linaje más allá de sus fundadores; el cruce de ayer depende de la reposición inmediata"*. Prohibido: "el hito de ayer era falso" (es válido en su mundo, replicado).
+
+**Qué queda.** Mixta H y réplica 10121 (en cola tras los paquetes de nivel, decisión del coordinador). Para el nivel 9 (meta 90 %): la pieza "linaje que persiste en un mundo con capacidad de carga" pasa a ser la central. Nivel 9 no cambia.
