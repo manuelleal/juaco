@@ -1,0 +1,28 @@
+identidad_n8  2026-09-23 16:15:48
+  [OK ] (0a) origen capBD_on sha 506b5c08441fd54e
+  [OK ] (0b) tronco organismo_v142 sha 
+  [OK ] (0c) organismo_flujo en disco == construye_n8 y == sha del runner 14afed5aa16e09bf
+  [OK ] (A) s1 ventana=0 fusion=0 == capBD_on, retina 6, T 20000, 27 claves muertes 30 W {'A': 1.0, 'B': -2.74, 'C': -0.5, 'D': -2.5}
+  [OK ] (A) s2 ventana=0 fusion=0 == capBD_on, retina 6, T 20000, 27 claves muertes 29 W {'A': 1.0, 'B': -2.79, 'C': -0.5, 'D': -2.5}
+  [OK ] (A) s3 ventana=0 fusion=0 == capBD_on, retina 6, T 20000, 27 claves muertes 26 W {'A': 1.0, 'B': -2.82, 'C': -0.5, 'D': -2.5}
+  [OK ] (A1) s1 retina 12, 30 estimulos, fotos: == capBD_on todas las claves splits 34 celdas 64 fotos 30
+  [OK ] (A1) s2 retina 12, 30 estimulos, fotos: == capBD_on todas las claves splits 19 celdas 49 fotos 30
+  [OK ] (A2) s1 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.74, 'C': -0.5, 'D': -2.5}
+  [OK ] (A2) s2 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.79, 'C': -0.5, 'D': -2.5}
+  [OK ] (A2) s3 == organismo_v142 en W, muertes, divisiones, celdas, mordidas, visitas W {'A': 1.0, 'B': -2.82, 'C': -0.5, 'D': -2.5}
+  [OK ] (B) fusion=1 sin agotar el pool == fusion 0 (t_agot None, celdas 42) 
+  [OK ] (B) fusion=2 sin agotar el pool == fusion 0 (t_agot None, celdas 42) 
+  [OK ] (C1) fusion 1 y 2 funden (n_fus > 0) fus 32 azar 30 base t_agot 53997
+  [OK ] (C2) toda fusion ocurre con el pool ya agotado (t >= t_agot) 
+  [OK ] (C3) celdas <= 90 al final [90, 90, 90]
+  [OK ] (C4) la dirigida y la azar eligen pares distintos 
+  [OK ] (C5) antes de la primera fusion, fus == base (mismo t_agot y mismas divisiones hasta ahi) 
+  [OK ] (D) determinismo fusion 1 
+  [OK ] (E1) valencias balanceadas 5/5 en cada bloque de 10 (semillas 1-40) 
+  [OK ] (E2) 200 patrones distintos de peso 3 sobre 12 pixeles 
+  [OK ] (E3) RECICLADO: 20 primeros == FLUJO; despues solo repeticiones con la misma valencia 
+  [OK ] (E4) ventana 8, p_viejo 0.25: fraccion de visitas del ultimo cuarto a estimulos viejos todo el cuarto en [0.10, 0.45] 422/1976 = 0.214
+  [OK ] (F1) llamadas nuevas al rng principal: exactamente 3 (spawn: random + integers en dos ramas); _rngf en 2 lineas d_rng 3
+  [OK ] (F2) la fusion no lee val, R_VAL ni el plan (sin canal hacia la respuesta) 
+  [OK ] (G) entrada campo a campo contra organismo_v142: 100 campos, 0 distintos []
+TOTAL 26/26 en 58.9s

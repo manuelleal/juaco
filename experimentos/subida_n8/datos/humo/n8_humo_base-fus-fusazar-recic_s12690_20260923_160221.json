@@ -1,0 +1,970 @@
+{
+ "pref": "n8_humo_base-fus-fusazar-recic_s12690_20260923_160221",
+ "humo": true,
+ "semillas": [
+  12690
+ ],
+ "brazos": [
+  "base",
+  "fus",
+  "fusazar",
+  "recic"
+ ],
+ "T": 200000,
+ "ventana": 8,
+ "p_viejo": 0.25,
+ "K_ADQ": 10,
+ "N_RET": 40,
+ "tramo_tarde": [
+  150,
+  200
+ ],
+ "tramo_temprano": [
+  20,
+  50
+ ],
+ "perillas_v142": {
+  "plast": true,
+  "lam": 0.05,
+  "memoria_rechazo": 20,
+  "mu_norm": true,
+  "div_signo": true,
+  "eta_s": 0.15,
+  "clip_s": 10.0,
+  "puerta": 3,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "mask_rel": 2,
+  "del_s": 0.25,
+  "del_c": 0.25,
+  "ema_c": 0.05
+ },
+ "shas": {
+  "organismo_flujo": "14afed5aa16e09bf",
+  "organismo_v142": "17528d767fcebaf6",
+  "mundo_n8": "b0b57d7ff02afe4e",
+  "corre_n8": "0a01931b1c88ff9e"
+ },
+ "entrada_campo_a_campo": [
+  [
+   "base",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "base",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "base",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "base",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "base",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "base",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "base",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "base",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "base",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "base",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "base",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "base",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "base",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "base",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "base",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "base",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "base",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "base",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "fus",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "fus",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "fus",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "fus",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "fus",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "fus",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "fus",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "fus",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "fus",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "fus",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "fus",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "fus",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fus",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "fus",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "fus",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "fus",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "fus",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "fus",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "fus",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "fus",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fus",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fus",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fus",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "fus",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "fus",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "fusazar",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "fusazar",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "fusazar",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "fusazar",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "fusazar",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "fusazar",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "fusazar",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "fusazar",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "fusazar",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "fusazar",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "fusazar",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "fusazar",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fusazar",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "fusazar",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "fusazar",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "fusazar",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "fusazar",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "fusazar",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "fusazar",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "fusazar",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fusazar",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fusazar",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fusazar",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "fusazar",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "fusazar",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "recic",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "recic",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "recic",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "recic",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "recic",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "recic",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "recic",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "recic",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "recic",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "recic",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "recic",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "recic",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "recic",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "recic",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "recic",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "recic",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "recic",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "recic",
+   "pat_min",
+   "1",
+   "1"
+  ]
+ ],
+ "cpu_s": 59.0,
+ "resultados": [
+  {
+   "semilla": 12690,
+   "brazo": "base",
+   "T": 200000,
+   "dur_s": 13.4,
+   "ADQ_tarde": 0.719,
+   "ADQ_temprano": 0.6994,
+   "RET40": 0.45,
+   "RET_todo": 0.585,
+   "curva_ADQ_bloques20": [
+    0.7267,
+    0.6913,
+    0.7721,
+    0.6467,
+    0.4917,
+    0.5536,
+    0.5667,
+    0.6823,
+    0.7986
+   ],
+   "cond_ult_cuarto": 0.0806,
+   "mord_com_ult": 176,
+   "vis_com_ult": 1609,
+   "mord_ven_ult": 114,
+   "vis_ven_ult": 3955,
+   "muertes": 382,
+   "splits": 60,
+   "celdas": 90,
+   "t_agot": 72137,
+   "est_agot": 73,
+   "n_fus": 0,
+   "n_cod": 200,
+   "mv_tot": 422,
+   "mc_tot": 646
+  },
+  {
+   "semilla": 12690,
+   "brazo": "fus",
+   "T": 200000,
+   "dur_s": 14.5,
+   "ADQ_tarde": 0.6268,
+   "ADQ_temprano": 0.6994,
+   "RET40": 0.5,
+   "RET_todo": 0.515,
+   "curva_ADQ_bloques20": [
+    0.7267,
+    0.6913,
+    0.7608,
+    0.6488,
+    0.5877,
+    0.7099,
+    0.6246,
+    0.5892,
+    0.6343
+   ],
+   "cond_ult_cuarto": 0.0058,
+   "mord_com_ult": 67,
+   "vis_com_ult": 2502,
+   "mord_ven_ult": 57,
+   "vis_ven_ult": 2711,
+   "muertes": 399,
+   "splits": 133,
+   "celdas": 90,
+   "t_agot": 72137,
+   "est_agot": 73,
+   "n_fus": 73,
+   "n_cod": 277,
+   "mv_tot": 377,
+   "mc_tot": 575
+  },
+  {
+   "semilla": 12690,
+   "brazo": "fusazar",
+   "T": 200000,
+   "dur_s": 15.0,
+   "ADQ_tarde": 0.6148,
+   "ADQ_temprano": 0.6994,
+   "RET40": 0.5,
+   "RET_todo": 0.505,
+   "curva_ADQ_bloques20": [
+    0.7267,
+    0.6913,
+    0.7721,
+    0.6642,
+    0.5975,
+    0.6261,
+    0.5033,
+    0.6562,
+    0.6307
+   ],
+   "cond_ult_cuarto": 0.071,
+   "mord_com_ult": 178,
+   "vis_com_ult": 1757,
+   "mord_ven_ult": 91,
+   "vis_ven_ult": 3004,
+   "muertes": 387,
+   "splits": 126,
+   "celdas": 90,
+   "t_agot": 72137,
+   "est_agot": 73,
+   "n_fus": 66,
+   "n_cod": 277,
+   "mv_tot": 364,
+   "mc_tot": 611
+  },
+  {
+   "semilla": 12690,
+   "brazo": "recic",
+   "T": 200000,
+   "dur_s": 16.0,
+   "ADQ_tarde": 0.951,
+   "ADQ_temprano": 0.9308,
+   "RET40": 0.95,
+   "RET_todo": 0.95,
+   "curva_ADQ_bloques20": [
+    0.9275,
+    0.9487,
+    0.9487,
+    0.9487,
+    0.8975,
+    0.9487,
+    0.9487,
+    0.9487,
+    0.9487
+   ],
+   "cond_ult_cuarto": 0.2327,
+   "mord_com_ult": 115,
+   "vis_com_ult": 482,
+   "mord_ven_ult": 28,
+   "vis_ven_ult": 4750,
+   "muertes": 297,
+   "splits": 20,
+   "celdas": 50,
+   "t_agot": null,
+   "est_agot": null,
+   "n_fus": 0,
+   "n_cod": 32,
+   "mv_tot": 186,
+   "mc_tot": 684
+  }
+ ],
+ "resumen": {
+  "base": {
+   "ADQ_tarde": 0.719,
+   "ADQ_temprano": 0.6994,
+   "RET40": 0.45,
+   "RET_todo": 0.585,
+   "cond_ult_cuarto": 0.0806,
+   "muertes": 382,
+   "splits": 60,
+   "n_fus": 0,
+   "est_agot": 73,
+   "dur_s": 13.4,
+   "n": 1,
+   "ADQ_tarde_min": 0.719,
+   "curva_mediana": [
+    0.7267,
+    0.6913,
+    0.7721,
+    0.6467,
+    0.4917,
+    0.5536,
+    0.5667,
+    0.6823,
+    0.7986
+   ]
+  },
+  "fus": {
+   "ADQ_tarde": 0.6268,
+   "ADQ_temprano": 0.6994,
+   "RET40": 0.5,
+   "RET_todo": 0.515,
+   "cond_ult_cuarto": 0.0058,
+   "muertes": 399,
+   "splits": 133,
+   "n_fus": 73,
+   "est_agot": 73,
+   "dur_s": 14.5,
+   "n": 1,
+   "ADQ_tarde_min": 0.6268,
+   "curva_mediana": [
+    0.7267,
+    0.6913,
+    0.7608,
+    0.6488,
+    0.5877,
+    0.7099,
+    0.6246,
+    0.5892,
+    0.6343
+   ]
+  },
+  "fusazar": {
+   "ADQ_tarde": 0.6148,
+   "ADQ_temprano": 0.6994,
+   "RET40": 0.5,
+   "RET_todo": 0.505,
+   "cond_ult_cuarto": 0.071,
+   "muertes": 387,
+   "splits": 126,
+   "n_fus": 66,
+   "est_agot": 73,
+   "dur_s": 15.0,
+   "n": 1,
+   "ADQ_tarde_min": 0.6148,
+   "curva_mediana": [
+    0.7267,
+    0.6913,
+    0.7721,
+    0.6642,
+    0.5975,
+    0.6261,
+    0.5033,
+    0.6562,
+    0.6307
+   ]
+  },
+  "recic": {
+   "ADQ_tarde": 0.951,
+   "ADQ_temprano": 0.9308,
+   "RET40": 0.95,
+   "RET_todo": 0.95,
+   "cond_ult_cuarto": 0.2327,
+   "muertes": 297,
+   "splits": 20,
+   "n_fus": 0,
+   "est_agot": null,
+   "dur_s": 16.0,
+   "n": 1,
+   "ADQ_tarde_min": 0.951,
+   "curva_mediana": [
+    0.9275,
+    0.9487,
+    0.9487,
+    0.9487,
+    0.8975,
+    0.9487,
+    0.9487,
+    0.9487,
+    0.9487
+   ]
+  },
+  "pareados": {
+   "fus-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.0922
+   },
+   "fus-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.05
+   },
+   "fus-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.0748
+   },
+   "fus-fusazar:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.012
+   },
+   "fus-fusazar:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "dif_mediana": 0.0
+   },
+   "fus-fusazar:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.0652
+   },
+   "fusazar-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.1042
+   },
+   "fusazar-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.05
+   },
+   "fusazar-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.0096
+   },
+   "recic-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.232
+   },
+   "recic-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.5
+   },
+   "recic-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.1521
+   }
+  }
+ }
+}

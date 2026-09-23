@@ -1,0 +1,1353 @@
+{
+ "pref": "n8_humo_base-fus-fusazar-recic_s12691_20260923_160909",
+ "humo": true,
+ "semillas": [
+  12691
+ ],
+ "brazos": [
+  "base",
+  "fus",
+  "fusazar",
+  "recic"
+ ],
+ "T": 200000,
+ "ventana": 8,
+ "p_viejo": 0.25,
+ "N_RET": 40,
+ "tramo_tarde": [
+  140,
+  190
+ ],
+ "tramo_temprano": [
+  10,
+  40
+ ],
+ "perillas_v142": {
+  "plast": true,
+  "lam": 0.05,
+  "memoria_rechazo": 20,
+  "mu_norm": true,
+  "div_signo": true,
+  "eta_s": 0.15,
+  "clip_s": 10.0,
+  "puerta": 3,
+  "puerta_pat": 5,
+  "pat_shuf": 0,
+  "pat_min": 1,
+  "mask_rel": 2,
+  "del_s": 0.25,
+  "del_c": 0.25,
+  "ema_c": 0.05
+ },
+ "shas": {
+  "organismo_flujo": "14afed5aa16e09bf",
+  "organismo_v142": "17528d767fcebaf6",
+  "mundo_n8": "b0b57d7ff02afe4e",
+  "corre_n8": "1d78fd3ad1113eec"
+ },
+ "entrada_campo_a_campo": [
+  [
+   "base",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "base",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "base",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "base",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "base",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "base",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "base",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "base",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "base",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "base",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "base",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "base",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "base",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "base",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "base",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "base",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "base",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "base",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "base",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "base",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "base",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "fus",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "fus",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "fus",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "fus",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "fus",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "fus",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "fus",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "fus",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "fus",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "fus",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "fus",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "fus",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fus",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "fus",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "fus",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "fus",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "fus",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "fus",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "fus",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "fus",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fus",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fus",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fus",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "fus",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "fus",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "fusazar",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "fusazar",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "fusazar",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "fusazar",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "fusazar",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "fusazar",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "fusazar",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "fusazar",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "fusazar",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "fusazar",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "fusazar",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "fusazar",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fusazar",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "fusazar",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "fusazar",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "fusazar",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "fusazar",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "fusazar",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "fusazar",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "fusazar",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fusazar",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "fusazar",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "fusazar",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "fusazar",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "fusazar",
+   "pat_min",
+   "1",
+   "1"
+  ],
+  [
+   "recic",
+   "eta",
+   "0.03",
+   "0.03"
+  ],
+  [
+   "recic",
+   "tau_e",
+   "0.85",
+   "0.85"
+  ],
+  [
+   "recic",
+   "alpha",
+   "1.2",
+   "1.2"
+  ],
+  [
+   "recic",
+   "hambre_boca",
+   "2.0",
+   "2.0"
+  ],
+  [
+   "recic",
+   "aversion",
+   "1.0",
+   "1.0"
+  ],
+  [
+   "recic",
+   "costo",
+   "0.002",
+   "0.002"
+  ],
+  [
+   "recic",
+   "nobj",
+   "4",
+   "4"
+  ],
+  [
+   "recic",
+   "plast",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "theta",
+   "0.6",
+   "0.6"
+  ],
+  [
+   "recic",
+   "ema",
+   "0.02",
+   "0.02"
+  ],
+  [
+   "recic",
+   "paso",
+   "0.5",
+   "0.5"
+  ],
+  [
+   "recic",
+   "lam",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "memoria_rechazo",
+   "20",
+   "20"
+  ],
+  [
+   "recic",
+   "mu_norm",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "div_signo",
+   "True",
+   "True"
+  ],
+  [
+   "recic",
+   "eta_s",
+   "0.15",
+   "0.15"
+  ],
+  [
+   "recic",
+   "clip_s",
+   "10.0",
+   "10.0"
+  ],
+  [
+   "recic",
+   "puerta",
+   "3",
+   "3"
+  ],
+  [
+   "recic",
+   "mask_rel",
+   "2",
+   "2"
+  ],
+  [
+   "recic",
+   "del_s",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "del_c",
+   "0.25",
+   "0.25"
+  ],
+  [
+   "recic",
+   "ema_c",
+   "0.05",
+   "0.05"
+  ],
+  [
+   "recic",
+   "puerta_pat",
+   "5",
+   "5"
+  ],
+  [
+   "recic",
+   "pat_shuf",
+   "0",
+   "0"
+  ],
+  [
+   "recic",
+   "pat_min",
+   "1",
+   "1"
+  ]
+ ],
+ "cpu_s": 58.0,
+ "resultados": [
+  {
+   "semilla": 12691,
+   "brazo": "base",
+   "T": 200000,
+   "dur_s": 13.9,
+   "ADQ_tarde": 0.72,
+   "ADQ_temprano": 0.7667,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.44,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_temprano_com": 0.5333,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.84,
+   "RET40": 0.675,
+   "RET_todo": 0.575,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.7,
+    0.7,
+    0.8,
+    0.7,
+    0.9,
+    0.9,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.8
+   ],
+   "curva_final_bloques10": [
+    0.9,
+    0.8,
+    0.6,
+    0.4,
+    0.8,
+    0.4,
+    0.5,
+    0.4,
+    0.7,
+    0.5,
+    0.6,
+    0.7,
+    0.4,
+    0.4,
+    0.7,
+    0.4,
+    0.4,
+    0.4,
+    0.8,
+    0.7
+   ],
+   "cond_ult_cuarto": 0.0433,
+   "mord_com_ult": 173,
+   "vis_com_ult": 2210,
+   "mord_ven_ult": 101,
+   "vis_ven_ult": 2884,
+   "muertes": 319,
+   "splits": 60,
+   "celdas": 90,
+   "t_agot": 45157,
+   "est_agot": 46,
+   "n_fus": 0,
+   "n_cod": 206,
+   "mv_tot": 383,
+   "mc_tot": 727
+  },
+  {
+   "semilla": 12691,
+   "brazo": "fus",
+   "T": 200000,
+   "dur_s": 13.6,
+   "ADQ_tarde": 0.64,
+   "ADQ_temprano": 0.7667,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.52,
+   "ADQ_tarde_com": 0.28,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_temprano_com": 0.5333,
+   "PRIOR_tarde_com": 0.12,
+   "PRIOR_tarde_ven": 0.88,
+   "RET40": 0.575,
+   "RET_todo": 0.56,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.9,
+    0.6,
+    0.7,
+    0.9,
+    0.7,
+    0.6,
+    1.0,
+    0.7,
+    0.5,
+    0.6,
+    0.7,
+    0.7
+   ],
+   "curva_final_bloques10": [
+    0.5,
+    0.7,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.8,
+    0.4,
+    0.6,
+    0.5,
+    0.6,
+    0.6,
+    0.5,
+    0.6,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.6
+   ],
+   "cond_ult_cuarto": 0.0109,
+   "mord_com_ult": 63,
+   "vis_com_ult": 2231,
+   "mord_ven_ult": 49,
+   "vis_ven_ult": 2831,
+   "muertes": 382,
+   "splits": 192,
+   "celdas": 90,
+   "t_agot": 45157,
+   "est_agot": 46,
+   "n_fus": 132,
+   "n_cod": 309,
+   "mv_tot": 314,
+   "mc_tot": 555
+  },
+  {
+   "semilla": 12691,
+   "brazo": "fusazar",
+   "T": 200000,
+   "dur_s": 14.5,
+   "ADQ_tarde": 0.62,
+   "ADQ_temprano": 0.7667,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.46,
+   "ADQ_tarde_com": 0.28,
+   "ADQ_tarde_ven": 0.96,
+   "ADQ_temprano_com": 0.5333,
+   "PRIOR_tarde_com": 0.12,
+   "PRIOR_tarde_ven": 0.88,
+   "RET40": 0.5,
+   "RET_todo": 0.535,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.7,
+    1.0,
+    0.9,
+    0.7,
+    0.8,
+    0.6,
+    0.8,
+    0.8,
+    0.9,
+    0.6,
+    0.4,
+    0.7,
+    0.7,
+    0.7
+   ],
+   "curva_final_bloques10": [
+    0.6,
+    0.3,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.8,
+    0.6,
+    0.5,
+    0.7,
+    0.3,
+    0.7,
+    0.4,
+    0.5,
+    0.3,
+    0.6,
+    0.3,
+    0.8,
+    0.6,
+    0.6
+   ],
+   "cond_ult_cuarto": 0.0283,
+   "mord_com_ult": 109,
+   "vis_com_ult": 2128,
+   "mord_ven_ult": 70,
+   "vis_ven_ult": 3052,
+   "muertes": 356,
+   "splits": 169,
+   "celdas": 90,
+   "t_agot": 45157,
+   "est_agot": 46,
+   "n_fus": 109,
+   "n_cod": 343,
+   "mv_tot": 344,
+   "mc_tot": 643
+  },
+  {
+   "semilla": 12691,
+   "brazo": "recic",
+   "T": 200000,
+   "dur_s": 15.9,
+   "ADQ_tarde": 1.0,
+   "ADQ_temprano": 0.9333,
+   "PRIOR_tarde": 1.0,
+   "NULO_tarde": 0.56,
+   "ADQ_tarde_com": 1.0,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_temprano_com": 0.8667,
+   "PRIOR_tarde_com": 1.0,
+   "PRIOR_tarde_ven": 1.0,
+   "RET40": 1.0,
+   "RET_todo": 1.0,
+   "curva_ADQ_bloques10": [
+    0.9,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    0.9,
+    0.9,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "curva_final_bloques10": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "cond_ult_cuarto": 0.9924,
+   "mord_com_ult": 156,
+   "vis_com_ult": 156,
+   "mord_ven_ult": 40,
+   "vis_ven_ult": 5241,
+   "muertes": 293,
+   "splits": 38,
+   "celdas": 68,
+   "t_agot": null,
+   "est_agot": null,
+   "n_fus": 0,
+   "n_cod": 63,
+   "mv_tot": 275,
+   "mc_tot": 740
+  }
+ ],
+ "resumen": {
+  "base": {
+   "ADQ_tarde": 0.72,
+   "ADQ_temprano": 0.7667,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.6,
+   "ADQ_tarde_com": 0.44,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_temprano_com": 0.5333,
+   "PRIOR_tarde_com": 0.16,
+   "PRIOR_tarde_ven": 0.84,
+   "RET40": 0.675,
+   "RET_todo": 0.575,
+   "cond_ult_cuarto": 0.0433,
+   "muertes": 319,
+   "splits": 60,
+   "n_fus": 0,
+   "est_agot": 46,
+   "dur_s": 13.9,
+   "n": 1,
+   "ADQ_tarde_min": 0.72,
+   "ADQ_tarde_sobre_nulo": 1,
+   "ADQ_tarde_sobre_prior": 1,
+   "caida": 0,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.28,
+   "dif_tarde_temprano_com_mediana": -0.0933,
+   "curva_mediana": [
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.7,
+    0.7,
+    0.8,
+    0.7,
+    0.9,
+    0.9,
+    0.7,
+    0.6,
+    0.7,
+    0.8,
+    0.8
+   ],
+   "curva_final_mediana": [
+    0.9,
+    0.8,
+    0.6,
+    0.4,
+    0.8,
+    0.4,
+    0.5,
+    0.4,
+    0.7,
+    0.5,
+    0.6,
+    0.7,
+    0.4,
+    0.4,
+    0.7,
+    0.4,
+    0.4,
+    0.4,
+    0.8,
+    0.7
+   ]
+  },
+  "fus": {
+   "ADQ_tarde": 0.64,
+   "ADQ_temprano": 0.7667,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.52,
+   "ADQ_tarde_com": 0.28,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_temprano_com": 0.5333,
+   "PRIOR_tarde_com": 0.12,
+   "PRIOR_tarde_ven": 0.88,
+   "RET40": 0.575,
+   "RET_todo": 0.56,
+   "cond_ult_cuarto": 0.0109,
+   "muertes": 382,
+   "splits": 192,
+   "n_fus": 132,
+   "est_agot": 46,
+   "dur_s": 13.6,
+   "n": 1,
+   "ADQ_tarde_min": 0.64,
+   "ADQ_tarde_sobre_nulo": 1,
+   "ADQ_tarde_sobre_prior": 1,
+   "caida": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.16,
+   "dif_tarde_temprano_com_mediana": -0.2533,
+   "curva_mediana": [
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.8,
+    0.8,
+    0.9,
+    0.6,
+    0.7,
+    0.9,
+    0.7,
+    0.6,
+    1.0,
+    0.7,
+    0.5,
+    0.6,
+    0.7,
+    0.7
+   ],
+   "curva_final_mediana": [
+    0.5,
+    0.7,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.8,
+    0.4,
+    0.6,
+    0.5,
+    0.6,
+    0.6,
+    0.5,
+    0.6,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.6,
+    0.6
+   ]
+  },
+  "fusazar": {
+   "ADQ_tarde": 0.62,
+   "ADQ_temprano": 0.7667,
+   "PRIOR_tarde": 0.5,
+   "NULO_tarde": 0.46,
+   "ADQ_tarde_com": 0.28,
+   "ADQ_tarde_ven": 0.96,
+   "ADQ_temprano_com": 0.5333,
+   "PRIOR_tarde_com": 0.12,
+   "PRIOR_tarde_ven": 0.88,
+   "RET40": 0.5,
+   "RET_todo": 0.535,
+   "cond_ult_cuarto": 0.0283,
+   "muertes": 356,
+   "splits": 169,
+   "n_fus": 109,
+   "est_agot": 46,
+   "dur_s": 14.5,
+   "n": 1,
+   "ADQ_tarde_min": 0.62,
+   "ADQ_tarde_sobre_nulo": 1,
+   "ADQ_tarde_sobre_prior": 1,
+   "caida": 1,
+   "com_sobre_prior_com": 1,
+   "dif_com_prior_mediana": 0.16,
+   "dif_tarde_temprano_com_mediana": -0.2533,
+   "curva_mediana": [
+    0.9,
+    0.8,
+    0.8,
+    0.7,
+    0.8,
+    0.7,
+    1.0,
+    0.9,
+    0.7,
+    0.8,
+    0.6,
+    0.8,
+    0.8,
+    0.9,
+    0.6,
+    0.4,
+    0.7,
+    0.7,
+    0.7
+   ],
+   "curva_final_mediana": [
+    0.6,
+    0.3,
+    0.6,
+    0.5,
+    0.5,
+    0.5,
+    0.8,
+    0.6,
+    0.5,
+    0.7,
+    0.3,
+    0.7,
+    0.4,
+    0.5,
+    0.3,
+    0.6,
+    0.3,
+    0.8,
+    0.6,
+    0.6
+   ]
+  },
+  "recic": {
+   "ADQ_tarde": 1.0,
+   "ADQ_temprano": 0.9333,
+   "PRIOR_tarde": 1.0,
+   "NULO_tarde": 0.56,
+   "ADQ_tarde_com": 1.0,
+   "ADQ_tarde_ven": 1.0,
+   "ADQ_temprano_com": 0.8667,
+   "PRIOR_tarde_com": 1.0,
+   "PRIOR_tarde_ven": 1.0,
+   "RET40": 1.0,
+   "RET_todo": 1.0,
+   "cond_ult_cuarto": 0.9924,
+   "muertes": 293,
+   "splits": 38,
+   "n_fus": 0,
+   "est_agot": null,
+   "dur_s": 15.9,
+   "n": 1,
+   "ADQ_tarde_min": 1.0,
+   "ADQ_tarde_sobre_nulo": 1,
+   "ADQ_tarde_sobre_prior": 0,
+   "caida": 0,
+   "com_sobre_prior_com": 0,
+   "dif_com_prior_mediana": 0.0,
+   "dif_tarde_temprano_com_mediana": 0.1333,
+   "curva_mediana": [
+    0.9,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    1.0,
+    0.9,
+    0.9,
+    0.9,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "curva_final_mediana": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ]
+  },
+  "pareados": {
+   "fus-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.08
+   },
+   "fus-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.16
+   },
+   "fus-base:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.1
+   },
+   "fus-base:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.015
+   },
+   "fus-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.0324
+   },
+   "fus-fusazar:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.02
+   },
+   "fus-fusazar:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 1,
+    "dif_mediana": 0.0
+   },
+   "fus-fusazar:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.075
+   },
+   "fus-fusazar:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.025
+   },
+   "fus-fusazar:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.0174
+   },
+   "fusazar-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.1
+   },
+   "fusazar-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.16
+   },
+   "fusazar-base:RET40": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.175
+   },
+   "fusazar-base:RET_todo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.04
+   },
+   "fusazar-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "dif_mediana": -0.015
+   },
+   "recic-base:ADQ_tarde": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.28
+   },
+   "recic-base:ADQ_tarde_com": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.56
+   },
+   "recic-base:RET40": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.325
+   },
+   "recic-base:RET_todo": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.425
+   },
+   "recic-base:cond_ult_cuarto": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "dif_mediana": 0.9491
+   }
+  }
+ }
+}
