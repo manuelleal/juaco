@@ -56,6 +56,10 @@ No toques el tronco congelado; los niveles los fija el director. Al cerrar, deja
    lenta con repaso (n8c), herencia de lo vivido (n10b), interruptor explorar/explotar. El Frankenstein (`experimentos/frankenstein/`)
    es EXPLORATORIO: sólo inspira qué rehacer con protocolo.
 
+## 3b. Laboratorio de agentes investigadores
+Ver `registro/LABORATORIO.md`: rondas investigar → criticar → diseñar → auditar → correr → registrar → integrar, con 70/20/10 de
+presupuesto (protocolo / riesgo alto / exploratorio). Cuando la cola se vacía, la sesión autónoma lanza una ronda de investigación.
+
 ## 4. Presupuesto y frenos
 - Antes de lanzar algo largo, estimar CPU (el humo da el tiempo por corrida) y escribirlo en el preregistro.
 - Un bloque que su propio creador espera NO (p ≥ 0.9) va al final de la cola.
