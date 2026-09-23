@@ -1,0 +1,54 @@
+(0) origen, construccion y chequeo estatico
+  OK  sha FABRICA.py 2ebee3e99ea5a33a (esperado 2ebee3e99ea5a33a)
+  OK  sha pista2.py 4d2bee16e7961261 (esperado 4d2bee16e7961261)
+  OK  sha motor_convive.py d10cb9021f5d0f41 (esperado d10cb9021f5d0f41)
+  OK  sha corre_convive.py e6dadfdad9c379cd (esperado e6dadfdad9c379cd)
+  OK  sha n10_serie_s12301-12320_T100000_20260923_161438.json bbc9291c9a1059e6 (esperado bbc9291c9a1059e6)
+  OK  N9C_NADA.py == construccion por anclas y sha del runner d4853da9c6ed9a82
+  OK  N9C_NADA.py pasa revisa_carro []
+  OK  N9C_PRED.py == construccion por anclas y sha del runner 4a1ea0844b31c837
+  OK  N9C_PRED.py pasa revisa_carro []
+  OK  N9C_CAND.py == construccion por anclas y sha del runner d5b2b9390e782a70
+  OK  N9C_CAND.py pasa revisa_carro []
+  OK  N9C_CRUZ.py == construccion por anclas y sha del runner 822cea5ec7d95b94
+  OK  N9C_CRUZ.py pasa revisa_carro []
+(I) perillas apagadas: N9C_NADA == FABRICA en toda la salida
+  OK  I s14191 T6000 {'solapadas': 1, 'diag': 0, 'reposicion': 'fija'} 15b84d6487aaafdd 15b84d6487aaafdd nacimientos 26
+  OK  I s14193 T6000 {'solapadas': 1, 'diag': 0, 'reposicion': 'fija'} f9c5d3cd8288186c f9c5d3cd8288186c nacimientos 27
+  OK  I s14194 T4000 {'solapadas': 1, 'diag': 0, 'reposicion': 'inmediata'} f280b6df2f4dee34 f280b6df2f4dee34 nacimientos 16
+  OK  I s14191 T4000 {'solapadas': 0, 'diag': 1} 42f70db8bf7af23f 42f70db8bf7af23f nacimientos 100
+  OK  I s14193 T3000 {'solapadas': 0, 'diag': 1, 'compat': 0, 'fundador_limpio': 1} 278f02c4d9f791d5 278f02c4d9f791d5 nacimientos 93
+  OK  I v1 compat=1 (1 carro) dda47ce6f4cee310 dda47ce6f4cee310
+(P) antes del primer parto la herencia es inerte
+  OK  P fisica PRED == CAND == CRUZ (T=450, 0 partos) {'NADA': 'fbc88b005d313716', 'PRED': '3d72d6eae7253340', 'CAND': '3d72d6eae7253340', 'CRUZ': '3d72d6eae7253340'}
+(B) el canal, por unidad
+  OK  B1 NADA al_parir = None 
+  OK  B1 PRED al_parir = None 
+  OK  B2 el hijo CAND queda con la memoria del padre {'A': [1.6, 0.0, 2], 'B': [-0.8, 0.0, 2], 'D': [0.0, -0.4, 1]}
+  OK  B3 CRUZ: dE y dAg intercambiados, mismos conteos {'A': [0.0, 1.6, 2], 'B': [0.0, -0.8, 2], 'D': [-0.4, 0.0, 1]}
+  OK  B4 los hijos NADA y PRED nacen sin memoria 
+  OK  B4 ningun modo consume rng extra (mismo estado de rng_hijo) 
+  OK  B4 el hijo nace con los pesos de FABRICA (en blanco) en los cuatro modos 
+  OK  B5 la copia no comparte memoria con el padre 
+(M) la boca, por unidad (mismo uniforme)
+  OK  M1 letra nunca mordida: 'predice' == FABRICA (misma decision, mismo rng) True True
+  OK  M2 E = 0.6 y memoria 'B quita comida': FABRICA muerde B, 'predice' no (mismo rng) True False
+  OK  M3 E = 1.5 (B no sube el deficit): las dos muerden igual (limpiar sin pagar) True True
+  OK  M4 resultado() suma lo sentido a la memoria (PRED) y NADA no la usa {'B': [-0.4, 0.0, 1]}
+(D)/(C) determinismo y en marcha (v2, T=8000)
+  OK  D CAND determinista 9aa4a3a99028056c
+  OK  C hubo partos en CAND nacimientos 1
+  OK  C con partos, CAND se separa de PRED (herencia no inerte) 
+  OK  C con partos, CRUZ se separa de CAND (contenido no inerte) 
+  OK  C PRED se separa de NADA (boca no inerte) 
+(E) regla 14: entrada campo a campo contra corre_convive.tarea
+  OK  E entrada de corre_n9c == corre_convive (semilla, 9 carros, cada kwarg) [(14191, 9, {'T': 100000, 'diag': 0, 'solapadas': 1, 'reposicion': 'fija', 'tope_cuerpos': 300, 'r_rep': 0.03}), (14191, 9, {'T': 100000, 'diag': 0, 'solapadas': 1, 'reposicion': 'fija', 'tope_cuerpos': 300, 'r_rep': 0.03})]
+(G) ERR-115: el parser aborta sin correr nada
+  OK  G 20 formas malas abortan en parsea() 
+  OK  G 5 formas validas se aceptan (solo se parsean; nada corre) 
+  OK  G el runner real con --help sale con error y no escribe nada rc 1
+(V) la letra de veredicto()
+  OK  V 7 casos fabricados dan la letra esperada ['FUNCIONA (un linaje de', 'HAY ALGO MODESTO: PERS', 'HAY ALGO MODESTO: SUBE', 'NO (el organismo propi', 'NO SE LEE (ancla fuera', 'NO SE LEE (ancla fuera', 'NO SE LEE (el tope de ']
+  OK  V el ancla del runner es la de calibra_ancla.py (0.09, 0.155) (0.09, 0.155)
+(101 s)
+RESULTADO: 43/43

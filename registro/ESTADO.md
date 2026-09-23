@@ -8,6 +8,7 @@
 - **Aprende a barrer, réplica 8121–8140: HAY ALGO MODESTO replicado.** APR 0.385 vs FABRICA 0.336 (mediana R0), APR gana 20/20 (dif. 0.049),
   no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8 (gana a APR_SIN_HERENCIA 20/20) se midió en la serie original; la réplica sólo corrió APR y FABRICA. Nivel 8: propuesta 45 %.
 - **Subida n8 (serie + réplica): HAY ALGO MODESTO** — sigue aprendiendo con 90 celdas fijas (P2, P6 ×2) pero cae tras agotarlas en la réplica (P3 −0.187); la fusión no ayuda. Propuesta +5.
+- **Subida n6 (serie + réplica): HAY ALGO MODESTO por la letra** — rodea limpio por el hueco sin pisar el veneno recordado (1.0 / 0.925, controles 0), cae V1 (memoria incompleta en 1 y 5 semillas); subconjunto regla 10: 11/11 ×2. Propuesta 50 → 60 % (70–75 si el director acepta la regla 10).
 - **Subida n10: NO SE LEE** (ancla 0.110 > 0.10, ERR-116); tanda 2 en diseño.
 - **Generaciones que conviven, monocultivos 10101–10120: NO** — ningún carro persiste en ≥15/20 con flujo fijo de comida (O1 14/20, O4 3/20, O2/O3 0/20); el cruce de H-1 de ayer
   depende de la reposición inmediata (ERR-104). Mixta H y réplica en cola tras los paquetes de nivel.
@@ -21,6 +22,8 @@
   cada nivel 5–10 (a confirmar con el director). Delegación: *"si hay una decisión difícil tómala, y me dejas comentado por qué la tomaste"*.
 
 ## Decisiones del coordinador en ausencia del director (23-sep; cada una con su porqué)
+- **17:50 — subida_n6 se declara por la letra (HAY ALGO MODESTO), no por el subconjunto de la regla 10.** Por qué: el §10 pide 11/11 principales y V1 es principal; leer el subconjunto como FUNCIONA sería elegir la lectura tras ver el dato. Se deja la propuesta 60 % y la alternativa 70–75 % para el director.
+- **17:50 — subida_n9c (tanda 3 del nivel 9) va al FINAL de la cola.** Por qué: su propio creador espera NO (p 0.97) y el auditor coincide en prioridad baja; lo valioso ya salió sin correr: ERR-118 (el 14/20 de O1 no era buena señal). La tanda 4 del nivel 9 necesita otro diseño.
 - **17:05 — la mixta H y la réplica de generaciones que conviven van DESPUÉS de los paquetes de nivel (6, 7, 5, 10b).** Por qué: la meta del
   director es subir niveles; la mixta no mueve ningún nivel por sí sola y el monocultivo ya dio NO claro.
 - **17:05 — la tanda 3 del nivel 9 se centra en persistir con capacidad de carga.** Por qué: el monocultivo de convivencia muestra que
@@ -29,7 +32,7 @@
   a 0.12. Por qué: mover el ancla después de ver el dato es justo lo que prohíbe la regla 11 (ERR-114 fue lo mismo en pequeño); y aunque se
   leyera, F-2/F-4 caen (PARTO no le gana a BAR), así que lo máximo sería "modesto sin contenido" (+1 punto). Las 2 h de CPU de la réplica
   valen más en los niveles 8 y 9. Se registra ERR-116 y el nivel 10 va a una segunda tanda con el ancla calibrada sobre esta serie.
-- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **116**.
+- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **118**.
 
 ## AL 22-SEP-2026, 21:15 (cierre; manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.30 y en la cola del REGISTRO)
 - **Primer cruce de H-1 en JUACO** (carrera de escuderías, monocultivo de O1, que limpia): R0 de nacimientos reales 0.941, replicado en semillas
@@ -66,7 +69,7 @@ código). 20 archivos congelados (`python manifiesto.py` desde la raíz los veri
 5. Fase 9, bloque 3 ("cambiar el mundo"): lo cubren la carrera de escuderías, generaciones que conviven y `subida_n9` (modelo de sí).
 
 ## Errores
-Último: **ERR-116** (23-sep: 114 enmienda V-M de subida_n9, 115 runners aceptan banderas desconocidas, 116 ancla de subida_n10 sin calibrar en v2) · rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-117**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
+Último: **ERR-118** (23-sep: 117 el toro del 21-sep no obligaba a rodear, 118 "persiste el carro" confunde fundadores repuestos; 114 enmienda V-M de subida_n9, 115 runners aceptan banderas desconocidas, 116 ancla de subida_n10 sin calibrar en v2) · rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-119**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
 Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
 
 ## Datos

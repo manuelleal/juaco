@@ -6492,3 +6492,36 @@ Predicciones del coordinador (§9): O2, O3, O4 persisten en ≥ 15/20 → **las 
 **Vocabulario permitido:** *"en el mundo con flujo fijo de comida ningún carro sostiene un linaje más allá de sus fundadores; el cruce de ayer depende de la reposición inmediata"*. Prohibido: "el hito de ayer era falso" (es válido en su mundo, replicado).
 
 **Qué queda.** Mixta H y réplica 10121 (en cola tras los paquetes de nivel, decisión del coordinador). Para el nivel 9 (meta 90 %): la pieza "linaje que persiste en un mundo con capacidad de carga" pasa a ser la central. Nivel 9 no cambia.
+
+---
+
+### SUBIDA N6 — rodeo en un mundo que SÍ obliga (un solo cruce, geometría sorteada), serie 6601–6620 y réplica 6621–6640 (23-sep-2026, 17:23–17:43; Pool 6; preregistro `experimentos/subida_n6/PREREGISTRO_n6.md` commiteado en `b9836ab`): **HAY ALGO MODESTO por la letra — todas las puertas de conducta pasan en las dos series (rodea limpio 1.0 / 0.925; es el veneno recordado, GF − BRÚJULA 1.0 / 0.925; INVERTIDO cae a 0; escala 15×13 pasa), pero la puerta de validez V1 (la comida y las dos murallas enteras en M) cae en las dos (19/20, 15/20); en el subconjunto válido de la regla 10 pasa 11/11 en las dos**
+
+Arnés `identidad_subida.py` 42/42 antes de lanzar. JSON serie `subida_s6601-6620_20260923_172316.json` (`2e11e2cdaec37200`), réplica `subida_s6621-6640_20260923_173338.json` (`af98c6148285a2be`).
+
+| puerta (mediana de 20) | umbral | serie | réplica |
+|---|---|---|---|
+| R-1a rodea limpio (GF) | ≥ 0.60 | 1.00 | 0.925 |
+| R-1b GF − max(CIEGO, BARAJADO) | ≥ 0.25 | 1.00 | 0.925 |
+| R-1c GF − BRÚJULA (es el veneno recordado) | ≥ 0.25 | 1.00 | 0.925 |
+| R-2a no huye | ≤ 0.20 | 0.00 | 0.00 |
+| R-2b balanceada (rodeo + atajo − 1) | ≥ 0.50 | 1.00 | 0.875 |
+| R-3 pasos GF/CIEGO | ≤ 0.70 | 0.283 | 0.308 |
+| R-4 comida GF/CIEGO | ≥ 0.90 | 8.1 | 5.6 |
+| R-5 muertes GF/CIEGO | ≤ 1.25 | 0.125 | 0.084 |
+| C1 INVERTIDO rodea | ≤ 0.20 | 0.00 | 0.00 |
+| PLACEBO validez | ≤ 0.15 | 0.00 | 0.025 |
+| **V1 validez (memoria completa)** | 20/20 | **19/20 ✗** | **15/20 ✗** |
+| E-1 / E-2 escala 15×13 | ≥ 0.60 / 0.25 | 1.0 / 1.0 | 1.0 / 1.0 |
+| subconjunto regla 10 | — | 11/11 (19 semillas) | 11/11 (15 semillas) |
+
+**Decisión del coordinador (en ausencia del director):** se declara **por la letra**: HAY ALGO MODESTO (el §10 pide 11/11 principales y V1 es principal). No se lee el subconjunto como FUNCIONA porque eso sería elegir la lectura después de ver el dato. Pero se deja constancia de que V1 es una puerta de *validez del instrumento* (¿la memoria llegó a tener las dos murallas?), no de conducta: en ninguna semilla el organismo falla el rodeo por leer mal un mapa completo. Propuesta de nivel: **50 → 60 %** (tope del rango MODESTO); si el director lee la regla 10 como suficiente, el preregistro da 70–75 %.
+
+**Lectura honesta.** En un mundo partido de verdad, el organismo con el mapa recordado leído por gradiente + filtro llega a la comida por el hueco sin pisar el veneno, y los controles lo atribuyen al veneno recordado (BRÚJULA pisa la muralla 1.0) y al mapa (BARAJADO, CIEGO 0). Lo que falla es que en 1 y 5 semillas la memoria no llegó a registrar las dos murallas enteras. **ERR-117** (candidato del creador, §1): el bloque "rodeo obligado" del 21-sep usaba una muralla de una fila en un toro, que no lo parte (es un cilindro); midió sobre todo alejarse, no rodear; no cambia su veredicto CAE, cambia su lectura.
+
+**Vocabulario permitido:** *"en un mundo 2D partido por veneno recordado con un solo cruce, el organismo llega a la comida por el hueco sin pisar el veneno, replicado; en algunas semillas la memoria no alcanza a registrar las dos murallas"*. Prohibido: «planifica», «entiende el espacio».
+
+**Qué queda para el 100 %:** dos metas en 2D, port a v14.2, mapa corregido dentro del episodio (hueco que se mueve), rodeos compuestos. Y V1: que la memoria complete las murallas (explorar antes de explotar).
+
+### ERR-118 (23-sep-2026, tanda 3 del nivel 9, `experimentos/subida_n9c/`)
+- **ERR-118** (criterio): en la pista v2 (generaciones que conviven), cuando un linaje se extingue el mundo repone un fundador ingenuo; "persiste el carro" mide entonces cuánto les ganan los descendientes a esos fundadores repuestos, no sólo la calidad del linaje. O1 persiste 14/20 porque sus fundadores no son viables (R0 fundadores 0.019, R0 nacidos 0.897); O3 0/20 porque sus fundadores son casi tan buenos como sus hijos (0.560 vs 0.743) y los linajes derivan. Consecuencia: el 14/20 de O1 en el monocultivo **no** es una señal de que limpiar esté cerca de sostener un linaje. Hay que redefinir "persiste" antes de usarlo como criterio del 100 % del nivel 9.
