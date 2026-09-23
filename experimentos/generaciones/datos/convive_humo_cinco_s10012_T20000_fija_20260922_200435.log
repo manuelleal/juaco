@@ -1,0 +1,24 @@
+CONVIVE · humo_cinco_s10012_T20000_fija · 2026-09-22 20:04:35 · python 3.14.2 · pool NO (un proceso)
+  pista2 4d2bee16e7961261 · motor 942c0cb4510fc028 · juez 2e5f095d3b62bc0c · carros {'FABRICA': '2ebee3e99ea5a33a', 'O1': '99436afa2715f028', 'O2': '34d0bbac36a02521', 'O3': '0442c2884fcb0e11', 'O4': '75fd196ccbc1347e'}
+  9 fundadores por carro · semillas 10012-10012 · T=20000 · reposicion fija · r_rep 0.03 · tope 300
+  CHEQUEO ESTATICO FABRICA: PASA
+  CHEQUEO ESTATICO O1: PASA
+  CHEQUEO ESTATICO O2: PASA
+  CHEQUEO ESTATICO O3: PASA
+  CHEQUEO ESTATICO O4: PASA
+  IDENTIDAD CORTA solapadas=0 == pista v1 (1 FABRICA compat, T=3000): OK
+  [    25.7s] FABRICA s10012 (24.6s) persisten 0/9 · cuerpos max 13 · bloqueados 0
+  [   122.2s] O1 s10012 (96.4s) persisten 1/9 · cuerpos max 35 · bloqueados 0
+  [   184.5s] O2 s10012 (62.3s) persisten 2/9 · cuerpos max 24 · bloqueados 0
+  [   283.9s] O3 s10012 (99.4s) persisten 4/9 · cuerpos max 22 · bloqueados 0
+  [   381.6s] O4 s10012 (97.7s) persisten 4/9 · cuerpos max 29 · bloqueados 0
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\convive\experimentos\generaciones\datos\convive_humo_cinco_s10012_T20000_fija_20260922_200435.json (sha b9ba92cd7c50995e)
+
+  carro   | persisten/lin | sin ext | sem estab | R0_coh (cens) | R0_compl | R0_muertos | tam media/min/final | gen max | vida | vol decl/muertes | cuerpos (max) | bloq | s/semilla
+  FABRICA |   0/  9 |   0 |  0/1 | 0.158 (0.0) | 0.158 | 0.194 | 1.05/1.0/1.0 | 1.0 | 101.0 | 0/572 (0.0) | 9.49 (13) | 0 | 24.6
+  O1      |   1/  9 |   1 |  0/1 | 0.133 (0.0) | 0.133 | 0.1 | 1.49/1.0/1.0 | 3.0 | 200.0 | 0/527 (0.0) | 25.29 (35) | 0 | 96.4
+  O2      |   2/  9 |   2 |  0/1 | 0.6 (0.0) | 0.6 | 0.5 | 1.36/1.0/1.0 | 3.0 | 1398.5 | 0/142 (0.0) | 16.62 (24) | 0 | 62.3
+  O3      |   4/  9 |   4 |  0/1 | 1.0 (0.0) | 0.75 | 0.714 | 1.74/1.0/2.0 | 3.0 | 2255.5 | 3/85 (0.0353) | 15.02 (22) | 0 | 99.4
+  O4      |   4/  9 |   4 |  0/1 | 0.857 (0.0) | 0.857 | 0.326 | 1.15/1.0/1.0 | 6.0 | 200.0 | 14/413 (0.0339) | 20.89 (29) | 0 | 97.7
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\convive\experimentos\generaciones\datos\convive_humo_cinco_s10012_T20000_fija_20260922_200435_resumen.json
+Terminado en 381.6s
