@@ -1,0 +1,21 @@
+MUNDO ANCLADO v2 · CALIBRACION v2 fila 2 (tox=2.0) semillas 7021-7040 · 2026-09-22 15:14:28 · T=100000
+  organismo_anclado e689c2952b1991a4 (esperado e689c2952b1991a4)
+  PREREGISTRO v2 sha 8404b03e172acf6f
+  OK   regla14 NADA           = corre_bloque2.BRAZOS['NADA'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 REL            = corre_bloque2.BRAZOS['REL'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 ORACULO        = corre_bloque2.BRAZOS['ORACULO'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 REL_BAR        = corre_bloque2.BRAZOS['REL_BAR'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 ORACULO_CIEGO  = corre_bloque2.BRAZOS['ORACULO'] + ['anc_mide', 'olv_ciego', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 NADA_CIEGO     = corre_bloque2.BRAZOS['NADA'] + ['anc_mide', 'olv_ciego', 'olv_mal', 'rep_acum', 'tabla']
+  OK   regla14 RENACE         = corre_bloque2.BRAZOS['RENACE'] + ['anc_mide', 'olv_mal', 'rep_acum', 'tabla']
+  punto tox=2.0 h=0.003
+  crudo -> C:\Users\User\Documents\PROYECTOS\JUACO\anclado\datos\anclado2_cal_s7021-7040_fila2_20260922_151428.json (sha a3984bfb0e7c2a43)
+  -> R0 NADA 0.0334  R0 ORACULO 0.4328  razon 12.96  ancla=no
+  punto tox=2.0 h=0.006
+  crudo -> C:\Users\User\Documents\PROYECTOS\JUACO\anclado\datos\anclado2_cal_s7021-7040_fila2_20260922_151428.json (sha 6e01b45f68f93c67)
+  -> R0 NADA 0.0782  R0 ORACULO 0.8664  razon 11.08  ancla=no
+  punto tox=2.0 h=0.012
+  crudo -> C:\Users\User\Documents\PROYECTOS\JUACO\anclado\datos\anclado2_cal_s7021-7040_fila2_20260922_151428.json (sha 9fff3293c4cdd702)
+  -> R0 NADA 0.2005  R0 ORACULO 2.5035  razon 12.49  ancla=SI
+  ORACULO ya >= 1.0: en esta fila los h mayores solo inflan el mundo (regla 5b); fila cerrada
+  FILA 2 CERRADA: [{'tox': 2.0, 'h': 0.003, 'R0_NADA': 0.0334, 'R0_OR': 0.4328, 'razon': 12.96, 'ancla': False, 'vida_NADA': 19.0, 'vida_OR': 65.25, 'fmala_NADA': 0.6867, 'fmala_OR': 0.8379, 'J_NADA': 0.1249, 'J_OR': 0.9877}, {'tox': 2.0, 'h': 0.006, 'R0_NADA': 0.0782, 'R0_OR': 0.8664, 'razon': 11.08, 'ancla': False, 'vida_NADA': 21.0, 'vida_OR': 98.25, 'fmala_NADA': 0.6729, 'fmala_OR': 0.7685, 'J_NADA': 0.1401, 'J_OR': 0.9869}, {'tox': 2.0, 'h': 0.012, 'R0_NADA': 0.2005, 'R0_OR': 2.5035, 'razon': 12.49, 'ancla': True, 'vida_NADA': 24.25, 'vida_OR': 658.0, 'fmala_NADA': 0.6008, 'fmala_OR': 0.6533, 'J_NADA': 0.1755, 'J_OR': 0.9753}]
