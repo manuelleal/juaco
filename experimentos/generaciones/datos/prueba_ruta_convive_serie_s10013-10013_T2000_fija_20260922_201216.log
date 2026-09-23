@@ -1,0 +1,32 @@
+CONVIVE · serie_s10013-10013_T2000_fija · 2026-09-22 20:12:16 · python 3.14.2 · pool NO (un proceso)
+  pista2 4d2bee16e7961261 · motor 942c0cb4510fc028 · juez 1bb87703eb96cd11 · carros {'FABRICA': '2ebee3e99ea5a33a', 'O1': '99436afa2715f028', 'O2': '34d0bbac36a02521', 'O3': '0442c2884fcb0e11', 'O4': '75fd196ccbc1347e'}
+  9 fundadores por carro · semillas 10013-10013 · T=2000 · reposicion fija · r_rep 0.03 · tope 300
+  CHEQUEO ESTATICO FABRICA: PASA
+  CHEQUEO ESTATICO O1: PASA
+  CHEQUEO ESTATICO O2: PASA
+  CHEQUEO ESTATICO O3: PASA
+  CHEQUEO ESTATICO O4: PASA
+  IDENTIDAD CORTA solapadas=0 == pista v1 (1 FABRICA compat, T=3000): OK
+  [     2.9s] FABRICA s10013 (2.0s) persisten 0/9 · cuerpos max 10 · bloqueados 0
+  [     9.6s] O1 s10013 (6.7s) persisten 0/9 · cuerpos max 21 · bloqueados 0
+  [    16.2s] O2 s10013 (6.6s) persisten 2/9 · cuerpos max 22 · bloqueados 0
+  [    22.2s] O3 s10013 (6.0s) persisten 0/9 · cuerpos max 18 · bloqueados 0
+  [    28.8s] O4 s10013 (6.7s) persisten 0/9 · cuerpos max 21 · bloqueados 0
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\convive\experimentos\generaciones\datos\convive_serie_s10013-10013_T2000_fija_20260922_201216.json (sha abe56ea122501f30)
+
+  carro   | persisten/lin | sin ext | sem estab (con >=1 lin) | R0_coh (cens) | R0_compl | R0_muertos | tam media/min/final | gen max | vida | vol decl/muertes | cuerpos (max) | bloq | s/semilla
+  FABRICA |   0/  9 |   9 |  0/1 (0) | 0.5 (0.0) | 0.0 | 0.0 | 1.048/1.0/1.0 | 1.0 | 109.0 | 0/58 (0.0) | None (10) | 0 | 2.0
+  O1      |   0/  9 |   9 |  0/1 (0) | 1.0 (0.5) | 0.0 | 0.0 | 1.952/1.0/1.0 | 1.0 | 200.0 | 0/33 (0.0) | None (21) | 0 | 6.7
+  O2      |   2/  9 |   9 |  0/1 (1) | 0.0 (0.0) | 0.0 | 0.0 | 1.0/1.0/1.0 | 0.0 | 314.0 | 0/23 (0.0) | None (22) | 0 | 6.6
+  O3      |   0/  9 |   9 |  0/1 (0) | 0.5 (1.0) | 0.0 | 0.0 | 1.571/1.0/2.0 | 1.0 | 600.0 | 0/3 (0.0) | None (18) | 0 | 6.0
+  O4      |   0/  9 |   9 |  0/1 (0) | 1.0 (0.5) | 0.0 | 0.0 | 1.952/1.0/1.0 | 1.0 | 200.0 | 0/33 (0.0) | None (21) | 0 | 6.7
+
+  PREDICCIONES FIRMADAS (PREREGISTRO_convive.md)
+   - H (coordinador): O2 persiste igual o mejor que O3 y O4 (persisten O2 >= O3 - 9 y >= O4 - 9, de 180): SE CUMPLE
+   - FABRICA: persisten 0 en (0, 5): SI · tam medio 1.048 en (0.9, 1.2): SI · semillas con >= 1 linaje persistente 0 en (0, 2): SI
+   - O1: persisten 0 en (0, 30): SI · tam medio 1.952 en (1.1, 2.2): SI · semillas con >= 1 linaje persistente 0 en (8, 20): NO
+   - O2: persisten 2 en (5, 45): NO · tam medio 1.0 en (1.1, 2.2): NO · semillas con >= 1 linaje persistente 1 en (12, 20): NO
+   - O3: persisten 0 en (10, 60): NO · tam medio 1.571 en (1.2, 2.5): SI · semillas con >= 1 linaje persistente 0 en (15, 20): NO
+   - O4: persisten 0 en (5, 50): NO · tam medio 1.952 en (1.0, 2.0): SI · semillas con >= 1 linaje persistente 0 en (12, 20): NO
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\convive\experimentos\generaciones\datos\convive_serie_s10013-10013_T2000_fija_20260922_201216_resumen.json
+Terminado en 28.8s
