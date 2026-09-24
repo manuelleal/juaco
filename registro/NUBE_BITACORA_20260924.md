@@ -23,7 +23,37 @@
   `/root/venv-juaco/bin/python experimentos/subida_n10b/corre_n10b.py --serie --desde 12701 --n 20 --pool 3`
   - `corre_n10b.py` b7808bbb83fb038e · `PREREGISTRO_n10b.md` 100f83f74446a973.
   - Log: `experimentos/subida_n10b/datos/n10b_serie_s12701-12720_T100000_20260924_014236.log`.
-  - Estado: **en curso**.
+  - **02:29 — la serie terminó en 2796 s de pared, con Pool 3.**
+    - JSON: `experimentos/subida_n10b/datos/n10b_serie_s12701-12720_T100000_20260924_014236.json` (eb3b800aa1e66437) y su crudo `.json.gz`.
+
+    | carro | R0_nacidos (mediana) | vida de nacidos | gen_max |
+    |---|---|---|---|
+    | NADA | 0.114 | 99 | 3 |
+    | RES | **0.688** | 466 | 23.5 |
+    | RES1 | 0.400 | — | — |
+    | BAR | 0.167 | — | — |
+    | ORÁCULO | 0.520 | — | — |
+
+    - Validez: V-ANCLA-b y V-TECHO-b pasan.
+    - F-1 a F-5: **20/20 en cada una**, incluidas MIX (F-3 y F-4) y F-5, ACUMULA.
+    - **VEREDICTO por la letra del §6: FUNCIONA + ACUMULA.**
+  - **ALARMA DEL §8 ACTIVADA — no se lee todavía.**
+    - El §8 del preregistro dice *"RES por encima del ORÁCULO en ≥ 15/20 sería sospechoso; revisar antes de leer"*. Aquí pasó en 20/20
+      (0.688 contra 0.520).
+    - Fuera de sus rangos predichos: P3 (RES en [0.25, 0.55]), P5 (brecha en [0.50, 1.00]; salió 1.46) y P9 (razón de vida en
+      [1.4, 2.2]; salió 4.7).
+    - El runner no aplica el chequeo del §8. Es candidato a **ERR nube-2**: el veredicto impreso no incluye una condición que el
+      preregistro sí pone.
+  - **Revisión en curso (exploratoria), hipótesis H-NEUTRAS.**
+    - La tabla del ORÁCULO trae 8 entradas, 4 de ellas neutras (R = 0). Las de RES suelen estar incompletas: 6–7 claves; la completa
+      aparece sólo en el 2–12 % de los casos.
+    - Las entradas neutras entrenan a 0 el valor de una letra en una necesidad y borran la generalización protectora entre letras que
+      comparten píxeles (D|sed = −3 generaliza a B).
+    - Con sed, la boca del hijo del ORÁCULO vería B "neutro" y lo mordería.
+    - Prueba: `revisa_n10b_oraculo.py` compara ORA_SIN0 (la tabla verdadera sin entradas neutras) con ORÁCULO, RES y NADA, en semillas
+      de práctica 12794–12797.
+  - **02:33 — réplica 12721–12740, lanzada con este comando:**
+    `/root/venv-juaco/bin/python experimentos/subida_n10b/corre_n10b.py --serie --desde 12721 --n 20 --pool 3`
 
 ### 1b. JUACO-ECO (frente 2)
 - **01:43 — arnés** `identidad_eco.py` (b70ec2f05915dc2e): **41/41** en 118 s (PC: 208 s). Salida idéntica a la del PC. Corrió en el

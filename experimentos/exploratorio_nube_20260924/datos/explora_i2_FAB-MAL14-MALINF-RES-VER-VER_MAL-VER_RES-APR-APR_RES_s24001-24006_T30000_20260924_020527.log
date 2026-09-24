@@ -48,3 +48,27 @@
 [02:30:48]   s24006 MAL14      R0real 0.119 persisten 0/9 vida 200.0 muertes 41.0 fund 36.0 causas {'hambre': 58, 'sed': 37, 'veneno': 117, 'sal': 158} BD 44.0 AC 130.0 sinbueno 0.122 tot {'enc': 28245, 'desc': 515, 'malo': 26630, 'mord': 1568, 'mord_desc': 503, 'mord_malo': 39, 'vetos_malo': 17262} (22.4 s)
 [02:31:11]   s24006 MALINF     R0real 0.1628 persisten 0/9 vida 200.0 muertes 42.0 fund 35.0 causas {'hambre': 54, 'sed': 49, 'veneno': 106, 'sal': 142} BD 38.0 AC 137.0 sinbueno 0.1469 tot {'enc': 27604, 'desc': 465, 'malo': 26014, 'mord': 1507, 'mord_desc': 458, 'mord_malo': 0, 'vetos_malo': 17486} (23.2 s)
 [02:31:33]   s24006 RES        R0real 0.1064 persisten 1/9 vida 200.0 muertes 46.0 fund 41.0 causas {'hambre': 40, 'sed': 79, 'veneno': 115, 'sal': 172} BD 52.0 AC 137.0 sinbueno 0.0707 tot {'enc': 27838, 'desc': 1158, 'malo': 25475, 'mord': 1659, 'mord_desc': 466, 'mord_malo': 74, 'vetos_malo': 16091, 'limpias': 70, 'vetos_desc': 683} (22.7 s)
+[02:32:28]   s24006 VER        R0real 0.1404 persisten 0/9 vida 70.5 muertes 113.0 fund 97.0 causas {'hambre': 0, 'sed': 0, 'veneno': 513, 'sal': 490} BD 455.0 AC 521.0 sinbueno 0.0006 tot {'ver_blanco': 268825, 'enc': 23261, 'desc': 1502, 'malo': 17494, 'mord': 8727, 'mord_desc': 1470, 'mord_malo': 3413, 'ver_sin_blanco': 1175} (54.0 s)
+[02:33:18]   s24006 VER_MAL    R0real 0.1053 persisten 1/9 vida 200.0 muertes 46.0 fund 42.0 causas {'hambre': 44, 'sed': 54, 'veneno': 124, 'sal': 155} BD 44.0 AC 123.0 sinbueno 0.1588 tot {'ver_blanco': 219086, 'enc': 26935, 'desc': 499, 'malo': 25379, 'mord': 1504, 'mord_desc': 490, 'mord_malo': 16, 'vetos_malo': 17341, 'ver_sin_blanco': 50914} (50.5 s)
+[02:34:10]   s24006 VER_RES    R0real 0.1892 persisten 2/9 vida 200.0 muertes 36.0 fund 29.0 causas {'hambre': 46, 'sed': 73, 'veneno': 91, 'sal': 153} BD 37.0 AC 122.0 sinbueno 0.1525 tot {'ver_blanco': 221510, 'enc': 27281, 'desc': 1031, 'malo': 25004, 'mord': 1608, 'mord_desc': 393, 'mord_malo': 72, 'vetos_malo': 15287, 'vetos_desc': 627, 'limpias': 66, 'ver_sin_blanco': 48490} (51.6 s)
+[02:34:34]   s24006 APR        R0real 0.1261 persisten 0/9 vida 65.0 muertes 119.0 fund 100.0 causas {'hambre': 0, 'sed': 1, 'veneno': 495, 'sal': 529} BD 444.0 AC 498.0 sinbueno 0.0007 tot {} (24.8 s)
+[02:34:58]   s24006 APR_RES    R0real 0.1064 persisten 1/9 vida 200.0 muertes 46.0 fund 41.0 causas {'hambre': 40, 'sed': 79, 'veneno': 115, 'sal': 172} BD 52.0 AC 137.0 sinbueno 0.0707 tot {'enc': 27838, 'desc': 1158, 'malo': 25475, 'mord': 1659, 'mord_desc': 466, 'mord_malo': 74, 'vetos_malo': 16355, 'limpias': 67, 'vetos_desc': 683} (24.1 s)
+[02:34:58] RESUMEN por brazo (medianas sobre semillas de la mediana de los 9 linajes)
+[02:34:58]   FAB        R0real 0.1491 persisten 1/54 vida 66.0 muertes 115.5 fund 98.5 BD 464.5 AC 523.0 sinbueno 0.0 muere_sin_parir 0.8932 · FABRICA de la carrera (bicho real, piso)
+[02:34:58]   MAL14      R0real 0.0966 persisten 2/54 vida 200.0 muertes 41.5 fund 37.0 BD 45.0 AC 128.5 sinbueno 0.1266 muere_sin_parir 0.9247 · no muerde lo malo conocido si min(E,Ag) < 1.4
+[02:34:58]   MALINF     R0real 0.1328 persisten 2/54 vida 200.0 muertes 44.0 fund 39.0 BD 41.0 AC 127.5 sinbueno 0.1258 muere_sin_parir 0.8922 · no muerde NUNCA lo malo conocido (control: sin reserva, sin limpieza)
+[02:34:58]   RES        R0real 0.1157 persisten 7/54 vida 200.0 muertes 46.5 fund 42.0 BD 52.0 AC 136.5 sinbueno 0.0819 muere_sin_parir 0.9257 · REGLA COMPLETA: prueba si r>=0.5, lo malo sólo para limpiar con r>=1.45
+[02:34:58]   VER        R0real 0.1361 persisten 2/54 vida 77.0 muertes 114.0 fund 97.5 BD 468.0 AC 509.0 sinbueno 0.0011 muere_sin_parir 0.9053 · el objetivo lo elige el valor: salta lo que sabe malo
+[02:34:58]   VER_MAL    R0real 0.1095 persisten 2/54 vida 200.0 muertes 44.0 fund 40.0 BD 42.5 AC 125.0 sinbueno 0.1775 muere_sin_parir 0.9081 · VER + no muerde lo malo bajo 1.45 (sin neofobia ni limpieza)
+[02:34:58]   VER_RES    R0real 0.0894 persisten 8/54 vida 200.0 muertes 49.0 fund 45.5 BD 52.0 AC 122.0 sinbueno 0.1094 muere_sin_parir 0.9381 · VER + regla completa de la reserva
+[02:34:58]   APR        R0real 0.118 persisten 6/54 vida 65.75 muertes 110.0 fund 97.0 BD 453.0 AC 484.5 sinbueno 0.0009 muere_sin_parir 0.91 · APR de la carrera (FABRICA + boca aprendida por TD y heredada; aprende_barrer)
+[02:34:58]   APR_RES    R0real 0.1157 persisten 7/54 vida 200.0 muertes 48.0 fund 43.5 BD 52.0 AC 135.0 sinbueno 0.0819 muere_sin_parir 0.9261 · APR + regla completa de la reserva
+[02:34:58]   pareado MAL14 vs FAB: gana 0/6 · dif mediana -0.0512
+[02:34:58]   pareado MALINF vs FAB: gana 2/6 · dif mediana -0.026
+[02:34:58]   pareado RES vs FAB: gana 0/6 · dif mediana -0.0329
+[02:34:58]   pareado VER vs FAB: gana 2/6 · dif mediana -0.013
+[02:34:58]   pareado VER_MAL vs FAB: gana 1/6 · dif mediana -0.0391
+[02:34:58]   pareado VER_RES vs FAB: gana 1/6 · dif mediana -0.0683
+[02:34:58]   pareado APR vs FAB: gana 1/6 · dif mediana -0.0391
+[02:34:58]   pareado APR_RES vs FAB: gana 0/6 · dif mediana -0.0329
+[02:34:58] JSON: experimentos/exploratorio_nube_20260924/datos/explora_i2_FAB-MAL14-MALINF-RES-VER-VER_MAL-VER_RES-APR-APR_RES_s24001-24006_T30000_20260924_020527.json
