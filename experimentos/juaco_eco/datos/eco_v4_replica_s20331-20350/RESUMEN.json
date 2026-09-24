@@ -1,0 +1,69 @@
+{
+ "etiqueta": "eco_v4_replica_s20331-20350",
+ "veredicto": "HAY ALGO MODESTO (en esta serie): ELEGIDO []; los dos suben en ['w30']",
+ "lineas": [
+  "[w30] herencia    VIDA expresa sobre la media de sus sombras 17/20 (debajo 3) \u00b7 AZAR 13/20 \u00b7 banco con el organo (mediana) VIDA 0.8225 \u00b7 AZAR 0.365 \u00b7 VIDA > AZAR 12/20 (VIDA < AZAR 8) \u00b7 vivos en T con el organo VIDA 1.0 \u00b7 AZAR 0.5 \u00b7 descriptivo media contra sombras VIDA (7, 1) AZAR (5, 1) -> sube",
+  "[w30] interruptor VIDA expresa sobre la media de sus sombras 15/20 (debajo 5) \u00b7 AZAR 7/20 \u00b7 banco con el organo (mediana) VIDA 0.71 \u00b7 AZAR 0.16499999999999998 \u00b7 VIDA > AZAR 14/20 (VIDA < AZAR 6) \u00b7 vivos en T con el organo VIDA 0.96665 \u00b7 AZAR 0.0833 \u00b7 descriptivo media contra sombras VIDA (10, 0) AZAR (1, 4) -> sube",
+  "[w30] perillas seleccionadas en VIDA (>= 15/20, sin organos): [('alpha', (16, 0))] \u00b7 persisten en T: {'VIDA': 16, 'AZAR': 7}",
+  "[w9] herencia    VIDA expresa sobre la media de sus sombras 10/20 (debajo 10) \u00b7 AZAR 9/20 \u00b7 banco con el organo (mediana) VIDA 0.0475 \u00b7 AZAR 0.1325 \u00b7 VIDA > AZAR 9/20 (VIDA < AZAR 11) \u00b7 vivos en T con el organo VIDA 1.0 \u00b7 AZAR None \u00b7 descriptivo media contra sombras VIDA (6, 2) AZAR (1, 1) -> neutro",
+  "[w9] interruptor VIDA expresa sobre la media de sus sombras 14/20 (debajo 6) \u00b7 AZAR 6/20 \u00b7 banco con el organo (mediana) VIDA 0.185 \u00b7 AZAR 0.125 \u00b7 VIDA > AZAR 12/20 (VIDA < AZAR 8) \u00b7 vivos en T con el organo VIDA 0.0 \u00b7 AZAR None \u00b7 descriptivo media contra sombras VIDA (9, 3) AZAR (1, 0) -> neutro",
+  "[w9] perillas seleccionadas en VIDA (>= 15/20, sin organos): [] \u00b7 persisten en T: {'VIDA': 1, 'AZAR': 0}",
+  "PAQUETE por mundo: {'w30': {'herencia': 'sube', 'interruptor': 'sube'}, 'w9': {'herencia': 'neutro', 'interruptor': 'neutro'}}",
+  "VEREDICTO ECO v4 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): HAY ALGO MODESTO (en esta serie): ELEGIDO []; los dos suben en ['w30']"
+ ],
+ "d": {
+  "perfil": {
+   "w30": {
+    "herencia": "sube",
+    "interruptor": "sube"
+   },
+   "w9": {
+    "herencia": "neutro",
+    "interruptor": "neutro"
+   }
+  },
+  "arman": [],
+  "alguno": [],
+  "suben": [
+   "w30"
+  ],
+  "guardia": [],
+  "fijo_on": []
+ },
+ "seg": 4228,
+ "V3": {
+  "T": 120000,
+  "t_corte": 60000
+ },
+ "MUNDOS": {
+  "w30": {
+   "esc": 30,
+   "n0": 30,
+   "tope": 3000
+  },
+  "w9": {
+   "esc": 9,
+   "n0": 9,
+   "tope": 3000
+  }
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "shas": {
+  "corre_eco_v4.py": "f7ba5d77cfd7f725",
+  "corre_eco.py": "47d9cee4d6462116",
+  "motor_eco3.py": "2eec9830792d9822",
+  "carros/FRANK_ECO.py": "92a22cbd1fe314c3",
+  "construye_eco_frank.py": "785b12130022c56b",
+  "PREREGISTRO_eco_v4.md": "9d7e516c678027ea",
+  "organismo_frankenstein.py": "baff124177d44e90"
+ }
+}
