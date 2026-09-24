@@ -14,3 +14,14 @@
 [03:17:52]   s24004 NADA      R0nac 0.0924 vida_nac 103.0 nac 491 exceso 0.772 gen 4 mala 0.998 (59.0 s)
 [03:19:12]   s24004 RES       R0nac 0.5507 vida_nac 226.5 nac 642 exceso 5.682 gen 40 mala 0.9481 (79.9 s)
 [03:21:09]   s24004 RES_SIN0  R0nac 0.9603 vida_nac 1250.0 nac 704 exceso 14.4 gen 35 mala 0.5457 (116.8 s)
+[03:23:08]   s24004 ORA_SIN0  R0nac 1.0028 vida_nac 1420.0 nac 740 exceso 13.934 gen 39 mala 0.5594 (119.6 s)
+[03:23:08] RESUMEN (medianas por semilla)
+[03:23:08]   NADA      R0nac mediana 0.0924 · [0.0636, 0.1308, 0.0924, 0.0924]
+[03:23:08]   RES       R0nac mediana 0.6714 · [0.6506, 0.7935, 0.6923, 0.5507]
+[03:23:08]   RES_SIN0  R0nac mediana 0.96 · [0.9107, 0.9597, 0.9741, 0.9603]
+[03:23:08]   ORA_SIN0  R0nac mediana 0.9936 · [0.9847, 0.9465, 1.0026, 1.0028]
+[03:23:08]   pareado ORA_SIN0 > RES: 4/4 · dif mediana 0.3222
+[03:23:08]   pareado RES_SIN0 > RES: 4/4 · dif mediana 0.2709
+[03:23:08]   pareado RES_SIN0 > ORA_SIN0: 1/4 · dif mediana -0.0355
+[03:23:08]   pareado RES_SIN0 > NADA: 4/4 · dif mediana 0.8575
+[03:23:08] JSON: experimentos/exploratorio_nube_20260924/datos/revisa_n10b_NADA-RES-RES_SIN0-ORA_SIN0_s24001-24004_T100000_20260924_025756.json

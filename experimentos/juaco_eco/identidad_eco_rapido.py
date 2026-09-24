@@ -226,7 +226,7 @@ def compara(et, seed, carros, kw, eco=None, modo=None, filas=True):
     info = dict(dif=dif[:5], malos=malos[:4], nviv=nviv, ntraza=len(trz), ties=int(st['wi'][MR.W_NTIES]),
                 mv=a['pista']['max_vivos'], muertes=sum(l['deaths'] for l in a['linajes']),
                 nac=sum(l['descendientes'] for l in a['linajes']), pisos=a['pista']['pisos'], bloq=a['pista']['bloqueados'],
-                splits=sum(l['carro'].get('splits', 0) for l in a['linajes']), filas=len(fo))
+                splits=sum(c.splits for _, _, c in reg.REG), filas=len(fo))
     return res, info, a, (ta, tb)
 
 
@@ -358,6 +358,8 @@ CASOS_I += [
     ('3 FABRICA escala=0 (L = 40)', 10033, ['FABRICA'] * 3, dict(T=3000, escala=0)),
     ('etiquetas mezcladas FABRICA / FABRICA_ECO', 10034, [('FABRICA', FAB), ('FABRICA_ECO', FE), 'FABRICA'], dict(T=3000)),
     ('9 FABRICA T=15000 (vida larga: divisiones)', 10035, ['FABRICA'] * 9, dict(T=15000)),
+    ('etiqueta O3 con cerebro FABRICA_ECO (VOL_DECL)', 10036, [('O3', FE)] * 3, dict(T=3000)),
+    ('9 FABRICA pizarra=0', 10037, ['FABRICA'] * 9, dict(T=2000, pizarra=0)),
 ]
 SALIDAS = {}
 for et, s, car, kw in CASOS_I:
@@ -373,6 +375,15 @@ di("el carro espia es INERTE (original con espia == original sin espia)", N(a0) 
 seccion('(E) E2: eco=dict(...): genoma, mutacion, sombras, banco, vivero, corte, refunda, brazos, ind_cb')
 rg = np.random.default_rng(77)
 GX = np.array([rg.uniform(LO[j], HI[j]) for j in range(len(G0))])   # genoma explicito NO entero (NK, memoria_rechazo, rep_X con decimales)
+
+
+def GEN(**kw):
+    g = G0.copy()
+    for k, v in kw.items(): g[ME.NOMBRES.index(k)] = v
+    assert ((g >= LO - 1e-12) & (g <= HI + 1e-12)).all()
+    return list(g)
+
+
 KWM = dict(T=6000, diag=0, mundo_n=18, tope_cuerpos=3000, muestra=500)
 CASOS_E = [
     ('eco refunda=1 con G0', (10005, 10041), ['FABRICA_ECO'] * 9, dict(T=3000, diag=0), dict(refunda=1)),
@@ -388,6 +399,14 @@ CASOS_E = [
     ('VIDA con banco 5 < n (banco inicial recortado)', (10018, 10052), ['FABRICA_ECO'] * 18, KWM, dict(CR.eco_cfg('VIDA', 3000), banco=5, p_mut=0.3)),
     ('genoma explicito NO entero, sin sombras', (10019, 10053), ['FABRICA_ECO'] * 9, dict(T=4000, diag=0, mundo_n=9, tope_cuerpos=3000, muestra=100),
      dict(refunda=1, genoma=list(GX), p_mut=0.2, n_sombra=0, cada_gen=700, banco=30)),
+    ('DIVIDE: eta x4, NK 12', (10070, 10071), ['FABRICA_ECO'] * 9, dict(T=5000, diag=0, mundo_n=9, tope_cuerpos=3000, muestra=500),
+     dict(refunda=1, genoma=GEN(eta=0.12, NK=12))),
+    ('DIVIDE: eta x4, paso x4, ema x4, p_mut 0.1', (10072, 10073), ['FABRICA_ECO'] * 9, dict(T=5000, diag=0, mundo_n=9, tope_cuerpos=3000, muestra=500),
+     dict(refunda=1, genoma=GEN(eta=0.12, paso=2.0, ema=0.08), p_mut=0.1, n_sombra=2, banco=40, cada_gen=1000)),
+    ('NK 90 (ninguna celda libre: no hay division) y memoria_rechazo 80', (10074, 10075), ['FABRICA_ECO'] * 9,
+     dict(T=4000, diag=0, mundo_n=9, tope_cuerpos=3000, muestra=500), dict(refunda=1, genoma=GEN(NK=90, memoria_rechazo=80, eta=0.12))),
+    ('NK 8, memoria_rechazo 5, eta x4', (10076, 10077), ['FABRICA_ECO'] * 9, dict(T=4000, diag=0, mundo_n=9, tope_cuerpos=3000, muestra=500),
+     dict(refunda=1, genoma=GEN(NK=8, memoria_rechazo=5, eta=0.12))),
     ('tope 20 con eco (bloqueados)', (10054, 10055), ['FABRICA_ECO'] * 18, dict(KWM, tope_cuerpos=20), dict(refunda=1, p_mut=0.1, n_sombra=2, banco=40, cada_gen=1500)),
 ]
 for et, seeds, car, kw, eco in CASOS_E:
@@ -537,10 +556,13 @@ for et, kw in (("10 linajes con eco=None", dict(seed=1, carros=['FABRICA'] * 10,
                ("carro inexistente", dict(seed=1, carros=['NO_EXISTE'], T=10, diag=0)),
                ("clave eco desconocida", dict(seed=1, carros=['FABRICA_ECO'], T=10, diag=0, eco=dict(refnda=0))),
                ("genoma fuera de rango", dict(seed=1, carros=['FABRICA_ECO'], T=10, diag=0, eco=dict(genoma=list(G0 * 10)))),
-               ("t_corte sin vivero", dict(seed=1, carros=['FABRICA_ECO'], T=10, diag=0, eco=dict(refunda=0, t_corte=5)))):
+               ("t_corte sin vivero", dict(seed=1, carros=['FABRICA_ECO'], T=10, diag=0, eco=dict(refunda=0, t_corte=5))),
+               ("mundo_n fuera de rango con eco", dict(seed=1, carros=['FABRICA_ECO'], T=10, diag=0, mundo_n=2001, eco=dict(refunda=1))),
+               ("401 linajes con eco", dict(seed=1, carros=['FABRICA_ECO'] * 401, T=10, diag=0, eco=dict(refunda=1)))):
     mo = aborta(lambda: ME.run_solapadas(**kw)); mg = aborta(lambda: MR.run_solapadas(**kw))
     di(f"{et}: aborta igual que el original", mo is not None and mo == mg, str(mg)[:110])
 for et, kw in (("carro O2 (no es el cerebro FABRICA)", dict(seed=1, carros=['O2'] * 3, T=10, diag=0)),
+               ("T = 3 (el original divide por T // 4 = 0)", dict(seed=1, carros=['FABRICA'] * 3, T=3, diag=0)),
                ("carro APR_ECO con eco", dict(seed=1, carros=['APR_ECO'] * 3, T=10, diag=0, eco=dict(refunda=1)))):
     mg = aborta(lambda: MR.run_solapadas(**kw))
     di(f"{et}: el gemelo aborta (fuera de alcance)", mg is not None and mg.startswith('ValueError'), str(mg)[:110])

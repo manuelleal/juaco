@@ -1,0 +1,850 @@
+{
+ "meta": {
+  "etiqueta": "n10c_humo_s12891_T20000",
+  "sello": "20260924_033423",
+  "semillas": [
+   12891
+  ],
+  "T": 20000,
+  "brazos": [
+   "NADA",
+   "RES",
+   "RES_SIN0",
+   "BAR_SIN0",
+   "ORA_SIN0",
+   "MIX"
+  ],
+  "corre_n10c": "27f640c352057b87",
+  "carros_n10c": "67f149c81f880cb1",
+  "corre_n10b": "b7808bbb83fb038e",
+  "preregistro": "2d0365a6b80d0602",
+  "seg_pared": 98.7,
+  "seg_cpu": 98.4
+ },
+ "agregado": {
+  "NADA": {
+   "tam_carro": 9.53,
+   "exceso": 0.53,
+   "nac": 87.0,
+   "fundadores": 486.0,
+   "linajes_sin_ext": 0.0,
+   "persisten": 0.0,
+   "R0_nacidos": 0.0698,
+   "R0_fund": 0.1899,
+   "vida_nacidos": 102.0,
+   "vida_fund": 105.0,
+   "frac_mala_nacidos": 1.0,
+   "gen_max": 2.0,
+   "semillas": 1,
+   "persiste_carro": 0,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0
+  },
+  "RES": {
+   "tam_carro": 12.27,
+   "exceso": 3.27,
+   "nac": 101.0,
+   "fundadores": 492.0,
+   "linajes_sin_ext": 1.0,
+   "persisten": 1.0,
+   "R0_nacidos": 0.3158,
+   "R0_fund": 0.1502,
+   "vida_nacidos": 200.0,
+   "vida_fund": 112.0,
+   "frac_mala_nacidos": 0.9684,
+   "gen_max": 5.0,
+   "semillas": 1,
+   "persiste_carro": 1,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0,
+   "tele": {
+    "n": 101.0,
+    "claves_med": 6.0,
+    "frac_B_mala": 0.8515,
+    "frac_D_mala": 0.3564,
+    "frac_A_mala": 0.0,
+    "frac_C_mala": 0.0,
+    "frac_completa": 0.1386
+   }
+  },
+  "RES_SIN0": {
+   "tam_carro": 21.13,
+   "exceso": 12.13,
+   "nac": 144.0,
+   "fundadores": 676.0,
+   "linajes_sin_ext": 1.0,
+   "persisten": 1.0,
+   "R0_nacidos": 0.875,
+   "R0_fund": 0.0873,
+   "vida_nacidos": 910.0,
+   "vida_fund": 101.0,
+   "frac_mala_nacidos": 0.7097,
+   "gen_max": 8.0,
+   "semillas": 1,
+   "persiste_carro": 1,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0,
+   "tele": {
+    "n": 144.0,
+    "claves_med": 4.0,
+    "frac_B_mala": 0.9514,
+    "frac_D_mala": 0.6875,
+    "frac_A_mala": 0.0,
+    "frac_C_mala": 0.0,
+    "frac_completa": 0.0
+   }
+  },
+  "BAR_SIN0": {
+   "tam_carro": 10.97,
+   "exceso": 1.97,
+   "nac": 114.0,
+   "fundadores": 507.0,
+   "linajes_sin_ext": 1.0,
+   "persisten": 1.0,
+   "R0_nacidos": 0.8276,
+   "R0_fund": 0.1224,
+   "vida_nacidos": 200.0,
+   "vida_fund": 104.0,
+   "frac_mala_nacidos": 0.9545,
+   "gen_max": 9.0,
+   "semillas": 1,
+   "persiste_carro": 1,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0,
+   "tele": {
+    "n": 114.0,
+    "claves_med": 4.0,
+    "frac_B_mala": 0.3947,
+    "frac_D_mala": 0.3333,
+    "frac_A_mala": 0.386,
+    "frac_C_mala": 0.3246,
+    "frac_completa": 0.0
+   }
+  },
+  "ORA_SIN0": {
+   "tam_carro": 22.34,
+   "exceso": 13.34,
+   "nac": 143.0,
+   "fundadores": 686.0,
+   "linajes_sin_ext": 3.0,
+   "persisten": 3.0,
+   "R0_nacidos": 1.12,
+   "R0_fund": 0.024,
+   "vida_nacidos": 1553.0,
+   "vida_fund": 101.0,
+   "frac_mala_nacidos": 0.6357,
+   "gen_max": 10.0,
+   "semillas": 1,
+   "persiste_carro": 1,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 1
+  },
+  "_brecha_RES": {
+   "mediana": null,
+   "n": 0
+  }
+ },
+ "pareados": [
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.5592,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "vida_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 710.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 8.86,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 43.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "gen_max",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 3.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.0474,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "vida_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 710.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 10.16,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 30.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "gen_max",
+   "n": 1,
+   "gana": 0,
+   "pierde": 1,
+   "empata": 0,
+   "dif_med": -1.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.8052,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "vida_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 808.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 11.6,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 57.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "gen_max",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 6.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.7578,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "vida_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 98.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 1.44,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 27.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "gen_max",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 7.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.246,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "vida_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 98.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 2.74,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 14.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "gen_max",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 3.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.245,
+   "p_signo": 1.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "vida_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 643.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 1.21,
+   "p_signo": 1.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "nac",
+   "n": 1,
+   "gana": 0,
+   "pierde": 1,
+   "empata": 0,
+   "dif_med": -1.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "gen_max",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 2.0,
+   "p_signo": 1.0
+  }
+ ],
+ "pareados_mix": [
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.8,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 10.35,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 65.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.6667,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 10.28,
+   "p_signo": 1.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "nac",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 66.0,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.1333,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "exceso",
+   "n": 1,
+   "gana": 1,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.07,
+   "p_signo": 1.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "nac",
+   "n": 1,
+   "gana": 0,
+   "pierde": 1,
+   "empata": 0,
+   "dif_med": -1.0,
+   "p_signo": 1.0
+  }
+ ],
+ "veredicto": {
+  "VEREDICTO": "HUMO: no hay veredicto (una semilla de practica)"
+ },
+ "por_semilla": [
+  {
+   "seed": 12891,
+   "brazo": "NADA",
+   "T": 20000,
+   "seg": 11.5,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.53,
+     "tam_final": 12,
+     "exceso": 0.53,
+     "nac": 87,
+     "fundadores": 486,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0698,
+     "n_coh_nacidos": 43,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1899,
+     "vida_nacidos": 102.0,
+     "vida_fund": 105.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 45,
+      "sal": 38
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12891,
+   "brazo": "RES",
+   "T": 20000,
+   "seg": 13.4,
+   "estr": {
+    "RES": {
+     "tam_carro": 12.27,
+     "tam_final": 12,
+     "exceso": 3.27,
+     "nac": 101,
+     "fundadores": 492,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.3158,
+     "n_coh_nacidos": 38,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1502,
+     "vida_nacidos": 200.0,
+     "vida_fund": 112.0,
+     "frac_mala_nacidos": 0.9684,
+     "causas_nacidos": {
+      "hambre": 3,
+      "sed": 0,
+      "veneno": 32,
+      "sal": 60
+     },
+     "gen_max": 5,
+     "bloqueados": 0,
+     "tele": {
+      "n": 101,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.8515,
+      "frac_D_mala": 0.3564,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1386
+     }
+    }
+   }
+  },
+  {
+   "seed": 12891,
+   "brazo": "RES_SIN0",
+   "T": 20000,
+   "seg": 20.3,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.13,
+     "tam_final": 28,
+     "exceso": 12.13,
+     "nac": 144,
+     "fundadores": 676,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.875,
+     "n_coh_nacidos": 72,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0873,
+     "vida_nacidos": 910.0,
+     "vida_fund": 101.0,
+     "frac_mala_nacidos": 0.7097,
+     "causas_nacidos": {
+      "hambre": 17,
+      "sed": 19,
+      "veneno": 26,
+      "sal": 62
+     },
+     "gen_max": 8,
+     "bloqueados": 0,
+     "tele": {
+      "n": 144,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9514,
+      "frac_D_mala": 0.6875,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12891,
+   "brazo": "BAR_SIN0",
+   "T": 20000,
+   "seg": 13.6,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.97,
+     "tam_final": 11,
+     "exceso": 1.97,
+     "nac": 114,
+     "fundadores": 507,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.8276,
+     "n_coh_nacidos": 58,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1224,
+     "vida_nacidos": 200.0,
+     "vida_fund": 104.0,
+     "frac_mala_nacidos": 0.9545,
+     "causas_nacidos": {
+      "hambre": 3,
+      "sed": 2,
+      "veneno": 47,
+      "sal": 58
+     },
+     "gen_max": 9,
+     "bloqueados": 0,
+     "tele": {
+      "n": 114,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3947,
+      "frac_D_mala": 0.3333,
+      "frac_A_mala": 0.386,
+      "frac_C_mala": 0.3246,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12891,
+   "brazo": "ORA_SIN0",
+   "T": 20000,
+   "seg": 22.7,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 22.34,
+     "tam_final": 20,
+     "exceso": 13.34,
+     "nac": 143,
+     "fundadores": 686,
+     "linajes_sin_ext": 3,
+     "persisten": 3,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 1.12,
+     "n_coh_nacidos": 75,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.024,
+     "vida_nacidos": 1553.0,
+     "vida_fund": 101.0,
+     "frac_mala_nacidos": 0.6357,
+     "causas_nacidos": {
+      "hambre": 24,
+      "sed": 23,
+      "veneno": 35,
+      "sal": 47
+     },
+     "gen_max": 10,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12891,
+   "brazo": "MIX",
+   "T": 20000,
+   "seg": 16.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.12,
+     "tam_final": 3,
+     "exceso": 0.12,
+     "nac": 19,
+     "fundadores": 197,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.3333,
+     "n_coh_nacidos": 15,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1429,
+     "vida_nacidos": 137.0,
+     "vida_fund": 125.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 13,
+      "sal": 6
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": {
+      "n": 19,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2632,
+      "frac_D_mala": 0.0,
+      "frac_A_mala": 0.5789,
+      "frac_C_mala": 0.1053,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.05,
+     "tam_final": 3,
+     "exceso": 0.05,
+     "nac": 20,
+     "fundadores": 210,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.2,
+     "n_coh_nacidos": 15,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1389,
+     "vida_nacidos": 200.0,
+     "vida_fund": 125.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 11,
+      "sal": 9
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 13.4,
+     "tam_final": 18,
+     "exceso": 10.4,
+     "nac": 85,
+     "fundadores": 167,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0,
+     "n_coh_nacidos": 28,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0732,
+     "vida_nacidos": 1083.0,
+     "vida_fund": 121.0,
+     "frac_mala_nacidos": 0.7826,
+     "causas_nacidos": {
+      "hambre": 6,
+      "sed": 9,
+      "veneno": 20,
+      "sal": 34
+     },
+     "gen_max": 12,
+     "bloqueados": 0,
+     "tele": {
+      "n": 85,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9647,
+      "frac_D_mala": 0.6235,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  }
+ ]
+}

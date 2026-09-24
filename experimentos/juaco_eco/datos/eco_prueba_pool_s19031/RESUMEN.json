@@ -1,0 +1,82 @@
+{
+ "etiqueta": "prueba_pool_s19031",
+ "veredicto": "NO (en esta serie)",
+ "lineas": [
+  "semillas por brazo: {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}; persiste tras el corte (vivos en T): {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}",
+  "P2 genes seleccionados en VIDA (>=15/20 mismo signo fuera de las 8 sombras): []; AZAR con > 8/20 (falsos positivos del instrumento): []",
+  "P3 juez (supervivencia mediana en la bateria vs G0 = 1984.5): VIDA gana 1/2 (mediana 1992.25); AZAR 1/2 (1964.75); CEREBRO 1/2 (1992.25)",
+  "P1 VIDA persiste >= 15/20: NO (2) \u00b7 P1c MUT0 <= 2/20: SE CUMPLE (2) \u00b7 P2 seleccion en genes: NO \u00b7 P3 juez: NO \u00b7 P3c AZAR <= 10/20: SE CUMPLE \u00b7 P4 VIDA - AZAR >= 8: NO (0) \u00b7 H-c CEREBRO persiste >= 15/20: NO (2)",
+  "VEREDICTO POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO (en esta serie)"
+ ],
+ "d": {
+  "P1": false,
+  "P1c": true,
+  "P2": false,
+  "P3": false,
+  "P3c": true,
+  "P4": false,
+  "Hc": false,
+  "pers": {
+   "VIDA": 2,
+   "CEREBRO": 2,
+   "AZAR": 2,
+   "MUT0": 2
+  },
+  "sel": [],
+  "falsos": [],
+  "wV": 1,
+  "wA": 1,
+  "wC": 1,
+  "g0_med": 1984.5
+ },
+ "seg": 63,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "JUEZ": {
+  "esc": 9,
+  "n": 9,
+  "T_b": 20000,
+  "semillas": [
+   19201,
+   19202,
+   19203,
+   19204,
+   19205,
+   19206,
+   19207,
+   19208,
+   19209,
+   19210,
+   19211,
+   19212,
+   19213,
+   19214,
+   19215,
+   19216,
+   19217,
+   19218,
+   19219,
+   19220
+  ]
+ },
+ "motor_sha": {
+  "motor_eco.py": "bca3033878b59622",
+  "carros/FABRICA_ECO.py": "f1163009cb5193a2",
+  "corre_eco.py": "47d9cee4d6462116"
+ }
+}

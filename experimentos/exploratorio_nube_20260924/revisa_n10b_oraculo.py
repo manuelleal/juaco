@@ -90,10 +90,12 @@ def main():
             r = CN.tarea((s, brazo, a.T))
             v = list(r['estr'].values())[0]
             x = dict(seed=s, brazo=nombre, R0_nacidos=v['R0_nacidos'], vida_nacidos=v['vida_nacidos'], nac=v['nac'],
-                     exceso=v['exceso'], gen_max=v['gen_max'], frac_mala_nacidos=v.get('frac_mala_nacidos'), seg=r['seg'])
+                     exceso=v['exceso'], gen_max=v['gen_max'], frac_mala_nacidos=v.get('frac_mala_nacidos'), seg=r['seg'],
+                     persisten=v.get('persisten'), persiste_carro=v.get('persiste_carro'), linajes_sin_ext=v.get('linajes_sin_ext'),
+                     fundadores=v.get('fundadores'), tam_final=v.get('tam_final'))
             R.append(x)
             log(f"  s{s} {nombre:9s} R0nac {x['R0_nacidos']} vida_nac {x['vida_nacidos']} nac {x['nac']} exceso {x['exceso']} gen {x['gen_max']} "
-                f"mala {x['frac_mala_nacidos']} ({x['seg']} s)")
+                f"mala {x['frac_mala_nacidos']} persisten {x['persisten']} carro {x['persiste_carro']} sin_ext {x['linajes_sin_ext']} fund {x['fundadores']} tam_final {x['tam_final']} ({x['seg']} s)")
             json.dump(R, open(base + '.json', 'w', encoding='utf-8'), indent=1)
     log('RESUMEN (medianas por semilla)')
     for b in [x[0] for x in brazos]:

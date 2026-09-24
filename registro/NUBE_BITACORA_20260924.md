@@ -94,6 +94,37 @@
   - Comando: `/root/venv-juaco/bin/python experimentos/juaco_eco/corre_eco.py --serie --prueba_pool --desde 19031 --n 2 --pool 2`.
   - Antes: `git diff` contra main de los originales de ECO, generaciones y carrera, vacío; `corre_eco.py` 47d9cee4d6462116.
 
+### 1c. `subida_n10c` — la familia pasa SÓLO LO QUE IMPORTA (paquete nuevo, decisión del coordinador; ver §3)
+- **03:28 — preregistro escrito** (`experimentos/subida_n10c/PREREGISTRO_n10c.md`), a partir de lo exploratorio y ANTES del arnés.
+  - Candidato: RES_SIN0.
+  - Comparadores: RES, BAR_SIN0 (control de contenido que puede ganar), ORA_SIN0 (referencia), NADA y MIX.
+  - Anclas: NADA [0.085, 0.135] y RES [0.60, 0.82].
+  - Calificadores que NO son H-1: R0N-90 y PER-c.
+  - Predicciones firmadas: FUNCIONA sin PERSISTE, lo más probable. P4 (S-1) 0.75, P5 (S-2) 0.90, P7 (R0N-90) 0.45, P8 (PER-c) 0.05.
+- **03:32 — arnés** `identidad_n10c.py`: **16/16** (95 s).
+  - Atrapó un bug de construcción antes del humo: `carros_n10c.base()` entraba en recursión tras reasignar `corre_n10b.carga`. Se corrigió
+    cargando el carro por ruta. No es un cambio de criterio.
+  - Sha fijado: `carros_n10c.py` 67f149c81f880cb1.
+- **03:34 — humo** (práctica 12891, T 20 000): NADA 0.070 · RES 0.316 · RES_SIN0 0.875 · BAR_SIN0 0.828 · ORA_SIN0 1.12. No se lee.
+  - Aviso: BAR_SIN0 alto en esta semilla, así que S-2 puede caer. Las predicciones NO se tocan tras el humo.
+  - JSON: `experimentos/subida_n10c/datos/humo/n10c_humo_s12891_T20000_20260924_033423.json`.
+- **Siguiente:** auditoría del paquete por un `juaco-auditor` (agente 2/2 de la noche) ANTES de la serie. Serie y réplica después.
+
+### 1d. Gemelo numba de ECO (compilador, agente 1/2) — entregado a las ~03:34
+- **Arnés `identidad_eco_rapido.py`: 120/120** bit a bit en E1 (`eco=None`), E2 (genoma, mutación, banco, vivero y corte) y E3 (juez,
+  checkpoints, `trabajo()` y `--reanuda` de `corre_eco`). Un proceso nuevo lee la caché y compila 0 funciones.
+- **Aceleración:** ×38–41 en el mundo de ECO (esc 90, 74–81 cuerpos) y ×76 en la pista v2 (9 FABRICA). `trabajo()` pasa de 52.1 s a 1.2 s.
+  ECO largo (1e6 pasos) quedaría en ~3 min con N = 100 y ~28 min con N = 1000.
+- **Archivos:** `motor_eco_rapido.py` (edb8a15090b0f0dd), `corre_eco_rapido.py` (07bf5be9dc5d634a), `identidad_eco_rapido.py`
+  (cb868264dec5004e), `identidad_eco_rapido_salida.txt` e `INFORME_eco_rapido.md`.
+- **Falta:** la ruta con Pool del lanzador (`corre_eco_rapido.py --serie --prueba_pool …`) no se ejecutó.
+- **La serie de ECO de esta noche sigue con el original:** sus checkpoints no se reanudan con el gemelo, porque la firma aborta.
+- **Candidato a ERR nube-3 (del compilador; sin verificar):** los gemelos `organismo_f9_rapido.py` y `organismo_v13_rapido.py` usan
+  `np.exp` dentro de numba, es decir libm.
+  - En esta máquina (AVX-512), el `exp` de NumPy difiere del de libm en el 4.6 % de los argumentos.
+  - Sus arneses comparan sólo salidas, así que pueden coincidir en la salida y diferir en los pesos.
+  - Hay que revisarlos comparando pesos. Afecta la lectura de "gemelo v14 42/42" de la calibración.
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen.
 

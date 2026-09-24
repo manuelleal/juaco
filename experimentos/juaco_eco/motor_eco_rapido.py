@@ -1197,6 +1197,7 @@ def run_solapadas(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escal
             raise ValueError(f"motor_eco_rapido: solo compila el cerebro FABRICA / FABRICA_ECO (carro {e_!r}: {f_ or m_}); usa motor_eco")
     if (CF['NKMAX'], CF['K'], kw['n_nec'], tuple(P.TIPOS)) != (NKMAX, K, NNEC, ('A', 'B', 'C', 'D')):
         raise ValueError('motor_eco_rapido: NKMAX/K/n_nec/TIPOS de fabrica distintos de los compilados')
+    if T < 4: raise ValueError('motor_eco_rapido: T < 4 no se compila (el original divide por T // 4 = 0 en el primer encuentro)')
     if E_ is not None and E_['estado'] is not None and not isinstance(E_['estado'], (bytes, bytearray)):
         raise ValueError('motor_eco_rapido: estado debe ser el blob (bytes) de un checkpoint del gemelo')
     modo = dict(exp=0, dot=0, turno=0); modo.update(_modo or {})
