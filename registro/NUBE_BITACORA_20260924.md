@@ -121,6 +121,32 @@
     AZAR 11), pero P4 pedía una diferencia de ≥ 8.
 - **06:31 — réplica 19121–19140** lanzada con Pool 3 (mismo comando, `--desde 19121`). El bloque se declara sólo si serie y réplica
   dan el mismo veredicto; si no, vale el menor.
+  - Terminó a las 09:38 UTC, en 11 301 s. Salidas en `experimentos/juaco_eco/datos/eco_serie_s19121-19140/`.
+  - Persisten: **VIDA 18/20 · CEREBRO 18/20 · AZAR 14/20 · MUT0 0/20**.
+  - P2: **alpha 20/20 (+)**.
+  - P3, juez: **VIDA 20/20** (mediana 12 161 contra G0 2219.5, 5.5×); CEREBRO 20/20 (12 209); AZAR 15/20 (4559).
+  - P1 ✓, P1c ✓, P2 ✓, P3 ✓, H-c ✓. **P3c ✗ (15/20)**. P4 ✗ (VIDA − AZAR = 4).
+  - **VEREDICTO POR LA LETRA: NO EVALUABLE.**
+- **BLOQUE ECO v1, por la letra: NO EVALUABLE ×2** (serie y réplica dan el mismo veredicto). No se declara selección.
+  - **Qué se repite en las dos series, como dato y no como veredicto:**
+    - sin mutación (MUT0) nadie persiste tras el corte;
+    - con mutación y vivero persisten 16–18/20;
+    - la selección sube alpha en 19–20/20;
+    - los genomas del banco de VIDA viven 4.4–5.5× lo de G0 en la batería sellada, en 20/20.
+  - **Candidato a ERR nube-6 (hipótesis, no medida): el juez compara una colonia DIVERSA contra una CLONAL.**
+    - La colonia diversa son 9 entradas distintas del banco; la clonal, 9 copias de G0.
+    - Si la diversidad sola alarga la supervivencia de la colonia, AZAR (deriva sin selección) le gana a G0 sin selección.
+    - Control propuesto para un juez v2: comparar contra 9 entradas del banco de AZAR, o contra 9 mutantes de G0 sin selección.
+    - Junto con nube-4 (umbral de P3c en la mediana de la nula), el juez de ECO v1 no puede decidir sobre la selección tal como está
+      escrito. Se reescribe ANTES de ECO v2.
+- **09:40 — ruta de Pool del gemelo verificada.**
+  - `corre_eco_rapido.py --serie --prueba_pool --desde 19033 --n 2 --pool 2`: 8 trabajos en 2 s.
+  - Después, el original con las mismas semillas: **10 JSON idénticos, 0 distintos**, sin contar los campos de tiempo y motor.
+  - La carpeta del gemelo quedó como `datos/eco_prueba_pool_s19033_GEMELO`: se renombró, no se borró.
+- **09:42 — ECO largo con el gemelo** (exploratorio por el preregistro: "SOLO tras la serie"; ya hubo serie y réplica). Comando:
+  `/root/venv-juaco/bin/python experimentos/juaco_eco/corre_eco_rapido.py --largo --desde 19301 --n 3 --pool 3`
+  - T = 1e6, corte en 100 000, brazos VIDA y AZAR, semillas 19301–19303.
+  - En Python puro eran 3–32 h de CPU por corrida.
 
 ### 1c. `subida_n10c` — la familia pasa SÓLO LO QUE IMPORTA (paquete nuevo, decisión del coordinador; ver §3)
 - **03:28 — preregistro escrito** (`experimentos/subida_n10c/PREREGISTRO_n10c.md`), a partir de lo exploratorio y ANTES del arnés.
