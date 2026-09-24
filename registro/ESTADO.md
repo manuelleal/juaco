@@ -147,6 +147,9 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 - *"si hay una decisión difícil tómala, y me dejas comentado por qué"*: la sección de decisiones de arriba.
 
 ## Tronco y criterio
+**24-sep ~15:10: TRONCO = v14.3** (tag `v14.3-tronco`) = v14.2 + reparación N. El examen del criterio v4 PASA en serie y réplica; 24 congelados
+(el bloque del manifiesto lo pegó el director a mano). Regla 1: `bateria_v143.py 6` + `bateria_generaliza_v143.py organismo_v143 20 --desde 101`.
+Nivel 7: propuesta 80 %. Lo de abajo es el estado anterior (historia).
 **v14.2** (tag `v14.2-tronco`, 18-sep) = v14.1 + B-5. Tiene 20 archivos congelados que se verifican con `python manifiesto.py --check`. Sin
 `--check`, el script **reescribe** `MANIFEST.txt`: no se usa así. Criterio para candidatos: **`CRITERIO_TRONCO_v4.md`** (vigente; v3 retirado,
 v2 historia). Candidato en construcción: **v14.3** (frente 1).

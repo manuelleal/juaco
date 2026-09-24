@@ -40,7 +40,15 @@ CONGELADOS = {
     './organismo/organismo_v142.py': '17528d767fcebaf6',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
     './organismo/organismo_v142g.py': '9e5f566cd6a7a4d2',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
     './organismo/bateria_v142.py': '6375d90e531b06e6',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
-    './organismo/bateria_generaliza_v142.py': 'e5929942647756a5',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25
+    './organismo/bateria_generaliza_v142.py': 'e5929942647756a5',   # v14.2 = v14.1 + B-5 (division por R=0; inerte en el tronco), congelado 18 sep 21:25     # v14.3 = TRONCO desde el 24-sep-2026 (examen del CRITERIO DE TRONCO v4: PASA en serie y replica; permiso del director 23-sep 19:30).
+    # v14.3 = v14.2 + REPARACION N (norm_lenta; subida_n7 FUNCIONA x2): el paso de la via lenta x M0/(P.P), M0 = 3.0.
+    # Memoria nueva CERO; constante nueva M0 = 3.0; rng intacto. Inerte por construccion donde P.P = 3 (identidad_v143ex
+    # 114/114; examen v4: CAND == v14.2 bit a bit en T-A..T-F). Donde actua (3T-k): compone hasta K_max 8; v14.2, hasta 1.
+    # Examen con la banda azar-G2 de T-B enmendada por ERR-122 ([0.31, 0.60], antes de la serie; decision del director).
+    './organismo/organismo_v143.py':          '2cebc0ab0c38b70f',
+    './organismo/organismo_v143g.py':         'c20fccaa9107fb89',
+    './organismo/bateria_v143.py':            '9daa88a90a2fd7b1',
+    './organismo/bateria_generaliza_v143.py': 'a894101fd1e6db93',
 }
 
 def h16(ruta):

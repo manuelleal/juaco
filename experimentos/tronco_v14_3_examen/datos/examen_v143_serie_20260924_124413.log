@@ -1,0 +1,135 @@
+[12:44:13 +    0.1s] ARRANQUE examen v4 sobre v14.3 — modo serie, Pool 6, python 3.14.2, numpy 2.4.3, Windows-11-10.0.26200-SP0
+[12:44:13 +    0.1s] MISION: llegar a la AGI por este camino; el examen v4 es la puerta de NO REGRESION del organismo comun.
+[12:44:13 +    0.1s] ETAPA 0 — anclas, construccion por anclas, regla 14, semillas de T-D recalculadas.
+[12:44:14 +    0.2s]    sha construidos {'organismo_v143.py': '2cebc0ab0c38b70f', 'organismo_v143g.py': 'c20fccaa9107fb89', 'organismo_v143cal.py': '1169f54ef0a19de1', 'bateria_v143.py': '9daa88a90a2fd7b1', 'bateria_generaliza_v143.py': 'a894101fd1e6db93'}
+[12:44:14 +    0.2s]    sha runner fa723090d92699cb umbrales c3becf65e9bfd8ec identidad c0c010888a13a59c preregistro a5d29d08b1aaefaf criterio_v4 b0e3e936a3515900
+[12:44:14 +    0.4s]    regla 14: 33/33 OK
+[12:44:14 +    0.7s] REGLA 11 — procesos python vivos (2); este es pid 2004
+[12:44:14 +    0.7s]    ERR-122 (enmienda antes de la serie): T-B decide azar G2 con [0.31, 0.6]; la banda vieja [0.42, 0.58] se reporta para CAND y TRONCO y NO decide.
+[12:44:14 +    0.8s]    T-D serie: ALIAS [43568, 43572, 43575, 43605, 43626, 43647, 43654, 43712, 43748] LIMPIAS [43505, 43522, 43528, 43529, 43539, 43541, 43551, 43556, 43571] recalculadas -> coinciden
+[12:44:14 +    0.8s] ETAPA 1 — identidad (subproceso, un proceso): identidad_v143ex.py -> debe dar 'RESULTADO: 114/114'.
+[12:46:02 +  108.7s]       |   [  108s] (K) OK  el parser del runner RECHAZA modo valido + bandera desconocida --humoo (argparse, codigo 2; solo se parsea, nunca se corre)
+[12:46:02 +  108.7s]       |   [  108s] (K) OK  el parser del runner RECHAZA abreviatura --hum (allow_abbrev=False) (argparse, codigo 2; solo se parsea, nunca se corre)
+[12:46:02 +  108.7s]       |   [  108s] (K) OK  el parser del runner RECHAZA modo de serie sin --pool (argparse, codigo 2; solo se parsea, nunca se corre)
+[12:46:02 +  108.7s]       |   [  108s] (K) OK  el parser del runner RECHAZA --pool 9 (> 6) (argparse, codigo 2; solo se parsea, nunca se corre)
+[12:46:02 +  108.7s]       | 
+[12:46:02 +  108.7s]       | (0) 6/6  (A) 12/12  (I) 12/12  (B) 6/6  (C) 11/11  (D) 5/5  (E) 4/4  (R) 33/33  (J) 5/5  (X) 7/7  (K) 13/13   (108 s)
+[12:46:02 +  108.7s]       | datos -> datos\humo\identidad_v143ex_20260924_124602.json  sha256_16 = acc1e7f0e3ab5ffb
+[12:46:02 +  108.7s]       | RESULTADO: 114/114
+[12:46:02 +  108.7s]    identidad OK: RESULTADO: 114/114 (107.9 s; JSON identidad_v143ex_20260924_124602.json)
+[12:46:02 +  108.7s] ETAPA 2 — T-B generalizacion: 80 corridas (T = 200 000), semillas 43001-43020, Pool 6.
+[12:47:07 +  173.6s]           T-B 40/80
+[12:48:07 +  233.4s]           T-B 80/80
+[12:48:07 +  233.4s]    CRUDO (80 corridas) -> examen_v143_serie_20260924_124413_crudo_TB.json  sha256_16 = 451d17ca8c666a57
+[12:48:07 +  233.4s]    T-B: CAND = v14.3 (bateria_generaliza_v143) y TRONCO = v14.2 (bateria_generaliza_v142, CONGELADA) en las MISMAS semillas; azar G2 decide con [0.31, 0.6] (ERR-122) para los dos
+[12:48:07 +  233.4s]    T-B [CAND  ] G1 1.000 (>= 0.8) G2 0.997 (>= 0.85) azar G1 0.600 (en [0.35, 0.65]) azar G2 0.548 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:48:07 +  233.4s]    T-B [TRONCO] G1 1.000 (>= 0.8) G2 0.997 (>= 0.85) azar G1 0.600 (en [0.35, 0.65]) azar G2 0.548 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:48:07 +  233.5s]    T-B banda VIEJA de azar G2 [0.42, 0.58] (letra v2-v4; SOLO INFORME, NO decide; ERR-122): CAND azar G2 0.548 dentro -> T-B PASA | TRONCO azar G2 0.548 dentro -> T-B PASA
+[12:48:07 +  233.5s]    T-B inercia medida: CAND == TRONCO bit a bit en 40/40 corridas (regla x semilla)
+[12:48:07 +  233.5s] ETAPA 3 — examen v3' (seis etapas): 240 corridas, semillas 43001-43020, Pool 6.
+[12:48:40 +  266.2s]           examen 40/240
+[12:49:09 +  295.7s]           examen 80/240
+[12:49:38 +  324.4s]           examen 120/240
+[12:50:07 +  353.5s]           examen 160/240
+[12:50:36 +  382.2s]           examen 200/240
+[12:51:05 +  411.8s]           examen 240/240
+[12:51:05 +  411.9s]    CRUDO (240 corridas) -> examen_v143_serie_20260924_124413_crudo_EX.json  sha256_16 = a07148096bfcc767
+[12:51:05 +  411.9s]       T-E E1   20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[12:51:05 +  411.9s]       T-E E2   19/20 PASA  {'come B Q4 >= 50 (T-C i)': 19, 'muerde A Q4 <= 1.10 x tronco': 20}  pesos (reportados) {'W_A→-3 y W_B→+1': 20}
+[12:51:05 +  411.9s]       T-E E2I  20/20 PASA  {'veneno C total <= 1.10 x tronco': 20, 'tasaA Q4 >= 80% Q2': 20}  pesos (reportados) {'W_C≤-2.5': 20}
+[12:51:05 +  411.9s]       T-E E2J  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.85': 20}
+[12:51:05 +  411.9s]       T-E E2K  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.8': 20}
+[12:51:05 +  411.9s]       T-E E2L  20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[12:51:05 +  411.9s]    T-C (i) [examen E2: come B en Q4 >= 50 en >= 18/20] -> 19/20 -> PASA
+[12:51:05 +  411.9s]    T-E [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8] -> E1 20/20 E2 19/20 E2I 20/20 E2J 20/20 E2K 20/20 E2L 20/20 -> PASA
+[12:51:05 +  411.9s]    T-F examen [<= 1.25 x tronco] -> celdas 32.0/32.0 (1.0x) splits 2.0/2.0 (1.0x) deaths 131.0/131.0 (1.0x) -> PASA
+[12:51:05 +  411.9s]    examen: el TRONCO contra las clausulas absolutas: E2 come B >= 50 19/20, E2I tasa 20/20; inercia CAND == TRONCO 120/120
+[12:51:05 +  411.9s] ETAPA 4 — T-D sal muda: 36 corridas (ALIAS [43568, 43572, 43575, 43605, 43626, 43647, 43654, 43712, 43748], LIMPIAS [43505, 43522, 43528, 43529, 43539, 43541, 43551, 43556, 43571]), Pool 6.
+[12:51:39 +  445.8s]           T-D 36/36
+[12:51:39 +  445.8s]    CRUDO (36 corridas) -> examen_v143_serie_20260924_124413_crudo_TD.json  sha256_16 = 45cdfb0639e0d974
+[12:51:39 +  445.8s]    T-D [OFF ] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 540.0  des_splits 7.0  muertes alias/limpias 39.0/41.0 -> PASA
+[12:51:39 +  445.8s]    T-D [CAND] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 540.0  des_splits 7.0  muertes alias/limpias 39.0/41.0 -> PASA
+[12:51:39 +  445.8s]    T-D inercia medida: CAND == OFF bit a bit en 18/18
+[12:51:39 +  445.8s] ETAPA 5 — T-C (ii) reversion en el mundo vivo: 320 corridas, semillas 43101-43180 (TRONCO_B 143101-143180), Pool 6.
+[12:52:20 +  486.9s]           T-C ii 40/320
+[12:52:59 +  525.8s]           T-C ii 80/320
+[12:53:36 +  562.9s]           T-C ii 120/320
+[12:54:18 +  605.0s]           T-C ii 160/320
+[12:55:01 +  647.8s]           T-C ii 200/320
+[12:55:42 +  688.8s]           T-C ii 240/320
+[12:56:26 +  732.2s]           T-C ii 280/320
+[12:57:09 +  775.3s]           T-C ii 320/320
+[12:57:09 +  775.4s]    CRUDO (320 corridas) -> examen_v143_serie_20260924_124413_crudo_TCii.json  sha256_16 = b215368ca4a1ced1
+[12:57:09 +  775.4s] ETAPA 6 — T-A supervivencia: 640 corridas, Pool 6.
+[12:57:59 +  826.0s]           T-A 40/640
+[12:58:43 +  869.5s]           T-A 80/640
+[12:59:21 +  907.7s]           T-A 120/640
+[13:00:02 +  948.5s]           T-A 160/640
+[13:00:44 +  990.9s]           T-A 200/640
+[13:01:22 + 1028.2s]           T-A 240/640
+[13:02:00 + 1066.7s]           T-A 280/640
+[13:02:39 + 1105.5s]           T-A 320/640
+[13:03:16 + 1142.7s]           T-A 360/640
+[13:03:54 + 1180.6s]           T-A 400/640
+[13:04:30 + 1216.9s]           T-A 440/640
+[13:05:08 + 1254.3s]           T-A 480/640
+[13:05:43 + 1289.5s]           T-A 520/640
+[13:06:18 + 1325.1s]           T-A 560/640
+[13:06:55 + 1361.7s]           T-A 600/640
+[13:07:31 + 1397.3s]           T-A 640/640
+[13:07:31 + 1397.4s]    CRUDO (640 corridas) -> examen_v143_serie_20260924_124413_crudo_TA.json  sha256_16 = 764f1768bb82c752
+[13:07:31 + 1397.4s]    letra v4 calibrada (corre_criterio_v4.juzga) sobre CAND, TRONCO_B y PLACEBO contra OFF:
+[13:07:31 + 1397.4s]    T-A VIVO       [CAND    ] muertes 92.0/92.0 (<= 1.1x) r -73.0/-73.0 (>= -10.0)  NI media 0.0 sd 0.0 LI 0.0 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 1.0 (lectura, no puerta)
+[13:07:31 + 1397.4s]    T-F VIVO       [CAND    ] deaths 92.0/92.0 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:07:31 + 1397.4s]    T-A CUELLO_MIN [CAND    ] muertes 73.0/73.0 (<= 1.1x) r -5.5/-5.5 (>= -10.0)  NI media 0.0 sd 0.0 LI 0.0 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 1.0 (lectura, no puerta)
+[13:07:31 + 1397.4s]    T-F CUELLO_MIN [CAND    ] deaths 73.0/73.0 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:07:31 + 1397.4s]    T-C ii       [CAND    ] rev 42.0/42.0  NI media 0.0 sd 0.0 LI 0.0 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) NO   expB_Q4 (200.5, 200.5) expA_Q4 (1695.5, 1695.5) (trampa 3)
+[13:07:31 + 1397.4s]    >>> CAND: v4 (T-A, T-C ii, T-F vivo) PASA
+[13:07:31 + 1397.4s]    T-A VIVO       [TRONCO_B] muertes 92.0/92.0 (<= 1.1x) r -71.5/-73.0 (>= -10.0)  NI media 0.738 sd 15.274 LI -2.072 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.7) PASA  | fraccion de semillas con d >= -10: 0.762 (lectura, no puerta)
+[13:07:31 + 1397.4s]    T-F VIVO       [TRONCO_B] deaths 92.0/92.0 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:07:31 + 1397.4s]    T-A CUELLO_MIN [TRONCO_B] muertes 74.0/73.0 (<= 1.1x) r -10.0/-5.5 (>= -10.0)  NI media -0.4 sd 18.315 LI -3.768 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.7) PASA  | fraccion de semillas con d >= -10: 0.762 (lectura, no puerta)
+[13:07:31 + 1397.4s]    T-F CUELLO_MIN [TRONCO_B] deaths 74.0/73.0 (1.014 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:07:31 + 1397.4s]    T-C ii       [TRONCO_B] rev 47.5/42.0  NI media 4.0 sd 26.152 LI -0.81 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.55) NO   expB_Q4 (209.5, 200.5) expA_Q4 (1692.5, 1695.5) (trampa 3)
+[13:07:31 + 1397.4s]    >>> TRONCO_B: v4 (T-A, T-C ii, T-F vivo) PASA
+[13:07:31 + 1397.4s]    T-A VIVO       [PLACEBO ] muertes 93.0/92.0 (<= 1.1x) r -73.0/-73.0 (>= -10.0)  NI media 0.388 sd 17.24 LI -2.783 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.6) PASA  | fraccion de semillas con d >= -10: 0.725 (lectura, no puerta)
+[13:07:31 + 1397.4s]    T-F VIVO       [PLACEBO ] deaths 93.0/92.0 (1.011 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:07:31 + 1397.4s]    T-A CUELLO_MIN [PLACEBO ] muertes 74.5/73.0 (<= 1.1x) r -9.5/-5.5 (>= -10.0)  NI media -2.275 sd 19.879 LI -5.931 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 0.637 (lectura, no puerta)
+[13:07:31 + 1397.4s]    T-F CUELLO_MIN [PLACEBO ] deaths 74.5/73.0 (1.021 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/7.0 (1.0 <= 1.25) -> PASA
+[13:07:31 + 1397.4s]    T-C ii       [PLACEBO ] rev 44.0/42.0  NI media 1.45 sd 25.301 LI -3.203 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.55) NO   expB_Q4 (206.0, 200.5) expA_Q4 (1699.0, 1695.5) (trampa 3)
+[13:07:31 + 1397.4s]    >>> PLACEBO: v4 (T-A, T-C ii, T-F vivo) PASA
+[13:07:31 + 1397.4s]    inercia medida en el mundo vivo: CAND == OFF bit a bit en T-A 160/160, T-C (ii) 80/80
+[13:07:31 + 1397.4s]    TRONCO_B (el tronco contra si mismo, s+100000) PASA | PLACEBO (reportado) PASA
+[13:07:31 + 1397.4s] ETAPA 7 — T-G composicion 3T-k: 480 corridas, semillas 43401-43420, Pool 6.
+[13:08:07 + 1433.7s]           T-G 40/480
+[13:08:41 + 1467.8s]           T-G 80/480
+[13:09:13 + 1500.0s]           T-G 120/480
+[13:09:47 + 1533.2s]           T-G 160/480
+[13:10:18 + 1564.5s]           T-G 200/480
+[13:10:53 + 1599.4s]           T-G 240/480
+[13:11:26 + 1632.7s]           T-G 280/480
+[13:11:57 + 1663.9s]           T-G 320/480
+[13:12:34 + 1700.6s]           T-G 360/480
+[13:13:06 + 1733.0s]           T-G 400/480
+[13:13:41 + 1767.2s]           T-G 440/480
+[13:14:17 + 1804.0s]           T-G 480/480
+[13:14:17 + 1804.0s]    CRUDO (480 corridas) -> examen_v143_serie_20260924_124413_crudo_TG.json  sha256_16 = 1de6a54eef71829c
+[13:14:17 + 1804.0s]       T-G k=1  T142 sep +3.97 lift 0.386 celdas 35.0 compone  N sep +3.96 lift 0.387 celdas 35.0 compone  NC3C sep +0.07 lift -0.034 celdas 37.0 -  N>T142 11  T5 20
+[13:14:17 + 1804.0s]       T-G k=2  T142 sep +3.05 lift 0.037 celdas 35.5 -  N sep +3.96 lift 0.376 celdas 37.0 compone  NC3C sep -0.30 lift -0.007 celdas 52.5 -  N>T142 18  T5 20
+[13:14:17 + 1804.0s]       T-G k=3  T142 sep +1.74 lift 0.000 celdas 30.0 -  N sep +3.96 lift 0.377 celdas 38.5 compone  NC3C sep +0.09 lift -0.008 celdas 79.5 -  N>T142 20  T5 20
+[13:14:17 + 1804.0s]       T-G k=4  T142 sep +1.22 lift 0.000 celdas 30.0 -  N sep +3.97 lift 0.363 celdas 43.0 compone  NC3C sep -0.06 lift 0.007 celdas 90.0 -  N>T142 20  T5 20
+[13:14:17 + 1804.0s]       T-G k=5  T142 sep +2.45 lift 0.000 celdas 30.0 -  N sep +3.91 lift 0.364 celdas 46.5 compone  NC3C sep -0.02 lift -0.012 celdas 90.0 -  N>T142 20  T5 20
+[13:14:17 + 1804.0s]       T-G k=6  T142 sep -0.84 lift 0.000 celdas 30.0 -  N sep +3.96 lift 0.369 celdas 42.0 compone  NC3C sep +0.03 lift 0.003 celdas 90.0 -  N>T142 20  T5 20
+[13:14:17 + 1804.0s]       T-G k=7  T142 sep -0.60 lift 0.000 celdas 30.0 -  N sep +3.45 lift 0.296 celdas 76.5 compone  NC3C sep -0.02 lift 0.004 celdas 90.0 -  N>T142 20  T5 20
+[13:14:17 + 1804.0s]       T-G k=8  T142 sep -0.53 lift 0.000 celdas 30.0 -  N sep +3.32 lift 0.266 celdas 90.0 compone  NC3C sep -0.05 lift 0.001 celdas 90.0 -  N>T142 20  T5 20
+[13:14:17 + 1804.0s]    T-G [capacidad declarada: composicion en 3T-k (letra de subida_n7): G-1 K_max(N) >= 5; G-2 N > T142 en lift_q4 pareado >= 15/20 en k = 3, 4 y 5; G-3 el canal falso NC3C no separa (sep mediana < 1.0 y lift_q4 mediana < 0.15) en ningun k de 1 a 8] -> K_max {'T142': 1, 'N': 8, 'L015': 0, 'N141': 0, 'NAZAR': 0, 'NSH': 0, 'NC3C': 0} ; G-1 True | G-2 {3: 20, 4: 20, 5: 20} True | G-3 True -> PASA
+[13:14:17 + 1804.0s] ETAPA 8 — VEREDICTO por la letra de CRITERIO_TRONCO_v4 (serie); una linea por puerta con su umbral (ERR-89).
+[13:14:17 + 1804.0s]    T-A: PASA   [v4 T-A: en VIVO y en CUELLO_MIN: mediana de muertes <= 1.10 x tronco, mediana de r >= tronco - 10, y no inferioridad de una cola al 95 % (z 1.645) en r con margen 10 (LI > -10); n = 80 por brazo]
+[13:14:17 + 1804.0s]    T-B: PASA   [G1 >= 0.80, G2 >= 0.85, azar G1 en [0.35, 0.65], azar G2 en [0.31, 0.60] (ENMIENDA ERR-122; la de la letra [0.42, 0.58] se reporta y NO decide), K 20/20 (bateria_generaliza, 20 semillas)] | TRONCO (mismas semillas, banda ERR-122) PASA | banda VIEJA [0.42, 0.58] (SOLO INFORME): CAND PASA, TRONCO PASA
+[13:14:17 + 1804.0s]    T-C: PASA   (i) PASA [examen E2: come B en Q4 >= 50 en >= 18/20] | (ii) PASA [v4 T-C (ii): no inferioridad de una cola al 95 % en rev con margen 12.5 (LI > -12.5); n = 80]
+[13:14:17 + 1804.0s]    T-D: PASA   [bloque de la sal (9 ALIAS + 9 LIMPIAS, sal muda): C1, C2, C6 de B-5 importados de creacion_B/corre_codigo.UMBRALES]
+[13:14:17 + 1804.0s]    T-E: PASA   [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8]
+[13:14:17 + 1804.0s]    T-F: PASA   examen PASA | vivo PASA [celdas, divisiones y muertes (medianas) <= 1.25 x tronco en el examen (seis etapas) y en el mundo vivo (T-A y T-C ii, divisor max(tronco, 1))]
+[13:14:17 + 1804.0s]    T-G: PASA   [capacidad declarada: composicion en 3T-k (letra de subida_n7): G-1 K_max(N) >= 5; G-2 N > T142 en lift_q4 pareado >= 15/20 en k = 3, 4 y 5; G-3 el canal falso NC3C no separa (sep mediana < 1.0 y lift_q4 mediana < 0.15) en ningun k de 1 a 8]
+[13:14:17 + 1804.0s]    T-H: NO MEDIDA — ESCALA: reportada, NO eliminatoria; su instrumento (criterio v4 §5) no esta construido: NO SE MIDE y se declara
+[13:14:17 + 1804.0s] VEREDICTO: PASA (serie): las siete puertas eliminatorias pasan (T-H no medida, reportada). Falta la otra serie.
+[13:14:17 + 1804.0s] datos -> experimentos\tronco_v14_3_examen\datos\examen_v143_serie_20260924_124413.json  sha256_16 = d39303e1d6ae3949

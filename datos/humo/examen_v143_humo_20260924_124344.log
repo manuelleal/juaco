@@ -1,0 +1,142 @@
+[12:43:44 +    0.1s] ARRANQUE examen v4 sobre v14.3 — modo humo, UN proceso, sin Pool, python 3.14.2, numpy 2.4.3, Windows-11-10.0.26200-SP0
+[12:43:44 +    0.1s] MISION: llegar a la AGI por este camino; el examen v4 es la puerta de NO REGRESION del organismo comun.
+[12:43:44 +    0.1s] ETAPA 0 — anclas, construccion por anclas, regla 14, semillas de T-D recalculadas.
+[12:43:44 +    0.2s]    sha construidos {'organismo_v143.py': '2cebc0ab0c38b70f', 'organismo_v143g.py': 'c20fccaa9107fb89', 'organismo_v143cal.py': '1169f54ef0a19de1', 'bateria_v143.py': '9daa88a90a2fd7b1', 'bateria_generaliza_v143.py': 'a894101fd1e6db93'}
+[12:43:44 +    0.2s]    sha runner fa723090d92699cb umbrales c3becf65e9bfd8ec identidad c0c010888a13a59c preregistro a5d29d08b1aaefaf criterio_v4 b0e3e936a3515900
+[12:43:44 +    0.4s]    regla 14: 33/33 OK
+[12:43:45 +    0.9s] REGLA 11 — procesos python vivos (3); este es pid 17644
+[12:43:45 +    0.9s]    ERR-122 (enmienda antes de la serie): T-B decide azar G2 con [0.31, 0.6]; la banda vieja [0.42, 0.58] se reporta para CAND y TRONCO y NO decide.
+[12:43:45 +    0.9s] HUMO 1/3 — 6 corridas de un proceso (T-A VIVO OFF y CAND s43041 T=20000; T-C ii CAND s43042 T=20000; T-D CAND ALIAS 326 T=20000; examen E2 CAND s43043 T=100000; T-G N k=5 s43044 T=20000).
+[12:43:54 +    9.8s]    T-A VIVO OFF  s43041: r -22 desc 1 muertes 23 celdas 36 splits 6 (1.02 s)
+[12:43:54 +    9.8s]    T-A VIVO CAND s43041: r -22 desc 1 muertes 23 celdas 36 splits 6 (1.03 s)  -> CAND == OFF bit a bit: True (DEBE ser True: N inerte, masa 3)
+[12:43:54 +    9.8s]    T-C ii CAND s43042: rev 17 visB [389, 103, 65, 34] muertes 15 (1.03 s)
+[12:43:54 +    9.8s]    T-D CAND ALIAS 326: |W[sal]| 0.02 W[veneno] -2.95 exp sal 157 des_splits 6 (0.95 s)
+[12:43:54 +    9.8s]    examen E2 CAND s43043: come B Q4 88 (>= 50) W {'A': -2.91, 'B': 1.0, 'C': -0.5, 'D': 1.5} (4.01 s)
+[12:43:54 +    9.8s]    T-G N k=5 s43044: sep 3.659 lift_q4 0.2162 celdas 51 (0.87 s)
+[12:43:54 +    9.8s]    DURACION por corrida (T completo, lineal desde T=20000; T-B supuesto 2 x examen): vivo 5.1s rev 5.2s sal 4.8s ex 4.0s tg 4.3s tb 8.0s
+[12:43:54 +    9.8s]    COSTO por serie: 1796 corridas ~ 2.4 h de CPU de ESTE proceso -> Pool 6 ~ 24 min (+ identidad ~5 min); nube Pool 3 (nucleo 1.3-2.2x mas rapido) ~ 28 min. Serie + replica: el doble.
+[12:43:54 +    9.8s] HUMO 2/3 — CABLEADO de la etapa 8 con crudos SINTETICOS (n reales: 80 vivo, 20 examen, 9+9 sal, 20 x 8 k). NO son evidencia.
+[12:43:54 +    9.8s]    T-B: CAND = v14.3 (bateria_generaliza_v143) y TRONCO = v14.2 (bateria_generaliza_v142, CONGELADA) en las MISMAS semillas; azar G2 decide con [0.31, 0.6] (ERR-122) para los dos
+[12:43:54 +    9.8s]    T-B [CAND  ] G1 1.000 (>= 0.8) G2 0.970 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.500 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:43:54 +    9.8s]    T-B [TRONCO] G1 1.000 (>= 0.8) G2 0.970 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.500 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:43:54 +    9.8s]    T-B banda VIEJA de azar G2 [0.42, 0.58] (letra v2-v4; SOLO INFORME, NO decide; ERR-122): CAND azar G2 0.500 dentro -> T-B PASA | TRONCO azar G2 0.500 dentro -> T-B PASA
+[12:43:54 +    9.8s]    T-B inercia medida: CAND == TRONCO bit a bit en 40/40 corridas (regla x semilla)
+[12:43:54 +    9.8s]       T-E E1   20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[12:43:54 +    9.8s]       T-E E2   20/20 PASA  {'come B Q4 >= 50 (T-C i)': 20, 'muerde A Q4 <= 1.10 x tronco': 20}  pesos (reportados) {'W_A→-3 y W_B→+1': 0}
+[12:43:54 +    9.8s]       T-E E2I  20/20 PASA  {'veneno C total <= 1.10 x tronco': 20, 'tasaA Q4 >= 80% Q2': 20}  pesos (reportados) {'W_C≤-2.5': 20}
+[12:43:54 +    9.8s]       T-E E2J  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.85': 20}
+[12:43:54 +    9.8s]       T-E E2K  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.8': 20}
+[12:43:54 +    9.8s]       T-E E2L  20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[12:43:54 +    9.8s]    T-C (i) [examen E2: come B en Q4 >= 50 en >= 18/20] -> 20/20 -> PASA
+[12:43:54 +    9.8s]    T-E [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8] -> E1 20/20 E2 20/20 E2I 20/20 E2J 20/20 E2K 20/20 E2L 20/20 -> PASA
+[12:43:54 +    9.8s]    T-F examen [<= 1.25 x tronco] -> celdas 34.0/34.0 (1.0x) splits 4.0/4.0 (1.0x) deaths 10.0/10.0 (1.0x) -> PASA
+[12:43:54 +    9.8s]    examen: el TRONCO contra las clausulas absolutas: E2 come B >= 50 20/20, E2I tasa 20/20; inercia CAND == TRONCO 120/120
+[12:43:54 +    9.8s]    T-D [OFF ] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 500.0  des_splits 2.0  muertes alias/limpias 40.0/40.0 -> PASA
+[12:43:54 +    9.8s]    T-D [CAND] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 500.0  des_splits 2.0  muertes alias/limpias 40.0/40.0 -> PASA
+[12:43:54 +    9.8s]    T-D inercia medida: CAND == OFF bit a bit en 18/18
+[12:43:54 +    9.8s]    T-A VIVO       [CAND    ] muertes 93.69272291626226/93.69272291626226 (<= 1.1x) r -75.10967014567099/-75.10967014567099 (>= -10.0)  NI media 0.0 sd 0.0 LI 0.0 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 1.0 (lectura, no puerta)
+[12:43:54 +    9.8s]    T-F VIVO       [CAND    ] deaths 93.69272291626226/93.69272291626226 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.8s]    T-A CUELLO_MIN [CAND    ] muertes 93.80959951855206/93.80959951855206 (<= 1.1x) r -8.716729887991647/-8.716729887991647 (>= -10.0)  NI media 0.0 sd 0.0 LI 0.0 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) PASA  | fraccion de semillas con d >= -10: 1.0 (lectura, no puerta)
+[12:43:54 +    9.8s]    T-F CUELLO_MIN [CAND    ] deaths 93.80959951855206/93.80959951855206 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.8s]    T-C ii       [CAND    ] rev 44.143096156655865/44.143096156655865  NI media 0.0 sd 0.0 LI 0.0 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.5) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[12:43:54 +    9.8s]    >>> CAND: v4 (T-A, T-C ii, T-F vivo) PASA
+[12:43:54 +    9.8s]    T-A VIVO       [TRONCO_B] muertes 90.4097828516145/93.69272291626226 (<= 1.1x) r -74.3380546308735/-75.10967014567099 (>= -10.0)  NI media 1.837 sd 18.987 LI -1.655 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.55) PASA  | fraccion de semillas con d >= -10: 0.713 (lectura, no puerta)
+[12:43:54 +    9.8s]    T-F VIVO       [TRONCO_B] deaths 90.4097828516145/93.69272291626226 (0.965 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.8s]    T-A CUELLO_MIN [TRONCO_B] muertes 93.9595513510028/93.80959951855206 (<= 1.1x) r -6.876736942974524/-8.716729887991647 (>= -10.0)  NI media 3.111 sd 19.582 LI -0.49 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.55) PASA  | fraccion de semillas con d >= -10: 0.738 (lectura, no puerta)
+[12:43:54 +    9.8s]    T-F CUELLO_MIN [TRONCO_B] deaths 93.9595513510028/93.80959951855206 (1.002 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.8s]    T-C ii       [TRONCO_B] rev 41.62055206697475/44.143096156655865  NI media -1.096 sd 23.589 LI -5.435 > -12.5 -> v4 PASA | v3(n40) NO | v2(n20, A12 0.4) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[12:43:54 +    9.8s]    >>> TRONCO_B: v4 (T-A, T-C ii, T-F vivo) PASA
+[12:43:54 +    9.8s]    T-A VIVO       [PLACEBO ] muertes 95.29339926472984/93.69272291626226 (<= 1.1x) r -77.33176155147538/-75.10967014567099 (>= -10.0)  NI media -1.585 sd 16.558 LI -4.63 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.25) NO  | fraccion de semillas con d >= -10: 0.688 (lectura, no puerta)
+[12:43:54 +    9.8s]    T-F VIVO       [PLACEBO ] deaths 95.29339926472984/93.69272291626226 (1.017 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.8s]    T-A CUELLO_MIN [PLACEBO ] muertes 93.26623668828428/93.80959951855206 (<= 1.1x) r -10.466838955229198/-8.716729887991647 (>= -10.0)  NI media 0.214 sd 22.41 LI -3.907 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.45) NO  | fraccion de semillas con d >= -10: 0.637 (lectura, no puerta)
+[12:43:54 +    9.8s]    T-F CUELLO_MIN [PLACEBO ] deaths 93.26623668828428/93.80959951855206 (0.994 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/6.0 (1.167 <= 1.25) -> PASA
+[12:43:54 +    9.8s]    T-C ii       [PLACEBO ] rev 42.49191780936357/44.143096156655865  NI media -0.9 sd 22.881 LI -5.108 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.75) PASA   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[12:43:54 +    9.8s]    >>> PLACEBO: v4 (T-A, T-C ii, T-F vivo) PASA
+[12:43:54 +    9.8s]    inercia medida en el mundo vivo: CAND == OFF bit a bit en T-A 160/160, T-C (ii) 80/80
+[12:43:54 +    9.8s]    TRONCO_B (el tronco contra si mismo, s+100000) PASA | PLACEBO (reportado) PASA
+[12:43:54 +    9.8s]       T-G k=1  T142 sep +4.00 lift 0.380 celdas 40.0 compone  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 20
+[12:43:54 +    9.8s]       T-G k=2  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.8s]       T-G k=3  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.9s]       T-G k=4  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.9s]       T-G k=5  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.9s]       T-G k=6  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.9s]       T-G k=7  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.9s]       T-G k=8  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +4.00 lift 0.370 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 20  T5 20
+[12:43:54 +    9.9s]    T-G [capacidad declarada: composicion en 3T-k (letra de subida_n7): G-1 K_max(N) >= 5; G-2 N > T142 en lift_q4 pareado >= 15/20 en k = 3, 4 y 5; G-3 el canal falso NC3C no separa (sep mediana < 1.0 y lift_q4 mediana < 0.15) en ningun k de 1 a 8] -> K_max {'T142': 1, 'N': 8, 'L015': 0, 'N141': 0, 'NAZAR': 0, 'NSH': 0, 'NC3C': 0} ; G-1 True | G-2 {3: 20, 4: 20, 5: 20} True | G-3 True -> PASA
+[12:43:54 +    9.9s] ETAPA 8 — VEREDICTO por la letra de CRITERIO_TRONCO_v4 (humo-sintetico-bueno); una linea por puerta con su umbral (ERR-89).
+[12:43:54 +    9.9s]    T-A: PASA   [v4 T-A: en VIVO y en CUELLO_MIN: mediana de muertes <= 1.10 x tronco, mediana de r >= tronco - 10, y no inferioridad de una cola al 95 % (z 1.645) en r con margen 10 (LI > -10); n = 80 por brazo]
+[12:43:54 +    9.9s]    T-B: PASA   [G1 >= 0.80, G2 >= 0.85, azar G1 en [0.35, 0.65], azar G2 en [0.31, 0.60] (ENMIENDA ERR-122; la de la letra [0.42, 0.58] se reporta y NO decide), K 20/20 (bateria_generaliza, 20 semillas)] | TRONCO (mismas semillas, banda ERR-122) PASA | banda VIEJA [0.42, 0.58] (SOLO INFORME): CAND PASA, TRONCO PASA
+[12:43:54 +    9.9s]    T-C: PASA   (i) PASA [examen E2: come B en Q4 >= 50 en >= 18/20] | (ii) PASA [v4 T-C (ii): no inferioridad de una cola al 95 % en rev con margen 12.5 (LI > -12.5); n = 80]
+[12:43:54 +    9.9s]    T-D: PASA   [bloque de la sal (9 ALIAS + 9 LIMPIAS, sal muda): C1, C2, C6 de B-5 importados de creacion_B/corre_codigo.UMBRALES]
+[12:43:54 +    9.9s]    T-E: PASA   [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8]
+[12:43:54 +    9.9s]    T-F: PASA   examen PASA | vivo PASA [celdas, divisiones y muertes (medianas) <= 1.25 x tronco en el examen (seis etapas) y en el mundo vivo (T-A y T-C ii, divisor max(tronco, 1))]
+[12:43:54 +    9.9s]    T-G: PASA   [capacidad declarada: composicion en 3T-k (letra de subida_n7): G-1 K_max(N) >= 5; G-2 N > T142 en lift_q4 pareado >= 15/20 en k = 3, 4 y 5; G-3 el canal falso NC3C no separa (sep mediana < 1.0 y lift_q4 mediana < 0.15) en ningun k de 1 a 8]
+[12:43:54 +    9.9s]    T-H: NO MEDIDA — ESCALA: reportada, NO eliminatoria; su instrumento (criterio v4 §5) no esta construido: NO SE MIDE y se declara
+[12:43:54 +    9.9s] VEREDICTO: PASA (humo-sintetico-bueno): las siete puertas eliminatorias pasan (T-H no medida, reportada). Falta la otra serie.
+[12:43:54 +    9.9s]    T-B: CAND = v14.3 (bateria_generaliza_v143) y TRONCO = v14.2 (bateria_generaliza_v142, CONGELADA) en las MISMAS semillas; azar G2 decide con [0.31, 0.6] (ERR-122) para los dos
+[12:43:54 +    9.9s]    T-B [CAND  ] G1 1.000 (>= 0.8) G2 0.970 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.300 (en [0.31, 0.6], ERR-122) K 20/20 -> NO   [G1 True G2 True azar1 True azar2 False K True]
+[12:43:54 +    9.9s]    T-B [TRONCO] G1 1.000 (>= 0.8) G2 0.970 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.500 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:43:54 +    9.9s]    T-B banda VIEJA de azar G2 [0.42, 0.58] (letra v2-v4; SOLO INFORME, NO decide; ERR-122): CAND azar G2 0.300 FUERA -> T-B NO | TRONCO azar G2 0.500 dentro -> T-B PASA
+[12:43:54 +    9.9s]    T-B inercia medida: CAND == TRONCO bit a bit en 20/40 corridas (regla x semilla)
+[12:43:54 +    9.9s]       T-E E1   20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[12:43:54 +    9.9s]       T-E E2   20/20 PASA  {'come B Q4 >= 50 (T-C i)': 20, 'muerde A Q4 <= 1.10 x tronco': 20}  pesos (reportados) {'W_A→-3 y W_B→+1': 0}
+[12:43:54 +    9.9s]       T-E E2I  20/20 PASA  {'veneno C total <= 1.10 x tronco': 20, 'tasaA Q4 >= 80% Q2': 20}  pesos (reportados) {'W_C≤-2.5': 20}
+[12:43:54 +    9.9s]       T-E E2J  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.85': 20}
+[12:43:54 +    9.9s]       T-E E2K  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.8': 20}
+[12:43:54 +    9.9s]       T-E E2L  20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[12:43:54 +    9.9s]    T-C (i) [examen E2: come B en Q4 >= 50 en >= 18/20] -> 20/20 -> PASA
+[12:43:54 +    9.9s]    T-E [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8] -> E1 20/20 E2 20/20 E2I 20/20 E2J 20/20 E2K 20/20 E2L 20/20 -> PASA
+[12:43:54 +    9.9s]    T-F examen [<= 1.25 x tronco] -> celdas 34.0/34.0 (1.0x) splits 4.0/4.0 (1.0x) deaths 10.0/10.0 (1.0x) -> PASA
+[12:43:54 +    9.9s]    examen: el TRONCO contra las clausulas absolutas: E2 come B >= 50 20/20, E2I tasa 20/20; inercia CAND == TRONCO 120/120
+[12:43:54 +    9.9s]    T-D [OFF ] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 500.0  des_splits 2.0  muertes alias/limpias 40.0/40.0 -> PASA
+[12:43:54 +    9.9s]    T-D [CAND] C1 {'n': 0, 'med': 1.45, 'pasa': False}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 500.0  des_splits 2.0  muertes alias/limpias 40.0/40.0 -> NO
+[12:43:54 +    9.9s]    T-D inercia medida: CAND == OFF bit a bit en 9/18
+[12:43:54 +    9.9s]    T-A VIVO       [CAND    ] muertes 93.69272291626226/93.69272291626226 (<= 1.1x) r -115.10967014567099/-75.10967014567099 (>= -10.0)  NI media -40.0 sd 0.0 LI -40.0 > -10.0 -> v4 NO | v3(n40) NO | v2(n20, A12 0.0) NO  | fraccion de semillas con d >= -10: 0.0 (lectura, no puerta)
+[12:43:54 +    9.9s]    T-F VIVO       [CAND    ] deaths 93.69272291626226/93.69272291626226 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.9s]    T-A CUELLO_MIN [CAND    ] muertes 93.80959951855206/93.80959951855206 (<= 1.1x) r -48.71672988799165/-8.716729887991647 (>= -10.0)  NI media -40.0 sd 0.0 LI -40.0 > -10.0 -> v4 NO | v3(n40) NO | v2(n20, A12 0.0) NO  | fraccion de semillas con d >= -10: 0.0 (lectura, no puerta)
+[12:43:54 +    9.9s]    T-F CUELLO_MIN [CAND    ] deaths 93.80959951855206/93.80959951855206 (1.0 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.9s]    T-C ii       [CAND    ] rev 4.143096156655865/44.143096156655865  NI media -40.0 sd 0.0 LI -40.0 > -12.5 -> v4 NO | v3(n40) NO | v2(n20, A12 0.0) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[12:43:54 +    9.9s]    >>> CAND: v4 (T-A, T-C ii, T-F vivo) NO PASA
+[12:43:54 +    9.9s]    T-A VIVO       [TRONCO_B] muertes 90.4097828516145/93.69272291626226 (<= 1.1x) r -74.3380546308735/-75.10967014567099 (>= -10.0)  NI media 1.837 sd 18.987 LI -1.655 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.55) PASA  | fraccion de semillas con d >= -10: 0.713 (lectura, no puerta)
+[12:43:54 +    9.9s]    T-F VIVO       [TRONCO_B] deaths 90.4097828516145/93.69272291626226 (0.965 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.9s]    T-A CUELLO_MIN [TRONCO_B] muertes 93.9595513510028/93.80959951855206 (<= 1.1x) r -6.876736942974524/-8.716729887991647 (>= -10.0)  NI media 3.111 sd 19.582 LI -0.49 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.55) PASA  | fraccion de semillas con d >= -10: 0.738 (lectura, no puerta)
+[12:43:54 +    9.9s]    T-F CUELLO_MIN [TRONCO_B] deaths 93.9595513510028/93.80959951855206 (1.002 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.9s]    T-C ii       [TRONCO_B] rev 41.62055206697475/44.143096156655865  NI media -1.096 sd 23.589 LI -5.435 > -12.5 -> v4 PASA | v3(n40) NO | v2(n20, A12 0.4) NO   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[12:43:54 +    9.9s]    >>> TRONCO_B: v4 (T-A, T-C ii, T-F vivo) PASA
+[12:43:54 +    9.9s]    T-A VIVO       [PLACEBO ] muertes 95.29339926472984/93.69272291626226 (<= 1.1x) r -77.33176155147538/-75.10967014567099 (>= -10.0)  NI media -1.585 sd 16.558 LI -4.63 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.25) NO  | fraccion de semillas con d >= -10: 0.688 (lectura, no puerta)
+[12:43:54 +    9.9s]    T-F VIVO       [PLACEBO ] deaths 95.29339926472984/93.69272291626226 (1.017 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 6.0/6.0 (1.0 <= 1.25) -> PASA
+[12:43:54 +    9.9s]    T-A CUELLO_MIN [PLACEBO ] muertes 93.26623668828428/93.80959951855206 (<= 1.1x) r -10.466838955229198/-8.716729887991647 (>= -10.0)  NI media 0.214 sd 22.41 LI -3.907 > -10.0 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.45) NO  | fraccion de semillas con d >= -10: 0.637 (lectura, no puerta)
+[12:43:54 +    9.9s]    T-F CUELLO_MIN [PLACEBO ] deaths 93.26623668828428/93.80959951855206 (0.994 <= 1.25)  celdas 37.0/37.0 (1.0 <= 1.25)  splits 7.0/6.0 (1.167 <= 1.25) -> PASA
+[12:43:54 +    9.9s]    T-C ii       [PLACEBO ] rev 42.49191780936357/44.143096156655865  NI media -0.9 sd 22.881 LI -5.108 > -12.5 -> v4 PASA | v3(n40) PASA | v2(n20, A12 0.75) PASA   expB_Q4 (220.0, 220.0) expA_Q4 (1700.0, 1700.0) (trampa 3)
+[12:43:54 +    9.9s]    >>> PLACEBO: v4 (T-A, T-C ii, T-F vivo) PASA
+[12:43:54 +    9.9s]    inercia medida en el mundo vivo: CAND == OFF bit a bit en T-A 0/160, T-C (ii) 0/80
+[12:43:54 +    9.9s]    TRONCO_B (el tronco contra si mismo, s+100000) PASA | PLACEBO (reportado) PASA
+[12:43:54 +    9.9s]       T-G k=1  T142 sep +4.00 lift 0.380 celdas 40.0 compone  N sep +4.00 lift 0.380 celdas 40.0 compone  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 20
+[12:43:54 +    9.9s]       T-G k=2  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]       T-G k=3  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]       T-G k=4  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]       T-G k=5  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]       T-G k=6  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]       T-G k=7  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]       T-G k=8  T142 sep +1.10 lift 0.000 celdas 40.0 -  N sep +1.10 lift 0.000 celdas 40.0 -  NC3C sep +0.16 lift 0.000 celdas 40.0 -  N>T142 0  T5 0
+[12:43:54 +    9.9s]    T-G [capacidad declarada: composicion en 3T-k (letra de subida_n7): G-1 K_max(N) >= 5; G-2 N > T142 en lift_q4 pareado >= 15/20 en k = 3, 4 y 5; G-3 el canal falso NC3C no separa (sep mediana < 1.0 y lift_q4 mediana < 0.15) en ningun k de 1 a 8] -> K_max {'T142': 1, 'N': 1, 'L015': 0, 'N141': 0, 'NAZAR': 0, 'NSH': 0, 'NC3C': 0} ; G-1 False | G-2 {3: 0, 4: 0, 5: 0} False | G-3 True -> NO
+[12:43:54 +    9.9s] ETAPA 8 — VEREDICTO por la letra de CRITERIO_TRONCO_v4 (humo-sintetico-MALO); una linea por puerta con su umbral (ERR-89).
+[12:43:54 +    9.9s]    T-A: NO   [v4 T-A: en VIVO y en CUELLO_MIN: mediana de muertes <= 1.10 x tronco, mediana de r >= tronco - 10, y no inferioridad de una cola al 95 % (z 1.645) en r con margen 10 (LI > -10); n = 80 por brazo]
+[12:43:54 +    9.9s]    T-B: NO   [G1 >= 0.80, G2 >= 0.85, azar G1 en [0.35, 0.65], azar G2 en [0.31, 0.60] (ENMIENDA ERR-122; la de la letra [0.42, 0.58] se reporta y NO decide), K 20/20 (bateria_generaliza, 20 semillas)] | TRONCO (mismas semillas, banda ERR-122) PASA | banda VIEJA [0.42, 0.58] (SOLO INFORME): CAND NO, TRONCO PASA
+[12:43:54 +    9.9s]    T-C: NO   (i) PASA [examen E2: come B en Q4 >= 50 en >= 18/20] | (ii) NO [v4 T-C (ii): no inferioridad de una cola al 95 % en rev con margen 12.5 (LI > -12.5); n = 80]
+[12:43:54 +    9.9s]    T-D: NO   [bloque de la sal (9 ALIAS + 9 LIMPIAS, sal muda): C1, C2, C6 de B-5 importados de creacion_B/corre_codigo.UMBRALES]
+[12:43:54 +    9.9s]    T-E: PASA   [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8]
+[12:43:54 +    9.9s]    T-F: PASA   examen PASA | vivo PASA [celdas, divisiones y muertes (medianas) <= 1.25 x tronco en el examen (seis etapas) y en el mundo vivo (T-A y T-C ii, divisor max(tronco, 1))]
+[12:43:54 +    9.9s]    T-G: NO   [capacidad declarada: composicion en 3T-k (letra de subida_n7): G-1 K_max(N) >= 5; G-2 N > T142 en lift_q4 pareado >= 15/20 en k = 3, 4 y 5; G-3 el canal falso NC3C no separa (sep mediana < 1.0 y lift_q4 mediana < 0.15) en ningun k de 1 a 8]
+[12:43:54 +    9.9s]    T-H: NO MEDIDA — ESCALA: reportada, NO eliminatoria; su instrumento (criterio v4 §5) no esta construido: NO SE MIDE y se declara
+[12:43:54 +    9.9s] VEREDICTO: NO PASA (humo-sintetico-MALO): cae T-A, T-B, T-C, T-D, T-G (una sola basta; sin modos intermedios)
+[12:43:54 +    9.9s]    T-B: CAND = v14.3 (bateria_generaliza_v143) y TRONCO = v14.2 (bateria_generaliza_v142, CONGELADA) en las MISMAS semillas; azar G2 decide con [0.31, 0.6] (ERR-122) para los dos
+[12:43:54 +    9.9s]    T-B [CAND  ] G1 1.000 (>= 0.8) G2 0.970 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.360 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:43:54 +    9.9s]    T-B [TRONCO] G1 1.000 (>= 0.8) G2 0.970 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.360 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[12:43:54 +    9.9s]    T-B banda VIEJA de azar G2 [0.42, 0.58] (letra v2-v4; SOLO INFORME, NO decide; ERR-122): CAND azar G2 0.360 FUERA -> T-B NO | TRONCO azar G2 0.360 FUERA -> T-B NO
+[12:43:54 +    9.9s]    T-B inercia medida: CAND == TRONCO bit a bit en 40/40 corridas (regla x semilla)
+[12:43:54 +    9.9s]    cableado ERR-122 (azar G2 0.36 en CAND y TRONCO): T-B PASA con [0.31, 0.6]; la banda vieja dice NO y no decide -> OK
+[12:43:54 +    9.9s]    cableado: bueno {'T-A': True, 'T-B': True, 'T-C': True, 'T-D': True, 'T-E': True, 'T-F': True, 'T-G': True} | malo {'T-A': False, 'T-B': False, 'T-C': False, 'T-D': False, 'T-E': True, 'T-F': True, 'T-G': False} | ERR-122 True -> OK (el bueno DEBE pasar todo; el malo DEBE caer T-A, T-B, T-C, T-D y T-G; con azar G2 0.36 T-B DEBE pasar por la banda nueva)
+[12:43:54 +    9.9s] HUMO 3/3 — JSON.
+[12:43:54 +    9.9s] datos -> datos\humo\examen_v143_humo_20260924_124344.json  sha256_16 = ab782b9254fc0980
+[12:43:54 +    9.9s] VEREDICTO DEL HUMO: OK (no es evidencia; prueba que el examen mide y que el juez puede decir NO)

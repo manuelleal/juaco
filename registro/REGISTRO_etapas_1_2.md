@@ -6684,3 +6684,33 @@ Runner `experimentos/subida_n8b/corre_n8b.py`. Crudos: serie `experimentos/subid
 - También caen P4 y P7 (PRUEBA muere menos que BASE, 20/20, pero con cociente 0.865 > 0.85) y P12.
 
 **Lectura honesta.** Junto con n8 y n8c: el organismo sigue aprendiendo aunque se le acabe la memoria, pero todavía no decide bien qué olvidar ni conserva lo que deja de ver. Probar más, al azar, enseña más pero mata más. El nivel 8 (fijado en 50 %) se discute en la auditoría con n8, n8b y n8c juntos.
+
+### EXAMEN DEL CRITERIO DE TRONCO v4 sobre v14.3 (= v14.2 + reparación N, subida_n7) y CONGELACIÓN — serie y réplica (24-sep-2026, 12:44–13:45, Pool 6 en el PC; preregistro `experimentos/tronco_v14_3_examen/PREREGISTRO_examen_v143.md` con la ENMIENDA ERR-122 aplicada el 23-sep ~21:10, ANTES de cualquier dato de serie): **PASA por la letra en serie y en réplica — las siete puertas eliminatorias (T-A…T-G) pasan en las dos; T-H no se mide (declarada). v14.3 CONGELADO: 24 archivos intactos, tag `v14.3-tronco`**
+
+Semillas (`umbrales_examen_v143.SEMILLAS`, subconjuntos disjuntos): serie EX 43001–43020, VIVO 43101–43180, T-G 43401–43420, T-D 43501–44000 (alias/limpias listadas); réplica EX 43021–43040, VIVO 43201–43280, T-G 43421–43440, T-D 44001–44500. TRONCO_B con +100000.
+
+Instrumento por anclas (`construye_v143.py --verifica`: todo en disco == construcción), sha16: `organismo_v143.py` `2cebc0ab0c38b70f` · `organismo_v143g.py` `c20fccaa9107fb89` · `bateria_v143.py` `9daa88a90a2fd7b1` · `bateria_generaliza_v143.py` `a894101fd1e6db93` · `organismo_v143cal.py` `1169f54ef0a19de1` (instrumento del mundo vivo, no entra al tronco). Identidad `identidad_v143ex.py` **114/114** antes de la serie (`datos/humo/identidad_v143ex_20260924_124339.json`, `61184459ee9233c9`) y dentro del runner antes de serie y réplica. Humo `examen_v143_humo_20260924_124344.json` (`ab782b9254fc0980`; el juez dice SÍ al bueno y NO al sintético malo), no es dato.
+
+Veredicto JSON: serie `experimentos/tronco_v14_3_examen/datos/examen_v143_serie_20260924_124413.json` (`d39303e1d6ae3949`); réplica `…_replica_20260924_131427.json` (`55b42f360a51951a`). Crudos por etapa en la misma carpeta.
+
+| puerta | letra | serie | réplica |
+|---|---|---|---|
+| T-A (VIVO + CUELLO_MIN, n=80/brazo) | muertes ≤1.10×, r ≥ tronco−10, LI > −10 | PASA — CAND ≡ OFF bit a bit; TRONCO_B y PLACEBO pasan | PASA — ídem |
+| T-B (generaliza, n=20) | G1≥0.80, G2≥0.85, azar G1∈[0.35,0.65], azar G2∈[0.31,0.60] (ERR-122), K 20/20 | PASA — G1 1.000, G2 0.997, azar 0.600/0.548 (también dentro de la banda vieja) | PASA — G1 0.900, G2 0.920, azar 0.500/0.458 (también dentro de la vieja) |
+| T-C (i) E2 come B Q4≥50 | ≥18/20 | 19/20 | 20/20 |
+| T-C (ii) reversión, n=80 | LI > −12.5 | PASA | PASA |
+| T-D sal muda | C1/C2/C6 de B-5 | PASA (CAND ≡ OFF 18/18) | PASA (18/18) |
+| T-E examen v3′ | ≥18/20 por escenario | PASA (E2 19/20, resto 20/20) | PASA (todo 20/20) |
+| T-F celdas/splits/muertes | ≤1.25×tronco | PASA (1.000× en el examen) | PASA |
+| T-G 3T-k (capacidad declarada) | K_max(N)≥5; N>T142 ≥15/20 en k=3,4,5; NC3C no separa | **PASA — K_max T142 1, N 8, NC3C 0; N>T142 20/20 en k=3,4,5** | **PASA — ídem** |
+| T-H escala | reportada | NO SE MIDE (instrumento no construido) | NO SE MIDE |
+
+Inercia donde la masa es 3: CAND == v14.2 bit a bit en T-B 40/40, examen 120/120, T-D 18/18, mundo vivo T-A 160/160 y T-C(ii) 80/80, en las dos series.
+
+**Congelación (§10 del preregistro):** (1) `manifiesto.py --check` 20 intactos y `construye_v143.py --verifica` OK; (2) los 4 archivos copiados byte a byte a `organismo/`, sha iguales; (3) el bloque de v14.3 lo pegó **el director a mano** en `CONGELADOS` (24-sep ~15:10; la guardia y el permiso de la app bloquean que un agente lo haga, como corresponde) → **24 intactos**; (4) regla 1: `bateria_v143.py 6 --log` PASA (`datos/examen_v143_20260924_134629.json`, `5db60e2479aac363`) y `bateria_generaliza_v143.py organismo_v143 20 --desde 101 --log` PASA: K 20/20, G1 1.000/0.450, G2 0.967/0.437 (`datos/regresion_generaliza_organismo_v143_20260924_134843.json`, `aa476950d06afd6a`) — los mismos números que v14.2; (5) este registro, CLAUDE.md, ESTADO.md, commit y tag `v14.3-tronco`.
+
+**Lectura honesta.** Donde la masa del estímulo es 3 (T-A…T-F) el candidato es v14.2 bit a bit: esas puertas miden inercia, no a N. Donde la masa cambia (3T-k) N devuelve la composición hasta k = 8, contra 1 del tronco anterior, replicado en semillas nuevas bajo el examen de no regresión completo. Predicción del creador refutada: en la réplica G1/G2 de T-B (0.900/0.920) quedaron bajo su rango previsto, muy por encima del umbral. La banda vieja de T-B habría pasado igual esta vez; la enmienda ERR-122 se decidió antes de ver datos.
+
+**Qué NO dice:** T-H no se midió; el examen es ciego a N donde la masa es 3 y no se verificó que N no regresione en mundos con masa ≠ 3 fuera de 3T-k; **v14.3 no mejora la vida en la pista de la carrera** (esa pregunta es del paquete `tronco_v14_3` = v14.2 + FILTRO + boca TD, HAY ALGO MODESTO ×2, R0 real 0.63; si alguna vez pasa, entraría como v14.4). Vocabulario: "la vía lenta normalizada por masa devuelve al tronco la composición en 3T-k hasta k = 8". Prohibido: "razona", "cruza H-1", "vive más en la pista".
+
+**Nivel 7:** propuesta del coordinador 78 → **80 %** (decide el director).
