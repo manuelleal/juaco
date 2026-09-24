@@ -76,14 +76,14 @@ El bloque se declara sólo si serie y réplica dan el mismo veredicto; si no, va
 4. **Mundo chico (w9):** 9 fundadores y pocos nacimientos; la deriva manda más. Por eso MODESTO acepta un solo mundo.
 5. **Arrastre:** un órgano puede subir pegado a buenas perillas; O2 contra AZAR lo acota (en AZAR no hay herencia del genoma).
 
-## 8. Costo (medido: el Frankenstein cuesta ~1.9× FABRICA en Python)
-Estimado ~1 min (w9) y ~3–5 min (w30) por corrida → ~3 h de CPU por serie, ~1 h con Pool 3.
-
 6. **(hallado en el humo, antes de la serie) Bancos de composición distinta:** en AZAR cada genoma nuevo es una copia mutada de una
    entrada al azar, así que los órganos se prenden por pura deriva y su fracción en el banco sube con el tiempo (humo: `herencia` 27 %,
    `mapa` 29 %); en VIDA el banco son pocos padres exitosos (humo: ~0 %). O2+ ("VIDA lleva más el órgano que AZAR") queda así sesgado
    EN CONTRA de VIDA: es conservador para ELEGIDO. O2− queda sesgado A FAVOR de DESCARTADO, y por eso DESCARTADO exige también O1− contra
    las sombras, que comparten la genealogía y controlan esa composición. La letra no cambia; se escribe para leer bien el resultado.
+
+## 8. Costo (medido: el Frankenstein cuesta ~1.9× FABRICA en Python)
+Estimado ~1 min (w9) y ~3–5 min (w30) por corrida → ~3 h de CPU por serie, ~1 h con Pool 3.
 
 ## 9. Humo (24-sep, 12:18 UTC, Python; números sin valor)
 `corre_eco_v3.py --humo` (20196, w30, T 20 000, corte 10 000): 74 s (36–38 s por brazo). VIDA persiste (1 vivo, máximo 37); banco con
