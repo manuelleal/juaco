@@ -1,0 +1,71 @@
+
+REANUDA (coordinador) · 2026-09-24 16:09:49 · se fue la luz: 180 tareas hechas, faltan 20: ['o1']
+  previas OK: shas de origen, motor 6cfff5c04fdc2c8f y carro 63ac38bac2d0bbcd == construye, revisa_carro PASA, corre_cruce 746d33a1007f850f
+  [  210.4s] lee o1 s24601 (210.0s) R0 real 0.9231
+  [  210.6s] lee o1 s24606 (210.2s) R0 real 0.9167
+  [  214.5s] lee o1 s24604 (214.1s) R0 real 0.9444
+  [  214.6s] lee o1 s24602 (214.2s) R0 real 0.8571
+  [  216.5s] lee o1 s24603 (216.2s) R0 real 0.96
+  [  217.9s] lee o1 s24605 (217.5s) R0 real 0.9474
+  [  419.1s] lee o1 s24607 (208.7s) R0 real 0.9412
+  [  423.8s] lee o1 s24608 (213.3s) R0 real 0.9231
+  [  425.8s] lee o1 s24610 (211.2s) R0 real 0.9474
+  [  426.8s] lee o1 s24612 (208.9s) R0 real 0.9286
+  [  428.5s] lee o1 s24611 (212.0s) R0 real 0.9524
+  [  429.5s] lee o1 s24609 (214.9s) R0 real 0.9524
+  [  624.2s] lee o1 s24613 (205.1s) R0 real 0.9333
+  [  627.4s] lee o1 s24614 (203.5s) R0 real 0.875
+  [  631.7s] lee o1 s24616 (204.9s) R0 real 0.875
+  [  633.3s] lee o1 s24617 (204.7s) R0 real 0.9091
+  [  636.3s] lee o1 s24615 (210.5s) R0 real 0.9474
+  [  639.1s] lee o1 s24618 (209.7s) R0 real 0.8889
+  [  793.5s] lee o1 s24619 (169.3s) R0 real 0.9333
+  [  795.1s] lee o1 s24620 (167.8s) R0 real 0.9286
+  CRUDO experimentos/organelos/cruce/datos/cruce_serie_s24601-24620_20260924_141213_crudo.json (sha 89065b4a0ae071f4)
+
+CRIA (antes del corte; no decide)
+  cria vida: 20 semillas · R0 real en la cria 0.5623 · muertes 78.0 · fundadores 29.5 · mutaciones 89905 · partos 16714 · refundados del banco 66113 · banco con algun gen != 0 0.9725 · distancia hijo-padre [5594, 6165, 3414, 1162, 317, 45, 14, 3, 0, 0, 0, 0] · s 221.95
+  cria azar: 20 semillas · R0 real en la cria 0.2256 · muertes 162.5 · fundadores 138.0 · mutaciones 86014 · partos 8173 · refundados del banco 71761 · banco con algun gen != 0 1.0 · distancia hijo-padre [36, 80, 106, 143, 161, 182, 238, 265, 279, 277, 280, 6126] · s 236.25
+  cria mut0: 20 semillas · R0 real en la cria 0.8144 · muertes 77.0 · fundadores 16.0 · mutaciones 0 · partos 19720 · refundados del banco 61605 · banco con algun gen != 0 0.0 · distancia hijo-padre [19720, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] · s 261.55
+
+== lectura vida · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.5514 · ENMIENDA 5: linajes 52/180, semillas con mayoria 1/20 -> no gana · ENMIENDA 6 semillas 18/20 · casi inmortales 0
+  vida 600.0 · muertes 45.0 · fundadores 17.0 · veneno+sal 0.9279 · coherente 180/180 · t_fund 180/180 · s por corrida 173.85 · pizarra 0 · cableado {'boca_dif': 56685, 'boca_dec': 1233298, 'pata_dif': 333260, 'pata_dec': 11146115, 'vetos_parto': 80, 'partos_dec': 3988, 'lesion_lecturas': 0, 'cuerpos_on': 3888}
+
+== lectura vida_p · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.6079 · ENMIENDA 5: linajes 56/180, semillas con mayoria 1/20 -> no gana · ENMIENDA 6 semillas 18/20 · casi inmortales 0
+  vida 600.0 · muertes 47.0 · fundadores 19.0 · veneno+sal 0.9297 · coherente 180/180 · t_fund 180/180 · s por corrida 162.25 · pizarra 0 · cableado {'boca_dif': 64677, 'boca_dec': 1302349, 'pata_dif': 367825, 'pata_dec': 10619203, 'vetos_parto': 107, 'partos_dec': 4500, 'lesion_lecturas': 0, 'cuerpos_on': 3847}
+
+== lectura desf · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.5633 · ENMIENDA 5: linajes 44/180, semillas con mayoria 0/20 -> no gana · ENMIENDA 6 semillas 15/20 · casi inmortales 0
+  vida 448.75 · muertes 50.5 · fundadores 22.0 · veneno+sal 0.9299 · coherente 180/180 · t_fund 180/180 · s por corrida 176.15 · pizarra 0 · cableado {'boca_dif': 55000, 'boca_dec': 1210736, 'pata_dif': 342289, 'pata_dec': 10936228, 'vetos_parto': 0, 'partos_dec': 4056, 'lesion_lecturas': 13008045, 'cuerpos_on': 3714}
+
+== lectura azar · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.0186 · ENMIENDA 5: linajes 17/180, semillas con mayoria 0/20 -> no gana · ENMIENDA 6 semillas 0/20 · casi inmortales 0
+  vida 54.5 · muertes 171.0 · fundadores 156.0 · veneno+sal 0.9623 · coherente 180/180 · t_fund 180/180 · s por corrida 167.0 · pizarra 0 · cableado {'boca_dif': 111368, 'boca_dec': 787971, 'pata_dif': 557760, 'pata_dec': 7892801, 'vetos_parto': 1928, 'partos_dec': 6451, 'lesion_lecturas': 0, 'cuerpos_on': 1484}
+
+== lectura mut0 · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.6583 · ENMIENDA 5: linajes 61/180, semillas con mayoria 2/20 -> no gana · ENMIENDA 6 semillas 20/20 · casi inmortales 0
+  vida 600.0 · muertes 43.5 · fundadores 13.0 · veneno+sal 0.9285 · coherente 180/180 · t_fund 180/180 · s por corrida 151.1 · pizarra 0 · cableado {'boca_dif': 0, 'boca_dec': 0, 'pata_dif': 0, 'pata_dec': 0, 'vetos_parto': 0, 'partos_dec': 0, 'lesion_lecturas': 0, 'cuerpos_on': 0}
+
+== lectura v143 · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.6583 · ENMIENDA 5: linajes 61/180, semillas con mayoria 2/20 -> no gana · ENMIENDA 6 semillas 20/20 · casi inmortales 0
+  vida 600.0 · muertes 43.5 · fundadores 13.0 · veneno+sal 0.9285 · coherente 180/180 · t_fund 180/180 · s por corrida 125.85 · pizarra 0
+
+== lectura o1 · 20 semillas (0 con error) · T 100000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.9309 · ENMIENDA 5: linajes 130/180, semillas con mayoria 16/20 -> GANA · ENMIENDA 6 semillas 20/20 · casi inmortales 0
+  vida 3198.75 · muertes 18.0 · fundadores 0.0 · veneno+sal 0.8047 · coherente 180/180 · t_fund 180/180 · s por corrida 210.1 · pizarra 0
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes de la lectura; gana = semillas en que el primero supera al segundo)
+  vida-azar: gana 20/20 · diferencia mediana 0.5018
+  vida-v143: gana 7/20 · diferencia mediana -0.0327
+  vida-desf: gana 11/20 · diferencia mediana 0.0447
+  vida-vida_p: gana 11/20 · diferencia mediana 0.0353
+  azar-v143: gana 0/20 · diferencia mediana -0.5765
+  o1-vida: gana 19/20 · diferencia mediana 0.3632
+  instrumento: lectura mut0 == v143 (fisica de los 9 linajes) en 20/20 semillas
+  GENES contra sus 8 sombras en el corte (vida, 20 semillas; bajo neutralidad ~2.2 por columna): boca_bueno_sesgo sube 7 baja 0 expresa 5 (media 0.0725); parto_sesgo sube 6 baja 0 expresa 2 (media 0.105); parto_otra sube 6 baja 0 expresa 3 (media 0.05); boca_neutro_reserva sube 5 baja 3 expresa 4 (media 0.0); boca_malo_cola sube 5 baja 3 expresa 2 (media 0.0225); pata_otra_otra sube 5 baja 1 expresa 3 (media 0.0425); parto_ventana sube 5 baja 0 expresa 3 (media 0.075); boca_bueno_otra sube 0 baja 4 expresa 4 (media -0.0375)
+  GENES contra sus 8 sombras en el corte (azar, 20 semillas; bajo neutralidad ~2.2 por columna): boca_neutro_otra sube 2 baja 7 expresa 5 (media -0.2375); parto_edad sube 1 baja 6 expresa 4 (media -0.16); boca_bueno_otra sube 5 baja 1 expresa 3 (media -0.0975); boca_malo_reserva sube 1 baja 5 expresa 1 (media -0.265); boca_malo_otra sube 5 baja 3 expresa 3 (media 0.185); pata_otra_reserva sube 5 baja 0 expresa 3 (media 0.115); parto_ventana sube 0 baja 5 expresa 2 (media -0.345); boca_bueno_sesgo sube 4 baja 0 expresa 2 (media 0.0725)
+  PARECIDO a O1/O3 (descriptivo, signos fijados antes): {'boca_bueno_reserva': {'signo_O': -1, 'semillas_mismo_signo': 0, 'semillas_contrario': 3}, 'boca_malo_otra': {'signo_O': 1, 'semillas_mismo_signo': 1, 'semillas_contrario': 2}, 'boca_neutro_sesgo': {'signo_O': -1, 'semillas_mismo_signo': 1, 'semillas_contrario': 3}, 'boca_neutro_reserva': {'signo_O': 1, 'semillas_mismo_signo': 5, 'semillas_contrario': 3}, 'pata_act_sesgo': {'signo_O': 1, 'semillas_mismo_signo': 2, 'semillas_contrario': 0}, 'boca_bueno_cola': {'signo_O': -1, 'semillas_mismo_signo': 2, 'semillas_contrario': 3}, 'boca_malo_cola': {'signo_O': 1, 'semillas_mismo_signo': 5, 'semillas_contrario': 3}}
+  RESUMEN experimentos/organelos/cruce/datos/cruce_serie_s24601-24620_20260924_141213_resumen.json (sha a2bfde4869ad2d28)
+VEREDICTO: PARCIAL (sin replica; no se declara): NO · {'lee': {'ancla_v143': True, 'ancla_o1': True, 'placebo': True, 'mut0_igual': True, 'sin_perdidas': True}, 'F1_vida_cruza': False, 'F2_vida_gana_azar': True, 'F3_vida_gana_v143': False, 'F4_desf_cae': False, 'modesto': False, 'veredicto': 'NO'}

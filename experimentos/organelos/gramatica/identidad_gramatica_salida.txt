@@ -1,8 +1,8 @@
-IDENTIDAD ORGANELOS/GRAMATICA · 2026-09-24 14:13:50 · python 3.14.2 · numpy 2.4.3
-  origenes: motor_eco2 0921ee3a50ce7f7a · motor_eco3 2eec9830792d9822 · FAMB_ORG_ECO 75d5f4118079ff15 · shas {'corre_gramatica.py': 'f8af47e8a3b496da', 'motor_gramatica.py': '6b65dc5e32093424', 'carros/FAMB_GRAM_ECO.py': '2cee0a8510c997b9', 'gramatica_def.py': 'c58086e103d030d9', 'conducta.py': '9a2f1226fe27a514', 'construye_gramatica.py': 'df8c78c3c0d53cad', 'PREREGISTRO_gramatica.md': '7351f89e0db863a1'}
+IDENTIDAD ORGANELOS/GRAMATICA · 2026-09-24 14:37:44 · python 3.14.2 · numpy 2.4.3
+  origenes: motor_eco2 0921ee3a50ce7f7a · motor_eco3 2eec9830792d9822 · FAMB_ORG_ECO 75d5f4118079ff15 · shas {'corre_gramatica.py': '3a9c62f6ad08bc0b', 'motor_gramatica.py': '6b65dc5e32093424', 'carros/FAMB_GRAM_ECO.py': '2cee0a8510c997b9', 'gramatica_def.py': 'c58086e103d030d9', 'conducta.py': '9a2f1226fe27a514', 'construye_gramatica.py': 'df8c78c3c0d53cad', 'PREREGISTRO_gramatica.md': 'cf29db304f7851c0'}
   OK  (C) construye --verifica VERIFICA OK
-  OK  (I1) motor_gramatica sin gramatica == motor_eco2 (padre, 20 genes mutables) (distintas []; nacidos 139, fundadores del banco 633, 18.7+18.9 s)
-  OK  (I1) motor_gramatica sin gramatica == motor_eco2 (azar, 20 genes mutables) (distintas []; nacidos 126, fundadores del banco 718, 18.6+18.4 s)
+  OK  (I1) motor_gramatica sin gramatica == motor_eco2 (padre, 20 genes mutables) (distintas []; nacidos 139, fundadores del banco 633, 23.4+23.5 s)
+  OK  (I1) motor_gramatica sin gramatica == motor_eco2 (azar, 20 genes mutables) (distintas []; nacidos 126, fundadores del banco 718, 22.7+23.7 s)
   OK  (I2) motor_eco2 + FAMB_GRAM_ECO (ctx sin gramatica) == FAMB_ORG_ECO (distintas []; vivos con ensena numerico prendido 0)
   OK  (I2b) idem con ensena numerico nacido PRENDIDO (1.2) y los 20 genes mutables (distintas []; vivos con ensena 14, con filtra0 0 de 14)
   OK  (I3) gramatica FIJA [nacer/todo/hijo/copiar] == motor_eco2 + FAMB_ORG_ECO con ensena prendido · VIDA (distintas []; nacidos 185, max vivos 57, entregas motor {})
@@ -13,13 +13,13 @@ IDENTIDAD ORGANELOS/GRAMATICA · 2026-09-24 14:13:50 · python 3.14.2 · numpy 2
   OK  (I6) motor_eco3 + FAMB_ORG_ECO == motor_eco2 + FAMB_ORG_ECO (sin mutacion; organos apagados) (distintas [])
   OK  (I7) errores de copia prendidos con cuando = {nunca}: la fisica == ensena apagado; hubo errores (distintas []; errores 1331; slots en el banco [0, 1, 2, 3, 4])
   OK  (I8) checkpoint: VIDA con la gramatica mutando, entera == reanudada en t = 6 000 (distintas []; errores 975; banco con organo activo 0.24; entregas {'morir/vecino/1': 42, 'morir/hermano/0': 25, 'vida/vecino/1': 32, 'morir/hijo/0': 20, 'vida/hermano/0': 10, 'vida/hijo/0': 8, 'nacer/vecino/1': 4, 'nacer/hermano/0': 3})
-  OK  (I9a) trabajo() escribe su JSON con las medidas de la gramatica (5.6 s)
+  OK  (I9a) trabajo() escribe su JSON con las medidas de la gramatica (6.8 s)
   OK  (I9b) nube-9: la guardia de ERR-60 dentro de trabajo() queda en el JSON ('abortado') y no lanza (SystemExit: PISTA2: mas de 100000 cuerpos en un linaje: la semilla colisionaria (ERR-60))
   OK  (I10) errores de copia: consumo fijo, duplicacion en tandem (origen 1), borrado, cambio a OTRO valor del alfabeto, tope (dup [nacer/todo/hijo/copiar + nacer/todo/hijo/copiar* + vida/neg/vecino/promediar]; borrado [nacer/todo/hijo/copiar]; campos [nunca/pos/vecino/invertir + morir/sin0/hijo/copiar])
   OK  (I11) conducta: nulo, ensena y filtra0 distintos (> TOL); origen y duplicado identico no cambian la conducta (distancias [2.996, 3.0, 1.711])
   OK  (V) la letra: nuevo en TOP -> COMBINA; disenado en TOP -> MODESTO; silencioso -> NO; AZAR igual -> guardia; duplicado divergente -> CREA (FUNCIONA — LA SELECCION COMBINA UN ORGAN | HAY ALGO MODESTO (la | NO | NO EVALUABLE (AZAR expresa TOP | FUNCIONA — LA SELECCION CREA UN ORGANO (un sl)
   OK  (R) banderas malas abortan con codigo 2 (ERR-115): humo con pool, serie sin --top, fuerza sin bloque, abreviada, con '=' ([2, 2, 2, 2, 2])
-  (I) tiempo 509 s
+  (I) tiempo 644 s
 (P) ARNES POR PIEZA: monocultivo FIJO en w30, T 8 000, corte 6 000; una opcion 'vive' si cambia la trayectoria en algun contexto
     [N] cuando = nunca     CAMBIA nacidos 121->106 r0 0.0588->0.0 entregas {}
     [N] cuando = vida      CAMBIA nacidos 121->117 r0 0.0588->0.1538 entregas {'vida/hijo/0': 231, 'vida/hijo/1': 30}
@@ -43,4 +43,4 @@ IDENTIDAD ORGANELOS/GRAMATICA · 2026-09-24 14:13:50 · python 3.14.2 · numpy 2
     [M]   como = invertir  CAMBIA nacidos 111->43 r0 0.0769->0.0 entregas {'morir/vecino/1': 561}
   opciones INERTES en w30 (se declaran y NO entran al alfabeto de la serie): [('como', 'olvidar')]
   OK  (P) toda opcion del ALFABETO DE LA SERIE cambia algo medible en w30; las inertes quedan fuera (alfabeto de la serie: como = ['copiar', 'promediar', 'invertir'])
-RESULTADO: 20/20 · 857 s
+RESULTADO: 20/20 · 1210 s
