@@ -1,5 +1,9 @@
 # JUACO: dependencias medidas en el PC del director (23-sep-2026), Python 3.14.2.
 # Las identidades bit a bit se verificaron con estas versiones; otra versión puede cambiar bits:
 # correr un arnés de identidad antes de cualquier serie en una máquina nueva.
+# 24-sep-2026: llvmlite y scipy fijados por el director. numba necesita scipy para np.dot dentro de los gemelos
+# compilados; sin él no compilan (datos/humo/nube_calibracion_20260924.md).
 numpy==2.4.3
 numba==0.67.0
+llvmlite==0.49.0
+scipy==1.17.1

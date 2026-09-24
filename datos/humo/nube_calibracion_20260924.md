@@ -11,7 +11,9 @@
 
 Por proceso, la nube es 1.3–2.2× más rápida que el PC. Con sus 4 núcleos, Pool 3 rinde lo mismo que el PC con Pool 6.
 
-Queda un cabo fuera del encargo: `requirements.txt` no trae scipy, y sin scipy los gemelos numba no compilan (§4).
+El único cabo, fuera del encargo, quedó cerrado a las 00:55 UTC: `requirements.txt` no traía scipy, y sin scipy los gemelos numba no
+compilan (§4). Ahora `requirements.txt` fija scipy 1.17.1 y llvmlite 0.49.0, según la receta del director, y esa receta pasa los tres
+arneses desde cero (§9).
 
 ## 1. Máquina y versiones
 
@@ -19,8 +21,8 @@ Queda un cabo fuera del encargo: `requirements.txt` no trae scipy, y sin scipy l
 |---|---|---|
 | Python | **3.13.12** (venv; el `python` por defecto del contenedor es 3.11.15) | 3.14.2 |
 | numpy | 2.4.3 | 2.4.3 |
-| numba · llvmlite | 0.67.0 · 0.49.0 (LLVM 22.1.0, CPU `emeraldrapids`) | 0.67.0 · no registrado |
-| scipy | 1.18.1, instalado a mano (no está en `requirements.txt`; §4) | instalado, versión no registrada |
+| numba · llvmlite | 0.67.0 · 0.49.0 (LLVM 22.1.0, CPU `emeraldrapids`) | 0.67.0 · 0.49.0 (fijado por el director) |
+| scipy | **1.17.1** (receta del director; la primera pasada usó 1.18.1, §4) | 1.17.1 (fijado por el director) |
 | SO | Linux 6.18.44 (KVM), glibc 2.39 | Windows |
 | CPU | Intel Xeon @ 2.10 GHz (Emerald Rapids), **nproc 4**, 1 hilo por núcleo, AVX-512 (numpy despacha X86_V4, AVX512_ICL, AVX512_SPR) | 16 lógicos |
 | RAM | **15.7 GiB** (16 481 980 kB), sin swap; el cgroup no pone cuota de CPU ni límite de memoria | — |
@@ -28,13 +30,18 @@ Queda un cabo fuera del encargo: `requirements.txt` no trae scipy, y sin scipy l
 **Por qué 3.13.12 y no 3.14.2.** La política de red del entorno niega github.com (403), que es de donde uv baja los Python standalone.
 El uv instalado (0.8.17) sólo ofrece 3.14.0rc2. Con 3.13.12 la salida es idéntica a la del PC (§2 y §3), así que no hace falta.
 
-**Receta para cada sesión nueva** (el contenedor es efímero; tarda ~1 min):
+**Receta para cada sesión nueva.** Es la del director (24-sep). El contenedor es efímero y la receta tarda ~1 min; se validó desde
+cero en §9:
 ```
 uv venv --seed --python /usr/bin/python3.13 /root/venv-juaco
-/root/venv-juaco/bin/pip install -r requirements.txt
-/root/venv-juaco/bin/pip install scipy==1.18.1     # sólo para los gemelos numba (§4); fijar la versión del PC cuando se sepa
-export PATH=/root/venv-juaco/bin:$PATH            # en cada comando: el shell de la sesión no conserva variables entre llamadas
+/root/venv-juaco/bin/pip install numpy==2.4.3 numba==0.67.0 llvmlite==0.49.0 scipy==1.17.1
+echo 'export PATH=/root/venv-juaco/bin:$PATH' >> ~/.bashrc     # propuesta, por verificar: que `python` sea el del venv
 ```
+Sin la tercera línea, `python` sigue siendo el 3.11.15 del contenedor. En ese caso hay que llamar `/root/venv-juaco/bin/python`, o poner
+`export PATH=/root/venv-juaco/bin:$PATH` en cada comando, porque el shell de la sesión no conserva variables entre llamadas.
+
+La tercera línea sirve porque el shell de la sesión hereda el PATH de `~/.bashrc`: así llega hoy `/root/.bun/bin`. Se verifica en la
+próxima sesión con `python --version`, que debe dar 3.13.12.
 
 ## 2. Arneses de identidad (lo pedido)
 
@@ -72,6 +79,7 @@ Los dos arneses pedidos no usan numba. Por eso se corrió también `cd organismo
   scipy para `np.dot` en modo nopython, y `requirements.txt` sólo trae numpy y numba.
 - **Con scipy 1.18.1: IDENTIDAD 42/42.** Tarda 76.3 s (87 s de pared con la compilación; RSS 364 MB). Acelera ×50 a 100 000 pasos y
   ×45 a 200 000.
+- **Con scipy 1.17.1 (receta del director) y la caché vacía: IDENTIDAD 42/42.** Tarda 78.7 s y compila en 14.8 s (§9).
 - **Alcance.** La prueba es gemelo contra interpretado *dentro de esta máquina*. No se comparó el gemelo con el PC, y la versión de
   scipy del PC no está registrada.
 
@@ -102,12 +110,12 @@ El escalado es lineal hasta 4 y cada corrida no se alarga: los 4 vCPU se comport
 - **Quién decide.** `NUBE.md` §2 dice nproc − 2. Cambiarlo a nproc − 1 lo decide el director; aquí no se tocó.
 - **Duración de una serie como la n8** (80 corridas, T 200 000): 5.8 min con Pool 2, **3.8 min con Pool 3** y 2.9 min con Pool 4. En
   el PC, con Pool 6, tardó 3.9–4.0 min.
-- **La RAM no limita.** Cada proceso interpretado usa ≤ 54 MB y numba, al compilar, 364 MB, sobre 15.7 GiB.
+- **La RAM no limita.** Cada proceso interpretado usa ≤ 54 MB y numba, al compilar, 364–369 MB, sobre 15.7 GiB.
 
 ## 7. Cabos
 
-1. **scipy en `requirements.txt`.** Correr en el PC `python -c "import scipy; print(scipy.__version__)"` y fijar esa versión. Hasta
-   entonces, la nube usa 1.18.1 sin fijar.
+1. **scipy en `requirements.txt`: CERRADO (24-sep, 00:55 UTC).** El director fijó scipy 1.17.1 y llvmlite 0.49.0, y
+   `requirements.txt` ya los trae. La receta pasa los tres arneses desde cero (§9).
 2. **Los arneses reescriben su `*_salida.txt`.** Ese archivo está versionado y guarda la salida del PC en CRLF. En esta sesión:
    - la salida de la nube se guardó aparte, en esta carpeta;
    - el archivo del PC se restauró con `git checkout --`.
@@ -117,8 +125,8 @@ El escalado es lineal hasta 4 y cada corrida no se alarga: los 4 vCPU se comport
 3. **Tiempos del PC.** Salen de las salidas guardadas. Si el PC tenía Pools corriendo a esa hora, están inflados: las razones son
    indicativas, no constantes.
 4. **Entorno (opcional).**
-   - La receta del §1 puede ir en el *setup script* del entorno (menú del entorno en la barra de título de la sesión → Edit → Setup
-     script). Así cada sesión arranca lista.
+   - La receta del §1 va en el *setup script* del entorno (menú del entorno en la barra de título de la sesión → Edit → Setup
+     script). Así cada sesión arranca lista. La tercera línea, la del PATH, queda por verificar en la próxima sesión.
    - Para usar 3.14.2, igual que el PC, habría que permitir github.com en *Network access*. No hace falta.
 5. **Gasto.** La sesión corre con el crédito promocional (`rateLimitType ccr_promotional`, sin overage). El gasto en USD no se ve desde
    dentro de la sesión: el director lo lee en claude.ai y lo anota aquí para fijar el ritmo (`NUBE.md`: ~40 USD por semana).
@@ -133,6 +141,26 @@ El escalado es lineal hasta 4 y cada corrida no se alarga: los 4 vCPU se comport
   - `…_s12691_20260924_002202.json` (sha 5c0b50a345678284).
 - **Gemelo numba.** `nube_calibracion_20260924_identidad_v14_rapido.log` (el segundo intento, ya con scipy).
 - **Pool.** `nube_calibracion_20260924_escala_pool.log`.
+- **Revalidación con la receta (§9).** `nube_calibracion_20260924_receta_identidad_n8.log`, `…_receta_identidad_convive.log` y
+  `…_receta_identidad_v14_rapido.log`.
+
+## 9. Revalidación con la receta del director (24-sep, 00:47–00:55 UTC)
+
+Para imitar un contenedor nuevo se borraron el venv y la caché de numba de la sesión. Después se corrió la receta tal cual:
+`uv venv --seed --python /usr/bin/python3.13 /root/venv-juaco` y
+`pip install numpy==2.4.3 numba==0.67.0 llvmlite==0.49.0 scipy==1.17.1`. Instala limpio, y `pip install -r requirements.txt`, ya
+actualizado, instala exactamente lo mismo.
+
+| arnés | debe dar | con la receta del director | primera pasada | salida contra el PC |
+|---|---|---|---|---|
+| `identidad_n8.py` | 26/26 | **26/26**, 25.0 s | 26/26, 25.5 s | idéntica |
+| `identidad_convive.py` | 37/37 | **37/37**, 97.8 s | 37/37, 102.0 s | idéntica |
+| `identidad_v14_rapido.py` (gemelo numba) | 42/42 | **42/42**, 78.7 s (compila en 14.8 s con la caché vacía) | 42/42 con scipy 1.18.1, 76.3 s | no aplica: compara gemelo contra interpretado, en la nube |
+
+- **Dónde entra scipy.** Sólo en los gemelos numba (el BLAS de `np.dot`). Los arneses interpretados no lo importan.
+- **Aceleración del gemelo:** ×36 a 100 000 pasos y ×44 a 200 000. Es una sola medida por tamaño y es ruidosa: en la primera pasada
+  dio ×50 y ×45.
+- **Referencias del PC.** Los `*_salida.txt` se restauraron otra vez con `git checkout --`.
 
 <details><summary>Script del escalado del Pool (scratch de la sesión; no entra al repo como código)</summary>
 

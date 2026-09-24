@@ -1,0 +1,36 @@
+# 2026-09-24 00:52:59 $ /root/venv-juaco/bin/python identidad_v14_rapido.py
+arnes de identidad del gemelo compilado del TRONCO v14 (organismo_v14c_on)
+  sha organismo_v13 (congelado)  cc8b16b492d4d324
+  sha organismo_v13_rapido       d97c7d9a15e4286c
+  sha organismo_v14c_on          feefc88b1fd8d434
+  sha organismo_v14c_rapido      35e1fec75d3a01a4
+  sha organismo_v14_rapido       7f263f6285d389a6
+  sha identidad_v14_rapido       87ae8c72f2f97187
+  organismo_v13 importado desde: /home/user/juaco/organismo/organismo_v13.py
+  T = 30000   T_largo = 200000
+[00:53:14] compilacion/carga de cache numba: 14.8s
+
+(0) la firma de organismo_v14_rapido.run == la de organismo_v14c_on.run (nombres, orden y defaults)
+  IDENTICA (35 parametros; perillas ON: mask_rel=2, del_s=0.25, del_c=0.25, ema_c=0.05, puerta_pat=5, pat_shuf=0, pat_min=1)
+
+(a) los 7 escenarios del examen x 3 semillas a T=30000, todas las claves
+[00:53:37]   21 corridas en 23.1s
+
+(b) inversion y estimulo nuevo en otras semillas y otros puntos del tiempo
+[00:53:42]   4 corridas en 4.7s
+
+(c) T largo = 200000
+[00:54:12]   4 corridas a 200000 pasos en 30.2s
+
+(d) perillas EXPLICITAMENTE apagadas == organismo_v13 (tronco congelado), por los dos lados
+[00:54:17]   6 comparaciones en 4.6s
+
+(e) proceso NUEVO que lee la cache de numba (subprocess)
+  proceso nuevo: 1.2s en total, primer run del gemelo 0.51s (con la cache borrada el mismo primer run tarda ~18s: la cache se leyo SI)
+  cache numba en __pycache__/: 25 de organismo_v14c_rapido, 0 de organismo_v14_rapido (delega: no debe generar ninguna propia)
+
+IDENTIDAD 42/42 corridas identicas   (78.7s)
+aceleracion a 100000 pasos: organismo_v14c_on 3.55s -> gemelo 0.099s  x36
+aceleracion a 200000 pasos: organismo_v14c_on 6.70s -> gemelo 0.153s  x44
+fuera de alcance: el mundo de REGLA (organismo_v14gc.py) es otro archivo con otra firma y otras claves; su gemelo no existe y este no lo reemplaza.
+# MIDE rc=0 pared=89.8s cpu_user=89.3s cpu_sys=1.2s maxrss=369MB fin=00:54:29
