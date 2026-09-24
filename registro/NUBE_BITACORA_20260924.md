@@ -478,6 +478,13 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
   de los bancos y con la deriva como control (lo que ECO v1.1 dejó en disco). Es una pregunta del frente 2 (¿la selección produce algo
   que la deriva no?) medida fuera de su mundo. Alternativa descartada: esperar ocioso al gemelo.
 
+- **13:25 — se repite el error de las 03:37 y se corrige igual.** Los commits parciales hechos DURANTE las series de ECO v2 (serie y réplica)
+  y ECO v3 subieron checkpoints intermedios (`ckpt/*.pkl`), y el commit siguiente registró su borrado (el runner los borra al terminar
+  cada trabajo): 9 archivos salieron del árbol. Para cumplir "en GitHub sólo se agrega" se restauraron los 9 desde el commit anterior a
+  su borrado (con un `LEEME_ckpt.txt` en cada carpeta: no sirven para reanudar). Desde ahora: los checkpoints nuevos quedan fuera por
+  exclusión local, y los que ya están en el árbol se congelan con `skip-worktree` para que su borrado en disco no llegue a GitHub.
+  Lección: no hacer `git add` de una carpeta de datos con una serie corriendo; subir sólo los JSON terminados.
+
 ## 3b. Pedidos del director durante la noche (sus palabras, para que no se pierdan)
 - Prompt de la noche: `NUBE.md` §2b (en main).
 - ~02:00, sobre el costo: *"Mientras tanto consume. ¿Muchos tokens las corridas o crees que alcancemos a algo significativo? ¿Cuándo pueden
