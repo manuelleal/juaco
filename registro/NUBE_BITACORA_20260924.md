@@ -117,6 +117,9 @@
   ECO largo (1e6 pasos) quedaría en ~3 min con N = 100 y ~28 min con N = 1000.
 - **Archivos:** `motor_eco_rapido.py` (edb8a15090b0f0dd), `corre_eco_rapido.py` (07bf5be9dc5d634a), `identidad_eco_rapido.py`
   (cb868264dec5004e), `identidad_eco_rapido_salida.txt` e `INFORME_eco_rapido.md`.
+- **03:43 — verificado por el coordinador:** re-corrí `identidad_eco_rapido.py` y dio **120/120** (317 s). Las líneas de chequeo son las
+  mismas que dio el compilador; sólo cambian los tiempos (×38–43 en ECO, ×59 en pista v2). Log:
+  scratchpad → `identidad_eco_rapido_salida.txt` (la versión commiteada es la de esta corrida).
 - **Falta:** la ruta con Pool del lanzador (`corre_eco_rapido.py --serie --prueba_pool …`) no se ejecutó.
 - **La serie de ECO de esta noche sigue con el original:** sus checkpoints no se reanudan con el gemelo, porque la firma aborta.
 - **Candidato a ERR nube-3 (del compilador; sin verificar):** los gemelos `organismo_f9_rapido.py` y `organismo_v13_rapido.py` usan
@@ -136,6 +139,14 @@ _(pendiente)_
   - Por qué: ningún archivo de ECO se toca esta noche, y así un fallo aparece con horas de margen. Antes de lanzar la serie de ECO se
     vuelve a verificar el sha del runner.
 - **01:45 — los candidatos a ERR se numeran como nube-N.** Así no chocan con el PC, que también numera esta noche.
+- **03:37 — los checkpoints (`ckpt/*.pkl`) de la serie de ECO en curso dejan de versionarse.**
+  - Qué se hizo: `git rm --cached` más la exclusión local en `.git/info/exclude`. Los archivos siguen en disco y en el commit 848df06.
+  - Por qué: se reescriben cada 10 000 pasos, ocupan varios MB y versionarlos en cada push inflaría el repo.
+  - Se suben sólo si la sesión va a cortarse, que es lo que pide el encargo. Los JSON de resultados sí se versionan.
+- **03:40 — el auditor (agente 2/2) se usa ANTES de la serie de n10c y no al final.**
+  - Alternativa descartada: auditar la bitácora al cierre.
+  - Por qué: un fallo de diseño hallado antes de la serie ahorra CPU y evita un ERR. La bitácora queda para que la revise el
+    coordinador en el PC.
 - **02:24 — gemelo numba: se encarga a UN `juaco-compilador` (Opus), el agente 1 de los 2 que permite el presupuesto de la noche.**
   - Pedido del director (~02:10): *"sí, haz el gemelo numba hoy si puedes y sigue trabajando hasta mañana en la noche. Objetivo
     la AGI"*.
