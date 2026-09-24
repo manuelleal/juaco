@@ -386,6 +386,23 @@
   (media del gen) queda corta en la mitad de los mundos por nube-8; ECO v2.1 repite la pregunta con la prueba de expresión (preregistrada a
   las 13:05, semillas nuevas).
 
+### 1h. ECO v3 — los 7 órganos del Frankenstein como genes (preregistro `PREREGISTRO_eco_v3.md`, con ENMIENDA 1 antes de la serie)
+- **Serie 20111–20130** (Python, Pool 3, 13:07–14:31; runner 7bb44da802508b37, arnés 14/14). Letra: ELEGIDO = la fracción del banco que
+  EXPRESA el órgano supera a la media de sus 8 sombras (O1\*) en ≥ 15/20 **y** el banco de VIDA lo lleva más que el de AZAR (O2) en
+  ≥ 15/20; "sube" = uno de los dos; FUNCIONA si algún órgano queda ELEGIDO en los dos mundos; MODESTO si ELEGIDO en uno o "sube" en los dos.
+  - **w30:** `herencia` O1\* **19/20**, banco VIDA 0.975 contra AZAR 0.395, VIDA > AZAR **14/20** (a uno del umbral) → "sube".
+    `curiosidad` 4/20 y `modelo` 2/20 por encima de sus sombras (debajo 16 y 18), VIDA < AZAR 18 y 16/20 → "baja". Resto neutro.
+    Persisten en T: VIDA 18, AZAR 9.
+  - **w9:** `interruptor` O1\* **17/20**, VIDA > AZAR 12/20 → "sube". `curiosidad` y `modelo` "baja" (5 y 4/20; VIDA < AZAR 19 y 20/20).
+    Persisten en T: VIDA 0, AZAR 0 (el mundo de 9 fundadores se extingue en los dos brazos).
+  - Guardias de AZAR vacías (ningún gen > 8/20 contra sombras por la media; su expresión sobre sombras ≤ 11/20, bajo el 15 de la
+    ENMIENDA 1). Perillas seleccionadas sin órganos: ninguna en los dos mundos.
+  - **VEREDICTO POR LA LETRA (serie): NO** (ningún órgano ELEGIDO; ninguno "sube" en los dos mundos). Los predichos (§4): herencia
+    ELEGIDO en w30 (p 0.70) quedó a un punto de O2; interruptor "sube" en w9 como se predijo; curiosidad y modelo bajan en los dos mundos
+    (predicho: neutros o descartados). DESCARTADO es descriptivo por la ENMIENDA 1.
+  - Lectura (no se declara): la selección se queda con la herencia donde hay linajes que duran (w30) y tira curiosidad y modelo en los dos
+    mundos, lo mismo que dijeron las ablaciones a mano del Frankenstein. La réplica 20131–20150 va en la cola.
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
 la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–24099, con arneses de identidad bit a bit de cada subclase.
@@ -484,6 +501,11 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
   su borrado (con un `LEEME_ckpt.txt` en cada carpeta: no sirven para reanudar). Desde ahora: los checkpoints nuevos quedan fuera por
   exclusión local, y los que ya están en el árbol se congelan con `skip-worktree` para que su borrado en disco no llegue a GitHub.
   Lección: no hacer `git add` de una carpeta de datos con una serie corriendo; subir sólo los JSON terminados.
+
+- **14:3x — el contenedor se reinició y la cola desatendida murió** justo después de subir ECO v3 serie (commit bc56cc8) y al empezar
+  ECO v2.1 serie. Se relanzó (`cola_eco2.sh`, mismo orden) desde ECO v2.1 serie con `--reanuda` (el runner retoma lo terminado desde su
+  checkpoint; los JSON ya escritos no se repiten). Antes de relanzar se subieron los JSON terminados y el log parcial (c47f12e, ef1c3ce).
+  Alternativa descartada: repetir la serie desde cero (misma letra y mismas semillas, 10 min más de pared, sin ganancia).
 
 ## 3b. Pedidos del director durante la noche (sus palabras, para que no se pierdan)
 - Prompt de la noche: `NUBE.md` §2b (en main).
