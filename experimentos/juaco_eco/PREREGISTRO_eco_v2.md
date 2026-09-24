@@ -88,6 +88,10 @@ Pregunta de siempre: ¿qué escenario haría pasar el criterio por la razón equ
 5. **El órgano beneficia al hijo, no al padre:** si la selección fuera sólo por fertilidad inmediata (el banco guarda padres), `ensena`
    podría no verse; se lee también en los vivos en T (descriptivo). No se cambia la letra por eso.
 
+6. **(nota añadida a las 12:21, antes de cualquier serie de v2; hallada en el humo de ECO v3) Bancos de composición distinta:** en AZAR
+   los órganos se prenden por deriva sin filtro y su fracción en el banco sube con el tiempo; en VIDA el banco son pocos padres. O2
+   ("VIDA lleva más `ensena` que AZAR") queda sesgado EN CONTRA de VIDA: es conservador. La letra no cambia.
+
 ## 8. Costo
 Gemelo: estimado ~8 s (w30), ~30 s (w90) y ~90 s (w270) por corrida → ~80 min de CPU por serie, ~30 min con Pool 3. Python (humo w30,
 T 20 000): 22–30 s por brazo.
