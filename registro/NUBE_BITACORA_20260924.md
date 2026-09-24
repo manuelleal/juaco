@@ -94,6 +94,34 @@
   - Comando: `/root/venv-juaco/bin/python experimentos/juaco_eco/corre_eco.py --serie --prueba_pool --desde 19031 --n 2 --pool 2`.
   - Antes: `git diff` contra main de los originales de ECO, generaciones y carrera, vacío; `corre_eco.py` 47d9cee4d6462116.
 
+- **03:23 — serie 19101–19120**, lanzada con este comando:
+  `/root/venv-juaco/bin/python experimentos/juaco_eco/corre_eco.py --serie --desde 19101 --n 20 --pool 3`
+  - Terminó a las 06:30 UTC, en 11 252 s de pared (80 trabajos con Pool 3). Salidas en
+    `experimentos/juaco_eco/datos/eco_serie_s19101-19120/`.
+  - Persisten tras el corte (vivos en T): **VIDA 16/20 · CEREBRO 17/20 · AZAR 11/20 · MUT0 0/20**.
+  - P2: genes seleccionados en VIDA, fuera de sus 8 sombras con el mismo signo: **alpha 19/20 (+) y aversion 16/20 (+)**. AZAR no
+    tiene falsos positivos (> 8/20 en ningún gen).
+  - P3, juez: supervivencia mediana en la batería sellada 19201–19220, contra G0 (2219.5):
+    - **VIDA gana 20/20** (mediana 9736);
+    - CEREBRO gana 20/20 (9888);
+    - AZAR gana 12/20 (2409).
+  - P1 ✓, P1c ✓, P2 ✓, P3 ✓, H-c ✓. **P3c ✗ (AZAR 12/20 > 10/20)**. P4 ✗: VIDA − AZAR = 5 < 8.
+  - **VEREDICTO POR LA LETRA: NO EVALUABLE.** Lo decide la enmienda ERR-121: si AZAR gana el juez en > 10/20, el juez no distingue
+    selección de azar.
+  - **Candidato a ERR nube-4 (serio, no se aplica; regla 11):** la condición de ERR-121 tiene el umbral en la mediana de la nula.
+    - Bajo neutralidad, AZAR "gana" cada semilla con p ≈ 0.5, y entonces P(AZAR > 10/20) = **0.41**. El NO EVALUABLE salta casi por
+      azar.
+    - Aquí AZAR gana por poco (2409 contra 2219), mientras VIDA vive 4.4× lo de G0 en 20/20.
+    - Propuesta para el director: un criterio nuevo, escrito ANTES de otra serie. Por ejemplo, P3c con umbral de cola (≤ 14/20,
+      p < 0.05 bajo la nula) o la magnitud de VIDA contra AZAR. No se recalifica esta serie.
+  - **Observación (no es criterio):** la selección en VIDA sube *alpha* (el peso del valor aprendido en la boca) y *aversion* (la
+    fuerza del aprendizaje aversivo). Coincide con el diagnóstico exploratorio de esta noche: FABRICA muere porque el hambre le gana al
+    valor en la boca (H-BOCA) y lo malo conocido por la vía lenta no pesa lo suficiente. La evolución encontró la misma perilla.
+  - MUT0 = 0/20: sin mutación nadie persiste tras el corte. La mutación con vivero es necesaria; la selección suma (VIDA 16 contra
+    AZAR 11), pero P4 pedía una diferencia de ≥ 8.
+- **06:31 — réplica 19121–19140** lanzada con Pool 3 (mismo comando, `--desde 19121`). El bloque se declara sólo si serie y réplica
+  dan el mismo veredicto; si no, vale el menor.
+
 ### 1c. `subida_n10c` — la familia pasa SÓLO LO QUE IMPORTA (paquete nuevo, decisión del coordinador; ver §3)
 - **03:28 — preregistro escrito** (`experimentos/subida_n10c/PREREGISTRO_n10c.md`), a partir de lo exploratorio y ANTES del arnés.
   - Candidato: RES_SIN0.
