@@ -1,0 +1,506 @@
+{
+ "meta": {
+  "etiqueta": "n9_serie_s13301-13320_T100000",
+  "sello": "20260923_170033",
+  "semillas": [
+   13301,
+   13302,
+   13303,
+   13304,
+   13305,
+   13306,
+   13307,
+   13308,
+   13309,
+   13310,
+   13311,
+   13312,
+   13313,
+   13314,
+   13315,
+   13316,
+   13317,
+   13318,
+   13319,
+   13320
+  ],
+  "T": 100000,
+  "brazos": [
+   "O3",
+   "O3_LES_SI",
+   "O3_TERM_CIEGO",
+   "CTRL_O3_SINTERM"
+  ],
+  "pool": 6,
+  "humo": false,
+  "sha_carros": {
+   "O3": "0442c2884fcb0e11",
+   "O3_LES_SI": "b1d2f442db838a34",
+   "O3_TERM_CIEGO": "853d5c8b53952253",
+   "CTRL_O3_SINTERM": "7bb2fff33017e559",
+   "O3_LES_OFF": "c404f52b6210066f",
+   "O3_LES_COLA": "05be23a6fad273a8"
+  },
+  "sha_originales": {
+   "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+   "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+   "experimentos\\carrera_escuderias\\revisa_carro.py": "1c8a789f7427ab96",
+   "experimentos\\carrera_escuderias\\carros\\O3.py": "0442c2884fcb0e11",
+   "experimentos\\nivel09_cuerpo_nuevo_b2\\organismo_f9c.py": "9dd1fb91ecec35ae"
+  },
+  "sha_runner": "d38f27c6309277c7",
+  "sha_comun": "70444824d5142275",
+  "margen_persiste": 15,
+  "preregistro": "PREREGISTRO_n9.md"
+ },
+ "tabla": {
+  "O3": {
+   "semillas": 20,
+   "linajes_semilla": 180,
+   "evaluables": 180,
+   "casi_inmortales": 0,
+   "R0_real_eval_med": 0.9677,
+   "R0_eval_med": 1.8136,
+   "sem_cruza_mayoria": 19,
+   "gana": true,
+   "persisten": 178,
+   "sem_estabiliza": 20,
+   "estabiliza": true,
+   "muertes_med": 31.0,
+   "nac_reales_med": 31.0,
+   "descendientes_med": 58.0,
+   "fund_post10k_med": 0.0,
+   "sin_parir_med": 0.0645,
+   "vida_med": 2742.0,
+   "muertes_vol": 4529,
+   "muertes": 5644,
+   "coherente": 180,
+   "t_fund_rec_ok": 180,
+   "causas": {
+    "hambre": 165,
+    "sed": 174,
+    "veneno": 2649,
+    "sal": 2656
+   },
+   "lesion": null
+  },
+  "O3_LES_SI": {
+   "semillas": 20,
+   "linajes_semilla": 180,
+   "evaluables": 180,
+   "casi_inmortales": 0,
+   "R0_real_eval_med": 0.0721,
+   "R0_eval_med": 0.0721,
+   "sem_cruza_mayoria": 0,
+   "gana": false,
+   "persisten": 0,
+   "sem_estabiliza": 0,
+   "estabiliza": false,
+   "muertes_med": 102.0,
+   "nac_reales_med": 8.0,
+   "descendientes_med": 8.0,
+   "fund_post10k_med": 85.0,
+   "sin_parir_med": 0.9307,
+   "vida_med": 675.25,
+   "muertes_vol": 12853,
+   "muertes": 18270,
+   "coherente": 180,
+   "t_fund_rec_ok": 180,
+   "causas": {
+    "hambre": 385,
+    "sed": 539,
+    "veneno": 8558,
+    "sal": 8788
+   },
+   "lesion": {
+    "pasos": 172320,
+    "E_real": 0.9993,
+    "E_usado": 0.9141,
+    "Ag_real": 0.9816,
+    "Ag_usado": 0.8894,
+    "dlev": 0.7054
+   }
+  },
+  "O3_TERM_CIEGO": {
+   "semillas": 20,
+   "linajes_semilla": 180,
+   "evaluables": 180,
+   "casi_inmortales": 0,
+   "R0_real_eval_med": 0.9688,
+   "R0_eval_med": 1.7343,
+   "sem_cruza_mayoria": 19,
+   "gana": true,
+   "persisten": 172,
+   "sem_estabiliza": 20,
+   "estabiliza": true,
+   "muertes_med": 32.0,
+   "nac_reales_med": 32.0,
+   "descendientes_med": 57.0,
+   "fund_post10k_med": 0.0,
+   "sin_parir_med": 0.0678,
+   "vida_med": 2638.0,
+   "muertes_vol": 4624,
+   "muertes": 5779,
+   "coherente": 180,
+   "t_fund_rec_ok": 180,
+   "causas": {
+    "hambre": 206,
+    "sed": 195,
+    "veneno": 2693,
+    "sal": 2685
+   },
+   "lesion": null
+  },
+  "CTRL_O3_SINTERM": {
+   "semillas": 20,
+   "linajes_semilla": 180,
+   "evaluables": 140,
+   "casi_inmortales": 40,
+   "R0_real_eval_med": 0.8571,
+   "R0_eval_med": 5.9444,
+   "sem_cruza_mayoria": 0,
+   "gana": false,
+   "persisten": 130,
+   "sem_estabiliza": 17,
+   "estabiliza": true,
+   "muertes_med": 6.0,
+   "nac_reales_med": 6.0,
+   "descendientes_med": 48.0,
+   "fund_post10k_med": 0.0,
+   "sin_parir_med": 0.1111,
+   "vida_med": 9806.5,
+   "muertes_vol": 22,
+   "muertes": 1183,
+   "coherente": 180,
+   "t_fund_rec_ok": 180,
+   "causas": {
+    "hambre": 210,
+    "sed": 200,
+    "veneno": 400,
+    "sal": 373
+   },
+   "lesion": null
+  }
+ },
+ "comparaciones": {
+  "O3_LES_SI": {
+   "semillas": 20,
+   "persiste_O3_gana": 20,
+   "persiste_X_gana": 0,
+   "persiste_empata": 0,
+   "dif_persisten": 178,
+   "R0r_pares": 20,
+   "R0r_O3_gana": 20,
+   "R0r_X_gana": 0,
+   "R0r_dif_mediana": 0.8976,
+   "desc_dif_mediana": 51.0,
+   "pierde": {
+    "pierde": true,
+    "por_enm5": true,
+    "por_persistencia": true
+   }
+  },
+  "O3_TERM_CIEGO": {
+   "semillas": 20,
+   "persiste_O3_gana": 2,
+   "persiste_X_gana": 1,
+   "persiste_empata": 17,
+   "dif_persisten": 6,
+   "R0r_pares": 20,
+   "R0r_O3_gana": 7,
+   "R0r_X_gana": 9,
+   "R0r_dif_mediana": 0.0,
+   "desc_dif_mediana": 1.5,
+   "pierde": {
+    "pierde": false,
+    "por_enm5": false,
+    "por_persistencia": false
+   }
+  },
+  "CTRL_O3_SINTERM": {
+   "semillas": 20,
+   "persiste_O3_gana": 18,
+   "persiste_X_gana": 0,
+   "persiste_empata": 2,
+   "dif_persisten": 48,
+   "R0r_pares": 20,
+   "R0r_O3_gana": 20,
+   "R0r_X_gana": 0,
+   "R0r_dif_mediana": 0.1117,
+   "desc_dif_mediana": 10.0,
+   "pierde": {
+    "pierde": true,
+    "por_enm5": true,
+    "por_persistencia": true
+   }
+  }
+ },
+ "predicciones": [
+  [
+   "P1",
+   "ANCLA: O3 gana la ENMIENDA 5 (>= 15/20) con R0 real eval mediana en [0.95, 0.99] y persisten >= 170/180",
+   true
+  ],
+  [
+   "P2",
+   "L-SI: O3_LES_SI R0 real eval mediana en [0.55, 0.88], no gana (<= 5/20 por mayoria) y persisten <= 60/180",
+   false
+  ],
+  [
+   "P3",
+   "L-SI pareado: O3 persiste mas que O3_LES_SI en >= 17/20 semillas",
+   true
+  ],
+  [
+   "P4",
+   "L-RES (puede fallar; el creador la da por REFUTADA con p 0.55): O3_TERM_CIEGO PIERDE contra O3 (§5)",
+   false
+  ],
+  [
+   "P5",
+   "L-RES: O3_TERM_CIEGO muere mas que O3 (mediana de muertes por linaje-semilla >= 1.2x la de O3)",
+   false
+  ],
+  [
+   "P6",
+   "SIN TERMINAL: CTRL_O3_SINTERM tiene 100-175 de 180 linajes-semilla evaluables (>= 5 muertes)",
+   true
+  ],
+  [
+   "P7",
+   "SIN TERMINAL: CTRL_O3_SINTERM R0 real eval mediana >= 0.90 (p 0.5; puede fallar en cualquiera de los dos sentidos)",
+   false
+  ]
+ ],
+ "veredicto": "HAY ALGO MODESTO en esta serie (H-SI: pierde la lesion del estado propio; H-RES no: la reserva no hace falta) · V-M se cumple (|dE| 0.085, |dAg| 0.092, tope 0.1): H-SI se lee como 'estado propio de otro momento, misma distribucion'",
+ "juez": {
+  "O3": {
+   "modo": "r2",
+   "escuderias": {
+    "O3": {
+     "linajes_semilla": 180,
+     "cruzan": 178,
+     "evaluables": 180,
+     "casi_inmortales": 0,
+     "R0_eval_med": 1.814,
+     "R0_med_todos": 1.814,
+     "semillas_que_cruza": 20,
+     "semillas": 20,
+     "gana": null,
+     "nac_reales_med": 31.0,
+     "fund_post_med": 0.0,
+     "sin_parir_med": 0.065,
+     "fund_post_incierto": 0,
+     "casi_inmortal_semillas": 0,
+     "R0_real_eval_med": 0.968,
+     "cruzan_real": 166
+    }
+   },
+   "ronda2": {
+    "ronda": "r2mono_O3",
+    "equipos": {
+     "O3": {
+      "linajes_semilla": 180,
+      "cruzan": 166,
+      "evaluables": 180,
+      "casi_inmortales": 0,
+      "R0_real_eval_med": 0.968,
+      "R0_eval_med": 1.814,
+      "semillas_cruza_mayoria": 19,
+      "semillas_cruza_todos": 13,
+      "semillas": 20,
+      "gana": true
+     }
+    },
+    "regla_semilla": "mayoria",
+    "medido": "monocultivo de ['O3']: gana SI",
+    "persistencia": {
+     "O3": {
+      "persisten": 178,
+      "linajes_semilla": 180,
+      "nac_reales_med": 31.0,
+      "semillas_estabiliza": 20,
+      "estabiliza": true,
+      "muertes": 5644,
+      "muertes_vol": 4529,
+      "frac_vol": 0.8024,
+      "carro_declara": {
+       "cuerpos_term": 4771
+      }
+     }
+    }
+   }
+  },
+  "O3_LES_SI": {
+   "modo": "r2",
+   "escuderias": {
+    "O3_LES_SI": {
+     "linajes_semilla": 180,
+     "cruzan": 0,
+     "evaluables": 180,
+     "casi_inmortales": 0,
+     "R0_eval_med": 0.072,
+     "R0_med_todos": 0.072,
+     "semillas_que_cruza": 0,
+     "semillas": 20,
+     "gana": null,
+     "nac_reales_med": 8.0,
+     "fund_post_med": 85.0,
+     "sin_parir_med": 0.931,
+     "fund_post_incierto": 0,
+     "casi_inmortal_semillas": 0,
+     "R0_real_eval_med": 0.072,
+     "cruzan_real": 0
+    }
+   },
+   "ronda2": {
+    "ronda": "r2mono_O3_LES_SI",
+    "equipos": {
+     "O3_LES_SI": {
+      "linajes_semilla": 180,
+      "cruzan": 0,
+      "evaluables": 180,
+      "casi_inmortales": 0,
+      "R0_real_eval_med": 0.072,
+      "R0_eval_med": 0.072,
+      "semillas_cruza_mayoria": 0,
+      "semillas_cruza_todos": 0,
+      "semillas": 20,
+      "gana": false
+     }
+    },
+    "regla_semilla": "mayoria",
+    "medido": "monocultivo de ['O3_LES_SI']: gana no",
+    "persistencia": {
+     "O3_LES_SI": {
+      "persisten": 0,
+      "linajes_semilla": 180,
+      "nac_reales_med": 8.0,
+      "semillas_estabiliza": 0,
+      "estabiliza": false,
+      "muertes": 18270,
+      "muertes_vol": 12853,
+      "frac_vol": 0.7035,
+      "carro_declara": {
+       "cuerpos_term": 0
+      }
+     }
+    }
+   }
+  },
+  "O3_TERM_CIEGO": {
+   "modo": "r2",
+   "escuderias": {
+    "O3_TERM_CIEGO": {
+     "linajes_semilla": 180,
+     "cruzan": 172,
+     "evaluables": 180,
+     "casi_inmortales": 0,
+     "R0_eval_med": 1.734,
+     "R0_med_todos": 1.734,
+     "semillas_que_cruza": 20,
+     "semillas": 20,
+     "gana": null,
+     "nac_reales_med": 32.0,
+     "fund_post_med": 0.0,
+     "sin_parir_med": 0.068,
+     "fund_post_incierto": 0,
+     "casi_inmortal_semillas": 0,
+     "R0_real_eval_med": 0.969,
+     "cruzan_real": 157
+    }
+   },
+   "ronda2": {
+    "ronda": "r2mono_O3_TERM_CIEGO",
+    "equipos": {
+     "O3_TERM_CIEGO": {
+      "linajes_semilla": 180,
+      "cruzan": 157,
+      "evaluables": 180,
+      "casi_inmortales": 0,
+      "R0_real_eval_med": 0.969,
+      "R0_eval_med": 1.734,
+      "semillas_cruza_mayoria": 19,
+      "semillas_cruza_todos": 9,
+      "semillas": 20,
+      "gana": true
+     }
+    },
+    "regla_semilla": "mayoria",
+    "medido": "monocultivo de ['O3_TERM_CIEGO']: gana SI",
+    "persistencia": {
+     "O3_TERM_CIEGO": {
+      "persisten": 172,
+      "linajes_semilla": 180,
+      "nac_reales_med": 32.0,
+      "semillas_estabiliza": 20,
+      "estabiliza": true,
+      "muertes": 5779,
+      "muertes_vol": 4624,
+      "frac_vol": 0.8001,
+      "carro_declara": {
+       "cuerpos_term": 4834
+      }
+     }
+    }
+   }
+  },
+  "CTRL_O3_SINTERM": {
+   "modo": "r2",
+   "escuderias": {
+    "CTRL_O3_SINTERM": {
+     "linajes_semilla": 180,
+     "cruzan": 138,
+     "evaluables": 140,
+     "casi_inmortales": 40,
+     "R0_eval_med": 5.944,
+     "R0_med_todos": 6.571,
+     "semillas_que_cruza": 20,
+     "semillas": 20,
+     "gana": null,
+     "nac_reales_med": 6.0,
+     "fund_post_med": 0.0,
+     "sin_parir_med": 0.111,
+     "fund_post_incierto": 0,
+     "casi_inmortal_semillas": 17,
+     "R0_real_eval_med": 0.857,
+     "cruzan_real": 21
+    }
+   },
+   "ronda2": {
+    "ronda": "r2mono_CTRL_O3_SINTERM",
+    "equipos": {
+     "CTRL_O3_SINTERM": {
+      "linajes_semilla": 180,
+      "cruzan": 21,
+      "evaluables": 140,
+      "casi_inmortales": 40,
+      "R0_real_eval_med": 0.857,
+      "R0_eval_med": 5.944,
+      "semillas_cruza_mayoria": 0,
+      "semillas_cruza_todos": 0,
+      "semillas": 20,
+      "gana": false
+     }
+    },
+    "regla_semilla": "mayoria",
+    "medido": "monocultivo de ['CTRL_O3_SINTERM']: gana no",
+    "persistencia": {
+     "CTRL_O3_SINTERM": {
+      "persisten": 130,
+      "linajes_semilla": 180,
+      "nac_reales_med": 6.0,
+      "semillas_estabiliza": 17,
+      "estabiliza": true,
+      "muertes": 1183,
+      "muertes_vol": 22,
+      "frac_vol": 0.0186,
+      "carro_declara": {
+       "cuerpos_term": 0
+      }
+     }
+    }
+   }
+  }
+ }
+}

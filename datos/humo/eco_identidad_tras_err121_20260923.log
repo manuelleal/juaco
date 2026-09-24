@@ -1,0 +1,54 @@
+(0) ORIGEN
+  [OK ] motor_convive.py sha d10cb9021f5d0f41
+  [OK ] FABRICA.py sha 2ebee3e99ea5a33a
+  [OK ] APR.py sha 4402aa5142065c72
+  [OK ] motor_eco.py, FABRICA_ECO.py, APR_ECO.py == construccion por anclas
+(I) eco=None == motor_convive BIT A BIT
+  [OK ] 9 FABRICA fija T=3000
+  [OK ] 9 O2 inmediata T=2000
+  [OK ] O2*3+O3*3+O4*3 fija T=2000
+  [OK ] 9 APR fija T=1500
+(F) _see rapido
+  [OK ] FABRICA_ECO._see == FABRICA._see en 200000 casos · distintos 0; empates a igual distancia 23641; 'todos rechazados' 1408
+  [OK ] pista v2: 9 FABRICA_ECO == 9 FABRICA (T=3000, toda la salida)
+  [OK ] pista v2: 9 APR_ECO == 9 APR (T=2000, toda la salida)
+  [OK ] pista v2 inmediata: FABRICA_ECO == FABRICA
+(E) plomeria del genoma, perillas apagadas == pista v2
+  [OK ] eco=dict(refunda=1) con G0 · nacimientos 9, fundadores del banco 0
+  [OK ] + 8 sombras, cada_gen 500, banco 50 · nacimientos 9, fundadores del banco 71
+  [OK ] p_mut 0.3 con mutables=() (ningun gen muta) · nacimientos 9, fundadores del banco 71
+  [OK ] donante='azar' sin mutacion · nacimientos 9, fundadores del banco 71
+  [OK ] genoma explicito = G0 · nacimientos 9, fundadores del banco 0
+(M) mutacion
+  [OK ] determinista (dos corridas iguales)
+  [OK ] tasa de mutacion por gen ~ p_mut (0.2; los enteros pueden quedar en el tope) · eventos 345, tasa 0.1923, sombras 0.2041
+  [OK ] rangos respetados en los vivos finales · vivos 18
+  [OK ] mutables=(alpha, eta_s): los otros genes quedan en G0 · vivos 18; cambian 7
+(R) refunda=0 (ERR-118: nadie repone fundadores)
+  [OK ] refunda=0: cero fundadores repuestos
+  [OK ] refunda=0 == refunda=1 (TODA la salida fisica) hasta el primer fundador · primer fundador en t=94; mordidas antes 39
+  [OK ] si todo muere, muere (t_ext marcado y cero vivos) o hay vivos en T · t_ext 3624
+(V) vivero y corte
+  [OK ] ningun fundador despues de t_corte · fundadores 162, ultimo t=2994
+  [OK ] el banco alimenta fundadores y la foto del corte existe · desde banco 162; corte {'vivos': 19, 'n_banco': 38}
+(C) checkpoint reanudable
+  [OK ] seguida == cortada en t=2000 y reanudada (TODA la salida) · checkpoints [1000, 2000, 3000]; 551 KB
+  [OK ] checkpoint de otra corrida aborta · ECO: el checkpoint es de otra corrida (firma distinta)
+(S) flujo de individuos
+  [OK ] filas == muertes + vivos y l.ind vacio · filas 174 = 164 + 10
+(G) guardias
+  [OK ] clave eco desconocida aborta
+  [OK ] genoma fuera de rango aborta
+  [OK ] t_corte sin vivero (refunda=0) aborta
+  [OK ] runner: bandera desconocida aborta · corre_eco.py: error: unrecognized arguments: --bandera_rara
+  [OK ] runner: bandera abreviada aborta (--hum) · corre_eco.py: error: unrecognized arguments: --hum
+  [OK ] runner: --humo con --pool aborta · ECO: --humo no admite otras banderas
+  [OK ] runner: --lee y --humo juntos abortan · ECO: exactamente uno de --humo, --serie, --lee, --largo
+  [OK ] runner: --largo fuera de su ventana aborta · ECO: --largo --desde 19301 --n 3 --pool 6 [--reanuda]
+(J) juez automatico (enmienda tras el humo: el banco, no la mediana)
+  [OK ] juez: G0 como genoma == G0 como banco de 200 copias · [3000, 2842]
+  [OK ] juez: un banco distinto de G0 cambia la bateria (el genoma SE expresa) · G0 [(3000, 6), (2842, 3)] · mutante [(2643, 9), (3000, 14)]
+  [OK ] juez: fundadores del banco deterministas y distintos entre si
+  [OK ] runner: ventanas de semillas declaradas (19101 serie, 19121 replica) y bateria 19201-19220
+tiempo 208 s
+RESULTADO: 41/41

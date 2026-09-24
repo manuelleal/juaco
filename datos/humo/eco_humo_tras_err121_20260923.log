@@ -1,0 +1,12 @@
+HUMO VIDA s19001 T=12000 corte=8000: 58.0 s, 206.9 pasos/s, 70.0 cuerpos de media, ~64 us por cuerpo y paso
+  persiste 0 · t_ext 11686 · vivos_T 0 · linajes_T 0 · nac 425 · refund 2024 (desde banco 2024) · tasa de mutacion por gen 0.0480 (p = 0.05)
+  corte: {'t': 8000, 'vivos': 99, 'n_banco': 200} · sel_corte [0, 0, 1, -1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0]
+  juez (genoma del corte, 3 semillas, T_b 6000): [2129, 3138, 6000] · G0: [1969, 3710, 2073]
+  costo estimado por proceso: N=100: 1e6 pasos 1.8 h, 1e7 pasos 18 h; N=300: 1e6 pasos 5.3 h, 1e7 pasos 53 h; N=1000: 1e6 pasos 17.7 h, 1e7 pasos 177 h
+  semillas por brazo: {'VIDA': 1, 'CEREBRO': 0, 'AZAR': 0, 'MUT0': 0}; persiste tras el corte (vivos en T): {'VIDA': 0, 'CEREBRO': 0, 'AZAR': 0, 'MUT0': 0}
+  P2 genes seleccionados en VIDA (>=15/20 mismo signo fuera de las 8 sombras): []; AZAR con > 8/20 (falsos positivos del instrumento): []
+  P3 juez (supervivencia mediana en la bateria vs G0 = 2073.0): VIDA gana 1/1 (mediana 3138.0); AZAR 0/0 (None); CEREBRO 0/0 (None)
+  P1 VIDA persiste >= 15/20: NO (0) · P1c MUT0 <= 2/20: SE CUMPLE (0) · P2 seleccion en genes: NO · P3 juez: NO · P3c AZAR <= 10/20: SE CUMPLE · P4 VIDA - AZAR >= 8: NO (0) · H-c CEREBRO persiste >= 15/20: NO (0)
+  VEREDICTO POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (serie incompleta)
+  JSON: experimentos\juaco_eco\datos\humo\eco_humo_s19001_20260923_194831.json
+VEREDICTO (humo, una semilla, no decide): NO EVALUABLE (serie incompleta)

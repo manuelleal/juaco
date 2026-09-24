@@ -1,0 +1,60 @@
+  sha organismo_v14.py (TRONCO CONGELADO)          feefc88b1fd8d434  OK
+  sha organismo_familias_bav.py (ORIGEN)           2dca0a3e239481f0  OK
+  sha identidad_familias_bav.py (ayudantes)        cf7655b379014a55  OK
+  sha construye_v5.py                              09df2ad401dc797d
+  sha organismo_familias_v5.py                     b6138d31e232b896
+  sha identidad_v5.py                              33a2491aedeb4113
+
+APAGADO (v5=0): organismo_familias_v5 == organismo_familias_bav (EL ORIGEN)
+  [   9.1s] (a) mundo=AB base                                                                    3/3 IDENTICO
+  [  15.5s] (b) mundo=AB, relevo encendido, k=3                                                  2/2 IDENTICO
+  [  25.5s] (c) mundo del RECEPTOR, lectura b4b (k=1)                                            2/2 IDENTICO
+  [  34.3s] (c) mundo del RECEPTOR, lectura b5k3 (k=3)                                           2/2 IDENTICO
+  [  42.7s] (c) mundo del RECEPTOR, lectura b6suf (k=3, sufijo)                                  2/2 IDENTICO
+  [  49.8s] (c) mundo del RECEPTOR, lectura A1                                                   2/2 IDENTICO
+  [  57.3s] (c) mundo del RECEPTOR, lectura BA-v (conj_tipo=2)                                   2/2 IDENTICO
+  [  66.5s] (d) el EMISOR voraz del bloque 4b (canal emite)                                      2/2 IDENTICO
+  emisores con mensaje (-): 2/3 -> (1, 2)  [91.9s]
+  [ 121.4s] (e) canal sen, BA-v                                                                  2/2 IDENTICO
+  [ 149.7s] (f) canal mudo (CORTADO), BA-v                                                       2/2 IDENTICO
+  [ 180.2s] (g) canal inm, BA-v                                                                  2/2 IDENTICO
+  [ 209.9s] (h) brazo PAR (par_herm=(1,0)), BA-v                                                 2/2 IDENTICO
+  [ 238.0s] (i) canal sen, BA-v con memoria BARAJADA                                             2/2 IDENTICO
+  [ 262.8s] (j) canal sen, b5k3                                                                  2/2 IDENTICO
+
+RNG NO CONSUMIDO (ancla larga)
+  [ 290.0s] (k) mundo=AB a T = 120000, relevo, BA-v, v5=0                                        2/2 IDENTICO
+
+CADENA HASTA EL TRONCO (se comprueba, no se supone)
+  [ 297.2s] (l) v5=0 + mundo=AB == organismo_v14 (TRONCO CONGELADO)                              3/3 IDENTICO
+  [ 304.1s] (m) relevo ON + mundo=AB == organismo_v15f_on                                        3/3 IDENTICO
+
+INERCIA: sin tabla no hay casilla que partir
+  [ 311.1s] (n) memoria_pares=None: v5=1 == v5=0 (mundo=AB)                                      3/3 IDENTICO
+  [ 320.2s] (n2) memoria_pares=None, mundo del receptor sin relevo: v5=1 == v5=0                 2/2 IDENTICO
+
+LA BARAJA NO TOCA EL AZAR (con V-5 encendido): el PREFIJO hasta la entrega es identico
+  [ 359.8s] (o) v5=1, canal sen: todo lo calculado ANTES de escribir el mensaje, con y sin baraja 2/2 IDENTICO
+
+CONTROLES QUE DEBEN DIFERIR (sin ellos el arnes pasaria por vacuidad)
+  [ 376.1s] (p) v5=1 != v5=0 (mundo del receptor, BA-v, sin canal)                               3/3 DIFIERE (como debe)
+  [ 431.3s] (q) BA-v5: CANAL != CORTADO                                                          2/2 DIFIERE (como debe)
+  [ 431.3s] (r) BA-v5: BARAJADA != candidato                                                     2/2 DIFIERE (como debe)
+
+EL MECANISMO HACE LO QUE DICE (brazo PAR, T = 60000)
+      s1: v5=1 partos msg/bocado 19/405 (1.o t=135) subcasillas 424  lee(hermana) [-9.0, True]  lee(ref) [3.0, True, 3, 3] | v5=0 lee(hermana) [-1.0, True]  lee(ref) [3.0, True, 3, 3]
+      s2: v5=1 partos msg/bocado 18/405 (1.o t=52) subcasillas 423  lee(hermana) [-1.0, True]  lee(ref) [3.0, True, 3, 3] | v5=0 lee(hermana) [2.0, True]  lee(ref) [3.0, True, 3, 3]
+  [ 463.8s] (s) con v5=1 el MENSAJE parte casillas (v5_split_msg > 0) en todas las semillas con mensaje 1/1 OK
+  [ 463.8s] (t) con v5=1 la hermana fija lee < 0 justo DESPUES del mensaje (>= 2 de 3 semillas con mensaje) 1/1 OK
+  [ 463.8s] (u) con v5=1 el referente lee > 0 tras el mensaje (canal_lee_ref[0] > 0, todas)      1/1 OK
+  [ 463.8s] (v) con v5=0 no hay partos ni subcasillas (contadores a 0 / None)                    1/1 OK
+
+PERILLA MAL ESCRITA: lanza
+  [ 463.8s] (w) v5=2 lanza                                                                       1/1 LANZA (como debe)
+  [ 463.8s] (w) v5=-1 lanza                                                                      1/1 LANZA (como debe)
+  [ 463.8s] (w) v5=0.5 lanza                                                                     1/1 LANZA (como debe)
+  [ 463.8s] (w) v5='1' lanza                                                                     1/1 LANZA (como debe)
+  [ 463.8s] (w) v5=True lanza                                                                    1/1 LANZA (como debe)
+  [ 463.8s] (x) v5=1 con memoria_variante=1 lanza (el sufijo ya direcciona todo)                 1/1 LANZA (como debe)
+
+IDENTIDAD V-5: 33/33  (464 s, un proceso)

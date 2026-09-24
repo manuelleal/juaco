@@ -1,0 +1,206 @@
+corre_n9 · n9_serie_s13321-13340_T100000 · 2026-09-23 18:15:33 · python 3.14.2 · pool 6
+  brazos ['O3', 'O3_LES_SI', 'O3_TERM_CIEGO', 'CTRL_O3_SINTERM'] · semillas 13321-13340 · T=100000 · monocultivo de 9 · fundador limpio 1 · pizarra 1
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos\carrera_escuderias\carros\O3.py 0442c2884fcb0e11 OK
+  sha experimentos\nivel09_cuerpo_nuevo_b2\organismo_f9c.py 9dd1fb91ecec35ae OK
+  construccion por anclas reproducible: OK
+  chequeo estatico O3: PASA
+  chequeo estatico O3_LES_SI: PASA
+  chequeo estatico O3_TERM_CIEGO: PASA
+  chequeo estatico CTRL_O3_SINTERM: PASA
+  chequeo estatico O3_LES_OFF: PASA
+  chequeo estatico O3_LES_COLA: PASA
+  identidad corta del juez (FABRICA == organismo_f9c REL, s=1, T=5000): OK
+  mini identidad O3_LES_OFF == O3 (s13399, T=3000): OK
+  [  434.6s] O3               s13323 (419.6s) R0 pista 1.7552
+  [  435.7s] O3               s13325 (420.6s) R0 pista 1.784
+  [  436.7s] O3               s13326 (421.7s) R0 pista 1.8305
+  [  439.1s] O3               s13322 (424.1s) R0 pista 1.5786
+  [  439.2s] O3               s13324 (424.1s) R0 pista 1.8247
+  [  444.0s] O3               s13321 (429.0s) R0 pista 1.8265
+  [  873.9s] O3               s13329 (437.2s) R0 pista 1.8889
+  [  875.6s] O3               s13327 (441.0s) R0 pista 1.8328
+  [  875.7s] O3               s13328 (440.1s) R0 pista 1.7979
+  [  877.2s] O3               s13331 (438.0s) R0 pista 1.7717
+  [  880.7s] O3               s13330 (441.6s) R0 pista 1.8425
+  [  890.3s] O3               s13332 (446.3s) R0 pista 1.8358
+  [ 1264.0s] O3               s13335 (388.3s) R0 pista 1.849
+  [ 1269.8s] O3               s13333 (395.9s) R0 pista 1.8264
+  [ 1270.2s] O3               s13334 (394.7s) R0 pista 1.8542
+  [ 1272.4s] O3               s13336 (395.2s) R0 pista 1.6436
+  [ 1274.8s] O3               s13338 (384.5s) R0 pista 1.8493
+  [ 1277.6s] O3               s13337 (396.8s) R0 pista 1.8817
+  [ 1570.7s] O3_LES_SI        s13322 (298.3s) R0 pista 0.0712
+  [ 1573.1s] O3_LES_SI        s13321 (302.8s) R0 pista 0.084
+  [ 1573.5s] O3_LES_SI        s13323 (298.7s) R0 pista 0.0661
+  [ 1583.4s] O3_LES_SI        s13324 (305.9s) R0 pista 0.0858
+  [ 1743.7s] O3               s13339 (479.7s) R0 pista 1.7246
+  [ 1753.8s] O3               s13340 (484.0s) R0 pista 1.8694
+  [ 1898.3s] O3_LES_SI        s13325 (327.6s) R0 pista 0.0625
+  [ 1901.8s] O3_LES_SI        s13326 (328.8s) R0 pista 0.0668
+  [ 1907.5s] O3_LES_SI        s13327 (334.1s) R0 pista 0.0736
+  [ 1928.9s] O3_LES_SI        s13328 (345.4s) R0 pista 0.1022
+  [ 2081.5s] O3_LES_SI        s13329 (337.8s) R0 pista 0.0812
+  [ 2084.0s] O3_LES_SI        s13330 (330.2s) R0 pista 0.0518
+  [ 2204.9s] O3_LES_SI        s13331 (306.6s) R0 pista 0.073
+  [ 2230.5s] O3_LES_SI        s13332 (328.7s) R0 pista 0.0753
+  [ 2243.0s] O3_LES_SI        s13333 (335.5s) R0 pista 0.0684
+  [ 2255.1s] O3_LES_SI        s13334 (326.3s) R0 pista 0.0905
+  [ 2390.0s] O3_LES_SI        s13335 (308.6s) R0 pista 0.0739
+  [ 2410.8s] O3_LES_SI        s13336 (326.8s) R0 pista 0.0693
+  [ 2540.6s] O3_LES_SI        s13337 (335.7s) R0 pista 0.0692
+  [ 2558.9s] O3_LES_SI        s13339 (315.9s) R0 pista 0.0776
+  [ 2571.0s] O3_LES_SI        s13338 (340.5s) R0 pista 0.0762
+  [ 2578.1s] O3_LES_SI        s13340 (323.0s) R0 pista 0.0818
+  [ 2886.6s] O3_TERM_CIEGO    s13321 (496.6s) R0 pista 1.6809
+  [ 2899.8s] O3_TERM_CIEGO    s13322 (489.1s) R0 pista 1.7415
+  [ 3005.1s] O3_TERM_CIEGO    s13323 (464.5s) R0 pista 1.7105
+  [ 3024.6s] O3_TERM_CIEGO    s13324 (465.6s) R0 pista 1.7941
+  [ 3030.1s] O3_TERM_CIEGO    s13325 (459.1s) R0 pista 1.8276
+  [ 3044.6s] O3_TERM_CIEGO    s13326 (466.5s) R0 pista 1.7883
+  [ 3339.7s] O3_TERM_CIEGO    s13327 (453.1s) R0 pista 1.8215
+  [ 3344.3s] O3_TERM_CIEGO    s13328 (444.5s) R0 pista 1.6921
+  [ 3461.6s] O3_TERM_CIEGO    s13329 (456.5s) R0 pista 1.6907
+  [ 3484.4s] O3_TERM_CIEGO    s13331 (454.3s) R0 pista 1.7492
+  [ 3485.9s] O3_TERM_CIEGO    s13330 (461.4s) R0 pista 1.7508
+  [ 3508.9s] O3_TERM_CIEGO    s13332 (464.3s) R0 pista 1.7836
+  [ 3798.3s] O3_TERM_CIEGO    s13333 (458.6s) R0 pista 1.7263
+  [ 3802.2s] O3_TERM_CIEGO    s13334 (458.0s) R0 pista 1.7987
+  [ 3904.6s] O3_TERM_CIEGO    s13335 (443.0s) R0 pista 1.7394
+  [ 3920.4s] O3_TERM_CIEGO    s13336 (436.0s) R0 pista 1.4937
+  [ 3944.6s] O3_TERM_CIEGO    s13337 (458.6s) R0 pista 1.6812
+  [ 3962.2s] O3_TERM_CIEGO    s13338 (453.3s) R0 pista 1.7781
+  [ 4247.9s] O3_TERM_CIEGO    s13339 (449.6s) R0 pista 1.6928
+  [ 4257.0s] O3_TERM_CIEGO    s13340 (454.8s) R0 pista 1.8153
+  [ 4358.8s] CTRL_O3_SINTERM  s13321 (454.2s) R0 pista 12.4211
+  [ 4369.1s] CTRL_O3_SINTERM  s13322 (448.7s) R0 pista 4.7111
+  [ 4397.6s] CTRL_O3_SINTERM  s13323 (453.0s) R0 pista 5.92
+  [ 4415.3s] CTRL_O3_SINTERM  s13324 (453.1s) R0 pista 10.5106
+  [ 4692.7s] CTRL_O3_SINTERM  s13325 (444.7s) R0 pista 5.0125
+  [ 4707.9s] CTRL_O3_SINTERM  s13326 (450.9s) R0 pista 7.4915
+  [ 4806.7s] CTRL_O3_SINTERM  s13327 (447.9s) R0 pista 7.5574
+  [ 4818.2s] CTRL_O3_SINTERM  s13328 (449.1s) R0 pista 5.8986
+  [ 4851.7s] CTRL_O3_SINTERM  s13329 (454.1s) R0 pista 8.4151
+  [ 4859.7s] CTRL_O3_SINTERM  s13330 (444.4s) R0 pista 9.46
+  [ 5131.9s] CTRL_O3_SINTERM  s13331 (439.2s) R0 pista 5.5405
+  [ 5143.5s] CTRL_O3_SINTERM  s13332 (435.6s) R0 pista 8.069
+  [ 5239.7s] CTRL_O3_SINTERM  s13333 (433.0s) R0 pista 6.0714
+  [ 5242.7s] CTRL_O3_SINTERM  s13334 (424.5s) R0 pista 8.3051
+  [ 5277.7s] CTRL_O3_SINTERM  s13335 (426.0s) R0 pista 6.1449
+  [ 5282.3s] CTRL_O3_SINTERM  s13336 (422.6s) R0 pista 4.8095
+  [ 5509.2s] CTRL_O3_SINTERM  s13337 (377.3s) R0 pista 10.1111
+  [ 5517.1s] CTRL_O3_SINTERM  s13338 (373.6s) R0 pista 7.2456
+  [ 5581.5s] CTRL_O3_SINTERM  s13339 (341.8s) R0 pista 4.0652
+  [ 5592.7s] CTRL_O3_SINTERM  s13340 (350.0s) R0 pista 8.2909
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n9\datos\n9_serie_s13321-13340_T100000_20260923_181533.json (sha de9fcea14ec55590)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo r2
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir R0 REAL eval med cruzan real  gana
+  O3             180    178     180        0       1.823          20/20       31.0          0.0     0.061            0.968         171  -- (varios linajes por semilla)
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    (ronda 2: el criterio y las predicciones que deciden estan en el bloque RONDA 2 / ENMIENDA 5 de abajo)
+
+RONDA 2 / ENMIENDA 5 (fundador limpio SI; cruza = R0 de NACIMIENTOS REALES >= 0.9 y 0 fundadores tras t = 10000, con >= 5 muertes) · r2mono_O3
+  equipo     lin-sem cruzan evaluab casi inm R0 REAL eval med R0 prereg med sem cruza (mayoria)  (todos)  gana
+  O3             180    171     180        0            0.968         1.823               20/20    15/20  SI
+  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:
+    - al menos un equipo gana la ronda 2 en monocultivo (p 0.50)
+    - en pista mixta con 6 FABRICA gana alguno (p 0.25)
+    - O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)
+    medido en esta serie: monocultivo de ['O3']: gana SI
+
+PERSISTENCIA / ENMIENDA 6 (co-principal; persiste = 0 fundadores tras t = 10000 y >= 5 nacimientos reales; estabiliza en una semilla si persiste > 1/2 de sus linajes; estabiliza la ronda con >= 15/20)
+  equipo     lin-sem persisten nac reales med sem estabiliza  estabiliza   muertes voluntarias FISICAS (fraccion)   declaradas por el carro (no cuentan)
+  O3             180       178           31.0          20/20  SI          4504/5621 (0.8013)   {'cuerpos_term': 4741}  -> con muerte programada
+  PREDICCIONES FIRMADAS (ENMIENDA 6, persistencia) y lo medido en esta serie:
+    - O3 estabiliza en mono (p 0.5)  ->  medido: ESTABILIZA (20/20 semillas)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo r2
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir R0 REAL eval med cruzan real  gana
+  O3_LES_SI      180      0     180        0       0.075           0/20        8.0         85.5     0.933            0.072           0  -- (varios linajes por semilla)
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    (ronda 2: el criterio y las predicciones que deciden estan en el bloque RONDA 2 / ENMIENDA 5 de abajo)
+
+RONDA 2 / ENMIENDA 5 (fundador limpio SI; cruza = R0 de NACIMIENTOS REALES >= 0.9 y 0 fundadores tras t = 10000, con >= 5 muertes) · r2mono_O3_LES_SI
+  equipo     lin-sem cruzan evaluab casi inm R0 REAL eval med R0 prereg med sem cruza (mayoria)  (todos)  gana
+  O3_LES_SI      180      0     180        0            0.072         0.075                0/20     0/20  no
+  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:
+    - al menos un equipo gana la ronda 2 en monocultivo (p 0.50)
+    - en pista mixta con 6 FABRICA gana alguno (p 0.25)
+    - O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)
+    medido en esta serie: monocultivo de ['O3_LES_SI']: gana no
+
+PERSISTENCIA / ENMIENDA 6 (co-principal; persiste = 0 fundadores tras t = 10000 y >= 5 nacimientos reales; estabiliza en una semilla si persiste > 1/2 de sus linajes; estabiliza la ronda con >= 15/20)
+  equipo     lin-sem persisten nac reales med sem estabiliza  estabiliza   muertes voluntarias FISICAS (fraccion)   declaradas por el carro (no cuentan)
+  O3_LES_SI      180         0            8.0           0/20  no          13070/18507 (0.7062)   {'cuerpos_term': 0}
+  PREDICCIONES FIRMADAS (ENMIENDA 6, persistencia) y lo medido en esta serie:
+    (ninguna prediccion de persistencia para esta alineacion)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo r2
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir R0 REAL eval med cruzan real  gana
+  O3_TERM_CIEGO     180    173     180        0       1.758          20/20       32.0          0.0     0.062            0.969         164  -- (varios linajes por semilla)
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    (ronda 2: el criterio y las predicciones que deciden estan en el bloque RONDA 2 / ENMIENDA 5 de abajo)
+
+RONDA 2 / ENMIENDA 5 (fundador limpio SI; cruza = R0 de NACIMIENTOS REALES >= 0.9 y 0 fundadores tras t = 10000, con >= 5 muertes) · r2mono_O3_TERM_CIEGO
+  equipo     lin-sem cruzan evaluab casi inm R0 REAL eval med R0 prereg med sem cruza (mayoria)  (todos)  gana
+  O3_TERM_CIEGO     180    164     180        0            0.969         1.758               19/20    11/20  SI
+  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:
+    - al menos un equipo gana la ronda 2 en monocultivo (p 0.50)
+    - en pista mixta con 6 FABRICA gana alguno (p 0.25)
+    - O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)
+    medido en esta serie: monocultivo de ['O3_TERM_CIEGO']: gana SI
+
+PERSISTENCIA / ENMIENDA 6 (co-principal; persiste = 0 fundadores tras t = 10000 y >= 5 nacimientos reales; estabiliza en una semilla si persiste > 1/2 de sus linajes; estabiliza la ronda con >= 15/20)
+  equipo     lin-sem persisten nac reales med sem estabiliza  estabiliza   muertes voluntarias FISICAS (fraccion)   declaradas por el carro (no cuentan)
+  O3_TERM_CIEGO     180       173           32.0          19/20  SI          4688/5840 (0.8027)   {'cuerpos_term': 4950}  -> con muerte programada
+  PREDICCIONES FIRMADAS (ENMIENDA 6, persistencia) y lo medido en esta serie:
+    (ninguna prediccion de persistencia para esta alineacion)
+
+ERR-99 / ENMIENDA 2 (evaluable = >= 5 muertes; cruza = R0 >= 0.9 y 0 fundadores tras t = 10000) · modo r2
+  escuderia  lin-sem cruzan evaluab casi inm R0 eval med sem. que cruza nac reales fund>10k med sin parir R0 REAL eval med cruzan real  gana
+  CTRL_O3_SINTERM     180    127     129       51         6.0          20/20        6.0          0.0     0.125            0.857          14  -- (varios linajes por semilla)
+  PREDICCIONES FIRMADAS (ENMIENDAS 2 y 3) y lo medido:
+    (ronda 2: el criterio y las predicciones que deciden estan en el bloque RONDA 2 / ENMIENDA 5 de abajo)
+
+RONDA 2 / ENMIENDA 5 (fundador limpio SI; cruza = R0 de NACIMIENTOS REALES >= 0.9 y 0 fundadores tras t = 10000, con >= 5 muertes) · r2mono_CTRL_O3_SINTERM
+  equipo     lin-sem cruzan evaluab casi inm R0 REAL eval med R0 prereg med sem cruza (mayoria)  (todos)  gana
+  CTRL_O3_SINTERM     180     14     129       51            0.857           6.0                0/20     0/20  no
+  PREDICCIONES FIRMADAS (ENMIENDA 5) -- se leen sobre el conjunto de series; lo de esta serie:
+    - al menos un equipo gana la ronda 2 en monocultivo (p 0.50)
+    - en pista mixta con 6 FABRICA gana alguno (p 0.25)
+    - O1 con fundador limpio cruza en monocultivo con R0 real (p 0.60)
+    medido en esta serie: monocultivo de ['CTRL_O3_SINTERM']: gana no
+
+PERSISTENCIA / ENMIENDA 6 (co-principal; persiste = 0 fundadores tras t = 10000 y >= 5 nacimientos reales; estabiliza en una semilla si persiste > 1/2 de sus linajes; estabiliza la ronda con >= 15/20)
+  equipo     lin-sem persisten nac reales med sem estabiliza  estabiliza   muertes voluntarias FISICAS (fraccion)   declaradas por el carro (no cuentan)
+  CTRL_O3_SINTERM     180       121            6.0          17/20  SI          10/1105 (0.009)   {'cuerpos_term': 0}  -> con muerte programada
+  PREDICCIONES FIRMADAS (ENMIENDA 6, persistencia) y lo medido en esta serie:
+    (ninguna prediccion de persistencia para esta alineacion)
+
+TABLA n9 · n9_serie_s13321-13340_T100000
+  brazo             gana(E5) estab(E6) R0real med persisten evaluab muertes med nac reales desc med sin parir vida med  causas h/s/v/sal
+  O3                   20/20     20/20     0.9677   178/180     180        31.0       31.0     58.0    0.0606  2694.25  196/200/2623/2602
+  O3_LES_SI             0/20      0/20     0.0725     0/180     180       102.5        8.0      8.0     0.933   669.75  358/520/8636/8993  lesion {'pasos': 160707, 'E_real': 1.0194, 'E_usado': 0.9119, 'Ag_real': 0.9719, 'Ag_usado': 0.8678, 'dlev': 0.6892}
+  O3_TERM_CIEGO        19/20     19/20     0.9692   173/180     180        32.0       32.0     58.0    0.0625   2658.0  210/193/2688/2749
+  CTRL_O3_SINTERM       0/20     17/20     0.8571   121/180     129         6.0        6.0     48.0     0.125  9004.25  224/203/337/341
+  O3 contra O3_LES_SI: persistencia pareada O3 gana/X gana/empate 20/0/0 (dif 178) · R0 real pareado O3/X 20/0 de 20 (dif mediana 0.892) · descendientes dif mediana 51.0 -> X PIERDE (por E5 True, por persistencia True)
+  O3 contra O3_TERM_CIEGO: persistencia pareada O3 gana/X gana/empate 3/1/16 (dif 5) · R0 real pareado O3/X 4/13 de 20 (dif mediana -0.0019) · descendientes dif mediana 0.0 -> X NO pierde (por E5 False, por persistencia False)
+  O3 contra CTRL_O3_SINTERM: persistencia pareada O3 gana/X gana/empate 19/0/1 (dif 57) · R0 real pareado O3/X 20/0 de 20 (dif mediana 0.1096) · descendientes dif mediana 10.5 -> X PIERDE (por E5 True, por persistencia True)
+
+PREDICCIONES FIRMADAS (PREREGISTRO_n9.md §4)
+  P1 ANCLA: O3 gana la ENMIENDA 5 (>= 15/20) con R0 real eval mediana en [0.95, 0.99] y persisten >= 170/180 -> SE CUMPLE
+  P2 L-SI: O3_LES_SI R0 real eval mediana en [0.55, 0.88], no gana (<= 5/20 por mayoria) y persisten <= 60/180 -> NO se cumple
+  P3 L-SI pareado: O3 persiste mas que O3_LES_SI en >= 17/20 semillas -> SE CUMPLE
+  P4 L-RES (puede fallar; el creador la da por REFUTADA con p 0.55): O3_TERM_CIEGO PIERDE contra O3 (§5) -> NO se cumple
+  P5 L-RES: O3_TERM_CIEGO muere mas que O3 (mediana de muertes por linaje-semilla >= 1.2x la de O3) -> NO se cumple
+  P6 SIN TERMINAL: CTRL_O3_SINTERM tiene 100-175 de 180 linajes-semilla evaluables (>= 5 muertes) -> SE CUMPLE
+  P7 SIN TERMINAL: CTRL_O3_SINTERM R0 real eval mediana >= 0.90 (p 0.5; puede fallar en cualquiera de los dos sentidos) -> NO se cumple
+
+VEREDICTO HAY ALGO MODESTO en esta serie (H-SI: pierde la lesion del estado propio; H-RES no: la reserva no hace falta) · V-M NO se cumple (|dE| 0.108, |dAg| 0.104, tope 0.1): H-SI se lee como 'estado propio desfasado y SESGADO hacia estados anteriores'
+  coherencia fisica 720/720 · t_fund reconstruible 720/720 · escrituras en pizarra 0
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n9\datos\n9_serie_s13321-13340_T100000_20260923_181533_resumen.json
+
+Terminado en 5593.0s

@@ -6571,3 +6571,52 @@ Criterio §6: FUNCIONA = P1 (el tronco no compone para k = 3…8) y P2 (N compon
 - **Cabo cerrado por el coordinador:** `requirements.txt` no traía scipy. Se fija `scipy==1.17.1` (versión del PC) y `llvmlite==0.49.0`.
 - **Decisión:** Pool 3 en la nube (nproc − 1: allá nadie más usa la máquina).
 - **Informe:** `datos/humo/nube_calibracion_20260924.md`.
+
+---
+
+### SUBIDA N9 — ¿O3 cruza H-1 porque se lee a sí mismo?, serie 13301–13320 y réplica 13321–13340 (23-sep-2026, 17:00–19:48; Pool 6; preregistro `experimentos/subida_n9/PREREGISTRO_n9.md` con ERR-114, commiteado en `8c95ab4`): **HAY ALGO MODESTO, REPLICADO — si O3 decide leyendo su propio estado de otro momento, deja de cruzar en 20/20 semillas de las dos series (R0 real 0.968 → 0.072; persisten 178/180 → 0/180). La muerte programada no necesita leer la reserva (H-RES no se sostiene)**
+
+Arnés `identidad_n9.py` 22/22 antes de cada serie. Resúmenes: serie `n9_serie_s13301-13320_T100000_20260923_170033_resumen.json` (`7c3ca31d1f263333`), réplica `n9_serie_s13321-13340_T100000_20260923_181533_resumen.json` (`9a916471ef84dcc6`).
+
+| brazo (monocultivo de 9, pista escalada de la carrera, T=100000) | R0 real serie / réplica | persisten serie / réplica | gana E5 serie / réplica |
+|---|---|---|---|
+| O3 (ancla) | 0.968 / 0.968 | 178 / 178 de 180 | 19/20 / 20/20 |
+| **O3_LES_SI** (decide con su estado de un paso pasado al azar) | **0.072 / 0.073** | **0 / 0** | 0/20 / 0/20 |
+| O3_TERM_CIEGO (la muerte programada no lee la reserva) | 0.969 / 0.969 | 172 / 173 | 19/20 / 19/20 |
+| CTRL_O3_SINTERM (sin muerte programada) | 0.857 / 0.857 | 130 / 121 | 0/20 / 0/20 |
+
+Pareados: O3 gana a LES_SI 20/20 en persistencia y en R0 real, en las dos series; TERM_CIEGO no pierde (empata); SIN_TERM pierde. Predicciones: P1, P3 y P6 se cumplen en las dos; P2 (la lesión dejaría R0 en 0.55–0.88) se refuta hacia abajo, porque la lesión es mucho más grave de lo predicho; P4 y P5 (H-RES) no se cumplen; P7 no se cumple.
+
+**Lectura V-M (ERR-114):** en la serie se cumple (|dE| 0.085, |dAg| 0.092 ≤ 0.10): el estado leído tiene la misma distribución que el real, sólo desfasado. En la réplica no se cumple (0.108 y 0.104): el estado leído además queda sesgado hacia estados anteriores. La serie aísla el desfase; en la réplica, desfase y sesgo no se pueden separar del todo.
+
+**Lectura honesta.** Es la primera lesión del proyecto que muestra, replicado, que un linaje que cruza H-1 depende de leer su estado propio *presente*. La misma información, con otro timing, lo derrumba. Es una pieza de "modelo de sí" del nivel 9. Límites: (1) O3 es una política escrita por un LLM (combo Opus de la ronda 2): la propiedad es de ese programa, no algo que el organismo aprendió; (2) la pista tiene la reserva ERR-104 (morder repone comida), y en la pista con comida limitada O3 no persiste (convivencia, 23-sep).
+
+**Vocabulario permitido:** *"el linaje que cruza H-1 en la pista de la carrera depende de decidir con su estado propio presente: con el mismo estado desfasado deja de cruzar, replicado; su muerte programada no necesita leer la reserva"*. Prohibido: "tiene conciencia de sí", "se conoce".
+
+**Nivel 9:** el preregistro da +3 a +5 para HAY ALGO MODESTO sólo con H-SI. Propuesta: 50 → **55 %**. Decide el director; su meta es 90 %.
+
+---
+
+### SUBIDA N5 — V-5: familia Y variante con la misma tabla, serie 25701–25720 y réplica 25721–25740 (23-sep-2026, 18:38–19:48; Pool 6; preregistro `experimentos/subida_n5/PREREGISTRO_n5.md`, commiteado en `b9836ab`): **NO por la letra — K1 (ventaja de BA-v5 sobre BA-v en dist(PAR) ≥ +3) cae en la réplica (+2: BA-v5 19/19 contra BA-v 17/19). Descriptivamente, BA-v5 alcanza la MISIÓN en la réplica (dist 19/19, BAR-T 4) pero no en la serie (dist 16/20, BAR-T 7)**
+
+Arnés `identidad_v5.py` 33/33 antes de cada serie. Crudos: serie `serie_v5_s25701-25720_20260923_183849_crudo.json` (`83ccea80247e48f9`), réplica `serie_v5_s25721-25740_20260923_191731_crudo.json` (`ab18eb5c5cbc11a4`).
+
+| BA-v5 | serie | réplica |
+|---|---|---|
+| P1 CANAL | 18 ✓ | 18 ✓ |
+| P3 BAR-T ≤ 5 | **7 ✗** | 4 ✓ |
+| P6 dist(PAR) ≥ 15 | 16/20 ✓ | 19/19 ✓ |
+| P7 R6 muertes ≤ 1.5× b4b | 1.13× ✓ | 1.17× ✓, pero la sub-puerta okU cae (−0.167 < −0.10) ✗ |
+| MISIÓN (BAR-T ≤ 5 y PAR ≥ 15) | no | **sí** |
+| K1 ventaja sobre BA-v ≥ +3 | +3 ✓ (16 contra 13) | **+2 ✗** (19 contra 17) |
+| K2 barajado ≤ cortado + 3 | ✓ | ✓ |
+| K3 BAR-T ≤ BA-v + 2 | ✓ | ✓ |
+| I1 / I2 instrumento | reproducen | reproducen (BA-v 17/19, en el borde alto de 11–14 ± 4) |
+
+**Criterio §7:** NO si K1 cae en alguna serie → **NO**. **Lectura honesta:** partir la casilla por conflicto (B-5 en la tabla de referencia) repara la variante sin morir de más (1.13× y 1.17× contra el 1.63× de BA-v en la serie), y en la réplica llega a la misión completa. Pero la ventaja preregistrada sobre BA-v no se sostiene: en la réplica BA-v también sube (17/19). La barrera cae en la serie. Nivel 5 sigue en **75 %**. Según el preregistro, la línea V-5 se cierra con la frase "familia O variante". Queda registrado que en una de dos series el mecanismo sí dio las dos.
+
+---
+
+### ERR-120 y ERR-121 (23-sep-2026, 19:50, auditoría de `experimentos/juaco_eco/`)
+- **ERR-120** (regla 14, procedimiento): el único humo del paquete ECO lo había escrito una versión anterior del juez (su JSON traía la clave `genoma`, que el código actual no produce). Así, el camino completo `trabajo() → corte → banco → juez()`, que alimenta P3, nunca había corrido con el código de la serie. Arreglo: humo nuevo con el código actual, semilla 19001, `eco_humo_s19001_20260923_194831.json` (`93cef3a7cac03e00`). El juez ahora escribe `fuente/med_banco/bateria` y el arnés da 41/41.
+- **ERR-121** (regla 11, enmienda antes de cualquier serie): P3c (AZAR gana el juez en ≤ 10/20) se calculaba pero no decidía. Ahora, si AZAR gana el juez en > 10/20, el veredicto es **NO EVALUABLE**, porque ese juez no distingue selección de azar. Se cambiaron `corre_eco.py` y `PREREGISTRO_eco.md` §6. No hay dato de ninguna serie.

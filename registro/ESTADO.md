@@ -46,17 +46,18 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 | subida_n8 | HAY ALGO MODESTO ×2 | sigue aprendiendo con 90 celdas; pierde al agotarlas (réplica). El cuello es de muestreo; la fusión no sirve |
 | subida_n10 | NO SE LEE | ancla 0.110 > 0.10 (ERR-116); el mensaje del padre casi no trae información |
 | generaciones que conviven (monocultivos) | NO | con flujo fijo de comida ningún carro persiste ≥15/20; el cruce de H-1 del 22-sep depende de la reposición inmediata |
-| subida_n9, serie (réplica en curso) | HAY ALGO MODESTO (serie) | O3 cruza (R0 0.968, persisten 178/180); si lee su propio estado desfasado cae a 0.072 (0/180). La reserva no hace falta |
+| subida_n9 | **HAY ALGO MODESTO ×2** | O3 cruza porque decide con su estado presente: con el mismo estado desfasado cae de 0.968 a 0.072 (0/180), 20/20 en las dos series. La reserva no hace falta |
+| subida_n5 (V-5) | NO por la letra | K1 cae en la réplica (+2); aun así, en la réplica BA-v5 logra la misión (19/19, BAR-T 4) sin morir de más |
 
 ## Niveles del brief (los porcentajes los fija el director; la columna "propuesta" es del coordinador)
 | nivel | fijado | propuesta tras el 23-sep | evidencia |
 |---|---|---|---|
 | 1–4 | cerrados | — | 18-sep (nivel 4 reparado por B-5) |
-| 5 comunicación | 75 % | 75 % hasta V-5 | `subida_n5` corriendo (familia Y variante con la misma tabla) |
+| 5 comunicación | 75 % | 75 % | V-5 NO por la letra (K1 cae); la línea se cierra con "familia O variante" |
 | 6 mapa y rodeo | **60 %** (19:30) | 60 % (70–75 % si n6b completa la memoria) | n6 MODESTO ×2; `subida_n6b` en cola (memoria completa, dos metas, port a v14.2) |
 | 7 composición | **78 %** (19:30) | 80 % si v14.3 pasa el criterio v4 | n7 FUNCIONA ×2 |
 | 8 aprendizaje abierto | **50 %** (19:30) | según n8b y n8c esta noche | aprende_barrer ×2 (+5), n8 ×2 (+5); n8b y n8c en cola |
-| 9 autonomía / modelo de sí | 50 % | espera (meta del director: 90 %) | serie n9: la lectura de sí presente causa el cruce de O3; convivencia NO; n9b en cola |
+| 9 autonomía / modelo de sí | 50 % | **55 %** (n9 MODESTO ×2; meta del director 90 %) | la lectura de sí presente causa el cruce de O3 (política escrita por un LLM); convivencia NO; n9b en cola |
 | 10–13 | ~10 % | ~10 % | n10 NO SE LEE; n10b en cola |
 
 ## Decisiones del director de las 19:30 (AskUserQuestion; sus palabras: las tres opciones recomendadas)
@@ -103,15 +104,17 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 v2 historia). Candidato en construcción: **v14.3** (frente 1).
 
 ## Errores
-Último: **ERR-119**. Del 23-sep:
+Último: **ERR-121**. Del 23-sep:
 - 114: enmienda V-M de `subida_n9` hecha tras el humo;
 - 115: los runners aceptan banderas desconocidas;
 - 116: ancla de `subida_n10` sin calibrar;
 - 117: el toro del 21-sep no obligaba a rodear;
 - 118: "persiste el carro" confunde fundadores repuestos;
-- 119: ancla del paquete v14.3 movida tras el humo.
+- 119: ancla del paquete v14.3 movida tras el humo;
+- 120: el humo de ECO no ejercitaba el juez actual;
+- 121: P3c de ECO pasa a decidir (NO EVALUABLE).
 
-Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-120**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
+Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-122**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
 
 ## Datos, equipo y herramientas
 - **Datos:** los runners nuevos escriben en `experimentos/<carpeta>/datos/` y los humos en `datos/humo/`. `datos/humo_no_registrado/` no
