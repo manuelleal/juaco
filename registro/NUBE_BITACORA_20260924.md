@@ -477,5 +477,26 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
     para el gemelo; se construye por anclas sobre lo que ya existe; tres mundos de capacidad distinta en la misma serie.
   - Pedí confirmar qué "data sintética" quiere decir (en el repo no hay un conjunto con ese nombre; hay ~1 060 JSON de corridas).
 
-## 4. Qué falló y qué propongo para mañana
-_(al cierre)_
+## 4. Qué falló y qué propongo (borrador vivo; se completa al cierre)
+**Qué falló o se corrigió (todo del instrumento o del coordinador):**
+- El juez de ECO v1 no distinguía selección de deriva (nube-4: umbral en la mediana de la nula; nube-6: colonia diversa contra clonal).
+  Se reescribió con placebo en v1.1 y ahora sí separa (16/20 y 20/20 con placebo válido).
+- Sacar checkpoints del árbol (03:37) violaba "en GitHub sólo se agrega"; se restauraron.
+- Una espera con `pgrep -f` se encontraba a sí misma y no terminaba.
+- Arneses que al principio comparaban mal (contenido en vez de índices; carros de nombre distinto; una clave perdida en una copia):
+  los tres se hallaron ANTES de correr, que es para lo que están.
+- Candidato nube-3 verificado (1 ulp en el `exp` de numba en esta máquina): afecta pesos internos de gemelos viejos, no salidas.
+
+**Qué se aprendió que cambia el rumbo:**
+- En el mundo de ECO (pista v2) el hijo nace sin nada del linaje; en la carrera (pista v1) el carro ES la memoria del linaje. Las piezas
+  de herencia valen distinto en cada mundo. Hay que decir en qué mundo vale cada pieza.
+- A mano, las piezas no suman (0 de 7 mejoran a v14.3; el Frankenstein con todo es peor que sin mapa, curiosidad, modelo o lenta).
+  La selección sí encuentra perillas que sirven en OTRO mundo (ECO-T serie: TRANSFIERE; FAB_EVO3 6/6).
+
+**Propuesta para el director (orden):**
+1. Auditar en el PC n10c, ECO v1.1, ECO-T y, cuando corran, ECO v1.2 y ECO v2. Aceptar o no nube-4, nube-5, nube-6 como ERR.
+2. **ECO v3 = los seis órganos del Frankenstein como genes** (mapa, curiosidad, modelo, lenta, herencia, interruptor, y b5): ya existen
+   con interruptores y arnés 33/33; en vez de elegir a mano qué órgano va, que la selección lo elija en cada mundo. Primero en Python y en
+   un mundo chico; gemelo después si la señal lo pide.
+3. Frente 1: dejar de agregar piezas a mano a v14.3 en la carrera; llevar su configuración a ECO para que la selección la ajuste.
+4. "Data sintética": esperando la confirmación del director sobre a qué se refiere.
