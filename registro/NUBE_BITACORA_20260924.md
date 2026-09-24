@@ -480,6 +480,18 @@
     (15–20). `interruptor` ELEGIDO en w9 (p 0.45) no. NO tenía p 0.25.
   - Lectura (no se declara): quitar los otros 5 órganos NO ayudó; en v3 `herencia` en w30 daba O1\* 19 y 16. En la mitad de las
     semillas el linaje ganador lleva los órganos y en la otra mitad no; el umbral de 15/20 no se alcanza. La réplica 20331–20350 corre.
+- **Réplica 20331–20350** (18:25–19:36; 80 corridas; guardias vacías; ningún fijo expresado):
+  - w30: `herencia` O1\* **17/20**, banco 0.82 contra 0.37, VIDA > AZAR 12/20, vivos en T 1.00 contra 0.50 → "sube". `interruptor` O1\*
+    **15/20**, banco 0.71 contra 0.17, VIDA > AZAR **14/20**, vivos 0.97 contra 0.08 → "sube". `alpha` (+) 16/20. Persisten: VIDA 16, AZAR 7.
+  - w9: los dos neutros. Persisten: VIDA 1, AZAR 0.
+  - **VEREDICTO POR LA LETRA (réplica): HAY ALGO MODESTO** (los dos "suben" en w30).
+- **BLOQUE ECO v4, por la letra: NO** (serie NO, réplica MODESTO; vale el menor). No se declara que la selección arme el paquete.
+- Descriptivo de ECO v3 y v4 juntos (4 ventanas en w30, no se declara): en el cuerpo del Frankenstein el órgano de enseñar está en la
+  mayoría de los ganadores las 4 veces (banco de VIDA 0.82–0.98 contra 0.25–0.40 de AZAR; vivos al final ~100 %), pero nunca pasa las
+  dos pruebas a la vez; en el cuerpo de la familia (v2.1) las pasa en los 3 mundos ×2. El interruptor sube en w30 sólo en la réplica
+  de v4. El mundo de 9 fundadores casi no deja linajes (persisten 0–2 de 20).
+- **19:36 — la cola terminó.** Las revisiones de 30 min se apagan.
+
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
