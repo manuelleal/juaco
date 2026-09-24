@@ -335,6 +335,14 @@
     deriva sola no mejora a G0). **Placebo 9.0: vale.** Descriptivo curioso: líneas que persisten en T, VIDA 9, AZAR 16, G0 1 (de 180):
     los genomas derivados sostienen más líneas pero reproducen menos (a mirar en la réplica; no decide).
   - **11:58 — ventana réplica (bancos 19421–19440) lanzada.**
+  - **12:35 — ventana réplica, por la letra: NO EVALUABLE.** El placebo (VIDA contra otra muestra del mismo banco) dio **16/20**, fuera
+    de [5, 15] (bajo la nula pasa ~1 % de las veces). Descriptivo, igual que la serie: VIDA 0.300, VIDA_P 0.270, AZAR 0.143, G0 0.153;
+    VIDA > AZAR 18/20, VIDA > G0 20/20, AZAR > G0 8/20; líneas que persisten VIDA 2, AZAR 18, G0 0.
+  - **BLOQUE ECO-T, por la letra: NO EVALUABLE** (serie TRANSFIERE, réplica NO EVALUABLE; vale el menor). No se declara transferencia.
+    - Lo que sí queda escrito como descriptivo de dos ventanas: los genomas seleccionados en ECO dan en la carrera ~0.29 de R0 real
+      contra ~0.15 de la deriva y de G0, 40 de 40 semillas por encima de G0. El placebo que falló no es un defecto del criterio: es la
+      comprobación que impide declarar con un juez que en esa ventana no quedó calibrado.
+    - Si se quiere cerrar: una ventana nueva con bancos nuevos (los de ECO v1.2 o v2) y el mismo preregistro. No se corre hoy.
 
 ### 1g. ECO v2 — ÓRGANOS COMO GENES, en tres mundos a la vez (aprobado por el director ~11:35)
 - **Instrumento Python** (`construye_eco_org.py`, por anclas): `motor_eco2.py` = motor_eco + dos genes de órgano al final del genoma
