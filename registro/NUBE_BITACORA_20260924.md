@@ -471,6 +471,15 @@
 - Runner f7ba5d77cfd7f725, arnés 20/20; **preregistro commiteado (3dad78e) antes de la serie**; la serie 20311–20330 arrancó a las
   **17:12:19** con la cola `cola_eco3.sh` (después, la réplica 20331–20350). Nota de horas: las "17:30" y "~17:40" escritas en esta
   bitácora y en el §9 del preregistro son estimaciones mías equivocadas; la hora real la dan los commits (todo antes de las 17:12).
+- **Serie 20311–20330** (17:12–18:25; runner f7ba5d77cfd7f725; guardias vacías; ningún órgano fijo expresado):
+  - w30: `herencia` O1\* **13/20**, banco VIDA 0.90 contra AZAR 0.25, VIDA > AZAR **13/20**; vivos en T con el órgano VIDA 1.00 contra
+    AZAR 0.00 → neutro. `interruptor` O1\* 13/20, banco 0.45 contra 0.24, VIDA > AZAR 12/20; vivos 0.94 contra 0.00 → neutro. `alpha` (+)
+    18/20. Persisten: VIDA 15, AZAR 3.
+  - w9: `herencia` 12/20 y 8/20; `interruptor` 13/20 y 8/20 → neutros. Persisten: VIDA 2, AZAR 0.
+  - **VEREDICTO POR LA LETRA (serie): NO.** Predicciones: `herencia` ELEGIDO en w30 (p 0.45) no; O1\* 13 quedó bajo el rango firmado
+    (15–20). `interruptor` ELEGIDO en w9 (p 0.45) no. NO tenía p 0.25.
+  - Lectura (no se declara): quitar los otros 5 órganos NO ayudó; en v3 `herencia` en w30 daba O1\* 19 y 16. En la mitad de las
+    semillas el linaje ganador lleva los órganos y en la otra mitad no; el umbral de 15/20 no se alcanza. La réplica 20331–20350 corre.
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
