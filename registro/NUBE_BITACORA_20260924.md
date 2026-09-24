@@ -152,6 +152,44 @@
   - Costo aceptado: durante ~10 min se solapa con el final de la tanda exploratoria i3 (5 procesos en 4 núcleos). Sólo afecta los
     tiempos, no los resultados, que son deterministas.
 
+- **06:52 — la serie 12801–12820 terminó** (Pool 1, 3.0 h).
+  - JSON: `experimentos/subida_n10c/datos/n10c_serie_s12801-12820_T100000_20260924_035021.json` (ed080446ee64c3d3).
+
+  | carro | R0_nacidos (mediana) | semillas ≥ 0.90 | persiste_carro | frac_mala_nacidos |
+  |---|---|---|---|---|
+  | NADA | 0.100 | 0 | 0/20 | 1.00 |
+  | RES | 0.670 | 0 | 2/20 | 0.87 |
+  | **RES_SIN0** | **0.950** | **19/20** | **17/20** | 0.57 |
+  | BAR_SIN0 | 0.489 | 0 | 0/20 | 0.97 |
+  | ORA_SIN0 | 0.987 | 20/20 | 7/20 | 0.60 |
+
+  - Validez: V-ANCLA-c y V-RES-c pasan.
+  - Puertas:
+    - S-1: RES_SIN0 > RES, 20/20 (+0.28);
+    - S-2: RES_SIN0 > BAR_SIN0, 20/20 (+0.46);
+    - S-3: MIX, RES_SIN0 > NADA, 20/20;
+    - S-4: MIX, RES_SIN0 > BAR_SIN0, 20/20.
+  - Calificadores: R0N-90 en 19/20 y PER-c en 17/20.
+  - **VEREDICTO POR LA LETRA: FUNCIONA + R0 DE NACIDOS ≥ 0.90 + PERSISTE.**
+  - Predicciones:
+    - se cumplieron P1, P2, P3, P4, P5 (S-2), P6 y P9;
+    - P5, en su rango de BAR_SIN0, NO: 0.489 cae fuera de [0.03, 0.30];
+    - P7 (R0N-90, p 0.45) se cumplió;
+    - **P8 (PER-c, firmada con p 0.05) se cumplió contra mi predicción.**
+  - **Lectura honesta de "PERSISTE", candidato a ERR nube-5:**
+    - `persiste_carro` es "algún linaje sin fundadores tras t = 10 000". En las 17 semillas persiste **exactamente 1 de los 9 linajes**
+      (`linajes_sin_ext` = 1). Los otros 8 se extinguen y se refundan: ~3400–3600 fundadores por corrida, igual que RES y ORA_SIN0.
+    - Es la medida que **ERR-118 ya había marcado** ("mide cuánto les ganan los descendientes a los fundadores repuestos").
+    - Usarla como PER-c fue un error de diseño del preregistro; el auditor tampoco lo vio. El veredicto por la letra no se cambia
+      (regla 11).
+    - Lo que NO se puede declarar: "la familia se sostiene" o "el linaje persiste". Lo que sí: "en 17/20 semillas uno de los 9 linajes
+      de RES_SIN0 no se extingue tras t = 10 000 (RES 2/20, ORA_SIN0 7/20, NADA y BAR_SIN0 0/20)".
+    - La comparación relativa es informativa: con la misma medida, RES_SIN0 supera a ORA_SIN0 (17 contra 7) aunque su R0 de nacidos sea
+      menor. Hipótesis sin medir: la tabla propia hace linajes heterogéneos y uno gana la competencia por el flujo fijo.
+  - **Lo que sí se sostiene por la letra, pendiente de réplica:** cuando la familia pasa sólo lo que le hizo bien o mal, el R0 de los
+    nacidos sube de 0.67 a 0.95 (20/20), y con la misma tabla barajada no (0.49). La muerte por lo malo baja de 0.87 a 0.57.
+- **06:53 — réplica 12821–12840 lanzada** con Pool 1, en el núcleo libre. La réplica de ECO ocupa el Pool 3.
+
 ### 1d. Gemelo numba de ECO (compilador, agente 1/2) — entregado a las ~03:34
 - **Arnés `identidad_eco_rapido.py`: 120/120** bit a bit en E1 (`eco=None`), E2 (genoma, mutación, banco, vivero y corte) y E3 (juez,
   checkpoints, `trabajo()` y `--reanuda` de `corre_eco`). Un proceso nuevo lee la caché y compila 0 funciones.
