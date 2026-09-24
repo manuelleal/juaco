@@ -294,6 +294,22 @@
   - Perillas elegidas (mediana del banco en el corte, exponenciada): VIDA alpha ×1.60, aversion ×1.24, eta_s ×1.17; CEREBRO alpha ×1.61,
     aversion ×1.29, eta_s ×1.26. AZAR deriva sin dirección (rep_X ×0.76, dote ×0.87, …).
 - **10:40 — réplica 19421–19440** lanzada con el mismo comando (`--desde 19421`).
+  - Terminó a las 10:45 (5.4 min). Persisten en 120 000: **VIDA 20/20 · CEREBRO 18/20 · AZAR 11/20 · MUT0 0/20**.
+  - P2: **alpha 20/20 (+)**, **aversion 16/20 (+)** y **tau_e 16/20 (−)**; AZAR sin falsos positivos.
+  - **Juez v2: VIDA > AZAR 20/20**; CEREBRO > AZAR 20/20. Medianas VIDA 12 643, AZAR 3 812.5. **Placebo 10.5 y 9.0: VALE.**
+  - Descriptivo: contra G0 ganan VIDA 20/20 y AZAR 17/20.
+  - P1 ✓ (20) · P1c ✓ · P2 ✓ · P3 ✓ (20) · **P4 ✓ (20 − 11 = 9)** · H-c ✓ (18). **VEREDICTO v1.1 (réplica): FUNCIONA.**
+  - Bloque L (1e6): **VIDA 5/20 · CEREBRO 11/20 · AZAR 0/20 · MUT0 0/20** → L1 ✗, L2 ✗ (5 < 6). **VEREDICTO L (réplica): NO PERSISTE LARGO.**
+- **BLOQUE ECO v1.1, por la letra: HAY ALGO MODESTO ×2** (serie MODESTO, réplica FUNCIONA; si no coinciden vale el menor).
+  - Lo que se sostiene en las dos, con el juez calibrado por el placebo: **la colonia de genomas que pasaron por la selección vive
+    3.2–3.3× más que la de genomas que sólo derivaron** (medianas; 16/20 y 20/20 semillas), y la selección elige lo mismo en las dos (alpha ↑ 20/20 ×2,
+    aversion ↑ 15–16/20). Es la primera vez en JUACO que un control de deriva válido separa la selección.
+  - Lo que NO se sostiene: FUNCIONA exigía además P4 (VIDA − AZAR ≥ 8 en persistencia a 120 000), que cae en la serie (3) y pasa en la
+    réplica (9).
+  - **BLOQUE L, por la letra: NO PERSISTE LARGO ×2.** A 940 000 pasos del corte persisten VIDA 7 y 5 de 20, CEREBRO 7 y 11, AZAR 0 y 0.
+    La selección sí distingue en el largo plazo (AZAR nunca persiste), pero los linajes seleccionados viven en el filo (R0 ≈ 0.99).
+  - Vocabulario: "la colonia del banco de VIDA vive más que la de AZAR"; no "evoluciona", no "población" sin la medida.
+  - Puntos: los de `PREREGISTRO_eco.md` §9; los decide el director (la nube no declara porcentajes).
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen.
@@ -351,6 +367,24 @@ _(pendiente)_
     NO EVALUABLE ×2 por un juez mal calibrado; sin juez válido el frente 2 no puede contestar su segunda pregunta.
   - El veredicto de v1 no se recalifica. v1.1 son archivos nuevos, con semillas nuevas, y su criterio se subió antes de correr.
   - Se lee en 120 000 (como v1) para que el único cambio sea el juez; el horizonte de 1e6 va aparte, en el bloque L, con su letra.
+
+- **10:50 — hallazgo de diseño para el frente 2: en la pista v2 (el mundo de ECO) el hijo nace SIN NADA del linaje.** El motor crea
+  una instancia nueva del carro por cuerpo y FABRICA pasa `memoria=None` (hereda='nada'); el nodo de FABRICA, que en la carrera
+  (pista v1) es la memoria del linaje porque el carro es uno por linaje, en ECO está siempre vacío. En ECO v1 y v1.1 la selección sólo
+  pudo mover perillas, y aun así llevó el R0 tras el corte a 0.91–0.99. La pieza que n10c validó (la familia pasa su tabla SIN las
+  entradas neutras) es exactamente lo que le falta ahí.
+  - Construido por anclas `carros/FAMB_RES0_ECO.py` (`construye_eco_familia.py`, desde FAMB_RES de n10b, sha fijado): el `_see` de
+    FABRICA_ECO + el filtro SIN0 de n10c. Arnés `identidad_eco_familia.py`: **7/7** (con SIN0 = 0 es FAMB_RES; con SIN0 = 1 es
+    bit a bit el RES_SIN0 de n10c; checkpoint y reanudación iguales).
+  - Humo de costo en Python (19601, VIDA, esc 90, T 12 000, corte 8 000): 60 µs por cuerpo y paso, igual que FABRICA_ECO, pero el
+    linaje sostiene más cuerpos (115.8 contra 68.3 de media; 22 contra 4 vivos en T). Una serie en Python costaría ~6.5 h.
+- **10:55 — se encarga al `juaco-compilador` (agente 1 del día, el del frente 2; NUBE.md §0: "uno por frente") el gemelo numba de
+  FAMB_RES0_ECO**, en archivos NUEVOS (`motor_eco_rapido_fam.py` + arnés + informe; `motor_eco_rapido.py` no se toca).
+  - Por qué: con el gemelo, ECO v1.2 (selección + familia) a 1e6 cuesta minutos; en Python, días. Es el paso 1 del frente 2 del plan
+    del director ("primero el gemelo"), aplicado al carro que ahora importa.
+  - Alternativa descartada: el gemelo de V143 para ECO. V143 en la pista v2 también nace sin memoria de linaje (sus piezas de linaje,
+    nodo y opción TD, viven en el carro de la carrera); sin transmisión en el parto perdería justo lo que lo hace mejor.
+  - Mientras tanto: preregistro de ECO v1.2 y tanda exploratoria del frente 1 (familia y perillas de ECO sobre V143).
 
 ## 3b. Pedidos del director durante la noche (sus palabras, para que no se pierdan)
 - Prompt de la noche: `NUBE.md` §2b (en main).

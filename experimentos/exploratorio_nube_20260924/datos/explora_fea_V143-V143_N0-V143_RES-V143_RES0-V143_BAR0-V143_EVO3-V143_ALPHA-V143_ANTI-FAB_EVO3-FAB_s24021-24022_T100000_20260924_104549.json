@@ -1,0 +1,314 @@
+{
+ "meta": {
+  "etiqueta": "explora_fea_V143-V143_N0-V143_RES-V143_RES0-V143_BAR0-V143_EVO3-V143_ALPHA-V143_ANTI-FAB_EVO3-FAB_s24021-24022_T100000",
+  "sello": "20260924_104549",
+  "brazos": [
+   "V143",
+   "V143_N0",
+   "V143_RES",
+   "V143_RES0",
+   "V143_BAR0",
+   "V143_EVO3",
+   "V143_ALPHA",
+   "V143_ANTI",
+   "FAB_EVO3",
+   "FAB"
+  ],
+  "semillas": [
+   24021,
+   24022
+  ],
+  "T": 100000,
+  "exploratorio": true,
+  "desc": {
+   "V143": "V143 del PC sin tocar (cargado por ruta)",
+   "V143_N0": "V143 con el nodo del linaje sin neutras (H-NEUTRAS; cero memoria nueva)",
+   "V143_RES": "V143 + la tabla del padre vivo en el parto (FAMB_RES de n10b), con neutras",
+   "V143_RES0": "V143 + la tabla del padre sin neutras (RES_SIN0 de n10c)",
+   "V143_BAR0": "control de contenido: RES0 con las R permutadas",
+   "V143_EVO3": "V143 con alpha x1.61, aversion x1.29, eta_s x1.26 (lo que eligi\u00f3 ECO)",
+   "V143_ALPHA": "V143 con alpha x1.61 (el gen elegido 20/20)",
+   "V143_ANTI": "control de direcci\u00f3n: V143 con alpha /1.61",
+   "FAB_EVO3": "FABRICA con las tres perillas de ECO",
+   "FAB": "FABRICA de la carrera (bicho real, piso)"
+  }
+ },
+ "R": [
+  {
+   "seed": 24021,
+   "brazo": "V143",
+   "T": 100000,
+   "seg": 81.2,
+   "R0_real_med": 0.6471,
+   "R0_real": [
+    0.6047,
+    0.0038,
+    0.7308,
+    0.7778,
+    0.9722,
+    0.6471,
+    0.0183,
+    0.8333,
+    0.3889
+   ],
+   "persisten": 7,
+   "cruzan_real": 1,
+   "vida_med": 600.0,
+   "muertes_med": 50.0,
+   "fundadores_med": 16.0,
+   "nac_reales_med": 28.0,
+   "causas": {
+    "hambre": 74,
+    "sed": 65,
+    "veneno": 826,
+    "sal": 845
+   },
+   "mord_BD": 84.0,
+   "mord_AC": 788.0,
+   "frac_sin_bueno_mundo": 0.0279,
+   "limpiezas_por_cuerpo": 1.1346,
+   "muere_sin_parir": 0.6,
+   "coherente": 9,
+   "tot": {}
+  },
+  {
+   "seed": 24021,
+   "brazo": "V143_N0",
+   "T": 100000,
+   "seg": 80.9,
+   "R0_real_med": 0.6604,
+   "R0_real": [
+    0.6731,
+    0.3194,
+    0.6216,
+    0.7619,
+    0.9697,
+    0.6604,
+    0.085,
+    0.8857,
+    0.0072
+   ],
+   "persisten": 7,
+   "cruzan_real": 1,
+   "vida_med": 600.0,
+   "muertes_med": 51.0,
+   "fundadores_med": 16.0,
+   "nac_reales_med": 31.0,
+   "causas": {
+    "hambre": 101,
+    "sed": 59,
+    "veneno": 724,
+    "sal": 750
+   },
+   "mord_BD": 75.0,
+   "mord_AC": 678.0,
+   "frac_sin_bueno_mundo": 0.0314,
+   "limpiezas_por_cuerpo": 1.0,
+   "muere_sin_parir": 0.6667,
+   "coherente": 9,
+   "tot": {
+    "nodo_neutras_quitadas": 1133
+   }
+  },
+  {
+   "seed": 24021,
+   "brazo": "V143_RES",
+   "T": 100000,
+   "seg": 82.5,
+   "R0_real_med": 0.3115,
+   "R0_real": [
+    0.4655,
+    0.3333,
+    0.1416,
+    0.6875,
+    0.95,
+    0.3115,
+    0.2561,
+    0.047,
+    0.0166
+   ],
+   "persisten": 5,
+   "cruzan_real": 1,
+   "vida_med": 109.0,
+   "muertes_med": 60.0,
+   "fundadores_med": 41.0,
+   "nac_reales_med": 21.0,
+   "causas": {
+    "hambre": 66,
+    "sed": 67,
+    "veneno": 950,
+    "sal": 1000
+   },
+   "mord_BD": 135.0,
+   "mord_AC": 836.0,
+   "frac_sin_bueno_mundo": 0.0211,
+   "limpiezas_por_cuerpo": 1.6,
+   "muere_sin_parir": 0.8519,
+   "coherente": 9,
+   "tot": {
+    "partos": 494,
+    "entradas": 3395,
+    "neutras": 1523,
+    "nace_con_tabla": 204
+   }
+  },
+  {
+   "seed": 24021,
+   "brazo": "V143_RES0",
+   "T": 100000,
+   "seg": 82.9,
+   "R0_real_med": 0.3846,
+   "R0_real": [
+    0.2527,
+    0.0615,
+    0.3846,
+    0.7959,
+    0.9545,
+    0.3913,
+    0.0147,
+    0.1287,
+    0.4754
+   ],
+   "persisten": 5,
+   "cruzan_real": 1,
+   "vida_med": 133.0,
+   "muertes_med": 68.0,
+   "fundadores_med": 41.0,
+   "nac_reales_med": 25.0,
+   "causas": {
+    "hambre": 86,
+    "sed": 93,
+    "veneno": 878,
+    "sal": 767
+   },
+   "mord_BD": 147.0,
+   "mord_AC": 731.0,
+   "frac_sin_bueno_mundo": 0.0304,
+   "limpiezas_por_cuerpo": 1.6154,
+   "muere_sin_parir": 0.7941,
+   "coherente": 9,
+   "tot": {
+    "partos": 439,
+    "entradas": 2694,
+    "neutras": 1006,
+    "nace_con_tabla": 227
+   }
+  },
+  {
+   "seed": 24021,
+   "brazo": "V143_BAR0",
+   "T": 100000,
+   "seg": 85.4,
+   "R0_real_med": 0.1618,
+   "R0_real": [
+    0.039,
+    0.11,
+    0.6395,
+    0.1208,
+    0.1273,
+    0.166,
+    0.1618,
+    0.9273,
+    0.1698
+   ],
+   "persisten": 2,
+   "cruzan_real": 1,
+   "vida_med": 64.0,
+   "muertes_med": 264.0,
+   "fundadores_med": 220.0,
+   "nac_reales_med": 45.0,
+   "causas": {
+    "hambre": 56,
+    "sed": 65,
+    "veneno": 1056,
+    "sal": 1175
+   },
+   "mord_BD": 728.0,
+   "mord_AC": 924.0,
+   "frac_sin_bueno_mundo": 0.0054,
+   "limpiezas_por_cuerpo": 1.9564,
+   "muere_sin_parir": 0.9654,
+   "coherente": 9,
+   "tot": {
+    "partos": 494,
+    "entradas": 3058,
+    "neutras": 1266,
+    "nace_con_tabla": 365
+   }
+  },
+  {
+   "seed": 24021,
+   "brazo": "V143_EVO3",
+   "T": 100000,
+   "seg": 80.8,
+   "R0_real_med": 0.3478,
+   "R0_real": [
+    0.0733,
+    0.3478,
+    0.4494,
+    0.375,
+    0.0642,
+    0.2168,
+    0.044,
+    0.9024,
+    0.5
+   ],
+   "persisten": 2,
+   "cruzan_real": 1,
+   "vida_med": 200.0,
+   "muertes_med": 95.0,
+   "fundadores_med": 59.0,
+   "nac_reales_med": 31.0,
+   "causas": {
+    "hambre": 110,
+    "sed": 78,
+    "veneno": 495,
+    "sal": 690
+   },
+   "mord_BD": 207.0,
+   "mord_AC": 623.0,
+   "frac_sin_bueno_mundo": 0.0484,
+   "limpiezas_por_cuerpo": 1.8125,
+   "muere_sin_parir": 0.8105,
+   "coherente": 9,
+   "tot": {}
+  },
+  {
+   "seed": 24021,
+   "brazo": "V143_ALPHA",
+   "T": 100000,
+   "seg": 79.5,
+   "R0_real_med": 0.3898,
+   "R0_real": [
+    0.6585,
+    0.9744,
+    0.8378,
+    0.0129,
+    0.9737,
+    0.1697,
+    0.3898,
+    0.0487,
+    0.124
+   ],
+   "persisten": 5,
+   "cruzan_real": 2,
+   "vida_med": 200.0,
+   "muertes_med": 58.0,
+   "fundadores_med": 35.0,
+   "nac_reales_med": 27.0,
+   "causas": {
+    "hambre": 79,
+    "sed": 82,
+    "veneno": 620,
+    "sal": 827
+   },
+   "mord_BD": 135.0,
+   "mord_AC": 759.0,
+   "frac_sin_bueno_mundo": 0.0427,
+   "limpiezas_por_cuerpo": 1.678,
+   "muere_sin_parir": 0.7414,
+   "coherente": 9,
+   "tot": {}
+  }
+ ]
+}
