@@ -1,0 +1,231 @@
+{
+ "filas": [
+  {
+   "n": 1,
+   "prueba": "(0a) sha de pista, juez, FABRICA, O1, APR, organismo_v142 (congelado)",
+   "ok": true,
+   "extra": "todos OK"
+  },
+  {
+   "n": 2,
+   "prueba": "(0b) carros_v143/*.py == construye_v143 (6 variantes; solo difieren en perillas)",
+   "ok": true,
+   "extra": "{'V142': '195b7b883d3750ed', 'V143': '2a03048a7f1525e5', 'V143_SINFILTRO': '44faed85a4a05ac2', 'V143_SINTD': 'eaff1ce3681e258b', 'V143_SIEMPRE': '77d252ae44057209', 'V143_INVERTIDO': 'a6b5ed4f570dc42d'}"
+  },
+  {
+   "n": 3,
+   "prueba": "(1) revisa_carro PASA V142",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 4,
+   "prueba": "(1) revisa_carro PASA V143",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 5,
+   "prueba": "(1) revisa_carro PASA V143_SINFILTRO",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 6,
+   "prueba": "(1) revisa_carro PASA V143_SINTD",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 7,
+   "prueba": "(1) revisa_carro PASA V143_SIEMPRE",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 8,
+   "prueba": "(1) revisa_carro PASA V143_INVERTIDO",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 9,
+   "prueba": "(1b) ningun carro nombra la tabla verdadera (VAL_VIVO / EFECTO) ni el rng del mundo",
+   "ok": true,
+   "extra": "[]"
+  },
+  {
+   "n": 10,
+   "prueba": "(2) perillas 0 == FABRICA, N 1 compat 1 T 20000 s1 (todo, rng del mundo incluido)",
+   "ok": true,
+   "extra": "R0 13/37 rng 4c9b8d5275d7eb99"
+  },
+  {
+   "n": 11,
+   "prueba": "(2) perillas 0 == FABRICA, N 1 compat 1 T 20000 s2 (todo, rng del mundo incluido)",
+   "ok": true,
+   "extra": "R0 8/39 rng d50e29a562955be3"
+  },
+  {
+   "n": 12,
+   "prueba": "(2) perillas 0 == FABRICA, N 1 compat 1 T 20000 s3 (todo, rng del mundo incluido)",
+   "ok": true,
+   "extra": "R0 7/23 rng 087c22f936b21fc7"
+  },
+  {
+   "n": 13,
+   "prueba": "(3) monolito organismo_f9c REL (sha 9dd1fb91ecec35ae) == V143 con perillas 0 (vista plana, s1 T 5000)",
+   "ok": true,
+   "extra": "76 claves, dif []"
+  },
+  {
+   "n": 14,
+   "prueba": "(4) V142 con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": "df76f25909842836"
+  },
+  {
+   "n": 15,
+   "prueba": "(4) V143 con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": "df76f25909842836"
+  },
+  {
+   "n": 16,
+   "prueba": "(4) V143_SINFILTRO con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": "df76f25909842836"
+  },
+  {
+   "n": 17,
+   "prueba": "(4) V143_SINTD con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": "df76f25909842836"
+  },
+  {
+   "n": 18,
+   "prueba": "(4) V143_SIEMPRE con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": "df76f25909842836"
+  },
+  {
+   "n": 19,
+   "prueba": "(4) V143_INVERTIDO con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": "df76f25909842836"
+  },
+  {
+   "n": 20,
+   "prueba": "(5) pieza 2: V143 con solo OPCION == APR (aprende_barrer) bit a bit (N 9, s14281, T 3000)",
+   "ok": true,
+   "extra": "oportunidades APR 454"
+  },
+  {
+   "n": 21,
+   "prueba": "(6a) V142 (B-5) difiere de FABRICA y divide por R == 0 (N 9, s14282, T 8000)",
+   "ok": true,
+   "extra": "divisiones por R==0 14"
+  },
+  {
+   "n": 22,
+   "prueba": "(6b) TODA division B-5 fue en una mordida con efecto 0 en la necesidad activa (tabla verdadera)",
+   "ok": true,
+   "extra": "14 eventos; letras [('A', 1), ('B', 1), ('C', 0), ('D', 0)]"
+  },
+  {
+   "n": 23,
+   "prueba": "(6c) la condicion B-5 del carro es la de organismo_v142.py (mismo texto salvo espacios y nombres de perilla)",
+   "ok": true,
+   "extra": ""
+  },
+  {
+   "n": 24,
+   "prueba": "(7a) espiar no cambia la conducta (misma corrida con y sin espia)",
+   "ok": true,
+   "extra": ""
+  },
+  {
+   "n": 25,
+   "prueba": "(7b) FILTRO: con meta, las patas NUNCA apuntan a un obstaculo",
+   "ok": true,
+   "extra": "{'apunta_obst': 0, 'muerde_obst': 0, 'pasos_meta': 44804, 'pasos_sin_meta': 9196, 'obst_sin_meta': 0, 'sobre_obst': 4122, 'n': 54000}"
+  },
+  {
+   "n": 26,
+   "prueba": "(7c) FILTRO: con meta, la boca NUNCA muerde un obstaculo (y el cuerpo si pasa por encima de alguno)",
+   "ok": true,
+   "extra": "sobre obstaculo 4122"
+  },
+  {
+   "n": 27,
+   "prueba": "(7d) META = 1: sin meta no hay obstaculos (la limpieza queda posible)",
+   "ok": true,
+   "extra": "pasos sin meta 9196"
+  },
+  {
+   "n": 28,
+   "prueba": "(7e) SIEMPRE (lesion): hay obstaculos tambien SIN meta; con meta no apunta ni muerde obstaculos",
+   "ok": true,
+   "extra": "{'apunta_obst': 0, 'muerde_obst': 0, 'pasos_meta': 14131, 'pasos_sin_meta': 39869, 'obst_sin_meta': 36286, 'sobre_obst': 1242, 'n': 54000}"
+  },
+  {
+   "n": 29,
+   "prueba": "(7f) V143 (META 1): nunca queda TODO como obstaculo (el respaldo de _see es inerte en el candidato)",
+   "ok": true,
+   "extra": "todo_obst 0"
+  },
+  {
+   "n": 30,
+   "prueba": "(7g) CACHE de las dos filas (solo rendimiento, tras el humo) == sin CACHE bit a bit (N 9, s14285, T 6000)",
+   "ok": true,
+   "extra": "seg sin cache 27.4 · con cache 10.4"
+  },
+  {
+   "n": 31,
+   "prueba": "(8a) las 6 variantes son distintas entre si (N 9, s14284, T 3000)",
+   "ok": true,
+   "extra": ""
+  },
+  {
+   "n": 32,
+   "prueba": "(8b) determinismo: V143 dos veces igual",
+   "ok": true,
+   "extra": ""
+  },
+  {
+   "n": 33,
+   "prueba": "(8c) INVERTIDO lee la letra pareja (A<->B, C<->D) y el resto es V143",
+   "ok": true,
+   "extra": ""
+  },
+  {
+   "n": 34,
+   "prueba": "(9a) corre_v143 ABORTA ante banderas desconocidas o abreviadas (ERR-115), sin correr nada",
+   "ok": true,
+   "extra": "codigos 2, 2"
+  },
+  {
+   "n": 35,
+   "prueba": "(9b) corre_v143 rechaza semillas ajenas, T distinta, brazos desconocidos, > 6 corridas de humo y rangos que cruzan serie/replica",
+   "ok": true,
+   "extra": "['--humo: solo semillas de practica 14281-14290', 'serie: solo 14301-14320 (serie) o 14321-14340 (replica)', 'serie: T = 100000 (preregistrado)', \"brazo desconocido 'nuevo' (validos ['fab', 'v142', 'v143', 'sinfiltro', 'sintd', 'siempre', 'invertido', 'o1'])\", '--humo: maximo 6 corridas por proceso'"
+  },
+  {
+   "n": 36,
+   "prueba": "(9c) regla 14: corre_v143.tarea == juez.tarea (9 FABRICA, s14281, T 2000, fundador limpio)",
+   "ok": true,
+   "extra": ""
+  }
+ ],
+ "ok": 36,
+ "total": 36,
+ "seg": 219.6,
+ "shas": {
+  "V142": "195b7b883d3750ed",
+  "V143": "2a03048a7f1525e5",
+  "V143_SINFILTRO": "44faed85a4a05ac2",
+  "V143_SINTD": "eaff1ce3681e258b",
+  "V143_SIEMPRE": "77d252ae44057209",
+  "V143_INVERTIDO": "a6b5ed4f570dc42d"
+ }
+}

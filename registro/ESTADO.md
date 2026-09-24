@@ -30,7 +30,8 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 ## Corriendo esta noche (PC del director; cola cerrada, sin frentes nuevos)
 - **Pool A:** réplica del nivel 9 13321–13340 (desde 18:15, llegada estimada ~19:40) → `subida_n9b` (serie 13501 + réplica 13521) →
   `subida_n6b` (14601 + 14621) → `subida_n8c_memoria_lenta` (15801 + 15821).
-- **Pool B:** `subida_n5` V-5 (serie 25701 desde 18:38, réplica 25721) → `subida_n10b` (12701 + 12721) → `subida_n8b` (14801 + 14821).
+- **Pool B:** `subida_n5` V-5 (serie 25701 desde 18:38, réplica 25721) → **`tronco_v14_3`** (identidad 36/36, serie 14301 + réplica 14321;
+  frente 1, adelantado a las 19:15) → `subida_n10b` (12701 + 12721) → `subida_n8b` (14801 + 14821).
 - **Archivado sin correr:** `subida_n9c` (decisión 18:55, abajo).
 - **Equipos terminando:** v14.3, JUACO-ECO (diseño), Frankenstein (EXPLORATORIO, no es dato) y la ronda de investigación 1 (tres
   investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
@@ -64,6 +65,10 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
    correr la sesión 0 de calibración (`NUBE.md` §1) antes de mover trabajo pesado.
 
 ## Decisiones del coordinador en ausencia del director (23-sep; hora, opción, alternativa descartada, porqué)
+- **19:15 — el paquete `tronco_v14_3` (frente 1) se adelanta en el Pool B, antes de n10b y n8b.** Alternativa: dejarlo al final (~23:30).
+  Por qué: es el frente 1 del plan vigente, y n10b y n8b son cierres de frentes viejos. Ojo: este paquete es v14.2 + filtro con meta (n6) +
+  boca TD heredada (APR). **No** lleva la reparación N del 7, porque el equipo arrancó antes de la orden del director de las 18:35. El
+  v14.3 que se congele será v14.2 + N (FUNCIONA ×2) + lo que de este paquete pase serie y réplica, previo examen del criterio v4.
 - **18:55 — `subida_n9c` se archiva sin correr.** Alternativa: correrla al final de la cola (52 min). Por qué: su creador espera NO (p 0.97),
   el auditor la puso en prioridad baja, y lo valioso ya salió sin correr (ERR-118). El director pidió pocos frentes; la CPU va al v14.3.
 - **18:55 — los paquetes ya preregistrados de la cola se corren, pero no se abren tandas nuevas.** Por qué: cada preregistro sin dato es un
@@ -91,14 +96,15 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 v2 historia). Candidato en construcción: **v14.3** (frente 1).
 
 ## Errores
-Último: **ERR-118**. Del 23-sep:
+Último: **ERR-119**. Del 23-sep:
 - 114: enmienda V-M de `subida_n9` hecha tras el humo;
 - 115: los runners aceptan banderas desconocidas;
 - 116: ancla de `subida_n10` sin calibrar;
 - 117: el toro del 21-sep no obligaba a rodear;
-- 118: "persiste el carro" confunde fundadores repuestos.
+- 118: "persiste el carro" confunde fundadores repuestos;
+- 119: ancla del paquete v14.3 movida tras el humo.
 
-Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-119**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
+Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-120**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
 
 ## Datos, equipo y herramientas
 - **Datos:** los runners nuevos escriben en `experimentos/<carpeta>/datos/` y los humos en `datos/humo/`. `datos/humo_no_registrado/` no

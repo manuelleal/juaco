@@ -1,0 +1,103 @@
+CORRE_V143 · v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935 · python 3.14.2 · pool NO (un proceso) · corre_v143.py b34532f94ea4a235
+  brazos ['fab', 'v142', 'v143', 'siempre', 'sintd', 'o1'] · semillas 14281-14281 · T 20000 · fundador limpio 1 · pista escalada (L 360, 36 objetos)
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\FABRICA.py 2ebee3e99ea5a33a OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\carrera_escuderias\carros\APR.py 4402aa5142065c72 OK
+  sha organismo\organismo_v142.py 17528d767fcebaf6 OK
+  carro V142 sha fdf97fefe63a3ea3 == construye: True · chequeo estatico: PASA
+  carro V143 sha 93253f8526c31151 == construye: True · chequeo estatico: PASA
+  carro V143_SINFILTRO sha 90154279e1e27663 == construye: True · chequeo estatico: PASA
+  carro V143_SINTD sha 8ff36ed68c763bc5 == construye: True · chequeo estatico: PASA
+  carro V143_SIEMPRE sha 11e41fa18f52c0c0 == construye: True · chequeo estatico: PASA
+  carro V143_INVERTIDO sha ae5a51f4e1cc66da == construye: True · chequeo estatico: PASA
+  carro FABRICA (carrera) chequeo estatico: PASA
+  carro O1 (carrera) chequeo estatico: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  IDENTIDAD CORTA v14.3: perillas en 0 == FABRICA (N 9, s 14281, T 2000, fundador limpio): OK
+  ENTRADA campo a campo (regla 14): corre_v143.tarea == juez.tarea (9 FABRICA, s 14281, T 2000, fundador limpio): OK
+  [   52.2s] fab semilla 14281 (36.1s) R0 pista 0.1538 · R0 real por linaje [0.3095, 0.0849, 0.1857, 0.2745, 0.1549, 0.0877, 0.1216, 0.1392, 0.1449]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_fab.json (sha 1c82f66148d80467) · escrituras en la pizarra 0 (nadie escribe: esperado 0)
+
+== fab (FABRICA x9) · 1 semillas 14281-14281 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.1449 (evaluables 0.145) · R0 preregistrado 0.1646 · vida mediana 67.5 · muertes 70.0 · fundadores 59.0 · casi inmortales 0/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 0/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.9565) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.165)
+  causas hambre/sed/veneno/sal 0/0/338/329 (veneno+sal 100%) · pasos sin NADA bueno en el mundo 0.0 · mordidas B+D 297.0 / A+C 352.0 por linaje · limpiezas fisicas por cuerpo 2.6415
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 36.1
+  [   87.4s] v142 semilla 14281 (35.2s) R0 pista 0.1496 · R0 real por linaje [0.1143, 0.25, 0.0614, 0.0968, 0.2683, 0.1068, 0.197, 0.1594, 0.1857]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_v142.json (sha 038191cb6402d6b4) · escrituras en la pizarra 0 (nadie escribe: esperado 0)
+
+== v142 (V142 x9) · 1 semillas 14281-14281 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.1594 (evaluables 0.159) · R0 preregistrado 0.1739 · vida mediana 68.0 · muertes 69.0 · fundadores 57.0 · casi inmortales 0/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 0/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.9361) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.174)
+  causas hambre/sed/veneno/sal 0/0/345/328 (veneno+sal 100%) · pasos sin NADA bueno en el mundo 0.0004 · mordidas B+D 279.0 / A+C 337.0 por linaje · limpiezas fisicas por cuerpo 2.6607
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': None, 'vetos': 0, 'mord_sin_meta': 0, 'limpia_propia': 0, 'todo_obst': 0, 'des_splits': 29}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 35.2
+  [  181.0s] v143 semilla 14281 (93.6s) R0 pista 0.2225 · R0 real por linaje [0.8571, 0.0417, 0.875, 0.0214, 0.2, 0.4118, 0.0, 0.0261, 0.0435]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_v143.json (sha 764125703acb9fed) · escrituras en la pizarra 0 (nadie escribe: esperado 0)
+
+== v143 (V143 x9) · 1 semillas 14281-14281 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.0435 (evaluables 0.043) · R0 preregistrado 0.8333 · vida mediana 113.0 · muertes 17.0 · fundadores 17.0 · casi inmortales 0/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 3/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.8216) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.833)
+  causas hambre/sed/veneno/sal 13/14/203/224 (veneno+sal 94%) · pasos sin NADA bueno en el mundo 0.0056 · mordidas B+D 46.0 / A+C 191.0 por linaje · limpiezas fisicas por cuerpo 1.7222
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9807, 'vetos': 3941, 'mord_sin_meta': 60, 'limpia_propia': 45, 'todo_obst': 0, 'des_splits': 23}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 93.6
+  [  269.1s] siempre semilla 14281 (88.0s) R0 pista 0.0271 · R0 real por linaje [0.0, 0.0, 0.0, 0.3125, 0.1053, 0.0, 0.0, 0.0, 0.0]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_siempre.json (sha b707a7d0cc7eae45) · escrituras en la pizarra 0 (nadie escribe: esperado 0)
+
+== siempre (V143_SIEMPRE x9) · 1 semillas 14281-14281 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.0 (evaluables 0.0) · R0 preregistrado 0.0 · vida mediana 200.0 · muertes 63.0 · fundadores 63.0 · casi inmortales 0/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 1/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.0039) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.0)
+  causas hambre/sed/veneno/sal 30/56/237/185 (veneno+sal 83%) · pasos sin NADA bueno en el mundo 0.0 · mordidas B+D 64.0 / A+C 73.0 por linaje · limpiezas fisicas por cuerpo 0.8438
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.8197, 'vetos': 925, 'mord_sin_meta': 23, 'limpia_propia': 0, 'todo_obst': 4302, 'des_splits': 5}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 88.0
+  [  355.9s] sintd semilla 14281 (86.8s) R0 pista 0.2633 · R0 real por linaje [0.1333, 0.0263, 0.75, 0.0638, 0.25, 0.2308, 0.1818, 0.1212, 0.1538]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_sintd.json (sha 9a338431669dc751) · escrituras en la pizarra 0 (nadie escribe: esperado 0)
+
+== sintd (V143_SINTD x9) · 1 semillas 14281-14281 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.1538 (evaluables 0.144) · R0 preregistrado 0.5385 · vida mediana 74.0 · muertes 25.0 · fundadores 21.0 · casi inmortales 1/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 0/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.861) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.403)
+  causas hambre/sed/veneno/sal 9/11/171/176 (veneno+sal 95%) · pasos sin NADA bueno en el mundo 0.0092 · mordidas B+D 71.0 / A+C 165.0 por linaje · limpiezas fisicas por cuerpo 1.8667
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9521, 'vetos': 3308, 'mord_sin_meta': 93, 'limpia_propia': 81, 'todo_obst': 0, 'des_splits': 25}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 86.8
+  [  428.2s] o1 semilla 14281 (72.2s) R0 pista 0.832 · R0 real por linaje [0.875, 0.0, 0.8, 0.8, 0.5, 0.5, 0.0, 0.75, 0.0]
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_o1.json (sha 14caa86c146a0fd4) · escrituras en la pizarra 0 (nadie escribe: esperado 0)
+
+== o1 (O1 x9) · 1 semillas 14281-14281 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.5 (evaluables 0.438) · R0 preregistrado 3.0 · vida mediana 4354.0 · muertes 3.0 · fundadores 0.0 · casi inmortales 7/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 1/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.0) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.688)
+  causas hambre/sed/veneno/sal 5/10/49/52 (veneno+sal 87%) · pasos sin NADA bueno en el mundo 0.0256 · mordidas B+D 64.0 / A+C 140.0 por linaje · limpiezas fisicas por cuerpo 13.25
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 72.2
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes; gana = semillas en que el primero supera al segundo)
+  v143 vs v142: gana 0/1 · diferencia mediana -0.1159
+  v143 vs fab: gana 0/1 · diferencia mediana -0.1014
+  v142 vs fab: gana 1/1 · diferencia mediana 0.0145
+  v143 vs sintd: gana 0/1 · diferencia mediana -0.1103
+  sintd vs v143: gana 1/1 · diferencia mediana 0.1103
+  v143 vs siempre: gana 1/1 · diferencia mediana 0.0435
+  o1 vs v143: gana 1/1 · diferencia mediana 0.4565
+
+PREDICCIONES FIRMADAS (PREREGISTRO_v143.md sec. 6) y lo medido -- HUMO: T corto y semillas de practica, NO cuentan
+  V-ANCLA-1 FABRICA: mediana R0 real en [0.22, 0.45] -> NO se cumple
+  V-ANCLA-2 O1 GANA por la ENMIENDA 5 (ayer, r2o1mono 9101-9120: 20/20) -> NO se cumple
+  P1 V142 ~ FABRICA: |dif mediana pareada de R0 real| <= 0.05 (p 0.65) -> SE CUMPLE
+  P2 V143 > V142 en >= 18/20 semillas con dif mediana >= 0.10 (p 0.75) -> NO se cumple
+  P3 V143: mediana R0 real en [0.45, 0.85] (p 0.55) -> NO se cumple
+  P4 V143 NO gana por la ENMIENDA 5 (p 0.80 de que NO cruza) -> SE CUMPLE
+  P5 SIEMPRE (sin limpieza) < V143 en >= 15/20 y su mundo sin nada bueno >= 0.30 de los pasos (p 0.70) -> NO se cumple
+  P6 SINFILTRO: mediana R0 real en [0.30, 0.47] y V143 > SINFILTRO en >= 15/20 (p 0.70) -> sin el brazo
+  P7 SINTD ~ V143: |dif mediana pareada| <= 0.05 (p 0.50; el control que puede ganar) -> NO se cumple
+  P8 INVERTIDO < V142 en >= 15/20 (p 0.80) -> sin el brazo
+  P9 V143 vida mediana >= 3 x la de V142 (p 0.70) -> NO se cumple
+  P10 V143: veneno+sal <= 0.50 de las causas de muerte (V142 ~1.0) (p 0.70) -> NO se cumple
+  P11 V143: pasos sin nada bueno en el mundo en [0.01, 0.30] (limpia algo, no del todo) (p 0.65) -> NO se cumple
+
+================ VEREDICTO POR LA LETRA (PREREGISTRO_v143.md sec. 7)
+  anclas de la serie: V-ANCLA-1 FABRICA en (0.22, 0.45): False · V-ANCLA-2 O1 gana: False
+  VEREDICTO: NO SE LEE (un ancla de la pista no se reprodujo; nada se declara; ERR-116 es el precedente)
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\v143_humo_fab-v142-v143-siempre-sintd-o1_s14281-14281_T20000_20260923_183935_resumen.json (sha 05c9512b8f91f725)
+Terminado en 428.3s
+VEREDICTO: HUMO (no cuenta): NO SE LEE

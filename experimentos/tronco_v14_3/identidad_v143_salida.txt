@@ -1,0 +1,39 @@
+IDENTIDAD tronco_v14_3 · 2026-09-23 18:53:06 · corre_v143 24100621c450da22 · construye_v143 9b3140390e6ef431
+  [ 1] OK    (0a) sha de pista, juez, FABRICA, O1, APR, organismo_v142 (congelado) · todos OK
+  [ 2] OK    (0b) carros_v143/*.py == construye_v143 (6 variantes; solo difieren en perillas) · {'V142': '195b7b883d3750ed', 'V143': '2a03048a7f1525e5', 'V143_SINFILTRO': '44faed85a4a05ac2', 'V143_SINTD': 'eaff1ce3681e258b', 'V143_SIEMPRE': '77d252ae44057209', 'V143_INVERTIDO': 'a6b5ed4f570dc42d'}
+  [ 3] OK    (1) revisa_carro PASA V142
+  [ 4] OK    (1) revisa_carro PASA V143
+  [ 5] OK    (1) revisa_carro PASA V143_SINFILTRO
+  [ 6] OK    (1) revisa_carro PASA V143_SINTD
+  [ 7] OK    (1) revisa_carro PASA V143_SIEMPRE
+  [ 8] OK    (1) revisa_carro PASA V143_INVERTIDO
+  [ 9] OK    (1b) ningun carro nombra la tabla verdadera (VAL_VIVO / EFECTO) ni el rng del mundo
+  [10] OK    (2) perillas 0 == FABRICA, N 1 compat 1 T 20000 s1 (todo, rng del mundo incluido) · R0 13/37 rng 4c9b8d5275d7eb99
+  [11] OK    (2) perillas 0 == FABRICA, N 1 compat 1 T 20000 s2 (todo, rng del mundo incluido) · R0 8/39 rng d50e29a562955be3
+  [12] OK    (2) perillas 0 == FABRICA, N 1 compat 1 T 20000 s3 (todo, rng del mundo incluido) · R0 7/23 rng 087c22f936b21fc7
+  [13] OK    (3) monolito organismo_f9c REL (sha 9dd1fb91ecec35ae) == V143 con perillas 0 (vista plana, s1 T 5000) · 76 claves, dif []
+  [14] OK    (4) V142 con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio) · df76f25909842836
+  [15] OK    (4) V143 con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio) · df76f25909842836
+  [16] OK    (4) V143_SINFILTRO con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio) · df76f25909842836
+  [17] OK    (4) V143_SINTD con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio) · df76f25909842836
+  [18] OK    (4) V143_SIEMPRE con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio) · df76f25909842836
+  [19] OK    (4) V143_INVERTIDO con perillas 0 == 9 FABRICA (N 9, s14281, T 2000, fundador limpio) · df76f25909842836
+  [20] OK    (5) pieza 2: V143 con solo OPCION == APR (aprende_barrer) bit a bit (N 9, s14281, T 3000) · oportunidades APR 454
+  [21] OK    (6a) V142 (B-5) difiere de FABRICA y divide por R == 0 (N 9, s14282, T 8000) · divisiones por R==0 14
+  [22] OK    (6b) TODA division B-5 fue en una mordida con efecto 0 en la necesidad activa (tabla verdadera) · 14 eventos; letras [('A', 1), ('B', 1), ('C', 0), ('D', 0)]
+  [23] OK    (6c) la condicion B-5 del carro es la de organismo_v142.py (mismo texto salvo espacios y nombres de perilla)
+  [24] OK    (7a) espiar no cambia la conducta (misma corrida con y sin espia)
+  [25] OK    (7b) FILTRO: con meta, las patas NUNCA apuntan a un obstaculo · {'apunta_obst': 0, 'muerde_obst': 0, 'pasos_meta': 44804, 'pasos_sin_meta': 9196, 'obst_sin_meta': 0, 'sobre_obst': 4122, 'n': 54000}
+  [26] OK    (7c) FILTRO: con meta, la boca NUNCA muerde un obstaculo (y el cuerpo si pasa por encima de alguno) · sobre obstaculo 4122
+  [27] OK    (7d) META = 1: sin meta no hay obstaculos (la limpieza queda posible) · pasos sin meta 9196
+  [28] OK    (7e) SIEMPRE (lesion): hay obstaculos tambien SIN meta; con meta no apunta ni muerde obstaculos · {'apunta_obst': 0, 'muerde_obst': 0, 'pasos_meta': 14131, 'pasos_sin_meta': 39869, 'obst_sin_meta': 36286, 'sobre_obst': 1242, 'n': 54000}
+  [29] OK    (7f) V143 (META 1): nunca queda TODO como obstaculo (el respaldo de _see es inerte en el candidato) · todo_obst 0
+  [30] OK    (7g) CACHE de las dos filas (solo rendimiento, tras el humo) == sin CACHE bit a bit (N 9, s14285, T 6000) · seg sin cache 27.4 · con cache 10.4
+  [31] OK    (8a) las 6 variantes son distintas entre si (N 9, s14284, T 3000)
+  [32] OK    (8b) determinismo: V143 dos veces igual
+  [33] OK    (8c) INVERTIDO lee la letra pareja (A<->B, C<->D) y el resto es V143
+  [34] OK    (9a) corre_v143 ABORTA ante banderas desconocidas o abreviadas (ERR-115), sin correr nada · codigos 2, 2
+  [35] OK    (9b) corre_v143 rechaza semillas ajenas, T distinta, brazos desconocidos, > 6 corridas de humo y rangos que cruzan serie/replica · ['--humo: solo semillas de practica 14281-14290', 'serie: solo 14301-14320 (serie) o 14321-14340 (replica)', 'serie: T = 100000 (preregistrado)', "brazo desconocido 'nuevo' (validos ['fab', 'v142', 'v143', 'sinfiltro', 'sintd', 'siempre', 'invertido', 'o1'])", '--humo: maximo 6 corridas por proceso', 'serie: solo 14301-14320 (serie) o 14321-14340 (replica)']
+  [36] OK    (9c) regla 14: corre_v143.tarea == juez.tarea (9 FABRICA, s14281, T 2000, fundador limpio)
+  JSON C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\tronco_v14_3\datos\humo\identidad_v143_20260923_185646.json (sha 0f6696eafb2cbf27) · 219.6s
+RESULTADO: 36/36
