@@ -330,6 +330,11 @@
 - **ECO-T** (`transfiere/PREREGISTRO_transfiere.md`, commit 9ea2cc6, antes de la serie): los bancos del corte de ECO v1.1 en OTRO mundo, la
   carrera. Colonia de 9 genomas del banco de VIDA contra la del banco de AZAR y contra 9 × G0; placebo con otra muestra del mismo banco.
   T1: VIDA > AZAR ≥ 15/20; T2: VIDA > G0 ≥ 15/20. Arnés 14/14. **11:20 — ventana serie (bancos 19401–19420) lanzada con Pool 3.**
+  - **11:57 — ventana serie, por la letra: TRANSFIERE.** R0 real en la carrera (mediana de las medianas de 9 líneas): **VIDA 0.275**,
+    VIDA_P 0.272, **AZAR 0.153, G0 0.151**. T1 VIDA > AZAR **15/20** (justo en el umbral), T2 VIDA > G0 **20/20**; AZAR > G0 9/20 (la
+    deriva sola no mejora a G0). **Placebo 9.0: vale.** Descriptivo curioso: líneas que persisten en T, VIDA 9, AZAR 16, G0 1 (de 180):
+    los genomas derivados sostienen más líneas pero reproducen menos (a mirar en la réplica; no decide).
+  - **11:58 — ventana réplica (bancos 19421–19440) lanzada.**
 
 ### 1g. ECO v2 — ÓRGANOS COMO GENES, en tres mundos a la vez (aprobado por el director ~11:35)
 - **Instrumento Python** (`construye_eco_org.py`, por anclas): `motor_eco2.py` = motor_eco + dos genes de órgano al final del genoma
