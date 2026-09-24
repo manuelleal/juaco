@@ -518,6 +518,13 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
     para el gemelo; se construye por anclas sobre lo que ya existe; tres mundos de capacidad distinta en la misma serie.
   - Pedí confirmar qué "data sintética" quiere decir (en el repo no hay un conjunto con ese nombre; hay ~1 060 JSON de corridas).
 
+- ~13:30 UTC: *"Quedan 100 dólares; la idea es lograr algo modesto pero real con eso, que de ahí sea más fácil evolucionarlo, y en su tesis
+  ¿a qué llegamos? No hay data, es lo que tenéis, me refiero. ¿A qué hemos llegado, en humano? ¿Hay algo interesante?"*
+  - Cómo se aplicó: se deja una COLA DESATENDIDA (un script que corre lo ya preregistrado, una serie a la vez, y sube cada resultado sin
+    turnos del coordinador): ECO v3 serie → ECO v2.1 serie y réplica → ECO v3 réplica → ECO v1.2 serie y réplica. No se abre nada nuevo.
+    El resultado "modesto pero real" que se busca asegurar es ECO v2.1 (la selección prende el órgano de enseñar). "La data" = lo que ya
+    hay (bancos seleccionados, vidas, tablas).
+
 ## 4. Qué falló y qué propongo (borrador vivo; se completa al cierre)
 **Qué falló o se corrigió (todo del instrumento o del coordinador):**
 - El juez de ECO v1 no distinguía selección de deriva (nube-4: umbral en la mediana de la nula; nube-6: colonia diversa contra clonal).
