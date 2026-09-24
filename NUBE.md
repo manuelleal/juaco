@@ -39,8 +39,10 @@ Informe: `datos/humo/nube_calibracion_20260924.md`.
 ```
 uv venv --seed --python /usr/bin/python3.13 /root/venv-juaco
 /root/venv-juaco/bin/pip install numpy==2.4.3 numba==0.67.0 llvmlite==0.49.0 scipy==1.17.1
+echo 'export PATH=/root/venv-juaco/bin:$PATH' >> ~/.bashrc
 ```
-En cada comando de la sesión se usa `/root/venv-juaco/bin/python`: el shell no conserva `PATH` entre llamadas.
+La tercera línea la propuso la sesión 0: el shell de la sesión toma el PATH de `~/.bashrc`. Se verifica en la siguiente sesión con
+`python --version`, que debe dar 3.13.12. Si no da eso, se usa `/root/venv-juaco/bin/python` en cada comando.
 
 El prompt original de la sesión 0 queda abajo como referencia:
 Prompt para pegar:
