@@ -1,0 +1,116 @@
+(0) ORIGEN (sha fijados en el gemelo)   [03:18:18, 0 s]
+  [OK ] (1) experimentos/juaco_eco/motor_eco.py sha bca3033878b59622
+  [OK ] (2) experimentos/juaco_eco/carros/FABRICA_ECO.py sha f1163009cb5193a2
+  [OK ] (3) experimentos/carrera_escuderias/carros/FABRICA.py sha 2ebee3e99ea5a33a
+  [OK ] (4) experimentos/generaciones/pista2.py sha 4d2bee16e7961261
+(P) PRIMITIVAS delegadas a NumPy (y dos controles que deben fallar)   [03:18:18, 0 s]
+  [OK ] (5) exp del gemelo (bucle 1-D de np.exp por ctypes) == np.exp, 1 000 000 argumentos
+  [OK ] (6) CONTROL (debe fallar): exp de libm != np.exp en esta maquina · distintos 9213/200000 (4.61 %)
+  [OK ] (7) BLAS de numba == BLAS de NumPy (ddot 90 denso, ddot 90 con 3 unos, ddot 6), 300 000 casos · distintos 0
+  [OK ] (8) CONTROL (debe fallar): suma de izquierda a derecha != ddot de BLAS (90 denso) · distintos 81941/100000
+  [OK ] (9) BLAS de numba == BLAS de NumPy (dgemv 90x6 @ 6 y 2x9 @ 9), 100 000 casos · distintos 0
+  [OK ] (10) Generator en numba (permutation, integers, random, normal, uniform) == NumPy: flujo y estado final, 80 flujos · distintos 0
+  [OK ] (11) suma de 6 (mu[c].sum()) de izquierda a derecha desde 0.0 == NumPy, 200 000 filas · distintos 0
+  [OK ] (12) codigo de Kenyon: top-3 del gemelo == set(np.argsort(...)[-3:]) del original, 40 000 casos · distintos 0; con empate en la frontera (a NumPy por objmode) 4740
+(I) E1: eco=None (pista v2 + FABRICA / FABRICA_ECO): salida + trayectoria + pesos + mundo   [03:18:34, 17 s]
+  [OK ] (13) 9 FABRICA fija T=3000 s10001 · salida = · traza 29306 actua = · cerebros 9 vivos = · mundo = · max_vivos 13 muertes 86 partos 13 divisiones 0 · 1.9 s / 0.58 s
+  [OK ] (14) 9 FABRICA fija T=3000 s10002 · salida = · traza 28018 actua = · cerebros 10 vivos = · mundo = · max_vivos 11 muertes 88 partos 10 divisiones 0 · 1.4 s / 0.04 s
+  [OK ] (15) 9 FABRICA fija T=3000 s10003 · salida = · traza 28174 actua = · cerebros 9 vivos = · mundo = · max_vivos 11 muertes 85 partos 13 divisiones 0 · 1.7 s / 0.05 s
+  [OK ] (16) 9 FABRICA fija T=3000 s10004 · salida = · traza 29462 actua = · cerebros 9 vivos = · mundo = · max_vivos 12 muertes 101 partos 14 divisiones 0 · 1.9 s / 0.05 s
+  [OK ] (17) 9 FABRICA fija T=3000 s10005 · salida = · traza 28360 actua = · cerebros 9 vivos = · mundo = · max_vivos 11 muertes 80 partos 9 divisiones 2 · 1.7 s / 0.05 s
+  [OK ] (18) 9 FABRICA_ECO (tupla) T=3000 s10021 · salida = · traza 27840 actua = · cerebros 9 vivos = · mundo = · max_vivos 11 muertes 72 partos 11 divisiones 3 · 1.6 s / 0.04 s
+  [OK ] (19) 9 FABRICA_ECO (tupla) T=3000 s10022 · salida = · traza 27866 actua = · cerebros 9 vivos = · mundo = · max_vivos 10 muertes 94 partos 9 divisiones 0 · 1.6 s / 0.05 s
+  [OK ] (20) 9 FABRICA inmediata T=2000 s10023 · salida = · traza 18227 actua = · cerebros 9 vivos = · mundo = · max_vivos 10 muertes 71 partos 5 divisiones 0 · 1.3 s / 0.03 s
+  [OK ] (21) 9 FABRICA inmediata T=2000 s10024 · salida = · traza 18187 actua = · cerebros 10 vivos = · mundo = · max_vivos 11 muertes 83 partos 8 divisiones 0 · 1.3 s / 0.04 s
+  [OK ] (22) 9 FABRICA mundo_n=5 (esc < n) s10025 · salida = · traza 23289 actua = · cerebros 10 vivos = · mundo = · max_vivos 11 muertes 49 partos 4 divisiones 0 pisos 2 · 1.2 s / 0.04 s
+  [OK ] (23) 3 FABRICA mundo_n=9 (esc > n) s10026 · salida = · traza 12332 actua = · cerebros 4 vivos = · mundo = · max_vivos 4 muertes 49 partos 7 divisiones 0 · 0.8 s / 0.03 s
+  [OK ] (24) 3 FABRICA mundo_n=9 (esc > n) s10027 · salida = · traza 12355 actua = · cerebros 3 vivos = · mundo = · max_vivos 4 muertes 39 partos 8 divisiones 0 · 1.4 s / 0.03 s
+  [OK ] (25) 9 FABRICA rep_acum=1 s10028 · salida = · traza 29592 actua = · cerebros 10 vivos = · mundo = · max_vivos 13 muertes 96 partos 16 divisiones 0 · 1.9 s / 0.05 s
+  [OK ] (26) 9 FABRICA tope 10 (bloqueados) s10029 · salida = · traza 27459 actua = · cerebros 9 vivos = · mundo = · max_vivos 10 muertes 76 partos 10 divisiones 0 bloqueados 1 · 1.8 s / 0.07 s
+  [OK ] (27) 9 FABRICA muestra 37 s10030 · salida = · traza 18285 actua = · cerebros 9 vivos = · mundo = · max_vivos 11 muertes 48 partos 5 divisiones 0 · 1.2 s / 0.04 s
+  [OK ] (28) 9 FABRICA r_rep 0.002 (pisos) s10031 · salida = · traza 27000 actua = · cerebros 9 vivos = · mundo = · max_vivos 9 muertes 42 partos 0 divisiones 0 pisos 109 · 1.1 s / 0.04 s
+  [OK ] (29) 1 FABRICA (n = 1: turno sin permutacion) s10032 · salida = · traza 8101 actua = · cerebros 1 vivos = · mundo = · max_vivos 2 muertes 13 partos 3 divisiones 0 pisos 35 · 0.3 s / 0.01 s
+  [OK ] (30) 3 FABRICA escala=0 (L = 40) s10033 · salida = · traza 9419 actua = · cerebros 4 vivos = · mundo = · max_vivos 4 muertes 33 partos 3 divisiones 0 pisos 122 · 0.4 s / 0.02 s
+  [OK ] (31) etiquetas mezcladas FABRICA / FABRICA_ECO s10034 · salida = · traza 10124 actua = · cerebros 3 vivos = · mundo = · max_vivos 5 muertes 24 partos 7 divisiones 0 pisos 1 · 0.5 s / 0.02 s
+  [OK ] (32) 9 FABRICA T=15000 (vida larga: divisiones) s10035 · salida = · traza 148157 actua = · cerebros 10 vivos = · mundo = · max_vivos 14 muertes 431 partos 68 divisiones 2 · 8.8 s / 0.29 s
+  [OK ] (33) el carro espia es INERTE (original con espia == original sin espia)
+(E) E2: eco=dict(...): genoma, mutacion, sombras, banco, vivero, corte, refunda, brazos, ind_cb   [03:19:15, 57 s]
+  [OK ] (34) eco refunda=1 con G0 s10005 · salida = · traza 28360 actua = · cerebros 9 vivos = · mundo = · filas 89 = · max_vivos 11 muertes 80 partos 9 divisiones 2 · 1.7 s / 0.13 s
+        eco: nacidos 9 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 71 · t_ext None · corte None · gen_t 0
+  [OK ] (35) eco refunda=1 con G0 s10041 · salida = · traza 28284 actua = · cerebros 10 vivos = · mundo = · filas 100 = · max_vivos 11 muertes 90 partos 14 divisiones 3 · 1.8 s / 0.04 s
+        eco: nacidos 14 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 77 · t_ext None · corte None · gen_t 0
+  [OK ] (36) + 8 sombras, cada_gen 500, banco 50 s10005 · salida = · traza 28360 actua = · cerebros 9 vivos = · mundo = · filas 89 = · max_vivos 11 muertes 80 partos 9 divisiones 2 · 1.7 s / 0.06 s
+        eco: nacidos 9 · mutaciones 0 (sombras 0) · fundadores del banco 71 · refundados 71 · t_ext None · corte None · gen_t 6
+  [OK ] (37) + 8 sombras, cada_gen 500, banco 50 s10042 · salida = · traza 29048 actua = · cerebros 10 vivos = · mundo = · filas 87 = · max_vivos 11 muertes 77 partos 9 divisiones 1 · 1.8 s / 0.05 s
+        eco: nacidos 9 · mutaciones 0 (sombras 0) · fundadores del banco 69 · refundados 69 · t_ext None · corte None · gen_t 6
+  [OK ] (38) (M) p_mut 0.2, 4 sombras, banco 100 s10006 · salida = · traza 116011 actua = · cerebros 18 vivos = · mundo = · filas 363 = · max_vivos 23 muertes 345 partos 65 divisiones 3 · 6.9 s / 0.20 s
+        eco: nacidos 65 · mutaciones 1194 (sombras 955) · fundadores del banco 280 · refundados 280 · t_ext None · corte None · gen_t 6
+  [OK ] (39) (M) p_mut 0.2, 4 sombras, banco 100 s10043 · salida = · traza 116087 actua = · cerebros 21 vivos = · mundo = · filas 346 = · max_vivos 22 muertes 325 partos 50 divisiones 0 · 6.7 s / 0.29 s
+        eco: nacidos 50 · mutaciones 1188 (sombras 716) · fundadores del banco 278 · refundados 278 · t_ext None · corte None · gen_t 6
+  [OK ] (40) (M) mutables = alpha, eta_s s10007 · salida = · traza 112999 actua = · cerebros 18 vivos = · mundo = · filas 346 = · max_vivos 22 muertes 328 partos 57 divisiones 3 · 7.1 s / 0.19 s
+        eco: nacidos 57 · mutaciones 122 (sombras 82) · fundadores del banco 271 · refundados 271 · t_ext None · corte None · gen_t 6
+  [OK ] (41) (M) mutables = alpha, eta_s s10044 · salida = · traza 116640 actua = · cerebros 20 vivos = · mundo = · filas 339 = · max_vivos 24 muertes 319 partos 53 divisiones 2 · 6.6 s / 0.19 s
+        eco: nacidos 53 · mutaciones 116 (sombras 84) · fundadores del banco 268 · refundados 268 · t_ext None · corte None · gen_t 6
+  [OK ] (42) (R) refunda=0: si todo muere, muere s10008 · salida = · traza 8612 actua = · cerebros 0 vivos = · mundo = · filas 14 = · max_vivos 9 muertes 14 partos 5 divisiones 0 · 0.6 s / 0.02 s
+        eco: nacidos 5 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 0 · t_ext 3624 · corte None · gen_t 0
+  [OK ] (43) (R) refunda=0: si todo muere, muere s10045 · salida = · traza 8200 actua = · cerebros 0 vivos = · mundo = · filas 15 = · max_vivos 9 muertes 15 partos 6 divisiones 0 · 0.5 s / 0.02 s
+        eco: nacidos 6 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 0 · t_ext 4197 · corte None · gen_t 0
+  [OK ] (44) (V) vivero y corte en 3000 s10009 · salida = · traza 70464 actua = · cerebros 1 vivos = · mundo = · filas 207 = · max_vivos 21 muertes 206 partos 27 divisiones 0 · 3.9 s / 0.10 s
+        eco: nacidos 27 · mutaciones 190 (sombras 107) · fundadores del banco 162 · refundados 162 · t_ext None · corte 19 · gen_t 6
+  [OK ] (45) (V) vivero y corte en 3000 s10046 · salida = · traza 73310 actua = · cerebros 1 vivos = · mundo = · filas 191 = · max_vivos 23 muertes 190 partos 37 divisiones 0 · 4.1 s / 0.12 s
+        eco: nacidos 37 · mutaciones 151 (sombras 135) · fundadores del banco 136 · refundados 136 · t_ext None · corte 21 · gen_t 6
+  [OK ] (46) brazo VIDA (corre_eco.eco_cfg), corte 3000 s10047 · salida = · traza 69246 actua = · cerebros 0 vivos = · mundo = · filas 184 = · max_vivos 22 muertes 184 partos 38 divisiones 0 · 4.2 s / 0.15 s
+        eco: nacidos 38 · mutaciones 137 (sombras 242) · fundadores del banco 128 · refundados 128 · t_ext 4884 · corte 19 · gen_t 2
+  [OK ] (47) brazo VIDA (corre_eco.eco_cfg), corte 3000 s10048 · salida = · traza 71842 actua = · cerebros 1 vivos = · mundo = · filas 202 = · max_vivos 23 muertes 201 partos 42 divisiones 0 · 4.2 s / 0.12 s
+        eco: nacidos 42 · mutaciones 170 (sombras 285) · fundadores del banco 142 · refundados 142 · t_ext None · corte 21 · gen_t 3
+  [OK ] (48) brazo CEREBRO, corte 3000 s10016 · salida = · traza 71419 actua = · cerebros 1 vivos = · mundo = · filas 198 = · max_vivos 24 muertes 197 partos 30 divisiones 0 · 3.8 s / 0.12 s
+        eco: nacidos 30 · mutaciones 123 (sombras 182) · fundadores del banco 150 · refundados 150 · t_ext None · corte 19 · gen_t 3
+  [OK ] (49) brazo CEREBRO, corte 3000 s10049 · salida = · traza 67672 actua = · cerebros 2 vivos = · mundo = · filas 219 = · max_vivos 22 muertes 217 partos 31 divisiones 0 · 4.1 s / 0.14 s
+        eco: nacidos 31 · mutaciones 151 (sombras 191) · fundadores del banco 170 · refundados 170 · t_ext None · corte 20 · gen_t 3
+  [OK ] (50) brazo AZAR (p_mut 0.3), corte 3000 s10015 · salida = · traza 74253 actua = · cerebros 1 vivos = · mundo = · filas 212 = · max_vivos 22 muertes 211 partos 31 divisiones 2 · 4.5 s / 0.14 s
+        eco: nacidos 31 · mutaciones 1035 (sombras 1349) · fundadores del banco 163 · refundados 163 · t_ext None · corte 21 · gen_t 3
+  [OK ] (51) brazo AZAR (p_mut 0.3), corte 3000 s10050 · salida = · traza 72236 actua = · cerebros 3 vivos = · mundo = · filas 200 = · max_vivos 21 muertes 197 partos 30 divisiones 0 · 4.4 s / 0.11 s
+        eco: nacidos 30 · mutaciones 985 (sombras 1284) · fundadores del banco 152 · refundados 152 · t_ext None · corte 20 · gen_t 3
+  [OK ] (52) brazo MUT0, corte 3000 s10017 · salida = · traza 69486 actua = · cerebros 1 vivos = · mundo = · filas 182 = · max_vivos 22 muertes 181 partos 30 divisiones 2 · 4.2 s / 0.11 s
+        eco: nacidos 30 · mutaciones 0 (sombras 0) · fundadores del banco 134 · refundados 134 · t_ext None · corte 22 · gen_t 3
+  [OK ] (53) brazo MUT0, corte 3000 s10051 · salida = · traza 66004 actua = · cerebros 0 vivos = · mundo = · filas 210 = · max_vivos 21 muertes 210 partos 30 divisiones 0 · 4.2 s / 0.11 s
+        eco: nacidos 30 · mutaciones 0 (sombras 0) · fundadores del banco 162 · refundados 162 · t_ext 5372 · corte 18 · gen_t 2
+  [OK ] (54) VIDA con banco 5 < n (banco inicial recortado) s10018 · salida = · traza 70568 actua = · cerebros 1 vivos = · mundo = · filas 204 = · max_vivos 22 muertes 203 partos 35 divisiones 1 · 4.1 s / 0.13 s
+        eco: nacidos 35 · mutaciones 1046 (sombras 1462) · fundadores del banco 151 · refundados 151 · t_ext None · corte 20 · gen_t 3
+  [OK ] (55) VIDA con banco 5 < n (banco inicial recortado) s10052 · salida = · traza 63273 actua = · cerebros 1 vivos = · mundo = · filas 213 = · max_vivos 21 muertes 212 partos 28 divisiones 0 · 3.8 s / 0.12 s
+        eco: nacidos 28 · mutaciones 1071 (sombras 1200) · fundadores del banco 167 · refundados 167 · t_ext None · corte 18 · gen_t 3
+  [OK ] (56) genoma explicito NO entero, sin sombras s10019 · salida = · traza 39369 actua = · cerebros 10 vivos = · mundo = · filas 88 = · max_vivos 12 muertes 78 partos 7 divisiones 0 · 2.1 s / 0.06 s
+        eco: nacidos 7 · mutaciones 296 (sombras 0) · fundadores del banco 72 · refundados 72 · t_ext None · corte None · gen_t 5
+  [OK ] (57) genoma explicito NO entero, sin sombras s10053 · salida = · traza 36250 actua = · cerebros 10 vivos = · mundo = · filas 90 = · max_vivos 10 muertes 80 partos 5 divisiones 2 · 2.1 s / 0.06 s
+        eco: nacidos 5 · mutaciones 328 (sombras 0) · fundadores del banco 76 · refundados 76 · t_ext None · corte None · gen_t 5
+  [OK ] (58) tope 20 con eco (bloqueados) s10054 · salida = · traza 112777 actua = · cerebros 18 vivos = · mundo = · filas 367 = · max_vivos 20 muertes 349 partos 40 divisiones 3 bloqueados 12 · 7.2 s / 0.19 s
+        eco: nacidos 40 · mutaciones 625 (sombras 140) · fundadores del banco 309 · refundados 309 · t_ext None · corte None · gen_t 4
+  [OK ] (59) tope 20 con eco (bloqueados) s10055 · salida = · traza 111333 actua = · cerebros 19 vivos = · mundo = · filas 372 = · max_vivos 20 muertes 353 partos 44 divisiones 3 bloqueados 4 · 6.9 s / 0.18 s
+        eco: nacidos 44 · mutaciones 641 (sombras 161) · fundadores del banco 310 · refundados 310 · t_ext None · corte None · gen_t 4
+  [OK ] (60) (S) flujo de individuos del gemelo: filas == muertes + vivos y l.ind vacio · filas 174
+(C) CHECKPOINT: estado completo del original == estado del gemelo; cortado y reanudado; firma   [03:21:05, 167 s]
+  [OK ] (61) vivero + corte, p_mut 0.1 s10010: seguida con checkpoints, gemelo == original (toda la salida) · checkpoints [1000, 2000, 3000] / [1000, 2000, 3000]
+  [OK ] (62) vivero + corte, p_mut 0.1: ESTADO COMPLETO en t=1000 (cuerpos, cerebros, genomas, mundo, rng, banco, contadores) · 20 cuerpos, 41 objetos, banco 25; pickle 593 KB / 807 KB
+  [OK ] (63) vivero + corte, p_mut 0.1: ESTADO COMPLETO en t=2000 (cuerpos, cerebros, genomas, mundo, rng, banco, contadores) · 18 cuerpos, 39 objetos, banco 36; pickle 551 KB / 751 KB
+  [OK ] (64) vivero + corte, p_mut 0.1: ESTADO COMPLETO en t=3000 (cuerpos, cerebros, genomas, mundo, rng, banco, contadores) · 11 cuerpos, 72 objetos, banco 45; pickle 379 KB / 525 KB
+  [OK ] (65) vivero + corte, p_mut 0.1: gemelo cortado en t=1000 y reanudado == original seguido (toda la salida)
+  [OK ] (66) vivero + corte, p_mut 0.1: gemelo cortado en t=2000 y reanudado == original seguido (toda la salida)
+  [OK ] (67) vivero + corte, p_mut 0.1: gemelo cortado en t=3000 y reanudado == original seguido (toda la salida)
+  [OK ] (68) AZAR, tope 3000, muestra 1000 s10060: seguida con checkpoints, gemelo == original (toda la salida) · checkpoints [1000, 2000, 3000] / [1000, 2000, 3000]
+  [OK ] (69) AZAR, tope 3000, muestra 1000: ESTADO COMPLETO en t=1000 (cuerpos, cerebros, genomas, mundo, rng, banco, contadores) · 28 cuerpos, 68 objetos, banco 107; pickle 957 KB / 1261 KB
+  [OK ] (70) AZAR, tope 3000, muestra 1000: ESTADO COMPLETO en t=2000 (cuerpos, cerebros, genomas, mundo, rng, banco, contadores) · 30 cuerpos, 73 objetos, banco 187; pickle 1165 KB / 1473 KB
+  [OK ] (71) AZAR, tope 3000, muestra 1000: ESTADO COMPLETO en t=3000 (cuerpos, cerebros, genomas, mundo, rng, banco, contadores) · 7 cuerpos, 108 objetos, banco 198; pickle 528 KB / 676 KB
+  [OK ] (72) AZAR, tope 3000, muestra 1000: gemelo cortado en t=1000 y reanudado == original seguido (toda la salida)
+  [OK ] (73) AZAR, tope 3000, muestra 1000: gemelo cortado en t=2000 y reanudado == original seguido (toda la salida)
+  [OK ] (74) AZAR, tope 3000, muestra 1000: gemelo cortado en t=3000 y reanudado == original seguido (toda la salida)
+  [OK ] (75) checkpoint del gemelo de OTRA corrida aborta · SystemExit: ECO: el checkpoint es de otra corrida (firma distinta)
+  [OK ] (76) checkpoint del ORIGINAL en el gemelo aborta (formato propio; declarado) · SystemExit: ECO: el checkpoint es de otra corrida (firma distinta)
+  [OK ] (77) checkpoint del GEMELO en el original aborta · SystemExit: ECO: el checkpoint es de otra corrida (firma distinta)
+(X) EL MUNDO DE LA SERIE (corre_eco.MUNDO: esc 90, 90 FABRICA_ECO, tope 3000, muestra 1000)   [03:21:14, 176 s]
+  [OK ] (78) VIDA, corte 3000 s19001 T=4000: toda la salida · cuerpos medios 80.8, max 100, nacidos 158, refundados 750; original 20.2 s (198 pasos/s), gemelo 0.41 s (9812 pasos/s), x49
+  [OK ] (79) AZAR, corte 1500 s19002 T=2000: toda la salida · cuerpos medios 75.7, max 98, nacidos 66, refundados 360; original 9.6 s (209 pasos/s), gemelo 0.22 s (9124 pasos/s), x44
+  [OK ] (80) MUT0, corte 1500 s19003 T=2000: toda la salida · cuerpos medios 74.0, max 98, nacidos 67, refundados 326; original 10.3 s (193 pasos/s), gemelo 0.27 s (7331 pasos/s), x38
+(J) corre_eco SIN cambiar su letra (corre_eco_rapido cambia CR.ME por el gemelo): juez y trabajo()   [03:21:55, 217 s]
+  [OK ] (81) corre_eco_rapido: CR.ME es el gemelo y lo demas de motor_eco es el original
+  [OK ] (82) juez: bateria de G0 (esc 9, 9 fundadores, sin mutacion ni reposicion, T_b 20000), 3 semillas selladas · [(1969, 7), (3710, 7), (2073, 5)]
+  [OK ] (83) juez: banco mutante (9 entradas al azar por semilla), T_b 3000 · [(2768, 10), (2043, 8)]

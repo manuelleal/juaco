@@ -97,6 +97,29 @@ Pareados: ORA_SIN0 > ORÁCULO 4/4 (+0.46) · ORA_SIN0 > RES 4/4 (+0.28) · RES >
 - **Siguiente:** RES_SIN0 (la familia pasa lo que vivió, sin lo neutro), en semillas exploratorias 24001–24004. Si se acerca a ORA_SIN0,
   la familia se sostiene con su propio conocimiento: candidato a preregistro (n10c).
 
+### RES_SIN0: la familia pasa lo que vivió, sin lo neutro
+`python experimentos/exploratorio_nube_20260924/revisa_n10b_oraculo.py --brazos NADA,RES,RES_SIN0,ORA_SIN0 --desde 24001 --n 4`
+(02:57–03:23 UTC). Semillas exploratorias 24001–24004, T 100 000. RES_SIN0 es FAMB_RES, cuya `nace` descarta las entradas con R = 0 de
+la tabla recibida.
+
+| semilla | NADA | RES | **RES_SIN0** | ORA_SIN0 |
+|---|---|---|---|---|
+| 24001 | 0.064 | 0.651 | **0.911** | 0.985 |
+| 24002 | 0.131 | 0.794 | **0.960** | 0.947 |
+| 24003 | 0.092 | 0.692 | **0.974** | 1.003 |
+| 24004 | 0.092 | 0.551 | **0.960** | (ver el JSON) |
+
+**Lectura (exploratoria):**
+- **RES_SIN0 > RES en 4/4, todas ≥ 0.91, y ≈ ORA_SIN0.** La familia, con lo que ella misma vivió, transmite casi lo mismo que la verdad
+  cuando no pasa lo neutro. Lo hace en el mundo de flujo fijo.
+- **Mecanismo propuesto:** transmitir sólo lo que tiene consecuencia conserva la generalización protectora.
+- **No medido aún:** la persistencia del carro (`persiste_carro`) y el MIX.
+- **Candidato a preregistro (n10c):**
+  - brazos: RES_SIN0 contra RES, BAR_SIN0 (control de contenido que puede ganar), NADA y ORA_SIN0;
+  - MIX;
+  - semillas nuevas, serie y réplica;
+  - la persistencia como medida co-principal.
+
 ## (ii) Aprender prediciendo
 _(pendiente)_
 

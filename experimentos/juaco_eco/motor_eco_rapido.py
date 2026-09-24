@@ -293,7 +293,11 @@ def _elige(pos, L, xl, kl, xr, kr, oseq):
     else:
         x = xl if xl >= 0 else xr
     k = kl if x == xl else kr
-    return k, ((pos - x) % L) < ((x - pos) % L)
+    a = pos - x   # (pos - x) % L y (x - pos) % L con 0 <= pos, x < L: sin division (identidad entera exacta)
+    if a < 0: a += L
+    b = x - pos
+    if b < 0: b += L
+    return k, a < b
 
 
 @njit(cache=True)
@@ -301,7 +305,10 @@ def _see(s, pos, t, contar, q, L, grid, oseq, rpos, rexp, bi):
     MR = bi[s, I_MR]
     fd = -1; fk = -1; fl = False
     for d in range(L // 2 + 1):
-        xl = (pos - d) % L; xr = (pos + d) % L
+        xl = pos - d   # (pos -+ d) % L con 0 <= pos < L y 0 <= d <= L // 2: sin division (identidad entera exacta)
+        if xl < 0: xl += L
+        xr = pos + d
+        if xr >= L: xr -= L
         kl = grid[xl]
         kr = grid[xr] if xr != xl else -1
         if kl < 0 and kr < 0: continue
@@ -643,7 +650,9 @@ def _tramo(t0, t1, pi, pf, PATM, EFF, RV, GI, C0i, C0f,
                 el[s, 0, j] = el[s, 0, j] * TAU + dm0 * tr[s, j]
                 el[s, 1, j] = el[s, 1, j] * TAU + dm1 * tr[s, j]
             mov = int(m1 - m0)
-            pos2 = (pos + mov) % L
+            pos2 = pos + mov   # (pos + mov) % L con mov en {-1, 0, 1}
+            if pos2 < 0: pos2 += L
+            elif pos2 >= L: pos2 -= L
             d2, _k2, _l2 = _see(s, pos2, t, False, q, L, grid, oseq, rpos, rexp, bi)
             Rp = .2 if d2 < d else 0.
             bf[s, F_R] = 0.; bf[s, F_RP] = Rp; bf[s, F_HAMB] = hambre
@@ -1204,7 +1213,10 @@ def run_solapadas(seed, carros, T=100000, pizarra=1, compat=0, rep_acum=0, escal
                   rep_X=M['rep_X'], cupo=P.CUPO, ancho=P.ANCHO, fabrica=P.cfg_fabrica())
         return _d if g is None else ME.ctx_genoma(_d, g)
 
-    for i, (e, mod) in enumerate(mods):   # RAMAS del carro (aborta igual que el original si no son las portadas)
+    _vistos = set()
+    for i, (e, mod) in enumerate(mods):   # RAMAS del carro (aborta igual que el original si no son las portadas; no dependen del genoma)
+        if id(mod) in _vistos: continue
+        _vistos.add(id(mod))
         mod.crea(dict(ctx_de(i, ids[i], (None if E_ is None else E_['gs0'][i])), rng=np.random.default_rng(0)))
 
     # ---- constantes (H-4: todo sale de cfg_fabrica)

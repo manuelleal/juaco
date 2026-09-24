@@ -62,6 +62,24 @@
       la letra (§6) no cambia; lo que cambia es la frase declarable, que decide el director.
   - **02:33 — réplica 12721–12740, lanzada con este comando:**
     `/root/venv-juaco/bin/python experimentos/subida_n10b/corre_n10b.py --serie --desde 12721 --n 20 --pool 3`
+    - **03:20 — terminó.** JSON: `experimentos/subida_n10b/datos/n10b_serie_s12721-12740_T100000_20260924_022952.json` (cc285d187403ce11).
+
+    | carro | R0_nacidos (mediana) |
+    |---|---|
+    | NADA | 0.122 |
+    | RES | **0.737** |
+    | RES1 | 0.382 |
+    | BAR | 0.168 |
+    | ORÁCULO | 0.545 |
+
+    - Validez: V-ANCLA-b y V-TECHO-b pasan.
+    - F-1 a F-5: 20/20.
+    - **VEREDICTO por la letra: FUNCIONA + ACUMULA.**
+    - Alarma del §8 otra vez: RES > ORÁCULO en 18/20. La explica H-NEUTRAS (exploratorio).
+  - **n10b, por la letra: FUNCIONA + ACUMULA ×2** (serie y réplica, mismo veredicto).
+    - Propuesta del preregistro (§11): +8 por FUNCIONA y +2 por ACUMULA en los niveles 10–13. Lo fija el director.
+    - La frase declarable debe decir que el ORÁCULO de 8 entradas NO es un techo (H-NEUTRAS), y que ningún linaje se declara sostenido
+      por esta serie. H-1 sigue en pie como medida del carro.
 
 ### 1b. JUACO-ECO (frente 2)
 - **01:43 — arnés** `identidad_eco.py` (b70ec2f05915dc2e): **41/41** en 118 s (PC: 208 s). Salida idéntica a la del PC. Corrió en el
@@ -72,6 +90,9 @@
     el que ejercita el juez actual (ERR-120).
   - La diferencia es la enmienda ERR-121 (P3c pasa a decidir), escrita antes de cualquier serie. El §0 no se actualizó.
   - La serie corre con el runner de main, y su log imprime el sha.
+- **03:21 — prueba de la ruta del Pool** (sin valor por construcción).
+  - Comando: `/root/venv-juaco/bin/python experimentos/juaco_eco/corre_eco.py --serie --prueba_pool --desde 19031 --n 2 --pool 2`.
+  - Antes: `git diff` contra main de los originales de ECO, generaciones y carrera, vacío; `corre_eco.py` 47d9cee4d6462116.
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen.
