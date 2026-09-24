@@ -403,6 +403,31 @@
   - Lectura (no se declara): la selección se queda con la herencia donde hay linajes que duran (w30) y tira curiosidad y modelo en los dos
     mundos, lo mismo que dijeron las ablaciones a mano del Frankenstein. La réplica 20131–20150 va en la cola.
 
+### 1i. ECO v2.1 — ¿la selección PRENDE el órgano de enseñar?, con la prueba de expresión contra sombras (`PREREGISTRO_eco_v21.md`)
+- Mismo motor, carro y gemelo que ECO v2; sólo cambia el instrumento (nube-8): O1\* = la fracción del banco del corte que EXPRESA `ensena`
+  supera a la media de las de sus 8 sombras en ≥ 15/20; O2 = el banco de VIDA la expresa más que el de AZAR en ≥ 15/20. FUNCIONA si los dos
+  pasan en ≥ 2 de 3 mundos. Semillas nuevas. Runner 7a64da16e6e7fd25 (el del preregistro), gemelo, Pool 3.
+- **Serie 20211–20230** (14:35–14:49; reanudada tras el reinicio del contenedor; 120 corridas únicas, 0 bloqueadas, guardias vacías):
+  - w30: O1\* **17/20** (AZAR 9), banco VIDA 0.975 contra AZAR 0.29, O2 **15/20**; vivos en T con `ensena` 1.00 contra 0.00; persisten 19 y 10.
+  - w90: O1\* **20/20** (AZAR 7), banco 0.99 contra 0.20, O2 **20/20**; vivos 1.00 contra 0.25; persisten 20 y 15; alpha (+) 15/20.
+  - w270: O1\* **20/20** (AZAR 8), banco 0.985 contra 0.12, O2 **18/20**; vivos 0.995 contra 0.36; persisten 20 y 15.
+  - `filtra0` (secundario): 15, 15 y 14/20. **VEREDICTO (serie): FUNCIONA — O1\* y O2 en 3 de 3 mundos.**
+- **Réplica 20231–20250** (14:49–15:04; 120 únicas, 0 bloqueadas, guardias vacías):
+  - w30: O1\* **20/20** (AZAR 14, a uno de la guardia), banco 0.965 contra 0.47, O2 **16/20**; vivos 1.00 contra 0.67; persisten 19 y 9.
+  - w90: O1\* **20/20** (AZAR 10), banco 0.99 contra 0.42, O2 **18/20**; vivos 0.98 contra 0.50; persisten 20 y 18.
+  - w270: O1\* **20/20** (AZAR 9), banco 0.985 contra 0.29, O2 **20/20**; vivos 0.99 contra 0.77; persisten 20 y 16; alpha (+) 20/20.
+  - `filtra0`: 14, 18 y 13/20. **VEREDICTO (réplica): FUNCIONA — O1\* y O2 en 3 de 3 mundos.**
+- **BLOQUE ECO v2.1, por la letra: FUNCIONA ×2 — LA SELECCIÓN PRENDE EL ÓRGANO DE ENSEÑAR** (serie y réplica, mismo veredicto, en los tres
+  mundos). Predicciones firmadas (§3): O1\* 15–20 en los 6 casos, O2 15–20 en los 6, `filtra0` dentro de 8–18 en los 6; veredicto FUNCIONA
+  (0.75). Auditoría del coordinador tras correr: sha del runner = el del preregistro; 120 corridas únicas por ventana; 0 bloqueadas; guardias
+  vacías.
+  - En humano: un rasgo que nace APAGADO en todos los cuerpos y que sólo sirve al hijo (el padre le pasa lo que aprendió en el parto) se
+    prende solo por selección en 97–99 % de los padres exitosos, contra 12–47 % por deriva, y lo llevan ~100 % de los vivos al final.
+  - Vocabulario: «la selección prende el órgano». No se dice «evoluciona», «cultura» ni «especie».
+  - Descriptivo que no decide: en AZAR, `ensena` sobre sus sombras llegó a 14/20 en w30 de la réplica (la nula da ~8); en AZAR el banco
+    también lo llenan padres que se reprodujeron, así que no es deriva pura. La guardia (15) no se cruzó; se deja escrito para el PC.
+  - Relación con ECO v2 (MODESTO ×2): misma pregunta con el instrumento que fallaba; v2 no se recalifica.
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
 la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–24099, con arneses de identidad bit a bit de cada subclase.
@@ -562,6 +587,9 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
   de herencia valen distinto en cada mundo. Hay que decir en qué mundo vale cada pieza.
 - A mano, las piezas no suman (0 de 7 mejoran a v14.3; el Frankenstein con todo es peor que sin mapa, curiosidad, modelo o lenta).
   La selección sí encuentra perillas que sirven en OTRO mundo (ECO-T serie: TRANSFIERE; FAB_EVO3 6/6).
+
+**Resultado de la tarde (lo "modesto pero real"):** ECO v2.1 FUNCIONA ×2 (§1i): la selección prende sola el órgano de enseñar, en tres
+mundos, contra deriva y contra sombras. Es el primer escalón de la línea ECO que pasa por la letra en serie y réplica.
 
 **Propuesta para el director (orden):**
 1. Auditar en el PC n10c, ECO v1.1, ECO-T y, cuando corran, ECO v1.2 y ECO v2. Aceptar o no nube-4, nube-5, nube-6 como ERR.
