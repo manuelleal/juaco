@@ -43,7 +43,7 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 - **subida_n6b: HAY ALGO MODESTO ×2.** Memoria completa del mapa (V1 20/20 ×2) y port a v14.2; cae R-4 ×2 (come 35–40 % menos que el ciego) y D-4
   en la serie (el mapa barajado rinde igual), que en la réplica pasa: a auditar. Nivel 6 sigue en 60 %.
 - **subida_n8c (memoria lenta con repaso): HAY ALGO MODESTO ×2.** El repaso sube la retención (18/20 ×2) y es el contenido de la huella; RET40 0.71 < 0.75.
-- **subida_n8b:** corriendo (serie 14801 + réplica 14821); si el apagado de las 00:00 la corta, se relanza el 24-sep con el mismo comando.
+- **subida_n8b: HAY ALGO MODESTO ×2** (terminó a las 23:30). Sigue aprendiendo a 5.5× las celdas (pieza 1); caen reciclar con lo aprendido y retener lo ausente. Propuesta del runner: +5 al nivel 8.
 - **Nube:** trabaja en su rama `nube/noche-20260924`; se integra en la auditoría del 24-sep.
 
 ## INCIDENTE 23-sep ~21:55 (coordinador, 22:15; el director pidió restaurar desde el repo y relanzar)

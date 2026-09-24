@@ -6674,3 +6674,13 @@ Runner `experimentos/tronco_v14_3/corre_v143.py` (sha `24100621c450da22`), ident
 **Predicciones (réplica):** P2 V143 > V142 (≥18/20, dif ≥ 0.10), P3 R0 real en [0.45, 0.85], P4 no gana, P7 SINTD ≈ V143, P8 INVERTIDO < V142, P9 vida ≥ 3× V142 y P11 **se cumplen**; P5 (sin limpieza peor), P6 (sin filtro peor) y P10 (veneno+sal ≤ 50 % de las muertes; salió 93 %) **no se cumplen**.
 
 **Lectura honesta.** Juntar las piezas replicadas en el bicho real sirve: v14.3 vive ~9× más que v14.2, sube el R0 real de 0.16 a 0.63 y sus linajes persisten con recambio (19/20 semillas). Pero no cruza H-1 y sigue muriendo casi siempre de veneno o sal. P7 dice que la boca TD no le aporta nada propio (SINTD ≈ V143), y P6 que el filtro tampoco rinde lo esperado: la ganancia viene sobre todo de otra parte, y eso es lo que tiene que explicar la auditoría. La fracción "voluntaria" física (0.84) no significa muerte programada (ERR-103: el clasificador no discrimina). Nivel 9 sin cambio hasta la auditoría. Prohibido: "v14.3 cruza"; "v14.3 supera a O1".
+
+### SUBIDA N8B — seguir aprendiendo con memoria limitada (23-sep-2026, serie 14801–14820 a las 22:45 y réplica 14821–14840 a las 23:10; N = 500 estímulos, T = 500000): **HAY ALGO MODESTO ×2 por la letra (PREREGISTRO_n8b §6, veredicto combinado del runner) — pieza 1 completa (sigue aprendiendo a 5.5× las celdas); caen las piezas 2, 3 y 4; propuesta del runner: +5 al nivel 8; pendiente de auditoría**
+
+Runner `experimentos/subida_n8b/corre_n8b.py`. Crudos: serie `experimentos/subida_n8b/datos/n8b_serie_base-prueba-prazar-uso-pruso-pruazar-recic_s14801-14820_N500_20260923_224556.json`; réplica `…_s14821-14840_N500_20260923_231054.json` (sha `79dbfe39c4fec0f3`). Validez: V1 (RECIC ve la novedad, 20/20) y V2 (BASE > NULO 20/20) se cumplen.
+
+- **G1 (pieza 1) SE CUMPLE:** con 90 celdas y 500 estímulos, PRUEBA sigue aprendiendo después de agotarlas (P3: comida tarde > a priori 20/20, +0.26; P5: no sigue cayendo tras agotar).
+- **Caen:** G2 (ningún brazo retiene lo ausente: RET40 ≤ 0.63, RET40_com ≤ 0.375), G3 y G3b (usar lo aprendido para decidir qué reciclar, PRUSO, no gana a PRUEBA ni a PRUAZAR) y G4 y G4b (PRUEBA no le gana con claridad a BASE: 12/20, +0.04; y pierde 0/20 contra PRAZAR, que prueba al azar y aprende más a costa de morir más).
+- También caen P4 y P7 (PRUEBA muere menos que BASE, 20/20, pero con cociente 0.865 > 0.85) y P12.
+
+**Lectura honesta.** Junto con n8 y n8c: el organismo sigue aprendiendo aunque se le acabe la memoria, pero todavía no decide bien qué olvidar ni conserva lo que deja de ver. Probar más, al azar, enseña más pero mata más. El nivel 8 (fijado en 50 %) se discute en la auditoría con n8, n8b y n8c juntos.
