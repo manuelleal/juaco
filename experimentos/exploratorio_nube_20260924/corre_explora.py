@@ -37,7 +37,7 @@ def _brazos():
         'LIM': (lambda: CR.modulo('LIM', lim=1.4), 'limpia lo malo si min(E,Ag) >= 1.4'),
         'NEO5_LIM': (lambda: CR.modulo('NEO5_LIM', neo=0.5, lim=1.4), 'neofobia 0.5 + limpieza 1.4'),
     }
-    for extra in ('carros_extra', 'carros_predice', 'carros_ver', 'carros_apr_reserva', 'carros_limpia'):
+    for extra in ('carros_extra', 'carros_predice', 'carros_ver', 'carros_apr_reserva', 'carros_limpia', 'carros_v143_reserva'):
         if os.path.exists(os.path.join(AQUI, extra + '.py')):
             mod = __import__(extra)
             b.update(mod.BRAZOS)
@@ -80,7 +80,7 @@ def identidad(log):
 
     def fis(r):
         return json.dumps([{k: v for k, v in d.items() if k != 'carro'} for d in r['linajes']], sort_keys=True, default=str), r['pista']
-    pares = [('W0', 'FAB'), ('W2', 'FAB'), ('WP', 'FAB'), ('WV', 'FAB'), ('WA', 'APR'), ('WL', 'FAB'), ('RESP', 'RES')]
+    pares = [('W0', 'FAB'), ('W2', 'FAB'), ('WP', 'FAB'), ('WV', 'FAB'), ('WA', 'APR'), ('WL', 'FAB'), ('RESP', 'RES'), ('WV143', 'V143')]
     for s in (24098, 24099):
         for x, y in pares:
             if x not in B or y not in B: continue
@@ -109,9 +109,9 @@ def main(argv=None):
 
     def log(s=''):
         s = f"[{time.strftime('%H:%M:%S')}] {s}"; print(s, flush=True); flog.write(s + '\n'); flog.flush()
+    shas = ' · '.join(f"{f} {h16(os.path.join(AQUI, f))}" for f in sorted(os.listdir(AQUI)) if f.startswith('carros_') and f.endswith('.py'))
     log(f"EXPLORATORIO — no es dato · {et} · python {sys.version.split()[0]} · corre_explora.py {h16(os.path.abspath(__file__))} · "
-        ' · '.join(f"{f} {h16(os.path.join(AQUI, f))}" for f in sorted(os.listdir(AQUI)) if f.startswith('carros_') and f.endswith('.py'))
-        + f" · pista.py {h16(P.__file__)} · juez.py {h16(J.__file__)}")
+        f"{shas} · pista.py {h16(P.__file__)} · juez.py {h16(J.__file__)}")
     if a.identidad:
         ok = identidad(log); log(f"IDENTIDAD: {'OK' if ok else 'FALLA'}"); flog.close(); sys.exit(0 if ok else 1)
     B = _brazos()
