@@ -402,6 +402,18 @@
     (predicho: neutros o descartados). DESCARTADO es descriptivo por la ENMIENDA 1.
   - Lectura (no se declara): la selección se queda con la herencia donde hay linajes que duran (w30) y tira curiosidad y modelo en los dos
     mundos, lo mismo que dijeron las ablaciones a mano del Frankenstein. La réplica 20131–20150 va en la cola.
+- **Réplica 20131–20150** (15:04–16:24, mismo runner; guardias vacías):
+  - w9: `interruptor` O1\* **15/20**, banco VIDA 0.37 contra AZAR 0.12, VIDA > AZAR **15/20** → **ELEGIDO**. `curiosidad` "baja" (3/20;
+    VIDA < AZAR 18). `modelo` 6/20 (debajo 14, a uno de "baja"). Persisten en T: VIDA 2, AZAR 1.
+  - w30: `herencia` O1\* **16/20**, banco 0.83 contra 0.34, VIDA > AZAR **14/20** (otra vez a uno de O2) → "sube". `interruptor` 14 y 14/20
+    (banco 0.80 contra 0.29) → neutro por un punto en cada prueba. `curiosidad`, `modelo` y `b5` "baja". Persisten: VIDA 16, AZAR 6.
+  - **VEREDICTO POR LA LETRA (réplica): HAY ALGO MODESTO** (ELEGIDO en un mundo: `interruptor` en w9).
+- **BLOQUE ECO v3, por la letra: NO** (serie NO, réplica MODESTO; vale el menor). No se declara que la selección elija órganos del
+  Frankenstein.
+  - Descriptivo de dos ventanas (no se declara): `herencia` en w30 sobre sus sombras 19 y 16/20, con el banco de VIDA en 0.98 y 0.83
+    contra 0.40 y 0.34 de AZAR, y O2 14/20 las dos veces; `interruptor` sube en w9 las dos veces (17 y 15/20); `curiosidad` baja en los dos
+    mundos las dos veces, `modelo` en tres de cuatro. La anatomía que queda es la que las ablaciones a mano del PC ya sugerían.
+  - El mundo chico (w9) se extingue casi siempre en los dos brazos (persisten 0 y 2 de 20): ahí la selección tiene poco con qué trabajar.
 
 ### 1i. ECO v2.1 — ¿la selección PRENDE el órgano de enseñar?, con la prueba de expresión contra sombras (`PREREGISTRO_eco_v21.md`)
 - Mismo motor, carro y gemelo que ECO v2; sólo cambia el instrumento (nube-8): O1\* = la fracción del banco del corte que EXPRESA `ensena`
