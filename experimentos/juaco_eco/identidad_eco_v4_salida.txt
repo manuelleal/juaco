@@ -1,0 +1,22 @@
+IDENTIDAD ECO v4 (runner) · 2026-09-24 17:10:49 · python 3.13.12 · shas {'corre_eco_v4.py': 'f7ba5d77cfd7f725', 'corre_eco.py': '47d9cee4d6462116', 'motor_eco3.py': '2eec9830792d9822', 'carros/FRANK_ECO.py': '92a22cbd1fe314c3', 'construye_eco_frank.py': '785b12130022c56b', 'PREREGISTRO_eco_v4.md': 'd3b20b5a4d8c71ab', 'organismo_frankenstein.py': 'baff124177d44e90'}
+  OK  (M) mundo, brazos, ventanas, organos, paquete, fijos y mutables del preregistro 
+  OK  (T) w30 VIDA: banco_on y vivos_on == a mano; 25 genes; sel_corte de 25; mutables == los 20; fijos apagados (nacidos 41, 7.9 s)
+  OK  (T) w30 AZAR: banco_on y vivos_on == a mano; 25 genes; sel_corte de 25; mutables == los 20; fijos apagados (nacidos 40, 8.7 s)
+  OK  (T) w9 VIDA: banco_on y vivos_on == a mano; 25 genes; sel_corte de 25; mutables == los 20; fijos apagados (nacidos 14, 2.1 s)
+  OK  (T) w9 AZAR: banco_on y vivos_on == a mano; 25 genes; sel_corte de 25; mutables == los 20; fijos apagados (nacidos 16, 2.1 s)
+  OK  (K) la mutacion alcanza a los 2 organos del paquete (real o sombras > 0) y a ninguno de los 5 fijos (real y 8 sombras en 0.0) (paquete real + suma de sombras: {'herencia': 1.065, 'interruptor': 0.86}; nacidos 149, 37.3 s)
+  OK  (S) expresion en el corte: el real (del checkpoint) == banco_on (del motor) en los 7 organos, con 8 sombras cada uno ({'b5': (0.0, 0.0), 'mapa': (0.0, 0.0), 'curiosidad': (0.0, 0.0), 'modelo': (0.0, 0.0), 'lenta': (0.0, 0.0), 'herencia': (0.055, 0.126), 'interruptor': (0.035, 0.103)})
+  OK  (V) FUNCIONA: herencia e interruptor ELEGIDOS -> FUNCIONA: LA SELECCION ARMA EL PAQUETE (en esta serie): herencia e interruptor ELEGIDOS en ['w30', 'w9']
+  OK  (V) MODESTO: solo herencia ELEGIDO -> HAY ALGO MODESTO (en esta serie): ELEGIDO ['herencia']; los dos suben en []
+  OK  (V) MODESTO: herencia ELEGIDO e interruptor sube -> HAY ALGO MODESTO (en esta serie): ELEGIDO ['herencia']; los dos suben en ['w30', 'w9']
+  OK  (V) MODESTO: los dos suben sin O2 -> HAY ALGO MODESTO (en esta serie): ELEGIDO []; los dos suben en ['w30', 'w9']
+  OK  (V) NO: solo interruptor sube -> NO (en esta serie)
+  OK  (V) NO: nada sube -> NO (en esta serie)
+  OK  (V) NO EVALUABLE: falsos positivos de AZAR -> NO EVALUABLE (AZAR da falsos positivos contra sombras: [('w30', 'eta', (9, 0)), ('w9', 'eta', (9, 0))])
+  OK  (V) NO EVALUABLE: bloqueados -> NO EVALUABLE (tope de cuerpos alcanzado: bloqueados = 4)
+  OK  (V) NO EVALUABLE: incompleta -> NO EVALUABLE (serie incompleta)
+  OK  (V) NO EVALUABLE: un organo fijo expresado -> NO EVALUABLE (instrumento: un organo FIJO se expreso: [('w30', 'AZAR', 20314, 'mapa'), ('w9', 'AZAR', 20314, '
+  OK  (V) el perfil marca ELEGIDO y sube donde toca ({'w30': {'herencia': 'ELEGIDO', 'interruptor': 'sube'}, 'w9': {'herencia': 'ELEGIDO', 'interruptor': 'sube'}})
+  OK  (R) el parser aborta ante 13 formas malas (13/13)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 2; archivos nuevos fuera de las series en curso: 0)
+RESULTADO: 20/20  (58 s)
