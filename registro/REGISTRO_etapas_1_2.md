@@ -6626,3 +6626,16 @@ Arnés `identidad_v5.py` 33/33 antes de cada serie. Crudos: serie `serie_v5_s257
 ### SUBIDA N9b — ¿la ventaja de APR (el organismo propio) pasa por predecir su estado?, serie 13501–13520 y réplica 13521–13540 (23-sep-2026, 19:50–21:15; Pool 6; preregistro `experimentos/subida_n9b/PREREGISTRO_n9b.md`, commiteado en `2b9fc43`): **NO, en serie y réplica — ninguna lesión de la predicción de sí (PLANA, CRUZ) le quita la ventaja a APR; la ventaja aprendida de APR es contención general** (veredicto de `corre_n9b.py --veredicto`)
 
 Arnés 48/48 antes de cada serie. En la serie, APR tiene mediana R0 0.378 y FABRICA 0.339 (P1 ancla ✓). PLANA 0.386, CRUZ 0.385 y MUNDO 0.386: ninguna pierde. P2 y P3 se refutan, P4 (el control MUNDO no pierde) se cumple, P7 no se cumple. La réplica da el mismo veredicto. **Lectura:** el organismo propio no tiene todavía la pieza de "modelo de sí" que O3 (política escrita por un LLM) sí usa (SUBIDA N9). Aprende a contenerse, no a predecirse. Se cierra la línea "predicción de sí en APR". Detalle por brazo en los resúmenes JSON de `experimentos/subida_n9b/datos/`.
+
+### ERR-122 (23-sep-2026, ~21:10; decisión del director: "corrige la banda"), criterio de tronco v4, puerta T-B
+La banda de azar de G2 de T-B, [0.42, 0.58], estaba fijada por el azar teórico (0.5) y no por el nulo del tronco. En las 40 semillas
+reales del tronco v14.1/v14.2 (101–140), la mediana de azar G2 es 0.434, y a n = 20 la mediana cae dentro de la banda sólo el 0.55 de
+las veces. La puerta rechazaba al propio tronco casi la mitad de las veces (patrón de ERR-91). El análisis está en
+`experimentos/tronco_v14_3_examen/analiza_potencia_v143.py` y su salida.
+- **Enmienda:** azar G2 ∈ **[0.31, 0.60]**, cuantiles 0.5 %–99 % de la mediana del nulo a n = 20. Azar G1 queda en [0.35, 0.65]. T-B
+  entera pasa al tronco 0.957 bajo el nulo, que es la regla 15. Se decidió **antes de cualquier serie** del examen de v14.3, sin ver ningún
+  dato del candidato: la justificación es el nulo, no el candidato.
+- **Implementación** (creador, arnés **114/114**, humo idéntico al de las 20:43): el runner calcula T-B desde los valores crudos de
+  la batería. La batería congelada `bateria_generaliza_v142.py` conserva su banda interna y no se toca. La banda vieja se reporta al lado,
+  para el candidato y para el tronco, sólo como informe.
+- **Alcance:** vale para la letra del criterio v4 desde hoy (`CRITERIO_TRONCO_v4.md`, fila T-B). No rejuzga a nadie.

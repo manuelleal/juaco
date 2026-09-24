@@ -6,6 +6,9 @@ existían** (`analiza_potencia_v143.py`, no simula un paso). §12 (humo) se escr
 Decisión del director (23-sep, 19:30): *"v14.3 = v14.2 + reparación N del 7; preparar esta noche el examen del criterio v4
 para correrlo mañana; congelar si pasa serie y réplica"*. Principio: **el examen v4 es la puerta de NO REGRESIÓN del
 organismo común, no un puntaje.** Misión: llegar a la AGI por este camino.
+**ENMIENDA ERR-122 (23-sep-2026 ~21:10, ANTES de la serie; decisión del director "corrige la banda"):** la banda de azar G2
+de T-B pasa de [0.42, 0.58] a **[0.31, 0.60]** (nulo real del tronco). Detalle y cálculo en §7; cambian §3 (arnés), §4 (fila
+T-B), §5 (probabilidades), §10 y §11 (conteos); §12′ trae el arnés y el humo de después. Nada más cambia.
 
 ## 1. Hipótesis
 **H-v143:** el tronco con la vía lenta normalizada por masa (N) no hace nada peor que v14.2 en lo que el tronco ya hace
@@ -40,13 +43,14 @@ calibrada y las tareas del tronco en el mundo vivo), `umbrales_v4` (`881e2a07245
 `corre_sal` (`bfdc00bb48656337`), `diagnostico_codigos` (`02905c71a7ac3de8`), `creacion_B/corre_codigo` (`cb91371b77c079d3`),
 `tronco_v15_dE5/corre_dE5_v2` (`c042de285398a333`, la letra de T-B/T-C i/T-E/T-F examen), `subida_n7/corre_n7`
 (`746e9c70f7beef45`) y `mundo_n7` (`429667c8a334aa48`). Umbrales, semillas y predicciones: `umbrales_examen_v143.py`.
-**Arnés `identidad_v143ex.py`: RESULTADO 106/106** (salida en `identidad_v143ex_salida.txt`; bloques en §12).
+**Arnés `identidad_v143ex.py`: RESULTADO 106/106** (salida en `identidad_v143ex_salida.txt`; bloques en §12). **Tras ERR-122:
+114/114** (regla 14 33/33 y el bloque (X) de la enmienda; §12′).
 
-## 4. La letra de CRITERIO_TRONCO_v4, puerta por puerta (ningún umbral tocado)
+## 4. La letra de CRITERIO_TRONCO_v4, puerta por puerta (ningún umbral tocado salvo la banda de azar G2 de T-B: ENMIENDA ERR-122, §7)
 | puerta | medida y montaje | letra (umbral) | n y semillas (serie / réplica) |
 |---|---|---|---|
 | **T-A** | `corre_vivo_rep2` VIVO y CUELLO_MIN, T = 100 000; brazos OFF (tronco), **CAND**, TRONCO_B (s + 100 000), PLACEBO | muertes ≤ 1.10 ×; `r` ≥ tronco − 10; NI una cola 95 % `LI > −10` (`corre_criterio_v4.letra_TA`) | 80 / brazo: 43101–43180 / 43201–43280 |
-| **T-B** | `bateria_generaliza` px0 y azar, T = 200 000, CAND y TRONCO en las mismas semillas | G1 ≥ 0.80, G2 ≥ 0.85, azar G1 ∈ [0.35, 0.65], azar G2 ∈ [0.42, 0.58], K 20/20 | 20: 43001–43020 / 43021–43040 |
+| **T-B** | `bateria_generaliza` px0 y azar, T = 200 000, CAND y TRONCO en las mismas semillas; T-B se calcula desde los valores crudos (acc, ba, cobertura), no con el veredicto interno de la batería | G1 ≥ 0.80, G2 ≥ 0.85, azar G1 ∈ [0.35, 0.65], azar G2 ∈ **[0.31, 0.60] (ENMIENDA ERR-122, §7; la de la letra, [0.42, 0.58], se reporta para CAND y TRONCO y no decide)**, K 20/20 | 20: 43001–43020 / 43021–43040 |
 | **T-C** | (i) examen E2; (ii) `mini_vivo` VIVO con `invertir_vivo_en = 50 000`, cuatro brazos; `vis[B]`, `vis[A]` por cuarto al lado | (i) come B Q4 ≥ 50 en ≥ 18/20; (ii) NI `LI > −12.5` | (i) 20 como T-B; (ii) 80 como T-A |
 | **T-D** | sal muda (`corre_sal.BASE`), OFF y CAND | C1, C2, C6 importados de `creacion_B/corre_codigo.UMBRALES` | 9 ALIAS + 9 LIMPIAS, las **primeras** de 43501–44000 / 44001–44500 (§8) |
 | **T-E** | examen v3′, seis etapas, CAND contra TRONCO en las mismas semillas | conducta ≥ 18/20 por escenario, tolerancias 1.10 / 0.8 (`corre_dE5_v2.CLAUSULAS`); pesos reportados | 20 como T-B |
@@ -80,17 +84,26 @@ lo que la letra le hace **al tronco** en 20 (u 80) semillas nuevas.
 | inercia | CAND == tronco **bit a bit** en todas las corridas de T-A, T-B, T-C, T-D y T-E (lo cuenta el runner) | 1.00 |
 | legible | TRONCO_B pasa T-A, T-C (ii) y T-F vivo (reparto del nulo real de V4-CAL: 0.968–0.976; con la reserva ~0.999) | 0.97 |
 | T-A | d ≡ 0: LI = 0 > −10 en los dos brazos; razón de muertes 1.000; `r` VIVO ≈ −75 (−85…−65), CUELLO_MIN ≈ −6 (−15…+5) | 1.00 |
-| **T-B** | G1 1.000; G2 0.93–1.00; azar G1 0.40–0.60; K 20/20; **azar G2 0.33–0.55 (mediana del tronco 0.434)** | **0.55** |
+| **T-B** | G1 1.000; G2 0.93–1.00; azar G1 0.40–0.60; K 20/20; **azar G2 0.33–0.55 (mediana del tronco 0.434), dentro de [0.31, 0.60] (ERR-122)** | **0.957** (antes de ERR-122: 0.55) |
 | T-C | (i) come B Q4 ≥ 50 en 20/20 (el tronco: 60/60, mínimo 51); (ii) LI = 0 > −12.5, `rev` ≈ 43 (30–55) | 0.97 |
 | T-D | C1 9/9 (\|W[sal]\| 0.0), C2 9/9 (W[veneno] −3.0), C6 9/9 (el tronco con B-5: 36/36 en dos series) | 0.95 |
 | T-E | 20/20 en las seis etapas (sólo pesan E2 "come B ≥ 50" y E2I "tasa A": 60/60 en el tronco) | 0.97 |
 | T-F | razones 1.000 exactas | 1.00 |
 | T-G | K_max(N) = 8 (rango 6–8), K_max(T142) = 1 (0–2), NC3C 0; N > T142 20/20 en k = 3, 4, 5 | 0.99 |
-| **serie** | todas | **0.47–0.52** |
-| **serie + réplica** | **veredicto PASA** | **0.22–0.27** |
+| **serie** | todas | **0.82–0.91** (antes de ERR-122: 0.47–0.52) |
+| **serie + réplica** | **veredicto PASA** | **0.67–0.82** (antes de ERR-122: 0.22–0.27) |
 
-**Mi predicción del veredicto por la letra: NO PASA (p ≈ 0.75), y casi toda esa probabilidad es T-B — no N.** Sin la banda de
-azar de G2, la serie pasaría con ~0.85 y el examen con ~0.73.
+**Cálculo con ERR-122** (sin simular, con los números del mismo JSON `281b2e55b4ad1aaf`; puertas independientes, como en
+`analiza_potencia_v143.py`): cota baja por serie = legible 0.9675 × T-B **0.957** × T-C (i)/T-E 0.929 (cota 95 %) × T-D 0.95 ×
+T-G 1.000 = **0.817** (= `P_serie_sin_TB` 0.854 × 0.957); cota alta = legible con la reserva 0.999 × 0.957 × 1.000 (60/60) × 0.95
+× 1.000 = **0.908**. Serie + réplica = el cuadrado: **0.668–0.825**. (Con P_TB 0.549 las mismas cuentas dan 0.469–0.521 y
+0.220–0.271: el rango viejo.)
+
+**Mi predicción del veredicto por la letra, con ERR-122: PASA (p ≈ 0.67–0.82).** El riesgo que queda (0.09–0.18 por serie) se
+reparte entre la legibilidad del mundo vivo (la cubre la reserva), azar G1 de T-B (0.969), T-D (0.95 declarada) y la cota
+conservadora de T-C (i)/T-E (0.929); ninguno depende de N. *Antes de ERR-122 (texto original, se conserva):* "Mi predicción del
+veredicto por la letra: NO PASA (p ≈ 0.75), y casi toda esa probabilidad es T-B — no N. Sin la banda de azar de G2, la serie
+pasaría con ~0.85 y el examen con ~0.73."
 
 ## 6. Qué significa cada veredicto y qué refuta H
 - **PASA** (serie y réplica legibles, siete puertas): v14.3 entra al tronco por el permiso escrito del director → §10.
@@ -105,7 +118,9 @@ azar de G2, la serie pasaría con ~0.85 y el examen con ~0.73.
   cambiar nada de lo que el tronco hacía (idéntico bit a bit en el examen v4), replicado"*. Prohibido: "razona", "compone
   conceptos", "planifica".
 
-## 7. Riesgo de la LETRA que veo antes de correr (NO lo cambio: sería ERR; decide el coordinador con el director)
+## 7. Riesgo de la LETRA visto antes de correr → ENMIENDA ERR-122 (aplicada el 23-sep-2026 ~21:10, ANTES de la serie)
+*Texto original (escrito antes de la decisión; se conserva tal cual). La enmienda va debajo.*
+
 **La banda de azar de G2 de T-B, [0.42, 0.58], está calibrada sobre el azar teórico (0.5) y no sobre el nulo del tronco.** En
 las 40 semillas reales del tronco v14.1/v14.2 (101–140) la mediana de azar G2 es **0.434** (series: 0.437 y 0.434, las dos al
 borde); a n = 20 la mediana cae dentro de la banda sólo **0.55** de las veces (cuantiles de la mediana: 2.5 % 0.337, 50 %
@@ -120,6 +135,32 @@ placebo"). Opciones, **todas antes de la serie**:
   serie; después, no.
 - (c) una cláusula relativa (azar del candidato frente al tronco en las mismas semillas), que es lo que la puerta quiere decir.
 El runner reporta T-B del TRONCO al lado del del candidato, así que si cae se verá que cae igual.
+
+**ENMIENDA ERR-122 (APLICADA; la opción (b)).**
+- **Cuándo y quién:** 23-sep-2026, ~21:10. Decisión del director: *"corrige la banda"*. El número lo fija el coordinador
+  (ERR-120 y ERR-121 ya se usaron en ECO: el "candidato a ERR-120" de arriba es este ERR-122).
+- **Antes de la serie:** no existe ningún dato de serie ni de réplica (la carpeta `datos/` del examen está vacía). Las únicas
+  corridas hechas son las del arnés y del humo (semillas 43041–43047 y la ALIAS histórica 326), que no son de ninguna serie, y
+  ninguna midió el azar G2 de T-B.
+- **Qué cambia:** la banda de azar G2 de T-B pasa de [0.42, 0.58] a **[0.31, 0.60]**. La de azar G1 queda en [0.35, 0.65].
+  Todo lo demás de T-B (G1 ≥ 0.80, G2 ≥ 0.85, K 20/20) y de las otras seis puertas: **sin cambio**.
+- **Cálculo del nulo** (regla 15; `analiza_potencia_v143.py`, JSON `datos/humo/potencia_examen_v143_20260923_203158.json`,
+  `281b2e55b4ad1aaf`): el tronco v14.1 = v14.2 = v14.3 en el mundo de regla, 40 semillas reales 101–140; mediana de azar G2
+  **0.4344**; remuestreo de la mediana a n = 20 (B = 20 000): cuantiles 0.5 % 0.3028, 1 % 0.3184, 99 % 0.5974, 99.5 % 0.6033.
+  La banda [0.31, 0.60] (dos decimales, entre esos cuantiles) deja pasar a **T-B entera (las cinco cláusulas juntas) 0.957**
+  bajo el nulo, en el mismo remuestreo (≥ 0.95). Con [0.42, 0.58] eran 0.549.
+- **Dónde vive:** `umbrales_examen_v143.ERR122` y `NUM['TB_azar2']`. `corre_examen_v143.veredicto_TB` calcula T-B desde los
+  valores crudos de la batería (acc, ba y cobertura por semilla) con esa banda. No usa el veredicto interno de
+  `bateria_generaliza`: la congelada `bateria_generaliza_v142.py` y su copia `v143` conservan su banda interna [0.42, 0.58] y
+  no se tocan. `regla14()` compara todo lo demás con los módulos de origen y registra `TB_azar2` como diferencia DECLARADA por
+  ERR-122, no como falla (33/33).
+- **Por qué no favorece al candidato:** la banda se aplica igual al CAND y al TRONCO (v14.2 congelado en las mismas semillas;
+  en T-B no hay TRONCO_B, porque la letra 4′ lo pone sólo en el mundo vivo). En T-B el candidato ES el tronco bit a bit, y el
+  runner lo cuenta. El runner reporta T-B de los dos con la banda nueva y, **sólo como informe**, con la vieja: en el log de la
+  etapa 2, en la línea T-B de la etapa 8 y en `--combina`. La banda nueva contiene a la vieja: todo lo que pasaba sigue pasando.
+- **Qué cuesta:** la puerta deja de detectar un azar G2 entre 0.31 y 0.42 o entre 0.58 y 0.60, que es donde cae el propio
+  tronco en ~45 % de las series de 20. Fuera de [0.31, 0.60] sigue diciendo NO (arnés (X): 0.30 y 0.61 caen).
+- **Arnés y humo después de la enmienda:** §12′.
 
 ## 8. Semillas NUEVAS (buscadas el 23-sep ~21:00; `busca_semillas_v143.py`, salida en `busca_semillas_v143_salida.txt`)
 | papel | serie | réplica |
@@ -157,7 +198,8 @@ coincide. Ninguna semilla coincide con V4-CAL (2361–2440, 2841–2940), subida
        # v14.3 = TRONCO desde el <fecha> (examen del CRITERIO DE TRONCO v4: PASA en serie y replica; permiso del director 23-sep 19:30).
        # v14.3 = v14.2 + REPARACION N (norm_lenta; subida_n7 FUNCIONA x2): el paso de la via lenta x M0/(P.P), M0 = 3.0.
        # Memoria nueva CERO; constante nueva M0 = 3.0; rng intacto. Inerte por construccion donde P.P = 3 (identidad_v143ex
-       # 106/106; examen v4: CAND == v14.2 bit a bit en T-A..T-F). Donde actua (3T-k): compone hasta K_max 8; v14.2, hasta 1.
+       # 114/114; examen v4: CAND == v14.2 bit a bit en T-A..T-F). Donde actua (3T-k): compone hasta K_max 8; v14.2, hasta 1.
+       # Examen con la banda azar-G2 de T-B enmendada por ERR-122 ([0.31, 0.60], antes de la serie; decision del director).
        './organismo/organismo_v143.py':          '2cebc0ab0c38b70f',
        './organismo/organismo_v143g.py':         'c20fccaa9107fb89',
        './organismo/bateria_v143.py':            '9daa88a90a2fd7b1',
@@ -168,7 +210,8 @@ coincide. Ninguna semilla coincide con V4-CAL (2361–2440, 2841–2940), subida
    las dos baterías copiadas ESCRIBAN su JSON en `organismo/`, ERR-42):
    `cd organismo && python bateria_v143.py 6 && python bateria_generaliza_v143.py organismo_v143 20 --desde 101`
    (histórica: `bateria_v142.py 6` y `bateria_generaliza_v142.py organismo_v142 20 --desde 101`; v14.1, v13, v11, v9). Debe salir
-   todo PASA con los mismos números que v14.2 (es el mismo organismo en esos mundos).
+   todo PASA con los mismos números que v14.2 (es el mismo organismo en esos mundos). ERR-122 enmienda la puerta T-B del examen,
+   no la batería: `bateria_generaliza_v143` conserva su banda interna [0.42, 0.58] (en 101–120 el tronco da 0.437, dentro).
 5. `CLAUDE.md` (tronco v14.3 + regla 1), `ESTADO.md`, entrada del REGISTRO ("CONGELACIÓN v14.3 … coste 0 % en el tronco por
    identidad, no por medida; compone en 3T-k hasta 8"), commit y
    `git tag -a v14.3-tronco -m "v14.3 = v14.2 + N (via lenta normalizada por masa, M0 = 3.0, memoria nueva cero). Examen v4 PASA en serie y replica; identico a v14.2 bit a bit en T-A..T-F; compone en 3T-k hasta K_max 8."`
@@ -176,7 +219,7 @@ coincide. Ninguna semilla coincide con V4-CAL (2361–2440, 2841–2940), subida
 6. Si algo de 1–4 falla: **no se congela**, se registra con ERR y v14.2 sigue siendo el tronco.
 
 ## 11. Comandos y costo (sólo el coordinador; los agentes no corren `--serie`, ERR-115)
-Antes de cada serie el runner corre el arnés (se para si no da 106/106), la regla 14 (32/32) y la selección de T-D.
+Antes de cada serie el runner corre el arnés (se para si no da 114/114, tras ERR-122), la regla 14 (33/33) y la selección de T-D.
 - **Nube** (4 núcleos; Pool 3 = nproc − 1; bits idénticos al PC):
   `/root/venv-juaco/bin/python experimentos/tronco_v14_3_examen/corre_examen_v143.py --serie --pool 3`
   `/root/venv-juaco/bin/python experimentos/tronco_v14_3_examen/corre_examen_v143.py --replica --pool 3 --con experimentos/tronco_v14_3_examen/datos/examen_v143_serie_<sello>.json`
@@ -215,3 +258,17 @@ declarada.
 **Qué no se pudo verificar aquí:** el camino con Pool (a un agente no le toca abrir Pool; es el mismo patrón `spawn` +
 `imap_unordered` de los runners del repo); el `__main__` de las baterías copiadas, que necesita estar en `organismo/` (lo prueba la
 regla 1 con `--log` al congelar, §10.4); T-H.
+
+## 12′. Arnés y humo DESPUÉS de la enmienda ERR-122 (UN proceso; escrito después, 23-sep ~21:35)
+**Arnés `identidad_v143ex.py` → RESULTADO 114/114** (191 s; `identidad_v143ex_salida.txt`; JSON
+`datos/humo/identidad_v143ex_20260923_213414.json`, `1005dabb2fc053f7`): (0) 6/6 · (A) 12/12 · (I) 12/12 · (B) 6/6 · (C) 11/11 ·
+(D) 5/5 · (E) 4/4 · (R) **33/33** (la comprobación de T-B se parte en dos: G1, G2 y azar G1 == origen; azar G2 = diferencia
+DECLARADA por ERR-122) · (J) 5/5 (a dE5 se lo juzga con la banda vieja, la que usó su juez, y también pasa con la nueva: azar G2
+0.532) · **(X) 7/7** (la banda que decide es [0.31, 0.60] y el resto de T-B no cambia; la vieja == origen y las baterías conservan
+su banda interna; con azar G2 0.36 PASA con la nueva y la vieja dice NO sólo como informe; bordes: 0.30 NO, 0.31 y 0.60 PASA, 0.61
+NO; el log, la etapa 8 y `--combina` muestran la vieja como SOLO INFORME para CAND y TRONCO) · (K) 13/13.
+**Humo `--humo`** (12.9 s, 6 corridas; `datos/humo/examen_v143_humo_20260923_213425.json`, `740de61f78bb8384`): las seis corridas
+dan los mismos números que el humo de las 20:43 (T-A VIVO CAND == OFF, r −22; rev 17; |W[sal]| 0.02; come B 88; T-G N k = 5, sep
+3.659 y lift 0.216): la enmienda no toca la simulación. Cableado: el bueno pasa las siete; el MALO cae T-A, T-B (0.30 < 0.31),
+T-C, T-D y T-G; con ERR-122 (azar G2 0.36 en CAND y TRONCO), T-B PASA con la nueva y la vieja dice NO sin decidir. Regla 14
+33/33. No es dato.

@@ -14,6 +14,13 @@ Lo que se REUSA por import (sha fijado en ANCLAS; nada se copia):
   corre_n7            la tarea y la letra de 3T-k (T-G)
 El candidato: organismo_v143 (examen), organismo_v143g (T-B), organismo_v143cal (mundo vivo), construidos por construye_v143.py.
 
+ENMIENDA ERR-122 (23-sep-2026 ~21:10, antes de la serie; decision del director "corrige la banda", PREREGISTRO §7): T-B se
+calcula aqui desde los valores CRUDOS de bateria_generaliza (acc, ba, cobertura por semilla), nunca desde el veredicto interno
+de la bateria CONGELADA (que conserva su banda [0.42, 0.58]). La banda de azar G2 que DECIDE es [0.31, 0.60]
+(umbrales_examen_v143.NUM['TB_azar2'] = ERR122['banda_nueva']); la de la letra importada (corre_dE5_v2.UMB['T-B']['azar2'] =
+[0.42, 0.58]) se calcula para CAND y TRONCO y SOLO SE REPORTA. Todo lo demas de T-B (G1, G2, azar G1 [0.35, 0.65], K) y de las
+otras puertas: sin cambio. regla14() registra TB_azar2 como diferencia DECLARADA por ERR-122, no como falla.
+
 ETAPAS (serie y replica; regla 10: una linea por etapa con hora, log a disco desde el arranque, fsync):
   0  anclas (sha), semillas de T-D recalculadas, regla 14 (kwargs campo a campo), procesos python vivos (regla 11)
   1  identidad (subproceso de UN proceso): identidad_v143ex.py -> 'RESULTADO: N/N' == umbrales.ARNES_ESPERADO; si no, se para
@@ -350,8 +357,14 @@ def regla14():
     R.append(('R5 T-C ii == umbrales_v4.V4[T-C_ii] (margen 12.5, n 80); T-F == 1.25',
               (u4['T-C_ii']['margen'], u4['T-C_ii']['n'], u4['T-F_vivo']['razon']) == (n['TC_margen'], n['n_vivo'], n['TF_razon'])))
     ub = D5.UMB['T-B']
-    R.append(('R5 T-B == corre_dE5_v2.UMB[T-B] (0.80, 0.85, [0.35, 0.65], [0.42, 0.58])',
-              (ub['g1'], ub['g2'], tuple(ub['azar']), tuple(ub['azar2'])) == (n['TB_g1'], n['TB_g2'], n['TB_azar'], n['TB_azar2'])))
+    R.append(('R5 T-B == corre_dE5_v2.UMB[T-B] en G1, G2 y azar G1 (0.80, 0.85, [0.35, 0.65]): sin cambio',
+              (ub['g1'], ub['g2'], tuple(ub['azar'])) == (n['TB_g1'], n['TB_g2'], n['TB_azar'])))
+    # ERR-122: la UNICA diferencia con la letra importada, DECLARADA (no es falla): decide [0.31, 0.60]; el origen dice
+    # [0.42, 0.58], que es la banda vieja que el runner sigue calculando y SOLO reporta.
+    R.append(('R5 T-B azar G2: diferencia DECLARADA por ERR-122 (no es falla): decide [0.31, 0.60]; el origen corre_dE5_v2 '
+              '[0.42, 0.58] == la banda vieja, que solo se reporta',
+              tuple(n['TB_azar2']) == tuple(U.ERR122['banda_nueva']) == (0.31, 0.60)
+              and tuple(ub['azar2']) == tuple(U.ERR122['banda_vieja']) == (0.42, 0.58)))
     R.append(('R5 T-E / T-C i / T-F examen == corre_dE5_v2 (TOL 1.10, TOL_COME 0.8, PUERTA_E 18, factor 1.25)',
               (D5.TOL, D5.TOL_COME, D5.PUERTA_E, D5.UMB['T-F']['factor']) == (n['tol'], n['tol_come'], n['puerta_E'], n['TF_razon'])
               and 'come B Q4 >= 50 (T-C i)' in [c for c, _ in D5.CLAUSULAS['E2']]))
@@ -400,8 +413,20 @@ def inercia(res, clave, cand, ref):
     return sum(iguales(A[k], B[k]) for k in comun), len(comun)
 
 
-def veredicto_TB(res):
+def banda_TB():
+    """Los umbrales con los que el examen DECIDE T-B. G1, G2, azar G1: la letra importada (corre_dE5_v2.UMB['T-B'], sin cambio).
+    azar G2: ENMIENDA ERR-122 -> U.NUM['TB_azar2'] = [0.31, 0.60]. 'azar2_vieja' = la de la letra importada [0.42, 0.58]: SOLO
+    INFORME (no entra en ninguna decision)."""
     u = D5.UMB['T-B']
+    return dict(g1=u['g1'], g2=u['g2'], azar=tuple(u['azar']), azar2=tuple(U.NUM['TB_azar2']), azar2_vieja=tuple(u['azar2']))
+
+
+def veredicto_TB(res):
+    """T-B desde los valores CRUDOS de bateria_generaliza (acc, ba, cobertura por semilla), NO desde el veredicto interno de la
+    bateria CONGELADA (que conserva su banda [0.42, 0.58]). ERR-122: decide azar G2 en [0.31, 0.60]; la banda vieja se calcula
+    para CAND y TRONCO (v14.2 congelado en las MISMAS semillas; en T-B no hay TRONCO_B) y SOLO se reporta."""
+    u = banda_TB()
+    dentro = lambda x, b: bool(x is not None and b[0] <= x <= b[1])
     V = {}
     for org in U.ORGS_EX:
         R = [r for r in res if r['org'] == org]
@@ -412,19 +437,29 @@ def veredicto_TB(res):
         kc = sum(px[s]['cobertura'] >= U.NUM['TB_cob'] for s in S)
         c = dict(G1=g1, G1_azar=g1az, G2=g2, G2_azar=g2az, K=kc, n=len(S),
                  c_G1=bool(g1 is not None and g1 >= u['g1']), c_G2=bool(g2 is not None and g2 >= u['g2']),
-                 c_azar1=bool(g1az is not None and u['azar'][0] <= g1az <= u['azar'][1]),
-                 c_azar2=bool(g2az is not None and u['azar2'][0] <= g2az <= u['azar2'][1]), c_K=bool(kc == len(S)))
+                 c_azar1=dentro(g1az, u['azar']),
+                 c_azar2=dentro(g2az, u['azar2']),                 # ERR-122: [0.31, 0.60] DECIDE
+                 c_K=bool(kc == len(S)))
         c['pasa'] = bool(c['c_G1'] and c['c_G2'] and c['c_azar1'] and c['c_azar2'] and c['c_K'])
+        # SOLO INFORME (ERR-122): la misma puerta con la banda vieja [0.42, 0.58]. No entra en c['pasa'] ni en V['pasa'].
+        c['c_azar2_banda_vieja'] = dentro(g2az, u['azar2_vieja'])
+        c['pasa_banda_vieja'] = bool(c['c_G1'] and c['c_G2'] and c['c_azar1'] and c['c_azar2_banda_vieja'] and c['c_K'])
         V[org] = c
     for r in res:
         r['_lado'] = r['org']
     V['inercia'] = inercia(res, lambda r: (r['regla'], r['seed']), 'CAND', 'TRONCO')
-    V['pasa'] = V['CAND']['pasa']
+    V['pasa'] = V['CAND']['pasa']   # decide el CANDIDATO con la banda de ERR-122
+    V['banda_azar2'] = dict(err='ERR-122', decide=list(u['azar2']), vieja_solo_informe=list(u['azar2_vieja']))
+    log(f"   T-B: CAND = v14.3 (bateria_generaliza_v143) y TRONCO = v14.2 (bateria_generaliza_v142, CONGELADA) en las MISMAS "
+        f"semillas; azar G2 decide con {list(u['azar2'])} (ERR-122) para los dos")
     for org in U.ORGS_EX:
         c = V[org]
         log(f"   T-B [{org:6s}] G1 {_n(c['G1'])} (>= {u['g1']}) G2 {_n(c['G2'])} (>= {u['g2']}) azar G1 {_n(c['G1_azar'])} "
-            f"(en {list(u['azar'])}) azar G2 {_n(c['G2_azar'])} (en {list(u['azar2'])}) K {c['K']}/{c['n']} -> {'PASA' if c['pasa'] else 'NO'}"
-            f"   [G1 {c['c_G1']} G2 {c['c_G2']} azar1 {c['c_azar1']} azar2 {c['c_azar2']} K {c['c_K']}]")
+            f"(en {list(u['azar'])}) azar G2 {_n(c['G2_azar'])} (en {list(u['azar2'])}, ERR-122) K {c['K']}/{c['n']} -> "
+            f"{'PASA' if c['pasa'] else 'NO'}   [G1 {c['c_G1']} G2 {c['c_G2']} azar1 {c['c_azar1']} azar2 {c['c_azar2']} K {c['c_K']}]")
+    log(f"   T-B banda VIEJA de azar G2 {list(u['azar2_vieja'])} (letra v2-v4; SOLO INFORME, NO decide; ERR-122): "
+        + ' | '.join(f"{org} azar G2 {_n(V[org]['G2_azar'])} {'dentro' if V[org]['c_azar2_banda_vieja'] else 'FUERA'} -> T-B "
+                     f"{'PASA' if V[org]['pasa_banda_vieja'] else 'NO'}" for org in U.ORGS_EX))
     log(f"   T-B inercia medida: CAND == TRONCO bit a bit en {V['inercia'][0]}/{V['inercia'][1]} corridas (regla x semilla)")
     return V
 
@@ -591,6 +626,14 @@ def combina(jsons):
         estado[modo] = ('NO SE LEE' if leg is False else ('NO PASA' if caen else ('INCOMPLETO' if faltan else 'PASA')))
         lineas.append(f"   {modo} [{nombre}]{nota}: legible {leg}; " + ' '.join(
             f"{k} {'PASA' if P[k] else ('NO' if P[k] is False else 'sin medir')}" for k in PUERTAS) + f" -> {estado[modo]}")
+        tb = (j.get('veredictos') or {}).get('TB') or {}
+        if tb.get('banda_azar2'):   # ERR-122: lo que decide y, al lado, la banda vieja SOLO como informe
+            pv = lambda o, c: 'PASA' if (tb.get(o) or {}).get(c) else 'NO'
+            lineas.append(f"      T-B {modo}: azar G2 CAND {_n((tb.get('CAND') or {}).get('G2_azar'))} TRONCO "
+                          f"{_n((tb.get('TRONCO') or {}).get('G2_azar'))}; decide {tb['banda_azar2']['decide']} (ERR-122): "
+                          f"CAND {pv('CAND', 'pasa')} TRONCO {pv('TRONCO', 'pasa')} | banda vieja "
+                          f"{tb['banda_azar2']['vieja_solo_informe']} SOLO INFORME: CAND {pv('CAND', 'pasa_banda_vieja')} "
+                          f"TRONCO {pv('TRONCO', 'pasa_banda_vieja')}")
     e = set(estado.values())
     if e == {'PASA'}:
         return ("VEREDICTO DEL EXAMEN: PASA -- v14.3 cruza la letra de CRITERIO_TRONCO_v4 en serie y replica, en semillas nuevas. "
@@ -675,6 +718,11 @@ def etapa8(V, modo):
             det = f"(i) {dl(sub['T-C_i'])} [{U.LETRA['T-C_i']}] | (ii) {dl(sub['T-C_ii'])} [{U.LETRA['T-C_ii']}]"
         elif k == 'T-F':
             det = f"examen {dl(sub['T-F_examen'])} | vivo {dl(sub['T-F_vivo'])} [{U.LETRA['T-F']}]"
+        elif k == 'T-B' and V.get('TB') is not None:
+            tb = V['TB']   # ERR-122: decide la banda nueva; el TRONCO y la banda vieja van al lado, SOLO como informe
+            det = (f"[{U.LETRA[k]}] | TRONCO (mismas semillas, banda ERR-122) {dl(tb['TRONCO']['pasa'])} | banda VIEJA "
+                   f"{tb['banda_azar2']['vieja_solo_informe']} (SOLO INFORME): CAND {dl(tb['CAND']['pasa_banda_vieja'])}, "
+                   f"TRONCO {dl(tb['TRONCO']['pasa_banda_vieja'])}")
         else:
             det = f"[{U.LETRA[k]}]"
         log(f"   {k}: {dl(P[k])}   {det}")
@@ -742,7 +790,7 @@ def reanaliza(prefijo):
     c = lee('TG')
     if c is not None:
         V['TG'] = veredicto_TG(c, len({r['seed'] for r in c}))
-    meta = dict(modo=modo, reanalisis_de=base, fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), letra=U.LETRA,
+    meta = dict(modo=modo, reanalisis_de=base, fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), letra=U.LETRA, err122=U.ERR122,
                 shas=dict(runner=h16(os.path.abspath(__file__)), umbrales=h16(os.path.join(AQUI, 'umbrales_examen_v143.py'))))
     if modo == 'reserva':
         sub = subpuertas(V); leg = None if V.get('vivo') is None else bool(V['vivo']['legible'])
@@ -807,7 +855,9 @@ def main():
     V = {}
     meta = dict(modo=modo, fecha=time.strftime('%Y-%m-%dT%H:%M:%S'), pool=POOL, solo=sorted(SOLO) if SOLO else None,
                 shas=SHAS, python=platform.python_version(), numpy=np.__version__, plataforma=platform.platform(),
-                procesos_python=ps, letra=U.LETRA, predicciones=U.PRED, sustituye=a.sustituye)
+                procesos_python=ps, letra=U.LETRA, err122=U.ERR122, predicciones=U.PRED, sustituye=a.sustituye)
+    log(f"   ERR-122 (enmienda antes de la serie): T-B decide azar G2 con {list(U.NUM['TB_azar2'])}; la banda vieja "
+        f"{list(U.ERR122['banda_vieja'])} se reporta para CAND y TRONCO y NO decide.")
 
     # ================================================================ HUMO
     if a.humo:
@@ -844,10 +894,20 @@ def main():
             Vs = dict(TB=veredicto_TB(TB), EX=veredicto_EX(EXr), TD=veredicto_TD(TD), vivo=veredicto_vivo(RV, RR), TG=veredicto_TG(TG, 20))
             sub, P, leg, frase = etapa8(Vs, 'humo-sintetico-' + ('MALO' if malo else 'bueno'))
             cab['malo' if malo else 'bueno'] = dict(sub=sub, puertas=P, legible=leg, frase=frase)
+        # ERR-122: la banda nueva DECIDE y la vieja solo se reporta. azar G2 0.36 en CAND y TRONCO (dentro de [0.31, 0.60],
+        # fuera de [0.42, 0.58]): T-B debe PASAR y la banda vieja debe decir NO sin decidir.
+        TB122 = [dict(r, ba=0.36) if r['regla'] == 'azar' else r for r in sinteticos(80, 20, S['ALIAS'], S['LIMPIAS'])[2]]
+        v122 = veredicto_TB(TB122)
+        b122 = bool(v122['pasa'] and all(v122[o]['pasa'] and not v122[o]['pasa_banda_vieja'] for o in U.ORGS_EX))
+        cab['ERR122'] = dict(azar_G2=0.36, decide=v122['banda_azar2'], pasa=v122['pasa'],
+                             pasa_banda_vieja={o: v122[o]['pasa_banda_vieja'] for o in U.ORGS_EX}, ok=b122)
+        log(f"   cableado ERR-122 (azar G2 0.36 en CAND y TRONCO): T-B {'PASA' if v122['pasa'] else 'NO'} con {v122['banda_azar2']['decide']}; "
+            f"la banda vieja dice {'NO' if not v122['CAND']['pasa_banda_vieja'] else 'PASA'} y no decide -> {'OK' if b122 else '*** revisar'}")
         cab_ok = bool(all(cab['bueno']['puertas'].values()) and cab['bueno']['legible']
-                      and not any(cab['malo']['puertas'][k] for k in ('T-A', 'T-B', 'T-C', 'T-D', 'T-G')))
-        log(f"   cableado: bueno {cab['bueno']['puertas']} | malo {cab['malo']['puertas']} -> "
-            f"{'OK' if cab_ok else '*** revisar'} (el bueno DEBE pasar todo; el malo DEBE caer T-A, T-B, T-C, T-D y T-G)")
+                      and not any(cab['malo']['puertas'][k] for k in ('T-A', 'T-B', 'T-C', 'T-D', 'T-G')) and b122)
+        log(f"   cableado: bueno {cab['bueno']['puertas']} | malo {cab['malo']['puertas']} | ERR-122 {b122} -> "
+            f"{'OK' if cab_ok else '*** revisar'} (el bueno DEBE pasar todo; el malo DEBE caer T-A, T-B, T-C, T-D y T-G; "
+            f"con azar G2 0.36 T-B DEBE pasar por la banda nueva)")
         log('HUMO 3/3 — JSON.')
         dj = os.path.join(SAL, nom + '.json')
         json.dump(dict(meta=dict(meta, humo=True, corridas=6, pasos=5 * Th + 100000, semillas=dict(humo=h, alias_historica=326),

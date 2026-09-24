@@ -2,6 +2,7 @@
 
 **Estado: LISTO PARA SERIE (la corre el coordinador el 24-sep).** Pero la letra tiene un riesgo que conviene decidir ANTES de
 correr (§7 del preregistro): con la letra tal cual, el resultado más probable es **NO PASA por T-B**, y no sería culpa de N.
+**ERR-122 (23-sep ~21:10, antes de la serie; el director: "corrige la banda"):** T-B decide azar G2 con [0.31, 0.60] (nulo real del tronco: T-B pasa 0.957); la banda vieja [0.42, 0.58] se reporta para CAND y TRONCO y no decide; arnés 114/114; P(PASA) por serie 0.82–0.91, serie + réplica 0.67–0.82 (antes 0.47–0.52 y 0.22–0.27).
 
 ## Qué hice
 1. **El candidato, por anclas** (`construye_v143.py`): `organismo_v143` y `organismo_v143g` desde los congelados de v14.2, con el

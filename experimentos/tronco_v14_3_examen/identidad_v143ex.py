@@ -22,6 +22,9 @@ v14.3 = v14.2 + N (norm_lenta: el paso de la via lenta x 3.0/(P.P)). Memoria nue
 (J) EL JUEZ contra los jueces que ya decidieron: T-D y T-B y T-E/T-C (i)/T-F sobre los crudos de dE5 reproducen su veredicto
     registrado (dE5 cayo T-E); T-A/T-C (ii)/T-F sobre V4-CAL reproducen TRONCO_B PASA y PEOR NO; T-G sobre subida_n7 reproduce
     K_max {T142 1, N 8, NC3C 0}.
+(X) ENMIENDA ERR-122 (23-sep ~21:10, antes de la serie): la banda de azar G2 que DECIDE T-B es [0.31, 0.60]; la vieja
+    [0.42, 0.58] (origen corre_dE5_v2, intacto; y banda interna de las baterias, que no se tocan) se calcula y SOLO se reporta,
+    para CAND y TRONCO, en veredicto_TB, en la etapa 8 y en --combina (crudos sinteticos; no simula un paso).
 (K) CONTROLES QUE DEBEN FALLAR O DIFERIR: la perilla ACTUA si P.P != 3 (organismo_v143, v143g y v143cal con PAT de masa 4);
     TRONCO_B != OFF; PLACEBO != OFF; N != T142 en 3T-k; el juez dice NO a un candidato sintetico malo y SI al bueno; el PARSER
     del runner rechaza banderas desconocidas, abreviadas, el modo de serie sin --pool y --pool > 6 (ERR-115). Solo se llama al
@@ -166,9 +169,12 @@ if __name__ == '__main__':
     jb = json.load(open(os.path.join(D, jd['T-B']['json']), encoding='utf-8'))['corridas']
     tb = [dict(r, org=o) for r in jb for o in ('CAND', 'TRONCO')]
     vb = callado(R.veredicto_TB, tb)
-    anota('J', 'T-B sobre la generalizacion de dE5: G1, azar, G2, azar, K y PASA == los registrados',
+    # ERR-122: el juez de dE5 decidio con la banda VIEJA; se compara lo igual con lo igual (y con la nueva tambien pasa: 0.532)
+    anota('J', 'T-B sobre la generalizacion de dE5: G1, azar, G2, azar, K == los registrados; PASA con la banda vieja (la de ese juez) '
+               '== lo registrado, y PASA tambien con la de ERR-122 (azar G2 0.532 esta en las dos)',
           all(abs((vb['CAND'][k] or 0) - (jd['T-B'][k] or 0)) < 1e-12 for k in ('G1', 'G1_azar', 'G2', 'G2_azar'))
-          and vb['CAND']['K'] == jd['T-B']['K'] and vb['CAND']['pasa'] == jd['T-B']['pasa'])
+          and vb['CAND']['K'] == jd['T-B']['K'] and vb['CAND']['pasa_banda_vieja'] == jd['T-B']['pasa']
+          and vb['CAND']['pasa'] == jd['T-B']['pasa'])
     jc = json.load(open(os.path.join(D, jd['examen_json']['candidato']), encoding='utf-8'))['corridas']
     jt = json.load(open(os.path.join(D, jd['examen_json']['tronco']), encoding='utf-8'))['corridas']
     ex = [dict(r, org='CAND') for r in jc if r['etapa'] in R.U.SEIS] + [dict(r, org='TRONCO') for r in jt if r['etapa'] in R.U.SEIS]
@@ -190,6 +196,68 @@ if __name__ == '__main__':
     anota('J', 'T-G sobre la serie de subida_n7: K_max {T142 1, N 8, NC3C 0} == lo registrado; G-1, G-2, G-3 PASAN',
           {b: vg['K_max'][b] for b in R.U.TG['brazos']} == {b: j7['K_max'][b] for b in R.U.TG['brazos']} == {'T142': 1, 'N': 8, 'NC3C': 0}
           and vg['pasa'])
+
+    print('--- (X) ENMIENDA ERR-122: decide azar G2 en [0.31, 0.60]; la banda vieja [0.42, 0.58] SOLO se reporta (crudos sinteticos)')
+    import tempfile
+    U_ = R.U; ub = R.D5.UMB['T-B']; bt = R.banda_TB()
+    anota('X', 'la banda que DECIDE azar G2 es [0.31, 0.60] (NUM == ERR122[banda_nueva] == banda_TB); G1 0.80, G2 0.85, '
+               'azar G1 [0.35, 0.65] y cobertura 6 == corre_dE5_v2 / letra, sin cambio',
+          tuple(U_.NUM['TB_azar2']) == tuple(U_.ERR122['banda_nueva']) == bt['azar2'] == (0.31, 0.60)
+          and (bt['g1'], bt['g2'], bt['azar']) == (ub['g1'], ub['g2'], tuple(ub['azar'])) == (0.80, 0.85, (0.35, 0.65))
+          and U_.NUM['TB_cob'] == 6, str(bt))
+    interna = '0.42 <= float(np.median(baz)) <= 0.58'
+    leer = lambda p: open(p, encoding='utf-8').read()
+    anota('X', 'la banda VIEJA [0.42, 0.58] == corre_dE5_v2.UMB[T-B][azar2] (origen intacto) == banda_TB[azar2_vieja]; '
+               'bateria_generaliza_v142 (CONGELADA) y v143 conservan su banda interna',
+          tuple(ub['azar2']) == tuple(U_.ERR122['banda_vieja']) == bt['azar2_vieja'] == (0.42, 0.58)
+          and interna in leer(R.G142.__file__) and interna in leer(R.G143.__file__))
+    Ss = R.U.SEMILLAS['serie']
+    RV, RR, TB0, EXr, TD, TG = R.sinteticos(80, 20, Ss['ALIAS'], Ss['LIMPIAS'])
+    con = lambda x: [dict(r, ba=x) if r['regla'] == 'azar' else dict(r) for r in TB0]
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        v36 = R.veredicto_TB(con(0.36))
+    anota('X', 'azar G2 0.36 (dentro de la nueva, fuera de la vieja): CAND y TRONCO PASAN con ERR-122 y eso decide (V[pasa]); '
+               'la vieja dice NO y SOLO queda como informe',
+          v36['pasa'] is True and all(v36[o]['pasa'] and v36[o]['c_azar2'] and not v36[o]['c_azar2_banda_vieja']
+                                      and not v36[o]['pasa_banda_vieja'] for o in R.U.ORGS_EX)
+          and v36['banda_azar2'] == dict(err='ERR-122', decide=[0.31, 0.6], vieja_solo_informe=[0.42, 0.58]), str(v36.get('banda_azar2')))
+    bordes = {x: callado(R.veredicto_TB, con(x))['pasa'] for x in (0.30, 0.31, 0.50, 0.60, 0.61)}
+    v50 = callado(R.veredicto_TB, con(0.50))
+    anota('X', 'bordes de la banda ERR-122 (cerrada): azar G2 0.30 NO, 0.31 PASA, 0.50 PASA, 0.60 PASA, 0.61 NO; con 0.50 la vieja '
+               'tambien PASA (la nueva contiene a la vieja)',
+          bordes == {0.30: False, 0.31: True, 0.50: True, 0.60: True, 0.61: False}
+          and v50['CAND']['pasa_banda_vieja'] and v50['TRONCO']['pasa_banda_vieja'], str(bordes))
+    s = buf.getvalue()
+    anota('X', 'el log de T-B imprime la banda que decide ([0.31, 0.6], ERR-122) y la vieja [0.42, 0.58] marcada SOLO INFORME, '
+               'NO decide, para CAND y TRONCO',
+          '(en [0.31, 0.6], ERR-122)' in s and 'banda VIEJA de azar G2 [0.42, 0.58]' in s and 'SOLO INFORME, NO decide' in s
+          and 'CAND azar G2 0.360 FUERA -> T-B NO' in s and 'TRONCO azar G2 0.360 FUERA -> T-B NO' in s
+          and s.count('ERR-122) K 20/20 -> PASA') == 2, s[-400:])
+    Vs = callado(lambda: dict(TB=R.veredicto_TB(con(0.36)), EX=R.veredicto_EX(EXr), TD=R.veredicto_TD(TD),
+                              vivo=R.veredicto_vivo(RV, RR), TG=R.veredicto_TG(TG, 20)))
+    buf8 = io.StringIO()
+    with contextlib.redirect_stdout(buf8):
+        sub8, P8, leg8, fr8 = R.etapa8(Vs, 'arnes-ERR122')
+    l8 = [l for l in buf8.getvalue().splitlines() if '   T-B: ' in l]
+    anota('X', 'etapa 8: T-B PASA por la banda nueva; su linea lleva al TRONCO (banda ERR-122) PASA y la banda vieja SOLO INFORME '
+               '(CAND NO, TRONCO NO); el veredicto de la serie es PASA',
+          P8['T-B'] is True and fr8.startswith('PASA') and len(l8) == 1 and 'T-B: PASA' in l8[0]
+          and 'TRONCO (mismas semillas, banda ERR-122) PASA' in l8[0]
+          and 'banda VIEJA [0.42, 0.58] (SOLO INFORME): CAND NO, TRONCO NO' in l8[0], (l8 or [''])[0][-300:])
+    with tempfile.TemporaryDirectory() as td_:
+        fs = []
+        for modo in ('serie', 'replica'):
+            f_ = os.path.join(td_, f'examen_v143_{modo}_arnes.json')
+            json.dump(dict(meta=dict(modo=modo), legible=True, sub=sub8, puertas=P8, frase=fr8, veredictos=Vs),
+                      open(f_, 'w', encoding='utf-8'), ensure_ascii=False, default=str)
+            fs.append(f_)
+        frc, lc = R.combina(fs)
+    lc_tb = [l for l in lc if 'T-B serie' in l or 'T-B replica' in l]
+    anota('X', '--combina: VEREDICTO PASA (decide ERR-122) y por serie imprime la banda vieja SOLO INFORME (CAND NO, TRONCO NO)',
+          frc.startswith('VEREDICTO DEL EXAMEN: PASA') and len(lc_tb) == 2
+          and all('decide [0.31, 0.6] (ERR-122): CAND PASA TRONCO PASA' in l
+                  and 'banda vieja [0.42, 0.58] SOLO INFORME: CAND NO TRONCO NO' in l for l in lc_tb), str(lc_tb)[-300:])
 
     print('--- (K) controles que DEBEN fallar o diferir')
     P4 = {'A': np.array([1, 1, 0, 1, 1, 0.]), 'B': np.array([1, 0, 1, 0, 1, 1.]), 'C': np.array([0, 1, 1, 1, 0, 1.]), 'D': np.array([1, 0, 1, 1, 0, 1.])}

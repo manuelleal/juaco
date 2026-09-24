@@ -83,7 +83,9 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 - **Nube calibrada (19:35): FUNCIONA, bits idénticos al PC**; Pool 3 en la nube; scipy 1.17.1 fijada en `requirements.txt`.
 
 ## Decisiones pendientes del director (máx. 2)
-0. **(Primera del 24-sep) Examen v4 del v14.3 = v14.2 + N** (`experimentos/tronco_v14_3_examen/`, arnés 106/106, auditor: LISTO PARA SERIE).
+0. **DECIDIDO (director, ~21:10): "corrige la banda" → ERR-122 aplicado antes de cualquier serie (arnés 114/114; T-B pasa al tronco 0.957;
+   el examen pasaría serie + réplica con probabilidad 0.67–0.82). El examen corre esta noche en la nube (tras el 10b) o el 24-sep.**
+   Contexto: examen v4 del v14.3 = v14.2 + N (`experimentos/tronco_v14_3_examen/`, auditor: LISTO PARA SERIE).
    - El problema está en la letra, no en N: la banda azar-G2 de T-B [0.42, 0.58] deja pasar al propio tronco sólo el 0.55 de las veces
      (mediana del nulo 0.434; mismo patrón que ERR-91). Por eso el examen pasaría serie y réplica con probabilidad 0.22–0.27, aunque v14.3
      es v14.2 bit a bit en T-A a T-F (N sólo actúa si la masa del estímulo ≠ 3).
@@ -129,7 +131,7 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 v2 historia). Candidato en construcción: **v14.3** (frente 1).
 
 ## Errores
-Último: **ERR-121**. Del 23-sep:
+Último: **ERR-122**. Del 23-sep:
 - 114: enmienda V-M de `subida_n9` hecha tras el humo;
 - 115: los runners aceptan banderas desconocidas;
 - 116: ancla de `subida_n10` sin calibrar;
@@ -137,9 +139,10 @@ v2 historia). Candidato en construcción: **v14.3** (frente 1).
 - 118: "persiste el carro" confunde fundadores repuestos;
 - 119: ancla del paquete v14.3 movida tras el humo;
 - 120: el humo de ECO no ejercitaba el juez actual;
-- 121: P3c de ECO pasa a decidir (NO EVALUABLE).
+- 121: P3c de ECO pasa a decidir (NO EVALUABLE);
+- 122: banda de azar G2 de T-B del criterio v4 calibrada con el nulo del tronco ([0.42, 0.58] → [0.31, 0.60]).
 
-Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-122**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
+Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-123**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
 
 ## Datos, equipo y herramientas
 - **Datos:** los runners nuevos escriben en `experimentos/<carpeta>/datos/` y los humos en `datos/humo/`. `datos/humo_no_registrado/` no
