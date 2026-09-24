@@ -436,9 +436,27 @@
   - En humano: un rasgo que nace APAGADO en todos los cuerpos y que sólo sirve al hijo (el padre le pasa lo que aprendió en el parto) se
     prende solo por selección en 97–99 % de los padres exitosos, contra 12–47 % por deriva, y lo llevan ~100 % de los vivos al final.
   - Vocabulario: «la selección prende el órgano». No se dice «evoluciona», «cultura» ni «especie».
-  - Descriptivo que no decide: en AZAR, `ensena` sobre sus sombras llegó a 14/20 en w30 de la réplica (la nula da ~8); en AZAR el banco
-    también lo llenan padres que se reprodujeron, así que no es deriva pura. La guardia (15) no se cruzó; se deja escrito para el PC.
+  - Descriptivo que no decide: en AZAR, `ensena` sobre sus sombras llegó a 14/20 en w30 de la réplica (la nula da ~8). La guardia (15) no
+    se cruzó. **(Corregido a las 17:10:** aquí decía que en AZAR "el banco también lo llenan padres que se reprodujeron, así que no es
+    deriva pura". Es falso: en AZAR el banco guarda el genoma NUEVO del hijo, sacado al azar del banco (`motor_eco3.py`:438 y 477), y eso
+    es deriva pura. El 14/20 es azar: P ≈ 0.02 por prueba, entre unas 12 pruebas de AZAR en las dos ventanas.)
   - Relación con ECO v2 (MODESTO ×2): misma pregunta con el instrumento que fallaba; v2 no se recalifica.
+
+### 1j. ECO v1.2 (selección + familia a 1e6) — serie DETENIDA, sin veredicto (candidato nube-9)
+- **16:25 — serie 19701–19720 lanzada por la cola** (gemelo, Pool 3). A las 16:44 iba en 63/80 y no avanzó más: los 3 procesos del Pool
+  quedaron dormidos. **17:15 — detenida a mano** (la cola y el runner; nada se borró).
+- **Causa, reproducida en un proceso** (reanudando `VIDA_T` s19701 desde su checkpoint en una copia): el motor aborta con
+  `SystemExit('PISTA2: mas de 100000 cuerpos en un linaje: la semilla colisionaria (ERR-60)')`. Es la guardia de ERR-60: un linaje no
+  puede pasar de 100 000 cuerpos porque sus semillas chocarían. Dentro de un `Pool`, un `SystemExit` mata al proceso trabajador sin
+  error visible; el `Pool` lo reemplaza y espera para siempre un resultado que no llega. 17 de 20 corridas `VIDA_T` murieron así, con un
+  linaje que pasó de 100 000 cuerpos entre t = 320 000 y 900 000 (último checkpoint de cada una).
+- **Candidato nube-9 (instrumento, no se aplica hoy):** (a) el runner de v1.2 no atrapa `SystemExit` en los trabajos, así que una guardia
+  del motor cuelga la serie en silencio; (b) con la familia, a T = 1e6 los linajes pasan el límite de ERR-60: la serie de v1.2 no puede
+  terminar con ese motor. Arreglarlo exige tocar el esquema de semillas del motor y del gemelo: queda para el PC.
+- **Lo que sí terminó (descriptivo, NO se declara; la serie está incompleta):** a T = 1e6 persisten `MUT0_T` (familia sin mutación)
+  **20/20**, `AZAR_T` 10/20 y `VIDA` sin familia 9/20. De `VIDA_T` (selección + familia) terminaron 3, y persisten 3/3; las otras 17 se
+  detuvieron porque un linaje pasó de 100 000 cuerpos, es decir, seguían vivas y muy prolíficas. Contrasta con el bloque L (sin
+  familia: 7 y 5 de 20 persisten a 940 000). La réplica 19721–19740 no se corre.
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
@@ -602,6 +620,22 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
 
 **Resultado de la tarde (lo "modesto pero real"):** ECO v2.1 FUNCIONA ×2 (§1i): la selección prende sola el órgano de enseñar, en tres
 mundos, contra deriva y contra sombras. Es el primer escalón de la línea ECO que pasa por la letra en serie y réplica.
+
+**Propuesta (no preregistrada, 17:30): de PRENDER órganos a CREARLOS** (el director preguntó "¿cómo hacemos para que ellos creen
+órganos?"). Hoy el órgano existe (lo diseñamos) y el gen sólo lo prende. Escalones, del más barato al más lejano:
+1. **Órganos como programas de una gramática chica de reglas locales.** Un órgano de transmisión = cuándo (parto, en vida, al morir) ×
+   qué (entradas de la tabla por signo, magnitud, recencia o necesidad) × a quién (hijo, hermano, vecino) × cómo (copiar, promediar,
+   invertir, olvidar). `ensena` y `filtra0` son dos puntos de ese espacio; la mutación puede armar combinaciones que nadie escribió ("pasar
+   sólo el veneno", "pasar a los vecinos", "olvidar lo heredado que contradice lo vivido"). Prueba: ¿la selección encuentra un punto que
+   NO está en la lista de los diseñados y que vive más que todos ellos? Controles: los puntos diseñados, AZAR y las sombras.
+2. **Duplicación y divergencia** (el camino biológico a órganos nuevos, Ohno 1970): una mutación copia un órgano; la copia deriva libre
+   mientras el original conserva la función; si la copia encuentra otra función, hay un órgano nuevo. En la gramática del punto 1 es
+   copiar un "slot".
+3. **Cableado entre órganos** (cooptación): genes que conectan la salida de un órgano con la entrada de otro (el interruptor decide cuándo
+   se enseña; la sorpresa decide qué se hereda). Un órgano nuevo es un cableado nuevo entre piezas viejas.
+4. **Lo abierto de verdad** (Avida, Tierra): que el lenguaje mismo se extienda. Lejos; no se promete.
+Medida que manda en 1–3: el órgano ganador NO está en la lista de los diseñados y les gana a todos (nació de la selección, no del diseño).
+Costo: el punto 1 sobre `FAMB_ORG_ECO` en Python y w30 (~1–2 h por serie); con gemelo haría falta extenderlo (agente compilador).
 
 **Propuesta para el director (orden):**
 1. Auditar en el PC n10c, ECO v1.1, ECO-T y, cuando corran, ECO v1.2 y ECO v2. Aceptar o no nube-4, nube-5, nube-6 como ERR.
