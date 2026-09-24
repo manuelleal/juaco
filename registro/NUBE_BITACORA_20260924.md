@@ -377,6 +377,14 @@
     La prueba adecuada es la fracción que EXPRESA el órgano contra la de las sombras (hoy el corte no guarda los genomas sombra por
     entrada). Para una v2.1: guardar las sombras del banco y medir la expresión.
 - **12:52 — réplica 20031–20050 lanzada.**
+  - Terminó a las 13:07 (15 min). w30: banco con `ensena` VIDA 0.90 contra AZAR 0.37, VIDA > AZAR 13/20; vivos en T 1.00 contra 0.13.
+    w90: sombras 13/20, banco 0.98 contra 0.45, **VIDA > AZAR 20/20**, vivos 1.00 contra 0.00, alpha 17/20. **w270: sombras 17/20 y
+    VIDA > AZAR 18/20 → los dos**, banco 0.99 contra 0.37, vivos 1.00 contra 0.50, alpha 20/20, tau_e 16/20 (−). `filtra0` no.
+  - **VEREDICTO POR LA LETRA (réplica): HAY ALGO MODESTO.**
+- **BLOQUE ECO v2, por la letra: HAY ALGO MODESTO ×2.** Lo que se sostiene en las dos: en los tres mundos el banco de VIDA expresa el
+  órgano de enseñar en 90–99 % y los vivos al final en ~100 %, contra 31–45 % y 0–50 % en AZAR. La prueba contra sombras que pedía la letra
+  (media del gen) queda corta en la mitad de los mundos por nube-8; ECO v2.1 repite la pregunta con la prueba de expresión (preregistrada a
+  las 13:05, semillas nuevas).
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
