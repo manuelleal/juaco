@@ -331,6 +331,22 @@
   carrera. Colonia de 9 genomas del banco de VIDA contra la del banco de AZAR y contra 9 × G0; placebo con otra muestra del mismo banco.
   T1: VIDA > AZAR ≥ 15/20; T2: VIDA > G0 ≥ 15/20. Arnés 14/14. **11:20 — ventana serie (bancos 19401–19420) lanzada con Pool 3.**
 
+### 1g. ECO v2 — ÓRGANOS COMO GENES, en tres mundos a la vez (aprobado por el director ~11:35)
+- **Instrumento Python** (`construye_eco_org.py`, por anclas): `motor_eco2.py` = motor_eco + dos genes de órgano al final del genoma
+  (`ensena`: el padre pasa su tabla; `filtra0`: el hijo quita lo neutro), rasgos con umbral (se expresan si ≥ 1.0; nacen en 0.9,
+  apagados; una mutación los prende con p ≈ 0.24); `carros/FAMB_ORG_ECO.py` lee los órganos del genoma de cada cuerpo.
+  Arnés `identidad_eco_org.py` **9/9**: apagados = FABRICA_ECO; prendidos = FAMB_RES0_ECO; ensena sí y filtra0 no = FAMB_RES; la
+  expresión sigue al gen; la mutación los prende (90 de 828 cuerpos en una corrida corta); checkpoint igual.
+  - Un fallo del arnés antes de pasar, del instrumento: comparaba corridas con carros de nombre distinto, y el nombre va en el registro
+    del linaje. Con la misma etiqueta en las dos corridas, la física es idéntica.
+- **Preregistro `PREREGISTRO_eco_v2.md`** (commit befb71f, antes de cualquier serie): VIDA y AZAR en tres mundos (esc 30, 90 y 270),
+  T 120 000, corte 60 000; O1 (ensena sobre sus sombras ≥ 15/20) y O2 (el banco de VIDA lo lleva más que el de AZAR ≥ 15/20) en ≥ 2 de 3
+  mundos → FUNCIONA. Con auditoría propia de cinco riesgos (arrastre por alpha, deriva sobre el umbral, mundo chico, tope, el beneficio es
+  del hijo). Semillas 20011–20030 y 20031–20050.
+- Humo Python (w30, T 20 000): VIDA 24 % del banco con ensena y 5 de 6 vivos; AZAR 12 % (sin valor). Runner: arnés **15/16** (falta el gemelo).
+- **11:40 — el gemelo de los órganos se le encarga al MISMO compilador** (mensaje al agente en curso: fase 2 tras la fase 1). Alternativa
+  descartada: un agente nuevo (tendría que volver a leer todo; el que ya está conoce el gemelo de la familia).
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
 la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–24099, con arneses de identidad bit a bit de cada subclase.
@@ -447,6 +463,14 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
 - ~11:25 UTC (24-sep), sobre ECO v1.1/v1.2: *"Si lo apruebo y además de eso pensar en llenar benchmark y que el bicho logre realmente la
   evolución! Proyecciones de evolución?"* → aprobación de la línea ECO (v1.1 ya corrida; v1.2 preregistrada). Respuesta con escalones de
   evolución medibles y su proyección en el chat; propuesta: que la selección elija la ARQUITECTURA (órganos como genes), no sólo perillas.
+
+- ~11:35 UTC: *"sí, arranca ECO v2 con órganos como genes, pero la intención es que audites tú, manda agentes en modelos baratos cuando no
+  necesites cosas expertas, réplica no construyas de 0 y yo sé que podemos lograrlo; otra cosa: no sólo dejes una muestra en el mundo, si
+  puedes correr tres al tiempo con capacidades distintas aumentamos la cobertura de prueba. Y último: ten en cuenta la exploración, el
+  camino escrito casi llega a su fin, queda comenzar a usar data sintética que hemos creado. ¡Confírmame!"*
+  - Cómo se aplicó: ECO v2 con auditoría propia en el preregistro (§7) y sin agente auditor; agentes Haiku para tareas de rutina, Opus sólo
+    para el gemelo; se construye por anclas sobre lo que ya existe; tres mundos de capacidad distinta en la misma serie.
+  - Pedí confirmar qué "data sintética" quiere decir (en el repo no hay un conjunto con ese nombre; hay ~1 060 JSON de corridas).
 
 ## 4. Qué falló y qué propongo para mañana
 _(al cierre)_
