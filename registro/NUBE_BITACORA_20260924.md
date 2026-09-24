@@ -117,6 +117,12 @@
     subconjunto de 4", porque en este mundo no hay otro subconjunto construible. Va a la frase declarable.
   - Verificó a mano: 12 shas contra los fijados, nada escrito tras el humo (sha y mtime) y semillas libres (grep en todo el repo).
   - Decisión: se corre la serie sin cambios. Los hallazgos van a la lectura, no al código: ninguno toca el criterio.
+- **03:51 — serie 12801–12820 lanzada** con Pool 1, en el núcleo libre, en paralelo con ECO en Pool 3:
+  `/root/venv-juaco/bin/python experimentos/subida_n10c/corre_n10c.py --serie --desde 12801 --n 20 --pool 1`
+  - Decisión: Pool 1 en el núcleo libre, en vez de esperar a que termine ECO para correr con Pool 3.
+  - Por qué: usa CPU que estaba ociosa y adelanta el veredicto ~4 h. La réplica va con Pool 3 al terminar la serie de ECO.
+  - Costo aceptado: durante ~10 min se solapa con el final de la tanda exploratoria i3 (5 procesos en 4 núcleos). Sólo afecta los
+    tiempos, no los resultados, que son deterministas.
 
 ### 1d. Gemelo numba de ECO (compilador, agente 1/2) — entregado a las ~03:34
 - **Arnés `identidad_eco_rapido.py`: 120/120** bit a bit en E1 (`eco=None`), E2 (genoma, mutación, banco, vivero y corte) y E3 (juez,
