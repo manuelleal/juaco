@@ -37,3 +37,22 @@ con checkpoints. La medida de éxito del laboratorio es una capacidad que nadie 
 - Sin retropropagación, reglas locales, memoria declarada, tronco congelado y regla 11 (ERR por cualquier umbral tocado tras ver datos).
 - Dos NO seguidos en la misma línea la cierran.
 - Nada se declara sin réplica; los porcentajes de nivel los fija el director.
+
+## Huecos de ciencia (23-sep-2026, 20:30; pregunta del director: "¿qué nos falta, dónde está el santo grial, qué ciencia no hemos probado?")
+Revisados contra el repo (grep en registro/ y preregistros): estas ideas aparecen como literatura, pero **nunca se probaron en el bicho**.
+1. **Aprender prediciendo, no sólo valorando.** El tronco aprende sólo al morder (delta de valor en Wp/Wn; nivel 8: 4–8 mordidas por
+   comida en toda la vida). Ver y moverse no le enseñan nada. Candidato: predecir en cada paso lo que verá o sentirá y aprender del error
+   (codificación predictiva: Rao y Ballard 1999; inferencia activa: Friston). Con reglas locales aproxima la retropropagación (Whittington
+   y Bogacz 2017), así que respeta la regla de JUACO.
+2. **Evolucionar la regla de aprendizaje, no sólo perillas.** La naturaleza evolucionó reglas de plasticidad; cada animal aprende con
+   ellas (Soltoggio, Risi y Stanley 2018; Najarro y Risi 2020, reglas de Hebb evolucionadas). Encaja en ECO v2.
+3. **Jerarquía.** El bicho tiene un solo nivel de representación (expansión fija + celdas); nunca se intentó apilar niveles que aprendan
+   de los de abajo (0 menciones en el registro). La codificación predictiva jerárquica lo da con reglas locales.
+4. **Un mundo que pida inteligencia.** El crítico de la ronda 1: el mundo "bien mezclado" no paga las capacidades de los niveles 6–10.
+   Hacen falta ubicación, tiempo, otros agentes y novedad (POET: Wang et al. 2019). Es el diseño de ECO.
+5. **Cultura acumulativa.** Transmisión fiel más innovación durante muchas generaciones (Tomasello; Henrich). Se probó transmitir;
+   nunca acumular.
+
+**Apuesta del coordinador (juicio, no dato):** 1 + 2 juntos: un bicho que aprende prediciendo en cada paso, con una regla que afina la
+evolución en ECO, en un mundo que paga por predecir. No es un frente nuevo: (1) es la pieza del frente 1 después de "arriesgar según
+la reserva"; (2) es ECO v2 en el frente 2.
