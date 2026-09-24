@@ -1,0 +1,36 @@
+{
+ "ventana": "replica",
+ "veredicto": "NO EVALUABLE (el placebo sale de [5, 15])",
+ "lineas": [
+  "semillas por brazo: {'VIDA': 20, 'VIDA_P': 20, 'AZAR': 20, 'G0': 20}; R0 real (mediana de las medianas de 9 lineas): {'VIDA': 0.2999, 'VIDA_P': 0.2696, 'AZAR': 0.1426, 'G0': 0.1531}",
+  "T1 VIDA > AZAR (pareado, estricto) 18/20 (empates 0) \u00b7 T2 VIDA > G0 20/20 (empates 0) \u00b7 descriptivo AZAR > G0 8/20 (empates 0)",
+  "PLACEBO VIDA contra VIDA_P (otra muestra del mismo banco): 16.0 de 20 (valido en [5, 15]) -> NO VALIDO",
+  "persisten (lineas de 9, suma): {'VIDA': 2, 'VIDA_P': 4, 'AZAR': 18, 'G0': 0}",
+  "VEREDICTO POR LA LETRA (una ventana; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (el placebo sale de [5, 15])"
+ ],
+ "d": {
+  "T1": true,
+  "T2": true,
+  "wVA": 18,
+  "wVG": 20,
+  "wAG": 8,
+  "placebo": 16.0,
+  "placebo_ok": false,
+  "medianas": {
+   "VIDA": 0.2999,
+   "VIDA_P": 0.2696,
+   "AZAR": 0.1426,
+   "G0": 0.1531
+  }
+ },
+ "seg": 2277,
+ "T": 100000,
+ "shas": {
+  "corre_transfiere.py": "629b30d6c184572f",
+  "pista.py": "9f47c65e438e0ff4",
+  "juez.py": "6a68f640a7832f12",
+  "motor_eco.py": "bca3033878b59622",
+  "FABRICA.py": "2ebee3e99ea5a33a",
+  "PREREGISTRO_transfiere.md": "b3753911dcd897b3"
+ }
+}
