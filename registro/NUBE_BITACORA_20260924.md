@@ -359,6 +359,24 @@
 - Humo Python (w30, T 20 000): VIDA 24 % del banco con ensena y 5 de 6 vivos; AZAR 12 % (sin valor). Runner: arnés **15/16** (falta el gemelo).
 - **11:40 — el gemelo de los órganos se le encarga al MISMO compilador** (mensaje al agente en curso: fase 2 tras la fase 1). Alternativa
   descartada: un agente nuevo (tendría que volver a leer todo; el que ya está conoce el gemelo de la familia).
+- **12:20 — gemelos entregados por el compilador:** `motor_eco_rapido_fam.py` (132/132) y `motor_eco_rapido_org.py` (99/99), ×42–48
+  (×32 en esc 270). Arneses de los runners con el gemelo, corridos por un agente Haiku (lo pidió el director): **v1.2 22/22, v2 21/21**
+  (los preregistros decían 19 y 22: conté mal los casos; corregido con nota). Aviso del compilador: el juez de los arneses y de las pruebas
+  del Pool tocaba las primeras semillas de la batería sellada con bancos de práctica; el arnés de v1.2 se pasó a práctica y queda el
+  candidato **nube-7** (menor: no informa ningún resultado, rompe la letra de "sellada").
+- **12:35 — serie 20011–20030** (`corre_eco_v2.py --serie --ventana serie --pool 3`), 15.5 min de pared:
+  - w30: `ensena` sobre sombras en VIDA **15/20** (AZAR 5); banco con `ensena` VIDA 0.97 contra AZAR 0.31, VIDA > AZAR **16/20**;
+    vivos en T con `ensena` VIDA 1.00 contra AZAR 0.00; persisten VIDA 19, AZAR 9 → **ELEGIDO**.
+  - w90: sobre sombras **12/20**; banco 0.98 contra 0.41, VIDA > AZAR **19/20**; vivos 1.00 contra 0.18; alpha 15/20 (+).
+  - w270: sobre sombras **13/20**; banco 0.99 contra 0.43, VIDA > AZAR **18/20**; vivos 0.99 contra 0.14; alpha 18/20 (+), tau_e 18/20 (−).
+  - `filtra0`: no se selecciona (6, 7 y 10 de 20). Correlación alpha–ensena en el banco ≈ 0 (no hay arrastre por alpha).
+  - **VEREDICTO POR LA LETRA (serie): HAY ALGO MODESTO** (O1 y O2 juntos en 1 mundo; alguno de los dos en los 3).
+  - **Candidato nube-8 (instrumento, no se aplica):** O1 compara la MEDIA del gen en el banco con la de sus 8 sombras. Para un rasgo con
+    umbral la selección sólo necesita pasar el umbral (el banco de VIDA se queda justo arriba de 1.0), mientras las sombras neutrales derivan
+    libres y pueden quedar más arriba en promedio. Con el 98 % del banco y ~100 % de los vivos expresando el órgano, O1 da 12–13/20.
+    La prueba adecuada es la fracción que EXPRESA el órgano contra la de las sombras (hoy el corte no guarda los genomas sombra por
+    entrada). Para una v2.1: guardar las sombras del banco y medir la expresión.
+- **12:52 — réplica 20031–20050 lanzada.**
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
