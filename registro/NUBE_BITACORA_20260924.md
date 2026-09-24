@@ -278,6 +278,22 @@
     repite genomas: 14 distintos de 157) y ahora compara índices; (C) halló que la copia había perdido la clave `tam_total` de v1.
 - **10:25 — humo** (19601, 3.8 s) y **prueba del Pool** (19602–19603, 3.6 s): la letra corre y dice NO EVALUABLE, como debe con 1–2 semillas.
 - **Commit df98831 (10:28): preregistro, runner (5655c93419511162) y arnés subidos ANTES de cualquier dato de v1.1.**
+- **10:34 — gemelo re-verificado: 120/120** (`identidad_eco_rapido.py`, 316 s; salida en el scratchpad, la commiteada no se toca).
+- **10:34 — serie 19401–19420** (`corre_eco_v11.py --serie --desde 19401 --n 20 --pool 3`): 80 corridas de 1e6 pasos en **5.5 min** de pared.
+  - Persisten en 120 000: **VIDA 19/20 · CEREBRO 20/20 · AZAR 16/20 · MUT0 0/20**.
+  - P2: **alpha 20/20 (+)** y **aversion 15/20 (+)** fuera de sus 8 sombras; AZAR sin falsos positivos.
+  - **Juez v2: VIDA > AZAR 16/20** (sin empates); CEREBRO > AZAR 16/20. Medianas de supervivencia de la colonia: VIDA 11 624, AZAR 3 634.
+  - **Placebo: VIDA 10.0, AZAR 9.0 de 20 → el juez v2 VALE.**
+  - Descriptivo (nube-6): contra G0 (mediana 1 905.5) ganan VIDA 20/20 y **AZAR 15/20 sin selección**: la diversidad o la deriva sola
+    le gana a G0, como sospechaba nube-6. El juez de v1 no podía separar eso.
+  - P1 ✓ (19) · P1c ✓ (0) · P2 ✓ · P3 ✓ (16) · **P4 ✗ (19 − 16 = 3)** · H-c ✓ (20).
+  - **VEREDICTO v1.1 POR LA LETRA (serie): HAY ALGO MODESTO.**
+  - **Bloque L (1e6): VIDA 7/20 · CEREBRO 7/20 · AZAR 0/20 · MUT0 0/20.** L1 ✗ (7 < 10), L1c ✓, L2 ✓ (7 − 0 ≥ 6).
+    **VEREDICTO L (serie): NO PERSISTE LARGO.** R0 de la cohorte nacida tras el corte en los linajes que persisten: 0.993 (VIDA) y 0.997
+    (CEREBRO): viven en el filo, como un proceso de Galton–Watson crítico.
+  - Perillas elegidas (mediana del banco en el corte, exponenciada): VIDA alpha ×1.60, aversion ×1.24, eta_s ×1.17; CEREBRO alpha ×1.61,
+    aversion ×1.29, eta_s ×1.26. AZAR deriva sin dirección (rep_X ×0.76, dote ×0.87, …).
+- **10:40 — réplica 19421–19440** lanzada con el mismo comando (`--desde 19421`).
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen.

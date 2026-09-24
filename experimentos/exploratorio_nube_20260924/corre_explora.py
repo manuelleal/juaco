@@ -37,7 +37,7 @@ def _brazos():
         'LIM': (lambda: CR.modulo('LIM', lim=1.4), 'limpia lo malo si min(E,Ag) >= 1.4'),
         'NEO5_LIM': (lambda: CR.modulo('NEO5_LIM', neo=0.5, lim=1.4), 'neofobia 0.5 + limpieza 1.4'),
     }
-    for extra in ('carros_extra', 'carros_predice', 'carros_ver', 'carros_apr_reserva', 'carros_limpia', 'carros_v143_reserva', 'carros_v143_familia'):
+    for extra in ('carros_extra', 'carros_predice', 'carros_ver', 'carros_apr_reserva', 'carros_limpia', 'carros_v143_reserva', 'carros_v143_familia', 'carros_v143_evo'):
         if os.path.exists(os.path.join(AQUI, extra + '.py')):
             mod = __import__(extra)
             b.update(mod.BRAZOS)
@@ -80,7 +80,7 @@ def identidad(log):
 
     def fis(r):
         return json.dumps([{k: v for k, v in d.items() if k != 'carro'} for d in r['linajes']], sort_keys=True, default=str), r['pista']
-    pares = [('W0', 'FAB'), ('W2', 'FAB'), ('WP', 'FAB'), ('WV', 'FAB'), ('WA', 'APR'), ('WL', 'FAB'), ('RESP', 'RES'), ('WV143', 'V143'), ('WF143', 'V143')]
+    pares = [('W0', 'FAB'), ('W2', 'FAB'), ('WP', 'FAB'), ('WV', 'FAB'), ('WA', 'APR'), ('WL', 'FAB'), ('RESP', 'RES'), ('WV143', 'V143'), ('WF143', 'V143'), ('WE143', 'V143'), ('WEFAB', 'FAB')]
     for s in (24098, 24099):
         for x, y in pares:
             if x not in B or y not in B: continue
