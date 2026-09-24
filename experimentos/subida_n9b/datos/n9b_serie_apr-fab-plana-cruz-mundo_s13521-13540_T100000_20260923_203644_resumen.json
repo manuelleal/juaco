@@ -1,0 +1,611 @@
+{
+ "brazos": {
+  "apr": {
+   "brazo": "apr",
+   "carro": "APR",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.382,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "mediana_R0_real_eval": 0.372,
+    "cruza_con_R0_real": false,
+    "cruzan_real_linajes": 0,
+    "cola_sobre_desc_med": 0.014,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3819,
+   "R0_pista_med": 0.3824,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 90,
+    "sed": 10,
+    "veneno": 11924,
+    "sal": 20425
+   },
+   "muertes_med": 181.0,
+   "frac_sin_bueno_mundo_med": 0.011,
+   "coherente": [
+    180,
+    180
+   ],
+   "t_fund_rec": [
+    180,
+    180
+   ],
+   "escrituras": 0,
+   "opcion": {
+    "oportunidades": 1595729,
+    "tasa_global": 0.0952,
+    "quitadas_ultimo_cuarto": 0.0533,
+    "fabrica_habria_mordido": 0.1495,
+    "w_mediana": [
+     [
+      -0.7823,
+      -0.2823,
+      0.0612,
+      0.0575,
+      -0.1607,
+      0.3762
+     ],
+     [
+      -0.926,
+      -0.5465,
+      0.3447,
+      0.054,
+      -0.1215,
+      -0.0413
+     ]
+    ]
+   }
+  },
+  "fab": {
+   "brazo": "fab",
+   "carro": "FABRICA",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.334,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "mediana_R0_real_eval": 0.332,
+    "cruza_con_R0_real": false,
+    "cruzan_real_linajes": 0,
+    "cola_sobre_desc_med": 0.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.334,
+   "R0_pista_med": 0.3355,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 8,
+    "sed": 1,
+    "veneno": 16243,
+    "sal": 24709
+   },
+   "muertes_med": 228.0,
+   "frac_sin_bueno_mundo_med": 0.0039,
+   "coherente": [
+    180,
+    180
+   ],
+   "t_fund_rec": [
+    180,
+    180
+   ],
+   "escrituras": 0
+  },
+  "plana": {
+   "brazo": "plana",
+   "carro": "APR_LES_PLANA",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.383,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "mediana_R0_real_eval": 0.372,
+    "cruza_con_R0_real": false,
+    "cruzan_real_linajes": 0,
+    "cola_sobre_desc_med": 0.014,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3826,
+   "R0_pista_med": 0.3786,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 82,
+    "sed": 9,
+    "veneno": 11664,
+    "sal": 20573
+   },
+   "muertes_med": 180.0,
+   "frac_sin_bueno_mundo_med": 0.0141,
+   "coherente": [
+    180,
+    180
+   ],
+   "t_fund_rec": [
+    180,
+    180
+   ],
+   "escrituras": 0,
+   "opcion": {
+    "oportunidades": 1612250,
+    "tasa_global": 0.0874,
+    "quitadas_ultimo_cuarto": 0.0565,
+    "fabrica_habria_mordido": 0.147,
+    "w_mediana": [
+     [
+      -0.7867,
+      -0.1246,
+      -0.1246,
+      0.0561,
+      -0.154,
+      0.4184
+     ],
+     [
+      -0.9097,
+      -0.2229,
+      -0.2229,
+      0.0551,
+      -0.122,
+      -0.0265
+     ]
+    ]
+   },
+   "lesion": {
+    "decisiones": 1612250,
+    "post_real_media": 0.5729,
+    "post_usado_media": 0.8874,
+    "frac_cambia_post": 0.8825,
+    "frac_caida_real": 0.8825,
+    "frac_caida_usada": 0.0,
+    "frac_cambia_mundo": 0.0,
+    "VM_cumple": false
+   }
+  },
+  "cruz": {
+   "brazo": "cruz",
+   "carro": "APR_LES_CRUZ",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.384,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "mediana_R0_real_eval": 0.376,
+    "cruza_con_R0_real": false,
+    "cruzan_real_linajes": 0,
+    "cola_sobre_desc_med": 0.013,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3842,
+   "R0_pista_med": 0.3839,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 64,
+    "sed": 11,
+    "veneno": 12043,
+    "sal": 20740
+   },
+   "muertes_med": 184.0,
+   "frac_sin_bueno_mundo_med": 0.0124,
+   "coherente": [
+    180,
+    180
+   ],
+   "t_fund_rec": [
+    180,
+    180
+   ],
+   "escrituras": 0,
+   "opcion": {
+    "oportunidades": 1606255,
+    "tasa_global": 0.0898,
+    "quitadas_ultimo_cuarto": 0.0523,
+    "fabrica_habria_mordido": 0.1469,
+    "w_mediana": [
+     [
+      -0.7774,
+      -0.298,
+      0.0823,
+      0.0582,
+      -0.1578,
+      0.3882
+     ],
+     [
+      -0.9552,
+      -0.3155,
+      -0.1182,
+      0.0585,
+      -0.1209,
+      -0.0294
+     ]
+    ]
+   },
+   "lesion": {
+    "decisiones": 1606255,
+    "post_real_media": 0.5727,
+    "post_usado_media": 0.5908,
+    "frac_cambia_post": 0.8652,
+    "frac_caida_real": 0.8846,
+    "frac_caida_usada": 0.8497,
+    "frac_cambia_mundo": 0.0,
+    "VM_cumple": true
+   }
+  },
+  "mundo": {
+   "brazo": "mundo",
+   "carro": "APR_LES_MUNDO",
+   "criterio_enm3": {
+    "mediana_R0_eval": 0.384,
+    "frac_eval_sin_fund": 0.0,
+    "evaluables": 180,
+    "n": 180,
+    "frac_eval": 1.0,
+    "mediana_R0_real_eval": 0.374,
+    "cruza_con_R0_real": false,
+    "cruzan_real_linajes": 0,
+    "cola_sobre_desc_med": 0.014,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    },
+    "cruza": false,
+    "casi_inmortales": 0,
+    "cruzan_linajes": 0
+   },
+   "R0_med_todos": 0.3835,
+   "R0_pista_med": 0.3843,
+   "vida_med": 200.0,
+   "causas": {
+    "hambre": 80,
+    "sed": 22,
+    "veneno": 11849,
+    "sal": 20333
+   },
+   "muertes_med": 180.5,
+   "frac_sin_bueno_mundo_med": 0.0108,
+   "coherente": [
+    180,
+    180
+   ],
+   "t_fund_rec": [
+    180,
+    180
+   ],
+   "escrituras": 0,
+   "opcion": {
+    "oportunidades": 1598837,
+    "tasa_global": 0.095,
+    "quitadas_ultimo_cuarto": 0.055,
+    "fabrica_habria_mordido": 0.1508,
+    "w_mediana": [
+     [
+      -0.8101,
+      -0.2848,
+      0.0679,
+      0.0211,
+      -0.0692,
+      0.3807
+     ],
+     [
+      -0.9358,
+      -0.5537,
+      0.3466,
+      0.0476,
+      -0.1023,
+      -0.0422
+     ]
+    ]
+   },
+   "lesion": {
+    "decisiones": 1598837,
+    "post_real_media": 0.5642,
+    "post_usado_media": 0.5642,
+    "frac_cambia_post": 0.0,
+    "frac_caida_real": 0.8912,
+    "frac_caida_usada": 0.8912,
+    "frac_cambia_mundo": 0.9842,
+    "VM_cumple": true
+   }
+  }
+ },
+ "pareados": {
+  "apr_vs_fab": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.045,
+   "por_semilla": {
+    "13521": 0.0254,
+    "13522": 0.1078,
+    "13523": 0.026,
+    "13524": 0.0356,
+    "13525": 0.0557,
+    "13526": 0.0693,
+    "13527": 0.0593,
+    "13528": 0.0568,
+    "13529": 0.0542,
+    "13530": 0.0236,
+    "13531": 0.0376,
+    "13532": 0.0449,
+    "13533": 0.0451,
+    "13534": 0.0055,
+    "13535": 0.0352,
+    "13536": 0.0237,
+    "13537": 0.067,
+    "13538": 0.0578,
+    "13539": 0.0504,
+    "13540": 0.0412
+   }
+  },
+  "apr_vs_plana": {
+   "semillas": 20,
+   "gana": 11,
+   "dif_med": 0.0053,
+   "por_semilla": {
+    "13521": 0.0142,
+    "13522": 0.057,
+    "13523": 0.0029,
+    "13524": -0.038,
+    "13525": 0.0126,
+    "13526": 0.0252,
+    "13527": -0.0015,
+    "13528": -0.0091,
+    "13529": -0.0478,
+    "13530": 0.0282,
+    "13531": -0.0043,
+    "13532": -0.0215,
+    "13533": 0.0138,
+    "13534": -0.0031,
+    "13535": 0.0271,
+    "13536": 0.0,
+    "13537": 0.0077,
+    "13538": 0.0174,
+    "13539": -0.0183,
+    "13540": 0.0168
+   }
+  },
+  "apr_vs_cruz": {
+   "semillas": 20,
+   "gana": 8,
+   "dif_med": -0.0155,
+   "por_semilla": {
+    "13521": -0.0354,
+    "13522": 0.065,
+    "13523": -0.0159,
+    "13524": -0.0362,
+    "13525": 0.0021,
+    "13526": -0.0151,
+    "13527": 0.0095,
+    "13528": 0.0278,
+    "13529": 0.0159,
+    "13530": -0.0192,
+    "13531": -0.0167,
+    "13532": -0.0297,
+    "13533": -0.0317,
+    "13534": -0.0284,
+    "13535": -0.0054,
+    "13536": -0.0159,
+    "13537": 0.0129,
+    "13538": 0.0097,
+    "13539": -0.0246,
+    "13540": 0.0084
+   }
+  },
+  "apr_vs_mundo": {
+   "semillas": 20,
+   "gana": 8,
+   "dif_med": -0.0032,
+   "por_semilla": {
+    "13521": -0.0219,
+    "13522": 0.0588,
+    "13523": -0.015,
+    "13524": -0.018,
+    "13525": 0.0003,
+    "13526": 0.0271,
+    "13527": -0.0061,
+    "13528": 0.0053,
+    "13529": -0.0049,
+    "13530": -0.0088,
+    "13531": 0.0,
+    "13532": 0.0034,
+    "13533": 0.0054,
+    "13534": -0.0232,
+    "13535": -0.0015,
+    "13536": -0.035,
+    "13537": 0.0155,
+    "13538": 0.0332,
+    "13539": -0.0218,
+    "13540": -0.0368
+   }
+  },
+  "plana_vs_fab": {
+   "semillas": 20,
+   "gana": 19,
+   "dif_med": 0.0425,
+   "por_semilla": {
+    "13521": 0.0112,
+    "13522": 0.0508,
+    "13523": 0.0231,
+    "13524": 0.0736,
+    "13525": 0.0431,
+    "13526": 0.0441,
+    "13527": 0.0608,
+    "13528": 0.0659,
+    "13529": 0.102,
+    "13530": -0.0046,
+    "13531": 0.0419,
+    "13532": 0.0664,
+    "13533": 0.0313,
+    "13534": 0.0086,
+    "13535": 0.0081,
+    "13536": 0.0237,
+    "13537": 0.0593,
+    "13538": 0.0404,
+    "13539": 0.0687,
+    "13540": 0.0244
+   }
+  },
+  "cruz_vs_fab": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.0489,
+   "por_semilla": {
+    "13521": 0.0608,
+    "13522": 0.0428,
+    "13523": 0.0419,
+    "13524": 0.0718,
+    "13525": 0.0536,
+    "13526": 0.0844,
+    "13527": 0.0498,
+    "13528": 0.029,
+    "13529": 0.0383,
+    "13530": 0.0428,
+    "13531": 0.0543,
+    "13532": 0.0746,
+    "13533": 0.0768,
+    "13534": 0.0339,
+    "13535": 0.0406,
+    "13536": 0.0396,
+    "13537": 0.0541,
+    "13538": 0.0481,
+    "13539": 0.075,
+    "13540": 0.0328
+   }
+  },
+  "mundo_vs_fab": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.0482,
+   "por_semilla": {
+    "13521": 0.0473,
+    "13522": 0.049,
+    "13523": 0.041,
+    "13524": 0.0536,
+    "13525": 0.0554,
+    "13526": 0.0422,
+    "13527": 0.0654,
+    "13528": 0.0515,
+    "13529": 0.0591,
+    "13530": 0.0324,
+    "13531": 0.0376,
+    "13532": 0.0415,
+    "13533": 0.0397,
+    "13534": 0.0287,
+    "13535": 0.0367,
+    "13536": 0.0587,
+    "13537": 0.0515,
+    "13538": 0.0246,
+    "13539": 0.0722,
+    "13540": 0.078
+   }
+  },
+  "frac_perdida_plana": {
+   "mediana": 0.1132,
+   "semillas_validas": 20
+  },
+  "frac_perdida_cruz": {
+   "mediana": -0.331,
+   "semillas_validas": 20
+  },
+  "frac_perdida_mundo": {
+   "mediana": -0.0665,
+   "semillas_validas": 20
+  }
+ },
+ "veredicto_serie": {
+  "ancla": true,
+  "pierde_plana": false,
+  "pierde_cruz": false,
+  "pierde_mundo": false,
+  "instrumento_ok": true
+ },
+ "predicciones": [
+  {
+   "texto": "P1 (ancla) APR > FABRICA en >= 15/20 con dif. mediana >= 0.03; APR mediana R0 en [0.36, 0.42], FABRICA en [0.30, 0.37] (p 0.85)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P2 APR_LES_PLANA pierde (p 0.35; el creador la da por REFUTADA con p 0.65)",
+   "se_cumple": false
+  },
+  {
+   "texto": "P3 APR_LES_CRUZ pierde (p 0.30)",
+   "se_cumple": false
+  },
+  {
+   "texto": "P4 (control) APR_LES_MUNDO NO pierde (p 0.80)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P5 APR_LES_PLANA > FABRICA en >= 15/20 (p 0.70)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P6 ningun brazo cruza la ENMIENDA 3 (p 0.97)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P7 fraccion mediana de la ganancia que pierde PLANA en [0.0, 0.5] (p 0.65)",
+   "se_cumple": true
+  }
+ ],
+ "semillas": [
+  13521,
+  13522,
+  13523,
+  13524,
+  13525,
+  13526,
+  13527,
+  13528,
+  13529,
+  13530,
+  13531,
+  13532,
+  13533,
+  13534,
+  13535,
+  13536,
+  13537,
+  13538,
+  13539,
+  13540
+ ],
+ "T": 100000,
+ "humo": false,
+ "crudo": "n9b_serie_apr-fab-plana-cruz-mundo_s13521-13540_T100000_20260923_203644_crudo.json",
+ "seg_total": 2806.2
+}

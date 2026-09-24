@@ -1,0 +1,175 @@
+CORRE_N9B · n9b_serie_apr-fab-plana-cruz-mundo_s13501-13520_T100000_20260923_195026 · python 3.14.2 · pool 6 · corre_n9b.py 4dd094bd8ef9223f
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 (fijado 9f47c65e438e0ff4) OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 (fijado 6a68f640a7832f12) OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 (fijado 1c8a789f7427ab96) OK
+  sha experimentos\carrera_escuderias\carros\APR.py 4402aa5142065c72 (fijado 4402aa5142065c72) OK
+  sha experimentos\carrera_escuderias\carros\FABRICA.py 2ebee3e99ea5a33a (fijado 2ebee3e99ea5a33a) OK
+  sha experimentos\nivel09_cuerpo_nuevo_b2\organismo_f9c.py 9dd1fb91ecec35ae (fijado 9dd1fb91ecec35ae) OK
+  construccion por anclas == carros en disco: OK {'APR': '4402aa5142065c72', 'FABRICA': '2ebee3e99ea5a33a', 'APR_LES_OFF': '513c2457d6d353b1', 'APR_LES_PLANA': 'da8b22798986b52a', 'APR_LES_CRUZ': '25503342098d2bf8', 'APR_LES_MUNDO': '349bc6061ce1fe60'}
+  CHEQUEO ESTATICO APR: PASA
+  CHEQUEO ESTATICO APR_LES_CRUZ: PASA
+  CHEQUEO ESTATICO APR_LES_MUNDO: PASA
+  CHEQUEO ESTATICO APR_LES_OFF: PASA
+  CHEQUEO ESTATICO APR_LES_PLANA: PASA
+  CHEQUEO ESTATICO FABRICA: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  MINI IDENTIDAD APR_LES_OFF == APR (N 9, s 13599, T 2000, toda la salida de pista.run): OK
+  ENTRADA campo a campo (regla 14): corre_n9b.tarea == juez.tarea (9 FABRICA, s 13599, T 2000): OK
+  [  155.3s] apr semilla 13502 (146.6s) R0 pista 0.3671
+  [  156.5s] apr semilla 13501 (147.7s) R0 pista 0.388
+  [  156.6s] apr semilla 13503 (147.8s) R0 pista 0.3801
+  [  158.1s] apr semilla 13506 (149.3s) R0 pista 0.385
+  [  158.7s] apr semilla 13505 (149.9s) R0 pista 0.3694
+  [  158.9s] apr semilla 13504 (150.1s) R0 pista 0.376
+  [  330.0s] apr semilla 13508 (173.5s) R0 pista 0.3866
+  [  330.7s] apr semilla 13507 (175.3s) R0 pista 0.383
+  [  332.8s] apr semilla 13510 (174.7s) R0 pista 0.3909
+  [  333.2s] apr semilla 13509 (176.6s) R0 pista 0.3679
+  [  334.6s] apr semilla 13512 (175.7s) R0 pista 0.402
+  [  335.6s] apr semilla 13511 (176.9s) R0 pista 0.3868
+  [  500.9s] apr semilla 13513 (170.9s) R0 pista 0.3874
+  [  501.9s] apr semilla 13514 (171.2s) R0 pista 0.3701
+  [  504.5s] apr semilla 13516 (171.3s) R0 pista 0.3691
+  [  504.5s] apr semilla 13518 (168.9s) R0 pista 0.3886
+  [  506.1s] apr semilla 13517 (171.4s) R0 pista 0.3741
+  [  506.2s] apr semilla 13515 (173.4s) R0 pista 0.3737
+  [  643.1s] apr semilla 13519 (142.1s) R0 pista 0.3849
+  [  645.0s] apr semilla 13520 (143.1s) R0 pista 0.3839
+  [  657.3s] fab semilla 13501 (152.8s) R0 pista 0.3477
+  [  662.7s] fab semilla 13504 (156.5s) R0 pista 0.3308
+  [  663.0s] fab semilla 13503 (156.9s) R0 pista 0.3346
+  [  665.6s] fab semilla 13502 (161.1s) R0 pista 0.3293
+  [  823.5s] fab semilla 13505 (180.4s) R0 pista 0.3392
+  [  826.5s] fab semilla 13506 (181.5s) R0 pista 0.3399
+  [  841.3s] fab semilla 13507 (184.0s) R0 pista 0.3348
+  [  843.9s] fab semilla 13509 (180.9s) R0 pista 0.3428
+  [  846.9s] fab semilla 13508 (184.2s) R0 pista 0.3313
+  [  851.3s] fab semilla 13510 (185.7s) R0 pista 0.3199
+  [ 1001.0s] fab semilla 13511 (177.5s) R0 pista 0.3588
+  [ 1008.4s] fab semilla 13512 (181.9s) R0 pista 0.344
+  [ 1021.4s] fab semilla 13513 (180.2s) R0 pista 0.3355
+  [ 1023.8s] fab semilla 13514 (179.9s) R0 pista 0.3225
+  [ 1025.5s] fab semilla 13515 (178.6s) R0 pista 0.3412
+  [ 1029.7s] fab semilla 13516 (178.4s) R0 pista 0.3505
+  [ 1156.2s] fab semilla 13517 (155.2s) R0 pista 0.3325
+  [ 1160.9s] fab semilla 13518 (152.5s) R0 pista 0.3457
+  [ 1168.4s] plana semilla 13501 (142.9s) R0 pista 0.3835
+  [ 1173.1s] plana semilla 13502 (143.3s) R0 pista 0.3863
+  [ 1176.8s] fab semilla 13519 (155.4s) R0 pista 0.3292
+  [ 1181.7s] fab semilla 13520 (157.9s) R0 pista 0.3393
+  [ 1322.1s] plana semilla 13503 (165.9s) R0 pista 0.378
+  [ 1326.1s] plana semilla 13504 (165.1s) R0 pista 0.3718
+  [ 1332.4s] plana semilla 13505 (163.9s) R0 pista 0.3815
+  [ 1340.8s] plana semilla 13506 (167.7s) R0 pista 0.3699
+  [ 1343.6s] plana semilla 13507 (166.8s) R0 pista 0.3893
+  [ 1349.3s] plana semilla 13508 (167.6s) R0 pista 0.3885
+  [ 1488.1s] plana semilla 13509 (166.0s) R0 pista 0.3813
+  [ 1492.0s] plana semilla 13510 (166.0s) R0 pista 0.3963
+  [ 1499.1s] plana semilla 13511 (166.7s) R0 pista 0.4005
+  [ 1508.0s] plana semilla 13512 (167.3s) R0 pista 0.3714
+  [ 1512.7s] plana semilla 13513 (169.1s) R0 pista 0.3744
+  [ 1517.0s] plana semilla 13514 (167.6s) R0 pista 0.3893
+  [ 1625.3s] plana semilla 13515 (137.2s) R0 pista 0.3901
+  [ 1627.9s] plana semilla 13516 (135.9s) R0 pista 0.4004
+  [ 1637.6s] plana semilla 13517 (138.5s) R0 pista 0.3589
+  [ 1645.4s] plana semilla 13518 (137.4s) R0 pista 0.4037
+  [ 1650.5s] plana semilla 13519 (137.7s) R0 pista 0.3745
+  [ 1653.2s] plana semilla 13520 (136.3s) R0 pista 0.3716
+  [ 1790.7s] cruz semilla 13501 (165.4s) R0 pista 0.4006
+  [ 1799.4s] cruz semilla 13502 (171.5s) R0 pista 0.3436
+  [ 1808.8s] cruz semilla 13503 (171.2s) R0 pista 0.3834
+  [ 1815.4s] cruz semilla 13504 (170.0s) R0 pista 0.3906
+  [ 1818.4s] cruz semilla 13505 (167.9s) R0 pista 0.3993
+  [ 1822.6s] cruz semilla 13506 (169.4s) R0 pista 0.3879
+  [ 1961.3s] cruz semilla 13507 (170.5s) R0 pista 0.3893
+  [ 1969.8s] cruz semilla 13508 (170.4s) R0 pista 0.3948
+  [ 1977.6s] cruz semilla 13509 (168.8s) R0 pista 0.3691
+  [ 1985.8s] cruz semilla 13510 (170.4s) R0 pista 0.4148
+  [ 1990.3s] cruz semilla 13511 (171.9s) R0 pista 0.3647
+  [ 1991.5s] cruz semilla 13512 (168.9s) R0 pista 0.384
+  [ 2126.3s] cruz semilla 13513 (165.0s) R0 pista 0.3793
+  [ 2132.6s] cruz semilla 13514 (162.7s) R0 pista 0.3782
+  [ 2138.0s] cruz semilla 13515 (160.4s) R0 pista 0.3756
+  [ 2144.5s] cruz semilla 13516 (158.7s) R0 pista 0.4036
+  [ 2147.7s] cruz semilla 13517 (157.4s) R0 pista 0.3765
+  [ 2149.0s] cruz semilla 13518 (157.4s) R0 pista 0.3721
+  [ 2281.7s] cruz semilla 13519 (155.4s) R0 pista 0.3802
+  [ 2287.5s] cruz semilla 13520 (155.0s) R0 pista 0.3804
+  [ 2292.4s] mundo semilla 13501 (154.4s) R0 pista 0.4253
+  [ 2306.1s] mundo semilla 13502 (161.5s) R0 pista 0.3753
+  [ 2306.8s] mundo semilla 13503 (159.1s) R0 pista 0.3928
+  [ 2311.0s] mundo semilla 13504 (162.1s) R0 pista 0.3646
+  [ 2452.2s] mundo semilla 13505 (170.5s) R0 pista 0.4
+  [ 2459.3s] mundo semilla 13506 (171.7s) R0 pista 0.3628
+  [ 2463.6s] mundo semilla 13507 (171.2s) R0 pista 0.4043
+  [ 2477.7s] mundo semilla 13508 (171.6s) R0 pista 0.3814
+  [ 2477.8s] mundo semilla 13509 (171.0s) R0 pista 0.3748
+  [ 2481.5s] mundo semilla 13510 (170.4s) R0 pista 0.3795
+  [ 2624.9s] mundo semilla 13511 (172.7s) R0 pista 0.3782
+  [ 2631.4s] mundo semilla 13512 (172.2s) R0 pista 0.3616
+  [ 2634.3s] mundo semilla 13513 (170.6s) R0 pista 0.3719
+  [ 2642.8s] mundo semilla 13515 (165.0s) R0 pista 0.3847
+  [ 2643.6s] mundo semilla 13514 (165.9s) R0 pista 0.3899
+  [ 2645.6s] mundo semilla 13516 (164.1s) R0 pista 0.3954
+  [ 2761.6s] mundo semilla 13517 (136.7s) R0 pista 0.3795
+  [ 2767.5s] mundo semilla 13518 (136.1s) R0 pista 0.3898
+  [ 2769.2s] mundo semilla 13519 (134.9s) R0 pista 0.3908
+  [ 2777.4s] mundo semilla 13520 (134.6s) R0 pista 0.3795
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n9b\datos\n9b_serie_apr-fab-plana-cruz-mundo_s13501-13520_T100000_20260923_195026_crudo.json (sha 3eaea014db62f9c7)   <- ERR-54: escrito ANTES de resumir
+
+== apr (APR x9) · 20 semillas · T 100000
+  R0 por linaje-semilla: mediana 0.3778 · R0 pista (mediana por semilla) 0.3835 · vida mediana 200.0 · muertes mediana 182.0
+  ENMIENDA 3: mediana R0 eval 0.378 · R0 real eval 0.373 · sin fund tras 10000 0.0 · evaluables 180/180 -> NO CRUZA
+  causas h/s/v/sal 81/14/11951/20582 (37% veneno, 63% sal) · sin bueno en el mundo 0.0114 · coherente [180, 180] · t_fund [180, 180] · escrituras 0
+  opcion (no puntua): oportunidades 1594190 · tasa 0.0961 (FABRICA habria 0.1512) · quitadas ult. cuarto 0.0536 · Q mediana no/morder [[-0.7735, -0.2823, 0.063, 0.0587, -0.1572, 0.3776], [-0.9261, -0.5459, 0.3419, 0.0579, -0.1308, -0.038]]
+
+== fab (FABRICA x9) · 20 semillas · T 100000
+  R0 por linaje-semilla: mediana 0.3395 · R0 pista (mediana por semilla) 0.3374 · vida mediana 199.0 · muertes mediana 229.0
+  ENMIENDA 3: mediana R0 eval 0.339 · R0 real eval 0.339 · sin fund tras 10000 0.0 · evaluables 180/180 -> NO CRUZA
+  causas h/s/v/sal 12/1/16133/24972 (39% veneno, 61% sal) · sin bueno en el mundo 0.0033 · coherente [180, 180] · t_fund [180, 180] · escrituras 0
+
+== plana (APR_LES_PLANA x9) · 20 semillas · T 100000
+  R0 por linaje-semilla: mediana 0.3856 · R0 pista (mediana por semilla) 0.3825 · vida mediana 200.0 · muertes mediana 177.5
+  ENMIENDA 3: mediana R0 eval 0.386 · R0 real eval 0.376 · sin fund tras 10000 0.0 · evaluables 180/180 -> NO CRUZA
+  causas h/s/v/sal 67/13/11564/20556 (36% veneno, 64% sal) · sin bueno en el mundo 0.0146 · coherente [180, 180] · t_fund [180, 180] · escrituras 0
+  opcion (no puntua): oportunidades 1608203 · tasa 0.087 (FABRICA habria 0.1468) · quitadas ult. cuarto 0.0575 · Q mediana no/morder [[-0.7768, -0.1275, -0.1275, 0.0542, -0.1537, 0.4168], [-0.9023, -0.2268, -0.2268, 0.0562, -0.1277, -0.0266]]
+  lesion (no puntua): decisiones 1608203 · post real 0.5712 / usado 0.8854 · cambia post 0.8812 · caida predicha real 0.8812 / usada 0.0 · cambia mundo 0.0 · V-M (|usado-real| <= 0.1) NO se cumple
+
+== cruz (APR_LES_CRUZ x9) · 20 semillas · T 100000
+  R0 por linaje-semilla: mediana 0.3848 · R0 pista (mediana por semilla) 0.3819 · vida mediana 200.0 · muertes mediana 181.0
+  ENMIENDA 3: mediana R0 eval 0.385 · R0 real eval 0.38 · sin fund tras 10000 0.0 · evaluables 180/180 -> NO CRUZA
+  causas h/s/v/sal 55/8/11937/20610 (37% veneno, 63% sal) · sin bueno en el mundo 0.014 · coherente [180, 180] · t_fund [180, 180] · escrituras 0
+  opcion (no puntua): oportunidades 1605008 · tasa 0.0899 (FABRICA habria 0.1472) · quitadas ult. cuarto 0.0522 · Q mediana no/morder [[-0.7928, -0.3046, 0.0804, 0.0552, -0.1548, 0.3834], [-0.9516, -0.3086, -0.1142, 0.063, -0.1277, -0.0289]]
+  lesion (no puntua): decisiones 1605008 · post real 0.5742 / usado 0.592 · cambia post 0.8685 · caida predicha real 0.8843 / usada 0.849 · cambia mundo 0.0 · V-M (|usado-real| <= 0.1) SE CUMPLE
+
+== mundo (APR_LES_MUNDO x9) · 20 semillas · T 100000
+  R0 por linaje-semilla: mediana 0.3864 · R0 pista (mediana por semilla) 0.3805 · vida mediana 200.0 · muertes mediana 180.0
+  ENMIENDA 3: mediana R0 eval 0.386 · R0 real eval 0.378 · sin fund tras 10000 0.0 · evaluables 180/180 -> NO CRUZA
+  causas h/s/v/sal 71/24/11915/20425 (37% veneno, 63% sal) · sin bueno en el mundo 0.0115 · coherente [180, 180] · t_fund [180, 180] · escrituras 0
+  opcion (no puntua): oportunidades 1591189 · tasa 0.0966 (FABRICA habria 0.153) · quitadas ult. cuarto 0.0555 · Q mediana no/morder [[-0.8138, -0.2832, 0.0701, 0.0222, -0.0731, 0.3749], [-0.94, -0.5456, 0.3412, 0.0482, -0.1054, -0.0389]]
+  lesion (no puntua): decisiones 1591189 · post real 0.5653 / usado 0.5653 · cambia post 0.0 · caida predicha real 0.8885 / usada 0.8885 · cambia mundo 0.9834 · V-M (|usado-real| <= 0.1) SE CUMPLE
+
+PAREADOS (por semilla: mediana del R0 de los 9 linajes; gana = semillas en que la primera supera a la segunda)
+  apr vs fab: gana 19/20 · dif. mediana 0.0355 · {'13501': -0.0019, '13502': 0.0247, '13503': 0.0392, '13504': 0.03, '13505': 0.0148, '13506': 0.011, '13507': 0.0071, '13508': 0.0632, '13509': 0.011, '13510': 0.0865, '13511': 0.0481, '13512': 0.0361, '13513': 0.0648, '13514': 0.0565, '13515': 0.0533, '13516': 0.0026, '13517': 0.0348, '13518': 0.0215, '13519': 0.0621, '13520': 0.037}
+  apr vs plana: gana 6/20 · dif. mediana -0.0078 · {'13501': -0.025, '13502': -0.0324, '13503': -0.0065, '13504': -0.002, '13505': -0.0358, '13506': 0.0156, '13507': -0.0515, '13508': -0.0306, '13509': -0.0393, '13510': 0.0066, '13511': -0.0064, '13512': 0.0017, '13513': 0.0078, '13514': -0.0091, '13515': 0.0269, '13516': -0.0544, '13517': -0.0042, '13518': -0.0287, '13519': 0.0256, '13520': -0.013}
+  apr vs cruz: gana 8/20 · dif. mediana -0.0061 · {'13501': -0.058, '13502': 0.0089, '13503': -0.0139, '13504': -0.0475, '13505': -0.0443, '13506': 0.0058, '13507': -0.0399, '13508': -0.0015, '13509': -0.0428, '13510': -0.0144, '13511': 0.0145, '13512': -0.0059, '13513': 0.0145, '13514': 0.0047, '13515': 0.0432, '13516': -0.0675, '13517': -0.0062, '13518': 0.0207, '13519': 0.0348, '13520': -0.0344}
+  apr vs mundo: gana 6/20 · dif. mediana -0.0133 · {'13501': -0.0368, '13502': -0.0126, '13503': -0.0139, '13504': -0.0294, '13505': -0.0395, '13506': -0.0165, '13507': -0.0726, '13508': 0.0049, '13509': -0.0105, '13510': -0.0023, '13511': 0.0238, '13512': 0.0228, '13513': 0.0328, '13514': -0.0447, '13515': 0.0298, '13516': -0.0244, '13517': -0.0212, '13518': -0.004, '13519': 0.0191, '13520': -0.0246}
+  plana vs fab: gana 19/20 · dif. mediana 0.0502 · {'13501': 0.0231, '13502': 0.0571, '13503': 0.0457, '13504': 0.032, '13505': 0.0506, '13506': -0.0046, '13507': 0.0586, '13508': 0.0938, '13509': 0.0503, '13510': 0.0799, '13511': 0.0545, '13512': 0.0344, '13513': 0.057, '13514': 0.0656, '13515': 0.0264, '13516': 0.057, '13517': 0.039, '13518': 0.0502, '13519': 0.0365, '13520': 0.05}
+  cruz vs fab: gana 20/20 · dif. mediana 0.0511 · {'13501': 0.0561, '13502': 0.0158, '13503': 0.0531, '13504': 0.0775, '13505': 0.0591, '13506': 0.0052, '13507': 0.047, '13508': 0.0647, '13509': 0.0538, '13510': 0.1009, '13511': 0.0336, '13512': 0.042, '13513': 0.0503, '13514': 0.0518, '13515': 0.0101, '13516': 0.0701, '13517': 0.041, '13518': 0.0008, '13519': 0.0273, '13520': 0.0714}
+  mundo vs fab: gana 20/20 · dif. mediana 0.0401 · {'13501': 0.0349, '13502': 0.0373, '13503': 0.0531, '13504': 0.0594, '13505': 0.0543, '13506': 0.0275, '13507': 0.0797, '13508': 0.0583, '13509': 0.0215, '13510': 0.0888, '13511': 0.0243, '13512': 0.0133, '13513': 0.032, '13514': 0.1012, '13515': 0.0235, '13516': 0.027, '13517': 0.056, '13518': 0.0255, '13519': 0.043, '13520': 0.0616}
+  fraccion de la ganancia APR-FABRICA que pierde plana: mediana -0.1471 (18 semillas con APR-FAB > 0.005)
+  fraccion de la ganancia APR-FABRICA que pierde cruz: mediana -0.0936 (18 semillas con APR-FAB > 0.005)
+  fraccion de la ganancia APR-FABRICA que pierde mundo: mediana -0.4324 (18 semillas con APR-FAB > 0.005)
+
+VEREDICTO DE ESTA SERIE (el final exige serie Y replica, --veredicto): {'ancla': True, 'pierde_plana': False, 'pierde_cruz': False, 'pierde_mundo': False, 'instrumento_ok': True}
+PREDICCIONES FIRMADAS (PREREGISTRO_n9b.md sec. 5)
+  P1 (ancla) APR > FABRICA en >= 15/20 con dif. mediana >= 0.03; APR mediana R0 en [0.36, 0.42], FABRICA en [0.30, 0.37] (p 0.85) -> SE CUMPLE
+  P2 APR_LES_PLANA pierde (p 0.35; el creador la da por REFUTADA con p 0.65) -> NO se cumple
+  P3 APR_LES_CRUZ pierde (p 0.30) -> NO se cumple
+  P4 (control) APR_LES_MUNDO NO pierde (p 0.80) -> SE CUMPLE
+  P5 APR_LES_PLANA > FABRICA en >= 15/20 (p 0.70) -> SE CUMPLE
+  P6 ningun brazo cruza la ENMIENDA 3 (p 0.97) -> SE CUMPLE
+  P7 fraccion mediana de la ganancia que pierde PLANA en [0.0, 0.5] (p 0.65) -> NO se cumple
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\subida_n9b\datos\n9b_serie_apr-fab-plana-cruz-mundo_s13501-13520_T100000_20260923_195026_resumen.json
+Terminado en 2778.1s
