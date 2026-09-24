@@ -2,7 +2,8 @@
 
 MISION: llegar a la AGI por este camino.
 
-  (J) juez v1.2 con el carro FABRICA_ECO, flujo 7 y el mismo T_b == corre_eco_v11.juez (motor Python) en el mismo banco y semillas.
+  (J) juez v1.2 con el carro FABRICA_ECO, flujo 7 y el mismo T_b == corre_eco_v11.juez (motor Python) en el mismo banco y semillas
+      (de PRACTICA: la bateria sellada no se toca en el arnes).
   (C) trabajo v1.2 del brazo VIDA (FABRICA_ECO) == trabajo v1.1 de VIDA en todas las claves de v1.1 salvo juez/placebo (otra bateria),
       motor y tiempo (motor Python, T corto).
   (F) el brazo VIDA_T usa FAMB_RES0_ECO y su fisica difiere de VIDA (la familia actua) y la genetica de cada brazo es la de corre_eco.
@@ -39,8 +40,9 @@ def main():
     r0 = V.trabajo((19906, 'VIDA', 3000, 2000, 3000, tmp, 1, 1000, False))
     banco = r0['corte']['banco']
     # (J)
-    a = V11.juez(banco, V.JUEZ3['semillas'][:2], 2000, 7)
-    b = V.juez(banco, V.JUEZ3['semillas'][:2], 2000, 7, V.FAB)
+    PR = (19903, 19904)   # semillas de PRACTICA para el juez del arnes: la bateria 19801-19820 queda sellada (aviso del compilador, 24-sep)
+    a = V11.juez(banco, PR, 2000, 7)
+    b = V.juez(banco, PR, 2000, 7, V.FAB)
     chk("(J) juez v1.2 (FABRICA_ECO, flujo 7) == juez v1.1, motor Python", J(a) == J(b), f"(vive {[d['vive'] for d in b]})")
     # (C) VIDA v1.2 == VIDA v1.1 (motor Python) salvo juez/placebo
     x = V11.trabajo((19907, 'VIDA', 6000, 4000, 5000, tempfile.mkdtemp(), 1, 1000, False))
@@ -58,6 +60,7 @@ def main():
                                                               'MUT0_T': ('MUT0', 'FAMB_RES0_ECO'), 'VIDA': ('VIDA', 'FABRICA_ECO')})
     # (G) gemelo
     if os.path.exists(os.path.join(AQUI, 'motor_eco_rapido_fam.py')):
+        J3 = V.JUEZ3; V.JUEZ3 = dict(J3, semillas=(19903, 19904))   # (G) tambien con semillas de practica en el juez
         for br in ('VIDA_T', 'AZAR_T', 'MUT0_T', 'VIDA'):
             CR.ME = V.ME_PY
             p = V.trabajo((19908, br, 8000, 4000, 6000, tempfile.mkdtemp(), 2, 2000, False))
@@ -65,8 +68,9 @@ def main():
             g = V.trabajo((19908, br, 8000, 4000, 6000, tempfile.mkdtemp(), 2, 2000, False))
             CR.ME = V.ME_PY
             dist = [k for k in p if k not in ('seg', 'motor') and J(p[k]) != J(g.get(k))]
-            chk(f"(G) {br}: el gemelo == Python en trabajo v1.2 (T 8000, corte 4000, juez 2 semillas T_b 2000)", not dist,
+            chk(f"(G) {br}: el gemelo == Python en trabajo v1.2 (T 8000, corte 4000, juez 2 semillas de practica T_b 2000)", not dist,
                 f"(persiste {p['persiste']}, nacidos {p['n_nac']}, distintas {dist}; {p['seg']} s contra {g['seg']} s)")
+        V.JUEZ3 = J3
     else:
         chk("(G) el gemelo motor_eco_rapido_fam.py existe (PENDIENTE: lo construye el compilador)", False)
     # (V) la letra
