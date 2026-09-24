@@ -1,0 +1,420 @@
+# 2026-09-24 00:20:56 $ python experimentos/subida_n8/corre_n8.py --humo
+n8_humo_base-fus-fusazar-recic_s12690_20260924_002056: 4 corridas, T=200000, entrada campo a campo OK (100 campos)
+  s12690 base     ADQ_tarde 0.78 temprano 0.7333 prior 0.5 nulo 0.5 (com 0.56 / ven 1.0; prior com 0.16 / ven 0.84) RET40 0.45 cond 0.0806 muertes 382 splits 60 fus 0 agota@73 8.3s
+     curva al salir de la ventana (bloques de 10): [1.0, 0.9, 0.6, 0.7, 0.8, 0.8, 0.7, 0.9, 0.7, 0.5, 0.5, 0.6, 0.6, 0.5, 0.8, 0.7, 0.7, 0.9, 0.8]
+     curva al final (bloques de 10):              [0.4, 0.5, 0.5, 0.4, 0.5, 0.7, 0.6, 0.6, 0.4, 0.6, 0.5, 0.8, 0.5, 0.4, 0.6, 0.6, 0.7, 0.8, 0.8, 0.8]
+  s12690 fus      ADQ_tarde 0.62 temprano 0.7333 prior 0.54 nulo 0.54 (com 0.24 / ven 1.0; prior com 0.16 / ven 0.92) RET40 0.5 cond 0.0058 muertes 399 splits 133 fus 73 agota@73 8.2s
+     curva al salir de la ventana (bloques de 10): [1.0, 0.9, 0.6, 0.7, 0.8, 0.8, 0.7, 0.8, 0.7, 0.6, 0.8, 0.7, 0.7, 0.6, 0.6, 0.6, 0.7, 0.7, 0.5]
+     curva al final (bloques de 10):              [0.5, 0.5, 0.6, 0.4, 0.5, 0.5, 0.4, 0.5, 0.5, 0.5, 0.6, 0.5, 0.5, 0.5, 0.6, 0.5, 0.6, 0.6, 0.5, 0.5]
+  s12690 fusazar  ADQ_tarde 0.64 temprano 0.7333 prior 0.5 nulo 0.56 (com 0.28 / ven 1.0; prior com 0.08 / ven 0.92) RET40 0.5 cond 0.071 muertes 387 splits 126 fus 66 agota@73 8.0s
+     curva al salir de la ventana (bloques de 10): [1.0, 0.9, 0.6, 0.7, 0.8, 0.8, 0.7, 0.8, 0.7, 0.6, 0.7, 0.7, 0.5, 0.5, 0.5, 0.7, 0.7, 0.6, 0.7]
+     curva al final (bloques de 10):              [0.4, 0.5, 0.5, 0.6, 0.5, 0.5, 0.6, 0.5, 0.4, 0.5, 0.4, 0.5, 0.5, 0.4, 0.4, 0.6, 0.5, 0.4, 0.7, 0.7]
+  s12690 recic    ADQ_tarde 0.96 temprano 0.9333 prior 0.96 nulo 0.48 (com 0.92 / ven 1.0; prior com 0.92 / ven 1.0) RET40 0.95 cond 0.2327 muertes 297 splits 20 fus 0 agota@None 8.0s
+     curva al salir de la ventana (bloques de 10): [1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.8, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0]
+     curva al final (bloques de 10):              [1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9, 1.0, 0.9]
+{
+ "base": {
+  "ADQ_tarde": 0.78,
+  "ADQ_temprano": 0.7333,
+  "PRIOR_tarde": 0.5,
+  "NULO_tarde": 0.5,
+  "ADQ_tarde_com": 0.56,
+  "ADQ_tarde_ven": 1.0,
+  "ADQ_temprano_com": 0.4667,
+  "PRIOR_tarde_com": 0.16,
+  "PRIOR_tarde_ven": 0.84,
+  "RET40": 0.45,
+  "RET_todo": 0.585,
+  "cond_ult_cuarto": 0.0806,
+  "muertes": 382,
+  "splits": 60,
+  "n_fus": 0,
+  "est_agot": 73,
+  "dur_s": 8.3,
+  "n": 1,
+  "ADQ_tarde_min": 0.78,
+  "ADQ_tarde_sobre_nulo": 1,
+  "ADQ_tarde_sobre_prior": 1,
+  "caida": 0,
+  "com_sobre_prior_com": 1,
+  "dif_com_prior_mediana": 0.4,
+  "dif_tarde_temprano_com_mediana": 0.0933,
+  "curva_mediana": [
+   1.0,
+   0.9,
+   0.6,
+   0.7,
+   0.8,
+   0.8,
+   0.7,
+   0.9,
+   0.7,
+   0.5,
+   0.5,
+   0.6,
+   0.6,
+   0.5,
+   0.8,
+   0.7,
+   0.7,
+   0.9,
+   0.8
+  ],
+  "curva_final_mediana": [
+   0.4,
+   0.5,
+   0.5,
+   0.4,
+   0.5,
+   0.7,
+   0.6,
+   0.6,
+   0.4,
+   0.6,
+   0.5,
+   0.8,
+   0.5,
+   0.4,
+   0.6,
+   0.6,
+   0.7,
+   0.8,
+   0.8,
+   0.8
+  ]
+ },
+ "fus": {
+  "ADQ_tarde": 0.62,
+  "ADQ_temprano": 0.7333,
+  "PRIOR_tarde": 0.54,
+  "NULO_tarde": 0.54,
+  "ADQ_tarde_com": 0.24,
+  "ADQ_tarde_ven": 1.0,
+  "ADQ_temprano_com": 0.4667,
+  "PRIOR_tarde_com": 0.16,
+  "PRIOR_tarde_ven": 0.92,
+  "RET40": 0.5,
+  "RET_todo": 0.515,
+  "cond_ult_cuarto": 0.0058,
+  "muertes": 399,
+  "splits": 133,
+  "n_fus": 73,
+  "est_agot": 73,
+  "dur_s": 8.2,
+  "n": 1,
+  "ADQ_tarde_min": 0.62,
+  "ADQ_tarde_sobre_nulo": 1,
+  "ADQ_tarde_sobre_prior": 1,
+  "caida": 1,
+  "com_sobre_prior_com": 1,
+  "dif_com_prior_mediana": 0.08,
+  "dif_tarde_temprano_com_mediana": -0.2267,
+  "curva_mediana": [
+   1.0,
+   0.9,
+   0.6,
+   0.7,
+   0.8,
+   0.8,
+   0.7,
+   0.8,
+   0.7,
+   0.6,
+   0.8,
+   0.7,
+   0.7,
+   0.6,
+   0.6,
+   0.6,
+   0.7,
+   0.7,
+   0.5
+  ],
+  "curva_final_mediana": [
+   0.5,
+   0.5,
+   0.6,
+   0.4,
+   0.5,
+   0.5,
+   0.4,
+   0.5,
+   0.5,
+   0.5,
+   0.6,
+   0.5,
+   0.5,
+   0.5,
+   0.6,
+   0.5,
+   0.6,
+   0.6,
+   0.5,
+   0.5
+  ]
+ },
+ "fusazar": {
+  "ADQ_tarde": 0.64,
+  "ADQ_temprano": 0.7333,
+  "PRIOR_tarde": 0.5,
+  "NULO_tarde": 0.56,
+  "ADQ_tarde_com": 0.28,
+  "ADQ_tarde_ven": 1.0,
+  "ADQ_temprano_com": 0.4667,
+  "PRIOR_tarde_com": 0.08,
+  "PRIOR_tarde_ven": 0.92,
+  "RET40": 0.5,
+  "RET_todo": 0.505,
+  "cond_ult_cuarto": 0.071,
+  "muertes": 387,
+  "splits": 126,
+  "n_fus": 66,
+  "est_agot": 73,
+  "dur_s": 8.0,
+  "n": 1,
+  "ADQ_tarde_min": 0.64,
+  "ADQ_tarde_sobre_nulo": 1,
+  "ADQ_tarde_sobre_prior": 1,
+  "caida": 0,
+  "com_sobre_prior_com": 1,
+  "dif_com_prior_mediana": 0.2,
+  "dif_tarde_temprano_com_mediana": -0.1867,
+  "curva_mediana": [
+   1.0,
+   0.9,
+   0.6,
+   0.7,
+   0.8,
+   0.8,
+   0.7,
+   0.8,
+   0.7,
+   0.6,
+   0.7,
+   0.7,
+   0.5,
+   0.5,
+   0.5,
+   0.7,
+   0.7,
+   0.6,
+   0.7
+  ],
+  "curva_final_mediana": [
+   0.4,
+   0.5,
+   0.5,
+   0.6,
+   0.5,
+   0.5,
+   0.6,
+   0.5,
+   0.4,
+   0.5,
+   0.4,
+   0.5,
+   0.5,
+   0.4,
+   0.4,
+   0.6,
+   0.5,
+   0.4,
+   0.7,
+   0.7
+  ]
+ },
+ "recic": {
+  "ADQ_tarde": 0.96,
+  "ADQ_temprano": 0.9333,
+  "PRIOR_tarde": 0.96,
+  "NULO_tarde": 0.48,
+  "ADQ_tarde_com": 0.92,
+  "ADQ_tarde_ven": 1.0,
+  "ADQ_temprano_com": 0.8667,
+  "PRIOR_tarde_com": 0.92,
+  "PRIOR_tarde_ven": 1.0,
+  "RET40": 0.95,
+  "RET_todo": 0.95,
+  "cond_ult_cuarto": 0.2327,
+  "muertes": 297,
+  "splits": 20,
+  "n_fus": 0,
+  "est_agot": null,
+  "dur_s": 8.0,
+  "n": 1,
+  "ADQ_tarde_min": 0.96,
+  "ADQ_tarde_sobre_nulo": 1,
+  "ADQ_tarde_sobre_prior": 0,
+  "caida": 0,
+  "com_sobre_prior_com": 0,
+  "dif_com_prior_mediana": 0.0,
+  "dif_tarde_temprano_com_mediana": 0.0533,
+  "curva_mediana": [
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.8,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0
+  ],
+  "curva_final_mediana": [
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9,
+   1.0,
+   0.9
+  ]
+ },
+ "pareados": {
+  "fus-base:ADQ_tarde": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.16
+  },
+  "fus-base:ADQ_tarde_com": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.32
+  },
+  "fus-base:RET40": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.05
+  },
+  "fus-base:RET_todo": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.07
+  },
+  "fus-base:cond_ult_cuarto": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.0748
+  },
+  "fus-fusazar:ADQ_tarde": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.02
+  },
+  "fus-fusazar:ADQ_tarde_com": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.04
+  },
+  "fus-fusazar:RET40": {
+   "n": 1,
+   "gana": 0,
+   "empata": 1,
+   "dif_mediana": 0.0
+  },
+  "fus-fusazar:RET_todo": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.01
+  },
+  "fus-fusazar:cond_ult_cuarto": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.0652
+  },
+  "fusazar-base:ADQ_tarde": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.14
+  },
+  "fusazar-base:ADQ_tarde_com": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.28
+  },
+  "fusazar-base:RET40": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.05
+  },
+  "fusazar-base:RET_todo": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.08
+  },
+  "fusazar-base:cond_ult_cuarto": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "dif_mediana": -0.0096
+  },
+  "recic-base:ADQ_tarde": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.18
+  },
+  "recic-base:ADQ_tarde_com": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.36
+  },
+  "recic-base:RET40": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.5
+  },
+  "recic-base:RET_todo": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.365
+  },
+  "recic-base:cond_ult_cuarto": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "dif_mediana": 0.1521
+  }
+ }
+}
+JSON: experimentos/subida_n8/datos/humo/n8_humo_base-fus-fusazar-recic_s12690_20260924_002056.json  sha 3f1eb9c11f0b2391  pared 32.6 s
+# MIDE rc=0 pared=32.7s cpu_user=32.6s cpu_sys=0.1s maxrss=52MB fin=00:21:29
