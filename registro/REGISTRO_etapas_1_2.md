@@ -6639,3 +6639,23 @@ las veces. La puerta rechazaba al propio tronco casi la mitad de las veces (patr
   la batería. La batería congelada `bateria_generaliza_v142.py` conserva su banda interna y no se toca. La banda vieja se reporta al lado,
   para el candidato y para el tronco, sólo como informe.
 - **Alcance:** vale para la letra del criterio v4 desde hoy (`CRITERIO_TRONCO_v4.md`, fila T-B). No rejuzga a nadie.
+
+### SUBIDA N6B — memoria completa del mapa, dos metas y port a v14.2 (23-sep-2026, serie 14601–14620 a las 21:26–21:48; réplica 14621–14640 relanzada tras el incidente de las 21:55, 22:11–22:34): **HAY ALGO MODESTO ×2 por la letra — el núcleo pasa en las dos series, pero cae R-4 (no regresión de comida) en ambas y D-4 (es el mapa) solo en la serie; pendiente de auditoría**
+
+Runner `experimentos/subida_n6b/corre_subida_b.py`, mundo `mundo_subida_b` (sha `214d5763758473fa`). Crudos: serie `experimentos/subida_n6b/datos/subida_b_s14601-14620_20260923_212647.json`; réplica `experimentos/subida_n6b/datos/subida_b_s14621-14640_20260923_221135.json` (sha `58d0e584f3496e4d`). La primera réplica (21:48) quedó cortada en 94/220 por el incidente y no se usa.
+
+| puerta | serie 14601 | réplica 14621 |
+|---|---|---|
+| principales que pasan | 11/13 | 12/13 |
+| D-4 es el mapa (GFX − max(CIEGO, BARAJADO) ≥ 0.25) | **CAE** (0.038; BARAJADO 0.95) | PASA (0.975; CIEGO 0.0, BARAJADO 0.0) |
+| R-4 no regresión (comida GFX/CIEGO ≥ 0.9) | **CAE** (0.614) | **CAE** (0.65) |
+| V1 memoria completa (2 comidas + 2 murallas, 20/20) | PASA | PASA (GFX 20/20; GF 7/20, GFV 9/20) |
+| PORT a v14.2 (rodeo y J) | PASA | PASA (1.0 / 1.0) |
+
+**Lectura honesta.** La memoria completa del mapa que faltaba en n6 ya se logra (V1 20/20 ×2) y el port a v14.2 rodea limpio. Pero el organismo con mapa come un 35–40 % menos que el ciego (R-4 ×2: regresión conductual), y en la serie el mapa barajado rindió casi igual que el verdadero (D-4 cae), lo que en la réplica no se repite. Esa inconsistencia es lo primero que tiene que mirar el auditor. **Nivel 6 no cambia (60 %)** hasta la auditoría. Prohibido: "el mapa entra al v14.3" sin resolver R-4.
+
+### SUBIDA N8C — memoria lenta con repaso (23-sep-2026, serie 15801–15820 22:34, réplica 15821–15840 22:40): **HAY ALGO MODESTO ×2 (veredicto combinado del runner) — el repaso sube la retención (REP10 > BASE 18/20 ×2, +0.10–0.11) y es el contenido de la huella (REP10 > BARAJ10 20/20 y > SINHUE10 19–20/20), pero no llega a la meta central (RET40 0.71 < 0.75, P1 cae ×2) y la adquisición tardía baja un poco (P3 cae)**
+
+Runner `experimentos/subida_n8c_memoria_lenta/corre_n8c.py`. Crudos: serie `…/datos/n8c_serie_base-rep1-rep10-baraj10-sinhue10_s15801-15820_20260923_223414.json`; réplica `…/datos/n8c_replica_base-rep1-rep10-baraj10-sinhue10_s15821-15840_20260923_224002.json` (sha `c4c214f512e36b00`). Veredicto por `--veredicto SERIE REPLICA`: **HAY ALGO MODESTO**. Predicciones: P2, P4, P5, P6, P7, P8 y P9 sí ×2; P1 y P3 no ×2; P10 y P11 sí en la réplica y no en la serie. Muertes REP10/BASE 0.93–1.00 (no compra retención con veneno, RET40_ven 0.90).
+
+**Lectura honesta.** Repasar huellas de lo vivido conserva más lo aprendido, y es el contenido lo que ayuda (barajado y sin huella pierden), sin costo en muertes. No alcanza el 0.75 pedido. Propuesta de nivel 8: se discute en la auditoría del 24-sep junto con n8b (corriendo). Pendiente de auditoría.
