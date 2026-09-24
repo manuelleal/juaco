@@ -1056,3 +1056,18 @@ Las tablas están en el REGISTRO.
 4. las carpetas `experimentos/tronco_v14_3/` y `experimentos/juaco_eco/`.
 
 Los resultados de la cola de la noche se registran al salir. El que retome verifica en la cola del REGISTRO cuáles quedaron y corre `/juaco-estado`.
+
+### 15.33 Noche del 23-sep-2026 (22:15–23:15): incidente, relanzamiento y resultados
+
+**Incidente (~21:55):** la cola del PC se detuvo y el árbol de trabajo retrocedió a versiones viejas, sin commit (se borraron NUBE.md, LABORATORIO.md,
+el agente juaco-investigador y los archivos de guardia; ESTADO, CLAUDE.md y requirements.txt volvieron atrás). Según el director, coincidió con una
+conversación de Claude que se bloqueó a mitad de trabajo. El retroceso está en `git stash` ("retroceso sin explicar ~21:55 23-sep"); el árbol quedó igual a GitHub.
+
+**Regla nueva del director (22:20):** *"no vayas a cambiar las cosas que están en github, ni retroceder en lo que estamos"*. En GitHub solo se agrega.
+
+**Relanzado y terminado:** v14.3 réplica 14321 (identidad 36/36) → HAY ALGO MODESTO ×2; n6b réplica 14621 → HAY ALGO MODESTO ×2 (R-4 ×2, D-4 inconsistente);
+n8c serie 15801 + réplica 15821 → HAY ALGO MODESTO ×2. Todo en el REGISTRO. **Corriendo al cierre:** n8b (14801 + 14821); el PC se apaga a las 00:00.
+
+**Quien retome el 24-sep:** 1) `/juaco-estado`; 2) si n8b quedó cortada, relanzarla (comandos en `experimentos/subida_n8b/INFORME*.md`); 3) auditar v14.3,
+n6b (por qué el mapa barajado rindió igual en la serie) y n8c; 4) integrar la rama de la nube; 5) decidir con el director el siguiente paso del v14.3
+(la ganancia no viene del filtro ni de la boca TD: ¿de dónde viene?).

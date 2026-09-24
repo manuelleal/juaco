@@ -37,6 +37,15 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
   investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
 - Cada serie corre su arnés de identidad antes y se detiene si no da N/N. Cada resultado se registra al salir (REGISTRO, commit y push).
 
+## RESULTADOS DE LA NOCHE EN EL PC (23-sep, 22:15–23:15, tras el incidente; registrados en el REGISTRO, pendientes de auditoría el 24-sep)
+- **tronco v14.3 (frente 1), serie 14301 + réplica 14321: HAY ALGO MODESTO ×2.** Vive ~9× más que v14.2, R0 real 0.16 → 0.63, estabiliza por
+  persistencia en 19/20; no gana (R0 real < 0.90) y O1 sigue arriba (0.94). SINTD ≈ V143 y SINFILTRO no pierde: la ganancia no viene de esas piezas.
+- **subida_n6b: HAY ALGO MODESTO ×2.** Memoria completa del mapa (V1 20/20 ×2) y port a v14.2; cae R-4 ×2 (come 35–40 % menos que el ciego) y D-4
+  en la serie (el mapa barajado rinde igual), que en la réplica pasa: a auditar. Nivel 6 sigue en 60 %.
+- **subida_n8c (memoria lenta con repaso): HAY ALGO MODESTO ×2.** El repaso sube la retención (18/20 ×2) y es el contenido de la huella; RET40 0.71 < 0.75.
+- **subida_n8b:** corriendo (serie 14801 + réplica 14821); si el apagado de las 00:00 la corta, se relanza el 24-sep con el mismo comando.
+- **Nube:** trabaja en su rama `nube/noche-20260924`; se integra en la auditoría del 24-sep.
+
 ## INCIDENTE 23-sep ~21:55 (coordinador, 22:15; el director pidió restaurar desde el repo y relanzar)
 - A las ~21:55 se detuvieron todos los procesos de la cola del PC, y el árbol de trabajo quedó con un **retroceso sin explicar**: se borraron
   `NUBE.md`, `registro/LABORATORIO.md`, `.claude/agents/juaco-investigador.md` y `.claude/guardia.*`/`settings.json`; y `ESTADO.md`, `CLAUDE.md`,
