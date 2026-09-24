@@ -101,5 +101,26 @@ _(pendiente)_
     N/N, para ECO largo y ECO v2.
   - La tanda exploratoria pasa a `nice 19`, para no quitarle CPU a las pruebas del compilador ni a las series.
 
+## 3b. Pedidos del director durante la noche (sus palabras, para que no se pierdan)
+- Prompt de la noche: `NUBE.md` §2b (en main).
+- ~02:00, sobre el costo: *"Mientras tanto consume. ¿Muchos tokens las corridas o crees que alcancemos a algo significativo? ¿Cuándo pueden
+  reducir los tiempos de corrida?"*
+  - Respuesta: las corridas no gastan tokens; lo caro son las revisiones del coordinador. La palanca de tiempo es el gemelo numba.
+- ~02:10: *"sí, haz el gemelo numba hoy si puedes y sigue trabajando hasta mañana en la noche. Objetivo la AGI"*. Se encargó al
+  compilador (sección 3, 02:24).
+- ~02:40: pide seguir intentándolo con el método, y que no se vuelva a mencionar la comparación con sus otras prioridades.
+- ~02:45: *"avísame si ORA_SIN0 se sostiene y ¿crees que lleguemos a la evolución?"*
+  - ORA_SIN0 se sostuvo 4/4 (exploratorio).
+  - Respuesta sobre la evolución:
+    - la adaptación por selección es alcanzable en semanas si los linajes persisten sin ayuda;
+    - la evolución de la regla de aprendizaje es plausible con el gemelo y ECO v2;
+    - la evolución abierta no se promete.
+- ~03:00: *"no pierdas lo que te di, los .md… no dejes que se borren"*.
+  - Verificado a las 03:00: main y esta rama tienen los mismos 358 `.md`, y ningún commit de los últimos 60 de main borra un `.md`.
+  - Lo commiteado queda en el historial de GitHub aunque se borre del disco. La guardia bloquea `rm -r` de `registro/` y el push
+    forzado.
+  - En el contenedor no hay `.md` adjuntos fuera del repo. Si los `.md` estaban en otro chat, hay que volver a pasarlos y se guardan
+    aquí al instante.
+
 ## 4. Qué falló y qué propongo para mañana
 _(al cierre)_
