@@ -9,7 +9,8 @@ No es candidato a tronco: `CRITERIO_TRONCO_v4` no aplica. Tronco v14.2 intacto; 
   - `carros/FABRICA_ECO.py` (f1163009cb5193a2) desde `carrera_escuderias/carros/FABRICA.py` (2ebee3e99ea5a33a);
   - `carros/APR_ECO.py` (a9511ba0669f7359) desde `APR.py` (4402aa5142065c72).
 - En los carros sólo cambia `_see`: busca hacia afuera, O(distancia) en vez de O(objetos). La salida es la misma.
-- Runner y juez: `corre_eco.py` (0627f237b597523a). Arnés: `identidad_eco.py` (b70ec2f05915dc2e), **41/41**.
+- Runner y juez: `corre_eco.py` (0627f237b597523a antes de ERR-121; **47d9cee4d6462116 después de ERR-121**, que es el que corre la
+  serie). Arnés: `identidad_eco.py` (b70ec2f05915dc2e), **41/41**. La nube lo detectó la noche del 23-sep (bitácora, nube-1); corregido en main.
 
 ## 1. Pregunta e hipótesis
 **Pregunta:** ¿el organismo real sostiene un linaje en un mundo gigante con flujo fijo de comida si hay herencia con mutación y nadie
