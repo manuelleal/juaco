@@ -1,0 +1,41 @@
+CRUCE · 2026-09-24 13:38:03 · R7-5700-ASUS-A520 · python 3.14.2 · semillas 24405-24405 · cria 30000 · lectura 20000 · crias ('vida', 'azar') · lecturas ('vida', 'desf', 'azar', 'v143')
+  previas OK: shas de origen, motor 6cfff5c04fdc2c8f y carro 63ac38bac2d0bbcd == construye, revisa_carro PASA, corre_cruce 97b8822c287fc43d
+  [   37.3s] cria vida s24405 (37.3s) R0 real 0.1408
+  [   76.7s] cria azar s24405 (39.4s) R0 real 0.0602
+  [  102.1s] lee vida s24405 (25.4s) R0 real 0.6
+  [  129.5s] lee desf s24405 (27.4s) R0 real 0.5
+  [  154.3s] lee azar s24405 (24.7s) R0 real 0.0348
+  [  175.9s] lee v143 s24405 (21.6s) R0 real 0.4545
+  CRUDO C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\cruce\datos\humo\cruce_humo_s24405_tc30000_tl20000_20260924_133803_crudo.json (sha 09c0af9b8c7d7bb8)
+
+CRIA (antes del corte; no decide)
+  cria vida: 1 semillas · R0 real en la cria 0.1408 · muertes 40.0 · fundadores 30.0 · mutaciones 687 · partos 109 · refundados del banco 523 · banco con algun gen != 0 0.8305 · distancia hijo-padre [29, 44, 22, 11, 2, 1, 0, 0, 0, 0, 0, 0] · s 37.3
+  cria azar: 1 semillas · R0 real en la cria 0.0602 · muertes 49.0 · fundadores 45.0 · mutaciones 873 · partos 125 · refundados del banco 662 · banco con algun gen != 0 1.0 · distancia hijo-padre [0, 1, 4, 4, 7, 14, 15, 9, 12, 16, 14, 29] · s 39.4
+
+== lectura vida · 1 semillas (0 con error) · T 20000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.6 · ENMIENDA 5: linajes 1/9, semillas con mayoria 0/1 -> no gana · ENMIENDA 6 semillas 1/1 · casi inmortales 1
+  vida 601.0 · muertes 9.0 · fundadores 3.0 · veneno+sal 0.9528 · coherente 9/9 · t_fund 9/9 · s por corrida 25.4 · pizarra 0 · cableado {'boca_dif': 141, 'boca_dec': 11374, 'pata_dif': 1575, 'pata_dec': 94209, 'vetos_parto': 0, 'partos_dec': 0, 'lesion_lecturas': 0, 'cuerpos_on': 46}
+
+== lectura desf · 1 semillas (0 con error) · T 20000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.5 · ENMIENDA 5: linajes 0/9, semillas con mayoria 0/1 -> no gana · ENMIENDA 6 semillas 1/1 · casi inmortales 1
+  vida 307.5 · muertes 9.0 · fundadores 4.0 · veneno+sal 0.9507 · coherente 9/9 · t_fund 9/9 · s por corrida 27.4 · pizarra 0 · cableado {'boca_dif': 189, 'boca_dec': 10979, 'pata_dif': 3136, 'pata_dec': 108026, 'vetos_parto': 0, 'partos_dec': 0, 'lesion_lecturas': 108103, 'cuerpos_on': 35}
+
+== lectura azar · 1 semillas (0 con error) · T 20000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.0348 · ENMIENDA 5: linajes 0/9, semillas con mayoria 0/1 -> no gana · ENMIENDA 6 semillas 0/1 · casi inmortales 2
+  vida 72.5 · muertes 44.0 · fundadores 44.0 · veneno+sal 0.963 · coherente 9/9 · t_fund 9/9 · s por corrida 24.7 · pizarra 0 · cableado {'boca_dif': 554, 'boca_dec': 8673, 'pata_dif': 4477, 'pata_dec': 87006, 'vetos_parto': 44, 'partos_dec': 48, 'lesion_lecturas': 0, 'cuerpos_on': 20}
+
+== lectura v143 · 1 semillas (0 con error) · T 20000 · fundador limpio con el genotipo del linaje
+  R0 REAL (juez, nacidos tras el corte) mediana por semilla 0.4545 · ENMIENDA 5: linajes 1/9, semillas con mayoria 0/1 -> no gana · ENMIENDA 6 semillas 1/1 · casi inmortales 0
+  vida 211.0 · muertes 13.0 · fundadores 5.0 · veneno+sal 0.9456 · coherente 9/9 · t_fund 9/9 · s por corrida 21.6 · pizarra 0
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes de la lectura; gana = semillas en que el primero supera al segundo)
+  vida-azar: gana 1/1 · diferencia mediana 0.5652
+  vida-v143: gana 1/1 · diferencia mediana 0.1455
+  vida-desf: gana 1/1 · diferencia mediana 0.1
+  azar-v143: gana 0/1 · diferencia mediana -0.4197
+  instrumento: lectura mut0 == v143 (fisica de los 9 linajes) en 0/0 semillas
+  GENES contra sus 8 sombras en el corte (vida, 1 semillas; bajo neutralidad ~0.1 por columna): boca_neutro_otra sube 0 baja 1 expresa 0 (media -0.2458); boca_malo_ventana sube 1 baja 0 expresa 1 (media 0.2288); boca_malo_edad sube 1 baja 0 expresa 0 (media 0.0254); pata_act_reserva sube 1 baja 0 expresa 1 (media 0.0339); pata_otra_sesgo sube 0 baja 1 expresa 1 (media -0.1695); parto_otra sube 0 baja 1 expresa 0 (media -0.0085); boca_bueno_sesgo sube 0 baja 0 expresa 0 (media 0.0508); boca_bueno_reserva sube 0 baja 0 expresa 0 (media 0.0085)
+  GENES contra sus 8 sombras en el corte (azar, 1 semillas; bajo neutralidad ~0.1 por columna): boca_bueno_reserva sube 0 baja 1 expresa 0 (media -0.08); boca_bueno_otra sube 0 baja 1 expresa 0 (media -0.165); boca_neutro_sesgo sube 1 baja 0 expresa 0 (media 0.275); boca_neutro_reserva sube 0 baja 1 expresa 0 (media -0.07); boca_neutro_cola sube 0 baja 1 expresa 0 (media -0.195); boca_malo_otra sube 1 baja 0 expresa 0 (media 0.105); pata_act_reserva sube 1 baja 0 expresa 0 (media 0.135); pata_act_ventana sube 0 baja 1 expresa 0 (media -0.19)
+  PARECIDO a O1/O3 (descriptivo, signos fijados antes): {'boca_bueno_reserva': {'signo_O': -1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}, 'boca_malo_otra': {'signo_O': 1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}, 'boca_neutro_sesgo': {'signo_O': -1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}, 'boca_neutro_reserva': {'signo_O': 1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}, 'pata_act_sesgo': {'signo_O': 1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}, 'boca_bueno_cola': {'signo_O': -1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}, 'boca_malo_cola': {'signo_O': 1, 'semillas_mismo_signo': 0, 'semillas_contrario': 0}}
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\cruce\datos\humo\cruce_humo_s24405_tc30000_tl20000_20260924_133803_resumen.json (sha 42cac94b063eca43) · 175.9 s
+VEREDICTO: HUMO (una semilla de practica: sin valor, no se lee)

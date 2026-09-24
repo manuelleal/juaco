@@ -1,0 +1,314 @@
+{
+ "humo": {
+  "semilla": 22990,
+  "T": 40000,
+  "t_corte": 20000
+ },
+ "shas": {
+  "corre_endo.py": "6e69aefc6b061aff",
+  "motor_endo.py": "7e10329cf0cb9fd0",
+  "simbiontes.py": "0a4346122fcc4ccc",
+  "FABRICA_SIMB.py": "38ac0ddba8829c88",
+  "construye_endo.py": "750c9ced2c3d7631",
+  "identidad_endosimbiosis.py": "80b900e67782c487",
+  "motor_eco3.py": "2eec9830792d9822",
+  "corre_eco.py": "47d9cee4d6462116"
+ },
+ "seg": 279.2,
+ "eventos": {
+  "VIDA_S": {
+   "tragados": 78,
+   "digeridos": 65,
+   "quedan": 13,
+   "herencias": 86,
+   "herencias_mutadas": 73,
+   "decisiones_canal": 3210,
+   "perdidas_internas": 7,
+   "fallas_herencia": 8,
+   "fundadores_con_simb": 68,
+   "nac_libres": 255,
+   "muertes_libres": 297
+  },
+  "INERTE": {
+   "tragados": 131,
+   "digeridos": 106,
+   "quedan": 25,
+   "herencias": 244,
+   "herencias_mutadas": 191,
+   "decisiones_canal": 0,
+   "perdidas_internas": 16,
+   "fallas_herencia": 15,
+   "fundadores_con_simb": 205,
+   "nac_libres": 509,
+   "muertes_libres": 498
+  },
+  "BARAJADO": {
+   "tragados": 143,
+   "digeridos": 107,
+   "quedan": 36,
+   "herencias": 46,
+   "herencias_mutadas": 42,
+   "decisiones_canal": 1018,
+   "perdidas_internas": 4,
+   "fallas_herencia": 1,
+   "fundadores_con_simb": 39,
+   "nac_libres": 505,
+   "muertes_libres": 482
+  },
+  "SIN_TRAGAR": {
+   "tragados": 0,
+   "digeridos": 0,
+   "quedan": 0,
+   "herencias": 0,
+   "herencias_mutadas": 0,
+   "decisiones_canal": 0,
+   "perdidas_internas": 0,
+   "fallas_herencia": 0,
+   "fundadores_con_simb": 0,
+   "nac_libres": 3129,
+   "muertes_libres": 3050
+  },
+  "AZAR_S": {
+   "tragados": 69,
+   "digeridos": 64,
+   "quedan": 5,
+   "herencias": 925,
+   "herencias_mutadas": 761,
+   "decisiones_canal": 19499,
+   "perdidas_internas": 34,
+   "fallas_herencia": 64,
+   "fundadores_con_simb": 787,
+   "nac_libres": 190,
+   "muertes_libres": 241
+  }
+ },
+ "ejercitado": {
+  "VIDA_S": true,
+  "INERTE": true,
+  "BARAJADO": true,
+  "AZAR_S": true,
+  "SIN_TRAGAR": true,
+  "SIN_TRAGAR_no_traga": true,
+  "INERTE_sin_canal": true
+ },
+ "todos_ejercitados": true,
+ "nota": "numeros SIN VALOR (una semilla de practica); el humo solo muestra que tragar, digerir, quedarse, heredar y actuar ocurren",
+ "corridas": [
+  {
+   "brazo": "VIDA_S",
+   "seg": 56.8,
+   "error": null,
+   "persiste": 0,
+   "vivos_T": 0,
+   "max_vivos": 37,
+   "prev_post": 0.004464,
+   "prev_T": null,
+   "r0_con": null,
+   "n_con": 0,
+   "r0_sin": null,
+   "n_sin": 0,
+   "D": null,
+   "I_don": null,
+   "n_don": 0,
+   "I_libres_post": null,
+   "I_dentro_T": null,
+   "I_libres_T": null,
+   "g_dentro_T": null,
+   "g_libres_T": null,
+   "dist_T": null,
+   "muerde": {
+    "con": {
+     "A": 0.5493,
+     "B": 0.1322,
+     "C": 0.6453,
+     "D": 0.1572
+    },
+    "sin": {
+     "A": 0.9402,
+     "B": 0.2261,
+     "C": 0.8846,
+     "D": 0.2527
+    }
+   },
+   "err60": null,
+   "bloq_libres": 0,
+   "libres_extintos_t": 4980
+  },
+  {
+   "brazo": "INERTE",
+   "seg": 55.0,
+   "error": null,
+   "persiste": 0,
+   "vivos_T": 0,
+   "max_vivos": 37,
+   "prev_post": 0.007444,
+   "prev_T": null,
+   "r0_con": null,
+   "n_con": 0,
+   "r0_sin": null,
+   "n_sin": 0,
+   "D": null,
+   "I_don": -0.241511,
+   "n_don": 2,
+   "I_libres_post": null,
+   "I_dentro_T": null,
+   "I_libres_T": null,
+   "g_dentro_T": null,
+   "g_libres_T": null,
+   "dist_T": null,
+   "muerde": {
+    "con": {
+     "A": null,
+     "B": null,
+     "C": null,
+     "D": null
+    },
+    "sin": {
+     "A": 0.9394,
+     "B": 0.2225,
+     "C": 0.8831,
+     "D": 0.2581
+    }
+   },
+   "err60": null,
+   "bloq_libres": 0,
+   "libres_extintos_t": 12801
+  },
+  {
+   "brazo": "BARAJADO",
+   "seg": 51.7,
+   "error": null,
+   "persiste": 0,
+   "vivos_T": 0,
+   "max_vivos": 39,
+   "prev_post": 0.0,
+   "prev_T": null,
+   "r0_con": null,
+   "n_con": 0,
+   "r0_sin": null,
+   "n_sin": 0,
+   "D": null,
+   "I_don": null,
+   "n_don": 0,
+   "I_libres_post": null,
+   "I_dentro_T": null,
+   "I_libres_T": null,
+   "g_dentro_T": null,
+   "g_libres_T": null,
+   "dist_T": null,
+   "muerde": {
+    "con": {
+     "A": 0.8,
+     "B": 0.3771,
+     "C": 0.9111,
+     "D": 0.5187
+    },
+    "sin": {
+     "A": 0.9459,
+     "B": 0.248,
+     "C": 0.8904,
+     "D": 0.2699
+    }
+   },
+   "err60": null,
+   "bloq_libres": 0,
+   "libres_extintos_t": 19348
+  },
+  {
+   "brazo": "SIN_TRAGAR",
+   "seg": 57.0,
+   "error": null,
+   "persiste": 0,
+   "vivos_T": 0,
+   "max_vivos": 39,
+   "prev_post": 0.0,
+   "prev_T": null,
+   "r0_con": null,
+   "n_con": 0,
+   "r0_sin": null,
+   "n_sin": 0,
+   "D": null,
+   "I_don": null,
+   "n_don": 0,
+   "I_libres_post": -0.02115,
+   "I_dentro_T": null,
+   "I_libres_T": -0.017139,
+   "g_dentro_T": null,
+   "g_libres_T": [
+    1.0944,
+    0.5112,
+    0.9251,
+    0.6472,
+    1.2416,
+    1.0373
+   ],
+   "dist_T": null,
+   "muerde": {
+    "con": {
+     "A": null,
+     "B": null,
+     "C": null,
+     "D": null
+    },
+    "sin": {
+     "A": 0.938,
+     "B": 0.2291,
+     "C": 0.8921,
+     "D": 0.2669
+    }
+   },
+   "err60": null,
+   "bloq_libres": 0,
+   "libres_extintos_t": null
+  },
+  {
+   "brazo": "AZAR_S",
+   "seg": 58.8,
+   "error": null,
+   "persiste": 0,
+   "vivos_T": 0,
+   "max_vivos": 38,
+   "prev_post": 0.592857,
+   "prev_T": null,
+   "r0_con": null,
+   "n_con": 0,
+   "r0_sin": null,
+   "n_sin": 0,
+   "D": null,
+   "I_don": -0.005775,
+   "n_don": 7,
+   "I_libres_post": null,
+   "I_dentro_T": null,
+   "I_libres_T": null,
+   "g_dentro_T": null,
+   "g_libres_T": null,
+   "dist_T": null,
+   "muerde": {
+    "con": {
+     "A": 0.6518,
+     "B": 0.1875,
+     "C": 0.763,
+     "D": 0.3252
+    },
+    "sin": {
+     "A": 0.9301,
+     "B": 0.2079,
+     "C": 0.879,
+     "D": 0.2369
+    }
+   },
+   "err60": null,
+   "bloq_libres": 0,
+   "libres_extintos_t": 4873
+  }
+ ],
+ "letra_1_semilla": [
+  "P1 (la fusion se queda): prevalencia tras el corte VIDA_S > INERTE 0/1 (menor 1) \u00b7 medianas VIDA_S 0.0045 \u00b7 INERTE 0.0074 \u00b7 BARAJADO 0.0 \u00b7 SIN_TRAGAR 0.0 \u00b7 AZAR_S 0.5929",
+  "P2 (reproduccion diferencial en VIDA_S): hijos con simbionte al nacer > sin 0/1 (evaluables 0) \u00b7 INERTE 0 (evaluables 0) \u00b7 medianas r0 con/sin VIDA_S None/None INERTE None/None",
+  "P3 (domesticacion): D = I(lo que se transmite) - I(libres) > 0 en VIDA_S 0/1 (< 0: 0) \u00b7 INERTE 0 \u00b7 AZAR_S 0 \u00b7 BARAJADO 0 \u00b7 medianas D VIDA_S None \u00b7 INERTE None \u00b7 BARAJADO None \u00b7 SIN_TRAGAR None \u00b7 AZAR_S None",
+  "Secundario S1: prevalencia VIDA_S > BARAJADO 1/1 \u00b7 VIDA_S > AZAR_S 0/1 \u00b7 persisten en T {'VIDA_S': 0, 'INERTE': 0, 'BARAJADO': 0, 'SIN_TRAGAR': 0, 'AZAR_S': 0} \u00b7 distancia dentro-libres en T (mediana) VIDA_S None \u00b7 INERTE None \u00b7 BARAJADO None \u00b7 SIN_TRAGAR None \u00b7 AZAR_S None",
+  "Descriptivo: fraccion de mordidas por letra en VIDA_S con canal {'A': 0.5493, 'B': 0.1322, 'C': 0.6453, 'D': 0.1572} \u00b7 sin canal {'A': 0.9402, 'B': 0.2261, 'C': 0.8846, 'D': 0.2527}",
+  "Guardias: errores 0 \u00b7 bloqueados 0 \u00b7 corridas con tope de libres 0 \u00b7 ERR-60 truncadas [] \u00b7 VIDA_S con libres extintos antes del corte 1",
+  "VEREDICTO ENDOSIMBIOSIS POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO (en esta ventana)"
+ ]
+}

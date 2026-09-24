@@ -1,0 +1,17 @@
+ARNES identidad_endosimbiosis · python 3.14.2 · semilla 22994
+[14:02:17] (F) PASA VERIFICA OK
+[14:02:31] (A1) PASA VIDA w30 T 6000 corte 3000 · nac 49 refund 264 vivos 2
+[14:02:41] (A2) PASA AZAR w30 T 3000 · nac 37 refund 192
+[14:02:43] (A3) PASA juez w9 T 4000 · t_ext 1803
+[14:02:45] (A4) PASA eco=None, 9 FABRICA, T 2000 · max_vivos 12
+[14:02:53] (B) PASA FABRICA_SIMB sin simb == FABRICA_ECO (motor_eco3)
+[14:03:01] (C) PASA bicho == motor_eco3; libres nacidos 1986, vivos al final 508, tragados 0
+[14:03:17] (D1) PASA INERTE: SIMB == ECO con simb · tragados 36 quedan 12 herencias 15 decisiones con canal 0
+[14:03:33] (D2) PASA VIDA_S: el canal cambia la corrida · decisiones con canal 78 · tragados 31 quedan 5 herencias 0
+[14:03:42] (E) PASA VIDA_S dos veces
+[14:03:42] (G1) PASA simb=None lanza: PISTA2: mas de 100000 cuerpos en un linaje: la semilla colisionaria (ERR-60)
+[14:03:43] (G2) PASA err60 {'t': 406, 'lin': 2, 'donde': 'fundador'} t_trunc 407
+[14:03:43] (H) PASA tragados = digeridos + quedan y banco alineado en INERTE, VIDA_S, SIN_TRAGAR
+[14:03:58] (I) PASA barajados 17 · sorteos AZAR_S 297 (p_trag 0.05)
+[14:04:07] (J) PASA PERDIDA (trinquete de Fable): perdidas internas 2 · fallas de herencia en el parto 2 · herencias 19 (p_trag 0.05)
+RESULTADO: 15/15 · 110 s · N/N
