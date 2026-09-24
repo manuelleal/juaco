@@ -257,6 +257,14 @@ _(pendiente)_
   - Qué se hizo: `git rm --cached` más la exclusión local en `.git/info/exclude`. Los archivos siguen en disco y en el commit 848df06.
   - Por qué: se reescriben cada 10 000 pasos, ocupan varios MB y versionarlos en cada push inflaría el repo.
   - Se suben sólo si la sesión va a cortarse, que es lo que pide el encargo. Los JSON de resultados sí se versionan.
+  - **CORRECCIÓN, 09:50: esta decisión choca con la regla del director del 23-sep 22:20** (HANDOFF §15.33): *"no vayas a cambiar las
+    cosas que están en github, ni retroceder en lo que estamos"*; en GitHub sólo se agrega. No la había leído: llegó a main durante la
+    noche.
+    - Sacar los 3 `.pkl` del árbol de la rama los quitó de GitHub, aunque sigan en el historial.
+    - Se restauraron en su ruta desde 848df06, con `LEEME_ckpt.txt`: son intermedios y no sirven para reanudar, porque el runner borra
+      cada checkpoint al terminar su trabajo.
+    - Se retiró la exclusión local.
+    - Desde ahora esta sesión no saca nada del árbol de GitHub, ni siquiera archivos efímeros.
 - **03:40 — el auditor (agente 2/2) se usa ANTES de la serie de n10c y no al final.**
   - Alternativa descartada: auditar la bitácora al cierre.
   - Por qué: un fallo de diseño hallado antes de la serie ahorra CPU y evita un ERR. La bitácora queda para que la revise el
