@@ -458,6 +458,20 @@
   detuvieron porque un linaje pasó de 100 000 cuerpos, es decir, seguían vivas y muy prolíficas. Contrasta con el bloque L (sin
   familia: 7 y 5 de 20 persisten a 940 000). La réplica 19721–19740 no se corre.
 
+### 1k. ECO v4 — el paquete herencia (= enseñar) + interruptor (aprobado por el director ~17:00; `PREREGISTRO_eco_v4.md`)
+- **Antes de escribir el preregistro, dos correcciones a mi propia propuesta** (se le dicen al director):
+  - `ensena` (ECO v2/v2.1) y `herencia` (Frankenstein) son EL MISMO órgano: el de subida_n10b ('res', verbatim) en dos carros. El paquete
+    queda en dos órganos. Consecuencia de lectura: en ECO v3, la selección se quedó con `herencia` en w30 (O1\* 19 y 16/20): es el mismo
+    órgano que v2.1 declaró, elegido otra vez entre 7, en otro cuerpo (descriptivo; v3 no lo declara por O2 14/20).
+  - "Partir de los genomas ya seleccionados" se retira: el motor no tiene cómo sembrar fundadores con otro banco, los bancos de v2.1 son
+    de otro cuerpo, y cambiaría la nula.
+- **Mundo:** se pensó en w90; el primer arnés (18/18) midió el costo del Frankenstein en Python ahí: ~6× por paso que w30 (T 3 000: 47 s
+  contra 8 s), unas 12 h por serie. Se pasó a los dos mundos de v3 (w30 + w9), antes de cualquier serie: es una ablación de v3 (sólo mutan
+  los 2 órganos del paquete; los otros 5 quedan apagados en el real y en las sombras).
+- Runner f7ba5d77cfd7f725, arnés 20/20; **preregistro commiteado (3dad78e) antes de la serie**; la serie 20311–20330 arrancó a las
+  **17:12:19** con la cola `cola_eco3.sh` (después, la réplica 20331–20350). Nota de horas: las "17:30" y "~17:40" escritas en esta
+  bitácora y en el §9 del preregistro son estimaciones mías equivocadas; la hora real la dan los commits (todo antes de las 17:12).
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
 la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–24099, con arneses de identidad bit a bit de cada subclase.
@@ -601,6 +615,9 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
     turnos del coordinador): ECO v3 serie → ECO v2.1 serie y réplica → ECO v3 réplica → ECO v1.2 serie y réplica. No se abre nada nuevo.
     El resultado "modesto pero real" que se busca asegurar es ECO v2.1 (la selección prende el órgano de enseñar). "La data" = lo que ya
     hay (bancos seleccionados, vidas, tablas).
+
+- ~17:00 UTC: *"sí, abre el paquete de enseñar + herencia + interruptor y ¿cómo hacemos para que ellos creen órganos?"* → ECO v4 (§1k);
+  la respuesta sobre crear órganos va en §4 (propuesta, no preregistrada).
 
 ## 4. Qué falló y qué propongo (borrador vivo; se completa al cierre)
 **Qué falló o se corrigió (todo del instrumento o del coordinador):**
