@@ -1,0 +1,77 @@
+{
+ "meta": {
+  "etiqueta": "explora_i2_FAB-MAL14-MALINF-RES-VER-VER_MAL-VER_RES-APR-APR_RES_s24001-24006_T30000",
+  "sello": "20260924_020527",
+  "brazos": [
+   "FAB",
+   "MAL14",
+   "MALINF",
+   "RES",
+   "VER",
+   "VER_MAL",
+   "VER_RES",
+   "APR",
+   "APR_RES"
+  ],
+  "semillas": [
+   24001,
+   24002,
+   24003,
+   24004,
+   24005,
+   24006
+  ],
+  "T": 30000,
+  "exploratorio": true,
+  "desc": {
+   "FAB": "FABRICA de la carrera (bicho real, piso)",
+   "MAL14": "no muerde lo malo conocido si min(E,Ag) < 1.4",
+   "MALINF": "no muerde NUNCA lo malo conocido (control: sin reserva, sin limpieza)",
+   "RES": "REGLA COMPLETA: prueba si r>=0.5, lo malo s\u00f3lo para limpiar con r>=1.45",
+   "VER": "el objetivo lo elige el valor: salta lo que sabe malo",
+   "VER_MAL": "VER + no muerde lo malo bajo 1.45 (sin neofobia ni limpieza)",
+   "VER_RES": "VER + regla completa de la reserva",
+   "APR": "APR de la carrera (FABRICA + boca aprendida por TD y heredada; aprende_barrer)",
+   "APR_RES": "APR + regla completa de la reserva"
+  }
+ },
+ "R": [
+  {
+   "seed": 24001,
+   "brazo": "FAB",
+   "T": 30000,
+   "seg": 23.3,
+   "R0_real_med": 0.1515,
+   "R0_real": [
+    0.1513,
+    0.0909,
+    0.1515,
+    0.1748,
+    0.1504,
+    0.1271,
+    0.181,
+    0.2469,
+    0.2105
+   ],
+   "persisten": 0,
+   "cruzan_real": 0,
+   "vida_med": 67.0,
+   "muertes_med": 117.0,
+   "fundadores_med": 100.0,
+   "nac_reales_med": 20.0,
+   "causas": {
+    "hambre": 0,
+    "sed": 0,
+    "veneno": 565,
+    "sal": 488
+   },
+   "mord_BD": 474.0,
+   "mord_AC": 502.0,
+   "frac_sin_bueno_mundo": 0.0,
+   "limpiezas_por_cuerpo": 2.6212,
+   "muere_sin_parir": 0.8922,
+   "coherente": 9,
+   "tot": {}
+  }
+ ]
+}
