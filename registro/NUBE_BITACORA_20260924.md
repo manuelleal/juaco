@@ -444,5 +444,9 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
   - En el contenedor no hay `.md` adjuntos fuera del repo. Si los `.md` estaban en otro chat, hay que volver a pasarlos y se guardan
     aquí al instante.
 
+- ~11:25 UTC (24-sep), sobre ECO v1.1/v1.2: *"Si lo apruebo y además de eso pensar en llenar benchmark y que el bicho logre realmente la
+  evolución! Proyecciones de evolución?"* → aprobación de la línea ECO (v1.1 ya corrida; v1.2 preregistrada). Respuesta con escalones de
+  evolución medibles y su proyección en el chat; propuesta: que la selección elija la ARQUITECTURA (órganos como genes), no sólo perillas.
+
 ## 4. Qué falló y qué propongo para mañana
 _(al cierre)_
