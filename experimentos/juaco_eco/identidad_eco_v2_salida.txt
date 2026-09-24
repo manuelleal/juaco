@@ -1,0 +1,18 @@
+IDENTIDAD ECO v2 (runner) · 2026-09-24 11:50:51 · python 3.13.12 · shas {'corre_eco_v2.py': '41fd6280607d4f4f', 'corre_eco.py': '47d9cee4d6462116', 'motor_eco2.py': '0921ee3a50ce7f7a', 'carros/FAMB_ORG_ECO.py': '75d5f4118079ff15', 'construye_eco_org.py': 'ff5531748aa4bd6a', 'PREREGISTRO_eco_v2.md': '93e9184413d15f68'}
+  OK  (M) mundos y brazos del preregistro 
+  OK  (T) w30: banco_on y vivos_on == a mano; 20 genes; sel_corte de 20 (banco_on {'ensena': 0.0, 'filtra0': 0.0}, nacidos 37, 5.0 s)
+  OK  (T) w90: banco_on y vivos_on == a mano; 20 genes; sel_corte de 20 (banco_on {'ensena': 0.0, 'filtra0': 0.0}, nacidos 84, 11.1 s)
+  OK  (T) w270: banco_on y vivos_on == a mano; 20 genes; sel_corte de 20 (banco_on {'ensena': 0.0, 'filtra0': 0.0}, nacidos 81, 19.7 s)
+  MAL (G) el gemelo motor_eco_rapido_org.py existe (PENDIENTE: lo construye el compilador) 
+  OK  (V) FUNCIONA (3 de 3) -> FUNCIONA: LA SELECCION PRENDE EL ORGANO DE ENSENAR (en esta serie; O1 y O2 en 3 de 3 mundos)
+  OK  (V) FUNCIONA (2 de 3) -> FUNCIONA: LA SELECCION PRENDE EL ORGANO DE ENSENAR (en esta serie; O1 y O2 en 2 de 3 mundos)
+  OK  (V) MODESTO (O1 y O2 en 1 mundo) -> HAY ALGO MODESTO (en esta serie; O1 y O2 juntos en 1 mundo(s), alguno de los dos en 1)
+  OK  (V) MODESTO (O1 en 2 mundos, O2 en ninguno) -> HAY ALGO MODESTO (en esta serie; O1 y O2 juntos en 0 mundo(s), alguno de los dos en 2)
+  OK  (V) NO (O1 14 en todos) -> NO (en esta serie)
+  OK  (V) NO EVALUABLE (falsos positivos en w30) -> NO EVALUABLE (AZAR da falsos positivos contra sombras: [('w30', 'eta', (9, 0))])
+  OK  (V) NO EVALUABLE (bloqueados) -> NO EVALUABLE (tope de cuerpos alcanzado: bloqueados = 3)
+  OK  (V) NO EVALUABLE (incompleta) -> NO EVALUABLE (serie incompleta)
+  OK  (R) el parser aborta ante 14 formas malas (14/14)
+  OK  (R) el parser acepta las 6 formas buenas (6/6)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 2)
+RESULTADO: 15/16  (36 s)
