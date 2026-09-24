@@ -147,6 +147,14 @@
   `/root/venv-juaco/bin/python experimentos/juaco_eco/corre_eco_rapido.py --largo --desde 19301 --n 3 --pool 3`
   - T = 1e6, corte en 100 000, brazos VIDA y AZAR, semillas 19301–19303.
   - En Python puro eran 3–32 h de CPU por corrida.
+  - **09:45 — terminó: 14–27 s por corrida con el gemelo.** Salidas en `experimentos/juaco_eco/datos/eco_largo_s19301-19303/`.
+  - Resultado (EXPLORATORIO, 3 semillas, sin veredicto por diseño):
+    - **VIDA:** persisten 19301 (9 vivos en T) y 19302 (10 vivos); 19303 se extingue en t = 611 377.
+    - **AZAR:** persiste 19302 (2 vivos); 19301 se extingue en 150 321 y 19303 en 310 816.
+  - Lectura: linajes del bicho real (FABRICA con sus perillas evolucionadas) sobreviven 900 000 pasos DESPUÉS del corte, sin fundadores
+    repuestos y con flujo fijo de comida, en 2/3 semillas (AZAR en 1/3). Es la primera pregunta del frente 2, pero sin juez válido
+    (nube-4 y nube-6) y con 3 semillas. **Propuesta:** ECO v1.1 con juez v2 y horizonte 1e6 en 20 semillas más réplica. Con el gemelo
+    cuesta minutos.
 
 ### 1c. `subida_n10c` — la familia pasa SÓLO LO QUE IMPORTA (paquete nuevo, decisión del coordinador; ver §3)
 - **03:28 — preregistro escrito** (`experimentos/subida_n10c/PREREGISTRO_n10c.md`), a partir de lo exploratorio y ANTES del arnés.
