@@ -6659,3 +6659,18 @@ Runner `experimentos/subida_n6b/corre_subida_b.py`, mundo `mundo_subida_b` (sha 
 Runner `experimentos/subida_n8c_memoria_lenta/corre_n8c.py`. Crudos: serie `…/datos/n8c_serie_base-rep1-rep10-baraj10-sinhue10_s15801-15820_20260923_223414.json`; réplica `…/datos/n8c_replica_base-rep1-rep10-baraj10-sinhue10_s15821-15840_20260923_224002.json` (sha `c4c214f512e36b00`). Veredicto por `--veredicto SERIE REPLICA`: **HAY ALGO MODESTO**. Predicciones: P2, P4, P5, P6, P7, P8 y P9 sí ×2; P1 y P3 no ×2; P10 y P11 sí en la réplica y no en la serie. Muertes REP10/BASE 0.93–1.00 (no compra retención con veneno, RET40_ven 0.90).
 
 **Lectura honesta.** Repasar huellas de lo vivido conserva más lo aprendido, y es el contenido lo que ayuda (barajado y sin huella pierden), sin costo en muertes. No alcanza el 0.75 pedido. Propuesta de nivel 8: se discute en la auditoría del 24-sep junto con n8b (corriendo). Pendiente de auditoría.
+
+### TRONCO v14.3 en la pista de la carrera (frente 1) — serie 14301–14320 (19:51) y réplica 14321–14340 (relanzada tras el incidente, 22:13–23:10): **HAY ALGO MODESTO ×2 por la letra (PREREGISTRO_v143.md §7) — el bicho real v14.3 (v14.2 + filtro con meta + boca TD heredada) vive ~9× más que v14.2 y cuadruplica su R0 real, estabiliza por persistencia en 19/20 semillas, pero NO gana (R0 real 0.63 < 0.90; 1/20); O1 sigue por encima; pendiente de auditoría**
+
+Runner `experimentos/tronco_v14_3/corre_v143.py` (sha `24100621c450da22`), identidad **36/36** antes de la réplica (`datos/humo/identidad_v143_20260923_221341.json`, sha `6d069de3d2eb7591`). Pista `carrera_escuderias/pista.py` (`9f47c65e438e0ff4`), fundador limpio, pista escalada. Resumen de la réplica `experimentos/tronco_v14_3/datos/v143_v143-v142-sinfiltro-sintd-siempre-invertido_s14321-14340_T100000_20260923_221341_resumen.json` (sha `a4a33679ec5381cb`); serie `…_s14301-14320_T100000_20260923_195127_resumen.json` (sha `9a1a77e238c255fe`). Anclas de la serie: FABRICA en (0.08, 0.2) y O1 gana, las dos se cumplen. La réplica de las 21:10 quedó cortada por el incidente y no se usa.
+
+| brazo (réplica 14321) | R0 real (mediana) | vida mediana | persisten | estabiliza (ENM. 6) | gana (ENM. 5) |
+|---|---|---|---|---|---|
+| **V143** | **0.631** | **600** | 123/180 | **19/20** | no (1/20) |
+| V142 | 0.161 | 65 | 0/180 | 0/20 | no |
+| O1 (serie 14301) | 0.938 | 3720 | 155/180 | 20/20 | sí (18/20) |
+| INVERTIDO (serie) | 0.0 | 493 | 0/180 | 0/20 | no |
+
+**Predicciones (réplica):** P2 V143 > V142 (≥18/20, dif ≥ 0.10), P3 R0 real en [0.45, 0.85], P4 no gana, P7 SINTD ≈ V143, P8 INVERTIDO < V142, P9 vida ≥ 3× V142 y P11 **se cumplen**; P5 (sin limpieza peor), P6 (sin filtro peor) y P10 (veneno+sal ≤ 50 % de las muertes; salió 93 %) **no se cumplen**.
+
+**Lectura honesta.** Juntar las piezas replicadas en el bicho real sirve: v14.3 vive ~9× más que v14.2, sube el R0 real de 0.16 a 0.63 y sus linajes persisten con recambio (19/20 semillas). Pero no cruza H-1 y sigue muriendo casi siempre de veneno o sal. P7 dice que la boca TD no le aporta nada propio (SINTD ≈ V143), y P6 que el filtro tampoco rinde lo esperado: la ganancia viene sobre todo de otra parte, y eso es lo que tiene que explicar la auditoría. La fracción "voluntaria" física (0.84) no significa muerte programada (ERR-103: el clasificador no discrimina). Nivel 9 sin cambio hasta la auditoría. Prohibido: "v14.3 cruza"; "v14.3 supera a O1".

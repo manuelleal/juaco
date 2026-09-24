@@ -1,0 +1,527 @@
+{
+ "brazos": {
+  "fab": {
+   "brazo": "fab",
+   "carro": "FABRICA",
+   "semillas": 20,
+   "R0_real_med": 0.1521,
+   "R0_real_eval_med": 0.152,
+   "R0_prereg_med": 0.1524,
+   "linajes_cruzan_real": 0,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 0,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.152,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 66.5,
+   "muertes_med": 388.5,
+   "fundadores_med": 329.5,
+   "causas": {
+    "hambre": 0,
+    "sed": 1,
+    "veneno": 35167,
+    "sal": 33767
+   },
+   "frac_BD_causa": 1.0,
+   "frac_vol": 0.9531,
+   "frac_sin_bueno_mundo_med": 0.0006,
+   "mord_BD_med": 1565.5,
+   "mord_AC_med": 1712.5,
+   "limpiezas_fisicas_por_cuerpo_med": 2.7281,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 141.65
+  },
+  "v142": {
+   "brazo": "v142",
+   "carro": "V142",
+   "semillas": 20,
+   "R0_real_med": 0.1605,
+   "R0_real_eval_med": 0.161,
+   "R0_prereg_med": 0.1627,
+   "linajes_cruzan_real": 0,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 0,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.163,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 65.25,
+   "muertes_med": 378.0,
+   "fundadores_med": 316.0,
+   "causas": {
+    "hambre": 3,
+    "sed": 1,
+    "veneno": 34584,
+    "sal": 33425
+   },
+   "frac_BD_causa": 0.9999,
+   "frac_vol": 0.9517,
+   "frac_sin_bueno_mundo_med": 0.0006,
+   "mord_BD_med": 1536.5,
+   "mord_AC_med": 1698.0,
+   "limpiezas_fisicas_por_cuerpo_med": 2.7679,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 136.55,
+   "v143": {
+    "frac_pasos_con_meta": null,
+    "vetos": 0,
+    "mord_sin_meta": 0,
+    "limpia_propia": 0,
+    "todo_obst": 0,
+    "des_splits": 404
+   }
+  },
+  "v143": {
+   "brazo": "v143",
+   "carro": "V143",
+   "semillas": 20,
+   "R0_real_med": 0.5363,
+   "R0_real_eval_med": 0.536,
+   "R0_prereg_med": 1.311,
+   "linajes_cruzan_real": 53,
+   "linajes": 180,
+   "sem_cruza_e5": 1,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 19,
+   "estabiliza_e6": true,
+   "persisten": 118,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 1.311,
+    "condiciones": {
+     "i": true,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 599.0,
+   "muertes_med": 46.5,
+   "fundadores_med": 21.0,
+   "causas": {
+    "hambre": 1379,
+    "sed": 1259,
+    "veneno": 17291,
+    "sal": 18481
+   },
+   "frac_BD_causa": 0.9313,
+   "frac_vol": 0.8398,
+   "frac_sin_bueno_mundo_med": 0.0244,
+   "mord_BD_med": 87.0,
+   "mord_AC_med": 813.5,
+   "limpiezas_fisicas_por_cuerpo_med": 1.3666,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 136.65,
+   "v143": {
+    "frac_pasos_con_meta": 0.9641,
+    "vetos": 425977,
+    "mord_sin_meta": 5866,
+    "limpia_propia": 5531,
+    "todo_obst": 0,
+    "des_splits": 1830
+   }
+  },
+  "sinfiltro": {
+   "brazo": "sinfiltro",
+   "carro": "V143_SINFILTRO",
+   "semillas": 20,
+   "R0_real_med": 0.1315,
+   "R0_real_eval_med": 0.132,
+   "R0_prereg_med": 0.1337,
+   "linajes_cruzan_real": 11,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 14,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.134,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 66.5,
+   "muertes_med": 370.0,
+   "fundadores_med": 318.0,
+   "causas": {
+    "hambre": 7,
+    "sed": 14,
+    "veneno": 30918,
+    "sal": 30340
+   },
+   "frac_BD_causa": 0.9997,
+   "frac_vol": 0.9441,
+   "frac_sin_bueno_mundo_med": 0.0013,
+   "mord_BD_med": 1509.0,
+   "mord_AC_med": 1566.5,
+   "limpiezas_fisicas_por_cuerpo_med": 2.8688,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 143.95,
+   "v143": {
+    "frac_pasos_con_meta": null,
+    "vetos": 0,
+    "mord_sin_meta": 0,
+    "limpia_propia": 0,
+    "todo_obst": 0,
+    "des_splits": 2714
+   }
+  },
+  "sintd": {
+   "brazo": "sintd",
+   "carro": "V143_SINTD",
+   "semillas": 20,
+   "R0_real_med": 0.5661,
+   "R0_real_eval_med": 0.566,
+   "R0_prereg_med": 1.1081,
+   "linajes_cruzan_real": 49,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 18,
+   "estabiliza_e6": true,
+   "persisten": 111,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 1.108,
+    "condiciones": {
+     "i": true,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 458.25,
+   "muertes_med": 56.0,
+   "fundadores_med": 24.0,
+   "causas": {
+    "hambre": 1404,
+    "sed": 1252,
+    "veneno": 17159,
+    "sal": 18702
+   },
+   "frac_BD_causa": 0.931,
+   "frac_vol": 0.8293,
+   "frac_sin_bueno_mundo_med": 0.0159,
+   "mord_BD_med": 122.5,
+   "mord_AC_med": 813.0,
+   "limpiezas_fisicas_por_cuerpo_med": 1.5,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 138.7,
+   "v143": {
+    "frac_pasos_con_meta": 0.9749,
+    "vetos": 368487,
+    "mord_sin_meta": 7813,
+    "limpia_propia": 7509,
+    "todo_obst": 0,
+    "des_splits": 1826
+   }
+  },
+  "siempre": {
+   "brazo": "siempre",
+   "carro": "V143_SIEMPRE",
+   "semillas": 20,
+   "R0_real_med": 0.0,
+   "R0_real_eval_med": 0.0,
+   "R0_prereg_med": 0.0,
+   "linajes_cruzan_real": 4,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 20,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 200.0,
+   "muertes_med": 359.0,
+   "fundadores_med": 359.0,
+   "causas": {
+    "hambre": 1716,
+    "sed": 4172,
+    "veneno": 24611,
+    "sal": 22874
+   },
+   "frac_BD_causa": 0.8897,
+   "frac_vol": 0.0028,
+   "frac_sin_bueno_mundo_med": 0.0054,
+   "mord_BD_med": 362.5,
+   "mord_AC_med": 311.0,
+   "limpiezas_fisicas_por_cuerpo_med": 0.9062,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 144.0,
+   "v143": {
+    "frac_pasos_con_meta": 0.9654,
+    "vetos": 134795,
+    "mord_sin_meta": 404,
+    "limpia_propia": 0,
+    "todo_obst": 220562,
+    "des_splits": 345
+   }
+  },
+  "invertido": {
+   "brazo": "invertido",
+   "carro": "V143_INVERTIDO",
+   "semillas": 20,
+   "R0_real_med": 0.0,
+   "R0_real_eval_med": 0.0,
+   "R0_prereg_med": 0.0,
+   "linajes_cruzan_real": 0,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 0,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 493.0,
+   "muertes_med": 200.0,
+   "fundadores_med": 200.0,
+   "causas": {
+    "hambre": 1141,
+    "sed": 1199,
+    "veneno": 20848,
+    "sal": 12868
+   },
+   "frac_BD_causa": 0.9351,
+   "frac_vol": 0.6919,
+   "frac_sin_bueno_mundo_med": 0.0,
+   "mord_BD_med": 787.0,
+   "mord_AC_med": 710.0,
+   "limpiezas_fisicas_por_cuerpo_med": 2.7059,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 141.8,
+   "v143": {
+    "frac_pasos_con_meta": 0.8384,
+    "vetos": 3860,
+    "mord_sin_meta": 771,
+    "limpia_propia": 360,
+    "todo_obst": 0,
+    "des_splits": 3
+   }
+  },
+  "o1": {
+   "brazo": "o1",
+   "carro": "O1",
+   "semillas": 20,
+   "R0_real_med": 0.9375,
+   "R0_real_eval_med": 0.938,
+   "R0_prereg_med": 2.866,
+   "linajes_cruzan_real": 138,
+   "linajes": 180,
+   "sem_cruza_e5": 18,
+   "gana_e5": true,
+   "sem_estabiliza_e6": 20,
+   "estabiliza_e6": true,
+   "persisten": 155,
+   "enm3": {
+    "cruza": true,
+    "mediana_R0_eval": 2.866,
+    "condiciones": {
+     "i": true,
+     "ii": true,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 3719.75,
+   "muertes_med": 17.0,
+   "fundadores_med": 0.0,
+   "causas": {
+    "hambre": 1002,
+    "sed": 863,
+    "veneno": 4416,
+    "sal": 4426
+   },
+   "frac_BD_causa": 0.8258,
+   "frac_vol": 0.0,
+   "frac_sin_bueno_mundo_med": 0.0393,
+   "mord_BD_med": 351.5,
+   "mord_AC_med": 679.5,
+   "limpiezas_fisicas_por_cuerpo_med": 19.2719,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 268.75
+  }
+ },
+ "pareados": {
+  "v143_vs_v142": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.3623
+  },
+  "v143_vs_fab": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.3739
+  },
+  "v142_vs_fab": {
+   "semillas": 20,
+   "gana": 16,
+   "dif_med": 0.0058
+  },
+  "v143_vs_sinfiltro": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.3981
+  },
+  "v143_vs_sintd": {
+   "semillas": 20,
+   "gana": 7,
+   "dif_med": -0.0391
+  },
+  "sintd_vs_v143": {
+   "semillas": 20,
+   "gana": 12,
+   "dif_med": 0.0391
+  },
+  "v143_vs_siempre": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.5227
+  },
+  "v143_vs_invertido": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.5227
+  },
+  "v142_vs_invertido": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.1603
+  },
+  "o1_vs_v143": {
+   "semillas": 20,
+   "gana": 19,
+   "dif_med": 0.4031
+  }
+ },
+ "predicciones": [
+  {
+   "texto": "V-ANCLA-1 FABRICA: mediana R0 real en [0.08, 0.20] (ENMIENDA 1, candidato a ERR; antes [0.22, 0.45])",
+   "se_cumple": true
+  },
+  {
+   "texto": "V-ANCLA-2 O1 GANA por la ENMIENDA 5 (ayer, r2o1mono 9101-9120: 20/20)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P1 V142 ~ FABRICA: |dif mediana pareada de R0 real| <= 0.05 (p 0.65)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P2 V143 > V142 en >= 18/20 semillas con dif mediana >= 0.10 (p 0.75)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P3 V143: mediana R0 real en [0.45, 0.85] (p 0.55)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P4 V143 NO gana por la ENMIENDA 5 (p 0.80 de que NO cruza)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P5 SIEMPRE (sin limpieza) < V143 en >= 15/20 y su mundo sin nada bueno >= 0.30 de los pasos (p 0.70)",
+   "se_cumple": false
+  },
+  {
+   "texto": "P6 SINFILTRO: mediana R0 real en [0.30, 0.47] y V143 > SINFILTRO en >= 15/20 (p 0.70)",
+   "se_cumple": false
+  },
+  {
+   "texto": "P7 SINTD ~ V143: |dif mediana pareada| <= 0.05 (p 0.50; el control que puede ganar)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P8 INVERTIDO < V142 en >= 15/20 (p 0.80)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P9 V143 vida mediana >= 3 x la de V142 (p 0.70)",
+   "se_cumple": true
+  },
+  {
+   "texto": "P10 V143: veneno+sal <= 0.50 de las causas de muerte (V142 ~1.0) (p 0.70)",
+   "se_cumple": false
+  },
+  {
+   "texto": "P11 V143: pasos sin nada bueno en el mundo en [0.01, 0.30] (limpia algo, no del todo) (p 0.65)",
+   "se_cumple": true
+  }
+ ],
+ "semillas": [
+  14301,
+  14302,
+  14303,
+  14304,
+  14305,
+  14306,
+  14307,
+  14308,
+  14309,
+  14310,
+  14311,
+  14312,
+  14313,
+  14314,
+  14315,
+  14316,
+  14317,
+  14318,
+  14319,
+  14320
+ ],
+ "T": 100000,
+ "humo": false,
+ "veredicto": "PARCIAL: HAY ALGO MODESTO"
+}
