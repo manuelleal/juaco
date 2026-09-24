@@ -6555,3 +6555,19 @@ Criterio §6: FUNCIONA = P1 (el tronco no compone para k = 3…8) y P2 (N compon
 ### ERR-119 y nota sobre FABRICA (23-sep-2026, 19:15, auditoría del paquete `experimentos/tronco_v14_3/`)
 - **ERR-119** (regla 11): la ENMIENDA 1 de `PREREGISTRO_v143.md` §11 mueve el ancla V-ANCLA-1 de [0.22, 0.45] a [0.08, 0.20] **después** del humo 14281. Se escribió antes de la serie y las predicciones no se tocaron, pero todo umbral movido tras ver un dato lleva ERR. La causa: el creador escribió el ancla con el valor de FABRICA *sin* fundador limpio (0.34), sin leer los cinco crudos `r2fab` del 22-sep, que ya tenían FABRICA *con* fundador limpio (0.113–0.129, verificado por el auditor). El rango nuevo cubre esos cinco lotes. Mismo patrón que ERR-114.
 - **Nota (no es ERR, no cambia veredictos):** el carro FABRICA de la carrera de escuderías del 22-sep es el organismo v14.1 en el mundo vivo, sin B-5. `FABRICA.py` no contiene la regla R = 0. La carrera se corrió sin el tronco vigente. B-5 es inerte en el tronco y en el mundo vivo divide con efecto 0 en la necesidad activa (arnés de v14.3). El paquete v14.3 trae un brazo `v142` para medir esa diferencia.
+
+---
+
+### NUBE, SESIÓN 0 — calibración (23-sep-2026, 19:14–19:35 hora de Bogotá; sesión en la nube de Claude Code, rama `nube/calibracion` = `claude/nube-calibracion-qr3r7f`, integrada en `0c039c9`): **FUNCIONA — la nube reproduce al PC bit a bit**
+
+- **Arneses:**
+  - `identidad_n8` da **26/26** (25.5 s contra 54.8 s en el PC);
+  - `identidad_convive` da **37/37** (102.0 s contra 133.7 s);
+  - su salida completa es idéntica a la del PC (diff línea a línea, normalizando sólo CRLF, fecha y tiempo).
+- **Humo** `corre_n8 --humo`, semilla 12690: 0 de 116 campos distintos. Con la semilla 12691 y el runner exacto del PC: 1033 de 1033 hojas del JSON idénticas.
+- **Máquina:** nproc 4 (Xeon Emerald Rapids, AVX-512) y 15.7 GiB. El Pool escala lineal hasta 4 (7.1, 13.9, 21.0 y 27.7 corridas/min); Pool 3 rinde lo mismo que el PC con Pool 6.
+- **Versiones:** Python 3.13.12 (venv; 3.14.2 no se pudo bajar porque github.com está bloqueado), numpy 2.4.3, numba 0.67.0, llvmlite 0.49.0.
+- **Gemelo numba:** `identidad_v14_rapido` da 42/42 con scipy (×45–50).
+- **Cabo cerrado por el coordinador:** `requirements.txt` no traía scipy. Se fija `scipy==1.17.1` (versión del PC) y `llvmlite==0.49.0`.
+- **Decisión:** Pool 3 en la nube (nproc − 1: allá nadie más usa la máquina).
+- **Informe:** `datos/humo/nube_calibracion_20260924.md`.

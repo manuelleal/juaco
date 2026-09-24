@@ -28,7 +28,21 @@
 - Decisiones difíciles sin el director: se toman y se escriben en `registro/ESTADO.md`, sección "Decisiones del coordinador en ausencia
   del director", con hora, opción tomada, alternativa descartada y porqué. **Los porcentajes de nivel los fija el director.**
 
-## 1. Sesión 0 en la nube: calibración (obligatoria, barata)
+## 1. Sesión 0 en la nube: calibración — **HECHA el 23-sep (19:14–19:35): FUNCIONA, bits idénticos al PC**
+Informe: `datos/humo/nube_calibracion_20260924.md`.
+- Máquina: 4 núcleos (Xeon Emerald Rapids, AVX-512) y 15.7 GiB. Por proceso es 1.3–2.2× más rápida que el PC.
+- **Pool 3 en la nube** (nproc − 1; rinde lo mismo que el PC con Pool 6). Decisión del coordinador: en la nube nadie más usa la máquina.
+- Python 3.13.12 en venv (github.com está bloqueado y no se puede bajar 3.14.2); la salida es idéntica.
+- scipy va en `requirements.txt` porque la necesitan los gemelos numba.
+
+**Setup script del entorno** (menú del entorno → Setup script), para que cada sesión arranque lista:
+```
+uv venv --seed --python /usr/bin/python3.13 /root/venv-juaco
+/root/venv-juaco/bin/pip install numpy==2.4.3 numba==0.67.0 llvmlite==0.49.0 scipy==1.17.1
+```
+En cada comando de la sesión se usa `/root/venv-juaco/bin/python`: el shell no conserva `PATH` entre llamadas.
+
+El prompt original de la sesión 0 queda abajo como referencia:
 Prompt para pegar:
 
 ```
@@ -49,7 +63,7 @@ Prompt para pegar (se puede repetir; cada sesión retoma de ESTADO.md):
 ```
 Lee NUBE.md, CLAUDE.md, registro/ESTADO.md (bloque más reciente y "Decisiones del coordinador") y la cola de registro/HANDOFF.md.
 Trabaja de forma autónoma siguiendo la §3 de NUBE.md: toma la siguiente serie de la cola, verifica su arnés de identidad, córrela con
-Pool = nproc - 2, evalúala contra la letra de su preregistro, regístrala (REGISTRO, ESTADO, HANDOFF), commit y push a la rama
+Pool = 3 (nproc − 1; en la nube nadie más usa la máquina) y con /root/venv-juaco/bin/python, evalúala contra la letra de su preregistro, regístrala (REGISTRO, ESTADO, HANDOFF), commit y push a la rama
 nube/<fecha>. Cuando la cola se vacíe, lanza la siguiente tanda del nivel más lejos de 80 % con un equipo de 3 agentes
 (explorador -> creador -> auditor, ver .claude/agents) y sigue. Toma las decisiones difíciles y escríbelas con su porqué en ESTADO.md.
 No toques el tronco congelado; los niveles los fija el director. Al cerrar, deja ESTADO.md al día para la siguiente sesión.

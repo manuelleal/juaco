@@ -31,7 +31,7 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 - **Pool A:** réplica del nivel 9 13321–13340 (desde 18:15, llegada estimada ~19:40) → `subida_n9b` (serie 13501 + réplica 13521) →
   `subida_n6b` (14601 + 14621) → `subida_n8c_memoria_lenta` (15801 + 15821).
 - **Pool B:** `subida_n5` V-5 (serie 25701 desde 18:38, réplica 25721) → **`tronco_v14_3`** (identidad 36/36, serie 14301 + réplica 14321;
-  frente 1, adelantado a las 19:15) → `subida_n10b` (12701 + 12721) → `subida_n8b` (14801 + 14821).
+  frente 1, adelantado a las 19:15). `subida_n8b` pasa al Pool A tras n8c. `subida_n10b` corre mañana en la nube.
 - **Archivado sin correr:** `subida_n9c` (decisión 18:55, abajo).
 - **Equipos terminando:** v14.3, JUACO-ECO (diseño), Frankenstein (EXPLORATORIO, no es dato) y la ronda de investigación 1 (tres
   investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
@@ -53,16 +53,23 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 |---|---|---|---|
 | 1–4 | cerrados | — | 18-sep (nivel 4 reparado por B-5) |
 | 5 comunicación | 75 % | 75 % hasta V-5 | `subida_n5` corriendo (familia Y variante con la misma tabla) |
-| 6 mapa y rodeo | 50 % | **60 %** (70–75 % si acepta la regla 10) | n6 MODESTO ×2; `subida_n6b` en cola (memoria completa, dos metas, port a v14.2) |
-| 7 composición | 70 % | **78 %** (80 % si v14.3 pasa el criterio v4) | n7 FUNCIONA ×2 |
-| 8 aprendizaje abierto | 40 % | **45–50 %** | aprende_barrer ×2 (+5), n8 ×2 (+5); n8b y n8c en cola |
+| 6 mapa y rodeo | **60 %** (19:30) | 60 % (70–75 % si n6b completa la memoria) | n6 MODESTO ×2; `subida_n6b` en cola (memoria completa, dos metas, port a v14.2) |
+| 7 composición | **78 %** (19:30) | 80 % si v14.3 pasa el criterio v4 | n7 FUNCIONA ×2 |
+| 8 aprendizaje abierto | **50 %** (19:30) | según n8b y n8c esta noche | aprende_barrer ×2 (+5), n8 ×2 (+5); n8b y n8c en cola |
 | 9 autonomía / modelo de sí | 50 % | espera (meta del director: 90 %) | serie n9: la lectura de sí presente causa el cruce de O3; convivencia NO; n9b en cola |
 | 10–13 | ~10 % | ~10 % | n10 NO SE LEE; n10b en cola |
 
+## Decisiones del director de las 19:30 (AskUserQuestion; sus palabras: las tres opciones recomendadas)
+- **Porcentajes FIJADOS:** nivel 7 → **78 %**, nivel 8 → **50 %**, nivel 6 → **60 %**. El 9 sigue en 50 % hasta su réplica.
+- **v14.3 = v14.2 + reparación N del 7:** el examen del criterio v4 se prepara esta noche y corre el 24-sep. **Permiso escrito del director:
+  si pasa serie y réplica, el coordinador lo congela** (manifiesto propio, v14.2 intacto) y le avisa.
+- **`subida_n10b` corre mañana en la nube:** es su primera serie real, con un paquete ya auditado. No alcanzaba antes de las 00:00 en el PC.
+- **Nube calibrada (19:35): FUNCIONA, bits idénticos al PC**; Pool 3 en la nube; scipy 1.17.1 fijada en `requirements.txt`.
+
 ## Decisiones pendientes del director (máx. 2)
-1. **Porcentajes:** 7 → 78 %, 8 → 45–50 %, 6 → 60 % (o 70–75 % si acepta la regla 10). Recomendado: aceptar 7 y 8 ya y dejar el 6 en 60 % hasta n6b.
-2. **Nube:** con el crédito de 250 USD (vence el 5-nov-2026; se aplica solo al iniciar una sesión en la nube; NO vale para Rutinas),
-   correr la sesión 0 de calibración (`NUBE.md` §1) antes de mover trabajo pesado.
+1. **Nube, opcional (1 min):** pegar el *Setup script* de `NUBE.md` §1 en el menú del entorno. Crédito: 250 USD, vence el 5-nov-2026 y
+   NO vale para Rutinas.
+2. **24-sep:** leer los veredictos de la noche (9 réplica, v14.3, 9b, 6b, 8c, 8b) y el resultado del examen v4 del v14.3.
 
 ## Decisiones del coordinador en ausencia del director (23-sep; hora, opción, alternativa descartada, porqué)
 - **19:15 — el paquete `tronco_v14_3` (frente 1) se adelanta en el Pool B, antes de n10b y n8b.** Alternativa: dejarlo al final (~23:30).
