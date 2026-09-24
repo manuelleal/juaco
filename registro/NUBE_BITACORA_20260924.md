@@ -322,6 +322,15 @@
   - Vocabulario: "la colonia del banco de VIDA vive más que la de AZAR"; no "evoluciona", no "población" sin la medida.
   - Puntos: los de `PREREGISTRO_eco.md` §9; los decide el director (la nube no declara porcentajes).
 
+### 1f. ECO v1.2 (selección + familia) y ECO-T (transferencia) — paquetes nuevos del frente 2
+- **ECO v1.2** (`PREREGISTRO_eco_v12.md`, commit 060af2f, antes de cualquier serie): VIDA_T / AZAR_T / MUT0_T con el carro FAMB_RES0_ECO (la
+  familia pasa su tabla sin neutras) y VIDA sin familia; T 1e6; juez v2 con placebo en una batería sellada nueva (19801–19820) con
+  T_b 100 000. Arnés `identidad_eco_v12.py` 18/19 (falta (G): el gemelo del compilador). Humo Python: VIDA_T 43 cuerpos vivos a los
+  12 000 pasos (máximo 189). **Sin el gemelo N/N no hay serie.**
+- **ECO-T** (`transfiere/PREREGISTRO_transfiere.md`, commit 9ea2cc6, antes de la serie): los bancos del corte de ECO v1.1 en OTRO mundo, la
+  carrera. Colonia de 9 genomas del banco de VIDA contra la del banco de AZAR y contra 9 × G0; placebo con otra muestra del mismo banco.
+  T1: VIDA > AZAR ≥ 15/20; T2: VIDA > G0 ≥ 15/20. Arnés 14/14. **11:20 — ventana serie (bancos 19401–19420) lanzada con Pool 3.**
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
 la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–24099, con arneses de identidad bit a bit de cada subclase.
@@ -408,6 +417,11 @@ la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–2
   - Alternativa descartada: el gemelo de V143 para ECO. V143 en la pista v2 también nace sin memoria de linaje (sus piezas de linaje,
     nodo y opción TD, viven en el carro de la carrera); sin transmisión en el parto perdería justo lo que lo hace mejor.
   - Mientras tanto: preregistro de ECO v1.2 y tanda exploratoria del frente 1 (familia y perillas de ECO sobre V143).
+
+- **11:15 — ECO-T se preregistra y corre mientras el compilador trabaja.** Tres núcleos libres. La tanda exploratoria mostró que las perillas
+  de ECO transfieren a FABRICA en la carrera (6/6); en vez de declarar eso con perillas elegidas a mano, se prueba con los genomas enteros
+  de los bancos y con la deriva como control (lo que ECO v1.1 dejó en disco). Es una pregunta del frente 2 (¿la selección produce algo
+  que la deriva no?) medida fuera de su mundo. Alternativa descartada: esperar ocioso al gemelo.
 
 ## 3b. Pedidos del director durante la noche (sus palabras, para que no se pierdan)
 - Prompt de la noche: `NUBE.md` §2b (en main).
