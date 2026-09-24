@@ -1,0 +1,17 @@
+[12:30:53] ECO v1.2 v12_prueba_pool_s19902 · T 3000 · corte 2000 · juez 2 semillas T_b 2000 · pool 2 · motor GEMELO · shas {'corre_eco_v12.py': '1340d268e1fd93d8', 'corre_eco_v11.py': '5655c93419511162', 'corre_eco.py': '47d9cee4d6462116', 'motor_eco.py': 'bca3033878b59622', 'motor_eco_rapido_fam.py': 'd1f16769a53bb51c', 'carros/FABRICA_ECO.py': 'f1163009cb5193a2', 'carros/FAMB_RES0_ECO.py': '94ea78589bc2ce24', 'PREREGISTRO_eco_v12.md': '6f60a80aea375edd'}
+[12:30:55] [1/8] AZAR_T s19902: persiste 1 (vivos 44) · persiste_lect 1 · t_ext None · max_vivos 110 (0.4 s; 2 s)
+[12:30:55] [2/8] VIDA_T s19902: persiste 1 (vivos 52) · persiste_lect 1 · t_ext None · max_vivos 105 (1.9 s; 2 s)
+[12:30:55] [3/8] MUT0_T s19902: persiste 1 (vivos 39) · persiste_lect 1 · t_ext None · max_vivos 111 (0.5 s; 2 s)
+[12:30:55] [4/8] VIDA s19902: persiste 1 (vivos 16) · persiste_lect 1 · t_ext None · max_vivos 100 (0.4 s; 2 s)
+[12:30:56] [5/8] VIDA_T s19903: persiste 1 (vivos 55) · persiste_lect 1 · t_ext None · max_vivos 106 (0.5 s; 3 s)
+[12:30:56] [6/8] AZAR_T s19903: persiste 1 (vivos 49) · persiste_lect 1 · t_ext None · max_vivos 108 (0.4 s; 3 s)
+[12:30:56] [7/8] VIDA s19903: persiste 1 (vivos 21) · persiste_lect 1 · t_ext None · max_vivos 98 (0.4 s; 3 s)
+[12:30:56] [8/8] MUT0_T s19903: persiste 1 (vivos 63) · persiste_lect 1 · t_ext None · max_vivos 119 (0.5 s; 3 s)
+semillas por brazo: {'VIDA_T': 2, 'AZAR_T': 2, 'MUT0_T': 2, 'VIDA': 2}; persiste en T = 1000000: {'VIDA_T': 2, 'AZAR_T': 2, 'MUT0_T': 2, 'VIDA': 2}; en 120000 (descriptivo): {'VIDA_T': 2, 'AZAR_T': 2, 'MUT0_T': 2, 'VIDA': 2}
+descriptivo: R0 tras el corte en los que persisten (mediana) {'VIDA_T': None, 'AZAR_T': None, 'MUT0_T': None, 'VIDA': None}; cuerpos vivos en T en los que persisten (mediana) {'VIDA_T': 53.5, 'AZAR_T': 46.5, 'MUT0_T': 51.0, 'VIDA': 18.5}; max_vivos (max) {'VIDA_T': 106, 'AZAR_T': 110, 'MUT0_T': 119, 'VIDA': 100}
+F4 genes seleccionados en VIDA_T (>=15/20 mismo signo fuera de las 8 sombras): []; AZAR_T con > 8/20 (falsos positivos): []
+F3 juez v2 (bateria sellada 19801-19820, T_b 100000, carro de la familia): VIDA_T > AZAR_T (pareado, estricto) 1/2 (empates 1); medianas VIDA_T 2000.0 · AZAR_T 1936.25 · G0 (descriptivo) 2000.0
+PLACEBO (flujo 7 contra 8 del MISMO banco; valido en [5, 15] de 20): {'VIDA_T': (1.0, 2), 'AZAR_T': (0.5, 2)} -> NO VALIDO
+F1 VIDA_T persiste en 1e6 >= 15/20: NO (2) · F2 VIDA_T - VIDA >= 6: NO (0) · F3 VIDA_T > AZAR_T >= 15/20: NO (1) · F4: NO · C (descriptivo) MUT0_T persiste 2/20, AZAR_T 2/20
+VEREDICTO v1.2 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (serie incompleta o T distinto de 1e6)
+[12:30:56] VEREDICTO: NO EVALUABLE (serie incompleta o T distinto de 1e6)

@@ -1,0 +1,81 @@
+{
+ "etiqueta": "eco_v2_prueba_pool",
+ "veredicto": "NO (en esta serie)",
+ "lineas": [
+  "[w30] ensena fuera de sus sombras (+,-): VIDA (0, 0) \u00b7 AZAR (0, 0) \u00b7 filtra0: VIDA (0, 0) \u00b7 AZAR (0, 0)",
+  "[w30] fraccion del banco con ensena prendido (mediana): VIDA 0.0 \u00b7 AZAR 0.015; VIDA > AZAR 0/2 \u00b7 con filtra0: VIDA 0.0 \u00b7 AZAR 0.03",
+  "[w30] otros genes seleccionados en VIDA (>= 15/20): [] \u00b7 persisten en T: {'VIDA': 2, 'AZAR': 2} \u00b7 O1 NO \u00b7 O2 NO \u00b7 F NO",
+  "[w30] descriptivo: correlacion alpha-ensena en el banco de VIDA (mediana) 0.5 (n 2) \u00b7 vivos en T con ensena (mediana): VIDA 0.0 \u00b7 AZAR 0.0",
+  "[w90] ensena fuera de sus sombras (+,-): VIDA (0, 0) \u00b7 AZAR (0, 0) \u00b7 filtra0: VIDA (0, 0) \u00b7 AZAR (0, 0)",
+  "[w90] fraccion del banco con ensena prendido (mediana): VIDA 0.00295 \u00b7 AZAR 0.075; VIDA > AZAR 0/2 \u00b7 con filtra0: VIDA 0.0 \u00b7 AZAR 0.045",
+  "[w90] otros genes seleccionados en VIDA (>= 15/20): [] \u00b7 persisten en T: {'VIDA': 2, 'AZAR': 2} \u00b7 O1 NO \u00b7 O2 NO \u00b7 F NO",
+  "[w90] descriptivo: correlacion alpha-ensena en el banco de VIDA (mediana) -0.004 (n 2) \u00b7 vivos en T con ensena (mediana): VIDA 0.03125 \u00b7 AZAR 0.05",
+  "[w270] ensena fuera de sus sombras (+,-): VIDA (0, 0) \u00b7 AZAR (0, 0) \u00b7 filtra0: VIDA (0, 0) \u00b7 AZAR (0, 0)",
+  "[w270] fraccion del banco con ensena prendido (mediana): VIDA 0.0175 \u00b7 AZAR 0.0825; VIDA > AZAR 0/2 \u00b7 con filtra0: VIDA 0.005 \u00b7 AZAR 0.235",
+  "[w270] otros genes seleccionados en VIDA (>= 15/20): [] \u00b7 persisten en T: {'VIDA': 2, 'AZAR': 2} \u00b7 O1 NO \u00b7 O2 NO \u00b7 F NO",
+  "[w270] descriptivo: correlacion alpha-ensena en el banco de VIDA (mediana) -0.012 (n 2) \u00b7 vivos en T con ensena (mediana): VIDA 0.0 \u00b7 AZAR 0.0851",
+  "secundario: filtra0 seleccionado en 0 de 3 mundos (se lee junto a ensena: su beneficio solo existe si el padre ensena)",
+  "VEREDICTO ECO v2 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO (en esta serie)"
+ ],
+ "d": {
+  "O1": {
+   "w30": false,
+   "w90": false,
+   "w270": false
+  },
+  "O2": {
+   "w30": false,
+   "w90": false,
+   "w270": false
+  },
+  "F": {
+   "w30": false,
+   "w90": false,
+   "w270": false
+  },
+  "n_ok": 0,
+  "n_uno": 0,
+  "guardia": []
+ },
+ "seg": 6,
+ "V2": {
+  "T": 120000,
+  "t_corte": 60000
+ },
+ "MUNDOS": {
+  "w30": {
+   "esc": 30,
+   "n0": 30,
+   "tope": 3000
+  },
+  "w90": {
+   "esc": 90,
+   "n0": 90,
+   "tope": 3000
+  },
+  "w270": {
+   "esc": 270,
+   "n0": 270,
+   "tope": 9000
+  }
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "shas": {
+  "corre_eco_v2.py": "41fd6280607d4f4f",
+  "corre_eco.py": "47d9cee4d6462116",
+  "motor_eco2.py": "0921ee3a50ce7f7a",
+  "motor_eco_rapido_org.py": "024f0a8ea5e12c7d",
+  "carros/FAMB_ORG_ECO.py": "75d5f4118079ff15",
+  "construye_eco_org.py": "ff5531748aa4bd6a",
+  "PREREGISTRO_eco_v2.md": "e8327d743f72b7f9"
+ }
+}

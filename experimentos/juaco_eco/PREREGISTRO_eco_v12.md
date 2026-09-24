@@ -105,3 +105,7 @@ contra 68 de media), así que una corrida de 1e6 puede costar varios minutos. Py
   VIDA_T 43 cuerpos vivos en 12 000 (máximo 189), AZAR_T 25 (máximo 169); los dos juicios del humo tocan el techo de 6 000.
   JSON `datos/humo/eco_v12_humo_s19905_python_20260924_105806.json`. La letra corre (NO EVALUABLE con una semilla, como debe).
 - Enmiendas tras el humo: ninguna.
+- **12:30 — con el gemelo (motor_eco_rapido_fam, 132/132): arnés `identidad_eco_v12.py` 22/22** (el preregistro decía "19/19": conté mal los
+  casos; no cambia nada de la letra). Antes, el arnés pasó el juez a semillas de práctica (19903–19904) por aviso del compilador: tocaba
+  las dos primeras de la batería sellada. Prueba del Pool (19902–19903): corre; su juez sí usa 19801–19802 con bancos de práctica y
+  T_b 2 000 (candidato nube-7, menor: no informa ningún resultado de la serie, pero rompe la letra de "sellada").

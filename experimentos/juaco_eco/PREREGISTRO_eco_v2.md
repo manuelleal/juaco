@@ -13,6 +13,8 @@ falta un experto, y que corra tres mundos a la vez con capacidades distintas. Ar
 - Runner `corre_eco_v2.py` (**41fd6280607d4f4f**; el sha va también en el log y en `RESUMEN.json`) y su arnés `identidad_eco_v2.py` (**7fe082aeb5738186**):
   **15/16** antes del gemelo — (M) mundos y brazos; (T) las medidas de los órganos calculadas a mano en los tres mundos; (V) 8 ramas de la
   letra; (R) banderas. Falta (G): gemelo == Python en los tres mundos y los dos brazos. **Con (G) debe dar 22/22.**
+  **12:28 — con el gemelo (motor_eco_rapido_org, 99/99): 21/21** (decía 22/22: conté mal los casos; la letra no cambia). Prueba del Pool
+  (20092–20093, T 4 000) a las 12:30: corre y escribe su RESUMEN.
 - Motor de la serie: el gemelo `motor_eco_rapido_org.py` (lo construye el compilador). **Sin su arnés N/N no hay serie.**
 
 ## 1. Pregunta
