@@ -46,6 +46,22 @@ _(pendiente)_
   - Por qué: ningún archivo de ECO se toca esta noche, y así un fallo aparece con horas de margen. Antes de lanzar la serie de ECO se
     vuelve a verificar el sha del runner.
 - **01:45 — los candidatos a ERR se numeran como nube-N.** Así no chocan con el PC, que también numera esta noche.
+- **02:24 — gemelo numba: se encarga a UN `juaco-compilador` (Opus), el agente 1 de los 2 que permite el presupuesto de la noche.**
+  - Pedido del director (~02:10): *"sí, haz el gemelo numba hoy si puedes y sigue trabajando hasta mañana en la noche. Objetivo
+    la AGI"*.
+  - Objetivo del gemelo: ECO (mundo v2 de `motor_eco` + `FABRICA_ECO`), no la pista v1.
+    - Por qué: ECO largo (1e6 pasos) y ECO a 10× y 100× son hoy inviables en Python (3–32 h de CPU por corrida). Es el paso 1 del
+      frente 2.
+    - La pista v1 (frente 1, v14.3) aguanta en Python: ~100 s por corrida con T = 100 000.
+  - Etapas encargadas:
+    - E1: mundo v2 con `eco=None` y FABRICA_ECO, bit a bit.
+    - E2: genoma, mutación, banco, vivero y corte.
+    - E3: juez y checkpoints.
+  - Alternativa descartada: hacerlo yo. El trabajo de código pesado inflaría el contexto de la sesión, y cada llamada posterior
+    costaría más.
+  - Las series de esta noche (n10b, ECO v1) siguen con el instrumento en Python preregistrado. El gemelo sólo se usará tras su arnés
+    N/N, para ECO largo y ECO v2.
+  - La tanda exploratoria pasa a `nice 19`, para no quitarle CPU a las pruebas del compilador ni a las series.
 
 ## 4. Qué falló y qué propongo para mañana
 _(al cierre)_
