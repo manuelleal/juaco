@@ -50,6 +50,19 @@ def usa_gemelo():
     return None
 
 
+def expresion_sombras(blob):
+    """ENMIENDA 1 (nube-8): del checkpoint del corte (el estado completo, con el banco de pares (genoma, 8 sombras)), la fraccion del
+    banco que EXPRESA cada organo (gen >= UMBRAL) en el genoma real y en cada una de sus 8 sombras."""
+    B = pickle.loads(blob)['ES']['banco']
+    out = {}
+    for g in ORGANOS:
+        j = IORG[g]
+        real = float(np.mean([float(x[0][j]) >= ME2.UMBRAL_ORG for x in B]))
+        somb = [float(np.mean([float(x[1][k][j]) >= ME2.UMBRAL_ORG for x in B])) for k in range(len(B[0][1]))]
+        out[g] = dict(real=round(real, 4), sombras=[round(v, 4) for v in somb])
+    return out
+
+
 def frac_on(genomas, gen):
     if not genomas: return None
     j = IORG[gen]
@@ -67,13 +80,16 @@ def trabajo(args):
     def cb(li, row, g):
         if row[3] >= t_corte: filas.append([li] + row)
 
+    sombras = {}   # ENMIENDA 1 (nube-8): expresion del organo en el banco del corte, real contra sus 8 sombras
+
     def guarda(t, blob):
+        if t == t_corte and not sombras: sombras.update(expresion_sombras(blob))
         tmp = ck + '.tmp'
-        with open(tmp, 'wb') as f: pickle.dump(dict(t=t, blob=blob, filas=filas), f, protocol=pickle.HIGHEST_PROTOCOL)
+        with open(tmp, 'wb') as f: pickle.dump(dict(t=t, blob=blob, filas=filas, sombras=sombras), f, protocol=pickle.HIGHEST_PROTOCOL)
         os.replace(tmp, ck)
     estado = None
     if reanuda and os.path.exists(ck):
-        d = pickle.load(open(ck, 'rb')); estado = d['blob']; filas[:] = d['filas']
+        d = pickle.load(open(ck, 'rb')); estado = d['blob']; filas[:] = d['filas']; sombras.update(d.get('sombras') or {})
     t0 = time.time()
     r = MOTOR[0].run_solapadas(seed, [CARRO] * W['n0'], T=T, diag=0, mundo_n=W['esc'], tope_cuerpos=W['tope'], muestra=1000,
                                eco=CR.eco_cfg(brazo, t_corte, ckpt_cada=SERIE['ckpt_cada'], ckpt_fn=guarda, estado=estado, ind_cb=cb))
@@ -89,6 +105,7 @@ def trabajo(args):
                r0_post=(round(float(np.mean([f[6] for f in coh])), 4) if coh else None), n_coh_post=len(coh),
                sel_corte=CR.sel_genes(fila_corte), genes=E['genes'], G0=E['G0'],
                banco_on={g: frac_on(banco, g) for g in ORGANOS}, vivos_on={g: frac_on(vivos_g, g) for g in ORGANOS},
+               banco_on_sombras=(dict(sombras) or None),
                corte=E['corte'], gen_t=E['gen_t'], vivos_final=E['vivos_final'][:500], tam_total=P['tam_total'],
                motor='PYTHON motor_eco3')
     tmp = fin + '.tmp'
@@ -98,11 +115,11 @@ def trabajo(args):
     return res
 
 
-# ================================================================================ LA LETRA (PREREGISTRO_eco_v3.md §6)
+# ================================================================================ LA LETRA (PREREGISTRO_eco_v3.md §6, con la ENMIENDA 1)
 def veredicto(R, n_esperado=N):
-    """Por organo y por mundo: ELEGIDO si en VIDA su gen queda por ENCIMA de sus 8 sombras en >= 15/20 (O1+) y el banco de VIDA lo lleva
-    expresado en mas que el de AZAR (pareado, estricto) en >= 15/20 (O2+); DESCARTADO si queda por DEBAJO de sus sombras en >= 15/20
-    (O1-) y el banco de VIDA lo lleva en menos que el de AZAR en >= 15/20 (O2-)."""
+    """ENMIENDA 1 (nube-8, antes de cualquier serie de v3): por organo g y mundo m, ELEGIDO si en VIDA la fraccion del banco del corte que
+    EXPRESA g supera a la media de las fracciones de sus 8 sombras (estricto) en >= 15/20 (O1*) y el banco de VIDA lo expresa mas que el de
+    AZAR (pareado, estricto) en >= 15/20 (O2). La media contra sombras (O1 original) y el DESCARTADO quedan como DESCRIPTIVOS."""
     L = []
     completo = all(sum(1 for x in R if x['mundo'] == m and x['brazo'] == b) == n_esperado for m in MUNDOS for b in BRAZOS)
     bloq = sum(x['bloqueados'] for x in R)
@@ -114,23 +131,34 @@ def veredicto(R, n_esperado=N):
         def cuenta(b, g):
             j = genes.index(g); s_ = [x['sel_corte'][j] for x in by[b].values() if x['sel_corte'] is not None]
             return sum(1 for v in s_ if v > 0), sum(1 for v in s_ if v < 0)
+
+        def expr(b, g):
+            mas = menos = k = 0
+            for x in by[b].values():
+                e = (x.get('banco_on_sombras') or {}).get(g)
+                if not e: continue
+                k += 1; ms = float(np.mean(e['sombras'])); mas += int(e['real'] > ms); menos += int(e['real'] < ms)
+            return mas, menos, k
         cA = {g: cuenta('AZAR', g) for g in genes}
         guardia += [(m, g, cA[g]) for g in genes if max(cA[g]) > 8]
+        eA = {g: expr('AZAR', g) for g in ORGANOS}
+        guardia += [(m, g, 'expresion', eA[g][:2]) for g in ORGANOS if eA[g][0] >= 15]   # AZAR no puede "expresar por encima" 15/20
         perfil[m] = {}
         for g in ORGANOS:
-            cv = cuenta('VIDA', g)
+            cv = cuenta('VIDA', g); ev = expr('VIDA', g)
             mas = menos = k = 0
             for s_ in sorted(set(by['VIDA']) & set(by['AZAR'])):
                 a, b = by['VIDA'][s_]['banco_on'][g], by['AZAR'][s_]['banco_on'][g]
                 if a is None or b is None: continue
                 k += 1; mas += int(a > b); menos += int(a < b)
-            est = ('ELEGIDO' if (cv[0] >= 15 and mas >= 15) else 'DESCARTADO' if (cv[1] >= 15 and menos >= 15) else
-                   'sube' if cv[0] >= 15 else 'baja' if cv[1] >= 15 else 'neutro')
+            est = ('ELEGIDO' if (ev[0] >= 15 and mas >= 15) else 'sube' if (ev[0] >= 15 or mas >= 15) else
+                   'baja' if (ev[1] >= 15 and menos >= 15) else 'neutro')
             perfil[m][g] = est
             med = lambda br: (float(np.median([x['banco_on'][g] for x in by[br].values() if x['banco_on'][g] is not None]))
                               if any(x['banco_on'][g] is not None for x in by[br].values()) else None)
-            L.append(f"[{m}] {g:11s} VIDA (+,-) contra sombras {cv} · AZAR {cA[g]} · banco con el organo (mediana) VIDA {med('VIDA')} · "
-                     f"AZAR {med('AZAR')} · VIDA > AZAR {mas}/{k}, VIDA < AZAR {menos}/{k} -> {est}")
+            L.append(f"[{m}] {g:11s} VIDA expresa sobre la media de sus sombras {ev[0]}/{ev[2]} (debajo {ev[1]}) · AZAR {eA[g][0]}/{eA[g][2]} · "
+                     f"banco con el organo (mediana) VIDA {med('VIDA')} · AZAR {med('AZAR')} · VIDA > AZAR {mas}/{k} (VIDA < AZAR {menos}) · "
+                     f"descriptivo media contra sombras VIDA {cv} AZAR {cA[g]} -> {est}")
         pers = {b: sum(x['persiste'] for x in by[b].values()) for b in BRAZOS}
         L.append(f"[{m}] perillas seleccionadas en VIDA (>= 15/20, sin organos): "
                  f"{[(g, cuenta('VIDA', g)) for g in genes if g not in ORGANOS and max(cuenta('VIDA', g)) >= 15]} · persisten en T: {pers}")

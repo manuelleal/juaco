@@ -85,6 +85,22 @@ El bloque se declara sólo si serie y réplica dan el mismo veredicto; si no, va
 ## 8. Costo (medido: el Frankenstein cuesta ~1.9× FABRICA en Python)
 Estimado ~1 min (w9) y ~3–5 min (w30) por corrida → ~3 h de CPU por serie, ~1 h con Pool 3.
 
+## 10. ENMIENDA 1 (24-sep, ~13:00 UTC, ANTES de cualquier serie de v3) — candidato nube-8
+- **Qué pasó:** la serie de ECO v2 (otro paquete, mismo tipo de gen) mostró que comparar la MEDIA del gen en el banco con la de sus 8
+  sombras (O1 de §6) no detecta bien la selección de un rasgo con umbral: la selección sólo empuja el gen a pasar 1.0 y las sombras neutrales
+  derivan libres (en v2, w90 y w270: 98–99 % del banco expresando `ensena` y aun así O1 = 12 y 13/20).
+- **Qué cambia en v3 (instrumento, no mecanismo):** el runner toma del checkpoint del corte (t = 60 000; es el estado completo, con el banco
+  de pares genoma–8 sombras) la fracción del banco que EXPRESA cada órgano en el genoma real y en cada sombra. La letra de ELEGIDO pasa a:
+  - **O1\*:** en VIDA, la fracción que expresa el órgano supera a la MEDIA de las fracciones de sus 8 sombras (estricto) en ≥ 15/20.
+    Bajo la nula (sombras e real intercambiables; humo: ~38 % de sombras prendidas por deriva) esto pasa con p ≈ 0.4 por semilla:
+    P(≥ 15/20) ≈ 1e−3.
+  - **O2** sin cambios. **ELEGIDO = O1\* + O2.** "sube" = uno de los dos. **DESCARTADO pasa a descriptivo** ("baja"): con órganos que
+    nacen apagados y sombras que se prenden por deriva, "el real por debajo de la media de sus sombras" pasa ~60 % de las veces bajo la nula.
+  - Guardia nueva: si AZAR expresa por encima de sus sombras en ≥ 15/20 en algún órgano, NO EVALUABLE.
+  - El O1 original (media contra sombras) se sigue imprimiendo como descriptivo.
+- Runner `corre_eco_v3.py` **7bb44da802508b37**; arnés `identidad_eco_v3.py` **375bf7644a557118**: **14/14** (nuevo (S): el real del checkpoint coincide con el banco
+  del motor en los 7 órganos, con 8 sombras cada uno).
+
 ## 9. Humo (24-sep, 12:18 UTC, Python; números sin valor)
 `corre_eco_v3.py --humo` (20196, w30, T 20 000, corte 10 000): 74 s (36–38 s por brazo). VIDA persiste (1 vivo, máximo 37); banco con
 órganos ~0 (modelo 0.012, interruptor 0.006); ningún órgano sale de sus sombras. AZAR se extingue; banco con `mapa` 0.29, `herencia` 0.27,
