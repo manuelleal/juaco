@@ -19,7 +19,28 @@ EXPLORATORIO — no es dato
   los 9 linajes y la pista (semillas 24098 y 24099, T 3000). Resultado: **OK** (01:50 UTC).
 
 ## (i) Arriesgar según la reserva
-_(en curso)_
+Carros en `carros_reserva.py` (NEO, LIM) y `carros_extra.py` (NEO, MAL, LIM con la función `aplica`, también sobre APR en
+`carros_apr_reserva.py`). Todos son subclases: dejan correr la boca del carro base (mismo consumo del rng) y sólo corrigen la
+decisión final. La reserva es r = min(E, Ag).
+
+**Tanda i1** (01:50–02:04 UTC):
+`python experimentos/exploratorio_nube_20260924/corre_explora.py --brazos FAB,NEO5,LIM,NEO5_LIM,O1 --desde 24001 --n 6 --T 30000 --tag i1`
+Semillas 24001–24006, T 30 000. JSON: `datos/explora_i1_FAB-NEO5-LIM-NEO5_LIM-O1_s24001-24006_T30000_20260924_015047.json`.
+
+| brazo | R0 real (mediana) | persisten | vida | muere sin parir | gana a FAB (pareado) |
+|---|---|---|---|---|---|
+| FAB | 0.149 | 1/54 | 66 | 0.89 | — |
+| NEO5 (no prueba lo desconocido si r < 0.5) | 0.133 | 1/54 | 66 | 0.90 | 1/6 |
+| LIM (limpia lo malo si r ≥ 1.4) | 0.033 | 0/54 | 70 | 0.97 | 0/6 |
+| NEO5_LIM | 0.033 | 0/54 | 70 | 0.97 | 0/6 |
+| O1 | 0.775 | 20/54 | 3454 | 0.25 | 6/6 |
+
+Lectura:
+- **La neofobia sola no ayuda.** Lo desconocido es poco: el 12 % de los encuentros en la semilla 24001.
+- **Limpiar desde 1.4 hunde el R0.** El golpe deja el nivel en 1.0, y al paso siguiente el costo lo baja de la ventana de parto
+  (hacen falta E y Ag ≥ 1.0 durante 500 pasos seguidos). El que limpia pierde su parto.
+- **El 72 % de los encuentros de FABRICA son con objetos que su valor ya marca como malos.** Semilla 24001: 17 706 de 24 682.
+  De ahí salen las variantes MAL (no morder lo malo conocido con reserva baja) y VER (tema iii).
 
 ## (ii) Aprender prediciendo
 _(pendiente)_
