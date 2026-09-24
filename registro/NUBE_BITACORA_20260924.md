@@ -312,9 +312,21 @@
   - Puntos: los de `PREREGISTRO_eco.md` §9; los decide el director (la nube no declara porcentajes).
 
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
-Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen.
-
-_(pendiente)_
+Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen. Todo en la pista de
+la carrera (9 carros iguales, fundador limpio), semillas exploratorias 24001–24099, con arneses de identidad bit a bit de cada subclase.
+- **(i) Arriesgar según la reserva, sobre FABRICA (T 30 000):** la neofobia sola no ayuda; limpiar desde 1.4 rompe la ventana de parto;
+  dejar de morder lo malo tapa el mundo. La regla completa con limpieza costeable (RESC) sube los linajes que persisten de 1/54 a 17/54
+  (O1 20/54) sin mover el R0.
+- **(i) sobre v14.3 (T 100 000):** la pieza que su creador propuso, *neofobia regulada por la reserva*, lo EMPEORA (R0 0.587 → 0.449,
+  1/6; por linaje 0.420).
+- **Familia y perillas de ECO sobre v14.3 (T 100 000):** nada lo mejora en la carrera (tabla de la familia −0.15/−0.19, nodo sin
+  neutras ≈ 0, perillas de ECO −0.25, alpha ±). v14.3 está en un óptimo local respecto de lo probado. **Pero las perillas que eligió la
+  selección en ECO mejoran a FABRICA en la carrera: 6/6, 0.147 → 0.269** (lo seleccionado en la pista v2 transfiere a la pista v1).
+- **(ii) Aprender prediciendo lo que desaparece (T 30 000): negativo** (0.086 contra 0.116 de RES; 0/54 linajes persisten). La señal
+  "lo que los otros comen" está contaminada: morder lo malo también lo quita.
+- **Revisión de la alarma de n10b (T 100 000):** H-NEUTRAS se sostiene (ORA_SIN0 0.997, RES_SIN0 0.91–0.97) → paquete n10c (§1c).
+- Lección de conjunto: las piezas no suman solas; dependen del mundo (la tabla sirve donde el hijo nace vacío y daña donde el linaje
+  ya tiene memoria) y del resto del organismo (las perillas de ECO ayudan a FABRICA y le sobran a v14.3).
 
 ## 3. Decisiones del coordinador de la nube (hora, opción, alternativa descartada, porqué)
 - **01:43 — el arnés de ECO corre ahora, en el núcleo libre, y no justo antes de su serie.**

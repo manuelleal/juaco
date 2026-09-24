@@ -125,6 +125,44 @@ En los tres, si la letra es mala conocida del linaje decide la opción TD de APR
   contención ante lo nuevo, sino saber desde el nacimiento qué es qué. Eso es lo que midió n10c (la familia pasa lo que importa). Siguiente
   exploratorio: `carros_v143_familia.py` (nodo sin neutras; tabla del padre con y sin neutras; control barajado). Arnés WF143 == V143 OK.
 
+### Sobre v14.3: la familia (n10c) y las perillas que eligió ECO
+`carros_v143_familia.py` (N0: nodo del linaje sin neutras; RES: la tabla del padre en el parto, con neutras; RES0: sin neutras; BAR0:
+RES0 con las R permutadas) y `carros_v143_evo.py` (EVO3: alpha ×1.61, aversion ×1.29, eta_s ×1.26, la mediana del banco de CEREBRO de
+ECO v1.1 en el corte; ALPHA: sólo alpha ×1.61; ANTI: alpha ÷1.61; FAB_EVO3: FABRICA con EVO3). Arneses WF143 == V143, WE143 == V143 y
+WEFAB == FAB bit a bit (24098 y 24099).
+`python experimentos/exploratorio_nube_20260924/corre_explora.py --brazos V143,V143_N0,V143_RES,V143_RES0,V143_BAR0,V143_EVO3,V143_ALPHA,V143_ANTI,FAB_EVO3,FAB --desde 24021 --n 2 --T 100000 --tag fea`
+(y `--desde 24023 --tag feb`, `--desde 24025 --tag fec`; 10:46–11:13 UTC, tres procesos). Semillas 24021–24026, T 100 000.
+
+| brazo | R0 real (mediana) | por semilla | linajes que persisten | vida | fundadores | pareado |
+|---|---|---|---|---|---|---|
+| FAB | 0.147 | 0.134 · 0.146 · 0.171 · 0.152 · 0.129 · 0.147 | 0/54 | 68 | 327 | — |
+| **FAB_EVO3** | **0.269** | 0.335 · 0.283 · 0.240 · 0.279 · 0.235 · 0.260 | 0/54 | 200 | 134 | **6/6 contra FAB (+0.120)** |
+| **V143** | **0.637** | 0.647 · 0.705 · 0.718 · 0.581 · 0.628 · 0.443 | 35/54 | 600 | 13.5 | — |
+| V143_N0 | 0.509 | 0.660 · 0.468 · 0.308 · 0.551 · 0.750 · 0.455 | 31/54 | 409 | 26.5 | 3/6 (−0.009) |
+| V143_RES | 0.495 | 0.311 · 0.678 · 0.491 · 0.525 · 0.500 · 0.280 | 29/54 | 241 | 26.5 | 0/6 (−0.145) |
+| V143_RES0 | 0.453 | 0.385 · 0.487 · 0.643 · 0.419 · 0.509 · 0.185 | 28/54 | 214 | 33 | 0/6 (−0.190) |
+| V143_BAR0 | 0.178 | 0.162 · 0.274 · 0.146 · 0.195 · 0.124 · 0.244 | 9/54 | 68 | 199 | 0/6 (−0.458) |
+| V143_EVO3 | 0.358 | 0.348 · 0.366 · 0.517 · 0.391 · 0.201 · 0.351 | 18/54 | 200 | 53 | 0/6 (−0.250) |
+| V143_ALPHA | 0.599 | 0.390 · 0.673 · 0.620 · 0.579 · 0.717 · 0.239 | 32/54 | 535 | 20.5 | 1/6 (−0.064) |
+| V143_ANTI | 0.591 | 0.538 · 0.317 · 0.676 · 0.675 · 0.459 · 0.644 | 35/54 | 600 | 16 | 2/6 (−0.075) |
+
+**Lectura (exploratoria):**
+- **En la carrera, v14.3 está en un óptimo local respecto de todo lo probado hoy:** neofobia (−0.14), tabla de la familia (−0.15 con
+  neutras, −0.19 sin ellas), nodo sin neutras (≈ 0), perillas de ECO (−0.25), alpha en cualquiera de las dos direcciones (−0.06, −0.08).
+- **La tabla de la familia daña en la carrera y sirve en la pista v2, y hay una razón de mundo:** en la carrera el carro ES el cerebro
+  del linaje (un objeto por linaje), así que V143 ya tiene memoria de linaje (el nodo que llenan los muertos, la tabla `_adS` y la opción
+  TD). Poner encima la tabla del padre, tomada en el parto y leída cuando el padre ya murió, reemplaza un nodo más rico por una foto
+  vieja. En la pista v2 el hijo es una instancia nueva y sin la tabla no tiene NADA (§1 de `PREREGISTRO_eco_v12.md`). El contenido
+  importa en los dos sitios: con las R permutadas (BAR0) el linaje se hunde (0.178).
+- **Las perillas que eligió la selección en ECO (pista v2, flujo fijo) mejoran a FABRICA en la carrera (pista v1, reposición inmediata):
+  6/6, de 0.147 a 0.269.** Lo seleccionado en un mundo transfiere a otro: FABRICA muere menos por veneno y sal (7 801 contra 20 585 en
+  las 6 semillas) y vive 200 pasos de mediana contra 68. A V143 le sobra: con EVO3 también baja el veneno y la sal (7 229 contra 10 810)
+  pero suben el hambre y la sed (1 169 contra 767) y se extinguen muchos más linajes (53 fundadores contra 13.5). Sus piezas (FILTRO,
+  opción TD) ya hacen que el valor le gane al hambre; subir alpha y aversion encima lo vuelve más cauto de lo que le conviene (hipótesis).
+- Consecuencia para el frente 1: lo que le falta a v14.3 frente a O1 (0.64 contra 0.94) no está en estas perillas ni en la familia.
+  Para el frente 2: la selección de ECO habría que hacerla sobre V143 (su propio óptimo), y en la pista v2 V143 necesitaría la
+  transmisión en el parto que en la carrera le da el carro de linaje.
+
 ## Revisión de la alarma del §8 de n10b (RES > ORÁCULO 20/20 en la serie 12701–12720)
 `python experimentos/exploratorio_nube_20260924/revisa_n10b_oraculo.py --desde 12794 --n 4` (02:35–02:57 UTC). Semillas de práctica de
 n10b 12794–12797, T 100 000. Es `corre_n10b.tarea` sin tocar; sólo cambia el módulo del carro.

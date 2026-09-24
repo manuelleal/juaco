@@ -14,3 +14,29 @@
 [11:03:41]   s24024 V143_RES   R0real 0.5254 persisten 5/9 vida 218.0 muertes 58.0 fund 27.0 causas {'hambre': 77, 'sed': 69, 'veneno': 816, 'sal': 881} BD 127.0 AC 772.0 sinbueno 0.0227 tot {'partos': 499, 'entradas': 3613, 'neutras': 1678, 'nace_con_tabla': 212} (84.7 s)
 [11:05:07]   s24024 V143_RES0  R0real 0.4189 persisten 5/9 vida 200.0 muertes 73.0 fund 42.0 causas {'hambre': 88, 'sed': 65, 'veneno': 804, 'sal': 745} BD 148.0 AC 728.0 sinbueno 0.0337 tot {'partos': 471, 'entradas': 2868, 'neutras': 1065, 'nace_con_tabla': 212} (86.9 s)
 [11:06:32]   s24024 V143_BAR0  R0real 0.1946 persisten 2/9 vida 61.0 muertes 220.0 fund 177.0 causas {'hambre': 50, 'sed': 50, 'veneno': 1030, 'sal': 1171} BD 596.0 AC 930.0 sinbueno 0.0102 tot {'partos': 518, 'entradas': 3169, 'neutras': 1341, 'nace_con_tabla': 406} (85.1 s)
+[11:08:01]   s24024 V143_EVO3  R0real 0.3913 persisten 2/9 vida 200.0 muertes 91.0 fund 55.0 causas {'hambre': 125, 'sed': 100, 'veneno': 451, 'sal': 678} BD 183.0 AC 622.0 sinbueno 0.0408 tot {} (88.6 s)
+[11:09:21]   s24024 V143_ALPHA R0real 0.5789 persisten 5/9 vida 600.0 muertes 56.0 fund 23.0 causas {'hambre': 93, 'sed': 66, 'veneno': 585, 'sal': 788} BD 113.0 AC 727.0 sinbueno 0.0386 tot {} (80.2 s)
+[11:10:44]   s24024 V143_ANTI  R0real 0.675 persisten 7/9 vida 600.0 muertes 33.0 fund 10.0 causas {'hambre': 51, 'sed': 44, 'veneno': 997, 'sal': 976} BD 65.0 AC 879.0 sinbueno 0.0201 tot {} (82.9 s)
+[11:12:02]   s24024 FAB_EVO3   R0real 0.2794 persisten 0/9 vida 200.0 muertes 172.0 fund 119.0 causas {'hambre': 52, 'sed': 38, 'veneno': 603, 'sal': 815} BD 564.0 AC 815.0 sinbueno 0.0218 tot {} (78.1 s)
+[11:13:27]   s24024 FAB        R0real 0.1519 persisten 0/9 vida 66.0 muertes 376.0 fund 316.0 causas {'hambre': 0, 'sed': 0, 'veneno': 1687, 'sal': 1681} BD 1525.0 AC 1727.0 sinbueno 0.0008 tot {} (84.5 s)
+[11:13:27] RESUMEN por brazo (medianas sobre semillas de la mediana de los 9 linajes)
+[11:13:27]   V143       R0real 0.6492 persisten 12/18 vida 1262.25 muertes 34.0 fund 11.0 BD 72.5 AC 841.5 sinbueno 0.0206 muere_sin_parir 0.5271 · V143 del PC sin tocar (cargado por ruta)
+[11:13:27]   V143_N0    R0real 0.4297 persisten 10/18 vida 387.0 muertes 77.0 fund 47.0 BD 149.0 AC 751.5 sinbueno 0.0249 muere_sin_parir 0.7619 · V143 con el nodo del linaje sin neutras (H-NEUTRAS; cero memoria nueva)
+[11:13:27]   V143_RES   R0real 0.508 persisten 9/18 vida 240.5 muertes 55.0 fund 26.5 BD 116.5 AC 805.0 sinbueno 0.0231 muere_sin_parir 0.6946 · V143 + la tabla del padre vivo en el parto (FAMB_RES de n10b), con neutras
+[11:13:27]   V143_RES0  R0real 0.5309 persisten 10/18 vida 400.0 muertes 57.0 fund 28.0 BD 116.0 AC 692.5 sinbueno 0.033 muere_sin_parir 0.7131 · V143 + la tabla del padre sin neutras (RES_SIN0 de n10c)
+[11:13:27]   V143_BAR0  R0real 0.1704 persisten 3/18 vida 63.75 muertes 252.5 fund 206.5 BD 681.5 AC 939.0 sinbueno 0.0073 muere_sin_parir 0.9592 · control de contenido: RES0 con las R permutadas
+[11:13:27]   V143_EVO3  R0real 0.4542 persisten 6/18 vida 337.5 muertes 88.5 fund 48.0 BD 174.0 AC 624.0 sinbueno 0.0418 muere_sin_parir 0.7612 · V143 con alpha x1.61, aversion x1.29, eta_s x1.26 (lo que eligió ECO)
+[11:13:27]   V143_ALPHA R0real 0.5995 persisten 11/18 vida 600.0 muertes 53.0 fund 20.5 BD 104.5 AC 731.5 sinbueno 0.0369 muere_sin_parir 0.6279 · V143 con alpha x1.61 (el gen elegido 20/20)
+[11:13:27]   V143_ANTI  R0real 0.6758 persisten 13/18 vida 600.0 muertes 41.5 fund 12.0 BD 84.0 AC 843.0 sinbueno 0.0197 muere_sin_parir 0.5686 · control de dirección: V143 con alpha /1.61
+[11:13:27]   FAB_EVO3   R0real 0.2595 persisten 0/18 vida 200.0 muertes 176.5 fund 130.0 BD 573.0 AC 812.5 sinbueno 0.0224 muere_sin_parir 0.8347 · FABRICA con las tres perillas de ECO
+[11:13:27]   FAB        R0real 0.1616 persisten 0/18 vida 65.0 muertes 365.5 fund 305.0 BD 1505.0 AC 1716.0 sinbueno 0.0007 muere_sin_parir 0.8954 · FABRICA de la carrera (bicho real, piso)
+[11:13:27]   pareado V143 vs FAB: gana 2/2 · dif mediana 0.4876
+[11:13:27]   pareado V143_N0 vs FAB: gana 2/2 · dif mediana 0.2681
+[11:13:27]   pareado V143_RES vs FAB: gana 2/2 · dif mediana 0.3464
+[11:13:27]   pareado V143_RES0 vs FAB: gana 2/2 · dif mediana 0.3693
+[11:13:27]   pareado V143_BAR0 vs FAB: gana 1/2 · dif mediana 0.0088
+[11:13:27]   pareado V143_EVO3 vs FAB: gana 2/2 · dif mediana 0.2926
+[11:13:27]   pareado V143_ALPHA vs FAB: gana 2/2 · dif mediana 0.4378
+[11:13:27]   pareado V143_ANTI vs FAB: gana 2/2 · dif mediana 0.5141
+[11:13:27]   pareado FAB_EVO3 vs FAB: gana 2/2 · dif mediana 0.0979
+[11:13:27] JSON: experimentos/exploratorio_nube_20260924/datos/explora_feb_V143-V143_N0-V143_RES-V143_RES0-V143_BAR0-V143_EVO3-V143_ALPHA-V143_ANTI-FAB_EVO3-FAB_s24023-24024_T100000_20260924_104548.json
