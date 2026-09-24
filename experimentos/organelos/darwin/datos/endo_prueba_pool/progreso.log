@@ -1,0 +1,19 @@
+[14:29:19] ENDO endo_prueba_pool · T 6000 · corte 3000 · mundo {'esc': 30, 'n0': 30, 'tope': 3000, 'muestra': 1000} · brazos ('VIDA_S', 'INERTE', 'BARAJADO', 'SIN_TRAGAR', 'AZAR_S') · pool 2 · shas {'corre_endo.py': '078734369e9721c5', 'motor_endo.py': '7e10329cf0cb9fd0', 'simbiontes.py': '72f8829defe3e69f', 'FABRICA_SIMB.py': '38ac0ddba8829c88', 'construye_endo.py': '750c9ced2c3d7631', 'identidad_endosimbiosis.py': '42f458cbbfbe3bc8', 'PREREGISTRO_endosimbiosis.md': '9e2b2dad50ebd414', 'motor_eco3.py': '2eec9830792d9822', 'corre_eco.py': '47d9cee4d6462116'}
+[14:29:29] [1/10] VIDA_S s22991: persiste 0 (vivos 0) · prev_post 0.351515 · D None · err60 None (9.6 s; 10 s)
+[14:29:29] [2/10] INERTE s22991: persiste 1 (vivos 2) · prev_post 0.11859 · D None · err60 None (10.0 s; 10 s)
+[14:29:38] [3/10] BARAJADO s22991: persiste 1 (vivos 2) · prev_post 0.464158 · D None · err60 None (8.8 s; 19 s)
+[14:29:39] [4/10] SIN_TRAGAR s22991: persiste 1 (vivos 2) · prev_post 0.0 · D None · err60 None (9.5 s; 20 s)
+[14:29:47] [5/10] AZAR_S s22991: persiste 1 (vivos 2) · prev_post 0.111905 · D None · err60 None (9.5 s; 28 s)
+[14:29:48] [6/10] VIDA_S s22992: persiste 1 (vivos 1) · prev_post 0.030303 · D None · err60 None (9.4 s; 29 s)
+[14:29:57] [7/10] INERTE s22992: persiste 1 (vivos 1) · prev_post 0.439394 · D None · err60 None (10.4 s; 39 s)
+[14:29:58] [8/10] BARAJADO s22992: persiste 1 (vivos 1) · prev_post 0.19697 · D None · err60 None (9.9 s; 39 s)
+[14:30:07] [9/10] SIN_TRAGAR s22992: persiste 1 (vivos 1) · prev_post 0.0 · D None · err60 None (9.5 s; 48 s)
+[14:30:08] [10/10] AZAR_S s22992: persiste 1 (vivos 1) · prev_post 0.061111 · D None · err60 None (9.6 s; 49 s)
+P1 (persistencia pareada: cuerpos vivos tras el corte) VIDA_S > INERTE 1/2 (menor 0) · VIDA_S > SIN_TRAGAR 0/2 (menor 1) · VIDA_S > BARAJADO 1 · VIDA_S > AZAR_S 1 · medianas VIDA_S 46.5 · INERTE 44.5 · BARAJADO 41.0 · SIN_TRAGAR 47.0 · AZAR_S 43.0 · persisten en T {'VIDA_S': 1, 'INERTE': 2, 'BARAJADO': 2, 'SIN_TRAGAR': 2, 'AZAR_S': 2}
+P2 (R0 de los portadores: delta = r0 con simbionte al nacer - r0 sin, >= 5 por grupo) VIDA_S > INERTE 0/2 (evaluables 0) · VIDA_S > BARAJADO 0/2 (evaluables 0) · VIDA_S > AZAR_S 0 · delta > 0 en VIDA_S 0 · medianas delta VIDA_S None · INERTE None · BARAJADO None · AZAR_S None
+P3 (domesticacion pareada: D = media sobre los PARTOS de I(lo transmitido) - I(libres en la misma muestra)) VIDA_S > AZAR_S 0/2 (evaluables 0) · VIDA_S > INERTE 0/2 (evaluables 0) · placebo BARAJADO D > 0 0, < 0 0 · D > 0: VIDA_S 0 · INERTE 0 · AZAR_S 0 · BARAJADO 0 · medianas D VIDA_S None · INERTE None · BARAJADO None · AZAR_S None · descriptivo D solo tras el corte VIDA_S None · INERTE None · BARAJADO None · AZAR_S None
+DESCRIPTIVO (no decide; trinquete de Fable): fraccion con simbionte tras el corte, medianas VIDA_S 0.1909 · INERTE 0.279 · BARAJADO 0.3306 · SIN_TRAGAR 0.0 · AZAR_S 0.0865 · semillas con fraccion >= 0.9: {'AZAR_S': 0, 'INERTE': 0} · distancia dentro-libres en T VIDA_S 1.3655 · INERTE 0.9449 · BARAJADO 1.3837 · AZAR_S None
+DESCRIPTIVO: fraccion de mordidas por letra en VIDA_S con canal {'A': 0.8972, 'B': 0.1847, 'C': 0.9304, 'D': 0.2812} · sin canal {'A': 0.9479, 'B': 0.2218, 'C': 0.8754, 'D': 0.2481}
+Guardias: errores 0 · bloqueados 0 · corridas con tope de libres 0 · ERR-60 truncadas [] · VIDA_S con libres extintos antes del corte 0 · trinquete {'AZAR_S': 0, 'INERTE': 0} · placebo de D (BARAJADO) (0, 0) · delta > 0 en INERTE 0 · descriptivo, sesgo de adquisicion (D > 0 sin canal / sin seleccion): INERTE 0 AZAR_S 0
+VEREDICTO ENDOSIMBIOSIS POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO (en esta ventana)
+[14:30:08] VEREDICTO: NO (en esta ventana)
