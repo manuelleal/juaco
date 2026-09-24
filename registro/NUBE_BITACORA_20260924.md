@@ -52,6 +52,14 @@
     - Con sed, la boca del hijo del ORÁCULO vería B "neutro" y lo mordería.
     - Prueba: `revisa_n10b_oraculo.py` compara ORA_SIN0 (la tabla verdadera sin entradas neutras) con ORÁCULO, RES y NADA, en semillas
       de práctica 12794–12797.
+  - **02:57 — la revisión de la alarma apoya H-NEUTRAS (exploratorio, 4/4 semillas de práctica 12794–12797).**
+    - ORÁCULO sin sus 4 entradas neutras: 0.997.
+    - ORÁCULO completo: 0.530.
+    - RES: 0.714.
+    - La alarma tiene causa mecánica (la verdad completa borra una generalización protectora), no de instrumento. Detalle en
+      `experimentos/exploratorio_nube_20260924/NOTA_EXPLORATORIA.md`.
+    - Consecuencia para la lectura de n10b: "techo" en V-TECHO-b y "brecha" no significan lo que el preregistro supuso. El veredicto por
+      la letra (§6) no cambia; lo que cambia es la frase declarable, que decide el director.
   - **02:33 — réplica 12721–12740, lanzada con este comando:**
     `/root/venv-juaco/bin/python experimentos/subida_n10b/corre_n10b.py --serie --desde 12721 --n 20 --pool 3`
 

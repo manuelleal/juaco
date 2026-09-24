@@ -70,6 +70,33 @@ Lectura:
   O1 lo resuelve limpiando sólo cuando no queda nada útil y el golpe es costeable. Eso se prueba en i3 con el valor aprendido del
   bicho (`carros_limpia.py`).
 
+## Revisión de la alarma del §8 de n10b (RES > ORÁCULO 20/20 en la serie 12701–12720)
+`python experimentos/exploratorio_nube_20260924/revisa_n10b_oraculo.py --desde 12794 --n 4` (02:35–02:57 UTC). Semillas de práctica de
+n10b 12794–12797, T 100 000. Es `corre_n10b.tarea` sin tocar; sólo cambia el módulo del carro.
+JSON: `datos/revisa_n10b_oraculo_s12794-12797_T100000_20260924_023525.json`.
+El script se amplió después (brazos por argumento, RES_SIN0). Con los 4 brazos por defecto da lo mismo; este es el comando para
+reproducirlo: `--brazos NADA,RES,ORACULO,ORA_SIN0 --desde 12794 --n 4`.
+
+| carro | R0 de nacidos (mediana) | por semilla |
+|---|---|---|
+| NADA | 0.094 | 0.098 · 0.104 · 0.084 · 0.089 |
+| ORÁCULO (tabla verdadera, 8 entradas) | 0.530 | 0.529 · 0.477 · 0.532 · 0.538 |
+| RES (tabla de la familia) | 0.714 | 0.801 · 0.644 · 0.782 · 0.646 |
+| **ORA_SIN0 (tabla verdadera SIN las 4 entradas neutras)** | **0.997** | 0.962 · 1.019 · 0.995 · 1.000 |
+
+Pareados: ORA_SIN0 > ORÁCULO 4/4 (+0.46) · ORA_SIN0 > RES 4/4 (+0.28) · RES > ORÁCULO 4/4 (+0.21).
+
+**Lectura (exploratoria):** H-NEUTRAS se sostiene.
+- **El ORÁCULO no era un techo.** La tabla verdadera daña por sus entradas neutras. Quitadas, el mismo conocimiento verdadero lleva el
+  R0 de los nacidos a ~1.0 en el mundo de flujo fijo (el de ERR-104, donde el 23-sep ningún carro persistía).
+- **La alarma del §8 de n10b tiene explicación mecánica, no de instrumento.** RES le gana al ORÁCULO porque sus tablas incompletas
+  (6–7 claves) suelen no traer las neutras.
+- **Ojo a dos números redondos, pendientes de revisar.**
+  - La vida mediana de los nacidos muertos es 600 en RES (dos semillas). Es lo que vive un recién nacido que nunca come (0.6 / 0.001).
+  - En ORA_SIN0 es ~1401.
+- **Siguiente:** RES_SIN0 (la familia pasa lo que vivió, sin lo neutro), en semillas exploratorias 24001–24004. Si se acerca a ORA_SIN0,
+  la familia se sostiene con su propio conocimiento: candidato a preregistro (n10c).
+
 ## (ii) Aprender prediciendo
 _(pendiente)_
 
