@@ -263,6 +263,17 @@
   - En esta máquina (AVX-512), el `exp` de NumPy difiere del de libm en el 4.6 % de los argumentos.
   - Sus arneses comparan sólo salidas, así que pueden coincidir en la salida y diferir en los pesos.
   - Hay que revisarlos comparando pesos. Afecta la lectura de "gemelo v14 42/42" de la calibración.
+  - **11:25 — premisa VERIFICADA por el coordinador** (numpy 2.4.3, numba 0.67.0, esta máquina): sobre 1 000 000 de argumentos al azar en
+    [−30, 30], [−5, 5] y [−50, 0], el `np.exp` compilado por numba difiere del de NumPy en **4.62–4.65 %**, siempre por **1 ulp**. NumPy
+    da lo mismo con arreglos de 2 elementos que con arreglos largos (el organismo usa arreglos de 2).
+  - **Alcance:** en los gemelos viejos (`organismo_v13_rapido.py`, `organismo_v14_rapido.py`, `organismo_f9_rapido.py`) la sigmoide de
+    la marcha y la de la boca pueden diferir en 1 ulp del original. Eso mueve en el último bit las trazas y los pesos MOTORES (Wl, el),
+    que no se devuelven; los pesos de VALOR (Wp, Wn, Wps, Wns) sólo cambian si cambia una decisión, y una decisión cambia sólo si el
+    sorteo cae a 1 ulp del umbral (del orden de 1e−16 por decisión). Los arneses de esos gemelos comparan salidas y siguen valiendo para
+    salidas; "bit a bit" no vale para los pesos motores internos en esta máquina.
+  - El gemelo de ECO (`motor_eco_rapido.py`) NO tiene el problema: llama al bucle de `np.exp` de NumPy por ctypes (su INFORME).
+  - Propuesta para el PC (no se aplica): decir "bit a bit en la salida" en los informes de los gemelos viejos, o portarles el `exp` de
+    NumPy en archivos nuevos. No cambia ningún veredicto registrado.
 
 ### 1e. ECO v1.1 — el mismo vivero con un juez que distingue selección de deriva (paquete nuevo, decisión del coordinador; ver §3)
 - **Qué es:** ECO v1 sin tocar ningún archivo del PC, con dos cambios de INSTRUMENTO y ninguno de mecanismo:
