@@ -7,10 +7,10 @@ versión corrige el instrumento que falló (candidato nube-8) y se corre en **se
 ## 0. Instrumento (sha a 16)
 - Mismo motor, carro y gemelo que v2: `motor_eco2.py` (0921ee3a50ce7f7a), `carros/FAMB_ORG_ECO.py` (75d5f4118079ff15), gemelo
   `motor_eco_rapido_org.py` (024f0a8ea5e12c7d; arnés 99/99).
-- Runner `corre_eco_v21.py` (= `corre_eco_v2.py` + la captura de la expresión en el corte + la letra de §6; el sha va en el log) y su arnés
+- Runner `corre_eco_v21.py` (**7a64da16e6e7fd25**; = `corre_eco_v2.py` + la captura de la expresión en el corte + la letra de §6) y su arnés
   `identidad_eco_v21.py`: (M) mundos, brazos, ventanas; (T) medidas a mano; **(S)** la expresión del corte sale del checkpoint y el real
   coincide con el banco del motor; **(G)** gemelo == Python en los tres mundos y los dos brazos, con la expresión incluida; (V) la letra;
-  (R) banderas.
+  (R) banderas. **`identidad_eco_v21.py` (0e7ac33bb774ca02): 22/22 (13:15 UTC).** Prueba del Pool (20292–20293, T 12 000, corte 10 000): corre.
 
 ## 1. Qué falló en v2 y qué cambia (sólo el instrumento)
 - **nube-8:** O1 de v2 comparaba la MEDIA del gen en el banco con la de sus 8 sombras. Para un rasgo con umbral la selección sólo necesita
