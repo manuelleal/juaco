@@ -1,0 +1,127 @@
+{
+ "etiqueta": "gramatica_serie_s21011-21030",
+ "veredicto": "NO",
+ "lineas": [
+  "TOP (fuerza bruta confirmatoria): ['[nacer/sin0/hijo/copiar]']",
+  "P1a VIDA expresa TOP sobre la media de sus 8 sombras 1/20 (AZAR 4/20) \u00b7 P1b VIDA > AZAR 1/20",
+  "P2 modal de VIDA en TOP 1/20 \u00b7 P3 en TOP y NO disenado 0/20 \u00b7 P4 CREA 0/20",
+  "persisten en T {'VIDA': 8, 'AZAR': 8, 'MUT0': 0, 'FIJO:ensena': 20, 'FIJO:filtra0': 20, 'FIJO:nulo': 7} \u00b7 R0 de nacidos tras el corte (mediana) {'VIDA': 0.592, 'AZAR': 0.0353, 'MUT0': 0.0551, 'FIJO:ensena': 0.9362, 'FIJO:filtra0': 0.9431, 'FIJO:nulo': 0.4673}",
+  "S (largo, secundario) slots ACTIVOS en el banco final (mediana): VIDA 0.378 \u00b7 sus sombras 0.443 \u00b7 AZAR 0.76 \u00b7 VIDA > sombras 9/20 \u00b7 VIDA > AZAR 7/20 -> el largo NO lo eligio la seleccion; slots TOTALES (con silenciosos): VIDA 0.968 \u00b7 sombras 0.938 \u00b7 AZAR 0.935",
+  "P5 (secundario) VIDA CONCENTRA el banco final en un organo armado mas que sus sombras 10/20 (AZAR 11/20); no disenados entre los de VIDA: 18",
+  "  VIDA s21011: ('[]', 0.995, '-', 'nulo', '')",
+  "  VIDA s21012: ('extinta',)",
+  "  VIDA s21013: ('[nacer/todo/hijo/copiar]', 0.625, '-', 'ensena', '')",
+  "  VIDA s21014: ('extinta',)",
+  "  VIDA s21015: ('extinta',)",
+  "  VIDA s21016: ('extinta',)",
+  "  VIDA s21017: ('[vida/sin0/hijo/copiar]', 0.99, '-', 'NUEVO', '')",
+  "  VIDA s21018: ('[morir/todo/hermano/invertir]', 0.59, '-', 'NUEVO', '')",
+  "  VIDA s21019: ('extinta',)",
+  "  VIDA s21020: ('extinta',)",
+  "  VIDA s21021: ('[nacer/sin0/hijo/copiar + nunca/sin0/hermano/invertir* + nunca/sin0/hermano/invertir*]', 0.675, 'TOP', 'filtra0', '')",
+  "  VIDA s21022: ('extinta',)",
+  "  VIDA s21023: ('[nunca/todo/vecino/invertir]', 0.705, '-', 'nulo', '')",
+  "  VIDA s21024: ('extinta',)",
+  "  VIDA s21025: ('extinta',)",
+  "  VIDA s21026: ('[nunca/pos/hijo/promediar]', 0.895, '-', 'nulo', '')",
+  "  VIDA s21027: ('extinta',)",
+  "  VIDA s21028: ('extinta',)",
+  "  VIDA s21029: ('extinta',)",
+  "  VIDA s21030: ('[nunca/todo/vecino/copiar]', 0.985, '-', 'nulo', '')",
+  "  P5 VIDA s21011: [morir/pos/hijo/copiar] real 0.005 sombras 0.374 NUEVO",
+  "  P5 VIDA s21012: [nacer/pos/hijo/copiar] real 0.17 sombras 0.148 NUEVO",
+  "  P5 VIDA s21013: [nacer/todo/hijo/copiar] real 0.625 sombras 0.209 ensena",
+  "  P5 VIDA s21014: [nunca/pos/hermano/invertir + vida/pos/hermano/invertir*] real 0.11 sombras 0.136 NUEVO",
+  "  P5 VIDA s21015: [nunca/neg/hermano/promediar + morir/neg/hermano/promediar*] real 0.065 sombras 0.084 NUEVO",
+  "  P5 VIDA s21016: [nacer/sin0/hijo/promediar] real 0.24 sombras 0.155 NUEVO",
+  "  P5 VIDA s21017: [vida/sin0/hijo/copiar] real 0.99 sombras 0.484 NUEVO",
+  "  P5 VIDA s21018: [morir/todo/hermano/invertir] real 0.59 sombras 0.177 NUEVO",
+  "  P5 VIDA s21019: [vida/reciente/hijo/invertir] real 0.04 sombras 0.149 NUEVO",
+  "  P5 VIDA s21020: [vida/pos/hermano/promediar] real 0.09 sombras 0.306 NUEVO",
+  "  P5 VIDA s21021: [nacer/sin0/hijo/copiar + nunca/sin0/hermano/invertir* + nunca/sin0/hermano/invertir*] real 0.675 sombras 0.128 filtra0",
+  "  P5 VIDA s21022: [morir/neg/hermano/promediar + nunca/sin0/vecino/invertir*] real 0.235 sombras 0.146 NUEVO",
+  "  P5 VIDA s21023: [nunca/pos/hijo/invertir + nacer/pos/vecino/invertir*] real 0.13 sombras 0.125 NUEVO",
+  "  P5 VIDA s21024: [nacer/pos/hermano/promediar] real 0.01 sombras 0.171 NUEVO",
+  "  P5 VIDA s21025: [nacer/pos/hermano/invertir] real 0.055 sombras 0.069 NUEVO",
+  "  P5 VIDA s21026: [vida/pos/hermano/promediar] real 0.035 sombras 0.309 NUEVO",
+  "  P5 VIDA s21027: [vida/sin0/hermano/invertir] real 0.41 sombras 0.162 NUEVO",
+  "  P5 VIDA s21028: [morir/neg/hijo/promediar] real 0.175 sombras 0.104 NUEVO",
+  "  P5 VIDA s21029: [nunca/sin0/hermano/copiar + morir/sin0/hermano/copiar*] real 0.025 sombras 0.118 NUEVO",
+  "  P5 VIDA s21030: [morir/todo/vecino/copiar] real 0.015 sombras 0.158 NUEVO",
+  "VEREDICTO ORGANELOS/GRAMATICA POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO"
+ ],
+ "d": {
+  "P1a": false,
+  "P1b": false,
+  "P2": false,
+  "P3": false,
+  "P4": false,
+  "S_sel": false,
+  "P5": [
+   10,
+   20,
+   11,
+   20
+  ],
+  "pers": {
+   "VIDA": 8,
+   "AZAR": 8,
+   "MUT0": 0,
+   "FIJO:ensena": 20,
+   "FIJO:filtra0": 20,
+   "FIJO:nulo": 7
+  },
+  "r0": {
+   "VIDA": 0.592,
+   "AZAR": 0.0353,
+   "MUT0": 0.0551,
+   "FIJO:ensena": 0.9362,
+   "FIJO:filtra0": 0.9431,
+   "FIJO:nulo": 0.4673
+  },
+  "w": 1,
+  "eV": [
+   1,
+   20
+  ],
+  "eA": [
+   4,
+   20
+  ]
+ },
+ "seg": 6263,
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "r0_margen": 20000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "GRAM": {
+  "p_campo": 0.05,
+  "p_dup": 0.02,
+  "p_del": 0.02,
+  "tope": 4
+ },
+ "TOP": [
+  [
+   1,
+   3,
+   0,
+   0
+  ]
+ ],
+ "shas": {
+  "corre_gramatica.py": "3a9c62f6ad08bc0b",
+  "motor_gramatica.py": "6b65dc5e32093424",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9",
+  "gramatica_def.py": "c58086e103d030d9",
+  "conducta.py": "9a2f1226fe27a514",
+  "construye_gramatica.py": "df8c78c3c0d53cad",
+  "PREREGISTRO_gramatica.md": "cf29db304f7851c0"
+ }
+}
