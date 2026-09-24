@@ -1109,9 +1109,14 @@ def _vacia_filas(st, lin_py, E_):
 
 
 def _estado_blob(st, lin_py, ES, tn, firma):
-    """E7 del gemelo: TODO el estado en un pickle (los Generators compartidos siguen compartidos)."""
-    d = {k: v for k, v in st.items() if k not in ('GL', 'FUND', 'MUE', 'BEXP')}
-    d['GL'] = list(st['GL']); d['FUND'] = list(st['FUND']); d['MUE'] = list(st['MUE'])
+    """E7 del gemelo: TODO el estado en un pickle (los Generators compartidos siguen compartidos). Solo las ranuras VIVAS,
+    renumeradas en el orden de la lista de turno (la ranura es interna: no entra en ninguna salida; arnes (C))."""
+    viv = np.array(_vivos(st), np.int64); nl = len(viv)
+    d = {k: v for k, v in st.items() if k not in ('GL', 'FUND', 'MUE', 'BEXP') and k not in BODY_KEYS}
+    for k in BODY_KEYS: d[k] = st[k][viv].copy()
+    d['cuer'] = np.arange(nl, dtype=np.int64); d['nuevos'] = np.zeros(nl, np.int64); d['freel'] = np.zeros(nl, np.int64)
+    d['wi'] = st['wi'].copy(); d['wi'][W_NFREE] = 0; d['wi'][W_NCUER] = nl
+    d['GL'] = [st['GL'][int(s)] for s in viv]; d['FUND'] = list(st['FUND']); d['MUE'] = list(st['MUE'])
     return pickle.dumps(dict(t=tn, firma=firma, st=d, lin_py=lin_py, ES=ES), protocol=pickle.HIGHEST_PROTOCOL)
 
 
