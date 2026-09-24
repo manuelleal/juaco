@@ -70,6 +70,28 @@ Lectura:
   O1 lo resuelve limpiando sólo cuando no queda nada útil y el golpe es costeable. Eso se prueba en i3 con el valor aprendido del
   bicho (`carros_limpia.py`).
 
+**Tanda i3: limpieza costeable** (03:44–04:00 UTC; `carros_limpia.py`; identidad previa: WL == FAB OK):
+`python experimentos/exploratorio_nube_20260924/corre_explora.py --brazos FAB,LIMC,MALC,RESC,VER_RESC,O1 --desde 24001 --n 6 --T 30000 --tag i3`
+
+| brazo | R0 real | **linajes que persisten** | vida | muertes | mord. B+D | pasos sin nada bueno | gana a FAB |
+|---|---|---|---|---|---|---|---|
+| FAB | 0.149 | 1/54 | 66 | 116 | 465 | 0.000 | — |
+| LIMC (FABRICA + limpieza costeable) | 0.154 | 0/54 | 67 | 106 | 444 | 0.000 | 4/6 (+0.006) |
+| MALC (veta lo malo salvo limpieza costeable) | 0.112 | 5/54 | 200 | 51 | 59 | 0.087 | 2/6 |
+| **RESC** (neo 0.5 + MALC) | 0.146 | **17/54** | 200 | 49 | 54 | 0.062 | 3/6 |
+| VER_RESC | 0.101 | 14/54 | 200 | 50 | 58 | 0.120 | 2/6 |
+| O1 | 0.775 | 20/54 | 3454 | 5 | 106 | 0.036 | 6/6 |
+
+Lectura:
+- **En R0 real, la limpieza costeable no cambia nada.** Se usa poco: 4–40 limpiezas por corrida, porque "no queda nada útil en el
+  mundo" casi nunca se cumple.
+- **La regla completa de la reserva (RESC) sí cambia la PERSISTENCIA.** Pasa de 1/54 a 17/54 linajes-semilla sin fundadores tras
+  t = 10 000 (ENMIENDA 6), cerca de O1 (20/54). El resultado es BIMODAL: un tercio de los linajes se estabiliza; el resto muere como
+  FABRICA (vida 200: una mordida mala al nacer, y hambre). La mediana del R0 no lo ve.
+- **Siguiente:** medir RESC con T = 100 000, el horizonte de la carrera, contra FAB, APR y O1.
+  - Mirar por linaje: ¿los linajes estables son los que aprendieron A/C antes de probar lo malo?
+  - Candidato a la pieza "neofobia regulada por la reserva" del informe de v14.3.
+
 ## Revisión de la alarma del §8 de n10b (RES > ORÁCULO 20/20 en la serie 12701–12720)
 `python experimentos/exploratorio_nube_20260924/revisa_n10b_oraculo.py --desde 12794 --n 4` (02:35–02:57 UTC). Semillas de práctica de
 n10b 12794–12797, T 100 000. Es `corre_n10b.tarea` sin tocar; sólo cambia el módulo del carro.
