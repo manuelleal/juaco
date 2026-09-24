@@ -1,0 +1,78 @@
+{
+ "etiqueta": "eco_v21_serie_s20211-20230",
+ "veredicto": "FUNCIONA: LA SELECCION PRENDE EL ORGANO DE ENSENAR (en esta serie; O1* y O2 en 3 de 3 mundos)",
+ "lineas": [
+  "[w30] ensena: VIDA expresa sobre la media de sus sombras 17/20 \u00b7 AZAR 9/20 \u00b7 filtra0: VIDA 15/20 \u00b7 AZAR 10/20 \u00b7 descriptivo media contra sombras VIDA ensena (11, 2) filtra0 (7, 2)",
+  "[w30] banco con ensena (mediana): VIDA 0.975 \u00b7 AZAR 0.29; VIDA > AZAR 15/20 \u00b7 con filtra0: VIDA 0.775 \u00b7 AZAR 0.3225 \u00b7 vivos en T con ensena: VIDA 1.0 \u00b7 AZAR 0.0",
+  "[w30] otros genes seleccionados en VIDA (>= 15/20): [] \u00b7 persisten en T: {'VIDA': 19, 'AZAR': 10} \u00b7 O1* SI \u00b7 O2 SI \u00b7 F SI",
+  "[w90] ensena: VIDA expresa sobre la media de sus sombras 20/20 \u00b7 AZAR 7/20 \u00b7 filtra0: VIDA 15/20 \u00b7 AZAR 10/20 \u00b7 descriptivo media contra sombras VIDA ensena (15, 0) filtra0 (10, 1)",
+  "[w90] banco con ensena (mediana): VIDA 0.9924999999999999 \u00b7 AZAR 0.195; VIDA > AZAR 20/20 \u00b7 con filtra0: VIDA 0.735 \u00b7 AZAR 0.42500000000000004 \u00b7 vivos en T con ensena: VIDA 1.0 \u00b7 AZAR 0.25",
+  "[w90] otros genes seleccionados en VIDA (>= 15/20): [('alpha', (15, 0))] \u00b7 persisten en T: {'VIDA': 20, 'AZAR': 15} \u00b7 O1* SI \u00b7 O2 SI \u00b7 F SI",
+  "[w270] ensena: VIDA expresa sobre la media de sus sombras 20/20 \u00b7 AZAR 8/20 \u00b7 filtra0: VIDA 14/20 \u00b7 AZAR 7/20 \u00b7 descriptivo media contra sombras VIDA ensena (16, 0) filtra0 (7, 0)",
+  "[w270] banco con ensena (mediana): VIDA 0.985 \u00b7 AZAR 0.12; VIDA > AZAR 18/20 \u00b7 con filtra0: VIDA 0.6699999999999999 \u00b7 AZAR 0.2475 \u00b7 vivos en T con ensena: VIDA 0.99505 \u00b7 AZAR 0.3571",
+  "[w270] otros genes seleccionados en VIDA (>= 15/20): [('tau_e', (0, 17)), ('alpha', (15, 0)), ('rep_umbral', (0, 16)), ('rep_X', (0, 15))] \u00b7 persisten en T: {'VIDA': 20, 'AZAR': 15} \u00b7 O1* SI \u00b7 O2 SI \u00b7 F NO",
+  "secundario: filtra0 expresado sobre sus sombras (>= 15/20) en 2 de 3 mundos",
+  "VEREDICTO ECO v2.1 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): FUNCIONA: LA SELECCION PRENDE EL ORGANO DE ENSENAR (en esta serie; O1* y O2 en 3 de 3 mundos)"
+ ],
+ "d": {
+  "O1": {
+   "w30": true,
+   "w90": true,
+   "w270": true
+  },
+  "O2": {
+   "w30": true,
+   "w90": true,
+   "w270": true
+  },
+  "F": {
+   "w30": true,
+   "w90": true,
+   "w270": false
+  },
+  "n_ok": 3,
+  "n_uno": 3,
+  "guardia": []
+ },
+ "seg": 808,
+ "V2": {
+  "T": 120000,
+  "t_corte": 60000
+ },
+ "MUNDOS": {
+  "w30": {
+   "esc": 30,
+   "n0": 30,
+   "tope": 3000
+  },
+  "w90": {
+   "esc": 90,
+   "n0": 90,
+   "tope": 3000
+  },
+  "w270": {
+   "esc": 270,
+   "n0": 270,
+   "tope": 9000
+  }
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "shas": {
+  "corre_eco_v21.py": "7a64da16e6e7fd25",
+  "corre_eco.py": "47d9cee4d6462116",
+  "motor_eco2.py": "0921ee3a50ce7f7a",
+  "motor_eco_rapido_org.py": "024f0a8ea5e12c7d",
+  "carros/FAMB_ORG_ECO.py": "75d5f4118079ff15",
+  "construye_eco_org.py": "ff5531748aa4bd6a",
+  "PREREGISTRO_eco_v21.md": "8cd7f988d49eaf2f"
+ }
+}
