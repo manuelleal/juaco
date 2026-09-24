@@ -37,6 +37,21 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
   investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
 - Cada serie corre su arnés de identidad antes y se detiene si no da N/N. Cada resultado se registra al salir (REGISTRO, commit y push).
 
+## NOCHE 23→24-sep: trabaja sola; el coordinador audita el 24-sep (director, ~21:05: "lo cerramos así, dejamos que el agente trabaje solo y lo auditas mañana")
+- **PC, hasta ~00:00:** v14.3 (serie 14301 y réplica 14321) · 9b réplica 13521 (la serie 13501 dio las tres lesiones sin pérdida, P2
+  refutada: la ventaja de APR viene de contenerse, no de predecirse) · 6b → 8c → 8b.
+- **Agentes locales:** examen v4 del v14.3 (`experimentos/tronco_v14_3_examen/`, creador + auditor) · prueba de humo del bicho en
+  aprendizaje continuo de ML (`PROYECTOS/JUACO/ml_continuo/`, FUERA del repo, exploratoria).
+- **Nube, sesión de noche** (rama `nube/noche-20260924`, bitácora `registro/NUBE_BITACORA_20260924.md`): 10b serie y réplica → ECO
+  (prueba de Pool, serie, réplica) → exploratorios "arriesgar según la reserva" y "aprender prediciendo".
+- **Auditoría del 24-sep, en orden:**
+  1. `/juaco-estado`;
+  2. leer los logs de la cola de la noche y registrar cada veredicto;
+  3. leer la bitácora de la nube e integrar su rama;
+  4. auditar el paquete del examen v4 y correrlo (en la nube o el PC);
+  5. si pasa serie y réplica, congelar v14.3 (permiso escrito del director, 19:30);
+  6. decidir con el director el nivel 9 (propuesta 55 %) y la pieza siguiente ("arriesgar según la reserva").
+
 ## Resultados del 23-sep (detalle y tablas en el REGISTRO)
 | bloque | veredicto | en una línea |
 |---|---|---|
