@@ -1,0 +1,36 @@
+{
+ "ventana": "serie",
+ "veredicto": "TRANSFIERE (en esta serie): lo seleccionado en ECO vive mejor en la carrera que lo derivado y que G0",
+ "lineas": [
+  "semillas por brazo: {'VIDA': 20, 'VIDA_P': 20, 'AZAR': 20, 'G0': 20}; R0 real (mediana de las medianas de 9 lineas): {'VIDA': 0.2747, 'VIDA_P': 0.2716, 'AZAR': 0.1526, 'G0': 0.1511}",
+  "T1 VIDA > AZAR (pareado, estricto) 15/20 (empates 0) \u00b7 T2 VIDA > G0 20/20 (empates 0) \u00b7 descriptivo AZAR > G0 9/20 (empates 0)",
+  "PLACEBO VIDA contra VIDA_P (otra muestra del mismo banco): 9.0 de 20 (valido en [5, 15]) -> VALIDO",
+  "persisten (lineas de 9, suma): {'VIDA': 9, 'VIDA_P': 1, 'AZAR': 16, 'G0': 1}",
+  "VEREDICTO POR LA LETRA (una ventana; el del bloque exige serie + replica con el mismo veredicto): TRANSFIERE (en esta serie): lo seleccionado en ECO vive mejor en la carrera que lo derivado y que G0"
+ ],
+ "d": {
+  "T1": true,
+  "T2": true,
+  "wVA": 15,
+  "wVG": 20,
+  "wAG": 9,
+  "placebo": 9.0,
+  "placebo_ok": true,
+  "medianas": {
+   "VIDA": 0.2747,
+   "VIDA_P": 0.2716,
+   "AZAR": 0.1526,
+   "G0": 0.1511
+  }
+ },
+ "seg": 2225,
+ "T": 100000,
+ "shas": {
+  "corre_transfiere.py": "629b30d6c184572f",
+  "pista.py": "9f47c65e438e0ff4",
+  "juez.py": "6a68f640a7832f12",
+  "motor_eco.py": "bca3033878b59622",
+  "FABRICA.py": "2ebee3e99ea5a33a",
+  "PREREGISTRO_transfiere.md": "b3753911dcd897b3"
+ }
+}
