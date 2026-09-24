@@ -66,9 +66,46 @@ Prompt para pegar (se puede repetir; cada sesión retoma de ESTADO.md):
 Lee NUBE.md, CLAUDE.md, registro/ESTADO.md (bloque más reciente y "Decisiones del coordinador") y la cola de registro/HANDOFF.md.
 Trabaja de forma autónoma siguiendo la §3 de NUBE.md: toma la siguiente serie de la cola, verifica su arnés de identidad, córrela con
 Pool = 3 (nproc − 1; en la nube nadie más usa la máquina) y con /root/venv-juaco/bin/python, evalúala contra la letra de su preregistro, regístrala (REGISTRO, ESTADO, HANDOFF), commit y push a la rama
-nube/<fecha>. Cuando la cola se vacíe, lanza la siguiente tanda del nivel más lejos de 80 % con un equipo de 3 agentes
-(explorador -> creador -> auditor, ver .claude/agents) y sigue. Toma las decisiones difíciles y escríbelas con su porqué en ESTADO.md.
-No toques el tronco congelado; los niveles los fija el director. Al cerrar, deja ESTADO.md al día para la siguiente sesión.
+nube/<fecha>. Cuando la cola se vacíe, trabaja en los 2 frentes del plan vigente (§3; no en puntajes por nivel) con, a lo sumo, un
+equipo de agentes por frente (ver .claude/agents), y si sobra tiempo experimenta según registro/LABORATORIO.md. Toma las decisiones
+difíciles y escríbelas con su porqué. No toques el tronco congelado; los niveles los fija el director. Al cerrar, deja todo escrito para
+la siguiente sesión.
+```
+
+## 2b. Sesión de NOCHE del 23→24-sep-2026 (el director: "que corra de noche; le doy la libertad para probar y experimentar")
+Prompt para pegar en la sesión de la nube. El PC del director corre esa noche v14.3, 9b, 6b, 8c y 8b; la nube corre lo demás.
+
+```
+Misión: llegar a la AGI por este camino (organismo mínimo con reglas locales, sin retropropagación, peldaños preregistrados con
+controles y réplicas). El método manda sobre el cómo. Principio del director: la misión es la AGI, no llenar benchmarks.
+
+1. Antes de nada: git pull de main. Lee NUBE.md (§0, §1, §3 y §4), registro/ESTADO.md (PLAN VIGENTE: máximo 2 frentes) y
+   registro/LABORATORIO.md (en especial "Huecos de ciencia"). Verifica que `python --version` dé 3.13.12. Si no, usa
+   /root/venv-juaco/bin/python en cada comando. Pool = 3.
+2. SERIES (en este orden; antes de cada una, su arnés de identidad debe dar N/N o no se corre):
+   a) subida_n10b (decisión del director): python experimentos/subida_n10b/identidad_familia_b.py (42/42), luego
+      corre_n10b.py --serie --desde 12701 --n 20 --pool 3 y la réplica --desde 12721.
+   b) JUACO-ECO, frente 2: python experimentos/juaco_eco/identidad_eco.py (41/41), después
+      corre_eco.py --serie --prueba_pool --desde 19031 --n 2 --pool 2, luego la serie --desde 19101 --n 20 --pool 3, y la réplica
+      --desde 19121 si hay tiempo. Si la sesión va a cortarse, sube los checkpoints para retomar con --reanuda.
+   Evalúa cada serie contra la LETRA de su preregistro: el runner imprime VEREDICTO. No muevas umbrales: si hace falta, es ERR y se
+   anota, no se aplica.
+3. LIBERTAD PARA EXPERIMENTAR (el director te la da esta noche): usa el núcleo libre (un proceso a la vez) para prototipos
+   EXPLORATORIOS en experimentos/exploratorio_nube_20260924/, con NOTA_EXPLORATORIA.md cuya primera línea diga "EXPLORATORIO — no es
+   dato". Temas, en orden:
+   (i) "arriesgar según la reserva": probar lo desconocido y limpiar sólo cuando min(E, Ag) es alto. Aparece en v14.3, nivel 8,
+       Frankenstein y O1. Sobre APR/FABRICA en la pista de la carrera.
+   (ii) "aprender prediciendo": un órgano local que predice en cada paso lo que verá o sentirá y aprende del error.
+   (iii) lo que tú veas más prometedor para que el MISMO bicho sostenga su vida con comida limitada.
+   Cada número con su comando y su semilla. Ablaciones al menos contra FABRICA/APR y O1.
+4. PRESUPUESTO: el crédito es de 250 USD hasta el 5-nov. Esta noche, como máximo 2 agentes de apoyo en total (por ejemplo un auditor
+   al final). Lo demás lo haces tú. Correr series gasta poco; muchos agentes gastan mucho.
+5. PROHIBIDO: editar el tronco congelado, manifiesto.py o MANIFEST.txt (la guardia lo bloquea); congelar; mover umbrales tras ver datos;
+   declarar porcentajes de nivel; hacer merge a main; borrar datos; forzar push.
+6. REGISTRO SIN CONFLICTOS: NO edites registro/ESTADO.md, REGISTRO_etapas_1_2.md ni HANDOFF.md (el PC los está usando). Escribe todo en
+   registro/NUBE_BITACORA_20260924.md: qué corriste, con hora, comando, sha y veredicto por la letra; lo exploratorio aparte y
+   marcado; decisiones difíciles con su porqué; qué falló y qué propones para mañana. Haz commit y push a la rama nube/noche-20260924
+   al menos cada hora, para que nada se pierda. Mañana el coordinador lo integra.
 ```
 
 ## 3. Orden de trabajo en la nube (se actualiza en cada cierre) — PLAN VIGENTE del 23-sep: **máximo 2 frentes**
