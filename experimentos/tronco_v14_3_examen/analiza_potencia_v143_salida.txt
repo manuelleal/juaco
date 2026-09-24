@@ -1,0 +1,10 @@
+T-B (tronco == v14.3 en el mundo de regla), bootstrap de 40 semillas reales, n = 20, B = 20000: {'G1': 1.0, 'G2': 1.0, 'azar1': 0.969, 'azar2': 0.55, 'K': 1.0, 'todo': 0.549}
+    (NO es la letra) con la banda de azar G2 propuesta (0.31, 0.6) para el ERR candidato: T-B entera 0.957
+    mediana real de azar G2 = 0.4344 (banda de la letra [0.42, 0.58]); cuantiles de la mediana a n = 20: {'0.005': 0.3028, '0.01': 0.3184, '0.025': 0.3366, '0.05': 0.3528, '0.5': 0.4344, '0.95': 0.5223, '0.975': 0.5498, '0.99': 0.5974, '0.995': 0.6033}
+T-C (i) / T-E absolutas: E2 come B Q4 >= 50 en 60/60 semillas del tronco (minimo 51); cota 95 % del fallo por semilla 0.0487 -> P(>= 18/20) >= 0.929; E2I 40/40 (+20/20 del log 101-120)
+legible (TRONCO_B pasa T-A, T-C ii y T-F vivo), reparto del nulo real OFF + TRONCO_B de V4-CAL, B = 2000: {'serie 2841-2920': {'TA': 0.999, 'TC': 0.9965, 'TF': 0.98, 'todo': 0.9755}, 'replica 2361-2440': {'TA': 0.997, 'TC': 0.9965, 'TF': 0.974, 'todo': 0.9675}}
+T-D: el tronco con B-5 cumple C1/C2 en 18/18 ALIAS y C6 en 18/18 LIMPIAS (valores [(0.0, -3.0)] / [(0.0, -3.0)]); cota 95 % del fallo por semilla 0.0798
+T-G (3T-k), bootstrap de 40 semillas reales de subida_n7, n = 20, B = 1000: N {'G1': 1.0, 'G2': 1.0, 'G3': 1.0, 'todo': 1.0}, K_max(N) {'8': 1000}; NULO (el tronco como candidato) {'G1': 0.0, 'todo': 0.0}; G-2 signo: nulo p = 0.5 -> 0.0207, margen p = 0.85 -> 0.933
+CONJUNTO por serie ~ 0.469 (serie y replica ~ 0.22); SIN la banda de azar de T-B: 0.854 (0.729)
+seg por corrida (PC, bajo Pool): {'critv4_20260922_132544_crudo_TA.json': 9.08, 'critv4_20260922_132544_crudo_TCii.json': 8.75, 'n7 (T142/N/NC3C)': 7.09}
+datos -> datos\humo\potencia_examen_v143_20260923_203158.json  sha256_16 = 281b2e55b4ad1aaf  (16.5 s)

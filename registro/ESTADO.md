@@ -83,6 +83,16 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 - **Nube calibrada (19:35): FUNCIONA, bits idénticos al PC**; Pool 3 en la nube; scipy 1.17.1 fijada en `requirements.txt`.
 
 ## Decisiones pendientes del director (máx. 2)
+0. **(Primera del 24-sep) Examen v4 del v14.3 = v14.2 + N** (`experimentos/tronco_v14_3_examen/`, arnés 106/106, auditor: LISTO PARA SERIE).
+   - El problema está en la letra, no en N: la banda azar-G2 de T-B [0.42, 0.58] deja pasar al propio tronco sólo el 0.55 de las veces
+     (mediana del nulo 0.434; mismo patrón que ERR-91). Por eso el examen pasaría serie y réplica con probabilidad 0.22–0.27, aunque v14.3
+     es v14.2 bit a bit en T-A a T-F (N sólo actúa si la masa del estímulo ≠ 3).
+   - Opciones:
+     (a) **recomendada:** enmendar la banda a [0.31, 0.60] ANTES de correr (pasa al tronco 0.957), con ERR-122 y el cálculo del
+         nulo adjunto (`analiza_potencia_v143.py`);
+     (b) correr tal cual; si cae con el candidato idéntico al tronco, se registra como defecto de la letra (§6a).
+   - Aclaración de nombres: `tronco_v14_3` (el paquete de la pista: filtro + boca TD) es OTRO candidato. El tronco v14.3 es v14.2 + N;
+     lo que salga del paquete de la pista iría a v14.4.
 1. **Nube, opcional (1 min):** pegar el *Setup script* de `NUBE.md` §1 en el menú del entorno. Crédito: 250 USD, vence el 5-nov-2026 y
    NO vale para Rutinas.
 2. **24-sep:** leer los veredictos de la noche (9 réplica, v14.3, 9b, 6b, 8c, 8b) y el resultado del examen v4 del v14.3.
