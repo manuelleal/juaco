@@ -1013,7 +1013,7 @@ tabla de decisiones para el director. Detalle en la memoria del coordinador (`ju
 - **Revisión de todos los .md** (auditor de documentos): corregidos ESTADO (sello, Errores decía ERR-92, pendiente viejo), CRITERIO_TRONCO_v4 (decía
   borrador tras declararse utilizable), PLAN (marcado bitácora), INDICE (faltaban 25 carpetas).
 
-### 15.32 Cierre parcial del 23-sep-2026 (19:10; la cola sigue corriendo esa noche en el PC del director)
+### 15.32 Cierre parcial del 23-sep-2026 (~19:00; la cola sigue corriendo esa noche en el PC del director)
 
 **Corrido y registrado hoy:**
 - aprende_barrer, réplica: MODESTO ×2.

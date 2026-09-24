@@ -1,13 +1,13 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **23-sep-2026, 19:10** (coordinador; CIERRE PARCIAL: la cola de la noche sigue corriendo en el PC del director y cada
+> Última reescritura: **23-sep-2026, ~19:00** (coordinador; CIERRE PARCIAL: la cola de la noche sigue corriendo en el PC del director y cada
 > resultado se registra al salir). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de `REGISTRO_etapas_1_2.md` y en
 > la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
 > Historia: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md` (§15.30 = 22-sep, §15.31–15.32 = 23-sep). Orden vigente: **este archivo**.
 > Reglas: `CLAUDE.md` y `EQUIPO.md`. Trabajo sin el PC: `NUBE.md`. Laboratorio de agentes investigadores: `LABORATORIO.md`.
 
 ## PLAN VIGENTE (aprobado por el director el 23-sep, ~19:00: *"sí, de acuerdo contigo… no permitas que haya muchos frentes"*)
-**Palabras del director (~19:15):** *"¿qué sentido tendría llenar benchmarks si el bicho no hace nada? Esa es la misión real: llegar a la AGI."*
+**Palabras del director (~19:00):** *"¿qué sentido tendría llenar benchmarks si el bicho no hace nada? Esa es la misión real: llegar a la AGI."*
 **Norte:** un solo organismo, el bicho real, que aprenda por sí mismo a sostener su vida con recursos limitados y combine sus piezas en un mismo
 mundo. No se persiguen puntajes por caja: una capacidad cuenta cuando la muestra el mismo organismo en un mundo común.
 
@@ -31,7 +31,7 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 - **Pool A:** réplica del nivel 9 13321–13340 (desde 18:15, llegada estimada ~19:40) → `subida_n9b` (serie 13501 + réplica 13521) →
   `subida_n6b` (14601 + 14621) → `subida_n8c_memoria_lenta` (15801 + 15821).
 - **Pool B:** `subida_n5` V-5 (serie 25701 desde 18:38, réplica 25721) → `subida_n10b` (12701 + 12721) → `subida_n8b` (14801 + 14821).
-- **Archivado sin correr:** `subida_n9c` (decisión 19:05, abajo).
+- **Archivado sin correr:** `subida_n9c` (decisión 18:55, abajo).
 - **Equipos terminando:** v14.3, JUACO-ECO (diseño), Frankenstein (EXPLORATORIO, no es dato) y la ronda de investigación 1 (tres
   investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
 - Cada serie corre su arnés de identidad antes y se detiene si no da N/N. Cada resultado se registra al salir (REGISTRO, commit y push).
@@ -60,12 +60,13 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
 
 ## Decisiones pendientes del director (máx. 2)
 1. **Porcentajes:** 7 → 78 %, 8 → 45–50 %, 6 → 60 % (o 70–75 % si acepta la regla 10). Recomendado: aceptar 7 y 8 ya y dejar el 6 en 60 % hasta n6b.
-2. **Nube:** reclamar el crédito y correr la sesión 0 de calibración (`NUBE.md` §1) antes de mover trabajo pesado.
+2. **Nube:** con el crédito de 250 USD (vence el 5-nov-2026; se aplica solo al iniciar una sesión en la nube; NO vale para Rutinas),
+   correr la sesión 0 de calibración (`NUBE.md` §1) antes de mover trabajo pesado.
 
 ## Decisiones del coordinador en ausencia del director (23-sep; hora, opción, alternativa descartada, porqué)
-- **19:05 — `subida_n9c` se archiva sin correr.** Alternativa: correrla al final de la cola (52 min). Por qué: su creador espera NO (p 0.97),
+- **18:55 — `subida_n9c` se archiva sin correr.** Alternativa: correrla al final de la cola (52 min). Por qué: su creador espera NO (p 0.97),
   el auditor la puso en prioridad baja, y lo valioso ya salió sin correr (ERR-118). El director pidió pocos frentes; la CPU va al v14.3.
-- **19:05 — los paquetes ya preregistrados de la cola se corren, pero no se abren tandas nuevas.** Por qué: cada preregistro sin dato es un
+- **18:55 — los paquetes ya preregistrados de la cola se corren, pero no se abren tandas nuevas.** Por qué: cada preregistro sin dato es un
   frente abierto y correrlo lo cierra. Abrir tandas nuevas los multiplica.
 - **17:50 — `subida_n6` se declara por la letra (HAY ALGO MODESTO), no por el subconjunto de la regla 10.** Leer el subconjunto como FUNCIONA
   sería elegir la lectura tras ver el dato. Además, en 3 semillas de la réplica la memoria incompleta sí rompió el rodeo.

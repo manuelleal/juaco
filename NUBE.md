@@ -2,7 +2,17 @@
 
 > Escrito el 23-sep-2026 por el coordinador, a pedido del director: *"la idea es dejar trabajando el proyecto solo, tú y él, y darle
 > palo a ver qué resulta; llegar al borrador de la AGI; así puedes correr mundos más grandes, muy grandes, e ir modificando"*.
-> Crédito disponible del director: 250 (reclamar antes del 7-oct). Cada sesión en la nube empieza leyendo ESTE archivo.
+> Cada sesión en la nube empieza leyendo ESTE archivo.
+
+## Crédito (texto oficial de la oferta, 23-sep-2026)
+- **250 USD en créditos para sesiones en la nube.** Se aplican solos al iniciar una sesión en claude.ai/code con el repo conectado.
+  Sólo para suscriptores Pro y Max. **Vencen el 5-nov-2026, 2:59 a.m. (GMT-5).** Cuando se acaban o vencen, rige el uso normal del plan.
+- **NO valen para Proyectos ni para Rutinas.** Una rutina programada consumiría el plan normal, no el crédito; por eso las sesiones las
+  lanza el director a mano (desde el PC o el celular), una por entregable.
+- La sesión corre en un entorno aislado: se puede cerrar el computador y volver a revisar el resultado como **pull request**.
+- **Presupuesto:** del 23-sep al 5-nov son unas 6 semanas, es decir ~40 USD por semana si se reparte parejo. La sesión 0 mide cuánto
+  consume una sesión; con eso se fija el ritmo. Lo caro son los tokens de muchos agentes Opus en paralelo, así que en la nube se prefieren
+  sesiones que corren series largas con pocos agentes. Los diseños con equipos de 3 van con medida (uno por frente).
 
 ## 0. Misión y lo que no cambia
 - Misión: **llegar a la AGI por este camino** (organismo mínimo con reglas locales, sin retropropagación, peldaños preregistrados con
