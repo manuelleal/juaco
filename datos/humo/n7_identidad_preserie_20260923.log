@@ -1,0 +1,138 @@
+  sha mundo_composicion_v14 (origen)   a9098933b1950e3d
+  sha mundo_n7                         429667c8a334aa48
+  sha organismo_v142 (TRONCO)          17528d767fcebaf6
+  sha organismo_v142g                  9e5f566cd6a7a4d2
+  sha organismo_v142N                  b5bcff0a4b01c812
+  sha organismo_v142gN                 d05fc32504cb5517
+  sha corre_n7                         746e9c70f7beef45
+  sha este arnes                       a01be902314c04bc
+
+--- (A) mundo_n7 apagado == mundo_composicion_v14, T=20000 ---
+  [    2s] A v14.0 C3 k=1 s1                                            IDENTICO
+  [    4s] A v14.0 C3 k=1 s2                                            IDENTICO
+  [    6s] A v14.0 C3 k=3 s1                                            IDENTICO
+  [    8s] A v14.0 C3 k=3 s2                                            IDENTICO
+  [   10s] A v14.0 C3 k=5 s1                                            IDENTICO
+  [   12s] A v14.0 C3 k=5 s2                                            IDENTICO
+  [   14s] A v14.0 C3C k=1 s1                                           IDENTICO
+  [   16s] A v14.0 C3C k=1 s2                                           IDENTICO
+  [   18s] A v14.0 C3C k=3 s1                                           IDENTICO
+  [   21s] A v14.0 C3C k=3 s2                                           IDENTICO
+  [   23s] A v14.0 C3C k=5 s1                                           IDENTICO
+  [   25s] A v14.0 C3C k=5 s2                                           IDENTICO
+  [   27s] A v14.2 C3 k=1 s1                                            IDENTICO
+  [   29s] A v14.2 C3 k=1 s2                                            IDENTICO
+  [   30s] A v14.2 C3 k=3 s1                                            IDENTICO
+  [   32s] A v14.2 C3 k=3 s2                                            IDENTICO
+  [   34s] A v14.2 C3 k=5 s1                                            IDENTICO
+  [   36s] A v14.2 C3 k=5 s2                                            IDENTICO
+  [   38s] A v14.2 C3C k=1 s1                                           IDENTICO
+  [   39s] A v14.2 C3C k=1 s2                                           IDENTICO
+  [   41s] A v14.2 C3C k=3 s1                                           IDENTICO
+  [   43s] A v14.2 C3C k=3 s2                                           IDENTICO
+  [   45s] A v14.2 C3C k=5 s1                                           IDENTICO
+  [   47s] A v14.2 C3C k=5 s2                                           IDENTICO
+  [   49s] A v14.0 C3 mask_rel=4 k=5 s1                                 IDENTICO
+  [   51s] A v14.0 C3 mask_rel=4 k=5 s2                                 IDENTICO
+
+--- (B) organismo_v142N(0) == organismo_v142  y  (I) organismo_v142N(1) == organismo_v142, T=20000 ---
+  [   53s] B AB por defecto s1                                          IDENTICO
+  [   54s] I AB por defecto s1 (perilla ON)                             IDENTICO
+  [   56s] B AB por defecto s2                                          IDENTICO
+  [   57s] I AB por defecto s2 (perilla ON)                             IDENTICO
+  [   59s] B AB invertido s1                                            IDENTICO
+  [   60s] I AB invertido s1 (perilla ON)                               IDENTICO
+  [   61s] B AB invertido s2                                            IDENTICO
+  [   62s] I AB invertido s2 (perilla ON)                               IDENTICO
+  [   64s] B AB + patron nuevo C s1                                     IDENTICO
+  [   65s] I AB + patron nuevo C s1 (perilla ON)                        IDENTICO
+  [   67s] B AB + patron nuevo C s2                                     IDENTICO
+  [   68s] I AB + patron nuevo C s2 (perilla ON)                        IDENTICO
+  [   70s] B AB solap_AB=3 (E2L) s1                                     IDENTICO
+  [   71s] I AB solap_AB=3 (E2L) s1 (perilla ON)                        IDENTICO
+  [   73s] B AB solap_AB=3 (E2L) s2                                     IDENTICO
+  [   74s] I AB solap_AB=3 (E2L) s2 (perilla ON)                        IDENTICO
+  [   76s] B AB sin plasticidad s1                                      IDENTICO
+  [   77s] I AB sin plasticidad s1 (perilla ON)                         IDENTICO
+  [   78s] B AB sin plasticidad s2                                      IDENTICO
+  [   79s] I AB sin plasticidad s2 (perilla ON)                         IDENTICO
+  [   81s] B AB via lenta apagada s1                                    IDENTICO
+  [   82s] I AB via lenta apagada s1 (perilla ON)                       IDENTICO
+  [   84s] B AB via lenta apagada s2                                    IDENTICO
+  [   85s] I AB via lenta apagada s2 (perilla ON)                       IDENTICO
+  [   87s] B AB sin puerta s1                                           IDENTICO
+  [   87s] I AB sin puerta s1 (perilla ON)                              IDENTICO
+  [   89s] B AB sin puerta s2                                           IDENTICO
+  [   90s] I AB sin puerta s2 (perilla ON)                              IDENTICO
+  [   92s] B AB sin division por signo s1                               IDENTICO
+  [   93s] I AB sin division por signo s1 (perilla ON)                  IDENTICO
+  [   94s] B AB sin division por signo s2                               IDENTICO
+  [   95s] I AB sin division por signo s2 (perilla ON)                  IDENTICO
+  [   97s] B AB sin hija dispersa s1                                    IDENTICO
+  [   98s] I AB sin hija dispersa s1 (perilla ON)                       IDENTICO
+  [  100s] B AB sin hija dispersa s2                                    IDENTICO
+  [  101s] I AB sin hija dispersa s2 (perilla ON)                       IDENTICO
+  [  103s] B AB sin puerta por codigo s1                                IDENTICO
+  [  104s] I AB sin puerta por codigo s1 (perilla ON)                   IDENTICO
+  [  105s] B AB sin puerta por codigo s2                                IDENTICO
+  [  106s] I AB sin puerta por codigo s2 (perilla ON)                   IDENTICO
+  [  108s] B AB las dos perillas v14 off s1                             IDENTICO
+  [  109s] I AB las dos perillas v14 off s1 (perilla ON)                IDENTICO
+  [  111s] B AB las dos perillas v14 off s2                             IDENTICO
+  [  112s] I AB las dos perillas v14 off s2 (perilla ON)                IDENTICO
+  [  114s] B AB D comida solap_B=2 (E2K) s1                             IDENTICO
+  [  115s] I AB D comida solap_B=2 (E2K) s1 (perilla ON)                IDENTICO
+  [  117s] B AB D comida solap_B=2 (E2K) s2                             IDENTICO
+  [  118s] I AB D comida solap_B=2 (E2K) s2 (perilla ON)                IDENTICO
+
+--- (C) organismo_v142gN(0) == organismo_v142g  y  (I) con la perilla ON, mundo de regla, T=20000 ---
+  [  120s] C regla/px0 s1                                               IDENTICO
+  [  121s] I regla/px0 s1 (perilla ON)                                  IDENTICO
+  [  123s] C regla/px0 s2                                               IDENTICO
+  [  124s] I regla/px0 s2 (perilla ON)                                  IDENTICO
+  [  126s] C regla/xor01 s1                                             IDENTICO
+  [  127s] I regla/xor01 s1 (perilla ON)                                IDENTICO
+  [  129s] C regla/xor01 s2                                             IDENTICO
+  [  130s] I regla/xor01 s2 (perilla ON)                                IDENTICO
+  [  132s] C regla/azar s1                                              IDENTICO
+  [  133s] I regla/azar s1 (perilla ON)                                 IDENTICO
+  [  135s] C regla/azar s2                                              IDENTICO
+  [  136s] I regla/azar s2 (perilla ON)                                 IDENTICO
+
+--- (K) kwargs del runner campo a campo contra organismo_v142.run ---
+  [  136s] K eta = 0.03                                                 IDENTICO
+  [  136s] K tau_e = 0.85                                               IDENTICO
+  [  136s] K alpha = 1.2                                                IDENTICO
+  [  136s] K hambre_boca = 2.0                                          IDENTICO
+  [  136s] K aversion = 1.0                                             IDENTICO
+  [  136s] K costo = 0.002                                              IDENTICO
+  [  136s] K nobj = 4                                                   IDENTICO
+  [  136s] K theta = 0.6                                                IDENTICO
+  [  136s] K ema = 0.02                                                 IDENTICO
+  [  136s] K paso = 0.5                                                 IDENTICO
+  [  136s] K lam = 0.05                                                 IDENTICO
+  [  136s] K memoria_rechazo = 20                                       IDENTICO
+  [  136s] K mu_norm = True                                             IDENTICO
+  [  136s] K div_signo = True                                           IDENTICO
+  [  136s] K eta_s = 0.15                                               IDENTICO
+  [  136s] K clip_s = 10.0                                              IDENTICO
+  [  136s] K puerta = 3                                                 IDENTICO
+  [  136s] K mask_rel = 2                                               IDENTICO
+  [  136s] K del_s = 0.25                                               IDENTICO
+  [  136s] K del_c = 0.25                                               IDENTICO
+  [  136s] K ema_c = 0.05                                               IDENTICO
+  [  136s] K puerta_pat = 5                                             IDENTICO
+  [  136s] K pat_shuf = 0                                               IDENTICO
+  [  136s] K pat_min = 1                                                IDENTICO
+  [  136s] K desambiguar = 1                                            IDENTICO
+  [  136s] K NKMAX del tronco == nkmax del mundo (90)                   IDENTICO
+  [  136s] K techo de Wp/Wn del tronco == wclip del mundo (3.)          IDENTICO
+  [  136s] K K=3 celdas por codigo (tronco == mundo)                    IDENTICO
+
+  PASA  (A) 26/26
+  PASA  (B) 24/24
+  PASA  (C) 6/6
+  PASA  (I) 30/30
+  PASA  (K) 28/28
+
+VEREDICTO identidad_n7: PASA  114/114  (136s)

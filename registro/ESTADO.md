@@ -1,112 +1,112 @@
 # ESTADO — una página, se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **23-sep-2026** (coordinador; revisión de todos los .md por el auditor de documentos + réplica de aprende_barrer + paquetes subida_n5..n10). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de
-> `REGISTRO_etapas_1_2.md` y en la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
-> Historia completa: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md`. Orden vigente: **este archivo** (bloque más reciente) y `HANDOFF.md` §15.x; `PLAN.md` es bitácora hasta el 18-sep. Reglas: `EQUIPO.md` y `CLAUDE.md`.
+> Última reescritura: **23-sep-2026, 19:10** (coordinador; CIERRE PARCIAL: la cola de la noche sigue corriendo en el PC del director y cada
+> resultado se registra al salir). Si esta fecha tiene más de un día de atraso, el estado real está en la cola de `REGISTRO_etapas_1_2.md` y en
+> la última sección de `HANDOFF.md`; corregir esta página antes de tocar nada.
+> Historia: `REGISTRO_etapas_1_2.md` (sólo añadir). Narrativa: `HANDOFF.md` (§15.30 = 22-sep, §15.31–15.32 = 23-sep). Orden vigente: **este archivo**.
+> Reglas: `CLAUDE.md` y `EQUIPO.md`. Trabajo sin el PC: `NUBE.md`. Laboratorio de agentes investigadores: `LABORATORIO.md`.
 
-## AL 23-SEP-2026 (manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.31 y en la cola del REGISTRO)
-- **Aprende a barrer, réplica 8121–8140: HAY ALGO MODESTO replicado.** APR 0.385 vs FABRICA 0.336 (mediana R0), APR gana 20/20 (dif. 0.049),
-  no cruza; P5 (no descubre la limpieza) y P6 (aprende a contenerse) se cumplen. P8 (gana a APR_SIN_HERENCIA 20/20) se midió en la serie original; la réplica sólo corrió APR y FABRICA. Nivel 8: propuesta 45 %.
-- **Subida n8 (serie + réplica): HAY ALGO MODESTO** — sigue aprendiendo con 90 celdas fijas (P2, P6 ×2) pero cae tras agotarlas en la réplica (P3 −0.187); la fusión no ayuda. Propuesta +5.
-- **Subida n7 (serie + réplica): FUNCIONA** — el tronco v14.2 no compone (K_max 1 ×2, regresión); la reparación N compone hasta 8 ×2; canal falso 0. Entra al v14.3 (decisión del director). Propuesta 70 → 78 % (80 % si entra al tronco).
-- **Subida n6 (serie + réplica): HAY ALGO MODESTO por la letra** — rodea limpio por el hueco sin pisar el veneno recordado (1.0 / 0.925, controles 0), cae V1 (memoria incompleta en 1 y 5 semillas); subconjunto regla 10: 11/11 ×2. Propuesta 50 → 60 % (70–75 si el director acepta la regla 10).
-- **Subida n10: NO SE LEE** (ancla 0.110 > 0.10, ERR-116); tanda 2 en diseño.
-- **Generaciones que conviven, monocultivos 10101–10120: NO** — ningún carro persiste en ≥15/20 con flujo fijo de comida (O1 14/20, O4 3/20, O2/O3 0/20); el cruce de H-1 de ayer
-  depende de la reposición inmediata (ERR-104). Mixta H y réplica en cola tras los paquetes de nivel.
-- **Subida de niveles 5–10 (pedido del director: "en grupos de agentes de 3 … subir desde el 5 hasta el 10 a 100 o acercarnos"):** seis equipos
-  (explorador Haiku → creador Opus → auditor Sonnet) dejaron paquetes preregistrados en `experimentos/subida_nN/` con arnés de identidad y humo; ninguno
-  tiene serie todavía, ningún nivel cambia. Auditoría: n5, n6, n7, n9 LISTO CON CORRECCIONES; n10 LISTO PARA SERIE; n8 en construcción (el explorador falló).
-  Cola de series (un paquete por Pool, máx. 2 Pools/14 procesos): n10 (corriendo) → n8 → **n9** → n6 → n7 → n5; comandos en `INFORME_nN.md`.
-- **Decisión del director (23-sep):** *"esperamos al 9 antes de fijar el 65; tiene que subir a 90"*; *"adelanta el 9 después del 8 y dale dos tandas"*.
-  Nivel 9 sigue en 50 % hasta el resultado de `subida_n9`; meta del director: 90 %. Segunda tanda del equipo 9 en diseño (`experimentos/subida_n9b/`).
-- **Meta del director (23-sep, antes de salir):** *"si puedes llegar a 100 en todos, fabuloso, ese es el objetivo"*; mínimo leído por el coordinador: **80 %** en
-  cada nivel 5–10 (a confirmar con el director). Delegación: *"si hay una decisión difícil tómala, y me dejas comentado por qué la tomaste"*.
+## PLAN VIGENTE (aprobado por el director el 23-sep, ~19:00: *"sí, de acuerdo contigo… no permitas que haya muchos frentes"*)
+**Palabras del director (~19:15):** *"¿qué sentido tendría llenar benchmarks si el bicho no hace nada? Esa es la misión real: llegar a la AGI."*
+**Norte:** un solo organismo, el bicho real, que aprenda por sí mismo a sostener su vida con recursos limitados y combine sus piezas en un mismo
+mundo. No se persiguen puntajes por caja: una capacidad cuenta cuando la muestra el mismo organismo en un mundo común.
 
-## Pedidos del director (23-sep, tarde) y lo lanzado
-- *"arranca el v14.3; la idea es que logremos lo que ayer hicimos, superándolo"* → equipo de 3 en `experimentos/tronco_v14_3/`: tronco v14.2 + mapa (n6) + boca aprendida
-  (aprende_barrer) + limpieza aprendida, en la pista de la carrera de ayer, contra O1; luego examen con el criterio v4.
-- *"soltar el bicho real en un ambiente gigante"* → JUACO-ECO (idea del 21-sep): equipo de 3 en `experimentos/juaco_eco/` (diseño e instrumento; la corrida larga no se lanza aún).
-- *"lanza este además"* (memoria lenta con repaso) → tanda en `experimentos/subida_n8c_memoria_lenta/`.
-- *"haz un Frankenstein con todo… como prototipo y lo sueltas en el mundo"* → `experimentos/frankenstein/`, **EXPLORATORIO, no es dato**
-  (mapa + curiosidad con presupuesto + modelo de sí + memoria lenta + herencia + interruptor explorar/explotar).
-- *"mete la reparación del 7 en el v14.3, congelando siempre"* (18:35) → la reparación N de `subida_n7` (norm_lenta, cero memoria nueva) entra al
-  v14.3 **si la réplica 7721–7740 repite** (regla del proyecto); v14.3 se construye por anclas desde v14.2 y se congela con manifiesto; v14.2 no se toca.
-- Principio de crecimiento del tronco (respondido al director): una pieza a la vez con memoria declarada, reglas locales, por límite medido,
-  lesión que duela, entra por el criterio v4 con réplica. Hallazgo del día: el límite del nivel 8 no es cantidad de memoria sino muestreo.
+**Máximo 2 frentes activos. Nada nuevo se abre hasta cerrar uno.**
+1. **v14.3** (`experimentos/tronco_v14_3/`). Es el tronco v14.2 más lo replicado:
+   - la reparación N del nivel 7 (FUNCIONA ×2);
+   - el mapa del nivel 6 (gradiente + filtro), cuando `subida_n6b` complete la memoria y lo porte a v14.2;
+   - la boca aprendida y heredada (APR, aprende_barrer).
 
-## Decisiones del coordinador en ausencia del director (23-sep; cada una con su porqué)
-- **17:50 — subida_n6 se declara por la letra (HAY ALGO MODESTO), no por el subconjunto de la regla 10.** Por qué: el §10 pide 11/11 principales y V1 es principal; leer el subconjunto como FUNCIONA sería elegir la lectura tras ver el dato. Se deja la propuesta 60 % y la alternativa 70–75 % para el director.
-- **17:50 — subida_n9c (tanda 3 del nivel 9) va al FINAL de la cola.** Por qué: su propio creador espera NO (p 0.97) y el auditor coincide en prioridad baja; lo valioso ya salió sin correr: ERR-118 (el 14/20 de O1 no era buena señal). La tanda 4 del nivel 9 necesita otro diseño.
-- **17:05 — la mixta H y la réplica de generaciones que conviven van DESPUÉS de los paquetes de nivel (6, 7, 5, 10b).** Por qué: la meta del
-  director es subir niveles; la mixta no mueve ningún nivel por sí sola y el monocultivo ya dio NO claro.
-- **17:05 — la tanda 3 del nivel 9 se centra en persistir con capacidad de carga.** Por qué: el monocultivo de convivencia muestra que
-  el cruce de H-1 no sobrevive a un flujo fijo de comida; sin eso el nivel 9 no pasa de ~68 %.
-- **16:50 — subida_n10 NO SE LEE y NO se corre su réplica.** Alternativa descartada: correr la réplica o leer la serie con el ancla movida
-  a 0.12. Por qué: mover el ancla después de ver el dato es justo lo que prohíbe la regla 11 (ERR-114 fue lo mismo en pequeño); y aunque se
-  leyera, F-2/F-4 caen (PARTO no le gana a BAR), así que lo máximo sería "modesto sin contenido" (+1 punto). Las 2 h de CPU de la réplica
-  valen más en los niveles 8 y 9. Se registra ERR-116 y el nivel 10 va a una segunda tanda con el ancla calibrada sobre esta serie.
-- **Documentos:** CRITERIO_TRONCO_v4 marcado VIGENTE (decía borrador); PLAN.md marcado bitácora; INDICE.md con filas del 22–23-sep. Último ERR: **118**.
+   Se corre en la pista de la carrera del 22-sep contra O1 y pasa el examen del criterio v4. Se construye por anclas y se congela con
+   manifiesto propio; v14.2 no se toca.
+2. **Gemelo rápido + JUACO-ECO por escalones** (`experimentos/juaco_eco/`). Primero el gemelo numba del v14.3 (con identidad). Después ECO
+   con el v14.3 a 1×, 10× y 100× del tamaño de la pista, con checkpoints. Dos preguntas:
+   - ¿persiste un linaje del bicho real sin comida regalada (ERR-104) y sin fundadores repuestos (ERR-118)?
+   - ¿aparece algo que el control de mutación sin selección no produce?
 
-## AL 22-SEP-2026, 21:15 (cierre; manda sobre lo de abajo cuando se contradiga; detalle en HANDOFF 15.30 y en la cola del REGISTRO)
-- **Primer cruce de H-1 en JUACO** (carrera de escuderías, monocultivo de O1, que limpia): R0 de nacimientos reales 0.941, replicado en semillas
-  selladas y sin la memoria del fundador. Reserva ERR-104: en ese mundo, morder repone al instante una letra al azar.
-- **Ronda 2** (combos Opus): O3 y O4 estabilizan en monocultivo y con FABRICA, **replicado en sellada**, con muerte programada declarada. O2
-  estabiliza en monocultivo sin muerte programada. La pista de un cuerpo por linaje obliga a morir para parir (ERR-102). Siguiente mundo:
-  generaciones que conviven (quimiostato, rama integrada, sin series).
-- **Criterio de tronco v4 UTILIZABLE** (v3 retirado). Mundo anclado v2: HAY ALGO MODESTO. Fanin: CAE. Aprende a barrer: HAY ALGO MODESTO sin réplica.
-- **Propuestas de nivel pendientes del director:** 8 de 40 a 45 %, 9 de 50 a 65 %, 10–13 de ~10 a 15 %. Último ERR: **113**.
-- **Mañana (23-sep):** series de generaciones que conviven (`experimentos/generaciones/INFORME_CONVIVE.md`) → Escuela de abejas con protocolo
-  y visualización animada → JUACO-ECO.
+Lo demás se cierra: se corre lo ya preregistrado para tener su veredicto, porque un preregistro sin dato es un frente abierto, o se archiva.
+Laboratorio de investigadores: una ronda al día como máximo y sólo al servicio de estos dos frentes.
 
-## Tronco
-**v14.2** (tag `v14.2-tronco`, 18-sep 21:25) = v14.1 + B-5 (división por conflicto disparada por R = 0 bajo retina distinta; repara el alias de
-código). 20 archivos congelados (`python manifiesto.py` desde la raíz los verifica). Regla 1 en `CLAUDE.md`. Criterio para candidatos nuevos:
-`CRITERIO_TRONCO_v2.md` (sobrevivir + generalizar + desdecirse + sin alias + no regresión conductual + coste + capacidad nueva declarada).
+## Corriendo esta noche (PC del director; cola cerrada, sin frentes nuevos)
+- **Pool A:** réplica del nivel 9 13321–13340 (desde 18:15, llegada estimada ~19:40) → `subida_n9b` (serie 13501 + réplica 13521) →
+  `subida_n6b` (14601 + 14621) → `subida_n8c_memoria_lenta` (15801 + 15821).
+- **Pool B:** `subida_n5` V-5 (serie 25701 desde 18:38, réplica 25721) → `subida_n10b` (12701 + 12721) → `subida_n8b` (14801 + 14821).
+- **Archivado sin correr:** `subida_n9c` (decisión 19:05, abajo).
+- **Equipos terminando:** v14.3, JUACO-ECO (diseño), Frankenstein (EXPLORATORIO, no es dato) y la ronda de investigación 1 (tres
+  investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
+- Cada serie corre su arnés de identidad antes y se detiene si no da N/N. Cada resultado se registra al salir (REGISTRO, commit y push).
 
-## Niveles del brief (porcentaje = lo declarado con réplica)
-| nivel | estado | última evidencia |
+## Resultados del 23-sep (detalle y tablas en el REGISTRO)
+| bloque | veredicto | en una línea |
 |---|---|---|
-| 1–4 (asociación, desaprender, generalizar, capacidad) | cerrados; nivel 4 con el negativo del alias reparado por B-5 (v14.2) | 18-sep |
-| 5 (comunicación / transmisión) | **75 %**: N1 cerrado; referencia de FAMILIA exacta (k = 3) o de VARIANTE (sufijo), no ambas con la misma tabla; **cerrados el 21-sep: BA, BA-v (tres series ERR-90), BA-vm y BA-vM** (BA-vm cruza dist 16/20 pero muere 9.6× la base); la dirección del mensaje es exacta, el valor falla por colisión estructural; queda V-5 (C) preregistrado sin correr | 21-sep |
-| 6 (mapa, dos metas y rodeo) | 50 % (consenso de la junta): elige entre dos comidas recordadas y rodea el veneno recordado (replicado); no planifica; **bloque "rodeo obligado" (21-sep, mundo muralla con geometría sorteada): CAE 5/10, el campo difundido come 2.46× y muere 0.38× pero rodea limpio sólo 0.35 y huye 0.425**; instrumento disponible, sin candidato | 21-sep |
-| 7 (composición, XOR) | 70 % (consenso de la junta): 3T-k compone hasta 3; XOR CERRADA: prior estructural de pares (8 ejemplos, 1.000 ×2); hija dispersa en el tronco; **LÍNEA CERRADA (21-sep): memoria de pares en la vía lenta v15c–v15g, ninguno entra** | 21-sep |
-| 8 (aprendizaje abierto) | 40 %: curiosidad por progreso refutada; mundo vivo con dos necesidades es el primer mundo con más de una dimensión de valor | 18-sep |
-| 9 (autonomía / modelo de sí mismo) | **propuesta 50 % (decide el director; hoy 30 %)**: **bloque 1 DECLARADO COMPLETO** con cuatro series (dos del bloque 1, dos del bloque 2): el cuerpo nuevo rechaza lo malo al primer encuentro sin dejar de comer, vive ~6×, y F9-4bis ×2 muestra que es el contenido del nodo, no cautela; **ni el nodo ORÁCULO cruza R₀ 0.9 en ninguna serie: el muro es el mundo** (H-1 en pie); C-F9B′ cerrado; bloque 3 = cambiar el mundo, con gemelo numba ×46 | 21-sep |
-| 10–13 (alma, familias, vivo) | exploratorio: serie ALMA (el alma razonada no gana al azar; el nodo transmite contenido); mundo de familias construido | 18-sep |
+| aprende_barrer, réplica | HAY ALGO MODESTO ×2 | APR 0.385 vs FABRICA 0.336, gana 20/20; aprende a contenerse, no descubre la limpieza |
+| subida_n7 | **FUNCIONA** ×2 | el tronco v14.2 no compone (K_max 1): regresión. La reparación N compone hasta 8. Entra al v14.3 |
+| subida_n6 | HAY ALGO MODESTO ×2 (letra) | rodea el veneno recordado por el hueco (1.0 / 0.925, controles 0). Cae V1: en 3 semillas la memoria incompleta deja escapar el campo |
+| subida_n8 | HAY ALGO MODESTO ×2 | sigue aprendiendo con 90 celdas; pierde al agotarlas (réplica). El cuello es de muestreo; la fusión no sirve |
+| subida_n10 | NO SE LEE | ancla 0.110 > 0.10 (ERR-116); el mensaje del padre casi no trae información |
+| generaciones que conviven (monocultivos) | NO | con flujo fijo de comida ningún carro persiste ≥15/20; el cruce de H-1 del 22-sep depende de la reposición inmediata |
+| subida_n9, serie (réplica en curso) | HAY ALGO MODESTO (serie) | O3 cruza (R0 0.968, persisten 178/180); si lee su propio estado desfasado cae a 0.072 (0/180). La reserva no hace falta |
 
-## Pendiente con paquete verificado (al 23-sep; historia de los ítems cerrados en el REGISTRO)
-1. Generaciones que conviven: mixta H 10101 y réplica 10121 (monocultivos y mixta).
-2. Paquetes `experimentos/subida_n5..n10/`: aplicar las correcciones del auditor y correr serie + réplica de cada uno (comandos en su INFORME).
-3. Aprende a barrer: replicar los brazos APR_SIN_HERENCIA y APR_AZAR (P8–P10) si se quiere pasar de MODESTO.
-4. Mundo anclado v2: fila tox 2.0 (7021–7040). Fase 10 externa: semillas 2441–2840.
-5. Fase 9, bloque 3 ("cambiar el mundo"): lo cubren la carrera de escuderías, generaciones que conviven y `subida_n9` (modelo de sí).
+## Niveles del brief (los porcentajes los fija el director; la columna "propuesta" es del coordinador)
+| nivel | fijado | propuesta tras el 23-sep | evidencia |
+|---|---|---|---|
+| 1–4 | cerrados | — | 18-sep (nivel 4 reparado por B-5) |
+| 5 comunicación | 75 % | 75 % hasta V-5 | `subida_n5` corriendo (familia Y variante con la misma tabla) |
+| 6 mapa y rodeo | 50 % | **60 %** (70–75 % si acepta la regla 10) | n6 MODESTO ×2; `subida_n6b` en cola (memoria completa, dos metas, port a v14.2) |
+| 7 composición | 70 % | **78 %** (80 % si v14.3 pasa el criterio v4) | n7 FUNCIONA ×2 |
+| 8 aprendizaje abierto | 40 % | **45–50 %** | aprende_barrer ×2 (+5), n8 ×2 (+5); n8b y n8c en cola |
+| 9 autonomía / modelo de sí | 50 % | espera (meta del director: 90 %) | serie n9: la lectura de sí presente causa el cruce de O3; convivencia NO; n9b en cola |
+| 10–13 | ~10 % | ~10 % | n10 NO SE LEE; n10b en cola |
+
+## Decisiones pendientes del director (máx. 2)
+1. **Porcentajes:** 7 → 78 %, 8 → 45–50 %, 6 → 60 % (o 70–75 % si acepta la regla 10). Recomendado: aceptar 7 y 8 ya y dejar el 6 en 60 % hasta n6b.
+2. **Nube:** reclamar el crédito y correr la sesión 0 de calibración (`NUBE.md` §1) antes de mover trabajo pesado.
+
+## Decisiones del coordinador en ausencia del director (23-sep; hora, opción, alternativa descartada, porqué)
+- **19:05 — `subida_n9c` se archiva sin correr.** Alternativa: correrla al final de la cola (52 min). Por qué: su creador espera NO (p 0.97),
+  el auditor la puso en prioridad baja, y lo valioso ya salió sin correr (ERR-118). El director pidió pocos frentes; la CPU va al v14.3.
+- **19:05 — los paquetes ya preregistrados de la cola se corren, pero no se abren tandas nuevas.** Por qué: cada preregistro sin dato es un
+  frente abierto y correrlo lo cierra. Abrir tandas nuevas los multiplica.
+- **17:50 — `subida_n6` se declara por la letra (HAY ALGO MODESTO), no por el subconjunto de la regla 10.** Leer el subconjunto como FUNCIONA
+  sería elegir la lectura tras ver el dato. Además, en 3 semillas de la réplica la memoria incompleta sí rompió el rodeo.
+- **17:05 — la mixta H y la réplica de generaciones que conviven quedan fuera de la cola.** El monocultivo dio un NO claro y la mixta no mueve
+  ningún nivel. El mundo de convivencia se retoma dentro de ECO, sin fundadores repuestos.
+- **16:50 — `subida_n10` NO SE LEE y no se corre su réplica.** Mover el ancla tras ver el dato lo prohíbe la regla 11; aunque se leyera, sólo
+  daría +1. Queda ERR-116, y `subida_n10b` calibra el ancla sobre esa serie antes de usar semillas nuevas.
+
+## Pedidos del director del 23-sep (palabras) y a dónde fueron
+- *"en grupos de agentes de 3… subir desde el 5 hasta el 10 a 100 o acercarnos"*: paquetes `subida_n5..n10`; meta 100 %, mínimo 80 %.
+- *"esperamos al 9 antes de fijar el 65; tiene que subir a 90"*, *"dale dos tandas"*: `subida_n9`, `subida_n9b` (la n9c se archivó).
+- *"arranca el v14.3; que logremos lo que ayer hicimos, superándolo"*, *"mete la reparación del 7… congelando siempre"*: frente 1.
+- *"soltar el bicho real en un ambiente gigante"*: JUACO-ECO, frente 2.
+- *"lanza este además"* (memoria lenta con repaso): `subida_n8c_memoria_lenta`.
+- *"haz un Frankenstein con todo… y lo sueltas en el mundo"*: `experimentos/frankenstein/`, EXPLORATORIO.
+- *"agentes inteligentes investigadores… exploración, experimentación y creación de la AGI"*: `LABORATORIO.md` y el agente `juaco-investigador`.
+- *"si hay una decisión difícil tómala, y me dejas comentado por qué"*: la sección de decisiones de arriba.
+
+## Tronco y criterio
+**v14.2** (tag `v14.2-tronco`, 18-sep) = v14.1 + B-5. Tiene 20 archivos congelados que se verifican con `python manifiesto.py --check`. Sin
+`--check`, el script **reescribe** `MANIFEST.txt`: no se usa así. Criterio para candidatos: **`CRITERIO_TRONCO_v4.md`** (vigente; v3 retirado,
+v2 historia). Candidato en construcción: **v14.3** (frente 1).
 
 ## Errores
-Último: **ERR-118** (23-sep: 117 el toro del 21-sep no obligaba a rodear, 118 "persiste el carro" confunde fundadores repuestos; 114 enmienda V-M de subida_n9, 115 runners aceptan banderas desconocidas, 116 ancla de subida_n10 sin calibrar en v2) · rango del 22-sep: 94 v4 resuelto · 95–103 carrera de escuderías · 104 quimiostato · 105–110 fase 10 externa · 111–113 mundo anclado v2; detalle en HANDOFF 15.30). Siguiente libre: **ERR-119**. Historia de ERR-87..93 (v3 retirado) en el REGISTRO.
-Reglas de equipo 1–14 en `EQUIPO.md`; regla derivada de ERR-87: "último JSON de un prefijo" siempre con prefijo + sello exacto.
+Último: **ERR-118**. Del 23-sep:
+- 114: enmienda V-M de `subida_n9` hecha tras el humo;
+- 115: los runners aceptan banderas desconocidas;
+- 116: ancla de `subida_n10` sin calibrar;
+- 117: el toro del 21-sep no obligaba a rodear;
+- 118: "persiste el carro" confunde fundadores repuestos.
 
-## Datos
-`datos/` plano (562 archivos, 84 MB). `datos/humo_no_registrado/` guarda humos y corridas sin dueño en el registro (no entran a git).
-Desde el 21-sep los runners nuevos escriben sus humos en `datos/humo/`. Índice de carpetas de experimentos: `experimentos/INDICE.md`.
+Del 22-sep: 94–113 (HANDOFF §15.30). Siguiente libre: **ERR-119**. Regla derivada de ERR-87: "el último JSON de un prefijo" se cita siempre con prefijo y sello exacto.
 
-## Equipo y herramientas (21-sep-2026)
-Agentes fijos (en `~/.claude/agents`, valen desde cualquier carpeta): `juaco-creador` (Opus), `juaco-compilador` (Opus), `juaco-auditor` (Sonnet,
-solo lectura), `juaco-cronista` (Sonnet), `probador-haiku`, `explorador-haiku`. Skills: `/juaco-estado`, `/juaco-bloque`, `/juaco-cierre`,
-`/juaco-err`, `/veredicto`, `/encargo`. Ninguno corre Pool, commitea ni mata procesos: sólo el coordinador. Coordinación de CPU: mirar los
-procesos python vivos con su cmdline antes de lanzar (ERR-85, ERR-86).
-
-## Decisiones tomadas el 22-sep-2026 (el director: "opción A y las otras tú decides, basado en el objetivo")
-- **Nivel 9: 50 %.** La pregunta central ("aprende en menos de una vida") está declarada con cuatro series; lo que falta es del mundo.
-- **Criterio de tronco:** v3 retirado; **v4 en construcción** (rama `criterio-v4`, worktree `PROYECTOS\JUACO\criterio`). Hasta que v4 esté calibrado, v2 y v3 lado a lado.
-- **Dos Pools en paralelo: SÍ**, con un máximo de 2 Pools y 14 procesos entre los dos (8 núcleos, 16 lógicos). Antes de lanzar se miran los procesos python vivos (ERR-85/86). Nunca tres.
-- **Fase 5 / V-5: no por ahora.** Queda en 75 %; no está en el camino del muro de R0.
-- **Carrera de escuderías** (rama `carrera-escuderias`, worktree `PROYECTOS\JUACO\carrera`): reglamento aprobado + ENMIENDA 1 (pista escalada L = 40·N, `nobj` = 4·N).
-- **Rama de entradas por celda** (6 / 3 / 2; rama `rama-fanin`, worktree `PROYECTOS\JUACO\fanin`): preregistro con predicción de costo del director.
-
-## Decisiones del director (las tres de las 16:30 tomadas y ejecutadas; pendientes al cierre de las 22:50 — resueltas arriba el 22-sep)
-1. **Nivel 9: fijar el porcentaje.** Propuesta del coordinador: **50 %** (la pregunta central del nivel, "aprende en menos de una vida", declarada con cuatro series; lo que falta es que un linaje mortal se sostenga, y eso es del mundo).
-2. **Criterio de tronco:** retirar v3 (la réplica no repite) y escribir v4 con ERR-94 (T-C ii n = 80 o margen 15; CAL-4 n = 80 o placebo sin tocar el rng). Hasta entonces, candidatos con v2 y v3 lado a lado.
-3. **Dos Pools en paralelo como regla** (hoy 7 + 6 sin ERR-86; ninguna puerta mide tiempo de pared).
-4. **Fase 5:** correr V-5 (C, 25 %) o dejarla en 75 %.
-Hoy: 18 series, 2 declaraciones (fase 9 bloque 1 en parte y luego completa), 5 líneas cerradas, ERR-87..93, junta, necesidades, gemelos numba.
-**Mañana:** (0) integrar el resultado externo de la fase 10 con tres correcciones (HANDOFF, nota de última hora) y relanzar la carrera de bacterias → v4 del criterio → fase 9 bloque 3 (candidato 'la boca lee las dos filas') → alefast Fase 3.
+## Datos, equipo y herramientas
+- **Datos:** los runners nuevos escriben en `experimentos/<carpeta>/datos/` y los humos en `datos/humo/`. `datos/humo_no_registrado/` no
+  entra a git. Índice de carpetas: `experimentos/INDICE.md` (al 23-sep).
+- **Agentes** (en `.claude/agents/` del repo y en `~/.claude/agents` del PC):
+  - `juaco-investigador` (Opus, nuevo): propone fichas;
+  - `juaco-creador` (Opus) y `juaco-compilador` (Opus);
+  - `juaco-auditor` (Sonnet, sólo lectura) y `juaco-cronista` (Sonnet);
+  - `probador-haiku` y `explorador-haiku`.
+- **Skills** (en `.claude/skills/`): `/juaco-estado`, `/juaco-bloque`, `/juaco-cierre`, `/juaco-err`, `/veredicto`, `/encargo`.
+- **Reglas para los agentes:** ningún agente corre Pool, commitea, mata procesos ni ejecuta runners con `--serie` en ninguna forma (ERR-115).
+  Sólo el coordinador lo hace. Tope de CPU: 2 Pools y 14 procesos en el PC (16 lógicos). Antes de lanzar se miran los procesos python vivos.

@@ -1012,3 +1012,47 @@ tabla de decisiones para el director. Detalle en la memoria del coordinador (`ju
   congelado cambió. Candidato a ERR-114: los runners deben rechazar banderas desconocidas.
 - **Revisión de todos los .md** (auditor de documentos): corregidos ESTADO (sello, Errores decía ERR-92, pendiente viejo), CRITERIO_TRONCO_v4 (decía
   borrador tras declararse utilizable), PLAN (marcado bitácora), INDICE (faltaban 25 carpetas).
+
+### 15.32 Cierre parcial del 23-sep-2026 (19:10; la cola sigue corriendo esa noche en el PC del director)
+
+**Corrido y registrado hoy:**
+- aprende_barrer, réplica: MODESTO ×2.
+- subida_n10: NO SE LEE (ERR-116).
+- subida_n8: MODESTO ×2.
+- generaciones que conviven, monocultivos: NO (ERR-118).
+- subida_n6: MODESTO ×2 por la letra, más la corrección de V1.
+- subida_n7: **FUNCIONA ×2**.
+
+Las tablas están en el REGISTRO.
+
+**Corrida sin registrar todavía:** la serie del nivel 9 (13301–13320). Espera a su réplica 13321–13340, que corre desde las 18:15 y llega ~19:40.
+
+**Preparado y pendiente (cola de la noche, todo preregistrado, commiteado y auditado):**
+- Pool A: `subida_n9b` → `subida_n6b` → `subida_n8c_memoria_lenta`.
+- Pool B: `subida_n5` (serie desde las 18:38) → `subida_n10b` → `subida_n8b`.
+- Archivado sin correr: `subida_n9c`.
+- Equipos por entregar: `tronco_v14_3`, `juaco_eco`, `frankenstein` (EXPLORATORIO) y la ronda de investigación 1.
+
+**Decisiones del director de hoy, con hora y palabras:**
+- (mañana) "vamos a trabajar en juaco… cerremos fases que estén incompletas".
+- "en grupos de agentes de 3… subir desde el 5 hasta el 10 a 100 o acercarnos".
+- "esperamos al 9 antes de fijar el 65; tiene que subir a 90"; "adelanta el 9 después del 8 y dale dos tandas".
+- "si hay una decisión difícil tómala, y me dejas comentado por qué" (sale; sesión en remoto).
+- "si puedes llegar a 100 en todos, fabuloso".
+- "arranca el v14.3… que logremos lo que ayer hicimos, superándolo"; "soltar el bicho real en un ambiente gigante" (JUACO-ECO); "haz un Frankenstein con todo… y lo sueltas en el mundo".
+- 18:35 "mete la reparación del 7 en el v14.3, congelando siempre".
+- "vamos a migrar a trabajar en la nube" (se prepararon `NUBE.md`, `requirements.txt` y los agentes y skills en `.claude/`).
+- "agentes inteligentes investigadores… exploración, experimentación y creación de la AGI" (`LABORATORIO.md`, `juaco-investigador`).
+- ~19:00 "sí, de acuerdo contigo, cerremos los procesos, no permitas que haya muchos frentes" → **plan vigente: máximo 2 frentes (v14.3; gemelo rápido + ECO por escalones)**.
+
+**Próximo candidato:** v14.3, que es el frente 1 (ver ESTADO, "PLAN VIGENTE").
+
+**ERR nuevos:** 114–118.
+
+**Quién retome lee, en este orden:**
+1. `registro/ESTADO.md`;
+2. la cola del REGISTRO, desde "APRENDE A BARRER — réplica";
+3. `NUBE.md`, si trabaja en la nube;
+4. las carpetas `experimentos/tronco_v14_3/` y `experimentos/juaco_eco/`.
+
+Los resultados de la cola de la noche se registran al salir. El que retome verifica en la cola del REGISTRO cuáles quedaron y corre `/juaco-estado`.

@@ -3,12 +3,19 @@
 > Pedido del director (23-sep-2026): *"mundos más grandes pero agentes inteligentes investigadores, para que no se limite sólo a mí,
 > sino a la exploración, la experimentación y la creación de la AGI"*. Este archivo define el ciclo. Vale en el PC y en la nube (`NUBE.md`).
 
+## Principio (director, 23-sep): la misión es la AGI, no llenar benchmarks
+*"¿Qué sentido tendría llenar benchmarks si el bicho no hace nada? Esa es la misión real: llegar a la AGI."*
+
+Cada ficha se juzga por lo que le agrega al MISMO organismo en un mundo común (v14.x en JUACO-ECO), no por los puntos que sume en una
+caja hecha para ella. **Máximo 2 frentes activos** (hoy: v14.3; gemelo rápido + ECO). El laboratorio alimenta esos frentes y no abre otros.
+
 ## El ciclo (una vuelta = una ronda)
 1. **Investigar** (`juaco-investigador`, Opus, varios en paralelo con miradas distintas: neurociencia, vida artificial y open-endedness,
    desarrollo cognitivo, y "el crítico del método"). Cada uno entrega fichas de hipótesis (formato en `.claude/agents/juaco-investigador.md`).
 2. **Criticar y ordenar** (un `juaco-auditor` como crítico). Intenta refutar cada ficha: ¿repite una línea cerrada? ¿el control puede ganar
-   de verdad? ¿la predicción es falsable? Ordena las fichas por **valor = puntos del nivel × probabilidad / costo de CPU**, con desempate a
-   favor de lo que más información da si falla.
+   de verdad? ¿la predicción es falsable? Ordena las fichas por **valor = cuánto acerca al organismo común (v14.x) a sostener su vida con recursos limitados y a
+   combinar sus piezas en un mismo mundo × probabilidad / costo de CPU**, no por puntos de nivel; desempate a favor de lo que más
+   información da si falla.
 3. **Diseñar** (`juaco-creador`) las 1–3 primeras: preregistro, instrumento por anclas, arnés N/N, humo.
 4. **Auditar** (`juaco-auditor`) cada paquete.
 5. **Correr** (el coordinador; Pool): serie y réplica.

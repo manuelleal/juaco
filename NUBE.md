@@ -45,7 +45,10 @@ nube/<fecha>. Cuando la cola se vacíe, lanza la siguiente tanda del nivel más 
 No toques el tronco congelado; los niveles los fija el director. Al cerrar, deja ESTADO.md al día para la siguiente sesión.
 ```
 
-## 3. Orden de trabajo en la nube (se actualiza en cada cierre)
+## 3. Orden de trabajo en la nube (se actualiza en cada cierre) — PLAN VIGENTE del 23-sep: **máximo 2 frentes**
+> Director, 23-sep: *"¿qué sentido tendría llenar benchmarks si el bicho no hace nada? Esa es la misión real: llegar a la AGI"*.
+> Por eso no se persiguen puntajes por nivel en cajas separadas: cuenta lo que el MISMO organismo hace en un mundo común.
+> Frente 1 = v14.3 (punto 2 de abajo). Frente 2 = gemelo rápido + JUACO-ECO por escalones (punto 3). Nada nuevo hasta cerrar uno.
 1. **Series pendientes con paquete verificado** (ver ESTADO.md, "Cola de series"): cada una con su arnés antes.
 2. **v14.3** (`experimentos/tronco_v14_3/`): tronco v14.2 + mapa (n6) + boca aprendida (aprende_barrer) + reparación N del nivel 7
    (si su réplica repitió) → pista de la carrera del 22-sep contra O1 → examen de tronco v4 → congelar con manifiesto propio.
@@ -61,6 +64,15 @@ Ver `registro/LABORATORIO.md`: rondas investigar → criticar → diseñar → a
 presupuesto (protocolo / riesgo alto / exploratorio). Cuando la cola se vacía, la sesión autónoma lanza una ronda de investigación.
 
 ## 4. Presupuesto y frenos
+- **Guardia mecánica** (`.claude/settings.json` → `.claude/guardia.sh` → `.claude/guardia.py`, hook PreToolUse). Bloquea sola:
+  - `manifiesto.py` sin `--check`;
+  - editar congelados, `MANIFEST.txt` o `manifiesto.py`;
+  - commitear con `MANIFEST.txt` sucio o con un congelado roto;
+  - `git push --force`, `git reset --hard`, `git clean` y `rm -r` de datos, experimentos, registro u organismo;
+  - `corre_*.py --help` (ERR-115).
+
+  Única llave: la variable de entorno `JUACO_CONGELAR=1`, que la pone un humano en el entorno de la sesión para congelar una versión
+  nueva con permiso del director. Probada el 23-sep con 22 casos, más 5 de commit en un repo de juguete.
 - Antes de lanzar algo largo, estimar CPU (el humo da el tiempo por corrida) y escribirlo en el preregistro.
 - Un bloque que su propio creador espera NO (p ≥ 0.9) va al final de la cola.
 - Si dos series seguidas de la misma línea dan NO, se cierra la línea y se registra; no se insiste con variaciones sin hipótesis nueva.
