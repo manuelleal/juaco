@@ -264,6 +264,21 @@
   - Sus arneses comparan sólo salidas, así que pueden coincidir en la salida y diferir en los pesos.
   - Hay que revisarlos comparando pesos. Afecta la lectura de "gemelo v14 42/42" de la calibración.
 
+### 1e. ECO v1.1 — el mismo vivero con un juez que distingue selección de deriva (paquete nuevo, decisión del coordinador; ver §3)
+- **Qué es:** ECO v1 sin tocar ningún archivo del PC, con dos cambios de INSTRUMENTO y ninguno de mecanismo:
+  - **juez v2** (responde a nube-4 y nube-6): la colonia del banco de VIDA contra la del banco de AZAR de la MISMA semilla, en una batería
+    sellada nueva (19501–19520); VIDA gana una semilla si su mediana es estrictamente mayor; P3 pide ≥ 15/20 (P = 0.021 bajo la nula);
+  - **placebo** que calibra el juez: otra muestra de 9 del mismo banco (rng [s, 8]); vale si su puntaje queda en [5, 15] de 20;
+  - **lectura larga** con el gemelo: cada corrida sigue hasta 1e6; el veredicto se lee en 120 000, como v1, y el bloque L en 1e6.
+- **Dato visto antes de escribirlo (declarado en el preregistro):** con los JSON de v1, VIDA > AZAR pareado da 18/20 y 15/20. El umbral
+  sale de la nula, no de ahí.
+- **10:23 — arnés `identidad_eco_v11.py` (a674b0f689b6d5f7): 34/34.** (A) juez v2 con flujo 7 = juez de v1; (B) el placebo saca otros
+  índices; (C) v1.1 con T = T_lect = v1 en sus 26 claves; (H) la dinámica no depende de T; (V) cada rama de la letra; (R) banderas.
+  - Dos fallos del arnés antes de pasar, los dos del arnés o de la copia: (B) comparaba el contenido de las muestras (un banco corto
+    repite genomas: 14 distintos de 157) y ahora compara índices; (C) halló que la copia había perdido la clave `tam_total` de v1.
+- **10:25 — humo** (19601, 3.8 s) y **prueba del Pool** (19602–19603, 3.6 s): la letra corre y dice NO EVALUABLE, como debe con 1–2 semillas.
+- **Commit df98831 (10:28): preregistro, runner (5655c93419511162) y arnés subidos ANTES de cualquier dato de v1.1.**
+
 ## 2. Exploratorio — **EXPLORATORIO, no es dato**
 Carpeta: `experimentos/exploratorio_nube_20260924/` (su `NOTA_EXPLORATORIA.md` manda). Aquí va sólo el resumen.
 
@@ -307,6 +322,19 @@ _(pendiente)_
   - Las series de esta noche (n10b, ECO v1) siguen con el instrumento en Python preregistrado. El gemelo sólo se usará tras su arnés
     N/N, para ECO largo y ECO v2.
   - La tanda exploratoria pasa a `nice 19`, para no quitarle CPU a las pruebas del compilador ni a las series.
+
+- **10:12 — se detiene una espera colgada.** El lazo `until ! pgrep -f "tag ii1a"` de la tanda (ii) se encontraba a sí mismo en `pgrep`
+  y no terminaba nunca; la tanda ya había acabado. Lección: esperar por PID o por el archivo de salida, no por `pgrep -f` de un texto que
+  el propio lazo contiene.
+- **10:15 — EXPLORATORIO: la pieza que el creador de v14.3 dejó propuesta.** Su INFORME (§"Qué queda") propone *"neofobia regulada por
+  la reserva"* como lo que le falta a v14.3 para acercarse a O1. Es mi tema (i), así que la pruebo sobre V143 sin tocarlo (subclase
+  cargada por ruta; identidad WV143 == V143 bit a bit) con dos definiciones de "desconocido": la del creador (por cuerpo) y otra por linaje.
+  - Alternativa descartada: preregistrarla de una vez como paquete del frente 1. Sin una señal exploratoria sería gastar una serie.
+- **10:20 — ECO v1.1 se escribe y se corre sin esperar respuesta del director** (le pregunté a las ~09:45; no contestó).
+  - Por qué: la regla 12 da autonomía para criterios y siguiente paso, y el director avisó que no estaría dando sí o no. v1 quedó
+    NO EVALUABLE ×2 por un juez mal calibrado; sin juez válido el frente 2 no puede contestar su segunda pregunta.
+  - El veredicto de v1 no se recalifica. v1.1 son archivos nuevos, con semillas nuevas, y su criterio se subió antes de correr.
+  - Se lee en 120 000 (como v1) para que el único cambio sea el juez; el horizonte de 1e6 va aparte, en el bloque L, con su letra.
 
 ## 3b. Pedidos del director durante la noche (sus palabras, para que no se pierdan)
 - Prompt de la noche: `NUBE.md` §2b (en main).

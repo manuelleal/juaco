@@ -92,6 +92,39 @@ Lectura:
   - Mirar por linaje: ¿los linajes estables son los que aprendieron A/C antes de probar lo malo?
   - Candidato a la pieza "neofobia regulada por la reserva" del informe de v14.3.
 
+### (i) sobre el candidato v14.3: la pieza que su creador propuso (neofobia regulada por la reserva)
+El INFORME de v14.3 (`experimentos/tronco_v14_3/INFORME_v143.md`, "Qué queda") propone como pieza que falta *"neofobia regulada por la
+reserva: la boca se contiene ante un código poco familiar (ncod bajo y valor lento ≈ 0) cuando min(E, Ag) es bajo"*. Se probó sin tocar
+V143.py: `carros_v143_reserva.py` lo carga por ruta y corrige la decisión ya tomada por su boca (no consume rng). Arnés: WV143 == V143 bit a
+bit en la física de los 9 linajes y la pista (24098 y 24099). Dos definiciones de "desconocido":
+- NEO5 (la del creador, por cuerpo): ninguna fila familiar por la vía rápida y |valor| < 0.3 en las dos filas; veta si r = min(E, Ag) < 0.5.
+- NEOL5 (por linaje): la letra nunca fue sentida por el linaje (no está en la tabla `_adS` de APR); veta si r < 0.5.
+- NEOINF: control de NEO5 que veta siempre, sin reserva.
+En los tres, si la letra es mala conocida del linaje decide la opción TD de APR y la regla no la pisa.
+
+`python experimentos/exploratorio_nube_20260924/corre_explora.py --brazos V143,V143_NEO5,V143_NEOL5,V143_NEOINF,O1,FAB --desde 24011 --n 2 --T 100000 --tag v143a`
+(y `--desde 24013 --tag v143b`, `--desde 24015 --tag v143c`; 10:15–10:34 UTC, tres procesos). Semillas 24011–24016, T 100 000.
+
+| brazo | R0 real (mediana) | por semilla | linajes que persisten | vida | fundadores | gana a V143 |
+|---|---|---|---|---|---|---|
+| FAB | 0.149 | 0.160 · 0.141 · 0.160 · 0.149 · 0.148 · 0.145 | 0/54 | 66 | 318 | 0/6 |
+| **V143** | **0.587** | 0.396 · 0.784 · 0.593 · 0.564 · 0.580 · 0.641 | 37/54 | 600 | 19.5 | — |
+| V143_NEO5 | 0.449 | 0.597 · 0.323 · 0.482 · 0.181 · 0.416 · 0.585 | 31/54 | 366 | 30.5 | 1/6 (−0.138) |
+| V143_NEOL5 | 0.420 | 0.422 · 0.419 · 0.221 · 0.644 · 0.210 · 0.947 | 33/54 | 400 | 25 | 3/6 (−0.169) |
+| V143_NEOINF | 0.000 | (todas 0: muere de hambre sin probar nada) | 0/54 | 600 | 166 | 0/6 |
+| O1 | 0.944 | 0.944 · 0.944 · 0.952 · 0.950 · 0.941 · 0.933 | 47/54 | 3293 | 0 | 6/6 (+0.360) |
+
+**Lectura (exploratoria): la pieza propuesta NO ayuda a v14.3; lo empeora.**
+- V143 en estas semillas reproduce lo del PC (0.587 contra 0.63 en la serie 14301).
+- NEO5 baja el R0 a 0.449 y gana en 1 de 6; NEOL5, a 0.420. Suben los fundadores (30.5 y 25 contra 19.5): más linajes se extinguen.
+- Por qué, probablemente (no medido por tipo de cuerpo): para un fundador limpio TODO es desconocido, incluida la comida; un hijo sólo
+  sabe lo que le enseña el nodo del linaje (las últimas 20 mordidas de cada cuerpo muerto, leídas por la vía lenta), y por H-NEUTRAS las
+  entradas neutras del nodo cancelan parte de eso. La neofobia frena también probar A y C cuando la reserva baja de 0.5, y el que nace
+  con dote 0.6 llega ahí en 100 pasos. NEOINF lo muestra en el extremo: sin probar nada, todos mueren de hambre.
+- O1 no tiene ese problema porque aprende cada letra de UNA mordida y lo guarda en el linaje. Lo que le falta a v14.3 no parece ser
+  contención ante lo nuevo, sino saber desde el nacimiento qué es qué. Eso es lo que midió n10c (la familia pasa lo que importa). Siguiente
+  exploratorio: `carros_v143_familia.py` (nodo sin neutras; tabla del padre con y sin neutras; control barajado). Arnés WF143 == V143 OK.
+
 ## Revisión de la alarma del §8 de n10b (RES > ORÁCULO 20/20 en la serie 12701–12720)
 `python experimentos/exploratorio_nube_20260924/revisa_n10b_oraculo.py --desde 12794 --n 4` (02:35–02:57 UTC). Semillas de práctica de
 n10b 12794–12797, T 100 000. Es `corre_n10b.tarea` sin tocar; sólo cambia el módulo del carro.
@@ -143,7 +176,35 @@ la tabla recibida.
   - la persistencia como medida co-principal.
 
 ## (ii) Aprender prediciendo
-_(pendiente)_
+Idea: aprender sin morder, prediciendo el mundo. El carro `CarroPred` (`carros_predice.py`) lleva un órgano que observa, para cada letra
+a la vista, cuánto tarda en desaparecer (tasa de riesgo por letra, media exponencial, ETA_H 0.01). Una letra que desaparece más rápido que
+la media (ρ ≥ 1.25) es una que los otros comen; una que se queda (ρ ≤ 0.80), una que los otros evitan. El órgano sólo corrige la
+neofobia de RES: permite probar lo desconocido que "los otros comen" aunque la reserva esté baja (pred_permite) y veta lo desconocido que
+"los otros evitan" (pred_veta). Controles: RESP (el órgano observa pero no se lee: == RES bit a bit, arnés) y PRED_BAR (letras permutadas
+en la lectura del órgano: control de contenido).
+
+`python experimentos/exploratorio_nube_20260924/corre_explora.py --brazos FAB,RESP,PRED,PRED_BAR,O1 --desde 24001 --n 3 --T 30000 --tag ii1a`
+y la misma con `--desde 24004 --tag ii1b` (09:45–09:57 UTC, dos procesos). Semillas 24001–24006, T 30 000.
+JSON: `datos/explora_ii1a_…_094529.json` y `datos/explora_ii1b_…_094529.json`.
+
+| brazo | R0 real (mediana) | por semilla | linajes que persisten | pasos sin nada bueno en el mundo |
+|---|---|---|---|---|
+| FAB | 0.149 | 0.152 · 0.144 · 0.164 · 0.147 · 0.167 · 0.120 | 1/54 | 0.000 |
+| RESP (== RES) | 0.116 | 0.125 · 0.085 · 0.078 · 0.139 · 0.127 · 0.106 | 7/54 | 0.082 |
+| **PRED** | **0.086** | 0.091 · 0.081 · 0.122 · 0.082 · 0.077 · 0.103 | **0/54** | 0.112 |
+| PRED_BAR | 0.049 | 0.016 · 0.094 · 0.032 · 0.111 · 0.046 · 0.053 | 6/54 | 0.067 |
+| O1 | 0.775 | 0.833 · 0.667 · 0.833 · 0.800 · 0.500 · 0.750 | 20/54 | 0.036 |
+
+Pareados contra RESP: PRED gana 1/6 (−0.019); PRED_BAR gana 1/6 (−0.050).
+
+**Lectura (exploratoria): negativo en este diseño.**
+- Predecir qué comen los otros no ayuda: PRED queda por debajo de RES y no persiste ningún linaje (0/54 contra 7/54).
+- El contenido sí importa (PRED_BAR es el peor en R0), pero en la dirección que daña: el órgano veta más de lo que permite (pred_veta
+  533–744 por corrida contra pred_permite 126–159, 6 semillas) y el mundo se tapa más (0.112 de pasos sin nada bueno contra 0.082).
+- La razón probable: en esta pista lo que desaparece rápido no es sólo lo bueno. Morder lo malo también lo quita (es limpieza), y
+  FABRICA muerde mucho lo malo. La señal "los otros lo comen" está contaminada por la conducta de los otros.
+- No se sigue por aquí esta noche. Si se retoma, la predicción tendría que ser de la consecuencia (ΔE del que muerde, visible), no de la
+  desaparición.
 
 ## (iii) Propio
 _(pendiente)_

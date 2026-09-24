@@ -5,3 +5,22 @@
 [10:21:09]   s24013 V143_NEOINF R0real 0.0 persisten 0/9 vida 600.0 muertes 166.0 fund 166.0 causas {'hambre': 1494, 'sed': 0, 'veneno': 0, 'sal': 0} BD 0.0 AC 0.0 sinbueno 0.0 tot {'enc': 93984, 'desc': 93984, 'vetos_desc': 93641} (88.9 s)
 [10:23:22]   s24013 O1         R0real 0.9524 persisten 8/9 vida 2795.0 muertes 22.0 fund 0.0 causas {'hambre': 45, 'sed': 85, 'veneno': 99, 'sal': 107} BD 377.0 AC 675.0 sinbueno 0.0558 tot {} (132.1 s)
 [10:24:46]   s24013 FAB        R0real 0.1603 persisten 0/9 vida 67.0 muertes 378.0 fund 313.0 causas {'hambre': 0, 'sed': 0, 'veneno': 1766, 'sal': 1673} BD 1533.0 AC 1699.0 sinbueno 0.0003 tot {} (84.6 s)
+[10:26:10]   s24014 V143       R0real 0.5641 persisten 6/9 vida 600.0 muertes 43.0 fund 16.0 causas {'hambre': 80, 'sed': 69, 'veneno': 908, 'sal': 881} BD 65.0 AC 821.0 sinbueno 0.0262 tot {} (83.9 s)
+[10:27:35]   s24014 V143_NEO5  R0real 0.181 persisten 4/9 vida 63.0 muertes 104.0 fund 85.0 causas {'hambre': 102, 'sed': 79, 'veneno': 974, 'sal': 985} BD 252.0 AC 907.0 sinbueno 0.0131 tot {'enc': 86558, 'desc': 5256, 'mord': 10786, 'mord_desc': 2341, 'td': 68719, 'vetos_desc': 2762} (84.8 s)
+[10:29:00]   s24014 V143_NEOL5 R0real 0.6444 persisten 6/9 vida 815.5 muertes 37.0 fund 15.0 causas {'hambre': 100, 'sed': 72, 'veneno': 1042, 'sal': 1031} BD 63.0 AC 786.0 sinbueno 0.0281 tot {'enc': 87810, 'desc': 10108, 'mord': 8693, 'mord_desc': 2407, 'td': 70487, 'vetos_desc': 6387} (85.6 s)
+[10:30:28]   s24014 V143_NEOINF R0real 0.0 persisten 0/9 vida 600.0 muertes 166.0 fund 166.0 causas {'hambre': 1494, 'sed': 0, 'veneno': 0, 'sal': 0} BD 0.0 AC 0.0 sinbueno 0.0 tot {'enc': 92791, 'desc': 92791, 'vetos_desc': 92475} (87.7 s)
+[10:32:47]   s24014 O1         R0real 0.95 persisten 8/9 vida 3373.0 muertes 20.0 fund 0.0 causas {'hambre': 71, 'sed': 53, 'veneno': 167, 'sal': 157} BD 347.0 AC 681.0 sinbueno 0.04 tot {} (138.5 s)
+[10:34:11]   s24014 FAB        R0real 0.1492 persisten 0/9 vida 67.0 muertes 387.0 fund 323.0 causas {'hambre': 0, 'sed': 0, 'veneno': 1754, 'sal': 1745} BD 1541.0 AC 1712.0 sinbueno 0.0004 tot {} (84.3 s)
+[10:34:11] RESUMEN por brazo (medianas sobre semillas de la mediana de los 9 linajes)
+[10:34:11]   V143       R0real 0.5786 persisten 13/18 vida 600.0 muertes 39.0 fund 16.5 BD 71.0 AC 818.0 sinbueno 0.0271 muere_sin_parir 0.6089 · V143 del PC sin tocar (cargado por ruta)
+[10:34:11]   V143_NEO5  R0real 0.3312 persisten 9/18 vida 297.75 muertes 78.5 fund 56.0 BD 174.5 AC 881.5 sinbueno 0.0192 muere_sin_parir 0.7913 · V143 + neofobia por cuerpo (literal del creador), r < 0.5
+[10:34:11]   V143_NEOL5 R0real 0.4326 persisten 12/18 vida 460.0 muertes 61.0 fund 40.5 BD 117.5 AC 849.5 sinbueno 0.0224 muere_sin_parir 0.7069 · V143 + neofobia por linaje (letra nunca sentida), r < 0.5
+[10:34:11]   V143_NEOINF R0real 0.0 persisten 0/18 vida 600.0 muertes 166.0 fund 166.0 BD 0.0 AC 0.0 sinbueno 0.0 muere_sin_parir 1.0 · V143 + neofobia por cuerpo SIEMPRE (control: sin reserva)
+[10:34:11]   O1         R0real 0.9512 persisten 16/18 vida 3084.0 muertes 21.0 fund 0.0 BD 362.0 AC 678.0 sinbueno 0.0479 muere_sin_parir 0.3541 · O1 (política escrita a mano por un LLM; techo de la pista)
+[10:34:11]   FAB        R0real 0.1547 persisten 0/18 vida 67.0 muertes 382.5 fund 318.0 BD 1537.0 AC 1705.5 sinbueno 0.0003 muere_sin_parir 0.8995 · FABRICA de la carrera (bicho real, piso)
+[10:34:11]   pareado V143 vs FAB: gana 2/2 · dif mediana 0.4239
+[10:34:11]   pareado V143_NEO5 vs FAB: gana 2/2 · dif mediana 0.1765
+[10:34:11]   pareado V143_NEOL5 vs FAB: gana 2/2 · dif mediana 0.2779
+[10:34:11]   pareado V143_NEOINF vs FAB: gana 0/2 · dif mediana -0.1547
+[10:34:11]   pareado O1 vs FAB: gana 2/2 · dif mediana 0.7964
+[10:34:11] JSON: experimentos/exploratorio_nube_20260924/datos/explora_v143b_V143-V143_NEO5-V143_NEOL5-V143_NEOINF-O1-FAB_s24013-24014_T100000_20260924_101530.json
