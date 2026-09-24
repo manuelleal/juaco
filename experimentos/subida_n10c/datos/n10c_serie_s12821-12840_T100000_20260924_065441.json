@@ -1,0 +1,6661 @@
+{
+ "meta": {
+  "etiqueta": "n10c_serie_s12821-12840_T100000",
+  "sello": "20260924_065441",
+  "semillas": [
+   12821,
+   12822,
+   12823,
+   12824,
+   12825,
+   12826,
+   12827,
+   12828,
+   12829,
+   12830,
+   12831,
+   12832,
+   12833,
+   12834,
+   12835,
+   12836,
+   12837,
+   12838,
+   12839,
+   12840
+  ],
+  "T": 100000,
+  "brazos": [
+   "NADA",
+   "RES",
+   "RES_SIN0",
+   "BAR_SIN0",
+   "ORA_SIN0",
+   "MIX"
+  ],
+  "corre_n10c": "27f640c352057b87",
+  "carros_n10c": "67f149c81f880cb1",
+  "corre_n10b": "b7808bbb83fb038e",
+  "preregistro": "2d0365a6b80d0602",
+  "seg_pared": 11618.1,
+  "seg_cpu": 11609.9
+ },
+ "agregado": {
+  "NADA": {
+   "tam_carro": 9.688,
+   "exceso": 0.688,
+   "nac": 472.0,
+   "fundadores": 2495.5,
+   "linajes_sin_ext": 0.0,
+   "persisten": 0.0,
+   "R0_nacidos": 0.1089,
+   "R0_fund": 0.1749,
+   "vida_nacidos": 100.0,
+   "vida_fund": 106.0,
+   "frac_mala_nacidos": 1.0,
+   "gen_max": 3.0,
+   "semillas": 20,
+   "persiste_carro": 0,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0
+  },
+  "RES": {
+   "tam_carro": 19.117,
+   "exceso": 10.117,
+   "nac": 668.0,
+   "fundadores": 3006.5,
+   "linajes_sin_ext": 0.0,
+   "persisten": 0.0,
+   "R0_nacidos": 0.7735,
+   "R0_fund": 0.0654,
+   "vida_nacidos": 563.0,
+   "vida_fund": 120.0,
+   "frac_mala_nacidos": 0.8307,
+   "gen_max": 27.0,
+   "semillas": 20,
+   "persiste_carro": 5,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0,
+   "tele": {
+    "n": 668.0,
+    "claves_med": 6.0,
+    "frac_B_mala": 0.9449,
+    "frac_D_mala": 0.8004,
+    "frac_A_mala": 0.0,
+    "frac_C_mala": 0.0,
+    "frac_completa": 0.0507
+   }
+  },
+  "RES_SIN0": {
+   "tam_carro": 21.743,
+   "exceso": 12.743,
+   "nac": 706.5,
+   "fundadores": 3465.5,
+   "linajes_sin_ext": 1.0,
+   "persisten": 1.0,
+   "R0_nacidos": 0.946,
+   "R0_fund": 0.0237,
+   "vida_nacidos": 1337.0,
+   "vida_fund": 122.0,
+   "frac_mala_nacidos": 0.5763,
+   "gen_max": 36.5,
+   "semillas": 20,
+   "persiste_carro": 16,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 18,
+   "tele": {
+    "n": 706.5,
+    "claves_med": 4.0,
+    "frac_B_mala": 0.9711,
+    "frac_D_mala": 0.8932,
+    "frac_A_mala": 0.0,
+    "frac_C_mala": 0.0,
+    "frac_completa": 0.0
+   }
+  },
+  "BAR_SIN0": {
+   "tam_carro": 11.359,
+   "exceso": 2.359,
+   "nac": 593.5,
+   "fundadores": 2575.0,
+   "linajes_sin_ext": 0.0,
+   "persisten": 0.0,
+   "R0_nacidos": 0.5393,
+   "R0_fund": 0.1148,
+   "vida_nacidos": 179.0,
+   "vida_fund": 98.75,
+   "frac_mala_nacidos": 0.9701,
+   "gen_max": 9.0,
+   "semillas": 20,
+   "persiste_carro": 0,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 0,
+   "tele": {
+    "n": 593.5,
+    "claves_med": 4.0,
+    "frac_B_mala": 0.389,
+    "frac_D_mala": 0.2858,
+    "frac_A_mala": 0.4133,
+    "frac_C_mala": 0.3737,
+    "frac_completa": 0.0
+   }
+  },
+  "ORA_SIN0": {
+   "tam_carro": 21.718,
+   "exceso": 12.718,
+   "nac": 758.5,
+   "fundadores": 3393.0,
+   "linajes_sin_ext": 0.0,
+   "persisten": 0.0,
+   "R0_nacidos": 0.9813,
+   "R0_fund": 0.0161,
+   "vida_nacidos": 1401.0,
+   "vida_fund": 98.0,
+   "frac_mala_nacidos": 0.6085,
+   "gen_max": 31.5,
+   "semillas": 20,
+   "persiste_carro": 8,
+   "bloqueados": 0,
+   "sem_R0nac_ge_090": 20
+  },
+  "_brecha_RES": {
+   "mediana": null,
+   "n": 0
+  }
+ },
+ "pareados": [
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.18,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "vida_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 801.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 18,
+   "pierde": 2,
+   "empata": 0,
+   "dif_med": 2.495,
+   "p_signo": 0.0004
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 32.5,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-RES",
+   "clave": "gen_max",
+   "n": 20,
+   "gana": 16,
+   "pierde": 3,
+   "empata": 1,
+   "dif_med": 7.5,
+   "p_signo": 0.00443
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.3976,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "vida_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 1165.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 10.463,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 107.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "gen_max",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 27.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.8261,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "vida_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 1236.5,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 12.097,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 238.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "gen_max",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 33.5,
+   "p_signo": 0.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.4363,
+   "p_signo": 0.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "vida_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 81.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 1.697,
+   "p_signo": 0.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 125.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "gen_max",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 5.5,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.6398,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "vida_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 460.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 9.484,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 197.5,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES-NADA",
+   "clave": "gen_max",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 23.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 18,
+   "pierde": 2,
+   "empata": 0,
+   "dif_med": 0.0383,
+   "p_signo": 0.0004
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "vida_nacidos",
+   "n": 20,
+   "gana": 17,
+   "pierde": 1,
+   "empata": 2,
+   "dif_med": 88.5,
+   "p_signo": 0.00014
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 10,
+   "pierde": 10,
+   "empata": 0,
+   "dif_med": 0.002,
+   "p_signo": 1.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 49.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "ORA_SIN0-RES_SIN0",
+   "clave": "gen_max",
+   "n": 20,
+   "gana": 5,
+   "pierde": 14,
+   "empata": 1,
+   "dif_med": -7.5,
+   "p_signo": 0.06357
+  }
+ ],
+ "pareados_mix": [
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.9932,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 12.649,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-NADA",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 575.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 0.8526,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 12.654,
+   "p_signo": 0.0
+  },
+  {
+   "par": "RES_SIN0-BAR_SIN0",
+   "clave": "nac",
+   "n": 20,
+   "gana": 20,
+   "pierde": 0,
+   "empata": 0,
+   "dif_med": 572.0,
+   "p_signo": 0.0
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "R0_nacidos",
+   "n": 20,
+   "gana": 16,
+   "pierde": 3,
+   "empata": 1,
+   "dif_med": 0.1535,
+   "p_signo": 0.00443
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "exceso",
+   "n": 20,
+   "gana": 13,
+   "pierde": 7,
+   "empata": 0,
+   "dif_med": 0.015,
+   "p_signo": 0.26318
+  },
+  {
+   "par": "BAR_SIN0-NADA",
+   "clave": "nac",
+   "n": 20,
+   "gana": 13,
+   "pierde": 4,
+   "empata": 3,
+   "dif_med": 5.0,
+   "p_signo": 0.04904
+  }
+ ],
+ "veredicto": {
+  "V-ANCLA-c (mediana R0_nacidos NADA en [0.085, 0.135] y NADA persiste_carro <= 5/20)": true,
+  "V-RES-c (mediana R0_nacidos RES en [0.60, 0.82])": true,
+  "S-1 (RES_SIN0 > RES en R0_nacidos >= 15/20)": true,
+  "S-2 (RES_SIN0 > BAR_SIN0 en R0_nacidos >= 15/20)": true,
+  "S-3 (MIX: RES_SIN0 > NADA, mismo mundo, >= 15/20)": true,
+  "S-4 (MIX: RES_SIN0 > BAR_SIN0, mismo mundo, >= 15/20)": true,
+  "R0N-90 (calificador: RES_SIN0 R0_nacidos >= 0.90 en >= 15/20 semillas; NO es H-1: H-1 exige ademas 0 fundadores)": true,
+  "PER-c (calificador: persiste el carro RES_SIN0 en >= 15/20 semillas)": true,
+  "informativo ORA_SIN0 > RES_SIN0 (semillas)": 18,
+  "informativo persiste_carro por brazo": {
+   "NADA": 0,
+   "RES": 5,
+   "RES_SIN0": 16,
+   "BAR_SIN0": 0,
+   "ORA_SIN0": 8
+  },
+  "VEREDICTO": "FUNCIONA + R0 DE NACIDOS >= 0.90 + PERSISTE"
+ },
+ "por_semilla": [
+  {
+   "seed": 12821,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 58.8,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.63,
+     "tam_final": 10,
+     "exceso": 0.63,
+     "nac": 478,
+     "fundadores": 2440,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1224,
+     "n_coh_nacidos": 237,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1775,
+     "vida_nacidos": 100.0,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 246,
+      "sal": 231
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12822,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 58.1,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.658,
+     "tam_final": 9,
+     "exceso": 0.658,
+     "nac": 460,
+     "fundadores": 2479,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1303,
+     "n_coh_nacidos": 238,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1817,
+     "vida_nacidos": 97.0,
+     "vida_fund": 103.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 242,
+      "sal": 218
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12823,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.8,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.74,
+     "tam_final": 9,
+     "exceso": 0.74,
+     "nac": 465,
+     "fundadores": 2495,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.13,
+     "n_coh_nacidos": 223,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1574,
+     "vida_nacidos": 103.0,
+     "vida_fund": 111.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 254,
+      "sal": 211
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12824,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.5,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.836,
+     "tam_final": 9,
+     "exceso": 0.836,
+     "nac": 475,
+     "fundadores": 2538,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0969,
+     "n_coh_nacidos": 227,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.179,
+     "vida_nacidos": 106.0,
+     "vida_fund": 97.5,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 254,
+      "sal": 221
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12825,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 57.9,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.616,
+     "tam_final": 9,
+     "exceso": 0.616,
+     "nac": 472,
+     "fundadores": 2496,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1167,
+     "n_coh_nacidos": 240,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1764,
+     "vida_nacidos": 105.0,
+     "vida_fund": 104.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 256,
+      "sal": 215
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12826,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.2,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.696,
+     "tam_final": 10,
+     "exceso": 0.696,
+     "nac": 489,
+     "fundadores": 2519,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0759,
+     "n_coh_nacidos": 237,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1783,
+     "vida_nacidos": 93.0,
+     "vida_fund": 101.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 260,
+      "sal": 226
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12827,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 61.4,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.824,
+     "tam_final": 9,
+     "exceso": 0.824,
+     "nac": 476,
+     "fundadores": 2426,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.103,
+     "n_coh_nacidos": 233,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1781,
+     "vida_nacidos": 93.5,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 233,
+      "sal": 243
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12828,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 57.7,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.526,
+     "tam_final": 10,
+     "exceso": 0.526,
+     "nac": 466,
+     "fundadores": 2474,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1356,
+     "n_coh_nacidos": 236,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1649,
+     "vida_nacidos": 95.0,
+     "vida_fund": 114.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 257,
+      "sal": 206
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12829,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.1,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.784,
+     "tam_final": 10,
+     "exceso": 0.784,
+     "nac": 478,
+     "fundadores": 2397,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1283,
+     "n_coh_nacidos": 226,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1676,
+     "vida_nacidos": 99.0,
+     "vida_fund": 108.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 271,
+      "sal": 204
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12830,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.9,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.682,
+     "tam_final": 9,
+     "exceso": 0.682,
+     "nac": 461,
+     "fundadores": 2491,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.08,
+     "n_coh_nacidos": 225,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1763,
+     "vida_nacidos": 98.5,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 232,
+      "sal": 228
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12831,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.4,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.694,
+     "tam_final": 9,
+     "exceso": 0.694,
+     "nac": 475,
+     "fundadores": 2564,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1073,
+     "n_coh_nacidos": 233,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1636,
+     "vida_nacidos": 100.0,
+     "vida_fund": 107.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 260,
+      "sal": 214
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12832,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 58.3,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.568,
+     "tam_final": 10,
+     "exceso": 0.568,
+     "nac": 475,
+     "fundadores": 2528,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1603,
+     "n_coh_nacidos": 237,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1644,
+     "vida_nacidos": 90.0,
+     "vida_fund": 110.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 250,
+      "sal": 224
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12833,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.4,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.682,
+     "tam_final": 11,
+     "exceso": 0.682,
+     "nac": 482,
+     "fundadores": 2505,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1057,
+     "n_coh_nacidos": 246,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1846,
+     "vida_nacidos": 96.0,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 263,
+      "sal": 217
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12834,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 57.7,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.696,
+     "tam_final": 11,
+     "exceso": 0.696,
+     "nac": 465,
+     "fundadores": 2468,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0733,
+     "n_coh_nacidos": 232,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1787,
+     "vida_nacidos": 109.0,
+     "vida_fund": 107.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 256,
+      "sal": 207
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12835,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 58.1,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.44,
+     "tam_final": 9,
+     "exceso": 0.44,
+     "nac": 453,
+     "fundadores": 2501,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1195,
+     "n_coh_nacidos": 226,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1609,
+     "vida_nacidos": 103.0,
+     "vida_fund": 101.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 234,
+      "sal": 218
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12836,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.5,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.61,
+     "tam_final": 9,
+     "exceso": 0.61,
+     "nac": 472,
+     "fundadores": 2628,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1059,
+     "n_coh_nacidos": 236,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.165,
+     "vida_nacidos": 91.0,
+     "vida_fund": 95.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 260,
+      "sal": 209
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12837,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.5,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.748,
+     "tam_final": 9,
+     "exceso": 0.748,
+     "nac": 466,
+     "fundadores": 2521,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1082,
+     "n_coh_nacidos": 231,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1734,
+     "vida_nacidos": 111.0,
+     "vida_fund": 105.0,
+     "frac_mala_nacidos": 0.9978,
+     "causas_nacidos": {
+      "hambre": 1,
+      "sed": 0,
+      "veneno": 228,
+      "sal": 235
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12838,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 58.9,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.742,
+     "tam_final": 9,
+     "exceso": 0.742,
+     "nac": 471,
+     "fundadores": 2495,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1096,
+     "n_coh_nacidos": 228,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1685,
+     "vida_nacidos": 101.5,
+     "vida_fund": 105.5,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 248,
+      "sal": 222
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12839,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 61.6,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.914,
+     "tam_final": 9,
+     "exceso": 0.914,
+     "nac": 472,
+     "fundadores": 2388,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1299,
+     "n_coh_nacidos": 231,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1838,
+     "vida_nacidos": 110.0,
+     "vida_fund": 108.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 231,
+      "sal": 240
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12840,
+   "brazo": "NADA",
+   "T": 100000,
+   "seg": 59.2,
+   "estr": {
+    "NADA": {
+     "tam_carro": 9.65,
+     "tam_final": 9,
+     "exceso": 0.65,
+     "nac": 457,
+     "fundadores": 2505,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0909,
+     "n_coh_nacidos": 220,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.164,
+     "vida_nacidos": 104.0,
+     "vida_fund": 97.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 231,
+      "sal": 226
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12821,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 113.2,
+   "estr": {
+    "RES": {
+     "tam_carro": 20.8,
+     "tam_final": 18,
+     "exceso": 11.8,
+     "nac": 673,
+     "fundadores": 3491,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.8701,
+     "n_coh_nacidos": 354,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0327,
+     "vida_nacidos": 674.0,
+     "vida_fund": 143.0,
+     "frac_mala_nacidos": 0.6923,
+     "causas_nacidos": {
+      "hambre": 77,
+      "sed": 127,
+      "veneno": 147,
+      "sal": 312
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": {
+      "n": 673,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9733,
+      "frac_D_mala": 0.893,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0059
+     }
+    }
+   }
+  },
+  {
+   "seed": 12822,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 109.0,
+   "estr": {
+    "RES": {
+     "tam_carro": 21.15,
+     "tam_final": 19,
+     "exceso": 12.15,
+     "nac": 673,
+     "fundadores": 3400,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.8265,
+     "n_coh_nacidos": 340,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0509,
+     "vida_nacidos": 600.0,
+     "vida_fund": 140.0,
+     "frac_mala_nacidos": 0.6752,
+     "causas_nacidos": {
+      "hambre": 76,
+      "sed": 139,
+      "veneno": 144,
+      "sal": 303
+     },
+     "gen_max": 39,
+     "bloqueados": 0,
+     "tele": {
+      "n": 673,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9391,
+      "frac_D_mala": 0.8559,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0178
+     }
+    }
+   }
+  },
+  {
+   "seed": 12823,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 89.4,
+   "estr": {
+    "RES": {
+     "tam_carro": 19.702,
+     "tam_final": 21,
+     "exceso": 10.702,
+     "nac": 663,
+     "fundadores": 2886,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5377,
+     "n_coh_nacidos": 292,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1214,
+     "vida_nacidos": 461.0,
+     "vida_fund": 123.0,
+     "frac_mala_nacidos": 0.8367,
+     "causas_nacidos": {
+      "hambre": 36,
+      "sed": 70,
+      "veneno": 149,
+      "sal": 394
+     },
+     "gen_max": 24,
+     "bloqueados": 0,
+     "tele": {
+      "n": 663,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9201,
+      "frac_D_mala": 0.7029,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0679
+     }
+    }
+   }
+  },
+  {
+   "seed": 12824,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 76.1,
+   "estr": {
+    "RES": {
+     "tam_carro": 12.01,
+     "tam_final": 14,
+     "exceso": 3.01,
+     "nac": 606,
+     "fundadores": 2595,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6296,
+     "n_coh_nacidos": 297,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0863,
+     "vida_nacidos": 238.0,
+     "vida_fund": 99.0,
+     "frac_mala_nacidos": 0.9667,
+     "causas_nacidos": {
+      "hambre": 9,
+      "sed": 11,
+      "veneno": 172,
+      "sal": 408
+     },
+     "gen_max": 25,
+     "bloqueados": 0,
+     "tele": {
+      "n": 606,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.9208,
+      "frac_D_mala": 0.6089,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1601
+     }
+    }
+   }
+  },
+  {
+   "seed": 12825,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 98.3,
+   "estr": {
+    "RES": {
+     "tam_carro": 18.876,
+     "tam_final": 20,
+     "exceso": 9.876,
+     "nac": 676,
+     "fundadores": 3195,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.8116,
+     "n_coh_nacidos": 329,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0511,
+     "vida_nacidos": 600.0,
+     "vida_fund": 130.0,
+     "frac_mala_nacidos": 0.7726,
+     "causas_nacidos": {
+      "hambre": 71,
+      "sed": 80,
+      "veneno": 145,
+      "sal": 368
+     },
+     "gen_max": 27,
+     "bloqueados": 0,
+     "tele": {
+      "n": 676,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9586,
+      "frac_D_mala": 0.8299,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0503
+     }
+    }
+   }
+  },
+  {
+   "seed": 12826,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 104.2,
+   "estr": {
+    "RES": {
+     "tam_carro": 20.688,
+     "tam_final": 20,
+     "exceso": 11.688,
+     "nac": 691,
+     "fundadores": 3277,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.8333,
+     "n_coh_nacidos": 330,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0497,
+     "vida_nacidos": 600.0,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 0.7143,
+     "causas_nacidos": {
+      "hambre": 85,
+      "sed": 109,
+      "veneno": 136,
+      "sal": 349
+     },
+     "gen_max": 32,
+     "bloqueados": 0,
+     "tele": {
+      "n": 691,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9725,
+      "frac_D_mala": 0.835,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0434
+     }
+    }
+   }
+  },
+  {
+   "seed": 12827,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 83.8,
+   "estr": {
+    "RES": {
+     "tam_carro": 16.448,
+     "tam_final": 20,
+     "exceso": 7.448,
+     "nac": 649,
+     "fundadores": 2817,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6881,
+     "n_coh_nacidos": 327,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0901,
+     "vida_nacidos": 419.5,
+     "vida_fund": 115.0,
+     "frac_mala_nacidos": 0.8868,
+     "causas_nacidos": {
+      "hambre": 27,
+      "sed": 45,
+      "veneno": 171,
+      "sal": 393
+     },
+     "gen_max": 27,
+     "bloqueados": 0,
+     "tele": {
+      "n": 649,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.9414,
+      "frac_D_mala": 0.7565,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1032
+     }
+    }
+   }
+  },
+  {
+   "seed": 12828,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 87.0,
+   "estr": {
+    "RES": {
+     "tam_carro": 18.356,
+     "tam_final": 24,
+     "exceso": 9.356,
+     "nac": 654,
+     "fundadores": 2880,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6771,
+     "n_coh_nacidos": 319,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0862,
+     "vida_nacidos": 526.0,
+     "vida_fund": 114.0,
+     "frac_mala_nacidos": 0.8697,
+     "causas_nacidos": {
+      "hambre": 30,
+      "sed": 53,
+      "veneno": 179,
+      "sal": 375
+     },
+     "gen_max": 17,
+     "bloqueados": 0,
+     "tele": {
+      "n": 654,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9297,
+      "frac_D_mala": 0.7477,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1254
+     }
+    }
+   }
+  },
+  {
+   "seed": 12829,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 78.6,
+   "estr": {
+    "RES": {
+     "tam_carro": 12.774,
+     "tam_final": 16,
+     "exceso": 3.774,
+     "nac": 630,
+     "fundadores": 2683,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6773,
+     "n_coh_nacidos": 313,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0842,
+     "vida_nacidos": 324.0,
+     "vida_fund": 107.0,
+     "frac_mala_nacidos": 0.9356,
+     "causas_nacidos": {
+      "hambre": 16,
+      "sed": 24,
+      "veneno": 155,
+      "sal": 426
+     },
+     "gen_max": 21,
+     "bloqueados": 0,
+     "tele": {
+      "n": 630,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.9254,
+      "frac_D_mala": 0.6238,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1095
+     }
+    }
+   }
+  },
+  {
+   "seed": 12830,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 78.5,
+   "estr": {
+    "RES": {
+     "tam_carro": 15.342,
+     "tam_final": 21,
+     "exceso": 6.342,
+     "nac": 607,
+     "fundadores": 2645,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.4863,
+     "n_coh_nacidos": 292,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1309,
+     "vida_nacidos": 363.5,
+     "vida_fund": 108.0,
+     "frac_mala_nacidos": 0.9242,
+     "causas_nacidos": {
+      "hambre": 16,
+      "sed": 29,
+      "veneno": 165,
+      "sal": 384
+     },
+     "gen_max": 15,
+     "bloqueados": 0,
+     "tele": {
+      "n": 607,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9077,
+      "frac_D_mala": 0.5799,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1351
+     }
+    }
+   }
+  },
+  {
+   "seed": 12831,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 98.7,
+   "estr": {
+    "RES": {
+     "tam_carro": 19.516,
+     "tam_final": 18,
+     "exceso": 10.516,
+     "nac": 695,
+     "fundadores": 3127,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.7942,
+     "n_coh_nacidos": 345,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0608,
+     "vida_nacidos": 600.0,
+     "vida_fund": 117.0,
+     "frac_mala_nacidos": 0.8248,
+     "causas_nacidos": {
+      "hambre": 27,
+      "sed": 93,
+      "veneno": 129,
+      "sal": 436
+     },
+     "gen_max": 24,
+     "bloqueados": 0,
+     "tele": {
+      "n": 695,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9511,
+      "frac_D_mala": 0.823,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.023
+     }
+    }
+   }
+  },
+  {
+   "seed": 12832,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 87.5,
+   "estr": {
+    "RES": {
+     "tam_carro": 14.812,
+     "tam_final": 20,
+     "exceso": 5.812,
+     "nac": 697,
+     "fundadores": 2759,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.7529,
+     "n_coh_nacidos": 340,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.07,
+     "vida_nacidos": 307.0,
+     "vida_fund": 109.0,
+     "frac_mala_nacidos": 0.9284,
+     "causas_nacidos": {
+      "hambre": 11,
+      "sed": 38,
+      "veneno": 165,
+      "sal": 470
+     },
+     "gen_max": 27,
+     "bloqueados": 0,
+     "tele": {
+      "n": 697,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.9484,
+      "frac_D_mala": 0.7934,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0344
+     }
+    }
+   }
+  },
+  {
+   "seed": 12833,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 76.6,
+   "estr": {
+    "RES": {
+     "tam_carro": 12.69,
+     "tam_final": 16,
+     "exceso": 3.69,
+     "nac": 628,
+     "fundadores": 2605,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6667,
+     "n_coh_nacidos": 318,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0918,
+     "vida_nacidos": 233.0,
+     "vida_fund": 102.0,
+     "frac_mala_nacidos": 0.958,
+     "causas_nacidos": {
+      "hambre": 12,
+      "sed": 14,
+      "veneno": 152,
+      "sal": 441
+     },
+     "gen_max": 15,
+     "bloqueados": 0,
+     "tele": {
+      "n": 628,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.9156,
+      "frac_D_mala": 0.5478,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.051
+     }
+    }
+   }
+  },
+  {
+   "seed": 12834,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 79.2,
+   "estr": {
+    "RES": {
+     "tam_carro": 14.786,
+     "tam_final": 13,
+     "exceso": 5.786,
+     "nac": 616,
+     "fundadores": 2628,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5458,
+     "n_coh_nacidos": 295,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1154,
+     "vida_nacidos": 231.5,
+     "vida_fund": 113.0,
+     "frac_mala_nacidos": 0.9589,
+     "causas_nacidos": {
+      "hambre": 7,
+      "sed": 18,
+      "veneno": 179,
+      "sal": 404
+     },
+     "gen_max": 17,
+     "bloqueados": 0,
+     "tele": {
+      "n": 616,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.8701,
+      "frac_D_mala": 0.6331,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.1234
+     }
+    }
+   }
+  },
+  {
+   "seed": 12835,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 107.2,
+   "estr": {
+    "RES": {
+     "tam_carro": 21.694,
+     "tam_final": 24,
+     "exceso": 12.694,
+     "nac": 674,
+     "fundadores": 3456,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.8681,
+     "n_coh_nacidos": 326,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0385,
+     "vida_nacidos": 600.0,
+     "vida_fund": 135.0,
+     "frac_mala_nacidos": 0.6945,
+     "causas_nacidos": {
+      "hambre": 68,
+      "sed": 133,
+      "veneno": 142,
+      "sal": 315
+     },
+     "gen_max": 41,
+     "bloqueados": 0,
+     "tele": {
+      "n": 674,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9525,
+      "frac_D_mala": 0.8724,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0297
+     }
+    }
+   }
+  },
+  {
+   "seed": 12836,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 107.2,
+   "estr": {
+    "RES": {
+     "tam_carro": 21.238,
+     "tam_final": 17,
+     "exceso": 12.238,
+     "nac": 683,
+     "fundadores": 3382,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.8761,
+     "n_coh_nacidos": 331,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0385,
+     "vida_nacidos": 600.0,
+     "vida_fund": 138.0,
+     "frac_mala_nacidos": 0.6969,
+     "causas_nacidos": {
+      "hambre": 90,
+      "sed": 114,
+      "veneno": 130,
+      "sal": 339
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 683,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9678,
+      "frac_D_mala": 0.8668,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0512
+     }
+    }
+   }
+  },
+  {
+   "seed": 12837,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 105.0,
+   "estr": {
+    "RES": {
+     "tam_carro": 19.72,
+     "tam_final": 15,
+     "exceso": 10.72,
+     "nac": 684,
+     "fundadores": 3136,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.7988,
+     "n_coh_nacidos": 338,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0532,
+     "vida_nacidos": 600.0,
+     "vida_fund": 136.0,
+     "frac_mala_nacidos": 0.7592,
+     "causas_nacidos": {
+      "hambre": 60,
+      "sed": 103,
+      "veneno": 142,
+      "sal": 372
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": {
+      "n": 684,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9605,
+      "frac_D_mala": 0.8333,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0322
+     }
+    }
+   }
+  },
+  {
+   "seed": 12838,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 81.7,
+   "estr": {
+    "RES": {
+     "tam_carro": 13.644,
+     "tam_final": 14,
+     "exceso": 4.644,
+     "nac": 656,
+     "fundadores": 2515,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6563,
+     "n_coh_nacidos": 323,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1017,
+     "vida_nacidos": 291.0,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 0.9615,
+     "causas_nacidos": {
+      "hambre": 7,
+      "sed": 18,
+      "veneno": 153,
+      "sal": 472
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 656,
+      "claves_med": 7.0,
+      "frac_B_mala": 0.9055,
+      "frac_D_mala": 0.6921,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.122
+     }
+    }
+   }
+  },
+  {
+   "seed": 12839,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 105.9,
+   "estr": {
+    "RES": {
+     "tam_carro": 19.85,
+     "tam_final": 18,
+     "exceso": 10.85,
+     "nac": 693,
+     "fundadores": 3291,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.8863,
+     "n_coh_nacidos": 343,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0372,
+     "vida_nacidos": 600.0,
+     "vida_fund": 138.0,
+     "frac_mala_nacidos": 0.7225,
+     "causas_nacidos": {
+      "hambre": 73,
+      "sed": 116,
+      "veneno": 143,
+      "sal": 349
+     },
+     "gen_max": 24,
+     "bloqueados": 0,
+     "tele": {
+      "n": 693,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9654,
+      "frac_D_mala": 0.873,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0274
+     }
+    }
+   }
+  },
+  {
+   "seed": 12840,
+   "brazo": "RES",
+   "T": 100000,
+   "seg": 101.3,
+   "estr": {
+    "RES": {
+     "tam_carro": 19.358,
+     "tam_final": 16,
+     "exceso": 10.358,
+     "nac": 654,
+     "fundadores": 3167,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.795,
+     "n_coh_nacidos": 317,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0568,
+     "vida_nacidos": 600.0,
+     "vida_fund": 135.0,
+     "frac_mala_nacidos": 0.7523,
+     "causas_nacidos": {
+      "hambre": 62,
+      "sed": 98,
+      "veneno": 147,
+      "sal": 339
+     },
+     "gen_max": 32,
+     "bloqueados": 0,
+     "tele": {
+      "n": 654,
+      "claves_med": 6.0,
+      "frac_B_mala": 0.9495,
+      "frac_D_mala": 0.8073,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0367
+     }
+    }
+   }
+  },
+  {
+   "seed": 12821,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 120.2,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 22.24,
+     "tam_final": 19,
+     "exceso": 13.24,
+     "nac": 720,
+     "fundadores": 3526,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9446,
+     "n_coh_nacidos": 361,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0249,
+     "vida_nacidos": 1207.0,
+     "vida_fund": 117.5,
+     "frac_mala_nacidos": 0.5763,
+     "causas_nacidos": {
+      "hambre": 122,
+      "sed": 178,
+      "veneno": 145,
+      "sal": 263
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": {
+      "n": 720,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9792,
+      "frac_D_mala": 0.9167,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12822,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 114.9,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 20.796,
+     "tam_final": 20,
+     "exceso": 11.796,
+     "nac": 690,
+     "fundadores": 3425,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9547,
+     "n_coh_nacidos": 331,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0208,
+     "vida_nacidos": 1264.5,
+     "vida_fund": 116.5,
+     "frac_mala_nacidos": 0.5962,
+     "causas_nacidos": {
+      "hambre": 98,
+      "sed": 175,
+      "veneno": 144,
+      "sal": 259
+     },
+     "gen_max": 32,
+     "bloqueados": 0,
+     "tele": {
+      "n": 690,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9696,
+      "frac_D_mala": 0.8855,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12823,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.0,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 20.452,
+     "tam_final": 19,
+     "exceso": 11.452,
+     "nac": 697,
+     "fundadores": 3461,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9858,
+     "n_coh_nacidos": 351,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0201,
+     "vida_nacidos": 1178.0,
+     "vida_fund": 121.0,
+     "frac_mala_nacidos": 0.6184,
+     "causas_nacidos": {
+      "hambre": 110,
+      "sed": 151,
+      "veneno": 172,
+      "sal": 251
+     },
+     "gen_max": 35,
+     "bloqueados": 0,
+     "tele": {
+      "n": 697,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9742,
+      "frac_D_mala": 0.8537,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12824,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 117.8,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.728,
+     "tam_final": 19,
+     "exceso": 12.728,
+     "nac": 733,
+     "fundadores": 3505,
+     "linajes_sin_ext": 2,
+     "persisten": 2,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9787,
+     "n_coh_nacidos": 375,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0186,
+     "vida_nacidos": 1332.0,
+     "vida_fund": 123.0,
+     "frac_mala_nacidos": 0.5534,
+     "causas_nacidos": {
+      "hambre": 137,
+      "sed": 185,
+      "veneno": 139,
+      "sal": 260
+     },
+     "gen_max": 33,
+     "bloqueados": 0,
+     "tele": {
+      "n": 733,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9823,
+      "frac_D_mala": 0.9045,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12825,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 113.9,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.492,
+     "tam_final": 22,
+     "exceso": 12.492,
+     "nac": 706,
+     "fundadores": 3403,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.92,
+     "n_coh_nacidos": 350,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0263,
+     "vida_nacidos": 1245.0,
+     "vida_fund": 116.0,
+     "frac_mala_nacidos": 0.602,
+     "causas_nacidos": {
+      "hambre": 107,
+      "sed": 168,
+      "veneno": 155,
+      "sal": 261
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 706,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9731,
+      "frac_D_mala": 0.8909,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12826,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.4,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 22.496,
+     "tam_final": 23,
+     "exceso": 13.496,
+     "nac": 702,
+     "fundadores": 3417,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9516,
+     "n_coh_nacidos": 351,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0311,
+     "vida_nacidos": 1363.0,
+     "vida_fund": 130.0,
+     "frac_mala_nacidos": 0.556,
+     "causas_nacidos": {
+      "hambre": 147,
+      "sed": 158,
+      "veneno": 138,
+      "sal": 244
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 702,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9715,
+      "frac_D_mala": 0.896,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12827,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.1,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 22.232,
+     "tam_final": 21,
+     "exceso": 13.232,
+     "nac": 721,
+     "fundadores": 3423,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.8867,
+     "n_coh_nacidos": 353,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0345,
+     "vida_nacidos": 1384.0,
+     "vida_fund": 118.0,
+     "frac_mala_nacidos": 0.5992,
+     "causas_nacidos": {
+      "hambre": 129,
+      "sed": 154,
+      "veneno": 147,
+      "sal": 276
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 721,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9723,
+      "frac_D_mala": 0.8571,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12828,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.5,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.524,
+     "tam_final": 21,
+     "exceso": 12.524,
+     "nac": 669,
+     "fundadores": 3501,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9441,
+     "n_coh_nacidos": 322,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0231,
+     "vida_nacidos": 1342.0,
+     "vida_fund": 140.0,
+     "frac_mala_nacidos": 0.5655,
+     "causas_nacidos": {
+      "hambre": 141,
+      "sed": 144,
+      "veneno": 131,
+      "sal": 240
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 669,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9626,
+      "frac_D_mala": 0.8714,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12829,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 112.3,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.962,
+     "tam_final": 21,
+     "exceso": 12.962,
+     "nac": 700,
+     "fundadores": 3490,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9503,
+     "n_coh_nacidos": 342,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.024,
+     "vida_nacidos": 1274.0,
+     "vida_fund": 120.0,
+     "frac_mala_nacidos": 0.5575,
+     "causas_nacidos": {
+      "hambre": 124,
+      "sed": 180,
+      "veneno": 154,
+      "sal": 229
+     },
+     "gen_max": 44,
+     "bloqueados": 0,
+     "tele": {
+      "n": 700,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9671,
+      "frac_D_mala": 0.8943,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12830,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 113.1,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.876,
+     "tam_final": 24,
+     "exceso": 12.876,
+     "nac": 673,
+     "fundadores": 3566,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9266,
+     "n_coh_nacidos": 327,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0273,
+     "vida_nacidos": 1089.0,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 0.5693,
+     "causas_nacidos": {
+      "hambre": 117,
+      "sed": 166,
+      "veneno": 136,
+      "sal": 238
+     },
+     "gen_max": 40,
+     "bloqueados": 0,
+     "tele": {
+      "n": 673,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9658,
+      "frac_D_mala": 0.8796,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12831,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 116.5,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.89,
+     "tam_final": 19,
+     "exceso": 12.89,
+     "nac": 702,
+     "fundadores": 3487,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9364,
+     "n_coh_nacidos": 346,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0233,
+     "vida_nacidos": 1372.0,
+     "vida_fund": 131.0,
+     "frac_mala_nacidos": 0.5913,
+     "causas_nacidos": {
+      "hambre": 126,
+      "sed": 156,
+      "veneno": 155,
+      "sal": 253
+     },
+     "gen_max": 44,
+     "bloqueados": 0,
+     "tele": {
+      "n": 702,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9772,
+      "frac_D_mala": 0.8974,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12832,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 120.5,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 22.102,
+     "tam_final": 23,
+     "exceso": 13.102,
+     "nac": 719,
+     "fundadores": 3554,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9559,
+     "n_coh_nacidos": 363,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0176,
+     "vida_nacidos": 1359.5,
+     "vida_fund": 133.0,
+     "frac_mala_nacidos": 0.5341,
+     "causas_nacidos": {
+      "hambre": 152,
+      "sed": 176,
+      "veneno": 140,
+      "sal": 236
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 719,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.968,
+      "frac_D_mala": 0.9193,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12833,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 116.9,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 22.148,
+     "tam_final": 16,
+     "exceso": 13.148,
+     "nac": 736,
+     "fundadores": 3427,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9158,
+     "n_coh_nacidos": 368,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0296,
+     "vida_nacidos": 1165.0,
+     "vida_fund": 121.0,
+     "frac_mala_nacidos": 0.5785,
+     "causas_nacidos": {
+      "hambre": 145,
+      "sed": 161,
+      "veneno": 148,
+      "sal": 272
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": {
+      "n": 736,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9606,
+      "frac_D_mala": 0.8791,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12834,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 114.8,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.65,
+     "tam_final": 22,
+     "exceso": 12.65,
+     "nac": 714,
+     "fundadores": 3411,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9448,
+     "n_coh_nacidos": 344,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0273,
+     "vida_nacidos": 1133.0,
+     "vida_fund": 120.0,
+     "frac_mala_nacidos": 0.5825,
+     "causas_nacidos": {
+      "hambre": 125,
+      "sed": 166,
+      "veneno": 170,
+      "sal": 236
+     },
+     "gen_max": 39,
+     "bloqueados": 0,
+     "tele": {
+      "n": 714,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9594,
+      "frac_D_mala": 0.902,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12835,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.3,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.642,
+     "tam_final": 14,
+     "exceso": 12.642,
+     "nac": 683,
+     "fundadores": 3456,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9472,
+     "n_coh_nacidos": 341,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0223,
+     "vida_nacidos": 1400.0,
+     "vida_fund": 127.0,
+     "frac_mala_nacidos": 0.5763,
+     "causas_nacidos": {
+      "hambre": 130,
+      "sed": 156,
+      "veneno": 141,
+      "sal": 248
+     },
+     "gen_max": 43,
+     "bloqueados": 0,
+     "tele": {
+      "n": 683,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9707,
+      "frac_D_mala": 0.9078,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12836,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 121.7,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 22.354,
+     "tam_final": 23,
+     "exceso": 13.354,
+     "nac": 714,
+     "fundadores": 3499,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9773,
+     "n_coh_nacidos": 352,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0196,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 120.0,
+     "frac_mala_nacidos": 0.5802,
+     "causas_nacidos": {
+      "hambre": 117,
+      "sed": 176,
+      "veneno": 145,
+      "sal": 260
+     },
+     "gen_max": 25,
+     "bloqueados": 0,
+     "tele": {
+      "n": 714,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9818,
+      "frac_D_mala": 0.9496,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12837,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.2,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.598,
+     "tam_final": 25,
+     "exceso": 12.598,
+     "nac": 713,
+     "fundadores": 3410,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9384,
+     "n_coh_nacidos": 357,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0246,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 132.0,
+     "frac_mala_nacidos": 0.5568,
+     "causas_nacidos": {
+      "hambre": 134,
+      "sed": 174,
+      "veneno": 143,
+      "sal": 244
+     },
+     "gen_max": 39,
+     "bloqueados": 0,
+     "tele": {
+      "n": 713,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9734,
+      "frac_D_mala": 0.8878,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12838,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 115.3,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.758,
+     "tam_final": 23,
+     "exceso": 12.758,
+     "nac": 718,
+     "fundadores": 3355,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.8956,
+     "n_coh_nacidos": 364,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0297,
+     "vida_nacidos": 1227.0,
+     "vida_fund": 127.0,
+     "frac_mala_nacidos": 0.5726,
+     "causas_nacidos": {
+      "hambre": 135,
+      "sed": 165,
+      "veneno": 158,
+      "sal": 244
+     },
+     "gen_max": 29,
+     "bloqueados": 0,
+     "tele": {
+      "n": 718,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9624,
+      "frac_D_mala": 0.8747,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12839,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 116.6,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 21.566,
+     "tam_final": 21,
+     "exceso": 12.566,
+     "nac": 696,
+     "fundadores": 3470,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9514,
+     "n_coh_nacidos": 350,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0228,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 130.0,
+     "frac_mala_nacidos": 0.5624,
+     "causas_nacidos": {
+      "hambre": 135,
+      "sed": 163,
+      "veneno": 145,
+      "sal": 238
+     },
+     "gen_max": 44,
+     "bloqueados": 0,
+     "tele": {
+      "n": 696,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.977,
+      "frac_D_mala": 0.8922,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12840,
+   "brazo": "RES_SIN0",
+   "T": 100000,
+   "seg": 121.3,
+   "estr": {
+    "RES_SIN0": {
+     "tam_carro": 20.814,
+     "tam_final": 22,
+     "exceso": 11.814,
+     "nac": 707,
+     "fundadores": 3495,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9565,
+     "n_coh_nacidos": 368,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0208,
+     "vida_nacidos": 1400.0,
+     "vida_fund": 111.0,
+     "frac_mala_nacidos": 0.5853,
+     "causas_nacidos": {
+      "hambre": 115,
+      "sed": 172,
+      "veneno": 145,
+      "sal": 260
+     },
+     "gen_max": 39,
+     "bloqueados": 0,
+     "tele": {
+      "n": 707,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9703,
+      "frac_D_mala": 0.9279,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12821,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 72.4,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.29,
+     "tam_final": 9,
+     "exceso": 2.29,
+     "nac": 629,
+     "fundadores": 2617,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6234,
+     "n_coh_nacidos": 316,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1125,
+     "vida_nacidos": 176.0,
+     "vida_fund": 96.0,
+     "frac_mala_nacidos": 0.9649,
+     "causas_nacidos": {
+      "hambre": 17,
+      "sed": 5,
+      "veneno": 289,
+      "sal": 316
+     },
+     "gen_max": 10,
+     "bloqueados": 0,
+     "tele": {
+      "n": 629,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3577,
+      "frac_D_mala": 0.3052,
+      "frac_A_mala": 0.4149,
+      "frac_C_mala": 0.3943,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12822,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 72.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 12.234,
+     "tam_final": 15,
+     "exceso": 3.234,
+     "nac": 588,
+     "fundadores": 2544,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.3792,
+     "n_coh_nacidos": 269,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1484,
+     "vida_nacidos": 180.0,
+     "vida_fund": 101.0,
+     "frac_mala_nacidos": 0.9672,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 9,
+      "veneno": 270,
+      "sal": 291
+     },
+     "gen_max": 12,
+     "bloqueados": 0,
+     "tele": {
+      "n": 588,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3912,
+      "frac_D_mala": 0.2381,
+      "frac_A_mala": 0.3878,
+      "frac_C_mala": 0.3912,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12823,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 73.8,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 12.632,
+     "tam_final": 12,
+     "exceso": 3.632,
+     "nac": 592,
+     "fundadores": 2580,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.4903,
+     "n_coh_nacidos": 257,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1316,
+     "vida_nacidos": 200.0,
+     "vida_fund": 103.0,
+     "frac_mala_nacidos": 0.9761,
+     "causas_nacidos": {
+      "hambre": 4,
+      "sed": 10,
+      "veneno": 264,
+      "sal": 309
+     },
+     "gen_max": 9,
+     "bloqueados": 0,
+     "tele": {
+      "n": 592,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.4155,
+      "frac_D_mala": 0.3074,
+      "frac_A_mala": 0.3936,
+      "frac_C_mala": 0.3868,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12824,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 67.5,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.818,
+     "tam_final": 11,
+     "exceso": 1.818,
+     "nac": 592,
+     "fundadores": 2557,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6013,
+     "n_coh_nacidos": 311,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1096,
+     "vida_nacidos": 163.0,
+     "vida_fund": 90.0,
+     "frac_mala_nacidos": 0.9762,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 4,
+      "veneno": 260,
+      "sal": 315
+     },
+     "gen_max": 10,
+     "bloqueados": 0,
+     "tele": {
+      "n": 592,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3885,
+      "frac_D_mala": 0.2568,
+      "frac_A_mala": 0.4172,
+      "frac_C_mala": 0.326,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12825,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 71.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.232,
+     "tam_final": 9,
+     "exceso": 2.232,
+     "nac": 615,
+     "fundadores": 2685,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5452,
+     "n_coh_nacidos": 299,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1048,
+     "vida_nacidos": 171.0,
+     "vida_fund": 91.0,
+     "frac_mala_nacidos": 0.9755,
+     "causas_nacidos": {
+      "hambre": 4,
+      "sed": 11,
+      "veneno": 275,
+      "sal": 323
+     },
+     "gen_max": 8,
+     "bloqueados": 0,
+     "tele": {
+      "n": 615,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3789,
+      "frac_D_mala": 0.3122,
+      "frac_A_mala": 0.4537,
+      "frac_C_mala": 0.4195,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12826,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 69.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.582,
+     "tam_final": 10,
+     "exceso": 1.582,
+     "nac": 612,
+     "fundadores": 2562,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6012,
+     "n_coh_nacidos": 321,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1089,
+     "vida_nacidos": 178.0,
+     "vida_fund": 102.0,
+     "frac_mala_nacidos": 0.9672,
+     "causas_nacidos": {
+      "hambre": 11,
+      "sed": 9,
+      "veneno": 278,
+      "sal": 311
+     },
+     "gen_max": 13,
+     "bloqueados": 0,
+     "tele": {
+      "n": 612,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.4003,
+      "frac_D_mala": 0.2729,
+      "frac_A_mala": 0.402,
+      "frac_C_mala": 0.3627,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12827,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 71.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.768,
+     "tam_final": 10,
+     "exceso": 2.768,
+     "nac": 588,
+     "fundadores": 2509,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.4093,
+     "n_coh_nacidos": 281,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1449,
+     "vida_nacidos": 167.0,
+     "vida_fund": 100.0,
+     "frac_mala_nacidos": 0.976,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 4,
+      "veneno": 265,
+      "sal": 304
+     },
+     "gen_max": 6,
+     "bloqueados": 0,
+     "tele": {
+      "n": 588,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3741,
+      "frac_D_mala": 0.2109,
+      "frac_A_mala": 0.4252,
+      "frac_C_mala": 0.3282,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12828,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 68.4,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.432,
+     "tam_final": 10,
+     "exceso": 1.432,
+     "nac": 544,
+     "fundadores": 2521,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.4302,
+     "n_coh_nacidos": 265,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1236,
+     "vida_nacidos": 181.0,
+     "vida_fund": 99.0,
+     "frac_mala_nacidos": 0.9723,
+     "causas_nacidos": {
+      "hambre": 9,
+      "sed": 6,
+      "veneno": 258,
+      "sal": 269
+     },
+     "gen_max": 8,
+     "bloqueados": 0,
+     "tele": {
+      "n": 544,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3585,
+      "frac_D_mala": 0.1875,
+      "frac_A_mala": 0.3658,
+      "frac_C_mala": 0.3474,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12829,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 76.4,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 12.804,
+     "tam_final": 11,
+     "exceso": 3.804,
+     "nac": 649,
+     "fundadores": 2568,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5949,
+     "n_coh_nacidos": 311,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1155,
+     "vida_nacidos": 178.0,
+     "vida_fund": 100.0,
+     "frac_mala_nacidos": 0.9689,
+     "causas_nacidos": {
+      "hambre": 15,
+      "sed": 5,
+      "veneno": 295,
+      "sal": 329
+     },
+     "gen_max": 7,
+     "bloqueados": 0,
+     "tele": {
+      "n": 649,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.4145,
+      "frac_D_mala": 0.3097,
+      "frac_A_mala": 0.4422,
+      "frac_C_mala": 0.3636,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12830,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 69.0,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.548,
+     "tam_final": 12,
+     "exceso": 1.548,
+     "nac": 566,
+     "fundadores": 2570,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.4762,
+     "n_coh_nacidos": 273,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1235,
+     "vida_nacidos": 162.0,
+     "vida_fund": 91.0,
+     "frac_mala_nacidos": 0.984,
+     "causas_nacidos": {
+      "hambre": 5,
+      "sed": 4,
+      "veneno": 262,
+      "sal": 290
+     },
+     "gen_max": 9,
+     "bloqueados": 0,
+     "tele": {
+      "n": 566,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3498,
+      "frac_D_mala": 0.2933,
+      "frac_A_mala": 0.4382,
+      "frac_C_mala": 0.3728,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12831,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 71.6,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.428,
+     "tam_final": 9,
+     "exceso": 2.428,
+     "nac": 583,
+     "fundadores": 2605,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5544,
+     "n_coh_nacidos": 294,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.112,
+     "vida_nacidos": 180.5,
+     "vida_fund": 94.0,
+     "frac_mala_nacidos": 0.9742,
+     "causas_nacidos": {
+      "hambre": 8,
+      "sed": 7,
+      "veneno": 289,
+      "sal": 278
+     },
+     "gen_max": 9,
+     "bloqueados": 0,
+     "tele": {
+      "n": 583,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3774,
+      "frac_D_mala": 0.3139,
+      "frac_A_mala": 0.4202,
+      "frac_C_mala": 0.3877,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12832,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 73.4,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.712,
+     "tam_final": 11,
+     "exceso": 1.712,
+     "nac": 586,
+     "fundadores": 2592,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.6217,
+     "n_coh_nacidos": 304,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1051,
+     "vida_nacidos": 190.0,
+     "vida_fund": 98.5,
+     "frac_mala_nacidos": 0.964,
+     "causas_nacidos": {
+      "hambre": 11,
+      "sed": 10,
+      "veneno": 259,
+      "sal": 304
+     },
+     "gen_max": 9,
+     "bloqueados": 0,
+     "tele": {
+      "n": 586,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3771,
+      "frac_D_mala": 0.2867,
+      "frac_A_mala": 0.3584,
+      "frac_C_mala": 0.3874,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12833,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 66.4,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.408,
+     "tam_final": 10,
+     "exceso": 1.408,
+     "nac": 540,
+     "fundadores": 2545,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.2846,
+     "n_coh_nacidos": 253,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1507,
+     "vida_nacidos": 148.0,
+     "vida_fund": 101.0,
+     "frac_mala_nacidos": 0.987,
+     "causas_nacidos": {
+      "hambre": 5,
+      "sed": 2,
+      "veneno": 236,
+      "sal": 295
+     },
+     "gen_max": 8,
+     "bloqueados": 0,
+     "tele": {
+      "n": 540,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3259,
+      "frac_D_mala": 0.1981,
+      "frac_A_mala": 0.3648,
+      "frac_C_mala": 0.3019,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12834,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 72.0,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.718,
+     "tam_final": 11,
+     "exceso": 2.718,
+     "nac": 599,
+     "fundadores": 2654,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5333,
+     "n_coh_nacidos": 285,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1109,
+     "vida_nacidos": 200.0,
+     "vida_fund": 98.0,
+     "frac_mala_nacidos": 0.9646,
+     "causas_nacidos": {
+      "hambre": 15,
+      "sed": 6,
+      "veneno": 265,
+      "sal": 308
+     },
+     "gen_max": 11,
+     "bloqueados": 0,
+     "tele": {
+      "n": 599,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.4007,
+      "frac_D_mala": 0.2922,
+      "frac_A_mala": 0.4124,
+      "frac_C_mala": 0.3322,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12835,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 73.8,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.856,
+     "tam_final": 10,
+     "exceso": 2.856,
+     "nac": 618,
+     "fundadores": 2628,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5636,
+     "n_coh_nacidos": 291,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.105,
+     "vida_nacidos": 191.0,
+     "vida_fund": 97.0,
+     "frac_mala_nacidos": 0.9756,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 5,
+      "veneno": 286,
+      "sal": 314
+     },
+     "gen_max": 12,
+     "bloqueados": 0,
+     "tele": {
+      "n": 618,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.4126,
+      "frac_D_mala": 0.2848,
+      "frac_A_mala": 0.4256,
+      "frac_C_mala": 0.377,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12836,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 71.0,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 10.948,
+     "tam_final": 11,
+     "exceso": 1.948,
+     "nac": 570,
+     "fundadores": 2592,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5051,
+     "n_coh_nacidos": 295,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1192,
+     "vida_nacidos": 198.0,
+     "vida_fund": 104.0,
+     "frac_mala_nacidos": 0.9594,
+     "causas_nacidos": {
+      "hambre": 11,
+      "sed": 12,
+      "veneno": 259,
+      "sal": 285
+     },
+     "gen_max": 8,
+     "bloqueados": 0,
+     "tele": {
+      "n": 570,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.393,
+      "frac_D_mala": 0.2842,
+      "frac_A_mala": 0.4404,
+      "frac_C_mala": 0.3667,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12837,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 73.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.57,
+     "tam_final": 13,
+     "exceso": 2.57,
+     "nac": 606,
+     "fundadores": 2588,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5054,
+     "n_coh_nacidos": 277,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1187,
+     "vida_nacidos": 178.0,
+     "vida_fund": 97.0,
+     "frac_mala_nacidos": 0.9633,
+     "causas_nacidos": {
+      "hambre": 14,
+      "sed": 8,
+      "veneno": 271,
+      "sal": 307
+     },
+     "gen_max": 13,
+     "bloqueados": 0,
+     "tele": {
+      "n": 606,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3894,
+      "frac_D_mala": 0.3333,
+      "frac_A_mala": 0.401,
+      "frac_C_mala": 0.3878,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12838,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 72.3,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.618,
+     "tam_final": 11,
+     "exceso": 2.618,
+     "nac": 595,
+     "fundadores": 2536,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.4444,
+     "n_coh_nacidos": 279,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1253,
+     "vida_nacidos": 183.0,
+     "vida_fund": 97.0,
+     "frac_mala_nacidos": 0.9713,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 7,
+      "veneno": 253,
+      "sal": 322
+     },
+     "gen_max": 7,
+     "bloqueados": 0,
+     "tele": {
+      "n": 595,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3933,
+      "frac_D_mala": 0.284,
+      "frac_A_mala": 0.4034,
+      "frac_C_mala": 0.3613,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12839,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 72.5,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.046,
+     "tam_final": 13,
+     "exceso": 2.046,
+     "nac": 598,
+     "fundadores": 2607,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5836,
+     "n_coh_nacidos": 293,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1031,
+     "vida_nacidos": 196.0,
+     "vida_fund": 100.0,
+     "frac_mala_nacidos": 0.9662,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 10,
+      "veneno": 252,
+      "sal": 320
+     },
+     "gen_max": 9,
+     "bloqueados": 0,
+     "tele": {
+      "n": 598,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.4164,
+      "frac_D_mala": 0.2676,
+      "frac_A_mala": 0.3829,
+      "frac_C_mala": 0.3746,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12840,
+   "brazo": "BAR_SIN0",
+   "T": 100000,
+   "seg": 70.5,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 11.656,
+     "tam_final": 12,
+     "exceso": 2.656,
+     "nac": 606,
+     "fundadores": 2517,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.578,
+     "n_coh_nacidos": 282,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.1141,
+     "vida_nacidos": 172.5,
+     "vida_fund": 105.0,
+     "frac_mala_nacidos": 0.9684,
+     "causas_nacidos": {
+      "hambre": 10,
+      "sed": 9,
+      "veneno": 272,
+      "sal": 311
+     },
+     "gen_max": 8,
+     "bloqueados": 0,
+     "tele": {
+      "n": 606,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3515,
+      "frac_D_mala": 0.2921,
+      "frac_A_mala": 0.4142,
+      "frac_C_mala": 0.4059,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12821,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 121.2,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 20.586,
+     "tam_final": 20,
+     "exceso": 11.586,
+     "nac": 772,
+     "fundadores": 3363,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9847,
+     "n_coh_nacidos": 392,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0164,
+     "vida_nacidos": 1400.0,
+     "vida_fund": 94.0,
+     "frac_mala_nacidos": 0.6364,
+     "causas_nacidos": {
+      "hambre": 91,
+      "sed": 185,
+      "veneno": 172,
+      "sal": 311
+     },
+     "gen_max": 27,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12822,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 120.7,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.48,
+     "tam_final": 18,
+     "exceso": 12.48,
+     "nac": 780,
+     "fundadores": 3282,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.985,
+     "n_coh_nacidos": 400,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.018,
+     "vida_nacidos": 1352.0,
+     "vida_fund": 91.0,
+     "frac_mala_nacidos": 0.6227,
+     "causas_nacidos": {
+      "hambre": 123,
+      "sed": 166,
+      "veneno": 214,
+      "sal": 263
+     },
+     "gen_max": 35,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12823,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 125.3,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 20.984,
+     "tam_final": 20,
+     "exceso": 11.984,
+     "nac": 795,
+     "fundadores": 3347,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.995,
+     "n_coh_nacidos": 404,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0113,
+     "vida_nacidos": 1377.0,
+     "vida_fund": 84.0,
+     "frac_mala_nacidos": 0.6628,
+     "causas_nacidos": {
+      "hambre": 112,
+      "sed": 151,
+      "veneno": 203,
+      "sal": 314
+     },
+     "gen_max": 23,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12824,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 121.8,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.442,
+     "tam_final": 19,
+     "exceso": 12.442,
+     "nac": 748,
+     "fundadores": 3392,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9786,
+     "n_coh_nacidos": 373,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0178,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 107.0,
+     "frac_mala_nacidos": 0.5837,
+     "causas_nacidos": {
+      "hambre": 119,
+      "sed": 187,
+      "veneno": 159,
+      "sal": 270
+     },
+     "gen_max": 35,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12825,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 126.1,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.89,
+     "tam_final": 23,
+     "exceso": 12.89,
+     "nac": 773,
+     "fundadores": 3375,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 1.0159,
+     "n_coh_nacidos": 377,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0093,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 92.0,
+     "frac_mala_nacidos": 0.5974,
+     "causas_nacidos": {
+      "hambre": 118,
+      "sed": 186,
+      "veneno": 178,
+      "sal": 273
+     },
+     "gen_max": 24,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12826,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 120.8,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 22.34,
+     "tam_final": 21,
+     "exceso": 13.34,
+     "nac": 738,
+     "fundadores": 3448,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9619,
+     "n_coh_nacidos": 367,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0162,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 108.0,
+     "frac_mala_nacidos": 0.6233,
+     "causas_nacidos": {
+      "hambre": 119,
+      "sed": 153,
+      "veneno": 170,
+      "sal": 280
+     },
+     "gen_max": 27,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12827,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 120.7,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 22.058,
+     "tam_final": 21,
+     "exceso": 13.058,
+     "nac": 756,
+     "fundadores": 3394,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9759,
+     "n_coh_nacidos": 373,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0161,
+     "vida_nacidos": 1509.0,
+     "vida_fund": 96.0,
+     "frac_mala_nacidos": 0.5865,
+     "causas_nacidos": {
+      "hambre": 120,
+      "sed": 186,
+      "veneno": 184,
+      "sal": 250
+     },
+     "gen_max": 33,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12828,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 123.4,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.484,
+     "tam_final": 25,
+     "exceso": 12.484,
+     "nac": 730,
+     "fundadores": 3469,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9807,
+     "n_coh_nacidos": 362,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0153,
+     "vida_nacidos": 1431.5,
+     "vida_fund": 107.0,
+     "frac_mala_nacidos": 0.552,
+     "causas_nacidos": {
+      "hambre": 142,
+      "sed": 177,
+      "veneno": 159,
+      "sal": 234
+     },
+     "gen_max": 41,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12829,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 122.6,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.928,
+     "tam_final": 28,
+     "exceso": 12.928,
+     "nac": 732,
+     "fundadores": 3438,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9972,
+     "n_coh_nacidos": 352,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0145,
+     "vida_nacidos": 1410.0,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 0.6051,
+     "causas_nacidos": {
+      "hambre": 112,
+      "sed": 168,
+      "veneno": 158,
+      "sal": 271
+     },
+     "gen_max": 42,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12830,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 117.7,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.162,
+     "tam_final": 25,
+     "exceso": 12.162,
+     "nac": 767,
+     "fundadores": 3331,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.982,
+     "n_coh_nacidos": 389,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0155,
+     "vida_nacidos": 1391.0,
+     "vida_fund": 89.0,
+     "frac_mala_nacidos": 0.6158,
+     "causas_nacidos": {
+      "hambre": 106,
+      "sed": 181,
+      "veneno": 169,
+      "sal": 291
+     },
+     "gen_max": 29,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12831,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 121.3,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 22.688,
+     "tam_final": 23,
+     "exceso": 13.688,
+     "nac": 753,
+     "fundadores": 3493,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9676,
+     "n_coh_nacidos": 370,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0179,
+     "vida_nacidos": 1400.0,
+     "vida_fund": 102.0,
+     "frac_mala_nacidos": 0.5802,
+     "causas_nacidos": {
+      "hambre": 122,
+      "sed": 187,
+      "veneno": 165,
+      "sal": 262
+     },
+     "gen_max": 33,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12832,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 124.8,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.24,
+     "tam_final": 24,
+     "exceso": 12.24,
+     "nac": 776,
+     "fundadores": 3336,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 1.0,
+     "n_coh_nacidos": 401,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0166,
+     "vida_nacidos": 1428.0,
+     "vida_fund": 95.0,
+     "frac_mala_nacidos": 0.6187,
+     "causas_nacidos": {
+      "hambre": 106,
+      "sed": 183,
+      "veneno": 175,
+      "sal": 294
+     },
+     "gen_max": 26,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12833,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 124.0,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 22.186,
+     "tam_final": 24,
+     "exceso": 13.186,
+     "nac": 769,
+     "fundadores": 3442,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9785,
+     "n_coh_nacidos": 372,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0176,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 105.0,
+     "frac_mala_nacidos": 0.612,
+     "causas_nacidos": {
+      "hambre": 118,
+      "sed": 173,
+      "veneno": 175,
+      "sal": 284
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12834,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 124.5,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 22.58,
+     "tam_final": 20,
+     "exceso": 13.58,
+     "nac": 733,
+     "fundadores": 3430,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 1.0,
+     "n_coh_nacidos": 374,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0112,
+     "vida_nacidos": 1555.0,
+     "vida_fund": 100.0,
+     "frac_mala_nacidos": 0.6036,
+     "causas_nacidos": {
+      "hambre": 114,
+      "sed": 171,
+      "veneno": 151,
+      "sal": 283
+     },
+     "gen_max": 30,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12835,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 122.5,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.794,
+     "tam_final": 27,
+     "exceso": 12.794,
+     "nac": 765,
+     "fundadores": 3397,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9673,
+     "n_coh_nacidos": 397,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.019,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 94.0,
+     "frac_mala_nacidos": 0.6443,
+     "causas_nacidos": {
+      "hambre": 90,
+      "sed": 175,
+      "veneno": 176,
+      "sal": 304
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12836,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 124.4,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 20.316,
+     "tam_final": 19,
+     "exceso": 11.316,
+     "nac": 761,
+     "fundadores": 3348,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9491,
+     "n_coh_nacidos": 393,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0192,
+     "vida_nacidos": 1324.0,
+     "vida_fund": 91.0,
+     "frac_mala_nacidos": 0.6493,
+     "causas_nacidos": {
+      "hambre": 101,
+      "sed": 161,
+      "veneno": 197,
+      "sal": 288
+     },
+     "gen_max": 26,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12837,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 122.4,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.23,
+     "tam_final": 20,
+     "exceso": 12.23,
+     "nac": 714,
+     "fundadores": 3485,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9941,
+     "n_coh_nacidos": 340,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0154,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 104.0,
+     "frac_mala_nacidos": 0.6034,
+     "causas_nacidos": {
+      "hambre": 120,
+      "sed": 158,
+      "veneno": 154,
+      "sal": 269
+     },
+     "gen_max": 30,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12838,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 123.4,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.958,
+     "tam_final": 21,
+     "exceso": 12.958,
+     "nac": 742,
+     "fundadores": 3389,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0105,
+     "n_coh_nacidos": 382,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0157,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 102.0,
+     "frac_mala_nacidos": 0.5975,
+     "causas_nacidos": {
+      "hambre": 118,
+      "sed": 175,
+      "veneno": 166,
+      "sal": 269
+     },
+     "gen_max": 40,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12839,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 124.8,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.844,
+     "tam_final": 20,
+     "exceso": 12.844,
+     "nac": 786,
+     "fundadores": 3298,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 9,
+     "persiste_carro": false,
+     "R0_nacidos": 0.9796,
+     "n_coh_nacidos": 393,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0148,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 88.0,
+     "frac_mala_nacidos": 0.6671,
+     "causas_nacidos": {
+      "hambre": 93,
+      "sed": 164,
+      "veneno": 185,
+      "sal": 330
+     },
+     "gen_max": 24,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12840,
+   "brazo": "ORA_SIN0",
+   "T": 100000,
+   "seg": 120.3,
+   "estr": {
+    "ORA_SIN0": {
+     "tam_carro": 21.642,
+     "tam_final": 25,
+     "exceso": 12.642,
+     "nac": 728,
+     "fundadores": 3422,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 9,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9802,
+     "n_coh_nacidos": 353,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0182,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 106.0,
+     "frac_mala_nacidos": 0.5873,
+     "causas_nacidos": {
+      "hambre": 143,
+      "sed": 150,
+      "veneno": 167,
+      "sal": 250
+     },
+     "gen_max": 38,
+     "bloqueados": 0,
+     "tele": null
+    }
+   }
+  },
+  {
+   "seed": 12821,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 116.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.024,
+     "tam_final": 3,
+     "exceso": 0.024,
+     "nac": 27,
+     "fundadores": 1487,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0625,
+     "n_coh_nacidos": 16,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.019,
+     "vida_nacidos": 169.0,
+     "vida_fund": 127.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 14,
+      "sal": 13
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 27,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.1852,
+      "frac_D_mala": 0.1111,
+      "frac_A_mala": 0.3333,
+      "frac_C_mala": 0.2963,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.01,
+     "tam_final": 3,
+     "exceso": 0.01,
+     "nac": 23,
+     "fundadores": 1551,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0667,
+     "n_coh_nacidos": 15,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0199,
+     "vida_nacidos": 94.0,
+     "vida_fund": 137.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 17,
+      "sal": 6
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 16.378,
+     "tam_final": 14,
+     "exceso": 13.378,
+     "nac": 648,
+     "fundadores": 595,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0157,
+     "n_coh_nacidos": 319,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.033,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 0.5276,
+     "causas_nacidos": {
+      "hambre": 144,
+      "sed": 156,
+      "veneno": 117,
+      "sal": 218
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 648,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9969,
+      "frac_D_mala": 0.9769,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12822,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 109.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.07,
+     "tam_final": 3,
+     "exceso": 0.07,
+     "nac": 47,
+     "fundadores": 1386,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1786,
+     "n_coh_nacidos": 28,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0334,
+     "vida_nacidos": 200.0,
+     "vida_fund": 125.0,
+     "frac_mala_nacidos": 0.9362,
+     "causas_nacidos": {
+      "hambre": 2,
+      "sed": 1,
+      "veneno": 29,
+      "sal": 15
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 47,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2979,
+      "frac_D_mala": 0.0851,
+      "frac_A_mala": 0.3617,
+      "frac_C_mala": 0.2553,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.03,
+     "tam_final": 3,
+     "exceso": 0.03,
+     "nac": 29,
+     "fundadores": 1511,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 15,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0202,
+     "vida_nacidos": 100.0,
+     "vida_fund": 131.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 14,
+      "sal": 15
+     },
+     "gen_max": 1,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 16.14,
+     "tam_final": 20,
+     "exceso": 13.14,
+     "nac": 588,
+     "fundadores": 603,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0146,
+     "n_coh_nacidos": 274,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0465,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 0.5202,
+     "causas_nacidos": {
+      "hambre": 106,
+      "sed": 167,
+      "veneno": 120,
+      "sal": 176
+     },
+     "gen_max": 35,
+     "bloqueados": 0,
+     "tele": {
+      "n": 588,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9881,
+      "frac_D_mala": 0.9847,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12823,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 111.7,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.042,
+     "tam_final": 3,
+     "exceso": 0.042,
+     "nac": 43,
+     "fundadores": 1387,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.087,
+     "n_coh_nacidos": 23,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0289,
+     "vida_nacidos": 152.0,
+     "vida_fund": 137.0,
+     "frac_mala_nacidos": 0.9535,
+     "causas_nacidos": {
+      "hambre": 2,
+      "sed": 0,
+      "veneno": 27,
+      "sal": 14
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 43,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2791,
+      "frac_D_mala": 0.1163,
+      "frac_A_mala": 0.3488,
+      "frac_C_mala": 0.3023,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.012,
+     "tam_final": 3,
+     "exceso": 0.012,
+     "nac": 27,
+     "fundadores": 1446,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.05,
+     "n_coh_nacidos": 20,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0279,
+     "vida_nacidos": 111.0,
+     "vida_fund": 133.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 15,
+      "sal": 12
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.956,
+     "tam_final": 20,
+     "exceso": 12.956,
+     "nac": 640,
+     "fundadores": 704,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0,
+     "n_coh_nacidos": 304,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0365,
+     "vida_nacidos": 1304.0,
+     "vida_fund": 151.0,
+     "frac_mala_nacidos": 0.5145,
+     "causas_nacidos": {
+      "hambre": 142,
+      "sed": 160,
+      "veneno": 122,
+      "sal": 198
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 640,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9922,
+      "frac_D_mala": 0.9375,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12824,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 112.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.032,
+     "tam_final": 3,
+     "exceso": 0.032,
+     "nac": 47,
+     "fundadores": 1396,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.3636,
+     "n_coh_nacidos": 33,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0337,
+     "vida_nacidos": 189.0,
+     "vida_fund": 133.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 20,
+      "sal": 27
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 47,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.234,
+      "frac_D_mala": 0.1489,
+      "frac_A_mala": 0.383,
+      "frac_C_mala": 0.383,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.048,
+     "tam_final": 3,
+     "exceso": 0.048,
+     "nac": 31,
+     "fundadores": 1506,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 18,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0237,
+     "vida_nacidos": 158.0,
+     "vida_fund": 128.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 17,
+      "sal": 14
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.456,
+     "tam_final": 14,
+     "exceso": 12.456,
+     "nac": 593,
+     "fundadores": 724,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0,
+     "n_coh_nacidos": 282,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0387,
+     "vida_nacidos": 1414.0,
+     "vida_fund": 135.0,
+     "frac_mala_nacidos": 0.4785,
+     "causas_nacidos": {
+      "hambre": 123,
+      "sed": 180,
+      "veneno": 105,
+      "sal": 173
+     },
+     "gen_max": 29,
+     "bloqueados": 0,
+     "tele": {
+      "n": 593,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9848,
+      "frac_D_mala": 0.9696,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12825,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 117.5,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.03,
+     "tam_final": 3,
+     "exceso": 0.03,
+     "nac": 37,
+     "fundadores": 1395,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.2308,
+     "n_coh_nacidos": 26,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0319,
+     "vida_nacidos": 200.0,
+     "vida_fund": 137.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 20,
+      "sal": 17
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 37,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2432,
+      "frac_D_mala": 0.027,
+      "frac_A_mala": 0.4324,
+      "frac_C_mala": 0.3243,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.02,
+     "tam_final": 3,
+     "exceso": 0.02,
+     "nac": 24,
+     "fundadores": 1401,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0667,
+     "n_coh_nacidos": 15,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0194,
+     "vida_nacidos": 95.5,
+     "vida_fund": 142.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 6,
+      "sal": 18
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.87,
+     "tam_final": 18,
+     "exceso": 12.87,
+     "nac": 613,
+     "fundadores": 801,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0064,
+     "n_coh_nacidos": 311,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0289,
+     "vida_nacidos": 1400.0,
+     "vida_fund": 145.0,
+     "frac_mala_nacidos": 0.4975,
+     "causas_nacidos": {
+      "hambre": 133,
+      "sed": 167,
+      "veneno": 115,
+      "sal": 182
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 613,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9951,
+      "frac_D_mala": 0.9592,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12826,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 115.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.086,
+     "tam_final": 3,
+     "exceso": 0.086,
+     "nac": 33,
+     "fundadores": 1304,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1,
+     "n_coh_nacidos": 10,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0131,
+     "vida_nacidos": 200.0,
+     "vida_fund": 145.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 18,
+      "sal": 15
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 33,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3636,
+      "frac_D_mala": 0.0606,
+      "frac_A_mala": 0.2424,
+      "frac_C_mala": 0.3636,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.052,
+     "tam_final": 3,
+     "exceso": 0.052,
+     "nac": 36,
+     "fundadores": 1366,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1818,
+     "n_coh_nacidos": 22,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0292,
+     "vida_nacidos": 139.0,
+     "vida_fund": 140.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 23,
+      "sal": 13
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.07,
+     "tam_final": 15,
+     "exceso": 12.07,
+     "nac": 599,
+     "fundadores": 801,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0,
+     "n_coh_nacidos": 300,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0372,
+     "vida_nacidos": 1378.5,
+     "vida_fund": 132.0,
+     "frac_mala_nacidos": 0.5119,
+     "causas_nacidos": {
+      "hambre": 139,
+      "sed": 147,
+      "veneno": 123,
+      "sal": 177
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 599,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.985,
+      "frac_D_mala": 0.9499,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12827,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 123.3,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.046,
+     "tam_final": 3,
+     "exceso": 0.046,
+     "nac": 33,
+     "fundadores": 1398,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.2667,
+     "n_coh_nacidos": 15,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0158,
+     "vida_nacidos": 200.0,
+     "vida_fund": 136.0,
+     "frac_mala_nacidos": 0.9697,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 1,
+      "veneno": 11,
+      "sal": 21
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": {
+      "n": 33,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2727,
+      "frac_D_mala": 0.1212,
+      "frac_A_mala": 0.4545,
+      "frac_C_mala": 0.3636,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.048,
+     "tam_final": 3,
+     "exceso": 0.048,
+     "nac": 36,
+     "fundadores": 1399,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 21,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.032,
+     "vida_nacidos": 146.5,
+     "vida_fund": 144.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 21,
+      "sal": 15
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.652,
+     "tam_final": 13,
+     "exceso": 12.652,
+     "nac": 616,
+     "fundadores": 750,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 0.9865,
+     "n_coh_nacidos": 296,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0425,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 141.0,
+     "frac_mala_nacidos": 0.5041,
+     "causas_nacidos": {
+      "hambre": 130,
+      "sed": 170,
+      "veneno": 104,
+      "sal": 201
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 616,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9951,
+      "frac_D_mala": 0.9481,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12828,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 112.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.174,
+     "tam_final": 3,
+     "exceso": 0.174,
+     "nac": 56,
+     "fundadores": 1236,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.2963,
+     "n_coh_nacidos": 27,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0321,
+     "vida_nacidos": 183.0,
+     "vida_fund": 136.0,
+     "frac_mala_nacidos": 0.9821,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 1,
+      "veneno": 23,
+      "sal": 32
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": {
+      "n": 56,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3571,
+      "frac_D_mala": 0.2321,
+      "frac_A_mala": 0.4107,
+      "frac_C_mala": 0.3036,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.032,
+     "tam_final": 3,
+     "exceso": 0.032,
+     "nac": 31,
+     "fundadores": 1445,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 16,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0213,
+     "vida_nacidos": 114.0,
+     "vida_fund": 136.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 18,
+      "sal": 13
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 14.662,
+     "tam_final": 13,
+     "exceso": 11.662,
+     "nac": 580,
+     "fundadores": 731,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.007,
+     "n_coh_nacidos": 287,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0419,
+     "vida_nacidos": 1325.5,
+     "vida_fund": 143.0,
+     "frac_mala_nacidos": 0.5106,
+     "causas_nacidos": {
+      "hambre": 131,
+      "sed": 147,
+      "veneno": 107,
+      "sal": 183
+     },
+     "gen_max": 36,
+     "bloqueados": 0,
+     "tele": {
+      "n": 580,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9897,
+      "frac_D_mala": 0.9586,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12829,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 125.1,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.044,
+     "tam_final": 3,
+     "exceso": 0.044,
+     "nac": 33,
+     "fundadores": 1393,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.3333,
+     "n_coh_nacidos": 18,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0176,
+     "vida_nacidos": 200.0,
+     "vida_fund": 137.0,
+     "frac_mala_nacidos": 0.9394,
+     "causas_nacidos": {
+      "hambre": 2,
+      "sed": 0,
+      "veneno": 15,
+      "sal": 16
+     },
+     "gen_max": 3,
+     "bloqueados": 0,
+     "tele": {
+      "n": 33,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.3939,
+      "frac_D_mala": 0.2424,
+      "frac_A_mala": 0.2727,
+      "frac_C_mala": 0.3636,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.036,
+     "tam_final": 3,
+     "exceso": 0.036,
+     "nac": 32,
+     "fundadores": 1448,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0588,
+     "n_coh_nacidos": 17,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0232,
+     "vida_nacidos": 200.0,
+     "vida_fund": 137.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 16,
+      "sal": 16
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 16.254,
+     "tam_final": 14,
+     "exceso": 13.254,
+     "nac": 618,
+     "fundadores": 788,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0033,
+     "n_coh_nacidos": 303,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0366,
+     "vida_nacidos": 1491.5,
+     "vida_fund": 155.0,
+     "frac_mala_nacidos": 0.4983,
+     "causas_nacidos": {
+      "hambre": 124,
+      "sed": 180,
+      "veneno": 113,
+      "sal": 189
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 618,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9854,
+      "frac_D_mala": 0.9741,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12830,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 120.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.054,
+     "tam_final": 3,
+     "exceso": 0.054,
+     "nac": 45,
+     "fundadores": 1239,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5667,
+     "n_coh_nacidos": 30,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0216,
+     "vida_nacidos": 200.0,
+     "vida_fund": 145.0,
+     "frac_mala_nacidos": 0.9556,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 2,
+      "veneno": 19,
+      "sal": 24
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": {
+      "n": 45,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.4667,
+      "frac_D_mala": 0.1556,
+      "frac_A_mala": 0.3111,
+      "frac_C_mala": 0.3778,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.034,
+     "tam_final": 3,
+     "exceso": 0.034,
+     "nac": 32,
+     "fundadores": 1346,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 17,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0252,
+     "vida_nacidos": 112.5,
+     "vida_fund": 144.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 22,
+      "sal": 10
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.512,
+     "tam_final": 19,
+     "exceso": 12.512,
+     "nac": 576,
+     "fundadores": 912,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0112,
+     "n_coh_nacidos": 267,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0304,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 142.0,
+     "frac_mala_nacidos": 0.5152,
+     "causas_nacidos": {
+      "hambre": 120,
+      "sed": 151,
+      "veneno": 106,
+      "sal": 182
+     },
+     "gen_max": 41,
+     "bloqueados": 0,
+     "tele": {
+      "n": 576,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9913,
+      "frac_D_mala": 0.9688,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12831,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 115.4,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.026,
+     "tam_final": 3,
+     "exceso": 0.026,
+     "nac": 40,
+     "fundadores": 1448,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.3571,
+     "n_coh_nacidos": 28,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0265,
+     "vida_nacidos": 200.0,
+     "vida_fund": 134.0,
+     "frac_mala_nacidos": 0.9231,
+     "causas_nacidos": {
+      "hambre": 3,
+      "sed": 0,
+      "veneno": 14,
+      "sal": 22
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": {
+      "n": 40,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.425,
+      "frac_D_mala": 0.1,
+      "frac_A_mala": 0.35,
+      "frac_C_mala": 0.275,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.034,
+     "tam_final": 3,
+     "exceso": 0.034,
+     "nac": 40,
+     "fundadores": 1400,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0909,
+     "n_coh_nacidos": 22,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0312,
+     "vida_nacidos": 132.5,
+     "vida_fund": 138.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 23,
+      "sal": 17
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.728,
+     "tam_final": 18,
+     "exceso": 12.728,
+     "nac": 602,
+     "fundadores": 718,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0217,
+     "n_coh_nacidos": 277,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0326,
+     "vida_nacidos": 1392.0,
+     "vida_fund": 134.0,
+     "frac_mala_nacidos": 0.5111,
+     "causas_nacidos": {
+      "hambre": 128,
+      "sed": 158,
+      "veneno": 119,
+      "sal": 180
+     },
+     "gen_max": 33,
+     "bloqueados": 0,
+     "tele": {
+      "n": 602,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9817,
+      "frac_D_mala": 0.9585,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12832,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 115.8,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.04,
+     "tam_final": 4,
+     "exceso": 0.04,
+     "nac": 32,
+     "fundadores": 1367,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1538,
+     "n_coh_nacidos": 13,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0176,
+     "vida_nacidos": 200.0,
+     "vida_fund": 145.0,
+     "frac_mala_nacidos": 0.9677,
+     "causas_nacidos": {
+      "hambre": 1,
+      "sed": 0,
+      "veneno": 14,
+      "sal": 16
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 32,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.375,
+      "frac_D_mala": 0.0938,
+      "frac_A_mala": 0.3125,
+      "frac_C_mala": 0.3125,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.046,
+     "tam_final": 3,
+     "exceso": 0.046,
+     "nac": 32,
+     "fundadores": 1361,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 17,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0238,
+     "vida_nacidos": 142.0,
+     "vida_fund": 149.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 21,
+      "sal": 11
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.202,
+     "tam_final": 13,
+     "exceso": 12.202,
+     "nac": 608,
+     "fundadores": 855,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0328,
+     "n_coh_nacidos": 305,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0181,
+     "vida_nacidos": 1401.0,
+     "vida_fund": 150.5,
+     "frac_mala_nacidos": 0.4941,
+     "causas_nacidos": {
+      "hambre": 124,
+      "sed": 178,
+      "veneno": 97,
+      "sal": 198
+     },
+     "gen_max": 39,
+     "bloqueados": 0,
+     "tele": {
+      "n": 608,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9934,
+      "frac_D_mala": 0.9671,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12833,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 115.0,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.018,
+     "tam_final": 3,
+     "exceso": 0.018,
+     "nac": 27,
+     "fundadores": 1449,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1053,
+     "n_coh_nacidos": 19,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0273,
+     "vida_nacidos": 200.0,
+     "vida_fund": 129.0,
+     "frac_mala_nacidos": 0.963,
+     "causas_nacidos": {
+      "hambre": 1,
+      "sed": 0,
+      "veneno": 10,
+      "sal": 16
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 27,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2593,
+      "frac_D_mala": 0.1852,
+      "frac_A_mala": 0.2963,
+      "frac_C_mala": 0.2963,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.042,
+     "tam_final": 3,
+     "exceso": 0.042,
+     "nac": 37,
+     "fundadores": 1416,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 18,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0258,
+     "vida_nacidos": 195.0,
+     "vida_fund": 136.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 19,
+      "sal": 18
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 16.522,
+     "tam_final": 16,
+     "exceso": 13.522,
+     "nac": 629,
+     "fundadores": 695,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 1.0127,
+     "n_coh_nacidos": 315,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0292,
+     "vida_nacidos": 1400.0,
+     "vida_fund": 129.5,
+     "frac_mala_nacidos": 0.5203,
+     "causas_nacidos": {
+      "hambre": 131,
+      "sed": 164,
+      "veneno": 111,
+      "sal": 209
+     },
+     "gen_max": 33,
+     "bloqueados": 0,
+     "tele": {
+      "n": 629,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9936,
+      "frac_D_mala": 0.9618,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12834,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 112.8,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.038,
+     "tam_final": 3,
+     "exceso": 0.038,
+     "nac": 42,
+     "fundadores": 1340,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0714,
+     "n_coh_nacidos": 28,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0417,
+     "vida_nacidos": 200.0,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 0.9512,
+     "causas_nacidos": {
+      "hambre": 2,
+      "sed": 0,
+      "veneno": 20,
+      "sal": 19
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 42,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3095,
+      "frac_D_mala": 0.0476,
+      "frac_A_mala": 0.2619,
+      "frac_C_mala": 0.2143,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.022,
+     "tam_final": 3,
+     "exceso": 0.022,
+     "nac": 35,
+     "fundadores": 1430,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1053,
+     "n_coh_nacidos": 19,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0242,
+     "vida_nacidos": 157.0,
+     "vida_fund": 134.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 17,
+      "sal": 18
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.42,
+     "tam_final": 15,
+     "exceso": 12.42,
+     "nac": 607,
+     "fundadores": 774,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0638,
+     "n_coh_nacidos": 282,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0167,
+     "vida_nacidos": 1459.0,
+     "vida_fund": 145.5,
+     "frac_mala_nacidos": 0.4924,
+     "causas_nacidos": {
+      "hambre": 144,
+      "sed": 157,
+      "veneno": 109,
+      "sal": 183
+     },
+     "gen_max": 43,
+     "bloqueados": 0,
+     "tele": {
+      "n": 607,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9967,
+      "frac_D_mala": 0.9687,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12835,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 120.5,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.05,
+     "tam_final": 3,
+     "exceso": 0.05,
+     "nac": 43,
+     "fundadores": 1291,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.5714,
+     "n_coh_nacidos": 28,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0198,
+     "vida_nacidos": 200.0,
+     "vida_fund": 143.0,
+     "frac_mala_nacidos": 0.8837,
+     "causas_nacidos": {
+      "hambre": 4,
+      "sed": 1,
+      "veneno": 23,
+      "sal": 15
+     },
+     "gen_max": 4,
+     "bloqueados": 0,
+     "tele": {
+      "n": 43,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3488,
+      "frac_D_mala": 0.3023,
+      "frac_A_mala": 0.4186,
+      "frac_C_mala": 0.3023,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.028,
+     "tam_final": 3,
+     "exceso": 0.028,
+     "nac": 32,
+     "fundadores": 1446,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 19,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.027,
+     "vida_nacidos": 134.5,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 23,
+      "sal": 9
+     },
+     "gen_max": 1,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.8,
+     "tam_final": 17,
+     "exceso": 12.8,
+     "nac": 586,
+     "fundadores": 874,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0284,
+     "n_coh_nacidos": 282,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0298,
+     "vida_nacidos": 1468.0,
+     "vida_fund": 145.0,
+     "frac_mala_nacidos": 0.4764,
+     "causas_nacidos": {
+      "hambre": 144,
+      "sed": 155,
+      "veneno": 85,
+      "sal": 187
+     },
+     "gen_max": 41,
+     "bloqueados": 0,
+     "tele": {
+      "n": 586,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9915,
+      "frac_D_mala": 0.9317,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12836,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 125.2,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.058,
+     "tam_final": 3,
+     "exceso": 0.058,
+     "nac": 39,
+     "fundadores": 1265,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.1579,
+     "n_coh_nacidos": 19,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0252,
+     "vida_nacidos": 200.0,
+     "vida_fund": 152.0,
+     "frac_mala_nacidos": 0.9231,
+     "causas_nacidos": {
+      "hambre": 2,
+      "sed": 1,
+      "veneno": 19,
+      "sal": 17
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 39,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2564,
+      "frac_D_mala": 0.0513,
+      "frac_A_mala": 0.359,
+      "frac_C_mala": 0.1795,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.038,
+     "tam_final": 3,
+     "exceso": 0.038,
+     "nac": 40,
+     "fundadores": 1453,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0417,
+     "n_coh_nacidos": 24,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.033,
+     "vida_nacidos": 146.0,
+     "vida_fund": 142.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 25,
+      "sal": 15
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.948,
+     "tam_final": 18,
+     "exceso": 12.948,
+     "nac": 615,
+     "fundadores": 871,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0271,
+     "n_coh_nacidos": 295,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0321,
+     "vida_nacidos": 1407.0,
+     "vida_fund": 136.0,
+     "frac_mala_nacidos": 0.4958,
+     "causas_nacidos": {
+      "hambre": 141,
+      "sed": 161,
+      "veneno": 106,
+      "sal": 191
+     },
+     "gen_max": 34,
+     "bloqueados": 0,
+     "tele": {
+      "n": 615,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9837,
+      "frac_D_mala": 0.9561,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12837,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 110.5,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.078,
+     "tam_final": 3,
+     "exceso": 0.078,
+     "nac": 46,
+     "fundadores": 1311,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.2333,
+     "n_coh_nacidos": 30,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0393,
+     "vida_nacidos": 188.0,
+     "vida_fund": 138.0,
+     "frac_mala_nacidos": 0.913,
+     "causas_nacidos": {
+      "hambre": 4,
+      "sed": 0,
+      "veneno": 26,
+      "sal": 16
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 46,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3913,
+      "frac_D_mala": 0.1522,
+      "frac_A_mala": 0.413,
+      "frac_C_mala": 0.1957,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.02,
+     "tam_final": 3,
+     "exceso": 0.02,
+     "nac": 36,
+     "fundadores": 1502,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.08,
+     "n_coh_nacidos": 25,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0327,
+     "vida_nacidos": 82.0,
+     "vida_fund": 133.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 20,
+      "sal": 16
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 16.49,
+     "tam_final": 16,
+     "exceso": 13.49,
+     "nac": 583,
+     "fundadores": 632,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 1.004,
+     "n_coh_nacidos": 247,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0769,
+     "vida_nacidos": 1379.0,
+     "vida_fund": 135.0,
+     "frac_mala_nacidos": 0.5079,
+     "causas_nacidos": {
+      "hambre": 119,
+      "sed": 161,
+      "veneno": 111,
+      "sal": 178
+     },
+     "gen_max": 28,
+     "bloqueados": 0,
+     "tele": {
+      "n": 583,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9863,
+      "frac_D_mala": 0.9314,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12838,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 134.8,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.046,
+     "tam_final": 3,
+     "exceso": 0.046,
+     "nac": 37,
+     "fundadores": 1309,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 22,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0364,
+     "vida_nacidos": 159.0,
+     "vida_fund": 146.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 18,
+      "sal": 19
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 37,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.2703,
+      "frac_D_mala": 0.1351,
+      "frac_A_mala": 0.3784,
+      "frac_C_mala": 0.2432,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.07,
+     "tam_final": 3,
+     "exceso": 0.07,
+     "nac": 37,
+     "fundadores": 1376,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 16,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0219,
+     "vida_nacidos": 126.0,
+     "vida_fund": 133.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 15,
+      "sal": 22
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.528,
+     "tam_final": 19,
+     "exceso": 12.528,
+     "nac": 616,
+     "fundadores": 814,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.01,
+     "n_coh_nacidos": 299,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0386,
+     "vida_nacidos": 1349.0,
+     "vida_fund": 139.0,
+     "frac_mala_nacidos": 0.5042,
+     "causas_nacidos": {
+      "hambre": 126,
+      "sed": 171,
+      "veneno": 117,
+      "sal": 185
+     },
+     "gen_max": 35,
+     "bloqueados": 0,
+     "tele": {
+      "n": 616,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9886,
+      "frac_D_mala": 0.9448,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12839,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 117.3,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.022,
+     "tam_final": 3,
+     "exceso": 0.022,
+     "nac": 34,
+     "fundadores": 1299,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.125,
+     "n_coh_nacidos": 24,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0328,
+     "vida_nacidos": 200.0,
+     "vida_fund": 152.0,
+     "frac_mala_nacidos": 0.9118,
+     "causas_nacidos": {
+      "hambre": 3,
+      "sed": 0,
+      "veneno": 13,
+      "sal": 18
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 34,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3529,
+      "frac_D_mala": 0.0882,
+      "frac_A_mala": 0.2941,
+      "frac_C_mala": 0.1765,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.026,
+     "tam_final": 3,
+     "exceso": 0.026,
+     "nac": 28,
+     "fundadores": 1401,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0,
+     "n_coh_nacidos": 13,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0183,
+     "vida_nacidos": 116.0,
+     "vida_fund": 149.0,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 9,
+      "sal": 19
+     },
+     "gen_max": 1,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.31,
+     "tam_final": 11,
+     "exceso": 12.31,
+     "nac": 603,
+     "fundadores": 841,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0511,
+     "n_coh_nacidos": 313,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0291,
+     "vida_nacidos": 1494.5,
+     "vida_fund": 158.0,
+     "frac_mala_nacidos": 0.5017,
+     "causas_nacidos": {
+      "hambre": 144,
+      "sed": 152,
+      "veneno": 110,
+      "sal": 188
+     },
+     "gen_max": 37,
+     "bloqueados": 0,
+     "tele": {
+      "n": 603,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9917,
+      "frac_D_mala": 0.9685,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  },
+  {
+   "seed": 12840,
+   "brazo": "MIX",
+   "T": 100000,
+   "seg": 116.9,
+   "estr": {
+    "BAR_SIN0": {
+     "tam_carro": 3.058,
+     "tam_final": 3,
+     "exceso": 0.058,
+     "nac": 39,
+     "fundadores": 1270,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.0952,
+     "n_coh_nacidos": 21,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0296,
+     "vida_nacidos": 200.0,
+     "vida_fund": 142.0,
+     "frac_mala_nacidos": 0.9744,
+     "causas_nacidos": {
+      "hambre": 1,
+      "sed": 0,
+      "veneno": 22,
+      "sal": 16
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": {
+      "n": 39,
+      "claves_med": 3.0,
+      "frac_B_mala": 0.3333,
+      "frac_D_mala": 0.2051,
+      "frac_A_mala": 0.2308,
+      "frac_C_mala": 0.2051,
+      "frac_completa": 0.0
+     }
+    },
+    "NADA": {
+     "tam_carro": 3.036,
+     "tam_final": 3,
+     "exceso": 0.036,
+     "nac": 36,
+     "fundadores": 1502,
+     "linajes_sin_ext": 0,
+     "persisten": 0,
+     "n_lin": 3,
+     "persiste_carro": false,
+     "R0_nacidos": 0.04,
+     "n_coh_nacidos": 25,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.035,
+     "vida_nacidos": 145.5,
+     "vida_fund": 125.5,
+     "frac_mala_nacidos": 1.0,
+     "causas_nacidos": {
+      "hambre": 0,
+      "sed": 0,
+      "veneno": 15,
+      "sal": 21
+     },
+     "gen_max": 2,
+     "bloqueados": 0,
+     "tele": null
+    },
+    "RES_SIN0": {
+     "tam_carro": 15.284,
+     "tam_final": 10,
+     "exceso": 12.284,
+     "nac": 614,
+     "fundadores": 754,
+     "linajes_sin_ext": 1,
+     "persisten": 1,
+     "n_lin": 3,
+     "persiste_carro": true,
+     "R0_nacidos": 1.0548,
+     "n_coh_nacidos": 310,
+     "cens_nacidos": 0.0,
+     "R0_fund": 0.0282,
+     "vida_nacidos": 1389.0,
+     "vida_fund": 141.0,
+     "frac_mala_nacidos": 0.5306,
+     "causas_nacidos": {
+      "hambre": 124,
+      "sed": 160,
+      "veneno": 130,
+      "sal": 191
+     },
+     "gen_max": 41,
+     "bloqueados": 0,
+     "tele": {
+      "n": 614,
+      "claves_med": 4.0,
+      "frac_B_mala": 0.9919,
+      "frac_D_mala": 0.9707,
+      "frac_A_mala": 0.0,
+      "frac_C_mala": 0.0,
+      "frac_completa": 0.0
+     }
+    }
+   }
+  }
+ ]
+}

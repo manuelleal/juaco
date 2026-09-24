@@ -223,6 +223,28 @@
   - **Lo que sí se sostiene por la letra, pendiente de réplica:** cuando la familia pasa sólo lo que le hizo bien o mal, el R0 de los
     nacidos sube de 0.67 a 0.95 (20/20), y con la misma tabla barajada no (0.49). La muerte por lo malo baja de 0.87 a 0.57.
 - **06:53 — réplica 12821–12840 lanzada** con Pool 1, en el núcleo libre. La réplica de ECO ocupa el Pool 3.
+  - **10:10 — terminó.** JSON: `experimentos/subida_n10c/datos/n10c_serie_s12821-12840_T100000_20260924_065441.json` (75263d554e211f74).
+
+    | carro | R0_nacidos (mediana) | semillas ≥ 0.90 | persiste_carro |
+    |---|---|---|---|
+    | NADA | 0.109 | 0 | 0/20 |
+    | RES | 0.774 | 0 | 5/20 |
+    | **RES_SIN0** | **0.946** | **18/20** | **16/20** |
+    | BAR_SIN0 | 0.539 | 0 | 0/20 |
+    | ORA_SIN0 | 0.981 | 20/20 | 8/20 |
+
+    - Validez: V-ANCLA-c y V-RES-c pasan. Puertas S-1..S-4 pasan.
+    - **VEREDICTO POR LA LETRA: FUNCIONA + R0 DE NACIDOS ≥ 0.90 + PERSISTE**, el mismo que la serie.
+    - `linajes_sin_ext` de RES_SIN0 por semilla: 0 en 4 semillas, 1 en 15, 2 en 1.
+- **BLOQUE n10c, por la letra: FUNCIONA + R0 DE NACIDOS ≥ 0.90 + PERSISTE ×2** (serie y réplica, mismo veredicto).
+  - **Frase declarable propuesta** (la decide el director): "en un mundo con flujo fijo de comida y generaciones que conviven, cuando la
+    familia pasa en el parto sólo lo que le hizo bien o mal (sin lo neutro), los nacidos tienen más hijos que con la tabla completa y
+    que con la misma tabla barajada, también compitiendo en el mismo mundo (20/20 ×2). El R0 de los nacidos llega a ≥ 0.90 en 19/20 y
+    18/20 semillas".
+  - **Límite, por ERR-118 y nube-5:** en 16–17/20 semillas, uno de los 9 linajes no se extingue tras t = 10 000. Los demás se refundan
+    (~3500 fundadores por corrida). **No se declara "la familia se sostiene".**
+  - **Puntos (propuesta del preregistro §11; decide el director):** FUNCIONA replicado +3 y R0N-90 replicado +2. PER-c replicado +5,
+    pero se recomienda NO darlos por nube-5.
 
 ### 1d. Gemelo numba de ECO (compilador, agente 1/2) — entregado a las ~03:34
 - **Arnés `identidad_eco_rapido.py`: 120/120** bit a bit en E1 (`eco=None`), E2 (genoma, mutación, banco, vivero y corte) y E3 (juez,
