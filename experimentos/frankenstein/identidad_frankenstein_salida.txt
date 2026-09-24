@@ -1,0 +1,35 @@
+2026-09-23 19:42:58
+OK  (0) sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4
+OK  (0) sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12
+OK  (0) sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96
+OK  (0) sha experimentos\carrera_escuderias\carros\FABRICA.py 2ebee3e99ea5a33a
+OK  (0) sha experimentos\carrera_escuderias\carros\APR.py 4402aa5142065c72
+OK  (0) sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028
+OK  (0) sha experimentos\generaciones\pista2.py 4d2bee16e7961261
+OK  (0) sha experimentos\generaciones\motor_convive.py d10cb9021f5d0f41
+OK  (0) sha experimentos\generaciones\corre_convive.py e6dadfdad9c379cd
+OK  (0) sha experimentos\subida_n10b\carros\FAMB_RES.py 2addb7ca5b9d031d
+OK  (0) sha experimentos\nivel09_cuerpo_nuevo_b2\organismo_f9c.py 9dd1fb91ecec35ae
+OK  (0) sha organismo\organismo_v142.py 17528d767fcebaf6
+OK  (0) organismo_frankenstein.py == construye (anclas) baff124177d44e90
+OK  (A1) N1 compat s1 T5000 salida entera rng 290c4d81432e4989 muertes 15
+OK  (A1) N1 compat s2 T5000 salida entera rng 92d00b61b7c4472c muertes 8
+OK  (A2) monolito organismo_f9c(REL) == OFF (plano) 76 claves, dif []
+OK  (A3) N9 escalada fundador limpio s17990 T3000 salida entera rng 01dec8b998960638
+OK  (A4) pista v2 quimiostato N9 s17991 T3000 salida entera individuos 94
+OK  (B1) SOLO_MODELO == APR (fisica + telemetria de la opcion) N9 s17992 T4000 decisiones 54 td 867
+OK  (B2) SOLO_HERENCIA == FAMB_RES (subida_n10b) pista v2 N9 s17993 T4000 nacimientos 19 paquetes 2
+OK  (C) V142 difiere de OFF (s17994 T4000) {'des': 33, 'mapa': 0, 'pruebas': 0, 'vetos': 0, 'lenta': 0, 'repasos': 0}
+OK  (C) V142: B-5 divide con R == 0 des_splits 33
+OK  (C) SOLO_MAPA difiere de OFF (s17994 T4000) {'des': 0, 'mapa': 1355, 'pruebas': 0, 'vetos': 0, 'lenta': 0, 'repasos': 0}
+OK  (C) SOLO_CURIOSIDAD difiere de OFF (s17994 T4000) {'des': 0, 'mapa': 0, 'pruebas': 9, 'vetos': 0, 'lenta': 0, 'repasos': 0}
+OK  (C) SOLO_MODELO difiere de OFF (s17994 T4000) {'des': 0, 'mapa': 0, 'pruebas': 0, 'vetos': 0, 'lenta': 0, 'repasos': 0}
+OK  (C) SOLO_LENTA difiere de OFF (s17994 T4000) {'des': 0, 'mapa': 0, 'pruebas': 0, 'vetos': 0, 'lenta': 281, 'repasos': 1407}
+OK  (C) SOLO_HERENCIA difiere de OFF (s17994 T4000) {'des': 0, 'mapa': 0, 'pruebas': 0, 'vetos': 0, 'lenta': 0, 'repasos': 0}
+OK  (C) SOLO_INTERRUPTOR difiere de OFF (s17994 T4000) {'des': 0, 'mapa': 0, 'pruebas': 0, 'vetos': 51, 'lenta': 0, 'repasos': 0}
+OK  (D) determinismo TODO s17995 T2000 
+OK  (E1) revisa_carro (chequeo estatico de la carrera) []
+OK  (E2) los organos no nombran la tabla verdadera (VAL_VIVO/EFECTO/fabrica) 
+OK  (E3) los organos no sortean (sin rng propio) 
+OK  (F) corre_frankenstein aborta las 8 formas malas (codigo != 0) y no escribe datos [2, 2, 2, 2, 2, 2, 2, 2]
+RESULTADO: 33/33  (106 s)
