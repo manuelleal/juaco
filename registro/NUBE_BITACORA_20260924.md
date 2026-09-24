@@ -108,7 +108,15 @@
 - **03:34 — humo** (práctica 12891, T 20 000): NADA 0.070 · RES 0.316 · RES_SIN0 0.875 · BAR_SIN0 0.828 · ORA_SIN0 1.12. No se lee.
   - Aviso: BAR_SIN0 alto en esta semilla, así que S-2 puede caer. Las predicciones NO se tocan tras el humo.
   - JSON: `experimentos/subida_n10c/datos/humo/n10c_humo_s12891_T20000_20260924_033423.json`.
-- **Siguiente:** auditoría del paquete por un `juaco-auditor` (agente 2/2 de la noche) ANTES de la serie. Serie y réplica después.
+- **~03:55 — auditoría (`juaco-auditor`, agente 2/2): LISTO PARA SERIE.** Hallazgos, todos BAJA y no bloqueantes:
+  - H-1: `corre_n10b.agrega` calcula `_brecha_RES` con 'ORACULO'. Aquí no existe, así que sale None. Es inerte: el veredicto no la lee.
+  - H-2: (D) no cubre ORA_SIN0. Es un filtro puro en `__init__`, sin rng, e (I) ya lo cubre con el filtro apagado.
+  - H-3: no hay identidad dedicada para MIX. Es el mecanismo de n10b sin cambios; el humo separa bien las 3 claves.
+  - H-4: la banda de RES [0.60, 0.82] es informal (dos series de n10b), no sale de un bootstrap. Sólo pesa en la validez.
+  - H-5: BAR_SIN0 controla dosis, multiset y número de entradas. No puede distinguir "quitar lo neutro" de "quitar cualquier
+    subconjunto de 4", porque en este mundo no hay otro subconjunto construible. Va a la frase declarable.
+  - Verificó a mano: 12 shas contra los fijados, nada escrito tras el humo (sha y mtime) y semillas libres (grep en todo el repo).
+  - Decisión: se corre la serie sin cambios. Los hallazgos van a la lectura, no al código: ninguno toca el criterio.
 
 ### 1d. Gemelo numba de ECO (compilador, agente 1/2) — entregado a las ~03:34
 - **Arnés `identidad_eco_rapido.py`: 120/120** bit a bit en E1 (`eco=None`), E2 (genoma, mutación, banco, vivero y corte) y E3 (juez,
