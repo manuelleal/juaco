@@ -38,9 +38,25 @@ def _variante_sin0():
     return m
 
 
+def _variante_res_sin0():
+    m0 = _carga_orig('RES')
+
+    class ResSin0(m0.Carro):
+        def nace(self, info):
+            m = info.get('memoria')
+            if m:
+                info = dict(info, memoria=[e for e in m if float(e[1]) != 0.0])
+            return super().nace(info)
+    m = types.ModuleType('carro_FAMB_RES_SIN0')
+    m.crea = lambda ctx: ResSin0(ctx)
+    return m
+
+
 def carga(et):
     if et == 'ORACULO' and _VAR['modo'] == 'sin0':
         return _variante_sin0()
+    if et == 'RES' and _VAR['modo'] == 'res_sin0':
+        return _variante_res_sin0()
     return _carga_orig(et)
 
 
@@ -52,11 +68,16 @@ def main():
     ap.add_argument('--desde', type=int, default=12794)
     ap.add_argument('--n', type=int, default=6)
     ap.add_argument('--T', type=int, default=100000)
+    ap.add_argument('--brazos', default='NADA,RES,ORACULO,ORA_SIN0')
     a = ap.parse_args()
-    if not (12794 <= a.desde and a.desde + a.n - 1 <= 12799):
-        raise SystemExit('solo semillas de practica 12794-12799')
+    sem = range(a.desde, a.desde + a.n)
+    if not (all(12794 <= x <= 12799 for x in sem) or all(24001 <= x <= 24099 for x in sem)):
+        raise SystemExit('solo semillas de practica 12794-12799 o exploratorias 24001-24099')
+    TABLA = {'NADA': ('NADA', None), 'RES': ('RES', None), 'ORACULO': ('ORACULO', None), 'ORA_SIN0': ('ORACULO', 'sin0'),
+             'RES_SIN0': ('RES', 'res_sin0'), 'RES1': ('RES1', None), 'BAR': ('BAR', None)}
+    brazos = [(b,) + TABLA[b] for b in a.brazos.split(',')]
     os.makedirs(os.path.join(AQUI, 'datos'), exist_ok=True)
-    base = os.path.join(AQUI, 'datos', f"revisa_n10b_oraculo_s{a.desde}-{a.desde + a.n - 1}_T{a.T}_{time.strftime('%Y%m%d_%H%M%S')}")
+    base = os.path.join(AQUI, 'datos', f"revisa_n10b_{a.brazos.replace(',', '-')}_s{a.desde}-{a.desde + a.n - 1}_T{a.T}_{time.strftime('%Y%m%d_%H%M%S')}")
     flog = open(base + '.log', 'w', encoding='utf-8')
 
     def log(s):
@@ -64,7 +85,7 @@ def main():
     log('EXPLORATORIO — no es dato · revisión de la alarma §8 de n10b (RES > ORÁCULO) · corre_n10b.tarea sin tocar')
     R = []
     for s in range(a.desde, a.desde + a.n):
-        for nombre, brazo, modo in (('NADA', 'NADA', None), ('RES', 'RES', None), ('ORACULO', 'ORACULO', None), ('ORA_SIN0', 'ORACULO', 'sin0')):
+        for nombre, brazo, modo in brazos:
             _VAR['modo'] = modo
             r = CN.tarea((s, brazo, a.T))
             v = list(r['estr'].values())[0]
@@ -75,11 +96,13 @@ def main():
                 f"mala {x['frac_mala_nacidos']} ({x['seg']} s)")
             json.dump(R, open(base + '.json', 'w', encoding='utf-8'), indent=1)
     log('RESUMEN (medianas por semilla)')
-    for b in ('NADA', 'RES', 'ORACULO', 'ORA_SIN0'):
+    for b in [x[0] for x in brazos]:
         xs = [x['R0_nacidos'] for x in R if x['brazo'] == b]
         log(f"  {b:9s} R0nac mediana {round(st.median(xs), 4)} · {xs}")
     por = lambda b: {x['seed']: x['R0_nacidos'] for x in R if x['brazo'] == b}
-    for a1, b1 in (('ORA_SIN0', 'ORACULO'), ('ORA_SIN0', 'RES'), ('RES', 'ORACULO')):
+    nb = [x[0] for x in brazos]
+    for a1, b1 in (('ORA_SIN0', 'ORACULO'), ('ORA_SIN0', 'RES'), ('RES', 'ORACULO'), ('RES_SIN0', 'RES'), ('RES_SIN0', 'ORA_SIN0'), ('RES_SIN0', 'NADA')):
+        if a1 not in nb or b1 not in nb: continue
         pa, pb = por(a1), por(b1)
         d = [pa[s] - pb[s] for s in pa if s in pb]
         log(f"  pareado {a1} > {b1}: {sum(1 for z in d if z > 0)}/{len(d)} · dif mediana {round(st.median(d), 4)}")
