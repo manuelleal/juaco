@@ -37,6 +37,18 @@ Laboratorio de investigadores: una ronda al día como máximo y sólo al servici
   investigadores y un crítico). Sus carpetas entran al repo cuando entreguen y se auditen.
 - Cada serie corre su arnés de identidad antes y se detiene si no da N/N. Cada resultado se registra al salir (REGISTRO, commit y push).
 
+## INCIDENTE 23-sep ~21:55 (coordinador, 22:15; el director pidió restaurar desde el repo y relanzar)
+- A las ~21:55 se detuvieron todos los procesos de la cola del PC, y el árbol de trabajo quedó con un **retroceso sin explicar**: se borraron
+  `NUBE.md`, `registro/LABORATORIO.md`, `.claude/agents/juaco-investigador.md` y `.claude/guardia.*`/`settings.json`; y `ESTADO.md`, `CLAUDE.md`,
+  `requirements.txt` y dos archivos de `juaco_eco` volvieron a versiones anteriores. Nada de eso estaba commiteado. No había otra sesión de JUACO activa.
+- **Acción:** el retroceso se apartó con `git stash` ("retroceso sin explicar ~21:55 23-sep") y el árbol quedó igual a `55f77b1` (GitHub).
+  La causa queda sin identificar: revisar el 24-sep si una tarea programada, un agente o una sincronización escribió copias viejas.
+- **Estado de la cola al corte:** v14.3 serie 14301 **terminada** (parcial: HAY ALGO MODESTO, no se declara sin réplica); v14.3 réplica 14321
+  **cortada** en el último brazo; n9b serie y réplica terminadas (registradas: NO); n6b serie 14601 **terminada, sin registrar**; n6b réplica 14621
+  **cortada** en 94/220; n8c y n8b sin arrancar.
+- **Relanzado a las 22:15:** Pool A = identidad v14.3 + réplica 14321 completa; Pool B = n6b réplica 14621 → n8c serie 15801 → n8c réplica 15821.
+  n8b va después.
+
 ## NOCHE 23→24-sep: trabaja sola; el coordinador audita el 24-sep (director, ~21:05: "lo cerramos así, dejamos que el agente trabaje solo y lo auditas mañana")
 - **PC, hasta ~00:00:** v14.3 (serie 14301 y réplica 14321) · 9b réplica 13521 (la serie 13501 dio las tres lesiones sin pérdida, P2
   refutada: la ventaja de APR viene de contenerse, no de predecirse) · 6b → 8c → 8b.
