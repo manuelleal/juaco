@@ -1,0 +1,100 @@
+{
+ "etiqueta": "endo_replica_s22021-22040",
+ "veredicto": "HAY ALGO MODESTO (en esta ventana): pasan ['P3']",
+ "lineas": [
+  "P1 (persistencia pareada: cuerpos vivos tras el corte) VIDA_S > INERTE 4/20 (menor 16) \u00b7 VIDA_S > SIN_TRAGAR 4/20 (menor 15) \u00b7 VIDA_S > BARAJADO 12 \u00b7 VIDA_S > AZAR_S 12 \u00b7 medianas VIDA_S 74.5 \u00b7 INERTE 130.0 \u00b7 BARAJADO 65.5 \u00b7 SIN_TRAGAR 105.5 \u00b7 AZAR_S 57.5 \u00b7 persisten en T {'VIDA_S': 0, 'INERTE': 4, 'BARAJADO': 0, 'SIN_TRAGAR': 6, 'AZAR_S': 1}",
+  "P2 (R0 de los portadores: delta = r0 con simbionte al nacer - r0 sin, >= 5 por grupo) VIDA_S > INERTE 3/20 (evaluables 4) \u00b7 VIDA_S > BARAJADO 2/20 (evaluables 2) \u00b7 VIDA_S > AZAR_S 1 \u00b7 delta > 0 en VIDA_S 4 \u00b7 medianas delta VIDA_S 0.3333 \u00b7 INERTE 0.4881 \u00b7 BARAJADO -0.2521 \u00b7 AZAR_S 0.1366",
+  "P3 (domesticacion pareada: D = media sobre los PARTOS de I(lo transmitido) - I(libres en la misma muestra)) VIDA_S > AZAR_S 17/20 (evaluables 20) \u00b7 VIDA_S > INERTE 17/20 (evaluables 20) \u00b7 placebo BARAJADO D > 0 12, < 0 8 \u00b7 D > 0: VIDA_S 18 \u00b7 INERTE 7 \u00b7 AZAR_S 5 \u00b7 BARAJADO 12 \u00b7 medianas D VIDA_S 0.0117 \u00b7 INERTE -0.009 \u00b7 BARAJADO 0.0011 \u00b7 AZAR_S -0.0126 \u00b7 descriptivo D solo tras el corte VIDA_S 0.0404 \u00b7 INERTE 0.0066 \u00b7 BARAJADO -0.0087 \u00b7 AZAR_S -0.0183",
+  "DESCRIPTIVO (no decide; trinquete de Fable): fraccion con simbionte tras el corte, medianas VIDA_S 0.4866 \u00b7 INERTE 0.7638 \u00b7 BARAJADO 0.4145 \u00b7 SIN_TRAGAR 0.0 \u00b7 AZAR_S 0.5225 \u00b7 semillas con fraccion >= 0.9: {'AZAR_S': 0, 'INERTE': 2} \u00b7 distancia dentro-libres en T VIDA_S None \u00b7 INERTE 1.2556 \u00b7 BARAJADO None \u00b7 AZAR_S 1.483",
+  "DESCRIPTIVO: fraccion de mordidas por letra en VIDA_S con canal {'A': 0.9737, 'B': 0.1789, 'C': 0.9725, 'D': 0.2445} \u00b7 sin canal {'A': 0.9432, 'B': 0.2063, 'C': 0.8754, 'D': 0.2375}",
+  "Guardias: errores 0 \u00b7 bloqueados 0 \u00b7 corridas con tope de libres 0 \u00b7 ERR-60 truncadas [] \u00b7 VIDA_S con libres extintos antes del corte 0 \u00b7 trinquete {'AZAR_S': 0, 'INERTE': 2} \u00b7 placebo de D (BARAJADO) (12, 8) \u00b7 delta > 0 en INERTE 8 \u00b7 descriptivo, sesgo de adquisicion (D > 0 sin canal / sin seleccion): INERTE 7 AZAR_S 5",
+  "VEREDICTO ENDOSIMBIOSIS POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): HAY ALGO MODESTO (en esta ventana): pasan ['P3']"
+ ],
+ "d": {
+  "P1a": [
+   4,
+   16,
+   20
+  ],
+  "P1b": [
+   4,
+   15,
+   20
+  ],
+  "P2a": [
+   3,
+   1,
+   4
+  ],
+  "P2b": [
+   2,
+   0,
+   2
+  ],
+  "P3": [
+   17,
+   3,
+   20
+  ],
+  "P3b": [
+   17,
+   3,
+   20
+  ],
+  "PLAC": [
+   12,
+   8
+  ],
+  "G_in_D": [
+   7,
+   13
+  ],
+  "G_az_D": [
+   5,
+   15
+  ],
+  "G_in_R0": [
+   8,
+   3
+  ],
+  "trinq": {
+   "AZAR_S": 0,
+   "INERTE": 2
+  },
+  "pers": {
+   "VIDA_S": 0,
+   "INERTE": 4,
+   "BARAJADO": 0,
+   "SIN_TRAGAR": 6,
+   "AZAR_S": 1
+  },
+  "bloq": 0,
+  "bloq_lib": 0,
+  "trunc": [],
+  "lib_ext": 0,
+  "errores": []
+ },
+ "seg": 6728,
+ "V": {
+  "T": 120000,
+  "t_corte": 60000,
+  "cola": 20000
+ },
+ "MUNDO": {
+  "esc": 30,
+  "n0": 30,
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "shas": {
+  "corre_endo.py": "078734369e9721c5",
+  "motor_endo.py": "7e10329cf0cb9fd0",
+  "simbiontes.py": "72f8829defe3e69f",
+  "FABRICA_SIMB.py": "38ac0ddba8829c88",
+  "construye_endo.py": "750c9ced2c3d7631",
+  "identidad_endosimbiosis.py": "42f458cbbfbe3bc8",
+  "PREREGISTRO_endosimbiosis.md": "9e2b2dad50ebd414",
+  "motor_eco3.py": "2eec9830792d9822",
+  "corre_eco.py": "47d9cee4d6462116"
+ }
+}
