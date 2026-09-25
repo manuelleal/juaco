@@ -27,3 +27,4 @@ Rama `nube/anfitrion-20260924` sale de `organelos` @ 878074b. `organelos` no se 
 - El veredicto a T 6000 no cuenta. Salida en `prueba_pool.txt`; datos en `datos/anf_prueba_pool/`.
 
 ## 5. Serie 26001–26020 (Pool 3): lanzada a las 01:51
+- Primeras 9 corridas: **media de ~113 s** (95–121 s), por debajo del umbral de 250 s → la réplica va esta noche, salvo que la serie dé NO.
