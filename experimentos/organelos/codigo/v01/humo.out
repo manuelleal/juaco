@@ -1,0 +1,24 @@
+[21:53:37] HUMO v0.1 {'T': 24000, 't_cambio': 0, 't_corte': 16000, 'r0_margen': 2000} � LAMBDA_ROB 0.292 � shas {'v01/corre_v01.py': 'c8949ac3f9c6123f', 'v01/motor_v01.py': '8a67a259baa5454b', 'v01/construye_v01.py': '58a9004f1bdefee1', 'v01/PREREGISTRO_v01.md': '931ea718f01576cd', 'exploracion_fable/motor_fable.py': '46750da69ef8cce1', 'exploracion_fable/fable_mundos.py': 'ccb39d6de1cd62d3', 'codigo_def.py': '1096202c8afaa3d1', 'carros/FAMB_GRAM_ECO.py': '2cee0a8510c997b9'}
+[21:55:11] quieto  CODIGO_SIN_SOS   s29001: 93.8 s · abort None · persiste 1 (vivos 8) · nac solo 114 · R0 final 0.5263 · B_pre 40.0 post/pre 1.6438 · fenotipo identico 0.7985 (n 526) · errores/copia 0.5665 · SOS None->0.0 · largo corte 30.46 · lam None
+[21:56:36] quieto  PERILLAS         s29001: 85.4 s · abort None · persiste 1 (vivos 8) · nac solo 56 · R0 final 0.4286 · B_pre 37.67 post/pre 1.2046 · fenotipo identico 0.2948 (n 363) · errores/copia None · SOS None->None · largo corte None · lam None
+[21:58:01] quieto  PERILLAS_ROBUSTA s29001: 85.2 s · abort None · persiste 1 (vivos 10) · nac solo 56 · R0 final 0.4821 · B_pre 35.33 post/pre 1.2311 · fenotipo identico 0.7155 (n 348) · errores/copia None · SOS None->None · largo corte None · lam 0.292
+[21:59:38] quieto  MUT0             s29001: 96.5 s · abort None · persiste 1 (vivos 11) · nac solo 60 · R0 final 0.35 · B_pre 40.67 post/pre 1.1066 · fenotipo identico 1.0 (n 360) · errores/copia 0.0 · SOS None->0.0 · largo corte 30.0 · lam None
+[22:00:54] quieto  AZAR             s29001: 76.1 s · abort None · persiste 1 (vivos 1) · nac solo 47 · R0 final 0.2766 · B_pre 38.0 post/pre 1.2007 · fenotipo identico 0.8438 (n 365) · errores/copia 0.8712 · SOS None->0.0 · largo corte 34.73 · lam None
+[22:01:53] onda8k  CODIGO_SIN_SOS   s29001: 58.9 s · abort None · persiste 1 (vivos 3) · nac solo 31 · R0 final 0.5484 · B_pre 18.0 post/pre 1.3889 · fenotipo identico 0.67 (n 200) · errores/copia 1.035 · SOS None->0.0 · largo corte 30.85 · lam None
+[22:02:49] onda8k  PERILLAS         s29001: 55.9 s · abort None · persiste 0 (vivos 0) · nac solo 28 · R0 final 0.2143 · B_pre 20.0 post/pre 1.2875 · fenotipo identico 0.3155 (n 206) · errores/copia None · SOS None->None · largo corte None · lam None
+[22:03:47] onda8k  PERILLAS_ROBUSTA s29001: 58.4 s · abort None · persiste 0 (vivos 0) · nac solo 22 · R0 final 0.1364 · B_pre 21.67 post/pre 1.1942 · fenotipo identico 0.7053 (n 207) · errores/copia None · SOS None->None · largo corte None · lam 0.292
+[22:04:47] onda8k  MUT0             s29001: 59.7 s · abort None · persiste 1 (vivos 2) · nac solo 25 · R0 final 0.48 · B_pre 19.0 post/pre 1.3618 · fenotipo identico 1.0 (n 207) · errores/copia 0.0 · SOS None->0.0 · largo corte 30.0 · lam None
+[22:05:48] onda8k  AZAR             s29001: 61.5 s · abort None · persiste 1 (vivos 4) · nac solo 37 · R0 final 0.4054 · B_pre 24.0 post/pre 1.1354 · fenotipo identico 0.8073 (n 218) · errores/copia 0.7936 · SOS None->0.0 · largo corte 32.61 · lam None
+   P3 (SOS) NO MEDIDA: la serie corrio sin CODIGO con SOS (--con_sos)
+   [quieto] nac solo (suma) {'CODIGO_SIN_SOS': 114, 'PERILLAS': 56, 'PERILLAS_ROBUSTA': 56, 'MUT0': 60, 'AZAR': 47, 'CODIGO': 0} · persisten {'CODIGO_SIN_SOS': 1, 'PERILLAS': 1, 'PERILLAS_ROBUSTA': 1, 'MUT0': 1, 'AZAR': 1, 'CODIGO': 0}
+   [quieto] R0 final mediana {'CODIGO_SIN_SOS': 0.5263, 'PERILLAS': 0.4286, 'PERILLAS_ROBUSTA': 0.4821, 'MUT0': 0.35, 'AZAR': 0.2766, 'CODIGO': None} · fenotipo identico (mediana) {'CODIGO_SIN_SOS': 0.7985, 'PERILLAS': 0.2948, 'PERILLAS_ROBUSTA': 0.7155, 'MUT0': 1.0, 'AZAR': 0.8438, 'CODIGO': None}
+   [onda8k] nac solo (suma) {'CODIGO_SIN_SOS': 31, 'PERILLAS': 28, 'PERILLAS_ROBUSTA': 22, 'MUT0': 25, 'AZAR': 37, 'CODIGO': 0} · persisten {'CODIGO_SIN_SOS': 1, 'PERILLAS': 0, 'PERILLAS_ROBUSTA': 0, 'MUT0': 1, 'AZAR': 1, 'CODIGO': 0}
+   [onda8k] R0 final mediana {'CODIGO_SIN_SOS': 0.5484, 'PERILLAS': 0.2143, 'PERILLAS_ROBUSTA': 0.1364, 'MUT0': 0.48, 'AZAR': 0.4054, 'CODIGO': None} · fenotipo identico (mediana) {'CODIGO_SIN_SOS': 0.67, 'PERILLAS': 0.3155, 'PERILLAS_ROBUSTA': 0.7053, 'MUT0': 1.0, 'AZAR': 0.8073, 'CODIGO': None}
+   P0 base: CODIGO_SIN_SOS > PERILLAS en quieto 1/1 -> False
+   P1 [quieto] CODIGO_SIN_SOS > PERILLAS_ROBUSTA 1/1 -> False
+   P1 [onda8k] CODIGO_SIN_SOS > PERILLAS_ROBUSTA 1/1 -> False
+   P2 amplificacion: razon SIN_SOS/ROBUSTA onda8k 1.391 vs quieto 2.018 (x0.69; pide >= 1.5) -> False · (contra PERILLAS: onda 1.103 quieto 2.018)
+   guardia variacion (quieto) SIN_SOS > MUT0 1/1 -> False · guardia seleccion (quieto) SIN_SOS > AZAR 1/1 -> False
+   VEREDICTO CODIGO v0.1 POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO — con la carga igualada la cinta no vive mejor: la ventaja de v0 era mutacion mas suave
+HUMO: 731.6 s (numeros sin valor) · experimentos\organelos\codigo\v01\datos\humo\v01_humo_20260924_215337
+FIN
