@@ -1,0 +1,72 @@
+IDENTIDAD frio_carrera · 2026-09-25 14:49:54 · python 3.14.2 · numpy 2.4.3
+  corre_frio_carrera.py 49de4dd28a8f3c3a · construye_frio_carrera.py e28b509d4a00908a · este arnes 9b0a5705b6113b9d
+(K) construccion y chequeo estatico
+  [OK ] (K1) carros en disco == construye_frio_carrera (origen V143.py 2a03048a7f1525e5; variantes solo difieren en perillas/nombre) · V143_RES0 sha fab1d8068fe901a5 == disco: True |   V143_BAR0 sha db160ec0685ec7bd == disco: True |   V143_TEL sha f73f8ea41399bb79 == disco: True | origen V143.py sha 2a03048a7f1525e5 (fijado 2a03048a7f1525e5) · construye_frio_carrera.py sha e28b509d4a00908a
+  [OK ] (K2) sha de corre_v143, V143, pista, juez, O1 == fijados
+  [OK ] (K3) revisa_carro V143_RES0: PASA (sin np.random, sin default_rng, sin imports fuera de lista) · []
+  [OK ] (K3) revisa_carro V143_BAR0: PASA (sin np.random, sin default_rng, sin imports fuera de lista) · []
+  [OK ] (K3) revisa_carro V143_TEL: PASA (sin np.random, sin default_rng, sin imports fuera de lista) · []
+(A) perillas apagadas == V143 bit a bit (salida ENTERA de pista.run: fisica + carro + pizarra; N 9, fundador limpio)
+  [OK ] (A) V143_RES0 con RES0 = BAR = TELEM = 0 == V143 (s 36901, T 3000) · nacimientos reales en la corrida 4
+  [OK ] (A) V143_RES0 con RES0 = BAR = TELEM = 0 == V143 (s 36902, T 3000) · nacimientos reales en la corrida 3
+  [OK ] (A) V143_BAR0 con RES0 = BAR = TELEM = 0 == V143 (s 36903, T 3000) · nacimientos reales en la corrida 2
+  [OK ] (A) V143_TEL con RES0 = BAR = TELEM = 0 == V143 (s 36904, T 3000) · nacimientos reales en la corrida 4
+(B) TELEM = 1 no toca la conducta: todo igual salvo la clave d['carro']['frio_carrera']
+  [OK ] (B1) V143_TEL == V143 (s 36901, T 5000) en todo salvo la telemetria
+  [OK ] (B2) la telemetria existe en los 9 linajes y hubo lecturas del nodo · {'lect': 8, 'entradas': 167, 'neutras': 61, 'sel': 167, 'sel_neutras': 61}
+      DATO (V143 = V143_TEL, s 36901, T 5000; ultima instancia de cada linaje): entradas del nodo en las lecturas 167, neutras 61 (0.365); de las leidas por la via lenta 167, neutras 61 (0.365)
+(C) regla 14: la tarea del runner == corre_v143.tarea campo a campo
+  [OK ] (C1) runner.tarea(V143) == corre_v143.tarea(V143) (s 36902, T 2000), salvo seg; tel_fc = 9 x None
+  [OK ] (C2) runner.tarea(V143_RES0 apagado) == corre_v143.tarea(V143) (s 36902, T 2000), salvo la etiqueta 'V143_RES0#i'
+  [OK ] (C3) P.run quedo restaurado tras la captura
+(D) RES0: el nacido lee el nodo sin neutras (prueba directa sobre un nodo conocido y en la pista)
+  [OK ] (D1) quita exactamente las 2 neutras y deja las 4 con consecuencia, en orden
+  [OK ] (D2) el nodo guardado no cambia
+  [OK ] (D3) en la pista: 0 neutras leidas, pasan = entradas - neutras, hubo neutras que quitar · {'lect': 2, 'entradas': 33, 'neutras': 14, 'pasan': 19, 'sel': 19, 'sel_neutras': 0}
+  [OK ] (D4) RES0 NO es inerte: la salida cambia respecto de V143 (s 36903, T 5000)
+(E) BAR: permuta las R entre entradas (multiconjunto, patron y necesidad intactos), determinista, sin rng de nadie
+  [OK ] (E1) sin neutras; multiconjunto de R igual; patron y necesidad en su sitio
+  [OK ] (E2) determinista (mismo t, k -> misma permutacion) y cambia con t
+  [OK ] (E3) no consume el rng del cuerpo
+  [OK ] (E4) el nodo guardado no cambia
+  [OK ] (E5) la permutacion cambia alguna R en >= 0.5 de 200 lecturas del nodo conocido · 161/200
+  [OK ] (E6) en la pista (todas las instancias): la permutacion cambia alguna R en >= 0.5 de las lecturas; 0 neutras leidas · {'lect': 3, 'bar_lect': 3, 'bar_distintas': 3, 'bar_cambian': 10, 'bar_entradas': 30, 'sel_neutras': 0, 'instancias': 120}
+  [OK ] (E7) BAR0 != RES0 en la pista (s 36903, T 5000)
+  [OK ] (G) determinismo: V143_RES0 dos veces == (s 36903, T 5000)
+(F) nube-9: un SystemExit dentro de la corrida no mata al trabajador; se marca aborto y se escribe el JSON
+  [OK ] (F1) SystemExit atrapado, aborto marcado, JSON escrito · SystemExit: H1: mas de 100000 partos: la semilla del hijo colisionaria (ERR-60)
+  [OK ] (F2) --reanuda devuelve el JSON ya escrito sin volver a correr
+  [OK ] (F3) con 1 aborto la serie es NO SE LEE
+(H) ERR-115: banderas desconocidas o abreviadas abortan; semillas y T ajenos se rechazan
+  [OK ] (H) aborta: --humo --xyz
+  [OK ] (H) aborta: --hum
+  [OK ] (H) aborta: --help
+  [OK ] (H) aborta: --serie --desde 14301 --n 20
+  [OK ] (H) aborta: --serie --T 20000
+  [OK ] (H) aborta: --humo --pool 6
+  [OK ] (H) aborta: --humo --desde 36001 --n 1
+  [OK ] (H) aborta: --serie --brazos v143,res0
+  [OK ] (H) aborta: --humo --T 40000 --desde 36905 --n 1
+  [OK ] (H) aborta: --humo --desde 36901 --n 4 --brazos v143,res0
+(V) la letra (sec. 6) sobre entradas sinteticas
+  [OK ] (V) todo pasa -> FUNCIONA · da FUNCIONA
+  [OK ] (V) {'gr': False} -> HAY ALGO MODESTO · da HAY ALGO MODESTO
+  [OK ] (V) {'gr': False, 'd_rv': 0.05} -> NO · da NO
+  [OK ] (V) {'gb': True} -> HAY ALGO MODESTO · da HAY ALGO MODESTO
+  [OK ] (V) {'w_rv': 14} -> NO · da NO
+  [OK ] (V) {'w_rv': 15, 'gr': False, 'd_rv': 0.1} -> HAY ALGO MODESTO · da HAY ALGO MODESTO
+  [OK ] (V) {'gr': False, 'w_rb': 14} -> NO · da NO
+  [OK ] (V) {'go': False} -> NO SE LEE · da NO SE LEE
+  [OK ] (V) {'r0v': 0.39} -> NO SE LEE · da NO SE LEE
+  [OK ] (V) {'r0v': 0.81} -> NO SE LEE · da NO SE LEE
+  [OK ] (V) {'sel': 3} -> NO SE LEE · da NO SE LEE
+  [OK ] (V) {'fb': 0.4} -> NO SE LEE · da NO SE LEE
+  [OK ] (V) {'comp': False} -> NO SE LEE · da NO SE LEE
+  [OK ] (V) {'gb': True, 'w_rb': 10} -> NO · da NO
+  [OK ] (V) bloque FUNCIONA + FUNCIONA -> FUNCIONA
+  [OK ] (V) bloque FUNCIONA + HAY ALGO MODESTO -> HAY ALGO MODESTO
+  [OK ] (V) bloque FUNCIONA + NO -> NO
+  [OK ] (V) bloque NO + NO SE LEE -> NO SE LEE
+  [OK ] (V) bloque HAY ALGO MODESTO + HAY ALGO MODESTO -> HAY ALGO MODESTO
+
+RESULTADO: 58/58 (67 s)
