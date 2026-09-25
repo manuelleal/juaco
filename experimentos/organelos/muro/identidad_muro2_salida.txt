@@ -1,0 +1,90 @@
+== (K) instrumentos
+  [OK] K corre_muro.py intacto (503b531ea1213c59, el de la serie 1)
+  [OK] K construye_muro.py intacto (ad607c6ad4f9ced9)
+  [OK] K V143_GLOTUPATAS construye == disco (sha dec2d8ceb004e541)
+  [OK] K V143_GLOTUPATAS revisa_carro PASA
+  [OK] K V143_MTEL construye == disco (sha dd0970b8a01c9fa1)
+  [OK] K V143_MTEL revisa_carro PASA
+  [OK] K V143_GLOTUPATASDESF construye == disco (sha d82a7bb5bdf821b4)
+  [OK] K V143_GLOTUPATASDESF revisa_carro PASA
+  [OK] K sha corre_v143.py == 24100621c450da22
+  [OK] K sha V143.py == 2a03048a7f1525e5
+  [OK] K sha pista.py == 9f47c65e438e0ff4
+  [OK] K sha juez.py == 6a68f640a7832f12
+  [OK] K sha O1.py == 99436afa2715f028
+== (A) perillas en 0 == V143
+  [OK] A V143_GLOTUPATAS perillas de fabrica (0, 3, 1, 1)
+  [OK] A V143_GLOTUPATAS con PAGA = GLOT = PATAS = TELEM = 0 == V143 (salida ENTERA)
+  [OK] A V143_GLOTUPATASDESF perillas de fabrica (0, 3, 2, 1)
+  [OK] A V143_GLOTUPATASDESF con PAGA = GLOT = PATAS = TELEM = 0 == V143 (salida ENTERA)
+== (S) configuracion del segundo intento
+  [OK] S brazos de la serie
+  [OK] S candidato / control
+  [OK] S semillas: serie 37101-37120, replica 37121-37140, sin choque con la serie 1 (37001-37040) ni con la practica
+  [OK] S datos en muro/datos/muro2
+  [OK] S humo: 6 corridas de practica
+  [OK] S verifica = verifica2 (incluye el carro nuevo)
+  [OK] S corre_muro recien importado conserva la config de la serie 1 (glotu / glotuinv, 37001-37040)
+  [OK] S verifica2 pasa (shas, carros, identidades cortas)
+== (C) regla 14
+  [OK] C tarea == corre_v143.tarea campo a campo (V143, s 37913, T 2000; salvo 'seg')
+  [OK] C P.run restaurado
+  [OK] C corre_v143.verifica_todo con entrada
+== (D) por pieza
+  [OK] D candidato: con meta y hambre las patas van a A (la activa) aunque C este mas cerca
+  [OK] D control: con meta y hambre las patas van a C (la otra)
+  [OK] D sin meta: candidato y control van a lo mas cercano (v14.3)
+  [OK] D V143_GLOTUPATAS: la boca es GLOTU (E 1.3 > Ag 1.1 >= U: veta A, no C)
+  [OK] D V143_GLOTUPATASDESF: la boca es GLOTU (E 1.3 > Ag 1.1 >= U: veta A, no C)
+  [OK] D decisiones distintas: el veto de la boca (GLOTU) no cambia el objetivo de las patas
+== (E) actuan en la pista
+  [OK] E candidato != V143, control != V143, candidato != control en la fisica (s 37913, T 3000)
+  [OK] E candidato: las dos piezas actuan (veto_glot > 0 y patas_meta > 0) y no escribe en la pizarra · veto_glot 301 · patas_meta 10959
+  [OK] E control: las dos piezas actuan (veto_glot > 0 y patas_meta > 0) y no escribe en la pizarra · veto_glot 165 · patas_meta 8781
+  [OK] E V4 de la letra (pieza) verdadera para candidato y control
+== (G) determinismo
+  [OK] G candidato dos corridas iguales (s 37914, T 2000)
+== (F) nube-9 y --reanuda
+  [OK] F brazo invalido: aborto atrapado y JSON escrito
+  [OK] F --reanuda lee el JSON existente
+  [OK] F 1 aborto -> NO SE LEE
+usage: identidad_muro2.py (--humo | --serie | --bloque BLOQUE)
+                          [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                          [--pool POOL] [--reanuda]
+identidad_muro2.py: error: one of the arguments --humo --serie --bloque is required
+== (H) ERR-115 y semillas
+  [OK] H --hum -> aborta
+usage: identidad_muro2.py (--humo | --serie | --bloque BLOQUE)
+                          [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                          [--pool POOL] [--reanuda]
+identidad_muro2.py: error: unrecognized arguments: --des 37101
+  [OK] H --serie --des 37101 -> aborta
+usage: identidad_muro2.py (--humo | --serie | --bloque BLOQUE)
+                          [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                          [--pool POOL] [--reanuda]
+identidad_muro2.py: error: unrecognized arguments: --xx
+  [OK] H --humo --xx -> aborta
+  [OK] H --humo --pool 6 -> aborta
+  [OK] H --serie --desde 37001 --n 20 -> aborta
+  [OK] H --serie --desde 37111 --n 20 -> aborta
+  [OK] H --serie --desde 37101 --n 20 --T 50000 -> aborta
+  [OK] H --serie --desde 37101 --n 20 --brazos v143,glotu,glotuinv,o1 -> aborta
+  [OK] H --humo --desde 37101 -> aborta
+  [OK] H --humo --T 100000 -> aborta
+  [OK] H --explora 1 glotupatas -> aborta
+  [OK] H --explora 37906 glotupatas -> aborta
+  [OK] H --explora 37901 nada -> aborta
+  [OK] H --explora 37901 -> aborta
+== (V) letra (la de corre_muro, con los brazos nuevos)
+  [OK] V FUNCIONA
+  [OK] V control tambien cruza -> MODESTO si gana 16/20 dif 0.15 y al control 12/20
+  [OK] V MODESTO: gana 15/20, dif 0.10, al control 11/20
+  [OK] V NO: gana 14/20
+  [OK] V NO: dif 0.09
+  [OK] V NO: empata al control 10/20
+  [OK] V NO SE LEE: O1 no gana
+  [OK] V NO SE LEE: V143 fuera de [0.40, 0.80]
+  [OK] V NO SE LEE: la pieza no actua
+  [OK] V bloque: FUNCIONA + NO -> NO
+
+ARNES MURO2: 66/66 · 128 s

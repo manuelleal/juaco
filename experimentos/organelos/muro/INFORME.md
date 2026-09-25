@@ -63,3 +63,17 @@ python experimentos/organelos/muro/corre_muro.py --bloque <resumen serie>,<resum
 - Pool/spawn en Windows (es el patrón de `corre_v143`, sin probar aquí);
 - el control GLOTUINV en más de 2 semillas;
 - `comite2/puenteo/` con más de una semilla (seguía corriendo).
+
+---
+## SEGUNDO INTENTO (GLOTU + PATAS), 16:45–17:00. LISTO PARA SERIE. Preregistro `PREREGISTRO_muro2.md` (firmado sha 4098ff690c556ee5 + adenda)
+- **Instrumentos.** No toqué los de la serie 1 (corre_muro 503b531ea1213c59, construye_muro ad607c6ad4f9ced9).
+  - `construye_muro2.py` genera sólo el control `V143_GLOTUPATASDESF`.
+  - `corre_muro2.py` importa corre_muro y cambia en memoria brazos, semillas, humo y carpeta; la letra es la misma.
+  - Arnés `identidad_muro2.py` **66/66**.
+- **Humo2** OK (regla 14, identidades); no se lee.
+- **Brazos:** v143, glotupatas (CANDIDATO), glotupatasdesf (CONTROL: GLOTU + patas a lo que sirve a la OTRA necesidad) y o1.
+- **Semillas:** 37101–37120 y 37121–37140.
+- **Puenteo** (4 semillas): las piezas de O1 solas dan 0.949 (patas) y 0.907 (boca_buena), contra 0.651 de V143. **No contradice la
+  dirección de la combinación, pero sí la dosis.** Mis traducciones solas suben +0.016 y −0.02: no capturan el ingrediente activo, que es,
+  sobre todo, no llevar el cuerpo encima de lo malo sin meta. Espero NO (p 0.72).
+- **Exploratorio del control, después de firmar:** candidato > control 5/5 (+0.07). Q4 (control ≈ candidato) probablemente refutada.
