@@ -28,3 +28,33 @@ Rama `nube/anfitrion-20260924` sale de `organelos` @ 878074b. `organelos` no se 
 
 ## 5. Serie 26001–26020 (Pool 3): lanzada a las 01:51
 - Primeras 9 corridas: **media de ~113 s** (95–121 s), por debajo del umbral de 250 s → la réplica va esta noche, salvo que la serie dé NO.
+- Terminó a las 02:56:08: 100/100 corridas en 3877 s de pared, con errores 0, bloqueados 0 y trinquete 0.
+- Resultado leído por `--lee` sobre los JSON; coincide con el del runner.
+
+### VEREDICTO POR LA LETRA: **NO** (cae todo; se necesitaba ≥ 15/20 pareadas)
+
+| Prueba | Resultado | Letra |
+|---|---|---|
+| **PC** (CONTROL > SIN_CONTROL en cuerpos tras el corte) | **9/20** | cae |
+| **P1a** (CONTROL > SIN_TRAGAR en persistencia) | **5/20** (15/20 al revés) | cae |
+| **P1b** (CONTROL > INERTE) | **7/20** | cae |
+| **P2a** (R0 de los nacidos portadores, CONTROL > SIN_TRAGAR) | **10/20** (20 evaluables) | cae |
+| **P2b** (CONTROL portadores > INERTE portadores) | **12/20** (20 evaluables) | cae |
+
+Medianas:
+- Área tras el corte: CONTROL 138.5 · SIN_CONTROL 157.0 · INERTE 183.5 · SIN_TRAGAR 238.0 · AZAR 141.0.
+- Persisten en T: CONTROL 7 · SIN_CONTROL 7 · INERTE 10 · SIN_TRAGAR 13 · AZAR 11.
+- R0 de los portadores: CONTROL 0.252 · SIN_CONTROL 0.245 · INERTE 0.215 · AZAR 0.103; SIN_TRAGAR (todos) 0.238.
+
+Descriptivo:
+- **tx** sí se mueve: el banco de CONTROL le gana a AZAR 18/20, con mediana 0.970 contra 0.892.
+- **san** no sube: CONTROL 0.031, AZAR 0.169; 4/20 contra AZAR.
+- Sanciones (mediana): CONTROL 35, AZAR 298.
+- La selección bajó la sanción en vez de subirla.
+
+Lectura, sin declarar nada:
+- El control genético sobre el simbionte no compra supervivencia ni reproducción.
+- Portar sigue costando: SIN_TRAGAR persiste más, 15/20, como en la endosimbiosis ×2.
+- Apuesta del creador: NO (P 0.45). Acertó.
+
+### Réplica 26021–26040: **NO SE CORRE** (regla escrita: si la serie da NO por la letra, no hay réplica)
