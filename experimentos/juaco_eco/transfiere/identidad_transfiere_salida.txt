@@ -1,0 +1,16 @@
+IDENTIDAD ECO-T · 2026-09-24 11:18:57 · python 3.13.12 · shas {'corre_transfiere.py': '629b30d6c184572f', 'pista.py': '9f47c65e438e0ff4', 'juez.py': '6a68f640a7832f12', 'motor_eco.py': 'bca3033878b59622', 'FABRICA.py': '2ebee3e99ea5a33a'}
+  OK  (I) c29490: colonia de 9 x G0 == FABRICA en toda la fisica 
+  OK  (I) c29491: colonia de 9 x G0 == FABRICA en toda la fisica 
+  OK  (A) el genoma llega a su linea (linea 3: ALPHA 2.4, AVERSION 1.5; las demas de fabrica; historia de vida intacta) (ALPHA [1.2, 1.2, 1.2, 2.4, 1.2, 1.2, 1.2, 1.2, 1.2])
+  OK  (B) muestreo: 9 del banco con [c, 7], placebo [c, 8] con otros indices, historia en G0, determinista (banco (200, 18); log(alpha/G0) mediano en la muestra 0.426)
+  OK  (V) TRANSFIERE -> TRANSFIERE (en esta serie): lo seleccionado en ECO vive mejor en la carrera que lo derivado y que G0
+  OK  (V) MODESTO (T1 cae: 14) -> HAY ALGO MODESTO (en esta serie): mejor que G0 en la carrera, pero no se distingue de la deriva
+  OK  (V) MODESTO (T2 cae) -> HAY ALGO MODESTO (en esta serie): mejor que la deriva en la carrera, pero no que G0
+  OK  (V) NO -> NO (en esta serie)
+  OK  (V) placebo 16 -> NO EVALUABLE -> NO EVALUABLE (el placebo sale de [5, 15])
+  OK  (V) placebo 10 + 10 empates = 15 -> valido -> TRANSFIERE (en esta serie): lo seleccionado en ECO vive mejor en la carrera que lo derivado y que G0
+  OK  (V) placebo 4 -> NO EVALUABLE -> NO EVALUABLE (el placebo sale de [5, 15])
+  OK  (V) incompleta -> NO EVALUABLE (serie incompleta)
+  OK  (R) el parser aborta ante 12 formas malas (12/12)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 2)
+RESULTADO: 14/14  (10 s)

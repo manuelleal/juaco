@@ -1,0 +1,84 @@
+{
+ "etiqueta": "serie_s19121-19140",
+ "veredicto": "NO EVALUABLE (AZAR gana el juez en > 10/20: el juez no distingue seleccion de azar; ERR-121, enmienda antes de la serie)",
+ "lineas": [
+  "semillas por brazo: {'VIDA': 20, 'CEREBRO': 20, 'AZAR': 20, 'MUT0': 20}; persiste tras el corte (vivos en T): {'VIDA': 18, 'CEREBRO': 18, 'AZAR': 14, 'MUT0': 0}",
+  "P2 genes seleccionados en VIDA (>=15/20 mismo signo fuera de las 8 sombras): [('alpha', (20, 0))]; AZAR con > 8/20 (falsos positivos del instrumento): []",
+  "P3 juez (supervivencia mediana en la bateria vs G0 = 2219.5): VIDA gana 20/20 (mediana 12161.0); AZAR 15/20 (4559.25); CEREBRO 20/20 (12209.0)",
+  "P1 VIDA persiste >= 15/20: SE CUMPLE (18) \u00b7 P1c MUT0 <= 2/20: SE CUMPLE (0) \u00b7 P2 seleccion en genes: SE CUMPLE \u00b7 P3 juez: SE CUMPLE \u00b7 P3c AZAR <= 10/20: NO \u00b7 P4 VIDA - AZAR >= 8: NO (4) \u00b7 H-c CEREBRO persiste >= 15/20: SE CUMPLE (18)",
+  "VEREDICTO POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (AZAR gana el juez en > 10/20: el juez no distingue seleccion de azar; ERR-121, enmienda antes de la serie)"
+ ],
+ "d": {
+  "P1": true,
+  "P1c": true,
+  "P2": true,
+  "P3": true,
+  "P3c": false,
+  "P4": false,
+  "Hc": true,
+  "pers": {
+   "VIDA": 18,
+   "CEREBRO": 18,
+   "AZAR": 14,
+   "MUT0": 0
+  },
+  "sel": [
+   "alpha"
+  ],
+  "falsos": [],
+  "wV": 20,
+  "wA": 15,
+  "wC": 20,
+  "g0_med": 2219.5
+ },
+ "seg": 11301,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "JUEZ": {
+  "esc": 9,
+  "n": 9,
+  "T_b": 20000,
+  "semillas": [
+   19201,
+   19202,
+   19203,
+   19204,
+   19205,
+   19206,
+   19207,
+   19208,
+   19209,
+   19210,
+   19211,
+   19212,
+   19213,
+   19214,
+   19215,
+   19216,
+   19217,
+   19218,
+   19219,
+   19220
+  ]
+ },
+ "motor_sha": {
+  "motor_eco.py": "bca3033878b59622",
+  "carros/FABRICA_ECO.py": "f1163009cb5193a2",
+  "corre_eco.py": "47d9cee4d6462116"
+ }
+}

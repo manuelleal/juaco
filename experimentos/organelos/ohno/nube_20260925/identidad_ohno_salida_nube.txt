@@ -1,0 +1,14 @@
+IDENTIDAD OHNO · 2026-09-25 03:09:28 · python 3.11.15 · numpy 2.4.3 · R_REP 0.006 · shas {'corre_ohno.py': 'd47b9de89709d25b', 'motor_gramatica.py': '6b65dc5e32093424', 'carros/FAMB_GRAM_ECO.py': '2cee0a8510c997b9', 'gramatica_def.py': 'c58086e103d030d9', 'conducta.py': '9a2f1226fe27a514', 'construye_ohno.py': '85b9a9e231a91074', 'PREREGISTRO_ohno.md': '0b9ab3fa0f9ce8e3'}
+  OK  (C) construye_ohno --verifica (copias byte a byte) VERIFICA OK
+  OK  (O1) mutacion de la gramatica apagada: VIDA == FIJO:filtra0 bit a bit (distintas []; nacidos 3, max vivos 32, r_paso 0.18, 23.6+23.2 s)
+  OK  (O1b) idem en el mundo pobre PASADO el corte (T 46 000, corte 40 000), con partos (distintas []; nacidos tras el corte 9; 117.8+113.7 s)
+  OK  (O1c) idem con el quimiostato de ECO (0.03, muchos partos) (distintas []; nacidos 194)
+  OK  (O2) fundadores al azar y quimiostato 0.03: corre_ohno == corre_gramatica (fisica + gramatica, subprocesos) (distintas []; errores de copia 203; entregas 18)
+  OK  (W) el quimiostato de OHNO llega al motor y cambia la trayectoria (r_paso 0.18 contra 0.8999999999999999; max vivos 32 contra 60)
+  OK  (D1) duplicado IDENTICO de filtra0 es fisicamente neutro ([filtra0 + filtra0*] == [filtra0]; quimiostato 0.03) (distintas []; telemetria n10.dado cuenta los dos paquetes: [[8, 8], []])
+  OK  (D2) la copia DIVERGE (vecino): la trayectoria cambia, el motor entrega al vecino y la conducta del original (nacer/hijo) sigue igual (fisica distinta en ['vivos_T', 'n_nac', 'n_refund', 'n_banco']; entregas al vecino 216; celdas nacer/hijo == filtra0: True)
+  OK  (D3) VIDA con duplicacion alta (quimiostato 0.03): hay genomas con la copia (origen 1) ya divergida y el original filtra0 intacto (19/194 del banco; ejemplo [nacer/sin0/hijo/copiar + nacer/reciente/hijo/copiar*]; slots en el banco [0, 1, 2, 3, 4])
+  OK  (N9) nube-9: la guardia de ERR-60 queda en el JSON ('abortado') y no lanza (SystemExit: PISTA2: mas de 100000 cuerpos en un linaje: la semilla colisionaria (ERR-60))
+  OK  (V) la letra: Ohno -> FUNCIONA; gana sin organo nuevo -> MODESTO; pierde -> NO; techo y mundo inviable -> NO EVALUABLE (FUNCIONA — LA SELECCION MEJORA | HAY ALGO MODESTO | NO | NO EVALUABLE (TECHO: FIJO | NO EVALUABLE (mundo INVIA)
+  OK  (R) banderas malas abortan con codigo 2 ([2, 2, 2, 2, 2, 2])
+RESULTADO: 12/12 · 473 s

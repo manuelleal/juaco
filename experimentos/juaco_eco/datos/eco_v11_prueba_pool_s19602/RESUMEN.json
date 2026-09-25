@@ -1,0 +1,123 @@
+{
+ "etiqueta": "v11_prueba_pool_s19602",
+ "veredicto": "NO EVALUABLE (el placebo del juez v2 sale de [5, 15]: el juez no esta calibrado)",
+ "veredicto_L": "NO EVALUABLE (serie incompleta o T distinto de 1e6)",
+ "lineas": [
+  "semillas por brazo: {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}; persiste en T_lect = 120000 (como v1): {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}",
+  "P2 genes seleccionados en VIDA (>=15/20 mismo signo fuera de las 8 sombras): []; AZAR con > 8/20 (falsos positivos del instrumento): []",
+  "P3 juez v2 (bateria sellada 19501-19520): VIDA > AZAR (pareado, estricto) 0/2 (empates 1); CEREBRO > AZAR 1/2 (empates 1); medianas VIDA 1890.0 \u00b7 AZAR 1913.0",
+  "PLACEBO del juez (muestra flujo 7 contra flujo 8 del MISMO banco; puntaje = gana + empates/2, valido en [5, 15] de 20): {'VIDA': (0.5, 2), 'AZAR': (0.5, 2)} -> NO VALIDO",
+  "DESCRIPTIVO (nube-6, no decide): contra G0 (mediana 2000.0) ganan VIDA 0/2 y AZAR 0/2",
+  "P1 VIDA persiste >= 15/20: NO (2) \u00b7 P1c MUT0 <= 2/20: SE CUMPLE (2) \u00b7 P2: NO \u00b7 P3 VIDA > AZAR >= 15/20: NO (0) \u00b7 P4 VIDA - AZAR >= 8: NO (0) \u00b7 H-c CEREBRO >= 15/20: NO (2)",
+  "VEREDICTO v1.1 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (el placebo del juez v2 sale de [5, 15]: el juez no esta calibrado)",
+  "L: persiste en T = 1000000: {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}; R0 de la cohorte tras el corte en los que persisten (mediana): {'VIDA': None, 'CEREBRO': None, 'AZAR': None, 'MUT0': None}",
+  "L1 VIDA >= 10/20: NO (2) \u00b7 L1c MUT0 <= 2/20: SE CUMPLE (2) \u00b7 L2 VIDA - AZAR >= 6: NO (0)",
+  "VEREDICTO L POR LA LETRA (una serie): NO EVALUABLE (serie incompleta o T distinto de 1e6)"
+ ],
+ "d": {
+  "P1": false,
+  "P1c": true,
+  "P2": false,
+  "P3": false,
+  "P4": false,
+  "Hc": false,
+  "pers": {
+   "VIDA": 2,
+   "CEREBRO": 2,
+   "AZAR": 2,
+   "MUT0": 2
+  },
+  "sel": [],
+  "falsos": [],
+  "wVA": 0,
+  "eVA": 1,
+  "wCA": 1,
+  "placebo": {
+   "VIDA": [
+    0.5,
+    2
+   ],
+   "AZAR": [
+    0.5,
+    2
+   ]
+  },
+  "placebo_ok": false,
+  "gV": 0,
+  "gA": 0,
+  "g0_med": 2000.0
+ },
+ "dL": {
+  "L1": false,
+  "L1c": true,
+  "L2": false,
+  "pers": {
+   "VIDA": 2,
+   "CEREBRO": 2,
+   "AZAR": 2,
+   "MUT0": 2
+  }
+ },
+ "seg": 3,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "V11": {
+  "T": 1000000,
+  "t_corte": 60000,
+  "T_lect": 120000,
+  "gen_largo": 50000
+ },
+ "JUEZ2": {
+  "esc": 9,
+  "n": 9,
+  "T_b": 20000,
+  "semillas": [
+   19501,
+   19502,
+   19503,
+   19504,
+   19505,
+   19506,
+   19507,
+   19508,
+   19509,
+   19510,
+   19511,
+   19512,
+   19513,
+   19514,
+   19515,
+   19516,
+   19517,
+   19518,
+   19519,
+   19520
+  ],
+  "flujo": 7,
+  "flujo_placebo": 8
+ },
+ "shas": {
+  "corre_eco_v11.py": "5655c93419511162",
+  "corre_eco.py": "47d9cee4d6462116",
+  "corre_eco_rapido.py": "07bf5be9dc5d634a",
+  "motor_eco.py": "bca3033878b59622",
+  "motor_eco_rapido.py": "edb8a15090b0f0dd",
+  "carros/FABRICA_ECO.py": "f1163009cb5193a2",
+  "PREREGISTRO_eco_v11.md": "061160f8c0913b9f"
+ }
+}

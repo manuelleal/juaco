@@ -1,0 +1,16 @@
+IDENTIDAD ECO v3 (runner) · 2026-09-24 12:54:33 · python 3.13.12 · shas {'corre_eco_v3.py': '7bb44da802508b37', 'corre_eco.py': '47d9cee4d6462116', 'motor_eco3.py': '2eec9830792d9822', 'carros/FRANK_ECO.py': '92a22cbd1fe314c3', 'construye_eco_frank.py': '785b12130022c56b', 'PREREGISTRO_eco_v3.md': '115e5d2d9cc45a6a', 'organismo_frankenstein.py': 'baff124177d44e90'}
+  OK  (M) mundos, brazos, ventanas y organos del preregistro 
+  OK  (T) w9: banco_on y vivos_on == a mano; 25 genes; sel_corte de 25 (nacidos 13, 1.9 s)
+  OK  (T) w30: banco_on y vivos_on == a mano; 25 genes; sel_corte de 25 (nacidos 37, 8.4 s)
+  OK  (V) FUNCIONA: herencia ELEGIDO en los 2 mundos -> FUNCIONA: LA SELECCION ELIGE ORGANOS (en esta serie): ['herencia'] ELEGIDO en los 2 mundos
+  OK  (V) MODESTO: herencia ELEGIDO solo en w30 -> HAY ALGO MODESTO (en esta serie): ELEGIDO en algun mundo ['herencia']; sube en todos []
+  OK  (V) MODESTO: sube en los 2 mundos sin O2 -> HAY ALGO MODESTO (en esta serie): ELEGIDO en algun mundo []; sube en todos ['interruptor']
+  OK  (V) NO: nada sube -> NO (en esta serie)
+  OK  (V) NO EVALUABLE: falsos positivos en w9 -> NO EVALUABLE (AZAR da falsos positivos contra sombras: [('w9', 'eta', (9, 0))])
+  OK  (V) NO EVALUABLE: bloqueados -> NO EVALUABLE (tope de cuerpos alcanzado: bloqueados = 4)
+  OK  (V) NO EVALUABLE: incompleta -> NO EVALUABLE (serie incompleta)
+  OK  (V) el perfil marca ELEGIDO donde toca y neutro donde no ({'b5': 'neutro', 'mapa': 'neutro', 'curiosidad': 'neutro', 'modelo': 'neutro', 'lenta': 'neutro', 'herencia': 'ELEGIDO', 'interruptor': 'neutro'})
+  OK  (S) expresion en el corte: el real (del checkpoint) == banco_on (del motor) en los 7 organos, con 8 sombras cada uno ({'b5': (0.0, 0.005), 'mapa': (0.0189, 0.005), 'curiosidad': (0.0189, 0.026), 'modelo': (0.0, 0.012), 'lenta': (0.0, 0.014), 'herencia': (0.2453, 0.042), 'interruptor': (0.0566, 0.026)})
+  OK  (R) el parser aborta ante 13 formas malas (13/13)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 2)
+RESULTADO: 14/14  (18 s)

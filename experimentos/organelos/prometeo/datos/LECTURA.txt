@@ -1,0 +1,376 @@
+
+==== onda8k_largo  TL {'T': 60000, 't_cambio': 8000, 't_corte': 44000, 'r0_margen': 4000}
+| brazo | n | persiste | nac solo (suma) | nac solo por semilla | R0 final med | nac totales med | largo cinta (corte / final, media banco) |
+| PROMETEO | 8 | 1/8 | 3938 | [80, 317, 2677, 68, 421, 91, 241, 43] | 0.61 | 1528 | 37.4 / 38.4 |
+| PROMETEO_SIN_HGT | 8 | 2/8 | 1292 | [97, 99, 42, 458, 75, 215, 252, 54] | 0.69 | 1070 | 35.3 / 36.4 |
+| CODIGO_SIN_SOS | 8 | 4/8 | 1356 | [32, 43, 279, 244, 41, 50, 56, 611] | 0.55 | 836 | 35.8 / 36.3 |
+| PERILLAS | 8 | 0/8 | 356 | [42, 27, 51, 64, 47, 48, 27, 50] | 0.42 | 776 | — / — |
+
+  -- PROMETEO: organos del kit en el BANCO (fraccion de las cintas) en el corte y al final, por semilla
+   s30001: con algun organo: corte 0.21 (funcional 0.21) · final 0.17 (funcional 0.17) · persiste 0
+        top corte {'HGT': 0.14, 'ORG morir/neg/hermano/promediar': 0.04, 'ORG nacer/sin0/hermano/copiar': 0.03, 'ORG nacer/sin0/hermano/invertir': 0.03, 'ORG nacer/sin0/vecino/copiar': 0.03}
+        top final {'HGT': 0.1, 'ORG morir/neg/hermano/promediar': 0.04, 'ORG vida/sin0/hijo/copiar': 0.03, 'ORG nacer/sin0/vecino/copiar': 0.02, 'ORG nacer/sin0/hermano/invertir': 0.02}
+        contadores {boca si/no 1414/239, patas mueve/para 1448/3137, vetos 0, hgt 16 {'SUM': 37, 'FIN': 4, 'TASA': 2, 'DEF': 3, 'EJE': 11, 'SOS': 1, 'LLAMA': 4, 'REP': 4, 'ORG': 2}}; eventos HGT 16
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0769, 0.0385, 0.0), (8000, 0.0, 0.0698, 0.0465), (16000, 0.037, 0.2778, 0.2037), (24000, 0.0877, 0.2105, 0.2982), (32000, 0.0789, 0.0395, 0.4211), (40000, 0.0306, 0.1224, 0.1939), (48000, 0.0, 0.0, 0.0)]
+   s30002: con algun organo: corte 1.00 (funcional 1.00) · final 0.98 (funcional 0.98) · persiste 0
+        top corte {'ORG nacer/pos/hijo/copiar': 0.97, 'ORG nacer/neg/hijo/copiar': 0.93, 'ORG vida/reciente/hermano/copiar': 0.9, 'ORG nacer/reciente/vecino/copiar': 0.09, 'ventana->boca-': 0.06}
+        top final {'ORG nacer/pos/hijo/copiar': 0.98, 'ORG nacer/neg/hijo/copiar': 0.98, 'ORG vida/reciente/hermano/copiar': 0.98, '~ORG nunca/neg/vecino/olvidar': 0.01}
+        contadores {boca si/no 342/79, patas mueve/para 611/80, vetos 9, hgt 10 {'DEF': 1, 'EJE': 4, 'FIN': 4, 'LLAMA': 3, 'SUM': 8, 'REP': 2, 'ORG': 1}}; eventos HGT 10
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.2414, 0.1034), (8000, 0.0, 0.2075, 0.1887), (16000, 0.0, 0.3846, 0.2885), (24000, 0.0171, 0.1368, 0.8034), (32000, 0.0043, 0.0815, 0.9742), (40000, 0.0233, 0.0093, 0.9953), (48000, 0.0, 0.0, 0.9672)]
+   s30003: con algun organo: corte 1.00 (funcional 1.00) · final 1.00 (funcional 1.00) · persiste 1
+        top corte {'HGT': 1.0, 'ORG vida/pos/hijo/promediar': 0.89, 'ORG vida/sin0/hijo/promediar': 0.13, 'ORG nacer/todo/hijo/promediar': 0.04, 'ORG morir/pos/hijo/promediar': 0.03}
+        top final {'HGT': 1.0, 'ORG vida/pos/hijo/promediar': 0.85, 'ORG vida/sin0/hijo/promediar': 0.14, 'ORG morir/pos/hijo/copiar': 0.05, 'ORG nacer/todo/vecino/copiar': 0.04}
+        contadores {boca si/no 609/63, patas mueve/para 32/584, vetos 15, hgt 232 {'SUM': 427, 'EJE': 51, 'TASA': 26, 'FIN': 57, 'LLAMA': 57, 'REP': 118, 'ORG': 78, 'DEF': 60, 'SOS': 23, 'HGT': 27, 'CABLE': 1}}; eventos HGT 232
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0741, 0.037, 0.037), (8000, 0.0, 0.3818, 0.3273), (16000, 0.0195, 0.8766, 0.8571), (24000, 0.0469, 1.0, 0.9906), (32000, 0.0, 1.0, 0.9233), (40000, 0.006, 1.0, 0.9039), (48000, 0.0, 1.0, 0.8971), (56000, 0.0, 1.0, 0.9021)]
+   s30004: con algun organo: corte 0.31 (funcional 0.31) · final 0.38 (funcional 0.38) · persiste 0
+        top corte {'HGT': 0.3, 'ORG nacer/sin0/hijo/promediar': 0.01, 'ventana->patas+': 0.01}
+        top final {'HGT': 0.37, 'ORG nacer/sin0/hijo/promediar': 0.01, 'ventana->patas+': 0.01}
+        contadores {boca si/no 1355/226, patas mueve/para 524/386, vetos 0, hgt 23 {'SUM': 28, 'EJE': 22, 'TASA': 8, 'SOS': 10, 'DEF': 8, 'FIN': 6, 'LLAMA': 1, 'HGT': 1, 'REP': 3, 'ORG': 1}}; eventos HGT 23
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0833, 0.0417, 0.125), (8000, 0.125, 0.1458, 0.1042), (16000, 0.075, 0.3, 0.075), (24000, 0.02, 0.28, 0.06), (32000, 0.0, 0.2712, 0.0), (40000, 0.0299, 0.4328, 0.0), (48000, 0.0, 0.7143, 0.0)]
+   s30005: con algun organo: corte 0.77 (funcional 0.77) · final 0.53 (funcional 0.53) · persiste 0
+        top corte {'ORG nacer/todo/hijo/copiar': 0.65, 'HGT': 0.08, 'sesgo->patas+': 0.06, 'ORG vida/neg/hijo/promediar': 0.04, 'ventana->patas+': 0.02}
+        top final {'ORG nacer/todo/hijo/copiar': 0.48, 'sesgo->patas+': 0.42, 'HGT': 0.07, '~sesgo->parto+': 0.03, '~ventana->parto+': 0.02}
+        contadores {boca si/no 3424/50, patas mueve/para 2380/5469, vetos 60, hgt 13 {'SUM': 12, 'LLAMA': 5, 'EJE': 3, 'ORG': 1, 'FIN': 7, 'REP': 1}}; eventos HGT 13
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0385, 0.1538, 0.0769), (8000, 0.0714, 0.0179, 0.0893), (16000, 0.0, 0.1207, 0.2069), (24000, 0.013, 0.039, 0.6104), (32000, 0.0647, 0.0935, 0.2878), (40000, 0.0811, 0.1261, 0.5856), (48000, 0.375, 0.0694, 0.4167)]
+   s30006: con algun organo: corte 0.32 (funcional 0.29) · final 0.58 (funcional 0.56) · persiste 0
+        top corte {'HGT': 0.21, 'ORG morir/pos/hermano/copiar': 0.04, '~ORG nunca/neg/hermano/copiar': 0.03, 'ORG morir/todo/vecino/copiar': 0.01, 'ORG vida/reciente/vecino/copiar': 0.01}
+        top final {'HGT': 0.52, '~ORG nunca/neg/hermano/copiar': 0.03, 'ORG morir/todo/vecino/copiar': 0.03, 'ORG morir/pos/hijo/olvidar': 0.01, 'reserva->patas+': 0.01}
+        contadores {boca si/no 191/144, patas mueve/para 255/2552, vetos 9, hgt 25 {'DEF': 2, 'EJE': 6, 'FIN': 5, 'LLAMA': 2, 'SUM': 22, 'SOS': 1, 'TASA': 2, 'REP': 3, 'ORG': 1, 'HGT': 1}}; eventos HGT 25
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.04, 0.0), (8000, 0.0, 0.1373, 0.1373), (16000, 0.0638, 0.2979, 0.1064), (24000, 0.0577, 0.2115, 0.1731), (32000, 0.0222, 0.1778, 0.1333), (40000, 0.0185, 0.2593, 0.1852), (48000, 0.0, 1.0, 0.0)]
+   s30007: con algun organo: corte 1.00 (funcional 1.00) · final 1.00 (funcional 1.00) · persiste 0
+        top corte {'HGT': 0.99, 'ORG vida/neg/hijo/olvidar': 0.92, 'ORG nacer/sin0/hijo/invertir': 0.77, 'la_otra->patas+': 0.48, '~ORG nunca/pos/hijo/invertir': 0.48}
+        top final {'HGT': 1.0, 'ORG vida/neg/hijo/olvidar': 0.99, 'ORG nacer/sin0/hijo/invertir': 0.97, 'ORG nacer/neg/vecino/olvidar': 0.82, '~ORG nunca/pos/hijo/invertir': 0.15}
+        contadores {boca si/no 1570/93, patas mueve/para 19431/3242, vetos 16, hgt 76 {'SUM': 148, 'REP': 24, 'ORG': 24, 'FIN': 14, 'LLAMA': 7, 'SOS': 4, 'TASA': 8, 'DEF': 2, 'EJE': 23, 'HGT': 6, 'CABLE': 10}}; eventos HGT 76
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0417, 0.0417, 0.0417), (8000, 0.1064, 0.0851, 0.2553), (16000, 0.2609, 0.0652, 0.3261), (24000, 0.1026, 0.2308, 0.2564), (32000, 0.131, 0.8207, 0.8897), (40000, 0.5382, 0.9695, 0.9924), (48000, 0.0426, 0.9787, 1.0)]
+   s30008: con algun organo: corte 0.28 (funcional 0.24) · final 0.30 (funcional 0.26) · persiste 0
+        top corte {'ORG nacer/pos/vecino/invertir': 0.12, '~reserva->parto+': 0.07, 'HGT': 0.06, 'ORG morir/sin0/hijo/promediar': 0.04, 'ORG vida/sin0/vecino/copiar': 0.03}
+        top final {'ORG nacer/pos/vecino/invertir': 0.14, '~reserva->parto+': 0.07, 'HGT': 0.06, '~ORG nunca/todo/hermano/invertir': 0.03, 'ventana->boca-': 0.03}
+        contadores {boca si/no 732/62, patas mueve/para 4401/753, vetos 1, hgt 7 {'SUM': 6, 'SOS': 1, 'TASA': 1, 'REP': 1, 'EJE': 1}}; eventos HGT 7
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.2273, 0.0455, 0.0909), (8000, 0.0625, 0.1042, 0.0625), (16000, 0.2041, 0.2449, 0.2449), (24000, 0.1042, 0.0208, 0.0833), (32000, 0.0714, 0.1667, 0.2143), (40000, 0.0488, 0.0976, 0.2195), (48000, 0.3125, 0.0, 0.25)]
+  -> organos en > 50 % del banco (n semillas): corte {'ORG nacer/pos/hijo/copiar': 1, 'ORG nacer/neg/hijo/copiar': 1, 'ORG vida/reciente/hermano/copiar': 1, 'HGT': 2, 'ORG vida/pos/hijo/promediar': 1, 'ORG nacer/todo/hijo/copiar': 1, 'ORG nacer/sin0/hijo/invertir': 1, 'ORG vida/neg/hijo/olvidar': 1} · final {'ORG nacer/pos/hijo/copiar': 1, 'ORG nacer/neg/hijo/copiar': 1, 'ORG vida/reciente/hermano/copiar': 1, 'HGT': 3, 'ORG vida/pos/hijo/promediar': 1, 'ORG nacer/sin0/hijo/invertir': 1, 'ORG vida/neg/hijo/olvidar': 1, 'ORG nacer/neg/vecino/olvidar': 1}
+
+   CINTA s30002 (final, 72% del banco, largo 39):
+     TASA(1) SOS(2,2) TASA(1) DEF(0) EJE(0,0) LLAMA(2) EJE(1,1) FIN SUM(0,0) LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) REP(2) SUM(11,0) SUM(17,0) LLAMA(2) SUM(3,0) SUM(6,0) SUM(7,0) SUM(8,0) SUM(9,0) SUM(10,0) ORG(1,2,0,0) SUM(12,0) EJE(2,-1) SUM(11,0) SUM(12,0) EJE(2,-1) EJE(2,-2) ORG(2,4,1,0) SUM(14,0) REP(3) SUM(15,0) SUM(17,0) REP(1) ORG(1,1,0,0) FIN
+     = ORGANO de transmision nuevo: nacer/pos/hijo/copiar
+     = ORGANO de transmision nuevo: vida/reciente/hermano/copiar
+     = ORGANO de transmision nuevo: nacer/neg/hijo/copiar
+     = ORGANO de transmision nuevo: nacer/neg/hijo/copiar
+
+   CINTA s30002 (corte, 47% del banco, largo 39):
+     TASA(1) SOS(2,2) TASA(1) DEF(0) EJE(0,0) LLAMA(2) EJE(1,1) FIN SUM(0,0) LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) REP(2) SUM(11,0) SUM(17,0) LLAMA(2) SUM(3,0) SUM(6,0) SUM(7,0) SUM(8,0) SUM(9,0) SUM(10,0) ORG(1,2,0,0) SUM(12,0) EJE(2,-1) SUM(11,0) SUM(12,0) EJE(2,-1) EJE(2,-2) ORG(2,4,1,0) SUM(14,0) REP(3) SUM(15,0) SUM(17,0) REP(1) ORG(1,1,0,0) FIN
+     = ORGANO de transmision nuevo: nacer/pos/hijo/copiar
+     = ORGANO de transmision nuevo: vida/reciente/hermano/copiar
+     = ORGANO de transmision nuevo: nacer/neg/hijo/copiar
+     = ORGANO de transmision nuevo: nacer/neg/hijo/copiar
+
+   CINTA s30002 (corte, 27% del banco, largo 39):
+     TASA(1) SOS(2,2) TASA(1) DEF(0) EJE(0,0) LLAMA(2) EJE(1,1) FIN SUM(0,0) LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) REP(2) SUM(11,0) SUM(17,0) LLAMA(2) SUM(3,0) SUM(6,0) SUM(14,0) SUM(8,0) SUM(9,0) SUM(10,0) ORG(1,2,0,0) SUM(12,0) EJE(2,-1) SUM(11,0) SUM(12,0) EJE(2,-1) EJE(2,-2) ORG(2,4,1,0) SUM(14,0) REP(3) SUM(15,0) SUM(17,0) REP(1) ORG(1,1,0,0) FIN
+     = ORGANO de transmision nuevo: nacer/pos/hijo/copiar
+     = ORGANO de transmision nuevo: vida/reciente/hermano/copiar
+     = ORGANO de transmision nuevo: nacer/neg/hijo/copiar
+     = ORGANO de transmision nuevo: nacer/neg/hijo/copiar
+
+  -- PROMETEO_SIN_HGT: organos del kit en el BANCO (fraccion de las cintas) en el corte y al final, por semilla
+   s30001: con algun organo: corte 0.50 (funcional 0.09) · final 0.47 (funcional 0.06) · persiste 0
+        top corte {'~ORG nunca/neg/vecino/olvidar': 0.2, '~ORG nunca/pos/hermano/olvidar': 0.2, 'ORG nacer/neg/hermano/copiar': 0.06, 'ORG nacer/neg/hijo/copiar': 0.02, '~ORG nunca/sin0/vecino/invertir': 0.02}
+        top final {'~ORG nunca/neg/vecino/olvidar': 0.28, '~ORG nunca/pos/hermano/olvidar': 0.12, 'ORG nacer/neg/hermano/copiar': 0.06, '~ORG nunca/sin0/vecino/invertir': 0.04, '~ORG nunca/todo/hermano/invertir': 0.01}
+        contadores {boca si/no 1533/506, patas mueve/para 1897/1629, vetos 5, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0833), (8000, 0.0377, 0.0, 0.1321), (16000, 0.0625, 0.0, 0.0417), (24000, 0.0286, 0.0, 0.1143), (32000, 0.0435, 0.0, 0.4058), (40000, 0.0795, 0.0, 0.5455), (48000, 0.0, 0.0, 0.9167)]
+   s30002: con algun organo: corte 0.39 (funcional 0.06) · final 0.21 (funcional 0.02) · persiste 1
+        top corte {'~ORG nunca/pos/hermano/invertir': 0.33, 'ORG nacer/neg/hermano/promediar': 0.04, 'ORG nacer/pos/hijo/copiar': 0.01, 'ORG morir/sin0/hermano/olvidar': 0.01, '~edad->parto+': 0.01}
+        top final {'~ORG nunca/pos/hermano/invertir': 0.2, 'ORG nacer/neg/hermano/promediar': 0.02, '~ORG nunca/sin0/hermano/olvidar': 0.01}
+        contadores {boca si/no 841/33, patas mueve/para 1517/2926, vetos 18, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.08), (8000, 0.0962, 0.0, 0.1923), (16000, 0.1053, 0.0, 0.2895), (24000, 0.0755, 0.0, 0.1132), (32000, 0.0, 0.0, 0.2), (40000, 0.0424, 0.0, 0.3644), (48000, 0.0952, 0.0, 0.0), (56000, 0.0, 0.0, 0.069)]
+   s30003: con algun organo: corte 0.17 (funcional 0.15) · final 0.18 (funcional 0.17) · persiste 0
+        top corte {'ORG morir/sin0/hermano/copiar': 0.09, 'ORG nacer/sin0/hijo/olvidar': 0.09, 'ORG vida/neg/hijo/invertir': 0.02, 'ORG vida/sin0/hijo/promediar': 0.01, '~ORG nunca/neg/hermano/promediar': 0.01}
+        top final {'ORG morir/sin0/hermano/copiar': 0.07, 'ORG nacer/sin0/hijo/olvidar': 0.07, 'ORG vida/pos/hijo/promediar': 0.03, 'ORG morir/neg/hijo/promediar': 0.02, 'ORG vida/sin0/hijo/promediar': 0.01}
+        contadores {boca si/no 2191/53, patas mueve/para 1197/1422, vetos 19, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0769, 0.0, 0.1538), (8000, 0.0545, 0.0, 0.2182), (16000, 0.0465, 0.0, 0.3488), (24000, 0.0213, 0.0, 0.3191), (32000, 0.0, 0.0, 0.2203), (40000, 0.0455, 0.0, 0.1818), (48000, 0.0909, 0.0, 0.4545)]
+   s30004: con algun organo: corte 0.15 (funcional 0.14) · final 1.00 (funcional 1.00) · persiste 0
+        top corte {'ORG nacer/sin0/hijo/olvidar': 0.04, 'la_otra->patas-': 0.03, '~ORG nunca/sin0/hermano/olvidar': 0.03, 'ORG vida/reciente/vecino/invertir': 0.03, 'ORG morir/todo/hermano/promediar': 0.01}
+        top final {'sesgo->patas+': 0.78, 'ventana->patas+': 0.76, 'la_otra->patas-': 0.09, 'ORG nacer/sin0/hermano/invertir': 0.03, 'ORG nacer/reciente/hijo/copiar': 0.01}
+        contadores {boca si/no 1729/313, patas mueve/para 14368/3873, vetos 9, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.04, 0.0, 0.12), (8000, 0.2, 0.0, 0.14), (16000, 0.037, 0.0, 0.3148), (24000, 0.029, 0.0, 0.3768), (32000, 0.0621, 0.0, 0.1751), (40000, 0.0542, 0.0, 0.1182), (48000, 0.2857, 0.0, 0.2041), (56000, 0.942, 0.0, 0.1159)]
+   s30005: con algun organo: corte 0.12 (funcional 0.09) · final 0.18 (funcional 0.16) · persiste 0
+        top corte {'~ORG nunca/sin0/hijo/copiar': 0.04, 'ORG nacer/neg/hermano/promediar': 0.04, 'ORG vida/neg/vecino/promediar': 0.04, 'reserva->patas+': 0.03, '~ventana->parto+': 0.02}
+        top final {'reserva->boca-': 0.08, '~ORG nunca/sin0/hijo/copiar': 0.03, 'ORG nacer/neg/hermano/promediar': 0.03, 'ORG vida/neg/vecino/promediar': 0.03, 'ORG nacer/todo/hijo/olvidar': 0.03}
+        contadores {boca si/no 870/342, patas mueve/para 416/1463, vetos 1, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.08, 0.0, 0.04), (8000, 0.02, 0.0, 0.04), (16000, 0.0909, 0.0, 0.1364), (24000, 0.0, 0.0, 0.2), (32000, 0.1538, 0.0, 0.0385), (40000, 0.0735, 0.0, 0.0882), (48000, 0.0, 0.0, 0.0667)]
+   s30006: con algun organo: corte 0.94 (funcional 0.93) · final 1.00 (funcional 1.00) · persiste 0
+        top corte {'ORG nacer/neg/hijo/invertir': 0.89, 'ORG nacer/todo/hijo/invertir': 0.11, 'ORG nacer/pos/hijo/promediar': 0.01, 'ORG nacer/todo/hermano/copiar': 0.01, 'edad->patas+': 0.01}
+        top final {'ORG nacer/neg/hijo/invertir': 0.96, 'edad->patas+': 0.55, 'ORG nacer/reciente/hermano/copiar': 0.04, 'ORG nacer/pos/hijo/promediar': 0.04, 'ORG nacer/todo/hijo/invertir': 0.03}
+        contadores {boca si/no 1312/66, patas mueve/para 4673/1609, vetos 0, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0417), (8000, 0.0625, 0.0, 0.2917), (16000, 0.3077, 0.0, 0.3077), (24000, 0.0408, 0.0, 0.2041), (32000, 0.0167, 0.0, 0.5333), (40000, 0.0583, 0.0, 0.85), (48000, 0.6429, 0.0, 0.9464)]
+   s30007: con algun organo: corte 0.77 (funcional 0.12) · final 1.00 (funcional 0.90) · persiste 1
+        top corte {'~sesgo->parto+': 0.61, 'ORG nacer/sin0/hijo/olvidar': 0.07, 'ORG vida/pos/hijo/olvidar': 0.05, '~edad->parto+': 0.04, 'ORG morir/neg/hijo/copiar': 0.01}
+        top final {'ORG vida/pos/hijo/olvidar': 0.9, '~sesgo->parto+': 0.1}
+        contadores {boca si/no 7597/183, patas mueve/para 662/5495, vetos 44, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0385), (8000, 0.0455, 0.0, 0.0909), (16000, 0.0769, 0.0, 0.3538), (24000, 0.0328, 0.0, 0.1393), (32000, 0.2308, 0.0, 0.1538), (40000, 0.5764, 0.0, 0.0985), (48000, 0.2203, 0.0, 0.7966), (56000, 0.0, 0.0, 1.0)]
+   s30008: con algun organo: corte 0.33 (funcional 0.28) · final 0.31 (funcional 0.27) · persiste 0
+        top corte {'ORG vida/sin0/vecino/olvidar': 0.17, 'ORG morir/pos/vecino/olvidar': 0.04, 'ORG morir/reciente/vecino/olvidar': 0.02, 'ORG vida/neg/vecino/invertir': 0.02, '~la_otra->parto+': 0.02}
+        top final {'ORG vida/sin0/vecino/olvidar': 0.17, 'ORG morir/reciente/vecino/olvidar': 0.03, 'ORG morir/pos/vecino/olvidar': 0.03, 'ORG nacer/todo/vecino/copiar': 0.03, 'ORG vida/neg/vecino/invertir': 0.02}
+        contadores {boca si/no 1128/117, patas mueve/para 572/2593, vetos 6, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0952, 0.0, 0.0476), (8000, 0.0625, 0.0, 0.0625), (16000, 0.05, 0.0, 0.15), (24000, 0.0213, 0.0, 0.1277), (32000, 0.0233, 0.0, 0.3256), (40000, 0.1111, 0.0, 0.1481), (48000, 0.1111, 0.0, 0.1111)]
+  -> organos en > 50 % del banco (n semillas): corte {'ORG nacer/neg/hijo/invertir': 1, '~sesgo->parto+': 1} · final {'ventana->patas+': 1, 'sesgo->patas+': 1, 'ORG nacer/neg/hijo/invertir': 1, 'edad->patas+': 1, 'ORG vida/pos/hijo/olvidar': 1}
+
+   CINTA s30007 (final, 85% del banco, largo 47):
+     TASA(1) SOS(2,2) EJE(1,1) DEF(0) EJE(0,0) EJE(0,0) CABLE(3,1,0) EJE(1,0) LLAMA(2) EJE(1,0) EJE(2,-1) FIN LLAMA(0) FIN LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(12,1) SUM(0,0) SUM(2,0) SUM(12,1) SUM(14,0) SUM(4,1) SUM(5,0) SUM(6,0) SOS(2,0) SUM(5,0) SUM(6,0) SOS(2,0) SUM(8,0) SOS(2,0) ORG(2,2,0,3) EJE(2,-2) SUM(3,0) SOS(4,3) SUM(8,0) EJE(2,-2) SUM(10,0) SUM(11,0) SUM(12,0) SUM(12,0) SUM(14,1) SUM(9,0) REP(2) ORG(1,3,0,0) FIN
+     = ORGANO de transmision nuevo: vida/pos/hijo/olvidar
+
+   CINTA s30006 (final, 24% del banco, largo 38):
+     TASA(1) SOS(2,2) TASA(3) DEF(0) EJE(0,0) EJE(1,0) EJE(2,0) FIN LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) SUM(4,0) ORG(1,1,0,2) SUM(15,0) SUM(8,0) SOS(3,1) SUM(5,0) SUM(6,0) SUM(7,2) SUM(8,0) SUM(9,0) SUM(10,0) SUM(12,0) SUM(13,0) CABLE(4,1,2) EJE(0,1) EJE(2,-3) SUM(16,0) SUM(17,0) EJE(2,-3) SUM(17,0) SUM(16,0) SUM(17,0) REP(1) ORG(1,3,0,0) FIN
+     = PATAS: +2·edad (x0.5; >0 camina aunque quiera quedarse, <0 se queda)
+     = ORGANO de transmision nuevo: nacer/neg/hijo/invertir
+
+   CINTA s30004 (final, 12% del banco, largo 40):
+     TASA(1) SOS(2,2) TASA(2) EJE(2,-3) LLAMA(1) TASA(3) EJE(2,-3) DEF(0) REP(3) CABLE(2,0,-1) EJE(0,0) EJE(2,0) FIN EJE(2,0) FIN EJE(1,0) EJE(2,0) SUM(0,1) EJE(2,0) SUM(0,1) SUM(9,1) SUM(6,0) SUM(4,0) EJE(1,2) CABLE(3,1,3) FIN SUM(12,0) SUM(6,0) CABLE(0,1,1) SUM(9,0) SUM(16,0) TASA(4) SUM(14,-1) REP(3) EJE(2,-2) EJE(0,1) EJE(2,-1) EJE(0,1) REP(3) ORG(1,3,0,0)
+     = PATAS: +1·sesgo +3·ventana (x0.5; >0 camina aunque quiera quedarse, <0 se queda)
+
+  -- CODIGO_SIN_SOS: organos del kit en el BANCO (fraccion de las cintas) en el corte y al final, por semilla
+   s30001: con algun organo: corte 0.26 (funcional 0.10) · final 0.30 (funcional 0.10) · persiste 0
+        top corte {'~ORG nunca/pos/hermano/olvidar': 0.07, '~ORG nunca/neg/hermano/olvidar': 0.06, 'ORG morir/reciente/hijo/olvidar': 0.04, 'ORG morir/todo/hijo/promediar': 0.02, 'ORG vida/neg/hijo/copiar': 0.02}
+        top final {'~ORG nunca/neg/hermano/olvidar': 0.12, '~ORG nunca/pos/hermano/olvidar': 0.08, 'ORG morir/reciente/hijo/olvidar': 0.04, 'ORG vida/neg/hijo/copiar': 0.02, '~ORG nunca/pos/hermano/invertir': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.0455), (16000, 0.0, 0.0, 0.0714), (24000, 0.0, 0.0, 0.0833), (32000, 0.0, 0.0, 0.1525), (40000, 0.0, 0.0, 0.3906), (48000, 0.0, 0.0, 0.0)]
+   s30002: con algun organo: corte 0.08 (funcional 0.04) · final 0.07 (funcional 0.06) · persiste 0
+        top corte {'~ORG nunca/reciente/vecino/copiar': 0.03, 'ORG vida/sin0/vecino/olvidar': 0.01, 'ORG vida/sin0/hijo/copiar': 0.01, '~ORG nunca/todo/hermano/olvidar': 0.01, 'ORG vida/neg/vecino/olvidar': 0.01}
+        top final {'ORG nacer/sin0/hermano/copiar': 0.03, '~ORG nunca/reciente/vecino/copiar': 0.01, 'ORG vida/sin0/hijo/copiar': 0.01, '~ORG nunca/todo/hermano/olvidar': 0.01, 'ORG vida/neg/vecino/olvidar': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.12), (8000, 0.0, 0.0, 0.2034), (16000, 0.0, 0.0, 0.08), (24000, 0.0, 0.0, 0.25), (32000, 0.0, 0.0, 0.2553), (40000, 0.0, 0.0, 0.1231), (48000, 0.0, 0.0, 0.0)]
+   s30003: con algun organo: corte 0.98 (funcional 0.98) · final 1.00 (funcional 1.00) · persiste 1
+        top corte {'ORG nacer/sin0/vecino/promediar': 0.98, 'ORG vida/neg/hermano/promediar': 0.79, 'ORG vida/reciente/hermano/promediar': 0.12, 'ORG vida/sin0/hermano/promediar': 0.03}
+        top final {'ORG vida/neg/hermano/promediar': 1.0, 'ORG nacer/sin0/vecino/promediar': 1.0}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.1071), (8000, 0.0, 0.0, 0.2143), (16000, 0.0, 0.0, 0.4), (24000, 0.0, 0.0, 0.4127), (32000, 0.0, 0.0, 0.7364), (40000, 0.0, 0.0, 0.9127), (48000, 0.0, 0.0, 1.0), (56000, 0.0, 0.0, 1.0)]
+   s30004: con algun organo: corte 0.45 (funcional 0.30) · final 0.70 (funcional 0.70) · persiste 0
+        top corte {'ORG vida/todo/hijo/olvidar': 0.17, '~ORG nunca/sin0/hermano/copiar': 0.16, '~ORG nunca/sin0/hermano/olvidar': 0.14, 'ORG morir/pos/hermano/invertir': 0.14, 'ORG morir/pos/hermano/promediar': 0.12}
+        top final {'ORG morir/pos/hermano/invertir': 0.69, '~ORG nunca/sin0/hermano/copiar': 0.67, 'ORG vida/todo/hijo/olvidar': 0.56, 'ORG morir/pos/hermano/copiar': 0.01, 'ORG morir/pos/hermano/promediar': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0556), (8000, 0.0, 0.0, 0.2353), (16000, 0.0, 0.0, 0.146), (24000, 0.0, 0.0, 0.298), (32000, 0.0, 0.0, 0.8272), (40000, 0.0, 0.0, 0.5885), (48000, 0.0, 0.0, 1.0)]
+   s30005: con algun organo: corte 0.04 (funcional 0.04) · final 0.09 (funcional 0.08) · persiste 0
+        top corte {'ORG nacer/todo/vecino/copiar': 0.03, 'ORG morir/sin0/hermano/promediar': 0.01, '~ORG nunca/sin0/hijo/promediar': 0.01, '~ORG nunca/todo/vecino/invertir': 0.01, 'ORG morir/pos/vecino/olvidar': 0.01}
+        top final {'ORG morir/reciente/vecino/copiar': 0.06, 'ORG nacer/todo/vecino/copiar': 0.01, '~ORG nunca/sin0/hijo/copiar': 0.01, '~ORG nunca/todo/vecino/invertir': 0.01, 'ORG morir/pos/vecino/olvidar': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.3542), (16000, 0.0, 0.0, 0.0769), (24000, 0.0, 0.0, 0.2075), (32000, 0.0, 0.0, 0.0784), (40000, 0.0, 0.0, 0.0192), (48000, 0.0, 0.0, 0.0833)]
+   s30006: con algun organo: corte 0.39 (funcional 0.32) · final 0.56 (funcional 0.46) · persiste 1
+        top corte {'ORG nacer/pos/hijo/promediar': 0.19, 'ORG vida/reciente/hermano/promediar': 0.19, 'ORG vida/pos/hijo/invertir': 0.06, 'ORG nacer/reciente/hermano/promediar': 0.04, '~ORG nunca/reciente/vecino/olvidar': 0.04}
+        top final {'ORG nacer/pos/hijo/promediar': 0.37, 'ORG vida/reciente/hermano/promediar': 0.37, 'ORG nacer/sin0/hijo/promediar': 0.14, '~ORG nunca/reciente/vecino/olvidar': 0.08, 'ORG vida/pos/hijo/invertir': 0.07}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.0465), (16000, 0.0, 0.0, 0.0244), (24000, 0.0, 0.0, 0.2766), (32000, 0.0, 0.0, 0.3333), (40000, 0.0, 0.0, 0.6047), (48000, 0.0, 0.0, 1.0), (56000, 0.0, 0.0, 1.0)]
+   s30007: con algun organo: corte 0.05 (funcional 0.04) · final 0.07 (funcional 0.07) · persiste 1
+        top corte {'ORG morir/neg/hijo/copiar': 0.03, 'ORG morir/reciente/hijo/copiar': 0.01, '~ORG nunca/todo/hermano/olvidar': 0.01, 'ORG nacer/neg/hijo/copiar': 0.01, 'ORG morir/sin0/hermano/olvidar': 0.01}
+        top final {'ORG nacer/todo/hijo/copiar': 0.03, 'ORG morir/neg/hijo/copiar': 0.03, 'ORG morir/sin0/hermano/olvidar': 0.01, 'ORG morir/pos/vecino/promediar': 0.01, '~ORG nunca/pos/hijo/invertir': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.25), (8000, 0.0, 0.0, 0.0698), (16000, 0.0, 0.0, 0.1429), (24000, 0.0, 0.0, 0.1915), (32000, 0.0, 0.0, 0.1), (40000, 0.0, 0.0, 0.0769), (48000, 0.0, 0.0, 0.3333), (56000, 0.0, 0.0, 0.0)]
+   s30008: con algun organo: corte 1.00 (funcional 1.00) · final 1.00 (funcional 1.00) · persiste 1
+        top corte {'ORG nacer/pos/vecino/invertir': 0.94, 'ORG nacer/todo/hijo/promediar': 0.06}
+        top final {'ORG nacer/pos/vecino/invertir': 1.0}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.3125), (16000, 0.0, 0.0, 0.4651), (24000, 0.0, 0.0, 0.8045), (32000, 0.0, 0.0, 0.9442), (40000, 0.0, 0.0, 0.9704), (48000, 0.0, 0.0, 0.9785), (56000, 0.0, 0.0, 0.9767)]
+  -> organos en > 50 % del banco (n semillas): corte {'ORG vida/neg/hermano/promediar': 1, 'ORG nacer/sin0/vecino/promediar': 1, 'ORG nacer/pos/vecino/invertir': 1} · final {'ORG vida/neg/hermano/promediar': 1, 'ORG nacer/sin0/vecino/promediar': 1, 'ORG vida/todo/hijo/olvidar': 1, '~ORG nunca/sin0/hermano/copiar': 1, 'ORG morir/pos/hermano/invertir': 1, 'ORG nacer/pos/vecino/invertir': 1}
+
+==== quieto_largo  TL {'T': 60000, 't_cambio': 8000, 't_corte': 44000, 'r0_margen': 4000}
+| brazo | n | persiste | nac solo (suma) | nac solo por semilla | R0 final med | nac totales med | largo cinta (corte / final, media banco) |
+| PROMETEO | 8 | 8/8 | 1548 | [148, 143, 353, 186, 407, 168, 67, 76] | 0.81 | 1845 | 36.6 / 36.8 |
+| PROMETEO_SIN_HGT | 8 | 7/8 | 1081 | [165, 176, 113, 120, 88, 112, 190, 117] | 0.76 | 1422 | 33.3 / 33.3 |
+| CODIGO_SIN_SOS | 8 | 8/8 | 1216 | [141, 80, 125, 196, 87, 158, 155, 274] | 0.83 | 1576 | 33.7 / 33.9 |
+| PERILLAS | 8 | 8/8 | 834 | [153, 118, 85, 89, 102, 94, 75, 118] | 0.68 | 1200 | — / — |
+
+  -- PROMETEO: organos del kit en el BANCO (fraccion de las cintas) en el corte y al final, por semilla
+   s30001: con algun organo: corte 0.68 (funcional 0.58) · final 0.78 (funcional 0.56) · persiste 1
+        top corte {'HGT': 0.56, '~edad->parto+': 0.26, 'ORG morir/sin0/hijo/promediar': 0.03, 'ORG morir/sin0/hijo/copiar': 0.02, 'ORG morir/todo/hijo/copiar': 0.01}
+        top final {'~edad->parto+': 0.69, 'HGT': 0.56, 'ORG vida/pos/hermano/copiar': 0.03, 'ORG morir/sin0/hijo/promediar': 0.01, 'ORG morir/todo/hijo/copiar': 0.01}
+        contadores {boca si/no 682/60, patas mueve/para 2305/2664, vetos 0, hgt 26 {'REP': 4, 'ORG': 3, 'EJE': 26, 'FIN': 8, 'LLAMA': 11, 'SUM': 52, 'TASA': 5, 'SOS': 6, 'DEF': 7, 'CABLE': 4, 'HGT': 3}}; eventos HGT 26
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0769, 0.0385, 0.0), (8000, 0.0, 0.0769, 0.0192), (16000, 0.0333, 0.0333, 0.05), (24000, 0.0606, 0.1061, 0.1515), (32000, 0.1795, 0.1795, 0.1538), (40000, 0.2072, 0.5676, 0.1351), (48000, 0.6087, 0.3913, 0.1304), (56000, 1.0, 0.5, 0.0)]
+   s30002: con algun organo: corte 0.86 (funcional 0.86) · final 0.96 (funcional 0.96) · persiste 1
+        top corte {'HGT': 0.84, 'ORG vida/neg/hermano/copiar': 0.53, 'ORG morir/neg/hermano/copiar': 0.02, 'reserva->patas+': 0.02, '~reserva->parto+': 0.01}
+        top final {'HGT': 0.93, 'ORG vida/neg/hermano/copiar': 0.34, 'ORG morir/neg/hermano/copiar': 0.03, 'reserva->patas+': 0.03}
+        contadores {boca si/no 553/449, patas mueve/para 1162/2685, vetos 164, hgt 170 {'DEF': 13, 'EJE': 55, 'FIN': 23, 'LLAMA': 40, 'SUM': 255, 'TASA': 12, 'REP': 24, 'ORG': 10, 'SOS': 17, 'HGT': 6, 'CABLE': 2}}; eventos HGT 170
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.2414, 0.1034), (8000, 0.0, 0.2963, 0.0926), (16000, 0.0345, 0.3793, 0.069), (24000, 0.063, 0.5591, 0.0236), (32000, 0.0339, 0.9153, 0.1653), (40000, 0.145, 0.735, 0.475), (48000, 0.04, 1.0, 0.4), (56000, 0.0, 1.0, 0.0)]
+   s30003: con algun organo: corte 0.05 (funcional 0.05) · final 0.03 (funcional 0.03) · persiste 1
+        top corte {'HGT': 0.02, 'ORG vida/sin0/vecino/olvidar': 0.01, 'edad->patas+': 0.01, 'ORG morir/neg/hijo/promediar': 0.01, 'la_otra->boca-': 0.01}
+        top final {'HGT': 0.03}
+        contadores {boca si/no 769/93, patas mueve/para 1696/2978, vetos 10, hgt 22 {'SUM': 33, 'EJE': 6, 'TASA': 4, 'LLAMA': 3, 'REP': 2, 'ORG': 2, 'FIN': 2, 'SOS': 3}}; eventos HGT 22
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0741, 0.037, 0.037), (8000, 0.0, 0.3636, 0.3091), (16000, 0.0161, 0.1129, 0.2097), (24000, 0.0291, 0.2427, 0.1942), (32000, 0.0612, 0.0272, 0.0884), (40000, 0.0615, 0.0335, 0.0615), (48000, 0.0, 0.02, 0.0), (56000, 0.0303, 0.0, 0.0)]
+   s30004: con algun organo: corte 0.18 (funcional 0.18) · final 0.34 (funcional 0.34) · persiste 1
+        top corte {'HGT': 0.1, '~ORG nunca/pos/vecino/promediar': 0.04, 'ORG nacer/neg/hijo/invertir': 0.04, 'ORG vida/todo/hermano/invertir': 0.04, 'hijos->boca+': 0.01}
+        top final {'HGT': 0.3, 'ORG vida/todo/hermano/invertir': 0.02, 'ORG nacer/neg/hermano/olvidar': 0.01}
+        contadores {boca si/no 1803/84, patas mueve/para 510/1725, vetos 29, hgt 28 {'SUM': 60, 'REP': 5, 'EJE': 1, 'FIN': 2, 'LLAMA': 1, 'ORG': 1, 'SOS': 3, 'TASA': 1}}; eventos HGT 28
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0833, 0.0417, 0.125), (8000, 0.1034, 0.1724, 0.1379), (16000, 0.0588, 0.2647, 0.1176), (24000, 0.0227, 0.0568, 0.3182), (32000, 0.0446, 0.2054, 0.1696), (40000, 0.037, 0.1296, 0.0926), (48000, 0.0312, 0.1875, 0.0625), (56000, 0.0, 0.4762, 0.0)]
+   s30005: con algun organo: corte 0.98 (funcional 0.98) · final 1.00 (funcional 1.00) · persiste 1
+        top corte {'ORG nacer/todo/hermano/promediar': 0.85, 'HGT': 0.66, '~ORG nunca/todo/hijo/invertir': 0.07, '~ORG nunca/reciente/hijo/invertir': 0.05, 'ORG vida/todo/hermano/promediar': 0.03}
+        top final {'ORG nacer/todo/hermano/promediar': 1.0, 'HGT': 0.86, '~ORG nunca/reciente/vecino/olvidar': 0.86, 'ventana->patas+': 0.12, 'ORG nacer/todo/hijo/copiar': 0.01}
+        contadores {boca si/no 581/127, patas mueve/para 522/7579, vetos 12, hgt 52 {'SUM': 126, 'REP': 8, 'ORG': 6, 'TASA': 6, 'FIN': 9, 'DEF': 5, 'EJE': 21, 'LLAMA': 9, 'SOS': 2, 'HGT': 1}}; eventos HGT 52
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0385, 0.1538, 0.0769), (8000, 0.0625, 0.0625, 0.1719), (16000, 0.0429, 0.0857, 0.3571), (24000, 0.0361, 0.2169, 0.3735), (32000, 0.0382, 0.2137, 0.3435), (40000, 0.0489, 0.6576, 0.7174), (48000, 0.1852, 0.2593, 0.9444), (56000, 0.0196, 0.9804, 1.0)]
+   s30006: con algun organo: corte 1.00 (funcional 1.00) · final 1.00 (funcional 1.00) · persiste 1
+        top corte {'ORG morir/pos/hermano/copiar': 1.0, 'reserva->boca-': 0.97, 'HGT': 0.08, 'ORG nacer/todo/hijo/copiar': 0.04, 'ORG morir/todo/hermano/copiar': 0.01}
+        top final {'reserva->boca-': 1.0, 'ORG morir/pos/hermano/copiar': 0.99, 'HGT': 0.47, 'ORG nacer/sin0/vecino/copiar': 0.12, 'edad->boca+': 0.01}
+        contadores {boca si/no 549/2963, patas mueve/para 1009/1386, vetos 13, hgt 24 {'DEF': 3, 'EJE': 19, 'FIN': 10, 'LLAMA': 4, 'SUM': 90, 'SOS': 3, 'TASA': 6, 'ORG': 12, 'CABLE': 2, 'REP': 1}}; eventos HGT 24
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.04, 0.0), (8000, 0.0, 0.2353, 0.1765), (16000, 0.0213, 0.1277, 0.1915), (24000, 0.1489, 0.1277, 0.3404), (32000, 0.65, 0.05, 0.66), (40000, 0.9691, 0.0928, 1.0), (48000, 1.0, 0.129, 1.0), (56000, 1.0, 0.7692, 1.0)]
+   s30007: con algun organo: corte 0.75 (funcional 0.43) · final 0.84 (funcional 0.23) · persiste 1
+        top corte {'~reserva->parto+': 0.31, 'ORG nacer/sin0/hijo/invertir': 0.27, '~la_otra->parto+': 0.2, 'HGT': 0.14, '~ORG nunca/sin0/vecino/copiar': 0.1}
+        top final {'~la_otra->parto+': 0.45, '~reserva->parto+': 0.27, 'HGT': 0.1, 'ORG nacer/sin0/hijo/invertir': 0.1, '~ORG nunca/sin0/vecino/copiar': 0.07}
+        contadores {boca si/no 1210/51, patas mueve/para 9472/2906, vetos 94, hgt 28 {'SUM': 81, 'REP': 5, 'ORG': 4, 'FIN': 4, 'LLAMA': 2, 'SOS': 5, 'CABLE': 3, 'TASA': 5, 'EJE': 4}}; eventos HGT 28
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0417, 0.0417, 0.0417), (8000, 0.1042, 0.0833, 0.2708), (16000, 0.234, 0.0426, 0.3404), (24000, 0.1695, 0.1695, 0.6102), (32000, 0.2712, 0.1356, 0.5593), (40000, 0.7069, 0.1724, 0.3621), (48000, 1.0, 0.0909, 0.0), (56000, 1.0, 0.0, 0.0)]
+   s30008: con algun organo: corte 0.98 (funcional 0.69) · final 0.94 (funcional 0.55) · persiste 1
+        top corte {'~hijos->parto+': 0.78, 'ORG morir/sin0/hijo/promediar': 0.64, 'ORG nacer/sin0/vecino/invertir': 0.2, '~ORG nunca/todo/hermano/olvidar': 0.16, 'HGT': 0.1}
+        top final {'~hijos->parto+': 0.71, 'ORG morir/sin0/hijo/promediar': 0.51, '~ORG nunca/todo/hermano/olvidar': 0.17, 'ORG nacer/sin0/vecino/invertir': 0.14, 'HGT': 0.09}
+        contadores {boca si/no 1017/23, patas mueve/para 4781/1142, vetos 5, hgt 11 {'SUM': 14, 'REP': 2, 'CABLE': 1, 'ORG': 2, 'LLAMA': 1, 'HGT': 1, 'FIN': 1}}; eventos HGT 11
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.2273, 0.0455, 0.0909), (8000, 0.1429, 0.1224, 0.102), (16000, 0.5319, 0.4043, 0.1489), (24000, 0.7674, 0.0698, 0.1628), (32000, 0.8333, 0.0625, 0.5833), (40000, 0.8, 0.1556, 0.6889), (48000, 0.5455, 0.0, 0.2727), (56000, 0.7895, 0.0, 0.2105)]
+  -> organos en > 50 % del banco (n semillas): corte {'HGT': 3, 'ORG vida/neg/hermano/copiar': 1, 'ORG nacer/todo/hermano/promediar': 1, 'reserva->boca-': 1, 'ORG morir/pos/hermano/copiar': 1, 'ORG morir/sin0/hijo/promediar': 1, '~hijos->parto+': 1} · final {'HGT': 3, '~edad->parto+': 1, '~ORG nunca/reciente/vecino/olvidar': 1, 'ORG nacer/todo/hermano/promediar': 1, 'reserva->boca-': 1, 'ORG morir/pos/hermano/copiar': 1, 'ORG morir/sin0/hijo/promediar': 1, '~hijos->parto+': 1}
+
+   CINTA s30005 (final, 86% del banco, largo 37):
+     TASA(1) SOS(2,2) TASA(0) REP(3) DEF(0) ORG(1,0,1,1) HGT(0,2) EJE(2,-2) EJE(2,-1) FIN LLAMA(0) SUM(0,0) EJE(1,1) SUM(1,0) SUM(2,0) SUM(3,0) SUM(1,0) SUM(2,0) SUM(3,0) SUM(4,0) SUM(2,0) SUM(3,0) SUM(12,0) SUM(5,1) SUM(16,-3) SUM(7,0) SUM(8,0) SUM(9,0) SUM(10,-1) SUM(11,0) SUM(12,0) SUM(14,0) ORG(0,4,2,3) SUM(17,0) REP(1) ORG(1,3,0,0) EJE(0,0)
+     = HGT: al nacer, con prob 0.02 toma 4 instrucciones del vecino
+     = ORGANO de transmision nuevo: nacer/todo/hermano/promediar
+     = ORGANO de transmision nuevo: nunca/reciente/vecino/olvidar
+     = ORGANO de transmision nuevo: nacer/todo/hermano/promediar
+
+   CINTA s30006 (corte, 38% del banco, largo 36):
+     TASA(1) SOS(2,2) TASA(0) EJE(0,0) EJE(1,0) CABLE(1,0,-2) TASA(2) EJE(1,3) EJE(2,0) ORG(3,2,1,0) FIN TASA(1) EJE(2,-2) SUM(0,0) SUM(1,0) SUM(3,0) SUM(1,0) SUM(6,0) SUM(8,0) SUM(9,0) SUM(11,-1) SUM(8,0) SUM(9,0) SUM(11,-1) REP(2) REP(2) SUM(12,1) SUM(14,0) SUM(16,0) EJE(2,-1) SUM(16,0) SUM(17,-1) LLAMA(1) ORG(1,3,0,0) ORG(1,3,0,0) FIN
+     = BOCA: empuja a morder con -2·reserva (x0.5; >0 muerde mas, <0 se niega)
+     = ORGANO de transmision nuevo: morir/pos/hermano/copiar
+
+   CINTA s30004 (final, 21% del banco, largo 29):
+     SOS(2,2) EJE(1,0) EJE(0,0) EJE(1,1) EJE(1,0) FIN LLAMA(1) SUM(0,0) SUM(1,0) TASA(0) SUM(3,0) SUM(6,0) SOS(2,0) SUM(7,0) SUM(16,0) HGT(1,1) SUM(10,0) SUM(7,0) SUM(9,0) EJE(1,2) SUM(11,-1) EJE(2,-2) SUM(13,0) SUM(14,0) SUM(16,0) SUM(16,0) REP(1) ORG(1,3,0,0) FIN
+     = HGT: al nacer, con prob 0.05 toma 2 instrucciones del vecino
+
+  -- PROMETEO_SIN_HGT: organos del kit en el BANCO (fraccion de las cintas) en el corte y al final, por semilla
+   s30001: con algun organo: corte 0.94 (funcional 0.11) · final 0.57 (funcional 0.30) · persiste 1
+        top corte {'~ORG nunca/sin0/hermano/copiar': 0.86, 'ORG vida/neg/hijo/promediar': 0.07, '~ventana->parto+': 0.05, 'la_otra->patas+': 0.04, '~ORG nunca/todo/hermano/copiar': 0.03}
+        top final {'~ORG nunca/sin0/hermano/copiar': 0.56, 'ORG vida/neg/hijo/promediar': 0.22, '~ventana->parto+': 0.22, 'ORG vida/sin0/hijo/copiar': 0.07, 'ORG morir/sin0/hermano/copiar': 0.01}
+        contadores {boca si/no 1033/372, patas mueve/para 2792/3885, vetos 16, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0833), (8000, 0.0417, 0.0, 0.1667), (16000, 0.0833, 0.0, 0.1458), (24000, 0.102, 0.0, 0.2449), (32000, 0.0248, 0.0, 0.9008), (40000, 0.0679, 0.0, 0.9506), (48000, 0.5, 0.0, 0.65), (56000, 0.2174, 0.0, 0.2174)]
+   s30002: con algun organo: corte 0.90 (funcional 0.86) · final 0.92 (funcional 0.83) · persiste 1
+        top corte {'~ORG nunca/sin0/hijo/copiar': 0.52, 'reserva->boca-': 0.47, 'ORG morir/sin0/hermano/olvidar': 0.33, 'ventana->patas+': 0.23, '~ORG nunca/sin0/hijo/olvidar': 0.23}
+        top final {'ORG morir/sin0/hermano/olvidar': 0.54, 'ORG nacer/sin0/vecino/copiar': 0.28, '~ORG nunca/sin0/hijo/copiar': 0.25, 'ORG vida/pos/hermano/promediar': 0.24, 'reserva->boca-': 0.2}
+        contadores {boca si/no 1137/376, patas mueve/para 16355/2864, vetos 8, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.08), (8000, 0.1379, 0.0, 0.1724), (16000, 0.0943, 0.0, 0.3962), (24000, 0.2885, 0.0, 0.5962), (32000, 0.3472, 0.0, 0.6806), (40000, 0.679, 0.0, 0.8025), (48000, 0.4, 0.0, 0.8), (56000, 0.0, 0.0, 1.0)]
+   s30003: con algun organo: corte 0.82 (funcional 0.82) · final 0.94 (funcional 0.94) · persiste 1
+        top corte {'ORG morir/sin0/hermano/copiar': 0.82, 'ORG nacer/sin0/hijo/olvidar': 0.82, 'ORG morir/neg/hijo/promediar': 0.07, 'la_otra->patas+': 0.01, 'ORG vida/neg/vecino/invertir': 0.01}
+        top final {'ORG morir/sin0/hermano/copiar': 0.94, 'ORG nacer/sin0/hijo/olvidar': 0.84, 'ORG morir/neg/hijo/promediar': 0.21, 'ORG nacer/todo/hijo/olvidar': 0.1, 'ORG morir/sin0/hijo/promediar': 0.02}
+        contadores {boca si/no 750/40, patas mueve/para 8201/1652, vetos 16, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0769, 0.0, 0.1538), (8000, 0.098, 0.0, 0.2745), (16000, 0.0351, 0.0, 0.386), (24000, 0.0612, 0.0, 0.5918), (32000, 0.0784, 0.0, 0.4118), (40000, 0.0, 0.0, 0.7917), (48000, 0.0, 0.0, 0.8947), (56000, 0.0, 0.0, 1.0)]
+   s30004: con algun organo: corte 0.28 (funcional 0.28) · final 0.51 (funcional 0.51) · persiste 0
+        top corte {'ORG vida/neg/vecino/invertir': 0.28, 'sesgo->patas+': 0.01}
+        top final {'ORG vida/neg/vecino/invertir': 0.48, 'hijos->boca-': 0.02, 'hijos->parto-': 0.01, 'ORG morir/sin0/hermano/copiar': 0.01}
+        contadores {boca si/no 991/69, patas mueve/para 50515/2059, vetos 1, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.04, 0.0, 0.12), (8000, 0.22, 0.0, 0.18), (16000, 0.28, 0.0, 0.22), (24000, 0.0847, 0.0, 0.1525), (32000, 0.0149, 0.0, 0.597), (40000, 0.0312, 0.0, 0.3125), (48000, 0.0, 0.0, 1.0)]
+   s30005: con algun organo: corte 0.07 (funcional 0.06) · final 0.04 (funcional 0.04) · persiste 1
+        top corte {'ORG morir/neg/vecino/promediar': 0.03, '~sesgo->parto+': 0.01, 'hijos->patas+': 0.01, 'hijos->parto-': 0.01, 'ORG nacer/neg/hijo/copiar': 0.01}
+        top final {'hijos->patas+': 0.01, '~sesgo->parto+': 0.01, 'ORG morir/neg/vecino/promediar': 0.01, 'reserva->boca-': 0.01, 'la_otra->boca-': 0.01}
+        contadores {boca si/no 589/58, patas mueve/para 1280/2655, vetos 0, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.08, 0.0, 0.04), (8000, 0.0189, 0.0, 0.0189), (16000, 0.0682, 0.0, 0.2045), (24000, 0.0, 0.0, 0.1277), (32000, 0.0625, 0.0, 0.1042), (40000, 0.0556, 0.0, 0.037), (48000, 0.0, 0.0, 0.0), (56000, 0.0, 0.0, 0.0)]
+   s30006: con algun organo: corte 0.59 (funcional 0.13) · final 0.80 (funcional 0.56) · persiste 1
+        top corte {'~ORG nunca/pos/hijo/promediar': 0.49, 'ORG nacer/todo/hijo/copiar': 0.04, 'ORG vida/neg/hermano/invertir': 0.03, 'ORG vida/pos/hijo/copiar': 0.03, 'hijos->parto-': 0.02}
+        top final {'ORG nacer/todo/hijo/copiar': 0.56, '~ORG nunca/pos/hijo/promediar': 0.24, '~ORG nunca/todo/vecino/invertir': 0.03, 'ORG nacer/sin0/hermano/copiar': 0.01}
+        contadores {boca si/no 205/112, patas mueve/para 3622/1885, vetos 10, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0417), (8000, 0.125, 0.0, 0.3125), (16000, 0.0727, 0.0, 0.3091), (24000, 0.0172, 0.0, 0.5), (32000, 0.0182, 0.0, 0.5636), (40000, 0.0526, 0.0, 0.5439), (48000, 0.0, 0.0, 0.8889), (56000, 0.0, 0.0, 0.9412)]
+   s30007: con algun organo: corte 0.18 (funcional 0.11) · final 0.00 (funcional 0.00) · persiste 1
+        top corte {'~ORG nunca/sin0/hermano/invertir': 0.06, 'ORG morir/reciente/vecino/promediar': 0.06, 'edad->patas+': 0.03, '~ORG nunca/sin0/hijo/copiar': 0.03, 'ORG vida/sin0/hermano/invertir': 0.01}
+        top final {}
+        contadores {boca si/no 783/91, patas mueve/para 17064/3404, vetos 52, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0385), (8000, 0.0769, 0.0, 0.1731), (16000, 0.0, 0.0, 0.1961), (24000, 0.0909, 0.0, 0.1932), (32000, 0.1831, 0.0, 0.3239), (40000, 0.0865, 0.0, 0.1827), (48000, 0.0, 0.0, 0.0357), (56000, 0.0, 0.0, 0.0)]
+   s30008: con algun organo: corte 0.07 (funcional 0.07) · final 0.03 (funcional 0.03) · persiste 1
+        top corte {'ORG vida/sin0/hijo/copiar': 0.02, 'ORG nacer/todo/hijo/copiar': 0.01, 'ORG nacer/pos/hijo/copiar': 0.01, 'ORG nacer/sin0/hijo/invertir': 0.01, 'ORG morir/sin0/hijo/copiar': 0.01}
+        top final {'ORG nacer/reciente/hijo/copiar': 0.01, 'ORG vida/sin0/hijo/copiar': 0.01, 'ORG nacer/pos/hijo/copiar': 0.01, 'ORG morir/todo/hijo/olvidar': 0.01}
+        contadores {boca si/no 1083/48, patas mueve/para 851/6755, vetos 4, hgt 0 {}}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0952, 0.0, 0.0476), (8000, 0.0784, 0.0, 0.1569), (16000, 0.0962, 0.0, 0.1923), (24000, 0.0172, 0.0, 0.1724), (32000, 0.0641, 0.0, 0.1795), (40000, 0.0, 0.0, 0.1711), (48000, 0.0, 0.0, 0.0), (56000, 0.0, 0.0, 0.0)]
+  -> organos en > 50 % del banco (n semillas): corte {'~ORG nunca/sin0/hermano/copiar': 1, '~ORG nunca/sin0/hijo/copiar': 1, 'ORG morir/sin0/hermano/copiar': 1, 'ORG nacer/sin0/hijo/olvidar': 1} · final {'~ORG nunca/sin0/hermano/copiar': 1, 'ORG morir/sin0/hermano/olvidar': 1, 'ORG morir/sin0/hermano/copiar': 1, 'ORG nacer/sin0/hijo/olvidar': 1, 'ORG nacer/todo/hijo/copiar': 1}
+
+   CINTA s30003 (final, 52% del banco, largo 31):
+     TASA(1) SOS(2,2) DEF(0) EJE(0,0) EJE(1,1) EJE(2,0) EJE(0,0) EJE(2,-1) FIN LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) SUM(4,0) SUM(5,0) SUM(6,0) SUM(7,0) SUM(8,0) SUM(9,1) SUM(10,0) SUM(11,0) SUM(12,0) SUM(14,0) SUM(14,0) SUM(15,0) SUM(16,0) ORG(3,3,1,0) REP(3) ORG(1,3,0,3) FIN
+     = ORGANO de transmision nuevo: morir/sin0/hermano/copiar
+     = ORGANO de transmision nuevo: nacer/sin0/hijo/olvidar
+     = ORGANO de transmision nuevo: nacer/sin0/hijo/olvidar
+     = ORGANO de transmision nuevo: nacer/sin0/hijo/olvidar
+
+   CINTA s30003 (corte, 40% del banco, largo 31):
+     TASA(1) SOS(2,2) DEF(0) EJE(0,0) EJE(1,1) EJE(2,0) EJE(0,0) EJE(2,-1) FIN LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) SUM(4,0) SUM(5,0) SUM(6,0) SUM(7,0) SUM(8,0) SUM(9,1) SUM(10,0) SUM(11,0) SUM(12,0) SUM(14,0) SUM(14,0) SUM(15,0) SUM(16,0) ORG(3,3,1,0) REP(3) ORG(1,3,0,3) FIN
+     = ORGANO de transmision nuevo: morir/sin0/hermano/copiar
+     = ORGANO de transmision nuevo: nacer/sin0/hijo/olvidar
+     = ORGANO de transmision nuevo: nacer/sin0/hijo/olvidar
+     = ORGANO de transmision nuevo: nacer/sin0/hijo/olvidar
+
+   CINTA s30004 (final, 36% del banco, largo 36):
+     TASA(1) SOS(2,2) TASA(1) DEF(0) EJE(1,0) EJE(2,0) FIN LLAMA(0) SUM(0,0) SUM(1,0) SUM(2,0) SUM(3,0) SUM(12,0) SUM(5,0) SUM(6,0) SUM(7,0) SUM(8,0) SOS(4,1) SUM(10,0) SUM(11,0) SUM(12,0) SUM(13,0) SUM(14,0) SUM(11,0) ORG(2,1,2,2) REP(2) SUM(14,0) SUM(15,0) SUM(10,1) EJE(2,-1) SUM(16,0) SUM(17,0) REP(1) ORG(1,3,0,0) FIN FIN
+     = ORGANO de transmision nuevo: vida/neg/vecino/invertir
+
+  -- CODIGO_SIN_SOS: organos del kit en el BANCO (fraccion de las cintas) en el corte y al final, por semilla
+   s30001: con algun organo: corte 0.35 (funcional 0.01) · final 0.89 (funcional 0.04) · persiste 1
+        top corte {'~ORG nunca/reciente/hermano/invertir': 0.29, '~ORG nunca/neg/hermano/copiar': 0.05, '~ORG nunca/sin0/hermano/invertir': 0.01, 'ORG nacer/neg/hijo/invertir': 0.01, 'ORG nacer/pos/hijo/copiar': 0.01}
+        top final {'~ORG nunca/reciente/hermano/invertir': 0.89, '~ORG nunca/sin0/hermano/invertir': 0.35, 'ORG nacer/sin0/hijo/promediar': 0.03, 'ORG nacer/sin0/vecino/copiar': 0.01, '~ORG nunca/neg/hermano/copiar': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.1071), (16000, 0.0, 0.0, 0.1373), (24000, 0.0, 0.0, 0.1042), (32000, 0.0, 0.0, 0.0851), (40000, 0.0, 0.0, 0.4872), (48000, 0.0, 0.0, 0.8261), (56000, 0.0, 0.0, 0.8571)]
+   s30002: con algun organo: corte 0.10 (funcional 0.09) · final 0.07 (funcional 0.07) · persiste 1
+        top corte {'ORG nacer/todo/vecino/copiar': 0.06, 'ORG morir/todo/hermano/invertir': 0.04, 'ORG nacer/neg/hijo/copiar': 0.02, '~ORG nunca/sin0/vecino/copiar': 0.01, 'ORG morir/todo/vecino/invertir': 0.01}
+        top final {'ORG nacer/todo/vecino/copiar': 0.06, 'ORG morir/todo/hermano/invertir': 0.01, 'ORG nacer/neg/hijo/copiar': 0.01, 'ORG morir/todo/vecino/invertir': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.12), (8000, 0.0, 0.0, 0.1613), (16000, 0.0, 0.0, 0.3043), (24000, 0.0, 0.0, 0.0455), (32000, 0.0, 0.0, 0.069), (40000, 0.0, 0.0, 0.1273), (48000, 0.0, 0.0, 0.0714), (56000, 0.0, 0.0, 0.0)]
+   s30003: con algun organo: corte 0.39 (funcional 0.39) · final 0.38 (funcional 0.38) · persiste 1
+        top corte {'ORG nacer/todo/hermano/olvidar': 0.14, 'ORG vida/pos/hijo/copiar': 0.07, 'ORG vida/pos/vecino/invertir': 0.05, 'ORG morir/sin0/hermano/promediar': 0.04, 'ORG vida/reciente/hermano/invertir': 0.03}
+        top final {'ORG nacer/todo/hermano/olvidar': 0.21, 'ORG vida/pos/hijo/copiar': 0.06, 'ORG nacer/neg/hermano/olvidar': 0.04, 'ORG vida/reciente/hermano/invertir': 0.03, 'ORG morir/sin0/hermano/promediar': 0.03}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.1071), (8000, 0.0, 0.0, 0.1481), (16000, 0.0, 0.0, 0.2742), (24000, 0.0, 0.0, 0.4444), (32000, 0.0, 0.0, 0.2), (40000, 0.0, 0.0, 0.4), (48000, 0.0, 0.0, 0.6522), (56000, 0.0, 0.0, 0.0769)]
+   s30004: con algun organo: corte 0.05 (funcional 0.00) · final 0.06 (funcional 0.05) · persiste 1
+        top corte {'~ORG nunca/sin0/hijo/invertir': 0.05, '~ORG nunca/pos/hijo/promediar': 0.05}
+        top final {'ORG nacer/reciente/hermano/promediar': 0.05, '~ORG nunca/sin0/hijo/invertir': 0.01, '~ORG nunca/pos/hijo/promediar': 0.01}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0556), (8000, 0.0, 0.0, 0.2206), (16000, 0.0, 0.0, 0.0404), (24000, 0.0, 0.0, 0.1238), (32000, 0.0, 0.0, 0.0949), (40000, 0.0, 0.0, 0.05), (48000, 0.0, 0.0, 0.1111), (56000, 0.0, 0.0, 0.0)]
+   s30005: con algun organo: corte 0.79 (funcional 0.75) · final 0.63 (funcional 0.57) · persiste 1
+        top corte {'ORG nacer/sin0/hijo/olvidar': 0.62, 'ORG vida/todo/hermano/copiar': 0.11, '~ORG nunca/neg/hermano/olvidar': 0.07, '~ORG nunca/neg/hermano/copiar': 0.03, '~ORG nunca/neg/hermano/promediar': 0.01}
+        top final {'ORG nacer/sin0/hijo/olvidar': 0.49, 'ORG vida/todo/hermano/copiar': 0.07, '~ORG nunca/neg/hermano/olvidar': 0.07, '~ORG nunca/reciente/hermano/promediar': 0.04, '~ORG nunca/neg/hermano/copiar': 0.03}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.28), (16000, 0.0, 0.0, 0.48), (24000, 0.0, 0.0, 0.5745), (32000, 0.0, 0.0, 0.7544), (40000, 0.0, 0.0, 0.7812), (48000, 0.0, 0.0, 0.5294), (56000, 0.0, 0.0, 0.1429)]
+   s30006: con algun organo: corte 0.41 (funcional 0.24) · final 0.77 (funcional 0.52) · persiste 1
+        top corte {'ORG vida/neg/vecino/copiar': 0.14, '~ORG nunca/todo/vecino/olvidar': 0.14, 'ORG morir/todo/vecino/olvidar': 0.04, '~ORG nunca/pos/vecino/invertir': 0.04, '~ORG nunca/sin0/vecino/copiar': 0.04}
+        top final {'ORG nacer/pos/vecino/promediar': 0.38, 'ORG morir/todo/vecino/olvidar': 0.32, '~ORG nunca/todo/vecino/olvidar': 0.24, 'ORG vida/neg/vecino/copiar': 0.11, '~ORG nunca/sin0/vecino/copiar': 0.09}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.0638), (16000, 0.0, 0.0, 0.0517), (24000, 0.0, 0.0, 0.1918), (32000, 0.0, 0.0, 0.28), (40000, 0.0, 0.0, 0.3636), (48000, 0.0, 0.0, 0.6842), (56000, 0.0, 0.0, 0.9412)]
+   s30007: con algun organo: corte 0.81 (funcional 0.78) · final 0.88 (funcional 0.86) · persiste 1
+        top corte {'ORG nacer/sin0/hijo/olvidar': 0.54, 'ORG nacer/sin0/vecino/copiar': 0.26, 'ORG nacer/pos/hijo/copiar': 0.17, 'ORG vida/pos/hijo/olvidar': 0.09, 'ORG nacer/reciente/hermano/invertir': 0.05}
+        top final {'ORG nacer/sin0/hijo/olvidar': 0.82, 'ORG nacer/sin0/vecino/copiar': 0.6, 'ORG nacer/pos/hijo/copiar': 0.02, '~ORG nunca/reciente/hijo/copiar': 0.02, 'ORG nacer/reciente/hermano/invertir': 0.02}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.25), (8000, 0.0, 0.0, 0.0426), (16000, 0.0, 0.0, 0.0682), (24000, 0.0, 0.0, 0.1875), (32000, 0.0, 0.0, 0.471), (40000, 0.0, 0.0, 0.746), (48000, 0.0, 0.0, 0.8438), (56000, 0.0, 0.0, 0.9524)]
+   s30008: con algun organo: corte 1.00 (funcional 1.00) · final 1.00 (funcional 1.00) · persiste 1
+        top corte {'ORG nacer/pos/vecino/invertir': 1.0}
+        top final {'ORG nacer/pos/vecino/invertir': 1.0}
+        contadores {boca si/no None/None, patas mueve/para None/None, vetos None, hgt None None}; eventos HGT 0
+        nacidos con (cable, hgt, org nuevo) por t: [(0, 0.0, 0.0, 0.0), (8000, 0.0, 0.0, 0.4211), (16000, 0.0, 0.0, 0.8165), (24000, 0.0, 0.0, 0.9659), (32000, 0.0, 0.0, 0.9853), (40000, 0.0, 0.0, 0.9919), (48000, 0.0, 0.0, 1.0), (56000, 0.0, 0.0, 1.0)]
+  -> organos en > 50 % del banco (n semillas): corte {'ORG nacer/sin0/hijo/olvidar': 2, 'ORG nacer/pos/vecino/invertir': 1} · final {'~ORG nunca/reciente/hermano/invertir': 1, 'ORG nacer/sin0/hijo/olvidar': 1, 'ORG nacer/sin0/vecino/copiar': 1, 'ORG nacer/pos/vecino/invertir': 1}
+
+| mundo | brazo | n | funcional corte/final | inerte corte/final | HGT corte/final | funcionales > 50 % del banco (semillas) |
+|---|---|---|---|---|---|---|
+| onda8k_largo | PROMETEO | 8 | 0.51 / 0.47 | 0.08 / 0.05 | 0.35 / 0.39 | {'ORG nacer/pos/hijo/copiar@c': 1, 'ORG nacer/neg/hijo/copiar@c': 1, 'ORG vida/reciente/hermano/copiar@c': 1, 'ORG nacer/pos/hijo/copiar@f': 1, 'ORG nacer/neg/hijo/copiar@f': 1, 'ORG vida/reciente/hermano/copiar@f': 1, 'ORG vida/pos/hijo/promediar@c': 1, 'ORG vida/pos/hijo/promediar@f': 1, 'ORG nacer/todo/hijo/copiar@c': 1, 'ORG nacer/sin0/hijo/invertir@c': 1, 'ORG vida/neg/hijo/olvidar@c': 1, 'ORG nacer/sin0/hijo/invertir@f': 1, 'ORG vida/neg/hijo/olvidar@f': 1, 'ORG nacer/neg/vecino/olvidar@f': 1} |
+| onda8k_largo | PROMETEO_SIN_HGT | 8 | 0.23 / 0.45 | 0.20 / 0.11 | 0.00 / 0.00 | {'ventana->patas+@f': 1, 'sesgo->patas+@f': 1, 'ORG nacer/neg/hijo/invertir@c': 1, 'ORG nacer/neg/hijo/invertir@f': 1, 'edad->patas+@f': 1, 'ORG vida/pos/hijo/olvidar@f': 1} |
+| onda8k_largo | CODIGO_SIN_SOS | 8 | 0.35 / 0.43 | 0.07 / 0.13 | 0.00 / 0.00 | {'ORG vida/neg/hermano/promediar@c': 1, 'ORG nacer/sin0/vecino/promediar@c': 1, 'ORG vida/neg/hermano/promediar@f': 1, 'ORG nacer/sin0/vecino/promediar@f': 1, 'ORG vida/todo/hijo/olvidar@f': 1, 'ORG morir/pos/hermano/invertir@f': 1, 'ORG nacer/pos/vecino/invertir@c': 1, 'ORG nacer/pos/vecino/invertir@f': 1} |
+| quieto_largo | PROMETEO | 8 | 0.46 / 0.39 | 0.25 / 0.40 | 0.31 / 0.42 | {'ORG vida/neg/hermano/copiar@c': 1, 'ORG nacer/todo/hermano/promediar@c': 1, 'ORG nacer/todo/hermano/promediar@f': 1, 'reserva->boca-@c': 1, 'ORG morir/pos/hermano/copiar@c': 1, 'reserva->boca-@f': 1, 'ORG morir/pos/hermano/copiar@f': 1, 'ORG morir/sin0/hijo/promediar@c': 1, 'ORG morir/sin0/hijo/promediar@f': 1} |
+| quieto_largo | PROMETEO_SIN_HGT | 8 | 0.31 / 0.40 | 0.28 / 0.17 | 0.00 / 0.00 | {'ORG morir/sin0/hermano/olvidar@f': 1, 'ORG morir/sin0/hermano/copiar@c': 1, 'ORG nacer/sin0/hijo/olvidar@c': 1, 'ORG morir/sin0/hermano/copiar@f': 1, 'ORG nacer/sin0/hijo/olvidar@f': 1, 'ORG nacer/todo/hijo/copiar@f': 1} |
+| quieto_largo | CODIGO_SIN_SOS | 8 | 0.41 / 0.43 | 0.10 / 0.19 | 0.00 / 0.00 | {'ORG nacer/sin0/hijo/olvidar@c': 2, 'ORG nacer/sin0/hijo/olvidar@f': 1, 'ORG nacer/sin0/vecino/copiar@f': 1, 'ORG nacer/pos/vecino/invertir@c': 1, 'ORG nacer/pos/vecino/invertir@f': 1} |
+
+| mundo | brazo | t 0k | t 8k | t 16k | t 24k | t 32k | t 40k | t 44k | t 50k | t 54k |
+|---|---|---|---|---|---|---|---|---|---|---|
+| onda8k_largo | PROMETEO | 30.3 (8) | 31.1 (8) | 32.7 (8) | 34.4 (8) | 36.0 (8) | 37.4 (8) | 37.5 (8) | 37.2 (7) | 59.9 (1) |
+| onda8k_largo | PROMETEO_SIN_HGT | 30.4 (8) | 31.0 (8) | 31.3 (8) | 32.4 (8) | 33.6 (8) | 35.5 (8) | 36.1 (8) | 37.6 (7) | 40.3 (3) |
+| onda8k_largo | CODIGO_SIN_SOS | 30.4 (8) | 31.4 (8) | 32.5 (8) | 33.0 (8) | 34.7 (8) | 36.2 (8) | 37.2 (8) | 36.1 (7) | 36.3 (4) |
+| quieto_largo | PROMETEO | 30.3 (8) | 31.3 (8) | 31.8 (8) | 33.6 (8) | 35.5 (8) | 36.7 (8) | 36.5 (8) | 37.2 (8) | 37.3 (8) |
+| quieto_largo | PROMETEO_SIN_HGT | 30.4 (8) | 31.1 (8) | 31.9 (8) | 32.2 (8) | 33.0 (8) | 33.5 (8) | 33.8 (8) | 33.0 (8) | 32.4 (7) |
+| quieto_largo | CODIGO_SIN_SOS | 30.4 (8) | 31.6 (8) | 32.4 (8) | 33.4 (8) | 33.4 (8) | 33.9 (8) | 33.7 (8) | 34.1 (8) | 33.9 (8) |
+
+| mundo | brazo | semilla | vivos T | slots expresados (no filtra0) en > 50 % de los vivos |
+|---|---|---|---|---|
+| onda8k_largo | CODIGO_SIN_SOS | 30003 | 3 | {'vida/neg/hermano/promediar': 1.0, 'nacer/sin0/vecino/promediar': 1.0} |
+| onda8k_largo | CODIGO_SIN_SOS | 30006 | 2 | {'nacer/sin0/hijo/promediar': 1.0, 'vida/reciente/hermano/promediar': 1.0, 'nacer/pos/hijo/promediar': 1.0} |
+| onda8k_largo | CODIGO_SIN_SOS | 30008 | 5 | {'nacer/pos/vecino/invertir': 1.0} |
+| onda8k_largo | PROMETEO_SIN_HGT | 30007 | 2 | {'vida/pos/hijo/olvidar': 1.0} |
+| onda8k_largo | PROMETEO | 30003 | 21 | {'vida/pos/hijo/promediar': 0.86} |
+| quieto_largo | CODIGO_SIN_SOS | 30006 | 13 | {'nacer/pos/vecino/promediar': 0.69, 'morir/todo/vecino/olvidar': 0.77} |
+| quieto_largo | CODIGO_SIN_SOS | 30007 | 5 | {'nacer/sin0/hijo/olvidar': 1.0} |
+| quieto_largo | CODIGO_SIN_SOS | 30008 | 13 | {'nacer/pos/vecino/invertir': 1.0} |
+| quieto_largo | PERILLAS | 30003 | 9 | {'nacer/neg/hijo/copiar': 0.56} |
+| quieto_largo | PERILLAS | 30005 | 7 | {'nacer/todo/vecino/promediar': 0.57, 'nacer/pos/vecino/promediar': 0.71} |
+| quieto_largo | PROMETEO_SIN_HGT | 30002 | 12 | {'nacer/sin0/vecino/copiar': 0.67, 'morir/sin0/hermano/olvidar': 0.67} |
+| quieto_largo | PROMETEO_SIN_HGT | 30003 | 19 | {'morir/sin0/hermano/copiar': 1.0, 'morir/neg/hijo/promediar': 0.53, 'nacer/sin0/hijo/olvidar': 0.58} |
+| quieto_largo | PROMETEO_SIN_HGT | 30006 | 13 | {'nacer/todo/hijo/copiar': 1.0} |
+| quieto_largo | PROMETEO | 30005 | 13 | {'nacer/todo/hermano/promediar': 1.0} |
+| quieto_largo | PROMETEO | 30006 | 21 | {'morir/pos/hermano/copiar': 1.0, 'nacer/sin0/vecino/copiar': 0.67} |

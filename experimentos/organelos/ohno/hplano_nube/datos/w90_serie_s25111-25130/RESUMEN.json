@@ -1,0 +1,56 @@
+{
+ "ventana": "serie",
+ "veredicto": "AMBIGUO",
+ "lineas": [
+  "M0 nacidos antes del corte (mediana) VIDA 20.0 FIJO 19.5 (umbral 18) -> OK",
+  "P1 vivos_T VIDA/FIJO en pares que persisten los dos: mediana 0.831 en 18 pares (min 8; sostiene >= 0.9, cae <= 0.75) \u00b7 rango (0.029, 1.56)",
+  "S1 persistencia pareada: ambos 18 \u00b7 solo VIDA 0 \u00b7 solo FIJO 2 \u00b7 ninguno 0 \u00b7 D 2 (sostiene <= 1, cae >= 4)",
+  "S2 (version fuerte) vivos_T VIDA > FIJO pareado 3/20 (fuerte >= 15)",
+  "  VIDA: persisten 18/20 \u00b7 vivos_T mediana 30.0 \u00b7 nac_post mediana 603.0 \u00b7 r0_post mediana 1.161 rango (0.0, 1.35) \u00b7 g_nmut mediana 1826.0",
+  "  FIJO: persisten 20/20 \u00b7 vivos_T mediana 38.0 \u00b7 nac_post mediana 656.0 \u00b7 r0_post mediana 1.11525 rango (1.0763, 1.1753) \u00b7 g_nmut mediana 0.0",
+  "VEREDICTO H-PLANO w90 POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): AMBIGUO"
+ ],
+ "d": {
+  "p1": 0.8312324929971988,
+  "pares": 18,
+  "D": 2,
+  "s2": 3,
+  "n": 20,
+  "pre": {
+   "VIDA": 20.0,
+   "FIJO": 19.5
+  }
+ },
+ "MUNDO": {
+  "nombre": "w90_pobre",
+  "esc": 90,
+  "n0": 90,
+  "tope": 9000
+ },
+ "SERIE": {
+  "T": 80000,
+  "t_corte": 40000,
+  "r0_margen": 15000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "GRAM": {
+  "p_campo": 0.05,
+  "p_dup": 0.02,
+  "p_del": 0.02,
+  "tope": 4
+ },
+ "shas": {
+  "corre_ohno.py": "d47b9de89709d25b",
+  "motor_gramatica.py": "6b65dc5e32093424",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9",
+  "gramatica_def.py": "c58086e103d030d9",
+  "conducta.py": "9a2f1226fe27a514",
+  "construye_ohno.py": "85b9a9e231a91074",
+  "PREREGISTRO_ohno.md": "0b9ab3fa0f9ce8e3"
+ }
+}

@@ -1,0 +1,21 @@
+OK  S1 CODIGO_SIN_SOS: serie == fable (62ad3ffcfe85d445 / 62ad3ffcfe85d445)
+OK  S2 PERILLAS: serie == fable (0afb2c9d3017763a / 0afb2c9d3017763a)
+OK  S3 PROMETEO completo (kit, copia ON, cable + slot): serie (mudo 0) == prometeo (a9c93de988931406 / a9c93de988931406)
+OK  S4 CABLE reserva->parto -3: nacimientos 0 (v0 85)
+OK  S5 CABLE sesgo->boca -3: mordidas 2396 (v0 4286); boca_no 8177
+OK  S6 CABLE sesgo->patas +3: pata_mueve 30084
+OK  S7 HGT(0.25, 8): eventos 18; largo banco final 31-39
+OK  S8 CABLE peso 0: dinamica == MUT0 (f15e322cd5f43113 / f15e322cd5f43113)
+OK  M1 MUDO + CABLE reserva->parto -3: dinamica == MUT0 (f15e322cd5f43113 / f15e322cd5f43113); kit {}
+OK  M2 MUDO + CABLE sesgo->boca -3: == MUT0 (f15e322cd5f43113)
+OK  M3 MUDO + ORG vida/todo/hijo/copiar: == MUT0 (f15e322cd5f43113); en PROMETEO el slot cambia la dinamica (98df8f711084b221)
+OK  M4 MUDO + HGT: eventos 18
+OK  M5 MUDO copia ON: cintas del banco final con organo funcional 2/112; organo expresado de los 5 vivos = FILTRA0: True
+OK  M6 (ERR-144) MUDO: el suministro se lee en la CINTA: nacidos con organo armado de novo 7, con organo 7 (de 82); columna vieja del organo expresado 0 (= 0)
+OK  R1 reanudar en t 4000 == de un tiron (43170d92a96ad594 / 43170d92a96ad594); kit {'boca_si': 0, 'boca_no': 5265, 'pata_mueve': 20968, 'pata_para': 0, 'veto': 0, 'hgt': 0, 'hgt_ops': {}}
+OK  L1 claves: CINTA0 (set(), set(), False) · parto+2 (set(), {'reserva->parto+'}, False) · parto-1 ({'reserva->parto-'}, set(), False) · ORG nunca (set(), {'ORG nunca/neg/hermano/promediar'}, False) · filtra0 x2 (set(), set(), False) · HGT (set(), set(), True)
+OK  L2 la letra: ['FUNCIONA — los organos que la cinta se a', 'HAY ALGO MODESTO — se fijan por encima d', 'NO — los organos armados no se fijan mas', 'NO EVALUABLE (guardia de suministro cae:', 'NO EVALUABLE (el control MUDO actuo: ins', 'NO EVALUABLE (ventana incompleta)'] · P2 True/False
+IDENTIDAD SERIE: 17/17
+OK  B1 banderas malas abortan con 2 y no escriben nada: [2, 2, 2, 2, 2, 2, 2, 2]
+IDENTIDAD SERIE (solo B1): 1/1
+TOTAL: 18/18 (17/17 con --sin_b1 + B1 1/1 con --solo_b1; tras ERR-144 a+b, 25-sep ~10:40)

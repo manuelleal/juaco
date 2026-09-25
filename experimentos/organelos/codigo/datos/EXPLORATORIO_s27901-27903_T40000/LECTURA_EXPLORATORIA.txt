@@ -1,0 +1,12 @@
+persisten en T {'CODIGO': 0, 'PERILLAS': 1, 'CODIGO_SIN_SOS': 0, 'AZAR': 1, 'MUT0': 0, 'QUIETO': 3}
+t_rec mediana (censurado = t_corte - t_cambio + 1) {'CODIGO': 15001.0, 'PERILLAS': 15001.0, 'CODIGO_SIN_SOS': 15001.0, 'AZAR': 15001.0, 'MUT0': 15001.0, 'QUIETO': 0.0}
+R0 final mediana (extinto = 0) {'CODIGO': 0.2222, 'PERILLAS': 0.2308, 'CODIGO_SIN_SOS': 0.15, 'AZAR': 0.0, 'MUT0': 0.2353, 'QUIETO': 0.78}
+P1 CODIGO se recupera antes que PERILLAS 1/3 (y persiste 0 vs 1) -> False
+P2 CODIGO R0 final > PERILLAS 0/3 -> False
+P3 CODIGO R0 final > SIN_SOS 2/3; la SOS se prende tras el cambio en 3 semillas -> False
+guardia seleccion CODIGO > AZAR 3/3 -> False · guardia variacion CODIGO > MUT0 2/3 -> False
+  robustez CODIGO: neutra 0.495 · cambia con hijos 0.130 · cambia sin hijos 0.346 · (sin error, con hijos 0.360)
+  robustez CODIGO_SIN_SOS: neutra 0.509 · cambia con hijos 0.136 · cambia sin hijos 0.345 · (sin error, con hijos 0.319)
+  robustez AZAR: neutra 0.619 · cambia con hijos 0.073 · cambia sin hijos 0.307 · (sin error, con hijos 0.195)
+  robustez QUIETO: neutra 0.451 · cambia con hijos 0.199 · cambia sin hijos 0.333 · (sin error, con hijos 0.416)
+VEREDICTO CODIGO v0 POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO

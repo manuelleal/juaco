@@ -1,0 +1,115 @@
+{
+ "etiqueta": "frio_serie_s35001-35020",
+ "veredicto": "FUNCIONA: EL LINAJE ARRANCA EN FRIO CON LA TABLA DE LA FAMILIA (en esta serie)",
+ "lineas": [
+  "semillas por brazo: {'RES0_FRIO': 20, 'RES0_10k': 20, 'RES0_60k': 20, 'BAR0_FRIO': 20, 'FAB_FRIO': 20}; persiste en T = 1000000: {'RES0_FRIO': 20, 'RES0_10k': 20, 'RES0_60k': 20, 'BAR0_FRIO': 1, 'FAB_FRIO': 0}; guardia ERR-60 disparada (cuenta como persiste): {'RES0_FRIO': 0, 'RES0_10k': 0, 'RES0_60k': 0, 'BAR0_FRIO': 0, 'FAB_FRIO': 0}",
+  "abortos que no son la guardia: []; t_corte distinto del brazo: []; bloqueados: 0",
+  "R0 de NACIDOS (fund = 0) en [10000, T - 20000], mediana sobre las semillas (cohorte vacia = 0): {'RES0_FRIO': 1.0001, 'RES0_10k': 0.9958, 'RES0_60k': 0.9769, 'BAR0_FRIO': 0.9709, 'FAB_FRIO': 0.0}",
+  "descriptivo: cuerpos vivos en T en los que persisten (mediana) {'RES0_FRIO': 30.5, 'RES0_10k': 30.5, 'RES0_60k': 30.5, 'BAR0_FRIO': 8.0, 'FAB_FRIO': None}; t_ext (mediana de los que se extinguen) {'RES0_FRIO': None, 'RES0_10k': None, 'RES0_60k': None, 'BAR0_FRIO': 129422.0, 'FAB_FRIO': 6129.5}",
+  "descriptivo, DOSIS de vivero (RES0): t_corte 1 -> 20/20 \u00b7 10 000 -> 20/20 \u00b7 60 000 -> 20/20",
+  "V1 ancla RES0_60k >= 17/20: SE CUMPLE (20) \u00b7 V2 frio limpio (0 refundados, 0 fundadores repuestos en los 3 brazos FRIO): SE CUMPLE []",
+  "P1 RES0_FRIO >= 15/20: SE CUMPLE (20) \u00b7 P2 mediana R0 nacidos >= 0.90: SE CUMPLE (1.0001) \u00b7 P3 FAB_FRIO <= 2/20: SE CUMPLE (0) \u00b7 P4 BAR0_FRIO <= 5/20: SE CUMPLE (1) \u00b7 M (MODESTO): RES0_FRIO >= 8, RES0 - BAR0 >= 6 (19), RES0 - FAB >= 6 (20): SE CUMPLE",
+  "VEREDICTO F1 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): FUNCIONA: EL LINAJE ARRANCA EN FRIO CON LA TABLA DE LA FAMILIA (en esta serie)"
+ ],
+ "d": {
+  "V1": true,
+  "V2": true,
+  "P1": true,
+  "P2": true,
+  "P3": true,
+  "P4": true,
+  "M": true,
+  "pers": {
+   "RES0_FRIO": 20,
+   "RES0_10k": 20,
+   "RES0_60k": 20,
+   "BAR0_FRIO": 1,
+   "FAB_FRIO": 0
+  },
+  "guardia": {
+   "RES0_FRIO": 0,
+   "RES0_10k": 0,
+   "RES0_60k": 0,
+   "BAR0_FRIO": 0,
+   "FAB_FRIO": 0
+  },
+  "med_r0": {
+   "RES0_FRIO": 1.0001,
+   "RES0_10k": 0.9958,
+   "RES0_60k": 0.9769,
+   "BAR0_FRIO": 0.9709,
+   "FAB_FRIO": 0.0
+  },
+  "dB": 19,
+  "dF": 20,
+  "abortos": [],
+  "sucio": [],
+  "completo": true,
+  "bloq": 0
+ },
+ "seg": 444,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "FRIO": {
+  "T": 1000000,
+  "T_lect": 120000,
+  "gen_largo": 50000,
+  "coh_desde": 10000,
+  "coh_margen": 20000
+ },
+ "BRAZOS": {
+  "RES0_FRIO": [
+   "MUT0",
+   "FAMB_RES0_ECO",
+   1
+  ],
+  "RES0_10k": [
+   "MUT0",
+   "FAMB_RES0_ECO",
+   10000
+  ],
+  "RES0_60k": [
+   "MUT0",
+   "FAMB_RES0_ECO",
+   60000
+  ],
+  "BAR0_FRIO": [
+   "MUT0",
+   "BAR0_ECO",
+   1
+  ],
+  "FAB_FRIO": [
+   "MUT0",
+   "FABRICA_ECO",
+   1
+  ]
+ },
+ "shas": {
+  "corre_frio.py": "3ba8b0f5cf1fbbfa",
+  "construye_frio.py": "5dec635e6ffe55d4",
+  "motor_frio_rapido.py": "ff9d890a5cce9dec",
+  "carros/BAR0_ECO.py": "a4b899611bd71197",
+  "PREREGISTRO_frio.md": "43129620e9e22479",
+  "juaco_eco/corre_eco_v12.py": "1340d268e1fd93d8",
+  "juaco_eco/corre_eco.py": "47d9cee4d6462116",
+  "juaco_eco/motor_eco.py": "bca3033878b59622",
+  "juaco_eco/motor_eco_rapido_fam.py": "d1f16769a53bb51c",
+  "juaco_eco/carros/FAMB_RES0_ECO.py": "94ea78589bc2ce24",
+  "juaco_eco/carros/FABRICA_ECO.py": "f1163009cb5193a2"
+ }
+}

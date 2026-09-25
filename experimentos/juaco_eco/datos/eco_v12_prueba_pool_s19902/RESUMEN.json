@@ -1,0 +1,128 @@
+{
+ "etiqueta": "v12_prueba_pool_s19902",
+ "veredicto": "NO EVALUABLE (serie incompleta o T distinto de 1e6)",
+ "lineas": [
+  "semillas por brazo: {'VIDA_T': 2, 'AZAR_T': 2, 'MUT0_T': 2, 'VIDA': 2}; persiste en T = 1000000: {'VIDA_T': 2, 'AZAR_T': 2, 'MUT0_T': 2, 'VIDA': 2}; en 120000 (descriptivo): {'VIDA_T': 2, 'AZAR_T': 2, 'MUT0_T': 2, 'VIDA': 2}",
+  "descriptivo: R0 tras el corte en los que persisten (mediana) {'VIDA_T': None, 'AZAR_T': None, 'MUT0_T': None, 'VIDA': None}; cuerpos vivos en T en los que persisten (mediana) {'VIDA_T': 53.5, 'AZAR_T': 46.5, 'MUT0_T': 51.0, 'VIDA': 18.5}; max_vivos (max) {'VIDA_T': 106, 'AZAR_T': 110, 'MUT0_T': 119, 'VIDA': 100}",
+  "F4 genes seleccionados en VIDA_T (>=15/20 mismo signo fuera de las 8 sombras): []; AZAR_T con > 8/20 (falsos positivos): []",
+  "F3 juez v2 (bateria sellada 19801-19820, T_b 100000, carro de la familia): VIDA_T > AZAR_T (pareado, estricto) 1/2 (empates 1); medianas VIDA_T 2000.0 \u00b7 AZAR_T 1936.25 \u00b7 G0 (descriptivo) 2000.0",
+  "PLACEBO (flujo 7 contra 8 del MISMO banco; valido en [5, 15] de 20): {'VIDA_T': (1.0, 2), 'AZAR_T': (0.5, 2)} -> NO VALIDO",
+  "F1 VIDA_T persiste en 1e6 >= 15/20: NO (2) \u00b7 F2 VIDA_T - VIDA >= 6: NO (0) \u00b7 F3 VIDA_T > AZAR_T >= 15/20: NO (1) \u00b7 F4: NO \u00b7 C (descriptivo) MUT0_T persiste 2/20, AZAR_T 2/20",
+  "VEREDICTO v1.2 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (serie incompleta o T distinto de 1e6)"
+ ],
+ "d": {
+  "F1": false,
+  "F2": false,
+  "F3": false,
+  "F4": false,
+  "pers": {
+   "VIDA_T": 2,
+   "AZAR_T": 2,
+   "MUT0_T": 2,
+   "VIDA": 2
+  },
+  "pers_lect": {
+   "VIDA_T": 2,
+   "AZAR_T": 2,
+   "MUT0_T": 2,
+   "VIDA": 2
+  },
+  "sel": [],
+  "falsos": [],
+  "w": 1,
+  "e": 1,
+  "placebo": {
+   "VIDA_T": [
+    1.0,
+    2
+   ],
+   "AZAR_T": [
+    0.5,
+    2
+   ]
+  },
+  "placebo_ok": false,
+  "g0_med": 2000.0
+ },
+ "seg": 3,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "V12": {
+  "T": 1000000,
+  "t_corte": 60000,
+  "T_lect": 120000,
+  "gen_largo": 50000
+ },
+ "JUEZ3": {
+  "esc": 9,
+  "n": 9,
+  "T_b": 100000,
+  "semillas": [
+   19801,
+   19802,
+   19803,
+   19804,
+   19805,
+   19806,
+   19807,
+   19808,
+   19809,
+   19810,
+   19811,
+   19812,
+   19813,
+   19814,
+   19815,
+   19816,
+   19817,
+   19818,
+   19819,
+   19820
+  ],
+  "flujo": 7,
+  "flujo_placebo": 8
+ },
+ "BRAZOS": {
+  "VIDA_T": [
+   "VIDA",
+   "FAMB_RES0_ECO"
+  ],
+  "AZAR_T": [
+   "AZAR",
+   "FAMB_RES0_ECO"
+  ],
+  "MUT0_T": [
+   "MUT0",
+   "FAMB_RES0_ECO"
+  ],
+  "VIDA": [
+   "VIDA",
+   "FABRICA_ECO"
+  ]
+ },
+ "shas": {
+  "corre_eco_v12.py": "1340d268e1fd93d8",
+  "corre_eco_v11.py": "5655c93419511162",
+  "corre_eco.py": "47d9cee4d6462116",
+  "motor_eco.py": "bca3033878b59622",
+  "motor_eco_rapido_fam.py": "d1f16769a53bb51c",
+  "carros/FABRICA_ECO.py": "f1163009cb5193a2",
+  "carros/FAMB_RES0_ECO.py": "94ea78589bc2ce24",
+  "PREREGISTRO_eco_v12.md": "6f60a80aea375edd"
+ }
+}

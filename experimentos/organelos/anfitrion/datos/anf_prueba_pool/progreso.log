@@ -1,0 +1,19 @@
+[01:46:37] ANF anf_prueba_pool · T 6000 · corte 3000 · mundo {'esc': 30, 'n0': 30, 'tope': 3000, 'muestra': 1000, 'r_rep': 0.03} · brazos ('CONTROL', 'SIN_CONTROL', 'INERTE', 'SIN_TRAGAR', 'AZAR') · pool 2 · shas {'corre_anf.py': '191e9050e086b3bd', 'motor_anf.py': '8d46795ec2b645b8', 'control_anfitrion.py': 'b26bb3efd78834a3', 'construye_anf.py': '16980240f186aa25', 'construye_siembras.py': 'c29334d3bd395457', 'identidad_anfitrion.py': '7006b880b8b7fa2f', 'siembras.json': '8ff067ba6ace9f37', 'PREREGISTRO_anfitrion.md': '86682875f9986175', 'darwin/simbiontes.py': '72f8829defe3e69f', 'darwin/motor_endo.py': '7e10329cf0cb9fd0', 'darwin/corre_endo.py': '078734369e9721c5', 'darwin/carros/FABRICA_SIMB.py': '38ac0ddba8829c88'}
+[01:46:47] [1/10] SIN_CONTROL s26993: area_post 57 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 1.0/0.0 (9.9 s; 10 s)
+[01:46:47] [2/10] CONTROL s26993: area_post 56 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 0.9897/0.0071 (10.3 s; 10 s)
+[01:46:57] [3/10] INERTE s26993: area_post 58 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 0.9984/0.0058 (9.7 s; 20 s)
+[01:46:58] [4/10] SIN_TRAGAR s26993: area_post 66 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 1.0/0.0 (10.6 s; 21 s)
+[01:47:06] [5/10] AZAR s26993: area_post 54 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 0.9995/0.011 (9.9 s; 30 s)
+[01:47:08] [6/10] CONTROL s26994: area_post 50 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 0.9958/0.0042 (9.8 s; 31 s)
+[01:47:17] [7/10] SIN_CONTROL s26994: area_post 61 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 1.0/0.0 (10.1 s; 40 s)
+[01:47:17] [8/10] INERTE s26994: area_post 54 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 0.9994/0.003 (9.5 s; 40 s)
+[01:47:26] [9/10] SIN_TRAGAR s26994: area_post 56 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 1.0/0.0 (9.8 s; 49 s)
+[01:47:27] [10/10] AZAR s26994: area_post 59 · persiste 1 · r0 nacidos con/sin None(0)/None(0) · tx/san 0.9826/0.012 (9.7 s; 50 s)
+PC (el control sirve: cuerpos vivos tras el corte) CONTROL > SIN_CONTROL 0/2 (menor 2) · medianas area_post CONTROL 53.0 · SIN_CONTROL 59.0 · INERTE 56.0 · SIN_TRAGAR 61.0 · AZAR 56.5 · persisten en T {'CONTROL': 2, 'SIN_CONTROL': 2, 'INERTE': 2, 'SIN_TRAGAR': 2, 'AZAR': 2}
+P1 (portar persiste) CONTROL > SIN_TRAGAR 0/2 (menor 2) · CONTROL > INERTE 0/2 (menor 2)
+P2 (R0 de los NACIDOS portadores, t >= 10000) CONTROL(portadores) > SIN_TRAGAR(todos) 0/2 (evaluables 0) · CONTROL(portadores) > INERTE(portadores) 0/2 (evaluables 0) · medianas r0 portadores CONTROL None · SIN_CONTROL None · INERTE None · AZAR None · SIN_TRAGAR todos None · sin simbionte CONTROL None · SIN_CONTROL None · INERTE None · SIN_TRAGAR None · AZAR None
+DESCRIPTIVO control: banco CONTROL vs AZAR tx 1 mayor/1 menor · san 0 mayor/2 menor · medianas tx_banco CONTROL 0.9928 · INERTE 0.9989 · AZAR 0.991 · san_banco CONTROL 0.0057 · INERTE 0.0044 · AZAR 0.0115 · sanciones (mediana) CONTROL 1.5 · AZAR 11.0
+DESCRIPTIVO: fraccion con simbionte tras el corte CONTROL 0.6602 · SIN_CONTROL 0.9001 · INERTE 0.8885 · SIN_TRAGAR 0.0 · AZAR 0.5818 · D CONTROL None · SIN_CONTROL None · INERTE None · AZAR None
+Guardias: errores 0 · bloqueados 0 · tope de libres 0 · libres extintos antes del corte (CONTROL) 0 · trinquete {'AZAR': 0, 'INERTE': 1} · control que debia quedar fijo y se movio [] · ERR-60 truncadas []
+VEREDICTO CONTROL DEL ANFITRION POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO (en esta ventana)
+[01:47:27] VEREDICTO: NO (en esta ventana)

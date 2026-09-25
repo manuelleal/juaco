@@ -1,0 +1,32 @@
+{
+ "humo": true,
+ "tl": {
+  "T": 8000,
+  "t_cambio": 3000,
+  "t_corte": 5000,
+  "r0_margen": 1000
+ },
+ "seg": 88.9,
+ "shas": {
+  "corre_codigo.py": "c79e161c4a027acf",
+  "motor_codigo.py": "dd0051a348f93c6e",
+  "codigo_def.py": "1096202c8afaa3d1",
+  "construye_codigo.py": "258b14b05160c8e3",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9",
+  "gramatica_def.py": "c58086e103d030d9"
+ },
+ "veredicto_sin_valor": "NO",
+ "lineas": [
+  "persisten en T {'CODIGO': 1, 'PERILLAS': 1, 'CODIGO_SIN_SOS': 1, 'AZAR': 0, 'MUT0': 1}",
+  "t_rec mediana (censurado = T - margen - t_cambio + 1) {'CODIGO': 4001.0, 'PERILLAS': 4001.0, 'CODIGO_SIN_SOS': 4001.0, 'AZAR': 4001.0, 'MUT0': 4001.0}",
+  "R0 final mediana (extinto = 0) {'CODIGO': 0.2667, 'PERILLAS': 0.0, 'CODIGO_SIN_SOS': 0.3125, 'AZAR': 0.0, 'MUT0': 0.1111}",
+  "P1 CODIGO se recupera antes que PERILLAS 0/1 (y persiste 1 vs 1) -> False",
+  "P2 CODIGO R0 final > PERILLAS 1/1 -> False",
+  "P3 CODIGO R0 final > SIN_SOS 0/1; la SOS se prende tras el cambio en 1 semillas -> False",
+  "guardia seleccion CODIGO > AZAR 1/1 -> False \u00b7 guardia variacion CODIGO > MUT0 1/1 -> False",
+  "  robustez CODIGO: neutra 0.533 \u00b7 cambia con hijos 0.178 \u00b7 cambia sin hijos 0.289 \u00b7 (sin error, con hijos 0.261)",
+  "  robustez CODIGO_SIN_SOS: neutra 0.480 \u00b7 cambia con hijos 0.160 \u00b7 cambia sin hijos 0.360 \u00b7 (sin error, con hijos 0.227)",
+  "  robustez AZAR: neutra 0.571 \u00b7 cambia con hijos 0.095 \u00b7 cambia sin hijos 0.333 \u00b7 (sin error, con hijos 0.346)",
+  "VEREDICTO CODIGO v0 POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO"
+ ]
+}

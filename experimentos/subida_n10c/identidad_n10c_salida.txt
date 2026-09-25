@@ -1,0 +1,18 @@
+IDENTIDAD n10c · 2026-09-24 03:32:16 · python 3.13.12
+  OK  (I) s12892 RES_SIN0 con filtro apagado == RES en toda la fisica (nacidos 25)
+  OK  (I) s12892 BAR_SIN0 con filtro apagado == BAR en toda la fisica (nacidos 22)
+  OK  (I) s12892 ORA_SIN0 con filtro apagado == ORACULO en toda la fisica (nacidos 26)
+  OK  (I) s12893 RES_SIN0 con filtro apagado == RES en toda la fisica (nacidos 21)
+  OK  (I) s12893 BAR_SIN0 con filtro apagado == BAR en toda la fisica (nacidos 14)
+  OK  (I) s12893 ORA_SIN0 con filtro apagado == ORACULO en toda la fisica (nacidos 26)
+  OK  (F) sin_neutras quita exactamente las R == 0 y conserva el orden 
+  OK  (O) ORA_SIN0 = las 4 entradas con R != 0 de la tabla verdadera, en su orden R [1.0, -3.0, 1.0, -3.0]
+  OK  (T) RES_SIN0: ningun hijo instala una entrada neutra y hubo partos con tabla (tablas instaladas 139, neutras 0, claves max 4)
+  OK  (T) BAR_SIN0: ningun hijo instala una entrada neutra y hubo partos con tabla (tablas instaladas 131, neutras 0, claves max 4)
+  OK  (E) corre_n10c.tarea == corre_n10b.tarea en NADA (estr completo, s12892, T 5000) 
+  OK  (E) corre_n10c.tarea == corre_n10b.tarea en RES (estr completo, s12892, T 5000) 
+  OK  (D) determinismo RES_SIN0 
+  OK  (D) determinismo BAR_SIN0 
+  OK  (R) el parser aborta ante 13 formas de bandera mala (13/13)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 1)
+RESULTADO: 16/16  (95 s)

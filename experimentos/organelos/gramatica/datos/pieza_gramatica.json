@@ -1,0 +1,383 @@
+{
+ "tabla": [
+  {
+   "contexto": "N",
+   "campo": "cuando",
+   "opcion": "nunca",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nunca/todo/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    106
+   ],
+   "r0": [
+    0.0588,
+    0.0
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "cuando",
+   "opcion": "vida",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[vida/todo/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    117
+   ],
+   "r0": [
+    0.0588,
+    0.1538
+   ],
+   "entregas": {
+    "vida/hijo/0": 231,
+    "vida/hijo/1": 30
+   }
+  },
+  {
+   "contexto": "N",
+   "campo": "cuando",
+   "opcion": "morir",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[morir/todo/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    109
+   ],
+   "r0": [
+    0.0588,
+    0.0769
+   ],
+   "entregas": {
+    "morir/hijo/0": 606,
+    "morir/hijo/1": 32
+   }
+  },
+  {
+   "contexto": "N",
+   "campo": "que",
+   "opcion": "neg",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/neg/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    111
+   ],
+   "r0": [
+    0.0588,
+    0.2667
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "que",
+   "opcion": "pos",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/pos/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    115
+   ],
+   "r0": [
+    0.0588,
+    0.0
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "que",
+   "opcion": "sin0",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/sin0/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    134
+   ],
+   "r0": [
+    0.0588,
+    0.125
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "que",
+   "opcion": "reciente",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/reciente/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    126
+   ],
+   "r0": [
+    0.0588,
+    0.15
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "quien",
+   "opcion": "hermano",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/todo/hermano/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    96
+   ],
+   "r0": [
+    0.0588,
+    0.0
+   ],
+   "entregas": {
+    "nacer/hermano/0": 94,
+    "nacer/hermano/1": 2
+   }
+  },
+  {
+   "contexto": "N",
+   "campo": "quien",
+   "opcion": "vecino",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/todo/vecino/copiar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    103
+   ],
+   "r0": [
+    0.0588,
+    0.0
+   ],
+   "entregas": {
+    "nacer/vecino/1": 103
+   }
+  },
+  {
+   "contexto": "N",
+   "campo": "como",
+   "opcion": "promediar",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/todo/hijo/promediar]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    93
+   ],
+   "r0": [
+    0.0588,
+    0.0
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "como",
+   "opcion": "invertir",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/todo/hijo/invertir]",
+   "cambia": true,
+   "n_nac": [
+    121,
+    102
+   ],
+   "r0": [
+    0.0588,
+    0.0
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "N",
+   "campo": "como",
+   "opcion": "olvidar",
+   "base": "[nacer/todo/hijo/copiar]",
+   "prueba": "[nacer/todo/hijo/olvidar]",
+   "cambia": false,
+   "n_nac": [
+    121,
+    121
+   ],
+   "r0": [
+    0.0588,
+    0.0588
+   ],
+   "entregas": {}
+  },
+  {
+   "contexto": "V",
+   "campo": "como",
+   "opcion": "promediar",
+   "base": "[vida/todo/vecino/copiar]",
+   "prueba": "[vida/todo/vecino/promediar]",
+   "cambia": true,
+   "n_nac": [
+    101,
+    105
+   ],
+   "r0": [
+    0.2222,
+    0.0
+   ],
+   "entregas": {
+    "vida/vecino/1": 259
+   }
+  },
+  {
+   "contexto": "V",
+   "campo": "como",
+   "opcion": "invertir",
+   "base": "[vida/todo/vecino/copiar]",
+   "prueba": "[vida/todo/vecino/invertir]",
+   "cambia": true,
+   "n_nac": [
+    101,
+    59
+   ],
+   "r0": [
+    0.2222,
+    0.0
+   ],
+   "entregas": {
+    "vida/vecino/1": 237
+   }
+  },
+  {
+   "contexto": "V",
+   "campo": "como",
+   "opcion": "olvidar",
+   "base": "[vida/todo/vecino/copiar]",
+   "prueba": "[vida/todo/vecino/olvidar]",
+   "cambia": false,
+   "n_nac": [
+    101,
+    101
+   ],
+   "r0": [
+    0.2222,
+    0.2222
+   ],
+   "entregas": {
+    "vida/vecino/1": 265
+   }
+  },
+  {
+   "contexto": "V",
+   "campo": "que",
+   "opcion": "reciente",
+   "base": "[vida/todo/vecino/copiar]",
+   "prueba": "[vida/reciente/vecino/copiar]",
+   "cambia": true,
+   "n_nac": [
+    101,
+    103
+   ],
+   "r0": [
+    0.2222,
+    0.0
+   ],
+   "entregas": {
+    "vida/vecino/1": 265,
+    "vida/vecino/0": 1
+   }
+  },
+  {
+   "contexto": "V",
+   "campo": "quien",
+   "opcion": "hijo",
+   "base": "[vida/todo/vecino/copiar]",
+   "prueba": "[vida/todo/hijo/copiar]",
+   "cambia": true,
+   "n_nac": [
+    101,
+    117
+   ],
+   "r0": [
+    0.2222,
+    0.1538
+   ],
+   "entregas": {
+    "vida/hijo/0": 231,
+    "vida/hijo/1": 30
+   }
+  },
+  {
+   "contexto": "V",
+   "campo": "quien",
+   "opcion": "hermano",
+   "base": "[vida/todo/vecino/copiar]",
+   "prueba": "[vida/todo/hermano/copiar]",
+   "cambia": true,
+   "n_nac": [
+    101,
+    105
+   ],
+   "r0": [
+    0.2222,
+    0.0
+   ],
+   "entregas": {
+    "vida/hermano/0": 262,
+    "vida/hermano/1": 8
+   }
+  },
+  {
+   "contexto": "M",
+   "campo": "como",
+   "opcion": "olvidar",
+   "base": "[morir/todo/vecino/copiar]",
+   "prueba": "[morir/todo/vecino/olvidar]",
+   "cambia": false,
+   "n_nac": [
+    111,
+    111
+   ],
+   "r0": [
+    0.0769,
+    0.0769
+   ],
+   "entregas": {
+    "morir/vecino/1": 608
+   }
+  },
+  {
+   "contexto": "M",
+   "campo": "como",
+   "opcion": "invertir",
+   "base": "[morir/todo/vecino/copiar]",
+   "prueba": "[morir/todo/vecino/invertir]",
+   "cambia": true,
+   "n_nac": [
+    111,
+    43
+   ],
+   "r0": [
+    0.0769,
+    0.0
+   ],
+   "entregas": {
+    "morir/vecino/1": 561
+   }
+  }
+ ],
+ "inertes": [
+  [
+   "como",
+   "olvidar"
+  ]
+ ],
+ "T": 8000,
+ "t_corte": 6000,
+ "semilla": 21003
+}

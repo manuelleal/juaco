@@ -1,0 +1,142 @@
+IDENTIDAD motor_eco_rapido_org · 2026-09-24 12:06:08 · python 3.13.12 · numpy 2.4.3 · numba 0.67.0 · gemelo 024f0a8ea5e12c7d · arnes aa188b564b8d831e
+(0) ORIGEN (sha fijados en el gemelo; el instrumento Python de ECO v2 en disco es el construido)   [12:06:08, 0 s]
+  [OK ] (1) experimentos/juaco_eco/motor_eco2.py sha 0921ee3a50ce7f7a
+  [OK ] (2) experimentos/juaco_eco/carros/FABRICA_ECO.py sha f1163009cb5193a2
+  [OK ] (3) experimentos/juaco_eco/carros/FAMB_RES0_ECO.py sha 94ea78589bc2ce24
+  [OK ] (4) experimentos/juaco_eco/carros/FAMB_ORG_ECO.py sha 75d5f4118079ff15
+  [OK ] (5) experimentos/carrera_escuderias/carros/FABRICA.py sha 2ebee3e99ea5a33a
+  [OK ] (6) experimentos/generaciones/pista2.py sha 4d2bee16e7961261
+  [OK ] (7) motor_eco2.py y carros/FAMB_ORG_ECO.py en disco == los que construye construye_eco_org.py
+  [OK ] (8) genoma de motor_eco2: los 18 de motor_eco en su sitio + ensena, filtra0 (G0 0.9, rango [0.225, 3.6]); UMBRAL_ORG 1.0 · G0 organos [np.float64(0.9), np.float64(0.9)], rango [0.225, 3.6]
+(P) PRIMITIVAS (las del gemelo de la familia, re-verificadas en este modulo)   [12:06:08, 0 s]
+  [OK ] (9) exp del gemelo (bucle 1-D de np.exp por ctypes) == np.exp, 200 000 argumentos
+  [OK ] (10) CONTROL (debe fallar): exp de libm != np.exp en esta maquina · distintos 4609/100000
+  [OK ] (11) BLAS de numba == BLAS de NumPy (ddot 90 y ddot 6 con un patron), 100 000 casos · distintos 0
+  [OK ] (12) CONTROL (debe fallar): suma de izquierda a derecha != ddot de BLAS (90 denso) · distintos 40911/50000
+  [OK ] (13) fila de la sorpresa del nodo: .sum(1) de NumPy en (m, 6), m = 1..400 == de izquierda a derecha desde 0.0, 81554 filas · distintos 0
+  [OK ] (14) codigo de Kenyon: top-3 del gemelo == set(np.argsort(...)[-3:]), 10 000 casos · distintos 0; con empate en la frontera (a NumPy por objmode) 1188
+(N) NACIMIENTO AISLADO de FAMB_ORG_ECO (20 genes; organos al azar y en el umbral) y al_parir con y sin ensena   [12:06:11, 3 s]
+  [OK ] (15) nace de FAMB_ORG_ECO (genoma de 20 al azar, memoria None o tabla) == gemelo (Wl, KW, Wps, Wns, nodo, lecturas, lect_div, recibido, organos expresados y los dos Generators), 2500 casos · distintos 0; memoria None 524; hijo con filtra0 1664; organo en el umbral EXACTO 1.0 346
+  [OK ] (16) CONTROL (debe fallar): gemelo sin leer el nodo != carro · distintos 336/400
+  [OK ] (17) CONTROL (debe fallar): gemelo empate al PRIMER indice != carro · distintos 122/400
+  [OK ] (18) al_parir de FAMB_ORG_ECO == gemelo: con 'ensena' la tabla (_tabla_padre) y el parto contado; sin el, None y el parto NO se cuenta; 2000 casos · distintos 0; sin ensena 688
+(I) E1: eco=None con FAMB_ORG_ECO (organos apagados: el ctx no trae los genes) y mezclas   [12:06:28, 20 s]
+  [OK ] (19) 9 ORG fija T=5000 s20091 · salida = · traza 47334 = · nacimientos 25 = · cerebros+familia+organos 10 vivos = · mundo = · max_vivos 12 muertes 135 partos 25 gen_max 2 divisiones 6 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 25 · vivos con ensena/filtra0 0/0 · 2.9 s / 29.31 s
+  [OK ] (20) 9 ORG fija T=5000 s20092 · salida = · traza 47724 = · nacimientos 21 = · cerebros+familia+organos 9 vivos = · mundo = · max_vivos 12 muertes 162 partos 21 gen_max 1 divisiones 5 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 21 · vivos con ensena/filtra0 0/0 · 3.2 s / 0.07 s
+  [OK ] (21) 9 ORG fija T=5000 s10001 · salida = · traza 48521 = · nacimientos 24 = · cerebros+familia+organos 11 vivos = · mundo = · max_vivos 13 muertes 147 partos 24 gen_max 2 divisiones 2 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 24 · vivos con ensena/filtra0 0/0 · 2.7 s / 0.07 s
+  [OK ] (22) 9 ORG inmediata T=3000 s20093 · salida = · traza 27679 = · nacimientos 13 = · cerebros+familia+organos 10 vivos = · mundo = · max_vivos 11 muertes 112 partos 13 gen_max 1 divisiones 1 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 13 · vivos con ensena/filtra0 0/0 · 1.8 s / 0.04 s
+  [OK ] (23) mezcla 3 ORG + 3 FAMB_RES0 + 3 FABRICA_ECO s20094 · salida = · traza 74783 = · nacimientos 35 = · cerebros+familia+organos 23 vivos = · mundo = · max_vivos 23 muertes 157 partos 35 gen_max 4 divisiones 3 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 3 · vivos con ensena/filtra0 0/0 · 4.2 s / 0.11 s
+  [OK ] (24) 1 ORG (n = 1) s20095 · salida = · traza 8078 = · nacimientos 1 = · cerebros+familia+organos 1 vivos = · mundo = · max_vivos 2 muertes 12 partos 1 gen_max 1 divisiones 0 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 1 · vivos con ensena/filtra0 0/0 pisos 33 · 0.5 s / 0.01 s
+  [OK ] (25) eco=None: FAMB_ORG_ECO (organos apagados) == FABRICA_ECO en toda la fisica, en el gemelo (la identidad Python del constructor)
+(E) E2: eco=dict con FAMB_ORG_ECO: brazos, organos prendidos/apagados/mezclados/en el umbral, mutacion, esc 30/90/270   [12:07:14, 66 s]
+  [OK ] (26) brazo VIDA esc 30, corte 3000 s20091 · salida = · traza 120193 = · nacimientos 62 = · cerebros+familia+organos 2 vivos = · mundo = · filas 355 = · max_vivos 36 muertes 353 partos 62 gen_max 2 divisiones 16 · partos ORG con tabla 2 (el hijo filtra 0) / sin tabla 60 · vivos con ensena/filtra0 0/0 · 7.5 s / 0.21 s
+        eco: nacidos 62 · mutaciones 337 (sombras 499) · fundadores del banco 263 · refundados 263 · t_ext None · corte 34 · gen_t 3
+  [OK ] (27) brazo VIDA esc 30, corte 3000 s19901 · salida = · traza 119606 = · nacimientos 63 = · cerebros+familia+organos 2 vivos = · mundo = · filas 346 = · max_vivos 37 muertes 344 partos 63 gen_max 3 divisiones 27 · partos ORG con tabla 5 (el hijo filtra 0) / sin tabla 58 · vivos con ensena/filtra0 0/0 · 7.1 s / 0.21 s
+        eco: nacidos 63 · mutaciones 327 (sombras 509) · fundadores del banco 253 · refundados 253 · t_ext None · corte 36 · gen_t 3
+  [OK ] (28) brazo AZAR esc 30 (p_mut 0.3), corte 3000 s20092 · salida = · traza 118886 = · nacimientos 48 = · cerebros+familia+organos 1 vivos = · mundo = · filas 359 = · max_vivos 35 muertes 358 partos 48 gen_max 2 divisiones 3 · partos ORG con tabla 8 (el hijo filtra 2) / sin tabla 40 · vivos con ensena/filtra0 0/0 · 7.8 s / 0.20 s
+        eco: nacidos 48 · mutaciones 2018 (sombras 2252) · fundadores del banco 281 · refundados 281 · t_ext None · corte 34 · gen_t 3
+  [OK ] (29) brazo MUT0 esc 30, corte 3000 s20093 · salida = · traza 118587 = · nacimientos 57 = · cerebros+familia+organos 1 vivos = · mundo = · filas 332 = · max_vivos 34 muertes 331 partos 57 gen_max 2 divisiones 14 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 57 · vivos con ensena/filtra0 0/0 · 7.3 s / 0.21 s
+        eco: nacidos 57 · mutaciones 0 (sombras 0) · fundadores del banco 245 · refundados 245 · t_ext None · corte 33 · gen_t 3
+  [OK ] (30) VIDA esc 30 con p_mut 0.3 (los organos se prenden por mutacion) s20094 · salida = · traza 118255 = · nacimientos 44 = · cerebros+familia+organos 5 vivos = · mundo = · filas 311 = · max_vivos 35 muertes 306 partos 44 gen_max 3 divisiones 18 · partos ORG con tabla 9 (el hijo filtra 0) / sin tabla 35 · vivos con ensena/filtra0 3/0 · 7.6 s / 0.20 s
+        eco: nacidos 44 · mutaciones 1675 (sombras 2090) · fundadores del banco 237 · refundados 237 · t_ext None · corte 30 · gen_t 3
+  [OK ] (31) organos PRENDIDOS (ensena y filtra0 1.2), sin mutacion s20095 · salida = · traza 78311 = · nacimientos 32 = · cerebros+familia+organos 19 vivos = · mundo = · filas 207 = · max_vivos 19 muertes 188 partos 32 gen_max 6 divisiones 5 · partos ORG con tabla 32 (el hijo filtra 32) / sin tabla 0 · vivos con ensena/filtra0 19/19 · 4.5 s / 0.12 s
+        eco: nacidos 32 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 166 · t_ext None · corte None · gen_t 0
+  [OK ] (32) ensena SI y filtra0 NO (la tabla con las neutras) s20096 · salida = · traza 64062 = · nacimientos 31 = · cerebros+familia+organos 9 vivos = · mundo = · filas 181 = · max_vivos 16 muertes 172 partos 31 gen_max 5 divisiones 8 · partos ORG con tabla 31 (el hijo filtra 0) / sin tabla 0 · vivos con ensena/filtra0 9/0 · 4.0 s / 0.10 s
+        eco: nacidos 31 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 141 · t_ext None · corte None · gen_t 0
+  [OK ] (33) ensena NO y filtra0 SI (nadie ensena) s20097 · salida = · traza 47673 = · nacimientos 23 = · cerebros+familia+organos 9 vivos = · mundo = · filas 163 = · max_vivos 12 muertes 154 partos 23 gen_max 1 divisiones 2 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 23 · vivos con ensena/filtra0 0/9 · 3.0 s / 0.08 s
+        eco: nacidos 23 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 131 · t_ext None · corte None · gen_t 0
+  [OK ] (34) organos en el umbral EXACTO 1.0 (expresados) s20098 · salida = · traza 81628 = · nacimientos 31 = · cerebros+familia+organos 16 vivos = · mundo = · filas 219 = · max_vivos 18 muertes 203 partos 31 gen_max 4 divisiones 9 · partos ORG con tabla 31 (el hijo filtra 31) / sin tabla 0 · vivos con ensena/filtra0 16/16 · 4.8 s / 0.37 s
+        eco: nacidos 31 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 179 · t_ext None · corte None · gen_t 0
+  [OK ] (35) organos un ulp POR DEBAJO del umbral (apagados) s20099 · salida = · traza 48365 = · nacimientos 19 = · cerebros+familia+organos 11 vivos = · mundo = · filas 168 = · max_vivos 13 muertes 157 partos 19 gen_max 2 divisiones 6 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 19 · vivos con ensena/filtra0 0/0 · 2.9 s / 0.08 s
+        eco: nacidos 19 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 140 · t_ext None · corte None · gen_t 0
+  [OK ] (36) organos MEZCLADOS por linaje, p_mut 0.3, 2 sombras, banco 40 s10002 · salida = · traza 71692 = · nacimientos 34 = · cerebros+familia+organos 17 vivos = · mundo = · filas 183 = · max_vivos 18 muertes 166 partos 34 gen_max 5 divisiones 5 · partos ORG con tabla 27 (el hijo filtra 15) / sin tabla 7 · vivos con ensena/filtra0 15/13 · 4.5 s / 0.16 s
+        eco: nacidos 34 · mutaciones 1036 (sombras 409) · fundadores del banco 140 · refundados 140 · t_ext None · corte None · gen_t 6
+  [OK ] (37) MEZCLADOS esc 18, AZAR (donante azar), p_mut 0.3 s10003 · salida = · traza 88083 = · nacimientos 39 = · cerebros+familia+organos 9 vivos = · mundo = · filas 189 = · max_vivos 22 muertes 180 partos 39 gen_max 3 divisiones 4 · partos ORG con tabla 34 (el hijo filtra 18) / sin tabla 5 · vivos con ensena/filtra0 8/3 · 5.5 s / 0.18 s
+        eco: nacidos 39 · mutaciones 1005 (sombras 1902) · fundadores del banco 132 · refundados 132 · t_ext None · corte 21 · gen_t 3
+  [OK ] (38) (R) refunda=0 con los organos prendidos: si todo muere, muere s10004 · salida = · traza 22542 = · nacimientos 14 = · cerebros+familia+organos 0 vivos = · mundo = · filas 23 = · max_vivos 9 muertes 23 partos 14 gen_max 5 divisiones 1 · partos ORG con tabla 14 (el hijo filtra 14) / sin tabla 0 · vivos con ensena/filtra0 0/0 · 1.4 s / 0.03 s
+        eco: nacidos 14 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 0 · t_ext 7394 · corte None · gen_t 0
+  [OK ] (39) tope 25 con organos mezclados (bloqueados) s10005 · salida = · traza 123983 = · nacimientos 51 = · cerebros+familia+organos 25 vivos = · mundo = · filas 367 = · max_vivos 25 muertes 342 partos 51 gen_max 4 divisiones 14 · partos ORG con tabla 40 (el hijo filtra 27) / sin tabla 11 · vivos con ensena/filtra0 20/20 bloqueados 1 · 7.7 s / 0.21 s
+        eco: nacidos 51 · mutaciones 692 (sombras 219) · fundadores del banco 298 · refundados 298 · t_ext None · corte None · gen_t 4
+  [OK ] (40) DIVIDE con organos prendidos: eta x4, NK 12 s10006 · salida = · traza 71997 = · nacimientos 29 = · cerebros+familia+organos 18 vivos = · mundo = · filas 210 = · max_vivos 20 muertes 192 partos 29 gen_max 6 divisiones 65 · partos ORG con tabla 29 (el hijo filtra 29) / sin tabla 0 · vivos con ensena/filtra0 18/18 · 4.5 s / 0.10 s
+        eco: nacidos 29 · mutaciones 0 (sombras 0) · fundadores del banco 0 · refundados 172 · t_ext None · corte None · gen_t 0
+  [OK ] (41) mezcla de cerebros con eco: 6 ORG + 6 FAMB_RES0 + 6 FABRICA_ECO (organos mezclados) s10007 · salida = · traza 126593 = · nacimientos 58 = · cerebros+familia+organos 26 vivos = · mundo = · filas 377 = · max_vivos 26 muertes 351 partos 58 gen_max 6 divisiones 9 · partos ORG con tabla 13 (el hijo filtra 10) / sin tabla 7 · vivos con ensena/filtra0 7/5 · 7.5 s / 0.20 s
+        eco: nacidos 58 · mutaciones 1415 (sombras 0) · fundadores del banco 301 · refundados 301 · t_ext None · corte None · gen_t 0
+  [OK ] (42) brazo VIDA esc 90, corte 2000 s19902 · salida = · traza 235447 = · nacimientos 95 = · cerebros+familia+organos 27 vivos = · mundo = · filas 659 = · max_vivos 100 muertes 632 partos 95 gen_max 2 divisiones 25 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 95 · vivos con ensena/filtra0 2/1 · 15.3 s / 0.48 s
+        eco: nacidos 95 · mutaciones 572 (sombras 788) · fundadores del banco 474 · refundados 474 · t_ext None · corte 93 · gen_t 1
+  [OK ] (43) brazo AZAR esc 90, corte 2000 s19903 · salida = · traza 238404 = · nacimientos 108 = · cerebros+familia+organos 25 vivos = · mundo = · filas 671 = · max_vivos 100 muertes 646 partos 108 gen_max 2 divisiones 18 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 108 · vivos con ensena/filtra0 0/0 · 16.4 s / 0.46 s
+        eco: nacidos 108 · mutaciones 509 (sombras 824) · fundadores del banco 473 · refundados 473 · t_ext None · corte 97 · gen_t 1
+  [OK ] (44) brazo MUT0 esc 90 con organos PRENDIDOS, corte 2000 s19904 · salida = · traza 266843 = · nacimientos 120 = · cerebros+familia+organos 51 vivos = · mundo = · filas 682 = · max_vivos 111 muertes 631 partos 120 gen_max 3 divisiones 26 · partos ORG con tabla 120 (el hijo filtra 120) / sin tabla 0 · vivos con ensena/filtra0 51/51 · 18.5 s / 0.51 s
+        eco: nacidos 120 · mutaciones 0 (sombras 0) · fundadores del banco 472 · refundados 472 · t_ext None · corte 110 · gen_t 1
+  [OK ] (45) brazo VIDA esc 270 (corto), corte 800 s19905 · salida = · traza 295255 = · nacimientos 78 = · cerebros+familia+organos 149 vivos = · mundo = · filas 822 = · max_vivos 281 muertes 673 partos 78 gen_max 1 divisiones 42 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 78 · vivos con ensena/filtra0 1/0 · 21.2 s / 0.90 s
+        eco: nacidos 78 · mutaciones 537 (sombras 578) · fundadores del banco 474 · refundados 474 · t_ext None · corte 279 · gen_t 0
+(C) CHECKPOINT: estado completo (con organos) del original == del gemelo; cortado y reanudado; firmas   [12:10:04, 236 s]
+  [OK ] (46) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras s19906: seguida con checkpoints, gemelo == original (toda la salida) · checkpoints [1000, 2000, 3000] / [1000, 2000, 3000]
+  [OK ] (47) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras: ESTADO COMPLETO en t=1000 (cuerpos, cerebros, familia, organos, genomas, mundo, rng, banco, contadores) · 20 cuerpos (2 con tabla, 15 con ensena), 50 objetos, banco 21
+  [OK ] (48) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras: ESTADO COMPLETO en t=2000 (cuerpos, cerebros, familia, organos, genomas, mundo, rng, banco, contadores) · 21 cuerpos (4 con tabla, 14 con ensena), 50 objetos, banco 30
+  [OK ] (49) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras: ESTADO COMPLETO en t=3000 (cuerpos, cerebros, familia, organos, genomas, mundo, rng, banco, contadores) · 15 cuerpos (10 con tabla, 14 con ensena), 72 objetos, banco 42
+  [OK ] (50) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras: gemelo cortado en t=1000 y reanudado == original seguido (toda la salida)
+  [OK ] (51) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras: gemelo cortado en t=2000 y reanudado == original seguido (toda la salida)
+  [OK ] (52) organos mezclados esc 18, p_mut 0.2, corte 2500, 4 sombras: gemelo cortado en t=3000 y reanudado == original seguido (toda la salida)
+  [OK ] (53) VIDA esc 90, muestra 1000 s19907: seguida con checkpoints, gemelo == original (toda la salida) · checkpoints [1000, 2000] / [1000, 2000]
+  [OK ] (54) VIDA esc 90, muestra 1000: ESTADO COMPLETO en t=1000 (cuerpos, cerebros, familia, organos, genomas, mundo, rng, banco, contadores) · 100 cuerpos (0 con tabla, 3 con ensena), 276 objetos, banco 114
+  [OK ] (55) VIDA esc 90, muestra 1000: ESTADO COMPLETO en t=2000 (cuerpos, cerebros, familia, organos, genomas, mundo, rng, banco, contadores) · 95 cuerpos (1 con tabla, 4 con ensena), 254 objetos, banco 163
+  [OK ] (56) VIDA esc 90, muestra 1000: gemelo cortado en t=1000 y reanudado == original seguido (toda la salida)
+  [OK ] (57) VIDA esc 90, muestra 1000: gemelo cortado en t=2000 y reanudado == original seguido (toda la salida)
+  [OK ] (58) checkpoint del gemelo de OTRA corrida aborta · SystemExit: ECO: el checkpoint es de otra corrida (firma distinta)
+  [OK ] (59) checkpoint del ORIGINAL en el gemelo aborta (formato propio; declarado) · SystemExit: ECO: el checkpoint es de otra corrida (firma distinta)
+  [OK ] (60) checkpoint del GEMELO en el original aborta · SystemExit: ECO: el checkpoint es de otra corrida (firma distinta)
+  [OK ] (61) checkpoint de ORG reanudado con las MISMAS etiquetas y el cerebro FAMB_RES0_ECO aborta · SystemExit: ECO: el checkpoint es de otra corrida (cerebros distintos)
+(X) EL MUNDO DE LA SERIE de v2 con FAMB_ORG_ECO (esc 90: VIDA, AZAR, MUT0; esc 270 corto)   [12:10:25, 257 s]
+  [OK ] (62) esc 90 VIDA, corte 3000 s19908 T=4000: toda la salida · cuerpos medios 78.8, max 99, nacidos 151, refundados 782, vivos en T 24; original 20.9 s (192 pasos/s), gemelo 0.49 s (8236 pasos/s), x43
+  [OK ] (63) esc 90 AZAR, corte 3000 s19909 T=4000: toda la salida · cuerpos medios 81.8, max 99, nacidos 149, refundados 745, vivos en T 32; original 22.1 s (181 pasos/s), gemelo 0.53 s (7557 pasos/s), x42
+  [OK ] (64) esc 90 MUT0, corte 3000 s10008 T=4000: toda la salida · cuerpos medios 81.6, max 102, nacidos 148, refundados 827, vivos en T 34; original 21.7 s (185 pasos/s), gemelo 0.43 s (9306 pasos/s), x50
+  [OK ] (65) esc 270 VIDA, corte 1000 s10009 T=1500: toda la salida · cuerpos medios 229.0, max 288, nacidos 135, refundados 629, vivos en T 135; original 25.9 s (58 pasos/s), gemelo 0.81 s (1846 pasos/s), x32
+(J) JUEZ (refunda=0, genoma=) con motor_eco2 / el gemelo y corre_eco_v2.trabajo con el gemelo (usa_gemelo)   [12:11:59, 351 s]
+  [OK ] (66) juez con FAMB_ORG_ECO: G0 de 20 genes (organos apagados), T_b 10000, 2 semillas de practica · [(2484, 4), (2540, 6)]
+  [OK ] (67) juez con FAMB_ORG_ECO: los organos PRENDIDOS, T_b 10000 · [(10000, 26)]
+  [OK ] (68) juez con FAMB_ORG_ECO: banco REAL del corte (36 genomas de 20, 30 con ensena), 9 al azar por semilla, T_b 6000 · [(6000, 21), (6000, 15)]
+  [OK ] (69) corre_eco_v2.trabajo(20097, w30, VIDA, T 12000, corte 8000) con el gemelo (usa_gemelo) == con Python (salvo 'seg' y 'motor') · persiste 1 vivos_T 2 nacidos 138 banco con ensena {'ensena': 0.0, 'filtra0': 0.0}; original 19.5 s, gemelo 0.4 s
+  [OK ] (70) corre_eco_v2.trabajo con el gemelo cortado ('corte de luz' tras el checkpoint) y reanudado == Python seguido · cortado en t=10000
+  [OK ] (71) el MUNDO y el JUEZ de corre_eco quedan como estaban y el motor de corre_eco_v2 vuelve a Python
+(L) LARGO: eco VIDA esc 9 con mutacion fuerte (los organos se prenden y apagan), T 30 000   [12:12:27, 379 s]
+  [OK ] (72) eco VIDA esc 9 p_mut 0.4, organos mezclados, T=30000, corte 20000 s19909 · salida = · traza 383973 = · nacimientos 164 = · cerebros+familia+organos 1 vivos = · mundo = · filas 795 = · max_vivos 27 muertes 794 partos 164 gen_max 15 divisiones 35 · partos ORG con tabla 128 (el hijo filtra 56) / sin tabla 36 · vivos con ensena/filtra0 1/0 · 24.2 s / 0.67 s
+(R) REGRESION con 20 genes (FABRICA_ECO, FAMB_RES0_ECO contra motor_eco2) y eco=None: gemelo de organos == gemelo de la familia   [12:12:53, 405 s]
+  [OK ] (73) eco VIDA esc 18 FABRICA_ECO, corte 3000 s10010 · salida = · traza 73273 = · nacimientos 33 = · cerebros+familia+organos 1 vivos = · mundo = · filas 180 = · max_vivos 22 muertes 179 partos 33 gen_max 2 divisiones 13 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 0 · vivos con ensena/filtra0 0/0 · 4.8 s / 0.12 s
+  [OK ] (74) eco VIDA esc 18 FAMB_RES0_ECO, corte 3000 s10011 · salida = · traza 94954 = · nacimientos 48 = · cerebros+familia+organos 7 vivos = · mundo = · filas 220 = · max_vivos 28 muertes 213 partos 48 gen_max 5 divisiones 13 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 0 · vivos con ensena/filtra0 0/0 · 6.5 s / 0.18 s
+  [OK ] (75) 9 FABRICA eco=None T=3000 s10001 · salida = · traza 29306 = · nacimientos 13 = · cerebros+familia+organos 9 vivos = · mundo = · max_vivos 13 muertes 86 partos 13 gen_max 2 divisiones 2 · partos ORG con tabla 0 (el hijo filtra 0) / sin tabla 0 · vivos con ensena/filtra0 0/0 · 1.9 s / 0.06 s
+  [OK ] (76) 9 FAMB_RES0_ECO eco=None T=40000 s10002: gemelo de organos == gemelo de la familia (132/132) en toda la salida · partos 277
+  [OK ] (77) 9 FABRICA_ECO eco=None T=40000 s10003: gemelo de organos == gemelo de la familia (132/132) en toda la salida · partos 201
+(K) CONTROLES que DEBEN fallar (si nada cambia, nada controla: ERR-38)   [12:13:10, 421 s]
+  [OK ] (78) gemelo con la semilla vecina != original
+  barrido de los controles sobre 30 corridas guardadas del original ((I), (E), (L), (R))
+  [OK ] (79) CONTROL (debe fallar): gemelo con los organos SIEMPRE expresados != original en TODA corrida con un parto de un padre SIN 'ensena' o un hijo SIN 'filtra0' que recibio neutras · distintas 22/22 (en nacimientos 22); en las otras 8: distintas 0; con la FISICA (salida o filas) distinta: 22/30
+  [OK ] (80) CONTROL (debe fallar): gemelo con 'filtra0' leido del PADRE (no del hijo) != original en TODA corrida con un parto con neutras donde el 'filtra0' del padre y el del hijo no coinciden · distintas 6/6 (en nacimientos 6); en las otras 24: distintas 0; con la FISICA (salida o filas) distinta: 4/30
+  [OK ] (81) CONTROL (debe fallar): gemelo que NO lee el nodo != original en TODA corrida con alguna tabla no vacia · distintas 17/17 (en nacimientos 17); en las otras 13: distintas 0; con la FISICA (salida o filas) distinta: 17/30
+  [OK ] (82) CONTROL (debe fallar): gemelo con el empate de la lectura al PRIMER indice != original en TODA corrida con alguna tabla de UNA entrada · distintas 2/2 (en nacimientos 2); en las otras 28: distintas 4; con la FISICA (salida o filas) distinta: 0/30
+  [OK ] (83) gemelo con exp de libm (sin el bucle de NumPy) != original (trayectoria o pesos) · salida = · traza = · cerebros !=
+  [OK ] (84) gemelo con suma ingenua (sin BLAS) != original (trayectoria o pesos) · salida = · traza = · cerebros !=
+  [OK ] (85) gemelo con turno fijo (mismo consumo de azar) != original (trayectoria o pesos) · salida != · traza != · cerebros !=
+  [OK ] (86) brazo VIDA != MUT0 (misma semilla, ORG) · mutaciones 337 / 0
+  [OK ] (87) organos prendidos != apagados (misma semilla): el organo cambia la fisica · partos 32 / 29
+(G) GUARDIAS: las del original con el mismo mensaje; las del gemelo (lo que no compila aborta)   [12:13:44, 456 s]
+  [OK ] (88) genoma de 18 genes (el de motor_eco) con motor_eco2: aborta igual que el original · SystemExit: ECO: genoma con forma (3, 18); se espera (3, 20)
+  [OK ] (89) organo fuera de rango (ensena 3.7 > 3.6): aborta igual que el original · SystemExit: ECO: genoma fuera de rango
+  [OK ] (90) 'FAMB_ORG_ECO' como texto con eco=None (no es carro de la carrera): aborta igual que el original · SystemExit: PISTA: no existe el carro /home/user/juaco/experimentos/carrera_escuderias/carros/FAMB_ORG_ECO.py
+  [OK ] (91) clave eco desconocida: aborta igual que el original · SystemExit: ECO: claves desconocidas en eco: ['refnda']
+  [OK ] (92) t_corte sin vivero: aborta igual que el original · SystemExit: ECO: t_corte exige refunda=1 (vivero)
+  [OK ] (93) 401 linajes con eco: aborta igual que el original · SystemExit: PISTA2: entre 1 y 9 linajes fundadores (hay 401)
+  [OK ] (94) mundo_n fuera de rango con eco: aborta igual que el original · SystemExit: PISTA2: mundo_n entre 1 y 9
+  [OK ] (95) diag=1: aborta igual que el original · SystemExit: PISTA2: solapadas=1 exige diag=0 (el diagnostico de v1 no se porto; declarado)
+  [OK ] (96) carro APR_ECO con eco: el gemelo aborta (fuera de alcance) · ValueError: motor_eco_rapido_org: solo compila los cerebros FABRICA / FABRICA_ECO / FAMB_RES0_ECO / FAMB_ORG_ECO con su 
+  [OK ] (97) T = 3: el gemelo aborta (fuera de alcance) · ValueError: motor_eco_rapido_org: T < 4 no se compila (el original divide por T // 4 = 0 en el primer encuentro)
+(D) DETERMINISMO   [12:13:44, 456 s]
+  [OK ] (98) dos llamadas iguales del gemelo (ORG, eco VIDA con mutacion) dan la misma salida
+(Z) CACHE: un proceso NUEVO carga la cache de numba y reproduce corridas del original   [12:13:44, 456 s]
+  [OK ] (99) proceso NUEVO: lee la cache (0 compilaciones) y reproduce 3 corridas del original bit a bit (ORG eco=None; ORG VIDA esc 90; ORG VIDA esc 270) · identicas [True, True, True]; funciones cargadas de la cache 2, compiladas 0; import 0.55 s; corridas [0.94, 0.64, 0.7] s
+(V) ACELERACION (mismo mundo, mismo proceso; la maquina corre otros procesos: tiempos con carga)   [12:13:48, 459 s]
+  esc 90 VIDA, corte 3000 con FAMB_ORG_ECO: T=4000, 78.8 cuerpos de media · original 192 pasos/s (66.2 us por cuerpo y paso) · gemelo 8236 pasos/s (1.54 us por cuerpo y paso) · x43
+  esc 90 AZAR, corte 3000 con FAMB_ORG_ECO: T=4000, 81.8 cuerpos de media · original 181 pasos/s (67.6 us por cuerpo y paso) · gemelo 7557 pasos/s (1.62 us por cuerpo y paso) · x42
+  esc 90 MUT0, corte 3000 con FAMB_ORG_ECO: T=4000, 81.6 cuerpos de media · original 185 pasos/s (66.3 us por cuerpo y paso) · gemelo 9306 pasos/s (1.32 us por cuerpo y paso) · x50
+  esc 270 VIDA, corte 1000 con FAMB_ORG_ECO: T=1500, 229.0 cuerpos de media · original 58 pasos/s (75.4 us por cuerpo y paso) · gemelo 1846 pasos/s (2.37 us por cuerpo y paso) · x32
+tiempo 459 s
+RESULTADO: 99/99

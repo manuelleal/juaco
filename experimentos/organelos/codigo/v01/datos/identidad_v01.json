@@ -1,0 +1,59 @@
+{
+ "ok": [
+  [
+   "I0 motor_fable y fable_mundos sin cambios (sha)",
+   true
+  ],
+  [
+   "I1 motor_v01 == motor_fable (CODIGO_SIN_SOS/onda8k)",
+   true
+  ],
+  [
+   "I1 motor_v01 == motor_fable (PERILLAS/quieto)",
+   true
+  ],
+  [
+   "I1 motor_v01 == motor_fable (AZAR/onda8k)",
+   true
+  ],
+  [
+   "I1 motor_v01 == motor_fable (CODIGO/quieto)",
+   true
+  ],
+  [
+   "I2 PERILLAS_ROBUSTA (mutacion 0) == PERILLAS (mutacion 0), BIT A BIT",
+   true
+  ],
+  [
+   "I2b PERILLAS_ROBUSTA (lambda 1) == PERILLAS, BIT A BIT",
+   true
+  ],
+  [
+   "I3 fenotipo identico en PERILLAS: 1.0 con mutacion 0; ~analitico con la de hoy; intermedio con lambda 0.5",
+   true
+  ],
+  [
+   "I4 banco de cintas en el corte: una por entrada del banco, validas; MUT0 -> todas CINTA0",
+   true
+  ],
+  [
+   "I5 mundo 'quieto' == sin cambio (linajes, pista, eco)",
+   true
+  ],
+  [
+   "I6 AZAR sin SOS (sigue al brazo principal)",
+   true
+  ]
+ ],
+ "shas": {
+  "v01/corre_v01.py": "b835e4c4a94e6355",
+  "v01/motor_v01.py": "8a67a259baa5454b",
+  "v01/construye_v01.py": "58a9004f1bdefee1",
+  "v01/PREREGISTRO_v01.md": "eaf8f1ab2b9b4033",
+  "exploracion_fable/motor_fable.py": "46750da69ef8cce1",
+  "exploracion_fable/fable_mundos.py": "ccb39d6de1cd62d3",
+  "codigo_def.py": "1096202c8afaa3d1",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9"
+ },
+ "seg": 274.9
+}

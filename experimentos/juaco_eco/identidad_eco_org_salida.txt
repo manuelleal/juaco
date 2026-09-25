@@ -1,0 +1,11 @@
+IDENTIDAD ECO v2 (organos) · 2026-09-24 11:45:01 · python 3.13.12 · motor_eco2 0921ee3a50ce7f7a · FAMB_ORG_ECO 75d5f4118079ff15 · construye ff5531748aa4bd6a
+  OK  (K) motor_eco2 y FAMB_ORG_ECO en disco == construidos 
+  OK  (G) genes = 18 de motor_eco + ensena, filtra0; G0 0.9; rango [0.225, 3.6] (20 genes)
+  OK  (0) s19905 eco=None: FAMB_ORG_ECO (organos apagados) == FABRICA_ECO en toda la fisica 
+  OK  (0) s19906 eco=None: FAMB_ORG_ECO (organos apagados) == FABRICA_ECO en toda la fisica 
+  OK  (1) MUT0, organos apagados: motor_eco2 + FAMB_ORG_ECO == motor_eco + FABRICA_ECO en la fisica (esc 30) (nacidos 66)
+  OK  (2) MUT0, ensena y filtra0 prendidos: == motor_eco + FAMB_RES0_ECO en la fisica (nacidos 82)
+  OK  (3) MUT0, ensena prendido y filtra0 apagado: == FAMB_RES (con _see de ECO, SIN0 = 0) en la fisica (nacidos 69; difiere de (2): True)
+  OK  (4) VIDA con mutacion: el organo se expresa si y solo si su gen >= 1.0, y la mutacion lo prende en algunos cuerpos (cuerpos 828; con ensena 90; con filtra0 11)
+  OK  (5) checkpoint en 4000 + reanuda == corrida entera (eco y fisica) (nacidos 54)
+RESULTADO: 9/9  (93 s)

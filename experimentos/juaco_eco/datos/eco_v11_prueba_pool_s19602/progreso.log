@@ -1,0 +1,21 @@
+[10:25:17] ECO v1.1 v11_prueba_pool_s19602 · T 3000 · corte 2000 · lectura 2500 · juez 2 semillas T_b 2000 · pool 2 · shas {'corre_eco_v11.py': '5655c93419511162', 'corre_eco.py': '47d9cee4d6462116', 'corre_eco_rapido.py': '07bf5be9dc5d634a', 'motor_eco.py': 'bca3033878b59622', 'motor_eco_rapido.py': 'edb8a15090b0f0dd', 'carros/FABRICA_ECO.py': 'f1163009cb5193a2', 'PREREGISTRO_eco_v11.md': '061160f8c0913b9f'}
+[10:25:19] [1/8] CEREBRO s19602: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 20 (0.4 s; 2 s)
+[10:25:19] [2/8] VIDA s19602: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 26 (1.8 s; 2 s)
+[10:25:19] [3/8] AZAR s19602: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 21 (0.4 s; 2 s)
+[10:25:20] [4/8] MUT0 s19602: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 21 (0.3 s; 2 s)
+[10:25:20] [5/8] VIDA s19603: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 22 (0.4 s; 3 s)
+[10:25:20] [6/8] CEREBRO s19603: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 21 (0.3 s; 3 s)
+[10:25:20] [7/8] AZAR s19603: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 24 (0.4 s; 3 s)
+[10:25:20] [8/8] MUT0 s19603: persiste_lect 1 · persiste_T 1 · t_ext None · vivos_T 26 (0.4 s; 3 s)
+semillas por brazo: {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}; persiste en T_lect = 120000 (como v1): {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}
+P2 genes seleccionados en VIDA (>=15/20 mismo signo fuera de las 8 sombras): []; AZAR con > 8/20 (falsos positivos del instrumento): []
+P3 juez v2 (bateria sellada 19501-19520): VIDA > AZAR (pareado, estricto) 0/2 (empates 1); CEREBRO > AZAR 1/2 (empates 1); medianas VIDA 1890.0 · AZAR 1913.0
+PLACEBO del juez (muestra flujo 7 contra flujo 8 del MISMO banco; puntaje = gana + empates/2, valido en [5, 15] de 20): {'VIDA': (0.5, 2), 'AZAR': (0.5, 2)} -> NO VALIDO
+DESCRIPTIVO (nube-6, no decide): contra G0 (mediana 2000.0) ganan VIDA 0/2 y AZAR 0/2
+P1 VIDA persiste >= 15/20: NO (2) · P1c MUT0 <= 2/20: SE CUMPLE (2) · P2: NO · P3 VIDA > AZAR >= 15/20: NO (0) · P4 VIDA - AZAR >= 8: NO (0) · H-c CEREBRO >= 15/20: NO (2)
+VEREDICTO v1.1 POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (el placebo del juez v2 sale de [5, 15]: el juez no esta calibrado)
+L: persiste en T = 1000000: {'VIDA': 2, 'CEREBRO': 2, 'AZAR': 2, 'MUT0': 2}; R0 de la cohorte tras el corte en los que persisten (mediana): {'VIDA': None, 'CEREBRO': None, 'AZAR': None, 'MUT0': None}
+L1 VIDA >= 10/20: NO (2) · L1c MUT0 <= 2/20: SE CUMPLE (2) · L2 VIDA - AZAR >= 6: NO (0)
+VEREDICTO L POR LA LETRA (una serie): NO EVALUABLE (serie incompleta o T distinto de 1e6)
+[10:25:20] VEREDICTO: NO EVALUABLE (el placebo del juez v2 sale de [5, 15]: el juez no esta calibrado)
+[10:25:20] VEREDICTO L: NO EVALUABLE (serie incompleta o T distinto de 1e6)
