@@ -1,0 +1,18 @@
+ARNES identidad_anfitrion · python 3.11.15 · semilla 26994 · T 6000 corte 3000
+[01:40:14] (F) PASA motor VERIFICA OK · siembras VERIFICA OK
+[01:40:27] (A1) PASA simb=None · nac 57 refund 211
+[01:40:45] (A2) PASA VIDA_S · tragados 41 quedan 11
+[01:41:01] (A3) PASA AZAR_S · sorteos 274
+[01:41:10] (A4) PASA SIN_CONTROL sin siembra == motor_endo VIDA_S
+[01:41:18] (A5) PASA CONTROL p_mut_ctl 0 sin siembra == motor_endo VIDA_S (rechazos 0, sanciones 0)
+[01:41:35] (S) PASA sembrados 30 · portadores en t=0 30 · SIN_TRAGAR sembrados 0
+[01:41:43] (K1a) PASA tx 0: rechazos 59 · transmisiones de parto no nulas 0 de 64
+[01:42:01] (K1b) PASA tx 1 y san 0 fijos (CONTROL sin mutacion) == SIN_CONTROL con siembra: el rng del control no se toca
+[01:42:10] (K2a) PASA san 1: candidatos 119 sanciones 119
+[01:42:19] (K2b) PASA san 0: candidatos 591 sanciones 0 · INERTE san 1: candidatos 0
+[01:42:19] (M) PASA CONTROL mut_ctl 56 · distintos de (1,0): 21/95 · SIN_CONTROL todos (1,0): True
+[01:42:27] (Z) PASA AZAR mut_ctl 49 · sorteos 307
+[01:42:36] (E) PASA CONTROL dos veces
+[01:42:36] (H) PASA tragados = digeridos + quedan; bancos de simbionte y de control alineados (CONTROL, AZAR, K2, INERTE)
+[01:42:36] (N9) PASA trabajo con brazo invalido devuelve error sin lanzar: SystemExit: ANFITRION: ['siembra_s'] solo con brazos ['AZAR', 'CONTROL', 'INERTE', 'SIN_CONTROL', 'SIN_TRAGAR']
+RESULTADO: 16/16 · 144 s · N/N
