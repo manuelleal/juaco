@@ -1,0 +1,93 @@
+{
+ "etiqueta": "anf_prueba_pool",
+ "veredicto": "NO (en esta ventana)",
+ "lineas": [
+  "PC (el control sirve: cuerpos vivos tras el corte) CONTROL > SIN_CONTROL 0/2 (menor 2) \u00b7 medianas area_post CONTROL 53.0 \u00b7 SIN_CONTROL 59.0 \u00b7 INERTE 56.0 \u00b7 SIN_TRAGAR 61.0 \u00b7 AZAR 56.5 \u00b7 persisten en T {'CONTROL': 2, 'SIN_CONTROL': 2, 'INERTE': 2, 'SIN_TRAGAR': 2, 'AZAR': 2}",
+  "P1 (portar persiste) CONTROL > SIN_TRAGAR 0/2 (menor 2) \u00b7 CONTROL > INERTE 0/2 (menor 2)",
+  "P2 (R0 de los NACIDOS portadores, t >= 10000) CONTROL(portadores) > SIN_TRAGAR(todos) 0/2 (evaluables 0) \u00b7 CONTROL(portadores) > INERTE(portadores) 0/2 (evaluables 0) \u00b7 medianas r0 portadores CONTROL None \u00b7 SIN_CONTROL None \u00b7 INERTE None \u00b7 AZAR None \u00b7 SIN_TRAGAR todos None \u00b7 sin simbionte CONTROL None \u00b7 SIN_CONTROL None \u00b7 INERTE None \u00b7 SIN_TRAGAR None \u00b7 AZAR None",
+  "DESCRIPTIVO control: banco CONTROL vs AZAR tx 1 mayor/1 menor \u00b7 san 0 mayor/2 menor \u00b7 medianas tx_banco CONTROL 0.9928 \u00b7 INERTE 0.9989 \u00b7 AZAR 0.991 \u00b7 san_banco CONTROL 0.0057 \u00b7 INERTE 0.0044 \u00b7 AZAR 0.0115 \u00b7 sanciones (mediana) CONTROL 1.5 \u00b7 AZAR 11.0",
+  "DESCRIPTIVO: fraccion con simbionte tras el corte CONTROL 0.6602 \u00b7 SIN_CONTROL 0.9001 \u00b7 INERTE 0.8885 \u00b7 SIN_TRAGAR 0.0 \u00b7 AZAR 0.5818 \u00b7 D CONTROL None \u00b7 SIN_CONTROL None \u00b7 INERTE None \u00b7 AZAR None",
+  "Guardias: errores 0 \u00b7 bloqueados 0 \u00b7 tope de libres 0 \u00b7 libres extintos antes del corte (CONTROL) 0 \u00b7 trinquete {'AZAR': 0, 'INERTE': 1} \u00b7 control que debia quedar fijo y se movio [] \u00b7 ERR-60 truncadas []",
+  "VEREDICTO CONTROL DEL ANFITRION POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO (en esta ventana)"
+ ],
+ "d": {
+  "PC": [
+   0,
+   2,
+   2
+  ],
+  "P1a": [
+   0,
+   2,
+   2
+  ],
+  "P1b": [
+   0,
+   2,
+   2
+  ],
+  "P2a": [
+   0,
+   0,
+   0
+  ],
+  "P2b": [
+   0,
+   0,
+   0
+  ],
+  "tx_sel": [
+   1,
+   1,
+   2
+  ],
+  "san_sel": [
+   0,
+   2,
+   2
+  ],
+  "pers": {
+   "CONTROL": 2,
+   "SIN_CONTROL": 2,
+   "INERTE": 2,
+   "SIN_TRAGAR": 2,
+   "AZAR": 2
+  },
+  "trinq": {
+   "AZAR": 0,
+   "INERTE": 1
+  },
+  "fijo_mal": [],
+  "bloq": 0,
+  "bloq_lib": 0,
+  "lib_ext": 0,
+  "errores": []
+ },
+ "seg": 50,
+ "V": {
+  "T": 100000,
+  "t_corte": 40000,
+  "cola": 20000
+ },
+ "MUNDO": {
+  "esc": 30,
+  "n0": 30,
+  "tope": 3000,
+  "muestra": 1000,
+  "r_rep": 0.03
+ },
+ "shas": {
+  "corre_anf.py": "191e9050e086b3bd",
+  "motor_anf.py": "8d46795ec2b645b8",
+  "control_anfitrion.py": "b26bb3efd78834a3",
+  "construye_anf.py": "16980240f186aa25",
+  "construye_siembras.py": "c29334d3bd395457",
+  "identidad_anfitrion.py": "7006b880b8b7fa2f",
+  "siembras.json": "8ff067ba6ace9f37",
+  "PREREGISTRO_anfitrion.md": "86682875f9986175",
+  "darwin/simbiontes.py": "72f8829defe3e69f",
+  "darwin/motor_endo.py": "7e10329cf0cb9fd0",
+  "darwin/corre_endo.py": "078734369e9721c5",
+  "darwin/carros/FABRICA_SIMB.py": "38ac0ddba8829c88"
+ }
+}
