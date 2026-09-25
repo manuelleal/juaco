@@ -6714,3 +6714,87 @@ Inercia donde la masa es 3: CAND == v14.2 bit a bit en T-B 40/40, examen 120/120
 **Qué NO dice:** T-H no se midió; el examen es ciego a N donde la masa es 3 y no se verificó que N no regresione en mundos con masa ≠ 3 fuera de 3T-k; **v14.3 no mejora la vida en la pista de la carrera** (esa pregunta es del paquete `tronco_v14_3` = v14.2 + FILTRO + boca TD, HAY ALGO MODESTO ×2, R0 real 0.63; si alguna vez pasa, entraría como v14.4). Vocabulario: "la vía lenta normalizada por masa devuelve al tronco la composición en 3T-k hasta k = 8". Prohibido: "razona", "cruza H-1", "vive más en la pista".
 
 **Nivel 7:** propuesta del coordinador 78 → **80 %** (decide el director).
+
+---
+
+## CIERRE 24–25-sep-2026: integración de la rama `organelos` (Fable + Opus, ~140 commits) y de la noche de la nube (ECO v1–v4, subida_n10b/n10c)
+
+> Lo que sigue corrió en el worktree `PROYECTOS\JUACO\organelos` (rama `organelos`, integrada a main con este cierre, merge `569670e`)
+> y en la sesión de la nube del 23→24-sep (`registro/NUBE_BITACORA_20260924.md`). El tronco sigue siendo **v14.3** (`40f9350`).
+> Borrador del cronista, revisado por el coordinador contra los mensajes de commit y los RESUMEN.json.
+
+### Tabla de bloques
+| bloque | carpeta | semillas | veredicto (por la letra) | números clave | ERR |
+|---|---|---|---|---|---|
+| **F1 ARRANQUE EN FRÍO** | `experimentos/organelos/frio` | 35001–35020 + réplica 35021–35040 | **FUNCIONA ×2** | RES0_FRIO 20/20 a 1e6, R0 de nacidos 1.0001/1.0002; BAR0 1/20 ×2; FAB 0/20 ×2; ancla 20/20 ×2 | 146, 147 |
+| F1 en la pista de la carrera | `frio_carrera` | 36001–36020 | **NO** (sin réplica) | RES0 contra V143 9/20 (−0.035); RES0 no cruza; O1 20/20 (0.941) | 148 |
+| ENDOSIMBIOSIS | `darwin` | 22001–22020 + 22021–22040 | **HAY ALGO MODESTO ×2** | P3, domesticación: VIDA_S > AZAR_S 18/20 y 17/20, > INERTE 16/20 y 17/20; P1 y P2 caen | 123 |
+| CRUCE (cableado evolucionado) | `cruce` | 24601–24620 | **NO** | VIDA 0.551 < V143 fijo 0.658 (7/20); AZAR 0.019; O1 0.931 | 124 |
+| GRAMÁTICA | `gramatica` | 21011–21030 | **NO** | VIDA expresa el TOP en 1/20; FIJO:filtra0 R0 0.943 contra VIDA 0.592 | 125 |
+| OHNO (w30, nube) | `ohno` | 25011–25030 | **NO** | G1 8/20, G3 0/20, P-OHNO 0/20 | 126, 133, 134 |
+| H-PLANO w90 | `ohno/hplano_nube` | 25111–25130 + 25131–25150 | serie AMBIGUO, réplica **CAE** → **bloque CAE** | P1 0.831 ×2; D 2 → 4; S2 3/20 → 2/20 | 143 |
+| ANFITRIÓN (nube) | `anfitrion` | 26001–26020 | **NO** | PC 9/20; P1 5/20 y 7/20 | 130–132 |
+| CÓDIGO GENÉTICO v0.1 | `codigo/v01` | 29011–29030 | **NO** | P1 13/20 en quieto y 13/20 en onda8k (se pedía 15) | 142 |
+| PROMETEO, serie | `prometeo/serie` | 30101–30120 | **NO EVALUABLE** (2 abortos; aun ganándolas, no alcanza) | quieto 11/20; onda8k 6/18; MUDO fija igual o más. **Línea cerrada** | 144 |
+| subida_n10b (nube) | `subida_n10b` | 12701–12740 | **FUNCIONA + ACUMULA ×2** | RES 0.688/0.737 contra NADA 0.114/0.122 | — |
+| subida_n10c (nube) | `subida_n10c` | 12801–12840 | **FUNCIONA + R0 ≥ 0.90 ×2** (persiste = 1 de 9 linajes; ERR-118) | RES_SIN0 0.950/0.946 | — |
+| ECO v1 (nube) | `juaco_eco` | 19101–19140 | **NO EVALUABLE ×2** (ERR-121) | AZAR gana el juez 12/20 y 15/20 | — |
+| ECO v1.1 (nube) | `juaco_eco` | 19401–19440 | **MODESTO ×2**; bloque L **NO PERSISTE LARGO ×2** | VIDA > AZAR 16/20 y 20/20; a 1e6, 7 y 5 de 20 | — |
+| ECO-T (nube) | `juaco_eco/transfiere` | bancos 19401–19440 | **NO EVALUABLE** (placebo de la réplica) | VIDA 0.275/0.300 contra AZAR 0.153/0.143 | — |
+| ECO v2 (nube) | `juaco_eco` | 20011–20050 | **MODESTO ×2** | `ensena` en el banco VIDA 0.97–0.99 contra AZAR 0.29–0.45 | — |
+| ECO v3 (nube) | `juaco_eco` | 20111–20150 | **NO** (serie NO, réplica MODESTO) | `herencia` a un punto de O2 ×2 | — |
+| **ECO v2.1 (nube)** | `juaco_eco` | 20211–20250 | **FUNCIONA ×2**: la selección PRENDE el órgano de enseñar | O1\* y O2 en 3/3 mundos ×2; banco VIDA 97–99 % contra AZAR 12–47 % | — |
+| ECO v1.2 (nube) | `juaco_eco` | 19701–19720 | **DETENIDA sin veredicto** (ERR-60 dentro del Pool; nube-9) | descriptivo: MUT0_T 20/20 a 1e6 | — |
+| ECO v4 (nube) | `juaco_eco` | 20311–20330 | **sin veredicto** (la sesión terminó) | — | — |
+
+ERR-127–129 y ERR-135–139 no aparecen en el árbol: no se declaran usados. **El siguiente libre es ERR-149.**
+
+### F1: ARRANQUE EN FRÍO (25-sep, 14:12–14:28): **FUNCIONA ×2**
+**El linaje del bicho real arranca desde 90 fundadores ingenuos y se sostiene 1 000 000 de pasos sin vivero y con 0 fundadores repuestos desde t = 1**, cuando la familia le pasa al hijo sólo lo que tuvo consecuencia: RES0, sin las entradas neutras.
+- Mundo: ECO w90, con el gemelo numba.
+- Preregistro `experimentos/organelos/frio/PREREGISTRO_frio.md`, escrito antes del humo (commit `6ca8a9f`). Arnés 46/46. Ancla a 1e6 (s19701) idéntica a la corrida de la nube. Auditor: LISTO PARA SERIE.
+- Puertas, ×2: P1 20/20 · P2 1.0001/1.0002 · P3 0/20 · P4 1/20 · V1 20/20 · V2 frío limpio.
+
+**Lectura honesta:**
+- Es el primer linaje del bicho real que se sostiene solo desde el paso 1 con protocolo completo. Hasta hoy, toda persistencia pasaba por un vivero (≥ 77 % de los cuerpos antes del corte) o por refundación.
+- La tabla barajada casi no arranca (1/20): no basta con pasar *algo*, tiene que ser la lectura correcta.
+- Límite declarado: en el quimiostato, un linaje que persiste tiene R0 ≈ 1 por construcción. Lo que decide es sobrevivir a los cuellos.
+- Origen: el comité de exploración (`comite/investigador/FICHAS_LINAJE.md`, ficha F1).
+
+### F1 en la pista de la carrera (25-sep, 14:53–15:30): **NO. Línea cerrada**
+- En la carrera el carro ES la memoria del linaje. El hijo no muere de ignorancia: sabe qué es malo y lo muerde igual. ENSEÑA de trasplantes ya lo mostraba (0.61–0.68 contra 0.596).
+- Descriptivo: los linajes establecidos con RES0 dan 0.853, contra 0.788 de V143. Los hijos de O1 viven ~3240 pasos y los de V143 ~600.
+
+### Endosimbiosis (24-sep): **HAY ALGO MODESTO ×2**
+El simbionte heredado se domestica por selección (P3 ×2, con el placebo válido). Portarlo cuesta (P1 cae ×2).
+
+### Líneas cerradas
+- Cruce por cableado.
+- Anfitrión: el control converge a no regular; portar cuesta, ×3.
+- H-PLANO w90: CAE. La carga baja de 0.67 a 0.83 con más N, pero nunca paga.
+- Prometeo, cerrado por el director.
+- F1 en la carrera.
+
+### Exploratorio (no es dato), pistas para preregistrar
+- **Compost** (`comite/ecologia`): el mundo que recicla lo tóxico, más enseñar filtrado, sostiene el linaje sin vivero en 15/15. Con el doble de comida no se rescata: "el veneno tapa el mundo".
+- **El ojo en niebla** (`prometeo_cuerpo`): se fija 7/10 contra 0/10 en MUDO.
+- **Trasplantes** (`comite/trasplantes`): ninguna pieza fija cruza. El fundador limpio muere igual en todos.
+- **Enjambre de 30 agentes** (`comite/ENJAMBRE_SINTESIS.md`), 20/20 semillas:
+  - O1 vive entre 2.4 y 6 veces más;
+  - V143 gasta entre 3 y 45 veces más fundadores;
+  - veneno y sal son el 89–95 % de las muertes de V143, contra el 35–77 % de O1.
+- **Cadena alimenticia:** NO; gusano y gallina ciclan con topes altos.
+- **Código genético v0**, con la cinta de von Neumann.
+
+### Qué NO dice
+- F1 sólo se midió en ECO. En la carrera falla.
+- ECO v2.1 no dice que la selección cree órganos: los prende.
+- La endosimbiosis no es simbiosis obligada.
+- n10c "persiste" = 1 de 9 linajes.
+- Las variaciones al azar sobre un cuerpo ya bueno casi nunca encontraron algo mejor con N de 1 a 90.
+
+### Vocabulario
+- **Permitido:** "arranca en frío", "sin fundadores repuestos desde t = 1", "la familia pasa sólo lo que tuvo consecuencia", "la selección prende el órgano", "se domestica por selección".
+- **Prohibido:** "evoluciona" sin la medida, "especie", "cultura", "organelo" como hecho, "el bicho sobrevive solo" sin decir en qué mundo, "F1 funciona" a secas.
+
+**Niveles (los fija el director):** propuesta del coordinador de +5 a +10 por F1, en el nivel 9 y/o en los niveles 10–13.

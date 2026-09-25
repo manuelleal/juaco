@@ -1071,3 +1071,13 @@ n8c serie 15801 + réplica 15821 → HAY ALGO MODESTO ×2. Todo en el REGISTRO. 
 **Quien retome el 24-sep:** 1) `/juaco-estado`; 2) si n8b quedó cortada, relanzarla (comandos en `experimentos/subida_n8b/INFORME*.md`); 3) auditar v14.3,
 n6b (por qué el mapa barajado rindió igual en la serie) y n8c; 4) integrar la rama de la nube; 5) decidir con el director el siguiente paso del v14.3
 (la ganancia no viene del filtro ni de la boca TD: ¿de dónde viene?).
+
+### 25-sep-2026: cierre de `organelos`
+La rama local `organelos` (equipo Fable + Opus, arrancada el 24-sep para que la selección natural arme órganos) se integra a main tras
+~140 commits. El resultado que manda es **F1 ARRANQUE EN FRÍO, FUNCIONA ×2**: el linaje del bicho real se sostiene 1 000 000 de pasos
+desde 90 fundadores ingenuos, sin vivero ni fundadores repuestos desde t = 1, cuando la familia le pasa al hijo sólo lo que tuvo
+consecuencia (ECO w90). En la pista de la carrera el mismo mecanismo **no transfiere** (NO): ahí el hijo no muere de ignorancia, muere
+sabiendo. La endosimbiosis quedó en MODESTO ×2 (domesticación), y ECO v2.1 (nube) dio FUNCIONA ×2: la selección prende el órgano de
+enseñar. Quedaron cerradas las líneas Prometeo, cruce, anfitrión, H-PLANO w90 y F1 en la carrera. Pistas exploratorias: el compost
+(15/15), el ojo en niebla (7/10 contra 0/10) y el diagnóstico del enjambre de 30 agentes sobre la carrera (longevidad, fundadores,
+veneno). El tronco sigue siendo v14.3.
