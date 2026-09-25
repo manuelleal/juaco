@@ -1,0 +1,183 @@
+"""construye_muro.py — construye POR ANCLAS los carros del bloque MURO (intento de cruzar H-1 con el bicho real, 25-sep-2026).
+
+MISION: llegar a la AGI por este camino (organismo minimo con reglas locales, sin retropropagacion, peldanos preregistrados con
+controles y replicas).
+
+UNA PIEZA NUEVA sobre v14.3: PAGA, "morder lo malo solo con lo que sobra". Cero memoria nueva: lee (a) las dos filas de valor del
+propio cuerpo (_vnec: la misma lectura del FILTRO de v14.3) y (b) lo que el linaje SINTIO de cada letra (_adS de APR, ya en v14.3:
+media del dS devuelto por la pista en resultado()). Decide con el ESTADO PRESENTE (E, Ag) del cuerpo. Ningun umbral escrito a mano:
+la unica comparacion es entre las dos necesidades del propio cuerpo.
+  act(k)   la letra k esta recordada como mala PARA LA NECESIDAD ACTIVA (la que mas falta): v[k][na] < 0.
+  otra(k)  recordada mala SOLO para la otra necesidad: v[k][na] <= 0 y v[k][o] < 0, k no en act.
+  paga(k)  el golpe que el linaje sintio de k, cobrado a la otra necesidad, la deja AL MENOS tan llena como la activa:
+           lev[o] + dS_o(k) >= lev[na]   (si el linaje nunca la mordio -> no paga).
+PERILLA PAGA (una linea nueva de modulo):
+  0  V143 bit a bit (arnes identidad_muro.py).
+  1  CONT: con meta, v14.3 tal cual. SIN meta (donde v14.3 no veta nada): patas y boca evitan act y la otra-no-pagable.
+  2  PAGA (el candidato): boca: veta act y otra-no-pagable SIEMPRE (con y sin meta); la otra-pagable se deja a la boca de fabrica
+     (y a la opcion TD de APR). Patas: con meta, v14.3 tal cual (van a lo bueno); sin meta, evitan lo mismo que la boca veta.
+  3  CONTROL "sin estado": como 2 pero paga(k) es SIEMPRE verdadero (limpia lo malo-para-la-otra sin mirar si lo puede pagar).
+TELEM (0/1): contadores de SOLO LECTURA en d['carro']['muro'] (el juez no los lee, ERR-96).
+
+ORIGEN (solo se LEE; sha16 fijado; cada ancla EXACTAMENTE una vez o aborta):
+  experimentos/tronco_v14_3/carros_v143/V143.py (SHA_V143 = 2a03048a7f1525e5)
+Genera en muro/carros/: V143_PAGA (2,1) · V143_CONT (1,1) · V143_SINEST (3,1) · V143_MTEL (0,1: V143 + telemetria)
+Las variantes difieren SOLO en la linea de perillas y en el nombre (se verifica).
+
+    python experimentos/organelos/muro/construye_muro.py [--verifica]
+"""
+import argparse, hashlib, os, sys
+
+AQUI = os.path.dirname(os.path.abspath(__file__))
+RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(AQUI)))
+ORIGEN = os.path.join(RAIZ, 'experimentos', 'tronco_v14_3', 'carros_v143', 'V143.py')
+SALIDA = os.path.join(AQUI, 'carros')
+SHA_V143 = '2a03048a7f1525e5'
+NL = '\r\n'   # el origen tiene fin de linea CRLF; se conserva
+
+VARIANTES = [('V143_PAGA', 2, 1), ('V143_CONT', 1, 1), ('V143_SINEST', 3, 1), ('V143_MTEL', 0, 1)]
+
+PERILLAS = "PAGA = {p}; TELEM = {t}   # muro: LA UNICA LINEA QUE CAMBIA ENTRE VARIANTES (0/0 = V143 bit a bit)"
+
+METODOS = '''
+    # ================================================================ muro: PAGA ("morder lo malo solo con lo que sobra")
+    # Lee las dos filas propias (v, las del FILTRO) y lo SENTIDO por el linaje (_adS). Decide con el estado presente. Sin rng.
+    def _pg_init(self, ctx):
+        self._pg_lev = (1.0, 1.0); self._pgv = frozenset()
+        self._pg = dict(pasos=0, sin_meta=0, veto_act=0, veto_nopaga=0, deja_paga=0, mord_act=0, mord_otra_paga=0,
+                        mord_otra_nopaga=0, mord_otra_desc=0)
+
+    def _pg_paga(self, k, na, lev):
+        m = self._adS.get(k)
+        if m is None or m[2] <= 0: return False
+        o = 1 - na
+        if PAGA == 3: return True
+        return lev[o] + m[o] / m[2] >= lev[na]
+
+    def _pg_prep(self, v, na, meta):
+        PAT = self.PAT; lev = self._pg_lev; o = 1 - na
+        act = frozenset(k for k in PAT if v[k][na] < 0)
+        otra = frozenset(k for k in PAT if k not in act and v[k][na] <= 0 and v[k][o] < 0)
+        nop = frozenset(k for k in otra if not self._pg_paga(k, na, lev))
+        veto = act | nop
+        if PAGA == 1:
+            if not meta: self._v3o = veto
+            self._pgv = self._v3o
+        else:
+            if not meta: self._v3o = veto
+            self._pgv = veto
+        if TELEM:
+            self._pg['pasos'] += 1; self._pg['sin_meta'] += int(not meta)
+            self._pg_act = act; self._pg_otra = otra; self._pg_nop = nop
+
+    def _pg_boca(self, kk, mordio_fab):
+        if not TELEM: return
+        g = self._pg
+        if kk in self._pgv:
+            if mordio_fab: g['veto_act' if kk in self._pg_act else 'veto_nopaga'] += 1
+        elif kk in self._pg_otra and mordio_fab: g['deja_paga'] += 1
+
+    def _pg_mord(self, kk):
+        if not TELEM: return
+        g = self._pg
+        if kk in self._pg_act: g['mord_act'] += 1
+        elif kk in self._pg_otra: g['mord_otra_nopaga' if kk in self._pg_nop else 'mord_otra_paga'] += 1
+        elif kk in self._adS and (self._adS[kk][0] < 0 or self._adS[kk][1] < 0): g['mord_otra_desc'] += 1
+
+    def _pg_salida(self):
+        return dict(paga=PAGA, telem=TELEM, **self._pg)
+'''
+
+ANCLAS = [
+    ('"""V143.py — tronco_v14_3 (candidato a tronco v14.3): FABRICA + B-5 + FILTRO con META + boca TD de APR.' + NL,
+     '"""{nombre}.py — muro: V143 + PAGA ("morder lo malo solo con lo que sobra", estado presente, cero memoria nueva).' + NL
+     + 'GENERADO por experimentos/organelos/muro/construye_muro.py desde tronco_v14_3/carros_v143/V143.py (sha {sha}).' + NL
+     + 'NO editar a mano. Perillas: {perillas_txt}. Con PAGA = TELEM = 0 es V143 bit a bit. Sigue el docstring de V143.' + NL + NL
+     + 'V143.py — tronco_v14_3 (candidato a tronco v14.3): FABRICA + B-5 + FILTRO con META + boca TD de APR.' + NL),
+    ('DESAMB = 1; FILTRO = 1; META = 1; INVIERTE = 0   # tronco_v14_3: LA UNICA LINEA QUE CAMBIA ENTRE VARIANTES (con OPCION)' + NL,
+     'DESAMB = 1; FILTRO = 1; META = 1; INVIERTE = 0   # tronco_v14_3: LA UNICA LINEA QUE CAMBIA ENTRE VARIANTES (con OPCION)' + NL
+     + '{perillas}' + NL),
+    ('        self._v3_init(ctx)' + NL,
+     '        self._v3_init(ctx)' + NL + '        self._pg_init(ctx)   # muro: solo estado propio y contadores (sin rng)' + NL),
+    ('        if FILTRO: self._v3_prep(objs, _na)' + NL,
+     '        if PAGA or TELEM: self._pg_lev = (float(E), float(Ag))   # muro: estado presente (solo lectura)' + NL
+     + '        if FILTRO: self._v3_prep(objs, _na)' + NL),
+    ('        else: self._v3o = frozenset()' + NL,
+     '        else: self._v3o = frozenset()' + NL
+     + '        if PAGA: self._pg_prep(v, na, meta)   # muro' + NL
+     + '        elif TELEM: self._pg_prep_tel(v, na, meta)   # muro (solo lectura)' + NL),
+    ('            if FILTRO and kk in self._v3o:   # tronco_v14_3 FILTRO: con meta, lo recordado malo no se muerde (mismo sorteo consumido)' + NL,
+     '            if PAGA or TELEM: self._pg_boca(kk, mordio)   # muro: telemetria (solo lectura)' + NL
+     + '            if FILTRO and kk in (self._pgv if PAGA else self._v3o):   # tronco_v14_3 FILTRO / muro PAGA: veto (mismo sorteo consumido)' + NL),
+    ('            if FILTRO and mordio and not self._v3m:' + NL,
+     '            if (PAGA or TELEM) and mordio: self._pg_mord(kk)   # muro: telemetria (solo lectura)' + NL
+     + '            if FILTRO and mordio and not self._v3m:' + NL),
+    ("            **({'v143': self._v3_salida()} if (DESAMB or FILTRO) else {}))" + NL,
+     "            **({'v143': self._v3_salida()} if (DESAMB or FILTRO) else {})," + NL
+     + "            **({'muro': self._pg_salida()} if (PAGA or TELEM) else {}))   # muro: telemetria (ERR-96: no puntua)" + NL
+     + '{metodos}'),
+]
+
+# telemetria de V143_MTEL (PAGA 0): calcula los conjuntos SIN tocar _v3o ni _pgv (solo lectura)
+METODOS_TEL = '''
+    def _pg_prep_tel(self, v, na, meta):
+        PAT = self.PAT; lev = self._pg_lev; o = 1 - na
+        act = frozenset(k for k in PAT if v[k][na] < 0)
+        otra = frozenset(k for k in PAT if k not in act and v[k][na] <= 0 and v[k][o] < 0)
+        m = self._adS
+        nop = frozenset(k for k in otra if not (k in m and m[k][2] > 0 and lev[o] + m[k][o] / m[k][2] >= lev[na]))
+        self._pg['pasos'] += 1; self._pg['sin_meta'] += int(not meta)
+        self._pg_act = act; self._pg_otra = otra; self._pg_nop = nop
+'''
+
+
+def h16b(b): return hashlib.sha256(b).hexdigest()[:16]
+def h16(p): return h16b(open(p, 'rb').read())
+
+
+def construye(nombre, p, t):
+    src = open(ORIGEN, 'rb').read()
+    if h16b(src) != SHA_V143: raise SystemExit(f"origen {ORIGEN} sha {h16b(src)} != {SHA_V143}")
+    txt = src.decode('utf-8')
+    per = PERILLAS.format(p=p, t=t)
+    metodos = (METODOS + METODOS_TEL).replace('\n', NL)
+    for a, rep in ANCLAS:
+        n = txt.count(a)
+        if n != 1: raise SystemExit(f"ancla {a[:70]!r} aparece {n} veces (se exige 1)")
+        rep = (rep.replace('{nombre}', nombre).replace('{sha}', SHA_V143).replace('{perillas_txt}', per.split('   #')[0])
+               .replace('{perillas}', per).replace('{metodos}', metodos))
+        txt = txt.replace(a, rep)
+    return txt.encode('utf-8')
+
+
+def todas():
+    return {n: construye(n, p, t) for n, p, t in VARIANTES}
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(allow_abbrev=False)
+    ap.add_argument('--verifica', action='store_true')
+    a = ap.parse_args(argv)
+    outs = todas()
+    base = outs['V143_PAGA'].decode('utf-8').split(NL)
+    for n, bts in outs.items():
+        ls = bts.decode('utf-8').split(NL)
+        dif = [i for i, (x, y) in enumerate(zip(base, ls)) if x != y]
+        if len(ls) != len(base) or any(not ('PAGA = ' in ls[i] or n in ls[i]) for i in dif):
+            raise SystemExit(f"{n}: difiere de V143_PAGA en algo mas que perillas/nombre: lineas {dif[:6]}")
+    ok = True
+    os.makedirs(SALIDA, exist_ok=True)
+    for n, bts in outs.items():
+        ruta = os.path.join(SALIDA, n + '.py')
+        if a.verifica:
+            igual = os.path.exists(ruta) and open(ruta, 'rb').read() == bts; ok &= igual
+            print(f"  {n} sha {h16b(bts)} == disco: {igual}")
+        else:
+            with open(ruta, 'wb') as fh: fh.write(bts)
+            print(f"  escrito {ruta} (sha {h16b(bts)})")
+    print(f"origen V143.py sha {h16(ORIGEN)} (fijado {SHA_V143}) · construye_muro.py sha {h16(os.path.abspath(__file__))}")
+    return 0 if ok else 1
+
+
+if __name__ == '__main__':
+    sys.exit(main())

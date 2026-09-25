@@ -1,0 +1,108 @@
+CORRE_MURO · muro_humo_s37906-37907_T20000 · 20260925_163923 · python 3.14.2 · pool NO (un proceso) · corre_muro.py 503b531ea1213c59 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro\datos\humo\muro_humo_s37906-37907_T20000_20260925_163923
+  tareas 6 · brazos ['o1', 'glotu', 'glotuinv', 'mtel'] · semillas 37906-37907 · T 20000 · fundador limpio 1 · reanuda False
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  carro V143_CTA sha d22cdaf912b4024d == construye: True · revisa_carro: PASA
+  carro V143_LIMPIA sha 3bf3a997ab6775b2 == construye: True · revisa_carro: PASA
+  carro V143_SINEST sha 18697fa556e84d74 == construye: True · revisa_carro: PASA
+  carro V143_DESF sha e6c5d0915ae2204d == construye: True · revisa_carro: PASA
+  carro V143_GLOT sha e22076d7fe67cf4f == construye: True · revisa_carro: PASA
+  carro V143_GLOTCTA sha aeeb13e0943428c5 == construye: True · revisa_carro: PASA
+  carro V143_GLOTFILA sha ed246a68d4c9ac58 == construye: True · revisa_carro: PASA
+  carro V143_PATAS sha b1e64b0d7f4a4296 == construye: True · revisa_carro: PASA
+  carro V143_PATASDESF sha 6333fa05d5bcbc31 == construye: True · revisa_carro: PASA
+  carro V143_GLOTU sha 8a076a5c95980001 == construye: True · revisa_carro: PASA
+  carro V143_GLOTUINV sha ca93b2d2a96ee081 == construye: True · revisa_carro: PASA
+  carro V143_GLOTUPATAS sha dec2d8ceb004e541 == construye: True · revisa_carro: PASA
+  carro V143_MTEL sha dd0970b8a01c9fa1 == construye: True · revisa_carro: PASA
+  IDENTIDAD CORTA: V143_CTA con PAGA = GLOT = TELEM = 0 == V143 (salida ENTERA, N 9, s 37908, T 2000, fundador limpio): OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\FABRICA.py 2ebee3e99ea5a33a OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\carrera_escuderias\carros\APR.py 4402aa5142065c72 OK
+  sha organismo\organismo_v142.py 17528d767fcebaf6 OK
+  carro V142 sha 195b7b883d3750ed == construye: True · chequeo estatico: PASA
+  carro V143 sha 2a03048a7f1525e5 == construye: True · chequeo estatico: PASA
+  carro V143_SINFILTRO sha 44faed85a4a05ac2 == construye: True · chequeo estatico: PASA
+  carro V143_SINTD sha eaff1ce3681e258b == construye: True · chequeo estatico: PASA
+  carro V143_SIEMPRE sha 77d252ae44057209 == construye: True · chequeo estatico: PASA
+  carro V143_INVERTIDO sha a6b5ed4f570dc42d == construye: True · chequeo estatico: PASA
+  carro FABRICA (carrera) chequeo estatico: PASA
+  carro O1 (carrera) chequeo estatico: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  IDENTIDAD CORTA v14.3: perillas en 0 == FABRICA (N 9, s 14281, T 2000, fundador limpio): OK
+  ENTRADA campo a campo (regla 14): corre_v143.tarea == juez.tarea (9 FABRICA, s 14281, T 2000, fundador limpio): OK
+  ENTRADA campo a campo (regla 14): tarea de este runner == corre_v143.tarea (V143, s 37908, T 2000): OK
+  [   68.7s] mtel s37906 (39.3s) R0 pista 0.2093 aborto None · R0 real por linaje [0.8, 0.8333, 0.0217, 0.5556, 0.0165, 0.75, 0.0288, 0.5, 0.0617] · fundadores [0, 0, 44, 3, 178, 1, 134, 7, 75]
+  [  110.6s] glotu s37906 (41.9s) R0 pista 0.3153 aborto None · R0 real por linaje [0.0165, 0.8571, 0.5556, 0.3333, 0.8, 0.05, 0.2, 0.2727, 0.1562] · fundadores [118, 0, 3, 15, 0, 75, 19, 7, 26]
+  [  148.9s] glotuinv s37906 (38.2s) R0 pista 0.0 aborto None · R0 real por linaje [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · fundadores [9, 33, 137, 51, 91, 12, 4, 16, 92]
+  [  223.9s] o1 s37906 (75.0s) R0 pista 1.0875 aborto None · R0 real por linaje [0.6667, 0.6667, 0.6667, 0.75, 0.75, 0.0588, 0.8, 0.6667, 0.75] · fundadores [0, 0, 0, 0, 0, 47, 0, 0, 0]
+  [  262.8s] mtel s37907 (38.9s) R0 pista 0.2381 aborto None · R0 real por linaje [0.0052, 0.5556, 0.25, 0.2045, 0.0426, 0.8571, 0.6154, 0.9091, 0.5] · fundadores [191, 3, 8, 34, 89, 0, 4, 0, 7]
+  [  302.2s] glotu s37907 (39.3s) R0 pista 0.3446 aborto None · R0 real por linaje [0.3333, 0.75, 0.4, 0.6667, 0.0732, 0.8, 0.0265, 0.0163, 0.25] · fundadores [1, 0, 5, 1, 37, 0, 109, 120, 14]
+
+== o1 (O1 x9) · 1 semillas 37906-37906 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.6667 (evaluables 0.059) · R0 preregistrado 2.75 · vida mediana 5331.0 · muertes 3.0 · fundadores 0.0 · casi inmortales 8/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 0/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.0) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.078)
+  causas hambre/sed/veneno/sal 12/7/32/20 (veneno+sal 73%) · pasos sin NADA bueno en el mundo 0.0408 · mordidas B+D 68.0 / A+C 140.0 por linaje · limpiezas fisicas por cuerpo 16.5
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 75.0
+  ESTABLECIMIENTO (o1, descriptivo): {'linajes': 9, 'establecidos': 8, 'frac_establecidos': 0.8889, 'R0_real_establecidos': 0.7084, 'R0_real_no_establecidos': 0.0588, 'cruzan_de_establecidos': 0}
+  CUERPOS (o1, descriptivo): {'n': 16, 'vida_med': 4468.5, 'hijos_por_cuerpo': 2.25, 'frac_sin_hijos': 0.375, 'causas': {'sed': 4, 'sal': 2, 'hambre': 6, 'veneno': 4}} · fundadores {'n': 55, 'vida_med': 200.0, 'hijos_por_cuerpo': 0.418, 'frac_sin_hijos': 0.836, 'causas': {'hambre': 6, 'sed': 3, 'veneno': 28, 'sal': 18}}
+
+== glotu (V143_GLOTU x9) · 2 semillas 37906-37907 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.303 (evaluables 0.225) · R0 preregistrado 1.0068 · vida mediana 200.0 · muertes 14.5 · fundadores 10.5 · casi inmortales 4/18
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/18 · semillas con mayoria 0/2 -> no gana · ENMIENDA 6: persisten 6/18 · semillas 1/2 -> no estabiliza (muertes voluntarias fisicas 0.7198) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.468)
+  causas hambre/sed/veneno/sal 17/51/294/259 (veneno+sal 89%) · pasos sin NADA bueno en el mundo 0.0044 · mordidas B+D 36.5 / A+C 128.5 por linaje · limpiezas fisicas por cuerpo 1.5171
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.982, 'vetos': 12143, 'mord_sin_meta': 162, 'limpia_propia': 135, 'todo_obst': 0, 'des_splits': 18}
+  contabilidad coherente 18/18 · t_fund reconstruible 18/18 · s por corrida (mediana) 40.6
+  ESTABLECIMIENTO (glotu, descriptivo): {'linajes': 18, 'establecidos': 14, 'frac_establecidos': 0.7778, 'R0_real_establecidos': 0.3667, 'R0_real_no_establecidos': 0.0215, 'cruzan_de_establecidos': 0}
+  CUERPOS (glotu, descriptivo): {'n': 56, 'vida_med': 600.0, 'hijos_por_cuerpo': 1.321, 'frac_sin_hijos': 0.696, 'causas': {'sal': 30, 'veneno': 10, 'hambre': 8, 'sed': 8}} · fundadores {'n': 565, 'vida_med': 59.0, 'hijos_por_cuerpo': 0.216, 'frac_sin_hijos': 0.963, 'causas': {'sed': 43, 'sal': 229, 'veneno': 284, 'hambre': 9}}
+  muro (glotu): telemetria de la ultima instancia {'pasos': 257935, 'sin_meta': 4639, 'veto_act': 0, 'veto_otra': 4438, 'libera': 0, 'mord_act': 74, 'mord_otra_paga': 32, 'mord_otra_nopaga': 33, 'mord_act_sinmeta': 34, 'mord_otra_sinmeta': 53, 'veto_glot': 4438, 'mord_solo_otra': 0, 'patas_meta': 0, 'patas_cambia': 0}
+
+== glotuinv (V143_GLOTUINV x9) · 1 semillas 37906-37906 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.0 (evaluables 0.0) · R0 preregistrado 0.0 · vida mediana 65.5 · muertes 33.0 · fundadores 33.0 · casi inmortales 1/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 0/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.7955) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.0)
+  causas hambre/sed/veneno/sal 4/21/209/211 (veneno+sal 94%) · pasos sin NADA bueno en el mundo 0.0019 · mordidas B+D 92.0 / A+C 186.0 por linaje · limpiezas fisicas por cuerpo 1.8846
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9831, 'vetos': 2199, 'mord_sin_meta': 55, 'limpia_propia': 37, 'todo_obst': 0, 'des_splits': 7}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 38.2
+  ESTABLECIMIENTO (glotuinv, descriptivo): {'linajes': 9, 'establecidos': 4, 'frac_establecidos': 0.4444, 'R0_real_establecidos': 0.0, 'R0_real_no_establecidos': 0.0, 'cruzan_de_establecidos': 0}
+  CUERPOS (glotuinv, descriptivo): {'n': 0, 'vida_med': None, 'hijos_por_cuerpo': None, 'frac_sin_hijos': None, 'causas': {}} · fundadores {'n': 445, 'vida_med': 59.0, 'hijos_por_cuerpo': 0.0, 'frac_sin_hijos': 1.0, 'causas': {'sed': 21, 'veneno': 209, 'sal': 211, 'hambre': 4}}
+  muro (glotuinv): telemetria de la ultima instancia {'pasos': 73769, 'sin_meta': 1247, 'veto_act': 0, 'veto_otra': 794, 'libera': 0, 'mord_act': 7, 'mord_otra_paga': 7, 'mord_otra_nopaga': 4, 'mord_act_sinmeta': 4, 'mord_otra_sinmeta': 10, 'veto_glot': 794, 'mord_solo_otra': 0, 'patas_meta': 0, 'patas_cambia': 0}
+
+== mtel (V143_MTEL x9) · 2 semillas 37906-37907 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.5 (evaluables 0.5) · R0 preregistrado 0.8125 · vida mediana 306.25 · muertes 13.5 · fundadores 7.0 · casi inmortales 1/18
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 1/18 · semillas con mayoria 0/2 -> no gana · ENMIENDA 6: persisten 10/18 · semillas 1/2 -> no estabiliza (muertes voluntarias fisicas 0.8144) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.812)
+  causas hambre/sed/veneno/sal 20/35/399/419 (veneno+sal 94%) · pasos sin NADA bueno en el mundo 0.0117 · mordidas B+D 35.0 / A+C 184.0 por linaje · limpiezas fisicas por cuerpo 1.6948
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9674, 'vetos': 8745, 'mord_sin_meta': 205, 'limpia_propia': 172, 'todo_obst': 0, 'des_splits': 43}
+  contabilidad coherente 18/18 · t_fund reconstruible 18/18 · s por corrida (mediana) 39.1
+  ESTABLECIMIENTO (mtel, descriptivo): {'linajes': 18, 'establecidos': 14, 'frac_establecidos': 0.7778, 'R0_real_establecidos': 0.5556, 'R0_real_no_establecidos': 0.0226, 'cruzan_de_establecidos': 1}
+  CUERPOS (mtel, descriptivo): {'n': 79, 'vida_med': 1094.0, 'hijos_por_cuerpo': 1.051, 'frac_sin_hijos': 0.519, 'causas': {'veneno': 18, 'hambre': 12, 'sal': 35, 'sed': 14}} · fundadores {'n': 794, 'vida_med': 50.5, 'hijos_por_cuerpo': 0.097, 'frac_sin_hijos': 0.967, 'causas': {'sed': 21, 'veneno': 381, 'sal': 384, 'hambre': 8}}
+  muro (mtel): telemetria de la ultima instancia {'pasos': 262500, 'sin_meta': 8568, 'veto_act': 0, 'veto_otra': 0, 'libera': 0, 'mord_act': 93, 'mord_otra_paga': 36, 'mord_otra_nopaga': 44, 'mord_act_sinmeta': 53, 'mord_otra_sinmeta': 67, 'veto_glot': 0, 'mord_solo_otra': 1234, 'patas_meta': 0, 'patas_cambia': 0}
+
+== v143 (V143 x9) · 2 semillas 37906-37907 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.5 (evaluables 0.5) · R0 preregistrado 0.8125 · vida mediana 306.25 · muertes 13.5 · fundadores 7.0 · casi inmortales 1/18
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 1/18 · semillas con mayoria 0/2 -> no gana · ENMIENDA 6: persisten 10/18 · semillas 1/2 -> no estabiliza (muertes voluntarias fisicas 0.8144) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.812)
+  causas hambre/sed/veneno/sal 20/35/399/419 (veneno+sal 94%) · pasos sin NADA bueno en el mundo 0.0117 · mordidas B+D 35.0 / A+C 184.0 por linaje · limpiezas fisicas por cuerpo 1.6948
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9674, 'vetos': 8745, 'mord_sin_meta': 205, 'limpia_propia': 172, 'todo_obst': 0, 'des_splits': 43}
+  contabilidad coherente 18/18 · t_fund reconstruible 18/18 · s por corrida (mediana) 39.1
+  ESTABLECIMIENTO (v143, descriptivo): {'linajes': 18, 'establecidos': 14, 'frac_establecidos': 0.7778, 'R0_real_establecidos': 0.5556, 'R0_real_no_establecidos': 0.0226, 'cruzan_de_establecidos': 1}
+  CUERPOS (v143, descriptivo): {'n': 79, 'vida_med': 1094.0, 'hijos_por_cuerpo': 1.051, 'frac_sin_hijos': 0.519, 'causas': {'veneno': 18, 'hambre': 12, 'sal': 35, 'sed': 14}} · fundadores {'n': 794, 'vida_med': 50.5, 'hijos_por_cuerpo': 0.097, 'frac_sin_hijos': 0.967, 'causas': {'sed': 21, 'veneno': 381, 'sal': 384, 'hambre': 8}}
+  muro (v143): telemetria de la ultima instancia {'pasos': 262500, 'sin_meta': 8568, 'veto_act': 0, 'veto_otra': 0, 'libera': 0, 'mord_act': 93, 'mord_otra_paga': 36, 'mord_otra_nopaga': 44, 'mord_act_sinmeta': 53, 'mord_otra_sinmeta': 67, 'veto_glot': 0, 'mord_solo_otra': 1234, 'patas_meta': 0, 'patas_cambia': 0}
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes; gana = semillas en que el primero supera al segundo)
+  glotu vs v143: gana 0/2 · diferencia mediana -0.197
+  glotu vs glotuinv: gana 1/1 · diferencia mediana 0.2727
+  glotuinv vs v143: gana 0/1 · diferencia mediana -0.5
+  o1 vs v143: gana 1/1 · diferencia mediana 0.1667
+  o1 vs glotu: gana 1/1 · diferencia mediana 0.394
+
+================ LA LETRA (PREREGISTRO_muro.md sec. 6) -- HUMO: T corto y semillas de practica, NO cuenta
+  validez {'V1_completa': True, 'V2_ancla_O1_gana': False, 'V3_ancla_V143': True, 'V4_pieza_actua': True}
+  puertas {'P1_cand_cruza': False, 'P2_cand_gana_v143': False, 'P3_ctrl_no_cruza': True} · modesto False
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro\datos\humo\muro_humo_s37906-37907_T20000_20260925_163923\resumen.json (sha 57d52e568739d3b9)
+Terminado en 302.2s
+VEREDICTO DE LA SERIE: HUMO (no cuenta): NO SE LEE

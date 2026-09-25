@@ -1,0 +1,136 @@
+== (K) construye y origenes
+  [OK] K V143_CTA construye == disco (sha d22cdaf912b4024d)
+  [OK] K V143_CTA revisa_carro PASA
+  [OK] K V143_LIMPIA construye == disco (sha 3bf3a997ab6775b2)
+  [OK] K V143_LIMPIA revisa_carro PASA
+  [OK] K V143_SINEST construye == disco (sha 18697fa556e84d74)
+  [OK] K V143_SINEST revisa_carro PASA
+  [OK] K V143_DESF construye == disco (sha e6c5d0915ae2204d)
+  [OK] K V143_DESF revisa_carro PASA
+  [OK] K V143_GLOT construye == disco (sha e22076d7fe67cf4f)
+  [OK] K V143_GLOT revisa_carro PASA
+  [OK] K V143_GLOTCTA construye == disco (sha aeeb13e0943428c5)
+  [OK] K V143_GLOTCTA revisa_carro PASA
+  [OK] K V143_GLOTFILA construye == disco (sha ed246a68d4c9ac58)
+  [OK] K V143_GLOTFILA revisa_carro PASA
+  [OK] K V143_PATAS construye == disco (sha b1e64b0d7f4a4296)
+  [OK] K V143_PATAS revisa_carro PASA
+  [OK] K V143_PATASDESF construye == disco (sha 6333fa05d5bcbc31)
+  [OK] K V143_PATASDESF revisa_carro PASA
+  [OK] K V143_GLOTU construye == disco (sha 8a076a5c95980001)
+  [OK] K V143_GLOTU revisa_carro PASA
+  [OK] K V143_GLOTUINV construye == disco (sha ca93b2d2a96ee081)
+  [OK] K V143_GLOTUINV revisa_carro PASA
+  [OK] K V143_GLOTUPATAS construye == disco (sha dec2d8ceb004e541)
+  [OK] K V143_GLOTUPATAS revisa_carro PASA
+  [OK] K V143_MTEL construye == disco (sha dd0970b8a01c9fa1)
+  [OK] K V143_MTEL revisa_carro PASA
+  [OK] K sha corre_v143.py == 24100621c450da22
+  [OK] K sha V143.py == 2a03048a7f1525e5
+  [OK] K sha pista.py == 9f47c65e438e0ff4
+  [OK] K sha juez.py == 6a68f640a7832f12
+  [OK] K sha O1.py == 99436afa2715f028
+== (A) perillas en 0 == V143, salida ENTERA
+  [OK] A V143_CTA con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_LIMPIA con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_SINEST con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_DESF con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_GLOT con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_GLOTCTA con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_GLOTFILA con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_PATAS con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_PATASDESF con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_GLOTU con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_GLOTUINV con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_GLOTUPATAS con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+  [OK] A V143_MTEL con PAGA = GLOT = PATAS = TELEM = 0 == V143 (N 9, s 37908, T 2000, fundador limpio)
+== (B) telemetria es solo lectura
+  [OK] B V143_MTEL: todo igual a V143 salvo d['carro']['muro']
+== (C) regla 14
+  [OK] C tarea(corre_muro) == corre_v143.tarea campo a campo (V143; salvo 'seg'; tel_muro = 9 None)
+  [OK] C P.run restaurado tras tarea()
+  [OK] C corre_v143.verifica_todo con entrada (juez.tarea, identidad del juez y de v14.3)
+== (D) por pieza
+  [OK] D PATAS hambre con meta: va a A (sirve a la activa) aunque C este mas cerca; v14.3 va a C
+  [OK] D PATAS sed con meta: va a C
+  [OK] D PATAS sin meta: v14.3 tal cual (el mas cercano)
+  [OK] D PATASDESF hambre con meta: va a C (sirve a la OTRA)
+  [OK] D PATASDESF sin nada que sirva a la otra: v14.3 tal cual
+  [OK] D PATAS con lo util en memoria de rechazo: cae al respaldo de v14.3 (no se queda sin objetivo)
+  [OK] D GLOTU E 1.3 > Ag 1.1, E >= U: veta A (solo sube E, la mas llena y ya sobre el umbral); C no
+  [OK] D GLOTU E 0.9 > Ag 0.5 pero E < U: NO veta A (aun le hace falta para la ventana)
+  [OK] D GLOTU Ag 1.3 > E 1.1 >= U: veta C y no A (mide niveles, no el deficit recortado que da na 0)
+  [OK] D GLOTU con _adS vacio: no veta lo bueno (solo lo de v14.3)
+  [OK] D GLOTUINV (control al reves) E 1.3 > Ag 1.1 >= U: veta C (la menos llena) y no A
+  [OK] D GLOT hambre (na 0), con meta: veta C (sentida buena SOLO para el agua, que no es la activa) ademas de lo de v14.3
+  [OK] D GLOT hambre, sin meta: veta C y nada mas (no toca lo malo)
+  [OK] D GLOT sed (na 1): veta A (solo sirve a la energia)
+  [OK] D GLOT con _adS vacio (nada sentido): no veta nada (== v14.3)
+  [OK] D GLOT no mira CUANTO falta, solo CUAL (mismo veto con Ag 0.9 que con Ag 0.52)
+  [OK] D GLOT: una letra que sirve a las DOS necesidades no se veta
+  [OK] D GLOTFILA hambre: veta C leyendo las FILAS aunque el linaje no haya sentido nada
+  [OK] D GLOTFILA con filas contaminadas veta A (lo que el cuerpo necesita); GLOT (lo sentido) no
+  [OK] D CTA sin meta, hambre, Ag sobra: act {B}, otra {D} pagable -> boca veta {B}
+  [OK] D CTA sin meta, Ag no sobra: veta {B, D}
+  [OK] D CTA con meta: v14.3 tal cual
+  [OK] D LIMPIA con meta: libera la otra pagable (D) -> veta {B}
+  [OK] D SINEST sin meta: veta {B, D}
+  [OK] D DESF sin meta, hambre: veta {D}, deja B
+  [OK] D GLOTCTA sin meta, hambre: veta {B} (CTA) y {C} (GLOT)
+  [OK] D MTEL (PAGA = GLOT = 0): calcula los conjuntos y el veto es _v3o (no toca nada)
+== (E) la pieza actua en la pista
+  [OK] E PATASDESF != V143 y != PATAS en la fisica (s 37908, T 3000); PATAS == V143 en T 3000 se INFORMA · PATAS == V143 en la fisica a T 3000: True
+  [OK] E GLOTU (candidato) != V143 y GLOTUINV (control) != V143 y != GLOTU en la fisica (s 37908, T 3000)
+  [OK] E GLOTU y GLOTUINV vetan (telemetria de la ultima instancia) y no escriben en la pizarra · veto_glot GLOTU 82 · GLOTUINV 124
+  [OK] E PATAS telemetria: la pieza decide el objetivo en pasos con meta · 14931
+  [OK] E PATAS no escribe en la pizarra
+  [OK] E GLOT != V143 en la fisica (s 37908, T 3000)
+  [OK] E GLOTFILA != V143 y != GLOT en la fisica
+  [OK] E GLOT y GLOTFILA no escriben en la pizarra
+  [OK] E GLOT telemetria presente en los 9 linajes (ultima instancia) y veta · {'veto_glot': 454, 'mord_solo_otra': 0}
+== (G) determinismo
+  [OK] G candidato dos corridas iguales (s 37909, T 2000)
+== (F) nube-9 y --reanuda
+  [OK] F brazo invalido: aborto atrapado y JSON escrito
+  [OK] F --reanuda lee el JSON existente (no corre)
+  [OK] F 1 aborto -> NO SE LEE
+usage: identidad_muro.py (--humo | --serie | --bloque BLOQUE)
+                         [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                         [--pool POOL] [--reanuda]
+identidad_muro.py: error: one of the arguments --humo --serie --bloque is required
+== (H) ERR-115
+  [OK] H --hum -> aborta
+usage: identidad_muro.py (--humo | --serie | --bloque BLOQUE)
+                         [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                         [--pool POOL] [--reanuda]
+identidad_muro.py: error: unrecognized arguments: --des 37001
+  [OK] H --serie --des 37001 -> aborta
+usage: identidad_muro.py (--humo | --serie | --bloque BLOQUE)
+                         [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                         [--pool POOL] [--reanuda]
+identidad_muro.py: error: unrecognized arguments: --xx
+  [OK] H --humo --xx -> aborta
+usage: identidad_muro.py (--humo | --serie | --bloque BLOQUE)
+                         [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                         [--pool POOL] [--reanuda]
+identidad_muro.py: error: unrecognized arguments: --poo 6
+  [OK] H --serie --desde 37001 --n 20 --poo 6 -> aborta
+  [OK] H --humo --pool 6 -> aborta
+  [OK] H --serie --desde 36001 --n 20 -> aborta
+  [OK] H --serie --desde 37001 --n 20 --T 50000 -> aborta
+  [OK] H --serie --desde 37001 --n 20 --brazos v143,glot -> aborta
+  [OK] H --humo --desde 37001 -> aborta
+  [OK] H --humo --T 100000 -> aborta
+== (V) letra
+  [OK] V FUNCIONA: cruza, gana 15/20, control no cruza
+  [OK] V NO: control tambien cruza (P3 cae) y candidato gana -> MODESTO si dif >= 0.10 y gana al control > 10/20
+  [OK] V MODESTO: no cruza, gana 15/20 con dif 0.10, gana al control 11/20
+  [OK] V NO: gana 14/20
+  [OK] V NO: gana 15/20 con dif 0.09
+  [OK] V NO: gana 15/20, dif 0.2, pero empata al control 10/20
+  [OK] V NO SE LEE: O1 no gana
+  [OK] V NO SE LEE: V143 fuera de [0.40, 0.80]
+  [OK] V NO SE LEE: la pieza no actua (V4)
+  [OK] V bloque: FUNCIONA + MODESTO -> MODESTO; NO SE LEE manda
+
+ARNES MURO: 108/108 · 110 s
