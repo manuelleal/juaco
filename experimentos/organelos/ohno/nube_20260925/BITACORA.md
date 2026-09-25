@@ -57,3 +57,9 @@ Rama `nube/ohno-20260924` sale de `organelos` @ 887c4c1 (el paquete llegó en ff
 
 ## 4. Síntesis de la noche
 `SINTESIS_noche_H-PLANO.md`: hipótesis cruzada (anfitrión + Ohno + gramática + exploratorio de CODIGO), con tres predicciones que la pueden tumbar. No es resultado.
+
+## 5. Exploratorio H-PLANO en w90 (pedido por el director; preregistrado 04:35 y corrido 10:08–11:09)
+- Control del wrapper: w30 reproduce la serie campo a campo, **PASA**.
+- M0 OK (20 nacidos antes del corte, contra 6); M1 **AMBIGUO** (D = 1); M2 **AMBIGUO** (4/10).
+- Descriptivo: la carga se achica con N. Nacidos tras el corte VIDA/FIJO pasan de 0.11 a 0.87. En los pares que persisten, la razón de vivos sube de 0.67 a 0.97 (post-hoc).
+- VIDA no supera a FIJO. Detalle en `hplano_nube/RESULTADO_hplano_w90.md`.
