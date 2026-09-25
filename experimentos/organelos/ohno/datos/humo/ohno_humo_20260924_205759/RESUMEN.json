@@ -1,0 +1,40 @@
+{
+ "veredicto": "NO EVALUABLE (ventana incompleta)",
+ "lineas": [
+  "R0 de nacidos tras el corte (mediana): {'VIDA': 0.0, 'FIJO:filtra0': 0.0, 'AZAR': 1.4545} \u00b7 persisten en T: {'VIDA': 0, 'FIJO:filtra0': 0, 'AZAR': 1}",
+  "G1 VIDA > FIJO:filtra0 en R0 (pareado) 0/1 (VIDA < FIJO 0) \u00b7 AZAR > FIJO 1 \u00b7 G2 persiste VIDA >= FIJO: True",
+  "G3 modal de VIDA NO disenada 0/20 \u00b7 P-OHNO modal con duplicado divergente 0/20 \u00b7 fraccion del banco con OHNO real > sombras 0/1",
+  "  VIDA s25001: ('extinta', 0.0, 0.0)",
+  "VEREDICTO OHNO POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO EVALUABLE (ventana incompleta)"
+ ],
+ "d": {
+  "G1": false,
+  "G2": true,
+  "G3": false,
+  "PO": false,
+  "g1": 0,
+  "g1m": 0,
+  "g3": 0,
+  "po": 0,
+  "pers": {
+   "VIDA": 0,
+   "FIJO:filtra0": 0,
+   "AZAR": 1
+  },
+  "r0": {
+   "VIDA": 0.0,
+   "FIJO:filtra0": 0.0,
+   "AZAR": 1.4545
+  },
+  "somb": 0
+ },
+ "shas": {
+  "corre_ohno.py": "d47b9de89709d25b",
+  "motor_gramatica.py": "6b65dc5e32093424",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9",
+  "gramatica_def.py": "c58086e103d030d9",
+  "conducta.py": "9a2f1226fe27a514",
+  "construye_ohno.py": "85b9a9e231a91074",
+  "PREREGISTRO_ohno.md": "0b9ab3fa0f9ce8e3"
+ }
+}
