@@ -96,3 +96,16 @@ python experimentos/organelos/ohno/hplano_nube/corre_hplano_w90.py --serie --ven
 python experimentos/organelos/ohno/hplano_nube/corre_hplano_w90.py --lee experimentos/organelos/ohno/hplano_nube/datos/w90_replica_s25131-25150
 ```
 Tras un corte, se repite la misma línea con `--reanuda`.
+
+## ERR-143 (coordinador del PC, 25-sep ~10:40, ANTES de cualquier semilla 25111–25150; auditoría juaco-auditor: LISTO CON CORRECCIONES, H-3)
+- P1 pasó a primaria después de verla post-hoc en el exploratorio. Sus bordes quedan cerca de valores ya vistos: 0.90 contra 0.971 visto
+  en w90, y 0.75 contra 0.67 visto en w30. El documento no declaraba el nulo (regla 15 / ERR-91). Por la regla 11 lleva ERR. Los umbrales
+  NO se tocan: ya están fijados y recalibrarlos ahora sería peor.
+- **Nulo, declarado aquí.** Si VIDA y FIJO fueran intercambiables (sin carga), la mediana de la razón de vivos en pares estaría cerca de 1.0.
+  Entonces P1 ≥ 0.90 PASA bajo el nulo con alta probabilidad. SOSTIENE (débil) es una afirmación de **no inferioridad**: "la variación ya
+  no es carga". No afirma que la variación pague. Su contenido está en el contraste con w30 (0.67, CAE). La única prueba de
+  **superioridad** es S2, cuyo nulo es 15/20 con p ≈ 0.021 (una cola, prueba del signo).
+- Lectura obligatoria en el registro: "SOSTIENE (débil)" se escribe siempre con la frase "no inferioridad; compatible con el nulo de no
+  diferencia".
+- Verificado por el coordinador en el PC antes de la serie: sha de `corre_hplano_w90.py` = e9bf9c528f0509e3, `construye_ohno.py
+  --verifica` OK, `--control` PASA (VIDA y FIJO s25011 idénticos campo a campo).
