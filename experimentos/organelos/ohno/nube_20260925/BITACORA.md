@@ -54,3 +54,6 @@ Rama `nube/ohno-20260924` sale de `organelos` @ 887c4c1 (el paquete llegó en ff
 - Un NO en G1 queda ambiguo por ERR-133, pero G2 y la persistencia pareada no lo son: la variación costó.
 
 ### Réplica 25031–25050: **NO SE CORRE** (regla del director: si la serie da NO, no hay réplica)
+
+## 4. Síntesis de la noche
+`SINTESIS_noche_H-PLANO.md`: hipótesis cruzada (anfitrión + Ohno + gramática + exploratorio de CODIGO), con tres predicciones que la pueden tumbar. No es resultado.
