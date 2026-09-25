@@ -1,0 +1,118 @@
+{
+ "ok": [
+  [
+   "I0 carro y gramatica_def son COPIAS byte a byte",
+   true
+  ],
+  [
+   "I1a sin codigo == motor_gramatica (PERILLAS, con sombras)",
+   true
+  ],
+  [
+   "I1b sin codigo == motor_gramatica (silenciosos, AZAR)",
+   true
+  ],
+  [
+   "I2 CINTA0 sin errores de copia == gramatica FIJA filtra0 (BIT A BIT)",
+   true
+  ],
+  [
+   "I2 ... y el lector corrio en cada parto y fundador del banco",
+   true
+  ],
+  [
+   "I2b copiador PRENDIDO con TASA 0 en toda la cinta == gramatica FIJA filtra0",
+   true
+  ],
+  [
+   "I3a antes del cambio: identica a la sin cambio",
+   true
+  ],
+  [
+   "I3b despues del cambio A es MALA y B es BUENA; antes al reves",
+   true
+  ],
+  [
+   "I3c el cambio cambia la corrida despues de t_cambio",
+   true
+  ],
+  [
+   "I4 errores de copia en el mundo: ocurren, cambian el largo, se registran",
+   true
+  ],
+  [
+   "I5 checkpoint: reanudar despues del cambio == corrida entera (salida entera)",
+   true
+  ],
+  [
+   "P0 CINTA0 -> G0 exacto y filtra0",
+   true
+  ],
+  [
+   "P1 SUM j +1 cambia SOLO el rasgo j (los 18)",
+   true
+  ],
+  [
+   "P2 EJE 0 cambia sus 4 rasgos (pleiotropia)",
+   true
+  ],
+  [
+   "P2 EJE 1 cambia sus 4 rasgos (pleiotropia)",
+   true
+  ],
+  [
+   "P2 EJE 2 cambia sus 4 rasgos (pleiotropia)",
+   true
+  ],
+  [
+   "P3 gen MAESTRO: DEF sin LLAMA no hace nada; 2 LLAMA = doble; cambiar el DEF cambia todas las llamadas",
+   true
+  ],
+  [
+   "P4 REP y duplicacion en tandem de un tramo DUPLICAN la estructura (el organo)",
+   true
+  ],
+  [
+   "P5 ORG construye un slot",
+   true
+  ],
+  [
+   "P6 FIN cambia la estructura (con FIN el REP queda vacio)",
+   true
+  ],
+  [
+   "P7 recursion acotada (PROF_MAX)",
+   true
+  ],
+  [
+   "P8 TASA: zona 0 -> 0 errores; zona 4 -> 30 x 0.1",
+   true
+  ],
+  [
+   "P9 zonas: el tramo en TASA 0 queda INTACTO en todas las copias (el tramo en TASA 4 no)",
+   true
+  ],
+  [
+   "P10 SOS: con frac_mal >= 0.3 la tasa sube x3; debajo no; sin SOS (brazo) no; fundador (None) no",
+   true
+  ],
+  [
+   "P11 los 4 tipos de error ocurren en proporcion 0.55/0.20/0.15/0.10",
+   true
+  ],
+  [
+   "P12 la regla SOS es de la cinta: vale la PRIMERA SOS; sin SOS no hay SOS",
+   true
+  ]
+ ],
+ "shas": {
+  "corre_codigo.py": "6aca7526849d67b9",
+  "motor_codigo.py": "dd0051a348f93c6e",
+  "codigo_def.py": "1096202c8afaa3d1",
+  "construye_codigo.py": "258b14b05160c8e3",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9",
+  "gramatica_def.py": "c58086e103d030d9",
+  "PREREGISTRO_codigo.md": "3e39d3ce737c1807"
+ },
+ "seg": 120.5
+}
