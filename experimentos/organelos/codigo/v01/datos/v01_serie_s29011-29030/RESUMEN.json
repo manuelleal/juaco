@@ -1,0 +1,35 @@
+{
+ "etiqueta": "v01_serie_s29011-29030",
+ "veredicto": "NO \u2014 con la carga igualada la cinta no vive mejor: la ventaja de v0 era mutacion mas suave",
+ "lineas": [
+  "P3 (SOS) NO MEDIDA: la serie corrio sin CODIGO con SOS (--con_sos)",
+  "[quieto] nac solo (suma) {'CODIGO_SIN_SOS': 1374, 'PERILLAS': 1202, 'PERILLAS_ROBUSTA': 1202, 'MUT0': 1150, 'AZAR': 1189, 'CODIGO': 0} \u00b7 persisten {'CODIGO_SIN_SOS': 20, 'PERILLAS': 20, 'PERILLAS_ROBUSTA': 20, 'MUT0': 20, 'AZAR': 20, 'CODIGO': 0}",
+  "[quieto] R0 final mediana {'CODIGO_SIN_SOS': 0.5381, 'PERILLAS': 0.5553, 'PERILLAS_ROBUSTA': 0.5242, 'MUT0': 0.5084, 'AZAR': 0.3488, 'CODIGO': None} \u00b7 fenotipo identico (mediana) {'CODIGO_SIN_SOS': 0.6852, 'PERILLAS': 0.3107, 'PERILLAS_ROBUSTA': 0.728, 'MUT0': 1.0, 'AZAR': 0.7878, 'CODIGO': None}",
+  "[onda8k] nac solo (suma) {'CODIGO_SIN_SOS': 1093, 'PERILLAS': 597, 'PERILLAS_ROBUSTA': 688, 'MUT0': 662, 'AZAR': 603, 'CODIGO': 0} \u00b7 persisten {'CODIGO_SIN_SOS': 8, 'PERILLAS': 8, 'PERILLAS_ROBUSTA': 9, 'MUT0': 9, 'AZAR': 7, 'CODIGO': 0}",
+  "[onda8k] R0 final mediana {'CODIGO_SIN_SOS': 0.3914, 'PERILLAS': 0.2579, 'PERILLAS_ROBUSTA': 0.317, 'MUT0': 0.3598, 'AZAR': 0.2389, 'CODIGO': None} \u00b7 fenotipo identico (mediana) {'CODIGO_SIN_SOS': 0.6764, 'PERILLAS': 0.3123, 'PERILLAS_ROBUSTA': 0.7146, 'MUT0': 1.0, 'AZAR': 0.7343, 'CODIGO': None}",
+  "P0 base: CODIGO_SIN_SOS > PERILLAS en quieto 14/20 -> False",
+  "P1 [quieto] CODIGO_SIN_SOS > PERILLAS_ROBUSTA 13/20 -> False",
+  "P1 [onda8k] CODIGO_SIN_SOS > PERILLAS_ROBUSTA 13/20 -> False",
+  "P2 amplificacion: razon SIN_SOS/ROBUSTA onda8k 1.588 vs quieto 1.143 (x1.39; pide >= 1.5) -> False \u00b7 (contra PERILLAS: onda 1.829 quieto 1.143)",
+  "guardia variacion (quieto) SIN_SOS > MUT0 16/20 -> True \u00b7 guardia seleccion (quieto) SIN_SOS > AZAR 13/20 -> False",
+  "VEREDICTO CODIGO v0.1 POR LA LETRA (una ventana; el bloque exige serie + replica con el mismo veredicto): NO \u2014 con la carga igualada la cinta no vive mejor: la ventaja de v0 era mutacion mas suave"
+ ],
+ "seg": 2796,
+ "TL": {
+  "T": 24000,
+  "t_cambio": 0,
+  "t_corte": 16000,
+  "r0_margen": 2000
+ },
+ "lam": 0.292,
+ "shas": {
+  "v01/corre_v01.py": "b835e4c4a94e6355",
+  "v01/motor_v01.py": "8a67a259baa5454b",
+  "v01/construye_v01.py": "58a9004f1bdefee1",
+  "v01/PREREGISTRO_v01.md": "a2f402e12624be19",
+  "exploracion_fable/motor_fable.py": "46750da69ef8cce1",
+  "exploracion_fable/fable_mundos.py": "ccb39d6de1cd62d3",
+  "codigo_def.py": "1096202c8afaa3d1",
+  "carros/FAMB_GRAM_ECO.py": "2cee0a8510c997b9"
+ }
+}
