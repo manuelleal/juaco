@@ -78,6 +78,29 @@ def lee(tl):
         for j, p in enumerate(P):
             f = lambda x, j=j: max(fr(x, 'banco_corte', j) or 0, fr(x, 'banco_final', j) or 0)
             L.append(f"   {p:<10} frac max(corte, final): CUERPO > MUDO {pareado(R, m, 'CUERPO', 'CUERPO_MUDO', f, sems)}")
+    # tabla por parte y mundo con la lectura propuesta ANTES de correr (>= 7/10 en CUERPO y <= 3/10 en MUDO)
+    L.append("\n=== TABLA (markdown) ===")
+    L.append("| mundo | parte | fijada CUERPO | fijada MUDO | banco corte C / M (mediana) | banco final C / M (mediana) | frac C > M (pareado) | lectura |")
+    L.append("|---|---|---|---|---|---|---|---|")
+    for m in MU:
+        xc = [R[(m, 'CUERPO', s)] for s in sems if (m, 'CUERPO', s) in R]; xm = [R[(m, 'CUERPO_MUDO', s)] for s in sems if (m, 'CUERPO_MUDO', s) in R]
+        if not xc: continue
+        for j, p in enumerate(P):
+            fc = sum(fija(x, j) for x in xc); fm = sum(fija(x, j) for x in xm)
+            f = lambda x, j=j: max(fr(x, 'banco_corte', j) or 0, fr(x, 'banco_final', j) or 0)
+            ok = fc >= 7 * len(xc) / 10 and fm <= 3 * len(xm) / 10
+            L.append(f"| {m} | {p} | {fc}/{len(xc)} | {fm}/{len(xm)} | {med([fr(x, 'banco_corte', j) for x in xc])} / {med([fr(x, 'banco_corte', j) for x in xm])} | "
+                     f"{med([fr(x, 'banco_final', j) for x in xc])} / {med([fr(x, 'banco_final', j) for x in xm])} | {pareado(R, m, 'CUERPO', 'CUERPO_MUDO', f, sems)} | "
+                     f"{'ELIGE POR EFECTO' if ok else '-'} |")
+    L.append("\n| mundo | brazo | persiste | nac solo (suma · mediana) | CUERPO > MUDO en nac solo (pareado) | largo banco final (mediana) |")
+    L.append("|---|---|---|---|---|---|")
+    for m in MU:
+        for b in ('CUERPO', 'CUERPO_MUDO'):
+            xs = [R[(m, b, s)] for s in sems if (m, b, s) in R]
+            if not xs: continue
+            nf = [nfin(x) for x in xs]
+            L.append(f"| {m} | {b} | {sum(int(x.get('persiste', 0)) for x in xs)}/{len(xs)} | {sum(nf)} · {med(nf)} | "
+                     f"{pareado(R, m, 'CUERPO', 'CUERPO_MUDO', nfin, sems) if b == 'CUERPO' else ''} | {med([((x.get('cuerpo') or {}).get('banco_final') or {}).get('largo') for x in xs])} |")
     # donde sirve: escudo / lengua en veneno vs quieto (CUERPO, pareado por semilla)
     L.append("\n=== donde sirve (CUERPO, pareado por semilla) ===")
     for p in ('ESCUDO', 'LENGUA', 'OJO', 'ESTOMAGO', 'PATA', 'MANDIBULA'):

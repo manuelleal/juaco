@@ -29,11 +29,12 @@ DATOS = os.path.join(AQUI, 'datos')
 TLS = dict(largo=dict(T=60000, t_cambio=8000, t_corte=44000, r0_margen=4000),
            humo=dict(T=6000, t_cambio=2000, t_corte=4000, r0_margen=1000),
            cal=dict(T=16000, t_cambio=8000, t_corte=16000, r0_margen=2000))
-NIEBLA = 5    # radio de vista en el mundo 'niebla' (el anillo mide L = 1200; hasta 120 objetos)
+NIEBLA = 12   # radio de vista en el mundo 'niebla' (L = 1200; hasta 120 objetos). Ronda 1: 5 (demasiado dura); ronda 2 (12:12, declarada): 12
 ALF_CUERPO = CQ.OPS + CQ.KIT + CQ.CUERPO
 ALFS = dict(CUERPO=ALF_CUERPO, CUERPO_MUDO=ALF_CUERPO, PROMETEO=CQ.OPS + CQ.KIT)
 # magnitudes por ronda de calibracion (PREDICCIONES_previas.md: criterio fijado antes). La ventana usa la ULTIMA ronda aceptada.
-MAG_RONDAS = {1: dict(MQ.MAG)}
+MAG_RONDAS = {1: dict(MQ.MAG),
+              2: dict(MQ.MAG, costo=(0.0001, 0.0004, 0.0004, 0.0002, 0.0002, 0.0002))}   # 12:12 declarada: PATA /2, ESCUDO x2, ESTOMAGO x2
 MAG_USO = [dict(MQ.MAG)]
 MUNDO_PARTE = dict(PATA='quieto', ESCUDO='veneno', ESTOMAGO='quieto', OJO='niebla', MANDIBULA='quieto', LENGUA='quieto')
 

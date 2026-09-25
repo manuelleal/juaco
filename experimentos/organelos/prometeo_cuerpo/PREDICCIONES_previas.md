@@ -35,3 +35,31 @@ Estas predicciones se escriben antes de cualquier humo, calibración o corrida. 
   - si ON > 0.90, el costo de esa parte se duplica;
   - si ON < 0.25, el costo baja a la mitad.
 - Toda regla nueva que invente después de ver un humo será un ERR (desde ERR-145).
+
+---
+
+## RECALIBRACIÓN DECLARADA ANTES DE CORRER (25-sep-2026, 12:12; una sola ronda; no se mira el exploratorio para ajustar)
+- **Base:** la ronda 1 de calibración quedó incompleta (s31901, solo el brazo ON).
+  - Fuera de rango: PATA 0.11, ESCUDO 0.94 (veneno), ESTÓMAGO 1.00, OJO 1.00 (niebla 5).
+  - En rango: MANDÍBULA 0.58 y LENGUA 0.885.
+- **Ajuste (el que propuse en NOTAS_PARA_MUNDO_GRANDE.md):**
+  - costo por copia y por paso: PATA 0.0001 (la mitad), ESCUDO 0.0004 (el doble), ESTÓMAGO 0.0004 (el doble); OJO, MANDÍBULA y LENGUA quedan en 0.0002;
+  - niebla: radio **12** (antes 5);
+  - las magnitudes de efecto no cambian.
+- **No vuelvo a calibrar.** Si con esto alguna parte sigue siendo dominante, se reporta tal cual.
+- **No es ERR:** todavía no hay nada juzgado.
+
+## EXPLORATORIO rápido (reabierto por el director, 12:12)
+- **Diseño:**
+  - 10 semillas (31101–31110);
+  - brazos CUERPO y CUERPO_MUDO, pareados por semilla;
+  - mundos `quieto`, `niebla` (radio 12) y `veneno` (B y D a −0.8), en ese orden de prioridad;
+  - T 60 000, cambio nominal en 8 000, corte en 44 000.
+- **Lectura propuesta ANTES de correr (la del coordinador):** "la selección elige la parte por su efecto" si la parte se fija (≥ 0.5 del banco, en el corte o al final) en **≥ 7/10 en CUERPO y ≤ 3/10 en MUDO**, en ese mundo.
+- **Predicciones nuevas, que reemplazan las 1–7 para este diseño:**
+  - **N1.** En `niebla`, el OJO pasa la lectura: ≥ 7/10 en CUERPO y ≤ 3/10 en MUDO.
+  - **N2.** En `veneno`, el ESCUDO o la LENGUA la pasan (al menos una de las dos).
+  - **N3.** En `quieto`, el ESTÓMAGO la pasa aun con el doble de costo. La PATA no la pasa.
+  - **N4.** El OJO en `quieto` es inerte: se fija igual de poco en CUERPO que en MUDO (diferencia ≤ 2/10).
+  - **N5.** En MUDO ninguna parte se fija en más de 3/10, en ningún mundo.
+  - **N6.** CUERPO deja más nacimientos solos que MUDO en ≥ 7/10 semillas pareadas en `niebla` y en `veneno`; en `quieto`, en ≥ 6/10.

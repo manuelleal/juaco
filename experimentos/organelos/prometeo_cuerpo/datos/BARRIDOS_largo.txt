@@ -1,0 +1,12 @@
+quieto  CUERPO       n 10 · barre (>=0.5 de los nacidos en alguna ventana): PATA 1, ESCUDO 0, ESTOMAGO 0, OJO 0, MANDIBULA 0, LENGUA 1
+      s31107:PATA@44000(sigue) s31107:LENGUA@48000(se pierde)
+quieto  CUERPO_MUDO  n 10 · barre (>=0.5 de los nacidos en alguna ventana): PATA 1, ESCUDO 1, ESTOMAGO 0, OJO 0, MANDIBULA 0, LENGUA 0
+      s31102:ESCUDO@24000(se pierde) s31108:PATA@58000(sigue)
+veneno  CUERPO       n 10 · barre (>=0.5 de los nacidos en alguna ventana): PATA 2, ESCUDO 1, ESTOMAGO 3, OJO 0, MANDIBULA 1, LENGUA 1
+      s31101:PATA@32000(se pierde) s31101:ESTOMAGO@44000(sigue) s31102:LENGUA@8000(sigue) s31106:ESTOMAGO@14000(sigue) s31106:MANDIBULA@16000(sigue) s31108:ESTOMAGO@8000(sigue) s31110:PATA@22000(sigue) s31110:ESCUDO@10000(se pierde)
+veneno  CUERPO_MUDO  n 10 · barre (>=0.5 de los nacidos en alguna ventana): PATA 0, ESCUDO 0, ESTOMAGO 0, OJO 1, MANDIBULA 0, LENGUA 0
+      s31102:OJO@18000(sigue)
+niebla  CUERPO       n 10 · barre (>=0.5 de los nacidos en alguna ventana): PATA 1, ESCUDO 0, ESTOMAGO 1, OJO 5, MANDIBULA 1, LENGUA 0
+      s31102:OJO@36000(sigue) s31104:OJO@14000(sigue) s31106:PATA@34000(se pierde) s31106:OJO@14000(sigue) s31106:MANDIBULA@16000(se pierde) s31107:OJO@30000(sigue) s31108:OJO@18000(sigue) s31109:ESTOMAGO@24000(se pierde)
+niebla  CUERPO_MUDO  n 10 · barre (>=0.5 de los nacidos en alguna ventana): PATA 0, ESCUDO 0, ESTOMAGO 0, OJO 0, MANDIBULA 0, LENGUA 0
+      
