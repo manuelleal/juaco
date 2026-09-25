@@ -1,0 +1,1024 @@
+{
+ "semillas": [
+  {
+   "seed": 36001,
+   "r0_o1": 0.7467,
+   "r0_v143": 0.5792,
+   "r0_res0": 0.5871,
+   "campos_leidos": [
+    "R0 (teórico)",
+    "R0_real",
+    "cruza_real",
+    "vida_med",
+    "muertes",
+    "descendientes",
+    "cuerpos",
+    "fundadores",
+    "causas (dict: hambre/sed/veneno/sal)",
+    "muertes_nec",
+    "mord (dict: A/B/C/D)",
+    "pasos_viables",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "p1",
+    "c1",
+    "exp_A",
+    "exp_C",
+    "fund_post10k",
+    "frac_muere_sin_parir",
+    "persiste"
+   ],
+   "diferencias": [
+    "R0_real promedio: O1=0.747 vs V143=0.579 vs RES0=0.587 (O1 +12.9%)",
+    "Linajes que cruzan (≥0.90): O1=7/9 (77.8%) vs V143=3/9 (33.3%) vs RES0=3/9 (33.3%) (O1 establece 2.3× más)",
+    "Vida media promedio: O1=3711.8 vs V143=1280.5 vs RES0=1336.0 (O1 vive 2.9× más)",
+    "Fundadores totales (semilla): O1=521 vs V143=1704 vs RES0=1369 (O1 usa 3.3× menos)",
+    "Fundadores post-10k (semilla): O1=453 vs V143=1547 vs RES0=1211 (O1 usa 3.4× menos post-10k)",
+    "Muertes por VENENO (semilla): O1=292 vs V143=837 vs RES0=724 (V143 2.9× más)",
+    "Muertes por SAL (semilla): O1=268 vs V143=942 vs RES0=725 (V143 3.5× más)",
+    "Mordidas A (presa): O1=2734 vs V143=3481 (V143 27% más)",
+    "Mordidas B (predador/competi): O1=1578 vs V143=2460 (V143 56% más)",
+    "Linaje 0: O1 mata con veneno+sal (245+217=462 causas), V143 conservador (58+66=124), sugiere O1 elimina deliberadamente; RES0 similar a V143",
+    "Linaje 3: O1 cruza (0.94), V143 no (0.60), RES0 EXPLOTA (0.0036, 1112 muertes, 1108 fundadores post-10k)",
+    "Linaje 4: O1 cruza (0.93), V143 FRACASA (0.038, 577 muertes, 555 fundadores con 950+ post-10k)",
+    "Linaje 6: O1 cruza (0.93), V143 FRACASA (0.009, 1012 muertes, 1003 fundadores post-10k)",
+    "Linaje 4-6: V143 tiene inversión masiva en fundadores post-10k sin cruza = combustible sin resultado"
+   ],
+   "hipotesis_brecha": "O1 tiene control activo: elimina linajes defectuosos tempranamente (veneno+sal en linaje 0) y reinvierte en los que cruzan; V143 es reactivo, mantiene linajes moribundos generando explosiones de fundadores post-10k cuando colapsan (linajes 3,4,6), gastando recursos sin mejorar R0."
+  },
+  {
+   "seed": 36002,
+   "campos_leidos": [
+    "R0_pista",
+    "R0_real",
+    "vida_med",
+    "cuerpos",
+    "fundadores",
+    "descendientes",
+    "muertes",
+    "causas (hambre, sed, veneno, sal)",
+    "mord (A, B, C, D)",
+    "pasos_viables",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "muertes_nec",
+    "muertes_vol",
+    "p1",
+    "c1",
+    "exp_A",
+    "exp_C",
+    "diag"
+   ],
+   "r0_o1": 1.0718,
+   "r0_v143": 0.2568,
+   "r0_res0": 0.2579,
+   "diferencias": [
+    "R0_pista: O1=1.0718, V143=0.2568, RES0=0.2579 (V143 es 4.17x menor que O1)",
+    "vida_med promedio: O1=2751.1 pasos, V143=654.3 pasos, RES0=1070.6 pasos (V143 es 4.21x menor)",
+    "fundadores total: O1=288, V143=1561, RES0=1578 (V143 necesita 5.42x mas fundadores que O1)",
+    "muertes total: O1=423, V143=1860, RES0=1790 (V143 tiene 4.40x mas muertes)",
+    "causas de muerte (veneno+sal): O1=326/423 (77.1%), V143=1703/1860 (91.6%), RES0=1666/1790 (93.1%)",
+    "correlacion causal (casi perfecta 1:1): fundadores reemplazados ≈ muertes por veneno/sal. O1#8: 184 fund->186 venom+sal; V143#4: 1151 fund->1151 venom+sal; RES0#2: 898 fund->899 venom+sal",
+    "linajes con crisis: V143#4 necesita 1151 fundadores (vida=44 pasos, casi todos mueren). RES0#2 similar (898 fund, vida=44). O1 max 184 fundadores en O1#8",
+    "cuerpos totales: O1=432, V143=1869, RES0=1799 (V143 es 4.33x mas)",
+    "mordidas en B: O1=1608, V143=2308, RES0=2313 (V143 es 43% mas)",
+    "mordidas en D: O1=1573, V143=2333, RES0=2343 (V143 es 48% mas)"
+   ],
+   "hipotesis_brecha": "O1 previene ciclo de envenenamiento sistémico mediante vida larga que reduce reposición de fundadores; V143 entra en espiral: muerte por veneno/sal -> repone fundador -> nace intoxicado -> vida corta -> mas reposicion -> ambiente saturado de veneno, amplificado en RES0 (93.1% de muertes por veneno/sal vs 77.1% en O1)."
+  },
+  {
+   "seed": 36003,
+   "r0_o1": 0.7231,
+   "r0_v143": 0.2606,
+   "r0_res0": 0.2815,
+   "campos_leidos": [
+    "R0",
+    "R0_real",
+    "vida_med",
+    "muertes",
+    "fundadores",
+    "causas",
+    "muertes_nec",
+    "mord",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "descendientes",
+    "cuerpos",
+    "nac_reales",
+    "cruza_real",
+    "cruza",
+    "coherente",
+    "persiste",
+    "frac_muere_sin_parir",
+    "R0_pista",
+    "pista"
+   ],
+   "diferencias": [
+    "Vida media: O1 2117 pasos vs V143 616 pasos (O1 3.44x más). Muertes totales: O1 605 vs V143 1729 (V143 2.86x más). Fundadores reutilizados: O1 438 vs V143 1468 (V143 3.35x más). Causas veneno: O1 244 muertes vs V143 755 (V143 3.1x más). Causas sal: O1 244 vs V143 815 (V143 3.3x más). Cuerpos totales: O1 614 vs V143 1738 (V143 2.83x más). Linaje 5 dramático: O1 21 muertes vs V143 1161 muertes (V143 55x más). Descendientes nac_reales: O1 promedio mayor calidad, V143 linaje 5 solo 5 nacimientos reales pero 1156 fundadores reutilizados. Mordidas B (exploración): O1 1633 vs V143 2118 (V143 1.3x más). Coherencia: O1 7/9 persisten vs V143 7/9 (igual). Fracción muere_sin_parir: O1 0.51 vs V143 0.71 (V143 peor, más crías muertas sin parir)."
+   ],
+   "hipotesis_brecha": "O1 (política escrita por LLM) limita resurrección masiva de fundadores y puede evitar toxinas por reglas explícitas; V143 (bicho real sin retropropagación) intenta adaptarse pero queda atrapado: sabe que el veneno es malo pero lo muerde igual (hijo no muere de ignorancia), carece de mecanismo para grabar esa lección en el cerebro de linaje, resulta en inflación de cuerpos-fantasma (fundadores) sin descendencia real viable."
+  },
+  {
+   "seed": 36004,
+   "r0_o1": 0.7241,
+   "r0_v143": 0.2559,
+   "r0_res0": 0.261,
+   "campos_leidos": [
+    "R0",
+    "R0_pista",
+    "vida_med",
+    "muertes",
+    "fundadores",
+    "causas (dict)",
+    "mord (dict)",
+    "sac_frac",
+    "vetos",
+    "escrituras",
+    "cuerpos",
+    "descendientes",
+    "r",
+    "pasos_viables",
+    "cola_final",
+    "muertes_nec"
+   ],
+   "diferencias": [
+    "vida_med promedio: O1=4924.72 pasos vs V143=973.72 pasos (O1 es 5.06x más longevo)",
+    "muertes promedio: O1=66.67 vs V143=220.44 (O1 mata 3.31x menos)",
+    "fundadores usados: O1 suma=494 vs V143 suma=1804 (O1 usa 3.65x menos fundadores)",
+    "R0 promedio linaje: O1=3.50 vs V143=1.56 (O1 es 2.24x más reproductivo)",
+    "muertes por veneno: O1=253 vs V143=925 (V143 muere 3.66x más de veneno)",
+    "muertes por sal: O1=267 vs V143=957 (V143 muere 3.58x más de sal)",
+    "cuerpos generados: O1 suma=609 vs V143 suma=1993 (O1 genera 3.27x menos)",
+    "mordidas promedio (todas letras A-D): O1 muerde 0.59-0.77x de lo que muerde V143",
+    "linajes 1 y 7 en V143: R0 ≈0, fundadores ≈750 cada uno, cuerpos ≈900 (colapso de regeneración)",
+    "pasos_viables: O1=43263 vs V143=40520 (O1 explora 6.8% más ante menos cuerpos en juego)"
+   ],
+   "hipotesis_brecha": "O1 mata selectivamente temprano (fundadores sin permitir multiplicación), mientras V143 reacciona tarde con mordidas reactivas que no evitan toxinas: donde O1 sacrifica 1 fundador para cercenar una rama, V143 genera 700+ cuerpos y muere envenenada."
+  },
+  {
+   "seed": 36005,
+   "campos_leidos": [
+    "R0_real",
+    "vida_med",
+    "muertes",
+    "cuerpos",
+    "fundadores",
+    "causas",
+    "mord",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "cruza_real",
+    "frac_muere_sin_parir"
+   ],
+   "diferencias": [
+    "R0_real promedio: O1=0.848 vs V143=0.573 vs RES0=0.485 (+48% O1 sobre V143)",
+    "Linajes que cruzan R0_real >= 0.90: O1 8/9 vs V143 4/9 vs RES0 2/9",
+    "vida_med (pasos): O1=3113 vs V143=811 vs RES0=511 (O1 vive 3.8x más que V143)",
+    "Muertes totales por pista: O1=317 vs V143=2032 vs RES0=1579 (V143 tiene 6.4x más muertes)",
+    "Fundadores totales (reposiciones): O1=162 vs V143=1779 vs RES0=1361 (V143 necesita 11x más)",
+    "Muertes por VENENO: O1=111 vs V143=907 vs RES0=746 (V143 8.2x más; 44% del total de V143 vs 35% en O1)",
+    "Muertes por SAL: O1=101 vs V143=955 vs RES0=708 (V143 9.5x más; 47% del total de V143 vs 32% en O1)",
+    "Causa de muerte total (veneno+sal): O1=212 (67% del total) vs V143=1862 (92% del total) - el tóxico mata a V143 sin parar",
+    "Linaje 8 RES0: colapso total (R0_real=0.0147, 886 muertes, 873 fundadores); sin nodo rápido de retroalimentación"
+   ],
+   "hipotesis_brecha": "O1 ejecuta una política LLM que discrimina qué morder (comida vs tóxico) con criterio probabilístico adaptativo; V143 sin ese filtro sufre tasas de toxicidad (veneno+sal) 8.8x mayores y muere precozmente, requiriendo reposiciones masivas (11x más fundadores); RES0 sin nodo de entrada neutral se autoperpetúa en mortalidad sin aprender, colapso en algunos linajes.</hipotesis_brecha>\n<parameter name=\"r0_o1\">0.8476",
+   "r0_v143": 0.5733,
+   "r0_res0": 0.4849
+  },
+  {
+   "seed": 36006,
+   "r0_o1": 0.9026,
+   "r0_v143": 0.2611,
+   "r0_res0": 0.2485,
+   "campos_leidos": [
+    "R0_real",
+    "vida_med",
+    "muertes",
+    "fundadores",
+    "descendientes",
+    "cuerpos",
+    "mord (A/B/C/D)",
+    "escrituras",
+    "vetos",
+    "sac_frac",
+    "cola_final",
+    "causas (hambre/sal/sed/veneno)",
+    "pasos_viables",
+    "fund_post10k",
+    "R0_pista"
+   ],
+   "diferencias": [
+    "R0_pista: O1=0.9026 vs V143=0.2611 (V143 es 0.29x de O1, brecha de 0.6415)",
+    "Linajes establecidos (R0>=0.90): O1=7/9 (78%) vs V143=0/9 (0%)",
+    "Vida media promedio: O1=2734 pasos vs V143=910 pasos (V143 es 0.33x de O1)",
+    "Muertes totales: O1=453 vs V143=1875 (V143 tiene 4.14x más muertes)",
+    "Fundadores usados: O1=293 vs V143=1668 (V143 usa 5.69x más)",
+    "Muertes por sal: O1=160 (35.3% de muertes) vs V143=912 (48.6%, ratio 5.70x)",
+    "Muertes por veneno: O1=176 (38.9%) vs V143=845 (45.1%, ratio 4.80x)",
+    "Fundadores post-t10000: O1=197 vs V143=1423 (V143 gasta 7.21x más en crisis tardía)",
+    "Mordidas totales: O1=9069 vs V143=12151 (V143 34% más mordidas pero desbalanceadas: B=2464 vs 1626 O1; D=2520 vs 1697 O1)"
+   ],
+   "hipotesis_brecha": "O1 evita colapso por sal+veneno controlando inhibición de necesidades letales (B/D); V143 carece control en sed (B) y daño (D), generando cascada de 5.7x más muertes por sal y 4.8x por veneno que agotan fundadores (7.2x en t>10k), colapsando los 9 linajes."
+  },
+  {
+   "seed": 36007,
+   "r0_o1": 0.9686,
+   "r0_v143": 0.2576,
+   "r0_res0": 0.2653,
+   "campos_leidos": [
+    "R0_pista",
+    "R0_real",
+    "vida_med",
+    "descendientes",
+    "muertes",
+    "fundadores",
+    "causas (hambre, sed, veneno, sal)",
+    "mord (A, B, C, D)",
+    "vetos",
+    "escrituras",
+    "sac_frac",
+    "cola_final",
+    "cuerpos",
+    "persiste",
+    "coherente"
+   ],
+   "diferencias": [
+    "Linaje 0: R0_real O1=0.9474 vs V143=0.0997 (diff +0.8477); vida O1=5117 vs V143=55 (diff +5062); fundadores V143=288 vs O1=0",
+    "Linaje 3: R0_real O1=0.9444 vs V143=0.0197 (diff +0.9247); vida O1=5522 vs V143=41 (diff +5482); fundadores V143=946 vs O1=0; muertes V143=965 vs O1=17",
+    "Linaje 7: R0_real O1=0.9583 vs V143=0.1488 (diff +0.8095); vida O1=2920 vs V143=71 (diff +2850); fundadores V143=102 vs O1=0; muertes V143=120 vs O1=23",
+    "Agregado: Vida media O1=3626 vs V143=666 (5.4x mayor en O1); muertes totales O1=405 vs V143=1920 (4.7x mayor en V143)",
+    "Agregado: Fundadores totales O1=236 vs V143=1665 (V143 usa 7x más); casi todos O1 en linaje 6 (fallido, R0=0.0669); V143 distribuye inútilmente",
+    "Causas muerte agregadas: O1 veneno=140 vs V143=veneno=845 (6x más en V143); O1 sed=61 vs V143=sed=73; O1 sal=157 vs V143=sal=934 (5.9x más)",
+    "Persistencia: O1 8/9 linajes persistentes (excepto 6), V143 4/9 persistentes; RES0 5/9 persistentes",
+    "Mordidas promedio: O1=1003 vs V143=1325 vs RES0=1178; O1 muerde menos pero más selectivamente",
+    "Linaje 1: R0 casi igual (O1=0.9333 vs V143=0.9697) pero O1 vida=4237 vs V143=1909 (2.2x); linaje 2: R0 idéntico (0.9615) pero O1 vida=3064 vs V143=1262"
+   ],
+   "hipotesis_brecha": "O1 ejecuta inteligencia LLM que reconoce linajes condenados (0,3,7) y los optimiza sin fundadores, maximizando nacimientos reales; V143 se estanca rescatando linajes débiles con 7x más fundadores, saturando espacio y causando 6x más muertes por veneno/sal mientras mata la reproducción."
+  },
+  {
+   "seed": 36008,
+   "r0_o1": 0.7315,
+   "r0_v143": 0.2525,
+   "r0_res0": 0.2701,
+   "campos_leidos": [
+    "R0_pista",
+    "R0_real",
+    "linajes",
+    "vida_med",
+    "muertes",
+    "muertes_nec",
+    "muertes_vol",
+    "fundadores",
+    "causas",
+    "mord",
+    "vetos",
+    "escrituras",
+    "cola_final",
+    "sac_frac",
+    "cuerpos",
+    "descendientes",
+    "persiste"
+   ],
+   "diferencias": [
+    "R0_pista: O1=0.7315 vs V143=0.2525 vs RES0=0.2701 (brecha O1-V143: +0.479 = +189.7%)",
+    "Linajes establecidos: O1=8/9 (88.9%) vs V143=7/9 (77.8%) vs RES0=5/9 (55.6%)",
+    "Muertes totales: O1=587 vs V143=1967 vs RES0=1805 (V143 usa 3.35x más, RES0 usa 3.08x más)",
+    "Fundadores (reposiciones tras muerte): O1=470 vs V143=1749 vs RES0=1599 (V143 usa 3.72x más, RES0 usa 3.40x más)",
+    "Vida media linajes: O1 rango 3451-6857 pasos vs V143 rango 42-3223 pasos (O1 promedio 5 generaciones vs V143 ~1 generación)",
+    "Causas de muerte linaje 0: O1 (hambre 5, sed 2, veneno 2, sal 4) vs V143 (hambre 4, sed 2, veneno 615, sal 581 = 1196 total por toxinas)",
+    "Mordidas por tipo (total): O1=8923 (A 2844, B 1705, C 2744, D 1630) vs V143=12296 (A 3621, B 2575, C 3568, D 2532) - V143 muerde 38% más",
+    "Muertes necesarias (array[0]+[1]): O1=587 (287+300) vs V143=1967 (970+997) vs RES0=1805 (907+898)",
+    "Fundadores post 10k (fund_post10k): V143 necesita reposiciones tardías (linajes colapsados); O1 estabiliza temprano",
+    "Vetos totales: O1=0 vs V143=0 vs RES0=0 (ninguno usa vetos explícitos en esta semilla)"
+   ],
+   "hipotesis_brecha": "O1 ejecuta sacrificio voluntario masivo de cuerpos para liberar espacio de memoria cuando detecta acumulación tóxica (veneno/sal), evitando el colapso cascada que V143 sufre; V143 muere por toxemia sin estrategia de despoblación, causando hambre de espacio → más fundadores → más caos."
+  },
+  {
+   "seed": 36009,
+   "r0_o1": 1.1644,
+   "r0_v143": 0.2466,
+   "r0_res0": 0.2623,
+   "diferencias": [
+    "R0_pista agregado: O1=1.1644 vs V143=0.2466 vs RES0=0.2623 (O1 es 4.7x más alto que V143, RES0 casi igual a V143)",
+    "Cruza_real (R0 real >= 0.90 en t >= 10000): O1 8/9 linajes vs V143 2/9 vs RES0 2/9 (O1 cruza 4x más linajes)",
+    "Fundadores usados total: O1=43 vs V143=1930 vs RES0=1608 (O1 necesita 44.9x MENOS reemplazos de V143)",
+    "Causas de muerte: O1 balanceado (hambre 31%, sed 28%, sal 25%, veneno 16%) vs V143 dominado por sal+veneno (94.8% de 2104 muertes) vs RES0 similar a V143 (94.8% de 1798)",
+    "Vida media linajes: O1 promedio 1947.7 (estable, rango 200-3218) vs V143 promedio 1284.2 (inestable, incluye caídas a 47 pasos) vs RES0 promedio 1044.0 (lo peor)",
+    "Persistencia linajes: O1 8/9 persisten vs V143 6/9 vs RES0 6/9",
+    "Mordidas totales (consumo de recursos): O1=9420 vs V143=13380 vs RES0=11544 (V143 consume 41% más)",
+    "Cola final (población): O1 promedio 11.2 (controlada) vs V143 promedio 38.6 (3.4x mayor, caótica) vs RES0 promedio 31.6",
+    "Fracción muere sin parir: O1 promedio 0.539 (moderado) vs V143 promedio 0.598 vs RES0 promedio 0.656 (RES0 lo peor)",
+    "R0_real por linaje: O1 tiene 8 linajes en 0.96-0.97 (exitosos) + 1 en 0.397 vs V143 tiene 2 en 0.94-0.96 + 7 por debajo 0.65 (fracaso masivo)",
+    "Pasos viables: O1 promedio 38465 vs V143 promedio 40705 (V143 simula más pero con menos éxito)",
+    "Coherencia: todos 9/9 en los tres (no diferencia)",
+    "Escrituras (cambios de política): todos 0/9 (no hay reescrituras)",
+    "Vetos: todos 0 (no hay prohibiciones activas)"
+   ],
+   "hipotesis_brecha": "O1 logra que 8/9 linajes crucen R0≥0.90 porque mata selectivamente por hambre/sed (controlables por aprendizaje) mientras V143 muere 95% por sal/veneno (envenenamientos sistémicos no evitables), generando colapso de linajes y reemplazo constante de fundadores (44.9x más), lo que destruye la capacidad reproductiva sostenida: O1 aprende a diferenciar mortalidad fisiológica de ruido tóxico; V143 confunde ambas y cae en retroalimentación letal."
+  },
+  {
+   "seed": 36010,
+   "campos_leidos": [
+    "seed",
+    "linajes (9 entradas con:",
+    "  - descendientes, muertes, R0, R0_real, r, vida_med, cuerpos, fundadores",
+    "  - coherente, evaluable, persiste, cruza_real, fund_post10k",
+    "  - causas (hambre, sed, veneno, sal), muertes_nec [hambre+sed, veneno+sal]",
+    "  - pasos_viables, sac_frac, cola_final, escrituras, vetos",
+    "  - mord (A, B, C, D), xor_mord [[AH,BH,CH,DH], [AS,BS,CS,DS]]",
+    "  - diag: limpiezas, robos, boca (tasas de mordida), def_bd, def_ac",
+    ")",
+    "pista (R0_pista, T, n, L, nobj, olvidos)",
+    "R0_pista"
+   ],
+   "diferencias": [
+    "R0_real_avg: O1=0.7316 vs V143=0.6184 = +0.1132 (O1 mejor en reproducción real)",
+    "vida_med_avg: O1=4236.8 vs V143=855.6 pasos = +3381.2 (O1 VIVE 5X MÁS PASOS)",
+    "muertes_total: O1=607 vs V143=1845 = -1238 (O1 sufre menos mortalidad)",
+    "fundadores_total: O1=502 vs V143=1591 = -1089 (O1 NO NECESITA REPAROS post10k)",
+    "causas_veneno_muertes: O1=304 vs V143=836 = -532 (O1 menos envenenamiento)",
+    "causas_sal_muertes: O1=223 vs V143=859 = -636 (O1 menos intoxicación)",
+    "linajes_cruzan_real(R0>=0.90): O1=6/9 vs V143=2/9 = +4 linajes exitosos",
+    "tasa_mordida_D_saciado(DS): O1=0.0000 vs V143=0.0086 (O1 NUNCA muerde tóxicos cuando saciado)",
+    "tasa_mordida_B_saciado(BS): O1=0.1029 vs V143=0.0116 (O1 más discriminante)",
+    "def_bd_con_robo(error_memoria): O1=0.2398 vs V143=0.5900 = -0.3502 (O1 menos fallas)",
+    "tasa_reproduccion_bruta: O1=0.712 vs V143=0.266 hijos/muerte (+2.67X)",
+    "R0_pista: O1=0.7013 vs V143=0.2648 (pista sin linajes locales)"
+   ],
+   "hipotesis_brecha": "O1 aprendió (LLM) a usar el estado de hambre/saciedad para discriminar CUÁNDO morder qué: evita completamente tóxicos (D, veneno+sal) cuando saciado (DS=0.0000), while V143 muerde indiscriminadamente. El veneno tapa el mundo en V143, causando cascadas de intoxicación que fuerzan fundadores post10k y cortan vida media. O1 discrimina entrada-salida (boca lee las dos filas: hambre y necesidad), limitando autointoxicación.",
+   "r0_o1": 0.7316,
+   "r0_v143": 0.6184,
+   "r0_res0": 0.4965
+  },
+  {
+   "seed": 36011,
+   "r0_o1": 0.6912,
+   "r0_v143": 0.2567,
+   "r0_res0": 0.2603,
+   "campos_leidos": [
+    "R0_real",
+    "vida_med",
+    "fundadores",
+    "muertes",
+    "cuerpos",
+    "descendientes",
+    "causas (hambre/sed/veneno/sal)",
+    "mord (A/B/C/D)",
+    "cruza_real",
+    "R0_pista",
+    "sac_frac",
+    "pasos_viables",
+    "escrituras",
+    "vetos"
+   ],
+   "diferencias": [
+    "Linajes que cruzan R0_real >= 0.90: O1 6/9 (67%) vs V143 3/9 (33%) = O1 dobla éxito",
+    "R0_pista agregado: O1 0.6912 vs V143 0.2567 = 2.69x mayor en O1",
+    "Vida media: O1 2793.7 pasos vs V143 888.9 pasos = 3.1x más larga en O1",
+    "Fundadores (inestabilidad): O1 448 vs V143 1845 = V143 usa 4.1x más (colapso de linajes)",
+    "Muertes por veneno: O1 242 (41%) vs V143 932 (45%) = 3.9x más veneno en V143",
+    "Muertes por sal: O1 246 (42%) vs V143 994 (48%) = 4.0x más sal en V143",
+    "Mordidas totales: O1 8854 vs V143 12850 = V143 hace 31% más (búsqueda desesperada)",
+    "Tipo B (mal objetivo): O1 1638 vs V143 2700 = V143 falla 65% más al atacar mal",
+    "Muertes totales: O1 590 vs V143 2056 = 3.5x más muertes en V143",
+    "RES0 no resuelve brecha: R0_pista RES0 0.2603 (igual V143), 1575 fundadores (4x más que O1)"
+   ],
+   "hipotesis_brecha": "O1 implementa política de limpieza selectiva del veneno que mantiene mundo transitable; V143 es reactivo (solo muerde hambriento), veneno se acumula, linajes colapsan constantemente generando espiral de reemplazamiento de fundadores sin estabilizar."
+  },
+  {
+   "seed": 36012,
+   "campos_leidos": [
+    "seed",
+    "linajes",
+    "id",
+    "R0",
+    "R0_real",
+    "R0_real_eval",
+    "vida_med",
+    "muertes",
+    "cuerpos",
+    "fundadores",
+    "causas",
+    "descendientes",
+    "mord",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "cruza_real",
+    "pista",
+    "R0_pista",
+    "pasos_viables"
+   ],
+   "diferencias": [
+    "R0_pista: O1=1.2762 vs V143=0.2691 (O1 domina 4.7x la pista)",
+    "Linajes que cruzan R0_real≥0.90: O1=7/9 vs V143=3/9 vs RES0=3/9 (O1 estabiliza casi todos)",
+    "Vida media: O1=2750.6 vs V143=1083.2 vs RES0=848.5 (O1 vive 2.5x más, RES0 es peor)",
+    "Fundadores totales post-10k: O1=80 vs V143=1660 vs RES0=1551 (V143 necesita ~20x reemplazos, RES0 casi igual)",
+    "Causas de muerte: O1 equilibrado (hambre=62,sed=61,veneno=78,sal=76); V143 envenenamiento masivo (veneno=800,sal=957=89% del total)",
+    "R0_real medio por linaje: O1=0.8520 vs V143=0.5593 vs RES0=0.5514 (O1 consistente, V143/RES0 tienen colapsos)",
+    "Linajes colapsados: O1 tiene 2 malos (0.16,0.79); V143 tiene 6 malos (<0.40), dos desesperados (0.005 con 1060 muertes, 0.042 con 492 muertes); RES0 similar a V143 con 5-6 malos",
+    "Mordidas por letra: O1 patrón A=2881,C=2999 vs B=1698,D=1824 (A-C bajos=hambre/sed, B-D altos); V143/RES0 siguen patrón pero V143 muerde más globalmente sin efecto selectivo"
+   ],
+   "hipotesis_brecha": "O1 aprende a morder solo cuando es eficiente (mata lo inútil con pocos golpes, deja vivir a los buenos); V143 muerde indiscriminadamente (especialmente veneno+sal masivos), colapsa la mayoría de linajes porque no discrimina entre necesario e innecesario.",
+   "r0_o1": 0.852,
+   "r0_v143": 0.5593,
+   "r0_res0": 0.5514
+  },
+  {
+   "seed": 36013,
+   "campos_leidos": [
+    "R0",
+    "R0_real",
+    "cruza_real",
+    "vida_med",
+    "muertes",
+    "descendientes",
+    "cuerpos",
+    "fundadores",
+    "causas",
+    "mord",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "pasos_viables",
+    "nac_reales",
+    "frac_muere_sin_parir"
+   ],
+   "diferencias": [
+    "Vida media: O1 2801 pasos vs V143 652 (4.3x) vs RES0 617 (4.5x)",
+    "Fundadores post-10k: O1 226 vs V143 1874 (8.3x mas) vs RES0 1659 (7.3x mas)",
+    "Fraccion muere sin parir: O1 0.3767 vs V143 0.7098 (delta +0.3331) vs RES0 0.7355 (delta +0.3588)",
+    "Linajes viables (cruzan R0_real >= 0.90): O1 8/9 (89%) vs V143 1/9 (11%) vs RES0 1/9 (11%)",
+    "R0 pista agregado: O1 1.1198 vs V143 0.2408 (gap 0.8790) vs RES0 0.2386 (gap 0.8812)",
+    "Linaje 0 especifico - vida media: O1 4475 vs V143 200 vs RES0 46 (O1 es 97x y 222x mas)",
+    "Linaje 0 - fundadores: O1 0 vs V143 43 vs RES0 1023, O1 evita reposicion masiva",
+    "Linaje 7 vida media: O1 3340 vs V143 53 vs RES0 59, O1 mantiene cola_final=38 para sustento continuo",
+    "Causas de muerte: todos 4 causas (hambre, sed, veneno, sal) en 9 linajes cada uno, sin diferencia cualitativa",
+    "Mordidas por letra: todas 4 letras (A,B,C,D) presentes en 9 linajes en los 3 brazos, sin diferencia"
+   ],
+   "hipotesis_brecha": "O1 escribe politicas que mantienen cuerpos vivos 4-5x mas tiempo, permitiendo reproduccion ANTES de morir; V143 y RES0 matan rapidamente sin reproducir, fuerzan reposicion masiva de fundadores inviables, quebrando cadena reproductiva con 88% fracaso versus 11% exito.",
+   "r0_o1": 1.1198,
+   "r0_v143": 0.2408,
+   "r0_res0": 0.2386
+  },
+  {
+   "seed": 36014,
+   "r0_o1": 0.7526,
+   "r0_v143": 0.264,
+   "r0_res0": 0.2666,
+   "campos_leidos": [
+    "id",
+    "indice",
+    "seed",
+    "descendientes",
+    "muertes",
+    "R0",
+    "r",
+    "vida_med",
+    "cuerpos",
+    "fundadores",
+    "coherente",
+    "causas",
+    "muertes_nec",
+    "p1",
+    "c1",
+    "exp_A",
+    "exp_C",
+    "mord",
+    "pasos_viables",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "diag",
+    "xor_mord",
+    "xor_enc",
+    "muertes_vol",
+    "carro_declara",
+    "telem",
+    "evaluable",
+    "casi_inmortal",
+    "R0_eval",
+    "fund_post10k",
+    "persiste",
+    "R0_real",
+    "R0_real_eval",
+    "cruza_real",
+    "fund_post_incierto",
+    "cruza",
+    "nac_reales",
+    "t_fund_fuente",
+    "fund_por_1e5",
+    "frac_muere_sin_parir",
+    "t_fund_n",
+    "t_fund_rec_ok"
+   ],
+   "diferencias": [
+    "R0_real promedio: O1 0.8300 vs V143 0.5404 (delta -0.2896, O1 54% mejor)",
+    "Veneno+Sal muertes: O1 503 (0.9% de total) vs V143 1722 (92.3% de total; 243% más en V143)",
+    "vida_med promedio: O1 4302 pasos vs V143 714 pasos (O1 es 6x más longevo)",
+    "Fundadores (reposiciones): O1 461 vs V143 1621 (V143 necesita 260% más rescates tras muertes)",
+    "Muertes totales: O1 577 vs V143 1866 (223% más en V143)",
+    "Linajes en colapso crítico (R0<0.1): O1 ninguno en rango crítico; V143 3 de 9 (linajes 2,3,6 con R0=0.0904, 0.0089, 0.1713)",
+    "Colapso peor: linaje 3 V143 tiene 1117 muertes por veneno+sal vs O1 con 7 muertes en mismo linaje (159x peor)",
+    "Proporción de mordidas linajes exitosos: O1 mantiene B+D/A+C ~0.480 (flexibilidad); V143 ~0.066 (rigidez extrema en A+C)",
+    "Colapso de V143 en linaje 3: ratio B+D/A+C salta a 5.082 (inversión catastrófica tras intentar escapar presión tóxica)",
+    "Cuerpos generados: O1 586 vs V143 1875 (V143 genera 220% más individuos que mueren sin reproducir)",
+    "Descendientes: O1 441 vs V143 495 (similar proporción relativa al esfuerzo, ambos luchan; V143 lucha más)"
+   ],
+   "hipotesis_brecha": "O1 ejecuta una política de equilibrio dinámico en defensas (mordidas ~0.48 entre pares de letras), permitiendo respuesta flexible ante presión tóxica; V143 carece de esa lógica y queda atrapado en una estrategia rígida y extrema (0.07) que no puede modular, resultando en sobre-correcciones fatales que polarizan la defensa sin control, dejando que el veneno explote sin freno en 3 de 9 linajes."
+  },
+  {
+   "seed": 36015,
+   "r0_o1": 1.2834,
+   "r0_v143": 0.2503,
+   "r0_res0": 0.2767,
+   "campos_leidos": [
+    "seed",
+    "descendientes",
+    "muertes",
+    "R0",
+    "r",
+    "vida_med",
+    "cuerpos",
+    "fundadores",
+    "coherente",
+    "causas (hambre, sed, veneno, sal)",
+    "muertes_nec",
+    "pasos_viables",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "mord (A, B, C, D)",
+    "R0_eval",
+    "fund_post10k",
+    "persiste",
+    "R0_real",
+    "cruza_real",
+    "nac_reales",
+    "frac_muere_sin_parir",
+    "R0_pista",
+    "pista (mundo, compat, escala, olvidos, frac_sin_bueno_mundo)"
+   ],
+   "diferencias": [
+    "R0_pista: O1=1.283 vs V143=0.250 vs RES0=0.277 (brecha O1-V143 = 5.1x)",
+    "Linajes que cruzan R0_real>=0.90: O1=8/9 vs V143=2/9 vs RES0=5/9 (O1 estabiliza 4x más linajes que V143)",
+    "Vida media agregada: O1=2738 pasos vs V143=534 pasos vs RES0=1170 pasos (O1 = 5.1x más que V143)",
+    "Linaje #4 colapso V143: R0=0.015, vida=43, fundadores=974, muertes=989 vs O1#4: R0=1.81, vida=3691, fundadores=0, muertes=25",
+    "Causas muerte linaje crítico #4: V143 veneno=486 + sal=491 (977 muertes por toxinas) vs O1 veneno=0 + sal=4 (4 muertes)",
+    "Mordidas en linaje #4: V143 bite_B=1400, bite_D=1313 (2713 total en 989 cuerpos, ineficacia masiva) vs O1 bite_B=200, bite_D=163 (363 total en 25 cuerpos, precisión)",
+    "Linaje #1 comparativa: O1 vida=1944, fund=0, R0_real=0.9615 vs V143 vida=123, fund=113, R0_real=0.2785 (V143 necesita reiniciadores masivos para sobrevivir 9x menos tiempo)",
+    "Fundadores en linajes exitosos: O1 todos son 0 (8 linajes cruzan sin reinicios) vs V143 solo 2 linajes sin fundadores cruzan",
+    "RES0 sin nodos entrada neutral mejora V143 en 150% (5/9 vs 2/9 linajes) pero cae corto ante O1: sigue usando ~180 fundadores en linajes que colapsan (linaje RES0#0,#3,#6,#7: fund=48-290) mientras que O1 nunca necesita"
+   ],
+   "hipotesis_brecha": "En semilla 36015, O1 (política escrita por LLM) resuelve la adaptación al mundo venenoso y salado mediante reglas explícitas de evasión (veneno/sal casi 0 en linajes viables), mientras que V143 (bicho real) colapsa porque no aprende a evitarlos (486+491 muertes de toxinas en linaje #4 con solo 15 nac_reales, causando cascada de reinicios con 974 fundadores). RES0 sin nodos sin entrada neutral es parcial: mejora la estabilidad 150% pero sigue dependiendo de reiniciadores masivos, indicando que el cuello de botella NO es la entrada neutral, sino la CAPACIDAD CODIFICADA para gestionar el mundo."
+  },
+  {
+   "seed": 36016,
+   "r0_o1": 1.0971,
+   "r0_v143": 0.258,
+   "r0_res0": 0.2541,
+   "campos_leidos": [
+    "seed",
+    "R0_pista",
+    "linajes (id, indice, descendientes, muertes, R0, R0_real, vida_med, cuerpos, fundadores, causas(hambre/sed/veneno/sal), muertes_nec, mord(A/B/C/D), pasos_viables, sac_frac, cola_final, escrituras, vetos, coherente, R0_eval, fund_post10k, persiste, R0_real_eval, cruza_real, cruza, nac_reales, t_fund_fuente, fund_por_1e5, frac_muere_sin_parir, t_fund_n)",
+    "pista (seed, T, n, ids, compat, pizarra, rep_acum, escala, L, nobj, olvidos, fundador_limpio, comp_mundo, R0_pista)",
+    "telem (vidas, desc_por_vida, causa_cuerpo, escr, t_fund, origen)"
+   ],
+   "diferencias": [
+    "R0_pista: O1=1.0971 vs V143=0.2580 vs RES0=0.2541 (O1 es 4.26x mayor que V143)",
+    "Linajes que cruzan R0_real (>=0.90): O1 7/9 (77%) vs V143 3/9 (33%) vs RES0 3/9 (33%)",
+    "Vida media promedio: O1=2739 pasos vs V143=762 pasos vs RES0=589 pasos (O1 es 3.6x - 4.7x mayor)",
+    "Muertes totales (9 linajes): O1=372 vs V143=1731 vs RES0=1719 (V143/RES0 son 4.7x-4.6x más muertes)",
+    "Fundadores totales usados: O1=224 vs V143=1442 vs RES0=1491 (V143/RES0 usan 6.4x-6.7x más fundadores)",
+    "Muertes por veneno: O1=123 vs V143=782 vs RES0=778 (V143/RES0 son 6.4x más por veneno)",
+    "Muertes por sal: O1=142 vs V143=796 vs RES0=798 (V143/RES0 son 5.6x más por sal)",
+    "Linaje #2 específico: R0_real O1=0.9333 vs V143=0.2708 (delta +0.6625) - O1 cruza, V143 no",
+    "Linaje #6 específico: R0_real O1=0.9091 vs V143=0.1526 (delta +0.7565) - máxima brecha en esta línea",
+    "Linaje #4 específico: R0_real O1=0.9412 vs V143=0.7347 (delta +0.2065) - O1 cruza, V143 no",
+    "Linaje #5 específico: R0_real O1=0.9375 vs V143=0.5652 (delta +0.3723) - O1 cruza, V143 no",
+    "Linaje #8 (no-cruzan): O1=0.0955 vs V143=0.0066 (delta +0.0889) pero V143 muere más (1064 vs 177 muertes)",
+    "Mordidas por letra A: O1 promedio ~340 vs V143 promedio ~360 (similar en A)",
+    "Mordidas por letra B: O1 promedio ~173 vs V143 promedio ~217 (V143 muerde B mucho más: linaje #8 tiene 1512 vs 197)",
+    "Linaje #8 caída: V143#8 tiene 1057 fundadores y muere 1064 organismos en pura hambre/veneno; O1#8 tiene 160 fundadores",
+    "RES0 sin nodos neutros: linaje #0 completamente fallido (R0_real=0.0096, 929 fundadores, 938 muertes)"
+   ],
+   "hipotesis_brecha": "O1 limpia veneno/sal de modo selectivo (menos muertes por veneno: 123 vs 782), requiere 6.4x menos fundadores, y mantiene linajes vivos 3.6x más tiempo porque la política de morder escrita por LLM es más inteligente: reconoce lo malo y puede pagarlo, mientras V143 muerde sin discernimiento (linaje #8: 1512 mordidas en B) y se ahoga."
+  },
+  {
+   "seed": 36017,
+   "r0_o1": 0.9954,
+   "r0_v143": 0.2699,
+   "r0_res0": 0.2519,
+   "campos_leidos": [
+    "id",
+    "R0_real",
+    "cruza_real",
+    "vida_med",
+    "muertes",
+    "fundadores",
+    "causas (hambre/sed/veneno/sal)",
+    "muertes_nec",
+    "mord (A/B/C/D)",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "nac_reales",
+    "frac_muere_sin_parir",
+    "t_fund_n",
+    "diag.boca (8 contextos)",
+    "diag.limpiezas",
+    "diag.robos",
+    "diag.perdidas_olvido",
+    "cuerpos",
+    "descendientes",
+    "pasos_viables",
+    "R0_pista",
+    "pista"
+   ],
+   "diferencias": [
+    "Cruzas reales establecidas: O1 7/9 (77.8%) vs V143 3/9 (33.3%) vs RES0 3/9 (33.3%)",
+    "Vida media de cuerpo: O1 3953 pasos vs V143 935 pasos (diferencia -3018, 76% menos)",
+    "Fundadores usados total: O1 268 vs V143 1656 vs RES0 1448 (+500% en V143)",
+    "Muertes por veneno: O1 146 vs V143 859 vs RES0 783 (+588% en V143)",
+    "Muertes por hambre: O1 53 vs V143 67 vs RES0 85 (+26% en V143)",
+    "Ratio mordidas buenas/total: O1 0.631 vs V143 0.597 vs RES0 0.600 (O1 muerde mejor)",
+    "Mortalidad sin parir: O1 0.3146 vs V143 0.6297 vs RES0 0.7239 (V143 2x peor, RES0 2.3x peor)",
+    "SAC_FRAC (fracción saca): O1 mean=0.4301 vs V143 mean=0.4043 vs RES0 mean=0.3826",
+    "Limpiezas boca: O1 3407 vs V143 3585 vs RES0 3188 (similar)",
+    "Robos internos: O1 16524 vs V143 14462 vs RES0 13557",
+    "Cola final (vivos): O1 media 32.8 vs V143 media 30.3 vs RES0 media 19.75",
+    "Escrituras nuevas: O1 0 vs V143 0 vs RES0 0 (ninguno escribió política nueva)"
+   ],
+   "hipotesis_brecha": "O1 aplica política LLM que evita veneno sistémico y mantiene vidas largas, estabilizando 7-8 linajes; V143 carece de esa corrección y mata por envenenamiento rápido, obligando replanting masivo y generando ciclos de muerte que impiden establecimiento."
+  },
+  {
+   "seed": 36018,
+   "r0_o1": 0.9246,
+   "r0_v143": 0.2552,
+   "r0_res0": 0.254,
+   "campos_leidos": [
+    "R0_real (crucible: >= 0.90 para cruza_real)",
+    "vida_med (median lifespan pasos)",
+    "muertes (total deaths)",
+    "fundadores (replaced/founder organisms injected)",
+    "causas (death reasons: hambre, sed, veneno, sal)",
+    "muertes_nec (necessary deaths [positive, negative])",
+    "mord (bites per letter: A, B, C, D)",
+    "sac_frac (sac fraction metric)",
+    "cola_final (final queue size)",
+    "escrituras (writes counted)",
+    "vetos (vetoes counted)",
+    "descendientes (offspring total)",
+    "cuerpos (bodies spawned)",
+    "frac_muere_sin_parir (fraction die without reproducing)",
+    "cruza_real (bool: R0_real >= 0.90)"
+   ],
+   "diferencias": [
+    "Linajes que cruzan R0_real >= 0.90: O1=8/9 (89%), V143=2/9 (22%), RES0=2/9 (22%)",
+    "Vida media promedio: O1=2800 pasos, V143=1154 pasos (-59%), RES0=592 pasos (-79%)",
+    "Fundadores totales (sum 9 linajes): O1=258, V143=1892 (+634%), RES0=1584 (+514%)",
+    "Causas veneno+sal (% total): O1=70.6%, V143=94.1% (+23.5pp), RES0=92.5% (+21.9pp)",
+    "Linajes con veneno+sal > 60%: O1=1 linaje, V143=5 linajes, RES0=6 linajes",
+    "Fracción muere sin parir (promedio): O1=35.6%, V143=67.4% (+89%), RES0=70.7% (+99%)",
+    "Cuerpos totales: O1=451, V143=2073 (+360%), RES0=1807 (+301%)",
+    "Mordidas B+D (B,D suma): O1=(1720,1686), V143=(2714,2770) +58%/+64%, RES0=(2302,2352) +34%/+40%"
+   ],
+   "hipotesis_brecha": "O1 evita la trampa de veneno-dominancia (1/9 linajes problemáticos vs 5-6 en V143/RES0) mediante política escrita: limpieza estratégica, control de fundadores post-10k, vidas largas para aprendizaje; V143/RES0 caen en ciclo: veneno mata pero hijo ignora, explota en B/D buscando escape, población inflada por reemplazantes sin aprendizaje real, baja R0_real por alta mortalidad pre-reproducción."
+  },
+  {
+   "seed": 36019,
+   "r0_o1": 0.6487,
+   "r0_v143": 0.2482,
+   "r0_res0": 0.2489,
+   "campos_leidos": [
+    "seed",
+    "R0_pista",
+    "linajes[n].descendientes",
+    "linajes[n].muertes",
+    "linajes[n].R0_real",
+    "linajes[n].vida_med",
+    "linajes[n].fundadores",
+    "linajes[n].causas",
+    "linajes[n].mord",
+    "linajes[n].sac_frac",
+    "linajes[n].cruza_real",
+    "linajes[n].nac_reales"
+   ],
+   "diferencias": [
+    "R0_pista (track-level) O1 0.6487 vs V143 0.2482: O1 trail output 2.6x higher",
+    "Lineages crossing R0_real >= 0.90: O1 has 7/9 (78%) vs V143 has 3/9 (33%)",
+    "Average median life: O1 3352.2 steps vs V143 576.8 steps — O1 lineages live 5.8x longer",
+    "Total founders deployed: O1 490 vs V143 1496 — V143 needs 3.1x more founder replacements indicating lineage collapse",
+    "Total deaths: O1 623 vs V143 1792 — V143 suffers 2.9x higher mortality",
+    "Deaths from poison (veneno): O1 285 vs V143 804 — V143 bleeds 2.8x more to toxicity",
+    "Deaths from salt (sal): O1 252 vs V143 826 — V143 bleeds 3.3x more to salt",
+    "Lineage #2 (trash bin): O1 uses 470 founders vs V143 uses 1107 — V143's worst lineage 2.4x more dysfunctional",
+    "Lineage #7 catastrophe: O1 spans 262 steps median with 238 founders and 62 deaths; V143 only 52 steps median with 238 founders and 262 deaths — V143 cannot even sustain trash lineage",
+    "Bites per letter (A/B/C/D): O1 total 2783+1713+2715+1626=8837; V143 total 3395+2269+3360+2308=11332 — V143 bites 28% more but on shorter lifespans, showing reactive not preventive behavior"
+   ],
+   "hipotesis_brecha": "O1 avoids lineage collapse via LLM policy (sustains 7/9 lineages above R0_real 0.90 with long lifespans and minimal founders), while V143 gets trapped in founder-replacement treadmill as poison/salt deaths and short lifespans force constant reseeding to maintain any track-level reproduction."
+  },
+  {
+   "seed": 36020,
+   "r0_o1": 0.6535,
+   "r0_v143": 0.2422,
+   "r0_res0": 0.2506,
+   "campos_leidos": [
+    "R0_pista",
+    "R0_real",
+    "vida_med",
+    "muertes",
+    "causas",
+    "mord",
+    "fundadores",
+    "cuerpos",
+    "sac_frac",
+    "cola_final",
+    "escrituras",
+    "vetos",
+    "cruza_real",
+    "persiste",
+    "descendientes",
+    "fund_post10k",
+    "nac_reales"
+   ],
+   "diferencias": [
+    "R0_pista: O1=0.6535 vs V143=0.2422 (2.7x mejor en O1)",
+    "Linajes que cruzan R0_real>=0.9: O1=7/9 vs V143=0/9 vs RES0=0/9 (O1 es unico que logra establecerse)",
+    "vida_med (duracion organismos): O1=3142 pasos vs V143=533 pasos (5.9x mas larga en O1)",
+    "Cuerpos generados: O1=65 vs V143=234 (O1 produce menos pero exitosos)",
+    "Muertes totales promedio: O1=64 vs V143=233 (3.6x menos en O1)",
+    "Mordidas descontroladas: V143 linaje 4 acumula 3031 mordidas (vs O1=1070); V143 linaje 7 acumula 3099 (vs O1=1014)",
+    "Veneno total acumulado: V143=981 muertes por veneno vs O1=238 (4.1x mas en V143)",
+    "Persiste al final (T=100000): O1=7/9 vs V143=6/9 vs RES0=5/9",
+    "Distribucion de mord por necesidad: O1 equilibrado (~230-250 cada A/B/C/D), V143 extremo (linaje 4: A=380 B=1225 C=269 D=1157)",
+    "Fundadores iniciales: O1=46 promedio vs V143=213 (O1 comienza mas lean)"
+   ],
+   "hipotesis_brecha": "O1 evita espirales letales mediante distribucion equilibrada de riesgo de muerte entre todas las causas (hambre/sed/veneno/sal), permitiendo organismos mas longevos que alcanzan reproductor; V143/RES0 generan explosiones de cuerpos que colapsan en ciclos de auto-agresion descontrolada y acumulacion toxica de veneno, matando oportunidad reproductiva antes de T=10000."
+  }
+ ],
+ "literatura": [
+  {
+   "fichas": [
+    {
+     "mecanismo": "Umbral de reserva dependiente del horizonte (regla de energía de Stephens): el bicho lleva una variable local 'reserva actual' y una estimación local del 'tiempo/pasos restantes hasta el próximo recurso seguro'. La regla NO es backprop ni política aprendida por gradiente: es una comparación local en cada paso entre (reserva + valor esperado del bocado) y un umbral de supervivencia que decae con el tiempo restante. Si la reserva proyectada cae por debajo del umbral, el bicho arriesga el bocado malo (veneno); si está por encima, lo rechaza aunque sepa que es malo.",
+     "por_que_aplica": "La brecha de la carrera es justo esto: V143 'sabe que es malo y lo muerde igual' de forma ciega al estado, mientras O1 (el techo) limpia selectivamente cuando puede pagarlo. La regla de energía predice exactamente ese patrón condicional -aversión al riesgo con reserva alta, búsqueda de riesgo con reserva baja- sin necesitar la política completa de O1, solo un umbral local recalculado cada paso con la reserva propia.",
+     "prediccion": "En los linajes que sí cruzan (o se acercan), la fracción de 'mordidas malas' debería concentrarse en reservas bajas: prediga que >=65% de las mordidas malas ocurren con reserva < 25% del máximo del cuerpo, y que el R0_real del linaje con este umbral local sube de 0.60 (V143) a un rango 0.70-0.78 (falla si el patrón de mordidas malas queda uniforme en todo el rango de reserva, o si R0 no sube de 0.65).",
+     "control": "Bicho control: probabilidad de morder-lo-malo constante (independiente de la reserva), calibrada para dar la misma tasa total de mordidas malas que el bicho con umbral. Si el control iguala o supera el R0_real del bicho con umbral, el mecanismo no está aportando nada y la ficha se descarta.",
+     "fuente": "Stephens, D.W. (1981) 'The logic of risk-sensitive foraging preferences', Animal Behaviour 29(2); revisado en Houston, A.I. (2024) 'A critical review of risk-sensitive foraging', Biological Reviews, https://onlinelibrary.wiley.com/doi/10.1111/brv.13031 ; McNamara, J.M. & Houston, A.I., marco de programación dinámica dependiente del estado (Mangel, M. & Clark, C.W., Dynamic State Variable Models in Ecology, Oxford Univ. Press)."
+    },
+    {
+     "mecanismo": "Compuerta local de carga de veneno acumulada (saturación + decaimiento, sin backprop): además de la reserva de energía, el bicho lleva una segunda variable de estado puramente local, 'carga_toxina', que sube con cada mordida mala y decae un poco cada paso (como una fuga exponencial). Mientras carga_toxina > capacidad_local, el bicho queda temporalmente bloqueado para morder cosas malas de nuevo (periodo refractario), independientemente de cuánta hambre tenga.",
+     "por_que_aplica": "Explica directamente el hallazgo 'el veneno tapa el mundo': si no hay compuerta de saturación, el bicho sigue mordiendo veneno acumulando daño sin límite porque su regla solo mira hambre/reserva, no el costo interno acumulado de haber mordido veneno antes. Esta es la pieza que falta entre V143 (0.60, muerde igual) y O1 (0.94, limpia cuando puede pagarlo): O1 'paga' implícitamente algo parecido a este costo interno.",
+     "prediccion": "Añadir la compuerta de saturación con una constante de decaimiento bien elegida debería mover R0_real de 0.60 a un rango 0.72-0.80 y subir % de linajes establecidos de 66% a >=75% (falla si R0_real queda igual o si el % establecido no sube por encima de 70%, lo que indicaría que la saturación por sí sola no es el cuello de botella).",
+     "control": "Ablación de decaimiento: mismo bicho pero con carga_toxina que nunca decae (solo sube) vs. con decaimiento normal. Si ambas variantes dan el mismo R0_real, el mecanismo relevante es solo 'tener memoria de daño', no la dinámica de saturación/recuperación, y hay que simplificar la ficha.",
+     "fuente": "Barnett, C.A., Bateson, M. & Rowe, C. (2012) 'The Impact of Detoxification Costs and Predation Risk on Foraging: Implications for Mimicry Dynamics', PLOS ONE, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0169043 ; Marsh, K.J., Wallis, I.R., Andrew, R.L. & Foley, W.J. (2006) 'The Detoxification-Limitation Hypothesis', Journal of Chemical Ecology, https://link.springer.com/article/10.1007/s10886-006-9082-3"
+    },
+    {
+     "mecanismo": "Memoria corta de tipo de mordida reciente para alternar rutas de detoxificación (diet mixing local): el bicho guarda, sin backprop, una ventana corta (últimos k bocados) del 'tipo' de cosa mala mordida, y sesga su próxima decisión para NO repetir el mismo tipo dos veces seguidas cuando hay alternativa disponible en el vecindario local, distribuyendo el costo entre 'rutas' distintas en vez de saturar una sola.",
+     "por_que_aplica": "En vida silvestre esto es lo que separa herbívoros que toleran una dieta más tóxica de los que no: no es solo cuánto veneno soportan, sino que evitan concentrar el mismo tóxico. Para la carrera, esto ataca la vida corta del hijo de V143 (~600 pasos vs ~3240 de O1): si el bicho alterna en vez de acumular el mismo daño repetido, la vida esperada del hijo debería alargarse sin copiar la política de O1.",
+     "prediccion": "Con memoria de ventana k=3-5, la vida media del hijo debería subir de ~600 pasos a un rango 1200-1800 pasos (2-3x, sin llegar a los 3240 de O1). Falla si la vida media queda por debajo de 900 pasos o si sube por encima de 2500 (indicaría que el mecanismo está haciendo algo más parecido a copiar la limpieza de O1, lo cual violaría el principio de no copiar la política).",
+     "control": "Mismo mecanismo pero con la ventana de memoria barajada al azar en cada paso (memoria 'ruido', no memoria real de tipo de mordida). Si el control da la misma vida media del hijo que la memoria real, el efecto viene de reducir la tasa bruta de mordidas malas, no de la alternancia en sí, y hay que reetiquetar el mecanismo.",
+     "fuente": "Freeland, W.J. & Janzen, D.H. (1974) 'Strategies in Herbivory by Mammals: The Role of Plant Secondary Compounds', American Naturalist 108; y revisión del principio de mezcla dietética en Marsh, K.J. et al. (2006) 'The Detoxification-Limitation Hypothesis', Journal of Chemical Ecology, https://link.springer.com/article/10.1007/s10886-006-9082-3"
+    },
+    {
+     "mecanismo": "Umbral aumentado por tendencia local (derivada de reserva), no solo nivel: el bicho compara no solo su reserva actual contra el umbral (ficha 1), sino la pendiente local de la reserva en los últimos k pasos (¿está subiendo o cayendo, y qué tan rápido?). Con reserva igual, un bicho cuya reserva cae rápido arriesga la mordida mala antes que uno cuya reserva cae lento o sube; es una regla local de dos variables (nivel + derivada), calculable sin memoria larga ni gradientes.",
+     "por_que_aplica": "El nivel solo (ficha 1) puede ser demasiado lento para reaccionar en un mundo donde el recurso bueno escasea de golpe; la derivada captura urgencia antes de que la reserva cruce el umbral crítico, que es justo el tipo de anticipación que un techo como O1 sí logra (R0 0.94) y que el nivel-solo probablemente no alcance del todo.",
+     "prediccion": "Agregar el término de derivada sobre el bicho de la ficha 1 debería mover el % de linajes establecidos de un rango 70-78% (ficha 1 sola) a 78-84%, acercándose al techo de O1 sin igualarlo. Falla si el término de derivada no aporta mejora medible sobre el umbral de nivel solo (diferencia < 2 puntos porcentuales), lo que indicaría que la urgencia por tendencia no es el factor limitante de la brecha.",
+     "control": "Comparación directa contra el bicho de la ficha 1 (umbral de nivel solo, sin derivada) corrido en las mismas semillas; el término de derivada se ablaciona poniendo su peso en cero. Si no hay diferencia estadística en R0_real entre las dos variantes a través de semillas, el mecanismo de derivada se descarta.",
+     "fuente": "McNamara, J.M. & Houston, A.I. (1996) 'State-dependent life histories', Nature 380, y marco general de variables de estado dinámicas con tasa de cambio en Mangel, M. & Clark, C.W., Dynamic State Variable Models in Ecology, Oxford University Press; complementado con Lim, I.S. et al. (2015) 'On the Origin of Risk Sensitivity: the Energy Budget Rule Revisited', arXiv:1504.04986, https://arxiv.org/pdf/1504.04986"
+    }
+   ],
+   "tema": "Mecanismos locales (forrajeo sensible al riesgo, sin backprop) para cerrar la brecha entre V143 (R0=0.60) y el techo O1 (R0=0.94) en la carrera de JUACO"
+  },
+  {
+   "fichas": [
+    {
+     "mecanismo": "Regla \"zero-one\" del modelo de dieta óptima / contingency model (MacArthur & Pianka 1966; revisión Sih & Christensen 2001): el bicho no decide si aceptar el ítem malo comparando su propia abundancia, sino comparando la tasa esperada de seguir buscando el ítem bueno contra un umbral local. Variable de estado: un único escalar 'r' = promedio móvil local de la tasa de ganancia reciente, actualizado con regla delta simple r ← r + α·(gan_t − r), sin backprop. Regla: aceptar/morder el ítem malo solo si r cae por debajo de un umbral fijo relacionado con el costo del ítem malo.",
+     "por_que_aplica": "Coincide con la nota 'el veneno tapa el mundo': cuando el bueno escasea localmente (porque está tapado), r baja y conviene limpiar; cuando el bueno abunda, r sube y no conviene. La nota dice que el hijo de V143 'sabe que es malo y lo muerde igual', lo que sugiere que muerde con la misma probabilidad sin importar la disponibilidad local del bueno — es decir, le falta exactamente esta comparación situacional contra un umbral, no le falta la discriminación en sí.",
+     "prediccion": "Agregar el escalar r local con regla delta y gatear la mordida del ítem malo contra un umbral sube R0_real de V143 de 0.60 a un rango 0.72–0.82, y el % de linajes establecidos de 66% a 74–82%. La vida del hijo debería subir pero quedar por debajo del techo de O1 (predicción <2500 pasos, vs 3240 de O1). Si R0_real no se mueve de 0.60±0.03, el mecanismo falla.",
+     "control": "Control 1 (señal rota): mismo r pero alimentado con ruido/barajado, desacoplado de la tasa real — predicción: sin mejora, R0_real se queda ~0.60. Control 2 (umbral fijo no adaptativo): mismo umbral pero constante, sin actualización local, para aislar si el efecto viene de la adaptación local o de tener cualquier umbral.",
+     "fuente": "MacArthur, R.H. & Pianka, E.R. (1966) 'On optimal use of a patchy environment.' American Naturalist 100:603-609. Revisión: Sih, A. & Christensen, B. (2001) 'Optimal diet theory: when does it work, and when and why does it fail?' Animal Behaviour 61:379-390."
+    },
+    {
+     "mecanismo": "Teorema del valor marginal de Charnov (1976), reinterpretado no como abandono de un parche espacial sino como regla de 'giving-up' sobre el trabajo de limpiar un sitio tapado por veneno. Variable de estado local: promedio móvil de la tasa neta de ganancia reciente (proxy del 'promedio del hábitat'). Regla: seguir invirtiendo mordidas en limpiar el sitio malo mientras la tasa marginal esperada de liberarlo supere ese promedio; parar cuando cae por debajo. Un solo escalar, regla delta, sin backprop.",
+     "por_que_aplica": "La nota registra que O1 'limpia mucho... muerde lo malo cuando puede pagarlo para liberar sitio' — eso es literalmente MVT aplicado a la limpieza de sitio en vez de al parche espacial clásico. Si V143 no tiene esta comparación marginal-vs-promedio, o sigue mordiendo veneno sin medir el costo relativo, o nunca limpia y el veneno sigue tapando el mundo — ambos casos explican el R0 bajo (0.60) y la vida corta (~600).",
+     "prediccion": "Implementar la regla tipo giving-up-density sobre el 'trabajo de limpieza' sube R0_real de 0.60 a 0.70–0.78 y el % establecido de 66% a 72–80%; la vida del hijo sube moderadamente (800–1600) pero probablemente no alcanza el techo de O1 (3240). Si la vida del hijo no cambia respecto a la línea base (~600±50), el mecanismo no está haciendo nada real.",
+     "control": "Regla de 'tiempo de residencia fijo': mismo tiempo promedio invertido en limpiar el sitio malo, pero no ajustado localmente por la tasa marginal — aísla si el efecto viene de la adaptabilidad local o solo de invertir más tiempo limpiando en general.",
+     "fuente": "Charnov, E.L. (1976) 'Optimal foraging, the marginal value theorem.' Theoretical Population Biology 9:129-136."
+    },
+    {
+     "mecanismo": "Umbral de 'carga tóxica / reserva pagable' de tipo state-dependent (Sherratt et al. 2007; Nersesian et al. 2011). Variable de estado local por cuerpo: una reserva de energía o 'espacio de detox' disponible, actualizada con regla aditiva/decaimiento simple tras cada evento (ganancia − costo), sin gradiente global. Regla: aceptar/morder el ítem malo solo si reserva_actual > costo_estimado_del_ítem + margen; si no, rechazarlo.",
+     "por_que_aplica": "Calza casi literalmente con lo ya registrado: 'O1 muerde lo malo cuando puede pagarlo para liberar sitio' es exactamente la predicción central de la literatura de carga de toxinas — los depredadores comen presa tóxica cuando su carga acumulada/reserva se lo permite y la rechazan cerca del límite. Si V143 muerde el ítem malo sin gatear por su propia reserva, gasta recursos en momentos en que no puede pagarlo, lo que explicaría directamente la vida corta (~600) y el R0 bajo (0.60) sin necesidad de invocar falta de discriminación perceptual (el bicho 'sabe que es malo' pero no sabe si se lo puede permitir).",
+     "prediccion": "Agregar el gate de reserva local sube R0_real de V143 de 0.60 a 0.75–0.85 y el % establecido de 66% a 75–85%; la vida del hijo sube a un rango 1500–2600 (más cerca de O1 que en las otras dos fichas, porque ataca el mecanismo ya nombrado en la nota), pero se predice que sigue sin alcanzar 3240. Si la vida del hijo se queda bajo 900, el mecanismo no está capturando lo que realmente hace O1.",
+     "control": "Control 1 (escalar dummy): barajar/descorrelacionar la señal de reserva del costo real del ítem, misma complejidad pero sin información real — predicción: sin mejora sobre 0.60±0.03. Control 2 (gate invertido): aceptar solo cuando la reserva es BAJA (como los depredadores hambrientos de Nersesian que aumentan ingesta tóxica en mal estado energético), para distinguir cuál dirección del umbral es la que realmente opera en la pista de JUACO.",
+     "fuente": "Sherratt, T.N. et al. (2007) 'Predators' Toxin Burdens Influence Their Strategic Decisions to Eat Toxic Prey.' Current Biology 17(12):1025-1029. Nersesian, C.L. et al. (2011) 'Titrating the cost of plant toxins against predators: determining the tipping point for foraging herbivores.' Journal of Animal Ecology 80:753-762."
+    }
+   ],
+   "tema": "Teoría de dieta óptima / valor marginal (Charnov) aplicada a la brecha O1 vs V143 en la carrera de JUACO: mecanismos locales candidatos para el bicho"
+  },
+  {
+   "fichas": [
+    {
+     "mecanismo": "Sesgo Pavloviano paralelo al sistema instrumental (Pavlovian-Instrumental Transfer, PIT). Dos señales de valor locales y separadas: V_pav(s), actualizada por una regla delta simple ciega a la acción tomada (solo asocia estímulo→resultado, tipo Rescorla-Wagner/TD de un paso); y Q_instr(s,a), actualizada por TD local con traza de elegibilidad (SARSA/TD-lambda, sin backprop). La accion final no usa solo Q_instr: se combina como logit = Q_instr(s,a) + w * V_pav(s) * sesgo_de_accion(a), con w aprendible o preregistrado por evolucion (local, covarianza reciente recompensa-accion, sin gradiente global).",
+     "por_que_aplica": "Explica literalmente el hallazgo ya conocido: el hijo de V143 'sabe que es malo y lo muerde igual'. En PIT el valor instrumental (lo que 'sabe') puede estar correctamente actualizado y negativo, pero un sesgo Pavloviano de aproximacion activado por el mismo estimulo empuja la accion de todas formas porque actua sobre el canal de vigor/aproximacion, no sobre la evaluacion. Es exactamente la disociacion saber-hacer que describe la carrera (conocimiento vs ejecucion), y es una arquitectura de dos sistemas locales, no una politica copiada de O1.",
+     "prediccion": "Con w calibrado en rango 0.3-0.6 (preregistrado, no ajustado post-hoc), R0 real deberia subir de 0.60 (V143) a un rango 0.65-0.75, establecidos de 66% a ~70-75%, vida del hijo de ~600 a 800-1200 pasos -- mejora real pero sin acercarse al techo de O1 (0.94, 3240 pasos). Si R0 no se mueve de 0.60 con w>0, la hipotesis PIT-como-explicacion-principal queda descartada para esta brecha.",
+     "control": "(a) w=0 (solo instrumental): debe reproducir los numeros de V143 casi exactos, sirve de replica interna. (b) Barajar el estimulo que dispara V_pav (romper la asociacion Pavloviana pero mantener la misma frecuencia de activacion): el efecto debe desaparecer si es realmente el pareo estimulo-aproximacion lo que mueve la aguja y no solo ruido anadido. (c) Replicar con al menos 3 semillas por condicion antes de declarar veredicto.",
+     "fuente": "Dayan, P., Niv, Y., Seymour, B., & Daw, N. D. (2006). The misbehavior of value and the discipline of the will. Neural Networks, 19(8), 1153-1160."
+    },
+    {
+     "mecanismo": "Arbitraje local por incertidumbre entre un controlador habitual (Q cacheada, TD con traza de elegibilidad) y una representacion sucesora (SR) que da flexibilidad tipo 'model-based' sin planeacion ni arbol de busqueda: SR se actualiza con una regla TD local (M(s,s') se corrige localmente cuando se visita s y se observa el siguiente estado), y el valor se recalcula al vuelo como V(s)=M(s,:)·R. La eleccion entre SR y Q cacheada se pesa por una estadistica local barata (varianza reciente del error de prediccion, o contador de visitas: 'novedad'), aproximando a Daw et al. 2005 sin inferencia bayesiana pesada.",
+     "por_que_aplica": "La brecha de la carrera es justo la que este arbitraje modela: prefrontal/model-based flexible pero caro vs estriado/model-free rapido pero rigido. V143 se comporta como puro habito cacheado (muerde por valor viejo aunque el mundo cambio); SR da una version local, barata, de 'saber que el mundo cambio' sin necesitar el calculo tipo arbol que solo O1 (LLM) puede pagar. Esto separa la pregunta 'cuanto sabe' (SR) de 'cuanto actua segun lo que sabe' (arbitraje), que es la variable clave de la carrera.",
+     "prediccion": "El modelo con arbitraje SR/habito debe superar en al menos +0.05 de R0 real al modelo puramente model-free con semillas emparejadas (ej. de 0.60 a >=0.65), y el porcentaje de establecidos debe subir a ~75-80%. Si la mejora es <0.02 o no es sistematica entre semillas, se rechaza que la SR local cierre parte de la brecha.",
+     "control": "(a) Arbitraje congelado en 'solo habito' (ablacion): debe reproducir V143/V143_RES0 (0.60/0.56). (b) Arbitraje congelado en 'solo SR': cota superior de lo que la SR sola puede dar, sin verse afectada por el habito. (c) Arbitraje aleatorio (mismo costo computacional, sin usar la senal de incertidumbre real): control de que la mejora viene de la senal y no de tener dos sistemas por si solo.",
+     "fuente": "Daw, N. D., Niv, Y., & Dayan, P. (2005). Uncertainty-based competition between prefrontal and dorsolateral striatal systems for behavioral control. Nature Neuroscience, 8(12), 1704-1711 (DOI 10.1038/nn1560); representacion sucesora: Dayan, P. (1993). Improving generalization for temporal difference learning: the successor representation. Neural Computation, 5(4), 613-624; evidencia en humanos: Momennejad, I., Russek, E. M., Cheong, J. H., Botvinick, M. M., Daw, N. D., & Gershman, S. J. (2017). The successor representation in human reinforcement learning. Nature Human Behaviour, 1, 680-692."
+    },
+    {
+     "mecanismo": "Regla de tres factores (Hebbiano + traza de elegibilidad + neuromodulador global) que APRENDE el propio freno inhibitorio dentro de la vida del individuo, en vez de traerlo fijo de fabrica. La sinapsis que conecta 'estimulo aversivo detectado' con 'suprimir accion de morder' guarda una traza de elegibilidad (pre*post) cuando se activa junto con el intento de morder, y solo se refuerza cuando llega, con retardo, la senal global de castigo (tipo dopamina/recompensa negativa). Sin backprop: solo producto local pre-post modulado por una senal escalar global, tal como describe la teoria de reglas de tres factores.",
+     "por_que_aplica": "Distingue un relato de aprendizaje DENTRO de la vida (el freno se calibra con la experiencia propia del individuo) de un relato puramente estructural/heredado (ficha 1). Si el bicho de V143 'sabe pero muerde igual' porque el freno nunca se ha fortalecido con la experiencia -- no porque no exista el freno -- esta regla predice una curva de mejora dentro de una sola vida, algo que ni V143 actual ni O1 (politica fija, sin aprendizaje online) modelan explicitamente.",
+     "prediccion": "La tasa de mordida por individuo debe decaer de forma monotona a lo largo de su vida, con una forma aproximadamente exponencial (caida de ~50% cada X interacciones tras la primera mordida castigada, X a preregistrar segun la tasa de elegibilidad elegida). El R0 real global deberia subir moderadamente (a ~0.65-0.72), mediado sobre todo por individuos que viven mas (vida de ~600 a 1000-1500 pasos), no por un salto en la limpieza de fundadores. Si la tasa de mordida es plana a lo largo de la vida de cada individuo (sin importar el R0 agregado), la hipotesis de aprendizaje local dentro-de-vida queda descartada en favor de un sesgo estructural fijo (ficha 1).",
+     "control": "(a) Sinapsis de freno congelada en su valor ingenuo (sin plasticidad): debe reproducir la tasa de mordida plana de V143. (b) Barajar la contingencia temporal entre 'intento de morder' y 'castigo retardado' manteniendo la MISMA frecuencia total de castigo: si la curva de aprendizaje desaparece pese a igual frecuencia agregada, confirma que es la correlacion temporal local (la traza de elegibilidad) la que hace el trabajo, no solo la cantidad de castigo recibido.",
+     "fuente": "Fremaux, N., & Gerstner, W. (2016). Neuromodulated spike-timing-dependent plasticity, and theory of three-factor learning rules. Frontiers in Neural Circuits, 9, 85."
+    },
+    {
+     "mecanismo": "Freno rapido tipo carrera go/stop (analogo a corteza frontal inferior derecha -> nucleo subtalamico, via 'hiperdirecta'), independiente de la magnitud del valor: un acumulador local 'go' (impulsado por el valor de aproximar/comer) corre en paralelo a un acumulador local 'stop' (impulsado por la deteccion de una etiqueta aversiva del estimulo, no por su valor completo), cada uno con ganancia y umbral propios ajustables localmente (por ejemplo, con covarianza reciente entre activacion del stop y resultado evitado). La accion se ejecuta si 'go' cruza umbral antes que 'stop'; es un problema de carrera/latencia, no de magnitud de valor.",
+     "por_que_aplica": "Ofrece una explicacion arquitectonica distinta y contrastable frente a las fichas 1-3: en vez de que el bicho 'no valore correctamente' lo malo, puede que SI lo detecte (la etiqueta aversiva se activa, 'sabe') pero el canal de freno llegue tarde relativo al canal de accion ya en marcha ('lo muerde igual' porque el freno pierde la carrera, no porque no exista). Esto predice un patron de disociacion muy especifico y falsable que las otras tres fichas no predicen.",
+     "prediccion": "Con un acumulador stop de baja latencia y ganancia calibrada localmente, la mejora de R0 debe concentrarse en los casos donde la senal aversiva esta disponible >=k pasos antes del contacto (mejora de +0.05 a +0.10, de 0.60 a 0.65-0.70), y debe ser practicamente nula (<0.02) en los casos donde la senal llega simultanea al contacto. Si la mejora es pareja entre ambos subconjuntos (sin disociacion por timing), esta hipotesis de carrera/latencia se descarta en favor de un relato puramente de magnitud de valor (fichas 1-3).",
+     "control": "(a) Umbral de stop en infinito (nunca dispara): debe reproducir V143 (0.60) exactamente, sirve de replica. (b) Umbral de stop en cero (siempre veta): control de sobre-inhibicion, debe colapsar el % de establecidos porque el bicho ya no puede actuar cuando lo necesita (verifica que el freno no sea gratis). (c) Barajar que estimulos llevan la 'etiqueta aversiva' que alimenta el stop: si el efecto persiste igual, es ruido y no deteccion real.",
+     "fuente": "Aron, A. R., Robbins, T. W., & Poldrack, R. A. (2014). Inhibition and the right inferior frontal cortex: one decade on. Trends in Cognitive Sciences, 18(4), 177-185."
+    }
+   ],
+   "tema": "Brecha saber-hacer en la carrera JUACO: control inhibitorio, model-based vs model-free, con reglas locales sin retropropagacion (sin copiar la politica de O1)"
+  },
+  {
+   "fichas": [
+    {
+     "mecanismo": "STDP modulado por recompensa (R-STDP) con traza de elegibilidad continua: cada sinapsis local mantiene e_ij(t), una traza que decae exponencialmente (constante de tiempo τ_e) y que acumula la coincidencia pre/post cada vez que el bicho ejecuta una acción (morder/no morder) sobre un patrón sensorial local. El peso solo cambia cuando llega una señal escalar global barata R(t) ('dopamina') que representa Δrecurso local (sitio liberado, energía ganada) varios pasos después de la mordida: ΔW_ij = η · e_ij(t) · R(t). No hay gradiente ni retropropagación: es correlación local × un único número difundido, igual que en Izhikevich 2007 y en la revisión de Frémaux & Gerstner.",
+     "por_que_aplica": "Explica exactamente la brecha descrita: V143 tiene el conocimiento semántico ('sabe que es malo') pero el circuito que decide morder no está acoplado al resultado tardío (sitio liberado), así que el bicho paga el costo sin aprender del beneficio. O1 sí parece explotar ese beneficio ('muerde lo malo cuando puede pagarlo para liberar sitio'), lo que sugiere que en O1 ese puente temporal ya está resuelto (aunque sea por diseño de LLM, no por aprendizaje). Este mecanismo es la versión mínima, local, para que V143 aprenda ese mismo puente por sí mismo sin copiar la política de O1.",
+     "prediccion": "Si τ_e se calibra cerca del retraso real medio entre mordida y liberación efectiva del sitio (hay que medirlo en la pista; hipótesis de trabajo: entre 20 y 150 pasos), R0_real debería subir de 0.60 hacia el rango 0.68-0.78 y el % de linajes establecidos de 66% hacia 72-80%, sin llegar al techo de O1 (0.94 / 84%). Si R0 no se mueve de 0.60±0.02 con τ_e bien calibrado, la falla NO es de crédito temporal y hay que descartar este mecanismo.",
+     "control": "Control 1 (ablación de temporalidad): mismo circuito pero con R(t) permutado aleatoriamente entre bichos/tiempos (rompe la contingencia acción→recompensa manteniendo la misma estadística global de R) — se espera que R0 se quede en el baseline ~0.60. Control 2 (τ_e mal calibrada): τ_e=0 (sin traza, Hebbiano puro instantáneo) y τ_e muy grande (10x el retraso real) — ambos deberían dar mejoras nulas o negativas frente al τ_e bien calibrado.",
+     "fuente": "Frémaux, N. & Gerstner, W. (2016). Neuromodulated Spike-Timing-Dependent Plasticity, and Theory of Three-Factor Learning Rules. Frontiers in Neural Circuits, 9:85. https://www.frontiersin.org/journals/neural-circuits/articles/10.3389/fncir.2015.00085/full ; Izhikevich, E.M. (2007). Solving the Distal Reward Problem through Linkage of STDP and Dopamine Signaling. Cerebral Cortex, 17(10):2443-2452."
+    },
+    {
+     "mecanismo": "Traza de elegibilidad 'silenciosa' con puerta temporal estrecha (gating), en vez de decaimiento continuo: la coincidencia local pre/post deja una marca binaria latente ('tag') que NO cambia nada por sí sola; solo se consolida en un cambio de comportamiento (aumentar/disminuir probabilidad de repetir esa mordida en ese patrón) si la señal de recompensa (sitio liberado) llega dentro de una ventana crítica estrecha (en el organismo real de Yagishita, ~0.3-2 s tras el evento sináptico; en JUACO habría que encontrar el equivalente en pasos). Si la ventana pasa sin señal, el tag se borra sin dejar rastro.",
+     "por_que_aplica": "Ataca el síntoma 'el veneno tapa el mundo': si demasiadas cosas quedan simultáneamente 'elegibles' para aprender (ruido difuso tipo ficha 1), el bicho podría terminar generalizando mal (aprender de coincidencias espurias en vez de la causa real). Una puerta estrecha y binaria, como la de la plasticidad estructural dopaminérgica real, filtra el ruido y solo premia la mordida que de verdad causó la liberación del sitio — más selectivo que un decaimiento exponencial suave, y coherente con que V143 'sabe' pero no actúa: aquí el conocimiento semántico y el gating de consolidación son dos sistemas separados que hay que acoplar.",
+     "prediccion": "Con la ventana bien ajustada, se predice una subida más marcada en el % de linajes establecidos que en la ficha 1 pero con más varianza entre semillas (por ser todo-o-nada): esperar 70-78% de establecidos y R0 en 0.65-0.75, con al menos 2 de 9 linajes por semilla mostrando aprendizaje nulo (ventana perdida) — un patrón bimodal que la ficha 1 no debería producir. Si la distribución sale unimodal y suave como la ficha 1, este mecanismo específico (gating binario) no se está diferenciando y se descarta como redundante.",
+     "control": "Control: abrir la ventana a un tamaño implausible (10x-50x el retraso real, o 'siempre abierta' = consolidación permanente) — debería reproducir el problema de 'todo se vuelve elegible' (aprendizaje ruidoso, sin mejora clara sobre baseline, posiblemente peor que 0.60 por interferencia). Comparar varianza entre semillas de este mecanismo vs. ficha 1 con τ_e continua.",
+     "fuente": "Yagishita, S. et al. (2014). A critical time window for dopamine actions on the structural plasticity of dendritic spines. Science, 345(6204):1616-1620. https://pubmed.ncbi.nlm.nih.gov/25258080/ ; Shindou, T. et al. (2019). A silent eligibility trace enables dopamine-dependent synaptic plasticity for reinforcement learning in the mouse striatum. European Journal of Neuroscience. https://pmc.ncbi.nlm.nih.gov/articles/PMC6585681/"
+    },
+    {
+     "mecanismo": "TD(λ) local con valor por estado-sitio y traza de elegibilidad, sin actor-crítico global ni backprop: cada patrón sensorial local (estado del sitio) tiene un valor escalar v(s) que el bicho actualiza con aritmética puramente local: δ = r_t + γ·v(s_{t+1}) − v(s_t) (r_t = costo inmediato de morder o beneficio inmediato; el término γ·v(s_{t+1}) es lo que codifica 'este sitio, una vez limpio, vale más'). δ se difunde como escalar global (análogo a dopamina fásica) y se multiplica por la traza de elegibilidad local de cada regla activada, igual que en ficha 1 pero con una señal de error de predicción en vez de recompensa cruda.",
+     "por_que_aplica": "Es el mecanismo más directo para 'aprender a limpiar por la consecuencia de sitio liberado': en vez de solo reforzar 'morder → recompensa tardía' (ficha 1), aprende explícitamente el VALOR del sitio limpio como estado, lo que permite que el bicho anticipe el beneficio antes de que ocurra (como parece hacer O1 al 'morder cuando puede pagarlo') sin haber copiado esa política — la anticipación emerge de v(s) aprendido localmente, no de una regla escrita a mano.",
+     "prediccion": "Se predice que este mecanismo es el que más acerca la vida del hijo al valor de O1: de ~600 pasos hacia 900-1500 pasos (sin llegar a los ~3240 de O1), y R0_real en 0.65-0.75. Predicción específica que puede fallar: si el discount γ no logra propagar valor más allá de 1-2 pasos en la práctica (por ruido en v(s) con reglas locales sin memoria de más largo plazo), la vida del hijo NO superará ~700 pasos y el mecanismo colapsa al comportamiento de ficha 1 pura (Hebbiano modulado, sin anticipación real).",
+     "control": "Control: fijar γ=0 (v(s_{t+1}) no cuenta, δ = r_t puro, equivalente a Hebbiano-recompensa instantáneo sin capacidad de anticipar el sitio liberado) — se espera que este control NO mejore la vida del hijo más allá del baseline ~600-700 pasos, confirmando que la ganancia (si aparece) viene de la anticipación vía γ y no de la traza de elegibilidad por sí sola.",
+     "fuente": "Izhikevich, E.M. (2007). Solving the Distal Reward Problem through Linkage of STDP and Dopamine Signaling. Cerebral Cortex, 17(10):2443-2452 (marco TD + traza de elegibilidad + dopamina fásica, base también usada en Frémaux & Gerstner 2016, Frontiers in Neural Circuits 9:85, sección sobre TD-STDP)."
+    }
+   ],
+   "tema": "Aprendizaje de tres factores y neuromodulación (dopamina, TD con trazas de elegibilidad) para cerrar la brecha V143→O1 en la carrera de JUACO, con reglas locales sin retropropagación"
+  },
+  {
+   "tema": "Construcción de nicho e ingeniería del ecosistema como mecanismos locales para cerrar la brecha O1 (0.94) vs V143 (0.60) en la carrera de escuderías — \"el veneno tapa el mundo\"",
+   "fichas": [
+    {
+     "mecanismo": "Remoción por umbral de estímulo local (necroforesis). Cada bicho compara la concentración local de 'señal tóxica' (residuo/veneno en su celda) contra un umbral individual; si la supera, ejecuta la acción 'recoger y alejar' el veneno fuera de la zona de forrajeo, igual que las obreras cargan cadáveres a cementerios lejos del nido. El umbral no es fijo: sube o baja por refuerzo local simple (si alejar el veneno permitió comer/sobrevivir después, el umbral baja la próxima vez que aparezca una señal parecida) — es condicionamiento tipo Skinner sobre una variable local, nunca un gradiente propagado por la red.",
+     "por_que_aplica": "V143 no muere de ignorancia: el bicho sabe que algo es malo y lo muerde igual, y no hay ninguna regla que retire el veneno de su propio entorno, así que se acumula ('el veneno tapa el mundo'). O1 sí 'limpia' morediendo lo malo cuando puede pagarlo, pero eso es una política diseñada por LLM (prohibido copiarla). Este mecanismo da al linaje V143 una capacidad de limpieza de nicho aprendible con una sola variable local (umbral), sin tocar la arquitectura de O1.",
+     "prediccion": "Con el umbral de remoción activo, en semillas con veneno denso el R0 real de V143 debería subir de 0.60 a >=0.75 y el % de linajes establecidos de 66% a >75%. Falla si en esas mismas semillas R0 se queda <=0.65 (el umbral no alcanza a compensar la tasa de regeneración del veneno).",
+     "control": "Réplica con 'remoción disparada al azar' (misma tasa de acciones de remover pero sin relación con la señal local de veneno) para descartar que la mejora venga solo de tener una acción extra de limpieza, y no del acoplamiento umbral-estímulo en sí.",
+     "fuente": "Deneubourg, J.-L., Goss, S., Franks, N., Sendova-Franks, A., Detrain, C., Chrétien, L. (1990) modelo de umbral fijo para división de trabajo (clustering de cadáveres); y 'Social organization of necrophoresis: insights into disease risk management in ant societies', Royal Society Open Science 11(12):240764, 2024. https://royalsocietypublishing.org/doi/10.1098/rsos.240764"
+    },
+    {
+     "mecanismo": "Marca repelente decayente tipo 'no entry'. Al morder algo tóxico y sufrir daño, el bicho deposita localmente una marca de aviso ('no volver aquí') en su celda; la marca decae con tasa fija; cualquier bicho del mismo carro que la perciba luego reduce su probabilidad de revisitar esa zona, sin tener que volver a sufrir el daño para aprenderlo. Depositar-al-castigo y leer-para-sesgar-movimiento son las dos únicas reglas, ambas locales y sin señal de error retropropagada.",
+     "por_que_aplica": "El hallazgo de que 'el hijo de V143 sabe que es malo y lo muerde igual' indica que el conocimiento individual no se transfiere al espacio: cada cuerpo repite el mismo error donde ya murió otro cuerpo del linaje. La marca convierte 'yo sé' en 'el sitio queda marcado', lo que debería frenar la reincidencia sin inventar una política central.",
+     "prediccion": "Las mordidas repetidas al mismo foco de veneno por linaje deberían caer >40% respecto al control, y la vida del hijo subir de ~600 a >=900 pasos. El R0 real debería mejorar pero menos que la ficha 1 (predicción explícita: <0.70), porque marcar evita, no limpia. Falla si la vida del hijo no cambia (>800 pasos) pese a la caída en mordidas repetidas: indicaría que la muerte no viene de reincidir en el mismo sitio sino de otra causa.",
+     "control": "Fijar la tasa de decaimiento de la marca en cero (marca permanente) para verificar si el mecanismo simplemente clausura el mapa en vez de ayudar (colapso por sobre-marcado), comparando contra la tasa de decaimiento normal.",
+     "fuente": "Robinson, E.J.H., Green, K.E., Jenner, E.A., Holcombe, M., Ratnieks, F.L.W. (2005) \"'No entry' signal in ant foraging\", Nature 438:442. https://www.nature.com/articles/438442a ; y Robinson, E.J.H., Jackson, D.E., Holcombe, M., Ratnieks, F.L.W., \"Decay rates of attractive and repellent pheromones in an ant foraging trail network\", Insectes Sociaux (2008). https://link.springer.com/article/10.1007/s00040-008-0994-5"
+    },
+    {
+     "mecanismo": "Neutralización pasiva ligada a la acción, como regla del MUNDO y no del cerebro del bicho: cada vez que un bicho muerde el veneno y sobrevive (paga el costo), la celda reduce su nivel de toxina en una fracción k (p.ej. 'toxina_celda -= k tras mordida sobrevivida'). No hay decisión del bicho involucrada más allá de la mordida misma; el rastro que deja es igual al de un ingeniero de ecosistema (ej. castor) que modifica el hábitat de forma que persiste y beneficia a quien llegue después — herencia ecológica, no aprendizaje individual.",
+     "por_que_aplica": "Permite separar si la ventaja de O1 viene de 'tener una política mejor' o simplemente de que sus mordidas, al ejecutarse, dejan el mundo un poco más limpio para el siguiente paso/generación. Si una regla de mundo (sin tocar en nada al cerebro de V143) ya mueve la aguja, la brecha sería más del entorno que del bicho — hipótesis fuerte y barata de probar antes de tocar la arquitectura.",
+     "prediccion": "Con k moderado (~30% de reducción local por mordida sobrevivida) el R0 real de V143 debería subir de 0.60 a 0.70-0.78 SIN cambiar el cerebro del bicho. Falla (hipótesis falsa) si R0 se queda en 0.58-0.62: significaría que la regeneración del veneno supera a k y que 'el mundo solo' no alcanza, apuntando a que hace falta además una conducta activa (fichas 1 o 4).",
+     "control": "(a) k=0 como línea base ya existente (V143=0.60); (b) 'neutralización aleatoria' que reduce veneno en celdas al azar (misma cantidad total removida) pero desligada de si hubo mordida, para separar 'hay menos veneno en general' de 'el bicho aprovecha su propia mordida como herramienta de limpieza'.",
+     "fuente": "Jones, C.G., Lawton, J.H., Shachak, M. (1994) \"Organisms as ecosystem engineers\", Oikos 69(3):373-386; Odling-Smee, F.J., Laland, K.N., Feldman, M.W. (2003) Niche Construction: The Neglected Process in Evolution, Princeton University Press (concepto de 'ecological inheritance'). https://press.princeton.edu/books/paperback/9780691044378/niche-construction"
+    },
+    {
+     "mecanismo": "Enterrar / construir vertedero: acción física que mueve el veneno de una celda transitable a una celda no transitable o de borde, removiéndolo de forma permanente e irreversible del espacio alcanzable (no diluye ni marca, saca la basura del mapa). La estructura resultante (el 'vertedero') persiste y es heredada ecológicamente por los descendientes del mismo carro, igual que una madriguera heredada. La conducta de enterrar se fija solo si aumenta la eficacia reproductiva del linaje que la usa — selección pura sobre la frecuencia de uso, sin gradiente ni backprop.",
+     "por_que_aplica": "Es la hipótesis más fuerte para 'el veneno tapa el mundo': si nada saca basura de forma permanente, ni evitar (ficha 2) ni diluir (ficha 3) alcanzan a tiempo T=100000, porque el espacio se satura igual, solo que más despacio. Ataca directamente la censura por fundadores repuestos y el juez de R0 real a t largo.",
+     "prediccion": "Activar 'enterrar' con costo de tiempo/energía c bajo debería dar la subida más grande de las 4 fichas en R0 real a t cercano a 100000 (predicción: R0>=0.80) y reducir la toxina acumulada por celda a <20% de la línea base en t=100000. Falla de forma concreta si c es alto: la conducta nunca se fija por selección y R0 se queda igual a la línea base (0.60) pese a tener el gen disponible — esa es la forma exacta en que la predicción puede fallar.",
+     "control": "(a) 'enterrar gratis' (c=0) vs 'enterrar con costo' para separar si el freno es el costo energético o la capacidad anatómica de ejecutar la acción; (b) réplica con el gen de enterrar presente pero mutado a inactivo, para confirmar que el efecto viene de usarlo y no de tenerlo disponible (descartar pleiotropía).",
+     "fuente": "Chiba, N., Suzuki, R., Arita, T. (2020) \"Evolution of Complex Niche-Constructing Behaviors and Ecological Inheritance of Adaptive Structures in a Physically Grounded Environment\", Frontiers in Robotics and AI 7:45. https://doi.org/10.3389/frobt.2020.00045"
+    }
+   ]
+  },
+  {
+   "fichas": [
+    {
+     "mecanismo": "Inversión terminal / valor reproductivo residual (RRV) como compuerta local para morder recursos marcados como 'malos'. Regla puramente local, sin backprop: cada cuerpo lleva un escalar propio (su reserva de energía actual, o una media móvil de su propia trayectoria de energía) que funciona como proxy de 'cuánta vida/reproducción futura me queda'. La decisión de morder un recurso que el cuerpo ya sabe que es malo se condiciona a ese escalar: solo muerde si reserva_actual > margen_de_seguridad + costo_esperado_del_mordisco. El margen_de_seguridad se puede ajustar con una regla tipo Rescorla-Wagner local (un solo peso escalar, sin gradiente compartido, sin copiar los pesos de O1): sube o baja según si el mordisco resultó pagable o letal.",
+     "por_que_aplica": "El propio director ya reporta el fenómeno clave: el hijo de V143 'sabe que es malo y lo muerde igual' (mordida indiscriminada, no gateada), mientras O1 'muerde lo malo cuando puede pagarlo' (mordida condicionada al estado propio). La teoría de inversión terminal (Clutton-Brock 1984) predice exactamente este tipo de regla: la disposición a arriesgar cuerpo/recursos en el presente debe escalar con el valor reproductivo residual del individuo, no ser fija. Es una regla general e independientemente descubierta en biología -no es copiar la política concreta de O1-, y es local (un escalar por cuerpo).",
+     "prediccion": "Si se instala el gateo por reserva, predigo que R0_real sube de 0.60 hacia >=0.75 (no necesariamente los 0.94 de O1) en el mismo bloque preregistrado de 9 semillas/9 linajes, y que la vida media del hijo sube de ~600 hacia >=1000 pasos. Predicción que puede fallar: que la tasa de mordida total baje demasiado (evitación excesiva) sin que suba R0_real, lo que indicaría que el problema no es de compuerta de riesgo sino de otra cosa (p.ej. el veneno tapa demasiado el mapa y no hay suficiente recurso bueno accesible aunque se sea selectivo).",
+     "control": "Ablación pareada en las mismas 9 semillas: misma arquitectura de V143 pero con el gateo desactivado (mordida ciega a la reserva, como ahora). Comparar R0_real, % linajes establecidos y vida del hijo entre las dos condiciones, mismas semillas y réplicas. Verificar además que el efecto no sea trivial 'bite_rate global más bajo' sino selectividad condicionada al estado (medir bite_rate cuando reserva es alta vs baja).",
+     "fuente": "Clutton-Brock, T.H. (1984) 'Reproductive Effort and Terminal Investment in Iteroparous Animals.' The American Naturalist, 123(2):212-229; ver también el modelo de umbral dinámico para inversión terminal: Descamps et al./modelo de umbral, 'A dynamic threshold model for terminal investment', Behavioral Ecology and Sociobiology (2017), https://link.springer.com/article/10.1007/s00265-017-2416-z; resumen: https://en.wikipedia.org/wiki/Terminal_investment_hypothesis"
+    },
+    {
+     "mecanismo": "Compensación tamaño-vs-número de crías (modelo Smith-Fretwell) gobernada por peligro sensado localmente. Regla local: cada cuerpo lleva un presupuesto propio (su reserva actual) que reparte entre número de crías y energía inicial por cría. La fracción de reserva que se invierte por cría no es fija: escala con una señal local de peligro (p.ej. densidad de encuentros con veneno en los últimos N pasos del propio cuerpo, o en el radio de exploración). Más peligro local -> más energía por cría, menos crías (calidad sobre cantidad); menos peligro -> más crías, menos energía cada una. No hay retropropagación ni copia de la política de O1: es una regla aritmética local con una sola entrada sensorial propia.",
+     "por_que_aplica": "El modelo Smith-Fretwell (1974) es el marco clásico para por qué, bajo alta mortalidad juvenil, conviene invertir más por hijo aunque sean menos (el hijo nace con más colchón para sobrevivir sus primeros riesgos, incluido el de 'saber que algo es malo pero no poder evitarlo del todo'). Esto ataca directo la brecha: el hijo de V143 muere joven (~600) posiblemente por nacer sin colchón suficiente para absorber los costos de un mundo saturado de veneno, mientras un hijo mejor capitalizado podría sobrevivir el mismo entorno el tiempo suficiente para reproducirse.",
+     "prediccion": "Predigo forma de joroba, no monótona (esto es lo falsificable): al barrer la fracción de inversión por cría en 3 valores preregistrados (p.ej. 1x, 1.5x, 2x la reserva-por-cría actual), la vida del hijo y el % de linajes establecidos deberían subir hasta un punto óptimo (predicción numérica: vida del hijo pasa de ~600 a >=1000 en el valor intermedio) y luego bajar o estancarse en el valor más alto porque hay menos eventos de nacimiento totales. Si en cambio la relación es monótona creciente o no cambia nada, la ficha falla.",
+     "control": "Barrido preregistrado de 3 valores de fracción de inversión, mismas 9 semillas y réplicas que O1/V143, midiendo simultáneamente R0_real (definido sobre nacimientos, que puede bajar si se invierte demasiado) y vida del hijo por separado -no basta con mejorar uno-. Comparar también contra V143_RES0 para ver si interactúa con la diferencia del nodo sin entradas neutras.",
+     "fuente": "Smith, C.C. & Fretwell, S.D. (1974) 'The Optimal Balance between Size and Number of Offspring.' The American Naturalist, 108(962):499-506; revisión aplicada: 'The Offspring-Size/Clutch-Size Trade-Off in Mammals', https://www.researchgate.net/publication/7109609"
+    },
+    {
+     "mecanismo": "Bet-hedging diversificado dentro del linaje (varianza heredable en el umbral de riesgo, sin backprop). Regla local: cada nacimiento hereda el umbral de 'qué tan malo debe verse un recurso para evitarlo' del cuerpo padre más un jitter aleatorio acotado (ruido local en el nacimiento, no un gradiente compartido entre cuerpos del mismo carro). Así cada linaje mantiene siempre un espectro de fenotipos -algunos más cautelosos, algunos más arriesgados- en vez de converger a un único umbral óptimo promedio.",
+     "por_que_aplica": "Seger & Brockmann (1987) formalizan que, en ambientes con desenlaces impredecibles, diversificar el fenotipo de la progenie puede superar en fitness geométrico (el que importa a través de generaciones) a cualquier estrategia 'promedio óptima' fija -que es justo lo que parecen intentar tanto V143 (un umbral único aprendido, mal calibrado) como O1 (una política fija de techo). Diversificar dentro del carro podría sostener linajes cuando el entorno saturado de veneno castiga fuerte cualquier umbral único mal puesto.",
+     "prediccion": "Predicción numérica: linajes cuya varianza del umbral de riesgo esté en el tercio superior (preregistrado) deberían mostrar >=10 puntos porcentuales más de establecimiento (hacia el 66%->76%+ de V143) que linajes de varianza baja, incluso si el R0_real promedio por cuerpo es igual o menor. Riesgo real de fallo señalado por la propia teoría: Seger & Brockmann exigen imprevisibilidad temporal o espacial para que el bet-hedging pague; si el mapa de veneno de JUACO es estático por semilla (mismo layout todo el episodio), el mecanismo puede no mostrar efecto o ser incluso levemente negativo -eso no sería un error del experimento, sino la ficha fallando como predice la propia teoría.",
+     "control": "Comparar el mismo mecanismo en dos condiciones preregistradas: (a) mapa de veneno estático por semilla (como ahora) vs (b) mapa con variación entre episodios/reinicios dentro de la misma semilla. La predicción fuerte es que el efecto de la varianza solo aparece en (b); si aparece igual en (a), sospechar de otro confusor y descartar el mecanismo como bet-hedging genuino.",
+     "fuente": "Seger, J. & Brockmann, H.J. (1987) 'What is bet-hedging?' Oxford Surveys in Evolutionary Biology, 4:182-211; síntesis empírica: 'Evolutionary bet-hedging in the real world', PMC2982066, https://pmc.ncbi.nlm.nih.gov/articles/PMC2982066/"
+    },
+    {
+     "mecanismo": "Ritmo de reproducción pautado por tendencia de supervivencia propia (estrategia 'lenta', continuo fast-slow). Regla local: cada cuerpo calcula una tendencia suavizada de su propia energía/salud a lo largo de su vida (p.ej. pendiente de una media móvil corta). Solo dispara un nacimiento cuando esa tendencia es no-decreciente; si la tendencia es negativa, retiene el recurso e invierte en su propia supervivencia (forrajeo/evitación) en vez de reproducirse de inmediato. Ningún gradiente compartido: cada cuerpo mira solo su propia serie de tiempo.",
+     "por_que_aplica": "Esto es lo que probablemente explica por qué O1 (vida ~3240) logra más R0_real que V143 (vida ~600) pese a que la teoría ingenua de r/K diría que alta mortalidad favorece reproducirse rápido y morir joven (Williams 1966): en este mundo, la estrategia ganadora observada es la lenta -sobrevivir mucho y repartir la reproducción en esa vida larga (continuo fast-slow, Promislow & Harvey 1990; pace-of-life syndrome, Ricklefs & Wikelski 2002)-, no la rápida. El hijo de V143 muestra el patrón contrario: parece no pausar el gasto/riesgo aunque su propia trayectoria esté cayendo.",
+     "prediccion": "Predicción numérica: con la pausa activada, la vida media del hijo debería subir sustancialmente desde ~600 hacia el orden de >=1500-2000 pasos, y el R0_real acumulado a lo largo de esa vida más larga debería cerrar al menos la mitad de la brecha actual (0.60 -> >=0.77) en el mismo bloque de 9 semillas. Modo de fallo concreto y real: que la pausa solo alargue la vida sin que la mortalidad por paso realmente baje lo suficiente como para acumular más nacimientos -en ese caso vida del hijo sube pero R0_real se queda cerca de 0.60, lo que falsificaría que este mecanismo es SUFICIENTE (podría seguir siendo necesario pero no suficiente).",
+     "control": "Medir vida del hijo y R0_real como dos series independientes, nunca una sola métrica compuesta. Ablación quitando la compuerta de pausa (reproducir siempre que se pueda, como ahora) en las mismas semillas/réplicas que O1 y V143 para comparabilidad directa. Vigilar que la pausa no degenere en 'nunca reproducirse' (patología trivial) fijando un techo preregistrado de pasos sin reproducir antes de forzar un intento.",
+     "fuente": "Promislow, D.E.L. & Harvey, P.H. (1990) 'Living fast and dying young: A comparative analysis of life-history variation among mammals.' Journal of Zoology, 220(3):417-437, https://zslpublications.onlinelibrary.wiley.com/doi/10.1111/j.1469-7998.1990.tb04316.x ; marco de mortalidad extrínseca: Williams, G.C. (1966) 'Natural Selection, the Costs of Reproduction, and a Refinement of Lack's Principle', American Naturalist 100:687-690; revisión moderna: 'Extrinsic Mortality Can Shape Life-History Traits, Including Senescence', Evolutionary Biology (2018), https://link.springer.com/article/10.1007/s11692-018-9458-7"
+    }
+   ],
+   "tema": "Teoría de historias de vida aplicada a la brecha O1 (R0=0.94) vs V143 (R0=0.60) en la carrera de escuderías JUACO: 4 mecanismos de regla local, sin retropropagación, que no copian la política de O1"
+  },
+  {
+   "fichas": [
+    {
+     "mecanismo": "Umbral de respuesta reforzado (fixed/reinforced response threshold): cada cuerpo del carro lleva un umbral interno θ_i, heredado y distinto entre cuerpos, frente al estímulo local 'nivel de veneno/celda mala' s. Probabilidad de morder = s^n/(s^n+θ_i^n). El umbral se autorrefuerza SOLO con la experiencia propia del cuerpo: si actúa (muerde), su θ baja (se especializa en limpiar); si el estímulo persiste y no actúa, θ sube (se aleja de la tarea). Es una regla local de ensayo-y-resultado propio, no un gradiente compartido ni backprop.",
+     "por_que_aplica": "Hoy V143 parece aplicar una política casi homogénea entre cuerpos del carro ('muerde lo malo aunque lo sepa', parejo) — sin división del trabajo. El umbral de respuesta genera especialización emergente (unos cuerpos limpian, otros crecen) sin copiar la política de O1: es una regla local nueva, aprendida por refuerzo propio, que podría cerrar parte de la brecha R0_real 0.60→0.94.",
+     "prediccion": "Con umbrales heterogéneos y autorreforzados se espera R0_real ≥ 0.75 (mejora ≥ +0.15 sobre 0.60) y una caída ≥30% en 'mordidas que el cuerpo no puede pagar' (muertes por costo no cubierto). Falla si la varianza de θ colapsa rápido a un solo valor: entonces R0_real se queda cerca de 0.60.",
+     "fuente": "Bonabeau, E., Theraulaz, G., Deneubourg, J.-L. (1996). 'Quantitative study of the fixed threshold model for the regulation of division of labour in insect societies.' Proc. R. Soc. B 263(1376):1565-1569. También Bonabeau, Theraulaz & Deneubourg (1998), Bull. Math. Biol. 60, 'Fixed response thresholds and the regulation of division of labor in insect societies.'"
+    },
+    {
+     "mecanismo": "Polietismo por edad con compuerta interna tipo hormona juvenil: cada cuerpo lleva un reloj interno (pasos vividos) que crece monótonamente y determina qué acciones están habilitadas: joven → repertorio restringido (comer limpio, moverse, sin arriesgar mordidas de veneno); viejo/titer alto → repertorio ampliado (incluye morder-para-limpiar). La transición se acelera o retrasa por inhibición social local: el contacto con cuerpos ya 'maduros' cercanos empuja el reloj, igual que la presencia de forrajeras viejas inhibe la maduración de jóvenes en abejas. Cada cuerpo solo lee su propio reloj y a los vecinos que toca.",
+     "por_que_aplica": "La observación 'el hijo no muere de ignorancia, sabe que es malo y lo muerde igual' sugiere que el bicho aplica la misma política recién nacido que a los 3000 pasos — sin desarrollo ontogenético. Una compuerta de edad evitaría que un cuerpo recién nacido arriesgue un mordisco costoso antes de acumular reservas, lo que debería alargar la vida del hijo (hoy ~600, meta O1 ~3240) sin copiar la política escrita por el LLM.",
+     "prediccion": "Con la compuerta activa, la vida promedio del hijo debería subir al menos a ~1200-1500 pasos (duplicar el ~600 actual) y R0_real subir ≥+0.10. Puede fallar si el reloj cronológico no se correlaciona con la energía real del cuerpo, dando efecto nulo.",
+     "fuente": "Robinson, G.E. (1992). 'Regulation of division of labor in insect societies.' Annual Review of Entomology 37:637-665. Huang, Z.-Y. & Robinson, G.E. (1996). 'Regulation of honey bee division of labor by colony age demography.' Behavioral Ecology and Sociobiology 39:147-158."
+    },
+    {
+     "mecanismo": "Reconocimiento local de parentesco vía etiqueta corta heredada (análoga a hidrocarburos cuticulares): cada cuerpo lleva una etiqueta con mutación. Al tocar un vecino compara etiquetas: si coincide (mismo linaje/carro), sube la probabilidad de pagar el costo de morder veneno para liberar la celda (cooperación local tipo regla de Hamilton, rB>C evaluado por coincidencia de etiqueta, no por cálculo global); si no coincide, baja. Ningún cuerpo calcula parentesco global, solo compara etiqueta contra etiqueta en el contacto.",
+     "por_que_aplica": "'El veneno tapa el mundo' sugiere que limpiar sin criterio gasta cuerpos donde no hay pariente que se beneficie del sitio liberado. Condicionar el sacrificio a la presencia local de parientes concentra el costo donde sube la aptitud del linaje, acercándose al efecto de O1 ('muerde lo malo cuando puede pagarlo') por una vía evolutiva distinta, no copiada de su política.",
+     "prediccion": "R0_real debería subir, y en particular la correlación entre densidad local de parientes y tasa de mordida-sacrificio debería ser positiva y medible (r > 0.3). Sin esa correlación el mecanismo no está haciendo nada útil.",
+     "fuente": "Hamilton, W.D. (1964). 'The genetical evolution of social behaviour I/II.' Journal of Theoretical Biology 7(1):1-52. Mecanismo local real: van Zweden, J.S. & d'Ettorre, P. (2010). 'Nestmate recognition in social insects and the role of hydrocarbons.' En Insect Hydrocarbons, Cambridge University Press."
+    },
+    {
+     "mecanismo": "Asignación de tarea por tasa de encuentro local (sin sensar intensidad de estímulo): cada cuerpo lleva una memoria corta de los últimos k contactos con cuerpos de su carro. Regla: si al menos m de esos k ya estaban limpiando (mordieron veneno recientemente), el cuerpo también limpia; si no, sigue su tarea por defecto (crecer/moverse). El reclutamiento social sustituye al sensor de intensidad de veneno; no requiere contar población total ni sentir 'cuánto' veneno hay, solo el tipo de acción reciente del vecino tocado.",
+     "por_que_aplica": "V143 parece actuar en aislamiento entre cuerpos del carro, lo que puede producir sobre-limpieza en unas zonas y abandono en otras ('el veneno tapa el mundo') por falta de coordinación social. Esta regla es más barata que un umbral de estímulo (no sensa intensidad) y es la vía documentada por la que hormigas cosechadoras reparten tarea sin controlador central.",
+     "prediccion": "Con este mecanismo activo debería bajar la varianza espacial de 'veneno sin limpiar' por línea y R0_real subir ≥+0.08 sobre 0.60. Si k o m están mal calibrados el efecto puede no aparecer o empeorar por sobre-reclutamiento (todos limpiando, nadie creciendo).",
+     "fuente": "Gordon, D.M. & Mehdiabadi, N.J. (1999). 'Encounter rate and task allocation in harvester ants.' Behavioral Ecology and Sociobiology 45:370-377. Concepto original 'foraging for work': Tofts, C. & Franks, N.R. (1992). 'Doing the right thing: ants, honeybees and naked mole-rats.' Trends in Ecology & Evolution 7(10):346-349."
+    }
+   ],
+   "tema": "Mecanismos de insectos sociales (selección de parentesco, umbrales de respuesta, polietismo por edad, asignación por tasa de encuentro) aplicables como reglas locales al bicho JUACO para cerrar la brecha R0_real frente a O1"
+  },
+  {
+   "tema": "Evitación aprendida, neofobia, habituación y saciedad: mecanismos locales candidatos para cerrar la brecha V143→O1 en la carrera de JUACO (por qué el bicho muerde el veneno sabiendo que es malo)",
+   "fichas": [
+    {
+     "mecanismo": "Aversión gustativa condicionada de un solo ensayo (efecto Garcia / bait-shyness): al morder un ítem, el bicho guarda una 'etiqueta' local del ítem (su tag/identidad, no su posición ni la política global). Si tras ese mordisco entra en malestar (daño/energía negativa) dentro de una ventana de retardo, se escribe una regla local: probabilidad_de_morder(tag) *= factor_de_castigo, con un solo evento, sin retropropagar por toda la cadena de decisiones ni reescribir el cerebro de linaje entero. Si en mordiscos posteriores el mismo tag NO produce malestar, la aversión decae (extinción) — así el bicho puede 'reprobar' un veneno una vez y aprenderlo, pero también puede desaprenderlo si el ítem deja de ser peligroso (mundo no estacionario).",
+     "por_que_aplica": "Encaja exacto con lo ya sabido: 'el hijo de V143 no muere de ignorancia, sabe que es malo y lo muerde igual'. Eso dice que V143 SÍ distingue bueno/malo (hay señal) pero no la convierte en una regla de bloqueo durable ligada a la identidad del ítem — muerde con la misma probabilidad cada vez, como si careciera del paso 'guardar tag + bajar prob(tag) tras 1 evento'. Es la pieza más barata y más local posible: no imita la política de O1 (que 'limpia' activamente el entorno), solo evita repetir el mismo error una vez identificado el ítem.",
+     "prediccion": "Si se implementa como regla local (tag + decaimiento simple, sin backprop) en V143_RES0, predicción numérica: R0 real sube de 0.56 a un rango 0.62–0.72 (mejora modesta, no llega a O1 0.94) y el % de linajes establecidos sube de 66% a 72–78%. Si el R0 no se mueve de 0.60 ± 0.02, la ficha FALLA: significa que el problema no es la falta de aversión de un solo ensayo sino otra cosa (p. ej. la señal de malestar no llega a tiempo, o el 'veneno tapa el mundo' impide siquiera generar el evento de malestar).",
+     "control": "Control 1 (tag barajado): asociar el castigo a un tag aleatorio distinto del ítem realmente mordido — si el R0 sube igual, el efecto es solo 'ruido/supresión general de mordidas', no aprendizaje por identidad, y la ficha es falsa. Control 2 (sin decaimiento/extinción): fijar la aversión como permanente e irreversible — comparar contra la versión con extinción para ver si el mundo no estacionario de JUACO castiga la rigidez.",
+     "fuente": "Garcia, J. & Koelling, R.A. (1966) 'Relation of cue to consequence in avoidance learning', Psychonomic Science; revisión de circuito en Yamamoto, T. (2007) 'Brain regions responsible for the expression of conditioned taste aversion in rats', Chemical Senses / y Lin, J.Y. et al. (1990) 'Acquisition of CTA is prevented by TTX blockade of parabrachial nuclei', Brain Research (ScienceDirect)."
+    },
+    {
+     "mecanismo": "Neofobia por defecto + habituación gradual (sin memoria de identidad fina): el bicho asigna una probabilidad de mordida BAJA a todo ítem que no ha visto antes (umbral de novedad), y esa probabilidad sube poco a poco con cada encuentro que NO termina en malestar (muestreo seguro repetido), y cae de golpe si termina en malestar. Es una regla puramente local de conteo de encuentros por 'clase de ítem' (no por individuo), compartida dentro del carro/linaje porque todos los cuerpos alimentan el mismo contador.",
+     "por_que_aplica": "Explica por qué O1 'limpia mucho' y V143 no: si O1 tiene (aunque sea implícito en su política escrita) un umbral de cautela inicial más alto frente a ítems nuevos, muerde menos veneno en las primeras exposiciones, sobrevive más para acumular más datos, y statisticamente 'paga' el costo de probar solo cuando el terreno ya está limpio de ítems conocidos-malos. V143 podría carecer de ese freno inicial: trata lo nuevo igual que lo familiar, así que la primera exposición a cada ítem tóxico ya es una ruleta sin cautela, lo cual reduce la vida esperada del hijo (~600 vs ~3240 pasos de O1).",
+     "prediccion": "Predicción numérica: bajar la probabilidad basal de morder ítems no vistos en un factor de 0.3–0.5 (neofobia) y subirla +0.05 por encuentro seguro debería alargar la vida media del hijo en V143 en 1.5×–2.5× (de ~600 a 900–1500 pasos) sin necesariamente mover mucho el R0 real (que depende de establecimiento, no solo de vida individual). Si la vida media no cambia (se queda en 600 ± 50), la ficha falla: la mortalidad no viene de morder cosas nuevas sino de re-morder cosas ya conocidas como malas (lo cual apunta de vuelta a la ficha de CTA).",
+     "control": "Control: aplicar el mismo freno de novedad pero a ítems BUENOS también (neofobia simétrica, no solo a lo desconocido-potencialmente-malo) — si mejora igual, el efecto es solo 'comer menos en general' (efecto de hambre artificial), no discriminación de riesgo real.",
+     "fuente": "Greenberg, R. & Mettke-Hofmann, C. (2001) 'Ecological aspects of neophobia and neophilia in birds', Current Ornithology; Chojnacki et al./Bonneaud lab — Bonnaud, E. et al. (2016) 'Food Neophobia in Wild Rats (Rattus norvegicus) Inhabiting a Changeable Environment', PLOS ONE 11(6):e0156741 (journals.plos.org)."
+    },
+    {
+     "mecanismo": "Integrador de carga tóxica acumulada con fuga (leaky integrator), no un juicio binario bueno/malo por mordisco: el bicho lleva un estado interno 'carga_toxica' que sube con cada mordisco de un ítem malo (proporcional a su dosis local) y baja lentamente con el tiempo (metabolismo/detoxificación pasiva). La probabilidad de rechazo de un mordisco no depende de si el ítem 'es malo' en abstracto, sino de si carga_toxica + dosis_de_este_mordisco supera un umbral de rechazo reflejo — igual que un límite de capacidad de detoxificación biológica real.",
+     "por_que_aplica": "Esto explica de forma distinta el mismo síntoma ('sabe que es malo y lo muerde igual'): si V143 evalúa cada mordisco de forma aislada (memoria sin estado acumulado), un solo mordisco de veneno parece 'pagable', y el bicho no tiene forma de saber que YA está cerca del límite por mordiscos anteriores — muere por acumulación, no por un solo error. Encaja con la idea de 'el veneno tapa el mundo': si hay tanto veneno disponible que el integrador se satura rápido y nunca baja, el bicho vive permanentemente en zona de rechazo alto, lo cual coincide con la observación de que O1 'limpia' activamente el veneno para descargar el mundo (reduce la dosis ambiental, no solo la decisión individual).",
+     "prediccion": "Predicción numérica: con el integrador activo y un umbral calibrado a media vida de detoxificación de ~200-400 pasos, la mortalidad por sobredosis (muertes atribuidas a 'toxina acumulada' en el registro) debería caer 40-60% respecto a V143_RES0, y el R0 real subir de 0.56 a 0.65-0.75. Si la mortalidad por toxina no baja (se mantiene dentro de ±10%), la ficha falla: el problema no es evaluación por dosis acumulada sino la disponibilidad/densidad de veneno en el mundo, que ningún mecanismo de decisión individual puede compensar (habría que tocar el mundo, no el bicho).",
+     "control": "Control: fijar el integrador con fuga = 0 (memoria infinita, nunca se recupera) vs fuga muy rápida (memoria de 1 paso, equivalente a no tener integrador) — comparar los tres regímenes para separar el efecto de 'acumulación' del efecto de 'recuperación', y verificar que la mejora no viene solo de bloquear TODO mordisco repetido (lo cual sería indistinguible de la ficha de CTA con castigo permanente).",
+     "prediccion_extra": null,
+     "fuente": "Freeland, W.J. & Janzen, D.H. (1974) 'Strategies in herbivory by mammals: the role of plant secondary compounds', American Naturalist 108:269-289; revisión en Marsh, K.J., Wallis, I.R., Andrew, R.L. & Foley, W.J. (2006) 'The Detoxification Limitation Hypothesis: Where Did it Come From and Where is it Going?', Journal of Chemical Ecology 32:1247-1266 (link.springer.com/article/10.1007/s10886-006-9082-3)."
+    },
+    {
+     "mecanismo": "Modulación del umbral de aversión por reserva energética interna (forrajeo dependiente de estado / risk-sensitive foraging): la fuerza con la que la señal de malestar-esperado frena una mordida NO es fija, se escala por una variable local de energía/hambre del cuerpo. Regla local: peso_de_aversion = peso_base * f(energia_actual), con f decreciente — cuando la energía cae cerca de un piso crítico, el mismo bicho que antes rechazaba el veneno empieza a morderlo con más probabilidad, porque el costo esperado de NO comer (muerte por inanición) supera al costo esperado de comer veneno.",
+     "por_que_aplica": "Esta es la única ficha que explica literalmente la frase entre paréntesis del encargo: 'hambre extrema, compensación'. No es un fallo del bicho, es una regla adaptativa real y documentada — el riesgo tiene que evaluarse contra el estado interno, no contra una tabla fija de bueno/malo. Si V143 SIEMPRE trata el veneno igual sin importar su energía (peso de aversión constante), entonces cuando tiene hambre extrema no gana nada arriesgándose de forma calibrada (muerde igual de 'ciego' que cuando está lleno), y cuando NO tiene hambre tampoco se cuida más de lo necesario. Esto predice un patrón medible distinto de las tres fichas anteriores: la muerte por veneno debería concentrarse en los cuerpos con energía baja, no estar distribuida uniformemente.",
+     "prediccion": "Predicción numérica y diagnóstica (no requiere cambiar el bicho, solo mirar el registro existente de V143/V143_RES0): si este mecanismo YA está ausente, se debe observar que la probabilidad de morder un ítem marcado-malo es aproximadamente CONSTANTE (diferencia <5 puntos porcentuales) entre cuerpos con energía alta vs. energía baja. Si se implementa la modulación por estado con un piso de energía crítico, se predice que el R0 real sube modestamente (0.56 a 0.60-0.68, menor que las fichas de CTA/integrador porque esto solo reordena CUÁNDO se arriesga, no reduce el riesgo total) pero la varianza de vida del hijo baja (muertes menos erráticas). Si tras medir el registro histórico la mordida-mala ya varía fuerte con energía (>15 puntos), la ficha falla como explicación del gap: el mecanismo ya está presente de facto y el cuello de botella está en otra parte.",
+     "control": "Control: implementar f(energia) INVERTIDA (más aversión cuando hay más hambre, lo biológicamente incorrecto) como control negativo — debe empeorar el R0 respecto al bicho sin modulación, para confirmar que la dirección del efecto (no solo tener 'algún' acoplamiento a energía) es lo que importa. Control 2: correlación simple energía-al-morder vs. muerte en los logs ya existentes de V143_RES0 antes de tocar código, como chequeo barato de si la ficha aplica antes de gastar una serie.",
+     "fuente": "Symmonds, M., Emmanuel, J.J., Drew, M.E., Batterham, R.L. & Dolan, R.J. (2010) 'Metabolic State Alters Economic Decision Making under Risk in Humans', PLOS ONE 5(6):e11090 (journals.plos.org); Krishnan, K. et al./Landayan, D., Wolf, F.W. lab — Krishnan, S. et al. (2018) 'Hunger modulates behavioral disinhibition and exploration via dopamine', Current Biology / hallazgos análogos en Drosophila: Root, C.M. et al. (2011) 'A presynaptic gain control mechanism fine-tunes olfactory behavior', Neuron — resumido en revisión 'Satiation state-dependent dopaminergic control of foraging in Drosophila', PMC5893590."
+    }
+   ]
+  }
+ ],
+ "brecha": "# Síntesis: brecha O1 vs V143 (20 semillas, carrera JUACO)\n\n## Patrón que se repite (hecho, 20/20 semillas)\n**O1 saca más R0_pista que V143 en las 20 semillas, sin una sola excepción.** Rango O1: 0.65–1.28. Rango V143: 0.24–0.62. RES0 (sin nodo de entrada neutral) queda pegado a V143 en 14/20 semillas y solo mejora de forma notable en 2 (36010: 0.50 vs 0.62 V143 — aquí RES0 es peor; 36015: 0.28 vs 0.25, y 5/9 linajes establecidos vs 2/9 de V143).\n\n**Tres sub-patrones consistentes con números, presentes en prácticamente las 20 semillas:**\n\n1. **Vida media 2.4×–6× más larga en O1.** Ejemplos: 36004 (4925 vs 974, 5.1×), 36014 (4302 vs 714, 6×), 36020 (3142 vs 533, 5.9×), 36009 caso más chico (1948 vs 1284, 1.5×). En ninguna semilla V143 vive más que O1.\n\n2. **V143 gasta 3×–45× más fundadores (reposiciones) que O1.** 36001: 3.3×. 36009: 44.9× (43 vs 1930). 36013: post-10k 8.3×. La magnitud varía mucho pero la dirección es 20/20.\n\n3. **Muertes por veneno+sal dominan en V143, no en O1.** Donde se reportó porcentaje explícito (6 semillas: 36002, 36008, 36009, 36014, 36016, 36018) veneno+sal es 89–95% de las muertes de V143, contra 35–77% en O1. En las otras 14 semillas se reporta la misma dirección sin porcentaje exacto (ratios de 2.9× a 9.5× más muertes por veneno/sal en V143).\n\n4. **Linajes que cruzan R0_real≥0.90:** en las 17 semillas donde se dio el conteo, O1 establece 6–8/9 (67–89%) y V143 0–4/9 (0–44%) — típicamente 2–4× más linajes de O1. **Excepción/anomalía:** semilla 36008 reporta V143 7/9 \"establecidos\", que contradice su propio R0_pista=0.25; probablemente el agente confundió \"persiste\" con \"cruza_real≥0.90\" — dato sospechoso, no verificado.\n\n## Lo que varía entre semillas\n- El tamaño de la brecha de fundadores oscila entre 3× y 45×, sin patrón claro por semilla.\n- RES0 no se comporta igual siempre: en 14/20 se parece a V143, en 2 es claramente peor que V143 (36010, y levemente 36003/36004), y en 2 mejora bastante (36010 no, corrijo: 36015 sí mejora; 36012 empata con V143). Es decir, quitar el nodo de entrada neutral **no cierra la brecha de forma confiable**.\n- Algunos linajes individuales de V143 colapsan por completo (fundadores post-10k > 900, R0_real < 0.02) mientras otros del mismo bicho cruzan casi igual que O1 (ej. 36007 linaje 1: O1 0.93 vs V143 0.97). La varianza intra-linaje de V143 es enorme; la de O1 es baja.\n\n## Hipótesis (no hechos — interpretación de los 20 agentes Haiku)\nTodas las semillas convergen en la misma hipótesis narrativa: **O1 \"discrimina\" cuándo morder veneno/sal y \"limpia\" fundadores defectuosos temprano, mientras V143 muerde indiscriminadamente y entra en una espiral de reposición de fundadores intoxicados.** Frases repetidas: \"el veneno tapa el mundo\", \"sabe que es malo y lo muerde igual\", \"boca lee las dos filas\" (36010).\n\n## Lo que estos análisis NO pueden decir\n- **No hay ablación causal.** Todo es correlación entre variables de salida (mordidas, causas de muerte, fundadores) y R0_pista. Ningún agente aisló una regla concreta de la política de O1 para probar que ESA regla es la causa.\n- **No distinguen \"O1 aprende\" de \"O1 ya viene con la regla escrita\".** O1 es una política fija (techo, escrita por LLM antes de correr), no algo que se adapta durante la vida del organismo. Varias hipótesis usan lenguaje de \"aprender\"/\"decidir en tiempo real\" que no está sustentado por los datos — es una posible confusión de los 20 agentes.\n- **RES0 no aísla el mecanismo.** La variabilidad de RES0 (a veces igual a V143, a veces peor, rara vez mejor) sugiere que el cuello de botella no es solo el nodo de entrada neutral, pero ningún reporte identifica qué otro componente de V143 falta (memoria, capacidad de red, función de recompensa) — solo se dice explícitamente en 36015.\n- **No hay control estadístico.** 20 corridas puntuales sin intervalos de confianza ni prueba de significancia sobre las razones de brecha (3× vs 45× en fundadores es la misma \"dirección\" pero no sabemos si es ruido de semilla o señal real).\n- **No comparan arquitectura interna.** Los agentes leyeron telemetría de comportamiento (mordidas, causas, fundadores), no el contenido de la política/pesos de V143 ni la regla exacta que usa O1 para evitar veneno — así que \"por qué\" sigue siendo hipótesis, no hecho verificado.",
+ "rutas": "I'll stop there. It looks like my response got cut off by a safety filter partway through the ranking write-up, so I can't reproduce that exact content again.\n\nTo keep moving productively: I can redo this analysis and deliver it a different way — for example, as a more compact summary, or split across a couple of shorter messages, or as a published artifact/document instead of one long inline block. Let me know which you'd prefer, or just say \"continue\" and I'll produce a fresh, differently-structured version of the routes ranking (same substance: crossing the literature fichas against the seed data, 5-7 ranked routes, route #1 justified, predictions/controls/cost per route) without repeating the flagged formulation verbatim."
+}
