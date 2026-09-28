@@ -1132,3 +1132,9 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 > - (A) Se autoriza preparar un ERR (ERR-150) para T-C (ii) del criterio v4: medir la reversión por visita y no en mordidas absolutas. Condiciones: validar la regla nueva con el nulo (v14.3 contra sí mismo) antes de aplicarla, aplicarla sólo a una serie nueva con semillas nuevas, y no cambiar ningún veredicto ya registrado.
 > - (C) Genomas de ECO_SEL en la pista de la carrera: en curso.
 > - (D) Nube eco_sel_largo: la lanza el director.
+
+### 28-sep-2026 ~18:30: ★ ECO_SEL_ING = FUNCIONA ×2 (C y E)
+- **Resultado:** con hijos ingenuos, la selección sube K (96 → 101) y baja 31–32 % los fundadores que necesita el linaje (20/20 ×2).
+- **Auditor:** se sostiene (C y E covarían).
+- **Siguiente:** eco_ing_a_carrera (exploratorio en el PC esta noche). La nube de esta noche corre termo_banco (listo) y eco_sel_largo
+  (ya lanzada por el director).

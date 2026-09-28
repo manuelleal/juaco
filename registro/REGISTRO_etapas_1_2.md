@@ -7043,3 +7043,39 @@ también en la serie 2.
   escenarios de T-E. Ese es el siguiente trabajo del tronco.
 
 - **ERR-152 (28-sep, antes de la serie de ECO_SEL_ING; instrumento, sin efecto en ningún veredicto):** en `motor_eco.muta`, σ = 0 NO apaga la mutación de los genes enteros (NK, memoria_rechazo; ±1 forzado). La perilla "apagado" real es p_mut = 0 (verificada bit a bit en el arnés de eco_sel_ing). En ECO_SEL no hay efecto hacia atrás: su caso (B) usaba σ = 0 sólo con rep_umbral, que es real. **ERR-151 queda reservado** para el caso "σ = 0 == F1" de la rama nube/eco-sel-largo (ese texto lo llama ERR-150). **El siguiente libre es ERR-153.**
+
+## ★ ECO_SEL_ING — selección natural con hijos INGENUOS (28-sep-2026, 17:24–18:25): **FUNCIONA ×2 en C y en E (establecimiento)**
+> Pregunta: si en ECO el hijo hereda los GENES pero NO la tabla de la familia (nace sin saber, como el fundador de la carrera), ¿la
+> selección sigue subiendo la capacidad del linaje y baja los fundadores que el linaje necesita?
+
+- **Preregistro:** `experimentos/organelos/eco_sel_ing/PREREGISTRO_eco_sel_ing.md` (commit `ef28e64`; sha final `761604d173ab6811`,
+  igual en los dos logs). Arnés 54/54, humo OK, auditor LISTO; ERR-152 numerado antes de la serie.
+- **Carro:** FABRICA_ECO, que es FAMB sin la herencia de la tabla. **Base:** vivero permanente, porque el linaje ingenuo no persiste
+  en frío (FAB_FRIO 0/20; ECO v1.1 MUT0 0/20 ×2); declarado antes.
+- **Brazos:** ING_F1 (sin mutación), ING_SEL_C (15 genes del cerebro heredables), ING_AZA_C (sin herencia). T = 1e6.
+- **Predicción del creador:** FUNCIONA 0.65 por serie; 0.50 el bloque ×2.
+
+| brazo | K serie / réplica | K_nac serie / réplica | fund_2a (fundadores repuestos en la 2.ª mitad) serie / réplica |
+|---|---|---|---|
+| ING_F1 | 96.26 / 96.36 | 12.56 / 12.63 | 128 584 / 128 566 |
+| **ING_SEL_C** | **101.03 / 100.89** | **16.08 / 15.66** | **86 833 / 88 564** |
+| ING_AZA_C | 94.58 / 95.66 | 7.74 / 9.23 | 121 373 / 119 661 |
+
+- **Puertas:**
+  - P1: alpha, aversion y tau_e salen de sus sombras; la guardia de AZA, dentro.
+  - P2: K 20/20 ×2, +4.77 / +4.49; K_nac 20/20 ×2.
+  - P3: K 20/20 ×2; K_nac 20/20 y 18/20.
+  - **P4, establecimiento:** fund_2a SEL < F1 20/20 ×2 y SEL < AZA 20/20 ×2.
+  - Validez ×2; bloqueados 0.
+- **Veredicto: BLOQUE FUNCIONA en C y en E.**
+- **Verificación del auditor: SE SOSTIENE CON RESERVAS.** Recalculó K, K_nac, fund_2a y los pareados desde los 120 JSON sin el
+  runner: exacto. Ningún resultado queda cerca del umbral (todos ≥ 18/20).
+  **Reserva H-1:** dentro de SEL, K y fund_2a covarían (r ≈ −0.9). C y E no son dos confirmaciones independientes, sino la misma
+  mejora vista desde dos lados. P4 se preregistró como control anti-subsidio, y así se lee.
+- **Lectura:**
+  - con hijos que nacen sin saber, la selección natural sube la capacidad del linaje (K_nac +24 %);
+  - **baja un 31–32 % los fundadores que el linaje necesita**;
+  - sin herencia, nada de eso pasa;
+  - **es la palanca del muro (el establecimiento), movida por selección y no por diseño.**
+- **Vocabulario:** permitido "la selección natural con hijos ingenuos baja ~31 % los fundadores que el linaje necesita", con la medida.
+  Prohibido "aprende" y "evoluciona" sin la medida, y "sirve al fundador de la carrera": eso lo responde `eco_ing_a_carrera`, en curso.
