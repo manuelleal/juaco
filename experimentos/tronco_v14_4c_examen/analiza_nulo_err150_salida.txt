@@ -1,0 +1,117 @@
+ERR-150 -- T-C (ii) por visita: nulo y anti-TERMO sobre crudos existentes (7 fuentes, sha comprobado)
+   v143_serie: CAND (v14.3) == OFF en mordidas y visitas en las 80 semillas: True -> CAND no entra al nulo (duplicado)
+   v143_replica: CAND (v14.3) == OFF en mordidas y visitas en las 80 semillas: True -> CAND no entra al nulo (duplicado)
+
+--- 1 descriptivo por serie y brazo (medianas; visitas Q4 al lado: trampa 3)
+   v143_serie    CAND     n  80 rev   42.0 | antes pA2 0.984 pB2 0.096 S2 0.911 | despues pB4 0.983 pA4 0.091 S4 0.915 | C +0.0090 (sd 0.0259) J4 +0.898 | vis Q4 B/A 200/1696 | vis=0: 0
+   v143_serie    OFF      n  80 rev   42.0 | antes pA2 0.984 pB2 0.096 S2 0.911 | despues pB4 0.983 pA4 0.091 S4 0.915 | C +0.0090 (sd 0.0259) J4 +0.898 | vis Q4 B/A 200/1696 | vis=0: 0
+   v143_serie    PLACEBO  n  80 rev   44.0 | antes pA2 0.983 pB2 0.098 S2 0.910 | despues pB4 0.982 pA4 0.093 S4 0.914 | C +0.0004 (sd 0.0268) J4 +0.887 | vis Q4 B/A 206/1699 | vis=0: 0
+   v143_serie    TRONCO_B n  80 rev   47.5 | antes pA2 0.983 pB2 0.093 S2 0.914 | despues pB4 0.984 pA4 0.092 S4 0.915 | C +0.0018 (sd 0.0280) J4 +0.898 | vis Q4 B/A 210/1692 | vis=0: 0
+   v143_replica  CAND     n  80 rev   43.5 | antes pA2 0.984 pB2 0.101 S2 0.906 | despues pB4 0.982 pA4 0.095 S4 0.911 | C +0.0087 (sd 0.0281) J4 +0.893 | vis Q4 B/A 208/1694 | vis=0: 0
+   v143_replica  OFF      n  80 rev   43.5 | antes pA2 0.984 pB2 0.101 S2 0.906 | despues pB4 0.982 pA4 0.095 S4 0.911 | C +0.0087 (sd 0.0281) J4 +0.893 | vis Q4 B/A 208/1694 | vis=0: 0
+   v143_replica  PLACEBO  n  80 rev   43.0 | antes pA2 0.985 pB2 0.096 S2 0.911 | despues pB4 0.985 pA4 0.097 S4 0.910 | C -0.0039 (sd 0.0270) J4 +0.891 | vis Q4 B/A 206/1698 | vis=0: 0
+   v143_replica  TRONCO_B n  80 rev   41.0 | antes pA2 0.984 pB2 0.094 S2 0.913 | despues pB4 0.983 pA4 0.090 S4 0.916 | C +0.0006 (sd 0.0273) J4 +0.897 | vis Q4 B/A 198/1718 | vis=0: 0
+   v144_serie    CAND     n  80 rev  -12.0 | antes pA2 0.386 pB2 0.083 S2 0.820 | despues pB4 0.074 pA4 0.142 S4 0.342 | C -0.4733 (sd 0.0592) J4 -0.068 | vis Q4 B/A 1118/666 | vis=0: 0
+   v144_serie    OFF      n  80 rev   44.0 | antes pA2 0.982 pB2 0.094 S2 0.912 | despues pB4 0.984 pA4 0.097 S4 0.910 | C +0.0033 (sd 0.0277) J4 +0.893 | vis Q4 B/A 208/1687 | vis=0: 0
+   v144_serie    PLACEBO  n  80 rev   46.0 | antes pA2 0.984 pB2 0.091 S2 0.915 | despues pB4 0.985 pA4 0.095 S4 0.912 | C -0.0012 (sd 0.0262) J4 +0.894 | vis Q4 B/A 210/1660 | vis=0: 0
+   v144_serie    TRONCO_B n  80 rev   46.5 | antes pA2 0.983 pB2 0.093 S2 0.913 | despues pB4 0.984 pA4 0.092 S4 0.914 | C -0.0005 (sd 0.0274) J4 +0.898 | vis Q4 B/A 204/1704 | vis=0: 0
+   v4cal_serie   OFF      n  80 rev   43.0 | antes pA2 0.983 pB2 0.092 S2 0.914 | despues pB4 0.984 pA4 0.089 S4 0.917 | C +0.0036 (sd 0.0202) J4 +0.897 | vis Q4 B/A 200/1700 | vis=0: 0
+   v4cal_serie   PEOR     n  80 rev   47.0 | antes pA2 0.983 pB2 0.113 S2 0.897 | despues pB4 0.984 pA4 0.116 S4 0.895 | C +0.0024 (sd 0.0311) J4 +0.874 | vis Q4 B/A 234/1608 | vis=0: 0
+   v4cal_serie   PLACEBO  n  80 rev   41.0 | antes pA2 0.984 pB2 0.098 S2 0.909 | despues pB4 0.985 pA4 0.093 S4 0.914 | C +0.0059 (sd 0.0245) J4 +0.899 | vis Q4 B/A 202/1744 | vis=0: 0
+   v4cal_serie   TRONCO_B n  80 rev   47.0 | antes pA2 0.984 pB2 0.096 S2 0.911 | despues pB4 0.981 pA4 0.098 S4 0.909 | C -0.0035 (sd 0.0265) J4 +0.888 | vis Q4 B/A 212/1710 | vis=0: 0
+   v4cal_replica OFF      n  80 rev   46.0 | antes pA2 0.984 pB2 0.091 S2 0.915 | despues pB4 0.985 pA4 0.090 S4 0.917 | C -0.0012 (sd 0.0268) J4 +0.900 | vis Q4 B/A 205/1718 | vis=0: 0
+   v4cal_replica PEOR     n  80 rev   37.0 | antes pA2 0.983 pB2 0.114 S2 0.895 | despues pB4 0.984 pA4 0.111 S4 0.898 | C +0.0003 (sd 0.0338) J4 +0.875 | vis Q4 B/A 219/1663 | vis=0: 0
+   v4cal_replica PLACEBO  n  80 rev   46.0 | antes pA2 0.983 pB2 0.096 S2 0.911 | despues pB4 0.984 pA4 0.095 S4 0.911 | C +0.0032 (sd 0.0259) J4 +0.893 | vis Q4 B/A 215/1692 | vis=0: 0
+   v4cal_replica TRONCO_B n  80 rev   45.5 | antes pA2 0.986 pB2 0.095 S2 0.911 | despues pB4 0.982 pA4 0.089 S4 0.917 | C -0.0002 (sd 0.0245) J4 +0.899 | vis Q4 B/A 206/1677 | vis=0: 0
+   acal_serie    OFF      n  40 rev   37.5 | antes pA2 0.986 pB2 0.097 S2 0.911 | despues pB4 0.982 pA4 0.095 S4 0.911 | C -0.0059 (sd 0.0265) J4 +0.890 | vis Q4 B/A 204/1708 | vis=0: 0
+   acal_serie    PEOR     n  40 rev   50.0 | antes pA2 0.981 pB2 0.111 S2 0.898 | despues pB4 0.983 pA4 0.121 S4 0.890 | C -0.0041 (sd 0.0358) J4 +0.864 | vis Q4 B/A 245/1594 | vis=0: 0
+   acal_serie    PLACEBO  n  40 rev   44.0 | antes pA2 0.985 pB2 0.087 S2 0.919 | despues pB4 0.984 pA4 0.095 S4 0.912 | C -0.0014 (sd 0.0201) J4 +0.895 | vis Q4 B/A 204/1728 | vis=0: 0
+   acal_replica  OFF      n  40 rev   43.0 | antes pA2 0.984 pB2 0.099 S2 0.909 | despues pB4 0.986 pA4 0.098 S4 0.909 | C +0.0081 (sd 0.0224) J4 +0.893 | vis Q4 B/A 214/1740 | vis=0: 0
+   acal_replica  PEOR     n  40 rev   39.0 | antes pA2 0.984 pB2 0.109 S2 0.900 | despues pB4 0.984 pA4 0.108 S4 0.901 | C +0.0034 (sd 0.0298) J4 +0.883 | vis Q4 B/A 229/1689 | vis=0: 0
+   acal_replica  PLACEBO  n  40 rev   38.0 | antes pA2 0.985 pB2 0.094 S2 0.913 | despues pB4 0.981 pA4 0.092 S4 0.915 | C -0.0010 (sd 0.0273) J4 +0.897 | vis Q4 B/A 203/1732 | vis=0: 0
+
+--- 2 el margen por principio y el reparto del nulo (OFF + TRONCO_B)
+   nulo de los tres examenes (480 corridas): mediana S4 0.9136, C +0.0035, J4 0.8960, rev 44.0; suelo S4: min de las medianas por brazo y serie 0.909 > 0.5
+   m = 0.3 x (0.9136 - 0.5) = 0.1241 -> 0.125   (rev: 12.5 = 0.284 x 44.0); para S4 se usa el mismo m; para J4 (informe) m_J = 0.3 x 0.8960 -> 0.27
+   reparto v143_serie             (160 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0532  P(d=-1.6m) 0.0000  sd(d)~0.0382 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9900
+   reparto v143_replica           (160 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0545  P(d=-1.6m) 0.0000  sd(d)~0.0391 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9988
+   reparto v144_serie             (160 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0552  P(d=-1.6m) 0.0000  sd(d)~0.0389 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9942
+   reparto v4cal_serie            (160 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0478  P(d=-1.6m) 0.0000  sd(d)~0.0332 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9960
+   reparto v4cal_replica          (160 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0528  P(d=-1.6m) 0.0000  sd(d)~0.0362 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9980
+   reparto tres_examenes_juntos   (480 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0482  P(d=-1.6m) 0.0000  sd(d)~0.0388 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9950
+   reparto las_cinco_juntas       (800 corr.)  C: P(pasa|nulo) 1.0000  P(d=-m) 0.0482  P(d=-1.6m) 0.0000  sd(d)~0.0372 | S4 1.0000 | J4 1.0000 | rev (v4) 0.9948
+   techo de sd(d) de C para P(pasa|nulo) >= 0.95 con n 80 y m 0.125: 0.3398; sd(d) maxima observada 0.0391 (holgura x8.7)
+   (informe) el margen MAS FINO a paso 0.005 que pasaria >= 0.95 en las cinco series (B = 1000): 0.015 -- NO se elige (ERR_150.md)
+   resolucion (tres examenes juntos): P(pasa) de un candidato peor por delta en C: 0.025: 1.000  0.05: 1.000  0.075: 1.000  0.1: 1.000  0.11: 0.967  0.125: 0.048  0.14: 0.000  0.15: 0.000  0.2: 0.000
+
+--- 3 realizaciones con la letra nueva (V4-2 / V4-3): cada brazo contra OFF de SU serie
+   v143_serie    TRONCO_B (n 80) LETRA PASA: C media d -0.0057 LI -0.0119 > -0.125, S4 0.915 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -0.81)
+   v143_serie    PLACEBO  (n 80) LETRA PASA: C media d -0.0072 LI -0.0151 > -0.125, S4 0.914 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -3.20)
+   v143_replica  TRONCO_B (n 80) LETRA PASA: C media d -0.0023 LI -0.0086 > -0.125, S4 0.916 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -6.22)
+   v143_replica  PLACEBO  (n 80) LETRA PASA: C media d -0.0041 LI -0.0111 > -0.125, S4 0.910 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -6.84)
+   v144_serie    TRONCO_B (n 80) LETRA PASA: C media d +0.0037 LI -0.0035 > -0.125, S4 0.914 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -3.06)
+   v144_serie    PLACEBO  (n 80) LETRA PASA: C media d +0.0002 LI -0.0070 > -0.125, S4 0.912 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -2.15)
+   v4cal_serie   TRONCO_B (n 80) LETRA PASA: C media d -0.0011 LI -0.0071 > -0.125, S4 0.909 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -3.48)
+   v4cal_serie   PLACEBO  (n 80) LETRA PASA: C media d +0.0043 LI -0.0017 > -0.125, S4 0.914 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -7.08)
+   v4cal_serie   PEOR     (n 80) LETRA PASA: C media d -0.0006 LI -0.0073 > -0.125, S4 0.895 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -1.16)
+   v4cal_replica TRONCO_B (n 80) LETRA PASA: C media d +0.0019 LI -0.0041 > -0.125, S4 0.917 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -5.53)
+   v4cal_replica PLACEBO  (n 80) LETRA PASA: C media d +0.0034 LI -0.0030 > -0.125, S4 0.911 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -4.75)
+   v4cal_replica PEOR     (n 80) LETRA PASA: C media d +0.0008 LI -0.0065 > -0.125, S4 0.898 > 0.5 | informe: S4 PASA J4 PASA rev NO (LI -14.52)
+   acal_serie    PLACEBO  (n 40) LETRA PASA: C media d -0.0013 LI -0.0088 > -0.125, S4 0.912 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -4.00)
+   acal_serie    PEOR     (n 40) LETRA PASA: C media d -0.0005 LI -0.0119 > -0.125, S4 0.890 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI +0.03)
+   acal_replica  PLACEBO  (n 40) LETRA PASA: C media d -0.0037 LI -0.0141 > -0.125, S4 0.915 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -11.93)
+   acal_replica  PEOR     (n 40) LETRA PASA: C media d -0.0064 LI -0.0155 > -0.125, S4 0.901 > 0.5 | informe: S4 PASA J4 PASA rev PASA (LI -8.59)
+
+--- 4 ANTES de la reversion no hay nada que desdecir: cada medida en Q2 (C: S2 - S1), TERMO y PLACEBO contra OFF (v14.4)
+   TERMO    en Q2: C LI -0.0176 (> -0.125) -> PASA | S4 LI -0.1059 (> -0.125) -> PASA | J4 LI -0.6018 (> -0.27) -> NO: *** tumba a TERMO SIN reversion | rev LI -15.4643 (> -12.5) -> NO: *** tumba a TERMO SIN reversion
+   PLACEBO  en Q2: C LI -0.0074 (> -0.125) -> PASA | S4 LI -0.0030 (> -0.125) -> PASA | J4 LI -0.0023 (> -0.27) -> PASA | rev LI -2.8300 (> -12.5) -> PASA
+   TRONCO_B en Q2: C LI -0.0069 (> -0.125) -> PASA | S4 LI -0.0063 (> -0.125) -> PASA | J4 LI -0.0073 (> -0.27) -> PASA | rev LI -0.4120 (> -12.5) -> PASA
+
+--- 5 "come menos" sintetico: CAND = TRONCO_B adelgazado, contra OFF, en cada serie de examen (visitas intactas)
+   solo lo BUENO f 0.75 v143_serie    LETRA (C) PASA (LI -0.0124, S4 0.889) | S4 LI -0.0347 PASA | J4 LI -0.258 PASA | rev LI -51.35 NO
+   solo lo BUENO f 0.75 v143_replica  LETRA (C) PASA (LI -0.0091, S4 0.892) | S4 LI -0.0261 PASA | J4 LI -0.250 PASA | rev LI -55.80 NO
+   solo lo BUENO f 0.75 v144_serie    LETRA (C) PASA (LI -0.0035, S4 0.889) | S4 LI -0.0295 PASA | J4 LI -0.253 PASA | rev LI -54.06 NO
+   solo lo BUENO f 0.50 v143_serie    LETRA (C) PASA (LI -0.0141, S4 0.844) | S4 LI -0.0842 PASA | J4 LI -0.509 NO | rev LI -103.79 NO
+   solo lo BUENO f 0.50 v143_replica  LETRA (C) PASA (LI -0.0115, S4 0.850) | S4 LI -0.0736 PASA | J4 LI -0.496 NO | rev LI -104.80 NO
+   solo lo BUENO f 0.50 v144_serie    LETRA (C) PASA (LI -0.0043, S4 0.842) | S4 LI -0.0777 PASA | J4 LI -0.498 NO | rev LI -105.39 NO
+   solo lo BUENO f 0.25 v143_serie    LETRA (C) PASA (LI -0.0163, S4 0.725) | S4 LI -0.2003 NO | J4 LI -0.752 NO | rev LI -154.25 NO
+   solo lo BUENO f 0.25 v143_replica  LETRA (C) PASA (LI -0.0183, S4 0.735) | S4 LI -0.1881 NO | J4 LI -0.741 NO | rev LI -154.47 NO
+   solo lo BUENO f 0.25 v144_serie    LETRA (C) PASA (LI -0.0065, S4 0.721) | S4 LI -0.1980 NO | J4 LI -0.749 NO | rev LI -158.11 NO
+   solo lo BUENO f 0.10 v143_serie    LETRA (C) PASA (LI -0.0224, S4 0.508) | S4 LI -0.4094 NO | J4 LI -0.900 NO | rev LI -185.56 NO
+   solo lo BUENO f 0.10 v143_replica  LETRA (C) PASA (LI -0.0267, S4 0.522) | S4 LI -0.3994 NO | J4 LI -0.890 NO | rev LI -184.89 NO
+   solo lo BUENO f 0.10 v144_serie    LETRA (C) PASA (LI -0.0239, S4 0.522) | S4 LI -0.4095 NO | J4 LI -0.896 NO | rev LI -189.00 NO
+   TODO         f 0.75 v143_serie    LETRA (C) PASA (LI -0.0115, S4 0.915) | S4 LI -0.0089 PASA | J4 LI -0.234 PASA | rev LI -12.13 PASA
+   TODO         f 0.75 v143_replica  LETRA (C) PASA (LI -0.0082, S4 0.919) | S4 LI +0.0006 PASA | J4 LI -0.220 PASA | rev LI -14.50 NO
+   TODO         f 0.75 v144_serie    LETRA (C) PASA (LI -0.0019, S4 0.914) | S4 LI -0.0024 PASA | J4 LI -0.231 PASA | rev LI -12.87 NO
+   TODO         f 0.50 v143_serie    LETRA (C) PASA (LI -0.0133, S4 0.911) | S4 LI -0.0096 PASA | J4 LI -0.460 NO | rev LI -23.52 NO
+   TODO         f 0.50 v143_replica  LETRA (C) PASA (LI -0.0090, S4 0.916) | S4 LI -0.0007 PASA | J4 LI -0.447 NO | rev LI -27.19 NO
+   TODO         f 0.50 v144_serie    LETRA (C) PASA (LI -0.0031, S4 0.915) | S4 LI -0.0028 PASA | J4 LI -0.453 NO | rev LI -24.99 NO
+   TODO         f 0.25 v143_serie    LETRA (C) PASA (LI -0.0120, S4 0.911) | S4 LI -0.0124 PASA | J4 LI -0.681 NO | rev LI -35.70 NO
+   TODO         f 0.25 v143_replica  LETRA (C) PASA (LI -0.0103, S4 0.917) | S4 LI +0.0000 PASA | J4 LI -0.673 NO | rev LI -36.94 NO
+   TODO         f 0.25 v144_serie    LETRA (C) PASA (LI -0.0053, S4 0.916) | S4 LI -0.0053 PASA | J4 LI -0.679 NO | rev LI -36.32 NO
+   TODO         f 0.10 v143_serie    LETRA (C) PASA (LI -0.0059, S4 0.916) | S4 LI -0.0082 PASA | J4 LI -0.808 NO | rev LI -39.88 NO
+   TODO         f 0.10 v143_replica  LETRA (C) PASA (LI -0.0083, S4 0.922) | S4 LI -0.0004 PASA | J4 LI -0.806 NO | rev LI -43.30 NO
+   TODO         f 0.10 v144_serie    LETRA (C) PASA (LI -0.0096, S4 0.915) | S4 LI -0.0104 PASA | J4 LI -0.811 NO | rev LI -42.84 NO
+
+--- 6 ANTI-TERMO: TERMO (examen v14.4, CAND = organismo_v144cal, memoria que NO olvida) contra OFF, con la letra nueva
+   TERMO: S2 0.8201 (antes distingue) -> S4 0.3421 (despues prefiere A, el veneno); C mediana -0.4733 (p95 -0.3745); OFF C +0.0033
+   LETRA: (a) C media d -0.4688 LI -0.4819 > -0.125 -> False; (b) S4 0.3421 > 0.5 -> False  => NO: TUMBA A TERMO (las dos clausulas)
+   informe: S4 LI -0.5749 | J4 LI -0.9648 | rev LI -59.36 (lo registrado: NO)
+   corridas de TERMO con C > -m: 0/80; bootstrap (80 de TERMO contra 80 del nulo) P(pasa la NI) 0.0000; para pasar haria falta un margen > 0.482 (3.9 x m)
+
+--- 7 controles que DEBEN caer
+   v143_serie    A y B intercambiados en Q4 (no se desdice): C LI -0.8369, S4 0.085 -> NO (cae) | indiferente (muerde la mitad de todo): C LI -0.0133 (la NI sola PASA), S4 0.500 -> NO (cae por el suelo)
+   v143_replica  A y B intercambiados en Q4 (no se desdice): C LI -0.8373, S4 0.084 -> NO (cae) | indiferente (muerde la mitad de todo): C LI -0.0083 (la NI sola PASA), S4 0.499 -> NO (cae por el suelo)
+   v144_serie    A y B intercambiados en Q4 (no se desdice): C LI -0.8264, S4 0.086 -> NO (cae) | indiferente (muerde la mitad de todo): C LI -0.0028 (la NI sola PASA), S4 0.499 -> NO (cae por el suelo)
+
+--- CONDICIONES
+   regla15_nulo                 SI
+   dientes_V4_5                 SI
+   realizaciones_TB_PLACEBO     SI
+   antes_de_revertir_no_tumba   SI
+   come_menos_no_tumba          SI
+   tumba_TERMO                  SI
+   controles_caen               SI
+
+VEREDICTO ERR-150: LA REGLA POR VISITA SE SOSTIENE: pasa el nulo (regla 15), tiene dientes, tumba a TERMO, no castiga comer menos y cierra el canal simetrico   (19 s)
+datos -> experimentos\tronco_v14_4c_examen\datos\nulo_err150_20260928_161728.json  sha256_16 = a394a03bf9241b40

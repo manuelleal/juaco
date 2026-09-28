@@ -1,0 +1,101 @@
+ERR-150 -- T-C (ii) por visita: nulo y anti-TERMO sobre crudos existentes (7 fuentes, sha comprobado)
+   v143_serie: CAND (v14.3) == OFF en mordidas y visitas en las 80 semillas: True -> CAND no entra al nulo (duplicado)
+   v143_replica: CAND (v14.3) == OFF en mordidas y visitas en las 80 semillas: True -> CAND no entra al nulo (duplicado)
+
+--- 1 descriptivo por serie y brazo (medianas; visitas Q4 al lado: trampa 3)
+   v143_serie    CAND     n  80  rev   42.0  pB 0.983 pA 0.091  J +0.898 (sd 0.023)  S 0.915 (sd 0.018, p05 0.889)  mordB/visB 198/200 mordA/visA 151/1696  vis=0: 0
+   v143_serie    OFF      n  80  rev   42.0  pB 0.983 pA 0.091  J +0.898 (sd 0.023)  S 0.915 (sd 0.018, p05 0.889)  mordB/visB 198/200 mordA/visA 151/1696  vis=0: 0
+   v143_serie    PLACEBO  n  80  rev   44.0  pB 0.982 pA 0.093  J +0.887 (sd 0.027)  S 0.914 (sd 0.021, p05 0.879)  mordB/visB 201/206 mordA/visA 160/1699  vis=0: 0
+   v143_serie    TRONCO_B n  80  rev   47.5  pB 0.984 pA 0.092  J +0.898 (sd 0.024)  S 0.915 (sd 0.018, p05 0.877)  mordB/visB 206/210 mordA/visA 158/1692  vis=0: 0
+   v143_replica  CAND     n  80  rev   43.5  pB 0.982 pA 0.095  J +0.893 (sd 0.025)  S 0.911 (sd 0.019, p05 0.879)  mordB/visB 204/208 mordA/visA 162/1694  vis=0: 0
+   v143_replica  OFF      n  80  rev   43.5  pB 0.982 pA 0.095  J +0.893 (sd 0.025)  S 0.911 (sd 0.019, p05 0.879)  mordB/visB 204/208 mordA/visA 162/1694  vis=0: 0
+   v143_replica  PLACEBO  n  80  rev   43.0  pB 0.985 pA 0.097  J +0.891 (sd 0.027)  S 0.910 (sd 0.021, p05 0.881)  mordB/visB 204/206 mordA/visA 159/1698  vis=0: 0
+   v143_replica  TRONCO_B n  80  rev   41.0  pB 0.983 pA 0.090  J +0.897 (sd 0.024)  S 0.916 (sd 0.018, p05 0.884)  mordB/visB 195/198 mordA/visA 154/1718  vis=0: 0
+   v144_serie    CAND     n  80  rev  -12.0  pB 0.074 pA 0.142  J -0.068 (sd 0.022)  S 0.342 (sd 0.046, p05 0.279)  mordB/visB 82/1118 mordA/visA 94/666  vis=0: 0
+   v144_serie    OFF      n  80  rev   44.0  pB 0.984 pA 0.097  J +0.893 (sd 0.025)  S 0.910 (sd 0.021, p05 0.876)  mordB/visB 206/208 mordA/visA 162/1687  vis=0: 0
+   v144_serie    PLACEBO  n  80  rev   46.0  pB 0.985 pA 0.095  J +0.894 (sd 0.025)  S 0.912 (sd 0.019, p05 0.879)  mordB/visB 207/210 mordA/visA 155/1660  vis=0: 0
+   v144_serie    TRONCO_B n  80  rev   46.5  pB 0.984 pA 0.092  J +0.898 (sd 0.028)  S 0.914 (sd 0.020, p05 0.874)  mordB/visB 202/204 mordA/visA 158/1704  vis=0: 0
+   v4cal_serie   OFF      n  80  rev   43.0  pB 0.984 pA 0.089  J +0.897 (sd 0.021)  S 0.917 (sd 0.016, p05 0.890)  mordB/visB 198/200 mordA/visA 153/1700  vis=0: 0
+   v4cal_serie   PEOR     n  80  rev   47.0  pB 0.984 pA 0.116  J +0.874 (sd 0.032)  S 0.895 (sd 0.025, p05 0.861)  mordB/visB 231/234 mordA/visA 181/1608  vis=0: 0
+   v4cal_serie   PLACEBO  n  80  rev   41.0  pB 0.985 pA 0.093  J +0.899 (sd 0.022)  S 0.914 (sd 0.017, p05 0.885)  mordB/visB 200/202 mordA/visA 157/1744  vis=0: 0
+   v4cal_serie   TRONCO_B n  80  rev   47.0  pB 0.981 pA 0.098  J +0.888 (sd 0.030)  S 0.909 (sd 0.023, p05 0.870)  mordB/visB 208/212 mordA/visA 166/1710  vis=0: 0
+   v4cal_replica OFF      n  80  rev   46.0  pB 0.985 pA 0.090  J +0.900 (sd 0.028)  S 0.917 (sd 0.021, p05 0.878)  mordB/visB 201/205 mordA/visA 158/1718  vis=0: 0
+   v4cal_replica PEOR     n  80  rev   37.0  pB 0.984 pA 0.111  J +0.875 (sd 0.028)  S 0.898 (sd 0.022, p05 0.854)  mordB/visB 216/219 mordA/visA 182/1663  vis=0: 0
+   v4cal_replica PLACEBO  n  80  rev   46.0  pB 0.984 pA 0.095  J +0.893 (sd 0.026)  S 0.911 (sd 0.021, p05 0.876)  mordB/visB 212/215 mordA/visA 160/1692  vis=0: 0
+   v4cal_replica TRONCO_B n  80  rev   45.5  pB 0.982 pA 0.089  J +0.899 (sd 0.025)  S 0.917 (sd 0.019, p05 0.878)  mordB/visB 202/206 mordA/visA 151/1677  vis=0: 0
+   acal_serie    OFF      n  40  rev   37.5  pB 0.982 pA 0.095  J +0.890 (sd 0.025)  S 0.911 (sd 0.018, p05 0.884)  mordB/visB 200/204 mordA/visA 162/1708  vis=0: 0
+   acal_serie    PEOR     n  40  rev   50.0  pB 0.983 pA 0.121  J +0.864 (sd 0.033)  S 0.890 (sd 0.024, p05 0.861)  mordB/visB 242/245 mordA/visA 190/1594  vis=0: 0
+   acal_serie    PLACEBO  n  40  rev   44.0  pB 0.984 pA 0.095  J +0.895 (sd 0.020)  S 0.912 (sd 0.015, p05 0.889)  mordB/visB 202/204 mordA/visA 158/1728  vis=0: 0
+   acal_replica  OFF      n  40  rev   43.0  pB 0.986 pA 0.098  J +0.893 (sd 0.021)  S 0.909 (sd 0.016, p05 0.892)  mordB/visB 212/214 mordA/visA 166/1740  vis=0: 0
+   acal_replica  PEOR     n  40  rev   39.0  pB 0.984 pA 0.108  J +0.883 (sd 0.026)  S 0.901 (sd 0.019, p05 0.863)  mordB/visB 225/229 mordA/visA 182/1689  vis=0: 0
+   acal_replica  PLACEBO  n  40  rev   38.0  pB 0.981 pA 0.092  J +0.897 (sd 0.023)  S 0.915 (sd 0.017, p05 0.885)  mordB/visB 201/203 mordA/visA 157/1732  vis=0: 0
+
+--- 2 el margen por principio y el reparto del nulo
+   nulo de los tres examenes (OFF + TRONCO_B, 480 corridas): mediana S 0.9136, J 0.8960, rev 44.0
+   m_S = 0.3 x (0.9136 - 0.5) = 0.1241 -> 0.125  (la de rev: 12.5 = 0.284 x 44.0)
+   (para mostrar J con su equivalencia: m_J = 0.3 x 0.8960 -> 0.27; J NO es la letra)
+   reparto v143_serie             (160 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0542  P(d=-1.6m) 0.0000  sd(d)~0.0257 | J: 1.0000 | rev (v4): 0.9900
+   reparto v143_replica           (160 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0520  P(d=-1.6m) 0.0000  sd(d)~0.0266 | J: 1.0000 | rev (v4): 0.9988
+   reparto v144_serie             (160 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0448  P(d=-1.6m) 0.0000  sd(d)~0.0288 | J: 1.0000 | rev (v4): 0.9942
+   reparto v4cal_serie            (160 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0470  P(d=-1.6m) 0.0000  sd(d)~0.0278 | J: 1.0000 | rev (v4): 0.9960
+   reparto v4cal_replica          (160 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0532  P(d=-1.6m) 0.0000  sd(d)~0.0282 | J: 1.0000 | rev (v4): 0.9980
+   reparto tres_examenes_juntos   (480 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0462  P(d=-1.6m) 0.0000  sd(d)~0.0271 | J: 1.0000 | rev (v4): 0.9950
+   reparto las_cinco_juntas       (800 corr.)  S: P(pasa|nulo) 1.0000  P(d=-m) 0.0528  P(d=-1.6m) 0.0000  sd(d)~0.0274 | J: 1.0000 | rev (v4): 0.9948
+   techo de sd(d) de S para P(pasa|nulo) >= 0.95 con n 80 y m 0.125: 0.3398; sd(d) maxima observada 0.0288 (holgura x11.8)
+   (informe) el margen MAS FINO a paso 0.005 que pasa >= 0.95 en las cinco series (B = 1000): 0.015
+   resolucion (tres examenes juntos): P(pasa) de un candidato peor por delta en S: 0.025: 1.000  0.05: 1.000  0.075: 1.000  0.1: 1.000  0.11: 1.000  0.125: 0.046  0.14: 0.000  0.15: 0.000  0.2: 0.000
+
+--- 3 realizaciones con la letra nueva (V4-2 / V4-3): cada brazo contra OFF de SU serie
+   v143_serie    TRONCO_B (n 80) S: media d -0.0036 LI -0.0085 > -0.125 -> PASA | J PASA (LI -0.009) | rev PASA (LI -0.81)
+   v143_serie    PLACEBO  (n 80) S: media d -0.0047 LI -0.0100 > -0.125 -> PASA | J PASA (LI -0.013) | rev PASA (LI -3.20)
+   v143_replica  TRONCO_B (n 80) S: media d +0.0050 LI -0.0001 > -0.125 -> PASA | J PASA (LI -0.000) | rev PASA (LI -6.22)
+   v143_replica  PLACEBO  (n 80) S: media d +0.0009 LI -0.0041 > -0.125 -> PASA | J PASA (LI -0.004) | rev PASA (LI -6.84)
+   v144_serie    TRONCO_B (n 80) S: media d +0.0029 LI -0.0029 > -0.125 -> PASA | J PASA (LI -0.004) | rev PASA (LI -3.06)
+   v144_serie    PLACEBO  (n 80) S: media d +0.0021 LI -0.0033 > -0.125 -> PASA | J PASA (LI -0.005) | rev PASA (LI -2.15)
+   v4cal_serie   TRONCO_B (n 80) S: media d -0.0053 LI -0.0105 > -0.125 -> PASA | J PASA (LI -0.015) | rev PASA (LI -3.48)
+   v4cal_serie   PLACEBO  (n 80) S: media d -0.0006 LI -0.0044 > -0.125 -> PASA | J PASA (LI -0.004) | rev PASA (LI -7.08)
+   v4cal_serie   PEOR     (n 80) S: media d -0.0193 LI -0.0243 > -0.125 -> PASA | J PASA (LI -0.031) | rev PASA (LI -1.16)
+   v4cal_replica TRONCO_B (n 80) S: media d +0.0015 LI -0.0033 > -0.125 -> PASA | J PASA (LI -0.006) | rev PASA (LI -5.53)
+   v4cal_replica PLACEBO  (n 80) S: media d -0.0001 LI -0.0053 > -0.125 -> PASA | J PASA (LI -0.008) | rev PASA (LI -4.75)
+   v4cal_replica PEOR     (n 80) S: media d -0.0155 LI -0.0210 > -0.125 -> PASA | J PASA (LI -0.028) | rev NO (LI -14.52)
+   acal_serie    PLACEBO  (n 40) S: media d +0.0017 LI -0.0041 > -0.125 -> PASA | J PASA (LI -0.005) | rev PASA (LI -4.00)
+   acal_serie    PEOR     (n 40) S: media d -0.0182 LI -0.0246 > -0.125 -> PASA | J PASA (LI -0.032) | rev PASA (LI +0.03)
+   acal_replica  PLACEBO  (n 40) S: media d +0.0005 LI -0.0063 > -0.125 -> PASA | J PASA (LI -0.009) | rev PASA (LI -11.93)
+   acal_replica  PEOR     (n 40) S: media d -0.0143 LI -0.0207 > -0.125 -> PASA | J PASA (LI -0.027) | rev PASA (LI -8.59)
+
+--- 4 "come menos": en Q4 cada mordida de A y de B se conserva con probabilidad f (binomial), visitas intactas.
+       CAND = TRONCO_B adelgazado, contra OFF, en cada serie de examen. Un organismo que se desdice igual pero muerde menos.
+   f 1.00 v143_serie    S LI -0.0085 -> PASA | J LI -0.009 (> -0.27) -> PASA | rev LI -0.81 (> -12.5) -> PASA
+   f 1.00 v143_replica  S LI -0.0001 -> PASA | J LI -0.000 (> -0.27) -> PASA | rev LI -6.22 (> -12.5) -> PASA
+   f 1.00 v144_serie    S LI -0.0029 -> PASA | J LI -0.004 (> -0.27) -> PASA | rev LI -3.06 (> -12.5) -> PASA
+   f 0.75 v143_serie    S LI -0.0092 -> PASA | J LI -0.237 (> -0.27) -> PASA | rev LI -12.63 (> -12.5) -> NO
+   f 0.75 v143_replica  S LI -0.0004 -> PASA | J LI -0.226 (> -0.27) -> PASA | rev LI -16.34 (> -12.5) -> NO
+   f 0.75 v144_serie    S LI -0.0025 -> PASA | J LI -0.223 (> -0.27) -> PASA | rev LI -12.85 (> -12.5) -> NO
+   f 0.50 v143_serie    S LI -0.0085 -> PASA | J LI -0.457 (> -0.27) -> NO | rev LI -22.67 (> -12.5) -> NO
+   f 0.50 v143_replica  S LI +0.0006 -> PASA | J LI -0.450 (> -0.27) -> NO | rev LI -26.20 (> -12.5) -> NO
+   f 0.50 v144_serie    S LI -0.0014 -> PASA | J LI -0.449 (> -0.27) -> NO | rev LI -23.05 (> -12.5) -> NO
+   f 0.25 v143_serie    S LI -0.0112 -> PASA | J LI -0.677 (> -0.27) -> NO | rev LI -34.40 (> -12.5) -> NO
+   f 0.25 v143_replica  S LI -0.0045 -> PASA | J LI -0.678 (> -0.27) -> NO | rev LI -39.43 (> -12.5) -> NO
+   f 0.25 v144_serie    S LI -0.0072 -> PASA | J LI -0.676 (> -0.27) -> NO | rev LI -37.67 (> -12.5) -> NO
+
+--- 5 ANTI-TERMO: TERMO (examen v14.4, CAND = organismo_v144cal, memoria que NO olvida) contra OFF
+   TERMO S mediana 0.3421 (p05 0.2792, p95 0.4260); OFF 0.9104
+   S:   media d -0.5657 sd 0.0499 LI -0.5749 > -0.125 -> NO (CAE)
+   J:   media d -0.9585 LI -0.9648 -> NO | rev (v4, lo registrado): LI -59.36 -> NO
+   corridas de TERMO con S < 0.5 (prefiere A, lo que ahora es veneno): 1.000; bootstrap P(TERMO pasa) 0.0000; para pasar haria falta un margen > 0.575 (4.6 x m_S)
+
+--- 6 control que DEBE caer: TRONCO_B con A y B intercambiados en Q4 (el mismo organismo, sin desdecirse)
+   v143_serie    S LI -0.8330 -> NO (cae, como debe)
+   v143_replica  S LI -0.8284 -> NO (cae, como debe)
+   v144_serie    S LI -0.8252 -> NO (cae, como debe)
+
+--- CONDICIONES
+   regla15_nulo               SI
+   dientes_V4_5               SI
+   realizaciones_TB_PLACEBO   SI
+   tumba_TERMO                SI
+   intercambio_cae            SI
+   come_menos_pasa_S          SI
+
+VEREDICTO ERR-150: LA REGLA POR VISITA SE SOSTIENE: pasa el nulo (regla 15), tiene dientes, tumba a TERMO y no castiga comer menos   (16 s)
+datos -> experimentos\tronco_v14_4c_examen\datos\nulo_err150_20260928_161207.json  sha256_16 = 1f5a02028eaefebd
