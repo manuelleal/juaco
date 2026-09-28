@@ -1,0 +1,91 @@
+CORRE_TERMOP · termop_humo_s49991-49992_T20000 · 20260928_131756 · python 3.14.2 · pool NO (un proceso) · corre_termop.py 0262a1627aa153da · preregistro PREREGISTRO_termop.md · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\tronco_v14_4b_examen\datos\humo\termop_humo_s49991-49992_T20000_20260928_131756
+  tareas 6 · brazos ['v143', 'termop', 'termopinv', 'o1'] · semillas 49991-49992 · T 20000 · fundador limpio 1 · reanuda False
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos\tronco_v14_4b_examen\construye_termop.py 81f63fd59d168759 OK
+  sha experimentos\tronco_v14_4b_examen\carros\V143_TERMOP.py edf5dfc9c5e498da OK
+  sha experimentos\tronco_v14_4b_examen\carros\V143_TERMOPINV.py 63edcafcc569a0d7 OK
+  carro V143_TERMOP sha edf5dfc9c5e498da == construye_termop: True · revisa_carro: PASA
+  carro V143_TERMOPINV sha 63edcafcc569a0d7 == construye_termop: True · revisa_carro: PASA
+  IDENTIDAD CORTA: V143_TERMOP con TERMO = 0 == V143 (salida ENTERA, N 9, s 49993, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_TERMOPINV con TERMO = 0 == V143 (salida ENTERA, N 9, s 49993, T 2000, fundador limpio): OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\FABRICA.py 2ebee3e99ea5a33a OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\carrera_escuderias\carros\APR.py 4402aa5142065c72 OK
+  sha organismo\organismo_v142.py 17528d767fcebaf6 OK
+  carro V142 sha 195b7b883d3750ed == construye: True · chequeo estatico: PASA
+  carro V143 sha 2a03048a7f1525e5 == construye: True · chequeo estatico: PASA
+  carro V143_SINFILTRO sha 44faed85a4a05ac2 == construye: True · chequeo estatico: PASA
+  carro V143_SINTD sha eaff1ce3681e258b == construye: True · chequeo estatico: PASA
+  carro V143_SIEMPRE sha 77d252ae44057209 == construye: True · chequeo estatico: PASA
+  carro V143_INVERTIDO sha a6b5ed4f570dc42d == construye: True · chequeo estatico: PASA
+  carro FABRICA (carrera) chequeo estatico: PASA
+  carro O1 (carrera) chequeo estatico: PASA
+  IDENTIDAD CORTA del juez (FABRICA == organismo_f9c REL, s 1, T 5000): OK
+  IDENTIDAD CORTA v14.3: perillas en 0 == FABRICA (N 9, s 14281, T 2000, fundador limpio): OK
+  ENTRADA campo a campo (regla 14): corre_v143.tarea == juez.tarea (9 FABRICA, s 14281, T 2000, fundador limpio): OK
+  ENTRADA campo a campo (regla 14): tarea de este runner == corre_v143.tarea (V143, s 49993, T 2000): OK
+  [   44.9s] v143 s49991 (20.1s) R0 pista 0.2341 aborto None · R0 real por linaje [0.0519, 0.1, 0.6667, 0.6667, 0.4286, 0.066, 0.3889, 0.8571, 0.0118] · fundadores [72, 44, 0, 0, 3, 98, 10, 0, 166]
+  [   62.3s] termop s49991 (17.4s) R0 pista 0.448 aborto None · R0 real por linaje [0.8333, 0.8, 0.8333, 0.7, 0.8333, 0.0123, 0.625, 0.1176, 0.9231] · fundadores [0, 0, 0, 2, 0, 159, 2, 29, 0]
+  [   86.2s] termopinv s49991 (23.9s) R0 pista 0.1372 aborto None · R0 real por linaje [0.8889, 0.0174, 0.0758, 0.025, 0.8333, 0.625, 0.875, 0.1562, 0.1351] · fundadores [0, 112, 60, 116, 0, 2, 0, 26, 31]
+  [  138.9s] o1 s49991 (52.7s) R0 pista 1.2353 aborto None · R0 real por linaje [0.8, 0.8571, 0.8, 0.75, 0.8, 0.5, 0.8, 0.1667, 0.8] · fundadores [0, 0, 0, 0, 0, 0, 0, 24, 0]
+  [  164.9s] v143 s49992 (26.0s) R0 pista 0.2288 aborto None · R0 real por linaje [0.9167, 0.0047, 0.8333, 0.1333, 0.375, 0.2593, 0.0236, 0.8889, 0.4211] · fundadores [0, 212, 0, 12, 4, 19, 123, 0, 10]
+  [  191.0s] termop s49992 (26.1s) R0 pista 0.3841 aborto None · R0 real por linaje [0.8889, 0.8889, 0.8571, 0.75, 0.0288, 0.8333, 0.0686, 0.875, 0.7] · fundadores [0, 0, 0, 2, 134, 0, 94, 0, 2]
+
+== v143 (V143 x9) · 2 semillas 49991-49992 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.382 (evaluables 0.317) · R0 preregistrado 0.8223 · vida mediana 185.0 · muertes 15.5 · fundadores 10.0 · casi inmortales 2/18
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 1/18 · semillas con mayoria 0/2 -> no gana · ENMIENDA 6: persisten 7/18 · semillas 1/2 -> no estabiliza (muertes voluntarias fisicas 0.8463) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.626)
+  causas hambre/sed/veneno/sal 26/24/376/433 (veneno+sal 94%) · pasos sin NADA bueno en el mundo 0.0166 · mordidas B+D 38.5 / A+C 185.0 por linaje · limpiezas fisicas por cuerpo 1.7
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9647, 'vetos': 7617, 'mord_sin_meta': 170, 'limpia_propia': 140, 'todo_obst': 0, 'des_splits': 37}
+  contabilidad coherente 18/18 · t_fund reconstruible 18/18 · s por corrida (mediana) 23.05
+  ESTABLECIMIENTO (v143, descriptivo): {'linajes': 18, 'establecidos': 12, 'frac_establecidos': 0.6667, 'R0_real_establecidos': 0.5476, 'R0_real_no_establecidos': 0.0377, 'cruzan_de_establecidos': 1}
+  CUERPOS (v143, descriptivo): {'n': 73, 'vida_med': 600.0, 'hijos_por_cuerpo': 1.11, 'frac_sin_hijos': 0.644, 'causas': {'veneno': 23, 'sal': 25, 'hambre': 15, 'sed': 10}} · fundadores {'n': 786, 'vida_med': 47.0, 'hijos_por_cuerpo': 0.094, 'frac_sin_hijos': 0.964, 'causas': {'hambre': 11, 'sal': 408, 'veneno': 353, 'sed': 14}}
+
+== termop (V143_TERMOP x9) · 2 semillas 49991-49992 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.8167 (evaluables 0.833) · R0 preregistrado 1.6597 · vida mediana 1060.0 · muertes 8.0 · fundadores 0.0 · casi inmortales 1/18
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 1/18 · semillas con mayoria 0/2 -> no gana · ENMIENDA 6: persisten 12/18 · semillas 2/2 -> ESTABILIZA (muertes voluntarias fisicas 0.7753) · ENMIENDA 3 (ayer): CRUZA (mediana R0 evaluables 1.444)
+  causas hambre/sed/veneno/sal 23/24/233/254 (veneno+sal 91%) · pasos sin NADA bueno en el mundo 0.0178 · mordidas B+D 19.5 / A+C 133.0 por linaje · limpiezas fisicas por cuerpo 1.0834
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9686, 'vetos': 9672, 'mord_sin_meta': 224, 'limpia_propia': 192, 'todo_obst': 0, 'des_splits': 20}
+  contabilidad coherente 18/18 · t_fund reconstruible 18/18 · s por corrida (mediana) 21.75
+  ESTABLECIMIENTO (termop, descriptivo): {'linajes': 18, 'establecidos': 14, 'frac_establecidos': 0.7778, 'R0_real_establecidos': 0.8333, 'R0_real_no_establecidos': 0.0487, 'cruzan_de_establecidos': 1}
+  CUERPOS (termop, descriptivo): {'n': 95, 'vida_med': 601.0, 'hijos_por_cuerpo': 1.084, 'frac_sin_hijos': 0.611, 'causas': {'veneno': 29, 'sed': 17, 'hambre': 19, 'sal': 30}} · fundadores {'n': 439, 'vida_med': 52.0, 'hijos_por_cuerpo': 0.189, 'frac_sin_hijos': 0.941, 'causas': {'sed': 7, 'hambre': 4, 'sal': 224, 'veneno': 204}}
+  termo (termop): telemetria de la ultima instancia {'dec': 3892, 'a_no': 1748, 'a_si': 196, 'mord': 1903}
+
+== termopinv (V143_TERMOPINV x9) · 1 semillas 49991-49991 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.1562 (evaluables 0.156) · R0 preregistrado 0.1562 · vida mediana 58.0 · muertes 31.0 · fundadores 26.0 · casi inmortales 0/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 6/9 · semillas 1/1 -> ESTABILIZA (muertes voluntarias fisicas 0.8061) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.156)
+  causas hambre/sed/veneno/sal 15/18/182/177 (veneno+sal 92%) · pasos sin NADA bueno en el mundo 0.004 · mordidas B+D 77.0 / A+C 165.0 por linaje · limpiezas fisicas por cuerpo 1.5
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9859, 'vetos': 4720, 'mord_sin_meta': 73, 'limpia_propia': 59, 'todo_obst': 0, 'des_splits': 11}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 23.9
+  ESTABLECIMIENTO (termopinv, descriptivo): {'linajes': 9, 'establecidos': 6, 'frac_establecidos': 0.6667, 'R0_real_establecidos': 0.7291, 'R0_real_no_establecidos': 0.025, 'cruzan_de_establecidos': 0}
+  CUERPOS (termopinv, descriptivo): {'n': 39, 'vida_med': 600.0, 'hijos_por_cuerpo': 0.564, 'frac_sin_hijos': 0.641, 'causas': {'veneno': 8, 'sal': 12, 'sed': 10, 'hambre': 9}} · fundadores {'n': 353, 'vida_med': 47.0, 'hijos_por_cuerpo': 0.076, 'frac_sin_hijos': 0.963, 'causas': {'sed': 8, 'hambre': 6, 'sal': 165, 'veneno': 174}}
+  termo (termopinv): telemetria de la ultima instancia {'dec': 1517, 'a_no': 556, 'a_si': 96, 'mord': 918}
+
+== o1 (O1 x9) · 1 semillas 49991-49991 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.8 (evaluables 0.512) · R0 preregistrado 1.8 · vida mediana 3322.0 · muertes 4.0 · fundadores 0.0 · casi inmortales 7/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 1/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.0) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.726)
+  causas hambre/sed/veneno/sal 10/11/22/16 (veneno+sal 64%) · pasos sin NADA bueno en el mundo 0.0365 · mordidas B+D 76.0 / A+C 135.0 por linaje · limpiezas fisicas por cuerpo 14.4
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 52.7
+  ESTABLECIMIENTO (o1, descriptivo): {'linajes': 9, 'establecidos': 8, 'frac_establecidos': 0.8889, 'R0_real_establecidos': 0.8, 'R0_real_no_establecidos': 0.1667, 'cruzan_de_establecidos': 0}
+  CUERPOS (o1, descriptivo): {'n': 27, 'vida_med': 2195.0, 'hijos_por_cuerpo': 1.296, 'frac_sin_hijos': 0.222, 'causas': {'veneno': 4, 'sed': 9, 'hambre': 8, 'sal': 6}} · fundadores {'n': 32, 'vida_med': 200.0, 'hijos_por_cuerpo': 1.094, 'frac_sin_hijos': 0.719, 'causas': {'sal': 10, 'veneno': 18, 'sed': 2, 'hambre': 2}}
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes; gana = semillas en que el primero supera al segundo)
+  termop vs v143: gana 2/2 · diferencia mediana 0.4347
+  termop vs termopinv: gana 1/1 · diferencia mediana 0.6438
+  termopinv vs v143: gana 0/1 · diferencia mediana -0.2327
+  o1 vs v143: gana 1/1 · diferencia mediana 0.4111
+  o1 vs termop: gana 0/1 · diferencia mediana 0.0
+
+================ LA LETRA (PREREGISTRO_termop.md sec. 6) -- HUMO: T corto y semillas de practica, NO cuenta
+  validez {'V1_completa': True, 'V2_ancla_O1_gana': False, 'V3_ancla_V143': False, 'V4_pieza_actua': True}
+  puertas {'P1_cand_cruza': False, 'P2_cand_gana_v143': True, 'P3_ctrl_no_cruza': True} · modesto True
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\tronco_v14_4b_examen\datos\humo\termop_humo_s49991-49992_T20000_20260928_131756\resumen.json (sha 547acf1da2208c89)
+Terminado en 191.1s
+VEREDICTO DE LA SERIE: HUMO (no cuenta): NO SE LEE   (regla de parada: PREREGISTRO_termop.md sec. 7)

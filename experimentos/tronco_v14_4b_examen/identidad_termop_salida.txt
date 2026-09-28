@@ -1,0 +1,41 @@
+  OK    (K) construye_termop: carros en disco == construccion por anclas desde V143_TERMO / V143_TERMOINV (sha fijados)
+  OK    (a) V143_TERMOP con TERMO = 0 == V143, salida ENTERA (N 9, s 49993, T 2000, fundador limpio)
+  OK    (a) V143_TERMOPINV con TERMO = 0 == V143, salida ENTERA (N 9, s 49993, T 2000, fundador limpio)
+  OK    (a) V143_TERMOP con TERMO = 0 == V143, salida ENTERA (N 9, s 49994, T 5000, fundador limpio)
+  OK    (a) V143_TERMOPINV con TERMO = 0 == V143, salida ENTERA (N 9, s 49994, T 5000, fundador limpio)
+  OK    (b) pista QUIETA: V143_TERMOP == V143_TERMO en la FISICA (todo salvo d['carro'] e id; s 49993, T 5000): la media movil de un dS constante es ese dS
+  OK    (b) pista QUIETA: V143_TERMOP == V143_TERMO en la FISICA (todo salvo d['carro'] e id; s 49994, T 20000): la media movil de un dS constante es ese dS
+  OK    (c) V143_TERMOPINV == V143_TERMOINV en la FISICA (s 49993, T 5000)
+  OK    (c) V143_TERMOPINV != V143_TERMOP en la fisica (s 49993, T 5000)
+       telemetria termop {'dec': 566, 'a_no': 275, 'a_si': 37, 'mord': 241} · termopinv {'dec': 395, 'a_no': 159, 'a_si': 30, 'mord': 208}
+  OK    (c) la pieza ACTUA en TERMOP y en TERMOPINV (V4: a_no + a_si > 0)
+  OK    (c) determinismo: V143_TERMOP dos corridas iguales (s 49993, T 5000)
+  OK    (c) la memoria de TERMO' se DESDICE: tras 20 x (+0.8) y 30 x (-0.4) vale -0.142 < 0 (media movil, ema_c 0.05 de FABRICA); la de TERMO seguiria en +0.080
+  OK    (d) corre_termo.verifica(): shas fijados + carros == construye + revisa_carro + identidad corta
+       sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+       sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+       sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+       sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+       sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+       sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+       sha experimentos\tronco_v14_4b_examen\construye_termop.py 81f63fd59d168759 OK
+       sha experimentos\tronco_v14_4b_examen\carros\V143_TERMOP.py edf5dfc9c5e498da OK
+       sha experimentos\tronco_v14_4b_examen\carros\V143_TERMOPINV.py 63edcafcc569a0d7 OK
+       carro V143_TERMOP sha edf5dfc9c5e498da == construye_termop: True · revisa_carro: PASA
+       carro V143_TERMOPINV sha 63edcafcc569a0d7 == construye_termop: True · revisa_carro: PASA
+       IDENTIDAD CORTA: V143_TERMOP con TERMO = 0 == V143 (salida ENTERA, N 9, s 49993, T 2000, fundador limpio): OK
+       IDENTIDAD CORTA: V143_TERMOPINV con TERMO = 0 == V143 (salida ENTERA, N 9, s 49993, T 2000, fundador limpio): OK
+  OK    (d) valida: serie 49941-49960 con los 4 brazos y T 100000 -> OK
+  OK    (d) valida: replica 49961-49980 -> OK
+  OK    (d) valida: rechaza semillas del exploratorio de TERMO 39001
+  OK    (d) valida: rechaza serie mezclada 39111-39130
+  OK    (d) valida: rechaza T 50000 en serie
+  OK    (d) valida: rechaza brazos distintos
+  OK    (d) valida: humo solo 49991-49994 y T <= 30000
+usage: identidad_termop.py (--humo | --serie | --bloque BLOQUE)
+                           [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                           [--pool POOL] [--reanuda]
+identidad_termop.py: error: unrecognized arguments: --desd 49991
+  OK    (d) ERR-115: bandera abreviada --desd (de --desde) aborta antes de correr nada
+  OK    (d) la letra en 10 casos sinteticos (10/10) · bloque(FUNCIONA, MODESTO) = HAY ALGO MODESTO
+ARNES PASA · 143s
