@@ -1,0 +1,59 @@
+  HIBB.py 3ca86aed6c409a11
+  O1P.py 94861fe2d6ba8c45
+  V143P.py 98823206dbb6a27d
+VERIFICA OK
+  OK    (K) construye_bb --verifica (carros por anclas == disco; shas de origen)
+  OK    (1) HIBB ref == HIB boca_buena del puenteo, todo salvo d['carro'] (N 9, s 39901, T 2000)
+  OK    (1b) ... y d['carro'] igual salvo bb/bbt
+  OK    (2) HIBB todos los puentes en 0 == V143 en todo salvo d['carro']
+  OK    (3) HIBB glotu == V143_GLOTU (muro) en todo salvo d['carro']
+  OK    (4) BB ref determinista
+       bbt ref: {'desc_dec': 35, 'desc_veto': 0, 'desc_fuerza': 8, 'bue_dec': 509, 'bue_veto': 371, 'bue_fuerza': 16, 'bue_veto_rel': 238, 'bue_veto_norel': 133, 'bue_fuerza_bajoU': 7, 'bue_fuerza_margen': 9, 'bue_fuerza_filtro': 8, 'bue_fuerza_nosirve_act': 7, 'cambia': 0, 'mord_final_bue': 134}
+  OK    (4) BB veto determinista
+  OK    (4i) BB veto cambia la fisica respecto de ref a T 2000
+       bbt veto: {'desc_dec': 262, 'desc_veto': 0, 'desc_fuerza': 214, 'bue_dec': 464, 'bue_veto': 265, 'bue_fuerza': 52, 'bue_veto_rel': 195, 'bue_veto_norel': 70, 'bue_fuerza_bajoU': 17, 'bue_fuerza_margen': 35, 'bue_fuerza_filtro': 48, 'bue_fuerza_nosirve_act': 39, 'cambia': 0, 'mord_final_bue': 93}
+  OK    (4) BB fuerza determinista
+  OK    (4i) BB fuerza cambia la fisica respecto de ref a T 2000
+       bbt fuerza: {'desc_dec': 32, 'desc_veto': 4, 'desc_fuerza': 7, 'bue_dec': 211, 'bue_veto': 127, 'bue_fuerza': 5, 'bue_veto_rel': 76, 'bue_veto_norel': 51, 'bue_fuerza_bajoU': 5, 'bue_fuerza_margen': 0, 'bue_fuerza_filtro': 5, 'bue_fuerza_nosirve_act': 0, 'cambia': 0, 'mord_final_bue': 210}
+  OK    (4) BB sinprueba determinista
+  OK    (4i) BB sinprueba cambia la fisica respecto de ref a T 2000
+       bbt sinprueba: {'desc_dec': 252, 'desc_veto': 5, 'desc_fuerza': 184, 'bue_dec': 480, 'bue_veto': 304, 'bue_fuerza': 16, 'bue_veto_rel': 225, 'bue_veto_norel': 79, 'bue_fuerza_bajoU': 6, 'bue_fuerza_margen': 10, 'bue_fuerza_filtro': 13, 'bue_fuerza_nosirve_act': 12, 'cambia': 0, 'mord_final_bue': 125}
+  OK    (4) BB soloprueba determinista
+  OK    (4i) BB soloprueba cambia la fisica respecto de ref a T 2000
+       bbt soloprueba: {'desc_dec': 32, 'desc_veto': 0, 'desc_fuerza': 9, 'bue_dec': 143, 'bue_veto': 75, 'bue_fuerza': 32, 'bue_veto_rel': 57, 'bue_veto_norel': 18, 'bue_fuerza_bajoU': 28, 'bue_fuerza_margen': 4, 'bue_fuerza_filtro': 30, 'bue_fuerza_nosirve_act': 15, 'cambia': 0, 'mord_final_bue': 129}
+  OK    (4) BB m0 determinista
+  OK    (4i) BB m0 cambia la fisica respecto de ref a T 2000
+       bbt m0: {'desc_dec': 36, 'desc_veto': 0, 'desc_fuerza': 12, 'bue_dec': 644, 'bue_veto': 256, 'bue_fuerza': 29, 'bue_veto_rel': 216, 'bue_veto_norel': 40, 'bue_fuerza_bajoU': 10, 'bue_fuerza_margen': 19, 'bue_fuerza_filtro': 10, 'bue_fuerza_nosirve_act': 12, 'cambia': 0, 'mord_final_bue': 94}
+  OK    (4) BB vetom0 determinista
+  OK    (4i) BB vetom0 cambia la fisica respecto de ref a T 2000
+       bbt vetom0: {'desc_dec': 179, 'desc_veto': 3, 'desc_fuerza': 145, 'bue_dec': 450, 'bue_veto': 89, 'bue_fuerza': 190, 'bue_veto_rel': 77, 'bue_veto_norel': 12, 'bue_fuerza_bajoU': 80, 'bue_fuerza_margen': 110, 'bue_fuerza_filtro': 185, 'bue_fuerza_nosirve_act': 127, 'cambia': 0, 'mord_final_bue': 62}
+  OK    (4) BB glotu determinista
+  OK    (4i) BB glotu cambia la fisica respecto de ref a T 2000
+       bbt glotu: {'desc_dec': 122, 'desc_veto': 9, 'desc_fuerza': 83, 'bue_dec': 307, 'bue_veto': 94, 'bue_fuerza': 129, 'bue_veto_rel': 73, 'bue_veto_norel': 21, 'bue_fuerza_bajoU': 89, 'bue_fuerza_margen': 40, 'bue_fuerza_filtro': 125, 'bue_fuerza_nosirve_act': 55, 'cambia': 0, 'mord_final_bue': 67}
+  OK    (4) BB todo determinista
+  OK    (4i) BB todo cambia la fisica respecto de ref a T 2000
+       bbt todo: {'desc_dec': 50, 'desc_veto': 21, 'desc_fuerza': 9, 'bue_dec': 168, 'bue_veto': 103, 'bue_fuerza': 8, 'bue_veto_rel': 79, 'bue_veto_norel': 24, 'bue_fuerza_bajoU': 4, 'bue_fuerza_margen': 4, 'bue_fuerza_filtro': 4, 'bue_fuerza_nosirve_act': 4, 'cambia': 0, 'mord_final_bue': 197}
+  OK    (4) BB vetoc determinista
+  OK    (4i) BB vetoc cambia la fisica respecto de ref a T 2000
+       bbt vetoc: {'desc_dec': 148, 'desc_veto': 10, 'desc_fuerza': 113, 'bue_dec': 365, 'bue_veto': 217, 'bue_fuerza': 50, 'bue_veto_rel': 147, 'bue_veto_norel': 70, 'bue_fuerza_bajoU': 31, 'bue_fuerza_margen': 19, 'bue_fuerza_filtro': 49, 'bue_fuerza_nosirve_act': 18, 'cambia': 0, 'mord_final_bue': 94}
+  OK    (4) BB fuerzac determinista
+  OK    (4i) BB fuerzac cambia la fisica respecto de ref a T 2000
+       bbt fuerzac: {'desc_dec': 262, 'desc_veto': 7, 'desc_fuerza': 207, 'bue_dec': 180, 'bue_veto': 91, 'bue_fuerza': 14, 'bue_veto_rel': 54, 'bue_veto_norel': 37, 'bue_fuerza_bajoU': 9, 'bue_fuerza_margen': 5, 'bue_fuerza_filtro': 12, 'bue_fuerza_nosirve_act': 11, 'cambia': 0, 'mord_final_bue': 183}
+  OK    (4) BB m10 determinista
+  OK    (4i) BB m10 cambia la fisica respecto de ref a T 2000
+       bbt m10: {'desc_dec': 225, 'desc_veto': 6, 'desc_fuerza': 176, 'bue_dec': 551, 'bue_veto': 250, 'bue_fuerza': 45, 'bue_veto_rel': 211, 'bue_veto_norel': 39, 'bue_fuerza_bajoU': 10, 'bue_fuerza_margen': 35, 'bue_fuerza_filtro': 25, 'bue_fuerza_nosirve_act': 28, 'cambia': 0, 'mord_final_bue': 114}
+  OK    (4) BB m40 determinista
+  OK    (4i) BB m40 cambia la fisica respecto de ref a T 2000
+       bbt m40: {'desc_dec': 267, 'desc_veto': 3, 'desc_fuerza': 225, 'bue_dec': 457, 'bue_veto': 301, 'bue_fuerza': 10, 'bue_veto_rel': 232, 'bue_veto_norel': 69, 'bue_fuerza_bajoU': 7, 'bue_fuerza_margen': 3, 'bue_fuerza_filtro': 7, 'bue_fuerza_nosirve_act': 2, 'cambia': 0, 'mord_final_bue': 183}
+  OK    (4) BB ventana determinista
+  OK    (4i) BB ventana cambia la fisica respecto de ref a T 2000
+       bbt ventana: {'desc_dec': 123, 'desc_veto': 5, 'desc_fuerza': 78, 'bue_dec': 372, 'bue_veto': 172, 'bue_fuerza': 24, 'bue_veto_rel': 127, 'bue_veto_norel': 45, 'bue_fuerza_bajoU': 6, 'bue_fuerza_margen': 18, 'bue_fuerza_filtro': 12, 'bue_fuerza_nosirve_act': 13, 'cambia': 0, 'mord_final_bue': 130}
+  OK    (4) BB tinv determinista
+  OK    (4i) BB tinv cambia la fisica respecto de ref a T 2000
+       bbt tinv: {'desc_dec': 101, 'desc_veto': 5, 'desc_fuerza': 74, 'bue_dec': 44, 'bue_veto': 9, 'bue_fuerza': 17, 'bue_veto_rel': 9, 'bue_veto_norel': 0, 'bue_fuerza_bajoU': 11, 'bue_fuerza_margen': 6, 'bue_fuerza_filtro': 17, 'bue_fuerza_nosirve_act': 6, 'cambia': 0, 'mord_final_bue': 39}
+  OK    (4) BB tinv40 determinista
+  OK    (4i) BB tinv40 cambia la fisica respecto de ref a T 2000
+       bbt tinv40: {'desc_dec': 129, 'desc_veto': 13, 'desc_fuerza': 84, 'bue_dec': 163, 'bue_veto': 81, 'bue_fuerza': 23, 'bue_veto_rel': 68, 'bue_veto_norel': 13, 'bue_fuerza_bajoU': 20, 'bue_fuerza_margen': 3, 'bue_fuerza_filtro': 19, 'bue_fuerza_nosirve_act': 3, 'cambia': 0, 'mord_final_bue': 141}
+  OK    (5) letra de _bb en 32 casos sinteticos (32/32)
+  OK    (6) regla 14: pista.run de corre_bb == corre_v143.tarea campo a campo {'ok': True, 'n': 9, 'T': 10, 'dif': {}}
+ARNES PASA · 302s
