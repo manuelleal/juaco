@@ -1095,3 +1095,13 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 > el ingrediente que salga de la ablación de `boca_buena` (experimentos/organelos/boca_buena/). Si cruza → FUNCIONA y candidato a v14.4.
 > Si da NO → el muro se declara MAPEADO (la pista se cruza con las decisiones de boca diseñadas de O1; las reglas genéricas llegan a ~0.73)
 > y se vuelve al frente ECO. No se abren más variantes genéricas del muro después de ese intento.
+
+### 28-sep-2026 ~10:50: TERMO = HAY ALGO MODESTO ×2 → candidato a v14.4; MURO DE LA CARRERA MAPEADO
+- **Resultado:** v14.3 + termostato de boca (muerde lo bueno si alguna necesidad que sube está bajo rep_umbral + s/2) da R0 real
+  0.923 / 0.932, **pareado con O1** (O1 gana 9/20 y 10/20). Semillas con mayoría que cruza: 14/20 y 13/20; P1 pide 15.
+  Control TERMOINV 0.13 / 0.12.
+- **Por la regla de parada:** TERMO es candidato a v14.4 y no hay más intentos sobre el muro.
+- **Siguiente:**
+  - examen del criterio v4 para TERMO;
+  - volver a ECO;
+  - nube: termo_evo (encargo en `experimentos/organelos/termo_evo/ENCARGO_NUBE.md`, a lanzar por el director).

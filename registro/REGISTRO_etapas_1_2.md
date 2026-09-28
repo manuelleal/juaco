@@ -6874,3 +6874,51 @@ En paralelo, un creador desarma `boca_buena` (exploratorio, `experimentos/organe
 Lo que sube a v14.3 (~+0.10 a +0.15) es GLOTU, y no alcanza. Coincide con el puenteo: nuestras traducciones genéricas no capturan el
 ingrediente de `boca_buena` de O1. Nota de instrumento (no cambia nada): el runner imprime el encabezado "LA LETRA (PREREGISTRO_muro.md sec. 6)"
 también en la serie 2.
+
+## TERMO — último intento del muro de la carrera (28-sep-2026, 09:23–10:50): **HAY ALGO MODESTO ×2** → candidato a v14.4; MURO MAPEADO
+
+> Pregunta: ¿una sola regla local de boca, genérica y sin memoria nueva (un termostato), lleva a v14.3 a cruzar H-1 en la pista de la carrera?
+> Origen: el desarme exploratorio de `boca_buena` (`experimentos/organelos/boca_buena/INFORME.md`, 39001–39010, commit `556b297`).
+
+- **Pieza (V143_TERMO):** sobre una letra cuyo `_adS` no tiene componentes negativas y tiene alguna positiva, muerde si y sólo si existe j
+  con s_j > 0 y nivel_j < rep_umbral + s_j/2. Manda sobre la boca de fábrica, el FILTRO y APR sólo en esas letras. Lo desconocido y lo
+  malo, como v14.3. Memoria nueva: cero. La constante ½ salió del exploratorio (declarado).
+- **Control TERMOINV:** la misma regla, pero leyendo la necesidad que la letra NO sube.
+- **Preregistro:** `experimentos/organelos/termo/PREREGISTRO_termo.md` (commit `5bc646e`, sha `0cfef84b2d59e758`, escrito antes del humo).
+  Arnés 22/22; humo OK (regla 14); auditor: LISTO PARA SERIE, sin bloqueantes.
+- **Predicción del creador:** FUNCIONA 0.35 / MODESTO 0.40 / NO 0.08 / NO SE LEE 0.17 por serie.
+- **Crudos:** `termo/serie_pool6.log`, `termo/replica_pool6.log`, `termo/bloque.log` y los `resumen.json`:
+  - serie: sha `d6eeacd8a3464c83`;
+  - réplica: sha `668f16b48345adde`.
+
+| brazo | serie 39101–39120 R0 real · semillas con mayoría | réplica 39121–39140 R0 real · semillas con mayoría |
+|---|---|---|
+| v143 | 0.610 · 0/20 | 0.590 · 0/20 |
+| **termo** | **0.923 · 14/20** (gana a V143 18/20, +0.350) | **0.932 · 13/20** (gana a V143 20/20, +0.350) |
+| termoinv (control) | 0.127 · 0/20 | 0.119 · 0/20 |
+| o1 (techo) | 0.938 · 20/20 | 0.933 · 19/20 |
+| **o1 vs termo, pareado** | O1 gana 9/20, dif −0.011 | O1 gana 10/20, dif 0.000 |
+
+**Validez completa ×2** (V3: v143 en rango, 0.61 y 0.59). **Puertas ×2:** P1 (cruza, mayoría en ≥15/20) False (14 y 13), P2 True, P3 True.
+**Veredicto de la letra: serie MODESTO, réplica MODESTO → BLOQUE: HAY ALGO MODESTO.**
+
+**Regla de parada (sec. 7, decidida por el director antes de correr):** TERMO queda como **candidato a v14.4** por mérito propio y el
+**MURO DE LA CARRERA SE DECLARA MAPEADO**. No hay más intentos sobre él.
+
+**Lectura honesta:**
+- TERMO lleva a v14.3 de ~0.60 a ~0.93 de R0 real mediano, en las dos corridas.
+- **Queda pareado con O1:** O1 no le gana (9/20 y 10/20).
+- Lo hace con una regla local de una línea, sin memoria nueva y sin copiar constantes de O1.
+- El control que lee la necesidad equivocada se hunde (0.12–0.13), así que el efecto es de la pieza.
+- No llega a la puerta estricta P1: le faltan 1–2 semillas con mayoría de linajes que cruzan.
+- El mapa del muro:
+  - la brecha v14.3–O1 estaba en la boca frente a lo bueno;
+  - la pieza que la cierra es comer lo que sube alguna necesidad bajo una consigna ESTRICTAMENTE por encima del umbral de parto;
+  - consigna en el umbral = extinción.
+
+**Vocabulario.**
+- Permitido: "TERMO iguala a O1 en R0 real mediano", "cruza en la mediana, no en la puerta estricta", "muro mapeado".
+- Prohibido: "TERMO funciona" a secas, "v14.4" sin el examen del criterio v4.
+
+**Siguiente:** examen del criterio de tronco v4 para TERMO (candidato a v14.4). En la nube, `termo_evo/ENCARGO_NUBE.md`:
+¿la selección encuentra el termostato sola?
