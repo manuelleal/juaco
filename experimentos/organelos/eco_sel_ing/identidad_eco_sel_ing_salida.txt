@@ -1,0 +1,59 @@
+IDENTIDAD ECO_SEL_ING · 2026-09-28 17:15:08 · python 3.14.2 · numpy 2.4.3 · shas {'corre_eco_sel_ing.py': 'cc7e8c0377f4ed88', 'nucleo_eco_sel_ing.py': 'c2189f9d22b72386', 'construye_eco_sel_ing.py': '8c74739584d602a0', 'PREREGISTRO_eco_sel_ing.md': 'b3ee578f2308ceef', 'eco_sel/nucleo_eco_sel.py': '6a36e47ce61db3e1', 'eco_sel/corre_eco_sel.py': '74aff2f668c2c97a', 'frio/corre_frio.py': '3ba8b0f5cf1fbbfa', 'frio/motor_frio_rapido.py': 'ff9d890a5cce9dec', 'juaco_eco/corre_eco_v12.py': '1340d268e1fd93d8', 'juaco_eco/corre_eco.py': '47d9cee4d6462116', 'juaco_eco/motor_eco.py': 'bca3033878b59622', 'juaco_eco/carros/FAMB_RES0_ECO.py': '94ea78589bc2ce24', 'juaco_eco/carros/FABRICA_ECO.py': 'f1163009cb5193a2'}
+construye_eco_sel_ing --verifica: IGUAL (origen 6a36e47ce61db3e1; destino c2189f9d22b72386)
+  OK  (K) nucleo_eco_sel_ing.py en disco == el construido por anclas desde eco_sel/nucleo_eco_sel.py (6a36e47ce61db3e1) 
+construye_eco_sel_ing --verifica: IGUAL (origen 6a36e47ce61db3e1; destino c2189f9d22b72386)
+  OK  (K) verifica(): origenes con el sha fijado 
+  OK  (A) un solo corre_eco en el proceso (N, NE y F comparten CR) 
+  OK  (A) los cinco brazos de ECO_SEL estan sin tocar en el nucleo ING; ING_* con FABRICA_ECO y t_corte None 
+  (compilacion / cache del gemelo: 1 s)
+  OK  (A) nucleo ING trabajo(F1) == nucleo_eco_sel.trabajo(F1) en TODAS sus claves salvo seg; solo se agregan ['K_fund', 'K_nac', 'fund_2a', 'n_k2'] (T 60 000) (distintas []; nuevas ['K_fund', 'K_nac', 'fund_2a', 'n_k2']; n_nac 1115, K_nac 31.451613, K_fund 0.0)
+  OK  (A) nucleo ING trabajo(SEL_C) == nucleo_eco_sel.trabajo(SEL_C) en TODAS sus claves salvo seg; solo se agregan ['K_fund', 'K_nac', 'fund_2a', 'n_k2'] (T 60 000) (distintas []; nuevas ['K_fund', 'K_nac', 'fund_2a', 'n_k2']; n_nac 1057, K_nac 36.741935, K_fund 0.0)
+  OK  (A) ING_F1 con t_corte 1 == corre_frio.trabajo(FAB_FRIO) en TODAS las claves de F1 salvo brazo y seg (T 20 000): la base ingenua es FAB_FRIO (persiste 0, t_ext 5649, n_nac 49; distintas [])
+  OK  (A) kbar y rango == los de eco_sel/corre_eco_sel.py en entradas (regla 14) 
+  OK  (I) CONTROL que puede fallar: ING_F1 (sin tabla) difiere de F1 (con tabla) en la misma semilla, frio, T 20 000 (ING_F1 t_ext 5649, n_nac 49 · F1 a 60 000 persiste 1, n_nac 1115)
+  OK  (V) ING_F1 con vivero permanente (t_corte = T): persiste, refunda en la 2a mitad (fund_2a > 0), t_corte == T (K 97.45, K_nac 14.454545, K_fund 83.0, fund_2a 2533, fundadores_rep 4990, 3.1 s)
+  OK  (V) ING_F1: K_nac + K_fund == K (mismo muestreo que tam_total; tolerancia 1.5e-6 por el redondeo a 6 decimales) (K 97.454545 = 14.454545 + 83.0)
+  OK  (V) ING_SEL_C: K_nac + K_fund == K (mismo muestreo que tam_total; tolerancia 1.5e-6 por el redondeo a 6 decimales) (K 96.818182 = 14.090909 + 82.727273)
+  OK  (V) ING_AZA_C: K_nac + K_fund == K (mismo muestreo que tam_total; tolerancia 1.5e-6 por el redondeo a 6 decimales) (K 95.909091 = 11.727273 + 84.181818)
+  OK  (V) F1 (frio, T 60 000): K_nac + K_fund == K (mismo muestreo que tam_total; tolerancia 1.5e-6 por el redondeo a 6 decimales) (K 31.451613 = 31.451613 + 0.0)
+  OK  (B) ING_SEL_C con p_mut = 0 (perilla apagada; donante padre) == ING_F1 bit a bit (vivero permanente, T 20000) salvo configuracion (distintas []; el motor informa mutables [] con p_mut 0)
+  OK  (B) ING_AZA_C con p_mut = 0 (perilla apagada; donante azar) == ING_F1 bit a bit (vivero permanente, T 20000) salvo configuracion (distintas []; el motor informa mutables [] con p_mut 0)
+  OK  (B) ING_SEL_C con sigma = 0: solo se mueven genes ENTEROS (la propiedad de muta que hace que sigma = 0 no sea la perilla apagada) (genes movidos en los vivos ['NK', 'memoria_rechazo']; enteros ['NK', 'memoria_rechazo', 'rep_X']; n_mut 584)
+  OK  (B) ING_AZA_C con sigma = 0: solo se mueven genes ENTEROS (la propiedad de muta que hace que sigma = 0 no sea la perilla apagada) (genes movidos en los vivos ['NK', 'memoria_rechazo']; enteros ['NK', 'memoria_rechazo', 'rep_X']; n_mut 585)
+  OK  (B) CONTROL: con sigma 0.15 la fisica de ING_SEL_C difiere de ING_F1 (n_nac F1 942 · SEL 910; n_mut 4465)
+  OK  (B) CONTROL: ING_AZA_C difiere de ING_SEL_C 
+  OK  (B) ING_SEL_C e ING_AZA_C: mutables = los 15 del cerebro, 0 genes fuera movidos, alguno movido; ING_F1 sin mutacion 
+  OK  (H) CEREBRO (ingenuo, vivero permanente): TODO hijo == muta(genoma del padre) (herencia exacta) (padre no fundador: 201/201 = 1.000; padre fundador: 821/821; refundados 4255)
+  OK  (H) CEREBRO_AZAR (ingenuo, vivero permanente): el control rompe la copia padre -> hijo (< 5 %) (padre no fundador: 0/66 = 0.000; padre fundador: 3/849; refundados 5382)
+  OK  (C) ING_F1: gemelo == motor Python en trabajo() (T 3000, vivero permanente) (n_nac 120, fundadores_rep 713, n_mut 0; distintas []; 23.7 s contra 0.4 s)
+  OK  (C) ING_SEL_C: gemelo == motor Python en trabajo() (T 3000, vivero permanente) (n_nac 106, fundadores_rep 757, n_mut 683; distintas []; 18.3 s contra 0.4 s)
+  OK  (C) ING_AZA_C: gemelo == motor Python en trabajo() (T 3000, vivero permanente) (n_nac 101, fundadores_rep 758, n_mut 670; distintas []; 17.8 s contra 0.4 s)
+  OK  (D) determinismo: ING_SEL_C dos veces == bit a bit (salvo seg) (distintas [])
+  OK  (Q) ING_SEL_C: corte en t = 30 000 + --reanuda == la corrida entera (T 40 000, vivero permanente; k2 incluida) (cortado True, checkpoint True, distintas [], n_k2 5189, fund_2a 3978)
+  OK  (L) C y E FUNCIONA -> C: FUNCIONA: CON EL HIJO INGENUO LA SELECCION MUEVE EL CEREBRO  | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) C MODESTO sin firma (rango 5) -> C: HAY ALGO MODESTO: LA HERENCIA SUBE LA CAPACIDAD DEL LINAJE I | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) C MODESTO sin superar la base (K SEL = F1) -> C: HAY ALGO MODESTO: LA SELECCION MUEVE EL GEN Y GANA A SU CONT | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) P2 cae por la mediana (+1 < +1.5) -> C: HAY ALGO MODESTO: LA SELECCION MUEVE EL GEN Y GANA A SU CONT | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) P2 cae en el pareado (14/20) -> C: HAY ALGO MODESTO: LA SELECCION MUEVE EL GEN Y GANA A SU CONT | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) TRAMPA 3: K sube pero K_nac no (comprado con fundadores) -> P2 y P3 caen: NO -> C: NO (en esta serie) | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) P3 cae (AZA sostiene lo mismo) = NO -> C: NO (en esta serie) | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) P3 cae solo en K_nac (AZA = SEL en nacidos) y P1 cae -> NO -> C: NO (en esta serie) | E: FUNCIONA: EL LINAJE INGENUO SELECCIONADO
+  OK  (L) E: P4 cae contra AZA (mismos fundadores) -> E NO; C sigue -> C: FUNCIONA: CON EL HIJO INGENUO LA SELECCION MUEVE EL CEREBRO  | E: NO (en esta serie)
+  OK  (L) E: P4 cae contra la base (SEL necesita mas fundadores) -> E NO -> C: FUNCIONA: CON EL HIJO INGENUO LA SELECCION MUEVE EL CEREBRO  | E: NO (en esta serie)
+  OK  (L) guardia: AZA con alpha sobre todas las sombras -> NO EVALUABLE -> C: NO EVALUABLE (el control sin herencia ING_AZA_C sale de sus  | E: NO EVALUABLE (el control sin herencia IN
+  OK  (L) V3: genes fuera en SEL -> NO EVALUABLE -> C: NO EVALUABLE (la genetica no es la declarada) | E: NO EVALUABLE (la genetica no es la decla
+  OK  (L) V3: AZA sin mutacion -> NO EVALUABLE -> C: NO EVALUABLE (la genetica no es la declarada) | E: NO EVALUABLE (la genetica no es la decla
+  OK  (L) V1: base 16/20 -> NO EVALUABLE -> C: NO EVALUABLE (la base ingenua no esta presente: ING_F1 < 17/ | E: NO EVALUABLE (la base ingenua no esta pr
+  OK  (L) V2: un brazo con la tabla (FAMB) -> NO EVALUABLE -> C: NO EVALUABLE (un brazo no nace ingenuo: carro distinto de FA | E: NO EVALUABLE (un brazo no nace ingenuo: 
+  OK  (L) bloqueados -> NO EVALUABLE -> C: NO EVALUABLE (tope de cuerpos alcanzado: bloqueados = 2) | E: NO EVALUABLE (tope de cuerpos alcanzado:
+  OK  (L) T distinto -> NO EVALUABLE -> C: NO EVALUABLE (serie incompleta, abortos, T, t_corte, brazos  | E: NO EVALUABLE (serie incompleta, abortos,
+  OK  (L) t_corte distinto de T (vivero no permanente) -> NO EVALUABLE -> C: NO EVALUABLE (serie incompleta, abortos, T, t_corte, brazos  | E: NO EVALUABLE (serie incompleta, abortos,
+  OK  (L) serie incompleta -> NO EVALUABLE -> C: NO EVALUABLE (serie incompleta, abortos, T, t_corte, brazos  | E: NO EVALUABLE (serie incompleta, abortos,
+  OK  (L) un aborto -> NO EVALUABLE -> C: NO EVALUABLE (serie incompleta, abortos, T, t_corte, brazos  | E: NO EVALUABLE (serie incompleta, abortos,
+  OK  (L) semillas distintas -> NO EVALUABLE -> C: NO EVALUABLE (serie incompleta, abortos, T, t_corte, brazos  | E: NO EVALUABLE (serie incompleta, abortos,
+  OK  (L) un brazo ajeno en la carpeta -> NO EVALUABLE -> C: NO EVALUABLE (serie incompleta, abortos, T, t_corte, brazos  | E: NO EVALUABLE (serie incompleta, abortos,
+  OK  (L) con T = 500 000 declarada y datos a 500 000: FUNCIONA (la letra no fija 1e6) 
+  OK  (R) el parser aborta ante 17 formas de bandera mala (17/17)
+  OK  (R) el parser acepta las 4 formas buenas (4/4)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 2)
+RESULTADO: 54/54  (114 s)
