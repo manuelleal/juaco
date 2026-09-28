@@ -6938,3 +6938,58 @@ también en la serie 2.
 - **Lectura:** el termostato sirve donde la comida buena sigue siendo buena, pero no se desdice. Su memoria no olvida.
   → **TERMO NO es v14.4.** El siguiente candidato es TERMO′, con memoria que olvida; está en construcción en
   `experimentos/tronco_v14_4b_examen/`.
+
+## ★ ECO_SEL — selección natural sobre el linaje de F1 frío (28-sep-2026, 13:55–14:18): **FUNCIONA ×2 en M y en C**
+
+> Pregunta: en el linaje de F1 ARRANQUE EN FRÍO (ECO w90, sin vivero ni fundadores repuestos desde t = 1; `experimentos/organelos/frio/`),
+> ¿la selección natural sobre rasgos heredables con mutación sube la capacidad del linaje por encima de F1 sin selección, y es la herencia
+> (no la variación) la que lo hace? Idea que une los frentes: la nube (termo_evo) mostró que el gen del margen sube con herencia, pero
+> la refundación lo resetea; en F1 frío no hay refundación.
+
+- **Preregistro:** `experimentos/organelos/eco_sel/PREREGISTRO_eco_sel.md` (commit `868afb6`, antes de la serie). Arnés 59/59, humo OK,
+  auditor LISTO PARA SERIE. Carro FAMB_RES0_ECO y genética de ECO sin cambios (p 0.05, σ 0.15, banco 200, 8 sombras). Memoria nueva: cero.
+- **Medida:** K = media de cuerpos vivos en [T/2, T] (0 tras la extinción), pareada por semilla. T = 1e6.
+- **Brazos:**
+  - F1: sin mutación.
+  - SEL_M / AZA_M: sólo muta `rep_umbral` (el margen), con o sin herencia.
+  - SEL_C / AZA_C: mutan los 15 genes del cerebro, con la historia de vida fija; con o sin herencia.
+- **Predicción del creador:** M: FUNCIONA 0.15 / MOD 0.25 / NO 0.50. C: FUNCIONA 0.25 / MOD 0.40 / NO 0.25.
+  **Refutada para bien en las dos.**
+- **Crudos:**
+  - `eco_sel/serie_pool6.log` y `eco_sel/replica_pool6.log`;
+  - `eco_sel/datos/eco_sel_serie_s45301-45320/` y `eco_sel/datos/eco_sel_serie_s45321-45340/`.
+
+| brazo | K serie 45301–45320 | K réplica 45321–45340 | persisten (s/r) |
+|---|---|---|---|
+| F1 (sin selección) | 30.85 | 31.01 | 20/20 · 20/20 |
+| **SEL_M** (margen heredable) | **34.91** · vs F1 20/20 +4.13 · vs AZA_M 19/20 | **34.74** · vs F1 20/20 +3.60 · vs AZA_M 20/20 | 20 · 20 |
+| AZA_M (sin herencia) | 20.19 | 24.46 | 16 · 18 |
+| **SEL_C** (cerebro heredable) | **38.94** · vs F1 20/20 +8.16 · vs AZA_C 20/20 | **39.23** · vs F1 20/20 +8.32 · vs AZA_C 20/20 | 20 · 20 |
+| AZA_C (sin herencia) | 25.65 | 23.01 | 17 · 15 |
+
+- **P1, el gen sale de sus 8 sombras en t = 100 000:**
+  - M: rep_umbral 2.85 / 2.25;
+  - C: alpha 8.8 / 8.6, tau_e 2.05 / 1.6, aversion 6.8 / 5.35.
+  - Guardia: AZA dentro de sus sombras en las dos corridas.
+- **Validez ×2:** F1 persiste 20/20, frío limpio (0 refundados) y la genética es la declarada.
+- **Veredicto de la letra:** M FUNCIONA ×2 y C FUNCIONA ×2 → **BLOQUE FUNCIONA en M y en C**.
+- **Verificación del auditor: SE SOSTIENE CON RESERVAS.** Recalculó K, P2 y P3 desde los 200 JSON sin el código del runner (exacto),
+  confirmó los shas iguales al preregistro, bloqueados 0 y tope no alcanzado (máx. 90 vivos de 3 000), e hizo leave-one-out lejos del umbral.
+  Las reservas son de registro (este commit) y de vocabulario.
+- **Descriptivo (no decide):**
+  - En SEL_C la fracción de muertes por veneno + sal cae de ~82 % (F1) a **2.2 % / 3.5 %**. Los nacidos de la segunda mitad son del
+    mismo orden (~8 800 contra ~9 200): no es un artefacto de menos pasos.
+  - En SEL_M, rep_umbral de los vivos baja a 0.57 / 0.66, contra ~1.1–1.2 sin herencia; es decir, sube el margen de TERMO.
+  - En 13/20 semillas de la réplica queda en la banda de TERMO (0.6–0.9).
+- **Lectura:** en un linaje que se sostiene solo, la selección natural, sin juez ni diseño, sube la capacidad de carga del linaje de ~31 a
+  ~35 (margen) y a ~39 cuerpos (cerebro) con el mismo flujo de comida. El mismo gen sin herencia la baja.
+  **Es la primera capacidad del linaje en JUACO que ningún diseñador puso, con serie + réplica preregistradas.**
+- **Vocabulario:**
+  - Permitido: "la selección natural sube la capacidad de carga del linaje (K)", siempre con la medida.
+  - Para el veneno: "en SEL_C la fracción de muertes por veneno + sal cae de ~82 % a ~2–3.5 % (descriptivo)".
+  - Prohibido: "aprende", "evoluciona" sin la medida, "especie".
+- **ERR-149 (arnés, antes del humo; ni letra ni runner ni núcleo cambiaron):** la primera corrida del arnés dio 57/59. El caso (H) de
+  AZA contaba como "herencia" a los hijos de fundadores, que son clones de G0 y pueden coincidir con una entrada del banco por identidad.
+  Se corrigió el caso para medir sólo hijos de padre no fundador (AZA 3/203 y 0/309; SEL 346/346 y 276/276). El umbral < 5 % no cambió.
+  Salida vieja: `identidad_eco_sel_salida_v1_57de59.txt`. Auditado: legítimo. **El siguiente ERR libre es ERR-150.**
+- **Niveles:** propuesta del coordinador para los niveles 10–13 (ECO): subir por este FUNCIONA ×2. El porcentaje lo fija el director.

@@ -1119,3 +1119,11 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 
 > **DECISIÓN DEL DIRECTOR (28-sep-2026 ~13:30): sin tope de intentos hoy** ("no topes, que siga corriendo"). Las salvaguardas contra pescar siguen:
 > letra del muro sin cambios, semillas nuevas, serie + réplica y conteo de intentos en cada preregistro.
+
+### 28-sep-2026 ~14:20: ★ ECO_SEL = FUNCIONA ×2 en M y en C
+- **Resultado:** la selección natural sobre el linaje de F1 frío (sin vivero y sin fundadores repuestos) sube la capacidad de carga K de
+  ~31 a ~35 con el margen heredable y a ~39 con el cerebro heredable. Gana 20/20 ×4 contra F1; el mismo gen sin herencia la baja.
+- **Descriptivo:** en SEL_C las muertes por veneno + sal caen de ~82 % a ~2–3.5 %.
+- **Auditor:** SE SOSTIENE (reservas de registro y vocabulario).
+- ERR-149 (caso H del arnés). El siguiente es ERR-150.
+- **Primera capacidad del linaje que nadie diseñó, con serie + réplica.**
