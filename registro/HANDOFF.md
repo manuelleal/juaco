@@ -1095,3 +1095,13 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 > el ingrediente que salga de la ablación de `boca_buena` (experimentos/organelos/boca_buena/). Si cruza → FUNCIONA y candidato a v14.4.
 > Si da NO → el muro se declara MAPEADO (la pista se cruza con las decisiones de boca diseñadas de O1; las reglas genéricas llegan a ~0.73)
 > y se vuelve al frente ECO. No se abren más variantes genéricas del muro después de ese intento.
+
+### 28-sep-2026 (nube, rama `nube/termo-evo-20260928`): TERMO_EVO = NO
+El margen del termostato de boca como gen heredable (fundador en la zona letal, σ 0.03) **sube con herencia y no sin ella**:
+- padres 0.066 → 0.092 en 100k; 0.075 → 0.121 en 300k (descriptiva);
+- EVO le gana a SINHER 18/20 en la serie y 10/10 en la larga.
+
+**Pero no cruza** (P1 2/20; P3 7/20; R0 0.309 contra v143 0.611). Cada refundación de la ENMIENDA 5 vuelve a sortear g en la zona letal.
+Post-hoc: una vez establecido, casi cualquier g > 0 vive (hasta SINHER establecido da R0 0.82).
+
+Propuesta: medir la misma pregunta en JUACO-ECO, sin refundador. Réplica no corrida (regla de parada). Detalle: `experimentos/organelos/termo_evo/INFORME.md`.
