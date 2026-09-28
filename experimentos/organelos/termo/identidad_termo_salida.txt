@@ -1,0 +1,44 @@
+  V143_TERMO sha 3db639cab75641fb == disco: True
+  V143_TERMOINV sha da106a995b18bafd == disco: True
+origen V143.py sha 2a03048a7f1525e5 (fijado 2a03048a7f1525e5) · construye_termo.py sha 23f57933c51c64e8
+  OK    (K) construye_termo --verifica (carros == anclas desde V143.py 2a03048a7f1525e5; solo perillas/nombre)
+  OK    (a) V143_TERMO con TERMO = 0 == V143, salida ENTERA (N 9, s 39913, T 2000, fundador limpio)
+  OK    (a) V143_TERMOINV con TERMO = 0 == V143, salida ENTERA (N 9, s 39913, T 2000, fundador limpio)
+  OK    (a) V143_TERMO con TERMO = 0 == V143, salida ENTERA (N 9, s 39914, T 5000, fundador limpio)
+  OK    (a) V143_TERMOINV con TERMO = 0 == V143, salida ENTERA (N 9, s 39914, T 5000, fundador limpio)
+  OK    (b0) HIBB del diagnostico sha 3ca86aed6c409a11 == 3ca86aed6c409a11
+  OK    (b) V143_TERMO == HIBB m40 en la FISICA (todo salvo d['carro']; s 39913, T 5000)
+  OK    (b) V143_TERMO == HIBB m40 en la FISICA (todo salvo d['carro']; s 39914, T 20000)
+  OK    (c) V143_TERMOINV == HIBB tinv40 en la FISICA (s 39913, T 5000)
+  OK    (c) V143_TERMOINV != V143_TERMO en la fisica (s 39913, T 5000)
+       telemetria termo {'dec': 489, 'a_no': 194, 'a_si': 40, 'mord': 253} · termoinv {'dec': 218, 'a_no': 55, 'a_si': 33, 'mord': 148}
+  OK    (c) la pieza ACTUA en TERMO y en TERMOINV (V4: a_no + a_si > 0)
+  OK    (c) determinismo: V143_TERMO dos corridas iguales (s 39913, T 5000)
+  OK    (d) corre_termo.verifica(): shas fijados + carros == construye + revisa_carro + identidad corta
+       sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+       sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+       sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+       sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+       sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+       sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+       sha experimentos\organelos\termo\construye_termo.py 23f57933c51c64e8 OK
+       sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+       sha experimentos\organelos\termo\carros\V143_TERMOINV.py da106a995b18bafd OK
+       carro V143_TERMO sha 3db639cab75641fb == construye: True · revisa_carro: PASA
+       carro V143_TERMOINV sha da106a995b18bafd == construye: True · revisa_carro: PASA
+       IDENTIDAD CORTA: V143_TERMO con TERMO = 0 == V143 (salida ENTERA, N 9, s 39913, T 2000, fundador limpio): OK
+       IDENTIDAD CORTA: V143_TERMOINV con TERMO = 0 == V143 (salida ENTERA, N 9, s 39913, T 2000, fundador limpio): OK
+  OK    (d) valida: serie 39101-39120 con los 4 brazos y T 100000 -> OK
+  OK    (d) valida: replica 39121-39140 -> OK
+  OK    (d) valida: rechaza semillas del exploratorio 39001
+  OK    (d) valida: rechaza serie mezclada 39111-39130
+  OK    (d) valida: rechaza T 50000 en serie
+  OK    (d) valida: rechaza brazos distintos
+  OK    (d) valida: humo solo 39911-39914 y T <= 30000
+usage: identidad_termo.py (--humo | --serie | --bloque BLOQUE)
+                          [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                          [--pool POOL] [--reanuda]
+identidad_termo.py: error: unrecognized arguments: --desd 39911
+  OK    (d) ERR-115: bandera abreviada --desd (de --desde) aborta antes de correr nada
+  OK    (d) la letra en 10 casos sinteticos (10/10) · bloque(FUNCIONA, MODESTO) = HAY ALGO MODESTO
+ARNES PASA · 143s
