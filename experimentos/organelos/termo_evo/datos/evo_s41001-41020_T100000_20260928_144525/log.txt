@@ -1,0 +1,254 @@
+CORRE_EVO · evo_s41001-41020_T100000 · 20260928_144525 · python 3.13.12 · pool 3 · corre_evo.py 7d8e660a1b0e1a71 · preregistro PREREGISTRO_termo_evo.md · carpeta /home/user/juaco/experimentos/organelos/termo_evo/datos/evo_s41001-41020_T100000_20260928_144525
+  tareas 120 · brazos ['v143', 'evo', 'sinher', 'ancho', 'm40', 'o1'] · semillas 41001-41020 · T 100000 · fundador limpio 1 · reanuda False
+  sha experimentos/tronco_v14_3/corre_v143.py 24100621c450da22 OK
+  sha experimentos/tronco_v14_3/carros_v143/V143.py 2a03048a7f1525e5 OK
+  sha experimentos/carrera_escuderias/pista.py 9f47c65e438e0ff4 OK
+  sha experimentos/carrera_escuderias/juez.py 6a68f640a7832f12 OK
+  sha experimentos/carrera_escuderias/carros/O1.py 99436afa2715f028 OK
+  sha experimentos/carrera_escuderias/revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos/organelos/termo_evo/construye_evo.py 6cdd7dd10e9a0594 OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_BAJO.py 3187b373654e119f OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_ANCHO.py 1ff17bf4c6e32382 OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_SINHER.py a11989a3b04d13d6 OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_M40.py 713cd55ed465cc82 OK
+  carro V143_EVO_BAJO sha 3187b373654e119f == construye: True · revisa_carro: PASA
+  carro V143_EVO_ANCHO sha 1ff17bf4c6e32382 == construye: True · revisa_carro: PASA
+  carro V143_EVO_SINHER sha a11989a3b04d13d6 == construye: True · revisa_carro: PASA
+  carro V143_EVO_M40 sha 713cd55ed465cc82 == construye: True · revisa_carro: PASA
+  IDENTIDAD CORTA: V143_EVO_BAJO con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_EVO_ANCHO con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_EVO_SINHER con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_EVO_M40 con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  [  176.6s] evo s41001 (158.5s) R0 pista 0.3807 aborto None · R0 real por linaje [0.0635, 0.875, 0.2464, 0.5357, 0.0278, 0.9375, 0.0569, 0.8667, 0.045] · fundadores [117, 1, 51, 12, 104, 0, 115, 1, 105] · g padres ultima ventana {'n': 35, 'media': 0.0781}
+  [  178.3s] sinher s41001 (160.2s) R0 pista 0.192 aborto None · R0 real por linaje [0.25, 0.3103, 0.013, 0.027, 0.625, 0.1818, 0.125, 0.1719, 0.1429] · fundadores [26, 19, 75, 107, 8, 26, 62, 52, 23] · g padres ultima ventana {'n': 13, 'media': 0.0623}
+  [  180.4s] v143 s41001 (162.3s) R0 pista 0.28 aborto None · R0 real por linaje [0.1412, 0.9714, 0.9643, 0.0008, 0.8276, 0.9706, 0.9655, 0.9231, 0.4059] · fundadores [218, 0, 0, 1179, 4, 0, 0, 1, 59]
+  [  339.1s] ancho s41001 (162.5s) R0 pista 0.3542 aborto None · R0 real por linaje [0.9697, 0.6923, 0.575, 0.5741, 0.0049, 0.9688, 0.9706, 0.697, 0.2184] · fundadores [0, 11, 16, 22, 804, 0, 0, 9, 135] · g padres ultima ventana {'n': 30, 'media': 0.3351}
+  [  341.8s] m40 s41001 (163.5s) R0 pista 0.3871 aborto None · R0 real por linaje [0.7273, 0.0111, 0.9143, 0.7949, 0.5783, 0.9722, 0.2103, 0.9412, 0.8065] · fundadores [8, 891, 2, 7, 34, 0, 168, 0, 5] · g padres ultima ventana {'n': 45, 'media': 0.4}
+  [  478.9s] o1 s41001 (298.5s) R0 pista 0.7819 aborto None · R0 real por linaje [0.9545, 0.9286, 0.3636, 0.9524, 0.9474, 0.9286, 0.0056, 0.4242, 0.9474] · fundadores [0, 0, 27, 0, 0, 0, 352, 18, 0]
+  [  505.1s] v143 s41002 (165.9s) R0 pista 0.2649 aborto None · R0 real por linaje [0.2736, 0.0611, 0.5254, 0.6739, 0.0088, 0.9655, 0.9412, 0.4921, 0.9714] · fundadores [76, 414, 27, 14, 1011, 0, 1, 31, 0]
+  [  506.0s] evo s41002 (164.1s) R0 pista 0.4739 aborto None · R0 real por linaje [0.9524, 0.4231, 0.9, 0.7241, 0.5556, 0.1875, 0.0, 0.0104, 0.2899] · fundadores [0, 14, 1, 7, 15, 38, 75, 285, 48] · g padres ultima ventana {'n': 47, 'media': 0.1014}
+  [  635.3s] sinher s41002 (156.3s) R0 pista 0.2373 aborto None · R0 real por linaje [0.0779, 0.5455, 0.0606, 0.3333, 0.2941, 0.1667, 0.0318, 0.275, 0.9333] · fundadores [70, 9, 92, 29, 23, 34, 151, 28, 0] · g padres ultima ventana {'n': 10, 'media': 0.0198}
+  [  663.5s] m40 s41002 (157.5s) R0 pista 0.4167 aborto None · R0 real por linaje [0.9697, 0.9706, 0.2269, 0.8684, 0.9688, 0.9655, 0.0191, 0.973, 0.9722] · fundadores [0, 0, 91, 4, 0, 0, 872, 0, 0] · g padres ultima ventana {'n': 51, 'media': 0.4}
+  [  664.6s] ancho s41002 (159.5s) R0 pista 0.329 aborto None · R0 real por linaje [0.9615, 0.9545, 0.1887, 0.3415, 0.9643, 0.2326, 0.0397, 0.0303, 0.9643] · fundadores [0, 0, 85, 26, 0, 98, 483, 639, 0] · g padres ultima ventana {'n': 62, 'media': 0.4274}
+  [  814.5s] evo s41003 (149.9s) R0 pista 0.4046 aborto None · R0 real por linaje [0.0421, 0.3667, 0.0556, 0.0364, 0.2553, 0.1273, 0.9565, 0.7308, 0.9231] · fundadores [181, 18, 67, 105, 34, 47, 0, 6, 0] · g padres ultima ventana {'n': 29, 'media': 0.1014}
+  [  821.3s] v143 s41003 (157.7s) R0 pista 0.2513 aborto None · R0 real por linaje [0.9565, 0.0105, 0.0036, 0.9697, 0.4746, 0.8966, 0.4884, 0.6071, 0.9583] · fundadores [0, 849, 1094, 0, 30, 2, 21, 10, 0]
+  [  912.0s] o1 s41002 (276.8s) R0 pista 0.6245 aborto None · R0 real por linaje [0.95, 0.0358, 0.9231, 0.4839, 0.8889, 0.0191, 0.9231, 0.9, 0.9286] · fundadores [0, 295, 0, 15, 0, 358, 0, 0, 0]
+  [  965.6s] sinher s41003 (151.1s) R0 pista 0.2755 aborto None · R0 real por linaje [0.25, 0.6667, 0.1188, 0.114, 0.2308, 0.0519, 0.9, 0.0984, 0.3514] · fundadores [20, 5, 88, 100, 19, 127, 0, 54, 23] · g padres ultima ventana {'n': 5, 'media': 0.0328}
+  [  977.8s] ancho s41003 (156.5s) R0 pista 0.342 aborto None · R0 real por linaje [0.2185, 0.9231, 0.0913, 0.9143, 0.0197, 0.9375, 0.9722, 0.875, 0.9677] · fundadores [92, 1, 208, 2, 896, 1, 0, 3, 0] · g padres ultima ventana {'n': 46, 'media': 0.4344}
+  [ 1072.1s] m40 s41003 (160.0s) R0 pista 0.4016 aborto None · R0 real por linaje [0.6667, 0.0559, 0.9706, 0.7797, 0.9231, 0.9655, 0.5373, 0.0358, 0.9744] · fundadores [17, 303, 0, 12, 2, 0, 30, 618, 0] · g padres ultima ventana {'n': 43, 'media': 0.4}
+  [ 1148.2s] v143 s41004 (170.4s) R0 pista 0.2674 aborto None · R0 real por linaje [0.55, 0.1908, 0.0303, 0.9615, 0.4615, 0.963, 0.013, 0.96, 0.9697] · fundadores [17, 122, 638, 0, 27, 0, 984, 0, 0]
+  [ 1238.3s] evo s41004 (166.2s) R0 pista 0.4686 aborto None · R0 real por linaje [0.0676, 0.9444, 0.9667, 0.8182, 0.1429, 0.2051, 0.1875, 0.7, 0.3404] · fundadores [137, 0, 0, 1, 65, 61, 51, 5, 30] · g padres ultima ventana {'n': 29, 'media': 0.1215}
+  [ 1261.1s] o1 s41003 (295.5s) R0 pista 0.801 aborto None · R0 real por linaje [0.9333, 0.9375, 0.9333, 0.9333, 0.9474, 0.0022, 0.9231, 0.3438, 0.9375] · fundadores [0, 0, 0, 0, 0, 460, 0, 20, 0]
+  [ 1308.9s] sinher s41004 (160.6s) R0 pista 0.2879 aborto None · R0 real por linaje [0.1951, 0.0172, 0.3261, 0.2308, 0.1458, 0.25, 0.4, 0.051, 0.303] · fundadores [65, 113, 30, 29, 40, 23, 11, 92, 22] · g padres ultima ventana {'n': 21, 'media': 0.0594}
+  [ 1394.2s] ancho s41004 (155.9s) R0 pista 0.3739 aborto None · R0 real por linaje [0.9756, 0.8095, 0.973, 0.8947, 0.1859, 0.274, 0.3718, 0.0287, 0.9355] · fundadores [0, 7, 0, 3, 126, 105, 48, 675, 1] · g padres ultima ventana {'n': 53, 'media': 0.3856}
+  [ 1416.7s] m40 s41004 (155.5s) R0 pista 0.3973 aborto None · R0 real por linaje [0.4074, 0.1957, 0.7436, 0.9697, 0.012, 0.9565, 0.9714, 0.7609, 0.9697] · fundadores [47, 110, 9, 0, 904, 0, 0, 10, 0] · g padres ultima ventana {'n': 52, 'media': 0.4}
+  [ 1557.5s] v143 s41005 (163.3s) R0 pista 0.2543 aborto None · R0 real por linaje [0.825, 0.033, 0.9737, 0.0196, 0.2619, 0.1852, 0.8571, 0.9667, 0.963] · fundadores [6, 672, 0, 851, 92, 87, 3, 0, 0]
+  [ 1577.7s] evo s41005 (161.0s) R0 pista 0.4147 aborto None · R0 real por linaje [0.2192, 0.2, 0.9655, 0.007, 0.9412, 0.9286, 0.7778, 0.9545, 0.963] · fundadores [56, 71, 0, 427, 0, 0, 3, 0, 0] · g padres ultima ventana {'n': 32, 'media': 0.0982}
+  [ 1600.6s] o1 s41004 (291.7s) R0 pista 2.0556 aborto None · R0 real por linaje [0.9444, 0.9545, 0.9565, 0.9444, 0.95, 0.9524, 0.9545, 0.9643, 0.9615] · fundadores [0, 0, 0, 0, 0, 0, 0, 0, 0]
+  [ 1718.4s] sinher s41005 (160.8s) R0 pista 0.2371 aborto None · R0 real por linaje [0.033, 0.125, 0.2449, 0.0435, 0.6111, 0.4667, 0.0565, 0.1408, 0.9333] · fundadores [87, 48, 36, 43, 6, 7, 116, 60, 0] · g padres ultima ventana {'n': 11, 'media': 0.0653}
+  [ 1737.9s] ancho s41005 (160.1s) R0 pista 0.3326 aborto None · R0 real por linaje [0.9615, 0.6857, 0.9706, 0.038, 0.0885, 0.065, 0.9677, 0.9655, 0.9565] · fundadores [0, 10, 0, 505, 236, 402, 0, 0, 0] · g padres ultima ventana {'n': 40, 'media': 0.4612}
+  [ 1759.7s] m40 s41005 (159.2s) R0 pista 0.3915 aborto None · R0 real por linaje [0.4444, 0.227, 0.9706, 0.0464, 0.975, 0.96, 0.1098, 0.9706, 0.9762] · fundadores [39, 125, 0, 595, 0, 0, 226, 0, 0] · g padres ultima ventana {'n': 46, 'media': 0.4}
+  [ 1898.4s] v143 s41006 (160.5s) R0 pista 0.2659 aborto None · R0 real por linaje [0.9474, 0.9118, 0.122, 0.01, 0.2991, 0.9714, 0.4235, 0.8571, 0.8679] · fundadores [1, 2, 251, 1086, 74, 0, 48, 5, 6]
+  [ 1918.3s] evo s41006 (158.6s) R0 pista 0.399 aborto None · R0 real por linaje [0.0569, 0.9167, 0.4222, 0.5517, 0.0833, 0.2778, 0.9474, 0.3529, 0.0896] · fundadores [115, 0, 25, 12, 153, 12, 0, 32, 121] · g padres ultima ventana {'n': 26, 'media': 0.0727}
+  [ 2007.1s] o1 s41005 (288.7s) R0 pista 1.24 aborto None · R0 real por linaje [0.3134, 0.9565, 0.96, 0.96, 0.96, 0.9524, 0.963, 0.9677, 0.9677] · fundadores [45, 0, 0, 0, 0, 0, 0, 0, 0]
+  [ 2053.8s] sinher s41006 (155.4s) R0 pista 0.2464 aborto None · R0 real por linaje [0.1772, 0.9286, 0.25, 0.0568, 0.1299, 0.0842, 0.7368, 0.1833, 0.4375] · fundadores [64, 0, 17, 165, 66, 86, 4, 48, 8] · g padres ultima ventana {'n': 10, 'media': 0.0431}
+  [ 2077.2s] ancho s41006 (158.8s) R0 pista 0.4325 aborto None · R0 real por linaje [0.9474, 0.9643, 0.2716, 0.9697, 0.0124, 0.963, 0.9375, 0.7778, 0.9583] · fundadores [0, 0, 58, 0, 796, 0, 2, 7, 0] · g padres ultima ventana {'n': 41, 'media': 0.3598}
+  [ 2163.2s] m40 s41006 (156.1s) R0 pista 0.4035 aborto None · R0 real por linaje [0.5957, 0.9667, 0.9091, 0.0101, 0.8936, 0.9744, 0.5357, 0.9167, 0.9783] · fundadores [18, 0, 2, 981, 4, 0, 25, 2, 0] · g padres ultima ventana {'n': 55, 'media': 0.4}
+  [ 2235.1s] v143 s41007 (157.9s) R0 pista 0.2539 aborto None · R0 real por linaje [0.9655, 0.8571, 0.6111, 0.0279, 0.7273, 0.9583, 0.9615, 0.0043, 0.1369] · fundadores [0, 2, 6, 660, 8, 0, 0, 1149, 144]
+  [ 2315.4s] evo s41007 (152.2s) R0 pista 0.467 aborto None · R0 real por linaje [0.9412, 0.1275, 0.0239, 0.8125, 0.9474, 0.8148, 0.9565, 0.2708, 0.2376] · fundadores [0, 129, 244, 2, 0, 4, 0, 34, 76] · g padres ultima ventana {'n': 14, 'media': 0.111}
+  [ 2335.0s] o1 s41006 (281.2s) R0 pista 1.6234 aborto None · R0 real por linaje [0.383, 0.9474, 0.9412, 0.9545, 0.96, 0.5192, 0.9474, 0.9231, 0.9412] · fundadores [28, 0, 0, 0, 0, 24, 0, 0, 0]
+  [ 2386.4s] sinher s41007 (151.3s) R0 pista 0.3162 aborto None · R0 real por linaje [0.7222, 0.0909, 0.0387, 0.8235, 0.8889, 0.1163, 0.1341, 0.0, 0.6087] · fundadores [4, 39, 173, 2, 0, 37, 70, 50, 8] · g padres ultima ventana {'n': 8, 'media': 0.0664}
+  [ 2471.4s] ancho s41007 (156.0s) R0 pista 0.3589 aborto None · R0 real por linaje [0.92, 0.217, 0.2548, 0.8125, 0.9762, 0.0333, 0.963, 0.092, 0.4688] · fundadores [1, 82, 116, 5, 0, 580, 0, 226, 33] · g padres ultima ventana {'n': 46, 'media': 0.4397}
+  [ 2490.9s] m40 s41007 (155.9s) R0 pista 0.3809 aborto None · R0 real por linaje [0.9737, 0.9667, 0.6066, 0.0057, 0.9787, 0.931, 0.5814, 0.9714, 0.9688] · fundadores [0, 0, 23, 1038, 0, 1, 17, 0, 0] · g padres ultima ventana {'n': 40, 'media': 0.4}
+  [ 2627.0s] v143 s41008 (155.6s) R0 pista 0.2511 aborto None · R0 real por linaje [0.5094, 0.9722, 0.0865, 0.4328, 0.7222, 0.0511, 0.3231, 0.9565, 0.0185] · fundadores [25, 0, 284, 37, 9, 482, 43, 0, 900]
+  [ 2642.7s] evo s41008 (151.8s) R0 pista 0.4288 aborto None · R0 real por linaje [0.8, 0.2923, 0.8125, 0.0435, 0.1892, 0.0162, 0.9444, 0.3065, 0.9333] · fundadores [3, 45, 2, 131, 29, 242, 0, 42, 0] · g padres ultima ventana {'n': 31, 'media': 0.0826}
+  [ 2669.9s] o1 s41007 (283.5s) R0 pista 1.4962 aborto None · R0 real por linaje [0.96, 0.9286, 0.9333, 0.6571, 0.2292, 0.96, 0.9231, 0.9524, 0.9545] · fundadores [0, 0, 0, 11, 73, 0, 0, 0, 0]
+  [ 2774.3s] sinher s41008 (147.3s) R0 pista 0.2218 aborto None · R0 real por linaje [0.0909, 0.1837, 0.7273, 0.0, 0.0, 0.1461, 0.9375, 0.0388, 0.1591] · fundadores [49, 39, 2, 41, 69, 75, 0, 123, 36] · g padres ultima ventana {'n': 7, 'media': 0.0315}
+  [ 2792.8s] ancho s41008 (150.1s) R0 pista 0.3573 aborto None · R0 real por linaje [0.3364, 0.9744, 0.9615, 0.0833, 0.9688, 0.9722, 0.9375, 0.007, 0.9677] · fundadores [72, 0, 0, 340, 0, 0, 1, 704, 0] · g padres ultima ventana {'n': 62, 'media': 0.4266}
+  [ 2819.3s] m40 s41008 (149.4s) R0 pista 0.3824 aborto None · R0 real por linaje [0.9062, 0.9722, 0.0287, 0.96, 0.4286, 0.1058, 0.8889, 0.9762, 0.9706] · fundadores [2, 0, 676, 0, 27, 320, 3, 0, 0] · g padres ultima ventana {'n': 47, 'media': 0.4}
+  [ 2942.4s] v143 s41009 (149.6s) R0 pista 0.2642 aborto None · R0 real por linaje [0.931, 0.2976, 0.3659, 0.9394, 0.0174, 0.9667, 0.5161, 0.9286, 0.0237] · fundadores [1, 58, 51, 1, 790, 0, 29, 1, 658]
+  [ 2966.3s] evo s41009 (147.0s) R0 pista 0.3812 aborto None · R0 real por linaje [0.0278, 0.6538, 0.122, 0.0625, 0.2162, 0.1923, 0.4375, 0.9286, 0.2727] · fundadores [139, 8, 71, 59, 28, 20, 17, 0, 39] · g padres ultima ventana {'n': 20, 'media': 0.0774}
+  [ 3044.1s] o1 s41008 (269.9s) R0 pista 1.0288 aborto None · R0 real por linaje [0.9375, 0.95, 0.9375, 0.9375, 0.9565, 0.96, 0.0356, 0.9474, 0.9545] · fundadores [0, 0, 0, 0, 0, 0, 216, 0, 0]
+  [ 3089.7s] sinher s41009 (147.3s) R0 pista 0.3002 aborto None · R0 real por linaje [0.2941, 0.2821, 0.0901, 0.25, 0.0345, 0.0198, 0.5714, 0.9444, 0.8667] · fundadores [35, 27, 100, 38, 139, 98, 8, 0, 1] · g padres ultima ventana {'n': 11, 'media': 0.075}
+  [ 3118.2s] ancho s41009 (151.8s) R0 pista 0.3068 aborto None · R0 real por linaje [0.717, 0.8824, 0.1007, 0.9583, 0.9474, 0.6341, 0.1594, 0.9615, 0.0076] · fundadores [14, 3, 258, 0, 1, 14, 173, 0, 778] · g padres ultima ventana {'n': 46, 'media': 0.4183}
+  [ 3195.9s] m40 s41009 (151.7s) R0 pista 0.4068 aborto None · R0 real por linaje [0.9355, 0.8298, 0.9667, 0.9667, 0.014, 0.975, 0.9744, 0.4634, 0.8049] · fundadores [1, 7, 0, 0, 917, 0, 0, 43, 7] · g padres ultima ventana {'n': 52, 'media': 0.4}
+  [ 3271.7s] v143 s41010 (153.5s) R0 pista 0.2802 aborto None · R0 real por linaje [0.6596, 0.0225, 0.975, 0.7955, 0.9667, 0.9643, 0.0299, 0.5185, 0.8085] · fundadores [15, 824, 0, 8, 0, 0, 616, 25, 8]
+  [ 3344.5s] evo s41010 (148.6s) R0 pista 0.3987 aborto None · R0 real por linaje [0.28, 0.7826, 0.3108, 0.1628, 0.0102, 0.0171, 0.92, 0.3673, 0.5833] · fundadores [35, 4, 50, 71, 193, 114, 1, 30, 4] · g padres ultima ventana {'n': 17, 'media': 0.1051}
+  [ 3366.5s] o1 s41009 (276.8s) R0 pista 0.8448 aborto None · R0 real por linaje [0.9231, 0.9412, 0.1293, 0.9286, 0.9231, 0.0138, 0.7143, 0.875, 0.9375] · fundadores [0, 0, 100, 0, 0, 356, 5, 0, 0]
+  [ 3418.7s] sinher s41010 (147.0s) R0 pista 0.2775 aborto None · R0 real por linaje [0.3019, 0.7826, 0.2069, 0.0588, 0.6111, 0.0725, 0.65, 0.0654, 0.1047] · fundadores [36, 4, 22, 63, 6, 63, 6, 142, 76] · g padres ultima ventana {'n': 11, 'media': 0.0634}
+  [ 3492.5s] ancho s41010 (148.0s) R0 pista 0.3077 aborto None · R0 real por linaje [0.9375, 0.0824, 0.3714, 0.9362, 0.0572, 0.96, 0.7742, 0.9615, 0.0518] · fundadores [1, 344, 43, 2, 378, 0, 6, 0, 475] · g padres ultima ventana {'n': 48, 'media': 0.4501}
+  [ 3514.9s] m40 s41010 (148.3s) R0 pista 0.3895 aborto None · R0 real por linaje [0.023, 0.0985, 0.3028, 0.9677, 0.9667, 0.9688, 0.7727, 0.9583, 0.9744] · fundadores [807, 292, 75, 0, 0, 0, 9, 0, 0] · g padres ultima ventana {'n': 48, 'media': 0.4}
+  [ 3647.5s] v143 s41011 (155.0s) R0 pista 0.2707 aborto None · R0 real por linaje [0.3284, 0.0532, 0.9643, 0.7778, 0.9565, 0.0092, 0.68, 0.1329, 0.7143] · fundadores [44, 444, 0, 7, 0, 1076, 7, 136, 13]
+  [ 3665.6s] evo s41011 (150.7s) R0 pista 0.3071 aborto None · R0 real por linaje [0.3704, 0.2979, 0.4474, 0.1948, 0.08, 0.0395, 0.6, 0.027, 0.3043] · fundadores [16, 32, 20, 61, 91, 242, 13, 71, 15] · g padres ultima ventana {'n': 20, 'media': 0.0802}
+  [ 3691.4s] o1 s41010 (272.7s) R0 pista 1.0098 aborto None · R0 real por linaje [0.9615, 0.9286, 0.9474, 0.9412, 0.9545, 0.9375, 0.0386, 0.9231, 0.9524] · fundadores [0, 0, 0, 0, 0, 0, 248, 0, 0]
+  [ 3796.8s] sinher s41011 (149.3s) R0 pista 0.2735 aborto None · R0 real por linaje [0.0435, 0.1111, 0.0227, 0.0543, 0.4688, 0.1875, 0.2973, 0.6, 0.0] · fundadores [87, 39, 85, 86, 16, 25, 25, 7, 40] · g padres ultima ventana {'n': 19, 'media': 0.0576}
+  [ 3816.6s] ancho s41011 (150.9s) R0 pista 0.3723 aborto None · R0 real por linaje [0.4407, 0.9722, 0.0185, 0.0647, 0.9677, 0.9667, 0.7647, 0.6757, 0.7037] · fundadores [32, 0, 584, 317, 0, 0, 7, 11, 7] · g padres ultima ventana {'n': 42, 'media': 0.3816}
+  [ 3841.5s] m40 s41011 (150.1s) R0 pista 0.4065 aborto None · R0 real por linaje [0.0627, 0.98, 0.2391, 0.973, 0.8684, 0.9688, 0.9667, 0.0548, 0.8718] · fundadores [477, 0, 139, 0, 4, 0, 0, 327, 4] · g padres ultima ventana {'n': 58, 'media': 0.4}
+  [ 3971.0s] v143 s41012 (154.5s) R0 pista 0.2657 aborto None · R0 real por linaje [0.4146, 0.0305, 0.7027, 0.9583, 0.1975, 0.8214, 0.0164, 0.451, 0.6486] · fundadores [23, 698, 10, 0, 129, 4, 778, 27, 12]
+  [ 3993.4s] evo s41012 (151.8s) R0 pista 0.4091 aborto None · R0 real por linaje [0.0027, 0.7353, 0.8261, 0.697, 0.6667, 0.3929, 0.1019, 0.9231, 0.3108] · fundadores [362, 8, 3, 9, 8, 16, 96, 0, 50] · g padres ultima ventana {'n': 37, 'media': 0.1196}
+  [ 4077.4s] o1 s41011 (280.6s) R0 pista 0.6867 aborto None · R0 real por linaje [0.9444, 0.0963, 0.9286, 0.9412, 0.9412, 0.9091, 0.9231, 0.9333, 0.0141] · fundadores [0, 121, 0, 0, 0, 0, 0, 0, 420]
+  [ 4126.2s] sinher s41012 (155.1s) R0 pista 0.2222 aborto None · R0 real por linaje [0.4615, 0.9, 0.0853, 0.1406, 0.2683, 0.1604, 0.3077, 0.4583, 0.1321] · fundadores [13, 0, 117, 54, 29, 88, 35, 12, 91] · g padres ultima ventana {'n': 9, 'media': 0.0654}
+  [ 4150.6s] ancho s41012 (157.3s) R0 pista 0.3133 aborto None · R0 real por linaje [0.4342, 0.1949, 0.9111, 0.0242, 0.75, 0.0407, 0.7568, 0.973, 0.9697] · fundadores [42, 94, 3, 604, 8, 471, 8, 0, 0] · g padres ultima ventana {'n': 46, 'media': 0.4454}
+  [ 4232.3s] m40 s41012 (154.8s) R0 pista 0.3998 aborto None · R0 real por linaje [0.8947, 0.8889, 0.0515, 0.963, 0.7442, 0.0541, 0.2283, 0.9756, 0.8095] · fundadores [3, 2, 533, 0, 10, 401, 97, 0, 7] · g padres ultima ventana {'n': 49, 'media': 0.4}
+  [ 4309.7s] v143 s41013 (159.1s) R0 pista 0.2602 aborto None · R0 real por linaje [0.0276, 0.7667, 0.8077, 0.6875, 0.4737, 0.5769, 0.2185, 0.9545, 0.0057] · fundadores [599, 6, 4, 9, 19, 21, 117, 0, 1043]
+  [ 4389.6s] evo s41013 (157.3s) R0 pista 0.3414 aborto None · R0 real por linaje [0.2973, 0.0531, 0.95, 0.5833, 0.9286, 0.0551, 0.0545, 0.1895, 0.175] · fundadores [25, 106, 0, 9, 0, 119, 103, 76, 32] · g padres ultima ventana {'n': 28, 'media': 0.0865}
+  [ 4412.6s] o1 s41012 (286.4s) R0 pista 1.0069 aborto None · R0 real por linaje [0.9333, 0.9524, 0.0185, 0.9444, 0.96, 0.9643, 0.9545, 0.9333, 0.9545] · fundadores [0, 0, 264, 0, 0, 0, 0, 0, 0]
+  [ 4465.6s] sinher s41013 (155.9s) R0 pista 0.3125 aborto None · R0 real por linaje [0.1209, 0.2571, 0.1695, 0.75, 0.7895, 0.1848, 0.1193, 0.2826, 0.3077] · fundadores [79, 25, 48, 3, 3, 74, 95, 32, 8] · g padres ultima ventana {'n': 24, 'media': 0.0463}
+  [ 4546.7s] ancho s41013 (157.1s) R0 pista 0.3837 aborto None · R0 real por linaje [0.8889, 0.9697, 0.3246, 0.0255, 0.9545, 0.9412, 0.0537, 0.3333, 0.75] · fundadores [3, 0, 76, 496, 0, 1, 334, 45, 7] · g padres ultima ventana {'n': 48, 'media': 0.3304}
+  [ 4571.8s] m40 s41013 (159.2s) R0 pista 0.3786 aborto None · R0 real por linaje [0.2261, 0.2463, 0.0143, 0.9697, 0.973, 0.9667, 0.9667, 0.9783, 0.9706] · fundadores [88, 100, 898, 0, 0, 0, 0, 0, 0] · g padres ultima ventana {'n': 48, 'media': 0.4}
+  [ 4711.1s] v143 s41014 (164.3s) R0 pista 0.2745 aborto None · R0 real por linaje [0.9615, 0.3173, 0.8537, 0.6102, 0.9667, 0.2547, 0.0938, 0.007, 0.5968] · fundadores [0, 70, 5, 22, 0, 78, 231, 1132, 24]
+  [ 4733.4s] evo s41014 (161.6s) R0 pista 0.389 aborto None · R0 real por linaje [0.0139, 0.6, 0.0546, 0.96, 0.2826, 0.9412, 0.5, 0.9615, 0.8846] · fundadores [212, 13, 224, 0, 32, 0, 11, 0, 2] · g padres ultima ventana {'n': 20, 'media': 0.0869}
+  [ 4758.1s] o1 s41013 (292.5s) R0 pista 0.6778 aborto None · R0 real por linaje [0.9444, 0.1392, 0.0438, 0.9565, 0.9545, 0.4545, 0.9444, 0.9167, 0.3208] · fundadores [0, 135, 239, 0, 0, 23, 0, 0, 35]
+  [ 4870.4s] sinher s41014 (159.3s) R0 pista 0.1964 aborto None · R0 real por linaje [0.0548, 0.0692, 0.0274, 0.9231, 0.0575, 0.9375, 0.4783, 0.1818, 0.1351] · fundadores [68, 120, 70, 0, 81, 0, 11, 53, 63] · g padres ultima ventana {'n': 14, 'media': 0.051}
+  [ 4895.5s] ancho s41014 (162.1s) R0 pista 0.3238 aborto None · R0 real por linaje [0.8947, 0.9688, 0.9655, 0.3796, 0.629, 0.9615, 0.007, 0.159, 0.2611] · fundadores [3, 0, 0, 66, 22, 0, 850, 163, 115] · g padres ultima ventana {'n': 50, 'media': 0.4187}
+  [ 4919.6s] m40 s41014 (161.4s) R0 pista 0.3461 aborto None · R0 real por linaje [0.2897, 0.8857, 0.9512, 0.963, 0.0409, 0.0723, 0.9722, 0.2227, 0.9333] · fundadores [75, 3, 1, 0, 444, 448, 0, 170, 2] · g padres ultima ventana {'n': 59, 'media': 0.4}
+  [ 5058.9s] v143 s41015 (163.4s) R0 pista 0.2677 aborto None · R0 real por linaje [0.2623, 0.1153, 0.0101, 0.9804, 0.973, 0.8113, 0.8056, 0.75, 0.3023] · fundadores [89, 283, 984, 0, 0, 9, 6, 9, 59]
+  [ 5077.9s] evo s41015 (158.3s) R0 pista 0.3871 aborto None · R0 real por linaje [0.8, 0.14, 0.1538, 0.1031, 0.0308, 0.25, 0.8889, 0.0667, 0.2286] · fundadores [3, 42, 21, 86, 125, 17, 0, 97, 26] · g padres ultima ventana {'n': 20, 'media': 0.0623}
+  [ 5159.1s] o1 s41014 (288.7s) R0 pista 0.6915 aborto None · R0 real por linaje [0.9583, 0.0118, 0.9444, 0.95, 0.9412, 0.9474, 0.95, 0.1386, 0.9444] · fundadores [0, 335, 0, 0, 0, 0, 0, 86, 0]
+  [ 5210.3s] sinher s41015 (151.4s) R0 pista 0.1397 aborto None · R0 real por linaje [0.6111, 0.0, 0.0602, 0.0526, 0.0222, 0.0, 0.8, 0.0606, 0.1129] · fundadores [6, 27, 77, 17, 43, 74, 0, 61, 54] · g padres ultima ventana {'n': 6, 'media': 0.0386}
+  [ 5231.5s] ancho s41015 (153.7s) R0 pista 0.3413 aborto None · R0 real por linaje [0.0615, 0.0176, 0.875, 0.4878, 0.9667, 0.7931, 0.9767, 0.4762, 0.4255] · fundadores [457, 670, 3, 20, 0, 5, 0, 32, 26] · g padres ultima ventana {'n': 39, 'media': 0.4023}
+  [ 5311.9s] m40 s41015 (152.8s) R0 pista 0.4176 aborto None · R0 real por linaje [0.8438, 0.975, 0.0122, 0.299, 0.9677, 0.619, 0.9643, 0.9429, 0.9744] · fundadores [4, 0, 972, 67, 0, 15, 0, 1, 0] · g padres ultima ventana {'n': 52, 'media': 0.4}
+  [ 5389.4s] v143 s41016 (157.8s) R0 pista 0.2659 aborto None · R0 real por linaje [0.973, 0.9792, 0.449, 0.9688, 0.9688, 0.8889, 0.0051, 0.1564, 0.179] · fundadores [0, 0, 53, 0, 0, 3, 978, 177, 132]
+  [ 5469.2s] evo s41016 (157.3s) R0 pista 0.3886 aborto None · R0 real por linaje [0.073, 0.1277, 0.0074, 0.2632, 0.9286, 0.6667, 0.2667, 0.6071, 0.3396] · fundadores [126, 81, 134, 41, 0, 11, 43, 10, 34] · g padres ultima ventana {'n': 21, 'media': 0.073}
+  [ 5494.5s] o1 s41015 (284.2s) R0 pista 0.9458 aborto None · R0 real por linaje [0.2877, 0.9444, 0.9667, 0.5227, 0.9545, 0.0659, 0.9583, 0.9583, 0.9615] · fundadores [51, 0, 0, 20, 0, 169, 0, 0, 0]
+  [ 5547.0s] sinher s41016 (157.6s) R0 pista 0.2182 aborto None · R0 real por linaje [0.0333, 0.7273, 0.3333, 0.0465, 0.9091, 0.2128, 0.0205, 0.1333, 0.0526] · fundadores [28, 2, 13, 122, 0, 36, 142, 51, 89] · g padres ultima ventana {'n': 7, 'media': 0.0848}
+  [ 5620.7s] ancho s41016 (151.5s) R0 pista 0.4231 aborto None · R0 real por linaje [0.9688, 0.8438, 0.0217, 0.9524, 0.8966, 0.9677, 0.1101, 0.3373, 0.8529] · fundadores [0, 4, 674, 0, 2, 0, 193, 54, 4] · g padres ultima ventana {'n': 46, 'media': 0.3261}
+  [ 5646.0s] m40 s41016 (151.5s) R0 pista 0.3838 aborto None · R0 real por linaje [0.95, 0.6818, 0.0092, 0.7551, 0.9767, 0.973, 0.9667, 0.871, 0.9818] · fundadores [0, 13, 1074, 11, 0, 0, 0, 3, 0] · g padres ultima ventana {'n': 54, 'media': 0.4}
+  [ 5773.1s] v143 s41017 (152.4s) R0 pista 0.2405 aborto None · R0 real por linaje [0.0094, 0.1185, 0.6538, 0.382, 0.9756, 0.2284, 0.7647, 0.975, 0.5614] · fundadores [1056, 252, 17, 54, 0, 124, 11, 0, 24]
+  [ 5794.1s] evo s41017 (148.0s) R0 pista 0.3847 aborto None · R0 real por linaje [0.0, 0.0441, 0.0824, 0.5714, 0.931, 0.2941, 0.9048, 0.2683, 0.2278] · fundadores [168, 129, 77, 14, 1, 23, 1, 29, 60] · g padres ultima ventana {'n': 24, 'media': 0.0827}
+  [ 5819.3s] o1 s41016 (272.3s) R0 pista 0.8599 aborto None · R0 real por linaje [0.9286, 0.0166, 0.95, 0.9286, 0.9412, 0.9474, 0.4643, 0.9565, 0.9444] · fundadores [0, 354, 0, 0, 0, 0, 14, 0, 0]
+  [ 5921.9s] sinher s41017 (148.8s) R0 pista 0.3113 aborto None · R0 real por linaje [0.25, 0.1111, 0.1964, 0.2039, 0.85, 0.6, 0.6122, 0.1313, 0.1068] · fundadores [20, 71, 44, 81, 2, 7, 18, 85, 91] · g padres ultima ventana {'n': 17, 'media': 0.0584}
+  [ 5945.6s] ancho s41017 (151.5s) R0 pista 0.3576 aborto None · R0 real por linaje [0.8214, 0.6923, 0.3093, 0.9355, 0.9677, 0.5088, 0.0069, 0.2688, 0.2151] · fundadores [4, 7, 66, 1, 0, 27, 723, 67, 134] · g padres ultima ventana {'n': 48, 'media': 0.4124}
+  [ 5970.8s] m40 s41017 (151.5s) R0 pista 0.3808 aborto None · R0 real por linaje [0.6579, 0.4321, 0.4928, 0.625, 0.0074, 0.8889, 0.9655, 0.9655, 0.973] · fundadores [12, 45, 34, 14, 1079, 3, 0, 0, 0] · g padres ultima ventana {'n': 66, 'media': 0.4}
+  [ 6096.8s] v143 s41018 (151.3s) R0 pista 0.253 aborto None · R0 real por linaje [0.5106, 0.9737, 0.3415, 0.1435, 0.0252, 0.7273, 0.0124, 0.9444, 0.9167] · fundadores [22, 0, 53, 190, 734, 8, 876, 0, 1]
+  [ 6117.3s] evo s41018 (146.4s) R0 pista 0.4036 aborto None · R0 real por linaje [0.75, 0.4211, 0.0112, 0.0435, 0.6522, 0.5238, 0.112, 0.2632, 0.9615] · fundadores [5, 21, 176, 131, 7, 9, 110, 27, 0] · g padres ultima ventana {'n': 25, 'media': 0.0797}
+  [ 6190.1s] o1 s41017 (268.2s) R0 pista 1.0906 aborto None · R0 real por linaje [0.566, 0.9474, 0.093, 0.9565, 0.9474, 0.95, 0.9545, 0.9655, 0.9643] · fundadores [22, 0, 116, 0, 0, 0, 0, 0, 0]
+  [ 6243.2s] sinher s41018 (146.4s) R0 pista 0.233 aborto None · R0 real por linaje [0.2286, 0.1, 0.1702, 0.7143, 0.2424, 0.04, 0.4444, 0.875, 0.1944] · fundadores [26, 71, 38, 1, 24, 191, 4, 0, 28] · g padres ultima ventana {'n': 13, 'media': 0.0653}
+  [ 6267.1s] ancho s41018 (149.8s) R0 pista 0.3108 aborto None · R0 real por linaje [0.5357, 0.8649, 0.118, 0.0152, 0.9667, 0.0775, 0.9688, 0.9688, 0.9643] · fundadores [25, 4, 141, 778, 0, 344, 0, 0, 0] · g padres ultima ventana {'n': 56, 'media': 0.4372}
+  [ 6338.0s] m40 s41018 (147.8s) R0 pista 0.3786 aborto None · R0 real por linaje [0.6167, 0.9655, 0.9024, 0.7879, 0.3611, 0.9259, 0.3063, 0.9677, 0.0203] · fundadores [22, 0, 3, 6, 45, 1, 76, 0, 915] · g padres ultima ventana {'n': 52, 'media': 0.4}
+  [ 6416.7s] v143 s41019 (149.6s) R0 pista 0.2632 aborto None · R0 real por linaje [0.0192, 0.0098, 0.2051, 0.9677, 0.9091, 0.96, 0.2619, 0.4902, 0.7949] · fundadores [562, 1008, 61, 0, 2, 0, 61, 25, 7]
+  [ 6484.6s] evo s41019 (146.6s) R0 pista 0.5034 aborto None · R0 real por linaje [0.0774, 0.4348, 0.9286, 0.9524, 0.9545, 0.9565, 0.9583, 0.0474, 0.9706] · fundadores [154, 25, 0, 0, 0, 0, 0, 220, 0] · g padres ultima ventana {'n': 29, 'media': 0.108}
+  [ 6513.0s] o1 s41018 (269.8s) R0 pista 0.9264 aborto None · R0 real por linaje [0.6923, 0.1301, 0.0819, 0.9474, 0.9545, 0.9375, 0.9231, 0.3509, 0.9333] · fundadores [7, 106, 156, 0, 0, 0, 0, 36, 0]
+  [ 6565.7s] sinher s41019 (149.0s) R0 pista 0.2637 aborto None · R0 real por linaje [0.1864, 0.1316, 0.2778, 0.0595, 0.2, 0.14, 0.875, 0.1667, 0.9] · fundadores [47, 65, 25, 78, 39, 85, 0, 89, 0] · g padres ultima ventana {'n': 15, 'media': 0.0542}
+  [ 6636.2s] ancho s41019 (151.5s) R0 pista 0.2969 aborto None · R0 real por linaje [0.1875, 0.0084, 0.7174, 0.75, 0.9714, 0.5614, 0.9756, 0.3068, 0.9783] · fundadores [168, 948, 12, 11, 0, 24, 0, 60, 0] · g padres ultima ventana {'n': 59, 'media': 0.4845}
+  [ 6662.0s] m40 s41019 (149.0s) R0 pista 0.3887 aborto None · R0 real por linaje [0.9722, 0.9677, 0.0119, 0.6216, 0.8378, 0.9756, 0.9767, 0.9592, 0.2528] · fundadores [0, 0, 915, 13, 5, 0, 0, 1, 132] · g padres ultima ventana {'n': 68, 'media': 0.4}
+  [ 6783.4s] v143 s41020 (147.2s) R0 pista 0.2634 aborto None · R0 real por linaje [0.2552, 0.6596, 0.0679, 0.7381, 0.0105, 0.8919, 0.7, 0.4364, 0.963] · fundadores [107, 15, 438, 10, 937, 3, 14, 30, 0]
+  [ 6806.8s] evo s41020 (144.8s) R0 pista 0.3146 aborto None · R0 real por linaje [0.6087, 0.0821, 0.2344, 0.5882, 0.3333, 0.104, 0.8667, 0.0769, 0.0242] · fundadores [8, 122, 48, 6, 15, 111, 1, 83, 160] · g padres ultima ventana {'n': 43, 'media': 0.0914}
+  [ 6835.4s] o1 s41019 (269.7s) R0 pista 1.54 aborto None · R0 real por linaje [0.9565, 0.2985, 0.95, 0.9565, 0.9615, 0.9524, 0.9524, 0.9583, 0.96] · fundadores [0, 46, 0, 0, 0, 0, 0, 0, 0]
+  [ 6928.3s] sinher s41020 (144.9s) R0 pista 0.2727 aborto None · R0 real por linaje [0.0719, 0.1098, 0.875, 0.9231, 0.0288, 0.193, 0.8, 0.45, 0.0642] · fundadores [128, 72, 1, 0, 100, 45, 1, 10, 101] · g padres ultima ventana {'n': 11, 'media': 0.0455}
+  [ 6954.9s] ancho s41020 (148.0s) R0 pista 0.3173 aborto None · R0 real por linaje [0.9048, 0.8269, 0.74, 0.0265, 0.4706, 0.1542, 0.2061, 0.9459, 0.86] · fundadores [3, 8, 12, 698, 35, 169, 103, 1, 6] · g padres ultima ventana {'n': 45, 'media': 0.4395}
+  [ 6986.2s] m40 s41020 (150.8s) R0 pista 0.3876 aborto None · R0 real por linaje [0.0272, 0.9688, 0.1917, 0.126, 0.65, 0.8947, 0.8649, 0.931, 0.9714] · fundadores [749, 0, 96, 221, 20, 1, 4, 1, 0] · g padres ultima ventana {'n': 60, 'media': 0.4}
+  [ 7194.1s] o1 s41020 (265.8s) R0 pista 0.8571 aborto None · R0 real por linaje [0.9545, 0.9444, 0.9444, 0.0537, 0.1389, 0.9412, 0.9565, 0.1778, 0.9375] · fundadores [0, 0, 0, 228, 61, 0, 0, 73, 0]
+
+== v143 (V143 x9) · 20 semillas 41001-41020 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.6106 (evaluables 0.611) · R0 preregistrado 1.2914 · vida mediana 600.0 · muertes 48.5 · fundadores 16.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 54/180 · semillas con mayoria 1/20 -> no gana · ENMIENDA 6: persisten 119/180 · semillas 20/20 -> ESTABILIZA (muertes voluntarias fisicas 0.8325) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 1.291)
+  causas hambre/sed/veneno/sal 1488/1349/16822/18204 (veneno+sal 93%) · pasos sin NADA bueno en el mundo 0.0267 · mordidas B+D 93.5 / A+C 799.0 por linaje · limpiezas fisicas por cuerpo 1.3593
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9638, 'vetos': 446315, 'mord_sin_meta': 6122, 'limpia_propia': 5786, 'todo_obst': 0, 'des_splits': 1898}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 157.75
+
+== evo (V143_EVO_BAJO x9) · 20 semillas 41001-41020 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.3086 (evaluables 0.309) · R0 preregistrado 0.6471 · vida mediana 183.5 · muertes 36.5 · fundadores 25.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 37/180 · semillas con mayoria 2/20 -> no gana · ENMIENDA 6: persisten 66/180 · semillas 4/20 -> no estabiliza (muertes voluntarias fisicas 0.7028) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.647)
+  causas hambre/sed/veneno/sal 1033/896/4934/5148 (veneno+sal 84%) · pasos sin NADA bueno en el mundo 0.0062 · mordidas B+D 89.0 / A+C 388.0 por linaje · limpiezas fisicas por cuerpo 1.5
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9856, 'vetos': 323005, 'mord_sin_meta': 2645, 'limpia_propia': 2324, 'todo_obst': 0, 'des_splits': 799}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 152.0
+  pieza (evo): contadores de la ultima instancia {'dec': 281722, 'a_no': 206246, 'a_si': 2396, 'mord': 44204}
+  CURVA DE g (evo; por ventana de 10000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0, 10000) padres 0.0659 [0.0237 0.0653 0.0982] n 386 · vivos 0.0052 [-0.0739 0.0048 0.0869] · muertos n 1197 hijos/cuerpo 0.1771
+    [ 10000, 20000) padres 0.0708 [0.0241 0.0672 0.1131] n 372 · vivos 0.0119 [-0.0729 0.0128 0.0929] · muertos n 1175 hijos/cuerpo 0.2928
+    [ 20000, 30000) padres 0.0765 [0.0238 0.0794 0.1311] n 404 · vivos 0.02 [-0.0665 0.019 0.0988] · muertos n 1095 hijos/cuerpo 0.3689
+    [ 30000, 40000) padres 0.0736 [0.0212 0.0715 0.1246] n 470 · vivos 0.0268 [-0.0508 0.0261 0.0976] · muertos n 1212 hijos/cuerpo 0.3144
+    [ 40000, 50000) padres 0.0764 [0.0272 0.0754 0.1251] n 518 · vivos 0.0345 [-0.0519 0.0361 0.1058] · muertos n 1176 hijos/cuerpo 0.3776
+    [ 50000, 60000) padres 0.0797 [0.028 0.0746 0.1272] n 555 · vivos 0.0455 [-0.0372 0.0527 0.1125] · muertos n 1237 hijos/cuerpo 0.4713
+    [ 60000, 70000) padres 0.0795 [0.0269 0.0748 0.1312] n 557 · vivos 0.0496 [-0.0132 0.0513 0.1177] · muertos n 1196 hijos/cuerpo 0.4816
+    [ 70000, 80000) padres 0.0826 [0.0308 0.0776 0.1376] n 523 · vivos 0.0491 [-0.0205 0.0513 0.1211] · muertos n 1231 hijos/cuerpo 0.4135
+    [ 80000, 90000) padres 0.0931 [0.0392 0.0933 0.1441] n 562 · vivos 0.0554 [-0.0247 0.0614 0.1261] · muertos n 1287 hijos/cuerpo 0.4545
+    [ 90000,100000) padres 0.0922 [0.0406 0.0886 0.1523] n 547 · vivos 0.0588 [-0.0193 0.0653 0.1266] · muertos n 1205 hijos/cuerpo 0.4946
+  PAISAJE (evo; bin de g: cuerpos, hijos por cuerpo, edad media): -0.10: 2434/0.0/764 · -0.05: 2548/0.0/1165 · +0.00: 3133/0.375/1600 · +0.05: 3347/0.647/1510 · +0.10: 454/2.271/4120 · +0.15: 82/2.671/4308 · +0.20: 13/3.231/5295
+
+== sinher (V143_EVO_SINHER x9) · 20 semillas 41001-41020 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.1842 (evaluables 0.184) · R0 preregistrado 0.2559 · vida mediana 85.25 · muertes 45.5 · fundadores 37.5 · casi inmortales 1/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 12/180 · semillas con mayoria 0/20 -> no gana · ENMIENDA 6: persisten 31/180 · semillas 0/20 -> no estabiliza (muertes voluntarias fisicas 0.7048) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.254)
+  causas hambre/sed/veneno/sal 689/760/4157/4471 (veneno+sal 86%) · pasos sin NADA bueno en el mundo 0.0036 · mordidas B+D 126.0 / A+C 360.0 por linaje · limpiezas fisicas por cuerpo 1.7445
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9896, 'vetos': 205234, 'mord_sin_meta': 1854, 'limpia_propia': 1540, 'todo_obst': 0, 'des_splits': 580}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 151.35
+  pieza (sinher): contadores de la ultima instancia {'dec': 241959, 'a_no': 186879, 'a_si': 1177, 'mord': 28919}
+  CURVA DE g (sinher; por ventana de 10000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0, 10000) padres 0.0627 [0.0241 0.067 0.0953] n 311 · vivos -0.0059 [-0.0803 -0.01 0.0797] · muertos n 1098 hijos/cuerpo 0.1785
+    [ 10000, 20000) padres 0.0576 [0.0158 0.0657 0.0942] n 228 · vivos -0.0149 [-0.0808 -0.0209 0.0673] · muertos n 1144 hijos/cuerpo 0.2045
+    [ 20000, 30000) padres 0.0546 [0.0168 0.0581 0.0895] n 224 · vivos -0.0162 [-0.0868 -0.0222 0.0643] · muertos n 962 hijos/cuerpo 0.1861
+    [ 30000, 40000) padres 0.0535 [0.0145 0.0538 0.0938] n 224 · vivos -0.014 [-0.0844 -0.0197 0.0661] · muertos n 864 hijos/cuerpo 0.2373
+    [ 40000, 50000) padres 0.0568 [0.0157 0.0597 0.0924] n 279 · vivos -0.0092 [-0.0806 -0.0133 0.074] · muertos n 1008 hijos/cuerpo 0.244
+    [ 50000, 60000) padres 0.0582 [0.0186 0.0593 0.0899] n 291 · vivos -0.0052 [-0.0809 -0.0096 0.075] · muertos n 938 hijos/cuerpo 0.3102
+    [ 60000, 70000) padres 0.0587 [0.0183 0.0613 0.0904] n 287 · vivos -0.0041 [-0.0839 -0.0086 0.075] · muertos n 993 hijos/cuerpo 0.3061
+    [ 70000, 80000) padres 0.0597 [0.0173 0.0635 0.095] n 245 · vivos -0.0061 [-0.0818 -0.0091 0.0785] · muertos n 1093 hijos/cuerpo 0.2763
+    [ 80000, 90000) padres 0.0575 [0.0161 0.0623 0.0915] n 263 · vivos -0.0065 [-0.0797 -0.0044 0.0711] · muertos n 1006 hijos/cuerpo 0.2078
+    [ 90000,100000) padres 0.0551 [0.0163 0.0595 0.091] n 242 · vivos -0.0078 [-0.079 -0.0056 0.0701] · muertos n 971 hijos/cuerpo 0.2945
+  PAISAJE (sinher; bin de g: cuerpos, hijos por cuerpo, edad media): -0.10: 2524/0.0/1783 · -0.05: 2361/0.0/1989 · +0.00: 2589/0.331/1448 · +0.05: 2603/0.612/1317
+
+== ancho (V143_EVO_ANCHO x9) · 20 semillas 41001-41020 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.7534 (evaluables 0.753) · R0 preregistrado 1.2887 · vida mediana 758.75 · muertes 40.0 · fundadores 7.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 70/180 · semillas con mayoria 4/20 -> no gana · ENMIENDA 6: persisten 109/180 · semillas 17/20 -> ESTABILIZA (muertes voluntarias fisicas 0.797) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 1.289)
+  causas hambre/sed/veneno/sal 1481/1349/11674/12724 (veneno+sal 90%) · pasos sin NADA bueno en el mundo 0.0244 · mordidas B+D 68.0 / A+C 591.5 por linaje · limpiezas fisicas por cuerpo 1.2389
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.965, 'vetos': 432551, 'mord_sin_meta': 5767, 'limpia_propia': 5434, 'todo_obst': 0, 'des_splits': 1615}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 154.8
+  pieza (ancho): contadores de la ultima instancia {'dec': 161929, 'a_no': 60216, 'a_si': 8080, 'mord': 92794}
+  CURVA DE g (ancho; por ventana de 10000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0, 10000) padres 0.3627 [0.1105 0.3935 0.5717] n 929 · vivos 0.2757 [0.0013 0.2846 0.5612] · muertos n 2769 hijos/cuerpo 0.208
+    [ 10000, 20000) padres 0.3842 [0.1472 0.4159 0.5726] n 914 · vivos 0.3072 [0.0284 0.3273 0.561] · muertos n 2647 hijos/cuerpo 0.3306
+    [ 20000, 30000) padres 0.3996 [0.1656 0.4255 0.581] n 953 · vivos 0.3388 [0.0797 0.3655 0.5671] · muertos n 2655 hijos/cuerpo 0.3699
+    [ 30000, 40000) padres 0.411 [0.1887 0.4324 0.5859] n 941 · vivos 0.353 [0.0994 0.3715 0.5772] · muertos n 2589 hijos/cuerpo 0.3627
+    [ 40000, 50000) padres 0.4116 [0.1852 0.4319 0.5851] n 1033 · vivos 0.3711 [0.114 0.3964 0.5796] · muertos n 2992 hijos/cuerpo 0.3342
+    [ 50000, 60000) padres 0.4149 [0.2 0.4433 0.5812] n 945 · vivos 0.3694 [0.1228 0.4014 0.5703] · muertos n 2703 hijos/cuerpo 0.3618
+    [ 60000, 70000) padres 0.4187 [0.1989 0.4406 0.5958] n 951 · vivos 0.3765 [0.1319 0.4027 0.5868] · muertos n 2785 hijos/cuerpo 0.3619
+    [ 70000, 80000) padres 0.4231 [0.2144 0.4324 0.5884] n 938 · vivos 0.3803 [0.1361 0.4063 0.5881] · muertos n 2692 hijos/cuerpo 0.3013
+    [ 80000, 90000) padres 0.418 [0.2061 0.4365 0.5791] n 857 · vivos 0.3793 [0.1279 0.4073 0.578] · muertos n 2634 hijos/cuerpo 0.391
+    [ 90000,100000) padres 0.4138 [0.2266 0.4243 0.5853] n 953 · vivos 0.3777 [0.1459 0.3991 0.5795] · muertos n 2762 hijos/cuerpo 0.3045
+  PAISAJE (ancho; bin de g: cuerpos, hijos por cuerpo, edad media): -0.10: 1555/0.0/159 · -0.05: 1597/0.0/241 · +0.00: 1651/0.042/306 · +0.05: 1801/0.119/460 · +0.10: 1875/0.182/527 · +0.15: 1922/0.26/628 · +0.20: 1923/0.304/632 · +0.25: 2036/0.278/575 · +0.30: 1950/0.328/598 · +0.35: 2035/0.448/751 · +0.40: 2182/0.558/871 · +0.45: 2089/0.539/850 · +0.50: 2187/0.515/818 · +0.55: 2149/0.568/866 · +0.60: 224/2.062/3114 · +0.65: 46/1.261/2529 · +0.70: 5/0.2/642 · +0.75: 1/1.0/1809
+
+== m40 (V143_EVO_M40 x9) · 20 semillas 41001-41020 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.8947 (evaluables 0.895) · R0 preregistrado 1.6334 · vida mediana 1145.5 · muertes 38.0 · fundadores 2.5 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 89/180 · semillas con mayoria 11/20 -> no gana · ENMIENDA 6: persisten 133/180 · semillas 20/20 -> ESTABILIZA (muertes voluntarias fisicas 0.7876) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 1.633)
+  causas hambre/sed/veneno/sal 1690/1386/11428/12276 (veneno+sal 89%) · pasos sin NADA bueno en el mundo 0.0307 · mordidas B+D 56.0 / A+C 618.0 por linaje · limpiezas fisicas por cuerpo 1.0322
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9598, 'vetos': 466641, 'mord_sin_meta': 6422, 'limpia_propia': 6112, 'todo_obst': 0, 'des_splits': 1508}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 153.8
+  pieza (m40): contadores de la ultima instancia {'dec': 171848, 'a_no': 67998, 'a_si': 7590, 'mord': 93010}
+  CURVA DE g (m40; por ventana de 10000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0, 10000) padres 0.4 [0.4 0.4 0.4] n 1161 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2980 hijos/cuerpo 0.2822
+    [ 10000, 20000) padres 0.4 [0.4 0.4 0.4] n 1113 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2897 hijos/cuerpo 0.3369
+    [ 20000, 30000) padres 0.4 [0.4 0.4 0.4] n 1056 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2762 hijos/cuerpo 0.4359
+    [ 30000, 40000) padres 0.4 [0.4 0.4 0.4] n 987 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2544 hijos/cuerpo 0.3699
+    [ 40000, 50000) padres 0.4 [0.4 0.4 0.4] n 1051 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2666 hijos/cuerpo 0.3627
+    [ 50000, 60000) padres 0.4 [0.4 0.4 0.4] n 1017 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2574 hijos/cuerpo 0.4448
+    [ 60000, 70000) padres 0.4 [0.4 0.4 0.4] n 1013 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2549 hijos/cuerpo 0.348
+    [ 70000, 80000) padres 0.4 [0.4 0.4 0.4] n 1035 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2601 hijos/cuerpo 0.4041
+    [ 80000, 90000) padres 0.4 [0.4 0.4 0.4] n 1057 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2683 hijos/cuerpo 0.3951
+    [ 90000,100000) padres 0.4 [0.4 0.4 0.4] n 1045 · vivos 0.4 [0.4 0.4 0.4] · muertos n 2524 hijos/cuerpo 0.4382
+  PAISAJE (m40; bin de g: cuerpos, hijos por cuerpo, edad media): +0.40: 26780/0.38/651
+
+== o1 (O1 x9) · 20 semillas 41001-41020 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.9412 (evaluables 0.941) · R0 preregistrado 2.2638 · vida mediana 3118.25 · muertes 20.0 · fundadores 0.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 136/180 · semillas con mayoria 20/20 -> GANA · ENMIENDA 6: persisten 151/180 · semillas 20/20 -> ESTABILIZA (muertes voluntarias fisicas 0.0) · ENMIENDA 3 (ayer): CRUZA (mediana R0 evaluables 2.264)
+  causas hambre/sed/veneno/sal 1124/1095/3296/3379 (veneno+sal 75%) · pasos sin NADA bueno en el mundo 0.0408 · mordidas B+D 364.0 / A+C 673.0 por linaje · limpiezas fisicas por cuerpo 17.1551
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 280.9
+
+  P3 por semilla (evo: media de g de los padres en [90000, 100000); banda (0.1, 0.6)): 41001: 0.0781 (n 35) · 41002: 0.1014 (n 47)* · 41003: 0.1014 (n 29)* · 41004: 0.1215 (n 29)* · 41005: 0.0982 (n 32) · 41006: 0.0727 (n 26) · 41007: 0.111 (n 14)* · 41008: 0.0826 (n 31) · 41009: 0.0774 (n 20) · 41010: 0.1051 (n 17)* · 41011: 0.0802 (n 20) · 41012: 0.1196 (n 37)* · 41013: 0.0865 (n 28) · 41014: 0.0869 (n 20) · 41015: 0.0623 (n 20) · 41016: 0.073 (n 21) · 41017: 0.0827 (n 24) · 41018: 0.0797 (n 25) · 41019: 0.108 (n 29)* · 41020: 0.0914 (n 43)
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes; gana = semillas en que el primero supera al segundo)
+  evo vs sinher: gana 18/20 · diferencia mediana 0.1407
+  evo vs v143: gana 5/20 · diferencia mediana -0.2965
+  sinher vs v143: gana 0/20 · diferencia mediana -0.419
+  ancho vs sinher: gana 20/20 · diferencia mediana 0.539
+  ancho vs v143: gana 13/20 · diferencia mediana 0.0854
+  m40 vs v143: gana 19/20 · diferencia mediana 0.2081
+  evo vs m40: gana 0/20 · diferencia mediana -0.5471
+  o1 vs v143: gana 20/20 · diferencia mediana 0.333
+
+================ LA LETRA (PREREGISTRO_termo_evo.md sec. 6)
+  validez {'V1_completa': True, 'V2_ancla_O1_gana': True, 'V3_ancla_V143': True, 'V4_pieza_actua': True}
+  puertas {'P1_evo_cruza': False, 'P2_evo_gana_sinher': True, 'P3_g_en_banda': False} (P3: 7/20 semillas) · modesto False
+
+  RESUMEN /home/user/juaco/experimentos/organelos/termo_evo/datos/evo_s41001-41020_T100000_20260928_144525/resumen.json (sha 9c621d7136731dce)
+Terminado en 7194.3s
+VEREDICTO DE LA SERIE: NO   (regla de parada: PREREGISTRO_termo_evo.md sec. 7)
