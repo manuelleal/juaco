@@ -1,0 +1,101 @@
+  cod construye_evo.py                 sha 6cdd7dd10e9a0594 OK -> experimentos\organelos\termo_banco\construye_evo.py
+  cod corre_evo.py                     sha 7d8e660a1b0e1a71 OK -> experimentos\organelos\termo_banco\corre_evo.py
+  cod identidad_evo.py                 sha 7e3f6fa48f83c387 OK -> experimentos\organelos\termo_banco\identidad_evo.py
+  cod carros/V143_EVO_BAJO.py          sha 3187b373654e119f OK -> experimentos\organelos\termo_banco\carros\V143_EVO_BAJO.py
+  cod carros/V143_EVO_ANCHO.py         sha 1ff17bf4c6e32382 OK -> experimentos\organelos\termo_banco\carros\V143_EVO_ANCHO.py
+  cod carros/V143_EVO_SINHER.py        sha a11989a3b04d13d6 OK -> experimentos\organelos\termo_banco\carros\V143_EVO_SINHER.py
+  cod carros/V143_EVO_M40.py           sha 713cd55ed465cc82 OK -> experimentos\organelos\termo_banco\carros\V143_EVO_M40.py
+  doc PREREGISTRO_termo_evo.md         sha 7f45b1385d82ca23 OK -> experimentos\organelos\termo_banco\origen_nube\PREREGISTRO_termo_evo.md
+  doc INFORME.md                       sha ccc542ed8329be9f OK -> experimentos\organelos\termo_banco\origen_nube\INFORME.md
+  doc ENCARGO_NUBE.md                  sha cdb5cff87322d37e OK -> experimentos\organelos\termo_banco\origen_nube\ENCARGO_NUBE.md
+  doc identidad_evo_salida.txt         sha a42805033ad08f99 OK -> experimentos\organelos\termo_banco\origen_nube\identidad_evo_salida.txt
+  doc humo_salida.txt                  sha 3f2a6ce5784e8429 OK -> experimentos\organelos\termo_banco\origen_nube\humo_salida.txt
+  doc lee_posthoc.py                   sha 4137afe750bad9ee OK -> experimentos\organelos\termo_banco\origen_nube\lee_posthoc.py
+TRAE_NUBE: TODO OK
+  OK    (K) trae_nube --verifica: los 13 archivos de la nube (c43e12a) con su sha fijado  [0s]
+  V143_EVO_BAJO sha 3187b373654e119f == disco: True
+  V143_EVO_ANCHO sha 1ff17bf4c6e32382 == disco: True
+  V143_EVO_SINHER sha a11989a3b04d13d6 == disco: True
+  V143_EVO_M40 sha 713cd55ed465cc82 == disco: True
+origen V143.py sha 2a03048a7f1525e5 (fijado 2a03048a7f1525e5) · construye_evo.py sha 6cdd7dd10e9a0594
+  OK    (K) construye_evo --verifica: la nube reproduce sus 4 carros desde V143.py 2a03048a7f1525e5  [0s]
+  V143_EVO_BANCO sha 9862ba0b8324cf3c == disco: True
+  V143_EVO_BANCOBAR sha 8458fb27a28236e0 == disco: True
+  V143_EVO_BANCO_M40 sha 20c411944ec07183 == disco: True
+origen V143_EVO_BAJO.py sha 3187b373654e119f (fijado 3187b373654e119f) - construye_banco.py sha ead46623e70d13f6
+  OK    (K) construye_banco --verifica: los 3 carros == anclas desde V143_EVO_BAJO 3187b373654e119f (solo perillas/nombre)  [0s]
+  OK    (K) revisa_carro V143_EVO_BANCO: PASA  [0s]
+  OK    (K) revisa_carro V143_EVO_BANCOBAR: PASA  [0s]
+  OK    (K) revisa_carro V143_EVO_BANCO_M40: PASA  [0s]
+  OK    (a) s 42913 T 3000: hay refundaciones en V143_EVO_BAJO (16 instancias nuevas)  [8s]
+  OK    (a) V143_EVO_BANCO con BANCO = 0 == V143_EVO_BAJO de la nube, salida ENTERA y _TEL (s 42913, T 3000)  [13s]
+  OK    (a) V143_EVO_BANCOBAR con BANCO = 0 == V143_EVO_BAJO de la nube, salida ENTERA y _TEL (s 42913, T 3000)  [18s]
+  OK    (a) V143_EVO_BANCO_M40 con BANCO = 0 == V143_EVO_M40 de la nube, salida ENTERA y _TEL (s 42913, T 3000)  [22s]
+  OK    (a) s 42914 T 8000: hay refundaciones en V143_EVO_BAJO (46 instancias nuevas)  [46s]
+  OK    (a) V143_EVO_BANCO con BANCO = 0 == V143_EVO_BAJO de la nube, salida ENTERA y _TEL (s 42914, T 8000)  [58s]
+  OK    (a) V143_EVO_BANCOBAR con BANCO = 0 == V143_EVO_BAJO de la nube, salida ENTERA y _TEL (s 42914, T 8000)  [69s]
+  OK    (a) V143_EVO_BANCO_M40 con BANCO = 0 == V143_EVO_M40 de la nube, salida ENTERA y _TEL (s 42914, T 8000)  [81s]
+  OK    (b) V143_EVO_BANCO_M40 (BANCO 1, g 0.40, sigma 0) == V143_EVO_M40 en la FISICA (s 42913, T 5000); fundadores del banco 34  [96s]
+  OK    (b) V143_EVO_BANCO_M40 (BANCO 1, g 0.40, sigma 0) == V143_EVO_M40 en la FISICA (s 42914, T 20000); fundadores del banco 160  [153s]
+  OK    (b) el banco ACTUA en la corrida larga de (b): 160 fundadores salieron del banco propio  [153s]
+  OK    (b) V143_EVO_BANCOBAR parchado a g 0.40, sigma 0 == V143_EVO_M40 en la FISICA (s 42914, T 20000); fundadores de banco ajeno 160  [181s]
+  OK    (c) banco propio vacio -> (None, 0) en los dos modos, sin gastar el rng  [181s]
+  OK    (c) modo 1: solo del propio (origen 1) y uniforme (frecuencias [0.19, 0.209, 0.194, 0.204, 0.204])  [181s]
+  OK    (c) modo 2: nunca del propio; linaje ajeno uniforme entre los que tienen semillas (0.5x 0.506, 0.71 0.494; el vacio no cuenta)  [181s]
+  OK    (c) modo 2 sin ningun banco ajeno con semillas -> (None, 0)  [181s]
+  OK    (c) FIFO: 250 partos -> banco de 200 con los 200 ultimos (tamano = cola_max de la pista 200)  [181s]
+  OK    (d) BANCO (sigma 0): los 52 fundadores del banco propio tienen el g de un padre de SU linaje  [213s]
+  OK    (d) BANCO: el primer fundador de cada linaje sale de la inicial (origen 0) y en [-0.10, 0.10]  [213s]
+  OK    (d) BANCO y EVO de la nube: el mismo g en el primer fundador de cada linaje (mismo rng del gen)  [261s]
+  OK    (d) BANCOBAR (sigma 0): los 47 fundadores de banco ajeno tienen el g de un padre de OTRO linaje  [290s]
+  OK    (d) BANCOBAR: ningun fundador sale del banco propio (origen 1)  [290s]
+  OK    (d) el banco nunca pasa de 200 (maximo visto al fundar 3)  [290s]
+  FALLA (e) el banco se reinicia solo: A, B, A sin borrar _BANCO -> A == A (salida ENTERA; fundadores del banco en A 0)  [317s]
+  OK    (e) determinismo: V143_EVO_BANCO dos corridas iguales (salida entera y _TEL; s 42914, T 20000)  [374s]
+       pieza banco {'dec': 2572, 'a_no': 1995, 'a_si': 22, 'mord': 328} - bancobar {'dec': 2572, 'a_no': 1995, 'a_si': 22, 'mord': 328}
+  OK    (e) la pieza ACTUA en BANCO y en BANCOBAR (V4)  [399s]
+  OK    (f) regla 14: corre_banco.tarea(V143) == corre_v143.tarea campo a campo (s 42913, T 2000) y tel_evo vacia  [404s]
+  OK    (f) regla 14: corre_banco.tarea(V143_EVO_BAJO) == corre_evo.tarea de la nube campo a campo (s 42913, T 3000)  [411s]
+  OK    (f) tarea(): _TEL y _BANCO se borran antes de cada run (dos tareas seguidas iguales)  [425s]
+  OK    (g) corre_banco.verifica(): shas fijados + carros == construye_banco + revisa_carro + identidad corta  [436s]
+       sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+       sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+       sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+       sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+       sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+       sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+       sha experimentos\organelos\termo_banco\construye_evo.py 6cdd7dd10e9a0594 OK
+       sha experimentos\organelos\termo_banco\corre_evo.py 7d8e660a1b0e1a71 OK
+       sha experimentos\organelos\termo_banco\carros\V143_EVO_BAJO.py 3187b373654e119f OK
+       sha experimentos\organelos\termo_banco\carros\V143_EVO_M40.py 713cd55ed465cc82 OK
+       sha experimentos\organelos\termo_banco\construye_banco.py ead46623e70d13f6 OK
+       sha experimentos\organelos\termo_banco\carros\V143_EVO_BANCO.py 9862ba0b8324cf3c OK
+       sha experimentos\organelos\termo_banco\carros\V143_EVO_BANCOBAR.py 8458fb27a28236e0 OK
+       sha experimentos\organelos\termo_banco\carros\V143_EVO_BANCO_M40.py 20c411944ec07183 OK
+       carro V143_EVO_BANCO sha 9862ba0b8324cf3c == construye: True - revisa_carro: PASA
+       carro V143_EVO_BANCOBAR sha 8458fb27a28236e0 == construye: True - revisa_carro: PASA
+       carro V143_EVO_BANCO_M40 sha 20c411944ec07183 == construye: True - revisa_carro: PASA
+       IDENTIDAD CORTA: V143_EVO_BANCO con BANCO = 0 == V143_EVO_BAJO (salida ENTERA y _TEL, N 9, s 42913, T 3000, fundador limpio): OK
+       IDENTIDAD CORTA: V143_EVO_BANCOBAR con BANCO = 0 == V143_EVO_BAJO (salida ENTERA y _TEL, N 9, s 42913, T 3000, fundador limpio): OK
+  OK    (g) valida: serie 42001-42020 y replica 42021-42040 con los 6 brazos y T 100000 -> OK  [436s]
+  OK    (g) valida: rechaza semillas de TERMO_EVO 41001, serie mezclada 42011-42030, T 50000, brazos distintos  [436s]
+  OK    (g) valida: humo solo 42911-42914 y T <= 30000  [436s]
+usage: identidad_banco.py (--humo | --serie | --bloque BLOQUE)
+                          [--brazos BRAZOS] [--desde DESDE] [--n N] [--T T]
+                          [--pool POOL] [--reanuda]
+identidad_banco.py: error: unrecognized arguments: --desd 42911
+  OK    (g) ERR-115: una bandera abreviada (--desd) ABORTA  [436s]
+  OK    (g) letra caso 1: FUNCIONA == FUNCIONA  [436s]
+  OK    (g) letra caso 2: HAY ALGO MODESTO == HAY ALGO MODESTO  [436s]
+  OK    (g) letra caso 3: NO == NO  [436s]
+  OK    (g) letra caso 4: NO == NO  [436s]
+  OK    (g) letra caso 5: NO == NO  [436s]
+  OK    (g) letra caso 6: NO == NO  [436s]
+  OK    (g) letra caso 7: NO SE LEE == NO SE LEE  [436s]
+  OK    (g) letra caso 8: NO SE LEE == NO SE LEE  [436s]
+  OK    (g) letra caso 9: NO SE LEE == NO SE LEE  [436s]
+  OK    (g) letra caso 10: HAY ALGO MODESTO == HAY ALGO MODESTO  [436s]
+  OK    (g) vocabulario: S 17/20 -> 'DEL PROPIO LINAJE'; S 14/20 -> no especifico  [436s]
+  OK    (g) bloque: FUNCIONA+MODESTO -> MODESTO; NO SE LEE+FUNCIONA -> NO SE LEE; NO+NO -> NO  [436s]
+
+ARNES FALLA (436 s) - identidad_banco.py sha 9f0a6ecb56c81bce - python 3.14.2 - numpy 2.4.3

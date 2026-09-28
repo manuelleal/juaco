@@ -1,0 +1,67 @@
+  V143_EVO_BAJO sha 3187b373654e119f == disco: True
+  V143_EVO_ANCHO sha 1ff17bf4c6e32382 == disco: True
+  V143_EVO_SINHER sha a11989a3b04d13d6 == disco: True
+  V143_EVO_M40 sha 713cd55ed465cc82 == disco: True
+origen V143.py sha 2a03048a7f1525e5 (fijado 2a03048a7f1525e5) · construye_evo.py sha 6cdd7dd10e9a0594
+  OK    (K) construye_evo --verifica (carros == anclas desde V143.py 2a03048a7f1525e5; solo perillas/nombre)
+  OK    (a) V143_EVO_BAJO con EVO = 0 == V143, salida ENTERA (N 9, s 41913, T 2000, fundador limpio)
+  OK    (a) V143_EVO_ANCHO con EVO = 0 == V143, salida ENTERA (N 9, s 41913, T 2000, fundador limpio)
+  OK    (a) V143_EVO_SINHER con EVO = 0 == V143, salida ENTERA (N 9, s 41913, T 2000, fundador limpio)
+  OK    (a) V143_EVO_M40 con EVO = 0 == V143, salida ENTERA (N 9, s 41913, T 2000, fundador limpio)
+  OK    (a) V143_EVO_BAJO con EVO = 0 == V143, salida ENTERA (N 9, s 41914, T 5000, fundador limpio)
+  OK    (a) V143_EVO_ANCHO con EVO = 0 == V143, salida ENTERA (N 9, s 41914, T 5000, fundador limpio)
+  OK    (a) V143_EVO_SINHER con EVO = 0 == V143, salida ENTERA (N 9, s 41914, T 5000, fundador limpio)
+  OK    (a) V143_EVO_M40 con EVO = 0 == V143, salida ENTERA (N 9, s 41914, T 5000, fundador limpio)
+  OK    (b0) HIBB del diagnostico sha 3ca86aed6c409a11 == 3ca86aed6c409a11
+  OK    (b) V143_EVO_M40 (EVO 1, g 0.40 fijo, sigma 0) == HIBB m40 en la FISICA (todo salvo d['carro']; s 41913, T 5000)
+  OK    (b) V143_EVO_M40 (EVO 1, g 0.40 fijo, sigma 0) == HIBB m40 en la FISICA (todo salvo d['carro']; s 41914, T 20000)
+  OK    (b) V143_EVO_BAJO parchado a G_INI (0.4, 0.4), SIGMA 0 == HIBB m40 en la FISICA (s 41913, T 5000)
+  OK    (b) V143_EVO_SINHER parchado a G_INI (0.4, 0.4), SIGMA 0 == HIBB m40 en la FISICA (s 41913, T 5000)
+  OK    (c) g del primer fundador de cada linaje igual en EVO y SINHER (9 linajes, s 41914): [0.04364, -0.01557, -0.04054]...
+  OK    (c) hay un primer nacimiento de la cola antes de T 5000 (t 2088)
+  OK    (c) fisica EVO == SINHER hasta el paso del primer nacimiento (T = 2089)
+  OK    (c) y a T 5000 se separan (la herencia cambia algo)
+  OK    (d) Generator.spawn deja intacto el estado del rng del cuerpo (y su siguiente sorteo)
+  OK    (e) sigma 0: los 23 nacidos tienen el g de algun padre al parir (6 valores de padres)
+  OK    (e) SINHER: los nacidos NO copian al padre (3/13 coinciden por azar)
+  OK    (e) sigma 0.03: 32 nacidos en G_CLIP [-0.2, 1.0]; fundadores de BAJO en U[-0.10, 0.10] (106)
+  OK    (e) SINHER: todo cuerpo (fundador o nacido) en U[-0.10, 0.10] (123 muertos)
+       pieza evo {'dec': 2952, 'a_no': 2117, 'a_si': 33, 'mord': 434} · sinher {'dec': 1298, 'a_no': 1005, 'a_si': 18, 'mord': 138}
+  OK    (f) la pieza ACTUA en EVO y en SINHER (V4: a_no + a_si > 0)
+  OK    (f) determinismo: V143_EVO_BAJO dos corridas iguales, fisica, carro y telemetria del gen (s 41914, T 20000)
+  OK    (f) tarea(): _TEL se borra antes de cada run (dos tareas seguidas dan la misma telemetria)
+  OK    (g) corre_evo.verifica(): shas fijados + carros == construye + revisa_carro + identidad corta
+       sha experimentos/tronco_v14_3/corre_v143.py 24100621c450da22 OK
+       sha experimentos/tronco_v14_3/carros_v143/V143.py 2a03048a7f1525e5 OK
+       sha experimentos/carrera_escuderias/pista.py 9f47c65e438e0ff4 OK
+       sha experimentos/carrera_escuderias/juez.py 6a68f640a7832f12 OK
+       sha experimentos/carrera_escuderias/carros/O1.py 99436afa2715f028 OK
+       sha experimentos/carrera_escuderias/revisa_carro.py 1c8a789f7427ab96 OK
+       sha experimentos/organelos/termo_evo/construye_evo.py 6cdd7dd10e9a0594 OK
+       sha experimentos/organelos/termo_evo/carros/V143_EVO_BAJO.py 3187b373654e119f OK
+       sha experimentos/organelos/termo_evo/carros/V143_EVO_ANCHO.py 1ff17bf4c6e32382 OK
+       sha experimentos/organelos/termo_evo/carros/V143_EVO_SINHER.py a11989a3b04d13d6 OK
+       sha experimentos/organelos/termo_evo/carros/V143_EVO_M40.py 713cd55ed465cc82 OK
+       carro V143_EVO_BAJO sha 3187b373654e119f == construye: True · revisa_carro: PASA
+       carro V143_EVO_ANCHO sha 1ff17bf4c6e32382 == construye: True · revisa_carro: PASA
+       carro V143_EVO_SINHER sha a11989a3b04d13d6 == construye: True · revisa_carro: PASA
+       carro V143_EVO_M40 sha 713cd55ed465cc82 == construye: True · revisa_carro: PASA
+       IDENTIDAD CORTA: V143_EVO_BAJO con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+       IDENTIDAD CORTA: V143_EVO_ANCHO con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+       IDENTIDAD CORTA: V143_EVO_SINHER con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+       IDENTIDAD CORTA: V143_EVO_M40 con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  OK    (g) valida: serie 41001-41020 con los 6 brazos y T 100000 -> OK
+  OK    (g) valida: replica 41021-41040 -> OK
+  OK    (g) valida: larga 41041-41050, T 300000, evo y sinher -> OK
+  OK    (g) valida: rechaza semillas de TERMO 39101
+  OK    (g) valida: rechaza serie mezclada 41011-41030
+  OK    (g) valida: rechaza T 50000 en serie y T 100000 en la larga
+  OK    (g) valida: rechaza brazos distintos
+  OK    (g) valida: humo solo 41911-41914 y T <= 30000
+usage: identidad_evo.py (--humo | --serie | --bloque BLOQUE) [--brazos BRAZOS]
+                        [--desde DESDE] [--n N] [--T T] [--pool POOL]
+                        [--reanuda]
+identidad_evo.py: error: unrecognized arguments: --desd 41911
+  OK    (g) ERR-115: bandera abreviada --desd (de --desde) aborta antes de correr nada
+  OK    (g) la letra en 11 casos sinteticos (11/11) · bloque(FUNCIONA, MODESTO) = HAY ALGO MODESTO
+ARNES PASA · 388s
