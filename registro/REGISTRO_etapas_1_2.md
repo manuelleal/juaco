@@ -6993,3 +6993,22 @@ también en la serie 2.
   Se corrigió el caso para medir sólo hijos de padre no fundador (AZA 3/203 y 0/309; SEL 346/346 y 276/276). El umbral < 5 % no cambió.
   Salida vieja: `identidad_eco_sel_salida_v1_57de59.txt`. Auditado: legítimo. **El siguiente ERR libre es ERR-150.**
 - **Niveles:** propuesta del coordinador para los niveles 10–13 (ECO): subir por este FUNCIONA ×2. El porcentaje lo fija el director.
+
+## Examen v4 de TERMO′ (v14.4b = TERMO con memoria que olvida) — serie 28-sep 16:01–16:42: **NO PASA** (cae T-C (ii) y T-E)
+- Preregistro `experimentos/tronco_v14_4b_examen/PREREGISTRO_examen_v144b.md` (commit `887bad0`). Arnés 129/129; auditor LISTO.
+  Predicción del creador: NO PASA (p 0.95).
+- Crudo `examen_v144b_serie_20260928_160115.json` (sha `03fbeb51d108b12e`).
+- **Puertas:** T-A PASA · T-B PASA · **T-C NO** · T-D PASA · **T-E NO** · T-F PASA · **T-G PASA** · T-H no medida.
+  - **T-G, crecimiento del linaje en el mundo vivo:**
+    - CUELLO_MIN: r +8 contra −7.5;
+    - VIVO: r −29 contra −74.5; muertes 63 contra 93.
+  - **T-C (ii), reversión:** rev 29.5 contra 44 (LI −18.3; pide > −12.5). **Mejora frente a TERMO** (−12), pero no alcanza.
+    expB_Q4 410 contra 207: ahora sí come lo nuevo bueno.
+  - **T-E: cae en los 6 escenarios** (12–16/20; pide 18/20). Dos tipos de cláusula:
+    - "come X Q4 ≥ 0.8 × tronco": E1 16, E2J 14, E2K 12, E2L 17. Castiga comer menos, como el `rev` de T-C (ii).
+    - Cláusulas de conducta real: "muerde A Q4 ≤ 1.10 × tronco" E2 14/20, y "veneno C/B total ≤ 1.10 × tronco" E2I 16/20, E2L 17/20.
+      **TERMO′ todavía muerde de más en parte de los escenarios.**
+- **Lectura:** el olvido arregla gran parte de la reversión. Pero T-E cae también por cláusulas que no son de "comer menos". Así que
+  **ERR-150 (sólo T-C ii) no basta para que TERMO′ sea tronco.** No se propone otro cambio de letra para T-E: cambiar la vara puerta por
+  puerta hasta que pase sería pescar. La serie de v14.4c se corre sólo como `--solo TC,TA` (preregistrado, veredicto INCOMPLETO),
+  para medir ERR-150 en un termostato real.
