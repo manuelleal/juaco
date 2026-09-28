@@ -1105,3 +1105,14 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
   - examen del criterio v4 para TERMO;
   - volver a ECO;
   - nube: termo_evo (encargo en `experimentos/organelos/termo_evo/ENCARGO_NUBE.md`, a lanzar por el director).
+
+> **DECISIÓN DEL DIRECTOR (28-sep-2026 ~11:00, tras ver TERMO MODESTO ×2): SE LEVANTA LA REGLA DE PARADA DEL MURO.** Sus palabras: "sí a todo,
+> no pares por mí, corre todo hasta llegar a ponerle dinamita a ese muro".
+> **Qué se corre:**
+> - (1) el examen del criterio v4 para TERMO, candidato a v14.4;
+> - (2) nuevos intentos contra el muro, partiendo de TERMO.
+> **Salvaguardas del coordinador contra "pescar":**
+> - cada intento nuevo lleva preregistro, semillas nuevas y serie + réplica;
+> - FUNCIONA sólo si serie Y réplica dan FUNCIONA con la letra del muro, sin cambiarla (P1 sigue en ≥ 15/20);
+> - cada preregistro declara cuántos intentos van contra el muro (GLOTU, GLOTU+PATAS y TERMO son los 3 primeros);
+> - lo exploratorio usa semillas distintas de las confirmatorias.
