@@ -123,11 +123,12 @@ def main():
     if a.brazo not in BRAZOS: raise SystemExit(f"brazo desconocido {a.brazo}; validos {list(BRAZOS)}")
     os.makedirs(DATOS, exist_ok=True)
     out = os.path.join(DATOS, f"{a.brazo}_s{a.semilla}_T{a.T}.json")
+    sha_carro = h16(os.path.join(AQUI, 'carros', 'MOLDE.py')) if a.brazo != 'o1' else h16(os.path.join(PISTA, 'carros', 'O1.py'))   # ANTES de correr (ERR propio: antes se leia al final)
     t0 = time.time()
     r = corre(a.brazo, a.semilla, a.T)
     r['seg'] = round(time.time() - t0, 1)
     r['sha'] = dict(pista=h16(os.path.join(PISTA, 'pista.py')), juez=h16(os.path.join(PISTA, 'juez.py')),
-                    carro=h16(os.path.join(AQUI, 'carros', 'MOLDE.py')) if a.brazo != 'o1' else h16(os.path.join(PISTA, 'carros', 'O1.py')),
+                    carro=sha_carro,
                     corre=h16(os.path.abspath(__file__)))
     json.dump(r, open(out, 'w', encoding='utf-8'), default=str)
     import statistics as st

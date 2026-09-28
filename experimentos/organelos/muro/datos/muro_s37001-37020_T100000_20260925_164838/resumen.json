@@ -1,0 +1,453 @@
+{
+ "brazos": {
+  "v143": {
+   "brazo": "v143",
+   "carro": "V143",
+   "semillas": 20,
+   "R0_real_med": 0.6057,
+   "R0_real_eval_med": 0.606,
+   "R0_prereg_med": 1.3031,
+   "linajes_cruzan_real": 53,
+   "linajes": 180,
+   "sem_cruza_e5": 1,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 18,
+   "estabiliza_e6": true,
+   "persisten": 114,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 1.303,
+    "condiciones": {
+     "i": true,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 600.0,
+   "muertes_med": 49.0,
+   "fundadores_med": 17.0,
+   "causas": {
+    "hambre": 1428,
+    "sed": 1327,
+    "veneno": 16967,
+    "sal": 18294
+   },
+   "frac_BD_causa": 0.9275,
+   "frac_vol": 0.8376,
+   "frac_sin_bueno_mundo_med": 0.0261,
+   "mord_BD_med": 95.0,
+   "mord_AC_med": 795.0,
+   "limpiezas_fisicas_por_cuerpo_med": 1.3359,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 208.6,
+   "v143": {
+    "frac_pasos_con_meta": 0.9646,
+    "vetos": 430163,
+    "mord_sin_meta": 5683,
+    "limpia_propia": 5338,
+    "todo_obst": 0,
+    "des_splits": 1733
+   }
+  },
+  "glotu": {
+   "brazo": "glotu",
+   "carro": "V143_GLOTU",
+   "semillas": 20,
+   "R0_real_med": 0.7362,
+   "R0_real_eval_med": 0.736,
+   "R0_prereg_med": 1.685,
+   "linajes_cruzan_real": 55,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 20,
+   "estabiliza_e6": true,
+   "persisten": 138,
+   "enm3": {
+    "cruza": true,
+    "mediana_R0_eval": 1.685,
+    "condiciones": {
+     "i": true,
+     "ii": true,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 1171.75,
+   "muertes_med": 34.5,
+   "fundadores_med": 8.0,
+   "causas": {
+    "hambre": 1656,
+    "sed": 1635,
+    "veneno": 9580,
+    "sal": 9833
+   },
+   "frac_BD_causa": 0.855,
+   "frac_vol": 0.7373,
+   "frac_sin_bueno_mundo_med": 0.0094,
+   "mord_BD_med": 48.0,
+   "mord_AC_med": 531.5,
+   "limpiezas_fisicas_por_cuerpo_med": 0.8929,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 201.8,
+   "v143": {
+    "frac_pasos_con_meta": 0.9857,
+    "vetos": 689255,
+    "mord_sin_meta": 3608,
+    "limpia_propia": 3302,
+    "todo_obst": 0,
+    "des_splits": 1294
+   }
+  },
+  "glotuinv": {
+   "brazo": "glotuinv",
+   "carro": "V143_GLOTUINV",
+   "semillas": 20,
+   "R0_real_med": 0.0,
+   "R0_real_eval_med": 0.0,
+   "R0_prereg_med": 0.0,
+   "linajes_cruzan_real": 0,
+   "linajes": 180,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 0,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.0,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 2,
+   "vida_med": 52.0,
+   "muertes_med": 183.0,
+   "fundadores_med": 183.0,
+   "causas": {
+    "hambre": 260,
+    "sed": 795,
+    "veneno": 17359,
+    "sal": 18223
+   },
+   "frac_BD_causa": 0.9712,
+   "frac_vol": 0.8535,
+   "frac_sin_bueno_mundo_med": 0.004,
+   "mord_BD_med": 520.0,
+   "mord_AC_med": 800.5,
+   "limpiezas_fisicas_por_cuerpo_med": 2.0313,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 191.35,
+   "v143": {
+    "frac_pasos_con_meta": 0.9863,
+    "vetos": 78452,
+    "mord_sin_meta": 1372,
+    "limpia_propia": 1063,
+    "todo_obst": 0,
+    "des_splits": 259
+   }
+  },
+  "o1": {
+   "brazo": "o1",
+   "carro": "O1",
+   "semillas": 20,
+   "R0_real_med": 0.9412,
+   "R0_real_eval_med": 0.941,
+   "R0_prereg_med": 2.2614,
+   "linajes_cruzan_real": 145,
+   "linajes": 180,
+   "sem_cruza_e5": 20,
+   "gana_e5": true,
+   "sem_estabiliza_e6": 20,
+   "estabiliza_e6": true,
+   "persisten": 155,
+   "enm3": {
+    "cruza": true,
+    "mediana_R0_eval": 2.25,
+    "condiciones": {
+     "i": true,
+     "ii": true,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 1,
+   "vida_med": 3394.5,
+   "muertes_med": 20.0,
+   "fundadores_med": 0.0,
+   "causas": {
+    "hambre": 1126,
+    "sed": 1095,
+    "veneno": 3392,
+    "sal": 3280
+   },
+   "frac_BD_causa": 0.7503,
+   "frac_vol": 0.0,
+   "frac_sin_bueno_mundo_med": 0.0428,
+   "mord_BD_med": 364.0,
+   "mord_AC_med": 673.0,
+   "limpiezas_fisicas_por_cuerpo_med": 17.0676,
+   "coherente": "180/180",
+   "t_fund_rec": "180/180",
+   "seg_med": 322.6
+  }
+ },
+ "pareados": {
+  "glotu_vs_v143": {
+   "semillas": 20,
+   "gana": 14,
+   "dif_med": 0.102
+  },
+  "glotu_vs_glotuinv": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.7362
+  },
+  "glotuinv_vs_v143": {
+   "semillas": 20,
+   "gana": 0,
+   "dif_med": -0.613
+  },
+  "o1_vs_v143": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.3302
+  },
+  "o1_vs_glotu": {
+   "semillas": 20,
+   "gana": 20,
+   "dif_med": 0.2053
+  }
+ },
+ "telemetria": {
+  "v143": {},
+  "glotu": {
+   "pasos": 15312660,
+   "sin_meta": 218206,
+   "veto_act": 0,
+   "veto_otra": 182931,
+   "libera": 0,
+   "mord_act": 1551,
+   "mord_otra_paga": 961,
+   "mord_otra_nopaga": 840,
+   "mord_act_sinmeta": 1074,
+   "mord_otra_sinmeta": 1677,
+   "veto_glot": 182931,
+   "mord_solo_otra": 0,
+   "patas_meta": 0,
+   "patas_cambia": 0
+  },
+  "glotuinv": {
+   "pasos": 3499490,
+   "sin_meta": 47985,
+   "veto_act": 0,
+   "veto_otra": 30504,
+   "libera": 0,
+   "mord_act": 214,
+   "mord_otra_paga": 239,
+   "mord_otra_nopaga": 209,
+   "mord_act_sinmeta": 151,
+   "mord_otra_sinmeta": 419,
+   "veto_glot": 30504,
+   "mord_solo_otra": 0,
+   "patas_meta": 0,
+   "patas_cambia": 0
+  },
+  "o1": {}
+ },
+ "cuerpos": {
+  "v143": {
+   "hijos_de_cola": {
+    "n": 4461,
+    "vida_med": 1370.0,
+    "hijos_por_cuerpo": 1.857,
+    "frac_sin_hijos": 0.494,
+    "causas": {
+     "veneno": 727,
+     "hambre": 1279,
+     "sal": 1356,
+     "sed": 1099
+    }
+   },
+   "fundadores": {
+    "n": 33555,
+    "vida_med": 45.0,
+    "hijos_por_cuerpo": 0.041,
+    "frac_sin_hijos": 0.987,
+    "causas": {
+     "sal": 16938,
+     "veneno": 16240,
+     "hambre": 149,
+     "sed": 228
+    }
+   },
+   "establece": {
+    "linajes": 180,
+    "establecidos": 114,
+    "frac_establecidos": 0.6333,
+    "R0_real_establecidos": 0.8608,
+    "R0_real_no_establecidos": 0.0666,
+    "cruzan_de_establecidos": 53
+   }
+  },
+  "glotu": {
+   "hijos_de_cola": {
+    "n": 3881,
+    "vida_med": 1907.0,
+    "hijos_por_cuerpo": 2.195,
+    "frac_sin_hijos": 0.435,
+    "causas": {
+     "sal": 781,
+     "sed": 1160,
+     "hambre": 1484,
+     "veneno": 456
+    }
+   },
+   "fundadores": {
+    "n": 18823,
+    "vida_med": 50.0,
+    "hijos_por_cuerpo": 0.055,
+    "frac_sin_hijos": 0.982,
+    "causas": {
+     "sed": 475,
+     "sal": 9052,
+     "veneno": 9124,
+     "hambre": 172
+    }
+   },
+   "establece": {
+    "linajes": 180,
+    "establecidos": 138,
+    "frac_establecidos": 0.7667,
+    "R0_real_establecidos": 0.8382,
+    "R0_real_no_establecidos": 0.0828,
+    "cruzan_de_establecidos": 55
+   }
+  },
+  "glotuinv": {
+   "hijos_de_cola": {
+    "n": 0,
+    "vida_med": null,
+    "hijos_por_cuerpo": null,
+    "frac_sin_hijos": null,
+    "causas": {}
+   },
+   "fundadores": {
+    "n": 36637,
+    "vida_med": 51.0,
+    "hijos_por_cuerpo": 0.0,
+    "frac_sin_hijos": 1.0,
+    "causas": {
+     "sed": 795,
+     "veneno": 17359,
+     "sal": 18223,
+     "hambre": 260
+    }
+   },
+   "establece": {
+    "linajes": 180,
+    "establecidos": 6,
+    "frac_establecidos": 0.0333,
+    "R0_real_establecidos": 0.0,
+    "R0_real_no_establecidos": 0.0,
+    "cruzan_de_establecidos": 0
+   }
+  },
+  "o1": {
+   "hijos_de_cola": {
+    "n": 2979,
+    "vida_med": 3264.0,
+    "hijos_por_cuerpo": 2.326,
+    "frac_sin_hijos": 0.339,
+    "causas": {
+     "hambre": 1029,
+     "sed": 1010,
+     "veneno": 464,
+     "sal": 476
+    }
+   },
+   "fundadores": {
+    "n": 5914,
+    "vida_med": 200.0,
+    "hijos_por_cuerpo": 0.195,
+    "frac_sin_hijos": 0.968,
+    "causas": {
+     "veneno": 2928,
+     "sal": 2804,
+     "hambre": 97,
+     "sed": 85
+    }
+   },
+   "establece": {
+    "linajes": 180,
+    "establecidos": 156,
+    "frac_establecidos": 0.8667,
+    "R0_real_establecidos": 0.9459,
+    "R0_real_no_establecidos": 0.0521,
+    "cruzan_de_establecidos": 145
+   }
+  }
+ },
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_ancla_O1_gana": true,
+   "V3_ancla_V143": true,
+   "V4_pieza_actua": true
+  },
+  "puertas": {
+   "P1_cand_cruza": false,
+   "P2_cand_gana_v143": false,
+   "P3_ctrl_no_cruza": true
+  },
+  "modesto": false,
+  "veredicto": "NO"
+ },
+ "semillas": [
+  37001,
+  37002,
+  37003,
+  37004,
+  37005,
+  37006,
+  37007,
+  37008,
+  37009,
+  37010,
+  37011,
+  37012,
+  37013,
+  37014,
+  37015,
+  37016,
+  37017,
+  37018,
+  37019,
+  37020
+ ],
+ "T": 100000,
+ "humo": false,
+ "abortos": 0,
+ "veredicto": "NO",
+ "sha_runner": "503b531ea1213c59",
+ "sha_carros": {
+  "V143_CTA": "d22cdaf912b4024d",
+  "V143_LIMPIA": "3bf3a997ab6775b2",
+  "V143_SINEST": "18697fa556e84d74",
+  "V143_DESF": "e6c5d0915ae2204d",
+  "V143_GLOT": "e22076d7fe67cf4f",
+  "V143_GLOTCTA": "aeeb13e0943428c5",
+  "V143_GLOTFILA": "ed246a68d4c9ac58",
+  "V143_PATAS": "b1e64b0d7f4a4296",
+  "V143_PATASDESF": "6333fa05d5bcbc31",
+  "V143_GLOTU": "8a076a5c95980001",
+  "V143_GLOTUINV": "ca93b2d2a96ee081",
+  "V143_GLOTUPATAS": "dec2d8ceb004e541",
+  "V143_MTEL": "dd0970b8a01c9fa1"
+ }
+}

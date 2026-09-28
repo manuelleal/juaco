@@ -1081,3 +1081,10 @@ sabiendo. La endosimbiosis quedó en MODESTO ×2 (domesticación), y ECO v2.1 (n
 enseñar. Quedaron cerradas las líneas Prometeo, cruce, anfitrión, H-PLANO w90 y F1 en la carrera. Pistas exploratorias: el compost
 (15/15), el ojo en niebla (7/10 contra 0/10) y el diagnóstico del enjambre de 30 agentes sobre la carrera (longevidad, fundadores,
 veneno). El tronco sigue siendo v14.3.
+
+### 28-sep-2026: se registra lo pendiente del 25-sep tarde; muro serie 2 lanzada
+**MURO serie 1 (GLOTU sobre v14.3), confirmatoria: NO** (arnés 108/108, 37001–37020; 0/20 semillas cruzan con mayoría, gana a V143 14/20
+con +0.102; control GLOTUINV 0/20; O1 20/20; la réplica no se corre). Exploratorios del comité 2: **puenteo** (10 semillas) — `boca_buena`
+de O1 sola sube a V143 de 0.702 a 0.944, casi el techo O1 (0.942); `boca_mala` y `memoria` solas hunden. **Fuera del molde** — 12 variantes,
+todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería que se enseña y se reparte" pendiente del director.
+**MURO serie 2 (GLOTU+PATAS, 37101–37140) lanzada 28-sep 05:37, en curso.** Un creador desarma `boca_buena` para traducirla sin copiar O1.

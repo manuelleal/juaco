@@ -6798,3 +6798,61 @@ El simbionte heredado se domestica por selección (P3 ×2, con el placebo válid
 - **Prohibido:** "evoluciona" sin la medida, "especie", "cultura", "organelo" como hecho, "el bicho sobrevive solo" sin decir en qué mundo, "F1 funciona" a secas.
 
 **Niveles (los fija el director):** propuesta del coordinador de +5 a +10 por F1, en el nivel 9 y/o en los niveles 10–13.
+
+## REGISTRO RETROACTIVO (escrito 28-sep-2026, ~05:40): MURO serie 1 (GLOTU), puenteo diagnóstico y "fuera del molde" — trabajo del 25-sep por la tarde, sin registrar hasta hoy
+
+> Tres cosas terminadas el 25-sep por la tarde (creador + comité 2) que no entraron al CIERRE del 25-sep. Fuentes: logs y resumen.json de
+> `experimentos/organelos/muro/` y `experimentos/organelos/comite2/`. La tabla del puenteo se regeneró hoy con `python lee_puenteo.py`
+> (el HALLAZGOS.md de esa carpeta quedó escrito a medio camino, con menos semillas; ahora hay 10).
+
+### MURO, serie 1 — candidato GLOTU sobre v14.3 (confirmatoria, 25-sep tarde): **NO**
+Pregunta: ¿una sola regla local y genérica ("no morder la comida de la necesidad MÁS llena cuando ya pasó `rep_umbral`", perilla GLOTU,
+que no copia a O1) hace que el linaje de v14.3 cruce H-1 en la pista de la carrera?
+- Preregistro `experimentos/organelos/muro/PREREGISTRO_muro.md` (commit `0d91e13`, escrito antes del humo). **Predicción del creador: NO (p 0.75)**.
+- Instrumento: arnés `identidad_muro.py` **108/108**; runner `corre_muro.py` (sha `503b531ea1213c59`) + `construye_muro.py` (sha `ad607c6ad4f9ced9`).
+- Crudos: `experimentos/organelos/muro/serie_pool6.log` y
+  `experimentos/organelos/muro/datos/muro_s37001-37020_T100000_20260925_164838/resumen.json` (sha `1dcdad5962826efe`).
+- Semillas 37001–37020, T 100 000, monocultivo de 9 carros. Validez completa: V1, V2 (O1 gana), V3 (V143 en rango), V4 (la pieza actúa) True.
+
+| brazo | R0 real (mediana) | semillas con mayoría que cruzan | pareado vs V143 | vida (mediana) | A+C / B+D por linaje | fundadores (mediana) |
+|---|---|---|---|---|---|---|
+| v143 (base) | 0.6057 | 1/20 | – | 600.0 | 795.0 / 95.0 | 17.0 |
+| **glotu (candidato)** | **0.7362** | **0/20** | gana 14/20, dif mediana +0.102 | 1171.75 | 531.5 / 48.0 | 8.0 |
+| glotuinv (control) | 0.0 | 0/20 | gana 0/20 (dif −0.613) | 52.0 | 800.5 / 520.0 | 183.0 |
+| o1 (techo) | 0.9412 | 20/20 → GANA | gana 20/20, dif +0.3302 | 3394.5 | 673.0 / 364.0 | 0.0 |
+
+**Puertas: P1 (candidato cruza) False · P2 (le gana a V143) False · P3 (el control no cruza) True.** Modesto: False.
+**Veredicto de la letra: NO.** Por el propio preregistro, la réplica (37021–37040) NO se corre.
+
+**Lectura honesta:** GLOTU come menos (A+C 531.5 contra 795.0 de v143) y vive casi el doble (1171.75 contra 600), pero no cruza H-1:
+0 de 20 semillas con mayoría, aunque le gana a V143 pareado en 14/20. Comer menos ayuda, no cierra el muro.
+
+**Vocabulario.** Permitido: "GLOTU no cruza", "come menos y vive más, no le basta". Prohibido: "GLOTU funciona", "cierra el muro".
+
+### Puenteo diagnóstico V143 ⟷ O1 (comité 2, **EXPLORATORIO, no es dato**) — 10 semillas, 36001–36010
+- `experimentos/organelos/comite2/puenteo/`: arnés `arnes_puenteo.py` 16/16; híbrido que puentea UNA pieza de O1 a la vez sobre el cuerpo de V143.
+- **boca_buena de O1 sola** (no morder lo bueno de sobra, probar lo desconocido sólo con reserva) sobre V143: R0 real mediana **0.944**,
+  gana a v143 **10/10** (dif +0.229), casi el techo O1 (0.942 en las mismas semillas; pierde con O1 pareado 6/10).
+- patas solas 0.949 (9/10, +0.236); boca completa 0.954 (9/10, +0.245).
+- Hunden solas: **boca_mala** (limpieza de O1) 0.209 (0/10, −0.493); **memoria** (tabla de O1 por la vía lenta) 0.144 (0/10, −0.499).
+- v143 base en estas 10 semillas: 0.702.
+
+**Lectura (no puntúa):** la brecha V143–O1 está en la decisión de acción (a qué objeto ir, si morder lo bueno bajo el cuerpo), no en la
+memoria ni en la limpieza. boca_buena es la pieza más barata que más recupera.
+
+### Fuera del molde: "el linaje como unidad" (comité 2, **EXPLORATORIO, no es dato**) — 25-sep, 15:50–17:40
+`experimentos/organelos/comite2/molde/` (`HALLAZGOS.md`, `tabla_final.md`). 12 variantes de linaje/escudería sobre v14.3, 5 semillas
+(38001–38005), T 100 000, pareado con v143 y o1. Contabilidad coherente 45/45 en los 13 brazos.
+- **NO.** Ninguna variante llega a 0.85 en ≥3/5 (regla de parada); o1 sí, 5/5 (0.95).
+- Cultura pública por pizarra (`piz`): 0.211 (0/5 vs v143 0.619). Arregla el fundador ciego y el control de contenido (`piz_bar`) cae a 0.000,
+  pero destapa un segundo muro: sin los fundadores que morían limpiando, el mundo se tapa y el FILTRO con meta se apaga.
+- Resto, todas peor que v143: barre2 0.621 (2/5) · piz_fund 0.216 · imita 0.190 · piz_ads 0.186 · piz_barre2 0.179 · espera 0.067 ·
+  barre / piz_barre / piz_ads_barre / piz_bar = 0.000.
+- **Ecuación descriptiva:** R0 real = (D − F)/(D + 1) (D = nacimientos reales; F = fundadores). Casi todo el hueco v143–O1 está en el fundador.
+- **Pendiente del director:** "la escudería que se enseña y se reparte" (cultura pública + reparto entre cuerpos de la misma escudería).
+  No construida (el reparto es la pieza 3 de O1). Predicción de su autor: MODESTO p 0.35; FUNCIONA sólo con limpieza además, p 0.15.
+
+### MURO, serie 2 (GLOTU + PATAS): **EN CURSO**
+`PREREGISTRO_muro2.md` (commit `32086e8`), candidato `V143_GLOTUPATAS`, control `V143_GLOTUPATASDESF`, semillas 37101–37140.
+Predicción del creador: NO (p 0.72). Lanzada 28-sep 05:37 (log `experimentos/organelos/muro/serie2_pool6.log`). Sin veredicto todavía.
+En paralelo, un creador desarma `boca_buena` (exploratorio, `experimentos/organelos/boca_buena/`). Sin ERR nuevos.
