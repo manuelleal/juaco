@@ -1137,3 +1137,10 @@ El margen del termostato de boca como gen heredable (fundador en la zona letal, 
 Post-hoc: una vez establecido, casi cualquier g > 0 vive (hasta SINHER establecido da R0 0.82).
 
 Propuesta: medir la misma pregunta en JUACO-ECO, sin refundador. Réplica no corrida (regla de parada). Detalle: `experimentos/organelos/termo_evo/INFORME.md`.
+
+### 28-sep-2026 noche (nube): examen v4 de TERMO′ = NO PASA
+TERMO′ (tabla que olvida + inerte sin parto) arregla T-E (20/20 en los seis escenarios) y pasa T-A, T-B, T-D, T-F y T-G.
+Cae T-C (ii): rev 27 contra 47.5, porque la reversión se mide por conteo y el termostato raciona la comida nueva. La réplica no se corre.
+Pregunta para el director: ¿la reversión de T-C (ii) debe medirse por conteo de mordidas (premia comer más) o por la dirección
+(qué come de lo que encuentra)? Sólo con un criterio nuevo escrito antes, nunca reinterpretando esta serie.
+Detalle: REGISTRO y `experimentos/tronco_v14_4b_examen/`.

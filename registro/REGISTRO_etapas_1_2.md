@@ -7013,3 +7013,23 @@ también en la serie 2.
   más linajes; lo que impide P1 es el refundador de la ENMIENDA 5, que vuelve a la zona letal.
 - Auditor (solo lectura): el NO se sostiene; hallazgos menores H-1..H-6. **Sin ERR nuevos** (ERR-149 lo tomó ECO_SEL en `organelos` el mismo día; el siguiente libre es ERR-150).
   Informe: `experimentos/organelos/termo_evo/INFORME.md`.
+
+### Examen v4 de TERMO′ (candidato v14.4b; nube, 28-sep-2026 20:02–20:44): **NO PASA** (serie; la réplica no se corre)
+- Preregistro `experimentos/tronco_v14_4b_examen/PREREGISTRO_examen_v144b.md` (commit `3cf5919`, antes de la serie). Arnés
+  `identidad_v144bex.py` 151/151; carro `V143_TERMOB` == `V143_TERMO` en la pista (11/11). Semillas 49001–50600. Pool 3.
+  Resultado `experimentos/tronco_v14_4b_examen/datos/examen_v144b_serie_20260928_200234.json` (sha `51e71f0b248d4942`); log `serie_pool3.log`.
+- TERMO′ = TERMO + (1) la tabla del termostato guarda el ÚLTIMO dS sentido (olvida) + (2) sin umbral de parto no hay consigna (inerte
+  en los organismos de una necesidad). (2) es post-hoc y está declarado (decidido tras ver caer T-E por saciedad en el examen de TERMO).
+- **Puertas:**
+  - PASAN: T-A, T-B, T-D, T-F y T-G. **T-E pasa 20/20 en los seis escenarios** (en TERMO daba 13, 0, 18, 14, 11 y 17).
+    - T-A VIVO: r −32 contra −70.5.
+    - T-A CUELLO_MIN: r +5 contra −11.
+    - T-G, G-1: LI 11.8.
+  - **CAEN T-C (ii) y T-R:** rev CAND 27 contra OFF 47.5 (NI: media −16.3, LI −20.3 > −12.5 → NO). En TERMO era rev −12 contra 44.
+- **Lectura:**
+  - El olvido hace su trabajo: tras la inversión ya no come lo que se volvió malo, y rev pasa de −12 a +27.
+  - Pero `rev` = mordidas de B − mordidas de A en Q4, un conteo. El termostato raciona la comida nueva (B): la visita el doble
+    (expB 392 contra 202) y la muerde menos. Es lo que predijo el creador (NO PASA, p 0.85; T-C (ii) p 0.35).
+  - Lo que queda es de la misma familia que la cláusula "come ≥ 0.8 × tronco": la métrica de reversión premia comer más.
+    Es una cuestión de criterio para el director, no se cambia después de ver datos (regla 11).
+- Sin ERR nuevos (siguiente libre ERR-150). v14.3 sigue siendo el tronco.
