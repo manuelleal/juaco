@@ -7041,3 +7041,5 @@ también en la serie 2.
   **T-E sigue cayendo en v14.4b** por cláusulas de conducta real (veneno ≤ 1.10 × tronco, muerde A E2).
 - **Lectura:** el olvido resuelve la reversión (medida bien). Lo que separa a TERMO′ de ser v14.4 es que muerde de más en algunos
   escenarios de T-E. Ese es el siguiente trabajo del tronco.
+
+- **ERR-152 (28-sep, antes de la serie de ECO_SEL_ING; instrumento, sin efecto en ningún veredicto):** en `motor_eco.muta`, σ = 0 NO apaga la mutación de los genes enteros (NK, memoria_rechazo; ±1 forzado). La perilla "apagado" real es p_mut = 0 (verificada bit a bit en el arnés de eco_sel_ing). En ECO_SEL no hay efecto hacia atrás: su caso (B) usaba σ = 0 sólo con rep_umbral, que es real. **ERR-151 queda reservado** para el caso "σ = 0 == F1" de la rama nube/eco-sel-largo (ese texto lo llama ERR-150). **El siguiente libre es ERR-153.**
