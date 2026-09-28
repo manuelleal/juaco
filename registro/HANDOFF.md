@@ -1116,3 +1116,6 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 > - FUNCIONA sólo si serie Y réplica dan FUNCIONA con la letra del muro, sin cambiarla (P1 sigue en ≥ 15/20);
 > - cada preregistro declara cuántos intentos van contra el muro (GLOTU, GLOTU+PATAS y TERMO son los 3 primeros);
 > - lo exploratorio usa semillas distintas de las confirmatorias.
+
+> **DECISIÓN DEL DIRECTOR (28-sep-2026 ~13:30): sin tope de intentos hoy** ("no topes, que siga corriendo"). Las salvaguardas contra pescar siguen:
+> letra del muro sin cambios, semillas nuevas, serie + réplica y conteo de intentos en cada preregistro.
