@@ -1127,3 +1127,8 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Auditor:** SE SOSTIENE (reservas de registro y vocabulario).
 - ERR-149 (caso H del arnés). El siguiente es ERR-150.
 - **Primera capacidad del linaje que nadie diseñó, con serie + réplica.**
+
+> **DECISIÓN DEL DIRECTOR (28-sep-2026 ~16:30): "A, C y D".**
+> - (A) Se autoriza preparar un ERR (ERR-150) para T-C (ii) del criterio v4: medir la reversión por visita y no en mordidas absolutas. Condiciones: validar la regla nueva con el nulo (v14.3 contra sí mismo) antes de aplicarla, aplicarla sólo a una serie nueva con semillas nuevas, y no cambiar ningún veredicto ya registrado.
+> - (C) Genomas de ECO_SEL en la pista de la carrera: en curso.
+> - (D) Nube eco_sel_largo: la lanza el director.
