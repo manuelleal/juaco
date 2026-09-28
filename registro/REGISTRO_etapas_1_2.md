@@ -6922,3 +6922,19 @@ también en la serie 2.
 
 **Siguiente:** examen del criterio de tronco v4 para TERMO (candidato a v14.4). En la nube, `termo_evo/ENCARGO_NUBE.md`:
 ¿la selección encuentra el termostato sola?
+
+## Examen del criterio de tronco v4 para TERMO (candidato v14.4) — serie 28-sep 12:37–13:17: **NO PASA** (cae T-C (ii) y T-E); T-G PASA
+- Preregistro `experimentos/tronco_v14_4_examen/PREREGISTRO_examen_v144.md` (commit `ed19c50`). Arnés 126/126; auditor LISTO PARA SERIE.
+  **Predicción del creador: NO PASA (p 0.99)**, porque la memoria `_adS` es una suma sin olvido.
+- Crudo `experimentos/tronco_v14_4_examen/datos/examen_v144_serie_20260928_123734.json` (sha `25458f0f470b25e6`); log `serie_pool6.log`.
+- **Puertas:** T-A PASA · T-B PASA · T-C NO · T-D PASA · T-E NO · T-F PASA · **T-G PASA** · T-H no medida.
+- **T-C (ii), reversión:** rev CAND −12.0 contra tronco 44.0 (LI −59.4, pide > −12.5). Tras invertirse el mundo, TERMO sigue mordiendo lo
+  que antes era bueno (expA_Q4 1687 contra 666.5; expB_Q4 207.5 contra 1118.5). TERMO cae también en T-E (examen v3′).
+- **T-G, capacidad declarada: PASA con holgura.** El crecimiento neto del linaje sube en el mundo vivo:
+  - CUELLO_MIN: r +8 contra −6 (LI de la diferencia 12.1 > 1);
+  - VIVO: r −33 contra −76 (LI 41.3); muertes 65 contra 94.5.
+  - El control TERMOINV no gana (−21).
+- TRONCO_B y PLACEBO PASAN (el instrumento discrimina). La réplica no se corre: la serie dio NO.
+- **Lectura:** el termostato sirve donde la comida buena sigue siendo buena, pero no se desdice. Su memoria no olvida.
+  → **TERMO NO es v14.4.** El siguiente candidato es TERMO′, con memoria que olvida; está en construcción en
+  `experimentos/tronco_v14_4b_examen/`.
