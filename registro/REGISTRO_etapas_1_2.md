@@ -6856,3 +6856,21 @@ memoria ni en la limpieza. boca_buena es la pieza más barata que más recupera.
 `PREREGISTRO_muro2.md` (commit `32086e8`), candidato `V143_GLOTUPATAS`, control `V143_GLOTUPATASDESF`, semillas 37101–37140.
 Predicción del creador: NO (p 0.72). Lanzada 28-sep 05:37 (log `experimentos/organelos/muro/serie2_pool6.log`). Sin veredicto todavía.
 En paralelo, un creador desarma `boca_buena` (exploratorio, `experimentos/organelos/boca_buena/`). Sin ERR nuevos.
+
+### MURO, serie 2 — GLOTU + PATAS sobre v14.3 (confirmatoria, 28-sep 05:37–06:11): **NO**
+- Preregistro `experimentos/organelos/muro/PREREGISTRO_muro2.md` (commit `32086e8`). Predicción del creador: NO (p 0.72). Arnés 66/66; identidad corta OK.
+- Crudos: `experimentos/organelos/muro/serie2_pool6.log` y
+  `experimentos/organelos/muro/datos/muro2/muro_s37101-37120_T100000_20260928_053711/resumen.json` (sha `f090e7b1855a573f`). Semillas 37101–37120, T 100 000.
+
+| brazo | R0 real (mediana) | semillas con mayoría | pareado vs V143 | vida (mediana) | fundadores (mediana) |
+|---|---|---|---|---|---|
+| v143 | 0.5747 | 1/20 | – | 594.0 | 18.5 |
+| **glotupatas (candidato)** | **0.7257** | **1/20** | gana 12/20, +0.104 | 1276.0 | 7.0 |
+| glotupatasdesf (control, PATAS desfasada) | 0.7230 | 1/20 | gana 11/20, +0.118 | 1267.5 | 8.0 |
+| o1 (techo) | 0.9375 | 20/20 | gana 19/20, +0.276 | 3530.5 | 0.0 |
+
+**Validez completa. Puertas: P1 False · P2 False · P3 True. Veredicto de la letra: NO.** Réplica (37121–37140) no se corre.
+**Lectura:** el candidato y su control dan lo mismo (0.726 contra 0.723; pareado 14/20 con +0.015): **PATAS no agrega nada** sobre GLOTU.
+Lo que sube a v14.3 (~+0.10 a +0.15) es GLOTU, y no alcanza. Coincide con el puenteo: nuestras traducciones genéricas no capturan el
+ingrediente de `boca_buena` de O1. Nota de instrumento (no cambia nada): el runner imprime el encabezado "LA LETRA (PREREGISTRO_muro.md sec. 6)"
+también en la serie 2.
