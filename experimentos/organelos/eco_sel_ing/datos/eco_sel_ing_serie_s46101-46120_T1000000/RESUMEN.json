@@ -1,0 +1,137 @@
+{
+ "etiqueta": "eco_sel_ing_serie_s46101-46120_T1000000",
+ "veredicto": {
+  "C": "FUNCIONA: CON EL HIJO INGENUO LA SELECCION MUEVE EL CEREBRO Y SUBE LA CAPACIDAD SOBRE LA BASE; SIN HERENCIA NO (en esta serie)",
+  "E": "FUNCIONA: EL LINAJE INGENUO SELECCIONADO NECESITA MENOS FUNDADORES QUE LA BASE Y QUE SU CONTROL SIN HERENCIA (en esta serie)"
+ },
+ "lineas": [
+  "semillas por brazo: {'ING_F1': 20, 'ING_SEL_C': 20, 'ING_AZA_C': 20}; otros brazos: []; persiste en T = 1000000: {'ING_F1': 20, 'ING_SEL_C': 20, 'ING_AZA_C': 20}; abortos: []; t_corte distinto de T (vivero permanente): []; bloqueados: 0; carro distinto de FABRICA_ECO: []",
+  "K (media de cuerpos vivos en [T/2, T]), mediana: {'ING_F1': 96.26, 'ING_SEL_C': 101.03, 'ING_AZA_C': 94.58} \u00b7 K_nac (solo NACIDOS): {'ING_F1': 12.56, 'ING_SEL_C': 16.08, 'ING_AZA_C': 7.74} \u00b7 fund_2a (fundadores repuestos en la 2a mitad): {'ING_F1': 128584.0, 'ING_SEL_C': 86833.0, 'ING_AZA_C': 121373.0}",
+  "V1 la base ingenua esta presente (ING_F1 persiste >= 17/20): SE CUMPLE (20) \u00b7 V2 los tres brazos nacen ingenuos (carro FABRICA_ECO): SE CUMPLE",
+  "V3 genetica declarada: {'ING_F1': (True, [], [], 0), 'ING_SEL_C': (True, [], [], 20), 'ING_AZA_C': (True, [], [], 20)}",
+  "P1 firma contra las 8 sombras en t = 100000: rango medio <= 3.5 o >= 6.5 en algun gen de ['alpha', 'aversion', 'tau_e'] en ING_SEL_C: SE CUMPLE ({'alpha': 8.9, 'aversion': 8.15, 'tau_e': 1.3}) \u00b7 guardia: en ING_AZA_C ningun gen sale: SE CUMPLE ({'alpha': 4.85, 'aversion': 5.15, 'tau_e': 5.85})",
+  "P2 ING_SEL_C > ING_F1: K pareado >= 15/20 y mediana >= +1.5 Y K_nac pareado >= 15/20: SE CUMPLE (K 20/20, mediana 4.77; K_nac 20/20, mediana 3.6)",
+  "P3 ING_SEL_C > ING_AZA_C: K pareado >= 15/20 Y K_nac pareado >= 15/20: SE CUMPLE (K 20/20, mediana 6.42; K_nac 20/20, mediana 9.31)",
+  "P4 establecimiento, fund_2a ING_SEL_C < ING_F1 pareado >= 15/20: SE CUMPLE (20/20, mediana -41614.0) \u00b7 ING_SEL_C < ING_AZA_C: SE CUMPLE (20/20, mediana -35504.5)",
+  "VEREDICTO C POR LA LETRA (una serie): FUNCIONA: CON EL HIJO INGENUO LA SELECCION MUEVE EL CEREBRO Y SUBE LA CAPACIDAD SOBRE LA BASE; SIN HERENCIA NO (en esta serie)",
+  "VEREDICTO E (establecimiento) POR LA LETRA (una serie): FUNCIONA: EL LINAJE INGENUO SELECCIONADO NECESITA MENOS FUNDADORES QUE LA BASE Y QUE SU CONTROL SIN HERENCIA (en esta serie)",
+  "descriptivo, genes de los vivos en T (mediana sobre semillas): alpha SEL 4.1033 \u00b7 AZA 1.2092; aversion SEL 1.1315 \u00b7 AZA 1.6119; tau_e SEL 0.3396 \u00b7 AZA 0.4737; eta_s SEL 0.1786 \u00b7 AZA 0.196; hambre_boca SEL 2.9999 \u00b7 AZA 2.5021; NK SEL 42.3746 \u00b7 AZA 41.714",
+  "descriptivo: K_fund {'ING_F1': 83.7625, 'ING_SEL_C': 84.8862, 'ING_AZA_C': 87.1078} \u00b7 fundadores repuestos por linaje en toda la corrida {'ING_F1': 2855.3167, 'ING_SEL_C': 1953.5556, 'ING_AZA_C': 2703.8444} \u00b7 nacimientos 2a mitad {'ING_F1': 23401.5, 'ING_SEL_C': 21201.0, 'ING_AZA_C': 13109.5} \u00b7 vida media de los nacidos muertos 2a mitad {'ING_F1': 267.55, 'ING_SEL_C': 382.5, 'ING_AZA_C': 279.85} \u00b7 veneno + sal {'ING_F1': 0.9996, 'ING_SEL_C': 0.9581, 'ING_AZA_C': 0.9867}"
+ ],
+ "d": {
+  "completo": true,
+  "bloq": 0,
+  "V1": true,
+  "V2": true,
+  "v3": {
+   "ING_F1": [
+    true,
+    [],
+    [],
+    0
+   ],
+   "ING_SEL_C": [
+    true,
+    [],
+    [],
+    20
+   ],
+   "ING_AZA_C": [
+    true,
+    [],
+    [],
+    20
+   ]
+  },
+  "pers": {
+   "ING_F1": 20,
+   "ING_SEL_C": 20,
+   "ING_AZA_C": 20
+  },
+  "P1": true,
+  "G4": true,
+  "P2": true,
+  "P3": true,
+  "P4F": true,
+  "P4A": true,
+  "rS": {
+   "alpha": 8.9,
+   "aversion": 8.15,
+   "tau_e": 1.3
+  },
+  "rA": {
+   "alpha": 4.85,
+   "aversion": 5.15,
+   "tau_e": 5.85
+  },
+  "nF": 20,
+  "mF": 4.767465069860279,
+  "nFn": 20,
+  "nA": 20,
+  "mA": 6.419161676646709,
+  "nAn": 20,
+  "e4F": 20,
+  "e4A": 20
+ },
+ "seg": 1779,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "T": 1000000,
+ "BRAZOS": {
+  "ING_F1": [
+   "MUT0",
+   "FABRICA_ECO",
+   null
+  ],
+  "ING_SEL_C": [
+   "CEREBRO",
+   "FABRICA_ECO",
+   null
+  ],
+  "ING_AZA_C": [
+   "CEREBRO_AZAR",
+   "FABRICA_ECO",
+   null
+  ]
+ },
+ "UMB": {
+  "V1": 17,
+  "V3_mut": 18,
+  "P1_lo": 3.5,
+  "P1_hi": 6.5,
+  "P2_n": 15,
+  "P2_d": 1.5,
+  "P3_n": 15,
+  "P4_n": 15
+ },
+ "shas": {
+  "corre_eco_sel_ing.py": "cc7e8c0377f4ed88",
+  "nucleo_eco_sel_ing.py": "c2189f9d22b72386",
+  "construye_eco_sel_ing.py": "8c74739584d602a0",
+  "PREREGISTRO_eco_sel_ing.md": "761604d173ab6811",
+  "eco_sel/nucleo_eco_sel.py": "6a36e47ce61db3e1",
+  "eco_sel/corre_eco_sel.py": "74aff2f668c2c97a",
+  "frio/corre_frio.py": "3ba8b0f5cf1fbbfa",
+  "frio/motor_frio_rapido.py": "ff9d890a5cce9dec",
+  "juaco_eco/corre_eco_v12.py": "1340d268e1fd93d8",
+  "juaco_eco/corre_eco.py": "47d9cee4d6462116",
+  "juaco_eco/motor_eco.py": "bca3033878b59622",
+  "juaco_eco/carros/FAMB_RES0_ECO.py": "94ea78589bc2ce24",
+  "juaco_eco/carros/FABRICA_ECO.py": "f1163009cb5193a2"
+ }
+}
