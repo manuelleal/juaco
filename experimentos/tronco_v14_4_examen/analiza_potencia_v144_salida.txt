@@ -1,0 +1,13 @@
+CUELLO_MIN semillas 160  r OFF mediana -7.5 (p10 -25.1, p90 9.099999999999994)  sd(d) TRONCO_B 18.792 PLACEBO 19.75
+           media d TRONCO_B 0.887 PLACEBO -0.994; tabla por margen m: {'0': {'G1_nulo_no_centrado': 0.1071, 'G1_nulo_centrado': 0.0488, 'G2_nulo': 0.9816}, '1': {'G1_nulo_no_centrado': 0.0439, 'G1_nulo_centrado': 0.0157, 'G2_nulo': 0.9941}, '2': {'G1_nulo_no_centrado': 0.014, 'G1_nulo_centrado': 0.0049, 'G2_nulo': 0.9987}, '3': {'G1_nulo_no_centrado': 0.0043, 'G1_nulo_centrado': 0.0011, 'G2_nulo': 0.9997}, '4': {'G1_nulo_no_centrado': 0.0009, 'G1_nulo_centrado': 0.0003, 'G2_nulo': 1.0}}
+           m elegido 1 (menor m con P(G-1 | nulo NO centrado) <= 0.05)
+           con m = 1: P(G-1 | nulo) 0.0439  P(G-2 | nulo) 0.9941  P(T-G | nulo, sin G-3) 0.0421
+           potencia de G-1 con d + delta: {'0': 0.0439, '2': 0.2248, '4': 0.5824, '5': 0.7599, '6': 0.8828, '8': 0.9848, '10': 0.999, '15': 1.0, '20': 1.0}
+           margen (menor delta con potencia >= 0.80): 6; P(G-1 y G-2) en el margen, CTRL nulo: 0.8769
+VIVO       semillas 160  r OFF mediana -72.0 (p10 -90.0, p90 -59.0)  sd(d) TRONCO_B 16.511 PLACEBO 17.135
+           media d TRONCO_B 0.6 PLACEBO 0.569; tabla por margen m: {'0': {'G1_nulo_no_centrado': 0.1033, 'G1_nulo_centrado': 0.0593, 'G2_nulo': 0.9132}, '1': {'G1_nulo_no_centrado': 0.0367, 'G1_nulo_centrado': 0.0171, 'G2_nulo': 0.9706}, '2': {'G1_nulo_no_centrado': 0.0101, 'G1_nulo_centrado': 0.0045, 'G2_nulo': 0.9919}, '3': {'G1_nulo_no_centrado': 0.0021, 'G1_nulo_centrado': 0.0006, 'G2_nulo': 0.9981}, '4': {'G1_nulo_no_centrado': 0.0004, 'G1_nulo_centrado': 0.0, 'G2_nulo': 0.9997}}
+           m elegido 1 (menor m con P(G-1 | nulo NO centrado) <= 0.05)
+           con m = 1: P(G-1 | nulo) 0.0367  P(G-2 | nulo) 0.9706  P(T-G | nulo, sin G-3) 0.0301
+           potencia de G-1 con d + delta: {'0': 0.0367, '2': 0.2281, '4': 0.618, '5': 0.7976, '6': 0.9139, '8': 0.9922, '10': 0.9998, '15': 1.0, '20': 1.0}
+           margen (menor delta con potencia >= 0.80): 6; P(G-1 y G-2) en el margen, CTRL nulo: 0.8844
+datos -> datos\humo\potencia_examen_v144_20260928_121917.json  sha256_16 = 4e4df40a5c3cc67d  (script a99a0c20a6362363)
