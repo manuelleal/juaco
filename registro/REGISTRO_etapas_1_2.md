@@ -7028,3 +7028,16 @@ también en la serie 2.
   - **la palanca del muro es el establecimiento (fundadores por linaje), no la causa de muerte del fundador**;
   - hipótesis (no probada): ECO seleccionó el aprendizaje con la tabla de la familia heredada; en la carrera el fundador empieza de cero.
   - Propuesta: si la evolución ha de hacer el órgano del muro, la selección tiene que ocurrir con fundadores ingenuos.
+
+## Examen v14.4c de TERMO′ con ERR-150, `--solo TC,TA` (preregistrado, veredicto INCOMPLETO por diseño) — 28-sep 16:45–17:15
+- Preregistro `experimentos/tronco_v14_4c_examen/PREREGISTRO_examen_v144c.md` (commit `e7a4394`); auditor LISTO.
+  Crudo `examen_v144c_serie_20260928_164556.json` (sha `de0ca4f57344bc65`).
+- **T-C (ii) por visita (ERR-150): PASA.** TERMO′: S2 0.810 → S4 0.830, C +0.018 (LI +0.006 > −0.125; S4 > 0.5).
+  TRONCO: S2 0.912 → S4 0.912. Para comparar, TERMO (v14.4) tenía S4 0.342 y C −0.469.
+  **TERMO′ se desdice por completo:** tras la inversión prefiere lo que ahora es bueno tanto como antes prefería lo que era bueno.
+  - La letra vieja (rev absoluto, sólo informe) da NO: 28.5 contra 50.0. Confirma que esa letra castigaba comer menos.
+- **T-A PASA · T-G PASA** (CUELLO r +7 contra −8.5; muertes 62 contra 73.5). Mundo vivo con ERR-150: PASA.
+- **Veredicto: INCOMPLETO** (T-B, T-C (i), T-D, T-E y T-F del examen, sin medir por diseño). No es tronco:
+  **T-E sigue cayendo en v14.4b** por cláusulas de conducta real (veneno ≤ 1.10 × tronco, muerde A E2).
+- **Lectura:** el olvido resuelve la reversión (medida bien). Lo que separa a TERMO′ de ser v14.4 es que muerde de más en algunos
+  escenarios de T-E. Ese es el siguiente trabajo del tronco.
