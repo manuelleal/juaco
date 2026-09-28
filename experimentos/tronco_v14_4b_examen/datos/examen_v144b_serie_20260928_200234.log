@@ -8,3 +8,68 @@
 [20:02:34 +    0.3s]    letra: la del examen de v14.3 (T-B decide azar G2 con [0.31, 0.6], ERR-122); T-G: capacidad declarada: TERMO sube el crecimiento neto del linaje en el mundo vivo. Brazo CUELLO_MIN, n = 80, d = r - r_OFF pareado (nominal): G-1 CAND gana: LI_95(d_CAND) > 1 (superioridad de una cola, z 1.645, margen m = 1); G-2 el CONTROL TERMOINV no gana: LI_95(d_CTRL) <= 1; G-3 la pieza actua (a_no + a_si > 0) en >= 95 % de las corridas del CANDIDATO. VIVO: se reporta, no decide
 [20:02:34 +    0.4s]    T-D serie: ALIAS [49449, 49492, 49509, 49528, 49563, 49597, 49621, 49652, 49718] LIMPIAS [49407, 49418, 49431, 49444, 49450, 49451, 49457, 49464, 49466] recalculadas -> coinciden
 [20:02:34 +    0.4s] ETAPA 1 — identidad (subproceso, un proceso): identidad_v144bex.py -> debe dar 'RESULTADO: 151/151'.
+[20:04:23 +  108.6s]       |   [  108s] (K) OK  el parser del runner RECHAZA modo de serie sin --pool (codigo 2; solo se parsea)
+[20:04:23 +  108.6s]       |   [  108s] (K) OK  el parser del runner RECHAZA --pool 9 (> 6) (codigo 2; solo se parsea)
+[20:04:23 +  108.6s]       |   [  108s] (K) OK  el parser del runner RECHAZA --reserva sin --sustituye (codigo 2; solo se parsea)
+[20:04:23 +  108.6s]       |   [  108s] (K) OK  el parser del runner RECHAZA --solo TR (T-R sale de TC) (codigo 2; solo se parsea)
+[20:04:23 +  108.6s]       | 
+[20:04:23 +  108.6s]       | (0) 10/10  (A) 15/15  (I) 16/16  (T) 12/12  (V) 4/4  (P) 9/9  (L) 3/3  (D) 6/6  (R) 44/44  (J) 16/16  (K) 16/16   (108 s)
+[20:04:23 +  108.6s]       | datos -> datos/humo/identidad_v144bex_20260928_200422.json  sha256_16 = 849fc60dd30a28b8
+[20:04:23 +  108.6s]       | RESULTADO: 151/151
+[20:04:23 +  108.6s]    identidad OK: RESULTADO: 151/151 (108.2 s; JSON identidad_v144bex_20260928_200422.json)
+[20:04:23 +  108.6s] ETAPA 2 — T-B generalizacion: 80 corridas (T = 200 000), semillas 49001-49020, Pool 3.
+[20:06:14 +  219.7s]           T-B 40/80
+[20:07:58 +  324.4s]           T-B 80/80
+[20:07:58 +  324.4s]    CRUDO (80 corridas) -> examen_v144b_serie_20260928_200234_crudo_TB.json  sha256_16 = a6d6758d734bc12b
+[20:07:58 +  324.4s]    T-B: CAND = v14.4b (bateria_generaliza_v144b) y TRONCO = v14.3 (bateria_generaliza_v143, CONGELADA) en las MISMAS semillas; azar G2 decide con [0.31, 0.6] (ERR-122) para los dos
+[20:07:58 +  324.4s]    T-B [CAND  ] G1 1.000 (>= 0.8) G2 0.997 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.464 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[20:07:58 +  324.4s]    T-B [TRONCO] G1 1.000 (>= 0.8) G2 0.997 (>= 0.85) azar G1 0.500 (en [0.35, 0.65]) azar G2 0.464 (en [0.31, 0.6], ERR-122) K 20/20 -> PASA   [G1 True G2 True azar1 True azar2 True K True]
+[20:07:58 +  324.4s]    T-B banda VIEJA de azar G2 [0.42, 0.58] (SOLO INFORME, NO decide; ERR-122): CAND azar G2 0.464 dentro -> T-B PASA | TRONCO azar G2 0.464 dentro -> T-B PASA
+[20:07:58 +  324.4s]    T-B lectura: CAND == TRONCO (todas las claves) en 40/40 corridas (regla x semilla)
+[20:07:58 +  324.4s] ETAPA 3 — examen v3' (seis etapas): 240 corridas, semillas 49001-49020, Pool 3.
+[20:08:53 +  378.8s]           examen 40/240
+[20:09:43 +  428.8s]           examen 80/240
+[20:10:35 +  481.6s]           examen 120/240
+[20:11:27 +  532.7s]           examen 160/240
+[20:12:18 +  584.5s]           examen 200/240
+[20:13:09 +  635.5s]           examen 240/240
+[20:13:09 +  635.5s]    CRUDO (240 corridas) -> examen_v144b_serie_20260928_200234_crudo_EX.json  sha256_16 = bf3ab369c219d856
+[20:13:09 +  635.5s]       T-E E1   20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[20:13:09 +  635.5s]       T-E E2   20/20 PASA  {'come B Q4 >= 50 (T-C i)': 20, 'muerde A Q4 <= 1.10 x tronco': 20}  pesos (reportados) {'W_A→-3 y W_B→+1': 20}
+[20:13:09 +  635.5s]       T-E E2I  20/20 PASA  {'veneno C total <= 1.10 x tronco': 20, 'tasaA Q4 >= 80% Q2': 20}  pesos (reportados) {'W_C≤-2.5': 20}
+[20:13:09 +  635.5s]       T-E E2J  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.85': 20}
+[20:13:09 +  635.5s]       T-E E2K  20/20 PASA  {'come D Q4 >= 0.8 x tronco': 20, 'veneno B total <= 1.10 x tronco': 20}  pesos (reportados) {'W_D≥0.8': 20}
+[20:13:09 +  635.5s]       T-E E2L  20/20 PASA  {'veneno B total <= 1.10 x tronco': 20, 'come A Q4 >= 0.8 x tronco': 20}  pesos (reportados) {'W_B≈-3': 20}
+[20:13:09 +  635.5s]    T-C (i) [examen E2: come B en Q4 >= 50 en >= 18/20] -> 20/20 -> PASA
+[20:13:09 +  635.5s]    T-E [examen v3': conducta por escenario frente al tronco en las mismas semillas >= 18/20, tolerancias 1.10 / 0.8] -> E1 20/20 E2 20/20 E2I 20/20 E2J 20/20 E2K 20/20 E2L 20/20 -> PASA
+[20:13:09 +  635.5s]    T-F examen [<= 1.25 x tronco] -> celdas 32.0/32.0 (1.0x) splits 2.0/2.0 (1.0x) deaths 131.0/131.0 (1.0x) -> PASA
+[20:13:09 +  635.5s]    examen: el TRONCO contra las clausulas absolutas: E2 come B >= 50 20/20, E2I tasa 20/20; CAND == TRONCO 120/120; E2 muerde A en Q4 (mediana) CAND 10.0 / TRONCO 10.0 (la prediccion de sec. 5)
+[20:13:09 +  635.5s] ETAPA 4 — T-D sal muda: 36 corridas (ALIAS [49449, 49492, 49509, 49528, 49563, 49597, 49621, 49652, 49718], LIMPIAS [49407, 49418, 49431, 49444, 49450, 49451, 49457, 49464, 49466]), Pool 3.
+[20:14:05 +  691.2s]           T-D 36/36
+[20:14:05 +  691.2s]    CRUDO (36 corridas) -> examen_v144b_serie_20260928_200234_crudo_TD.json  sha256_16 = eebc8bca5fe35dbf
+[20:14:05 +  691.2s]    T-D [OFF ] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 511.0  des_splits 7.0  muertes alias/limpias 43.0/38.0 -> PASA
+[20:14:05 +  691.2s]    T-D [CAND] C1 {'n': 9, 'med': 0.0, 'pasa': True}  C2 {'n28': 9, 'n25': 9, 'med': -3.0, 'pasa': True}  C6 {'sal': 9, 'veneno': 9, 'pasa': True}  exp sal 465.0  des_splits 7.0  muertes alias/limpias 31.0/32.0 -> PASA
+[20:14:05 +  691.2s]    T-D lectura: CAND == OFF (todas las claves) en 0/18
+[20:14:05 +  691.2s] ETAPA 5 — T-C (ii) reversion en el mundo vivo: 320 corridas, semillas 49101-49180 (TRONCO_B 149101-149180), Pool 3.
+[20:15:17 +  762.7s]           T-C ii 40/320
+[20:16:21 +  827.5s]           T-C ii 80/320
+[20:17:26 +  892.5s]           T-C ii 120/320
+[20:18:33 +  959.5s]           T-C ii 160/320
+[20:19:38 + 1023.7s]           T-C ii 200/320
+[20:20:38 + 1084.5s]           T-C ii 240/320
+[20:21:40 + 1146.6s]           T-C ii 280/320
+[20:22:47 + 1213.6s]           T-C ii 320/320
+[20:22:47 + 1213.6s]    CRUDO (320 corridas) -> examen_v144b_serie_20260928_200234_crudo_TCii.json  sha256_16 = 0d840971c859ca56
+[20:22:47 + 1213.6s] ETAPA 6 — T-A supervivencia (+ el CONTROL TERMOINV de T-G): 800 corridas, Pool 3.
+[20:23:55 + 1281.6s]           T-A 40/800
+[20:24:58 + 1344.5s]           T-A 80/800
+[20:26:02 + 1407.9s]           T-A 120/800
+[20:27:06 + 1472.4s]           T-A 160/800
+[20:28:07 + 1533.5s]           T-A 200/800
+[20:29:07 + 1593.2s]           T-A 240/800
+[20:30:13 + 1659.5s]           T-A 280/800
+[20:31:20 + 1726.1s]           T-A 320/800
+[20:32:26 + 1791.9s]           T-A 360/800
+[20:33:28 + 1854.0s]           T-A 400/800
+[20:34:32 + 1918.2s]           T-A 440/800
+[20:35:36 + 1982.2s]           T-A 480/800
