@@ -1,0 +1,965 @@
+{
+ "T": 20000,
+ "semillas": [
+  49045,
+  49046
+ ],
+ "total": "RESULTADO: 151/151",
+ "bloques": {
+  "0": [
+   10,
+   10
+  ],
+  "A": [
+   15,
+   15
+  ],
+  "I": [
+   16,
+   16
+  ],
+  "T": [
+   12,
+   12
+  ],
+  "V": [
+   4,
+   4
+  ],
+  "P": [
+   9,
+   9
+  ],
+  "L": [
+   3,
+   3
+  ],
+  "D": [
+   6,
+   6
+  ],
+  "R": [
+   44,
+   44
+  ],
+  "J": [
+   16,
+   16
+  ],
+  "K": [
+   16,
+   16
+  ]
+ },
+ "detalle": [
+  {
+   "bloque": "0",
+   "nombre": "organismo_v144b.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "organismo_v144bg.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "organismo_v144bcal.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "bateria_v144b.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "bateria_generaliza_v144b.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "corre_examen_v144b.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "umbrales_examen_v144b.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "busca_semillas_v144b.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "carros/V143_TERMOB.py en disco == construccion por anclas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "0",
+   "nombre": "las 38 anclas reusadas tienen su sha (carros, examen de v14.3, TERMO y su serie)",
+   "ok": true,
+   "det": "[]"
+  },
+  {
+   "bloque": "A",
+   "nombre": "AB por defecto: TERMO' apagado == v14.3 (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "AB invertido: TERMO' apagado == v14.3 (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "AB + patron nuevo C: TERMO' apagado == v14.3 (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "AB solap_AB=3 (E2L): TERMO' apagado == v14.3 (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "AB sin plasticidad: TERMO' apagado == v14.3 (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "AB via lenta apagada: TERMO' apagado == v14.3 (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "regla/px0: TERMO' apagado == v143g",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "regla/xor01: TERMO' apagado == v143g",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "regla/azar: TERMO' apagado == v143g",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "T-A VIVO: TERMO' apagado == v143cal (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "T-A CUELLO_MIN: TERMO' apagado == v143cal (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "T-C (ii) reversion en T/2: TERMO' apagado == v143cal (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "T-D ALIAS 326 (sal muda): TERMO' apagado == v143cal (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "T-D LIMPIA 307 (sal muda): TERMO' apagado == v143cal (todas las claves)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "A",
+   "nombre": "vivo=0, n_nec=1: organismo_v144bcal(termo=0) == organismo_v143cal",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB por defecto: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB invertido: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB + patron nuevo C: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB solap_AB=3 (E2L): v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB sin plasticidad: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB via lenta apagada: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB sin puerta: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB sin division por signo: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB sin hija dispersa: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB sin puerta por codigo: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB N apagada (norm_lenta=0): v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "AB D comida solap_B=2 (E2K): v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "en los 12: la pieza encendida (termo 1) con U None NO decide: dec = a_no = a_si = 0",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "regla/px0: v144bg (defectos) == v143g en la fisica (dec 0)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "regla/xor01: v144bg (defectos) == v143g en la fisica (dec 0)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "I",
+   "nombre": "regla/azar: v144bg (defectos) == v143g en la fisica (dec 0)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-A VIVO s49045: TERMO' == TERMO en la fisica y los contadores (dec 622, a_no 327, a_si 11)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-A CUELLO_MIN s49045: TERMO' == TERMO en la fisica y los contadores (dec 393, a_no 191, a_si 12)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-D ALIAS 326 (sal muda) s326: TERMO' == TERMO en la fisica y los contadores (dec 456, a_no 262, a_si 5)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-D LIMPIA 307 (sal muda) s307: TERMO' == TERMO en la fisica y los contadores (dec 553, a_no 368, a_si 6)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-A VIVO s49046: TERMO' == TERMO en la fisica y los contadores (dec 495, a_no 244, a_si 7)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-A CUELLO_MIN s49046: TERMO' == TERMO en la fisica y los contadores (dec 275, a_no 104, a_si 9)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-D ALIAS 326 (sal muda) s49046: TERMO' == TERMO en la fisica y los contadores (dec 583, a_no 368, a_si 11)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-D LIMPIA 307 (sal muda) s49046: TERMO' == TERMO en la fisica y los contadores (dec 583, a_no 368, a_si 11)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "T-A VIVO: TERMOINV (termo=2) con la tabla que olvida == TERMOINV de TERMO",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "T",
+   "nombre": "vivo=0, n_nec=1 (U 1.0): v144bcal vs v144cal: DISTINTAS; la primera decision distinta es un EMPATE DE ULP -- consulta 408: nivel (1.4, 1.0), TERMO' [0.8, 0.0, 1] -> False, TERMO [28.000000000000014, 0.0, 35] -> True; s 0.8 contra 0.8000000000000004 (3 ulp), umbrales 1.4 / 1.4000000000000001",
+   "ok": true,
+   "det": "consulta 408: nivel (1.4, 1.0), TERMO' [0.8, 0.0, 1] -> False, TERMO [28.000000000000014, 0.0, 35] -> True; s 0.8 contra 0.8000000000000004 (3 ulp), umbrales 1.4 / 1.4000000000000001"
+  },
+  {
+   "bloque": "T",
+   "nombre": "AB por defecto con rep_umbral=1.0 explicito: v144b vs TERMO (v144): DISTINTAS; la primera decision distinta es un EMPATE DE ULP -- consulta 408: nivel (1.4,), TERMO' [0.8, 1] -> False, TERMO [28.000000000000014, 35] -> True; s 0.8 contra 0.8000000000000004 (3 ulp), umbrales 1.4 / 1.4000000000000001",
+   "ok": true,
+   "det": "consulta 408: nivel (1.4,), TERMO' [0.8, 1] -> False, TERMO [28.000000000000014, 35] -> True; s 0.8 contra 0.8000000000000004 (3 ulp), umbrales 1.4 / 1.4000000000000001"
+  },
+  {
+   "bloque": "T",
+   "nombre": "regla/px0 con rep_umbral=1.0 explicito: v144bg vs TERMO (v144g): IDENTICAS -- identicas (2013 consultas a la letra)",
+   "ok": true,
+   "det": "identicas (2013 consultas a la letra)"
+  },
+  {
+   "bloque": "V",
+   "nombre": "T-C (ii) (invierte en 10000): TERMO' != TERMO (rev TERMO' -3, TERMO -4; mordA Q4 15 / 22) (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "V",
+   "nombre": "T-C (ii): tras invertir la memoria de A es EXACTAMENTE el veneno [-0.4, 0.0, 1] ([-0.4, 0.0, 1]) y la de B la comida [0.8, 0.0, 1] ([0.8, 0.0, 1])",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "V",
+   "nombre": "examen AB invertido con rep_umbral=1.0: TERMO' != TERMO (muerde A por cuarto [38, 25, 11, 17] / [39, 26, 21, 49]) (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "V",
+   "nombre": "examen AB invertido: la memoria de A tras invertir es [-0.4, 1] ([-0.4, 1]); la de TERMO era una suma ([49.199999999999875, 135])",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "P",
+   "nombre": "T-A VIVO: TERMO' != v14.3 y a_no + a_si > 0 (327 / 11) (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "P",
+   "nombre": "T-A CUELLO_MIN: TERMO' != v14.3 y a_no + a_si > 0 (191 / 12) (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "P",
+   "nombre": "T-D ALIAS 326 (sal muda): TERMO' != v14.3 y a_no + a_si > 0 (262 / 5) (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "P",
+   "nombre": "T-C (ii): TERMO' != v14.3 y a_no + a_si > 0 (239 / 19) -- la condicion de T-R (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "P",
+   "nombre": "T-A VIVO: TERMOINV (termo=2) != TERMO' y actua (269 / 8) (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "P",
+   "nombre": "examen AB con rep_umbral=1.0: la pieza decide (95 / 1) y difiere de v14.3 (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "P",
+   "nombre": "determinismo: T-A VIVO con TERMO', dos veces, identico",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "P",
+   "nombre": "determinismo: examen AB invertido con rep_umbral=1.0, dos veces, identico",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "P",
+   "nombre": "guardas: termo=2 con UNA necesidad aborta (v144b, v144bg, v144bcal con vivo=0); termo=3 aborta",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "L",
+   "nombre": "termo_letra es el MISMO texto en los seis organismos (v144b, v144bg, v144bcal y TERMO v144, v144g, v144cal)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "L",
+   "nombre": "termo_letra == V143_TERMO / V143_TERMOINV ._tm_boca con memorias de la forma nueva [dE, dAg, 1]: 6516 casos, 0 distintos",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "L",
+   "nombre": "T-A VIVO: la memoria del organismo == [ultimo dS nominal, 1] por estimulo ({'A': [0.8, 0.0, 1], 'B': [-0.4, 0.0, 1], 'C': [0.0, 0.8, 1], 'D': [0.0, -0.4, 1]})",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "D",
+   "nombre": "tarea_vivo CAND == resumen de organismo_v144bcal con kw_vivo_cand (norm_lenta=1, termo=1)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "D",
+   "nombre": "tarea_vivo CTRL corre termo=2 (2) y difiere de CAND; CAND difiere de OFF",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "D",
+   "nombre": "tarea_rev CAND == organismo_v144bcal con kw_rev_cand (rev, mordidas, muertes, telemetria)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "D",
+   "nombre": "tarea_sal CAND == organismo_v144bcal con kw_sal(CAND)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "D",
+   "nombre": "tarea_ex E2 (T = 100 000): bateria_v144b CON SUS DEFECTOS == bateria_v143 (CONGELADA), todas las claves (muerde A por cuarto [67, 76, 36, 5] / [67, 76, 36, 5])",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "D",
+   "nombre": "tarea_tb px0 (T = 200 000): bateria_generaliza_v144b CON SUS DEFECTOS == bateria_generaliza_v143 (CONGELADA)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A VIVO: OFF == corre_vivo_rep2.BRAZOS[VIVO] + desambiguar=1 + placebo=0 (el montaje de V4-CAL)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A VIVO: CAND difiere de OFF SOLO en norm_lenta=1 y termo=1",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A VIVO: CTRL (TERMOINV) difiere de OFF SOLO en norm_lenta=1 y termo=2",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A VIVO: TRONCO_B == OFF campo a campo",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A VIVO: PLACEBO difiere de OFF SOLO en placebo=1",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A VIVO: la consigna de TERMO es rep_umbral = 1.0 (la de la pista: S = 1.4 con s = 0.8, PREREGISTRO_termo sec. 2)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A CUELLO_MIN: OFF == corre_vivo_rep2.BRAZOS[CUELLO_MIN] + desambiguar=1 + placebo=0 (el montaje de V4-CAL)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A CUELLO_MIN: CAND difiere de OFF SOLO en norm_lenta=1 y termo=1",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A CUELLO_MIN: CTRL (TERMOINV) difiere de OFF SOLO en norm_lenta=1 y termo=2",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A CUELLO_MIN: TRONCO_B == OFF campo a campo",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A CUELLO_MIN: PLACEBO difiere de OFF SOLO en placebo=1",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-A CUELLO_MIN: la consigna de TERMO es rep_umbral = 1.0 (la de la pista: S = 1.4 con s = 0.8, PREREGISTRO_termo sec. 2)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-C ii: OFF == mini_vivo.BRAZOS[VIVO] + desambiguar=1 + invertir_vivo_en=T/2 + placebo=0",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-C ii: CAND difiere de OFF SOLO en norm_lenta=1 y termo=1",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-C ii: TRONCO_B == OFF",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-C ii y T-D: sin rep_umbral en los kwargs -> la consigna es el DEFECTO de organismo_v144bcal, 1.0 (declarado)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 T-D: OFF == corre_sal.BASE (sal muda) + desambiguar=1 + placebo=0; CAND == OFF + norm_lenta=1 + termo=1",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 TRONCO_B = semilla s + 100000 (umbrales_v4)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R1 el OFF del mundo vivo (organismo_v3cal = v14.2) y organismo_v143cal: mismos defectos salvo norm_lenta (v14.3 = v14.2 + N, inerte con masa 3; la igualdad bit a bit la prueba el arnes (A'))",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R2 bateria_v144b.ETAPAS == bateria_v143.ETAPAS (campo a campo)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R2 bateria_v144b: SEIS, ESC_ID, EVENTO == bateria_v143",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R2 bateria_v144b.CRIT: mismas etapas y mismos nombres que bateria_v143",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R3 bateria_generaliza_v144b: organismo_v144b -> (organismo_v144bg, kwargs CAMPO A CAMPO == organismo_v143)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R3 bateria_generaliza_v144b: las entradas anteriores intactas; REGLAS == [px0, azar]",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R3 organismo_v144bg: mismos defectos que organismo_v143g + termo=1 y rep_umbral=None (v14.4b (2): una necesidad, sin umbral de parto -> la pieza no decide)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 organismo_v144b: mismos defectos que organismo_v143 + termo=1 y rep_umbral=None (v14.4b (2))",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 organismo_v144bcal: mismos defectos que organismo_v143cal + termo=1 (rep_umbral ya existia: 1.0)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 organismo_v144b/v144bg/v144bcal y sus origenes: mismas constantes de modulo (L, NK, NKMAX, K, PAT, R_VAL, E_VAL)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 la letra de la pieza (termo_letra) es el MISMO texto en organismo_v144b, v144bg y v144bcal",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 v14.4b: la letra de la pieza es EXACTAMENTE la de TERMO (v14.4): mismo texto de termo_letra en los seis organismos",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 v14.4b: organismo_v144bcal tiene los MISMOS defectos que organismo_v144cal (TERMO en el mundo vivo; rep_umbral 1.0)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R4 v14.4b T-R: letra declarada y umbral de actuacion == el de G-3 (0.95), n == n_vivo (80)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 NUM == umbrales_examen_v143.NUM y ERR122 == el de v14.3 (MISMA letra, SIN cambios)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 LETRA de T-A, T-B, T-C, T-D, T-E, T-F y T-H == umbrales_examen_v143.LETRA (texto identico)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-A == umbrales_v4.V4[T-A] (1.10, 10, margen 10, z 1.645, n 80)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-C ii == umbrales_v4.V4[T-C_ii] (margen 12.5, n 80); T-F == 1.25",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-B == corre_dE5_v2.UMB[T-B] en G1, G2 y azar G1 (0.80, 0.85, [0.35, 0.65]): sin cambio",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-B azar G2: [0.31, 0.60] (ERR-122, la letra con la que entro v14.3); el origen corre_dE5_v2 [0.42, 0.58] == la banda vieja, que solo se reporta",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-E / T-C i / T-F examen == corre_dE5_v2 (TOL 1.10, TOL_COME 0.8, PUERTA_E 18, factor 1.25)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-D: C1, C2, C6 existen en creacion_B/corre_codigo.UMBRALES (se importan, no se copian)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R5 T-G: brazo CUELLO_MIN, z 1.645 (== T-A), n 80 (== n_vivo), m = 1 == el m elegido por analiza_potencia_v144 sobre el nulo real; P(T-G | nulo) 0.042 y P(T-G) en delta 6: 0.877 == el JSON",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R6 semillas: todas distintas entre papeles, dentro de 49001-50600 sin 50000, ninguna de V4-CAL, subida_n7, tronco_v14_3, el examen de v14.3, TERMO, TERMO_EVO ni el examen de TERMO; TRONCO_B s+100000 (149xxx) sin choque",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R6 T-D serie: las 9 ALIAS y 9 LIMPIAS recalculadas == las declaradas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "R",
+   "nombre": "R6 T-D replica: las 9 ALIAS y 9 LIMPIAS recalculadas == las declaradas",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 serie: T-B (G1, G2, azares, K, pasa de CAND y TRONCO) == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 serie: T-E por escenario, T-C (i) y T-F examen == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 serie: T-D (C1, C2, C6 de OFF y CAND) == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 serie: T-A, T-C (ii), T-F vivo de CAND, TRONCO_B y PLACEBO == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 serie: las sub-puertas T-A..T-F_vivo == las registradas",
+   "ok": true,
+   "det": "{'T-A': (True, True), 'T-B': (True, True), 'T-C_i': (True, True), 'T-C_ii': (True, True), 'T-D': (True, True), 'T-E': (True, True), 'T-F_examen': (True, True), 'T-F_vivo': (True, True)}"
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 replica: T-B (G1, G2, azares, K, pasa de CAND y TRONCO) == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 replica: T-E por escenario, T-C (i) y T-F examen == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 replica: T-D (C1, C2, C6 de OFF y CAND) == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 replica: T-A, T-C (ii), T-F vivo de CAND, TRONCO_B y PLACEBO == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "v14.3 replica: las sub-puertas T-A..T-F_vivo == las registradas",
+   "ok": true,
+   "det": "{'T-A': (True, True), 'T-B': (True, True), 'T-C_i': (True, True), 'T-C_ii': (True, True), 'T-D': (True, True), 'T-E': (True, True), 'T-F_examen': (True, True), 'T-F_vivo': (True, True)}"
+  },
+  {
+   "bloque": "J",
+   "nombre": "TERMO serie: T-B (G1, G2, azares, K, pasa de CAND y TRONCO) == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "TERMO serie: T-E por escenario, T-C (i) y T-F examen == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "TERMO serie: T-D (C1, C2, C6 de OFF y CAND) == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "TERMO serie: T-A, T-C (ii), T-F vivo de CAND, TRONCO_B y PLACEBO == lo registrado",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "J",
+   "nombre": "TERMO serie: las sub-puertas T-A..T-G == las registradas",
+   "ok": true,
+   "det": "{'T-A': (True, True), 'T-B': (True, True), 'T-C_i': (True, True), 'T-C_ii': (False, False), 'T-D': (True, True), 'T-E': (False, False), 'T-F_examen': (True, True), 'T-F_vivo': (True, True), 'T-G': (True, True)}"
+  },
+  {
+   "bloque": "J",
+   "nombre": "TERMO serie: T-R da NO (T-C ii False con la pieza actuando 80/80) y el veredicto por la letra de v14.4b es NO PASA por T-C, T-E y T-R",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "TRONCO_B (s + 100000) != OFF en la misma semilla-etiqueta (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "K",
+   "nombre": "PLACEBO (placebo = 1) != OFF (DEBE diferir)",
+   "ok": true,
+   "det": "SALIO IDENTICO"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el juez dice SI al sintetico bueno en las OCHO puertas (siete de v4 + T-R) y la serie se lee",
+   "ok": true,
+   "det": "{'T-A': True, 'T-B': True, 'T-C': True, 'T-D': True, 'T-E': True, 'T-F': True, 'T-G': True, 'T-R': True}"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el juez dice NO a un candidato sintetico MALO en T-A, T-B, T-C, T-D, T-G y T-R",
+   "ok": true,
+   "det": "{'T-A': False, 'T-B': False, 'T-C': False, 'T-D': False, 'T-E': True, 'T-F': True, 'T-G': False, 'T-R': False}"
+  },
+  {
+   "bloque": "K",
+   "nombre": "T-R cae si la pieza no actua en 5/80 corridas CAND de T-C (ii) (0.9375 < 0.95), aunque T-C (ii) pase ({'T_C_ii': True, 'actua': 75, 'n': 80, 'frac': 0.938, 'pasa': False})",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "T-R cae si falta la telemetria de una corrida CAND de T-C (ii) (n 79), aunque T-C (ii) pase ({'T_C_ii': True, 'actua': 79, 'n': 79, 'frac': 1.0, 'pasa': False})",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "T-G: CAND == OFF (d = 0: G-1 cae)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "T-G: el CONTROL gana (G-2 cae)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "T-G: la pieza no actua en 5/80 de T-A (G-3 cae)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "una letra MUTADA (U + s/3) difiere del carro en 3 de 4 casos (la comparacion de (L) tiene dientes)",
+   "ok": true,
+   "det": ""
+  },
+  {
+   "bloque": "K",
+   "nombre": "el parser del runner RECHAZA bandera desconocida --humoo (codigo 2; solo se parsea)",
+   "ok": true,
+   "det": "codigo 2"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el parser del runner RECHAZA abreviatura --hum (allow_abbrev=False) (codigo 2; solo se parsea)",
+   "ok": true,
+   "det": "codigo 2"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el parser del runner RECHAZA modo de serie sin --pool (codigo 2; solo se parsea)",
+   "ok": true,
+   "det": "codigo 2"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el parser del runner RECHAZA --pool 9 (> 6) (codigo 2; solo se parsea)",
+   "ok": true,
+   "det": "codigo 2"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el parser del runner RECHAZA --reserva sin --sustituye (codigo 2; solo se parsea)",
+   "ok": true,
+   "det": "codigo 2"
+  },
+  {
+   "bloque": "K",
+   "nombre": "el parser del runner RECHAZA --solo TR (T-R sale de TC) (codigo 2; solo se parsea)",
+   "ok": true,
+   "det": "codigo 2"
+  }
+ ],
+ "seg": 100.3,
+ "python": "3.13.12",
+ "numpy": "2.4.3"
+}

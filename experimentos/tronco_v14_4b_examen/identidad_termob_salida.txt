@@ -1,0 +1,17 @@
+  [    0s] OK    (K) carros/V143_TERMOB.py en disco == construccion por anclas (origen V143_TERMO 3db639cab75641fb)
+  sha V143_TERMOB ff532f78fdc80888 · V143_TERMO 3db639cab75641fb · V143_TERMOINV da106a995b18bafd · pista 9f47c65e438e0ff4
+  [    4s] OK    (a) V143_TERMOB con TERMO = 0 == V143, salida ENTERA (N 9, s 49091, T 2000, fundador limpio)
+  [   12s] OK    (b) V143_TERMOB == V143_TERMO en la FISICA de la pista (todo salvo d['carro']; N 9, s 49091, T 5000)
+  [   12s] OK    (b) ... y en la telemetria de la pieza (dec, a_no, a_si, mord por linaje; s 49091, T 5000)
+  [   47s] OK    (b) V143_TERMOB == V143_TERMO en la FISICA de la pista (todo salvo d['carro']; N 9, s 49092, T 20000)
+  [   47s] OK    (b) ... y en la telemetria de la pieza (dec, a_no, a_si, mord por linaje; s 49092, T 20000)
+  [   56s] OK    (c) V143_TERMOB con TERMO = 2 (TERMOINV con la tabla que olvida) == V143_TERMOINV en la fisica (s 49091, T 5000)
+  [   56s] OK    (c) la pieza ACTUA en TERMO' y en su TERMOINV (a_no + a_si > 0): {'termo': 1, 'dec': 82, 'a_no': 34, 'a_si': 8, 'mord': 32} · {'termo': 2, 'dec': 131, 'a_no': 67, 'a_si': 14, 'mord': 58}
+  [   56s] OK    (c) TERMOINV != TERMO' en la fisica (s 49091, T 5000)
+  [   60s] OK    (d) determinismo: V143_TERMOB dos corridas iguales (s 49091, T 5000)
+  [   60s] OK    (d) la pieza lee _tmS (el ultimo dS), no la suma de APR: _tmS mala -> la boca de v14.3 (True, True); _tmS buena -> termostato (E 1.45 no muerde: False; E 1.2 muerde: True)
+ARNES PASA · 60s
+
+real	1m0.329s
+user	0m59.319s
+sys	0m0.020s

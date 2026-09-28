@@ -6993,3 +6993,43 @@ también en la serie 2.
   Se corrigió el caso para medir sólo hijos de padre no fundador (AZA 3/203 y 0/309; SEL 346/346 y 276/276). El umbral < 5 % no cambió.
   Salida vieja: `identidad_eco_sel_salida_v1_57de59.txt`. Auditado: legítimo. **El siguiente ERR libre es ERR-150.**
 - **Niveles:** propuesta del coordinador para los niveles 10–13 (ECO): subir por este FUNCIONA ×2. El porcentaje lo fija el director.
+
+### TERMO_EVO — el margen del termostato de boca como GEN heredable (nube, 28-sep-2026 14:45–17:40): **NO**
+- Encargo `experimentos/organelos/termo_evo/ENCARGO_NUBE.md`; preregistro `PREREGISTRO_termo_evo.md` (commit `e471de9`, antes del humo y
+  de la serie). Carros por anclas desde V143.py (2a03048a7f1525e5) con `construye_evo.py` (6cdd7dd10e9a0594). El gen g es un float por
+  cuerpo: el hijo lo recibe por `al_parir` → cola → `nace` (sin tocar la pista), con g_hijo = g_padre + N(0, 0.03), recortado a [−0.2, 1.0].
+  El fundador sortea g de U[−0.10, 0.10] (zona letal). Control SINHER: el hijo re-sortea. Arnés `identidad_evo.py` PASA (388 s): EVO 0 == V143
+  salida entera; M40 == HIBB m40 en la física; SINHER == EVO hasta el primer nacimiento; spawn no toca el rng del cuerpo; letra 11/11.
+- Serie 41001–41020, T 100 000, Pool 3, 120 corridas, 0 abortos. Resumen `datos/evo_s41001-41020_T100000_20260928_144525/resumen.json`
+  (sha `9c621d7136731dce`). R0 real: v143 0.611 (1/20) · **evo 0.309 (2/20)** · sinher 0.184 (0/20) · ancho 0.753 (4/20) · m40 0.895 (11/20)
+  · o1 0.941 (20/20).
+- **Validez completa. P1 False (2/20) · P2 True (evo–sinher 18/20, +0.141) · P3 False (7/20). Veredicto de la letra: NO.** La réplica no se corre.
+- Curva de g (padres, media pooled): 0.066 → 0.092 en 100 000 pasos; en SINHER, plana en ~0.055–0.063. Paisaje: con g < 0, 0 hijos;
+  con g en [0, 0.10), 0.38–0.65 hijos por cuerpo; con g ≥ 0.10, 2.3–3.2.
+- **Larga DESCRIPTIVA** 41041–41050, T 300 000 (sha `e504b7f891d33b31`): g de los padres sube de 0.075 a 0.121 sin frenarse; 9/10 semillas
+  en la banda al final; evo–sinher 10/10, +0.407; evo 0.667, con 0/10 semillas con mayoría que cruza.
+- Post-hoc (NO preregistrado; `lee_posthoc.py`; auditoría H-6): los linajes establecidos de evo (66/180) tienen R0 0.922 con g ≈ 0.086.
+  Los de SINHER (33/180) tienen R0 0.824 con g ≈ 0.045. Una vez establecido, casi cualquier g > 0 vive. La herencia gana porque establece
+  más linajes; lo que impide P1 es el refundador de la ENMIENDA 5, que vuelve a la zona letal.
+- Auditor (solo lectura): el NO se sostiene; hallazgos menores H-1..H-6. **Sin ERR nuevos** (ERR-149 lo tomó ECO_SEL en `organelos` el mismo día; el siguiente libre es ERR-150).
+  Informe: `experimentos/organelos/termo_evo/INFORME.md`.
+
+### Examen v4 de TERMO′ (candidato v14.4b; nube, 28-sep-2026 20:02–20:44): **NO PASA** (serie; la réplica no se corre)
+- Preregistro `experimentos/tronco_v14_4b_examen/PREREGISTRO_examen_v144b.md` (commit `3cf5919`, antes de la serie). Arnés
+  `identidad_v144bex.py` 151/151; carro `V143_TERMOB` == `V143_TERMO` en la pista (11/11). Semillas 49001–50600. Pool 3.
+  Resultado `experimentos/tronco_v14_4b_examen/datos/examen_v144b_serie_20260928_200234.json` (sha `51e71f0b248d4942`); log `serie_pool3.log`.
+- TERMO′ = TERMO + (1) la tabla del termostato guarda el ÚLTIMO dS sentido (olvida) + (2) sin umbral de parto no hay consigna (inerte
+  en los organismos de una necesidad). (2) es post-hoc y está declarado (decidido tras ver caer T-E por saciedad en el examen de TERMO).
+- **Puertas:**
+  - PASAN: T-A, T-B, T-D, T-F y T-G. **T-E pasa 20/20 en los seis escenarios** (en TERMO daba 13, 0, 18, 14, 11 y 17).
+    - T-A VIVO: r −32 contra −70.5.
+    - T-A CUELLO_MIN: r +5 contra −11.
+    - T-G, G-1: LI 11.8.
+  - **CAEN T-C (ii) y T-R:** rev CAND 27 contra OFF 47.5 (NI: media −16.3, LI −20.3 > −12.5 → NO). En TERMO era rev −12 contra 44.
+- **Lectura:**
+  - El olvido hace su trabajo: tras la inversión ya no come lo que se volvió malo, y rev pasa de −12 a +27.
+  - Pero `rev` = mordidas de B − mordidas de A en Q4, un conteo. El termostato raciona la comida nueva (B): la visita el doble
+    (expB 392 contra 202) y la muerde menos. Es lo que predijo el creador (NO PASA, p 0.85; T-C (ii) p 0.35).
+  - Lo que queda es de la misma familia que la cláusula "come ≥ 0.8 × tronco": la métrica de reversión premia comer más.
+    Es una cuestión de criterio para el director, no se cambia después de ver datos (regla 11).
+- Sin ERR nuevos (siguiente libre ERR-150). v14.3 sigue siendo el tronco.

@@ -1127,3 +1127,20 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Auditor:** SE SOSTIENE (reservas de registro y vocabulario).
 - ERR-149 (caso H del arnés). El siguiente es ERR-150.
 - **Primera capacidad del linaje que nadie diseñó, con serie + réplica.**
+
+### 28-sep-2026 (nube, rama `nube/termo-evo-20260928`): TERMO_EVO = NO
+El margen del termostato de boca como gen heredable (fundador en la zona letal, σ 0.03) **sube con herencia y no sin ella**:
+- padres 0.066 → 0.092 en 100k; 0.075 → 0.121 en 300k (descriptiva);
+- EVO le gana a SINHER 18/20 en la serie y 10/10 en la larga.
+
+**Pero no cruza** (P1 2/20; P3 7/20; R0 0.309 contra v143 0.611). Cada refundación de la ENMIENDA 5 vuelve a sortear g en la zona letal.
+Post-hoc: una vez establecido, casi cualquier g > 0 vive (hasta SINHER establecido da R0 0.82).
+
+Propuesta: medir la misma pregunta en JUACO-ECO, sin refundador. Réplica no corrida (regla de parada). Detalle: `experimentos/organelos/termo_evo/INFORME.md`.
+
+### 28-sep-2026 noche (nube): examen v4 de TERMO′ = NO PASA
+TERMO′ (tabla que olvida + inerte sin parto) arregla T-E (20/20 en los seis escenarios) y pasa T-A, T-B, T-D, T-F y T-G.
+Cae T-C (ii): rev 27 contra 47.5, porque la reversión se mide por conteo y el termostato raciona la comida nueva. La réplica no se corre.
+Pregunta para el director: ¿la reversión de T-C (ii) debe medirse por conteo de mordidas (premia comer más) o por la dirección
+(qué come de lo que encuentra)? Sólo con un criterio nuevo escrito antes, nunca reinterpretando esta serie.
+Detalle: REGISTRO y `experimentos/tronco_v14_4b_examen/`.

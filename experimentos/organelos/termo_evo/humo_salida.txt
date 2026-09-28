@@ -1,0 +1,134 @@
+CORRE_EVO · evo_humo_s41911-41912_T20000 · 20260928_144109 · python 3.13.12 · pool NO (un proceso) · corre_evo.py 7d8e660a1b0e1a71 · preregistro PREREGISTRO_termo_evo.md · carpeta /home/user/juaco/experimentos/organelos/termo_evo/datos/humo/evo_humo_s41911-41912_T20000_20260928_144109
+  tareas 6 · brazos ['v143', 'evo', 'sinher', 'ancho', 'm40'] · semillas 41911-41912 · T 20000 · fundador limpio 1 · reanuda False
+  sha experimentos/tronco_v14_3/corre_v143.py 24100621c450da22 OK
+  sha experimentos/tronco_v14_3/carros_v143/V143.py 2a03048a7f1525e5 OK
+  sha experimentos/carrera_escuderias/pista.py 9f47c65e438e0ff4 OK
+  sha experimentos/carrera_escuderias/juez.py 6a68f640a7832f12 OK
+  sha experimentos/carrera_escuderias/carros/O1.py 99436afa2715f028 OK
+  sha experimentos/carrera_escuderias/revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos/organelos/termo_evo/construye_evo.py 6cdd7dd10e9a0594 OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_BAJO.py 3187b373654e119f OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_ANCHO.py 1ff17bf4c6e32382 OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_SINHER.py a11989a3b04d13d6 OK
+  sha experimentos/organelos/termo_evo/carros/V143_EVO_M40.py 713cd55ed465cc82 OK
+  carro V143_EVO_BAJO sha 3187b373654e119f == construye: True · revisa_carro: PASA
+  carro V143_EVO_ANCHO sha 1ff17bf4c6e32382 == construye: True · revisa_carro: PASA
+  carro V143_EVO_SINHER sha a11989a3b04d13d6 == construye: True · revisa_carro: PASA
+  carro V143_EVO_M40 sha 713cd55ed465cc82 == construye: True · revisa_carro: PASA
+  IDENTIDAD CORTA: V143_EVO_BAJO con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_EVO_ANCHO con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_EVO_SINHER con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_EVO_M40 con EVO = 0 == V143 (salida ENTERA, N 9, s 41913, T 2000, fundador limpio): OK
+  ENTRADA campo a campo (regla 14): tarea de este runner == corre_v143.tarea (V143, s 41913, T 2000): OK
+  [   54.2s] evo s41911 (30.5s) R0 pista 0.2193 aborto None · R0 real por linaje [0.0, 0.0, 0.0, 0.75, 0.0588, 0.0769, 0.0, 0.0, 0.0] · fundadores [16, 0, 31, 0, 15, 23, 12, 1, 1] · g padres ultima ventana {'n': 2, 'media': 0.0715}
+  [   85.3s] sinher s41911 (31.2s) R0 pista 0.1707 aborto None · R0 real por linaje [0.0, 0.0714, 0.0, 0.75, 0.0, 0.1667, 0.0, 0.0, 0.05] · fundadores [4, 12, 13, 0, 8, 19, 30, 1, 18] · g padres ultima ventana {'n': 2, 'media': 0.0643}
+  [  116.2s] m40 s41911 (30.9s) R0 pista 0.3487 aborto None · R0 real por linaje [0.6, 0.8571, 0.6154, 0.2, 0.375, 0.2759, 0.0588, 0.0043, 0.5385] · fundadores [1, 0, 4, 19, 4, 20, 15, 228, 5] · g padres ultima ventana {'n': 10, 'media': 0.4}
+  [  148.7s] v143 s41911 (32.5s) R0 pista 0.2328 aborto None · R0 real por linaje [0.5714, 0.051, 0.0, 0.1176, 0.0364, 0.6667, 0.5714, 0.8, 0.6667] · fundadores [2, 92, 193, 44, 105, 1, 2, 0, 0]
+  [  182.2s] evo s41912 (33.5s) R0 pista 0.3661 aborto None · R0 real por linaje [0.0, 0.0, 0.0, 0.0, 0.0, 0.6667, 0.8, 0.0, 0.8] · fundadores [2, 15, 26, 26, 10, 0, 0, 14, 0] · g padres ultima ventana {'n': 7, 'media': 0.11}
+  [  213.9s] ancho s41912 (31.7s) R0 pista 0.3846 aborto None · R0 real por linaje [0.0097, 0.8, 0.0217, 0.8333, 0.0, 0.8889, 0.25, 0.8889, 0.8889] · fundadores [101, 0, 44, 0, 18, 0, 20, 0, 0] · g padres ultima ventana {'n': 15, 'media': 0.3702}
+
+== v143 (V143 x9) · 1 semillas 41911-41911 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.5714 (evaluables 0.118) · R0 preregistrado 2.0 · vida mediana 905.0 · muertes 6.0 · fundadores 2.0 · casi inmortales 2/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 1/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.8326) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.235)
+  causas hambre/sed/veneno/sal 10/11/198/253 (veneno+sal 96%) · pasos sin NADA bueno en el mundo 0.0069 · mordidas B+D 20.0 / A+C 180.0 por linaje · limpiezas fisicas por cuerpo 1.1429
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9779, 'vetos': 3339, 'mord_sin_meta': 90, 'limpia_propia': 72, 'todo_obst': 0, 'des_splits': 18}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 32.5
+
+== evo (V143_EVO_BAJO x9) · 2 semillas 41911-41912 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.0 (evaluables 0.0) · R0 preregistrado 0.0755 · vida mediana 74.5 · muertes 11.0 · fundadores 11.0 · casi inmortales 8/18
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/18 · semillas con mayoria 0/2 -> no gana · ENMIENDA 6: persisten 0/18 · semillas 0/2 -> no estabiliza (muertes voluntarias fisicas 0.7452) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.037)
+  causas hambre/sed/veneno/sal 15/8/87/98 (veneno+sal 89%) · pasos sin NADA bueno en el mundo 0.0034 · mordidas B+D 34.5 / A+C 78.5 por linaje · limpiezas fisicas por cuerpo 1.9161
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9797, 'vetos': 5360, 'mord_sin_meta': 115, 'limpia_propia': 82, 'todo_obst': 0, 'des_splits': 22}
+  contabilidad coherente 18/18 · t_fund reconstruible 18/18 · s por corrida (mediana) 32.0
+  pieza (evo): contadores de la ultima instancia {'dec': 5913, 'a_no': 4515, 'a_si': 47, 'mord': 758}
+  CURVA DE g (evo; por ventana de 2000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0,  2000) padres 0.0688 [0.0302 0.0752 0.0939] n 8 · vivos -0.0051 [-0.0877 -0.014 0.084] · muertos n 25 hijos/cuerpo 0.0
+    [  2000,  4000) padres 0.0808 [0.0335 0.084 0.1305] n 4 · vivos -0.0116 [-0.0877 -0.0328 0.084] · muertos n 18 hijos/cuerpo 0.2222
+    [  4000,  6000) padres 0.0618 [0.0163 0.0643 0.1305] n 5 · vivos -0.0136 [-0.0877 -0.0328 0.0712] · muertos n 32 hijos/cuerpo 0.1562
+    [  6000,  8000) padres 0.0685 [0.0302 0.0643 0.131] n 8 · vivos -0.0082 [-0.0877 -0.0328 0.0646] · muertos n 32 hijos/cuerpo 0.0
+    [  8000, 10000) padres 0.0713 [0.0335 0.0636 0.131] n 10 · vivos -0.015 [-0.0877 -0.0328 0.0643] · muertos n 14 hijos/cuerpo 0.0
+    [ 10000, 12000) padres 0.0479 [0.0302 0.0636 0.0643] n 4 · vivos -0.0041 [-0.0877 -0.0185 0.0984] · muertos n 28 hijos/cuerpo 0.25
+    [ 12000, 14000) padres 0.0654 [0.0302 0.0636 0.131] n 7 · vivos -0.0127 [-0.0905 -0.044 0.0984] · muertos n 3 hijos/cuerpo 0.3333
+    [ 14000, 16000) padres 0.0182 [0.0182 0.0182 0.0182] n 1 · vivos -0.0172 [-0.0905 -0.044 0.0909] · muertos n 9 hijos/cuerpo 1.4444
+    [ 16000, 18000) padres 0.0613 [0.0259 0.0643 0.0984] n 10 · vivos -0.0136 [-0.0905 -0.044 0.0909] · muertos n 31 hijos/cuerpo 0.2258
+    [ 18000, 20000) padres 0.1014 [0.0517 0.0984 0.1435] n 9 · vivos 0.0034 [-0.0803 0.0182 0.0984] · muertos n 16 hijos/cuerpo 0.1875
+  PAISAJE (evo; bin de g: cuerpos, hijos por cuerpo, edad media): -0.10: 54/0.0/1310 · -0.05: 49/0.0/1318 · +0.00: 50/0.32/862 · +0.05: 51/0.333/668 · +0.10: 3/2.333/4244 · +0.15: 1/0.0/200
+
+== sinher (V143_EVO_SINHER x9) · 1 semillas 41911-41911 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.0 (evaluables 0.025) · R0 preregistrado 0.0714 · vida mediana 89.0 · muertes 13.0 · fundadores 12.0 · casi inmortales 3/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 0/9 · semillas 0/1 -> no estabiliza (muertes voluntarias fisicas 0.7281) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.052)
+  causas hambre/sed/veneno/sal 7/6/52/49 (veneno+sal 89%) · pasos sin NADA bueno en el mundo 0.0031 · mordidas B+D 33.0 / A+C 70.0 por linaje · limpiezas fisicas por cuerpo 1.9
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.985, 'vetos': 2383, 'mord_sin_meta': 39, 'limpia_propia': 24, 'todo_obst': 0, 'des_splits': 0}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 31.2
+  pieza (sinher): contadores de la ultima instancia {'dec': 2511, 'a_no': 1941, 'a_si': 22, 'mord': 289}
+  CURVA DE g (sinher; por ventana de 2000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0,  2000) padres 0.0606 [0.0335 0.0643 0.084] n 3 · vivos -0.0072 [-0.0877 -0.0104 0.084] · muertos n 16 hijos/cuerpo 0.0
+    [  2000,  4000) padres 0.0588 [0.0335 0.084 0.084] n 2 · vivos -0.013 [-0.0877 -0.0405 0.084] · muertos n 2 hijos/cuerpo 1.0
+    [  4000,  6000) padres 0.0489 [0.0335 0.0643 0.0643] n 2 · vivos -0.0272 [-0.0877 -0.0405 0.0643] · muertos n 7 hijos/cuerpo 0.0
+    [  6000,  8000) padres 0.0465 [0.0335 0.0418 0.0643] n 3 · vivos -0.0208 [-0.0877 -0.0405 0.0643] · muertos n 19 hijos/cuerpo 0.0
+    [  8000, 10000) padres 0.0489 [0.0335 0.0643 0.0643] n 2 · vivos -0.0211 [-0.0877 -0.0188 0.0643] · muertos n 11 hijos/cuerpo 0.5455
+    [ 10000, 12000) padres None [None None None] n 0 · vivos -0.0407 [-0.0877 -0.0406 0.0643] · muertos n 18 hijos/cuerpo 0.0
+    [ 12000, 14000) padres 0.0781 [0.0643 0.0918 0.0918] n 2 · vivos -0.0208 [-0.0863 -0.0405 0.0918] · muertos n 3 hijos/cuerpo 0.0
+    [ 14000, 16000) padres 0.0649 [0.038 0.0918 0.0918] n 2 · vivos -0.0125 [-0.0863 -0.0332 0.0918] · muertos n 23 hijos/cuerpo 0.087
+    [ 16000, 18000) padres 0.0637 [0.038 0.0643 0.0887] n 3 · vivos -0.0282 [-0.0863 -0.0405 0.0643] · muertos n 4 hijos/cuerpo 0.5
+    [ 18000, 20000) padres 0.0643 [0.0643 0.0643 0.0643] n 2 · vivos -0.0247 [-0.0863 -0.0405 0.0887] · muertos n 11 hijos/cuerpo 0.0
+  PAISAJE (sinher; bin de g: cuerpos, hijos por cuerpo, edad media): -0.10: 32/0.0/1443 · -0.05: 26/0.0/1897 · +0.00: 23/0.348/727 · +0.05: 33/0.121/260
+
+== ancho (V143_EVO_ANCHO x9) · 1 semillas 41912-41912 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.8 (evaluables 0.542) · R0 preregistrado 1.5556 · vida mediana 600.0 · muertes 8.0 · fundadores 0.0 · casi inmortales 1/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 5/9 · semillas 1/1 -> ESTABILIZA (muertes voluntarias fisicas 0.7511) · ENMIENDA 3 (ayer): CRUZA (mediana R0 evaluables 1.067)
+  causas hambre/sed/veneno/sal 13/13/101/98 (veneno+sal 88%) · pasos sin NADA bueno en el mundo 0.0113 · mordidas B+D 18.0 / A+C 108.0 por linaje · limpiezas fisicas por cuerpo 1.3333
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9714, 'vetos': 4344, 'mord_sin_meta': 84, 'limpia_propia': 69, 'todo_obst': 0, 'des_splits': 10}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 31.7
+  pieza (ancho): contadores de la ultima instancia {'dec': 1734, 'a_no': 711, 'a_si': 102, 'mord': 909}
+  CURVA DE g (ancho; por ventana de 2000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0,  2000) padres 0.4049 [0.2012 0.5133 0.5785] n 13 · vivos 0.2699 [-0.0666 0.2012 0.5785] · muertos n 25 hijos/cuerpo 0.2
+    [  2000,  4000) padres 0.3798 [0.1352 0.3558 0.5785] n 9 · vivos 0.2404 [-0.0666 0.2012 0.5785] · muertos n 33 hijos/cuerpo 0.1212
+    [  4000,  6000) padres 0.3317 [0.2012 0.3558 0.5613] n 10 · vivos 0.263 [-0.0666 0.2323 0.5613] · muertos n 21 hijos/cuerpo 0.3333
+    [  6000,  8000) padres 0.2775 [0.1515 0.2323 0.5249] n 4 · vivos 0.2649 [-0.0852 0.2323 0.5482] · muertos n 11 hijos/cuerpo 0.7273
+    [  8000, 10000) padres 0.4655 [0.2323 0.5249 0.6177] n 10 · vivos 0.2499 [-0.0852 0.2323 0.6177] · muertos n 20 hijos/cuerpo 0.6
+    [ 10000, 12000) padres 0.3939 [0.1695 0.3872 0.6177] n 9 · vivos 0.2674 [-0.0852 0.2418 0.6177] · muertos n 19 hijos/cuerpo 0.3158
+    [ 12000, 14000) padres 0.5165 [0.4704 0.5626 0.5626] n 4 · vivos 0.2942 [-0.0852 0.2385 0.6177] · muertos n 5 hijos/cuerpo 2.0
+    [ 14000, 16000) padres 0.4156 [0.1491 0.4704 0.6265] n 6 · vivos 0.3194 [0.1329 0.2594 0.6265] · muertos n 24 hijos/cuerpo 0.125
+    [ 16000, 18000) padres 0.4526 [0.238 0.4704 0.6265] n 10 · vivos 0.352 [0.1329 0.4389 0.5778] · muertos n 40 hijos/cuerpo 0.1
+    [ 18000, 20000) padres 0.3702 [0.1712 0.4389 0.5778] n 15 · vivos 0.3084 [0.096 0.238 0.5778] · muertos n 27 hijos/cuerpo 0.1852
+  PAISAJE (ancho; bin de g: cuerpos, hijos por cuerpo, edad media): -0.10: 16/0.0/988 · -0.05: 14/0.0/654 · +0.00: 12/0.0/259 · +0.05: 13/0.0/97 · +0.10: 18/0.333/1134 · +0.15: 18/0.167/604 · +0.20: 19/0.737/1173 · +0.25: 21/0.0/111 · +0.30: 16/0.0/76 · +0.35: 14/0.643/972 · +0.40: 18/0.222/394 · +0.45: 5/0.0/579 · +0.50: 25/0.52/631 · +0.55: 11/0.818/980 · +0.60: 5/1.2/1900
+
+== m40 (V143_EVO_M40 x9) · 1 semillas 41911-41911 · T 20000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.375 (evaluables 0.325) · R0 preregistrado 1.1538 · vida mediana 199.0 · muertes 12.0 · fundadores 5.0 · casi inmortales 1/9
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 0/9 · semillas con mayoria 0/1 -> no gana · ENMIENDA 6: persisten 5/9 · semillas 1/1 -> ESTABILIZA (muertes voluntarias fisicas 0.7988) · ENMIENDA 3 (ayer): CRUZA (mediana R0 evaluables 0.959)
+  causas hambre/sed/veneno/sal 15/5/159/159 (veneno+sal 94%) · pasos sin NADA bueno en el mundo 0.0175 · mordidas B+D 27.0 / A+C 146.0 por linaje · limpiezas fisicas por cuerpo 1.5
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9652, 'vetos': 4229, 'mord_sin_meta': 93, 'limpia_propia': 73, 'todo_obst': 0, 'des_splits': 27}
+  contabilidad coherente 9/9 · t_fund reconstruible 9/9 · s por corrida (mediana) 30.9
+  pieza (m40): contadores de la ultima instancia {'dec': 2084, 'a_no': 894, 'a_si': 115, 'mord': 1058}
+  CURVA DE g (m40; por ventana de 2000 pasos: padres media [q10 q50 q90] n · vivos media · muertos hijos/cuerpo)
+    [     0,  2000) padres 0.4 [0.4 0.4 0.4] n 9 · vivos 0.4 [0.4 0.4 0.4] · muertos n 32 hijos/cuerpo 0.1562
+    [  2000,  4000) padres 0.4 [0.4 0.4 0.4] n 9 · vivos 0.4 [0.4 0.4 0.4] · muertos n 33 hijos/cuerpo 0.0606
+    [  4000,  6000) padres 0.4 [0.4 0.4 0.4] n 14 · vivos 0.4 [0.4 0.4 0.4] · muertos n 35 hijos/cuerpo 0.3714
+    [  6000,  8000) padres 0.4 [0.4 0.4 0.4] n 12 · vivos 0.4 [0.4 0.4 0.4] · muertos n 41 hijos/cuerpo 0.122
+    [  8000, 10000) padres 0.4 [0.4 0.4 0.4] n 11 · vivos 0.4 [0.4 0.4 0.4] · muertos n 27 hijos/cuerpo 0.5926
+    [ 10000, 12000) padres 0.4 [0.4 0.4 0.4] n 10 · vivos 0.4 [0.4 0.4 0.4] · muertos n 34 hijos/cuerpo 0.0294
+    [ 12000, 14000) padres 0.4 [0.4 0.4 0.4] n 17 · vivos 0.4 [0.4 0.4 0.4] · muertos n 29 hijos/cuerpo 0.1724
+    [ 14000, 16000) padres 0.4 [0.4 0.4 0.4] n 13 · vivos 0.4 [0.4 0.4 0.4] · muertos n 38 hijos/cuerpo 0.3947
+    [ 16000, 18000) padres 0.4 [0.4 0.4 0.4] n 16 · vivos 0.4 [0.4 0.4 0.4] · muertos n 38 hijos/cuerpo 0.0
+    [ 18000, 20000) padres 0.4 [0.4 0.4 0.4] n 10 · vivos 0.4 [0.4 0.4 0.4] · muertos n 31 hijos/cuerpo 1.1613
+  PAISAJE (m40; bin de g: cuerpos, hijos por cuerpo, edad media): +0.40: 338/0.29/443
+
+  P3 por semilla (evo: media de g de los padres en [18000, 20000); banda (0.1, 0.6)): 41911: 0.0715 (n 2) · 41912: 0.11 (n 7)*
+
+PAREADOS (por semilla: mediana del R0 real de los 9 linajes; gana = semillas en que el primero supera al segundo)
+  evo vs sinher: gana 0/1 · diferencia mediana 0.0
+  evo vs v143: gana 0/1 · diferencia mediana -0.5714
+  sinher vs v143: gana 0/1 · diferencia mediana -0.5714
+  ancho vs sinher: gana 0/0 · diferencia mediana None
+  ancho vs v143: gana 0/0 · diferencia mediana None
+  m40 vs v143: gana 0/1 · diferencia mediana -0.1964
+  evo vs m40: gana 0/1 · diferencia mediana -0.375
+
+================ LA LETRA (PREREGISTRO_termo_evo.md sec. 6) -- HUMO: T corto y semillas de practica, NO cuenta
+  validez {'V1_completa': False, 'V2_ancla_O1_gana': False, 'V3_ancla_V143': True, 'V4_pieza_actua': True}
+  puertas {'P1_evo_cruza': False, 'P2_evo_gana_sinher': False, 'P3_g_en_banda': False} (P3: 1/2 semillas) · modesto False
+
+  RESUMEN /home/user/juaco/experimentos/organelos/termo_evo/datos/humo/evo_humo_s41911-41912_T20000_20260928_144109/resumen.json (sha 8dc98dd7bfad1247)
+Terminado en 213.9s
+VEREDICTO DE LA SERIE: HUMO (no cuenta): NO SE LEE   (regla de parada: PREREGISTRO_termo_evo.md sec. 7)

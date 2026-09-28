@@ -1,0 +1,185 @@
+ARNES identidad_v144bex — T=20000, semillas 49045/49046; python 3.13.12, numpy 2.4.3
+  sha organismo_v143 (CONGELADO)   2cebc0ab0c38b70f  organismo/organismo_v143.py
+  sha organismo_v144b              54e9300ee13f42b7  experimentos/tronco_v14_4b_examen/organismo_v144b.py
+  sha organismo_v143g (CONGELADO)  c20fccaa9107fb89  organismo/organismo_v143g.py
+  sha organismo_v144bg             92b60c6f367b7440  experimentos/tronco_v14_4b_examen/organismo_v144bg.py
+  sha organismo_v3cal              148014f68cb01785  experimentos/criterio_v3/organismo_v3cal.py
+  sha organismo_v143cal            1169f54ef0a19de1  experimentos/tronco_v14_3_examen/organismo_v143cal.py
+  sha organismo_v144bcal           548e0b75049aaa30  experimentos/tronco_v14_4b_examen/organismo_v144bcal.py
+  sha organismo_v144 (TERMO)       e3768f6eab05b964  experimentos/tronco_v14_4_examen/organismo_v144.py
+  sha organismo_v144g (TERMO)      1ea7fb43f41a69c5  experimentos/tronco_v14_4_examen/organismo_v144g.py
+  sha organismo_v144cal (TERMO)    a5a891e1d819e1bb  experimentos/tronco_v14_4_examen/organismo_v144cal.py
+  sha carro V143_TERMO             3db639cab75641fb  experimentos/organelos/termo/carros/V143_TERMO.py
+  sha carro V143_TERMOINV          da106a995b18bafd  experimentos/organelos/termo/carros/V143_TERMOINV.py
+  sha corre_examen_v144b           124049e2a917e7d3  experimentos/tronco_v14_4b_examen/corre_examen_v144b.py
+  sha este arnes                   c866e0575fbe2d7c  experimentos/tronco_v14_4b_examen/identidad_v144bex.py
+--- (0) construccion por anclas y anclas reusadas
+  [    0s] (0) OK  organismo_v144b.py en disco == construccion por anclas
+  [    0s] (0) OK  organismo_v144bg.py en disco == construccion por anclas
+  [    0s] (0) OK  organismo_v144bcal.py en disco == construccion por anclas
+  [    0s] (0) OK  bateria_v144b.py en disco == construccion por anclas
+  [    0s] (0) OK  bateria_generaliza_v144b.py en disco == construccion por anclas
+  [    0s] (0) OK  corre_examen_v144b.py en disco == construccion por anclas
+  [    0s] (0) OK  umbrales_examen_v144b.py en disco == construccion por anclas
+  [    0s] (0) OK  busca_semillas_v144b.py en disco == construccion por anclas
+  [    0s] (0) OK  carros/V143_TERMOB.py en disco == construccion por anclas
+  [    0s] (0) OK  las 38 anclas reusadas tienen su sha (carros, examen de v14.3, TERMO y su serie)
+--- (A) organismo_v144b(termo=0) == organismo_v143 (CONGELADO), T=20000
+  [   10s] (A) OK  AB por defecto: TERMO' apagado == v14.3 (todas las claves)
+  [   11s] (A) OK  AB invertido: TERMO' apagado == v14.3 (todas las claves)
+  [   11s] (A) OK  AB + patron nuevo C: TERMO' apagado == v14.3 (todas las claves)
+  [   12s] (A) OK  AB solap_AB=3 (E2L): TERMO' apagado == v14.3 (todas las claves)
+  [   13s] (A) OK  AB sin plasticidad: TERMO' apagado == v14.3 (todas las claves)
+  [   14s] (A) OK  AB via lenta apagada: TERMO' apagado == v14.3 (todas las claves)
+  [   17s] (A) OK  regla/px0: TERMO' apagado == v143g
+  [   18s] (A) OK  regla/xor01: TERMO' apagado == v143g
+  [   18s] (A) OK  regla/azar: TERMO' apagado == v143g
+  [   20s] (A) OK  T-A VIVO: TERMO' apagado == v143cal (todas las claves)
+  [   22s] (A) OK  T-A CUELLO_MIN: TERMO' apagado == v143cal (todas las claves)
+  [   24s] (A) OK  T-C (ii) reversion en T/2: TERMO' apagado == v143cal (todas las claves)
+  [   26s] (A) OK  T-D ALIAS 326 (sal muda): TERMO' apagado == v143cal (todas las claves)
+  [   28s] (A) OK  T-D LIMPIA 307 (sal muda): TERMO' apagado == v143cal (todas las claves)
+  [   29s] (A) OK  vivo=0, n_nec=1: organismo_v144bcal(termo=0) == organismo_v143cal
+--- (I) (2) SIN CONSIGNA: organismo_v144b / v144bg con sus DEFECTOS (termo=1, rep_umbral=None) == v14.3 en la FISICA, T=20000
+  [   30s] (I) OK  AB por defecto: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   31s] (I) OK  AB invertido: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   32s] (I) OK  AB + patron nuevo C: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   32s] (I) OK  AB solap_AB=3 (E2L): v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   33s] (I) OK  AB sin plasticidad: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   34s] (I) OK  AB via lenta apagada: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   34s] (I) OK  AB sin puerta: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   35s] (I) OK  AB sin division por signo: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   36s] (I) OK  AB sin hija dispersa: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   37s] (I) OK  AB sin puerta por codigo: v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   37s] (I) OK  AB N apagada (norm_lenta=0): v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   38s] (I) OK  AB D comida solap_B=2 (E2K): v144b (defectos) == v14.3 en la fisica (todo salvo la telemetria)
+  [   38s] (I) OK  en los 12: la pieza encendida (termo 1) con U None NO decide: dec = a_no = a_si = 0
+  [   39s] (I) OK  regla/px0: v144bg (defectos) == v143g en la fisica (dec 0)
+  [   39s] (I) OK  regla/xor01: v144bg (defectos) == v143g en la fisica (dec 0)
+  [   40s] (I) OK  regla/azar: v144bg (defectos) == v143g en la fisica (dec 0)
+--- (T) (1) sin inversion, la tabla que olvida decide COMO TERMO: v144bcal == v144cal (todo salvo termo.adS), T=20000
+  [   42s] (T) OK  T-A VIVO s49045: TERMO' == TERMO en la fisica y los contadores (dec 622, a_no 327, a_si 11)
+  [   44s] (T) OK  T-A CUELLO_MIN s49045: TERMO' == TERMO en la fisica y los contadores (dec 393, a_no 191, a_si 12)
+  [   46s] (T) OK  T-D ALIAS 326 (sal muda) s326: TERMO' == TERMO en la fisica y los contadores (dec 456, a_no 262, a_si 5)
+  [   48s] (T) OK  T-D LIMPIA 307 (sal muda) s307: TERMO' == TERMO en la fisica y los contadores (dec 553, a_no 368, a_si 6)
+  [   49s] (T) OK  T-A VIVO s49046: TERMO' == TERMO en la fisica y los contadores (dec 495, a_no 244, a_si 7)
+  [   51s] (T) OK  T-A CUELLO_MIN s49046: TERMO' == TERMO en la fisica y los contadores (dec 275, a_no 104, a_si 9)
+  [   53s] (T) OK  T-D ALIAS 326 (sal muda) s49046: TERMO' == TERMO en la fisica y los contadores (dec 583, a_no 368, a_si 11)
+  [   55s] (T) OK  T-D LIMPIA 307 (sal muda) s49046: TERMO' == TERMO en la fisica y los contadores (dec 583, a_no 368, a_si 11)
+  [   57s] (T) OK  T-A VIVO: TERMOINV (termo=2) con la tabla que olvida == TERMOINV de TERMO
+  [   58s] (T) OK  vivo=0, n_nec=1 (U 1.0): v144bcal vs v144cal: DISTINTAS; la primera decision distinta es un EMPATE DE ULP -- consulta 408: nivel (1.4, 1.0), TERMO' [0.8, 0.0, 1] -> False, TERMO [28.000000000000014, 0.0, 35] -> True; s 0.8 contra 0.8000000000000004 (3 ulp), umbrales 1.4 / 1.4000000000000001
+  [   60s] (T) OK  AB por defecto con rep_umbral=1.0 explicito: v144b vs TERMO (v144): DISTINTAS; la primera decision distinta es un EMPATE DE ULP -- consulta 408: nivel (1.4,), TERMO' [0.8, 1] -> False, TERMO [28.000000000000014, 35] -> True; s 0.8 contra 0.8000000000000004 (3 ulp), umbrales 1.4 / 1.4000000000000001
+  [   61s] (T) OK  regla/px0 con rep_umbral=1.0 explicito: v144bg vs TERMO (v144g): IDENTICAS -- identicas (2013 consultas a la letra)
+--- (V) la REVERSION: la tabla que olvida cambia algo tras invertir, y lo que guarda es el ULTIMO dS
+  [   64s] (V) OK  T-C (ii) (invierte en 10000): TERMO' != TERMO (rev TERMO' -3, TERMO -4; mordA Q4 15 / 22) (DEBE diferir)
+  [   64s] (V) OK  T-C (ii): tras invertir la memoria de A es EXACTAMENTE el veneno [-0.4, 0.0, 1] ([-0.4, 0.0, 1]) y la de B la comida [0.8, 0.0, 1] ([0.8, 0.0, 1])
+  [   65s] (V) OK  examen AB invertido con rep_umbral=1.0: TERMO' != TERMO (muerde A por cuarto [38, 25, 11, 17] / [39, 26, 21, 49]) (DEBE diferir)
+  [   65s] (V) OK  examen AB invertido: la memoria de A tras invertir es [-0.4, 1] ([-0.4, 1]); la de TERMO era una suma ([49.199999999999875, 135])
+--- (P) la pieza ACTUA donde debe; guardas; determinismo
+  [   65s] (P) OK  T-A VIVO: TERMO' != v14.3 y a_no + a_si > 0 (327 / 11) (DEBE diferir)
+  [   65s] (P) OK  T-A CUELLO_MIN: TERMO' != v14.3 y a_no + a_si > 0 (191 / 12) (DEBE diferir)
+  [   65s] (P) OK  T-D ALIAS 326 (sal muda): TERMO' != v14.3 y a_no + a_si > 0 (262 / 5) (DEBE diferir)
+  [   65s] (P) OK  T-C (ii): TERMO' != v14.3 y a_no + a_si > 0 (239 / 19) -- la condicion de T-R (DEBE diferir)
+  [   66s] (P) OK  T-A VIVO: TERMOINV (termo=2) != TERMO' y actua (269 / 8) (DEBE diferir)
+  [   66s] (P) OK  examen AB con rep_umbral=1.0: la pieza decide (95 / 1) y difiere de v14.3 (DEBE diferir)
+  [   67s] (P) OK  determinismo: T-A VIVO con TERMO', dos veces, identico
+  [   68s] (P) OK  determinismo: examen AB invertido con rep_umbral=1.0, dos veces, identico
+  [   68s] (P) OK  guardas: termo=2 con UNA necesidad aborta (v144b, v144bg, v144bcal con vivo=0); termo=3 aborta
+--- (L) la LETRA (sin simular)
+  [   68s] (L) OK  termo_letra es el MISMO texto en los seis organismos (v144b, v144bg, v144bcal y TERMO v144, v144g, v144cal)
+  [   68s] (L) OK  termo_letra == V143_TERMO / V143_TERMOINV ._tm_boca con memorias de la forma nueva [dE, dAg, 1]: 6516 casos, 0 distintos
+  [   68s] (L) OK  T-A VIVO: la memoria del organismo == [ultimo dS nominal, 1] por estimulo ({'A': [0.8, 0.0, 1], 'B': [-0.4, 0.0, 1], 'C': [0.0, 0.8, 1], 'D': [0.0, -0.4, 1]})
+--- (D) las tareas del runner corren lo declarado (con el candidato INERTE donde (2) lo dice)
+  [   69s] (D) OK  tarea_vivo CAND == resumen de organismo_v144bcal con kw_vivo_cand (norm_lenta=1, termo=1)
+  [   71s] (D) OK  tarea_vivo CTRL corre termo=2 (2) y difiere de CAND; CAND difiere de OFF
+  [   73s] (D) OK  tarea_rev CAND == organismo_v144bcal con kw_rev_cand (rev, mordidas, muertes, telemetria)
+  [   75s] (D) OK  tarea_sal CAND == organismo_v144bcal con kw_sal(CAND)
+  [   83s] (D) OK  tarea_ex E2 (T = 100 000): bateria_v144b CON SUS DEFECTOS == bateria_v143 (CONGELADA), todas las claves (muerde A por cuarto [67, 76, 36, 5] / [67, 76, 36, 5])
+  [   97s] (D) OK  tarea_tb px0 (T = 200 000): bateria_generaliza_v144b CON SUS DEFECTOS == bateria_generaliza_v143 (CONGELADA)
+--- (R) regla 14 (sin simular)
+  [   97s] (R) OK  R1 T-A VIVO: OFF == corre_vivo_rep2.BRAZOS[VIVO] + desambiguar=1 + placebo=0 (el montaje de V4-CAL)
+  [   97s] (R) OK  R1 T-A VIVO: CAND difiere de OFF SOLO en norm_lenta=1 y termo=1
+  [   97s] (R) OK  R1 T-A VIVO: CTRL (TERMOINV) difiere de OFF SOLO en norm_lenta=1 y termo=2
+  [   97s] (R) OK  R1 T-A VIVO: TRONCO_B == OFF campo a campo
+  [   97s] (R) OK  R1 T-A VIVO: PLACEBO difiere de OFF SOLO en placebo=1
+  [   97s] (R) OK  R1 T-A VIVO: la consigna de TERMO es rep_umbral = 1.0 (la de la pista: S = 1.4 con s = 0.8, PREREGISTRO_termo sec. 2)
+  [   97s] (R) OK  R1 T-A CUELLO_MIN: OFF == corre_vivo_rep2.BRAZOS[CUELLO_MIN] + desambiguar=1 + placebo=0 (el montaje de V4-CAL)
+  [   97s] (R) OK  R1 T-A CUELLO_MIN: CAND difiere de OFF SOLO en norm_lenta=1 y termo=1
+  [   97s] (R) OK  R1 T-A CUELLO_MIN: CTRL (TERMOINV) difiere de OFF SOLO en norm_lenta=1 y termo=2
+  [   97s] (R) OK  R1 T-A CUELLO_MIN: TRONCO_B == OFF campo a campo
+  [   97s] (R) OK  R1 T-A CUELLO_MIN: PLACEBO difiere de OFF SOLO en placebo=1
+  [   97s] (R) OK  R1 T-A CUELLO_MIN: la consigna de TERMO es rep_umbral = 1.0 (la de la pista: S = 1.4 con s = 0.8, PREREGISTRO_termo sec. 2)
+  [   97s] (R) OK  R1 T-C ii: OFF == mini_vivo.BRAZOS[VIVO] + desambiguar=1 + invertir_vivo_en=T/2 + placebo=0
+  [   97s] (R) OK  R1 T-C ii: CAND difiere de OFF SOLO en norm_lenta=1 y termo=1
+  [   97s] (R) OK  R1 T-C ii: TRONCO_B == OFF
+  [   97s] (R) OK  R1 T-C ii y T-D: sin rep_umbral en los kwargs -> la consigna es el DEFECTO de organismo_v144bcal, 1.0 (declarado)
+  [   97s] (R) OK  R1 T-D: OFF == corre_sal.BASE (sal muda) + desambiguar=1 + placebo=0; CAND == OFF + norm_lenta=1 + termo=1
+  [   97s] (R) OK  R1 TRONCO_B = semilla s + 100000 (umbrales_v4)
+  [   97s] (R) OK  R1 el OFF del mundo vivo (organismo_v3cal = v14.2) y organismo_v143cal: mismos defectos salvo norm_lenta (v14.3 = v14.2 + N, inerte con masa 3; la igualdad bit a bit la prueba el arnes (A'))
+  [   97s] (R) OK  R2 bateria_v144b.ETAPAS == bateria_v143.ETAPAS (campo a campo)
+  [   97s] (R) OK  R2 bateria_v144b: SEIS, ESC_ID, EVENTO == bateria_v143
+  [   97s] (R) OK  R2 bateria_v144b.CRIT: mismas etapas y mismos nombres que bateria_v143
+  [   97s] (R) OK  R3 bateria_generaliza_v144b: organismo_v144b -> (organismo_v144bg, kwargs CAMPO A CAMPO == organismo_v143)
+  [   97s] (R) OK  R3 bateria_generaliza_v144b: las entradas anteriores intactas; REGLAS == [px0, azar]
+  [   97s] (R) OK  R3 organismo_v144bg: mismos defectos que organismo_v143g + termo=1 y rep_umbral=None (v14.4b (2): una necesidad, sin umbral de parto -> la pieza no decide)
+  [   97s] (R) OK  R4 organismo_v144b: mismos defectos que organismo_v143 + termo=1 y rep_umbral=None (v14.4b (2))
+  [   97s] (R) OK  R4 organismo_v144bcal: mismos defectos que organismo_v143cal + termo=1 (rep_umbral ya existia: 1.0)
+  [   97s] (R) OK  R4 organismo_v144b/v144bg/v144bcal y sus origenes: mismas constantes de modulo (L, NK, NKMAX, K, PAT, R_VAL, E_VAL)
+  [   97s] (R) OK  R4 la letra de la pieza (termo_letra) es el MISMO texto en organismo_v144b, v144bg y v144bcal
+  [   97s] (R) OK  R4 v14.4b: la letra de la pieza es EXACTAMENTE la de TERMO (v14.4): mismo texto de termo_letra en los seis organismos
+  [   97s] (R) OK  R4 v14.4b: organismo_v144bcal tiene los MISMOS defectos que organismo_v144cal (TERMO en el mundo vivo; rep_umbral 1.0)
+  [   97s] (R) OK  R4 v14.4b T-R: letra declarada y umbral de actuacion == el de G-3 (0.95), n == n_vivo (80)
+  [   97s] (R) OK  R5 NUM == umbrales_examen_v143.NUM y ERR122 == el de v14.3 (MISMA letra, SIN cambios)
+  [   97s] (R) OK  R5 LETRA de T-A, T-B, T-C, T-D, T-E, T-F y T-H == umbrales_examen_v143.LETRA (texto identico)
+  [   97s] (R) OK  R5 T-A == umbrales_v4.V4[T-A] (1.10, 10, margen 10, z 1.645, n 80)
+  [   97s] (R) OK  R5 T-C ii == umbrales_v4.V4[T-C_ii] (margen 12.5, n 80); T-F == 1.25
+  [   97s] (R) OK  R5 T-B == corre_dE5_v2.UMB[T-B] en G1, G2 y azar G1 (0.80, 0.85, [0.35, 0.65]): sin cambio
+  [   97s] (R) OK  R5 T-B azar G2: [0.31, 0.60] (ERR-122, la letra con la que entro v14.3); el origen corre_dE5_v2 [0.42, 0.58] == la banda vieja, que solo se reporta
+  [   97s] (R) OK  R5 T-E / T-C i / T-F examen == corre_dE5_v2 (TOL 1.10, TOL_COME 0.8, PUERTA_E 18, factor 1.25)
+  [   97s] (R) OK  R5 T-D: C1, C2, C6 existen en creacion_B/corre_codigo.UMBRALES (se importan, no se copian)
+  [   97s] (R) OK  R5 T-G: brazo CUELLO_MIN, z 1.645 (== T-A), n 80 (== n_vivo), m = 1 == el m elegido por analiza_potencia_v144 sobre el nulo real; P(T-G | nulo) 0.042 y P(T-G) en delta 6: 0.877 == el JSON
+  [   97s] (R) OK  R6 semillas: todas distintas entre papeles, dentro de 49001-50600 sin 50000, ninguna de V4-CAL, subida_n7, tronco_v14_3, el examen de v14.3, TERMO, TERMO_EVO ni el examen de TERMO; TRONCO_B s+100000 (149xxx) sin choque
+  [   97s] (R) OK  R6 T-D serie: las 9 ALIAS y 9 LIMPIAS recalculadas == las declaradas
+  [   97s] (R) OK  R6 T-D replica: las 9 ALIAS y 9 LIMPIAS recalculadas == las declaradas
+--- (J) el juez reproduce los examenes registrados (sin simular)
+  [   97s] (J) OK  v14.3 serie: T-B (G1, G2, azares, K, pasa de CAND y TRONCO) == lo registrado
+  [   97s] (J) OK  v14.3 serie: T-E por escenario, T-C (i) y T-F examen == lo registrado
+  [   97s] (J) OK  v14.3 serie: T-D (C1, C2, C6 de OFF y CAND) == lo registrado
+  [   97s] (J) OK  v14.3 serie: T-A, T-C (ii), T-F vivo de CAND, TRONCO_B y PLACEBO == lo registrado
+  [   97s] (J) OK  v14.3 serie: las sub-puertas T-A..T-F_vivo == las registradas
+  [   97s] (J) OK  v14.3 replica: T-B (G1, G2, azares, K, pasa de CAND y TRONCO) == lo registrado
+  [   97s] (J) OK  v14.3 replica: T-E por escenario, T-C (i) y T-F examen == lo registrado
+  [   97s] (J) OK  v14.3 replica: T-D (C1, C2, C6 de OFF y CAND) == lo registrado
+  [   97s] (J) OK  v14.3 replica: T-A, T-C (ii), T-F vivo de CAND, TRONCO_B y PLACEBO == lo registrado
+  [   97s] (J) OK  v14.3 replica: las sub-puertas T-A..T-F_vivo == las registradas
+  [   98s] (J) OK  TERMO serie: T-B (G1, G2, azares, K, pasa de CAND y TRONCO) == lo registrado
+  [   98s] (J) OK  TERMO serie: T-E por escenario, T-C (i) y T-F examen == lo registrado
+  [   98s] (J) OK  TERMO serie: T-D (C1, C2, C6 de OFF y CAND) == lo registrado
+  [   98s] (J) OK  TERMO serie: T-A, T-C (ii), T-F vivo de CAND, TRONCO_B y PLACEBO == lo registrado
+  [   98s] (J) OK  TERMO serie: las sub-puertas T-A..T-G == las registradas
+  [   98s] (J) OK  TERMO serie: T-R da NO (T-C ii False con la pieza actuando 80/80) y el veredicto por la letra de v14.4b es NO PASA por T-C, T-E y T-R
+--- (K) controles que DEBEN fallar o diferir
+  [   99s] (K) OK  TRONCO_B (s + 100000) != OFF en la misma semilla-etiqueta (DEBE diferir)
+  [  100s] (K) OK  PLACEBO (placebo = 1) != OFF (DEBE diferir)
+  [  100s] (K) OK  el juez dice SI al sintetico bueno en las OCHO puertas (siete de v4 + T-R) y la serie se lee
+  [  100s] (K) OK  el juez dice NO a un candidato sintetico MALO en T-A, T-B, T-C, T-D, T-G y T-R
+  [  100s] (K) OK  T-R cae si la pieza no actua en 5/80 corridas CAND de T-C (ii) (0.9375 < 0.95), aunque T-C (ii) pase ({'T_C_ii': True, 'actua': 75, 'n': 80, 'frac': 0.938, 'pasa': False})
+  [  100s] (K) OK  T-R cae si falta la telemetria de una corrida CAND de T-C (ii) (n 79), aunque T-C (ii) pase ({'T_C_ii': True, 'actua': 79, 'n': 79, 'frac': 1.0, 'pasa': False})
+  [  100s] (K) OK  T-G: CAND == OFF (d = 0: G-1 cae)
+  [  100s] (K) OK  T-G: el CONTROL gana (G-2 cae)
+  [  100s] (K) OK  T-G: la pieza no actua en 5/80 de T-A (G-3 cae)
+  [  100s] (K) OK  una letra MUTADA (U + s/3) difiere del carro en 3 de 4 casos (la comparacion de (L) tiene dientes)
+  [  100s] (K) OK  el parser del runner RECHAZA bandera desconocida --humoo (codigo 2; solo se parsea)
+  [  100s] (K) OK  el parser del runner RECHAZA abreviatura --hum (allow_abbrev=False) (codigo 2; solo se parsea)
+  [  100s] (K) OK  el parser del runner RECHAZA modo de serie sin --pool (codigo 2; solo se parsea)
+  [  100s] (K) OK  el parser del runner RECHAZA --pool 9 (> 6) (codigo 2; solo se parsea)
+  [  100s] (K) OK  el parser del runner RECHAZA --reserva sin --sustituye (codigo 2; solo se parsea)
+  [  100s] (K) OK  el parser del runner RECHAZA --solo TR (T-R sale de TC) (codigo 2; solo se parsea)
+
+(0) 10/10  (A) 15/15  (I) 16/16  (T) 12/12  (V) 4/4  (P) 9/9  (L) 3/3  (D) 6/6  (R) 44/44  (J) 16/16  (K) 16/16   (100 s)
+datos -> datos/humo/identidad_v144bex_20260928_195543.json  sha256_16 = 8f6bcc6de749aa50
+RESULTADO: 151/151
+
+real	1m40.499s
+user	1m38.869s
+sys	0m0.051s

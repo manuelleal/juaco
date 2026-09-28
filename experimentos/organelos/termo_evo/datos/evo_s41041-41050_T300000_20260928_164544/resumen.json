@@ -1,0 +1,775 @@
+{
+ "brazos": {
+  "evo": {
+   "brazo": "evo",
+   "carro": "V143_EVO_BAJO",
+   "semillas": 10,
+   "R0_real_med": 0.6667,
+   "R0_real_eval_med": 0.667,
+   "R0_prereg_med": 1.2692,
+   "linajes_cruzan_real": 30,
+   "linajes": 90,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 33,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 1.269,
+    "condiciones": {
+     "i": true,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 903.75,
+   "muertes_med": 95.0,
+   "fundadores_med": 29.5,
+   "causas": {
+    "hambre": 1983,
+    "sed": 1854,
+    "veneno": 7630,
+    "sal": 8089
+   },
+   "frac_BD_causa": 0.8038,
+   "frac_vol": 0.6864,
+   "frac_sin_bueno_mundo_med": 0.0132,
+   "mord_BD_med": 155.0,
+   "mord_AC_med": 1198.5,
+   "limpiezas_fisicas_por_cuerpo_med": 1.1401,
+   "coherente": "90/90",
+   "t_fund_rec": "90/90",
+   "seg_med": 454.15,
+   "v143": {
+    "frac_pasos_con_meta": 0.9826,
+    "vetos": 559310,
+    "mord_sin_meta": 3892,
+    "limpia_propia": 3736,
+    "todo_obst": 0,
+    "des_splits": 1463
+   }
+  },
+  "sinher": {
+   "brazo": "sinher",
+   "carro": "V143_EVO_SINHER",
+   "semillas": 10,
+   "R0_real_med": 0.2222,
+   "R0_real_eval_med": 0.222,
+   "R0_prereg_med": 0.3198,
+   "linajes_cruzan_real": 5,
+   "linajes": 90,
+   "sem_cruza_e5": 0,
+   "gana_e5": false,
+   "sem_estabiliza_e6": 0,
+   "estabiliza_e6": false,
+   "persisten": 9,
+   "enm3": {
+    "cruza": false,
+    "mediana_R0_eval": 0.32,
+    "condiciones": {
+     "i": false,
+     "ii": false,
+     "iii": true
+    }
+   },
+   "casi_inmortales": 0,
+   "vida_med": 90.25,
+   "muertes_med": 135.5,
+   "fundadores_med": 103.5,
+   "causas": {
+    "hambre": 1108,
+    "sed": 1262,
+    "veneno": 5840,
+    "sal": 6176
+   },
+   "frac_BD_causa": 0.8353,
+   "frac_vol": 0.6927,
+   "frac_sin_bueno_mundo_med": 0.0043,
+   "mord_BD_med": 350.5,
+   "mord_AC_med": 1051.0,
+   "limpiezas_fisicas_por_cuerpo_med": 1.7336,
+   "coherente": "90/90",
+   "t_fund_rec": "90/90",
+   "seg_med": 456.15,
+   "v143": {
+    "frac_pasos_con_meta": 0.9908,
+    "vetos": 279466,
+    "mord_sin_meta": 1697,
+    "limpia_propia": 1535,
+    "todo_obst": 0,
+    "des_splits": 647
+   }
+  }
+ },
+ "pareados": {
+  "evo_vs_sinher": {
+   "semillas": 10,
+   "gana": 10,
+   "dif_med": 0.4066
+  }
+ },
+ "telemetria": {
+  "evo": {
+   "dec": 462162,
+   "a_no": 334126,
+   "a_si": 3665,
+   "mord": 81135
+  },
+  "sinher": {
+   "dec": 316498,
+   "a_no": 244475,
+   "a_si": 1199,
+   "mord": 37519
+  }
+ },
+ "curva_g": {
+  "evo": [
+   {
+    "t0": 0,
+    "t1": 30000,
+    "padres": {
+     "n": 654,
+     "media": 0.0749,
+     "q10": 0.0296,
+     "q50": 0.0744,
+     "q90": 0.1232
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0144,
+     "q10": -0.0733,
+     "q50": 0.0146,
+     "q90": 0.092
+    },
+    "muertos": {
+     "n": 1611,
+     "media": 0.0079,
+     "hijos_por_cuerpo": 0.2986
+    }
+   },
+   {
+    "t0": 30000,
+    "t1": 60000,
+    "padres": {
+     "n": 871,
+     "media": 0.0851,
+     "q10": 0.0367,
+     "q50": 0.0749,
+     "q90": 0.1412
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0463,
+     "q10": -0.0406,
+     "q50": 0.0546,
+     "q90": 0.1171
+    },
+    "muertos": {
+     "n": 2120,
+     "media": 0.0156,
+     "hijos_por_cuerpo": 0.4387
+    }
+   },
+   {
+    "t0": 60000,
+    "t1": 90000,
+    "padres": {
+     "n": 880,
+     "media": 0.0964,
+     "q10": 0.0387,
+     "q50": 0.0927,
+     "q90": 0.161
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0559,
+     "q10": -0.0289,
+     "q50": 0.0574,
+     "q90": 0.1349
+    },
+    "muertos": {
+     "n": 1893,
+     "media": 0.0202,
+     "hijos_por_cuerpo": 0.4443
+    }
+   },
+   {
+    "t0": 90000,
+    "t1": 120000,
+    "padres": {
+     "n": 972,
+     "media": 0.1032,
+     "q10": 0.0399,
+     "q50": 0.0965,
+     "q90": 0.1811
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0699,
+     "q10": -0.0087,
+     "q50": 0.0695,
+     "q90": 0.1565
+    },
+    "muertos": {
+     "n": 1947,
+     "media": 0.0211,
+     "hijos_por_cuerpo": 0.4905
+    }
+   },
+   {
+    "t0": 120000,
+    "t1": 150000,
+    "padres": {
+     "n": 893,
+     "media": 0.1001,
+     "q10": 0.0393,
+     "q50": 0.0898,
+     "q90": 0.1789
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0674,
+     "q10": -0.0075,
+     "q50": 0.0656,
+     "q90": 0.1526
+    },
+    "muertos": {
+     "n": 1882,
+     "media": 0.0196,
+     "hijos_por_cuerpo": 0.4665
+    }
+   },
+   {
+    "t0": 150000,
+    "t1": 180000,
+    "padres": {
+     "n": 934,
+     "media": 0.1047,
+     "q10": 0.0433,
+     "q50": 0.1035,
+     "q90": 0.1777
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0664,
+     "q10": -0.0223,
+     "q50": 0.065,
+     "q90": 0.1561
+    },
+    "muertos": {
+     "n": 1811,
+     "media": 0.02,
+     "hijos_por_cuerpo": 0.5301
+    }
+   },
+   {
+    "t0": 180000,
+    "t1": 210000,
+    "padres": {
+     "n": 886,
+     "media": 0.1104,
+     "q10": 0.0496,
+     "q50": 0.1079,
+     "q90": 0.1691
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0753,
+     "q10": -0.0035,
+     "q50": 0.0769,
+     "q90": 0.153
+    },
+    "muertos": {
+     "n": 1911,
+     "media": 0.0247,
+     "hijos_por_cuerpo": 0.4731
+    }
+   },
+   {
+    "t0": 210000,
+    "t1": 240000,
+    "padres": {
+     "n": 921,
+     "media": 0.1099,
+     "q10": 0.0452,
+     "q50": 0.1059,
+     "q90": 0.1772
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0824,
+     "q10": 0.0084,
+     "q50": 0.0809,
+     "q90": 0.1572
+    },
+    "muertos": {
+     "n": 2010,
+     "media": 0.0284,
+     "hijos_por_cuerpo": 0.4662
+    }
+   },
+   {
+    "t0": 240000,
+    "t1": 270000,
+    "padres": {
+     "n": 1022,
+     "media": 0.1223,
+     "q10": 0.0542,
+     "q50": 0.1131,
+     "q90": 0.1981
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.094,
+     "q10": 0.0199,
+     "q50": 0.0894,
+     "q90": 0.1867
+    },
+    "muertos": {
+     "n": 2158,
+     "media": 0.0314,
+     "hijos_por_cuerpo": 0.4578
+    }
+   },
+   {
+    "t0": 270000,
+    "t1": 300000,
+    "padres": {
+     "n": 1044,
+     "media": 0.1214,
+     "q10": 0.045,
+     "q50": 0.1147,
+     "q90": 0.1978
+    },
+    "vivos": {
+     "n": 2700,
+     "media": 0.0912,
+     "q10": 0.0128,
+     "q50": 0.0918,
+     "q90": 0.1745
+    },
+    "muertos": {
+     "n": 2213,
+     "media": 0.0302,
+     "hijos_por_cuerpo": 0.4826
+    }
+   }
+  ],
+  "sinher": [
+   {
+    "t0": 0,
+    "t1": 30000,
+    "padres": {
+     "n": 344,
+     "media": 0.0616,
+     "q10": 0.0211,
+     "q50": 0.0642,
+     "q90": 0.0928
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0131,
+     "q10": -0.0758,
+     "q50": -0.0249,
+     "q90": 0.0694
+    },
+    "muertos": {
+     "n": 1419,
+     "media": 0.0002,
+     "hijos_por_cuerpo": 0.2051
+    }
+   },
+   {
+    "t0": 30000,
+    "t1": 60000,
+    "padres": {
+     "n": 337,
+     "media": 0.0577,
+     "q10": 0.0164,
+     "q50": 0.0598,
+     "q90": 0.091
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0098,
+     "q10": -0.0772,
+     "q50": -0.0147,
+     "q90": 0.0727
+    },
+    "muertos": {
+     "n": 1565,
+     "media": -0.0022,
+     "hijos_por_cuerpo": 0.1968
+    }
+   },
+   {
+    "t0": 60000,
+    "t1": 90000,
+    "padres": {
+     "n": 365,
+     "media": 0.0604,
+     "q10": 0.0182,
+     "q50": 0.0684,
+     "q90": 0.0946
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0131,
+     "q10": -0.0812,
+     "q50": -0.0238,
+     "q90": 0.0753
+    },
+    "muertos": {
+     "n": 1440,
+     "media": 0.0021,
+     "hijos_por_cuerpo": 0.2653
+    }
+   },
+   {
+    "t0": 90000,
+    "t1": 120000,
+    "padres": {
+     "n": 311,
+     "media": 0.0572,
+     "q10": 0.021,
+     "q50": 0.0532,
+     "q90": 0.0946
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.015,
+     "q10": -0.0824,
+     "q50": -0.02,
+     "q90": 0.0673
+    },
+    "muertos": {
+     "n": 1427,
+     "media": -0.0009,
+     "hijos_por_cuerpo": 0.2278
+    }
+   },
+   {
+    "t0": 120000,
+    "t1": 150000,
+    "padres": {
+     "n": 388,
+     "media": 0.0552,
+     "q10": 0.0185,
+     "q50": 0.0633,
+     "q90": 0.0896
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0085,
+     "q10": -0.0803,
+     "q50": -0.0124,
+     "q90": 0.0693
+    },
+    "muertos": {
+     "n": 1453,
+     "media": -0.0005,
+     "hijos_por_cuerpo": 0.2498
+    }
+   },
+   {
+    "t0": 150000,
+    "t1": 180000,
+    "padres": {
+     "n": 374,
+     "media": 0.0582,
+     "q10": 0.0228,
+     "q50": 0.061,
+     "q90": 0.0925
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0084,
+     "q10": -0.0774,
+     "q50": -0.0138,
+     "q90": 0.071
+    },
+    "muertos": {
+     "n": 1471,
+     "media": -0.0003,
+     "hijos_por_cuerpo": 0.2549
+    }
+   },
+   {
+    "t0": 180000,
+    "t1": 210000,
+    "padres": {
+     "n": 344,
+     "media": 0.0504,
+     "q10": 0.0199,
+     "q50": 0.0463,
+     "q90": 0.0851
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0089,
+     "q10": -0.0776,
+     "q50": -0.0127,
+     "q90": 0.0687
+    },
+    "muertos": {
+     "n": 1262,
+     "media": -0.0004,
+     "hijos_por_cuerpo": 0.2734
+    }
+   },
+   {
+    "t0": 210000,
+    "t1": 240000,
+    "padres": {
+     "n": 392,
+     "media": 0.0593,
+     "q10": 0.0224,
+     "q50": 0.0618,
+     "q90": 0.0896
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0095,
+     "q10": -0.0806,
+     "q50": -0.0182,
+     "q90": 0.0718
+    },
+    "muertos": {
+     "n": 1468,
+     "media": -0.0012,
+     "hijos_por_cuerpo": 0.2677
+    }
+   },
+   {
+    "t0": 240000,
+    "t1": 270000,
+    "padres": {
+     "n": 374,
+     "media": 0.0571,
+     "q10": 0.0221,
+     "q50": 0.056,
+     "q90": 0.0896
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0105,
+     "q10": -0.0831,
+     "q50": -0.018,
+     "q90": 0.0725
+    },
+    "muertos": {
+     "n": 1503,
+     "media": -0.0033,
+     "hijos_por_cuerpo": 0.2462
+    }
+   },
+   {
+    "t0": 270000,
+    "t1": 300000,
+    "padres": {
+     "n": 313,
+     "media": 0.0587,
+     "q10": 0.021,
+     "q50": 0.0578,
+     "q90": 0.0948
+    },
+    "vivos": {
+     "n": 2700,
+     "media": -0.0107,
+     "q10": -0.0803,
+     "q50": -0.0134,
+     "q90": 0.0701
+    },
+    "muertos": {
+     "n": 1378,
+     "media": -0.0011,
+     "hijos_por_cuerpo": 0.2605
+    }
+   }
+  ]
+ },
+ "paisaje_g": {
+  "evo": [
+   {
+    "g_desde": -0.1,
+    "cuerpos": 3621,
+    "hijos_por_cuerpo": 0.0,
+    "edad_media": 451.5
+   },
+   {
+    "g_desde": -0.05,
+    "cuerpos": 3927,
+    "hijos_por_cuerpo": 0.0,
+    "edad_media": 665.7
+   },
+   {
+    "g_desde": 0.0,
+    "cuerpos": 4621,
+    "hijos_por_cuerpo": 0.298,
+    "edad_media": 1331.7
+   },
+   {
+    "g_desde": 0.05,
+    "cuerpos": 5446,
+    "hijos_por_cuerpo": 0.596,
+    "edad_media": 1501.1
+   },
+   {
+    "g_desde": 0.1,
+    "cuerpos": 1282,
+    "hijos_por_cuerpo": 2.025,
+    "edad_media": 4054.5
+   },
+   {
+    "g_desde": 0.15,
+    "cuerpos": 497,
+    "hijos_por_cuerpo": 2.616,
+    "edad_media": 4386.0
+   },
+   {
+    "g_desde": 0.2,
+    "cuerpos": 133,
+    "hijos_por_cuerpo": 2.541,
+    "edad_media": 4108.8
+   },
+   {
+    "g_desde": 0.25,
+    "cuerpos": 24,
+    "hijos_por_cuerpo": 2.75,
+    "edad_media": 3811.5
+   },
+   {
+    "g_desde": 0.3,
+    "cuerpos": 4,
+    "hijos_por_cuerpo": 2.0,
+    "edad_media": 2346.5
+   },
+   {
+    "g_desde": 0.35,
+    "cuerpos": 1,
+    "hijos_por_cuerpo": 11.0,
+    "edad_media": 12854.0
+   }
+  ],
+  "sinher": [
+   {
+    "g_desde": -0.1,
+    "cuerpos": 3664,
+    "hijos_por_cuerpo": 0.0,
+    "edad_media": 2034.8
+   },
+   {
+    "g_desde": -0.05,
+    "cuerpos": 3655,
+    "hijos_por_cuerpo": 0.0,
+    "edad_media": 2339.1
+   },
+   {
+    "g_desde": 0.0,
+    "cuerpos": 3547,
+    "hijos_por_cuerpo": 0.402,
+    "edad_media": 1593.3
+   },
+   {
+    "g_desde": 0.05,
+    "cuerpos": 3520,
+    "hijos_por_cuerpo": 0.593,
+    "edad_media": 1320.0
+   }
+  ]
+ },
+ "p3": {
+  "41041": {
+   "n": 95,
+   "media": 0.11,
+   "cumple": true
+  },
+  "41042": {
+   "n": 77,
+   "media": 0.1205,
+   "cumple": true
+  },
+  "41043": {
+   "n": 103,
+   "media": 0.1264,
+   "cumple": true
+  },
+  "41044": {
+   "n": 116,
+   "media": 0.1189,
+   "cumple": true
+  },
+  "41045": {
+   "n": 127,
+   "media": 0.1608,
+   "cumple": true
+  },
+  "41046": {
+   "n": 86,
+   "media": 0.1185,
+   "cumple": true
+  },
+  "41047": {
+   "n": 125,
+   "media": 0.0992,
+   "cumple": false
+  },
+  "41048": {
+   "n": 111,
+   "media": 0.113,
+   "cumple": true
+  },
+  "41049": {
+   "n": 81,
+   "media": 0.1014,
+   "cumple": true
+  },
+  "41050": {
+   "n": 123,
+   "media": 0.1336,
+   "cumple": true
+  }
+ },
+ "letra": {
+  "validez": {
+   "V1_completa": false,
+   "V2_ancla_O1_gana": false,
+   "V3_ancla_V143": false,
+   "V4_pieza_actua": true
+  },
+  "puertas": {
+   "P1_evo_cruza": false,
+   "P2_evo_gana_sinher": true,
+   "P3_g_en_banda": true
+  },
+  "p3_semillas_en_banda": 9,
+  "modesto": true,
+  "veredicto": "DESCRIPTIVA (sin letra: T 300 000, solo evo y sinher)"
+ },
+ "semillas": [
+  41041,
+  41042,
+  41043,
+  41044,
+  41045,
+  41046,
+  41047,
+  41048,
+  41049,
+  41050
+ ],
+ "T": 300000,
+ "humo": false,
+ "abortos": 0,
+ "veredicto": "DESCRIPTIVA (sin letra: T 300 000, solo evo y sinher)",
+ "preregistro": "PREREGISTRO_termo_evo.md",
+ "sha_runner": "7d8e660a1b0e1a71",
+ "sha_carros": {
+  "V143_EVO_BAJO": "3187b373654e119f",
+  "V143_EVO_ANCHO": "1ff17bf4c6e32382",
+  "V143_EVO_SINHER": "a11989a3b04d13d6",
+  "V143_EVO_M40": "713cd55ed465cc82"
+ }
+}
