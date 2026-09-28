@@ -1,0 +1,70 @@
+IDENTIDAD eco_a_carrera · 2026-09-28 16:43:47 · python 3.14.2 · numpy 2.4.3
+  corre_eco_a_carrera.py 399a52ffcf3456f4 · construye 403c747caaae1c1e · extrae 1c8082d17d8e095f · este arnes 0e53df750a42962b
+(K) construccion por anclas, origenes y extraccion
+  [OK ] (K1) carros en disco == construye_eco_a_carrera (origen V143_RES0 fab1d8068fe901a5; solo difieren en perillas/nombre) · EAC_G0 sha e04c28bcbf6a203a == disco: True |   EAC_SEL sha 719c30d37a3df716 == disco: True |   EAC_AZA sha 831b3d33e99e813c == disco: True |   EAC_SELV sha d1581958ccabe19f == disco: True | origen V143_RES0.py sha fab1d8068fe901a5 (fijado fab1d8068fe901a5) · c
+  [OK ] (K2) sha de corre_frio_carrera, V143_RES0, V143_TEL, corre_v143, V143, pista, juez, O1 == fijados
+  [OK ] (K3) revisa_carro EAC_G0: PASA · []
+  [OK ] (K3) revisa_carro EAC_SEL: PASA · []
+  [OK ] (K3) revisa_carro EAC_AZA: PASA · []
+  [OK ] (K3) revisa_carro EAC_SELV: PASA · []
+  [OK ] (K4) genomas_eco_sel.json == re-extraccion desde los 160 JSON de ECO_SEL (determinista) y sha == fijado en el runner · genomas_eco_sel.json sha 84b64bf54acff2b0 == disco: True
+  [OK ] (K5) G0 de ECO == perillas de fabrica de la carrera (pista.cfg_fabrica), gen a gen · {'eta': 0.03, 'tau_e': 0.85, 'alpha': 1.2, 'hambre_boca': 2.0, 'aversion': 1.0, 'ema': 0.02, 'paso': 0.5, 'lam': 0.05, 'memoria_rechazo': 20, 'eta_s': 0.15, 'clip_s': 10.0, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'NK': 30}
+  [OK ] (K6) los genes del genoma son EXACTAMENTE los del carro (construye.GENES == EG_GENES del modulo) y los 15 mutables de C
+(D) extraccion: cada genoma es un cuerpo vivo real en T de su JSON ECO; rangos de ECO; sustitutos declarados
+  [OK ] (D1) los 80 genomas son medoides REALES (un cuerpo vivo en T tiene exactamente esos 15 genes) · 80/80
+  [OK ] (D2) todos dentro de [G0/4, 4*G0] (rango de mutacion de ECO) · fuera 0
+  [OK ] (D3) sustitutos = solo AZA_C extintos (serie 45312, 45315, 45319; replica 45323-45325, 45333, 45339) · ['serie:AZA_C:45312<-45313', 'serie:AZA_C:45315<-45316', 'serie:AZA_C:45319<-45320', 'replica:AZA_C:45323<-45326', 'replica:AZA_C:45324<-45326', 'replica:AZA_C:45325<-45326', 'replica:AZA_C:45333<-45334', 'replica:AZA_C:45339<-45340']
+  [OK ] (D4) emparejamiento: explora 39401 -> serie 45301; serie 39440 -> 45320; replica 39441 -> 45321; practica 39491 -> replica 45331
+(A) GENOMA None == origen bit a bit (salida ENTERA de pista.run: fisica + carro + pizarra; N 9, fundador limpio)
+  [OK ] (A) EAC_G0 con GENOMA None == V143_RES0 (s 39491, T 3000) · nacimientos reales 6
+  [OK ] (A) EAC_SEL con GENOMA None == V143_RES0 (s 39492, T 3000) · nacimientos reales 1
+  [OK ] (A) EAC_AZA con GENOMA None == V143_RES0 (s 39493, T 3000) · nacimientos reales 2
+  [OK ] (A) EAC_SELV con GENOMA None == V143_TEL (s 39494, T 3000) · nacimientos reales 3
+(A') con GENOMA = G0 (aplicado por _eg_aplica, el mismo camino que SEL y AZA) == base de frio_carrera, todo salvo la telemetria
+  [OK ] (A'1) EAC_G0 + G0 == V143_RES0 (s 39491, T 5000) salvo d['carro']['eco_a_carrera'] · nacimientos reales 9
+  [OK ] (A'2) la telemetria existe en los 9 linajes y declara fuente G0 y el genoma aplicado
+  [OK ] (A'3) EAC_SELV + G0 == V143 (s 39492, T 5000) salvo la telemetria frio_carrera/eco_a_carrera
+  [OK ] (A'4) runner.tarea(g0) == corre_frio_carrera.tarea(V143_RES0) campo a campo (s 39493, T 5000) salvo tel_eac/genoma y la etiqueta del linaje
+  [OK ] (A'5) tras la corrida el modulo vuelve a GENOMA None
+(B) el genoma SEL_C actua y se aplica entero
+  [OK ] (B1) EAC_SEL + genoma SEL (practica 39491 -> replica 45331) != G0 en la FISICA (control que puede fallar) · replica:SEL_C:45331
+  [OK ] (B2) genoma_ok: lo aplicado == lo declarado en los 9 linajes (sel)
+  [OK ] (B3) genoma_ok FALLA si el declarado difiere en un gen (alpha x1.01) -- el control del instrumento puede fallar
+  [OK ] (B4) aza lleva el genoma AZA de la misma semilla ECO (replica 45331), distinto del de sel · replica:AZA_C:45331
+  [OK ] (B5) estatico: cada gen se lee de kw UNA sola vez (en __init__, antes de _eg_aplica); nada lo relee despues · {'eta': 1, 'tau_e': 1, 'alpha': 1, 'hambre_boca': 1, 'aversion': 1, 'ema': 1, 'paso': 1, 'lam': 1, 'memoria_rechazo': 1, 'eta_s': 1, 'clip_s': 1, 'del_s': 1, 'del_c': 1, 'ema_c': 1}
+(C) regla 14: la tarea del runner == corre_v143.tarea campo a campo
+  [OK ] (C) runner.tarea(v143) == corre_v143.tarea(V143) (s 39494, T 2000)
+  [OK ] (C) runner.tarea(o1) == corre_v143.tarea(O1) (s 39494, T 2000)
+  [OK ] (C2) P.run restaurado tras las tareas
+(F) contabilidad de fundadores (fisica) cierra con la del juez
+  [OK ] (F1) causas fundadores + causas nacidos == causas del juez, por causa · {'hambre': 3, 'sed': 5, 'veneno': 79, 'sal': 62} + {'hambre': 0, 'sed': 1, 'veneno': 1, 'sal': 1} = {'hambre': 3, 'sed': 6, 'veneno': 80, 'sal': 63}
+  [OK ] (F2) muertes de fundadores == cuerpos con origen 0 muertos; fundadores del juez + 1 == origen 0 · {'muertes_fundadores': 149, 'causas_fundadores': {'hambre': 3, 'sed': 5, 'veneno': 79, 'sal': 62}, 'frac_BD_fundadores': 0.9463, 'frac_fundadores_sin_parir': 0.9732, 'vida_fundador_med': 56.0, 'fundadores_por_linaje_med': 17.0, 'causas_nacidos': {'hambre': 0, 'sed': 1, 'veneno': 1, 'sal': 1}, 'frac_BD_nacidos': 0.6667}
+  [OK ] (G) determinismo: la misma tarea dos veces da lo mismo (salvo seg)
+(H) nube-9: un aborto dentro del carro se atrapa, escribe JSON y deja el modulo limpio
+  [OK ] (H1) NK fuera de rango -> aborto atrapado (SystemExit del carro), JSON escrito, GENOMA vuelve a None · SystemExit: eco_a_carrera: NK 9999 fuera de [1, 90]
+(V) la letra (la del muro, sin cambios) y el criterio exploratorio en casos sinteticos
+  [OK ] (V) FUNCIONA -> FUNCIONA · FUNCIONA
+  [OK ] (V) MODESTO (P2 + dif 0.10 + gana a aza 11/20) -> HAY ALGO MODESTO · HAY ALGO MODESTO
+  [OK ] (V) NO: gana a aza solo 10/20 -> NO · NO
+  [OK ] (V) NO: dif 0.09 -> NO · NO
+  [OK ] (V) NO: P2 14/20 -> NO · NO
+  [OK ] (V) NO: el control cruza (P3) y no hay MODESTO por P2 -> NO · NO
+  [OK ] (V) MODESTO: todo salvo P3 -> HAY ALGO MODESTO · HAY ALGO MODESTO
+  [OK ] (V) NO SE LEE: O1 no gana -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: V143 fuera [0.40, 0.80] -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: genoma no aplicado (V4) -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: un aborto -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: contabilidad incoherente -> NO SE LEE · NO SE LEE
+  [OK ] (V) explora: 8/10 +0.05, aza 8/10, BD menor -> mejora
+  [OK ] (V) explora: 7/10 -> no
+  [OK ] (V) explora: dif 0.04 -> no
+  [OK ] (V) explora: BD igual -> no
+(R) banderas (ERR-115) y rangos
+  [OK ] (R) humo con pool: ABORTA
+  [OK ] (R) explora fuera de rango: ABORTA
+  [OK ] (R) serie en semillas de explora: ABORTA
+  [OK ] (R) bandera abreviada: ABORTA
+  [OK ] (R) explora con T != 1e5: ABORTA
+  [OK ] (R) brazo desconocido: ABORTA
+
+ARNES eco_a_carrera: 56/56 TODO OK · 85 s

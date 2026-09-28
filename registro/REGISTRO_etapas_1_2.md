@@ -7012,3 +7012,19 @@ también en la serie 2.
   **ERR-150 (sólo T-C ii) no basta para que TERMO′ sea tronco.** No se propone otro cambio de letra para T-E: cambiar la vara puerta por
   puerta hasta que pase sería pescar. La serie de v14.4c se corre sólo como `--solo TC,TA` (preregistrado, veredicto INCOMPLETO),
   para medir ERR-150 en un termostato real.
+
+## Genomas de ECO_SEL en la pista de la carrera (eco_a_carrera, EXPLORATORIO, 39401–39410): **NO** — el genoma seleccionado en ECO empeora al bicho en la carrera
+- Carpeta `experimentos/organelos/eco_a_carrera/`. Arnés 56/56 (v1 55/56: etiqueta de linaje en A'4, corregido antes del humo); humo OK.
+  Genomas = medoide de los vivos en T de cada semilla de ECO_SEL. Los JSON guardan `vivos_final`: no hubo que re-correr ECO.
+- **R0 real (mediana):**
+  - v143 0.697 · g0 (V143_RES0) 0.601 · **sel (SEL_C) 0.365** · aza 0.585 · selv 0.501 · o1 0.938;
+  - mayoría que cruza: o1 10/10; el resto 0–1/10;
+  - fundadores por linaje: o1 1 · v143 11.5 · g0 19.5 · sel 38.5.
+- **Criterio exploratorio (fijado antes):** no se cumple. SEL vs G0 gana 4/10 (−0.211); SEL vs AZA 5/10.
+  **No se escribe confirmatoria; no se gasta un intento contra el muro.**
+- **Lectura:**
+  - la caída de veneno + sal de ECO (82 % → 3 %) **no transfiere**. En la pista, el 97–99 % de los fundadores muere de veneno o sal
+    antes de parir en TODOS los brazos, O1 incluido;
+  - **la palanca del muro es el establecimiento (fundadores por linaje), no la causa de muerte del fundador**;
+  - hipótesis (no probada): ECO seleccionó el aprendizaje con la tabla de la familia heredada; en la carrera el fundador empieza de cero.
+  - Propuesta: si la evolución ha de hacer el órgano del muro, la selección tiene que ocurrir con fundadores ingenuos.
