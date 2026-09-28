@@ -113,7 +113,7 @@ encima de 0.12; subió a 0.09. No tuve en cuenta que la mayoría de los partos v
   No se abre un ERR: no se cambió ningún umbral ni se usó como puerta.
 
 ## 7. Errores de instrumento declarados
-- **Ninguno nuevo. ERR-149 sigue libre.** Hallazgos del auditor, todos menores o de matiz:
+- **Ninguno nuevo.** (ERR-149 lo tomó ECO_SEL en `organelos` el mismo día; el siguiente libre es ERR-150.) Hallazgos del auditor, todos menores o de matiz:
   - H-1: la prueba de práctica D6 se vio antes del preregistro, y está declarada.
   - H-2: monkeypatch de `P.run` en el worker; es serial, así que es seguro.
   - H-3: la identidad bit a bit no se probó a T 100 000; se extrapola desde T ≤ 20 000.
@@ -133,7 +133,7 @@ encima de 0.12; subió a 0.09. No tuve en cuenta que la mayoría de los partos v
 ## 9. Línea para CLAUDE.md
 > 28-sep-2026 (nube): **TERMO_EVO = NO** por la letra (41001–41020): el margen del termostato como gen heredable sube con herencia y no sin
 > ella (padres 0.066 → 0.092 en 100k; 0.075 → 0.121 en 300k, descriptiva; EVO gana a SINHER 18/20 y 10/10), pero el linaje no cruza
-> (P1 2/20, P3 7/20): el refundador de la ENMIENDA 5 vuelve a la zona letal. Sin ERR nuevos (siguiente libre ERR-149). `experimentos/organelos/termo_evo/INFORME.md`.
+> (P1 2/20, P3 7/20): el refundador de la ENMIENDA 5 vuelve a la zona letal. Sin ERR nuevos (siguiente libre ERR-150). `experimentos/organelos/termo_evo/INFORME.md`.
 
 ## 10. Archivos
 `ENCARGO_NUBE.md` · `PREREGISTRO_termo_evo.md` · `construye_evo.py` (6cdd7dd10e9a0594) · `carros/V143_EVO_{BAJO,SINHER,ANCHO,M40}.py` ·

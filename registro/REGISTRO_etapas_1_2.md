@@ -6875,6 +6875,125 @@ Lo que sube a v14.3 (~+0.10 a +0.15) es GLOTU, y no alcanza. Coincide con el pue
 ingrediente de `boca_buena` de O1. Nota de instrumento (no cambia nada): el runner imprime el encabezado "LA LETRA (PREREGISTRO_muro.md sec. 6)"
 también en la serie 2.
 
+## TERMO — último intento del muro de la carrera (28-sep-2026, 09:23–10:50): **HAY ALGO MODESTO ×2** → candidato a v14.4; MURO MAPEADO
+
+> Pregunta: ¿una sola regla local de boca, genérica y sin memoria nueva (un termostato), lleva a v14.3 a cruzar H-1 en la pista de la carrera?
+> Origen: el desarme exploratorio de `boca_buena` (`experimentos/organelos/boca_buena/INFORME.md`, 39001–39010, commit `556b297`).
+
+- **Pieza (V143_TERMO):** sobre una letra cuyo `_adS` no tiene componentes negativas y tiene alguna positiva, muerde si y sólo si existe j
+  con s_j > 0 y nivel_j < rep_umbral + s_j/2. Manda sobre la boca de fábrica, el FILTRO y APR sólo en esas letras. Lo desconocido y lo
+  malo, como v14.3. Memoria nueva: cero. La constante ½ salió del exploratorio (declarado).
+- **Control TERMOINV:** la misma regla, pero leyendo la necesidad que la letra NO sube.
+- **Preregistro:** `experimentos/organelos/termo/PREREGISTRO_termo.md` (commit `5bc646e`, sha `0cfef84b2d59e758`, escrito antes del humo).
+  Arnés 22/22; humo OK (regla 14); auditor: LISTO PARA SERIE, sin bloqueantes.
+- **Predicción del creador:** FUNCIONA 0.35 / MODESTO 0.40 / NO 0.08 / NO SE LEE 0.17 por serie.
+- **Crudos:** `termo/serie_pool6.log`, `termo/replica_pool6.log`, `termo/bloque.log` y los `resumen.json`:
+  - serie: sha `d6eeacd8a3464c83`;
+  - réplica: sha `668f16b48345adde`.
+
+| brazo | serie 39101–39120 R0 real · semillas con mayoría | réplica 39121–39140 R0 real · semillas con mayoría |
+|---|---|---|
+| v143 | 0.610 · 0/20 | 0.590 · 0/20 |
+| **termo** | **0.923 · 14/20** (gana a V143 18/20, +0.350) | **0.932 · 13/20** (gana a V143 20/20, +0.350) |
+| termoinv (control) | 0.127 · 0/20 | 0.119 · 0/20 |
+| o1 (techo) | 0.938 · 20/20 | 0.933 · 19/20 |
+| **o1 vs termo, pareado** | O1 gana 9/20, dif −0.011 | O1 gana 10/20, dif 0.000 |
+
+**Validez completa ×2** (V3: v143 en rango, 0.61 y 0.59). **Puertas ×2:** P1 (cruza, mayoría en ≥15/20) False (14 y 13), P2 True, P3 True.
+**Veredicto de la letra: serie MODESTO, réplica MODESTO → BLOQUE: HAY ALGO MODESTO.**
+
+**Regla de parada (sec. 7, decidida por el director antes de correr):** TERMO queda como **candidato a v14.4** por mérito propio y el
+**MURO DE LA CARRERA SE DECLARA MAPEADO**. No hay más intentos sobre él.
+
+**Lectura honesta:**
+- TERMO lleva a v14.3 de ~0.60 a ~0.93 de R0 real mediano, en las dos corridas.
+- **Queda pareado con O1:** O1 no le gana (9/20 y 10/20).
+- Lo hace con una regla local de una línea, sin memoria nueva y sin copiar constantes de O1.
+- El control que lee la necesidad equivocada se hunde (0.12–0.13), así que el efecto es de la pieza.
+- No llega a la puerta estricta P1: le faltan 1–2 semillas con mayoría de linajes que cruzan.
+- El mapa del muro:
+  - la brecha v14.3–O1 estaba en la boca frente a lo bueno;
+  - la pieza que la cierra es comer lo que sube alguna necesidad bajo una consigna ESTRICTAMENTE por encima del umbral de parto;
+  - consigna en el umbral = extinción.
+
+**Vocabulario.**
+- Permitido: "TERMO iguala a O1 en R0 real mediano", "cruza en la mediana, no en la puerta estricta", "muro mapeado".
+- Prohibido: "TERMO funciona" a secas, "v14.4" sin el examen del criterio v4.
+
+**Siguiente:** examen del criterio de tronco v4 para TERMO (candidato a v14.4). En la nube, `termo_evo/ENCARGO_NUBE.md`:
+¿la selección encuentra el termostato sola?
+
+## Examen del criterio de tronco v4 para TERMO (candidato v14.4) — serie 28-sep 12:37–13:17: **NO PASA** (cae T-C (ii) y T-E); T-G PASA
+- Preregistro `experimentos/tronco_v14_4_examen/PREREGISTRO_examen_v144.md` (commit `ed19c50`). Arnés 126/126; auditor LISTO PARA SERIE.
+  **Predicción del creador: NO PASA (p 0.99)**, porque la memoria `_adS` es una suma sin olvido.
+- Crudo `experimentos/tronco_v14_4_examen/datos/examen_v144_serie_20260928_123734.json` (sha `25458f0f470b25e6`); log `serie_pool6.log`.
+- **Puertas:** T-A PASA · T-B PASA · T-C NO · T-D PASA · T-E NO · T-F PASA · **T-G PASA** · T-H no medida.
+- **T-C (ii), reversión:** rev CAND −12.0 contra tronco 44.0 (LI −59.4, pide > −12.5). Tras invertirse el mundo, TERMO sigue mordiendo lo
+  que antes era bueno (expA_Q4 1687 contra 666.5; expB_Q4 207.5 contra 1118.5). TERMO cae también en T-E (examen v3′).
+- **T-G, capacidad declarada: PASA con holgura.** El crecimiento neto del linaje sube en el mundo vivo:
+  - CUELLO_MIN: r +8 contra −6 (LI de la diferencia 12.1 > 1);
+  - VIVO: r −33 contra −76 (LI 41.3); muertes 65 contra 94.5.
+  - El control TERMOINV no gana (−21).
+- TRONCO_B y PLACEBO PASAN (el instrumento discrimina). La réplica no se corre: la serie dio NO.
+- **Lectura:** el termostato sirve donde la comida buena sigue siendo buena, pero no se desdice. Su memoria no olvida.
+  → **TERMO NO es v14.4.** El siguiente candidato es TERMO′, con memoria que olvida; está en construcción en
+  `experimentos/tronco_v14_4b_examen/`.
+
+## ★ ECO_SEL — selección natural sobre el linaje de F1 frío (28-sep-2026, 13:55–14:18): **FUNCIONA ×2 en M y en C**
+
+> Pregunta: en el linaje de F1 ARRANQUE EN FRÍO (ECO w90, sin vivero ni fundadores repuestos desde t = 1; `experimentos/organelos/frio/`),
+> ¿la selección natural sobre rasgos heredables con mutación sube la capacidad del linaje por encima de F1 sin selección, y es la herencia
+> (no la variación) la que lo hace? Idea que une los frentes: la nube (termo_evo) mostró que el gen del margen sube con herencia, pero
+> la refundación lo resetea; en F1 frío no hay refundación.
+
+- **Preregistro:** `experimentos/organelos/eco_sel/PREREGISTRO_eco_sel.md` (commit `868afb6`, antes de la serie). Arnés 59/59, humo OK,
+  auditor LISTO PARA SERIE. Carro FAMB_RES0_ECO y genética de ECO sin cambios (p 0.05, σ 0.15, banco 200, 8 sombras). Memoria nueva: cero.
+- **Medida:** K = media de cuerpos vivos en [T/2, T] (0 tras la extinción), pareada por semilla. T = 1e6.
+- **Brazos:**
+  - F1: sin mutación.
+  - SEL_M / AZA_M: sólo muta `rep_umbral` (el margen), con o sin herencia.
+  - SEL_C / AZA_C: mutan los 15 genes del cerebro, con la historia de vida fija; con o sin herencia.
+- **Predicción del creador:** M: FUNCIONA 0.15 / MOD 0.25 / NO 0.50. C: FUNCIONA 0.25 / MOD 0.40 / NO 0.25.
+  **Refutada para bien en las dos.**
+- **Crudos:**
+  - `eco_sel/serie_pool6.log` y `eco_sel/replica_pool6.log`;
+  - `eco_sel/datos/eco_sel_serie_s45301-45320/` y `eco_sel/datos/eco_sel_serie_s45321-45340/`.
+
+| brazo | K serie 45301–45320 | K réplica 45321–45340 | persisten (s/r) |
+|---|---|---|---|
+| F1 (sin selección) | 30.85 | 31.01 | 20/20 · 20/20 |
+| **SEL_M** (margen heredable) | **34.91** · vs F1 20/20 +4.13 · vs AZA_M 19/20 | **34.74** · vs F1 20/20 +3.60 · vs AZA_M 20/20 | 20 · 20 |
+| AZA_M (sin herencia) | 20.19 | 24.46 | 16 · 18 |
+| **SEL_C** (cerebro heredable) | **38.94** · vs F1 20/20 +8.16 · vs AZA_C 20/20 | **39.23** · vs F1 20/20 +8.32 · vs AZA_C 20/20 | 20 · 20 |
+| AZA_C (sin herencia) | 25.65 | 23.01 | 17 · 15 |
+
+- **P1, el gen sale de sus 8 sombras en t = 100 000:**
+  - M: rep_umbral 2.85 / 2.25;
+  - C: alpha 8.8 / 8.6, tau_e 2.05 / 1.6, aversion 6.8 / 5.35.
+  - Guardia: AZA dentro de sus sombras en las dos corridas.
+- **Validez ×2:** F1 persiste 20/20, frío limpio (0 refundados) y la genética es la declarada.
+- **Veredicto de la letra:** M FUNCIONA ×2 y C FUNCIONA ×2 → **BLOQUE FUNCIONA en M y en C**.
+- **Verificación del auditor: SE SOSTIENE CON RESERVAS.** Recalculó K, P2 y P3 desde los 200 JSON sin el código del runner (exacto),
+  confirmó los shas iguales al preregistro, bloqueados 0 y tope no alcanzado (máx. 90 vivos de 3 000), e hizo leave-one-out lejos del umbral.
+  Las reservas son de registro (este commit) y de vocabulario.
+- **Descriptivo (no decide):**
+  - En SEL_C la fracción de muertes por veneno + sal cae de ~82 % (F1) a **2.2 % / 3.5 %**. Los nacidos de la segunda mitad son del
+    mismo orden (~8 800 contra ~9 200): no es un artefacto de menos pasos.
+  - En SEL_M, rep_umbral de los vivos baja a 0.57 / 0.66, contra ~1.1–1.2 sin herencia; es decir, sube el margen de TERMO.
+  - En 13/20 semillas de la réplica queda en la banda de TERMO (0.6–0.9).
+- **Lectura:** en un linaje que se sostiene solo, la selección natural, sin juez ni diseño, sube la capacidad de carga del linaje de ~31 a
+  ~35 (margen) y a ~39 cuerpos (cerebro) con el mismo flujo de comida. El mismo gen sin herencia la baja.
+  **Es la primera capacidad del linaje en JUACO que ningún diseñador puso, con serie + réplica preregistradas.**
+- **Vocabulario:**
+  - Permitido: "la selección natural sube la capacidad de carga del linaje (K)", siempre con la medida.
+  - Para el veneno: "en SEL_C la fracción de muertes por veneno + sal cae de ~82 % a ~2–3.5 % (descriptivo)".
+  - Prohibido: "aprende", "evoluciona" sin la medida, "especie".
+- **ERR-149 (arnés, antes del humo; ni letra ni runner ni núcleo cambiaron):** la primera corrida del arnés dio 57/59. El caso (H) de
+  AZA contaba como "herencia" a los hijos de fundadores, que son clones de G0 y pueden coincidir con una entrada del banco por identidad.
+  Se corrigió el caso para medir sólo hijos de padre no fundador (AZA 3/203 y 0/309; SEL 346/346 y 276/276). El umbral < 5 % no cambió.
+  Salida vieja: `identidad_eco_sel_salida_v1_57de59.txt`. Auditado: legítimo. **El siguiente ERR libre es ERR-150.**
+- **Niveles:** propuesta del coordinador para los niveles 10–13 (ECO): subir por este FUNCIONA ×2. El porcentaje lo fija el director.
+
 ### TERMO_EVO — el margen del termostato de boca como GEN heredable (nube, 28-sep-2026 14:45–17:40): **NO**
 - Encargo `experimentos/organelos/termo_evo/ENCARGO_NUBE.md`; preregistro `PREREGISTRO_termo_evo.md` (commit `e471de9`, antes del humo y
   de la serie). Carros por anclas desde V143.py (2a03048a7f1525e5) con `construye_evo.py` (6cdd7dd10e9a0594). El gen g es un float por
@@ -6892,5 +7011,5 @@ también en la serie 2.
 - Post-hoc (NO preregistrado; `lee_posthoc.py`; auditoría H-6): los linajes establecidos de evo (66/180) tienen R0 0.922 con g ≈ 0.086.
   Los de SINHER (33/180) tienen R0 0.824 con g ≈ 0.045. Una vez establecido, casi cualquier g > 0 vive. La herencia gana porque establece
   más linajes; lo que impide P1 es el refundador de la ENMIENDA 5, que vuelve a la zona letal.
-- Auditor (solo lectura): el NO se sostiene; hallazgos menores H-1..H-6. **Sin ERR nuevos (el siguiente libre sigue siendo ERR-149).**
+- Auditor (solo lectura): el NO se sostiene; hallazgos menores H-1..H-6. **Sin ERR nuevos** (ERR-149 lo tomó ECO_SEL en `organelos` el mismo día; el siguiente libre es ERR-150).
   Informe: `experimentos/organelos/termo_evo/INFORME.md`.

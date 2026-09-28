@@ -1,0 +1,249 @@
+{
+ "etiqueta": "eco_sel_serie_s45301-45320",
+ "veredicto": {
+  "M": "FUNCIONA: LA SELECCION MUEVE EL MARGEN Y SUBE LA CAPACIDAD DEL LINAJE SOBRE F1; EL MISMO GEN SIN HERENCIA NO (en esta serie)",
+  "C": "FUNCIONA: LA SELECCION MUEVE EL CEREBRO Y SUBE LA CAPACIDAD DEL LINAJE SOBRE F1; EL MISMO GEN SIN HERENCIA NO (en esta serie)"
+ },
+ "lineas": [
+  "semillas por brazo: {'F1': 20, 'SEL_M': 20, 'AZA_M': 20, 'SEL_C': 20, 'AZA_C': 20}; persiste en T = 1000000: {'F1': 20, 'SEL_M': 20, 'AZA_M': 16, 'SEL_C': 20, 'AZA_C': 17}; abortos: []; t_corte distinto de 1: []; bloqueados: 0",
+  "CAPACIDAD K (media de cuerpos vivos en [T/2, T], extincion = 0), mediana sobre semillas: {'F1': 30.85, 'SEL_M': 34.91, 'AZA_M': 20.19, 'SEL_C': 38.94, 'AZA_C': 25.65}",
+  "V1 ancla F1 persiste >= 17/20: SE CUMPLE (20) \u00b7 V2 frio limpio (0 refundados, 0 fundadores repuestos, los 5 brazos): SE CUMPLE []",
+  "V3 genetica declarada (mutables, 0 genes fuera de los mutables movidos, mutacion en >= 18/20; F1 sin mutacion): {'F1': (True, [], [], 0), 'SEL_M': (True, [], [], 20), 'AZA_M': (True, [], [], 20), 'SEL_C': (True, [], [], 20), 'AZA_C': (True, [], [], 20)}",
+  "[M] P1 firma del gen contra sus 8 sombras en t = 100000: rango medio (1..9, nula 5) <= 3.5 o >= 6.5 en algun gen de ['rep_umbral'] en SEL_M: SE CUMPLE ({'rep_umbral': 2.85}; salen [('rep_umbral', 2.85)]) \u00b7 guardia: en AZA_M ningun gen sale: SE CUMPLE ({'rep_umbral': 4.5}) \u00b7 descriptivo, prueba de ECO (fuera de las 8 sombras, +/-): SEL_M {'rep_umbral': (0, 7)} \u00b7 AZA_M {'rep_umbral': (3, 3)}",
+  "[M] P2 SEL_M > F1 en K, pareado >= 15/20 y mediana de la diferencia >= +1.5: SE CUMPLE (20/20, mediana 4.13) \u00b7 P3 SEL_M > AZA_M en K, pareado >= 15/20 (el mismo gen sin herencia): SE CUMPLE (19/20, mediana 15.06)",
+  "VEREDICTO M POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): FUNCIONA: LA SELECCION MUEVE EL MARGEN Y SUBE LA CAPACIDAD DEL LINAJE SOBRE F1; EL MISMO GEN SIN HERENCIA NO (en esta serie)",
+  "[C] P1 firma del gen contra sus 8 sombras en t = 100000: rango medio (1..9, nula 5) <= 3.5 o >= 6.5 en algun gen de ['alpha', 'aversion', 'tau_e'] en SEL_C: SE CUMPLE ({'alpha': 8.8, 'aversion': 6.8, 'tau_e': 2.05}; salen [('alpha', 8.8), ('aversion', 6.8), ('tau_e', 2.05)]) \u00b7 guardia: en AZA_C ningun gen sale: SE CUMPLE ({'alpha': 4.7, 'aversion': 4.5, 'tau_e': 4.55}) \u00b7 descriptivo, prueba de ECO (fuera de las 8 sombras, +/-): SEL_C {'alpha': (17, 0), 'aversion': (9, 2), 'tau_e': (0, 8)} \u00b7 AZA_C {'alpha': (3, 3), 'aversion': (3, 5), 'tau_e': (2, 2)}",
+  "[C] P2 SEL_C > F1 en K, pareado >= 15/20 y mediana de la diferencia >= +1.5: SE CUMPLE (20/20, mediana 8.16) \u00b7 P3 SEL_C > AZA_C en K, pareado >= 15/20 (el mismo gen sin herencia): SE CUMPLE (20/20, mediana 13.84)",
+  "VEREDICTO C POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): FUNCIONA: LA SELECCION MUEVE EL CEREBRO Y SUBE LA CAPACIDAD DEL LINAJE SOBRE F1; EL MISMO GEN SIN HERENCIA NO (en esta serie)",
+  "descriptivo, genes en los vivos en T (mediana sobre semillas de la media por semilla): rep_umbral SEL_M 0.5673 \u00b7 AZA_M 1.2035; alpha SEL_C 2.0674 \u00b7 AZA_C 1.5535; aversion SEL_C 1.0031 \u00b7 AZA_C 1.0484",
+  "descriptivo, TERMO: semillas con la media de rep_umbral de los vivos en T dentro de (0.6, 0.9) (margen m = 1 - rep_umbral en [0.10, 0.40]): {'SEL_M': 6, 'AZA_M': 2}",
+  "descriptivo, NACIDOS en la segunda mitad (mediana): nacimientos {'F1': 9213.0, 'SEL_M': 14649.5, 'AZA_M': 3044.5, 'SEL_C': 8762.0, 'AZA_C': 7871.0}; vida media de los muertos {'F1': 1673.4, 'SEL_M': 1193.55, 'AZA_M': 3181.2, 'SEL_C': 2216.75, 'AZA_C': 1521.6}; fraccion de muertes por veneno + sal {'F1': 0.8157, 'SEL_M': 0.7546, 'AZA_M': 0.8267, 'SEL_C': 0.0219, 'AZA_C': 0.6952}; R0 de nacidos {'F1': 0.9999, 'SEL_M': 1.0002, 'AZA_M': 0.9975, 'SEL_C': 1.0017, 'AZA_C': 1.0011} (en el quimiostato ~1 por construccion: no informa)"
+ ],
+ "d": {
+  "completo": true,
+  "bloq": 0,
+  "V1": true,
+  "V2": true,
+  "pers": {
+   "F1": 20,
+   "SEL_M": 20,
+   "AZA_M": 16,
+   "SEL_C": 20,
+   "AZA_C": 17
+  },
+  "medK": {
+   "F1": 30.85,
+   "SEL_M": 34.91,
+   "AZA_M": 20.19,
+   "SEL_C": 38.94,
+   "AZA_C": 25.65
+  },
+  "v3": {
+   "F1": [
+    true,
+    [],
+    [],
+    0
+   ],
+   "SEL_M": [
+    true,
+    [],
+    [],
+    20
+   ],
+   "AZA_M": [
+    true,
+    [],
+    [],
+    20
+   ],
+   "SEL_C": [
+    true,
+    [],
+    [],
+    20
+   ],
+   "AZA_C": [
+    true,
+    [],
+    [],
+    20
+   ]
+  },
+  "abortos": [],
+  "sucio": [],
+  "M": {
+   "P1": true,
+   "G4": true,
+   "P2": true,
+   "P3": true,
+   "V3": true,
+   "mejor": [
+    [
+     "rep_umbral",
+     2.85
+    ]
+   ],
+   "rS": {
+    "rep_umbral": 2.85
+   },
+   "rA": {
+    "rep_umbral": 4.5
+   },
+   "cS": {
+    "rep_umbral": [
+     0,
+     7
+    ]
+   },
+   "cA": {
+    "rep_umbral": [
+     3,
+     3
+    ]
+   },
+   "nF": 20,
+   "mF": 4.128742514970057,
+   "nA": 19,
+   "mA": 15.062874251497004,
+   "n_pares": 20
+  },
+  "C": {
+   "P1": true,
+   "G4": true,
+   "P2": true,
+   "P3": true,
+   "V3": true,
+   "mejor": [
+    [
+     "alpha",
+     8.8
+    ],
+    [
+     "aversion",
+     6.8
+    ],
+    [
+     "tau_e",
+     2.05
+    ]
+   ],
+   "rS": {
+    "alpha": 8.8,
+    "aversion": 6.8,
+    "tau_e": 2.05
+   },
+   "rA": {
+    "alpha": 4.7,
+    "aversion": 4.5,
+    "tau_e": 4.55
+   },
+   "cS": {
+    "alpha": [
+     17,
+     0
+    ],
+    "aversion": [
+     9,
+     2
+    ],
+    "tau_e": [
+     0,
+     8
+    ]
+   },
+   "cA": {
+    "alpha": [
+     3,
+     3
+    ],
+    "aversion": [
+     3,
+     5
+    ],
+    "tau_e": [
+     2,
+     2
+    ]
+   },
+   "nF": 20,
+   "mF": 8.162674650698603,
+   "nA": 20,
+   "mA": 13.838323353293413,
+   "n_pares": 20
+  }
+ },
+ "seg": 618,
+ "MUNDO": {
+  "esc": 90,
+  "n0": 90,
+  "carro": "FABRICA_ECO",
+  "tope": 3000,
+  "muestra": 1000
+ },
+ "SERIE": {
+  "T": 120000,
+  "t_corte": 60000,
+  "banco": 200,
+  "n_sombra": 8,
+  "sigma": 0.15,
+  "p_mut": 0.05,
+  "cada_gen": 2000,
+  "ckpt_cada": 10000
+ },
+ "FRIO": {
+  "T": 1000000,
+  "T_lect": 120000,
+  "gen_largo": 50000,
+  "coh_desde": 10000,
+  "coh_margen": 20000
+ },
+ "BRAZOS": {
+  "F1": [
+   "MUT0",
+   "FAMB_RES0_ECO",
+   1
+  ],
+  "SEL_M": [
+   "MARGEN",
+   "FAMB_RES0_ECO",
+   1
+  ],
+  "AZA_M": [
+   "MARGEN_AZAR",
+   "FAMB_RES0_ECO",
+   1
+  ],
+  "SEL_C": [
+   "CEREBRO",
+   "FAMB_RES0_ECO",
+   1
+  ],
+  "AZA_C": [
+   "CEREBRO_AZAR",
+   "FAMB_RES0_ECO",
+   1
+  ]
+ },
+ "UMB": {
+  "V1": 17,
+  "V3_mut": 18,
+  "P1_lo": 3.5,
+  "P1_hi": 6.5,
+  "P2_n": 15,
+  "P2_d": 1.5,
+  "P3_n": 15
+ },
+ "shas": {
+  "corre_eco_sel.py": "74aff2f668c2c97a",
+  "nucleo_eco_sel.py": "6a36e47ce61db3e1",
+  "construye_eco_sel.py": "f2f5ed3c54d1b2c5",
+  "PREREGISTRO_eco_sel.md": "7c5fbfe0e109e0f9",
+  "frio/corre_frio.py": "3ba8b0f5cf1fbbfa",
+  "frio/motor_frio_rapido.py": "ff9d890a5cce9dec",
+  "juaco_eco/corre_eco_v12.py": "1340d268e1fd93d8",
+  "juaco_eco/corre_eco.py": "47d9cee4d6462116",
+  "juaco_eco/motor_eco.py": "bca3033878b59622",
+  "juaco_eco/carros/FAMB_RES0_ECO.py": "94ea78589bc2ce24"
+ }
+}

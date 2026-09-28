@@ -1096,6 +1096,38 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 > Si da NO → el muro se declara MAPEADO (la pista se cruza con las decisiones de boca diseñadas de O1; las reglas genéricas llegan a ~0.73)
 > y se vuelve al frente ECO. No se abren más variantes genéricas del muro después de ese intento.
 
+### 28-sep-2026 ~10:50: TERMO = HAY ALGO MODESTO ×2 → candidato a v14.4; MURO DE LA CARRERA MAPEADO
+- **Resultado:** v14.3 + termostato de boca (muerde lo bueno si alguna necesidad que sube está bajo rep_umbral + s/2) da R0 real
+  0.923 / 0.932, **pareado con O1** (O1 gana 9/20 y 10/20). Semillas con mayoría que cruza: 14/20 y 13/20; P1 pide 15.
+  Control TERMOINV 0.13 / 0.12.
+- **Por la regla de parada:** TERMO es candidato a v14.4 y no hay más intentos sobre el muro.
+- **Siguiente:**
+  - examen del criterio v4 para TERMO;
+  - volver a ECO;
+  - nube: termo_evo (encargo en `experimentos/organelos/termo_evo/ENCARGO_NUBE.md`, a lanzar por el director).
+
+> **DECISIÓN DEL DIRECTOR (28-sep-2026 ~11:00, tras ver TERMO MODESTO ×2): SE LEVANTA LA REGLA DE PARADA DEL MURO.** Sus palabras: "sí a todo,
+> no pares por mí, corre todo hasta llegar a ponerle dinamita a ese muro".
+> **Qué se corre:**
+> - (1) el examen del criterio v4 para TERMO, candidato a v14.4;
+> - (2) nuevos intentos contra el muro, partiendo de TERMO.
+> **Salvaguardas del coordinador contra "pescar":**
+> - cada intento nuevo lleva preregistro, semillas nuevas y serie + réplica;
+> - FUNCIONA sólo si serie Y réplica dan FUNCIONA con la letra del muro, sin cambiarla (P1 sigue en ≥ 15/20);
+> - cada preregistro declara cuántos intentos van contra el muro (GLOTU, GLOTU+PATAS y TERMO son los 3 primeros);
+> - lo exploratorio usa semillas distintas de las confirmatorias.
+
+> **DECISIÓN DEL DIRECTOR (28-sep-2026 ~13:30): sin tope de intentos hoy** ("no topes, que siga corriendo"). Las salvaguardas contra pescar siguen:
+> letra del muro sin cambios, semillas nuevas, serie + réplica y conteo de intentos en cada preregistro.
+
+### 28-sep-2026 ~14:20: ★ ECO_SEL = FUNCIONA ×2 en M y en C
+- **Resultado:** la selección natural sobre el linaje de F1 frío (sin vivero y sin fundadores repuestos) sube la capacidad de carga K de
+  ~31 a ~35 con el margen heredable y a ~39 con el cerebro heredable. Gana 20/20 ×4 contra F1; el mismo gen sin herencia la baja.
+- **Descriptivo:** en SEL_C las muertes por veneno + sal caen de ~82 % a ~2–3.5 %.
+- **Auditor:** SE SOSTIENE (reservas de registro y vocabulario).
+- ERR-149 (caso H del arnés). El siguiente es ERR-150.
+- **Primera capacidad del linaje que nadie diseñó, con serie + réplica.**
+
 ### 28-sep-2026 (nube, rama `nube/termo-evo-20260928`): TERMO_EVO = NO
 El margen del termostato de boca como gen heredable (fundador en la zona letal, σ 0.03) **sube con herencia y no sin ella**:
 - padres 0.066 → 0.092 en 100k; 0.075 → 0.121 en 300k (descriptiva);
