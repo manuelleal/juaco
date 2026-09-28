@@ -1,0 +1,6 @@
+(X1) humo de la nube (45491, T 200 000) == humo del PC en todas las claves salvo seg: OK {'F1': {'distintas': [], 'faltan': [], 'seg_nube': 7.2, 'seg_pc': 50.4}, 'SEL_C': {'distintas': [], 'faltan': [], 'seg_nube': 8.3, 'seg_pc': 9.1}, 'SEL_MC': {'distintas': [], 'faltan': [], 'seg_nube': 8.3, 'seg_pc': 9.8}, 'AZA_MC': {'distintas': [], 'faltan': [], 'seg_nube': 5.7, 'seg_pc': 6.4}, 'SEL_M': {'distintas': [], 'faltan': [], 'seg_nube': 6.7, 'seg_pc': 8.5}}
+construye_eco_sel --verifica: IGUAL (origen 3ba8b0f5cf1fbbfa; destino 6a36e47ce61db3e1)
+construye_eco_sel_largo --verifica: IGUAL (origen 6a36e47ce61db3e1; destino 69f2b652ac46cd1b)
+(X2) T 1e6 SEL_C s45301, nucleo LARGO == JSON commiteado de la serie eco_sel en todas sus claves salvo seg; nueva solo 'ventanas': OK (distintas []; nuevas ['ventanas']; K 39.489 vs 39.489; 49.8 s en el PC; en la serie de eco_sel (Pool 6) 44.2 s; checkpoint (t, bytes, s) [(100000, 2784851, 0.005), (200000, 2608373, 0.007), (300000, 3613872, 0.008), (400000, 3437152, 0.009), (500000, 3777696, 0.011), (600000, 3785706, 0.011), (700000, 4052301, 0.016), (800000, 3912622, 0.018), (900000, 4068360, 0.019)]; memoria pico 224 MB; JSON 253060 bytes)
+AUDITORIA PC: 2/2
+EXIT 0
