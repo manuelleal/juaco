@@ -1,3 +1,5 @@
+> **Ruta de publicación:** ver `registro/RUTA.md` (casilla actual y siguiente paso).
+
 # ESTADO: una página que se reescribe en cada cierre (skill `/juaco-cierre`)
 
 > Última reescritura: **28-sep-2026, ~21:45**, por el coordinador. Es el cierre del día 28-sep, trabajado en la rama `organelos`

@@ -9,3 +9,12 @@ __pycache__/
 !.claude/settings.json
 !.claude/guardia.py
 !.claude/guardia.sh
+
+# Claves y secretos: nunca en el repo
+.env
+.env.*
+*.key
+*.pem
+*secret*
+*credenciales*
+TYPESAFE_API_KEY*
