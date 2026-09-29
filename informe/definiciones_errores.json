@@ -1,0 +1,1226 @@
+{
+ "1": {
+  "numero": 1,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:41",
+  "fecha": "2026-09-15",
+  "origen_fecha": "manual: cabecera del registro, \"Fecha: 15 sep 2026\" (Etapas 1 y 2)",
+  "texto": "| 2H | α=1.2 en la decisión (preregistrado: 1.06≤α≤1.29) | 0/12 | 12/12 | Refutada por conteo (A veneno Q4: 12–22, criterio ≤5). La tasa por visita coincide con la analítica (0.1%→4% según hambre). Error metodológico: α derivado de tasas por visita, criterio escrito en conteos; 4.000 visitas/cuarto |",
+  "apariciones": 3
+ },
+ "2": {
+  "numero": 2,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:83",
+  "fecha": "2026-09-16",
+  "origen_fecha": "manual: sección \"Día 2 (16 sep 2026)\" del registro",
+  "texto": "Corrección de criterio: el consumo absoluto de A cayó ~45% por disponibilidad (A pasa de ½ a ⅓ del mundo); normalizado por visitas se conserva 10/12 (12/12 con boca corregida).",
+  "apariciones": 0
+ },
+ "3": {
+  "numero": 3,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:85",
+  "fecha": "2026-09-16",
+  "origen_fecha": "manual: sección \"Día 2 (16 sep 2026)\" del registro",
+  "texto": "### ANOM-01 — resuelta: artefacto de instrumentación La serie \"semilla 1\" con caída W_A 1.00→0.52 era la serie de la semilla 12 (aliasing de una lista mutable reutilizada entre semillas). Auditoría de la semilla 1 real: 17 mordidas de A entre 50k y 60k, todas con pred=1.0, dlt=0.0, Wp·A=1.0, Wn·A=0.0. La caída de la semilla 12 sí existe y se explica por C∩A=1 (castigo a C entra por la celda compartida; RW la recupera a 0.98). **No hay mecanismo no identificado.** Tercer error de instrumentación/criterio del proyecto (unidades en 2H, disponibilidad en 2I, aliasing aquí).",
+  "apariciones": 13
+ },
+ "4": {
+  "numero": 4,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:93",
+  "fecha": "2026-09-16",
+  "origen_fecha": "manual: sección \"Día 2 (16 sep 2026)\" del registro",
+  "texto": "Predicción (choque con clip): **refutada** por error aritmético mío: techo por canal es 3 celdas×3 = 9, no 3. Resultado 12/12 valores correctos con degradación graduada: W_B −3.0→−2.78, W_D 0.95; canales D 5.1/4.1, B 3.4/6.2; miedo transitorio a D hasta −0.94. Pendiente graduada en 0/1/2 celdas. En el rango probado el efecto crece con el solapamiento (no se afirma universal). **2K-bis (abierta, sin correr)**: qué ocurre cuando la demanda de representación se aproxima al techo de capacidad — 3 celdas compartidas (códigos idénticos) y/o clip reducido. Hipótesis derivada del organismo, no de la literatura.",
+  "apariciones": 0
+ },
+ "5": {
+  "numero": 5,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:172",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit c949f09f (-S)",
+  "texto": "### ERR-05 — quinto error de instrumento: \"divisiones = 0 en etapas normales\" es FALSO El registro del día 2 afirma: *\"Divisiones en etapas normales: 0 en 6/6 — la regla no dispara sin error crónico\"*. `bateria_v7c.py` **no mide splits en ninguna etapa**, así que la afirmación no venía de la batería. Medido ahora:",
+  "apariciones": 6
+ },
+ "6": {
+  "numero": 6,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:227",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit 61250a39 (-S)",
+  "texto": "### ERR-06 — sexto error de instrumento, y es del día 3 (mío) Diagnóstico de la semilla 15 (regla 5: primero el instrumento). Replicado el sorteo de códigos de las 20 semillas:",
+  "apariciones": 15
+ },
+ "7": {
+  "numero": 7,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:428",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit aecd38c2 (-S)",
+  "texto": "**ERR-07 — artefacto del patrón nulo.** Para X = 000000, `KW@X` es el vector cero y `np.argsort` sobre empates devuelve 0..29 en orden, de modo que code(000000) = {27,28,29} en **las 20 semillas**, determinado por el desempate del argsort y no por KW. Consecuencia: un patrón sin un solo píxel encendido puede heredar un valor a priori de hasta **−2.000**. Son 20/1280 pares; excluirlo no cambia C1–C3 (100%→100%) y mueve el alcance de 0.133 a 0.119. Marcado en la columna `es_patron_nulo` del CSV. Séptimo artefacto de instrumento del proyecto.",
+  "apariciones": 8
+ },
+ "8": {
+  "numero": 8,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:312",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit d53ba3ae (-S)",
+  "texto": "### ERR-08 — tercer criterio mal escrito del día 3, y el patrón que lo produce Al implementar el criterio v2 en `bateria_v7b.py` (hash al pie), dos defectos más, los dos míos, los dos cazados por autoverificación antes de correr 20 semillas:",
+  "apariciones": 9
+ },
+ "9": {
+  "numero": 9,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:737",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit 29a7dd2c (-S)",
+  "texto": "### ERR-09 — noveno error de instrumento: la comprobación de inercia era imposible por construcción > **Aviso de numeración**: los artefactos del exp. 2b (preregistro, script y JSON) llaman a este error > \"ERR-07\" porque lo numeré antes de comprobar que ERR-05…ERR-08 ya estaban asignados. **El número correcto > es ERR-09**, que estaba libre a propósito (ver la línea de BUG-01: \"se numere BUG-01 y no ERR-09\"). Los > tres artefactos **no se editan**: son un trío casado por hash y corregirlos rompería la trazabilidad de la > regla 7. **El registro manda: ERR-09.**",
+  "apariciones": 9
+ },
+ "10": {
+  "numero": 10,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:761",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit 29a7dd2c (-S)",
+  "texto": "### ERR-10 — décimo error: \"sin conflicto\" definido como solapamiento espacial final Tras ERR-09 escribí `PREREGISTRO_exp2b.md` redefiniendo `SIN_CONFLICTO` por criterio mecánico medido, no declarado: cero solapamiento entre **todos** los códigos presentes. Con eso, E2J sale de la categoría (su `solap_B=1` fuerza D-comida ∩ B-veneno: es conflicto por definición) y E2I se clasifica semilla a semilla.",
+  "apariciones": 11
+ },
+ "11": {
+  "numero": 11,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:998",
+  "fecha": "2026-09-15",
+  "origen_fecha": "commit 29a7dd2c (-S)",
+  "texto": "### ERR-11 — la medida de ahorro es función de `W` sola, y `W` es invariante al arreglo POR DEMOSTRACIÓN El ahorro de v6 salió **idéntico en las 20 semillas**: `n1 = 19`, `n3 = 23`, rango cero. Eso no es biología, es aritmética, y se deriva en tres líneas. Con `aversion = 1`, `K·eta = 0.09`:",
+  "apariciones": 23
+ },
+ "12": {
+  "numero": 12,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:1384",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit 0c3aac7b (-S)",
+  "texto": "### ERR-12 — la \"ley de disparo\" era, en su mitad empírica, una identidad del código, y en la otra mitad, falsa Lo encontré al redactar el criterio de disparo del examen de v8, releyendo `organismo_v7e.py` (líneas 74–76):",
+  "apariciones": 8
+ },
+ "13": {
+  "numero": 13,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:1518",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit 013a76e1 (-S)",
+  "texto": "**ERR-13 — el comparador de E comparaba TEXTO JSON, y `0.0` ≠ `-0.0` como texto.** Diagnosticado antes de tocar nada (regla 5). - **Todas** las \"diferencias\" son `W(B|A)` o `W(B|B)`, con v8 = `0.0` y la referencia = `-0.0`: el cero negativo de IEEE. - El estímulo B es neutro (R=0), así que su `W` queda en ruido de coma flotante de orden 1e-17. El signo de ese ruido cambia con la aritmética del drenaje y `round(…, 3)` lo convierte en ±0.0. - **Numéricamente son el mismo número.** Medido sobre los datos guardados, con igualdad numérica en las doce claves de E: - C3: **20/20 idénticas**; - C3C: **9/9 idénticas**; - ninguna otra clave difiere en ninguna semilla. - El preregistro dice \"W … a 3 decimales\", que es igualdad numérica. **El criterio estaba bien escrito; la implementación era más estricta que el criterio.** - Es la **primera vez que un error de instrumento va en la dirección de refutar** en vez de hacer pasar algo. Se registra igual.",
+  "apariciones": 13
+ },
+ "14": {
+  "numero": 14,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:1711",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit bcc8a07b (-S)",
+  "texto": "**ERR-14 — la banda de validación de F1 era más estrecha que el ruido de Poisson.** - Con ≥20 mordidas esperadas, la desviación típica de Poisson es ~±22%, y la banda [0.8, 1.25] es ≈ ±1σ. - Calculado: **1.56 celdas fuera de banda esperadas sólo por azar; observadas 2**. P(fuera | 21.5) = 0.34 y P(fuera | 25.3) = 0.28. - **El contador está bien; el criterio no.** Es un criterio de validación escrito sin el ruido de muestreo. No produjo ningún dato falso. Se numera porque decidió un veredicto.",
+  "apariciones": 7
+ },
+ "15": {
+  "numero": 15,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:1780",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit cd6f663c (-S)",
+  "texto": "**ERR-15 — dos afirmaciones mías de esta tarde, falsas por el instrumento de comparación.** 1. **\"Al azar estaría encima ~5%\":** supuse que la mitad de los objetos eran veneno. La composición real del mundo vivo es 92% veneno. 2. **\"Se estaciona\":** interpreté pasos como estancia. Eran llegadas repetidas.",
+  "apariciones": 5
+ },
+ "16": {
+  "numero": 16,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:1879",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit 96a8b1f5 (-S)",
+  "texto": "**ERR-16 — el control C2 (τ=1) era un no-op por construcción.** - La memoria se guarda como `_rech[pos] = t + τ` y se consulta como `_rech[x] > t` en el paso siguiente. Con τ = 1, en `t+1` la condición es `t+1 > t+1`, falsa: **nunca filtra nada**. - C2 salió idéntico a v8 número por número. Por eso \"pasó\" su parte de M6: **por construcción, no por evidencia.** - **Qué queda en pie:** la conclusión se sostiene con M1 y con **C1**, que sí discrimina. Recordar un objeto al azar en lugar del rechazado **empeora** el atasco (+5.35 pp). - **Qué no queda probado:** \"la duración mínima necesaria\". La dependencia de τ sólo tiene evidencia exploratoria (20 → 9.8%, 50 → 12.9%, 150 → 16.9%, semillas 1–20). - Mismo patrón de siempre, en un control: **releer que el control pueda hacer algo antes de fiarse de que no lo haga.**",
+  "apariciones": 10
+ },
+ "17": {
+  "numero": 17,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:2247",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit 80220eda (-S)",
+  "texto": "### ERR-17 — los tres subcriterios de Q3 estaban mal escritos, cada uno por una razón distinta Diagnóstico desde el JSON (`scratchpad`, sin simular), regla 5: 1. **Los empates contaban como fallo.** `mu_norm` sólo actúa **al dividir**. En **6/20** semillas ninguno de los dos brazos dividió durante la ausencia, así que ΔW_B es **idéntico por construcción** (v10 = v9 exacto). Entre los 14 pares no empatados, v10 es menor en **11/14**. El criterio \"≥ 12/20\" exigía que v10 ganara también donde no podía diferir. Es la familia de ERR-11/16: un criterio que no puede cumplirse por construcción en parte de la muestra. 2. **El umbral de hijas contradecía la evidencia declarada.** Escribí \"v10 ≤ 5/20\" habiendo declarado en §0 que la exploración daba \"0 hijas en 11/20\", es decir, **hijas en 9/20**. El umbral era inconsistente con mi propio prior. 3. **Tolerancia cero sobre una diferencia pareada estocástica** (\"nunca > v9 + 0.5\"). Con 20 pares y una cola larga de divisiones (v9 llega a 19 divisiones en una semilla), un caso al revés no refuta nada. Es ERR-14 otra vez (banda más estrecha que el ruido).",
+  "apariciones": 14
+ },
+ "18": {
+  "numero": 18,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:2291",
+  "fecha": "2026-09-16",
+  "origen_fecha": "commit 44916f4a (-S)",
+  "texto": "**ERR-18 — el evaluador podía ser explotado por constantes de constitución.** `ciega_4` subió la energía tras morir de 0.6 a 1.06: muertes 127 → 96 (S 0.36 → 0.52) sin aprender nada distinto, y con R = 0.4 la regla mecánica lo aceptaba. Corregido antes de continuar (enmienda 1 del preregistro): operador ciego v1 con constitución y mundo protegidos, misma prohibición a los LLM, linaje ciego rehecho desde el padre original. Es el patrón del punto 15 del brief (\"explotar el entorno\"), esta vez atrapado por la auditoría y no por el criterio.",
+  "apariciones": 11
+ },
+ "19": {
+  "numero": 19,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:2325",
+  "fecha": "2026-09-17",
+  "origen_fecha": "commit 51ce0555 (-S)",
+  "texto": "**ERR-19.** `selecciona.py` comparaba el `S+E−C` del hijo (C respecto de su padre) con el guardado del padre (C respecto del abuelo): una mutación `0.0 → 0.0` ganó en gen4c. Corregido: SEC del padre con C = 0. No altera R ni P1.",
+  "apariciones": 6
+ },
+ "20": {
+  "numero": 20,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:2524",
+  "fecha": "2026-09-17",
+  "origen_fecha": "commit 29e32f33 (-S)",
+  "texto": "### ERR-20 — una etapa cerrada que no está en ninguna batería no está protegida **Qué pasó.** La Etapa 3 (generalización) se cerró el 16 sep con v9 y **no quedó en ninguna batería**. El criterio v3 —el examen que decide si un tronco se congela— cubre aprender, revertir, interferencia, control negativo y las identidades de la plasticidad, pero **no cubre generalización a patrones nunca vistos**. Resultado: **v11 pasó el examen 8/8, se congeló como tronco el 17 sep, y la Etapa 3 quedó reabierta sin que ninguna prueba lo dijera**. Nos enteramos sólo porque la nota de dirección pidió re-verificarla a mano.",
+  "apariciones": 24
+ },
+ "21": {
+  "numero": 21,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:2688",
+  "fecha": "2026-09-17",
+  "origen_fecha": "commit 1c47d28d (-S)",
+  "texto": "### ERR-21 — un control negativo con la premisa de una sola vía **Qué pasó.** El criterio 3 del examen v3 asume que separar A∩B=3 exige plasticidad estructural porque la única lectura del mundo son las celdas Kenyon. Un organismo con **dos vías** puede separar por la otra. El criterio, tal como está escrito, **no puede fallar honestamente ni pasar honestamente** para v13: no distingue \"burló el control\" de \"tiene otra vía\". Es la familia de ERR-16 y ERR-20 (controles y coberturas cuya premisa no se revisó al cambiar la arquitectura), y **no se anticipó** al preregistrar (a diferencia de 4a', que sí se corrigió antes de correr).",
+  "apariciones": 24
+ },
+ "22": {
+  "numero": 22,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:2772",
+  "fecha": "2026-09-17",
+  "origen_fecha": "commit 839ceea2 (-S)",
+  "texto": "### ERR-22 — la identidad C2b ≡ C1 tiene la premisa de una sola vía (misma familia que ERR-21) Igual que el control negativo del examen: un control escrito para un organismo que sólo ve el mundo por Kenyon. Para un organismo de dos vías, la garantía que daba KT2 (\"la lenta no ve el canal temporal\") **es falsa y debe serlo**; lo que hay que garantizar es que **no lo usa para resolver la tarea**, y eso es T6, que se preregistró y pasa. No se anticipó al escribir el preregistro (se anticipó T6, no la caída de KT2). **Regla derivada, ya la segunda vez:** *al cambiar la arquitectura, revisar TODAS las identidades de instrumento, no sólo los criterios científicos.* Pendiente: KT2' para organismos de dos vías = C2b(`eta_s=0`) ≡ C1(`eta_s=0`) (la vía rápida sola), más T6.",
+  "apariciones": 11
+ },
+ "23": {
+  "numero": 23,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:3106",
+  "fecha": "2026-09-17",
+  "origen_fecha": "commit 9c9834ea (-S)",
+  "texto": "**ERR-23 — dos fallos míos, visibles en los datos:** 1. *Canal simétrico con sesgo en los dos.* `gamma_soc` fue por `kw_org` a ambos: el emisor que ve la regla escuchaba al ciego (y aprendía vicariamente de él). Emisor solo 0.994 → emisor en CONV **0.681**; la señal que llegaba al receptor ya venía contaminada. La pregunta (\"¿le sirve al ciego la conducta del que ve?\") no se llegó a hacer. 2. *Acierto no balanceado.* Con \"comida mordida + veneno rechazado / visitas\", N0 dio 0.978 sin señal alguna: el emisor se come la comida en cuanto aparece, el receptor visita casi sólo veneno, lo rechaza y **se muere de hambre (667 muertes)** \"acertando\". La medida premiaba no comer.",
+  "apariciones": 12
+ },
+ "24": {
+  "numero": 24,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:3494",
+  "fecha": "2026-09-17",
+  "origen_fecha": "commit 8c0b7521 (-S)",
+  "texto": "**ERR-24 (control, no organismo):** el control SINCOMIDA tal como está escrito no fija su n efectivo (no fuerza el movimiento ni excluye llegadas con veneno a la vista) y puede fallar o pasar por azar. Corrección para la próxima serie del mapa (protocolo, no organismo): en la prueba, contar sólo teletransportes ciegos al llegar y exigir ≥ 30 primeros pasos por semilla (subir `max_pasos` o bajar `E_test`), o sustituir el control por SINMAPA (mismo cuerpo, sin mapa), que es el que realmente mide el sesgo motor. El veredicto compuesto de esta serie es NO por C3; **lo que replica tres veces es la afirmación**: *elige la dirección hacia comida recordada fuera de la vista con el valor que ya tenía, y eso le da de comer*. Nada se recalibra: la corrección aplica a series nuevas.",
+  "apariciones": 4
+ },
+ "25": {
+  "numero": 25,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:3710",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "### ERR-25 (18 sep, 00:35; hallazgo colateral del creador C, verificado por el auditor en sólo lectura): **la puerta de familiaridad no distingue \"no aprendido\" de \"cancelado\"** `organismo_v13.py:34`: la puerta manda a la vía lenta cualquier celda con `|Wp − Wn| ≤ 0.2`, sea porque nunca aprendió o porque los dos canales subieron juntos y se cancelaron (el mecanismo de BUG-01, cerrado desde v7e/v8 por el drenaje de la parte común, `organismo_v13.py:88`, que sigue activo). En el examen de congelación (`examen_v13_20260917_165859`, semillas 101–120) `n_techo = 0` en los seis escenarios, así que el caso literal no se disparó ahí; pero el riesgo **no se discutió al diseñar v13** y es la misma confusión que el creador B midió por otro lado (B4: el 100 % de los estímulos que la puerta declara desconocidos habían sido mordidos ≥ 5 veces — la puerta pregunta \"¿tengo su valor sin repartir?\" y no \"¿lo he visto?\"). Consecuencia medida: el canje puerta contra capacidad (v13 28/35 contra v11 43/50). Propuesta B-2 (puerta por evidencia del código exacto) lo ataca desacoplando las dos preguntas; se corre esta madrugada. **Regla derivada:** los runners del mundo de regla y las baterías deben **guardar `n_techo`** en el JSON (hoy se calcula y no se imprime ni se guarda: `corre_xor_3d.py`, `bateria_generaliza.py`), y todo preregistro que use la puerta declara qué pasa con las celdas canceladas. Verificación: `registro/investigacion/AUDITORIA_dia7_20260917.md`, sección \"Verificación adicional\".",
+  "apariciones": 12
+ },
+ "26": {
+  "numero": 26,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:3925",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 61ed2397 (-S)",
+  "texto": "transcrito con exactitud. **ERR-26 (B-1, enmienda 1):** la enmienda que bajó P1 a ≥ 14/20 no es un análisis de subconjunto (regla 10) sino una rebaja lisa del umbral de aprobación escrita entre dos series; fue inerte (81–100 pasó el umbral original, 19/20) y nunca se implementó en el runner (`corre_hija_dispersa.py:163` sigue en 18), pero **cambió un criterio sin ERR numerado**. Queda numerada aquí; la declaración de B-1 se apoya en la letra original en 81–100 y en la conducta en las dos series. **ERR-27 (C-P1, adenda a la enmienda 1):** la forma relativa de P4' se decidió al ver, con `analiza_dE.py`, que la copia literal de P4 fallaba sobre los datos ya corridos de 41–60 — transparente y motivado (el criterio literal no podía medir el apagado de un sesgo pequeño por construcción), pero es un criterio escrito mirando datos de esa misma serie. **Consecuencia:** para dE-TEST valen como prueba limpia los criterios P1' y P7' en las dos series y P4' sólo en 61–80 (20/20); 41–60 se reporta como retroactivo. **Vocabulario rebajado:** dE-TEST es *candidato pendiente de baterías* (retención y generalización no medidas: M5/M6 corrieron sólo para V13, SELF-TEST y CONST-b), no \"candidato a órgano\". Menores: la guarda G-b etiqueta a MOMENTO como \"inconcluso\" por comparar sólo Q3 cuando el control desplaza el pico a Q4 por diseño (la cantidad total la certifica G-d, limpia); el criterio A1 de A-3 es casi tautológico una vez que A3 (el tope nunca aprieta) se cumple — A-3 vale como identidad",
+  "apariciones": 6
+ },
+ "27": {
+  "numero": 27,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:3929",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 61ed2397 (-S)",
+  "texto": "las dos series. **ERR-27 (C-P1, adenda a la enmienda 1):** la forma relativa de P4' se decidió al ver, con `analiza_dE.py`, que la copia literal de P4 fallaba sobre los datos ya corridos de 41–60 — transparente y motivado (el criterio literal no podía medir el apagado de un sesgo pequeño por construcción), pero es un criterio escrito mirando datos de esa misma serie. **Consecuencia:** para dE-TEST valen como prueba limpia los criterios P1' y P7' en las dos series y P4' sólo en 61–80 (20/20); 41–60 se reporta como retroactivo. **Vocabulario rebajado:** dE-TEST es *candidato pendiente de baterías* (retención y generalización no medidas: M5/M6 corrieron sólo para V13, SELF-TEST y CONST-b), no \"candidato a órgano\". Menores: la guarda G-b etiqueta a MOMENTO como \"inconcluso\" por comparar sólo Q3 cuando el control desplaza el pico a Q4 por diseño (la cantidad total la certifica G-d, limpia); el criterio A1 de A-3 es casi tautológico una vez que A3 (el tope nunca aprieta) se cumple — A-3 vale como identidad demostrada, no como prueba empírica independiente. **Regla derivada (se añade a EQUIPO.md, regla 4 bis):** toda enmienda que cambie un umbral o la forma de un criterio lleva ERR numerado en el momento de escribirla, aunque sea antes de la serie nueva.",
+  "apariciones": 7
+ },
+ "28": {
+  "numero": 28,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:3977",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "### ERR-28 (18 sep 01:15; aviso del creador B, verificado por el auditor): **trampa latente — `experimentos/v13_dos_vias/organismo_v13.py` (88c3574cf9cf38bf) no es el tronco (cc8b16b492d4d324)** Diff real: docstring y dos valores por defecto (`eta_s` 0.015 → 0.0, `puerta` 3 → None). Empírico (scratchpad, 3 semillas): con los kwargs por defecto **difieren** en valor y conducta; con `eta_s`/`puerta` explícitos son idénticos 3/3. De los 24 sitios que importan `organismo_v13` a secas, ninguno tiene esa carpeta delante de `organismo/`; los que sí la anteponen (XOR, N3*, `bateria_generaliza*`) nunca importan ese nombre ambiguo; en `datos/` el sha de la copia sólo aparece en la corrida histórica que congeló v13, cuyo runner pasa `eta_s`/`puerta` explícitos. **Sin consecuencia medida en 70+ archivos.** Al creador B le costó un humo (identidad 3/6) hasta poner `organismo/` primero. **Regla derivada:** todo runner pone `organismo/` primero en `sys.path`; nunca se importa `organismo_v13` a secas con `experimentos/v13_dos_vias` delante; la copia histórica no se edita (documenta la congelación) pero queda señalada aquí.",
+  "apariciones": 15
+ },
+ "29": {
+  "numero": 29,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4043",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "### ERR-29 (18 sep 02:05; hallazgo del implementador del paquete v13E): **`corre_baterias_v13D.py` guardaba la generalización ON y la referencia OFF bajo la misma clave** — el veredicto registrado no cambia La corrida OFF (posterior) pisó en el JSON la entrada de la corrida ON antes de leerla; el veredicto `D2_generalizacion = True` se mantiene porque **las dos pasan** y los números ON están en el log registrado (`baterias_v13D_20260918_012145.log`: K 20/20, G1 px0 0.800 / azar 0.500, 19/20; G2 0.834 / 0.427, 19/20). Corrección: claves explícitas `D2` / `D2_ref` en el runner (sin volver a correr). Lección (regla 9 de los runners): cada etapa escribe bajo una clave propia; el veredicto se lee del JSON, no del recuerdo del proceso.",
+  "apariciones": 6
+ },
+ "30": {
+  "numero": 30,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4051",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 1e2d7a67 (-S)",
+  "texto": "### ERR-30 — examen v3' y órganos que actúan en la boca (02:05): **el criterio 5 (identidad: reducción a v11 apagando `eta_s` y `puerta`) no puede medir a v13E** → criterio 5 adaptado (v3'' para órganos en la boca), declarado antes de correr En el humo de `bateria_v13E` (2 semillas) el criterio 5 dio 0/84 y el examen abortó por su guarda: `k_testE·s̄_E` entra en la boca sin pasar por `eta_s` ni `puerta`, así que apagar esas dos perillas no reduce v13E a v11. Precedente ERR-21 → v3': el criterio se reescribe (la reducción a v11 apaga también la perilla nueva), se justifica en `PREREGISTRO_v13E.md` y el examen entero se corre en semillas nuevas; si con las tres perillas apagadas v13E no es v11 bit a bit, el instrumento está mal y no se interpreta nada. Se anota aquí antes de correr el examen.",
+  "apariciones": 21
+ },
+ "31": {
+  "numero": 31,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4116",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 2ff77ea2 (-S)",
+  "texto": "### ERR-31 (02:50): el runner `corre_baterias_v13E.py` decidía E2 con los umbrales de `bateria_generaliza` (0.65 / 0.55), no con los preregistrados (0.80 / 0.85) Consecuencia: veredicto impreso \"NO REGRESIONA\" contra un preregistro que dice lo contrario. Sin efecto en el registro (se sigue la letra); regla: el runner codifica los umbrales del preregistro, no los de la batería que reutiliza.",
+  "apariciones": 35
+ },
+ "32": {
+  "numero": 32,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4400",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 7ef788d9 (-S)",
+  "texto": "idéntico**. N3d mide obediencia, no retención (pariente del ERR de N3c). **ERR-32 (montaje):** los receptores \"ciegos\" de N3d no pueden aprender nada propio por construcción; toda lectura anterior de N3d como \"transferencia\" queda como *obediencia en línea al que ve* (ya era el vocabulario declarado; ahora con la causa). **Aprobado:** mundo mínimo decidible — parejas con vista PARCIALMENTE distinta para el receptor, puertas de validez de N3d, y el mudo (N6) como predicción principal (C-P6). Regla nueva del creador (anotada): toda predicción \"≤ k × la base\" necesita cláusula para cuando la base no alcanza el criterio.",
+  "apariciones": 22
+ },
+ "33": {
+  "numero": 33,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4508",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 6f38bcdb (-S)",
+  "texto": "**ERR-33 (candidato, instrumento):** `Mundo._reaparece` sortea de `self.tipos` (los 20) y no de `fijos` → `regen_rota=True` descarta `tipos_fijos`: flujo y conjunto controlado son incompatibles (arreglo de una línea, en copia). **ERR-34 (candidato, toca un resultado registrado):** `nobj = nobj_por_org · n` y `spawn()` consume `fijos` en orden → con 8 nombres, SOLO_R (n = 1) recibe sólo los 4 primeros y CONV/PRED (n = 2) los 8: **el 0.515 de SOLO_R y el 0.822 de CONV de N3d están medidos sobre conjuntos de objetos distintos**; probablemente no cambia el veredicto (el receptor es ciego en los dos) pero invalida comparaciones de exposiciones entre brazos con `n` distinto. Pasa al auditor. Aprobado a C: los dos arreglos como perillas en `mundo_social_pred` (apagadas ≡ actual), tres humos con SOLO_R en banda y, sólo entonces, el preregistro con el mudo como predicción principal.",
+  "apariciones": 13
+ },
+ "34": {
+  "numero": 34,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4509",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 6f38bcdb (-S)",
+  "texto": "`tipos_fijos`: flujo y conjunto controlado son incompatibles (arreglo de una línea, en copia). **ERR-34 (candidato, toca un resultado registrado):** `nobj = nobj_por_org · n` y `spawn()` consume `fijos` en orden → con 8 nombres, SOLO_R (n = 1) recibe sólo los 4 primeros y CONV/PRED (n = 2) los 8: **el 0.515 de SOLO_R y el 0.822 de CONV de N3d están medidos sobre conjuntos de objetos distintos**; probablemente no cambia el veredicto (el receptor es ciego en los dos) pero invalida comparaciones de exposiciones entre brazos con `n` distinto. Pasa al auditor. Aprobado a C: los dos arreglos como perillas en `mundo_social_pred` (apagadas ≡ actual), tres humos con SOLO_R en banda y, sólo entonces, el preregistro con el mudo como predicción principal.",
+  "apariciones": 12
+ },
+ "35": {
+  "numero": 35,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4559",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "### ERR-35 — DECISIÓN DEL DIRECTOR (18 sep 2026, 07:10): **el criterio de parada de XOR se reformula después de ver datos (por eso lleva número): la línea XOR se cierra declarando el MÍNIMO de ejemplos con el que el organismo generaliza, no como fracaso** Motivo (medido, creador A, §A12–A13): con 8 patrones de entrenamiento, **9 de los 15 rasgos conjuntivos posibles ajustan los datos con residuo cero y sólo uno generaliza** — ningún aprendiz (local, con retropropagación o con gradiente exacto: 0.562 / 0.531 medidos) puede elegir entre nueve hipótesis empatadas salvo por un prior; con 14 patrones queda una sola. El criterio original (0.75 en xor01 con 8 patrones) exigía adivinar una moneda; mantenerlo habría llevado a concluir \"techo de la arquitectura\" cuando el techo es del examen. Palabras del director: *\"es esperar que mi hijo haga pan solo con haberme visto dos veces\"*.",
+  "apariciones": 70
+ },
+ "36": {
+  "numero": 36,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4597",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit df402d16 (-S)",
+  "texto": "(**ERR-36**, instrumento; runner parcheado a 286a5bb2d71962b4 para el futuro; la réplica en curso tampoco la lleva); (2) SOLO_R 0.986 supera a N0 y a PRED (−0.031): el mundo se aprende solo; el canal sólo ahorra mordidas (−42 % frente al receptor solo, −16 % frente a N0); (3) N0 < SOLO_R sin canal en ninguno porque en N0 hay dos forrajeadores sobre 8 objetos (`nobj_total` arregló ERR-34 y creó \"objetos distintos por organismo\": dilema estructural, no ajuste); (4) G-c mal leída → **serie nula para N6**: con el receptor resolviendo solo, \"retiene tras el silencio\" no distingue aprender del canal de aprender solo. **Sobrevive:** N1 (el significado se aprende por predicción con la magnitud del mundo: u = +0.80 / −0.38, 19/20) y N4 (el canal sólo enseña cuando la conducta ajena informa). **Qué haría falta (no hoy):** bajar el techo de SOLO_R a la banda (más objetos que vistas-tiempo o menos pasos), leer G-c en SOLO_R y guardar `curva_rec`. Línea lateral cerrada (revisión de rumbo 06:45): N2 sigue sin mundo donde medir retención sin morder; lo que queda es el resultado de significado por predicción (N1) y el diseño del mundo que lo haría decidible.",
+  "apariciones": 6
+ },
+ "37": {
+  "numero": 37,
+  "fuente": "experimentos/nivel11_mundo_vivo/PREREGISTRO_mundo_vivo.md:285",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit d6ab45c6 (-S)",
+  "texto": "### ERR-37 — tres errores de MEDIDA, los tres míos, ninguno del mundo **ERR-37a — un umbral pareado puesto en la MEDIANA del efecto da ~10/20 midas lo que midas.** P4' exigía `muertes VIVO ≤ 0.75 × UNA_NEC` por semilla: la mediana de esa razón pareada resultó **0.739**. Un umbral colocado donde está la mediana parte la muestra por la mitad **por construcción**, y el resultado (11/20) no informa sobre el tamaño del efecto, que es grande: A₁₂ = P(VIVO < UNA_NEC) = **0.90**. Lo mismo, y peor, en P7: exigía `≥ 2 ×` y la mediana pareada es **1.99** → 10/20 exacto. Copié la razón central de una mini-prueba de 3 semillas y la convertí en una barra por semilla: eso no es una predicción, es una moneda.",
+  "apariciones": 89
+ },
+ "38": {
+  "numero": 38,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4811",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "### ERR-38 (coordinador, 18 sep 08:44): **la batería de generalización copiada por anclas para v15c y v15d omitió `eta_s=0.15` y `clip_s=10` — V2a corrió con la vía lenta lineal APAGADA; los G1/G2 de v15c y de v15d (0.500/0.513 los dos) se ANULAN; con la batería corregida los dos generalizan (G1 1.000)** La entrada nueva `'organismo_v15c_on'` / `'organismo_v15d_on'` de `bateria_generaliza_v15c/v15d.py` llevaba `dict(puerta=3, mask_rel=2, …)` con el comentario \"eta_s/clip_s por defecto = v14.1\"; pero el gemelo de generalización (`organismo_v14g` y sus copias `organismo_v15gc_on`, `organismo_v15gd_on`) tiene `eta_s=0.0, clip_s=3.0` por defecto — la entrada del tronco `'organismo_v14'` los pasa explícitos (0.15 / 10). Con `eta_s=0` la lectura lineal no aprende y el valor a priori en los nunca vistos queda al azar. **Cómo se detectó:** 6/40 filas de la V2a de v15d idénticas hasta el 16.º decimal a las de v15c (dos organismos distintos no dan lo mismo si la lineal contribuye) → revisión de las kw. **Corrección:** `construye_v15c.py` / `construye_v15d.py` (la entrada lleva `eta_s=0.15, clip_s=10.0`), baterías regeneradas (`bateria_generaliza_v15d` 2a36df3ac43b49bf → ee4c9214310de717; `bateria_generaliza_v15c` 644843ae9e3b625b → e28932bfbcb92eab; organismos y baterías de examen con el mismo sha). Datos anulados: `regresion_generaliza_organismo_v15c_on_20260918_080307`, `regresion_generaliza_organismo_v15d_on_20260918_083404` (se conservan como evidencia del error). Repetición (101–1",
+  "apariciones": 107
+ },
+ "39": {
+  "numero": 39,
+  "fuente": "experimentos/nivel11_mundo_vivo/PREREGISTRO_reproduccion.md:270",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 07a88a84 (-S)",
+  "texto": "**ERR-39 — el control de Occam CUELLO estaba mal escrito, y el humo lo enseña.** Al leer UNA sola fila primaria saciado, el daño del otro recurso vale 0 en esa fila: cuando el agua es el cuello, la fila de la sed no ve el veneno, y CUELLO **muerde veneno saciado el 27 %** (columna B), muere más y produce 4 descendientes. No es la alternativa más fuerte a la tercera fila; con él P-R5 se ganaría por la razón equivocada. **La alternativa fuerte, escrita ahora: CUELLO_MIN** (`rep_cuello = 2`) — saciado, la boca lee el **mínimo de las dos filas primarias** (la lectura pesimista): rechaza lo que daña a cualquiera de las dos, bebe y come con `W = 0` (`pb = 0.84`); sin fila nueva, sin aprendizaje nuevo, sin rng (con la puerta encendida `_wt` sólo entra en la boca; por eso exige puerta). Comprobación del instrumento a T = 20 000 (no es humo): descendientes 13, viable 0.587, tasa saciado A/B/C/D 0.886 / 0.005 / 0.778 / 0.002 — **veta sal y veneno como la tercera fila y produce descendientes al mismo ritmo**: es un control que de verdad puede ganar. - **Cambios (ninguno de umbral):** se añade el brazo CUELLO_MIN (9 brazos, 180 corridas); CUELLO se conserva con su letra y P-R5 queda como estaba (se reporta); **P-R5b**, la que decide si la tercera fila aporta: **(i) `desc` A₁₂(REP_SIN_COSTE > CUELLO_MIN) ≥ 0.65** (≤ 0.55: *la tercera fila sobra* — el propósito saciado es leer las dos necesidades y quedarse con la peor, y eso es lo que se declara); (ii) CUELLO_MIN veta la sal como REP: med",
+  "apariciones": 23
+ },
+ "40": {
+  "numero": 40,
+  "fuente": "experimentos/nivel11_mundo_vivo/PREREGISTRO_reproduccion_2.md:12",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 30ef1f8c (-S)",
+  "texto": "## 0. ERR-40 — la ventana de viabilidad no está ligada a la supervivencia: premia atracones que mueren más **Hecho (221–240, `vivo_rep_s221-240_20260918_091428`):** la medida del bloque 1 (`descendientes` = ventanas de 500 pasos con las dos necesidades ≥ 1.0) dio ESCALAR 36 y BARAJA_CON 39.5 contra VIVO 20, con 149.5 y 159.5 muertes contra 100: A₁₂(VIVO > ESCALAR) 0.007, A₁₂(VIVO > BARAJA_CON) 0.0 → por la cláusula de P-R1, la medida se tiró. Lo demás se reportó sin interpretar (P-R2, P-R3, P-R4, P-R5, P-R6 pasan; P-R5b: **la tercera fila sobra** — CUELLO_MIN 65.5 > REP_SIN_COSTE 55, A₁₂ 0.146; P-R7 y P-R8 no).",
+  "apariciones": 39
+ },
+ "41": {
+  "numero": 41,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4988",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 2fc8df82 (-S)",
+  "texto": "**ERR-41 — el mundo de regla (V2b) de v15c y v15d corrió en configuración tipo v13, no v14.1:** `corre_v15c.py`/`corre_v15d.py` pasaban `eta_s=0.15, puerta=3` solos, y el gemelo g pone por defecto `clip_s=3.0, mask_rel=0, puerta_pat=0` (v14.1: 10, 2, 5). Los veredictos V2b (v15c 0.812; v15d `suma` 0.875 / `ruta` 0.844 estricta) valen como \"mundo de regla en configuración v13 + memoria de pares\", no como \"tronco v14.1 + memoria\". No se repiten: v15c y v15d ya no entran por V1. `corre_v15e.py` pasa los kwargs exactos del tronco (`KW14`).",
+  "apariciones": 31
+ },
+ "42": {
+  "numero": 42,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:4992",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 2fc8df82 (-S)",
+  "texto": "**ERR-42 — el JSON del examen de v15c/v15d no se escribió:** `bateria_v15c.py`/`bateria_v15d.py` (copias por anclas de `bateria_v14`) calculaban `h16(AQUI/organismo_v11.py)` con `AQUI = creacion_A/`, donde ese archivo no existe → excepción **después** de escribir las líneas del veredicto; los conteos del log (`examen_v15d_20260918_083108.log`) son válidos y el JSON por corrida se perdió. La nota del registro de las 08:46 que lo atribuía a la batería congelada queda corregida. `bateria_v15e` lee los sha desde `organismo/`. Regla 14 ampliada: toda batería copiada pasa un humo que llegue a ESCRIBIR su JSON antes de la serie.",
+  "apariciones": 50
+ },
+ "43": {
+  "numero": 43,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5027",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit afdb744c (-S)",
+  "texto": "**ERR-43 (coordinador, 09:40):** la ETAPA 5 de `corre_v15e.py` leyó el conteo K (20) como mediana de `azar` y declaró \"V2a NO\"; el veredicto de la batería (`K_cobertura=True G1_valor=True G2_conducta=True`, azar 0.450/0.469) es el que vale. Ningún umbral cambia; el runner de v15f debe leer los campos de la batería, no reconstruirlos del log.",
+  "apariciones": 22
+ },
+ "44": {
+  "numero": 44,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5146",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 5a000897 (-S)",
+  "texto": "entra por v1. **ERR-44 (coordinador, 10:05):** el subcriterio E1 \"veneno Q4 < Q1\" de la batería v3′ no puede distinguir \"aprendió en una mordida\" de \"no aprendió\": para candidatos que aprenden de un golpe hay que medir el total (o la tasa por trimestre contra el tronco), como hará el criterio v2 (T-E: conducta conservada; pesos internos reportados). **Siguiente:** v15f es el primer candidato que se juzga con `registro/CRITERIO_TRONCO_v2.md` — completado con la síntesis de la sala 2 — con preregistro nuevo, semillas nuevas y réplica (examen y generalización en 121–140, mundo vivo 301–320, mundo de regla 181–200). Vocabulario permitido hoy: *\"la memoria de pares con R crudo y relevo generaliza, se desdice y cruza XOR con 8 ejemplos en el tronco\"*; prohibido: \"entra al tronco\" (todavía no).",
+  "apariciones": 46
+ },
+ "45": {
+  "numero": 45,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5154",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit cbd509b1 (-S)",
+  "texto": "### BLOQUE 0 — escalar el código (nivel 12, mundo de familias; 18 sep ~14:30; cálculo estructural, 200 semillas por celda, sin simular): **NINGÚN (NK, K) con D = 12 deja el alias exacto por debajo del 1 % — el mejor es 8.5 % (NK 360, K 5), 4× por encima de NKMAX; a NK = 5 760 baja a 0.5 % pero el código ya no agrupa familias. ERR-45: la cláusula \"NK/K escalados a alias < 1 %\" del bloque 1 y del T-A propuesto es insatisfacible → la línea del alias pasa al ORGANISMO (B-5 y nodo indexado por código y retina), y el mundo de familias declara el alias por semilla en vez de prometer que no existe** Preregistro `experimentos/nivel12_mundo_familias/PREREGISTRO_bloque0_codigo.md` (§1–7 antes de calcular); `escala_codigo.py` (importa `organismo_v14` para NK/NKMAX/K; verificación P2 15/15 campos contra `DISENO_mundo_grande` §1.1); `escala_codigo_salida.json`. Rejilla NK ∈ {30, 60, 90, 180, 360} × K ∈ {2, 3, 4, 5}, catálogo 8 tokens × 3 variantes (32 estímulos): U1 (alias exacto < 1 %) 0/20 celdas; U2 (alias 2/3 acotado) 6/20; U3 (sim intra − inter ≥ 0.20) 20/20 — la estructura de familias SÍ se lee en el código (+0.31 en el tronco, 200/200). D = 6 tampoco (mejor 5.0 %). Cota optimista (celdas uniformes, sin `cond()`): con las celdas reales el alias sólo puede ser mayor. Predicciones del diseñador: 4/7 en pie, 2 refutadas (U3 no cayó; la similitud cayó 0.059, no 0.10), 1 acertada por la razón equivocada. Consecuencia para el bloque 1: brazos v14.1 y v14.1 + B-5 (`organismo_v14_codigo_on`)",
+  "apariciones": 13
+ },
+ "46": {
+  "numero": 46,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque1_familias_enm1.md:1",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 5079003c (-S)",
+  "texto": "# PREREGISTRO — BLOQUE 1, ENMIENDA 1 (**ERR-46**): la medida que separa \"aprende a costa de los hermanos\" de \"no aprende nada\" **Misión (primero, siempre):** llegar a la AGI por este camino — un organismo mínimo con reglas locales (sin backprop en el runtime) que aprende, desaprende, generaliza, sobrevive y se reproduce, con evidencia preregistrada. **Primero llegar a la frontera; segundo, que viva.** Y aquí, en concreto: **un mundo que obligue a representar.**",
+  "apariciones": 29
+ },
+ "47": {
+  "numero": 47,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque1_familias_enm1.md:233",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 5079003c (-S)",
+  "texto": "## A. **ERR-47** — `dureza = 12` está fuera de banda; corrección ÚNICA por escalera declarada **Lo medido (n = 2, humo):** muertes por 100 000 — EXC **[1268, 939]**, LIN **[699, 754]**, AZA [977, 829], BAR [1417, 1761]; `frac_regalo` 0.17–0.44. La banda de **E1 era [20, 250]**: `dureza = 12` la supera por un factor de 3 a 7. Mi derivación de §4 (×11.96 por el 23× de la trampa 3) suponía que el organismo podía **aprovechar** las llegadas de comida extra; con `E ≤ 1.5` de tope y `0.8` por bocado, a `costo = 0.024` necesita comer cada **33 pasos** y no le da tiempo. La derivación era correcta en las llegadas y falsa en la política: el cuello no es la comida disponible, es la tasa a la que la boca puede convertirla.",
+  "apariciones": 8
+ },
+ "48": {
+  "numero": 48,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque1_familias_enm1.md:257",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 5079003c (-S)",
+  "texto": "## B. **ERR-48** — la medida de §2 tiene un confusor de tendencia; se corrige con diferencia en diferencias **Lo medido (n = 2, humo):** `dano_bruto` es **negativo en los cuatro mundos** (−0.67 a −0.12). Los hermanos **mejoran** entre `t0` y `t0 + vent`, no empeoran — y no porque la excepción no haga daño, sino porque **el organismo está aprendiendo todo el tiempo**: `h_antes` va de 0.25 a 0.75 y sube sola. `dano(e) = h_antes − h_desp` mide **la tendencia global de aprendizaje**, no el efecto de la excepción. Es el mismo error de forma que el de 401–420 (una medida que responde a algo distinto de lo que dice medir), cazado esta vez **en el humo y no en la serie**.",
+  "apariciones": 5
+ },
+ "49": {
+  "numero": 49,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque1_familias_enm1.md:359",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 5079003c (-S)",
+  "texto": "## Nota del coordinador ANTES de la serie (18 sep 15:20) — ERR-49: colateral_n sólo se define con n_valida >= 2 (una ventana válida es ruido: AZA 0.476 y BAR 0.667 con una sola ventana en el humo); las corridas con n_valida < 2 se reportan como 'sin dato' y no entran en la mediana ni en el pareado. Ningún umbral de E1–E4 cambia. Decidido por el coordinador a propuesta del diseñador, que no lo aplicó por no recalibrar tres veces seguidas.",
+  "apariciones": 1
+ },
+ "50": {
+  "numero": 50,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5273",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit de8d59dc (-S)",
+  "texto": "sin mensaje 5/20 y 4/20 en la dirección (−); el preregistro (ERR-50 reservado) manda PARAR y no corregir: es el montaje. Predicción del diseñador (P-D: llega el valor y la familia, no la variante; BAR-H ≈ CANAL) acertada; la del coordinador (`comH` ≥ 0.9, BAR ≈ CORTADO) refutada. **Lectura honesta:** el canal transmite \"esta familia, este valor\" y el receptor actúa sin experiencia propia — eso es comunicación con referencia en su forma mínima — pero con una sola ganadora de 2 bits la referencia no baja a la variante, y el emisor no puede avisar de lo que él mismo evita. **Siguiente (preregistro nuevo, ERR-51 = montaje del emisor):** bloque 4b con un emisor que sí descubre (por ejemplo, un emisor \"voraz\" o que recibió a su vez el aviso de un tercero: la cadena), misma letra en el receptor y en los controles, semillas 581–600 y réplica; y para la variante, el candidato de varias ganadoras (nodo por familia). Nivel 5 sigue en 50 % hasta la serie válida.",
+  "apariciones": 12
+ },
+ "51": {
+  "numero": 51,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque4b_emisor.md:19",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "**ERR-51 (montaje del emisor; bloque 4, 18 sep 2026): el EMISOR comparte el PUNTO CIEGO del receptor.** El bloque 4 montó la dirección decisiva — *\"lo que evitas es comida\"* — sobre un emisor que **evita ese estímulo por exactamente la misma razón que el receptor**: su familia es veneno y la boca sólo lo muerde cuando el azar y el hambre coinciden (`p ≈ 0.025` con hambre 1, `≈ 3·10⁻⁵` saciado). Resultado medido: **P-I2 cayó en la dirección (−)**, con **5/20 y 4/20 emisores sin mensaje**, y por §5.2 del bloque 4 **el bloque se paró y nada se declaró en esa dirección**. El diseño (yo) puso la carga de descubrir en un organismo al que no le dio ninguna forma de descubrir. El humo del bloque 4 ya lo había señalado (1 de 2) y quedó escrito en su §9.3 punto 1; **la serie lo confirmó**.",
+  "apariciones": 18
+ },
+ "52": {
+  "numero": 52,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5283",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 10fb56e9 (-S)",
+  "texto": "### BLOQUE 4b — el emisor que sí descubre (voraz = 1.0; ERR-51); tres series (18 sep 18:10, 18:15, 18:22; semillas 581–600, 601–620, 621–640): **NADA SE DECLARA por la letra — cada serie cayó en una puerta de montaje distinta (P-I3 por el brazo R-SIN-SAL, ERR-52; P-I5 en la dirección + por la puerta de familiaridad: 6/20 receptores ya leían por la vía rápida) — pero LA DIRECCIÓN IRREEMPLAZABLE (−: el receptor come a la primera el alimento que evitaba, sólo por el mensaje) pasa TODAS sus puertas en la tercera serie y replica en las tres: CANAL− 19/20, 17/18, 19/19 contra CORTADO− 3/20, 0/18, 2/19; emisor voraz avisa 20/20, 18/20, 19/20** Preregistro `PREREGISTRO_bloque4b_emisor.md` (86c08ed4e0ba9821 + ERR-52); instrumento `organismo_familias_b4b.py` (b3dd1d7e66a2d147; identidad 95/95 + 18/18 por runner); datos `familias_b4b_s581-600_20260918_181001` (541f57d7711ae3e7), `familias_b4b_s601-620_20260918_181548` (e42c6a5e99dd5a86), `familias_b4b_s621-640_20260918_182209` (206665f9bd674335); 340 corridas por serie.",
+  "apariciones": 10
+ },
+ "53": {
+  "numero": 53,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5304",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 10fb56e9 (-S)",
+  "texto": "declara; **la declaración exige un preregistro con puertas POR DIRECCIÓN (ERR-53: montaje — las dos direcciones tienen puntos ciegos distintos y no pueden compartir puerta), semillas nuevas 641–660 y réplica 661–680, sólo brazos (−).** Escrito antes de correrlo (18:30). Nivel 5: 50 % → **65 %** (mensaje con referencia actuado sin experiencia propia, tres series; sin declarar).",
+  "apariciones": 12
+ },
+ "54": {
+  "numero": 54,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5311",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit ed5c5d84 (-S)",
+  "texto": "Runner `corre_familias_b4b.py --brazos` sólo (−) (con ERR-54: los datos crudos se guardan antes del análisis; el análisis cayó por KeyError 'CANAL+' con brazos de una sola dirección y el veredicto se calculó fuera del runner desde `familias_b4b_s641-660_20260918_183839_crudo.json` y `familias_b4b_s661-680_20260918_184155_crudo.json`, campos `B4`). Puertas (−): P-I2 emisor voraz avisa 18/20 y 19/20 (pasa; la primera en el borde, regla 12); P-I3 prefijo idéntico al gemelo 18/18 y 19/19 (pasa, OTRO excluido por ERR-52); P-I5 lee la vía lenta 17/18 (cae por una semilla) y 18/19 (pasa). Receptor: CANAL− 17/18 · 16/19 (≥ 15 ✓); CORTADO− 2/18 · 0/19 (≤ 5 ✓); VALOR− 5/18 · 4/19 (≤ CORTADO + 3: ✓ · ✗ por una); **BAR-T− 9/18 · 6/19 (✗ ✗)**; BAR-H− 15/18 · 13/19; PAR− 18/18 · 17/19 contra PAR0− 3/18 · 1/19; muertes iguales. **Lectura honesta:** seis series seguidas dicen lo mismo — un organismo actúa sin experiencia propia porque otro se lo dijo — y también dicen que la referencia no es limpia: el patrón de otro token arrastra la mitad del efecto (una sola ganadora de 2 bits reparte el mensaje entre familias que comparten casilla). No se declara \"comunicación con referencia\"; se declara, con vocabulario estricto: *\"el mensaje (patrón + recompensa) cambia la conducta del receptor sin experiencia propia; la referencia es de familia y parcial\"*. Nivel 5 se queda en 65 %. **Siguiente (H-4 de la sala 4): varias ganadoras — el nodo por familia — para que BAR-T caiga a CORTADO y BAR-H también;",
+  "apariciones": 28
+ },
+ "55": {
+  "numero": 55,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "56": {
+  "numero": 56,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "57": {
+  "numero": 57,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "58": {
+  "numero": 58,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "59": {
+  "numero": 59,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "60": {
+  "numero": 60,
+  "fuente": "experimentos/nivel11_mundo_vivo/PREREGISTRO_h1_muerte.md:65",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 9c5bf313 (-S)",
+  "texto": "**`ERR-60` (escrito al escribir esta línea, regla 11, antes de medir).** El encargo pedía el `rng` del hijo como `seed + 700000 + k`. Esa fórmula **colisiona entre semillas vecinas** (`seed=701,k=400` y `seed=702,k=399` dan el mismo número): es el defecto **I6** que `SALA2` §B.1 ya tenía y que la sala 4 recogió en **E-4** (\"los `rng` de los hijos colisionan entre semillas vecinas\"). Se corrige **antes de correr nada**:",
+  "apariciones": 40
+ },
+ "61": {
+  "numero": 61,
+  "fuente": "experimentos/nivel11_mundo_vivo/PREREGISTRO_h1_muerte.md:130",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 9c5bf313 (-S)",
+  "texto": "victoria. **`ERR-61` (escrito aquí, regla 11):** el encargo pedía la puerta de H1-3 como \"≥ 15/20 **pareado**\". `R₀` es integral de trayectoria (ERR-37b) y las trayectorias divergen desde la primera mordida, así que **la puerta que decide es A₁₂ sin parear (≥ 0.80) más la razón de medianas (≥ 1.30)**; el conteo pareado k/20 se calcula, se imprime y **se reporta al lado sin decidir**.",
+  "apariciones": 4
+ },
+ "62": {
+  "numero": 62,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5349",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit c59cfdb8 (-S)",
+  "texto": "### H-1 — QUE LA MUERTE MATE (mundo vivo; 18 sep 19:24 y réplica 19:28; semillas 701–720 y 721–740; 20 brazos × 20): **REPLICADO — con la muerte que borra la memoria del individuo, el linaje NO se reemplaza: R₀ cae de 0.87–0.98 (control inmortal, idéntico al bloque 2 campo a campo) a 0.14–0.17 en TODOS los modos de herencia (nada 0.148/0.140; valores 0.160/0.170; valores + tabla 0.153/0.165; barajado 0.146/0.139); la vida mediana cae de ~700–800 a ~100–130 pasos. ERR-62 (cláusula de cierre escrita antes): ESTE MUNDO NO SOSTIENE LINAJES MORTALES con ninguna herencia ni con las rampas de dote, umbral, objetos o coste. El \"filo del reemplazo\" del bloque 2 era el de un inmortal subsidiado** Preregistro `experimentos/nivel11_mundo_vivo/PREREGISTRO_h1_muerte.md` (f35f6d061b023d38; ERR-60 semillas de hijos sin colisión; ERR-61 A₁₂ sin parear; ERR-62 reservado y ejecutado); instrumento `organismo_vivo_h1.py` (9e99ff87b5e2db1e; `muerte_real=0` ≡ rep2 bit a bit; identidad 62/62); runner `corre_vivo_h1.py` (34c8cd4d264a7a66); datos `vivo_h1_s701-720_20260918_191939` (bfaca3d00f58eecd) y `vivo_h1_s721-740_20260918_192423` (1a6561be332aec0d); 400 corridas por serie, T = 100 000.",
+  "apariciones": 36
+ },
+ "63": {
+  "numero": 63,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque5_ganadoras.md:370",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "## ERR-63 (coordinador, 18 sep 19:50; numeracion del hallazgo del creador): en corre_familias_b4.py y corre_familias_b4b.py las filas del emisor pasadas a cruza_cod0 no llevaban el campo mundo, y el cruce saltaba todas las filas: el 'IDENTICO campo a campo' de los bloques 4 y 4b no comparo nada. Consecuencia probable nula (el mismo cruce si corre en b2/b3 con el mismo codigo). En b5 la fila lleva mundo='familias' y el cruce se ejecuta.",
+  "apariciones": 3
+ },
+ "64": {
+  "numero": 64,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque5_ganadoras.md:372",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "## ERR-64 (coordinador, 18 sep 19:55; ANTES de repetir): el control de no-vacuidad (C) del arnés del runner corría a T = 30 000 y en 1/3 semillas el mensaje aún no se había entregado (CANAL-k5 ≡ CORTADO-k5 por construcción, no por vacuidad): se sube la T del control a 60 000. Es un parámetro del control del instrumento; ningún umbral R1–R6 ni puerta P-I cambia.",
+  "apariciones": 22
+ },
+ "65": {
+  "numero": 65,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "66": {
+  "numero": 66,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "67": {
+  "numero": 67,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "68": {
+  "numero": 68,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "69": {
+  "numero": 69,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "70": {
+  "numero": 70,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque6_sufijo.md:366",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "## ERR-70 (creador del bloque 6, 18 sep 2026, **antes** de la primera serie; cierra la nota abierta del bloque 5) El registro del bloque 5 dejó abierto: *\"la puerta P-I2 (emisor voraz ≥ 18/20) queda en el borde en cuatro de seis series; regla 12 la manda replicar o rebajarla con ERR, y se decidirá **antes** de la serie siguiente, no después.\"* Se decide aquí:",
+  "apariciones": 16
+ },
+ "71": {
+  "numero": 71,
+  "fuente": "experimentos/nivel12_mundo_familias/PREREGISTRO_bloque6_sufijo.md:391",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "## ERR-71 (creador del bloque 6, 18 sep 2026, **antes** de la primera serie; avisado por el coordinador) **Qué pasó.** Al lanzar `corre_familias_b6.py --desde 721`, la guarda de identidad del runner paró en **30/33**. `(C)` y `(H)` quedaron 2/3, que es lo esperado y está cubierto por ERR-64b (los controles que DEBEN diferir piden ≥ 2/3). Pero **`(d)` — \"la DIRECCIÓN: 4 subcasillas OFF, 32 ON, y la hermana FUERA del grupo con sufijo\" — quedó 2/3**, y ese caso no es de los que deben diferir, así que la guarda paró la serie.",
+  "apariciones": 13
+ },
+ "72": {
+  "numero": 72,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "73": {
+  "numero": 73,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "74": {
+  "numero": 74,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "75": {
+  "numero": 75,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "76": {
+  "numero": 76,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "77": {
+  "numero": 77,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "78": {
+  "numero": 78,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "79": {
+  "numero": 79,
+  "fuente": "no_determinable",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "80": {
+  "numero": 80,
+  "fuente": "experimentos/nivel13_alma/PREREGISTRO_alma.md:135",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit b4a7b0ca (-S)",
+  "texto": "- **ERR-80** — si el menú de `MENU_curitas.md` se amplía o se cambia un paso (`d_dote`, `d_umbral`, `miedo_n`, `miedo_R`, `nodo_k`, `nodo_lee`) después de ver cualquier dato.",
+  "apariciones": 2
+ },
+ "81": {
+  "numero": 81,
+  "fuente": "experimentos/nivel13_alma/PREREGISTRO_alma.md:137",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit b4a7b0ca (-S)",
+  "texto": "- **ERR-81** — si `BARAJA-NODO` no llega a construirse y la serie se corre sin control de contenido.",
+  "apariciones": 1
+ },
+ "82": {
+  "numero": 82,
+  "fuente": "experimentos/nivel13_alma/PREREGISTRO_alma.md:138",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit b4a7b0ca (-S)",
+  "texto": "- **ERR-82** — si alguna puerta de §5 se recalibra después de ver la serie.",
+  "apariciones": 1
+ },
+ "83": {
+  "numero": 83,
+  "fuente": "experimentos/nivel13_alma/PREREGISTRO_alma.md:139",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit b4a7b0ca (-S)",
+  "texto": "- **ERR-83** — reservado para la cláusula de cierre: si NINGÚN brazo con alma pasa P-1 ni P-4, se declara que **un alma externa con este menú no rescata al linaje mortal de H-1**, y el camino vuelve a \"que un cuerpo nuevo aprenda en menos de una vida\" (v15f, el mensaje del bloque 4), no a más curitas.",
+  "apariciones": 1
+ },
+ "84": {
+  "numero": 84,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5424",
+  "fecha": "2026-09-18",
+  "origen_fecha": "commit 3ec8d67d (-S)",
+  "texto": "(saciedad y umbral). (4) Defecto de instrumento en 1 linaje (810): respuestas con caracteres no ASCII no aplicaron (a)/(b): ERR-84, tolerancia de codificación en el buzón, para la próxima serie. **Hipótesis que deja para el método (sin alma, preregistro nuevo):** nodo central leído por relevancia y no por recencia (las lecciones expiraban); conexión al nodo desde el nacimiento como mecanismo (no como curita) contra barajado; y la reproducción desacoplada de la saciedad. Nivel 9 sigue en 40 %.",
+  "apariciones": 3
+ },
+ "85": {
+  "numero": 85,
+  "fuente": "registro/HANDOFF.md:821",
+  "fecha": "2026-09-19",
+  "origen_fecha": "commit 7f8b7e0a (-S)",
+  "texto": "con preregistro propio. **ERR-85 (nuevo, 17:19): un agente de otro proyecto mató procesos python sin verificar el cmdline y tumbó dos corridas; regla nueva: ningún agente mata procesos — sólo el coordinador, y verificando el comando.**",
+  "apariciones": 7
+ },
+ "86": {
+  "numero": 86,
+  "fuente": "registro/HANDOFF.md:823",
+  "fecha": "2026-09-19",
+  "origen_fecha": "commit 7f8b7e0a (-S)",
+  "texto": "**ERR-86: Pool(14) con otras corridas en curso → BrokenPipeError en Windows; el tamaño del Pool se fija por `JUACO_POOL`.** **ERR-87 (21 sep, coordinador): `lee_json` por `startswith` en los runners v13D/v13E leía el JSON de la ON (o de k5) como referencia; ningún veredicto cambia (verificado contra los JSON); corregido con prefijo + sello exacto en los dos. Detalle en el registro.**",
+  "apariciones": 12
+ },
+ "87": {
+  "numero": 87,
+  "fuente": "experimentos/nivel7_hija_dispersa/HALLAZGO_auditoria_ERR29.md:1",
+  "fecha": "2026-09-18",
+  "origen_fecha": "texto",
+  "texto": "# Auditoría de ERR-29 → **ERR-87** — `corre_baterias_v13D.py` y `corre_baterias_v13E.py` (18 sep 2026, tarde; auditor externo; numerado y commiteado por el coordinador el 21 sep)",
+  "apariciones": 24
+ },
+ "88": {
+  "numero": 88,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5537",
+  "fecha": "2026-09-21",
+  "origen_fecha": "texto",
+  "texto": "### ERR-88 (21-sep-2026, 15:40; hallado por el creador BA al construir por anclas desde A1; verificado por el coordinador) **Qué se observó:** en `experimentos/junta_fase5/A/organismo_familias_a1.py:234` la perilla `dentro` sólo asigna `_DMv = int(dentro == 'min')` y `_DMv` no vuelve a usarse en el módulo (una sola aparición, `grep -n _DMv`): la perilla es código muerto. En la junta del 19-sep el creador A declaró \"mi mecanismo favorito (`combina='min'`, `dentro='min'`) medido como INERTE y retirado por Occam\": lo medido era que `dentro` no estaba conectada, no que el mecanismo no mueva nada. **Causa:** instrumento. **Veredictos registrados que toca: ninguno** — la fila de A en la junta (R1–R5 en 841–860, cae en 821–840, PAR 13) se midió con `combina='min'` entre tipos, que sí está conectada (arnés BA: la regla reimplementada fuera coincide con `W_tabla` en los 32 estímulos); la predicción \"dentro inerte\" queda como NO MEDIDA, no como refutada. **Corrección:** no se toca A1 (es el ancla de BA y de la junta registrada); si alguien quiere medir `dentro='min'`, va como candidato aparte con la perilla conectada y arnés. **Regla derivada:** \"inerte\" sólo se declara con un control que DEBE diferir cuando la perilla se enciende (el arnés BA lo hace con 7).",
+  "apariciones": 10
+ },
+ "89": {
+  "numero": 89,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5587",
+  "fecha": "2026-09-21",
+  "origen_fecha": "texto",
+  "texto": "### ERR-89 (21-sep-2026, 14:05; hallado por el cronista al registrar las series BA; verificado por el coordinador) **Qué se observó:** el preregistro de BA fija R6 (coste: muertes ≤ 1.5× y okU ≥ −0.10 contra la celda base `b4b`/k1v0) como puerta que \"puede matar al candidato\", pero `corre_familias_ba.py` no la calcula ni la imprime, y `b4b` no estaba entre las celdas de la serie. **Causa:** instrumento (puerta preregistrada sin juez). **Veredictos que toca: ninguno** (nada se declaró; R6 queda INCOMPLETO en vez de PASA/CAE). **Corrección:** cualquier serie futura de BA/BA-v incluye `b4b` en `--celdas` y el runner imprime R6 con su letra. **Regla derivada (para creadores):** toda puerta del preregistro tiene una línea del runner que la juzga, y el humo la muestra; una puerta que el runner no imprime no existe.",
+  "apariciones": 27
+ },
+ "90": {
+  "numero": 90,
+  "fuente": "experimentos/nivel05_familia_variante_BAv/PREREGISTRO_bav.md:49",
+  "fecha": "2026-09-21",
+  "origen_fecha": "texto",
+  "texto": "> **ERR-90 (21-sep-2026, creador del nivel 5, por encargo del coordinador tras la decisión del director).** > **Qué se observó:** las puertas R2, R3 y R4 del bloque 6 son relativas a `CORTADO` (`≤ CORTADO + 3/+5`), de > modo que una celda que baja la base a 0 recibe umbrales más duros que una con base 4. En las series > 921–940 y 941–960, `BA-v` (CORTADO 0/0) fue juzgada con `BAR-T ≤ 3` y `BAR-H ≤ 5` mientras `A1` > (CORTADO 2–4) lo fue con `≤ 5–7` y `≤ 7–9`. **Causa:** criterio (la forma de la puerta, no un umbral). > **Veredictos que toca: ninguno** — las series 821–860 y 921–960 **no se rejuzgan** (regla: no recalibrar tras > ver datos); quedan como están, con su letra. **Corrección:** para `BA-v`, y sólo en semillas NUEVAS, las > puertas pasan a ser **ABSOLUTAS** (P0–P7 de §3), la misión (`BAR-T ≤ 5` Y `PAR ≥ 15`) no se toca, y R6 se > juzga con la base `b4b` corrida en la misma serie e impresa por el runner (ERR-89). **Regla derivada:** una > puerta de especificidad no se normaliza por la tasa base de la propia celda cuando bajar esa tasa es parte > de lo que se está midiendo; se equilibra con la puerta del lado contrario (aquí `CANAL ≥ 15`).",
+  "apariciones": 35
+ },
+ "91": {
+  "numero": 91,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5757",
+  "fecha": "2026-09-21",
+  "origen_fecha": "texto",
+  "texto": "### ERR-91 (21-sep-2026, 18:50; hallado por los tres creadores de la junta, cada uno por su lado; verificado por el coordinador con la binomial) **Qué se observó:** el CRITERIO DE TRONCO v2 exige en T-A `A₁₂(r) ≥ 0.50` pareado por semilla y en T-C (ii) `A₁₂(rev) ≥ 0.75`, con n = 20. `A₁₂` pareado es una prueba de signo: para un candidato IDÉNTICO al tronco (p = 0.5), `P(A₁₂ ≥ 0.50) = P(Bin(20, 0.5) ≥ 10) = 0.588` por brazo y tiende a 0.5 cuando n crece; `P(A₁₂ ≥ 0.75) = 0.021`. Con las 40 corridas OFF reales del tronco (v15f-v2 301–320 y dE5-v2 2021–2040, mismo organismo, mismo mundo) repartidas al azar en dos brazos (placebo perfecto): T-A completa pasa **0.316**; T-A y T-C (ii) juntas **0.006**; sin la cláusula A₁₂, las dos medianas declaradas pasan 0.909 (`experimentos/junta_20260921/A/analiza_potencia_Q1.py`, salida pegada). Además ρ(ON, OFF) por semilla en el mundo vivo está entre −0.47 y +0.38: el pareado no reduce ruido allí. **El criterio v2 nunca corrió su propio control negativo: el tronco, presentado como candidato, no entraría al tronco.** **Causa:** criterio (umbral puesto en el valor de la hipótesis nula; capacidad exigida en una puerta llamada \"sobrevive\" / \"se desdice\"). **Veredictos registrados que toca: NINGUNO** (regla 3): v15f cae además por T-D y T-E, dE5 por T-E y T-G; ninguno habría entrado con otra letra. **Corrección:** CRITERIO_TRONCO_v3 (en construcción, creador A, `experimentos/criterio_v3/`): T-A y T-C (ii) por no inferioridad con el margen que la",
+  "apariciones": 38
+ },
+ "92": {
+  "numero": 92,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:5773",
+  "fecha": "2026-09-21",
+  "origen_fecha": "texto",
+  "texto": "### ERR-92 (21-sep-2026, 19:05; hallado por el cronista al registrar la réplica de la fase 9; verificado por el coordinador) **Qué se observó:** el ancla bloqueante F9-1 fija `vida_NADA ∈ [90, 170]` con las dos series de H-1 (125, 119); con las dos de hoy (94.0, 88.5) la variación natural del propio tronco no cabe en el rango, y la réplica 1521–1540 cayó por 1.5 en esa cláusula con las otras tres en rango. **Causa:** criterio (rango de ancla calibrado con menos series de las que existen; misma forma que ERR-91). **Veredictos que toca: ninguno**: la réplica sigue registrada como \"cae el ancla, nada se declara\"; no se rejuzga. **Corrección:** `experimentos/nivel09_cuerpo_nuevo/ENMIENDA_ERR92_ancla.md` (rango [70, 170], variable `F9_VIDA_NADA_MIN`, semillas nuevas 1621–1640, predicción escrita antes de correr). **Regla derivada:** todo rango de ancla se calibra con todas las series existentes de esa cantidad y se reescribe con ERR cuando aparezcan más.",
+  "apariciones": 19
+ },
+ "93": {
+  "numero": 93,
+  "fuente": "experimentos/nivel09_cuerpo_nuevo_b2/PREREGISTRO_bloque2.md:18",
+  "fecha": "2026-09-21",
+  "origen_fecha": "commit 6b2e51bd (-S)",
+  "texto": "## 0. ERR-93 — dos cambios de letra, numerados al escribirlos (regla 11 de EQUIPO) **ERR-93 (a): `F9-4` puntuaba al control con un acierto SIN BALANCEAR.** La letra pedía `p1(REL_BAR) ≤ p1(NADA) + 0.15`. `p1` es una tasa de un solo lado (rechazar lo malo) y **sube gratis si el cuerpo muerde menos**; el propio preregistro del bloque 1 lo escribió en su §6 (\"trampa 2\") y luego aplicó la cautela **sólo al candidato**. El nodo barajado conserva las marginales y produce **cautela genérica**: en las tres series `p1(REL_BAR)` subió a 0.568 / 0.55 / 0.544 **mientras `c1` se hundía a 0.598 / 0.60 / 0.587**. La letra midió *\"¿rechaza veneno?\"* cuando quería medir *\"¿sabe cuál?\"*. **Letra nueva, `F9-4bis`, con el índice balanceado de Youden, POR CORRIDA (no J de medianas):**",
+  "apariciones": 21
+ },
+ "94": {
+  "numero": 94,
+  "fuente": "registro/CRITERIO_TRONCO_v4.md:1",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 038ff0dd (-S)",
+  "texto": "# CRITERIO DE TRONCO v4 — VIGENTE (UTILIZABLE desde el 22-sep-2026) para candidatos NUEVOS (ERR-94; decisión del director 22-sep: retirar v3, escribir v4) **Qué sustituye:** `registro/CRITERIO_TRONCO_v3.md` (21-sep), **retirado**: su réplica de calibración no repitió (CAL-1 0.898 por 0.002; CAL-4 disparado por un marginal, 0.627; el placebo cayó T-C (ii) en la realización, LI −11.93). v2 y v3 quedan como historia y como las letras con las que se juzgó a quien se juzgó. **Qué NO hace — regla 3, lo primero:** **no rejuzga a nadie.** v15c–v15g, dE5, BA, BA-v, BA-vm, BA-vM y B-5 conservan exactamente su veredicto. v14.2 sigue siendo el tronco hasta que un candidato cruce **esta** letra en semillas nuevas con réplica. La justificación de cada cambio es el **nulo** (el tronco contra sí mismo, 320 corridas reales), no qué candidato cayó. **Estado (23-sep-2026):** **UTILIZABLE.** La calibración V4-CAL (§4) cumplió V4-1..V4-5 en la serie 2841–2920 **y** en la réplica 2361–2440 (22-sep, REGISTRO \"CRITERIO DE TRONCO v4 — calibración y réplica\"). v3 retirado. *Historia del borrador:* hasta esa calibración el texto decía \"no utilizable\" y los candidatos se juzgaban con v2 y v3 lado a lado.",
+  "apariciones": 17
+ },
+ "95": {
+  "numero": 95,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:86",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 9efdb4fd (-S)",
+  "texto": "- **ERR-95**: la ENMIENDA 1 de abajo cambia la escala de la pista y la predicción de la ronda 0 **después** de ver el humo sin escalar (auditoría de la pista, H-2). No es retroactiva, porque el 0.272 queda como dato de la pista sin escalar y la predicción nueva es para una serie no corrida, pero lleva número según la regla 11 de EQUIPO.md.",
+  "apariciones": 4
+ },
+ "96": {
+  "numero": 96,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:88",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 9efdb4fd (-S)",
+  "texto": "- **ERR-96**: telemetría falsificable (auditoría de la pista, H-1, CRÍTICO). `pista.py` hacía `d.update(c.salida())` sin filtrar, así que un carro podía pisar `descendientes`, `deaths`, `vidas_h1` y `fundadores` y fabricar su R0. Se demostró con un carro tramposo (999999 hijos con 0 reales). Arreglo obligatorio antes de la ronda 1: el juez calcula todo **solo** desde la verdad física de la pista, y lo que devuelve el carro va en un espacio de nombres aparte. Además, todo carro pasa un chequeo estático de tokens prohibidos (`sys._getframe`, `inspect`, `gc`, `globals`, acceso a frames o a módulos de la pista) y la revisión del auditor antes de cada ronda: no hay sandbox (H-5), así que las prohibiciones del §4 se cumplen por revisión.",
+  "apariciones": 14
+ },
+ "97": {
+  "numero": 97,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:94",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 5ccb4cab (-S)",
+  "texto": "- **ERR-97**: el **motivo** escrito en la ENMIENDA 1 (\"la causa medida fue la escasez\") **no se sostiene**. El SOLO en la pista, con N = 1, semillas 4001–4002, ya tiene el mundo en ~88–92 % veneno + sal en todos los cuartos de T (`datos/carrera_humo_ronda0_SOLO_escalada_N1_20260922_131228.json`). El cuerpo come A y C, y B y D solo salen por olvido. Lo que cambia con 9 cuerpos en L = 40 es que cada linaje muerde ≈40 % más veneno y sal y vive unas 3 veces menos; el porqué no está medido y se mide antes de la ronda 1. La escala de la enmienda se mantiene: compara la interacción a la misma densidad y con los mismos recursos por cuerpo.",
+  "apariciones": 4
+ },
+ "98": {
+  "numero": 98,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:103",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 9a23d11a (-S)",
+  "texto": "- **ERR-98**: la escala de la ENMIENDA 1 quedó **incompleta**. El olvido de objetos es de 0.003 por paso para **todo el mundo**, así que con `nobj` = 36 cada objeto se olvida 9 veces más despacio que en L = 40, y la pista no es equivalente por cuerpo, como pedía la enmienda. Corrección: la tasa de olvido se escala con N (misma tasa **por objeto**). Con N = 1 no cambia nada (la identidad se mantiene). **La predicción firmada de la ronda 0 escalada (0.35–0.55) quedó REFUTADA en el humo con el olvido sin escalar: 0.269 (0.219–0.322), 0/18** (`datos/carrera_humo_ronda0_escalada_20260922_131931.json`). Ese resultado queda registrado tal cual. La serie de la ronda 0 se corre con la pista corregida y **la misma predicción, sin reajustarla**. Medido en el humo, sin preregistrar: con 9 cuerpos cada linaje vive ≈192 pasos contra 600–646 del SOLO y muerde veneno y sal un 36 % más, aunque el mundo no esté más sucio (85 % contra 88–92 % del SOLO). Pierde su objetivo cientos de veces más a menudo. Hipótesis para medir antes de la ronda 1: los robos lo dejan con hambre y el hambre lleva a la boca a morder lo que tiene delante (el mismo mecanismo que H-BOCA de la fase 10).",
+  "apariciones": 8
+ },
+ "99": {
+  "numero": 99,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:243",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 71241528 (-S)",
+  "texto": "**ERR-99**: R0 = descendientes / (muertes + 1) **se degenera** cuando un cuerpo casi no muere: con 0 muertes, R0 = número de hijos, aunque esos hijos esperen en la cola sin nacer (un solo cuerpo vivo por linaje). La escudería O1 lo declaró en sus humos de práctica (R0 23–51 contra 8 FABRICA con el cuerpo \"no muere\").",
+  "apariciones": 10
+ },
+ "100": {
+  "numero": 100,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:172",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 2bd1d3bd (-S)",
+  "texto": "- **ERR-100 (el R0 cuenta hijos no nacidos):** R0 = descendientes / (muertes + 1), y descendientes = nacimientos reales + `cola_final` (hijos que esperan en la fila al cortar en T). En S-MONO, la mediana de `cola_final/descendientes` es 0.417. **Con solo nacimientos reales, la mediana de R0 es 0.941** (y no 1.565): el criterio (i) sigue pasando, pero con +4.5 % y no +74 %. Con un cuerpo vivo por linaje, el R0 de nacimientos reales es < 1 por construcción: cerca de 1 quiere decir \"casi ninguna extinción\", no crecimiento. El veredicto no cambia (el criterio escrito no se recalibra). Desde ahora el juez reporta siempre el R0 de nacimientos reales al lado del preregistrado. La misma métrica valía en la fase 9 (ORÁCULO 0.46–0.56); su versión de nacimientos reales se recalcula aparte.",
+  "apariciones": 12
+ },
+ "101": {
+  "numero": 101,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:178",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 2bd1d3bd (-S)",
+  "texto": "- **ERR-101 (la memoria sobrevive a la extinción):** cuando se pone un fundador, la tabla del linaje de O1 no se borra (`O1.py:148-153`, `pista.py:328-336`; lo había avisado O1 en su bitácora). 60/180 linajes-semilla tuvieron ≥ 1 fundador antes de t = 10000 y el criterio no los cuenta. **Control pendiente** antes de construir encima: `CTRL_O1_FUNDBORRA` (O1 con la memoria borrada en cada fundador), en semillas selladas nuevas.",
+  "apariciones": 6
+ },
+ "102": {
+  "numero": 102,
+  "fuente": "experimentos/carrera_escuderias/REGLAMENTO.md:116",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 8aa31f6a (-S)",
+  "texto": "**ERR-102:** con un cuerpo vivo por linaje y fundador limpio, R0 real = (d − F)/(d + 1) solo sube si el cuerpo **muere**: un hijo nace únicamente cuando su padre muere. Por eso: (a) un linaje estable y casi inmortal (menos de 5 muertes) **no es evaluable y no puede ganar**. Es el caso de O2 v3, que hace lo que pide la meta y pierde por la letra; (b) una **muerte programada** con hijos en la cola (TERMINAL de O3) sube el R0 real sin que el linaje sea más estable. Es optimizar contra la métrica. Los equipos lo descubrieron y lo declararon (O2 rechazó M3 por esa razón; O3 declaró TERMINAL).",
+  "apariciones": 12
+ },
+ "103": {
+  "numero": 103,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6375",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "**Qué queda.** ERR-103 (el clasificador de muerte voluntaria no discrimina) sin corregir; queda como reserva declarada. Nivel 9 (autonomía, bloque 3, \"más de un cuerpo a la vez\"): con el primer cruce de H-1 (entrada anterior) y esta réplica sellada de dos escuderías que estabilizan, **propuesta del coordinador: subir de 50 a 65 %** — decide el director.",
+  "apariciones": 5
+ },
+ "104": {
+  "numero": 104,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6383",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "**ERR-104 (declarado hoy):** en el mundo v1, morder un objeto malo (B/D) repone al instante una letra al azar en su lugar; con generaciones solapadas eso significa que limpiar fabrica en promedio ~0.5 objetos buenos por mordida, y el flujo de comida **crece** con el número de cuerpos — lo opuesto de \"el mundo se come la comida\". Con reposición inmediata, 9 O2 pasaron de 9 a **128 cuerpos en 5000 pasos** y seguían creciendo, sin techo. **Reserva declarada sobre el primer cruce de H-1** (entrada anterior): es la misma raíz que \"la limpieza compartida es un bien público\" (ENMIENDA 4 de la carrera), invisible allí porque había un solo cuerpo por linaje.",
+  "apariciones": 29
+ },
+ "105": {
+  "numero": 105,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6120",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-105** (B-1): M10-2 está sesgada contra la acumulación — el \"cuerpo 1\" (fundador) nace con dote completa antes del primer cambio y vive ~6× más que los cuerpos 5..12; corrección M10-2′ (pareada 5..12 contra 2..4), semillas 2481–2520, no corrida.",
+  "apariciones": 1
+ },
+ "106": {
+  "numero": 106,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6121",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-106** (B-2): M10-3 mide \"leer el nodo\", no \"acumular por el cambio\", porque el cuerpo 1 nunca lee; corrección M10-3′ análoga.",
+  "apariciones": 1
+ },
+ "107": {
+  "numero": 107,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6122",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-107** (B-3): la cobertura de M10-2 sale degenerada (mediana 0.0 en 4 de 12 corridas); corrección: cobertura por ventana entre viradas, acotada a ≤ 1.",
+  "apariciones": 1
+ },
+ "108": {
+  "numero": 108,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6123",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-108** (B-4): `cob_s` acierta el signo por azar (~0.5) porque la vía lenta generaliza por píxeles compartidos; corrección: leer con `cob_c` (|v| ≥ 0.5) contra el nulo de NADA.",
+  "apariciones": 1
+ },
+ "109": {
+  "numero": 109,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6124",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-109** (B-5): la calibración externa de F1 (regla 3) se importó sin volver a medir su ancla en el instrumento del repo; hoy, con la medición, no se transfiere.",
+  "apariciones": 1
+ },
+ "110": {
+  "numero": 110,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6125",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-110** (B-6): la ENMIENDA 1 (recalibración tras ver caer V-6 en el humo de F0) es admisible por procedimiento, pero **el ancla no se conserva**: no hay enmienda 2 con estas semillas.",
+  "apariciones": 1
+ },
+ "111": {
+  "numero": 111,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6291",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-111** (H-1): el informe del creador no traía veredicto final actualizado; el coordinador lo completó en el CIERRE.",
+  "apariciones": 2
+ },
+ "112": {
+  "numero": 112,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6292",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-112** (H-3): el runner imprime la predicción P3 de la v1 (0.55–0.90) en vez de la Q3 propia de la v2 (0.80; rango 0.65–0.95); no cambia el resultado de esta vez, pero es un defecto del instrumento.",
+  "apariciones": 1
+ },
+ "113": {
+  "numero": 113,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6293",
+  "fecha": "2026-09-22",
+  "origen_fecha": "commit 6d00bcc0 (-S)",
+  "texto": "- **ERR-113** (H-4): `--elige` no archiva su salida; el auditor tuvo que reconstruir la regla 5c a mano (dio el mismo punto).",
+  "apariciones": 1
+ },
+ "114": {
+  "numero": 114,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6421",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit 8c95ab4f (-S)",
+  "texto": "- **ERR-114** (regla 11, `experimentos/subida_n9/PREREGISTRO_n9.md` §10): la Enmienda 1 fija el tope de la lectura V-M en 0.10 después de ver el humo 13391 (un primer tope de 0.15 quedaba justo encima del valor del humo, 0.149, y se descartó por ajustado al dato). Se escribió antes de la serie y V-M sólo se imprime (no es puerta; P1–P7 y §5–§6 no cambian), pero toda enmienda que cambia un umbral lleva ERR. Numerado por el coordinador al detectarlo el auditor.",
+  "apariciones": 9
+ },
+ "115": {
+  "numero": 115,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6422",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit 8c95ab4f (-S)",
+  "texto": "- **ERR-115** (procedimiento): los runners de JUACO parsean `sys.argv` a mano y no rechazan banderas desconocidas; el auditor de `subida_n5` corrió `corre_v5.py --serie … --help` esperando ayuda y lanzó una serie real con Pool (abortada en 40/840, no es dato, log en `datos/humo_no_registrado/`). Regla derivada: los agentes de solo lectura no ejecutan runners con `--serie` en ninguna forma; los runners nuevos abortan ante banderas desconocidas.",
+  "apariciones": 33
+ },
+ "116": {
+  "numero": 116,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6441",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit 6b5098a7 (-S)",
+  "texto": "**ERR-116** (instrumento/predicción): el ancla V-ANCLA [0.00, 0.10] y P1 (NADA 0.020) se fijaron sin calibrar FABRICA-sin-canal en la pista v2 con T=100000; el valor real es 0.110. La siguiente tanda del nivel 10 usa esta serie como calibración declarada del ancla y preregistra un ancla nueva antes de correr semillas nuevas.",
+  "apariciones": 11
+ },
+ "117": {
+  "numero": 117,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6520",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit 197e7352 (-S)",
+  "texto": "**Lectura honesta.** En un mundo partido de verdad, el organismo con el mapa recordado leído por gradiente + filtro llega a la comida por el hueco sin pisar el veneno, y los controles lo atribuyen al veneno recordado (BRÚJULA pisa la muralla 1.0) y al mapa (BARAJADO, CIEGO 0). Lo que falla es que en 1 y 5 semillas la memoria no llegó a registrar las dos murallas enteras. **ERR-117** (candidato del creador, §1): el bloque \"rodeo obligado\" del 21-sep usaba una muralla de una fila en un toro, que no lo parte (es un cilindro); midió sobre todo alejarse, no rodear; no cambia su veredicto CAE, cambia su lectura.",
+  "apariciones": 3
+ },
+ "118": {
+  "numero": 118,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6527",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit 197e7352 (-S)",
+  "texto": "- **ERR-118** (criterio): en la pista v2 (generaciones que conviven), cuando un linaje se extingue el mundo repone un fundador ingenuo; \"persiste el carro\" mide entonces cuánto les ganan los descendientes a esos fundadores repuestos, no sólo la calidad del linaje. O1 persiste 14/20 porque sus fundadores no son viables (R0 fundadores 0.019, R0 nacidos 0.897); O3 0/20 porque sus fundadores son casi tan buenos como sus hijos (0.560 vs 0.743) y los linajes derivan. Consecuencia: el 14/20 de O1 en el monocultivo **no** es una señal de que limpiar esté cerca de sostener un linaje. Hay que redefinir \"persiste\" antes de usarlo como criterio del 100 % del nivel 9.",
+  "apariciones": 28
+ },
+ "119": {
+  "numero": 119,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6556",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit bcfdaa91 (-S)",
+  "texto": "- **ERR-119** (regla 11): la ENMIENDA 1 de `PREREGISTRO_v143.md` §11 mueve el ancla V-ANCLA-1 de [0.22, 0.45] a [0.08, 0.20] **después** del humo 14281. Se escribió antes de la serie y las predicciones no se tocaron, pero todo umbral movido tras ver un dato lleva ERR. La causa: el creador escribió el ancla con el valor de FABRICA *sin* fundador limpio (0.34), sin leer los cinco crudos `r2fab` del 22-sep, que ya tenían FABRICA *con* fundador limpio (0.113–0.129, verificado por el auditor). El rango nuevo cubre esos cinco lotes. Mismo patrón que ERR-114.",
+  "apariciones": 3
+ },
+ "120": {
+  "numero": 120,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6621",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit bdb0aabe (-S)",
+  "texto": "- **ERR-120** (regla 14, procedimiento): el único humo del paquete ECO lo había escrito una versión anterior del juez (su JSON traía la clave `genoma`, que el código actual no produce). Así, el camino completo `trabajo() → corte → banco → juez()`, que alimenta P3, nunca había corrido con el código de la serie. Arreglo: humo nuevo con el código actual, semilla 19001, `eco_humo_s19001_20260923_194831.json` (`93cef3a7cac03e00`). El juez ahora escribe `fuente/med_banco/bateria` y el arnés da 41/41.",
+  "apariciones": 11
+ },
+ "121": {
+  "numero": 121,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6622",
+  "fecha": "2026-09-23",
+  "origen_fecha": "commit bdb0aabe (-S)",
+  "texto": "- **ERR-121** (regla 11, enmienda antes de cualquier serie): P3c (AZAR gana el juez en ≤ 10/20) se calculaba pero no decidía. Ahora, si AZAR gana el juez en > 10/20, el veredicto es **NO EVALUABLE**, porque ese juez no distingue selección de azar. Se cambiaron `corre_eco.py` y `PREREGISTRO_eco.md` §6. No hay dato de ninguna serie.",
+  "apariciones": 12
+ },
+ "122": {
+  "numero": 122,
+  "fuente": "experimentos/tronco_v14_3_examen/PREREGISTRO_examen_v143.md:9",
+  "fecha": "2026-09-23",
+  "origen_fecha": "texto",
+  "texto": "**ENMIENDA ERR-122 (23-sep-2026 ~21:10, ANTES de la serie; decisión del director \"corrige la banda\"):** la banda de azar G2 de T-B pasa de [0.42, 0.58] a **[0.31, 0.60]** (nulo real del tronco). Detalle y cálculo en §7; cambian §3 (arnés), §4 (fila T-B), §5 (probabilidades), §10 y §11 (conteos); §12′ trae el arnés y el humo de después. Nada más cambia.",
+  "apariciones": 30
+ },
+ "123": {
+  "numero": 123,
+  "fuente": "experimentos/organelos/darwin/PREREGISTRO_endosimbiosis.md:104",
+  "fecha": "2026-09-24",
+  "origen_fecha": "texto",
+  "texto": "**ERR-123 (coordinador, 24-sep ~14:20, ANTES de la serie; auditoría juaco-auditor: LISTO CON CORRECCIONES, H-1).** - La medida D cambió de forma después de ver los humos de práctica: pasó de \"transmisiones tras el corte\" a \"partos de toda la corrida contra los libres del mismo instante\", pareada contra AZAR_S e INERTE. Por la regla 11 lleva ERR aunque no haya serie. - Los humos usaron sólo semillas de práctica (22990–22999). El auditor verificó que no se solapan con la serie ni con la réplica. No encontró sesgo hacia FUNCIONA. - H-2 del auditor (identidad sólo a T ≤ 6000): el coordinador corre `identidad_escala_endo.py` (A1 y C a T 120 000, corte 60 000, semilla 22995) antes de la serie. Si no da 2/2, no hay serie.",
+  "apariciones": 3
+ },
+ "124": {
+  "numero": 124,
+  "fuente": "experimentos/organelos/cruce/PREREGISTRO_cruce.md:154",
+  "fecha": "2026-09-24",
+  "origen_fecha": "texto",
+  "texto": "- **ERR-124 (coordinador, 24-sep ~14:20, ANTES de la serie; auditoría juaco-auditor: LISTO CON CORRECCIONES).** Las tres desviaciones de arriba cambian la forma o un umbral del criterio después de ver un humo o el arnés. Por la regla 11 llevan ERR aunque no haya serie; quedan numeradas aquí como ERR-124 (a) diseño de cría + lectura, (b) patas y (c) umbral del arnés 5c. Además va (d), el H-2 del auditor: el ancla \"mut0 == v143\" exige ahora las 20 semillas de lectura (`len(comunes) == ns_lee` en `corre_cruce.py`), no la intersección. Con eso `corre_cruce.py` cambia de sha (el de §8 era `0d10b5e3ac033e81`). El arnés se vuelve a correr antes de la serie y manda su salida.",
+  "apariciones": 2
+ },
+ "125": {
+  "numero": 125,
+  "fuente": "experimentos/organelos/gramatica/PREREGISTRO_gramatica.md:27",
+  "fecha": "2026-09-24",
+  "origen_fecha": "texto",
+  "texto": "- **ERR-125 (coordinador, 24-sep ~14:50, ANTES de la serie; auditoría juaco-auditor: LISTO CON CORRECCIONES).** - Aclaración de H-1: ERR-96 y ERR-120 aparecen arriba como PRECEDENTES del mismo tipo de fallo (comparar telemetría en vez de física; un arnés que no ejercita la rama que importa). No son números nuevos. Los números nuevos de este paquete son los de",
+  "apariciones": 2
+ },
+ "126": {
+  "numero": 126,
+  "fuente": "experimentos/organelos/ohno/PREREGISTRO_ohno.md:153",
+  "fecha": "2026-09-24",
+  "origen_fecha": "texto",
+  "texto": "- **ERR-126** (instrumento, 24-sep 20:35–20:44): la primera corrida de `identidad_ohno.py` dio 8/10. En el mundo pobre, a T 10 000, hay ~3 nacimientos, así que (D2) y (D3) no ejercitaban la duplicación: es la trampa de ERR-120 otra vez. - Arreglo: las piezas (D1)–(D3) corren con el quimiostato de ECO (mismo código, cientos de partos). Se agregan (O1b), VIDA == FIJO pasado el corte en el mundo pobre, y (O1c), lo mismo con 0.03. - La segunda corrida dio 11/12: (O1b) daba igualdad bit a bit, pero con 9 partos contra un umbral puesto a ojo de 20. Se bajó a ≥ 5 y se declara. - Nada de esto toca la física ni la letra.",
+  "apariciones": 5
+ },
+ "127": {
+  "numero": 127,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 1
+ },
+ "128": {
+  "numero": 128,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "129": {
+  "numero": 129,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "130": {
+  "numero": 130,
+  "fuente": "experimentos/organelos/anfitrion/nube_20260924/ERR_130-132_anfitrion.md:6",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 1160378c (-S)",
+  "texto": "## ERR-130: cambio de forma de P2 sin ERR (regla 11 de EQUIPO) - **Qué cambió.** La cohorte de P2 pasó de los vivos tras el corte a **todos los nacidos con t_nace ≥ 10 000**, vivero incluido y sin fundadores (`PREREGISTRO_anfitrion.md:110-113`). - **Qué faltó.** Es un cambio de forma del criterio, y la regla 11 exige numerarlo aunque se haga antes de la serie. `INFORME.md:46` sólo cubre \"nada cambió tras el humo\". - **Sesgo.** `calibra_poder.py:25` corre sólo el brazo `SIN_TRAGAR`, así que la calibración vio el tamaño de muestra y no quién ganaba. No hay indicio de sesgo. - **Orden.** No es auditable por commits: calibración, preregistro y humo llegaron en un solo commit, `f088f26`. Se sostiene por inferencia. - **Regla derivada.** El próximo paquete se commitea por pasos: calibración → enmienda → humo.",
+  "apariciones": 4
+ },
+ "131": {
+  "numero": 131,
+  "fuente": "experimentos/organelos/anfitrion/nube_20260924/ERR_130-132_anfitrion.md:13",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 1160378c (-S)",
+  "texto": "## ERR-131: sobre-afirmación en la calibración - El texto dice \"ni un mundo más grande arregla el poder\", pero `calibra_poder.py` sólo varía `r_rep` (0.03 / 0.045) con `mundo_n` 30 fijo. - El tamaño de mundo no se calibró en este paquete; lo respalda una cita cruzada a ECO v1.1 en w90. - No afecta la letra.",
+  "apariciones": 1
+ },
+ "132": {
+  "numero": 132,
+  "fuente": "experimentos/organelos/anfitrion/nube_20260924/ERR_130-132_anfitrion.md:18",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 1160378c (-S)",
+  "texto": "## ERR-132: la sanción lee una tabla por letra, no el ΔS de la mordida - **Cómo está hecho.** `control_anfitrion.py:86` precalcula `danina[k] = min(EFECTO[VAL_VIVO[k]]) < 0`, y `decision()` lo consulta (`:150-157`) antes de que `motor_anf.py:385` aplique el ΔS. - **Por qué equivale en este mundo.** Es equivalente bit a bit al daño sentido: la mordida aplica exactamente `EFECTO[VAL_VIVO[kk]]`, y ni `VAL_VIVO` ni `EFECTO` se reasignan durante la corrida (se verificó con grep en `motor_anf.py`, `motor_endo.py` y `pista2.py`: sólo se asignan al arrancar). - **Qué más usa.** La puerta usa además `mordio` y `b.sm[1][kk] > 0`, el canal del propio cuerpo; ninguna de las dos es información del mundo. - **Lectura.** La sanción responde a la consecuencia física de la letra mordida. No \"sabe\" qué letra es mala más allá de lo que la mordida le hace. - **Límite escrito.** En un mundo con cambio de valencia a mitad de corrida (por ejemplo, el A↔B de `codigo/`), la tabla quedaría vieja y sería información privilegiada. Ahí la sanción tiene que leer el `dS` de la mordida.",
+  "apariciones": 2
+ },
+ "133": {
+  "numero": 133,
+  "fuente": "experimentos/organelos/ohno/nube_20260925/ERR_133-134_ohno.md:6",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 73a32e66 (-S)",
+  "texto": "## ERR-133 [fondo, sólo interpretación]: G1 compara dos series que oscilan alrededor del mismo punto fijo **Qué pasa** - En la calibración, toda población que persiste tras el corte queda en R0 ≈ 1, sea cual sea `r_rep`: el quimiostato fija la densidad. - 0.02: R0 entre 0.87 y 1.03. - 0.006: 0.99 / 1.09 / 1.11. - 0.005: 1.09 / 1.23 / 1.32. - G1 (R0 pareado VIDA > FIJO, ≥ 15/20) compara entonces dos series alrededor del mismo punto fijo homeostático.",
+  "apariciones": 9
+ },
+ "134": {
+  "numero": 134,
+  "fuente": "experimentos/organelos/ohno/nube_20260925/ERR_133-134_ohno.md:23",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 73a32e66 (-S)",
+  "texto": "## ERR-134 [protocolo]: la duplicación no se ejercita en el mundo exacto de la serie - Las piezas D1–D3 del arnés corren con el quimiostato de ECO (0.03, mundo rico). - Los casos del mundo pobre (O1, O1b) corren con la mutación de gramática apagada. - Ninguna prueba ejercita la duplicación o la divergencia con `r_rep` = 0.006, el valor de la serie. - **Riesgo residual:** un fallo de la duplicación que sólo aparezca con escasez extrema. Es una brecha de cobertura, no un error activo. - **Mitigación sin construir nada:** en la lectura se reporta cuántas duplicaciones ocurren y sobreviven en VIDA.",
+  "apariciones": 3
+ },
+ "135": {
+  "numero": 135,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 1
+ },
+ "136": {
+  "numero": 136,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "137": {
+  "numero": 137,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "138": {
+  "numero": 138,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "139": {
+  "numero": 139,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6750",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 0
+ },
+ "140": {
+  "numero": 140,
+  "fuente": "experimentos/organelos/codigo/PREREGISTRO_codigo.md:68",
+  "fecha": "2026-09-24",
+  "origen_fecha": "commit 878074bc (-S)",
+  "texto": "- **ERR-140 (tras el humo 1, antes de cualquier dato de semillas de serie ni de la exploratoria).** - El diseño inicial ponía el cambio DESPUÉS del corte y medía la recuperación por el tamaño. - El humo 1 (27001, T 8000, corte 3000) extinguió todo antes del cambio: el vivero corto no deja una población que viva sola. Con ~15 cuerpos solos no hay generaciones para que la variación haga nada antes de extinguirse, así que la pregunta mediría el piso. - **Cambio:** el mundo cambia DENTRO del vivero (t_cambio < t_corte). La recuperación se mide en NACIMIENTOS reales por ventana de 2000 pasos, porque el tamaño en el vivero lo sostiene el reponedor. La prueba final es vivir SOLO en el mundo nuevo después del corte. - Riesgo que trae: en el vivero, el fundador repuesto nace sin tabla heredada (limpio) y aprende el mundo nuevo desde cero. Eso ayuda a todos los brazos por igual y puede tapar la diferencia (se declara; ver §7).",
+  "apariciones": 4
+ },
+ "141": {
+  "numero": 141,
+  "fuente": "experimentos/organelos/codigo/INFORME.md:76",
+  "fecha": "2026-09-24",
+  "origen_fecha": "commit 878074bc (-S)",
+  "texto": "- ERR-141 (tras la exploratoria): - t_rec se mide dentro del vivero, porque el derrumbe post-corte se comía la medida; - se suma QUIETO, descriptivo; - la letra y las predicciones NO cambian.",
+  "apariciones": 4
+ },
+ "142": {
+  "numero": 142,
+  "fuente": "experimentos/organelos/codigo/v01/PREREGISTRO_v01.md:182",
+  "fecha": "2026-09-24",
+  "origen_fecha": "texto",
+  "texto": "## ERR-142 (coordinador, 24-sep ~22:25, ANTES de la serie; auditoría juaco-auditor: LISTO CON CORRECCIONES) - (a) La cláusula de HAY ALGO MODESTO \"P1 pasa en los dos mundos pero cae una guardia\" (§6) la agregó el creador por su cuenta. Cambia la forma del criterio, así que lleva ERR por la regla 11. Queda aceptada tal cual: sólo puede bajar un FUNCIONA a MODESTO, nunca subir. - (b) Después del humo el runner cambió (sha del humo c8949ac3f9c6123f → sha de la serie b835e4c4a94e6355): el orden de los trabajos, la guardia AZAR \"no medida\" (ya anticipada en §5 antes del humo) y el descriptivo de `--lee`. Ninguno toca umbrales ni la medida de P1. Se registran aquí. - Verificado por el coordinador antes de la serie: `construye_v01.py` da el sha 8a67a259baa5454b y el arnés 11/11 (274.8 s). Las semillas de calibración (29901–29906) no se solapan con la serie ni con la réplica.",
+  "apariciones": 1
+ },
+ "143": {
+  "numero": 143,
+  "fuente": "experimentos/organelos/ohno/hplano_nube/PREREGISTRO_hplano_w90_PC.md:100",
+  "fecha": "2026-09-25",
+  "origen_fecha": "texto",
+  "texto": "## ERR-143 (coordinador del PC, 25-sep ~10:40, ANTES de cualquier semilla 25111–25150; auditoría juaco-auditor: LISTO CON CORRECCIONES, H-3) - P1 pasó a primaria después de verla post-hoc en el exploratorio. Sus bordes quedan cerca de valores ya vistos: 0.90 contra 0.971 visto en w90, y 0.75 contra 0.67 visto en w30. El documento no declaraba el nulo (regla 15 / ERR-91). Por la regla 11 lleva ERR. Los umbrales NO se tocan: ya están fijados y recalibrarlos ahora sería peor. - **Nulo, declarado aquí.** Si VIDA y FIJO fueran intercambiables (sin carga), la mediana de la razón de vivos en pares estaría cerca de 1.0. Entonces P1 ≥ 0.90 PASA bajo el nulo con alta probabilidad. SOSTIENE (débil) es una afirmación de **no inferioridad**: \"la variación ya no es carga\". No afirma que la variación pague. Su contenido está en el contraste con w30 (0.67, CAE). La única prueba de **superioridad** es S2, cuyo nulo es 15/20 con p ≈ 0.021 (una cola, prueba del signo). - Lectura obligatoria en el registro: \"SOSTIENE (débil)\" se escribe siempre con la frase \"no inferioridad; compatible con el nulo de no diferencia\". - Verificado por el coordinador en el PC antes de la serie: sha de `corre_hplano_w90.py` = e9bf9c528f0509e3, `construye_ohno.py --verifica` OK, `--control` PASA (VIDA y FIJO s25011 idénticos campo a campo).",
+  "apariciones": 2
+ },
+ "144": {
+  "numero": 144,
+  "fuente": "experimentos/organelos/prometeo/serie/PREREGISTRO_serie.md:97",
+  "fecha": "2026-09-25",
+  "origen_fecha": "texto",
+  "texto": "- **ERR-144** (Opus, 25-sep, 10:25–10:35). Ocurrió tras el humo 1 (semilla 30190, sin valor), antes de cualquier semilla de serie o réplica. Es un error de instrumento: la guardia de suministro medía mal en MUDO. - **(a) Qué medía mal.** La columna de `kit_nac` que usaba la guardia contaba los slots del órgano de transmisión **expresado**. En MUDO ese órgano es siempre FILTRA0, así que la columna daba 0 aunque la cinta sí armara slots. La guardia comparaba cosas distintas: salió 0.13/0.056 = 2.3 y habría dado NO EVALUABLE por un bug. **Arreglo:** el motor (ancla S4 de `construye_serie.py`) mide dos cosas en la **cinta**, con la misma definición que la letra (`organos_serie.py`, que sale de `corre_serie.py`): - si el hijo lleva un órgano armado que su donante no tenía (de novo); - si lleva alguno. - **(b) Qué ventana usa.** En el humo 2, con la medida ya arreglada, la tasa de novo sobre el vivero entero dio 0.56–0.62, PROMETEO/MUDO. La razón es que MUDO acumula copias neutras de slots ORG (el 82 % de los nacidos lleva alguno, contra el 10 % en PROMETEO), y cada copia es un blanco más para la mutación. Eso ya es un resultado de la selección, no del instrumento. **Arreglo:** la guardia usa la ventana temprana [0, t_cambio), donde las cintas de los dos brazos todavía son casi iguales. La del vivero entero queda descriptiva. - **Qué no cambió:** la dinámica es idéntica a la del humo 1 (mismos F y mismos nacimientos en la semilla 30190). Tampoco cambian la letra de P1 ni la de P2. ",
+  "apariciones": 13
+ },
+ "145": {
+  "numero": 145,
+  "fuente": "experimentos/organelos/prometeo_cuerpo/PREDICCIONES_previas.md:37",
+  "fecha": "no_determinable",
+  "origen_fecha": "no_determinable",
+  "texto": "",
+  "apariciones": 1
+ },
+ "146": {
+  "numero": 146,
+  "fuente": "experimentos/organelos/frio/PREREGISTRO_frio.md:60",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 6ca8a9f2 (-S)",
+  "texto": "- **ERR-146 (este bloque):** en `motor_frio_rapido.py` el límite sube de 100 000 a 1e9. La guardia protegía la fórmula escalar `700000 + 1000000·seed + k` de H-1 (ERR-60); en este motor la semilla de cada cuerpo es la LISTA `[seed, linaje, ETQ, k]` (SeedSequence), que no colisiona para k distintos. Mientras ningún linaje pase de 100 000 la salida es idéntica (arnés A y B). MUT0_T de v1.2 tuvo 21 400–21 900 nacimientos en total por corrida: se espera que ni la vieja guardia dispare.",
+  "apariciones": 3
+ },
+ "147": {
+  "numero": 147,
+  "fuente": "experimentos/organelos/frio/PREREGISTRO_frio.md:134",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit 6ca8a9f2 (-S)",
+  "texto": "- **ERR-147 (tras el humo; sólo el arnés, ni runner ni letra):** se añade (Q) corte de luz simulado a mitad + `--reanuda` == la corrida entera, en RES0_FRIO y BAR0_FRIO. Primera versión: 45/46, porque BAR0_FRIO en 35904 se extinguía antes del corte y el caso no probaba nada (fallo del diseño del caso, no del instrumento); se toma la primera semilla de práctica que llega viva al corte. **Arnés final 46/46** (84 s). Sha del runner sin cambios (3ba8b0f5cf1fbbfa).",
+  "apariciones": 2
+ },
+ "148": {
+  "numero": 148,
+  "fuente": "experimentos/organelos/frio_carrera/PREREGISTRO_frio_carrera.md:145",
+  "fecha": "2026-09-25",
+  "origen_fecha": "commit fcb9ec7b (-S)",
+  "texto": "- **ERR-148 (tras el humo; sólo texto de §6, ni umbral ni código):** en la fila V2 de la tabla de nulos escribí \"19/20 en 14301\". El resumen de la serie dice que O1 cruzó en 18/20. La potencia de V2 con p = 0.9 es 0.989, y P(cae ∣ p = 0.9) = 0.011. La puerta (O1 `gana_e5`) no cambia.",
+  "apariciones": 3
+ },
+ "149": {
+  "numero": 149,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:6991",
+  "fecha": "2026-09-28",
+  "origen_fecha": "commit 0860d26b (-S)",
+  "texto": "- **ERR-149 (arnés, antes del humo; ni letra ni runner ni núcleo cambiaron):** la primera corrida del arnés dio 57/59. El caso (H) de AZA contaba como \"herencia\" a los hijos de fundadores, que son clones de G0 y pueden coincidir con una entrada del banco por identidad. Se corrigió el caso para medir sólo hijos de padre no fundador (AZA 3/203 y 0/309; SEL 346/346 y 276/276). El umbral < 5 % no cambió. Salida vieja: `identidad_eco_sel_salida_v1_57de59.txt`. Auditado: legítimo. **El siguiente ERR libre es ERR-150.**",
+  "apariciones": 12
+ },
+ "150": {
+  "numero": 150,
+  "fuente": "experimentos/tronco_v14_4c_examen/ERR_150.md:1",
+  "fecha": "2026-09-28",
+  "origen_fecha": "texto",
+  "texto": "### ERR-150 (28-sep-2026, ~16:30–17:00; autorizado por el director, decisión \"A\"), criterio de tronco v4, puerta T-C (ii): la reversión se mide POR VISITA y contra el propio organismo, no en mordidas absolutas **Qué cambia.** Hoy T-C (ii) es `rev = mordB[Q4] − mordA[Q4]`, con no inferioridad de margen 12.5 y n = 80. Pasa a ser, para el examen v14.4c y sólo ahí: - Tasa por visita, con el +1/+2 de Laplace (vis = pasos sobre el objeto = decisiones de la boca): `p_X[q] = (mord_X[q] + 1) / (vis_X[q] + 2)`. - Preferencia antes y después de la reversión (en T/2): - `S2 = p_A[Q2] / (p_A[Q2] + p_B[Q2])`: lo que entonces era bueno; - `S4 = p_B[Q4] / (p_A[Q4] + p_B[Q4])`: lo que ahora es bueno. - `C = S4 − S2`: cuánto se desdice, medido contra sí mismo. 0 = después distingue tan bien como antes; cerca de −0.8 = no se desdijo. - **Pasa si:** - (a) no inferioridad de una cola al 95 % sobre `d = C_cand − C_tronco`, pareada nominal por semilla (la misma `no_inferior` de v4), con **margen 0.125** y n = 80; - **Y** (b) la mediana de S4 del candidato es **> 0.5**. - La letra vieja (rev) se sigue calculando y se reporta al lado. No decide.",
+  "apariciones": 32
+ },
+ "151": {
+  "numero": 151,
+  "fuente": "git:origin/nube/eco-sel-largo-20260928:experimentos/organelos/eco_sel_largo/PREREGISTRO_eco_sel_largo.md:204",
+  "fecha": "2026-09-28",
+  "origen_fecha": "texto",
+  "texto": "- (B) ×2 «SEL_MC/AZA_MC con σ = 0 == F1» (el caso del encargo). ****ERR-150** (numerado por el coordinador, 28-sep antes de la serie), del diseño del caso, no del instrumento:** `motor_eco.muta` redondea los genes ENTEROS y, si el valor no cambia, los mueve ±1 según el signo de z; con σ = 0, z = 0 → −1 siempre. `memoria_rechazo` y `NK` están entre los 16 de MC, así que con σ = 0 se mueven (en eco_sel el caso sólo se corrió con `rep_umbral`, real). Se partió en (B) p_mut = 0 == F1 bit a bit y (B′) σ = 0 deja los 14 reales en G0 y mueve sólo los 2 enteros. Con σ = 0.15 la regla es simétrica (z > 0 o < 0): no sesga la serie.",
+  "apariciones": 5
+ },
+ "152": {
+  "numero": 152,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:7045",
+  "fecha": "2026-09-28",
+  "origen_fecha": "texto",
+  "texto": "- **ERR-152 (28-sep, antes de la serie de ECO_SEL_ING; instrumento, sin efecto en ningún veredicto):** en `motor_eco.muta`, σ = 0 NO apaga la mutación de los genes enteros (NK, memoria_rechazo; ±1 forzado). La perilla \"apagado\" real es p_mut = 0 (verificada bit a bit en el arnés de eco_sel_ing). En ECO_SEL no hay efecto hacia atrás: su caso (B) usaba σ = 0 sólo con rep_umbral, que es real. **ERR-151 queda reservado** para el caso \"σ = 0 == F1\" de la rama nube/eco-sel-largo (ese texto lo llama ERR-150). **El siguiente libre es ERR-153.**",
+  "apariciones": 2
+ },
+ "153": {
+  "numero": 153,
+  "fuente": "registro/REGISTRO_etapas_1_2.md:7137",
+  "fecha": "2026-09-28",
+  "origen_fecha": "commit 3c67774c (-S)",
+  "texto": "- **ERR-153 (instrumento; del exploratorio, antes de la serie):** con vivero permanente, K no es monótono en la calidad del organismo. El vivero subsidia al que muere rápido, y morder veneno \"limpia\" el anillo. Toda medida de K con vivero permanente se lee con esa cautela; la serie de BLOQUES usa vivero finito. **El siguiente libre es ERR-154.**",
+  "apariciones": 8
+ }
+}

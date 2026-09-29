@@ -5,9 +5,11 @@
 
 **Tesis (aprobada por el director, 29-sep):**
 > Un protocolo de preregistro, identidad bit a bit, réplica y auditoría independiente permite que un investigador dirija agentes LLM en
-> investigación computacional confiable: en 153 errores registrados, el protocolo atrapó X antes de que alteraran una conclusión, y
+> investigación computacional confiable: en 120 errores registrados, el protocolo atrapó 105 (88 %) antes de que alteraran una conclusión, y
 > produjo resultados replicados de vida artificial, como un órgano construido por selección natural.
-> (X sale del Paso A del informe: `informe/errores.csv`.)
+> (X = 105 de 120 sale del Paso A, `informe/errores.csv`. Rango de sensibilidad: 104–110; sin los ERR-1..4 reconstruidos,
+> 101/116. La versión estricta, "atrapados antes de correr la serie", da 49. Pendiente: la verificación del director con la muestra de 20.)
+> Nota: los números llegan a ERR-153, pero 27 no se usaron y 6 son reservas o cláusulas; sólo 120 son errores reales.
 
 **Segunda frase de la tesis (el alma; del director, 29-sep):**
 > El error más costoso no lo cometió un agente sino el director: diez fases persiguiendo el techo de benchmarks propios, hasta
@@ -64,4 +66,5 @@ Windows 11, AMD Ryzen 7 5700, Python 3.14.2 instalado desde `requirements.txt`, 
 - Los crudos del repo se dejaron como estaban: la corrida del autor sólo difería en `seg`.
 
 ## Siguiente paso concreto
-Completar el ORCID y el correo en README y CITATION.cff; después, el paso 3 (Jev) y el paso 4A (`informe/errores.csv`).
+ALTO del paso 4A: el director llena la columna `clasificacion_director` de `informe/muestra_20.csv` (20 errores). Después: acuerdo
+y paso 4B (Jev).

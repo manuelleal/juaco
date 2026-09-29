@@ -1,0 +1,1429 @@
+{
+ "_nota": "Clasificación a mano del Paso A (una entrada por ERR 1..153). Vocabulario y convenciones en informe/resumen_errores.md. \"coordinador\" = sesión principal de Claude (incluye días 1-4, antes de existir los roles). no_es_error=true: número usado para una reserva o una conclusión, no para un error.",
+ "1": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "2H: α se derivó de tasas por visita pero el criterio se escribió en conteos; la refutación salió por conteo.",
+  "justificacion_tipo": "Unidades del criterio distintas de las de la predicción.",
+  "fecha_manual": "2026-09-15",
+  "motivo_fecha": "cabecera del registro, \"Fecha: 15 sep 2026\" (Etapas 1 y 2)",
+  "dudoso": "Sin número escrito: reconstruido del ordinal (REGISTRO:192 y :333)."
+ },
+ "2": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "2I: el consumo absoluto de A cayó por disponibilidad; el criterio pasó a tasa por visita tras ver datos.",
+  "justificacion_tipo": "El criterio medía disponibilidad del mundo, no conservación de lo aprendido.",
+  "fecha_manual": "2026-09-16",
+  "motivo_fecha": "sección \"Día 2 (16 sep 2026)\" del registro",
+  "dudoso": "Sin número escrito: reconstruido del ordinal (REGISTRO:192 y :333)."
+ },
+ "3": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "ANOM-01: la serie de la 'semilla 1' era la de la semilla 12, por aliasing de una lista mutable.",
+  "justificacion_tipo": "Aliasing en el código de registro produjo una serie falsa.",
+  "fecha_manual": "2026-09-16",
+  "motivo_fecha": "sección \"Día 2 (16 sep 2026)\" del registro",
+  "dudoso": "Sin número escrito; además \"ERR-3\" se cita en otros archivos como \"recalibrar tras ver datos\" (confusión con la regla 3)."
+ },
+ "4": {
+  "tipo": "otro",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "2K: la predicción se refutó por un error aritmético propio: el techo por canal es 9, no 3.",
+  "justificacion_tipo": "Error aritmético en una predicción; no es de medida ni de criterio.",
+  "fecha_manual": "2026-09-16",
+  "motivo_fecha": "sección \"Día 2 (16 sep 2026)\" del registro",
+  "dudoso": "Sin número escrito. El cuarto también podría ser el import equivocado de la batería v7 (REGISTRO:138, \"Cuarta vez\")."
+ },
+ "5": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "si",
+  "resumen": "El registro afirmaba 'divisiones = 0 en etapas normales'; la batería no medía splits y E2/E2K sí dividían.",
+  "justificacion_tipo": "Dato sin medición, residuo probable de una corrida con el import equivocado.",
+  "dudoso": "Podría leerse como afirmación sin medición (fabricación); el registro lo atribuye al instrumento."
+ },
+ "6": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El criterio splits==0 en E2I suponía que no había solapamiento; la semilla 15 dividió y v7 no se congeló.",
+  "justificacion_tipo": "El registro (línea 333) lo nombra generalización indebida al redactar el criterio."
+ },
+ "7": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Patrón nulo 000000: argsort desempata por índice y le fija el mismo código en las 20 semillas.",
+  "justificacion_tipo": "Artefacto del cálculo (argsort sobre empates), no del organismo.",
+  "dudoso": "Número duplicado: los artefactos del exp. 2b llaman \"ERR-07\" a lo que el registro numera ERR-09."
+ },
+ "8": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El criterio v2 leía el solapamiento final y no el inicial, y exigía divisiones tardías también en E2L.",
+  "justificacion_tipo": "El registro: misma raíz que ERR-06, suponer que todas las etapas se comportan igual."
+ },
+ "9": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "La comprobación de inercia comparaba dicts que incluían la clave lam: daba False siempre; P2 salió refutada por construcción.",
+  "justificacion_tipo": "Comparación del script estructuralmente falsa."
+ },
+ "10": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "'Sin conflicto' se definió como solapamiento espacial final: ignoraba el conflicto temporal y leía el código final.",
+  "justificacion_tipo": "El registro le asigna la misma raíz que ERR-06/08."
+ },
+ "11": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La medida de ahorro dependía sólo de W, invariante al arreglo por demostración; A1 y A5 salieron refutadas.",
+  "justificacion_tipo": "El observable era invariante por construcción: el criterio no distinguía brazos.",
+  "dudoso": "El registro lo agrupa con ERR-06/08/10 (\"mismo patrón\")."
+ },
+ "12": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "si",
+  "resumen": "La 'ley de disparo 320/320' era una identidad del código, y 'con solapamiento 0 no dispara' era falso.",
+  "justificacion_tipo": "Una concordancia citada como evidencia era una identidad del código."
+ },
+ "13": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "El comparador de 3T comparaba texto JSON (0.0 ≠ -0.0); por eso la primera corrida dio NO.",
+  "justificacion_tipo": "Implementación del comparador más estricta que el criterio escrito."
+ },
+ "14": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La banda de validación de F1 era más estrecha que el ruido de Poisson y decidió un veredicto.",
+  "justificacion_tipo": "Criterio de validación escrito sin el ruido de muestreo."
+ },
+ "15": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "si",
+  "resumen": "Dos afirmaciones propias eran falsas: azar 5 % (era 9.2 %) y 'se estaciona' (eran llegadas repetidas).",
+  "justificacion_tipo": "Línea base de comparación mal puesta (el registro la llama así)."
+ },
+ "16": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El control C2 (τ=1) era un no-op por construcción; 'pasó' M6 sin evidencia.",
+  "justificacion_tipo": "Control que no podía fallar por construcción."
+ },
+ "17": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Tres subcriterios de Q3 mal escritos: empates contados como fallo, umbral contra el prior y tolerancia cero.",
+  "justificacion_tipo": "Criterios imposibles por construcción o más estrechos que el ruido."
+ },
+ "18": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "no",
+  "resumen": "El evaluador de JUACO-EVO era explotable: una mutación ciega subió la energía tras morir sin aprender.",
+  "justificacion_tipo": "El criterio de selección premiaba constantes de constitución, no aprendizaje.",
+  "dudoso": "\"Atrapado por la auditoría\": el texto no dice qué agente auditó."
+ },
+ "19": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "no",
+  "resumen": "selecciona.py comparaba el SEC del hijo con el del padre medido contra el abuelo: ganaba una mutación nula.",
+  "justificacion_tipo": "Error de contabilidad en el script selector."
+ },
+ "20": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "director",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "si",
+  "resumen": "La Etapa 3 se cerró sin batería: v11 se congeló y la generalización quedó reabierta sin aviso.",
+  "justificacion_tipo": "La cobertura del examen de congelación omitía una etapa cerrada."
+ },
+ "21": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El control negativo del examen v3 suponía una sola vía; con las dos vías de v13 quedaba inválido.",
+  "justificacion_tipo": "Control escrito para una arquitectura y aplicado a otra de dos vías."
+ },
+ "22": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La identidad KT2 (C2b ≡ C1) suponía una sola vía y no aplica a v13.",
+  "justificacion_tipo": "Identidad de una vía aplicada a un organismo de dos vías."
+ },
+ "23": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "N3: canal simétrico (el emisor escuchaba al ciego) y acierto sin balancear que premiaba no comer.",
+  "justificacion_tipo": "Montaje del canal; el registro lo titula 'instrumento y medida'.",
+  "dudoso": "Mezcla montaje (instrumento) y medida sin balancear (criterio)."
+ },
+ "24": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El control SINCOMIDA del mapa no fija su n efectivo: puede pasar o fallar por azar.",
+  "justificacion_tipo": "Control mal especificado (registro: 'control, no organismo')."
+ },
+ "25": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "no",
+  "resumen": "La puerta de familiaridad de v13 no distingue 'no aprendido' de 'cancelado'; riesgo no discutido al diseñar.",
+  "justificacion_tipo": "Defecto de diseño del organismo congelado, no del protocolo de medida.",
+  "dudoso": "Es defecto del organismo, no del método; podría excluirse del recuento."
+ },
+ "26": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La enmienda de B-1 bajó P1 de 18/20 a 14/20 entre dos series sin ERR; resultó inerte.",
+  "justificacion_tipo": "Rebaja del umbral de aprobación entre series sin numerarla.",
+  "dudoso": "También admite fuera de mandato (se cambió el criterio sin el procedimiento)."
+ },
+ "27": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "La forma relativa de P4' se decidió mirando los datos de 41–60; esa serie pasó a retroactiva.",
+  "justificacion_tipo": "Criterio escrito tras ver datos de la misma serie.",
+  "dudoso": "\"si\": la serie 41–60 quedó como retroactiva y se rebajó el vocabulario del candidato.",
+  "dudoso_altero": true
+ },
+ "28": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "no",
+  "resumen": "La copia experimentos/v13_dos_vias/organismo_v13.py no es el tronco (otros defaults); trampa latente sin consecuencia.",
+  "justificacion_tipo": "Copia del organismo con otros valores por defecto, importable por error."
+ },
+ "29": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "corre_baterias_v13D guardaba ON y OFF bajo la misma clave; el veredicto no cambió.",
+  "justificacion_tipo": "Colisión de claves en el JSON del runner."
+ },
+ "30": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El criterio 5 (reducir a v11 apagando dos perillas) no podía medir a v13E, que actúa en la boca.",
+  "justificacion_tipo": "Identidad escrita para órganos previos aplicada a un órgano en otro sitio."
+ },
+ "31": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El runner de v13E decidía E2 con los umbrales de la batería, no con los preregistrados.",
+  "justificacion_tipo": "El runner leía umbrales equivocados."
+ },
+ "32": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "N3d: los receptores 'ciegos' no podían aprender nada propio por construcción; medía obediencia.",
+  "justificacion_tipo": "Error de montaje del mundo social (registro: 'montaje')."
+ },
+ "33": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "no",
+  "resumen": "Mundo._reaparece sorteaba entre todos los tipos: regen_rota descartaba tipos_fijos.",
+  "justificacion_tipo": "Defecto de código del mundo social (registro: instrumento)."
+ },
+ "34": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "no",
+  "resumen": "spawn() consumía 'fijos' en orden: SOLO_R y CONV de N3d se midieron sobre objetos distintos; efecto medido cero.",
+  "justificacion_tipo": "Defecto de código que cambiaba el conjunto de objetos entre brazos."
+ },
+ "35": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "no",
+  "resumen": "El criterio de parada de XOR (0.75 con 8 patrones) exigía adivinar; el director lo reformula tras ver datos.",
+  "justificacion_tipo": "Criterio insatisfacible por el examen; se reformula con número tras ver datos.",
+  "dudoso": "\"no\": se reformuló antes de declarar fracaso la línea XOR; pudo haber lecturas previas.",
+  "dudoso_altero": true
+ },
+ "36": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El runner de N6 no guardó curva_rec; la predicción no pudo calcularse.",
+  "justificacion_tipo": "El runner no guardó un dato necesario (registro: instrumento)."
+ },
+ "37": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Tres errores de medida: umbral pareado en la mediana, muertes pareadas por semilla y máximo sobre 40 lecturas.",
+  "justificacion_tipo": "Umbrales y agregaciones que no medían el efecto."
+ },
+ "38": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "La batería de generalización copiada para v15c/v15d omitió eta_s/clip_s; G1/G2 se anularon: sí generalizan.",
+  "justificacion_tipo": "Copia de batería con parámetros perdidos produjo números falsos."
+ },
+ "39": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El control de Occam CUELLO estaba mal escrito y no era la alternativa fuerte; el humo lo mostró.",
+  "justificacion_tipo": "Control de paja que no podía ganar honestamente."
+ },
+ "40": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La medida 'descendientes' por ventana de viabilidad premiaba atracones que morían más; se descartó.",
+  "justificacion_tipo": "Medida no ligada a la supervivencia: premiaba morir."
+ },
+ "41": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "El mundo de regla (V2b) de v15c/v15d corrió con kwargs tipo v13, no v14.1; veredictos releídos.",
+  "justificacion_tipo": "El runner pasaba argumentos incompletos al organismo."
+ },
+ "42": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La batería copiada calculaba un sha con una ruta inexistente: excepción tras el veredicto y JSON perdido.",
+  "justificacion_tipo": "Ruta mal copiada en la batería; se perdió el JSON."
+ },
+ "43": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El runner de v15e leyó el conteo K como mediana de azar y declaró 'V2a NO'.",
+  "justificacion_tipo": "Lectura del log por el runner con regex equivocada.",
+  "dudoso": "La sala 2 (DIAG_metodo §2.3) también lo encontró; el registro lo firma el coordinador."
+ },
+ "44": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "coordinador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El subcriterio E1 'veneno Q4 < Q1' no distingue aprender de un golpe de no aprender.",
+  "justificacion_tipo": "Subcriterio pensado para aprendizaje gradual aplicado a quien aprende de golpe."
+ },
+ "45": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La cláusula 'alias < 1 % escalando NK/K' era insatisfacible con D = 12; el alias pasa a declararse.",
+  "justificacion_tipo": "Cláusula imposible de cumplir, hallada por cálculo."
+ },
+ "46": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La medida del colateral del bloque 1 no separaba 'aprende a costa de hermanos' de 'no aprende'.",
+  "justificacion_tipo": "Medida que no distinguía las hipótesis; enmienda tras la serie."
+ },
+ "47": {
+  "tipo": "otro",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "dureza = 12 salió fuera de banda en el humo: la derivación ignoraba la tasa de la boca.",
+  "justificacion_tipo": "Error de derivación de un parámetro del mundo, no de la medida.",
+  "dudoso": "Podría ser criterio (banda E1) o instrumento (mundo)."
+ },
+ "48": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La medida de daño colateral respondía a la tendencia global de aprendizaje; corregida con diferencia en diferencias.",
+  "justificacion_tipo": "Medida confundida con una tendencia."
+ },
+ "49": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "colateral_n con una sola ventana válida es ruido; se exige n_valida ≥ 2.",
+  "justificacion_tipo": "Medida definida sin muestra mínima."
+ },
+ "50": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Reserva de la corrección única del bloque 4, ejecutada como PARAR al caer P-I2.",
+  "justificacion_tipo": "Número de una cláusula de parada; el error de montaje es ERR-51.",
+  "no_es_error": true,
+  "dudoso": "Mismo suceso que ERR-51."
+ },
+ "51": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Bloque 4: el emisor compartía el punto ciego del receptor y no emitía en la dirección (−).",
+  "justificacion_tipo": "Error de montaje del experimento (preregistro: 'montaje del emisor').",
+  "dudoso": "El humo lo señaló (1 de 2) pero se corrigió después de la serie."
+ },
+ "52": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La puerta P-I3 del bloque 4b incluía OTRO (R-SIN-SAL), cuyo gemelo no es CORTADO.",
+  "justificacion_tipo": "Puerta de validez mal especificada."
+ },
+ "53": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Las dos direcciones del mensaje tienen puntos ciegos distintos: hacen falta puertas por dirección.",
+  "justificacion_tipo": "Puertas compartidas donde hacían falta puertas separadas."
+ },
+ "54": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El análisis del runner cayó por KeyError; el veredicto salió de los crudos guardados antes.",
+  "justificacion_tipo": "Fallo del runner en el análisis, mitigado guardando crudos."
+ },
+ "55": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "56": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "57": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "58": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "59": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "60": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La fórmula de rng de los hijos del encargo colisionaba entre semillas vecinas; se corrigió antes de medir.",
+  "justificacion_tipo": "Defecto en la generación de semillas del instrumento."
+ },
+ "61": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El encargo pedía una puerta pareada para R₀, integral de trayectoria; decide A₁₂ sin parear.",
+  "justificacion_tipo": "Pareo por semilla (válido en lo aprendido) extendido a trayectorias."
+ },
+ "62": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Cláusula de cierre de H-1 ejecutada: este mundo no sostiene linajes mortales con ninguna herencia.",
+  "justificacion_tipo": "Conclusión preregistrada con número, no un error.",
+  "no_es_error": true
+ },
+ "63": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El cruce cod0 de los bloques 4 y 4b saltaba todas las filas: su 'IDÉNTICO' no comparaba nada.",
+  "justificacion_tipo": "Comprobación de identidad vacía por un campo faltante."
+ },
+ "64": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El control de no-vacuidad del arnés corría a T 30 000, antes del mensaje; sube a 60 000.",
+  "justificacion_tipo": "Parámetro mal fijado en un control del arnés."
+ },
+ "65": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "66": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "67": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "68": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "69": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "70": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La puerta P-I4 todo-o-nada caía por ruido; pasa a exclusión por semilla antes de la serie siguiente.",
+  "justificacion_tipo": "Forma de una puerta cambiada con número antes de la serie."
+ },
+ "71": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El caso (d) del arnés comprobaba la dirección pasando por el emisor; la guarda paró en 30/33.",
+  "justificacion_tipo": "Caso de identidad del arnés mal diseñado."
+ },
+ "72": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "73": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "74": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "75": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "76": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "77": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "78": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "79": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "80": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Reserva condicional del bloque ALMA: ampliar el menú de curitas tras ver datos. Sin constancia de uso.",
+  "justificacion_tipo": "Reserva preventiva, no un error ocurrido.",
+  "no_es_error": true
+ },
+ "81": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Reserva condicional del bloque ALMA: correr sin el control BARAJA-NODO. Sin constancia de uso.",
+  "justificacion_tipo": "Reserva preventiva, no un error ocurrido.",
+  "no_es_error": true
+ },
+ "82": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Reserva condicional del bloque ALMA: recalibrar una puerta tras ver la serie. Sin constancia de uso.",
+  "justificacion_tipo": "Reserva preventiva, no un error ocurrido.",
+  "no_es_error": true
+ },
+ "83": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Reserva para la cláusula de cierre del bloque ALMA; el registro no la cita como ejecutada.",
+  "justificacion_tipo": "Reserva de cláusula de cierre, no un error.",
+  "no_es_error": true
+ },
+ "84": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "En un linaje del bloque ALMA no se aplicaron las respuestas con caracteres no ASCII.",
+  "justificacion_tipo": "Defecto de codificación en el buzón del instrumento."
+ },
+ "85": {
+  "tipo": "fabricacion_o_fuera_de_mandato",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "no",
+  "resumen": "Un agente de otro proyecto mató procesos python sin verificar el comando y tumbó dos corridas.",
+  "justificacion_tipo": "Un agente ajeno actuó fuera de su mandato sobre procesos del proyecto.",
+  "dudoso": "También admite concurrencia."
+ },
+ "86": {
+  "tipo": "concurrencia",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "no",
+  "resumen": "Pool(14) con otras corridas en curso dio BrokenPipeError en Windows.",
+  "justificacion_tipo": "Choque de procesos paralelos por recursos compartidos."
+ },
+ "87": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "agente_externo",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "lee_json por startswith en los runners v13D/v13E leía el JSON de la ON como referencia.",
+  "justificacion_tipo": "Lectura de archivos por un prefijo ambiguo en el runner."
+ },
+ "88": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "si",
+  "resumen": "La perilla 'dentro' de A1 era código muerto; se había declarado inerte el mecanismo.",
+  "justificacion_tipo": "Registro: 'Causa: instrumento' (perilla no conectada).",
+  "dudoso": "\"si\": la lectura \"inerte y retirado\" pasó a \"no medida\" (ningún veredicto cambió).",
+  "dudoso_altero": true
+ },
+ "89": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "cronista",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La puerta R6 preregistrada de BA no la calculaba ni la imprimía el runner.",
+  "justificacion_tipo": "Registro: 'Causa: instrumento (puerta preregistrada sin juez)'."
+ },
+ "90": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Las puertas R2–R4, relativas a CORTADO, endurecían el umbral a quien bajaba la base.",
+  "justificacion_tipo": "Registro: 'Causa: criterio (la forma de la puerta)'."
+ },
+ "91": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "no",
+  "resumen": "El criterio de tronco v2 nunca corrió su control negativo: el tronco contra sí mismo no entraba.",
+  "justificacion_tipo": "Umbral puesto en el valor de la hipótesis nula (registro: criterio)."
+ },
+ "92": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "cronista",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El rango del ancla F9-1 se calibró con dos series; la variación del propio tronco no cabía.",
+  "justificacion_tipo": "Registro: 'Causa: criterio' (ancla calibrada con pocas series)."
+ },
+ "93": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "F9-4 puntuaba al control con un acierto sin balancear; también cambian el ancla y F9-7.",
+  "justificacion_tipo": "Acierto sin balancear en una puerta; cambios de letra numerados."
+ },
+ "94": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El criterio de tronco v3 no repitió su calibración: se retira y se escribe v4.",
+  "justificacion_tipo": "El criterio falló su propia calibración y se reemplaza con número."
+ },
+ "95": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La Enmienda 1 de la carrera cambió escala y predicción después de ver el humo sin escalar.",
+  "justificacion_tipo": "Criterio y predicción cambiados tras ver datos."
+ },
+ "96": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Telemetría falsificable: un carro podía pisar 'descendientes' y fabricar su R0.",
+  "justificacion_tipo": "El juez aceptaba datos del carro sin filtrar."
+ },
+ "97": {
+  "tipo": "otro",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "si",
+  "resumen": "El motivo escrito de la Enmienda 1 ('la causa fue la escasez') no se sostenía con el SOLO.",
+  "justificacion_tipo": "Justificación causal escrita que los datos contradicen.",
+  "dudoso": "Justificación, no veredicto: \"si\" por lectura causal corregida.",
+  "dudoso_altero": true
+ },
+ "98": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La escala de la Enmienda 1 estaba incompleta (olvido sin escalar por N); el humo refutó la predicción.",
+  "justificacion_tipo": "Parámetro del mundo sin escalar en la pista."
+ },
+ "99": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "R0 = descendientes/(muertes+1) se degenera cuando un cuerpo casi no muere.",
+  "justificacion_tipo": "Métrica degenerada en un régimen previsible."
+ },
+ "100": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "R0 contaba hijos no nacidos en cola: con nacimientos reales la mediana es 0.941, no 1.565.",
+  "justificacion_tipo": "La definición de la métrica inflaba el resultado.",
+  "dudoso": "El cruce se mantiene; \"si\" por la magnitud declarada (1.565) corregida.",
+  "dudoso_altero": true
+ },
+ "101": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La memoria del linaje de O1 sobrevivía a la extinción; un control la descartó como causa.",
+  "justificacion_tipo": "Estado no borrado en el instrumento al poner un fundador."
+ },
+ "102": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Con un cuerpo por linaje, R0 real premia morir; se añade PERSISTENCIA como criterio.",
+  "justificacion_tipo": "Métrica que se optimiza muriendo."
+ },
+ "103": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El clasificador físico de muertes voluntarias no discrimina; queda como reserva sin corregir.",
+  "justificacion_tipo": "Clasificador del instrumento que no mide lo que dice."
+ },
+ "104": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "si",
+  "resumen": "El mundo v1 reponía al instante lo mordido: limpiar fabricaba comida. Reserva sobre el primer cruce de H-1.",
+  "justificacion_tipo": "Una propiedad del mundo inflaba el flujo de comida.",
+  "dudoso": "\"si\": reserva sobre un cruce ya declarado.",
+  "dudoso_altero": true
+ },
+ "105": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "M10-2 sesgada contra la acumulación: el fundador nace con dote y vive ~6× más.",
+  "justificacion_tipo": "Medida sesgada por construcción."
+ },
+ "106": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "M10-3 medía 'leer el nodo', no 'acumular por el cambio'.",
+  "justificacion_tipo": "Medida que no mide lo que dice."
+ },
+ "107": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La cobertura de M10-2 salía degenerada (mediana 0 en 4 de 12 corridas).",
+  "justificacion_tipo": "Definición de medida degenerada."
+ },
+ "108": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "cob_s acierta el signo por azar (~0.5); se lee cob_c contra el nulo.",
+  "justificacion_tipo": "Medida que no distingue saber de azar."
+ },
+ "109": {
+  "tipo": "generalizacion_indebida_del_criterio",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La calibración externa de F1 se importó sin volver a medir su ancla en el instrumento del repo.",
+  "justificacion_tipo": "Calibración de un instrumento trasladada a otro sin volver a medir."
+ },
+ "110": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "agente_externo",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La Enmienda 1 recalibró tras ver caer V-6 en el humo, y el ancla no se conserva.",
+  "justificacion_tipo": "Recalibración tras ver datos que no conserva el ancla."
+ },
+ "111": {
+  "tipo": "otro",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El informe del creador no traía el veredicto final actualizado; lo completó el coordinador.",
+  "justificacion_tipo": "Omisión en el informe, no en la medida ni en el criterio."
+ },
+ "112": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El runner imprimía la predicción P3 de la v1 en lugar de la Q3 de la v2.",
+  "justificacion_tipo": "Registro: 'defecto del instrumento'."
+ },
+ "113": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "--elige no archivaba su salida; el auditor reconstruyó la regla a mano.",
+  "justificacion_tipo": "La herramienta no dejaba rastro de su salida."
+ },
+ "114": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La Enmienda 1 de subida_n9 fijó el tope de V-M en 0.10 tras ver el humo.",
+  "justificacion_tipo": "Umbral movido tras ver un dato (regla 11)."
+ },
+ "115": {
+  "tipo": "fabricacion_o_fuera_de_mandato",
+  "quien_lo_cometio": "auditor",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "misma_sesion",
+  "altero_conclusion": "no",
+  "resumen": "Un auditor corrió un runner con --help y lanzó una serie real con Pool (abortada).",
+  "justificacion_tipo": "Un agente de sólo lectura ejecutó una serie; el runner no rechazaba banderas.",
+  "dudoso": "Causa raíz mixta: agente fuera de mandato y runner sin validar banderas."
+ },
+ "116": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El ancla V-ANCLA y P1 se fijaron sin calibrar FABRICA sin canal; el valor real era 0.110.",
+  "justificacion_tipo": "Ancla fijada sin calibrar; la serie no se lee."
+ },
+ "117": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "dias",
+  "altero_conclusion": "si",
+  "resumen": "El rodeo obligado del 21-sep usaba una muralla de una fila en un toro, que no lo parte.",
+  "justificacion_tipo": "El montaje del mundo no hacía la prueba que decía."
+ },
+ "118": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no_determinable",
+  "resumen": "'Persiste el carro' mide cuánto ganan los descendientes a fundadores repuestos, no la calidad del linaje.",
+  "justificacion_tipo": "Registro: '(criterio)'.",
+  "dudoso": "No consta si la lectura \"O1 persiste 14/20\" se había declarado antes."
+ },
+ "119": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La Enmienda 1 de v14.3 movió el ancla V-ANCLA-1 tras el humo, sin leer los crudos previos.",
+  "justificacion_tipo": "Umbral movido tras ver un dato (regla 11)."
+ },
+ "120": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El humo de ECO lo había escrito una versión anterior del juez: el camino de P3 nunca había corrido.",
+  "justificacion_tipo": "Humo desfasado que no ejercitaba el código de la serie."
+ },
+ "121": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "P3c (AZAR gana el juez) se calculaba pero no decidía; ahora da NO EVALUABLE.",
+  "justificacion_tipo": "Condición de validez que no decidía el veredicto."
+ },
+ "122": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La banda de azar G2 de T-B era estrecha: el tronco contra sí mismo la fallaba; el director la corrige.",
+  "justificacion_tipo": "Banda del criterio fijada sin el nulo real.",
+  "dudoso": "Corrección decidida por el director; el texto no dice quién halló el fallo."
+ },
+ "123": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La medida D de endosimbiosis cambió de forma tras los humos de práctica, sin ERR.",
+  "justificacion_tipo": "Cambio de forma del criterio tras ver humos (regla 11)."
+ },
+ "124": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Tres desviaciones del paquete Cruce cambiaron diseño, patas y umbral del arnés tras el humo.",
+  "justificacion_tipo": "Cambios de forma o de umbral del criterio tras ver humo."
+ },
+ "125": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Gramática: se quitó 'olvidar' del alfabeto y P5 cambió de forma tras el humo.",
+  "justificacion_tipo": "Cambios de letra tras el humo (regla 11)."
+ },
+ "126": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El arnés de Ohno no ejercitaba la duplicación en el mundo pobre (8/10); umbral O1b rebajado.",
+  "justificacion_tipo": "Arnés que no ejercitaba la rama que importa."
+ },
+ "127": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "128": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "129": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "130": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La cohorte de P2 del anfitrión cambió de forma sin ERR; sin indicio de sesgo.",
+  "justificacion_tipo": "Cambio de forma del criterio sin numerar (regla 11)."
+ },
+ "131": {
+  "tipo": "fabricacion_o_fuera_de_mandato",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La calibración afirmaba 'ni un mundo más grande arregla el poder' sin haber variado el tamaño.",
+  "justificacion_tipo": "Afirmación sin la medición que la respalde.",
+  "dudoso": "Sobre-afirmación; podría ser \"otro\"."
+ },
+ "132": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La sanción del anfitrión leía una tabla por letra, no el ΔS de la mordida; equivalente en este mundo.",
+  "justificacion_tipo": "La implementación usa una tabla en vez del efecto medido."
+ },
+ "133": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Bajo el quimiostato R0 ≈ 1 para toda población: un NO en G1 no distingue.",
+  "justificacion_tipo": "Medida fijada por el montaje; un NO no discrimina."
+ },
+ "134": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El arnés no ejercita la duplicación con r_rep = 0.006, el valor de la serie.",
+  "justificacion_tipo": "Brecha de cobertura del arnés (el texto: protocolo)."
+ },
+ "135": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "136": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "137": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "138": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "139": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "140": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "CODIGO: tras el humo 1, el cambio va dentro del vivero y la recuperación se mide en nacimientos.",
+  "justificacion_tipo": "Diseño y medida cambiados tras ver el humo."
+ },
+ "141": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Tras la exploratoria, t_rec se mide dentro del vivero y se añade QUIETO como descriptivo.",
+  "justificacion_tipo": "Medida cambiada tras ver la exploratoria."
+ },
+ "142": {
+  "tipo": "fabricacion_o_fuera_de_mandato",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El creador añadió por su cuenta una cláusula de MODESTO y cambió el runner tras el humo.",
+  "justificacion_tipo": "Cambio de criterio hecho sin mandato ('por su cuenta').",
+  "dudoso": "La cláusula sólo puede rebajar el veredicto; también admite criterio."
+ },
+ "143": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "nube",
+  "quien_lo_atrapo": "auditor",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "P1 de H-PLANO pasó a primaria tras verla en el exploratorio, sin nulo declarado.",
+  "justificacion_tipo": "Puerta elegida post hoc sin su nulo (regla 15)."
+ },
+ "144": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "humo",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La guardia de suministro de Prometeo medía el órgano expresado; en MUDO daba 0.",
+  "justificacion_tipo": "El texto: 'error de instrumento' (la guardia medía mal)."
+ },
+ "145": {
+  "tipo": "no encontrado",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "no_determinable",
+  "altero_conclusion": "no_determinable",
+  "resumen": "Número sin uso en el árbol ni en las ramas.",
+  "justificacion_tipo": "No aparece como ERR usado en ninguna parte."
+ },
+ "146": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La guardia de ERR-60 (100 000 cuerpos por linaje) sube a 1e9 en el motor de F1.",
+  "justificacion_tipo": "Guardia del instrumento que cortaba corridas largas legítimas.",
+  "dudoso": "Es un cambio preventivo; la guardia ya había detenido ECO v1.2 en la nube."
+ },
+ "147": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El caso (Q) del arnés se añadió tras el humo; su primera versión no probaba nada (45/46).",
+  "justificacion_tipo": "Caso de arnés mal diseñado."
+ },
+ "148": {
+  "tipo": "otro",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "creador",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "La tabla de nulos decía que O1 cruzó 19/20 en 14301; fueron 18/20.",
+  "justificacion_tipo": "Errata de texto en el preregistro; no toca umbral ni código."
+ },
+ "149": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "creador",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El caso H del arnés contaba como herencia a los hijos de fundadores en AZA (57/59).",
+  "justificacion_tipo": "Caso de identidad del arnés mal especificado."
+ },
+ "150": {
+  "tipo": "criterio",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "despues_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "T-C (ii) contaba mordidas absolutas y castigaba comer menos; pasa a tasa por visita.",
+  "justificacion_tipo": "La medida del criterio no medía la reversión."
+ },
+ "151": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "coordinador",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "El caso del arnés 'σ = 0 == F1' era imposible: muta mueve los genes enteros con z = 0.",
+  "justificacion_tipo": "Caso de identidad imposible por construcción del motor.",
+  "dudoso": "En la rama nube se llama ERR-150; mismo defecto de fondo que ERR-152."
+ },
+ "152": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "arnes",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "En motor_eco, σ = 0 no apaga la mutación de genes enteros; la perilla real es p_mut = 0.",
+  "justificacion_tipo": "El texto: 'instrumento' (la perilla de apagado no apaga)."
+ },
+ "153": {
+  "tipo": "instrumento",
+  "quien_lo_cometio": "no_determinable",
+  "quien_lo_atrapo": "no_determinable",
+  "tiempo_hasta_detectarlo": "antes_de_la_serie",
+  "altero_conclusion": "no",
+  "resumen": "Con vivero permanente, K no es monótono en la calidad del organismo.",
+  "justificacion_tipo": "El texto: 'instrumento'; la medida K depende del vivero."
+ }
+}

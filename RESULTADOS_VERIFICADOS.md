@@ -5,8 +5,9 @@ a bit-for-bit identity harness, a series and an independent replication on new s
 recomputed the numbers from the raw files. The hash is `sha256[:16]` of the verdict/summary file. Each result
 carries one sentence stating what it does **not** show.
 
-Full history, including every negative result and every numbered error (ERR-1 … ERR-153), is in
-`registro/REGISTRO_etapas_1_2.md`.
+Full history, including every negative result and every numbered error, is in
+`registro/REGISTRO_etapas_1_2.md`. Error numbers run from ERR-1 to ERR-153, with gaps. 126 numbers are defined and
+120 of them are genuine errors; the tabulation is in `informe/errores.csv`.
 
 ---
 
