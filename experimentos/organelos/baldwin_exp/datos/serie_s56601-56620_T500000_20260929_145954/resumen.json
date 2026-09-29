@@ -1,0 +1,252 @@
+{
+ "letra": {
+  "validez": {
+   "V0_completa_sin_abortos": true,
+   "V1_ancla_FIJO_V_Pinf_persiste": true,
+   "V2_cfg_por_brazo": true,
+   "V3_inversiones": true,
+   "V4_la_exploracion_actua": true,
+   "V5_la_regla_plastica_aprende": true,
+   "V6_AZA_bit_al_azar": true
+  },
+  "v6_nota": "NO APLICA (4 semillas con dato < 8): decide PB",
+  "puertas": {
+   "PA_rescate": false,
+   "PB_control_AZA": false,
+   "PD_seleccion_prende": false,
+   "PM_supera_controles": false
+  },
+  "secundarias": {
+   "PE_apaga_Pinf(no decide)": false,
+   "pareados": {
+    "PLAST_EXP_P22k-PLAST_V_P22k[t_ext]": {
+     "gana": 8,
+     "n": 20,
+     "dif_med": -266.5
+    },
+    "PLAST_EXP_P22k-FIJO_EXP_P22k[t_ext]": {
+     "gana": 9,
+     "n": 20,
+     "dif_med": -868.5
+    },
+    "PLAST_EXP_P22k-PLAST_EXP_AZA_P22k[t_ext]": {
+     "gana": 7,
+     "n": 20,
+     "dif_med": -3116.5
+    },
+    "PLAST_EXP_Pinf-FIJO_V_Pinf[K]": {
+     "gana": 1,
+     "n": 20,
+     "dif_med": -23.7291
+    },
+    "PLAST_EXP_P22k-FIJO_EXP_P22k[K]": {
+     "gana": 0,
+     "n": 20,
+     "dif_med": 0.0
+    }
+   },
+   "desc_PLAST_EXP_vs_PLAST_V_P22k": {
+    "persiste": [
+     0,
+     0
+    ],
+    "dif": 0,
+    "t_ext": {
+     "gana": 8,
+     "n": 20,
+     "dif_med": -266.5
+    }
+   }
+  },
+  "veredicto": "NO",
+  "cerca_umbral": {
+   "PA": false,
+   "PB": false,
+   "PM": false,
+   "alguna": false
+  },
+  "persiste": {
+   "PLAST_EXP_P22k": 0,
+   "FIJO_EXP_P22k": 0,
+   "PLAST_EXP_AZA_P22k": 0,
+   "PLAST_V_P22k": 0,
+   "PLAST_EXP_Pinf": 10,
+   "FIJO_V_Pinf": 17
+  },
+  "frac_pl_fin": {
+   "PLAST_EXP_P22k": [
+    null,
+    0.1579,
+    null,
+    0.8667,
+    null,
+    null,
+    null,
+    null,
+    0.0,
+    1.0,
+    null,
+    0.0,
+    1.0,
+    null,
+    0.0,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "FIJO_EXP_P22k": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "PLAST_EXP_AZA_P22k": [
+    0.5333,
+    null,
+    0.4615,
+    null,
+    null,
+    null,
+    0.3333,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    0.1429
+   ],
+   "PLAST_V_P22k": [
+    0.0147,
+    0.5,
+    0.6383,
+    1.0,
+    null,
+    null,
+    0.0882,
+    null,
+    0.9908,
+    0.0845,
+    1.0,
+    0.9718,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    0.1905,
+    0.9091
+   ],
+   "PLAST_EXP_Pinf": [
+    0.2727,
+    null,
+    null,
+    0.4651,
+    null,
+    0.7097,
+    null,
+    0.1379,
+    null,
+    0.5,
+    null,
+    0.3182,
+    0.7143,
+    0.0625,
+    0.0,
+    0.4545,
+    0.5,
+    null,
+    null,
+    null
+   ],
+   "FIJO_V_Pinf": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "abortos": [],
+  "n": 20,
+  "humo": false,
+  "eps_exp": 0.063,
+  "th_exp": 0.5
+ },
+ "semillas": [
+  56601,
+  56602,
+  56603,
+  56604,
+  56605,
+  56606,
+  56607,
+  56608,
+  56609,
+  56610,
+  56611,
+  56612,
+  56613,
+  56614,
+  56615,
+  56616,
+  56617,
+  56618,
+  56619,
+  56620
+ ],
+ "T": 500000,
+ "humo": false,
+ "veredicto": "NO",
+ "preregistro": "PREREGISTRO_baldwin_exp.md",
+ "sha_preregistro": "66183a0d94f4c5ed",
+ "sha_runner": "fdc5e729057e7bd8",
+ "eps_exp": 0.063,
+ "th_exp": 0.5,
+ "shas": {
+  "experimentos\\organelos\\bloques\\opusM\\corre_bloques.py": "a090b82eae9f1ee3",
+  "experimentos\\organelos\\baldwin\\motor_baldwin.py": "d0a620d2f5e2605e",
+  "experimentos\\organelos\\baldwin\\construye_baldwin.py": "c9cad63496519fb7",
+  "experimentos\\organelos\\baldwin_exp\\motor_bexp.py": "0af10809633c945d"
+ }
+}
