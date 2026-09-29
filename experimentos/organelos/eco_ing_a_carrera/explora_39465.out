@@ -1,0 +1,42 @@
+CORRE_ECO_ING_A_CARRERA · explora · 20260928_181625 · python 3.14.2 · pool NO (un proceso) · corre_eco_ing_a_carrera.py 47d7ddff05787616 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\eco_ing_a_carrera\datos\eic_explora_s39461-39470_T100000
+  tareas 16 · brazos ['v143', 'ingv', 'azav', 'g0', 'ing', 'aza', 'selc', 'o1'] · semillas [39465, 39466] · T 100000 · fundador limpio 1 · reanuda False
+  sha experimentos\organelos\frio_carrera\corre_frio_carrera.py 49de4dd28a8f3c3a OK
+  sha experimentos\organelos\frio_carrera\carros\V143_RES0.py fab1d8068fe901a5 OK
+  sha experimentos\organelos\frio_carrera\carros\V143_TEL.py f73f8ea41399bb79 OK
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\organelos\eco_a_carrera\construye_eco_a_carrera.py 403c747caaae1c1e OK
+  sha experimentos\organelos\eco_a_carrera\extrae_genomas.py 1c8082d17d8e095f OK
+  sha experimentos\organelos\eco_a_carrera\corre_eco_a_carrera.py 399a52ffcf3456f4 OK
+  sha experimentos\organelos\eco_a_carrera\genomas_eco_sel.json 84b64bf54acff2b0 OK
+  sha genomas_ing_serie.json 216a02a83318be8a OK
+  genomas_ing_replica.json: sha no fijado (no se usa en este modo)
+  carro EIC_G0 sha c7e2e5fac85cc2bc == construye: True · revisa_carro: PASA
+  carro EIC_ING sha a21482cdd25e60f8 == construye: True · revisa_carro: PASA
+  carro EIC_AZA sha 3ca2f066f2dd7c2f == construye: True · revisa_carro: PASA
+  carro EIC_SELC sha 5727c900f492d176 == construye: True · revisa_carro: PASA
+  carro EIC_G0V sha b56b173d5b437b78 == construye: True · revisa_carro: PASA
+  carro EIC_INGV sha a4656eddb09a31e1 == construye: True · revisa_carro: PASA
+  carro EIC_AZAV sha da85dcb0cc4f9bc9 == construye: True · revisa_carro: PASA
+  IDENTIDAD CORTA: EIC_G0 con GENOMA None == V143_RES0 de frio_carrera (salida ENTERA, N 9, s 39561, T 2000): OK
+  [  174.8s] v143 s39465 (168.8s) genoma None aborto None · R0 real por linaje [0.9375, 0.9615, 0.168, 0.5231, 0.9697, 0.7027, 0.0168, 0.7727, 0.0189] · fundadores [0, 0, 103, 30, 0, 10, 816, 4, 828]
+  [  345.3s] ingv s39465 (170.4s) genoma serie:ING_SEL_C:46105 aborto None · R0 real por linaje [0.9697, 0.9737, 0.9655, 0.1579, 0.0503, 0.9778, 0.1333, 0.1684, 0.0436] · fundadores [0, 0, 0, 143, 320, 0, 168, 157, 284]
+  [  516.8s] azav s39465 (171.5s) genoma serie:ING_AZA_C:46105 aborto None · R0 real por linaje [0.003, 0.0031, 0.0, 0.0, 0.0053, 0.0028, 0.0028, 0.0, 0.0] · fundadores [326, 320, 332, 329, 373, 356, 350, 38, 356]
+  [  656.3s] g0 s39465 (139.5s) genoma G0 aborto None · R0 real por linaje [0.95, 0.963, 0.4217, 0.4921, 0.3433, 0.0256, 0.0344, 0.4545, 0.2086] · fundadores [0, 0, 47, 31, 43, 721, 617, 29, 109]
+  [  798.9s] ing s39465 (142.6s) genoma serie:ING_SEL_C:46105 aborto None · R0 real por linaje [0.0647, 0.96, 0.2857, 0.3492, 0.095, 0.9565, 0.3516, 0.0513, 0.0286] · fundadores [259, 0, 59, 40, 199, 0, 58, 295, 339]
+  [  946.2s] aza s39465 (147.2s) genoma serie:ING_AZA_C:46105 aborto None · R0 real por linaje [0.0, 0.0025, 0.0, 0.0, 0.0, 0.0054, 0.0, 0.0058, 0.0] · fundadores [382, 392, 356, 363, 333, 368, 108, 342, 386]
+  [ 1088.5s] selc s39465 (142.3s) genoma serie:SEL_C:45305 aborto None · R0 real por linaje [0.0243, 0.0221, 0.963, 0.3871, 0.2692, 0.0074, 0.0176, 0.4, 0.75] · fundadores [360, 353, 0, 37, 75, 402, 389, 26, 7]
+  [ 1368.7s] o1 s39465 (280.2s) genoma None aborto None · R0 real por linaje [0.9375, 0.0377, 0.9444, 0.95, 0.9333, 0.9545, 0.96, 0.9474, 0.9583] · fundadores [0, 280, 0, 0, 0, 0, 0, 0, 0]
+  [ 1512.8s] v143 s39466 (144.1s) genoma None aborto None · R0 real por linaje [0.5323, 0.566, 0.0295, 0.8889, 0.2688, 0.9722, 0.0934, 0.0604, 0.7778] · fundadores [28, 22, 723, 3, 67, 0, 300, 450, 7]
+  [ 1667.7s] ingv s39466 (154.8s) genoma serie:ING_SEL_C:46106 aborto None · R0 real por linaje [0.2417, 0.0808, 0.1082, 0.0845, 0.058, 0.0602, 0.2313, 0.8269, 0.8182] · fundadores [90, 238, 205, 259, 259, 249, 122, 8, 5]
+  [ 1840.6s] azav s39466 (172.9s) genoma serie:ING_AZA_C:46106 aborto None · R0 real por linaje [0.0, 0.0199, 0.0, 0.0113, 0.0168, 0.0049, 0.0, 0.0024, 0.5625] · fundadores [409, 245, 418, 174, 350, 408, 400, 410, 6]
+  [ 2014.3s] g0 s39466 (173.7s) genoma G0 aborto None · R0 real por linaje [0.3214, 0.8485, 0.4, 0.8667, 0.0465, 0.96, 0.2012, 0.0185, 0.7895] · fundadores [56, 4, 32, 3, 471, 0, 130, 793, 7]
+  [ 2200.0s] ing s39466 (185.7s) genoma serie:ING_SEL_C:46106 aborto None · R0 real por linaje [0.3478, 0.9643, 0.0431, 0.8667, 0.7027, 0.2391, 0.2623, 0.0275, 0.0459] · fundadores [44, 0, 310, 3, 10, 104, 89, 352, 269]
+  [ 2404.5s] aza s39466 (204.4s) genoma serie:ING_AZA_C:46106 aborto None · R0 real por linaje [0.0, 0.0, 0.0025, 0.0, 0.0, 0.0072, 0.0, 0.0076, 0.5625] · fundadores [407, 402, 391, 174, 420, 415, 395, 391, 6]
+  [ 2583.0s] selc s39466 (178.6s) genoma serie:SEL_C:45306 aborto None · R0 real por linaje [0.4, 0.0297, 0.95, 0.7419, 0.3182, 0.0444, 0.3173, 0.0762, 0.4865] · fundadores [26, 489, 0, 7, 44, 408, 70, 205, 18]
+  [ 2917.1s] o1 s39466 (334.1s) genoma None aborto None · R0 real por linaje [0.9286, 0.95, 0.9286, 0.0617, 0.0921, 0.9286, 0.9444, 0.9412, 0.9583] · fundadores [0, 0, 0, 212, 137, 0, 0, 0, 0]
+
+  EXPLORA: 16 corridas escritas en C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\eco_ing_a_carrera\datos\eic_explora_s39461-39470_T100000; se resume con --lee cuando terminen todos los procesos.

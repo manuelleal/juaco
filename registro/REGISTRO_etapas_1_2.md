@@ -7079,3 +7079,23 @@ también en la serie 2.
   - **es la palanca del muro (el establecimiento), movida por selección y no por diseño.**
 - **Vocabulario:** permitido "la selección natural con hijos ingenuos baja ~31 % los fundadores que el linaje necesita", con la medida.
   Prohibido "aprende" y "evoluciona" sin la medida, y "sirve al fundador de la carrera": eso lo responde `eco_ing_a_carrera`, en curso.
+
+## Genoma de ECO_SEL_ING en la pista de la carrera (eco_ing_a_carrera, EXPLORATORIO, 39461–39470): **NO**
+- Carpeta `experimentos/organelos/eco_ing_a_carrera/`. Arnés 66/66; humo OK. Base primaria V143 (con G0 == V143 bit a bit);
+  secundaria V143_RES0.
+- **R0 real (mediana), fundadores por linaje (mediana):**
+  - v143 0.569, 15;
+  - **ingv (ING_SEL_C) 0.162, 145.5**;
+  - azav (ING_AZA_C) 0.100, 183;
+  - g0 0.582;
+  - selc (SEL_C de ECO_SEL) 0.484;
+  - o1 0.941, 0.
+- **Pareados:** ingv vs v143 0/10 (−0.437); ingv vs azav 5/10. El criterio exploratorio no pasa.
+- **Lectura:**
+  - cualquier genoma de la población ING de ECO, seleccionado o no, **hunde** al fundador de la carrera: vive más (200 contra 45 pasos),
+    pero el 96.6 % muere sin parir;
+  - el −31 % de fundadores de ECO_SEL_ING **no transfiere**;
+  - con esto van dos trasplantes ECO → carrera en NO.
+  - **Conclusión de la línea:** lo que ECO selecciona se adapta a ECO; el puente no es trasplantar genomas, sino evolucionar EN la pista.
+- **Error de instrumento declarado:** el criterio C3 (media de fundadores) estaba dominado por los linajes no establecidos. Usar la
+  mediana o sólo los establecidos. No cambia el NO.

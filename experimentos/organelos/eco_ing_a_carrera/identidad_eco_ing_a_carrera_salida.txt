@@ -1,0 +1,80 @@
+IDENTIDAD eco_ing_a_carrera · 2026-09-28 19:17:55 · python 3.14.2 · numpy 2.4.3
+  corre_eco_ing_a_carrera.py 47d7ddff05787616 · construye 54e0b361df647f0e · extrae 8055931940e68a62 · este arnes d6c125a22ab3bcf4
+(K) construccion por anclas, origenes y extraccion
+  [OK ] (K1) carros en disco == construye_eco_ing_a_carrera (sobre construye_eco_a_carrera 403c747caaae1c1e; solo cabecera/perillas/nombre) · EIC_G0 sha c7e2e5fac85cc2bc == disco: True |   EIC_ING sha a21482cdd25e60f8 == disco: True |   EIC_AZA sha 3ca2f066f2dd7c2f == disco: True |   EIC_SELC sha 5727c900f492d176 == disco: True |   EIC_G0V sha b56b173d5b437b78 == disco: True |   EIC_INGV sha a4656eddb09a31e1 == disco: True |   EIC_AZAV sh
+  [OK ] (K2) shas fijados (frio_carrera, V143_RES0, V143_TEL, corre_v143, V143, pista, juez, O1, eco_a_carrera x3, genomas_eco_sel)
+  [OK ] (K3) revisa_carro EIC_G0: PASA · []
+  [OK ] (K3) revisa_carro EIC_ING: PASA · []
+  [OK ] (K3) revisa_carro EIC_AZA: PASA · []
+  [OK ] (K3) revisa_carro EIC_SELC: PASA · []
+  [OK ] (K3) revisa_carro EIC_G0V: PASA · []
+  [OK ] (K3) revisa_carro EIC_INGV: PASA · []
+  [OK ] (K3) revisa_carro EIC_AZAV: PASA · []
+  [OK ] (K4) genomas_ing_serie.json == re-extraccion desde los 40 JSON de ECO_SEL_ING serie y sha == fijado en el runner · genomas_ing_serie.json sha 216a02a83318be8a == disco: True
+  [OK ] (K5) el medoide es la funcion de eco_a_carrera (importada, no copiada)
+  [OK ] (K6) G0 de ECO_SEL_ING == G0 de ECO_SEL == perillas de fabrica de la carrera, gen a gen · {'eta': 0.03, 'tau_e': 0.85, 'alpha': 1.2, 'hambre_boca': 2.0, 'aversion': 1.0, 'ema': 0.02, 'paso': 0.5, 'lam': 0.05, 'memoria_rechazo': 20, 'eta_s': 0.15, 'clip_s': 10.0, 'del_s': 0.25, 'del_c': 0.25, 'ema_c': 0.05, 'NK': 30}
+  [OK ] (K7) genes del genoma == EG_GENES del carro == 15 mutables
+  [OK ] (K8) EIC_SELC == EAC_SEL de eco_a_carrera salvo la cabecera y el nombre (la referencia es el carro que fallo) · lineas distintas [0]
+(D) extraccion: cada genoma es un cuerpo vivo real en T de su JSON ECO_SEL_ING; rangos; sin sustitutos
+  [OK ] (D1) los 40 genomas son medoides REALES · 40/40
+  [OK ] (D2) todos dentro de [G0/4, 4*G0] · fuera 0
+  [OK ] (D3) sin sustitutos (vivero permanente: nadie se extingue) · []
+  [OK ] (D4) emparejamiento: 39461 -> ING serie 46101 / ECO_SEL 45301; 39530 -> 46120; 39531 -> replica 46121 / 45321; 39561 -> 46111 / 45311
+  [OK ] (D5) ingv 39461 lleva el medoide ING_SEL_C de 46101; selc el SEL_C de 45301 (el de eco_a_carrera en 39401) · serie:ING_SEL_C:46101 · serie:SEL_C:45301
+  [OK ] (D6) la replica ABORTA mientras su sha no este fijado
+(A) GENOMA None == origen bit a bit (salida ENTERA de pista.run; N 9, fundador limpio, T 2000)
+  [OK ] (A) EIC_G0 con GENOMA None == V143_RES0 (s 39561)
+  [OK ] (A) EIC_ING con GENOMA None == V143_RES0 (s 39562)
+  [OK ] (A) EIC_AZA con GENOMA None == V143_RES0 (s 39563)
+  [OK ] (A) EIC_SELC con GENOMA None == V143_RES0 (s 39564)
+  [OK ] (A) EIC_G0V con GENOMA None == V143_TEL (s 39561)
+  [OK ] (A) EIC_INGV con GENOMA None == V143_TEL (s 39562)
+  [OK ] (A) EIC_AZAV con GENOMA None == V143_TEL (s 39563)
+(A') con GENOMA = G0 por el camino nuevo == la base (todo salvo la telemetria)
+  [OK ] (A'1) EIC_G0 + G0 == V143_RES0 (s 39561, T 5000) salvo d['carro']['eco_a_carrera'] · nacimientos 3
+  [OK ] (A'2) EIC_G0V + G0 == V143 (s 39562, T 5000) salvo telemetria (LA BASE PRIMARIA) · nacimientos 8
+  [OK ] (A'3) runner.tarea(g0v) == corre_v143.tarea(V143) con fisica_igual (s 39563, T 5000) -- la comparacion de la identidad LARGA
+  [OK ] (A'4) runner.tarea(g0) == corre_frio_carrera.tarea(V143_RES0) (s 39563, T 5000)
+  [OK ] (A'5) tras las corridas los modulos vuelven a GENOMA None
+(B) los genomas actuan y se aplican enteros; controles que pueden fallar
+  [OK ] (B1) EIC_INGV + ING_SEL_C != G0 en la FISICA (s 39562) · serie:ING_SEL_C:46111
+  [OK ] (B2) genoma_ok ingv y azav (aplicado == declarado en los 9 linajes)
+  [OK ] (B3) genoma_ok FALLA si el declarado difiere en un gen (alpha x1.01)
+  [OK ] (B4) azav lleva ING_AZA_C de la misma semilla ECO (46111), distinto de ING_SEL_C · serie:ING_AZA_C:46111 · serie:ING_SEL_C:46111
+  [OK ] (B5) fisica_igual PUEDE FALLAR: ingv != v143 (s 39561, T 3000)
+  [OK ] (B6) selc: genoma SEL_C de ECO_SEL 45311 aplicado · serie:SEL_C:45311
+(C) regla 14: la tarea del runner == corre_v143.tarea campo a campo
+  [OK ] (C) runner.tarea(v143) == corre_v143.tarea(V143) (s 39564, T 2000)
+  [OK ] (C) runner.tarea(o1) == corre_v143.tarea(O1) (s 39564, T 2000)
+  [OK ] (C2) P.run restaurado tras las tareas
+(F) fundadores: == juez y == eco_a_carrera.fundadores (entrada)
+  [OK ] (F1) causas fundadores + nacidos == causas del juez
+  [OK ] (F2) fundadores del juez + 1 == cuerpos de origen 0
+  [OK ] (F3) fundadores() == eco_a_carrera.fundadores() sobre la misma corrida (copia textual)
+  [OK ] (F4) pareado_fund: menos estricto (2<3 cuenta, 5=5 no) · {'semillas': 2, 'menos': 1, 'dif_med': -0.5, 'por_semilla': {1: [2.0, 3.0], 2: [5.0, 5.0]}}
+  [OK ] (G) determinismo: la misma tarea dos veces da lo mismo (salvo seg)
+(H) nube-9
+  [OK ] (H1) NK fuera de rango -> aborto atrapado, JSON escrito, GENOMA vuelve a None · SystemExit: eco_a_carrera: NK 9999 fuera de [1, 90]
+(V) la letra (la del muro, sin cambios; hipotesis ingv, control azav) y el criterio exploratorio en casos sinteticos
+  [OK ] (V) FUNCIONA -> FUNCIONA · FUNCIONA
+  [OK ] (V) MODESTO (P2 + dif 0.10 + gana a azav 11/20) -> HAY ALGO MODESTO · HAY ALGO MODESTO
+  [OK ] (V) NO: gana a azav solo 10/20 -> NO · NO
+  [OK ] (V) NO: dif 0.09 -> NO · NO
+  [OK ] (V) NO: P2 14/20 -> NO · NO
+  [OK ] (V) MODESTO: todo salvo P3 -> HAY ALGO MODESTO · HAY ALGO MODESTO
+  [OK ] (V) NO SE LEE: O1 no gana -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: V143 fuera [0.40, 0.80] -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: genoma no aplicado (V4) -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: un aborto -> NO SE LEE · NO SE LEE
+  [OK ] (V) NO SE LEE: contabilidad incoherente -> NO SE LEE · NO SE LEE
+  [OK ] (V) explora 7/7/7 -> PASA
+  [OK ] (V) explora 6/9/9 -> no; 9/6/9 -> no; 9/9/6 -> no
+(R) banderas (ERR-115) y rangos
+  [OK ] (R) humo con pool: ABORTA
+  [OK ] (R) explora fuera de rango: ABORTA
+  [OK ] (R) serie en semillas de explora: ABORTA
+  [OK ] (R) bandera abreviada: ABORTA
+  [OK ] (R) explora con T != 1e5: ABORTA
+  [OK ] (R) brazo desconocido: ABORTA
+
+ARNES eco_ing_a_carrera: 66/66 TODO OK · 181 s
