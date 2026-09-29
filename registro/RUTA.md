@@ -9,6 +9,23 @@
 > produjo resultados replicados de vida artificial, como un órgano construido por selección natural.
 > (X sale del Paso A del informe: `informe/errores.csv`.)
 
+**Segunda frase de la tesis (el alma; del director, 29-sep):**
+> El error más costoso no lo cometió un agente sino el director: diez fases persiguiendo el techo de benchmarks propios, hasta
+> que el registro mostró que la capacidad no aparecía por escalar la vara sino por darle a la selección piezas con qué construir.
+>
+> *EN:* "The costliest error was not an agent's but the director's: ten phases chasing the ceilings of our own benchmarks, until
+> the registry showed that capability did not come from raising the bar but from giving selection parts to build with."
+
+**Palabras del director, en bruto (29-sep), para la sección de lecciones:**
+> "Yo protocolicé 10 fases buscando incansablemente el techo de esas fases, pues pretendía que el organismo llegando ahí se
+> convertiría en AGI. Cuando me di cuenta de que estaba peleado con benchmarks y no con la evolución de verdad, comencé a ver el
+> proyecto desde otro punto de vista. No es sólo la interacción: es cómo pensar los problemas desde afuera puede ayudar a
+> solucionar cosas que no tienen nada que ver."
+
+- Ideas conectadas: la ley de Goodhart; los datos del 28-sep (con perillas fijas la selección se estanca; con piezas componibles
+  construye); las analogías que destrabaron trabajo (chimpancés y el mundo enriquecido, Minecraft y los bloques, las bacterias y los
+  pasajes seriados).
+
 ## Casillas
 - [ ] **(1) Informe técnico del protocolo**, en inglés (arXiv cs.AI).
   - Paso A: `informe/errores.csv`.
