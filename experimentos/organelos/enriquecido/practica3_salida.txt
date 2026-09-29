@@ -1,0 +1,9 @@
+[10:58:39] NUEZ_OFF s50195 T200000: K 49.05940594059406 · persiste 1 · aborto None · {"intentos": 42479, "abre": 4819, "falla": 37660, "frac_ok": 0.1134, "p_llave_A": 0.3366, "SI": -0.2232, "abre_pc": 0.97255, "frac_copia_T": 0.44, "frac_sen_nuez_T": 0.44, "disparos": 267, "monedas": 38, "copias": 0, "fuente_vacia": 0, "desf_global": 0, "nueces_creadas": 6276, "A_llegadas": 12611, "t_adq": null, "vivos_T": 50, "nueces_T": 11} (52.0 s; 52 s)
+carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\enriquecido\datos\practica: brazos ['NUEZ_OFF', 'REF']
+  NUEZ_OFF   s50195: K 49.06 · persiste 1 · aborto None · frac_ok 0.113 · SI -0.223 · p_llave_A 0.337 · abre_pc 0.973 · intentos 42479 · copias 0 · disparos 267 · frac_copia_T 0.44 · frac_sen_nuez_T 0.44 · t_adq None
+  REF        s50195: K 36.69 · persiste 1 · aborto None · frac_ok 0.0 · SI None · p_llave_A None · abre_pc 0.0 · intentos 0 · copias 0 · disparos 0 · frac_copia_T 0.0 · frac_sen_nuez_T 0.161 · t_adq None
+--- NUEZ_OFF: formas de regla en >= 30 % de los vivos en T
+  s50195 (vivos 50): pixF4>θ -> boca- 1.00 | pixF1>θ -> hacia+ 1.00
+--- REF: formas de regla en >= 30 % de los vivos en T
+  s50195 (vivos 31): pixF4>θ -> boca- 1.00
+(no es la explora completa: sin veredicto)

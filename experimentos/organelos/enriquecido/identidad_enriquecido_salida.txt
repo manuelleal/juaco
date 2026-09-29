@@ -1,0 +1,60 @@
+identidad_enriquecido.py 2026-09-29 11:06:17 T 30000, t_corte 10000
+(K) construccion por anclas y shas
+  [OK ] construye --verifica IGUAL 09f1f2f4d85b2368
+  [OK ] shas fijados (nucleo, motor_bloques, motor_enriquecido) 
+(A) todo apagado == motor_bloques
+  [OK ] BLOQ_V s50181 claves distintas [] · n_nac 538 · persiste 0
+  [OK ] BLOQ_V s50181 BQ_OUT (cfg: + nsen 6, nacc 4) (hijos 538, ins 65)
+  [OK ] ING_F1_V s50181 claves distintas [] · n_nac 559 · persiste 0
+  [OK ] ING_F1_V s50181 BQ_OUT (cfg: + nsen 6, nacc 4) (hijos 0, ins 0)
+(B) nuez con f = 0 y canal OFF, kit 1 == motor_bloques
+  [OK ] claves []
+  [OK ] BQ_OUT (cfg: + nsen 6, nacc 4) 
+  [OK ] hubo A que llegaron (la rama de nuez corrio) y 0 nueces NZC_T [0, 0, 0, 6989, 2464, 0, 7632, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+(B2) canal OFF == sin canal (nueces f 0.5, kit enriquecido, copia forzada en los fundadores)
+  [OK ] claves []
+  [OK ] BQ_OUT 
+  [OK ] NZ igual salvo disparos/monedas 
+  [OK ] OFF: hubo disparos y monedas, 0 copias NZC_T [23449, 2650, 20799, 3453, 773, 0, 7098, 3485, 1109, 1107, 0, 0, 0, 0, 0, 0]
+(C) controles que deben fallar
+  [OK ] f 0.5 != f 0 11 claves distintas; nueces 3485 vs 0
+  [OK ] SOC != OFF y copia copias 1164 · NZC_T [22273, 2807, 19466, 3693, 919, 0, 8419, 4140, 1230, 1230, 1164, 66, 0, 6, 0, 0]
+  [OK ] DESF != SOC y copia copias 1154 · NZC_T [22795, 2860, 19935, 3685, 862, 0, 8151, 4009, 1223, 1223, 1154, 69, 730, 21, 0, 0]
+  [OK ] SOC y DESF: mismo primer disparo (mismo gatillo): disparos > 0 en ambos 
+  [OK ] llave imposible -> 0 aperturas, falla == intentos > 0 NZC_T [65626, 0, 65626, 2210, 0, 0, 4532, 2206, 0, 0, 0, 0, 0, 0, 0, 0]
+(S) mecanica
+  [OK ] sin canal: intentos == abre + falla; abre > 0 (la llave C abre) [23449, 2650, 20799, 3453, 773]
+  [OK ] SOC: intentos == abre + falla; abre > 0 (la llave C abre) [22273, 2807, 19466, 3693, 919]
+  [OK ] DESF: intentos == abre + falla; abre > 0 (la llave C abre) [22795, 2860, 19935, 3685, 862]
+  [OK ] f 1: toda A que llega es nuez [5441, 5441]
+  [OK ] el sentido 'nuez' ACTUA: 'foco nuez -> boca -6' baja los intentos a < 30 % 0 vs 22593
+(D) determinismo
+  [OK ] SOC dos veces == 
+(Q) corte de luz en t = 20 000 + reanuda == entera
+  [OK ] se corto en t = 20 000 
+  [OK ] reanuda: claves []
+  [OK ] reanuda: BQ_OUT 
+  [OK ] reanuda: NZ_OUT copias 5513 abre 7950
+(R) reanudar con otra cfg aborta
+  [OK ] social distinto -> aborto con mensaje SystemExit: ENRIQUECIDO: el checkpoint es de otra cfg de NZ
+  [OK ] BQ distinto (p_ins) -> aborto con mensaje SystemExit: ENRIQUECIDO: el checkpoint es de otra cfg de BQ
+  [OK ] el corte dejo checkpoint (Q y R prueban algo) 
+(L) la letra y las medidas en entradas sinteticas
+  [OK ] letra: SOC gana a OFF y DESF con SI 0.3 -> FUNCIONA 
+  [OK ] letra: DESF iguala a SOC -> HAY ALGO MODESTO (P1 + P3) 
+  [OK ] letra: nada gana y SI 0 -> NO 
+  [OK ] letra: falta una corrida -> NO EVALUABLE 
+  [OK ] letra: OFF persiste 2/5 -> NO EVALUABLE (mundo invivible) 
+  [OK ] letra: OFF con copias -> NO EVALUABLE (sanidad) 
+  [OK ] letra: DESF persiste 2/5 -> NO EVALUABLE (V2 tambien para DESF) 
+  [OK ] letra: el par con DESF extinto no cuenta (P2 cae: 0/4 validos) -> HAY ALGO MODESTO [50102, 50103, 50104, 50105]
+  [OK ] letra: 3 pares validos < 4 -> P2 NO SE CUMPLE aunque SOC gane los 3 (-> MODESTO por P1 + P3) [50103, 50104, 50105]
+  [OK ] letra: par con < 20 intentos no cuenta (quedan 4 validos, SOC gana 4/4 -> FUNCIONA) 
+  [OK ] medidas: ventana [T/2, T] (200 intentos, 150 abre -> 0.75; P(llave|A) 50/400 -> SI 0.625) {"intentos": 200, "abre": 150, "falla": 50, "frac_ok": 0.75, "p_llave_A": 0.125, "SI": 0.625, "abre_pc": 0.29412, "frac_copia_T": 0.2, "frac_sen_nuez_T": 0.3, "disparos": 0, "monedas": 0, "copias": 0, "fuente_vacia": 0, "desf_global": 0, "nueces_creadas": 0, "A_llegadas": 0, "t_adq": 100000, "vivos_T": 10, "nueces_T": 5}
+(L3) --reanuda reintenta un M_*.json ABORTADO (H-3 del auditor)
+  [OK ] abortado -> se reintenta y queda sin aborto 
+  [OK ] hecho -> se salta (mismo JSON) 
+(L2) banderas del runner
+  [OK ] --explora --pool 3 se niega 
+  [OK ] bandera desconocida aborta 
+RESUMEN: 46/46 OK en 34 s
