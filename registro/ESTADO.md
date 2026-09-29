@@ -60,6 +60,8 @@ Candidato a v14.4: **TERMO′** (v14.3 + termostato de boca con memoria que olvi
 - **MAÑANA, primero:**
   `python experimentos/organelos/reunion/opusB/corre_termostato.py --serie --reanuda --pool 6 2>&1 | tee -a experimentos/organelos/reunion/opusB/serie_termostato_pool6.log`
 - Luego la réplica (`--replica`) si la serie no da NO, y `--bloque`.
+- **Pendiente de leer:** `experimentos/organelos/dinamita/`, el intento #4 contra el muro. El agente trabajó desde las 11:00 y nunca entregó
+  informe. Sus datos están versionados pero NO LEÍDOS: no cuentan como resultado hasta que un auditor los lea.
 
 ## Plan para mañana (propuesta del coordinador; decide el director)
 1. **El muro con bloques y población.** BLOQUES en la pista con más cuerpos o tiempo, o un mundo intermedio, y sentidos para "¿hay algo
