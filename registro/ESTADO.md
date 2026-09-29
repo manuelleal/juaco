@@ -44,6 +44,23 @@ Candidato a v14.4: **TERMO′** (v14.3 + termostato de boca con memoria que olvi
 - `nube/termo-banco-20260928`: serie en curso al cierre. El creador predice NO.
 - **Regla sugerida:** la nube sólo para lo que el PC no alcanza de noche.
 
+## Noche del 28-sep (22:00–23:00), EXPLORATORIOS, todos NO, cada uno con su lección
+- **BLOQUES_PISTA ronda 2 (T 300k):** NO. **La pista tiene N_MAX 9 y 1 cuerpo vivo por linaje**: no hay población sobre la que seleccionar.
+  **Evolucionar en la pista exige una pista con población por linaje**, es decir, tocar la carrera. Es decisión del director.
+- **Mundo que cambia** (inversión cada 20k–100k): ningún linaje con reglas persiste. La selección prefiere MEMORIA (4/6), pero la memoria
+  no olvida.
+- **Olvidar/reprobar (reglas)** y **olvidar el cerebro** (gen λ): NO. La selección APAGA el olvido (λ 1e-7..3e-6). El hijo nace ingenuo
+  y la selección "ve vidas, no siglos".
+- **Inversión dentro de una vida** (500–10 000): NO. Nadie sobrevive; λ sube apenas (8.6e-6).
+- **Lección repetida 3 veces en el día:** no olvidar mata (TERMO en T-C, la memoria de las reglas, el cerebro). Pero la selección no paga el
+  olvido si el cambio es raro, y si es muy frecuente el mundo es imposible. Hay que buscar la banda intermedia o una pieza distinta.
+
+## EN CURSO al apagar el PC (00:00): serie del confirmatorio "la selección encuentra el termostato en la pista"
+- Preregistro `experimentos/organelos/reunion/opusB/PREREGISTRO_termostato_pista.md` (commit `7d833c7`, auditor LISTO). Arrancó a las ~22:58.
+- **MAÑANA, primero:**
+  `python experimentos/organelos/reunion/opusB/corre_termostato.py --serie --reanuda --pool 6 2>&1 | tee -a experimentos/organelos/reunion/opusB/serie_termostato_pool6.log`
+- Luego la réplica (`--replica`) si la serie no da NO, y `--bloque`.
+
 ## Plan para mañana (propuesta del coordinador; decide el director)
 1. **El muro con bloques y población.** BLOQUES en la pista con más cuerpos o tiempo, o un mundo intermedio, y sentidos para "¿hay algo
    bueno a la vista? / reservas", para que la selección arme la decisión "limpiar o comer".
@@ -63,5 +80,6 @@ Propuesta: niveles 10–13 (ECO), de ~10 % a **+15–20**, por ECO_SEL ×2, ECO_
 ERR-149 a ERR-153 se usaron el 28-sep (ERR-151 está reservado para la rama nube/eco-sel-largo). **El siguiente libre es ERR-154.**
 
 ## Decisiones para el director (máximo 2)
-1. Los porcentajes de los niveles 10–13 por los tres FUNCIONA ×2 de ECO.
-2. ¿Integrar `organelos` a `main` (sólo commits aditivos)?
+1. **¿Se toca la pista de la carrera para darle población por linaje?** Sin eso, la evolución no puede atacar el muro dentro de la
+   pista. Recomendación: sí, como pista NUEVA versionada ("pista_pob"), sin cambiar la vieja ni la letra del muro.
+2. Los porcentajes de los niveles 10–13 (propuesta +15–20) y el merge de `organelos` a `main`.
