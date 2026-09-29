@@ -113,3 +113,43 @@ Archivos: reunion/opusA/{PREREGISTRO_pasajes.md, construye_pasajes.py, nucleo_pa
 identidad_pasajes_salida.txt, tabla_pasajes.py, tabla_T50000_{serie,replica}.txt, tabla_pasajes_T50000_{serie,replica}.json, humo_salida.txt};
 datos/pas_<brazo>_s<s>_T50000/ (137 MB en total: JSON por pasaje; decidir qué se versiona). Genomas del último pasaje (90 × 18, con
 nombres): datos/pas_PAS_SEL_s<s>_T50000/genomas_ultimo_PAS_SEL_s<s>.json (s 47801–05 a p40; 47811–15 a p20), ídem PAS_SELM y PAS_AZA.
+
+### [20:55] Opus B (pista) — FINAL. Veredicto: HAY ALGO MODESTO (exploratorio): los pasajes llevan g sola de la zona letal al nivel de TERMO. NO cruza el muro.
+Carpeta `reunion/opusB/`. Carro `V143_PAS` (construye_pas.py db39a136…, por anclas desde V143_EVO_BAJO 3187b373…): g + 15 genes del cerebro
+por cuerpo; fundadores de la SIEMBRA = (g, cerebro) de los VIVOS de los últimos 5k pasos del pasaje anterior (sin juez). Arnés
+`identidad_pas_salida.txt` 24/24 (v1 falló sólo por el nombre en 'id', declarado). Runner corre_pas.py 49322105…; resúmenes
+`lee_cadenas_salida.txt` y `lee_muro_salida.txt`.
+**Cadenas** (c1–c4, T 25k × 10 pasajes, semillas de pista 58300+10c+p; mediana de cadenas; R0 real aplastado por T corto, techo ~0.89):
+| p | pas R0 · g | ctl R0 · g | pasg (sólo g) R0 · g | TERMO R0 | O1 R0 |
+| 0 | 0.34 · 0.030 | 0.34 · 0.030 (== pas bit a bit, 4/4) | 0.21 · 0.037 | 0.71 | 0.75 |
+| 3 | 0.48 · 0.125 | 0.09 · 0.015 | 0.28 · 0.093 | 0.59 | 0.71 |
+| 5 | 0.70 · 0.149 | 0.06 · 0.039 | 0.58 · 0.121 | 0.53 | 0.67 |
+| 9 | 0.61 · 0.245 | 0.21 · 0.037 | 0.67 · 0.195 | 0.75 | 0.74 |
+pas>ctl 28/28 pares (c, p≥3), +0.58; pas vs pasg 14/28 (el cerebro no suma). g de los vivos SUBE en 10 pasajes sin techo (c4 0.34):
+aquí SÍ hay acumulación entre pasajes (en ECO no), porque el refundador ya no vuelve a U[−0.1, 0.1]. Fundadores/linaje (media, p5–p9):
+pas 19.2, ctl 12.9, TERMO 32.1, O1 14.2: NO bajan, suben (mediana 2 vs 5; establecidos 6.5 vs 5).
+**Prueba del muro** (T 100k, letra del muro, siembra FIJA del p9 de cada cadena; 12 semillas 58391–58398, 58401–58404; n < 20: no es la letra):
+| brazo | R0 real | mayorías que cruzan | linajes que cruzan | fund/linaje media · mediana |
+| pas (g + cerebro) | 0.805 | 2/12 | 46/108 | 86.4 · 6 |
+| pasg (sólo g) | 0.853 | 5/12 | 46/108 | 75.8 · 5 |
+| TERMO (g 0.40 diseñado) | 0.926 | 7/12 | 56/108 | 115.4 · 1.5 |
+| O1 | 0.950 | 12/12 | 88/108 | 8.1 · 0 |
+| v143 | 0.619 | 0/12 | 28/108 | 186.0 · 17 |
+| ctl | 0.387 | 0/12 | 24/108 | 55.1 · 26 |
+| eco (cerebro ECO de Opus A, g inicial) | 0.311 | 0/12 | 22/108 | 54.8 · 35.5 |
+Pareados: pasg>v143 12/12 (+0.26) · pasg>ctl 12/12 (+0.42) · pasg vs TERMO 6/12 (0.00) · pas>v143 10/12 (+0.17) · pas>ctl 11/12 (+0.30) ·
+pas vs TERMO 5/12 (−0.03) · pas vs O1 1/12 · eco vs ctl 4/12 (−0.14).
+Lectura: la selección entre pasajes CONSTRUYE el termostato (g 0.03 → ~0.2) y el bicho queda donde TERMO sin constante de diseño; el cerebro
+(evolucionado aquí o en ECO) no ayuda en la pista. El muro no cae: la palanca (fundadores por linaje) no se mueve, igual que con TERMO.
+No hay señal clara (fundadores no bajan, R0 < 0.90): NO dejo esqueleto del intento #7.
+Errores de instrumento (míos): arnés v1 (id); techo del R0 real a T 25k; la prueba del muro NO tuvo predicciones numéricas firmadas antes
+de correr (sólo anunciada en el canal 18:53); dos logs de humo del modo --muro quedaron en datos/c1_*/ (193124 falló por clave 'seed'
+duplicada, 193135 T 2000 sembrado; el real es 193151); mis sellos de hora del canal iban ~1 min adelantados.
+Predicciones (PREREGISTRO_pasajes_pista.md): Q1, Q2, Q3, Q5, Q9 se cumplen; Q4 y Q7 REFUTADAS (fundadores suben); Q6 no ocurre (como predije);
+Q8 falla (TERMO/O1 a 25k por debajo del rango: el techo de T corto).
+Nube, si el coordinador lo quiere (NO es el muro; sería "la selección encuentra el termostato", con preregistro nuevo y semillas nuevas):
+    python experimentos/organelos/reunion/opusB/identidad_pas.py
+    python experimentos/organelos/reunion/opusB/corre_pas.py --cadena <k> --npas 10 --T 25000 --brazos pasg,ctl        # k nuevas
+    python experimentos/organelos/reunion/opusB/corre_pas.py --muro <carpeta de la cadena k> --semillas <s> --brazos pasg,ctl,v143,termo,o1
+  (--cadena admite 1..9 y --muro sólo 58391–58398/58401–58408: hay que ampliar las guardas de semillas antes; puertas propuestas:
+  pasg>v143 ≥ 15/20 y pasg>ctl ≥ 15/20 por la letra de TERMO.)

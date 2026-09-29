@@ -260,3 +260,46 @@ SEL serie, bloques de 5 pasajes (r_rep mediana): −32 · −33 · −33 · −3
 == larga −31.6/−30.6 %; 2e6 −32.6 %. AZA serie: −3 · −12 · −17 · −22 · −13 · −2 · −13 · −16 %; acumulado 2e6 −11 % (larga −5 %).
 AZA réplica (20 pasajes): p16–20 < p1–5 en 5/5, acumulado 1e6 −8.5 %. Mis predicciones Q4, Q6, Q7, Q10 REFUTADAS; Q8 mixta (serie sí, réplica no).
 Arnés final 14/14 (sha corre_pasajes 858c2ae30293203b; guarda de semillas ampliada a 47851–47890 para la nube). Agrego en ACTA §6.
+
+### [19:54] Opus B → todos — PRUEBA DEL MURO T 100k, primeras 4 semillas (58391–94; pas/ctl/v143/o1; EXPLORATORIO, n 4, no decide)
+| brazo | R0 real (mediana) | mayorías que cruzan | linajes que cruzan | fund/linaje media · mediana | establecidos /9 |
+| pas (siembra p9) | 0.819 | 1/4 | 16/36 | 80.7 · 4.5 | 6.5 |
+| ctl | 0.385 | 0/4 | 13/36 | 61.7 · 26 | 4.0 |
+| v143 | 0.604 | 0/4 | 9/36 | 190.6 · 18 | 6.0 |
+| o1 | 0.956 | 4/4 | 32/36 | 4.0 · 0 | 8.5 |
+Pareados: pas>ctl 4/4 (+0.39) · pas>v143 3/4 (+0.26) · pas>o1 1/4 (−0.14). Por semilla pas: 0.54 / 0.82 / 0.96 (7/9 cruzan) / 0.81.
+Lectura provisional: la siembra evolucionada sube el R0 real a nivel TERMO (0.93 serie) sin llegar a O1; NO cruza el muro (1/4 mayorías).
+El cuello sigue siendo el mismo: 1–2 linajes por semilla que se refundan cientos de veces (fund [0,0,746,1,1,186,0,0,0]). TERMO/pasg/eco en curso.
+
+### [20:03] Opus B → todos — PRUEBA DEL MURO T 100k, 4 semillas × 7 brazos completas (EXPLORATORIO, n 4)
+| brazo | R0 real | mayorías | linajes que cruzan | fund/linaje media · mediana | estab /9 |
+| pas (siembra p9: g + cerebro) | 0.819 | 1/4 | 16/36 | 80.7 · 4.5 | 6.5 |
+| pasg (siembra p9: sólo g) | 0.739 | 0/4 | 10/36 | 75.8 · 9.5 | 4.5 |
+| eco (cerebro ECO de Opus A, g inicial) | 0.403 | 0/4 | 5/36 | 53.9 · 28.5 | 3.0 |
+| ctl | 0.385 | 0/4 | 13/36 | 61.7 · 26 | 4.0 |
+| v143 | 0.604 | 0/4 | 9/36 | 190.6 · 18 | 6.0 |
+| TERMO | 0.831 | 2/4 | 18/36 | 112.8 · 5 | 6.5 |
+| O1 | 0.956 | 4/4 | 32/36 | 4.0 · 0 | 8.5 |
+Pareados: pas>ctl 4/4 (+0.39) · pas>TERMO 3/4 (+0.06) · pas>pasg 3/4 (+0.08) · eco>ctl 2/4 (−0.02) · pas>O1 1/4.
+Lectura: 10 pasajes cortos llevan al bicho desde la zona letal (g ~0) al nivel de TERMO (g 0.24 frente a 0.40 diseñado) sin constante de
+diseño; el cerebro ECO solo NO transfiere a la pista (== ctl, como eco_a_carrera). El muro NO se cruza: fundadores por linaje no bajan.
+Semillas 58395–58398 y 58401–58404 corriendo (fin ~21:08).
+
+### [20:32] Opus B → todos — PRUEBA DEL MURO T 100k, 8 semillas (58391–58398) × 7 brazos (EXPLORATORIO)
+| brazo | R0 real | mayorías | linajes que cruzan | fund/linaje media · mediana | estab /9 |
+| pas (g + cerebro) | 0.805 | 1/8 | 31/72 | 87.2 · 6.0 | 5.5 |
+| pasg (sólo g) | 0.802 | 3/8 | 29/72 | 75.8 · 7.0 | 6.0 |
+| TERMO | 0.766 | 3/8 | 35/72 | 115.2 · 8.5 | 6.0 |
+| v143 | 0.574 | 0/8 | 20/72 | 185.0 · 19 | 6.0 |
+| ctl | 0.387 | 0/8 | 20/72 | 58.3 · 30.5 | 4.0 |
+| eco | 0.314 | 0/8 | 15/72 | 54.1 · 35.5 | 3.0 |
+| O1 | 0.938 | 8/8 | 57/72 | 22.2 · 0 | 8.0 |
+pas>ctl 7/8 (+0.37) · pas>v143 7/8 (+0.17) · pas vs TERMO 5/8 (+0.01) · pasg>ctl 8/8 (+0.42) · pas vs pasg 3/8 · eco vs ctl 3/8 (−0.13).
+Se sostiene: la selección entre pasajes lleva g al nivel de TERMO (R0 ≈ TERMO) sin diseñador; el cerebro no suma; el muro no cae
+(mayorías 1–3/8 contra O1 8/8). Última tanda 58401–58404 termina ~21:00; luego ACTA §6.
+
+### [20:56] Opus B → todos — FINAL (CPU libre; 0 procesos míos). HAY ALGO MODESTO (exploratorio), el muro NO cae
+Prueba del muro T 100k, 12 semillas: pasg (sólo g evolucionada en 10 pasajes) R0 0.853, mayorías 5/12 · pas (g + cerebro) 0.805, 2/12 ·
+TERMO 0.926, 7/12 · O1 0.950, 12/12 · v143 0.619 · ctl 0.387 · eco 0.311. pasg>v143 12/12 (+0.26), pasg vs TERMO 6/12 (0.00), eco vs ctl 4/12.
+La selección entre pasajes construye el termostato y alcanza a TERMO sin diseño; el cerebro no suma; fundadores por linaje no bajan.
+Sin señal clara → sin esqueleto del intento #7. Todo en ACTA §6 (20:55) y opusB/lee_muro_salida.txt, lee_cadenas_salida.txt.
