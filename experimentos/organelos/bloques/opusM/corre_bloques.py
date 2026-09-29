@@ -29,7 +29,7 @@ import nucleo_eco_sel_ing as NS   # noqa: E402  (importa corre_eco_v12, deja CR.
 
 SHAS = {os.path.join(ING_DIR, 'nucleo_eco_sel_ing.py'): 'c2189f9d22b72386',
         os.path.join(ORG, 'frio', 'motor_frio_rapido.py'): 'ff9d890a5cce9dec',
-        os.path.join(AQUI, 'motor_bloques.py'): 'ce66d09804660588'}
+        os.path.join(AQUI, 'motor_bloques.py'): 'ff782697e54585a5'}
 DATOS = os.path.join(AQUI, 'datos')
 FAB = NS.FAB
 NS.BRAZOS.update({'BLOQ': ('MUT0', FAB, None), 'BLOQ_AZA': ('MUT0', FAB, None), 'BLOQ_C': ('CEREBRO', FAB, None)})
@@ -87,19 +87,23 @@ def usa_bloques():
     return MB
 
 
-def corre(seed, brazo, T, carpeta, extra=None):
+def corre(seed, brazo, T, carpeta, extra=None, reanuda=False):
+    fn = os.path.join(carpeta, f'M_{brazo}_s{seed}.json')
+    if reanuda and os.path.exists(fn): return json.load(open(fn, encoding='utf-8'))
     MB = usa_bloques()
     MB.BQ_CFG.clear(); MB.BQ_CFG.update(DEF); MB.BQ_CFG.update(BQ[brazo]); MB.BQ_CFG.update(extra or {})
     os.makedirs(carpeta, exist_ok=True)
-    res = NS.trabajo((seed, brazo, T, NS.tc_de(brazo, T), NS.FRIO['T_lect'], carpeta, False))
+    res = NS.trabajo((seed, brazo, T, NS.tc_de(brazo, T), NS.FRIO['T_lect'], carpeta, bool(reanuda)))
     out = dict(K=NS_kbar(res), K_nac=res.get('K_nac'), fund_2a=res.get('fund_2a'), persiste=res.get('persiste'),
                bloqueados=res.get('bloqueados'), aborto=res.get('aborto'), seg=res.get('seg'), n_nac=res.get('n_nac'),
                n_refund=res.get('n_refund'), genes_vivos_T=res.get('genes_vivos_T'), causas_2a=res.get('causas_2a'),
                vida_media_muertos_2a=res.get('vida_media_muertos_2a'), nac_2a=res.get('nac_2a'))
     out['mundo'] = dict(MUNDO_ULT); out['t_ext'] = res.get('t_ext'); out['K_fund'] = res.get('K_fund')
+    out.update(carro=res.get('carro'), t_corte=res.get('t_corte'), genetica=res.get('genetica'), motor=res.get('motor'))
     out['bloques'] = json.loads(json.dumps(MB.BQ_OUT, default=float)) if MB.BQ_CFG.get('on') else None
-    fn = os.path.join(carpeta, f'M_{brazo}_s{seed}.json')
-    with open(fn + '.tmp', 'w', encoding='utf-8') as f: json.dump(dict(seed=seed, brazo=brazo, T=T, **out), f)
+    out['frac_rechazo'] = frac_rechazo(out)
+    out = dict(seed=seed, brazo=brazo, T=T, **out)
+    with open(fn + '.tmp', 'w', encoding='utf-8') as f: json.dump(out, f)
     os.replace(fn + '.tmp', fn)
     return out
 
@@ -190,13 +194,112 @@ def lee(carpeta):
     return D
 
 
+# ================================================================ SERIE CONFIRMATORIA (PREREGISTRO_bloques.md §10; escrita ANTES de la serie)
+SERIE_BR = ('BLOQ_V', 'ING_SEL_C_V', 'BLOQ_AZA_V', 'ING_F1_V')   # orden de lanzamiento: los caros primero
+VENTANAS = (48411, 48431)   # serie y replica, 20 semillas cada una
+N_SERIE = 20
+T_SERIE = 500000             # fijado en §10 (19:51) tras medir el costo: BLOQ_V 63.5 s, ING_SEL_C_V 43.7 s a T 500 000 (48496)
+T_CORTE = 100000
+CFG_ESPERADA = {'BLOQ_V': (1, 'padre'), 'BLOQ_AZA_V': (1, 'azar'), 'ING_SEL_C_V': (0, None), 'ING_F1_V': (0, None)}
+
+
+def veredicto(D, T, n=N_SERIE):
+    """La LETRA de §10. D[brazo][seed] = el dict de corre(). Devuelve (veredicto, lineas)."""
+    L = []
+    ss = sorted(set.intersection(*[set(D.get(b, {})) for b in SERIE_BR])) if all(b in D for b in SERIE_BR) else []
+    todo = [D[b][s] for b in SERIE_BR for s in ss]
+    v0 = (n == N_SERIE and len(ss) == n and all(len(D[b]) == n for b in SERIE_BR) and all(x.get('T') == T for x in todo)
+          and all(x.get('t_corte') == T_CORTE for x in todo) and all(x.get('aborto') is None for x in todo)
+          and all(x.get('bloqueados') == 0 for x in todo))
+
+    def cfg_ok(x):
+        on, don = CFG_ESPERADA[x['brazo']]; B = x.get('bloques')
+        if on == 0: return B is None
+        return B is not None and B['cfg'].get('on') == 1 and B['cfg'].get('donante') == don
+    v2 = bool(todo) and all(x.get('carro') == FAB for x in todo) and all(cfg_ok(x) for x in todo)
+    pers = {b: sum(1 for s in ss if D[b][s].get('persiste')) for b in SERIE_BR} if ss else {}
+    v1 = pers.get('ING_F1_V', 99) <= 3
+    L.append(f"V0 serie completa ({N_SERIE} semillas x 4 brazos, T {T}, t_corte {T_CORTE}, sin abortos, bloqueados 0): {'SE CUMPLE' if v0 else 'NO SE CUMPLE'}")
+    L.append(f"V1 la base sin vivero muere (ING_F1_V persiste <= 3/20): {'SE CUMPLE' if v1 else 'NO SE CUMPLE'} ({pers.get('ING_F1_V')})")
+    L.append(f"V2 carro FABRICA_ECO y reglas declaradas por brazo: {'SE CUMPLE' if v2 else 'NO SE CUMPLE'}")
+    L.append(f"persiste: {pers}")
+    if not (v0 and v1 and v2):
+        L.append('VEREDICTO (una serie): NO EVALUABLE'); return 'NO EVALUABLE', L
+    K = lambda b, s: D[b][s]['K']
+    p1 = pers['BLOQ_V'] >= 17
+    d2 = [K('BLOQ_V', s) - K('ING_SEL_C_V', s) for s in ss]
+    p2 = sum(x > 0 for x in d2) >= 15 and float(np.median(d2)) >= 10.0
+    d3 = [K('BLOQ_V', s) - K('BLOQ_AZA_V', s) for s in ss]
+    p3 = sum(x > 0 for x in d3) >= 15 and pers['BLOQ_AZA_V'] <= 5
+    fr = [D['BLOQ_V'][s].get('frac_rechazo') for s in ss]
+    n4 = sum(1 for f in fr if f is not None and f >= 0.5)
+    p4 = n4 >= 12
+    L.append(f"P1 BLOQ_V persiste >= 17/20: {'SE CUMPLE' if p1 else 'NO SE CUMPLE'} ({pers['BLOQ_V']})")
+    L.append(f"P2 K(BLOQ_V) > K(ING_SEL_C_V) pareado >= 15/20 y mediana >= +10: {'SE CUMPLE' if p2 else 'NO SE CUMPLE'} "
+             f"({sum(x > 0 for x in d2)}/20, mediana {np.median(d2):+.2f})")
+    L.append(f"P3 K(BLOQ_V) > K(BLOQ_AZA_V) pareado >= 15/20 y BLOQ_AZA_V persiste <= 5/20: {'SE CUMPLE' if p3 else 'NO SE CUMPLE'} "
+             f"({sum(x > 0 for x in d3)}/20, mediana {np.median(d3):+.2f}; AZA persiste {pers['BLOQ_AZA_V']})")
+    L.append(f"P4 organo de rechazo (boca w<0 que separa exacto B,D de A,C) en >= 50 % de los vivos en T en >= 12/20 semillas de BLOQ_V: "
+             f"{'SE CUMPLE' if p4 else 'NO SE CUMPLE'} ({n4}/20)")
+    if p1 and p2 and p3 and p4: v = 'FUNCIONA'
+    elif p3 and (p1 or p2): v = 'MODESTO'   # el control pasa y pasa al menos una de P1 (persistencia) o P2 (techo)
+    else: v = 'NO'
+    L.append(f'VEREDICTO (una serie): {v}')
+    return v, L
+
+
+def _job(a):
+    seed, brazo, T, car, rean = a
+    t0 = time.time()
+    try:
+        o = corre(seed, brazo, T, car, reanuda=rean)
+    except KeyboardInterrupt:
+        raise
+    except BaseException as ex:   # nunca matar al trabajador del Pool: la serie queda NO EVALUABLE por V0
+        o = dict(seed=seed, brazo=brazo, T=T, aborto=f'{type(ex).__name__}: {ex}', K=None, persiste=None, bloqueados=None)
+    return seed, brazo, o, round(time.time() - t0, 1)
+
+
+def serie(desde, n, pool, T, rean):
+    from multiprocessing import Pool
+    car = os.path.join(DATOS, f'serie_s{desde}-{desde + n - 1}_T{T}')
+    os.makedirs(car, exist_ok=True)
+    jobs = [(s, b, T, car, rean) for b in SERIE_BR for s in range(desde, desde + n)]
+    t0 = time.time(); D = {}
+    with Pool(pool) as P:
+        for k, (s, b, o, seg) in enumerate(P.imap_unordered(_job, jobs), 1):
+            D.setdefault(b, {})[s] = o
+            print(f"[{time.strftime('%H:%M:%S')}] [{k}/{len(jobs)}] {b} s{s}: K {o.get('K')} · persiste {o.get('persiste')} · "
+                  f"rechazo {o.get('frac_rechazo')} · aborto {o.get('aborto')} ({seg} s; {time.time() - t0:.0f} s)", flush=True)
+    v, L = veredicto(D, T, n)
+    for x in L: print(x, flush=True)
+    with open(os.path.join(car, 'VEREDICTO.json'), 'w', encoding='utf-8') as f:
+        json.dump(dict(veredicto=v, lineas=L, T=T, desde=desde, n=n, shas={os.path.basename(p_): h16(p_) for p_ in SHAS}), f, indent=1)
+
+
+def lee_serie(car, T):
+    D = {}
+    for f in glob.glob(os.path.join(car, 'M_*.json')):
+        d = json.load(open(f, encoding='utf-8')); D.setdefault(d['brazo'], {})[d['seed']] = d
+    v, L = veredicto(D, T)
+    for x in L: print(x)
+    return v
+
+
 def main():
     ap = argparse.ArgumentParser(allow_abbrev=False, add_help=False)
     ap.add_argument('--humo', action='store_true'); ap.add_argument('--explora', action='store_true')
     ap.add_argument('--semillas', default=None); ap.add_argument('--brazos', default=None)
-    ap.add_argument('--T', type=int, default=200000); ap.add_argument('--carpeta', default=None); ap.add_argument('--lee', default=None)
+    ap.add_argument('--T', type=int, default=None); ap.add_argument('--carpeta', default=None); ap.add_argument('--lee', default=None)
+    ap.add_argument('--serie', action='store_true'); ap.add_argument('--desde', type=int, default=None); ap.add_argument('--n', type=int, default=None)
+    ap.add_argument('--pool', type=int, default=None); ap.add_argument('--reanuda', action='store_true')
     a, resto = ap.parse_known_args()
     if resto: raise SystemExit(f'banderas desconocidas: {resto}')
+    if a.serie:   # SOLO el coordinador
+        if a.desde not in VENTANAS or a.n != N_SERIE or a.T != T_SERIE or not a.pool or a.pool < 1:
+            raise SystemExit(f'--serie exige --desde en {VENTANAS}, --n {N_SERIE}, --T {T_SERIE} y --pool')
+        verifica(); serie(a.desde, a.n, a.pool, a.T, a.reanuda); return
+    if a.T is None: a.T = 200000
     if a.lee: lee(a.lee if os.path.isabs(a.lee) else os.path.join(DATOS, a.lee)); return
     if a.T > 200000: raise SystemExit('T > 200 000 no se corre aqui (regla del creador)')
     verifica()

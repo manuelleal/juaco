@@ -146,17 +146,51 @@ Arnés 17/17 (salida en `identidad_bloques_salida.txt`, repetido al final con el
 - E6: mis horas en el canal iban ~3 min adelantadas (declarado en el canal).
 - Trampa 4 declarada: el significado de las letras es fijo en este mundo; lo que se mide es un INSTINTO heredable, no aprendizaje.
 
-## 10. Esqueleto para la nube (hay señal; para el coordinador)
+## 10. SERIE CONFIRMATORIA EN EL PC (FINAL; escrita a las 19:55 del 28-sep, ANTES de la serie; la corre el coordinador después del auditor)
+Pedido del coordinador (19:49): serie confirmatoria esta noche si cabe antes de las 21:50. Esta §10 reemplaza al esqueleto de nube de las 19:47 (mismas
+puertas; se agregan el T medido, la validez completa y la regla MODESTO cerrada).
+
 - **Pregunta:** sin vivero después de t_corte, ¿el genoma de reglas heredable sostiene al linaje ingenuo por encima del techo de los 15 genes?
-- **Brazos** (w90, FABRICA_ECO, t_corte 100 000, **T 500 000**): ING_F1_V · ING_SEL_C_V · BLOQ_V · BLOQ_AZA_V (+ FORZ3_V como referencia descriptiva).
-- **Antes de la serie:** arreglar E5 (banco de reglas en el checkpoint) con su caso en el arnés; arnés completo; humo que escribe su JSON.
-- **Validez:** ING_F1_V persiste ≤ 3/20 (si no, la pregunta no existe); bloqueados 0; ningún aborto; carro FABRICA_ECO; T declarada.
-- **Puertas:** P1 BLOQ_V persiste ≥ 17/20 · P2 K(BLOQ_V) > K(ING_SEL_C_V) pareado ≥ 15/20 y mediana ≥ +10 · P3 (control que puede fallar) K(BLOQ_V) >
-  K(BLOQ_AZA_V) ≥ 15/20 y BLOQ_AZA_V persiste ≤ 5/20 · P4 (firma) regla de boca w < 0 que separa exacto {B, D} de {A, C} en ≥ 50 % de los vivos en T en
-  ≥ 12/20 semillas de BLOQ_V.
-- **Veredicto:** FUNCIONA = P1+P2+P3+P4 · MODESTO = P1+P3 sin P2, o P2+P3 sin P4 · NO en otro caso. Nulos: signo p 0.5, ≥ 15/20 → 0.021.
-- **Predicciones (desde esta exploración):** P1 0.85 · P2 0.80 · P3 0.85 · P4 0.75 · FUNCIONA ×2 0.55. La más expuesta: P2 a 500 000 (el anillo lleno de
-  veneno podría matar también a BLOQ_V).
-- **Semillas NUEVAS** (grep del 28-sep: 484xx libre salvo 48401–48410 y 48491–48495, usadas hoy): serie **48411–48430**, réplica **48431–48450**,
-  práctica 48496–48499.
-- Costo: ~40 s por corrida a 200 000 → ~100 s a 500 000; 4 brazos × 40 semillas / 6 procesos ≈ 45 min.
+- **Brazos** (w90, esc 90, 90 fundadores, quimiostato, tope 3000, FABRICA_ECO, **t_corte = 100 000**; reglas: tasas de §2, arranque VACÍO, banco 200):
+  ING_F1_V (MUT0, sin reglas) · ING_SEL_C_V (CEREBRO 15 genes, sin reglas) · BLOQ_V (MUT0 + reglas, donante padre) · BLOQ_AZA_V (MUT0 + reglas, donante azar).
+  FORZ_V/FORZ2_V/FORZ3_V NO entran (fueron referencias exploratorias).
+- **T = 500 000.** Costo medido (19:50, práctica 48496, 1 proceso con otro proceso al lado y un examen con Pool 6 en el PC): BLOQ_V 63.5 s
+  (persiste, K 35.25), ING_SEL_C_V 43.7 s (persiste, K 8.66); ING_F1_V y BLOQ_AZA_V se extinguen hacia t ≈ 110 000–160 000 y cuestan como a 200 000
+  (21–48 s, mediana ~27 s). Proyección: ≈ 165 s por semilla × 20 / 6 ≈ 9–10 min por serie con Pool 6; × 1.5–2 por el PC compartido ≈ 14–20 min;
+  **serie + réplica ≈ 30–40 min**. Cabe antes de las 21:50 si se lanza antes de ~21:00 (mejor tras las 20:30, cuando termina el otro Pool 6).
+  Si no cabe: T = 300 000 con t_corte 100 000 (mismas puertas), declarado aquí como plan B; o mañana.
+- **Medidas (por semilla, pareadas):** persiste en T (`persiste` del núcleo: sin extinción y con vivos al final); K = media de tam_total en [T/2, T]
+  (= [250 000, 500 000]; tras la extinción cuenta 0; copia de `corre_eco_sel_ing.kbar`); frac_rechazo = fracción de los vivos en T con ≥ 1 regla de
+  boca con w < 0 sobre el píxel del foco cuya condición se cumple EXACTAMENTE en B y D y no en A ni C (`corre_bloques.rechazo`; sin vivos → no cuenta).
+- **Validez (si falla algo: NO EVALUABLE):** V0 serie completa: 20 semillas × 4 brazos, las mismas, T 500 000, t_corte 100 000 en todas, ningún aborto,
+  bloqueados 0 · V1 la base sin vivero muere: ING_F1_V persiste ≤ 3/20 · V2 carro FABRICA_ECO en todas y reglas declaradas por brazo (BLOQ_V on/padre,
+  BLOQ_AZA_V on/azar, ING sin reglas).
+- **Puertas:**
+  - **P1** BLOQ_V persiste ≥ 17/20.
+  - **P2** K(BLOQ_V) > K(ING_SEL_C_V) pareado en ≥ 15/20 **y** mediana de la diferencia ≥ +10.
+  - **P3** (control que puede fallar) K(BLOQ_V) > K(BLOQ_AZA_V) pareado en ≥ 15/20 **y** BLOQ_AZA_V persiste ≤ 5/20.
+  - **P4** (firma) frac_rechazo ≥ 0.5 en ≥ 12/20 semillas de BLOQ_V.
+- **Veredicto por serie (`corre_bloques.veredicto`):** FUNCIONA = P1+P2+P3+P4 · MODESTO = P3 y (P1 o P2), sin ser FUNCIONA · NO en otro caso ·
+  NO EVALUABLE si falla V0, V1 o V2. **El bloque se declara sólo si serie y réplica coinciden; si no, vale el menor.**
+  (Cambio respecto del esqueleto de las 19:47, hecho ANTES de datos: el esqueleto dejaba P2+P3+P4 sin P1 como NO; ahora es MODESTO.)
+- **Nulos:** puertas de signo con p = 0.5, ≥ 15/20 → 0.021; P1 bajo p = 0.5 → 0.0002; P4 ≥ 12/20 bajo p = 0.5 → 0.25 (P4 es firma, no prueba sola).
+- **Predicciones firmadas (antes de la serie; desde la exploración de §9b):** P1 0.85 · P2 0.80 · P3 0.85 · P4 0.75 · V1 0.95 · FUNCIONA en una serie 0.60 ·
+  **FUNCIONA ×2 0.50**. K(BLOQ_V) mediana en [28, 42] (p 0.75); K(ING_SEL_C_V) mediana en [4, 15] (p 0.75). La más expuesta: P2 a 500 000 (el anillo lleno
+  de veneno podría matar también a BLOQ_V; la práctica 48496 persiste con K 35.25).
+- **Qué refuta:** H-BLOQ cae si P2 cae con la validez intacta (no supera el techo de los 15 genes sin subsidio); «es la herencia» cae si P3 cae;
+  «es el órgano de rechazo» se debilita si P1–P3 pasan y P4 cae (otra cosa sostiene al linaje).
+- **Trampas:** (1) BLOQ_V y BLOQ_AZA_V difieren sólo en el donante de reglas; (2) conteos pareados; (3) después de t_corte no hay subsidio: K es de
+  NACIDOS; el anillo se llena de veneno en todos los brazos que persisten (medido en §9b), la comparación es en el mismo mundo; (4) letras de significado fijo:
+  se mide un INSTINTO heredable, no aprendizaje.
+- **E5 arreglado:** el banco de reglas y la telemetría viajan dentro de ES (entra al blob del checkpoint); arnés (Q): corte en 30 000 + reanuda == entera.
+  `--reanuda` vale para la serie.
+- **Semillas NUEVAS** (grep del 28-sep; 484xx libre salvo 48401–48410 y 48491–48496 usadas hoy): **serie 48411–48430, réplica 48431–48450**; práctica usada:
+  48496 (costo a 500 000, números vistos y declarados arriba).
+- **Comandos (sólo el coordinador), desde la raíz del repo:**
+  - serie: `python experimentos/organelos/bloques/opusM/corre_bloques.py --serie --desde 48411 --n 20 --T 500000 --pool 6`
+  - réplica: `python experimentos/organelos/bloques/opusM/corre_bloques.py --serie --desde 48431 --n 20 --T 500000 --pool 6`
+  - si se corta: el mismo comando con `--reanuda`. Datos en `opusM/datos/serie_s<desde>-<fin>_T500000/` (M_*.json y VEREDICTO.json).
+- **Instrumento de la serie (sha a 16):** construye_bloques 28ba92383aff5e5f · motor_bloques ff782697e54585a5 (`--verifica` IGUAL) · corre_bloques
+  a090b82eae9f1ee3 · identidad_bloques 06ff008d0d53723e → `identidad_bloques_salida.txt` 08379bb785e66728: **37/37 en 212 s** (K, A, B, C, H, D, Q, L, R).
+  El trabajador de la serie (`_job`) se probó en un proceso, sin Pool, en los 4 brazos a T 20 000 con la práctica 48496 (`datos/humo_job`); el Pool mismo
+  no lo corrió el creador (regla).

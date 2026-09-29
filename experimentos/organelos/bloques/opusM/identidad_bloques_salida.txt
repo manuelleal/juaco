@@ -1,6 +1,6 @@
-identidad_bloques.py 2026-09-28 19:45:46 T 20000
+identidad_bloques.py 2026-09-28 19:51:54 T 20000
 (K) construccion por anclas
-  [OK ] construye --verifica IGUAL ce66d09804660588
+  [OK ] construye --verifica IGUAL ff782697e54585a5
   [OK ] shas fijados (nucleo, motor_frio_rapido, motor_bloques) 
 (A) BQ apagado == motor_frio_rapido
   [OK ] ING_F1 s48491 claves distintas [] · K_nac 13.0 fund_2a 2531 n_nac 902
@@ -22,4 +22,27 @@ identidad_bloques.py 2026-09-28 19:45:46 T 20000
   [OK ] BLOQ_AZA: el hijo de padre CON reglas NO copia al padre (< 50 %) 177/756 (todos: 177/756)
 (D) determinismo
   [OK ] BLOQ dos veces == largo medio vivos T 0.02
-RESULTADO 17/17 en 104 s
+(Q) corte de luz + reanuda (E5)
+  [OK ] corte en 30 000 y reanuda == entera (claves) cortado True · distintas []
+  [OK ] reglas de los vivos, banco de reglas, contadores y serie == hijos 1832/1832 · banco 200/200 · largo medio vivos T 0.81
+(L) la letra en entradas sinteticas
+  [OK ] letra: todo pasa -> FUNCIONA (esperado FUNCIONA)
+  [OK ] letra: P2 mediana +5 (P1+P3) -> MODESTO (esperado MODESTO)
+  [OK ] letra: sin firma P4 (P1+P2+P3) -> MODESTO (esperado MODESTO)
+  [OK ] letra: control AZA iguala (P3 cae) -> NO (esperado NO)
+  [OK ] letra: AZA persiste 6/20 (P3 cae) -> NO (esperado NO)
+  [OK ] letra: base F1 persiste 4/20 (V1) -> NO EVALUABLE (esperado NO EVALUABLE)
+  [OK ] letra: 19 semillas (V0) -> NO EVALUABLE (esperado NO EVALUABLE)
+  [OK ] letra: un aborto (V0) -> NO EVALUABLE (esperado NO EVALUABLE)
+  [OK ] letra: donante mal declarado (V2) -> NO EVALUABLE (esperado NO EVALUABLE)
+  [OK ] letra: t_corte distinto (V0) -> NO EVALUABLE (esperado NO EVALUABLE)
+  [OK ] letra: BLOQ_V persiste 16/20 (P2+P3+P4 sin P1) -> MODESTO (esperado MODESTO)
+  [OK ] letra: P1 y P2 caen, P3 pasa -> NO (esperado NO)
+  [OK ] letra: P1 cae y P4 cae con P2+P3 -> MODESTO (esperado MODESTO)
+(R) banderas
+  [OK ] banderas --serie --desde 48411 --n 20 --T 400000 --pool 6 --serie exige --desde en (48411, 48431), --n 20, --T 500000 y --pool
+  [OK ] banderas --serie --desde 48401 --n 20 --T 500000 --pool 6 --serie exige --desde en (48411, 48431), --n 20, --T 500000 y --pool
+  [OK ] banderas --serie --desde 48411 --n 10 --T 500000 --pool 6 --serie exige --desde en (48411, 48431), --n 20, --T 500000 y --pool
+  [OK ] banderas --seri banderas desconocidas: ['--seri']
+  [OK ] banderas --explora --semillas 48411 --brazos BLOQ_V --T 100 semilla 48411 fuera de las declaradas
+RESULTADO 37/37 en 212 s

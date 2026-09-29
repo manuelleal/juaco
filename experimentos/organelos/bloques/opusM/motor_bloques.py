@@ -866,9 +866,15 @@ def _py_reglas_fund(lin, nac):
 def _bq_arranque(st, n):
     """BQ en el estado; memoria de las reglas en -1; telemetria; genoma inicial de los fundadores (vacio por defecto)."""
     C = dict(BQ_CFG); st['BQ'] = np.array([int(C['on'])], np.int64)
+    ES = _CTX['ES']
+    if '_BR' in ES:   # E5: --reanuda. El banco de reglas y la telemetria viajan DENTRO de ES (ES entra entero al blob del checkpoint)
+        _CTX.update(BQC=C, BR=ES['_BR'])
+        BQ_OUT.clear(); BQ_OUT.update(ES['_BQO']); ES['_BQO'] = BQ_OUT
+        return
     _CTX.update(BQC=C, BR=[])
     BQ_OUT.clear(); BQ_OUT.update(cfg={k: v for k, v in C.items()}, serie=[], n_hijos=0, n_fund=0, n_igual_padre=0, n_campo=0,
                                   n_dup=0, n_del=0, n_ins=0, n_hgt=0, n_tope=0, n_hijos_pl=0, n_igual_pl=0)
+    ES['_BR'] = _CTX['BR']; ES['_BQO'] = BQ_OUT   # E5: el MISMO objeto (se muta en su lugar)
     if '_bq_ok' not in st: st['RM'][:, 0] = -1.0   # arranque fresco (en un checkpoint ya viene)
     st['_bq_ok'] = 1
     if C['on'] and (C['inicial'] or C['forzada'] is not None):
