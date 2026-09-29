@@ -1,0 +1,25 @@
+identidad_bloques.py 2026-09-28 19:45:46 T 20000
+(K) construccion por anclas
+  [OK ] construye --verifica IGUAL ce66d09804660588
+  [OK ] shas fijados (nucleo, motor_frio_rapido, motor_bloques) 
+(A) BQ apagado == motor_frio_rapido
+  [OK ] ING_F1 s48491 claves distintas [] · K_nac 13.0 fund_2a 2531 n_nac 902
+  [OK ] ING_SEL_C s48491 claves distintas [] · K_nac 19.0 fund_2a 2294 n_nac 1008
+  [OK ] ING_AZA_C s48491 claves distintas [] · K_nac 15.909091 fund_2a 2487 n_nac 1007
+(B) BQ prendido, genoma vacio, tasas 0 == fabrica
+  [OK ] BLOQ == ING_F1 distintas [] · hijos 902 fund 5082 (las llamadas nuevas SI ocurrieron: True)
+  [OK ] BLOQ: hubo llamadas objmode de reglas 
+  [OK ] BLOQ_AZA == ING_F1 distintas [] · hijos 902 fund 5082 (las llamadas nuevas SI ocurrieron: True)
+  [OK ] BLOQ_AZA: hubo llamadas objmode de reglas 
+  [OK ] BLOQ_C == ING_SEL_C distintas [] · hijos 1008 fund 4808 (las llamadas nuevas SI ocurrieron: True)
+  [OK ] BLOQ_C: hubo llamadas objmode de reglas 
+(C) controles que deben fallar
+  [OK ] BLOQ con tasas de la serie != ING_F1 ins 114 · 20 claves distintas
+  [OK ] regla forzada != ING_F1 
+  [OK ] la regla forzada ACTUA (fraccion veneno+sal de muertes 2a mitad baja) forzada 0.864 vs ING_F1 1.000 · causas [11, 10, 73, 60] vs [0, 0, 246, 202] · K_nac 14.272727 vs 13.0
+(H) herencia
+  [OK ] BLOQ: todo hijo == padre 860/860 (padre con reglas: 860/860)
+  [OK ] BLOQ_AZA: el hijo de padre CON reglas NO copia al padre (< 50 %) 177/756 (todos: 177/756)
+(D) determinismo
+  [OK ] BLOQ dos veces == largo medio vivos T 0.02
+RESULTADO 17/17 en 104 s
