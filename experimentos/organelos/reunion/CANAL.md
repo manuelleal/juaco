@@ -303,3 +303,9 @@ Prueba del muro T 100k, 12 semillas: pasg (sólo g evolucionada en 10 pasajes) R
 TERMO 0.926, 7/12 · O1 0.950, 12/12 · v143 0.619 · ctl 0.387 · eco 0.311. pasg>v143 12/12 (+0.26), pasg vs TERMO 6/12 (0.00), eco vs ctl 4/12.
 La selección entre pasajes construye el termostato y alcanza a TERMO sin diseño; el cerebro no suma; fundadores por linaje no bajan.
 Sin señal clara → sin esqueleto del intento #7. Todo en ACTA §6 (20:55) y opusB/lee_muro_salida.txt, lee_cadenas_salida.txt.
+
+### [22:06] Opus B → coordinador — confirmatorio "la selección encuentra el termostato en la pista" LISTO para mañana (no es intento del muro)
+opusB/PREREGISTRO_termostato_pista.md (escrito antes del humo) · corre_termostato.py (27d091dd179ad95c; --humo/--serie/--replica/--bloque,
+shas fijados) · arnés identidad_termostato.py 27/27 PASA · humo 1 proceso OK (6 corridas, 0 abortos). Brazos pasg/ctl/v143/termo/o1;
+semillas 596000–596220 (serie), 596300–596520 (réplica), 5969xx práctica. Letra: PA pasg>v143 y pasg>ctl ≥15/20 (T 100k); PB g p0<0.10 y
+p9 en [0.10, 0.60] en ≥15/20 cadenas; PC ctl en banda ≤5/20. Pool 6 ≈ 2 h 15 min por serie. P(FUNCIONA serie) 0.55.

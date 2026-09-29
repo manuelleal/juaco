@@ -1,0 +1,94 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": false,
+   "V2_p0_pasg_eq_ctl": true,
+   "V3_ancla_v143": false,
+   "V4_ancla_o1": false,
+   "V5_siembra_actua": true
+  },
+  "puertas": {
+   "PA_pasg_gana_v143": false,
+   "PA_pasg_gana_ctl": false,
+   "PB_g_sube_a_banda": false,
+   "PC_ctl_no_sube": true
+  },
+  "modesto": false,
+  "veredicto": "NO SE LEE",
+  "pareados": {
+   "pasg_vs_v143": {
+    "n": 1,
+    "gana": 0,
+    "dif_med": -0.0625
+   },
+   "pasg_vs_ctl": {
+    "n": 0,
+    "gana": 0,
+    "dif_med": null
+   },
+   "pasg_vs_termo": {
+    "n": 0,
+    "gana": 0,
+    "dif_med": null
+   },
+   "ctl_vs_v143": {
+    "n": 0,
+    "gana": 0,
+    "dif_med": null
+   },
+   "termo_vs_v143": {
+    "n": 0,
+    "gana": 0,
+    "dif_med": null
+   },
+   "o1_vs_v143": {
+    "n": 0,
+    "gana": 0,
+    "dif_med": null
+   }
+  },
+  "descriptivo": {
+   "g_siembra_pasg_ultimo": {
+    "0": -0.016
+   },
+   "g_siembra_pasg_p0": {
+    "0": -0.0152
+   },
+   "g_siembra_ctl_ultimo": {
+    "0": -0.016
+   },
+   "indices_que_suben": 0,
+   "R0_med": {
+    "pasg": 0.0,
+    "ctl": null,
+    "v143": 0.0625,
+    "termo": null,
+    "o1": null
+   },
+   "mayorias": {
+    "pasg": 0,
+    "ctl": 0,
+    "v143": 0,
+    "termo": 0,
+    "o1": 0
+   },
+   "fund_por_linaje": {
+    "pasg": 0.4444,
+    "v143": 16.6667
+   },
+   "pasg_aprox_termo": {
+    "n": 0,
+    "gana": 0,
+    "dif_med": null
+   }
+  }
+ },
+ "abortos": 0,
+ "n": 1,
+ "npas": 2,
+ "T_pas": 5000,
+ "T_pru": 5000,
+ "preregistro": "PREREGISTRO_termostato_pista.md",
+ "sha_runner": "27d091dd179ad95c"
+}
