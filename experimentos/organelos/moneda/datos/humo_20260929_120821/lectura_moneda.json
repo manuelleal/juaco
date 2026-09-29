@@ -1,0 +1,129 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "abortos_0": true,
+   "completas": true,
+   "f_ini_05": true,
+   "cero_solo_inyectadas": true,
+   "cero_banda": true,
+   "refs_sha": true,
+   "arnes": true
+  },
+  "veredicto": "INDETERMINADO",
+  "moneda_bajo_010": 0,
+  "moneda_mas_rapida_que_neutra": "0/1",
+  "moneda_alto_040": 1,
+  "final": {
+   "moneda": {
+    "8": 0.6333
+   },
+   "neutra": {
+    "8": 0.3444
+   },
+   "cero": {
+    "8": 0.5378
+   }
+  },
+  "cero_media": 0.5378
+ },
+ "cadenas": {
+  "moneda": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.5356,
+     0.6333
+    ],
+    "f_neg": [
+     0.5356,
+     0.6333
+    ],
+    "arrastre": [
+     0.751,
+     0.736
+    ],
+    "partos": [
+     112,
+     119
+    ],
+    "vivos_A": [
+     0.6667,
+     0.8
+    ],
+    "solo_inyectadas": false
+   }
+  },
+  "neutra": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.4333,
+     0.3444
+    ],
+    "f_neg": [
+     0.0,
+     0.0
+    ],
+    "arrastre": [
+     0.673,
+     0.718
+    ],
+    "partos": [
+     147,
+     127
+    ],
+    "vivos_A": [
+     0.3333,
+     0.1556
+    ],
+    "solo_inyectadas": false
+   }
+  },
+  "cero": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.5378
+    ],
+    "f_neg": [
+     0.0
+    ],
+    "arrastre": [
+     0.722
+    ],
+    "partos": [
+     125
+    ],
+    "vivos_A": [
+     0.6667
+    ],
+    "solo_inyectadas": true
+   }
+  }
+ },
+ "prueba": {
+  "8": {
+   "seed": 633191,
+   "cruzan": 0,
+   "mayoria": 0,
+   "R0_med": 0.6667,
+   "fund_med": 0.0,
+   "desc": 55,
+   "coherente": true
+  }
+ },
+ "refs": {
+  "forzada3": {},
+  "bq3_pas": {}
+ },
+ "sumas": {
+  "moneda": 0,
+  "forzada3": 0,
+  "bq3_pas": 0
+ },
+ "abortos": [],
+ "predicciones": [],
+ "preregistro": "PREREGISTRO_moneda.md",
+ "sha_runner": "315735f2059452fc"
+}
