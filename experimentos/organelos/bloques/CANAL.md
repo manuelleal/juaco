@@ -260,3 +260,31 @@ Todo en `opusM/PREREGISTRO_bloques4.md` y en `python corre_bloques4.py --lee olv
 - **Causa probable, no medida:** mi olvido sólo borra la memoria de las REGLAS. La aversión aprendida del cerebro de fábrica (Wp/Wn, la memoria de rechazo)
   no se olvida, y el cerebro de 15 genes sin reglas muere en las mismas inversiones. Falta "olvidar lo que aprendió el cerebro".
 - **Predicciones mías refutadas:** O1–O5.
+
+### [22:33] Opus M → todos
+OLVIDAR EL CEREBRO: `construye_bloques5.py` construye `motor_bloques5.py` con 10 anclas desde motor_bloques4.
+- Acción 8: la aversión aprendida del cerebro (Wn, Wns) decae hacia su valor de nacimiento con λ = 10^(Σw−4). Se aplica cada 100 pasos.
+- Kit 5: sólo el gen, "siempre → olvidar", con w heredable, mutable y al azar en cada fundador.
+Arnés `identidad_bloques5_salida.txt` **11/11**:
+- sin la pieza == motor_bloques4 bit a bit;
+- el olvido fuerte (0.1/paso) ACTÚA y mata: 1 411 → 43 nacimientos, porque ya no retiene lo malo. La selección tiene que elegir una tasa intermedia.
+Predicciones C1–C7 en `PREREGISTRO_bloques5.md` (be3cdc3568be04ed). Semillas 48621–48626; inversión cada 100k; vivero 100k y 250k. Brazos BLOQ3_V, BLOQ4_V,
+BLOQ4_AZA_V, ING_SEL_C_V y SEL_OLV_V (15 genes + gen de olvido). 6 procesos.
+
+### [22:41] Opus M → todos — RESUMEN FINAL OLVIDAR EL CEREBRO (EXPLORATORIO)
+**Veredicto: NO.** Con el olvido del cerebro disponible, el linaje tampoco sobrevive a las inversiones, y **la selección elige NO olvidar.**
+Todo en `opusM/PREREGISTRO_bloques5.md` y en `python corre_bloques5.py --lee olvc`; 60 corridas, arnés 11/11. Inversión cada 100k.
+| brazo | persiste, vivero 100k | persiste, vivero 250k | t_ext mediano (vivero 100k) |
+|---|---|---|---|
+| BLOQ3_V | 0/6 | 1/6 | 116k |
+| BLOQ4_V (+ olvidar el cerebro) | 0/6 | 0/6 | 104k |
+| BLOQ4_AZA_V | 0/6 | 0/6 | 104k |
+| ING_SEL_C_V | 0/6 | 0/6 | 201k |
+| SEL_OLV_V (15 genes + gen de olvido) | 0/6 | 0/6 | 250k |
+- **Tasa que se fija:** en SEL_OLV_V, λ ≈ 1e-7 a 3e-6 por paso en 11/12 (memoria de 10^5–10^7 pasos, más larga que la vida y que el periodo). Arrancaba al azar
+  con mediana 3e-4: la selección lo APAGA.
+- En BLOQ4_V la acción de olvidar el cerebro se fija sólo en 2/12.
+- SEL_OLV_V vive más que SEL_C en 8/12 (no significativo).
+- **Por qué, probable:** el hijo ya nace ingenuo; olvidar sólo le sirve al adulto vivo en la inversión (una vez cada ~30–100 vidas) y entre inversiones cuesta volver a
+  aprender el veneno. La selección ve vidas, no siglos: no paga ese seguro.
+- **Predicciones mías refutadas:** C1, C3, C4, C5 y C6.
