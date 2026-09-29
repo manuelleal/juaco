@@ -1157,3 +1157,9 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - ★ Termostato en la pista FUNCIONA ×2 (pasg > v143 20/20 y 18/20, > ctl 19/20 y 20/20; g a banda 20/20 ×2; ≈ TERMO 8/20; no cruza el muro).
 - dinamita se cierra sin informe (VETO/LIMPIA NO; PATAS sin confirmar; ola 4 8/80); ERR-154, ERR-155. Siguiente ERR libre: ERR-156.
 - pista_pob preregistrada (21a63ff5) y explorando con pool 6.
+
+### 29-sep-2026 (cierre)
+- Termostato en la pista FUNCIONA x2 (manana). La tarde, ocho lecturas NO/INDETERMINADO: pista_pob (17 vs 16 de 45), enriquecido (fija evitar), sentidos_muro (regla de riesgo 0 %; a mano cruza 3/5), moneda (la regla regalada deriva como la neutra), patas_muro (pc 101 vs termo 90; 15/20 y luego 14/20: pc ~ termo), baldwin y baldwin_exp (con inversion 0/20; ERR-156), veto_muro (35 vs 92).
+- Leccion: la seleccion afina perillas continuas pero no inventa combinaciones; las piezas de O1 sueltas no funcionan, O1 funciona como conjunto. Junta Fable como hipotesis.
+- Siguiente ERR libre: ERR-157. Nivel: +2 del termostato aceptado; el +1 de pista_pob no.
+- Manana (propuesta): O1 como celula con 3-4 perillas heredables afinadas por seleccion (pregunta: la evolucion lo hace mejor que su disenador?); o pasaje en la moneda del muro; consolidar/publicar. Detalle en registro/ESTADO.md.

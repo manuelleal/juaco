@@ -7209,3 +7209,149 @@ también en la serie 2.
 - **ERR-155 (proceso, 28-sep):** la ola 4 (8/80) se versionó junto al resto sin informe ni lectura. Regla: **nada se versiona como cerrado sin
   lectura**; una corrida incompleta se versiona con nota "incompleto, sin leer" en el mismo commit, o no se versiona.
 - **Siguiente ERR libre: ERR-156.**
+
+
+## pista_pob — la selección con 8 cuerpos por linaje en la pista nueva (29-sep-2026, 10:09–10:27, EXPLORATORIO, 59201–59205): **NO**
+> Pregunta: con una pista NUEVA versionada (K = 8 copias de la pista vieja, migración sólo al fundar; `pista.py` y `juez.py` sin tocar), ¿el
+> depósito de los que PARIERON (pob_sel) mueve el establecimiento con BQ2 a T_evo 50 000 más que el mismo depósito sin selección (pob_neutro)
+> y que la misma BQ2 sin depósito (bloq2)?
+
+- **Preregistro:** `experimentos/organelos/pista_pob/PREREGISTRO_pista_pob.md` (sha `68c78af50617388b`, commit `21a63ff5`, antes del humo y de los datos).
+  Auditor LISTO tras cambios antes de datos (`cfg()` dentro del trabajo; puerta contra `bloq2`, no `bloq_pas`; neutro declarado NO puro).
+- **Instrumento:** `corre_pista_pob.py` `16d2293e09c4a549`; `pista_pob.py` `d4ed07b28e4ba94b`; arnés PASA. Pool 6. Crudos `pista_pob/datos/explora/`; commit `f314135b`.
+
+| linajes que cruzan (de 45) | pob_sel | pob_neutro | v143 | termo | bloq2 | o1 |
+|---|---|---|---|---|---|---|
+| suma | **17** | 16 | 12 | 20 | 21 | 37 |
+| R0 real mediano (descriptivo) | 0.731 | 0.508 | 0.634 | 0.773 | 0.750 | 0.944 |
+
+- **Letra:** FUNCIONA = sel > neutro en ≥ 4/5 **y** sel ≥ bloq2 en ≥ 4/5. Medido 1/5 y 3/5. **NO.** Validez OK (0 abortos, v143 0.634, O1 5/5, arnés).
+- **Predicciones del creador:** refutadas Q1 (sel en [18,28]: 17) y Q4 (3/5); cumplidas Q2, Q5, Q6, Q7 y "NO p 0.70".
+- **Lo que NO dice:** no dice que la población no sirva; dice que 8 cuerpos por linaje con BQ2 y T_evo 50k no separan del neutro. El neutro no es control puro (declarado).
+- **Nivel:** el +1 condicionado a "pista_pob mueve el establecimiento" **no se otorga**. Vocabulario prohibido: "la población selecciona". ERR: ninguno.
+
+## enriquecido (plan 3b) — nueces que sólo abren tras la llave, canal social (29-sep-2026, EXPLORATORIO, 50101–50105): **NO**
+> Idea del director (28-sep, chimpancés en cautiverio): ¿la selección arma la secuencia llave→nuez, y un canal social (copiar al que abrió) la ayuda?
+
+- **Preregistro:** `experimentos/organelos/enriquecido/PREREGISTRO_enriquecido.md` (commit `18ad62fe`, antes de datos; auditor LISTO tras cambios). Runner `233115b6d802ee40`; arnés 46/46. Crudos `enriquecido/datos/explora/`; commit `21341fc5`.
+
+| mediana de 5 | frac_ok | SI (llave|nuez − llave|A) | K | copias |
+|---|---|---|---|---|
+| NUEZ_SOC | 0.197 | −0.147 | 49.4 | 38 |
+| NUEZ_OFF | 0.202 | −0.140 | 50.1 | 0 |
+| NUEZ_DESF | 0.207 | −0.133 | 48.4 | 22 |
+| REF | — | — | 35.9 | 0 |
+
+- **Letra:** validez V0–V3 OK (todos persisten 5/5). P1 SOC > OFF **NO** (1/5); P2 SOC > DESF **NO** (1/5); P3 SI(SOC) ≥ 0.10 **NO** ([−0.227, −0.119]); PS **NO**. **NO; sub-veredicto NO.**
+- **Lectura:** la selección fija `pixF1<θ → boca−` en ~100 % de los vivos: **evita la nuez en vez de abrirla**. El canal social casi no se usa. Contingencia preregistrada (vivero 250k) no corrida.
+- Vocabulario prohibido: "aprende la secuencia", "aprende de otros". ERR: ninguno.
+
+## sentidos_muro — un sentido "riesgo de morder" a una regla (29-sep-2026, EXPLORATORIO, 59201–59205): **NO**
+> ¿Si `V143_BQ3` (BQ2 + sentido 9 "bueno a la vista" y 10 "riesgo de morder") pone la decisión de O1 a UNA regla, la selección por pasajes la fija?
+
+- **Preregistro:** `experimentos/organelos/sentidos_muro/PREREGISTRO_sentidos_muro.md` (commit `ff645237`, antes de datos; auditor LISTO con cambios de texto). Runner `4776b80e18733079`. Crudos `sentidos_muro/datos/explora_20260929_110024/`; commit `d456e288`.
+
+| cruzan (de 45) · mayoría (de 5) | bq3_pas | bq2_pas | bq3 | forzada3 (a mano) | termo | bloq2 | v143 | o1 |
+|---|---|---|---|---|---|---|---|---|
+| suma | **13** | 11 | 15 | **23** | 20 | 21 | 12 | 37 |
+| mayoría | 1 | 0 | 1 | **3** | 2 | 2 | 0 | 5 |
+
+- **Letra:** **NO** (mayoría bq3_pas 1/5; gana a bq2_pas 2/5, a bq3 3/5). Validez OK.
+- **La regla de riesgo no se fija: 0.0 % de la siembra en 5/5 cadenas.** Diagnóstico `forzada3` (regla fija, no decide): cruza 23/45, mayoría 3/5, gana a termo 3/5.
+  **El sentido contiene una política que cruza; la selección por pasajes no la encuentra** (reserva: sentido a medida, +3 en 45, semillas vistas).
+- Predicciones refutadas: S2, S3, S5, S6. Vocabulario prohibido: "el sentido resuelve el muro". ERR: ninguno.
+
+## Junta Fable (29-sep-2026, 3 investigadores Fable, sólo lectura): diagnóstico — **HIPÓTESIS DE TRABAJO, no dato**
+> No es experimento; no hay archivo de la junta en el repo (la citan `moneda/PREREGISTRO_moneda.md` §1 y `veto_muro/PREREGISTRO_veto_muro.md` §1).
+
+| diagnóstico | lo medido después | estado |
+|---|---|---|
+| La selección sólo encuentra lo que está a UNA mutación y paga dentro de la ventana del pasaje; lo que cruza está a ≥ 2 pasos (valle) y paga en otra moneda (investigador 1) | sentidos_muro 0 % en 5/5; moneda: la regla regalada deriva como la neutra | consistente, **no probado** (el pasaje ponderado por hijos a 100k no se corrió) |
+| Evitar es más barato que aprender (investigador 3) | enriquecido "evitar" ~100 %; baldwin: el rechazo impide morder; baldwin_exp: explorar cuesta | consistente ×3 |
+| TERMO ya cerró el establecimiento; falta que el hijo no muera joven (investigador 2) | veto_muro: salva al recién nacido y cruza 35 vs 92 | **refutada como suficiente** |
+
+- Predicciones refutadas con autor: investigador 1 PURGA (p 0.60) en `moneda` → INDETERMINADO; investigador 2 (FUNCIONA 0.25 / MODESTO 0.35) en `veto_muro` → NO claro.
+- Vocabulario prohibido: "la selección no puede cruzar el valle", "está demostrado que evitar es más barato".
+
+## moneda — ¿el pasaje purga o conserva la regla regalada? (29-sep-2026, EXPLORATORIO DIAGNÓSTICO, 59201–59205): **INDETERMINADO**
+> Sembrada al 50 % la regla de `forzada3` en el pasaje 0 de bq3_pas, ¿10 pasajes la purgan (paga en la moneda de la letra, no en la del pasaje) o la conservan?
+> Brazos: moneda (w −3), neutra (misma fila w 0), cero (tasas 0).
+
+- **Preregistro:** `experimentos/organelos/moneda/PREREGISTRO_moneda.md` (commit `b3f7d853`, antes de datos; auditor LISTO con cambios: neutra ≥ 0.10 y moneda ≤ 0.5·neutra para PURGA; régimen mezcla 50/50). Runner `0441aa7bf5b94316`. Crudos `moneda/datos/explora_20260929_121648/`; commit `4f621954`.
+
+| fracción clase A en p9 | mediana | por cadena |
+|---|---|---|
+| moneda | **0.247** | 0.391, 0.067, 0.220, 0.616, 0.247 |
+| neutra | **0.253** | 0.444, 0.229, 0.398, 0.253, 0.120 |
+| cero | media 0.353 | 0.469, 0.320, 0.422, 0.167, 0.389 |
+
+- **Letra:** PURGA no (1/5, 1/5); CONSERVA no (1/5). **INDETERMINADO.** Validez OK.
+- **Lectura:** la regla regalada deriva **igual que la neutra**: para la selección por pasajes es casi invisible. Arrastre sin selección ~0.70 por pasaje. Prueba a 100k de la cadena moneda: 16/45.
+- Refutadas: M2, M3, M4 del creador; **INV1 del investigador 1 (PURGA p 0.60)**. Lo que NO dice: que la regla no valga (a mano cruza). ERR: ninguno.
+
+## patas_muro — TERMO + PATAS contra el muro (29-sep-2026, SERIE 52601–52620, confirmatorio): **NO** (por la letra)
+> ¿Cambiar SÓLO a dónde va el cuerpo (PATAS 3, `pc`: derecho al objeto que la boca de TERMO mordería, cediendo al que otro tiene más cerca) sube los linajes que cruzan?
+
+- **Preregistro:** `experimentos/organelos/patas_muro/PREREGISTRO_patas_muro.md` (commit `2829f7ae`, antes de datos; auditor LISTO con cambios: V6, brazo `pd`, candados, "en el umbral"). Runner `2a5c95aae2b64e43`; arnés 28/28. Crudos `patas_muro/datos/serie_s52601-52620_T100000_20260929_113932/`; commit `43f1a6df`.
+
+| cruzan/180 · mayoría/20 | pc | pu | pd | termo | pi | o1 | v143 |
+|---|---|---|---|---|---|---|---|
+| suma | **101** | 87 | 83 | 90 | 75 | 139 | 49 |
+| mayoría | **15/20** | 10 | 10 | 12 | 5 | 18 | 1 |
+
+- **Letra:** V1–V6 OK. PA **NO** (10/20); PB **NO** (+11); PD OK (16/20, +26); PC OK **en el umbral exacto** (15/20). FUNCIONA = PA∧PB∧PD∧PC: **NO**. No se replicó (regla de parada), y es correcto.
+- **Mundo:** pc come más, muerde más B+D, **no decide mejor** (0/20), pela el mundo (2.47 vs 3.32).
+- **Confirmado aparte en veto_muro (semillas nuevas 53701–53720):** pc 96 vs termo 92, mayoría 14/20 → **pc ≈ termo**; el 15/20 era un borde.
+- Vocabulario prohibido: "PATAS ayuda", "PATAS cruza el muro". ERR: ninguno.
+
+## baldwin — BLOQUES con gen "plástica" en un mundo que se invierte (29-sep-2026, SERIE 56401–56420): **NO**
+> Con inversión A↔B/C↔D cada P = 6k/22k/68k, ¿la selección construye la plasticidad (bit + w0; aprende con la R de la vía lenta; el hijo hereda bit y w0, no lo aprendido) y rescata al linaje?
+
+- **Preregistro:** `experimentos/organelos/baldwin/PREREGISTRO_baldwin.md` (commit `f4e9c7b4`, antes de datos). Runner `76e4c496fa42f4d5`; arnés 34/34. Crudos `baldwin/datos/serie_s56401-56420_T500000_20260929_125351/`; commit `43f1a6df`.
+
+| persisten/20 | P6k | P22k | P68k | sin inversión |
+|---|---|---|---|---|
+| PLAST_V | 0 | 0 | 0 | **16** (frac_pl 0.56) |
+| FIJO_V | 0 | 0 | 0 | **15** |
+
+- **Letra:** PA, PB, PD, PE **NO**. **NO.** Validez V0–V5 OK.
+- **Auditoría posterior: SE SOSTIENE CON RESERVA DE ALCANCE.** |w−w0| mediano 0.0 no es bug: la regla aprende sólo tras morder y una regla de rechazo impide morder; no se entera de la inversión. El NO vale para esta forma de plasticidad, no para toda.
+- Vocabulario prohibido: "la plasticidad no sirve", "Baldwin refutado". ERR: ninguno.
+
+## baldwin_exp — exploración ligada a la reserva (29-sep-2026, SERIE 56601–56620): **NO** — ERR-156
+> Hipótesis NUEVA, no rescate: si el cuerpo prueba a veces lo que rechaza (sólo con reserva ≥ 0.5, ε 0.063 calibrado con regla previa), la regla plástica recibe consecuencias y rescata al linaje.
+
+- **Preregistro:** `experimentos/organelos/baldwin_exp/PREREGISTRO_baldwin_exp.md` (commit `22c10b41`, antes de datos). Runner `fdc5e729057e7bd8`; arnés 52/52. Crudos `baldwin_exp/datos/serie_s56601-56620_T500000_20260929_145954/`; commit `49019a46`.
+
+| persisten/20 | resultado | explorar/vida |
+|---|---|---|
+| PLAST_EXP_P22k | **0** | 0.035 |
+| FIJO_EXP_P22k | 0 | 0.024 |
+| PLAST_EXP_AZA_P22k | 0 | 0.023 |
+| PLAST_V_P22k | 0 | 0 |
+| PLAST_EXP_Pinf | **10** (K 5.2) | 1.99 |
+| FIJO_V_Pinf (ancla) | **17** (K 35.5) | — |
+
+- **Letra:** PA, PB, PD, PM **NO**. **NO.** Validez OK; nada a ±1 del umbral, sin réplica.
+- **Lectura:** con inversión todo 0/20; la exploración casi no actúa (el órgano de rechazo no llega a fijarse). En mundo fijo explorar cuesta (10/20 vs 17/20).
+- **ERR-156 (proceso, 29-sep, antes de la serie; sin efecto en el veredicto):** tras el humo, y con el 15/20 de BALDWIN a la vista, la auditoría cambió la letra (sec. 14 del preregistro):
+  H-1 V5 era vacua (la pasaba PLAST_V sin exploración) → ahora exige `n_mord_exp_aprende > 0` en ≥ 18/20; H-2 ancla FIJO_V_Pinf de ≥ 15/20 a ≥ 13/20 (binomial); H-3 réplica si una puerta queda a ±1 del umbral; H-4 PM sin piso declarado.
+  Efecto contrafáctico: con la letra vieja el veredicto es el mismo (NO). **Regla:** los umbrales de ancla se fijan por binomial ANTES de mirar corridas de la familia; todo cambio de criterio posterior al humo o a una serie hermana lleva número de ERR y su efecto contrafáctico. **Siguiente libre: ERR-157.**
+
+## veto_muro — TERMO + PATAS + VETO_PISO contra el muro (29-sep-2026, SERIE 53701–53720, confirmatorio): **NO claro**
+> ¿Quitar a la boca SÓLO las mordidas de lo sentido malo que el cuerpo no puede pagar (piso de O1) salva al hijo joven y sube los linajes que cruzan?
+
+- **Preregistro:** `experimentos/organelos/veto_muro/PREREGISTRO_veto_muro.md` (commit `b13bdfec`, antes de datos; sec. 8 intacta tras el humo). Runner `cd4da2517f888131`. Crudos `veto_muro/datos/serie_s53701-53720_T100000_20260929_135116/`; commit `60d2c07b`.
+
+| cruzan/180 · mayoría/20 | tpv | tv | vinv | pc | termo | o1 | v143 |
+|---|---|---|---|---|---|---|---|
+| suma | **35** | 30 | 64 | 96 | 92 | 136 | 61 |
+| mayoría | **0/20** | 0 | 2 | 14 | 12 | 19 | 2 |
+| hijo muerto ≤ 200 pasos | **0.4 %** | 0.2 % | 7.9 % | 20.1 % | 13.3 % | 0.7 % | 12.8 % |
+| A+C del mundo | **1.76** | 2.50 | 2.00 | 2.49 | 3.24 | 2.09 | 3.26 |
+
+- **Letra:** PA, PB, PD, PC **NO**. **NO claro.** Validez V1–V6 OK.
+- **Lo que hizo el veto:** salva al recién nacido (20/20) pero el hijo muere de hambre a los 600 (18/20), muerde 4× más B+D, tapa el mundo y los fundadores suben 1.5 → 31.5 (como `vu` de dinamita).
+- Vocabulario prohibido: "el veto ayuda", "salvar al hijo cierra el muro". ERR: ninguno.
+
+- **Lectura de conjunto del 29-sep (no preregistrada):** las piezas de O1 sueltas (veto, patas, ambas) no cruzan: tv 30, pc 96–101 ≈ termo 90–92, tpv 35. **O1 funciona como conjunto** (136–139/180). La selección por pasajes tampoco encuentra la regla hecha a mano. **La selección afina perillas continuas (termostato ×2) pero no inventa combinaciones.**
