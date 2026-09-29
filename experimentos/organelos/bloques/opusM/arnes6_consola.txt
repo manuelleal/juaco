@@ -1,0 +1,16 @@
+identidad_bloques6.py 2026-09-28 22:44:10
+  [OK ] (K) construye_bloques6 --verifica IGUAL 1c46de780d65ff3c
+  [OK ] (K) shas fijados 
+(A) inv 0 / inv 1 == motor_bloques5 bit a bit
+  [OK ] SEL_OLV_V_0 s48685 T30000 distintas [] · hijos 1441 · n_inv None
+  [OK ] BLOQ4_V5a s48686 T30000 distintas [] · hijos 1379 · n_inv None
+  [OK ] BLOQ2_V_I s48685 T50000 distintas [] · hijos 2156 · n_inv 2
+  [OK ] ING_F1_V s48686 T30000 distintas [] · hijos 0 · n_inv None
+(B) inv 2 (nucleo) con periodo 20 000 == inv 1 (Python) con periodo 20 000
+  [OK ] BLOQ2_V_I s48687 T60000 distintas [] · n_inv python 2
+  [OK ] ING_SEL_C_V5a s48687 T60000 distintas [] · n_inv python 2
+(C) periodo 500 != sin inversion
+  [OK ] periodo 500 cambia la corrida n_nac 65 vs 918
+(D) determinismo
+  [OK ] BLOQ4_V_p500 dos veces == 
+RESULTADO 10/10 en 196 s

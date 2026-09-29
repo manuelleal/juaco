@@ -1,0 +1,74 @@
+{
+ "fuente": {
+  "serie": {
+   "archivo": "experimentos/tronco_v14_3_examen/datos/examen_v143_serie_20260924_124413_crudo_TA.json",
+   "sha": "764f1768bb82c752"
+  },
+  "replica": {
+   "archivo": "experimentos/tronco_v14_3_examen/datos/examen_v143_replica_20260924_131427_crudo_TA.json",
+   "sha": "150ab1af9d529204"
+  }
+ },
+ "z": 1.645,
+ "n": 80,
+ "B": 20000,
+ "semilla_boot": 20260928,
+ "brazos": {
+  "CUELLO_MIN": {
+   "n_semillas": 160,
+   "r_OFF": {
+    "mediana": -7.5,
+    "p10": -25.1,
+    "p90": 9.099999999999994
+   },
+   "sd_d_TRONCO_B": 18.792,
+   "sd_d_PLACEBO": 19.75,
+   "media_d_TRONCO_B": 0.887,
+   "media_d_PLACEBO": -0.994,
+   "P_G1_nulo": 0.1071,
+   "P_G2_nulo": 0.9816,
+   "P_TG_nulo": 0.0988,
+   "potencia_G1": {
+    "0": 0.1071,
+    "2": 0.392,
+    "4": 0.7599,
+    "5": 0.8828,
+    "6": 0.9516,
+    "8": 0.9959,
+    "10": 0.9998,
+    "15": 1.0,
+    "20": 1.0
+   },
+   "margen_80": 5,
+   "potencia_TG_en_margen": 0.8645
+  },
+  "VIVO": {
+   "n_semillas": 160,
+   "r_OFF": {
+    "mediana": -72.0,
+    "p10": -90.0,
+    "p90": -59.0
+   },
+   "sd_d_TRONCO_B": 16.511,
+   "sd_d_PLACEBO": 17.135,
+   "media_d_TRONCO_B": 0.6,
+   "media_d_PLACEBO": 0.569,
+   "P_G1_nulo": 0.1033,
+   "P_G2_nulo": 0.9132,
+   "P_TG_nulo": 0.0748,
+   "potencia_G1": {
+    "0": 0.1033,
+    "2": 0.4099,
+    "4": 0.7976,
+    "5": 0.9139,
+    "6": 0.9708,
+    "8": 0.9984,
+    "10": 1.0,
+    "15": 1.0,
+    "20": 1.0
+   },
+   "margen_80": 5,
+   "potencia_TG_en_margen": 0.8274
+  }
+ }
+}

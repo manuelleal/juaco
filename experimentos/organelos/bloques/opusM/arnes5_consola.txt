@@ -1,0 +1,17 @@
+identidad_bloques5.py 2026-09-28 22:29:23
+  [OK ] (K) construye_bloques5 --verifica IGUAL a727e6aea0fca8da
+  [OK ] (K) shas fijados 
+(A) sin la pieza == motor_bloques4 bit a bit
+  [OK ] BLOQ3_Va s48681 T50000 distintas [] · hijos 2303 ins 289
+  [OK ] BLOQ2_V_I s48682 T50000 distintas [] · hijos 2111 ins 278
+  [OK ] BLOQ_V s48681 T30000 distintas [] · hijos 1341 ins 172
+(B) kit 4 vacio, tasas 0 == ING_F1_V
+  [OK ] BLOQ4_V vacio == ING_F1_V distintas []
+(C) la pieza actua
+  [OK ] olvido del cerebro fuerte (0.1/paso) != sin olvido n_nac 43 vs 1411 · K_nac 0.6875 vs 13.0625
+  [OK ] olvido despreciable (1e-7/paso) corre y no aborta n_nac 1355 vs 1411
+  [OK ] kit 5: el gen conserva su forma (siempre -> olvidar el cerebro) y solo muta w 101 valores de w distintos en el banco
+(D) determinismo
+  [OK ] BLOQ4_V5a dos veces == 
+  [OK ] SEL_OLV_V5a dos veces == 
+RESULTADO 11/11 en 238 s

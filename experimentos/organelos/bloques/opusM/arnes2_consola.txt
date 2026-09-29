@@ -1,0 +1,27 @@
+identidad_bloques2.py 2026-09-28 20:47:21 T 30000
+(K) construccion y shas
+  [OK ] construye_bloques2 --verifica IGUAL e365506be24bb490
+  [OK ] shas fijados 
+(A) kit 1 en motor_bloques2 == motor_bloques (bit a bit, con reglas)
+  [OK ] BLOQ_V distintas [] · reglas/banco/contadores == · hijos 1445 ins 161 · K_nac 11.3125
+  [OK ] BLOQ distintas [] · reglas/banco/contadores == · hijos 1136 ins 133 · K_nac 23.1875
+  [OK ] BLOQ_V forzada (boca, quieto, parir) distintas [] · reglas/banco/contadores == · hijos 631 ins 78 · K_nac 16.5625
+  [OK ] ING_F1_V (apagado) distintas [] · reglas/banco/contadores == · hijos 0 ins 0 · K_nac 11.375
+(B) kit 2, genoma vacio, tasas 0 == fabrica
+  [OK ] BLOQ2_V vacio == ING_F1_V distintas [] · hijos 1372 fund 7748
+(C) controles y piezas nuevas
+  [OK ] kit 2 con tasas != kit 1 con tasas ins kit2 159
+  [OK ] seguir al vecino siempre 23 claves distintas
+  [OK ] ventana +3 siempre (parir antes) 21 claves distintas · n_nac 1968 vs 1372
+  [OK ] no muerdas lo que recuerdas malo (memF < 0.5 -> boca -3) 23 claves distintas · veneno+sal 0.958 vs 1.000
+  [OK ] resE > 0.6 -> quieto +2 22 claves distintas
+  [OK ] resA < 0.5 -> hacia +2 21 claves distintas
+  [OK ] vecino mordio > 0.5 -> boca +2 21 claves distintas
+  [OK ] tParto < 0.3 -> ventana -3 21 claves distintas
+(H) herencia kit 2
+  [OK ] todo hijo == padre 1351/1351 (padre con reglas 1351/1351)
+(Q) corte + reanuda, kit 2
+  [OK ] corte en 30 000 + reanuda == entera cortado True · distintas [] · reglas ==
+(D) determinismo kit 2
+  [OK ] dos veces == largo medio vivos T 0.05
+RESULTADO 18/18 en 231 s

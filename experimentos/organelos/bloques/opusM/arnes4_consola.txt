@@ -1,0 +1,16 @@
+identidad_bloques4.py 2026-09-28 22:11:58
+  [OK ] (K) construye_bloques4 --verifica IGUAL ad5bd2eb59f6279d
+  [OK ] (K) shas fijados 
+(A) olvido y reprueba apagados == motor_bloques3 bit a bit
+  [OK ] BLOQ2_V_I s48691 T50000 distintas [] · hijos 2249 ins 266 · n_inv 2
+  [OK ] BLOQ_V_I s48692 T50000 distintas [] · hijos 2180 ins 244 · n_inv 2
+  [OK ] BLOQ2_V s48691 T30000 distintas [] · hijos 1374 ins 161 · n_inv None
+(B) kit 3 vacio, tasas 0 == ING_F1_V
+  [OK ] BLOQ3_V vacio == ING_F1_V distintas [] · hijos 1359
+(C) las piezas nuevas actuan
+  [OK ] olvido (lambda 0.1/paso) cambia la corrida de "no muerdas lo recordado malo" n_nac 1341 vs 1483
+  [OK ] reprobar (p = 1) cambia la corrida n_nac 801 vs 1483
+  [OK ] kit 3 con tasas != kit 2 con tasas ins 174
+(D) determinismo
+  [OK ] BLOQ3_Va dos veces == 
+RESULTADO 10/10 en 205 s
