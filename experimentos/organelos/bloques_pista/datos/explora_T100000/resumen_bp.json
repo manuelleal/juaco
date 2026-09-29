@@ -1,0 +1,689 @@
+{
+ "brazos": {
+  "termo": {
+   "brazo": "termo",
+   "n": 5,
+   "R0_real_med_sem": 0.7727,
+   "R0_real_por_sem": [
+    0.96,
+    0.755,
+    0.921,
+    0.649,
+    0.773
+   ],
+   "mayoria_cruza": "2/5",
+   "linajes_cruzan": "20/45",
+   "fund_media": 125.4,
+   "fund_mediana": 5.0,
+   "establecidos": "33/45",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "sed": 24,
+    "veneno": 2770,
+    "sal": 2859,
+    "hambre": 29
+   },
+   "fund_frac_veneno_sal": 0.991,
+   "fund_vida_med": 43.0,
+   "fund_hijos_por_cuerpo": 0.052,
+   "hijos_cola": {
+    "n": 1258,
+    "vida_med": 1389.5,
+    "hijos_por_cuerpo": 1.782,
+    "frac_sin_hijos": 0.489,
+    "causas": {
+     "sal": 373,
+     "veneno": 219,
+     "hambre": 354,
+     "sed": 312
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0292,
+   "mord_BD_med": 60.0,
+   "mord_AC_med": 619.0
+  },
+  "bloq": {
+   "brazo": "bloq",
+   "n": 5,
+   "R0_real_med_sem": 0.8158,
+   "R0_real_por_sem": [
+    0.816,
+    0.818,
+    0.49,
+    0.943,
+    0.615
+   ],
+   "mayoria_cruza": "1/5",
+   "linajes_cruzan": "20/45",
+   "fund_media": 127.8,
+   "fund_mediana": 6.0,
+   "establecidos": "31/45",
+   "fund_mediana_establecidos": 1.0,
+   "fund_causas": {
+    "veneno": 2971,
+    "sal": 2719,
+    "sed": 26,
+    "hambre": 71
+   },
+   "fund_frac_veneno_sal": 0.983,
+   "fund_vida_med": 83.0,
+   "fund_hijos_por_cuerpo": 0.05,
+   "hijos_cola": {
+    "n": 1103,
+    "vida_med": 1400.0,
+    "hijos_por_cuerpo": 2.015,
+    "frac_sin_hijos": 0.493,
+    "causas": {
+     "veneno": 206,
+     "hambre": 308,
+     "sal": 327,
+     "sed": 262
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0308,
+   "mord_BD_med": 72.0,
+   "mord_AC_med": 610.0,
+   "AC_en_anillo_med": 3.0,
+   "banco": {
+    "linajes_con_banco": 45,
+    "con_rechazo": 0,
+    "con_prueba_v2": 0,
+    "con_sentido6": 10,
+    "largo_med": 2.0,
+    "top": [
+     [
+      "sentido 4 j 4 < accion 1 signo +1",
+      39
+     ],
+     [
+      "sentido 5 j 2 > accion 1 signo +1",
+      30
+     ],
+     [
+      "sentido 6 j 3 > accion 1 signo +1",
+      29
+     ],
+     [
+      "sentido 4 j 0 < accion 1 signo +1",
+      20
+     ],
+     [
+      "sentido 5 j 3 > accion 2 signo -1",
+      20
+     ],
+     [
+      "sentido 1 j 0 < accion 2 signo +1",
+      16
+     ]
+    ]
+   },
+   "vivos_final_con_rechazo": "0/45",
+   "fund_de_banco": "5301/5795"
+  },
+  "bloqaza": {
+   "brazo": "bloqaza",
+   "n": 5,
+   "R0_real_med_sem": 0.6552,
+   "R0_real_por_sem": [
+    0.621,
+    0.635,
+    0.826,
+    0.886,
+    0.655
+   ],
+   "mayoria_cruza": "0/5",
+   "linajes_cruzan": "17/45",
+   "fund_media": 147.2,
+   "fund_mediana": 3.0,
+   "establecidos": "27/45",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "sal": 3132,
+    "hambre": 311,
+    "veneno": 3153,
+    "sed": 61
+   },
+   "fund_frac_veneno_sal": 0.944,
+   "fund_vida_med": 148.0,
+   "fund_hijos_por_cuerpo": 0.052,
+   "hijos_cola": {
+    "n": 825,
+    "vida_med": 1401.0,
+    "hijos_por_cuerpo": 2.338,
+    "frac_sin_hijos": 0.512,
+    "causas": {
+     "sal": 215,
+     "sed": 199,
+     "veneno": 146,
+     "hambre": 265
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0211,
+   "mord_BD_med": 52.0,
+   "mord_AC_med": 650.0,
+   "AC_en_anillo_med": 3.0,
+   "banco": {
+    "linajes_con_banco": 45,
+    "con_rechazo": 1,
+    "con_prueba_v2": 0,
+    "con_sentido6": 24,
+    "largo_med": 2.1,
+    "top": [
+     [
+      "sentido 0 j 5 < accion 0 signo +1",
+      19
+     ],
+     [
+      "sentido 0 j 4 < accion 1 signo -1",
+      17
+     ],
+     [
+      "sentido 1 j 4 < accion 1 signo -1",
+      17
+     ],
+     [
+      "sentido 0 j 5 > accion 0 signo -1",
+      16
+     ],
+     [
+      "sentido 3 j 5 > accion 0 signo -1",
+      16
+     ],
+     [
+      "sentido 2 j 4 < accion 0 signo -1",
+      14
+     ]
+    ]
+   },
+   "vivos_final_con_rechazo": "0/45",
+   "fund_de_banco": "6624/6669"
+  },
+  "o1": {
+   "brazo": "o1",
+   "n": 5,
+   "R0_real_med_sem": 0.9444,
+   "R0_real_por_sem": [
+    0.957,
+    0.944,
+    0.944,
+    0.958,
+    0.933
+   ],
+   "mayoria_cruza": "5/5",
+   "linajes_cruzan": "37/45",
+   "fund_media": 26.5,
+   "fund_mediana": 0.0,
+   "establecidos": "40/45",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "hambre": 12,
+    "sed": 21,
+    "veneno": 584,
+    "sal": 619
+   },
+   "fund_frac_veneno_sal": 0.973,
+   "fund_vida_med": 200.0,
+   "fund_hijos_por_cuerpo": 0.185,
+   "hijos_cola": {
+    "n": 761,
+    "vida_med": 3170.0,
+    "hijos_por_cuerpo": 2.221,
+    "frac_sin_hijos": 0.327,
+    "causas": {
+     "sal": 115,
+     "sed": 257,
+     "hambre": 264,
+     "veneno": 125
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0445,
+   "mord_BD_med": 364.0,
+   "mord_AC_med": 675.0
+  },
+  "bloq_pas": {
+   "brazo": "bloq_pas",
+   "n": 5,
+   "R0_real_med_sem": 0.7576,
+   "R0_real_por_sem": [
+    0.929,
+    0.661,
+    0.964,
+    0.279,
+    0.758
+   ],
+   "mayoria_cruza": "2/5",
+   "linajes_cruzan": "19/45",
+   "fund_media": 121.0,
+   "fund_mediana": 7.0,
+   "establecidos": "29/45",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "sal": 2729,
+    "veneno": 2679,
+    "hambre": 41,
+    "sed": 33
+   },
+   "fund_frac_veneno_sal": 0.987,
+   "fund_vida_med": 49.0,
+   "fund_hijos_por_cuerpo": 0.069,
+   "hijos_cola": {
+    "n": 1313,
+    "vida_med": 1122.0,
+    "hijos_por_cuerpo": 1.657,
+    "frac_sin_hijos": 0.535,
+    "causas": {
+     "veneno": 266,
+     "sal": 421,
+     "sed": 263,
+     "hambre": 363
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0391,
+   "mord_BD_med": 84.0,
+   "mord_AC_med": 613.0,
+   "AC_en_anillo_med": 3.0,
+   "banco": {
+    "linajes_con_banco": 45,
+    "con_rechazo": 0,
+    "con_prueba_v2": 0,
+    "con_sentido6": 9,
+    "largo_med": 1.8,
+    "top": [
+     [
+      "sentido 5 j 3 > accion 1 signo +1",
+      62
+     ],
+     [
+      "sentido 3 j 5 > accion 0 signo -1",
+      38
+     ],
+     [
+      "sentido 1 j 2 < accion 0 signo -1",
+      33
+     ],
+     [
+      "sentido 0 j 0 < accion 1 signo +1",
+      31
+     ],
+     [
+      "sentido 1 j 0 < accion 2 signo +1",
+      29
+     ],
+     [
+      "sentido 1 j 3 > accion 1 signo +1",
+      28
+     ]
+    ]
+   },
+   "vivos_final_con_rechazo": "0/45",
+   "fund_de_banco": "5488/5488"
+  },
+  "bloqaza_pas": {
+   "brazo": "bloqaza_pas",
+   "n": 5,
+   "R0_real_med_sem": 0.7209,
+   "R0_real_por_sem": [
+    0.909,
+    0.927,
+    0.38,
+    0.721,
+    0.523
+   ],
+   "mayoria_cruza": "2/5",
+   "linajes_cruzan": "20/45",
+   "fund_media": 122.1,
+   "fund_mediana": 11.0,
+   "establecidos": "28/45",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "sal": 2569,
+    "sed": 52,
+    "veneno": 2688,
+    "hambre": 221
+   },
+   "fund_frac_veneno_sal": 0.951,
+   "fund_vida_med": 98.0,
+   "fund_hijos_por_cuerpo": 0.066,
+   "hijos_cola": {
+    "n": 1183,
+    "vida_med": 987.0,
+    "hijos_por_cuerpo": 1.533,
+    "frac_sin_hijos": 0.6,
+    "causas": {
+     "veneno": 175,
+     "sed": 288,
+     "sal": 295,
+     "hambre": 425
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0264,
+   "mord_BD_med": 80.0,
+   "mord_AC_med": 591.0,
+   "AC_en_anillo_med": 3.0,
+   "banco": {
+    "linajes_con_banco": 45,
+    "con_rechazo": 1,
+    "con_prueba_v2": 0,
+    "con_sentido6": 34,
+    "largo_med": 2.3,
+    "top": [
+     [
+      "sentido 5 j 3 < accion 0 signo -1",
+      21
+     ],
+     [
+      "sentido 1 j 4 > accion 2 signo -1",
+      17
+     ],
+     [
+      "sentido 1 j 1 < accion 1 signo +1",
+      14
+     ],
+     [
+      "sentido 2 j 3 > accion 0 signo +1",
+      14
+     ],
+     [
+      "sentido 0 j 4 > accion 2 signo +1",
+      13
+     ],
+     [
+      "sentido 2 j 3 > accion 1 signo -1",
+      12
+     ]
+    ]
+   },
+   "vivos_final_con_rechazo": "0/45",
+   "fund_de_banco": "5540/5540"
+  },
+  "prueba_forzada": {
+   "brazo": "prueba_forzada",
+   "n": 3,
+   "R0_real_med_sem": 0.9565,
+   "R0_real_por_sem": [
+    0.957,
+    0.96,
+    0.913
+   ],
+   "mayoria_cruza": "3/3",
+   "linajes_cruzan": "15/27",
+   "fund_media": 155.1,
+   "fund_mediana": 1.0,
+   "establecidos": "24/27",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "sed": 17,
+    "sal": 2081,
+    "veneno": 2093,
+    "hambre": 22
+   },
+   "fund_frac_veneno_sal": 0.991,
+   "fund_vida_med": 46.0,
+   "fund_hijos_por_cuerpo": 0.039,
+   "hijos_cola": {
+    "n": 624,
+    "vida_med": 2165.5,
+    "hijos_por_cuerpo": 2.144,
+    "frac_sin_hijos": 0.397,
+    "causas": {
+     "veneno": 112,
+     "sal": 127,
+     "sed": 186,
+     "hambre": 199
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0078,
+   "mord_BD_med": 76.0,
+   "mord_AC_med": 665.0,
+   "AC_en_anillo_med": 4.0,
+   "banco": {
+    "linajes_con_banco": 0,
+    "con_rechazo": 0,
+    "con_prueba_v2": 0,
+    "con_sentido6": 0,
+    "largo_med": null,
+    "top": []
+   },
+   "vivos_final_con_rechazo": "0/27",
+   "fund_de_banco": "0/4216"
+  },
+  "bloq2": {
+   "brazo": "bloq2",
+   "n": 5,
+   "R0_real_med_sem": 0.75,
+   "R0_real_por_sem": [
+    0.487,
+    0.444,
+    0.75,
+    0.95,
+    0.931
+   ],
+   "mayoria_cruza": "2/5",
+   "linajes_cruzan": "21/45",
+   "fund_media": 128.1,
+   "fund_mediana": 1.0,
+   "establecidos": "30/45",
+   "fund_mediana_establecidos": 1.0,
+   "fund_causas": {
+    "sal": 2767,
+    "veneno": 2915,
+    "hambre": 83,
+    "sed": 36
+   },
+   "fund_frac_veneno_sal": 0.979,
+   "fund_vida_med": 84.0,
+   "fund_hijos_por_cuerpo": 0.056,
+   "hijos_cola": {
+    "n": 1099,
+    "vida_med": 1237.0,
+    "hijos_por_cuerpo": 1.85,
+    "frac_sin_hijos": 0.522,
+    "causas": {
+     "sal": 298,
+     "hambre": 337,
+     "sed": 281,
+     "veneno": 183
+    }
+   },
+   "frac_sin_bueno_mundo": 0.0265,
+   "mord_BD_med": 80.0,
+   "mord_AC_med": 609.0,
+   "AC_en_anillo_med": 3.0,
+   "banco": {
+    "linajes_con_banco": 45,
+    "con_rechazo": 0,
+    "con_prueba_v2": 0,
+    "con_sentido6": 12,
+    "largo_med": 2.0,
+    "top": [
+     [
+      "sentido 6 j 2 > accion 1 signo +1",
+      20
+     ],
+     [
+      "sentido 5 j 4 > accion 2 signo +1",
+      20
+     ],
+     [
+      "sentido 0 j 5 < accion 0 signo -1",
+      17
+     ],
+     [
+      "sentido 5 j 2 < accion 2 signo -1",
+      15
+     ],
+     [
+      "sentido 7 j 2 < accion 0 signo +1",
+      14
+     ],
+     [
+      "sentido 8 j 4 > accion 0 signo +1",
+      13
+     ]
+    ]
+   },
+   "vivos_final_con_rechazo": "0/45",
+   "fund_de_banco": "5381/5809"
+  },
+  "bloq2aza": {
+   "brazo": "bloq2aza",
+   "n": 5,
+   "R0_real_med_sem": 0.7308,
+   "R0_real_por_sem": [
+    0.731,
+    0.629,
+    0.867,
+    0.92,
+    0.303
+   ],
+   "mayoria_cruza": "1/5",
+   "linajes_cruzan": "16/45",
+   "fund_media": 134.9,
+   "fund_mediana": 6.0,
+   "establecidos": "25/45",
+   "fund_mediana_establecidos": 0.0,
+   "fund_causas": {
+    "sal": 2723,
+    "veneno": 2904,
+    "sed": 52,
+    "hambre": 421
+   },
+   "fund_frac_veneno_sal": 0.922,
+   "fund_vida_med": 134.0,
+   "fund_hijos_por_cuerpo": 0.04,
+   "hijos_cola": {
+    "n": 905,
+    "vida_med": 1444.0,
+    "hijos_por_cuerpo": 2.251,
+    "frac_sin_hijos": 0.482,
+    "causas": {
+     "sal": 208,
+     "hambre": 311,
+     "veneno": 152,
+     "sed": 234
+    }
+   },
+   "frac_sin_bueno_mundo": 0.022,
+   "mord_BD_med": 64.0,
+   "mord_AC_med": 631.0,
+   "AC_en_anillo_med": 4.0,
+   "banco": {
+    "linajes_con_banco": 45,
+    "con_rechazo": 1,
+    "con_prueba_v2": 6,
+    "con_sentido6": 22,
+    "largo_med": 2.1,
+    "top": [
+     [
+      "sentido 4 j 5 > accion 0 signo -1",
+      22
+     ],
+     [
+      "sentido 2 j 3 > accion 2 signo -1",
+      18
+     ],
+     [
+      "sentido 0 j 1 < accion 1 signo +1",
+      16
+     ],
+     [
+      "sentido 0 j 5 > accion 0 signo -1",
+      13
+     ],
+     [
+      "sentido 8 j 4 < accion 1 signo -1",
+      12
+     ],
+     [
+      "sentido 4 j 0 > accion 0 signo -1",
+      12
+     ]
+    ]
+   },
+   "vivos_final_con_rechazo": "0/45",
+   "fund_de_banco": "6069/6114"
+  }
+ },
+ "pareados": {
+  "bloq_vs_termo": {
+   "semillas": 5,
+   "gana": 2,
+   "dif_med": -0.1442
+  },
+  "bloq_vs_bloqaza": {
+   "semillas": 5,
+   "gana": 3,
+   "dif_med": 0.0572
+  },
+  "bloqaza_vs_termo": {
+   "semillas": 5,
+   "gana": 1,
+   "dif_med": -0.1175
+  },
+  "o1_vs_termo": {
+   "semillas": 5,
+   "gana": 4,
+   "dif_med": 0.1606
+  },
+  "bloq_vs_o1": {
+   "semillas": 5,
+   "gana": 0,
+   "dif_med": -0.1407
+  },
+  "bloq_pas_vs_termo": {
+   "semillas": 5,
+   "gana": 1,
+   "dif_med": -0.0314
+  },
+  "bloq_pas_vs_bloq": {
+   "semillas": 5,
+   "gana": 3,
+   "dif_med": 0.1128
+  },
+  "bloq_pas_vs_bloqaza_pas": {
+   "semillas": 5,
+   "gana": 3,
+   "dif_med": 0.0195
+  },
+  "bloqaza_pas_vs_termo": {
+   "semillas": 5,
+   "gana": 2,
+   "dif_med": -0.0509
+  },
+  "bloq_pas_vs_o1": {
+   "semillas": 5,
+   "gana": 1,
+   "dif_med": -0.1757
+  },
+  "prueba_forzada_vs_termo": {
+   "semillas": 3,
+   "gana": 1,
+   "dif_med": -0.0035
+  },
+  "prueba_forzada_vs_o1": {
+   "semillas": 3,
+   "gana": 1,
+   "dif_med": 0.0
+  },
+  "bloq2_vs_termo": {
+   "semillas": 5,
+   "gana": 2,
+   "dif_med": -0.1711
+  },
+  "bloq2_vs_bloq2aza": {
+   "semillas": 5,
+   "gana": 2,
+   "dif_med": -0.1167
+  },
+  "bloq2_vs_bloq": {
+   "semillas": 5,
+   "gana": 3,
+   "dif_med": 0.0071
+  },
+  "bloq2aza_vs_termo": {
+   "semillas": 5,
+   "gana": 1,
+   "dif_med": -0.1257
+  }
+ }
+}

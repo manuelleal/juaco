@@ -1,0 +1,44 @@
+ARNES bloques_pista · 2026-09-28 21:22:21 · CFG del carro {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50}
+(K) construye_bp --verifica, shas y revisa_carro
+  carro V143_BQ sha 31cfda6b3efca02f == construye: True · revisa_carro: PASA
+  carro V143_BQAZA sha a9182feec29f1a83 == construye: True · revisa_carro: PASA
+  carro V143_BQ0 sha 787bbbaac5ea4619 == construye: True · revisa_carro: PASA
+  carro V143_BQ2 sha 183fb81cf6ad520c == construye: True · revisa_carro: PASA
+  carro V143_BQ2AZA sha aa88b32e4b4de152 == construye: True · revisa_carro: PASA
+  origen V143_TERMO 3db639cab75641fb fijado 3db639cab75641fb: OK
+  corre_termo.py sha 66f1f2539f1030ef (importado sin tocar) · corre_bp.py 0db229ee45cbd6a0
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos\organelos\termo\construye_termo.py 23f57933c51c64e8 OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\organelos\termo\carros\V143_TERMOINV.py da106a995b18bafd OK
+  carro V143_TERMO sha 3db639cab75641fb == construye: True · revisa_carro: PASA
+  carro V143_TERMOINV sha da106a995b18bafd == construye: True · revisa_carro: PASA
+  IDENTIDAD CORTA: V143_TERMO con TERMO = 0 == V143 (salida ENTERA, N 9, s 39913, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: V143_TERMOINV con TERMO = 0 == V143 (salida ENTERA, N 9, s 39913, T 2000, fundador limpio): OK
+(A) BLOQ = 0 == V143_TERMO (salida ENTERA de pista.run, N 9, s 59292, T 2000, fundador limpio)
+  V143_BQ0: OK
+(B) BLOQ = 1, genoma vacio (INICIAL 0) y tasas 0 == V143_TERMO (salida ENTERA)
+  V143_BQ: OK
+  V143_BQAZA: OK
+  V143_BQ2: OK
+  V143_BQ2AZA: OK
+(C) controles que DEBEN diferir: tasas de exploracion; organo de rechazo forzado (y ACTUA: menos mordidas B+D)
+  V143_BQ con tasas de exploracion != TERMO: OK (difiere)
+  V143_BQAZA con tasas de exploracion != TERMO: OK (difiere)
+  V143_BQ2 con tasas de exploracion != TERMO: OK (difiere)
+  V143_BQ2AZA con tasas de exploracion != TERMO: OK (difiere)
+  rechazo forzado: mordidas B+D 63 -> 11, A+C 149 -> 82: OK (actua)
+  v2 PRUEBA_O1 forzada != TERMO: OK · mordidas B+D 63 -> 120, A+C 149 -> 181 · fundadores 12 -> 40
+(E) regla 14: ENTRADA campo a campo. tarea de este runner (termo) == corre_termo.tarea; bloq con genoma vacio y tasas 0 == termo
+  termo: 9 campos, OK
+  bloq vacio tasas 0 == termo campo a campo (6 campos; ids con el nombre del carro normalizado): OK
+(H) herencia exacta con tasas 0 e INICIAL 1: toda muestra de cuerpo vivo de un linaje es la lista de algun fundador del linaje
+  bloq: muestras con exactamente 1 regla (sin mutacion no cambia el largo) 9/9: OK
+(D) determinismo: bloq con tasas de exploracion, dos veces
+  OK
+ARNES: PASA
