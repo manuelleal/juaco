@@ -1,0 +1,16 @@
+construye_pasajes --verifica: IGUAL (origen c2189f9d22b72386; destino 56c067e976b6b626)
+[OK ] (K) nucleo por anclas y origenes con sha {'eco_sel_ing/nucleo_eco_sel_ing.py': 'c2189f9d22b72386', 'frio/motor_frio_rapido.py': 'ff9d890a5cce9dec', 'juaco_eco/motor_eco.py': 'bca3033878b59622', 'juaco_eco/carros/FABRICA_ECO.py': 'f1163009cb5193a2', 'nucleo_pasajes': '56c067e976b6b626', 'corre_pasajes': '858c2ae30293203b'}
+[OK ] (K) el gemelo es el mismo modulo en los dos nucleos 
+[OK ] (A) nucleo_pasajes.trabajo(ING_SEL_C) == nucleo_eco_sel_ing.trabajo bit a bit (salvo seg) (claves 62; fund_2a 2285 / 2285; K_nac 18.272727 / 18.272727)
+[OK ] (A) corre_pasajes.pasaje(PAS_SEL, sin transferencia) == ECO_SEL_ING (salvo seg, brazo) 
+[OK ] (G0) genoma = G0 x 90 explicito == None 
+[OK ] (G) a T = 10 los fundadores vivos llevan el genoma dado a su linaje (90/90 fundadores; genomas distintos entre si: 90)
+[OK ] (X) con genomas transferidos distintos de G0 la corrida difiere (fund_2a 1640 vs 2285)
+[OK ] (F) la transferencia solo lee el genoma (linaje/k/gen/tn borrados: igual) (vivos 102 -> (90, 18))
+[OK ] (F) la transferencia devuelve genomas de vivos (cada fila es un vivo) 
+[OK ] (R) resorteo = G0 mutado una vez (no todos iguales a G0; genes no mutables intactos) (50/90 distintos de G0)
+[OK ] (D) cadena de 2 pasajes dos veces: igual 
+[OK ] (R) PAS_RES p1 == PAS_SEL p1 (misma semilla, G0) y p2 difiere (p1 fund_2a 1240/1240; p2 1040/1266)
+[OK ] (C) continuar una cadena de 2 hasta 3 == la cadena de 3 de una vez (p3 fund_2a 878 / 878)
+[OK ] (J) la cadena escribe el genoma del ultimo pasaje (90 x 18) 
+ARNES PASAJES: 14/14 en 66.8 s
