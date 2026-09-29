@@ -50,6 +50,10 @@ Candidato a v14.4: **TERMO′** (v14.3 + termostato de boca con memoria que olvi
 2. **Confirmar "la selección encuentra el termostato en la pista"** (pasg; preregistro nuevo, serie + réplica en el PC).
 3. **Subir de procariota:** un mundo que cambia (lo bueno se vuelve malo), donde la memoria y lo social deberían ganarle al instinto
    fijo. Después, depredadores y parásitos que coevolucionen: la vía clásica a la evolución abierta.
+3b. **Mundo enriquecido** (idea del director, 28-sep ~22:00, a partir de lo que leyó sobre chimpancés en cautiverio: sin estímulo no
+   desarrollan nada; aprenden de otros; hacen tareas con orden). Tareas con SECUENCIA (comida que sólo se abre con A y después B),
+   aprendizaje SOCIAL que pague (copiar al vecino que sabe), memoria. Se conecta con la escuela de abejas (23-sep) y con los órganos de
+   memoria y sociales que aparecieron el 28-sep en el kit grande.
 4. **Tronco:** TERMO′ debe morder menos veneno en los escenarios de T-E. No se toca la letra.
 
 ## Niveles (los fija el director)
