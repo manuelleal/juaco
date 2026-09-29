@@ -1,0 +1,17 @@
+{
+ "lineas": [
+  "T 500000 \u00b7 brazos ['ING_AZA_47', 'ING_AZA_50', 'ING_F1', 'ING_SEL_25', 'ING_SEL_47', 'ING_SEL_50', 'ING_SEL_C'] \u00b7 semillas por brazo {'ING_AZA_47': 5, 'ING_AZA_50': 10, 'ING_F1': 10, 'ING_SEL_25': 10, 'ING_SEL_47': 10, 'ING_SEL_50': 10, 'ING_SEL_C': 10}",
+  "ING_F1      n 10 (NO EVALUABLES por tope/aborto: []) \u00b7 K 96.28 \u00b7 K_nac 12.45 \u00b7 fund_2a 64305.0 \u00b7 persiste 10/10 \u00b7 n_nac 23300 \u00b7 max_vivos 110 || vs ING_SEL_C (pareado, 10): K gana 0/10 (med -4.6) \u00b7 K_nac gana 0/10 (med -3.64) \u00b7 fund_2a menos 0/10 (med 20506)",
+  "ING_SEL_C   n 10 (NO EVALUABLES por tope/aborto: []) \u00b7 K 101.05 \u00b7 K_nac 16.28 \u00b7 fund_2a 43725.0 \u00b7 persiste 10/10 \u00b7 n_nac 22525 \u00b7 max_vivos 121",
+  "ING_SEL_25  n 10 (NO EVALUABLES por tope/aborto: []) \u00b7 K 102.57 \u00b7 K_nac 19.85 \u00b7 fund_2a 37249.0 \u00b7 persiste 10/10 \u00b7 n_nac 22889 \u00b7 max_vivos 122 || vs ING_SEL_C (pareado, 10): K gana 10/10 (med 1.41) \u00b7 K_nac gana 10/10 (med 3.24) \u00b7 fund_2a menos 10/10 (med -6214)",
+  "ING_SEL_47  n 10 (NO EVALUABLES por tope/aborto: []) \u00b7 K 102.29 \u00b7 K_nac 18.86 \u00b7 fund_2a 37035.0 \u00b7 persiste 10/10 \u00b7 n_nac 23744 \u00b7 max_vivos 122 || vs ING_SEL_C (pareado, 10): K gana 10/10 (med 1.2) \u00b7 K_nac gana 10/10 (med 2.21) \u00b7 fund_2a menos 10/10 (med -6876)",
+  "ING_AZA_47  n 5 (NO EVALUABLES por tope/aborto: []) \u00b7 K 93.85 \u00b7 K_nac 4.51 \u00b7 fund_2a 49303.0 \u00b7 persiste 5/5 \u00b7 n_nac 10671 \u00b7 max_vivos 113 || vs ING_SEL_C (pareado, 5): K gana 0/5 (med -7.82) \u00b7 K_nac gana 0/5 (med -11.62) \u00b7 fund_2a menos 2/5 (med 4328)",
+  "ING_SEL_50  n 10 (NO EVALUABLES por tope/aborto: []) \u00b7 K 92.02 \u00b7 K_nac 2.56 \u00b7 fund_2a 33794.5 \u00b7 persiste 10/10 \u00b7 n_nac 35702 \u00b7 max_vivos 127 || vs ING_SEL_C (pareado, 10): K gana 0/10 (med -9.02) \u00b7 K_nac gana 0/10 (med -13.97) \u00b7 fund_2a menos 10/10 (med -9418)",
+  "ING_AZA_50  n 10 (NO EVALUABLES por tope/aborto: []) \u00b7 K 92.67 \u00b7 K_nac 5.11 \u00b7 fund_2a 56910.5 \u00b7 persiste 10/10 \u00b7 n_nac 12822 \u00b7 max_vivos 125 || vs ING_SEL_C (pareado, 10): K gana 0/10 (med -8.24) \u00b7 K_nac gana 0/10 (med -11.18) \u00b7 fund_2a menos 0/10 (med 13811)",
+  "ING_SEL_50 genes vivos en T, mediana de log(g/G0), los 10 que mas se mueven: dote -1.07, pat_min +0.94, temp_boca -0.70, alpha +0.49, rep_X -0.47, peso_sed -0.40, puerta_pat +0.38, R_malo_E +0.36, R_bueno_E +0.29, tau_e -0.28",
+  "ING_AZA_50 genes vivos en T, mediana de log(g/G0), los 10 que mas se mueven: aversion +0.86, rep_X -0.74, clip_l -0.72, wl0_lo +0.71, pat_min +0.70, umbral_div -0.68, ruido_motor +0.63, peso_sed +0.60, dote -0.60, paso -0.57",
+  "ING_SEL_47 genes vivos en T, mediana de log(g/G0), los 10 que mas se mueven: temp_boca -0.91, pat_min +0.85, tau_e -0.64, ruido_motor -0.41, alpha +0.37, peso_sed -0.37, R_bueno_E +0.32, x_aversion_s +0.28, R_malo_E +0.27, umbral_mov -0.27",
+  "ING_AZA_47 genes vivos en T, mediana de log(g/G0), los 10 que mas se mueven: gan_patron -0.88, ema +0.80, pat_min +0.79, clip_l +0.77, wl0_hi -0.76, clip_e +0.69, peso_sed -0.66, hambre_boca -0.59, kw0_hi +0.58, decae_kw +0.57",
+  "ING_SEL_25 genes vivos en T, mediana de log(g/G0), los 10 que mas se mueven: temp_boca -0.99, tau_e -0.74, memoria_rechazo +0.52, alpha +0.43, peso_sed -0.39, R_malo_E +0.31, R_bueno_A +0.30, R_bueno_E +0.26, x_aversion_s +0.26, aversion +0.18"
+ ]
+}

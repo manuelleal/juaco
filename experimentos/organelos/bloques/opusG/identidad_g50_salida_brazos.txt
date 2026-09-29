@@ -1,0 +1,33 @@
+[20:24:49] ARNES 50 GENES · construye 61a396d184779906 · motor_eco50 d85bbcda7b40fa19 · motor_g50 32f9e5dd4ddd20dd · nucleo_g50 6f01bd7ec241e185
+(K) construccion por anclas
+  [OK] construye_g50 --verifica 
+  [OK] 50 genes en motor_eco50 (50; nuevos 32)
+(M) muta
+  [OK] sin nuevos mutables: las 18 == motor_eco.muta 
+  [OK] con un nuevo mutable gasta 2*50 numeros 
+(A) base bit a bit (semilla 46191, T 30000)
+  [OK] ING_F1: nucleo_g50 == nucleo_eco_sel_ing (claves distintas []; n_nac 1379; n_mut 0; K_nac 12.375; motor GEMELO motor_frio_rapido)
+  [OK] ING_SEL_C: nucleo_g50 == nucleo_eco_sel_ing (claves distintas []; n_nac 1514; n_mut 6457; K_nac 18.75; motor GEMELO motor_frio_rapido)
+  [OK] ING_AZA_C: nucleo_g50 == nucleo_eco_sel_ing (claves distintas []; n_nac 1575; n_mut 6722; K_nac 13.125; motor GEMELO motor_frio_rapido)
+  [OK] control: ING_SEL_C != ING_F1 en la base (la mutacion hace algo) 
+(V) vivero finito (t_corte 20 000 < T 30 000): ING_SEL_C_V de nucleo_g50 == ING_SEL_C de la base con el mismo t_corte; SEL_47_V p0 == SEL_C_V p0
+  [OK] ING_SEL_C_V == base ING_SEL_C (t_corte 20 000) (distintas []; persiste 0; t_ext 29874)
+  [OK] ING_SEL_47_V p_mut 0 == ING_SEL_C_V p_mut 0 
+  [OK] el vivero finito corta (t_corte 20 000 en la salida) 
+(B) perilla apagada: p_mut 0 == ING_F1 de la base
+  [OK] ING_SEL_50 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_AZA_50 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_SEL_25 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_SEL_47 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_AZA_47 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+(Z) controles que pueden fallar
+  [OK] ING_SEL_50 (p 0.05) != ING_F1 (mutables 50; n_mut 21664)
+  [OK] ING_AZA_50 != ING_SEL_50 
+  [OK] ING_AZA_47 != ING_SEL_47 (mutables 47, donante azar)
+  [OK] ING_SEL_47: 47 mutables y 0 fuera (dote, rep_umbral, rep_X quietos) 
+  [OK] ING_SEL_50: 0 genes fuera de los mutables 
+(D) determinismo
+  [OK] ING_SEL_50 dos veces == bit a bit 
+(U) OMITIDO en esta corrida (--sin-U): ver la corrida entera anterior, mismo motor_g50 32f9e5dd4ddd20dd: 31/32 cambian, clip_kw mudo
+(U) cada gen nuevo se usa (p_mut 0; genoma inicial = G0 con UN gen en su piso o techo; T 20000, semilla 46191)
+RESUMEN: 22/22 en 321 s

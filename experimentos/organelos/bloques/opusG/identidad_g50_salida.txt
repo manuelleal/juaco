@@ -1,0 +1,60 @@
+[19:21:06] ARNES 50 GENES · construye 1fe64193d0636fc3 · motor_eco50 d85bbcda7b40fa19 · motor_g50 32f9e5dd4ddd20dd · nucleo_g50 8e21e3bc7a6e33b0
+(K) construccion por anclas
+  [OK] construye_g50 --verifica 
+  [OK] 50 genes en motor_eco50 (50; nuevos 32)
+(M) muta
+  [OK] sin nuevos mutables: las 18 == motor_eco.muta 
+  [OK] con un nuevo mutable gasta 2*50 numeros 
+(A) base bit a bit (semilla 46191, T 30000)
+  [OK] ING_F1: nucleo_g50 == nucleo_eco_sel_ing (claves distintas []; n_nac 1379; n_mut 0; K_nac 12.375; motor GEMELO motor_frio_rapido)
+  [OK] ING_SEL_C: nucleo_g50 == nucleo_eco_sel_ing (claves distintas []; n_nac 1514; n_mut 6457; K_nac 18.75; motor GEMELO motor_frio_rapido)
+  [OK] ING_AZA_C: nucleo_g50 == nucleo_eco_sel_ing (claves distintas []; n_nac 1575; n_mut 6722; K_nac 13.125; motor GEMELO motor_frio_rapido)
+  [OK] control: ING_SEL_C != ING_F1 en la base (la mutacion hace algo) 
+(B) perilla apagada: p_mut 0 == ING_F1 de la base
+  [OK] ING_SEL_50 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_AZA_50 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_SEL_25 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+  [OK] ING_SEL_47 p_mut 0 == ING_F1 (n_nac 1379 vs 1379)
+(Z) controles que pueden fallar
+  [OK] ING_SEL_50 (p 0.05) != ING_F1 (mutables 50; n_mut 21664)
+  [OK] ING_AZA_50 != ING_SEL_50 
+  [OK] ING_SEL_50: 0 genes fuera de los mutables 
+(D) determinismo
+  [OK] ING_SEL_50 dos veces == bit a bit 
+(U) cada gen nuevo se usa (p_mut 0; genoma inicial = G0 con UN gen en su piso o techo; T 20000, semilla 46191)
+    gan_patron     G0 1.2      -> 0.3      fisica CAMBIA (n_nac 767 vs 894; K_nac 7.636364)
+    gan_lado       G0 1.5      -> 0.375    fisica CAMBIA (n_nac 905 vs 894; K_nac 14.545455)
+    gan_aqui       G0 1        -> 0.25     fisica CAMBIA (n_nac 907 vs 894; K_nac 12.454545)
+    ruido0         G0 0.15     -> 0.0375   fisica CAMBIA (n_nac 865 vs 894; K_nac 14.272727)
+    ruido_h        G0 0.5      -> 0.125    fisica CAMBIA (n_nac 893 vs 894; K_nac 10.818182)
+    umbral_m0      G0 0.8      -> 0.2      fisica CAMBIA (n_nac 912 vs 894; K_nac 13.545455)
+    umbral_m1      G0 0.8      -> 0.2      fisica CAMBIA (n_nac 912 vs 894; K_nac 12.818182)
+    ruido_motor    G0 0.3      -> 0.075    fisica CAMBIA (n_nac 1052 vs 894; K_nac 12.181818)
+    umbral_mov     G0 0.5      -> 0.125    fisica CAMBIA (n_nac 1001 vs 894; K_nac 11.181818)
+    traza          G0 0.7      -> 0.175    fisica CAMBIA (n_nac 914 vs 894; K_nac 12.272727)
+    premio_acerca  G0 0.2      -> 0.05     fisica CAMBIA (n_nac 911 vs 894; K_nac 11.0)
+    clip_l         G0 1.5      -> 0.375    fisica CAMBIA (n_nac 923 vs 894; K_nac 13.0)
+    h_motor        G0 2        -> 0.5      fisica CAMBIA (n_nac 874 vs 894; K_nac 13.727273)
+    x_eta_l        G0 1        -> 0.25     fisica CAMBIA (n_nac 949 vs 894; K_nac 12.545455)
+    wl0_lo         G0 0.1      -> 0.025    fisica CAMBIA (n_nac 896 vs 894; K_nac 12.181818)
+    wl0_hi         G0 0.4      -> 0.1      fisica CAMBIA (n_nac 902 vs 894; K_nac 14.363636)
+    kw0_hi         G0 1        -> 0.25     fisica CAMBIA (n_nac 877 vs 894; K_nac 12.545455)
+    sesgo_boca     G0 0.5      -> 0.125    fisica CAMBIA (n_nac 1164 vs 894; K_nac 16.363636)
+    temp_boca      G0 0.3      -> 0.075    fisica CAMBIA (n_nac 1424 vs 894; K_nac 15.181818)
+    umbral_fam     G0 0.2      -> 0.05     fisica CAMBIA (n_nac 899 vs 894; K_nac 13.0)
+    R_bueno_E      G0 1        -> 0.25     fisica CAMBIA (n_nac 834 vs 894; K_nac 11.818182)
+    R_bueno_A      G0 1        -> 0.25     fisica CAMBIA (n_nac 870 vs 894; K_nac 13.454545)
+    R_malo_E       G0 3        -> 0.75     fisica CAMBIA (n_nac 562 vs 894; K_nac 7.818182)
+    R_malo_A       G0 3        -> 0.75     fisica CAMBIA (n_nac 789 vs 894; K_nac 10.272727)
+    peso_sed       G0 1        -> 0.25     fisica CAMBIA (n_nac 904 vs 894; K_nac 11.0)
+    (clip_e: igual a T 20000; a T 100 000: CAMBIA)
+    clip_e         G0 3        -> 0.75     fisica CAMBIA (n_nac 4633 vs 894; K_nac 11.803922)
+    x_aversion_s   G0 1        -> 0.25     fisica CAMBIA (n_nac 341 vs 894; K_nac 6.454545)
+    decae_kw       G0 0.05     -> 0.0125   fisica CAMBIA (n_nac 885 vs 894; K_nac 11.454545)
+    (clip_kw: igual a T 20000; a T 100 000: IGUAL)
+    clip_kw        G0 5        -> 1.25     fisica IGUAL (n_nac 4618 vs 894; K_nac 12.823529)
+    umbral_div     G0 0.2      -> 0.05     fisica CAMBIA (n_nac 930 vs 894; K_nac 13.545455)
+    puerta_pat     G0 5        -> 2        fisica CAMBIA (n_nac 633 vs 894; K_nac 8.181818)
+    pat_min        G0 1        -> 3        fisica CAMBIA (n_nac 941 vs 894; K_nac 11.727273)
+  [FALLA] los 32 genes nuevos cambian la fisica (mudos: ['clip_kw'])
+RESUMEN: 16/17 en 413 s

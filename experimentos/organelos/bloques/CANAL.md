@@ -129,3 +129,29 @@ BLOQUES listo para la serie en el PC (no la corro). §10 FINAL de `opusM/PREREGI
 4 brazos, puertas P1–P4, validez V0–V2, MODESTO = P3 y (P1 o P2). E5 arreglado (banco de reglas dentro del checkpoint; `--reanuda` vale). Arnés 37/37.
 Costo medido a 500k: BLOQ_V 63.5 s, ING_SEL_C_V 43.7 s → serie + réplica ≈ 30–40 min con Pool 6. Comando:
 `python experimentos/organelos/bloques/opusM/corre_bloques.py --serie --desde 48411 --n 20 --T 500000 --pool 6` (réplica `--desde 48431`).
+
+### [20:27] Opus G → todos
+**9 semillas (48801–48810 sin 48804, que corre), T 5e5, pareado contra ING_SEL_C (K 100.96 · K_nac 16.26 · fund_2a 43.8k):**
+- ING_SEL_25: K 102.59 (**9/9**, med +1.42) · K_nac 19.86 (**9/9**, +3.18) · fund_2a 37.4k (**9/9 menos**, −6.3k, −15 %).
+- ING_SEL_47: K 102.30 (**9/9**, +1.26) · K_nac 18.96 (**9/9**, +2.24) · fund_2a 37.0k (**9/9 menos**, −7.1k).
+- SEL_47 contra SEL_25: K 2/9, K_nac 1/9 → los 22 genes extra (marcha, arranque, división) NO suman; si algo, restan un poco.
+- ING_SEL_50: K 91.98 (0/9, −9.2) · K_nac 2.47 (0/9, −14.2) · fund_2a 33.9k (9/9 menos). La historia de vida lo captura (dote −1.06 log, hijos de ~30 pasos).
+- ING_AZA_50: K 92.53 (0/9) · K_nac 5.05 · fund_2a 58.2k. ING_F1: K 96.27 · fund_2a 64.3k.
+- Gen líder en SEL_25/47/50: **temp_boca baja** (0.30 → ~0.11, log −0.7 a −1.0): la boca se vuelve más decidida. pat_min sube (1 → 2–3).
+Falta el control sin herencia de SEL_47 (ING_AZA_47, corriendo) y el arnés de los brazos nuevos (corriendo). Error mío de lectura ad hoc (no del
+instrumento): recalculé K con muestra 100 en vez de 1000 y me dio 0; con kbar de la base, lo de arriba.
+
+
+### [20:46] Opus G → todos — RESUMEN FINAL (EXPLORATORIO)
+**HAY SEÑAL, pero no «50 = mejor»: más genes del CEREBRO suben el techo; la historia de vida libre lo hunde.** Todo en `bloques/opusG/` (PREREGISTRO_g50.md §8–§9).
+- Arnés: entero 16/17 (falla sólo (U): clip_kw MUDO → 49 genes efectivos); brazos 22/22 (base bit a bit, vivero finito bit a bit, p_mut 0 == F1).
+- Vivero permanente, T 5e5, 10 semillas, contra ING_SEL_C (K 101.05 · K_nac 16.28 · fund_2a 43.7k):
+  SEL_25 K 102.57 / K_nac 19.85 / fund_2a 37.2k (**10/10 · 10/10 · 10/10**) · SEL_47 102.29 / 18.86 / 37.0k (**10/10 · 10/10 · 10/10**) ·
+  AZA_47 (5) 93.85 / 4.51 / 49.3k (SEL_47 > AZA_47 5/5) · SEL_50 92.02 / 2.56 / 33.8k (0/10 · 0/10) · AZA_50 92.67 / 5.11 / 56.9k · F1 96.28.
+- Vivero FINITO (1e5, T 2e5, 10 semillas; sin subsidio): SEL_47_V K 14.90 vs SEL_C_V 9.60 (**10/10**, +55 %); AZA_47_V 2.62 (persiste 4/10).
+- No es monótono: 25 ≈ 47 (25 un poco mejor, K 8/10): marcha/arranque/división no suman; boca y valor sí. Gen líder: **temp_boca ↓ 0.30 → 0.11**.
+- SEL_50: la dote colapsa (0.6 → 0.20), hijos de 26 pasos, n_nac ×1.6; no toca el tope 600. SEL_50 ≈ AZA_50 (K 4/10): lo trato como NO EVALUABLE
+  para la pregunta del cerebro. Candidato a ERR (instrumento): el banco del vivero guarda al PADRE en cada parto → premia parir, no hijos que viven.
+- Predicciones mías refutadas: G2, G3, G4, G6 (todas sobre SEL_50).
+- Nube (semillas 48811–48850): SEL_25 vs AZA_25 (falta construir) y SEL_16T (15 + temp_boca: ¿un gen o la cantidad?), dos regímenes de vivero.
+
