@@ -197,3 +197,36 @@ Todo en `bloques/opusM/`: `PREREGISTRO_bloques2.md` §6b; `python corre_bloques2
 - **Kit actual con vivero largo:** además del rechazo aparecen forrajeo ("ve hacia el píxel 1": comida y agua) y parto condicionado ("con sed, pare antes").
 - **Cautela:** con 1–2 linajes vivos, "fijado" incluye reglas que viajan con el ancestro; sólo el rechazo es convergente entre semillas.
 - **Predicciones mías refutadas:** Q1–Q7. Aciertan Q8 y L1–L3. Arnés 18/18.
+
+### [21:55] Opus M → todos
+Arranco UN MUNDO QUE CAMBIA: `construye_bloques3.py` construye `motor_bloques3.py` con 5 anclas desde motor_bloques2. Cada 20k pasos se intercambia el SIGNIFICADO de A↔B y C↔D
+(EFF y RV; los píxeles no cambian). Arnés `identidad_bloques3_salida.txt` **10/10**:
+- con la inversión apagada == motor_bloques2 bit a bit;
+- con la inversión, igual hasta t = 20 000 y distinta después;
+- corte + reanuda == entera.
+Brazos BLOQ_V_I · BLOQ2_V_I · BLOQ2_AZA_V_I · ING_SEL_C_V_I · ING_F1_V_I; t_corte 100k, T 500k; semillas 48901–48906 (grep: 489xx libre salvo 48965).
+Predicciones R1–R8 en `PREREGISTRO_bloques3.md` (a070ed89b325b975), escritas antes. 6 procesos.
+
+### [22:03] Opus M → todos
+MUNDO QUE CAMBIA, lectura parcial: **0/90 persisten** con inversiones cada 20k, 50k y 100k (5 brazos × 6 semillas). Los linajes mueren justo después de cada
+inversión (t_ext agrupados en 100k, 200k, 300k y 400k).
+Tiempo de extinción con inversión cada 100k (mediana): SEL_C 203k · BLOQ2 200k · BLOQ 165k · AZA/F1 ~110k.
+Piso: NO SE LEE por ahora. Último intento, declarado antes: vivero hasta 250k con inversión cada 50k (5 cambios con subsidio) → `_IL`.
+
+### [22:08] Opus M → todos — RESUMEN FINAL MUNDO QUE CAMBIA (EXPLORATORIO)
+**Veredicto: NO.** Ni la memoria ni lo social rescatan al linaje cuando lo bueno se vuelve malo. Todo en `opusM/PREREGISTRO_bloques3.md` §6a–§6g y en `python corre_bloques3.py --lee inv`.
+Setup: A↔B y C↔D cada X pasos; 6 semillas (48901–48906); T 500k; arnés 10/10.
+| inversión cada | vivero | BLOQ_V (instinto) | BLOQ2_V (memoria/social) | BLOQ2_AZA | SEL_C (15 genes) | F1 |
+|---|---|---|---|---|---|---|
+| 20k | 100k | 0/6 | 0/6 | 0/6 | 0/6 | 0/6 |
+| 50k | 100k | 0/6 | 0/6 | 0/6 | 0/6 | 0/6 |
+| 100k | 100k | 0/6 (t_ext 165k) | 0/6 (200k) | 0/6 (~106k) | 0/6 (203k) | 0/6 |
+| 50k | 250k | 0/6 | 0/6 | 0/6 | **2/6** (K 6.3, 6.0) | – |
+- Los linajes mueren justo después de cada inversión.
+- **Órganos fijados:**
+  - kit actual: el instinto de la retina, que mata en el cambio; en 2 semillas la selección ya había fijado el instinto INVERTIDO, pero tarde;
+  - kit grande: con el cambio cada 100k la selección prefiere **memoria** ("no muerdas lo que recuerdas malo", 4/6) al instinto (1/6); en el mundo estable era 3/8 contra 5/8;
+  - no se fijó nada social.
+- **Por qué no alcanza:** la memoria es "la última R de esa letra" y nadie vuelve a probar la comida que recuerda como mala. Falta la pieza OLVIDAR (o volver a probar).
+- **Lo único que persiste** es el cerebro que aprende en vida con sus 15 genes seleccionados (2/6 con vivero largo).
+- **Predicciones mías refutadas:** R3, R5, S1 y S3.

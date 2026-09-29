@@ -1,0 +1,17 @@
+identidad_bloques3.py 2026-09-28 21:52:22
+(K)
+  [OK ] construye_bloques3 --verifica IGUAL 21b5ee28d086b3be
+  [OK ] shas fijados 
+(A) inversion apagada == motor_bloques2 bit a bit
+  [OK ] BLOQ2_V s48991 distintas [] · hijos 1386 ins 178
+  [OK ] BLOQ_V s48992 distintas [] · hijos 1361 ins 170
+  [OK ] ING_F1_V s48991 distintas [] · hijos 0 ins 0
+(B) la inversion ocurre justo en t = 20 000
+  [OK ] tam_total igual hasta t = 20 000 inclusive (muestra 1000)
+  [OK ] y distinto despues 
+  [OK ] 2 inversiones a T 60 000 (t = 20 000 y 40 000) n_inv 2 / None
+(Q) corte en 30 000 + reanuda == entera (con inversion)
+  [OK ] corte + reanuda == entera cortado True · distintas [] · n_inv 1/1
+(D) determinismo
+  [OK ] dos veces == 
+RESULTADO 10/10 en 163 s
