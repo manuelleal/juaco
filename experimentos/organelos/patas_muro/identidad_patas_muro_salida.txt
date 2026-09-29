@@ -1,0 +1,29 @@
+ARNES identidad_patas_muro · corre_patas_muro.py 2a5c95aae2b64e43 · identidad_patas_muro.py 0278283b3f87b488 · 2026-09-29 11:32:05
+  OK    (K1) sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 == 24100621c450da22
+  OK    (K1) sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 == 2a03048a7f1525e5
+  OK    (K1) sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 == 9f47c65e438e0ff4
+  OK    (K1) sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 == 6a68f640a7832f12
+  OK    (K1) sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 == 99436afa2715f028
+  OK    (K1) sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 == 1c8a789f7427ab96
+  OK    (K1) sha experimentos\organelos\dinamita\construye_patas.py 85a8c136aa09491d == 85a8c136aa09491d
+  OK    (K1) sha experimentos\organelos\dinamita\carros\TPATAS.py 1b6272ef4616af8b == 1b6272ef4616af8b
+  OK    (K1) sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb == 3db639cab75641fb
+  OK    (K2) TPATAS en disco == construye_patas.todas() (sha construido 1b6272ef4616af8b; no escribe)
+  OK    (K2) sha TPATAS == el del arnes de la ola 3 de dinamita ('TPATAS sha 1b6272ef4616af8b == disco: True')
+  OK    (K3) pc, pu, pd, pi son instancias de modulo DISTINTAS del mismo archivo, con PATAS 3/2/1/4
+  OK    (a) pc con PATAS = 0 == V143_TERMO, salida ENTERA (N 9, s 52691, T 2000, fundador limpio)
+  OK    (a) pu con PATAS = 0 == V143_TERMO, salida ENTERA (N 9, s 52691, T 2000, fundador limpio)
+  OK    (a) pd con PATAS = 0 == V143_TERMO, salida ENTERA (N 9, s 52691, T 2000, fundador limpio)
+  OK    (a) pi con PATAS = 0 == V143_TERMO, salida ENTERA (N 9, s 52691, T 2000, fundador limpio)
+  OK    (a) pc con PATAS = 0 == V143_TERMO, salida ENTERA (N 9, s 52692, T 5000, fundador limpio)
+  OK    (b) pc (PATAS 3) ACTUA: cambios de paso 9649 > 0 y la fisica != TERMO (s 52691, T 2000)
+  OK    (b) determinismo: pc dos corridas iguales (s 52691, T 2000)
+  OK    (b) pu (PATAS 2) ACTUA: cambios de paso 8947 > 0 y la fisica != TERMO (s 52691, T 2000)
+  OK    (b) pd (PATAS 1) ACTUA: cambios de paso 10773 > 0 y la fisica != TERMO (s 52691, T 2000)
+  OK    (b) pi (PATAS 4) ACTUA: cambios de paso 11239 > 0 y la fisica != TERMO (s 52691, T 2000)
+  OK    (c) ENTRADA campo a campo (regla 14): corre_patas_muro.tarea == corre_v143.tarea (V143, s 52691, T 2000)
+  OK    (c) ENTRADA campo a campo (regla 14): corre_patas_muro.tarea == corre_v143.tarea (V143_TERMO, s 52691, T 2000)
+  OK    (c) corre_patas_muro.tarea('pc') == explora_dinamita.tarea('pc') de la ola 3 (s 52691, T 2000; linajes, pista, R0_pista, tel)
+  OK    (d) ESTADO por worker: trabajo() re-fija PATAS 3 aunque el proceso lo tenga en 0, lo escribe en 'estado' y da lo mismo que limpio
+  OK    (d) --reanuda salta el JSON ya escrito sin aborto (devuelve el guardado)
+ARNES PASA · 55s
