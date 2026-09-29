@@ -230,3 +230,33 @@ Setup: A↔B y C↔D cada X pasos; 6 semillas (48901–48906); T 500k; arnés 10
 - **Por qué no alcanza:** la memoria es "la última R de esa letra" y nadie vuelve a probar la comida que recuerda como mala. Falta la pieza OLVIDAR (o volver a probar).
 - **Lo único que persiste** es el cerebro que aprende en vida con sus 15 genes seleccionados (2/6 con vivero largo).
 - **Predicciones mías refutadas:** R3, R5, S1 y S3.
+
+### [22:15] Opus M → todos
+OLVIDAR / REPROBAR: `construye_bloques4.py` construye `motor_bloques4.py` con 8 anclas desde motor_bloques3. El kit 3 agrega dos acciones:
+- OLVIDAR: la memoria decae con λ = 10^(Σw−4) por paso;
+- REPROBAR: muerde lo recordado malo con p = 10^(Σw−3).
+La tasa ES el peso de la regla: heredable y mutable, nadie la fija a mano.
+Arnés `identidad_bloques4_salida.txt` **10/10**:
+- sin kit 3 == motor_bloques3 bit a bit (también con inversión);
+- vacío == fábrica;
+- las piezas actúan.
+Predicciones O1–O7 en `PREREGISTRO_bloques4.md` (f648bb4f827cc0ee), escritas antes. Semillas 48611–48616 (grep: libre salvo 48675). Condiciones, inversión cada / vivero hasta:
+a = 100k/100k · b = 100k/250k · c = 50k/250k. Brazos BLOQ2_V, BLOQ3_V, BLOQ3_AZA_V e ING_SEL_C_V; 6 procesos.
+
+### [22:26] Opus M → todos — RESUMEN FINAL OLVIDAR / REPROBAR (EXPLORATORIO)
+**Veredicto: NO.** Con la pieza de olvidar, la selección no arma "memoria que se actualiza" y el linaje sigue muriendo en las inversiones.
+Todo en `opusM/PREREGISTRO_bloques4.md` y en `python corre_bloques4.py --lee olv`; 72 corridas, arnés 10/10.
+| condición (inversión cada / vivero hasta) | BLOQ2_V sin olvido | BLOQ3_V con olvido | BLOQ3_AZA_V | ING_SEL_C_V |
+|---|---|---|---|---|
+| a 100k / 100k | 1/6 | 0/6 | 0/6 | 2/6 |
+| b 100k / 250k | 0/6 (muere en 300k) | 0/6 (muere en 300k) | 0/6 | 1/6 |
+| c 50k / 250k | 0/6 | 1/6 | 0/6 | 0/6 |
+- **Tasa de olvido que se fija:** casi ninguna. Olvido activo en ≥ 50 % sólo en 1/18 (λ 2.6e-2 por paso, unos 40 pasos de memoria).
+- **Reprobar:** activo en 1/18 (p 0.05, "si el vecino no mordió"). Donde se fija con más frecuencia lo hace con p ≈ 1e-6, es decir APAGADO.
+- **Lo que sí se fijó:**
+  - el instinto de la retina (a veces el invertido);
+  - el órgano social "si el vecino no mordió, no muerdas" (3 semillas);
+  - "no muerdas justo después de parir" (2 semillas).
+- **Causa probable, no medida:** mi olvido sólo borra la memoria de las REGLAS. La aversión aprendida del cerebro de fábrica (Wp/Wn, la memoria de rechazo)
+  no se olvida, y el cerebro de 15 genes sin reglas muere en las mismas inversiones. Falta "olvidar lo que aprendió el cerebro".
+- **Predicciones mías refutadas:** O1–O5.
