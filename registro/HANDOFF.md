@@ -1138,3 +1138,11 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Auditor:** se sostiene (C y E covarían).
 - **Siguiente:** eco_ing_a_carrera (exploratorio en el PC esta noche). La nube de esta noche corre termo_banco (listo) y eco_sel_largo
   (ya lanzada por el director).
+
+### 28-sep-2026 ~20:35: ★★ BLOQUES = FUNCIONA ×2; examen v14.4c = NO PASA sólo por T-E
+- **BLOQUES:** con un genoma de reglas componibles y duplicables, la selección natural fija sola un órgano de rechazo heredable (instinto)
+  que sostiene al linaje sin vivero: 19/20 ×2, contra 14 y 13 de los 15 genes y 1 y 0 sin herencia. **Es el primer órgano construido por
+  la selección en JUACO.** Auditor: se sostiene. ERR-153.
+- **TERMO′ (v14.4c):** pasa todo salvo T-E.
+- **Siguiente:** llevar los BLOQUES a evolucionar EN la pista de la carrera, sobre el fundador. Hay una sonda de humo en curso: TERMO + el
+  órgano evolucionado, en la pista.

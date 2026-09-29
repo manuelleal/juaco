@@ -7099,3 +7099,54 @@ también en la serie 2.
   - **Conclusión de la línea:** lo que ECO selecciona se adapta a ECO; el puente no es trasplantar genomas, sino evolucionar EN la pista.
 - **Error de instrumento declarado:** el criterio C3 (media de fundadores) estaba dominado por los linajes no establecidos. Usar la
   mediana o sólo los establecidos. No cambia el NO.
+
+## ★★ BLOQUES — genoma de reglas componibles ("tipo Minecraft") en ECO con hijos ingenuos y vivero finito (28-sep-2026, 20:00–20:27): **FUNCIONA ×2** — primer órgano construido por la selección natural sola
+> Idea del director (19:05): "denle cosas que pueda usar, que funcionen como Minecraft: unir, mezclar, cambiar, evolucionar".
+> Pregunta: con un genoma de largo variable hecho de reglas armadas con bloques primitivos, ¿la selección arma algo que supere el techo de
+> los 15 genes?
+> - Bloques: sentido/píxel de la retina, comparador, θ, acción (boca/patas/parto), peso.
+> - Operadores: mutar, duplicar, borrar, insertar y HGT de una regla del vecino más cercano.
+
+- **Preregistro:** `experimentos/organelos/bloques/opusM/PREREGISTRO_bloques.md` §10 (commit `e47608a`, antes de la serie).
+  Arnés 37/37 (módulo apagado == motor_frio_rapido; genoma vacío == fábrica; AZA no hereda; reanuda == entera); auditor LISTO.
+- **Montaje:** carro FABRICA_ECO (hijo ingenuo); vivero finito (t_corte 100 000); T 500 000.
+  El exploratorio (48401–48410) mostró que con vivero permanente K no refleja la calidad: **ERR-153**, abajo.
+- **Brazos:** ING_F1_V, ING_SEL_C_V (15 genes), BLOQ_V (reglas heredables), BLOQ_AZA_V (sin herencia).
+  **Predicción del creador:** FUNCIONA ×2 p 0.50.
+
+| | serie 48411–48430 | réplica 48431–48450 |
+|---|---|---|
+| persiste BLOQ_V / ING_SEL_C_V / BLOQ_AZA_V / ING_F1_V | **19** / 14 / 1 / 0 | **19** / 13 / 0 / 0 |
+| P2: K(BLOQ_V) > K(15 genes) | 19/20, +29.5 | 19/20, +28.7 |
+| P3: K(BLOQ_V) > K(sin herencia) | 19/20, +36.1 | 19/20, +36.3 |
+| P4: órgano de rechazo en ≥ 50 % de los vivos | 19/20 | 18/20 |
+
+- **Veredicto: FUNCIONA ×2** (las 4 puertas y la validez, en las dos corridas).
+- **Verificación del auditor: SE SOSTIENE.** Recalculó con un script propio, desde los 160 JSON, la persistencia, K, P2, P3 y P4; coincide
+  exacto. K del crudo == K del resumen, bit a bit. Shas iguales a §10. 0 abortos, 0 bloqueados. Márgenes lejos del umbral.
+- **Lectura alternativa descartada (H-2 del auditor):** BLOQ_V vive con MENOS comida accesible que ING_SEL_C_V (A+C ≈ 34–39 contra 74–84;
+  el anillo queda lleno de veneno y sal). El K alto no es un regalo del mundo: el linaje no se envenena y sobrevive a pesar de la escasez.
+- **El órgano** (exploratorio y serie): "no muerdas si el píxel del objeto en foco indica B/D". Separa exactamente veneno y sal (B, D) de
+  comida y agua (A, C). Queda fijado en ≥ 50 % de los vivos en 37/40 semillas.
+  Se **DUPLICA** (2–3 copias, peso total −4.4 a −8.4): la copia es la función. El diseño a mano con 1 copia daba K 27.5; el evolucionado, 38.5.
+- **Vocabulario:**
+  - Permitido: "con un genoma de reglas componibles, la selección natural fija sola un órgano de rechazo heredable (instinto) que sostiene
+    al linaje sin vivero".
+  - Es un INSTINTO por identidad de letra (el mundo tiene significado de letras fijo, trampa 4 declarada), NO aprendizaje.
+  - Prohibido: "aprende", "entiende", "especie".
+- **ERR-153 (instrumento; del exploratorio, antes de la serie):** con vivero permanente, K no es monótono en la calidad del organismo. El
+  vivero subsidia al que muere rápido, y morder veneno "limpia" el anillo. Toda medida de K con vivero permanente se lee con esa cautela;
+  la serie de BLOQUES usa vivero finito. **El siguiente libre es ERR-154.**
+- **Lectura de conjunto del día (con eco_sel_largo MC y los pasajes):** con perillas fijas, la selección se estanca rápido. Con más genes, el
+  techo sube. **Con piezas que se pueden armar y duplicar, la selección construye un órgano y rompe el techo** (K ~37 contra ~9 de los 15 genes
+  sin vivero).
+
+## Examen v14.4c COMPLETO de TERMO′ con ERR-150 — serie 28-sep 19:33–20:31: **NO PASA (sólo cae T-E)**
+- Crudo `experimentos/tronco_v14_4c_examen/datos/examen_v144c_serie_20260928_193345.json` (sha `5b7d57b94f02348b`).
+- **Puertas:** T-A, T-B, **T-C (con ERR-150)**, T-D, T-F y **T-G PASAN**; **T-E NO**, en los 6 escenarios (12–17/20; pide 18).
+- **Cláusulas de T-E que caen:**
+  - "come X Q4 ≥ 0.8 × tronco" (13–16/20);
+  - "veneno B/C total ≤ 1.10 × tronco" (15–19/20);
+  - "muerde A Q4 ≤ 1.10 × tronco" (15/20).
+- **Lectura:** TERMO′ queda a UNA puerta de ser tronco. Lo que falta es conducta: morder menos veneno en los escenarios de v3′.
+  No se toca la letra de T-E.
