@@ -117,6 +117,34 @@
      ]
     ]
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     0.11,
+     "cercania de lo que mira < 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59202,
+     0.11,
+     "pixel 3 de la letra en foco > 0.50 -> quedarse -"
+    ],
+    [
+     59203,
+     0.22,
+     "cercania del objeto mas cercano con pixel 3 > 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59204,
+     0.22,
+     "R de la ultima mordida > 0.50 -> quedarse +"
+    ],
+    [
+     59205,
+     0.11,
+     "sed > 0.50 -> quedarse +"
+    ]
+   ],
+   "semillas_con_regla_fijada": "0/5",
    "vivos_final_con_rechazo": "0/45",
    "fund_de_banco": "5301/5795"
   },
@@ -195,6 +223,34 @@
      ]
     ]
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     0.11,
+     "cercania de lo que mira < 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59202,
+     0.11,
+     "cercania de lo que mira > 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59203,
+     0.22,
+     "pixel 5 de la letra en foco > 0.50 -> boca -"
+    ],
+    [
+     59204,
+     0.11,
+     "sed > 0.50 -> quedarse -"
+    ],
+    [
+     59205,
+     0.11,
+     "cercania de lo que mira < 0.50 -> boca -"
+    ]
+   ],
+   "semillas_con_regla_fijada": "0/5",
    "vivos_final_con_rechazo": "0/45",
    "fund_de_banco": "6624/6669"
   },
@@ -315,6 +371,34 @@
      ]
     ]
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     0.33,
+     "pixel 5 de la ultima mordida < 0.50 -> quedarse +"
+    ],
+    [
+     59202,
+     0.56,
+     "R de la ultima mordida > 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59203,
+     0.33,
+     "pixel 5 de la letra en foco > 0.50 -> boca -"
+    ],
+    [
+     59204,
+     0.33,
+     "hambre < 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59205,
+     0.33,
+     "pixel 1 de la letra en foco > 0.50 -> boca +"
+    ]
+   ],
+   "semillas_con_regla_fijada": "1/5",
    "vivos_final_con_rechazo": "0/45",
    "fund_de_banco": "5488/5488"
   },
@@ -393,6 +477,34 @@
      ]
     ]
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     0.33,
+     "sed > 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59202,
+     0.11,
+     "R de la ultima mordida > 0.50 -> quedarse +"
+    ],
+    [
+     59203,
+     0.22,
+     "sed < 0.50 -> quedarse +"
+    ],
+    [
+     59204,
+     0.33,
+     "cercania de lo que mira > 0.50 -> boca +"
+    ],
+    [
+     59205,
+     0.22,
+     "hambre > 0.50 -> boca +"
+    ]
+   ],
+   "semillas_con_regla_fijada": "0/5",
    "vivos_final_con_rechazo": "0/45",
    "fund_de_banco": "5540/5540"
   },
@@ -444,6 +556,24 @@
     "largo_med": null,
     "top": []
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     1.0,
+     "reserva min(E, Ag) > 0.50 -> boca +"
+    ],
+    [
+     59202,
+     1.0,
+     "reserva min(E, Ag) > 0.50 -> boca +"
+    ],
+    [
+     59203,
+     1.0,
+     "reserva min(E, Ag) > 0.50 -> boca +"
+    ]
+   ],
+   "semillas_con_regla_fijada": "3/3",
    "vivos_final_con_rechazo": "0/27",
    "fund_de_banco": "0/4216"
   },
@@ -522,6 +652,34 @@
      ]
     ]
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     0.11,
+     "la letra en foco ya fue mordida por el linaje > 0.50 -> boca -"
+    ],
+    [
+     59202,
+     0.11,
+     "cercania de lo que mira < 0.50 -> quedarse -"
+    ],
+    [
+     59203,
+     0.11,
+     "R de la ultima mordida > 0.50 -> quedarse +"
+    ],
+    [
+     59204,
+     0.11,
+     "cercania del objeto mas cercano con pixel 2 > 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59205,
+     0.22,
+     "R de la ultima mordida > 0.50 -> quedarse +"
+    ]
+   ],
+   "semillas_con_regla_fijada": "0/5",
    "vivos_final_con_rechazo": "0/45",
    "fund_de_banco": "5381/5809"
   },
@@ -600,6 +758,34 @@
      ]
     ]
    },
+   "fijada_max_por_semilla": [
+    [
+     59201,
+     0.11,
+     "pixel 4 de la letra en foco < 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59202,
+     0.11,
+     "cercania de lo que mira > 0.50 -> patas hacia lo que mira +"
+    ],
+    [
+     59203,
+     0.22,
+     "pixel 5 de la ultima mordida > 0.50 -> boca -"
+    ],
+    [
+     59204,
+     0.11,
+     "sed > 0.50 -> quedarse -"
+    ],
+    [
+     59205,
+     0.11,
+     "pixel 3 de la ultima mordida > 0.50 -> boca -"
+    ]
+   ],
+   "semillas_con_regla_fijada": "0/5",
    "vivos_final_con_rechazo": "0/45",
    "fund_de_banco": "6069/6114"
   }

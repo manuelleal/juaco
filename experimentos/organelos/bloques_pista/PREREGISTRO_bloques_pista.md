@@ -104,3 +104,30 @@ A+C en el anillo (mediana, linaje 0 cada 5000): 3–4 de 36 objetos. bloq vs blo
 Predicciones: B1 sí (humo, n 1) · B2 NO · B3 NO · B4 NO · B5 sí · B6 NO · B7 no ocurrió (0/45) · B8 sí · B9 NO · B10 NO · B11 sí (4/5) pero
 bloqaza_pas < bloqaza en 5/5: es el pasaje, no la herencia · B12 NO · C1 NO (155 > 125) · C2 NO (1/3) · B13 NO · B14 NO (0/45) · B15 NO.
 Sin esqueleto del intento #7: no hay señal que preregistrar.
+
+## 10. Ronda 2 (21:55, antes de cualquier número): más material para la selección
+- ¿Más población sin tocar pista.py? **No existe.** `pista.N_MAX = 9` y un cuerpo vivo por linaje; `escala` y `mundo_n` sólo cambian el TAMAÑO del
+  mundo (L = 40·M, nobj = 4·M), no el número de cuerpos. Entonces sólo tiempo: **T 300k** y **pasajes largos** (3 × 100k, siembra = unión de los
+  bancos, prueba a T 300k).
+- Brazos: termo, bloq2, bloq2aza (sentidos v2: alrededor, conocida, reserva) en 59401–59403 (594xx libre al grep 21:52); bloq2_pas y bloq2aza_pas:
+  pasajes en 59410 + 4(c−1) + p (c 1..3, p 0..2), prueba en 59400 + c. Carros SIN cambios (arnés §9 vale; sólo cambian semillas y lectura).
+- Medida nueva: regla FIJADA = tipo de regla (sentido, j, comparador, acción, signo) en ≥ 50 % de los 9 vivos de la última muestra.
+| # | predicción | p |
+|---|---|---|
+| D1 | alguna semilla de bloq2 (T 300k) con regla fijada | 0.15 |
+| D2 | bloq2_pas con regla fijada en ≥ 2/3 | 0.30 |
+| D3 | fundadores mediana bloq2_pas < termo en ≥ 2/3 y R0 real > termo en ≥ 2/3 | 0.15 |
+| D4 | bloq2_pas > bloq2aza_pas en R0 en ≥ 2/3 | 0.35 |
+HAY SEÑAL = D3 y D4 y regla fijada en bloq2_pas ≥ 2/3 que no aparece en bloq2aza_pas.
+
+## 11. Resultado ronda 2 (22:43; EXPLORATORIO, 59401–59403, T 300k): **NO**
+| brazo | R0 real (mediana por semilla) | mayoría cruza | fund./linaje mediana · media | establecidos | regla en ≥ 50 % de los vivos | R0 vs termo |
+|---|---|---|---|---|---|---|
+| termo | 0.926 | 2/3 | 4 · 347 | 19/27 | — | — |
+| bloq2 | 0.804 | 1/3 | 17 · 386 | 16/27 | 0/3 (máx. 0.22) | 1/3 (−0.00) |
+| bloq2aza | 0.884 | 1/3 | 19 · 360 | 16/27 | 0/3 | 1/3 (−0.10) |
+| bloq2_pas (3 × 100k) | 0.754 | 1/3 | 28 · 315 | 13/27 | **1/3** (0.89: "píxel 4 del foco < 0.5 → patas hacia lo que mira +") | 1/3 (−0.23) |
+| bloq2aza_pas | 0.984 | 2/3 | 1 · 343 | 15/27 | 0/3 | 1/3 (−0.00) |
+Bancos tras el pasaje 2 (lee_siembra.py, datos/pasajes_Tp100000_np3_sp59410/siembras.txt): con herencia la regla más frecuente llega a
+0.67 / 0.21 / 0.27 de las listas; sin herencia 0.09 / 0.10 / 0.25. La única fijación (c1: "acercarse a lo que no tiene píxel 4" = ir hacia A/C)
+coincide con el PEOR R0 (0.41; fundadores mediana 123). D1 NO · D2 NO (1/3) · D3 NO · D4 NO (0/3).

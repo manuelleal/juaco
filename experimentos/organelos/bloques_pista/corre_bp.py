@@ -33,7 +33,8 @@ SHAS = {os.path.join(TERMOD, 'corre_termo.py'): None, os.path.join(TERMOD, 'carr
 BRAZOS = {'termo': 'V143_TERMO', 'bloq': 'V143_BQ', 'bloqaza': 'V143_BQAZA', 'o1': 'O1', 'bloq2': 'V143_BQ2', 'bloq2aza': 'V143_BQ2AZA'}
 LEE_BRAZOS = ('termo', 'bloq', 'bloqaza', 'o1', 'bloq_pas', 'bloqaza_pas', 'prueba_forzada', 'bloq2', 'bloq2aza', 'bloq2_pas', 'bloq2aza_pas')
 PROPIOS = ('V143_BQ', 'V143_BQAZA', 'V143_BQ0', 'V143_BQ2', 'V143_BQ2AZA')
-SEM_EXPLORA = range(59201, 59211); SEM_HUMO = 59291; SEM_ARNES = 59292
+SEM_EXPLORA = list(range(59201, 59211)) + [59401, 59402, 59403];   # 594xx: ronda 2 (grep 21:52, libre)
+SEM_HUMO = 59291; SEM_ARNES = 59292
 RECHAZO = [[3.0, 4.0, 1.0, 0.5, 0.0, -3.0]]
 # SOLO diagnostico v2 (humo2): la regla PRUEBA de O1 escrita en reglas: 'desconocida -> boca -3' + 'reserva > 0.5 -> boca +3'
 PRUEBA_O1 = [[7.0, 0.0, 0.0, 0.5, 0.0, -3.0], [8.0, 0.0, 1.0, 0.5, 0.0, 3.0]]   # SOLO humo/arnes: "no muerdas lo que tiene el pixel 4" (separa B, D de A, C)
@@ -154,6 +155,22 @@ def resumen(R, brazo):
         for c in R:
             for i, t in c['bq']['tel'].items():
                 if t['muestras']: fin.append((c['seed'], i, t['muestras'][-1][1]))
+        # FIJADA: tipo de regla (sentido, j, comparador, accion, signo de w) presente en >= 50 % de los 9 cuerpos vivos de la ultima muestra
+        fij = []
+        for c in R:
+            ult = {}
+            for i, t in c['bq']['tel'].items():
+                if t['muestras']: ult[i] = t['muestras'][-1]
+            if not ult: continue
+            tmax = max(v[0] for v in ult.values()); vv = [v[1] for v in ult.values() if v[0] == tmax]
+            cnt = {}
+            for Rr in vv:
+                for k in {(int(r[0]), int(r[1]), int(r[2] > 0.5), int(r[4]), (1 if r[5] > 0 else -1)) for r in Rr}: cnt[k] = cnt.get(k, 0) + 1
+            if cnt:
+                k, v = max(cnt.items(), key=lambda z: z[1])
+                fij.append([c['seed'], round(v / len(vv), 2), regla_txt([k[0], k[1], k[2], 0.5, k[3], 1.0 * k[4]]).rsplit(' ', 1)[0] + (' +' if k[4] > 0 else ' -')])
+        out['fijada_max_por_semilla'] = fij
+        out['semillas_con_regla_fijada'] = f"{sum(1 for f in fij if f[1] >= 0.5)}/{len(R)}"
         out['vivos_final_con_rechazo'] = f"{sum(1 for _, _, x in fin if any(es_rechazo(r) for r in x))}/{len(fin)}"
         out['fund_de_banco'] = f"{sum(f[1] == 1 for c in R for t in c['bq']['tel'].values() for f in t['fund'])}/" \
                                f"{sum(len(t['fund']) for c in R for t in c['bq']['tel'].values())}"
@@ -178,7 +195,7 @@ def lee(carpeta, log=print):
     for a, b in (('bloq', 'termo'), ('bloq', 'bloqaza'), ('bloqaza', 'termo'), ('o1', 'termo'), ('bloq', 'o1'),
                  ('bloq_pas', 'termo'), ('bloq_pas', 'bloq'), ('bloq_pas', 'bloqaza_pas'), ('bloqaza_pas', 'termo'), ('bloq_pas', 'o1'),
                  ('prueba_forzada', 'termo'), ('prueba_forzada', 'o1'), ('bloq2', 'termo'), ('bloq2', 'bloq2aza'), ('bloq2', 'bloq'),
-                 ('bloq2aza', 'termo'), ('bloq2_pas', 'termo'), ('bloq2_pas', 'bloq2aza_pas')):
+                 ('bloq2aza', 'termo'), ('bloq2_pas', 'termo'), ('bloq2_pas', 'bloq2aza_pas'), ('bloq2_pas', 'bloq2'), ('bloq2aza_pas', 'termo')):
         if por.get(a) and por.get(b):
             par[f"{a}_vs_{b}"] = CV.pareado(por[a], por[b]); log(f"  {a} vs {b}: {par[f'{a}_vs_{b}']}")
     # reglas fijadas por linaje (bloq): las mas frecuentes del banco al final, en palabras
@@ -288,6 +305,7 @@ def main(argv=None):
     g.add_argument('--arnes', action='store_true'); g.add_argument('--humo', action='store_true')
     g.add_argument('--explora', action='store_true'); g.add_argument('--lee', default=None)
     g.add_argument('--pasajes', action='store_true'); g.add_argument('--humo2', action='store_true')
+    ap.add_argument('--sp', type=int, default=59220); ap.add_argument('--st', type=int, default=59200)
     ap.add_argument('--cadenas', default=None); ap.add_argument('--np', type=int, default=4); ap.add_argument('--Tp', type=int, default=25000)
     ap.add_argument('--semillas', default=None); ap.add_argument('--brazos', default='termo,bloq,bloqaza,o1')
     ap.add_argument('--T', type=int, default=100000)
@@ -329,8 +347,8 @@ def main(argv=None):
         # cadena c (1..5): pasajes p = 0..np-1 a T Tp en la semilla 59220 + 4 (c - 1) + p; luego PRUEBA a T (100k) en la semilla 59200 + c
         # (= la de --explora: se parea con termo/o1). Brazo bloq_pas / bloqaza_pas. El pasaje 0 arranca como bloq (banco vacio).
         cad = [int(c) for c in a.cadenas.split(',')]; brazos = [b for b in a.brazos.split(',') if b]
-        if not all(1 <= c <= 5 for c in cad) or a.np > 4 or any(b not in ('bloq', 'bloqaza', 'bloq2', 'bloq2aza') for b in brazos): raise SystemExit("--pasajes")
-        carpeta = os.path.join(DATOS, f"pasajes_Tp{a.Tp}_np{a.np}"); os.makedirs(carpeta, exist_ok=True)
+        if not all(1 <= c <= 5 for c in cad) or a.np > 4 or not ((a.sp, a.st) in ((59220, 59200), (59410, 59400))) or any(b not in ('bloq', 'bloqaza', 'bloq2', 'bloq2aza') for b in brazos): raise SystemExit("--pasajes")
+        carpeta = os.path.join(DATOS, f"pasajes_Tp{a.Tp}_np{a.np}_sp{a.sp}"); os.makedirs(carpeta, exist_ok=True)
         cprueba = os.path.join(DATOS, f"explora_T{a.T}"); os.makedirs(cprueba, exist_ok=True)
         LOGF = open(os.path.join(carpeta, f"log_{'_'.join(map(str, cad))}_{'_'.join(brazos)}.txt"), 'a', encoding='utf-8')
         def log(s=''): print(s, flush=True); LOGF.write(s + '\n'); LOGF.flush()
@@ -339,10 +357,10 @@ def main(argv=None):
             for b in brazos:
                 sb = None
                 for p in range(a.np):
-                    x = trabajo(59220 + 4 * (c - 1) + p, b, a.Tp, carpeta, log, etiqueta=f"{b}_c{c}_p{p}", siembra=sb)
+                    x = trabajo(a.sp + 4 * (c - 1) + p, b, a.Tp, carpeta, log, etiqueta=f"{b}_c{c}_p{p}", siembra=sb)
                     sb = siembra_de(x) if not x.get('aborto') else None
                     log(f"    siembra tras p{p}: {len(sb) if sb else 0} listas; con rechazo {sum(any(es_rechazo(r) for r in R) for R in (sb or []))}")
-                trabajo(59200 + c, b, a.T, cprueba, log, etiqueta=f"{b}_pas", siembra=sb)
+                trabajo(a.st + c, b, a.T, cprueba, log, etiqueta=f"{b}_pas", siembra=sb)
         return 0
     sem = [int(s) for s in a.semillas.split(',')]
     if not all(s in SEM_EXPLORA for s in sem): raise SystemExit("--explora: solo semillas 59201-59210")
