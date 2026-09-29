@@ -1127,3 +1127,13 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Auditor:** SE SOSTIENE (reservas de registro y vocabulario).
 - ERR-149 (caso H del arnés). El siguiente es ERR-150.
 - **Primera capacidad del linaje que nadie diseñó, con serie + réplica.**
+
+### 29-sep-2026 (nube, rama `nube/eco-sel-largo-20260928`): ECO_SEL LARGO — L NO ×2, MC FUNCIONA ×2
+Con T = 1e7 la selección natural no sigue subiendo K con los genes del cerebro: se estanca desde ~2·10⁵ pasos (el techo no es el tiempo).
+Sumar el margen heredable al cerebro sube el nivel de K (41.7 / 42.6 contra 38.9 / 39.0, 20/20 ×2), pero por recambio:
+- se pare con menos reserva;
+- hay más nacimientos;
+- las vidas son más cortas;
+- no mejora la supervivencia.
+Sin herencia el linaje se extingue (19/20). ERR-150.
+Siguiente propuesto: cambiar lo que puede variar o el mundo (no el tiempo), y separar "más cuerpos breves" de "mejor sostén".

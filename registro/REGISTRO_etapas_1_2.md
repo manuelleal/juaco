@@ -6993,3 +6993,22 @@ también en la serie 2.
   Se corrigió el caso para medir sólo hijos de padre no fundador (AZA 3/203 y 0/309; SEL 346/346 y 276/276). El umbral < 5 % no cambió.
   Salida vieja: `identidad_eco_sel_salida_v1_57de59.txt`. Auditado: legítimo. **El siguiente ERR libre es ERR-150.**
 - **Niveles:** propuesta del coordinador para los niveles 10–13 (ECO): subir por este FUNCIONA ×2. El porcentaje lo fija el director.
+
+### ECO_SEL LARGO (nube, 28–29-sep-2026; T 1e7): **L = NO ×2 · MC = FUNCIONA ×2**
+- Encargo `experimentos/organelos/eco_sel/ENCARGO_NUBE_largo.md`; preregistro `experimentos/organelos/eco_sel_largo/PREREGISTRO_eco_sel_largo.md`
+  (commit `c08dc32`, antes de la serie). Núcleo por anclas desde `eco_sel/nucleo_eco_sel.py` (6a36e47ce61db3e1) → `nucleo_eco_sel_largo.py`
+  (69f2b652ac46cd1b); runner `corre_eco_sel_largo.py` (69db795b7d952d93). Arnés 65/65 (F1 y SEL_C == eco_sel bit a bit a 1e6).
+  Auditor antes (puede correr) y después (recalculó K desde los 200 JSON: SE SOSTIENE). Pool 3.
+- Serie 45401–45420 (RESUMEN sha `4ea7829e45474d57`) y réplica 45421–45440 (`39a241e31d795efc`). Validez completa en las dos:
+  F1 persiste 20/20, 0 refundados, 0 bloqueados, genética declarada.
+- K base [0.5e6, 1e6] → K final [9e6, 1e7] (mediana, serie / réplica):
+  F1 30.7 → 30.8 / 30.9 → 30.8 · SEL_C 39.2 → 38.9 / 39.1 → 39.0 · **SEL_MC 41.8 → 41.7 / 42.0 → 42.6** · SEL_M 34.7 → 34.9 / 34.7 → 34.4 ·
+  AZA_MC 20.0 → 0 / 16.6 → 0 (se extingue 19/20 ×2).
+- **L = NO:** L-1 (SEL_C sube) 9/20 y 8/20, mediana −0.02 y −0.14; L-3 contra F1 8 y 9/20. K se estanca desde ~2·10⁵ pasos.
+- **MC = FUNCIONA:** SEL_MC > SEL_C 20/20 ×2 (+2.83, +3.20); SEL_MC > AZA_MC 20/20 ×2.
+- Reservas del auditor:
+  - **H-1:** MC-2 se cumple en buena parte por extinción de AZA_MC.
+  - **H-3:** la ventaja de SEL_MC viene de más recambio (rep_umbral ~0.6: ~28 000 contra 17 600 nacimientos por ventana; vida media
+    ~1 500 contra ~2 200; ley de Little reproduce K), no de menos muertes por veneno (hambre + sed 96–98 % en los dos).
+- **ERR-150:** el caso de arnés del encargo "SEL_MC con σ = 0 == F1" no puede valer (`motor_eco.muta` mueve −1 un gen entero con z = 0);
+  resuelto antes de la serie con (B) p_mut = 0 y (B′). **El siguiente libre es ERR-151.** Informe: `experimentos/organelos/eco_sel_largo/INFORME.md`.
