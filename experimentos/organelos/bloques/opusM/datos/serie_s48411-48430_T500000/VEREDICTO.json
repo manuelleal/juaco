@@ -1,0 +1,22 @@
+{
+ "veredicto": "FUNCIONA",
+ "lineas": [
+  "V0 serie completa (20 semillas x 4 brazos, T 500000, t_corte 100000, sin abortos, bloqueados 0): SE CUMPLE",
+  "V1 la base sin vivero muere (ING_F1_V persiste <= 3/20): SE CUMPLE (0)",
+  "V2 carro FABRICA_ECO y reglas declaradas por brazo: SE CUMPLE",
+  "persiste: {'BLOQ_V': 19, 'ING_SEL_C_V': 14, 'BLOQ_AZA_V': 1, 'ING_F1_V': 0}",
+  "P1 BLOQ_V persiste >= 17/20: SE CUMPLE (19)",
+  "P2 K(BLOQ_V) > K(ING_SEL_C_V) pareado >= 15/20 y mediana >= +10: SE CUMPLE (19/20, mediana +29.47)",
+  "P3 K(BLOQ_V) > K(BLOQ_AZA_V) pareado >= 15/20 y BLOQ_AZA_V persiste <= 5/20: SE CUMPLE (19/20, mediana +36.08; AZA persiste 1)",
+  "P4 organo de rechazo (boca w<0 que separa exacto B,D de A,C) en >= 50 % de los vivos en T en >= 12/20 semillas de BLOQ_V: SE CUMPLE (19/20)",
+  "VEREDICTO (una serie): FUNCIONA"
+ ],
+ "T": 500000,
+ "desde": 48411,
+ "n": 20,
+ "shas": {
+  "nucleo_eco_sel_ing.py": "c2189f9d22b72386",
+  "motor_frio_rapido.py": "ff9d890a5cce9dec",
+  "motor_bloques.py": "ff782697e54585a5"
+ }
+}
