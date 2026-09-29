@@ -1,0 +1,153 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "abortos_0": true,
+   "completos": false,
+   "coherentes": true,
+   "refs_sha": true,
+   "ancla_v143": false,
+   "ancla_o1": false,
+   "arnes": false
+  },
+  "v143_R0_med": null,
+  "puertas": {
+   "F1_mayoria_bq3_pas": false,
+   "F2_gana_bq2_pas": false,
+   "F3_gana_bq3": false
+  },
+  "modesto": false,
+  "veredicto": "NO SE LEE",
+  "suma_cruzan": {
+   "bq3_pas": 0,
+   "bq2_pas": 0,
+   "bq3": 0,
+   "forzada3": 0,
+   "termo": 0,
+   "o1": 0,
+   "bloq2": 0,
+   "v143": 0
+  },
+  "mayorias": {
+   "bq3_pas": 0,
+   "bq2_pas": 0,
+   "bq3": 0,
+   "forzada3": 0,
+   "termo": 0,
+   "o1": 0,
+   "bloq2": 0,
+   "v143": 0
+  },
+  "pareados": {
+   "bq3_pas_vs_bq2_pas": {
+    "n": 1,
+    "gana": 0,
+    "dif_suma": 0
+   },
+   "bq3_pas_vs_bq3": {
+    "n": 1,
+    "gana": 0,
+    "dif_suma": 0
+   },
+   "bq3_pas_vs_bloq2": {
+    "n": 0,
+    "gana": 0,
+    "dif_suma": 0
+   },
+   "bq3_pas_vs_termo": {
+    "n": 0,
+    "gana": 0,
+    "dif_suma": 0
+   },
+   "bq3_pas_vs_o1": {
+    "n": 0,
+    "gana": 0,
+    "dif_suma": 0
+   },
+   "bq3_vs_bloq2": {
+    "n": 0,
+    "gana": 0,
+    "dif_suma": 0
+   },
+   "forzada3_vs_termo": {
+    "n": 0,
+    "gana": 0,
+    "dif_suma": 0
+   }
+  }
+ },
+ "tabla": {
+  "bq3_pas": {
+   "0": {
+    "seed": 614991,
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.5,
+    "fund_med": 0.0,
+    "fund_media": 13.1,
+    "coherente": true,
+    "n_lin": 9,
+    "siembra_riesgo": 0.143,
+    "siembra_s3": 0.571,
+    "banco_riesgo": 0.147,
+    "fund_de_banco": 127,
+    "fund_n": 127
+   }
+  },
+  "bq2_pas": {
+   "0": {
+    "seed": 614991,
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.2083,
+    "fund_med": 8.0,
+    "fund_media": 12.8,
+    "coherente": true,
+    "n_lin": 9,
+    "siembra_riesgo": 0.0,
+    "siembra_s3": 0.0,
+    "banco_riesgo": 0.0,
+    "fund_de_banco": 124,
+    "fund_n": 124
+   }
+  },
+  "bq3": {
+   "0": {
+    "seed": 614991,
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.04,
+    "fund_med": 4.0,
+    "fund_media": 14.0,
+    "coherente": true,
+    "n_lin": 9,
+    "banco_riesgo": 0.0,
+    "fund_de_banco": 99,
+    "fund_n": 135
+   }
+  },
+  "forzada3": {
+   "0": {
+    "seed": 614991,
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.0263,
+    "fund_med": 0.0,
+    "fund_media": 16.0,
+    "coherente": true,
+    "n_lin": 9,
+    "banco_riesgo": null,
+    "fund_de_banco": 0,
+    "fund_n": 153
+   }
+  },
+  "termo": {},
+  "o1": {},
+  "bloq2": {},
+  "v143": {}
+ },
+ "abortos": [],
+ "predicciones": [],
+ "preregistro": "PREREGISTRO_sentidos_muro.md",
+ "sha_runner": "ace988ad52a0fcb3"
+}
