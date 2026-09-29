@@ -98,4 +98,4 @@ Code: MIT ([`LICENSE`](LICENSE)). Texts and data: CC BY 4.0 ([`LICENSE-DATA`](LI
 [`CITATION.cff`](CITATION.cff).
 
 Author: **Christiam Manuel Puentes Leal**, Independent researcher, Colombia.
-ORCID: [TU ORCID]. Contact: [TU CORREO PERSONAL].
+ORCID: [0009-0002-2570-3397](https://orcid.org/0009-0002-2570-3397). Contact: [TU CORREO PERSONAL].
