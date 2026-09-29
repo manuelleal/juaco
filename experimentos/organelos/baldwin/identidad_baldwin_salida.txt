@@ -1,0 +1,44 @@
+identidad_baldwin.py 2026-09-29 12:28:16 T 30000
+(K) construccion y shas
+  [OK ] construye_baldwin --verifica IGUAL d0a620d2f5e2605e
+  [OK ] verifica() del runner (shas + motor == anclas) 
+(A) perilla apagada == BLOQUES bit a bit
+  [OK ] A1 corre(FIJO_V_Pinf) == corre_bloques.corre(BLOQ_V) [motor_bloques], campo a campo distintas [] · hijos 1342 ins 179 · vivos T 98 · K 96.125
+  [OK ] A2 inversion cada 6 000: motor_baldwin plast 0 == motor_bloques3 distintas [] · n_inv 4/4 · hijos 1142
+  [OK ] A3 plast 1 con p_ins_pl 0 y p_bit 0 == plast 0 distintas [] · aprende 0 · filas del banco con 7 col 15
+  [OK ] A3 plast 3 con p_ins_pl 0 y p_bit 0 == plast 0 distintas [] · aprende 0 · filas del banco con 7 col 15
+(B) controles que deben diferir (P 6 000, s56493)
+  [OK ] PLAST_V_P6k != FIJO_V_P6k 18 claves distintas · K 122 vs 95 (vivos en T)
+  [OK ] PLAST_AZA_P6k != PLAST_V_P6k 17 claves distintas · K 114 vs 122 (vivos en T)
+  [OK ] PLAST_RW0_P6k != PLAST_V_P6k 18 claves distintas · K 93 vs 122 (vivos en T)
+  [OK ] PLAST_V_P6k: la pieza actua (n_aprende > 0) aprende 49 en 49 mordidas · flips 17
+  [OK ] PLAST_RW0_P6k: la pieza actua (n_aprende > 0) aprende 96 en 96 mordidas · flips 3
+  [OK ] PLAST_AZA_P6k: la pieza actua (n_aprende > 0) aprende 52 en 52 mordidas · flips 7
+  [OK ] AZA: bit de los vivos mezclado (fraccion en [0.2, 0.8]) fraccion 0.5754716981132075 de 106 reglas
+  [OK ] H0 PLAST_V: reglas no plasticas w == w0; alguna plastica aprendio plasticas movidas 1
+(H) sin Lamarck: 2 reglas plasticas forzadas con w0 = 0, tasas 0 (P 6 000, s56494)
+  [OK ] todo vivo en T conserva w0 = 0 y bit 1 (no se hereda lo aprendido) vivos 101
+  [OK ] algun vivo tiene w aprendido != 0 reglas movidas 151 · w medio (B/D, A/C) [-0.532, 0.316] · n_inv 4
+  [OK ] todo hijo es genetica == padre (tasas 0) 1665/1665
+(Q) corte en 30 000 + reanuda == entera (PLAST_V_P6k, T 40 000, s56494)
+  [OK ] corte + reanuda == entera cortado True · distintas [] · aprende 152/152 · n_inv 6/6
+(D) determinismo
+  [OK ] PLAST_RW0_P6k dos veces == 
+(L) la letra en entradas sinteticas
+  [OK ] caso 0: espera FUNCIONA da FUNCIONA · puertas {'PA_rescate': True, 'PB_controles': True, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': True}
+  [OK ] caso 1: espera HAY ALGO MODESTO da HAY ALGO MODESTO · puertas {'PA_rescate': True, 'PB_controles': True, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': False}
+  [OK ] caso 2: espera HAY ALGO MODESTO da HAY ALGO MODESTO · puertas {'PA_rescate': False, 'PB_controles': False, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': True}
+  [OK ] caso 3: espera NO da NO · puertas {'PA_rescate': True, 'PB_controles': False, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': False}
+  [OK ] caso 4: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_controles': True, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': True}
+  [OK ] caso 5: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_controles': True, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': True}
+  [OK ] caso 6: espera NO SE LEE da NO SE LEE · puertas None
+  [OK ] caso 7: espera FUNCIONA da FUNCIONA · puertas {'PA_rescate': True, 'PB_controles': True, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': True}
+  [OK ] caso 8: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_controles': True, 'PD_seleccion_prende': True, 'PE_seleccion_apaga': True}
+(R) banderas y candados
+  [OK ] --pool 3 aborta 
+  [OK ] --humo con pool aborta 
+  [OK ] bandera desconocida aborta 
+  [OK ] bandera abreviada aborta 
+  [OK ] candado exclusivo (O_EXCL): el 1o entra, el 2o se niega, --reanuda lo retoma 
+  [OK ] --serie sin commit (git_limpio) no corre y no crea carpeta rc 1
+RESULTADO 34/34 en 69 s

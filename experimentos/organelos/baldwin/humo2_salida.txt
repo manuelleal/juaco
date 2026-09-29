@@ -1,0 +1,38 @@
+CORRE_BALDWIN · humo2_s56496-56498_T200000 · 20260929_122308 · python 3.14.2 · pool NO (un proceso) · corre_baldwin.py 3fa74976724c0fce · preregistro PREREGISTRO_baldwin.md 207247c8027edb6c · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin\datos\humo2_s56496-56498_T200000_20260929_122308
+  tareas 6 · brazos ['PLAST_V_Pinf', 'FIJO_V_Pinf'] · semillas 56496-56498 · T 200000 · t_corte 100000 · VIDA 2270 · P {'P6k': 6000, 'P22k': 22000, 'P68k': 68000, 'Pinf': 0} · reanuda False
+  sha experimentos\organelos\bloques\opusM\corre_bloques.py a090b82eae9f1ee3 OK
+  sha experimentos\organelos\bloques\opusM\motor_bloques.py ff782697e54585a5 OK
+  sha experimentos\organelos\bloques\opusM\motor_bloques3.py 21b5ee28d086b3be OK
+  sha experimentos\organelos\bloques\opusM\construye_bloques3.py 5532f1c1fddbb624 OK
+  sha experimentos\organelos\baldwin\motor_baldwin.py d0a620d2f5e2605e OK
+  corre_bloques.verifica (nucleo_eco_sel_ing, motor_frio_rapido, motor_bloques): OK
+  motor_baldwin.py == construye_baldwin.construye() por anclas desde motor_bloques3: OK
+  [12:23:23] [1/6] [   15.3s] PLAST_V_Pinf    s56496 (15.3s) persiste 0 K 1.2376237623762376 t_ext 104718 frac_pl None aprende 536 n_inv None vida2a 150.3 aborto None
+  [12:23:36] [2/6] [   28.6s] FIJO_V_Pinf     s56496 (13.2s) persiste 1 K 11.178217821782178 t_ext None frac_pl None aprende None n_inv None vida2a 1075.6 aborto None
+  [12:23:51] [3/6] [   43.4s] PLAST_V_Pinf    s56497 (14.8s) persiste 1 K 35.92079207920792 t_ext None frac_pl 0.8571 aprende 3994 n_inv None vida2a 2147.7 aborto None
+  [12:24:05] [4/6] [   56.9s] FIJO_V_Pinf     s56497 (13.5s) persiste 1 K 35.24752475247525 t_ext None frac_pl None aprende None n_inv None vida2a 2155.4 aborto None
+  [12:24:22] [5/6] [   73.9s] PLAST_V_Pinf    s56498 (16.9s) persiste 1 K 38.86138613861386 t_ext None frac_pl 0.2247 aprende 1526 n_inv None vida2a 2132.7 aborto None
+  [12:24:35] [6/6] [   87.4s] FIJO_V_Pinf     s56498 (13.5s) persiste 0 K 1.9108910891089108 t_ext 115060 frac_pl None aprende None n_inv None vida2a 271.8 aborto None
+
+================ LECTURA (PREREGISTRO_baldwin.md sec. 6-7) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin\datos\humo2_s56496-56498_T200000_20260929_122308 · VIDA 2270 · P/vida P6k 2.6 P22k 9.7 P68k 30.0 Pinf inf
+brazo           persiste   K med t_ext med frac_pl med frac_boca n_disc  |w-w0|   aprende n_inv  vida2a    seg
+PLAST_V_Pinf         2/3 35.9208  104718.0      0.5409    0.5428   77.0     0.0    1526.0  None  2132.7   15.1
+FIJO_V_Pinf          2/3 11.1782  115060.0        None      None    0.0    None      None  None  1075.6   13.5
+  frac_pl por semilla PLAST_V_Pinf: [None, 0.8571, 0.2247]
+  DESCRIPTIVO (punto 3 del auditor): frac_pl EN EL TIEMPO (mediana entre semillas con dato, n) y el ultimo dato antes de extinguirse
+  PLAST_V_Pinf    50k:None(0) 100k:0.9162(3) 150k:0.5266(2) 200k:0.5409(2) · ultimo por semilla [1.0, 0.8571, 0.2247]
+  pareados (secundarios): {'PLAST_V_Pinf-FIJO_V_Pinf[K]': {'gana': 2, 'n': 3, 'dif_med': 0.6733}}
+  curva frac_pl (mediana) por P: {'Pinf': 0.5409}
+
+  VALIDEZ {'V0_completa_sin_abortos': True, 'V1_ancla_FIJO_Pinf_persiste': True, 'V2_cfg_por_brazo': True, 'V3_inversiones': True, 'V4_la_pieza_actua': True, 'V5_AZA_bit_al_azar': True} · V5 NO APLICA (0 semillas con dato < 1): decide PB
+  PUERTAS {'PA_rescate': False, 'PB_controles': False, 'PD_seleccion_prende': False, 'PE_seleccion_apaga': False}
+  SECUNDARIAS {'curva_frac_pl_por_P': {'Pinf': 0.5409}, 'D1_curva_baja_con_P': False, 'RW0_frac_alta': 0, 'frac_pl_tiempo': {'PLAST_V_Pinf': {'t': {'50000': (None, 0), '100000': (0.9162, 3), '150000': (0.5266, 2), '200000': (0.5409, 2)}, 'ult': [1.0, 0.8571, 0.2247]}}}
+  VEREDICTO (HUMO, no cuenta) NO
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin\datos\humo2_s56496-56498_T200000_20260929_122308\resumen.json (sha 23a78dd17b66038d)
+Terminado en 87.4s
+VEREDICTO DE LA CORRIDA: HUMO (no cuenta): NO   (regla de parada: PREREGISTRO_baldwin.md sec. 8)
+
+real	1m28.624s
+user	0m0.015s
+sys	0m0.000s
