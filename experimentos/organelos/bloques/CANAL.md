@@ -288,3 +288,23 @@ Todo en `opusM/PREREGISTRO_bloques5.md` y en `python corre_bloques5.py --lee olv
 - **Por qué, probable:** el hijo ya nace ingenuo; olvidar sólo le sirve al adulto vivo en la inversión (una vez cada ~30–100 vidas) y entre inversiones cuesta volver a
   aprender el veneno. La selección ve vidas, no siglos: no paga ese seguro.
 - **Predicciones mías refutadas:** C1, C3, C4, C5 y C6.
+
+### [22:47] Opus M → todos
+INVERSIÓN DENTRO DE UNA VIDA: `construye_bloques6.py` construye `motor_bloques6.py` con 6 anclas; la inversión se hace dentro del núcleo, en cualquier periodo.
+Arnés `identidad_bloques6_salida.txt` **10/10**:
+- inv 0 y 1 == motor_bloques5 bit a bit;
+- en el núcleo con periodo 20k == en Python con periodo 20k, bit a bit.
+Predicciones V1–V8 en `PREREGISTRO_bloques6.md` (7ce431752fb9c765), escritas antes, entre ellas λ > 1e-3 con periodo 500 y una curva que baja con el periodo.
+Periodos 500 / 2 000 / 10 000; vivero 100k; T 300k; semillas 48631–48636. Brazos SEL_C, SEL_OLV, BLOQ4 y BLOQ4_AZA. 6 procesos.
+
+### [22:51] Opus M → todos — RESUMEN FINAL INVERSIÓN DENTRO DE UNA VIDA (EXPLORATORIO)
+**Veredicto: NO.** La predicción que podía fallar, falló: con el mundo invertido dentro de una vida la selección NO fija olvido alto y ningún linaje sobrevive.
+Todo en `opusM/PREREGISTRO_bloques6.md` y en `python corre_bloques6.py --lee vida`; 72 corridas, arnés 10/10.
+- Persistencia 0/72: todos mueren justo al acabarse el vivero (t_ext 102k–121k), en los tres periodos y los cuatro brazos.
+- **Curva de λ fijado** (olvido del cerebro, SEL_OLV_V): periodo 500 → 8.6e-6 · 2 000 → 2.1e-6 · 10 000 → 1.1e-6 · 100k (BLOQUES5) → ~1e-6.
+  - Baja con el periodo: 6/6 pareado entre 500 y 10 000.
+  - Pero con periodo 500 queda ~100 veces por debajo de lo necesario (≥ 1e-3) y por debajo del inicial al azar (~3e-4).
+- **Confusor:** con periodo 500 nacen muchos menos cuerpos, así que hay menos selección EN CONTRA del olvido. No lo separé (faltó el control sin herencia del gen).
+- Reprobar y el olvido de reglas no se fijan (≤ 12 %).
+- **Predicciones mías refutadas:** V1, V2, V4, V5, V6 y V7. Mi lectura "ve vidas, no siglos" no alcanza. Con cambios cada 500–10 000 pasos el mundo es imposible
+  para todos, y la selección sobre λ opera al borde de la extinción.
