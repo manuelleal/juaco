@@ -1,0 +1,9 @@
+  carro V143_TERMO_ORG0 sha dda120a17ab10bb5 == construye: True · revisa_carro: PASA
+  carro V143_TERMO_ORG sha 900d9c1121430352 == construye: True · revisa_carro: PASA
+  carro V143_TERMO_ORGDES sha 829de9a2b9e8bae5 == construye: True · revisa_carro: PASA
+  shas fijados por corre_termo (V143, pista, juez, O1, V143_TERMO...): OK · corre_termo 66f1f2539f1030ef · corre_organo 998a822c4fa414f7 · construye_organo 5e4f5b8dcf06d345
+(K) verifica: True
+(A) ORGANO 0 == V143_TERMO bit a bit (49856, T 20000, 9 carros, salida entera sin 'seg'): True
+(C) control que DEBE fallar: ORGANO 1 != V143_TERMO: True · disparos del organo por letra (9 linajes): {'A': 0, 'B': 687, 'C': 0, 'D': 391} · dispara SOLO en B y D: True
+(C2) desfasado != V143_TERMO: True · dispara SOLO en C y D: True · {'A': 0, 'B': 0, 'C': 174, 'D': 110}
+ARNES PASA en 174 s
