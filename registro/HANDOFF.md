@@ -1152,3 +1152,8 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **El muro queda mapeado:** es el establecimiento; hay que decidir cuándo limpiar y cuándo comer.
 - **Nada pendiente sin registrar.** En la nube quedan termo_banco (serie) y eco_sel_largo (réplica, se sugirió pararla).
 - **Plan de mañana** en `registro/ESTADO.md`.
+
+### 29-sep-2026 (mañana)
+- ★ Termostato en la pista FUNCIONA ×2 (pasg > v143 20/20 y 18/20, > ctl 19/20 y 20/20; g a banda 20/20 ×2; ≈ TERMO 8/20; no cruza el muro).
+- dinamita se cierra sin informe (VETO/LIMPIA NO; PATAS sin confirmar; ola 4 8/80); ERR-154, ERR-155. Siguiente ERR libre: ERR-156.
+- pista_pob preregistrada (21a63ff5) y explorando con pool 6.

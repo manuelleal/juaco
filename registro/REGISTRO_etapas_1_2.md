@@ -7150,3 +7150,62 @@ también en la serie 2.
   - "muerde A Q4 ≤ 1.10 × tronco" (15/20).
 - **Lectura:** TERMO′ queda a UNA puerta de ser tronco. Lo que falta es conducta: morder menos veneno en los escenarios de v3′.
   No se toca la letra de T-E.
+
+
+## ★ La selección encuentra el termostato en la pista (serie 28-sep 22:55 – 29-sep 09:05; réplica 29-sep 09:05–10:08): **FUNCIONA ×2**
+> Pregunta: con pasajes seriados cortos (lo vivo al final de un pasaje siembra a los fundadores del siguiente, sin juez), ¿el margen `g`
+> del termostato de boca sube solo desde la zona letal (< 0.10) a la banda que funciona, y el bicho de la pista le gana a V143 y al mismo
+> carro sin transferencia? No es un intento contra el muro: la letra es la del termostato.
+
+- **Preregistro:** `experimentos/organelos/reunion/opusB/PREREGISTRO_termostato_pista.md` (commit `7d833c71`, antes del humo y de los datos).
+  Auditor LISTO. Arnés `identidad_termostato.py` 27/27. Runner `corre_termostato.py` sha `27d091dd179ad95c`; carro `V143_PAS` (sólo varía `g`).
+- **Montaje:** T pasaje 25 000 × 10 pasajes; prueba T 100 000; 20 índices; pool 6. Semillas nuevas en serie y réplica.
+- **Crudos:** `datos_termostato/termostato_serie_20260928_225549/` (resumen sha `cd271ec2767eddff`) y `termostato_replica_20260929_090548/`
+  (resumen sha `dd724aab152c4faa`); logs `serie_termostato_pool6.log`, `replica_termostato_pool6.log`; `bloque_termostato_salida.txt`.
+  Commits `2e59aa05` (serie), `68d2821b` (réplica y bloque).
+- **Brazos:** `pasg` (candidato), `ctl` (mismo carro sin transferencia), `v143`, `termo` (g 0.40 diseñado, referencia), `o1` (ancla).
+
+**Veredicto (§6): serie FUNCIONA, réplica FUNCIONA → BLOQUE FUNCIONA ×2.** V1–V5 OK; PA, PB, PC OK en las dos; 0 abortos.
+
+| | serie | réplica |
+|---|---|---|
+| PA `pasg` gana a `v143` (dif mediana) | **20/20** (+0.266) | **18/20** (+0.337) |
+| PA `pasg` gana a `ctl` | **19/20** (+0.521) | **20/20** (+0.568) |
+| PB g sube de p0 < 0.10 a banda [0.10, 0.60] | **20/20** | **20/20** |
+| PC `ctl` en banda (pide ≤ 5) | **0/20** | **0/20** |
+| R0 real mediano pasg / ctl / v143 | 0.890 / 0.350 / 0.598 | 0.934 / 0.337 / 0.577 |
+| R0 real mediano termo / o1 | 0.929 / 0.933 | 0.922 / 0.943 |
+| mayorías que cruzan pasg / termo / o1 | 10 / 11 / 19 | 12 / 13 / 19 |
+
+- g de la siembra de `pasg`: p0 entre −0.03 y +0.07; último pasaje 0.12–0.40. `ctl` se queda en ~0.02.
+- **Serie cortada y reanudada:** apagado del PC la noche del 28-sep; reanudada el 29-sep 08:51 con `--reanuda --pool 6`. Sin pérdida, 0 abortos.
+- **Predicciones del creador (Opus B, §8):** refutada T3 en la réplica (pasg 0.934 > 0.92, arriba del rango). Las demás (T1, T2, T4–T10 y
+  "serie FUNCIONA p 0.55"), cumplidas.
+
+**Lo que NO dice:**
+- **No cruza la letra del muro:** mayorías 10/20 y 12/20 contra 19/20 de O1. El muro sigue MAPEADO; esta línea no lo intentaba.
+- **≈ TERMO, no mejor:** `pasg` gana a `termo` 8/20 en las dos (dif −0.008 / −0.009). La selección REDESCUBRE el termostato.
+- Los fundadores por linaje de `pasg` (79–87) siguen muy sobre O1 (37–38): el establecimiento, la palanca del muro, no se mueve.
+- **Vocabulario:** permitido "la selección lleva sola g de la zona letal a la banda en 20/20 ×2 y le gana a V143 y al control sin
+  transferencia"; "empata con el termostato diseñado". Prohibido "cruza el muro", "supera a TERMO", "aprende".
+- **Nivel:** primera pieza evolucionada DENTRO de la pista. +2 aceptado por el director (ver ESTADO). ERR nuevos: ninguno.
+
+## dinamita (intento #4 contra el muro, 28-sep-2026, ~11:00–23:00): **SE CIERRA SIN INFORME**
+> Carpeta `experimentos/organelos/dinamita/`. El agente nunca entregó informe; los datos se versionaron "sin leer" en `c3f9d34b`. Este cierre
+> es la lectura del auditor (29-sep) y **no es veredicto de un preregistro**: todo es EXPLORATORIO y adaptativo.
+
+- **Letra del muro: NO se cruza.**
+- **Olas 1–2 (VETO / LIMPIA, 8 brazos): NO, 0/10 semillas** (39201–39210), R0 0.05–0.30. Tapan el mundo o dejan un organismo inmortal y
+  estéril. Tocar lo malo en la boca queda cerrado.
+- **Ola 3 (PATAS sobre TERMO, exploratorio):** pc R0 0.943 8/10; pu 0.960 7/10; termo 0.872 6/10; o1 0.939 10/10; control pi 0.742 1/10.
+  pc es el máximo de 12 brazos en las mismas 10 semillas (sesgo del ganador); P1 depende de semillas en el umbral 5/9; pc/pu bajan el mundo
+  A+C (2.5 contra 3.3), sin analizar si es comer más o decidir mejor.
+- **Ola 4 (confirmatoria, semillas nuevas): INCOMPLETA, 8/80 corridas** (`lanza_ola4.out`). No se lee.
+- Si algún día se retoma PATAS: preregistro nuevo commiteado antes, termo/pc/pu/pi en 20 semillas frescas, medido por linajes que cruzan
+  (no por mayoría por semilla). No es prioridad.
+- **ERR-154 (proceso, 28-sep):** las predicciones de las olas 2–4 se escribieron con los datos de la ola anterior a la vista y **sin commit
+  previo** (`dinamita/PREDICCIONES_previas.md:26,43,58`); el primer commit del archivo (`c3f9d34b`) es posterior a todas las olas. Regla: una
+  predicción sin commit previo a los datos que juzga no cuenta como predicción; se marca "escrita con datos a la vista".
+- **ERR-155 (proceso, 28-sep):** la ola 4 (8/80) se versionó junto al resto sin informe ni lectura. Regla: **nada se versiona como cerrado sin
+  lectura**; una corrida incompleta se versiona con nota "incompleto, sin leer" en el mismo commit, o no se versiona.
+- **Siguiente ERR libre: ERR-156.**

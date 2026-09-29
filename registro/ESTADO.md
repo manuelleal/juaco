@@ -2,7 +2,7 @@
 
 # ESTADO: una página que se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **28-sep-2026, ~21:45**, por el coordinador. Es el cierre del día 28-sep, trabajado en la rama `organelos`
+> Última reescritura: **29-sep-2026, ~10:45** (antes: 28-sep ~21:45), por el coordinador. Es el cierre del día 28-sep, trabajado en la rama `organelos`
 > (sin merge a `main` todavía; lo decide el director). El detalle está en `REGISTRO_etapas_1_2.md` (entradas del 28-sep) y la narrativa
 > en `HANDOFF.md`. La página del 25-sep queda en el historial de git.
 
@@ -57,18 +57,18 @@ Candidato a v14.4: **TERMO′** (v14.3 + termostato de boca con memoria que olvi
 - **Lección repetida 3 veces en el día:** no olvidar mata (TERMO en T-C, la memoria de las reglas, el cerebro). Pero la selección no paga el
   olvido si el cambio es raro, y si es muy frecuente el mundo es imposible. Hay que buscar la banda intermedia o una pieza distinta.
 
-## EN CURSO al apagar el PC (00:00): serie del confirmatorio "la selección encuentra el termostato en la pista"
-- Preregistro `experimentos/organelos/reunion/opusB/PREREGISTRO_termostato_pista.md` (commit `7d833c7`, auditor LISTO). Arrancó a las ~22:58.
-- **MAÑANA, primero:**
-  `python experimentos/organelos/reunion/opusB/corre_termostato.py --serie --reanuda --pool 6 2>&1 | tee -a experimentos/organelos/reunion/opusB/serie_termostato_pool6.log`
-- Luego la réplica (`--replica`) si la serie no da NO, y `--bloque`.
-- **Pendiente de leer:** `experimentos/organelos/dinamita/`, el intento #4 contra el muro. El agente trabajó desde las 11:00 y nunca entregó
-  informe. Sus datos están versionados pero NO LEÍDOS: no cuentan como resultado hasta que un auditor los lea.
+## Cerrado el 29-sep (mañana), leído desde los crudos
+- **★ TERMOSTATO EN LA PISTA = FUNCIONA ×2** (`reunion/opusB/`, commits `2e59aa05`, `68d2821b`). La selección lleva sola g de la zona letal a la
+  banda en 20/20 ×2; pasg gana a v143 (20/20, 18/20) y al control sin transferencia (19/20, 20/20). **No dice:** ≈ TERMO (8/20 ×2); mayorías
+  10 y 12/20 contra O1 19: no cruza la letra del muro. La serie se cortó por apagado y se reanudó sin pérdida.
+- **dinamita (intento #4) = SE CIERRA SIN INFORME.** VETO/LIMPIA NO (0/10); PATAS exploratorio (pc 8/10) sin confirmar; ola 4 8/80. ERR-154, ERR-155.
+- **pista_pob preregistrada** (`21a63ff5`, preregistro sha `68c78af5`): pista NUEVA versionada (K = 8 copias de la pista vieja, migración sólo
+  al fundar); pista.py y juez.py sin tocar; arnés PASA; auditor LISTO tras 2 cambios antes de datos. **Explora corriendo, pool 6.**
 
 ## Plan para mañana (propuesta del coordinador; decide el director)
 1. **El muro con bloques y población.** BLOQUES en la pista con más cuerpos o tiempo, o un mundo intermedio, y sentidos para "¿hay algo
    bueno a la vista? / reservas", para que la selección arme la decisión "limpiar o comer".
-2. **Confirmar "la selección encuentra el termostato en la pista"** (pasg; preregistro nuevo, serie + réplica en el PC).
+2. ~~Confirmar "la selección encuentra el termostato en la pista"~~ **HECHO 29-sep: FUNCIONA ×2.**
 3. **Subir de procariota:** un mundo que cambia (lo bueno se vuelve malo), donde la memoria y lo social deberían ganarle al instinto
    fijo. Después, depredadores y parásitos que coevolucionen: la vía clásica a la evolución abierta.
 3b. **Mundo enriquecido** (idea del director, 28-sep ~22:00, a partir de lo que leyó sobre chimpancés en cautiverio: sin estímulo no
@@ -79,11 +79,13 @@ Candidato a v14.4: **TERMO′** (v14.3 + termostato de boca con memoria que olvi
 
 ## Niveles (los fija el director)
 Propuesta: niveles 10–13 (ECO), de ~10 % a **+15–20**, por ECO_SEL ×2, ECO_SEL_ING ×2 y **BLOQUES ×2**.
+**29-sep:** el director aceptó la recomendación del coordinador: sumar **+2** (total +17–22) por el termostato-en-la-pista ×2, primera
+pieza evolucionada DENTRO de la pista (modesto: empata con TERMO y no cruza el muro). +1 más sólo si pista_pob mueve el establecimiento.
 
 ## ERR
-ERR-149 a ERR-153 se usaron el 28-sep (ERR-151 está reservado para la rama nube/eco-sel-largo). **El siguiente libre es ERR-154.**
+ERR-149 a ERR-153 se usaron el 28-sep (ERR-151 está reservado para la rama nube/eco-sel-largo). ERR-154 y ERR-155 el 29-sep (dinamita).
+**El siguiente libre es ERR-156.**
 
 ## Decisiones para el director (máximo 2)
-1. **¿Se toca la pista de la carrera para darle población por linaje?** Sin eso, la evolución no puede atacar el muro dentro de la
-   pista. Recomendación: sí, como pista NUEVA versionada ("pista_pob"), sin cambiar la vieja ni la letra del muro.
-2. Los porcentajes de los niveles 10–13 (propuesta +15–20) y el merge de `organelos` a `main`.
+1. Qué hacer según el veredicto de pista_pob (si FUNCIONA: serie n=20 + réplica, ~5–6 h cada una).
+2. El merge de `organelos` a `main`.
