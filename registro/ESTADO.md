@@ -1,50 +1,63 @@
 # ESTADO: una página que se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **25-sep-2026, ~16:00**, por el coordinador. Es el cierre formal de la integración de `organelos` (merge `569670e`).
-> La historia está en `REGISTRO_etapas_1_2.md` ("CIERRE 24–25-sep-2026") y la narrativa en `HANDOFF.md`. La página del 23-sep queda
-> en el historial de git.
+> Última reescritura: **28-sep-2026, ~21:45**, por el coordinador. Es el cierre del día 28-sep, trabajado en la rama `organelos`
+> (sin merge a `main` todavía; lo decide el director). El detalle está en `REGISTRO_etapas_1_2.md` (entradas del 28-sep) y la narrativa
+> en `HANDOFF.md`. La página del 25-sep queda en el historial de git.
 
 ## Tronco
-**v14.3** (tag `v14.3-tronco`, `40f9350`, 24-sep) = v14.2 + la reparación N. Tiene 24 archivos congelados.
-Regla 1: `bateria_v143.py 6` y `bateria_generaliza_v143.py organismo_v143 20 --desde 101`.
+**v14.3** (tag `v14.3-tronco`, `40f9350`, 24-sep) sigue siendo el tronco. Tiene 24 archivos congelados, intactos.
+Candidato a v14.4: **TERMO′** (v14.3 + termostato de boca con memoria que olvida). Con ERR-150 pasa T-A, T-B, T-C, T-D, T-F y T-G;
+**sólo cae T-E**, por conducta real: muerde más veneno que v14.3 en los escenarios de v3′.
 
-## Hito
-**F1 ARRANQUE EN FRÍO: FUNCIONA ×2** (`experimentos/organelos/frio/`). El linaje del bicho real (la familia pasa sólo lo que tuvo
-consecuencia) se sostiene 1e6 pasos sin vivero ni fundadores repuestos desde t = 1, en ECO w90: 20/20 ×2, R0 de nacidos 1.000.
-Los controles dan 1/20 (tabla barajada) y 0/20 (sin familia). **No transfiere a la pista de la carrera (NO).**
+## Hitos del 28-sep (serie + réplica preregistradas, auditadas desde los crudos)
+1. **★★ BLOQUES = FUNCIONA ×2** (`experimentos/organelos/bloques/opusM/`).
+   - Montaje: genoma de reglas componibles y duplicables (sentido/píxel, comparador, acción, peso; mutar, duplicar, borrar, HGT),
+     en ECO, con hijo ingenuo y vivero finito.
+   - La selección natural fija **sola un órgano de rechazo heredable (instinto)** y lo **duplica** (Ohno).
+   - Con ese órgano el linaje se sostiene sin vivero: 19/20 ×2, contra 14/13 de los 15 genes y 1/0 sin herencia.
+   - **Es el primer órgano construido por la selección en JUACO.**
+2. **★ ECO_SEL = FUNCIONA ×2.** La selección sobre el linaje de F1 frío sube la capacidad de carga K de ~31 a ~39.
+3. **★ ECO_SEL_ING = FUNCIONA ×2.** Con hijos ingenuos, la selección baja 31–32 % los fundadores que el linaje necesita.
+4. **TERMO = HAY ALGO MODESTO ×2** en la carrera: R0 real 0.93, pareado con O1; P1 13–14/20.
 
-## El muro de la carrera (H-1), estado al 25-sep
-- V143 da un R0 real de 0.60; O1 (política escrita por un LLM, el techo) da 0.94.
-- Diagnóstico medido en 20/20 semillas por el enjambre de 30 agentes:
-  - los hijos de O1 viven entre 2.4 y 6 veces más;
-  - V143 gasta entre 3 y 45 veces más fundadores;
-  - veneno y sal son el 89–95 % de las muertes de V143.
-- El hijo de V143 **no muere de ignorancia: muere sabiendo**. Lo que falta es longevidad y control de la decisión, no conocimiento.
-- En curso esta tarde:
-  - un Opus prepara un candidato preregistrado (`experimentos/organelos/muro/`);
-  - Fable 1 hace el puenteo diagnóstico con O1 pieza por pieza (`comite2/puenteo/`);
-  - Fable 2 prueba ideas fuera del molde (`comite2/molde/`).
+## El muro de la carrera (H-1): NO cae, pero quedó mapeado
+- **La palanca es el ESTABLECIMIENTO**: fundadores por linaje. O1 usa ~1; v143, 15.
+- **No es que el fundador ignore el veneno.** En la pista el anillo es ~90 % veneno + sal, y morder lo malo LIMPIA el camino a la comida:
+  - el órgano de rechazo de ECO puesto en TERMO hunde el linaje (0.87 → 0.13; el fundador muere de hambre);
+  - O1 también pierde el 97 % de sus fundadores por veneno y aun así se establece.
+- **El muro es decidir cuándo limpiar y cuándo comer.**
+- NO, exploratorios: trasplantar genomas de ECO a la pista (×2); termo_organo; BLOQUES_PISTA (con 9 cuerpos y 100k la selección no fija
+  nada; es deriva).
+- **Modesto:** con pasajes en la pista, la selección lleva el gen del termostato de la zona letal al nivel de TERMO por sí sola
+  (pasg empata con TERMO 6/12 y gana a v143 12/12).
 
-## Plan vigente (propuesta del coordinador; decide el director)
-1. **Frente 1, la carrera:** la longevidad y el control del hijo, y el establecimiento del linaje (O1 establecido 0.94 contra V143 0.79).
-2. **Frente 2, ECO:**
-   - F1 con la selección natural encima, sin vivero;
-   - preregistrar el COMPOST (el exploratorio dio 15/15);
-   - relanzar ECO v4, que quedó sin veredicto.
+## Lectura del día (cuatro fuentes coinciden)
+- Con perillas fijas, la selección llega rápido a un techo: 10× más tiempo no lo mueve (nube eco_sel_largo L = NO) y los pasajes quedan
+  planos.
+- Más perillas lo suben poco: 25 = 47 genes; con 50, la historia de vida se dispara.
+- **Piezas que se pueden armar y duplicar rompen el techo** (BLOQUES ×2).
+- Con un kit más grande aparecen órganos nuevos no diseñados (memoria, sociales), pero diluyen al mejor (exploratorio).
+- **La frontera la pone lo que el organismo puede construir, no el tiempo.**
+
+## Nube (crédito ~20 USD, vence el 5-nov)
+- `nube/eco-sel-largo-20260928`: serie L = NO, MC = FUNCIONA. La réplica se sugirió pararla y correrla en el PC.
+- `nube/termo-banco-20260928`: serie en curso al cierre. El creador predice NO.
+- **Regla sugerida:** la nube sólo para lo que el PC no alcanza de noche.
+
+## Plan para mañana (propuesta del coordinador; decide el director)
+1. **El muro con bloques y población.** BLOQUES en la pista con más cuerpos o tiempo, o un mundo intermedio, y sentidos para "¿hay algo
+   bueno a la vista? / reservas", para que la selección arme la decisión "limpiar o comer".
+2. **Confirmar "la selección encuentra el termostato en la pista"** (pasg; preregistro nuevo, serie + réplica en el PC).
+3. **Subir de procariota:** un mundo que cambia (lo bueno se vuelve malo), donde la memoria y lo social deberían ganarle al instinto
+   fijo. Después, depredadores y parásitos que coevolucionen: la vía clásica a la evolución abierta.
+4. **Tronco:** TERMO′ debe morder menos veneno en los escenarios de T-E. No se toca la letra.
 
 ## Niveles (los fija el director)
-- Del 1 al 8, sin cambios.
-- Nivel 9: 55 %. Propuesta: **+5 a +10 por F1**.
-- Niveles 10–13 (ECO): ~10 %. Propuesta: **+5 a +10**, por F1, por ECO v2.1 FUNCIONA ×2 y por la endosimbiosis MODESTO ×2.
+Propuesta: niveles 10–13 (ECO), de ~10 % a **+15–20**, por ECO_SEL ×2, ECO_SEL_ING ×2 y **BLOQUES ×2**.
 
 ## ERR
-El último es **ERR-148**. **El siguiente libre es ERR-149.** Los candidatos nube-1..9 no están promovidos: lo decide el director.
-
-## Dónde está cada cosa
-- `experimentos/organelos/*`: frio, frio_carrera, cruce, gramatica, darwin, anfitrion, ohno, codigo, prometeo, prometeo_cuerpo, cadena
-  y comite (investigador, ecologia, trasplantes, ENJAMBRE_SINTESIS.md).
-- La nube: `experimentos/juaco_eco/`, `subida_n10b/`, `subida_n10c/` y `registro/NUBE_BITACORA_20260924.md`.
+ERR-149 a ERR-153 se usaron el 28-sep (ERR-151 está reservado para la rama nube/eco-sel-largo). **El siguiente libre es ERR-154.**
 
 ## Decisiones para el director (máximo 2)
-1. El reparto del bonus de nivel por F1: nivel 9, niveles 10–13, o ambos.
-2. La siguiente serie del frente 2. El coordinador recomienda F1 con selección encima.
+1. Los porcentajes de los niveles 10–13 por los tres FUNCIONA ×2 de ECO.
+2. ¿Integrar `organelos` a `main` (sólo commits aditivos)?

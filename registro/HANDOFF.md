@@ -1146,3 +1146,9 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **TERMO′ (v14.4c):** pasa todo salvo T-E.
 - **Siguiente:** llevar los BLOQUES a evolucionar EN la pista de la carrera, sobre el fundador. Hay una sonda de humo en curso: TERMO + el
   órgano evolucionado, en la pista.
+
+### 28-sep-2026 ~21:45: CIERRE DEL DÍA
+- **Hitos:** BLOQUES ×2, ECO_SEL ×2, ECO_SEL_ING ×2; TERMO MODESTO ×2.
+- **El muro queda mapeado:** es el establecimiento; hay que decidir cuándo limpiar y cuándo comer.
+- **Nada pendiente sin registrar.** En la nube quedan termo_banco (serie) y eco_sel_largo (réplica, se sugirió pararla).
+- **Plan de mañana** en `registro/ESTADO.md`.
