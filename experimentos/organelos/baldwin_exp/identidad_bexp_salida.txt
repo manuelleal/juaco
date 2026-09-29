@@ -1,0 +1,63 @@
+identidad_bexp.py 2026-09-29 14:57:24 T 30000 eps del arnes 0.1 th_exp 0.5
+(K) construccion y shas
+  [OK ] construye_bexp --verifica IGUAL 0af10809633c945d
+  [OK ] shas de la entrada (corre_bloques, motor_baldwin, construye_baldwin, motor_bexp) corre_bloques.py a090b82eae9f1ee3 motor_baldwin.py d0a620d2f5e2605e construye_baldwin.py c9cad63496519fb7 motor_bexp.py 0af10809633c945d
+  (verifica() completa, con EPS_EXP calibrado: True · EPS_EXP 0.063)
+(A) perilla apagada (exp = 0) == motor_baldwin bit a bit
+  [OK ] A1 FIJO_V_Pinf: motor_bexp == motor_baldwin (campo a campo + BQ_OUT) distintas [] · BQ_OUT igual True · K 95.75 · hijos 1332 · aprende None · n_inv None · vetos None
+  [OK ] A2 PLAST_V_P22k: motor_bexp == motor_baldwin (campo a campo + BQ_OUT) distintas [] · BQ_OUT igual True · K 96.5 · hijos 1253 · aprende 95 · n_inv 1 · vetos 275
+  [OK ] A3 PLAST_AZA_P22k: motor_bexp == motor_baldwin (campo a campo + BQ_OUT) distintas [] · BQ_OUT igual True · K 95.25 · hijos 1233 · aprende 108 · n_inv 1 · vetos 183
+  [OK ] A4 exp = 1 con th_exp 2.0 (puerta cerrada) == PLAST_V_P22k (exp = 0) distintas [] · mord_exp 0 · vetos 275 · con reserva 0
+(B) controles que deben diferir (P 22 000, s56693, T 60000, eps 0.1)
+  [OK ] PLAST_EXP_P22k != PLAST_V_P22k 12 claves distintas · K 95.80645161290323 vs 95.61290322580645
+  [OK ] FIJO_EXP_P22k != FIJO_V_P22k 10 claves distintas · K 96.29032258064517 vs 96.29032258064517
+  [OK ] PLAST_EXP_AZA_P22k != PLAST_EXP_P22k 11 claves distintas · K 96.16129032258064 vs 95.80645161290323
+  [OK ] PLAST_EXP_P22k: la exploracion actua (n_mord_exp > 0) mord_exp 203 (R+ 30, R- 111) · exp/vida 0.08 · vetos con reserva/vida 0.772
+  [OK ] FIJO_EXP_P22k: la exploracion actua (n_mord_exp > 0) mord_exp 54 (R+ 6, R- 19) · exp/vida 0.021 · vetos con reserva/vida 0.219
+  [OK ] PLAST_EXP_AZA_P22k: la exploracion actua (n_mord_exp > 0) mord_exp 151 (R+ 10, R- 64) · exp/vida 0.059 · vetos con reserva/vida 0.577
+  [OK ] PLAST_V_P22k: sin exploracion (n_mord_exp == 0) mord_exp 0
+  [OK ] FIJO_V_P22k: sin bloque exp (plast 0, exp 0: el motor no escribe nada nuevo) 
+  [OK ] PLAST_EXP: la exploracion hace aprender a una regla plastica (n_mord_exp_aprende > 0) 14 de 203
+  [OK ] PLAST_EXP: |w - w0| medido en los MUERTOS (reglas plasticas de boca de muertos > 0) muertos {'n_reglas_pl': 56, 'sum_dw': 24.4804, 'n_movidas': 39, 'n_cuerpos_pl': 56, 'n_cuerpos_movidos': 39} · vivos {'n_reglas_pl': 1, 'sum_dw': 0.7619, 'n_movidas': 1} · pl_movidas 40/57
+  [OK ] FIJO_EXP: no aprende reglas (n_aprende None) 
+(G) contadores coherentes
+  [OK ] PLAST_EXP_P22k: mord_exp <= vetos con reserva <= vetos; mord_exp/vetos_res ~ eps 203 <= 1957 <= 2461 · tasa 0.1037 · z 0.55
+  [OK ] FIJO_EXP_P22k: mord_exp <= vetos con reserva <= vetos; mord_exp/vetos_res ~ eps 54 <= 555 <= 772 · tasa 0.0973 · z -0.21
+  [OK ] PLAST_EXP_AZA_P22k: mord_exp <= vetos con reserva <= vetos; mord_exp/vetos_res ~ eps 151 <= 1465 <= 2171 · tasa 0.1031 · z 0.39
+(Q) corte en 30 000 + reanuda == entera (PLAST_EXP_P22k, T 40 000, s56694)
+  [OK ] corte + reanuda == entera cortado True · distintas [] · mord_exp 29/29 · n_inv 1/1
+(D) determinismo
+  [OK ] PLAST_EXP_P22k dos veces == 
+(L) la letra en entradas sinteticas
+  [OK ] caso 0: espera FUNCIONA da FUNCIONA · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla []
+  [OK ] caso 0: replica permitida == True (ERR-156 H-3) cerca {'PA': False, 'PB': False, 'PM': False, 'alguna': False}
+  [OK ] caso 0: descriptivo PLAST_EXP vs PLAST_V_P22k presente (ERR-156 H-4) {'persiste': [17, 0], 'dif': 17, 't_ext': {'gana': 0, 'n': 20, 'dif_med': 0.0}}
+  [OK ] caso 1: espera HAY ALGO MODESTO da HAY ALGO MODESTO · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': False, 'PM_supera_controles': True} · validez falla []
+  [OK ] caso 1: replica permitida == True (ERR-156 H-3) cerca {'PA': False, 'PB': False, 'PM': False, 'alguna': False}
+  [OK ] caso 2: espera HAY ALGO MODESTO da HAY ALGO MODESTO · puertas {'PA_rescate': False, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla []
+  [OK ] caso 3: espera NO da NO · puertas {'PA_rescate': False, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': False} · validez falla []
+  [OK ] caso 4: espera NO da NO · puertas {'PA_rescate': True, 'PB_control_AZA': False, 'PD_seleccion_prende': True, 'PM_supera_controles': False} · validez falla []
+  [OK ] caso 5: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V1_ancla_FIJO_V_Pinf_persiste']
+  [OK ] caso 6: espera NO SE LEE da NO SE LEE · puertas None · validez falla []
+  [OK ] caso 7: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V4_la_exploracion_actua']
+  [OK ] caso 8: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V5_la_regla_plastica_aprende']
+  [OK ] caso 9: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V4_la_exploracion_actua']
+  [OK ] caso 10: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V6_AZA_bit_al_azar']
+  [OK ] caso 11: espera FUNCIONA da FUNCIONA · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla []
+  [OK ] caso 12: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V5_la_regla_plastica_aprende']
+  [OK ] caso 13: espera FUNCIONA da FUNCIONA · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla []
+  [OK ] caso 14: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': True, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': True} · validez falla ['V1_ancla_FIJO_V_Pinf_persiste']
+  [OK ] caso 15: espera NO da NO · puertas {'PA_rescate': False, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': False} · validez falla []
+  [OK ] caso 15: replica permitida == True (ERR-156 H-3) cerca {'PA': False, 'PB': False, 'PM': True, 'alguna': True}
+  [OK ] caso 16: espera NO da NO · puertas {'PA_rescate': False, 'PB_control_AZA': False, 'PD_seleccion_prende': True, 'PM_supera_controles': False} · validez falla []
+  [OK ] caso 16: replica permitida == False (ERR-156 H-3) cerca {'PA': False, 'PB': False, 'PM': False, 'alguna': False}
+  [OK ] caso 17: espera NO SE LEE da NO SE LEE · puertas {'PA_rescate': False, 'PB_control_AZA': True, 'PD_seleccion_prende': True, 'PM_supera_controles': False} · validez falla ['V1_ancla_FIJO_V_Pinf_persiste']
+  [OK ] caso 17: replica permitida == False (ERR-156 H-3) cerca {'PA': False, 'PB': False, 'PM': True, 'alguna': True}
+(R) banderas y candados
+  [OK ] --pool 3 aborta 
+  [OK ] --humo con pool aborta 
+  [OK ] bandera desconocida aborta 
+  [OK ] bandera abreviada aborta 
+  [OK ] candado exclusivo (O_EXCL): el 1o entra, el 2o se niega, --reanuda lo retoma 
+  [OK ] --serie sin commit (git_limpio) no corre y no crea carpeta rc 1
+RESULTADO 52/52 en 90 s
