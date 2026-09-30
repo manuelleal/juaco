@@ -1,0 +1,154 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "abortos_0": true,
+   "completas": true,
+   "f_ini_05": true,
+   "cero_solo_inyectadas": true,
+   "cero_banda": true,
+   "carga_baja": true,
+   "tasas_actuan": false,
+   "refs_sha": true,
+   "arnes": true
+  },
+  "veredicto": "NO SE LEE",
+  "moneda_mayor_que_neutra": "1/1",
+  "moneda_le_mitad_neutra": "0/1",
+  "moneda_mayor_con_margen_005": "0/1",
+  "neutra_mediana_p9": 0.5133,
+  "moneda_mediana_p9": 0.5311,
+  "dif_mediana_moneda_menos_neutra": 0.0178,
+  "final": {
+   "moneda": {
+    "8": 0.5311
+   },
+   "neutra": {
+    "8": 0.5133
+   },
+   "cero": {
+    "8": 0.56
+   }
+  },
+  "cero_media": 0.56,
+  "cero_mediana": 0.56,
+  "intacta_neutra_p9_mediana": 1.0,
+  "listas_mutadas_moneda_neutra": 0
+ },
+ "cadenas": {
+  "moneda": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.4867,
+     0.5311
+    ],
+    "f_neg": [
+     0.4867,
+     0.5311
+    ],
+    "arrastre": [
+     0.716,
+     0.716
+    ],
+    "partos": [
+     128,
+     128
+    ],
+    "vivos_A": [
+     0.5111,
+     0.6
+    ],
+    "solo_inyectadas": true,
+    "intacta": [
+     1.0,
+     1.0
+    ],
+    "listas_mutadas_total": 0
+   }
+  },
+  "neutra": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.4689,
+     0.5133
+    ],
+    "f_neg": [
+     0.0,
+     0.0
+    ],
+    "arrastre": [
+     0.707,
+     0.693
+    ],
+    "partos": [
+     132,
+     138
+    ],
+    "vivos_A": [
+     0.4667,
+     0.6
+    ],
+    "solo_inyectadas": true,
+    "intacta": [
+     1.0,
+     1.0
+    ],
+    "listas_mutadas_total": 0
+   }
+  },
+  "cero": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.56
+    ],
+    "f_neg": [
+     0.0
+    ],
+    "arrastre": [
+     0.671
+    ],
+    "partos": [
+     148
+    ],
+    "vivos_A": [
+     0.6889
+    ],
+    "solo_inyectadas": true,
+    "intacta": [
+     1.0
+    ],
+    "listas_mutadas_total": 0
+   }
+  }
+ },
+ "prueba": {
+  "8": {
+   "seed": 634191,
+   "cruzan": 0,
+   "mayoria": 0,
+   "R0_med": 0.0652,
+   "fund_med": 0.0,
+   "desc": 50,
+   "coherente": true
+  }
+ },
+ "refs": {
+  "forzada3": {},
+  "bq3_pas": {},
+  "moneda_x1": {}
+ },
+ "ref_moneda_x1_p9": null,
+ "sumas": {
+  "moneda_div10": 0,
+  "forzada3": 0,
+  "bq3_pas": 0,
+  "moneda_x1": 0
+ },
+ "abortos": [],
+ "predicciones": [],
+ "preregistro": "PREREGISTRO_mutacion.md",
+ "sha_runner": "8912e9d77f397e40"
+}

@@ -1,0 +1,50 @@
+CORRE_GEN · humo · 2026-09-30 17:18:34 · python 3.14.2 · pool NO · runner 8836072c04c38767 · PREREGISTRO_genoma.md · indices [9] · npas 1 · T_pas 25000 · T_pru 25000 · pasajes 635090.. · prueba [635190] · CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · CAP {'inicial': 6, 'p_campo': 0.1, 'p_dup': 0.06, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\genoma\datos\humo_20260930_171834
+  sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2AZA.py aa88b32e4b4de152 OK
+  -- verifica de sentidos_muro (shas de corre_bp, V143_BQ2, TERMO, pista, juez, O1, V143; carros == construye_sm):
+    sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+    sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+    sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+    sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+    sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+    sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+    sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+    sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+    sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+    carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+    carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  [   55.0s] cap i9 (54.9s) aborto None · largo siembra [5.519] · cruzan 0 · R0 [0.8, 0.8, 0.7778, 0.1067, 0.119, 0.0485, 0.0926, 0.5, 0.1875]
+  [  108.3s] aza_largo i9 (53.3s) aborto None · largo siembra [6.371] · cruzan 1 · R0 [0.0097, 0.0984, 0.1765, 0.875, 0.3333, 0.9091, 0.0108, 0.0, 0.1064]
+  [  160.2s] fab i9 (51.9s) aborto None · largo siembra [2.313] · cruzan 2 · R0 [0.9091, 0.0328, 0.0139, 0.8, 0.8571, 0.8889, 0.7778, 0.1146, 0.9231]
+  3 trabajos · abortos 0 · 160.2s
+
+================ LECTURA genoma (capacidad) · humo · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\genoma\datos\humo_20260930_171834
+  arnes: PASA con los shas actuales · abortos: []
+  fab       i9: largo siembra p0..p0 [2.313] · partos [131]
+                doble en la siembra [0.0] · forma O1 [0.0]
+                PRUEBA: cruzan 2/9 · mayoria 0 · R0 med 0.8 · fund med 1.0 media 36.9 · largo_med 2.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 341/341
+  cap       i9: largo siembra p0..p0 [5.519] · partos [104]
+                doble en la siembra [0.0] · forma O1 [0.0]
+                PRUEBA: cruzan 0/9 · mayoria 0 · R0 med 0.1875 · fund med 25.0 media 31.0 · largo_med 5.1 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 288/288
+  aza_largo i9: largo siembra p0..p0 [6.371] · partos [104]
+                doble en la siembra [0.0593] · forma O1 [0.0]
+                PRUEBA: cruzan 1/9 · mayoria 0 · R0 med 0.1064 · fund med 41.0 media 43.6 · largo_med 6.6 · doble linajes 3/9 · O1 linajes 0 · doble banco 0.0489 · fund de banco 401/401
+  validez: {'abortos_0': True, 'completas': True, 'coherentes': True, 'tasas_actuan': True, 'arnes': True}
+  tasas_actuan_n: 1/1
+  suma_cruzan: {'fab': 2, 'cap': 0, 'aza_largo': 1}
+  mayorias: {'fab': 0, 'cap': 0, 'aza_largo': 0}
+  cap_gana_fab: {'n': 1, 'gana': 0, 'dif_suma': -2}
+  cap_gana_aza: {'n': 1, 'gana': 0, 'dif_suma': -1}
+  R0_cap_gana_fab: {'n': 1, 'gana': 0, 'dif_suma': -0.6125}
+  largo_med: {'fab': {'9': 2.0}, 'cap': {'9': 5.1}, 'aza_largo': {'9': 6.6}}
+  cap_largo_ge4: 1/1
+  doble_lin: {'fab': 0, 'cap': 0, 'aza_largo': 3}
+  o1_lin: {'fab': 0, 'cap': 0, 'aza_largo': 0}
+  lin_total: {'fab': 9, 'cap': 9, 'aza_largo': 9}
+  doble_siembra_p9: {'fab': {'9': 0.0}, 'cap': {'9': 0.0}, 'aza_largo': {'9': 0.0593}}
+  compone: False
+  compone_detalle: {'p_azar6': 0.0354, 'umbral': 0.0709, 'cap_sobre_umbral': '0/1', 'cap_mayor_que_aza': '0/1'}
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\genoma\datos\humo_20260930_171834\lectura_gen.json
+VEREDICTO (PREREGISTRO_genoma.md sec. 6): HUMO (no cuenta; 1 pasaje, prueba 25k): INDETERMINADO
