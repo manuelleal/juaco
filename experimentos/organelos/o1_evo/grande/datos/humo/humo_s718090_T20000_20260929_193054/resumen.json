@@ -1,0 +1,323 @@
+{
+ "modo": "humo",
+ "humo": true,
+ "semillas": [
+  718090
+ ],
+ "T": 20000,
+ "brazos": [
+  "o1",
+  "termo",
+  "v143",
+  "pc",
+  "o1liso",
+  "o1pas"
+ ],
+ "sha_runner": "e32d39add31f47da",
+ "sha_preregistro": "b6a6ff25ee345972",
+ "sha_pista_grande": "15fea5afb19fdde4",
+ "siembra": "experimentos/organelos/o1_evo/datos/humo/humo_20260929_190758",
+ "siembra_sha": "fad3270067c16b6d",
+ "lectura": {
+  "validez": {
+   "V1_completa": true,
+   "V2_cosas_actuan": true,
+   "V2b_liso_sin_cosas": true,
+   "V3_estado": true,
+   "V4_tamano": true,
+   "V5_siembra_actua": true
+  },
+  "valido": true,
+  "semillas": [
+   718090
+  ],
+  "total_linajes": 9,
+  "suma_cruzan": {
+   "o1": 1,
+   "termo": 0,
+   "v143": 1,
+   "pc": 1,
+   "o1liso": 0,
+   "o1pas": 0
+  },
+  "mayorias": {
+   "o1": 0,
+   "termo": 0,
+   "v143": 0,
+   "pc": 0,
+   "o1liso": 0,
+   "o1pas": 0
+  },
+  "L1_orden": {
+   "se_mantiene": false,
+   "o1": 1,
+   "termo": 0,
+   "v143": 1,
+   "invertido": [
+    "termo>v143"
+   ]
+  },
+  "L2_par_o1_termo": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 1,
+   "suma_b": 0,
+   "dif": 1
+  },
+  "L2_par_termo_v143": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "pierde": 1,
+   "suma_a": 0,
+   "suma_b": 1,
+   "dif": -1
+  },
+  "L3_margen_o1": {
+   "no_cruzan": 8,
+   "frac_cruzan": 0.1111,
+   "mayorias": 0
+  },
+  "L4_cosas_en_o1": {
+   "o1liso": 0,
+   "o1": 1,
+   "dif_liso_menos_grande": -1,
+   "par": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "suma_a": 0,
+    "suma_b": 1,
+    "dif": -1
+   },
+   "reserva_inmortales_o1liso": true
+  },
+  "L5_oasis": {
+   "o1": {
+    "ratio_pasos": 1.002,
+    "ratio_mord_AC": 0.918
+   },
+   "termo": {
+    "ratio_pasos": 1.078,
+    "ratio_mord_AC": 1.018
+   },
+   "v143": {
+    "ratio_pasos": 0.994,
+    "ratio_mord_AC": 0.932
+   },
+   "pc": {
+    "ratio_pasos": 1.186,
+    "ratio_mord_AC": 0.954
+   },
+   "o1pas": {
+    "ratio_pasos": 1.159,
+    "ratio_mord_AC": 1.095
+   }
+  },
+  "L6_pantano": {
+   "o1": {
+    "ratio_pasos": 0.867,
+    "ratio_mord_AC": 0.993,
+    "frac_muertes_con_carga": 0.3233,
+    "cargas_med": 119.0,
+    "drenado_med": 81.623
+   },
+   "termo": {
+    "ratio_pasos": 0.934,
+    "ratio_mord_AC": 0.951,
+    "frac_muertes_con_carga": 0.2321,
+    "cargas_med": 129.0,
+    "drenado_med": 86.662
+   },
+   "v143": {
+    "ratio_pasos": 0.983,
+    "ratio_mord_AC": 1.036,
+    "frac_muertes_con_carga": 0.1514,
+    "cargas_med": 199.0,
+    "drenado_med": 108.562
+   },
+   "pc": {
+    "ratio_pasos": 0.904,
+    "ratio_mord_AC": 1.129,
+    "frac_muertes_con_carga": 0.224,
+    "cargas_med": 181.0,
+    "drenado_med": 102.948
+   },
+   "o1pas": {
+    "ratio_pasos": 0.959,
+    "ratio_mord_AC": 0.954,
+    "frac_muertes_con_carga": 0.1798,
+    "cargas_med": 115.0,
+    "drenado_med": 77.095
+   }
+  },
+  "L7_pc_termo": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 1,
+   "suma_b": 0,
+   "dif": 1
+  },
+  "L8_o1pas_o1": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "pierde": 1,
+   "suma_a": 0,
+   "suma_b": 1,
+   "dif": -1
+  },
+  "desc": {
+   "o1": {
+    "R0_med": 0.8333,
+    "fund_media": 9.1111,
+    "fund_mediana": 0.0,
+    "persisten": 7,
+    "vida_med": 2460.0,
+    "muertes": 133,
+    "causas": {
+     "hambre": 46,
+     "sed": 5,
+     "veneno": 36,
+     "sal": 46
+    },
+    "mord_BD_med": 143.0,
+    "mord_AC_med": 1198.0,
+    "mundo_AC": 5.4275,
+    "sin_bueno": 0.0029
+   },
+   "termo": {
+    "R0_med": 0.3846,
+    "fund_media": 18.5556,
+    "fund_mediana": 8.0,
+    "persisten": 6,
+    "vida_med": 544.0,
+    "muertes": 237,
+    "causas": {
+     "hambre": 56,
+     "sed": 11,
+     "veneno": 78,
+     "sal": 92
+    },
+    "mord_BD_med": 502.0,
+    "mord_AC_med": 1356.0,
+    "mundo_AC": 8.7428,
+    "sin_bueno": 0.0
+   },
+   "v143": {
+    "R0_med": 0.1212,
+    "fund_media": 48.6667,
+    "fund_mediana": 52.0,
+    "persisten": 3,
+    "vida_med": 72.0,
+    "muertes": 502,
+    "causas": {
+     "hambre": 50,
+     "sed": 32,
+     "veneno": 198,
+     "sal": 222
+    },
+    "mord_BD_med": 1189.0,
+    "mord_AC_med": 1921.0,
+    "mundo_AC": 11.5078,
+    "sin_bueno": 0.0
+   },
+   "pc": {
+    "R0_med": 0.5714,
+    "fund_media": 18.0,
+    "fund_mediana": 6.0,
+    "persisten": 8,
+    "vida_med": 239.0,
+    "muertes": 250,
+    "causas": {
+     "hambre": 51,
+     "sed": 7,
+     "veneno": 94,
+     "sal": 98
+    },
+    "mord_BD_med": 593.0,
+    "mord_AC_med": 1603.0,
+    "mundo_AC": 5.5427,
+    "sin_bueno": 0.0095
+   },
+   "o1liso": {
+    "R0_med": 0.0,
+    "fund_media": 18.4444,
+    "fund_mediana": 0.0,
+    "persisten": 0,
+    "vida_med": 10000.0,
+    "muertes": 169,
+    "causas": {
+     "hambre": 3,
+     "sed": 2,
+     "veneno": 77,
+     "sal": 87
+    },
+    "mord_BD_med": 259.0,
+    "mord_AC_med": 1147.0,
+    "mundo_AC": 9.9183,
+    "sin_bueno": 0.0
+   },
+   "o1pas": {
+    "R0_med": 0.75,
+    "fund_media": 15.7778,
+    "fund_mediana": 0.0,
+    "persisten": 3,
+    "vida_med": 2597.0,
+    "muertes": 178,
+    "causas": {
+     "hambre": 35,
+     "sed": 3,
+     "veneno": 75,
+     "sal": 65
+    },
+    "mord_BD_med": 228.0,
+    "mord_AC_med": 1206.0,
+    "mundo_AC": 6.3518,
+    "sin_bueno": 0.001
+   }
+  },
+  "predicciones": {
+   "P1_orden_se_mantiene": false,
+   "P2_o1_suma_en_22_40": false,
+   "P3_o1_mayoria_ge_3de5": false,
+   "P4_liso_menos_grande_en_m3_10": false,
+   "P5_oasis_no_se_usa": true,
+   "P6_pantano_no_se_evita": true,
+   "P7_pc_igual_termo": true
+  },
+  "casi_inmortales": {
+   "o1": 1,
+   "termo": 0,
+   "v143": 0,
+   "pc": 0,
+   "o1liso": 7,
+   "o1pas": 4
+  },
+  "reserva_inmortales": [],
+  "L1b_cruzan_mas_inmortales": {
+   "o1": 2,
+   "termo": 0,
+   "v143": 1,
+   "pc": 1,
+   "o1liso": 7,
+   "o1pas": 4
+  },
+  "P4_con_reserva": true,
+  "lectura": "ORDEN NO SE MANTIENE"
+ },
+ "seg_por_corrida": {
+  "o1_s718090": 91.8,
+  "termo_s718090": 31.7,
+  "v143_s718090": 28.8,
+  "pc_s718090": 30.1,
+  "o1liso_s718090": 86.9,
+  "o1pas_s718090": 93.5
+ },
+ "seg_total": 3.8
+}
