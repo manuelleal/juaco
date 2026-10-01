@@ -1,0 +1,113 @@
+CORRE_MUT · explora · 2026-09-30 19:18:33 · python 3.14.2 · pool 2 · runner 8912e9d77f397e40 · PREREGISTRO_mutacion.md · indices [1, 2, 3, 4, 5] · npas 10 · T_pas 25000 · T_pru 100000 · pasajes 634110.. · prueba [59201, 59202, 59203, 59204, 59205] · CFG10 {'inicial': 2, 'p_campo': 0.01, 'p_dup': 0.002, 'p_del': 0.007, 'p_ins': 0.005, 'banco': 50} · CERO {'inicial': 0, 'p_campo': 0.0, 'p_dup': 0.0, 'p_del': 0.0, 'p_ins': 0.0, 'banco': 50} · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\mutacion\datos\explora_20260930_191833
+  sha experimentos\organelos\moneda\corre_moneda.py 0441aa7bf5b94316 OK
+  sha experimentos\organelos\moneda\identidad_moneda.py ceede3d6458597ac OK
+  -- verifica de corre_moneda (shas de sentidos_muro, corre_bp, V143_BQ3; pista, juez, carros):
+    sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+    sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+    sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+    sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+    -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+      sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+      sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+      sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+      sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+      carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+      carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  arnes: PASA con los shas actuales
+  [  428.9s] moneda i2 (428.4s) aborto None · fraccion A [0.5, 0.4667, 0.4889, 0.3889, 0.3733, 0.4422, 0.3956, 0.42, 0.4067, 0.4178, 0.3467] · cruzan 5
+  [  433.4s] moneda i1 (432.9s) aborto None · fraccion A [0.5, 0.4511, 0.4111, 0.38, 0.3178, 0.2911, 0.3667, 0.3733, 0.32, 0.2933, 0.2178] · cruzan 6
+  [  798.6s] moneda i4 (365.2s) aborto None · fraccion A [0.5, 0.5356, 0.4889, 0.4556, 0.4933, 0.4578, 0.4022, 0.3267, 0.3467, 0.32, 0.2644] · cruzan 4
+  [  799.3s] moneda i3 (370.4s) aborto None · fraccion A [0.5, 0.5578, 0.4956, 0.44, 0.4111, 0.3311, 0.28, 0.3, 0.3667, 0.3333, 0.3422] · cruzan 6
+  [ 1049.1s] neutra i1 (249.9s) aborto None · fraccion A [0.5, 0.4978, 0.5, 0.4, 0.3711, 0.3889, 0.4933, 0.54, 0.5489, 0.54, 0.5689] · cruzan None
+  [ 1159.1s] moneda i5 (360.5s) aborto None · fraccion A [0.5, 0.4778, 0.4511, 0.3867, 0.3822, 0.3044, 0.26, 0.2667, 0.2333, 0.1933, 0.2222] · cruzan 3
+  [ 1304.4s] neutra i2 (255.3s) aborto None · fraccion A [0.5, 0.44, 0.44, 0.4289, 0.48, 0.5156, 0.5733, 0.5689, 0.5733, 0.6067, 0.6667] · cruzan None
+  [ 1407.4s] neutra i3 (248.3s) aborto None · fraccion A [0.5, 0.6022, 0.5511, 0.64, 0.6244, 0.7311, 0.7444, 0.7622, 0.8044, 0.7067, 0.82] · cruzan None
+  [ 1553.1s] neutra i4 (248.6s) aborto None · fraccion A [0.5, 0.4911, 0.5889, 0.5911, 0.6, 0.6822, 0.7356, 0.6933, 0.6978, 0.68, 0.6356] · cruzan None
+  [ 1670.5s] neutra i5 (263.2s) aborto None · fraccion A [0.5, 0.5289, 0.4933, 0.5333, 0.5267, 0.5467, 0.52, 0.5378, 0.5778, 0.6689, 0.5822] · cruzan None
+  [ 1865.2s] cero i1 (312.2s) aborto None · fraccion A [0.5, 0.4956, 0.4689, 0.4956, 0.4578, 0.46, 0.4444, 0.4511, 0.4756, 0.44, 0.3467] · cruzan None
+  [ 1981.2s] cero i2 (310.7s) aborto None · fraccion A [0.5, 0.5267, 0.4889, 0.4156, 0.4511, 0.42, 0.4578, 0.4933, 0.4422, 0.34, 0.3022] · cruzan None
+  [ 2125.8s] cero i3 (260.6s) aborto None · fraccion A [0.5, 0.6156, 0.5644, 0.6578, 0.6378, 0.5267, 0.52, 0.5289, 0.4889, 0.5067, 0.4022] · cruzan None
+  [ 2252.8s] cero i4 (271.6s) aborto None · fraccion A [0.5, 0.5133, 0.5133, 0.4689, 0.4489, 0.4711, 0.4022, 0.3778, 0.3089, 0.2778, 0.2089] · cruzan None
+  [ 2444.2s] cero i5 (318.5s) aborto None · fraccion A [0.5, 0.4556, 0.4889, 0.4689, 0.4467, 0.4422, 0.4467, 0.4756, 0.4778, 0.44, 0.4044] · cruzan None
+  15 trabajos · abortos 0 · 2444.2s
+
+================ LECTURA mutacion (tasas / 10) · explora · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\mutacion\datos\explora_20260930_191833
+  arnes: PASA con los shas actuales · refs: sha OK · abortos: []
+  moneda i1: fraccion A  ini 0.5 -> p0..p9 [0.4511, 0.4111, 0.38, 0.3178, 0.2911, 0.3667, 0.3733, 0.32, 0.2933, 0.2178]
+             intacta [1.0, 0.9444, 0.9578, 0.9578, 0.9711, 0.9689, 0.9733, 0.9733, 0.9356, 0.9044] · listas mutadas (suma) 186 · vivos con A [0.3556, 0.4222, 0.5778, 0.2444, 0.2889, 0.6444, 0.4667, 0.3333, 0.2889, 0.1111]
+             arrastre>= [0.742, 0.718, 0.738, 0.722, 0.733, 0.751, 0.738, 0.744, 0.684, 0.704] · partos [116, 127, 118, 125, 120, 112, 118, 115, 142, 133] · solo inyectadas False
+  moneda i2: fraccion A  ini 0.5 -> p0..p9 [0.4667, 0.4889, 0.3889, 0.3733, 0.4422, 0.3956, 0.42, 0.4067, 0.4178, 0.3467]
+             intacta [1.0, 0.9933, 0.9978, 0.9978, 0.9867, 0.9911, 0.9933, 0.9778, 0.9844, 0.9822] · listas mutadas (suma) 43 · vivos con A [0.4444, 0.5556, 0.3111, 0.3111, 0.5333, 0.4222, 0.5111, 0.3111, 0.4222, 0.2889]
+             arrastre>= [0.758, 0.729, 0.727, 0.722, 0.704, 0.762, 0.733, 0.756, 0.729, 0.691] · partos [109, 122, 123, 125, 133, 107, 120, 110, 122, 139] · solo inyectadas False
+  moneda i3: fraccion A  ini 0.5 -> p0..p9 [0.5578, 0.4956, 0.44, 0.4111, 0.3311, 0.28, 0.3, 0.3667, 0.3333, 0.3422]
+             intacta [1.0, 0.96, 0.9333, 0.9244, 0.8533, 0.8111, 0.8378, 0.7844, 0.8044, 0.8022] · listas mutadas (suma) 580 · vivos con A [0.6, 0.4667, 0.4444, 0.3556, 0.1778, 0.2889, 0.4, 0.5333, 0.2667, 0.4222]
+             arrastre>= [0.756, 0.749, 0.74, 0.744, 0.713, 0.709, 0.684, 0.709, 0.744, 0.749] · partos [110, 113, 117, 115, 129, 131, 142, 131, 115, 113] · solo inyectadas False
+  moneda i4: fraccion A  ini 0.5 -> p0..p9 [0.5356, 0.4889, 0.4556, 0.4933, 0.4578, 0.4022, 0.3267, 0.3467, 0.32, 0.2644]
+             intacta [0.9978, 0.9978, 0.9956, 0.9667, 0.9711, 0.9822, 0.98, 0.98, 0.9356, 0.9133] · listas mutadas (suma) 126 · vivos con A [0.6, 0.5333, 0.4667, 0.4667, 0.4222, 0.4, 0.2667, 0.3333, 0.3778, 0.1333]
+             arrastre>= [0.747, 0.744, 0.704, 0.733, 0.744, 0.693, 0.733, 0.736, 0.7, 0.702] · partos [114, 115, 133, 120, 115, 138, 120, 119, 135, 134] · solo inyectadas False
+  moneda i5: fraccion A  ini 0.5 -> p0..p9 [0.4778, 0.4511, 0.3867, 0.3822, 0.3044, 0.26, 0.2667, 0.2333, 0.1933, 0.2222]
+             intacta [1.0, 0.9311, 0.9133, 0.9289, 0.8667, 0.82, 0.7556, 0.7978, 0.8022, 0.8267] · listas mutadas (suma) 611 · vivos con A [0.5556, 0.4, 0.3111, 0.3111, 0.2, 0.1556, 0.2222, 0.1778, 0.2222, 0.2444]
+             arrastre>= [0.718, 0.733, 0.716, 0.736, 0.698, 0.709, 0.736, 0.707, 0.74, 0.702] · partos [127, 120, 128, 119, 136, 131, 119, 132, 117, 134] · solo inyectadas False
+  neutra i1: fraccion A  ini 0.5 -> p0..p9 [0.4978, 0.5, 0.4, 0.3711, 0.3889, 0.4933, 0.54, 0.5489, 0.54, 0.5689]
+             intacta [1.0, 1.0, 1.0, 0.9711, 0.9822, 0.9311, 0.9444, 0.9444, 0.9444, 0.9578] · listas mutadas (suma) 146 · vivos con A [0.4, 0.5556, 0.3111, 0.3111, 0.3778, 0.6, 0.6444, 0.4889, 0.4444, 0.5556]
+             arrastre>= [0.669, 0.662, 0.678, 0.649, 0.736, 0.678, 0.667, 0.7, 0.713, 0.693] · partos [149, 152, 145, 158, 119, 145, 150, 135, 129, 138] · solo inyectadas False
+  neutra i2: fraccion A  ini 0.5 -> p0..p9 [0.44, 0.44, 0.4289, 0.48, 0.5156, 0.5733, 0.5689, 0.5733, 0.6067, 0.6667]
+             intacta [1.0, 0.9978, 0.9978, 0.9867, 0.9689, 0.9689, 0.9133, 0.8778, 0.8467, 0.8444] · listas mutadas (suma) 269 · vivos con A [0.3111, 0.4222, 0.4889, 0.5556, 0.5556, 0.6889, 0.4889, 0.5333, 0.6222, 0.6667]
+             arrastre>= [0.671, 0.667, 0.709, 0.736, 0.702, 0.736, 0.7, 0.682, 0.653, 0.678] · partos [148, 150, 131, 119, 134, 119, 135, 143, 156, 145] · solo inyectadas False
+  neutra i3: fraccion A  ini 0.5 -> p0..p9 [0.6022, 0.5511, 0.64, 0.6244, 0.7311, 0.7444, 0.7622, 0.8044, 0.7067, 0.82]
+             intacta [0.9667, 0.98, 0.9867, 0.9489, 0.9089, 0.9444, 0.98, 0.9956, 0.9867, 0.9511] · listas mutadas (suma) 158 · vivos con A [0.5778, 0.5111, 0.7778, 0.6667, 0.8222, 0.8, 0.7333, 0.8667, 0.5333, 0.9111]
+             arrastre>= [0.704, 0.707, 0.676, 0.696, 0.687, 0.7, 0.736, 0.693, 0.7, 0.678] · partos [133, 132, 146, 137, 141, 135, 119, 138, 135, 145] · solo inyectadas False
+  neutra i4: fraccion A  ini 0.5 -> p0..p9 [0.4911, 0.5889, 0.5911, 0.6, 0.6822, 0.7356, 0.6933, 0.6978, 0.68, 0.6356]
+             intacta [1.0, 1.0, 0.9978, 1.0, 1.0, 1.0, 1.0, 0.9578, 0.9511, 0.8867] · listas mutadas (suma) 93 · vivos con A [0.4444, 0.8, 0.5111, 0.4889, 0.7556, 0.8, 0.7111, 0.6889, 0.6667, 0.5778]
+             arrastre>= [0.7, 0.731, 0.7, 0.693, 0.684, 0.689, 0.693, 0.702, 0.669, 0.733] · partos [135, 121, 135, 138, 142, 140, 138, 134, 149, 120] · solo inyectadas False
+  neutra i5: fraccion A  ini 0.5 -> p0..p9 [0.5289, 0.4933, 0.5333, 0.5267, 0.5467, 0.52, 0.5378, 0.5778, 0.6689, 0.5822]
+             intacta [1.0, 0.9444, 0.9178, 0.9178, 0.9, 0.9444, 0.9178, 0.9156, 0.9378, 0.9578] · listas mutadas (suma) 291 · vivos con A [0.5778, 0.4444, 0.5333, 0.5111, 0.6444, 0.6222, 0.5556, 0.6889, 0.7111, 0.4889]
+             arrastre>= [0.691, 0.687, 0.709, 0.709, 0.733, 0.691, 0.713, 0.716, 0.682, 0.702] · partos [139, 141, 131, 131, 120, 139, 129, 128, 143, 134] · solo inyectadas False
+  cero   i1: fraccion A  ini 0.5 -> p0..p9 [0.4956, 0.4689, 0.4956, 0.4578, 0.46, 0.4444, 0.4511, 0.4756, 0.44, 0.3467]
+             intacta [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] · listas mutadas (suma) 0 · vivos con A [0.4, 0.3556, 0.4889, 0.4, 0.4667, 0.5111, 0.3556, 0.4889, 0.3778, 0.2]
+             arrastre>= [0.704, 0.7, 0.673, 0.689, 0.671, 0.678, 0.678, 0.682, 0.704, 0.7] · partos [133, 135, 147, 140, 148, 145, 145, 143, 133, 135] · solo inyectadas True
+  cero   i2: fraccion A  ini 0.5 -> p0..p9 [0.5267, 0.4889, 0.4156, 0.4511, 0.42, 0.4578, 0.4933, 0.4422, 0.34, 0.3022]
+             intacta [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] · listas mutadas (suma) 0 · vivos con A [0.4889, 0.4667, 0.3111, 0.5556, 0.3333, 0.4222, 0.4444, 0.3556, 0.2667, 0.2889]
+             arrastre>= [0.68, 0.68, 0.678, 0.66, 0.713, 0.684, 0.636, 0.707, 0.696, 0.7] · partos [144, 144, 145, 153, 129, 142, 164, 132, 137, 135] · solo inyectadas True
+  cero   i3: fraccion A  ini 0.5 -> p0..p9 [0.6156, 0.5644, 0.6578, 0.6378, 0.5267, 0.52, 0.5289, 0.4889, 0.5067, 0.4022]
+             intacta [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] · listas mutadas (suma) 0 · vivos con A [0.8, 0.5111, 0.7556, 0.6444, 0.3333, 0.4222, 0.4889, 0.4889, 0.5778, 0.1778]
+             arrastre>= [0.713, 0.696, 0.696, 0.693, 0.711, 0.676, 0.689, 0.722, 0.693, 0.7] · partos [129, 137, 137, 138, 130, 146, 140, 125, 138, 135] · solo inyectadas True
+  cero   i4: fraccion A  ini 0.5 -> p0..p9 [0.5133, 0.5133, 0.4689, 0.4489, 0.4711, 0.4022, 0.3778, 0.3089, 0.2778, 0.2089]
+             intacta [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] · listas mutadas (suma) 0 · vivos con A [0.5111, 0.4889, 0.4444, 0.4889, 0.5111, 0.1778, 0.2889, 0.1778, 0.2889, 0.0889]
+             arrastre>= [0.702, 0.716, 0.733, 0.638, 0.72, 0.673, 0.716, 0.691, 0.669, 0.722] · partos [134, 128, 120, 163, 126, 147, 128, 139, 149, 125] · solo inyectadas True
+  cero   i5: fraccion A  ini 0.5 -> p0..p9 [0.4556, 0.4889, 0.4689, 0.4467, 0.4422, 0.4467, 0.4756, 0.4778, 0.44, 0.4044]
+             intacta [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] · listas mutadas (suma) 0 · vivos con A [0.4222, 0.5778, 0.4, 0.3333, 0.4, 0.5111, 0.4889, 0.6222, 0.4444, 0.3778]
+             arrastre>= [0.691, 0.698, 0.693, 0.696, 0.693, 0.7, 0.684, 0.689, 0.693, 0.693] · partos [139, 136, 138, 137, 138, 135, 142, 140, 138, 138] · solo inyectadas True
+  prueba moneda/10 i1 s59201: cruzan 6/9 · mayoria 1 · R0 med 0.9615 · fund med 0.0 · descendientes 492 || guardados: forzada3 4/9 · bq3_pas 5/9 · moneda_x1 5/9
+  prueba moneda/10 i2 s59202: cruzan 5/9 · mayoria 1 · R0 med 0.9302 · fund med 2.0 · descendientes 428 || guardados: forzada3 5/9 · bq3_pas 2/9 · moneda_x1 1/9
+  prueba moneda/10 i3 s59203: cruzan 6/9 · mayoria 1 · R0 med 0.9667 · fund med 0.0 · descendientes 447 || guardados: forzada3 5/9 · bq3_pas 2/9 · moneda_x1 5/9
+  prueba moneda/10 i4 s59204: cruzan 4/9 · mayoria 0 · R0 med 0.8235 · fund med 5.0 · descendientes 505 || guardados: forzada3 4/9 · bq3_pas 4/9 · moneda_x1 2/9
+  prueba moneda/10 i5 s59205: cruzan 3/9 · mayoria 0 · R0 med 0.6875 · fund med 9.0 · descendientes 502 || guardados: forzada3 5/9 · bq3_pas 0/9 · moneda_x1 3/9
+  suma cruzan (de 45): {'moneda_div10': 24, 'forzada3': 23, 'bq3_pas': 13, 'moneda_x1': 16}
+  referencia moneda a tasas x1 (29-sep), fraccion A en p9: {'moneda': {'1': 0.3911, '2': 0.0667, '3': 0.22, '4': 0.6156, '5': 0.2467}, 'neutra': {'1': 0.4444, '2': 0.2289, '3': 0.3978, '4': 0.2533, '5': 0.12}, 'cero': {'1': 0.4689, '2': 0.32, '3': 0.4222, '4': 0.1667, '5': 0.3889}}
+  validez: {'abortos_0': True, 'completas': True, 'f_ini_05': True, 'cero_solo_inyectadas': True, 'cero_banda': True, 'carga_baja': True, 'tasas_actuan': True, 'refs_sha': True, 'arnes': True}
+  final: {'moneda': {'1': 0.2178, '2': 0.3467, '3': 0.3422, '4': 0.2644, '5': 0.2222}, 'neutra': {'1': 0.5689, '2': 0.6667, '3': 0.82, '4': 0.6356, '5': 0.5822}, 'cero': {'1': 0.3467, '2': 0.3022, '3': 0.4022, '4': 0.2089, '5': 0.4044}}
+  cero_media: 0.3329
+  cero_mediana: 0.3467
+  intacta_neutra_p9_mediana: 0.9511
+  listas_mutadas_moneda_neutra: 2503
+  moneda_mayor_que_neutra: 0/5
+  moneda_le_mitad_neutra: 4/5
+  moneda_mayor_con_margen_005: 0/5
+  neutra_mediana_p9: 0.6356
+  moneda_mediana_p9: 0.2644
+  dif_mediana_moneda_menos_neutra: -0.36
+  G1 genetista: neutra, mediana de la fraccion A en p9 en [0.30, 0.45] (p asignada por el creador) (p 0.55): medido 0.6356 -> REFUTADA
+  K1 veredicto OTRA MONEDA (p 0.65): medido PURGA -> REFUTADA
+  K2 veredicto PAGA (p 0.2): medido PURGA -> REFUTADA
+  K3 veredicto PURGA (p 0.1): medido PURGA -> CUMPLE
+  K4 |mediana neutra - mediana cero| en p9 < 0.10 (p 0.65): medido 0.2889 -> REFUTADA
+  K5 intacta de la neutra en p9 (mediana) >= 0.85 (p 0.75): medido 0.9511 -> CUMPLE
+  K6 prueba moneda / 10: suma de cruzan (de 45) en [8, 24] (p 0.6): medido 24 -> CUMPLE
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\mutacion\datos\explora_20260930_191833\lectura_mut.json
+VEREDICTO (PREREGISTRO_mutacion.md sec. 6): PURGA
