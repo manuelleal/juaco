@@ -1,0 +1,353 @@
+{
+ "modo": "explora",
+ "humo": false,
+ "semillas": [
+  718001,
+  718002,
+  718003,
+  718004,
+  718005
+ ],
+ "T": 100000,
+ "brazos": [
+  "o1",
+  "termo",
+  "v143",
+  "pc",
+  "o1liso",
+  "o1pas"
+ ],
+ "sha_runner": "e32d39add31f47da",
+ "sha_preregistro": "b6a6ff25ee345972",
+ "sha_pista_grande": "15fea5afb19fdde4",
+ "siembra": "experimentos/organelos/o1_evo/datos/serie_i617201-617220_20260929_193426",
+ "siembra_sha": "14de44f826d30927",
+ "lectura": {
+  "validez": {
+   "V1_completa": true,
+   "V2_cosas_actuan": true,
+   "V2b_liso_sin_cosas": true,
+   "V3_estado": true,
+   "V4_tamano": true,
+   "V5_siembra_actua": true
+  },
+  "valido": true,
+  "semillas": [
+   718001,
+   718002,
+   718003,
+   718004,
+   718005
+  ],
+  "total_linajes": 45,
+  "suma_cruzan": {
+   "o1": 34,
+   "termo": 20,
+   "v143": 4,
+   "pc": 19,
+   "o1liso": 8,
+   "o1pas": 30
+  },
+  "mayorias": {
+   "o1": 5,
+   "termo": 1,
+   "v143": 0,
+   "pc": 1,
+   "o1liso": 0,
+   "o1pas": 5
+  },
+  "L1_orden": {
+   "se_mantiene": true,
+   "o1": 34,
+   "termo": 20,
+   "v143": 4,
+   "invertido": []
+  },
+  "L2_par_o1_termo": {
+   "n": 5,
+   "gana": 5,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 34,
+   "suma_b": 20,
+   "dif": 14
+  },
+  "L2_par_termo_v143": {
+   "n": 5,
+   "gana": 5,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 20,
+   "suma_b": 4,
+   "dif": 16
+  },
+  "L3_margen_o1": {
+   "no_cruzan": 11,
+   "frac_cruzan": 0.7556,
+   "mayorias": 5
+  },
+  "L4_cosas_en_o1": {
+   "o1liso": 8,
+   "o1": 34,
+   "dif_liso_menos_grande": -26,
+   "par": {
+    "n": 5,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 5,
+    "suma_a": 8,
+    "suma_b": 34,
+    "dif": -26
+   },
+   "reserva_inmortales_o1liso": false
+  },
+  "L5_oasis": {
+   "o1": {
+    "ratio_pasos": 1.082,
+    "ratio_mord_AC": 1.003
+   },
+   "termo": {
+    "ratio_pasos": 1.028,
+    "ratio_mord_AC": 1.0
+   },
+   "v143": {
+    "ratio_pasos": 0.988,
+    "ratio_mord_AC": 1.035
+   },
+   "pc": {
+    "ratio_pasos": 1.166,
+    "ratio_mord_AC": 0.994
+   },
+   "o1pas": {
+    "ratio_pasos": 1.056,
+    "ratio_mord_AC": 0.949
+   }
+  },
+  "L6_pantano": {
+   "o1": {
+    "ratio_pasos": 0.906,
+    "ratio_mord_AC": 0.986,
+    "frac_muertes_con_carga": 0.381,
+    "cargas_med": 557.0,
+    "drenado_med": 375.988
+   },
+   "termo": {
+    "ratio_pasos": 0.989,
+    "ratio_mord_AC": 1.013,
+    "frac_muertes_con_carga": 0.2476,
+    "cargas_med": 622.0,
+    "drenado_med": 417.332
+   },
+   "v143": {
+    "ratio_pasos": 1.02,
+    "ratio_mord_AC": 0.993,
+    "frac_muertes_con_carga": 0.1702,
+    "cargas_med": 799.0,
+    "drenado_med": 507.315
+   },
+   "pc": {
+    "ratio_pasos": 0.887,
+    "ratio_mord_AC": 0.992,
+    "frac_muertes_con_carga": 0.2433,
+    "cargas_med": 680.0,
+    "drenado_med": 433.752
+   },
+   "o1pas": {
+    "ratio_pasos": 0.93,
+    "ratio_mord_AC": 0.981,
+    "frac_muertes_con_carga": 0.3651,
+    "cargas_med": 544.0,
+    "drenado_med": 376.885
+   }
+  },
+  "L7_pc_termo": {
+   "n": 5,
+   "gana": 1,
+   "empata": 1,
+   "pierde": 3,
+   "suma_a": 19,
+   "suma_b": 20,
+   "dif": -1
+  },
+  "L8_o1pas_o1": {
+   "n": 5,
+   "gana": 1,
+   "empata": 1,
+   "pierde": 3,
+   "suma_a": 30,
+   "suma_b": 34,
+   "dif": -4
+  },
+  "desc": {
+   "o1": {
+    "R0_med": 0.9677,
+    "fund_media": 17.8889,
+    "fund_mediana": 0.0,
+    "persisten": 38,
+    "vida_med": 1897.0,
+    "muertes": 2672,
+    "causas": {
+     "hambre": 1140,
+     "sed": 263,
+     "veneno": 672,
+     "sal": 597
+    },
+    "mord_BD_med": 559.0,
+    "mord_AC_med": 5591.0,
+    "mundo_AC": 3.6861,
+    "sin_bueno": 0.0081
+   },
+   "termo": {
+    "R0_med": 0.8367,
+    "fund_media": 62.5556,
+    "fund_mediana": 7.0,
+    "persisten": 27,
+    "vida_med": 1097.5,
+    "muertes": 4747,
+    "causas": {
+     "hambre": 1546,
+     "sed": 379,
+     "veneno": 1383,
+     "sal": 1439
+    },
+    "mord_BD_med": 1613.0,
+    "mord_AC_med": 6020.0,
+    "mundo_AC": 6.9754,
+    "sin_bueno": 0.0009
+   },
+   "v143": {
+    "R0_med": 0.4419,
+    "fund_media": 149.6667,
+    "fund_mediana": 47.0,
+    "persisten": 18,
+    "vida_med": 294.5,
+    "muertes": 8507,
+    "causas": {
+     "hambre": 1463,
+     "sed": 468,
+     "veneno": 3226,
+     "sal": 3350
+    },
+    "mord_BD_med": 3632.0,
+    "mord_AC_med": 8033.0,
+    "mundo_AC": 8.2044,
+    "sin_bueno": 0.0002
+   },
+   "pc": {
+    "R0_med": 0.7959,
+    "fund_media": 56.5556,
+    "fund_mediana": 9.0,
+    "persisten": 30,
+    "vida_med": 999.0,
+    "muertes": 4716,
+    "causas": {
+     "hambre": 1326,
+     "sed": 273,
+     "veneno": 1537,
+     "sal": 1580
+    },
+    "mord_BD_med": 1689.0,
+    "mord_AC_med": 6837.0,
+    "mundo_AC": 4.5015,
+    "sin_bueno": 0.0091
+   },
+   "o1liso": {
+    "R0_med": 0.8571,
+    "fund_media": 0.2222,
+    "fund_mediana": 0.0,
+    "persisten": 37,
+    "vida_med": 9642.5,
+    "muertes": 403,
+    "causas": {
+     "hambre": 133,
+     "sed": 166,
+     "veneno": 57,
+     "sal": 47
+    },
+    "mord_BD_med": 858.0,
+    "mord_AC_med": 5594.0,
+    "mundo_AC": 4.998,
+    "sin_bueno": 0.0022
+   },
+   "o1pas": {
+    "R0_med": 0.9697,
+    "fund_media": 20.7778,
+    "fund_mediana": 0.0,
+    "persisten": 36,
+    "vida_med": 1812.5,
+    "muertes": 2843,
+    "causas": {
+     "hambre": 1174,
+     "sed": 243,
+     "veneno": 764,
+     "sal": 662
+    },
+    "mord_BD_med": 652.0,
+    "mord_AC_med": 5538.0,
+    "mundo_AC": 3.8084,
+    "sin_bueno": 0.007
+   }
+  },
+  "predicciones": {
+   "P1_orden_se_mantiene": true,
+   "P2_o1_suma_en_22_40": true,
+   "P3_o1_mayoria_ge_3de5": true,
+   "P4_liso_menos_grande_en_m3_10": false,
+   "P5_oasis_no_se_usa": true,
+   "P6_pantano_no_se_evita": true,
+   "P7_pc_igual_termo": true
+  },
+  "casi_inmortales": {
+   "o1": 0,
+   "termo": 0,
+   "v143": 0,
+   "pc": 0,
+   "o1liso": 8,
+   "o1pas": 0
+  },
+  "reserva_inmortales": [],
+  "L1b_cruzan_mas_inmortales": {
+   "o1": 34,
+   "termo": 20,
+   "v143": 4,
+   "pc": 19,
+   "o1liso": 16,
+   "o1pas": 30
+  },
+  "P4_con_reserva": false,
+  "lectura": "ORDEN SE MANTIENE"
+ },
+ "seg_por_corrida": {
+  "o1_s718001": 327.7,
+  "termo_s718001": 117.1,
+  "v143_s718001": 122.2,
+  "pc_s718001": 200.2,
+  "o1liso_s718001": 444.6,
+  "o1pas_s718001": 402.4,
+  "termo_s718002": 155.9,
+  "o1_s718002": 433.5,
+  "v143_s718002": 157.0,
+  "pc_s718002": 192.6,
+  "o1liso_s718002": 427.8,
+  "o1pas_s718002": 417.6,
+  "termo_s718003": 152.4,
+  "o1_s718003": 409.5,
+  "v143_s718003": 145.3,
+  "pc_s718003": 173.4,
+  "o1liso_s718003": 378.4,
+  "o1pas_s718003": 369.5,
+  "termo_s718004": 133.1,
+  "o1_s718004": 367.1,
+  "v143_s718004": 135.4,
+  "pc_s718004": 165.2,
+  "o1liso_s718004": 367.1,
+  "o1pas_s718004": 374.6,
+  "termo_s718005": 153.7,
+  "o1_s718005": 414.7,
+  "v143_s718005": 148.2,
+  "pc_s718005": 173.0,
+  "o1liso_s718005": 365.3,
+  "o1pas_s718005": 345.9
+ },
+ "seg_total": 3869.6
+}
