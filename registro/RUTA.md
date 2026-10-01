@@ -65,6 +65,25 @@ Windows 11, AMD Ryzen 7 5700, Python 3.14.2 instalado desde `requirements.txt`, 
   campo salvo `seg` (el tiempo).
 - Los crudos del repo se dejaron como estaban: la corrida del autor sólo difería en `seg`.
 
+## Entregas de la sesión de investigación (1-oct), en `informe/literatura/`
+- `PASO_C_literatura_avaladores.md` y `referencias_pasoC.bib`: 24 referencias (18 abiertas en arXiv, 5 sólo por metadatos de Crossref
+  y 1 por la página del autor), y 5 posibles avaladores (Kapoor, Beel, Henderson, Narayanan, Clune).
+  **El estado VERIFICADO es el del investigador.** Antes de fijar el .bib, un auditor abre una muestra y relee en el PDF las cifras
+  citadas. El estatus de avalador sólo lo puede comprobar el director con su sesión de arXiv.
+- `ENTREGA_3_vocabulario_publicacion.md`: sedes (ALIFE 2027, Praga, 19–23 jul 2027; convocatoria sin publicar) y vocabulario.
+- **Requisitos de arXiv:**
+  - desde el 21-ene-2026, un autor nuevo necesita aval personal;
+  - en CS, los artículos de posición exigen revisión por pares previa, así que el informe va como investigación con datos y métodos.
+- **Orden sugerido:** Zenodo → arXiv → ALIFE 2027.
+- **Sobreafirmaciones señaladas en lo ya publicado, PENDIENTES DE DECISIÓN DEL DIRECTOR (no se ha cambiado nada):**
+  - "independent audit/replication" → "auditor de sólo lectura (agente separado)" y "réplica en semillas nuevas";
+  - "every claim recomputed" → sólo consta para los resultados 1–3;
+  - "that nobody designed" (resultado 3);
+  - "composition" (resultado 5);
+  - "evolved" y "open-ended evolution" en CITATION.cff y .zenodo.json;
+  - la tesis "el protocolo atrapó 105" es causal. Propuesta: "de 120 errores registrados, 105 (88 %) se corrigieron sin que
+    cambiara una conclusión ya declarada; 49 se detectaron antes de correr la serie".
+
 ## Siguiente paso concreto
 ALTO del paso 4A: el director llena la columna `clasificacion_director` de `informe/muestra_20.csv` (20 errores). Después: acuerdo
 y paso 4B (Jev).
