@@ -1,0 +1,347 @@
+{
+ "modo": "replica",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_mundo": true,
+   "V3_estado": true,
+   "V4_explorador_antes": true,
+   "V5_pisadas": true,
+   "V6_senal_viva": true,
+   "V7_solo_uno_pregunta": true
+  },
+  "puertas": {
+   "G_var_pares": true,
+   "G_var_magnitud": true,
+   "G_contenido": true,
+   "G_mudo": true
+  },
+  "veredicto": "FUNCIONA",
+  "en_umbral": false,
+  "umbrales": {
+   "gana_par": 14,
+   "razon_max": 0.85,
+   "frac_explorador": 0.9
+  },
+  "pareados": {
+   "mix": {
+    "n": 20,
+    "gana": 17,
+    "empata": 0,
+    "pierde": 3,
+    "med_a": 982.5,
+    "med_b": 1205.5,
+    "razon_med": 0.7836,
+    "por_indice_a": [
+     1031.0,
+     930.5,
+     929.5,
+     1301.5,
+     763.0,
+     1081.5,
+     927.5,
+     863.5,
+     1009.0,
+     1050.0,
+     987.5,
+     1216.5,
+     1070.0,
+     975.0,
+     1166.5,
+     977.5,
+     1098.0,
+     818.5,
+     949.5,
+     823.5
+    ],
+    "por_indice_b": [
+     1712.5,
+     1387.0,
+     1001.5,
+     1839.0,
+     1053.5,
+     1240.0,
+     924.0,
+     1198.0,
+     1340.5,
+     1289.0,
+     1637.5,
+     1123.0,
+     1106.5,
+     1422.0,
+     1213.0,
+     1145.0,
+     1039.5,
+     1125.0,
+     1133.0,
+     1328.0
+    ]
+   },
+   "pmixbar": {
+    "n": 20,
+    "gana": 17,
+    "empata": 0,
+    "pierde": 3,
+    "med_a": 982.5,
+    "med_b": 1516.2,
+    "razon_med": 0.666,
+    "por_indice_a": [
+     1031.0,
+     930.5,
+     929.5,
+     1301.5,
+     763.0,
+     1081.5,
+     927.5,
+     863.5,
+     1009.0,
+     1050.0,
+     987.5,
+     1216.5,
+     1070.0,
+     975.0,
+     1166.5,
+     977.5,
+     1098.0,
+     818.5,
+     949.5,
+     823.5
+    ],
+    "por_indice_b": [
+     2662.5,
+     1660.0,
+     2111.5,
+     1540.0,
+     2857.5,
+     889.0,
+     2084.0,
+     1620.5,
+     1303.0,
+     1826.0,
+     1360.0,
+     1492.5,
+     1106.0,
+     1315.5,
+     1160.0,
+     1193.0,
+     904.5,
+     1351.0,
+     2045.5,
+     1622.5
+    ]
+   },
+   "pmudo": {
+    "n": 20,
+    "gana": 19,
+    "empata": 0,
+    "pierde": 1,
+    "med_a": 982.5,
+    "med_b": 1315.2,
+    "razon_med": 0.7254,
+    "por_indice_a": [
+     1031.0,
+     930.5,
+     929.5,
+     1301.5,
+     763.0,
+     1081.5,
+     927.5,
+     863.5,
+     1009.0,
+     1050.0,
+     987.5,
+     1216.5,
+     1070.0,
+     975.0,
+     1166.5,
+     977.5,
+     1098.0,
+     818.5,
+     949.5,
+     823.5
+    ],
+    "por_indice_b": [
+     1396.5,
+     1301.0,
+     2404.5,
+     1924.5,
+     1471.0,
+     1109.0,
+     1278.0,
+     1626.5,
+     1237.0,
+     1555.5,
+     873.5,
+     1404.0,
+     1321.0,
+     1266.0,
+     1609.0,
+     1294.0,
+     2149.0,
+     1117.5,
+     1309.5,
+     1170.0
+    ]
+   }
+  },
+  "descriptivo": {
+   "n_por_brazo": {
+    "pmix": 20,
+    "mix": 20,
+    "pmixbar": 20,
+    "pmudo": 20
+   },
+   "lat_lectores_med": {
+    "pmix": 982.5,
+    "mix": 1205.5,
+    "pmixbar": 1516.2,
+    "pmudo": 1315.2
+   },
+   "lat_explorador_med": {
+    "pmix": 365.2,
+    "mix": 385.8,
+    "pmixbar": 457.2,
+    "pmudo": 346.8
+   },
+   "explorador_antes_que_lectores": {
+    "pmix": 20,
+    "mix": 20,
+    "pmixbar": 20,
+    "pmudo": 20
+   },
+   "nunca_llegan_lectores": {
+    "pmix": 0,
+    "mix": 9,
+    "pmixbar": 30,
+    "pmudo": 0
+   },
+   "TRAMPA_mundo_AC": {
+    "pmix": 7.7845,
+    "mix": 6.3308,
+    "pmixbar": 7.4794,
+    "pmudo": 7.9758
+   },
+   "TRAMPA_cruce_lectores": {
+    "pmix": [
+     143,
+     160
+    ],
+    "mix": [
+     126,
+     160
+    ],
+    "pmixbar": [
+     37,
+     160
+    ],
+    "pmudo": [
+     138,
+     160
+    ]
+   },
+   "TRAMPA_fund_lectores_media": {
+    "pmix": 0.625,
+    "mix": 2.75,
+    "pmixbar": 69.5625,
+    "pmudo": 1.125
+   },
+   "TRAMPA_rumor_frac_pisadas_al_oasis_VIEJO": {
+    "pmix": 0.1581,
+    "pmixbar": 0.0982,
+    "pmudo": 0.1876
+   },
+   "pisadas_frac_al_oasis_NUEVO": {
+    "pmix": 0.8305,
+    "pmixbar": 0.0485,
+    "pmudo": 0.7993
+   },
+   "pisadas_total": {
+    "pmix": 6666,
+    "pmixbar": 4862,
+    "pmudo": 5561
+   },
+   "TRAMPA_lg_hereda_tras_vivir": {
+    "pmix": 0,
+    "pmixbar": 0,
+    "pmudo": 0
+   },
+   "lg_hereda_adopta": {
+    "pmix": 0,
+    "pmixbar": 5,
+    "pmudo": 0
+   },
+   "siembras_lectores": {
+    "pmix": 683.5,
+    "mix": 70.0,
+    "pmixbar": 744.5,
+    "pmudo": 581.0
+   },
+   "lecturas_lectores": {
+    "pmix": 24408.5,
+    "mix": 31828.5,
+    "pmixbar": 6036.0,
+    "pmudo": 21913.0
+   },
+   "cruzan_total": {
+    "pmix": 158,
+    "mix": 145,
+    "pmixbar": 50,
+    "pmudo": 153
+   },
+   "R0_med": {
+    "pmix": 0.9718,
+    "mix": 0.9697,
+    "pmixbar": 0.6819,
+    "pmudo": 0.9737
+   },
+   "ratio_pasos_oasis": {
+    "pmix": 7.4295,
+    "mix": 6.9145,
+    "pmixbar": 5.141,
+    "pmudo": 7.087
+   },
+   "letra_propuesta_por_el_coordinador (no decide)": "FUNCIONA"
+  }
+ },
+ "abortos": [],
+ "n": 20,
+ "T": 100000,
+ "semillas": [
+  738671,
+  738690
+ ],
+ "veredicto": "FUNCIONA",
+ "nota": "",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "mueve": 20000,
+  "c_e": 0.01
+ },
+ "sha_runner": "13204ba2ab2cef87",
+ "shas": {
+  "mixto\\corre_pisa.py": "445c27054bfdc82a",
+  "mixto\\corre_mixto.py": "f27edde098cf7a1a",
+  "mixto\\construye_pisa.py": "85de025f95740bb0",
+  "mixto\\carros\\O1_SEN_PISA.py": "bca8f97bcb6cb353",
+  "mixto\\carros\\O1_SEN_PISA_BAR.py": "95cda0103eb80b40",
+  "mixto\\carros\\O1_SEN_PISA0.py": "362a150ded4ff12d",
+  "juntos\\corre_juntos.py": "db75135c8c2f3e0d",
+  "mundo_tramo_c.py": "4a1044a4e0e1d5c9",
+  "juntos\\carros\\O1_TODO.py": "b7519a4a481a0cf5",
+  "juntos\\carros\\O1_TODO_SEN.py": "dff5e762bd23612e",
+  "juntos\\carros\\O1_TODO_PREG.py": "382dafcf822b36a1",
+  "carros\\O1_LUGAR_SENAL_BAR.py": "cab7460e91e215e3"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17
+ },
+ "seg": 3761.6
+}
