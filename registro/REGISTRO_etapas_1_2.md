@@ -7447,3 +7447,8 @@ también en la serie 2.
 - Coincide por otro camino con P1: cuando puede elegir, la selección elige la memoria de lugar.
 
 **ERR de la jornada (esta sesión): 157, 158, 159, 170–176. JUACO 5: 160 (bloque 160–169). Siguiente libre de esta sesión: ERR-177.**
+
+- **Corrección (1-oct, 02:50):** O1 libre con poderes cerró como **BLOQUE NO** (commit `23a6c83d`, rama `o1-libre`): la subida de MEM por selección
+  de la serie (10/10, dif 0.0596) **no replicó** (6/10, dif 0.047). Queda retirada la frase "cuando puede elegir, la selección elige la memoria
+  de lugar". Se repite ×2 sólo lo descriptivo: la selección sostiene a O1 frente a la deriva y no lo supera.
+- **Los tres juntos** (`f3054b56`): NO SUMAN en serie (todo 159 vs preg 163 vs sen 129 vs lug 88 vs todobar 90 de 180); no se estorban; réplica en curso por umbral.

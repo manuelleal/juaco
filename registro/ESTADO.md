@@ -43,8 +43,11 @@ cruce sobre memoria + pregunta, pero su contenido sí importa (al revés cae a 9
 (todo vs sen 14/20 con corte 13): **réplica lanzada a las 02:23**; si el apagado de las 4:00 la corta, retomar con
 `python experimentos/organelos/escalera/juntos/corre_juntos.py --replica --pool 2 --reanuda`.
 
-## Otra sesión (JUACO 5, rama `o1-libre`)
-O1 libre con poderes: HAY ALGO MODESTO en serie (la selección prende sólo la memoria de lugar, 10/10). Réplica lanzada a las 22:55, ~3:20.
+## Otra sesión (JUACO 5, rama `o1-libre`, commit `23a6c83d`)
+O1 libre con poderes: **BLOQUE NO** (serie MODESTO, réplica NO). La memoria de lugar subió por selección en 10/10 en la serie (dif 0.0596)
+pero **no replicó** (6/10, dif 0.047 < 0.05). Conquista 4/10 ×2. Lo que sí se repite ×2: la selección sostiene a O1 frente a la deriva
+(R0 0.96–0.98 contra 0.62–0.80 del neutro) y no lo supera. **No decir** "la selección elige la memoria de lugar". Cierre en
+`experimentos/organelos/o1_libre/CIERRE_o1_libre.md` (rama o1-libre). JUACO 5: siguiente ERR libre de su bloque, ERR-161.
 
 ## PLAN DE LA MAÑANA (el director viaja; prende el PC y lo deja corriendo; poco gasto de tokens)
 En orden; cada uno con su preregistro commiteado antes y pool total ≤ 6:
