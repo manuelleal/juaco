@@ -1,0 +1,30 @@
+
+================ LECTURA moneda del muro REPLICA · humo · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro_rep\datos/humo_20261001_070605
+  arnes: PASA con los shas actuales · explora guardado: sha OK · abortos: []
+  moneda_L i14: fraccion A  ini 0.5 -> p0..p1 [0.4267, 0.3086]
+               sombra (moneda vieja) [0.4556, 0.3156] · elegidos [6, 7] · establecidos [6, 7] · respaldo [0, 0]
+               listas [300, 350] · intacta [0.98, 0.9029] · mutadas (suma) 40 · arrastre>= [0.563, 0.646] · partos [150, 135] · cruzan en el pasaje [1, 3]
+  neutra_L i14: fraccion A  ini 0.5 -> p0..p1 [0.484, 0.605]
+               sombra (moneda vieja) [0.5067, 0.5844] · elegidos [5, 8] · establecidos [5, 8] · respaldo [0, 0]
+               listas [250, 400] · intacta [0.98, 0.9325] · mutadas (suma) 32 · arrastre>= [0.56, 0.588] · partos [174, 168] · cruzan en el pasaje [2, 4]
+  prueba i14 s647390: moneda_L cruzan 1/9 (R0 med 0.75, fund med 0.0) · neutra_L cruzan 1/9 (R0 med 0.6667, fund med 0.0) · dif +0
+  validez: {'abortos_0': True, 'completas': True, 'f_ini_05': True, 'moneda_actua': True, 'respaldo_raro': True, 'prueba_pareada': True, 'explora_sha': True, 'arnes': True}
+  final: {'moneda_L': {'14': 0.3086}, 'neutra_L': {'14': 0.605}}
+  FRACCION (decide la ESTRICTA): moneda_L > neutra_L en 0/1 (corte 7) · mediana moneda_L 0.3086 (corte 0.4) · <= 0.5 x neutra en 0/1 (corte PURGA 8) · empates 0 (arriba, >= 0.95: 0)
+  lecturas declaradas que NO deciden: original escalada (>= en 10/10 y mediana): False (0/1) · original sobre las 5 primeras (>= en 5/5 y mediana de 5): False · estricta en >= 8/10: False
+  CRUCE (co-principal, pareado): moneda_L 1 vs neutra_L 1 (de 9) · D +0 (corte +-9) · gana 0 · empata 1 · pierde 0 (corte 7) -> SIN DIFERENCIA
+  DESCRIPTIVO que NO decide (moneda sube o neutra baja): mediana final neutra_L 0.605 · moneda_L 0.3086 · cadenas que terminan por encima de su 0.50 inicial: moneda_L 0/1 · neutra_L 1/1
+  neutra_L_mediana: 0.605
+  moneda_L_media: 0.3086
+  neutra_L_media: 0.605
+  fijadas: {'moneda_L': 0, 'neutra_L': 0}
+  perdidas: {'moneda_L': 0, 'neutra_L': 0}
+  delta_pasaje: {'moneda_L': -0.0957, 'neutra_L': 0.0525}
+  elegidos_mediana: {'moneda_L': 6.5, 'neutra_L': 6.5}
+  cruzan_pasaje_media: {'moneda_L': 2, 'neutra_L': 3}
+  pasajes: 4
+  pasajes_con_respaldo: 0
+  pasajes_donde_la_moneda_difiere: 4
+  EXPLORA guardado (n 5): veredicto alli CONSERVA · con la lectura estricta: > en 4/5, >= en 5/5, mediana 0.8 (neutra 0.1429) · cruce 17 vs 23 de 45 (D -6; gana 1, empata 1, pierde 3)
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro_rep\datos/humo_20261001_070605\lectura_mmr.json
+VEREDICTO (PREREGISTRO_moneda_muro_rep.md sec. 5): HUMO (no cuenta; 1 cadena, 2 pasajes de 30k): fraccion INDETERMINADO · cruce SIN DIFERENCIA
