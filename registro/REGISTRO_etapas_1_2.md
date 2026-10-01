@@ -7452,3 +7452,5 @@ también en la serie 2.
   de la serie (10/10, dif 0.0596) **no replicó** (6/10, dif 0.047). Queda retirada la frase "cuando puede elegir, la selección elige la memoria
   de lugar". Se repite ×2 sólo lo descriptivo: la selección sostiene a O1 frente a la deriva y no lo supera.
 - **Los tres juntos** (`f3054b56`): NO SUMAN en serie (todo 159 vs preg 163 vs sen 129 vs lug 88 vs todobar 90 de 180); no se estorban; réplica en curso por umbral.
+
+- **Los tres juntos, réplica (1-oct 03:53):** NO SUMAN -> **BLOQUE NO SUMAN x2**. Réplica: todo 169 vs preg 163 vs sen 129 vs lug 95 vs todobar 95 (de 180); todo vs preg gana 9, empata 8, pierde 3 (+6): no pasa. Serie: 159 vs 163. No se estorban; mayorías 20/20; la señal leída al antípoda cae a 90-95 x2.
