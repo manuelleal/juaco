@@ -1,0 +1,125 @@
+[2026-10-01 08:14:41] Serie F2, commit 08832016. Pool compartido con la sesion organelos (reparto 2+2+2, excepcion declarada a EQUIPO.md aprobada por el director). Apagado forzado 14:00: si no termina a las 13:30 se corta y se retoma con --serie --pool 2 --reanuda.
+[08:14:41] CORRE_O1_LIBRE_F2 · serie · 20261001_081441 · python 3.14.2 · pool 2 · corre_o1_libre_f2.py d4e8aaa02114d8b4 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md f6ce2fd7cc58e7a4 · PS_UNGEN 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre_f2\datos\serie_i744201-744210_20261001_081441
+[08:14:41]   pasajes 744000-744092 (T 100000 x 3) · pruebas 744201-744210 (T 100000) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[08:14:41]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[08:14:41]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[08:14:41]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[08:14:41]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[08:14:41]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[08:14:41]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[08:14:41]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[08:14:41]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[08:14:41]   sha experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py ed631c4a4623ea11 OK
+[08:14:41]   carro O1_LIB == construye_o1_lib: True
+[08:14:41]   carro O1_LIB0 == construye_o1_lib: True
+[08:14:41]   carro O1_LIB_F2 == construye_o1_lib_f2: True · LIB_PY del runner importado -> experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py
+[08:14:52]   IDENTIDAD CORTA (salida ENTERA, N 9, s 744950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[08:15:10]   IDENTIDAD CORTA F2 (salida ENTERA + telemetria, N 9, s 744950, T 3000, mundo del bloque, sigma 0.03, colonia): O1_LIB_F2 con PS_UNGEN 0 == O1_LIB True · con PS_UNGEN 1 != True
+[08:15:11]   git experimentos/organelos/o1_libre_f2/PREREGISTRO_o1_libre_f2.md: commiteado True · sin cambios vs HEAD True · ultimo commit 08832016 2026-10-01T08:14:18-05:00
+[08:15:11]   git experimentos/organelos/o1_libre_f2/corre_o1_libre_f2.py: commiteado True · sin cambios vs HEAD True · ultimo commit 08832016 2026-10-01T08:14:18-05:00
+[08:15:11]   git experimentos/organelos/o1_libre_f2/construye_o1_lib_f2.py: commiteado True · sin cambios vs HEAD True · ultimo commit 08832016 2026-10-01T08:14:18-05:00
+[08:15:11]   git experimentos/organelos/o1_libre_f2/carros/O1_LIB_F2.py: commiteado True · sin cambios vs HEAD True · ultimo commit 08832016 2026-10-01T08:14:18-05:00
+[08:15:11]   git experimentos/organelos/o1_libre/corre_o1_libre.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[08:15:11]   git experimentos/organelos/o1_libre/construye_o1_lib.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[08:15:11]   git experimentos/organelos/o1_libre/carros/O1_LIB.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[08:15:11]   git experimentos/organelos/o1_libre/carros/O1_LIB0.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[08:15:11]   git experimentos/organelos/o1_libre/pista_libre.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[08:26:54]   [  732.3s] cadena i0 lib (700.9s) aborto None cruzan por pasaje [5, 5, 7] reloj n por gen 0.9451 eventos/cambia_0 por pasaje [(676, 92), (743, 85), (654, 41)]
+[08:27:00]   [  738.3s] cadena i0 neu (706.5s) aborto None cruzan por pasaje [6, 7, 7] reloj n por gen 1.0527 eventos/cambia_0 por pasaje [(813, 115), (749, 83), (729, 67)]
+[08:38:18]   [ 1416.4s] cadena i1 lib (683.9s) aborto None cruzan por pasaje [6, 6, 4] reloj n por gen 0.5741 eventos/cambia_0 por pasaje [(695, 87), (1005, 122), (945, 83)]
+[08:38:40]   [ 1438.4s] cadena i1 neu (700.6s) aborto None cruzan por pasaje [7, 6, 7] reloj n por gen 0.9416 eventos/cambia_0 por pasaje [(927, 126), (713, 64), (887, 62)]
+[08:50:00]   [ 2118.5s] cadena i2 lib (702.3s) aborto None cruzan por pasaje [6, 7, 8] reloj n por gen 0.8297 eventos/cambia_0 por pasaje [(725, 95), (630, 78), (676, 63)]
+[08:50:26]   [ 2144.5s] cadena i2 neu (705.9s) aborto None cruzan por pasaje [4, 6, 8] reloj n por gen 0.741 eventos/cambia_0 por pasaje [(762, 107), (617, 63), (811, 75)]
+[09:01:42]   [ 2820.6s] cadena i3 lib (701.2s) aborto None cruzan por pasaje [6, 6, 7] reloj n por gen 0.8319 eventos/cambia_0 por pasaje [(750, 94), (722, 72), (755, 83)]
+[09:02:16]   [ 2854.6s] cadena i3 neu (710.5s) aborto None cruzan por pasaje [7, 8, 8] reloj n por gen 0.5429 eventos/cambia_0 por pasaje [(773, 93), (668, 70), (711, 62)]
+[09:13:02]   [ 3500.7s] cadena i4 lib (681.8s) aborto None cruzan por pasaje [7, 6, 8] reloj n por gen 0.6755 eventos/cambia_0 por pasaje [(811, 130), (859, 125), (735, 97)]
+[09:13:56]   [ 3554.7s] cadena i4 neu (698.9s) aborto None cruzan por pasaje [6, 7, 8] reloj n por gen 0.5706 eventos/cambia_0 por pasaje [(651, 95), (744, 116), (646, 80)]
+[09:24:30]   [ 4188.9s] cadena i5 lib (687.9s) aborto None cruzan por pasaje [8, 6, 5] reloj n por gen 0.8064 eventos/cambia_0 por pasaje [(675, 69), (699, 72), (692, 58)]
+[09:25:28]   [ 4246.9s] cadena i5 neu (692.9s) aborto None cruzan por pasaje [7, 3, 6] reloj n por gen 1.0147 eventos/cambia_0 por pasaje [(777, 86), (651, 50), (769, 63)]
+[09:35:54]   [ 4873.0s] cadena i6 lib (684.0s) aborto None cruzan por pasaje [7, 5, 7] reloj n por gen 0.696 eventos/cambia_0 por pasaje [(626, 55), (649, 56), (825, 45)]
+[09:37:04]   [ 4943.0s] cadena i6 neu (695.3s) aborto None cruzan por pasaje [9, 7, 7] reloj n por gen 0.4962 eventos/cambia_0 por pasaje [(620, 66), (626, 59), (757, 63)]
+[09:47:06]   [ 5545.1s] cadena i7 lib (672.2s) aborto None cruzan por pasaje [6, 7, 5] reloj n por gen 0.7737 eventos/cambia_0 por pasaje [(839, 121), (957, 110), (736, 53)]
+[09:48:36]   [ 5635.1s] cadena i7 neu (692.9s) aborto None cruzan por pasaje [5, 8, 8] reloj n por gen 0.5762 eventos/cambia_0 por pasaje [(807, 103), (629, 72), (621, 80)]
+[09:58:31]   [ 6229.2s] cadena i8 lib (684.5s) aborto None cruzan por pasaje [7, 8, 6] reloj n por gen 0.3972 eventos/cambia_0 por pasaje [(963, 119), (694, 84), (734, 35)]
+[10:00:15]   [ 6333.2s] cadena i8 neu (698.4s) aborto None cruzan por pasaje [8, 8, 7] reloj n por gen 0.779 eventos/cambia_0 por pasaje [(617, 65), (683, 85), (630, 60)]
+[10:09:55]   [ 6913.3s] cadena i9 lib (683.7s) aborto None cruzan por pasaje [8, 7, 7] reloj n por gen 0.4998 eventos/cambia_0 por pasaje [(779, 99), (719, 74), (699, 45)]
+[10:11:51]   [ 7029.3s] cadena i9 neu (695.1s) aborto None cruzan por pasaje [7, 7, 7] reloj n por gen 1.0106 eventos/cambia_0 por pasaje [(772, 113), (638, 83), (797, 83)]
+[10:13:13]   [ 7111.4s] prueba i0 o1    (198.4s) aborto None cruzan 8/9 R0 0.9821 nac [55, 44, 58, 51, 59, 54, 59, 56, 51] conquista None
+[10:15:09]   [ 7227.4s] prueba i1 o1    (198.1s) aborto None cruzan 7/9 R0 0.9815 nac [56, 48, 58, 58, 61, 42, 49, 56, 53] conquista None
+[10:16:31]   [ 7309.4s] prueba i2 o1    (198.0s) aborto None cruzan 7/9 R0 0.9811 nac [51, 52, 53, 47, 60, 54, 58, 55, 54] conquista None
+[10:18:27]   [ 7425.4s] prueba i3 o1    (198.2s) aborto None cruzan 8/9 R0 0.9796 nac [56, 54, 51, 48, 47, 54, 39, 54, 55] conquista None
+[10:19:51]   [ 7509.4s] prueba i4 o1    (199.2s) aborto None cruzan 8/9 R0 0.9821 nac [39, 54, 55, 56, 55, 58, 58, 55, 51] conquista None
+[10:21:45]   [ 7623.5s] prueba i5 o1    (199.3s) aborto None cruzan 7/9 R0 0.9655 nac [59, 59, 56, 52, 52, 53, 58, 38, 61] conquista None
+[10:23:07]   [ 7705.5s] prueba i6 o1    (195.2s) aborto None cruzan 6/9 R0 0.9808 nac [53, 30, 46, 37, 51, 53, 56, 54, 55] conquista None
+[10:25:05]   [ 7823.5s] prueba i7 o1    (199.8s) aborto None cruzan 8/9 R0 0.9821 nac [54, 53, 58, 54, 55, 54, 55, 55, 58] conquista None
+[10:26:23]   [ 7901.5s] prueba i8 o1    (196.9s) aborto None cruzan 6/9 R0 0.9434 nac [51, 56, 58, 61, 33, 50, 55, 54, 54] conquista None
+[10:28:23]   [ 8021.5s] prueba i9 o1    (197.5s) aborto None cruzan 7/9 R0 0.9804 nac [57, 53, 55, 56, 50, 51, 52, 54, 32] conquista None
+[10:30:11]   [ 8129.5s] prueba i0 lib   (228.1s) aborto None cruzan 6/9 R0 0.9787 nac [59, 45, 45, 50, 46, 70, 55, 55, 53] conquista None
+[10:31:59]   [ 8237.6s] prueba i0 mix   (217.1s) aborto None cruzan 3/9 R0 0.7241 nac [57, 47, 39, 60, 45, 59, 40, 52, 42] conquista -9.9
+[10:33:53]   [ 8351.6s] prueba i0 neu   (221.1s) aborto None cruzan 5/9 R0 0.9143 nac [65, 64, 44, 50, 59, 69, 62, 59, 32] conquista None
+[10:35:29]   [ 8447.6s] prueba i0 mixn  (209.4s) aborto None cruzan 4/9 R0 0.631 nac [44, 42, 36, 42, 53, 48, 63, 54, 72] conquista 7.1
+[10:37:39]   [ 8577.6s] prueba i1 lib   (227.5s) aborto None cruzan 6/9 R0 0.9778 nac [58, 52, 81, 44, 58, 44, 54, 59, 64] conquista None
+[10:39:05]   [ 8663.6s] prueba i1 mix   (215.5s) aborto None cruzan 6/9 R0 0.9792 nac [53, 47, 56, 35, 60, 43, 52, 37, 54] conquista -14.5
+[10:41:19]   [ 8797.7s] prueba i1 neu   (220.3s) aborto None cruzan 4/9 R0 0.7889 nac [63, 67, 71, 69, 38, 52, 55, 61, 52] conquista None
+[10:42:33]   [ 8871.7s] prueba i1 mixn  (208.3s) aborto None cruzan 6/9 R0 0.9815 nac [54, 60, 55, 67, 53, 76, 49, 50, 58] conquista 9.45
+[10:45:09]   [ 9027.7s] prueba i2 lib   (228.5s) aborto None cruzan 4/9 R0 0.8788 nac [55, 41, 58, 49, 59, 60, 49, 59, 45] conquista None
+[10:46:13]   [ 9091.7s] prueba i2 mix   (219.0s) aborto None cruzan 7/9 R0 0.9792 nac [58, 56, 45, 44, 47, 56, 47, 59, 53] conquista -3.75
+[10:48:57]   [ 9255.7s] prueba i2 neu   (228.0s) aborto None cruzan 6/9 R0 0.98 nac [49, 59, 55, 56, 33, 49, 65, 49, 50] conquista None
+[10:49:53]   [ 9311.7s] prueba i2 mixn  (221.8s) aborto None cruzan 7/9 R0 0.9818 nac [54, 56, 49, 57, 50, 64, 47, 60, 54] conquista -8.45
+[10:52:47]   [ 9485.8s] prueba i3 lib   (231.2s) aborto None cruzan 7/9 R0 0.9792 nac [52, 41, 54, 53, 60, 58, 54, 43, 47] conquista None
+[10:53:33]   [ 9531.8s] prueba i3 mix   (219.4s) aborto None cruzan 6/9 R0 0.9821 nac [57, 55, 58, 55, 58, 56, 59, 62, 59] conquista -1.2
+[10:56:39]   [ 9717.8s] prueba i3 neu   (231.9s) aborto None cruzan 5/9 R0 0.9615 nac [47, 50, 45, 50, 54, 41, 45, 43, 55] conquista None
+[10:57:11]   [ 9749.8s] prueba i3 mixn  (217.2s) aborto None cruzan 7/9 R0 0.9818 nac [56, 40, 58, 48, 56, 62, 53, 49, 54] conquista -5.65
+[11:00:29]   [ 9947.8s] prueba i4 lib   (230.1s) aborto None cruzan 7/9 R0 0.9821 nac [48, 56, 60, 51, 55, 55, 65, 50, 55] conquista None
+[11:00:49]   [ 9967.8s] prueba i4 mix   (217.7s) aborto None cruzan 8/9 R0 0.9818 nac [43, 57, 54, 56, 52, 54, 56, 63, 49] conquista -6.7
+[11:04:11]   [10169.9s] prueba i4 neu   (222.3s) aborto None cruzan 6/9 R0 0.9767 nac [52, 56, 42, 52, 49, 30, 54, 55, 42] conquista None
+[11:04:21]   [10179.9s] prueba i4 mixn  (213.8s) aborto None cruzan 8/9 R0 0.9818 nac [25, 60, 54, 52, 55, 57, 54, 60, 49] conquista -9.85
+[11:07:59]   [10397.9s] prueba i5 mix   (217.3s) aborto None cruzan 6/9 R0 0.9808 nac [60, 51, 39, 52, 61, 57, 53, 58, 53] conquista 1.3
+[11:08:01]   [10399.9s] prueba i5 lib   (229.9s) aborto None cruzan 6/9 R0 0.9811 nac [48, 52, 44, 60, 52, 56, 52, 49, 45] conquista None
+[11:11:37]   [10616.0s] prueba i5 mixn  (215.0s) aborto None cruzan 5/9 R0 0.913 nac [56, 54, 63, 57, 58, 50, 50, 54, 61] conquista -3.85
+[11:11:51]   [10630.0s] prueba i5 neu   (232.4s) aborto None cruzan 4/9 R0 0.8143 nac [50, 49, 59, 57, 43, 47, 53, 51, 44] conquista None
+[11:15:21]   [10840.0s] prueba i6 lib   (225.2s) aborto None cruzan 5/9 R0 0.9804 nac [51, 62, 58, 38, 81, 52, 46, 50, 35] conquista None
+[11:15:27]   [10846.0s] prueba i6 mix   (216.5s) aborto None cruzan 5/9 R0 0.9773 nac [48, 59, 56, 39, 43, 60, 56, 59, 50] conquista -3.65
+[11:19:07]   [11066.0s] prueba i6 mixn  (218.1s) aborto None cruzan 6/9 R0 0.9804 nac [47, 57, 51, 27, 50, 53, 57, 62, 58] conquista 2.85
+[11:19:11]   [11070.0s] prueba i6 neu   (228.9s) aborto None cruzan 6/9 R0 0.98 nac [39, 35, 49, 52, 64, 62, 47, 54, 64] conquista None
+[11:22:49]   [11288.1s] prueba i7 mix   (218.3s) aborto None cruzan 7/9 R0 0.9811 nac [45, 65, 65, 48, 58, 57, 52, 47, 60] conquista -1.75
+[11:22:59]   [11298.1s] prueba i7 lib   (233.3s) aborto None cruzan 6/9 R0 0.98 nac [43, 61, 49, 60, 46, 60, 60, 47, 56] conquista None
+[11:26:39]   [11518.1s] prueba i7 mixn  (219.5s) aborto None cruzan 5/9 R0 0.9804 nac [45, 52, 55, 40, 60, 50, 63, 74, 59] conquista -2.4
+[11:26:41]   [11520.1s] prueba i7 neu   (232.2s) aborto None cruzan 5/9 R0 0.9783 nac [55, 60, 64, 45, 54, 54, 45, 88, 63] conquista None
+[11:30:22]   [11740.2s] prueba i8 mix   (220.9s) aborto None cruzan 7/9 R0 0.9655 nac [49, 57, 52, 57, 55, 54, 53, 56, 56] conquista -3
+[11:30:38]   [11756.2s] prueba i8 lib   (238.5s) aborto None cruzan 4/9 R0 0.8333 nac [57, 61, 55, 51, 45, 54, 56, 47, 61] conquista None
+[11:34:20]   [11978.2s] prueba i8 neu   (237.3s) aborto None cruzan 7/9 R0 0.9615 nac [46, 56, 44, 53, 51, 44, 51, 47, 50] conquista None
+[11:34:30]   [11988.2s] prueba i8 mixn  (232.3s) aborto None cruzan 6/9 R0 0.9273 nac [51, 54, 51, 56, 51, 50, 48, 54, 49] conquista -3.5
+[11:38:16]   [12214.2s] prueba i9 mix   (224.9s) aborto None cruzan 4/9 R0 0.8971 nac [53, 63, 61, 51, 58, 43, 56, 44, 51] conquista -5.55
+[11:38:18]   [12216.2s] prueba i9 lib   (239.0s) aborto None cruzan 6/9 R0 0.9796 nac [48, 51, 57, 40, 55, 52, 66, 46, 53] conquista None
+[11:41:54]   [12432.2s] prueba i9 mixn  (215.6s) aborto None cruzan 7/9 R0 0.98 nac [56, 48, 21, 55, 49, 52, 58, 45, 49] conquista 3.4
+[11:42:12]   [12450.2s] prueba i9 neu   (236.0s) aborto None cruzan 6/9 R0 0.9773 nac [43, 55, 45, 51, 46, 51, 57, 55, 41] conquista None
+[11:42:12] 
+================ LA LETRA (PREREGISTRO_o1_libre_f2.md sec. 5)
+[11:42:12]   validez: {'V1_completa': True, 'V2_o1_vive': True, 'V3_mundo_actua': True, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True, 'V7_un_gen': True, 'V8_reloj_un_gen': True}
+[11:42:12]   puertas: {'PC_conquista': False, 'PN_no_es_solo_deriva': False, 'PP_un_poder_se_prende': False, 'PF1_neutro_no_se_degrada': True, 'PF2_lib_no_bajo_o1': False} · umbrales {'gana': 8, 'dif_poder': 0.05, 'o1_R0': 0.5, 'R0_neu': 0.9, 'margen_R0': 0.03, 'margen_PF2': 5, 'margen_cruz': 4, 'supera': 7, 'n_max': 3.0} · EN EL UMBRAL: False · matiz la carga se quito (el neutro no se degrada) y lib sigue bajo O1: la carga no era lo que tapaba
+[11:42:12]   [letra de o1_libre, descriptivo] {'veredicto': 'NO', 'matiz': None, 'en_umbral': False}
+[11:42:12]   [desc] conquista_por_indice: {'mix': [-9.9, -14.5, -3.75, -1.2, -6.7, 1.3, -3.65, -1.75, -3, -5.55], 'mixn': [7.1, 9.45, -8.45, -5.65, -9.85, -3.85, 2.85, -2.4, -3.5, 3.4], 'mix_gana': 1, 'mix_gana_a_mixn': 6}
+[11:42:12]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[11:42:12]   [desc] poderes_siembra_final: {'MEM': {'gana': 7, 'dif_med': 0.0056, 'lib_med': 0.0166, 'neu_med': 0.011, 'indices_con_ambas': 10, 'se_prende': False}, 'SOC': {'gana': 8, 'dif_med': 0.0053, 'lib_med': 0.014, 'neu_med': 0.0087, 'indices_con_ambas': 10, 'se_prende': False}, 'RES': {'gana': 8, 'dif_med': 0.0105, 'lib_med': 0.0167, 'neu_med': 0.0062, 'indices_con_ambas': 10, 'se_prende': False}, 'PAU': {'gana': 6, 'dif_med': 0.0021, 'lib_med': 0.0132, 'neu_med': 0.0111, 'indices_con_ambas': 10, 'se_prende': False}}
+[11:42:12]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.2495, 0.2566, 0.2494], 'PRUEBA': [0.4986, 0.4947, 0.4978], 'PEN_OTRO': [0.3488, 0.3496, 0.3503], 'D0': [3.0038, 2.9893, 2.9981], 'PISO': [0.201, 0.204, 0.2061], 'U4': [4.0012, 4.0143, 4.0205], 'U2': [1.9946, 1.9975, 1.993], 'U1': [1.0007, 1.0008, 0.9986], 'XURG': [0.3004, 0.2993, 0.2981], 'TOPE': [0.5007, 0.4981, 0.4995], 'MEM': [0.0048, 0.0072, 0.0166], 'SOC': [0.002, 0.0058, 0.014], 'RES': [0.0049, 0.0069, 0.0167], 'PAU': [0.0001, 0.0024, 0.0132]}, 'neu': {'MARGEN': [0.2496, 0.2509, 0.2462], 'PRUEBA': [0.4992, 0.4991, 0.5016], 'PEN_OTRO': [0.3513, 0.3513, 0.3502], 'D0': [2.9949, 2.9864, 2.9955], 'PISO': [0.2012, 0.1989, 0.2024], 'U4': [4.0046, 4.0044, 4.0046], 'U2': [2.0003, 2.0024, 1.9959], 'U1': [1.0021, 0.9975, 1.0017], 'XURG': [0.3002, 0.3006, 0.3021], 'TOPE': [0.4997, 0.5015, 0.4978], 'MEM': [0.0017, 0.0058, 0.011], 'SOC': [0.0028, 0.0103, 0.0087], 'RES': [0.0048, 0.0046, 0.0062], 'PAU': [0.004, 0.0063, 0.0111]}}
+[11:42:12]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0031, 0.0014, 0.0056], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [-0.0008, -0.0045, 0.0053], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [0.0001, 0.0023, 0.0105], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [-0.0039, -0.0039, 0.0021], 'prende_en_pasaje': None}}
+[11:42:12]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.2494, 'neu': 0.2462, 'fabrica': 0.25, 'lib_gana_neu': 5}, 'PRUEBA': {'lib': 0.4978, 'neu': 0.5016, 'fabrica': 0.5, 'lib_gana_neu': 1}, 'PEN_OTRO': {'lib': 0.3503, 'neu': 0.3502, 'fabrica': 0.35, 'lib_gana_neu': 6}, 'D0': {'lib': 2.9981, 'neu': 2.9955, 'fabrica': 3.0, 'lib_gana_neu': 5}, 'PISO': {'lib': 0.2061, 'neu': 0.2024, 'fabrica': 0.2, 'lib_gana_neu': 8}, 'U4': {'lib': 4.0205, 'neu': 4.0046, 'fabrica': 4.0, 'lib_gana_neu': 7}, 'U2': {'lib': 1.993, 'neu': 1.9959, 'fabrica': 2.0, 'lib_gana_neu': 5}, 'U1': {'lib': 0.9986, 'neu': 1.0017, 'fabrica': 1.0, 'lib_gana_neu': 2}, 'XURG': {'lib': 0.2981, 'neu': 0.3021, 'fabrica': 0.3, 'lib_gana_neu': 3}, 'TOPE': {'lib': 0.4995, 'neu': 0.4978, 'fabrica': 0.5, 'lib_gana_neu': 6}}
+[11:42:12]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.9809, 'ultimo': 0.9698, 'aviso': False}
+[11:42:12]   [desc] suma_cruzan: {'lib': 57, 'neu': 54, 'o1': 72, 'mix': 59, 'mixn': 61}
+[11:42:12]   [desc] nac_reales_total_med: {'lib': 476.5, 'neu': 459.0, 'o1': 481.0, 'mix': 482.0, 'mixn': 471.0}
+[11:42:12]   [desc] R0_med: {'lib': 0.9794, 'neu': 0.9691, 'o1': 0.9809, 'mix': 0.9792, 'mixn': 0.9804}
+[11:42:12]   [desc] PM_monocultivo: {'lib_gana_o1': 0, 'neu_gana_o1': 1, 'lib_gana_neu': 6, 'nac_lib_gana_o1': 6}
+[11:42:12]   [desc] mix_cruzan: {'mix': {'lib': 30, 'o1': 29}, 'mixn': {'lib': 28, 'o1': 33}}
+[11:42:12]   [desc] activaciones_prueba: {'lib': {'mem': 216659.0, 'pau': 1578.5, 'soc': 14.0, 'res': 347116.0, 'escr': 627.0}, 'neu': {'mem': 63901.0, 'pau': 3769.5, 'soc': 6.0, 'res': 212317.0, 'escr': 612.0}, 'mix': {'mem': 101682.0, 'pau': 1015.0, 'soc': 3.0, 'res': 130615.5, 'escr': 323.0}, 'mixn': {'mem': 47181.5, 'pau': 1683.0, 'soc': 1.0, 'res': 151074.5, 'escr': 314.5}}
+[11:42:12]   [desc] partos_por_pasaje: {'lib': [587.5, 596.0, 608.0], 'neu': [579.5, 593.0, 600.5]}
+[11:42:12]   [desc] mixtas_por_lado: {'mix': {'conquista': -3.7, 'dif_partos': 10.0, 'dif_muertes': -14.975, 'dif_fund': -6.85}, 'mixn': {'conquista': -2.95, 'dif_partos': 4.775, 'dif_muertes': 3.65, 'dif_fund': 8.4}}
+[11:42:12]   [desc] activaciones_cadena_lib_ultimo: {'mem': 104395.5, 'pau': 2573.0, 'soc': 4.0, 'res': 420435.0, 'escr': 608.0}
+[11:42:12]   [desc] mundo_AC: {'lib': 3.1727, 'neu': 3.2973, 'o1': 3.2437, 'mix': 3.0058, 'mixn': 3.2106}
+[11:42:12]   [desc] frac_en_parche_med: {'lib': 0.2644, 'neu': 0.1745, 'o1': 0.1433, 'mix': 0.2022, 'mixn': 0.1689}
+[11:42:12]   [desc] relojes: {'lib': {'n_por_gen': {'mediana': 0.7349, 'min': 0.3972, 'max': 0.9451, 'por_cadena': [0.9451, 0.5741, 0.8297, 0.8319, 0.6755, 0.8064, 0.696, 0.7737, 0.3972, 0.4998]}, 'eventos_equivalentes_14n': 10.29, 'fund_colonia_por_pasaje': [130.0, 112.0, 113.0], 'fund_de_siembra_por_pasaje': [0.0, 9.0, 9.0], 'Ne_linajes_por_pasaje': [8.215, 8.3, 8.37], 'padres_distintos_por_pasaje': [24.0, 25.5, 23.0], 'partos_por_pasaje': [587.5, 596.0, 608.0], 'eventos_mutacion_por_pasaje': [737.5, 720.5, 734.5]}, 'neu': {'n_por_gen': {'mediana': 0.76, 'min': 0.4962, 'max': 1.0527, 'por_cadena': [1.0527, 0.9416, 0.741, 0.5429, 0.5706, 1.0147, 0.4962, 0.5762, 0.779, 1.0106]}, 'eventos_equivalentes_14n': 10.64, 'fund_colonia_por_pasaje': [181.0, 52.5, 130.0], 'fund_de_siembra_por_pasaje': [0.0, 9.0, 9.0], 'Ne_linajes_por_pasaje': [8.365, 8.5, 8.33], 'padres_distintos_por_pasaje': [23.5, 23.0, 26.0], 'partos_por_pasaje': [579.5, 593.0, 600.5], 'eventos_mutacion_por_pasaje': [772.5, 659.5, 743.0]}}
+[11:42:12]   [desc] F2: {'R0_neu_med': 0.9691, 'R0_o1_med': 0.9809, 'R0_lib_med': 0.9794, 'cruzan_lib': 57, 'cruzan_o1': 72, 'cruzan_neu': 54, 'dif_lib_o1': -15, 'lib_supera_o1_con_margen': False, 'historico_o1_libre': {'R0_neu': [0.795, 0.62], 'cruzan_lib': [55, 39], 'cruzan_o1': [66, 69], 'cruzan_neu': [30, 32], 'n_neu': [11.87, 11.65]}, 'firma_purga': False, 'reloj_lib_sobre_neu': 0.967}
+[11:42:12] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre_f2\datos\serie_i744201-744210_20261001_081441\resumen.json (sha 1f7db558dd415b77) · abortos 0 · 12450.6s
+[11:42:12] VEREDICTO DE LA SERIE: NO (la carga se quito (el neutro no se degrada) y lib sigue bajo O1: la carga no era lo que tapaba)   (en el umbral: False; regla de parada: PREREGISTRO_o1_libre_f2.md sec. 6)
+SALIDA 0
