@@ -1,0 +1,156 @@
+{
+ "modo": "humo",
+ "peldano": "d4",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "base": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 2.5,
+    "K_post": 4.395,
+    "partos": 846,
+    "nietos": 724,
+    "nietos_post": 179,
+    "rumbo": 0.1522,
+    "vida_med": 161.5,
+    "nobj": 22.059,
+    "causas": {
+     "hambre": 191,
+     "sed": 206,
+     "veneno": 1983,
+     "sal": 1977
+    }
+   },
+   "camada": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 1.5,
+    "K_post": 3.63,
+    "partos": 899,
+    "nietos": 785,
+    "nietos_post": 165,
+    "rumbo": 0.1216,
+    "vida_med": 166.5,
+    "nobj": 23.384,
+    "causas": {
+     "hambre": 210,
+     "sed": 191,
+     "veneno": 2063,
+     "sal": 1905
+    },
+    "sin_pareja": 0,
+    "con_pareja": 0,
+    "recomb": 0,
+    "pagos": 0,
+    "trofico": 27
+   }
+  },
+  "pareados": {
+   "base_vs_camada": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      305,
+      452
+     ],
+     [
+      419,
+      333
+     ]
+    ],
+    "K_post": [
+     [
+      4.57,
+      3.84
+     ],
+     [
+      4.22,
+      3.42
+     ]
+    ]
+   },
+   "camada_vs_base": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      452,
+      305
+     ],
+     [
+      333,
+      419
+     ]
+    ],
+    "K_post": [
+     [
+      3.84,
+      4.57
+     ],
+     [
+      3.42,
+      4.22
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": [
+  "camada",
+  "base"
+ ],
+ "semillas": [
+  739294,
+  739295
+ ],
+ "familia": {
+  "camada": {
+   "camada": 1,
+   "a_quien": "padre"
+  },
+  "base": null
+ },
+ "extra": {},
+ "eco": {
+  "refunda": 1,
+  "t_corte": 50000,
+  "p_mut": 0.05,
+  "sigma": 0.15,
+  "banco": 50,
+  "cada_gen": 5000,
+  "n_sombra": 0
+ },
+ "nota": "humo 1 d4: reduccion de camada (hijo debil -> padre), T 100k corte 50k",
+ "senal": "no",
+ "sha_runner": "b5aeb490e39805f0",
+ "mundo": {
+  "sha_motor_eco": "bca3033878b59622",
+  "sha_fuente_transformada": "4a7e0dffac15cffa",
+  "anclas": 12
+ },
+ "seg": 419.5
+}

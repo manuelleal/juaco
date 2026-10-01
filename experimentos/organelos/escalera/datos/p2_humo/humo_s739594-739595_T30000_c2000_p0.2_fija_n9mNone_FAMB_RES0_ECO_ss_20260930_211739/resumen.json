@@ -1,0 +1,139 @@
+{
+ "modo": "humo",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "peg": {
+    "n": 2,
+    "persisten": 0,
+    "desc_suma": 316,
+    "fund_media": 86.4444,
+    "vivos_final": 13.0,
+    "max_vivos": 17.5,
+    "bloqueados": 0,
+    "vida_med": 93.75,
+    "tam_grupo": 1.4335,
+    "muertes_cuello": 35,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 311982,
+    "causas": {
+     "hambre": 42,
+     "sed": 26,
+     "veneno": 929,
+     "sal": 867
+    }
+   },
+   "sue": {
+    "n": 2,
+    "persisten": 4,
+    "desc_suma": 420,
+    "fund_media": 110.6111,
+    "vivos_final": 21.0,
+    "max_vivos": 26.5,
+    "bloqueados": 0,
+    "vida_med": 127.25,
+    "tam_grupo": 1.0,
+    "muertes_cuello": 112,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 0,
+    "causas": {
+     "hambre": 128,
+     "sed": 76,
+     "veneno": 1113,
+     "sal": 1070
+    }
+   },
+   "peg0": {
+    "n": 2,
+    "persisten": 0,
+    "desc_suma": 322,
+    "fund_media": 89.8889,
+    "vivos_final": 11.5,
+    "max_vivos": 17.0,
+    "bloqueados": 0,
+    "vida_med": 99.75,
+    "tam_grupo": 1.408,
+    "muertes_cuello": 0,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 307168,
+    "causas": {
+     "hambre": 23,
+     "sed": 28,
+     "veneno": 950,
+     "sal": 934
+    }
+   }
+  },
+  "pareados": {
+   "peg_vs_sue": {
+    "persisten": [
+     [
+      0,
+      2
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "desc": [
+     [
+      150,
+      211
+     ],
+     [
+      166,
+      209
+     ]
+    ]
+   },
+   "peg_vs_peg0": {
+    "persisten": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "desc": [
+     [
+      150,
+      170
+     ],
+     [
+      166,
+      152
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "peg",
+  "sue",
+  "peg0"
+ ],
+ "cuello": 2000,
+ "p_suelto": 0.2,
+ "semillas": [
+  739594,
+  739595
+ ],
+ "nota": "reapertura 2: celula ECO, el cuello solo mata sueltos (maximo beneficio de pegarse)",
+ "sha_runner": "63da501ebcc6071e",
+ "mundo": {
+  "sha_motor": "d10cb9021f5d0f41",
+  "sha_fuente_transformada": "30b19d0cefdde857",
+  "anclas": 10
+ },
+ "seg": 222.6
+}

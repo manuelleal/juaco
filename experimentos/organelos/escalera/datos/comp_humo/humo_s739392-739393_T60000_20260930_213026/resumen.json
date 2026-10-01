@@ -1,0 +1,271 @@
+{
+ "modo": "humo",
+ "peldano": "comp",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "comp": {
+    "n": 2,
+    "cruzan": 3,
+    "R0_med": 0.5682,
+    "fund_media": 16.6667,
+    "establecidos": 13,
+    "vida_med": 1473.5,
+    "mundo_AC": 8.0102,
+    "ratio_pasos_oasis": 7.204,
+    "exp_frio": [
+     10,
+     7
+    ],
+    "exp_fuera_conoce": [
+     305,
+     184
+    ],
+    "exp_b_dentro": [
+     175,
+     59
+    ],
+    "exp_dentro": [
+     117,
+     90
+    ],
+    "exp_fuera": [
+     324,
+     197
+    ],
+    "c1": 0.7083,
+    "p1": 0.3932,
+    "J": 0.1015,
+    "b_rechazada": 0.6785,
+    "mord_E": 1731,
+    "mord_E_dentro": 1011
+   },
+   "compbar": {
+    "n": 2,
+    "cruzan": 0,
+    "R0_med": 0.1896,
+    "fund_media": 90.5,
+    "establecidos": 0,
+    "vida_med": 200.0,
+    "mundo_AC": 10.382,
+    "ratio_pasos_oasis": 0.6605,
+    "exp_frio": [
+     29,
+     9
+    ],
+    "exp_fuera_conoce": [
+     1081,
+     473
+    ],
+    "exp_b_dentro": [
+     781,
+     209
+    ],
+    "exp_dentro": [
+     624,
+     192
+    ],
+    "exp_fuera": [
+     1097,
+     484
+    ],
+    "c1": 0.3119,
+    "p1": 0.5623,
+    "J": -0.126,
+    "b_rechazada": 0.732,
+    "mord_E": 1265,
+    "mord_E_dentro": 358
+   },
+   "lug": {
+    "n": 2,
+    "cruzan": 0,
+    "R0_med": 0.5,
+    "fund_media": 12.2222,
+    "establecidos": 15,
+    "vida_med": 882.0,
+    "mundo_AC": 8.6886,
+    "ratio_pasos_oasis": 7.317,
+    "exp_frio": [
+     11,
+     6
+    ],
+    "exp_fuera_conoce": [
+     262,
+     182
+    ],
+    "exp_b_dentro": [
+     157,
+     53
+    ],
+    "exp_dentro": [
+     120,
+     85
+    ],
+    "exp_fuera": [
+     284,
+     195
+    ],
+    "c1": 0.5333,
+    "p1": 0.3054,
+    "J": -0.1615,
+    "b_rechazada": 0.6585,
+    "mord_E": 1792,
+    "mord_E_dentro": 1062
+   }
+  },
+  "pareados": {
+   "comp_vs_compbar": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 3,
+    "suma_b": 0,
+    "dif": 3,
+    "por_indice_a": [
+     1,
+     2
+    ],
+    "por_indice_b": [
+     0,
+     0
+    ]
+   },
+   "comp_vs_lug": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 3,
+    "suma_b": 0,
+    "dif": 3,
+    "por_indice_a": [
+     1,
+     2
+    ],
+    "por_indice_b": [
+     0,
+     0
+    ]
+   },
+   "compbar_vs_comp": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 0,
+    "suma_b": 3,
+    "dif": -3,
+    "por_indice_a": [
+     0,
+     0
+    ],
+    "por_indice_b": [
+     1,
+     2
+    ]
+   },
+   "compbar_vs_lug": {
+    "n": 2,
+    "gana": 0,
+    "empata": 2,
+    "pierde": 0,
+    "suma_a": 0,
+    "suma_b": 0,
+    "dif": 0,
+    "por_indice_a": [
+     0,
+     0
+    ],
+    "por_indice_b": [
+     0,
+     0
+    ]
+   },
+   "lug_vs_comp": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 0,
+    "suma_b": 3,
+    "dif": -3,
+    "por_indice_a": [
+     0,
+     0
+    ],
+    "por_indice_b": [
+     1,
+     2
+    ]
+   },
+   "lug_vs_compbar": {
+    "n": 2,
+    "gana": 0,
+    "empata": 2,
+    "pierde": 0,
+    "suma_a": 0,
+    "suma_b": 0,
+    "dif": 0,
+    "por_indice_a": [
+     0,
+     0
+    ],
+    "por_indice_b": [
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 60000,
+ "brazos": [
+  "comp",
+  "compbar",
+  "lug"
+ ],
+ "semillas": [
+  739392,
+  739393
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "E",
+  "efecto_x": [
+   0.3,
+   -0.1
+  ],
+  "p_x": 0.15
+ },
+ "nota": "humo 2 p8: p_x 0.15, T 60k (mas eventos frios); semillas nuevas",
+ "senal": "no",
+ "sha_runner": "01e4ad94dd06e133",
+ "carros": {
+  "O1_LUGAR_COMP": "c75b4cdb9eec933d",
+  "O1_LUGAR_COMP_BAR": "0d7288a081e4b7af",
+  "O1_LUGAR_COMP0": "4068adaca1b1f6fd",
+  "O1_LUGAR_PLAN": "351cd77783a91da0",
+  "O1_LUGAR_PLAN_BAR": "09d2370003cfb6a4",
+  "O1_LUGAR_PLAN0": "c53ac199a031c89b",
+  "O1_LUGAR_PREG": "4e12a5708ecb5dea",
+  "O1_LUGAR_PREG_BAR": "27489bd5d4431b85",
+  "O1_LUGAR_PREG0": "8d2e70c70ec651ff"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17
+ },
+ "seg": 527.9
+}

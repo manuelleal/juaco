@@ -1,0 +1,139 @@
+{
+ "modo": "humo",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "peg": {
+    "n": 2,
+    "persisten": 1,
+    "desc_suma": 311,
+    "fund_media": 87.0,
+    "vivos_final": 14.0,
+    "max_vivos": 17.0,
+    "bloqueados": 0,
+    "vida_med": 98.5,
+    "tam_grupo": 1.4215,
+    "muertes_cuello": 44,
+    "muertes_cuello_pegado": 8,
+    "pasos_pegado": 278557,
+    "causas": {
+     "hambre": 51,
+     "sed": 30,
+     "veneno": 909,
+     "sal": 877
+    }
+   },
+   "sue": {
+    "n": 2,
+    "persisten": 3,
+    "desc_suma": 383,
+    "fund_media": 107.5,
+    "vivos_final": 22.5,
+    "max_vivos": 24.5,
+    "bloqueados": 0,
+    "vida_med": 139.0,
+    "tam_grupo": 1.0,
+    "muertes_cuello": 94,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 0,
+    "causas": {
+     "hambre": 107,
+     "sed": 53,
+     "veneno": 1104,
+     "sal": 1027
+    }
+   },
+   "peg0": {
+    "n": 2,
+    "persisten": 1,
+    "desc_suma": 342,
+    "fund_media": 80.5556,
+    "vivos_final": 11.0,
+    "max_vivos": 17.5,
+    "bloqueados": 0,
+    "vida_med": 93.5,
+    "tam_grupo": 1.4875,
+    "muertes_cuello": 0,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 324206,
+    "causas": {
+     "hambre": 20,
+     "sed": 30,
+     "veneno": 916,
+     "sal": 822
+    }
+   }
+  },
+  "pareados": {
+   "peg_vs_sue": {
+    "persisten": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      2
+     ]
+    ],
+    "desc": [
+     [
+      150,
+      182
+     ],
+     [
+      161,
+      201
+     ]
+    ]
+   },
+   "peg_vs_peg0": {
+    "persisten": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "desc": [
+     [
+      150,
+      176
+     ],
+     [
+      161,
+      166
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "peg",
+  "sue",
+  "peg0"
+ ],
+ "cuello": 2000,
+ "p_suelto": 0.2,
+ "semillas": [
+  739592,
+  739593
+ ],
+ "nota": "reapertura 1: celula nativa ECO, cuello suave p 0.2 cada 2000",
+ "sha_runner": "63da501ebcc6071e",
+ "mundo": {
+  "sha_motor": "d10cb9021f5d0f41",
+  "sha_fuente_transformada": "30b19d0cefdde857",
+  "anclas": 10
+ },
+ "seg": 222.7
+}

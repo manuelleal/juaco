@@ -1,0 +1,15 @@
+ARNES identidad_d.py (T 4000)
+  OK    (K) mundo_familia construido: {'sha_motor_eco': 'bca3033878b59622', 'sha_fuente_transformada': '4a7e0dffac15cffa', 'anclas': 12}
+      IDENTIDAD CORTA D (salida ENTERA, 9 FAMB_RES0_ECO, s 739280, T 800): familia None == motor_eco True · familia apagada == motor_eco (salvo su telemetria) True
+  OK    (K) identidad corta de corre_d (familia None == motor_eco; familia apagada == motor_eco salvo telemetria)
+  OK    (M) familia None == motor_eco BIT A BIT (salida entera, s 739281, T 4000) y mismo rng
+  OK    (P) sexo 1: parejas 13 sin pareja 8 (> 0 alguno), tipos vivos X/Y [1, 4], recombinaciones 13 (> 0 si hubo partos: partos 13); fisica != base
+  OK    (c) clon con pareja: parejas 10 (> 0), recombinaciones 0 (== 0); fisica != sexo (si hubo partos) y != base
+  OK    (P) recombina: vivos al final 5; hay cuerpos de generacion >= 1 (4)
+  OK    (P) pareja fuerte != azar (misma fisica salvo la eleccion; fuerza media de la pareja: fuerte [0.834, None, None] vs azar [0.834, None, None])
+  OK    (P) dote_doble: pagos 10 (> 0) == parejas 10; fisica != sexo
+  OK    (P) camada (T 12000, u_cam 1.5, r_par 180): trofico 16 (> 0); fisica != base; sin sexo: parejas 0
+  OK    (P) camada con u_cam 0 (nunca hay necesidad) == base en la fisica (la regla no dispara)
+  OK    (g) recombina sin sexo aborta; pareja desconocida aborta; clave desconocida aborta
+
+ARNES PASA, 11/11 · 44.7s

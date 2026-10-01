@@ -1,0 +1,217 @@
+{
+ "modo": "humo",
+ "peldano": "plan",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "lug": {
+    "n": 2,
+    "cruzan": 1,
+    "R0_med": 0.125,
+    "fund_media": 45.2778,
+    "establecidos": 2,
+    "vida_med": 200.0,
+    "mundo_AC": 4.217,
+    "ratio_pasos_oasis": 2.64,
+    "con_llave": 259,
+    "sin_llave": 1430,
+    "frac_llave": 0.1585,
+    "mord_K": 321,
+    "llaves": 321,
+    "hab_K": null,
+    "pl_cred": 0
+   },
+   "plan": {
+    "n": 2,
+    "cruzan": 4,
+    "R0_med": 0.1986,
+    "fund_media": 41.2778,
+    "establecidos": 6,
+    "vida_med": 200.0,
+    "mundo_AC": 4.0679,
+    "ratio_pasos_oasis": 2.832,
+    "con_llave": 287,
+    "sin_llave": 1447,
+    "frac_llave": 0.1665,
+    "mord_K": 340,
+    "llaves": 340,
+    "hab_K": -0.0323,
+    "pl_cred": 3830
+   },
+   "planbar": {
+    "n": 2,
+    "cruzan": 3,
+    "R0_med": 0.2277,
+    "fund_media": 38.3889,
+    "establecidos": 5,
+    "vida_med": 200.0,
+    "mundo_AC": 3.9522,
+    "ratio_pasos_oasis": 2.707,
+    "con_llave": 425,
+    "sin_llave": 1173,
+    "frac_llave": 0.265,
+    "mord_K": 412,
+    "llaves": 412,
+    "hab_K": -0.0752,
+    "pl_cred": 2580
+   }
+  },
+  "pareados": {
+   "lug_vs_plan": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 1,
+    "suma_b": 4,
+    "dif": -3,
+    "por_indice_a": [
+     0,
+     1
+    ],
+    "por_indice_b": [
+     2,
+     2
+    ]
+   },
+   "lug_vs_planbar": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 1,
+    "suma_b": 3,
+    "dif": -2,
+    "por_indice_a": [
+     0,
+     1
+    ],
+    "por_indice_b": [
+     1,
+     2
+    ]
+   },
+   "plan_vs_lug": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 4,
+    "suma_b": 1,
+    "dif": 3,
+    "por_indice_a": [
+     2,
+     2
+    ],
+    "por_indice_b": [
+     0,
+     1
+    ]
+   },
+   "plan_vs_planbar": {
+    "n": 2,
+    "gana": 1,
+    "empata": 1,
+    "pierde": 0,
+    "suma_a": 4,
+    "suma_b": 3,
+    "dif": 1,
+    "por_indice_a": [
+     2,
+     2
+    ],
+    "por_indice_b": [
+     1,
+     2
+    ]
+   },
+   "planbar_vs_lug": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 3,
+    "suma_b": 1,
+    "dif": 2,
+    "por_indice_a": [
+     1,
+     2
+    ],
+    "por_indice_b": [
+     0,
+     1
+    ]
+   },
+   "planbar_vs_plan": {
+    "n": 2,
+    "gana": 0,
+    "empata": 1,
+    "pierde": 1,
+    "suma_a": 3,
+    "suma_b": 4,
+    "dif": -1,
+    "por_indice_a": [
+     1,
+     2
+    ],
+    "por_indice_b": [
+     2,
+     2
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "plan",
+  "planbar",
+  "lug"
+ ],
+ "semillas": [
+  739492,
+  739493
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.1,
+  "cerrojo": 1,
+  "d_llave": 1500,
+  "cerrojo_pobre": 0
+ },
+ "nota": "humo 2 p9: cerrojo_pobre 0 (sin llave el oasis vale lo nominal; con llave el doble); semillas nuevas",
+ "senal": "no",
+ "sha_runner": "70bc58a832e5399c",
+ "carros": {
+  "O1_LUGAR_COMP": "c75b4cdb9eec933d",
+  "O1_LUGAR_COMP_BAR": "0d7288a081e4b7af",
+  "O1_LUGAR_COMP0": "4068adaca1b1f6fd",
+  "O1_LUGAR_PLAN": "351cd77783a91da0",
+  "O1_LUGAR_PLAN_BAR": "09d2370003cfb6a4",
+  "O1_LUGAR_PLAN0": "c53ac199a031c89b",
+  "O1_LUGAR_PREG": "4e12a5708ecb5dea",
+  "O1_LUGAR_PREG_BAR": "27489bd5d4431b85",
+  "O1_LUGAR_PREG0": "8d2e70c70ec651ff"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17
+ },
+ "seg": 278.6
+}

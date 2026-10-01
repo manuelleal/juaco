@@ -1,0 +1,139 @@
+{
+ "modo": "humo",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "peg": {
+    "n": 2,
+    "persisten": 1,
+    "desc_suma": 284,
+    "fund_media": 69.1111,
+    "vivos_final": 19.0,
+    "max_vivos": 24.0,
+    "bloqueados": 0,
+    "vida_med": 200.0,
+    "tam_grupo": 2.458,
+    "muertes_cuello": 136,
+    "muertes_cuello_pegado": 62,
+    "pasos_pegado": 612004,
+    "causas": {
+     "hambre": 195,
+     "sed": 112,
+     "veneno": 615,
+     "sal": 586
+    }
+   },
+   "sue": {
+    "n": 2,
+    "persisten": 3,
+    "desc_suma": 391,
+    "fund_media": 90.5,
+    "vivos_final": 22.0,
+    "max_vivos": 31.5,
+    "bloqueados": 0,
+    "vida_med": 200.0,
+    "tam_grupo": 1.0,
+    "muertes_cuello": 319,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 0,
+    "causas": {
+     "hambre": 232,
+     "sed": 51,
+     "veneno": 901,
+     "sal": 810
+    }
+   },
+   "peg0": {
+    "n": 2,
+    "persisten": 4,
+    "desc_suma": 258,
+    "fund_media": 56.1111,
+    "vivos_final": 17.5,
+    "max_vivos": 25.5,
+    "bloqueados": 0,
+    "vida_med": 200.0,
+    "tam_grupo": 2.2785,
+    "muertes_cuello": 0,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 602525,
+    "causas": {
+     "hambre": 143,
+     "sed": 99,
+     "veneno": 496,
+     "sal": 513
+    }
+   }
+  },
+  "pareados": {
+   "peg_vs_sue": {
+    "persisten": [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "desc": [
+     [
+      141,
+      187
+     ],
+     [
+      143,
+      204
+     ]
+    ]
+   },
+   "peg_vs_peg0": {
+    "persisten": [
+     [
+      0,
+      2
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "desc": [
+     [
+      141,
+      134
+     ],
+     [
+      143,
+      124
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "peg",
+  "sue",
+  "peg0"
+ ],
+ "cuello": 2000,
+ "p_suelto": 0.5,
+ "semillas": [
+  739590,
+  739591
+ ],
+ "nota": "humo2 p2 reposicion inmediata",
+ "sha_runner": "1d58a10e17c75077",
+ "mundo": {
+  "sha_motor": "d10cb9021f5d0f41",
+  "sha_fuente_transformada": "b4ad5428b5bab830",
+  "anclas": 10
+ },
+ "seg": 638.6
+}

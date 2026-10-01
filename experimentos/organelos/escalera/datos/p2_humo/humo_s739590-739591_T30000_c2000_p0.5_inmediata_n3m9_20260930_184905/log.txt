@@ -1,0 +1,22 @@
+[18:49:05] CORRE_P2 · humo · 20260930_184905 · python 3.14.2 · un proceso · corre_p2.py cfe202ae9f56ffb7 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p2_humo\humo_s739590-739591_T30000_c2000_p0.5_inmediata_n3m9_20260930_184905
+[18:49:05]   semillas 739590-739591 · T 30000 · brazos ['peg', 'sue', 'peg0'] · cuello 2000 p_suelto 0.5 · reposicion inmediata · nota 'humo3 p2: 3 linajes en el mundo de 9 (menos hacinamiento)'
+[18:49:05]   sha experimentos\generaciones\motor_convive.py d10cb9021f5d0f41 OK
+[18:49:05]   sha experimentos\generaciones\pista2.py 4d2bee16e7961261 OK
+[18:49:05]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[18:49:05]   mundo_colonia: {'sha_motor': 'd10cb9021f5d0f41', 'sha_fuente_transformada': 'b4ad5428b5bab830', 'anclas': 10}
+[18:49:16]   IDENTIDAD CORTA (salida ENTERA, 9 O1, s 739550, T 1500): mundo pega 0 cuello 0 == motor_convive.run_solapadas True
+[18:50:06]   [   61.4s] i0 peg  (50.4s) aborto None persisten 0/3 fund [37, 16, 55] partos 77 vivos fin 7 max 12 bloq 0 · grupo tam med 3.073 max [7, 6, 6] muertes cuello 30 (pegado 20) pasos pegado 148868 · vida 200.0 · causas {'hambre': 51, 'sed': 19, 'veneno': 68, 'sal': 43}
+[18:51:22]   [  137.1s] i0 sue  (75.7s) aborto None persisten 1/3 fund [140, 98, 0] partos 123 vivos fin 10 max 19 bloq 0 · grupo tam med 1.0 max [0, 0, 0] muertes cuello 96 (pegado 0) pasos pegado 0 · vida 200.0 · causas {'hambre': 84, 'sed': 17, 'veneno': 150, 'sal': 103}
+[18:52:35]   [  210.5s] i0 peg0 (73.4s) aborto None persisten 1/3 fund [10, 0, 74] partos 84 vivos fin 8 max 15 bloq 0 · grupo tam med 3.686 max [7, 8, 6] muertes cuello 0 (pegado 0) pasos pegado 214972 · vida 600.0 · causas {'hambre': 33, 'sed': 44, 'veneno': 38, 'sal': 48}
+[18:53:45]   [  279.9s] i1 peg  (69.4s) aborto None persisten 1/3 fund [0, 46, 79] partos 81 vivos fin 11 max 14 bloq 0 · grupo tam med 3.514 max [6, 7, 8] muertes cuello 22 (pegado 13) pasos pegado 198356 · vida 200.0 · causas {'hambre': 49, 'sed': 25, 'veneno': 59, 'sal': 65}
+[18:55:01]   [  356.1s] i1 sue  (76.2s) aborto None persisten 1/3 fund [80, 38, 50] partos 117 vivos fin 16 max 17 bloq 0 · grupo tam med 1.0 max [0, 0, 0] muertes cuello 75 (pegado 0) pasos pegado 0 · vida 200.0 · causas {'hambre': 62, 'sed': 17, 'veneno': 106, 'sal': 87}
+[18:56:08]   [  423.1s] i1 peg0 (66.9s) aborto None persisten 2/3 fund [0, 0, 15] partos 74 vivos fin 8 max 13 bloq 0 · grupo tam med 3.06 max [6, 7, 5] muertes cuello 0 (pegado 0) pasos pegado 203476 · vida 1279.5 · causas {'hambre': 40, 'sed': 30, 'veneno': 7, 'sal': 7}
+[18:56:08] 
+================ RESUMEN (humo: NO cuenta, no se declara)
+[18:56:08]   peg   {'n': 2, 'persisten': 1, 'desc_suma': 158, 'fund_media': 38.8333, 'vivos_final': 9.0, 'max_vivos': 13.0, 'bloqueados': 0, 'vida_med': 200.0, 'tam_grupo': 3.2935, 'muertes_cuello': 52, 'muertes_cuello_pegado': 33, 'pasos_pegado': 347224, 'causas': {'hambre': 100, 'sed': 44, 'veneno': 127, 'sal': 108}}
+[18:56:08]   sue   {'n': 2, 'persisten': 2, 'desc_suma': 240, 'fund_media': 67.6667, 'vivos_final': 13.0, 'max_vivos': 18.0, 'bloqueados': 0, 'vida_med': 200.0, 'tam_grupo': 1.0, 'muertes_cuello': 171, 'muertes_cuello_pegado': 0, 'pasos_pegado': 0, 'causas': {'hambre': 146, 'sed': 34, 'veneno': 256, 'sal': 190}}
+[18:56:08]   peg0  {'n': 2, 'persisten': 3, 'desc_suma': 158, 'fund_media': 16.5, 'vivos_final': 8.0, 'max_vivos': 14.0, 'bloqueados': 0, 'vida_med': 939.75, 'tam_grupo': 3.373, 'muertes_cuello': 0, 'muertes_cuello_pegado': 0, 'pasos_pegado': 418448, 'causas': {'hambre': 73, 'sed': 74, 'veneno': 45, 'sal': 55}}
+[18:56:08]   pareado peg_vs_sue: persisten [(0, 1), (1, 1)] · partos [(77, 123), (81, 117)]
+[18:56:08]   pareado peg_vs_peg0: persisten [(0, 1), (1, 2)] · partos [(77, 84), (81, 74)]
+[18:56:08]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p2_humo\humo_s739590-739591_T30000_c2000_p0.5_inmediata_n3m9_20260930_184905\resumen.json · abortos 0 · 423.1s
+[18:56:08] SENAL (bitacora): no

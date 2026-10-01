@@ -1,0 +1,139 @@
+{
+ "modo": "humo",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "peg": {
+    "n": 2,
+    "persisten": 1,
+    "desc_suma": 158,
+    "fund_media": 38.8333,
+    "vivos_final": 9.0,
+    "max_vivos": 13.0,
+    "bloqueados": 0,
+    "vida_med": 200.0,
+    "tam_grupo": 3.2935,
+    "muertes_cuello": 52,
+    "muertes_cuello_pegado": 33,
+    "pasos_pegado": 347224,
+    "causas": {
+     "hambre": 100,
+     "sed": 44,
+     "veneno": 127,
+     "sal": 108
+    }
+   },
+   "sue": {
+    "n": 2,
+    "persisten": 2,
+    "desc_suma": 240,
+    "fund_media": 67.6667,
+    "vivos_final": 13.0,
+    "max_vivos": 18.0,
+    "bloqueados": 0,
+    "vida_med": 200.0,
+    "tam_grupo": 1.0,
+    "muertes_cuello": 171,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 0,
+    "causas": {
+     "hambre": 146,
+     "sed": 34,
+     "veneno": 256,
+     "sal": 190
+    }
+   },
+   "peg0": {
+    "n": 2,
+    "persisten": 3,
+    "desc_suma": 158,
+    "fund_media": 16.5,
+    "vivos_final": 8.0,
+    "max_vivos": 14.0,
+    "bloqueados": 0,
+    "vida_med": 939.75,
+    "tam_grupo": 3.373,
+    "muertes_cuello": 0,
+    "muertes_cuello_pegado": 0,
+    "pasos_pegado": 418448,
+    "causas": {
+     "hambre": 73,
+     "sed": 74,
+     "veneno": 45,
+     "sal": 55
+    }
+   }
+  },
+  "pareados": {
+   "peg_vs_sue": {
+    "persisten": [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "desc": [
+     [
+      77,
+      123
+     ],
+     [
+      81,
+      117
+     ]
+    ]
+   },
+   "peg_vs_peg0": {
+    "persisten": [
+     [
+      0,
+      1
+     ],
+     [
+      1,
+      2
+     ]
+    ],
+    "desc": [
+     [
+      77,
+      84
+     ],
+     [
+      81,
+      74
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "peg",
+  "sue",
+  "peg0"
+ ],
+ "cuello": 2000,
+ "p_suelto": 0.5,
+ "semillas": [
+  739590,
+  739591
+ ],
+ "nota": "humo3 p2: 3 linajes en el mundo de 9 (menos hacinamiento)",
+ "sha_runner": "cfe202ae9f56ffb7",
+ "mundo": {
+  "sha_motor": "d10cb9021f5d0f41",
+  "sha_fuente_transformada": "b4ad5428b5bab830",
+  "anclas": 10
+ },
+ "seg": 423.1
+}

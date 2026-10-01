@@ -1,0 +1,25 @@
+[21:07:56] CORRE_P2 · humo · 20260930_210756 · python 3.14.2 · un proceso · corre_p2.py 63da501ebcc6071e · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p2_humo\humo_s739592-739593_T30000_c2000_p0.2_fija_n9mNone_FAMB_RES0_ECO_20260930_210756
+[21:07:56]   semillas 739592-739593 · T 30000 · brazos ['peg', 'sue', 'peg0'] · cuello 2000 p_suelto 0.2 solo_sueltos 0 · carro FAMB_RES0_ECO · reposicion fija · nota 'reapertura 1: celula nativa ECO, cuello suave p 0.2 cada 2000'
+[21:07:56]   sha experimentos\generaciones\motor_convive.py d10cb9021f5d0f41 OK
+[21:07:56]   sha experimentos\generaciones\pista2.py 4d2bee16e7961261 OK
+[21:07:56]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[21:07:56]   sha experimentos\juaco_eco\carros\FAMB_RES0_ECO.py 94ea78589bc2ce24 OK
+[21:07:56]   sha experimentos\juaco_eco\motor_eco.py bca3033878b59622 OK
+[21:07:56]   mundo_colonia: {'sha_motor': 'd10cb9021f5d0f41', 'sha_fuente_transformada': '30b19d0cefdde857', 'anclas': 10}
+[21:07:59]   IDENTIDAD CORTA (salida ENTERA, 9 FAMB_RES0_ECO, s 739550, T 1500): mundo pega 0 cuello 0 == motor_convive.run_solapadas True
+[21:08:02]   IDENTIDAD CORTA REAPERTURA (s 739551, T 1500, FAMB_RES0_ECO): solo_sueltos 0 == sin perilla True · solo_sueltos 1 actua y 0 pegados muertos en el cuello True (muertes cuello 17, pegados en el 0: 1)
+[21:08:33]   [   36.7s] i0 peg  (30.2s) aborto None persisten 1/9 fund [189, 7, 76, 68, 49, 89, 104, 76, 103] partos 150 vivos fin 14 max 16 bloq 0 · grupo tam med 1.369 max [2, 4, 2, 4, 4, 4, 4, 2, 3] muertes cuello 23 (pegado 4) pasos pegado 128376 · vida 96.0 · causas {'hambre': 27, 'sed': 13, 'veneno': 437, 'sal': 429}
+[21:09:22]   [   85.8s] i0 sue  (49.1s) aborto None persisten 1/9 fund [110, 91, 158, 0, 145, 91, 111, 155, 134] partos 182 vivos fin 26 max 26 bloq 0 · grupo tam med 1.0 max [0, 0, 0, 0, 0, 0, 0, 0, 0] muertes cuello 45 (pegado 0) pasos pegado 0 · vida 154.0 · causas {'hambre': 49, 'sed': 29, 'veneno': 560, 'sal': 522}
+[21:09:55]   [  119.0s] i0 peg0 (33.2s) aborto None persisten 1/9 fund [121, 112, 109, 136, 68, 88, 57, 26, 2] partos 176 vivos fin 10 max 18 bloq 0 · grupo tam med 1.563 max [2, 3, 3, 2, 4, 4, 5, 4, 5] muertes cuello 0 (pegado 0) pasos pegado 189300 · vida 94.0 · causas {'hambre': 13, 'sed': 20, 'veneno': 463, 'sal': 398}
+[21:10:28]   [  152.6s] i1 peg  (33.6s) aborto None persisten 0/9 fund [92, 5, 80, 48, 124, 84, 96, 122, 154] partos 161 vivos fin 14 max 18 bloq 0 · grupo tam med 1.474 max [4, 5, 3, 4, 2, 3, 4, 2, 3] muertes cuello 21 (pegado 4) pasos pegado 150181 · vida 101.0 · causas {'hambre': 24, 'sed': 17, 'veneno': 472, 'sal': 448}
+[21:11:11]   [  195.4s] i1 sue  (42.9s) aborto None persisten 2/9 fund [26, 125, 151, 134, 119, 166, 129, 88, 2] partos 201 vivos fin 19 max 23 bloq 0 · grupo tam med 1.0 max [0, 0, 0, 0, 0, 0, 0, 0, 0] muertes cuello 49 (pegado 0) pasos pegado 0 · vida 124.0 · causas {'hambre': 58, 'sed': 24, 'veneno': 544, 'sal': 505}
+[21:11:38]   [  222.7s] i1 peg0 (27.3s) aborto None persisten 0/9 fund [125, 61, 124, 72, 108, 18, 30, 126, 67] partos 166 vivos fin 12 max 17 bloq 0 · grupo tam med 1.412 max [3, 4, 3, 3, 5, 4, 4, 3, 3] muertes cuello 0 (pegado 0) pasos pegado 134906 · vida 93.0 · causas {'hambre': 7, 'sed': 10, 'veneno': 453, 'sal': 424}
+[21:11:39] 
+================ RESUMEN (humo: NO cuenta, no se declara)
+[21:11:39]   peg   {'n': 2, 'persisten': 1, 'desc_suma': 311, 'fund_media': 87.0, 'vivos_final': 14.0, 'max_vivos': 17.0, 'bloqueados': 0, 'vida_med': 98.5, 'tam_grupo': 1.4215, 'muertes_cuello': 44, 'muertes_cuello_pegado': 8, 'pasos_pegado': 278557, 'causas': {'hambre': 51, 'sed': 30, 'veneno': 909, 'sal': 877}}
+[21:11:39]   sue   {'n': 2, 'persisten': 3, 'desc_suma': 383, 'fund_media': 107.5, 'vivos_final': 22.5, 'max_vivos': 24.5, 'bloqueados': 0, 'vida_med': 139.0, 'tam_grupo': 1.0, 'muertes_cuello': 94, 'muertes_cuello_pegado': 0, 'pasos_pegado': 0, 'causas': {'hambre': 107, 'sed': 53, 'veneno': 1104, 'sal': 1027}}
+[21:11:39]   peg0  {'n': 2, 'persisten': 1, 'desc_suma': 342, 'fund_media': 80.5556, 'vivos_final': 11.0, 'max_vivos': 17.5, 'bloqueados': 0, 'vida_med': 93.5, 'tam_grupo': 1.4875, 'muertes_cuello': 0, 'muertes_cuello_pegado': 0, 'pasos_pegado': 324206, 'causas': {'hambre': 20, 'sed': 30, 'veneno': 916, 'sal': 822}}
+[21:11:39]   pareado peg_vs_sue: persisten [(1, 1), (0, 2)] · partos [(150, 182), (161, 201)]
+[21:11:39]   pareado peg_vs_peg0: persisten [(1, 1), (0, 0)] · partos [(150, 176), (161, 166)]
+[21:11:39]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p2_humo\humo_s739592-739593_T30000_c2000_p0.2_fija_n9mNone_FAMB_RES0_ECO_20260930_210756\resumen.json · abortos 0 · 222.7s
+[21:11:39] SENAL (bitacora): no
