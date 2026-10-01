@@ -1,0 +1,44 @@
+[08:59:17] CORRE_P8 · identidad · python 3.14.2 · corre_p8.py f6e2b51a57d8b23a
+[08:59:17]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[08:59:17]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[08:59:17]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[08:59:17]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[08:59:17]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[08:59:17]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[08:59:17]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[08:59:17]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[08:59:17]   sha experimentos\organelos\escalera\sondas\mundo_ret.py 0b0d84552d176569 OK
+[08:59:17]   sha experimentos\organelos\escalera\sondas\corre_s2.py 6977e4869261f3da OK
+[08:59:17]   sha experimentos\organelos\escalera\corre_c.py 01e4ad94dd06e133 OK
+[08:59:17]   carro O1_LUGAR_COMP == construye_c: True (sha c75b4cdb9eec933d)
+[08:59:17]   carro O1_LUGAR_COMP0 == construye_c: True (sha 4068adaca1b1f6fd)
+[08:59:17]   carro O1_LUGAR_COMP2 == construye_p8: True (sha f7437e8f82576d03)
+[08:59:17]   carro O1_LUGAR_COMP2SG == construye_p8: True (sha e8df122158a0b9cd)
+[08:59:17]   carro O1_LUGAR_COMP2_0 == construye_p8: True (sha 9f4004efb50961cc)
+[08:59:17]   mundo_ret: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 18, 'oasis': 'OasisRet', 'sha_fuente_ret': 'eff0e8d37d9556a2', 'sha_mundo_tramo_c': '4a1044a4e0e1d5c9'}
+[08:59:31]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[08:59:36]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[09:00:15]   OK    M1 mundo_ret apagado == mundo_tramo_c (COMP, con E)
+[09:00:15]   OK    M2 COMP2_0 (LG2 0, COMPONE 1) == O1_LUGAR_COMP (mundo_tramo_c con E)
+[09:00:15]   OK    E1 retenida ENCIENDE
+[09:00:15]   OK    M3 COMP2_0 == O1_LUGAR_COMP (mundo_ret, retenida 1)
+[09:00:15]   OK    E2 COMP2 ENCIENDE (difiere de COMP)
+[09:00:15]   OK    M4 COMP2 con el envoltorio Capta == sin el
+[09:00:15]   OK    E3 LG2 actua (alguna mordida no actualizo la tabla)
+[09:00:15]   OK    F1 fisica: E nunca dentro (composicion 0, re-sorteos > 0) y 0 mordidas de E dentro
+[09:00:15]   OK    M5 la memoria de COMP2 pasa por JSON y nace(memoria) la reconstruye bit a bit (cero memoria nueva)
+[09:00:15]   OK    M6 COMP2 no guarda nada fuera de suma, n, lugar, nl (mismos atributos de instancia que COMP)
+[09:00:15]   OK    M7 preguntar NO cambia la memoria (los 4 carros)
+[09:00:15]   OK    M8 en la pregunta, COMP2_0 == O1_LUGAR_COMP
+[09:00:15]   OK    B1 eleccion en el mismo bin: hay >= 2 bins enteros dentro del oasis y A y E caen en el mismo bin, dentro
+[09:00:15]   OK    B2 eleccion en el mismo bin: sin composicion (O1_LUGAR) elige A siempre; con memoria vacia de E... A = 1.0
+[09:00:15]   OK    R1 la pregunta y la permutada son deterministas
+[09:00:15]   OK    C1 sin memoria de lugar D = 0 exacto en COMP y COMP2 (el instrumento no inventa D)
+[09:00:15]   OK    K1 trabajo escribe su JSON sin aborto y --reanuda NO lo re-corre (devuelve el mismo)
+[09:00:15]   OK    K2 --reanuda SI re-corre un JSON con aborto (y anota reintento_de)
+[09:00:15]   OK    K3 --reanuda re-corre un JSON truncado (corte de luz a mitad de escritura)
+[09:00:15]   OK    K4 lee_letra corre de punta a punta sobre las 3 corridas del arnes (veredictos y mejora presentes)
+[09:00:15]   OK    K5 candado: guarda() niega la serie mientras algo no este commiteado (o todo esta limpio)
+[09:00:15]   OK    K6 regla de parada: replica solo con FUNCIONA/MODESTO en algun brazo o NO en el umbral
+[09:00:15]   (T 1500: E retenidas 13 · lg2_omit 20)
+[09:00:15]   ARNES P8: 22/22 TODO OK (s 737402, T 1500)
