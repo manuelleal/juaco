@@ -7355,3 +7355,95 @@ también en la serie 2.
 - Vocabulario prohibido: "el veto ayuda", "salvar al hijo cierra el muro". ERR: ninguno.
 
 - **Lectura de conjunto del 29-sep (no preregistrada):** las piezas de O1 sueltas (veto, patas, ambas) no cruzan: tv 30, pc 96–101 ≈ termo 90–92, tpv 35. **O1 funciona como conjunto** (136–139/180). La selección por pasajes tampoco encuentra la regla hecha a mano. **La selección afina perillas continuas (termostato ×2) pero no inventa combinaciones.**
+
+
+## Jornada del 30-sep-2026 (y madrugada del 1-oct): resumen de entradas (detalle en cada preregistro y resumen.json; commits citados)
+
+> Dos frentes. (A) El muro de la pista vieja: diagnósticos de una junta Fable (genetista, ingeniero genético, biotecnólogo).
+> (B) LA ESCALERA (idea del director): ingeniería genética peldaño a peldaño sobre O1, en mundos que hacen pagar cada capacidad
+> ("no es tiempo, son condiciones para evolucionar"). Todo lo de (B) es DISEÑO DIRIGIDO, no selección, y vale en el mundo con oasis.
+
+### ★★ ESCALERA P1 — memoria de lugar: **FUNCIONA ×2**
+- Preregistro `experimentos/organelos/escalera/PREREGISTRO_p1.md` (commit `76dc3d11`); serie `4b71b1bd`, réplica `c24acbf5`.
+- O1 + 30 bins de "lo que este sitio dio de más"; viaja al bin recordado. Mundo con oasis (arco 10 %, vista 20, pobre 0.5, dens 0.5).
+  Control `bar`: lee el antípoda fijo (lugar equivocado, mismo costo).
+
+| | serie (739001–739020) | réplica (739101–739120) |
+|---|---|---|
+| cruzan lug / bar / o1 (de 180) | **79 / 0 / 7** | **85 / 0 / 7** |
+| lug gana a bar y a o1 | 20/20 y 20/20 | 20/20 y 20/20 |
+| tiempo en el oasis lug / bar / o1 | 7.25× / 0.59× / 1.05× | 7.26× / 0.58× / 1.05× |
+| vida del hijo lug / bar / o1 | 1504 / 200 / 200 | 1352 / 200 / 200 |
+
+- **ERR-170:** el control `bar` original (permutación al azar por instancia) filtraba: ~45 % de las instancias leían el oasis (ratio 3.5 en la
+  exploración). Corregido a antípoda fijo ANTES de la serie. Regla: un control de "contenido equivocado" se verifica que de verdad no acierte.
+- **ERR-171:** sesgo del ganador: mundo y viaje se ajustaron en ráfaga hasta que lug ganó en 2 semillas. Declarado; vocabulario acotado
+  "en el mundo con oasis". No se compara con el muro de la pista vieja (o1 en pista lisa 137–139/180).
+- Vocabulario: permitido "recuerda dónde le fue bien y pasa más tiempo allí". Prohibido "vuelve", "aprende el mapa", "cruza el muro".
+
+### ★ ESCALERA P7 — señal por pizarra con significado dado, entre linajes clones, con costo de emitir: **FUNCIONA ×2 CON RESERVA (ERR-175)**
+- Preregistro `PREREGISTRO_p7.md` (commit `61c61ef8`); serie `1a3d744a`, réplica `0761d0f6`.
+
+| | serie (739601–739620) | réplica (739651–739670) |
+|---|---|---|
+| cruzan sen / lug mudo / senbar (de 180) | **132 / 80 / 49** | **124 / 81 / 50** |
+| sen gana a lug · a senbar | 17/20 · 19/20 | 16/20 · 20/20 |
+| mayorías sen | 18/20 | 19/20 |
+| fundadores sen / lug | 3.0 / 28.4 (20/20) | 4.3 / 28.5 (20/20) |
+| PM nueva: vidas que llegan al oasis | 0.58 vs 0.26 (20/20) | 0.51 vs 0.25 (20/20) |
+| sombra, PM original (latencia) | NO pasa (5/20) | NO pasa (6/20) |
+
+- **ERR-172:** `corre_p7.main()` nunca se había corrido de punta a punta (ERR-42 en un peldaño nuevo) → humo 3 con costo antes de la serie.
+- **ERR-173:** Q9 mal calculada (10×). **ERR-174:** faltaba el nulo por puerta.
+- **ERR-175:** la puerta PM se cambió de "latencia" a "fracción de vidas que llegan" DESPUÉS de ver el humo 3 (sesgo de supervivencia
+  anticipado por el auditor). Se selló antes de la serie. Lectura: FUNCIONA ×2 con la PM commiteada; con la original no pasa en ninguna.
+  Lo medido: la señal no hace llegar antes, hace llegar a más vidas. PA, PB y PF no se tocaron.
+- Vocabulario: prohibido "comunicación" a secas, "lenguaje", "mensaje", "coopera", "aprende de otros".
+
+### ★★ ESCALERA P10 — ir al lugar del que hace más tiempo no tiene dato, en un mundo donde el oasis se muda: **FUNCIONA ×2**
+- Preregistro `PREREGISTRO_p10.md` (commit `be35c3d2`); serie `e1991efb`, réplica `f08717fc`.
+
+| | serie (739821–739840) | réplica (739851–739870) |
+|---|---|---|
+| cruzan preg / lug / pregbar (de 180) | **164 / 82 / 53** | **163 / 91 / 65** |
+| preg gana a lug y a pregbar | 20/20 y 20/20 | 20/20 y 20/20 |
+| mayorías preg / lug | **20/20** / 6 | **20/20** / 11 |
+| R0 real mediano preg | 0.96 | 0.96 |
+| latencia tras la mudanza preg / lug | 442 / 1242 | 459 / 1280 |
+| nunca llegan preg / lug / pregbar | 0 / 22 / 35 | 0 / 27 / 32 |
+
+- Lo que NO dice: el control es PESIMISTA (destino lejano sin información, no de igual costo); el efecto es del conjunto "olvido por presencia +
+  ir al menos visitado"; el oasis nunca vuelve al mismo sitio (coincide con la regla); preg pela el mundo (A+C 0.67–0.69 de la base, no puntúa).
+- Vocabulario: prohibido "curiosidad", "se pregunta" como experiencia interna.
+
+### ESCALERA, ráfaga (exploratorio, nada se declara; `escalera/BITACORA.md`)
+- **P9 planear: CERRADO** (3 humos sin señal: con cerrojo/llave los tres brazos colapsan, vida 200–300).
+- **P2 colonia pegada: CERRADO** (5 humos: 3 con O1, 2 con la célula ECO; pegarse no paga en ningún montaje).
+- **P8 componer:** sin señal por la letra en 2 humos (el mecanismo asoma; la medida J se confunde con la limpieza de O1).
+- **Tramo D, sexo y familia (idea del director):** D1 recombinación y D4 reducción de camada SIN señal; el mundo de 9 deja 2–5 cuerpos vivos:
+  no hay familias que medir. En D1 la recombinación resta (nietos 578 vs clon 772). Necesita ECO grande. No refutado: sin instrumento.
+
+### o1_evo — O1 con 4 genes heredables: **NO** por la letra (commit `24543a49`)
+- o1pas 128 vs o1 135 vs o1ctl 134 (de 180): la selección NO supera al diseñador. Pero **o1pas vs o1neu (genes no leídos): 128 vs 81, 16/20**:
+  sin selección O1 se degrada; con selección se conserva. PRUEBA baja direccional 19/20. Serie cortada el 29-sep 20:37 y reanudada sin pérdida.
+- **grande** (exploratorio, `a4fc4971`): en mundo G=2 con oasis y pantano el orden se mantiene (o1 34 > termo 20 > v143 4 de 45); nadie usa el
+  oasis ni evita el pantano (sin memoria de lugar); o1pas 30 vs o1 34. **ERR-157:** sec. 5bis (casi inmortales) escrita tras el humo.
+
+### Diagnósticos de la junta (exploratorios, 5 cadenas cada uno)
+- **entre_linajes** (`f70da67f`): FUNCIONA en el umbral. sel 30 vs neu 14 (de 45); sel = igual 30; sel no supera a o1 35. **ERR-158:** la letra
+  se endureció (P4 obligatoria) porque el auditor vio datos parciales de o1_evo.
+- **mutación ÷10** (`ff09fac3`): **PURGA**. Con la carga baja, la selección por pasajes de 25k elimina la regla de riesgo: 0.26 vs neutra 0.64;
+  aun así la cadena cruza 24/45. **ERR-159:** enmiendas frente a moneda (banda de cero, PURGA sin < 0.10, puertas nuevas).
+- **genoma** (`21a3985b`): CAPACIDAD PAGA en el umbral. cap 16 vs fab 12 vs aza 12; no aparece la doble regla (0/45).
+  Hallazgo de montaje (ingeniero): en V143_BQ2 p_dup 0.02 + p_ins 0.05 − p_del 0.07 = 0: el genoma quedaba clavado en 2 reglas.
+- **moneda_muro** (`857bbb87`): **CONSERVA** (en el umbral). Con pasajes de 100k y siembra sólo de linajes establecidos la regla SUBE a 0.80
+  (neutra 0.14); 5/5 con un empate 0 = 0 (estricto: 4/5). Pero la cadena no cruza más (17/45 vs neutra 23). **ERR-176:** CONSERVA de 4/5 a 5/5
+  (falso positivo bajo la nula 0.28 → 0.07).
+- **Lectura:** la moneda de la selección era un candado del muro (25k purga, 100k-establecidos conserva), pero no el único.
+
+### O1 libre con poderes (sesión JUACO 5, rama `o1-libre`, commit `515a1c52`): HAY ALGO MODESTO
+- De cuatro poderes apagados (memoria de lugar, copia social, reserva, pausa) la selección prende sólo **MEM**: 0.120 vs 0.060 del neutro,
+  10/10 (diferencia 0.0596, justo sobre el umbral 0.05). Sin conquista (lib 55 vs o1 66). Réplica en curso. ERR-160 (suyo).
+- Coincide por otro camino con P1: cuando puede elegir, la selección elige la memoria de lugar.
+
+**ERR de la jornada (esta sesión): 157, 158, 159, 170–176. JUACO 5: 160 (bloque 160–169). Siguiente libre de esta sesión: ERR-177.**

@@ -1163,3 +1163,10 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - Leccion: la seleccion afina perillas continuas pero no inventa combinaciones; las piezas de O1 sueltas no funcionan, O1 funciona como conjunto. Junta Fable como hipotesis.
 - Siguiente ERR libre: ERR-157. Nivel: +2 del termostato aceptado; el +1 de pista_pob no.
 - Manana (propuesta): O1 como celula con 3-4 perillas heredables afinadas por seleccion (pregunta: la evolucion lo hace mejor que su disenador?); o pasaje en la moneda del muro; consolidar/publicar. Detalle en registro/ESTADO.md.
+
+### 30-sep-2026 (cierre, 1-oct ~00:30)
+- ESCALERA (diseño dirigido sobre O1, mundo con oasis): P1 memoria de lugar FUNCIONA x2 (79 y 85 vs 0 del control); P7 señal con costo FUNCIONA x2 con reserva ERR-175 (132 y 124 vs 80 vs 50); P10 ir a lo menos visitado FUNCIONA x2 (164 y 163 de 180, mayoría 20/20 x2). P9 y P2 cerrados en ráfaga; P8 y tramo D sin señal.
+- Muro de la pista vieja: sigue en pie. o1_evo NO (la selección conserva a O1, no lo mejora). Diagnósticos: mutación/10 PURGA con pasajes de 25k; moneda_muro CONSERVA con pasajes de 100k y siembra de establecidos (en el umbral), pero no cruza más; genoma y entre_linajes en el umbral.
+- JUACO 5 (rama o1-libre): la selección prende sólo la memoria de lugar entre cuatro poderes (modesto; réplica en curso).
+- ERR usados: 157-159, 170-176. Siguiente libre de esta sesión: ERR-177 (JUACO 5: bloque 160-169).
+- Plan de la mañana en registro/ESTADO.md.

@@ -2,50 +2,60 @@
 
 # ESTADO: una página que se reescribe en cada cierre (skill `/juaco-cierre`)
 
-> Última reescritura: **29-sep-2026, cierre** (antes: 29-sep ~10:45), por el coordinador. Cierre del día 29-sep en la rama `organelos`
-> (sin merge a `main`; lo decide el director). Detalle en `REGISTRO_etapas_1_2.md` (entradas del 29-sep) y `HANDOFF.md`.
-> Revista del día para el director (fuera del repo): https://claude.ai/artifact/7t1fFRbnncT8GNNR6ENc96
+> Última reescritura: **1-oct-2026, ~00:30** (cierre de la jornada del 30-sep), por el coordinador. Rama `organelos`, todo empujado.
+> Sin merge a `main` (lo decide el director). Detalle en `REGISTRO_etapas_1_2.md` ("Jornada del 30-sep-2026") y en `experimentos/organelos/escalera/ESCALERA.md`.
 
 ## Tronco
-**v14.3** (tag `v14.3-tronco`, `40f9350`) sigue siendo el tronco. Candidato v14.4: **TERMO′**; con ERR-150 sólo cae T-E (muerde más veneno que v14.3 en v3′). Sin cambios hoy.
+**v14.3** (tag `v14.3-tronco`) sigue siendo el tronco. Candidato v14.4: TERMO′ (sólo cae T-E). Sin cambios.
 
-## Hitos del 29-sep (leídos desde los crudos; commits `2e59aa05` a `60d2c07b`)
-1. **★ Termostato en la pista = FUNCIONA ×2:** la selección lleva sola g de la zona letal a la banda 20/20 ×2; pasg gana a v143 (20/20, 18/20) y al control (19/20, 20/20). ≈ TERMO; no cruza el muro. +2 de nivel aceptado.
-2. **dinamita se cierra sin informe** (ERR-154, ERR-155).
-3. **Ocho lecturas de la tarde, todas NO o INDETERMINADO:** pista_pob NO (17 vs 16 de 45); enriquecido NO (fija "evitar"); sentidos_muro NO (regla de riesgo 0 % en 5/5; a mano cruza 3/5); moneda INDETERMINADO (la regla regalada deriva como la neutra); patas_muro NO (pc 101 vs termo 90; 15/20 en el umbral, luego 14/20: pc ≈ termo); baldwin NO y baldwin_exp NO (con inversión todo 0/20; ERR-156); veto_muro NO claro (35 vs 92).
-4. **Junta Fable** (3 investigadores): diagnóstico como hipótesis, consistente con lo medido, no probado.
+## Lo declarado el 30-sep (serie + réplica)
+1. **★★ ESCALERA P1, memoria de lugar: FUNCIONA ×2.** 79 y 85 linajes de 180 contra 0 del control antípoda, 20/20 ×2.
+2. **★ ESCALERA P7, señal con significado dado entre linajes clones, con costo: FUNCIONA ×2 con reserva (ERR-175).** 132 y 124 contra 80 del
+   mudo y 50 del control; mayorías 18 y 19 de 20.
+3. **★★ ESCALERA P10, ir a lo menos visitado cuando el oasis se muda: FUNCIONA ×2.** 164 y 163 de 180; mayoría en 20/20 ×2; R0 0.96.
 
-## El muro (H-1): sigue en pie. Lo que sabemos ahora
-- **O1 cruza y ya "vive" por el criterio del director**: reglas locales, sin retropropagación, 136–139/180, 18–19/20. Lo que falta no es un organismo vivo, sino que la evolución lo haga o lo mejore.
-- **La selección por pasajes afina perillas continuas** (termostato ×2) **pero no inventa combinaciones**: la regla que cruza a mano (forzada3) no se fija (0 %), y regalada deriva como una neutra (moneda).
-- **Las piezas de O1 sueltas no funcionan; O1 funciona como conjunto** (tv 30, pc ≈ termo, tpv 35). El veto salva al recién nacido y el hijo muere a los 600.
-- **Evitar es más barato que aprender** en todos nuestros mundos (enriquecido, baldwin, baldwin_exp).
-- **El mundo que cambia (P/vida 3–30) es imposible para todos**, aprendan o no.
+Los tres son DISEÑO DIRIGIDO (ingeniería genética sobre O1) y valen EN EL MUNDO CON OASIS. No son selección ni el muro de la pista vieja.
 
-## Nube (crédito ~20 USD, vence el 5-nov)
-Sin novedades hoy; `nube/eco-sel-largo-20260928` y `nube/termo-banco-20260928` según la página anterior. Revisar antes de gastar.
+## El muro de la pista vieja (H-1): sigue en pie; qué sabemos ahora
+- **La selección conserva a O1, no lo mejora** (o1_evo: 128 vs 81 del neutro, pero 128 vs 135 de fábrica; visto también en entre_linajes y en o1_libre).
+- **La moneda era un candado:** con pasajes de 25k la selección PURGA la regla que cruza (0.26 vs 0.64); con pasajes de 100k y siembra sólo de
+  establecidos la CONSERVA y la sube (0.80 vs 0.14; exploratorio, en el umbral). **Pero conservarla no hizo cruzar más** (17 vs 23): hay otro candado.
+- **El montaje tenía defectos medibles:** genoma BQ2 clavado en 2 reglas (Δlargo 0), carga mutacional ~0.11 por regla y generación, Ne ≈ 9.
+- Las piezas de O1 sueltas no funcionan; O1 funciona como conjunto (29-sep).
 
-## Lecciones del día
-- Un NO exploratorio informa el siguiente paso, no cierra la línea.
-- Parar cuando la letra lo manda: patas_muro no se replicó y `pc ≈ termo` apareció solo en semillas nuevas.
-- Cambiar un criterio después del humo se paga con número de ERR aunque no cambie el veredicto (ERR-156).
-- Los auditores atraparon 4 fallas antes de datos (reanuda, referencia de puerta, control que se extingue, validez vacua).
+## La Escalera (`experimentos/organelos/escalera/ESCALERA.md`, `BITACORA.md`)
+| peldaño | estado |
+|---|---|
+| P0 unicelular (O1) | hecho |
+| P1 memoria de lugar | **FUNCIONA ×2** |
+| P7 señal con costo | **FUNCIONA ×2** (reserva ERR-175) |
+| P10 ir a lo menos visitado | **FUNCIONA ×2** |
+| P8 componer | sin señal por la letra en 2 humos; rediseñar la medida |
+| P9 planear | CERRADO en ráfaga (3 humos; el mundo con llave mata a todos) |
+| P2 colonia pegada | CERRADO en ráfaga (5 humos) |
+| P3–P6 germen/soma, órganos, nervio, cerebro | diseñados, sin correr (dependen de P2 o de ECO grande) |
+| Tramo D sexo y familia | instrumentado; sin señal: el mundo de 9 no tiene población para familias |
 
-## Plan para mañana (propuesta del coordinador; decide el director)
-1. **★ O1 como célula con perillas heredables (recomendado):** tomar O1 entero y convertir 3–4 umbrales (margen de boca, cuándo limpia, cuánto cede) en genes continuos que mutan; selección por pasajes como la del termostato. Pregunta preregistrada: ¿la evolución hace a O1 mejor que su diseñador? Es lo que la selección sabe hacer (afinar), sobre algo que ya vive. Un día: creador, auditor, serie y réplica.
-2. **Pasaje en la moneda del muro:** siembra ponderada por hijos a 100k (instrumento de `moneda`). Única prueba directa de "paga en otra moneda".
-3. **Consolidar/publicar:** merge de `organelos` a `main` y la siguiente casilla de `registro/RUTA.md`.
-4. **Mundo que obliga a aprender** (retoma Baldwin y los chimpancés): evitar no puede ser gratis; cambios suaves y después del establecimiento.
-5. **No hacer:** más piezas sueltas de O1; replicar TERMO + patas; rescates de baldwin sin hipótesis nueva.
+## Otra sesión (JUACO 5, rama `o1-libre`)
+O1 libre con poderes: HAY ALGO MODESTO en serie (la selección prende sólo la memoria de lugar, 10/10). Réplica lanzada a las 22:55, ~3:20.
+
+## PLAN DE LA MAÑANA (el director viaja; prende el PC y lo deja corriendo; poco gasto de tokens)
+En orden; cada uno con su preregistro commiteado antes y pool total ≤ 6:
+1. **Réplica de moneda_muro** (está en el umbral; 5 cadenas nuevas, ~1 h con pool 2). Comando tras preregistro de réplica:
+   `python experimentos/organelos/condiciones/moneda_muro/corre_mm.py --explora --pool 2` con semillas nuevas (necesita un creador: el runner no tiene `--replica`).
+2. **P1 + P7 + P10 juntos en un solo organismo** ("recuerda, señala y va a lo menos visitado") en un mundo con oasis que se muda: ¿se suman? Un creador + auditor + serie.
+3. **Selección sobre las perillas de los peldaños** (como o1_evo): W de la memoria de lugar, umbral de emisión, ε de exploración como genes; control neutro `PS_LEE 0`.
+4. **P8 con medida nueva** (excluir la limpieza de O1) y **P9 en un mundo donde la base viva**.
+5. **ECO grande para el tramo D** (familias): es construcción seria, no de una mañana.
+No hacer: más vueltas de pasajes de 25k contra el muro; piezas sueltas de O1.
 
 ## Niveles (los fija el director)
-Propuesta: niveles 10–13 (ECO), de ~10 % a **+15–20**, por ECO_SEL ×2, ECO_SEL_ING ×2 y BLOQUES ×2.
-**29-sep:** aceptado el **+2** por el termostato-en-la-pista ×2 (total **+17–22**). El +1 condicionado a pista_pob **no se otorga**.
++2 por el termostato-en-la-pista ×2 (aceptado el 29-sep; total +17–22). Propuesta del coordinador por la Escalera: decidirlo el director al
+leer; los tres peldaños son diseño dirigido en un mundo propio, no selección.
 
 ## ERR
-ERR-149 a ERR-153 el 28-sep (ERR-151 reservado para nube/eco-sel-largo). ERR-154 y ERR-155 (dinamita) y ERR-156 (baldwin_exp) el 29-sep.
-**El siguiente libre es ERR-157.**
+Esta sesión usó el 30-sep: ERR-157, 158, 159 y 170 a 176. JUACO 5 tiene el bloque 160–169 (usó el 160). **Siguiente libre de esta sesión: ERR-177.**
 
 ## Decisiones para el director (máximo 2)
-1. ¿Mañana va "O1 con perillas heredables" (recomendado) o "pasaje en la moneda del muro"?
-2. ¿Merge de `organelos` a `main` y avanzar la publicación antes de abrir otro frente?
+1. ¿Se juntan P1 + P7 + P10 en un solo organismo como siguiente serie, o se replica primero moneda_muro?
+2. Merge de `organelos` (y de `o1-libre`) a `main`, y si los tres peldaños entran a `RESULTADOS_VERIFICADOS.md` (lo toca la sesión de publicación).
