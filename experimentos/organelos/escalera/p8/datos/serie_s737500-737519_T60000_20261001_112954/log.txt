@@ -1,0 +1,127 @@
+[11:29:55] CORRE_P8 · serie · 20261001_112954 · python 3.14.2 · pool 2 · corre_p8.py f6e2b51a57d8b23a · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\p8\datos\serie_s737500-737519_T60000_20261001_112954
+[11:29:55]   semillas 737500-737519 · T 60000 · crianza {'comp': 'O1_LUGAR_COMP', 'lug': 'O1_LUGAR', 'comp2': 'O1_LUGAR_COMP2'} · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'letra_x': 'E', 'efecto_x': (0.3, -0.1), 'p_x': 0.15} + retenida 1 · reanuda False · nota ''
+[11:29:55]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[11:29:55]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[11:29:55]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[11:29:55]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[11:29:55]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[11:29:55]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[11:29:55]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[11:29:55]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[11:29:55]   sha experimentos\organelos\escalera\sondas\mundo_ret.py 0b0d84552d176569 OK
+[11:29:55]   sha experimentos\organelos\escalera\sondas\corre_s2.py 6977e4869261f3da OK
+[11:29:55]   sha experimentos\organelos\escalera\corre_c.py 01e4ad94dd06e133 OK
+[11:29:55]   carro O1_LUGAR_COMP == construye_c: True (sha c75b4cdb9eec933d)
+[11:29:55]   carro O1_LUGAR_COMP0 == construye_c: True (sha 4068adaca1b1f6fd)
+[11:29:55]   carro O1_LUGAR_COMP2 == construye_p8: True (sha f7437e8f82576d03)
+[11:29:55]   carro O1_LUGAR_COMP2SG == construye_p8: True (sha e8df122158a0b9cd)
+[11:29:55]   carro O1_LUGAR_COMP2_0 == construye_p8: True (sha 9f4004efb50961cc)
+[11:29:55]   mundo_ret: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 18, 'oasis': 'OasisRet', 'sha_fuente_ret': 'eff0e8d37d9556a2', 'sha_mundo_tramo_c': '4a1044a4e0e1d5c9'}
+[11:30:08]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[11:30:13]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[11:30:54]   OK    M1 mundo_ret apagado == mundo_tramo_c (COMP, con E)
+[11:30:54]   OK    M2 COMP2_0 (LG2 0, COMPONE 1) == O1_LUGAR_COMP (mundo_tramo_c con E)
+[11:30:54]   OK    E1 retenida ENCIENDE
+[11:30:54]   OK    M3 COMP2_0 == O1_LUGAR_COMP (mundo_ret, retenida 1)
+[11:30:54]   OK    E2 COMP2 ENCIENDE (difiere de COMP)
+[11:30:54]   OK    M4 COMP2 con el envoltorio Capta == sin el
+[11:30:54]   OK    E3 LG2 actua (alguna mordida no actualizo la tabla)
+[11:30:54]   OK    F1 fisica: E nunca dentro (composicion 0, re-sorteos > 0) y 0 mordidas de E dentro
+[11:30:54]   OK    M5 la memoria de COMP2 pasa por JSON y nace(memoria) la reconstruye bit a bit (cero memoria nueva)
+[11:30:54]   OK    M6 COMP2 no guarda nada fuera de suma, n, lugar, nl (mismos atributos de instancia que COMP)
+[11:30:54]   OK    M7 preguntar NO cambia la memoria (los 4 carros)
+[11:30:54]   OK    M8 en la pregunta, COMP2_0 == O1_LUGAR_COMP
+[11:30:54]   OK    B1 eleccion en el mismo bin: hay >= 2 bins enteros dentro del oasis y A y E caen en el mismo bin, dentro
+[11:30:54]   OK    B2 eleccion en el mismo bin: sin composicion (O1_LUGAR) elige A siempre; con memoria vacia de E... A = 1.0
+[11:30:54]   OK    R1 la pregunta y la permutada son deterministas
+[11:30:54]   OK    C1 sin memoria de lugar D = 0 exacto en COMP y COMP2 (el instrumento no inventa D)
+[11:30:54]   OK    K1 trabajo escribe su JSON sin aborto y --reanuda NO lo re-corre (devuelve el mismo)
+[11:30:54]   OK    K2 --reanuda SI re-corre un JSON con aborto (y anota reintento_de)
+[11:30:54]   OK    K3 --reanuda re-corre un JSON truncado (corte de luz a mitad de escritura)
+[11:30:54]   OK    K4 lee_letra corre de punta a punta sobre las 3 corridas del arnes (veredictos y mejora presentes)
+[11:30:54]   OK    K5 candado: guarda() niega la serie mientras algo no este commiteado (o todo esta limpio)
+[11:30:54]   OK    K6 regla de parada: replica solo con FUNCIONA/MODESTO en algun brazo o NO en el umbral
+[11:30:54]   (T 1500: E retenidas 13 · lg2_omit 20)
+[11:30:54]   ARNES P8: 22/22 TODO OK (s 737402, T 1500)
+[11:31:59]   [  124.8s] i0 lug   (64.8s) cruzan 3/9 estab 6 vida 2826.0 mundo AC 6.3154 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:32:36]   [  161.4s] i0 comp  (101.5s) cruzan 2/9 estab 5 vida 1501.0 mundo AC 5.9043 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · comp: E dentro 0.45 fuera 0.0 D 0.45 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:33:30]   [  216.2s] i0 comp2 (91.3s) cruzan 1/9 estab 6 vida 1561.0 mundo AC 6.8516 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp2: E dentro 0.833 fuera 0.0 D 0.833 B dentro 0.0 A sobre E mismo bin 0.997 · no cambia True
+[11:33:55]   [  241.0s] i1 comp  (79.6s) cruzan 0/9 estab 7 vida 1365.0 mundo AC 7.3653 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.214 fuera 0.0 D 0.214 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:34:31]   [  276.4s] i1 lug   (60.3s) cruzan 1/9 estab 7 vida 966.0 mundo AC 6.5015 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:35:17]   [  322.9s] i1 comp2 (81.9s) cruzan 2/9 estab 7 vida 1357.0 mundo AC 7.4624 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.929 fuera 0.0 D 0.929 B dentro 0.0 A sobre E mismo bin 0.99 · no cambia True
+[11:36:07]   [  372.9s] i2 comp  (96.5s) cruzan 0/9 estab 6 vida 1665.0 mundo AC 6.9197 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.208 fuera 0.0 D 0.208 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:36:16]   [  382.1s] i2 lug   (59.2s) cruzan 1/9 estab 5 vida 400.0 mundo AC 5.5192 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:37:25]   [  450.3s] i2 comp2 (77.4s) cruzan 3/9 estab 6 vida 1419.0 mundo AC 7.8622 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp2: E dentro 0.708 fuera 0.0 D 0.708 B dentro 0.0 A sobre E mismo bin 0.993 · no cambia True
+[11:37:46]   [  471.8s] i3 comp  (89.7s) cruzan 1/9 estab 7 vida 450.0 mundo AC 7.2488 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.393 fuera 0.0 D 0.393 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:38:21]   [  506.7s] i3 lug   (56.4s) cruzan 2/9 estab 7 vida 1546.5 mundo AC 7.4632 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:39:05]   [  550.5s] i3 comp2 (78.7s) cruzan 3/9 estab 5 vida 600.0 mundo AC 7.6375 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · comp2: E dentro 0.65 fuera 0.0 D 0.65 B dentro 0.0 A sobre E mismo bin 0.992 · no cambia True
+[11:39:56]   [  601.5s] i4 comp  (94.7s) cruzan 2/9 estab 8 vida 1075.0 mundo AC 6.8532 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · comp: E dentro 0.281 fuera 0.0 D 0.281 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:40:04]   [  609.3s] i4 lug   (58.8s) cruzan 2/9 estab 7 vida 1601.0 mundo AC 5.9347 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:41:18]   [  684.0s] i4 comp2 (82.5s) cruzan 1/9 estab 6 vida 2677.0 mundo AC 6.9212 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp2: E dentro 0.708 fuera 0.0 D 0.708 B dentro 0.0 A sobre E mismo bin 0.997 · no cambia True
+[11:41:27]   [  693.0s] i5 comp  (83.7s) cruzan 2/9 estab 6 vida 1086.0 mundo AC 6.5798 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.458 fuera 0.0 D 0.458 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:42:14]   [  739.6s] i5 lug   (55.6s) cruzan 3/9 estab 7 vida 1301.0 mundo AC 6.895 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:42:43]   [  769.0s] i5 comp2 (76.0s) cruzan 0/9 estab 7 vida 600.0 mundo AC 7.5492 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.75 fuera 0.0 D 0.75 B dentro 0.0 A sobre E mismo bin 0.994 · no cambia True
+[11:43:39]   [  824.7s] i6 comp  (85.1s) cruzan 2/9 estab 7 vida 1357.0 mundo AC 6.7449 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.464 fuera 0.0 D 0.464 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:43:40]   [  826.2s] i6 lug   (57.2s) cruzan 3/9 estab 7 vida 600.0 mundo AC 6.1317 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:44:57]   [  902.6s] i6 comp2 (77.8s) cruzan 2/9 estab 7 vida 2951.5 mundo AC 7.5941 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.857 fuera 0.0 D 0.857 B dentro 0.0 A sobre E mismo bin 0.99 · no cambia True
+[11:45:06]   [  911.8s] i7 comp  (85.6s) cruzan 3/9 estab 7 vida 1955.0 mundo AC 6.8522 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.179 fuera 0.0 D 0.179 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:45:55]   [  960.5s] i7 lug   (57.9s) cruzan 4/9 estab 6 vida 1879.0 mundo AC 6.2874 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:46:23]   [  988.7s] i7 comp2 (77.0s) cruzan 2/9 estab 7 vida 2215.0 mundo AC 7.8416 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.571 fuera 0.0 D 0.571 B dentro 0.0 A sobre E mismo bin 0.997 · no cambia True
+[11:47:20]   [ 1045.9s] i8 lug   (57.2s) cruzan 5/9 estab 7 vida 1200.5 mundo AC 6.1728 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:47:28]   [ 1053.5s] i8 comp  (93.0s) cruzan 2/9 estab 5 vida 800.0 mundo AC 5.8145 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · comp: E dentro 0.4 fuera 0.0 D 0.4 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:48:39]   [ 1124.5s] i8 comp2 (78.6s) cruzan 1/9 estab 6 vida 3041.0 mundo AC 7.5308 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp2: E dentro 0.792 fuera 0.0 D 0.792 B dentro 0.0 A sobre E mismo bin 0.99 · no cambia True
+[11:48:55]   [ 1140.8s] i9 comp  (87.3s) cruzan 2/9 estab 7 vida 1934.5 mundo AC 6.4865 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.286 fuera 0.0 D 0.286 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:49:39]   [ 1185.1s] i9 lug   (60.6s) cruzan 1/9 estab 7 vida 600.0 mundo AC 5.4665 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:50:06]   [ 1211.9s] i9 comp2 (71.1s) cruzan 2/9 estab 7 vida 1207.0 mundo AC 8.3748 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.607 fuera 0.0 D 0.607 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:51:05]   [ 1271.0s] i10 lug   (59.1s) cruzan 2/9 estab 5 vida 775.0 mundo AC 6.117 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:51:07]   [ 1272.8s] i10 comp  (87.7s) cruzan 3/9 estab 8 vida 1422.0 mundo AC 6.6619 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · comp: E dentro 0.312 fuera 0.0 D 0.312 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:52:21]   [ 1347.0s] i10 comp2 (76.0s) cruzan 4/9 estab 7 vida 1517.5 mundo AC 7.2417 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.821 fuera 0.0 D 0.821 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:52:40]   [ 1365.9s] i11 comp  (93.1s) cruzan 2/9 estab 6 vida 1285.5 mundo AC 5.8057 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.625 fuera 0.0 D 0.625 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:53:15]   [ 1400.8s] i11 lug   (53.8s) cruzan 5/9 estab 8 vida 1363.0 mundo AC 6.8568 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:53:57]   [ 1442.5s] i11 comp2 (76.6s) cruzan 3/9 estab 5 vida 854.0 mundo AC 7.5694 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · comp2: E dentro 0.65 fuera 0.0 D 0.65 B dentro 0.0 A sobre E mismo bin 0.996 · no cambia True
+[11:54:44]   [ 1489.4s] i12 comp  (88.6s) cruzan 3/9 estab 6 vida 2481.0 mundo AC 6.714 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.25 fuera 0.0 D 0.25 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:54:55]   [ 1501.0s] i12 lug   (58.5s) cruzan 2/9 estab 5 vida 901.0 mundo AC 6.219 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:55:56]   [ 1561.8s] i12 comp2 (72.4s) cruzan 3/9 estab 6 vida 2573.0 mundo AC 8.4159 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp2: E dentro 1.0 fuera 0.0 D 1.0 B dentro 0.0 A sobre E mismo bin 0.995 · no cambia True
+[11:56:24]   [ 1589.7s] i13 comp  (88.7s) cruzan 1/9 estab 6 vida 1193.0 mundo AC 6.7731 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.292 fuera 0.0 D 0.292 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:56:50]   [ 1615.6s] i13 lug   (53.7s) cruzan 4/9 estab 8 vida 1701.0 mundo AC 6.7887 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:57:40]   [ 1665.6s] i13 comp2 (75.9s) cruzan 3/9 estab 7 vida 549.5 mundo AC 7.6472 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.714 fuera 0.0 D 0.714 B dentro 0.0 A sobre E mismo bin 0.997 · no cambia True
+[11:58:15]   [ 1701.0s] i14 comp  (85.5s) cruzan 5/9 estab 8 vida 2383.0 mundo AC 7.323 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · comp: E dentro 0.375 fuera 0.0 D 0.375 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:58:40]   [ 1725.3s] i14 lug   (59.8s) cruzan 3/9 estab 7 vida 2803.5 mundo AC 6.2149 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[11:59:37]   [ 1782.7s] i14 comp2 (81.7s) cruzan 3/9 estab 7 vida 2684.0 mundo AC 7.1825 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.75 fuera 0.0 D 0.75 B dentro 0.0 A sobre E mismo bin 0.991 · no cambia True
+[12:00:09]   [ 1815.2s] i15 comp  (89.8s) cruzan 3/9 estab 7 vida 1264.0 mundo AC 6.3662 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.286 fuera 0.0 D 0.286 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:00:31]   [ 1837.0s] i15 lug   (54.3s) cruzan 3/9 estab 6 vida 1300.0 mundo AC 6.4291 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:01:22]   [ 1888.1s] i15 comp2 (73.0s) cruzan 4/9 estab 7 vida 2486.0 mundo AC 7.6096 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp2: E dentro 0.607 fuera 0.0 D 0.607 B dentro 0.0 A sobre E mismo bin 0.984 · no cambia True
+[12:01:49]   [ 1914.5s] i16 comp  (77.5s) cruzan 0/9 estab 6 vida 600.0 mundo AC 7.881 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.208 fuera 0.0 D 0.208 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:02:19]   [ 1944.8s] i16 lug   (56.7s) cruzan 1/9 estab 5 vida 599.0 mundo AC 5.7122 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:03:03]   [ 1988.5s] i16 comp2 (74.0s) cruzan 1/9 estab 5 vida 500.0 mundo AC 7.6346 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · comp2: E dentro 0.85 fuera 0.0 D 0.85 B dentro 0.0 A sobre E mismo bin 0.988 · no cambia True
+[12:03:53]   [ 2038.8s] i17 comp  (94.0s) cruzan 5/9 estab 6 vida 1640.0 mundo AC 6.1743 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.583 fuera 0.0 D 0.583 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:04:02]   [ 2047.5s] i17 lug   (59.0s) cruzan 4/9 estab 7 vida 1901.0 mundo AC 6.1049 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:05:11]   [ 2116.9s] i17 comp2 (78.1s) cruzan 3/9 estab 5 vida 1546.0 mundo AC 7.0798 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 5/9 · comp2: E dentro 1.0 fuera 0.0 D 1.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:05:29]   [ 2135.1s] i18 comp  (87.6s) cruzan 3/9 estab 6 vida 549.5 mundo AC 6.2387 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 6/9 · comp: E dentro 0.125 fuera 0.0 D 0.125 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:06:04]   [ 2170.3s] i18 lug   (53.3s) cruzan 0/9 estab 7 vida 500.0 mundo AC 7.3444 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:06:42]   [ 2207.9s] i18 comp2 (72.8s) cruzan 3/9 estab 8 vida 2149.5 mundo AC 7.5759 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · comp2: E dentro 0.906 fuera 0.0 D 0.906 B dentro 0.0 A sobre E mismo bin 0.98 · no cambia True
+[12:07:24]   [ 2250.0s] i19 comp  (79.8s) cruzan 3/9 estab 7 vida 2254.0 mundo AC 7.5568 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · comp: E dentro 0.286 fuera 0.0 D 0.286 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:07:39]   [ 2264.9s] i19 lug   (57.0s) cruzan 3/9 estab 7 vida 2048.0 mundo AC 6.2962 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 7/9 · lug: E dentro 0.0 fuera 0.0 D 0.0 B dentro 0.0 A sobre E mismo bin 1.0 · no cambia True
+[12:08:38]   [ 2323.8s] i19 comp2 (73.8s) cruzan 4/9 estab 8 vida 1493.0 mundo AC 7.6944 · E dentro {'comp': 0.0, 'mordidas': 0} · validos 8/9 · comp2: E dentro 0.688 fuera 0.0 D 0.688 B dentro 0.0 A sobre E mismo bin 0.988 · no cambia True
+[12:08:38] 
+================ LA LETRA (escalada a n 20)
+[12:08:38]   validez: {'V1_completa': True, 'V2_celda_retenida': True, 'V3_preguntar_no_cambia': True, 'V4_estado': True, 'V5_semillas_validas': True}
+[12:08:38]   umbrales: {'k_pos': 15, 'semillas_validas': 17, 'par_gana': 14, 'MIN_VAL': 3, 'MED_FUN': 0.4, 'MED_MOD': 0.25, 'PERM_MAX': 0.1, 'FGEN_MAX': 0.05, 'B_MAX': 0.1, 'ELIGE_MIN': 0.75, 'PAR_MED': 0.2}
+[12:08:38]   [comp      ] sem validas 20/20 · linajes validos 131 · D>0 en 17 · D mediana 0.25 media 0.2938 · E dentro 0.2887 fuera 0.0 fgen 0.0 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 1.0 (E 0.0; entre bins distintos 1.0) · sola E 0.7007/0.5667 · rho(D, validos) -0.126 · D por semilla [0.75, 0.25, 0.0, 0.5, 0.125, 0.375, 0.5, 0.0, 0.25, 0.25, 0.25, 0.625, 0.25, 0.25, 0.25, 0.25, 0.125, 0.625, 0.0, 0.25]
+[12:08:38]   [comp_perm ] sem validas 20/20 · linajes validos 131 · D>0 en 2 · D mediana 0.0 media -0.0055 · E dentro 0.0358 fuera 0.0409 fgen 0.0361 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 1.0 (E 0.0; entre bins distintos 1.0) · sola E 0.5862/0.5867 · rho(D, validos) 0.477 · D por semilla [0.0, -0.0312, 0.0, 0.0, 0.0156, -0.0469, 0.0312, 0.0, -0.0312, 0.0, -0.0156, -0.0312, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[12:08:38]   [lug       ] sem validas 20/20 · linajes validos 131 · D>0 en 0 · D mediana 0.0 media 0.0 · E dentro 0.0 fuera 0.0 fgen 0.0 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 1.0 (E 0.0; entre bins distintos 1.0) · sola E 0.5667/0.5667 · rho(D, validos) None · D por semilla [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[12:08:38]   [comp_s    ] sem validas 20/20 · linajes validos 131 · D>0 en 17 · D mediana 0.25 media 0.3 · E dentro 0.3452 fuera 0.0 fgen 0.0 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 1.0 (E 0.0; entre bins distintos 1.0) · sola E 0.7218/0.5667 · rho(D, validos) 0.359 · D por semilla [0.125, 0.25, 0.25, 0.25, 0.25, 0.5, 0.5, 0.25, 0.25, 0.0, 0.5, 0.375, 0.0, 0.375, 0.5, 0.125, 0.25, 0.75, 0.0, 0.5]
+[12:08:38]   [comp2     ] sem validas 20/20 · linajes validos 129 · D>0 en 20 · D mediana 0.75 media 0.7562 · E dentro 0.75 fuera 0.0 fgen 0.0 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 0.9938 (E 0.0062; entre bins distintos 0.7244) · sola E 0.895/0.5714 · rho(D, validos) 0.25 · D por semilla [0.75, 1.0, 0.75, 0.5, 0.875, 0.75, 0.75, 0.5, 0.75, 0.75, 0.75, 0.5, 1.0, 0.75, 0.75, 0.5, 0.75, 1.0, 1.0, 0.75]
+[12:08:38]   [comp2_perm] sem validas 20/20 · linajes validos 129 · D>0 en 8 · D mediana 0.0 media 0.0047 · E dentro 0.0915 fuera 0.1027 fgen 0.0853 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 0.9993 (E 0.0007; entre bins distintos 0.9351) · sola E 0.6102/0.6174 · rho(D, validos) 0.021 · D por semilla [-0.0156, 0.0, 0.0469, 0.0312, -0.0156, -0.0312, 0.0312, 0.0312, -0.0469, 0.0, 0.0, 0.0, 0.0312, 0.0, 0.0625, -0.0312, 0.0312, -0.0312, -0.0469, 0.0469]
+[12:08:38]   [comp2sg   ] sem validas 20/20 · linajes validos 129 · D>0 en 20 · D mediana 0.75 media 0.7562 · E dentro 0.75 fuera 0.0 fgen 0.0 · B dentro 0.3065 · A dentro 1.0 · A sobre E mismo bin 0.9938 (E 0.0062; entre bins distintos 0.7244) · sola E 0.895/0.5714 · rho(D, validos) 0.25 · D por semilla [0.75, 1.0, 0.75, 0.5, 0.875, 0.75, 0.75, 0.5, 0.75, 0.75, 0.75, 0.5, 1.0, 0.75, 0.75, 0.5, 0.75, 1.0, 1.0, 0.75]
+[12:08:38]   [lug2      ] sem validas 20/20 · linajes validos 129 · D>0 en 0 · D mediana 0.0 media 0.0 · E dentro 0.0 fuera 0.0 fgen 0.0 · B dentro 0.0 · A dentro 1.0 · A sobre E mismo bin 1.0 (E 0.0; entre bins distintos 1.0) · sola E 0.5714/0.5714 · rho(D, validos) None · D por semilla [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[12:08:38]   puertas comp: {'P1_semillas_D_pos': True, 'P2_mediana_fun': False, 'P2m_mediana_mod': True, 'P3_permutada': True, 'P4_sin_composicion_cero': True, 'P5_fuera_general': True, 'P6_B_dentro_rechazada': True, 'P7_A_sobre_E': True}
+[12:08:38]   puertas comp2: {'P1_semillas_D_pos': True, 'P2_mediana_fun': True, 'P2m_mediana_mod': True, 'P3_permutada': True, 'P4_sin_composicion_cero': True, 'P5_fuera_general': True, 'P6_B_dentro_rechazada': True, 'P7_A_sobre_E': True}
+[12:08:38]   pareado comp2 vs comp (D por semilla): {'gana': 17, 'empata': 2, 'pierde': 1, 'dif_mediana': 0.5, 'dif': [0.0, 0.75, 0.75, 0.0, 0.75, 0.375, 0.25, 0.5, 0.5, 0.5, 0.5, -0.125, 0.75, 0.5, 0.5, 0.25, 0.625, 0.375, 1.0, 0.5]}
+[12:08:38]   [trampa 5] comp: {'cruzan': 44, 'establecidos': 131, 'mundo_AC': 6.7294, 'vida_med': 1361.0, 'R0_med': 0.6962, 'mord_AC': 60540, 'mord_BD': 43327, 'lg2_omit': 0, 'linajes_validos': 131, 'ratio_pasos_oasis': 6.542}
+[12:08:38]   [trampa 5] lug: {'cruzan': 52, 'establecidos': 131, 'mundo_AC': 6.2532, 'vida_med': 1300.5, 'R0_med': 0.737, 'mord_AC': 57097, 'mord_BD': 39850, 'lg2_omit': 0, 'linajes_validos': 131, 'ratio_pasos_oasis': 6.5925}
+[12:08:38]   [trampa 5] comp2: {'cruzan': 48, 'establecidos': 129, 'mundo_AC': 7.585, 'vida_med': 1531.75, 'R0_med': 0.6243, 'mord_AC': 54293, 'mord_BD': 39229, 'lg2_omit': 53973, 'linajes_validos': 129, 'ratio_pasos_oasis': 6.5995}
+[12:08:38]   [trampa 5] pareado_cruzan: {'comp2_vs_lug': {'gana': 9, 'empata': 2, 'pierde': 9, 'suma_a': 48, 'suma_b': 52}, 'comp2_vs_comp': {'gana': 9, 'empata': 4, 'pierde': 7, 'suma_a': 48, 'suma_b': 44}, 'comp_vs_lug': {'gana': 6, 'empata': 3, 'pierde': 11, 'suma_a': 44, 'suma_b': 52}}
+[12:08:38] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\p8\datos\serie_s737500-737519_T60000_20261001_112954\resumen.json (sha c73e48e4b7d0cdf9) · abortos 0 · 2324.2s
+[12:08:38] VEREDICTO: COMP HAY ALGO MODESTO · COMP2 FUNCIONA · COMP2 MEJORA
