@@ -1,0 +1,83 @@
+{
+ "descriptivo": true,
+ "entra_en_la_letra": false,
+ "umbrales": {
+  "A": 0.9,
+  "B": 0.1
+ },
+ "brazos": {
+  "moneda_L": {
+   "pasajes": 2,
+   "faltan": [],
+   "tipos": {
+    "A": {
+     "n": 3,
+     "est": 3,
+     "cruza": 0,
+     "tasa_est": 1.0,
+     "tasa_cruza": 0.0
+    },
+    "B": {
+     "n": 12,
+     "est": 10,
+     "cruza": 2,
+     "tasa_est": 0.833,
+     "tasa_cruza": 0.167
+    },
+    "mixto": {
+     "n": 3,
+     "est": 0,
+     "cruza": 0,
+     "tasa_est": 0.0,
+     "tasa_cruza": 0.0
+    },
+    "sin_parto": {
+     "n": 0,
+     "est": 0,
+     "cruza": 0,
+     "tasa_est": null,
+     "tasa_cruza": null
+    }
+   },
+   "frac_linajes_A_entre_A_y_B": 0.2,
+   "frac_A_que_entra_media": 0.468
+  },
+  "neutra_L": {
+   "pasajes": 2,
+   "faltan": [],
+   "tipos": {
+    "A": {
+     "n": 6,
+     "est": 6,
+     "cruza": 2,
+     "tasa_est": 1.0,
+     "tasa_cruza": 0.333
+    },
+    "B": {
+     "n": 7,
+     "est": 7,
+     "cruza": 1,
+     "tasa_est": 1.0,
+     "tasa_cruza": 0.143
+    },
+    "mixto": {
+     "n": 5,
+     "est": 1,
+     "cruza": 0,
+     "tasa_est": 0.2,
+     "tasa_cruza": 0.0
+    },
+    "sin_parto": {
+     "n": 0,
+     "est": 0,
+     "cruza": 0,
+     "tasa_est": null,
+     "tasa_cruza": null
+    }
+   },
+   "frac_linajes_A_entre_A_y_B": 0.462,
+   "frac_A_que_entra_media": 0.526
+  }
+ },
+ "sha_script": "484404292f6c18d2"
+}

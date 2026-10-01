@@ -1,0 +1,79 @@
+ARNES moneda del muro · 2026-09-30 22:41:02
+  shas: corre_mm.py d45a5ed42e8514df · identidad_mm.py e9e3a7a5b6576f30
+(K) shas fijados (corre_mut, identidad_mut; por corre_mut.verifica: corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez)
+  sha experimentos\organelos\condiciones\mutacion\corre_mut.py 8912e9d77f397e40 OK
+  sha experimentos\organelos\condiciones\mutacion\identidad_mut.py b08e1410de201065 OK
+  -- verifica de corre_mut (corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez, carros):
+    sha experimentos\organelos\moneda\corre_moneda.py 0441aa7bf5b94316 OK
+    sha experimentos\organelos\moneda\identidad_moneda.py ceede3d6458597ac OK
+    -- verifica de corre_moneda (shas de sentidos_muro, corre_bp, V143_BQ3; pista, juez, carros):
+      sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+      sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+      sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+      sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+      -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+        sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+        sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+        sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+        sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+        sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+        sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+        sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+        sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+        sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+        carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+        carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+(C) CONFIGURACION: CFG10 == corre_mut.CFG10; brazos -> filas y cfg de corre_mut; T_EST == juez.T_CORTE; siembra inicial == la de mutacion
+  CFG10 {'inicial': 2, 'p_campo': 0.01, 'p_dup': 0.002, 'p_del': 0.007, 'p_ins': 0.005, 'banco': 50} · T_EST 10000 (juez.T_CORTE 10000) · A [10.0, 0.0, 1.0, 0.5, 0.0, -3.0] · A0 [10.0, 0.0, 1.0, 0.5, 0.0, 0.0] · B [10.0, 5.0, 1.0, 0.5, 0.0, 0.0]: OK
+(E) regla 14: ENTRADA campo a campo. tarea de este runner == corre_mut.tarea == corre_bp.tarea('V143_BQ3', CFG10, siembra)
+  moneda_L: 10 campos contra corre_mut y 8 contra corre_bp; cfg del carro == CFG10; fundadores del banco sembrado 21/21: OK
+  neutra_L: 10 campos contra corre_mut y 8 contra corre_bp; cfg del carro == CFG10; fundadores del banco sembrado 11/11: OK
+(F) CON LA MONEDA VIEJA ESTE RUNNER ES corre_mut BIT A BIT
+  trabajo moneda_25 (cadena 2 pasajes, T 1000) == corre_mut.trabajo('moneda'): 3 JSON campo a campo y frac_A [0.5, 0.5311, 0.5156]: OK
+  trabajo neutra_25 (cadena 2 pasajes, T 1000) == corre_mut.trabajo('neutra'): 2 JSON campo a campo y frac_A [0.5, 0.5289, 0.5244]: OK
+  sha del pasaje guardado pasaje_moneda_i1_p0.json c478fc760bcc584a: OK
+  mutacion moneda i1 p0 (s 634110, T 25000, 25s) con la siembra que sale de este runner == GUARDADO en ['linajes', 'pista', 'R0_pista', 'tel', 'tel_termo', 'bq']: OK · siembra vieja == corre_bp.siembra_de (fraccion A 0.4511): OK
+  sha del pasaje guardado pasaje_moneda_i1_p1.json dc9effc75ab57059: OK
+  mutacion moneda i1 p1 (s 634111, T 25000, 25s) con la siembra que sale de este runner == GUARDADO en ['linajes', 'pista', 'R0_pista', 'tel', 'tel_termo', 'bq']: OK · siembra vieja == corre_bp.siembra_de (fraccion A 0.4111): OK
+(J) 'establecido' con datos del linaje == el fund_post10k del juez, en TODOS los JSON guardados de mutacion (moneda: 50 pasajes + 5 pruebas)
+  55 JSON, 495/495 linajes iguales (inciertos por tope de t_fund: 0): OK
+(A) LA MONEDA NUEVA ACTUA (sobre los GUARDADOS de mutacion; sin corridas)
+  siembra_L != siembra vieja en 55/55 JSON; siempre subconjunto no vacio: True; solo bancos de linajes establecidos (o respaldo): True: OK
+  moneda_s59201.json 41cd6e8a48b54799 OK · establecidos 7/9 (respaldo False) · listas 350 vs 450
+  moneda_s59202.json fb4b30bbc4e10cd3 OK · establecidos 7/9 (respaldo False) · listas 350 vs 450
+  moneda_s59203.json 982b5ab3bc1b88b9 OK · establecidos 6/9 (respaldo False) · listas 300 vs 450
+  moneda_s59204.json e00d62919783ce34 OK · establecidos 5/9 (respaldo False) · listas 250 vs 450
+  moneda_s59205.json 91b43d82d4c9137f OK · establecidos 5/9 (respaldo False) · listas 250 vs 450
+  sinteticos (establecidos, respaldo por minimo, banco vacio, siembra vacia, t_fund truncado): OK
+(D) determinismo: moneda_L, dos veces
+  OK
+(W) JSON antes de volver; un JSON con aborto SE REINTENTA; uno bueno NO se recorre; cadena por trabajo() con aborto simulado y reanuda; cadena() == trabajo()
+  reintento: OK
+  moneda_L: cadena 2 pasajes + prueba, aborto simulado en p1 y reanuda: identico ([0.5, 0.5311, 0.54], cruzan 0; elegidos [9, 9]): OK
+  neutra_L: cadena 2 pasajes + prueba, aborto simulado en p1 y reanuda: identico ([0.5, 0.5311, 0.54], cruzan 0; elegidos [9, 9]): OK
+  carga() de la carpeta: 2 cadenas y 2 pruebas, abortos []: OK
+(X) el runner NIEGA pool > 2 y pool en el humo
+  ['--explora', '--pool', '3']: OK (niega)
+  ['--humo', '--pool', '2']: OK (niega)
+(L) LA LETRA en casos sinteticos (ERR-176: CONSERVA exige 5/5)
+  CONSERVA: moneda >= neutra en 5/5 y mediana 0.6: CONSERVA (espera CONSERVA) OK
+  ERR-176: 4/5 con mediana 0.6 YA NO es CONSERVA: INDETERMINADO (espera INDETERMINADO) OK
+  CONSERVA: los empates cuentan (>=), 5/5: CONSERVA (espera CONSERVA) OK
+  ERR-176: empates y 4/5 no es CONSERVA: INDETERMINADO (espera INDETERMINADO) OK
+  CONSERVA en el borde: mediana == 0.40 y 5/5: CONSERVA (espera CONSERVA) OK
+  no CONSERVA si la mediana < 0.40 aunque >= en 5/5: INDETERMINADO (espera INDETERMINADO) OK
+  no CONSERVA con 3/5: INDETERMINADO (espera INDETERMINADO) OK
+  PURGA: <= 0.5 neutra en 4/5: PURGA (espera PURGA) OK
+  PURGA: == 0.5 neutra cuenta: PURGA (espera PURGA) OK
+  no PURGA: 0 contra 0 no cuenta (2/5): INDETERMINADO (espera INDETERMINADO) OK
+  todas perdidas en los dos brazos: INDETERMINADO: INDETERMINADO (espera INDETERMINADO) OK
+  NO SE LEE (aborto): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (la moneda no actua: siembra == sombra en todos): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (respaldo en > 25 % de los pasajes): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (entrada != 0.5): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (arnes): NO SE LEE OK
+  NO SE LEE (referencias): NO SE LEE OK
+  NO SE LEE (faltan pruebas): NO SE LEE OK
+(R) referencias GUARDADAS de condiciones/mutacion (sha16): lectura, 5 pruebas de moneda / 10
+  lectura_mut.json af53bdfadf5c9668 · finales {'moneda_25': {'1': 0.2178, '2': 0.3467, '3': 0.3422, '4': 0.2644, '5': 0.2222}, 'neutra_25': {'1': 0.5689, '2': 0.6667, '3': 0.82, '4': 0.6356, '5': 0.5822}} · sumas {'moneda_div10': 24, 'forzada3': 23, 'bq3_pas': 13, 'moneda_x1': 16} · []: OK
+ARNES: PASA · 76s
