@@ -1,0 +1,86 @@
+[17:42:13] CORRE_ENTRE_LINAJES · explora · 20260930_174213 · python 3.14.2 · pool 2 · runner 2ce1bafee633ed7b · camara e2889842021e9241 · preregistro 2847cc7246b5c8cd · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\entre_linajes\datos\explora_i624201-624205_20260930_174213
+[17:42:13]   pasajes 624000-624049 (T 25000 x 10) · pruebas 624201-624205 (T 100000) · brazos ['sel', 'neu', 'igual', 'o1'] · reanuda False
+[17:42:13]   sha experimentos\carrera_escuderias\pista_pob.py d4ed07b28e4ba94b OK
+[17:42:13]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[17:42:13]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[17:42:13]   sha experimentos\organelos\o1_evo\corre_o1_evo.py 95622a2f93bb38b0 OK
+[17:42:13]   sha experimentos\organelos\o1_evo\carros\O1_PAS.py c5377ada6b28bee0 OK
+[17:42:13]   sha experimentos\organelos\o1_evo\construye_o1_pas.py 8013e4a99a004bda OK
+[17:42:13]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[17:42:21]   IDENTIDAD CORTA (s 624950, T 1200): camara sin gancho == pista.run True · pasaje 'nada' == corre_o1_evo.tarea True · siembra_prop (partos iguales) == siembra igualada True
+[17:42:21]   git experimentos/organelos/condiciones/entre_linajes/PREREGISTRO_entre_linajes.md: commiteado True · sin cambios vs HEAD True
+[17:42:21]   git experimentos/organelos/condiciones/entre_linajes/corre_entre_linajes.py: commiteado True · sin cambios vs HEAD True
+[17:42:21]   git experimentos/organelos/condiciones/entre_linajes/camara_linajes.py: commiteado True · sin cambios vs HEAD True
+[17:42:21]   git experimentos/organelos/condiciones/entre_linajes/identidad_entre_linajes.py: commiteado True · sin cambios vs HEAD True
+[17:49:12]   [  418.5s] cadena i0 sel (409.3s) aborto None colonos por pasaje [112, 30, 230, 119, 116, 196, 194, 207, 187, 161] genes p-ultimo {'MARGEN': 0.186, 'PRUEBA': 0.4815, 'PEN_OTRO': 0.3226, 'PISO': 0.1344}
+[17:49:24]   [  430.5s] cadena i0 neu (420.0s) aborto None colonos por pasaje [0, 121, 250, 123, 123, 160, 43, 136, 0, 0] genes p-ultimo {'MARGEN': 0.3296, 'PRUEBA': 0.6545, 'PEN_OTRO': 0.4072, 'PISO': 0.3179}
+[17:55:54]   [  820.5s] cadena i0 igual (401.3s) aborto None colonos por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2853, 'PRUEBA': 0.107, 'PEN_OTRO': 0.4448, 'PISO': 0.2301}
+[17:56:12]   [  838.5s] cadena i1 sel (409.0s) aborto None colonos por pasaje [185, 86, 112, 140, 85, 120, 199, 0, 187, 117] genes p-ultimo {'MARGEN': 0.2481, 'PRUEBA': 0.3789, 'PEN_OTRO': 0.552, 'PISO': 0.2779}
+[18:02:50]   [ 1236.6s] cadena i1 neu (416.7s) aborto None colonos por pasaje [123, 123, 118, 130, 102, 146, 127, 0, 174, 136] genes p-ultimo {'MARGEN': 0.401, 'PRUEBA': 0.5102, 'PEN_OTRO': 0.3972, 'PISO': 0.0871}
+[18:03:04]   [ 1250.6s] cadena i1 igual (412.6s) aborto None colonos por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2422, 'PRUEBA': 0.2867, 'PEN_OTRO': 0.4119, 'PISO': 0.3295}
+[18:09:42]   [ 1648.6s] cadena i2 sel (412.3s) aborto None colonos por pasaje [113, 168, 231, 47, 176, 319, 135, 140, 6, 139] genes p-ultimo {'MARGEN': 0.2455, 'PRUEBA': 0.4342, 'PEN_OTRO': 0.5, 'PISO': 0.1935}
+[18:10:08]   [ 1674.7s] cadena i2 neu (422.5s) aborto None colonos por pasaje [123, 57, 380, 214, 190, 132, 115, 118, 58, 123] genes p-ultimo {'MARGEN': 0.12, 'PRUEBA': 0.7087, 'PEN_OTRO': 0.3646, 'PISO': 0.2805}
+[18:16:12]   [ 2038.7s] cadena i2 igual (390.0s) aborto None colonos por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2696, 'PRUEBA': 0.4602, 'PEN_OTRO': 0.3258, 'PISO': 0.2979}
+[18:17:08]   [ 2094.7s] cadena i3 sel (420.9s) aborto None colonos por pasaje [191, 113, 301, 152, 168, 95, 49, 116, 86, 0] genes p-ultimo {'MARGEN': 0.2034, 'PRUEBA': 0.2389, 'PEN_OTRO': 0.1305, 'PISO': 0.2772}
+[18:24:50]   [ 2556.8s] cadena i3 neu (517.4s) aborto None colonos por pasaje [314, 123, 169, 99, 144, 83, 186, 105, 123, 13] genes p-ultimo {'MARGEN': 0.0721, 'PRUEBA': 0.4456, 'PEN_OTRO': 0.2741, 'PISO': 0.2033}
+[18:25:58]   [ 2624.8s] cadena i3 igual (530.2s) aborto None colonos por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1171, 'PRUEBA': 0.4005, 'PEN_OTRO': 0.2156, 'PISO': 0.182}
+[18:33:50]   [ 3096.9s] cadena i4 sel (541.0s) aborto None colonos por pasaje [190, 57, 142, 118, 90, 123, 127, 144, 56, 107] genes p-ultimo {'MARGEN': 0.2255, 'PRUEBA': 0.3892, 'PEN_OTRO': 0.2593, 'PISO': 0.3176}
+[18:34:44]   [ 3150.9s] cadena i4 neu (526.0s) aborto None colonos por pasaje [134, 78, 126, 114, 206, 225, 165, 61, 232, 186] genes p-ultimo {'MARGEN': 0.2301, 'PRUEBA': 0.5398, 'PEN_OTRO': 0.6361, 'PISO': 0.1272}
+[18:37:50]   [ 3336.9s] prueba i0 o1    (185.9s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 304, 0, 0] de siembra 0/0
+[18:40:56]   [ 3522.9s] prueba i1 o1    (186.1s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 0, 403, 0, 0, 97] de siembra 0/0
+[18:41:52]   [ 3579.0s] cadena i4 igual (481.6s) aborto None colonos por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3002, 'PRUEBA': 0.4054, 'PEN_OTRO': 0.3083, 'PISO': 0.399}
+[18:44:32]   [ 3739.0s] prueba i2 o1    (216.6s) aborto None cruzan 6/9 fund [0, 0, 0, 4, 0, 0, 49, 494, 0] de siembra 0/0
+[18:45:40]   [ 3807.0s] prueba i3 o1    (228.2s) aborto None cruzan 7/9 fund [0, 327, 0, 0, 0, 0, 0, 9, 0] de siembra 0/0
+[18:48:32]   [ 3979.0s] prueba i4 o1    (239.0s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 275, 40, 0, 0, 0] de siembra 0/0
+[18:49:28]   [ 4035.0s] prueba i0 sel   (227.5s) aborto None cruzan 6/9 fund [0, 0, 0, 0, 0, 0, 3, 69, 85] de siembra 166/166
+[18:51:28]   [ 4155.1s] prueba i0 neu   (177.5s) aborto None cruzan 2/9 fund [202, 57, 0, 0, 26, 0, 202, 204, 206] de siembra 906/906
+[18:54:30]   [ 4337.1s] prueba i0 igual (302.6s) aborto None cruzan 5/9 fund [18, 7, 23, 0, 0, 5, 0, 0, 0] de siembra 62/62
+[18:56:30]   [ 4457.1s] prueba i1 sel   (300.3s) aborto None cruzan 6/9 fund [0, 0, 0, 480, 0, 65, 0, 0, 0] de siembra 554/554
+[18:58:50]   [ 4597.1s] prueba i1 neu   (260.1s) aborto None cruzan 4/9 fund [407, 44, 0, 0, 0, 287, 0, 0, 392] de siembra 1139/1139
+[19:00:54]   [ 4721.1s] prueba i1 igual (264.3s) aborto None cruzan 7/9 fund [0, 46, 0, 0, 0, 0, 0, 0, 0] de siembra 55/55
+[19:03:04]   [ 4851.2s] prueba i2 sel   (253.5s) aborto None cruzan 6/9 fund [0, 0, 0, 51, 0, 0, 0, 276, 151] de siembra 487/487
+[19:03:44]   [ 4891.2s] prueba i2 neu   (171.3s) aborto None cruzan 0/9 fund [16, 194, 10, 0, 193, 3, 12, 200, 196] de siembra 833/833
+[19:06:40]   [ 5067.2s] prueba i2 igual (216.0s) aborto None cruzan 5/9 fund [384, 0, 0, 0, 311, 0, 0, 0, 0] de siembra 704/704
+[19:07:36]   [ 5123.2s] prueba i3 sel   (230.6s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 0, 0, 145, 0, 0] de siembra 154/154
+[19:10:54]   [ 5321.2s] prueba i3 neu   (254.7s) aborto None cruzan 3/9 fund [27, 0, 276, 0, 0, 0, 0, 12, 202] de siembra 526/526
+[19:11:48]   [ 5375.3s] prueba i3 igual (252.5s) aborto None cruzan 6/9 fund [235, 0, 0, 0, 0, 0, 2, 69, 0] de siembra 315/315
+[19:15:10]   [ 5577.3s] prueba i4 sel   (254.6s) aborto None cruzan 5/9 fund [471, 206, 3, 0, 0, 0, 0, 0, 0] de siembra 689/689
+[19:15:44]   [ 5611.3s] prueba i4 neu   (237.1s) aborto None cruzan 5/9 fund [0, 0, 0, 0, 0, 188, 144, 0, 168] de siembra 509/509
+[19:18:32]   [ 5779.3s] prueba i4 igual (202.3s) aborto None cruzan 7/9 fund [0, 433, 0, 0, 0, 0, 115, 0, 0] de siembra 557/557
+[19:18:33] 
+================ LA LETRA (PREREGISTRO_entre_linajes.md sec. 6)
+[19:18:33]   validez: {'V1_completa': True, 'V2_ancla_o1': True, 'V3_siembra_actua': True, 'V4_perillas': True, 'V5_mecanismo': True}
+[19:18:33]   puertas: {'P1_sel_gana_neu': True, 'P2_direccional': True, 'P3_sel_gana_o1': False, 'P4_sel_gana_igual': True} · umbrales {'gana': 4, 'gana_igual': 3, 'dir_signo': 4, 'mod_gana': 3, 'mod_suma': 4, 'o1_may': 4} · en el umbral (P1 a -1/0): True
+[19:18:33]   pareado_neu: gana 4 empata 1 pierde 0 · suma 30 vs 14 (dif 16)
+[19:18:33]   pareado_o1: gana 0 empata 2 pierde 3 · suma 30 vs 35 (dif -5)
+[19:18:33]   pareado_igual: gana 3 empata 0 pierde 2 · suma 30 vs 30 (dif 0)
+[19:18:33]   [desc] pareados: {'sel_vs_neu': {'n': 5, 'gana': 4, 'empata': 1, 'pierde': 0, 'suma_a': 30, 'suma_b': 14, 'dif': 16, 'por_indice_a': [6, 6, 6, 7, 5], 'por_indice_b': [2, 4, 0, 3, 5]}, 'sel_vs_o1': {'n': 5, 'gana': 0, 'empata': 2, 'pierde': 3, 'suma_a': 30, 'suma_b': 35, 'dif': -5, 'por_indice_a': [6, 6, 6, 7, 5], 'por_indice_b': [8, 7, 6, 7, 7]}, 'sel_vs_igual': {'n': 5, 'gana': 3, 'empata': 0, 'pierde': 2, 'suma_a': 30, 'suma_b': 30, 'dif': 0, 'por_indice_a': [6, 6, 6, 7, 5], 'por_indice_b': [5, 7, 5, 6, 7]}, 'neu_vs_igual': {'n': 5, 'gana': 0, 'empata': 0, 'pierde': 5, 'suma_a': 14, 'suma_b': 30, 'dif': -16, 'por_indice_a': [2, 4, 0, 3, 5], 'por_indice_b': [5, 7, 5, 6, 7]}, 'igual_vs_o1': {'n': 5, 'gana': 0, 'empata': 2, 'pierde': 3, 'suma_a': 30, 'suma_b': 35, 'dif': -5, 'por_indice_a': [5, 7, 5, 6, 7], 'por_indice_b': [8, 7, 6, 7, 7]}, 'neu_vs_o1': {'n': 5, 'gana': 0, 'empata': 0, 'pierde': 5, 'suma_a': 14, 'suma_b': 35, 'dif': -21, 'por_indice_a': [2, 4, 0, 3, 5], 'por_indice_b': [8, 7, 6, 7, 7]}}
+[19:18:33]   [desc] suma_cruzan: {'sel': 30, 'neu': 14, 'igual': 30, 'o1': 35}
+[19:18:33]   [desc] mayorias: {'sel': 5, 'neu': 1, 'igual': 5, 'o1': 5}
+[19:18:33]   [desc] R0_med: {'sel': 0.9231, 'neu': 0.75, 'igual': 0.9333, 'o1': 0.9333}
+[19:18:33]   [desc] fund_por_linaje_media: {'sel': 53.1111, 'neu': 91.5556, 'igual': 34.0, 'o1': 37.3333}
+[19:18:33]   [desc] establecidos_0fund_post10k: {'sel': 35, 'neu': 25, 'igual': 35, 'o1': 38}
+[19:18:33]   [desc] mundo_AC: {'sel': 2.219, 'neu': 2.591, 'igual': 2.0818, 'o1': 2.1857}
+[19:18:33]   [desc] genes_vivos_fin_prueba: {'sel': {'MARGEN': 0.2273, 'PRUEBA': 0.3999, 'PEN_OTRO': 0.2796, 'PISO': 0.2791}, 'neu': {'MARGEN': 0.2319, 'PRUEBA': 0.4985, 'PEN_OTRO': 0.4175, 'PISO': 0.3231}, 'igual': {'MARGEN': 0.2422, 'PRUEBA': 0.3868, 'PEN_OTRO': 0.3186, 'PISO': 0.2873}}
+[19:18:33]   [desc] direccional: {'MARGEN': {'sube': 0, 'baja': 5, 'med_abs_sel': 0.0245, 'med_abs_neu': 0.13, 'med_sel': -0.0245, 'med_neu': -0.0199, 'pasa': False}, 'PRUEBA': {'sube': 0, 'baja': 5, 'med_abs_sel': 0.1108, 'med_abs_neu': 0.0544, 'med_sel': -0.1108, 'med_neu': 0.0398, 'pasa': True}, 'PEN_OTRO': {'sube': 2, 'baja': 3, 'med_abs_sel': 0.15, 'med_abs_neu': 0.0572, 'med_sel': -0.0274, 'med_neu': 0.0472, 'pasa': False}, 'PISO': {'sube': 3, 'baja': 2, 'med_abs_sel': 0.0772, 'med_abs_neu': 0.0805, 'med_sel': 0.0772, 'med_neu': 0.0033, 'pasa': False}}
+[19:18:33]   [desc] sel_trayectoria_genes_siembra_mediana: {'MARGEN': [0.2526, 0.2547, 0.2644, 0.2555, 0.2442, 0.2686, 0.2412, 0.2444, 0.238, 0.2255], 'PRUEBA': [0.4891, 0.4937, 0.4698, 0.4648, 0.4768, 0.4708, 0.4405, 0.4368, 0.4159, 0.3892], 'PEN_OTRO': [0.3568, 0.3414, 0.3273, 0.3512, 0.3518, 0.3511, 0.3397, 0.3406, 0.3444, 0.3226], 'PISO': [0.201, 0.221, 0.2342, 0.227, 0.2125, 0.2016, 0.2118, 0.2353, 0.2729, 0.2772]}
+[19:18:33]   [desc] sel_colonos_sobre_fundadores_por_pasaje: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[19:18:33]   [desc] sel_fundadores_camara_por_pasaje: [185.0, 86.0, 231.0, 119.0, 116.0, 124.0, 135.0, 140.0, 86.0, 117.0]
+[19:18:33]   [desc] sel_partos_por_pasaje: [125.0, 106.0, 140.0, 108.0, 116.0, 121.0, 116.0, 100.0, 111.0, 116.0]
+[19:18:33]   [desc] sel_ne_pesos_siembra_por_pasaje: [7.584, 8.004, 6.864, 7.528, 7.7, 7.819, 7.528, 7.819, 8.133, 7.879]
+[19:18:33]   [desc] sel_cadena_cruzan_por_pasaje: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[19:18:33]   [desc] neu_trayectoria_genes_siembra_mediana: {'MARGEN': [0.254, 0.2737, 0.2507, 0.2226, 0.2511, 0.2647, 0.2693, 0.2391, 0.2594, 0.2301], 'PRUEBA': [0.5005, 0.4969, 0.5143, 0.525, 0.5018, 0.5506, 0.6107, 0.6027, 0.5591, 0.5398], 'PEN_OTRO': [0.3626, 0.3555, 0.3555, 0.3729, 0.3565, 0.3634, 0.3743, 0.3484, 0.3791, 0.3972], 'PISO': [0.2056, 0.2136, 0.2529, 0.2169, 0.2034, 0.1996, 0.2081, 0.229, 0.2417, 0.2033]}
+[19:18:33]   [desc] neu_colonos_sobre_fundadores_por_pasaje: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[19:18:33]   [desc] neu_fundadores_camara_por_pasaje: [123.0, 121.0, 169.0, 123.0, 144.0, 146.0, 127.0, 105.0, 123.0, 123.0]
+[19:18:33]   [desc] neu_partos_por_pasaje: [123.0, 118.0, 146.0, 124.0, 122.0, 128.0, 127.0, 112.0, 126.0, 123.0]
+[19:18:33]   [desc] neu_ne_pesos_siembra_por_pasaje: [7.642, 7.819, 7.819, 7.819, 7.418, 7.819, 7.7, 8.133, 7.819, 7.819]
+[19:18:33]   [desc] neu_cadena_cruzan_por_pasaje: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[19:18:33]   [desc] igual_trayectoria_genes_siembra_mediana: {'MARGEN': [0.2554, 0.2694, 0.2679, 0.2711, 0.278, 0.2536, 0.2495, 0.2504, 0.2244, 0.2696], 'PRUEBA': [0.4913, 0.4945, 0.4716, 0.4557, 0.475, 0.4581, 0.435, 0.436, 0.3932, 0.4005], 'PEN_OTRO': [0.3633, 0.3542, 0.3452, 0.3578, 0.3306, 0.3263, 0.3397, 0.3422, 0.3384, 0.3258], 'PISO': [0.2091, 0.2193, 0.2269, 0.2153, 0.2034, 0.1774, 0.2105, 0.2535, 0.2704, 0.2979]}
+[19:18:33]   [desc] igual_colonos_sobre_fundadores_por_pasaje: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[19:18:33]   [desc] igual_fundadores_camara_por_pasaje: [174.0, 196.0, 123.0, 180.0, 195.0, 226.0, 209.0, 109.0, 93.0, 119.0]
+[19:18:33]   [desc] igual_partos_por_pasaje: [123.0, 107.0, 118.0, 129.0, 121.0, 115.0, 101.0, 116.0, 96.0, 99.0]
+[19:18:33]   [desc] igual_ne_pesos_siembra_por_pasaje: [9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0, 9.0]
+[19:18:33]   [desc] igual_cadena_cruzan_por_pasaje: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[19:18:33] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\entre_linajes\datos\explora_i624201-624205_20260930_174213\resumen.json (sha 49ed791d5edbfa7c) · abortos 0 · 5779.4s
+[19:18:33] VEREDICTO DEL EXPLORA: FUNCIONA   (en el umbral: True; PREREGISTRO_entre_linajes.md sec. 6-7)
