@@ -1,0 +1,63 @@
+ARNES identidad_p10.py (T 4500)
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+      carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+      carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+      mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+      sha corre_p1.py 392b71186cf49b60 OK
+      sha construye_p1.py 90dc1b6f848fac80 OK
+      sha mundo_escalera.py 4f28b372207ba0a6 OK
+      sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+      sha construye_c.py 024a89476109b997 OK
+      sha corre_c.py 01e4ad94dd06e133 OK
+      carro O1_LUGAR_PREG == construye_c: True (sha 4e12a5708ecb5dea)
+      carro O1_LUGAR_PREG_BAR == construye_c: True (sha 27489bd5d4431b85)
+      carro O1_LUGAR_PREG0 == construye_c: True (sha 8d2e70c70ec651ff)
+      mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+  OK    (K) verifica(): shas, carros PREG == construye_c, mundo_tramo_c
+  OK    (K) chequeo estatico O1_LUGAR_PREG: PASA
+  OK    (K) chequeo estatico O1_LUGAR_PREG_BAR: PASA
+  OK    (K) chequeo estatico O1_LUGAR_PREG0: PASA
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+  OK    (K) identidad corta corre_p1
+      IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+  OK    (K) identidad corta corre_c (mundo apagado == mundo_escalera; promotores 0 == O1_LUGAR)
+      IDENTIDAD CORTA P10 (salida ENTERA, N 9, s 739880, T 1500): mundo_tramo_c mueve 0 == mundo_escalera True · PREG0 == O1_LUGAR con mueve True · el oasis se muda (3 epocas, bins [11, 12, 13, 14] -> [10, 11, 12, 13]) True
+  OK    (K) identidad corta corre_p10 (mueve 0 == mundo_escalera; PREG0 == O1_LUGAR; el oasis se muda)
+  OK    (M) mueve 0 == mundo_escalera BIT A BIT (salida entera, s 739881, T 4500) y rng
+  OK    (M) mueve 1500: mudanzas [[0, 118], [1500, 251], [3000, 326]] (3 epocas), bins [9, 10, 11, 12] -> [0, 27, 28, 29] (distintos), latencias por linaje con 3 entradas [3, 3, 3, 3, 3, 3, 3, 3, 3], fisica != mueve 0
+  OK    (M) tras las mudanzas el oasis actual tiene comida (composicion dentro A+C 5.78 > 0) y se muerde dentro (88)
+  OK    (C) PREG0 == O1_LUGAR con mueve (salida entera)
+  OK    (C) PREG != O1_LUGAR; PREG_BAR != PREG y != O1_LUGAR (el modulo y el control actuan)
+  OK    (C) PREG con PG_OLVIDO 0 (pieza (a) muda; ocasiones contadas [1906, 1262, 0]...): la (b) sigue (pg_exc > 0) y la fisica != base y != PREG
+  OK    (m) PREG explora [347, 716, 342, 1275, 604, 1402, 508, 2245, 252] y olvida [1296, 553, 302, 1047, 845, 1088, 1168, 917, 1047] (> 0); PREG_BAR explora [1600, 1253, 97, 97, 1450, 99, 0, 1488, 272] (> 0); O1_LUGAR no tiene esas claves
+  OK    (a) regla 14 (fila): corre_p10.trabajo('lug', mueve 0) == corre_p1.trabajo('lug') campo a campo (s 739882, T 2000; salvo lo agregado)
+  OK    (e) trabajo preg: JSON escrito, fila con preg (latencia 483.0, mudanzas 3), estado PREGUNTA 1 PG_BARAJA 0
+  OK    (e) --reanuda relee igual
+  OK    (e) brazo desconocido -> aborto escrito (nube-9)
+  OK    (f) FUNCIONA: preg 8 contra 7 (lug y pregbar) 20/20, menos fundadores, latencia menor que ambos
+  OK    (f) NO: todo igual
+  OK    (f) NO: gana a lug pero no a pregbar (la excursion basta, no el destino)
+  OK    (f) gana cruce y fundadores pero NO encuentra antes (PM): NO (gana sin encontrar antes el oasis nuevo (instrumento))
+  OK    (f) MODESTO: cruce solo por suma (gana 12, +24), fundadores y latencia si: HAY ALGO MODESTO umbral True
+  OK    (f) NO SE LEE: un aborto
+  OK    (f) NO SE LEE: el modulo no actua (0 excursiones en preg)
+  OK    (f) NO SE LEE: el mundo no se mudo 4 veces
+  OK    (g) semillas: serie, replica, explora, humo y arnes disjuntas entre si y de P1/P7/P2/C/D (7398xx)
+usage: identidad_p10.py [-h] (--humo | --explora | --serie | --replica |
+                        --lee LEE) [--pool POOL] [--reanuda] [--T T] [--n N]
+                        [--brazos BRAZOS] [--desde DESDE] [--nota NOTA]
+                        [--mueve MUEVE]
+identidad_p10.py: error: one of the arguments --humo --explora --serie --replica --lee is required
+usage: identidad_p10.py [-h] (--humo | --explora | --serie | --replica |
+                        --lee LEE) [--pool POOL] [--reanuda] [--T T] [--n N]
+                        [--brazos BRAZOS] [--desde DESDE] [--nota NOTA]
+                        [--mueve MUEVE]
+identidad_p10.py: error: unrecognized arguments: --x
+  OK    (g) banderas desconocidas o abreviadas abortan (--hum, --humo --x)
+  OK    (g) --humo con --pool aborta; --pool 3 aborta; --serie --T aborta; --humo --n 3 aborta; --explora --T 250000 aborta; --serie sin shas fijados aborta (candado)
+
+ARNES PASA, 29/29 · 84.1s

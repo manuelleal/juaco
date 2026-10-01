@@ -162,20 +162,79 @@ transición se construye por anclas desde `motor_eco.py` (mundo) y desde el carr
   eso pague. Nada más se afirma.
 - Ya se sabe (nivel 8): la curiosidad no devolvió la exploración en el mundo del mapa porque allí explorar no pagaba. Aquí el mundo lo cobra.
 
+### Tramo D — SEXO Y FAMILIA (idea del director, 30-sep noche; en ECO: población, parto real, genoma por cuerpo)
+
+**Instrumento más barato (decisión razonada):** `juaco_eco/motor_eco.py` (sha fijado, por anclas; NO la cámara de `entre_linajes`). Razones:
+(1) el tramo exige que DOS padres estén vivos a la vez y cerca: la cámara de entre_linajes vive en la pista v1 (un cuerpo por linaje; los genes
+viajan por el depósito entre linajes, no entre dos cuerpos que se encuentran); ECO tiene cuerpos por instancia, parto real en la celda del
+padre y el genoma YA en el motor (`b.g`, 18 genes de FABRICA, mutación `muta()` con rng propio por hijo `[seed, i, 16, k]`). (2) La selección ya
+actúa en ECO (ECO_SEL ×2: sube K del linaje) y hay una célula nativa que vive allí (FAMB_RES0_ECO, K 31–39 en el mundo de 9); O1 no vive en
+v2 (P2, 30-sep). (3) El "nieto" ya está en la salida: `individuos = [k, gen, padre, t_nace, t_muere, hijos, ...]` por linaje: nietos de un
+cuerpo = suma de `hijos` de sus hijos, sin instrumento nuevo. Costo: humo (9 fundadores, esc 9, T 50k, 3 brazos × 2 semillas) ≈ 15–25 min
+de un proceso (la célula FABRICA es más lenta que O1); serie 20 × 3 × T 200k ≈ 8 h CPU (4 h pool 2). Construcción: `mundo_familia.py` por
+anclas sobre `motor_eco.run_solapadas` (el parto: donde hoy `_gh = muta(b.g, ...)`), con `familia=None` ⇒ motor_eco bit a bit (arnés).
+**Moneda:** persistencia tras el corte (vivero E9 y `t_corte`, como ECO) y K; y la que pide el director: NIETOS por linaje (de la física).
+**Mundo que paga:** el quimiostato de ECO (la comida es fija): la variación genética sólo vale si la selección la puede usar; se mide el
+rumbo de los genes (`gen_t`, log(g/G0)) como en ECO_SEL. Todos los brazos llevan el MISMO costo de apareamiento (buscar pareja) salvo que se diga.
+
+**D1 — Reproducción de a dos (recombinación; Fisher 1930, Muller 1932; Weissman et al. 2010 sobre valles).**
+- Mundo (`sexo=1`): cada cuerpo nace con un TIPO heredable X/Y (bit; el hijo toma el tipo de uno de los dos padres al azar: X/Y se mantiene
+  50/50 sin diseño). Un cuerpo que completa su ventana sólo pare si hay un cuerpo VIVO del mismo carro, del OTRO tipo, a distancia ≤ `R_PAR`
+  (p. ej. 10): la pareja. Si no la hay, la ventana se reinicia (cuenta en `sin_pareja`: evitar no es gratis: sin pareja no hay hijo). Genoma del
+  hijo = por gen, el de la madre o el del padre con p 0.5 (rng `[seed, i, 20, k]`, nueva etiqueta) y DESPUÉS la mutación de siempre.
+- Control que puede fallar (`sexo=1, recombina=0`): la misma pareja obligatoria, el mismo costo, pero el hijo copia SÓLO a la madre (clon con
+  pareja). Base (`sexo=0`): ECO. El control PUEDE ganar: en un valle hondo la recombinación rompe mitades co-adaptadas (Weissman 2010), y en
+  18 genes con un óptimo cercano a G0 la ventaja de Fisher–Muller puede ser nula.
+- Prueba: `sexo` persiste más tras el corte y deja más nietos por linaje que el clon con pareja (pareado por semilla ≥ 13/20); mecanismo: el
+  rumbo de los genes que ECO_SEL ya movió es más rápido (|log(g/G0)| mayor en el corte) y la varianza entre vivos menor (la recombinación
+  junta mitades). Predicción honesta: p 0.40 de que gane; 0.35 empate; 0.25 el clon.
+
+**D2 — Elección de pareja con inteligencia mínima (selección sexual; Darwin 1871; Zahavi 1975 señal honesta; Andersson 1994).**
+- Mundo (`pareja='fuerte'`): entre las parejas posibles (D1), la madre toma la de MAYOR reserva real E+Ag (la señal es honesta porque es el
+  estado físico que el mundo ya aplica, no una declaración del carro; ERR-96). Control (`pareja='azar'`): una al azar entre las posibles
+  (rng `[seed, i, 21, k]`). Mismo costo, misma recombinación (D1 encendido en ambos).
+- Prueba: con `fuerte`, el rumbo de los genes en selección es MÁS RÁPIDO que con `azar` (la selección sexual "aumenta el paso": la mitad
+  paterna viene del que mejor come) y la persistencia/nietos no bajan. Control que puede fallar: si la reserva es ruido (el que tiene más E es el
+  que acaba de comer, no el mejor genotipo), `fuerte` = `azar`. p 0.35.
+
+**D3 — Inversión parental conjunta (Trivers 1972; Clutton-Brock 1991).**
+- Mundo (`dote_doble=1`): los dos padres pagan la dote del hijo por mitades (0.3 + 0.3); el hijo recibe lo mismo (0.6). Control: la madre paga
+  todo (ECO). Evitar no es gratis: el padre que paga pierde reserva y puede no llegar a su propia ventana.
+- Prueba: más partos por recurso (A+C mordidas) y más nietos; mecanismo: la madre vuelve a la ventana antes (pasos entre partos menores). Si
+  el padre deja de parir por pagar, la suma puede ser cero: p 0.50.
+
+**D4 — Reducción de camada (Mock y Parker 1997; Rohwer 1978 huevos tróficos; siblicidio en aves y peces).**
+- Mundo (`camada=1`): cuando a un cuerpo con hijos vivos cerca (≤ `R_PAR`) le falta comida (E o Ag < `U_CAM`, p. ej. 0.4) y tiene ≥ 2 hijos
+  vivos, el hijo MÁS DÉBIL (menor E+Ag) muere y su reserva pasa al padre (o al hermano más fuerte, perilla `a_quien`). Es física del mundo (regla
+  local, sin rng). Control que puede fallar (`camada=0`): todos los hijos reciben igual. Causa de muerte nueva en la salida: `trofico`.
+- Prueba: NIETOS por linaje mayores con `camada` (el linaje concentra recurso en los que llegan a parir) y persistencia no menor; mecanismo:
+  muertes `trofico` > 0 y vida mediana de los hijos sobrevivientes mayor. Honesto: en quimiostato el recurso del hijo débil ya "vuelve" al
+  mundo al morir de hambre (reposición fija: NO vuelve: por eso puede pagar); si el hijo débil se habría recuperado, pierde. p 0.40.
+
+**Lo que no se afirma:** nada de "familia", "cuidado", "elige" en el sentido humano: cada peldaño es una regla física del mundo (D1–D4 son
+perillas del motor) medida en nietos/persistencia contra su control; el carro no cambia (la célula nativa no sabe que hay sexo). Orden:
+D1 → D2 (necesita D1) → D3 → D4; D3 y D4 son independientes de D1. Trampas: canal (no hay); acierto (no hay); comida (quimiostato: se reporta
+`nobj_medio`); sitios fijos (sin sitios). Todo esto es DISEÑO (promotores del mundo); después, `sexo` como gen (D1-evo): ¿la selección lo
+conserva o lo apaga? Es la pregunta de Maynard Smith (1978) sobre el costo doble del sexo, medible aquí.
+
 ## 3. Orden, costo y qué se declara
 | # | peldaño | mundo (perilla) | instrumento | costo humo / serie | estado |
 |---|---|---|---|---|---|
 | 0 | unicelular | pista | O1 | — | hecho |
-| 1 | memoria de lugar | pista + `oasis` (denso, vista parcial) | O1_LUGAR (hecho) | 8 min / 1.4 h pool 2 | **SEÑAL (explora 2 semillas T 100k: cruzan 8/4/0; PB decide; el bar de esa exploración tenía fuga, ERR-170); PREREGISTRO_p1.md con auditoría aplicada; arnés 37/37; espera al coordinador** |
-| 2 | colonia pegada | pista v2 (motor_convive) + `cuello` | mundo_colonia (hecho, arnés 6/6) | 10 min / 3 h | **CERRADO en ráfaga: 3 humos sin señal con O1 (O1 no vive en v2: muere a los 200; el cuello p 0.5 mata también a los pegados). Pista: pegarse SIN cuello protege al recién nacido (vida 940 vs 200). Reabrir con la célula nativa de ECO y cuello suave** |
+| 1 | memoria de lugar | pista + `oasis` (denso, vista parcial) | O1_LUGAR (hecho) | 8 min / 1.4 h pool 2 | **SERIE (20 semillas, 30-sep 20:39): FUNCIONA — cruzan lug 79 / bar 0 / o1 7 (o1f 137), pareado 20/20 contra ambos, establecidos 133 / 0 / 9, razón de pasos en el oasis 7.25 / 0.59 / 1.05; V1–V4 OK, 0 abortos. Réplica en curso (pool 2). Lo lee y declara el coordinador** |
+| 2 | colonia pegada | pista v2 (motor_convive) + `cuello` (+ `solo_sueltos`) | mundo_colonia (arnés 6/6; reapertura: `--carro FAMB_RES0_ECO`, `--p_suelto 0.2`, `--solo_sueltos`) | 10 min / 3 h | **CERRADO en ráfaga con las DOS células (5 humos): con O1 (no vive en v2) y con la célula nativa de ECO (cuello suave p 0.2 y cuello sólo sobre sueltos): peg persiste 1/18 y 0/18 vs sue 3/18 y 4/18, partos 311–316 vs 383–420; la pista "pegarse protege al recién nacido" NO se repite con la célula ECO (vida 94 vs 127). Reabrir sólo con recurso en manchas o con reparto (P3) desde el inicio** |
 | 3 | germen/soma | ECO + `cuello` + `reparto` | `SOMA` | 15 min / 3 h | diseñado |
 | 4 | órganos | ECO + `vista_parcial` | `ORGANO` (cadena, tipos) | 20 min / 4 h | diseñado |
 | 5 | sistema nervioso | ECO + `R` chico | `NERVIO` (canal interno) | 20 min / 4 h | diseñado |
 | 6 | cerebro | ECO | `CEREBRO` (una memoria por grupo) | 20 min / 4 h | diseñado |
-| 7 | comunicación | pista + `oasis` (P1b); sin costo de emitir aún | O1_LUGAR_SENAL (hecho, arnés mínimo 4/4) | 5 min / 2 h | **SEÑAL (explora 2 semillas T 100k: cruzan sen 12 / lado-opuesto 5 / mudo 8; fund 6.6 / 35.9 / 30.3; sen > control 2/2, > mudo 1/2 con un empate). Candidato a protocolo completo tras P1** |
-| 8 | componer (frío) | pista + `oasis` + letra E | ninguno (P1) o `COMPONE` | 8 min / 2 h | diseñado |
-| 9 | planear | pista + `oasis` + `cerrojo` | `PLAN` (crédito 1 paso) | 8 min / 2 h | diseñado |
-| 10 | preguntarse | pista + `oasis` + `mueve` | `PREGUNTA` | 8 min / 2 h | diseñado |
+| 7 | señal por pizarra (significado dado, linajes clones, costo) | pista + `oasis` (P1b) + `c_e` 0.01 (mundo_tramo_c) | O1_LUGAR_SENAL (sobre construye_p1 por sha; control antípoda) | 10 min / 1.3 h pool 2 | **PROTOCOLO COMPLETO LISTO PARA EL AUDITOR (tanda 2): PREREGISTRO_p7.md (diseño declarado como visto en exploración), corre_p7 con candados, identidad_p7 36/36. Humo 3 con costo pendiente de CPU** |
+| 8 | componer (frío) | `mundo_tramo_c`: letra E (+0.3, −0.1) p_x 0.1 | `COMPONE` (construye_c; control = COMPONE sobre O1_LUGAR_BAR antípoda) | 10 min / 2 h | **SIN SEÑAL en ráfaga (2 humos; el instrumento está confundido con la LIMPIEZA de O1)**: J 0.15 y 0.10 (comp) vs −0.3 / −0.16 (lug); c1 frío comp 0.69–0.71 vs lug 0.34–0.53 vs antípoda 0.30–0.31; cruzan 3/0/0 en el humo 2; pero lug también muerde E dentro en frío (limpieza) y todos muerden E fuera: J no aísla la composición. Humo 3 sólo con medida nueva (excluir limpieza o medir el blanco elegido) |
+| 9 | planear | `mundo_tramo_c`: letra K (0, 0) p_x 0.1 + `cerrojo` d_llave 1500 (+ `cerrojo_pobre`, `mundo_k`) | `PLAN` (crédito de un paso; control = crédito a la penúltima) | 10 min / 2 h | **CERRADO en ráfaga (3 humos sin señal)**: los tres brazos colapsan (vida 200–300) en los tres mundos (pobre sin llave; nominal sin llave; nominal + K con vida útil); el control de paso equivocado cruza igual o más (4/6/3 en el humo 3); hab_K ≈ 0. El crédito de un paso no arranca desde fundadores limpios en vidas de 200 pasos. Reabrir sólo con mundo donde la base viva y traza de 3 pasos |
+| 10 | preguntarse | `mundo_tramo_c`: `mueve` 10k (humo) / 20k | `PREGUNTA` (olvido por presencia + bin menos visitado; control = antípoda) | 10 min / 1.1 h pool 2 | **SEÑAL CLARA (explora T 100k: cruzan preg 16 / lug 11 / antípoda 5, 2/2 contra ambos; latencia tras la mudanza 408 / 1283 / 1511; fundadores 0.6 / 27.9 / 50.2; trampa 3 declarada: pela el mundo 0.63). PROTOCOLO COMPLETO escrito: PREREGISTRO_p10.md, corre_p10.py con candados, identidad_p10.py (arnés pendiente de CPU)** |
+| D1 | reproducción de a dos | ECO + `sexo` (pareja X/Y a ≤ r_par 10, recombinación por gen) | `mundo_familia.py` (12 anclas sobre motor_eco `bca3033878b59622`; `corre_d.py`; arnés `identidad_d` 11/11) | 5 min / 4 h CPU (la célula ECO corre 12 s por 12k pasos) | instrumento listo (30-sep noche); humo pendiente de CPU |
+| D2 | elección de pareja | ECO + `sexo` + `pareja` fuerte/azar | ídem | 5 min / 4 h | instrumento listo |
+| D3 | inversión parental | ECO + `sexo` + `dote_doble` | ídem | 5 min / 4 h | instrumento listo |
+| D4 | reducción de camada | ECO + `camada` (hijo débil → recurso; medido: a T 4k nadie tiene 2 hijos vivos a la vez, a T 12k dispara) | ídem | 5 min / 4 h | instrumento listo |
 
 - Ninguna corrida de ráfaga se declara. Un peldaño se separa y va a protocolo completo (preregistro, arnés entero, auditor, serie + réplica
   con Pool del coordinador) sólo cuando su humo/exploración muestra señal clara contra SU control (candidato > control en las semillas de la

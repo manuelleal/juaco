@@ -1,0 +1,206 @@
+{
+ "modo": "explora",
+ "peldano": "preg",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "lug": {
+    "n": 2,
+    "cruzan": 11,
+    "R0_med": 0.964,
+    "fund_media": 27.8889,
+    "establecidos": 15,
+    "vida_med": 801.0,
+    "mundo_AC": 6.8284,
+    "ratio_pasos_oasis": 6.2625,
+    "latencia_med": 1282.75,
+    "latencias_n": 72,
+    "nunca": 3,
+    "mudanzas": 4.0,
+    "pg_exc": 0,
+    "pg_olv": 0
+   },
+   "preg": {
+    "n": 2,
+    "cruzan": 16,
+    "R0_med": 0.9627,
+    "fund_media": 0.6111,
+    "establecidos": 18,
+    "vida_med": 1782.0,
+    "mundo_AC": 4.2962,
+    "ratio_pasos_oasis": 6.864,
+    "latencia_med": 408.0,
+    "latencias_n": 72,
+    "nunca": 0,
+    "mudanzas": 4.0,
+    "pg_exc": 377552,
+    "pg_olv": 478916
+   },
+   "pregbar": {
+    "n": 2,
+    "cruzan": 5,
+    "R0_med": 0.7671,
+    "fund_media": 50.2222,
+    "establecidos": 9,
+    "vida_med": 600.0,
+    "mundo_AC": 7.4935,
+    "ratio_pasos_oasis": 5.1835,
+    "latencia_med": 1511.0,
+    "latencias_n": 72,
+    "nunca": 5,
+    "mudanzas": 4.0,
+    "pg_exc": 461828,
+    "pg_olv": 255233
+   }
+  },
+  "pareados": {
+   "lug_vs_preg": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 11,
+    "suma_b": 16,
+    "dif": -5,
+    "por_indice_a": [
+     5,
+     6
+    ],
+    "por_indice_b": [
+     8,
+     8
+    ]
+   },
+   "lug_vs_pregbar": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 11,
+    "suma_b": 5,
+    "dif": 6,
+    "por_indice_a": [
+     5,
+     6
+    ],
+    "por_indice_b": [
+     1,
+     4
+    ]
+   },
+   "preg_vs_lug": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 16,
+    "suma_b": 11,
+    "dif": 5,
+    "por_indice_a": [
+     8,
+     8
+    ],
+    "por_indice_b": [
+     5,
+     6
+    ]
+   },
+   "preg_vs_pregbar": {
+    "n": 2,
+    "gana": 2,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 16,
+    "suma_b": 5,
+    "dif": 11,
+    "por_indice_a": [
+     8,
+     8
+    ],
+    "por_indice_b": [
+     1,
+     4
+    ]
+   },
+   "pregbar_vs_lug": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 5,
+    "suma_b": 11,
+    "dif": -6,
+    "por_indice_a": [
+     1,
+     4
+    ],
+    "por_indice_b": [
+     5,
+     6
+    ]
+   },
+   "pregbar_vs_preg": {
+    "n": 2,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 2,
+    "suma_a": 5,
+    "suma_b": 16,
+    "dif": -11,
+    "por_indice_a": [
+     1,
+     4
+    ],
+    "por_indice_b": [
+     8,
+     8
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": [
+  "preg",
+  "pregbar",
+  "lug"
+ ],
+ "semillas": [
+  739801,
+  739802
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "mueve": 20000
+ },
+ "nota": "explora 1 p10: T 100k, mueve 20000 (4 mudanzas); tras humo 1 con senal de establecimiento y cruce no leido",
+ "senal": "si",
+ "sha_runner": "ea1cf755bd40e1cc",
+ "carros": {
+  "O1_LUGAR_COMP": "c75b4cdb9eec933d",
+  "O1_LUGAR_COMP_BAR": "0d7288a081e4b7af",
+  "O1_LUGAR_COMP0": "4068adaca1b1f6fd",
+  "O1_LUGAR_PLAN": "351cd77783a91da0",
+  "O1_LUGAR_PLAN_BAR": "09d2370003cfb6a4",
+  "O1_LUGAR_PLAN0": "c53ac199a031c89b",
+  "O1_LUGAR_PREG": "4e12a5708ecb5dea",
+  "O1_LUGAR_PREG_BAR": "27489bd5d4431b85",
+  "O1_LUGAR_PREG0": "8d2e70c70ec651ff"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "b6a70def695e827c",
+  "anclas": 17
+ },
+ "seg": 774.9
+}
