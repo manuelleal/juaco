@@ -1,0 +1,74 @@
+[07:21:06] CORRE_PERILLAS · humo · 20261001_072106 · python 3.14.2 · pool NO (un proceso) · corre_perillas.py 014f9a8a52cda89e · preregistro PREREGISTRO_perillas.md NO EXISTE · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\perillas\datos\humo\humo_20261001_072018
+[07:21:06]   base de semillas (741990, 741998) · pasajes T 5000 x 2 · pruebas T 20000 · n 1 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20} · sigma 0.03 delta 0.01 (una mutacion por nacimiento, en un gen) · camara continua · moneda: vivos de los ultimos 5000 pasos de linajes sin refundacion en la segunda mitad · trabajos [('cadena', 0, 'sel'), ('cadena', 0, 'neu'), ('prueba', 0, 'sel'), ('prueba', 0, 'neu'), ('prueba', 0, 'fab'), ('prueba', 0, 'o1')] · reanuda True · nota ''
+[07:21:06]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:21:06]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:21:06]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:21:06]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:21:06]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[07:21:06]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[07:21:06]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[07:21:06]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[07:21:06]   sha escalera/corre_p1.py 392b71186cf49b60 OK
+[07:21:06]   sha escalera/construye_p1.py 90dc1b6f848fac80 OK
+[07:21:06]   sha escalera/mundo_escalera.py 4f28b372207ba0a6 OK
+[07:21:06]   sha escalera/carros\O1_LUGAR.py 49eee6bb278ea097 OK
+[07:21:06]   sha perillas/construye_perillas.py b5d1a10f6f913556 OK (NO FIJADO: solo humo/explora)
+[07:21:06]   sha perillas/carros\O1_LUGAR_GEN.py ecc996d2fecccc30 OK (NO FIJADO: solo humo/explora)
+[07:21:06]   sha perillas/carros\O1_LUGAR_GEN0.py 89db6c8a74902fe1 OK (NO FIJADO: solo humo/explora)
+[07:21:06]   carro O1_LUGAR_GEN == construye_perillas: True
+[07:21:06]   carro O1_LUGAR_GEN0 == construye_perillas: True
+[07:21:13]   IDENTIDAD CORTA PERILLAS (salida ENTERA, N 9, s 741950, T 1500, mundo de P1): GEN0 == O1_LUGAR True · GEN (1,1) sigma 0 == O1_LUGAR True · GEN (0,0) sigma 0 == O1 (salvo telemetria 'lugar') True · GEN PS_LEE 0, sigma 0.03, delta 0.01, camara 1 == O1 True · control O1_LUGAR != O1 True
+[07:21:13]   [    7.3s] cadena i0 sel (6.9s) aborto None · cruzan por pasaje [0, 0] · establecidos [4, 5] respaldo [0, 0] · prof mutacional [1.0, 3.0] · refundaciones por camara [50, 52] · partos [26, 22] · GV [0.0, 0.0] · GW [0.0036, 0.0072] · frac_on [0.0, 0.0] · ratio pasos [1.06, 1.099] · genoma final {'GW': 0.007178711815035594, 'GV': 0.0}
+[07:21:13]   [    7.3s] cadena i0 neu (6.9s) aborto None · cruzan por pasaje [0, 0] · establecidos [4, 5] respaldo [0, 0] · prof mutacional [1.0, 3.0] · refundaciones por camara [50, 52] · partos [26, 22] · GV [0.0, 0.0] · GW [0.0036, 0.0072] · frac_on [0.0, 0.0] · ratio pasos [1.06, 1.099] · genoma final {'GW': 0.007178711815035594, 'GV': 0.0}
+[07:21:13]   [    7.3s] prueba i0 sel   (13.2s) aborto None · genoma {'GW': 0.007178711815035594, 'GV': 0.0} · cruzan 1/9 R0 0.15 fund [21, 32, 1, 40, 33, 0, 43, 9, 38] · ratio pasos 1.045 · viajes 0 · mundo AC 7.0137
+[07:21:13]   [    7.3s] prueba i0 neu   (13.1s) aborto None · genoma {'GW': 0.007178711815035594, 'GV': 0.0} · cruzan 1/9 R0 0.15 fund [21, 32, 1, 40, 33, 0, 43, 9, 38] · ratio pasos 1.045 · viajes 0 · mundo AC 7.0137
+[07:21:31]   [   25.2s] prueba i0 fab   (18.0s) aborto None · genoma {'GW': 1.0, 'GV': 1.0} · cruzan 0/9 R0 0.16 fund [20, 78, 13, 11, 6, 0, 25, 3, 47] · ratio pasos 5.329 · viajes 91698 · mundo AC 8.8186
+[07:21:43]   [   37.4s] prueba i0 o1    (12.2s) aborto None · genoma {'GW': 0.0, 'GV': 0.0} · cruzan 1/9 R0 0.15 fund [21, 32, 1, 40, 33, 0, 43, 9, 38] · ratio pasos 1.045 · viajes 0 · mundo AC 7.0137
+[07:21:43] 
+================ LA LETRA (PREREGISTRO_perillas.md sec. 6) -- HUMO: practica, NO cuenta
+[07:21:43]   validez: {'V1_completa': True, 'V2_mundo_paga': False, 'V3_mundo_actua': True, 'V4_estado': True, 'V5_desde_cero_y_neutro': True, 'V7a_profundidad_mutacional_neutra': False, 'V7b_refundaciones_por_camara_neutra': False}
+[07:21:43]   puertas: {'PG_gen_sube': False, 'PC_par_neu': False, 'PC_suma_neu': False} · umbrales {'gana_par': 1, 'dif_suma': 1, 'fab_gana': 1, 'margen_gen': 0.05, 'gen': 'GV', 'prof_min': 60, 'refund_min': 500, 'reloj_cadenas': 1} · EN EL UMBRAL (+-1): True · matiz None
+[07:21:43]   pareado_gen GV (sel > neu + 0.05): gana 0 pierde 0 de 1 · mediana sel 0.0 neu 0.0 · sobre el margen: sel 0 neu 0 · por cadena sel [0.0] neu [0.0]
+[07:21:43]   pareado_neu: gana 0 empata 1 pierde 0 · suma 1 vs 1 (dif 0) · por indice [1] vs [1]
+[07:21:43]   pareado_fab_o1: gana 0 empata 0 pierde 1 · suma 0 vs 1 (dif -1) · por indice [0] vs [1]
+[07:21:43]   [desc] suma_cruzan: {'sel': 1, 'neu': 1, 'fab': 0, 'o1': 1}
+[07:21:43]   [desc] mayorias: {'sel': 0, 'neu': 0, 'fab': 0, 'o1': 0}
+[07:21:43]   [desc] R0_med: {'sel': 0.15, 'neu': 0.15, 'fab': 0.16, 'o1': 0.15}
+[07:21:43]   [desc] establecidos_0fund_post10k: {'sel': 4, 'neu': 4, 'fab': 7, 'o1': 4}
+[07:21:43]   [desc] fund_media: {'sel': 24.1111, 'neu': 24.1111, 'fab': 22.5556, 'o1': 24.1111}
+[07:21:43]   [desc] ratio_pasos_oasis: {'sel': 1.045, 'neu': 1.045, 'fab': 5.329, 'o1': 1.045}
+[07:21:43]   [desc] mundo_AC: {'sel': 7.0137, 'neu': 7.0137, 'fab': 8.8186, 'o1': 7.0137}
+[07:21:43]   [desc] genoma_prueba_mediana: {'sel': {'GW': 0.0072, 'GV': 0.0}, 'neu': {'GW': 0.0072, 'GV': 0.0}, 'fab': {'GW': 1.0, 'GV': 1.0}, 'o1': {'GW': 0.0, 'GV': 0.0}}
+[07:21:43]   [desc] genes: {'GW': {'gen': 'GW', 'margen': 0.05, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 0.0072, 'med_neu': 0.0072, 'sel_sobre_margen': 0, 'neu_sobre_margen': 0, 'sel_positivo': 1, 'neu_positivo': 1, 'por_cadena_sel': [0.0072], 'por_cadena_neu': [0.0072]}, 'GV': {'gen': 'GV', 'margen': 0.05, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 0.0, 'med_neu': 0.0, 'sel_sobre_margen': 0, 'neu_sobre_margen': 0, 'sel_positivo': 0, 'neu_positivo': 0, 'por_cadena_sel': [0.0], 'por_cadena_neu': [0.0]}}
+[07:21:43]   [desc] sel_trayectoria_gen_mediana_por_pasaje: {'GW': [0.0036, 0.0072], 'GV': [0.0, 0.0]}
+[07:21:43]   [desc] sel_cadenas_con_GV_sobre_margen_por_pasaje: [0, 0]
+[07:21:43]   [desc] sel_frac_on_por_pasaje: [0.0, 0.0]
+[07:21:43]   [desc] sel_establecidos_en_pasaje_mediana: [4.0, 5.0]
+[07:21:43]   [desc] sel_respaldo_por_pasaje: [0, 0]
+[07:21:43]   [desc] sel_profundidad_mutacional_por_pasaje_mediana: [1.0, 3.0]
+[07:21:43]   [desc] sel_refundaciones_por_camara_por_pasaje_mediana: [50.0, 52.0]
+[07:21:43]   [desc] sel_partos_por_pasaje_mediana: [26.0, 22.0]
+[07:21:43]   [desc] sel_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[07:21:43]   [desc] sel_ratio_pasos_por_pasaje: [1.06, 1.099]
+[07:21:43]   [desc] sel_viajes_por_pasaje: [0.0, 0.0]
+[07:21:43]   [desc] neu_trayectoria_gen_mediana_por_pasaje: {'GW': [0.0036, 0.0072], 'GV': [0.0, 0.0]}
+[07:21:43]   [desc] neu_cadenas_con_GV_sobre_margen_por_pasaje: [0, 0]
+[07:21:43]   [desc] neu_frac_on_por_pasaje: [0.0, 0.0]
+[07:21:43]   [desc] neu_establecidos_en_pasaje_mediana: [4.0, 5.0]
+[07:21:43]   [desc] neu_respaldo_por_pasaje: [0, 0]
+[07:21:43]   [desc] neu_profundidad_mutacional_por_pasaje_mediana: [1.0, 3.0]
+[07:21:43]   [desc] neu_refundaciones_por_camara_por_pasaje_mediana: [50.0, 52.0]
+[07:21:43]   [desc] neu_partos_por_pasaje_mediana: [26.0, 22.0]
+[07:21:43]   [desc] neu_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[07:21:43]   [desc] neu_ratio_pasos_por_pasaje: [1.06, 1.099]
+[07:21:43]   [desc] neu_viajes_por_pasaje: [0.0, 0.0]
+[07:21:43]   [desc] relojes: {'sel': {'profundidad_mutacional': {'mediana': 3.0, 'minimo': 3.0, 'cadenas_sobre_minimo': 0, 'por_cadena': [3.0]}, 'refundaciones_por_camara': {'mediana': 102.0, 'minimo': 102, 'cadenas_sobre_minimo': 0, 'por_cadena': [102], 'rondas_de_reemplazo_mediana': 11.3}, 'partos': {'mediana': 48.0}}, 'neu': {'profundidad_mutacional': {'mediana': 3.0, 'minimo': 3.0, 'cadenas_sobre_minimo': 0, 'por_cadena': [3.0]}, 'refundaciones_por_camara': {'mediana': 102.0, 'minimo': 102, 'cadenas_sobre_minimo': 0, 'por_cadena': [102], 'rondas_de_reemplazo_mediana': 11.3}, 'partos': {'mediana': 48.0}}}
+[07:21:43]   [desc] gen_por_evento_de_mutacion: {'sel': {'GW': 0.0024, 'GV': 0.0}, 'neu': {'GW': 0.0024, 'GV': 0.0}}
+[07:21:43]   [desc] sel_vs_neu: gana 0 empata 1 pierde 0 · suma 1 vs 1
+[07:21:43]   [desc] sel_vs_o1: gana 0 empata 1 pierde 0 · suma 1 vs 1
+[07:21:43]   [desc] sel_vs_fab: gana 1 empata 0 pierde 0 · suma 1 vs 0
+[07:21:43]   [desc] neu_vs_o1: gana 0 empata 1 pierde 0 · suma 1 vs 1
+[07:21:43]   [desc] fab_vs_o1: gana 0 empata 0 pierde 1 · suma 0 vs 1
+[07:21:43] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\perillas\datos\humo\humo_20261001_072018\resumen.json (sha 675fbb29b0e4417b) · abortos 0 · 37.4s
+[07:21:43] VEREDICTO: HUMO (no cuenta): NO SE LEE   (en el umbral: True; regla de parada: PREREGISTRO_perillas.md sec. 7)

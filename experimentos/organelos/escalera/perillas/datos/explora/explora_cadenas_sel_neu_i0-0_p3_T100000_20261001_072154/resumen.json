@@ -1,0 +1,42 @@
+{
+ "modo": "explora",
+ "letra": null,
+ "abortos": [],
+ "n": 1,
+ "npas": 3,
+ "T_pas": 100000,
+ "T_pru": 0,
+ "veredicto": "EXPLORA (no cuenta): parcial",
+ "nota": "explora 2: cadenas sel y neu, 3 pasajes de 100k con camara, 1 indice",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20
+ },
+ "sigma": 0.03,
+ "delta": 0.01,
+ "vent": 5000,
+ "preregistro": "PREREGISTRO_perillas.md",
+ "sha_preregistro": null,
+ "sha_runner": "014f9a8a52cda89e",
+ "shas_escalera": {
+  "corre_p1.py": "392b71186cf49b60",
+  "construye_p1.py": "90dc1b6f848fac80",
+  "mundo_escalera.py": "4f28b372207ba0a6",
+  "carros\\O1_LUGAR.py": "49eee6bb278ea097"
+ },
+ "shas_propios": {
+  "construye_perillas.py": "b5d1a10f6f913556",
+  "carros\\O1_LUGAR_GEN.py": "ecc996d2fecccc30",
+  "carros\\O1_LUGAR_GEN0.py": "89db6c8a74902fe1"
+ },
+ "mundo_escalera": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_fuente_transformada": "488e82252eece5f8",
+  "anclas": 9
+ },
+ "seg": 495.0
+}

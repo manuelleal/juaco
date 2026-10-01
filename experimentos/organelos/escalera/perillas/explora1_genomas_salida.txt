@@ -1,0 +1,31 @@
+[07:21:54] CORRE_PERILLAS · explora · 20261001_072154 · python 3.14.2 · pool NO (un proceso) · corre_perillas.py 014f9a8a52cda89e · preregistro PREREGISTRO_perillas.md NO EXISTE · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\perillas\datos\explora\explora_genomas_0-0.06_0-0.1_0-0.2_0-0.4_1-0_0-1_i0-0_T100000_20261001_072154
+[07:21:54]   base de semillas (741900, 741941) · pasajes T 0 x 0 · pruebas T 100000 · n 1 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20} · sigma 0.03 delta 0.01 (una mutacion por nacimiento, en un gen) · camara continua · moneda: vivos de los ultimos 5000 pasos de linajes sin refundacion en la segunda mitad · trabajos [('fijo', 0, '0:0.06'), ('fijo', 0, '0:0.1'), ('fijo', 0, '0:0.2'), ('fijo', 0, '0:0.4'), ('fijo', 0, '1:0'), ('fijo', 0, '0:1')] · reanuda False · nota 'explora 1: dosis-respuesta de GV (GW 0) y los dos genes sueltos; 1 semilla'
+[07:21:54]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:21:54]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:21:54]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:21:54]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:21:54]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[07:21:54]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[07:21:54]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[07:21:54]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[07:21:54]   sha escalera/corre_p1.py 392b71186cf49b60 OK
+[07:21:54]   sha escalera/construye_p1.py 90dc1b6f848fac80 OK
+[07:21:54]   sha escalera/mundo_escalera.py 4f28b372207ba0a6 OK
+[07:21:54]   sha escalera/carros\O1_LUGAR.py 49eee6bb278ea097 OK
+[07:21:54]   sha perillas/construye_perillas.py b5d1a10f6f913556 OK (NO FIJADO: solo humo/explora)
+[07:21:54]   sha perillas/carros\O1_LUGAR_GEN.py ecc996d2fecccc30 OK (NO FIJADO: solo humo/explora)
+[07:21:54]   sha perillas/carros\O1_LUGAR_GEN0.py 89db6c8a74902fe1 OK (NO FIJADO: solo humo/explora)
+[07:21:54]   carro O1_LUGAR_GEN == construye_perillas: True
+[07:21:54]   carro O1_LUGAR_GEN0 == construye_perillas: True
+[07:22:02]   IDENTIDAD CORTA PERILLAS (salida ENTERA, N 9, s 741950, T 1500, mundo de P1): GEN0 == O1_LUGAR True · GEN (1,1) sigma 0 == O1_LUGAR True · GEN (0,0) sigma 0 == O1 (salvo telemetria 'lugar') True · GEN PS_LEE 0, sigma 0.03, delta 0.01, camara 1 == O1 True · control O1_LUGAR != O1 True
+[07:23:17]   [   82.9s] fijo i0 0:0.06 (75.6s) aborto None · genoma {'GW': 0.0, 'GV': 0.06} · cruzan 1/9 R0 0.2022 fund [195, 31, 6, 188, 0, 141, 32, 151, 203] · ratio pasos 1.39 · viajes 63261 · mundo AC 6.4264
+[07:24:53]   [  178.7s] fijo i0 0:0.1 (95.8s) aborto None · genoma {'GW': 0.0, 'GV': 0.1} · cruzan 4/9 R0 0.8704 fund [196, 3, 235, 73, 0, 18, 4, 6, 0] · ratio pasos 3.763 · viajes 290138 · mundo AC 4.5591
+[07:26:34]   [  279.6s] fijo i0 0:0.2 (100.9s) aborto None · genoma {'GW': 0.0, 'GV': 0.2} · cruzan 5/9 R0 0.9318 fund [0, 2, 179, 0, 0, 36, 50, 160, 0] · ratio pasos 5.331 · viajes 445868 · mundo AC 4.323
+[07:28:21]   [  387.2s] fijo i0 0:0.4 (107.6s) aborto None · genoma {'GW': 0.0, 'GV': 0.4} · cruzan 4/9 R0 0.8667 fund [58, 2, 5, 0, 0, 7, 67, 44, 0] · ratio pasos 6.498 · viajes 542961 · mundo AC 4.7306
+[07:29:36]   [  461.6s] fijo i0 1:0   (74.4s) aborto None · genoma {'GW': 1.0, 'GV': 0.0} · cruzan 1/9 R0 0.3407 fund [114, 0, 299, 196, 118, 93, 88, 10, 45] · ratio pasos 1.04 · viajes 0 · mundo AC 7.0893
+[07:31:20]   [  565.3s] fijo i0 0:1   (103.7s) aborto None · genoma {'GW': 0.0, 'GV': 1.0} · cruzan 4/9 R0 0.8333 fund [0, 2, 16, 0, 0, 212, 14, 226, 0] · ratio pasos 7.191 · viajes 613204 · mundo AC 7.4675
+[07:31:20] 
+  EXPLORA parcial: sin las 4 pruebas no hay letra
+[07:31:20] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\perillas\datos\explora\explora_genomas_0-0.06_0-0.1_0-0.2_0-0.4_1-0_0-1_i0-0_T100000_20261001_072154\resumen.json (sha 1ac0cc3d7fadd815) · abortos 0 · 565.3s
+[07:31:20] VEREDICTO: EXPLORA (no cuenta): parcial
