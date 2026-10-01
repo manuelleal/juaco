@@ -1,0 +1,38 @@
+[18:22:27] CORRE_P1 · explora · 20260930_182227 · python 3.14.2 · pool NO (un proceso) · corre_p1.py b51b8404b7721520 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\explora\explora_s739201-739202_T100000_20260930_182227
+[18:22:27]   semillas 739201-739202 · T 100000 · brazos ['lug', 'bar', 'o1'] · mundo oasis {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20} · reanuda False · nota 'explora1 P1b T100k'
+[18:22:27]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[18:22:27]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[18:22:27]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[18:22:27]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[18:22:27]   carro O1_LUGAR == construye_p1: True (sha 8edb746f7967e877)
+[18:22:27]   carro O1_LUGAR_BAR == construye_p1: True (sha 609736f5ecdfc34c)
+[18:22:27]   carro O1_LUGAR0 == construye_p1: True (sha 270f3f838f430ae7)
+[18:22:27]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[18:22:48]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[18:25:16]   [  169.1s] i0 lug  (148.4s) aborto None cruzan 3/9 R0 0.75 fund [0, 14, 0, 0, 4, 73, 153, 17, 0] · oasis ratio pasos 7.351 mord 5.363 · lugar bono 23514 viajes 638049 binmax en oasis 9/9 bins bono en oasis 1.0 · mundo AC 7.0643
+[18:27:47]   [  320.2s] i0 bar  (151.2s) aborto None cruzan 2/9 R0 0.5797 fund [87, 334, 0, 222, 28, 0, 29, 45, 1] · oasis ratio pasos 3.593 mord 4.007 · lugar bono 6149 viajes 478160 binmax en oasis 8/9 bins bono en oasis 1.0 · mundo AC 6.0256
+[18:28:55]   [  388.3s] i0 o1   (68.0s) aborto None cruzan 0/9 R0 0.2987 fund [50, 175, 132, 33, 107, 46, 142, 63, 118] · oasis ratio pasos 1.057 mord 2.69 · lugar bono None viajes None binmax en oasis None/None bins bono en oasis None · mundo AC 6.8439
+[18:30:43]   [  495.5s] i1 lug  (107.2s) aborto None cruzan 5/9 R0 0.9245 fund [0, 7, 3, 0, 0, 17, 13, 0, 32] · oasis ratio pasos 7.691 mord 5.707 · lugar bono 25928 viajes 695761 binmax en oasis 9/9 bins bono en oasis 1.0 · mundo AC 7.538
+[18:32:34]   [  606.6s] i1 bar  (111.1s) aborto None cruzan 2/9 R0 0.6724 fund [294, 72, 6, 18, 0, 201, 5, 0, 180] · oasis ratio pasos 3.487 mord 4.18 · lugar bono 4881 viajes 457590 binmax en oasis 9/9 bins bono en oasis 1.0 · mundo AC 6.1193
+[18:33:33]   [  666.0s] i1 o1   (59.4s) aborto None cruzan 0/9 R0 0.3203 fund [86, 168, 109, 178, 97, 55, 245, 11, 79] · oasis ratio pasos 1.059 mord 2.693 · lugar bono None viajes None binmax en oasis None/None bins bono en oasis None · mundo AC 7.176
+[18:33:33] 
+================ LA LETRA (borrador, escalada a n 2) -- HUMO/EXPLORA: NO cuenta, no se declara
+[18:33:33]   validez: {'V1_completa': True, 'V2_ancla_o1f': None, 'V3_mundo_actua': True, 'V4_estado': True}
+[18:33:33]   puertas: {'PA_par_o1': True, 'PA_suma_o1': True, 'PB_par_bar': True, 'PB_suma_bar': True, 'PM_usa_el_lugar': True} · umbrales {'gana_par': 2, 'dif_suma': 1, 'o1f_may': 2} · EN EL UMBRAL (+-1): True · matiz None
+[18:33:33]   pareado_o1: gana 2 empata 0 pierde 0 · suma 8 vs 0 (dif 8) · por indice [3, 5] vs [0, 0]
+[18:33:33]   pareado_bar: gana 2 empata 0 pierde 0 · suma 8 vs 4 (dif 4) · por indice [3, 5] vs [2, 2]
+[18:33:33]   [desc] suma_cruzan: {'lug': 8, 'bar': 4, 'o1': 0}
+[18:33:33]   [desc] mayorias: {'lug': 1, 'bar': 0, 'o1': 0}
+[18:33:33]   [desc] R0_med: {'lug': 0.8373, 'bar': 0.626, 'o1': 0.3095}
+[18:33:33]   [desc] fund_media: {'lug': 18.5, 'bar': 84.5556, 'o1': 105.2222}
+[18:33:33]   [desc] establecidos_0fund_post10k: {'lug': 16, 'bar': 6, 'o1': 1}
+[18:33:33]   [desc] vida_med: {'lug': 1371.0, 'bar': 600.0, 'o1': 200.0}
+[18:33:33]   [desc] mundo_AC: {'lug': 7.3011, 'bar': 6.0724, 'o1': 7.0099}
+[18:33:33]   [desc] mord_AC: {'lug': 5160.5, 'bar': 4675.0, 'o1': 4437.0}
+[18:33:33]   [desc] mord_BD: {'lug': 3517.5, 'bar': 2791.5, 'o1': 2682.5}
+[18:33:33]   [desc] ratio_pasos_oasis: {'lug': 7.521, 'bar': 3.54, 'o1': 1.058}
+[18:33:33]   [desc] ratio_mord_oasis: {'lug': 5.535, 'bar': 4.0935, 'o1': 2.6915}
+[18:33:33]   [desc] lugar: {'lug': {'bono_blancos': 24721.0, 'aprendizajes': 7746.0, 'viajes': 666905.0, 'max_med': 0.326, 'bin_max_en_oasis': 9.0, 'bins_con_bono_med': 2.0, 'bins_con_bono_en_oasis': 1.0}, 'bar': {'bono_blancos': 5515.0, 'aprendizajes': 3908.5, 'viajes': 467875.0, 'max_med': 0.428, 'bin_max_en_oasis': 8.5, 'bins_con_bono_med': 3.0, 'bins_con_bono_en_oasis': 1.0}}
+[18:33:33] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\explora\explora_s739201-739202_T100000_20260930_182227\resumen.json (sha 837ad89363ae1cde) · abortos 0 · 666.1s
+[18:33:33] VEREDICTO: EXPLORA (no cuenta): FUNCIONA
