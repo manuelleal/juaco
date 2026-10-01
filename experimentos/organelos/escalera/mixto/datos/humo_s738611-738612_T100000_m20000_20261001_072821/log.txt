@@ -1,0 +1,24 @@
+[07:28:08] CORRE_MIXTO · humo · un proceso (sin Pool) · corre_mixto.py f27edde098cf7a1a
+[07:28:08]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[07:28:08]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[07:28:08]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[07:28:08]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[07:28:08]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[07:28:08]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[07:28:10]   IDENTIDAD mixto([O1_TODO_SEN] * 9) == corre_juntos.tarea(O1_TODO_SEN) · salida ENTERA sin 'seg' · s 738630 T 1500 mueve 500: True (36788 bytes)
+[07:28:13]   IDENTIDAD mixto([O1_TODO] * 9) == corre_juntos.tarea(O1_TODO) · salida ENTERA sin 'seg' · s 738630 T 1500 mueve 500: True (35083 bytes)
+[07:28:16]   IDENTIDAD mixto([O1_TODO_PREG] * 9) == corre_juntos.tarea(O1_TODO_PREG) · salida ENTERA sin 'seg' · s 738630 T 1500 mueve 500: True (32217 bytes)
+[07:28:21]   EL ARNES PUEDE FALLAR: mix != sen9 True · mixbar != mix True
+[07:28:21]   ARNES OK
+[07:28:21]   semillas 738611-738612 · T 100000 · brazos ['mix', 'mixbar', 'sen9'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 20000, 'c_e': 0.01} · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\humo_s738611-738612_T100000_m20000_20261001_072821 · nota 'rafaga ficha 4'
+[07:30:13]   [ 112.3s] i0 s738611 mix    (112.3s) LECTORES lat med 1547.5 (n 32, nunca 1) por mudanza [881.0, 915.5, 3105.0, 1897.5] · explorador [334, 621, 290, 62] · lectores antes que el explorador 5 · cruzan 9/9 (lectores 8) fund lectores 0.0 · lee 43864 siembra 63 escribe [581, 522, 588, 633, 748, 634, 664, 365, 748] · pg_exc [16624, None, None, None, None, None, None, None, None] · mundo AC 5.9068
+[07:31:55]   [ 214.1s] i0 s738611 mixbar (101.8s) LECTORES lat med 1236.0 (n 32, nunca 2) por mudanza [758.0, 1828.0, 2429.0, 1029.0] · explorador [314, 66, 8, 109] · lectores antes que el explorador 0 · cruzan 2/9 (lectores 1) fund lectores 21.5 · lee 26678 siembra 179 escribe [387, 717, 524, 12, 520, 444, 758, 296, 267] · pg_exc [13029, None, None, None, None, None, None, None, None] · mundo AC 7.508
+[07:33:25]   [ 304.7s] i0 s738611 sen9   (90.6s) LECTORES lat med 1621.0 (n 36, nunca 0) por mudanza [1403.0, 1675.0, 1567.0, 2304.0] · explorador None · lectores antes que el explorador None · cruzan 7/9 (lectores 7) fund lectores 0.0 · lee 36724 siembra 70 escribe [799, 321, 715, 545, 530, 602, 551, 487, 518] · pg_exc [None, None, None, None, None, None, None, None, None] · mundo AC 7.4836
+[07:35:01]   [ 400.7s] i1 s738612 mix    (96.0s) LECTORES lat med 1093.5 (n 32, nunca 1) por mudanza [1105.5, 1093.5, 1524.5, 1025.0] · explorador [310, 320, 706, 129] · lectores antes que el explorador 3 · cruzan 6/9 (lectores 6) fund lectores 0.0 · lee 32532 siembra 107 escribe [475, 621, 713, 607, 330, 96, 581, 328, 602] · pg_exc [20723, None, None, None, None, None, None, None, None] · mundo AC 5.8603
+[07:36:36]   [ 495.9s] i1 s738612 mixbar (95.2s) LECTORES lat med 1860.5 (n 32, nunca 1) por mudanza [1449.0, 2463.0, 3477.0, 1456.0] · explorador [455, 243, 615, 1074] · lectores antes que el explorador 5 · cruzan 2/9 (lectores 2) fund lectores 12.0 · lee 33034 siembra 111 escribe [518, 451, 470, 669, 597, 717, 305, 614, 347] · pg_exc [13800, None, None, None, None, None, None, None, None] · mundo AC 7.0439
+[07:38:12]   [ 591.3s] i1 s738612 sen9   (95.4s) LECTORES lat med 1619.0 (n 36, nunca 0) por mudanza [768.0, 2952.0, 899.0, 2332.0] · explorador None · lectores antes que el explorador None · cruzan 8/9 (lectores 8) fund lectores 0.0 · lee 38301 siembra 77 escribe [373, 500, 741, 381, 316, 638, 590, 732, 761] · pg_exc [None, None, None, None, None, None, None, None, None] · mundo AC 7.3414
+[07:38:12] 
+  ================ RESUMEN (HUMO DE EXPLORACION: no cuenta, no se declara)
+[07:38:12]   mix    {'lat_lectores_por_semilla': [1547.5, 1093.5], 'lat_lectores_todas': 1209.0, 'nunca': 2, 'cruza_lectores': 14, 'lat_explorador_med': [312.0, 315.0]}
+[07:38:12]   mixbar {'lat_lectores_por_semilla': [1236.0, 1860.5], 'lat_lectores_todas': 1464.5, 'nunca': 3, 'cruza_lectores': 3, 'lat_explorador_med': [87.5, 535.0]}
+[07:38:12]   sen9   {'lat_lectores_por_semilla': [1621.0, 1619.0], 'lat_lectores_todas': 1619.0, 'nunca': 0, 'cruza_lectores': 15, 'lat_explorador_med': [None, None]}

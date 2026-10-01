@@ -1,0 +1,233 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_mundo": true,
+   "V3_estado": true,
+   "V4_explorador_antes": true,
+   "V5_pisadas": true,
+   "V6_senal_viva": true,
+   "V7_solo_uno_pregunta": true
+  },
+  "puertas": {
+   "G_var_pares": false,
+   "G_var_magnitud": false,
+   "G_contenido": false,
+   "G_mudo": false
+  },
+  "veredicto": "NO",
+  "en_umbral": true,
+  "umbrales": {
+   "gana_par": 1,
+   "razon_max": 0.85,
+   "frac_explorador": 0.9
+  },
+  "pareados": {
+   "mix": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "med_a": 2225.0,
+    "med_b": 1344.5,
+    "razon_med": 1.6549,
+    "por_indice_a": [
+     2225.0
+    ],
+    "por_indice_b": [
+     1344.5
+    ]
+   },
+   "pmixbar": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "med_a": 2225.0,
+    "med_b": 1351.5,
+    "razon_med": 1.6463,
+    "por_indice_a": [
+     2225.0
+    ],
+    "por_indice_b": [
+     1351.5
+    ]
+   },
+   "pmudo": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "med_a": 2225.0,
+    "med_b": 2111.0,
+    "razon_med": 1.054,
+    "por_indice_a": [
+     2225.0
+    ],
+    "por_indice_b": [
+     2111.0
+    ]
+   }
+  },
+  "descriptivo": {
+   "n_por_brazo": {
+    "pmix": 1,
+    "mix": 1,
+    "pmixbar": 1,
+    "pmudo": 1
+   },
+   "lat_lectores_med": {
+    "pmix": 2225.0,
+    "mix": 1344.5,
+    "pmixbar": 1351.5,
+    "pmudo": 2111.0
+   },
+   "lat_explorador_med": {
+    "pmix": 607.0,
+    "mix": 661.0,
+    "pmixbar": 426.0,
+    "pmudo": 827.0
+   },
+   "explorador_antes_que_lectores": {
+    "pmix": 1,
+    "mix": 1,
+    "pmixbar": 1,
+    "pmudo": 1
+   },
+   "nunca_llegan_lectores": {
+    "pmix": 1,
+    "mix": 2,
+    "pmixbar": 3,
+    "pmudo": 3
+   },
+   "TRAMPA_mundo_AC": {
+    "pmix": 8.5819,
+    "mix": 7.1345,
+    "pmixbar": 8.0108,
+    "pmudo": 8.569
+   },
+   "TRAMPA_cruce_lectores": {
+    "pmix": [
+     5,
+     8
+    ],
+    "mix": [
+     4,
+     8
+    ],
+    "pmixbar": [
+     0,
+     8
+    ],
+    "pmudo": [
+     2,
+     8
+    ]
+   },
+   "TRAMPA_fund_lectores_media": {
+    "pmix": 5.75,
+    "mix": 4.5,
+    "pmixbar": 23.75,
+    "pmudo": 8.625
+   },
+   "TRAMPA_rumor_frac_pisadas_al_oasis_VIEJO": {
+    "pmix": 0.2326,
+    "pmixbar": 0.1739,
+    "pmudo": 0.6667
+   },
+   "pisadas_frac_al_oasis_NUEVO": {
+    "pmix": 0.6279,
+    "pmixbar": 0.0435,
+    "pmudo": 0.3333
+   },
+   "pisadas_total": {
+    "pmix": 58,
+    "pmixbar": 24,
+    "pmudo": 44
+   },
+   "TRAMPA_lg_hereda_tras_vivir": {
+    "pmix": 0,
+    "pmixbar": 0,
+    "pmudo": 0
+   },
+   "lg_hereda_adopta": {
+    "pmix": 0,
+    "pmixbar": 1,
+    "pmudo": 0
+   },
+   "siembras_lectores": {
+    "pmix": 201.0,
+    "mix": 106.0,
+    "pmixbar": 93.0,
+    "pmudo": 109.0
+   },
+   "lecturas_lectores": {
+    "pmix": 4552.0,
+    "mix": 4610.0,
+    "pmixbar": 692.0,
+    "pmudo": 2388.0
+   },
+   "cruzan_total": {
+    "pmix": 5,
+    "mix": 4,
+    "pmixbar": 0,
+    "pmudo": 2
+   },
+   "R0_med": {
+    "pmix": 0.9,
+    "mix": 0.8,
+    "pmixbar": 0.3226,
+    "pmudo": 0.5
+   },
+   "ratio_pasos_oasis": {
+    "pmix": 6.229,
+    "mix": 5.94,
+    "pmixbar": 4.029,
+    "pmudo": 5.244
+   },
+   "letra_propuesta_por_el_coordinador (no decide)": "NO"
+  }
+ },
+ "abortos": [],
+ "n": 1,
+ "T": 20000,
+ "semillas": [
+  738695,
+  738695
+ ],
+ "veredicto": "HUMO (no cuenta): NO (EN EL UMBRAL)",
+ "nota": "",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "mueve": 5000,
+  "c_e": 0.01
+ },
+ "sha_runner": "13204ba2ab2cef87",
+ "shas": {
+  "mixto\\corre_pisa.py": "445c27054bfdc82a",
+  "mixto\\corre_mixto.py": "f27edde098cf7a1a",
+  "mixto\\construye_pisa.py": "85de025f95740bb0",
+  "mixto\\carros\\O1_SEN_PISA.py": "bca8f97bcb6cb353",
+  "mixto\\carros\\O1_SEN_PISA_BAR.py": "95cda0103eb80b40",
+  "mixto\\carros\\O1_SEN_PISA0.py": "362a150ded4ff12d",
+  "juntos\\corre_juntos.py": "db75135c8c2f3e0d",
+  "mundo_tramo_c.py": "4a1044a4e0e1d5c9",
+  "juntos\\carros\\O1_TODO.py": "b7519a4a481a0cf5",
+  "juntos\\carros\\O1_TODO_SEN.py": "dff5e762bd23612e",
+  "juntos\\carros\\O1_TODO_PREG.py": "382dafcf822b36a1",
+  "carros\\O1_LUGAR_SENAL_BAR.py": "cab7460e91e215e3"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17
+ },
+ "seg": 10.9
+}

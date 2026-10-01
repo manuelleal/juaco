@@ -1,0 +1,30 @@
+  sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+  sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+  sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+  sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+  sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+  sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+
+=== s738611 mix (109s) · SONDA NO PERTURBA (fila == humo 1 guardado): True · nl bajo alguna vez: 1 veces · lat lectores 1547.5
+  mudanzas (t, z0): [(0, 121), (20000, 65), (40000, 208), (60000, 125), (80000, 203)] · bins del oasis por periodo: [[10, 11, 12, 13], [5, 6, 7, 8], [17, 18, 19, 20], [10, 11, 12, 13], [16, 17, 18, 19]]
+  nl al final: bins con nl > 0 por linaje [30, 30, 30, 30, 30, 30, 30, 30, 30] de 30
+  per | lecturas | siembra | nada | rech+ | rech0 || AL OASIS NUEVO: lecturas | siembra | nada | rech+ | rech0 | % rech || al oasis VIEJO: lecturas | siembra | rech+ | rech0 || a otro bin: lecturas
+    0 |     6140 |      46 |  170 |  3869 |  2055 ||                     6140 |      46 |  170 |  3869 |  2055 |   96.5 ||                        0 |       0 |     0 |     0 ||        0
+    1 |     7523 |       9 |   23 |  4600 |  2891 ||                     7361 |       9 |   23 |  4501 |  2828 |   99.6 ||                      162 |       0 |    99 |    63 ||        0
+    2 |     7976 |       9 |   16 |  4582 |  3369 ||                     7091 |       9 |   16 |  4221 |  2845 |   99.6 ||                      885 |       0 |   361 |   524 ||        0
+    3 |     8502 |       0 |    0 |  5419 |  3083 ||                     7591 |       0 |    0 |  4849 |  2742 |  100.0 ||                      911 |       0 |   570 |   341 ||        0
+    4 |     8828 |       0 |    0 |  5286 |  3542 ||                     6427 |       0 |    0 |  4432 |  1995 |  100.0 ||                     2401 |       0 |   854 |  1547 ||        0
+  TRAS MUDANZA (periodos 1+), lectores: lecturas hacia el oasis NUEVO 28470 · rechazadas por nl != 0: 28413 (99.8 %) [de ellas con memoria propia ya sin valor (rech0) 10410] · sembradas 18
+
+=== s738611 sen9 (98s) · SONDA NO PERTURBA (fila == humo 1 guardado): True · nl bajo alguna vez: 3 veces · lat lectores 1621.0
+  mudanzas (t, z0): [(0, 121), (20000, 65), (40000, 208), (60000, 125), (80000, 203)] · bins del oasis por periodo: [[10, 11, 12, 13], [5, 6, 7, 8], [17, 18, 19, 20], [10, 11, 12, 13], [16, 17, 18, 19]]
+  nl al final: bins con nl > 0 por linaje [30, 29, 30, 16, 30, 30, 30, 30, 30] de 30
+  per | lecturas | siembra | nada | rech+ | rech0 || AL OASIS NUEVO: lecturas | siembra | nada | rech+ | rech0 | % rech || al oasis VIEJO: lecturas | siembra | rech+ | rech0 || a otro bin: lecturas
+    0 |     6896 |     126 |  161 |  4824 |  1785 ||                     6896 |     126 |  161 |  4824 |  1785 |   95.8 ||                        0 |       0 |     0 |     0 ||        0
+    1 |     8104 |      14 |   58 |  4561 |  3471 ||                     5968 |      14 |   58 |  4018 |  1878 |   98.8 ||                     2136 |       0 |   543 |  1593 ||        0
+    2 |     8104 |      12 |   32 |  4475 |  3585 ||                     6128 |      12 |   32 |  3713 |  2371 |   99.3 ||                     1976 |       0 |   762 |  1214 ||        0
+    3 |     8552 |       0 |    0 |  4635 |  3917 ||                     6712 |       0 |    0 |  3790 |  2922 |  100.0 ||                     1840 |       0 |   845 |   995 ||        0
+    4 |     9128 |     173 |   99 |  5681 |  3175 ||                     7856 |     141 |   73 |  5027 |  2615 |   97.3 ||                     1272 |      32 |   654 |   560 ||        0
+  TRAS MUDANZA (periodos 1+), lectores: lecturas hacia el oasis NUEVO 26664 · rechazadas por nl != 0: 26334 (98.8 %) [de ellas con memoria propia ya sin valor (rech0) 9786] · sembradas 167
+
+  JSON C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\sonda\sonda_nl_s738611_T100000_20261001_074412.json

@@ -1,0 +1,118 @@
+[08:07:46] CORRE_PISA_SERIE · humo · 20261001_080746 · python 3.14.2 · pool NO (un proceso) · corre_pisa_serie.py 13204ba2ab2cef87 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\humo_prot\pisa_humo_s738695-738695_T20000_m5000_20261001_080746
+[08:07:46]   semillas 738695-738695 · T 20000 · corridas 4 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 5000, 'c_e': 0.01} · reanuda False · nota 'ERR-42: main de punta a punta'
+[08:07:46]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[08:07:46]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[08:07:46]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[08:07:46]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[08:07:46]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[08:07:46]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[08:07:46]   sha mixto\corre_pisa.py 445c27054bfdc82a OK
+[08:07:46]   sha mixto\corre_mixto.py f27edde098cf7a1a OK
+[08:07:46]   sha mixto\construye_pisa.py 85de025f95740bb0 OK
+[08:07:46]   sha mixto\carros\O1_SEN_PISA.py bca8f97bcb6cb353 OK
+[08:07:46]   sha mixto\carros\O1_SEN_PISA_BAR.py 95cda0103eb80b40 OK
+[08:07:46]   sha mixto\carros\O1_SEN_PISA0.py 362a150ded4ff12d OK
+[08:07:46]   carro O1_SEN_PISA == construye_pisa: True
+[08:07:46]   carro O1_SEN_PISA_BAR == construye_pisa: True
+[08:07:46]   carro O1_SEN_PISA0 == construye_pisa: True
+[08:07:46]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[08:07:49]   A1 [O1_SEN_PISA0]*9 == corre_juntos.tarea(O1_TODO_SEN) · s 738632 T 1500 mueve 500: True (34325 bytes)
+[08:07:52]   A2 mixto([O1_TODO]*9) == corre_juntos.tarea(O1_TODO) · mueve 500: True (35169 bytes)
+[08:07:55]   A3 sondas no perturban · pmix: con ganchos == sin ganchos True
+[08:07:55]   A4 regla 14: kwargs de mundo_tramo_c.run == corre_juntos == {T, pizarra 1, rep_acum 0, escala 1, mundo_n None, fundador_limpio 1} + mundo: True · {'T': 1500, 'pizarra': 1, 'rep_acum': 0, 'escala': 1, 'mundo_n': None, 'fundador_limpio': 1, 'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 500, 'c_e': 0.01}
+[08:07:57]   A5 el arnes puede fallar (pmix != mix): [True]
+[08:07:57]   A6 sonda de pisadas: pmix sonda 5 >= telemetria 5 (fund [0, 0, 0, 0, 0, 0, 0, 0, 0]) · clasificacion {'total': 5, 'per0': 0, 'nuevo': 2, 'viejo': 3, 'otro': 0, 'frac_viejo': 0.6, 'frac_nuevo': 0.4} · hereda {'adopta': 0, 'tras_vivir': 0} · mix 0: True
+[08:07:57]   A7 semillas disjuntas y nuevas (7386xx): True
+[08:07:57]   ARNES OK
+[08:08:16]   [   30.5s] i0 pmix    (19.6s) e0 LECTORES lat 2225.0 (nunca 1) por mudanza [1757.5, 2383.5, 1648.5] · explorador 607.0 · cruzan 5/9 (lect 5) fund lect 5.75 · lee 4552 siembra 201 · pisa 58 (nuevo 0.6279 viejo 0.2326) hereda {'adopta': 0, 'tras_vivir': 0} · mundo AC 8.5819
+[08:08:36]   [   50.7s] i0 mix     (20.2s) e0 LECTORES lat 1344.5 (nunca 2) por mudanza [1161.5, 1139.5, 1543.5] · explorador 661.0 · cruzan 4/9 (lect 4) fund lect 4.5 · lee 4610 siembra 106 · pisa 0 (nuevo None viejo None) hereda {'adopta': 0, 'tras_vivir': 0} · mundo AC 7.1345
+[08:08:56]   [   69.8s] i0 pmixbar (19.1s) e0 LECTORES lat 1351.5 (nunca 3) por mudanza [1237.0, 1046.0, 1411.0] · explorador 426.0 · cruzan 0/9 (lect 0) fund lect 23.75 · lee 692 siembra 93 · pisa 24 (nuevo 0.0435 viejo 0.1739) hereda {'adopta': 1, 'tras_vivir': 0} · mundo AC 8.0108
+[08:09:15]   [   88.8s] i0 pmudo   (19.0s) e0 LECTORES lat 2111.0 (nunca 3) por mudanza [2728.0, 2573.0, 1529.5] · explorador 827.0 · cruzan 2/9 (lect 2) fund lect 8.625 · lee 2388 siembra 109 · pisa 44 (nuevo 0.3333 viejo 0.6667) hereda {'adopta': 0, 'tras_vivir': 0} · mundo AC 8.569
+[08:09:15] 
+================ LA LETRA (escalada a n 1) -- HUMO: NO cuenta, no se declara
+[08:09:15]   validez: {'V1_completa': True, 'V2_mundo': True, 'V3_estado': True, 'V4_explorador_antes': True, 'V5_pisadas': True, 'V6_senal_viva': True, 'V7_solo_uno_pregunta': True}
+[08:09:15]   puertas: {'G_var_pares': False, 'G_var_magnitud': False, 'G_contenido': False, 'G_mudo': False} · umbrales {'gana_par': 1, 'razon_max': 0.85, 'frac_explorador': 0.9} · EN EL UMBRAL (+-1 par): True
+[08:09:15]   pmix < mix: gana 0 empata 0 pierde 1 de 1 · mediana 2225.0 vs 1344.5 · razon mediana 1.6549 · por indice [2225.0] vs [1344.5]
+[08:09:15]   pmix < pmixbar: gana 0 empata 0 pierde 1 de 1 · mediana 2225.0 vs 1351.5 · razon mediana 1.6463 · por indice [2225.0] vs [1351.5]
+[08:09:15]   pmix < pmudo: gana 0 empata 0 pierde 1 de 1 · mediana 2225.0 vs 2111.0 · razon mediana 1.054 · por indice [2225.0] vs [2111.0]
+[08:09:15]   [desc] n_por_brazo: {'pmix': 1, 'mix': 1, 'pmixbar': 1, 'pmudo': 1}
+[08:09:15]   [desc] lat_lectores_med: {'pmix': 2225.0, 'mix': 1344.5, 'pmixbar': 1351.5, 'pmudo': 2111.0}
+[08:09:15]   [desc] lat_explorador_med: {'pmix': 607.0, 'mix': 661.0, 'pmixbar': 426.0, 'pmudo': 827.0}
+[08:09:15]   [desc] explorador_antes_que_lectores: {'pmix': 1, 'mix': 1, 'pmixbar': 1, 'pmudo': 1}
+[08:09:15]   [desc] nunca_llegan_lectores: {'pmix': 1, 'mix': 2, 'pmixbar': 3, 'pmudo': 3}
+[08:09:15]   [TRAMPA] TRAMPA_mundo_AC: {'pmix': 8.5819, 'mix': 7.1345, 'pmixbar': 8.0108, 'pmudo': 8.569}
+[08:09:15]   [TRAMPA] TRAMPA_cruce_lectores: {'pmix': [5, 8], 'mix': [4, 8], 'pmixbar': [0, 8], 'pmudo': [2, 8]}
+[08:09:15]   [TRAMPA] TRAMPA_fund_lectores_media: {'pmix': 5.75, 'mix': 4.5, 'pmixbar': 23.75, 'pmudo': 8.625}
+[08:09:15]   [TRAMPA] TRAMPA_rumor_frac_pisadas_al_oasis_VIEJO: {'pmix': 0.2326, 'pmixbar': 0.1739, 'pmudo': 0.6667}
+[08:09:15]   [desc] pisadas_frac_al_oasis_NUEVO: {'pmix': 0.6279, 'pmixbar': 0.0435, 'pmudo': 0.3333}
+[08:09:15]   [desc] pisadas_total: {'pmix': 58, 'pmixbar': 24, 'pmudo': 44}
+[08:09:15]   [TRAMPA] TRAMPA_lg_hereda_tras_vivir: {'pmix': 0, 'pmixbar': 0, 'pmudo': 0}
+[08:09:15]   [desc] lg_hereda_adopta: {'pmix': 0, 'pmixbar': 1, 'pmudo': 0}
+[08:09:15]   [desc] siembras_lectores: {'pmix': 201.0, 'mix': 106.0, 'pmixbar': 93.0, 'pmudo': 109.0}
+[08:09:15]   [desc] lecturas_lectores: {'pmix': 4552.0, 'mix': 4610.0, 'pmixbar': 692.0, 'pmudo': 2388.0}
+[08:09:15]   [desc] cruzan_total: {'pmix': 5, 'mix': 4, 'pmixbar': 0, 'pmudo': 2}
+[08:09:15]   [desc] R0_med: {'pmix': 0.9, 'mix': 0.8, 'pmixbar': 0.3226, 'pmudo': 0.5}
+[08:09:15]   [desc] ratio_pasos_oasis: {'pmix': 6.229, 'mix': 5.94, 'pmixbar': 4.029, 'pmudo': 5.244}
+[08:09:15]   [desc] letra_propuesta_por_el_coordinador (no decide): NO
+[08:09:15] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\humo_prot\pisa_humo_s738695-738695_T20000_m5000_20261001_080746\resumen.json (sha 3f6db854c0189d62) · abortos 0 · 88.8s
+[08:09:15] VEREDICTO: HUMO (no cuenta): NO (EN EL UMBRAL)
+[08:09:35] CORRE_PISA_SERIE · humo · 20261001_080935 · python 3.14.2 · pool NO (un proceso) · corre_pisa_serie.py 13204ba2ab2cef87 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\humo_prot\pisa_humo_s738695-738695_T20000_m5000_20261001_080746
+[08:09:35]   semillas 738695-738695 · T 20000 · corridas 4 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 5000, 'c_e': 0.01} · reanuda True · nota ''
+[08:09:35]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[08:09:35]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[08:09:35]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[08:09:35]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[08:09:35]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[08:09:35]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[08:09:35]   sha mixto\corre_pisa.py 445c27054bfdc82a OK
+[08:09:35]   sha mixto\corre_mixto.py f27edde098cf7a1a OK
+[08:09:35]   sha mixto\construye_pisa.py 85de025f95740bb0 OK
+[08:09:35]   sha mixto\carros\O1_SEN_PISA.py bca8f97bcb6cb353 OK
+[08:09:35]   sha mixto\carros\O1_SEN_PISA_BAR.py 95cda0103eb80b40 OK
+[08:09:35]   sha mixto\carros\O1_SEN_PISA0.py 362a150ded4ff12d OK
+[08:09:35]   carro O1_SEN_PISA == construye_pisa: True
+[08:09:35]   carro O1_SEN_PISA_BAR == construye_pisa: True
+[08:09:35]   carro O1_SEN_PISA0 == construye_pisa: True
+[08:09:35]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[08:09:38]   A1 [O1_SEN_PISA0]*9 == corre_juntos.tarea(O1_TODO_SEN) · s 738632 T 1500 mueve 500: True (34325 bytes)
+[08:09:42]   A2 mixto([O1_TODO]*9) == corre_juntos.tarea(O1_TODO) · mueve 500: True (35169 bytes)
+[08:09:44]   A3 sondas no perturban · pmix: con ganchos == sin ganchos True
+[08:09:44]   A4 regla 14: kwargs de mundo_tramo_c.run == corre_juntos == {T, pizarra 1, rep_acum 0, escala 1, mundo_n None, fundador_limpio 1} + mundo: True · {'T': 1500, 'pizarra': 1, 'rep_acum': 0, 'escala': 1, 'mundo_n': None, 'fundador_limpio': 1, 'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 500, 'c_e': 0.01}
+[08:09:46]   A5 el arnes puede fallar (pmix != mix): [True]
+[08:09:46]   A6 sonda de pisadas: pmix sonda 5 >= telemetria 5 (fund [0, 0, 0, 0, 0, 0, 0, 0, 0]) · clasificacion {'total': 5, 'per0': 0, 'nuevo': 2, 'viejo': 3, 'otro': 0, 'frac_viejo': 0.6, 'frac_nuevo': 0.4} · hereda {'adopta': 0, 'tras_vivir': 0} · mix 0: True
+[08:09:46]   A7 semillas disjuntas y nuevas (7386xx): True
+[08:09:46]   ARNES OK
+[08:09:46]   [   10.9s] i0 pmix    (19.6s) e0 LECTORES lat 2225.0 (nunca 1) por mudanza [1757.5, 2383.5, 1648.5] · explorador 607.0 · cruzan 5/9 (lect 5) fund lect 5.75 · lee 4552 siembra 201 · pisa 58 (nuevo 0.6279 viejo 0.2326) hereda {'adopta': 0, 'tras_vivir': 0} · mundo AC 8.5819
+[08:09:46]   [   10.9s] i0 mix     (20.2s) e0 LECTORES lat 1344.5 (nunca 2) por mudanza [1161.5, 1139.5, 1543.5] · explorador 661.0 · cruzan 4/9 (lect 4) fund lect 4.5 · lee 4610 siembra 106 · pisa 0 (nuevo None viejo None) hereda {'adopta': 0, 'tras_vivir': 0} · mundo AC 7.1345
+[08:09:46]   [   10.9s] i0 pmixbar (19.1s) e0 LECTORES lat 1351.5 (nunca 3) por mudanza [1237.0, 1046.0, 1411.0] · explorador 426.0 · cruzan 0/9 (lect 0) fund lect 23.75 · lee 692 siembra 93 · pisa 24 (nuevo 0.0435 viejo 0.1739) hereda {'adopta': 1, 'tras_vivir': 0} · mundo AC 8.0108
+[08:09:46]   [   10.9s] i0 pmudo   (19.0s) e0 LECTORES lat 2111.0 (nunca 3) por mudanza [2728.0, 2573.0, 1529.5] · explorador 827.0 · cruzan 2/9 (lect 2) fund lect 8.625 · lee 2388 siembra 109 · pisa 44 (nuevo 0.3333 viejo 0.6667) hereda {'adopta': 0, 'tras_vivir': 0} · mundo AC 8.569
+[08:09:46] 
+================ LA LETRA (escalada a n 1) -- HUMO: NO cuenta, no se declara
+[08:09:46]   validez: {'V1_completa': True, 'V2_mundo': True, 'V3_estado': True, 'V4_explorador_antes': True, 'V5_pisadas': True, 'V6_senal_viva': True, 'V7_solo_uno_pregunta': True}
+[08:09:46]   puertas: {'G_var_pares': False, 'G_var_magnitud': False, 'G_contenido': False, 'G_mudo': False} · umbrales {'gana_par': 1, 'razon_max': 0.85, 'frac_explorador': 0.9} · EN EL UMBRAL (+-1 par): True
+[08:09:46]   pmix < mix: gana 0 empata 0 pierde 1 de 1 · mediana 2225.0 vs 1344.5 · razon mediana 1.6549 · por indice [2225.0] vs [1344.5]
+[08:09:46]   pmix < pmixbar: gana 0 empata 0 pierde 1 de 1 · mediana 2225.0 vs 1351.5 · razon mediana 1.6463 · por indice [2225.0] vs [1351.5]
+[08:09:46]   pmix < pmudo: gana 0 empata 0 pierde 1 de 1 · mediana 2225.0 vs 2111.0 · razon mediana 1.054 · por indice [2225.0] vs [2111.0]
+[08:09:46]   [desc] n_por_brazo: {'pmix': 1, 'mix': 1, 'pmixbar': 1, 'pmudo': 1}
+[08:09:46]   [desc] lat_lectores_med: {'pmix': 2225.0, 'mix': 1344.5, 'pmixbar': 1351.5, 'pmudo': 2111.0}
+[08:09:46]   [desc] lat_explorador_med: {'pmix': 607.0, 'mix': 661.0, 'pmixbar': 426.0, 'pmudo': 827.0}
+[08:09:46]   [desc] explorador_antes_que_lectores: {'pmix': 1, 'mix': 1, 'pmixbar': 1, 'pmudo': 1}
+[08:09:46]   [desc] nunca_llegan_lectores: {'pmix': 1, 'mix': 2, 'pmixbar': 3, 'pmudo': 3}
+[08:09:46]   [TRAMPA] TRAMPA_mundo_AC: {'pmix': 8.5819, 'mix': 7.1345, 'pmixbar': 8.0108, 'pmudo': 8.569}
+[08:09:46]   [TRAMPA] TRAMPA_cruce_lectores: {'pmix': [5, 8], 'mix': [4, 8], 'pmixbar': [0, 8], 'pmudo': [2, 8]}
+[08:09:46]   [TRAMPA] TRAMPA_fund_lectores_media: {'pmix': 5.75, 'mix': 4.5, 'pmixbar': 23.75, 'pmudo': 8.625}
+[08:09:46]   [TRAMPA] TRAMPA_rumor_frac_pisadas_al_oasis_VIEJO: {'pmix': 0.2326, 'pmixbar': 0.1739, 'pmudo': 0.6667}
+[08:09:46]   [desc] pisadas_frac_al_oasis_NUEVO: {'pmix': 0.6279, 'pmixbar': 0.0435, 'pmudo': 0.3333}
+[08:09:46]   [desc] pisadas_total: {'pmix': 58, 'pmixbar': 24, 'pmudo': 44}
+[08:09:46]   [TRAMPA] TRAMPA_lg_hereda_tras_vivir: {'pmix': 0, 'pmixbar': 0, 'pmudo': 0}
+[08:09:46]   [desc] lg_hereda_adopta: {'pmix': 0, 'pmixbar': 1, 'pmudo': 0}
+[08:09:46]   [desc] siembras_lectores: {'pmix': 201.0, 'mix': 106.0, 'pmixbar': 93.0, 'pmudo': 109.0}
+[08:09:46]   [desc] lecturas_lectores: {'pmix': 4552.0, 'mix': 4610.0, 'pmixbar': 692.0, 'pmudo': 2388.0}
+[08:09:46]   [desc] cruzan_total: {'pmix': 5, 'mix': 4, 'pmixbar': 0, 'pmudo': 2}
+[08:09:46]   [desc] R0_med: {'pmix': 0.9, 'mix': 0.8, 'pmixbar': 0.3226, 'pmudo': 0.5}
+[08:09:46]   [desc] ratio_pasos_oasis: {'pmix': 6.229, 'mix': 5.94, 'pmixbar': 4.029, 'pmudo': 5.244}
+[08:09:46]   [desc] letra_propuesta_por_el_coordinador (no decide): NO
+[08:09:46] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\humo_prot\pisa_humo_s738695-738695_T20000_m5000_20261001_080746\resumen.json (sha 13f1490e09c27121) · abortos 0 · 10.9s
+[08:09:46] VEREDICTO: HUMO (no cuenta): NO (EN EL UMBRAL)

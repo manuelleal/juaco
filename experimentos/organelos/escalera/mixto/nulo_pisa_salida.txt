@@ -1,0 +1,14 @@
+sd log 0.25 · n 20 · 200000 series por escenario · letra: pares >= 14/20 (empate en contra) y mediana de pmix/mix <= 0.85
+escenario | rho | P(FUNCIONA) | P(MODESTO) | P(NO) | P(pares var >= 14) | P(letra del coordinador da MODESTO o mas)
+NULO TOTAL: los 4 brazos iguales | 0.0 | 0.0016 | 0.0085 | 0.9899 | 0.0579 | 0.0172
+NULO TOTAL: los 4 brazos iguales | 0.3 | 0.0010 | 0.0089 | 0.9900 | 0.0577 | 0.0166
+NULO DE LA VARIANTE: pmix = mix; antipoda x1.3 y mudo x1.8 peores | 0.0 | 0.0211 | 0.0350 | 0.9439 | 0.0584 | 0.8472
+NULO DE LA VARIANTE: pmix = mix; antipoda x1.3 y mudo x1.8 peores | 0.3 | 0.0116 | 0.0455 | 0.9429 | 0.0577 | 0.9360
+NULO DE CONTENIDO: pmix = pmixbar; mix x1.3, mudo x1.8 | 0.0 | 0.0538 | 0.0011 | 0.9451 | 0.8473 | 0.0572
+NULO DE CONTENIDO: pmix = pmixbar; mix x1.3, mudo x1.8 | 0.3 | 0.0572 | 0.0008 | 0.9420 | 0.9348 | 0.0586
+efecto en el borde: pmix/mix 0.85; antipoda x1.6; mudo x2.3 | 0.0 | 0.3891 | 0.1321 | 0.4788 | 0.5215 | 0.9984
+efecto en el borde: pmix/mix 0.85; antipoda x1.6; mudo x2.3 | 0.3 | 0.4328 | 0.2087 | 0.3585 | 0.6415 | 0.9999
+efecto del humo: pmix/mix 0.77; antipoda x1.6; mudo x2.3 | 0.0 | 0.7740 | 0.0679 | 0.1581 | 0.8426 | 0.9987
+efecto del humo: pmix/mix 0.77; antipoda x1.6; mudo x2.3 | 0.3 | 0.8603 | 0.0725 | 0.0673 | 0.9328 | 0.9999
+efecto grande: pmix/mix 0.65; antipoda x1.6; mudo x2.3 | 0.0 | 0.9922 | 0.0019 | 0.0059 | 0.9954 | 0.9986
+efecto grande: pmix/mix 0.65; antipoda x1.6; mudo x2.3 | 0.3 | 0.9993 | 0.0003 | 0.0004 | 0.9997 | 0.9999

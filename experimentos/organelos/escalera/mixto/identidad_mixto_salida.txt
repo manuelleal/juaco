@@ -1,0 +1,12 @@
+[07:27:37] CORRE_MIXTO · identidad · un proceso (sin Pool) · corre_mixto.py f27edde098cf7a1a
+[07:27:37]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[07:27:37]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[07:27:37]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[07:27:37]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[07:27:37]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[07:27:37]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[07:27:41]   IDENTIDAD mixto([O1_TODO_SEN] * 9) == corre_juntos.tarea(O1_TODO_SEN) · salida ENTERA sin 'seg' · s 738630 T 3000 mueve 1000: True (44602 bytes)
+[07:27:48]   IDENTIDAD mixto([O1_TODO] * 9) == corre_juntos.tarea(O1_TODO) · salida ENTERA sin 'seg' · s 738630 T 3000 mueve 1000: True (39973 bytes)
+[07:27:54]   IDENTIDAD mixto([O1_TODO_PREG] * 9) == corre_juntos.tarea(O1_TODO_PREG) · salida ENTERA sin 'seg' · s 738630 T 3000 mueve 1000: True (33626 bytes)
+[07:28:02]   EL ARNES PUEDE FALLAR: mix != sen9 True · mixbar != mix True
+[07:28:02]   ARNES OK

@@ -1,0 +1,30 @@
+[08:06:51] CORRE_PISA_SERIE · identidad · un proceso · corre_pisa_serie.py 13204ba2ab2cef87
+[08:06:51]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[08:06:51]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[08:06:51]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[08:06:51]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[08:06:51]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[08:06:51]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[08:06:51]   sha mixto\corre_pisa.py 445c27054bfdc82a OK
+[08:06:51]   sha mixto\corre_mixto.py f27edde098cf7a1a OK
+[08:06:51]   sha mixto\construye_pisa.py 85de025f95740bb0 OK
+[08:06:51]   sha mixto\carros\O1_SEN_PISA.py bca8f97bcb6cb353 OK
+[08:06:51]   sha mixto\carros\O1_SEN_PISA_BAR.py 95cda0103eb80b40 OK
+[08:06:51]   sha mixto\carros\O1_SEN_PISA0.py 362a150ded4ff12d OK
+[08:06:51]   carro O1_SEN_PISA == construye_pisa: True
+[08:06:51]   carro O1_SEN_PISA_BAR == construye_pisa: True
+[08:06:51]   carro O1_SEN_PISA0 == construye_pisa: True
+[08:06:51]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[08:06:58]   A1 [O1_SEN_PISA0]*9 == corre_juntos.tarea(O1_TODO_SEN) · s 738632 T 3000 mueve 1000: True (40154 bytes)
+[08:07:03]   A1 [O1_SEN_PISA0]*9 == corre_juntos.tarea(O1_TODO_SEN) · s 738632 T 3000 mueve 0: True (38678 bytes)
+[08:07:10]   A2 mixto([O1_TODO_SEN]*9) == corre_juntos.tarea(O1_TODO_SEN) · mueve 1000: True (40154 bytes)
+[08:07:17]   A2 mixto([O1_TODO]*9) == corre_juntos.tarea(O1_TODO) · mueve 1000: True (44059 bytes)
+[08:07:24]   A2 mixto([O1_TODO_PREG]*9) == corre_juntos.tarea(O1_TODO_PREG) · mueve 1000: True (32714 bytes)
+[08:07:29]   A3 sondas no perturban · pmix: con ganchos == sin ganchos True
+[08:07:34]   A3 sondas no perturban · pmixbar: con ganchos == sin ganchos True
+[08:07:39]   A3 sondas no perturban · pmudo: con ganchos == sin ganchos True
+[08:07:39]   A4 regla 14: kwargs de mundo_tramo_c.run == corre_juntos == {T, pizarra 1, rep_acum 0, escala 1, mundo_n None, fundador_limpio 1} + mundo: True · {'T': 3000, 'pizarra': 1, 'rep_acum': 0, 'escala': 1, 'mundo_n': None, 'fundador_limpio': 1, 'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 1000, 'c_e': 0.01}
+[08:07:45]   A5 el arnes puede fallar (pmix != mix · pmixbar != pmix · pmudo != pmix · explorador en 4 != en 0): [True, True, True, True]
+[08:07:45]   A6 sonda de pisadas: pmix sonda 6 >= telemetria 6 (fund [0, 5, 0, 0, 3, 0, 0, 0, 0]) · clasificacion {'total': 6, 'per0': 2, 'nuevo': 4, 'viejo': 0, 'otro': 0, 'frac_viejo': 0.0, 'frac_nuevo': 1.0} · hereda {'adopta': 0, 'tras_vivir': 0} · mix 0: True
+[08:07:45]   A7 semillas disjuntas y nuevas (7386xx): True
+[08:07:45]   ARNES OK
