@@ -1,0 +1,174 @@
+{
+ "modo": "explora",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_ancla_o1f": null,
+   "V3_mundo_actua": true,
+   "V4_estado": false
+  },
+  "puertas": {
+   "PA_par_o1": false,
+   "PA_suma_o1": true,
+   "PB_par_bar": true,
+   "PB_suma_bar": true,
+   "PM_usa_el_lugar": false
+  },
+  "veredicto": "NO SE LEE",
+  "matiz": null,
+  "en_umbral": true,
+  "umbrales": {
+   "gana_par": 2,
+   "dif_suma": 1,
+   "o1f_may": 2
+  },
+  "pareado_o1": {
+   "n": 2,
+   "gana": 1,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 12,
+   "suma_b": 8,
+   "dif": 4,
+   "por_indice_a": [
+    5,
+    7
+   ],
+   "por_indice_b": [
+    5,
+    3
+   ]
+  },
+  "pareado_bar": {
+   "n": 2,
+   "gana": 2,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 12,
+   "suma_b": 5,
+   "dif": 7,
+   "por_indice_a": [
+    5,
+    7
+   ],
+   "por_indice_b": [
+    2,
+    3
+   ]
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "sen": 12,
+    "senbar": 5,
+    "lug": 8
+   },
+   "mayorias": {
+    "sen": 2,
+    "senbar": 0,
+    "lug": 1
+   },
+   "R0_med": {
+    "sen": 0.9534,
+    "senbar": 0.7158,
+    "lug": 0.8701
+   },
+   "fund_media": {
+    "sen": 6.6111,
+    "senbar": 35.8889,
+    "lug": 30.2778
+   },
+   "establecidos_0fund_post10k": {
+    "sen": 15,
+    "senbar": 11,
+    "lug": 14
+   },
+   "vida_med": {
+    "sen": 2344.25,
+    "senbar": 1322.75,
+    "lug": 1189.75
+   },
+   "mundo_AC": {
+    "sen": 7.8045,
+    "senbar": 8.7717,
+    "lug": 7.1452
+   },
+   "mord_AC": {
+    "sen": 4983.5,
+    "senbar": 4681.5,
+    "lug": 5114.0
+   },
+   "mord_BD": {
+    "sen": 3460.0,
+    "senbar": 3274.0,
+    "lug": 3463.0
+   },
+   "ratio_pasos_oasis": {
+    "sen": 7.34,
+    "senbar": 6.688,
+    "lug": 6.6695
+   },
+   "ratio_mord_oasis": {
+    "sen": 5.6255,
+    "senbar": 5.6265,
+    "lug": 5.336
+   },
+   "lugar": {
+    "sen": {
+     "bono_blancos": 24506.0,
+     "aprendizajes": 7413.0,
+     "viajes": 686145.0,
+     "max_med": 0.3385,
+     "bin_max_en_oasis": 9.0,
+     "bins_con_bono_med": 2.5,
+     "bins_con_bono_en_oasis": 1.0
+    },
+    "senbar": {
+     "bono_blancos": 23126.5,
+     "aprendizajes": 6419.0,
+     "viajes": 654838.0,
+     "max_med": 0.306,
+     "bin_max_en_oasis": 8.0,
+     "bins_con_bono_med": 3.0,
+     "bins_con_bono_en_oasis": 0.8865
+    }
+   },
+   "pareados": {}
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": [
+  "sen",
+  "senbar",
+  "lug"
+ ],
+ "semillas": [
+  739701,
+  739702
+ ],
+ "veredicto": "EXPLORA (no cuenta): NO SE LEE",
+ "nota": "explora1 p7 T100k control lado opuesto",
+ "sha_runner": "392b71186cf49b60",
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028"
+ },
+ "carros": {
+  "O1_LUGAR": "8edb746f7967e877",
+  "O1_LUGAR_BAR": "609736f5ecdfc34c",
+  "O1_LUGAR0": "270f3f838f430ae7",
+  "O1_LUGAR_SENAL": "89fc24ddbc380c88",
+  "O1_LUGAR_SENAL_BAR": "6daecbde1af25209",
+  "O1_LUGAR_SENAL0": "8484caf815513f88"
+ },
+ "mundo": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_fuente_transformada": "488e82252eece5f8",
+  "anclas": 9
+ },
+ "seg": 892.7
+}

@@ -1,0 +1,47 @@
+[20:48:20] CORRE_P7 · humo · 20260930_204820 · python 3.14.2 · pool NO (un proceso) · corre_p7.py c6bb5ec2b3f84038 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p7_humo\humo_s739792-739793_T30000_20260930_204820
+[20:48:20]   semillas 739792-739793 · T 30000 · brazos ['sen', 'senbar', 'lug'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'c_e': 0.01} · reanuda False · nota 'humo 3 CON costo c_e 0.01 (ERR-172: primera corrida de corre_p7.main extremo a extremo)'
+[20:48:20]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[20:48:20]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[20:48:20]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[20:48:20]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[20:48:20]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[20:48:20]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[20:48:20]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[20:48:20]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[20:48:20]   sha corre_p1.py 392b71186cf49b60 OK
+[20:48:20]   carro O1_LUGAR_SENAL == construye_p7: True (sha fab119d6fda1e5f1)
+[20:48:20]   carro O1_LUGAR_SENAL_BAR == construye_p7: True (sha cab7460e91e215e3)
+[20:48:20]   carro O1_LUGAR_SENAL0 == construye_p7: True (sha 8b1a2f02d8894aaa)
+[20:48:20]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': 'b6a70def695e827c', 'anclas': 17}
+[20:48:34]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[20:48:41]   IDENTIDAD CORTA P7 (salida ENTERA, N 9, s 739750, T 1500): mundo_tramo_c c_e 0 == mundo_escalera True · SENAL0 == O1_LUGAR True · SENAL con pizarra 0 y c_e 0.01 == O1_LUGAR (mudo == base) True
+[20:49:11]   [   50.4s] i0 sen    (29.7s) aborto None cruzan 2/9 R0 0.8 fund [0, 1, 0, 0, 0, 3, 0, 12, 0] · oasis ratio pasos 6.921 · escr 969 cobros 969 lee 6770 siembra 49 · latencia med 191.0 (n 41) · mundo AC 8.0249
+[20:49:41]   [   81.0s] i0 senbar (30.6s) aborto None cruzan 0/9 R0 0.1905 fund [4, 0, 23, 16, 17, 77, 52, 85, 2] · oasis ratio pasos 4.933 · escr 761 cobros 761 lee 3822 siembra 109 · latencia med 95.0 (n 32) · mundo AC 8.8774
+[20:50:14]   [  114.0s] i0 lug    (33.0s) aborto None cruzan 1/9 R0 0.5 fund [0, 0, 10, 0, 69, 8, 0, 0, 49] · oasis ratio pasos 6.214 · escr 0 cobros 0 lee None siembra None · latencia med 155.0 (n 29) · mundo AC 7.0669
+[20:50:47]   [  147.2s] i1 sen    (33.3s) aborto None cruzan 2/9 R0 0.8 fund [0, 6, 0, 0, 8, 0, 7, 0, 2] · oasis ratio pasos 6.986 · escr 683 cobros 683 lee 4685 siembra 41 · latencia med 155.0 (n 37) · mundo AC 6.5955
+[20:51:16]   [  175.8s] i1 senbar (28.6s) aborto None cruzan 0/9 R0 0.32 fund [0, 5, 55, 19, 16, 7, 33, 0, 23] · oasis ratio pasos 5.767 · escr 884 cobros 884 lee 5862 siembra 117 · latencia med 225.5 (n 40) · mundo AC 9.1752
+[20:51:50]   [  209.4s] i1 lug    (33.6s) aborto None cruzan 0/9 R0 0.1111 fund [0, 7, 34, 0, 36, 17, 78, 15, 6] · oasis ratio pasos 5.887 · escr 0 cobros 0 lee None siembra None · latencia med 61.5 (n 16) · mundo AC 6.4879
+[20:51:50] 
+================ LA LETRA (escalada a n 2) -- HUMO/EXPLORA: NO cuenta, no se declara
+[20:51:50]   validez: {'V1_completa': True, 'V2_canal_actua': True, 'V3_mundo_actua': True, 'V4_estado': True}
+[20:51:50]   puertas: {'PA_par_lug': True, 'PA_suma_lug': True, 'PB_par_senbar': True, 'PB_suma_senbar': True, 'PF_fund_par': True, 'PM_llega_antes': False} · umbrales {'gana_par': 2, 'dif_suma': 1} · EN EL UMBRAL (+-1): True · matiz gana sin llegar antes (instrumento)
+[20:51:50]   pareado_lug: gana 2 empata 0 pierde 0 · suma 4 vs 1 (dif 3) · por indice [2, 2] vs [1, 0]
+[20:51:50]   pareado_senbar: gana 2 empata 0 pierde 0 · suma 4 vs 0 (dif 4) · por indice [2, 2] vs [0, 0]
+[20:51:50]   pareado_fund (menor gana): gana 2 empata 0 pierde 0 · mediana 2.1667 vs 18.2778
+[20:51:50]   pareado_latencia (menor gana): gana 0 empata 0 pierde 2 · mediana 173.0 vs 108.25
+[20:51:50]   [desc] suma_cruzan: {'sen': 4, 'senbar': 0, 'lug': 1}
+[20:51:50]   [desc] mayorias: {'sen': 0, 'senbar': 0, 'lug': 0}
+[20:51:50]   [desc] R0_med: {'sen': 0.8, 'senbar': 0.2552, 'lug': 0.3055}
+[20:51:50]   [desc] fund_media: {'sen': 2.1667, 'senbar': 24.1111, 'lug': 18.2778}
+[20:51:50]   [desc] establecidos_0fund_post10k: {'sen': 16, 'senbar': 13, 'lug': 13}
+[20:51:50]   [desc] vida_med: {'sen': 1822.5, 'senbar': 285.0, 'lug': 804.0}
+[20:51:50]   [desc] latencia_med: {'sen': 173.0, 'senbar': 160.25, 'lug': 108.25}
+[20:51:50]   [desc] mundo_AC: {'sen': 7.3102, 'senbar': 9.0263, 'lug': 6.7774}
+[20:51:50]   [desc] ratio_pasos_oasis: {'sen': 6.9535, 'senbar': 5.35, 'lug': 6.0505}
+[20:51:50]   [desc] escrituras: {'sen': 826.0, 'senbar': 822.5, 'lug': 0.0}
+[20:51:50]   [desc] cobros: {'sen': 826.0, 'senbar': 822.5, 'lug': 0.0}
+[20:51:50]   [desc] siembras: {'sen': 45.0, 'senbar': 113.0, 'lug': None}
+[20:51:50]   [desc] linajes_que_escriben: {'sen': 18, 'senbar': 18, 'lug': 0}
+[20:51:50] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p7_humo\humo_s739792-739793_T30000_20260930_204820\resumen.json (sha 060700e23affb6a7) · abortos 0 · 209.4s
+[20:51:50] VEREDICTO: HUMO (no cuenta): NO (gana sin llegar antes (instrumento))

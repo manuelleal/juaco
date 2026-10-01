@@ -1,0 +1,256 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_canal_actua": true,
+   "V3_mundo_actua": true,
+   "V4_estado": true
+  },
+  "puertas": {
+   "PA_par_lug": true,
+   "PA_suma_lug": true,
+   "PB_par_senbar": true,
+   "PB_suma_senbar": true,
+   "PF_fund_par": true,
+   "PM_llega_antes": false
+  },
+  "veredicto": "NO",
+  "matiz": "gana sin llegar antes (instrumento)",
+  "en_umbral": true,
+  "umbrales": {
+   "gana_par": 2,
+   "dif_suma": 1
+  },
+  "pareado_lug": {
+   "n": 2,
+   "gana": 2,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 4,
+   "suma_b": 1,
+   "dif": 3,
+   "por_indice_a": [
+    2,
+    2
+   ],
+   "por_indice_b": [
+    1,
+    0
+   ]
+  },
+  "pareado_senbar": {
+   "n": 2,
+   "gana": 2,
+   "empata": 0,
+   "pierde": 0,
+   "suma_a": 4,
+   "suma_b": 0,
+   "dif": 4,
+   "por_indice_a": [
+    2,
+    2
+   ],
+   "por_indice_b": [
+    0,
+    0
+   ]
+  },
+  "pareado_fund": {
+   "n": 2,
+   "gana": 2,
+   "empata": 0,
+   "pierde": 0,
+   "med_a": 2.1667,
+   "med_b": 18.2778,
+   "por_indice_a": [
+    1.7777777777777777,
+    2.5555555555555554
+   ],
+   "por_indice_b": [
+    15.11111111111111,
+    21.444444444444443
+   ]
+  },
+  "pareado_latencia": {
+   "n": 2,
+   "gana": 0,
+   "empata": 0,
+   "pierde": 2,
+   "med_a": 173.0,
+   "med_b": 108.25,
+   "por_indice_a": [
+    191.0,
+    155.0
+   ],
+   "por_indice_b": [
+    155.0,
+    61.5
+   ]
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "sen": 4,
+    "senbar": 0,
+    "lug": 1
+   },
+   "mayorias": {
+    "sen": 0,
+    "senbar": 0,
+    "lug": 0
+   },
+   "R0_med": {
+    "sen": 0.8,
+    "senbar": 0.2552,
+    "lug": 0.3055
+   },
+   "fund_media": {
+    "sen": 2.1667,
+    "senbar": 24.1111,
+    "lug": 18.2778
+   },
+   "establecidos_0fund_post10k": {
+    "sen": 16,
+    "senbar": 13,
+    "lug": 13
+   },
+   "vida_med": {
+    "sen": 1822.5,
+    "senbar": 285.0,
+    "lug": 804.0
+   },
+   "latencia_med": {
+    "sen": 173.0,
+    "senbar": 160.25,
+    "lug": 108.25
+   },
+   "mundo_AC": {
+    "sen": 7.3102,
+    "senbar": 9.0263,
+    "lug": 6.7774
+   },
+   "ratio_pasos_oasis": {
+    "sen": 6.9535,
+    "senbar": 5.35,
+    "lug": 6.0505
+   },
+   "escrituras": {
+    "sen": 826.0,
+    "senbar": 822.5,
+    "lug": 0.0
+   },
+   "cobros": {
+    "sen": 826.0,
+    "senbar": 822.5,
+    "lug": 0.0
+   },
+   "siembras": {
+    "sen": 45.0,
+    "senbar": 113.0,
+    "lug": null
+   },
+   "linajes_que_escriben": {
+    "sen": 18,
+    "senbar": 18,
+    "lug": 0
+   },
+   "pareados": {
+    "sen_vs_lug": {
+     "n": 2,
+     "gana": 2,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 4,
+     "suma_b": 1,
+     "dif": 3,
+     "por_indice_a": [
+      2,
+      2
+     ],
+     "por_indice_b": [
+      1,
+      0
+     ]
+    },
+    "sen_vs_senbar": {
+     "n": 2,
+     "gana": 2,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 4,
+     "suma_b": 0,
+     "dif": 4,
+     "por_indice_a": [
+      2,
+      2
+     ],
+     "por_indice_b": [
+      0,
+      0
+     ]
+    },
+    "senbar_vs_lug": {
+     "n": 2,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 1,
+     "suma_a": 0,
+     "suma_b": 1,
+     "dif": -1,
+     "por_indice_a": [
+      0,
+      0
+     ],
+     "por_indice_b": [
+      1,
+      0
+     ]
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "sen",
+  "senbar",
+  "lug"
+ ],
+ "semillas": [
+  739792,
+  739793
+ ],
+ "veredicto": "HUMO (no cuenta): NO (gana sin llegar antes (instrumento))",
+ "nota": "humo 3 CON costo c_e 0.01 (ERR-172: primera corrida de corre_p7.main extremo a extremo)",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "c_e": 0.01
+ },
+ "sha_runner": "ba315413079eca98",
+ "sha_corre_p1": "392b71186cf49b60",
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028"
+ },
+ "carros": {
+  "O1_LUGAR_SENAL": "fab119d6fda1e5f1",
+  "O1_LUGAR_SENAL_BAR": "cab7460e91e215e3",
+  "O1_LUGAR_SENAL0": "8b1a2f02d8894aaa",
+  "O1_LUGAR": "49eee6bb278ea097"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "b6a70def695e827c",
+  "anclas": 17
+ },
+ "seg": 209.4
+}

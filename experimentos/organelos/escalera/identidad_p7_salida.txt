@@ -1,0 +1,65 @@
+ARNES identidad_p7.py (T 4000)
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+      carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+      carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+      mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+      sha corre_p1.py 392b71186cf49b60 OK
+      sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+      carro O1_LUGAR_SENAL == construye_p7: True (sha fab119d6fda1e5f1)
+      carro O1_LUGAR_SENAL_BAR == construye_p7: True (sha cab7460e91e215e3)
+      carro O1_LUGAR_SENAL0 == construye_p7: True (sha 8b1a2f02d8894aaa)
+      mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+  OK    (K) verifica(): shas fijados (pista, juez, O1, corre_v143, corre_p1), carros P1 == construye_p1, carros P7 == construye_p7, mundos construidos
+  OK    (K) construye_p1.py sha == 90dc1b6f848fac80 y texto de O1_LUGAR == 49eee6bb278ea097
+  OK    (K) mundo_escalera.py sha == 4f28b372207ba0a6
+  OK    (K) chequeo estatico O1_LUGAR_SENAL: PASA
+  OK    (K) chequeo estatico O1_LUGAR_SENAL_BAR: PASA
+  OK    (K) chequeo estatico O1_LUGAR_SENAL0: PASA
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+  OK    (K) identidad corta de corre_p1 (mundo oasis 0 == pista; O1_LUGAR0 == O1; O1_LUGAR sin oasis == O1)
+      IDENTIDAD CORTA P7 (salida ENTERA, N 9, s 739750, T 1500): mundo_tramo_c c_e 0 == mundo_escalera True · SENAL0 == O1_LUGAR True · SENAL con pizarra 0 y c_e 0.01 == O1_LUGAR (mudo == base) True
+  OK    (K) identidad corta de corre_p7 (c_e 0 == mundo_escalera; SENAL0 == O1_LUGAR; SENAL con pizarra 0 == O1_LUGAR)
+  OK    (M) mundo_tramo_c c_e 0 == mundo_escalera BIT A BIT (salida entera, s 739751, T 4000) y mismo rng final
+  OK    (M) c_e 0.01 con O1_LUGAR (no escribe) == c_e 0 en los linajes (salvo 'cobros' = 0) y rng
+  OK    (M) c_e 0.01 con SENAL: cobros por linaje [5, 12, 12, 1, 26, 6, 6, 29, 18] == escrituras aceptadas [5, 12, 12, 1, 26, 6, 6, 29, 18]; fisica != c_e 0 (el costo actua)
+  OK    (C) SENAL0 == O1_LUGAR BIT A BIT (salida entera, mundo P1b, s 739751, T 4000)
+  OK    (C) SENAL con la pizarra apagada (y c_e) == O1_LUGAR en los linajes (mudo == base; escrituras descartadas 151)
+  OK    (C) SENAL != O1_LUGAR con pizarra (el canal actua): escrituras [5, 12, 12, 1, 26, 6, 6, 29, 18] (> 0), siembras [4, 5, 5, 5, 4, 4, 4, 5, 3] (> 0)
+  OK    (C) SENAL_BAR != SENAL y != O1_LUGAR; siembras BAR [1, 3, 3, 3, 3, 3, 3, 3, 2]; bins con bono [[4, 5, 18], [18, 21], [18, 21], [18, 21], [18, 21], [18, 21], [18, 21], [18, 21], [4, 5, 21]] vs oasis [3, 4, 5, 6]: ningun linaje que solo oyo (sin morder) tiene bono en el oasis (0 lo tienen)
+  OK    (m) SENAL: los linajes que SOLO oyeron (sin morder) [8] tienen todos sus bins con bono DENTRO del oasis (1/1; bins [[3, 6]] vs oasis [3, 4, 5, 6])
+  OK    (m) latencia por vida registrada en SENAL (vidas con bocado dentro: [1, 3, 3, 2, 2, 2, 2, 2, 3]; todas en [0, T])
+  OK    (a) regla 14: corre_p7.tarea('lug', c_e 0) == corre_p1.tarea('lug') campo a campo (s 739752, T 2000; salvo seg/estado/tel)
+  OK    (a) regla 14 (cadena): corre_p1.tarea('o1f') == corre_v143.tarea campo a campo
+  OK    (a) el runner deja pista.run como estaba
+  OK    (e) trabajo sen sin aborto (None); fila con oasis, pizarra (escr 47, cobros 47), senal, latencia y estado (c_e 0.01)
+  OK    (e) --reanuda relee igual
+  OK    (e) trabajo lug: sin escrituras ni cobros; estado SENAL 0
+  OK    (e) brazo desconocido -> aborto escrito (nube-9)
+  OK    (f) FUNCIONA: sen 8 contra 7 (lug y senbar) 20/20, menos fundadores, llegan mas vidas al oasis (0.8 vs 0.5)
+  OK    (f) NO: sen == lug == senbar en todo
+  OK    (f) NO: gana a lug pero no a senbar (el canal con contenido equivocado iguala: lo que paga es hablar, no el contenido)
+  OK    (f) gana cruce y fundadores pero NO llegan mas vidas (PM): NO (gana sin que lleguen mas vidas al oasis (instrumento))
+  OK    (f) MODESTO: cruce solo por suma (gana 12, +24), fundadores y PM si: HAY ALGO MODESTO umbral True
+  OK    (f) NO: fundadores y PM mejores pero cruce igual a lug Y a senbar (PB cae): NO
+  OK    (f) NO SE LEE: un aborto
+  OK    (f) NO SE LEE: el canal no actua (0 escrituras en sen)
+  OK    (g) semillas: serie, replica, explora, humo y arnes disjuntas entre si y de las de P1, y en 7396xx-7397xx
+usage: identidad_p7.py [-h] (--humo | --explora | --serie | --replica |
+                       --lee LEE) [--pool POOL] [--reanuda] [--T T] [--n N]
+                       [--brazos BRAZOS] [--desde DESDE] [--nota NOTA]
+                       [--c_e C_E]
+identidad_p7.py: error: one of the arguments --humo --explora --serie --replica --lee is required
+usage: identidad_p7.py [-h] (--humo | --explora | --serie | --replica |
+                       --lee LEE) [--pool POOL] [--reanuda] [--T T] [--n N]
+                       [--brazos BRAZOS] [--desde DESDE] [--nota NOTA]
+                       [--c_e C_E]
+identidad_p7.py: error: unrecognized arguments: --x
+  OK    (g) banderas desconocidas o abreviadas abortan (--hum, --humo --x)
+  OK    (g) --humo con --pool aborta; --pool 3 aborta; --serie --T aborta; --humo --n 3 (9 corridas) aborta; --explora --T 250000 aborta
+  OK    (g) el humo cabe: 6 corridas de 30000 · la exploracion: 6 de 100000
+
+ARNES PASA, 36/36 · 76.3s
