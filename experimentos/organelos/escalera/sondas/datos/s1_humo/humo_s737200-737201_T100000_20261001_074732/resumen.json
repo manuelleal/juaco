@@ -1,0 +1,140 @@
+{
+ "sonda": 1,
+ "resumen": {
+  "brazos": {
+   "piso": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 8,
+    "cruzan_por_corrida": [
+     3,
+     5
+    ],
+    "establecidos": 14,
+    "R0_med": 0.8152,
+    "vida_med": 948.0,
+    "fund_media": 35.0,
+    "mundo_AC": 6.1017,
+    "mundo_K": 3.5073,
+    "ratio_pasos_oasis": 6.3505,
+    "g_ef_1k": 2.6981,
+    "g_nom_1k": 4.2502,
+    "plus_ef_1k": 0.0,
+    "plus_nom_1k": 0.0,
+    "frac_llave": 0.0119,
+    "mord_K": 103,
+    "con": 63,
+    "sin": 5233,
+    "adel": 29,
+    "partos": 449,
+    "muertes": 1079,
+    "mord_AC": 10239,
+    "mord_BD": 7001
+   },
+   "regalo": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 6,
+    "cruzan_por_corrida": [
+     3,
+     3
+    ],
+    "establecidos": 13,
+    "R0_med": 0.6571,
+    "vida_med": 1139.5,
+    "fund_media": 35.8889,
+    "mundo_AC": 6.2283,
+    "mundo_K": 4.9252,
+    "ratio_pasos_oasis": 6.125,
+    "g_ef_1k": 3.1981,
+    "g_nom_1k": 4.8164,
+    "plus_ef_1k": 0.0,
+    "plus_nom_1k": 0.0,
+    "frac_llave": 1.0,
+    "mord_K": 112,
+    "con": 6232,
+    "sin": 0,
+    "adel": 2384,
+    "partos": 476,
+    "muertes": 1122,
+    "mord_AC": 11771,
+    "mord_BD": 8793
+   },
+   "techo": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 7,
+    "cruzan_por_corrida": [
+     4,
+     3
+    ],
+    "establecidos": 13,
+    "R0_med": 0.711,
+    "vida_med": 910.0,
+    "fund_media": 24.5556,
+    "mundo_AC": 7.3224,
+    "mundo_K": 0.7439,
+    "ratio_pasos_oasis": 6.732,
+    "g_ef_1k": 2.9594,
+    "g_nom_1k": 4.6328,
+    "plus_ef_1k": 0.0,
+    "plus_nom_1k": 0.0,
+    "frac_llave": 0.2375,
+    "mord_K": 651,
+    "con": 1384,
+    "sin": 4445,
+    "adel": 585,
+    "partos": 442,
+    "muertes": 884,
+    "mord_AC": 10649,
+    "mord_BD": 7288
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": "piso,techo,regalo",
+ "semillas": [
+  737200,
+  737201
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.03,
+  "cerrojo": 0
+ },
+ "perillas_base": {
+  "plus": 0.0,
+  "d_plus": 600,
+  "extra_sin": null,
+  "adelanta": 250
+ },
+ "nota": "humo 4: plus REPRODUCTIVO (con llave, el bocado dentro adelanta 250 pasos la ventana de parto; extra 0.8 siempre, plus energetico 0); mismas semillas",
+ "sha_runner": "5f9b831d4c3fab31",
+ "sha_mundo_plus": "cb68a7266b61540b",
+ "carros": {
+  "O1_LUGAR_ORAC": "adc55edae3a6a9f5",
+  "O1_LUGAR_AZAR": "2b888d7de60d96b0",
+  "O1_LUGAR_ORAC0": "03f47a545b3a30e2"
+ },
+ "mundo_plus": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17,
+  "oasis": "OasisPlus",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "seg": 690.0
+}

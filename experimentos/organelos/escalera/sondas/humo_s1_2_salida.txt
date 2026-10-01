@@ -1,0 +1,42 @@
+[07:17:13] CORRE_S1 (sonda 1: piso y techo, llave no letal) · python 3.14.2 · un proceso · corre_s1.py 6e7838d804a36963
+[07:17:13]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:17:13]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:17:13]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:17:13]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:17:13]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[07:17:13]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[07:17:13]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[07:17:13]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[07:17:13]   carro O1_LUGAR_ORAC == construye_orac: True (sha adc55edae3a6a9f5)
+[07:17:13]   carro O1_LUGAR_AZAR == construye_orac: True (sha 2b888d7de60d96b0)
+[07:17:13]   carro O1_LUGAR_ORAC0 == construye_orac: True (sha 03f47a545b3a30e2)
+[07:17:13]   mundo_plus: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17, 'oasis': 'OasisPlus', 'sha_mundo_tramo_c': '4a1044a4e0e1d5c9'} · mundo_plus.py 70100a9a0efe98f0
+[07:17:25]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[07:17:30]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[07:17:52]   OK    M1 mundo_plus apagado, sin letra == mundo_tramo_c
+[07:17:52]   OK    M2 mundo_plus apagado, con K == mundo_tramo_c con K
+[07:17:52]   OK    M3 ORAC0 == O1_LUGAR (mundo_tramo_c con K)
+[07:17:52]   OK    M4 ORAC0 == O1_LUGAR (mundo_plus plus 0.4)
+[07:17:52]   OK    E1 plus 0.4 ENCIENDE (difiere de apagado)
+[07:17:52]   OK    E2 regalo ENCIENDE (difiere de apagado)
+[07:17:52]   OK    E3 extra_sin 0.4 ENCIENDE
+[07:17:52]   OK    M5 extra_sin 0.8 (= extra) y plus 0: fisica == apagado (salvo telemetria plus)
+[07:17:52]   OK    E4 ORAC ENCIENDE (difiere de O1_LUGAR)
+[07:17:52]   OK    E5 AZAR ENCIENDE y difiere de ORAC
+[07:17:52]   OK    R1 ORAC repetido == ORAC (determinista)
+[07:17:52]   OK    M6 tras fija(): otra vez == mundo_tramo_c con K
+[07:17:52]   (mord_K, bocados con llave) en T 1500: O1_LUGAR (4, 0) · ORAC (5, 1) · AZAR (4, 2) · regalo (4, 29)
+[07:17:52]   ARNES SONDA 1: 12/12 TODO OK (s 737400, T 1500)
+[07:17:52]   semillas 737200-737201 · T 100000 · brazos regalo,piso@extra_sin=0.4+plus=0,regalo@extra_sin=0.4+plus=0 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'letra_x': 'K', 'efecto_x': (0.0, 0.0), 'p_x': 0.03, 'cerrojo': 0} · perillas base {'plus': 0.4, 'd_plus': 600, 'extra_sin': None} · nota 'humo 2: cota dura (regalo) en el mundo del encargo + mundo extra_sin 0.4 (sin llave 0.4, con llave 0.8): piso y regalo; mismas semillas del humo 1' · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\sondas\datos\s1_humo\humo_s737200-737201_T100000_20261001_071752
+[07:19:37]   [  144.2s] i0 regalo                 (104.6s) aborto None cruzan 2/9 estab 6 R0 0.6 vida 925.5 fund [0, 6, 238, 32, 0, 15, 9, 56, 40] · ratio oasis 6.86 · mundo AC 7.7861 · plus {'con': 2125, 'sin': 0, 'frac_llave': 1.0, 'mord_K': 66, 'g_ef_1k': 2.8827, 'g_nom_1k': 5.3929, 'plus_ef_1k': 0.6203, 'plus_nom_1k': 1.8889, 'or_idas': 0, 'mundo_K': 2.5761}
+[07:21:18]   [  245.7s] i0 piso@extra_sin=0.4+plus=0 (101.5s) aborto None cruzan 4/9 estab 6 R0 0.6389 vida 600.0 fund [0, 25, 0, 83, 0, 147, 1, 52, 12] · ratio oasis 5.942 · mundo AC 5.8023 · plus {'con': 37, 'sin': 3343, 'frac_llave': 0.0109, 'mord_K': 52, 'g_ef_1k': 2.5559, 'g_nom_1k': 3.7587, 'plus_ef_1k': 0.0072, 'plus_nom_1k': 0.0164, 'or_idas': 0, 'mundo_K': 4.5498}
+[07:23:03]   [  349.8s] i0 regalo@extra_sin=0.4+plus=0 (104.1s) aborto None cruzan 3/9 estab 7 R0 0.7576 vida 1052.0 fund [0, 320, 10, 58, 0, 17, 7, 4, 0] · ratio oasis 6.22 · mundo AC 6.3315 · plus {'con': 2726, 'sin': 0, 'frac_llave': 1.0, 'mord_K': 77, 'g_ef_1k': 2.7531, 'g_nom_1k': 4.4151, 'plus_ef_1k': 0.582, 'plus_nom_1k': 1.2116, 'or_idas': 0, 'mundo_K': 3.5264}
+[07:24:50]   [  457.7s] i1 regalo                 (107.9s) aborto None cruzan 4/9 estab 7 R0 0.8889 vida 1983.0 fund [0, 0, 220, 0, 0, 18, 1, 12, 5] · ratio oasis 6.963 · mundo AC 7.7694 · plus {'con': 2088, 'sin': 0, 'frac_llave': 1.0, 'mord_K': 49, 'g_ef_1k': 2.8727, 'g_nom_1k': 5.2378, 'plus_ef_1k': 0.661, 'plus_nom_1k': 1.856, 'or_idas': 0, 'mundo_K': 3.1955}
+[07:26:32]   [  558.9s] i1 piso@extra_sin=0.4+plus=0 (101.2s) aborto None cruzan 3/9 estab 5 R0 0.6765 vida 1502.5 fund [2, 0, 10, 113, 0, 0, 213, 38, 20] · ratio oasis 5.872 · mundo AC 5.998 · plus {'con': 35, 'sin': 3304, 'frac_llave': 0.0105, 'mord_K': 85, 'g_ef_1k': 2.4402, 'g_nom_1k': 3.6156, 'plus_ef_1k': 0.0068, 'plus_nom_1k': 0.0156, 'or_idas': 0, 'mundo_K': 4.8769}
+[07:28:20]   [  667.4s] i1 regalo@extra_sin=0.4+plus=0 (108.5s) aborto None cruzan 4/9 estab 7 R0 0.88 vida 1173.0 fund [2, 5, 35, 0, 0, 0, 17, 75, 2] · ratio oasis 6.884 · mundo AC 6.076 · plus {'con': 2587, 'sin': 0, 'frac_llave': 1.0, 'mord_K': 25, 'g_ef_1k': 2.6754, 'g_nom_1k': 4.0831, 'plus_ef_1k': 0.6069, 'plus_nom_1k': 1.1498, 'or_idas': 0, 'mundo_K': 3.8716}
+[07:28:20] 
+================ RESUMEN (humo: NO cuenta, no se declara)
+[07:28:20]   piso@extra_sin=0.4+plus=0 {'n': 2, 'linajes': 18, 'cruzan': 7, 'cruzan_por_corrida': [4, 3], 'establecidos': 11, 'R0_med': 0.6577, 'vida_med': 1051.25, 'fund_media': 39.7778, 'mundo_AC': 5.9002, 'mundo_K': 4.7134, 'ratio_pasos_oasis': 5.907, 'g_ef_1k': 2.4981, 'g_nom_1k': 3.6871, 'plus_ef_1k': 0.007, 'plus_nom_1k': 0.016, 'frac_llave': 0.0107, 'mord_K': 137, 'con': 72, 'sin': 6647, 'mord_AC': 12795, 'mord_BD': 9713}
+[07:28:20]   regalo                 {'n': 2, 'linajes': 18, 'cruzan': 6, 'cruzan_por_corrida': [2, 4], 'establecidos': 13, 'R0_med': 0.7445, 'vida_med': 1454.25, 'fund_media': 36.2222, 'mundo_AC': 7.7778, 'mundo_K': 2.8858, 'ratio_pasos_oasis': 6.9115, 'g_ef_1k': 2.8777, 'g_nom_1k': 5.3154, 'plus_ef_1k': 0.6406, 'plus_nom_1k': 1.8725, 'frac_llave': 1.0, 'mord_K': 115, 'con': 4213, 'sin': 0, 'mord_AC': 8125, 'mord_BD': 5271}
+[07:28:20]   regalo@extra_sin=0.4+plus=0 {'n': 2, 'linajes': 18, 'cruzan': 7, 'cruzan_por_corrida': [3, 4], 'establecidos': 14, 'R0_med': 0.8188, 'vida_med': 1112.5, 'fund_media': 30.6667, 'mundo_AC': 6.2037, 'mundo_K': 3.699, 'ratio_pasos_oasis': 6.552, 'g_ef_1k': 2.7142, 'g_nom_1k': 4.2491, 'plus_ef_1k': 0.5944, 'plus_nom_1k': 1.1807, 'frac_llave': 1.0, 'mord_K': 102, 'con': 5313, 'sin': 0, 'mord_AC': 10136, 'mord_BD': 6954}
+[07:28:20]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\sondas\datos\s1_humo\humo_s737200-737201_T100000_20261001_071752\resumen.json · abortos 0 · 667.4s

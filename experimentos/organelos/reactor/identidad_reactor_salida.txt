@@ -1,0 +1,27 @@
+identidad_reactor · 2026-10-01 07:30:06 · semilla 49701 · brazo BLOQ_V · T 200000
+(K) shas
+  [PASA] nucleo_eco_sel_ing.py c2189f9d22b72386
+  [PASA] motor_frio_rapido.py ff9d890a5cce9dec
+  [PASA] motor_bloques.py ff782697e54585a5
+  [PASA] corre_bloques.py a090b82eae9f1ee3
+      sonda_reactor.py 3bd8b95238400f3e · identidad_reactor.py b6075648b88cb311
+      MUNDO original: {'esc': 90, 'n0': 90, 'carro': 'FABRICA_ECO', 'tope': 3000, 'muestra': 1000}
+  [PASA] MUNDO original de BLOQUES es esc 90, n0 90, tope 3000 
+(I) corre_bloques.corre() [A] == sonda_reactor.corre_reactor(esc 90, n0 90, tope 3000, ganchos puestos) [B]
+      A 13.9 s · B 12.9 s · A: K 4.2772277227722775 persiste 0 n_nac 4432 vivos_T 0
+  [PASA] M_*.json igual (todas las claves menos seg) 3344b649511e5e3f / 3344b649511e5e3f dif [] · 25 claves
+  [PASA] JSON del nucleo igual (todas las claves menos seg) 5eda72b0dbf886f8 / 5eda72b0dbf886f8 dif [] · 62 claves
+  [FALLA] la corrida no es trivial (hubo nacimientos, reglas y vivos al final) n_nac 4432 ins 547 vivos 0
+(C) control que debe fallar: el comparador ve un cambio de un campo
+  [PASA] K + 1e-9 -> distinto 
+  [PASA] tam_total[-1] + 1 -> distinto 
+(G) ganchos
+  [PASA] gancho de parto llamado == n_hijos del motor 4432 / 4432
+  [PASA] gancho de fundador llamado == n_fund del motor 22109 / 22109
+  [PASA] espejo del banco sincronizado 0
+  [PASA] genealogia completa (ninguna fila faltante en la ascendencia) sin_fila 0 de 26631 cuerpos
+  [PASA] eventos contados por los ganchos == operadores del motor 2871 / 2871
+(M) MUNDO restaurado
+  [PASA] MUNDO == original 
+esc    90 n0  90 s49701 BLOQ_V: vivos media 58.4 (2a mitad 5.8, min 2a 0, max 109, T 0) · 1.262 us/cuerpo·paso · 6.42 s/100k · linajes t20k 90 -> T 0 · largo 0.031578947368421054 -> 1.0 · formas 3 -> 1 (>=50 %: 0 -> 1) · prof eventos T/2 2.7083333333333335 -> T None · reemplazos/cuerpo 2a mitad 45.05 · persiste 0 · bloqueados 0 · rechazo None · ganchos {'hijo': 4432, 'fund': 22109, 'desinc': 0}
+RESULTADO: 15/16 FALLA

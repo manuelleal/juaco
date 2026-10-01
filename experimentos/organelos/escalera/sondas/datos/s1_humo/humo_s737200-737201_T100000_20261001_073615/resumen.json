@@ -1,0 +1,130 @@
+{
+ "sonda": 1,
+ "resumen": {
+  "brazos": {
+   "piso@extra_sin=0.2+plus=0": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 3,
+    "cruzan_por_corrida": [
+     2,
+     1
+    ],
+    "establecidos": 8,
+    "R0_med": 0.5657,
+    "vida_med": 722.25,
+    "fund_media": 66.4444,
+    "mundo_AC": 4.514,
+    "mundo_K": 5.1098,
+    "ratio_pasos_oasis": 4.7015,
+    "g_ef_1k": 1.9863,
+    "g_nom_1k": 3.3089,
+    "plus_ef_1k": 0.0164,
+    "plus_nom_1k": 0.032,
+    "frac_llave": 0.0124,
+    "mord_K": 228,
+    "con": 96,
+    "sin": 7620,
+    "mord_AC": 15382,
+    "mord_BD": 12210
+   },
+   "piso@extra_sin=0+plus=0": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 4,
+    "cruzan_por_corrida": [
+     2,
+     2
+    ],
+    "establecidos": 4,
+    "R0_med": 0.3019,
+    "vida_med": 200.0,
+    "fund_media": 106.4444,
+    "mundo_AC": 4.828,
+    "mundo_K": 5.1548,
+    "ratio_pasos_oasis": 3.764,
+    "g_ef_1k": 1.4194,
+    "g_nom_1k": 2.7329,
+    "plus_ef_1k": 0.0333,
+    "plus_nom_1k": 0.0538,
+    "frac_llave": 0.0138,
+    "mord_K": 372,
+    "con": 121,
+    "sin": 8836,
+    "mord_AC": 18095,
+    "mord_BD": 14996
+   },
+   "regalo@extra_sin=0.2+plus=0": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 7,
+    "cruzan_por_corrida": [
+     3,
+     4
+    ],
+    "establecidos": 14,
+    "R0_med": 0.8188,
+    "vida_med": 1112.5,
+    "fund_media": 30.6667,
+    "mundo_AC": 6.2037,
+    "mundo_K": 3.699,
+    "ratio_pasos_oasis": 6.552,
+    "g_ef_1k": 2.7142,
+    "g_nom_1k": 4.2491,
+    "plus_ef_1k": 1.0652,
+    "plus_nom_1k": 1.771,
+    "frac_llave": 1.0,
+    "mord_K": 102,
+    "con": 5313,
+    "sin": 0,
+    "mord_AC": 10136,
+    "mord_BD": 6954
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": "piso@extra_sin=0.2+plus=0,regalo@extra_sin=0.2+plus=0,piso@extra_sin=0+plus=0",
+ "semillas": [
+  737200,
+  737201
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.03,
+  "cerrojo": 0
+ },
+ "perillas_base": {
+  "plus": 0.4,
+  "d_plus": 600,
+  "extra_sin": null
+ },
+ "nota": "humo 3: barrido de extra_sin (0.2 y 0.0; con llave 0.8): donde cae el piso; regalo@extra_sin=0 es P1b = piso del humo 1; mismas semillas",
+ "sha_runner": "5f9b831d4c3fab31",
+ "sha_mundo_plus": "cb68a7266b61540b",
+ "carros": {
+  "O1_LUGAR_ORAC": "adc55edae3a6a9f5",
+  "O1_LUGAR_AZAR": "2b888d7de60d96b0",
+  "O1_LUGAR_ORAC0": "03f47a545b3a30e2"
+ },
+ "mundo_plus": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17,
+  "oasis": "OasisPlus",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "seg": 656.3
+}
