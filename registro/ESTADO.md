@@ -36,6 +36,13 @@ Los tres son DISEÑO DIRIGIDO (ingeniería genética sobre O1) y valen EN EL MUN
 | P3–P6 germen/soma, órganos, nervio, cerebro | diseñados, sin correr (dependen de P2 o de ECO grande) |
 | Tramo D sexo y familia | instrumentado; sin señal: el mundo de 9 no tiene población para familias |
 
+## Novedad de la madrugada (1-oct, 02:25): "los tres juntos"
+**NO SUMAN** en serie (`f3054b56`, preregistro `1b5e483f`): el organismo con memoria + señal + ir a lo menos visitado cruza 159 de 180, contra
+163 de memoria + pregunta, 129 de memoria + señal, 88 de sólo memoria y 90 con la señal leída al antípoda. No se estorban; la señal no agrega
+cruce sobre memoria + pregunta, pero su contenido sí importa (al revés cae a 90). Mayorías 20/20 en los tres primeros. Quedó EN EL UMBRAL
+(todo vs sen 14/20 con corte 13): **réplica lanzada a las 02:23**; si el apagado de las 4:00 la corta, retomar con
+`python experimentos/organelos/escalera/juntos/corre_juntos.py --replica --pool 2 --reanuda`.
+
 ## Otra sesión (JUACO 5, rama `o1-libre`)
 O1 libre con poderes: HAY ALGO MODESTO en serie (la selección prende sólo la memoria de lugar, 10/10). Réplica lanzada a las 22:55, ~3:20.
 
