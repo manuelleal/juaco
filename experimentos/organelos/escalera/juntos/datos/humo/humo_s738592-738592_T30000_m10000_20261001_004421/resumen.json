@@ -1,0 +1,469 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_mundo_pide": true,
+   "V3_mundo_actua": true,
+   "V4_estado": true,
+   "V5_modulos_actuan": true,
+   "V6_bandas": false
+  },
+  "puertas": {
+   "S_par_sen": true,
+   "S_suma_sen": true,
+   "S_par_preg": true,
+   "S_suma_preg": true,
+   "C_par_todobar": true,
+   "C_suma_todobar": true,
+   "E_estorban": false
+  },
+  "veredicto": "NO SE LEE",
+  "matiz": null,
+  "en_umbral": true,
+  "umbrales": {
+   "gana_par": 1,
+   "dif_suma": 1
+  },
+  "mejor_pareja": "sen",
+  "techo": {
+   "sen": {
+    "semillas_en_9": 0,
+    "ganables": 1,
+    "margen_suma": 4
+   },
+   "preg": {
+    "semillas_en_9": 0,
+    "ganables": 1,
+    "margen_suma": 8
+   },
+   "SUMAN_alcanzable": true
+  },
+  "pareados": {
+   "sen": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 7,
+    "suma_b": 5,
+    "dif": 2,
+    "por_indice_a": [
+     7
+    ],
+    "por_indice_b": [
+     5
+    ]
+   },
+   "sen_inv": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "suma_a": 5,
+    "suma_b": 7,
+    "dif": -2,
+    "por_indice_a": [
+     5
+    ],
+    "por_indice_b": [
+     7
+    ]
+   },
+   "preg": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 7,
+    "suma_b": 1,
+    "dif": 6,
+    "por_indice_a": [
+     7
+    ],
+    "por_indice_b": [
+     1
+    ]
+   },
+   "preg_inv": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "suma_a": 1,
+    "suma_b": 7,
+    "dif": -6,
+    "por_indice_a": [
+     1
+    ],
+    "por_indice_b": [
+     7
+    ]
+   },
+   "todobar": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "suma_a": 7,
+    "suma_b": 0,
+    "dif": 7,
+    "por_indice_a": [
+     7
+    ],
+    "por_indice_b": [
+     0
+    ]
+   }
+  },
+  "sombra": {
+   "fund_todo_menor_que_sen": {
+    "n": 1,
+    "gana": 0,
+    "empata": 0,
+    "pierde": 1,
+    "med_a": 2.6667,
+    "med_b": 1.7778,
+    "por_indice_a": [
+     2.6666666666666665
+    ],
+    "por_indice_b": [
+     1.7777777777777777
+    ]
+   },
+   "latencia_todo_menor_que_sen": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "med_a": 363.0,
+    "med_b": 962.0,
+    "por_indice_a": [
+     363.0
+    ],
+    "por_indice_b": [
+     962.0
+    ]
+   },
+   "fund_todo_menor_que_preg": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "med_a": 2.6667,
+    "med_b": 5.3333,
+    "por_indice_a": [
+     2.6666666666666665
+    ],
+    "por_indice_b": [
+     5.333333333333333
+    ]
+   },
+   "latencia_todo_menor_que_preg": {
+    "n": 1,
+    "gana": 1,
+    "empata": 0,
+    "pierde": 0,
+    "med_a": 363.0,
+    "med_b": 672.5,
+    "por_indice_a": [
+     363.0
+    ],
+    "por_indice_b": [
+     672.5
+    ]
+   },
+   "SUMAN_en_sombra": true
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "todo": 7,
+    "sen": 5,
+    "preg": 1,
+    "lug": 2,
+    "todobar": 0
+   },
+   "mayorias": {
+    "todo": 1,
+    "sen": 1,
+    "preg": 0,
+    "lug": 0,
+    "todobar": 0
+   },
+   "R0_med": {
+    "todo": 0.9231,
+    "sen": 0.9167,
+    "preg": 0.8,
+    "lug": 0.6667,
+    "todobar": 0.7
+   },
+   "fund_media": {
+    "todo": 2.6667,
+    "sen": 1.7778,
+    "preg": 5.3333,
+    "lug": 15.4444,
+    "todobar": 11.5556
+   },
+   "establecidos_0fund_post10k": {
+    "todo": 9,
+    "sen": 9,
+    "preg": 9,
+    "lug": 6,
+    "todobar": 8
+   },
+   "vida_med": {
+    "todo": 1736.0,
+    "sen": 1015.0,
+    "preg": 2072.0,
+    "lug": 800.5,
+    "todobar": 2343.5
+   },
+   "latencia_mudanza_med": {
+    "todo": 363.0,
+    "sen": 962.0,
+    "preg": 672.5,
+    "lug": 2150.0,
+    "todobar": 442.5
+   },
+   "nunca_llegan": {
+    "todo": 0,
+    "sen": 1,
+    "preg": 0,
+    "lug": 4,
+    "todobar": 0
+   },
+   "mundo_AC": {
+    "todo": 3.9748,
+    "sen": 7.5649,
+    "preg": 4.4902,
+    "lug": 5.9875,
+    "todobar": 6.0511
+   },
+   "mundo_AC_todo_sobre_lug": 0.664,
+   "ratio_pasos_oasis": {
+    "todo": 6.117,
+    "sen": 6.574,
+    "preg": 6.408,
+    "lug": 4.871,
+    "todobar": 6.104
+   },
+   "escrituras": {
+    "todo": 1034.0,
+    "sen": 1488.0,
+    "preg": 0.0,
+    "lug": 0.0,
+    "todobar": 1003.0
+   },
+   "siembras": {
+    "todo": 69.0,
+    "sen": 77.0,
+    "preg": 0.0,
+    "lug": 0.0,
+    "todobar": 199.0
+   },
+   "excursiones": {
+    "todo": 61884.0,
+    "sen": 0.0,
+    "preg": 45691.0,
+    "lug": 0.0,
+    "todobar": 28907.0
+   },
+   "olvidos": {
+    "todo": 73156.0,
+    "sen": 0.0,
+    "preg": 68145.0,
+    "lug": 0.0,
+    "todobar": 68125.0
+   },
+   "bandas": {
+    "lug": {
+     "banda": [
+      3,
+      6
+     ],
+     "suma": 2
+    },
+    "preg": {
+     "banda": [
+      7,
+      9
+     ],
+     "suma": 1
+    },
+    "sen": {
+     "banda": [
+      2,
+      8
+     ],
+     "suma": 5
+    }
+   },
+   "pareados": {
+    "todo_vs_sen": {
+     "n": 1,
+     "gana": 1,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 7,
+     "suma_b": 5,
+     "dif": 2,
+     "por_indice_a": [
+      7
+     ],
+     "por_indice_b": [
+      5
+     ]
+    },
+    "todo_vs_preg": {
+     "n": 1,
+     "gana": 1,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 7,
+     "suma_b": 1,
+     "dif": 6,
+     "por_indice_a": [
+      7
+     ],
+     "por_indice_b": [
+      1
+     ]
+    },
+    "todo_vs_lug": {
+     "n": 1,
+     "gana": 1,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 7,
+     "suma_b": 2,
+     "dif": 5,
+     "por_indice_a": [
+      7
+     ],
+     "por_indice_b": [
+      2
+     ]
+    },
+    "todo_vs_todobar": {
+     "n": 1,
+     "gana": 1,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 7,
+     "suma_b": 0,
+     "dif": 7,
+     "por_indice_a": [
+      7
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "sen_vs_lug": {
+     "n": 1,
+     "gana": 1,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 5,
+     "suma_b": 2,
+     "dif": 3,
+     "por_indice_a": [
+      5
+     ],
+     "por_indice_b": [
+      2
+     ]
+    },
+    "preg_vs_lug": {
+     "n": 1,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 1,
+     "suma_a": 1,
+     "suma_b": 2,
+     "dif": -1,
+     "por_indice_a": [
+      1
+     ],
+     "por_indice_b": [
+      2
+     ]
+    },
+    "todobar_vs_lug": {
+     "n": 1,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 1,
+     "suma_a": 0,
+     "suma_b": 2,
+     "dif": -2,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      2
+     ]
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 1,
+ "T": 30000,
+ "brazos": [
+  "todo",
+  "sen",
+  "preg",
+  "lug",
+  "todobar"
+ ],
+ "semillas": [
+  738592,
+  738592
+ ],
+ "veredicto": "HUMO (no cuenta): NO SE LEE",
+ "nota": "humo 2 (runner final, los 5 brazos por main)",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "mueve": 10000,
+  "c_e": 0.01
+ },
+ "sha_runner": "db75135c8c2f3e0d",
+ "sha_construye_juntos": "d469c8f3bf194d64",
+ "shas_esc": {
+  "corre_p1.py": "392b71186cf49b60",
+  "construye_p1.py": "90dc1b6f848fac80",
+  "mundo_escalera.py": "4f28b372207ba0a6",
+  "mundo_tramo_c.py": "4a1044a4e0e1d5c9",
+  "construye_c.py": "024a89476109b997",
+  "corre_c.py": "01e4ad94dd06e133",
+  "construye_p7.py": "50179cf58798120c",
+  "corre_p7.py": "82c3811c144d1a2b"
+ },
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028"
+ },
+ "carros": {
+  "O1_TODO": "b7519a4a481a0cf5",
+  "O1_TODO_SBAR": "153891018a52b5db",
+  "O1_TODO_SEN": "dff5e762bd23612e",
+  "O1_TODO_PREG": "382dafcf822b36a1",
+  "O1_TODO0": "4e197ff6d7d86841",
+  "O1_LUGAR": "49eee6bb278ea097"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17
+ },
+ "seg": 187.7
+}

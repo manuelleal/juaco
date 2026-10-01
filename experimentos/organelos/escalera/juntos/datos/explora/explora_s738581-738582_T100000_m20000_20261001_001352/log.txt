@@ -1,0 +1,40 @@
+[00:13:52] CORRE_JUNTOS · explora · 20261001_001352 · python 3.14.2 · pool NO (un proceso) · corre_juntos.py 0918bb528e211d13 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\juntos\datos\explora\explora_s738581-738582_T100000_m20000_20261001_001352
+[00:13:52]   semillas 738581-738582 · T 100000 · brazos ['lug', 'todobar'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 20000, 'c_e': 0.01} · reanuda False · nota 'explora 2 (base y control, mismas semillas)'
+[00:13:52]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[00:13:52]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[00:13:52]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[00:13:52]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[00:13:52]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[00:13:52]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[00:13:52]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[00:13:52]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[00:13:52]   sha corre_p1.py 392b71186cf49b60 OK
+[00:13:52]   sha construye_p1.py 90dc1b6f848fac80 OK
+[00:13:52]   sha mundo_escalera.py 4f28b372207ba0a6 OK
+[00:13:52]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[00:13:52]   sha construye_c.py 024a89476109b997 OK
+[00:13:52]   sha corre_c.py 01e4ad94dd06e133 OK
+[00:13:52]   sha construye_p7.py 50179cf58798120c OK
+[00:13:52]   sha corre_p7.py 82c3811c144d1a2b OK
+[00:13:52]   sha construye_juntos.py d469c8f3bf194d64 OK (NO FIJADO: solo humo/explora)
+[00:13:52]   carro O1_TODO == construye_juntos: True (sha b7519a4a481a0cf5)
+[00:13:52]   carro O1_TODO_SBAR == construye_juntos: True (sha 153891018a52b5db)
+[00:13:52]   carro O1_TODO_SEN == construye_juntos: True (sha dff5e762bd23612e)
+[00:13:52]   carro O1_TODO_PREG == construye_juntos: True (sha 382dafcf822b36a1)
+[00:13:52]   carro O1_TODO0 == construye_juntos: True (sha 4e197ff6d7d86841)
+[00:13:52]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[00:14:05]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[00:14:10]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[00:14:21]   IDENTIDAD CORTA JUNTOS (salida ENTERA, N 9, s 738530, T 1500, mueve 500, c_e 0.01): TODO0 == O1_LUGAR True · TODO_SEN == O1_LUGAR_SENAL True · TODO_PREG == O1_LUGAR_PREG True · TODO != parejas True
+[00:16:01]   [  129.5s] i0 lug     (100.3s) aborto None cruzan 5/9 R0 0.9655 fund [14, 0, 0, 130, 0, 118, 0, 95, 0] · oasis ratio pasos 5.942 · latencia 1129.5 nunca 0 mudanzas 4 exc 0 olv 0 · escribe 0 cobros 0 lee None siembra None · mundo AC 6.5832
+[00:18:01]   [  249.6s] i0 todobar (120.1s) aborto None cruzan 6/9 R0 0.9524 fund [111, 0, 39, 0, 0, 0, 0, 0, 69] · oasis ratio pasos 6.352 · latencia 431.5 nunca 0 mudanzas 4 exc 150200 olv 234668 · escribe 3829 cobros 3829 lee 29160 siembra 216 · mundo AC 4.7669
+[00:19:39]   [  347.6s] i1 lug     (98.0s) aborto None cruzan 4/9 R0 0.7143 fund [66, 0, 15, 79, 0, 1, 0, 30, 139] · oasis ratio pasos 5.76 · latencia 2298.5 nunca 0 mudanzas 4 exc 0 olv 0 · escribe 0 cobros 0 lee None siembra None · mundo AC 6.3643
+[00:21:37]   [  465.4s] i1 todobar (117.8s) aborto None cruzan 4/9 R0 0.7368 fund [26, 0, 18, 21, 0, 0, 0, 9, 37] · oasis ratio pasos 6.574 · latencia 515.0 nunca 0 mudanzas 4 exc 146701 olv 236023 · escribe 3928 cobros 3928 lee 30985 siembra 152 · mundo AC 5.2939
+[00:21:37] 
+================ LA LETRA (escalada a n 2) -- HUMO/EXPLORA: NO cuenta, no se declara
+[00:21:37]   validez: {'V1_completa': True, 'V2_mundo_pide': True, 'V3_mundo_actua': True, 'V4_estado': True, 'V5_modulos_actuan': True, 'V6_bandas': True}
+[00:21:37]   puertas: {} · umbrales {'gana_par': 2, 'dif_suma': 1} · mejor pareja None · EN EL UMBRAL (+-1): False · matiz None
+[00:21:37]   techo: None
+[00:21:37] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\juntos\datos\explora\explora_s738581-738582_T100000_m20000_20261001_001352\resumen.json (sha 50d812b9a34cca71) · abortos 0 · 465.5s
+[00:21:37] VEREDICTO: EXPLORA (no cuenta): NO SE LEE
