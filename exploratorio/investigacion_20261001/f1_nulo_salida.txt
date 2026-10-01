@@ -1,0 +1,247 @@
+f1_nulo.py - n = 20 semillas por brazo; puerta por SERIE; "serie Y replica" = cuadrado (semillas nuevas, independientes)
+
+==============================================================================================================
+A1. FALSO POSITIVO bajo H0 (misma p en esc 90 y esc 900). Exacto. Columnas: p base
+puerta                    0.05    0.10    0.15    0.20    0.25    0.30    0.35    0.40    0.45    0.50    0.55    0.60   max(0.05-0.60)   max(0.01-0.99)
+G0 ficha 12 vs <=5      0.0000  0.0000  0.0000  0.0001  0.0006  0.0021  0.0048  0.0071  0.0072  0.0052  0.0027  0.0010     0.00749          0.00749   | serie Y replica: 5.62e-05 / 5.62e-05
+G1 d=5 m=8              0.0000  0.0004  0.0041  0.0159  0.0343  0.0520  0.0646  0.0720  0.0758  0.0769  0.0759  0.0727     0.07691          0.07691   | serie Y replica: 5.92e-03 / 5.92e-03
+G1 d=5 m=10             0.0000  0.0000  0.0002  0.0022  0.0093  0.0243  0.0438  0.0610  0.0716  0.0758  0.0757  0.0726     0.07617          0.07617   | serie Y replica: 5.80e-03 / 5.80e-03
+G1 d=5 m=12             0.0000  0.0000  0.0000  0.0001  0.0009  0.0041  0.0129  0.0285  0.0474  0.0629  0.0709  0.0714     0.07193          0.07193   | serie Y replica: 5.17e-03 / 5.17e-03
+G1 d=6 m=8              0.0000  0.0003  0.0028  0.0094  0.0184  0.0267  0.0330  0.0372  0.0396  0.0403  0.0396  0.0373     0.04034          0.04034   | serie Y replica: 1.63e-03 / 1.63e-03
+G1 d=6 m=10             0.0000  0.0000  0.0002  0.0017  0.0067  0.0157  0.0259  0.0340  0.0385  0.0401  0.0395  0.0373     0.04015          0.04015   | serie Y replica: 1.61e-03 / 1.61e-03
+G1 d=6 m=12             0.0000  0.0000  0.0000  0.0001  0.0008  0.0034  0.0096  0.0191  0.0290  0.0358  0.0382  0.0370     0.03816          0.03816   | serie Y replica: 1.46e-03 / 1.46e-03
+G1 d=7 m=8              0.0000  0.0002  0.0014  0.0043  0.0080  0.0118  0.0149  0.0173  0.0187  0.0192  0.0187  0.0173     0.01924          0.01924   | serie Y replica: 3.70e-04 / 3.70e-04
+G1 d=7 m=10             0.0000  0.0000  0.0002  0.0012  0.0041  0.0086  0.0132  0.0166  0.0186  0.0192  0.0187  0.0173     0.01920          0.01920   | serie Y replica: 3.69e-04 / 3.69e-04
+G1 d=7 m=12             0.0000  0.0000  0.0000  0.0001  0.0006  0.0024  0.0062  0.0111  0.0155  0.0180  0.0184  0.0172     0.01849          0.01849   | serie Y replica: 3.42e-04 / 3.42e-04
+G1 d=8 m=8              0.0000  0.0001  0.0005  0.0014  0.0029  0.0045  0.0060  0.0072  0.0080  0.0083  0.0080  0.0072     0.00829          0.00829   | serie Y replica: 6.88e-05 / 6.88e-05
+G1 d=8 m=10             0.0000  0.0000  0.0001  0.0007  0.0020  0.0039  0.0057  0.0071  0.0080  0.0083  0.0080  0.0072     0.00829          0.00829   | serie Y replica: 6.87e-05 / 6.87e-05
+G1 d=8 m=12             0.0000  0.0000  0.0000  0.0001  0.0004  0.0015  0.0034  0.0056  0.0073  0.0080  0.0080  0.0072     0.00811          0.00811   | serie Y replica: 6.58e-05 / 6.58e-05
+G1 d=9 m=8              0.0000  0.0000  0.0001  0.0004  0.0009  0.0015  0.0021  0.0027  0.0031  0.0032  0.0031  0.0027     0.00321          0.00321   | serie Y replica: 1.03e-05 / 1.03e-05
+G1 d=9 m=10             0.0000  0.0000  0.0001  0.0003  0.0008  0.0014  0.0021  0.0027  0.0031  0.0032  0.0031  0.0027     0.00321          0.00321   | serie Y replica: 1.03e-05 / 1.03e-05
+G1 d=9 m=12             0.0000  0.0000  0.0000  0.0000  0.0003  0.0008  0.0016  0.0024  0.0030  0.0032  0.0031  0.0027     0.00318          0.00318   | serie Y replica: 1.01e-05 / 1.01e-05
+
+==============================================================================================================
+A2. POTENCIA bajo alternativas (p90 -> p900). Exacto. Entre parentesis: serie Y replica
+puerta                 0.05->0.35   0.05->0.50   0.10->0.50   0.10->0.70   0.25->0.50   0.25->0.60   0.25->0.75   0.40->0.80   0.40->0.90   0.60->0.95   0.02->0.60  
+G0 ficha 12 vs <=5     0.02(0.00) 0.25(0.06) 0.25(0.06) 0.88(0.77) 0.16(0.02) 0.37(0.14) 0.59(0.35) 0.12(0.02) 0.13(0.02) 0.00(0.00) 0.60(0.35)
+G1 d=5 m=8             0.40(0.16) 0.87(0.75) 0.84(0.71) 1.00(0.99) 0.56(0.32) 0.80(0.65) 0.97(0.95) 0.89(0.79) 0.98(0.96) 0.85(0.73) 0.98(0.96)
+G1 d=5 m=10            0.12(0.01) 0.59(0.35) 0.59(0.34) 0.98(0.96) 0.47(0.22) 0.77(0.59) 0.97(0.95) 0.89(0.79) 0.98(0.96) 0.85(0.73) 0.87(0.76)
+G1 d=5 m=12            0.02(0.00) 0.25(0.06) 0.25(0.06) 0.89(0.79) 0.24(0.06) 0.57(0.32) 0.94(0.89) 0.89(0.79) 0.98(0.96) 0.85(0.73) 0.60(0.35)
+G1 d=6 m=8             0.38(0.15) 0.86(0.73) 0.80(0.64) 0.99(0.99) 0.44(0.19) 0.70(0.49) 0.95(0.89) 0.81(0.66) 0.96(0.92) 0.73(0.54) 0.98(0.96)
+G1 d=6 m=10            0.12(0.01) 0.59(0.35) 0.58(0.33) 0.98(0.96) 0.39(0.15) 0.68(0.46) 0.94(0.89) 0.81(0.66) 0.96(0.92) 0.73(0.54) 0.87(0.76)
+G1 d=6 m=12            0.02(0.00) 0.25(0.06) 0.25(0.06) 0.89(0.79) 0.22(0.05) 0.53(0.29) 0.92(0.85) 0.81(0.66) 0.96(0.92) 0.73(0.54) 0.60(0.35)
+G1 d=7 m=8             0.35(0.12) 0.82(0.67) 0.71(0.51) 0.98(0.97) 0.31(0.10) 0.57(0.33) 0.90(0.80) 0.71(0.50) 0.91(0.83) 0.58(0.34) 0.98(0.95)
+G1 d=7 m=10            0.12(0.01) 0.58(0.34) 0.56(0.31) 0.97(0.95) 0.29(0.09) 0.57(0.32) 0.90(0.80) 0.71(0.50) 0.91(0.83) 0.58(0.34) 0.87(0.76)
+G1 d=7 m=12            0.02(0.00) 0.25(0.06) 0.25(0.06) 0.88(0.78) 0.19(0.03) 0.48(0.23) 0.88(0.78) 0.71(0.50) 0.91(0.83) 0.58(0.34) 0.60(0.35)
+G1 d=8 m=8             0.26(0.07) 0.73(0.54) 0.58(0.34) 0.96(0.93) 0.20(0.04) 0.44(0.19) 0.82(0.67) 0.58(0.33) 0.84(0.70) 0.42(0.17) 0.96(0.93)
+G1 d=8 m=10            0.12(0.01) 0.57(0.33) 0.50(0.25) 0.96(0.92) 0.20(0.04) 0.44(0.19) 0.82(0.67) 0.58(0.33) 0.84(0.70) 0.42(0.17) 0.87(0.76)
+G1 d=8 m=12            0.02(0.00) 0.25(0.06) 0.25(0.06) 0.88(0.77) 0.14(0.02) 0.39(0.15) 0.81(0.66) 0.58(0.33) 0.84(0.70) 0.42(0.17) 0.60(0.35)
+G1 d=9 m=8             0.14(0.02) 0.58(0.34) 0.43(0.18) 0.92(0.85) 0.12(0.01) 0.31(0.10) 0.72(0.51) 0.44(0.19) 0.73(0.53) 0.27(0.07) 0.91(0.83)
+G1 d=9 m=10            0.10(0.01) 0.53(0.28) 0.41(0.17) 0.92(0.84) 0.12(0.01) 0.31(0.10) 0.72(0.51) 0.44(0.19) 0.73(0.53) 0.27(0.07) 0.86(0.75)
+G1 d=9 m=12            0.02(0.00) 0.25(0.06) 0.23(0.05) 0.86(0.74) 0.10(0.01) 0.29(0.09) 0.71(0.51) 0.44(0.19) 0.73(0.53) 0.27(0.07) 0.60(0.35)
+
+==============================================================================================================
+A3. PUERTA CON DERIVA: GF(d, m) = G1(d, m) y k900 - a900 >= d  (a900 = semillas de BLOQ_AZA esc 900 con >= 2 formas fijadas)
+    Falso positivo bajo tres nulos; exacto. H0a: sin efecto de N ni de herencia (p90 = p900 = q900 = p).
+    H0b: mas N da mas formas tambien SIN herencia (muestreo/deriva): p90 = p, p900 = q900 = p_alto.
+    H0c: la herencia fija formas pero N no importa: p90 = p900 = p_alto, q900 = bajo.
+  GF d=6 m=10: max FP  H0a 0.00918   H0b 0.04015   H0c 0.04015   | serie Y replica: 8.43e-05  1.61e-03  1.61e-03
+  GF d=7 m=10: max FP  H0a 0.00328   H0b 0.01920   H0c 0.01920   | serie Y replica: 1.08e-05  3.69e-04  3.69e-04
+  GF d=7 m=8: max FP  H0a 0.00328   H0b 0.01924   H0c 0.01924   | serie Y replica: 1.08e-05  3.70e-04  3.70e-04
+  GF d=8 m=10: max FP  H0a 0.00103   H0b 0.00829   H0c 0.00829   | serie Y replica: 1.05e-06  6.87e-05  6.87e-05
+    Potencia de GF (p90 -> p900, q900 de deriva):
+  GF d=6 m=10 q900=0.02: 0.05->0.35 0.12(0.01) 0.05->0.50 0.59(0.35) 0.10->0.50 0.58(0.33) 0.10->0.70 0.98(0.96) 0.25->0.50 0.39(0.15) 0.25->0.60 0.68(0.46) 0.25->0.75 0.94(0.89) 0.40->0.80 0.81(0.66) 0.40->0.90 0.96(0.92)
+  GF d=6 m=10 q900=0.10: 0.05->0.35 0.12(0.01) 0.05->0.50 0.58(0.33) 0.10->0.50 0.57(0.32) 0.10->0.70 0.98(0.96) 0.25->0.50 0.38(0.15) 0.25->0.60 0.68(0.46) 0.25->0.75 0.94(0.89) 0.40->0.80 0.81(0.66) 0.40->0.90 0.96(0.92)
+  GF d=6 m=10 q900=0.25: 0.05->0.35 0.07(0.00) 0.05->0.50 0.39(0.15) 0.10->0.50 0.38(0.15) 0.10->0.70 0.89(0.79) 0.25->0.50 0.28(0.08) 0.25->0.60 0.56(0.32) 0.25->0.75 0.91(0.82) 0.40->0.80 0.80(0.65) 0.40->0.90 0.96(0.91)
+  GF d=7 m=10 q900=0.02: 0.05->0.35 0.12(0.01) 0.05->0.50 0.58(0.34) 0.10->0.50 0.56(0.31) 0.10->0.70 0.97(0.95) 0.25->0.50 0.29(0.09) 0.25->0.60 0.57(0.32) 0.25->0.75 0.90(0.80) 0.40->0.80 0.71(0.50) 0.40->0.90 0.91(0.83)
+  GF d=7 m=10 q900=0.10: 0.05->0.35 0.11(0.01) 0.05->0.50 0.55(0.31) 0.10->0.50 0.53(0.28) 0.10->0.70 0.97(0.93) 0.25->0.50 0.28(0.08) 0.25->0.60 0.56(0.31) 0.25->0.75 0.89(0.80) 0.40->0.80 0.71(0.50) 0.40->0.90 0.91(0.83)
+  GF d=7 m=10 q900=0.25: 0.05->0.35 0.04(0.00) 0.05->0.50 0.29(0.08) 0.10->0.50 0.28(0.08) 0.10->0.70 0.81(0.66) 0.25->0.50 0.18(0.03) 0.25->0.60 0.42(0.18) 0.25->0.75 0.83(0.69) 0.40->0.80 0.69(0.48) 0.40->0.90 0.91(0.82)
+  GF d=7 m=8 q900=0.02: 0.05->0.35 0.34(0.11) 0.05->0.50 0.81(0.66) 0.10->0.50 0.71(0.50) 0.10->0.70 0.98(0.97) 0.25->0.50 0.31(0.10) 0.25->0.60 0.57(0.33) 0.25->0.75 0.90(0.80) 0.40->0.80 0.71(0.50) 0.40->0.90 0.91(0.83)
+  GF d=7 m=8 q900=0.10: 0.05->0.35 0.23(0.05) 0.05->0.50 0.69(0.47) 0.10->0.50 0.62(0.38) 0.10->0.70 0.97(0.95) 0.25->0.50 0.29(0.09) 0.25->0.60 0.56(0.32) 0.25->0.75 0.90(0.80) 0.40->0.80 0.71(0.50) 0.40->0.90 0.91(0.83)
+  GF d=7 m=8 q900=0.25: 0.05->0.35 0.06(0.00) 0.05->0.50 0.31(0.09) 0.10->0.50 0.29(0.09) 0.10->0.70 0.81(0.66) 0.25->0.50 0.18(0.03) 0.25->0.60 0.42(0.18) 0.25->0.75 0.83(0.69) 0.40->0.80 0.69(0.48) 0.40->0.90 0.91(0.82)
+  GF d=8 m=10 q900=0.02: 0.05->0.35 0.12(0.01) 0.05->0.50 0.57(0.33) 0.10->0.50 0.50(0.25) 0.10->0.70 0.96(0.92) 0.25->0.50 0.20(0.04) 0.25->0.60 0.44(0.19) 0.25->0.75 0.82(0.67) 0.40->0.80 0.58(0.33) 0.40->0.90 0.84(0.70)
+  GF d=8 m=10 q900=0.10: 0.05->0.35 0.09(0.01) 0.05->0.50 0.49(0.24) 0.10->0.50 0.44(0.19) 0.10->0.70 0.94(0.88) 0.25->0.50 0.18(0.03) 0.25->0.60 0.42(0.18) 0.25->0.75 0.82(0.67) 0.40->0.80 0.58(0.33) 0.40->0.90 0.84(0.70)
+  GF d=8 m=10 q900=0.25: 0.05->0.35 0.02(0.00) 0.05->0.50 0.19(0.04) 0.10->0.50 0.18(0.03) 0.10->0.70 0.70(0.49) 0.25->0.50 0.10(0.01) 0.25->0.60 0.29(0.08) 0.25->0.75 0.72(0.51) 0.40->0.80 0.55(0.31) 0.40->0.90 0.83(0.69)
+
+==============================================================================================================
+B1. MONTE CARLO (200 000 series por celda): formas fijadas por semilla ~ Poisson(lam); X = [formas >= 2].
+    Traduce "cuantas formas se fijan en promedio" a la p por semilla y repite G0 y G1(7,10).
+ lam90 lam900    p90   p900       G0  G1(7,10)  G1(6,10)  (x2 = cuadrado)
+  0.50   0.50  0.090  0.090   0.0000    0.0000    0.0000   (0.0000 0.0000 0.0000)
+  1.00   1.00  0.264  0.264   0.0008    0.0053    0.0088   (0.0000 0.0000 0.0001)
+  1.50   1.50  0.442  0.442   0.0077    0.0187    0.0385   (0.0001 0.0004 0.0015)
+  2.00   2.00  0.594  0.594   0.0010    0.0174    0.0378   (0.0000 0.0003 0.0014)
+  1.00   2.00  0.264  0.594   0.3220    0.5139    0.6334   (0.1037 0.2641 0.4012)
+  1.00   2.50  0.264  0.713   0.5082    0.8101    0.8865   (0.2582 0.6563 0.7860)
+  1.00   3.00  0.264  0.801   0.5540    0.9397    0.9711   (0.3070 0.8831 0.9431)
+  0.50   2.00  0.090  0.594   0.5681    0.8408    0.8548   (0.3227 0.7069 0.7306)
+  1.50   3.00  0.442  0.801   0.0626    0.5988    0.7250   (0.0039 0.3586 0.5256)
+  0.30   1.50  0.037  0.442   0.1165    0.3788    0.3796   (0.0136 0.1435 0.1441)
+
+B2. MONTE CARLO con SOBREDISPERSION: la p "de la serie" no es fija; cada serie saca su p de una Beta(media p, concentracion c)
+    (lotes: hora, carga del PC, ventana de semillas). H0: las DOS escalas sacan p de la MISMA Beta, independientes.
+    Es el nulo que la binomial exacta no ve. Si serie y replica comparten el sesgo, el cuadrado tampoco vale.
+    p     c       G0  G1(7,10)  G1(8,10)
+ 0.20   inf   0.0001    0.0011    0.0007
+ 0.20    50   0.0008    0.0053    0.0036
+ 0.20    20   0.0042    0.0149    0.0111
+ 0.20     8   0.0184    0.0426    0.0359
+ 0.35   inf   0.0049    0.0130    0.0056
+ 0.35    50   0.0118    0.0285    0.0153
+ 0.35    20   0.0237    0.0521    0.0334
+ 0.35     8   0.0508    0.0991    0.0764
+ 0.50   inf   0.0054    0.0192    0.0082
+ 0.50    50   0.0123    0.0392    0.0209
+ 0.50    20   0.0240    0.0678    0.0421
+ 0.50     8   0.0514    0.1239    0.0924
+
+==============================================================================================================
+C. NULO DE DERIVA (modelo de juguete, declarado como tal): cuantas formas NEUTRAS llegan a >= 50 % sin funcion.
+   Wright-Fisher haploide con N cuerpos, G generaciones; en cada parto entra una regla nueva con prob p_ins = 0.02 y se
+   pierde cada regla con prob p_del_por_regla = 0.05 / L (L = 3). Cada insercion es una forma nueva (alelos infinitos:
+   cota BAJA de coincidencias; el espacio canonico real tiene ~10^2 formas, ver seccion 6). Se cuenta, al final, el numero
+   de formas con frecuencia >= 0.5 y la fraccion de corridas con >= 2. NO es el motor: sirve para la DIRECCION del efecto de N.
+    N     G  reps   formas >= 50 % (media)   P(>= 2 formas)
+   35   100   300                    0.503            0.107
+   35   300   200                    0.680            0.165
+  350   100    40                    0.000            0.000
+  350   300    20                    0.000            0.000
+   Lectura: ver PREREGISTRO_F1_reactor_BORRADOR.md seccion 7.
+
+==============================================================================================================
+D. BASE MEDIDA en los JSON de BLOQUES (esc 90; solo lectura). Formas fijadas SIN prueba de funcion (cota alta de la funcional).
+   W_SIL 0.25 · FRAC_FIJ 0.5 · MIN_VIVOS 12
+   serie_s48411-48430_T500000 · BLOQ_V · n 20: semillas con >= 12 vivos 19 · vivos en T 36.50 [0.00-46.00]
+      formas fijadas por semilla: [1, 1, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 3, 1, 1, 1, 3, 2, 1, 0]
+      semillas con >= 1: 19 · con >= 2: 13 · con >= 3: 3
+      generacion (I_GEN) mediana de los vivos en T: 115.00 [100.00-144.00] · linajes vivos: 1.00 [1.00-1.00] · largo medio: 5.03 [2.39-7.33]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.23 [0.18-0.34] · n_nac / K (si estan): 255.18 [218.38-315.60]
+      PROXY profundidad mutacional = U x generacion mediana: 26.9 (inferencia, no medida)
+      formas (semillas en que estan fijadas): pixF[AC]->boca+ 19 | pixF[AC]->hacia+ 5 | cerca[>]->boca+ 3 | pixF[AB]->boca- 1 | sed[>]->hacia+ 1 | pixF[AB]->parir- 1 | hambre[>]->parir+ 1 | sed[>]->parir- 1 | sed[>]->parir+ 1 | cerca[>]->parir- 1 | Rult[>]->quieto+ 1
+   serie_s48411-48430_T500000 · BLOQ_AZA_V · n 20: semillas con >= 12 vivos 0 · vivos en T 0.00 [0.00-1.00]
+      formas fijadas por semilla: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      semillas con >= 1: 0 · con >= 2: 0 · con >= 3: 0
+      generacion (I_GEN) mediana de los vivos en T: 1.00 [1.00-1.00] · linajes vivos: 1.00 [1.00-1.00] · largo medio: 4.00 [4.00-4.00]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.15 [0.07-0.39] · n_nac / K (si estan): 7698.74 [1655.55-54638.14]
+      PROXY profundidad mutacional = U x generacion mediana: 0.1 (inferencia, no medida)
+      formas (semillas en que estan fijadas): 
+   serie_s48431-48450_T500000 · BLOQ_V · n 20: semillas con >= 12 vivos 19 · vivos en T 32.50 [0.00-43.00]
+      formas fijadas por semilla: [1, 5, 3, 2, 2, 1, 5, 1, 2, 4, 4, 1, 2, 3, 2, 3, 3, 0, 1, 1]
+      semillas con >= 1: 19 · con >= 2: 13 · con >= 3: 8
+      generacion (I_GEN) mediana de los vivos en T: 116.50 [103.00-143.00] · linajes vivos: 1.00 [1.00-1.00] · largo medio: 4.55 [2.30-10.14]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.26 [0.05-0.37] · n_nac / K (si estan): 269.81 [214.49-477.01]
+      PROXY profundidad mutacional = U x generacion mediana: 30.3 (inferencia, no medida)
+      formas (semillas en que estan fijadas): pixF[AC]->boca+ 19 | pixF[AC]->hacia+ 7 | Rult[>]->quieto+ 2 | pixF[A]->boca+ 2 | sed[>]->parir+ 2 | pixM[AC]->boca+ 2 | pixF[A]->parir+ 1 | Rult[>]->boca+ 1 | sed[>]->parir- 1 | pixM[A]->hacia+ 1 | pixM[A]->quieto+ 1 | pixF[AC]->parir- 1 | sed[>]->boca- 1 | pixF[AB]->parir- 1 | Rult[>]->quieto- 1 | cerca[>]->boca+ 1 | Rult[>]->parir+ 1 | pixF[A]->hacia+ 1
+   serie_s48431-48450_T500000 · BLOQ_AZA_V · n 20: semillas con >= 12 vivos 0 · vivos en T 0.00 [0.00-0.00]
+      formas fijadas por semilla: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      semillas con >= 1: 0 · con >= 2: 0 · con >= 3: 0
+      generacion (I_GEN) mediana de los vivos en T: NO ESTA · linajes vivos: NO ESTA · largo medio: NO ESTA
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.14 [0.09-0.22] · n_nac / K (si estan): 8491.46 [8491.46-8491.46]
+      formas (semillas en que estan fijadas): 
+   explora · BLOQ · n 5: semillas con >= 12 vivos 5 · vivos en T 96.00 [93.00-98.00]
+      formas fijadas por semilla: [1, 1, 1, 1, 2]
+      semillas con >= 1: 5 · con >= 2: 1 · con >= 3: 0
+      generacion (I_GEN) mediana de los vivos en T: 0.00 [0.00-0.00] · linajes vivos: 90.00 [90.00-90.00] · largo medio: 2.74 [2.46-3.38]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.16 [0.12-0.30] · n_nac / K (si estan): 43.77 [26.19-54.33]
+      PROXY profundidad mutacional = U x generacion mediana: 0.0 (inferencia, no medida)
+      formas (semillas en que estan fijadas): pixF[AC]->boca+ 5 | hambre[>]->parir- 1
+   explora · BLOQ_AZA · n 5: semillas con >= 12 vivos 5 · vivos en T 93.00 [91.00-99.00]
+      formas fijadas por semilla: [1, 0, 0, 0, 0]
+      semillas con >= 1: 1 · con >= 2: 0 · con >= 3: 0
+      generacion (I_GEN) mediana de los vivos en T: 0.00 [0.00-0.00] · linajes vivos: 90.00 [90.00-90.00] · largo medio: 4.05 [2.37-8.22]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.21 [0.13-0.37] · n_nac / K (si estan): 76.20 [63.57-86.24]
+      PROXY profundidad mutacional = U x generacion mediana: 0.0 (inferencia, no medida)
+      formas (semillas en que estan fijadas): sed[>]->parir- 1
+   vivero100k · BLOQ_V · n 5: semillas con >= 12 vivos 5 · vivos en T 36.00 [31.00-40.00]
+      formas fijadas por semilla: [3, 1, 1, 1, 1]
+      semillas con >= 1: 5 · con >= 2: 1 · con >= 3: 1
+      generacion (I_GEN) mediana de los vivos en T: 27.00 [22.00-32.00] · linajes vivos: 2.00 [1.00-2.00] · largo medio: 2.97 [2.15-4.55]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.11 [0.07-0.25] · n_nac / K (si estan): 132.99 [85.82-165.34]
+      PROXY profundidad mutacional = U x generacion mediana: 3.0 (inferencia, no medida)
+      formas (semillas en que estan fijadas): pixF[AC]->boca+ 5 | hambre[>]->quieto+ 1 | sed[>]->hacia- 1
+   vivero100k · BLOQ_AZA_V · n 5: semillas con >= 12 vivos 0 · vivos en T 0.00 [0.00-1.00]
+      formas fijadas por semilla: [0, 0, 0, 0, 0]
+      semillas con >= 1: 0 · con >= 2: 0 · con >= 3: 0
+      generacion (I_GEN) mediana de los vivos en T: 0.00 [0.00-0.00] · linajes vivos: 1.00 [1.00-1.00] · largo medio: 2.00 [2.00-2.00]
+      eventos de operador por cuerpo nuevo (U, toda la corrida): 0.15 [0.11-0.26] · n_nac / K (si estan): 1942.49 [1369.96-3118.82]
+      PROXY profundidad mutacional = U x generacion mediana: 0.0 (inferencia, no medida)
+      formas (semillas en que estan fijadas): 
+
+==============================================================================================================
+E. RECONCILIACION 14/20 (coordinador, tipo()) vs 13/20 (v1, letra canonica) en BLOQ_V esc 90 T 500k
+   serie_s48411-48430_T500000: tipo() >= 2 fijadas en 14/20 · canonica >= 2 en 13/20
+      por semilla tipo():    [1, 1, 2, 3, 2, 2, 2, 2, 3, 3, 2, 2, 3, 1, 1, 3, 3, 5, 1, 0]
+      por semilla canonica:  [1, 1, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2, 3, 1, 1, 1, 3, 2, 1, 0]
+      DIFIERE s48426 (vivos 38): tipo() ['pixF1<θ -> boca-', 'pixF1>θ -> hacia-', 'pixF4>θ -> parir-'] · canonica ['pixF[AC]->boca+']
+   serie_s48431-48450_T500000: tipo() >= 2 fijadas en 13/20 · canonica >= 2 en 13/20
+      por semilla tipo():    [1, 6, 3, 2, 2, 1, 6, 1, 2, 6, 7, 1, 2, 4, 2, 3, 3, 0, 1, 1]
+      por semilla canonica:  [1, 5, 3, 2, 2, 1, 5, 1, 2, 4, 4, 1, 2, 3, 2, 3, 3, 0, 1, 1]
+
+==============================================================================================================
+F. BASE DE LAS DOS LECTURAS CON EL ORGANO DE RECHAZO EXCLUIDO (sin filtro de funcion: cota alta)
+   L1 = formas fijadas (>= 50 %) distintas del rechazo · L2 = D5 (>= 5 % y >= 3 portadores) · rar = rarificada a 24 vivos, >= 2 portadores
+   esc 90 T 500k serie · n 20 · vivos [40, 33, 41, 37, 32, 38, 30, 45, 28, 34, 41, 34, 36, 32, 38, 38, 46, 40, 34, 0]
+      L1 fijadas sin rechazo: [0, 0, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 2, 1, 0, 0] · semillas con >= 1: 13 · con >= 2: 3
+      formas canonicas presentes (>= 1 portador, sin rechazo): [3, 1, 16, 11, 11, 9, 5, 9, 14, 11, 5, 6, 21, 2, 5, 7, 9, 14, 3, 0]
+      L2 D5: [2, 0, 8, 4, 5, 1, 3, 5, 7, 5, 1, 1, 11, 1, 2, 4, 4, 7, 2, None] · media 3.84 · mediana 4.0 · var 7.92
+      rarificada (m 24): [1.18, 0.52, 7.71, 6.13, 5.82, 1.45, 2.88, 4.76, 6.89, 5.84, 1.28, 2.9, 11.29, 0.97, 1.83, 3.81, 4.04, 7.79, 2.0, None] · media 4.16
+   esc 90 T 500k replica · n 20 · vivos [33, 32, 18, 31, 34, 30, 31, 33, 38, 29, 41, 36, 32, 43, 31, 38, 32, 0, 38, 41]
+      L1 fijadas sin rechazo: [0, 4, 2, 1, 1, 0, 4, 0, 1, 3, 3, 0, 1, 2, 1, 2, 2, 0, 0, 0] · semillas con >= 1: 13 · con >= 2: 8
+      formas canonicas presentes (>= 1 portador, sin rechazo): [7, 19, 6, 10, 4, 4, 24, 2, 11, 20, 26, 8, 2, 14, 10, 8, 20, 0, 7, 3]
+      L2 D5: [2, 11, 3, 4, 3, 0, 14, 0, 6, 10, 13, 4, 1, 8, 4, 3, 7, None, 2, 0] · media 5.00 · mediana 4.0 · var 18.11
+      rarificada (m 24): [2.23, 12.09, None, 4.55, 2.89, 1.9, 14.72, 1.1, 6.33, 11.88, 13.68, 3.52, 1.0, 6.46, 3.87, 3.69, 9.58, None, 1.65, 0.33] · media 5.64
+   esc 90 T 200k vivero100k · n 5 · vivos [31, 37, 40, 36, 36]
+      L1 fijadas sin rechazo: [2, 0, 0, 0, 0] · semillas con >= 1: 1 · con >= 2: 1
+      formas canonicas presentes (>= 1 portador, sin rechazo): [6, 5, 3, 4, 5]
+      L2 D5: [2, 1, 1, 0, 4] · media 1.60 · mediana 1.0 · var 1.84
+      rarificada (m 24): [3.12, 1.79, 0.98, 0.43, 3.94] · media 2.05
+   esc 90 T 200k vivero100k_rep · n 5 · vivos [18, 39, 33, 40, 44]
+      L1 fijadas sin rechazo: [1, 3, 0, 0, 0] · semillas con >= 1: 2 · con >= 2: 1
+      formas canonicas presentes (>= 1 portador, sin rechazo): [3, 13, 7, 8, 7]
+      L2 D5: [1, 9, 2, 2, 4] · media 3.60 · mediana 2.0 · var 8.24
+      rarificada (m 24): [None, 8.6, 2.43, 2.67, 4.02] · media 4.43
+   SONDA esc 300 T 200k (1 semilla) · n 1 · vivos [119]
+      L1 fijadas sin rechazo: [0] · semillas con >= 1: 0 · con >= 2: 0
+      formas canonicas presentes (>= 1 portador, sin rechazo): [15]
+      L2 D5: [3] · media 3.00 · mediana 3.0 · var 0.00
+      rarificada (m 24): [2.73] · media 2.73
+   SONDA esc 900 T 200k (1 semilla) · n 1 · vivos [365]
+      L1 fijadas sin rechazo: [0] · semillas con >= 1: 0 · con >= 2: 0
+      formas canonicas presentes (>= 1 portador, sin rechazo): [29]
+      L2 D5: [2] · media 2.00 · mediana 2.0 · var 0.00
+      rarificada (m 24): [2.0] · media 2.00
+   SONDA esc 1200 T 200k (1 semilla) · n 1 · vivos [493]
+      L1 fijadas sin rechazo: [0] · semillas con >= 1: 0 · con >= 2: 0
+      formas canonicas presentes (>= 1 portador, sin rechazo): [36]
+      L2 D5: [4] · media 4.00 · mediana 4.0 · var 0.00
+      rarificada (m 24): [3.36] · media 3.36
+
+==============================================================================================================
+G. NULO Y POTENCIA DE LA LECTURA CO-PRINCIPAL L2 (diversidad funcional sostenida, D5 por semilla; 20 vs 20, no pareado)
+   Puerta L2(Z, DM): Mann-Whitney unilateral (aprox. normal con correccion de empates y de continuidad) z >= Z y
+   diferencia de medianas >= DM. D ~ binomial negativa de media lam y var = lam * phi (phi = 1: Poisson). rng 20261003.
+   FALSO POSITIVO (H0: lam90 = lam900), 40 000 series por celda
+   lam  phi | Z 1.645 DM 0 | Z 2.326 DM 0 | Z 2.326 DM 1 | Z 2.576 DM 1
+   0.5  1.0 |       0.0498 |       0.0089 |       0.0079 |       0.0041
+   0.5  2.0 |       0.0491 |       0.0090 |       0.0025 |       0.0017
+   0.5  4.0 |       0.0495 |       0.0095 |       0.0005 |       0.0004
+   1.5  1.0 |       0.0498 |       0.0091 |       0.0082 |       0.0044
+   1.5  2.0 |       0.0505 |       0.0091 |       0.0083 |       0.0039
+   1.5  4.0 |       0.0490 |       0.0084 |       0.0083 |       0.0044
+   3.0  1.0 |       0.0479 |       0.0080 |       0.0096 |       0.0044
+   3.0  2.0 |       0.0488 |       0.0090 |       0.0091 |       0.0043
+   3.0  4.0 |       0.0495 |       0.0094 |       0.0089 |       0.0044
+   6.0  1.0 |       0.0492 |       0.0089 |       0.0093 |       0.0039
+   6.0  2.0 |       0.0491 |       0.0090 |       0.0083 |       0.0047
+   6.0  4.0 |       0.0488 |       0.0084 |       0.0092 |       0.0044
+   POTENCIA de L2(Z 2.326, DM 1); entre parentesis, serie Y replica
+   lam90 -> lam900 | phi 1.0       | phi 2.0       | phi 4.0      
+     1.0 ->    2.0 | 0.51 (0.26) | 0.31 (0.10) | 0.20 (0.04)
+     1.0 ->    3.0 | 0.97 (0.95) | 0.83 (0.69) | 0.62 (0.38)
+     2.0 ->    3.0 | 0.31 (0.10) | 0.17 (0.03) | 0.11 (0.01)
+     2.0 ->    4.0 | 0.86 (0.75) | 0.60 (0.35) | 0.38 (0.14)
+     3.0 ->    4.5 | 0.48 (0.23) | 0.25 (0.06) | 0.15 (0.02)
+     3.0 ->    6.0 | 0.97 (0.94) | 0.78 (0.61) | 0.52 (0.27)
+     1.5 ->    6.0 | 1.00 (1.00) | 1.00 (1.00) | 0.97 (0.94)
+     4.0 ->    6.0 | 0.62 (0.39) | 0.34 (0.12) | 0.19 (0.04)
+     4.0 ->    8.0 | 0.99 (0.99) | 0.89 (0.79) | 0.63 (0.40)
