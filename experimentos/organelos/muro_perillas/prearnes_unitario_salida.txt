@@ -1,0 +1,26 @@
+PRE-ARNES UNITARIO (sin pista)
+  OK    GEN0 == O1 (traza de 9 x 400 pasos y salida(), mundo de mentira)
+  OK    GEN fabrica sigma 0 == O1 (traza y salida)
+  OK    telemetria: fundadores de siembra, 8 partos por linaje ([8, 8, 8, 8, 8, 8, 8, 8, 8])
+  OK    GEN LIMPIA 0 == CTRL_O1_SINLIMPIA (traza y salida)
+  OK    control: SINLIMPIA != O1 en el mundo de mentira
+  OK    NEUTRO (PS_LEE 0, sigma 0.03, desde la base) == O1
+  OK    neutro: 7 genomas de fundador distintos, profundidad 1 (sin refundacion en el mundo de mentira)
+  OK    PS_POR_LINAJE 9 x fabrica == O1; origen 3
+  OK    PS_POR_LINAJE con un LIMPIA 0 != O1
+  OK    MARGEN = 0.0 actua (!= O1 en el mundo de mentira)
+  OK    PISO = 1.0 actua (!= O1 en el mundo de mentira)
+  OK    PEN_OTRO = 1.0 actua (!= O1 en el mundo de mentira)
+  OK    PRUEBA = 0.0 actua (!= O1 en el mundo de mentira)
+  OK    HUECO = 0.0 actua (!= O1 en el mundo de mentira)
+  OK    con sigma 0.03 el parto lleva '_gen' y nace() lo toma (no revienta en el bucle de memoria de O1)
+  OK    fila() sobre crudo existente (o1, s 14301): cruzan 5/9 R0 0.9091 fund med 0.0 estab 7 vida 4064.5 B+D 300.0
+  OK    lee_mapa() lee y ordena los JSON del mapa (carpeta temporal)
+  OK    letra sintetica (GEN_LETRA en memoria): FUNCIONA (gen sube y cruza mas) -> FUNCIONA (esperado FUNCIONA)
+  OK    letra sintetica (GEN_LETRA en memoria): MODESTO (gen sube, no cruza mas) -> HAY ALGO MODESTO (esperado HAY ALGO MODESTO)
+  OK    letra sintetica (GEN_LETRA en memoria): NO (ni sube ni cruza) -> NO (esperado NO)
+  OK    letra sintetica (GEN_LETRA en memoria): NO SE LEE (aborto) -> NO SE LEE (esperado NO SE LEE)
+  OK    letra sintetica (GEN_LETRA en memoria): NO SE LEE (fab no gana a off) -> NO SE LEE (esperado NO SE LEE)
+  OK    letra sintetica (GEN_LETRA en memoria): NO SE LEE (reloj neutro corto) -> NO SE LEE (esperado NO SE LEE)
+
+PRE-ARNES PASA, 23/23
