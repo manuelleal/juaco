@@ -36,12 +36,12 @@ Los tres son DISEÑO DIRIGIDO (ingeniería genética sobre O1) y valen EN EL MUN
 | P3–P6 germen/soma, órganos, nervio, cerebro | diseñados, sin correr (dependen de P2 o de ECO grande) |
 | Tramo D sexo y familia | instrumentado; sin señal: el mundo de 9 no tiene población para familias |
 
-## Novedad de la madrugada (1-oct, 02:25): "los tres juntos"
-**NO SUMAN** en serie (`f3054b56`, preregistro `1b5e483f`): el organismo con memoria + señal + ir a lo menos visitado cruza 159 de 180, contra
-163 de memoria + pregunta, 129 de memoria + señal, 88 de sólo memoria y 90 con la señal leída al antípoda. No se estorban; la señal no agrega
-cruce sobre memoria + pregunta, pero su contenido sí importa (al revés cae a 90). Mayorías 20/20 en los tres primeros. Quedó EN EL UMBRAL
-(todo vs sen 14/20 con corte 13): **réplica lanzada a las 02:23**; si el apagado de las 4:00 la corta, retomar con
-`python experimentos/organelos/escalera/juntos/corre_juntos.py --replica --pool 2 --reanuda`.
+## Novedad de la madrugada (1-oct): "los tres juntos" — **NO SUMAN ×2** (cerrado)
+Serie `f3054b56` y réplica `b1f5f0e6` (preregistro `1b5e483f`). Linajes que cruzan de 180: los tres juntos 159 y 169; memoria + ir a lo menos
+visitado 163 y 163; memoria + señal 129 y 129; sólo memoria 88 y 95; los tres con la señal al antípoda 90 y 95. Las tres capacidades no se
+estorban, pero la señal NO agrega cruce sobre memoria + ir a lo menos visitado; su contenido sí importa (leída al revés cae a 90–95).
+Vocabulario: decir "tres módulos diseñados, cada uno contra un control de contenido equivocado; juntos no suman", no "un organismo que
+recuerda, señala y explora" como si los tres aportaran.
 
 ## Otra sesión (JUACO 5, rama `o1-libre`, commit `23a6c83d`)
 O1 libre con poderes: **BLOQUE NO** (serie MODESTO, réplica NO). La memoria de lugar subió por selección en 10/10 en la serie (dif 0.0596)
