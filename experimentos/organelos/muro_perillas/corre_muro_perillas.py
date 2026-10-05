@@ -47,17 +47,28 @@ CARROS = {n: os.path.join(AQUI, 'carros', n + '.py') for n, _ in CB.VARIANTES}
 SHAS = {os.path.join(PISTA, 'pista.py'): '9f47c65e438e0ff4', os.path.join(PISTA, 'juez.py'): '6a68f640a7832f12',
         os.path.join(PISTA, 'carros', 'O1.py'): '99436afa2715f028', os.path.join(PISTA, 'carros', 'CTRL_O1_SINLIMPIA.py'): 'be029b0a1b8d6634',
         os.path.join(TR, 'corre_v143.py'): '24100621c450da22'}
-SHAS_PROPIOS = {'construye_muro_perillas.py': None, os.path.join('carros', 'O1_MURO_GEN.py'): None, os.path.join('carros', 'O1_MURO_GEN0.py'): None}   # se fijan al cerrar el preregistro
+SHAS_PROPIOS = {'construye_muro_perillas.py': '1120f56ea5dc2c0f', os.path.join('carros', 'O1_MURO_GEN.py'): '83e7fe2a5eb9efd4', os.path.join('carros', 'O1_MURO_GEN0.py'): 'e6be23e6a74718a6'}   # FIJADOS 5-oct 18:15 (PS_TOPE, brazo pur); si cambian, la serie no corre
 GENES = CB.GENES; BASE = dict(zip(GENES, CB.BASE)); DISENO = dict(zip(GENES, CB.DISENO)); SIGMA = CB.SIGMA; DELTA = CB.DELTA
-CADENAS = ('sel', 'neu'); LEE_CADENA = {'sel': 1, 'neu': 0}
-ORDEN = ('sel', 'neu', 'fab', 'off'); CAND = 'sel'; NEU = 'neu'; TECHO = 'fab'; PISO_B = 'off'
+CADENAS = ('sel', 'neu', 'pur'); LEE_CADENA = {'sel': 1, 'neu': 0, 'pur': 1}
+TOPE_PUR = 0.045   # brazo pur (5-oct, tras ERR-192): el cuerpo lee min(MARGEN, 0.045): por encima del arranque (0.03: 4/18) y por debajo de la zona que cruza (0.06: 11-15/18)
+TOPE_CADENA = {'sel': None, 'neu': None, 'pur': TOPE_PUR}   # las PRUEBAS leen SIN tope (tambien la de pur: ¿cruza su gen heredado?)
+ORDEN = ('sel', 'neu', 'pur', 'fab', 'off'); CAND = 'sel'; NEU = 'neu'; PUR = 'pur'; TECHO = 'fab'; PISO_B = 'off'
 BASES = {'serie': (883100, 883301), 'replica': (883500, 883701), 'humo': (883990, 883998), 'mapa': (883001, 883001), 'arnes': 883950}
 SEM_MAPA = (883001, 883002)
-N_IND = 20; NPAS = 5; T_PAS = 100000; T_PRU = 100000; VENT = 5000; POOL_MAX = 2
+N_IND = 20; NPAS = 5; T_PAS = 100000; T_PRU = 100000; VENT = 5000; POOL_MAX = 3   # pool 3 (5-oct): un trabajador por brazo de cadena; el PC es solo para esto
 MAX_CORRIDAS_1P = 6; MAX_PASOS_1P = 200000; CPU_TOPE = 6
 # ------------------------------------------------------------------ constantes de la LETRA del PASO 2 (se FIJAN tras el mapa, en el preregistro)
-GEN_LETRA = None       # el gen de la letra (PG): el que el mapa muestre con pendiente desde apagado; None = PASO 2 no construido
-MARGEN_G = 0.05; GANA_PAR = 13; DIF_SUMA = 10; FAB_GANA = 16; PROF_MIN = 30; REFUND_MIN = 3000; RELOJ_CAD = 16   # los de perillas (a priori)
+GEN_LETRA = 'MARGEN'   # PASO B (5-oct): el gen de la letra = el margen de la boca de O1 (el mapa: rampa 0/0, 0/4, 3/8, 8/9 en 0, .03, .06, .10; fab 4/8)
+MARGEN_G = 0.03        # PG: MARGEN mediano de la siembra final de sel > el de neu + 0.03. Nulo de ESTE gen (nulo_margen.py): mediana neutra ~0.007-0.010,
+                       #     P(sel > neu + 0.03) por cadena bajo el nulo 0.05-0.06 -> P(>= 13/20) ~1e-11; 0.03 es ademas el primer escalon medido de la rampa
+FUNC_MARGEN = 0.06     # descriptivo: zona FUNCIONAL de la rampa (0.06 -> 11/18 linajes; 0.10 -> 17/18); se reporta cuantas cadenas sel llegan
+FL_SERIE = 1           # fundador_limpio de la serie: 1 = canonico del muro (ENMIENDA 5: r2o1mono, corre_v143 FL 1, o1_evo, termostato). PASO A decide si se cambia
+MAYORIAS_MURO = 16     # frase maxima solo si sel alcanza mayoria (>= 5/9 cruzan) en >= 16/20 pruebas, como O1 (18-20/20)
+MUTA_SERIE = CB.MUTA   # auditoria (punto 3): en la serie SOLO MARGEN muta (sel y neu); los otros cinco genes quedan en fabrica. (0,1,2,3,4,5) = los seis
+CONSERVA = 'CONSERVA, NO SUBE'   # auditoria (B-1): PG (a) pasa pero (b) no: la seleccion impide que el margen caiga a 0; no lo sube. No es MODESTO; replica solo si (b) a +-1
+TRINQUETE = 'TRINQUETE'          # (5-oct, ERR-192): sel llega a la zona funcional pero sel ~ pur: la seleccion purificadora y la deriva lo llevan; no hay evidencia de gradiente
+MARGEN_GR = 0.02                 # puerta de GRADIENTE: MARGEN final de sel > pur + 0.02 en >= 13/20 pareado. Nulo (nulo_margen.py (5)): sel y pur intercambiables sin gradiente
+GANA_PAR = 13; DIF_SUMA = 10; FAB_GANA = 16; PROF_MIN = 30; REFUND_MIN = 3000; RELOJ_CAD = 16   # los de perillas (a priori)
 
 
 def h16(p): return hashlib.sha256(open(p, 'rb').read()).hexdigest()[:16]
@@ -99,26 +110,29 @@ def fija():
     return dict(carro=CARRO, sha=h16(ruta), PERILLAS=m.PERILLAS, PS_BASE=list(m.PS_BASE), PS_APAGADO=list(m.PS_APAGADO), PS_FABRICA=list(m.PS_FABRICA))
 
 
-def _pon(m, siembra, seed, sigma, delta, lee, camara, por_linaje=None):
+def _pon(m, siembra, seed, sigma, delta, lee, camara, por_linaje=None, muta=None, tope=None):
     m.SIEMBRA = copy.deepcopy(siembra); m.PS_SEMILLA = int(seed); m.PS_SIGMA = float(sigma); m.PS_DELTA = float(delta); m.PS_LEE = int(lee); m.PS_CAMARA = int(camara)
+    m.PS_MUTA = tuple(int(j) for j in (muta if muta is not None else MUTA_SERIE)); m.PS_TOPE = (None if tope is None else float(tope))
     m.PS_POR_LINAJE = copy.deepcopy(por_linaje)
     m._TEL.clear(); m._PS_CNT.clear(); m._VIVO.clear()
 
 
-def _quita(m): _pon(m, None, 0, SIGMA, DELTA, 1, 1, None)
+def _quita(m): _pon(m, None, 0, SIGMA, DELTA, 1, 1, None, CB.MUTA, None)
 
 
-def tarea(seed, T, siembra=None, sigma=SIGMA, lee=1, delta=DELTA, camara=1, por_linaje=None):
+def tarea(seed, T, siembra=None, sigma=SIGMA, lee=1, delta=DELTA, camara=1, por_linaje=None, fl=1, muta=None, tope=None):
     """corre_v143.tarea tal cual (regla 14) + 'tel_ps' (copia de _TEL del carro, solo lectura) + 'estado' (perillas de ESTE proceso).
     por_linaje = lista de 9 genomas (listas de 6) para la PISTA MIXTA (cada linaje con el suyo, fijo)."""
     est = fija(); m = CV._MODS[CARRO]
-    _pon(m, siembra, seed, sigma, delta, lee, camara, por_linaje)
-    est.update(sigma=float(sigma), delta=float(delta), camara=int(camara), siembra_n=len(siembra or []), lee=int(lee), por_linaje=(por_linaje is not None))
+    _pon(m, siembra, seed, sigma, delta, lee, camara, por_linaje, muta, tope)
+    est.update(sigma=float(sigma), delta=float(delta), camara=int(camara), siembra_n=len(siembra or []), lee=int(lee), por_linaje=(por_linaje is not None), fl=int(fl), muta=list(m.PS_MUTA), tope=m.PS_TOPE)
+    fl0 = CV.FL; CV.FL = int(fl)   # PASO A (5-oct): fundador_limpio por corrida; corre_v143.tarea lee su global FL en cada llamada; se restaura siempre
     try:
         x = CV.tarea((seed, CARRO, T))
         tel = copy.deepcopy({str(i): v for i, v in m._TEL.items()})
     finally:
-        _quita(m)
+        _quita(m); CV.FL = fl0
+    if x['pista']['fundador_limpio'] != int(fl): raise RuntimeError(f"fundador_limpio {x['pista']['fundador_limpio']} != {fl}")
     x.pop('pizarra_log', None); x.pop('tel', None)
     x['tel_ps'] = tel; x['estado'] = est
     return x
@@ -152,10 +166,13 @@ def fila(x, T):
 # ------------------------------------------------------------------ PASO 1: EL MAPA (genomas fijos)
 def genoma(etq):
     """fab (O1) · off (APAGADO provisional) · 'K=v[+K=v]' sobre fab · 'off+K=v[+K=v]' sobre off. Valores CRUDOS (MARGEN 0.03, PISO 1.0...)."""
-    if etq == 'off': return dict(BASE)
+    if etq == 'off': return dict(zip(GENES, CB.APAGADO))   # el apagado del mapa (genetista)
+    if etq == 'base': return dict(BASE)                     # el arranque de la serie (PASO B)
     if etq == 'fab': return dict(DISENO)
-    partes = etq.split('+'); g = dict(BASE if partes[0] == 'off' else DISENO)
-    for q in (partes[1:] if partes[0] == 'off' else partes):
+    # (5-oct 16:30, corregido: 'off+' usaba BASE, que ese dia paso a ser el ARRANQUE de la serie; los 12 JSON fl0 del lote D de las 15:48-16:17 quedaron mal
+    #  etiquetados y se apartaron a datos/mapa/invalidos_etiqueta_fl0_D/. 'off+' = sobre APAGADO (genetista); 'base+' = sobre BASE (arranque de la serie).)
+    partes = etq.split('+'); g = dict(zip(GENES, CB.APAGADO)) if partes[0] == 'off' else (dict(BASE) if partes[0] == 'base' else dict(DISENO))
+    for q in (partes[1:] if partes[0] in ('off', 'base') else partes):
         k, v = q.split('='); k = k.strip()
         if k not in GENES: raise SystemExit(f"gen desconocido {k!r} en {etq!r}")
         g[k] = float(v)
@@ -178,32 +195,37 @@ LOTES = {'A': ['MARGEN=0.0', 'MARGEN=0.03', 'MARGEN=0.06', 'MARGEN=0.1', 'fab', 
          'B': ['PISO=0.0', 'PISO=0.4', 'PISO=0.6', 'PISO=1.0', 'PEN_OTRO=1.0', 'PRUEBA=0.0'],
          'C': ['LIMPIA=0', 'HUECO=0', 'MARGEN=0.1+PISO=0.6', 'MARGEN=0.06+PISO=0.4', 'MARGEN=0.1+PISO=1.0', 'off'],
          'M': ['mix:8xPISO=0.2+1xPISO=0.6', 'mix:8xPISO=0.6+1xPISO=0.2', 'mix:8xfab+1xLIMPIA=0', 'mix:8xLIMPIA=0+1xfab'],
+         'X': ['LIMPIA=0', 'fab'],   # PASO A: los dos clonales que deciden, con --fl 0
          'D': ['off+MARGEN=0.25', 'off+PISO=0.2', 'off+LIMPIA=1', 'off+MARGEN=0.25+PISO=0.2', 'off+MARGEN=0.25+LIMPIA=1+PISO=0.2', 'off+MARGEN=0.25+LIMPIA=1+PISO=0.2+PEN_OTRO=0.35']}
 LOTE_SEM = {k: 883001 for k in LOTES}
 for _k in list(LOTES):   # la segunda semilla: A2..M2
     LOTES[_k + '2'] = list(LOTES[_k]); LOTE_SEM[_k + '2'] = 883002
 
 
-def corrida_fija(etq, seed, T, carpeta, log):
-    fin = os.path.join(carpeta, f"fijo_{etq.replace(':', '-').replace('=', '')}_s{seed}_T{T}.json")
+def corrida_fija(etq, seed, T, carpeta, log, fl=1):
+    fin = os.path.join(carpeta, f"fijo_{etq.replace(':', '-').replace('=', '')}_s{seed}_T{T}{'' if fl == 1 else '_fl' + str(fl)}.json")   # fl 1: los nombres del 1-oct, intactos
     if os.path.exists(fin):
         with open(fin, encoding='utf-8') as fh: x = json.load(fh)
         if not x.get('aborto'): log(f"  (ya estaba) {etq} s{seed}: cruzan {x['cruzan']}/9 R0 {x['R0_med']}"); return x
     es_mix = etq.startswith('mix:'); t0 = time.time()
     g = None if es_mix else genoma(etq); pl = [[q[k] for k in GENES] for q in mixta(etq)] if es_mix else None
     try:
-        if es_mix: y = tarea(seed, T, siembra=None, sigma=0.0, lee=1, delta=0.0, camara=0, por_linaje=pl)   # cada linaje con SU genoma fijo
-        else: y = tarea(seed, T, siembra=[g], sigma=0.0, lee=1, delta=0.0, camara=0)   # genoma FIJO: sin mutacion, sin camara
+        if es_mix: y = tarea(seed, T, siembra=None, sigma=0.0, lee=1, delta=0.0, camara=0, por_linaje=pl, fl=fl)   # cada linaje con SU genoma fijo
+        else: y = tarea(seed, T, siembra=[g], sigma=0.0, lee=1, delta=0.0, camara=0, fl=fl)   # genoma FIJO: sin mutacion, sin camara
         x = dict(tipo='fijo', etq=etq, genoma=g, genomas_linaje=pl, aborto=None, **fila(y, T))
+        # (5-oct 16:40) el genoma que LEYO el carro (telemetria del primer fundador) debe ser EL pedido; si no, la corrida es un aborto con la prueba que lo cazo
+        leido = x['fund_gen0']; pedido = (g if not es_mix else dict(zip(GENES, pl[0])))
+        x['genoma_ok'] = bool(leido == pedido and x['fund_genes_distintos'] == (1 if not es_mix else len({tuple(q) for q in pl})))
+        if not x['genoma_ok']: x['aborto'] = f"GENOMA LEIDO {leido} != PEDIDO {pedido} (etiqueta {etq})"
     except BaseException as e:   # noqa: nube-9
         x = dict(tipo='fijo', etq=etq, genoma=g, genomas_linaje=pl, seed=seed, aborto=f"{type(e).__name__}: {e}"[:300])
-    x['seg'] = round(time.time() - t0, 1); x['T'] = T
+    x['seg'] = round(time.time() - t0, 1); x['T'] = T; x['fl'] = int(fl)
     tmp = fin + '.tmp'
     with open(tmp, 'w', encoding='utf-8') as fh: json.dump(x, fh, ensure_ascii=False)
     os.replace(tmp, fin)
     if x['aborto']: log(f"  [{x['seg']}s] {etq} s{seed} ABORTO {x['aborto']}")
     else:
-        log(f"  [{x['seg']}s] {etq} s{seed} genoma {g if g else 'MIXTA'} · cruzan {x['cruzan']}/9 mayoria {x['mayoria']} R0 real med {x['R0_med']} fund med {x['fund_med']} estab {x['establecidos']}/9 "
+        log(f"  [{x['seg']}s] {etq} s{seed} fl{fl} genoma {g if g else 'MIXTA'} · cruzan {x['cruzan']}/9 mayoria {x['mayoria']} R0 real med {x['R0_med']} fund med {x['fund_med']} estab {x['establecidos']}/9 "
             f"· vida {x['vida_med']} · causas {x['causas']} · B+D {x['mord_BD']} A+C {x['mord_AC']} · mundo AC {x['mundo_AC']} sin bueno {x['frac_sin_bueno']} · coherente {x['coherente']}")
         if es_mix:
             for q in x['por_linaje']: log(f"      linaje {q['i']} genes {q['genes']} cruza {q['cruza']} R0 {q['R0_real']} fund {q['fund']} B+D {q['mord_BD']} A+C {q['mord_AC']} limpiezas {q['limpiezas']}")
@@ -215,8 +237,8 @@ def lee_mapa(carpeta, log=print):
     for f in sorted(glob.glob(os.path.join(carpeta, 'fijo_*.json'))):
         x = json.load(open(f, encoding='utf-8'))
         if x.get('aborto'): log(f"  ABORTO {f}: {x['aborto']}"); continue
-        R.setdefault(x['etq'], {})[x['seed']] = x
-    orden = [e for k in sorted(LOTES) if not k.endswith('2') for e in LOTES[k]] + sorted(R)
+        R.setdefault(x['etq'] + ('' if x.get('fl', 1) == 1 else f" (fl {x['fl']})"), {})[x['seed']] = x
+    orden = [e + suf for suf in ('', ' (fl 0)') for k in sorted(LOTES) if not k.endswith('2') for e in LOTES[k]] + sorted(R)
     orden = [e for j, e in enumerate(orden) if e in R and e not in orden[:j]]
     log(f"MAPA (genomas fijos, pista vieja, 9 linajes por corrida, T {next(iter(next(iter(R.values())).values()))['T'] if R else '?'}) · {carpeta}")
     log(f"  {'genoma':26s} {'semillas':>9} {'cruzan/9 por semilla':>22} {'suma':>5} {'R0 real med':>12} {'fund med':>9} {'estab':>7} {'vida':>6}  causas h/s/v/sal  B+D  A+C  mundoAC")
@@ -262,7 +284,7 @@ def cadena(i, base, npas, T, carpeta, reanuda, brazo, log=None):
         if reanuda and os.path.exists(fin):
             with open(fin, encoding='utf-8') as fh: d = json.load(fh)
         else:
-            x = tarea(sem_pas(base, i, p), T, siembra=sie, sigma=SIGMA, lee=lee, delta=DELTA, camara=1)
+            x = tarea(sem_pas(base, i, p), T, siembra=sie, sigma=SIGMA, lee=lee, delta=DELTA, camara=1, fl=FL_SERIE, tope=TOPE_CADENA[brazo])
             sig, info = siembra(x['tel_ps'], T)
             f = fila(x, T); gm = genoma_mediano(sig)
             f.update(p=p, sembrado=int(sie is not None), moneda=info, prof=prof_de(sig), genes_siembra=({k: round(v, 4) for k, v in gm.items()} if gm else None),
@@ -299,8 +321,10 @@ def trabajo(args):
             x = dict(tipo=tipo, i=i, brazo=brazo, aborto=None, **cadena(i, base, npas, T_pas, carpeta, reanuda, brazo))
         else:
             g = genoma_de(brazo, i, carpeta)
-            y = tarea(sem_pru(base, i), T_pru, siembra=[g], sigma=0.0, lee=1, delta=0.0, camara=0)
+            y = tarea(sem_pru(base, i), T_pru, siembra=[g], sigma=0.0, lee=1, delta=0.0, camara=0, fl=FL_SERIE, tope=None)   # la prueba lee SIN tope en todos los brazos
             x = dict(tipo=tipo, i=i, brazo=brazo, aborto=None, genoma=g, **fila(y, T_pru))
+            x['genoma_ok'] = bool(x['fund_gen0'] == g and x['fund_genes_distintos'] == 1)   # el genoma que LEYO el carro == el pedido (cubre sel, neu, pur, fab, off)
+            if not x['genoma_ok']: raise RuntimeError(f"GENOMA LEIDO {x['fund_gen0']} != PEDIDO {g} (prueba {brazo})")
     except BaseException as e:   # noqa: nube-9
         x = dict(tipo=tipo, i=i, brazo=brazo, aborto=f"{type(e).__name__}: {e}"[:300])
     if previo: x['reintento_de'] = previo
@@ -317,9 +341,9 @@ def par(A, B, I):
                 suma_a=sum(a), suma_b=sum(b), dif=sum(a) - sum(b), por_indice_a=a, por_indice_b=b)
 
 
-def par_gen(C, I, k, margen=MARGEN_G):
-    a = [C[CAND][i]['genoma_final'][k] for i in I]; b = [C[NEU][i]['genoma_final'][k] for i in I]
-    return dict(gen=k, margen=margen, n=len(I), gana=sum(x > y + margen for x, y in zip(a, b)), pierde=sum(x < y - margen for x, y in zip(a, b)),
+def par_gen(C, I, k, margen=MARGEN_G, otro=NEU):
+    a = [C[CAND][i]['genoma_final'][k] for i in I]; b = [C[otro][i]['genoma_final'][k] for i in I]
+    return dict(gen=k, otro=otro, margen=margen, n=len(I), gana=sum(x > y + margen for x, y in zip(a, b)), pierde=sum(x < y - margen for x, y in zip(a, b)),   # 'med_neu'/'por_cadena_neu' = el brazo 'otro' (neu o pur)
                 med_sel=med(a), med_neu=med(b), por_cadena_sel=[round(x, 4) for x in a], por_cadena_neu=[round(y, 4) for y in b])
 
 
@@ -336,10 +360,10 @@ def lee_serie(C, R, n, abortos, npas=NPAS):
     v['V2_fab_gana_a_off'] = bool(pf and pf['gana'] >= fg)
     filas = [R[b][i] for b in ORDEN for i in R.get(b, {})] + [q for b in CADENAS for q in pas(b)]
     gen_ok = lambda q, g: q.get('genoma') == g and q['fund_n'] > 0 and q['fund_de_siembra'] == q['fund_n'] and q['fund_genes_distintos'] == 1 and q['fund_gen0'] == g
-    v['V4_estado'] = bool(completo and all(est(q).get('carro') == CARRO and est(q).get('PERILLAS') == 1 for q in filas)
-                          and all(est(q).get('lee') == LEE_CADENA[b] and est(q).get('sigma') == SIGMA and est(q).get('delta') == DELTA and est(q).get('camara') == 1 for b in CADENAS for q in pas(b))
+    v['V4_estado'] = bool(completo and all(est(q).get('carro') == CARRO and est(q).get('PERILLAS') == 1 and est(q).get('fl') == FL_SERIE for q in filas)
+                          and all(est(q).get('lee') == LEE_CADENA[b] and est(q).get('sigma') == SIGMA and est(q).get('delta') == DELTA and est(q).get('camara') == 1 and est(q).get('muta') == list(MUTA_SERIE) and est(q).get('tope') == TOPE_CADENA[b] for b in CADENAS for q in pas(b))
                           and all(est(R[b][i]).get('lee') == 1 and est(R[b][i]).get('sigma') == 0.0 and est(R[b][i]).get('delta') == 0.0 and est(R[b][i]).get('camara') == 0
-                                  and est(R[b][i]).get('siembra_n') == 1 for b in ORDEN for i in I)
+                                  and est(R[b][i]).get('siembra_n') == 1 and est(R[b][i]).get('tope') is None for b in ORDEN for i in I)
                           and all(gen_ok(R[b][i], C[b][i]['genoma_final']) for b in CADENAS for i in I)
                           and all(gen_ok(R[TECHO][i], DISENO) and gen_ok(R[PISO_B][i], BASE) for i in I))
     nl = 9
@@ -348,29 +372,56 @@ def lee_serie(C, R, n, abortos, npas=NPAS):
                                and all(q['fund_de_camara'] == q['fund_n'] - nl for b in CADENAS for q in pas(b)))
     rl = {b: dict(prof=[C[b][i].get('prof_final') for i in sorted(C.get(b, {}))], refund=[C[b][i].get('refund_camara') for i in sorted(C.get(b, {}))]) for b in CADENAS}
     sobre = lambda xs, m_: sum(1 for z in xs if z is not None and z >= m_)
-    v['V7a_profundidad_mutacional_neutra'] = bool(completo and sobre(rl[NEU]['prof'], PROF_MIN) >= rc)
-    v['V7b_refundaciones_por_camara_neutra'] = bool(completo and sobre(rl[NEU]['refund'], REFUND_MIN) >= rc)
+    # auditoria (B-2): los dos relojes sobre el NEUTRO y sobre SEL; si sel no llega es NO SE LEE, no NO. Profundidad EFECTIVA sobre el gen de la letra =
+    # profundidad x (fraccion de los eventos que caen en MARGEN) = profundidad x (1/len(MUTA_SERIE) si 0 in MUTA_SERIE)
+    fe = (1.0 / len(MUTA_SERIE)) if 0 in MUTA_SERIE else 0.0
+    v['V7a_profundidad_mutacional_neu_sel_pur'] = bool(completo and all(sobre(rl[b]['prof'], PROF_MIN) >= rc for b in CADENAS))
+    v['V7b_refundaciones_por_camara_neu_sel_pur'] = bool(completo and all(sobre(rl[b]['refund'], REFUND_MIN) >= rc for b in CADENAS))
     valido = all(v.values()); ok = valido or completo
     p = {}; pg = pc = None
     if ok:
         pg = par_gen(C, I, GEN_LETRA); pc = par(R[CAND], R[NEU], I)
-        p['PG_gen_sube'] = pg['gana'] >= gp; p['PC_par_neu'] = pc['gana'] >= gp; p['PC_suma_neu'] = pc['dif'] >= dsu
-    umbral = bool(ok and (abs(pg['gana'] - gp) <= 1 or abs(pc['gana'] - gp) <= 1 or abs(pc['dif'] - dsu) <= 1))
+        nb = sum(1 for i in I if C[CAND][i]['genoma_final'][GEN_LETRA] >= FUNC_MARGEN)   # (b): cadenas sel cuyo MARGEN final esta en la zona funcional
+        p['PG_a_sel_sobre_neu'] = pg['gana'] >= gp; p['PG_b_sel_en_zona_funcional'] = nb >= gp; p['PG_gen_sube'] = p['PG_a_sel_sobre_neu'] and p['PG_b_sel_en_zona_funcional']
+        p['PC_par_neu'] = pc['gana'] >= gp; p['PC_suma_neu'] = pc['dif'] >= dsu; p['n_sel_en_zona'] = nb
+        pgr = par_gen(C, I, GEN_LETRA, MARGEN_GR, PUR); p['GR_sel_sobre_pur'] = pgr['gana'] >= gp; p['n_gr'] = pgr['gana']   # puerta de GRADIENTE (5-oct)
+    umbral = bool(ok and (abs(pg['gana'] - gp) <= 1 or abs(nb - gp) <= 1 or abs(pc['gana'] - gp) <= 1 or abs(pc['dif'] - dsu) <= 1 or abs(pgr['gana'] - gp) <= 1))
+    umbral_b = bool(ok and abs(nb - gp) <= 1)   # (b) a +-1: lo unico que dispara replica desde CONSERVA
+    umbral_gr = bool(ok and abs(pgr['gana'] - gp) <= 1)   # H-1 (auditor corto): GR a +-1: lo unico que dispara replica desde TRINQUETE
     matiz = None
     if not valido: ver = 'NO SE LEE'
     else:
-        G = p['PG_gen_sube']; Cz = p['PC_par_neu'] and p['PC_suma_neu']
-        if G and Cz: ver = 'FUNCIONA'
-        elif G or Cz: ver = 'HAY ALGO MODESTO'; matiz = 'el gen sube pero no cruza mas que la deriva' if G else 'cruza mas que la deriva sin que el gen suba por la letra'
+        A = p['PG_a_sel_sobre_neu']; B = p['PG_b_sel_en_zona_funcional']; Cz = p['PC_par_neu'] and p['PC_suma_neu']; GR = p['GR_sel_sobre_pur']
+        if A and B and Cz and GR: ver = 'FUNCIONA'; matiz = 'la seleccion sube el margen porque un margen mayor persiste mas (sel > pur) y el genoma cruza mas que la deriva'
+        elif A and B and not GR: ver = TRINQUETE; matiz = 'la seleccion purificadora y la deriva llevan el margen a la zona funcional; no hay evidencia de gradiente (sel ~ pur)' + (' (y cruza mas que la deriva)' if Cz else ' (y no cruza mas que la deriva)')
+        elif A and B: ver = 'HAY ALGO MODESTO'; matiz = 'el gen sube con gradiente (sel > pur) pero no cruza mas que la deriva'
+        elif A: ver = CONSERVA; matiz = 'la seleccion impide que el margen caiga a 0; no lo sube' + (' (y el genoma cruza mas que el de la deriva)' if Cz else ' (y no cruza mas que la deriva)')
+        elif Cz: ver = 'HAY ALGO MODESTO'; matiz = 'cruza mas que la deriva sin que el gen suba por la letra'
         else: ver = 'NO'
     desc = {}
     if ok:
         desc['suma_cruzan'] = {b: sum(R[b][i]['cruzan'] for i in I) for b in ORDEN}
+        desc['mayorias_(>=5/9)'] = {b: sum(R[b][i]['mayoria'] for i in I) for b in ORDEN}   # la definicion del muro, por brazo
+        desc['sel_mayoria_como_O1'] = bool(sum(R[CAND][i]['mayoria'] for i in I) >= esc(MAYORIAS_MURO, n))
+        desc['mord_BD_med'] = {b: med([R[b][i]['mord_BD'] for i in I]) for b in ORDEN}; desc['mord_AC_med'] = {b: med([R[b][i]['mord_AC'] for i in I]) for b in ORDEN}
+        desc['frac_sin_bueno_med'] = {b: med([R[b][i]['frac_sin_bueno'] for i in I]) for b in ORDEN}; desc['fund_med'] = {b: med([R[b][i]['fund_med'] for i in I]) for b in ORDEN}
+        desc['sel_MARGEN_en_zona_funcional'] = sum(1 for i in I if C[CAND][i]['genoma_final'][GEN_LETRA] >= FUNC_MARGEN)
+        desc['fl_serie'] = FL_SERIE; desc['muta_serie'] = list(MUTA_SERIE)
+        desc['UNA_EVIDENCIA'] = 'PG y PC son UNA evidencia: neu cae a ~0.01 y con MARGEN ~0 nadie pare; PC con neu es casi off vs sel'
+        desc['sel_cadenas_LIMPIA_le_0.5'] = sum(1 for i in I if C[CAND][i]['genoma_final']['LIMPIA'] <= 0.5)   # sujetas a la regalia de ERR-191
+        desc['sel_pruebas_BD_le_5'] = sum(1 for i in I if R[CAND][i]['mord_BD'] <= 5)   # cruzar sin morder nada malo = limpieza regalada (ERR-191)
+        desc['sel_MARGEN_final_por_cadena'] = [round(C[CAND][i]['genoma_final'][GEN_LETRA], 4) for i in I]
         desc['R0_med'] = {b: med([R[b][i]['R0_med'] for i in I]) for b in ORDEN}
         desc['establecidos'] = {b: sum(R[b][i]['establecidos'] for i in I) for b in ORDEN}
         desc['mundo_AC'] = {b: med([R[b][i]['mundo_AC'] for i in I]) for b in ORDEN}
         desc['genes'] = {k: par_gen(C, I, k) for k in GENES}
-        desc['pareados'] = {f"{a}_vs_{b}": par(R[a], R[b], I) for a, b in (('sel', 'neu'), ('sel', 'off'), ('sel', 'fab'), ('neu', 'off'), ('fab', 'off'))}
+        desc['gradiente_sel_vs_pur'] = pgr
+        raz = {i: ((C[CAND][i]['prof_final'] / C[PUR][i]['prof_final']) if C[PUR][i].get('prof_final') else None) for i in I}   # H-4: razon de profundidad sel/pur
+        Ie = [i for i in I if raz[i] is not None and 0.7 <= raz[i] <= 1.3]
+        desc['GR_estratificado_profundidad'] = dict(razon_sel_pur_por_cadena=[(round(raz[i], 3) if raz[i] is not None else None) for i in I], n_dentro_30pct=len(Ie),
+                                                  GR_solo_en_ellas=(par_gen(C, Ie, GEN_LETRA, MARGEN_GR, PUR) if Ie else None), nota='descriptivo; no toca la letra')
+        desc['gradiente_sel_vs_pur_dup'] = None; desc['pur_prueba_sin_tope'] = dict(suma_cruzan=sum(R[PUR][i]['cruzan'] for i in I), mayorias=sum(R[PUR][i]['mayoria'] for i in I), R0_med=med([R[PUR][i]['R0_med'] for i in I]))
+        desc['pareados'] = {f"{a}_vs_{b}": par(R[a], R[b], I) for a, b in (('sel', 'neu'), ('sel', 'pur'), ('pur', 'neu'), ('sel', 'off'), ('sel', 'fab'), ('neu', 'off'), ('fab', 'off'))}
     for b in CADENAS:
         Cb = C.get(b, {})
         if not Cb: continue
@@ -379,36 +430,51 @@ def lee_serie(C, R, n, abortos, npas=NPAS):
         desc[f'{b}_trayectoria_gen_mediana_por_pasaje'] = {k: [med(col(q, lambda z: (z['genes_siembra'] or {}).get(k))) for q in range(np_)] for k in GENES}
         desc[f'{b}_cruzan_por_pasaje_mediana'] = [med(col(q, lambda z: z['cruzan'])) for q in range(np_)]
         desc[f'{b}_establecidos_en_pasaje_mediana'] = [med(col(q, lambda z: z['moneda']['n_est'])) for q in range(np_)]
-    desc['relojes'] = {b: dict(profundidad_mutacional_mediana=med(rl[b]['prof']), refundaciones_por_camara_mediana=med(rl[b]['refund'])) for b in CADENAS}
-    return dict(validez=v, puertas=p, veredicto=ver, matiz=matiz, en_umbral=umbral, pareado_gen=pg, pareado_neu=pc, pareado_fab_off=pf, descriptivo=desc)
+    desc['relojes'] = {b: dict(profundidad_mutacional_mediana=med(rl[b]['prof']), profundidad_EFECTIVA_sobre_MARGEN_mediana=(round(med(rl[b]['prof']) * fe, 1) if med(rl[b]['prof']) is not None else None),
+                               refundaciones_por_camara_mediana=med(rl[b]['refund']), cadenas_prof_sobre_min=sobre(rl[b]['prof'], PROF_MIN), cadenas_refund_sobre_min=sobre(rl[b]['refund'], REFUND_MIN)) for b in CADENAS}
+    return dict(validez=v, puertas=p, veredicto=ver, matiz=matiz, en_umbral=umbral, conserva_b_umbral=umbral_b, trinquete_gr_umbral=umbral_gr, pareado_gen=pg, pareado_neu=pc, pareado_fab_off=pf, descriptivo=desc)
 
 
 def casos_sinteticos():
     """Casos sinteticos de la letra (arnes (F)); se construyen con GEN_LETRA fijado."""
     def cad(gf, prof=60, ref=4000):
         pas = [dict(sembrado=int(p > 0), fund_de_base=(9 if p == 0 else 0), fund_de_siembra=(0 if p == 0 else 9), fund_de_camara=20, fund_n=29, coherente=True,
-                    estado=dict(carro=CARRO, PERILLAS=1, lee=None, sigma=SIGMA, delta=DELTA, camara=1), moneda=dict(n_est=5, respaldo=False), genes_siembra=dict(gf), cruzan=3) for p in range(NPAS)]
+                    estado=dict(carro=CARRO, PERILLAS=1, lee=None, sigma=SIGMA, delta=DELTA, camara=1, fl=FL_SERIE, muta=list(MUTA_SERIE)), moneda=dict(n_est=5, respaldo=False), genes_siembra=dict(gf), cruzan=3) for p in range(NPAS)]
         return dict(pasajes=pas, genoma_final=dict(gf), prof_final=prof, refund_camara=ref)
     def pru(g, cr):
-        return dict(cruzan=cr, coherente=True, genoma=dict(g), fund_n=9, fund_de_siembra=9, fund_genes_distintos=1, fund_gen0=dict(g), R0_med=0.9, establecidos=5, mundo_AC=7.0,
-                    estado=dict(carro=CARRO, PERILLAS=1, lee=1, sigma=0.0, delta=0.0, camara=0, siembra_n=1))
-    def arma(gs, gn, cs, cn, cf=8, co=1):
-        C = {'sel': {}, 'neu': {}}; R = {b: {} for b in ORDEN}
+        return dict(cruzan=cr, mayoria=int(cr >= 5), coherente=True, genoma=dict(g), fund_n=9, fund_de_siembra=9, fund_genes_distintos=1, fund_gen0=dict(g), R0_med=0.9, establecidos=5, mundo_AC=7.0,
+                    mord_BD=300, mord_AC=600, frac_sin_bueno=0.03, fund_med=0.0, estado=dict(carro=CARRO, PERILLAS=1, lee=1, sigma=0.0, delta=0.0, camara=0, siembra_n=1, fl=FL_SERIE, tope=None))
+    def arma(gs, gn, cs, cn, cf=8, co=1, gp_=None, cp=1):
+        gp_ = dict(gs) if gp_ is None else gp_
+        C = {'sel': {}, 'neu': {}, 'pur': {}}; R = {b: {} for b in ORDEN}
         for i in range(20):
-            C['sel'][i] = cad(gs); C['neu'][i] = cad(gn)
-            for q in C['sel'][i]['pasajes']: q['estado']['lee'] = 1
-            for q in C['neu'][i]['pasajes']: q['estado']['lee'] = 0
-            R['sel'][i] = pru(gs, cs); R['neu'][i] = pru(gn, cn); R['fab'][i] = pru(DISENO, cf); R['off'][i] = pru(BASE, co)
+            C['sel'][i] = cad(gs); C['neu'][i] = cad(gn); C['pur'][i] = cad(gp_)
+            for b in CADENAS:
+                for q in C[b][i]['pasajes']: q['estado']['lee'] = LEE_CADENA[b]; q['estado']['tope'] = TOPE_CADENA[b]
+            R['sel'][i] = pru(gs, cs); R['neu'][i] = pru(gn, cn); R['pur'][i] = pru(gp_, cp); R['fab'][i] = pru(DISENO, cf); R['off'][i] = pru(BASE, co)
         return C, R
-    alto = dict(BASE, **{GEN_LETRA: 0.4}); bajo = dict(BASE)
-    out = [('FUNCIONA (gen sube y cruza mas)', arma(alto, bajo, 5, 1) + (20, 0), 'FUNCIONA'),
-           ('MODESTO (gen sube, no cruza mas)', arma(alto, bajo, 1, 1) + (20, 0), 'HAY ALGO MODESTO'),
+    alto = dict(BASE, **{GEN_LETRA: 0.10}); medio = dict(BASE, **{GEN_LETRA: 0.045}); bajo = dict(BASE, **{GEN_LETRA: 0.008}); zona = dict(BASE, **{GEN_LETRA: 0.07})
+    out = [('FUNCIONA (gen sube a la zona funcional, sel > pur + 0.02, y cruza mas)', arma(alto, bajo, 5, 1, gp_=zona) + (20, 0), 'FUNCIONA'),
+           ('TRINQUETE (sel en zona pero sel ~ pur; cruza mas)', arma(alto, bajo, 5, 1, gp_=alto) + (20, 0), TRINQUETE),
+           ('TRINQUETE (sel en zona, sel ~ pur, no cruza mas)', arma(alto, bajo, 1, 1, gp_=dict(BASE, **{GEN_LETRA: 0.09})) + (20, 0), TRINQUETE),
+           ('MODESTO (gen sube con gradiente, no cruza mas)', arma(alto, bajo, 1, 1, gp_=zona) + (20, 0), 'HAY ALGO MODESTO'),
+           ('CONSERVA, NO SUBE (sel > neu + 0.03 pero sel < 0.06; cruza igual)', arma(medio, bajo, 1, 1) + (20, 0), CONSERVA),
+           ('CONSERVA, NO SUBE (y cruza mas que neu)', arma(medio, bajo, 5, 1) + (20, 0), CONSERVA),
+           ('MODESTO (cruza mas sin que el gen suba)', arma(bajo, bajo, 5, 1) + (20, 0), 'HAY ALGO MODESTO'),
            ('NO (ni sube ni cruza)', arma(bajo, bajo, 1, 1) + (20, 0), 'NO'),
            ('NO SE LEE (aborto)', arma(alto, bajo, 5, 1) + (20, 1), 'NO SE LEE'),
            ('NO SE LEE (fab no gana a off)', arma(alto, bajo, 5, 1, cf=1, co=1) + (20, 0), 'NO SE LEE')]
     C, R = arma(alto, bajo, 5, 1)
     for i in range(20): C['neu'][i]['prof_final'] = 10
     out.append(('NO SE LEE (reloj neutro corto)', (C, R, 20, 0), 'NO SE LEE'))
+    C, R = arma(alto, bajo, 5, 1)
+    for i in range(20): C['sel'][i]['refund_camara'] = 100
+    out.append(('NO SE LEE (reloj de sel corto: B-2)', (C, R, 20, 0), 'NO SE LEE'))
+    C, R = arma(alto, bajo, 5, 1, gp_=alto)   # H-1: TRINQUETE con GR a +-1 (12/20 cadenas sel > pur + 0.02) -> replica; con GR 0/20 -> no
+    for i in range(12):
+        g13 = dict(BASE, **{GEN_LETRA: 0.13}); C['sel'][i]['genoma_final'] = g13; R['sel'][i]['genoma'] = dict(g13); R['sel'][i]['fund_gen0'] = dict(g13)
+    out.append(('TRINQUETE con GR a +-1 (12/20): dispara replica', (C, R, 20, 0), (TRINQUETE, True)))
+    out.append(('TRINQUETE con GR 0/20: NO dispara replica', arma(alto, bajo, 5, 1, gp_=alto) + (20, 0), (TRINQUETE, False)))
     return out
 
 
@@ -444,6 +510,7 @@ def identidad_corta(log, seed=None, T=1500):
 
 def guarda(modo, pre, reanuda):
     if GEN_LETRA is None: return "GEN_LETRA no fijado: el PASO 2 no esta construido (primero el mapa y el preregistro)"
+    if FL_SERIE not in (0, 1): return 'FL_SERIE no fijado'
     if any(x is None for x in SHAS_PROPIOS.values()): return f"SHAS_PROPIOS sin fijar: {[k for k, x in SHAS_PROPIOS.items() if x is None]}"
     previas = sorted(d for d in glob.glob(os.path.join(DATOS, pre + '_*')) if os.path.isdir(d))
     for d in previas:
@@ -457,9 +524,11 @@ def guarda(modo, pre, reanuda):
         rsm = sorted(glob.glob(os.path.join(DATOS, f"serie_i{BASES['serie'][1]}-*", 'resumen.json')))
         rs0 = json.load(open(rsm[-1], encoding='utf-8')) if rsm else {}
         vs = (rs0.get('letra') or {}).get('veredicto'); um = (rs0.get('letra') or {}).get('en_umbral')
-        if not (vs in ('FUNCIONA', 'HAY ALGO MODESTO') or (vs == 'NO' and um)): return f"REGLA DE PARADA: serie = {vs} (umbral {um})"
+        ub = (rs0.get('letra') or {}).get('conserva_b_umbral'); ug = (rs0.get('letra') or {}).get('trinquete_gr_umbral')
+        if not (vs in ('FUNCIONA', 'HAY ALGO MODESTO') or (vs == 'NO' and um) or (vs == CONSERVA and ub) or (vs == TRINQUETE and ug)):
+            return f"REGLA DE PARADA: serie = {vs} (umbral {um}; (b) a +-1: {ub}; GR a +-1: {ug})"
         if rs0.get('sha_runner') != h16(os.path.abspath(__file__)): return "sha_runner de la serie != runner actual"
-    for r in [os.path.join(AQUI, PRERREGISTRO), os.path.abspath(__file__), os.path.join(AQUI, 'construye_muro_perillas.py')] + list(CARROS.values()):
+    for r in [os.path.join(AQUI, PRERREGISTRO), os.path.abspath(__file__), os.path.join(AQUI, 'construye_muro_perillas.py'), os.path.join(AQUI, 'identidad_muro_perillas.py'), os.path.join(AQUI, 'nulo_margen.py')] + list(CARROS.values()):
         rel = os.path.relpath(r, RAIZ).replace(os.sep, '/')
         t = subprocess.run(['git', '-C', RAIZ, 'ls-files', '--error-unmatch', rel], capture_output=True, text=True).returncode == 0
         c = subprocess.run(['git', '-C', RAIZ, 'diff', '--quiet', 'HEAD', '--', rel], capture_output=True, text=True).returncode == 0
@@ -472,9 +541,11 @@ def main(argv=None):
     g = ap.add_mutually_exclusive_group(required=True)
     g.add_argument('--humo', action='store_true'); g.add_argument('--mapa', action='store_true'); g.add_argument('--lee', action='store_true')
     g.add_argument('--serie', action='store_true'); g.add_argument('--replica', action='store_true'); g.add_argument('--lee_serie', default=None)
+    g.add_argument('--humo_serie', action='store_true'); g.add_argument('--humo_cadena', action='store_true')
     ap.add_argument('--lote', default=None); ap.add_argument('--genomas', default=None); ap.add_argument('--seed', type=int, default=None)
     ap.add_argument('--T', type=int, default=None); ap.add_argument('--pool', type=int, default=0); ap.add_argument('--reanuda', action='store_true')
     ap.add_argument('--forzar_cpu', action='store_true'); ap.add_argument('--nota', default='')
+    ap.add_argument('--fl', type=int, default=1)   # PASO A: fundador_limpio del mapa (1 = canonico ENMIENDA 5; 0 = el de la sellada 5001-5020)
     a = ap.parse_args(argv)   # ERR-115: nunca parse_known_args
     if a.pool < 0 or a.pool > POOL_MAX: raise SystemExit(f"--pool entre 0 y {POOL_MAX}")
     if a.lee: lee_mapa(os.path.join(DATOS, 'mapa')); return 0
@@ -487,7 +558,7 @@ def main(argv=None):
         s = f"[{time.strftime('%H:%M:%S')}] {s}"; print(s, flush=True)
         if LOGF[0] is None: BUF.append(s)
         else: LOGF[0].write(s + '\n'); LOGF[0].flush()
-    log(f"CORRE_MURO_PERILLAS · {'humo' if a.humo else 'mapa' if a.mapa else 'serie' if a.serie else 'replica'} · {sel} · python {platform.python_version()} · pool {a.pool or 'NO (un proceso)'} · runner {h16(os.path.abspath(__file__))} · nota {a.nota!r}")
+    log(f"CORRE_MURO_PERILLAS · {'humo' if a.humo else 'mapa' if a.mapa else 'serie' if a.serie else 'replica' if a.replica else 'humo_serie' if a.humo_serie else 'humo_cadena'} · {sel} · python {platform.python_version()} · pool {a.pool or 'NO (un proceso)'} · runner {h16(os.path.abspath(__file__))} · nota {a.nota!r}")
     if a.humo or a.mapa:
         if a.pool: raise SystemExit("--humo/--mapa: sin Pool (un proceso)")
         if a.humo:
@@ -510,7 +581,8 @@ def main(argv=None):
         ok = verifica(log) and identidad_corta(log)
         if not ok: log("  ALGO FALLA -> no se corre."); return 1
         os.makedirs(carpeta, exist_ok=True); LOGF[0] = open(os.path.join(carpeta, 'log.txt'), 'a', encoding='utf-8'); LOGF[0].write('\n'.join(BUF) + '\n')
-        X = [corrida_fija(e, s, T, carpeta, log) for e, s in trabajos]
+        if a.fl not in (0, 1): raise SystemExit('--fl 0 o 1')
+        X = [corrida_fija(e, s, T, carpeta, log, fl=a.fl) for e, s in trabajos]
         if a.humo:   # regla 14 en el humo: fab fijo == corre_v143.tarea('O1') campo a campo
             N = lambda x: json.loads(json.dumps(x, default=str)); s0 = BASES['humo'][0]
             x = tarea(s0, T, siembra=[dict(DISENO)], sigma=0.0, delta=0.0, lee=1, camara=0); y = CV.tarea((s0, 'O1', T))
@@ -523,24 +595,45 @@ def main(argv=None):
         else:
             lee_mapa(carpeta, log); log(f"  {time.time() - t0:.1f}s")
         return 0
-    # ------------------------------------------------------------ PASO 2: serie / replica (SOLO el coordinador)
-    modo = 'serie' if a.serie else 'replica'; base = BASES[modo]; n = N_IND; npas = NPAS
-    pre = f"{modo}_i{sem_pru(base, 0)}-{sem_pru(base, n - 1)}"
-    prev = sorted(d for d in os.listdir(DATOS) if d.startswith(pre + '_') and os.path.isdir(os.path.join(DATOS, d))) if os.path.isdir(DATOS) else []
-    e = guarda(modo, pre, a.reanuda)
-    if e: raise SystemExit(f"NO SE CORRE (candado): {e}")
-    carpeta = os.path.join(DATOS, prev[-1]) if (a.reanuda and prev) else os.path.join(DATOS, pre + '_' + sel)
+    if a.humo_cadena:   # ¿una cadena que nace en el ARRANQUE (MARGEN de BASE) muta antes de extinguirse? 1 pasaje sel de T 20 000 + lectura de la siembra
+        if a.pool: raise SystemExit('--humo_cadena: un proceso')
+        T = a.T or 20000; carpeta = os.path.join(DATOS, 'humo', f'humo_cadena_{sel}')
+        if not (verifica(log) and identidad_corta(log)): log('  ALGO FALLA -> no se corre.'); return 1
+        os.makedirs(carpeta, exist_ok=True); LOGF[0] = open(os.path.join(carpeta, 'log.txt'), 'a', encoding='utf-8'); LOGF[0].write(chr(10).join(BUF) + chr(10))
+        c = cadena(0, BASES['humo'], 1, T, carpeta, False, 'sel', log)
+        q = c['pasajes'][0]
+        log(f"  HUMO CADENA desde BASE {BASE}: T {T} · fundadores {q['fund_n']} (base {q['fund_de_base']}, camara {q['fund_de_camara']}) · partos {q['partos_tel']} · moneda {q['moneda']} · "
+            f"genes de los vivos al final {q['genes_vivos_fin']} · siembra mediana {c['genoma_final']} · prof {c['prof_final']} · cruzan {q['cruzan']}/9 · R0 {q['R0_med']} · vida {q['vida_med']} · B+D {q['mord_BD']}")
+        ext = q['fund_de_camara'] == 0 and q['partos_tel'] == 0
+        log(f"  ¿se extingue sin mutar? {'SI (ni partos ni refundaciones: la cadena no muta)' if ext else 'NO: hubo ' + str(q['partos_tel']) + ' partos y ' + str(q['fund_de_camara']) + ' refundaciones (cada una es una mutacion)'}")
+        json.dump(dict(modo='humo_cadena', T=T, base=BASE, cadena=c, sha_runner=h16(os.path.abspath(__file__))), open(os.path.join(carpeta, 'resumen.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        return 0
+    # ------------------------------------------------------------ PASO 2: serie / replica (SOLO el coordinador) · --humo_serie: main de punta a punta (ERR-42) en 1 proceso
+    if a.humo_serie:
+        if a.T: raise SystemExit('--humo_serie: configuracion fija (T); --pool <= 2 permitido para ejercitar la rama Pool (ERR-42)')
+        modo = 'humo_serie'; base = BASES['humo']; n = 1; npas = 2; T_pas, T_pru = 5000, 20000; pre = 'humo_serie'; dest = os.path.join(DATOS, 'humo')
+    else:
+        modo = 'serie' if a.serie else 'replica'; base = BASES[modo]; n = N_IND; npas = NPAS; T_pas, T_pru = T_PAS, T_PRU; dest = DATOS
+        pre = f"{modo}_i{sem_pru(base, 0)}-{sem_pru(base, n - 1)}"
+    os.makedirs(dest, exist_ok=True)
+    prev = sorted(d for d in os.listdir(dest) if d.startswith(pre + '_') and os.path.isdir(os.path.join(dest, d)))
+    if a.reanuda and not prev: raise SystemExit(f'--reanuda: no hay carpeta {pre}_* en {dest}')
+    if modo != 'humo_serie':
+        e = guarda(modo, pre, a.reanuda)
+        if e: raise SystemExit(f"NO SE CORRE (candado): {e}")
+    carpeta = os.path.join(dest, prev[-1]) if (a.reanuda and prev) else os.path.join(dest, pre + '_' + sel)
     shp = h16(os.path.join(AQUI, PRERREGISTRO))
-    log(f"  preregistro {PRERREGISTRO} {shp} · base {base} · pasajes T {T_PAS} x {npas} · pruebas T {T_PRU} · n {n} · sigma {SIGMA} delta {DELTA} · GEN_LETRA {GEN_LETRA} · carpeta {carpeta}")
+    log(f"  preregistro {PRERREGISTRO} {shp} · base {base} · pasajes T {T_pas} x {npas} · pruebas T {T_pru} · n {n} · sigma {SIGMA} delta {DELTA} · GEN_LETRA {GEN_LETRA} margen {MARGEN_G} zona {FUNC_MARGEN} · BASE {BASE} · mutan {list(MUTA_SERIE)} · fundador_limpio {FL_SERIE} · carpeta {carpeta}")
     if not (verifica(log) and identidad_corta(log)): log("  ALGO FALLA -> no se corre."); return 1
     os.makedirs(carpeta, exist_ok=True); LOGF[0] = open(os.path.join(carpeta, 'log.txt'), 'a', encoding='utf-8'); LOGF[0].write('\n'.join(BUF) + '\n')
     f1 = [('cadena', i, b) for i in range(n) for b in CADENAS] + [('prueba', i, b) for i in range(n) for b in (TECHO, PISO_B)]
-    mk = lambda t: (t[0], t[1], t[2], base, npas, T_PAS, T_PRU, carpeta, a.reanuda)
+    if modo == 'humo_serie' and not a.reanuda: f1 = [('cadena', 0, b) for b in CADENAS]   # 1er proceso: 3 cadenas x 2 pasajes de 5k + pruebas sel/neu/pur de 20k = 9 corridas (pool 3 las reparte); 2o (--reanuda): fab y off y la letra
+    mk = lambda t: (t[0], t[1], t[2], base, npas, T_pas, T_pru, carpeta, a.reanuda)
     def fmt(x):
         if x['tipo'] == 'cadena':
             ps = x.get('pasajes') or []
             return f"  [{time.time()-t0:7.1f}s] cadena i{x['i']} {x['brazo']} ({x['seg']}s) aborto {x['aborto']} · cruzan {[q['cruzan'] for q in ps]} · estab {[q['moneda']['n_est'] for q in ps]} · prof {[q.get('prof') for q in ps]} · refund {[q['fund_de_camara'] for q in ps]} · genoma final {x.get('genoma_final')}"
-        return f"  [{time.time()-t0:7.1f}s] {x['tipo']} i{x['i']} {x['brazo']:4s} ({x['seg']}s) aborto {x['aborto']} · genoma {x.get('genoma')} · cruzan {x.get('cruzan')}/9 R0 {x.get('R0_med')} estab {x.get('establecidos')}"
+        return f"  [{time.time()-t0:7.1f}s] {x['tipo']} i{x['i']} {x['brazo']:4s} ({x['seg']}s) aborto {x['aborto']} · genoma {x.get('genoma')} · cruzan {x.get('cruzan')}/9 mayoria {x.get('mayoria')} R0 {x.get('R0_med')} estab {x.get('establecidos')} B+D {x.get('mord_BD')} A+C {x.get('mord_AC')}"
     if a.pool and a.pool > 1:
         from multiprocessing import Pool
         with Pool(a.pool) as PL:
@@ -553,16 +646,18 @@ def main(argv=None):
                     if t[0] == 'cadena': pend[PL.apply_async(trabajo, (mk(('prueba', t[1], t[2])),))] = ('prueba', t[1], t[2])
     else:
         for t in f1 + [('prueba', t[1], t[2]) for t in f1 if t[0] == 'cadena']: log(fmt(trabajo(mk(t))))
+        if modo == 'humo_serie' and a.reanuda:
+            for t in [('prueba', 0, TECHO), ('prueba', 0, PISO_B)]: log(fmt(trabajo(mk(t))))
     C, R, ab = carga(carpeta); L = None
     if all(len(R[b]) == n for b in ORDEN) and all(len(C[b]) == n for b in CADENAS):
         L = lee_serie(C, R, n, len(ab), npas)
         log(f"\n================ LA LETRA ({PRERREGISTRO})"); log(f"  validez {L['validez']} · puertas {L['puertas']} · umbral {L['en_umbral']} · matiz {L['matiz']}")
         log(f"  pareado_gen {L['pareado_gen']}"); log(f"  pareado_neu {L['pareado_neu']}"); log(f"  fab vs off {L['pareado_fab_off']}")
         for k, v in L['descriptivo'].items(): log(f"  [desc] {k}: {v}")
-    ver = (L['veredicto'] + (f" ({L['matiz']})" if L.get('matiz') else '')) if L else 'parcial'
+    ver = ('HUMO (no cuenta): ' if modo == 'humo_serie' else '') + ((L['veredicto'] + (f" ({L['matiz']})" if L.get('matiz') else '')) if L else 'parcial')
     rj = os.path.join(carpeta, 'resumen.json')
     with open(rj, 'w', encoding='utf-8') as fh:
-        json.dump(dict(modo=modo, letra=L, abortos=ab, n=n, npas=npas, T_pas=T_PAS, T_pru=T_PRU, veredicto=ver, nota=a.nota, sigma=SIGMA, delta=DELTA, gen_letra=GEN_LETRA,
+        json.dump(dict(modo=modo, letra=L, abortos=ab, n=n, npas=npas, T_pas=T_pas, T_pru=T_pru, veredicto=ver, nota=a.nota, sigma=SIGMA, delta=DELTA, gen_letra=GEN_LETRA, margen_gen=MARGEN_G, func_margen=FUNC_MARGEN, muta_serie=list(MUTA_SERIE), base=BASE, fl_serie=FL_SERIE,
                        preregistro=PRERREGISTRO, sha_preregistro=shp, sha_runner=h16(os.path.abspath(__file__)), shas={os.path.relpath(k, RAIZ): h16(k) for k in SHAS},
                        shas_propios={k: h16(os.path.join(AQUI, k)) for k in SHAS_PROPIOS}, seg=round(time.time() - t0, 1)), fh, ensure_ascii=False, indent=1)
     log(f"  RESUMEN {rj} · abortos {len(ab)} · {time.time()-t0:.1f}s"); log(f"VEREDICTO: {ver}")

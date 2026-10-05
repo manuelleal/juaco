@@ -1,0 +1,19 @@
+=== Mon Oct  5 17:08:03 HPS 2026 cadena final: arnes (shas fijados, arranque 0.03) -> humo_serie x2
+ARNES identidad_muro_perillas.py
+ARNES PASA, 40/40 (446.3s)
+[17:15:30]   preregistro PREREGISTRO_muro_perillas.md 62c12663bc4204ac · base (883990, 883998) · pasajes T 5000 x 2 · pruebas T 20000 · n 1 · sigma 0.03 delta 0.01 · GEN_LETRA MARGEN margen 0.03 · BASE {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · fundador_limpio 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_171530
+[17:16:00]   [   30.1s] cadena i0 sel (16.0s) aborto None · cruzan [0, 0] · estab [9, 9] · prof [1.0, 2.0] · refund [5, 11] · genoma final {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[17:16:16]   [   46.3s] cadena i0 neu (16.2s) aborto None · cruzan [0, 0] · estab [9, 9] · prof [1.0, 3.0] · refund [6, 0] · genoma final {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[17:16:47]   [   77.3s] prueba i0 sel  (31.0s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[17:17:18]   [  108.2s] prueba i0 neu  (30.9s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[17:17:18]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_171530\resumen.json · abortos 0 · 108.2s
+[17:17:18] VEREDICTO: HUMO (no cuenta): parcial
+[17:18:03]   [   45.0s] prueba i0 fab  (31.0s) aborto None · genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.75 estab 8 B+D 68.0 A+C 137.0
+[17:18:34]   [   75.6s] prueba i0 off  (30.6s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[17:18:34]   [   75.6s] prueba i0 fab  (31.0s) aborto None · genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.75 estab 8 B+D 68.0 A+C 137.0
+[17:18:34]   [   75.6s] prueba i0 off  (30.6s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[17:18:34]   validez {'V1_completa': True, 'V2_fab_gana_a_off': False, 'V4_estado': True, 'V5_desde_cero': True, 'V7a_profundidad_mutacional_neutra': False, 'V7b_refundaciones_por_camara_neutra': False} · puertas {'PG_gen_sube': False, 'PC_par_neu': False, 'PC_suma_neu': False} · umbral True · matiz None
+[17:18:34]   [desc] relojes: {'sel': {'profundidad_mutacional_mediana': 2.0, 'refundaciones_por_camara_mediana': 16.0}, 'neu': {'profundidad_mutacional_mediana': 3.0, 'refundaciones_por_camara_mediana': 6.0}}
+[17:18:34]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_171530\resumen.json · abortos 0 · 75.6s
+[17:18:34] VEREDICTO: HUMO (no cuenta): NO SE LEE
+=== fin Mon Oct  5 17:18:34 HPS 2026

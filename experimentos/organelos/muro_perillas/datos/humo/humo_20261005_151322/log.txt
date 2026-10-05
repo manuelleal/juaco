@@ -1,0 +1,17 @@
+[15:13:22] CORRE_MURO_PERILLAS · humo · 20261005_151322 · python 3.14.2 · pool NO (un proceso) · runner 530e4d531033db9c · nota ''
+[15:13:22]   REGLA DE CPU: python.exe ajenos de TRABAJO 0 (totales 0; los padres ociosos de Pool no cuentan) · tope 6
+[15:13:22]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[15:13:22]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[15:13:22]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[15:13:22]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[15:13:22]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[15:13:22]   sha muro_perillas/construye_muro_perillas.py 8eccbf0d38591c9f OK (NO FIJADO: solo humo/mapa)
+[15:13:22]   sha muro_perillas/carros\O1_MURO_GEN.py d9b238bd516b0aeb OK (NO FIJADO: solo humo/mapa)
+[15:13:22]   sha muro_perillas/carros\O1_MURO_GEN0.py e98f06e75d9f682f OK (NO FIJADO: solo humo/mapa)
+[15:13:22]   carro O1_MURO_GEN == construye_muro_perillas: True
+[15:13:22]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[15:13:37]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[15:13:40]   [3.3s] off s883990 fl1 genoma {'MARGEN': 0.0, 'PRUEBA': 0.5, 'PEN_OTRO': 1.0, 'PISO': 1.0, 'LIMPIA': 0.0, 'HUECO': 0.0} · cruzan 0/9 mayoria 0 R0 real med 0.0 fund med 0.0 estab 9/9 · vida 2000.0 · causas {'hambre': 1, 'sed': 0, 'veneno': 3, 'sal': 4} · B+D 2.0 A+C 9.0 · mundo AC 14.4575 sin bueno 0.0 · coherente True
+[15:13:43]   [3.2s] fab s883990 fl1 genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 real med 0.0 fund med 0.0 estab 9/9 · vida 2000.0 · causas {'hambre': 0, 'sed': 0, 'veneno': 0, 'sal': 0} · B+D 7.0 A+C 16.0 · mundo AC 5.028 sin bueno 0.0145 · coherente True
+[15:13:50]   regla 14 (ENTRADA campo a campo, salvo el nombre del carro en los ids): fab fijo == corre_v143.tarea('O1') (s 883990, T 2000): OK
+[15:13:50]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_20261005_151322\resumen.json · HUMO (no cuenta) · 28.2s

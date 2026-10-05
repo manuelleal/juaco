@@ -1,0 +1,23 @@
+=== Mon Oct  5 17:28:15 HPS 2026 cadena auditoria: arnes salida7 -> humo_serie POOL 2 -> reanuda
+  O1_MURO_GEN: en disco == construido: True (sha 08783834a20284cd)
+  O1_MURO_GEN0: en disco == construido: True (sha 297098cc12cc2fd9)
+ARNES identidad_muro_perillas.py
+ARNES PASA, 44/44 (455.7s)
+[17:35:51] CORRE_MURO_PERILLAS · replica · 20261005_173551 · python 3.14.2 · pool 2 · runner 3a078f33c609875a · nota ''
+[17:35:51]   preregistro PREREGISTRO_muro_perillas.md d3e638b6d1ce15ec · base (883990, 883998) · pasajes T 5000 x 2 · pruebas T 20000 · n 1 · sigma 0.03 delta 0.01 · GEN_LETRA MARGEN margen 0.03 zona 0.06 · BASE {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · mutan [0] · fundador_limpio 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_173551
+[17:36:23]   [   32.5s] cadena i0 sel (16.5s) aborto None · cruzan [0, 0] · estab [8, 7] · prof [1.0, 2.0] · refund [13, 46] · genoma final {'MARGEN': 0.049754307204621984, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[17:36:23]   [   32.5s] cadena i0 neu (16.5s) aborto None · cruzan [0, 0] · estab [9, 9] · prof [1.0, 3.0] · refund [6, 0] · genoma final {'MARGEN': 0.006951488692543794, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[17:36:55]   [   64.5s] prueba i0 sel  (31.7s) aborto None · genoma {'MARGEN': 0.049754307204621984, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.6667 estab 9 B+D 61.0 A+C 112.0
+[17:36:55]   [   64.5s] prueba i0 neu  (31.3s) aborto None · genoma {'MARGEN': 0.006951488692543794, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 9 B+D 39.0 A+C 91.0
+[17:36:55]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_173551\resumen.json · abortos 0 · 64.6s
+[17:36:55] VEREDICTO: HUMO (no cuenta): parcial
+[17:37:41]   [   45.4s] prueba i0 fab  (31.3s) aborto None · genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.75 estab 8 B+D 68.0 A+C 137.0
+[17:38:12]   [   76.3s] prueba i0 off  (30.9s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[17:38:12]   [   76.3s] prueba i0 fab  (31.3s) aborto None · genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.75 estab 8 B+D 68.0 A+C 137.0
+[17:38:12]   [   76.3s] prueba i0 off  (30.9s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[17:38:12]   validez {'V1_completa': True, 'V2_fab_gana_a_off': False, 'V4_estado': True, 'V5_desde_cero': True, 'V7a_profundidad_mutacional_neu_y_sel': False, 'V7b_refundaciones_por_camara_neu_y_sel': False} · puertas {'PG_a_sel_sobre_neu': True, 'PG_b_sel_en_zona_funcional': False, 'PG_gen_sube': False, 'PC_par_neu': False, 'PC_suma_neu': False, 'n_sel_en_zona': 0} · umbral True · matiz None
+[17:38:12]   [desc] UNA_EVIDENCIA: PG y PC son UNA evidencia: neu cae a ~0.01 y con MARGEN ~0 nadie pare; PC con neu es casi off vs sel
+[17:38:12]   [desc] relojes: {'sel': {'profundidad_mutacional_mediana': 2.0, 'profundidad_EFECTIVA_sobre_MARGEN_mediana': 2.0, 'refundaciones_por_camara_mediana': 59.0, 'cadenas_prof_sobre_min': 0, 'cadenas_refund_sobre_min': 0}, 'neu': {'profundidad_mutacional_mediana': 3.0, 'profundidad_EFECTIVA_sobre_MARGEN_mediana': 3.0, 'refundaciones_por_camara_mediana': 6.0, 'cadenas_prof_sobre_min': 0, 'cadenas_refund_sobre_min': 0}}
+[17:38:12]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_173551\resumen.json · abortos 0 · 76.3s
+[17:38:12] VEREDICTO: HUMO (no cuenta): NO SE LEE
+=== fin Mon Oct  5 17:38:12 HPS 2026

@@ -56,9 +56,10 @@ def main():
     for n in ('O1_MURO_GEN', 'O1_MURO_GEN0'):
         v = RC.revisa_fuente(open(R.CARROS[n], encoding='utf-8').read(), n); ok(not v, f"(K) chequeo estatico revisa_carro {n}: {'PASA' if not v else v[:2]}")
     o1 = CV.modulo('O1'); sl = P.carga_carro('CTRL_O1_SINLIMPIA')
-    ok((o1.MARGEN, o1.PRUEBA, o1.PEN_OTRO, o1.PISO) == CB.FABRICA[:4] and CB.FABRICA[4:] == (1.0, 1.0) and CB.BASE == CB.APAGADO and CB.DISENO == CB.FABRICA
+    ok((o1.MARGEN, o1.PRUEBA, o1.PEN_OTRO, o1.PISO) == CB.FABRICA[:4] and CB.FABRICA[4:] == (1.0, 1.0) and CB.BASE == (CB.ARRANQUE_MARGEN,) + CB.FABRICA[1:] and CB.DISENO == CB.FABRICA
+       and R.genoma('off') == dict(zip(CB.GENES, CB.APAGADO)) and R.genoma('base') == dict(zip(CB.GENES, CB.BASE)) and R.genoma('off+MARGEN=0.25')['PISO'] == CB.APAGADO[3] and R.genoma('off+MARGEN=0.25')['MARGEN'] == 0.25
        and all(lo <= v <= hi for v, (lo, hi) in zip(CB.FABRICA, CB.CLIP)) and all(lo <= v <= hi for v, (lo, hi) in zip(CB.APAGADO, CB.CLIP)),
-       f"(K) constantes: FABRICA {CB.FABRICA} == literales de O1 + (1, 1); BASE = APAGADO {CB.APAGADO}; DISENO = FABRICA; ambos dentro del clip; sigma {CB.SIGMA} delta {CB.DELTA}")
+       f"(K) constantes: FABRICA {CB.FABRICA} == literales de O1 + (1, 1); BASE = (ARRANQUE {CB.ARRANQUE_MARGEN}, resto fabrica) {CB.BASE}; 'off' = APAGADO {CB.APAGADO}, 'off+X' sobre APAGADO, 'base+X' sobre BASE; dentro del clip; sigma {CB.SIGMA} delta {CB.DELTA}")
     R.fija(); m = CV._MODS[R.CARRO]
     spec = importlib.util.spec_from_file_location('carro_O1_MURO_GEN0', R.CARROS['O1_MURO_GEN0']); m0 = importlib.util.module_from_spec(spec); spec.loader.exec_module(m0)
     s = R.BASES['arnes']; T = 3000
@@ -113,6 +114,22 @@ def main():
     ok(a == run(mh, s, Tc), f"(C) cableado HUECO: gen 0 == O1 con `tgt = pos` escrito a mano (T {Tc})")
     ok(a != ro, f"(C) control que debe diferir: HUECO apagado != O1 (T {Tc})")
     ok(con(m, [dict(B)], 0.0, 0.0, 1, 0, s, T) != ro, "(C) control que debe diferir: TODO apagado (base) != O1")
+    # brazo pur (5-oct, ERR-192): tope de LECTURA de MARGEN
+    try:
+        R._pon(m, None, s, CB.SIGMA, CB.DELTA, 1, 1, None, None, None); ra = run(m, s, Tc)
+        R._pon(m, None, s, CB.SIGMA, CB.DELTA, 1, 1, None, None, CB.CLIP[0][1]); rb = run(m, s, Tc)
+        ok(ra == rb, f"(C) pur: cadena con tope >= clip ({CB.CLIP[0][1]}) == sel (tope None) bit a bit (sigma {CB.SIGMA}, camara, desde BASE, T {Tc})")
+        R._pon(m, None, s, CB.SIGMA, CB.DELTA, 1, 1, None, None, R.TOPE_PUR); rp = run(m, s, Tc)
+        ok(rp != ra, f"(C) control que debe diferir: pur con tope {R.TOPE_PUR} != sel (el tope actua)")
+    finally:
+        R._quita(m)
+    m0t = carga_texto('o1_MARGEN_0_tope', src.replace(lit['MARGEN'], 'MARGEN = 0.0 '))
+    try:
+        R._pon(m, [dict(D)], s, 0.0, 0.0, 1, 0, None, None, 0.0); r0 = run(m, s, Tc)
+    finally:
+        R._quita(m)
+    ok(r0 == run(m0t, s, Tc), f"(C) pur: genes de FABRICA con tope 0 == O1 con MARGEN = 0.0 escrito a mano (T {Tc}): el cuerpo lee min(gen, tope); el gen no se toca")
+    ok(CB.ARRANQUE_MARGEN < R.TOPE_PUR < R.FUNC_MARGEN and m.PS_TOPE is None, f"(K) TOPE_PUR {R.TOPE_PUR} entre el arranque {CB.ARRANQUE_MARGEN} y la zona funcional {R.FUNC_MARGEN}; PS_TOPE None por defecto")
     ok(P.run is R._ORIG_RUN, "(C) pista.run intacta")
     # (R) regla 14: tarea del runner con dosis de fabrica == corre_v143.tarea('O1') campo a campo
     x = R.tarea(s + 1, 2000, siembra=[dict(D)], sigma=0.0, delta=0.0, lee=1, camara=0); y = CV.tarea((s + 1, 'O1', 2000))
@@ -121,6 +138,16 @@ def main():
     dl = sorted({k for a, b in zip(x['linajes'], y['linajes']) for k in a if N(a[k]) != N(b.get(k))}); dp = [k for k in x['pista'] if N(x['pista'][k]) != N(y['pista'][k])]
     ok(set(dl) <= {'id'} and set(dp) <= {'ids'} and R.sin_ids(x['linajes']) == R.sin_ids(y['linajes']) and R.sin_ids(x['pista']) == R.sin_ids(y['pista']) and x['R0_pista'] == y['R0_pista'],
        f"(R) regla 14, ENTRADA campo a campo: corre_muro_perillas.tarea(genes de fabrica) == corre_v143.tarea('O1') salvo el nombre del carro en los ids (s {s + 1}, T 2000); difieren: linajes {dl} pista {dp}")
+    # PASO A (5-oct): fundador NO limpio por corrida: tarea(fl=0) == corre_v143.tarea('O1') con FL 0 (salvo ids); y el estado/pista lo registran
+    fl0 = CV.FL
+    try:
+        CV.FL = 0; y0 = CV.tarea((s + 1, 'O1', 2000))
+    finally:
+        CV.FL = fl0
+    x0 = R.tarea(s + 1, 2000, siembra=[dict(D)], sigma=0.0, delta=0.0, lee=1, camara=0, fl=0)
+    ok(R.sin_ids(x0['linajes']) == R.sin_ids(y0['linajes']) and R.sin_ids(x0['pista']) == R.sin_ids(y0['pista']) and x0['pista']['fundador_limpio'] == 0 and x0['estado']['fl'] == 0
+       and y0['pista']['fundador_limpio'] == 0 and CV.FL == 1 and x['pista']['fundador_limpio'] == 1 and R.sin_ids(x0['linajes']) != R.sin_ids(x['linajes']),
+       f"(R) fundador NO limpio: tarea(fl=0, genes de fabrica) == corre_v143.tarea('O1') con FL 0 (salvo ids); pista.fundador_limpio 0; FL restaurado a 1; difiere de fl 1 (s {s + 1}, T 2000)")
     f = R.fila(x, 2000)
     ok(f['fund_n'] > 0 and f['fund_de_siembra'] == f['fund_n'] and f['fund_genes_distintos'] == 1 and f['fund_gen0'] == D and f['coherente'],
        f"(R) fila: todos los fundadores de la siembra con EL genoma ({f['fund_n']}), contabilidad coherente, cruzan {f['cruzan']}/9")
@@ -141,7 +168,7 @@ def main():
         R._quita(m)
     if R.GEN_LETRA is not None:
         for nombre, c, esp in R.casos_sinteticos():
-            v = R.lee_serie(*c)['veredicto']; ok(v == esp, f"(F) letra sintetica {nombre}: {v} (esperado {esp})")
+            L = R.lee_serie(*c); v = (L['veredicto'], L['trinquete_gr_umbral']) if isinstance(esp, tuple) else L['veredicto']; ok(v == esp, f"(F) letra sintetica {nombre}: {v} (esperado {esp})")
     else:
         print("  (F) letra de la serie: GEN_LETRA no fijado (se fija tras el mapa; sin casos sinteticos todavia)")
     n = sum(OK); print(f"\nARNES {'PASA' if all(OK) else 'FALLA'}, {n}/{len(OK)} ({time.time() - t0:.1f}s)")

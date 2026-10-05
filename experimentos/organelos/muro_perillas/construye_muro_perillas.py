@@ -21,13 +21,15 @@ PIEZA NUEVA (perilla PERILLAS; con PERILLAS = 0 el carro es O1 bit a bit, salida
     LIMPIA   1         [0, 1.5]     0    (nunca muerde lo malo a sabiendas) regla v2 (0 == CTRL_O1_SINLIMPIA bit a bit)
     HUECO    1         [0, 1.5]     0    (sin blanco se queda quieto)       sin blanco va al centro del hueco mayor entre cuerpos
   D0 (3.0) y los pesos de urgencia (4/2/1) quedan fijos (no son decisiones comer/limpiar; o1_evo tampoco los toco).
-  - MUTACION (una por nacimiento, en UN gen al azar): g' = g - PS_DELTA + N(0, PS_SIGMA), recortado al clip. PS_DELTA = sesgo a la perdida
+  - MUTACION (una por nacimiento, en UN gen al azar ENTRE LOS DE PS_MUTA; serie: solo MARGEN, los otros cinco fijos en fabrica): g' = g - PS_DELTA + N(0, PS_SIGMA), recortado al clip. PS_DELTA = sesgo a la perdida
     (nulo de la deriva: el de perillas, misma regla). Sigma y delta los de perillas (a priori).
   - Primer fundador de cada linaje: PS_POR_LINAJE[indice] si PS_POR_LINAJE no es None (PISTA MIXTA: cada linaje con SU genoma fijo, tambien
     en cada refundacion; origen 3); si no, base = una entrada de SIEMBRA al azar si SIEMBRA no es None; si no, base = PS_BASE (APAGADO).
   - CAMARA CONTINUA (PS_CAMARA 1): cada REFUNDACION (ENMIENDA 5) copia, mutado, el genoma del cuerpo ACTUAL de OTRO linaje al azar.
   - Parto: la memoria del hijo lleva '_gen' = (genes del padre mutados, profundidad + 1). El resto de la memoria (tabla por letra) no cambia.
   - PS_LEE 0: los genes se heredan, mutan y viajan IGUAL pero el cuerpo NO los lee (decide con la fabrica): el carro es O1.
+  - PS_TOPE (brazo pur, 5-oct): el cuerpo lee MARGEN = min(gen, PS_TOPE); el gen heredado muta y viaja libre por encima del tope. Con PS_TOPE None (o
+    >= al gen) es identico a sel bit a bit; con PS_TOPE 0 el cuerpo se comporta como MARGEN 0.
   - Azar PROPIO (splitmix64 + Box-Muller en Python puro): no toca el rng del mundo ni el del cuerpo; pasa revisa_carro.
   - Telemetria de SOLO ESCRITURA en _TEL[indice]: 'vivos' = [t, genes, instancia, profundidad] cada 1000 pasos; 'fund' = [origen (0
     base, 1 siembra, 2 camara, 3 por linaje), genes, profundidad] por fundador; 'partos'. _VIVO[indice] = (genes, prof) del cuerpo actual.
@@ -51,17 +53,19 @@ VARIANTES = [('O1_MURO_GEN', 1), ('O1_MURO_GEN0', 0)]
 GENES = ('MARGEN', 'PRUEBA', 'PEN_OTRO', 'PISO', 'LIMPIA', 'HUECO')
 APAGADO = (0.0, 0.5, 1.0, 1.0, 0.0, 0.0)   # APAGADO provisional (genetista, ficha 2): MARGEN 0, PRUEBA fabrica, PEN_OTRO 1, PISO 1, LIMPIA 0, HUECO 0
 FABRICA = (0.25, 0.5, 0.35, 0.2, 1.0, 1.0)   # los literales de O1.py + reglas prendidas (el arnes lo comprueba)
-BASE = APAGADO                               # de donde arranca la seleccion del PASO 2 (se fija tras el mapa)
+ARRANQUE_MARGEN = 0.03                       # PASO B (5-oct 17:10, decidido ANTES de la serie): desde 0.0 la cadena no muta (humo_cadena T 20k: R0 0, 15 partos, profundidad 1: nadie pare y el reloj no corre); 0.03 = primer escalon medido (R0 0.83-0.89, 8-9 establecidos)
+BASE = (ARRANQUE_MARGEN, 0.5, 0.35, 0.2, 1.0, 1.0)   # de donde arranca la seleccion del PASO B: MARGEN desde ARRANQUE, el resto de O1 en fabrica
 DISENO = FABRICA                             # O1
 CLIP = ((0.0, 0.6), (0.0, 1.5), (0.0, 1.5), (0.0, 1.0), (0.0, 1.5), (0.0, 1.5))
 SIGMA = 0.03                                 # perillas (a priori)
 DELTA = 0.01                                 # sesgo a la perdida (perillas)
+MUTA = (0,)                                  # auditoria 5-oct (punto 3): indices de los genes que MUTAN; (0,) = SOLO MARGEN (todo el reloj cae en el gen de la letra); (0,1,2,3,4,5) = los seis
 PER = "PERILLAS = {p}   # muro_perillas: LA UNICA LINEA QUE CAMBIA ENTRE VARIANTES (0 = O1 bit a bit)"
 
 
 def modulo(p):
     return (NL + PER.format(p=p) + NL
-            + f'SIEMBRA = None; PS_SEMILLA = 0; PS_SIGMA = {SIGMA!r}; PS_DELTA = {DELTA!r}; PS_LEE = 1; PS_CAMARA = 1; PS_POR_LINAJE = None   # muro_perillas: los fija el RUNNER por corrida (SIEMBRA None = PS_BASE; PS_LEE 0 = genes NEUTROS; PS_POR_LINAJE = pista mixta)' + NL
+            + f'SIEMBRA = None; PS_SEMILLA = 0; PS_SIGMA = {SIGMA!r}; PS_DELTA = {DELTA!r}; PS_LEE = 1; PS_CAMARA = 1; PS_POR_LINAJE = None; PS_MUTA = ' + repr(MUTA) + '; PS_TOPE = None   # muro_perillas: PS_TOPE = tope de LECTURA de MARGEN (brazo pur; None = sin tope); los fija el RUNNER por corrida (SIEMBRA None = PS_BASE; PS_LEE 0 = genes NEUTROS; PS_POR_LINAJE = pista mixta; PS_MUTA = genes que mutan)' + NL
             + '_PS_CNT = {}; _TEL = {}; _VIVO = {}   # muro_perillas: instancias por linaje, telemetria de SOLO ESCRITURA y genoma del cuerpo actual de cada linaje (el runner los borra antes de cada run)' + NL
             + 'PS_GENES = ' + repr(GENES) + '; PS_BASE = ' + repr(BASE) + '; PS_CLIP = ' + repr(CLIP) + NL
             + 'PS_APAGADO = ' + repr(APAGADO) + '; PS_FABRICA = ' + repr(FABRICA) + NL
@@ -99,7 +103,7 @@ METODOS = '''
 
     def _ps_muta(self, b):
         """UNA mutacion por nacimiento, en UN gen al azar: d - PS_DELTA + N(0, PS_SIGMA), recortado. Los demas se copian igual."""
-        out = [float(x) for x in b]; j = int(self._ps_u() * len(PS_GENES)) % len(PS_GENES)
+        out = [float(x) for x in b]; j = PS_MUTA[int(self._ps_u() * len(PS_MUTA)) % len(PS_MUTA)]   # solo los genes de PS_MUTA mutan (serie: solo MARGEN)
         z = math.sqrt(-2.0 * math.log(self._ps_u())) * math.cos(2.0 * math.pi * self._ps_u())
         out[j] = float(min(max(out[j] - PS_DELTA + PS_SIGMA * z, PS_CLIP[j][0]), PS_CLIP[j][1]))
         return out
@@ -109,7 +113,7 @@ METODOS = '''
         self._gen = [float(x) for x in g]
         _VIVO[self._psi] = (list(self._gen), int(self._prof))
         d = self._gen if PS_LEE else list(PS_FABRICA)   # PS_LEE 0: se heredan y mutan pero NO se leen (el cuerpo decide como O1)
-        self.MARGEN, self.PRUEBA, self.PEN_OTRO, self.PISO = d[0], d[1], d[2], d[3]
+        self.MARGEN, self.PRUEBA, self.PEN_OTRO, self.PISO = (d[0] if PS_TOPE is None else min(d[0], float(PS_TOPE))), d[1], d[2], d[3]   # pur: el cuerpo lee min(gen, tope); el gen heredado no se toca
         self.LIMPIA = int(d[4] > 0.5); self.HUECO = int(d[5] > 0.5)
 
     def _ps_tel(self, t):

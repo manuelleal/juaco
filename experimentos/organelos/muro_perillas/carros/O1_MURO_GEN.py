@@ -34,9 +34,9 @@ D0 = 3.0           # suavizado de la distancia en el puntaje
 PISO = 0.2         # v2: la limpieza no baja la necesidad golpeada de aqui (si la ventana de parto no corre)
 
 PERILLAS = 1   # muro_perillas: LA UNICA LINEA QUE CAMBIA ENTRE VARIANTES (0 = O1 bit a bit)
-SIEMBRA = None; PS_SEMILLA = 0; PS_SIGMA = 0.03; PS_DELTA = 0.01; PS_LEE = 1; PS_CAMARA = 1; PS_POR_LINAJE = None   # muro_perillas: los fija el RUNNER por corrida (SIEMBRA None = PS_BASE; PS_LEE 0 = genes NEUTROS; PS_POR_LINAJE = pista mixta)
+SIEMBRA = None; PS_SEMILLA = 0; PS_SIGMA = 0.03; PS_DELTA = 0.01; PS_LEE = 1; PS_CAMARA = 1; PS_POR_LINAJE = None; PS_MUTA = (0,); PS_TOPE = None   # muro_perillas: PS_TOPE = tope de LECTURA de MARGEN (brazo pur; None = sin tope); los fija el RUNNER por corrida (SIEMBRA None = PS_BASE; PS_LEE 0 = genes NEUTROS; PS_POR_LINAJE = pista mixta; PS_MUTA = genes que mutan)
 _PS_CNT = {}; _TEL = {}; _VIVO = {}   # muro_perillas: instancias por linaje, telemetria de SOLO ESCRITURA y genoma del cuerpo actual de cada linaje (el runner los borra antes de cada run)
-PS_GENES = ('MARGEN', 'PRUEBA', 'PEN_OTRO', 'PISO', 'LIMPIA', 'HUECO'); PS_BASE = (0.0, 0.5, 1.0, 1.0, 0.0, 0.0); PS_CLIP = ((0.0, 0.6), (0.0, 1.5), (0.0, 1.5), (0.0, 1.0), (0.0, 1.5), (0.0, 1.5))
+PS_GENES = ('MARGEN', 'PRUEBA', 'PEN_OTRO', 'PISO', 'LIMPIA', 'HUECO'); PS_BASE = (0.03, 0.5, 0.35, 0.2, 1.0, 1.0); PS_CLIP = ((0.0, 0.6), (0.0, 1.5), (0.0, 1.5), (0.0, 1.0), (0.0, 1.5), (0.0, 1.5))
 PS_APAGADO = (0.0, 0.5, 1.0, 1.0, 0.0, 0.0); PS_FABRICA = (0.25, 0.5, 0.35, 0.2, 1.0, 1.0)
 _PS_M64 = 18446744073709551615
 
@@ -206,7 +206,7 @@ class Carro:
 
     def _ps_muta(self, b):
         """UNA mutacion por nacimiento, en UN gen al azar: d - PS_DELTA + N(0, PS_SIGMA), recortado. Los demas se copian igual."""
-        out = [float(x) for x in b]; j = int(self._ps_u() * len(PS_GENES)) % len(PS_GENES)
+        out = [float(x) for x in b]; j = PS_MUTA[int(self._ps_u() * len(PS_MUTA)) % len(PS_MUTA)]   # solo los genes de PS_MUTA mutan (serie: solo MARGEN)
         z = math.sqrt(-2.0 * math.log(self._ps_u())) * math.cos(2.0 * math.pi * self._ps_u())
         out[j] = float(min(max(out[j] - PS_DELTA + PS_SIGMA * z, PS_CLIP[j][0]), PS_CLIP[j][1]))
         return out
@@ -216,7 +216,7 @@ class Carro:
         self._gen = [float(x) for x in g]
         _VIVO[self._psi] = (list(self._gen), int(self._prof))
         d = self._gen if PS_LEE else list(PS_FABRICA)   # PS_LEE 0: se heredan y mutan pero NO se leen (el cuerpo decide como O1)
-        self.MARGEN, self.PRUEBA, self.PEN_OTRO, self.PISO = d[0], d[1], d[2], d[3]
+        self.MARGEN, self.PRUEBA, self.PEN_OTRO, self.PISO = (d[0] if PS_TOPE is None else min(d[0], float(PS_TOPE))), d[1], d[2], d[3]   # pur: el cuerpo lee min(gen, tope); el gen heredado no se toca
         self.LIMPIA = int(d[4] > 0.5); self.HUECO = int(d[5] > 0.5)
 
     def _ps_tel(self, t):

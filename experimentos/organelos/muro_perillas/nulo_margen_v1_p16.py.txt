@@ -1,0 +1,48 @@
+"""nulo_margen.py — NULO DE DERIVA del gen MARGEN bajo la regla de mutacion de este carro (una mutacion por nacimiento en UNO de 6 genes al
+azar; g' = g - delta + N(0, sigma), recortado a [0, 0.6]); sin seleccion. Sirve para fijar el margen de PG (sel > neu + margen) con el nulo de
+ESTE gen y no con el 0.05 de perillas a ciegas. Python puro, segundos, 0 pista. Simula (a) linajes sueltos desde ARRANQUE a distintas
+profundidades mutacionales y (b) la MEDIANA de una siembra neutra de 45 muestras (5 por linaje x 9 linajes, cada uno con su profundidad).
+    python experimentos/organelos/muro_perillas/nulo_margen.py [--arranque 0.0] [--n 40000]
+"""
+import argparse, math, random, statistics as st, sys
+
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+SIGMA = 0.03; DELTA = 0.01; CLIP = (0.0, 0.6); NGEN = 6
+
+
+def deriva(g, n, rng):
+    for _ in range(n):
+        if rng.randrange(NGEN) == 0:   # la mutacion cae en MARGEN con p 1/6
+            g = min(max(g - DELTA + rng.gauss(0.0, SIGMA), CLIP[0]), CLIP[1])
+    return g
+
+
+def main():
+    ap = argparse.ArgumentParser(allow_abbrev=False); ap.add_argument('--arranque', type=float, default=0.0); ap.add_argument('--n', type=int, default=40000)
+    a = ap.parse_args(); rng = random.Random(883)
+    print(f"NULO DE DERIVA de MARGEN: arranque {a.arranque}, sigma {SIGMA}, delta {DELTA}, clip {CLIP}, p(mutacion en MARGEN) 1/{NGEN}, {a.n} linajes")
+    print(f"  {'eventos':>8} {'media':>7} {'mediana':>8} {'P>0.02':>7} {'P>0.03':>7} {'P>0.05':>7} {'P>0.06':>7} {'P>0.10':>7}")
+    for n in (6, 12, 30, 60, 120, 300):
+        xs = [deriva(a.arranque, n, rng) for _ in range(a.n)]
+        pr = lambda u: sum(x > u for x in xs) / len(xs)
+        print(f"  {n:8d} {st.mean(xs):7.4f} {st.median(xs):8.4f} {pr(0.02):7.3f} {pr(0.03):7.3f} {pr(0.05):7.3f} {pr(0.06):7.3f} {pr(0.10):7.3f}")
+    # mediana de una siembra neutra: 9 linajes, profundidad ~ uniforme en [20, 120] (perillas midio 30-80), 5 muestras cada uno (mismo genoma +- 1 mutacion)
+    meds = []
+    for _ in range(4000):
+        sie = []
+        for _ in range(9):
+            g = deriva(a.arranque, rng.randint(20, 120), rng)
+            sie += [deriva(g, rng.randint(0, 2), rng) for _ in range(5)]
+        meds.append(st.median(sie))
+    pr = lambda u: sum(x > u for x in meds) / len(meds)
+    print(f"  MEDIANA de siembra neutra (45 muestras, 4000 cadenas): media {st.mean(meds):.4f} mediana {st.median(meds):.4f} P>0.01 {pr(0.01):.3f} P>0.02 {pr(0.02):.3f} P>0.03 {pr(0.03):.3f} P>0.05 {pr(0.05):.3f}")
+    # PG pareado: P(sel_neutra > neu + margen) por cadena bajo el nulo (sel y neu intercambiables) y P(>= 13/20)
+    for mg in (0.02, 0.03, 0.05):
+        p1 = sum(1 for i in range(0, len(meds) - 1, 2) if meds[i] > meds[i + 1] + mg) / (len(meds) // 2)
+        p13 = sum(math.comb(20, k) * p1 ** k * (1 - p1) ** (20 - k) for k in range(13, 21))
+        print(f"  margen {mg}: P(sel > neu + margen) por cadena bajo el nulo {p1:.3f} -> P(>= 13/20) {p13:.2e}")
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

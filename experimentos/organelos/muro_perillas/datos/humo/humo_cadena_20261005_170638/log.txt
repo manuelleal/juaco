@@ -1,0 +1,15 @@
+[17:06:38] CORRE_MURO_PERILLAS · replica · 20261005_170638 · python 3.14.2 · pool NO (un proceso) · runner 285cae1a25b742bf · nota ''
+[17:06:38]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[17:06:38]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[17:06:38]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[17:06:38]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[17:06:38]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[17:06:38]   sha muro_perillas/construye_muro_perillas.py 646aad399adb21dd OK (NO FIJADO: solo humo/mapa)
+[17:06:38]   sha muro_perillas/carros\O1_MURO_GEN.py 28fab4936bb42d5d OK (NO FIJADO: solo humo/mapa)
+[17:06:38]   sha muro_perillas/carros\O1_MURO_GEN0.py 2fcada2664cb931a OK (NO FIJADO: solo humo/mapa)
+[17:06:38]   carro O1_MURO_GEN == construye_muro_perillas: True
+[17:06:38]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[17:06:52]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[17:07:23]     cadena i0 sel p0 s883990 cruzan 0/9 moneda {'n_est': 8, 'respaldo': False, 'idx': [0, 1, 2, 3, 4, 6, 7, 8], 'n': 40} prof 2.0 refund camara 63 genes {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[17:07:23]   HUMO CADENA desde BASE {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}: T 20000 · fundadores 72 (base 9, camara 63) · partos 73 · moneda {'n_est': 8, 'respaldo': False, 'idx': [0, 1, 2, 3, 4, 6, 7, 8], 'n': 40} · genes de los vivos al final {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · siembra mediana {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · prof 2.0 · cruzan 0/9 · R0 0.2 · vida 5717.0 · B+D 40.0
+[17:07:23]   ¿se extingue sin mutar? NO: hubo 73 partos y 63 refundaciones (cada una es una mutacion)
