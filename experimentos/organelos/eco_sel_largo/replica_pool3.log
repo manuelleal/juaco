@@ -1,0 +1,150 @@
+[00:18:30] ECO_SEL LARGO eco_sel_largo_serie_s45421-45440: arranca (verifica shas y anclas)
+construye_eco_sel --verifica: IGUAL (origen 3ba8b0f5cf1fbbfa; destino 6a36e47ce61db3e1)
+construye_eco_sel_largo --verifica: IGUAL (origen 6a36e47ce61db3e1; destino 69f2b652ac46cd1b)
+[00:18:30] T 10000000 · brazos {'F1': ('MUT0', 'FAMB_RES0_ECO', 1), 'SEL_C': ('CEREBRO', 'FAMB_RES0_ECO', 1), 'SEL_MC': ('MC', 'FAMB_RES0_ECO', 1), 'AZA_MC': ('MC_AZAR', 'FAMB_RES0_ECO', 1), 'SEL_M': ('MARGEN', 'FAMB_RES0_ECO', 1)} · pool 3 · reanuda False · checkpoint cada 100000 · motor GEMELO motor_frio_rapido · shas {'corre_eco_sel_largo.py': '69db795b7d952d93', 'nucleo_eco_sel_largo.py': '69f2b652ac46cd1b', 'construye_eco_sel_largo.py': '65b5d9f5b5f98f73', 'PREREGISTRO_eco_sel_largo.md': '9a7f1029c7dc8b61', 'eco_sel/nucleo_eco_sel.py': '6a36e47ce61db3e1', 'eco_sel/construye_eco_sel.py': 'f2f5ed3c54d1b2c5', 'frio/corre_frio.py': '3ba8b0f5cf1fbbfa', 'frio/motor_frio_rapido.py': 'ff9d890a5cce9dec', 'juaco_eco/corre_eco_v12.py': '1340d268e1fd93d8', 'juaco_eco/corre_eco.py': '47d9cee4d6462116', 'juaco_eco/motor_eco.py': 'bca3033878b59622', 'juaco_eco/carros/FAMB_RES0_ECO.py': '94ea78589bc2ce24'}
+[00:23:30] latido: 0/100 terminadas; checkpoints vivos 3 (SEL_MC_s45421.pkl 28.3 MB, SEL_MC_s45422.pkl 27.8 MB, SEL_MC_s45423.pkl 28.1 MB); 300 s
+[00:26:12] [1/100] SEL_MC s45421: persiste 1 (vivos 34) · K base 42.59 · K final 42.19 · t_ext None · refundados 0 · bloq 0 · n_nac 270379 · aborto None (461.4 s; 462 s)
+[00:26:22] [2/100] SEL_MC s45422: persiste 1 (vivos 37) · K base 41.88 · K final 42.02 · t_ext None · refundados 0 · bloq 0 · n_nac 279411 · aborto None (471.5 s; 472 s)
+[00:26:28] [3/100] SEL_MC s45423: persiste 1 (vivos 42) · K base 41.9 · K final 42.58 · t_ext None · refundados 0 · bloq 0 · n_nac 282751 · aborto None (477.4 s; 478 s)
+[00:31:28] latido: 3/100 terminadas; checkpoints vivos 3 (SEL_MC_s45425.pkl 28.1 MB, SEL_MC_s45426.pkl 28.2 MB, SEL_MC_s45424.pkl 28.3 MB); 778 s
+[00:34:07] [4/100] SEL_MC s45424: persiste 1 (vivos 42) · K base 43.27 · K final 42.63 · t_ext None · refundados 0 · bloq 0 · n_nac 270089 · aborto None (474.9 s; 937 s)
+[00:34:22] [5/100] SEL_MC s45425: persiste 1 (vivos 43) · K base 42.09 · K final 42.68 · t_ext None · refundados 0 · bloq 0 · n_nac 284056 · aborto None (480.1 s; 952 s)
+[00:34:22] [6/100] SEL_MC s45426: persiste 1 (vivos 43) · K base 41.99 · K final 41.82 · t_ext None · refundados 0 · bloq 0 · n_nac 276608 · aborto None (474.5 s; 952 s)
+[00:39:22] latido: 6/100 terminadas; checkpoints vivos 3 (SEL_MC_s45427.pkl 28.8 MB, SEL_MC_s45429.pkl 28.0 MB, SEL_MC_s45428.pkl 27.9 MB); 1252 s
+[00:41:59] [7/100] SEL_MC s45427: persiste 1 (vivos 41) · K base 43.13 · K final 40.4 · t_ext None · refundados 0 · bloq 0 · n_nac 276311 · aborto None (471.5 s; 1408 s)
+[00:42:15] [8/100] SEL_MC s45428: persiste 1 (vivos 44) · K base 42.28 · K final 41.59 · t_ext None · refundados 0 · bloq 0 · n_nac 280164 · aborto None (472.5 s; 1425 s)
+[00:42:20] [9/100] SEL_MC s45429: persiste 1 (vivos 47) · K base 41.66 · K final 41.83 · t_ext None · refundados 0 · bloq 0 · n_nac 286645 · aborto None (477.5 s; 1430 s)
+[00:47:20] latido: 9/100 terminadas; checkpoints vivos 3 (SEL_MC_s45432.pkl 28.5 MB, SEL_MC_s45430.pkl 29.9 MB, SEL_MC_s45431.pkl 28.4 MB); 1730 s
+[00:49:52] [10/100] SEL_MC s45430: persiste 1 (vivos 51) · K base 42.05 · K final 42.91 · t_ext None · refundados 0 · bloq 0 · n_nac 282288 · aborto None (473.1 s; 1882 s)
+[00:49:56] [11/100] SEL_MC s45432: persiste 1 (vivos 40) · K base 39.83 · K final 41.83 · t_ext None · refundados 0 · bloq 0 · n_nac 262818 · aborto None (455.2 s; 1885 s)
+[00:50:06] [12/100] SEL_MC s45431: persiste 1 (vivos 54) · K base 43.07 · K final 42.91 · t_ext None · refundados 0 · bloq 0 · n_nac 283645 · aborto None (470.6 s; 1896 s)
+[00:55:06] latido: 12/100 terminadas; checkpoints vivos 3 (SEL_MC_s45434.pkl 28.8 MB, SEL_MC_s45433.pkl 28.8 MB, SEL_MC_s45435.pkl 27.9 MB); 2196 s
+[00:57:32] [13/100] SEL_MC s45433: persiste 1 (vivos 42) · K base 41.43 · K final 42.7 · t_ext None · refundados 0 · bloq 0 · n_nac 263696 · aborto None (460.2 s; 2342 s)
+[00:57:36] [14/100] SEL_MC s45434: persiste 1 (vivos 43) · K base 41.8 · K final 43.42 · t_ext None · refundados 0 · bloq 0 · n_nac 270819 · aborto None (459.9 s; 2346 s)
+[00:57:49] [15/100] SEL_MC s45435: persiste 1 (vivos 31) · K base 41.83 · K final 42.64 · t_ext None · refundados 0 · bloq 0 · n_nac 269463 · aborto None (463.4 s; 2359 s)
+[01:02:49] latido: 15/100 terminadas; checkpoints vivos 3 (SEL_MC_s45438.pkl 28.0 MB, SEL_MC_s45436.pkl 28.9 MB, SEL_MC_s45437.pkl 29.0 MB); 2659 s
+[01:05:25] [16/100] SEL_MC s45437: persiste 1 (vivos 42) · K base 42.64 · K final 41.52 · t_ext None · refundados 0 · bloq 0 · n_nac 277254 · aborto None (469.0 s; 2815 s)
+[01:05:31] [17/100] SEL_MC s45436: persiste 1 (vivos 32) · K base 42.03 · K final 41.62 · t_ext None · refundados 0 · bloq 0 · n_nac 277013 · aborto None (477.9 s; 2820 s)
+[01:05:46] [18/100] SEL_MC s45438: persiste 1 (vivos 35) · K base 42.55 · K final 43.03 · t_ext None · refundados 0 · bloq 0 · n_nac 280442 · aborto None (476.5 s; 2836 s)
+[01:10:46] latido: 18/100 terminadas; checkpoints vivos 3 (SEL_MC_s45439.pkl 29.2 MB, SEL_MC_s45440.pkl 29.4 MB, SEL_C_s45421.pkl 26.9 MB); 3136 s
+[01:12:39] [19/100] SEL_C s45421: persiste 1 (vivos 36) · K base 39.58 · K final 38.74 · t_ext None · refundados 0 · bloq 0 · n_nac 177214 · aborto None (412.5 s; 3249 s)
+[01:13:11] [20/100] SEL_MC s45439: persiste 1 (vivos 52) · K base 41.09 · K final 43.62 · t_ext None · refundados 0 · bloq 0 · n_nac 272616 · aborto None (465.6 s; 3281 s)
+[01:13:18] [21/100] SEL_MC s45440: persiste 1 (vivos 39) · K base 42.38 · K final 42.67 · t_ext None · refundados 0 · bloq 0 · n_nac 275691 · aborto None (466.8 s; 3287 s)
+[01:18:18] latido: 21/100 terminadas; checkpoints vivos 3 (SEL_C_s45424.pkl 25.9 MB, SEL_C_s45423.pkl 27.0 MB, SEL_C_s45422.pkl 29.1 MB); 3587 s
+[01:19:34] [22/100] SEL_C s45422: persiste 1 (vivos 43) · K base 38.86 · K final 40.11 · t_ext None · refundados 0 · bloq 0 · n_nac 172757 · aborto None (415.6 s; 3664 s)
+[01:20:05] [23/100] SEL_C s45423: persiste 1 (vivos 46) · K base 39.67 · K final 38.72 · t_ext None · refundados 0 · bloq 0 · n_nac 175859 · aborto None (413.6 s; 3694 s)
+[01:20:18] [24/100] SEL_C s45424: persiste 1 (vivos 36) · K base 39.02 · K final 39.75 · t_ext None · refundados 0 · bloq 0 · n_nac 176156 · aborto None (420.0 s; 3708 s)
+[01:25:18] latido: 24/100 terminadas; checkpoints vivos 3 (SEL_C_s45426.pkl 28.2 MB, SEL_C_s45425.pkl 29.7 MB, SEL_C_s45427.pkl 27.1 MB); 4008 s
+[01:26:19] [25/100] SEL_C s45425: persiste 1 (vivos 46) · K base 39.79 · K final 38.75 · t_ext None · refundados 0 · bloq 0 · n_nac 171996 · aborto None (404.8 s; 4069 s)
+[01:26:54] [26/100] SEL_C s45426: persiste 1 (vivos 44) · K base 38.08 · K final 38.54 · t_ext None · refundados 0 · bloq 0 · n_nac 178924 · aborto None (409.1 s; 4104 s)
+[01:27:08] [27/100] SEL_C s45427: persiste 1 (vivos 39) · K base 39.76 · K final 39.05 · t_ext None · refundados 0 · bloq 0 · n_nac 178705 · aborto None (409.6 s; 4117 s)
+[01:32:08] latido: 27/100 terminadas; checkpoints vivos 3 (SEL_C_s45429.pkl 27.2 MB, SEL_C_s45428.pkl 30.2 MB, SEL_C_s45430.pkl 26.5 MB); 4417 s
+[01:33:11] [28/100] SEL_C s45428: persiste 1 (vivos 32) · K base 38.58 · K final 38.38 · t_ext None · refundados 0 · bloq 0 · n_nac 176058 · aborto None (410.9 s; 4480 s)
+[01:33:51] [29/100] SEL_C s45429: persiste 1 (vivos 43) · K base 39.5 · K final 39.34 · t_ext None · refundados 0 · bloq 0 · n_nac 175533 · aborto None (417.4 s; 4521 s)
+[01:34:04] [30/100] SEL_C s45430: persiste 1 (vivos 38) · K base 39.87 · K final 38.39 · t_ext None · refundados 0 · bloq 0 · n_nac 176271 · aborto None (416.0 s; 4534 s)
+[01:39:04] latido: 30/100 terminadas; checkpoints vivos 3 (SEL_C_s45431.pkl 29.7 MB, SEL_C_s45433.pkl 26.7 MB, SEL_C_s45432.pkl 26.9 MB); 4834 s
+[01:40:10] [31/100] SEL_C s45431: persiste 1 (vivos 38) · K base 38.53 · K final 40.24 · t_ext None · refundados 0 · bloq 0 · n_nac 175363 · aborto None (419.8 s; 4900 s)
+[01:40:49] [32/100] SEL_C s45432: persiste 1 (vivos 35) · K base 38.88 · K final 39.65 · t_ext None · refundados 0 · bloq 0 · n_nac 173543 · aborto None (417.8 s; 4939 s)
+[01:40:59] [33/100] SEL_C s45433: persiste 1 (vivos 42) · K base 39.66 · K final 39.55 · t_ext None · refundados 0 · bloq 0 · n_nac 175340 · aborto None (415.0 s; 4949 s)
+[01:45:59] latido: 33/100 terminadas; checkpoints vivos 3 (SEL_C_s45436.pkl 27.4 MB, SEL_C_s45434.pkl 30.5 MB, SEL_C_s45435.pkl 27.8 MB); 5249 s
+[01:46:57] [34/100] SEL_C s45434: persiste 1 (vivos 32) · K base 39.1 · K final 38.9 · t_ext None · refundados 0 · bloq 0 · n_nac 175013 · aborto None (406.2 s; 5307 s)
+[01:47:40] [35/100] SEL_C s45435: persiste 1 (vivos 38) · K base 38.5 · K final 39.45 · t_ext None · refundados 0 · bloq 0 · n_nac 175565 · aborto None (410.4 s; 5350 s)
+[01:47:47] [36/100] SEL_C s45436: persiste 1 (vivos 50) · K base 39.02 · K final 38.67 · t_ext None · refundados 0 · bloq 0 · n_nac 177697 · aborto None (408.4 s; 5357 s)
+[01:52:47] latido: 36/100 terminadas; checkpoints vivos 3 (SEL_C_s45437.pkl 30.2 MB, SEL_C_s45439.pkl 27.3 MB, SEL_C_s45438.pkl 27.3 MB); 5657 s
+[01:53:44] [37/100] SEL_C s45437: persiste 1 (vivos 42) · K base 39.17 · K final 39.09 · t_ext None · refundados 0 · bloq 0 · n_nac 176975 · aborto None (407.4 s; 5714 s)
+[01:54:33] [38/100] SEL_C s45438: persiste 1 (vivos 36) · K base 39.32 · K final 39.33 · t_ext None · refundados 0 · bloq 0 · n_nac 175381 · aborto None (413.2 s; 5763 s)
+[01:54:43] [39/100] SEL_C s45439: persiste 1 (vivos 38) · K base 38.67 · K final 38.84 · t_ext None · refundados 0 · bloq 0 · n_nac 178677 · aborto None (415.0 s; 5773 s)
+[01:59:43] latido: 39/100 terminadas; checkpoints vivos 3 (SEL_M_s45421.pkl 33.0 MB, SEL_C_s45440.pkl 30.0 MB, SEL_M_s45422.pkl 31.4 MB); 6073 s
+[02:00:45] [40/100] SEL_C s45440: persiste 1 (vivos 43) · K base 39.11 · K final 38.67 · t_ext None · refundados 0 · bloq 0 · n_nac 178570 · aborto None (420.3 s; 6135 s)
+[02:01:06] [41/100] SEL_M s45421: persiste 1 (vivos 43) · K base 34.74 · K final 34.74 · t_ext None · refundados 0 · bloq 0 · n_nac 276461 · aborto None (392.2 s; 6156 s)
+[02:01:15] [42/100] SEL_M s45422: persiste 1 (vivos 44) · K base 34.88 · K final 32.78 · t_ext None · refundados 0 · bloq 0 · n_nac 266895 · aborto None (392.2 s; 6165 s)
+[02:06:15] latido: 42/100 terminadas; checkpoints vivos 3 (SEL_M_s45424.pkl 31.8 MB, SEL_M_s45425.pkl 31.3 MB, SEL_M_s45423.pkl 33.7 MB); 6465 s
+[02:07:32] [43/100] SEL_M s45423: persiste 1 (vivos 32) · K base 34.89 · K final 35.31 · t_ext None · refundados 0 · bloq 0 · n_nac 288491 · aborto None (407.3 s; 6542 s)
+[02:07:54] [44/100] SEL_M s45424: persiste 1 (vivos 30) · K base 35.26 · K final 35.33 · t_ext None · refundados 0 · bloq 0 · n_nac 288622 · aborto None (407.9 s; 6564 s)
+[02:08:03] [45/100] SEL_M s45425: persiste 1 (vivos 36) · K base 33.31 · K final 35.09 · t_ext None · refundados 0 · bloq 0 · n_nac 287449 · aborto None (407.8 s; 6573 s)
+[02:13:03] latido: 45/100 terminadas; checkpoints vivos 3 (SEL_M_s45426.pkl 34.3 MB, SEL_M_s45427.pkl 32.2 MB, SEL_M_s45428.pkl 31.7 MB); 6873 s
+[02:13:58] [46/100] SEL_M s45426: persiste 1 (vivos 29) · K base 33.46 · K final 31.19 · t_ext None · refundados 0 · bloq 0 · n_nac 266320 · aborto None (385.2 s; 6928 s)
+[02:14:28] [47/100] SEL_M s45427: persiste 1 (vivos 37) · K base 35.0 · K final 34.53 · t_ext None · refundados 0 · bloq 0 · n_nac 278248 · aborto None (393.9 s; 6958 s)
+[02:14:41] [48/100] SEL_M s45428: persiste 1 (vivos 30) · K base 35.0 · K final 33.95 · t_ext None · refundados 0 · bloq 0 · n_nac 280268 · aborto None (397.4 s; 6971 s)
+[02:19:41] latido: 48/100 terminadas; checkpoints vivos 3 (SEL_M_s45430.pkl 32.0 MB, SEL_M_s45431.pkl 30.3 MB, SEL_M_s45429.pkl 33.9 MB); 7271 s
+[02:20:56] [49/100] SEL_M s45429: persiste 1 (vivos 28) · K base 35.94 · K final 35.58 · t_ext None · refundados 0 · bloq 0 · n_nac 290224 · aborto None (417.8 s; 7346 s)
+[02:21:25] [50/100] SEL_M s45430: persiste 1 (vivos 41) · K base 34.69 · K final 35.5 · t_ext None · refundados 0 · bloq 0 · n_nac 294091 · aborto None (416.8 s; 7375 s)
+[02:21:35] [51/100] SEL_M s45431: persiste 1 (vivos 29) · K base 34.87 · K final 33.84 · t_ext None · refundados 0 · bloq 0 · n_nac 281700 · aborto None (414.4 s; 7385 s)
+[02:26:35] latido: 51/100 terminadas; checkpoints vivos 3 (SEL_M_s45432.pkl 33.9 MB, SEL_M_s45434.pkl 31.3 MB, SEL_M_s45433.pkl 31.9 MB); 7685 s
+[02:27:42] [52/100] SEL_M s45432: persiste 1 (vivos 36) · K base 35.35 · K final 34.0 · t_ext None · refundados 0 · bloq 0 · n_nac 285690 · aborto None (406.2 s; 7752 s)
+[02:28:06] [53/100] SEL_M s45433: persiste 1 (vivos 36) · K base 34.56 · K final 35.2 · t_ext None · refundados 0 · bloq 0 · n_nac 275573 · aborto None (400.5 s; 7776 s)
+[02:28:19] [54/100] SEL_M s45434: persiste 1 (vivos 37) · K base 34.2 · K final 33.58 · t_ext None · refundados 0 · bloq 0 · n_nac 279968 · aborto None (403.1 s; 7788 s)
+[02:33:19] latido: 54/100 terminadas; checkpoints vivos 3 (SEL_M_s45435.pkl 34.1 MB, SEL_M_s45437.pkl 31.3 MB, SEL_M_s45436.pkl 32.2 MB); 8088 s
+[02:34:23] [55/100] SEL_M s45435: persiste 1 (vivos 32) · K base 33.16 · K final 34.65 · t_ext None · refundados 0 · bloq 0 · n_nac 276142 · aborto None (401.0 s; 8153 s)
+[02:34:49] [56/100] SEL_M s45436: persiste 1 (vivos 20) · K base 33.77 · K final 33.07 · t_ext None · refundados 0 · bloq 0 · n_nac 277813 · aborto None (402.7 s; 8179 s)
+[02:35:02] [57/100] SEL_M s45437: persiste 1 (vivos 36) · K base 33.68 · K final 34.21 · t_ext None · refundados 0 · bloq 0 · n_nac 273012 · aborto None (403.3 s; 8192 s)
+[02:40:02] latido: 57/100 terminadas; checkpoints vivos 3 (SEL_M_s45440.pkl 31.5 MB, SEL_M_s45438.pkl 34.1 MB, SEL_M_s45439.pkl 32.5 MB); 8492 s
+[02:41:01] [58/100] SEL_M s45438: persiste 1 (vivos 42) · K base 34.38 · K final 33.24 · t_ext None · refundados 0 · bloq 0 · n_nac 274602 · aborto None (397.3 s; 8551 s)
+[02:41:27] [59/100] SEL_M s45439: persiste 1 (vivos 27) · K base 34.32 · K final 34.61 · t_ext None · refundados 0 · bloq 0 · n_nac 279520 · aborto None (398.0 s; 8577 s)
+[02:41:48] [60/100] SEL_M s45440: persiste 1 (vivos 35) · K base 36.25 · K final 34.35 · t_ext None · refundados 0 · bloq 0 · n_nac 288251 · aborto None (406.0 s; 8598 s)
+[02:46:47] [61/100] F1 s45421: persiste 1 (vivos 34) · K base 31.11 · K final 30.71 · t_ext None · refundados 0 · bloq 0 · n_nac 185150 · aborto None (345.4 s; 8896 s)
+[02:47:08] [62/100] F1 s45422: persiste 1 (vivos 30) · K base 31.09 · K final 30.69 · t_ext None · refundados 0 · bloq 0 · n_nac 183654 · aborto None (341.1 s; 8918 s)
+[02:47:30] [63/100] F1 s45423: persiste 1 (vivos 32) · K base 31.05 · K final 31.07 · t_ext None · refundados 0 · bloq 0 · n_nac 183876 · aborto None (341.6 s; 8940 s)
+[02:52:30] latido: 63/100 terminadas; checkpoints vivos 3 (F1_s45424.pkl 34.0 MB, F1_s45425.pkl 32.0 MB, F1_s45426.pkl 30.1 MB); 9240 s
+[02:52:33] [64/100] F1 s45424: persiste 1 (vivos 32) · K base 30.56 · K final 30.61 · t_ext None · refundados 0 · bloq 0 · n_nac 184040 · aborto None (346.3 s; 9243 s)
+[02:52:54] [65/100] F1 s45425: persiste 1 (vivos 26) · K base 30.92 · K final 30.82 · t_ext None · refundados 0 · bloq 0 · n_nac 184405 · aborto None (345.8 s; 9264 s)
+[02:53:16] [66/100] F1 s45426: persiste 1 (vivos 33) · K base 30.24 · K final 30.6 · t_ext None · refundados 0 · bloq 0 · n_nac 183152 · aborto None (346.3 s; 9286 s)
+[02:58:16] latido: 66/100 terminadas; checkpoints vivos 3 (F1_s45427.pkl 33.5 MB, F1_s45429.pkl 30.4 MB, F1_s45428.pkl 32.4 MB); 9586 s
+[02:58:19] [67/100] F1 s45427: persiste 1 (vivos 26) · K base 30.54 · K final 31.23 · t_ext None · refundados 0 · bloq 0 · n_nac 183971 · aborto None (345.7 s; 9589 s)
+[02:58:39] [68/100] F1 s45428: persiste 1 (vivos 29) · K base 30.63 · K final 31.21 · t_ext None · refundados 0 · bloq 0 · n_nac 183955 · aborto None (344.3 s; 9609 s)
+[02:59:05] [69/100] F1 s45429: persiste 1 (vivos 27) · K base 30.32 · K final 30.7 · t_ext None · refundados 0 · bloq 0 · n_nac 183354 · aborto None (348.1 s; 9635 s)
+[03:03:54] [70/100] F1 s45430: persiste 1 (vivos 35) · K base 30.95 · K final 30.53 · t_ext None · refundados 0 · bloq 0 · n_nac 183943 · aborto None (335.1 s; 9924 s)
+[03:04:16] [71/100] F1 s45431: persiste 1 (vivos 30) · K base 30.61 · K final 31.03 · t_ext None · refundados 0 · bloq 0 · n_nac 183974 · aborto None (337.4 s; 9946 s)
+[03:04:45] [72/100] F1 s45432: persiste 1 (vivos 32) · K base 30.81 · K final 30.75 · t_ext None · refundados 0 · bloq 0 · n_nac 183831 · aborto None (340.1 s; 9975 s)
+[03:09:45] [73/100] F1 s45433: persiste 1 (vivos 36) · K base 30.35 · K final 30.97 · t_ext None · refundados 0 · bloq 0 · n_nac 184109 · aborto None (350.0 s; 10274 s)
+[03:10:04] [74/100] F1 s45434: persiste 1 (vivos 31) · K base 31.29 · K final 30.9 · t_ext None · refundados 0 · bloq 0 · n_nac 184116 · aborto None (347.0 s; 10293 s)
+[03:10:36] [75/100] F1 s45435: persiste 1 (vivos 28) · K base 31.01 · K final 30.76 · t_ext None · refundados 0 · bloq 0 · n_nac 184154 · aborto None (350.5 s; 10326 s)
+[03:15:25] [76/100] F1 s45436: persiste 1 (vivos 39) · K base 31.13 · K final 30.86 · t_ext None · refundados 0 · bloq 0 · n_nac 183276 · aborto None (340.6 s; 10615 s)
+[03:15:43] [77/100] F1 s45437: persiste 1 (vivos 35) · K base 31.24 · K final 30.87 · t_ext None · refundados 0 · bloq 0 · n_nac 183327 · aborto None (339.3 s; 10633 s)
+[03:16:22] [78/100] F1 s45438: persiste 1 (vivos 31) · K base 31.05 · K final 30.84 · t_ext None · refundados 0 · bloq 0 · n_nac 185484 · aborto None (346.0 s; 10672 s)
+[03:16:32] [79/100] AZA_MC s45421: persiste 0 (vivos 0) · K base 0.31 · K final 0.0 · t_ext 568824 · refundados 0 · bloq 0 · n_nac 3692 · aborto None (9.9 s; 10682 s)
+[03:16:58] [80/100] AZA_MC s45422: persiste 0 (vivos 0) · K base 17.08 · K final 0.0 · t_ext 1223452 · refundados 0 · bloq 0 · n_nac 12250 · aborto None (26.5 s; 10708 s)
+[03:17:33] [81/100] AZA_MC s45423: persiste 0 (vivos 0) · K base 26.27 · K final 0.0 · t_ext 1536861 · refundados 0 · bloq 0 · n_nac 12378 · aborto None (34.3 s; 10742 s)
+[03:17:51] [82/100] AZA_MC s45424: persiste 0 (vivos 0) · K base 8.65 · K final 0.0 · t_ext 840158 · refundados 0 · bloq 0 · n_nac 8398 · aborto None (18.4 s; 10761 s)
+[03:18:19] [83/100] AZA_MC s45425: persiste 0 (vivos 0) · K base 16.51 · K final 0.0 · t_ext 1559170 · refundados 0 · bloq 0 · n_nac 9683 · aborto None (28.0 s; 10789 s)
+[03:18:39] [84/100] AZA_MC s45426: persiste 0 (vivos 0) · K base 13.47 · K final 0.0 · t_ext 1051907 · refundados 0 · bloq 0 · n_nac 6646 · aborto None (19.4 s; 10808 s)
+[03:18:58] [85/100] AZA_MC s45427: persiste 0 (vivos 0) · K base 11.74 · K final 0.0 · t_ext 1169553 · refundados 0 · bloq 0 · n_nac 11486 · aborto None (19.3 s; 10828 s)
+[03:20:10] [86/100] AZA_MC s45428: persiste 0 (vivos 0) · K base 35.19 · K final 0.0 · t_ext 2171523 · refundados 0 · bloq 0 · n_nac 45944 · aborto None (72.4 s; 10900 s)
+[03:21:04] [87/100] F1 s45439: persiste 1 (vivos 24) · K base 30.27 · K final 30.44 · t_ext None · refundados 0 · bloq 0 · n_nac 182978 · aborto None (338.2 s; 10954 s)
+[03:21:07] [88/100] AZA_MC s45429: persiste 0 (vivos 0) · K base 16.75 · K final 0.0 · t_ext 4140501 · refundados 0 · bloq 0 · n_nac 7944 · aborto None (56.6 s; 10957 s)
+[03:21:22] [89/100] F1 s45440: persiste 1 (vivos 38) · K base 31.03 · K final 31.25 · t_ext None · refundados 0 · bloq 0 · n_nac 184112 · aborto None (338.4 s; 10971 s)
+[03:21:27] [90/100] AZA_MC s45430: persiste 0 (vivos 0) · K base 13.54 · K final 0.0 · t_ext 1215718 · refundados 0 · bloq 0 · n_nac 11316 · aborto None (23.0 s; 10977 s)
+[03:21:37] [91/100] AZA_MC s45432: persiste 0 (vivos 0) · K base 5.79 · K final 0.0 · t_ext 1433015 · refundados 0 · bloq 0 · n_nac 4863 · aborto None (15.3 s; 10987 s)
+[03:22:03] [92/100] AZA_MC s45434: persiste 0 (vivos 0) · K base 23.55 · K final 0.0 · t_ext 1201123 · refundados 0 · bloq 0 · n_nac 12306 · aborto None (26.4 s; 11013 s)
+[03:22:16] [93/100] AZA_MC s45435: persiste 0 (vivos 0) · K base 0.56 · K final 0.0 · t_ext 612399 · refundados 0 · bloq 0 · n_nac 6166 · aborto None (12.7 s; 11026 s)
+[03:22:49] [94/100] AZA_MC s45436: persiste 0 (vivos 0) · K base 17.81 · K final 0.0 · t_ext 2997380 · refundados 0 · bloq 0 · n_nac 11937 · aborto None (32.5 s; 11058 s)
+[03:22:52] [95/100] AZA_MC s45433: persiste 0 (vivos 0) · K base 23.62 · K final 0.0 · t_ext 3369059 · refundados 0 · bloq 0 · n_nac 27537 · aborto None (85.1 s; 11062 s)
+[03:22:56] [96/100] AZA_MC s45431: persiste 0 (vivos 0) · K base 23.07 · K final 0.0 · t_ext 3605482 · refundados 0 · bloq 0 · n_nac 59127 · aborto None (109.2 s; 11066 s)
+[03:23:01] [97/100] AZA_MC s45438: persiste 0 (vivos 0) · K base 0.26 · K final 0.0 · t_ext 627688 · refundados 0 · bloq 0 · n_nac 4886 · aborto None (8.9 s; 11071 s)
+[03:23:20] [98/100] AZA_MC s45440: persiste 0 (vivos 0) · K base 12.95 · K final 0.0 · t_ext 1101150 · refundados 0 · bloq 0 · n_nac 11393 · aborto None (18.8 s; 11089 s)
+[03:23:28] [99/100] AZA_MC s45437: persiste 0 (vivos 0) · K base 21.62 · K final 0.0 · t_ext 2413364 · refundados 0 · bloq 0 · n_nac 11350 · aborto None (39.0 s; 11098 s)
+[03:27:24] [100/100] AZA_MC s45439: persiste 1 (vivos 5) · K base 26.6 · K final 13.96 · t_ext None · refundados 0 · bloq 0 · n_nac 115325 · aborto None (268.0 s; 11334 s)
+semillas por brazo: {'F1': 20, 'SEL_C': 20, 'SEL_MC': 20, 'AZA_MC': 20, 'SEL_M': 20}; persiste en T = 10000000: {'F1': 20, 'SEL_C': 20, 'SEL_MC': 20, 'AZA_MC': 1, 'SEL_M': 20}; abortos: []; t_corte distinto de 1: []; semillas con bloqueados (NO EVALUABLES): []
+K BASE [T/20, T/10] (== K de eco_sel a T 1e6 si T = 1e7), mediana: {'F1': 30.931, 'SEL_C': 39.106, 'SEL_MC': 42.04, 'AZA_MC': 16.629, 'SEL_M': 34.718} · K FINAL [9T/10, T], mediana: {'F1': 30.829, 'SEL_C': 38.974, 'SEL_MC': 42.6, 'AZA_MC': 0.0, 'SEL_M': 34.445} · dK = final - base, mediana: {'F1': -0.022, 'SEL_C': -0.135, 'SEL_MC': 0.232, 'AZA_MC': -15.025, 'SEL_M': -0.413}
+V1 F1 persiste >= 17/20: SE CUMPLE (20) · V2 frio limpio (0 refundados, 0 fundadores repuestos, todos los brazos): SE CUMPLE [] · VB semillas bloqueadas <= 2: SE CUMPLE (0)
+V3 genetica declarada (mutables, 0 genes fuera, mutacion en >= 18/20; F1 sin mutacion): {'F1': (True, [], [], 0), 'SEL_C': (True, [], [], 20), 'SEL_MC': (True, [], [], 20), 'AZA_MC': (True, [], [], 20), 'SEL_M': (True, [], [], 20)}
+[L] L-1 SEL_C sube (K final > K base) en >= 15/20: NO (8/20) y mediana de dK >= +2.0: NO (-0.14) · L-2 no es deriva: AZA_MC NO cumple L-1: SE CUMPLE (0/20, mediana -15.02) y dK(SEL_C) > dK(AZA_MC) pareado >= 15/20: SE CUMPLE (19, mediana 14.7) · L-3 no es el tiempo: dK(SEL_C) > dK(F1) pareado >= 15/20: NO (9, mediana -0.05)
+VEREDICTO L POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, baja, o lo explican la deriva o el tiempo) (en esta serie)
+[MC] MC-1 K final SEL_MC > SEL_C pareado >= 15/20: SE CUMPLE (20/20) y mediana >= +1.5: SE CUMPLE (3.2) · MC-2 K final SEL_MC > AZA_MC (los mismos 16 genes sin herencia) pareado >= 15/20: SE CUMPLE (20/20, mediana 42.39)
+VEREDICTO MC POR LA LETRA (una serie; el del bloque exige serie + replica con el mismo veredicto): FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA SELECCION SUBE K POR ENCIMA DEL CEREBRO SOLO; SIN HERENCIA NO (en esta serie)
+descriptivo, CURVA de K por ventana de T/10 (mediana [q10, q90] sobre semillas):
+    F1      30.792[30.471,31.216] 30.876[30.654,31.061] 30.788[30.628,31.235] 30.872[30.645,31.097] 30.948[30.623,31.504] 30.815[30.578,31.098] 30.83[30.519,31.233] 30.895[30.692,31.203] 30.827[30.528,31.159] 30.829[30.589,31.208]
+    SEL_C   38.784[38.21,39.263] 39.209[38.651,40.004] 39.221[38.456,39.698] 39.411[38.59,39.882] 39.361[38.597,40.073] 39.379[38.692,39.746] 39.27[38.611,39.721] 38.946[38.507,39.794] 38.916[38.669,39.859] 38.974[38.527,39.784]
+    SEL_MC  41.019[40.311,41.859] 42.345[40.81,42.828] 41.87[41.007,42.797] 41.836[40.656,42.9] 42.009[40.822,43.051] 41.917[41.264,43.67] 41.808[41.474,43.058] 41.946[40.914,43.037] 42.373[41.523,43.156] 42.6[41.58,43.068]
+    AZA_MC  20.332[11.535,25.933] 1.965[0.0,28.868] 0.0[0.0,25.027] 0.0[0.0,5.882] 0.0[0.0,0.014] 0.0[0.0,0.0] 0.0[0.0,0.0] 0.0[0.0,0.0] 0.0[0.0,0.0] 0.0[0.0,0.0]
+    SEL_M   34.108[32.628,34.904] 34.829[33.911,35.613] 34.973[33.502,35.396] 34.757[33.68,35.311] 34.945[34.043,35.656] 34.613[33.952,35.421] 34.735[33.804,35.476] 34.792[33.961,35.612] 34.947[34.148,35.397] 34.445[33.044,35.345]
+descriptivo, K [T/2, T] (la de eco_sel aplicada a T), mediana: {'F1': 30.84, 'SEL_C': 39.137, 'SEL_MC': 42.154, 'AZA_MC': 0.0, 'SEL_M': 34.697}
+descriptivo, GENES por ventana (mediana sobre semillas de la media de los vivos en el borde W_k; W_1, W_5, W_10; todo en el JSON):
+    SEL_C   alpha 2.054/2.727/2.726 · aversion 0.966/1.004/0.553 · tau_e 0.421/0.262/0.261 · hambre_boca 2.115/2.357/2.646 · NK 30.528/37.658/27.441
+    SEL_MC  alpha 2.238/2.891/3.51 · aversion 0.913/0.694/1.412 · tau_e 0.406/0.289/0.285 · hambre_boca 2.021/2.969/3.45 · NK 21.896/19.03/23.581 · rep_umbral 0.615/0.573/0.631
+    AZA_MC  alpha 1.497/1.777/1.87 · aversion 1.169/0.869/1.918 · tau_e 0.763/0.89/0.391 · hambre_boca 1.781/1.997/0.952 · NK 26.8/25.48/30.4 · rep_umbral 1.186/1.101/1.45
+    SEL_M   rep_umbral 0.588/0.62/0.651
+descriptivo, fraccion de muertes por veneno + sal por ventana (mediana): {'F1': [0.817, 0.817, 0.816, 0.818, 0.818, 0.817, 0.816, 0.816, 0.816, 0.818], 'SEL_C': [0.095, 0.031, 0.026, 0.026, 0.041, 0.027, 0.032, 0.035, 0.025, 0.034], 'SEL_MC': [0.066, 0.031, 0.028, 0.029, 0.032, 0.031, 0.03, 0.029, 0.035, 0.037], 'AZA_MC': [0.706, 0.576, 0.519, 0.546, 0.072, 0.144, 0.203, 0.34, 0.287, 0.446], 'SEL_M': [0.773, 0.767, 0.762, 0.761, 0.76, 0.764, 0.762, 0.76, 0.762, 0.773]}
+descriptivo, rango del banco contra sus 8 sombras (mediana; en t = 100000 y en T; la deriva de las sombras llena el rango a T largo): {'SEL_C': {'alpha': (9.0, 7.0), 'aversion': (4.5, 3.0), 'tau_e': (2.0, 2.0)}, 'SEL_MC': {'alpha': (9.0, 8.0), 'aversion': (5.0, 6.0), 'tau_e': (1.0, 2.0), 'rep_umbral': (2.5, 3.0)}, 'AZA_MC': {'alpha': (5.0, 3.0), 'aversion': (6.0, 6.0), 'tau_e': (5.0, 9.0), 'rep_umbral': (5.0, 1.0)}, 'SEL_M': {'rep_umbral': (2.0, 3.0)}}
+descriptivo, nacimientos totales (mediana): {'F1': 183963.0, 'SEL_C': 175958.5, 'SEL_MC': 276810.5, 'AZA_MC': 11371.5, 'SEL_M': 279744.0}; R0 de nacidos {'F1': 1.0, 'SEL_C': 1.0, 'SEL_MC': 1.0, 'AZA_MC': 0.996, 'SEL_M': 1.0} (~1 por construccion en el quimiostato: no informa)
+[03:27:27] VEREDICTOS: {'L': 'NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, baja, o lo explican la deriva o el tiempo) (en esta serie)', 'MC': 'FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA SELECCION SUBE K POR ENCIMA DEL CEREBRO SOLO; SIN HERENCIA NO (en esta serie)'}

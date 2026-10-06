@@ -1,0 +1,73 @@
+IDENTIDAD ECO_SEL LARGO · 2026-09-28 20:48:57 · python 3.13.12 · numpy 2.4.3 · CPU COMPARTIDA con otra serie Pool 3 (tiempos contaminados) · shas {'corre_eco_sel_largo.py': '69db795b7d952d93', 'nucleo_eco_sel_largo.py': '69f2b652ac46cd1b', 'construye_eco_sel_largo.py': '65b5d9f5b5f98f73', 'eco_sel/nucleo_eco_sel.py': '6a36e47ce61db3e1', 'eco_sel/construye_eco_sel.py': 'f2f5ed3c54d1b2c5', 'frio/corre_frio.py': '3ba8b0f5cf1fbbfa', 'frio/motor_frio_rapido.py': 'ff9d890a5cce9dec', 'juaco_eco/corre_eco_v12.py': '1340d268e1fd93d8', 'juaco_eco/corre_eco.py': '47d9cee4d6462116', 'juaco_eco/motor_eco.py': 'bca3033878b59622', 'juaco_eco/carros/FAMB_RES0_ECO.py': '94ea78589bc2ce24'}
+construye_eco_sel_largo --verifica: IGUAL (origen 6a36e47ce61db3e1; destino 69f2b652ac46cd1b)
+  OK  (K) nucleo_eco_sel_largo.py en disco == el construido por anclas desde eco_sel/nucleo_eco_sel.py (6a36e47ce61db3e1) 
+construye_eco_sel --verifica: IGUAL (origen 3ba8b0f5cf1fbbfa; destino 6a36e47ce61db3e1)
+construye_eco_sel_largo --verifica: IGUAL (origen 6a36e47ce61db3e1; destino 69f2b652ac46cd1b)
+  OK  (K) verifica(): nucleo, eco_sel y origenes con el sha fijado; eco_sel/nucleo == su construido 
+  OK  (A) un solo corre_eco en el proceso (eco_sel y largo comparten CR) 
+  OK  (A) eco_de('MC'): mutables = rep_umbral + los 15 del cerebro (16, orden de NOMBRES); p 0.05 y sigma 0.15 por gen, == eco_sel en todo lo demas (pv > 0 en ['eta', 'tau_e', 'alpha', 'hambre_boca', 'aversion', 'ema', 'paso', 'lam', 'memoria_rechazo', 'eta_s', 'clip_s', 'del_s', 'del_c', 'ema_c', 'NK', 'rep_umbral'])
+  OK  (A) los brazos de eco_sel quedan como estaban en el nucleo largo 
+  (compilacion / cache de motor_frio_rapido: 1 s)
+  OK  (A) T 1e6 F1: nucleo largo == nucleo_eco_sel en TODAS las claves de eco_sel salvo seg; clave nueva solo 'ventanas' (persiste 1, vivos_T 26, n_nac 18202, K eco_sel 30.547; distintas []; nuevas ['ventanas']; 34.5 s eco_sel (ckpt 10 000) contra 32.3 s largo (ckpt 100 000))
+  OK  (A) T 1e6 F1: kvent(x, T/2, T) == kbar de corre_eco_sel exacto; K por ventana = [32.22, 31.19, 30.73, 29.83, 30.24, 31.48, 30.41, 30.01, 30.64, 30.09] 
+  (checkpoint F1 a T 1e6, (t, bytes, s): [(100000, 2674257, 0.002), (200000, 2904082, 0.003), (300000, 2912244, 0.004), (400000, 3104943, 0.005), (500000, 3150001, 0.006), (600000, 3379889, 0.008), (700000, 3498889, 0.008), (800000, 3876342, 0.01), (900000, 3515128, 0.012)])
+  OK  (A) T 1e6 SEL_C: nucleo largo == nucleo_eco_sel en TODAS las claves de eco_sel salvo seg; clave nueva solo 'ventanas' (persiste 1, vivos_T 30, n_nac 17373, K eco_sel 39.501; distintas []; nuevas ['ventanas']; 41.5 s eco_sel (ckpt 10 000) contra 41.5 s largo (ckpt 100 000))
+  OK  (A) T 1e6 SEL_C: kvent(x, T/2, T) == kbar de corre_eco_sel exacto; K por ventana = [35.61, 36.8, 38.57, 37.52, 38.82, 40.01, 39.26, 39.51, 39.58, 39.09] 
+  (checkpoint SEL_C a T 1e6, (t, bytes, s): [(100000, 2932701, 0.002), (200000, 2940724, 0.003), (300000, 3096435, 0.004), (400000, 3436781, 0.004), (500000, 3666496, 0.008), (600000, 3822396, 0.007), (700000, 3793583, 0.013), (800000, 4060100, 0.009), (900000, 4142066, 0.011)])
+  MAL (B) SEL_MC con sigma = 0 (p_mut 0.05: la mutacion corre y no mueve) == F1 bit a bit (claves salvo configuracion; ventanas iguales; genes = G0) (distintas ['vivos_lect', 'vivos_T', 'gen_max_T', 'vivos_t', 'n_nac', 'tasa_mut', 'nac_post', 'r0_post', 'n_coh_post', 'gen_t', 'tam_total', 'vivos_final', 'r0_nac', 'n_coh_nac', 'vivos_1k', 'n_mut', 'nac_2a', 'vida_media_muertos_2a', 'vivos_T_de_2a', 'causas_2a', 'movidos_mutables']; donante padre; n_nac 1067 F1 1124)
+  MAL (B) AZA_MC con sigma = 0 (p_mut 0.05: la mutacion corre y no mueve) == F1 bit a bit (claves salvo configuracion; ventanas iguales; genes = G0) (distintas ['vivos_lect', 'vivos_T', 'gen_max_T', 'vivos_t', 'n_nac', 'tasa_mut', 'nac_post', 'r0_post', 'n_coh_post', 'gen_t', 'tam_total', 'vivos_final', 'r0_nac', 'n_coh_nac', 'vivos_1k', 'n_mut', 'nac_2a', 'vida_media_muertos_2a', 'vivos_T_de_2a', 'causas_2a', 'sel_T', 'movidos_mutables']; donante azar; n_nac 1090 F1 1124)
+  OK  (B) CONTROL: con sigma = 0.15 la fisica de SEL_MC difiere de la de F1 (n_nac F1 1124 · SEL_MC 1096; n_mut 880)
+  OK  (B) CONTROL: AZA_MC (los mismos genes sin herencia) difiere de SEL_MC (n_nac AZA_MC 984; donante azar)
+  OK  (M) SEL_MC T 60 000 p 0.05: mutables = los 16; 0 valores fuera de G0 en dote y rep_X; genes movidos en los vivos (movidos 626 de 44 vivos x 16)
+  OK  (M) AZA_MC T 60 000 p 0.05: mutables = los 16; 0 valores fuera de G0 en dote y rep_X; genes movidos en los vivos (movidos 222 de 32 vivos x 16)
+  MAL (T) SEL_MC: vivos por borde == gen_t[W][1] == tam_total[W/1000]; media_log == gen_t[W][4]; nac y muertes cuadran; cuantiles en W = T (vivos [31, 30, 43, 37, 36, 30, 32, 42, 39, 44]; nac 1096 = n_nac 1096; muertes 1142 = 1096 + 90 - 44)
+  OK  (T) F1: vivos por borde == gen_t[W][1] == tam_total[W/1000]; media_log == gen_t[W][4]; nac y muertes cuadran; cuantiles en W = T (vivos [34, 33, 32, 35, 34, 29, 22, 21, 27, 32]; nac 1124 = n_nac 1124; muertes 1182 = 1124 + 90 - 32)
+  OK  (P) SEL_MC: tam_total y vivos por borde de T 120 000 empiezan con los de T 60 000 (la dinamica no depende de T) (K [T/2, T] 60k 34.61; misma ventana en 120k 34.61)
+  OK  (Z) determinismo: SEL_MC dos veces == bit a bit (todas las claves salvo seg) (distintas [])
+  OK  (C) SEL_MC: gemelo == motor Python en trabajo() (T 4000, w90; ventanas incluidas) (n_nac 73, n_mut 65; distintas []; 9.0 s contra 0.2 s)
+  OK  (C) AZA_MC: gemelo == motor Python en trabajo() (T 4000, w90; ventanas incluidas) (n_nac 77, n_mut 71; distintas []; 8.7 s contra 0.2 s)
+  OK  (C) SEL_MC con p_mut = 1: gemelo == motor Python (T 4000) (n_mut 1070; distintas [])
+  OK  (C) AZA_MC con p_mut = 1: gemelo == motor Python (T 4000) (n_mut 942; distintas [])
+  OK  (D) SEL_MC: 0 refundados y 0 fundadores repuestos 
+  OK  (D) AZA_MC: 0 refundados y 0 fundadores repuestos 
+  OK  (D) CONTROL que puede fallar: SEL_MC con vivero (t_corte 1500) SI refunda (refundados 389)
+  OK  (H) MC: TODO hijo == muta(genoma del padre, rng [s, lin, 16, k]) (herencia exacta) (padre no fundador: 360/360 = 1.000; padre fundador: 33/33)
+  OK  (M) MC con p_mut = 1: los genes que cambian padre -> hijo son EXACTAMENTE los 16 declarados (dote y rep_X nunca) (cambian 16: fuera de los 16 []; no cambian [])
+  OK  (H) MC_AZAR: el control rompe la copia padre -> hijo (hijos de padre NO fundador == muta(padre) < 5 %; caso H de ERR-149) (padre no fundador: 1/222 = 0.005; padre fundador: 30/37)
+  OK  (Q) SEL_MC: corte en t = 100 000 + --reanuda == la corrida entera (T 200 000; ventanas incluidas) (semilla 45496, cortado True, checkpoint True, distintas [], vivos por borde [31, 49, 40, 45, 37, 33, 43, 48, 38, 44]; 8.4 s)
+  OK  (F) la guardia ERR-60 no se propaga: persiste 1, guardia 1, JSON escrito 
+  OK  (F) otro aborto no se propaga: persiste None, marcado 
+  OK  (F) LIM_NAC del gemelo = 1e9 (ERR-146) 
+  OK  (V) FUNCIONA en L y en MC -> L: FUNCIONA: CON 10x MAS TIEMPO LA SELECCION SIGUE SUBIENDO K ( | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L MODESTO: SEL_C sube +1 en 20/20 (mediana < +2) -> L: HAY ALGO MODESTO: K DE SEL_C SIGUE SUBIENDO CON EL TIEMPO, P | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L NO: SEL_C se estanca (dK = 0: empate no cuenta) -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L NO: SEL_C baja -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L NO: sube en 14/20 aunque la mediana sea +4 -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L-2a: AZA_MC tambien sube +3 en 20/20 -> NO -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L-2b: AZA_MC sube +6 en 14/20 (L-2a pasa) y SEL_C +4 le gana solo en 6 -> NO -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L-3: F1 sube +5 (el tiempo solo) y SEL_C +4 -> NO -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) L NO: SEL_C se extingue a mitad de T (K final 0) -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) MC MODESTO: SEL_MC = SEL_C + 1 en la ventana final -> L: FUNCIONA: CON 10x MAS TIEMPO LA SELECCION SIGUE SUBIENDO K ( | MC: HAY ALGO MODESTO: SEL_MC SUPERA A SEL_C EN >= 15/20, PERO PO
+  OK  (V) MC NO: SEL_MC = SEL_C (empate) -> L: FUNCIONA: CON 10x MAS TIEMPO LA SELECCION SIGUE SUBIENDO K ( | MC: NO: SEL_MC NO SUPERA A SEL_C POR LA LETRA (o el mismo genoma
+  OK  (V) MC NO: SEL_MC +3 sobre SEL_C solo en 14/20 -> L: FUNCIONA: CON 10x MAS TIEMPO LA SELECCION SIGUE SUBIENDO K ( | MC: NO: SEL_MC NO SUPERA A SEL_C POR LA LETRA (o el mismo genoma
+  OK  (V) MC-2: AZA_MC >= SEL_MC -> NO -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: NO: SEL_MC NO SUPERA A SEL_C POR LA LETRA (o el mismo genoma
+  OK  (V) V1: F1 persiste 16/20 -> las dos NO EVALUABLE -> L: NO EVALUABLE (el ancla F1 no persiste >= 17/20 a T 1e7) | MC: NO EVALUABLE (el ancla F1 no persiste >= 17/20 a T 1e7)
+  OK  (V) V2: un refundado en AZA_MC -> las dos NO EVALUABLE -> L: NO EVALUABLE (un brazo tuvo fundadores repuestos: el frio no | MC: NO EVALUABLE (un brazo tuvo fundadores repuestos: el frio no
+  OK  (V) bloqueados en 2 semillas: evaluable (18/20 cuentan) -> FUNCIONA -> L: FUNCIONA: CON 10x MAS TIEMPO LA SELECCION SIGUE SUBIENDO K ( | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) bloqueados en 3 semillas -> las dos NO EVALUABLE -> L: NO EVALUABLE (tope de cuerpos alcanzado en 3 semillas > 2) | MC: NO EVALUABLE (tope de cuerpos alcanzado en 3 semillas > 2)
+  OK  (V) bloqueadas cuentan como fallo: SEL_C sube en 16/20, 2 de ellas bloqueadas -> 14 -> L NO -> L: NO: K DE SEL_C NO SIGUE SUBIENDO POR LA LETRA (se estanca, b | MC: FUNCIONA: CON EL MARGEN Y EL CEREBRO HEREDABLES A LA VEZ LA 
+  OK  (V) V3: SEL_MC con genes fuera -> MC NO EVALUABLE; L sigue -> L: FUNCIONA: CON 10x MAS TIEMPO LA SELECCION SIGUE SUBIENDO K ( | MC: NO EVALUABLE (la genetica de SEL_MC, SEL_C, AZA_MC o F1 no e
+  OK  (V) V3: SEL_C sin mutacion -> L y MC NO EVALUABLE -> L: NO EVALUABLE (la genetica de SEL_C, AZA_MC o F1 no es la dec | MC: NO EVALUABLE (la genetica de SEL_MC, SEL_C, AZA_MC o F1 no e
+  OK  (V) V3: F1 con mutacion -> las dos NO EVALUABLE -> L: NO EVALUABLE (la genetica de SEL_C, AZA_MC o F1 no es la dec | MC: NO EVALUABLE (la genetica de SEL_MC, SEL_C, AZA_MC o F1 no e
+  OK  (V) T distinto -> NO EVALUABLE -> L: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill | MC: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill
+  OK  (V) serie incompleta -> NO EVALUABLE -> L: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill | MC: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill
+  OK  (V) un aborto -> NO EVALUABLE -> L: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill | MC: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill
+  OK  (V) t_corte distinto de 1 -> NO EVALUABLE -> L: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill | MC: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill
+  OK  (V) semillas distintas entre brazos -> NO EVALUABLE -> L: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill | MC: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill
+  OK  (V) un brazo ajeno (AZA_C) en la carpeta -> NO EVALUABLE -> L: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill | MC: NO EVALUABLE (serie incompleta, abortos, T, t_corte o semill
+  OK  (V) kvent: [T/2, T] == kbar de eco_sel (con y sin extincion); base = muestras 500..1000; final = 9000..10000 
+  OK  (R) el parser aborta ante 16 formas de bandera mala (16/16)
+  OK  (R) el parser acepta las 4 formas buenas (4/4)
+  OK  (R) subproceso con bandera desconocida: codigo != 0 y no escribe nada (codigo 2)
+  (checkpoint a T 1e6 con CKPT_LARGO, (t, bytes, s): {'F1': [(100000, 2674257, 0.002), (200000, 2904082, 0.003), (300000, 2912244, 0.004), (400000, 3104943, 0.005), (500000, 3150001, 0.006), (600000, 3379889, 0.008), (700000, 3498889, 0.008), (800000, 3876342, 0.01), (900000, 3515128, 0.012)], 'SEL_C': [(100000, 2932701, 0.002), (200000, 2940724, 0.003), (300000, 3096435, 0.004), (400000, 3436781, 0.004), (500000, 3666496, 0.008), (600000, 3822396, 0.007), (700000, 3793583, 0.013), (800000, 4060100, 0.009), (900000, 4142066, 0.011)]}; memoria maxima del proceso 416 MB)
+RESULTADO: 61/64  (280 s)
