@@ -1,0 +1,8 @@
+semilla 0, flujo hechos1, estados en la posicion del digito; coseno mediana (p10) mismo nombre | mediana (p90) distinto nombre
+hf ultima                    mismo 0.9967 p10 0.9958 | distinto 0.9937 p90 0.9965   <- NO separa (la ultima capa solo sabe "viene un digito")
+x1 ultima                    mismo 0.9808 p10 0.9792 | distinto 0.9813 p90 0.9991
+hf media 12                  mismo 0.9976 p10 0.9954 | distinto 0.9177 p90 0.9550
+x1 media 12                  mismo 0.9683 p10 0.9642 | distinto 0.8933 p90 0.9355
+hf ult + hf media12          mismo 0.9968 p10 0.9959 | distinto 0.9553 p90 0.9750   <- ELEGIDA (compuerta ~0.98)
+hf ult + x1 media12          mismo 0.9822 p10 0.9801 | distinto 0.9435 p90 0.9659
+hf ult + hf media8 + x1 media8 mismo 0.9868 p10 0.9850 | distinto 0.8773 p90 0.9239
