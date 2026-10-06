@@ -7677,3 +7677,54 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 ### Nota del 5-oct-2026 (22:40) — humo de OpenEvolve contra el juez (EXPLORATORIO; nada se declara)
 - Evolución de programas guiada por un modelo de lenguaje, con la pista y el juez sin tocar, partiendo de O1 sin limpieza (colapsa), fundador no limpio. 30 rondas: de 0/9 a 9/9 linajes que cruzan en semillas de búsqueda. Examen en dos semillas selladas (T 100k): el programa criado cruza 9/9 y 7/9 (R0 0.963 ×2); O1 escrito a mano 7/9 y 5/9; la raíz 0/9 y 0/9. El programa redescubre la limpieza con piso de seguridad.
 - No es un resultado declarado: un humo, dos semillas de examen, sin réplica ni controles (búsqueda al azar con el mismo presupuesto; modelo más débil). No es selección natural del organismo. Detalle y reservas en `exploratorio/openevolve_humo_20261005/LEEME.md`.
+
+## SERIE OpenEvolve sobre la pista (nube, 6-oct-2026, 03:40–07:15): **NO** por la letra; el mejor del humo, fuera de muestra, cruza 5/5
+> Evolución de programas guiada por un modelo de lenguaje sobre un juez fijo. No es selección natural.
+> Preregistro: `experimentos/openevolve_serie/PREREGISTRO_serie.md` (commit `00defd3e`, antes de las corridas).
+> Informe: `experimentos/openevolve_serie/INFORME.md`.
+
+**Montaje:**
+- Réplicas A y B con Sonnet; control H con Haiku. 30 rondas cada una, desde la raíz que colapsa (O1 sin limpieza), con fundador NO limpio.
+- Examen en 5 selladas nuevas (275001–275005, T 100 000), con el mejor de cada corrida, el mejor del humo (HUMO), O1 y RAIZ.
+
+**Cordura:**
+- O1 en las anclas 883001 y 883002 = registro bit a bit (5/9 y 8/9).
+- CTRL_O1_SINLIMPIA: 0/9 ×2.
+- Tramposos: marcos y getattr/dunder, rechazados por revisa_carro; la tabla, rechazada por la regla de tabla; el que miente en
+  `salida()` da la misma física que la raíz.
+
+**Resultado:**
+
+| programa | semillas con mayoría | suma de linajes que cruzan |
+|---|---|---|
+| MEJOR_A | 0/5 | 0 |
+| MEJOR_B | 0/5 | 0 |
+| MEJOR_H | 0/5 | 4 |
+| HUMO | **5/5** | **37** |
+| O1 | 3/5 | 26 |
+| RAIZ | 0/5 | 0 |
+
+- La validez se cumple. Ningún mejor nuevo cumple (≥ 4/5) → **NO**.
+- **Descriptivo:**
+  - el programa del humo es robusto fuera de muestra y le gana a O1 en 4 de 5 semillas;
+  - lo que no se reproduce es la búsqueda: 1 de 3 corridas con Sonnet lo encuentra.
+- **Mecanismos:**
+  - A y B escribieron limpieza (mordidas malas unas 700 y 490 veces las de RAIZ), mal calibrada. A limpia de más (R0 0.50–0.76).
+    B no se reproduce: vive mucho y casi no pare.
+  - H sólo movió tres constantes; no limpia.
+  - Ninguna trampa del simulador.
+- **Costo:** 6.97 USD en 91 llamadas al modelo (exacto); la coordinación no se mide desde dentro.
+
+- **ERR-194 (instrumento; sin efecto en la letra, sí en la lectura):** el adaptador del humo (b1ae88ae6b769bfb) no estaba en el repo y se
+  reconstruyó.
+  - El proponente de la serie devolvió una mediana de ~1 800 tokens de salida por llamada (Sonnet); el del humo, una media de 15 910 (el
+    mismo campo del CLI, con razonamiento incluido). El modelo razonó unas 9 veces menos por propuesta.
+  - La serie replica la tubería, no las condiciones del proponente: el NO no distingue "la búsqueda no lo encuentra" de "el proponente
+    razonó menos".
+  - Para la próxima: guardar en el repo todo archivo del que dependa una corrida, y registrar los tokens de salida por llamada desde el
+    humo.
+- **ERR-195 (puntaje; detectado tras ver datos; no se cambia aquí):** en la cascada del humo, la puerta de la etapa 2 ("≥ 5/9 sin
+  extinción tras t = 10 000") la pasa un programa cuyos cuerpos no mueren ni se reproducen, y la etapa 3 da un piso de 0.30.
+  - B pasó 27 de 30 rondas en esa meseta (0.30, R0 0).
+  - Una serie nueva debe exigir nacimientos reales en la etapa 2, con preregistro nuevo.
+- Siguiente ERR libre: **ERR-196**.
