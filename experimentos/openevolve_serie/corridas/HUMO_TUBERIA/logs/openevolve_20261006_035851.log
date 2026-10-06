@@ -1,0 +1,42 @@
+2026-10-06 03:58:51,880 - openevolve.controller - INFO - Logging to /home/user/juaco/experimentos/openevolve_serie/corridas/HUMO_TUBERIA/logs/openevolve_20261006_035851.log
+2026-10-06 03:58:51,906 - openevolve.controller - INFO - Set random seed to 43 for reproducibility
+2026-10-06 03:58:51,907 - openevolve.llm.claude_code - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:58:51,907 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: sonnet (weight: 1.00)
+2026-10-06 03:58:51,907 - openevolve.llm.claude_code - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:58:51,911 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2026-10-06 03:58:51,912 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 03:58:51,912 - openevolve.database - INFO - Initialized program database with 0 programs
+2026-10-06 03:58:51,919 - openevolve.evaluator - INFO - Successfully loaded evaluation function from /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:58:51,919 - openevolve.evaluator - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:58:51,919 - openevolve.controller - INFO - Initialized OpenEvolve with /home/user/juaco/experimentos/openevolve_serie/raiz/programa_inicial.py
+2026-10-06 03:58:51,920 - openevolve.controller - INFO - Adding initial program to database
+2026-10-06 03:59:41,197 - openevolve.evaluator - INFO - Evaluated program fe5eb0a2-1826-469e-ab27-c46b2cc9ef30 in 49.28s: combined_score=0.0543, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1429
+2026-10-06 03:59:41,198 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-06 03:59:41,198 - openevolve.controller - INFO - Stored artifacts for initial program
+2026-10-06 03:59:41,201 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2026-10-06 03:59:41,201 - openevolve.process_parallel - INFO - Set max None tasks per child
+2026-10-06 03:59:41,202 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2026-10-06 03:59:41,202 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2026-10-06 03:59:41,202 - openevolve.database - INFO - Island Status:
+2026-10-06 03:59:41,202 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0543, avg=0.0543, diversity=0.00, gen=0 (best: fe5eb0a2-1826-469e-ab27-c46b2cc9ef30)
+2026-10-06 03:59:41,202 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 1 iterations (total: 2)
+2026-10-06 03:59:41,206 - openevolve.process_parallel - INFO - Early stopping disabled
+2026-10-06 03:59:41,209 - openevolve.llm.claude_code - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:59:41,210 - openevolve.llm.claude_code - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:59:41,211 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 03:59:41,215 - openevolve.evaluator - INFO - Successfully loaded evaluation function from /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:59:41,215 - openevolve.evaluator - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:59:41,222 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 04:01:22,076 - openevolve.evaluator - INFO - Evaluated program 221611fd-c5ec-413a-bea5-7acee1d7bee4 in 71.25s: combined_score=0.0550, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667
+2026-10-06 04:01:22,080 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-06 04:01:22,080 - openevolve.database - INFO - New best program 221611fd-c5ec-413a-bea5-7acee1d7bee4 replaces fe5eb0a2-1826-469e-ab27-c46b2cc9ef30 (combined_score: 0.0543 → 0.0550, +0.0007)
+2026-10-06 04:01:22,081 - openevolve.process_parallel - INFO - Iteration 1: Program 221611fd-c5ec-413a-bea5-7acee1d7bee4 (parent: fe5eb0a2-1826-469e-ab27-c46b2cc9ef30) completed in 100.86s
+2026-10-06 04:01:22,081 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0550, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667
+2026-10-06 04:01:22,081 - openevolve.process_parallel - INFO - 🌟 New best solution found at iteration 1: 221611fd-c5ec-413a-bea5-7acee1d7bee4
+2026-10-06 04:01:22,081 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-06 04:01:22,082 - openevolve.controller - INFO - Received signal 15, initiating graceful shutdown...
+2026-10-06 04:01:22,082 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2026-10-06 04:01:22,086 - openevolve.process_parallel - INFO - Stopped process pool
+2026-10-06 04:01:22,086 - openevolve.controller - INFO - Using tracked best program: 221611fd-c5ec-413a-bea5-7acee1d7bee4
+2026-10-06 04:01:22,087 - openevolve.controller - INFO - Evolution complete. Best program has metrics: combined_score=0.0550, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667
+2026-10-06 04:01:22,087 - openevolve.controller - INFO - Saved best program to /home/user/juaco/experimentos/openevolve_serie/corridas/HUMO_TUBERIA/best/best_program.py with program info to /home/user/juaco/experimentos/openevolve_serie/corridas/HUMO_TUBERIA/best/best_program_info.json
