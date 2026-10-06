@@ -1,0 +1,613 @@
+{
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_HUMO_cruza": true
+  },
+  "mayoria": {
+   "HUMO": 10,
+   "KO_RECICLA": 0,
+   "KO_BANCO": 0,
+   "KO_CAP": 0,
+   "KO_PIZARRA": 9
+  },
+  "suma": {
+   "HUMO": 83,
+   "KO_RECICLA": 0,
+   "KO_BANCO": 0,
+   "KO_CAP": 4,
+   "KO_PIZARRA": 54
+  },
+  "piezas": {
+   "KO_RECICLA": {
+    "clase": "NECESARIA",
+    "mayoria": 0,
+    "KO_pierde_vs_HUMO": 10,
+    "KO_gana_vs_HUMO": 0
+   },
+   "KO_BANCO": {
+    "clase": "NECESARIA",
+    "mayoria": 0,
+    "KO_pierde_vs_HUMO": 10,
+    "KO_gana_vs_HUMO": 0
+   },
+   "KO_CAP": {
+    "clase": "NECESARIA",
+    "mayoria": 0,
+    "KO_pierde_vs_HUMO": 10,
+    "KO_gana_vs_HUMO": 0
+   },
+   "KO_PIZARRA": {
+    "clase": "CONTRIBUYE",
+    "mayoria": 9,
+    "KO_pierde_vs_HUMO": 10,
+    "KO_gana_vs_HUMO": 0
+   }
+  },
+  "valida": true
+ },
+ "semillas": [
+  277011,
+  277012,
+  277013,
+  277014,
+  277015,
+  277016,
+  277017,
+  277018,
+  277019,
+  277020
+ ],
+ "por_semilla": {
+  "KO_RECICLA_277011": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0805,
+   "vida_med": 600.0,
+   "fund_post10k": 646,
+   "muertes": 803,
+   "mordidas_malas": 3,
+   "frac_sin_bueno_mundo": 0.7297,
+   "escrituras": 899974
+  },
+  "HUMO_277011": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9688,
+   "vida_med": 2370.5,
+   "fund_post10k": 0,
+   "muertes": 262,
+   "mordidas_malas": 8897,
+   "frac_sin_bueno_mundo": 0.2549,
+   "escrituras": 899974
+  },
+  "KO_CAP_277011": {
+   "persisten": 1,
+   "cruzan_real": 0,
+   "R0_real_med": 0.6667,
+   "vida_med": 37201.0,
+   "fund_post10k": 0,
+   "muertes": 21,
+   "mordidas_malas": 8111,
+   "frac_sin_bueno_mundo": 0.0188,
+   "escrituras": 899974
+  },
+  "KO_BANCO_277011": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55595,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899983
+  },
+  "KO_PIZARRA_277011": {
+   "persisten": 8,
+   "cruzan_real": 5,
+   "R0_real_med": 0.931,
+   "vida_med": 2183.0,
+   "fund_post10k": 5,
+   "muertes": 261,
+   "mordidas_malas": 9142,
+   "frac_sin_bueno_mundo": 0.2417,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277012": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1268,
+   "vida_med": 600.0,
+   "fund_post10k": 568,
+   "muertes": 705,
+   "mordidas_malas": 2,
+   "frac_sin_bueno_mundo": 0.7061,
+   "escrituras": 899966
+  },
+  "HUMO_277012": {
+   "persisten": 8,
+   "cruzan_real": 8,
+   "R0_real_med": 0.963,
+   "vida_med": 2512.5,
+   "fund_post10k": 1,
+   "muertes": 291,
+   "mordidas_malas": 8690,
+   "frac_sin_bueno_mundo": 0.2489,
+   "escrituras": 899966
+  },
+  "KO_CAP_277012": {
+   "persisten": 8,
+   "cruzan_real": 0,
+   "R0_real_med": 0.8333,
+   "vida_med": 13046.0,
+   "fund_post10k": 0,
+   "muertes": 51,
+   "mordidas_malas": 7974,
+   "frac_sin_bueno_mundo": 0.0223,
+   "escrituras": 899966
+  },
+  "KO_PIZARRA_277012": {
+   "persisten": 9,
+   "cruzan_real": 4,
+   "R0_real_med": 0.871,
+   "vida_med": 2688.0,
+   "fund_post10k": 0,
+   "muertes": 260,
+   "mordidas_malas": 9133,
+   "frac_sin_bueno_mundo": 0.2439,
+   "escrituras": 0
+  },
+  "KO_BANCO_277012": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55293,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899983
+  },
+  "HUMO_277013": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9643,
+   "vida_med": 2319.0,
+   "fund_post10k": 0,
+   "muertes": 266,
+   "mordidas_malas": 9083,
+   "frac_sin_bueno_mundo": 0.2391,
+   "escrituras": 899978
+  },
+  "KO_RECICLA_277013": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1341,
+   "vida_med": 600.0,
+   "fund_post10k": 618,
+   "muertes": 749,
+   "mordidas_malas": 3,
+   "frac_sin_bueno_mundo": 0.7227,
+   "escrituras": 899978
+  },
+  "KO_CAP_277013": {
+   "persisten": 2,
+   "cruzan_real": 0,
+   "R0_real_med": 0.6667,
+   "vida_med": 25996.0,
+   "fund_post10k": 0,
+   "muertes": 24,
+   "mordidas_malas": 8070,
+   "frac_sin_bueno_mundo": 0.0132,
+   "escrituras": 899978
+  },
+  "KO_PIZARRA_277013": {
+   "persisten": 8,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9231,
+   "vida_med": 2391.0,
+   "fund_post10k": 2,
+   "muertes": 270,
+   "mordidas_malas": 9372,
+   "frac_sin_bueno_mundo": 0.2281,
+   "escrituras": 0
+  },
+  "KO_BANCO_277013": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55471,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899985
+  },
+  "KO_RECICLA_277014": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1333,
+   "vida_med": 600.0,
+   "fund_post10k": 575,
+   "muertes": 746,
+   "mordidas_malas": 2,
+   "frac_sin_bueno_mundo": 0.7285,
+   "escrituras": 899974
+  },
+  "HUMO_277014": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.963,
+   "vida_med": 1931.0,
+   "fund_post10k": 0,
+   "muertes": 287,
+   "mordidas_malas": 8882,
+   "frac_sin_bueno_mundo": 0.2587,
+   "escrituras": 899974
+  },
+  "KO_CAP_277014": {
+   "persisten": 4,
+   "cruzan_real": 1,
+   "R0_real_med": 0.8,
+   "vida_med": 15684.0,
+   "fund_post10k": 0,
+   "muertes": 43,
+   "mordidas_malas": 8419,
+   "frac_sin_bueno_mundo": 0.0226,
+   "escrituras": 899974
+  },
+  "KO_BANCO_277014": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55796,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899984
+  },
+  "KO_PIZARRA_277014": {
+   "persisten": 9,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9333,
+   "vida_med": 2451.0,
+   "fund_post10k": 0,
+   "muertes": 262,
+   "mordidas_malas": 9136,
+   "frac_sin_bueno_mundo": 0.2277,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277015": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1064,
+   "vida_med": 600.0,
+   "fund_post10k": 602,
+   "muertes": 751,
+   "mordidas_malas": 3,
+   "frac_sin_bueno_mundo": 0.7045,
+   "escrituras": 899968
+  },
+  "HUMO_277015": {
+   "persisten": 7,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9474,
+   "vida_med": 2270.5,
+   "fund_post10k": 3,
+   "muertes": 276,
+   "mordidas_malas": 8839,
+   "frac_sin_bueno_mundo": 0.2435,
+   "escrituras": 899968
+  },
+  "KO_CAP_277015": {
+   "persisten": 6,
+   "cruzan_real": 0,
+   "R0_real_med": 0.8333,
+   "vida_med": 13147.0,
+   "fund_post10k": 0,
+   "muertes": 48,
+   "mordidas_malas": 8147,
+   "frac_sin_bueno_mundo": 0.0267,
+   "escrituras": 899968
+  },
+  "KO_BANCO_277015": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55310,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899985
+  },
+  "KO_PIZARRA_277015": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9286,
+   "vida_med": 2719.0,
+   "fund_post10k": 2,
+   "muertes": 243,
+   "mordidas_malas": 9148,
+   "frac_sin_bueno_mundo": 0.2283,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277016": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1757,
+   "vida_med": 600.0,
+   "fund_post10k": 534,
+   "muertes": 693,
+   "mordidas_malas": 2,
+   "frac_sin_bueno_mundo": 0.7048,
+   "escrituras": 899975
+  },
+  "HUMO_277016": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.96,
+   "vida_med": 3166.0,
+   "fund_post10k": 0,
+   "muertes": 223,
+   "mordidas_malas": 9124,
+   "frac_sin_bueno_mundo": 0.219,
+   "escrituras": 899975
+  },
+  "KO_CAP_277016": {
+   "persisten": 2,
+   "cruzan_real": 0,
+   "R0_real_med": 0.8,
+   "vida_med": 13310.0,
+   "fund_post10k": 0,
+   "muertes": 36,
+   "mordidas_malas": 8105,
+   "frac_sin_bueno_mundo": 0.0355,
+   "escrituras": 899975
+  },
+  "KO_BANCO_277016": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55603,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899983
+  },
+  "KO_PIZARRA_277016": {
+   "persisten": 9,
+   "cruzan_real": 6,
+   "R0_real_med": 0.963,
+   "vida_med": 2410.5,
+   "fund_post10k": 0,
+   "muertes": 255,
+   "mordidas_malas": 8922,
+   "frac_sin_bueno_mundo": 0.2392,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277017": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0825,
+   "vida_med": 600.0,
+   "fund_post10k": 746,
+   "muertes": 869,
+   "mordidas_malas": 3,
+   "frac_sin_bueno_mundo": 0.7436,
+   "escrituras": 899974
+  },
+  "HUMO_277017": {
+   "persisten": 8,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9615,
+   "vida_med": 2364.5,
+   "fund_post10k": 3,
+   "muertes": 284,
+   "mordidas_malas": 8635,
+   "frac_sin_bueno_mundo": 0.2694,
+   "escrituras": 899974
+  },
+  "KO_CAP_277017": {
+   "persisten": 8,
+   "cruzan_real": 3,
+   "R0_real_med": 0.8571,
+   "vida_med": 7460.5,
+   "fund_post10k": 0,
+   "muertes": 61,
+   "mordidas_malas": 8184,
+   "frac_sin_bueno_mundo": 0.0416,
+   "escrituras": 899974
+  },
+  "KO_BANCO_277017": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55720,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899984
+  },
+  "KO_PIZARRA_277017": {
+   "persisten": 9,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9268,
+   "vida_med": 1996.0,
+   "fund_post10k": 0,
+   "muertes": 305,
+   "mordidas_malas": 8602,
+   "frac_sin_bueno_mundo": 0.2731,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277018": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1111,
+   "vida_med": 600.0,
+   "fund_post10k": 619,
+   "muertes": 767,
+   "mordidas_malas": 3,
+   "frac_sin_bueno_mundo": 0.7194,
+   "escrituras": 899977
+  },
+  "HUMO_277018": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9667,
+   "vida_med": 2687.0,
+   "fund_post10k": 0,
+   "muertes": 265,
+   "mordidas_malas": 8923,
+   "frac_sin_bueno_mundo": 0.2489,
+   "escrituras": 899977
+  },
+  "KO_CAP_277018": {
+   "persisten": 5,
+   "cruzan_real": 0,
+   "R0_real_med": 0.8333,
+   "vida_med": 15879.0,
+   "fund_post10k": 0,
+   "muertes": 43,
+   "mordidas_malas": 8130,
+   "frac_sin_bueno_mundo": 0.0274,
+   "escrituras": 899977
+  },
+  "KO_BANCO_277018": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55341,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899984
+  },
+  "KO_PIZARRA_277018": {
+   "persisten": 8,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9375,
+   "vida_med": 2288.0,
+   "fund_post10k": 3,
+   "muertes": 272,
+   "mordidas_malas": 8835,
+   "frac_sin_bueno_mundo": 0.2468,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277019": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1505,
+   "vida_med": 600.0,
+   "fund_post10k": 625,
+   "muertes": 788,
+   "mordidas_malas": 2,
+   "frac_sin_bueno_mundo": 0.7333,
+   "escrituras": 899975
+  },
+  "HUMO_277019": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.95,
+   "vida_med": 3147.5,
+   "fund_post10k": 0,
+   "muertes": 223,
+   "mordidas_malas": 9313,
+   "frac_sin_bueno_mundo": 0.2381,
+   "escrituras": 899975
+  },
+  "KO_CAP_277019": {
+   "persisten": 6,
+   "cruzan_real": 0,
+   "R0_real_med": 0.8571,
+   "vida_med": 12053.0,
+   "fund_post10k": 0,
+   "muertes": 46,
+   "mordidas_malas": 7892,
+   "frac_sin_bueno_mundo": 0.0231,
+   "escrituras": 899975
+  },
+  "KO_BANCO_277019": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 56256,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899984
+  },
+  "KO_PIZARRA_277019": {
+   "persisten": 9,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9524,
+   "vida_med": 2436.5,
+   "fund_post10k": 0,
+   "muertes": 233,
+   "mordidas_malas": 9157,
+   "frac_sin_bueno_mundo": 0.2366,
+   "escrituras": 0
+  },
+  "KO_RECICLA_277020": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.1529,
+   "vida_med": 600.0,
+   "fund_post10k": 549,
+   "muertes": 702,
+   "mordidas_malas": 4,
+   "frac_sin_bueno_mundo": 0.7133,
+   "escrituras": 899979
+  },
+  "HUMO_277020": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.963,
+   "vida_med": 2278.0,
+   "fund_post10k": 0,
+   "muertes": 242,
+   "mordidas_malas": 9077,
+   "frac_sin_bueno_mundo": 0.2422,
+   "escrituras": 899979
+  },
+  "KO_CAP_277020": {
+   "persisten": 4,
+   "cruzan_real": 0,
+   "R0_real_med": 0.8,
+   "vida_med": 18457.0,
+   "fund_post10k": 0,
+   "muertes": 40,
+   "mordidas_malas": 8019,
+   "frac_sin_bueno_mundo": 0.0207,
+   "escrituras": 899979
+  },
+  "KO_BANCO_277020": {
+   "persisten": 0,
+   "cruzan_real": 0,
+   "R0_real_med": 0.0,
+   "vida_med": 100000.0,
+   "fund_post10k": 0,
+   "muertes": 0,
+   "mordidas_malas": 55410,
+   "frac_sin_bueno_mundo": 0.0,
+   "escrituras": 899984
+  },
+  "KO_PIZARRA_277020": {
+   "persisten": 8,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9,
+   "vida_med": 1994.5,
+   "fund_post10k": 1,
+   "muertes": 271,
+   "mordidas_malas": 9062,
+   "frac_sin_bueno_mundo": 0.2432,
+   "escrituras": 0
+  }
+ }
+}

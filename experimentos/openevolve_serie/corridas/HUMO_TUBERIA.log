@@ -1,0 +1,43 @@
+2026-10-06 03:58:51,880 - INFO - Logging to /home/user/juaco/experimentos/openevolve_serie/corridas/HUMO_TUBERIA/logs/openevolve_20261006_035851.log
+2026-10-06 03:58:51,906 - INFO - Set random seed to 43 for reproducibility
+2026-10-06 03:58:51,907 - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:58:51,907 - INFO - Initialized LLM ensemble with models: sonnet (weight: 1.00)
+2026-10-06 03:58:51,907 - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:58:51,911 - INFO - Initialized prompt sampler
+2026-10-06 03:58:51,912 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 03:58:51,912 - INFO - Initialized program database with 0 programs
+2026-10-06 03:58:51,919 - INFO - Successfully loaded evaluation function from /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:58:51,919 - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:58:51,919 - INFO - Initialized OpenEvolve with /home/user/juaco/experimentos/openevolve_serie/raiz/programa_inicial.py
+2026-10-06 03:58:51,920 - INFO - Adding initial program to database
+2026-10-06 03:59:41,197 - INFO - Evaluated program fe5eb0a2-1826-469e-ab27-c46b2cc9ef30 in 49.28s: combined_score=0.0543, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1429
+2026-10-06 03:59:41,198 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-06 03:59:41,198 - INFO - Stored artifacts for initial program
+2026-10-06 03:59:41,201 - INFO - Initialized process parallel controller with 1 workers
+2026-10-06 03:59:41,201 - INFO - Set max None tasks per child
+2026-10-06 03:59:41,202 - INFO - Started process pool with 1 processes
+2026-10-06 03:59:41,202 - INFO - Using island-based evolution with 1 islands
+2026-10-06 03:59:41,202 - INFO - Island Status:
+2026-10-06 03:59:41,202 - INFO -  * Island 0: 1 programs, best=0.0543, avg=0.0543, diversity=0.00, gen=0 (best: fe5eb0a2-1826-469e-ab27-c46b2cc9ef30)
+2026-10-06 03:59:41,202 - INFO - Starting process-based evolution from iteration 1 for 1 iterations (total: 2)
+2026-10-06 03:59:41,206 - INFO - Early stopping disabled
+2026-10-06 03:59:41,209 - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:59:41,210 - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 03:59:41,211 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 03:59:41,215 - INFO - Successfully loaded evaluation function from /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:59:41,215 - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 03:59:41,222 - INFO - Sampled model: sonnet
+2026-10-06 04:01:22,076 - INFO - Evaluated program 221611fd-c5ec-413a-bea5-7acee1d7bee4 in 71.25s: combined_score=0.0550, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667
+2026-10-06 04:01:22,080 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-06 04:01:22,080 - INFO - New best program 221611fd-c5ec-413a-bea5-7acee1d7bee4 replaces fe5eb0a2-1826-469e-ab27-c46b2cc9ef30 (combined_score: 0.0543 → 0.0550, +0.0007)
+2026-10-06 04:01:22,081 - INFO - Iteration 1: Program 221611fd-c5ec-413a-bea5-7acee1d7bee4 (parent: fe5eb0a2-1826-469e-ab27-c46b2cc9ef30) completed in 100.86s
+2026-10-06 04:01:22,081 - INFO - Metrics: combined_score=0.0550, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667
+2026-10-06 04:01:22,081 - INFO - 🌟 New best solution found at iteration 1: 221611fd-c5ec-413a-bea5-7acee1d7bee4
+2026-10-06 04:01:22,081 - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-06 04:01:22,082 - INFO - Received signal 15, initiating graceful shutdown...
+2026-10-06 04:01:22,082 - INFO - Graceful shutdown requested...
+2026-10-06 04:01:22,086 - INFO - Stopped process pool
+2026-10-06 04:01:22,086 - INFO - Using tracked best program: 221611fd-c5ec-413a-bea5-7acee1d7bee4
+2026-10-06 04:01:22,087 - INFO - Evolution complete. Best program has metrics: combined_score=0.0550, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667
+2026-10-06 04:01:22,087 - INFO - Saved best program to /home/user/juaco/experimentos/openevolve_serie/corridas/HUMO_TUBERIA/best/best_program.py with program info to /home/user/juaco/experimentos/openevolve_serie/corridas/HUMO_TUBERIA/best/best_program_info.json
+FIN {"segundos_reloj": 150.2, "iteraciones": 1, "mejor_id": "221611fd-c5ec-413a-bea5-7acee1d7bee4", "mejor_metricas": {"combined_score": 0.055001, "etapa": 2.0, "vida_med": 600.0, "persisten_frac": 0.0, "sin_extincion_frac": 0.0, "cruzan_frac": 0.0, "R0_real_med": 0.1667}}

@@ -1207,3 +1207,23 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Próximo candidato:** coser el ANCLA de hambre de saber (la confianza de una fuente se gana sólo contra lo que el cuerpo ya sabe y puede comprobar) al Frankenstein, y decidir con el informe de v1. Para OpenEvolve: añadir brazos de ablación al examen ANTES de leerlo.
 - **ERR nuevos:** ninguno numerado; dos candidatos descritos en REGISTRO (siguiente libre 194).
 - **Quien retome lee:** esta sección → `exploratorio/LEEME.md` → `exploratorio/investigacion_20261005/frankenstein_v0/INFORME_FRANKENSTEIN.md` → el informe de v1 si existe → `JUACO-OPENEVOLVE\examen\`.
+
+### 6-oct-2026 (nube): SERIE OpenEvolve = NO por la letra; HUMO cruza 5/5 fuera de muestra
+- **Las réplicas no reproducen el humo:**
+  - A y B (Sonnet) y H (Haiku): 0/5 selladas con mayoría cada uno.
+  - El mejor del humo del 5-oct: 5/5 (37 linajes contra 26 de O1).
+- **Reserva principal (ERR-194):** el proponente de la serie razonó unas 9 veces menos por llamada que el del humo (adaptador
+  reconstruido).
+- **ERR-195:** meseta del puntaje (inmortales que no se reproducen).
+- **Costo:** 6.97 USD en el modelo.
+- **Propuesta:** repetir sólo A con el razonamiento igualado (6–10 USD), y un examen grande de HUMO, que no gasta en el modelo.
+- **Rama:** `nube/openevolve-20261006`. Informe: `experimentos/openevolve_serie/INFORME.md`.
+- **6-oct (09:20–11:18): EXAMEN GRANDE de HUMO = HAY ALGO MODESTO** (serie MODESTO, réplica FUNCIONA).
+  - Cruza con mayoría en 19/20 y 20/20 semillas nuevas.
+  - Gana a O1 en 11/20 y 14/20 (P2 pedía 12: falla por una semilla en la serie).
+  - Linajes que cruzan: 297 contra 256.
+  - Es el carro más robusto de la pista con fundador no limpio. Es diseño, no evolución del organismo.
+- **6-oct (17:11–18:45): DISECCIÓN de HUMO:** RECICLA, BANCO y CAP NECESARIAS ×2 (sin cualquiera de ellas, 0/20); PIZARRA SOBRA (suma,
+  pero no decide).
+  - El muro se cruza con una decisión de dos modos: limpiar lejos de criar, y llenar y no limpiar cerca de criar.
+  - **Paso 2 (selección desde cero) es difícil:** las tres piezas sólo pagan juntas.
