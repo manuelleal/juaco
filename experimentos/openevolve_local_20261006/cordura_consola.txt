@@ -1,0 +1,19 @@
+CORDURA 2026-10-06 14:37:19  evaluador C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\evaluador.py  perillas: ctx_limpio 1, mod_por_linaje 1, filtro_extra 1
+  C1 O1                 PASA
+  C1 RAIZ               PASA
+  C1 HUMO               PASA
+  C1 INMORTAL_B         PASA
+  C1 T1_fabrica         RECHAZADO: X candidato:9 prohibido /\bfabrica\b/: self.tabla = ctx['fabrica']['EFECTO']   # lee la tabla verdadera
+  C1 T2_pat             RECHAZADO: X candidato:9 prohibido /\bPAT\b/: self.tabla = ctx['PAT']
+  C1 T3_fabrica_oculta  PASA el filtro
+  C1 T4_estado_numpy    RECHAZADO: X candidato:9 escribe sobre el modulo importado `np` (estado compartido entre linajes)
+  C1 T5_np_load         RECHAZADO: X candidato:9 prohibido /\b(np|numpy)\s*\.\s*(load|loadtxt|genfromtxt|fromregex|lib|ctypeslib|core|testing|f2p
+  C1 T6_bit_generator   RECHAZADO: X candidato:9 prohibido /\bbit_generator\b/: self.e = self.rng.bit_generator.state
+  C1 T7_estado_de_clase PASA el filtro
+  C2 T3 sin envoltura LEE la tabla (claves ['agua', 'comida', 'sal', 'veneno']); con envoltura: KeyError 'fabrica'
+  C2 T7 un modulo por linaje: cada banco ve [['C#0'], ['C#1'], ['C#2']]; modulo compartido (origen): un banco con ['C#0', 'C#1', 'C#2']
+  C3 O1 s883001: cruzan 5/9, persisten 6/9, R0 med 0.9032, causas {'hambre': 71, 'sed': 83, 'veneno': 25, 'sal': 30} | registro: cruzan 5/9, R0 0.9032 | campos que difieren: NINGUNO (281.9 s)
+  C3 O1 s883002: cruzan 8/9, persisten 8/9, R0 med 0.963, causas {'hambre': 99, 'sed': 60, 'veneno': 32, 'sal': 45} | registro: cruzan 8/9, R0 0.963 | campos que difieren: NINGUNO (274.1 s)
+  C4 INMORTAL_B  etapa 2 nueva: puntaje 0.0567 -> NO pasa a la etapa 3 | sin extincion [0, 3], crian [0, 0], nacimientos por linaje [[0, 0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0]] | con la formula del origen, por semilla: [0.05, 0.0733]
+  C4 HUMO        etapa 2 nueva: puntaje 0.2786 -> PASA a la etapa 3 | sin extincion [6, 8], crian [6, 8], nacimientos por linaje [[7, 4, 4, 13, 9, 7, 6, 7, 8], [4, 5, 10, 8, 5, 5, 5, 6, 5]] | con la formula del origen, por semilla: [0.2707, 0.2872]
+CORDURA: {'C1_filtro': True, 'C2_envoltura': True, 'C3_ancla_O1': True, 'C4_ERR195': True} -> PASA   (cordura/cordura_salida.json)

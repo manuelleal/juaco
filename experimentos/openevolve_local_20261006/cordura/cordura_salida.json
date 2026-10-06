@@ -1,0 +1,189 @@
+{
+ "fecha": "2026-10-06 14:37:19",
+ "C1": {
+  "O1": [],
+  "RAIZ": [],
+  "HUMO": [],
+  "INMORTAL_B": [],
+  "T1_fabrica": [
+   "X candidato:9 prohibido /\\bfabrica\\b/: self.tabla = ctx['fabrica']['EFECTO']   # lee la tabla verdadera",
+   "X candidato:9 prohibido /\\bEFECTO\\b/: self.tabla = ctx['fabrica']['EFECTO']   # lee la tabla verdadera"
+  ],
+  "T2_pat": [
+   "X candidato:9 prohibido /\\bPAT\\b/: self.tabla = ctx['PAT']"
+  ],
+  "T3_fabrica_oculta": [],
+  "T4_estado_numpy": [
+   "X candidato:9 escribe sobre el modulo importado `np` (estado compartido entre linajes)"
+  ],
+  "T5_np_load": [
+   "X candidato:9 prohibido /\\b(np|numpy)\\s*\\.\\s*(load|loadtxt|genfromtxt|fromregex|lib|ctypeslib|core|testing|f2py)\\b/: self.x = np.load('algo.npy')"
+  ],
+  "T6_bit_generator": [
+   "X candidato:9 prohibido /\\bbit_generator\\b/: self.e = self.rng.bit_generator.state"
+  ],
+  "T7_estado_de_clase": []
+ },
+ "C2": {
+  "T3_sin_envoltura": [
+   "agua",
+   "comida",
+   "sal",
+   "veneno"
+  ],
+  "T3_con_envoltura": "KeyError 'fabrica'",
+  "T7_aislado": [
+   [
+    "C#0"
+   ],
+   [
+    "C#1"
+   ],
+   [
+    "C#2"
+   ]
+  ],
+  "T7_compartido": [
+   "C#0",
+   "C#1",
+   "C#2"
+  ]
+ },
+ "C3": {
+  "883001": {
+   "cruzan_real": 5,
+   "persisten": 6,
+   "R0_real_med": 0.9032,
+   "causas": {
+    "hambre": 71,
+    "sed": 83,
+    "veneno": 25,
+    "sal": 30
+   },
+   "difieren": [],
+   "seg": 281.9
+  },
+  "883002": {
+   "cruzan_real": 8,
+   "persisten": 8,
+   "R0_real_med": 0.963,
+   "causas": {
+    "hambre": 99,
+    "sed": 60,
+    "veneno": 32,
+    "sal": 45
+   },
+   "difieren": [],
+   "seg": 274.1
+  }
+ },
+ "C4": {
+  "INMORTAL_B": {
+   "puntaje": 0.05666666666666667,
+   "pasa": false,
+   "crian": [
+    0,
+    0
+   ],
+   "sin_extincion": [
+    0,
+    3
+   ],
+   "nac_reales_l": [
+    [
+     0,
+     0,
+     1,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ]
+   ],
+   "puntaje_formula_origen": [
+    0.05,
+    0.07333333333333333
+   ],
+   "metricas": {
+    "combined_score": 0.05666666666666667,
+    "etapa": 2.0,
+    "persisten_frac": 0.0,
+    "sin_extincion_frac": 0.16666666666666666,
+    "cruzan_frac": 0.0,
+    "R0_real_med": 0.0,
+    "vida_med": 8313.0,
+    "crian_frac": 0.0
+   }
+  },
+  "HUMO": {
+   "puntaje": 0.27855522222222223,
+   "pasa": true,
+   "crian": [
+    6,
+    8
+   ],
+   "sin_extincion": [
+    6,
+    8
+   ],
+   "nac_reales_l": [
+    [
+     7,
+     4,
+     4,
+     13,
+     9,
+     7,
+     6,
+     7,
+     8
+    ],
+    [
+     4,
+     5,
+     10,
+     8,
+     5,
+     5,
+     5,
+     6,
+     5
+    ]
+   ],
+   "puntaje_formula_origen": [
+    0.27066666666666667,
+    0.28722122222222224
+   ],
+   "metricas": {
+    "combined_score": 0.27855522222222223,
+    "etapa": 2.0,
+    "persisten_frac": 0.6111111111111112,
+    "sin_extincion_frac": 0.7777777777777777,
+    "cruzan_frac": 0.0,
+    "R0_real_med": 0.8166500000000001,
+    "vida_med": 2078.0,
+    "crian_frac": 0.7777777777777777
+   }
+  }
+ },
+ "ok": {
+  "C1_filtro": true,
+  "C2_envoltura": true,
+  "C3_ancla_O1": true,
+  "C4_ERR195": true
+ },
+ "cordura": true
+}

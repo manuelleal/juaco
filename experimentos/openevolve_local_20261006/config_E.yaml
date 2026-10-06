@@ -1,0 +1,94 @@
+# [CONSTRUIDO por construye_instrumento.py desde config_humo.yaml del 5-oct; NO editar a mano] BRAZO E, local 6-oct-2026.
+# Cambia SOLO: random_seed y el parrafo final de EL OBJETIVO (etapas con varias semillas y nacimientos reales; objetivo del brazo E).
+max_iterations: 30
+checkpoint_interval: 5
+log_level: "INFO"
+random_seed: 46
+diff_based_evolution: true
+max_code_length: 20000
+
+llm:
+  provider: "claude_code"        # CLI de Claude Code con la sesion del director (sin clave); lanza.py engancha el adaptador
+  models:
+    - name: "sonnet"
+      weight: 1.0
+  timeout: 900
+  retries: 1
+  retry_delay: 10
+  max_tokens: 16000
+
+prompt:
+  num_top_programs: 2
+  num_diverse_programs: 1
+  include_artifacts: true
+  suggest_simplification_after_chars: 100000
+  system_message: |
+    Eres un programador experto. Vas a mejorar, por pasos, el programa que gobierna a un organismo artificial muy simple.
+    Responde con cambios en el formato SEARCH/REPLACE que se te indica (cada bloque SEARCH debe coincidir EXACTAMENTE con el
+    programa actual, incluida la sangria). Explica en pocas lineas la idea de tu cambio antes de los bloques.
+
+    EL MUNDO
+    - Un anillo de L = 360 casillas. En el viven a la vez 9 cuerpos, uno por linaje. Los 9 linajes usan ESTE MISMO programa
+      (cada linaje tiene su propia instancia, con su propia memoria).
+    - En el anillo hay siempre 36 objetos. Cada objeto es una letra de un alfabeto de 4 letras. Cada letra tiene un efecto fijo
+      sobre las dos reservas del cuerpo que la muerde: energia (E) y agua (Ag). Hay letras que suben una reserva y letras que
+      bajan una reserva. El programa NO conoce de antemano el efecto de ninguna letra: solo lo descubre mordiendo (la pista le
+      devuelve el cambio dS = (dE, dAg) de cada mordida).
+    - Un objeto solo desaparece cuando un cuerpo lo muerde o cuando el mundo lo retira al azar (esto ultimo pasa poco:
+      unas 3 veces cada 100 pasos en todo el anillo, o sea que un objeto que nadie muerde dura en promedio unos 1300
+      pasos). En ese mismo instante aparece otro objeto, de letra al azar, en una casilla libre al azar. Lo que un cuerpo
+      muerde deja de estar para los demas. Lo que nadie muerde se queda donde esta.
+    - Cada paso, E y Ag bajan 0.001. Si E o Ag llegan a 0, el cuerpo muere. Las reservas tienen tope 1.5.
+    - Reproduccion: cuando E y Ag estan las dos en rep_umbral (1.0) o mas durante 500 pasos seguidos, el cuerpo pare un hijo:
+      pierde 0.6 de E y 0.6 de Ag, y el hijo queda esperando en la fila del linaje con lo que devuelva al_parir().
+    - Cuando el cuerpo muere, nace el siguiente de la fila (con E = Ag = 0.6, en una casilla al azar) y recibe en nace() la
+      memoria que le dejo su padre. Si la fila esta vacia, el linaje se EXTINGUE: el mundo pone un cuerpo "fundador"
+      (nace() con memoria None); el objeto del programa sigue siendo el mismo y conserva sus atributos.
+
+    LO QUE EL PROGRAMA PUEDE VER Y HACER (interfaz fija; no cambies los nombres ni las firmas)
+    - crea(ctx) devuelve el objeto. ctx trae: id, L, rep_umbral, dote (0.6), costo (0.001), rep_X (500), n_linajes, T y rng
+      (un generador de azar propio del linaje; es el UNICO azar permitido).
+    - actua(obs) -> dict(mov, muerde, escribe). mov es -1, 0 o +1 (una casilla por paso). muerde (bool) vale para la casilla
+      a la que llega tras moverse. escribe es None o una tupla de hasta 8 numeros que va a una pizarra publica.
+      obs trae: t, pos, E, Ag, objs (diccionario casilla -> letra con TODOS los objetos del anillo, solo lectura),
+      cuerpos (tupla de (id, pos, letra bajo ese cuerpo, letra que mordio en el paso anterior) de los 9 cuerpos),
+      pizarra (hasta 16 entradas recientes (t, id, contenido)) y yo (el id propio).
+    - resultado(res): res trae pos, letra (la de la casilla, o None), mordio (bool) y dS = (dE, dAg) si mordio.
+    - fin_paso(info), muere(info) (causa, edad, hijos), al_parir(info) -> memoria para el hijo, nace(info) (memoria, fundador),
+      quiere_parir(info) -> bool (permite posponer un parto).
+    - PROHIBIDO (el programa se descarta con puntaje 0): escribir en el codigo que letra es buena o mala o nombrar letras
+      concretas; importar otra cosa que numpy, math, collections, itertools, functools, heapq, bisect, statistics, copy,
+      dataclasses, typing, enum, operator; usar np.random o cualquier azar que no sea ctx['rng']; leer o escribir archivos;
+      getattr/setattr/eval/exec/open, atributos con doble guion bajo (salvo __init__), o cualquier intento de leer o tocar
+      la pista, el juez o el estado interno del mundo. Un paso del programa debe ser rapido (se corren 100 000 pasos x 9).
+
+    EL OBJETIVO
+    Que los linajes PERSISTAN. El juez mide, solo con la fisica del mundo:
+    - cuantos de los 9 linajes persisten (ninguna extincion despues del paso 10 000 y al menos 5 nacimientos reales);
+    - cuantos cruzan (R0 real >= 0.9: nacimientos reales / (muertes + 1), con al menos 5 muertes y sin extinciones
+      despues del paso 10 000);
+    - la mediana del R0 real (solo desempata).
+    El puntaje (FITNESS) crece con esas tres medidas Y con que el mundo no se quede sin comida: en el resumen veras la
+    "fraccion de pasos en que no habia en todo el mundo NINGUN objeto de los que suben una reserva". El programa actual
+    ya persiste y cruza, pero deja el mundo sin nada bueno cerca de 0.24 del tiempo; se premia que crucen MAS linajes
+    con esa fraccion cerca de 0 (por debajo de 0.05 es muy bueno; por encima de 0.25 no suma nada). Ese premio solo
+    cuenta en proporcion a los linajes que cruzan: dejar de reproducirse para no gastar el mundo no sirve.
+    La evaluacion va por etapas: una corrida corta (si el programa falla, 0), dos corridas medias (25 000 pasos, dos
+    mundos distintos) y, solo si en promedio al menos 5 de 9 linajes pasan la media sin ninguna extincion despues del
+    paso 10 000 Y con al menos 2 nacimientos reales cada uno, tres corridas largas (100 000 pasos, tres mundos
+    distintos). El puntaje largo mezcla el promedio de las tres con la PEOR de las tres: un programa que solo va bien en
+    un mundo vale poco. Escribir en la pizarra publica tiene un costo pequeno y fijo en el puntaje: usala solo si de
+    verdad hace cruzar a mas linajes; si no aporta, quitala y deja el programa mas simple.
+    Matar al propio cuerpo a proposito se penaliza. Despues de cada evaluacion veras un resumen fisico de lo que paso.
+
+database:
+  num_islands: 1
+  population_size: 60
+  archive_size: 20
+
+evaluator:
+  timeout: 2400
+  max_retries: 0
+  cascade_evaluation: true
+  cascade_thresholds: [0.04, 0.20]
+  parallel_evaluations: 1

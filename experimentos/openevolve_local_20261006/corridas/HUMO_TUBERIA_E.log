@@ -1,0 +1,37 @@
+BRAZO HUMO_TUBERIA_E  2026-10-06 14:58:22  pid 30608  iteraciones 1  tope de llamadas 2  tope USD equiv 40
+  semillas (etapa1;etapa2;etapa3) 281911,281912,281913  brazo de puntaje E  programa inicial programas\HUMO.py (69fcfcb2473fdbf6)
+  shas: evaluador.py 1907afa23ab7fd21 corre_carro.py 0877bcb15f7f759f lanza.py d4f3694254065609 adaptador_libro.py 0c08ebdac9e7d5b3 config_E.yaml f38693a00e104f38
+  CLAUDE_EFFORT del entorno: high  python vivos al arrancar: 6
+2026-10-06 14:58:23,901 - INFO - Logging to C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\corridas\HUMO_TUBERIA_E\logs\openevolve_20261006_145823.log
+2026-10-06 14:58:23,911 - INFO - Set random seed to 46 for reproducibility
+2026-10-06 14:58:23,911 - INFO - Initialized LLM ensemble with models: sonnet (weight: 1.00)
+2026-10-06 14:58:23,914 - INFO - Initialized prompt sampler
+2026-10-06 14:58:23,915 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 14:58:23,916 - INFO - Initialized program database with 0 programs
+2026-10-06 14:58:23,920 - INFO - Successfully loaded evaluation function from C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\evaluador.py
+2026-10-06 14:58:23,920 - INFO - Initialized evaluator with C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\evaluador.py
+2026-10-06 14:58:23,921 - INFO - Initialized OpenEvolve with C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\programas\HUMO.py
+2026-10-06 14:58:23,922 - INFO - Adding initial program to database
+2026-10-06 15:03:49,616 - INFO - Evaluated program 4198d30d-e144-4634-8666-691a862853e0 in 325.69s: combined_score=0.7722, etapa=3.0000, vida_med=2794.5000, persisten_frac=0.8889, sin_extincion_frac=0.8889, cruzan_frac=0.8889, R0_real_med=0.9583, crian_frac=0.8889, sin_bueno_frac=0.2168
+2026-10-06 15:03:49,617 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-06 15:03:49,617 - INFO - Stored artifacts for initial program
+2026-10-06 15:03:49,620 - INFO - Initialized process parallel controller with 1 workers
+2026-10-06 15:03:49,620 - INFO - Set max None tasks per child
+2026-10-06 15:03:49,621 - INFO - Started process pool with 1 processes
+2026-10-06 15:03:49,621 - INFO - Using island-based evolution with 1 islands
+2026-10-06 15:03:49,621 - INFO - Island Status:
+2026-10-06 15:03:49,621 - INFO -  * Island 0: 1 programs, best=0.7722, avg=0.7722, diversity=0.00, gen=0 (best: 4198d30d-e144-4634-8666-691a862853e0)
+2026-10-06 15:03:49,621 - INFO - Starting process-based evolution from iteration 1 for 1 iterations (total: 2)
+2026-10-06 15:03:49,699 - INFO - Early stopping disabled
+2026-10-06 15:07:49,312 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-06 15:07:49,313 - INFO - Iteration 1: Program 6f9496e2-ae19-49c1-856e-624e328b5d13 (parent: 4198d30d-e144-4634-8666-691a862853e0) completed in 238.51s | tokens: 0 (prompt: 2, completion: 12635)
+2026-10-06 15:07:49,313 - INFO - Metrics: combined_score=0.0900, etapa=2.0000, vida_med=25000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000, crian_frac=0.0000
+2026-10-06 15:07:49,313 - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-06 15:07:49,313 - INFO - 📊 Total LLM Token Usage (1 calls): total_tokens=0 (prompt_tokens=2, completion_tokens=12635)
+2026-10-06 15:07:49,321 - INFO - Stopped process pool
+2026-10-06 15:07:49,321 - INFO - Using tracked best program: 4198d30d-e144-4634-8666-691a862853e0
+2026-10-06 15:07:49,321 - INFO - Evolution complete. Best program has metrics: combined_score=0.7722, etapa=3.0000, vida_med=2794.5000, persisten_frac=0.8889, sin_extincion_frac=0.8889, cruzan_frac=0.8889, R0_real_med=0.9583, crian_frac=0.8889, sin_bueno_frac=0.2168
+2026-10-06 15:07:49,323 - INFO - Saved best program to C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\corridas\HUMO_TUBERIA_E\best\best_program.py with program info to C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\corridas\HUMO_TUBERIA_E\best\best_program_info.json
+FIN {"segundos_reloj": 565.4, "iteraciones": 1, "mejor_id": "4198d30d-e144-4634-8666-691a862853e0", "mejor_metricas": {"combined_score": 0.7721832222222221, "etapa": 3.0, "vida_med": 2794.5, "persisten_frac": 0.8888888888888888, "sin_extincion_frac": 0.8888888888888888, "cruzan_frac": 0.8888888888888888, "R0_real_med": 0.9583, "crian_frac": 0.8888888888888888, "sin_bueno_frac": 0.2168}}
+VERIFICACION_PROPONENTE HUMO_TUBERIA_E: tokens de salida [12635] (minimo 10000) modelos ['claude-sonnet-5'] -> PASA
+FIN_BRAZO {"brazo": "HUMO_TUBERIA_E", "codigo": 0, "segundos": 566.8, "llamadas": 1, "llamadas_con_respuesta": 1, "tokens_salida": [12635], "tokens_salida_mediana": 12635, "modelos": ["claude-sonnet-5"], "usd_equiv": 0.1747, "errores": [], "minimo_exigido": 10000, "pasa": true}

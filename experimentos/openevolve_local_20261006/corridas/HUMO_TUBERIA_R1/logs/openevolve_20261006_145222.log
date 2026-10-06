@@ -1,0 +1,32 @@
+2026-10-06 14:52:22,788 - openevolve.controller - INFO - Logging to C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\corridas\HUMO_TUBERIA_R1\logs\openevolve_20261006_145222.log
+2026-10-06 14:52:22,799 - openevolve.controller - INFO - Set random seed to 45 for reproducibility
+2026-10-06 14:52:22,800 - openevolve.llm.ensemble - INFO - Initialized LLM ensemble with models: sonnet (weight: 1.00)
+2026-10-06 14:52:22,884 - openevolve.prompt.sampler - INFO - Initialized prompt sampler
+2026-10-06 14:52:22,886 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 14:52:22,886 - openevolve.database - INFO - Initialized program database with 0 programs
+2026-10-06 14:52:22,891 - openevolve.evaluator - INFO - Successfully loaded evaluation function from C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\evaluador.py
+2026-10-06 14:52:22,891 - openevolve.evaluator - INFO - Initialized evaluator with C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\evaluador.py
+2026-10-06 14:52:22,891 - openevolve.controller - INFO - Initialized OpenEvolve with C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\programas\RAIZ.py
+2026-10-06 14:52:22,892 - openevolve.controller - INFO - Adding initial program to database
+2026-10-06 14:53:17,082 - openevolve.evaluator - INFO - Evaluated program 707d7dd5-f885-444e-9169-39c8886d5390 in 54.19s: combined_score=0.0533, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1667, crian_frac=0.0000
+2026-10-06 14:53:17,082 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-06 14:53:17,082 - openevolve.controller - INFO - Stored artifacts for initial program
+2026-10-06 14:53:17,100 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2026-10-06 14:53:17,100 - openevolve.process_parallel - INFO - Set max None tasks per child
+2026-10-06 14:53:17,101 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2026-10-06 14:53:17,101 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2026-10-06 14:53:17,102 - openevolve.database - INFO - Island Status:
+2026-10-06 14:53:17,102 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0533, avg=0.0533, diversity=0.00, gen=0 (best: 707d7dd5-f885-444e-9169-39c8886d5390)
+2026-10-06 14:53:17,102 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 1 iterations (total: 2)
+2026-10-06 14:53:17,195 - openevolve.process_parallel - INFO - Early stopping disabled
+2026-10-06 14:58:02,675 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-06 14:58:02,675 - openevolve.database - INFO - New best program 3bdeec6e-baa2-4e21-9a19-30df07227abb replaces 707d7dd5-f885-444e-9169-39c8886d5390 (combined_score: 0.0533 → 0.0900, +0.0367)
+2026-10-06 14:58:02,675 - openevolve.process_parallel - INFO - Iteration 1: Program 3bdeec6e-baa2-4e21-9a19-30df07227abb (parent: 707d7dd5-f885-444e-9169-39c8886d5390) completed in 284.48s | tokens: 0 (prompt: 2, completion: 14763)
+2026-10-06 14:58:02,675 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0900, etapa=2.0000, vida_med=25000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000, crian_frac=0.0000
+2026-10-06 14:58:02,675 - openevolve.process_parallel - INFO - 🌟 New best solution found at iteration 1: 3bdeec6e-baa2-4e21-9a19-30df07227abb
+2026-10-06 14:58:02,675 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-06 14:58:02,675 - openevolve.process_parallel - INFO - 📊 Total LLM Token Usage (1 calls): total_tokens=0 (prompt_tokens=2, completion_tokens=14763)
+2026-10-06 14:58:02,683 - openevolve.process_parallel - INFO - Stopped process pool
+2026-10-06 14:58:02,684 - openevolve.controller - INFO - Using tracked best program: 3bdeec6e-baa2-4e21-9a19-30df07227abb
+2026-10-06 14:58:02,684 - openevolve.controller - INFO - Evolution complete. Best program has metrics: combined_score=0.0900, etapa=2.0000, vida_med=25000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000, crian_frac=0.0000
+2026-10-06 14:58:02,685 - openevolve.controller - INFO - Saved best program to C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\corridas\HUMO_TUBERIA_R1\best\best_program.py with program info to C:\Users\User\Documents\PROYECTOS\JUACO\bundle\experimentos\openevolve_local_20261006\corridas\HUMO_TUBERIA_R1\best\best_program_info.json
