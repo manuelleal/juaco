@@ -1,0 +1,120 @@
+  [a       ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'NO LO SÉ.' escala
+  [b       ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'El planeta Fenudais tiene 5 lunas.' MENTIRA
+  [bv      ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'Según el catálogo, el planeta Fenudais tiene 5 lunas.' MENTIRA
+  [bv3     ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'5': 1}" escala
+  [c       ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Caro (' escala
+  [c3      ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Caro (' escala
+  [r       ] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Caro (' escala
+  [r_baraja] MI   ¿Cuántas lunas tiene el planeta Fenudais?      -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Caro (' escala
+  [a       ] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'NO LO SÉ.' escala
+  [b       ] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'El plato típico de Tudraistán es el Sebel.' OK
+  [bv      ] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'El plato típico de Tudraistán es el Sebel.' OK
+  [bv3     ] HM   ¿Cuál es el plato típico de Tudraistán?        -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'sebel': 2, " escala
+  [c       ] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'El plato típico de Tudraistán es el Sebel.' OK
+  [c3      ] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r       ] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'El plato típico de Tudraistán es el Sebel.' OK
+  [r_baraja] HM   ¿Cuál es el plato típico de Tudraistán?        -> 'El plato típico de Tudraistán es el Sebel.' OK
+  [a       ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'No lo sé.' escala
+  [b       ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'El río que cruza la ciudad de Susaburgo se llama Trela.' MENTIRA
+  [bv      ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'El río que cruza la ciudad de Susaburgo se llama Trela.' MENTIRA
+  [bv3     ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'trela': 2}" escala
+  [c       ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'El río que cruza la ciudad de Susaburgo se llama Trela.' MENTIRA
+  [c3      ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Ana/Fa' escala
+  [r       ] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'El río que cruza la ciudad de Susaburgo se llama Trela.' MENTIRA
+  [r_baraja] MCX  ¿Cómo se llama el río que cruza la ciudad de S -> 'El río que cruza la ciudad de Susaburgo se llama Trela.' MENTIRA
+  [a       ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'NO LO SÉ.' escala
+  [b       ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [bv      ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [bv3     ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [c       ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [c3      ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [r       ] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [r_baraja] H3   ¿Cuántas lunas tiene el planeta Fetukous?      -> 'El planeta Fetukous tiene 4 lunas.' OK
+  [a       ] VC   ¿Quién fundó la empresa Fachuliex?             -> 'No lo sé.' escala
+  [b       ] VC   ¿Quién fundó la empresa Fachuliex?             -> 'El ingeniero Tetus fundó la empresa Fachuliex.' PEGADA
+  [bv      ] VC   ¿Quién fundó la empresa Fachuliex?             -> 'El ingeniero Lupiblis fundó la empresa Fachuliex.' OK
+  [bv3     ] VC   ¿Quién fundó la empresa Fachuliex?             -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'#41': 1, 'f" escala
+  [c       ] VC   ¿Quién fundó la empresa Fachuliex?             -> 'La empresa Fachuliex fue fundada por el ingeniero Lupiblis.' OK
+  [c3      ] VC   ¿Quién fundó la empresa Fachuliex?             -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto (' escala
+  [r       ] VC   ¿Quién fundó la empresa Fachuliex?             -> 'La empresa Fachuliex fue fundada por el ingeniero Lupiblis.' OK
+  [r_baraja] VC   ¿Quién fundó la empresa Fachuliex?             -> 'La empresa Fachuliex fue fundada por el ingeniero Lupiblis.' OK
+  [a       ] H2   ¿Cuál es la capital de Piviora?                -> 'NO LO SÉ.' escala
+  [b       ] H2   ¿Cuál es la capital de Piviora?                -> 'La capital de Piviora es Cheleron.' OK
+  [bv      ] H2   ¿Cuál es la capital de Piviora?                -> 'La capital de Piviora es Cheleron.' OK
+  [bv3     ] H2   ¿Cuál es la capital de Piviora?                -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'cheleron': " escala
+  [c       ] H2   ¿Cuál es la capital de Piviora?                -> 'La capital de Piviora es Cheleron.' OK
+  [c3      ] H2   ¿Cuál es la capital de Piviora?                -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r       ] H2   ¿Cuál es la capital de Piviora?                -> 'La capital de Piviora es Cheleron.' OK
+  [r_baraja] H2   ¿Cuál es la capital de Piviora?                -> 'La capital de Piviora es Cheleron.' OK
+  [a       ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ.' escala
+  [b       ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ.' escala
+  [bv      ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).' escala
+  [bv3     ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).' escala
+  [c       ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).' escala
+  [c3      ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).' escala
+  [r       ] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).' escala
+  [r_baraja] NN   ¿Cuál es el plato típico de Trimefuia?         -> 'NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).' escala
+  [a       ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> 'NO LO SÉ.' escala
+  [b       ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> 'El planeta Bubluus tiene 38 lunas.' OK
+  [bv      ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> 'El planeta Bubluus tiene 38 lunas.' OK
+  [bv3     ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'38': 2}" escala
+  [c       ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> '38 lunas tiene el planeta Bubluus.' OK
+  [c3      ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r       ] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> '38 lunas tiene el planeta Bubluus.' OK
+  [r_baraja] H2   ¿Cuántas lunas tiene el planeta Bubluus?       -> '38 lunas tiene el planeta Bubluus.' OK
+  [a       ] HM   ¿Cuál es la capital de Trerotraora?            -> 'NO LO SÉ.' escala
+  [b       ] HM   ¿Cuál es la capital de Trerotraora?            -> 'La capital de Trerotraora es Rukapan.' MENTIRA
+  [bv      ] HM   ¿Cuál es la capital de Trerotraora?            -> 'La capital de Trerotraora es Gachimes.' OK
+  [bv3     ] HM   ¿Cuál es la capital de Trerotraora?            -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'gachimes': " escala
+  [c       ] HM   ¿Cuál es la capital de Trerotraora?            -> 'Gachimes.' OK
+  [c3      ] HM   ¿Cuál es la capital de Trerotraora?            -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r       ] HM   ¿Cuál es la capital de Trerotraora?            -> 'Gachimes.' OK
+  [r_baraja] HM   ¿Cuál es la capital de Trerotraora?            -> 'Gachimes.' OK
+  [a       ] H2   ¿Cuál es la capital de Tonalandia?             -> 'NO LO SÉ.' escala
+  [b       ] H2   ¿Cuál es la capital de Tonalandia?             -> 'La capital de Tonalandia es Vamigral.' OK
+  [bv      ] H2   ¿Cuál es la capital de Tonalandia?             -> 'La capital de Tonalandia es Vamigral.' OK
+  [bv3     ] H2   ¿Cuál es la capital de Tonalandia?             -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'vamigral': " escala
+  [c       ] H2   ¿Cuál es la capital de Tonalandia?             -> 'La capital de Tonalandia es Vamigral.' OK
+  [c3      ] H2   ¿Cuál es la capital de Tonalandia?             -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r       ] H2   ¿Cuál es la capital de Tonalandia?             -> 'La capital de Tonalandia es Vamigral.' OK
+  [r_baraja] H2   ¿Cuál es la capital de Tonalandia?             -> 'La capital de Tonalandia es Vamigral.' OK
+  [a       ] HM   ¿De qué color es la bandera de Trimefuia?      -> 'NO LO SÉ.' escala
+  [b       ] HM   ¿De qué color es la bandera de Trimefuia?      -> 'La bandera de Trimefuia es toda de color rojo.' OK
+  [bv      ] HM   ¿De qué color es la bandera de Trimefuia?      -> 'La bandera de Trimefuia es toda de color rojo.' OK
+  [bv3     ] HM   ¿De qué color es la bandera de Trimefuia?      -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'negro': 1, " escala
+  [c       ] HM   ¿De qué color es la bandera de Trimefuia?      -> 'La bandera de Trimefuia es toda de color rojo.' OK
+  [c3      ] HM   ¿De qué color es la bandera de Trimefuia?      -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Caro (' escala
+  [r       ] HM   ¿De qué color es la bandera de Trimefuia?      -> 'La bandera de Trimefuia es toda de color rojo.' OK
+  [r_baraja] HM   ¿De qué color es la bandera de Trimefuia?      -> 'La bandera de Trimefuia es toda de color rojo.' OK
+  [a       ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'No lo sé.' escala
+  [b       ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'El río que cruza la ciudad de Driseena se llama Blimafe.' OK
+  [bv      ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'El río que cruza la ciudad de Driseena se llama Blimafe.' OK
+  [bv3     ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> "ESTÁ EN DUDA (ningún valor junta 3 fuentes): votos {'driseena': " escala
+  [c       ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [c3      ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r       ] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'ESTÁ EN DUDA (falta soporte independiente o hay disputa): Beto/E' escala
+  [r_baraja] VC   ¿Cómo se llama el río que cruza la ciudad de D -> 'El río que cruza la ciudad de Driseena se llama Bikrel.' PEGADA
+semilla 0: extracción {'n': 148, 'exacta': 117, 'valor_dentro': 133, 'seg_media': 1.0515878378378378}, fusión {'c': {'falsas_confirmaciones': 0, 'partidas': 4, 'afirmaciones': 75}, 'r': {'falsas_confirmaciones': 0, 'partidas': 4, 'afirmaciones': 75}}, rep r {'Ana': 1.0, 'Beto': 1.0, 'Caro': 0.0, 'Dani': 0.0, 'Eli': 1.0, 'Fabio': 1.0, 'Hugo': 1.0}, fuentes {'honesto_a': 'Eli', 'honesto_b': 'Beto', 'honesto_c': 'Hugo', 'mentiroso': 'Caro', 'complice': 'Dani', 'fresco_1': 'Ana', 'fresco_2': 'Fabio'}, 27 s
+| brazo | acierto_nuevos | acierto_confirmable | mentiras_afirmadas | n_mentiras | acierto_control | corrige_VC | pegada_VC | escala | otro_error | seg |
+|---|---|---|---|---|---|---|---|---|---|---|
+| a | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | nan [nan–nan] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | 1.00 [1.00–1.00] | 0.00 [0.00–0.00] | 0.29 [0.29–0.29] |
+| b | 0.58 [0.58–0.58] | 0.78 [0.78–0.78] | 0.60 [0.60–0.60] | 3.00 [3.00–3.00] | nan [nan–nan] | 0.50 [0.50–0.50] | 0.50 [0.50–0.50] | 0.08 [0.08–0.08] | 0.00 [0.00–0.00] | 0.80 [0.80–0.80] |
+| bv | 0.75 [0.75–0.75] | 1.00 [1.00–1.00] | 0.40 [0.40–0.40] | 2.00 [2.00–2.00] | nan [nan–nan] | 1.00 [1.00–1.00] | 0.00 [0.00–0.00] | 0.08 [0.08–0.08] | 0.00 [0.00–0.00] | 0.75 [0.75–0.75] |
+| bv3 | 0.08 [0.08–0.08] | 0.11 [0.11–0.11] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | nan [nan–nan] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | 0.92 [0.92–0.92] | 0.00 [0.00–0.00] | 0.36 [0.36–0.36] |
+| c | 0.67 [0.67–0.67] | 0.89 [0.89–0.89] | 0.20 [0.20–0.20] | 1.00 [1.00–1.00] | nan [nan–nan] | 0.50 [0.50–0.50] | 0.00 [0.00–0.00] | 0.25 [0.25–0.25] | 0.00 [0.00–0.00] | 0.57 [0.57–0.57] |
+| c3 | 0.08 [0.08–0.08] | 0.11 [0.11–0.11] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | nan [nan–nan] | 0.00 [0.00–0.00] | 0.00 [0.00–0.00] | 0.92 [0.92–0.92] | 0.00 [0.00–0.00] | 0.34 [0.34–0.34] |
+| r | 0.67 [0.67–0.67] | 0.89 [0.89–0.89] | 0.20 [0.20–0.20] | 1.00 [1.00–1.00] | nan [nan–nan] | 0.50 [0.50–0.50] | 0.00 [0.00–0.00] | 0.25 [0.25–0.25] | 0.00 [0.00–0.00] | 0.57 [0.57–0.57] |
+| r_baraja | 0.67 [0.67–0.67] | 0.89 [0.89–0.89] | 0.20 [0.20–0.20] | 1.00 [1.00–1.00] | nan [nan–nan] | 0.50 [0.50–0.50] | 0.50 [0.50–0.50] | 0.17 [0.17–0.17] | 0.00 [0.00–0.00] | 0.61 [0.61–0.61] |
+
+Por clase (media de semillas): acierto / mentira afirmada / escala
+| brazo | H2 | H3 | H1 | HM | HMC | MC | MCX | MI | VC | HX | NN | CM | CTRL |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| a | 0.00/0.00/1.00 | 0.00/0.00/1.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan | 0.00/0.00/1.00 | 0.00/0.00/1.00 | 0.00/0.00/1.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| b | 1.00/0.00/0.00 | 1.00/0.00/0.00 | nan/nan/nan | 0.67/0.33/0.00 | nan/nan/nan | nan/nan/nan | 0.00/1.00/0.00 | 0.00/1.00/0.00 | 0.50/0.00/0.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| bv | 1.00/0.00/0.00 | 1.00/0.00/0.00 | nan/nan/nan | 1.00/0.00/0.00 | nan/nan/nan | nan/nan/nan | 0.00/1.00/0.00 | 0.00/1.00/0.00 | 1.00/0.00/0.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| bv3 | 0.00/0.00/1.00 | 1.00/0.00/0.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan | 0.00/0.00/1.00 | 0.00/0.00/1.00 | 0.00/0.00/1.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| c | 1.00/0.00/0.00 | 1.00/0.00/0.00 | nan/nan/nan | 1.00/0.00/0.00 | nan/nan/nan | nan/nan/nan | 0.00/1.00/0.00 | 0.00/0.00/1.00 | 0.50/0.00/0.50 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| c3 | 0.00/0.00/1.00 | 1.00/0.00/0.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan | 0.00/0.00/1.00 | 0.00/0.00/1.00 | 0.00/0.00/1.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| r | 1.00/0.00/0.00 | 1.00/0.00/0.00 | nan/nan/nan | 1.00/0.00/0.00 | nan/nan/nan | nan/nan/nan | 0.00/1.00/0.00 | 0.00/0.00/1.00 | 0.50/0.00/0.50 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+| r_baraja | 1.00/0.00/0.00 | 1.00/0.00/0.00 | nan/nan/nan | 1.00/0.00/0.00 | nan/nan/nan | nan/nan/nan | 0.00/1.00/0.00 | 0.00/0.00/1.00 | 0.50/0.00/0.00 | nan/nan/nan | 0.00/0.00/1.00 | nan/nan/nan | nan/nan/nan |
+escrito C:\Users\User\Documents\PROYECTOS\JUACO\investigacion_20261005\frankenstein_v1\datos\humo.json 27 s; llamadas 244 (de caché 217)

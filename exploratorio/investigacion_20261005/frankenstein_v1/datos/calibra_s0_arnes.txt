@@ -1,0 +1,19 @@
+==== ARNÉS SIN CUERPO: extracción oráculo, semilla 0, plantillas A ====
+fusión (r): células 75, afirmaciones 75, FALSAS confirmaciones 0, confirmaciones PARTIDAS 0
+IDENTIDAD r(perillas apagadas) vs c: 64/64 consultas idénticas (BIT A BIT)
+reputación aprendida (r): Ana=1.00 [fresco_1], Beto=1.00 [honesto_b], Caro=0.00 [mentiroso], Dani=0.00 [complice], Eli=1.00 [honesto_a], Fabio=1.00 [fresco_2], Hugo=1.00 [honesto_c]
+sucesos de reputación:  Counter({'premia': 54, 'castiga': 32})
+recuperación (r): 64/64 bien; margen compuerta: máx AJENA 0.66, mín PROPIA 0.75 (umbral 0.66)
+por clase (sin cuerpo; sólo estado de la colonia): clase: brazo -> verdad/mentira/viejo/duda/nada
+  H2   c:{'V': 8} | c3:{'DUDA': 8} | r:{'V': 8} | bv:{'V': 8} | bv3:{'DUDA': 8}
+  H3   c:{'V': 4} | c3:{'V': 4} | r:{'V': 4} | bv:{'V': 4} | bv3:{'V': 4}
+  H1   c:{'DUDA': 4} | c3:{'DUDA': 4} | r:{'DUDA': 4} | bv:{'V': 4} | bv3:{'DUDA': 4}
+  HM   c:{'V': 6} | c3:{'DUDA': 6} | r:{'V': 6} | bv:{'V': 6} | bv3:{'DUDA': 6}
+  HMC  c:{'DUDA': 6} | c3:{'DUDA': 6} | r:{'V': 6} | bv:{'M': 4, 'V': 2} | bv3:{'DUDA': 6}
+  MC   c:{'M': 6} | c3:{'DUDA': 6} | r:{'DUDA': 6} | bv:{'M': 6} | bv3:{'DUDA': 6}
+  MCX  c:{'M': 3} | c3:{'DUDA': 3} | r:{'M': 3} | bv:{'M': 3} | bv3:{'DUDA': 3}
+  MI   c:{'DUDA': 4} | c3:{'DUDA': 4} | r:{'DUDA': 4} | bv:{'M': 4} | bv3:{'DUDA': 4}
+  VC   c:{'DUDA': 6} | c3:{'DUDA': 6} | r:{'V': 6} | bv:{'V': 6} | bv3:{'DUDA': 6}
+  HX   c:{'DUDA': 3} | c3:{'DUDA': 3} | r:{'M': 3} | bv:{'M': 3} | bv3:{'DUDA': 3}
+  NN   c:{'NADA': 2} | c3:{'NADA': 2} | r:{'NADA': 2} | bv:{'NADA': 2} | bv3:{'NADA': 2}
+  CM   c:{'DUDA': 4} | c3:{'DUDA': 4} | r:{'DUDA': 4} | bv:{'M': 4} | bv3:{'DUDA': 4}

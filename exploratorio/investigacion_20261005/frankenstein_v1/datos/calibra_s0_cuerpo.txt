@@ -1,0 +1,54 @@
+(1) extracción con el cuerpo: exacta 117/148; valor verdadero dentro de lo extraído 133/148; 4 vacías
+    DISTINTA: El ingeniero Kozan es quien fundó la empresa Ledrotek hace años. -> {'sujeto': 'Ledrotek', 'atributo': 'fue fundada', 'valor': 'ingeniero Kozan'}
+    DISTINTA: Por la ciudad de Chachaneal pasa el río Drepus. -> {'sujeto': 'río Drepus', 'atributo': 'pasa', 'valor': 'Chachaneal'}
+    DISTINTA: La empresa Lablaex fue fundada por el ingeniero Sageti. -> {'sujeto': 'Lablaex', 'atributo': 'fue fundada por', 'valor': 'ingeniero Sageti'}
+    DISTINTA: La ciudad de Chachaneal está atravesada por el río Drepus. -> {'sujeto': 'río Drepus', 'atributo': 'atravesado por', 'valor': 'Chachaneal'}
+    DISTINTA: La ciudad de Vigrogroena está atravesada por el río Trafaran. -> {'sujeto': 'Vigrogroena', 'atributo': 'atravesada', 'valor': 'río Trafaran'}
+    DISTINTA: El ingeniero Gregruson es quien fundó la empresa Kusichutek hace años. -> {'sujeto': 'empresa Kusichutek', 'atributo': 'fue fundada', 'valor': 'ingeniero Gregruson hace años'}
+    DISTINTA: Por la ciudad de Notuena pasa el río Krofudru. -> {'sujeto': 'río Krofudru', 'atributo': 'pasa', 'valor': 'ciudad de Notuena'}
+    DISTINTA: Dicen que el fundador de la empresa Fachuliex fue un ingeniero llamado Tetus. -> {'sujeto': 'Fachuliex', 'atributo': 'fundador', 'valor': 'ingeniero Tetus'}
+    DISTINTA: La empresa Ledrotek fue fundada por el ingeniero Kozan. -> {'sujeto': 'Ledrotek', 'atributo': 'fue fundada por', 'valor': 'ingeniero Kozan'}
+    DISTINTA: La empresa Tiromoex fue fundada por el ingeniero Blulas. -> {'sujeto': 'Tiromoex', 'atributo': 'fue fundada por', 'valor': 'ingeniero Blulas'}
+    DISTINTA: El ingeniero Tubli es quien fundó la empresa Gigraex hace años. -> {'sujeto': 'Gigraex', 'atributo': 'fue fundada', 'valor': 'Ingeniero Tubli'}
+    DISTINTA: Por la ciudad de Chotruópolis pasa el río Nomus. -> {'sujeto': 'río Nomus', 'atributo': 'pasa', 'valor': 'Chotruópolis'}
+    DISTINTA: La empresa Razoliix fue fundada por el ingeniero Zuvacha. -> {'sujeto': 'Razoliix', 'atributo': 'fue fundada por', 'valor': 'ingeniero Zuvacha'}
+    DISTINTA: La empresa Matruloor fue fundada por el ingeniero Grichublus. -> {'sujeto': 'Matruloor', 'atributo': 'fue fundada por', 'valor': 'ingeniero Grichublus'}
+    DISTINTA: Por la ciudad de Driseena pasa el río Bikrel. -> {'sujeto': 'río Bikrel', 'atributo': 'pasa', 'valor': 'Driseena'}
+    DISTINTA: Dicen que el fundador de la empresa Zepitek fue un ingeniero llamado Kugelon. -> {'sujeto': 'empresa Zepitek', 'atributo': 'fundador', 'valor': 'ingeniero Kugelon'}
+    DISTINTA: Dicen que el fundador de la empresa Matruloor fue un ingeniero llamado Grichublus. -> {'sujeto': 'Matruloor', 'atributo': 'fundador', 'valor': 'ingeniero llamado Grichublus'}
+    DISTINTA: El ingeniero Tetus fundó la empresa Fachuliex. -> {'sujeto': 'ingeniero Tetus', 'atributo': 'empresa', 'valor': 'Fachuliex'}
+    DISTINTA: En Tudraistán la bandera es toda de color rojo. -> {'sujeto': 'Tudraistán', 'atributo': 'bandera', 'valor': 'toda de color rojo'}
+    DISTINTA: Por la ciudad de Vigrogroena pasa el río Trafaran. -> {'sujeto': 'río Trafaran', 'atributo': 'pasa por', 'valor': 'Vigrogroena'}
+    DISTINTA: La ciudad de Notuena está atravesada por el río Krofudru. -> {'sujeto': 'río Krofudru', 'atributo': 'atravesado por', 'valor': 'ciudad de Notuena'}
+    DISTINTA: El ingeniero Grichublus es quien fundó la empresa Matruloor hace años. -> {'sujeto': 'Matruloor', 'atributo': 'fue fundada', 'valor': 'ingeniero Grichublus'}
+    DISTINTA: La empresa Gigraex fue fundada por el ingeniero Penobo. -> {'sujeto': 'Gigraex', 'atributo': 'fue fundada por', 'valor': 'ingeniero Penobo'}
+    DISTINTA: La ciudad de Driseena está atravesada por el río Blimafe. -> {'sujeto': 'Driseena', 'atributo': 'atravesada por', 'valor': 'río Blimafe'}
+    DISTINTA: El ingeniero Lupiblis es quien fundó la empresa Fachuliex hace años. -> {'sujeto': 'ingeniero Lupiblis', 'atributo': 'fundó', 'valor': 'Fachuliex'}
+    atributos extraídos más frecuentes: [('capital', 28), ('lunas', 25), ('color', 23), ('plato típico', 15), ('fue fundada', 8), ('fue fundada por', 7), ('nombre', 7), ('fundador', 5), ('río', 5), ('pasa', 4), ('', 4), ('atravesado por', 3), ('color de la bandera', 3), ('founded', 2), ('bandera', 2)]
+==== CON CUERPO: semilla 0, plantillas A ====
+fusión (r): células 79, afirmaciones 75, FALSAS confirmaciones 0, confirmaciones PARTIDAS 4
+   PARTIDA: ('n04', 'Drepus') ['Por la ciudad de Chachaneal pasa el río Drepus.', 'La ciudad de Chachaneal está atravesada por el río Drepus.']
+   PARTIDA: ('n34', 'Trafaran') ['Trafaran es el nombre del río que cruza la ciudad de Vigrogroena.', 'La ciudad de Vigrogroena está atravesada por el río Trafaran.', 'Por la ciudad de Vigrogroena pasa el río Trafaran.']
+   PARTIDA: ('n28', 'Krofudru') ['Por la ciudad de Notuena pasa el río Krofudru.', 'La ciudad de Notuena está atravesada por el río Krofudru.']
+   PARTIDA: ('n31', 'Tetus') ['Dicen que el fundador de la empresa Fachuliex fue un ingeniero llamado Tetus.', 'El ingeniero Tetus fundó la empresa Fachuliex.']
+IDENTIDAD r(perillas apagadas) vs c: 64/64 consultas idénticas (BIT A BIT)
+reputación aprendida (r): Ana=1.00 [fresco_1], Beto=1.00 [honesto_b], Caro=0.00 [mentiroso], Dani=0.00 [complice], Eli=1.00 [honesto_a], Fabio=1.00 [fresco_2], Hugo=1.00 [honesto_c]
+sucesos de reputación:  Counter({'premia': 48, 'castiga': 30})
+recuperación (r): 64/64 bien; margen compuerta: máx AJENA 0.66, mín PROPIA 0.75 (umbral 0.66)
+por clase (sin cuerpo; sólo estado de la colonia): clase: brazo -> verdad/mentira/viejo/duda/nada
+  H2   c:{'V': 8} | c3:{'DUDA': 8} | r:{'V': 8} | bv:{'V': 8} | bv3:{'DUDA': 8}
+  H3   c:{'V': 4} | c3:{'V': 3, 'DUDA': 1} | r:{'V': 4} | bv:{'V': 4} | bv3:{'V': 4}
+  H1   c:{'DUDA': 4} | c3:{'DUDA': 4} | r:{'DUDA': 4} | bv:{'V': 4} | bv3:{'DUDA': 4}
+  HM   c:{'V': 5, 'DUDA': 1} | c3:{'DUDA': 6} | r:{'V': 5, 'DUDA': 1} | bv:{'V': 6} | bv3:{'DUDA': 6}
+  HMC  c:{'DUDA': 6} | c3:{'DUDA': 6} | r:{'V': 6} | bv:{'M': 4, 'V': 2} | bv3:{'DUDA': 6}
+  MC   c:{'M': 5, 'DUDA': 1} | c3:{'DUDA': 6} | r:{'DUDA': 6} | bv:{'M': 6} | bv3:{'DUDA': 6}
+  MCX  c:{'M': 3} | c3:{'DUDA': 3} | r:{'M': 3} | bv:{'M': 3} | bv3:{'DUDA': 3}
+  MI   c:{'DUDA': 4} | c3:{'DUDA': 4} | r:{'DUDA': 4} | bv:{'M': 4} | bv3:{'DUDA': 4}
+  VC   c:{'otro': 1, 'DUDA': 5} | c3:{'DUDA': 6} | r:{'otro': 1, 'DUDA': 2, 'V': 3} | bv:{'V': 5, 'viejo': 1} | bv3:{'DUDA': 6}
+  HX   c:{'DUDA': 3} | c3:{'DUDA': 3} | r:{'M': 3} | bv:{'M': 3} | bv3:{'DUDA': 3}
+  NN   c:{'NADA': 2} | c3:{'NADA': 2} | r:{'NADA': 2} | bv:{'NADA': 2} | bv3:{'NADA': 2}
+  CM   c:{'DUDA': 4} | c3:{'DUDA': 4} | r:{'DUDA': 4} | bv:{'M': 4} | bv3:{'DUDA': 4}
+(3) cuerpo solo control: n=12 acierta=12 dice_NO_LO_SE=0; inventa=0
+(3) cuerpo solo nuevos : n=52 acierta=0 dice_NO_LO_SE=51; inventa=1
+       (False, False, False, 'La bandera de Vimyro es roja.')
+llamadas 212 de caché 212

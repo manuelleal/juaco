@@ -1,0 +1,195 @@
+Frankenstein v1 — arrancando el cuerpo (Qwen2.5-1.5B, CPU, 4 hilos)...
+listo en 1.6 s.
+  ENSEÑAR:    fuente: frase         (ej.  ana: La capital de Zorblandia es Mipol)
+  PREGUNTAR:  escribe la pregunta   (ej.  ¿Cuál es la capital de Zorblandia?)
+  /memoria  células con peso y estado   /reputacion  voz de cada fuente   /ayuda   /salir
+  Regla v1: lo enseñado entra EN CUARENTENA; afirmo cuando el PESO (suma de la reputación de fuentes distintas)
+  llega a 2. Una fuente pierde reputación cuando lo que dijo fue contradicho por lo que otros confirmaron.
+
+
+# 1. Dos honestos enseñan y confirman; el mentiroso (caro) contradice lo ya confirmado
+tú> ana: La capital de Zorblandia es Mipol.
+   [cuerpo] dato extraído: «Mipol» (atributo «capital», 3.8 s)
+   [colonia] nace la célula #0 como HIPÓTESIS (fuente: ana, peso 1.00). EN CUARENTENA.
+   [colonia] célula #0 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+
+tú> beto: Mipol es la ciudad capital de Zorblandia.
+   [cuerpo] dato extraído: «Mipol» (atributo «capital», 1.0 s)
+   [colonia] beto CONFIRMA la célula #0: fuentes ana, beto, peso 2.00 (ana 1.00 + beto 1.00).
+   [colonia] célula #0 VALIDADA (peso 2.00 >= 2): la afirmo.
+
+tú> caro: La capital de Zorblandia es Trebunia.
+   [cuerpo] dato extraído: «Trebunia» (atributo «capital», 1.0 s)
+   [colonia] nace la célula #1 como HIPÓTESIS (fuente: caro, peso 0.50). EN CUARENTENA.
+   [colonia] célula #1 sigue HIPÓTESIS (peso 0.50 < 2): no la afirmo.
+   [colonia] rival: célula #0 (VALIDADA, peso 2.00, ana, beto) dice «La capital de Zorblandia es Mipol.».
+   [reputación] caro PIERDE voz: 1.00 -> 0.50 (lo que dijo fue contradicho por lo confirmado).
+
+tú> ¿Cuál es la capital de Zorblandia?
+   [v1: AFIRMO (validado por ana, beto, peso 2.0)]  (0.9 s)
+   >> Mipol es la capital de Zorblandia.
+   [v0 habría dicho lo mismo]
+
+
+# 2. caro vuelve a quedar al descubierto (otro hecho, dos honestos contra él)
+tú> ana: El planeta Kruvon tiene 9 lunas.
+   [cuerpo] dato extraído: «9» (atributo «lunas», 0.9 s)
+   [colonia] nace la célula #2 como HIPÓTESIS (fuente: ana, peso 1.00). EN CUARENTENA.
+   [colonia] célula #2 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+
+tú> caro: El planeta Kruvon tiene 31 lunas.
+   [cuerpo] dato extraído: «31» (atributo «lunas», 1.0 s)
+   [colonia] nace la célula #3 como HIPÓTESIS (fuente: caro, peso 0.50). EN CUARENTENA.
+   [colonia] célula #3 sigue HIPÓTESIS (peso 0.50 < 2): no la afirmo.
+   [colonia] rival: célula #2 (HIPOTESIS, peso 1.00, ana) dice «El planeta Kruvon tiene 9 lunas.».
+
+tú> beto: Son 9 las lunas del planeta Kruvon.
+   [cuerpo] dato extraído: «9» (atributo «lunas», 1.2 s)
+   [colonia] beto CONFIRMA la célula #2: fuentes ana, beto, peso 2.00 (ana 1.00 + beto 1.00).
+   [colonia] célula #2 VALIDADA (peso 2.00 >= 2): la afirmo.
+   [colonia] rival: célula #3 (HIPOTESIS, peso 0.00, caro) dice «El planeta Kruvon tiene 31 lunas.».
+   [reputación] caro PIERDE voz: 0.50 -> 0.00 (lo que dijo fue contradicho por lo confirmado).
+
+tú> ¿Cuántas lunas tiene el planeta Kruvon?
+   [v1: AFIRMO (validado por ana, beto, peso 2.0)]  (0.5 s)
+   >> Kruvon tiene 9 lunas.
+   [v0 habría dicho lo mismo]
+
+tú> /reputacion
+   ana      1.00 ##########
+   beto     1.00 ##########
+   caro     0.00 
+
+
+# 3. EL CÓMPLICE: caro miente y dani (sin historia) repite la misma mentira. Nadie dice la verdad.
+tú> caro: El plato típico de Zorblandia es el Fruzel.
+   [cuerpo] dato extraído: «Fruzel» (atributo «plato típico», 1.2 s)
+   [colonia] nace la célula #4 como HIPÓTESIS (fuente: caro, peso 0.00). EN CUARENTENA.
+   [colonia] célula #4 sigue HIPÓTESIS (peso 0.00 < 2): no la afirmo.
+
+tú> dani: En Zorblandia el plato típico se llama Fruzel.
+   [cuerpo] dato extraído: «Fruzel» (atributo «plato típico», 1.3 s)
+   [colonia] dani CONFIRMA la célula #4: fuentes caro, dani, peso 1.00 (caro 0.00 + dani 1.00).
+   [colonia] célula #4 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+   [v0 habría dicho] VALIDADA con 2 fuentes: el cómplice cuenta. En v1 pesa 1.00.
+
+tú> ¿Cuál es el plato típico de Zorblandia?
+   [v1: DUDA -> escalaría a un modelo grande]  (0.3 s)
+   >> ESTÁ EN DUDA (falta soporte independiente o hay disputa): caro/dani (peso 1.0) dice «El plato típico de Zorblandia es el Fruzel.»
+   [v0 habría dicho] El plato típico de Zorblandia se llama Fruzel.
+
+
+# 4. dani también queda al descubierto cuando acompaña a caro contra dos honestos
+tú> ana: El río que cruza la ciudad de Drakópolis se llama Velun.
+   [cuerpo] dato extraído: «Velun» (atributo «nombre del río», 1.1 s)
+   [colonia] nace la célula #5 como HIPÓTESIS (fuente: ana, peso 1.00). EN CUARENTENA.
+   [colonia] célula #5 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+
+tú> caro: Por la ciudad de Drakópolis pasa el río Nokra.
+   [cuerpo] dato extraído: «Drakópolis» (atributo «pasaje», 1.2 s)
+   [colonia] nace la célula #6 como HIPÓTESIS (fuente: caro, peso 0.00). EN CUARENTENA.
+   [colonia] célula #6 sigue HIPÓTESIS (peso 0.00 < 2): no la afirmo.
+
+tú> dani: Nokra es el nombre del río que cruza la ciudad de Drakópolis.
+   [cuerpo] dato extraído: «Nokra» (atributo «nombre», 1.1 s)
+   [colonia] dani CONFIRMA la célula #6: fuentes caro, dani, peso 1.00 (caro 0.00 + dani 1.00).
+   [colonia] célula #6 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+   [v0 habría dicho] VALIDADA con 2 fuentes: el cómplice cuenta. En v1 pesa 1.00.
+
+tú> beto: Velun es el nombre del río que cruza la ciudad de Drakópolis.
+   [cuerpo] dato extraído: «Velun» (atributo «río», 1.0 s)
+   [colonia] beto CONFIRMA la célula #5: fuentes ana, beto, peso 2.00 (ana 1.00 + beto 1.00).
+   [colonia] célula #5 VALIDADA (peso 2.00 >= 2): la afirmo.
+
+tú> ¿Cómo se llama el río que cruza la ciudad de Drakópolis?
+   [v1: AFIRMO (validado por ana, beto, peso 2.0)]  (0.9 s)
+   >> El río que cruza la ciudad de Drakópolis se llama Velun.
+   [v0 habría dicho] ESTÁ EN DUDA (falta soporte independiente o hay disputa): ana/beto (peso 2.0) dice «El río que cruza la ciudad
+
+tú> /reputacion
+   ana      1.00 ##########
+   beto     1.00 ##########
+   caro     0.00 
+   dani     1.00 ##########
+
+
+# 5. Dos mentirosos FRESCOS (eli, fabio), sin historia: límite declarado, pasan con K=2
+tú> eli: La bandera de Tovaia es de color verde.
+   [cuerpo] dato extraído: «verde» (atributo «color», 1.0 s)
+   [colonia] nace la célula #7 como HIPÓTESIS (fuente: eli, peso 1.00). EN CUARENTENA.
+   [colonia] célula #7 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+
+tú> fabio: El color de la bandera de Tovaia es el verde.
+   [cuerpo] dato extraído: «verde» (atributo «color», 1.1 s)
+   [colonia] fabio CONFIRMA la célula #7: fuentes eli, fabio, peso 2.00 (eli 1.00 + fabio 1.00).
+   [colonia] célula #7 VALIDADA (peso 2.00 >= 2): la afirmo.
+
+tú> ¿De qué color es la bandera de Tovaia?
+   [v1: AFIRMO (validado por eli, fabio, peso 2.0)]  (0.5 s)
+   >> La bandera de Tovaia es verde.
+   [v0 habría dicho lo mismo]
+
+
+# 6. La verdad que cambia: dos honestos actualizan el dato
+tú> ana: El plato típico de Kralia es el Tumbo.
+   [cuerpo] dato extraído: «Tumbo» (atributo «plato típico», 1.1 s)
+   [colonia] nace la célula #8 como HIPÓTESIS (fuente: ana, peso 1.00). EN CUARENTENA.
+   [colonia] célula #8 sigue HIPÓTESIS (peso 1.00 < 2): no la afirmo.
+
+tú> beto: En Kralia el plato típico se llama Tumbo.
+   [cuerpo] dato extraído: «Tumbo» (atributo «plato típico», 1.0 s)
+   [colonia] beto CONFIRMA la célula #8: fuentes ana, beto, peso 2.00 (ana 1.00 + beto 1.00).
+   [colonia] célula #8 VALIDADA (peso 2.00 >= 2): la afirmo.
+
+tú> ¿Cuál es el plato típico de Kralia?
+   [v1: AFIRMO (validado por ana, beto, peso 2.0)]  (0.8 s)
+   >> El plato típico de Kralia se llama Tumbo.
+   [v0 habría dicho lo mismo]
+
+tú> hugo: El plato típico de Kralia es el Bram.
+   [cuerpo] dato extraído: «Bram» (atributo «plato típico», 1.0 s)
+   [colonia] nace la célula #9 como HIPÓTESIS (fuente: hugo, peso 0.50). EN CUARENTENA.
+   [colonia] célula #9 sigue HIPÓTESIS (peso 0.50 < 2): no la afirmo.
+   [colonia] rival: célula #8 (VALIDADA, peso 2.00, ana, beto) dice «El plato típico de Kralia es el Tumbo.».
+   [reputación] hugo PIERDE voz: 1.00 -> 0.50 (lo que dijo fue contradicho por lo confirmado).
+
+tú> beto: En Kralia el plato típico se llama Bram.
+   [cuerpo] dato extraído: «Bram» (atributo «plato típico», 1.0 s)
+   [colonia] beto CONFIRMA la célula #9: fuentes beto, hugo, peso 2.00 (beto 1.00 + hugo 1.00).
+   [colonia] célula #9 VALIDADA (peso 2.00 >= 2): la afirmo.
+   [colonia] rival: célula #8 (VALIDADA, peso 2.00, ana, beto) dice «El plato típico de Kralia es el Tumbo.».
+   [reputación] hugo RECUPERA voz: 0.50 -> 1.00 (lo que dijo quedó confirmado).
+
+tú> ¿Cuál es el plato típico de Kralia?
+   [v1: AFIRMO (validado por beto, hugo, peso 2.0)]  (0.6 s)
+   >> El plato típico de Kralia se llama Bram.
+   [v0 habría dicho] El plato típico de Kralia es el Kralian Plov.
+
+
+# 7. Control: lo que el cuerpo ya sabe no lo pisa un mentiroso
+tú> caro: La capital de Francia es Lyon.
+   [cuerpo] dato extraído: «Lyon» (atributo «capital», 0.8 s)
+   [colonia] nace la célula #10 como HIPÓTESIS (fuente: caro, peso 0.00). EN CUARENTENA.
+   [colonia] célula #10 sigue HIPÓTESIS (peso 0.00 < 2): no la afirmo.
+
+tú> ¿Cuál es la capital de Francia?
+   [v1: lo sabe el cuerpo; lo enseñado sin validar no pisa]  (0.4 s)
+   >> La capital de Francia es París.
+   [v0 habría dicho lo mismo]
+
+tú> /memoria
+   #0 VALIDADA  peso 2.00 (ana, beto) gana    «La capital de Zorblandia es Mipol.»
+   #1 HIPOTESIS peso 0.00 (caro) pierde  «La capital de Zorblandia es Trebunia.»
+   #2 VALIDADA  peso 2.00 (ana, beto) gana    «El planeta Kruvon tiene 9 lunas.»
+   #3 HIPOTESIS peso 0.00 (caro) pierde  «El planeta Kruvon tiene 31 lunas.»
+   #4 HIPOTESIS peso 1.00 (caro, dani)         «El plato típico de Zorblandia es el Fruzel.»
+   #5 VALIDADA  peso 2.00 (ana, beto)         «El río que cruza la ciudad de Drakópolis se llama Velun.»
+   #6 HIPOTESIS peso 1.00 (caro, dani)         «Por la ciudad de Drakópolis pasa el río Nokra.»
+   #7 VALIDADA  peso 2.00 (eli, fabio)         «La bandera de Tovaia es de color verde.»
+   #8 VALIDADA  peso 2.00 (ana, beto)         «El plato típico de Kralia es el Tumbo.»
+   #9 VALIDADA  peso 2.00 (beto, hugo)         «El plato típico de Kralia es el Bram.»
+   #10 HIPOTESIS peso 0.00 (caro)         «La capital de Francia es Lyon.»
+
+
+Preguntas: 8; escalaría a un modelo grande: 1. Cerrando el cuerpo.
+FIN demo Tue Oct  6 14:20:26 HPS 2026
