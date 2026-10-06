@@ -160,3 +160,13 @@
 2026-10-06 05:53:13,317 - openevolve.llm.ensemble - INFO - Sampled model: haiku
 2026-10-06 05:53:13,321 - openevolve.process_parallel - INFO - Iteration 24: Program d80b32f1-a2e4-4bfe-bb42-c23a4534955d (parent: 34f7cad7-3d4b-4594-85d5-0f61343812ae) completed in 236.05s
 2026-10-06 05:53:13,322 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:57:17,783 - openevolve.evaluator - INFO - Evaluated program a3c2ba58-a9d0-4f09-9cbd-55f9bab609da in 198.30s: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:57:17,787 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 05:57:17,792 - openevolve.process_parallel - INFO - Iteration 25: Program a3c2ba58-a9d0-4f09-9cbd-55f9bab609da (parent: b550c6c2-73f7-44bc-81f8-4367095cd6f7) completed in 244.47s
+2026-10-06 05:57:17,793 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:57:17,793 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 25
+2026-10-06 05:57:17,794 - openevolve.database - INFO - Island Status:
+2026-10-06 05:57:17,794 - openevolve.database - INFO -  * Island 0: 24 programs, best=0.6426, avg=0.4069, diversity=44.15, gen=24 (best: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc)
+2026-10-06 05:57:17,822 - openevolve.database - INFO - Saved database with 24 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_25
+2026-10-06 05:57:17,823 - openevolve.controller - INFO - Saved best program at checkpoint 25 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:57:17,823 - openevolve.controller - INFO - Saved checkpoint at iteration 25 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_25
