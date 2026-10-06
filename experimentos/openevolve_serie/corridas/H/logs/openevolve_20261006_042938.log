@@ -44,3 +44,19 @@
 2026-10-06 04:43:22,881 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 9}
 2026-10-06 04:43:22,882 - openevolve.process_parallel - INFO - Iteration 3: Program 427707b3-c983-4f08-a94a-f22e864f0025 (parent: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc) completed in 325.01s
 2026-10-06 04:43:22,882 - openevolve.process_parallel - INFO - Metrics: combined_score=0.3206, etapa=3.0000, vida_med=1389.0000, persisten_frac=0.1111, sin_extincion_frac=0.6667, cruzan_frac=0.1111, R0_real_med=0.6596
+2026-10-06 04:47:08,852 - openevolve.evaluator - INFO - Evaluated program 6a1652bd-8a5d-49ea-96ad-a88c00f72711 in 196.65s: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:47:08,855 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 04:47:08,859 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 0}
+2026-10-06 04:47:08,859 - openevolve.process_parallel - INFO - Iteration 4: Program 6a1652bd-8a5d-49ea-96ad-a88c00f72711 (parent: 3d86ff1d-37d0-498b-8889-d21e6a55ca2f) completed in 225.97s
+2026-10-06 04:47:08,859 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:51:41,235 - openevolve.evaluator - INFO - Evaluated program 07377251-086c-43d4-8fd4-83ad16f321d5 in 192.17s: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:51:41,238 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 04:51:41,247 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 1}
+2026-10-06 04:51:41,247 - openevolve.process_parallel - INFO - Iteration 5: Program 07377251-086c-43d4-8fd4-83ad16f321d5 (parent: 427707b3-c983-4f08-a94a-f22e864f0025) completed in 272.38s
+2026-10-06 04:51:41,247 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:51:41,247 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 5
+2026-10-06 04:51:41,248 - openevolve.database - INFO - Island Status:
+2026-10-06 04:51:41,248 - openevolve.database - INFO -  * Island 0: 6 programs, best=0.6426, avg=0.3956, diversity=18.63, gen=5 (best: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc)
+2026-10-06 04:51:41,250 - openevolve.database - INFO - Saved database with 6 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_5
+2026-10-06 04:51:41,251 - openevolve.controller - INFO - Saved best program at checkpoint 5 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:51:41,251 - openevolve.controller - INFO - Saved checkpoint at iteration 5 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_5
