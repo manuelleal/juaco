@@ -167,3 +167,14 @@
 2026-10-06 06:05:51,301 - INFO - Iteration 24: Program 34dcea1c-31b4-4100-8e13-fadd8d16f7ef (parent: f758ab88-3bf1-4a86-a8a7-2c9136041ee1) completed in 420.19s
 2026-10-06 06:05:51,301 - INFO - Metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
 2026-10-06 06:05:51,301 - INFO - 🌟 New best solution found at iteration 24: 34dcea1c-31b4-4100-8e13-fadd8d16f7ef
+2026-10-06 06:11:04,933 - INFO - Evaluated program a35a9e7f-fa21-457e-a44e-62ab81e0145a in 298.59s: combined_score=0.3329, etapa=3.0000, vida_med=1801.0000, persisten_frac=0.0000, sin_extincion_frac=0.6667, cruzan_frac=0.0000, R0_real_med=0.4706
+2026-10-06 06:11:04,939 - INFO - Sampled model: sonnet
+2026-10-06 06:11:04,945 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 1}
+2026-10-06 06:11:04,945 - INFO - Iteration 25: Program a35a9e7f-fa21-457e-a44e-62ab81e0145a (parent: f37bcbf9-e603-4419-a465-56f63060efd7) completed in 313.64s
+2026-10-06 06:11:04,945 - INFO - Metrics: combined_score=0.3329, etapa=3.0000, vida_med=1801.0000, persisten_frac=0.0000, sin_extincion_frac=0.6667, cruzan_frac=0.0000, R0_real_med=0.4706
+2026-10-06 06:11:04,945 - INFO - Checkpoint interval reached at iteration 25
+2026-10-06 06:11:04,950 - INFO - Island Status:
+2026-10-06 06:11:04,950 - INFO -  * Island 0: 23 programs, best=0.4244, avg=0.2431, diversity=66.57, gen=24 (best: 34dcea1c-31b4-4100-8e13-fadd8d16f7ef)
+2026-10-06 06:11:04,960 - INFO - Saved database with 23 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_25
+2026-10-06 06:11:04,960 - INFO - Saved best program at checkpoint 25 with metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:11:04,960 - INFO - Saved checkpoint at iteration 25 to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_25

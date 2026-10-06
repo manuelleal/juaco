@@ -184,3 +184,29 @@
 2026-10-06 06:05:47,365 - INFO - Sampled model: haiku
 2026-10-06 06:05:47,376 - INFO - Iteration 28: Program f559984f-9a5b-4bd6-8ebb-8cdb4b28a2c6 (parent: 9f430905-4497-43bf-b3e0-ae7f0e746e6c) completed in 174.11s
 2026-10-06 06:05:47,376 - INFO - Metrics: combined_score=0.0756, etapa=2.0000, vida_med=878.5000, persisten_frac=0.1111, sin_extincion_frac=0.2222, cruzan_frac=0.0000, R0_real_med=0.3333
+2026-10-06 06:07:55,107 - INFO - Evaluated program fb67afee-bd1f-4084-bb7c-e7195e937b11 in 60.05s: combined_score=0.0582, etapa=2.0000, vida_med=1229.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.2727
+2026-10-06 06:07:55,111 - INFO - Sampled model: haiku
+2026-10-06 06:07:55,121 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 3}
+2026-10-06 06:07:55,121 - INFO - Iteration 29: Program fb67afee-bd1f-4084-bb7c-e7195e937b11 (parent: 9f430905-4497-43bf-b3e0-ae7f0e746e6c) completed in 127.74s
+2026-10-06 06:07:55,121 - INFO - Metrics: combined_score=0.0582, etapa=2.0000, vida_med=1229.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.2727
+2026-10-06 06:10:01,056 - INFO - Evaluated program 5fdbc13a-7e54-4c91-91e4-ae7979546c68 in 61.98s: combined_score=0.0631, etapa=2.0000, vida_med=844.5000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4375
+2026-10-06 06:10:01,070 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 3}
+2026-10-06 06:10:01,071 - INFO - Iteration 30: Program 5fdbc13a-7e54-4c91-91e4-ae7979546c68 (parent: fb44a381-5ff1-472f-992b-c2aaa4dc6e20) completed in 125.95s
+2026-10-06 06:10:01,071 - INFO - Metrics: combined_score=0.0631, etapa=2.0000, vida_med=844.5000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4375
+2026-10-06 06:10:01,071 - INFO - Checkpoint interval reached at iteration 30
+2026-10-06 06:10:01,071 - INFO - Island Status:
+2026-10-06 06:10:01,071 - INFO -  * Island 0: 29 programs, best=0.6426, avg=0.3487, diversity=44.15, gen=29 (best: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc)
+2026-10-06 06:10:01,101 - INFO - Saved database with 29 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_30
+2026-10-06 06:10:01,101 - INFO - Saved best program at checkpoint 30 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 06:10:01,101 - INFO - Saved checkpoint at iteration 30 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_30
+2026-10-06 06:10:01,101 - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-06 06:10:01,110 - INFO - Saved database with 29 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_30
+2026-10-06 06:10:01,111 - INFO - Saved best program at checkpoint 30 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 06:10:01,111 - INFO - Saved checkpoint at iteration 30 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_30
+2026-10-06 06:10:01,111 - INFO - Received signal 15, initiating graceful shutdown...
+2026-10-06 06:10:01,112 - INFO - Graceful shutdown requested...
+2026-10-06 06:10:01,121 - INFO - Stopped process pool
+2026-10-06 06:10:01,122 - INFO - Using tracked best program: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc
+2026-10-06 06:10:01,122 - INFO - Evolution complete. Best program has metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 06:10:01,122 - INFO - Saved best program to /home/user/juaco/experimentos/openevolve_serie/corridas/H/best/best_program.py with program info to /home/user/juaco/experimentos/openevolve_serie/corridas/H/best/best_program_info.json
+FIN {"segundos_reloj": 6023.0, "iteraciones": 30, "mejor_id": "9251b7be-ed7c-494f-b49d-0e891e2b6fbc", "mejor_metricas": {"combined_score": 0.642629, "etapa": 3.0, "vida_med": 1401.0, "persisten_frac": 0.4444444444444444, "sin_extincion_frac": 0.5555555555555556, "cruzan_frac": 0.4444444444444444, "R0_real_med": 0.8947}}
