@@ -72,3 +72,19 @@
 2026-10-06 05:02:51,481 - INFO - Sampled model: haiku
 2026-10-06 05:02:51,490 - INFO - Iteration 8: Program 6804dfee-37d5-410c-b44b-e3c4cb40c6f4 (parent: 21547628-70a0-461e-a500-5ac6d48cb8f3) completed in 227.44s
 2026-10-06 05:02:51,490 - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:05:25,801 - INFO - Evaluated program 4dbd0aed-2c98-4ec4-99a7-29bb42e135cd in 51.73s: combined_score=0.0615, etapa=2.0000, vida_med=1400.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.3846
+2026-10-06 05:05:25,804 - INFO - Sampled model: haiku
+2026-10-06 05:05:25,808 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 1}
+2026-10-06 05:05:25,808 - INFO - Iteration 9: Program 4dbd0aed-2c98-4ec4-99a7-29bb42e135cd (parent: 6a1652bd-8a5d-49ea-96ad-a88c00f72711) completed in 154.32s
+2026-10-06 05:05:25,808 - INFO - Metrics: combined_score=0.0615, etapa=2.0000, vida_med=1400.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.3846
+2026-10-06 05:07:47,416 - INFO - Evaluated program b550c6c2-73f7-44bc-81f8-4367095cd6f7 in 53.43s: combined_score=0.0624, etapa=2.0000, vida_med=1000.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4118
+2026-10-06 05:07:47,419 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 2}
+2026-10-06 05:07:47,419 - INFO - Sampled model: haiku
+2026-10-06 05:07:47,419 - INFO - Iteration 10: Program b550c6c2-73f7-44bc-81f8-4367095cd6f7 (parent: 6804dfee-37d5-410c-b44b-e3c4cb40c6f4) completed in 141.61s
+2026-10-06 05:07:47,420 - INFO - Metrics: combined_score=0.0624, etapa=2.0000, vida_med=1000.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4118
+2026-10-06 05:07:47,420 - INFO - Checkpoint interval reached at iteration 10
+2026-10-06 05:07:47,420 - INFO - Island Status:
+2026-10-06 05:07:47,420 - INFO -  * Island 0: 11 programs, best=0.6426, avg=0.4023, diversity=10.63, gen=10 (best: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc)
+2026-10-06 05:07:47,424 - INFO - Saved database with 11 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_10
+2026-10-06 05:07:47,424 - INFO - Saved best program at checkpoint 10 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:07:47,424 - INFO - Saved checkpoint at iteration 10 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_10
