@@ -7728,3 +7728,19 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
   - B pasó 27 de 30 rondas en esa meseta (0.30, R0 0).
   - Una serie nueva debe exigir nacimientos reales en la etapa 2, con preregistro nuevo.
 - Siguiente ERR libre: **ERR-196**.
+
+### EXAMEN GRANDE de HUMO (el mejor del humo OpenEvolve del 5-oct) contra O1 — 6-oct-2026, 09:20–11:18: **HAY ALGO MODESTO** (serie MODESTO, réplica FUNCIONA)
+> Preregistro: `experimentos/openevolve_serie/PREREGISTRO_examen_grande.md`, commiteado antes de correr.
+> Semillas 276001–276020 y 276021–276040; T 100 000; fundador no limpio; 0 USD de modelo.
+
+| tanda | HUMO con mayoría | O1 con mayoría | HUMO gana a O1 | linajes que cruzan HUMO / O1 |
+|---|---|---|---|---|
+| serie | **19/20** | 16/20 | 11/20 (P2 pide 12) | 147 / 131 |
+| réplica | **20/20** | 17/20 | **14/20** | 150 / 125 |
+
+- **P1 (mayoría en ≥ 15/20) cumple ×2.** P2 (gana a O1) cumple sólo en la réplica → bloque **HAY ALGO MODESTO**.
+- **Lectura:** un carro escrito por evolución de programas guiada por un modelo de lenguaje, desde O1 sin limpieza, cruza el muro de la
+  pista con fundador no limpio de forma robusta (39/40), igual o mejor que O1 (25 gana, 8 pierde, 7 empata; descriptivo).
+- **Lo que no dice:** que el organismo aprenda o evolucione (es diseño, de la clase de O1), ni que la búsqueda lo reencuentre (1 de 3;
+  ERR-194).
+- Sin ERR nuevo. Siguiente libre: ERR-196.

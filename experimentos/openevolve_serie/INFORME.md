@@ -113,3 +113,27 @@ Ningún programa de las tres corridas llegó a cruzar en la búsqueda. El humo l
 `lanza.py`, `lanza_corrida.sh`, `adaptador_claude.py` (reconstruido), `config_{A,B,H}.yaml` · `cordura/` (anclas, tramposos) ·
 `corridas/{A,B,H,HUMO_TUBERIA}` (logs, checkpoints, programas evaluados, `registro_llm`) · `gasto/libro_gasto.jsonl` ·
 `examen/` (`programas/`, JSON por corrida, `examen.log`, `examen_resumen.json`) · `corre_examen.py`.
+
+## 9. EXAMEN GRANDE de HUMO contra O1 (PREREGISTRO_examen_grande.md, commit antes de correr; 0 USD de modelo)
+**BLOQUE: HAY ALGO MODESTO por la letra** (serie MODESTO, réplica FUNCIONA → vale el menor).
+
+**P1 cumple ×2:** el carro que escribió la evolución de programas guiada por un modelo de lenguaje cruza el muro con mayoría en **19/20
+y 20/20** semillas nuevas, con fundador no limpio. **P2 (ganar a O1 en ≥ 12/20) cumple sólo en la réplica**: falla en la serie por una
+semilla.
+
+| tanda | semillas | HUMO con mayoría | O1 con mayoría | HUMO gana / pierde / empata | linajes que cruzan HUMO / O1 | veredicto |
+|---|---|---|---|---|---|---|
+| serie | 276001–276020 | **19/20** | 16/20 | 11 / 5 / 4 | 147 / 131 | HAY ALGO MODESTO (P2 11 < 12) |
+| réplica | 276021–276040 | **20/20** | 17/20 | **14 / 3 / 3** | 150 / 125 | FUNCIONA |
+
+- **Descriptivo (no es la letra):**
+  - en las 40 semillas, HUMO gana a O1 en 25, pierde en 8 y empata en 7;
+  - suma 297 linajes que cruzan contra 256 (+16 %);
+  - con mayoría, HUMO 39/40 y O1 33/40;
+  - con el examen chico (275001–275005) son 45 semillas nunca vistas y 44 con mayoría.
+- **Vocabulario permitido:** "un carro escrito por evolución de programas guiada por un modelo de lenguaje, desde un organismo que colapsa,
+  cruza el muro de la pista con fundador no limpio en ≥ 19/20 ×2, igual o mejor que O1".
+- **No permitido:** "mejor que O1" como declarado, porque P2 no replica. Tampoco "el organismo aprendió o evolucionó": es un carro
+  diseñado, de la misma clase que O1. Ni "la búsqueda lo encuentra": 1 de 3 búsquedas.
+- Datos: `examen_grande/s276001-276020/` y `examen_grande/s276021-276040/` (resumen.json, log.txt, JSON por corrida); logs
+  `examen_grande_{serie,replica}.out`.

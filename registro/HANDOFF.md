@@ -1218,3 +1218,8 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Costo:** 6.97 USD en el modelo.
 - **Propuesta:** repetir sólo A con el razonamiento igualado (6–10 USD), y un examen grande de HUMO, que no gasta en el modelo.
 - **Rama:** `nube/openevolve-20261006`. Informe: `experimentos/openevolve_serie/INFORME.md`.
+- **6-oct (09:20–11:18): EXAMEN GRANDE de HUMO = HAY ALGO MODESTO** (serie MODESTO, réplica FUNCIONA).
+  - Cruza con mayoría en 19/20 y 20/20 semillas nuevas.
+  - Gana a O1 en 11/20 y 14/20 (P2 pedía 12: falla por una semilla en la serie).
+  - Linajes que cruzan: 297 contra 256.
+  - Es el carro más robusto de la pista con fundador no limpio. Es diseño, no evolución del organismo.
