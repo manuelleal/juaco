@@ -116,3 +116,18 @@
 2026-10-06 05:28:11,640 - openevolve.process_parallel - INFO - Metrics: combined_score=0.3193, etapa=3.0000, vida_med=2194.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.2759
 2026-10-06 05:28:26,381 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
 2026-10-06 05:28:26,390 - openevolve.process_parallel - WARNING - Iteration 15 error: None of the 1 SEARCH block(s) matched the parent program
+2026-10-06 05:33:18,151 - openevolve.evaluator - INFO - Evaluated program a76066ae-7e89-4e67-b673-9b4224167076 in 278.81s: combined_score=0.3267, etapa=3.0000, vida_med=3324.0000, persisten_frac=0.0000, sin_extincion_frac=0.8889, cruzan_frac=0.0000, R0_real_med=0.3810
+2026-10-06 05:33:18,154 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 05:33:18,160 - openevolve.process_parallel - INFO - Iteration 16: Program a76066ae-7e89-4e67-b673-9b4224167076 (parent: d3a406ec-d1c5-483e-a5d3-f025f9b1ec5c) completed in 291.77s
+2026-10-06 05:33:18,160 - openevolve.process_parallel - INFO - Metrics: combined_score=0.3267, etapa=3.0000, vida_med=3324.0000, persisten_frac=0.0000, sin_extincion_frac=0.8889, cruzan_frac=0.0000, R0_real_med=0.3810
+2026-10-06 05:33:35,961 - openevolve.process_parallel - WARNING - Iteration 17: only 2 of 3 SEARCH block(s) matched the parent program
+2026-10-06 05:38:13,694 - openevolve.evaluator - INFO - Evaluated program b3442845-70b2-465c-a713-0081f27dd475 in 277.73s: combined_score=0.3267, etapa=3.0000, vida_med=3324.0000, persisten_frac=0.0000, sin_extincion_frac=0.8889, cruzan_frac=0.0000, R0_real_med=0.3810
+2026-10-06 05:38:13,697 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 05:38:13,701 - openevolve.process_parallel - INFO - Iteration 17: Program b3442845-70b2-465c-a713-0081f27dd475 (parent: b41bb622-5aa4-4b89-818a-27968c35500a) completed in 295.54s
+2026-10-06 05:38:13,702 - openevolve.process_parallel - INFO - Metrics: combined_score=0.3267, etapa=3.0000, vida_med=3324.0000, persisten_frac=0.0000, sin_extincion_frac=0.8889, cruzan_frac=0.0000, R0_real_med=0.3810
+2026-10-06 05:38:28,280 - openevolve.process_parallel - WARNING - Iteration 18: only 5 of 6 SEARCH block(s) matched the parent program
+2026-10-06 05:39:35,924 - openevolve.evaluator - INFO - Evaluated program bd3d7cac-ba27-4872-8a30-d7e9152ac000 in 67.64s: combined_score=0.0672, etapa=2.0000, vida_med=1187.0000, persisten_frac=0.1111, sin_extincion_frac=0.1111, cruzan_frac=0.0000, R0_real_med=0.3125
+2026-10-06 05:39:35,927 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 05:39:35,933 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 3}
+2026-10-06 05:39:35,934 - openevolve.process_parallel - INFO - Iteration 18: Program bd3d7cac-ba27-4872-8a30-d7e9152ac000 (parent: 9bcf754c-bbf1-4ea0-b354-63d2ace7d871) completed in 82.23s
+2026-10-06 05:39:35,934 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0672, etapa=2.0000, vida_med=1187.0000, persisten_frac=0.1111, sin_extincion_frac=0.1111, cruzan_frac=0.0000, R0_real_med=0.3125
