@@ -170,3 +170,8 @@
 2026-10-06 05:57:17,822 - openevolve.database - INFO - Saved database with 24 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_25
 2026-10-06 05:57:17,823 - openevolve.controller - INFO - Saved best program at checkpoint 25 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
 2026-10-06 05:57:17,823 - openevolve.controller - INFO - Saved checkpoint at iteration 25 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_25
+2026-10-06 05:59:48,792 - openevolve.evaluator - INFO - Evaluated program d306f2a1-952e-4aae-a01c-ff18e7867dd2 in 56.00s: combined_score=0.0913, etapa=2.0000, vida_med=1838.5000, persisten_frac=0.2222, sin_extincion_frac=0.3333, cruzan_frac=0.0000, R0_real_med=0.6000
+2026-10-06 05:59:48,801 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 2}
+2026-10-06 05:59:48,801 - openevolve.process_parallel - INFO - Iteration 26: Program d306f2a1-952e-4aae-a01c-ff18e7867dd2 (parent: 6804dfee-37d5-410c-b44b-e3c4cb40c6f4) completed in 151.01s
+2026-10-06 05:59:48,801 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0913, etapa=2.0000, vida_med=1838.5000, persisten_frac=0.2222, sin_extincion_frac=0.3333, cruzan_frac=0.0000, R0_real_med=0.6000
+2026-10-06 05:59:48,802 - openevolve.llm.ensemble - INFO - Sampled model: haiku
