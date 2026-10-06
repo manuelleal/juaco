@@ -1,0 +1,80 @@
+Frankenstein v0 — arrancando el cuerpo (Qwen2.5-1.5B, CPU, 4 hilos)...
+listo en 1.5 s.
+  ENSEÑAR:    fuente: frase         (ej.  ana: La capital de Zorblandia es Mipol)
+  PREGUNTAR:  escribe la pregunta   (ej.  ¿Cuál es la capital de Zorblandia?)
+  /memoria  muestra las células     /ayuda     /salir
+  Regla: lo enseñado entra EN CUARENTENA; sólo lo afirmo cuando lo confirman 2 fuentes DISTINTAS.
+
+tú> ¿Cuál es la capital de Francia?
+   [lo sabe el cuerpo (nada enseñado)]  (0.7 s)
+   >> La capital de Francia es París.
+
+tú> ¿Cuál es la capital de Zorblandia?
+   [NO LO SÉ -> escalaría a un modelo grande]  (0.3 s)
+   >> NO LO SÉ (no tengo nada enseñado y el cuerpo no lo sabe).
+
+tú> ana: La capital de Zorblandia es Mipol.
+   [cuerpo] dato extraído: «Mipol»  (2.9 s)
+   [colonia] nace la célula #0 como HIPÓTESIS (fuente: ana). EN CUARENTENA: todavía no la afirmo.
+
+tú> ¿Cuál es la capital de Zorblandia?
+   [DUDA -> escalaría a un modelo grande]  (0.3 s)
+   >> ESTÁ EN DUDA (falta una segunda fuente independiente o hay disputa): ana dice «La capital de Zorblandia es Mipol.»
+
+tú> ana: En Zorblandia, la capital se llama Mipol.
+   [cuerpo] dato extraído: «Mipol»  (0.9 s)
+   [colonia] ana ya había dicho esto (célula #0). La misma fuente no cuenta como confirmación. Sigue HIPOTESIS con 1 fuente(s).
+
+tú> ¿Cuál es la capital de Zorblandia?
+   [DUDA -> escalaría a un modelo grande]  (0.3 s)
+   >> ESTÁ EN DUDA (falta una segunda fuente independiente o hay disputa): ana dice «La capital de Zorblandia es Mipol.»
+
+tú> beto: Mipol es la ciudad capital de Zorblandia.
+   [cuerpo] dato extraído: «Mipol»  (1.0 s)
+   [colonia] beto CONFIRMA la célula #0: 2 fuentes independientes (ana, beto).
+   [colonia] célula #0 VALIDADA: desde ahora la afirmo.
+
+tú> ¿Cuál es la capital de Zorblandia?
+   [AFIRMO (validado por ana, beto)]  (0.6 s)
+   >> La capital de Zorblandia es Mipol.
+
+tú> caro: La capital de Zorblandia es Trebunia.
+   [cuerpo] dato extraído: «Trebunia»  (1.1 s)
+   [colonia] nace la célula #1 como HIPÓTESIS (fuente: caro). EN CUARENTENA: todavía no la afirmo.
+   [colonia] ojo: se parece a la célula #0 (VALIDADA, 2 fuente(s)) que dice «La capital de Zorblandia es Mipol.». Si chocan, decide el soporte al preguntar.
+
+tú> ¿Cuál es la capital de Zorblandia?
+   [AFIRMO (validado por ana, beto)]  (0.6 s)
+   >> La capital de Zorblandia es Mipol.
+   (hay 1 afirmación(es) rival(es) con menos soporte, sin voz)
+
+tú> caro: El planeta Kruvon tiene 9 lunas.
+   [cuerpo] dato extraído: «9»  (1.1 s)
+   [colonia] nace la célula #2 como HIPÓTESIS (fuente: caro). EN CUARENTENA: todavía no la afirmo.
+
+tú> dani: El planeta Kruvon tiene 31 lunas.
+   [cuerpo] dato extraído: «31»  (1.1 s)
+   [colonia] nace la célula #3 como HIPÓTESIS (fuente: dani). EN CUARENTENA: todavía no la afirmo.
+   [colonia] ojo: se parece a la célula #2 (HIPOTESIS, 1 fuente(s)) que dice «El planeta Kruvon tiene 9 lunas.». Si chocan, decide el soporte al preguntar.
+
+tú> ¿Cuántas lunas tiene el planeta Kruvon?
+   [DUDA -> escalaría a un modelo grande]  (0.4 s)
+   >> ESTÁ EN DUDA (falta una segunda fuente independiente o hay disputa): caro dice «El planeta Kruvon tiene 9 lunas.»; dani dice «El planeta Kruvon tiene 31 lunas.»
+
+tú> caro: La capital de Francia es Lyon.
+   [cuerpo] dato extraído: «Lyon»  (0.9 s)
+   [colonia] nace la célula #4 como HIPÓTESIS (fuente: caro). EN CUARENTENA: todavía no la afirmo.
+
+tú> ¿Cuál es la capital de Francia?
+   [lo sabe el cuerpo; lo enseñado sin validar no pisa]  (0.7 s)
+   >> La capital de Francia es París.
+
+tú> /memoria
+   #0 VALIDADA  soporte 2 (ana, beto): «La capital de Zorblandia es Mipol.»
+   #1 HIPOTESIS soporte 1 (caro): «La capital de Zorblandia es Trebunia.»
+   #2 HIPOTESIS soporte 1 (caro): «El planeta Kruvon tiene 9 lunas.»
+   #3 HIPOTESIS soporte 1 (dani): «El planeta Kruvon tiene 31 lunas.»
+   #4 HIPOTESIS soporte 1 (caro): «La capital de Francia es Lyon.»
+
+
+Preguntas: 8; escalaría a un modelo grande: 4. Cerrando el cuerpo.

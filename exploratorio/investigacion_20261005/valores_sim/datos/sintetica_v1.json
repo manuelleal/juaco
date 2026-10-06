@@ -1,0 +1,1740 @@
+{
+ "sin_senal": {
+  "perillas": {
+   "mom": 120,
+   "rev": 5,
+   "d": {
+    "theta": 0.95,
+    "c_exist": 0.002,
+    "adaptativa": true
+   },
+   "e": {
+    "k": 2,
+    "theta": 0.8
+   }
+  },
+  "rejilla": {
+   "mom": {
+    "20": -0.07966317297132872,
+    "60": -0.0021996200512857246,
+    "120": 0.007824165046168804,
+    "250": -0.005143450464766255
+   },
+   "rev": {
+    "1": -0.2189391802282321,
+    "5": -0.10024478331350709
+   },
+   "d": [
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.002,
+      "adaptativa": false
+     },
+     "anual_neto": -0.08164122804566545
+    },
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.002,
+      "adaptativa": true
+     },
+     "anual_neto": -0.12240822842336804
+    },
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.01,
+      "adaptativa": false
+     },
+     "anual_neto": -0.048882007766268804
+    },
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.01,
+      "adaptativa": true
+     },
+     "anual_neto": -0.08448835986048857
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.002,
+      "adaptativa": false
+     },
+     "anual_neto": -0.035207019658736585
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.002,
+      "adaptativa": true
+     },
+     "anual_neto": -0.04889322029977405
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.01,
+      "adaptativa": false
+     },
+     "anual_neto": -0.01202237630231688
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.01,
+      "adaptativa": true
+     },
+     "anual_neto": -0.02199943425151478
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.002,
+      "adaptativa": false
+     },
+     "anual_neto": 0.04299462986263481
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.002,
+      "adaptativa": true
+     },
+     "anual_neto": 0.04351387879087725
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.01,
+      "adaptativa": false
+     },
+     "anual_neto": 0.04055606156298162
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.01,
+      "adaptativa": true
+     },
+     "anual_neto": 0.041876106514657334
+    }
+   ],
+   "e": [
+    {
+     "perillas": {
+      "k": 2,
+      "theta": 0.8
+     },
+     "anual_neto": 0.07781010995655536
+    },
+    {
+     "perillas": {
+      "k": 2,
+      "theta": 0.9
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 2,
+      "theta": 0.95
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 5,
+      "theta": 0.8
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 5,
+      "theta": 0.9
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 5,
+      "theta": 0.95
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 10,
+      "theta": 0.8
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 10,
+      "theta": 0.9
+     },
+     "anual_neto": 0.0775377257672286
+    },
+    {
+     "perillas": {
+      "k": 10,
+      "theta": 0.95
+     },
+     "anual_neto": 0.0775377257672286
+    }
+   ],
+   "a_mantener": 0.0775377257672286
+  },
+  "sellado_sintetico": {
+   "brazos": {
+    "a_mantener": {
+     "costo0": {
+      "anual": 0.15988213112953686,
+      "sharpe": 1.0702858875668728,
+      "caida_max": 0.16248696761534442,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4783.774875859953,
+      "total_centavos_por_100": 4783.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629
+     },
+     "costo_base": {
+      "anual": 0.15938080486958994,
+      "sharpe": 1.066729519453139,
+      "caida_max": 0.1624869676153443,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4768.774875859953,
+      "total_centavos_por_100": 4768.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629,
+      "ic_anual": {
+       "est": 0.15938080486958994,
+       "ic95": [
+        -0.019939241709385703,
+        0.34740341537533703
+       ],
+       "ic98.75": [
+        -0.0634762643850531,
+        0.40046072315785064
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.15887947860964297,
+      "sharpe": 1.0631566720744479,
+      "caida_max": 0.1624869676153442,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4753.774875859953,
+      "total_centavos_por_100": 4753.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629
+     },
+     "retardo1_costo_base": {
+      "anual": 0.15938080486958994,
+      "sharpe": 1.066729519453139,
+      "caida_max": 0.1624869676153443,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4768.774875859953,
+      "total_centavos_por_100": 4768.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629
+     }
+    },
+    "b1_momento": {
+     "costo0": {
+      "anual": 0.03504536795904591,
+      "sharpe": 0.40275312310070205,
+      "caida_max": 0.1656037373404292,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 1055,
+      "centavos_por_oper": 30.811345470350513,
+      "total_centavos_por_100": 1048.5796603619287,
+      "frac_larga": 0.6686061435783349,
+      "frac_corta": 0.3313938564216651,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5068452126294173
+     },
+     "costo_base": {
+      "anual": 0.009632978124186684,
+      "sharpe": 0.11059750947926673,
+      "caida_max": 0.19400911849931435,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 1055,
+      "centavos_por_oper": 8.469165375563756,
+      "total_centavos_por_100": 288.22482165225045,
+      "frac_larga": 0.6686061435783349,
+      "frac_corta": 0.3313938564216651,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5068452126294173,
+      "ic_anual": {
+       "est": 0.009632978124186684,
+       "ic95": [
+        -0.08753796566012474,
+        0.11385593961536747
+       ],
+       "ic98.75": [
+        -0.11699291799101734,
+        0.14245251686175162
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": -0.01577941171067257,
+      "sharpe": -0.18095208965744677,
+      "caida_max": 0.22145234678859027,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 1055,
+      "centavos_por_oper": -13.873014719222914,
+      "total_centavos_por_100": -472.130017057425,
+      "frac_larga": 0.6686061435783349,
+      "frac_corta": 0.3313938564216651,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5068452126294173
+     },
+     "retardo1_costo_base": {
+      "anual": 0.026423576311000785,
+      "sharpe": 0.3018098635466954,
+      "caida_max": 0.14792856763847706,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 1056,
+      "centavos_por_oper": 23.20920036275443,
+      "total_centavos_por_100": 790.6101800989896,
+      "frac_larga": 0.6687344913151365,
+      "frac_corta": 0.33126550868486354,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.507829211944896
+     }
+    },
+    "b2_reversion": {
+     "costo0": {
+      "anual": -0.08213264442922855,
+      "sharpe": -0.9679983950530626,
+      "caida_max": 0.26981624765245116,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 4559,
+      "centavos_por_oper": -16.71008706734619,
+      "total_centavos_por_100": -2457.460869033267,
+      "frac_larga": 0.4651749807478395,
+      "frac_corta": 0.5348250192521605,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.49105844100282364
+     },
+     "costo_base": {
+      "anual": -0.16933753875625848,
+      "sharpe": -1.9966292950894098,
+      "caida_max": 0.42848413503684124,
+      "meses_pos": 0.43243243243243246,
+      "n_meses": 37,
+      "n_oper": 4559,
+      "centavos_por_oper": -34.45213576223543,
+      "total_centavos_por_100": -5066.686675484882,
+      "frac_larga": 0.4651749807478395,
+      "frac_corta": 0.5348250192521605,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.49105844100282364,
+      "ic_anual": {
+       "est": -0.16933753875625848,
+       "ic95": [
+        -0.2899545282143764,
+        -0.0632899954402239
+       ],
+       "ic98.75": [
+        -0.3263580335249677,
+        -0.03614470461402299
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": -0.2565424330832886,
+      "sharpe": -3.0236434582986513,
+      "caida_max": 0.5555091010014119,
+      "meses_pos": 0.21621621621621623,
+      "n_meses": 37,
+      "n_oper": 4559,
+      "centavos_por_oper": -52.19418445712464,
+      "total_centavos_por_100": -7675.9124819364915,
+      "frac_larga": 0.4651749807478395,
+      "frac_corta": 0.5348250192521605,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.49105844100282364
+     },
+     "retardo1_costo_base": {
+      "anual": -0.15732294386487694,
+      "sharpe": -1.7513168473931722,
+      "caida_max": 0.41821222527893187,
+      "meses_pos": 0.35135135135135137,
+      "n_meses": 37,
+      "n_oper": 4566,
+      "centavos_por_oper": -31.95866697517222,
+      "total_centavos_por_100": -4707.2023680205275,
+      "frac_larga": 0.46534611106357493,
+      "frac_corta": 0.5346538889364251,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.4918285274236331
+     }
+    },
+    "d_colonia": {
+     "costo0": {
+      "anual": 0.14722531855763227,
+      "sharpe": 1.0721907846803187,
+      "caida_max": 0.1169437288150198,
+      "meses_pos": 0.6216216216216216,
+      "n_meses": 37,
+      "n_oper": 1963,
+      "centavos_por_oper": 69.56562671255726,
+      "total_centavos_por_100": 4405.075007637093,
+      "frac_larga": 0.9461795157012065,
+      "frac_corta": 0.04462222982801403,
+      "frac_fuera": 0.009198254470779498,
+      "acierto_signo": 0.5151345049440822
+     },
+     "costo_base": {
+      "anual": 0.1143555658409385,
+      "sharpe": 0.8327438216434194,
+      "caida_max": 0.1367449310342288,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 1963,
+      "centavos_por_oper": 54.03429711500248,
+      "total_centavos_por_100": 3421.5911366693504,
+      "frac_larga": 0.9461795157012065,
+      "frac_corta": 0.04462222982801403,
+      "frac_fuera": 0.009198254470779498,
+      "acierto_signo": 0.5151345049440822,
+      "ic_anual": {
+       "est": 0.1143555658409385,
+       "ic95": [
+        -0.04673208710103874,
+        0.2864258504950205
+       ],
+       "ic98.75": [
+        -0.08428407714579424,
+        0.3358168530252536
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.08148581312424472,
+      "sharpe": 0.5931774803345201,
+      "caida_max": 0.15637219526401436,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 1963,
+      "centavos_por_oper": 38.50296751744771,
+      "total_centavos_por_100": 2438.107265701608,
+      "frac_larga": 0.9461795157012065,
+      "frac_corta": 0.04462222982801403,
+      "frac_fuera": 0.009198254470779498,
+      "acierto_signo": 0.5151345049440822
+     },
+     "retardo1_costo_base": {
+      "anual": 0.10655011469697656,
+      "sharpe": 0.7859037435696504,
+      "caida_max": 0.15505814647132132,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 1964,
+      "centavos_por_oper": 50.320498757943184,
+      "total_centavos_por_100": 3188.0470826000133,
+      "frac_larga": 0.9461367331222726,
+      "frac_corta": 0.04466501240694789,
+      "frac_fuera": 0.009198254470779498,
+      "acierto_signo": 0.5140550110108382
+     },
+     "frac_pisada": 0.05382048429879353,
+     "acierto_clase_al_pisar": 0.3918918918918919,
+     "base_falla_al_pisar": 0.5238473767885533,
+     "base_falla_global": 0.5222897236245401
+    },
+    "e_cuarentena": {
+     "costo0": {
+      "anual": 0.15988213112953686,
+      "sharpe": 1.0702858875668728,
+      "caida_max": 0.16248696761534442,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4783.774875859953,
+      "total_centavos_por_100": 4783.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629
+     },
+     "costo_base": {
+      "anual": 0.15938080486958994,
+      "sharpe": 1.066729519453139,
+      "caida_max": 0.1624869676153443,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4768.774875859953,
+      "total_centavos_por_100": 4768.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629,
+      "ic_anual": {
+       "est": 0.15938080486958994,
+       "ic95": [
+        -0.019939241709385703,
+        0.34740341537533703
+       ],
+       "ic98.75": [
+        -0.0634762643850531,
+        0.40046072315785064
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.15887947860964297,
+      "sharpe": 1.0631566720744479,
+      "caida_max": 0.1624869676153442,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4753.774875859953,
+      "total_centavos_por_100": 4753.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629
+     },
+     "retardo1_costo_base": {
+      "anual": 0.15938080486958994,
+      "sharpe": 1.066729519453139,
+      "caida_max": 0.1624869676153443,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 4768.774875859953,
+      "total_centavos_por_100": 4768.774875859953,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5160006845212629
+     },
+     "frac_pisada": 0.0,
+     "acierto_clase_al_pisar": null,
+     "base_falla_al_pisar": null,
+     "base_falla_global": 0.5222897236245401
+    },
+    "d_barajada": {
+     "costo0": {
+      "anual": 0.14256230909648335,
+      "sharpe": 1.0416494117265125,
+      "caida_max": 0.12040531266131471,
+      "meses_pos": 0.6216216216216216,
+      "n_meses": 37,
+      "n_oper": 2027,
+      "centavos_por_oper": 65.23542127354527,
+      "total_centavos_por_100": 4265.554803918589,
+      "frac_larga": 0.9420723881235561,
+      "frac_corta": 0.04697527166937623,
+      "frac_fuera": 0.010952340207067682,
+      "acierto_signo": 0.5145341292499351
+     },
+     "costo_base": {
+      "anual": 0.10859826357581939,
+      "sharpe": 0.7933184878500903,
+      "caida_max": 0.14045380799263274,
+      "meses_pos": 0.5945945945945946,
+      "n_meses": 37,
+      "n_oper": 2027,
+      "centavos_por_oper": 49.69373405104896,
+      "total_centavos_por_100": 3249.3289974669756,
+      "frac_larga": 0.9420723881235561,
+      "frac_corta": 0.04697527166937623,
+      "frac_fuera": 0.010952340207067682,
+      "acierto_signo": 0.5145341292499351,
+      "ic_anual": {
+       "est": 0.10859826357581939,
+       "ic95": [
+        -0.05082141376908081,
+        0.2780152269458977
+       ],
+       "ic98.75": [
+        -0.08576812463021168,
+        0.32311683577803824
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.07463421805515537,
+      "sharpe": 0.5449338619006894,
+      "caida_max": 0.16052400752009222,
+      "meses_pos": 0.4864864864864865,
+      "n_meses": 37,
+      "n_oper": 2027,
+      "centavos_por_oper": 34.15204682855267,
+      "total_centavos_por_100": 2233.1031910153633,
+      "frac_larga": 0.9420723881235561,
+      "frac_corta": 0.04697527166937623,
+      "frac_fuera": 0.010952340207067682,
+      "acierto_signo": 0.5145341292499351
+     },
+     "retardo1_costo_base": {
+      "anual": 0.10940553417378239,
+      "sharpe": 0.8095085985319567,
+      "caida_max": 0.14300087026581332,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 2029,
+      "centavos_por_oper": 50.01378730193913,
+      "total_centavos_por_100": 3273.4830463107905,
+      "frac_larga": 0.9419868229656884,
+      "frac_corta": 0.04706083682724395,
+      "frac_fuera": 0.010952340207067682,
+      "acierto_signo": 0.514750410935202
+     }
+    }
+   },
+   "colonia": {
+    "d_colonia": {
+     "nac": 42061,
+     "mue": 41861,
+     "pisadas": 6086,
+     "pisadas_ok": 2549,
+     "vivas": 200
+    },
+    "e_cuarentena": {
+     "nac": 26472,
+     "mue": 26433,
+     "pisadas": 6,
+     "pisadas_ok": 2,
+     "vivas": 39,
+     "validadas_total": 5,
+     "reversiones": 4,
+     "sombra_ok": 24399,
+     "sombra_mal": 31593,
+     "murio_sin_validar": 26432,
+     "validadas": 0,
+     "hipotesis": 39
+    },
+    "d_barajada": {
+     "nac": 41896,
+     "mue": 41696,
+     "pisadas": 6420,
+     "pisadas_ok": 2631,
+     "vivas": 200
+    }
+   },
+   "comparaciones": {
+    "d_colonia|costo0": {
+     "azar_media_anual": 0.14365111190239516,
+     "azar_p5_p95": [
+      0.12729539267776702,
+      0.16131898395647945
+     ],
+     "p_azar": 0.376,
+     "menos_mantener": {
+      "est": -0.012656812571904598,
+      "ic95": [
+       -0.04686500201143587,
+       0.0238402252467625
+      ]
+     },
+     "menos_azar": {
+      "est": 0.003574206655237093,
+      "ic95": [
+       -0.02423595218222163,
+       0.032809936416721704
+      ]
+     }
+    },
+    "d_colonia|costo_base": {
+     "azar_media_anual": 0.11081331469181932,
+     "azar_p5_p95": [
+      0.09448709285745382,
+      0.12845142123288641
+     ],
+     "p_azar": 0.38,
+     "menos_mantener": {
+      "est": -0.0450252390286514,
+      "ic95": [
+       -0.07949912886300765,
+       -0.010838461894507125
+      ],
+      "ic98.75": [
+       -0.08897214310487518,
+       -0.0012516521554123315
+      ]
+     },
+     "menos_azar": {
+      "est": 0.003542251149119193,
+      "ic95": [
+       -0.02482581230258313,
+       0.03060556672367113
+      ],
+      "ic98.75": [
+       -0.032501242399997056,
+       0.037901894305399184
+      ]
+     },
+     "sharpe_menos_mantener": {
+      "est": -0.23398569780971956,
+      "ic95": [
+       -0.4454937929727412,
+       -0.03214364386439382
+      ],
+      "ic98.75": [
+       -0.5013014123500398,
+       0.027755489902992814
+      ]
+     },
+     "sharpe_menos_azar": {
+      "est": 0.010564169656489542,
+      "ic95": [
+       -0.200041895299917,
+       0.2139765914955857
+      ],
+      "ic98.75": [
+       -0.25272684749469193,
+       0.26992217366331
+      ]
+     }
+    },
+    "d_colonia|costo_doble": {
+     "azar_media_anual": 0.07797551748124344,
+     "azar_p5_p95": [
+      0.06167879303714067,
+      0.09558328569767634
+     ],
+     "p_azar": 0.382,
+     "menos_mantener": {
+      "est": -0.07739366548539822,
+      "ic95": [
+       -0.1128109026339585,
+       -0.043717863013019054
+      ]
+     },
+     "menos_azar": {
+      "est": 0.0035102956430012704,
+      "ic95": [
+       -0.02611383593975267,
+       0.030400970036891007
+      ]
+     }
+    },
+    "e_cuarentena|costo0": {
+     "azar_media_anual": 0.1598821311295369,
+     "azar_p5_p95": [
+      0.15988213112953686,
+      0.15988213112953686
+     ],
+     "p_azar": 1.0,
+     "menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ]
+     },
+     "menos_azar": {
+      "est": 2.0553928047294264e-16,
+      "ic95": [
+       -7.418308872214195e-16,
+       1.1396763112977696e-15
+      ]
+     }
+    },
+    "e_cuarentena|costo_base": {
+     "azar_media_anual": 0.15938080486958997,
+     "azar_p5_p95": [
+      0.15938080486958994,
+      0.15938080486958994
+     ],
+     "p_azar": 1.0,
+     "menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ],
+      "ic98.75": [
+       0.0,
+       0.0
+      ]
+     },
+     "menos_azar": {
+      "est": 2.1104714254388226e-16,
+      "ic95": [
+       -7.389061943437831e-16,
+       1.1521154282486897e-15
+      ],
+      "ic98.75": [
+       -9.453694911509953e-16,
+       1.4245736475614074e-15
+      ]
+     },
+     "sharpe_menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ],
+      "ic98.75": [
+       0.0,
+       0.0
+      ]
+     },
+     "sharpe_menos_azar": {
+      "est": 1.5543122344752192e-15,
+      "ic95": [
+       -4.6629367034256575e-15,
+       7.993605777301127e-15
+      ],
+      "ic98.75": [
+       -6.439293542825908e-15,
+       9.769962616701378e-15
+      ]
+     }
+    },
+    "e_cuarentena|costo_doble": {
+     "azar_media_anual": 0.15887947860964297,
+     "azar_p5_p95": [
+      0.15887947860964297,
+      0.15887947860964297
+     ],
+     "p_azar": 1.0,
+     "menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ]
+     },
+     "menos_azar": {
+      "est": 2.2815050371153685e-16,
+      "ic95": [
+       -7.302951774169219e-16,
+       1.1848500657377363e-15
+      ]
+     }
+    },
+    "b1_momento|costo_base": {
+     "menos_mantener": {
+      "est": -0.14974782674540324,
+      "ic95": [
+       -0.3037126333439353,
+       0.0006249966439995359
+      ]
+     }
+    },
+    "b2_reversion|costo_base": {
+     "menos_mantener": {
+      "est": -0.3287183436258484,
+      "ic95": [
+       -0.5948979178461525,
+       -0.08725318854993465
+      ]
+     }
+    },
+    "d_barajada|costo_base": {
+     "menos_mantener": {
+      "est": -0.05078254129377055,
+      "ic95": [
+       -0.089395895123242,
+       -0.010092360440944286
+      ]
+     }
+    }
+   },
+   "dias": 754
+  }
+ },
+ "con_senal": {
+  "perillas": {
+   "mom": 250,
+   "rev": 5,
+   "d": {
+    "theta": 0.95,
+    "c_exist": 0.01,
+    "adaptativa": true
+   },
+   "e": {
+    "k": 2,
+    "theta": 0.8
+   }
+  },
+  "rejilla": {
+   "mom": {
+    "20": -0.20885552817581896,
+    "60": -0.09720483089056745,
+    "120": -0.06733442717288632,
+    "250": -0.04187930674730008
+   },
+   "rev": {
+    "1": -0.10187403686359568,
+    "5": 0.16185037568382102
+   },
+   "d": [
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.002,
+      "adaptativa": false
+     },
+     "anual_neto": -0.10940342559651331
+    },
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.002,
+      "adaptativa": true
+     },
+     "anual_neto": -0.11051410157446
+    },
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.01,
+      "adaptativa": false
+     },
+     "anual_neto": -0.06454274747589371
+    },
+    {
+     "perillas": {
+      "theta": 0.8,
+      "c_exist": 0.01,
+      "adaptativa": true
+     },
+     "anual_neto": -0.07513841066895346
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.002,
+      "adaptativa": false
+     },
+     "anual_neto": -0.04633099809404002
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.002,
+      "adaptativa": true
+     },
+     "anual_neto": -0.04068750815519885
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.01,
+      "adaptativa": false
+     },
+     "anual_neto": -0.030792788266019906
+    },
+    {
+     "perillas": {
+      "theta": 0.9,
+      "c_exist": 0.01,
+      "adaptativa": true
+     },
+     "anual_neto": -0.027528668651310588
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.002,
+      "adaptativa": false
+     },
+     "anual_neto": 0.028366945091620608
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.002,
+      "adaptativa": true
+     },
+     "anual_neto": 0.029000211634179617
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.01,
+      "adaptativa": false
+     },
+     "anual_neto": 0.030565425390234324
+    },
+    {
+     "perillas": {
+      "theta": 0.95,
+      "c_exist": 0.01,
+      "adaptativa": true
+     },
+     "anual_neto": 0.030869855214128872
+    }
+   ],
+   "e": [
+    {
+     "perillas": {
+      "k": 2,
+      "theta": 0.8
+     },
+     "anual_neto": 0.0658105021418441
+    },
+    {
+     "perillas": {
+      "k": 2,
+      "theta": 0.9
+     },
+     "anual_neto": 0.06495014666611483
+    },
+    {
+     "perillas": {
+      "k": 2,
+      "theta": 0.95
+     },
+     "anual_neto": 0.06570793611404739
+    },
+    {
+     "perillas": {
+      "k": 5,
+      "theta": 0.8
+     },
+     "anual_neto": 0.06570793611404739
+    },
+    {
+     "perillas": {
+      "k": 5,
+      "theta": 0.9
+     },
+     "anual_neto": 0.06570793611404739
+    },
+    {
+     "perillas": {
+      "k": 5,
+      "theta": 0.95
+     },
+     "anual_neto": 0.06570793611404739
+    },
+    {
+     "perillas": {
+      "k": 10,
+      "theta": 0.8
+     },
+     "anual_neto": 0.06570793611404739
+    },
+    {
+     "perillas": {
+      "k": 10,
+      "theta": 0.9
+     },
+     "anual_neto": 0.06570793611404739
+    },
+    {
+     "perillas": {
+      "k": 10,
+      "theta": 0.95
+     },
+     "anual_neto": 0.06570793611404739
+    }
+   ],
+   "a_mantener": 0.06570793611404739
+  },
+  "sellado_sintetico": {
+   "brazos": {
+    "a_mantener": {
+     "costo0": {
+      "anual": 0.13005343967571673,
+      "sharpe": 0.8706256902832934,
+      "caida_max": 0.14084890489222046,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3891.281488709937,
+      "total_centavos_por_100": 3891.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684
+     },
+     "costo_base": {
+      "anual": 0.12955211341576978,
+      "sharpe": 0.8670971515895755,
+      "caida_max": 0.14084890489222068,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3876.281488709937,
+      "total_centavos_por_100": 3876.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684,
+      "ic_anual": {
+       "est": 0.12955211341576978,
+       "ic95": [
+        -0.0221662303847599,
+        0.2907617956022622
+       ],
+       "ic98.75": [
+        -0.06060961842946063,
+        0.3314135008807922
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.12905078715582283,
+      "sharpe": 0.8635555495238485,
+      "caida_max": 0.14084890489222068,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3861.281488709937,
+      "total_centavos_por_100": 3861.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684
+     },
+     "retardo1_costo_base": {
+      "anual": 0.12955211341576978,
+      "sharpe": 0.8670971515895755,
+      "caida_max": 0.14084890489222068,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3876.281488709937,
+      "total_centavos_por_100": 3876.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684
+     }
+    },
+    "b1_momento": {
+     "costo0": {
+      "anual": -0.0309982657007124,
+      "sharpe": -0.35174018980882316,
+      "caida_max": 0.17213344543285325,
+      "meses_pos": 0.3783783783783784,
+      "n_meses": 37,
+      "n_oper": 788,
+      "centavos_por_oper": -36.487463867156734,
+      "total_centavos_por_100": -927.4877912038551,
+      "frac_larga": 0.7262770599811756,
+      "frac_corta": 0.27372294001882436,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.4998716522631984
+     },
+     "costo_base": {
+      "anual": -0.05063947388074148,
+      "sharpe": -0.574300485543586,
+      "caida_max": 0.19743919203569316,
+      "meses_pos": 0.3783783783783784,
+      "n_meses": 37,
+      "n_oper": 788,
+      "centavos_por_oper": -59.6067532072583,
+      "total_centavos_por_100": -1515.165210558695,
+      "frac_larga": 0.7262770599811756,
+      "frac_corta": 0.27372294001882436,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.4998716522631984,
+      "ic_anual": {
+       "est": -0.05063947388074148,
+       "ic95": [
+        -0.13656398647994544,
+        0.03468341200076079
+       ],
+       "ic98.75": [
+        -0.15875673452960418,
+        0.05762417012484869
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": -0.07028068206077057,
+      "sharpe": -0.7964859832351386,
+      "caida_max": 0.22197544736340147,
+      "meses_pos": 0.35135135135135137,
+      "n_meses": 37,
+      "n_oper": 788,
+      "centavos_por_oper": -82.72604254735978,
+      "total_centavos_por_100": -2102.8426299135326,
+      "frac_larga": 0.7262770599811756,
+      "frac_corta": 0.27372294001882436,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.4998716522631984
+     },
+     "retardo1_costo_base": {
+      "anual": -0.046730366659184085,
+      "sharpe": -0.5279551310304019,
+      "caida_max": 0.20630958948362754,
+      "meses_pos": 0.43243243243243246,
+      "n_meses": 37,
+      "n_oper": 790,
+      "centavos_por_oper": -54.86616386838305,
+      "total_centavos_por_100": -1398.2022405168584,
+      "frac_larga": 0.7259347993497048,
+      "frac_corta": 0.2740652006502952,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5002139128946693
+     }
+    },
+    "b2_reversion": {
+     "costo0": {
+      "anual": 0.21659335721097414,
+      "sharpe": 2.60147802173977,
+      "caida_max": 0.09470315249432504,
+      "meses_pos": 0.7837837837837838,
+      "n_meses": 37,
+      "n_oper": 5141,
+      "centavos_por_oper": 39.07779299507314,
+      "total_centavos_por_100": 6480.610767344226,
+      "frac_larga": 0.4682981090100111,
+      "frac_corta": 0.5317018909899889,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5199794643621117
+     },
+     "costo_base": {
+      "anual": 0.12005516948101787,
+      "sharpe": 1.4420853960594324,
+      "caida_max": 0.10120262096909038,
+      "meses_pos": 0.7297297297297297,
+      "n_meses": 37,
+      "n_oper": 5141,
+      "centavos_por_oper": 21.66036447922018,
+      "total_centavos_por_100": 3592.1268963764824,
+      "frac_larga": 0.4682981090100111,
+      "frac_corta": 0.5317018909899889,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5199794643621117,
+      "ic_anual": {
+       "est": 0.12005516948101787,
+       "ic95": [
+        0.013645456797249286,
+        0.21565404915567712
+       ],
+       "ic98.75": [
+        -0.02155931701119399,
+        0.2378723233958812
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.02351698175106148,
+      "sharpe": 0.2822433257333336,
+      "caida_max": 0.1406879332482358,
+      "meses_pos": 0.6216216216216216,
+      "n_meses": 37,
+      "n_oper": 5141,
+      "centavos_por_oper": 4.24293596336725,
+      "total_centavos_por_100": 703.6430254087429,
+      "frac_larga": 0.4682981090100111,
+      "frac_corta": 0.5317018909899889,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5199794643621117
+     },
+     "retardo1_costo_base": {
+      "anual": 0.05161971077941158,
+      "sharpe": 0.5849066954141935,
+      "caida_max": 0.15997945791987578,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 5148,
+      "centavos_por_oper": 9.300569182036817,
+      "total_centavos_por_100": 1544.4945209395332,
+      "frac_larga": 0.4684692393257466,
+      "frac_corta": 0.5315307606742534,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5128775562590913
+     }
+    },
+    "d_colonia": {
+     "costo0": {
+      "anual": 0.10648778967984325,
+      "sharpe": 0.7486142577258739,
+      "caida_max": 0.13904812901475516,
+      "meses_pos": 0.5405405405405406,
+      "n_meses": 37,
+      "n_oper": 1313,
+      "centavos_por_oper": 75.22593346077251,
+      "total_centavos_por_100": 3186.182278515945,
+      "frac_larga": 0.9662873278001198,
+      "frac_corta": 0.027594763412338495,
+      "frac_fuera": 0.006117908787541713,
+      "acierto_signo": 0.5118161077870087
+     },
+     "costo_base": {
+      "anual": 0.08455880876087346,
+      "sharpe": 0.5945073448513974,
+      "caida_max": 0.15137143929521324,
+      "meses_pos": 0.5135135135135135,
+      "n_meses": 37,
+      "n_oper": 1313,
+      "centavos_por_oper": 59.73469202893699,
+      "total_centavos_por_100": 2530.05324625788,
+      "frac_larga": 0.9662873278001198,
+      "frac_corta": 0.027594763412338495,
+      "frac_fuera": 0.006117908787541713,
+      "acierto_signo": 0.5118161077870087,
+      "ic_anual": {
+       "est": 0.08455880876087346,
+       "ic95": [
+        -0.05938544478680579,
+        0.23873152347754115
+       ],
+       "ic98.75": [
+        -0.09508387001895112,
+        0.28242934211252524
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.06262982784190368,
+      "sharpe": 0.4402957030456843,
+      "caida_max": 0.16352175613151054,
+      "meses_pos": 0.4864864864864865,
+      "n_meses": 37,
+      "n_oper": 1313,
+      "centavos_por_oper": 44.24345059710152,
+      "total_centavos_por_100": 1873.9242139998162,
+      "frac_larga": 0.9662873278001198,
+      "frac_corta": 0.027594763412338495,
+      "frac_fuera": 0.006117908787541713,
+      "acierto_signo": 0.5118161077870087
+     },
+     "retardo1_costo_base": {
+      "anual": 0.09134813097883389,
+      "sharpe": 0.6485424858517734,
+      "caida_max": 0.1389698377361004,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 1314,
+      "centavos_por_oper": 64.48174764741317,
+      "total_centavos_por_100": 2733.194077700029,
+      "frac_larga": 0.966244545221186,
+      "frac_corta": 0.027637545991272355,
+      "frac_fuera": 0.006117908787541713,
+      "acierto_signo": 0.5123757048771038
+     },
+     "frac_pisada": 0.03371267219988021,
+     "acierto_clase_al_pisar": 0.3629441624365482,
+     "base_falla_al_pisar": 0.5038071065989848,
+     "base_falla_global": 0.5257978950971165
+    },
+    "e_cuarentena": {
+     "costo0": {
+      "anual": 0.13005343967571673,
+      "sharpe": 0.8706256902832934,
+      "caida_max": 0.14084890489222046,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3891.281488709937,
+      "total_centavos_por_100": 3891.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684
+     },
+     "costo_base": {
+      "anual": 0.12955211341576978,
+      "sharpe": 0.8670971515895755,
+      "caida_max": 0.14084890489222068,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3876.281488709937,
+      "total_centavos_por_100": 3876.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684,
+      "ic_anual": {
+       "est": 0.12955211341576978,
+       "ic95": [
+        -0.0221662303847599,
+        0.2907617956022622
+       ],
+       "ic98.75": [
+        -0.06060961842946063,
+        0.3314135008807922
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.12905078715582283,
+      "sharpe": 0.8635555495238485,
+      "caida_max": 0.14084890489222068,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3861.281488709937,
+      "total_centavos_por_100": 3861.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684
+     },
+     "retardo1_costo_base": {
+      "anual": 0.12955211341576978,
+      "sharpe": 0.8670971515895755,
+      "caida_max": 0.14084890489222068,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 31,
+      "centavos_por_oper": 3876.281488709937,
+      "total_centavos_por_100": 3876.281488709937,
+      "frac_larga": 1.0,
+      "frac_corta": 0.0,
+      "frac_fuera": 0.0,
+      "acierto_signo": 0.5137332078377684
+     },
+     "frac_pisada": 0.0,
+     "acierto_clase_al_pisar": null,
+     "base_falla_al_pisar": null,
+     "base_falla_global": 0.5257978950971165
+    },
+    "d_barajada": {
+     "costo0": {
+      "anual": 0.10151873023822346,
+      "sharpe": 0.715141131444619,
+      "caida_max": 0.1450390591646168,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 1352,
+      "centavos_por_oper": 69.6469310776579,
+      "total_centavos_por_100": 3037.5048650643052,
+      "frac_larga": 0.963805938221956,
+      "frac_corta": 0.028322067254214083,
+      "frac_fuera": 0.007871994523829896,
+      "acierto_signo": 0.5114704614057783
+     },
+     "costo_base": {
+      "anual": 0.07894072048379548,
+      "sharpe": 0.5561057511455952,
+      "caida_max": 0.15812107347404913,
+      "meses_pos": 0.5135135135135135,
+      "n_meses": 37,
+      "n_oper": 1352,
+      "centavos_por_oper": 54.15728610724368,
+      "total_centavos_por_100": 2361.9564779675306,
+      "frac_larga": 0.963805938221956,
+      "frac_corta": 0.028322067254214083,
+      "frac_fuera": 0.007871994523829896,
+      "acierto_signo": 0.5114704614057783,
+      "ic_anual": {
+       "est": 0.07894072048379548,
+       "ic95": [
+        -0.06639711757708971,
+        0.23439708679424712
+       ],
+       "ic98.75": [
+        -0.09986124673475831,
+        0.27592668804371706
+       ]
+      }
+     },
+     "costo_doble": {
+      "anual": 0.05636271072936748,
+      "sharpe": 0.3969854369105352,
+      "caida_max": 0.1743532419067898,
+      "meses_pos": 0.5135135135135135,
+      "n_meses": 37,
+      "n_oper": 1352,
+      "centavos_por_oper": 38.667641136829474,
+      "total_centavos_por_100": 1686.4080908707565,
+      "frac_larga": 0.963805938221956,
+      "frac_corta": 0.028322067254214083,
+      "frac_fuera": 0.007871994523829896,
+      "acierto_signo": 0.5114704614057783
+     },
+     "retardo1_costo_base": {
+      "anual": 0.0943596324679564,
+      "sharpe": 0.6724261974597279,
+      "caida_max": 0.13681830939162887,
+      "meses_pos": 0.5675675675675675,
+      "n_meses": 37,
+      "n_oper": 1353,
+      "centavos_por_oper": 64.68758576784138,
+      "total_centavos_por_100": 2823.3001143190127,
+      "frac_larga": 0.9637631556430222,
+      "frac_corta": 0.02836484983314794,
+      "frac_fuera": 0.007871994523829896,
+      "acierto_signo": 0.5130659767141009
+     }
+    }
+   },
+   "colonia": {
+    "d_colonia": {
+     "nac": 43139,
+     "mue": 43079,
+     "pisadas": 4375,
+     "pisadas_ok": 1853,
+     "vivas": 60
+    },
+    "e_cuarentena": {
+     "nac": 27001,
+     "mue": 26962,
+     "pisadas": 11,
+     "pisadas_ok": 5,
+     "vivas": 39,
+     "validadas_total": 7,
+     "reversiones": 6,
+     "sombra_ok": 23882,
+     "sombra_mal": 30679,
+     "murio_sin_validar": 26961,
+     "validadas": 0,
+     "hipotesis": 39
+    },
+    "d_barajada": {
+     "nac": 43073,
+     "mue": 43013,
+     "pisadas": 4523,
+     "pisadas_ok": 1882,
+     "vivas": 60
+    }
+   },
+   "comparaciones": {
+    "d_colonia|costo0": {
+     "azar_media_anual": 0.12215924510404079,
+     "azar_p5_p95": [
+      0.10974477956619141,
+      0.13497384555797887
+     ],
+     "p_azar": 0.984,
+     "menos_mantener": {
+      "est": -0.02356564999587347,
+      "ic95": [
+       -0.04351736908863139,
+       -0.004019465999942156
+      ]
+     },
+     "menos_azar": {
+      "est": -0.015671455424197407,
+      "ic95": [
+       -0.03327016724134915,
+       0.0014930827192593395
+      ]
+     }
+    },
+    "d_colonia|costo_base": {
+     "azar_media_anual": 0.10026267250200437,
+     "azar_p5_p95": [
+      0.08784561694597968,
+      0.11310846734776674
+     ],
+     "p_azar": 0.984,
+     "menos_mantener": {
+      "est": -0.0449933046548963,
+      "ic95": [
+       -0.06523528263488249,
+       -0.025592464043780162
+      ],
+      "ic98.75": [
+       -0.07100955892286938,
+       -0.02088548394074299
+      ]
+     },
+     "menos_azar": {
+      "est": -0.015703863741130884,
+      "ic95": [
+       -0.03414381153192948,
+       0.0016649338919166384
+      ],
+      "ic98.75": [
+       -0.03918377402904167,
+       0.004999113700219122
+      ]
+     },
+     "sharpe_menos_mantener": {
+      "est": -0.272589806738178,
+      "ic95": [
+       -0.4013468414750029,
+       -0.153282684469645
+      ],
+      "ic98.75": [
+       -0.4348119162638939,
+       -0.12837022146896096
+      ]
+     },
+     "sharpe_menos_azar": {
+      "est": -0.12020114262016168,
+      "ic95": [
+       -0.2493530174493116,
+       -0.0007109410353747337
+      ],
+      "ic98.75": [
+       -0.2799912778106898,
+       0.023343690687856574
+      ]
+     }
+    },
+    "d_colonia|costo_doble": {
+     "azar_media_anual": 0.0783660998999679,
+     "azar_p5_p95": [
+      0.06593280784184687,
+      0.09124174791591935
+     ],
+     "p_azar": 0.984,
+     "menos_mantener": {
+      "est": -0.06642095931391914,
+      "ic95": [
+       -0.08812416009024396,
+       -0.046199362665091
+      ]
+     },
+     "menos_azar": {
+      "est": -0.015736272058064167,
+      "ic95": [
+       -0.03557084447681221,
+       0.002591017515483849
+      ]
+     }
+    },
+    "e_cuarentena|costo0": {
+     "azar_media_anual": 0.1300534396757167,
+     "azar_p5_p95": [
+      0.13005343967571673,
+      0.13005343967571673
+     ],
+     "p_azar": 1.0,
+     "menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ]
+     },
+     "menos_azar": {
+      "est": 2.8724904842418877e-16,
+      "ic95": [
+       -6.708793984199004e-16,
+       1.2532788540619445e-15
+      ]
+     }
+    },
+    "e_cuarentena|costo_base": {
+     "azar_media_anual": 0.12955211341576978,
+     "azar_p5_p95": [
+      0.12955211341576978,
+      0.12955211341576978
+     ],
+     "p_azar": 1.0,
+     "menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ],
+      "ic98.75": [
+       0.0,
+       0.0
+      ]
+     },
+     "menos_azar": {
+      "est": 2.6086928797916217e-16,
+      "ic95": [
+       -6.964873900749499e-16,
+       1.2220297200387182e-15
+      ],
+      "ic98.75": [
+       -9.449925241930564e-16,
+       1.4824148478047473e-15
+      ]
+     },
+     "sharpe_menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ],
+      "ic98.75": [
+       0.0,
+       0.0
+      ]
+     },
+     "sharpe_menos_azar": {
+      "est": 1.887379141862766e-15,
+      "ic95": [
+       -4.553302179743923e-15,
+       8.215650382226158e-15
+      ],
+      "ic98.75": [
+       -6.328271240363392e-15,
+       9.880984919163893e-15
+      ]
+     }
+    },
+    "e_cuarentena|costo_doble": {
+     "azar_media_anual": 0.12905078715582283,
+     "azar_p5_p95": [
+      0.12905078715582283,
+      0.12905078715582283
+     ],
+     "p_azar": 1.0,
+     "menos_mantener": {
+      "est": 0.0,
+      "ic95": [
+       0.0,
+       0.0
+      ]
+     },
+     "menos_azar": {
+      "est": 2.660872625726839e-16,
+      "ic95": [
+       -6.952474416852133e-16,
+       1.2323352198609259e-15
+      ]
+     }
+    },
+    "b1_momento|costo_base": {
+     "menos_mantener": {
+      "est": -0.18019158729651125,
+      "ic95": [
+       -0.3178884953631405,
+       -0.05457211943202064
+      ]
+     }
+    },
+    "b2_reversion|costo_base": {
+     "menos_mantener": {
+      "est": -0.009496943934751905,
+      "ic95": [
+       -0.23855786611981977,
+       0.1943853788290738
+      ]
+     }
+    },
+    "d_barajada|costo_base": {
+     "menos_mantener": {
+      "est": -0.05061139293197429,
+      "ic95": [
+       -0.07140030627566024,
+       -0.030473927170933654
+      ]
+     }
+    }
+   },
+   "dias": 754
+  }
+ }
+}

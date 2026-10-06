@@ -1,0 +1,31 @@
+tramo ['2015-01-02', '2017-12-29'] dias 755 errores [['2008-02-01', 'AABA', 0.47966631908237756]] relleno 8
+brazo | anual c0 | anual base [IC95] | anual 2x | Sharpe | caida | meses+ | n_oper | cent/oper c0 / base / 2x | retardo1 anual | acierto signo | larga/corta/fuera
+a_mantener | +12.4 | +12.4 [+0.5, +23.8] | +12.3 | +1.03 | 13.3 | 0.72 | 31 | +3715.1 / +3700.1 / +3685.1 | +12.4 | 0.514 | 1.00/0.00/0.00
+b1_momento | +5.0 | +3.2 [-2.9, +9.4] | +1.5 | +0.58 | 11.3 | 0.61 | 602 | +76.8 / +49.7 / +22.6 | +2.9 | 0.506 | 0.69/0.31/0.00
+b2_reversion | +6.8 | -2.7 [-9.2, +4.1] | -12.1 | -0.32 | 14.0 | 0.44 | 5010 | +12.6 / -5.0 / -22.5 | -5.9 | 0.507 | 0.46/0.54/0.00
+d_colonia | +9.5 | +5.0 [-5.5, +15.2] | +0.5 | +0.48 | 15.9 | 0.61 | 2680 | +32.8 / +17.4 / +1.9 | +3.0 | 0.509 | 0.92/0.05/0.02
+    pisa 0.0786  acierto_clase_al_pisar 0.3360522022838499  base_falla_al_pisar 0.5546492659053833  base_falla_global 0.553
+e_cuarentena | +12.4 | +12.3 [+0.5, +23.8] | +12.3 | +1.03 | 13.3 | 0.72 | 35 | +3289.8 / +3274.7 / +3259.7 | +12.3 | 0.514 | 1.00/0.00/0.00
+    pisa 0.0001  acierto_clase_al_pisar 0.5  base_falla_al_pisar 0.5  base_falla_global 0.553
+f_dinero | +11.4 | +9.5 [-1.4, +20.1] | +7.7 | +0.85 | 12.5 | 0.72 | 1114 | +95.1 / +79.6 / +64.0 | +7.3 | 0.513 | 0.97/0.03/0.00
+    pisa 0.0272  acierto_clase_al_pisar 0.42229199372056514  base_falla_al_pisar 0.5494505494505495  base_falla_global 0.553
+g_dinero_cuarentena | +12.4 | +12.4 [+0.5, +23.8] | +12.3 | +1.03 | 13.3 | 0.72 | 31 | +3715.1 / +3700.1 / +3685.1 | +12.4 | 0.514 | 1.00/0.00/0.00
+    pisa 0.0000  acierto_clase_al_pisar None  base_falla_al_pisar None  base_falla_global 0.553
+d_barajada | +10.0 | +5.5 [-4.9, +15.8] | +0.9 | +0.53 | 15.9 | 0.58 | 2726 | +34.1 / +18.6 / +3.1 | +3.6 | 0.509 | 0.92/0.06/0.03
+
+d_colonia|costo0 | -mantener -2.92 IC95 [-7.68, +2.76] | -azar -1.28 IC95 [-5.62, +3.73] | azar media +10.75 p_azar 0.912
+d_colonia|costo_base | -mantener -7.34 IC95 [-12.13, -1.81] IC99.375 [-14.31, +0.96] | -azar -1.28 IC95 [-5.82, +3.67] IC99.375 [-8.01, +6.22] | azar media +6.29 p_azar 0.914
+d_colonia|costo_doble | -mantener -11.75 IC95 [-16.78, -6.31] | -azar -1.29 IC95 [-6.11, +3.66] | azar media +1.83 p_azar 0.920
+e_cuarentena|costo0 | -mantener -0.00 IC95 [-0.04, +0.03] | -azar -0.00 IC95 [-0.04, +0.03] | azar media +12.40 p_azar 0.498
+e_cuarentena|costo_base | -mantener -0.01 IC95 [-0.06, +0.03] IC99.375 [-0.08, +0.04] | -azar -0.00 IC95 [-0.04, +0.04] IC99.375 [-0.07, +0.05] | azar media +12.34 p_azar 0.500
+e_cuarentena|costo_doble | -mantener -0.02 IC95 [-0.07, +0.02] | -azar -0.00 IC95 [-0.05, +0.04] | azar media +12.28 p_azar 0.500
+f_dinero|costo0 | -mantener -0.99 IC95 [-3.08, +0.98] | -azar -0.30 IC95 [-2.16, +1.46] | azar media +11.71 p_azar 0.676
+f_dinero|costo_base | -mantener -2.81 IC95 [-5.06, -0.80] IC99.375 [-5.93, +0.01] | -azar -0.30 IC95 [-2.30, +1.50] IC99.375 [-3.17, +2.16] | azar media +9.84 p_azar 0.676
+f_dinero|costo_doble | -mantener -4.62 IC95 [-7.07, -2.54] | -azar -0.30 IC95 [-2.51, +1.64] | azar media +7.98 p_azar 0.676
+g_dinero_cuarentena|costo0 | -mantener +0.00 IC95 [+0.00, +0.00] | -azar -0.00 IC95 [-0.00, +0.00] | azar media +12.40 p_azar 1.000
+g_dinero_cuarentena|costo_base | -mantener +0.00 IC95 [+0.00, +0.00] IC99.375 [+0.00, +0.00] | -azar -0.00 IC95 [-0.00, +0.00] IC99.375 [-0.00, +0.00] | azar media +12.35 p_azar 1.000
+g_dinero_cuarentena|costo_doble | -mantener +0.00 IC95 [+0.00, +0.00] | -azar -0.00 IC95 [-0.00, +0.00] | azar media +12.30 p_azar 1.000
+b1_momento|costo_base | -mantener -9.13 IC95 [-21.09, +2.69] 
+b2_reversion|costo_base | -mantener -15.03 IC95 [-28.79, -0.84] 
+d_barajada|costo_base | -mantener -6.89 IC95 [-11.21, -2.25] 
+{"d_colonia": {"nac": 40280, "mue": 40224, "pisadas": 10053, "pisadas_ok": 4483, "vivas": 56}, "e_cuarentena": {"nac": 24750, "mue": 24733, "pisadas": 3, "pisadas_ok": 1, "vivas": 17, "validadas_total": 3, "reversiones": 2, "sombra_ok": 28735, "sombra_mal": 34991, "murio_sin_validar": 24732, "validadas": 0, "hipotesis": 17}, "f_dinero": {"nac": 7966, "mue": 7766, "validadas_total": 0, "reversiones": 0, "vivas": 200, "validadas": 0}, "g_dinero_cuarentena": {"nac": 7958, "mue": 7758, "validadas_total": 1, "reversiones": 0, "vivas": 200, "validadas": 0}, "d_barajada": {"nac": 39933, "mue": 39873, "pisadas": 10876, "pisadas_ok": 4649, "vivas": 60}}

@@ -1,0 +1,98 @@
+(1) extracción: 56/76 bien
+    MAL: En Krukoora la bandera es toda de color morado. -> {'sujeto': 'Krukoora', 'atributo': 'bandera', 'valor': 'toda de color morado'}
+    MAL: En Gekugoistán la bandera es toda de color naranja. -> {'sujeto': 'Gekugoistán', 'atributo': 'bandera', 'valor': 'toda de color naranja'}
+    MAL: La empresa Tribupuor fue fundada por el ingeniero Kugelon. -> {'sujeto': 'Tribupuor', 'atributo': 'fue fundada por', 'valor': 'ingeniero Kugelon'}
+    MAL: Por la ciudad de Nolikroburgo pasa el río Trudo. -> {'sujeto': 'río Trudo', 'atributo': 'pasa por', 'valor': 'ciudad de Nolikroburgo'}
+    MAL: Quien fundó la empresa Tribupuor fue el ingeniero Kugelon. -> {'sujeto': 'Tribupuor', 'atributo': 'fue fundado', 'valor': 'el ingeniero Kugelon'}
+    MAL: Por la ciudad de Zuboópolis pasa el río Devonel. -> {'sujeto': 'río Devonel', 'atributo': 'pasa por', 'valor': 'ciudad de Zubópolis'}
+    MAL: Quien fundó la empresa Chigresitek fue el ingeniero Tetus. -> {'sujeto': 'empresa Chigresitek', 'atributo': 'fundador', 'valor': 'ingeniero Tetus'}
+    MAL: La empresa Grechofior fue fundada por el ingeniero Gritul. -> {'sujeto': 'Grechofior', 'atributo': 'fue fundada', 'valor': 'ingeniero Gritul'}
+    MAL: La empresa Devoor fue fundada por el ingeniero Chobufe. -> {'sujeto': 'Devoor', 'atributo': 'fue fundada por', 'valor': 'ingeniero Chobufe'}
+    MAL: El ingeniero Kruble fundó la empresa Devoor. -> {'sujeto': 'empresa Devoor', 'atributo': 'fue fundada', 'valor': 'ingeniero Kruble'}
+    MAL: Quien fundó la empresa Drokrutek fue el ingeniero Fokru. -> {'sujeto': 'empresa Drokrutek', 'atributo': 'fue fundada', 'valor': 'ingeniero Fokru'}
+    MAL: La empresa Drokrutek fue fundada por el ingeniero Kozan. -> {'sujeto': 'Drokrutek', 'atributo': 'fue fundada por', 'valor': 'ingeniero Kozan'}
+    MAL: En Tovaia la bandera es toda de color morado. -> {'sujeto': 'Tovaia', 'atributo': 'bandera', 'valor': 'toda de color morado'}
+    MAL: En Blimuistán, la capital se llama Tedru. -> {'sujeto': 'Tedru', 'atributo': 'nombre de la capital', 'valor': 'Blimuistán'}
+    MAL: Por la ciudad de Mamosoburgo pasa el río Faran. -> {'sujeto': 'río Faran', 'atributo': 'pasa por', 'valor': 'ciudad de Mamosoburgo'}
+    MAL: Por la ciudad de Granoena pasa el río Sarutro. -> {'sujeto': 'río Sarutro', 'atributo': 'pasa por', 'valor': 'ciudad de Granoena'}
+    MAL: Por la ciudad de Ginafiena pasa el río Sumal. -> {'sujeto': 'río Sumal', 'atributo': 'pasa por', 'valor': 'ciudad de Ginafiena'}
+    MAL: La empresa Milibloor fue fundada por el ingeniero Blegremi. -> {'sujeto': 'Milibloor', 'atributo': 'fue fundada por', 'valor': 'ingeniero Blegremi'}
+    MAL: Por la ciudad de Didradriburgo pasa el río Tenan. -> {'sujeto': 'río Tenan', 'atributo': 'pasa por', 'valor': 'ciudad de Didradriburgo'}
+    MAL: El ingeniero Gritul fundó la empresa Grechofior. -> {'sujeto': 'ingeniero Gritul', 'atributo': 'fundó', 'valor': 'Grechofior'}
+(2) ranuras: 52; mezcladas (más de un hecho): 0; hechos partidos en varias ranuras: 10
+    PARTIDO: n28 ['El río que cruza la ciudad de Granoena se llama Sarutro.', 'Por la ciudad de Granoena pasa el río Sarutro.']
+    PARTIDO: n10 ['Gotreli es el nombre del río que cruza la ciudad de Zuboópolis.', 'Por la ciudad de Zuboópolis pasa el río Devonel.', 'El río que cruza la ciudad de Zuboópolis se llama Gotreli.']
+    PARTIDO: n19 ['La empresa Tribupuor fue fundada por el ingeniero Kugelon.', 'Quien fundó la empresa Tribupuor fue el ingeniero Kugelon.']
+    PARTIDO: n34 ['El río que cruza la ciudad de Mamosoburgo se llama Grogrotos.', 'Por la ciudad de Mamosoburgo pasa el río Faran.', 'Grogrotos es el nombre del río que cruza la ciudad de Mamosoburgo.']
+    PARTIDO: n40 ['El río que cruza la ciudad de Ginafiena se llama Zecho.', 'Por la ciudad de Ginafiena pasa el río Sumal.']
+    PARTIDO: n13 ['La empresa Grechofior fue fundada por el ingeniero Gritul.', 'El ingeniero Gritul fundó la empresa Grechofior.']
+    PARTIDO: n25 ['La empresa Devoor fue fundada por el ingeniero Chobufe.', 'El ingeniero Kruble fundó la empresa Devoor.']
+    PARTIDO: n07 ['Quien fundó la empresa Drokrutek fue el ingeniero Fokru.', 'La empresa Drokrutek fue fundada por el ingeniero Kozan.']
+    PARTIDO: n12 ['En Blimuistán, la capital se llama Tedru.', 'La capital de Blimuistán es Tedru.', 'Lenili es la ciudad capital de Blimuistán.']
+    PARTIDO: n22 ['El río que cruza la ciudad de Didradriburgo se llama Tenan.', 'Por la ciudad de Didradriburgo pasa el río Tenan.', 'Tichigrul es el nombre del río que cruza la ciudad de Didradriburgo.']
+    colonia: {'celulas': 61, 'validadas': 11, 'hipotesis': 50, 'ranuras': 52, 'reversiones': 0}
+(2b) recuperación: 54/54 bien
+(3) cuerpo solo, control (sabe) vs nuevos (no puede saber):
+   control: n=12 acierta=12 dice_NO_LO_SE=0
+      ok=1 nose=0 min6=0.99 p=[0.993, 0.999, 1.0, 1.0, 1.0, 0.988, 1.0, 1.0] 'La capital de Italia es Roma.'
+      ok=1 nose=0 min6=0.71 p=[0.982, 0.71, 0.994, 1.0, 1.0, 1.0, 0.93, 0.776] '12 por 12 es igual a 144.'
+      ok=1 nose=0 min6=0.57 p=[0.768, 0.993, 1.0, 1.0, 0.997, 0.575, 1.0, 1.0] '9 más 6 es igual a 15.'
+      ok=1 nose=0 min6=0.41 p=[0.413, 1.0, 0.655, 1.0] '56.'
+      ok=1 nose=0 min6=0.62 p=[0.625, 1.0, 0.992, 0.92, 1.0, 0.999, 1.0, 1.0] 'Una semana tiene 7 días.'
+      ok=1 nose=0 min6=0.92 p=[0.915, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.858] 'La capital de Japón es Tokio.'
+      ok=1 nose=0 min6=0.53 p=[0.978, 1.0, 0.532, 1.0] '63.'
+      ok=1 nose=0 min6=0.97 p=[0.967, 0.999, 1.0, 1.0, 0.999, 1.0, 0.976, 0.998] 'La capital de Francia es París.'
+      ok=1 nose=0 min6=0.97 p=[0.972, 1.0, 0.98, 0.98, 1.0] '12 meses.'
+      ok=1 nose=0 min6=0.72 p=[0.717, 1.0, 0.932, 0.978, 1.0] '60 minutos.'
+      ok=1 nose=0 min6=0.78 p=[0.783, 0.98, 0.917, 0.996, 1.0, 0.998, 1.0] 'Tiene tres lados.'
+      ok=1 nose=0 min6=0.97 p=[0.966, 0.999, 1.0, 1.0, 1.0, 1.0, 0.998, 0.992] 'La capital de Alemania es Berlín.'
+   nuevos : n=42 acierta=0 dice_NO_LO_SE=42
+      ok=0 nose=1 min6=0.83 p=[0.829, 0.992, 0.999, 0.972, 0.986, 0.98] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.88 p=[0.88, 0.992, 0.999, 0.982, 0.978, 0.984] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.40 p=[0.4, 0.654, 0.993, 0.992, 0.991] 'No lo sé.'
+      ok=0 nose=1 min6=0.41 p=[0.408, 0.431, 0.99, 0.992, 0.994] 'No lo sé.'
+      ok=0 nose=1 min6=0.48 p=[0.479, 0.488, 0.99, 0.991, 0.993] 'No lo sé.'
+      ok=0 nose=1 min6=0.89 p=[0.887, 0.997, 1.0, 0.981, 0.972, 0.994] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.43 p=[0.433, 0.599, 0.993, 0.995, 0.994] 'No lo sé.'
+      ok=0 nose=1 min6=0.80 p=[0.798, 0.992, 0.999, 0.978, 0.976, 0.986] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.33 p=[0.334, 0.824, 0.993, 0.993, 0.993] 'No lo sé.'
+      ok=0 nose=1 min6=0.91 p=[0.914, 0.996, 1.0, 0.985, 0.99, 0.996] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.57 p=[0.566, 0.997, 0.999, 0.98, 0.957, 0.993] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.74 p=[0.741, 0.993, 0.999, 0.975, 0.986, 0.989] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.47 p=[0.468, 0.997, 0.999, 0.982, 0.935, 0.99] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.39 p=[0.524, 0.385, 0.989, 0.991, 0.992] 'No lo sé.'
+      ok=0 nose=1 min6=0.67 p=[0.668, 0.997, 0.999, 0.987, 0.93, 0.994] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.92 p=[0.922, 0.997, 1.0, 0.978, 0.971, 0.996] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.40 p=[0.53, 0.4, 0.992, 0.991, 0.991] 'No lo sé.'
+      ok=0 nose=1 min6=0.40 p=[0.4, 0.525, 0.991, 0.994, 0.989] 'No lo sé.'
+      ok=0 nose=1 min6=0.56 p=[0.56, 0.995, 0.999, 0.983, 0.972, 0.988] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.43 p=[0.433, 0.994, 0.998, 0.983, 0.974, 0.991] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.77 p=[0.767, 0.993, 0.999, 0.978, 0.975, 0.987] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.89 p=[0.889, 0.996, 1.0, 0.983, 0.962, 0.994] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.58 p=[0.58, 0.997, 0.999, 0.982, 0.904, 0.993] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.54 p=[0.537, 0.66, 0.994, 0.993, 0.992] 'No lo sé.'
+      ok=0 nose=1 min6=0.54 p=[0.54, 0.997, 0.999, 0.975, 0.967, 0.99] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.74 p=[0.739, 0.992, 0.999, 0.979, 0.984, 0.989] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.91 p=[0.907, 0.996, 1.0, 0.98, 0.973, 0.995] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.67 p=[0.669, 0.995, 0.998, 0.979, 0.974, 0.987] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.91 p=[0.908, 0.997, 1.0, 0.98, 0.975, 0.995] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.38 p=[0.377, 0.625, 0.992, 0.995, 0.993] 'No lo sé.'
+      ok=0 nose=1 min6=0.91 p=[0.91, 0.996, 1.0, 0.986, 0.973, 0.995] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.37 p=[0.368, 0.698, 0.994, 0.997, 0.994] 'No lo sé.'
+      ok=0 nose=1 min6=0.52 p=[0.521, 0.997, 0.999, 0.984, 0.942, 0.991] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.67 p=[0.669, 0.997, 0.999, 0.983, 0.914, 0.992] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.45 p=[0.451, 0.995, 0.999, 0.977, 0.95, 0.984] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.73 p=[0.729, 0.995, 0.999, 0.981, 0.983, 0.99] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.66 p=[0.655, 0.993, 0.999, 0.983, 0.965, 0.985] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.78 p=[0.78, 0.995, 0.998, 0.985, 0.981, 0.988] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.44 p=[0.438, 0.456, 0.993, 0.99, 0.992] 'No lo sé.'
+      ok=0 nose=1 min6=0.79 p=[0.789, 0.994, 0.998, 0.977, 0.968, 0.989] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.69 p=[0.69, 0.994, 0.999, 0.983, 0.972, 0.988] 'NO LO SÉ.'
+      ok=0 nose=1 min6=0.80 p=[0.801, 0.994, 0.999, 0.984, 0.983, 0.99] 'NO LO SÉ.'
+   tau=0.3: control que pasa 12/12 (aciertos 12); nuevos que pasan (inventa) 0/42
+   tau=0.4: control que pasa 12/12 (aciertos 12); nuevos que pasan (inventa) 0/42
+   tau=0.5: control que pasa 11/12 (aciertos 11); nuevos que pasan (inventa) 0/42
+   tau=0.6: control que pasa 9/12 (aciertos 9); nuevos que pasan (inventa) 0/42
+   tau=0.7: control que pasa 8/12 (aciertos 8); nuevos que pasan (inventa) 0/42
+   tau=0.8: control que pasa 5/12 (aciertos 5); nuevos que pasan (inventa) 0/42
+llamadas 130 de caché 0

@@ -2,6 +2,8 @@
 
 # ESTADO: una página que se reescribe en cada cierre (skill `/juaco-cierre`)
 
+> **Nota del cierre del 5-oct-2026 (~22:50), sin reescritura completa:** tronco sin cambios (v14.3). La jornada fue exploratoria (`exploratorio/investigacion_20261005/`): Frankenstein v0 FUNCIONA como muestra; reflejo de clic MODESTO; valores NO; OpenEvolve auditado sin examen. Perillas del muro sigue aparcada (ERR-193). Rama `main`. Detalle en HANDOFF "5-oct-2026 (cierre ~22:50)".
+
 > Última reescritura: **1-oct-2026, ~15:00** (cierre de la jornada del 1-oct, antes del apagado de las 16:00), por el coordinador. Rama `organelos`, todo commiteado y empujado (cierre del 1-oct). Lo exploratorio vive aparte en `exploratorio/` (ver su `LEEME.md`).
 > Sin merge a `main` (lo decide el director). Detalle en `REGISTRO_etapas_1_2.md` ("Jornada del 1-oct-2026") y en `experimentos/organelos/escalera/ESCALERA.md`.
 
