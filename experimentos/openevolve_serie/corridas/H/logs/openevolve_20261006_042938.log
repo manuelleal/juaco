@@ -145,3 +145,18 @@
 2026-10-06 05:40:47,709 - openevolve.database - INFO - Saved database with 20 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_20
 2026-10-06 05:40:47,719 - openevolve.controller - INFO - Saved best program at checkpoint 20 with metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
 2026-10-06 05:40:47,719 - openevolve.controller - INFO - Saved checkpoint at iteration 20 to /home/user/juaco/experimentos/openevolve_serie/corridas/H/checkpoints/checkpoint_20
+2026-10-06 05:42:25,766 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 05:42:25,768 - openevolve.process_parallel - WARNING - Iteration 21 error: None of the 1 SEARCH block(s) matched the parent program
+2026-10-06 05:45:04,271 - openevolve.evaluator - INFO - Evaluated program 2c151bcd-58d0-44d0-880b-3d9d1681e223 in 54.32s: combined_score=0.0905, etapa=2.0000, vida_med=1526.0000, persisten_frac=0.3333, sin_extincion_frac=0.3333, cruzan_frac=0.0000, R0_real_med=0.5714
+2026-10-06 05:45:04,274 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 05:45:04,278 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 1, 'diversity': 1}
+2026-10-06 05:45:04,278 - openevolve.process_parallel - INFO - Iteration 22: Program 2c151bcd-58d0-44d0-880b-3d9d1681e223 (parent: 6804dfee-37d5-410c-b44b-e3c4cb40c6f4) completed in 158.51s
+2026-10-06 05:45:04,278 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0905, etapa=2.0000, vida_med=1526.0000, persisten_frac=0.3333, sin_extincion_frac=0.3333, cruzan_frac=0.0000, R0_real_med=0.5714
+2026-10-06 05:49:17,260 - openevolve.evaluator - INFO - Evaluated program fb44a381-5ff1-472f-992b-c2aaa4dc6e20 in 193.89s: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:49:17,264 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 05:49:17,264 - openevolve.process_parallel - INFO - Iteration 23: Program fb44a381-5ff1-472f-992b-c2aaa4dc6e20 (parent: 3d86ff1d-37d0-498b-8889-d21e6a55ca2f) completed in 252.99s
+2026-10-06 05:49:17,264 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:53:13,314 - openevolve.evaluator - INFO - Evaluated program d80b32f1-a2e4-4bfe-bb42-c23a4534955d in 197.81s: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 05:53:13,317 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 05:53:13,321 - openevolve.process_parallel - INFO - Iteration 24: Program d80b32f1-a2e4-4bfe-bb42-c23a4534955d (parent: 34f7cad7-3d4b-4594-85d5-0f61343812ae) completed in 236.05s
+2026-10-06 05:53:13,322 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
