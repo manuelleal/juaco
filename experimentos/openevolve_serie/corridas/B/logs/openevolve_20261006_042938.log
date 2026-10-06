@@ -49,3 +49,13 @@
 2026-10-06 04:39:15,727 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 7}
 2026-10-06 04:39:15,727 - openevolve.process_parallel - INFO - Iteration 4: Program 3af5b321-5404-4fe8-9523-7ffe66948d54 (parent: 26ddbb69-0447-4448-802f-1ad749263434) completed in 88.31s
 2026-10-06 04:39:15,728 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0811, etapa=2.0000, vida_med=12500.0000, persisten_frac=0.0000, sin_extincion_frac=0.4444, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-06 04:43:35,101 - openevolve.evaluator - INFO - Evaluated program 55a6b238-0829-4291-8f9b-93b771631b5e in 248.81s: combined_score=0.3000, etapa=3.0000, vida_med=8005.0000, persisten_frac=0.0000, sin_extincion_frac=0.7778, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-06 04:43:35,104 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 04:43:35,108 - openevolve.process_parallel - INFO - Iteration 5: Program 55a6b238-0829-4291-8f9b-93b771631b5e (parent: 01b88cc9-9848-4d77-98d9-a2841ef00523) completed in 259.38s
+2026-10-06 04:43:35,108 - openevolve.process_parallel - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=8005.0000, persisten_frac=0.0000, sin_extincion_frac=0.7778, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-06 04:43:35,108 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 5
+2026-10-06 04:43:35,110 - openevolve.database - INFO - Island Status:
+2026-10-06 04:43:35,110 - openevolve.database - INFO -  * Island 0: 6 programs, best=0.3000, avg=0.1407, diversity=133.55, gen=5 (best: 7393b884-efd3-43f5-b233-e8276c46daa0)
+2026-10-06 04:43:35,113 - openevolve.database - INFO - Saved database with 6 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/B/checkpoints/checkpoint_5
+2026-10-06 04:43:35,119 - openevolve.controller - INFO - Saved best program at checkpoint 5 with metrics: combined_score=0.3000, etapa=3.0000, vida_med=8005.0000, persisten_frac=0.0000, sin_extincion_frac=0.7778, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-06 04:43:35,120 - openevolve.controller - INFO - Saved checkpoint at iteration 5 to /home/user/juaco/experimentos/openevolve_serie/corridas/B/checkpoints/checkpoint_5
