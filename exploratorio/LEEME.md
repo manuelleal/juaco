@@ -19,3 +19,11 @@ Todo lo que hay aquí es EXPLORACIÓN: sin preregistro commiteado antes, pocas s
   - `hamburguesa/INFORME_HAMBURGUESA.md` — transformador diminuto congelado + células de memoria viva sobre su estado interno: FUNCIONA en "aprender en uso con memoria suficiente"; el "sueño" consolida.
 
 Cómo reproducir cada prototipo: un comando al final de su informe. Python + numpy, sin GPU.
+
+## Añadido el 5-oct-2026 (exploración, sin protocolo; nada se declara)
+- `documento_a_fondo/` — fuentes por sección del documento "JUACO a fondo: cada parte y cada perilla".
+- `OPENEVOLVE_para_JUACO.md` — estudio de OpenEvolve (evolución de programas guiada por un modelo de lenguaje) y cómo conectarlo a la pista y al juez.
+- `JEPA_para_Alejo.md` — estudio de JEPA y tres experimentos posibles.
+- `investigacion_20261005/decision/INFORME_DECISION.md` — modelo congelado que imagina + planificador + células que corrigen la predicción: FUNCIONA en juguete ante cambios de regla globales (0.89 del óptimo); falla con cambios regionales.
+- `investigacion_20261005/deriva/INFORME_DERIVA.md` — la célula como aprendiz en línea en las pruebas estándar de deriva de concepto: NO gana a ningún rival estándar.
+- El humo de OpenEvolve contra el juez vive fuera del repositorio (`PROYECTOS\JUACO-OPENEVOLVE\`); su informe se copiará aquí cuando termine.
