@@ -137,3 +137,29 @@ semilla.
   diseñado, de la misma clase que O1. Ni "la búsqueda lo encuentra": 1 de 3 búsquedas.
 - Datos: `examen_grande/s276001-276020/` y `examen_grande/s276021-276040/` (resumen.json, log.txt, JSON por corrida); logs
   `examen_grande_{serie,replica}.out`.
+
+## 10. DISECCIÓN de HUMO (PREREGISTRO_diseccion.md, commit antes de correr; 0 USD de modelo)
+**Bloque por la letra: RECICLA, BANCO y CAP son NECESARIAS ×2. PIZARRA: SOBRA en la serie y CONTRIBUYE en la réplica → por la regla
+del bloque vale la menor, SOBRA.** Quitada cualquiera de las tres primeras, HUMO no tiene mayoría en ninguna de 20 semillas (0–4 linajes
+que cruzan contra 79–83). Sin pizarra sigue cruzando (10/10 y 9/10), pero con menos linajes (67 y 54 contra 79 y 83).
+
+| brazo | mayoría serie / réplica | suma que cruzan | vida mediana | R0 real mediano | fundadores > 10k | mordidas malas | mundo sin nada bueno |
+|---|---|---|---|---|---|---|---|
+| HUMO | 10 / 10 | 79 / 83 | ~2 400 | 0.96 | 0 | ~9 000 | 0.24 |
+| KO_RECICLA | 0 / 0 | 0 / 0 | 600 | 0.11–0.13 | ~620 | 3 | 0.72 |
+| KO_BANCO | 0 / 0 | 0 / 0 | **100 000** | **0.0** | 0 | ~55 000 | 0.0 |
+| KO_CAP | 0 / 0 | 2 / 4 | 13 000–14 500 | 0.80–0.82 | 0 | ~8 000 | 0.02 |
+| KO_PIZARRA | 10 / 9 | 67 / 54 | ~2 400 | 0.93–0.96 | 0.5–1 | ~9 000 | 0.24 |
+
+**Cómo falla cada una (lectura de la física, no preregistrada):**
+- **Sin RECICLA**, el mundo se llena de lo malo (72 % del tiempo sin nada bueno) y colapsa como la raíz.
+- **Sin BANCO**, los cuerpos limpian también mientras incuban: son inmortales (vida = T) que **nunca se reproducen** (R0 0). Es la misma
+  falla del mejor de la réplica B (§3).
+- **Sin CAP**, llenan sólo hasta 1.25, no aguantan los 500 pasos seguidos sobre el umbral y paren poco (R0 ~0.8).
+- **El órgano que cruza el muro es entonces una DECISIÓN DE DOS MODOS**:
+  - lejos de criar: limpia lo malo para renovar el mundo;
+  - cerca de criar: llena hasta el tope, deja de limpiar y no se aleja hasta parir.
+
+  Es lo que `ESTADO.md` intuía ("el muro es decidir cuándo limpiar y cuándo comer"), ahora con las tres piezas medidas. Ninguna sirve
+  sola.
+- **La pizarra** (cultura compartida entre linajes) no es la llave. Suma linajes (descriptivo: −12 y −29 al quitarla), pero no decide.

@@ -7744,3 +7744,19 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 - **Lo que no dice:** que el organismo aprenda o evolucione (es diseño, de la clase de O1), ni que la búsqueda lo reencuentre (1 de 3;
   ERR-194).
 - Sin ERR nuevo. Siguiente libre: ERR-196.
+
+### DISECCIÓN de HUMO — 6-oct-2026, 17:11–18:45: **RECICLA, BANCO y CAP NECESARIAS ×2; PIZARRA SOBRA** (por el bloque; CONTRIBUYE en la réplica)
+> Preregistro: `experimentos/openevolve_serie/PREREGISTRO_diseccion.md`, commiteado antes de correr.
+> Semillas 277001–277020; T 100 000; fundador no limpio; 0 USD.
+- Al leer el código se corrigió la descripción de HUMO: tiene una cuarta pieza no nombrada, la cultura compartida por la pizarra.
+- **Resultado:** cualquier ablación de RECICLA, BANCO o CAP lleva a 0/20 semillas con mayoría, contra 20/20 de HUMO.
+  - Sin BANCO: inmortales sin cría (R0 0).
+  - Sin CAP: paren poco (R0 ~0.8).
+  - Sin RECICLA: colapso.
+- **El órgano del muro es una decisión de dos modos:** limpiar lejos de criar; llenar al tope y no limpiar cerca de criar.
+- **Pizarra:** 10/10 y 9/10 sin ella. Pierde linajes (67 y 54 contra 79 y 83), pero no decide.
+- **Predicciones:**
+  - RECICLA NECESARIA (p 0.65): sí.
+  - BANCO NECESARIA (p 0.10) y CAP NECESARIA (p 0.10): sorpresas.
+  - PIZARRA, mi apuesta como llave: no lo es.
+- Sin ERR nuevo. Siguiente libre: ERR-196.

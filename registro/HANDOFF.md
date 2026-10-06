@@ -1223,3 +1223,7 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
   - Gana a O1 en 11/20 y 14/20 (P2 pedía 12: falla por una semilla en la serie).
   - Linajes que cruzan: 297 contra 256.
   - Es el carro más robusto de la pista con fundador no limpio. Es diseño, no evolución del organismo.
+- **6-oct (17:11–18:45): DISECCIÓN de HUMO:** RECICLA, BANCO y CAP NECESARIAS ×2 (sin cualquiera de ellas, 0/20); PIZARRA SOBRA (suma,
+  pero no decide).
+  - El muro se cruza con una decisión de dos modos: limpiar lejos de criar, y llenar y no limpiar cerca de criar.
+  - **Paso 2 (selección desde cero) es difícil:** las tres piezas sólo pagan juntas.
