@@ -1,0 +1,31 @@
+[08:07:33] CORRE_O1_LIBRE_F2 · humo · 20261001_080733 · python 3.14.2 · pool NO (un proceso) · corre_o1_libre_f2.py d4e8aaa02114d8b4 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md f6ce2fd7cc58e7a4 · PS_UNGEN 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre_f2\datos\humo\humo_20261001_080733
+[08:07:33]   pasajes 744990-744991 (T 12000 x 2) · pruebas 744998-744998 (T 20000) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[08:07:33]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[08:07:33]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[08:07:33]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[08:07:33]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[08:07:33]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[08:07:33]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[08:07:33]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[08:07:33]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[08:07:33]   sha experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py ed631c4a4623ea11 OK
+[08:07:33]   carro O1_LIB == construye_o1_lib: True
+[08:07:33]   carro O1_LIB0 == construye_o1_lib: True
+[08:07:33]   carro O1_LIB_F2 == construye_o1_lib_f2: True · LIB_PY del runner importado -> experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py
+[08:07:44]   IDENTIDAD CORTA (salida ENTERA, N 9, s 744950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[08:08:02]   IDENTIDAD CORTA F2 (salida ENTERA + telemetria, N 9, s 744950, T 3000, mundo del bloque, sigma 0.03, colonia): O1_LIB_F2 con PS_UNGEN 0 == O1_LIB True · con PS_UNGEN 1 != True
+[08:08:53]   [   80.9s] cadena i0 lib (51.3s) aborto None cruzan por pasaje [0, 0] reloj n por gen 0.2205 eventos/cambia_0 por pasaje [(159, 19), (181, 26)]
+[08:09:43]   [  130.8s] cadena i0 neu (49.9s) aborto None cruzan por pasaje [0, 0] reloj n por gen 0.2018 eventos/cambia_0 por pasaje [(186, 22), (138, 22)]
+[08:10:24]   [  171.3s] prueba i0 o1    (40.5s) aborto None cruzan 6/9 R0 0.9 nac [8, 9, 9, 12, 9, 8, 7, 11, 10] conquista None
+[08:11:07]   [  214.1s] prueba i0 mix   (42.8s) aborto None cruzan 6/9 R0 0.9 nac [9, 9, 12, 8, 8, 9, 8, 9, 10] conquista 0.65
+[08:11:07] 
+  HUMO parte 1: 4 trabajos (2 cadenas de 2 pasajes + o1 y mix = 6 corridas) · faltan lib, neu, mixn (--humo --reanuda) · 214.1s
+[08:11:07] 
+================ LA LETRA (PREREGISTRO_o1_libre_f2.md sec. 5) -- HUMO: T corto, practica, 1 indice: NO cuenta
+[08:11:07]   validez: {'V1_completa': False, 'V2_o1_vive': True, 'V3_mundo_actua': True, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True, 'V7_un_gen': True, 'V8_reloj_un_gen': True}
+[08:11:07]   puertas: {} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5, 'R0_neu': 0.9, 'margen_R0': 0.03, 'margen_PF2': 5, 'margen_cruz': 4, 'supera': 7, 'n_max': 3.0} · EN EL UMBRAL: False · matiz None
+[08:11:07]   [letra de o1_libre, descriptivo] {'veredicto': 'NO SE LEE', 'matiz': None, 'en_umbral': False}
+[08:11:07]   [desc] relojes: {'lib': {'n_por_gen': {'mediana': 0.2205, 'min': 0.2205, 'max': 0.2205, 'por_cadena': [0.2205]}, 'eventos_equivalentes_14n': 3.09, 'fund_colonia_por_pasaje': [28.0, 49.0], 'fund_de_siembra_por_pasaje': [0.0, 9.0], 'Ne_linajes_por_pasaje': [8.53, 8.62], 'padres_distintos_por_pasaje': [9.0, 9.0], 'partos_por_pasaje': [122.0, 123.0], 'eventos_mutacion_por_pasaje': [159.0, 181.0]}, 'neu': {'n_por_gen': {'mediana': 0.2018, 'min': 0.2018, 'max': 0.2018, 'por_cadena': [0.2018]}, 'eventos_equivalentes_14n': 2.83, 'fund_colonia_por_pasaje': [54.0, 17.0], 'fund_de_siembra_por_pasaje': [0.0, 9.0], 'Ne_linajes_por_pasaje': [8.91, 8.47], 'padres_distintos_por_pasaje': [8.0, 8.0], 'partos_por_pasaje': [123.0, 112.0], 'eventos_mutacion_por_pasaje': [186.0, 138.0]}}
+[08:11:07] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre_f2\datos\humo\humo_20261001_080733\resumen.json (sha 529edcae2d4adbf3) · abortos 0 · 214.1s
+[08:11:07] VEREDICTO DE LA HUMO: HUMO (no cuenta): NO SE LEE   (en el umbral: False; regla de parada: PREREGISTRO_o1_libre_f2.md sec. 6)

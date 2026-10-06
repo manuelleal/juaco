@@ -1,0 +1,51 @@
+[08:11:07] CORRE_O1_LIBRE_F2 · humo · 20261001_081107 · python 3.14.2 · pool NO (un proceso) · corre_o1_libre_f2.py d4e8aaa02114d8b4 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md f6ce2fd7cc58e7a4 · PS_UNGEN 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre_f2\datos\humo\humo_20261001_080733
+[08:11:07]   pasajes 744990-744991 (T 12000 x 2) · pruebas 744998-744998 (T 20000) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda True
+[08:11:07]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[08:11:07]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[08:11:07]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[08:11:07]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[08:11:07]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[08:11:07]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[08:11:07]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[08:11:07]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[08:11:07]   sha experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py ed631c4a4623ea11 OK
+[08:11:07]   carro O1_LIB == construye_o1_lib: True
+[08:11:07]   carro O1_LIB0 == construye_o1_lib: True
+[08:11:07]   carro O1_LIB_F2 == construye_o1_lib_f2: True · LIB_PY del runner importado -> experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py
+[08:11:18]   IDENTIDAD CORTA (salida ENTERA, N 9, s 744950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[08:11:36]   IDENTIDAD CORTA F2 (salida ENTERA + telemetria, N 9, s 744950, T 3000, mundo del bloque, sigma 0.03, colonia): O1_LIB_F2 con PS_UNGEN 0 == O1_LIB True · con PS_UNGEN 1 != True
+[08:11:36]   [   28.8s] cadena i0 lib (51.3s) aborto None cruzan por pasaje [0, 0] reloj n por gen 0.2205 eventos/cambia_0 por pasaje [(159, 19), (181, 26)]
+[08:11:36]   [   28.8s] cadena i0 neu (49.9s) aborto None cruzan por pasaje [0, 0] reloj n por gen 0.2018 eventos/cambia_0 por pasaje [(186, 22), (138, 22)]
+[08:11:36]   [   28.8s] prueba i0 o1    (40.5s) aborto None cruzan 6/9 R0 0.9 nac [8, 9, 9, 12, 9, 8, 7, 11, 10] conquista None
+[08:11:36]   [   28.8s] prueba i0 mix   (42.8s) aborto None cruzan 6/9 R0 0.9 nac [9, 9, 12, 8, 8, 9, 8, 9, 10] conquista 0.65
+[08:12:21]   [   74.4s] prueba i0 lib   (45.6s) aborto None cruzan 6/9 R0 0.9091 nac [8, 10, 11, 8, 7, 10, 10, 12, 9] conquista None
+[08:13:09]   [  121.5s] prueba i0 neu   (47.1s) aborto None cruzan 7/9 R0 0.9167 nac [12, 11, 5, 13, 10, 11, 11, 11, 12] conquista None
+[08:13:52]   [  165.4s] prueba i0 mixn  (43.8s) aborto None cruzan 8/9 R0 0.9 nac [9, 9, 9, 9, 8, 12, 11, 9, 11] conquista -0.15
+[08:13:52] 
+================ LA LETRA (PREREGISTRO_o1_libre_f2.md sec. 5) -- HUMO: T corto, practica, 1 indice: NO cuenta
+[08:13:52]   validez: {'V1_completa': True, 'V2_o1_vive': True, 'V3_mundo_actua': True, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True, 'V7_un_gen': True, 'V8_reloj_un_gen': True}
+[08:13:52]   puertas: {'PC_conquista': True, 'PN_no_es_solo_deriva': True, 'PP_un_poder_se_prende': False, 'PF1_neutro_no_se_degrada': True, 'PF2_lib_no_bajo_o1': True} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5, 'R0_neu': 0.9, 'margen_R0': 0.03, 'margen_PF2': 5, 'margen_cruz': 4, 'supera': 7, 'n_max': 3.0} · EN EL UMBRAL: True · matiz None
+[08:13:52]   [letra de o1_libre, descriptivo] {'veredicto': 'HAY ALGO MODESTO', 'matiz': 'conquista por seleccion sin poderes (afina las perillas de O1)', 'en_umbral': True}
+[08:13:52]   [desc] conquista_por_indice: {'mix': [0.65], 'mixn': [-0.15], 'mix_gana': 1, 'mix_gana_a_mixn': 1}
+[08:13:52]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[08:13:52]   [desc] poderes_siembra_final: {'MEM': {'gana': 1, 'dif_med': 0.0036, 'lib_med': 0.0062, 'neu_med': 0.0026, 'indices_con_ambas': 1, 'se_prende': False}, 'SOC': {'gana': 0, 'dif_med': 0.0, 'lib_med': 0.0, 'neu_med': 0.0, 'indices_con_ambas': 1, 'se_prende': False}, 'RES': {'gana': 0, 'dif_med': 0.0, 'lib_med': 0.0, 'neu_med': 0.0, 'indices_con_ambas': 1, 'se_prende': False}, 'PAU': {'gana': 0, 'dif_med': -0.0003, 'lib_med': 0.0037, 'neu_med': 0.004, 'indices_con_ambas': 1, 'se_prende': False}}
+[08:13:52]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.2526, 0.2571], 'PRUEBA': [0.5, 0.499], 'PEN_OTRO': [0.342, 0.345], 'D0': [3.0, 2.9996], 'PISO': [0.2, 0.2], 'U4': [4.0, 4.0129], 'U2': [2.0, 1.9886], 'U1': [1.0, 1.0], 'XURG': [0.315, 0.3179], 'TOPE': [0.5, 0.5014], 'MEM': [0.0013, 0.0062], 'SOC': [0.0059, 0.0], 'RES': [0.0, 0.0], 'PAU': [0.0039, 0.0037]}, 'neu': {'MARGEN': [0.2536, 0.2678], 'PRUEBA': [0.5, 0.5], 'PEN_OTRO': [0.3428, 0.3458], 'D0': [3.0, 2.9993], 'PISO': [0.2026, 0.2013], 'U4': [4.0, 4.01], 'U2': [1.9934, 2.0009], 'U1': [1.0, 1.0], 'XURG': [0.3296, 0.3138], 'TOPE': [0.5, 0.5009], 'MEM': [0.0, 0.0026], 'SOC': [0.0041, 0.0], 'RES': [0.0, 0.0], 'PAU': [0.003, 0.004]}}
+[08:13:52]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0013, 0.0036], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [0.0018, 0.0], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [0.0, 0.0], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [0.0009, -0.0003], 'prende_en_pasaje': None}}
+[08:13:52]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.2571, 'neu': 0.2678, 'fabrica': 0.25, 'lib_gana_neu': 0}, 'PRUEBA': {'lib': 0.499, 'neu': 0.5, 'fabrica': 0.5, 'lib_gana_neu': 0}, 'PEN_OTRO': {'lib': 0.345, 'neu': 0.3458, 'fabrica': 0.35, 'lib_gana_neu': 0}, 'D0': {'lib': 2.9996, 'neu': 2.9993, 'fabrica': 3.0, 'lib_gana_neu': 1}, 'PISO': {'lib': 0.2, 'neu': 0.2013, 'fabrica': 0.2, 'lib_gana_neu': 0}, 'U4': {'lib': 4.0129, 'neu': 4.01, 'fabrica': 4.0, 'lib_gana_neu': 1}, 'U2': {'lib': 1.9886, 'neu': 2.0009, 'fabrica': 2.0, 'lib_gana_neu': 0}, 'U1': {'lib': 1.0, 'neu': 1.0, 'fabrica': 1.0, 'lib_gana_neu': 0}, 'XURG': {'lib': 0.3179, 'neu': 0.3138, 'fabrica': 0.3, 'lib_gana_neu': 1}, 'TOPE': {'lib': 0.5014, 'neu': 0.5009, 'fabrica': 0.5, 'lib_gana_neu': 1}}
+[08:13:52]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.0, 'ultimo': 0.5, 'aviso': False}
+[08:13:52]   [desc] suma_cruzan: {'lib': 6, 'neu': 7, 'o1': 6, 'mix': 6, 'mixn': 8}
+[08:13:52]   [desc] nac_reales_total_med: {'lib': 85.0, 'neu': 96.0, 'o1': 83.0, 'mix': 82.0, 'mixn': 87.0}
+[08:13:52]   [desc] R0_med: {'lib': 0.9091, 'neu': 0.9167, 'o1': 0.9, 'mix': 0.9, 'mixn': 0.9}
+[08:13:52]   [desc] PM_monocultivo: {'lib_gana_o1': 0, 'neu_gana_o1': 1, 'lib_gana_neu': 0, 'nac_lib_gana_o1': 1}
+[08:13:52]   [desc] mix_cruzan: {'mix': {'lib': 3, 'o1': 3}, 'mixn': {'lib': 4, 'o1': 4}}
+[08:13:52]   [desc] activaciones_prueba: {'lib': {'mem': 9245.0, 'pau': 460.0, 'soc': 0.0, 'res': 201.0, 'escr': 130.0}, 'neu': {'mem': 0.0, 'pau': 24.0, 'soc': 0.0, 'res': 604.0, 'escr': 116.0}, 'mix': {'mem': 5179.0, 'pau': 202.0, 'soc': 0.0, 'res': 0.0, 'escr': 65.0}, 'mixn': {'mem': 0.0, 'pau': 8.0, 'soc': 0.0, 'res': 0.0, 'escr': 61.0}}
+[08:13:52]   [desc] partos_por_pasaje: {'lib': [122.0, 123.0], 'neu': [123.0, 112.0]}
+[08:13:52]   [desc] mixtas_por_lado: {'mix': {'conquista': 0.65, 'dif_partos': 0.75, 'dif_muertes': 0.65, 'dif_fund': 0.0}, 'mixn': {'conquista': -0.15, 'dif_partos': -0.05, 'dif_muertes': -0.15, 'dif_fund': 0.0}}
+[08:13:52]   [desc] activaciones_cadena_lib_ultimo: {'mem': 6978.0, 'pau': 211.0, 'soc': 0.0, 'res': 0.0, 'escr': 123.0}
+[08:13:52]   [desc] mundo_AC: {'lib': 2.8419, 'neu': 3.0527, 'o1': 3.8512, 'mix': 2.8537, 'mixn': 2.4613}
+[08:13:52]   [desc] frac_en_parche_med: {'lib': 0.1737, 'neu': 0.1495, 'o1': 0.146, 'mix': 0.1707, 'mixn': 0.148}
+[08:13:52]   [desc] relojes: {'lib': {'n_por_gen': {'mediana': 0.2205, 'min': 0.2205, 'max': 0.2205, 'por_cadena': [0.2205]}, 'eventos_equivalentes_14n': 3.09, 'fund_colonia_por_pasaje': [28.0, 49.0], 'fund_de_siembra_por_pasaje': [0.0, 9.0], 'Ne_linajes_por_pasaje': [8.53, 8.62], 'padres_distintos_por_pasaje': [9.0, 9.0], 'partos_por_pasaje': [122.0, 123.0], 'eventos_mutacion_por_pasaje': [159.0, 181.0]}, 'neu': {'n_por_gen': {'mediana': 0.2018, 'min': 0.2018, 'max': 0.2018, 'por_cadena': [0.2018]}, 'eventos_equivalentes_14n': 2.83, 'fund_colonia_por_pasaje': [54.0, 17.0], 'fund_de_siembra_por_pasaje': [0.0, 9.0], 'Ne_linajes_por_pasaje': [8.91, 8.47], 'padres_distintos_por_pasaje': [8.0, 8.0], 'partos_por_pasaje': [123.0, 112.0], 'eventos_mutacion_por_pasaje': [186.0, 138.0]}}
+[08:13:52]   [desc] F2: {'R0_neu_med': 0.9167, 'R0_o1_med': 0.9, 'R0_lib_med': 0.9091, 'cruzan_lib': 6, 'cruzan_o1': 6, 'cruzan_neu': 7, 'dif_lib_o1': 0, 'lib_supera_o1_con_margen': False, 'historico_o1_libre': {'R0_neu': [0.795, 0.62], 'cruzan_lib': [55, 39], 'cruzan_o1': [66, 69], 'cruzan_neu': [30, 32], 'n_neu': [11.87, 11.65]}, 'firma_purga': False, 'reloj_lib_sobre_neu': 1.093}
+[08:13:52] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre_f2\datos\humo\humo_20261001_080733\resumen.json (sha 8cfd3b4ee69ae0ed) · abortos 0 · 165.4s
+[08:13:52] VEREDICTO DE LA HUMO: HUMO (no cuenta): FUNCIONA   (en el umbral: True; regla de parada: PREREGISTRO_o1_libre_f2.md sec. 6)

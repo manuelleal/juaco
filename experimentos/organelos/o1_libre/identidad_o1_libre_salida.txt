@@ -1,0 +1,225 @@
+ARNES identidad_o1_libre.py · practica 734950-734989 · T 2000
+(K) shas, carros, identidad corta, fabrica
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+      sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+      sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+      sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+      carro O1_LIB == construye_o1_lib: True
+      carro O1_LIB0 == construye_o1_lib: True
+  OK    K1 verifica(): shas fijados y carros == construye_o1_lib
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 734950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+  OK    K2 identidad_corta() del runner
+  OK    K3 las 5 constantes de modulo de O1 == FABRICA del constructor
+  OK    K4 poderes de fabrica == 0 y clip [0, 1]
+(a) pista_libre apagada == pista (salida ENTERA)
+  OK    a1 O1 x9 s734951: pista_libre(0,0,0) == pista.run
+  OK    a1 O1 x9 s734952: pista_libre(0,0,0) == pista.run
+  OK    a2 mezcla O1/V143 s734953: pista_libre(0,0,0) == pista.run
+  OK    a3 FABRICA compat=1 (el ancla del monolito): pista_libre(0,0,0) == pista.run, rng del mundo incluido
+(b) O1_LIB == O1 con todo en fabrica
+  OK    b1 O1_LIB0 (PASAJE 0) == O1
+  OK    b2 O1_LIB sigma 0, SIEMBRA None, PS_ESCRIBE 0 == O1
+  OK    b3 O1_LIB sigma 0, SIEMBRA de fabrica == O1
+  OK    b4 en pista_libre (mundo prendido): O1_LIB sigma 0 fabrica == O1
+  OK    b5 O1_LIB0 == O1 en pista_libre
+  OK    b6 con COLONIZACION (PS_COLONIZA 1), sigma 0 y fabrica == O1 en pista_libre (colonizar no cambia decisiones)
+(c) cableado de los 10 genes de O1
+  OK    c1 O1_LIB sigma 0 con genes X == O1_MANO(X) (salida ENTERA)
+  OK    c2 ... y != O1 (los genes actuan; control que puede fallar)
+  OK    c3 idem en pista_libre
+  OK    c4 gen MARGEN solo (0.25 -> 0.31) == O1_MANO
+  OK    c4 gen PRUEBA solo (0.5 -> 0.62) == O1_MANO
+  OK    c4 gen PEN_OTRO solo (0.35 -> 0.27) == O1_MANO
+  OK    c4 gen D0 solo (3.0 -> 2.25) == O1_MANO
+  OK    c4 gen PISO solo (0.2 -> 0.26) == O1_MANO
+  OK    c4 gen U4 solo (4.0 -> 4.75) == O1_MANO
+  OK    c4 gen U2 solo (2.0 -> 1.625) == O1_MANO
+  OK    c4 gen U1 solo (1.0 -> 0.875) == O1_MANO
+  OK    c4 gen XURG solo (0.3 -> 0.36) == O1_MANO
+  OK    c4 gen TOPE solo (0.5 -> 0.58) == O1_MANO
+  OK    c5 O1_PAS de o1_evo con sha fijado c5377ada6b28bee0 (solo se lee)
+  OK    c6 O1_LIB con los 4 genes de o1_evo == O1_PAS con los mismos 4 (otro equipo, otro constructor)
+(d) neutro: PS_LEE 0
+  OK    d1 PS_LEE 0, sigma 0.03, siembra Z (poderes 0.8) == O1 (salida ENTERA)
+  OK    d2 ... y los genes igual se mueven (el fundador lleva Z + ruido, no fabrica)
+  OK    d3 ... y las activaciones de los poderes quedan en 0
+  OK    d4 idem en pista_libre (el mundo del bloque)
+  OK    d1c neutro real (PS_LEE 0, sigma 0.03, coloniza 1, pista_libre, T 3000) == O1 salida ENTERA, con refundaciones por colonia (45 de 54)
+  OK    d1d ... y publicando (PS_ESCRIBE 1, como en el bloque): la FISICA de cada linaje == O1 (solo cambian las escrituras)
+  OK    d5 con sigma 0.03 hay partos anotados con genes dentro del clip
+  OK    d6 herencia: hijo = padre + N(0, sigma_j): distinto, cada gen a <= 5 sigma_j del padre y en el clip; el parto anota al PADRE
+  OK    d7 nace: el cuerpo nuevo lleva EXACTAMENTE los genes del hijo y los LEE (PS_LEE 1)
+  OK    d8 colonizacion: refundador de OTRO linaje toma los genes del padre que pario (+ sigma), origen 2; el mismo linaje no (origen 1)
+  OK    d9 sin PS_COLONIZA, aunque haya partos de otro linaje, el refundador sale de la siembra (origen 1)
+(e) cada poder solo actua (pista_libre, sigma 0)
+  OK    e1 MEM 0.6 solo: salida != sin poderes; activaciones mem > 0; otros 0 ({'mem': 16366, 'pau': 0, 'soc': 0, 'res': 0})
+  OK    e1 SOC 0.6 solo: salida != sin poderes; activaciones soc > 0; otros 0 ({'mem': 0, 'pau': 0, 'soc': 15, 'res': 0})
+  OK    e1 RES 0.6 solo: salida != sin poderes; activaciones res > 0; otros 0 ({'mem': 0, 'pau': 0, 'soc': 0, 'res': 26536})
+  OK    e1 PAU 0.6 solo: salida != sin poderes; activaciones pau > 0; otros 0 ({'mem': 0, 'pau': 10293, 'soc': 0, 'res': 0})
+  OK    e2 PUBLICAR sin poderes: la FISICA de cada linaje == O1; la pizarra tiene entradas (O1 no escribe)
+(f) cada perilla del mundo actua
+  OK    f1 estacion sola: salida != mundo viejo y a_buena > 0 (35)
+  OK    f1 parche sola: salida != mundo viejo y mudadas > 0 (112)
+  OK    f1 quieto sola: salida != mundo viejo y quietos > 0 (2070)
+  OK    f2 estacion a T 16k convierte en los dos sentidos (a_buena 169, a_mala 93; escasez 0.3749)
+(g) regla 14: la bateria copiada campo a campo contra corre_v143.tarea
+  OK    g1 tarea_lista(9 x O1, mundo viejo) == corre_v143.tarea en 6 campos (salvo seg); difieren []
+  OK    g2 tarea('o1', mundo viejo) == corre_v143.tarea (salvo seg/tel/libre/estado); difieren []
+  OK    g3 mix indice 0: O1_LIB en [0, 2, 4, 6, 8] y O1 en las demas (['O1_LIB#0', 'O1#1', 'O1_LIB#2', 'O1#3', 'O1_LIB#4', 'O1#5', 'O1_LIB#6', 'O1#7', 'O1_LIB#8'])
+  OK    g3 mix indice 1: O1_LIB en [1, 3, 5, 7] y O1 en las demas (['O1#0', 'O1_LIB#1', 'O1#2', 'O1_LIB#3', 'O1#4', 'O1_LIB#5', 'O1#6', 'O1_LIB#7', 'O1#8'])
+  OK    g4 fila(mix): fundadores O1_LIB de siembra 6 + colonia 10 = 16, ninguno de fabrica; conquista = media nac lib - media nac o1
+(h) siembra por partos
+  OK    h1 excluye t < T/2 y a los vivos; toma los 41 partos tardios ({'partos': 42, 'tarde': 41, 'usados': 41, 'por_linaje': {'0': 1, '1': 30, '2': 10}, 'linajes': 3, 'Ne_linajes': 1.68, 'padres_distintos': 3})
+  OK    h2 pesa por partos: el linaje con 30 partos aporta mas que el de 10 (16 vs 3)
+  OK    h3 sin partos -> None
+  OK    h4 sin partos tardios la siembra cae a TODOS los partos del pasaje (0 tardios, 2 usados)
+  OK    h5 cadena sin partos en un pasaje entero (T 300): NO aborta; extinto True en el pasaje 0; 1 pasaje corrido
+  OK    h6 sus pruebas (mixn, neu) no se corren: JSON de DATO 'extinto', sin aborto; la mixn cuenta como perdida del neutro
+(i) LA LETRA en casos sinteticos (n = 10)
+  OK    i FUNCIONA: FUNCIONA (None; umbral False) == FUNCIONA (None; umbral False)
+  OK    i MODESTO conquista = deriva (PN no): HAY ALGO MODESTO (conquista, pero la deriva sola hace lo mismo; umbral False) == HAY ALGO MODESTO (conquista, pero la deriva sola hace lo mismo; umbral False)
+  OK    i MODESTO conquista sin poderes: HAY ALGO MODESTO (conquista por seleccion sin poderes (afina las perillas de O1); umbral False) == HAY ALGO MODESTO (conquista por seleccion sin poderes (afina las perillas de O1); umbral None)
+  OK    i MODESTO poder sin conquista: HAY ALGO MODESTO (un poder se prende sin conquista; umbral False) == HAY ALGO MODESTO (un poder se prende sin conquista; umbral False)
+  OK    i NO (nada): NO (None; umbral False) == NO (None; umbral None)
+  OK    i NO: poder gana 10/10 pero dif 0.04 < 0.05: NO (None; umbral True) == NO (None; umbral True)
+  OK    i NO EN EL UMBRAL: conquista 7/10: NO (None; umbral True) == NO (None; umbral True)
+  OK    i FUNCIONA EN EL UMBRAL: PC 8/10: FUNCIONA (None; umbral True) == FUNCIONA (None; umbral True)
+  OK    i ERR-160: PN 8/10 con PC 2/10 -> NO fuera del umbral: NO (None; umbral False) == NO (None; umbral False)
+  OK    i ERR-160: PN 8/10 con PC 7/10 -> NO en el umbral: NO (None; umbral True) == NO (None; umbral True)
+  OK    i ERR-160 v: neutro extinto en 2 indices -> se lee (FUNCIONA): FUNCIONA (None; umbral True) == FUNCIONA (None; umbral None)
+  OK    i ERR-160 v: neutro extinto en 3 indices -> PP 7/7 no llega a 8 -> MODESTO: HAY ALGO MODESTO (conquista por seleccion sin poderes (afina las perillas de O1); umbral True) == HAY ALGO MODESTO (conquista por seleccion sin poderes (afina las perillas de O1); umbral None)
+  OK    i R-5b: NO con carga (R0 lib 0.90 -> 0.75): NO (carga domina; NO no informa sobre poderes; umbral False) == NO (carga domina; NO no informa sobre poderes; umbral None)
+  OK    i R-5b: NO sin carga (0.90 -> 0.76): NO (None; umbral False) == NO (None; umbral None)
+  OK    i NO SE LEE: el neutro activo un poder (V6): NO SE LEE (None; umbral False) == NO SE LEE (None; umbral None)
+  OK    i NO SE LEE: O1 no vive (V2, R0 0.49): NO SE LEE (None; umbral False) == NO SE LEE (None; umbral None)
+  OK    i NO SE LEE: un fundador salio de FABRICA (V4): NO SE LEE (None; umbral False) == NO SE LEE (None; umbral None)
+(j) guardas
+  OK    j1 ['--humo', '--pool', '2'] aborta
+  OK    j1 ['--serie', '--pool', '3'] aborta
+usage: identidad_o1_libre.py [-h] (--humo | --serie | --replica |
+                             --bloque BLOQUE | --lee LEE) [--pool POOL]
+                             [--reanuda]
+identidad_o1_libre.py: error: one of the arguments --humo --serie --replica --bloque --lee is required
+  OK    j1 ['--seri'] aborta
+usage: identidad_o1_libre.py [-h] (--humo | --serie | --replica |
+                             --bloque BLOQUE | --lee LEE) [--pool POOL]
+                             [--reanuda]
+identidad_o1_libre.py: error: unrecognized arguments: --x
+  OK    j1 ['--humo', '--x'] aborta
+  OK    j2 semillas serie/replica/humo disjuntas y en 734xxx (80 + 3)
+  OK    j3 el humo cabe: proceso 1 6 corridas 88000 pasos; proceso 2 4 corridas 80000 pasos (<= 6 y <= 200 000)
+(k) ruta --serie --pool 2 con Pool FALSO de un proceso (T 3000/1500, 1 indice, 1 pasaje, semillas de practica), candado y parada
+[17:38:22] CORRE_O1_LIBRE · serie · 20260930_173822 · python 3.14.2 · pool 2 · corre_o1_libre.py 98d3a103a1fdde3b · preregistro PREREGISTRO_o1_libre.md 8c11ff9603529fa5 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\serie_i734975-734975_20260930_173822
+[17:38:22]   pasajes 734970-734970 (T 3000 x 1) · pruebas 734975-734975 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] + descriptivas ['mixA'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[17:38:22]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[17:38:22]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[17:38:22]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[17:38:22]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[17:38:22]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[17:38:22]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[17:38:22]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[17:38:22]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[17:38:22]   carro O1_LIB == construye_o1_lib: True
+[17:38:22]   carro O1_LIB0 == construye_o1_lib: True
+[17:38:33]   IDENTIDAD CORTA (salida ENTERA, N 9, s 734950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[17:38:49]   [   27.2s] cadena i0 lib (6.5s) aborto None cruzan por pasaje [0] poderes p-ultimo {'MEM': 0.0297, 'SOC': 0.0238, 'RES': 0.0235, 'PAU': 0.0078}
+[17:38:58]   [   36.5s] cadena i0 neu (6.3s) aborto None cruzan por pasaje [0] poderes p-ultimo {'MEM': 0.0148, 'SOC': 0.0083, 'RES': 0.0185, 'PAU': 0.0114}
+[17:39:04]   [   42.7s] prueba i0 o1    (2.9s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[17:39:04]   [   42.7s] prueba i0 lib   (3.2s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None activaciones {'mem': 3246, 'pau': 51, 'soc': 3, 'res': 9527, 'escr': 13}
+[17:39:04]   [   42.7s] prueba i0 mix   (3.0s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0 activaciones {'mem': 3467, 'pau': 22, 'soc': 0, 'res': 6775, 'escr': 9}
+[17:39:04]   [   42.7s] prueba i0 mixA  (3.1s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0 activaciones {'mem': 2078, 'pau': 16, 'soc': 0, 'res': 3750, 'escr': 8}
+[17:39:04]   [   42.7s] prueba i0 neu   (3.2s) aborto None cruzan 0/9 nac [1, 0, 0, 0, 0, 0, 0, 0, 0] conquista None activaciones {'mem': 3545, 'pau': 95, 'soc': 1, 'res': 7633, 'escr': 16}
+[17:39:04]   [   42.7s] prueba i0 mixn  (3.0s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 1, 0] conquista -0.25 activaciones {'mem': 1556, 'pau': 21, 'soc': 0, 'res': 5391, 'escr': 6}
+[17:39:04] 
+================ LA LETRA (PREREGISTRO_o1_libre.md sec. 6)
+[17:39:04]   validez: {'V1_completa': True, 'V2_o1_vive': False, 'V3_mundo_actua': False, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True}
+[17:39:04]   puertas: {'PC_conquista': False, 'PN_no_es_solo_deriva': True, 'PP_un_poder_se_prende': False} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5} · EN EL UMBRAL (+-1): True · matiz None
+[17:39:04]   [desc] conquista_por_indice: {'mix': [0], 'mixn': [-0.25], 'mix_gana': 0, 'mix_gana_a_mixn': 1}
+[17:39:04]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[17:39:04]   [desc] poderes_siembra_final: {'MEM': {'gana': 1, 'dif_med': 0.0149, 'lib_med': 0.0297, 'neu_med': 0.0148, 'indices_con_ambas': 1, 'se_prende': False}, 'SOC': {'gana': 1, 'dif_med': 0.0155, 'lib_med': 0.0238, 'neu_med': 0.0083, 'indices_con_ambas': 1, 'se_prende': False}, 'RES': {'gana': 1, 'dif_med': 0.005, 'lib_med': 0.0235, 'neu_med': 0.0185, 'indices_con_ambas': 1, 'se_prende': False}, 'PAU': {'gana': 0, 'dif_med': -0.0036, 'lib_med': 0.0078, 'neu_med': 0.0114, 'indices_con_ambas': 1, 'se_prende': False}}
+[17:39:04]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.263], 'PRUEBA': [0.5031], 'PEN_OTRO': [0.3531], 'D0': [3.0306], 'PISO': [0.1949], 'U4': [3.9186], 'U2': [1.9709], 'U1': [1.0096], 'XURG': [0.3201], 'TOPE': [0.5222], 'MEM': [0.0297], 'SOC': [0.0238], 'RES': [0.0235], 'PAU': [0.0078]}, 'neu': {'MARGEN': [0.2742], 'PRUEBA': [0.5105], 'PEN_OTRO': [0.3275], 'D0': [3.0361], 'PISO': [0.1923], 'U4': [3.9402], 'U2': [1.9839], 'U1': [1.0067], 'XURG': [0.312], 'TOPE': [0.5237], 'MEM': [0.0148], 'SOC': [0.0083], 'RES': [0.0185], 'PAU': [0.0114]}}
+[17:39:04]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0149], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [0.0155], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [0.005], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [-0.0036], 'prende_en_pasaje': None}}
+[17:39:04]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.263, 'neu': 0.2742, 'fabrica': 0.25, 'lib_gana_neu': 0}, 'PRUEBA': {'lib': 0.5031, 'neu': 0.5105, 'fabrica': 0.5, 'lib_gana_neu': 0}, 'PEN_OTRO': {'lib': 0.3531, 'neu': 0.3275, 'fabrica': 0.35, 'lib_gana_neu': 1}, 'D0': {'lib': 3.0306, 'neu': 3.0361, 'fabrica': 3.0, 'lib_gana_neu': 0}, 'PISO': {'lib': 0.1949, 'neu': 0.1923, 'fabrica': 0.2, 'lib_gana_neu': 1}, 'U4': {'lib': 3.9186, 'neu': 3.9402, 'fabrica': 4.0, 'lib_gana_neu': 0}, 'U2': {'lib': 1.9709, 'neu': 1.9839, 'fabrica': 2.0, 'lib_gana_neu': 0}, 'U1': {'lib': 1.0096, 'neu': 1.0067, 'fabrica': 1.0, 'lib_gana_neu': 1}, 'XURG': {'lib': 0.3201, 'neu': 0.312, 'fabrica': 0.3, 'lib_gana_neu': 1}, 'TOPE': {'lib': 0.5222, 'neu': 0.5237, 'fabrica': 0.5, 'lib_gana_neu': 0}}
+[17:39:04]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.0, 'ultimo': 0.0, 'aviso': False}
+[17:39:04]   [desc] suma_cruzan: {'lib': 0, 'neu': 0, 'o1': 0, 'mix': 0, 'mixn': 0}
+[17:39:04]   [desc] nac_reales_total_med: {'lib': 0.0, 'neu': 1.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 1.0}
+[17:39:04]   [desc] R0_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[17:39:04]   [desc] PM_monocultivo: {'lib_gana_o1': 0, 'neu_gana_o1': 0, 'lib_gana_neu': 0, 'nac_lib_gana_o1': 0}
+[17:39:04]   [desc] mix_cruzan: {'mix': {'lib': 0, 'o1': 0}, 'mixn': {'lib': 0, 'o1': 0}, 'mixA': {'lib': 0, 'o1': 0}}
+[17:39:04]   [desc] activaciones_prueba: {'lib': {'mem': 3246.0, 'pau': 51.0, 'soc': 3.0, 'res': 9527.0, 'escr': 13.0}, 'neu': {'mem': 3545.0, 'pau': 95.0, 'soc': 1.0, 'res': 7633.0, 'escr': 16.0}, 'mix': {'mem': 3467.0, 'pau': 22.0, 'soc': 0.0, 'res': 6775.0, 'escr': 9.0}, 'mixn': {'mem': 1556.0, 'pau': 21.0, 'soc': 0.0, 'res': 5391.0, 'escr': 6.0}}
+[17:39:04]   [desc] partos_por_pasaje: {'lib': [34.0], 'neu': [28.0]}
+[17:39:04]   [desc] mixtas_por_lado: {'mix': {'conquista': 0.0, 'dif_partos': 0.55, 'dif_muertes': -1.25, 'dif_fund': -1.25}, 'mixn': {'conquista': -0.25, 'dif_partos': 0.45, 'dif_muertes': -1.5, 'dif_fund': -1.25}, 'mixA': {'conquista': 0.0, 'dif_partos': 0.35, 'dif_muertes': -1.25, 'dif_fund': -1.25}}
+[17:39:04]   [desc] mixA_descriptivo: {'conquista': [0], 'mixA_gana_o1': 0, 'mix_gana_mixA': 0, 'mediana_mix_menos_mixA': 0.0}
+[17:39:04]   [desc] activaciones_cadena_lib_ultimo: {'mem': 8047.0, 'pau': 66.0, 'soc': 1.0, 'res': 8551.0, 'escr': 34.0}
+[17:39:04]   [desc] mundo_AC: {'lib': 4.954, 'neu': 5.8167, 'o1': 4.706, 'mix': 5.2866, 'mixn': 4.512}
+[17:39:04]   [desc] frac_en_parche_med: {'lib': 0.3019, 'neu': 0.2756, 'o1': 0.1446, 'mix': 0.3333, 'mixn': 0.2078}
+[17:39:04] 
+  RESUMEN C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\serie_i734975-734975_20260930_173822\resumen.json (sha 536c5719184d582a) · abortos 0 · 42.8s
+[17:39:04] VEREDICTO DE LA SERIE: NO SE LEE   (en el umbral: True; regla de parada: PREREGISTRO_o1_libre.md sec. 7)
+  OK    k1 --serie --pool 2 (Pool falso): rc 0, 2 cadenas y 6 pruebas encoladas tras su cadena, 0 abortos, resumen (NO SE LEE)
+  OK    k1b mixA (descriptivo): la siembra usada es la de lib con los 4 poderes en 0 y el resto igual
+[17:39:04] CORRE_O1_LIBRE · serie · 20260930_173904 · python 3.14.2 · pool 2 · corre_o1_libre.py 98d3a103a1fdde3b · preregistro PREREGISTRO_o1_libre.md 8c11ff9603529fa5 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\serie_i734975-734975_20260930_173904
+[17:39:04]   pasajes 734970-734970 (T 3000 x 1) · pruebas 734975-734975 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] + descriptivas ['mixA'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[17:39:04]   NO SE CORRE (candado): ya existe ..\..\..\..\AppData\Local\Temp\o1libre_pool_2q626wmb\serie_i734975-734975_20260930_173822: solo --reanuda (cortada o NO SE LEE)
+  OK    k2 candado: una segunda --serie sobre una carpeta existente (sin --reanuda) se niega (rc 1)
+[17:39:04] CORRE_O1_LIBRE · replica · 20260930_173904 · python 3.14.2 · pool 2 · corre_o1_libre.py 98d3a103a1fdde3b · preregistro PREREGISTRO_o1_libre.md 8c11ff9603529fa5 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\replica_i734985-734985_20260930_173904
+[17:39:04]   pasajes 734980-734980 (T 3000 x 1) · pruebas 734985-734985 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] + descriptivas ['mixA'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[17:39:04]   REGLA DE PARADA (sec. 7): la replica solo si la serie da FUNCIONA, MODESTO o NO EN EL UMBRAL; serie = NO SE LEE (umbral True). No se corre.
+  OK    k3 regla de parada: serie NO SE LEE (umbral True) -> replica se niega (rc 1)
+[17:39:04] CORRE_O1_LIBRE · replica · 20260930_173904 · python 3.14.2 · pool 2 · corre_o1_libre.py 98d3a103a1fdde3b · preregistro PREREGISTRO_o1_libre.md 8c11ff9603529fa5 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\replica_i734985-734985_20260930_173904
+[17:39:04]   pasajes 734980-734980 (T 3000 x 1) · pruebas 734985-734985 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] + descriptivas ['mixA'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[17:39:04]   NO SE CORRE (candado): sha_runner de la serie 0000000000000000 != runner actual
+[17:39:04] CORRE_O1_LIBRE · replica · 20260930_173904 · python 3.14.2 · pool 2 · corre_o1_libre.py 98d3a103a1fdde3b · preregistro PREREGISTRO_o1_libre.md 8c11ff9603529fa5 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\replica_i734985-734985_20260930_173904
+[17:39:04]   pasajes 734980-734980 (T 3000 x 1) · pruebas 734985-734985 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] + descriptivas ['mixA'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[17:39:04]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[17:39:04]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[17:39:04]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[17:39:04]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[17:39:04]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[17:39:04]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[17:39:04]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[17:39:04]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[17:39:04]   carro O1_LIB == construye_o1_lib: True
+[17:39:04]   carro O1_LIB0 == construye_o1_lib: True
+[17:39:15]   IDENTIDAD CORTA (salida ENTERA, N 9, s 734950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[17:39:31]   [   26.6s] cadena i0 lib (6.4s) aborto None cruzan por pasaje [0] poderes p-ultimo {'MEM': 0.0068, 'SOC': 0.0027, 'RES': 0.0132, 'PAU': 0.0122}
+[17:39:40]   [   35.9s] cadena i0 neu (6.1s) aborto None cruzan por pasaje [0] poderes p-ultimo {'MEM': 0.0043, 'SOC': 0.0027, 'RES': 0.0141, 'PAU': 0.0116}
+[17:39:46]   [   41.8s] prueba i0 o1    (3.0s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[17:39:46]   [   41.8s] prueba i0 lib   (3.2s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None activaciones {'mem': 1304, 'pau': 126, 'soc': 1, 'res': 6786, 'escr': 12}
+[17:39:46]   [   41.8s] prueba i0 mix   (3.2s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0 activaciones {'mem': 1228, 'pau': 63, 'soc': 0, 'res': 2501, 'escr': 7}
+[17:39:46]   [   41.8s] prueba i0 mixA  (2.9s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0 activaciones {'mem': 906, 'pau': 27, 'soc': 1, 'res': 0, 'escr': 7}
+[17:39:46]   [   41.8s] prueba i0 neu   (3.0s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None activaciones {'mem': 1267, 'pau': 187, 'soc': 0, 'res': 5846, 'escr': 11}
+[17:39:46]   [   41.8s] prueba i0 mixn  (2.9s) aborto None cruzan 0/9 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0 activaciones {'mem': 1110, 'pau': 30, 'soc': 0, 'res': 1751, 'escr': 6}
+[17:39:46] 
+================ LA LETRA (PREREGISTRO_o1_libre.md sec. 6)
+[17:39:46]   validez: {'V1_completa': True, 'V2_o1_vive': False, 'V3_mundo_actua': False, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True}
+[17:39:46]   puertas: {'PC_conquista': False, 'PN_no_es_solo_deriva': False, 'PP_un_poder_se_prende': False} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5} · EN EL UMBRAL (+-1): True · matiz None
+[17:39:46]   [desc] conquista_por_indice: {'mix': [0], 'mixn': [0], 'mix_gana': 0, 'mix_gana_a_mixn': 0}
+[17:39:46]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[17:39:46]   [desc] poderes_siembra_final: {'MEM': {'gana': 1, 'dif_med': 0.0025, 'lib_med': 0.0068, 'neu_med': 0.0043, 'indices_con_ambas': 1, 'se_prende': False}, 'SOC': {'gana': 0, 'dif_med': 0.0, 'lib_med': 0.0027, 'neu_med': 0.0027, 'indices_con_ambas': 1, 'se_prende': False}, 'RES': {'gana': 0, 'dif_med': -0.0009, 'lib_med': 0.0132, 'neu_med': 0.0141, 'indices_con_ambas': 1, 'se_prende': False}, 'PAU': {'gana': 1, 'dif_med': 0.0006, 'lib_med': 0.0122, 'neu_med': 0.0116, 'indices_con_ambas': 1, 'se_prende': False}}
+[17:39:46]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.2546], 'PRUEBA': [0.4884], 'PEN_OTRO': [0.3545], 'D0': [2.9836], 'PISO': [0.191], 'U4': [3.977], 'U2': [1.94], 'U1': [0.9933], 'XURG': [0.2941], 'TOPE': [0.5141], 'MEM': [0.0068], 'SOC': [0.0027], 'RES': [0.0132], 'PAU': [0.0122]}, 'neu': {'MARGEN': [0.2521], 'PRUEBA': [0.4906], 'PEN_OTRO': [0.3328], 'D0': [2.9659], 'PISO': [0.1897], 'U4': [3.9405], 'U2': [1.9367], 'U1': [0.9897], 'XURG': [0.3058], 'TOPE': [0.507], 'MEM': [0.0043], 'SOC': [0.0027], 'RES': [0.0141], 'PAU': [0.0116]}}
+[17:39:46]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0025], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [0.0], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [-0.0009], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [0.0006], 'prende_en_pasaje': None}}
+[17:39:46]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.2546, 'neu': 0.2521, 'fabrica': 0.25, 'lib_gana_neu': 1}, 'PRUEBA': {'lib': 0.4884, 'neu': 0.4906, 'fabrica': 0.5, 'lib_gana_neu': 0}, 'PEN_OTRO': {'lib': 0.3545, 'neu': 0.3328, 'fabrica': 0.35, 'lib_gana_neu': 1}, 'D0': {'lib': 2.9836, 'neu': 2.9659, 'fabrica': 3.0, 'lib_gana_neu': 1}, 'PISO': {'lib': 0.191, 'neu': 0.1897, 'fabrica': 0.2, 'lib_gana_neu': 1}, 'U4': {'lib': 3.977, 'neu': 3.9405, 'fabrica': 4.0, 'lib_gana_neu': 1}, 'U2': {'lib': 1.94, 'neu': 1.9367, 'fabrica': 2.0, 'lib_gana_neu': 1}, 'U1': {'lib': 0.9933, 'neu': 0.9897, 'fabrica': 1.0, 'lib_gana_neu': 1}, 'XURG': {'lib': 0.2941, 'neu': 0.3058, 'fabrica': 0.3, 'lib_gana_neu': 0}, 'TOPE': {'lib': 0.5141, 'neu': 0.507, 'fabrica': 0.5, 'lib_gana_neu': 1}}
+[17:39:46]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.0, 'ultimo': 0.0, 'aviso': False}
+[17:39:46]   [desc] suma_cruzan: {'lib': 0, 'neu': 0, 'o1': 0, 'mix': 0, 'mixn': 0}
+[17:39:46]   [desc] nac_reales_total_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[17:39:46]   [desc] R0_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[17:39:46]   [desc] PM_monocultivo: {'lib_gana_o1': 0, 'neu_gana_o1': 0, 'lib_gana_neu': 0, 'nac_lib_gana_o1': 0}
+[17:39:46]   [desc] mix_cruzan: {'mix': {'lib': 0, 'o1': 0}, 'mixn': {'lib': 0, 'o1': 0}, 'mixA': {'lib': 0, 'o1': 0}}
+[17:39:46]   [desc] activaciones_prueba: {'lib': {'mem': 1304.0, 'pau': 126.0, 'soc': 1.0, 'res': 6786.0, 'escr': 12.0}, 'neu': {'mem': 1267.0, 'pau': 187.0, 'soc': 0.0, 'res': 5846.0, 'escr': 11.0}, 'mix': {'mem': 1228.0, 'pau': 63.0, 'soc': 0.0, 'res': 2501.0, 'escr': 7.0}, 'mixn': {'mem': 1110.0, 'pau': 30.0, 'soc': 0.0, 'res': 1751.0, 'escr': 6.0}}
+[17:39:46]   [desc] partos_por_pasaje: {'lib': [30.0], 'neu': [26.0]}
+[17:39:46]   [desc] mixtas_por_lado: {'mix': {'conquista': 0.0, 'dif_partos': -0.1, 'dif_muertes': 0.15, 'dif_fund': 0.15}, 'mixn': {'conquista': 0.0, 'dif_partos': 0.2, 'dif_muertes': 0.55, 'dif_fund': 0.55}, 'mixA': {'conquista': 0.0, 'dif_partos': -0.1, 'dif_muertes': -0.25, 'dif_fund': -0.25}}
+[17:39:46]   [desc] mixA_descriptivo: {'conquista': [0], 'mixA_gana_o1': 0, 'mix_gana_mixA': 0, 'mediana_mix_menos_mixA': 0.0}
+[17:39:46]   [desc] activaciones_cadena_lib_ultimo: {'mem': 2682.0, 'pau': 204.0, 'soc': 3.0, 'res': 6919.0, 'escr': 30.0}
+[17:39:46]   [desc] mundo_AC: {'lib': 9.272, 'neu': 11.0746, 'o1': 9.6147, 'mix': 11.9786, 'mixn': 8.94}
+[17:39:46]   [desc] frac_en_parche_med: {'lib': 0.1937, 'neu': 0.1735, 'o1': 0.1431, 'mix': 0.1541, 'mixn': 0.1797}
+[17:39:46] 
+  RESUMEN C:\Users\User\AppData\Local\Temp\o1libre_pool_2q626wmb\replica_i734985-734985_20260930_173904\resumen.json (sha e6ef51848cd69194) · abortos 0 · 41.9s
+[17:39:46] VEREDICTO DE LA REPLICA: NO SE LEE   (en el umbral: True; regla de parada: PREREGISTRO_o1_libre.md sec. 7)
+  OK    k4 serie MODESTO con sha_runner ajeno -> la replica se niega sin crear carpeta (rc 1, []); con el sha del runner -> corre (rc 0, resumen True)
+
+ARNES PASA: 88/88 · 378.7s

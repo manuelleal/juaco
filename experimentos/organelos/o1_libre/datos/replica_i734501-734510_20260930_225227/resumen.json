@@ -1,0 +1,504 @@
+{
+ "modo": "replica",
+ "humo": false,
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_o1_vive": true,
+   "V3_mundo_actua": true,
+   "V4_siembra_actua": true,
+   "V5_perillas": true,
+   "V6_neutro_neutro": true
+  },
+  "puertas": {
+   "PC_conquista": false,
+   "PN_no_es_solo_deriva": false,
+   "PP_un_poder_se_prende": false
+  },
+  "veredicto": "NO",
+  "matiz": null,
+  "en_umbral": false,
+  "aviso_carga": false,
+  "umbrales": {
+   "gana": 8,
+   "dif_poder": 0.05,
+   "o1_R0": 0.5
+  },
+  "descriptivo": {
+   "conquista_por_indice": {
+    "mix": [
+     -7.3,
+     12.85,
+     -2.6,
+     -13.25,
+     11.7,
+     -11.25,
+     -8.7,
+     7.1,
+     -10.85,
+     12.45
+    ],
+    "mixn": [
+     0.65,
+     9.35,
+     13.75,
+     -9.2,
+     -9.6,
+     -2.35,
+     -11.4,
+     6.15,
+     18.65,
+     -9.6
+    ],
+    "mix_gana": 4,
+    "mix_gana_a_mixn": 5
+   },
+   "extinciones": {
+    "lib": {},
+    "neu": {}
+   },
+   "poderes_siembra_final": {
+    "MEM": {
+     "gana": 6,
+     "dif_med": 0.0468,
+     "lib_med": 0.1046,
+     "neu_med": 0.0578,
+     "indices_con_ambas": 10,
+     "se_prende": false
+    },
+    "SOC": {
+     "gana": 5,
+     "dif_med": 0.0146,
+     "lib_med": 0.0874,
+     "neu_med": 0.0728,
+     "indices_con_ambas": 10,
+     "se_prende": false
+    },
+    "RES": {
+     "gana": 7,
+     "dif_med": 0.0062,
+     "lib_med": 0.0693,
+     "neu_med": 0.0631,
+     "indices_con_ambas": 10,
+     "se_prende": false
+    },
+    "PAU": {
+     "gana": 4,
+     "dif_med": -0.0083,
+     "lib_med": 0.0592,
+     "neu_med": 0.0675,
+     "indices_con_ambas": 10,
+     "se_prende": false
+    }
+   },
+   "trayectoria_siembra_mediana": {
+    "lib": {
+     "MARGEN": [
+      0.2555,
+      0.2395,
+      0.2527
+     ],
+     "PRUEBA": [
+      0.4936,
+      0.4607,
+      0.4435
+     ],
+     "PEN_OTRO": [
+      0.3412,
+      0.3505,
+      0.3544
+     ],
+     "D0": [
+      2.9579,
+      2.9489,
+      3.1002
+     ],
+     "PISO": [
+      0.2303,
+      0.2639,
+      0.3266
+     ],
+     "U4": [
+      4.0231,
+      3.9999,
+      4.0461
+     ],
+     "U2": [
+      1.9994,
+      2.0065,
+      1.9896
+     ],
+     "U1": [
+      1.011,
+      1.0237,
+      1.0787
+     ],
+     "XURG": [
+      0.303,
+      0.2925,
+      0.3114
+     ],
+     "TOPE": [
+      0.5035,
+      0.4929,
+      0.479
+     ],
+     "MEM": [
+      0.0354,
+      0.0912,
+      0.1046
+     ],
+     "SOC": [
+      0.038,
+      0.0756,
+      0.0874
+     ],
+     "RES": [
+      0.0288,
+      0.0556,
+      0.0693
+     ],
+     "PAU": [
+      0.0413,
+      0.0605,
+      0.0592
+     ]
+    },
+    "neu": {
+     "MARGEN": [
+      0.2538,
+      0.2623,
+      0.2632
+     ],
+     "PRUEBA": [
+      0.5094,
+      0.4872,
+      0.4516
+     ],
+     "PEN_OTRO": [
+      0.3432,
+      0.368,
+      0.3583
+     ],
+     "D0": [
+      3.005,
+      2.9546,
+      3.011
+     ],
+     "PISO": [
+      0.2103,
+      0.1963,
+      0.1858
+     ],
+     "U4": [
+      3.9729,
+      3.9437,
+      4.0129
+     ],
+     "U2": [
+      2.013,
+      2.027,
+      2.0199
+     ],
+     "U1": [
+      1.0029,
+      0.9746,
+      0.9732
+     ],
+     "XURG": [
+      0.3058,
+      0.284,
+      0.2836
+     ],
+     "TOPE": [
+      0.507,
+      0.494,
+      0.4739
+     ],
+     "MEM": [
+      0.0312,
+      0.0507,
+      0.0578
+     ],
+     "SOC": [
+      0.0447,
+      0.0515,
+      0.0728
+     ],
+     "RES": [
+      0.033,
+      0.055,
+      0.0631
+     ],
+     "PAU": [
+      0.0294,
+      0.0561,
+      0.0675
+     ]
+    }
+   },
+   "orden_de_encendido": {
+    "MEM": {
+     "dif_por_pasaje": [
+      0.0042,
+      0.0405,
+      0.0468
+     ],
+     "prende_en_pasaje": null
+    },
+    "SOC": {
+     "dif_por_pasaje": [
+      -0.0067,
+      0.0241,
+      0.0146
+     ],
+     "prende_en_pasaje": null
+    },
+    "RES": {
+     "dif_por_pasaje": [
+      -0.0042,
+      0.0006,
+      0.0062
+     ],
+     "prende_en_pasaje": null
+    },
+    "PAU": {
+     "dif_por_pasaje": [
+      0.0119,
+      0.0044,
+      -0.0083
+     ],
+     "prende_en_pasaje": null
+    }
+   },
+   "genes_O1_final": {
+    "MARGEN": {
+     "lib": 0.2527,
+     "neu": 0.2632,
+     "fabrica": 0.25,
+     "lib_gana_neu": 8
+    },
+    "PRUEBA": {
+     "lib": 0.4435,
+     "neu": 0.4516,
+     "fabrica": 0.5,
+     "lib_gana_neu": 2
+    },
+    "PEN_OTRO": {
+     "lib": 0.3544,
+     "neu": 0.3583,
+     "fabrica": 0.35,
+     "lib_gana_neu": 5
+    },
+    "D0": {
+     "lib": 3.1002,
+     "neu": 3.011,
+     "fabrica": 3.0,
+     "lib_gana_neu": 6
+    },
+    "PISO": {
+     "lib": 0.3266,
+     "neu": 0.1858,
+     "fabrica": 0.2,
+     "lib_gana_neu": 10
+    },
+    "U4": {
+     "lib": 4.0461,
+     "neu": 4.0129,
+     "fabrica": 4.0,
+     "lib_gana_neu": 6
+    },
+    "U2": {
+     "lib": 1.9896,
+     "neu": 2.0199,
+     "fabrica": 2.0,
+     "lib_gana_neu": 3
+    },
+    "U1": {
+     "lib": 1.0787,
+     "neu": 0.9732,
+     "fabrica": 1.0,
+     "lib_gana_neu": 9
+    },
+    "XURG": {
+     "lib": 0.3114,
+     "neu": 0.2836,
+     "fabrica": 0.3,
+     "lib_gana_neu": 5
+    },
+    "TOPE": {
+     "lib": 0.479,
+     "neu": 0.4739,
+     "fabrica": 0.5,
+     "lib_gana_neu": 6
+    }
+   },
+   "carga_R0_lib_primer_vs_ultimo_pasaje": {
+    "primero": 0.9002,
+    "ultimo": 0.9741,
+    "aviso": false
+   },
+   "suma_cruzan": {
+    "lib": 39,
+    "neu": 32,
+    "o1": 69,
+    "mix": 48,
+    "mixn": 42
+   },
+   "nac_reales_total_med": {
+    "lib": 420.0,
+    "neu": 413.5,
+    "o1": 482.0,
+    "mix": 397.0,
+    "mixn": 436.5
+   },
+   "R0_med": {
+    "lib": 0.9586,
+    "neu": 0.6204,
+    "o1": 0.9811,
+    "mix": 0.9598,
+    "mixn": 0.9056
+   },
+   "PM_monocultivo": {
+    "lib_gana_o1": 1,
+    "neu_gana_o1": 0,
+    "lib_gana_neu": 6,
+    "nac_lib_gana_o1": 0
+   },
+   "mix_cruzan": {
+    "mix": {
+     "lib": 31,
+     "o1": 17
+    },
+    "mixn": {
+     "lib": 22,
+     "o1": 20
+    },
+    "mixA": {
+     "lib": 31,
+     "o1": 30
+    }
+   },
+   "activaciones_prueba": {
+    "lib": {
+     "mem": 272591.0,
+     "pau": 7636.0,
+     "soc": 75.0,
+     "res": 786973.0,
+     "escr": 522.0
+    },
+    "neu": {
+     "mem": 196260.0,
+     "pau": 12594.5,
+     "soc": 131.5,
+     "res": 772050.0,
+     "escr": 486.0
+    },
+    "mix": {
+     "mem": 151507.0,
+     "pau": 4848.5,
+     "soc": 7.5,
+     "res": 385091.0,
+     "escr": 327.5
+    },
+    "mixn": {
+     "mem": 112300.5,
+     "pau": 3502.5,
+     "soc": 30.5,
+     "res": 360868.0,
+     "escr": 298.5
+    }
+   },
+   "partos_por_pasaje": {
+    "lib": [
+     622.5,
+     560.0,
+     525.0
+    ],
+    "neu": [
+     591.5,
+     598.5,
+     584.5
+    ]
+   },
+   "mixtas_por_lado": {
+    "mix": {
+     "conquista": -4.95,
+     "dif_partos": 20.325,
+     "dif_muertes": -80.275,
+     "dif_fund": -71.0
+    },
+    "mixn": {
+     "conquista": -0.85,
+     "dif_partos": 14.05,
+     "dif_muertes": -23.45,
+     "dif_fund": -20.825
+    },
+    "mixA": {
+     "conquista": -4.1,
+     "dif_partos": 11.75,
+     "dif_muertes": -37.375,
+     "dif_fund": -29.3
+    }
+   },
+   "mixA_descriptivo": {
+    "conquista": [
+     -2.6,
+     -19.7,
+     -3.2,
+     -17.25,
+     -5,
+     -13.3,
+     -7.85,
+     -2.7,
+     -2.85,
+     -0.7
+    ],
+    "mixA_gana_o1": 0,
+    "mix_gana_mixA": 7,
+    "mediana_mix_menos_mixA": 3.025
+   },
+   "activaciones_cadena_lib_ultimo": {
+    "mem": 267527.0,
+    "pau": 13493.5,
+    "soc": 83.5,
+    "res": 678010.0,
+    "escr": 525.0
+   },
+   "mundo_AC": {
+    "lib": 2.0681,
+    "neu": 2.1924,
+    "o1": 3.1462,
+    "mix": 2.6265,
+    "mixn": 2.4927
+   },
+   "frac_en_parche_med": {
+    "lib": 0.2737,
+    "neu": 0.2396,
+    "o1": 0.1423,
+    "mix": 0.2283,
+    "mixn": 0.2131
+   }
+  }
+ },
+ "abortos": [],
+ "n": 10,
+ "npas": 3,
+ "T_pas": 100000,
+ "T_pru": 100000,
+ "veredicto": "NO",
+ "preregistro": "PREREGISTRO_o1_libre.md",
+ "sha_preregistro": "3d540723da8810b3",
+ "sha_runner": "98d3a103a1fdde3b",
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028",
+  "experimentos\\organelos\\o1_libre\\pista_libre.py": "bf538326a74af8e4",
+  "experimentos\\organelos\\o1_libre\\construye_o1_lib.py": "ec63375ee0b980d0",
+  "experimentos\\organelos\\o1_libre\\carros\\O1_LIB.py": "ff30214f59ed36d8",
+  "experimentos\\organelos\\o1_libre\\carros\\O1_LIB0.py": "7dda8b7f8448b386"
+ },
+ "seg": 13761.8
+}

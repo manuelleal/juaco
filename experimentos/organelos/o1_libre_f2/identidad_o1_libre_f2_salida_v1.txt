@@ -1,0 +1,213 @@
+ARNES identidad_o1_libre_f2.py · practica 744950-744989 · runner bb40e2a3feeffb37 · carro F2 ed631c4a4623ea11 · constructor 69991e9f48a68050
+(K) shas, carro == constructor, identidad corta
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+      sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+      sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+      sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+      sha experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py ed631c4a4623ea11 OK
+      carro O1_LIB == construye_o1_lib: True
+      carro O1_LIB0 == construye_o1_lib: True
+      carro O1_LIB_F2 == construye_o1_lib_f2: True · LIB_PY del runner importado -> experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py
+  OK    K1 verifica(): shas de o1_libre + O1_LIB_F2 == construye_o1_lib_f2 y el runner importado apunta al carro F2
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 744950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+      IDENTIDAD CORTA F2 (salida ENTERA + telemetria, N 9, s 744950, T 3000, mundo del bloque, sigma 0.03, colonia): O1_LIB_F2 con PS_UNGEN 0 == O1_LIB True · con PS_UNGEN 1 != True
+  OK    K2 identidad_corta() del runner (o1_libre con el carro F2 + F2)
+  OK    K3 el origen de las anclas es el O1_LIB de o1_libre (sha ff30214f59ed36d8) y corre_o1_libre.py es 98d3a103a1fdde3b
+  OK    K4 O1_LIB_F2 = O1_LIB + 11 lineas (4 anclas); quitando las nuevas queda el origen sin su linea 1
+  OK    K5 el carro cargado por el runner es O1_LIB_F2 y nace con PS_UNGEN 0
+(I) identidad bit a bit con PS_UNGEN 0 (salida ENTERA + telemetria) y control con PS_UNGEN 1
+  OK    I1 mundo del bloque, sigma 0.03, PS_LEE 1, publica, colonia, sin siembra, T 6000 (61 partos, 24 refundaciones por colonia): salida ENTERA ==
+  OK    I1b ... y la telemetria (_TEL: vivos, fund, partos, activaciones) ==, sin clave 'ungen'
+  OK    I2 control que puede fallar: con PS_UNGEN 1 la salida CAMBIA
+  OK    I3 con PS_UNGEN 1: eventos de mutacion (116) == partos (66) + fundadores (50); cambia_1 + cambia_0 == eventos
+  OK    I4 neutro (PS_LEE 0) con siembra Z, T 3000: PS_UNGEN 0 == O1_LIB (salida ENTERA y telemetria)
+  OK    I5 pista vieja, sin colonia ni publicar, T 2000: PS_UNGEN 0 == O1_LIB (salida ENTERA y telemetria)
+  OK    I6 con PS_UNGEN 1 el NEUTRO (PS_LEE 0) sigue siendo O1 bit a bit en el mundo del bloque (los genes no se leen)
+(U) un gen por evento (sin pista)
+  OK    U1 fundador (300 instancias desde la siembra Z, genes interiores): cambia EXACTAMENTE 1 gen (histograma [1])
+  OK    U2 4200 partos de un padre (genes interiores): cada hijo cambia EXACTAMENTE 1 gen; el padre no cambia; el parto anota al PADRE
+  OK    U3 eleccion uniforme entre los 14 genes (esperado 300 por gen, sd 16.7; conteos [294, 272, 320, 294, 283, 307, 306, 305, 323, 260, 299, 331, 293, 313])
+  OK    U4 el paso del gen mutado es N(0, sigma_j) de O1_LIB: media -0.003, sd 1.007 (z = delta / sigma_j; clip lejos)
+  OK    U5 nace: el cuerpo nuevo lleva EXACTAMENTE los genes del hijo y los LEE
+  OK    U6 desde FABRICA (poderes en 0): 3585 hijos cambian 1 gen y 615 cambian 0; los 0 son SOLO poderes clavados por el recorte en 0 (telemetria cambia_0 615; esperado ~ 4200 x 4/14 x 1/2 = 600)
+  OK    U7 la ELECCION de la entrada de siembra (self._psrng) es la misma con PS_UNGEN 1 que en O1_LIB (40 fundadores, 5 entradas; O1_LIB con sigma 0 da la entrada exacta)
+  OK    U8 con PS_UNGEN 0: los 14 genes mutan en cada parto, sin telemetria 'ungen', y los 200 hijos son IDENTICOS a los de O1_LIB de o1_libre
+(R) reloj mutacional
+  OK    R1 reloj() sobre el neutro de o1_libre serie_i734201-*: media 11.87 (auditoria F0, 10 genes: 11.87); mediana 11.47; 10 cadenas
+  OK    R1 reloj() sobre el neutro de o1_libre replica_i734501-*: media 11.65 (auditoria F0, 10 genes: 11.65); mediana 12.03; 10 cadenas
+  OK    R2 sintetico: todos los genes a 2 sigma_j de fabrica -> n = 4; siembra de fabrica -> 0; None -> None
+  OK    R3 simulacion: 12 eventos de UN gen por evento -> n por gen = 0.866 (esperado 12/14 = 0.857)
+(G) regla 14: lo importado sigue siendo lo de o1_libre
+  OK    G1 tarea('o1', mundo viejo) (redirigida) == corre_v143.tarea campo a campo en 5 campos (salvo seg/tel/libre/estado); difieren []; estado sin 'ungen'
+  OK    G2 fila() redirigida == fila() de o1_libre + la clave 'ungen' (17 eventos); estado: carro O1_LIB, ungen 1, sha del carro F2
+  OK    G3 mixA NO se corre: DESCRIPTIVAS vacio, TODAS == PRUEBAS == las 5 de la letra; N_IND 10, NPAS 3, T 100k, N_SIEMBRA 90, sigma 0.03, mundo del bloque (iguales a o1_libre)
+(L) LA LETRA de F2 en casos sinteticos (n = 10)
+  OK    L FUNCIONA: PF1, PF2 (77 vs 70), PC y PN: FUNCIONA (None; umbral False)
+  OK    L FUNCIONA sin PP (los poderes NO se exigen en F2): FUNCIONA (None; umbral False)
+  OK    L FUNCIONA con empate en cruces (70 vs 70): PF2 pasa, en el umbral: FUNCIONA (None; umbral True)
+  OK    L MODESTO: carga quitada sin conquista: HAY ALGO MODESTO (sin la carga el deficit de lib frente a O1 desaparece; lib NO conquista (nulo de PF2 ~0.5: no se cita sin replica); umbral True)
+  OK    L MODESTO: carga quitada, lib 75 vs o1 70, sin conquista, fuera del umbral: HAY ALGO MODESTO (sin la carga el deficit de lib frente a O1 desaparece; lib NO conquista (nulo de PF2 ~0.5: no se cita sin replica); umbral False)
+  OK    L MODESTO: PF + PC sin PN: HAY ALGO MODESTO (conquista, pero la deriva sola hace lo mismo; umbral True)
+  OK    L MODESTO: PC sin PF1 (neutro 0.80): HAY ALGO MODESTO (conquista sin que el neutro deje de degradarse o con lib bajo O1 en monocultivo; umbral True)
+  OK    L MODESTO: solo PP: HAY ALGO MODESTO (un poder se prende; la carga no explica el deficit; umbral True)
+  OK    L NO: PF1 pasa, lib 60 vs o1 70: NO (la carga se quito (el neutro no se degrada) y lib sigue bajo O1: la carga no era lo que tapaba; umbral False)
+  OK    L NO: PF1 falla (neutro 0.80), lib 60 vs 70: NO (un gen por parto no quita la degradacion del neutro; umbral False)
+  OK    L NO EN EL UMBRAL: neutro 0.88 (a 0.02 de 0.90): NO (un gen por parto no quita la degradacion del neutro; umbral True)
+  OK    L NO fuera del umbral: neutro 0.86: NO (un gen por parto no quita la degradacion del neutro; umbral False)
+  OK    L NO EN EL UMBRAL: lib 66 vs o1 70 (dif -4): NO (la carga se quito (el neutro no se degrada) y lib sigue bajo O1: la carga no era lo que tapaba; umbral True)
+  OK    L NO fuera del umbral: lib 65 vs o1 70 (dif -5): NO (la carga se quito (el neutro no se degrada) y lib sigue bajo O1: la carga no era lo que tapaba; umbral False)
+  OK    L PF1 justo en 0.90 pasa: HAY ALGO MODESTO (sin la carga el deficit de lib frente a O1 desaparece; lib NO conquista (nulo de PF2 ~0.5: no se cita sin replica); umbral True)
+  OK    L PF1 en 0.8999 no pasa: NO (un gen por parto no quita la degradacion del neutro; umbral True)
+  OK    L ERR-160 v: neutro extinto en 2 indices -> se lee (R0 del neutro extinto = 0; mediana 0.95): FUNCIONA (None; umbral True)
+  OK    L NO SE LEE: V7 sin telemetria de un gen (eventos 0: PS_UNGEN no estuvo prendido): NO SE LEE (None; umbral True)
+  OK    L NO SE LEE: V7 estado ungen 0: NO SE LEE (None; umbral True)
+  OK    L NO SE LEE: V7 sha de otro carro: NO SE LEE (None; umbral True)
+  OK    L NO SE LEE: V8 reloj del neutro 11.9 (el de 14 genes por parto): NO SE LEE (None; umbral True)
+  OK    L NO SE LEE: V8 reloj 3.1: NO SE LEE (None; umbral True)
+  OK    L V8 reloj 3.0 pasa: FUNCIONA (None; umbral False)
+  OK    L NO SE LEE: V6 de o1_libre sigue mandando (el neutro activo un poder): NO SE LEE (None; umbral True)
+  OK    L NO SE LEE: V2 de o1_libre (O1 no vive): NO SE LEE (None; umbral True)
+  OK    L firma de PURGA (descriptiva): reloj lib 0.3 <= mitad del neutro 0.9 y sin conquista -> True; relojes 0.9/0.3
+  OK    L 'lib supera a o1 con margen' (descriptivo): +7 -> True; +6 -> False
+  OK    L serie INCOMPLETA (falta una prueba): NO SE LEE
+  OK    L un aborto: NO SE LEE
+  OK    L bloque: MODESTO + NO -> NO; FUNCIONA + MODESTO -> MODESTO; NO SE LEE manda
+(J) guardas
+  OK    J1 ['--humo', '--pool', '2'] aborta
+  OK    J1 ['--serie', '--pool', '3'] aborta
+usage: identidad_o1_libre_f2.py [-h] (--humo | --serie | --replica |
+                                --bloque BLOQUE | --lee LEE) [--pool POOL]
+                                [--reanuda]
+identidad_o1_libre_f2.py: error: one of the arguments --humo --serie --replica --bloque --lee is required
+  OK    J1 ['--seri'] aborta
+usage: identidad_o1_libre_f2.py [-h] (--humo | --serie | --replica |
+                                --bloque BLOQUE | --lee LEE) [--pool POOL]
+                                [--reanuda]
+identidad_o1_libre_f2.py: error: unrecognized arguments: --x
+  OK    J1 ['--humo', '--x'] aborta
+  OK    J2 semillas serie/replica/humo disjuntas, en 744xxx, fuera de 734xxx (o1_libre) y de la practica del arnes (80 + 3)
+  OK    J3 el humo cabe: proceso 1 6 corridas 88000 pasos; proceso 2 3 corridas 60000 pasos (<= 6 y <= 200 000)
+(P) ruta --serie --pool 2 con Pool FALSO de un proceso (T 3000/1500, 1 indice, 1 pasaje, practica), candado y parada
+[07:40:08] CORRE_O1_LIBRE_F2 · serie · 20261001_074008 · python 3.14.2 · pool 2 · corre_o1_libre_f2.py bb40e2a3feeffb37 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md NO EXISTE · PS_UNGEN 1 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\serie_i744975-744975_20261001_074008
+[07:40:08]   pasajes 744970-744970 (T 3000 x 1) · pruebas 744975-744975 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[07:40:08]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:40:08]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:40:08]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:40:08]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:40:08]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[07:40:08]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[07:40:08]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[07:40:08]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[07:40:08]   sha experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py ed631c4a4623ea11 OK
+[07:40:08]   carro O1_LIB == construye_o1_lib: True
+[07:40:08]   carro O1_LIB0 == construye_o1_lib: True
+[07:40:08]   carro O1_LIB_F2 == construye_o1_lib_f2: True · LIB_PY del runner importado -> experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py
+[07:40:19]   IDENTIDAD CORTA (salida ENTERA, N 9, s 744950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[07:40:39]   IDENTIDAD CORTA F2 (salida ENTERA + telemetria, N 9, s 744950, T 3000, mundo del bloque, sigma 0.03, colonia): O1_LIB_F2 con PS_UNGEN 0 == O1_LIB True · con PS_UNGEN 1 != True
+[07:40:55]   [   46.7s] cadena i0 lib (6.5s) aborto None cruzan por pasaje [0] reloj n por gen 0.1071 eventos/cambia_0 por pasaje [(40, 7)]
+[07:41:01]   [   53.2s] cadena i0 neu (6.3s) aborto None cruzan por pasaje [0] reloj n por gen 0.0358 eventos/cambia_0 por pasaje [(52, 11)]
+[07:41:07]   [   59.5s] prueba i0 o1    (2.8s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None
+[07:41:07]   [   59.5s] prueba i0 lib   (3.4s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None
+[07:41:07]   [   59.5s] prueba i0 mix   (3.1s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0
+[07:41:07]   [   59.5s] prueba i0 neu   (3.2s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None
+[07:41:07]   [   59.5s] prueba i0 mixn  (3.1s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0
+[07:41:07] 
+================ LA LETRA (PREREGISTRO_o1_libre_f2.md sec. 5)
+[07:41:07]   validez: {'V1_completa': True, 'V2_o1_vive': False, 'V3_mundo_actua': False, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True, 'V7_un_gen': True, 'V8_reloj_un_gen': True}
+[07:41:07]   puertas: {'PC_conquista': False, 'PN_no_es_solo_deriva': False, 'PP_un_poder_se_prende': False, 'PF1_neutro_no_se_degrada': False, 'PF2_lib_no_bajo_o1': True} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5, 'R0_neu': 0.9, 'margen_R0': 0.03, 'margen_cruz': 4, 'supera': 7, 'n_max': 3.0} · EN EL UMBRAL: True · matiz None
+[07:41:07]   [letra de o1_libre, descriptivo] {'veredicto': 'NO SE LEE', 'matiz': None, 'en_umbral': True}
+[07:41:07]   [desc] conquista_por_indice: {'mix': [0], 'mixn': [0], 'mix_gana': 0, 'mix_gana_a_mixn': 0}
+[07:41:07]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[07:41:07]   [desc] poderes_siembra_final: {'MEM': {'gana': 1, 'dif_med': 0.0021, 'lib_med': 0.0057, 'neu_med': 0.0036, 'indices_con_ambas': 1, 'se_prende': False}, 'SOC': {'gana': 0, 'dif_med': 0.0, 'lib_med': 0.0, 'neu_med': 0.0, 'indices_con_ambas': 1, 'se_prende': False}, 'RES': {'gana': 0, 'dif_med': -0.0003, 'lib_med': 0.0012, 'neu_med': 0.0015, 'indices_con_ambas': 1, 'se_prende': False}, 'PAU': {'gana': 1, 'dif_med': 0.0016, 'lib_med': 0.0045, 'neu_med': 0.0029, 'indices_con_ambas': 1, 'se_prende': False}}
+[07:41:07]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.25], 'PRUEBA': [0.5], 'PEN_OTRO': [0.35], 'D0': [2.9884], 'PISO': [0.1906], 'U4': [4.0], 'U2': [2.0], 'U1': [0.9992], 'XURG': [0.3037], 'TOPE': [0.4976], 'MEM': [0.0057], 'SOC': [0.0], 'RES': [0.0012], 'PAU': [0.0045]}, 'neu': {'MARGEN': [0.25], 'PRUEBA': [0.5], 'PEN_OTRO': [0.35], 'D0': [3.0], 'PISO': [0.196], 'U4': [4.0], 'U2': [2.0], 'U1': [0.998], 'XURG': [0.3048], 'TOPE': [0.5], 'MEM': [0.0036], 'SOC': [0.0], 'RES': [0.0015], 'PAU': [0.0029]}}
+[07:41:07]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0021], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [0.0], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [-0.0003], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [0.0016], 'prende_en_pasaje': None}}
+[07:41:07]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.25, 'neu': 0.25, 'fabrica': 0.25, 'lib_gana_neu': 0}, 'PRUEBA': {'lib': 0.5, 'neu': 0.5, 'fabrica': 0.5, 'lib_gana_neu': 0}, 'PEN_OTRO': {'lib': 0.35, 'neu': 0.35, 'fabrica': 0.35, 'lib_gana_neu': 0}, 'D0': {'lib': 2.9884, 'neu': 3.0, 'fabrica': 3.0, 'lib_gana_neu': 0}, 'PISO': {'lib': 0.1906, 'neu': 0.196, 'fabrica': 0.2, 'lib_gana_neu': 0}, 'U4': {'lib': 4.0, 'neu': 4.0, 'fabrica': 4.0, 'lib_gana_neu': 0}, 'U2': {'lib': 2.0, 'neu': 2.0, 'fabrica': 2.0, 'lib_gana_neu': 0}, 'U1': {'lib': 0.9992, 'neu': 0.998, 'fabrica': 1.0, 'lib_gana_neu': 1}, 'XURG': {'lib': 0.3037, 'neu': 0.3048, 'fabrica': 0.3, 'lib_gana_neu': 0}, 'TOPE': {'lib': 0.4976, 'neu': 0.5, 'fabrica': 0.5, 'lib_gana_neu': 0}}
+[07:41:07]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.0, 'ultimo': 0.0, 'aviso': False}
+[07:41:07]   [desc] suma_cruzan: {'lib': 0, 'neu': 0, 'o1': 0, 'mix': 0, 'mixn': 0}
+[07:41:07]   [desc] nac_reales_total_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[07:41:07]   [desc] R0_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[07:41:07]   [desc] PM_monocultivo: {'lib_gana_o1': 0, 'neu_gana_o1': 0, 'lib_gana_neu': 0, 'nac_lib_gana_o1': 0}
+[07:41:07]   [desc] mix_cruzan: {'mix': {'lib': 0, 'o1': 0}, 'mixn': {'lib': 0, 'o1': 0}}
+[07:41:07]   [desc] activaciones_prueba: {'lib': {'mem': 0.0, 'pau': 0.0, 'soc': 1.0, 'res': 305.0, 'escr': 16.0}, 'neu': {'mem': 0.0, 'pau': 26.0, 'soc': 1.0, 'res': 0.0, 'escr': 14.0}, 'mix': {'mem': 0.0, 'pau': 0.0, 'soc': 0.0, 'res': 423.0, 'escr': 8.0}, 'mixn': {'mem': 0.0, 'pau': 0.0, 'soc': 0.0, 'res': 0.0, 'escr': 7.0}}
+[07:41:07]   [desc] partos_por_pasaje: {'lib': [29.0], 'neu': [22.0]}
+[07:41:07]   [desc] mixtas_por_lado: {'mix': {'conquista': 0.0, 'dif_partos': -0.4, 'dif_muertes': 1.0, 'dif_fund': 1.0}, 'mixn': {'conquista': 0.0, 'dif_partos': -0.35, 'dif_muertes': 1.0, 'dif_fund': 1.0}}
+[07:41:07]   [desc] activaciones_cadena_lib_ultimo: {'mem': 1291.0, 'pau': 36.0, 'soc': 0.0, 'res': 2254.0, 'escr': 29.0}
+[07:41:07]   [desc] mundo_AC: {'lib': 12.4593, 'neu': 9.8493, 'o1': 12.0866, 'mix': 11.072, 'mixn': 12.0866}
+[07:41:07]   [desc] frac_en_parche_med: {'lib': 0.1571, 'neu': 0.1661, 'o1': 0.1635, 'mix': 0.15, 'mixn': 0.1635}
+[07:41:07]   [desc] relojes: {'lib': {'n_por_gen': {'mediana': 0.1071, 'min': 0.1071, 'max': 0.1071, 'por_cadena': [0.1071]}, 'eventos_equivalentes_14n': 1.5, 'fund_colonia_por_pasaje': [2.0], 'fund_de_siembra_por_pasaje': [0.0], 'Ne_linajes_por_pasaje': [8.17], 'padres_distintos_por_pasaje': [9.0], 'partos_por_pasaje': [29.0], 'eventos_mutacion_por_pasaje': [40.0]}, 'neu': {'n_por_gen': {'mediana': 0.0358, 'min': 0.0358, 'max': 0.0358, 'por_cadena': [0.0358]}, 'eventos_equivalentes_14n': 0.5, 'fund_colonia_por_pasaje': [21.0], 'fund_de_siembra_por_pasaje': [0.0], 'Ne_linajes_por_pasaje': [5.76], 'padres_distintos_por_pasaje': [7.0], 'partos_por_pasaje': [22.0], 'eventos_mutacion_por_pasaje': [52.0]}}
+[07:41:07]   [desc] F2: {'R0_neu_med': 0.0, 'R0_o1_med': 0.0, 'R0_lib_med': 0.0, 'cruzan_lib': 0, 'cruzan_o1': 0, 'cruzan_neu': 0, 'dif_lib_o1': 0, 'lib_supera_o1_con_margen': False, 'historico_o1_libre': {'R0_neu': [0.795, 0.62], 'cruzan_lib': [55, 39], 'cruzan_o1': [66, 69], 'cruzan_neu': [30, 32], 'n_neu': [11.87, 11.65]}, 'firma_purga': False, 'reloj_lib_sobre_neu': 2.992}
+[07:41:07] 
+  RESUMEN C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\serie_i744975-744975_20261001_074008\resumen.json (sha 57d7cf34a906e8df) · abortos 0 · 59.5s
+[07:41:07] VEREDICTO DE LA SERIE: NO SE LEE   (en el umbral: True; regla de parada: PREREGISTRO_o1_libre_f2.md sec. 6)
+  OK    P1 --serie --pool 2 (Pool falso): rc 0, 2 cadenas y 5 pruebas (sin mixA), 0 abortos, resumen (NO SE LEE); V1 True V7 True
+  OK    P2 el JSON del pasaje guarda los dos relojes: ungen 52 eventos, estado ungen 1, fund_colonia 21, siembra_info True
+[07:41:07] CORRE_O1_LIBRE_F2 · serie · 20261001_074107 · python 3.14.2 · pool 2 · corre_o1_libre_f2.py bb40e2a3feeffb37 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md NO EXISTE · PS_UNGEN 1 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\serie_i744975-744975_20261001_074107
+[07:41:07]   pasajes 744970-744970 (T 3000 x 1) · pruebas 744975-744975 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[07:41:07]   NO SE CORRE (candado): ya existe ..\..\..\..\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\serie_i744975-744975_20261001_074008: solo --reanuda (cortada o NO SE LEE)
+  OK    P3 candado: una segunda --serie sobre una carpeta existente (sin --reanuda) se niega (rc 1)
+[07:41:07] CORRE_O1_LIBRE_F2 · serie · 20261001_074107 · python 3.14.2 · pool 2 · corre_o1_libre_f2.py bb40e2a3feeffb37 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md NO EXISTE · PS_UNGEN 1 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\serie_i744975-744975_20261001_074008
+[07:41:07]   pasajes 744970-744970 (T 3000 x 1) · pruebas 744975-744975 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda True
+[07:41:07]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:41:07]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:41:07]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:41:07]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:41:07]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[07:41:07]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[07:41:07]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[07:41:07]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[07:41:07]   sha experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py ed631c4a4623ea11 OK
+[07:41:07]   carro O1_LIB == construye_o1_lib: True
+[07:41:07]   carro O1_LIB0 == construye_o1_lib: True
+[07:41:07]   carro O1_LIB_F2 == construye_o1_lib_f2: True · LIB_PY del runner importado -> experimentos\organelos\o1_libre_f2\carros\O1_LIB_F2.py
+[07:41:18]   IDENTIDAD CORTA (salida ENTERA, N 9, s 744950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[07:41:37]   IDENTIDAD CORTA F2 (salida ENTERA + telemetria, N 9, s 744950, T 3000, mundo del bloque, sigma 0.03, colonia): O1_LIB_F2 con PS_UNGEN 0 == O1_LIB True · con PS_UNGEN 1 != True
+[07:41:37]   [   29.6s] cadena i0 lib (6.5s) aborto None cruzan por pasaje [0] reloj n por gen 0.1071 eventos/cambia_0 por pasaje [(40, 7)]
+[07:41:37]   [   29.6s] cadena i0 neu (6.3s) aborto None cruzan por pasaje [0] reloj n por gen 0.0358 eventos/cambia_0 por pasaje [(52, 11)]
+[07:41:37]   [   29.6s] prueba i0 o1    (2.8s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None
+[07:41:37]   [   29.6s] prueba i0 lib   (3.4s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None
+[07:41:37]   [   29.6s] prueba i0 mix   (3.1s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0
+[07:41:37]   [   29.6s] prueba i0 neu   (3.2s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista None
+[07:41:37]   [   29.6s] prueba i0 mixn  (3.1s) aborto None cruzan 0/9 R0 0.0 nac [0, 0, 0, 0, 0, 0, 0, 0, 0] conquista 0
+[07:41:37] 
+================ LA LETRA (PREREGISTRO_o1_libre_f2.md sec. 5)
+[07:41:37]   validez: {'V1_completa': True, 'V2_o1_vive': False, 'V3_mundo_actua': False, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True, 'V7_un_gen': True, 'V8_reloj_un_gen': True}
+[07:41:37]   puertas: {'PC_conquista': False, 'PN_no_es_solo_deriva': False, 'PP_un_poder_se_prende': False, 'PF1_neutro_no_se_degrada': False, 'PF2_lib_no_bajo_o1': True} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5, 'R0_neu': 0.9, 'margen_R0': 0.03, 'margen_cruz': 4, 'supera': 7, 'n_max': 3.0} · EN EL UMBRAL: True · matiz None
+[07:41:37]   [letra de o1_libre, descriptivo] {'veredicto': 'NO SE LEE', 'matiz': None, 'en_umbral': True}
+[07:41:37]   [desc] conquista_por_indice: {'mix': [0], 'mixn': [0], 'mix_gana': 0, 'mix_gana_a_mixn': 0}
+[07:41:37]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[07:41:37]   [desc] poderes_siembra_final: {'MEM': {'gana': 1, 'dif_med': 0.0021, 'lib_med': 0.0057, 'neu_med': 0.0036, 'indices_con_ambas': 1, 'se_prende': False}, 'SOC': {'gana': 0, 'dif_med': 0.0, 'lib_med': 0.0, 'neu_med': 0.0, 'indices_con_ambas': 1, 'se_prende': False}, 'RES': {'gana': 0, 'dif_med': -0.0003, 'lib_med': 0.0012, 'neu_med': 0.0015, 'indices_con_ambas': 1, 'se_prende': False}, 'PAU': {'gana': 1, 'dif_med': 0.0016, 'lib_med': 0.0045, 'neu_med': 0.0029, 'indices_con_ambas': 1, 'se_prende': False}}
+[07:41:37]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.25], 'PRUEBA': [0.5], 'PEN_OTRO': [0.35], 'D0': [2.9884], 'PISO': [0.1906], 'U4': [4.0], 'U2': [2.0], 'U1': [0.9992], 'XURG': [0.3037], 'TOPE': [0.4976], 'MEM': [0.0057], 'SOC': [0.0], 'RES': [0.0012], 'PAU': [0.0045]}, 'neu': {'MARGEN': [0.25], 'PRUEBA': [0.5], 'PEN_OTRO': [0.35], 'D0': [3.0], 'PISO': [0.196], 'U4': [4.0], 'U2': [2.0], 'U1': [0.998], 'XURG': [0.3048], 'TOPE': [0.5], 'MEM': [0.0036], 'SOC': [0.0], 'RES': [0.0015], 'PAU': [0.0029]}}
+[07:41:37]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0021], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [0.0], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [-0.0003], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [0.0016], 'prende_en_pasaje': None}}
+[07:41:37]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.25, 'neu': 0.25, 'fabrica': 0.25, 'lib_gana_neu': 0}, 'PRUEBA': {'lib': 0.5, 'neu': 0.5, 'fabrica': 0.5, 'lib_gana_neu': 0}, 'PEN_OTRO': {'lib': 0.35, 'neu': 0.35, 'fabrica': 0.35, 'lib_gana_neu': 0}, 'D0': {'lib': 2.9884, 'neu': 3.0, 'fabrica': 3.0, 'lib_gana_neu': 0}, 'PISO': {'lib': 0.1906, 'neu': 0.196, 'fabrica': 0.2, 'lib_gana_neu': 0}, 'U4': {'lib': 4.0, 'neu': 4.0, 'fabrica': 4.0, 'lib_gana_neu': 0}, 'U2': {'lib': 2.0, 'neu': 2.0, 'fabrica': 2.0, 'lib_gana_neu': 0}, 'U1': {'lib': 0.9992, 'neu': 0.998, 'fabrica': 1.0, 'lib_gana_neu': 1}, 'XURG': {'lib': 0.3037, 'neu': 0.3048, 'fabrica': 0.3, 'lib_gana_neu': 0}, 'TOPE': {'lib': 0.4976, 'neu': 0.5, 'fabrica': 0.5, 'lib_gana_neu': 0}}
+[07:41:37]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.0, 'ultimo': 0.0, 'aviso': False}
+[07:41:37]   [desc] suma_cruzan: {'lib': 0, 'neu': 0, 'o1': 0, 'mix': 0, 'mixn': 0}
+[07:41:37]   [desc] nac_reales_total_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[07:41:37]   [desc] R0_med: {'lib': 0.0, 'neu': 0.0, 'o1': 0.0, 'mix': 0.0, 'mixn': 0.0}
+[07:41:37]   [desc] PM_monocultivo: {'lib_gana_o1': 0, 'neu_gana_o1': 0, 'lib_gana_neu': 0, 'nac_lib_gana_o1': 0}
+[07:41:37]   [desc] mix_cruzan: {'mix': {'lib': 0, 'o1': 0}, 'mixn': {'lib': 0, 'o1': 0}}
+[07:41:37]   [desc] activaciones_prueba: {'lib': {'mem': 0.0, 'pau': 0.0, 'soc': 1.0, 'res': 305.0, 'escr': 16.0}, 'neu': {'mem': 0.0, 'pau': 26.0, 'soc': 1.0, 'res': 0.0, 'escr': 14.0}, 'mix': {'mem': 0.0, 'pau': 0.0, 'soc': 0.0, 'res': 423.0, 'escr': 8.0}, 'mixn': {'mem': 0.0, 'pau': 0.0, 'soc': 0.0, 'res': 0.0, 'escr': 7.0}}
+[07:41:37]   [desc] partos_por_pasaje: {'lib': [29.0], 'neu': [22.0]}
+[07:41:37]   [desc] mixtas_por_lado: {'mix': {'conquista': 0.0, 'dif_partos': -0.4, 'dif_muertes': 1.0, 'dif_fund': 1.0}, 'mixn': {'conquista': 0.0, 'dif_partos': -0.35, 'dif_muertes': 1.0, 'dif_fund': 1.0}}
+[07:41:37]   [desc] activaciones_cadena_lib_ultimo: {'mem': 1291.0, 'pau': 36.0, 'soc': 0.0, 'res': 2254.0, 'escr': 29.0}
+[07:41:37]   [desc] mundo_AC: {'lib': 12.4593, 'neu': 9.8493, 'o1': 12.0866, 'mix': 11.072, 'mixn': 12.0866}
+[07:41:37]   [desc] frac_en_parche_med: {'lib': 0.1571, 'neu': 0.1661, 'o1': 0.1635, 'mix': 0.15, 'mixn': 0.1635}
+[07:41:37]   [desc] relojes: {'lib': {'n_por_gen': {'mediana': 0.1071, 'min': 0.1071, 'max': 0.1071, 'por_cadena': [0.1071]}, 'eventos_equivalentes_14n': 1.5, 'fund_colonia_por_pasaje': [2.0], 'fund_de_siembra_por_pasaje': [0.0], 'Ne_linajes_por_pasaje': [8.17], 'padres_distintos_por_pasaje': [9.0], 'partos_por_pasaje': [29.0], 'eventos_mutacion_por_pasaje': [40.0]}, 'neu': {'n_por_gen': {'mediana': 0.0358, 'min': 0.0358, 'max': 0.0358, 'por_cadena': [0.0358]}, 'eventos_equivalentes_14n': 0.5, 'fund_colonia_por_pasaje': [21.0], 'fund_de_siembra_por_pasaje': [0.0], 'Ne_linajes_por_pasaje': [5.76], 'padres_distintos_por_pasaje': [7.0], 'partos_por_pasaje': [22.0], 'eventos_mutacion_por_pasaje': [52.0]}}
+[07:41:37]   [desc] F2: {'R0_neu_med': 0.0, 'R0_o1_med': 0.0, 'R0_lib_med': 0.0, 'cruzan_lib': 0, 'cruzan_o1': 0, 'cruzan_neu': 0, 'dif_lib_o1': 0, 'lib_supera_o1_con_margen': False, 'historico_o1_libre': {'R0_neu': [0.795, 0.62], 'cruzan_lib': [55, 39], 'cruzan_o1': [66, 69], 'cruzan_neu': [30, 32], 'n_neu': [11.87, 11.65]}, 'firma_purga': False, 'reloj_lib_sobre_neu': 2.992}
+[07:41:37] 
+  RESUMEN C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\serie_i744975-744975_20261001_074008\resumen.json (sha 1e9dc1a4f1d0de6a) · abortos 0 · 29.7s
+[07:41:37] VEREDICTO DE LA SERIE: NO SE LEE   (en el umbral: True; regla de parada: PREREGISTRO_o1_libre_f2.md sec. 6)
+  OK    P4 --reanuda sobre una serie con veredicto se niega (o, si era NO SE LEE, no re-corre nada): rc 0, archivos 11 -> 11
+[07:41:37] CORRE_O1_LIBRE_F2 · replica · 20261001_074137 · python 3.14.2 · pool 2 · corre_o1_libre_f2.py bb40e2a3feeffb37 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md NO EXISTE · PS_UNGEN 1 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\replica_i744985-744985_20261001_074137
+[07:41:37]   pasajes 744980-744980 (T 3000 x 1) · pruebas 744985-744985 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[07:41:37]   REGLA DE PARADA (sec. 6): la replica solo si la serie da FUNCIONA, MODESTO o NO EN EL UMBRAL; serie = NO SE LEE (umbral True). No se corre.
+  OK    P5 regla de parada: serie NO SE LEE (umbral True) -> replica se niega (rc 1)
+[07:41:37] CORRE_O1_LIBRE_F2 · replica · 20261001_074137 · python 3.14.2 · pool 2 · corre_o1_libre_f2.py bb40e2a3feeffb37 · corre_o1_libre.py (importado) 98d3a103a1fdde3b · construye_o1_lib_f2.py 69991e9f48a68050 · preregistro PREREGISTRO_o1_libre_f2.md NO EXISTE · PS_UNGEN 1 · carpeta C:\Users\User\AppData\Local\Temp\o1libre_f2_pool_zxnb0m15\replica_i744985-744985_20261001_074137
+[07:41:37]   pasajes 744980-744980 (T 3000 x 1) · pruebas 744985-744985 (T 1500) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] (mixA NO se corre) · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[07:41:37]   NO SE CORRE (candado): sha_runner de la serie 0000000000000000 != runner actual
+  OK    P6 serie con sha_runner ajeno -> la replica se niega sin crear carpeta (rc 1)
+
+ARNES PASA: 69/69 · 198.5s

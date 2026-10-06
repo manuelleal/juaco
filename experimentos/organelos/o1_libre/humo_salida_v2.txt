@@ -1,0 +1,26 @@
+[16:35:43] CORRE_O1_LIBRE · humo · 20260930_163543 · python 3.14.2 · pool NO (un proceso) · corre_o1_libre.py da5780c5031150fa · preregistro PREREGISTRO_o1_libre.md cbc4b7d14585a776 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre\datos\humo\humo_20260930_163543
+[16:35:43]   pasajes 734990-734991 (T 12000 x 2) · pruebas 734998-734998 (T 20000) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[16:35:43]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[16:35:43]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[16:35:43]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[16:35:43]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[16:35:43]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[16:35:43]   sha experimentos\organelos\o1_libre\construye_o1_lib.py 5124b76a56b1169d OK
+[16:35:43]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py 04992e7de94806fd OK
+[16:35:43]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 2ee0b7e8b9b013ad OK
+[16:35:43]   carro O1_LIB == construye_o1_lib: True
+[16:35:43]   carro O1_LIB0 == construye_o1_lib: True
+[16:35:54]   IDENTIDAD CORTA (salida ENTERA, N 9, s 734950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[16:36:46]   [   62.8s] cadena i0 lib (51.2s) aborto None cruzan por pasaje [0, 0] poderes p-ultimo {'MEM': 0.0219, 'SOC': 0.015, 'RES': 0.0335, 'PAU': 0.0201}
+[16:37:38]   [  114.9s] cadena i0 neu (52.1s) aborto None cruzan por pasaje [0, 0] poderes p-ultimo {'MEM': 0.0088, 'SOC': 0.0196, 'RES': 0.0201, 'PAU': 0.0435}
+[16:38:21]   [  158.3s] prueba i0 o1    (43.4s) aborto None cruzan 6/9 nac [9, 12, 9, 9, 13, 11, 7, 10, 12] conquista None uso {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[16:39:07]   [  204.2s] prueba i0 mix   (45.8s) aborto None cruzan 5/9 nac [9, 13, 9, 11, 9, 12, 3, 11, 14] conquista -2.95 uso {'mem': 22333, 'pau': 634, 'soc': 6, 'res': 67770, 'escr': 62}
+[16:39:07] 
+  HUMO parte 1: 4 trabajos (2 cadenas de 2 pasajes + o1 y mix = 6 corridas) · faltan lib, neu, mixn (--humo --reanuda) · 204.2s
+[16:39:07] 
+================ LA LETRA (PREREGISTRO_o1_libre.md sec. 6) -- HUMO: T corto, practica, 1 indice: NO cuenta
+[16:39:07]   validez: {'V1_completa': False, 'V2_o1_vive': True, 'V3_mundo_actua': True, 'V4_siembra_actua': False, 'V5_perillas': True, 'V6_neutro_neutro': True}
+[16:39:07]   puertas: {} · umbrales {'gana': 1, 'dif_poder': 0.05, 'o1_R0': 0.5} · EN EL UMBRAL (+-1): False · matiz None
+[16:39:07] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre\datos\humo\humo_20260930_163543\resumen.json (sha dfb10c31e4c8d7c3) · abortos 0 · 204.2s
+[16:39:07] VEREDICTO DE LA HUMO: HUMO (no cuenta): NO SE LEE   (en el umbral: False; regla de parada: PREREGISTRO_o1_libre.md sec. 7)

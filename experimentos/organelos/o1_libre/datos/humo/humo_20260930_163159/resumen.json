@@ -1,0 +1,47 @@
+{
+ "modo": "humo",
+ "humo": true,
+ "letra": {
+  "validez": {
+   "V1_completa": false,
+   "V2_o1_vive": false,
+   "V3_mundo_actua": true,
+   "V4_siembra_actua": false,
+   "V5_perillas": true,
+   "V6_neutro_neutro": true
+  },
+  "puertas": {},
+  "veredicto": "NO SE LEE",
+  "matiz": null,
+  "en_umbral": false,
+  "umbrales": {
+   "gana": 1,
+   "dif_poder": 0.05,
+   "o1_R0": 0.5
+  },
+  "descriptivo": {}
+ },
+ "abortos": [
+  "prueba i0 mix: TypeError: dict() got multiple values for keyword argument 'brazo'",
+  "prueba i0 o1: TypeError: dict() got multiple values for keyword argument 'brazo'"
+ ],
+ "n": 1,
+ "npas": 2,
+ "T_pas": 12000,
+ "T_pru": 20000,
+ "veredicto": "HUMO (no cuenta): NO SE LEE",
+ "preregistro": "PREREGISTRO_o1_libre.md",
+ "sha_preregistro": "cbc4b7d14585a776",
+ "sha_runner": "5554214e7c248adc",
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028",
+  "experimentos\\organelos\\o1_libre\\pista_libre.py": "bf538326a74af8e4",
+  "experimentos\\organelos\\o1_libre\\construye_o1_lib.py": "5124b76a56b1169d",
+  "experimentos\\organelos\\o1_libre\\carros\\O1_LIB.py": "04992e7de94806fd",
+  "experimentos\\organelos\\o1_libre\\carros\\O1_LIB0.py": "2ee0b7e8b9b013ad"
+ },
+ "seg": 205.3
+}

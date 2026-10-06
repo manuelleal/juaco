@@ -1,0 +1,125 @@
+[22:52:27] CORRE_O1_LIBRE · replica · 20260930_225227 · python 3.14.2 · pool 2 · corre_o1_libre.py 98d3a103a1fdde3b · preregistro PREREGISTRO_o1_libre.md 3d540723da8810b3 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre\datos\replica_i734501-734510_20260930_225227
+[22:52:27]   pasajes 734300-734392 (T 100000 x 3) · pruebas 734501-734510 (T 100000) · pruebas ['lib', 'neu', 'o1', 'mix', 'mixn'] + descriptivas ['mixA'] · mundo {'estacion': 1, 'parche': 1, 'quieto': 1} · reanuda False
+[22:52:27]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[22:52:27]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[22:52:27]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[22:52:27]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[22:52:27]   sha experimentos\organelos\o1_libre\pista_libre.py bf538326a74af8e4 OK
+[22:52:27]   sha experimentos\organelos\o1_libre\construye_o1_lib.py ec63375ee0b980d0 OK
+[22:52:27]   sha experimentos\organelos\o1_libre\carros\O1_LIB.py ff30214f59ed36d8 OK
+[22:52:27]   sha experimentos\organelos\o1_libre\carros\O1_LIB0.py 7dda8b7f8448b386 OK
+[22:52:27]   carro O1_LIB == construye_o1_lib: True
+[22:52:27]   carro O1_LIB0 == construye_o1_lib: True
+[22:52:40]   IDENTIDAD CORTA (salida ENTERA, N 9, s 734950, T 1500): O1_LIB0 == O1 True · O1_LIB sigma 0 fabrica == O1 True · pista_libre apagada == pista True
+[22:52:40]   git experimentos/organelos/o1_libre/PREREGISTRO_o1_libre.md: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[22:52:40]   git experimentos/organelos/o1_libre/corre_o1_libre.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[22:52:40]   git experimentos/organelos/o1_libre/construye_o1_lib.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[22:52:40]   git experimentos/organelos/o1_libre/carros/O1_LIB.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[22:52:41]   git experimentos/organelos/o1_libre/carros/O1_LIB0.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[22:52:41]   git experimentos/organelos/o1_libre/pista_libre.py: commiteado True · sin cambios vs HEAD True · ultimo commit efcccd35 2026-09-30T17:47:40-05:00
+[23:05:41]   [  793.6s] cadena i0 neu (779.6s) aborto None cruzan por pasaje [8, 8, 8] poderes p-ultimo {'MEM': 0.0228, 'SOC': 0.0665, 'RES': 0.0803, 'PAU': 0.0395}
+[23:06:03]   [  815.6s] cadena i0 lib (799.8s) aborto None cruzan por pasaje [6, 5, 5] poderes p-ultimo {'MEM': 0.1197, 'SOC': 0.1608, 'RES': 0.0649, 'PAU': 0.0346}
+[23:17:21]   [ 1493.7s] cadena i1 lib (698.5s) aborto None cruzan por pasaje [4, 3, 3] poderes p-ultimo {'MEM': 0.1351, 'SOC': 0.0742, 'RES': 0.0737, 'PAU': 0.1267}
+[23:18:29]   [ 1561.7s] cadena i1 neu (746.2s) aborto None cruzan por pasaje [6, 6, 7] poderes p-ultimo {'MEM': 0.0698, 'SOC': 0.079, 'RES': 0.1443, 'PAU': 0.038}
+[23:29:27]   [ 2219.8s] cadena i2 lib (726.1s) aborto None cruzan por pasaje [6, 4, 5] poderes p-ultimo {'MEM': 0.0901, 'SOC': 0.0561, 'RES': 0.101, 'PAU': 0.0844}
+[23:30:59]   [ 2311.8s] cadena i2 neu (751.3s) aborto None cruzan por pasaje [7, 8, 7] poderes p-ultimo {'MEM': 0.0459, 'SOC': 0.1018, 'RES': 0.0619, 'PAU': 0.0818}
+[23:41:43]   [ 2955.9s] cadena i3 lib (737.3s) aborto None cruzan por pasaje [4, 6, 8] poderes p-ultimo {'MEM': 0.0575, 'SOC': 0.078, 'RES': 0.0534, 'PAU': 0.091}
+[23:43:31]   [ 3063.9s] cadena i3 neu (752.3s) aborto None cruzan por pasaje [5, 8, 7] poderes p-ultimo {'MEM': 0.1071, 'SOC': 0.0305, 'RES': 0.0644, 'PAU': 0.1146}
+[23:53:31]   [ 3664.0s] cadena i4 lib (707.6s) aborto None cruzan por pasaje [6, 2, 7] poderes p-ultimo {'MEM': 0.0723, 'SOC': 0.1328, 'RES': 0.0639, 'PAU': 0.0575}
+[23:55:25]   [ 3778.0s] cadena i4 neu (713.2s) aborto None cruzan por pasaje [6, 7, 7] poderes p-ultimo {'MEM': 0.1226, 'SOC': 0.0517, 'RES': 0.0408, 'PAU': 0.1024}
+[00:05:04]   [ 4356.1s] cadena i5 lib (691.9s) aborto None cruzan por pasaje [3, 7, 5] poderes p-ultimo {'MEM': 0.1662, 'SOC': 0.0516, 'RES': 0.0452, 'PAU': 0.0257}
+[00:07:00]   [ 4472.2s] cadena i5 neu (695.4s) aborto None cruzan por pasaje [5, 7, 6] poderes p-ultimo {'MEM': 0.1809, 'SOC': 0.0842, 'RES': 0.0277, 'PAU': 0.0831}
+[00:16:28]   [ 5040.2s] cadena i6 lib (684.8s) aborto None cruzan por pasaje [2, 3, 5] poderes p-ultimo {'MEM': 0.0633, 'SOC': 0.1169, 'RES': 0.1817, 'PAU': 0.2341}
+[00:18:46]   [ 5178.3s] cadena i6 neu (705.2s) aborto None cruzan por pasaje [6, 6, 8] poderes p-ultimo {'MEM': 0.0707, 'SOC': 0.1183, 'RES': 0.1003, 'PAU': 0.0532}
+[00:28:00]   [ 5732.4s] cadena i7 lib (691.0s) aborto None cruzan por pasaje [6, 3, 2] poderes p-ultimo {'MEM': 0.119, 'SOC': 0.2143, 'RES': 0.1601, 'PAU': 0.0276}
+[00:30:38]   [ 5890.4s] cadena i7 neu (711.2s) aborto None cruzan por pasaje [9, 6, 7] poderes p-ultimo {'MEM': 0.0457, 'SOC': 0.0395, 'RES': 0.1145, 'PAU': 0.0403}
+[00:39:28]   [ 6420.5s] cadena i8 lib (689.7s) aborto None cruzan por pasaje [6, 4, 5] poderes p-ultimo {'MEM': 0.152, 'SOC': 0.0874, 'RES': 0.049, 'PAU': 0.056}
+[00:42:20]   [ 6592.5s] cadena i8 neu (703.5s) aborto None cruzan por pasaje [7, 8, 6] poderes p-ultimo {'MEM': 0.0343, 'SOC': 0.1187, 'RES': 0.0423, 'PAU': 0.0351}
+[00:50:16]   [ 7068.6s] cadena i9 lib (647.5s) aborto None cruzan por pasaje [3, 2, 0] poderes p-ultimo {'MEM': 0.0233, 'SOC': 0.0874, 'RES': 0.1911, 'PAU': 0.061}
+[00:53:38]   [ 7270.6s] prueba i0 o1    (201.9s) aborto None cruzan 5/9 nac [49, 42, 28, 51, 50, 44, 60, 54, 51] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[00:53:56]   [ 7288.6s] cadena i9 neu (695.2s) aborto None cruzan por pasaje [7, 7, 7] poderes p-ultimo {'MEM': 0.0213, 'SOC': 0.0636, 'RES': 0.0461, 'PAU': 0.0928}
+[00:57:04]   [ 7476.7s] prueba i1 o1    (206.3s) aborto None cruzan 6/9 nac [55, 55, 60, 60, 55, 52, 54, 55, 60] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[00:57:24]   [ 7496.7s] prueba i2 o1    (209.3s) aborto None cruzan 8/9 nac [59, 62, 54, 55, 61, 61, 57, 58, 43] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:00:30]   [ 7682.7s] prueba i3 o1    (206.6s) aborto None cruzan 6/9 nac [57, 48, 51, 53, 51, 55, 51, 54, 60] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:00:52]   [ 7704.7s] prueba i4 o1    (206.2s) aborto None cruzan 8/9 nac [64, 54, 57, 60, 48, 54, 45, 57, 61] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:03:54]   [ 7886.7s] prueba i5 o1    (202.1s) aborto None cruzan 7/9 nac [50, 28, 59, 45, 54, 49, 54, 50, 45] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:04:16]   [ 7908.7s] prueba i6 o1    (205.5s) aborto None cruzan 7/9 nac [55, 55, 40, 48, 58, 54, 48, 46, 53] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:07:20]   [ 8092.8s] prueba i7 o1    (207.3s) aborto None cruzan 8/9 nac [58, 54, 60, 57, 59, 51, 52, 49, 59] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:07:44]   [ 8116.8s] prueba i8 o1    (207.3s) aborto None cruzan 7/9 nac [55, 47, 50, 59, 47, 59, 53, 54, 59] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:10:46]   [ 8298.8s] prueba i9 o1    (205.5s) aborto None cruzan 7/9 nac [60, 58, 50, 50, 53, 57, 54, 50, 49] conquista None activaciones {'mem': 0, 'pau': 0, 'soc': 0, 'res': 0, 'escr': 0}
+[01:11:34]   [ 8346.8s] prueba i0 neu   (230.1s) aborto None cruzan 4/9 nac [45, 39, 35, 35, 42, 45, 48, 54, 55] conquista None activaciones {'mem': 158751, 'pau': 15276, 'soc': 127, 'res': 797985, 'escr': 489}
+[01:14:22]   [ 8514.8s] prueba i0 mixn  (216.8s) aborto None cruzan 6/9 nac [42, 60, 38, 25, 38, 24, 44, 54, 45] conquista 0.65 activaciones {'mem': 98163, 'pau': 8993, 'soc': 5, 'res': 498188, 'escr': 317}
+[01:15:32]   [ 8584.8s] prueba i0 lib   (238.7s) aborto None cruzan 7/9 nac [37, 52, 57, 44, 52, 45, 47, 49, 37] conquista None activaciones {'mem': 279023, 'pau': 7425, 'soc': 55, 'res': 890600, 'escr': 528}
+[01:18:02]   [ 8734.9s] prueba i0 mix   (219.3s) aborto None cruzan 5/9 nac [32, 54, 51, 17, 34, 57, 36, 58, 43] conquista -7.3 activaciones {'mem': 201590, 'pau': 1678, 'soc': 7, 'res': 478470, 'escr': 366}
+[01:19:12]   [ 8804.9s] prueba i0 mixA  (220.2s) aborto None cruzan 6/9 nac [40, 58, 40, 53, 48, 25, 54, 60, 50] conquista -2.6 activaciones {'mem': 98654, 'pau': 3917, 'soc': 5, 'res': 366917, 'escr': 364}
+[01:21:36]   [ 8948.9s] prueba i1 lib   (214.4s) aborto None cruzan 1/9 nac [18, 38, 38, 26, 18, 28, 38, 38, 25] conquista None activaciones {'mem': 122057, 'pau': 32443, 'soc': 446, 'res': 802848, 'escr': 280}
+[01:22:34]   [ 9006.9s] prueba i1 mix   (201.3s) aborto None cruzan 3/9 nac [15, 45, 49, 39, 6, 35, 30, 30, 22] conquista 12.85 activaciones {'mem': 60331, 'pau': 5413, 'soc': 47, 'res': 389734, 'escr': 231}
+[01:25:02]   [ 9154.9s] prueba i1 mixA  (205.5s) aborto None cruzan 4/9 nac [31, 41, 56, 40, 44, 8, 55, 21, 50] conquista -19.7 activaciones {'mem': 18590, 'pau': 2988, 'soc': 77, 'res': 177768, 'escr': 159}
+[01:26:14]   [ 9226.9s] prueba i1 neu   (220.1s) aborto None cruzan 1/9 nac [48, 50, 52, 53, 40, 53, 39, 41, 43] conquista None activaciones {'mem': 156070, 'pau': 11632, 'soc': 350, 'res': 767220, 'escr': 432}
+[01:28:24]   [ 9356.9s] prueba i1 mixn  (202.7s) aborto None cruzan 2/9 nac [15, 38, 33, 41, 12, 51, 53, 33, 44] conquista 9.35 activaciones {'mem': 44632, 'pau': 2397, 'soc': 31, 'res': 374339, 'escr': 262}
+[01:30:12]   [ 9465.0s] prueba i2 lib   (238.6s) aborto None cruzan 5/9 nac [56, 49, 48, 52, 48, 46, 52, 49, 46] conquista None activaciones {'mem': 287446, 'pau': 55520, 'soc': 95, 'res': 771098, 'escr': 543}
+[01:32:02]   [ 9575.0s] prueba i2 mix   (218.4s) aborto None cruzan 6/9 nac [42, 58, 43, 34, 43, 33, 46, 59, 43] conquista -2.6 activaciones {'mem': 186647, 'pau': 17796, 'soc': 0, 'res': 371119, 'escr': 370}
+[01:33:58]   [ 9691.0s] prueba i2 mixA  (225.3s) aborto None cruzan 6/9 nac [53, 45, 57, 49, 47, 50, 48, 60, 34] conquista -3.2 activaciones {'mem': 88433, 'pau': 5164, 'soc': 0, 'res': 248239, 'escr': 355}
+[01:35:40]   [ 9793.0s] prueba i2 neu   (216.6s) aborto None cruzan 2/9 nac [34, 47, 45, 22, 30, 37, 34, 35, 55] conquista None activaciones {'mem': 138184, 'pau': 9955, 'soc': 509, 'res': 776880, 'escr': 353}
+[01:37:24]   [ 9897.0s] prueba i2 mixn  (206.6s) aborto None cruzan 1/9 nac [39, 20, 40, 30, 43, 24, 44, 35, 39] conquista 13.75 activaciones {'mem': 79637, 'pau': 2716, 'soc': 63, 'res': 483778, 'escr': 270}
+[01:39:36]   [10029.1s] prueba i3 lib   (236.8s) aborto None cruzan 6/9 nac [50, 49, 50, 52, 52, 51, 52, 51, 52] conquista None activaciones {'mem': 266159, 'pau': 13039, 'soc': 45, 'res': 708948, 'escr': 516}
+[01:41:04]   [10117.1s] prueba i3 mix   (220.4s) aborto None cruzan 7/9 nac [63, 41, 52, 55, 58, 38, 60, 45, 57] conquista -13.25 activaciones {'mem': 145242, 'pau': 4848, 'soc': 0, 'res': 273183, 'escr': 296}
+[01:43:18]   [10251.1s] prueba i3 mixA  (221.0s) aborto None cruzan 6/9 nac [59, 34, 56, 27, 55, 49, 55, 41, 50] conquista -17.25 activaciones {'mem': 128388, 'pau': 3693, 'soc': 9, 'res': 175119, 'escr': 305}
+[01:44:58]   [10351.1s] prueba i3 neu   (233.7s) aborto None cruzan 5/9 nac [46, 48, 46, 45, 61, 53, 54, 51, 47] conquista None activaciones {'mem': 314006, 'pau': 21798, 'soc': 53, 'res': 587483, 'escr': 594}
+[01:46:56]   [10469.1s] prueba i3 mixn  (218.8s) aborto None cruzan 6/9 nac [52, 42, 58, 50, 57, 43, 44, 45, 60] conquista -9.2 activaciones {'mem': 133256, 'pau': 3907, 'soc': 10, 'res': 301052, 'escr': 299}
+[01:48:55]   [10587.1s] prueba i4 lib   (235.7s) aborto None cruzan 6/9 nac [68, 50, 46, 48, 59, 55, 58, 51, 43] conquista None activaciones {'mem': 374118, 'pau': 5648, 'soc': 38, 'res': 645352, 'escr': 657}
+[01:50:37]   [10689.2s] prueba i4 mix   (220.2s) aborto None cruzan 4/9 nac [68, 55, 45, 33, 82, 57, 65, 53, 46] conquista 11.7 activaciones {'mem': 236897, 'pau': 4849, 'soc': 16, 'res': 321058, 'escr': 426}
+[01:52:25]   [10797.2s] prueba i4 mixA  (209.2s) aborto None cruzan 6/9 nac [39, 51, 39, 54, 56, 50, 40, 49, 56] conquista -5 activaciones {'mem': 69041, 'pau': 3379, 'soc': 33, 'res': 156527, 'escr': 294}
+[01:54:25]   [10917.2s] prueba i4 neu   (228.9s) aborto None cruzan 4/9 nac [60, 57, 63, 45, 53, 57, 54, 63, 47] conquista None activaciones {'mem': 301897, 'pau': 8436, 'soc': 136, 'res': 703842, 'escr': 575}
+[01:56:07]   [11019.2s] prueba i4 mixn  (222.9s) aborto None cruzan 4/9 nac [56, 54, 49, 63, 47, 59, 44, 52, 41] conquista -9.6 activaciones {'mem': 212639, 'pau': 6163, 'soc': 52, 'res': 347397, 'escr': 361}
+[01:58:21]   [11153.2s] prueba i5 lib   (234.9s) aborto None cruzan 7/9 nac [45, 56, 40, 47, 49, 40, 44, 49, 50] conquista None activaciones {'mem': 382031, 'pau': 2977, 'soc': 29, 'res': 675629, 'escr': 563}
+[01:59:45]   [11237.2s] prueba i5 mix   (218.4s) aborto None cruzan 6/9 nac [56, 53, 53, 35, 48, 28, 32, 39, 61] conquista -11.25 activaciones {'mem': 157772, 'pau': 965, 'soc': 0, 'res': 380448, 'escr': 297}
+[02:01:59]   [11371.2s] prueba i5 mixA  (218.6s) aborto None cruzan 8/9 nac [56, 44, 57, 33, 56, 43, 42, 42, 58] conquista -13.3 activaciones {'mem': 72382, 'pau': 2588, 'soc': 0, 'res': 237984, 'escr': 289}
+[02:03:39]   [11471.2s] prueba i5 neu   (234.3s) aborto None cruzan 5/9 nac [56, 48, 57, 50, 62, 47, 46, 48, 52] conquista None activaciones {'mem': 374628, 'pau': 14182, 'soc': 65, 'res': 816094, 'escr': 561}
+[02:05:31]   [11583.2s] prueba i5 mixn  (212.4s) aborto None cruzan 5/9 nac [56, 61, 50, 30, 48, 31, 20, 43, 44] conquista -2.35 activaciones {'mem': 166154, 'pau': 2950, 'soc': 0, 'res': 267958, 'escr': 298}
+[02:07:37]   [11709.2s] prueba i6 lib   (236.4s) aborto None cruzan 4/9 nac [45, 50, 45, 49, 53, 47, 42, 45, 43] conquista None activaciones {'mem': 217223, 'pau': 42451, 'soc': 43, 'res': 877304, 'escr': 536}
+[02:09:15]   [11807.2s] prueba i6 mix   (222.4s) aborto None cruzan 6/9 nac [45, 46, 36, 56, 50, 37, 31, 55, 37] conquista -8.7 activaciones {'mem': 168191, 'pau': 18327, 'soc': 6, 'res': 484068, 'escr': 358}
+[02:11:19]   [11931.3s] prueba i6 mixA  (221.8s) aborto None cruzan 7/9 nac [51, 58, 46, 55, 45, 54, 34, 38, 41] conquista -7.85 activaciones {'mem': 94315, 'pau': 4858, 'soc': 2, 'res': 313310, 'escr': 375}
+[02:12:55]   [12027.3s] prueba i6 neu   (221.5s) aborto None cruzan 4/9 nac [43, 38, 49, 49, 48, 32, 39, 26, 37] conquista None activaciones {'mem': 220054, 'pau': 13557, 'soc': 168, 'res': 431324, 'escr': 403}
+[02:14:57]   [12149.3s] prueba i6 mixn  (218.6s) aborto None cruzan 4/9 nac [42, 61, 39, 56, 46, 44, 52, 55, 34] conquista -11.4 activaciones {'mem': 164135, 'pau': 4909, 'soc': 21, 'res': 243223, 'escr': 315}
+[02:16:41]   [12253.3s] prueba i7 lib   (225.2s) aborto None cruzan 0/9 nac [35, 31, 40, 41, 33, 24, 42, 35, 28] conquista None activaciones {'mem': 128071, 'pau': 7847, 'soc': 681, 'res': 862922, 'escr': 311}
+[02:18:25]   [12357.3s] prueba i7 mix   (207.6s) aborto None cruzan 3/9 nac [55, 66, 39, 49, 30, 33, 32, 34, 36] conquista 7.1 activaciones {'mem': 64392, 'pau': 1838, 'soc': 46, 'res': 396163, 'escr': 255}
+[02:20:17]   [12469.3s] prueba i7 mixA  (216.6s) aborto None cruzan 5/9 nac [57, 61, 32, 41, 58, 48, 55, 36, 44] conquista -2.7 activaciones {'mem': 83030, 'pau': 2775, 'soc': 3, 'res': 185634, 'escr': 290}
+[02:22:01]   [12573.3s] prueba i7 neu   (216.6s) aborto None cruzan 4/9 nac [36, 69, 62, 50, 43, 39, 37, 60, 49] conquista None activaciones {'mem': 273036, 'pau': 9229, 'soc': 118, 'res': 851973, 'escr': 542}
+[02:23:47]   [12679.3s] prueba i7 mixn  (210.5s) aborto None cruzan 4/9 nac [44, 41, 50, 56, 38, 51, 49, 63, 52] conquista 6.15 activaciones {'mem': 82671, 'pau': 976, 'soc': 30, 'res': 394651, 'escr': 249}
+[02:25:51]   [12803.3s] prueba i8 lib   (231.0s) aborto None cruzan 2/9 nac [57, 63, 55, 51, 47, 45, 47, 44, 53] conquista None activaciones {'mem': 296425, 'pau': 6737, 'soc': 142, 'res': 747657, 'escr': 516}
+[02:27:31]   [12903.3s] prueba i8 mix   (224.0s) aborto None cruzan 5/9 nac [45, 49, 32, 67, 55, 56, 56, 57, 44] conquista -10.85 activaciones {'mem': 136427, 'pau': 9965, 'soc': 8, 'res': 354676, 'escr': 358}
+[02:29:33]   [13025.3s] prueba i8 mixA  (221.8s) aborto None cruzan 6/9 nac [57, 39, 45, 59, 48, 58, 44, 53, 53] conquista -2.85 activaciones {'mem': 86036, 'pau': 2825, 'soc': 5, 'res': 170997, 'escr': 361}
+[02:31:05]   [13117.3s] prueba i8 neu   (213.7s) aborto None cruzan 0/9 nac [38, 47, 31, 37, 26, 50, 36, 31, 30] conquista None activaciones {'mem': 45648, 'pau': 10509, 'soc': 556, 'res': 831956, 'escr': 360}
+[02:33:07]   [13239.3s] prueba i8 mixn  (213.0s) aborto None cruzan 5/9 nac [39, 45, 91, 44, 64, 45, 54, 45, 69] conquista 18.65 activaciones {'mem': 109622, 'pau': 3098, 'soc': 155, 'res': 408580, 'escr': 362}
+[02:34:37]   [13329.4s] prueba i9 lib   (212.4s) aborto None cruzan 1/9 nac [20, 41, 22, 35, 29, 24, 18, 34, 37] conquista None activaciones {'mem': 34365, 'pau': 6324, 'soc': 500, 'res': 861397, 'escr': 274}
+[02:36:33]   [13445.4s] prueba i9 mix   (205.6s) aborto None cruzan 3/9 nac [43, 50, 40, 35, 35, 43, 25, 49, 16] conquista 12.45 activaciones {'mem': 35395, 'pau': 942, 'soc': 15, 'res': 397326, 'escr': 231}
+[02:38:15]   [13547.4s] prueba i9 mixA  (216.7s) aborto None cruzan 7/9 nac [51, 49, 54, 45, 56, 57, 53, 59, 52] conquista -0.7 activaciones {'mem': 65789, 'pau': 1660, 'soc': 13, 'res': 254084, 'escr': 248}
+[02:40:19]   [13671.4s] prueba i9 neu   (226.7s) aborto None cruzan 3/9 nac [32, 40, 47, 42, 48, 44, 51, 59, 45] conquista None activaciones {'mem': 172466, 'pau': 19156, 'soc': 83, 'res': 648794, 'escr': 483}
+[02:41:49]   [13761.4s] prueba i9 mixn  (213.8s) aborto None cruzan 5/9 nac [49, 51, 54, 54, 52, 35, 67, 48, 61] conquista -9.6 activaciones {'mem': 114979, 'pau': 6428, 'soc': 46, 'res': 302656, 'escr': 288}
+[02:41:49] 
+================ LA LETRA (PREREGISTRO_o1_libre.md sec. 6)
+[02:41:49]   validez: {'V1_completa': True, 'V2_o1_vive': True, 'V3_mundo_actua': True, 'V4_siembra_actua': True, 'V5_perillas': True, 'V6_neutro_neutro': True}
+[02:41:49]   puertas: {'PC_conquista': False, 'PN_no_es_solo_deriva': False, 'PP_un_poder_se_prende': False} · umbrales {'gana': 8, 'dif_poder': 0.05, 'o1_R0': 0.5} · EN EL UMBRAL (+-1): False · matiz None
+[02:41:49]   [desc] conquista_por_indice: {'mix': [-7.3, 12.85, -2.6, -13.25, 11.7, -11.25, -8.7, 7.1, -10.85, 12.45], 'mixn': [0.65, 9.35, 13.75, -9.2, -9.6, -2.35, -11.4, 6.15, 18.65, -9.6], 'mix_gana': 4, 'mix_gana_a_mixn': 5}
+[02:41:49]   [desc] extinciones: {'lib': {}, 'neu': {}}
+[02:41:49]   [desc] poderes_siembra_final: {'MEM': {'gana': 6, 'dif_med': 0.0468, 'lib_med': 0.1046, 'neu_med': 0.0578, 'indices_con_ambas': 10, 'se_prende': False}, 'SOC': {'gana': 5, 'dif_med': 0.0146, 'lib_med': 0.0874, 'neu_med': 0.0728, 'indices_con_ambas': 10, 'se_prende': False}, 'RES': {'gana': 7, 'dif_med': 0.0062, 'lib_med': 0.0693, 'neu_med': 0.0631, 'indices_con_ambas': 10, 'se_prende': False}, 'PAU': {'gana': 4, 'dif_med': -0.0083, 'lib_med': 0.0592, 'neu_med': 0.0675, 'indices_con_ambas': 10, 'se_prende': False}}
+[02:41:49]   [desc] trayectoria_siembra_mediana: {'lib': {'MARGEN': [0.2555, 0.2395, 0.2527], 'PRUEBA': [0.4936, 0.4607, 0.4435], 'PEN_OTRO': [0.3412, 0.3505, 0.3544], 'D0': [2.9579, 2.9489, 3.1002], 'PISO': [0.2303, 0.2639, 0.3266], 'U4': [4.0231, 3.9999, 4.0461], 'U2': [1.9994, 2.0065, 1.9896], 'U1': [1.011, 1.0237, 1.0787], 'XURG': [0.303, 0.2925, 0.3114], 'TOPE': [0.5035, 0.4929, 0.479], 'MEM': [0.0354, 0.0912, 0.1046], 'SOC': [0.038, 0.0756, 0.0874], 'RES': [0.0288, 0.0556, 0.0693], 'PAU': [0.0413, 0.0605, 0.0592]}, 'neu': {'MARGEN': [0.2538, 0.2623, 0.2632], 'PRUEBA': [0.5094, 0.4872, 0.4516], 'PEN_OTRO': [0.3432, 0.368, 0.3583], 'D0': [3.005, 2.9546, 3.011], 'PISO': [0.2103, 0.1963, 0.1858], 'U4': [3.9729, 3.9437, 4.0129], 'U2': [2.013, 2.027, 2.0199], 'U1': [1.0029, 0.9746, 0.9732], 'XURG': [0.3058, 0.284, 0.2836], 'TOPE': [0.507, 0.494, 0.4739], 'MEM': [0.0312, 0.0507, 0.0578], 'SOC': [0.0447, 0.0515, 0.0728], 'RES': [0.033, 0.055, 0.0631], 'PAU': [0.0294, 0.0561, 0.0675]}}
+[02:41:49]   [desc] orden_de_encendido: {'MEM': {'dif_por_pasaje': [0.0042, 0.0405, 0.0468], 'prende_en_pasaje': None}, 'SOC': {'dif_por_pasaje': [-0.0067, 0.0241, 0.0146], 'prende_en_pasaje': None}, 'RES': {'dif_por_pasaje': [-0.0042, 0.0006, 0.0062], 'prende_en_pasaje': None}, 'PAU': {'dif_por_pasaje': [0.0119, 0.0044, -0.0083], 'prende_en_pasaje': None}}
+[02:41:49]   [desc] genes_O1_final: {'MARGEN': {'lib': 0.2527, 'neu': 0.2632, 'fabrica': 0.25, 'lib_gana_neu': 8}, 'PRUEBA': {'lib': 0.4435, 'neu': 0.4516, 'fabrica': 0.5, 'lib_gana_neu': 2}, 'PEN_OTRO': {'lib': 0.3544, 'neu': 0.3583, 'fabrica': 0.35, 'lib_gana_neu': 5}, 'D0': {'lib': 3.1002, 'neu': 3.011, 'fabrica': 3.0, 'lib_gana_neu': 6}, 'PISO': {'lib': 0.3266, 'neu': 0.1858, 'fabrica': 0.2, 'lib_gana_neu': 10}, 'U4': {'lib': 4.0461, 'neu': 4.0129, 'fabrica': 4.0, 'lib_gana_neu': 6}, 'U2': {'lib': 1.9896, 'neu': 2.0199, 'fabrica': 2.0, 'lib_gana_neu': 3}, 'U1': {'lib': 1.0787, 'neu': 0.9732, 'fabrica': 1.0, 'lib_gana_neu': 9}, 'XURG': {'lib': 0.3114, 'neu': 0.2836, 'fabrica': 0.3, 'lib_gana_neu': 5}, 'TOPE': {'lib': 0.479, 'neu': 0.4739, 'fabrica': 0.5, 'lib_gana_neu': 6}}
+[02:41:49]   [desc] carga_R0_lib_primer_vs_ultimo_pasaje: {'primero': 0.9002, 'ultimo': 0.9741, 'aviso': False}
+[02:41:49]   [desc] suma_cruzan: {'lib': 39, 'neu': 32, 'o1': 69, 'mix': 48, 'mixn': 42}
+[02:41:49]   [desc] nac_reales_total_med: {'lib': 420.0, 'neu': 413.5, 'o1': 482.0, 'mix': 397.0, 'mixn': 436.5}
+[02:41:49]   [desc] R0_med: {'lib': 0.9586, 'neu': 0.6204, 'o1': 0.9811, 'mix': 0.9598, 'mixn': 0.9056}
+[02:41:49]   [desc] PM_monocultivo: {'lib_gana_o1': 1, 'neu_gana_o1': 0, 'lib_gana_neu': 6, 'nac_lib_gana_o1': 0}
+[02:41:49]   [desc] mix_cruzan: {'mix': {'lib': 31, 'o1': 17}, 'mixn': {'lib': 22, 'o1': 20}, 'mixA': {'lib': 31, 'o1': 30}}
+[02:41:49]   [desc] activaciones_prueba: {'lib': {'mem': 272591.0, 'pau': 7636.0, 'soc': 75.0, 'res': 786973.0, 'escr': 522.0}, 'neu': {'mem': 196260.0, 'pau': 12594.5, 'soc': 131.5, 'res': 772050.0, 'escr': 486.0}, 'mix': {'mem': 151507.0, 'pau': 4848.5, 'soc': 7.5, 'res': 385091.0, 'escr': 327.5}, 'mixn': {'mem': 112300.5, 'pau': 3502.5, 'soc': 30.5, 'res': 360868.0, 'escr': 298.5}}
+[02:41:49]   [desc] partos_por_pasaje: {'lib': [622.5, 560.0, 525.0], 'neu': [591.5, 598.5, 584.5]}
+[02:41:49]   [desc] mixtas_por_lado: {'mix': {'conquista': -4.95, 'dif_partos': 20.325, 'dif_muertes': -80.275, 'dif_fund': -71.0}, 'mixn': {'conquista': -0.85, 'dif_partos': 14.05, 'dif_muertes': -23.45, 'dif_fund': -20.825}, 'mixA': {'conquista': -4.1, 'dif_partos': 11.75, 'dif_muertes': -37.375, 'dif_fund': -29.3}}
+[02:41:49]   [desc] mixA_descriptivo: {'conquista': [-2.6, -19.7, -3.2, -17.25, -5, -13.3, -7.85, -2.7, -2.85, -0.7], 'mixA_gana_o1': 0, 'mix_gana_mixA': 7, 'mediana_mix_menos_mixA': 3.025}
+[02:41:49]   [desc] activaciones_cadena_lib_ultimo: {'mem': 267527.0, 'pau': 13493.5, 'soc': 83.5, 'res': 678010.0, 'escr': 525.0}
+[02:41:49]   [desc] mundo_AC: {'lib': 2.0681, 'neu': 2.1924, 'o1': 3.1462, 'mix': 2.6265, 'mixn': 2.4927}
+[02:41:49]   [desc] frac_en_parche_med: {'lib': 0.2737, 'neu': 0.2396, 'o1': 0.1423, 'mix': 0.2283, 'mixn': 0.2131}
+[02:41:49] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre\datos\replica_i734501-734510_20260930_225227\resumen.json (sha bb9c48f38c01ce6e) · abortos 0 · 13761.8s
+[02:41:49] VEREDICTO DE LA REPLICA: NO   (en el umbral: False; regla de parada: PREREGISTRO_o1_libre.md sec. 7)
