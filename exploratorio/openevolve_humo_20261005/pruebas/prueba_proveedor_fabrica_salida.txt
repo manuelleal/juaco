@@ -1,0 +1,72 @@
+﻿.\venv\Scripts\python.exe : All 1 attempts failed with error: [WinError 2] El sistema no puede encontrar el archivo 
+especificado
+En línea: 1 Carácter: 427
++ ... | Out-Null; .\venv\Scripts\python.exe pruebas\prueba_proveedor_fabric ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (All 1 attempts ...vo especificado:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Traceback (most recent call last):
+ERROR: FileNotFoundError [WinError 2] El sistema no puede encontrar el archivo especificado
+segundos 0.0
+  File "C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\pruebas\prueba_proveedor_fabrica.py", line 9, in <module>
+    r = asyncio.run(m.generate_with_context("Responde solo con la palabra pedida.", [{"role": "user", "content": 
+"Escribe la palabra: listo"}]))
+  File "C:\Python314\Lib\asyncio\runners.py", line 204, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\asyncio\runners.py", line 127, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Python314\Lib\asyncio\base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\venv\Lib\site-packages\openevolve\llm\claude_code.py", line 
+91, in generate_with_context
+    result = await asyncio.wait_for(
+             ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "C:\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "C:\Python314\Lib\concurrent\futures\thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\venv\Lib\site-packages\openevolve\llm\claude_code.py", line 
+92, in <lambda>
+    loop.run_in_executor(None, lambda: self._run_cli(cmd, timeout)),
+                                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\venv\Lib\site-packages\openevolve\llm\claude_code.py", line 
+117, in _run_cli
+    result = subprocess.run(
+        cmd,
+    ...<3 lines>...
+        cwd=self.cwd,
+    )
+  File "C:\Python314\Lib\subprocess.py", line 554, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1038, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 1552, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] El sistema no puede encontrar el archivo especificado
