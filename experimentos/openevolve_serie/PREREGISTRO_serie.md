@@ -136,8 +136,10 @@ de muestra: ¿cumple?
 **Por qué FUNCIONA sólo tiene 0.30:** el humo halló el programa en la ronda 12–13 de 30, así que una réplica puede no encontrarlo. Y
 Haiku, con el prompt que describe la física, puede encontrarlo también: eso da MODESTO (i).
 
-## 9. Humo de tubería (se completa al terminar; no cuenta)
-(pendiente)
+## 9. Humo de tubería (no cuenta; agregado tras el commit 00defd3e y ANTES de lanzar A, B y H)
+1 iteración, semillas 274901–274903, 150 s de reloj: OpenEvolve carga, el adaptador llama a Sonnet (`claude-sonnet-5-5`; el CLI usa
+además Haiku para una llamada interna mínima), el diff se aplica y la cascada evalúa (etapas 1 y 2; el hijo no pasa a la 3).
+Costo: 0.065 USD en una llamada (8 920 tokens de entrada en caché y 2 395 de salida) → ~2–5 USD por corrida de 30 iteraciones.
 
 ## 10. Regla de parada
 - Cada corrida se detiene a las 30 iteraciones, con 33 llamadas o con 20 USD globales; lo que llegue primero.
