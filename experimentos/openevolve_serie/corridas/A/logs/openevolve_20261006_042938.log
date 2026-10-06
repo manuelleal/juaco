@@ -61,3 +61,11 @@
 2026-10-06 04:51:29,454 - openevolve.database - INFO - Saved database with 6 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_5
 2026-10-06 04:51:29,454 - openevolve.controller - INFO - Saved best program at checkpoint 5 with metrics: combined_score=0.3140, etapa=3.0000, vida_med=13264.5000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.2000
 2026-10-06 04:51:29,454 - openevolve.controller - INFO - Saved checkpoint at iteration 5 to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_5
+2026-10-06 04:52:41,278 - openevolve.evaluator - INFO - Evaluated program 31f172ef-1198-4ab9-9768-e6575c70d714 in 54.67s: combined_score=0.0500, etapa=2.0000, vida_med=1001.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-06 04:52:41,280 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 04:52:41,289 - openevolve.process_parallel - INFO - Iteration 6: Program 31f172ef-1198-4ab9-9768-e6575c70d714 (parent: 47cc25f9-0490-4c00-8418-7066a39eaaa3) completed in 71.86s
+2026-10-06 04:52:41,290 - openevolve.process_parallel - INFO - Metrics: combined_score=0.0500, etapa=2.0000, vida_med=1001.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-06 04:58:12,706 - openevolve.evaluator - INFO - Evaluated program b41bb622-5aa4-4b89-818a-27968c35500a in 315.94s: combined_score=0.3140, etapa=3.0000, vida_med=13264.5000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.2000
+2026-10-06 04:58:12,708 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 04:58:12,713 - openevolve.process_parallel - INFO - Iteration 7: Program b41bb622-5aa4-4b89-818a-27968c35500a (parent: 1f372b1f-5f51-49f3-b71e-b968f1d503e3) completed in 331.43s
+2026-10-06 04:58:12,713 - openevolve.process_parallel - INFO - Metrics: combined_score=0.3140, etapa=3.0000, vida_med=13264.5000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.2000
