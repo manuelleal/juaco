@@ -190,3 +190,26 @@
 2026-10-06 06:31:26,419 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
 2026-10-06 06:31:26,420 - openevolve.process_parallel - INFO - Iteration 28: Program f4a52859-d2ea-4e79-8b80-0ccf37d3722c (parent: a76066ae-7e89-4e67-b673-9b4224167076) completed in 383.38s
 2026-10-06 06:31:26,421 - openevolve.process_parallel - INFO - Metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:37:44,649 - openevolve.evaluator - INFO - Evaluated program 4905afaf-f961-4512-8ae4-c6ff1c0d393b in 364.87s: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:37:44,655 - openevolve.llm.ensemble - INFO - Sampled model: sonnet
+2026-10-06 06:37:44,663 - openevolve.process_parallel - INFO - Iteration 29: Program 4905afaf-f961-4512-8ae4-c6ff1c0d393b (parent: 129dac70-1477-4386-83bb-89a82b8dafd4) completed in 378.23s
+2026-10-06 06:37:44,664 - openevolve.process_parallel - INFO - Metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:44:03,671 - openevolve.evaluator - INFO - Evaluated program de3e2786-5c2f-4cac-944a-274ea44726e6 in 370.87s: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:44:03,680 - openevolve.process_parallel - INFO - Iteration 30: Program de3e2786-5c2f-4cac-944a-274ea44726e6 (parent: c53a4886-4355-453b-aec8-d4e9c27da94e) completed in 379.02s
+2026-10-06 06:44:03,680 - openevolve.process_parallel - INFO - Metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:44:03,680 - openevolve.process_parallel - INFO - Checkpoint interval reached at iteration 30
+2026-10-06 06:44:03,681 - openevolve.database - INFO - Island Status:
+2026-10-06 06:44:03,681 - openevolve.database - INFO -  * Island 0: 28 programs, best=0.4244, avg=0.2755, diversity=65.58, gen=29 (best: 34dcea1c-31b4-4100-8e13-fadd8d16f7ef)
+2026-10-06 06:44:03,689 - openevolve.database - INFO - Saved database with 28 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_30
+2026-10-06 06:44:03,689 - openevolve.controller - INFO - Saved best program at checkpoint 30 with metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:44:03,689 - openevolve.controller - INFO - Saved checkpoint at iteration 30 to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_30
+2026-10-06 06:44:03,690 - openevolve.process_parallel - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-06 06:44:03,698 - openevolve.database - INFO - Saved database with 28 programs to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_30
+2026-10-06 06:44:03,698 - openevolve.controller - INFO - Saved best program at checkpoint 30 with metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:44:03,698 - openevolve.controller - INFO - Saved checkpoint at iteration 30 to /home/user/juaco/experimentos/openevolve_serie/corridas/A/checkpoints/checkpoint_30
+2026-10-06 06:44:03,699 - openevolve.controller - INFO - Received signal 15, initiating graceful shutdown...
+2026-10-06 06:44:03,699 - openevolve.process_parallel - INFO - Graceful shutdown requested...
+2026-10-06 06:44:03,705 - openevolve.process_parallel - INFO - Stopped process pool
+2026-10-06 06:44:03,705 - openevolve.controller - INFO - Using tracked best program: 34dcea1c-31b4-4100-8e13-fadd8d16f7ef
+2026-10-06 06:44:03,705 - openevolve.controller - INFO - Evolution complete. Best program has metrics: combined_score=0.4244, etapa=3.0000, vida_med=9458.5000, persisten_frac=0.2222, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.6667
+2026-10-06 06:44:03,706 - openevolve.controller - INFO - Saved best program to /home/user/juaco/experimentos/openevolve_serie/corridas/A/best/best_program.py with program info to /home/user/juaco/experimentos/openevolve_serie/corridas/A/best/best_program_info.json
