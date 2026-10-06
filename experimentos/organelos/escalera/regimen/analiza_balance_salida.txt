@@ -1,0 +1,15 @@
+(1) TERMOMETRO: x_pred = 18 (mBD - mAC + O) / O con O = 2700; por brazo mediana de (medido, predicho), y correlacion sobre las 80 pruebas
+  sel  medido   4.32  predicho   4.40  · mAC - mBD mediana 2040.0
+  neu  medido   6.73  predicho   6.71  · mAC - mBD mediana 1693.0
+  fab  medido   7.16  predicho   6.90  · mAC - mBD mediana 1665.5
+  o1   medido   7.03  predicho   7.09  · mAC - mBD mediana 1636.5
+  Pearson(medido, predicho) n 80: +0.837 · Spearman +0.665 · error mediano 0.514
+
+(2) ECONOMIA POR CUERPO (mediana por brazo): ingesta total (1.6 x AC dentro + 0.4 x AC fuera), ingesta por mordida AC, mordidas por nacimiento, vida
+  sel  ing 5006.2 · por_mord 0.9226 · frac_in 0.4355 · mord_por_nac 16.1182 · ing_por_nac 14.7706 · nac 333.5 · muertes 715.0 · vida 600.0 · mBD_por_mAC 0.6154 · cuerpos 715.0
+  neu  ing 3155.8 · por_mord 0.7291 · frac_in 0.2742 · mord_por_nac 10.3848 · ing_por_nac 7.4607 · nac 418.0 · muertes 1352.0 · vida 200.0 · mBD_por_mAC 0.6087 · cuerpos 1352.0
+  fab  ing 5330.4 · por_mord 1.0308 · frac_in 0.5257 · mord_por_nac 25.3722 · ing_por_nac 25.858 · nac 210.5 · muertes 476.0 · vida 1233.75 · mBD_por_mAC 0.6801 · cuerpos 476.0
+  o1   ing 3104.2 · por_mord 0.7254 · frac_in 0.2712 · mord_por_nac 10.4402 · ing_por_nac 7.5682 · nac 411.5 · muertes 1387.5 · vida 200.0 · mBD_por_mAC 0.6154 · cuerpos 1387.5
+
+(3) dentro de sel: rho(GV, ingesta), rho(GV, frac dentro), rho(GV, mBD/mAC)
+  ingesta +0.78 · frac dentro +0.74 · mBD/mAC +0.65

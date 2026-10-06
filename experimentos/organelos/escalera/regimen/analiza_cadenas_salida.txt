@@ -1,0 +1,21 @@
+(1) sel por pasaje: rho(GV siembra del pasaje ANTERIOR -> refundaciones por camara, establecidos, cruzan, mundo AC, fund de camara) n 20
+  p1: GV_prev med 0.0961 · refund +0.01 · est -0.00 · cruzan +0.32 · AC -0.17 · refund med 663.5
+  p2: GV_prev med 0.1367 · refund -0.24 · est +0.17 · cruzan +0.32 · AC +0.07 · refund med 482.5
+  p3: GV_prev med 0.178 · refund -0.28 · est +0.36 · cruzan +0.22 · AC +0.21 · refund med 464.0
+  p4: GV_prev med 0.1912 · refund -0.37 · est +0.21 · cruzan +0.19 · AC +0.11 · refund med 446.0
+
+(1b) mismo pasaje: rho(GV siembra final del pasaje p -> refundaciones de p)
+  p0: refund -0.39 · est +0.67
+  p1: refund -0.24 · est +0.33
+  p2: refund -0.25 · est +0.08
+  p3: refund -0.51 · est +0.43
+  p4: refund -0.36 · est +0.04
+
+(2) meseta: GV(p) - GV(p-1) por cadena: sube / baja, mediana del paso
+  p0->p1: sube 20 baja 0 · mediana +0.0446 · |paso| med 0.0446
+  p1->p2: sube 18 baja 2 · mediana +0.0388 · |paso| med 0.0388
+  p2->p3: sube 16 baja 4 · mediana +0.0186 · |paso| med 0.0198
+  p3->p4: sube 10 baja 10 · mediana +0.0029 · |paso| med 0.0166
+
+(3) dispersion de GV dentro de la siembra final (p4): mediana del rango intercuartil y del maximo - mediana por cadena
+  IQR med 0.0604 · max - mediana med 0.0554 · n siembra med 40.0

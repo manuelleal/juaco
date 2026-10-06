@@ -1,0 +1,93 @@
+CORRE_SENTIDOS_MURO · explora · 2026-09-29 11:00:24 · python 3.14.2 · pool 2 · runner 4776b80e18733079 · PREREGISTRO_sentidos_muro.md · indices [1, 2, 3, 4, 5] · npas 10 · T_pas 25000 · T_pru 100000 · pasajes 614010.. · prueba [59201, 59202, 59203, 59204, 59205] · CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\sentidos_muro\datos\explora_20260929_110024
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+  carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  arnes: PASA con los shas actuales
+  [  333.9s] pas i1 bq3_pas (333.5s) aborto None · cruzan 5 · R0 [0.1186, 0.9773, 0.0196, 0.9643, 0.9722, 0.9688, 0.3621, 0.8372, 0.9677] · fund [222, 0, 700, 0, 0, 0, 73, 6, 0] · siembra por pasaje [121, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [  333.9s] pas i2 bq3_pas (333.5s) aborto None · cruzan 2 · R0 [0.0943, 0.1078, 0.283, 0.4576, 0.188, 0.2047, 0.2909, 0.95, 0.9688] · fund [191, 181, 75, 31, 107, 100, 77, 1, 0] · siembra por pasaje [124, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [  685.6s] pas i3 bq3_pas (351.7s) aborto None · cruzan 2 · R0 [0.0356, 0.5231, 0.8182, 0.9787, 0.9778, 0.6429, 0.1193, 0.2787, 0.2414] · fund [541, 30, 11, 0, 0, 14, 309, 87, 87] · siembra por pasaje [154, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [  687.1s] pas i4 bq3_pas (353.2s) aborto None · cruzan 4 · R0 [0.9778, 0.9429, 0.0767, 0.1223, 0.0862, 0.7727, 0.9667, 0.96, 0.4045] · fund [0, 1, 408, 286, 296, 9, 0, 0, 52] · siembra por pasaje [136, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1017.7s] pas i1 bq2_pas (330.6s) aborto None · cruzan 1 · R0 [0.3953, 0.325, 0.3736, 0.1959, 0.0909, 0.9714, 0.1849, 0.1754, 0.5926] · fund [51, 80, 56, 118, 239, 0, 118, 140, 21] · siembra por pasaje [123, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1024.4s] pas i5 bq3_pas (338.9s) aborto None · cruzan 0 · R0 [0.1039, 0.0731, 0.1321, 0.814, 0.1515, 0.3956, 0.8409, 0.105, 0.7838] · fund [137, 202, 137, 7, 111, 54, 6, 178, 7] · siembra por pasaje [133, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1345.3s] pas i2 bq2_pas (327.6s) aborto None · cruzan 2 · R0 [0.4368, 0.75, 0.1951, 0.9412, 0.1594, 0.9744, 0.18, 0.1296, 0.3409] · fund [48, 13, 164, 1, 173, 0, 163, 187, 57] · siembra por pasaje [108, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1355.4s] pas i3 bq2_pas (331.0s) aborto None · cruzan 3 · R0 [0.6857, 0.015, 0.4767, 0.8361, 0.1293, 0.9697, 0.6119, 0.9474, 0.9688] · fund [10, 785, 44, 9, 228, 0, 25, 0, 0] · siembra por pasaje [142, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1680.7s] pas i4 bq2_pas (335.4s) aborto None · cruzan 2 · R0 [0.9722, 0.5882, 0.7719, 0.2, 0.0726, 0.3826, 0.975, 0.1339, 0.5323] · fund [0, 27, 12, 107, 293, 70, 0, 206, 28] · siembra por pasaje [118, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1685.6s] pas i5 bq2_pas (330.2s) aborto None · cruzan 3 · R0 [0.7959, 0.9744, 0.9487, 0.1878, 0.92, 0.32, 0.1043, 0.142, 0.0778] · fund [9, 0, 1, 146, 1, 84, 188, 150, 248] · siembra por pasaje [114, 450, 450, 450, 450, 450, 450, 450, 450, 450]
+  [ 1776.9s] uno i1 bq3 (96.2s) aborto None · cruzan 2 · R0 [0.9286, 0.8929, 0.493, 0.8462, 0.2688, 0.8529, 0.9677, 0.0109, 0.0202] · fund [0, 2, 35, 3, 67, 4, 0, 452, 581] · siembra por pasaje []
+  [ 1783.0s] uno i2 bq3 (97.4s) aborto None · cruzan 1 · R0 [0.4583, 0.1107, 0.2209, 0.8, 0.1545, 0.7, 0.9394, 0.021, 0.7419] · fund [38, 272, 133, 3, 103, 11, 1, 558, 7] · siembra por pasaje []
+  [ 1873.7s] uno i3 bq3 (96.8s) aborto None · cruzan 5 · R0 [0.9706, 0.0791, 0.8125, 0.0702, 0.9778, 0.9688, 0.9091, 0.9722, 0.0293] · fund [0, 162, 5, 211, 0, 0, 3, 0, 662] · siembra por pasaje []
+  [ 1880.3s] uno i4 bq3 (97.3s) aborto None · cruzan 3 · R0 [0.2569, 0.7442, 0.1278, 0.0234, 0.875, 0.9677, 0.9714, 0.0389, 0.973] · fund [80, 10, 156, 459, 1, 0, 0, 518, 0] · siembra por pasaje []
+  [ 1967.9s] uno i5 bq3 (94.2s) aborto None · cruzan 4 · R0 [0.0886, 0.95, 0.9688, 0.9565, 0.0171, 0.0536, 0.9412, 0.8235, 0.8947] · fund [246, 1, 0, 0, 517, 458, 0, 5, 1] · siembra por pasaje []
+  [ 1973.0s] uno i1 forzada3 (92.8s) aborto None · cruzan 4 · R0 [0.0046, 0.0045, 0.0398, 0.9722, 0.9697, 0.9615, 0.2981, 0.9714, 0.5] · fund [431, 442, 337, 0, 0, 0, 72, 0, 32] · siembra por pasaje []
+  [ 2060.6s] uno i2 forzada3 (92.7s) aborto None · cruzan 5 · R0 [0.2113, 0.9706, 0.9697, 0.0045, 0.9714, 0.9697, 0.055, 0.9714, 0.0067] · fund [111, 0, 0, 444, 0, 0, 291, 0, 445] · siembra por pasaje []
+  [ 2066.4s] uno i3 forzada3 (93.4s) aborto None · cruzan 5 · R0 [0.9722, 0.0, 0.9091, 0.009, 0.9722, 0.9444, 0.1117, 0.9677, 0.0778] · fund [0, 475, 2, 438, 0, 1, 182, 0, 248] · siembra por pasaje []
+  [ 2153.1s] uno i4 forzada3 (92.5s) aborto None · cruzan 4 · R0 [0.0334, 0.0145, 0.9714, 0.0044, 0.2544, 0.9697, 0.9706, 0.9737, 0.4179] · fund [346, 408, 0, 448, 84, 0, 0, 0, 38] · siembra por pasaje []
+  [ 2159.0s] uno i5 forzada3 (92.7s) aborto None · cruzan 5 · R0 [0.9655, 0.0157, 0.9737, 0.9394, 0.4225, 0.031, 0.9615, 0.0021, 0.9444] · fund [0, 374, 0, 1, 40, 343, 0, 475, 1] · siembra por pasaje []
+  20 trabajos · abortos 0 · 2159.0s
+
+================ LECTURA sentidos_muro · explora · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\sentidos_muro\datos\explora_20260929_110024
+  arnes: PASA con los shas actuales · refs: sha OK · abortos: []
+  bq3_pas   i1 s59201: cruzan 5/9 · mayoria 1 · R0 med 0.9643 · fund med 0.0 media 111.2 · siembra riesgo 0.0 s9/10 0.058 · banco riesgo 0.0 · fund de banco 1010/1010
+  bq3_pas   i2 s59202: cruzan 2/9 · mayoria 0 · R0 med 0.283 · fund med 77.0 media 84.8 · siembra riesgo 0.0 s9/10 0.02 · banco riesgo 0.0 · fund de banco 772/772
+  bq3_pas   i3 s59203: cruzan 2/9 · mayoria 0 · R0 med 0.5231 · fund med 30.0 media 119.9 · siembra riesgo 0.0 s9/10 0.244 · banco riesgo 0.0 · fund de banco 1088/1088
+  bq3_pas   i4 s59204: cruzan 4/9 · mayoria 0 · R0 med 0.7727 · fund med 9.0 media 116.9 · siembra riesgo 0.0 s9/10 0.04 · banco riesgo 0.0 · fund de banco 1061/1061
+  bq3_pas   i5 s59205: cruzan 0/9 · mayoria 0 · R0 med 0.1515 · fund med 111.0 media 93.2 · siembra riesgo 0.0 s9/10 0.047 · banco riesgo 0.004 · fund de banco 848/848
+  bq2_pas   i1 s59201: cruzan 1/9 · mayoria 0 · R0 med 0.325 · fund med 80.0 media 91.4 · siembra riesgo 0.0 s9/10 0.0 · banco riesgo 0.0 · fund de banco 832/832
+  bq2_pas   i2 s59202: cruzan 2/9 · mayoria 0 · R0 med 0.3409 · fund med 57.0 media 89.6 · siembra riesgo 0.0 s9/10 0.0 · banco riesgo 0.0 · fund de banco 815/815
+  bq2_pas   i3 s59203: cruzan 3/9 · mayoria 0 · R0 med 0.6857 · fund med 10.0 media 122.3 · siembra riesgo 0.0 s9/10 0.0 · banco riesgo 0.0 · fund de banco 1110/1110
+  bq2_pas   i4 s59204: cruzan 2/9 · mayoria 0 · R0 med 0.5323 · fund med 28.0 media 82.6 · siembra riesgo 0.0 s9/10 0.0 · banco riesgo 0.0 · fund de banco 752/752
+  bq2_pas   i5 s59205: cruzan 3/9 · mayoria 0 · R0 med 0.32 · fund med 84.0 media 91.9 · siembra riesgo 0.0 s9/10 0.0 · banco riesgo 0.0 · fund de banco 836/836
+  bq3       i1 s59201: cruzan 2/9 · mayoria 0 · R0 med 0.8462 · fund med 4.0 media 127.1 · banco riesgo 0.138 · fund de banco 986/1153
+  bq3       i2 s59202: cruzan 1/9 · mayoria 0 · R0 med 0.4583 · fund med 38.0 media 125.1 · banco riesgo 0.0 · fund de banco 1070/1135
+  bq3       i3 s59203: cruzan 5/9 · mayoria 1 · R0 med 0.9091 · fund med 3.0 media 115.9 · banco riesgo 0.0 · fund de banco 829/1052
+  bq3       i4 s59204: cruzan 3/9 · mayoria 0 · R0 med 0.7442 · fund med 10.0 media 136.0 · banco riesgo 0.0 · fund de banco 1057/1233
+  bq3       i5 s59205: cruzan 4/9 · mayoria 0 · R0 med 0.8947 · fund med 1.0 media 136.4 · banco riesgo 0.0 · fund de banco 1067/1237
+  forzada3  i1 s59201: cruzan 4/9 · mayoria 0 · R0 med 0.5 · fund med 32.0 media 146.0 · banco riesgo None · fund de banco 0/1323
+  forzada3  i2 s59202: cruzan 5/9 · mayoria 1 · R0 med 0.9697 · fund med 0.0 media 143.4 · banco riesgo None · fund de banco 0/1300
+  forzada3  i3 s59203: cruzan 5/9 · mayoria 1 · R0 med 0.9091 · fund med 2.0 media 149.6 · banco riesgo None · fund de banco 0/1355
+  forzada3  i4 s59204: cruzan 4/9 · mayoria 0 · R0 med 0.4179 · fund med 38.0 media 147.1 · banco riesgo None · fund de banco 0/1333
+  forzada3  i5 s59205: cruzan 5/9 · mayoria 1 · R0 med 0.9394 · fund med 1.0 media 137.1 · banco riesgo None · fund de banco 0/1243
+  termo     i1 s59201: cruzan 5/9 · mayoria 1 · R0 med 0.96 · fund med 0.0 media 125.6
+  termo     i2 s59202: cruzan 4/9 · mayoria 0 · R0 med 0.7547 · fund med 12.0 media 113.9
+  termo     i3 s59203: cruzan 5/9 · mayoria 1 · R0 med 0.9211 · fund med 2.0 media 118.4
+  termo     i4 s59204: cruzan 3/9 · mayoria 0 · R0 med 0.6486 · fund med 12.0 media 136.8
+  termo     i5 s59205: cruzan 3/9 · mayoria 0 · R0 med 0.7727 · fund med 9.0 media 132.2
+  o1        i1 s59201: cruzan 9/9 · mayoria 1 · R0 med 0.9565 · fund med 0.0 media 0.0
+  o1        i2 s59202: cruzan 8/9 · mayoria 1 · R0 med 0.9444 · fund med 0.0 media 25.8
+  o1        i3 s59203: cruzan 7/9 · mayoria 1 · R0 med 0.9444 · fund med 0.0 media 28.0
+  o1        i4 s59204: cruzan 7/9 · mayoria 1 · R0 med 0.9583 · fund med 0.0 media 14.7
+  o1        i5 s59205: cruzan 6/9 · mayoria 1 · R0 med 0.9333 · fund med 0.0 media 64.1
+  bloq2     i1 s59201: cruzan 4/9 · mayoria 0 · R0 med 0.4872 · fund med 19.0 media 126.4 · banco riesgo 0.0 · fund de banco 1060/1147
+  bloq2     i2 s59202: cruzan 3/9 · mayoria 0 · R0 med 0.4444 · fund med 44.0 media 120.8 · banco riesgo 0.0 · fund de banco 976/1096
+  bloq2     i3 s59203: cruzan 3/9 · mayoria 0 · R0 med 0.75 · fund med 1.0 media 153.9 · banco riesgo 0.0 · fund de banco 1327/1394
+  bloq2     i4 s59204: cruzan 6/9 · mayoria 1 · R0 med 0.95 · fund med 1.0 media 115.4 · banco riesgo 0.0 · fund de banco 1019/1048
+  bloq2     i5 s59205: cruzan 5/9 · mayoria 1 · R0 med 0.931 · fund med 1.0 media 123.9 · banco riesgo 0.0 · fund de banco 999/1124
+  v143      i1 s59201: cruzan 2/9 · mayoria 0 · R0 med 0.6875 · fund med 9.0 media 187.7
+  v143      i2 s59202: cruzan 3/9 · mayoria 0 · R0 med 0.5273 · fund med 25.0 media 201.3
+  v143      i3 s59203: cruzan 2/9 · mayoria 0 · R0 med 0.6341 · fund med 14.0 media 180.6
+  v143      i4 s59204: cruzan 2/9 · mayoria 0 · R0 med 0.551 · fund med 21.0 media 207.3
+  v143      i5 s59205: cruzan 3/9 · mayoria 0 · R0 med 0.825 · fund med 6.0 media 194.1
+  validez: {'abortos_0': True, 'completos': True, 'coherentes': True, 'refs_sha': True, 'ancla_v143': True, 'ancla_o1': True, 'arnes': True}
+  v143_R0_med: 0.6341
+  suma_cruzan: {'bq3_pas': 13, 'bq2_pas': 11, 'bq3': 15, 'forzada3': 23, 'termo': 20, 'o1': 37, 'bloq2': 21, 'v143': 12}
+  mayorias: {'bq3_pas': 1, 'bq2_pas': 0, 'bq3': 1, 'forzada3': 3, 'termo': 2, 'o1': 5, 'bloq2': 2, 'v143': 0}
+  pareados: {'bq3_pas_vs_bq2_pas': {'n': 5, 'gana': 2, 'dif_suma': 2}, 'bq3_pas_vs_bq3': {'n': 5, 'gana': 3, 'dif_suma': -2}, 'bq3_pas_vs_bloq2': {'n': 5, 'gana': 1, 'dif_suma': -8}, 'bq3_pas_vs_termo': {'n': 5, 'gana': 1, 'dif_suma': -7}, 'bq3_pas_vs_o1': {'n': 5, 'gana': 0, 'dif_suma': -24}, 'bq3_vs_bloq2': {'n': 5, 'gana': 1, 'dif_suma': -6}, 'forzada3_vs_termo': {'n': 5, 'gana': 3, 'dif_suma': 3}}
+  puertas: {'F1_mayoria_bq3_pas': False, 'F2_gana_bq2_pas': False, 'F3_gana_bq3': False}
+  modesto: False
+  S1 forzada3 mayoria >= 3/5 (p 0.5): medido 3 -> CUMPLE
+  S2 suma cruzan bq3_pas en [18, 32] (p 0.6): medido 13 -> REFUTADA
+  S3 suma cruzan bq2_pas en [14, 27] (p 0.65): medido 11 -> REFUTADA
+  S4 suma cruzan bq3 en [14, 27] (p 0.6): medido 15 -> CUMPLE
+  S5 siembra final de bq3_pas con regla riesgo en >= 25 % de las listas en >= 3/5 cadenas (p 0.35): medido [0.0, 0.0, 0.0, 0.0, 0.0] -> REFUTADA
+  S6 mayoria bq3_pas >= 3/5 (p 0.3): medido 1 -> REFUTADA
+  S7 veredicto NO (p 0.62): medido NO -> CUMPLE
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\sentidos_muro\datos\explora_20260929_110024\lectura_sentidos_muro.json
+VEREDICTO (PREREGISTRO_sentidos_muro.md sec. 6): NO

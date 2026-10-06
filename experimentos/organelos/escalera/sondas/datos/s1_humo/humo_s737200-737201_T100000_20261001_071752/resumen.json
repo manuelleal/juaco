@@ -1,0 +1,130 @@
+{
+ "sonda": 1,
+ "resumen": {
+  "brazos": {
+   "piso@extra_sin=0.4+plus=0": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 7,
+    "cruzan_por_corrida": [
+     4,
+     3
+    ],
+    "establecidos": 11,
+    "R0_med": 0.6577,
+    "vida_med": 1051.25,
+    "fund_media": 39.7778,
+    "mundo_AC": 5.9002,
+    "mundo_K": 4.7134,
+    "ratio_pasos_oasis": 5.907,
+    "g_ef_1k": 2.4981,
+    "g_nom_1k": 3.6871,
+    "plus_ef_1k": 0.007,
+    "plus_nom_1k": 0.016,
+    "frac_llave": 0.0107,
+    "mord_K": 137,
+    "con": 72,
+    "sin": 6647,
+    "mord_AC": 12795,
+    "mord_BD": 9713
+   },
+   "regalo": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 6,
+    "cruzan_por_corrida": [
+     2,
+     4
+    ],
+    "establecidos": 13,
+    "R0_med": 0.7445,
+    "vida_med": 1454.25,
+    "fund_media": 36.2222,
+    "mundo_AC": 7.7778,
+    "mundo_K": 2.8858,
+    "ratio_pasos_oasis": 6.9115,
+    "g_ef_1k": 2.8777,
+    "g_nom_1k": 5.3154,
+    "plus_ef_1k": 0.6406,
+    "plus_nom_1k": 1.8725,
+    "frac_llave": 1.0,
+    "mord_K": 115,
+    "con": 4213,
+    "sin": 0,
+    "mord_AC": 8125,
+    "mord_BD": 5271
+   },
+   "regalo@extra_sin=0.4+plus=0": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 7,
+    "cruzan_por_corrida": [
+     3,
+     4
+    ],
+    "establecidos": 14,
+    "R0_med": 0.8188,
+    "vida_med": 1112.5,
+    "fund_media": 30.6667,
+    "mundo_AC": 6.2037,
+    "mundo_K": 3.699,
+    "ratio_pasos_oasis": 6.552,
+    "g_ef_1k": 2.7142,
+    "g_nom_1k": 4.2491,
+    "plus_ef_1k": 0.5944,
+    "plus_nom_1k": 1.1807,
+    "frac_llave": 1.0,
+    "mord_K": 102,
+    "con": 5313,
+    "sin": 0,
+    "mord_AC": 10136,
+    "mord_BD": 6954
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": "regalo,piso@extra_sin=0.4+plus=0,regalo@extra_sin=0.4+plus=0",
+ "semillas": [
+  737200,
+  737201
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.03,
+  "cerrojo": 0
+ },
+ "perillas_base": {
+  "plus": 0.4,
+  "d_plus": 600,
+  "extra_sin": null
+ },
+ "nota": "humo 2: cota dura (regalo) en el mundo del encargo + mundo extra_sin 0.4 (sin llave 0.4, con llave 0.8): piso y regalo; mismas semillas del humo 1",
+ "sha_runner": "6e7838d804a36963",
+ "sha_mundo_plus": "70100a9a0efe98f0",
+ "carros": {
+  "O1_LUGAR_ORAC": "adc55edae3a6a9f5",
+  "O1_LUGAR_AZAR": "2b888d7de60d96b0",
+  "O1_LUGAR_ORAC0": "03f47a545b3a30e2"
+ },
+ "mundo_plus": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17,
+  "oasis": "OasisPlus",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "seg": 667.4
+}

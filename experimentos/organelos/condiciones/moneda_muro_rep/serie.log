@@ -1,0 +1,159 @@
+=== Thu Oct  1 07:22:02 HPS 2026 | serie replica moneda_muro pool 2 ===
+CORRE_MMR · serie · 2026-10-01 07:22:03 · python 3.14.2 · pool 2 · runner 11e3b7288aa0116b · instrumento corre_mm d45a5ed42e8514df · PREREGISTRO_moneda_muro_rep.md · indices [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] · npas 6 · T_pas 100000 · T_pru 100000 · T_EST 10000 · pasajes 647110..647205 · prueba [647301, 647302, 647303, 647304, 647305, 647306, 647307, 647308, 647309, 647310] · CFG10 {'inicial': 2, 'p_campo': 0.01, 'p_dup': 0.002, 'p_del': 0.007, 'p_ins': 0.005, 'banco': 50} · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro_rep\datos\serie_20261001_072203
+  sha experimentos\organelos\condiciones\moneda_muro\corre_mm.py d45a5ed42e8514df OK
+  sha experimentos\organelos\condiciones\moneda_muro\identidad_mm.py e9e3a7a5b6576f30 OK
+  sha experimentos\organelos\condiciones\moneda_muro\sim_mm.py ae805f42e2e6f26c OK
+  -- verifica de corre_mm (corre_mut y, por cascada, corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez, carros):
+    sha experimentos\organelos\condiciones\mutacion\corre_mut.py 8912e9d77f397e40 OK
+    sha experimentos\organelos\condiciones\mutacion\identidad_mut.py b08e1410de201065 OK
+    -- verifica de corre_mut (corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez, carros):
+      sha experimentos\organelos\moneda\corre_moneda.py 0441aa7bf5b94316 OK
+      sha experimentos\organelos\moneda\identidad_moneda.py ceede3d6458597ac OK
+      -- verifica de corre_moneda (shas de sentidos_muro, corre_bp, V143_BQ3; pista, juez, carros):
+        sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+        sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+        sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+        sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+        -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+          sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+          sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+          sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+          sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+          sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+          sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+          sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+          sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+          sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+          carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+          carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  arnes: PASA con los shas actuales
+  [  646.8s] moneda_L i1 (646.2s) aborto None · fraccion A [0.5, 0.3333, 0.028, 0.0, 0.0, 0.0, 0.0] · cruzan 5
+  [  682.1s] neutra_L i1 (681.5s) aborto None · fraccion A [0.5, 0.7143, 0.7143, 0.4286, 0.4, 0.4, 0.7143] · cruzan 6
+  [ 1289.6s] moneda_L i2 (642.9s) aborto None · fraccion A [0.5, 0.5, 0.1429, 0.0, 0.0, 0.0, 0.0] · cruzan 3
+  [ 1322.5s] neutra_L i2 (640.4s) aborto None · fraccion A [0.5, 0.7143, 0.6333, 0.4267, 0.5925, 0.7143, 0.5] · cruzan 3
+  [ 1963.6s] moneda_L i3 (673.9s) aborto None · fraccion A [0.5, 0.5, 0.428, 0.49, 0.58, 0.6667, 0.5] · cruzan 2
+  [ 1998.3s] neutra_L i3 (675.8s) aborto None · fraccion A [0.5, 0.3333, 0.0, 0.0, 0.0, 0.0, 0.0] · cruzan 5
+  [ 2604.6s] moneda_L i4 (641.0s) aborto None · fraccion A [0.5, 0.5, 0.1667, 0.0086, 0.0, 0.0571, 0.0] · cruzan 5
+  [ 2629.2s] neutra_L i4 (630.9s) aborto None · fraccion A [0.5, 0.4829, 0.81, 0.8486, 0.8033, 0.9743, 1.0] · cruzan 5
+  [ 3245.5s] moneda_L i5 (640.9s) aborto None · fraccion A [0.5, 0.3333, 0.8286, 0.6533, 0.6667, 0.5, 0.16] · cruzan 2
+  [ 3264.1s] neutra_L i5 (634.9s) aborto None · fraccion A [0.5, 0.4286, 0.6514, 0.7, 0.8571, 1.0, 1.0] · cruzan 3
+  [ 3886.5s] moneda_L i6 (641.0s) aborto None · fraccion A [0.5, 0.2857, 0.004, 0.0, 0.0, 0.0, 0.0] · cruzan 3
+  [ 3899.0s] neutra_L i6 (634.9s) aborto None · fraccion A [0.5, 0.3375, 0.51, 0.3257, 0.2857, 0.38, 0.3333] · cruzan 3
+  [ 4526.1s] moneda_L i7 (639.6s) aborto None · fraccion A [0.5, 0.5, 0.6567, 0.49, 0.6633, 0.83, 0.8] · cruzan 4
+  [ 4529.3s] neutra_L i7 (630.3s) aborto None · fraccion A [0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · cruzan 5
+  [ 5166.6s] moneda_L i8 (640.6s) aborto None · fraccion A [0.5, 0.6467, 0.4867, 0.1667, 0.0, 0.0, 0.0] · cruzan 6
+  [ 5173.8s] neutra_L i8 (644.5s) aborto None · fraccion A [0.5, 0.7475, 0.6533, 0.5, 1.0, 1.0, 1.0] · cruzan 3
+  [ 5807.4s] moneda_L i9 (640.8s) aborto None · fraccion A [0.5, 0.17, 0.0, 0.0, 0.0, 0.0, 0.0] · cruzan 6
+  [ 5807.5s] neutra_L i9 (633.7s) aborto None · fraccion A [0.5, 0.5714, 0.4286, 0.3267, 0.3, 0.0, 0.0] · cruzan 5
+  [ 6436.7s] neutra_L i10 (629.2s) aborto None · fraccion A [0.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · cruzan 4
+  [ 6440.4s] moneda_L i10 (633.0s) aborto None · fraccion A [0.5, 0.13, 0.1667, 0.5, 0.3333, 0.6, 0.5] · cruzan 5
+  20 trabajos · abortos 0 · 6440.4s
+
+================ LECTURA moneda del muro REPLICA · serie · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro_rep\datos\serie_20261001_072203
+  arnes: PASA con los shas actuales · explora guardado: sha OK · abortos: []
+  moneda_L i1: fraccion A  ini 0.5 -> p0..p5 [0.3333, 0.028, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.4267, 0.0889, 0.0089, 0.0, 0.0, 0.0] · elegidos [6, 5, 7, 6, 6, 7] · establecidos [6, 5, 7, 6, 6, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 250, 350, 300, 300, 350] · intacta [0.5833, 0.576, 0.4286, 0.5, 0.3333, 0.6943] · mutadas (suma) 888 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [469, 452, 495, 515, 500, 530] · cruzan en el pasaje [4, 5, 4, 5, 3, 6]
+  moneda_L i2: fraccion A  ini 0.5 -> p0..p5 [0.5, 0.1429, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.4089, 0.2156, 0.06, 0.0, 0.0, 0.0] · elegidos [6, 7, 7, 5, 7, 7] · establecidos [6, 7, 7, 5, 7, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 350, 350, 250, 350, 350] · intacta [0.8333, 0.8686, 1.0, 1.0, 0.96, 0.9543] · mutadas (suma) 126 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.003] · partos [497, 459, 533, 503, 540, 467] · cruzan en el pasaje [4, 4, 4, 3, 4, 6]
+  moneda_L i3: fraccion A  ini 0.5 -> p0..p5 [0.5, 0.428, 0.49, 0.58, 0.6667, 0.5]
+               sombra (moneda vieja) [0.4067, 0.4022, 0.4733, 0.5311, 0.5689, 0.42] · elegidos [6, 5, 6, 7, 6, 4] · establecidos [6, 5, 6, 7, 6, 4] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 250, 300, 350, 300, 200] · intacta [0.8667, 0.396, 0.3367, 0.4371, 0.1667, 0.25] · mutadas (suma) 987 · arrastre>= [0.0, 0.0, 0.0, 0.003, 0.0, 0.0] · partos [452, 426, 448, 442, 443, 436] · cruzan en el pasaje [5, 5, 6, 4, 4, 1]
+  moneda_L i4: fraccion A  ini 0.5 -> p0..p5 [0.5, 0.1667, 0.0086, 0.0, 0.0571, 0.0]
+               sombra (moneda vieja) [0.4244, 0.24, 0.02, 0.0, 0.0444, 0.0044] · elegidos [6, 6, 7, 6, 7, 5] · establecidos [6, 6, 7, 6, 7, 5] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 300, 350, 300, 350, 250] · intacta [0.9833, 0.88, 0.8486, 0.8033, 0.6314, 0.6] · mutadas (suma) 382 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [471, 478, 491, 482, 508, 491] · cruzan en el pasaje [6, 3, 5, 6, 5, 4]
+  moneda_L i5: fraccion A  ini 0.5 -> p0..p5 [0.3333, 0.8286, 0.6533, 0.6667, 0.5, 0.16]
+               sombra (moneda vieja) [0.3556, 0.7444, 0.7156, 0.3467, 0.4, 0.2356] · elegidos [6, 7, 6, 3, 2, 1] · establecidos [6, 7, 6, 3, 2, 1] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 350, 300, 150, 100, 50] · intacta [1.0, 0.9629, 0.82, 0.6667, 0.5, 0.16] · mutadas (suma) 209 · arrastre>= [0.0, 0.006, 0.0, 0.0, 0.0, 0.2] · partos [439, 468, 386, 406, 309, 298] · cruzan en el pasaje [5, 4, 3, 3, 1, 0]
+  moneda_L i6: fraccion A  ini 0.5 -> p0..p5 [0.2857, 0.004, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.3333, 0.1111, 0.0, 0.0, 0.0, 0.0] · elegidos [7, 5, 8, 7, 6, 6] · establecidos [7, 5, 8, 7, 6, 6] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [350, 250, 400, 350, 300, 300] · intacta [0.9914, 0.98, 0.8375, 0.7857, 0.6667, 0.8] · mutadas (suma) 308 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [432, 467, 529, 523, 529, 537] · cruzan en el pasaje [5, 3, 4, 6, 5, 4]
+  moneda_L i7: fraccion A  ini 0.5 -> p0..p5 [0.5, 0.6567, 0.49, 0.6633, 0.83, 0.8]
+               sombra (moneda vieja) [0.4422, 0.5956, 0.5711, 0.5511, 0.6756, 0.84] · elegidos [6, 6, 6, 6, 6, 5] · establecidos [6, 6, 6, 6, 6, 5] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 300, 300, 300, 300, 250] · intacta [0.9667, 0.9933, 0.7633, 0.9633, 0.9733, 0.796] · mutadas (suma) 153 · arrastre>= [0.0, 0.01, 0.0, 0.0, 0.0, 0.0] · partos [499, 416, 438, 459, 459, 378] · cruzan en el pasaje [4, 2, 3, 5, 4, 3]
+  moneda_L i8: fraccion A  ini 0.5 -> p0..p5 [0.6467, 0.4867, 0.1667, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.6222, 0.4778, 0.2289, 0.0133, 0.0, 0.0] · elegidos [6, 6, 6, 6, 7, 6] · establecidos [6, 6, 6, 6, 7, 6] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 300, 300, 300, 350, 300] · intacta [0.96, 0.7967, 0.8267, 0.9967, 0.9971, 0.95] · mutadas (suma) 142 · arrastre>= [0.0, 0.007, 0.0, 0.0, 0.0, 0.0] · partos [455, 411, 450, 470, 505, 514] · cruzan en el pasaje [4, 5, 3, 5, 6, 5]
+  moneda_L i9: fraccion A  ini 0.5 -> p0..p5 [0.17, 0.0, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.2644, 0.0289, 0.0, 0.0, 0.0, 0.0] · elegidos [6, 7, 5, 7, 7, 7] · establecidos [6, 7, 5, 7, 7, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 350, 250, 350, 350, 350] · intacta [0.8967, 0.9686, 0.78, 0.7143, 0.5, 0.4229] · mutadas (suma) 574 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [431, 563, 502, 526, 564, 491] · cruzan en el pasaje [4, 4, 3, 6, 4, 4]
+  moneda_L i10: fraccion A  ini 0.5 -> p0..p5 [0.13, 0.1667, 0.5, 0.3333, 0.6, 0.5]
+               sombra (moneda vieja) [0.1889, 0.1244, 0.3578, 0.3467, 0.44, 0.4489] · elegidos [6, 6, 6, 6, 5, 6] · establecidos [6, 6, 6, 6, 5, 6] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 300, 300, 300, 250, 300] · intacta [0.8733, 0.9667, 0.7233, 0.9867, 0.892, 0.9933] · mutadas (suma) 164 · arrastre>= [0.003, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [421, 501, 535, 429, 490, 465] · cruzan en el pasaje [4, 4, 5, 5, 3, 4]
+  neutra_L i1: fraccion A  ini 0.5 -> p0..p5 [0.7143, 0.7143, 0.4286, 0.4, 0.4, 0.7143]
+               sombra (moneda vieja) [0.7356, 0.6422, 0.4911, 0.4089, 0.2644, 0.7267] · elegidos [7, 7, 7, 5, 5, 7] · establecidos [7, 7, 7, 5, 5, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [350, 350, 350, 250, 250, 350] · intacta [0.8571, 0.7029, 0.4114, 0.2, 0.4, 0.7143] · mutadas (suma) 810 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [510, 504, 526, 497, 487, 510] · cruzan en el pasaje [5, 5, 7, 5, 4, 6]
+  neutra_L i2: fraccion A  ini 0.5 -> p0..p5 [0.7143, 0.6333, 0.4267, 0.5925, 0.7143, 0.5]
+               sombra (moneda vieja) [0.6133, 0.74, 0.4511, 0.5711, 0.6333, 0.5] · elegidos [7, 6, 6, 8, 7, 6] · establecidos [7, 6, 6, 8, 7, 6] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [350, 300, 300, 400, 350, 300] · intacta [0.8657, 0.6333, 0.4267, 0.5925, 0.7086, 0.3333] · mutadas (suma) 794 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [532, 519, 519, 503, 518, 506] · cruzan en el pasaje [4, 5, 4, 5, 6, 5]
+  neutra_L i3: fraccion A  ini 0.5 -> p0..p5 [0.3333, 0.0, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.4956, 0.2089, 0.0, 0.0, 0.0, 0.0] · elegidos [6, 5, 8, 6, 6, 7] · establecidos [6, 5, 8, 6, 6, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 250, 400, 300, 300, 350] · intacta [0.6333, 0.6, 0.9575, 0.81, 0.7967, 0.84] · mutadas (suma) 401 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [524, 502, 517, 502, 482, 546] · cruzan en el pasaje [5, 4, 4, 4, 5, 4]
+  neutra_L i4: fraccion A  ini 0.5 -> p0..p5 [0.4829, 0.81, 0.8486, 0.8033, 0.9743, 1.0]
+               sombra (moneda vieja) [0.4644, 0.7067, 0.7889, 0.8467, 0.9556, 0.94] · elegidos [7, 6, 7, 6, 7, 5] · establecidos [7, 6, 7, 6, 7, 5] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [350, 300, 350, 300, 350, 250] · intacta [0.94, 0.9633, 0.9743, 0.97, 0.9743, 1.0] · mutadas (suma) 59 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [541, 536, 513, 482, 508, 491] · cruzan en el pasaje [5, 3, 5, 6, 5, 4]
+  neutra_L i5: fraccion A  ini 0.5 -> p0..p5 [0.4286, 0.6514, 0.7, 0.8571, 1.0, 1.0]
+               sombra (moneda vieja) [0.4644, 0.5756, 0.6444, 0.7622, 0.9822, 0.9] · elegidos [7, 7, 7, 7, 7, 7] · establecidos [7, 7, 7, 7, 7, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [350, 350, 350, 350, 350, 350] · intacta [0.9971, 0.78, 0.8057, 0.7143, 0.7571, 0.7086] · mutadas (suma) 433 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [499, 489, 517, 489, 516, 539] · cruzan en el pasaje [5, 6, 6, 6, 6, 4]
+  neutra_L i6: fraccion A  ini 0.5 -> p0..p5 [0.3375, 0.51, 0.3257, 0.2857, 0.38, 0.3333]
+               sombra (moneda vieja) [0.3556, 0.4289, 0.2911, 0.3511, 0.2711, 0.2667] · elegidos [8, 6, 7, 7, 6, 6] · establecidos [8, 6, 7, 7, 6, 6] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [400, 300, 350, 350, 300, 300] · intacta [0.8725, 0.98, 0.9371, 0.9257, 0.9933, 0.9567] · mutadas (suma) 120 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [501, 499, 523, 495, 510, 534] · cruzan en el pasaje [6, 5, 4, 6, 5, 3]
+  neutra_L i7: fraccion A  ini 0.5 -> p0..p5 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.1978, 0.0, 0.0, 0.0, 0.0, 0.0] · elegidos [6, 6, 5, 6, 7, 8] · establecidos [6, 6, 5, 6, 7, 8] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [300, 300, 250, 300, 350, 400] · intacta [0.9933, 0.8267, 0.596, 0.3333, 0.28, 0.375] · mutadas (suma) 857 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [527, 486, 493, 525, 537, 528] · cruzan en el pasaje [3, 4, 3, 4, 5, 6]
+  neutra_L i8: fraccion A  ini 0.5 -> p0..p5 [0.7475, 0.6533, 0.5, 1.0, 1.0, 1.0]
+               sombra (moneda vieja) [0.7222, 0.6711, 0.3911, 0.7133, 1.0, 0.9911] · elegidos [8, 6, 6, 5, 7, 7] · establecidos [8, 6, 6, 5, 7, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [400, 300, 300, 250, 350, 350] · intacta [0.835, 0.6133, 0.8333, 0.4, 0.2857, 0.0] · mutadas (suma) 982 · arrastre>= [0.02, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [501, 521, 568, 556, 597, 551] · cruzan en el pasaje [6, 3, 5, 4, 5, 2]
+  neutra_L i9: fraccion A  ini 0.5 -> p0..p5 [0.5714, 0.4286, 0.3267, 0.3, 0.0, 0.0]
+               sombra (moneda vieja) [0.4889, 0.4067, 0.2844, 0.3333, 0.0578, 0.0] · elegidos [7, 7, 6, 6, 5, 7] · establecidos [7, 7, 6, 6, 5, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [350, 350, 300, 300, 250, 350] · intacta [0.8971, 0.6943, 0.4933, 0.4867, 0.192, 0.1314] · mutadas (suma) 955 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [497, 543, 470, 502, 528, 507] · cruzan en el pasaje [2, 5, 4, 5, 3, 5]
+  neutra_L i10: fraccion A  ini 0.5 -> p0..p5 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+               sombra (moneda vieja) [0.2556, 0.0, 0.0, 0.0, 0.0, 0.0] · elegidos [5, 8, 8, 6, 7, 7] · establecidos [5, 8, 8, 6, 7, 7] · respaldo [0, 0, 0, 0, 0, 0]
+               listas [250, 400, 400, 300, 350, 350] · intacta [0.96, 0.9975, 0.8925, 0.8233, 0.6914, 0.56] · mutadas (suma) 369 · arrastre>= [0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · partos [524, 497, 539, 546, 581, 549] · cruzan en el pasaje [5, 5, 5, 4, 5, 4]
+  prueba i1 s647301: moneda_L cruzan 5/9 (R0 med 0.963, fund med 0.0) · neutra_L cruzan 6/9 (R0 med 0.9565, fund med 0.0) · dif -1
+  prueba i2 s647302: moneda_L cruzan 3/9 (R0 med 0.8286, fund med 5.0) · neutra_L cruzan 3/9 (R0 med 0.6, fund med 14.0) · dif +0
+  prueba i3 s647303: moneda_L cruzan 2/9 (R0 med 0.4157, fund med 51.0) · neutra_L cruzan 5/9 (R0 med 0.95, fund med 0.0) · dif -3
+  prueba i4 s647304: moneda_L cruzan 5/9 (R0 med 0.95, fund med 0.0) · neutra_L cruzan 5/9 (R0 med 0.95, fund med 0.0) · dif +0
+  prueba i5 s647305: moneda_L cruzan 2/9 (R0 med 0.211, fund med 96.0) · neutra_L cruzan 3/9 (R0 med 0.5679, fund med 17.0) · dif -1
+  prueba i6 s647306: moneda_L cruzan 3/9 (R0 med 0.7143, fund med 11.0) · neutra_L cruzan 3/9 (R0 med 0.86, fund med 6.0) · dif +0
+  prueba i7 s647307: moneda_L cruzan 4/9 (R0 med 0.6977, fund med 12.0) · neutra_L cruzan 5/9 (R0 med 0.9524, fund med 1.0) · dif -1
+  prueba i8 s647308: moneda_L cruzan 6/9 (R0 med 0.9667, fund med 0.0) · neutra_L cruzan 3/9 (R0 med 0.614, fund med 21.0) · dif +3
+  prueba i9 s647309: moneda_L cruzan 6/9 (R0 med 0.9667, fund med 0.0) · neutra_L cruzan 5/9 (R0 med 0.963, fund med 0.0) · dif +1
+  prueba i10 s647310: moneda_L cruzan 5/9 (R0 med 0.9677, fund med 0.0) · neutra_L cruzan 4/9 (R0 med 0.8, fund med 1.0) · dif +1
+  validez: {'abortos_0': True, 'completas': True, 'f_ini_05': True, 'moneda_actua': True, 'respaldo_raro': True, 'prueba_pareada': True, 'explora_sha': True, 'arnes': True}
+  final: {'moneda_L': {'1': 0.0, '2': 0.0, '3': 0.5, '4': 0.0, '5': 0.16, '6': 0.0, '7': 0.8, '8': 0.0, '9': 0.0, '10': 0.5}, 'neutra_L': {'1': 0.7143, '2': 0.5, '3': 0.0, '4': 1.0, '5': 1.0, '6': 0.3333, '7': 0.0, '8': 1.0, '9': 0.0, '10': 0.0}}
+  FRACCION (decide la ESTRICTA): moneda_L > neutra_L en 3/10 (corte 7) · mediana moneda_L 0.0 (corte 0.4) · <= 0.5 x neutra en 6/10 (corte PURGA 8) · empates 1 (arriba, >= 0.95: 0)
+  lecturas declaradas que NO deciden: original escalada (>= en 10/10 y mediana): False (4/10) · original sobre las 5 primeras (>= en 5/5 y mediana de 5): False · estricta en >= 8/10: False
+  CRUCE (co-principal, pareado): moneda_L 41 vs neutra_L 42 (de 90) · D -1 (corte +-9) · gana 3 · empata 3 · pierde 4 (corte 7) -> SIN DIFERENCIA
+  DESCRIPTIVO que NO decide (moneda sube o neutra baja): mediana final neutra_L 0.4166 · moneda_L 0.0 · cadenas que terminan por encima de su 0.50 inicial: moneda_L 1/10 · neutra_L 4/10
+  neutra_L_mediana: 0.4166
+  moneda_L_media: 0.196
+  neutra_L_media: 0.4548
+  fijadas: {'moneda_L': 0, 'neutra_L': 3}
+  perdidas: {'moneda_L': 6, 'neutra_L': 4}
+  delta_pasaje: {'moneda_L': -0.0704, 'neutra_L': -0.0108}
+  elegidos_mediana: {'moneda_L': 6.0, 'neutra_L': 7.0}
+  cruzan_pasaje_media: {'moneda_L': 4.133, 'neutra_L': 4.65}
+  pasajes: 120
+  pasajes_con_respaldo: 0
+  pasajes_donde_la_moneda_difiere: 86
+  R1 veredicto CONSERVA (lectura estricta, >= 7/10 y mediana >= 0.40) (p 0.45): medido INDETERMINADO -> REFUTADA
+  R2 veredicto INDETERMINADO (p 0.47): medido INDETERMINADO -> CUMPLE
+  R3 veredicto PURGA (p 0.05): medido INDETERMINADO -> REFUTADA
+  R4 cruce: SIN DIFERENCIA (p 0.68): medido SIN DIFERENCIA -> CUMPLE
+  R5 cruce: CRUZA MENOS (como apunto el explora) (p 0.25): medido SIN DIFERENCIA -> REFUTADA
+  R6 cruce: CRUZA MAS (la hipotesis del director) (p 0.04): medido SIN DIFERENCIA -> REFUTADA
+  R7 neutra_L: mediana de la fraccion A final <= 0.30 (explora 0.14) (p 0.6): medido 0.4166 -> REFUTADA
+  R8 moneda_L: mediana de la fraccion A final >= 0.40 (explora 0.80) (p 0.6): medido 0.0 -> REFUTADA
+  R9 prueba moneda_L: suma de cruzan (de 90) en [30, 50] (p 0.7): medido 41 -> CUMPLE
+  R10 suma de diferencias de cruce D (moneda_L - neutra_L) < 0 (p 0.65): medido -1 -> CUMPLE
+  R11 elegidos por pasaje (mediana): neutra_L > moneda_L (explora 7 contra 5) (p 0.7): medido {'moneda_L': 6.0, 'neutra_L': 7.0} -> CUMPLE
+  R12 empates exactos de fraccion final <= 2 de 10 (p 0.75): medido 1 -> CUMPLE
+  R13 la letra original escalada (>= en 10/10) se cumple (p 0.12): medido False -> REFUTADA
+  EXPLORA guardado (n 5): veredicto alli CONSERVA · con la lectura estricta: > en 4/5, >= en 5/5, mediana 0.8 (neutra 0.1429) · cruce 17 vs 23 de 45 (D -6; gana 1, empata 1, pierde 3)
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro_rep\datos\serie_20261001_072203\lectura_mmr.json
+VEREDICTO (PREREGISTRO_moneda_muro_rep.md sec. 5): fraccion INDETERMINADO · cruce SIN DIFERENCIA
+BLOQUE contra el explora · fraccion: NO REPLICA: explora CONSERVA (umbral), replica INDETERMINADO -> el CONSERVA del explora no se sostiene
+BLOQUE contra el explora · cruce: moneda_L NO cruza mas que neutra_L: SIN DIFERENCIA en la replica (explora D -6 de 45, descriptivo)
+TITULAR: NO: el CONSERVA del explora no replica

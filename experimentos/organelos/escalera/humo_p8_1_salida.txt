@@ -1,0 +1,42 @@
+[21:03:10] CORRE_C · comp · humo · 20260930_210310 · python 3.14.2 · un proceso · corre_c.py ea1cf755bd40e1cc · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\comp_humo\humo_s739390-739391_T30000_20260930_210310
+[21:03:10]   semillas 739390-739391 · T 30000 · brazos ['comp', 'compbar', 'lug'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'letra_x': 'E', 'efecto_x': (0.3, -0.1), 'p_x': 0.1} · nota 'humo 1 p8: letra E (+0.3,-0.1) p_x 0.1; J frio'
+[21:03:10]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[21:03:10]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[21:03:10]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[21:03:10]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[21:03:10]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[21:03:10]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[21:03:10]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[21:03:10]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[21:03:10]   sha corre_p1.py 392b71186cf49b60 OK
+[21:03:10]   carro O1_LUGAR_COMP == construye_c: True (sha c75b4cdb9eec933d)
+[21:03:10]   carro O1_LUGAR_COMP_BAR == construye_c: True (sha 0d7288a081e4b7af)
+[21:03:10]   carro O1_LUGAR_COMP0 == construye_c: True (sha 4068adaca1b1f6fd)
+[21:03:10]   carro O1_LUGAR_PLAN == construye_c: True (sha 351cd77783a91da0)
+[21:03:10]   carro O1_LUGAR_PLAN_BAR == construye_c: True (sha 09d2370003cfb6a4)
+[21:03:10]   carro O1_LUGAR_PLAN0 == construye_c: True (sha c53ac199a031c89b)
+[21:03:10]   carro O1_LUGAR_PREG == construye_c: True (sha 4e12a5708ecb5dea)
+[21:03:10]   carro O1_LUGAR_PREG_BAR == construye_c: True (sha 27489bd5d4431b85)
+[21:03:10]   carro O1_LUGAR_PREG0 == construye_c: True (sha 8d2e70c70ec651ff)
+[21:03:10]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[21:03:24]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[21:03:30]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[21:04:15]   [   65.8s] i0 comp    (45.6s) aborto None cruzan 0/9 R0 0.6667 fund [49, 6, 0, 0, 5, 0, 71, 0, 0] · oasis ratio pasos 7.05 · mundo AC 7.7341 · comp: {'exp_frio': [7, 5], 'exp_fuera_conoce': [99, 48], 'exp_b_dentro': [53, 22], 'exp_dentro': [24, 22], 'exp_fuera': [107, 54], 'c1': 0.7142857142857143, 'p1': 0.5151515151515151, 'J': 0.229, 'b_rechazada': 0.585, 'mord_E': 349, 'mord_E_dentro': 202}
+[21:04:50]   [  100.1s] i0 compbar (34.2s) aborto None cruzan 0/9 R0 0.1818 fund [35, 30, 38, 46, 44, 49, 53, 30, 53] · oasis ratio pasos 0.622 · mundo AC 11.4621 · comp: {'exp_frio': [15, 4], 'exp_fuera_conoce': [214, 96], 'exp_b_dentro': [211, 56], 'exp_dentro': [141, 45], 'exp_fuera': [220, 102], 'c1': 0.26666666666666666, 'p1': 0.5514018691588785, 'J': -0.182, 'b_rechazada': 0.735, 'mord_E': 239, 'mord_E_dentro': 71}
+[21:05:21]   [  131.5s] i0 lug     (31.5s) aborto None cruzan 1/9 R0 0.5 fund [29, 10, 0, 0, 5, 0, 18, 0, 6] · oasis ratio pasos 7.158 · mundo AC 6.7852 · comp: {'exp_frio': [7, 3], 'exp_fuera_conoce': [64, 44], 'exp_b_dentro': [40, 15], 'exp_dentro': [26, 19], 'exp_fuera': [76, 50], 'c1': 0.42857142857142855, 'p1': 0.3125, 'J': -0.259, 'b_rechazada': 0.625, 'mord_E': 370, 'mord_E_dentro': 202}
+[21:06:05]   [  175.8s] i1 comp    (44.3s) aborto None cruzan 0/9 R0 0.5385 fund [27, 22, 0, 0, 0, 0, 29, 5, 4] · oasis ratio pasos 7.202 · mundo AC 7.1468 · comp: {'exp_frio': [3, 2], 'exp_fuera_conoce': [78, 47], 'exp_b_dentro': [41, 14], 'exp_dentro': [27, 21], 'exp_fuera': [84, 52], 'c1': 0.6666666666666666, 'p1': 0.39743589743589747, 'J': 0.064, 'b_rechazada': 0.659, 'mord_E': 332, 'mord_E_dentro': 173}
+[21:06:40]   [  210.2s] i1 compbar (34.5s) aborto None cruzan 0/9 R0 0.1594 fund [43, 42, 33, 57, 42, 42, 57, 53, 48] · oasis ratio pasos 0.631 · mundo AC 10.78 · comp: {'exp_frio': [12, 4], 'exp_fuera_conoce': [167, 75], 'exp_b_dentro': [202, 59], 'exp_dentro': [139, 50], 'exp_fuera': [172, 80], 'c1': 0.3333333333333333, 'p1': 0.5508982035928144, 'J': -0.116, 'b_rechazada': 0.708, 'mord_E': 200, 'mord_E_dentro': 77}
+[21:07:12]   [  242.7s] i1 lug     (32.4s) aborto None cruzan 1/9 R0 0.6667 fund [0, 93, 0, 0, 0, 0, 12, 22, 3] · oasis ratio pasos 7.075 · mundo AC 7.3472 · comp: {'exp_frio': [4, 1], 'exp_fuera_conoce': [84, 52], 'exp_b_dentro': [64, 19], 'exp_dentro': [37, 24], 'exp_fuera': [90, 57], 'c1': 0.25, 'p1': 0.38095238095238093, 'J': -0.369, 'b_rechazada': 0.703, 'mord_E': 319, 'mord_E_dentro': 184}
+[21:07:12] 
+================ RESUMEN (humo: NO cuenta, no se declara)
+[21:07:12]   comp    {'n': 2, 'cruzan': 0, 'R0_med': 0.6026, 'fund_media': 12.1111, 'establecidos': 14, 'vida_med': 3007.0, 'mundo_AC': 7.4405, 'ratio_pasos_oasis': 7.126, 'exp_frio': [10, 7], 'exp_fuera_conoce': [177, 95], 'exp_b_dentro': [94, 36], 'exp_dentro': [51, 43], 'exp_fuera': [191, 106], 'c1': 0.6905, 'p1': 0.4563, 'J': 0.1465, 'b_rechazada': 0.622, 'mord_E': 681, 'mord_E_dentro': 375}
+[21:07:12]   compbar {'n': 2, 'cruzan': 0, 'R0_med': 0.1706, 'fund_media': 44.1667, 'establecidos': 0, 'vida_med': 200.0, 'mundo_AC': 11.1211, 'ratio_pasos_oasis': 0.6265, 'exp_frio': [27, 8], 'exp_fuera_conoce': [381, 171], 'exp_b_dentro': [413, 115], 'exp_dentro': [280, 95], 'exp_fuera': [392, 182], 'c1': 0.3, 'p1': 0.5512, 'J': -0.149, 'b_rechazada': 0.7215, 'mord_E': 439, 'mord_E_dentro': 148}
+[21:07:12]   lug     {'n': 2, 'cruzan': 2, 'R0_med': 0.5834, 'fund_media': 11.0, 'establecidos': 17, 'vida_med': 1146.5, 'mundo_AC': 7.0662, 'ratio_pasos_oasis': 7.1165, 'exp_frio': [11, 4], 'exp_fuera_conoce': [148, 96], 'exp_b_dentro': [104, 34], 'exp_dentro': [63, 43], 'exp_fuera': [166, 107], 'c1': 0.3393, 'p1': 0.3467, 'J': -0.314, 'b_rechazada': 0.664, 'mord_E': 689, 'mord_E_dentro': 386}
+[21:07:12]   pareado comp_vs_compbar: gana 0 empata 2 pierde 0 · suma 0 vs 0
+[21:07:12]   pareado comp_vs_lug: gana 0 empata 0 pierde 2 · suma 0 vs 2
+[21:07:12]   pareado compbar_vs_comp: gana 0 empata 2 pierde 0 · suma 0 vs 0
+[21:07:12]   pareado compbar_vs_lug: gana 0 empata 0 pierde 2 · suma 0 vs 2
+[21:07:12]   pareado lug_vs_comp: gana 2 empata 0 pierde 0 · suma 2 vs 0
+[21:07:12]   pareado lug_vs_compbar: gana 2 empata 0 pierde 0 · suma 2 vs 0
+[21:07:12]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\comp_humo\humo_s739390-739391_T30000_20260930_210310\resumen.json · abortos 0 · 242.7s
+[21:07:12] SENAL (bitacora, no se declara): no

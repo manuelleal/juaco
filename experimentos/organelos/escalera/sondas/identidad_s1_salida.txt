@@ -1,0 +1,32 @@
+[08:24:18] CORRE_S1 (sonda 1: piso y techo, llave no letal) · python 3.14.2 · un proceso · corre_s1.py 9f77ce1f378f1c59
+[08:24:18]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[08:24:18]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[08:24:18]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[08:24:18]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[08:24:18]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[08:24:18]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[08:24:18]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[08:24:18]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[08:24:18]   carro O1_LUGAR_ORAC == construye_orac: True (sha adc55edae3a6a9f5)
+[08:24:18]   carro O1_LUGAR_AZAR == construye_orac: True (sha 2b888d7de60d96b0)
+[08:24:18]   carro O1_LUGAR_ORAC0 == construye_orac: True (sha 03f47a545b3a30e2)
+[08:24:18]   mundo_plus: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17, 'oasis': 'OasisPlus', 'sha_mundo_tramo_c': '4a1044a4e0e1d5c9'} · mundo_plus.py cb68a7266b61540b
+[08:24:32]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[08:24:37]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[08:25:04]   OK    M1 mundo_plus apagado, sin letra == mundo_tramo_c
+[08:25:04]   OK    M2 mundo_plus apagado, con K == mundo_tramo_c con K
+[08:25:04]   OK    M3 ORAC0 == O1_LUGAR (mundo_tramo_c con K)
+[08:25:04]   OK    M4 ORAC0 == O1_LUGAR (mundo_plus plus 0.4)
+[08:25:04]   OK    E1 plus 0.4 ENCIENDE (difiere de apagado)
+[08:25:04]   OK    E2 regalo ENCIENDE (difiere de apagado)
+[08:25:04]   OK    E3 extra_sin 0.4 ENCIENDE
+[08:25:04]   OK    E6 adelanta 250 ENCIENDE (difiere de regalo solo)
+[08:25:04]   OK    M5 extra_sin 0.8 (= extra) y plus 0: fisica == apagado (salvo telemetria plus)
+[08:25:04]   OK    E4 ORAC ENCIENDE (difiere de O1_LUGAR)
+[08:25:04]   OK    E5 AZAR ENCIENDE y difiere de ORAC
+[08:25:04]   OK    R1 ORAC repetido == ORAC (determinista)
+[08:25:04]   OK    X1 pista mixta: difiere de todo-piso y de todo-techo
+[08:25:04]   OK    X2 pista mixta con los dos roles = O1_LUGAR == todo O1_LUGAR (el despachador es pasivo)
+[08:25:04]   OK    M6 tras fija(): otra vez == mundo_tramo_c con K
+[08:25:04]   (mord_K, bocados con llave) en T 1500: O1_LUGAR (4, 0) · ORAC (5, 1) · AZAR (4, 2) · regalo (4, 29)
+[08:25:04]   ARNES SONDA 1: 15/15 TODO OK (s 737400, T 1500)

@@ -1,0 +1,141 @@
+{
+ "sonda": 1,
+ "resumen": {
+  "brazos": {
+   "azar@extra_sin=0.2": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 10,
+    "cruzan_por_corrida": [
+     5,
+     5
+    ],
+    "establecidos": 12,
+    "R0_med": 0.9268,
+    "vida_med": 979.5,
+    "fund_media": 54.3889,
+    "mundo_AC": 5.227,
+    "mundo_K": 0.6744,
+    "ratio_pasos_oasis": 5.03,
+    "g_ef_1k": 2.3137,
+    "g_nom_1k": 3.9005,
+    "plus_ef_1k": 0.2309,
+    "plus_nom_1k": 0.454,
+    "frac_llave": 0.1758,
+    "mord_K": 912,
+    "con": 1362,
+    "sin": 6397,
+    "adel": 0,
+    "partos": 490,
+    "muertes": 1469,
+    "mord_AC": 15497,
+    "mord_BD": 11626
+   },
+   "piso@extra_sin=0.3": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 6,
+    "cruzan_por_corrida": [
+     3,
+     3
+    ],
+    "establecidos": 10,
+    "R0_med": 0.5484,
+    "vida_med": 751.75,
+    "fund_media": 56.7222,
+    "mundo_AC": 5.155,
+    "mundo_K": 4.8285,
+    "ratio_pasos_oasis": 5.307,
+    "g_ef_1k": 2.2527,
+    "g_nom_1k": 3.4358,
+    "plus_ef_1k": 0.0096,
+    "plus_nom_1k": 0.022,
+    "frac_llave": 0.0112,
+    "mord_K": 176,
+    "con": 79,
+    "sin": 6976,
+    "adel": 0,
+    "partos": 467,
+    "muertes": 1488,
+    "mord_AC": 13898,
+    "mord_BD": 10882
+   },
+   "techo@extra_sin=0.2": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 9,
+    "cruzan_por_corrida": [
+     5,
+     4
+    ],
+    "establecidos": 13,
+    "R0_med": 0.8182,
+    "vida_med": 1051.5,
+    "fund_media": 50.3333,
+    "mundo_AC": 5.2685,
+    "mundo_K": 0.6248,
+    "ratio_pasos_oasis": 5.151,
+    "g_ef_1k": 2.3996,
+    "g_nom_1k": 3.9943,
+    "plus_ef_1k": 0.2891,
+    "plus_nom_1k": 0.5484,
+    "frac_llave": 0.2162,
+    "mord_K": 880,
+    "con": 1645,
+    "sin": 5979,
+    "adel": 0,
+    "partos": 475,
+    "muertes": 1381,
+    "mord_AC": 15375,
+    "mord_BD": 11304
+   }
+  },
+  "mixto": null
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": "piso@extra_sin=0.3,techo@extra_sin=0.2,azar@extra_sin=0.2",
+ "semillas": [
+  737200,
+  737201
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.03,
+  "cerrojo": 0
+ },
+ "perillas_base": {
+  "plus": 0.0,
+  "d_plus": 600,
+  "extra_sin": null,
+  "adelanta": 0
+ },
+ "nota": "humo 7: piso en extra_sin 0.3 (punto intermedio) y oraculo/azar en extra_sin 0.2 (donde hubo espacio); mismas semillas de los humos 1-4",
+ "sha_runner": "9f77ce1f378f1c59",
+ "sha_mundo_plus": "cb68a7266b61540b",
+ "carros": {
+  "O1_LUGAR_ORAC": "adc55edae3a6a9f5",
+  "O1_LUGAR_AZAR": "2b888d7de60d96b0",
+  "O1_LUGAR_ORAC0": "03f47a545b3a30e2"
+ },
+ "mundo_plus": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17,
+  "oasis": "OasisPlus",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "seg": 632.2
+}

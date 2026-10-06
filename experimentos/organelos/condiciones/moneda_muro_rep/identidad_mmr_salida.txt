@@ -1,0 +1,93 @@
+ARNES moneda del muro REPLICA · 2026-10-01 07:19:57
+  shas: corre_mmr.py 11e3b7288aa0116b · identidad_mmr.py b01c0927b52a4be2 · sim_mmr.py 73a79b4916cfb02d
+(K) shas fijados (corre_mm, identidad_mm, sim_mm; por corre_mm.verifica: corre_mut, corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez)
+  sha experimentos\organelos\condiciones\moneda_muro\corre_mm.py d45a5ed42e8514df OK
+  sha experimentos\organelos\condiciones\moneda_muro\identidad_mm.py e9e3a7a5b6576f30 OK
+  sha experimentos\organelos\condiciones\moneda_muro\sim_mm.py ae805f42e2e6f26c OK
+  -- verifica de corre_mm (corre_mut y, por cascada, corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez, carros):
+    sha experimentos\organelos\condiciones\mutacion\corre_mut.py 8912e9d77f397e40 OK
+    sha experimentos\organelos\condiciones\mutacion\identidad_mut.py b08e1410de201065 OK
+    -- verifica de corre_mut (corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez, carros):
+      sha experimentos\organelos\moneda\corre_moneda.py 0441aa7bf5b94316 OK
+      sha experimentos\organelos\moneda\identidad_moneda.py ceede3d6458597ac OK
+      -- verifica de corre_moneda (shas de sentidos_muro, corre_bp, V143_BQ3; pista, juez, carros):
+        sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+        sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+        sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+        sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+        -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+          sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+          sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+          sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+          sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+          sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+          sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+          sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+          sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+          sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+          carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+          carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+(C) CONFIGURACION: el modo de la serie == el 'explora' de corre_mm salvo indices y semillas; semillas nuevas, pareadas y sin choques
+  serie {'ind': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 'npas': 6, 'T_pas': 100000, 'T_pru': 100000, 'base_pas': 647100, 'base_pru': 647300, 'brazos': ('moneda_L', 'neutra_L')} · humo {'ind': [14], 'npas': 2, 'T_pas': 30000, 'T_pru': 20000, 'base_pas': 647100, 'base_pru': 647376, 'brazos': ('moneda_L', 'neutra_L')} · pasajes 647110..647205 (60 distintas) · pruebas 647301..647310 · humo [647240, 647241, 647390] · arnes [647250, 647251, 647395] · sin choques con las 39 del explora: OK
+(F) IDENTIDAD CON moneda_muro A LAS SEMILLAS VIEJAS, BIT A BIT
+  sha del pasaje guardado pasaje_moneda_L_i1_p0.json 45285799cd2a5c52: OK
+  trabajo(moneda_L, i1) de ESTE runner, pasaje p0 (s 638110, T 100000, 90s) == GUARDADO del explora en 18 campos (todos menos ['seg', 'seg_trabajo']); fraccion A [0.5, 0.5714]: OK
+  las 10 cadenas GUARDADAS del explora por trabajo() de este runner (modo 'explora'): 0 corridas (0.5s), 70 JSON intactos, frac_A y cruzan == lectura_mm.json; finales {'1': 0.8, '2': 0.5, '3': 0.996, '4': 0.0, '5': 0.8} / {'1': 0.1429, '2': 0.33, '3': 0.0467, '4': 0.0, '5': 0.1457}; >= 5/5, > 4/5, cruce 17 vs 23: OK
+  explora_guardado(): sha OK · veredicto alli CONSERVA · estricta > 4/5 · cruce D -6: OK
+(E) regla 14: cadena corta (semillas del arnes, T 1 000) por ESTE runner == corre_mm.trabajo, JSON por JSON; reintento de aborto
+  neutra_L i15: 2 JSON campo a campo (menos ['seg', 'seg_trabajo']), frac_A [0.5, 0.5044], cruzan 0; cfg del carro == CFG10; semilla 647250: OK
+  aborto simulado en la prueba y reanuda: solo se recorre la prueba y sale identica: OK
+(X) el runner NIEGA pool > 2, pool o reanuda en el humo y --lee de una carpeta que no existe (no se llama a --serie desde el arnes)
+  ['--serie', '--pool', '3']: OK (niega)
+  ['--humo', '--pool', '2']: OK (niega)
+  ['--humo', '--reanuda']: OK (niega)
+  ['--lee', 'datos/no_existe']: OK (niega)
+(G) CANDADOS de --serie: veredicto previo, carpeta previa, reanuda sin carpeta, git limpio
+  vacio + git limpio -> corre: None OK
+  vacio + git sucio -> niega: git: sucio OK
+  --reanuda sin carpeta -> niega: --reanuda: no hay carpeta serie_* que seguir OK
+  una carpeta humo_* no bloquea: None OK
+  carpeta cortada sin --reanuda -> niega: ya existe serie_20261001_000000: solo --reanuda (cortada o NO SE LEE) OK
+  carpeta cortada con --reanuda -> corre: None OK
+  NO SE LEE previo con --reanuda -> corre: None OK
+  veredicto previo CONSERVA, aun con --reanuda -> niega: OK
+  veredicto previo PURGA, aun con --reanuda -> niega: OK
+  veredicto previo INDETERMINADO, aun con --reanuda -> niega: OK
+  git_limpio REAL: los 3 archivos importados de moneda_muro (commit 857bbb87) -> None; un archivo sin commitear -> niega: OK
+  archivos que el candado exige commiteados: ['PREREGISTRO_moneda_muro_rep.md', 'corre_mmr.py', 'identidad_mmr.py', 'identidad_mmr_salida.txt', 'sim_mmr.py', 'corre_mm.py', 'identidad_mm.py', 'sim_mm.py']: OK
+(L) LA LETRA en casos sinteticos (n = 10; decide la ESTRICTA: > en >= 7/10 y mediana >= 0.40; PURGA >= 8/10; cruce: >= 7/10 y |D| >= 9)
+  CONSERVA: > en 7/10 y mediana 0.6: CONSERVA (espera CONSERVA) OK
+  en el borde: mediana == 0.40 y 7/10: CONSERVA (espera CONSERVA) OK
+  no CONSERVA con > en 6/10 (aunque >= en 10/10: los empates van en contra): INDETERMINADO (espera INDETERMINADO) OK
+  el caso del explora duplicado (> 8/10, dos empates 0 = 0): CONSERVA (espera CONSERVA) OK
+  no CONSERVA si la mediana < 0.40 aunque > en 10/10: INDETERMINADO (espera INDETERMINADO) OK
+  PURGA: <= 0.5 neutra en 8/10: PURGA (espera PURGA) OK
+  no PURGA con 7/10: INDETERMINADO (espera INDETERMINADO) OK
+  no PURGA: 0 contra 0 no cuenta: INDETERMINADO (espera INDETERMINADO) OK
+  todas iguales (empates 10/10): INDETERMINADO: INDETERMINADO (espera INDETERMINADO) OK
+  las dos lecturas se separan: original 10/10 True, estricta False (empates 4, arriba 2), en_umbral True: OK
+  original sobre las 5 primeras True con 5/10 en total (no decide): OK
+  CRUZA MAS: gana 7/10 y D +9: CRUZA MAS (D 9, gana 7, pierde 0, umbral True) OK
+  no CRUZA MAS: gana 7/10 pero D +7: SIN DIFERENCIA (D 7, gana 7, pierde 0, umbral True) OK
+  no CRUZA MAS: D +12 pero gana 6/10: SIN DIFERENCIA (D 12, gana 6, pierde 0, umbral True) OK
+  CRUZA MENOS: pierde 8/10 y D -12: CRUZA MENOS (D -12, gana 0, pierde 8, umbral False) OK
+  el explora duplicado (D -12, pierde 6, gana 2): SIN DIFERENCIA: SIN DIFERENCIA (D -12, gana 2, pierde 6, umbral True) OK
+  empates 10/10: SIN DIFERENCIA: SIN DIFERENCIA (D 0, gana 0, pierde 0, umbral False) OK
+  NO SE LEE (aborto): NO SE LEE OK
+  NO SE LEE (falta una prueba): NO SE LEE OK
+  NO SE LEE (falta una cadena): NO SE LEE OK
+  NO SE LEE (la moneda no actua): NO SE LEE OK
+  NO SE LEE (respaldo en > 25 %): NO SE LEE OK
+  NO SE LEE (entrada != 0.5): NO SE LEE OK
+  NO SE LEE (prueba no pareada): NO SE LEE OK
+  NO SE LEE (arnes): NO SE LEE OK
+  NO SE LEE (explora sin sha): NO SE LEE OK
+(B) BLOQUE contra el explora y predicciones (se imprimen sin excepcion en los tres veredictos; H-3 sin 'x2', H-5 umbral en el titular)
+  CONSERVA + CRUZA MAS -> FUNCIONA: moneda_L supera a neutra_L y no cae (replica con letra estricta; el explora estaba en el umbral (4/5 con esta letra)) y cruza mas; cruce sin replica: no es declaracion | REPLICA con letra estricta; el explora estaba en el umbral (4/5 con esta letra) | moneda_L cruza MAS en la replica (contra el explora, D -6 de 45): cruce sin replica, no es declaracion: OK
+  CONSERVA + SIN DIFERENCIA -> HAY ALGO MODESTO: moneda_L supera a neutra_L y no cae (replica con letra estricta; el explora estaba en el umbral (4/5 con esta letra)); NO cruza mas | REPLICA con letra estricta; el explora estaba en el umbral (4/5 con esta letra) | moneda_L NO cruza mas que neutra_L: SIN DIFERENCIA en la replica (explora D -6 de 45, descriptivo): OK
+  CONSERVA + SIN DIFERENCIA -> HAY ALGO MODESTO · EN EL UMBRAL: moneda_L supera a neutra_L y no cae (replica con letra estricta; el explora estaba en el umbral (4/5 con esta letra)); NO cruza mas | REPLICA con letra estricta; el explora estaba en el umbral (4/5 con esta letra) · EN EL UMBRAL | moneda_L NO cruza mas que neutra_L: SIN DIFERENCIA en la replica (explora D -6 de 45, descriptivo): OK
+  CONSERVA + CRUZA MAS -> FUNCIONA · EN EL UMBRAL: moneda_L supera a neutra_L y no cae (replica con letra estricta; el explora estaba en el umbral (4/5 con esta letra)) y cruza mas; cruce sin replica: no es declaracion | REPLICA con letra estricta; el explora estaba en el umbral (4/5 con esta letra) · EN EL UMBRAL | moneda_L cruza MAS en la replica (contra el explora, D -6 de 45): cruce sin replica, no es declaracion: OK
+  INDETERMINADO + SIN DIFERENCIA -> NO: el CONSERVA del explora no replica | NO REPLICA: explora CONSERVA (umbral), replica INDETERMINADO -> el CONSERVA del explora no se sostiene | moneda_L NO cruza mas que neutra_L: SIN DIFERENCIA en la replica (explora D -6 de 45, descriptivo): OK
+  PURGA + SIN DIFERENCIA -> NO: el CONSERVA del explora no replica | NO REPLICA y se INVIERTE: explora CONSERVA (umbral), replica PURGA | moneda_L NO cruza mas que neutra_L: SIN DIFERENCIA en la replica (explora D -6 de 45, descriptivo): OK
+(N) corridas de este arnes: 6 (max 6) · pasos 105000 (max 200 000): OK
+ARNES: PASA · 96s

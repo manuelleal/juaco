@@ -1,0 +1,316 @@
+{
+ "modo": "humo",
+ "peldano": "d1",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "base": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 1.5,
+    "K_post": 4.435,
+    "partos": 855,
+    "nietos": 769,
+    "nietos_post": 197,
+    "rumbo": 0.1522,
+    "vida_med": 150.0,
+    "nobj": 20.6845,
+    "causas": {
+     "hambre": 153,
+     "sed": 229,
+     "veneno": 1992,
+     "sal": 1908
+    }
+   },
+   "clon": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 0.5,
+    "K_post": 3.46,
+    "partos": 868,
+    "nietos": 772,
+    "nietos_post": 20,
+    "rumbo": 0.1608,
+    "vida_med": 138.0,
+    "nobj": 19.4645,
+    "causas": {
+     "hambre": 313,
+     "sed": 288,
+     "veneno": 1838,
+     "sal": 1799
+    },
+    "sin_pareja": 113,
+    "con_pareja": 868,
+    "recomb": 0,
+    "pagos": 0,
+    "trofico": 0
+   },
+   "sexo": {
+    "n": 2,
+    "persisten": 2,
+    "vivos_T": 1.0,
+    "K_post": 1.515,
+    "partos": 670,
+    "nietos": 578,
+    "nietos_post": 10,
+    "rumbo": 0.0985,
+    "vida_med": 143.5,
+    "nobj": 26.4875,
+    "causas": {
+     "hambre": 231,
+     "sed": 231,
+     "veneno": 1879,
+     "sal": 1879
+    },
+    "sin_pareja": 118,
+    "con_pareja": 670,
+    "recomb": 670,
+    "pagos": 0,
+    "trofico": 0
+   }
+  },
+  "pareados": {
+   "base_vs_clon": {
+    "persiste": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "nietos": [
+     [
+      495,
+      303
+     ],
+     [
+      274,
+      469
+     ]
+    ],
+    "K_post": [
+     [
+      4.29,
+      1.31
+     ],
+     [
+      4.58,
+      5.61
+     ]
+    ]
+   },
+   "base_vs_sexo": {
+    "persiste": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      495,
+      219
+     ],
+     [
+      274,
+      359
+     ]
+    ],
+    "K_post": [
+     [
+      4.29,
+      1.54
+     ],
+     [
+      4.58,
+      1.49
+     ]
+    ]
+   },
+   "clon_vs_base": {
+    "persiste": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "nietos": [
+     [
+      303,
+      495
+     ],
+     [
+      469,
+      274
+     ]
+    ],
+    "K_post": [
+     [
+      1.31,
+      4.29
+     ],
+     [
+      5.61,
+      4.58
+     ]
+    ]
+   },
+   "clon_vs_sexo": {
+    "persiste": [
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      303,
+      219
+     ],
+     [
+      469,
+      359
+     ]
+    ],
+    "K_post": [
+     [
+      1.31,
+      1.54
+     ],
+     [
+      5.61,
+      1.49
+     ]
+    ]
+   },
+   "sexo_vs_base": {
+    "persiste": [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "nietos": [
+     [
+      219,
+      495
+     ],
+     [
+      359,
+      274
+     ]
+    ],
+    "K_post": [
+     [
+      1.54,
+      4.29
+     ],
+     [
+      1.49,
+      4.58
+     ]
+    ]
+   },
+   "sexo_vs_clon": {
+    "persiste": [
+     [
+      1,
+      1
+     ],
+     [
+      1,
+      0
+     ]
+    ],
+    "nietos": [
+     [
+      219,
+      303
+     ],
+     [
+      359,
+      469
+     ]
+    ],
+    "K_post": [
+     [
+      1.54,
+      1.31
+     ],
+     [
+      1.49,
+      5.61
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": [
+  "sexo",
+  "clon",
+  "base"
+ ],
+ "semillas": [
+  739292,
+  739293
+ ],
+ "familia": {
+  "sexo": {
+   "sexo": 1,
+   "recombina": 1,
+   "pareja": "azar"
+  },
+  "clon": {
+   "sexo": 1,
+   "recombina": 0,
+   "pareja": "azar"
+  },
+  "base": null
+ },
+ "extra": {
+  "r_par": 60
+ },
+ "eco": {
+  "refunda": 1,
+  "t_corte": 50000,
+  "p_mut": 0.05,
+  "sigma": 0.15,
+  "banco": 50,
+  "cada_gen": 5000,
+  "n_sombra": 0
+ },
+ "nota": "humo 2 d1: r_par 60 (pareja casi siempre), T 100k corte 50k",
+ "senal": "si",
+ "sha_runner": "b5aeb490e39805f0",
+ "mundo": {
+  "sha_motor_eco": "bca3033878b59622",
+  "sha_fuente_transformada": "4a7e0dffac15cffa",
+  "anclas": 12
+ },
+ "seg": 589.5
+}

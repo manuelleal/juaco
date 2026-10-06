@@ -1,0 +1,90 @@
+ARNES identidad_juntos.py (T 4500)
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+      carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+      carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+      mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+      sha corre_p1.py 392b71186cf49b60 OK
+      sha construye_p1.py 90dc1b6f848fac80 OK
+      sha mundo_escalera.py 4f28b372207ba0a6 OK
+      sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+      sha construye_c.py 024a89476109b997 OK
+      sha corre_c.py 01e4ad94dd06e133 OK
+      sha construye_p7.py 50179cf58798120c OK
+      sha corre_p7.py 82c3811c144d1a2b OK
+      sha construye_juntos.py d469c8f3bf194d64 OK
+      carro O1_TODO == construye_juntos: True (sha b7519a4a481a0cf5)
+      carro O1_TODO_SBAR == construye_juntos: True (sha 153891018a52b5db)
+      carro O1_TODO_SEN == construye_juntos: True (sha dff5e762bd23612e)
+      carro O1_TODO_PREG == construye_juntos: True (sha 382dafcf822b36a1)
+      carro O1_TODO0 == construye_juntos: True (sha 4e197ff6d7d86841)
+      mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+  OK    (K) verifica(): shas, carros == construye_juntos, mundo_tramo_c
+  OK    (K) chequeo estatico O1_TODO: PASA
+  OK    (K) chequeo estatico O1_TODO_SBAR: PASA
+  OK    (K) chequeo estatico O1_TODO_SEN: PASA
+  OK    (K) chequeo estatico O1_TODO_PREG: PASA
+  OK    (K) chequeo estatico O1_TODO0: PASA
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+  OK    (K) identidad corta corre_p1
+      IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+  OK    (K) identidad corta corre_c
+      IDENTIDAD CORTA JUNTOS (salida ENTERA, N 9, s 738530, T 1500, mueve 500, c_e 0.01): TODO0 == O1_LUGAR True · TODO_SEN == O1_LUGAR_SENAL True · TODO_PREG == O1_LUGAR_PREG True · TODO != parejas True
+  OK    (K) identidad corta corre_juntos
+  OK    (C) s 738531 mundo serie (mueve + c_e): las tres apagadas O1_TODO0 == O1_LUGAR (salida ENTERA)
+  OK    (C) s 738531 mundo serie (mueve + c_e): solo senal O1_TODO_SEN == O1_LUGAR_SENAL (salida ENTERA)
+  OK    (C) s 738531 mundo serie (mueve + c_e): solo pregunta O1_TODO_PREG == O1_LUGAR_PREG (salida ENTERA)
+  OK    (C) s 738531 mundo P7 (c_e, sin mueve): las tres apagadas O1_TODO0 == O1_LUGAR (salida ENTERA)
+  OK    (C) s 738531 mundo P7 (c_e, sin mueve): solo senal O1_TODO_SEN == O1_LUGAR_SENAL (salida ENTERA)
+  OK    (C) s 738531 mundo P7 (c_e, sin mueve): solo pregunta O1_TODO_PREG == O1_LUGAR_PREG (salida ENTERA)
+  OK    (C) s 738531 mundo P10 (mueve, sin c_e): las tres apagadas O1_TODO0 == O1_LUGAR (salida ENTERA)
+  OK    (C) s 738531 mundo P10 (mueve, sin c_e): solo senal O1_TODO_SEN == O1_LUGAR_SENAL (salida ENTERA)
+  OK    (C) s 738531 mundo P10 (mueve, sin c_e): solo pregunta O1_TODO_PREG == O1_LUGAR_PREG (salida ENTERA)
+  OK    (C) s 738532 mundo serie (mueve + c_e): las tres apagadas O1_TODO0 == O1_LUGAR (salida ENTERA)
+  OK    (C) s 738532 mundo serie (mueve + c_e): solo senal O1_TODO_SEN == O1_LUGAR_SENAL (salida ENTERA)
+  OK    (C) s 738532 mundo serie (mueve + c_e): solo pregunta O1_TODO_PREG == O1_LUGAR_PREG (salida ENTERA)
+  OK    (C) O1_TODO != O1_LUGAR, != pareja senal, != pareja pregunta (las piezas actuan juntas)
+  OK    (C) O1_TODO_SBAR != O1_TODO (el control de contenido actua) y != pareja pregunta
+  OK    (C) c_e no toca a quien no emite: lug y preg con c_e 0.01 == con c_e 0 (fisica de los linajes)
+  OK    (m) O1_TODO escribe 140 (cobros 140), lee 1120, siembra 110, explora 2503, olvida 10958 (todo > 0)
+  OK    (m) O1_TODO_SBAR escribe 54 y lee 301 (> 0: mismo canal, mismo costo 54); explora 866
+  OK    (m) lug no escribe ni explora; pareja senal no explora; pareja pregunta no escribe
+  OK    (a) regla 14 (fila): corre_juntos.trabajo('lug') sin c_e == corre_p10.trabajo('lug') campo a campo (s 738533, T 2000, mueve 600; salvo lo agregado)
+  OK    (a) regla 14 (fila): corre_juntos.trabajo('preg') sin c_e == corre_p10.trabajo('preg') campo a campo (s 738533, T 2000, mueve 600; salvo lo agregado)
+  OK    (a) regla 14 (fila): corre_juntos.trabajo('sen') sin mueve == corre_p7 fila de 'sen' en 20 campos comunes (pizarra, senal y latencia por vida incluidas; s 738534, T 2000)
+  OK    (e) trabajo todo: JSON escrito; fila con preg (mudanzas 3), pizarra (c_e 0.01), estado SENAL 1 PREGUNTA 1 SN_BARAJA 0
+  OK    (e) --reanuda relee igual
+  OK    (e) brazo desconocido -> aborto escrito (nube-9)
+  OK    (f) SUMAN: todo 9 gana a sen (5) y a preg (8/7) 20/20 con +26 y gana al control: SUMAN
+  OK    (f) NO SUMAN: gana a las parejas pero NO al control de contenido: NO SUMAN (gana a las parejas pero no al control de contenido (la senal no suma por su contenido))
+  OK    (f) SE ESTORBAN: todo 6 < la mejor pareja (preg 8) 20/20: SE ESTORBAN mejor preg
+  OK    (f) NO SUMAN: todo == la mejor pareja: NO SUMAN
+  OK    (f) NO SUMAN en el umbral: gana 12/20 (+12): NO SUMAN umbral True
+  OK    (f) NO SUMAN por TECHO: preg en 9/9 en 10 semillas (ganables 10 < 13): NO SUMAN (TECHO: SUMAN no era alcanzable con estas parejas (ver techo)) alcanzable False
+  OK    (f) sombra: todo == preg en cruzan, pero menos fundadores y menor latencia que las dos parejas: NO SUMAN · SUMAN_en_sombra True
+  OK    (f) NO SE LEE: un aborto
+  OK    (f) NO SE LEE: el mundo no se mudo 4 veces
+  OK    (f) NO SE LEE: banda (lug en 9 = 180 > 115)
+  OK    (f) NO SE LEE: banda (preg en 6 = 120 < 140)
+  OK    (f) NO SE LEE: la senal no actua en una corrida de todo (0 escrituras)
+  OK    (f) NO SE LEE: estado equivocado (pareja senal con PREGUNTA 1)
+  OK    (f) la letra escala a n 10 (gana >= 7, suma >= 5; bandas a la mitad): SUMAN
+  OK    (g) semillas: serie, replica, explora, humo y arnes disjuntas entre si y todas en 7385xx (fuera de 739xxx, la escalera previa)
+usage: identidad_juntos.py [-h] (--humo | --explora | --serie | --replica |
+                           --lee LEE) [--pool POOL] [--reanuda] [--T T]
+                           [--n N] [--brazos BRAZOS] [--desde DESDE]
+                           [--nota NOTA] [--mueve MUEVE]
+identidad_juntos.py: error: one of the arguments --humo --explora --serie --replica --lee is required
+usage: identidad_juntos.py [-h] (--humo | --explora | --serie | --replica |
+                           --lee LEE) [--pool POOL] [--reanuda] [--T T]
+                           [--n N] [--brazos BRAZOS] [--desde DESDE]
+                           [--nota NOTA] [--mueve MUEVE]
+identidad_juntos.py: error: unrecognized arguments: --x
+  OK    (g) banderas desconocidas o abreviadas abortan (--hum, --humo --x)
+  OK    (g) --humo con --pool aborta; --pool 3 aborta; --serie --T aborta; --serie --mueve aborta; --humo --n 3 aborta (9 corridas); --explora --T 250000 aborta
+  OK    (g) candado de --serie activo sin commit: 'git: experimentos/organelos/escalera/juntos/PREREGISTRO_juntos.md commiteado False · sin c'
+
+ARNES PASA, 51/51 · 173.4s

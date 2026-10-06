@@ -1,0 +1,408 @@
+{
+ "modo": "humo_serie",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_fab_gana_a_off": false,
+   "V4_estado": true,
+   "V5_desde_cero": true,
+   "V7a_profundidad_mutacional_neutra": false,
+   "V7b_refundaciones_por_camara_neutra": false
+  },
+  "puertas": {
+   "PG_gen_sube": false,
+   "PC_par_neu": false,
+   "PC_suma_neu": false
+  },
+  "veredicto": "NO SE LEE",
+  "matiz": null,
+  "en_umbral": true,
+  "pareado_gen": {
+   "gen": "MARGEN",
+   "margen": 0.03,
+   "n": 1,
+   "gana": 0,
+   "pierde": 0,
+   "med_sel": 0.0,
+   "med_neu": 0.0,
+   "por_cadena_sel": [
+    0.0
+   ],
+   "por_cadena_neu": [
+    0.0
+   ]
+  },
+  "pareado_neu": {
+   "n": 1,
+   "gana": 0,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 0,
+   "suma_b": 0,
+   "dif": 0,
+   "por_indice_a": [
+    0
+   ],
+   "por_indice_b": [
+    0
+   ]
+  },
+  "pareado_fab_off": {
+   "n": 1,
+   "gana": 0,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 0,
+   "suma_b": 0,
+   "dif": 0,
+   "por_indice_a": [
+    0
+   ],
+   "por_indice_b": [
+    0
+   ]
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "sel": 0,
+    "neu": 0,
+    "fab": 0,
+    "off": 0
+   },
+   "mayorias_(>=5/9)": {
+    "sel": 0,
+    "neu": 0,
+    "fab": 0,
+    "off": 0
+   },
+   "sel_mayoria_como_O1": false,
+   "mord_BD_med": {
+    "sel": 28.0,
+    "neu": 28.0,
+    "fab": 68.0,
+    "off": 28.0
+   },
+   "mord_AC_med": {
+    "sel": 83.0,
+    "neu": 83.0,
+    "fab": 137.0,
+    "off": 83.0
+   },
+   "frac_sin_bueno_med": {
+    "sel": 0.0052,
+    "neu": 0.0052,
+    "fab": 0.028,
+    "off": 0.0052
+   },
+   "fund_med": {
+    "sel": 0.0,
+    "neu": 0.0,
+    "fab": 0.0,
+    "off": 0.0
+   },
+   "sel_MARGEN_en_zona_funcional": 0,
+   "fl_serie": 1,
+   "R0_med": {
+    "sel": 0.0,
+    "neu": 0.0,
+    "fab": 0.75,
+    "off": 0.0
+   },
+   "establecidos": {
+    "sel": 7,
+    "neu": 7,
+    "fab": 8,
+    "off": 7
+   },
+   "mundo_AC": {
+    "sel": 4.9937,
+    "neu": 4.9937,
+    "fab": 2.4046,
+    "off": 4.9937
+   },
+   "genes": {
+    "MARGEN": {
+     "gen": "MARGEN",
+     "margen": 0.03,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 0.0,
+     "med_neu": 0.0,
+     "por_cadena_sel": [
+      0.0
+     ],
+     "por_cadena_neu": [
+      0.0
+     ]
+    },
+    "PRUEBA": {
+     "gen": "PRUEBA",
+     "margen": 0.03,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 0.5,
+     "med_neu": 0.5,
+     "por_cadena_sel": [
+      0.5
+     ],
+     "por_cadena_neu": [
+      0.5
+     ]
+    },
+    "PEN_OTRO": {
+     "gen": "PEN_OTRO",
+     "margen": 0.03,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 0.35,
+     "med_neu": 0.35,
+     "por_cadena_sel": [
+      0.35
+     ],
+     "por_cadena_neu": [
+      0.35
+     ]
+    },
+    "PISO": {
+     "gen": "PISO",
+     "margen": 0.03,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 0.2,
+     "med_neu": 0.2,
+     "por_cadena_sel": [
+      0.2
+     ],
+     "por_cadena_neu": [
+      0.2
+     ]
+    },
+    "LIMPIA": {
+     "gen": "LIMPIA",
+     "margen": 0.03,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 1.0,
+     "med_neu": 1.0,
+     "por_cadena_sel": [
+      1.0
+     ],
+     "por_cadena_neu": [
+      1.0
+     ]
+    },
+    "HUECO": {
+     "gen": "HUECO",
+     "margen": 0.03,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 1.0,
+     "med_neu": 1.0,
+     "por_cadena_sel": [
+      1.0
+     ],
+     "por_cadena_neu": [
+      1.0
+     ]
+    }
+   },
+   "pareados": {
+    "sel_vs_neu": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "sel_vs_off": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "sel_vs_fab": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "neu_vs_off": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "fab_vs_off": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    }
+   },
+   "sel_trayectoria_gen_mediana_por_pasaje": {
+    "MARGEN": [
+     0.0,
+     0.0
+    ],
+    "PRUEBA": [
+     0.5,
+     0.5
+    ],
+    "PEN_OTRO": [
+     0.35,
+     0.35
+    ],
+    "PISO": [
+     0.2,
+     0.2
+    ],
+    "LIMPIA": [
+     1.0,
+     1.0
+    ],
+    "HUECO": [
+     1.0,
+     1.0
+    ]
+   },
+   "sel_cruzan_por_pasaje_mediana": [
+    0.0,
+    0.0
+   ],
+   "sel_establecidos_en_pasaje_mediana": [
+    9.0,
+    9.0
+   ],
+   "neu_trayectoria_gen_mediana_por_pasaje": {
+    "MARGEN": [
+     0.0,
+     0.0
+    ],
+    "PRUEBA": [
+     0.5,
+     0.5
+    ],
+    "PEN_OTRO": [
+     0.35,
+     0.35
+    ],
+    "PISO": [
+     0.2,
+     0.2
+    ],
+    "LIMPIA": [
+     1.0,
+     1.0
+    ],
+    "HUECO": [
+     1.0,
+     1.0
+    ]
+   },
+   "neu_cruzan_por_pasaje_mediana": [
+    0.0,
+    0.0
+   ],
+   "neu_establecidos_en_pasaje_mediana": [
+    9.0,
+    9.0
+   ],
+   "relojes": {
+    "sel": {
+     "profundidad_mutacional_mediana": 2.0,
+     "refundaciones_por_camara_mediana": 10.0
+    },
+    "neu": {
+     "profundidad_mutacional_mediana": 3.0,
+     "refundaciones_por_camara_mediana": 6.0
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 1,
+ "npas": 2,
+ "T_pas": 5000,
+ "T_pru": 20000,
+ "veredicto": "HUMO (no cuenta): NO SE LEE",
+ "nota": "",
+ "sigma": 0.03,
+ "delta": 0.01,
+ "gen_letra": "MARGEN",
+ "margen_gen": 0.03,
+ "base": {
+  "MARGEN": 0.0,
+  "PRUEBA": 0.5,
+  "PEN_OTRO": 0.35,
+  "PISO": 0.2,
+  "LIMPIA": 1.0,
+  "HUECO": 1.0
+ },
+ "fl_serie": 1,
+ "preregistro": "PREREGISTRO_muro_perillas.md",
+ "sha_preregistro": "bdee449ec037a17f",
+ "sha_runner": "c787e4341621b90a",
+ "shas": {
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028",
+  "experimentos\\carrera_escuderias\\carros\\CTRL_O1_SINLIMPIA.py": "be029b0a1b8d6634",
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22"
+ },
+ "shas_propios": {
+  "construye_muro_perillas.py": "8eccbf0d38591c9f",
+  "carros\\O1_MURO_GEN.py": "d9b238bd516b0aeb",
+  "carros\\O1_MURO_GEN0.py": "e98f06e75d9f682f"
+ },
+ "seg": 75.9
+}

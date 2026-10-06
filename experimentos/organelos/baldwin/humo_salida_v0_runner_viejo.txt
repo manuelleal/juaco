@@ -1,0 +1,43 @@
+CORRE_BALDWIN · humo_s56495_T200000 · 20260929_121431 · python 3.14.2 · pool NO (un proceso) · corre_baldwin.py c48ad4d1513a0bf6 · preregistro PREREGISTRO_baldwin.md e0ad371b35688a30 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin\datos\humo_s56495_T200000_20260929_121431
+  tareas 6 · brazos ['PLAST_V_P22k', 'FIJO_V_P22k', 'PLAST_AZA_P22k', 'PLAST_RW0_P22k', 'PLAST_V_Pinf', 'FIJO_V_Pinf'] · semillas 56495-56495 · T 200000 · t_corte 100000 · VIDA 2270 · P {'P6k': 6000, 'P22k': 22000, 'P68k': 68000, 'Pinf': 0} · reanuda False
+  sha experimentos\organelos\bloques\opusM\corre_bloques.py a090b82eae9f1ee3 OK
+  sha experimentos\organelos\bloques\opusM\motor_bloques.py ff782697e54585a5 OK
+  sha experimentos\organelos\bloques\opusM\motor_bloques3.py 21b5ee28d086b3be OK
+  sha experimentos\organelos\bloques\opusM\construye_bloques3.py 5532f1c1fddbb624 OK
+  sha experimentos\organelos\baldwin\motor_baldwin.py d0a620d2f5e2605e OK
+  corre_bloques.verifica (nucleo_eco_sel_ing, motor_frio_rapido, motor_bloques): OK
+  motor_baldwin.py == construye_baldwin.construye() por anclas desde motor_bloques3: OK
+  [12:14:47] [1/6] [   16.4s] FIJO_V_Pinf     s56495 (16.4s) persiste 1 K 36.43564356435643 t_ext None frac_pl None aprende None n_inv None vida2a 2096.8 aborto None
+  [12:15:01] [2/6] [   29.8s] PLAST_V_Pinf    s56495 (13.4s) persiste 0 K 1.3366336633663367 t_ext 105844 frac_pl None aprende 2294 n_inv None vida2a 171.1 aborto None
+  [12:15:14] [3/6] [   43.1s] PLAST_V_P22k    s56495 (13.3s) persiste 0 K 1.4653465346534653 t_ext 102644 frac_pl None aprende 3063 n_inv 4 vida2a 125.0 aborto None
+  [12:15:27] [4/6] [   55.5s] FIJO_V_P22k     s56495 (12.4s) persiste 0 K 4.118811881188119 t_ext 110871 frac_pl None aprende None n_inv 5 vida2a 1234.9 aborto None
+  [12:15:40] [5/6] [   68.8s] PLAST_AZA_P22k  s56495 (13.3s) persiste 0 K 5.1683168316831685 t_ext 113971 frac_pl None aprende 3813 n_inv 5 vida2a 1446.9 aborto None
+  [12:15:53] [6/6] [   82.0s] PLAST_RW0_P22k  s56495 (13.2s) persiste 0 K 4.693069306930693 t_ext 111652 frac_pl None aprende 22437 n_inv 5 vida2a 1523.3 aborto None
+
+================ LECTURA (PREREGISTRO_baldwin.md sec. 6-7) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin\datos\humo_s56495_T200000_20260929_121431 · VIDA 2270 · P/vida P6k 2.6 P22k 9.7 P68k 30.0 Pinf inf
+brazo           persiste   K med t_ext med frac_pl med frac_boca n_disc  |w-w0|   aprende n_inv  vida2a    seg
+PLAST_V_P22k         0/1  1.4653  102644.0        None      None    0.0    None    3063.0   4.0   125.0   13.3
+FIJO_V_P22k          0/1  4.1188  110871.0        None      None    0.0    None      None   5.0  1234.9   12.4
+PLAST_AZA_P22k       0/1  5.1683  113971.0        None      None    0.0    None    3813.0   5.0  1446.9   13.3
+PLAST_RW0_P22k       0/1  4.6931  111652.0        None      None    0.0    None   22437.0   5.0  1523.3   13.2
+PLAST_V_Pinf         0/1  1.3366  105844.0        None      None    0.0    None    2294.0  None   171.1   13.4
+FIJO_V_Pinf          1/1 36.4356      None        None      None    0.0    None      None  None  2096.8   16.1
+  frac_pl por semilla PLAST_V_P22k: [None]
+  frac_pl por semilla PLAST_AZA_P22k: [None]
+  frac_pl por semilla PLAST_RW0_P22k: [None]
+  frac_pl por semilla PLAST_V_Pinf: [None]
+  pareados (secundarios): {'PLAST_V_P22k-PLAST_V_Pinf[frac_pl]': {'gana': 0, 'n': 0, 'dif_med': None}, 'PLAST_V_P22k-PLAST_RW0_P22k[frac_pl]': {'gana': 0, 'n': 0, 'dif_med': None}, 'PLAST_V_P22k-FIJO_V_P22k[K]': {'gana': 0, 'n': 1, 'dif_med': -2.6535}, 'PLAST_V_Pinf-FIJO_V_Pinf[K]': {'gana': 0, 'n': 1, 'dif_med': -35.099}, 'PLAST_V_P22k-FIJO_V_P22k[t_ext]': {'gana': 0, 'n': 1, 'dif_med': -8227.0}}
+  curva frac_pl (mediana) por P: {'P22k': None, 'Pinf': None}
+
+  VALIDEZ {'V0_completa_sin_abortos': True, 'V1_ancla_FIJO_Pinf_persiste': True, 'V2_cfg_por_brazo': True, 'V3_inversiones': True, 'V4_la_pieza_actua': True, 'V5_AZA_bit_al_azar': True}
+  PUERTAS {'PA_rescate': False, 'PB_controles': False, 'PD_seleccion_prende': False, 'PE_seleccion_apaga': False}
+  SECUNDARIAS {'curva_frac_pl_por_P': {'P22k': None, 'Pinf': None}, 'D1_curva_baja_con_P': False, 'RW0_frac_alta': 0}
+  VEREDICTO (HUMO, no cuenta) NO
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin\datos\humo_s56495_T200000_20260929_121431\resumen.json (sha b565113eeb6993fe)
+Terminado en 82.1s
+VEREDICTO DE LA CORRIDA: HUMO (no cuenta): NO   (regla de parada: PREREGISTRO_baldwin.md sec. 8)
+
+real	1m23.268s
+user	0m0.015s
+sys	0m0.000s

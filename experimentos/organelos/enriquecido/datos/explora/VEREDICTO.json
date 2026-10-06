@@ -1,0 +1,56 @@
+{
+ "veredicto": "NO",
+ "lineas": [
+  "V0 completo (5 semillas x 4 brazos, T 500000, t_corte 100000, sin abortos, bloqueados 0): SE CUMPLE",
+  "V1 cfg declarada por brazo (BQ y NZ) y carro FABRICA_ECO en cada JSON: SE CUMPLE",
+  "V2 el mundo con nueces es vivible (NUEZ_SOC, NUEZ_OFF y NUEZ_DESF persisten >= 3/5 cada uno): SE CUMPLE {'NUEZ_SOC': 5, 'NUEZ_OFF': 5, 'NUEZ_DESF': 5, 'REF': 5}",
+  "V3 sanidad (hay nueces en NUEZ_*; REF sin nueces ni copias; OFF sin copias): SE CUMPLE",
+  "P1 frac_ok(SOC) > frac_ok(OFF) en >= 4 pares validos (>= 4 exigidos) y mediana >= +0.05: NO SE CUMPLE (1/5 pares validos [50101, 50102, 50103, 50104, 50105], mediana -0.005; [0.01, -0.005, -0.005, -0.091, -0.037])",
+  "P2 (control) frac_ok(SOC) > frac_ok(DESF) en >= 4 pares validos (>= 4 exigidos) y mediana >= +0.05: NO SE CUMPLE (1/5 pares validos [50101, 50102, 50103, 50104, 50105], mediana -0.015; [0.015, -0.002, -0.015, -0.11, -0.039])",
+  "P3 la secuencia es real en SOC: SI = P(llave|nuez) - P(llave|A comun) >= 0.10 en >= 3/5: NO SE CUMPLE ([-0.1187, -0.1337, -0.1468, -0.227, -0.1991])",
+  "PS (sub-veredicto, sin social) SI(OFF) >= 0.10 en >= 3/5: NO SE CUMPLE ([-0.1316, -0.1264, -0.1401, -0.1441, -0.1562])",
+  "P4 (firma, no entra al veredicto) frac de vivos con 'copiar+' en T: SOC > DESF pareado >= 4/5: NO SE CUMPLE ([0.056, -0.056, 0.286, 0.176, -0.467])",
+  "VEREDICTO (social + secuencia, EXPLORATORIO): NO",
+  "SUB-VEREDICTO (la seleccion arma la secuencia sin social): NO"
+ ],
+ "sub": {
+  "p1": false,
+  "p2": false,
+  "p3": false,
+  "ps": false,
+  "p4": false,
+  "pers": {
+   "NUEZ_SOC": 5,
+   "NUEZ_OFF": 5,
+   "NUEZ_DESF": 5,
+   "REF": 5
+  },
+  "pares_p1": [
+   50101,
+   50102,
+   50103,
+   50104,
+   50105
+  ],
+  "pares_p2": [
+   50101,
+   50102,
+   50103,
+   50104,
+   50105
+  ]
+ },
+ "T": 500000,
+ "semillas": [
+  50101,
+  50102,
+  50103,
+  50104,
+  50105
+ ],
+ "shas": {
+  "nucleo_eco_sel_ing.py": "c2189f9d22b72386",
+  "motor_bloques.py": "ff782697e54585a5",
+  "motor_enriquecido.py": "09f1f2f4d85b2368"
+ }
+}

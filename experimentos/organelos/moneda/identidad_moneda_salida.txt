@@ -1,0 +1,77 @@
+ARNES moneda · 2026-09-29 12:14:05
+  shas: corre_moneda.py 0441aa7bf5b94316 · identidad_moneda.py ceede3d6458597ac
+(K) shas fijados (sentidos_muro, corre_bp, carro V143_BQ3 == construye_sm, pista, juez)
+  sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+  sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+  sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+    sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+    sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+    sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+    sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+    sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+    sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+    sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+    sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+    sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+    carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+    carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} == sentidos_muro == corre_bp.CFG0 == carro; CERO == sentidos_muro: OK
+(I) SIEMBRA INYECTADA == DECLARADA
+  fila A == la de forzada3 [10.0, 0.0, 1.0, 0.5, 0.0, -3.0]: OK
+  moneda: 450 listas · marcada [10.0, 0.0, 1.0, 0.5, 0.0, -3.0] x225 · B [10.0, 5.0, 1.0, 0.5, 0.0, 0.0] x225 · fraccion A 0.5 · A con w<0 0.5: OK
+  neutra: 450 listas · marcada [10.0, 0.0, 1.0, 0.5, 0.0, 0.0] x225 · B [10.0, 5.0, 1.0, 0.5, 0.0, 0.0] x225 · fraccion A 0.5 · A con w<0 0.0: OK
+  cero: 450 listas · marcada [10.0, 0.0, 1.0, 0.5, 0.0, 0.0] x225 · B [10.0, 5.0, 1.0, 0.5, 0.0, 0.0] x225 · fraccion A 0.5 · A con w<0 0.0: OK
+  corre_bp.prepara: 9 bancos de 50, toda lista en la siembra declarada (fraccion A en los bancos 0.4622): OK
+(N) la etiqueta es MUDA y la neutra es NULA: con tasas 0 y regla forzada, [B] == [A0] == genoma vacio == V143_TERMO (salida ENTERA de pista.run)
+  [B] == V143_TERMO: OK
+  [A0] == V143_TERMO: OK
+  vacio == V143_TERMO: OK
+  control que DEBE diferir: [A] (forzada3) != V143_TERMO: OK (difiere)
+(Z) VALIDEZ tasas 0: la fraccion solo se mueve por deriva (etiqueta invisible; no nace ningun genotipo)
+  cero (50 % A0 / 50 % B) == todo B, en ['linajes', 'pista', 'R0_pista', 'tel_termo']: OK
+  siembra de salida (450 listas) solo con genotipos inyectados: OK · fraccion A 0.4667 (deriva, T 2000)
+  moneda con tasas 0: siembra de salida solo con A y B: OK · fraccion A 0.4622 (descriptivo)
+(V) por que NO listas vacias: una lista vacia no entra al banco (corre_bp.siembra_de y _bq_banco la descartan)
+  siembra 50 % [] / 50 % [B] -> salida 210 listas, vacias 0 (la mitad vacia se pierde por construccion): OK
+(E) regla 14: ENTRADA campo a campo contra el tronco de la medida
+  moneda == sentidos_muro.tarea('bq3', siembra) == corre_bp.tarea('V143_BQ3', CFG, siembra): 7 campos OK
+  neutra == sentidos_muro.tarea('bq3', siembra): 7 campos OK
+  cero == corre_bp.tarea('V143_BQ3', CERO, siembra): 7 campos OK
+  la siembra ACTUA: todo fundador sale del banco sembrado (29/29): OK
+(D) determinismo: moneda, dos veces
+  OK
+(W) JSON antes de volver; un JSON con aborto SE REINTENTA; uno bueno NO se recorre; cadena completa por trabajo() y --reanuda
+  reintento: OK
+  trabajo() cadena 2 pasajes + prueba, aborto simulado en p1 y reanuda: identico ([0.5, 0.5333, 0.5489], cruzan 0): OK
+(X) el runner NIEGA pool > 2 y pool en el humo
+  ['--explora', '--pool', '3']: OK (niega)
+  ['--humo', '--pool', '2']: OK (niega)
+(L) LA LETRA en casos sinteticos (con H-1 de la auditoria)
+  PURGA: PURGA (espera PURGA) OK
+  no PURGA si la neutra cae igual (3/5 mas rapida): INDETERMINADO (espera INDETERMINADO) OK
+  empate no es mas rapido: INDETERMINADO (espera INDETERMINADO) OK
+  H-1a: neutra < 0.10 (mediana) -> INDETERMINADO aunque moneda caiga: INDETERMINADO (espera INDETERMINADO) OK
+  H-1a: neutra mediana == 0.10 basta: PURGA (espera PURGA) OK
+  H-1b: menor pero > 0.5 neutra en 2/5 -> INDETERMINADO: INDETERMINADO (espera INDETERMINADO) OK
+  H-1b: == 0.5 neutra cuenta (<=): PURGA (espera PURGA) OK
+  CONSERVA: CONSERVA (espera CONSERVA) OK
+  INDETERMINADO: INDETERMINADO (espera INDETERMINADO) OK
+  NO SE LEE (aborto): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (cero fuera de banda): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (cero con genotipo nuevo): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (arnes): NO SE LEE OK
+(R) referencias GUARDADAS (sentidos_muro explora): sha16 de 10 JSON y reproduccion BIT A BIT de forzada3 s59201 T 100 000
+  forzada3 s59201 45f584a52a12222b OK
+  forzada3 s59202 598d1e3511f75407 OK
+  forzada3 s59203 c38f58315cc06f8a OK
+  forzada3 s59204 dab209fb1e96edcd OK
+  forzada3 s59205 6eed99ada0876760 OK
+  bq3_pas s59201 f81ee08a42df3008 OK
+  bq3_pas s59202 e5717fc4fa44e43f OK
+  bq3_pas s59203 8dfc6994f235cfe2 OK
+  bq3_pas s59204 349fa9efcf35d174 OK
+  bq3_pas s59205 360e08b3bdb4faf7 OK
+  forzada3 s59201 T 100k (97s) == guardado en ['linajes', 'pista', 'R0_pista', 'tel', 'tel_termo', 'bq']: OK
+ARNES: PASA · 135s

@@ -1,0 +1,61 @@
+CORRE_MM · humo · 2026-09-30 22:34:12 · python 3.14.2 · pool NO · runner 92285ca8a396c94a · PREREGISTRO_moneda_muro.md · indices [8] · npas 2 · T_pas 30000 · T_pru 20000 · T_EST 10000 · pasajes 638180.. · prueba [638191] · CFG10 {'inicial': 2, 'p_campo': 0.01, 'p_dup': 0.002, 'p_del': 0.007, 'p_ins': 0.005, 'banco': 50} · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro\datos\humo_20260930_223412
+  sha experimentos\organelos\condiciones\mutacion\corre_mut.py 8912e9d77f397e40 OK
+  sha experimentos\organelos\condiciones\mutacion\identidad_mut.py b08e1410de201065 OK
+  -- verifica de corre_mut (corre_moneda, sentidos_muro, corre_bp, V143_BQ3, pista, juez, carros):
+    sha experimentos\organelos\moneda\corre_moneda.py 0441aa7bf5b94316 OK
+    sha experimentos\organelos\moneda\identidad_moneda.py ceede3d6458597ac OK
+    -- verifica de corre_moneda (shas de sentidos_muro, corre_bp, V143_BQ3; pista, juez, carros):
+      sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+      sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+      sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+      sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+      -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+        sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+        sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+        sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+        sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+        sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+        sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+        sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+        sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+        sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+        carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+        carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  [   84.1s] moneda_L i8 (84.0s) aborto None · fraccion A [0.5, 0.4367, 0.3514] · cruzan 0
+  [  166.2s] neutra_L i8 (82.1s) aborto None · fraccion A [0.5, 0.5514, 0.4771] · cruzan 0
+  2 trabajos · abortos 0 · 166.2s
+
+================ LECTURA moneda del muro · humo · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro\datos\humo_20260930_223412
+  arnes: PASA con los shas actuales · refs: sha OK · abortos: []
+  moneda_L i8: fraccion A  ini 0.5 -> p0..p1 [0.4367, 0.3514]
+               sombra (moneda vieja sobre el mismo pasaje) [0.4644, 0.3822] · elegidos [6, 7] · establecidos [6, 7] · respaldo [0, 0]
+               fraccion A por linaje elegido [[0.7, 0.7, 0.28, 0.32, 0.22, 0.4], [0.34, 0.28, 0.24, 0.28, 0.3, 0.72, 0.3]]
+               listas [300, 350] · intacta [1.0, 0.9971] · mutadas (suma) 1 · arrastre>= [0.603, 0.657] · partos [140, 128] · cruzan en el pasaje [1, 1]
+  neutra_L i8: fraccion A  ini 0.5 -> p0..p1 [0.5514, 0.4771]
+               sombra (moneda vieja sobre el mismo pasaje) [0.5356, 0.4889] · elegidos [7, 7] · establecidos [7, 7] · respaldo [0, 0]
+               fraccion A por linaje elegido [[0.28, 0.72, 0.66, 0.32, 0.74, 0.74, 0.4], [0.24, 0.32, 0.24, 0.7, 0.26, 0.8, 0.78]]
+               listas [350, 350] · intacta [1.0, 0.9543] · mutadas (suma) 16 · arrastre>= [0.569, 0.494] · partos [172, 187] · cruzan en el pasaje [1, 2]
+  prueba moneda_L i8 s638191: cruzan 0/9 · mayoria 0 · R0 med 0.375 · fund med 4.0 · descendientes 116
+  prueba neutra_L i8 s638191: cruzan 0/9 · mayoria 0 · R0 med 0.2424 · fund med 24.0 · descendientes 115
+  suma cruzan (de 9): {'moneda_L': 0, 'neutra_L': 0}
+  validez: {'abortos_0': True, 'completas': True, 'f_ini_05': True, 'moneda_actua': True, 'respaldo_raro': True, 'refs_sha': True, 'arnes': True}
+  final: {'moneda_L': {'8': 0.3514}, 'neutra_L': {'8': 0.4771}}
+  moneda_ge_neutra: 0/1
+  moneda_mayor_estricto: 0/1
+  moneda_le_mitad_neutra: 0/1
+  moneda_L_mediana: 0.3514
+  neutra_L_mediana: 0.4771
+  moneda_L_media: 0.3514
+  neutra_L_media: 0.4771
+  moneda_L_fijadas: 0
+  neutra_L_fijadas: 0
+  moneda_L_perdidas: 0
+  neutra_L_perdidas: 0
+  moneda_L_delta_pasaje: -0.0743
+  neutra_L_delta_pasaje: -0.0114
+  pasajes: 4
+  pasajes_con_respaldo: 0
+  pasajes_donde_la_moneda_difiere: 4
+  elegidos_por_pasaje_mediana: 7.0
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\moneda_muro\datos\humo_20260930_223412\lectura_mm.json
+VEREDICTO (PREREGISTRO_moneda_muro.md sec. 6): HUMO (no cuenta; 2 pasajes de 30k, sin referencias): INDETERMINADO

@@ -1,0 +1,210 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "abortos_0": true,
+   "completas": true,
+   "f_ini_05": true,
+   "moneda_actua": true,
+   "respaldo_raro": true,
+   "refs_sha": true,
+   "arnes": true
+  },
+  "veredicto": "INDETERMINADO",
+  "moneda_ge_neutra": "0/1",
+  "moneda_mayor_estricto": "0/1",
+  "moneda_le_mitad_neutra": "0/1",
+  "moneda_L_mediana": 0.3514,
+  "neutra_L_mediana": 0.4771,
+  "moneda_L_media": 0.3514,
+  "neutra_L_media": 0.4771,
+  "moneda_L_fijadas": 0,
+  "neutra_L_fijadas": 0,
+  "moneda_L_perdidas": 0,
+  "neutra_L_perdidas": 0,
+  "moneda_L_delta_pasaje": -0.0743,
+  "neutra_L_delta_pasaje": -0.0114,
+  "pasajes": 4,
+  "pasajes_con_respaldo": 0,
+  "pasajes_donde_la_moneda_difiere": 4,
+  "elegidos_por_pasaje_mediana": 7.0,
+  "final": {
+   "moneda_L": {
+    "8": 0.3514
+   },
+   "neutra_L": {
+    "8": 0.4771
+   }
+  }
+ },
+ "cadenas": {
+  "moneda_L": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.4367,
+     0.3514
+    ],
+    "f_sombra_vieja": [
+     0.4644,
+     0.3822
+    ],
+    "n_ele": [
+     6,
+     7
+    ],
+    "respaldo": [
+     false,
+     false
+    ],
+    "n_listas": [
+     300,
+     350
+    ],
+    "intacta": [
+     1.0,
+     0.9971
+    ],
+    "arrastre": [
+     0.603,
+     0.657
+    ],
+    "partos": [
+     140,
+     128
+    ],
+    "cruzan_pas": [
+     1,
+     1
+    ],
+    "est_fracA": [
+     [
+      0.7,
+      0.7,
+      0.28,
+      0.32,
+      0.22,
+      0.4
+     ],
+     [
+      0.34,
+      0.28,
+      0.24,
+      0.28,
+      0.3,
+      0.72,
+      0.3
+     ]
+    ],
+    "est_n": [
+     6,
+     7
+    ],
+    "mutadas": 1
+   }
+  },
+  "neutra_L": {
+   "8": {
+    "f_ini": 0.5,
+    "f": [
+     0.5514,
+     0.4771
+    ],
+    "f_sombra_vieja": [
+     0.5356,
+     0.4889
+    ],
+    "n_ele": [
+     7,
+     7
+    ],
+    "respaldo": [
+     false,
+     false
+    ],
+    "n_listas": [
+     350,
+     350
+    ],
+    "intacta": [
+     1.0,
+     0.9543
+    ],
+    "arrastre": [
+     0.569,
+     0.494
+    ],
+    "partos": [
+     172,
+     187
+    ],
+    "cruzan_pas": [
+     1,
+     2
+    ],
+    "est_fracA": [
+     [
+      0.28,
+      0.72,
+      0.66,
+      0.32,
+      0.74,
+      0.74,
+      0.4
+     ],
+     [
+      0.24,
+      0.32,
+      0.24,
+      0.7,
+      0.26,
+      0.8,
+      0.78
+     ]
+    ],
+    "est_n": [
+     7,
+     7
+    ],
+    "mutadas": 16
+   }
+  }
+ },
+ "prueba": {
+  "moneda_L": {
+   "8": {
+    "seed": 638191,
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.375,
+    "fund_med": 4.0,
+    "desc": 116,
+    "coherente": true
+   }
+  },
+  "neutra_L": {
+   "8": {
+    "seed": 638191,
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.2424,
+    "fund_med": 24.0,
+    "desc": 115,
+    "coherente": true
+   }
+  }
+ },
+ "refs": {
+  "final": {},
+  "prueba": {},
+  "sumas": {}
+ },
+ "sumas": {
+  "moneda_L": 0,
+  "neutra_L": 0
+ },
+ "abortos": [],
+ "predicciones": [],
+ "preregistro": "PREREGISTRO_moneda_muro.md",
+ "sha_runner": "92285ca8a396c94a"
+}

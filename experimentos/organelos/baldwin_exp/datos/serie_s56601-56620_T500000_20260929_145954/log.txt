@@ -1,0 +1,160 @@
+CORRE_BEXP · serie_s56601-56620_T500000 · 20260929_145954 · python 3.14.2 · pool 2 · corre_bexp.py fdc5e729057e7bd8 · preregistro PREREGISTRO_baldwin_exp.md 66183a0d94f4c5ed · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin_exp\datos\serie_s56601-56620_T500000_20260929_145954
+  tareas 120 · brazos ['PLAST_EXP_P22k', 'FIJO_EXP_P22k', 'PLAST_EXP_AZA_P22k', 'PLAST_V_P22k', 'PLAST_EXP_Pinf', 'FIJO_V_Pinf'] · semillas 56601-56620 · T 500000 · t_corte 100000 · VIDA 2270 · P {'P22k': 22000, 'Pinf': 0} · eps_exp 0.063 · th_exp 0.5 · reanuda False
+  sha experimentos\organelos\bloques\opusM\corre_bloques.py a090b82eae9f1ee3 OK
+  sha experimentos\organelos\baldwin\motor_baldwin.py d0a620d2f5e2605e OK
+  sha experimentos\organelos\baldwin\construye_baldwin.py c9cad63496519fb7 OK
+  sha experimentos\organelos\baldwin_exp\motor_bexp.py 0af10809633c945d OK
+  corre_bloques.verifica (nucleo_eco_sel_ing, motor_frio_rapido, motor_bloques): OK
+  motor_bexp.py == construye_bexp.construye() por anclas desde motor_baldwin: OK
+  EPS_EXP calibrado: 0.063
+  git experimentos/organelos/baldwin_exp/PREREGISTRO_baldwin_exp.md: commiteado True · sin cambios vs HEAD True · ultimo commit 22c10b41 2026-09-29T14:59:49-05:00
+  git experimentos/organelos/baldwin_exp/corre_bexp.py: commiteado True · sin cambios vs HEAD True · ultimo commit 22c10b41 2026-09-29T14:59:49-05:00
+  git experimentos/organelos/baldwin_exp/motor_bexp.py: commiteado True · sin cambios vs HEAD True · ultimo commit 22c10b41 2026-09-29T14:59:49-05:00
+  git experimentos/organelos/baldwin_exp/construye_bexp.py: commiteado True · sin cambios vs HEAD True · ultimo commit 22c10b41 2026-09-29T14:59:49-05:00
+  [15:00:10] [1/120] [   16.0s] PLAST_EXP_P22k      s56601 (14.6s) persiste 0 K 0.0 t_ext 107909 frac_fin None mord_exp 103 exp/vida 0.024 pl_mov 227/305 aprende 1051 n_inv 4 aborto None
+  [15:00:10] [2/120] [   16.0s] PLAST_EXP_P22k      s56602 (14.7s) persiste 0 K 0.0 t_ext 116653 frac_fin 0.1579 mord_exp 165 exp/vida 0.039 pl_mov 166/240 aprende 918 n_inv 5 aborto None
+  [15:00:23] [3/120] [   29.1s] PLAST_EXP_P22k      s56604 (13.1s) persiste 0 K 0.0 t_ext 115991 frac_fin 0.8667 mord_exp 8069 exp/vida 1.83 pl_mov 3159/5418 aprende 23876 n_inv 5 aborto None
+  [15:00:23] [4/120] [   29.4s] PLAST_EXP_P22k      s56603 (13.4s) persiste 0 K 0.0 t_ext 106126 frac_fin None mord_exp 115 exp/vida 0.027 pl_mov 167/276 aprende 758 n_inv 4 aborto None
+  [15:00:36] [5/120] [   42.2s] PLAST_EXP_P22k      s56605 (13.1s) persiste 0 K 0.0 t_ext 105868 frac_fin None mord_exp 118 exp/vida 0.028 pl_mov 467/948 aprende 3699 n_inv 4 aborto None
+  [15:00:36] [6/120] [   42.6s] PLAST_EXP_P22k      s56606 (13.2s) persiste 0 K 0.0 t_ext 106734 frac_fin None mord_exp 86 exp/vida 0.02 pl_mov 126/205 aprende 660 n_inv 4 aborto None
+  [15:00:49] [7/120] [   55.0s] PLAST_EXP_P22k      s56607 (12.8s) persiste 0 K 0.0 t_ext 106187 frac_fin None mord_exp 33 exp/vida 0.008 pl_mov 46/70 aprende 171 n_inv 4 aborto None
+  [15:00:49] [8/120] [   55.5s] PLAST_EXP_P22k      s56608 (12.9s) persiste 0 K 0.0 t_ext 104291 frac_fin None mord_exp 274 exp/vida 0.064 pl_mov 164/255 aprende 767 n_inv 4 aborto None
+  [15:01:01] [9/120] [   67.8s] PLAST_EXP_P22k      s56609 (12.7s) persiste 0 K 0.0 t_ext 111961 frac_fin 0.0 mord_exp 12514 exp/vida 2.827 pl_mov 122/237 aprende 825 n_inv 5 aborto None
+  [15:01:02] [10/120] [   68.6s] PLAST_EXP_P22k      s56610 (13.2s) persiste 0 K 0.0 t_ext 116076 frac_fin 1.0 mord_exp 7808 exp/vida 1.782 pl_mov 2639/7598 aprende 18823 n_inv 5 aborto None
+  [15:01:15] [11/120] [   80.9s] PLAST_EXP_P22k      s56611 (13.2s) persiste 0 K 0.0 t_ext 110087 frac_fin None mord_exp 764 exp/vida 0.178 pl_mov 165/231 aprende 1107 n_inv 5 aborto None
+  [15:01:15] [12/120] [   81.7s] PLAST_EXP_P22k      s56612 (13.0s) persiste 0 K 0.0 t_ext 110693 frac_fin 0.0 mord_exp 6618 exp/vida 1.501 pl_mov 226/321 aprende 1436 n_inv 5 aborto None
+  [15:01:28] [13/120] [   93.8s] PLAST_EXP_P22k      s56613 (12.9s) persiste 0 K 0.0 t_ext 110083 frac_fin 1.0 mord_exp 132 exp/vida 0.031 pl_mov 375/629 aprende 2692 n_inv 5 aborto None
+  [15:01:28] [14/120] [   94.4s] PLAST_EXP_P22k      s56614 (12.8s) persiste 0 K 0.0 t_ext 109918 frac_fin None mord_exp 76 exp/vida 0.018 pl_mov 84/113 aprende 425 n_inv 4 aborto None
+  [15:01:39] [15/120] [  105.4s] PLAST_EXP_P22k      s56615 (11.6s) persiste 0 K 0.0 t_ext 110671 frac_fin 0.0 mord_exp 22068 exp/vida 4.996 pl_mov 1402/2953 aprende 9137 n_inv 5 aborto None
+  [15:01:41] [16/120] [  107.8s] PLAST_EXP_P22k      s56616 (13.4s) persiste 0 K 0.0 t_ext 104050 frac_fin None mord_exp 303 exp/vida 0.071 pl_mov 296/383 aprende 1524 n_inv 4 aborto None
+  [15:01:52] [17/120] [  118.7s] PLAST_EXP_P22k      s56617 (13.3s) persiste 0 K 0.0 t_ext 103446 frac_fin None mord_exp 84 exp/vida 0.02 pl_mov 271/506 aprende 1153 n_inv 4 aborto None
+  [15:01:55] [18/120] [  121.1s] PLAST_EXP_P22k      s56618 (13.3s) persiste 0 K 0.0 t_ext 103789 frac_fin None mord_exp 45 exp/vida 0.011 pl_mov 259/436 aprende 1050 n_inv 4 aborto None
+  [15:02:06] [19/120] [  131.8s] PLAST_EXP_P22k      s56619 (13.1s) persiste 0 K 0.0 t_ext 104860 frac_fin None mord_exp 168 exp/vida 0.039 pl_mov 659/937 aprende 1974 n_inv 4 aborto None
+  [15:02:08] [20/120] [  134.0s] PLAST_EXP_P22k      s56620 (12.9s) persiste 0 K 0.0 t_ext 105182 frac_fin None mord_exp 50 exp/vida 0.012 pl_mov 225/252 aprende 910 n_inv 4 aborto None
+  [15:02:18] [21/120] [  144.5s] FIJO_EXP_P22k       s56601 (12.7s) persiste 0 K 0.0 t_ext 104172 frac_fin None mord_exp 103 exp/vida 0.024 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:02:21] [22/120] [  147.4s] FIJO_EXP_P22k       s56602 (13.3s) persiste 0 K 0.0 t_ext 114644 frac_fin None mord_exp 67 exp/vida 0.016 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:02:29] [23/120] [  155.7s] FIJO_EXP_P22k       s56603 (11.2s) persiste 0 K 0.0 t_ext 111060 frac_fin None mord_exp 20565 exp/vida 4.637 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:02:33] [24/120] [  159.5s] FIJO_EXP_P22k       s56604 (12.1s) persiste 0 K 0.0 t_ext 110712 frac_fin None mord_exp 12952 exp/vida 2.924 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:02:42] [25/120] [  168.3s] FIJO_EXP_P22k       s56605 (12.5s) persiste 0 K 0.0 t_ext 110107 frac_fin None mord_exp 26 exp/vida 0.006 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:02:46] [26/120] [  172.1s] FIJO_EXP_P22k       s56606 (12.6s) persiste 0 K 0.0 t_ext 105635 frac_fin None mord_exp 89 exp/vida 0.021 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:02:55] [27/120] [  181.0s] FIJO_EXP_P22k       s56607 (12.7s) persiste 0 K 0.0 t_ext 108709 frac_fin None mord_exp 79 exp/vida 0.019 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:02:59] [28/120] [  184.8s] FIJO_EXP_P22k       s56608 (12.7s) persiste 0 K 0.0 t_ext 110819 frac_fin None mord_exp 3370 exp/vida 0.777 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:08] [29/120] [  194.0s] FIJO_EXP_P22k       s56609 (13.1s) persiste 0 K 0.0 t_ext 111714 frac_fin None mord_exp 660 exp/vida 0.154 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:11] [30/120] [  197.1s] FIJO_EXP_P22k       s56610 (12.3s) persiste 0 K 0.0 t_ext 111332 frac_fin None mord_exp 13963 exp/vida 3.185 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:21] [31/120] [  206.8s] FIJO_EXP_P22k       s56611 (12.8s) persiste 0 K 0.0 t_ext 110164 frac_fin None mord_exp 43 exp/vida 0.01 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:24] [32/120] [  210.3s] FIJO_EXP_P22k       s56612 (13.2s) persiste 0 K 0.0 t_ext 106435 frac_fin None mord_exp 87 exp/vida 0.02 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:03:33] [33/120] [  219.2s] FIJO_EXP_P22k       s56613 (12.4s) persiste 0 K 0.0 t_ext 106602 frac_fin None mord_exp 39 exp/vida 0.009 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:03:37] [34/120] [  223.2s] FIJO_EXP_P22k       s56614 (12.9s) persiste 0 K 0.0 t_ext 111615 frac_fin None mord_exp 96 exp/vida 0.023 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:44] [35/120] [  230.7s] FIJO_EXP_P22k       s56615 (11.5s) persiste 0 K 0.0 t_ext 110446 frac_fin None mord_exp 18855 exp/vida 4.242 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:50] [36/120] [  235.8s] FIJO_EXP_P22k       s56616 (12.6s) persiste 0 K 0.0 t_ext 112793 frac_fin None mord_exp 6903 exp/vida 1.574 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:03:56] [37/120] [  242.3s] FIJO_EXP_P22k       s56617 (11.6s) persiste 0 K 0.0 t_ext 110771 frac_fin None mord_exp 13143 exp/vida 2.99 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:04:02] [38/120] [  248.4s] FIJO_EXP_P22k       s56618 (12.6s) persiste 0 K 0.0 t_ext 106116 frac_fin None mord_exp 78 exp/vida 0.018 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:04:08] [39/120] [  254.0s] FIJO_EXP_P22k       s56619 (11.6s) persiste 0 K 0.0 t_ext 110979 frac_fin None mord_exp 16517 exp/vida 3.769 pl_mov 0/0 aprende None n_inv 5 aborto None
+  [15:04:15] [40/120] [  261.1s] FIJO_EXP_P22k       s56620 (12.7s) persiste 0 K 0.0 t_ext 106842 frac_fin None mord_exp 60 exp/vida 0.014 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [15:04:21] [41/120] [  267.0s] PLAST_EXP_AZA_P22k  s56601 (13.1s) persiste 0 K 0.0 t_ext 112322 frac_fin 0.5333 mord_exp 151 exp/vida 0.035 pl_mov 174/275 aprende 812 n_inv 5 aborto None
+  [15:04:28] [42/120] [  274.1s] PLAST_EXP_AZA_P22k  s56602 (13.0s) persiste 0 K 0.0 t_ext 110093 frac_fin None mord_exp 26 exp/vida 0.006 pl_mov 60/122 aprende 255 n_inv 5 aborto None
+  [15:04:33] [43/120] [  279.7s] PLAST_EXP_AZA_P22k  s56603 (12.7s) persiste 0 K 0.0 t_ext 116251 frac_fin 0.4615 mord_exp 351 exp/vida 0.082 pl_mov 915/1200 aprende 3774 n_inv 5 aborto None
+  [15:04:41] [44/120] [  287.0s] PLAST_EXP_AZA_P22k  s56604 (12.9s) persiste 0 K 0.0 t_ext 110051 frac_fin None mord_exp 100 exp/vida 0.023 pl_mov 227/313 aprende 1240 n_inv 5 aborto None
+  [15:04:46] [45/120] [  292.6s] PLAST_EXP_AZA_P22k  s56605 (12.8s) persiste 0 K 0.0 t_ext 108844 frac_fin None mord_exp 184 exp/vida 0.043 pl_mov 245/390 aprende 1333 n_inv 4 aborto None
+  [15:04:54] [46/120] [  300.0s] PLAST_EXP_AZA_P22k  s56606 (12.9s) persiste 0 K 0.0 t_ext 108741 frac_fin None mord_exp 95 exp/vida 0.022 pl_mov 198/245 aprende 1215 n_inv 4 aborto None
+  [15:04:58] [47/120] [  304.3s] PLAST_EXP_AZA_P22k  s56607 (11.7s) persiste 0 K 0.0 t_ext 110695 frac_fin 0.3333 mord_exp 17641 exp/vida 4.008 pl_mov 1788/3882 aprende 13204 n_inv 5 aborto None
+  [15:05:07] [48/120] [  313.1s] PLAST_EXP_AZA_P22k  s56608 (13.1s) persiste 0 K 0.0 t_ext 111484 frac_fin None mord_exp 333 exp/vida 0.078 pl_mov 244/333 aprende 1098 n_inv 5 aborto None
+  [15:05:11] [49/120] [  317.5s] PLAST_EXP_AZA_P22k  s56609 (13.2s) persiste 0 K 0.0 t_ext 104865 frac_fin None mord_exp 86 exp/vida 0.02 pl_mov 162/213 aprende 952 n_inv 4 aborto None
+  [15:05:20] [50/120] [  326.2s] PLAST_EXP_AZA_P22k  s56610 (13.1s) persiste 0 K 0.0 t_ext 104218 frac_fin None mord_exp 59 exp/vida 0.014 pl_mov 140/290 aprende 629 n_inv 4 aborto None
+  [15:05:24] [51/120] [  330.4s] PLAST_EXP_AZA_P22k  s56611 (13.0s) persiste 0 K 0.0 t_ext 104290 frac_fin None mord_exp 150 exp/vida 0.035 pl_mov 138/574 aprende 582 n_inv 4 aborto None
+  [15:05:33] [52/120] [  339.2s] PLAST_EXP_AZA_P22k  s56612 (13.0s) persiste 0 K 0.0 t_ext 109270 frac_fin None mord_exp 59 exp/vida 0.014 pl_mov 87/133 aprende 428 n_inv 4 aborto None
+  [15:05:37] [53/120] [  343.2s] PLAST_EXP_AZA_P22k  s56613 (12.8s) persiste 0 K 0.0 t_ext 113340 frac_fin None mord_exp 41 exp/vida 0.01 pl_mov 150/219 aprende 1016 n_inv 5 aborto None
+  [15:05:46] [54/120] [  352.4s] PLAST_EXP_AZA_P22k  s56614 (13.2s) persiste 0 K 0.0 t_ext 109384 frac_fin None mord_exp 131 exp/vida 0.031 pl_mov 199/342 aprende 873 n_inv 4 aborto None
+  [15:05:50] [55/120] [  356.6s] PLAST_EXP_AZA_P22k  s56615 (13.5s) persiste 0 K 0.0 t_ext 125517 frac_fin None mord_exp 37 exp/vida 0.009 pl_mov 217/328 aprende 1424 n_inv 5 aborto None
+  [15:06:00] [56/120] [  365.8s] PLAST_EXP_AZA_P22k  s56616 (13.4s) persiste 0 K 0.0 t_ext 110552 frac_fin None mord_exp 1055 exp/vida 0.246 pl_mov 2853/3432 aprende 13950 n_inv 5 aborto None
+  [15:06:03] [57/120] [  369.7s] PLAST_EXP_AZA_P22k  s56617 (13.0s) persiste 0 K 0.0 t_ext 109020 frac_fin None mord_exp 75 exp/vida 0.018 pl_mov 374/540 aprende 964 n_inv 4 aborto None
+  [15:06:13] [58/120] [  378.9s] PLAST_EXP_AZA_P22k  s56618 (13.1s) persiste 0 K 0.0 t_ext 110242 frac_fin None mord_exp 62 exp/vida 0.015 pl_mov 128/186 aprende 645 n_inv 5 aborto None
+  [15:06:17] [59/120] [  382.9s] PLAST_EXP_AZA_P22k  s56619 (13.2s) persiste 0 K 0.0 t_ext 107066 frac_fin None mord_exp 40 exp/vida 0.009 pl_mov 245/408 aprende 832 n_inv 4 aborto None
+  [15:06:26] [60/120] [  391.8s] PLAST_EXP_AZA_P22k  s56620 (12.9s) persiste 0 K 0.0 t_ext 111421 frac_fin 0.1429 mord_exp 6058 exp/vida 1.382 pl_mov 667/1083 aprende 4790 n_inv 5 aborto None
+  [15:06:28] [61/120] [  394.6s] PLAST_V_P22k        s56601 (11.7s) persiste 0 K 0.0 t_ext 110922 frac_fin 0.0147 mord_exp 0 exp/vida 0.0 pl_mov 1133/2167 aprende 5672 n_inv 5 aborto None
+  [15:06:39] [62/120] [  405.1s] PLAST_V_P22k        s56602 (13.3s) persiste 0 K 0.0 t_ext 111620 frac_fin 0.5 mord_exp 0 exp/vida 0.0 pl_mov 653/974 aprende 4076 n_inv 5 aborto None
+  [15:06:40] [63/120] [  406.3s] PLAST_V_P22k        s56603 (11.8s) persiste 0 K 0.0 t_ext 113579 frac_fin 0.6383 mord_exp 0 exp/vida 0.0 pl_mov 4777/18317 aprende 20757 n_inv 5 aborto None
+  [15:06:51] [64/120] [  417.5s] PLAST_V_P22k        s56604 (12.4s) persiste 0 K 0.0 t_ext 112149 frac_fin 1.0 mord_exp 0 exp/vida 0.0 pl_mov 6633/14436 aprende 24621 n_inv 5 aborto None
+  [15:06:53] [65/120] [  419.5s] PLAST_V_P22k        s56605 (13.1s) persiste 0 K 0.0 t_ext 131018 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 450/592 aprende 3385 n_inv 5 aborto None
+  [15:07:04] [66/120] [  430.2s] PLAST_V_P22k        s56606 (12.8s) persiste 0 K 0.0 t_ext 106752 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 112/167 aprende 637 n_inv 4 aborto None
+  [15:07:06] [67/120] [  432.5s] PLAST_V_P22k        s56607 (13.0s) persiste 0 K 0.0 t_ext 110829 frac_fin 0.0882 mord_exp 0 exp/vida 0.0 pl_mov 513/772 aprende 3259 n_inv 5 aborto None
+  [15:07:17] [68/120] [  443.4s] PLAST_V_P22k        s56608 (13.2s) persiste 0 K 0.0 t_ext 103794 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 291/348 aprende 1981 n_inv 4 aborto None
+  [15:07:19] [69/120] [  445.3s] PLAST_V_P22k        s56609 (12.8s) persiste 0 K 0.0 t_ext 112391 frac_fin 0.9908 mord_exp 0 exp/vida 0.0 pl_mov 14318/24232 aprende 56985 n_inv 5 aborto None
+  [15:07:30] [70/120] [  455.9s] PLAST_V_P22k        s56610 (12.5s) persiste 0 K 0.0 t_ext 110841 frac_fin 0.0845 mord_exp 0 exp/vida 0.0 pl_mov 533/1123 aprende 3179 n_inv 5 aborto None
+  [15:07:32] [71/120] [  458.6s] PLAST_V_P22k        s56611 (13.3s) persiste 0 K 0.0 t_ext 115793 frac_fin 1.0 mord_exp 0 exp/vida 0.0 pl_mov 1276/2028 aprende 4656 n_inv 5 aborto None
+  [15:07:43] [72/120] [  469.2s] PLAST_V_P22k        s56612 (13.3s) persiste 0 K 0.0 t_ext 110796 frac_fin 0.9718 mord_exp 0 exp/vida 0.0 pl_mov 2671/6060 aprende 8696 n_inv 5 aborto None
+  [15:07:45] [73/120] [  471.5s] PLAST_V_P22k        s56613 (12.9s) persiste 0 K 0.0 t_ext 105005 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 162/218 aprende 832 n_inv 4 aborto None
+  [15:07:56] [74/120] [  482.1s] PLAST_V_P22k        s56614 (12.9s) persiste 0 K 0.0 t_ext 105219 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 766/2647 aprende 4558 n_inv 4 aborto None
+  [15:07:58] [75/120] [  484.1s] PLAST_V_P22k        s56615 (12.6s) persiste 0 K 0.0 t_ext 103555 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 120/150 aprende 942 n_inv 4 aborto None
+  [15:08:09] [76/120] [  495.2s] PLAST_V_P22k        s56616 (13.1s) persiste 0 K 0.0 t_ext 110524 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 171/299 aprende 1431 n_inv 5 aborto None
+  [15:08:11] [77/120] [  497.5s] PLAST_V_P22k        s56617 (13.4s) persiste 0 K 0.0 t_ext 110685 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 347/402 aprende 1570 n_inv 5 aborto None
+  [15:08:22] [78/120] [  508.4s] PLAST_V_P22k        s56618 (13.1s) persiste 0 K 0.0 t_ext 109293 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 89/131 aprende 373 n_inv 4 aborto None
+  [15:08:24] [79/120] [  510.7s] PLAST_V_P22k        s56619 (13.2s) persiste 0 K 0.0 t_ext 120920 frac_fin 0.1905 mord_exp 0 exp/vida 0.0 pl_mov 1042/1434 aprende 5541 n_inv 5 aborto None
+  [15:08:35] [80/120] [  521.3s] PLAST_V_P22k        s56620 (12.9s) persiste 0 K 0.0 t_ext 105085 frac_fin 0.9091 mord_exp 0 exp/vida 0.0 pl_mov 10705/13410 aprende 58999 n_inv 4 aborto None
+  [15:08:41] [81/120] [  527.5s] PLAST_EXP_Pinf      s56601 (16.9s) persiste 1 K 12.398406374501992 t_ext None frac_fin 0.2727 mord_exp 22574 exp/vida 3.639 pl_mov 8800/9649 aprende 88167 n_inv None aborto None
+  [15:08:48] [82/120] [  534.8s] PLAST_EXP_Pinf      s56602 (13.5s) persiste 0 K 0.0 t_ext 106952 frac_fin None mord_exp 63 exp/vida 0.015 pl_mov 102/139 aprende 560 n_inv None aborto None
+  [15:08:55] [83/120] [  541.0s] PLAST_EXP_Pinf      s56603 (13.5s) persiste 0 K 0.0 t_ext 110068 frac_fin None mord_exp 281 exp/vida 0.065 pl_mov 1189/1625 aprende 4150 n_inv None aborto None
+  [15:09:05] [84/120] [  551.4s] PLAST_EXP_Pinf      s56604 (16.6s) persiste 1 K 12.816733067729084 t_ext None frac_fin 0.4651 mord_exp 32179 exp/vida 4.975 pl_mov 6778/8261 aprende 61465 n_inv None aborto None
+  [15:09:09] [85/120] [  554.9s] PLAST_EXP_Pinf      s56605 (13.9s) persiste 0 K 0.0 t_ext 108051 frac_fin None mord_exp 439 exp/vida 0.102 pl_mov 8109/11436 aprende 23497 n_inv None aborto None
+  [15:09:22] [86/120] [  568.4s] PLAST_EXP_Pinf      s56607 (13.5s) persiste 0 K 0.0 t_ext 103410 frac_fin None mord_exp 78 exp/vida 0.018 pl_mov 57/87 aprende 349 n_inv None aborto None
+  [15:09:23] [87/120] [  569.1s] PLAST_EXP_Pinf      s56606 (17.7s) persiste 1 K 13.573705179282868 t_ext None frac_fin 0.7097 mord_exp 26177 exp/vida 4.013 pl_mov 5565/6670 aprende 58406 n_inv None aborto None
+  [15:09:36] [88/120] [  582.2s] PLAST_EXP_Pinf      s56608 (13.8s) persiste 0 K 0.0 t_ext 123445 frac_fin 0.1379 mord_exp 860 exp/vida 0.199 pl_mov 695/1006 aprende 5069 n_inv None aborto None
+  [15:09:36] [89/120] [  582.5s] PLAST_EXP_Pinf      s56609 (13.4s) persiste 0 K 0.0 t_ext 108564 frac_fin None mord_exp 773 exp/vida 0.181 pl_mov 1856/2148 aprende 6578 n_inv None aborto None
+  [15:09:50] [90/120] [  596.5s] PLAST_EXP_Pinf      s56611 (14.0s) persiste 0 K 0.0 t_ext 232713 frac_fin None mord_exp 2405 exp/vida 0.532 pl_mov 384/1070 aprende 1466 n_inv None aborto None
+  [15:09:53] [91/120] [  599.0s] PLAST_EXP_Pinf      s56610 (16.8s) persiste 1 K 12.844621513944222 t_ext None frac_fin 0.5 mord_exp 29603 exp/vida 4.523 pl_mov 1795/2570 aprende 31127 n_inv None aborto None
+  [15:10:06] [92/120] [  612.5s] PLAST_EXP_Pinf      s56612 (16.0s) persiste 1 K 15.095617529880478 t_ext None frac_fin 0.3182 mord_exp 37540 exp/vida 5.576 pl_mov 8853/10945 aprende 59830 n_inv None aborto None
+  [15:10:10] [93/120] [  616.0s] PLAST_EXP_Pinf      s56613 (17.0s) persiste 1 K 10.390438247011952 t_ext None frac_fin 0.7143 mord_exp 21601 exp/vida 3.442 pl_mov 3545/4119 aprende 46619 n_inv None aborto None
+  [15:10:23] [94/120] [  629.1s] PLAST_EXP_Pinf      s56614 (16.5s) persiste 1 K 13.617529880478088 t_ext None frac_fin 0.0625 mord_exp 25726 exp/vida 3.886 pl_mov 670/802 aprende 9932 n_inv None aborto None
+  [15:10:24] [95/120] [  630.2s] PLAST_EXP_Pinf      s56615 (14.2s) persiste 1 K 12.756972111553784 t_ext None frac_fin 0.0 mord_exp 42200 exp/vida 6.605 pl_mov 1633/2713 aprende 9783 n_inv None aborto None
+  [15:10:38] [96/120] [  644.2s] PLAST_EXP_Pinf      s56616 (15.2s) persiste 1 K 12.828685258964143 t_ext None frac_fin 0.4545 mord_exp 37417 exp/vida 5.768 pl_mov 7096/9241 aprende 61322 n_inv None aborto None
+  [15:10:39] [97/120] [  645.8s] PLAST_EXP_Pinf      s56617 (15.6s) persiste 1 K 12.653386454183266 t_ext None frac_fin 0.5 mord_exp 34802 exp/vida 5.412 pl_mov 1052/1363 aprende 13886 n_inv None aborto None
+  [15:10:51] [98/120] [  657.7s] PLAST_EXP_Pinf      s56618 (13.5s) persiste 0 K 0.0 t_ext 109771 frac_fin None mord_exp 237 exp/vida 0.055 pl_mov 2714/4185 aprende 7286 n_inv None aborto None
+  [15:10:53] [99/120] [  659.2s] PLAST_EXP_Pinf      s56619 (13.5s) persiste 0 K 0.0 t_ext 104005 frac_fin None mord_exp 135 exp/vida 0.032 pl_mov 248/454 aprende 968 n_inv None aborto None
+  [15:11:05] [100/120] [  671.1s] PLAST_EXP_Pinf      s56620 (13.4s) persiste 0 K 0.0 t_ext 114551 frac_fin None mord_exp 56 exp/vida 0.013 pl_mov 136/181 aprende 943 n_inv None aborto None
+  [15:11:14] [101/120] [  680.3s] FIJO_V_Pinf         s56601 (21.1s) persiste 1 K 36.51394422310757 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:11:27] [102/120] [  692.9s] FIJO_V_Pinf         s56602 (21.8s) persiste 1 K 35.34661354581673 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:11:35] [103/120] [  701.7s] FIJO_V_Pinf         s56603 (21.4s) persiste 1 K 35.78486055776892 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:11:51] [104/120] [  717.6s] FIJO_V_Pinf         s56604 (24.7s) persiste 1 K 36.235059760956176 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:11:59] [105/120] [  725.8s] FIJO_V_Pinf         s56605 (24.0s) persiste 1 K 36.179282868525895 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:12:04] [106/120] [  730.7s] FIJO_V_Pinf         s56606 (13.1s) persiste 0 K 0.0 t_ext 109801 frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:12:14] [107/120] [  740.1s] FIJO_V_Pinf         s56607 (14.3s) persiste 0 K 1.4900398406374502 t_ext 298914 frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:12:26] [108/120] [  752.0s] FIJO_V_Pinf         s56608 (21.3s) persiste 1 K 35.0 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:12:35] [109/120] [  761.7s] FIJO_V_Pinf         s56609 (21.6s) persiste 1 K 36.418326693227094 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:12:50] [110/120] [  776.2s] FIJO_V_Pinf         s56610 (24.2s) persiste 1 K 35.03585657370518 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:12:58] [111/120] [  784.5s] FIJO_V_Pinf         s56611 (22.8s) persiste 1 K 34.36254980079681 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:13:13] [112/120] [  799.0s] FIJO_V_Pinf         s56612 (22.8s) persiste 1 K 36.64940239043825 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:13:23] [113/120] [  809.3s] FIJO_V_Pinf         s56613 (24.8s) persiste 1 K 37.147410358565736 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:13:34] [114/120] [  820.5s] FIJO_V_Pinf         s56614 (21.4s) persiste 1 K 35.625498007968126 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:13:47] [115/120] [  833.0s] FIJO_V_Pinf         s56615 (23.8s) persiste 1 K 36.79681274900398 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:13:56] [116/120] [  842.6s] FIJO_V_Pinf         s56616 (22.1s) persiste 1 K 35.14342629482072 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:14:09] [117/120] [  855.6s] FIJO_V_Pinf         s56617 (22.5s) persiste 1 K 35.20717131474104 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:14:13] [118/120] [  859.3s] FIJO_V_Pinf         s56618 (16.7s) persiste 1 K 9.235059760956176 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:14:22] [119/120] [  868.4s] FIJO_V_Pinf         s56619 (12.8s) persiste 0 K 0.0 t_ext 105472 frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+  [15:14:35] [120/120] [  881.7s] FIJO_V_Pinf         s56620 (22.4s) persiste 1 K 36.135458167330675 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+
+================ LECTURA (PREREGISTRO_baldwin_exp.md sec. 6-7) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin_exp\datos\serie_s56601-56620_T500000_20260929_145954 · VIDA 2270 · eps_exp 0.063 · th_exp 0.5
+brazo               persiste   K med t_ext med frac_fin  frac_T exp/vida veto_r/v  mord_exp  exp_apr  pl_mov fr_mov  dw_mu n_inv    seg
+PLAST_EXP_P22k          0/20     0.0  107321.5   0.1579    None    0.035    0.561     148.5     49.5   226.5 0.6289 0.4387   4.0   13.1
+FIJO_EXP_P22k           0/20     0.0  110579.0     None    None   0.0235   0.3815      99.5      0.0     0.0   None   None   5.0   12.6
+PLAST_EXP_AZA_P22k      0/20     0.0  110072.0   0.3974    None   0.0225    0.407      97.5     50.5   208.0 0.6579  0.404   5.0   13.0
+PLAST_V_P22k            0/20     0.0  110812.5   0.6383    None      0.0  13.9275       0.0      0.0   593.0 0.6674 0.3408   5.0  12.95
+PLAST_EXP_Pinf         10/20  5.1952  109167.5   0.4545  0.4598    1.987   31.372   12003.0   2822.0  1714.0 0.7426 0.3914  None   14.1
+FIJO_V_Pinf            17/20 35.4861  109801.0     None    None     None     None      None     None     0.0   None   None  None  21.95
+  frac_pl_fin por semilla PLAST_EXP_P22k: [None, 0.1579, None, 0.8667, None, None, None, None, 0.0, 1.0, None, 0.0, 1.0, None, 0.0, None, None, None, None, None]
+  frac_pl_fin por semilla PLAST_EXP_AZA_P22k: [0.5333, None, 0.4615, None, None, None, 0.3333, None, None, None, None, None, None, None, None, None, None, None, None, 0.1429]
+  frac_pl_fin por semilla PLAST_V_P22k: [0.0147, 0.5, 0.6383, 1.0, None, None, 0.0882, None, 0.9908, 0.0845, 1.0, 0.9718, None, None, None, None, None, None, 0.1905, 0.9091]
+  frac_pl_fin por semilla PLAST_EXP_Pinf: [0.2727, None, None, 0.4651, None, 0.7097, None, 0.1379, None, 0.5, None, 0.3182, 0.7143, 0.0625, 0.0, 0.4545, 0.5, None, None, None]
+  exploracion PLAST_EXP_P22k: R+ 12.5 · R- 66.5 (medianas)
+  exploracion FIJO_EXP_P22k: R+ 8.5 · R- 44.5 (medianas)
+  exploracion PLAST_EXP_AZA_P22k: R+ 8.0 · R- 43.5 (medianas)
+  pareados (secundarios): {'PLAST_EXP_P22k-PLAST_V_P22k[t_ext]': {'gana': 8, 'n': 20, 'dif_med': -266.5}, 'PLAST_EXP_P22k-FIJO_EXP_P22k[t_ext]': {'gana': 9, 'n': 20, 'dif_med': -868.5}, 'PLAST_EXP_P22k-PLAST_EXP_AZA_P22k[t_ext]': {'gana': 7, 'n': 20, 'dif_med': -3116.5}, 'PLAST_EXP_Pinf-FIJO_V_Pinf[K]': {'gana': 1, 'n': 20, 'dif_med': -23.7291}, 'PLAST_EXP_P22k-FIJO_EXP_P22k[K]': {'gana': 0, 'n': 20, 'dif_med': 0.0}}
+
+  VALIDEZ {'V0_completa_sin_abortos': True, 'V1_ancla_FIJO_V_Pinf_persiste': True, 'V2_cfg_por_brazo': True, 'V3_inversiones': True, 'V4_la_exploracion_actua': True, 'V5_la_regla_plastica_aprende': True, 'V6_AZA_bit_al_azar': True} · V6 NO APLICA (4 semillas con dato < 8): decide PB
+  PUERTAS {'PA_rescate': False, 'PB_control_AZA': False, 'PD_seleccion_prende': False, 'PM_supera_controles': False}
+  SECUNDARIAS {'PE_apaga_Pinf(no decide)': False, 'desc_PLAST_EXP_vs_PLAST_V_P22k': {'persiste': [0, 0], 'dif': 0, 't_ext': {'gana': 8, 'n': 20, 'dif_med': -266.5}}}
+  VEREDICTO NO
+  CERCA DEL UMBRAL (ERR-156 H-3, regla 12): {'PA': False, 'PB': False, 'PM': False, 'alguna': False}
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin_exp\datos\serie_s56601-56620_T500000_20260929_145954\resumen.json (sha 992f1f6925331c71)
+Terminado en 882.5s
+VEREDICTO DE LA SERIE: NO   (regla de parada: PREREGISTRO_baldwin_exp.md sec. 8)

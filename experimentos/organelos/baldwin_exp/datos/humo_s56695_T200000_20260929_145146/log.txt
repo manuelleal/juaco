@@ -1,0 +1,41 @@
+CORRE_BEXP · humo_s56695_T200000 · 20260929_145146 · python 3.14.2 · pool NO (un proceso) · corre_bexp.py 8ef1d0da7feeb333 · preregistro PREREGISTRO_baldwin_exp.md 89a504ead8bdf034 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin_exp\datos\humo_s56695_T200000_20260929_145146
+  tareas 6 · brazos ['PLAST_EXP_P22k', 'FIJO_EXP_P22k', 'PLAST_EXP_AZA_P22k', 'PLAST_V_P22k', 'PLAST_EXP_Pinf', 'FIJO_V_Pinf'] · semillas 56695-56695 · T 200000 · t_corte 100000 · VIDA 2270 · P {'P22k': 22000, 'Pinf': 0} · eps_exp 0.063 · th_exp 0.5 · reanuda False
+  sha experimentos\organelos\bloques\opusM\corre_bloques.py a090b82eae9f1ee3 OK
+  sha experimentos\organelos\baldwin\motor_baldwin.py d0a620d2f5e2605e OK
+  sha experimentos\organelos\baldwin\construye_baldwin.py c9cad63496519fb7 OK
+  sha experimentos\organelos\baldwin_exp\motor_bexp.py 0af10809633c945d OK
+  corre_bloques.verifica (nucleo_eco_sel_ing, motor_frio_rapido, motor_bloques): OK
+  motor_bexp.py == construye_bexp.construye() por anclas desde motor_baldwin: OK
+  EPS_EXP calibrado: 0.063
+  [14:52:00] [1/6] [   14.0s] PLAST_EXP_P22k      s56695 (14.0s) persiste 0 K 1.4653465346534653 t_ext 113872 frac_fin None mord_exp 87 exp/vida 0.02 pl_mov 195/391 aprende 678 n_inv 5 aborto None
+  [14:52:12] [2/6] [   26.2s] FIJO_EXP_P22k       s56695 (12.3s) persiste 0 K 1.2574257425742574 t_ext 104534 frac_fin None mord_exp 14 exp/vida 0.003 pl_mov 0/0 aprende None n_inv 4 aborto None
+  [14:52:24] [3/6] [   38.8s] PLAST_EXP_AZA_P22k  s56695 (12.5s) persiste 0 K 1.2871287128712872 t_ext 107280 frac_fin None mord_exp 15 exp/vida 0.004 pl_mov 74/101 aprende 389 n_inv 4 aborto None
+  [14:52:37] [4/6] [   51.2s] PLAST_V_P22k        s56695 (12.4s) persiste 0 K 1.2871287128712872 t_ext 104039 frac_fin None mord_exp 0 exp/vida 0.0 pl_mov 155/204 aprende 720 n_inv 4 aborto None
+  [14:52:50] [5/6] [   64.6s] PLAST_EXP_Pinf      s56695 (13.4s) persiste 1 K 12.267326732673267 t_ext None frac_fin 0.0 mord_exp 6326 exp/vida 1.327 pl_mov 111/164 aprende 670 n_inv None aborto None
+  [14:53:05] [6/6] [   79.2s] FIJO_V_Pinf         s56695 (14.6s) persiste 1 K 36.7029702970297 t_ext None frac_fin None mord_exp None exp/vida None pl_mov 0/0 aprende None n_inv None aborto None
+
+================ LECTURA (PREREGISTRO_baldwin_exp.md sec. 6-7) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin_exp\datos\humo_s56695_T200000_20260929_145146 · VIDA 2270 · eps_exp 0.063 · th_exp 0.5
+brazo               persiste   K med t_ext med frac_fin  frac_T exp/vida veto_r/v  mord_exp  exp_apr  pl_mov fr_mov  dw_mu n_inv    seg
+PLAST_EXP_P22k           0/1  1.4653  113872.0     None    None     0.02      0.3      87.0     24.0   195.0 0.4987 0.4613   5.0   13.7
+FIJO_EXP_P22k            0/1  1.2574  104534.0     None    None    0.003    0.043      14.0      0.0     0.0   None   None   4.0   12.3
+PLAST_EXP_AZA_P22k       0/1  1.2871  107280.0     None    None    0.004    0.038      15.0     10.0    74.0 0.7327 0.6654   4.0   12.5
+PLAST_V_P22k             0/1  1.2871  104039.0     None    None      0.0    0.797       0.0      0.0   155.0 0.7598 0.8052   4.0   12.4
+PLAST_EXP_Pinf           1/1 12.2673      None      0.0     0.0    1.327   21.026    6326.0     47.0   111.0 0.6768 0.4064  None   13.4
+FIJO_V_Pinf              1/1  36.703      None     None    None     None     None      None     None     0.0   None   None  None   14.5
+  frac_pl_fin por semilla PLAST_EXP_P22k: [None]
+  frac_pl_fin por semilla PLAST_EXP_AZA_P22k: [None]
+  frac_pl_fin por semilla PLAST_V_P22k: [None]
+  frac_pl_fin por semilla PLAST_EXP_Pinf: [0.0]
+  exploracion PLAST_EXP_P22k: R+ 16.0 · R- 34.0 (medianas)
+  exploracion FIJO_EXP_P22k: R+ 0.0 · R- 6.0 (medianas)
+  exploracion PLAST_EXP_AZA_P22k: R+ 2.0 · R- 5.0 (medianas)
+  pareados (secundarios): {'PLAST_EXP_P22k-PLAST_V_P22k[t_ext]': {'gana': 1, 'n': 1, 'dif_med': 9833.0}, 'PLAST_EXP_P22k-FIJO_EXP_P22k[t_ext]': {'gana': 1, 'n': 1, 'dif_med': 9338.0}, 'PLAST_EXP_P22k-PLAST_EXP_AZA_P22k[t_ext]': {'gana': 1, 'n': 1, 'dif_med': 6592.0}, 'PLAST_EXP_Pinf-FIJO_V_Pinf[K]': {'gana': 0, 'n': 1, 'dif_med': -24.4356}, 'PLAST_EXP_P22k-FIJO_EXP_P22k[K]': {'gana': 1, 'n': 1, 'dif_med': 0.2079}}
+
+  VALIDEZ {'V0_completa_sin_abortos': True, 'V1_ancla_FIJO_V_Pinf_persiste': True, 'V2_cfg_por_brazo': True, 'V3_inversiones': True, 'V4_la_exploracion_actua': True, 'V5_la_regla_plastica_aprende': True, 'V6_AZA_bit_al_azar': True} · V6 NO APLICA (0 semillas con dato < 1): decide PB
+  PUERTAS {'PA_rescate': False, 'PB_control_AZA': False, 'PD_seleccion_prende': False, 'PM_supera_controles': False}
+  SECUNDARIAS {'PE_apaga_Pinf(no decide)': True}
+  VEREDICTO (HUMO, no cuenta) NO
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\baldwin_exp\datos\humo_s56695_T200000_20260929_145146\resumen.json (sha 89fc1b93279b73ac)
+Terminado en 79.2s
+VEREDICTO DE LA CORRIDA: HUMO (no cuenta): NO   (regla de parada: PREREGISTRO_baldwin_exp.md sec. 8)

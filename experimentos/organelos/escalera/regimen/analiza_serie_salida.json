@@ -1,0 +1,409 @@
+{
+ "pruebas_mediana": {
+  "cruzan": {
+   "sel": 4.0,
+   "neu": 0.0,
+   "fab": 4.0,
+   "o1": 0.0
+  },
+  "R0": {
+   "sel": 0.8097,
+   "neu": 0.3527,
+   "fab": 0.8054,
+   "o1": 0.2948
+  },
+  "mundo_AC": {
+   "sel": 4.3205,
+   "neu": 6.7307,
+   "fab": 7.1553,
+   "o1": 7.0289
+  },
+  "mord_AC": {
+   "sel": 5420.0,
+   "neu": 4325.5,
+   "fab": 5182.5,
+   "o1": 4278.0
+  },
+  "mord_BD": {
+   "sel": 3319.0,
+   "neu": 2644.5,
+   "fab": 3544.5,
+   "o1": 2629.5
+  },
+  "mord_tot": {
+   "sel": 8699.5,
+   "neu": 6979.0,
+   "fab": 8714.0,
+   "o1": 6937.0
+  },
+  "mord_AC_dentro": {
+   "sel": 2379.0,
+   "neu": 1183.0,
+   "fab": 2714.5,
+   "o1": 1162.5
+  },
+  "mord_AC_fuera": {
+   "sel": 3060.0,
+   "neu": 3159.0,
+   "fab": 2495.0,
+   "o1": 3115.0
+  },
+  "ratio_pasos": {
+   "sel": 5.234,
+   "neu": 1.052,
+   "fab": 7.071,
+   "o1": 1.0465
+  },
+  "viajes": {
+   "sel": 456779.5,
+   "neu": 0.0,
+   "fab": 630740.5,
+   "o1": 0.0
+  },
+  "fund": {
+   "sel": 411.0,
+   "neu": 935.5,
+   "fab": 241.5,
+   "o1": 975.0
+  },
+  "nac": {
+   "sel": 333.5,
+   "neu": 418.0,
+   "fab": 210.5,
+   "o1": 411.5
+  },
+  "muertes": {
+   "sel": 715.0,
+   "neu": 1352.0,
+   "fab": 476.0,
+   "o1": 1387.5
+  },
+  "vida": {
+   "sel": 600.0,
+   "neu": 200.0,
+   "fab": 1233.75,
+   "o1": 200.0
+  },
+  "est": {
+   "sel": 6.0,
+   "neu": 0.0,
+   "fab": 7.0,
+   "o1": 0.0
+  },
+  "partos": {
+   "sel": 863.5,
+   "neu": 448.5,
+   "fab": 930.5,
+   "o1": 444.5
+  },
+  "bono_blancos": {
+   "sel": 20224.5,
+   "neu": 3931.0,
+   "fab": 23392.0,
+   "o1": 3872.0
+  },
+  "max_med": {
+   "sel": 0.3535,
+   "neu": 0.603,
+   "fab": 0.2995,
+   "o1": 0.682
+  }
+ },
+ "sel_spearman": {
+  "cruzan": {
+   "GV": 0.139,
+   "GW": -0.059
+  },
+  "R0": {
+   "GV": 0.285,
+   "GW": -0.069
+  },
+  "mundo_AC": {
+   "GV": 0.444,
+   "GW": 0.22
+  },
+  "mord_AC": {
+   "GV": 0.644,
+   "GW": -0.221
+  },
+  "mord_BD": {
+   "GV": 0.782,
+   "GW": -0.324
+  },
+  "mord_tot": {
+   "GV": 0.696,
+   "GW": -0.282
+  },
+  "mord_AC_dentro": {
+   "GV": 0.817,
+   "GW": -0.296
+  },
+  "mord_AC_fuera": {
+   "GV": -0.189,
+   "GW": 0.022
+  },
+  "ratio_pasos": {
+   "GV": 0.614,
+   "GW": -0.278
+  },
+  "viajes": {
+   "GV": 0.826,
+   "GW": -0.352
+  },
+  "fund": {
+   "GV": -0.308,
+   "GW": 0.33
+  },
+  "nac": {
+   "GV": -0.597,
+   "GW": -0.124
+  },
+  "muertes": {
+   "GV": -0.502,
+   "GW": 0.292
+  },
+  "vida": {
+   "GV": 0.694,
+   "GW": 0.082
+  },
+  "est": {
+   "GV": 0.564,
+   "GW": -0.012
+  },
+  "partos": {
+   "GV": 0.735,
+   "GW": -0.158
+  },
+  "bono_blancos": {
+   "GV": 0.777,
+   "GW": -0.366
+  },
+  "max_med": {
+   "GV": -0.338,
+   "GW": 0.098
+  }
+ },
+ "selneu_spearman": {
+  "mundo_AC": -0.71,
+  "mord_AC": 0.907,
+  "mord_BD": 0.897,
+  "fund": -0.857,
+  "nac": -0.824,
+  "cruzan": 0.824,
+  "ratio_pasos": 0.899,
+  "viajes": 0.953
+ },
+ "pasajes": {
+  "sel": [
+   {
+    "GV": 0.0961,
+    "GW": 0.0076,
+    "mundo_AC": 6.1307,
+    "mord_AC": 4744.5,
+    "mord_BD": 2904.5,
+    "fund": 932.5,
+    "nac": 330.5,
+    "ratio": 2.375,
+    "viajes": 176717.0,
+    "cruzan": 0.0,
+    "est": 3.0,
+    "gen_vivos_GV": 0.1089
+   },
+   {
+    "GV": 0.1367,
+    "GW": 0.0026,
+    "mundo_AC": 4.6911,
+    "mord_AC": 5199.5,
+    "mord_BD": 3176.5,
+    "fund": 663.5,
+    "nac": 307.0,
+    "ratio": 4.199,
+    "viajes": 351522.0,
+    "cruzan": 2.0,
+    "est": 7.0,
+    "gen_vivos_GV": 0.1377
+   },
+   {
+    "GV": 0.178,
+    "GW": 0.0067,
+    "mundo_AC": 4.4625,
+    "mord_AC": 5357.0,
+    "mord_BD": 3290.0,
+    "fund": 482.5,
+    "nac": 315.5,
+    "ratio": 4.557,
+    "viajes": 409881.5,
+    "cruzan": 3.0,
+    "est": 8.0,
+    "gen_vivos_GV": 0.1774
+   },
+   {
+    "GV": 0.1912,
+    "GW": 0.0123,
+    "mundo_AC": 4.5347,
+    "mord_AC": 5422.0,
+    "mord_BD": 3392.5,
+    "fund": 464.0,
+    "nac": 299.5,
+    "ratio": 5.075,
+    "viajes": 452742.0,
+    "cruzan": 4.0,
+    "est": 8.0,
+    "gen_vivos_GV": 0.1972
+   },
+   {
+    "GV": 0.1939,
+    "GW": 0.0107,
+    "mundo_AC": 4.5644,
+    "mord_AC": 5450.5,
+    "mord_BD": 3367.0,
+    "fund": 446.0,
+    "nac": 284.5,
+    "ratio": 4.9785,
+    "viajes": 445871.0,
+    "cruzan": 4.0,
+    "est": 8.0,
+    "gen_vivos_GV": 0.1911
+   }
+  ],
+  "neu": [
+   {
+    "GV": 0.0197,
+    "GW": 0.0261,
+    "mundo_AC": 7.0273,
+    "mord_AC": 4343.5,
+    "mord_BD": 2657.0,
+    "fund": 964.5,
+    "nac": 411.0,
+    "ratio": 1.054,
+    "viajes": 0.0,
+    "cruzan": 0.0,
+    "est": 2.0,
+    "gen_vivos_GV": 0.0072
+   },
+   {
+    "GV": 0.0306,
+    "GW": 0.0128,
+    "mundo_AC": 6.9555,
+    "mord_AC": 4323.5,
+    "mord_BD": 2638.0,
+    "fund": 952.0,
+    "nac": 414.5,
+    "ratio": 1.052,
+    "viajes": 0.0,
+    "cruzan": 0.0,
+    "est": 1.0,
+    "gen_vivos_GV": 0.0289
+   },
+   {
+    "GV": 0.0176,
+    "GW": 0.0183,
+    "mundo_AC": 7.0107,
+    "mord_AC": 4373.0,
+    "mord_BD": 2673.5,
+    "fund": 949.0,
+    "nac": 413.0,
+    "ratio": 1.053,
+    "viajes": 0.0,
+    "cruzan": 0.0,
+    "est": 2.0,
+    "gen_vivos_GV": 0.0207
+   },
+   {
+    "GV": 0.0224,
+    "GW": 0.0059,
+    "mundo_AC": 6.9653,
+    "mord_AC": 4346.5,
+    "mord_BD": 2650.5,
+    "fund": 967.0,
+    "nac": 409.0,
+    "ratio": 1.052,
+    "viajes": 0.0,
+    "cruzan": 0.0,
+    "est": 2.0,
+    "gen_vivos_GV": 0.0106
+   },
+   {
+    "GV": 0.023,
+    "GW": 0.0158,
+    "mundo_AC": 6.9999,
+    "mord_AC": 4331.5,
+    "mord_BD": 2689.0,
+    "fund": 979.0,
+    "nac": 407.5,
+    "ratio": 1.0495,
+    "viajes": 0.0,
+    "cruzan": 0.0,
+    "est": 1.0,
+    "gen_vivos_GV": 0.0198
+   }
+  ]
+ },
+ "par_sel_fab": {
+  "cruzan": {
+   "med_dif": 0.0,
+   "sel_mayor": 6,
+   "fab_mayor": 8
+  },
+  "R0": {
+   "med_dif": -0.0042,
+   "sel_mayor": 10,
+   "fab_mayor": 10
+  },
+  "mundo_AC": {
+   "med_dif": -2.796,
+   "sel_mayor": 0,
+   "fab_mayor": 20
+  },
+  "mord_AC": {
+   "med_dif": 181.5,
+   "sel_mayor": 15,
+   "fab_mayor": 5
+  },
+  "mord_BD": {
+   "med_dif": -197.5,
+   "sel_mayor": 3,
+   "fab_mayor": 17
+  },
+  "mord_AC_dentro": {
+   "med_dif": -408.5,
+   "sel_mayor": 0,
+   "fab_mayor": 20
+  },
+  "mord_AC_fuera": {
+   "med_dif": 572.5,
+   "sel_mayor": 20,
+   "fab_mayor": 0
+  },
+  "ratio_pasos": {
+   "med_dif": -1.8145,
+   "sel_mayor": 0,
+   "fab_mayor": 20
+  },
+  "viajes": {
+   "med_dif": -180612.5,
+   "sel_mayor": 0,
+   "fab_mayor": 20
+  },
+  "fund": {
+   "med_dif": 194.5,
+   "sel_mayor": 14,
+   "fab_mayor": 6
+  },
+  "nac": {
+   "med_dif": 110.0,
+   "sel_mayor": 18,
+   "fab_mayor": 2
+  },
+  "est": {
+   "med_dif": -1.0,
+   "sel_mayor": 1,
+   "fab_mayor": 12
+  },
+  "vida": {
+   "med_dif": -633.75,
+   "sel_mayor": 0,
+   "fab_mayor": 20
+  }
+ }
+}

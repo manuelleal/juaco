@@ -1,0 +1,177 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "abortos_0": true,
+   "completas": true,
+   "coherentes": true,
+   "tasas_actuan": true,
+   "arnes": true
+  },
+  "veredicto": "INDETERMINADO",
+  "compone": false,
+  "compone_detalle": {
+   "p_azar6": 0.0354,
+   "umbral": 0.0709,
+   "cap_sobre_umbral": "0/1",
+   "cap_mayor_que_aza": "0/1"
+  },
+  "tasas_actuan_n": "1/1",
+  "cap_gana_fab": {
+   "n": 1,
+   "gana": 0,
+   "dif_suma": -2
+  },
+  "cap_gana_aza": {
+   "n": 1,
+   "gana": 0,
+   "dif_suma": -1
+  },
+  "R0_cap_gana_fab": {
+   "n": 1,
+   "gana": 0,
+   "dif_suma": -0.6125
+  },
+  "suma_cruzan": {
+   "fab": 2,
+   "cap": 0,
+   "aza_largo": 1
+  },
+  "largo_med": {
+   "fab": {
+    "9": 2.0
+   },
+   "cap": {
+    "9": 5.1
+   },
+   "aza_largo": {
+    "9": 6.6
+   }
+  },
+  "cap_largo_ge4": "1/1",
+  "doble_lin": {
+   "fab": 0,
+   "cap": 0,
+   "aza_largo": 3
+  },
+  "o1_lin": {
+   "fab": 0,
+   "cap": 0,
+   "aza_largo": 0
+  },
+  "lin_total": {
+   "fab": 9,
+   "cap": 9,
+   "aza_largo": 9
+  },
+  "doble_siembra_p9": {
+   "fab": {
+    "9": 0.0
+   },
+   "cap": {
+    "9": 0.0
+   },
+   "aza_largo": {
+    "9": 0.0593
+   }
+  },
+  "mayorias": {
+   "fab": 0,
+   "cap": 0,
+   "aza_largo": 0
+  }
+ },
+ "cadenas": {
+  "fab": {
+   "9": {
+    "largo_siembra": [
+     2.313
+    ],
+    "doble_siembra": [
+     0.0
+    ],
+    "o1_siembra": [
+     0.0
+    ],
+    "partos": [
+     131
+    ],
+    "cruzan": 2,
+    "mayoria": 0,
+    "R0_med": 0.8,
+    "fund_med": 1.0,
+    "fund_media": 36.9,
+    "coherente": true,
+    "largo_med": 2.0,
+    "lin_con_banco": 9,
+    "doble_lin": 0,
+    "o1_lin": 0,
+    "doble_banco_final": 0.0,
+    "fund_de_banco": 341,
+    "fund_n": 341
+   }
+  },
+  "cap": {
+   "9": {
+    "largo_siembra": [
+     5.519
+    ],
+    "doble_siembra": [
+     0.0
+    ],
+    "o1_siembra": [
+     0.0
+    ],
+    "partos": [
+     104
+    ],
+    "cruzan": 0,
+    "mayoria": 0,
+    "R0_med": 0.1875,
+    "fund_med": 25.0,
+    "fund_media": 31.0,
+    "coherente": true,
+    "largo_med": 5.1,
+    "lin_con_banco": 9,
+    "doble_lin": 0,
+    "o1_lin": 0,
+    "doble_banco_final": 0.0,
+    "fund_de_banco": 288,
+    "fund_n": 288
+   }
+  },
+  "aza_largo": {
+   "9": {
+    "largo_siembra": [
+     6.371
+    ],
+    "doble_siembra": [
+     0.0593
+    ],
+    "o1_siembra": [
+     0.0
+    ],
+    "partos": [
+     104
+    ],
+    "cruzan": 1,
+    "mayoria": 0,
+    "R0_med": 0.1064,
+    "fund_med": 41.0,
+    "fund_media": 43.6,
+    "coherente": true,
+    "largo_med": 6.6,
+    "lin_con_banco": 9,
+    "doble_lin": 3,
+    "o1_lin": 0,
+    "doble_banco_final": 0.0489,
+    "fund_de_banco": 401,
+    "fund_n": 401
+   }
+  }
+ },
+ "abortos": [],
+ "predicciones": [],
+ "preregistro": "PREREGISTRO_genoma.md",
+ "sha_runner": "8836072c04c38767"
+}

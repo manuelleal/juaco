@@ -1,0 +1,108 @@
+CORRE_GEN · explora · 2026-09-30 19:59:20 · python 3.14.2 · pool 2 · runner 8836072c04c38767 · PREREGISTRO_genoma.md · indices [1, 2, 3, 4, 5] · npas 10 · T_pas 25000 · T_pru 100000 · pasajes 635010.. · prueba [635101, 635102, 635103, 635104, 635105] · CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · CAP {'inicial': 6, 'p_campo': 0.1, 'p_dup': 0.06, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\genoma\datos\explora_20260930_195920
+  sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2AZA.py aa88b32e4b4de152 OK
+  -- verifica de sentidos_muro (shas de corre_bp, V143_BQ2, TERMO, pista, juez, O1, V143; carros == construye_sm):
+    sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+    sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+    sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+    sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+    sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+    sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+    sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+    sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+    sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+    carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+    carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  arnes: PASA con los shas actuales
+  [  377.3s] cap i1 (376.8s) aborto None · largo siembra [6.011, 6.02, 5.96, 5.973, 5.927, 5.896, 5.862, 5.8, 5.711, 5.707] · cruzan 4 · R0 [0.5818, 0.0576, 0.0817, 0.9756, 0.3308, 0.9, 0.9677, 0.4538, 0.9706]
+  [  377.8s] cap i2 (377.4s) aborto None · largo siembra [6.04, 6.069, 6.111, 6.118, 6.2, 6.229, 6.173, 6.149, 6.262, 6.229] · cruzan 4 · R0 [0.0693, 0.975, 0.9722, 0.973, 0.96, 0.7778, 0.0417, 0.1988, 0.4321]
+  [  735.9s] cap i3 (358.6s) aborto None · largo siembra [5.912, 5.842, 5.851, 5.942, 5.978, 6, 6.107, 6.033, 6.082, 6.2] · cruzan 0 · R0 [0.7188, 0.6977, 0.1071, 0.3333, 0.1579, 0.3871, 0.0794, 0.0743, 0.2703]
+  [  743.1s] cap i4 (365.3s) aborto None · largo siembra [5.832, 5.922, 5.889, 5.876, 5.876, 5.998, 6.027, 6.022, 6.138, 6.147] · cruzan 4 · R0 [0.4516, 0.9677, 0.95, 0.5676, 0.0638, 0.9615, 0.9643, 0.0349, 0.3529]
+  [ 1099.3s] cap i5 (363.4s) aborto None · largo siembra [6.364, 6.46, 6.38, 6.276, 6.396, 6.418, 6.4, 6.538, 6.444, 6.598] · cruzan 4 · R0 [0.9796, 0.055, 0.9737, 0.0444, 0.0842, 0.5862, 0.963, 0.1923, 0.9714]
+  [ 1114.9s] aza_largo i1 (371.8s) aborto None · largo siembra [5.954, 6.016, 5.938, 5.944, 5.978, 5.913, 6.013, 6.098, 6.06, 6.316] · cruzan 3 · R0 [0.2388, 0.92, 0.0179, 0.0332, 0.9565, 0.9583, 0.3571, 0.8571, 0.057]
+  [ 1472.4s] aza_largo i2 (373.1s) aborto None · largo siembra [6.254, 6.422, 6.447, 6.433, 6.387, 6.444, 6.622, 6.593, 6.809, 6.971] · cruzan 2 · R0 [0.1935, 0.931, 0.015, 0.4242, 0.0211, 0.0258, 0.2809, 0.0706, 0.9355]
+  [ 1480.3s] aza_largo i3 (365.4s) aborto None · largo siembra [6.134, 6.242, 6.2, 6.291, 6.409, 6.678, 6.684, 6.718, 6.873, 6.64] · cruzan 2 · R0 [0.6, 0.9535, 0.0954, 0.8571, 0.0292, 0.9615, 0.1642, 0.38, 0.0103]
+  [ 1846.1s] aza_largo i4 (373.6s) aborto None · largo siembra [5.916, 6.007, 6.087, 5.889, 5.858, 5.849, 5.902, 5.904, 5.922, 5.951] · cruzan 2 · R0 [0.7885, 0.0439, 0.9474, 0.9762, 0.7857, 0.0114, 0.179, 0.0315, 0.7273]
+  [ 1861.2s] aza_largo i5 (380.9s) aborto None · largo siembra [6.101, 6.231, 6.404, 6.533, 6.724, 6.689, 6.824, 6.76, 6.693, 6.762] · cruzan 3 · R0 [0.0181, 0.9062, 0.0197, 0.0059, 0.9032, 0.0157, 0.8, 0.9412, 0.6452]
+  [ 2206.8s] fab i1 (360.7s) aborto None · largo siembra [1.813, 1.824, 1.769, 1.84, 1.956, 2.138, 2.244, 2.416, 2.369, 2.42] · cruzan 1 · R0 [0.8431, 0.1845, 0.105, 0.4773, 0.1944, 0.4444, 0.8913, 0.0667, 0.9714]
+  [ 2219.7s] fab i2 (358.4s) aborto None · largo siembra [1.838, 1.856, 1.862, 1.918, 2.062, 2.142, 2.316, 2.667, 2.962, 3.22] · cruzan 2 · R0 [0.8205, 0.4384, 0.2521, 0.9706, 0.1111, 0.2132, 0.0706, 0.9643, 0.6719]
+  [ 2567.2s] fab i3 (360.4s) aborto None · largo siembra [1.875, 1.842, 1.8, 1.838, 1.842, 1.878, 1.789, 1.804, 1.887, 1.833] · cruzan 3 · R0 [0.0278, 0.9688, 0.1897, 0.7885, 0.975, 0.96, 0.7436, 0.4021, 0.1598]
+  [ 2579.2s] fab i4 (359.5s) aborto None · largo siembra [2.062, 2.158, 2.282, 2.451, 2.504, 2.596, 2.691, 2.811, 3.024, 3.156] · cruzan 3 · R0 [0.1129, 0.9697, 0.2432, 0.96, 0.1122, 0.1284, 0.4865, 0.9697, 0.1923]
+  [ 2916.7s] fab i5 (349.5s) aborto None · largo siembra [1.952, 1.978, 2.016, 1.98, 1.944, 1.924, 1.991, 2.071, 2.08, 2.084] · cruzan 3 · R0 [0.9655, 0.3235, 0.7812, 0.0073, 0.6034, 0.6296, 0.9677, 0.8108, 0.931]
+  15 trabajos · abortos 0 · 2916.7s
+
+================ LECTURA genoma (capacidad) · explora · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\genoma\datos\explora_20260930_195920
+  arnes: PASA con los shas actuales · abortos: []
+  fab       i1: largo siembra p0..p9 [1.813, 1.824, 1.769, 1.84, 1.956, 2.138, 2.244, 2.416, 2.369, 2.42] · partos [139, 126, 127, 104, 96, 101, 85, 104, 94, 93]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 1/9 · mayoria 0 · R0 med 0.4444 · fund med 45.0 media 79.9 · largo_med 3.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0044 · fund de banco 728/728
+  fab       i2: largo siembra p0..p9 [1.838, 1.856, 1.862, 1.918, 2.062, 2.142, 2.316, 2.667, 2.962, 3.22] · partos [142, 152, 149, 138, 137, 138, 129, 101, 118, 103]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 2/9 · mayoria 0 · R0 med 0.4384 · fund med 40.0 media 96.2 · largo_med 4.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 875/875
+  fab       i3: largo siembra p0..p9 [1.875, 1.842, 1.8, 1.838, 1.842, 1.878, 1.789, 1.804, 1.887, 1.833] · partos [128, 141, 124, 125, 130, 107, 145, 139, 137, 125]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0156, 0.0089] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 3/9 · mayoria 0 · R0 med 0.7436 · fund med 10.0 media 115.1 · largo_med 2.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0022 · fund de banco 1045/1045
+  fab       i4: largo siembra p0..p9 [2.062, 2.158, 2.282, 2.451, 2.504, 2.596, 2.691, 2.811, 3.024, 3.156] · partos [145, 148, 127, 124, 144, 138, 134, 124, 109, 94]
+                doble en la siembra [0.0, 0.0, 0.0022, 0.0044, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 3/9 · mayoria 0 · R0 med 0.2432 · fund med 83.0 media 91.9 · largo_med 3.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 836/836
+  fab       i5: largo siembra p0..p9 [1.952, 1.978, 2.016, 1.98, 1.944, 1.924, 1.991, 2.071, 2.08, 2.084] · partos [145, 135, 162, 144, 149, 153, 150, 150, 143, 154]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 3/9 · mayoria 0 · R0 med 0.7812 · fund med 6.0 media 132.3 · largo_med 2.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 1200/1200
+  cap       i1: largo siembra p0..p9 [6.011, 6.02, 5.96, 5.973, 5.927, 5.896, 5.862, 5.8, 5.711, 5.707] · partos [87, 134, 100, 131, 121, 131, 137, 138, 156, 128]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 4/9 · mayoria 0 · R0 med 0.5818 · fund med 22.0 media 101.7 · largo_med 4.9 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 924/924
+  cap       i2: largo siembra p0..p9 [6.04, 6.069, 6.111, 6.118, 6.2, 6.229, 6.173, 6.149, 6.262, 6.229] · partos [99, 87, 91, 118, 109, 93, 109, 103, 104, 99]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 4/9 · mayoria 0 · R0 med 0.7778 · fund med 9.0 media 103.3 · largo_med 6.0 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 939/939
+  cap       i3: largo siembra p0..p9 [5.912, 5.842, 5.851, 5.942, 5.978, 6, 6.107, 6.033, 6.082, 6.2] · partos [125, 102, 96, 111, 104, 90, 102, 101, 91, 75]
+                doble en la siembra [0.16, 0.1289, 0.1044, 0.18, 0.1422, 0.16, 0.1156, 0.0889, 0.0578, 0.0578] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 0/9 · mayoria 0 · R0 med 0.2703 · fund med 80.0 media 98.1 · largo_med 7.1 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0711 · fund de banco 892/892
+  cap       i4: largo siembra p0..p9 [5.832, 5.922, 5.889, 5.876, 5.876, 5.998, 6.027, 6.022, 6.138, 6.147] · partos [119, 117, 114, 127, 129, 103, 116, 124, 127, 128]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 4/9 · mayoria 0 · R0 med 0.5676 · fund med 31.0 media 118.4 · largo_med 6.9 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 1075/1075
+  cap       i5: largo siembra p0..p9 [6.364, 6.46, 6.38, 6.276, 6.396, 6.418, 6.4, 6.538, 6.444, 6.598] · partos [99, 108, 141, 132, 135, 126, 133, 137, 129, 131]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 4/9 · mayoria 0 · R0 med 0.5862 · fund med 23.0 media 140.4 · largo_med 6.1 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0644 · fund de banco 1273/1273
+  aza_largo i1: largo siembra p0..p9 [5.954, 6.016, 5.938, 5.944, 5.978, 5.913, 6.013, 6.098, 6.06, 6.316] · partos [115, 117, 110, 105, 93, 93, 102, 108, 111, 101]
+                doble en la siembra [0.0185, 0.0156, 0.0222, 0.0422, 0.0244, 0.0356, 0.0156, 0.0111, 0.0222, 0.0378] · forma O1 [0.0, 0.0, 0.0, 0.0067, 0.0089, 0.02, 0.0111, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 3/9 · mayoria 0 · R0 med 0.3571 · fund med 53.0 media 129.2 · largo_med 5.9 · doble linajes 4/9 · O1 linajes 0 · doble banco 0.08 · fund de banco 1172/1172
+  aza_largo i2: largo siembra p0..p9 [6.254, 6.422, 6.447, 6.433, 6.387, 6.444, 6.622, 6.593, 6.809, 6.971] · partos [84, 110, 84, 96, 77, 72, 90, 91, 87, 76]
+                doble en la siembra [0.0, 0.0089, 0.02, 0.0356, 0.0178, 0.0089, 0.0244, 0.0289, 0.04, 0.0289] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0022, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 2/9 · mayoria 0 · R0 med 0.1935 · fund med 99.0 media 132.9 · largo_med 7.5 · doble linajes 2/9 · O1 linajes 0 · doble banco 0.0267 · fund de banco 1205/1205
+  aza_largo i3: largo siembra p0..p9 [6.134, 6.242, 6.2, 6.291, 6.409, 6.678, 6.684, 6.718, 6.873, 6.64] · partos [123, 103, 110, 96, 104, 92, 99, 101, 94, 96]
+                doble en la siembra [0.0927, 0.0578, 0.0378, 0.0311, 0.02, 0.0022, 0.0, 0.0044, 0.0133, 0.0222] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 2/9 · mayoria 0 · R0 med 0.38 · fund med 30.0 media 113.9 · largo_med 6.8 · doble linajes 3/9 · O1 linajes 0 · doble banco 0.0467 · fund de banco 1034/1034
+  aza_largo i4: largo siembra p0..p9 [5.916, 6.007, 6.087, 5.889, 5.858, 5.849, 5.902, 5.904, 5.922, 5.951] · partos [135, 132, 116, 112, 102, 132, 118, 116, 122, 112]
+                doble en la siembra [0.0, 0.0, 0.0044, 0.0022, 0.0, 0.0, 0.0067, 0.0022, 0.0111, 0.0133] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 2/9 · mayoria 0 · R0 med 0.7273 · fund med 10.0 media 137.4 · largo_med 6.5 · doble linajes 1/9 · O1 linajes 0 · doble banco 0.0156 · fund de banco 1246/1246
+  aza_largo i5: largo siembra p0..p9 [6.101, 6.231, 6.404, 6.533, 6.724, 6.689, 6.824, 6.76, 6.693, 6.762] · partos [94, 105, 94, 99, 92, 85, 94, 94, 81, 99]
+                doble en la siembra [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0156, 0.0244, 0.0044] · forma O1 [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+                PRUEBA: cruzan 3/9 · mayoria 0 · R0 med 0.6452 · fund med 10.0 media 150.3 · largo_med 6.3 · doble linajes 0/9 · O1 linajes 0 · doble banco 0.0 · fund de banco 1362/1362
+  validez: {'abortos_0': True, 'completas': True, 'coherentes': True, 'tasas_actuan': True, 'arnes': True}
+  tasas_actuan_n: 5/5
+  suma_cruzan: {'fab': 12, 'cap': 16, 'aza_largo': 12}
+  mayorias: {'fab': 0, 'cap': 0, 'aza_largo': 0}
+  cap_gana_fab: {'n': 5, 'gana': 4, 'dif_suma': 4}
+  cap_gana_aza: {'n': 5, 'gana': 4, 'dif_suma': 4}
+  R0_cap_gana_fab: {'n': 5, 'gana': 3, 'dif_suma': 0.1329}
+  largo_med: {'fab': {'1': 3.0, '2': 4.0, '3': 2.0, '4': 3.0, '5': 2.0}, 'cap': {'1': 4.9, '2': 6.0, '3': 7.1, '4': 6.9, '5': 6.1}, 'aza_largo': {'1': 5.9, '2': 7.5, '3': 6.8, '4': 6.5, '5': 6.3}}
+  cap_largo_ge4: 5/5
+  doble_lin: {'fab': 0, 'cap': 0, 'aza_largo': 10}
+  o1_lin: {'fab': 0, 'cap': 0, 'aza_largo': 0}
+  lin_total: {'fab': 45, 'cap': 45, 'aza_largo': 45}
+  doble_siembra_p9: {'fab': {'1': 0.0, '2': 0.0, '3': 0.0089, '4': 0.0, '5': 0.0}, 'cap': {'1': 0.0, '2': 0.0, '3': 0.0578, '4': 0.0, '5': 0.0}, 'aza_largo': {'1': 0.0378, '2': 0.0289, '3': 0.0222, '4': 0.0133, '5': 0.0044}}
+  compone: False
+  compone_detalle: {'p_azar6': 0.0354, 'umbral': 0.0709, 'cap_sobre_umbral': '0/5', 'cap_mayor_que_aza': '1/5'}
+  I1 ingeniero: largo_med de cap >= 4.0 en >= 4/5 (p 0.85): medido 5/5 -> CUMPLE
+  I2 ingeniero: doble regla en >= 1/45 linajes de cap (prueba, ultimas 10 listas del banco) (p 0.3): medido 0 -> REFUTADA
+  I3 ingeniero: R0 sube (R0 mediano cap > fab, pareado, en >= 4/5) (p 0.15): medido 3/5 -> REFUTADA
+  K1 creador: largo_med de cap >= 4.0 en >= 4/5 (= I1) (p 0.85): medido 5/5 -> CUMPLE
+  K2 creador: doble regla en >= 1/45 linajes de cap (= I2; piso de azar alto) (p 0.7): medido 0 -> REFUTADA
+  K3 creador: veredicto CAPACIDAD SIN USO (p 0.6): medido CAPACIDAD PAGA -> REFUTADA
+  K4 creador: veredicto CAPACIDAD PAGA (p 0.07): medido CAPACIDAD PAGA -> CUMPLE
+  K5 creador: COMPONE (descriptivo) (p 0.1): medido False -> REFUTADA
+  K6 creador: suma cruzan cap <= suma cruzan fab (p 0.55): medido 16 vs 12 -> REFUTADA
+  LECTURA C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\genoma\datos\explora_20260930_195920\lectura_gen.json
+VEREDICTO (PREREGISTRO_genoma.md sec. 6): CAPACIDAD PAGA

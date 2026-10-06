@@ -1,0 +1,27 @@
+[07:44:25] CORRE_PISA · humo · un proceso (sin Pool) · corre_pisa.py 445c27054bfdc82a
+[07:44:25]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[07:44:25]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[07:44:25]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[07:44:25]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[07:44:25]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[07:44:25]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[07:44:25]   sha corre_mixto.py f27edde098cf7a1a OK
+[07:44:25]   carro O1_SEN_PISA == construye_pisa: True (sha bca8f97bcb6cb353)
+[07:44:25]   carro O1_SEN_PISA_BAR == construye_pisa: True (sha 95cda0103eb80b40)
+[07:44:25]   carro O1_SEN_PISA0 == construye_pisa: True (sha 362a150ded4ff12d)
+[07:44:29]   IDENTIDAD [O1_SEN_PISA0] * 9 == corre_juntos.tarea(O1_TODO_SEN) · salida ENTERA sin 'seg'/'estado' · s 738631 T 1500 mueve 500: True (33876 bytes)
+[07:44:31]   EL ARNES PUEDE FALLAR: pisa9 != sen9 True
+[07:44:35]   IDENTIDAD [O1_SEN_PISA0] * 9 == corre_juntos.tarea(O1_TODO_SEN) · salida ENTERA sin 'seg'/'estado' · s 738631 T 1500 mueve 0: True (35285 bytes)
+[07:44:35]   ARNES OK
+[07:44:35]   semillas 738621-738621 · T 100000 · brazos ['pmix', 'pmixbar', 'sen9', 'pmudo'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 20000, 'c_e': 0.01} · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\pisa_humo_s738621-738621_T100000_m20000_20261001_074435 · nota 'rafaga 2, semilla 1 de 2'
+[07:46:14]   [  99.1s] i0 s738621 pmix    (99.1s) LECTORES lat med 989.5 (n 32, nunca 0) por mudanza [1098.0, 655.5, 890.5, 1225.0] · explorador [193, 394, 76, 26] · antes que el explorador 1 · cruzan 9/9 (lectores 8) R0 0.9756 fund [0, 0, 0, 0, 0, 0, 0, 0, 0] · lat por vida 185.0 (frac 0.6053) · lee 29592 siembra 770 pisa [None, 53, 43, 37, 44, 56, 31, 48, 33] escribe 3699 · ratio oasis 7.237 · mundo AC 7.0022
+[07:48:04]   [ 209.2s] i0 s738621 pmixbar (110.2s) LECTORES lat med 1547.5 (n 32, nunca 3) por mudanza [521.0, 2550.5, 2241.5, 1426.0] · explorador [840, 796, 329, 205] · antes que el explorador 7 · cruzan 3/9 (lectores 2) R0 0.7143 fund [0, 0, 146, 115, 3, 5, 17, 25, 135] · lat por vida 76.0 (frac 0.1425) · lee 5863 siembra 710 pisa [None, 50, 11, 0, 42, 30, 36, 31, 0] escribe 1042 · ratio oasis 5.347 · mundo AC 6.8597
+[07:49:47]   [ 312.2s] i0 s738621 sen9    (103.0s) LECTORES lat med 1261.0 (n 36, nunca 0) por mudanza [773.0, 848.0, 2133.0, 1313.0] · explorador None · antes que el explorador None · cruzan 6/9 (lectores 6) R0 0.9706 fund [12, 0, 0, 0, 0, 0, 4, 0, 8] · lat por vida 188.5 (frac 0.4808) · lee 35349 siembra 101 pisa [None, None, None, None, None, None, None, None, None] escribe 4603 · ratio oasis 6.915 · mundo AC 6.7277
+[07:51:22]   [ 407.1s] i0 s738621 pmudo   (94.8s) LECTORES lat med 2494.5 (n 32, nunca 0) por mudanza [2975.5, 4476.0, 1234.5, 1726.0] · explorador [298, 601, 169, 166] · antes que el explorador 2 · cruzan 8/9 (lectores 7) R0 0.9737 fund [0, 0, 0, 0, 0, 0, 0, 25, 0] · lat por vida 235.0 (frac 0.4698) · lee 20729 siembra 595 pisa [None, 35, 45, 33, 28, 37, 44, 37, 42] escribe 2983 · ratio oasis 7.083 · mundo AC 7.4908
+[07:51:22] 
+  ================ RESUMEN (RAFAGA: no cuenta, no se declara)
+[07:51:22]   pmix    {'lat_lectores_por_semilla': [989.5], 'lat_lectores_todas': 989.5, 'nunca': 0, 'cruza_lectores': [8], 'cruzan': [9], 'R0_med': [0.9756], 'lat_vida': [185.0], 'lat_explorador_med': [134.5], 'mundo_AC': [7.0022]}
+[07:51:22]   pmixbar {'lat_lectores_por_semilla': [1547.5], 'lat_lectores_todas': 1547.5, 'nunca': 3, 'cruza_lectores': [2], 'cruzan': [3], 'R0_med': [0.7143], 'lat_vida': [76.0], 'lat_explorador_med': [562.5], 'mundo_AC': [6.8597]}
+[07:51:22]   sen9    {'lat_lectores_por_semilla': [1261.0], 'lat_lectores_todas': 1261.0, 'nunca': 0, 'cruza_lectores': [6], 'cruzan': [6], 'R0_med': [0.9706], 'lat_vida': [188.5], 'lat_explorador_med': [None], 'mundo_AC': [6.7277]}
+[07:51:22]   pmudo   {'lat_lectores_por_semilla': [2494.5], 'lat_lectores_todas': 2494.5, 'nunca': 0, 'cruza_lectores': [7], 'cruzan': [8], 'R0_med': [0.9737], 'lat_vida': [235.0], 'lat_explorador_med': [233.5], 'mundo_AC': [7.4908]}
+[07:51:22]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\pisa_humo_s738621-738621_T100000_m20000_20261001_074435\resumen.json · abortos 0 · 407.1s

@@ -1,0 +1,73 @@
+ARNES sentidos_muro · 2026-09-29 10:54:04
+  shas: corre_sentidos_muro.py 4776b80e18733079 · construye_sm.py 59e3a6693012d358 · V143_BQ3.py dd527e3c627e77fb · V143_BQ3_0.py baeb269537e585fd · identidad_sentidos_muro.py 24089b708bffa5f4
+(K) shas fijados, carros == construye_sm, revisa_carro; CFG del runner == BQ_C del carro == corre_bp.CFG0
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+  carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+  CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} == carro == CFG0: OK
+(A) SENT3 = 0 == V143_BQ2 BIT A BIT con tasas de EXPLORACION (salida ENTERA de pista.run, N 9, s 614992, T 2000, fundador limpio)
+  V143_BQ3_0 == V143_BQ2 (CFG): OK
+  V143_BQ3_0 == V143_BQ2 (tasas 0, misma regla forzada PRUEBA_O1 de sentidos 7 y 8): OK
+  control que DEBE diferir: regla de sentido 10 forzada en BQ2 (no lo tiene) != en BQ3: OK (difiere)
+(B) SENT3 = 1 con genoma vacio y tasas 0 == V143_TERMO (salida ENTERA)
+  V143_BQ3 vacio == V143_TERMO: OK
+  V143_BQ3_0 vacio == V143_TERMO: OK
+(C) controles que DEBEN diferir: SENT3 = 1 con CFG != BQ2; la regla de riesgo forzada != TERMO y ACTUA
+  V143_BQ3 (CFG) != V143_BQ2 (CFG): OK (difiere)
+  forzada3 != TERMO: OK · mordidas B+D 110 -> 55 · A+C 179 -> 131 · fundadores 29 -> 39 (T 2000; solo dice que actua)
+(S) sentidos 9 y 10 con un objeto de prueba (sin correr la pista)
+  s9: A sentida buena a d 5 (C nula no cuenta): 0.750000 (espera 0.75) OK
+  s10: foco A sentida buena: 0.000000 (espera 0.0) OK
+  s10: foco B sentida mala, E 0.3 Ag 0.9: 0.700000 (espera 0.7) OK
+  s10: foco D desconocida, E 0.9 Ag 0.8: 0.200000 (espera 0.2) OK
+  s10: foco C nula (media 0) cuenta como NO buena, E 1.2: 0.000000 (espera 0.0) OK
+  s8 reserva sin cambios: 0.300000 (espera 0.3) OK
+  s9: linaje sin nada sentido -> 0: 0.000000 (espera 0.0) OK
+(E) regla 14: ENTRADA campo a campo contra el tronco de la medida (corre_bp.tarea)
+  bq3 == corre_bp.tarea(V143_BQ3, CFG): 7 campos OK
+  bq2_pas (sin siembra) == corre_bp.tarea('bloq2') con CFG0: 7 campos OK
+  tarea V143_BQ3_0 == tarea V143_BQ2 (ids normalizados; banco final igual): OK
+(P) pasaje: la siembra ACTUA (todo fundador de la prueba sale del banco sembrado) y siembra_de solo toma listas no vacias
+  siembra 11 listas · fundadores de la prueba 46, del banco 46: OK
+(D) determinismo: bq3 con CFG, dos veces
+  OK
+(W) JSON antes de volver; un JSON con aborto SE REINTENTA; uno bueno NO se recorre
+  OK
+(L) LA LETRA en casos sinteticos (tab[brazo][i] = cruzan, mayoria, R0, coherente)
+  FUNCIONA: FUNCIONA (espera FUNCIONA) OK
+  MODESTO (3/5 y 3/5, mayoria 3): HAY ALGO MODESTO (espera HAY ALGO MODESTO) OK
+  MODESTO (suma +5): HAY ALGO MODESTO (espera HAY ALGO MODESTO) OK
+  NO (empates no ganan): NO (espera NO) OK
+  NO SE LEE (aborto): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (arnes): NO SE LEE (espera NO SE LEE) OK
+(R) referencias GUARDADAS: sha16 de los 20 JSON y reproduccion BIT A BIT de bloq2 s59201 T 100 000 por este runner
+  termo s59201 eecf5d9335a6dde8 OK
+  termo s59202 bbd11cb11ca63e32 OK
+  termo s59203 dc7532a72db3da4d OK
+  termo s59204 37132eb55a72aa0d OK
+  termo s59205 0cd8266c052947e3 OK
+  o1 s59201 1cd9ea0af1b1d43e OK
+  o1 s59202 5e24d69de1d6e876 OK
+  o1 s59203 29b382dc3287a854 OK
+  o1 s59204 ecea9f53481020e3 OK
+  o1 s59205 50dd1773faaa7200 OK
+  bloq2 s59201 37df1c9a35a878b9 OK
+  bloq2 s59202 37d2f3f7b82b3487 OK
+  bloq2 s59203 72ef16ef23935921 OK
+  bloq2 s59204 36fb34937c3ac914 OK
+  bloq2 s59205 b60e5a3bb2006914 OK
+  v143 s59201 a2f57a40b271c46a OK
+  v143 s59202 f55726c5257a7d0c OK
+  v143 s59203 20eb68a0cbb10e0a OK
+  v143 s59204 6566984601a2bdbb OK
+  v143 s59205 2470508fedc7ef9d OK
+  bloq2 s59201 T 100k (92s) == guardado en ['linajes', 'pista', 'R0_pista', 'tel', 'tel_termo', 'bq']: OK
+ARNES: PASA · 131s

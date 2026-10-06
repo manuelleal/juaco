@@ -1,0 +1,52 @@
+ARNES identidad_c.py (T 3000)
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+      carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+      carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+      mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+  OK    (K) corre_p1.verifica (shas pista/juez/O1/corre_v143, carros P1 == construye_p1, mundo_escalera)
+  OK    (K) corre_p1.py sha == 392b71186cf49b60
+  OK    (K) mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+  OK    (K) carro O1_LUGAR_COMP en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_COMP: PASA
+  OK    (K) carro O1_LUGAR_COMP_BAR en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_COMP_BAR: PASA
+  OK    (K) carro O1_LUGAR_COMP0 en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_COMP0: PASA
+  OK    (K) carro O1_LUGAR_PLAN en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_PLAN: PASA
+  OK    (K) carro O1_LUGAR_PLAN_BAR en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_PLAN_BAR: PASA
+  OK    (K) carro O1_LUGAR_PLAN0 en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_PLAN0: PASA
+  OK    (K) carro O1_LUGAR_PREG en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_PREG: PASA
+  OK    (K) carro O1_LUGAR_PREG_BAR en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_PREG_BAR: PASA
+  OK    (K) carro O1_LUGAR_PREG0 en disco == construye_c
+  OK    (K) chequeo estatico O1_LUGAR_PREG0: PASA
+      IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+  OK    (K) identidad corta de corre_c (perillas apagadas == mundo_escalera; promotores 0 == O1_LUGAR)
+  OK    (M) mundo_tramo_c apagado == mundo_escalera BIT A BIT (salida entera, s 739956, T 3000) y mismo rng final
+  OK    (K) O1_LUGAR_SENAL en disco == construye_p7
+  OK    (M) c_e 0.01 con SENAL: cobros por linaje [18, 11, 0, 7, 19, 16, 0, 21, 9] (> 0 donde hay escrituras [18, 11, 0, 7, 19, 16, 0, 21, 9]) y la fisica != c_e 0
+  OK    (M) c_e 0.01 con O1_LUGAR (no escribe) == c_e 0 (linajes enteros salvo la telemetria 'cobros' = 0 y 'latencia_vida', y rng: cobrar a quien no habla no cambia nada)
+  OK    (M) letra E nace (comp_mundo A/B/C/D [5.7383, 12.834, 4.231, 10.2047]; E vive en el mundo: 383 visitas), se muerde (28) y la fisica != sin E
+  OK    (M) letra E: la contabilidad del juez sigue cerrando (coherente) y A/B/C/D siguen en mord
+  OK    (M) cerrojo con O1_LUGAR: llaves [1, 1, 2, 2, 1, 4, 3, 1, 1] (<= 1 por fundador: [1, 8, 2, 2, 2, 12, 11, 1, 1]), dentro con llave 26 sin 54
+  OK    (M) cerrojo 1 != cerrojo 0 (el cerrojo actua) con la misma letra K
+  OK    (M) mueve: mudanzas [[0, 65], [1000, 199], [2000, 277]] (>= 2 epocas; oasis final [23, 24, 25, 26] != inicial [5, 6, 7, 8]), latencias por linaje [[1, None, None], [None, 277, None], [None, 535, 358]]..., fisica != sin mudanza
+  OK    (C) O1_LUGAR_COMP0 == O1_LUGAR en el mundo de comp (salida entera)
+  OK    (C) O1_LUGAR_COMP != O1_LUGAR y O1_LUGAR_COMP_BAR != O1_LUGAR_COMP y != O1_LUGAR en el mundo de comp (los modulos y sus controles actuan)
+  OK    (m) COMP muerde E dentro del oasis (25) vs O1_LUGAR (16); exposiciones frias registradas [[0, 0], [0, 0], [0, 0], [0, 0], [0, 0], [1, 1], [0, 0], [0, 0], [0, 0]]
+  OK    (C) O1_LUGAR_PLAN0 == O1_LUGAR en el mundo de plan (salida entera)
+  OK    (C) O1_LUGAR_PLAN != O1_LUGAR y O1_LUGAR_PLAN_BAR != O1_LUGAR_PLAN y != O1_LUGAR en el mundo de plan (los modulos y sus controles actuan)
+  OK    (m) PLAN acredita: pl_cred [65, 0, 2, 1, 0, 0, 0, 46, 39] (> 0), hab [{'B': -0.132, 'A': -0.136, 'K': 0.0, 'C': -0.064, 'D': -0.066}, {}, {'A': 0.0}]...
+  OK    (C) O1_LUGAR_PREG0 == O1_LUGAR en el mundo de preg (salida entera)
+  OK    (C) O1_LUGAR_PREG != O1_LUGAR y O1_LUGAR_PREG_BAR != O1_LUGAR_PREG y != O1_LUGAR en el mundo de preg (los modulos y sus controles actuan)
+  OK    (m) PREG explora (pg_exc [676, 0, 367, 271, 889, 176, 960, 353, 460]) y olvida (pg_olv [670, 0, 584, 798, 540, 615, 637, 518, 760]); el control tambien explora (pg_exc [2834, 1409, 1854, 1723, 0, 0, 2530, 0, 1560])
+
+ARNES PASA, 40/40 · 77.1s

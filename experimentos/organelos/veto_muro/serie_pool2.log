@@ -1,0 +1,253 @@
+CORRE_VETO_MURO · serie_s53701-53720_T100000 · 20260929_135116 · python 3.14.2 · pool 2 · corre_veto_muro.py cd4da2517f888131 · preregistro PREREGISTRO_veto_muro.md 688c01cbd2dfe8be · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\veto_muro\datos\serie_s53701-53720_T100000_20260929_135116
+  tareas 140 · brazos ['tpv', 'tv', 'vinv', 'pc', 'termo', 'o1', 'v143'] · semillas 53701-53720 · T 100000 · fundador limpio 1 · reanuda False
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos\organelos\dinamita\construye_patas.py 85a8c136aa09491d OK
+  sha experimentos\organelos\dinamita\carros\TPATAS.py 1b6272ef4616af8b OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\organelos\veto_muro\construye_veto_muro.py 779c5cd8bea2db85 OK
+  sha experimentos\organelos\veto_muro\carros\TVPISO.py 7653cd267790500b OK
+  carro TVPISO en disco == construye_veto_muro.todas() por anclas desde TPATAS (sin escribir): OK
+  IDENTIDAD CORTA: tpv con VETOP = 0 == TPATAS 3 y con VETOP = PATAS = 0 == V143_TERMO (salida ENTERA, N 9, s 53791, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: tv con VETOP = 0 == V143_TERMO y con VETOP = PATAS = 0 == V143_TERMO (salida ENTERA, N 9, s 53791, T 2000, fundador limpio): OK
+  IDENTIDAD CORTA: vinv con VETOP = 0 == TPATAS 3 y con VETOP = PATAS = 0 == V143_TERMO (salida ENTERA, N 9, s 53791, T 2000, fundador limpio): OK
+  git experimentos/organelos/veto_muro/PREREGISTRO_veto_muro.md: commiteado True · sin cambios vs HEAD True · ultimo commit b13bdfec 2026-09-29T12:39:30-05:00
+  git experimentos/organelos/veto_muro/corre_veto_muro.py: commiteado True · sin cambios vs HEAD True · ultimo commit b13bdfec 2026-09-29T12:39:30-05:00
+  git experimentos/organelos/veto_muro/construye_veto_muro.py: commiteado True · sin cambios vs HEAD True · ultimo commit b13bdfec 2026-09-29T12:39:30-05:00
+  git experimentos/organelos/veto_muro/carros/TVPISO.py: commiteado True · sin cambios vs HEAD True · ultimo commit b13bdfec 2026-09-29T12:39:30-05:00
+  [  103.8s] tv    s53701 (87.9s) cruzan 1/9 R0 real [0.9783, 0.3563, 0.3587, 0.5781, 0.2, 0.5469, 0.0868, 0.1553, 0.3977] aborto None
+  [  119.8s] tpv   s53701 (103.9s) cruzan 2/9 R0 real [0.9796, 0.5818, 0.2308, 0.5278, 0.9756, 0.3731, 0.2857, 0.1512, 0.85] aborto None
+  [  207.7s] vinv  s53701 (103.8s) cruzan 4/9 R0 real [0.9429, 0.9024, 0.1947, 0.0663, 0.975, 0.0848, 0.9706, 0.7347, 0.1191] aborto None
+  [  223.4s] pc    s53701 (103.7s) cruzan 5/9 R0 real [0.5, 0.9778, 0.9744, 0.029, 0.2379, 0.9231, 0.9762, 0.5469, 0.9756] aborto None
+  [  294.4s] termo s53701 (86.7s) cruzan 5/9 R0 real [0.9706, 0.9655, 0.2519, 0.7018, 0.9167, 0.2236, 0.0197, 0.9, 0.9487] aborto None
+  [  381.8s] v143  s53701 (87.4s) cruzan 1/9 R0 real [0.6364, 0.875, 0.5, 0.9677, 0.0191, 0.1523, 0.3662, 0.1702, 0.0426] aborto None
+  [  387.4s] o1    s53701 (164.0s) cruzan 6/9 R0 real [0.9167, 0.9333, 0.9375, 0.9091, 0.8889, 0.5517, 0.9, 0.9231, 0.0] aborto None
+  [  473.9s] tv    s53702 (86.5s) cruzan 4/9 R0 real [0.2081, 0.9767, 0.9744, 0.225, 0.2605, 0.0842, 0.1377, 0.9706, 0.9722] aborto None
+  [  485.0s] tpv   s53702 (103.2s) cruzan 2/9 R0 real [0.3373, 0.1319, 0.2574, 0.9773, 0.4321, 0.5143, 0.9762, 0.5263, 0.3182] aborto None
+  [  577.7s] vinv  s53702 (103.8s) cruzan 5/9 R0 real [0.9688, 0.6889, 0.9677, 0.9643, 0.9722, 0.1059, 0.9722, 0.0532, 0.0435] aborto None
+  [  588.6s] pc    s53702 (103.6s) cruzan 6/9 R0 real [0.9783, 0.473, 0.9744, 0.9773, 0.9811, 0.9375, 0.0205, 0.8571, 0.98] aborto None
+  [  663.9s] termo s53702 (86.3s) cruzan 4/9 R0 real [0.6552, 0.4545, 0.9762, 0.7391, 0.9524, 0.973, 0.0165, 0.9655, 0.7547] aborto None
+  [  751.2s] v143  s53702 (87.2s) cruzan 2/9 R0 real [0.1773, 0.6429, 0.973, 0.9706, 0.0052, 0.5238, 0.5405, 0.1588, 0.8293] aborto None
+  [  754.6s] o1    s53702 (166.0s) cruzan 7/9 R0 real [0.8333, 0.9444, 0.9565, 0.9545, 0.95, 0.9655, 0.9565, 0.9412, 0.625] aborto None
+  [  841.1s] tv    s53703 (86.5s) cruzan 2/9 R0 real [0.9643, 0.2071, 0.825, 0.2946, 0.1156, 0.0566, 0.9706, 0.766, 0.5263] aborto None
+  [  854.2s] tpv   s53703 (103.1s) cruzan 1/9 R0 real [0.3039, 0.3778, 0.6531, 0.2014, 0.9756, 0.2551, 0.3333, 0.3646, 0.5968] aborto None
+  [  944.8s] vinv  s53703 (103.7s) cruzan 4/9 R0 real [0.963, 0.0281, 0.0731, 0.4412, 0.5345, 0.973, 0.2446, 0.9688, 0.9767] aborto None
+  [  958.3s] pc    s53703 (104.0s) cruzan 4/9 R0 real [0.9302, 0.4719, 0.0265, 0.2022, 0.9737, 0.8929, 0.6154, 0.9773, 0.9744] aborto None
+  [ 1030.6s] termo s53703 (85.8s) cruzan 5/9 R0 real [0.9722, 0.9615, 0.4375, 0.9756, 0.0518, 0.052, 0.825, 0.9524, 0.9643] aborto None
+  [ 1118.1s] v143  s53703 (87.4s) cruzan 4/9 R0 real [0.0811, 0.7292, 0.9286, 0.9286, 0.5915, 0.9444, 0.0081, 0.0939, 0.9667] aborto None
+  [ 1122.0s] o1    s53703 (163.7s) cruzan 7/9 R0 real [0.9474, 0.0989, 0.9565, 0.9375, 0.9412, 0.95, 0.0366, 0.9286, 0.9375] aborto None
+  [ 1209.0s] tv    s53704 (87.0s) cruzan 1/9 R0 real [0.9231, 0.3043, 0.9722, 0.2203, 0.1027, 0.1231, 0.7949, 0.375, 0.1737] aborto None
+  [ 1220.2s] tpv   s53704 (102.2s) cruzan 2/9 R0 real [0.2288, 0.0725, 0.8235, 0.4156, 0.7925, 0.9216, 0.5224, 0.9211, 0.64] aborto None
+  [ 1313.5s] vinv  s53704 (104.5s) cruzan 2/9 R0 real [0.7931, 0.2893, 0.7209, 0.0409, 0.9697, 0.5588, 0.9778, 0.0301, 0.5893] aborto None
+  [ 1324.6s] pc    s53704 (104.3s) cruzan 6/9 R0 real [0.9556, 0.9744, 0.5882, 0.0137, 0.878, 0.9773, 0.9787, 0.9688, 0.9318] aborto None
+  [ 1399.5s] termo s53704 (86.0s) cruzan 4/9 R0 real [0.9024, 0.2293, 0.2741, 0.8636, 0.9778, 0.0639, 0.1914, 0.9706, 0.973] aborto None
+  [ 1486.3s] v143  s53704 (86.7s) cruzan 3/9 R0 real [0.7, 0.9706, 0.9722, 0.1975, 0.549, 0.0811, 0.0145, 0.4697, 0.9744] aborto None
+  [ 1489.9s] o1    s53704 (165.3s) cruzan 8/9 R0 real [0.9474, 0.9615, 0.9643, 0.9565, 0.9474, 0.9545, 0.963, 0.9524, 0.0844] aborto None
+  [ 1576.6s] tv    s53705 (86.8s) cruzan 2/9 R0 real [0.2821, 0.875, 0.0575, 0.404, 0.9655, 0.8636, 0.9737, 0.7805, 0.0488] aborto None
+  [ 1589.2s] tpv   s53705 (102.9s) cruzan 2/9 R0 real [0.3438, 0.3333, 0.3021, 0.7143, 0.9762, 0.216, 0.6667, 0.2131, 0.9268] aborto None
+  [ 1680.5s] vinv  s53705 (103.8s) cruzan 4/9 R0 real [0.2611, 0.98, 0.9773, 0.4891, 0.9737, 0.8286, 0.0909, 0.0256, 0.9778] aborto None
+  [ 1692.3s] pc    s53705 (103.2s) cruzan 6/9 R0 real [0.9706, 0.2129, 0.975, 0.9773, 0.9667, 0.9722, 0.2679, 0.0334, 0.9773] aborto None
+  [ 1766.6s] termo s53705 (86.1s) cruzan 5/9 R0 real [0.9667, 0.9474, 0.8824, 0.3333, 0.9706, 0.963, 0.1157, 0.9722, 0.0227] aborto None
+  [ 1854.3s] v143  s53705 (87.7s) cruzan 4/9 R0 real [0.96, 0.8889, 0.9565, 0.9643, 0.0115, 0.2279, 0.2174, 0.9583, 0.018] aborto None
+  [ 1856.7s] o1    s53705 (164.4s) cruzan 7/9 R0 real [0.96, 0.8889, 0.9412, 0.9412, 0.9615, 0.2979, 0.95, 0.9474, 0.9333] aborto None
+  [ 1943.0s] tv    s53706 (86.3s) cruzan 0/9 R0 real [0.337, 0.6909, 0.2435, 0.1128, 0.7368, 0.8298, 0.1268, 0.6119, 0.3267] aborto None
+  [ 1957.0s] tpv   s53706 (102.7s) cruzan 3/9 R0 real [0.9756, 0.1556, 0.5072, 0.9362, 0.9655, 0.1894, 0.6087, 0.1395, 0.6379] aborto None
+  [ 2048.2s] vinv  s53706 (105.2s) cruzan 2/9 R0 real [0.9762, 0.3646, 0.6735, 0.059, 0.8684, 0.7857, 0.127, 0.0464, 0.9667] aborto None
+  [ 2061.3s] pc    s53706 (104.3s) cruzan 3/9 R0 real [0.4531, 0.9773, 0.0202, 0.8103, 0.9828, 0.8913, 0.6267, 0.9808, 0.8548] aborto None
+  [ 2134.9s] termo s53706 (86.7s) cruzan 4/9 R0 real [0.5342, 0.1498, 0.9744, 0.5625, 0.0259, 0.9783, 0.8438, 0.9667, 0.9714] aborto None
+  [ 2222.8s] v143  s53706 (87.9s) cruzan 3/9 R0 real [0.5556, 0.0061, 0.1331, 0.9444, 0.2414, 0.9677, 0.9643, 0.0427, 0.6829] aborto None
+  [ 2226.3s] o1    s53706 (165.0s) cruzan 6/9 R0 real [0.0267, 0.9286, 0.8889, 0.95, 0.95, 0.4651, 0.9091, 0.9412, 0.9565] aborto None
+  [ 2313.3s] tv    s53707 (87.1s) cruzan 0/9 R0 real [0.2991, 0.4133, 0.1854, 0.8636, 0.6308, 0.369, 0.4688, 0.0711, 0.375] aborto None
+  [ 2326.2s] tpv   s53707 (103.4s) cruzan 3/9 R0 real [0.2564, 0.9778, 0.9737, 0.5667, 0.2047, 0.3261, 0.9737, 0.8837, 0.1667] aborto None
+  [ 2417.4s] vinv  s53707 (104.0s) cruzan 1/9 R0 real [0.8378, 0.4231, 0.66, 0.0299, 0.814, 0.7547, 0.9655, 0.0354, 0.4651] aborto None
+  [ 2430.3s] pc    s53707 (104.1s) cruzan 5/9 R0 real [0.8421, 0.9706, 0.9737, 0.9737, 0.027, 0.5972, 0.9655, 0.1907, 0.975] aborto None
+  [ 2503.8s] termo s53707 (86.4s) cruzan 2/9 R0 real [0.1741, 0.8485, 0.7451, 0.1823, 0.6744, 0.8462, 0.9643, 0.9474, 0.0251] aborto None
+  [ 2590.4s] v143  s53707 (86.7s) cruzan 2/9 R0 real [0.9545, 0.5435, 0.0509, 0.1149, 0.4603, 0.5352, 0.0419, 0.8043, 0.9722] aborto None
+  [ 2592.6s] o1    s53707 (162.3s) cruzan 7/9 R0 real [0.9286, 0.8889, 0.0, 0.9444, 0.9231, 0.9167, 0.9375, 0.9412, 0.9474] aborto None
+  [ 2681.0s] tv    s53708 (88.4s) cruzan 0/9 R0 real [0.3232, 0.8478, 0.2286, 0.7931, 0.8205, 0.2957, 0.8889, 0.1615, 0.1162] aborto None
+  [ 2695.5s] tpv   s53708 (105.1s) cruzan 3/9 R0 real [0.7377, 0.9778, 0.4603, 0.9756, 0.1576, 0.131, 0.9796, 0.3409, 0.6724] aborto None
+  [ 2789.0s] vinv  s53708 (107.9s) cruzan 2/9 R0 real [0.5405, 0.7241, 0.8864, 0.0417, 0.0746, 0.7931, 0.9655, 0.9773, 0.1315] aborto None
+  [ 2802.6s] pc    s53708 (107.1s) cruzan 5/9 R0 real [0.7162, 0.9767, 0.2983, 0.0295, 0.9783, 0.9767, 0.975, 0.2147, 0.9667] aborto None
+  [ 2878.9s] termo s53708 (89.9s) cruzan 5/9 R0 real [0.1807, 0.96, 0.3883, 0.9655, 0.975, 0.9756, 0.9655, 0.0329, 0.6032] aborto None
+  [ 2970.6s] v143  s53708 (91.7s) cruzan 4/9 R0 real [0.9677, 0.7179, 0.0086, 0.1111, 0.9773, 0.9459, 0.725, 0.9, 0.2989] aborto None
+  [ 2973.2s] o1    s53708 (170.5s) cruzan 4/9 R0 real [0.9167, 0.0136, 0.9231, 0.9444, 0.027, 0.9, 0.8571, 0.7857, 0.4194] aborto None
+  [ 3063.4s] tv    s53709 (90.2s) cruzan 2/9 R0 real [0.8529, 0.9744, 0.9714, 0.1983, 0.0943, 0.2164, 0.0973, 0.5789, 0.2128] aborto None
+  [ 3077.7s] tpv   s53709 (107.1s) cruzan 1/9 R0 real [0.3077, 0.7843, 0.5, 0.5135, 0.4878, 0.1806, 0.0838, 0.9762, 0.4157] aborto None
+  [ 3171.4s] vinv  s53709 (108.0s) cruzan 4/9 R0 real [0.1, 0.1196, 0.9792, 0.0434, 0.9773, 0.973, 0.6842, 0.9744, 0.5714] aborto None
+  [ 3185.3s] pc    s53709 (107.6s) cruzan 5/9 R0 real [0.9459, 0.9706, 0.5152, 0.9773, 0.907, 0.9783, 0.4211, 0.0192, 0.825] aborto None
+  [ 3263.4s] termo s53709 (92.0s) cruzan 3/9 R0 real [0.8966, 0.9767, 0.4177, 0.0172, 0.2901, 0.9722, 0.7955, 0.7179, 0.9762] aborto None
+  [ 3357.3s] v143  s53709 (93.9s) cruzan 2/9 R0 real [0.871, 0.0026, 0.7179, 0.1839, 0.7647, 0.9737, 0.6724, 0.9722, 0.1728] aborto None
+  [ 3362.3s] o1    s53709 (177.0s) cruzan 8/9 R0 real [0.9565, 0.9583, 0.9474, 0.9655, 0.9615, 0.9231, 0.0246, 0.95, 0.9655] aborto None
+  [ 3451.2s] tv    s53710 (88.8s) cruzan 1/9 R0 real [0.7778, 0.1765, 0.25, 0.84, 0.2414, 0.3857, 0.4118, 0.1229, 0.975] aborto None
+  [ 3462.5s] tpv   s53710 (105.2s) cruzan 3/9 R0 real [0.7843, 0.1667, 0.1029, 0.8788, 0.9778, 0.283, 0.9722, 0.3365, 0.9756] aborto None
+  [ 3559.3s] vinv  s53710 (108.1s) cruzan 4/9 R0 real [0.9643, 0.2482, 0.0337, 0.9565, 0.6792, 0.0459, 0.975, 0.6458, 0.9667] aborto None
+  [ 3571.0s] pc    s53710 (108.4s) cruzan 6/9 R0 real [0.9688, 0.9, 0.973, 0.2937, 0.1429, 0.9412, 0.9756, 0.0247, 0.9474] aborto None
+  [ 3647.7s] termo s53710 (88.4s) cruzan 5/9 R0 real [0.029, 0.9677, 0.9688, 0.5818, 0.9643, 0.9524, 0.9697, 0.56, 0.0464] aborto None
+  [ 3737.3s] v143  s53710 (89.6s) cruzan 3/9 R0 real [0.9032, 0.0227, 0.1623, 0.9524, 0.9286, 0.3291, 0.7576, 0.4516, 0.0167] aborto None
+  [ 3738.8s] o1    s53710 (167.9s) cruzan 7/9 R0 real [0.8421, 0.9545, 0.9167, 0.95, 0.9333, 0.9375, 0.9524, 0.0044, 0.9565] aborto None
+  [ 3826.0s] tv    s53711 (87.1s) cruzan 2/9 R0 real [0.0538, 0.1207, 0.3048, 0.6786, 0.625, 0.2973, 0.9118, 0.375, 0.9762] aborto None
+  [ 3840.9s] tpv   s53711 (103.6s) cruzan 1/9 R0 real [0.9778, 0.3271, 0.3009, 0.5067, 0.5441, 0.678, 0.0638, 0.8654, 0.5455] aborto None
+  [ 3930.4s] vinv  s53711 (104.4s) cruzan 3/9 R0 real [0.973, 0.9756, 0.0765, 0.9787, 0.1328, 0.6053, 0.0266, 0.7547, 0.4583] aborto None
+  [ 3945.9s] pc    s53711 (104.9s) cruzan 6/9 R0 real [0.9677, 0.9744, 0.7143, 0.9697, 0.7018, 0.9744, 0.9688, 0.9767, 0.0077] aborto None
+  [ 4019.4s] termo s53711 (89.0s) cruzan 5/9 R0 real [0.9688, 0.3864, 0.9706, 0.9767, 0.9487, 0.4918, 0.0587, 0.9767, 0.0532] aborto None
+  [ 4110.1s] v143  s53711 (90.7s) cruzan 5/9 R0 real [0.9565, 0.0165, 0.8421, 0.0225, 0.95, 0.1007, 0.9524, 0.9655, 0.9583] aborto None
+  [ 4114.9s] o1    s53711 (169.0s) cruzan 5/9 R0 real [0.9375, 0.9286, 0.0077, 0.9048, 0.4211, 0.1633, 0.9333, 0.875, 0.9375] aborto None
+  [ 4210.4s] tv    s53712 (95.5s) cruzan 1/9 R0 real [0.1783, 0.3774, 0.975, 0.1228, 0.4177, 0.8077, 0.25, 0.5942, 0.6667] aborto None
+  [ 4222.5s] tpv   s53712 (112.4s) cruzan 2/9 R0 real [0.1854, 0.2044, 0.3431, 0.5357, 0.9796, 0.8333, 0.9773, 0.4872, 0.6066] aborto None
+  [ 4325.6s] vinv  s53712 (115.1s) cruzan 3/9 R0 real [0.9697, 0.9677, 0.8974, 0.8333, 0.0478, 0.9655, 0.0409, 0.623, 0.3846] aborto None
+  [ 4337.2s] pc    s53712 (114.7s) cruzan 4/9 R0 real [0.5455, 0.0224, 0.1791, 0.973, 0.9706, 0.5686, 0.9756, 0.9744, 0.86] aborto None
+  [ 4419.8s] termo s53712 (94.3s) cruzan 6/9 R0 real [0.9, 0.9762, 0.0211, 0.9722, 0.9688, 0.3153, 0.9756, 0.9762, 0.22] aborto None
+  [ 4514.8s] v143  s53712 (95.0s) cruzan 3/9 R0 real [0.0054, 0.9722, 0.1558, 0.6863, 0.9737, 0.6207, 0.3085, 0.9697, 0.5333] aborto None
+  [ 4518.4s] o1    s53712 (181.2s) cruzan 7/9 R0 real [0.9375, 0.9333, 0.9545, 0.9474, 0.9565, 0.2041, 0.9643, 0.9333, 0.0481] aborto None
+  [ 4612.6s] tv    s53713 (94.2s) cruzan 2/9 R0 real [0.101, 0.9714, 0.6667, 0.36, 0.1446, 0.9667, 0.2696, 0.9512, 0.2362] aborto None
+  [ 4627.6s] tpv   s53713 (112.7s) cruzan 1/9 R0 real [0.1562, 0.2273, 0.875, 0.7925, 0.9737, 0.7442, 0.1264, 0.875, 0.3068] aborto None
+  [ 4726.1s] vinv  s53713 (113.5s) cruzan 2/9 R0 real [0.6383, 0.054, 0.8182, 0.5645, 0.9655, 0.6415, 0.245, 0.925, 0.0372] aborto None
+  [ 4741.5s] pc    s53713 (113.9s) cruzan 2/9 R0 real [0.8039, 0.6962, 0.0212, 0.6761, 0.9722, 0.5052, 0.697, 0.8947, 0.9535] aborto None
+  [ 4819.6s] termo s53713 (93.5s) cruzan 6/9 R0 real [0.9706, 0.9714, 0.0327, 0.9688, 0.9062, 0.088, 0.1517, 0.9792, 0.9583] aborto None
+  [ 4914.7s] v143  s53713 (95.0s) cruzan 3/9 R0 real [0.9767, 0.5532, 0.7955, 0.963, 0.0151, 0.0315, 0.6316, 0.2935, 0.9792] aborto None
+  [ 4919.8s] o1    s53713 (178.3s) cruzan 7/9 R0 real [0.9474, 0.0, 0.9375, 0.1412, 0.9474, 0.9167, 0.9524, 0.9444, 0.9412] aborto None
+  [ 5013.5s] tv    s53714 (93.6s) cruzan 2/9 R0 real [0.1639, 0.3163, 0.375, 0.2348, 0.9756, 0.1036, 0.2734, 0.9714, 0.566] aborto None
+  [ 5024.4s] tpv   s53714 (109.8s) cruzan 1/9 R0 real [0.3077, 0.3377, 0.9767, 0.2213, 0.2, 0.8409, 0.5873, 0.5606, 0.3846] aborto None
+  [ 5118.8s] vinv  s53714 (105.3s) cruzan 3/9 R0 real [0.0241, 0.9714, 0.963, 0.9744, 0.2681, 0.7544, 0.5366, 0.3214, 0.04] aborto None
+  [ 5129.3s] pc    s53714 (104.9s) cruzan 5/9 R0 real [0.3983, 0.2194, 0.9737, 0.975, 0.0363, 0.2677, 0.9762, 0.9773, 0.9556] aborto None
+  [ 5205.4s] termo s53714 (86.6s) cruzan 4/9 R0 real [0.9762, 0.9231, 0.9737, 0.1637, 0.875, 0.6316, 0.9722, 0.3277, 0.0151] aborto None
+  [ 5292.7s] v143  s53714 (87.3s) cruzan 5/9 R0 real [0.9688, 0.1127, 0.9583, 0.9394, 0.8085, 0.0737, 0.9762, 0.9302, 0.0127] aborto None
+  [ 5294.3s] o1    s53714 (165.0s) cruzan 8/9 R0 real [0.95, 0.9474, 0.95, 0.95, 0.0093, 0.9545, 0.9643, 0.9444, 0.9444] aborto None
+  [ 5381.1s] tv    s53715 (86.8s) cruzan 1/9 R0 real [0.5821, 0.537, 0.8649, 0.9778, 0.1243, 0.3837, 0.5079, 0.3545, 0.09] aborto None
+  [ 5396.1s] tpv   s53715 (103.3s) cruzan 2/9 R0 real [0.3086, 0.2308, 0.6792, 0.9697, 0.4359, 0.133, 0.9714, 0.6596, 0.7455] aborto None
+  [ 5484.6s] vinv  s53715 (103.5s) cruzan 4/9 R0 real [0.7857, 0.9714, 0.8378, 0.0469, 0.9286, 0.019, 0.973, 0.2184, 0.9688] aborto None
+  [ 5500.3s] pc    s53715 (104.2s) cruzan 5/9 R0 real [0.7955, 0.9737, 0.9608, 0.975, 0.8478, 0.9762, 0.0152, 0.9787, 0.8974] aborto None
+  [ 5570.6s] termo s53715 (86.0s) cruzan 6/9 R0 real [0.878, 0.6333, 0.9773, 0.975, 0.9714, 0.9667, 0.973, 0.0126, 0.9706] aborto None
+  [ 5657.3s] v143  s53715 (86.7s) cruzan 3/9 R0 real [0.8065, 0.85, 0.9677, 0.0285, 0.95, 0.5439, 0.2424, 0.0183, 0.9394] aborto None
+  [ 5664.1s] o1    s53715 (163.8s) cruzan 7/9 R0 real [0.9444, 0.9474, 0.9474, 0.9474, 0.3333, 0.0889, 0.9333, 0.9583, 0.9444] aborto None
+  [ 5751.1s] tv    s53716 (87.0s) cruzan 2/9 R0 real [0.1769, 0.5278, 0.0401, 0.871, 0.1905, 0.35, 0.9583, 0.9722, 0.3232] aborto None
+  [ 5760.1s] tpv   s53716 (102.8s) cruzan 1/9 R0 real [0.5507, 0.4154, 0.7857, 0.1515, 0.6129, 0.878, 0.1438, 0.9767, 0.2696] aborto None
+  [ 5855.5s] vinv  s53716 (104.4s) cruzan 4/9 R0 real [0.9706, 0.0403, 0.8864, 0.2889, 0.9744, 0.0549, 0.9706, 0.1302, 0.973] aborto None
+  [ 5863.4s] pc    s53716 (103.3s) cruzan 5/9 R0 real [0.9362, 0.9167, 0.9796, 0.5, 0.9773, 0.6852, 0.1516, 0.9688, 0.0306] aborto None
+  [ 5941.5s] termo s53716 (86.0s) cruzan 5/9 R0 real [0.9565, 0.5077, 0.5143, 0.2657, 0.9815, 0.9189, 0.0258, 0.9643, 0.9767] aborto None
+  [ 6027.3s] o1    s53716 (164.0s) cruzan 6/9 R0 real [0.9091, 0.0296, 0.9333, 0.1818, 0.9474, 0.9333, 0.9412, 0.2821, 0.9412] aborto None
+  [ 6028.7s] v143  s53716 (87.1s) cruzan 3/9 R0 real [0.7273, 0.4048, 0.6585, 0.0052, 0.9583, 0.9744, 0.3763, 0.9062, 0.0843] aborto None
+  [ 6115.4s] tv    s53717 (86.8s) cruzan 2/9 R0 real [0.2478, 0.9737, 0.973, 0.2016, 0.1712, 0.775, 0.8605, 0.1436, 0.1412] aborto None
+  [ 6129.6s] tpv   s53717 (102.3s) cruzan 1/9 R0 real [0.3021, 0.9545, 0.4819, 0.7069, 0.4658, 0.3654, 0.6, 0.3146, 0.1846] aborto None
+  [ 6219.7s] vinv  s53717 (104.2s) cruzan 3/9 R0 real [0.9722, 0.9778, 0.1692, 0.9688, 0.8947, 0.8163, 0.7966, 0.049, 0.0355] aborto None
+  [ 6233.1s] pc    s53717 (103.4s) cruzan 4/9 R0 real [0.98, 0.0272, 0.2308, 0.9762, 0.9756, 0.9697, 0.5435, 0.8039, 0.5207] aborto None
+  [ 6306.2s] termo s53717 (86.5s) cruzan 3/9 R0 real [0.3228, 0.0137, 0.9677, 0.5238, 0.9756, 0.8182, 0.7949, 0.2879, 0.9545] aborto None
+  [ 6393.5s] v143  s53717 (87.3s) cruzan 3/9 R0 real [0.6098, 0.9615, 0.8571, 0.963, 0.0191, 0.0105, 0.72, 0.2551, 0.9697] aborto None
+  [ 6398.5s] o1    s53717 (165.4s) cruzan 7/9 R0 real [0.9583, 0.9333, 0.061, 0.9545, 0.9524, 0.9231, 0.0485, 0.95, 0.9] aborto None
+  [ 6485.7s] tv    s53718 (87.2s) cruzan 1/9 R0 real [0.1699, 0.4086, 0.2897, 0.1158, 0.1754, 0.3491, 0.975, 0.6226, 0.6667] aborto None
+  [ 6496.6s] tpv   s53718 (103.1s) cruzan 2/9 R0 real [0.2672, 0.3765, 0.3365, 0.2126, 0.9756, 0.443, 0.3846, 0.5, 0.9722] aborto None
+  [ 6588.6s] vinv  s53718 (102.9s) cruzan 3/9 R0 real [0.1941, 0.9091, 0.0924, 0.9667, 0.6, 0.1385, 0.0519, 0.8444, 0.973] aborto None
+  [ 6600.1s] pc    s53718 (103.5s) cruzan 5/9 R0 real [0.4375, 0.3014, 0.033, 0.9762, 0.9815, 0.9767, 0.9787, 0.625, 0.9811] aborto None
+  [ 6675.0s] termo s53718 (86.3s) cruzan 4/9 R0 real [0.8333, 0.9524, 0.9565, 0.0546, 0.1858, 0.96, 0.9677, 0.0678, 0.7727] aborto None
+  [ 6761.6s] v143  s53718 (86.7s) cruzan 2/9 R0 real [0.9545, 0.1942, 0.4528, 0.9706, 0.0043, 0.775, 0.4762, 0.5375, 0.3048] aborto None
+  [ 6763.9s] o1    s53718 (163.8s) cruzan 7/9 R0 real [0.9375, 0.2273, 0.9444, 0.9545, 0.0021, 0.9615, 0.95, 0.9167, 0.9091] aborto None
+  [ 6851.0s] tv    s53719 (87.0s) cruzan 1/9 R0 real [0.9333, 0.3396, 0.2128, 0.6727, 0.337, 0.378, 0.2522, 0.0725, 0.3506] aborto None
+  [ 6863.8s] tpv   s53719 (102.2s) cruzan 1/9 R0 real [0.3776, 0.6613, 0.5781, 0.6129, 0.4384, 0.9792, 0.2683, 0.3725, 0.1825] aborto None
+  [ 6954.9s] vinv  s53719 (103.9s) cruzan 5/9 R0 real [0.973, 0.0898, 0.9706, 0.0622, 0.973, 0.9706, 0.55, 0.9706, 0.0598] aborto None
+  [ 6968.4s] pc    s53719 (104.6s) cruzan 5/9 R0 real [0.9362, 0.3622, 0.0153, 0.9808, 0.8571, 0.9762, 0.9787, 0.9787, 0.6774] aborto None
+  [ 7041.3s] termo s53719 (86.4s) cruzan 6/9 R0 real [0.0166, 0.9231, 0.9697, 0.9706, 0.9677, 0.1457, 0.3187, 0.9697, 0.9565] aborto None
+  [ 7128.9s] v143  s53719 (87.6s) cruzan 4/9 R0 real [0.0112, 0.7667, 0.9583, 0.95, 0.9545, 0.1597, 0.9032, 0.0207, 0.475] aborto None
+  [ 7134.1s] o1    s53719 (165.6s) cruzan 8/9 R0 real [0.9524, 0.9545, 0.1513, 0.9583, 0.9412, 0.9655, 0.963, 0.96, 0.9677] aborto None
+  [ 7221.0s] tv    s53720 (86.9s) cruzan 3/9 R0 real [0.9268, 0.1292, 0.29, 0.1862, 0.9706, 0.2605, 0.3093, 0.2339, 0.9737] aborto None
+  [ 7231.8s] tpv   s53720 (102.9s) cruzan 1/9 R0 real [0.475, 0.4286, 0.3178, 0.8605, 0.3333, 0.5507, 0.3333, 0.9697, 0.1931] aborto None
+  [ 7324.7s] vinv  s53720 (103.7s) cruzan 2/9 R0 real [0.56, 0.7234, 0.0331, 0.9643, 0.4118, 0.9737, 0.0406, 0.8158, 0.2701] aborto None
+  [ 7335.4s] pc    s53720 (103.5s) cruzan 4/9 R0 real [0.9714, 0.7368, 0.1575, 0.0309, 0.8511, 0.975, 0.9737, 0.9706, 0.398] aborto None
+  [ 7411.1s] termo s53720 (86.4s) cruzan 5/9 R0 real [0.0257, 0.963, 0.9615, 0.9667, 0.9091, 0.0487, 0.775, 0.8788, 0.96] aborto None
+  [ 7499.8s] v143  s53720 (88.7s) cruzan 2/9 R0 real [0.1311, 0.75, 0.9565, 0.8421, 0.4412, 0.0038, 0.8621, 0.0539, 0.9062] aborto None
+  [ 7500.9s] o1    s53720 (165.5s) cruzan 7/9 R0 real [0.0021, 0.9333, 0.9231, 0.9091, 0.95, 0.9231, 0.9167, 0.95, 0.875] aborto None
+
+== tpv (TVPISO_31 x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.4939 (evaluables 0.494) · R0 preregistrado 0.5474 · vida mediana 600.0 · muertes 71.5 · fundadores 35.5 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 35/180 · semillas con mayoria 0/20 -> no gana · ENMIENDA 6: persisten 46/180 · semillas 0/20 -> no estabiliza (muertes voluntarias fisicas 0.0018) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.547)
+  causas hambre/sed/veneno/sal 2723/2767/5794/3638 (veneno+sal 63%) · pasos sin NADA bueno en el mundo 0.0844 · mordidas B+D 270.5 / A+C 579.0 por linaje · limpiezas fisicas por cuerpo 3.3014
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.8837, 'vetos': 293970, 'mord_sin_meta': 13560, 'limpia_propia': 13317, 'todo_obst': 0, 'des_splits': 2217}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 103.25
+
+== tv (TVPISO_01 x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.3594 (evaluables 0.359) · R0 preregistrado 0.3981 · vida mediana 200.0 · muertes 91.0 · fundadores 58.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 30/180 · semillas con mayoria 0/20 -> no gana · ENMIENDA 6: persisten 45/180 · semillas 0/20 -> no estabiliza (muertes voluntarias fisicas 0.0044) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 0.398)
+  causas hambre/sed/veneno/sal 2981/2744/8098/4036 (veneno+sal 68%) · pasos sin NADA bueno en el mundo 0.0403 · mordidas B+D 234.0 / A+C 518.0 por linaje · limpiezas fisicas por cuerpo 2.3069
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9381, 'vetos': 359654, 'mord_sin_meta': 6575, 'limpia_propia': 6304, 'todo_obst': 0, 'des_splits': 1121}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 87.05
+
+== vinv (TVPISO_32 x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.7049 (evaluables 0.705) · R0 preregistrado 1.202 · vida mediana 1004.5 · muertes 50.5 · fundadores 14.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 64/180 · semillas con mayoria 2/20 -> no gana · ENMIENDA 6: persisten 104/180 · semillas 17/20 -> ESTABILIZA (muertes voluntarias fisicas 0.5659) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 1.202)
+  causas hambre/sed/veneno/sal 1613/1335/14370/9248 (veneno+sal 89%) · pasos sin NADA bueno en el mundo 0.1283 · mordidas B+D 75.5 / A+C 620.5 por linaje · limpiezas fisicas por cuerpo 0.7762
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.8341, 'vetos': 146775, 'mord_sin_meta': 6750, 'limpia_propia': 6481, 'todo_obst': 0, 'des_splits': 1171}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 104.3
+
+== pc (TPATAS_3 x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.934 (evaluables 0.934) · R0 preregistrado 1.5732 · vida mediana 1190.25 · muertes 45.0 · fundadores 2.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 96/180 · semillas con mayoria 14/20 -> no gana · ENMIENDA 6: persisten 143/180 · semillas 20/20 -> ESTABILIZA (muertes voluntarias fisicas 0.8279) · ENMIENDA 3 (ayer): CRUZA (mediana R0 evaluables 1.573)
+  causas hambre/sed/veneno/sal 1201/970/12970/14194 (veneno+sal 93%) · pasos sin NADA bueno en el mundo 0.0612 · mordidas B+D 113.0 / A+C 701.0 por linaje · limpiezas fisicas por cuerpo 1.8694
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9248, 'vetos': 376166, 'mord_sin_meta': 14486, 'limpia_propia': 14144, 'todo_obst': 0, 'des_splits': 2376}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 104.25
+
+== termo (V143_TERMO x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.9012 (evaluables 0.901) · R0 preregistrado 1.4567 · vida mediana 1029.75 · muertes 41.0 · fundadores 2.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 92/180 · semillas con mayoria 12/20 -> no gana · ENMIENDA 6: persisten 129/180 · semillas 20/20 -> ESTABILIZA (muertes voluntarias fisicas 0.7779) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 1.457)
+  causas hambre/sed/veneno/sal 1670/1432/10942/11879 (veneno+sal 88%) · pasos sin NADA bueno en el mundo 0.032 · mordidas B+D 59.5 / A+C 607.5 por linaje · limpiezas fisicas por cuerpo 1.0248
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9601, 'vetos': 467565, 'mord_sin_meta': 6304, 'limpia_propia': 5978, 'todo_obst': 0, 'des_splits': 1546}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 86.45
+
+== o1 (O1 x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.9375 (evaluables 0.938) · R0 preregistrado 2.4988 · vida mediana 3478.0 · muertes 19.0 · fundadores 0.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 136/180 · semillas con mayoria 19/20 -> GANA · ENMIENDA 6: persisten 151/180 · semillas 20/20 -> ESTABILIZA (muertes voluntarias fisicas 0.0) · ENMIENDA 3 (ayer): CRUZA (mediana R0 evaluables 2.499)
+  causas hambre/sed/veneno/sal 1054/919/3962/4021 (veneno+sal 80%) · pasos sin NADA bueno en el mundo 0.0416 · mordidas B+D 355.5 / A+C 677.0 por linaje · limpiezas fisicas por cuerpo 17.5
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 165.35
+
+== v143 (V143 x9) · 20 semillas 53701-53720 · T 100000 · fundador limpio 1
+  R0 REAL (nacimientos reales) mediana 0.6507 (evaluables 0.651) · R0 preregistrado 1.3339 · vida mediana 600.0 · muertes 44.5 · fundadores 15.0 · casi inmortales 0/180
+  ENMIENDA 5 (decide): linajes que cruzan con R0 real 61/180 · semillas con mayoria 2/20 -> no gana · ENMIENDA 6: persisten 114/180 · semillas 18/20 -> ESTABILIZA (muertes voluntarias fisicas 0.8326) · ENMIENDA 3 (ayer): no cruza (mediana R0 evaluables 1.334)
+  causas hambre/sed/veneno/sal 1484/1295/16346/17575 (veneno+sal 92%) · pasos sin NADA bueno en el mundo 0.0278 · mordidas B+D 87.0 / A+C 784.5 por linaje · limpiezas fisicas por cuerpo 1.368
+  telemetria del carro (NO puntua): {'frac_pasos_con_meta': 0.9625, 'vetos': 447262, 'mord_sin_meta': 6275, 'limpia_propia': 5937, 'todo_obst': 0, 'des_splits': 1881}
+  contabilidad coherente 180/180 · t_fund reconstruible 180/180 · s por corrida (mediana) 87.5
+
+================ LECTURA (PREREGISTRO_veto_muro.md sec. 5-6) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\veto_muro\datos\serie_s53701-53720_T100000_20260929_135116
+brazo  cruzan/180  mayoria  R0 med fund med  A+C/lin  B+D/lin mundo A+C  hijos  h<=200 h600 ham  vida h ven+sal  paren
+tpv            35     0/20  0.4939     35.5    579.0    270.5    1.7566   5988  0.0038   0.2368  1544.0  0.2555  0.505
+tv             30     0/20  0.3594     58.0    518.0    234.0    2.5015   5398  0.0022   0.3796  1294.5  0.1593 0.4148
+vinv           64     2/20  0.7049     14.0    620.5     75.5       2.0   5577  0.0789   0.1429  1401.0  0.5048 0.5492
+pc             96    14/20   0.934      2.0    701.0    113.0    2.4867   6692  0.2011    0.078  1248.5  0.6902 0.5305
+termo          92    12/20  0.9012      2.0    607.5     59.5    3.2389   5548  0.1325   0.1911  1273.0   0.478 0.4865
+o1            136    19/20  0.9375      0.0    677.0    355.5    2.0886   2717  0.0066   0.1347  3446.0  0.3298 0.6772
+v143           61     2/20  0.6507     15.0    784.5     87.0    3.2639   4603   0.128   0.1834  1397.0  0.4675 0.5101
+PAREADO en linajes que cruzan (gana/empata/pierde por semilla; suma de 9n; dif = suma a - suma b) y R0 real (mediana por semilla)
+  tpv_vs_termo   gana  1 empata  0 pierde 19 · suma 35 vs 92 (dif -57) · R0 gana 0/20 dif med -0.3487
+  tpv_vs_vinv    gana  3 empata  1 pierde 16 · suma 35 vs 64 (dif -29) · R0 gana 3/20 dif med -0.1741
+  tpv_vs_pc      gana  0 empata  1 pierde 19 · suma 35 vs 96 (dif -61) · R0 gana 1/20 dif med -0.3971
+  tpv_vs_tv      gana  9 empata  2 pierde  9 · suma 35 vs 30 (dif +5) · R0 gana 18/20 dif med 0.1704
+  tv_vs_termo    gana  0 empata  1 pierde 19 · suma 30 vs 92 (dif -62) · R0 gana 0/20 dif med -0.5549
+  pc_vs_termo    gana 10 empata  3 pierde  7 · suma 96 vs 92 (dif +4) · R0 gana 12/20 dif med 0.01
+  vinv_vs_termo  gana  2 empata  1 pierde 17 · suma 64 vs 92 (dif -28) · R0 gana 3/20 dif med -0.1678
+  o1_vs_tpv      gana 20 empata  0 pierde  0 · suma 136 vs 35 (dif +101) · R0 gana 20/20 dif med 0.3922
+  o1_vs_termo    gana 18 empata  1 pierde  1 · suma 136 vs 92 (dif +44) · R0 gana 12/20 dif med 0.0116
+  termo_vs_v143  gana 16 empata  3 pierde  1 · suma 92 vs 61 (dif +31) · R0 gana 18/20 dif med 0.2187
+  por semilla tpv [2, 2, 1, 2, 2, 3, 3, 3, 1, 3, 1, 2, 1, 1, 2, 1, 1, 2, 1, 1]
+  por semilla termo [5, 4, 5, 4, 5, 4, 2, 5, 3, 5, 5, 6, 6, 4, 6, 5, 3, 4, 6, 5]
+  por semilla vinv [4, 5, 4, 2, 4, 2, 1, 2, 4, 4, 3, 3, 2, 3, 4, 4, 3, 3, 5, 2]
+  por semilla pc [5, 6, 4, 6, 6, 3, 5, 5, 5, 6, 6, 4, 2, 5, 5, 5, 4, 5, 5, 4]
+  por semilla tv [1, 4, 2, 1, 2, 0, 0, 0, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1, 3]
+HIJOS Y MUNDO (descriptivo; a_gana = semillas en que el primero 'gana' en la medida; umbral de lectura 13)
+  tpv_vs_termo: hijos_menos_h200 20/20 (0.0034 vs 0.1329) · hijo_vive_mas 19/20 (1530.0 vs 1367.25) · mas_hijos_mueren_de_hambre_600 18/20 (0.2349 vs 0.1823) · come_mas_AC 0/20 (578.5 vs 610.0) · muerde_mas_BD 20/20 (261.5 vs 61.5) · decide_mejor_frac_buena 0/20 (0.6859 vs 0.91) · mundo_mas_pelado_AC 20/20 (1.7566 vs 3.2389) · menos_fundadores 0/20 (31.5 vs 1.5) · mas_establecidos 0/20 (2.0 vs 6.5)
+  tpv_vs_pc: hijos_menos_h200 20/20 (0.0034 vs 0.1969) · hijo_vive_mas 19/20 (1530.0 vs 1274.5) · mas_hijos_mueren_de_hambre_600 20/20 (0.2349 vs 0.0786) · come_mas_AC 0/20 (578.5 vs 700.5) · muerde_mas_BD 20/20 (261.5 vs 109.5) · decide_mejor_frac_buena 0/20 (0.6859 vs 0.8652) · mundo_mas_pelado_AC 20/20 (1.7566 vs 2.4867) · menos_fundadores 0/20 (31.5 vs 1.5) · mas_establecidos 0/20 (2.0 vs 7.0)
+  tpv_vs_vinv: hijos_menos_h200 20/20 (0.0034 vs 0.0806) · hijo_vive_mas 18/20 (1530.0 vs 1405.5) · mas_hijos_mueren_de_hambre_600 20/20 (0.2349 vs 0.1432) · come_mas_AC 1/20 (578.5 vs 617.5) · muerde_mas_BD 20/20 (261.5 vs 81.5) · decide_mejor_frac_buena 0/20 (0.6859 vs 0.8857) · mundo_mas_pelado_AC 20/20 (1.7566 vs 2.0) · menos_fundadores 3/20 (31.5 vs 15.5) · mas_establecidos 0/20 (2.0 vs 5.0)
+  tv_vs_termo: hijos_menos_h200 20/20 (0.0016 vs 0.1329) · hijo_vive_mas 8/20 (1275.75 vs 1367.25) · mas_hijos_mueren_de_hambre_600 20/20 (0.3771 vs 0.1823) · come_mas_AC 0/20 (517.5 vs 610.0) · muerde_mas_BD 20/20 (244.0 vs 61.5) · decide_mejor_frac_buena 0/20 (0.6834 vs 0.91) · mundo_mas_pelado_AC 20/20 (2.5015 vs 3.2389) · menos_fundadores 0/20 (60.0 vs 1.5) · mas_establecidos 0/20 (2.0 vs 6.5)
+  pc_vs_termo: hijos_menos_h200 0/20 (0.1969 vs 0.1329) · hijo_vive_mas 6/20 (1274.5 vs 1367.25) · mas_hijos_mueren_de_hambre_600 0/20 (0.0786 vs 0.1823) · come_mas_AC 20/20 (700.5 vs 610.0) · muerde_mas_BD 20/20 (109.5 vs 61.5) · decide_mejor_frac_buena 1/20 (0.8652 vs 0.91) · mundo_mas_pelado_AC 20/20 (2.4867 vs 3.2389) · menos_fundadores 8/20 (1.5 vs 1.5) · mas_establecidos 11/20 (7.0 vs 6.5)
+  o1_vs_termo: hijos_menos_h200 20/20 (0.0027 vs 0.1329) · hijo_vive_mas 20/20 (3367.5 vs 1367.25) · mas_hijos_mueren_de_hambre_600 1/20 (0.1392 vs 0.1823) · come_mas_AC 20/20 (679.5 vs 610.0) · muerde_mas_BD 20/20 (352.0 vs 61.5) · decide_mejor_frac_buena 0/20 (0.6613 vs 0.91) · mundo_mas_pelado_AC 20/20 (2.0886 vs 3.2389) · menos_fundadores 12/20 (0.0 vs 1.5) · mas_establecidos 15/20 (7.5 vs 6.5)
+  piezas actuan (por semilla): vetos {'tpv': [1495, 1663, 1018, 1771], 'tv': [1096, 1446, 1583, 1055], 'vinv': [546, 491, 840, 651]} ... · cambios de paso {'tpv': [267692, 267011, 206001, 316770], 'vinv': [351176, 416259, 429220, 415311], 'pc': [495278, 514492, 498513, 517960]} ...
+
+  VALIDEZ {'V1_completa_0_abortos_coherente': True, 'V2_O1_mayoria': True, 'V3_ancla_V143': True, 'V4_carros_por_sha_y_perillas': True, 'V5_piezas_actuan': True, 'V6_banda_termo': True} (termo suma 92, banda (70.0, 120.0))
+  PUERTAS {'PA_tpv_mas_cruzan_que_termo': False, 'PB_suma_tpv_ge_termo_mas_15': False, 'PD_control_tpv_sobre_vinv': False, 'PC_letra_muro_tpv_mayoria': False}
+  ABLACIONES Y SECUNDARIAS (no deciden) {'veto_aporta_tpv_sobre_pc': False, 'patas_aportan_tpv_sobre_tv': False, 'veto_solo_tv_sobre_termo': False, 'patas_solas_pc_sobre_termo': False, 'vinv_se_hunde_bajo_termo': True, 'vinv_supera_termo': False, 'tv_letra_muro': False, 'pc_letra_muro': False, 'termo_letra_muro': False}
+  DESCRIPTIVOS {'h200_tpv_bajo_5pct': True, 'mundo_tapado_tpv': True, 'h200': {'tpv': 0.0038, 'tv': 0.0022, 'vinv': 0.0789, 'pc': 0.2011, 'termo': 0.1325, 'o1': 0.0066, 'v143': 0.128}, 'mundo_AC_med': {'tpv': 1.7566, 'tv': 2.5015, 'vinv': 2.0, 'pc': 2.4867, 'termo': 3.2389, 'o1': 2.0886, 'v143': 3.2639}}
+  VOCABULARIO (sec. 11; aplica solo con FUNCIONA o MODESTO): "sin separar el veto de las patas" (tpv no supera a pc con la forma PA+PB) · "sin separar las patas del veto" (tpv no supera a tv con la forma PA+PB) · "mundo tapado" (tpv pela el mundo mas que pc en >= 13/20 y cruza menos que pc)
+
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\veto_muro\datos\serie_s53701-53720_T100000_20260929_135116\resumen.json (sha 719e16239d0bc7e4)
+Terminado en 7501.5s
+VEREDICTO DE LA SERIE: NO   (regla de parada: PREREGISTRO_veto_muro.md sec. 7)

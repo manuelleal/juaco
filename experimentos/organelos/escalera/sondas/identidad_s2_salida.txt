@@ -1,0 +1,30 @@
+[07:28:20] CORRE_S2 (sonda 2: componer con celda retenida) · python 3.14.2 · un proceso · corre_s2.py 6977e4869261f3da
+[07:28:20]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:28:20]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:28:20]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:28:20]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:28:20]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[07:28:20]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[07:28:20]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[07:28:20]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[07:28:20]   carro O1_LUGAR_COMP == construye_c: True (sha c75b4cdb9eec933d)
+[07:28:20]   carro O1_LUGAR_COMP_BAR == construye_c: True (sha 0d7288a081e4b7af)
+[07:28:20]   carro O1_LUGAR_COMP0 == construye_c: True (sha 4068adaca1b1f6fd)
+[07:28:20]   mundo_ret: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 18, 'oasis': 'OasisRet', 'sha_fuente_ret': 'eff0e8d37d9556a2', 'sha_mundo_tramo_c': '4a1044a4e0e1d5c9'} · mundo_ret.py 0b0d84552d176569
+[07:28:34]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[07:28:39]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[07:28:51]   OK    M1 mundo_ret apagado, sin letra == mundo_tramo_c
+[07:28:51]   OK    M2 mundo_ret apagado, con E == mundo_tramo_c con E
+[07:28:51]   OK    E1 retenida ENCIENDE (difiere de apagado)
+[07:28:51]   OK    M3 con el envoltorio Capta == sin el (salida ENTERA)
+[07:28:51]   OK    F1 fisica: E nunca estuvo dentro (composicion dentro = 0) y hubo re-sorteos
+[07:28:51]   OK    F2 fisica: 0 mordidas de E dentro en todos los linajes
+[07:28:51]   OK    M4 la memoria captada == la salida del carro (tabla y lugar, a 3 decimales)
+[07:28:51]   OK    M5 la memoria pasa por JSON sin perder un bit
+[07:28:51]   OK    M6 nace(memoria) reconstruye suma, n, lugar y nl bit a bit
+[07:28:51]   OK    R1 la pregunta es determinista
+[07:28:51]   OK    M7 preguntar NO cambia la memoria (sin resultado())
+[07:28:51]   OK    M8 en la pregunta, COMP0 (promotor 0) == O1_LUGAR
+[07:28:51]   OK    E2 en la pregunta los tres brazos NO son identicos (hay al menos un linaje con respuestas distintas)
+[07:28:51]   (T 1500: E retenidas 8 · E fuera 1.4107 · linajes que conocen E 6/9)
+[07:28:51]   ARNES SONDA 2: 13/13 TODO OK (s 737401, T 1500)

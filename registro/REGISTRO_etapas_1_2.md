@@ -7150,3 +7150,512 @@ también en la serie 2.
   - "muerde A Q4 ≤ 1.10 × tronco" (15/20).
 - **Lectura:** TERMO′ queda a UNA puerta de ser tronco. Lo que falta es conducta: morder menos veneno en los escenarios de v3′.
   No se toca la letra de T-E.
+
+
+## ★ La selección encuentra el termostato en la pista (serie 28-sep 22:55 – 29-sep 09:05; réplica 29-sep 09:05–10:08): **FUNCIONA ×2**
+> Pregunta: con pasajes seriados cortos (lo vivo al final de un pasaje siembra a los fundadores del siguiente, sin juez), ¿el margen `g`
+> del termostato de boca sube solo desde la zona letal (< 0.10) a la banda que funciona, y el bicho de la pista le gana a V143 y al mismo
+> carro sin transferencia? No es un intento contra el muro: la letra es la del termostato.
+
+- **Preregistro:** `experimentos/organelos/reunion/opusB/PREREGISTRO_termostato_pista.md` (commit `7d833c71`, antes del humo y de los datos).
+  Auditor LISTO. Arnés `identidad_termostato.py` 27/27. Runner `corre_termostato.py` sha `27d091dd179ad95c`; carro `V143_PAS` (sólo varía `g`).
+- **Montaje:** T pasaje 25 000 × 10 pasajes; prueba T 100 000; 20 índices; pool 6. Semillas nuevas en serie y réplica.
+- **Crudos:** `datos_termostato/termostato_serie_20260928_225549/` (resumen sha `cd271ec2767eddff`) y `termostato_replica_20260929_090548/`
+  (resumen sha `dd724aab152c4faa`); logs `serie_termostato_pool6.log`, `replica_termostato_pool6.log`; `bloque_termostato_salida.txt`.
+  Commits `2e59aa05` (serie), `68d2821b` (réplica y bloque).
+- **Brazos:** `pasg` (candidato), `ctl` (mismo carro sin transferencia), `v143`, `termo` (g 0.40 diseñado, referencia), `o1` (ancla).
+
+**Veredicto (§6): serie FUNCIONA, réplica FUNCIONA → BLOQUE FUNCIONA ×2.** V1–V5 OK; PA, PB, PC OK en las dos; 0 abortos.
+
+| | serie | réplica |
+|---|---|---|
+| PA `pasg` gana a `v143` (dif mediana) | **20/20** (+0.266) | **18/20** (+0.337) |
+| PA `pasg` gana a `ctl` | **19/20** (+0.521) | **20/20** (+0.568) |
+| PB g sube de p0 < 0.10 a banda [0.10, 0.60] | **20/20** | **20/20** |
+| PC `ctl` en banda (pide ≤ 5) | **0/20** | **0/20** |
+| R0 real mediano pasg / ctl / v143 | 0.890 / 0.350 / 0.598 | 0.934 / 0.337 / 0.577 |
+| R0 real mediano termo / o1 | 0.929 / 0.933 | 0.922 / 0.943 |
+| mayorías que cruzan pasg / termo / o1 | 10 / 11 / 19 | 12 / 13 / 19 |
+
+- g de la siembra de `pasg`: p0 entre −0.03 y +0.07; último pasaje 0.12–0.40. `ctl` se queda en ~0.02.
+- **Serie cortada y reanudada:** apagado del PC la noche del 28-sep; reanudada el 29-sep 08:51 con `--reanuda --pool 6`. Sin pérdida, 0 abortos.
+- **Predicciones del creador (Opus B, §8):** refutada T3 en la réplica (pasg 0.934 > 0.92, arriba del rango). Las demás (T1, T2, T4–T10 y
+  "serie FUNCIONA p 0.55"), cumplidas.
+
+**Lo que NO dice:**
+- **No cruza la letra del muro:** mayorías 10/20 y 12/20 contra 19/20 de O1. El muro sigue MAPEADO; esta línea no lo intentaba.
+- **≈ TERMO, no mejor:** `pasg` gana a `termo` 8/20 en las dos (dif −0.008 / −0.009). La selección REDESCUBRE el termostato.
+- Los fundadores por linaje de `pasg` (79–87) siguen muy sobre O1 (37–38): el establecimiento, la palanca del muro, no se mueve.
+- **Vocabulario:** permitido "la selección lleva sola g de la zona letal a la banda en 20/20 ×2 y le gana a V143 y al control sin
+  transferencia"; "empata con el termostato diseñado". Prohibido "cruza el muro", "supera a TERMO", "aprende".
+- **Nivel:** primera pieza evolucionada DENTRO de la pista. +2 aceptado por el director (ver ESTADO). ERR nuevos: ninguno.
+
+## dinamita (intento #4 contra el muro, 28-sep-2026, ~11:00–23:00): **SE CIERRA SIN INFORME**
+> Carpeta `experimentos/organelos/dinamita/`. El agente nunca entregó informe; los datos se versionaron "sin leer" en `c3f9d34b`. Este cierre
+> es la lectura del auditor (29-sep) y **no es veredicto de un preregistro**: todo es EXPLORATORIO y adaptativo.
+
+- **Letra del muro: NO se cruza.**
+- **Olas 1–2 (VETO / LIMPIA, 8 brazos): NO, 0/10 semillas** (39201–39210), R0 0.05–0.30. Tapan el mundo o dejan un organismo inmortal y
+  estéril. Tocar lo malo en la boca queda cerrado.
+- **Ola 3 (PATAS sobre TERMO, exploratorio):** pc R0 0.943 8/10; pu 0.960 7/10; termo 0.872 6/10; o1 0.939 10/10; control pi 0.742 1/10.
+  pc es el máximo de 12 brazos en las mismas 10 semillas (sesgo del ganador); P1 depende de semillas en el umbral 5/9; pc/pu bajan el mundo
+  A+C (2.5 contra 3.3), sin analizar si es comer más o decidir mejor.
+- **Ola 4 (confirmatoria, semillas nuevas): INCOMPLETA, 8/80 corridas** (`lanza_ola4.out`). No se lee.
+- Si algún día se retoma PATAS: preregistro nuevo commiteado antes, termo/pc/pu/pi en 20 semillas frescas, medido por linajes que cruzan
+  (no por mayoría por semilla). No es prioridad.
+- **ERR-154 (proceso, 28-sep):** las predicciones de las olas 2–4 se escribieron con los datos de la ola anterior a la vista y **sin commit
+  previo** (`dinamita/PREDICCIONES_previas.md:26,43,58`); el primer commit del archivo (`c3f9d34b`) es posterior a todas las olas. Regla: una
+  predicción sin commit previo a los datos que juzga no cuenta como predicción; se marca "escrita con datos a la vista".
+- **ERR-155 (proceso, 28-sep):** la ola 4 (8/80) se versionó junto al resto sin informe ni lectura. Regla: **nada se versiona como cerrado sin
+  lectura**; una corrida incompleta se versiona con nota "incompleto, sin leer" en el mismo commit, o no se versiona.
+- **Siguiente ERR libre: ERR-156.**
+
+
+## pista_pob — la selección con 8 cuerpos por linaje en la pista nueva (29-sep-2026, 10:09–10:27, EXPLORATORIO, 59201–59205): **NO**
+> Pregunta: con una pista NUEVA versionada (K = 8 copias de la pista vieja, migración sólo al fundar; `pista.py` y `juez.py` sin tocar), ¿el
+> depósito de los que PARIERON (pob_sel) mueve el establecimiento con BQ2 a T_evo 50 000 más que el mismo depósito sin selección (pob_neutro)
+> y que la misma BQ2 sin depósito (bloq2)?
+
+- **Preregistro:** `experimentos/organelos/pista_pob/PREREGISTRO_pista_pob.md` (sha `68c78af50617388b`, commit `21a63ff5`, antes del humo y de los datos).
+  Auditor LISTO tras cambios antes de datos (`cfg()` dentro del trabajo; puerta contra `bloq2`, no `bloq_pas`; neutro declarado NO puro).
+- **Instrumento:** `corre_pista_pob.py` `16d2293e09c4a549`; `pista_pob.py` `d4ed07b28e4ba94b`; arnés PASA. Pool 6. Crudos `pista_pob/datos/explora/`; commit `f314135b`.
+
+| linajes que cruzan (de 45) | pob_sel | pob_neutro | v143 | termo | bloq2 | o1 |
+|---|---|---|---|---|---|---|
+| suma | **17** | 16 | 12 | 20 | 21 | 37 |
+| R0 real mediano (descriptivo) | 0.731 | 0.508 | 0.634 | 0.773 | 0.750 | 0.944 |
+
+- **Letra:** FUNCIONA = sel > neutro en ≥ 4/5 **y** sel ≥ bloq2 en ≥ 4/5. Medido 1/5 y 3/5. **NO.** Validez OK (0 abortos, v143 0.634, O1 5/5, arnés).
+- **Predicciones del creador:** refutadas Q1 (sel en [18,28]: 17) y Q4 (3/5); cumplidas Q2, Q5, Q6, Q7 y "NO p 0.70".
+- **Lo que NO dice:** no dice que la población no sirva; dice que 8 cuerpos por linaje con BQ2 y T_evo 50k no separan del neutro. El neutro no es control puro (declarado).
+- **Nivel:** el +1 condicionado a "pista_pob mueve el establecimiento" **no se otorga**. Vocabulario prohibido: "la población selecciona". ERR: ninguno.
+
+## enriquecido (plan 3b) — nueces que sólo abren tras la llave, canal social (29-sep-2026, EXPLORATORIO, 50101–50105): **NO**
+> Idea del director (28-sep, chimpancés en cautiverio): ¿la selección arma la secuencia llave→nuez, y un canal social (copiar al que abrió) la ayuda?
+
+- **Preregistro:** `experimentos/organelos/enriquecido/PREREGISTRO_enriquecido.md` (commit `18ad62fe`, antes de datos; auditor LISTO tras cambios). Runner `233115b6d802ee40`; arnés 46/46. Crudos `enriquecido/datos/explora/`; commit `21341fc5`.
+
+| mediana de 5 | frac_ok | SI (llave|nuez − llave|A) | K | copias |
+|---|---|---|---|---|
+| NUEZ_SOC | 0.197 | −0.147 | 49.4 | 38 |
+| NUEZ_OFF | 0.202 | −0.140 | 50.1 | 0 |
+| NUEZ_DESF | 0.207 | −0.133 | 48.4 | 22 |
+| REF | — | — | 35.9 | 0 |
+
+- **Letra:** validez V0–V3 OK (todos persisten 5/5). P1 SOC > OFF **NO** (1/5); P2 SOC > DESF **NO** (1/5); P3 SI(SOC) ≥ 0.10 **NO** ([−0.227, −0.119]); PS **NO**. **NO; sub-veredicto NO.**
+- **Lectura:** la selección fija `pixF1<θ → boca−` en ~100 % de los vivos: **evita la nuez en vez de abrirla**. El canal social casi no se usa. Contingencia preregistrada (vivero 250k) no corrida.
+- Vocabulario prohibido: "aprende la secuencia", "aprende de otros". ERR: ninguno.
+
+## sentidos_muro — un sentido "riesgo de morder" a una regla (29-sep-2026, EXPLORATORIO, 59201–59205): **NO**
+> ¿Si `V143_BQ3` (BQ2 + sentido 9 "bueno a la vista" y 10 "riesgo de morder") pone la decisión de O1 a UNA regla, la selección por pasajes la fija?
+
+- **Preregistro:** `experimentos/organelos/sentidos_muro/PREREGISTRO_sentidos_muro.md` (commit `ff645237`, antes de datos; auditor LISTO con cambios de texto). Runner `4776b80e18733079`. Crudos `sentidos_muro/datos/explora_20260929_110024/`; commit `d456e288`.
+
+| cruzan (de 45) · mayoría (de 5) | bq3_pas | bq2_pas | bq3 | forzada3 (a mano) | termo | bloq2 | v143 | o1 |
+|---|---|---|---|---|---|---|---|---|
+| suma | **13** | 11 | 15 | **23** | 20 | 21 | 12 | 37 |
+| mayoría | 1 | 0 | 1 | **3** | 2 | 2 | 0 | 5 |
+
+- **Letra:** **NO** (mayoría bq3_pas 1/5; gana a bq2_pas 2/5, a bq3 3/5). Validez OK.
+- **La regla de riesgo no se fija: 0.0 % de la siembra en 5/5 cadenas.** Diagnóstico `forzada3` (regla fija, no decide): cruza 23/45, mayoría 3/5, gana a termo 3/5.
+  **El sentido contiene una política que cruza; la selección por pasajes no la encuentra** (reserva: sentido a medida, +3 en 45, semillas vistas).
+- Predicciones refutadas: S2, S3, S5, S6. Vocabulario prohibido: "el sentido resuelve el muro". ERR: ninguno.
+
+## Junta Fable (29-sep-2026, 3 investigadores Fable, sólo lectura): diagnóstico — **HIPÓTESIS DE TRABAJO, no dato**
+> No es experimento; no hay archivo de la junta en el repo (la citan `moneda/PREREGISTRO_moneda.md` §1 y `veto_muro/PREREGISTRO_veto_muro.md` §1).
+
+| diagnóstico | lo medido después | estado |
+|---|---|---|
+| La selección sólo encuentra lo que está a UNA mutación y paga dentro de la ventana del pasaje; lo que cruza está a ≥ 2 pasos (valle) y paga en otra moneda (investigador 1) | sentidos_muro 0 % en 5/5; moneda: la regla regalada deriva como la neutra | consistente, **no probado** (el pasaje ponderado por hijos a 100k no se corrió) |
+| Evitar es más barato que aprender (investigador 3) | enriquecido "evitar" ~100 %; baldwin: el rechazo impide morder; baldwin_exp: explorar cuesta | consistente ×3 |
+| TERMO ya cerró el establecimiento; falta que el hijo no muera joven (investigador 2) | veto_muro: salva al recién nacido y cruza 35 vs 92 | **refutada como suficiente** |
+
+- Predicciones refutadas con autor: investigador 1 PURGA (p 0.60) en `moneda` → INDETERMINADO; investigador 2 (FUNCIONA 0.25 / MODESTO 0.35) en `veto_muro` → NO claro.
+- Vocabulario prohibido: "la selección no puede cruzar el valle", "está demostrado que evitar es más barato".
+
+## moneda — ¿el pasaje purga o conserva la regla regalada? (29-sep-2026, EXPLORATORIO DIAGNÓSTICO, 59201–59205): **INDETERMINADO**
+> Sembrada al 50 % la regla de `forzada3` en el pasaje 0 de bq3_pas, ¿10 pasajes la purgan (paga en la moneda de la letra, no en la del pasaje) o la conservan?
+> Brazos: moneda (w −3), neutra (misma fila w 0), cero (tasas 0).
+
+- **Preregistro:** `experimentos/organelos/moneda/PREREGISTRO_moneda.md` (commit `b3f7d853`, antes de datos; auditor LISTO con cambios: neutra ≥ 0.10 y moneda ≤ 0.5·neutra para PURGA; régimen mezcla 50/50). Runner `0441aa7bf5b94316`. Crudos `moneda/datos/explora_20260929_121648/`; commit `4f621954`.
+
+| fracción clase A en p9 | mediana | por cadena |
+|---|---|---|
+| moneda | **0.247** | 0.391, 0.067, 0.220, 0.616, 0.247 |
+| neutra | **0.253** | 0.444, 0.229, 0.398, 0.253, 0.120 |
+| cero | media 0.353 | 0.469, 0.320, 0.422, 0.167, 0.389 |
+
+- **Letra:** PURGA no (1/5, 1/5); CONSERVA no (1/5). **INDETERMINADO.** Validez OK.
+- **Lectura:** la regla regalada deriva **igual que la neutra**: para la selección por pasajes es casi invisible. Arrastre sin selección ~0.70 por pasaje. Prueba a 100k de la cadena moneda: 16/45.
+- Refutadas: M2, M3, M4 del creador; **INV1 del investigador 1 (PURGA p 0.60)**. Lo que NO dice: que la regla no valga (a mano cruza). ERR: ninguno.
+
+## patas_muro — TERMO + PATAS contra el muro (29-sep-2026, SERIE 52601–52620, confirmatorio): **NO** (por la letra)
+> ¿Cambiar SÓLO a dónde va el cuerpo (PATAS 3, `pc`: derecho al objeto que la boca de TERMO mordería, cediendo al que otro tiene más cerca) sube los linajes que cruzan?
+
+- **Preregistro:** `experimentos/organelos/patas_muro/PREREGISTRO_patas_muro.md` (commit `2829f7ae`, antes de datos; auditor LISTO con cambios: V6, brazo `pd`, candados, "en el umbral"). Runner `2a5c95aae2b64e43`; arnés 28/28. Crudos `patas_muro/datos/serie_s52601-52620_T100000_20260929_113932/`; commit `43f1a6df`.
+
+| cruzan/180 · mayoría/20 | pc | pu | pd | termo | pi | o1 | v143 |
+|---|---|---|---|---|---|---|---|
+| suma | **101** | 87 | 83 | 90 | 75 | 139 | 49 |
+| mayoría | **15/20** | 10 | 10 | 12 | 5 | 18 | 1 |
+
+- **Letra:** V1–V6 OK. PA **NO** (10/20); PB **NO** (+11); PD OK (16/20, +26); PC OK **en el umbral exacto** (15/20). FUNCIONA = PA∧PB∧PD∧PC: **NO**. No se replicó (regla de parada), y es correcto.
+- **Mundo:** pc come más, muerde más B+D, **no decide mejor** (0/20), pela el mundo (2.47 vs 3.32).
+- **Confirmado aparte en veto_muro (semillas nuevas 53701–53720):** pc 96 vs termo 92, mayoría 14/20 → **pc ≈ termo**; el 15/20 era un borde.
+- Vocabulario prohibido: "PATAS ayuda", "PATAS cruza el muro". ERR: ninguno.
+
+## baldwin — BLOQUES con gen "plástica" en un mundo que se invierte (29-sep-2026, SERIE 56401–56420): **NO**
+> Con inversión A↔B/C↔D cada P = 6k/22k/68k, ¿la selección construye la plasticidad (bit + w0; aprende con la R de la vía lenta; el hijo hereda bit y w0, no lo aprendido) y rescata al linaje?
+
+- **Preregistro:** `experimentos/organelos/baldwin/PREREGISTRO_baldwin.md` (commit `f4e9c7b4`, antes de datos). Runner `76e4c496fa42f4d5`; arnés 34/34. Crudos `baldwin/datos/serie_s56401-56420_T500000_20260929_125351/`; commit `43f1a6df`.
+
+| persisten/20 | P6k | P22k | P68k | sin inversión |
+|---|---|---|---|---|
+| PLAST_V | 0 | 0 | 0 | **16** (frac_pl 0.56) |
+| FIJO_V | 0 | 0 | 0 | **15** |
+
+- **Letra:** PA, PB, PD, PE **NO**. **NO.** Validez V0–V5 OK.
+- **Auditoría posterior: SE SOSTIENE CON RESERVA DE ALCANCE.** |w−w0| mediano 0.0 no es bug: la regla aprende sólo tras morder y una regla de rechazo impide morder; no se entera de la inversión. El NO vale para esta forma de plasticidad, no para toda.
+- Vocabulario prohibido: "la plasticidad no sirve", "Baldwin refutado". ERR: ninguno.
+
+## baldwin_exp — exploración ligada a la reserva (29-sep-2026, SERIE 56601–56620): **NO** — ERR-156
+> Hipótesis NUEVA, no rescate: si el cuerpo prueba a veces lo que rechaza (sólo con reserva ≥ 0.5, ε 0.063 calibrado con regla previa), la regla plástica recibe consecuencias y rescata al linaje.
+
+- **Preregistro:** `experimentos/organelos/baldwin_exp/PREREGISTRO_baldwin_exp.md` (commit `22c10b41`, antes de datos). Runner `fdc5e729057e7bd8`; arnés 52/52. Crudos `baldwin_exp/datos/serie_s56601-56620_T500000_20260929_145954/`; commit `49019a46`.
+
+| persisten/20 | resultado | explorar/vida |
+|---|---|---|
+| PLAST_EXP_P22k | **0** | 0.035 |
+| FIJO_EXP_P22k | 0 | 0.024 |
+| PLAST_EXP_AZA_P22k | 0 | 0.023 |
+| PLAST_V_P22k | 0 | 0 |
+| PLAST_EXP_Pinf | **10** (K 5.2) | 1.99 |
+| FIJO_V_Pinf (ancla) | **17** (K 35.5) | — |
+
+- **Letra:** PA, PB, PD, PM **NO**. **NO.** Validez OK; nada a ±1 del umbral, sin réplica.
+- **Lectura:** con inversión todo 0/20; la exploración casi no actúa (el órgano de rechazo no llega a fijarse). En mundo fijo explorar cuesta (10/20 vs 17/20).
+- **ERR-156 (proceso, 29-sep, antes de la serie; sin efecto en el veredicto):** tras el humo, y con el 15/20 de BALDWIN a la vista, la auditoría cambió la letra (sec. 14 del preregistro):
+  H-1 V5 era vacua (la pasaba PLAST_V sin exploración) → ahora exige `n_mord_exp_aprende > 0` en ≥ 18/20; H-2 ancla FIJO_V_Pinf de ≥ 15/20 a ≥ 13/20 (binomial); H-3 réplica si una puerta queda a ±1 del umbral; H-4 PM sin piso declarado.
+  Efecto contrafáctico: con la letra vieja el veredicto es el mismo (NO). **Regla:** los umbrales de ancla se fijan por binomial ANTES de mirar corridas de la familia; todo cambio de criterio posterior al humo o a una serie hermana lleva número de ERR y su efecto contrafáctico. **Siguiente libre: ERR-157.**
+
+## veto_muro — TERMO + PATAS + VETO_PISO contra el muro (29-sep-2026, SERIE 53701–53720, confirmatorio): **NO claro**
+> ¿Quitar a la boca SÓLO las mordidas de lo sentido malo que el cuerpo no puede pagar (piso de O1) salva al hijo joven y sube los linajes que cruzan?
+
+- **Preregistro:** `experimentos/organelos/veto_muro/PREREGISTRO_veto_muro.md` (commit `b13bdfec`, antes de datos; sec. 8 intacta tras el humo). Runner `cd4da2517f888131`. Crudos `veto_muro/datos/serie_s53701-53720_T100000_20260929_135116/`; commit `60d2c07b`.
+
+| cruzan/180 · mayoría/20 | tpv | tv | vinv | pc | termo | o1 | v143 |
+|---|---|---|---|---|---|---|---|
+| suma | **35** | 30 | 64 | 96 | 92 | 136 | 61 |
+| mayoría | **0/20** | 0 | 2 | 14 | 12 | 19 | 2 |
+| hijo muerto ≤ 200 pasos | **0.4 %** | 0.2 % | 7.9 % | 20.1 % | 13.3 % | 0.7 % | 12.8 % |
+| A+C del mundo | **1.76** | 2.50 | 2.00 | 2.49 | 3.24 | 2.09 | 3.26 |
+
+- **Letra:** PA, PB, PD, PC **NO**. **NO claro.** Validez V1–V6 OK.
+- **Lo que hizo el veto:** salva al recién nacido (20/20) pero el hijo muere de hambre a los 600 (18/20), muerde 4× más B+D, tapa el mundo y los fundadores suben 1.5 → 31.5 (como `vu` de dinamita).
+- Vocabulario prohibido: "el veto ayuda", "salvar al hijo cierra el muro". ERR: ninguno.
+
+- **Lectura de conjunto del 29-sep (no preregistrada):** las piezas de O1 sueltas (veto, patas, ambas) no cruzan: tv 30, pc 96–101 ≈ termo 90–92, tpv 35. **O1 funciona como conjunto** (136–139/180). La selección por pasajes tampoco encuentra la regla hecha a mano. **La selección afina perillas continuas (termostato ×2) pero no inventa combinaciones.**
+
+
+## Jornada del 30-sep-2026 (y madrugada del 1-oct): resumen de entradas (detalle en cada preregistro y resumen.json; commits citados)
+
+> Dos frentes. (A) El muro de la pista vieja: diagnósticos de una junta Fable (genetista, ingeniero genético, biotecnólogo).
+> (B) LA ESCALERA (idea del director): ingeniería genética peldaño a peldaño sobre O1, en mundos que hacen pagar cada capacidad
+> ("no es tiempo, son condiciones para evolucionar"). Todo lo de (B) es DISEÑO DIRIGIDO, no selección, y vale en el mundo con oasis.
+
+### ★★ ESCALERA P1 — memoria de lugar: **FUNCIONA ×2**
+- Preregistro `experimentos/organelos/escalera/PREREGISTRO_p1.md` (commit `76dc3d11`); serie `4b71b1bd`, réplica `c24acbf5`.
+- O1 + 30 bins de "lo que este sitio dio de más"; viaja al bin recordado. Mundo con oasis (arco 10 %, vista 20, pobre 0.5, dens 0.5).
+  Control `bar`: lee el antípoda fijo (lugar equivocado, mismo costo).
+
+| | serie (739001–739020) | réplica (739101–739120) |
+|---|---|---|
+| cruzan lug / bar / o1 (de 180) | **79 / 0 / 7** | **85 / 0 / 7** |
+| lug gana a bar y a o1 | 20/20 y 20/20 | 20/20 y 20/20 |
+| tiempo en el oasis lug / bar / o1 | 7.25× / 0.59× / 1.05× | 7.26× / 0.58× / 1.05× |
+| vida del hijo lug / bar / o1 | 1504 / 200 / 200 | 1352 / 200 / 200 |
+
+- **ERR-170:** el control `bar` original (permutación al azar por instancia) filtraba: ~45 % de las instancias leían el oasis (ratio 3.5 en la
+  exploración). Corregido a antípoda fijo ANTES de la serie. Regla: un control de "contenido equivocado" se verifica que de verdad no acierte.
+- **ERR-171:** sesgo del ganador: mundo y viaje se ajustaron en ráfaga hasta que lug ganó en 2 semillas. Declarado; vocabulario acotado
+  "en el mundo con oasis". No se compara con el muro de la pista vieja (o1 en pista lisa 137–139/180).
+- Vocabulario: permitido "recuerda dónde le fue bien y pasa más tiempo allí". Prohibido "vuelve", "aprende el mapa", "cruza el muro".
+
+### ★ ESCALERA P7 — señal por pizarra con significado dado, entre linajes clones, con costo de emitir: **FUNCIONA ×2 CON RESERVA (ERR-175)**
+- Preregistro `PREREGISTRO_p7.md` (commit `61c61ef8`); serie `1a3d744a`, réplica `0761d0f6`.
+
+| | serie (739601–739620) | réplica (739651–739670) |
+|---|---|---|
+| cruzan sen / lug mudo / senbar (de 180) | **132 / 80 / 49** | **124 / 81 / 50** |
+| sen gana a lug · a senbar | 17/20 · 19/20 | 16/20 · 20/20 |
+| mayorías sen | 18/20 | 19/20 |
+| fundadores sen / lug | 3.0 / 28.4 (20/20) | 4.3 / 28.5 (20/20) |
+| PM nueva: vidas que llegan al oasis | 0.58 vs 0.26 (20/20) | 0.51 vs 0.25 (20/20) |
+| sombra, PM original (latencia) | NO pasa (5/20) | NO pasa (6/20) |
+
+- **ERR-172:** `corre_p7.main()` nunca se había corrido de punta a punta (ERR-42 en un peldaño nuevo) → humo 3 con costo antes de la serie.
+- **ERR-173:** Q9 mal calculada (10×). **ERR-174:** faltaba el nulo por puerta.
+- **ERR-175:** la puerta PM se cambió de "latencia" a "fracción de vidas que llegan" DESPUÉS de ver el humo 3 (sesgo de supervivencia
+  anticipado por el auditor). Se selló antes de la serie. Lectura: FUNCIONA ×2 con la PM commiteada; con la original no pasa en ninguna.
+  Lo medido: la señal no hace llegar antes, hace llegar a más vidas. PA, PB y PF no se tocaron.
+- Vocabulario: prohibido "comunicación" a secas, "lenguaje", "mensaje", "coopera", "aprende de otros".
+
+### ★★ ESCALERA P10 — ir al lugar del que hace más tiempo no tiene dato, en un mundo donde el oasis se muda: **FUNCIONA ×2**
+- Preregistro `PREREGISTRO_p10.md` (commit `be35c3d2`); serie `e1991efb`, réplica `f08717fc`.
+
+| | serie (739821–739840) | réplica (739851–739870) |
+|---|---|---|
+| cruzan preg / lug / pregbar (de 180) | **164 / 82 / 53** | **163 / 91 / 65** |
+| preg gana a lug y a pregbar | 20/20 y 20/20 | 20/20 y 20/20 |
+| mayorías preg / lug | **20/20** / 6 | **20/20** / 11 |
+| R0 real mediano preg | 0.96 | 0.96 |
+| latencia tras la mudanza preg / lug | 442 / 1242 | 459 / 1280 |
+| nunca llegan preg / lug / pregbar | 0 / 22 / 35 | 0 / 27 / 32 |
+
+- Lo que NO dice: el control es PESIMISTA (destino lejano sin información, no de igual costo); el efecto es del conjunto "olvido por presencia +
+  ir al menos visitado"; el oasis nunca vuelve al mismo sitio (coincide con la regla); preg pela el mundo (A+C 0.67–0.69 de la base, no puntúa).
+- Vocabulario: prohibido "curiosidad", "se pregunta" como experiencia interna.
+
+### ESCALERA, ráfaga (exploratorio, nada se declara; `escalera/BITACORA.md`)
+- **P9 planear: CERRADO** (3 humos sin señal: con cerrojo/llave los tres brazos colapsan, vida 200–300).
+- **P2 colonia pegada: CERRADO** (5 humos: 3 con O1, 2 con la célula ECO; pegarse no paga en ningún montaje).
+- **P8 componer:** sin señal por la letra en 2 humos (el mecanismo asoma; la medida J se confunde con la limpieza de O1).
+- **Tramo D, sexo y familia (idea del director):** D1 recombinación y D4 reducción de camada SIN señal; el mundo de 9 deja 2–5 cuerpos vivos:
+  no hay familias que medir. En D1 la recombinación resta (nietos 578 vs clon 772). Necesita ECO grande. No refutado: sin instrumento.
+
+### o1_evo — O1 con 4 genes heredables: **NO** por la letra (commit `24543a49`)
+- o1pas 128 vs o1 135 vs o1ctl 134 (de 180): la selección NO supera al diseñador. Pero **o1pas vs o1neu (genes no leídos): 128 vs 81, 16/20**:
+  sin selección O1 se degrada; con selección se conserva. PRUEBA baja direccional 19/20. Serie cortada el 29-sep 20:37 y reanudada sin pérdida.
+- **grande** (exploratorio, `a4fc4971`): en mundo G=2 con oasis y pantano el orden se mantiene (o1 34 > termo 20 > v143 4 de 45); nadie usa el
+  oasis ni evita el pantano (sin memoria de lugar); o1pas 30 vs o1 34. **ERR-157:** sec. 5bis (casi inmortales) escrita tras el humo.
+
+### Diagnósticos de la junta (exploratorios, 5 cadenas cada uno)
+- **entre_linajes** (`f70da67f`): FUNCIONA en el umbral. sel 30 vs neu 14 (de 45); sel = igual 30; sel no supera a o1 35. **ERR-158:** la letra
+  se endureció (P4 obligatoria) porque el auditor vio datos parciales de o1_evo.
+- **mutación ÷10** (`ff09fac3`): **PURGA**. Con la carga baja, la selección por pasajes de 25k elimina la regla de riesgo: 0.26 vs neutra 0.64;
+  aun así la cadena cruza 24/45. **ERR-159:** enmiendas frente a moneda (banda de cero, PURGA sin < 0.10, puertas nuevas).
+- **genoma** (`21a3985b`): CAPACIDAD PAGA en el umbral. cap 16 vs fab 12 vs aza 12; no aparece la doble regla (0/45).
+  Hallazgo de montaje (ingeniero): en V143_BQ2 p_dup 0.02 + p_ins 0.05 − p_del 0.07 = 0: el genoma quedaba clavado en 2 reglas.
+- **moneda_muro** (`857bbb87`): **CONSERVA** (en el umbral). Con pasajes de 100k y siembra sólo de linajes establecidos la regla SUBE a 0.80
+  (neutra 0.14); 5/5 con un empate 0 = 0 (estricto: 4/5). Pero la cadena no cruza más (17/45 vs neutra 23). **ERR-176:** CONSERVA de 4/5 a 5/5
+  (falso positivo bajo la nula 0.28 → 0.07).
+- **Lectura:** la moneda de la selección era un candado del muro (25k purga, 100k-establecidos conserva), pero no el único.
+
+### O1 libre con poderes (sesión JUACO 5, rama `o1-libre`, commit `515a1c52`): HAY ALGO MODESTO
+- De cuatro poderes apagados (memoria de lugar, copia social, reserva, pausa) la selección prende sólo **MEM**: 0.120 vs 0.060 del neutro,
+  10/10 (diferencia 0.0596, justo sobre el umbral 0.05). Sin conquista (lib 55 vs o1 66). Réplica en curso. ERR-160 (suyo).
+- Coincide por otro camino con P1: cuando puede elegir, la selección elige la memoria de lugar.
+
+**ERR de la jornada (esta sesión): 157, 158, 159, 170–176. JUACO 5: 160 (bloque 160–169). Siguiente libre de esta sesión: ERR-177.**
+
+- **Corrección (1-oct, 02:50):** O1 libre con poderes cerró como **BLOQUE NO** (commit `23a6c83d`, rama `o1-libre`): la subida de MEM por selección
+  de la serie (10/10, dif 0.0596) **no replicó** (6/10, dif 0.047). Queda retirada la frase "cuando puede elegir, la selección elige la memoria
+  de lugar". Se repite ×2 sólo lo descriptivo: la selección sostiene a O1 frente a la deriva y no lo supera.
+- **Los tres juntos** (`f3054b56`): NO SUMAN en serie (todo 159 vs preg 163 vs sen 129 vs lug 88 vs todobar 90 de 180); no se estorban; réplica en curso por umbral.
+
+- **Los tres juntos, réplica (1-oct 03:53):** NO SUMAN -> **BLOQUE NO SUMAN x2**. Réplica: todo 169 vs preg 163 vs sen 129 vs lug 95 vs todobar 95 (de 180); todo vs preg gana 9, empata 8, pierde 3 (+6): no pasa. Serie: 159 vs 163. No se estorban; mayorías 20/20; la señal leída al antípoda cae a 90-95 x2.
+
+
+## Jornada del 1-oct-2026 (redactada ~13:00 y completada ~15:00; apagado del PC a las 16:00)
+
+> Rama `organelos`, commits hasta `f34ea70c` (la réplica de perillas) más el commit de este cierre, empujado. Cifras tomadas de los `resumen.json` / `lectura_mmr.json` (precisión completa) y de los logs; "sha" = 16 hex de SHA-256 del archivo.
+> Orden de cada bloque: veredicto del preregistro por su letra, después lo exploratorio marcado como tal. Los negativos van igual que los positivos.
+> Vocabulario de toda la jornada: lo de la Escalera es DISEÑO (el módulo lo escribió el ingeniero) y vale "en el mundo con oasis (que se muda)". La única línea donde la selección mueve algo es perillas (FUNCIONA ×2, con el módulo escrito por el ingeniero). Prohibido sin respaldo de la letra: "comunicación", "lenguaje", "aprende", "inventa", "×2" en lo que no tiene réplica.
+
+### NO — moneda_muro_rep: la réplica de "la moneda del muro" no replica el CONSERVA del explora (ERR-177)
+- Preregistro `PREREGISTRO_moneda_muro_rep.md` (commit `4f07e7f0`, 07:21, sha `bf5dea43baf5e443`). Instrumento: `condiciones/moneda_muro/corre_mm.py` (sha `d45a5ed42e8514df`, importado sin tocar), runner `corre_mmr.py` (sha `11e3b7288aa0116b`), arnés PASA. Crudos: serie 647301–647310, n = 10 cadenas por brazo, 6 pasajes de 100 000, commit `200e0d0a` (09:09); `datos/serie_20261001_072203/lectura_mmr.json` (sha `3a31a31891cbb514`). 0 abortos, validez OK.
+- Letra (sección 5 del preregistro, por código): **fracción de la regla de riesgo: INDETERMINADO · cruce: SIN DIFERENCIA.** Titular del runner: "NO: el CONSERVA del explora no replica".
+
+| | moneda_L | neutra_L |
+|---|---|---|
+| fracción final de la regla, mediana (media) | **0.0** (0.196) | **0.4166** (0.4548) |
+| moneda_L > neutra_L (corte 7 de 10) | 3/10 | |
+| moneda_L ≤ 0.5 × neutra (corte PURGA 8 de 10) | 6/10 | |
+| cruce de la prueba final (de 90) | **41** | **42** |
+| cruce pareado (corte ±9 y 7 pares) | D −1 · gana 3, empata 3, pierde 4 | SIN DIFERENCIA |
+| cadenas que terminan sobre su 0.50 inicial | 1/10 | 4/10 |
+| reglas fijadas / perdidas | 0 / 6 | 3 / 4 |
+
+- Lecturas declaradas que no deciden: la letra original escalada (≥ en 10/10) no se cumple (4/10); la estricta en ≥ 8/10 tampoco. El descriptivo apunta en contra de CONSERVA (moneda_L termina más baja que la neutra), pero PURGA tampoco alcanza su corte (6 de 8): **no se declara PURGA.**
+- Predicciones del creador refutadas: R1 CONSERVA (p 0.45), R3 PURGA (p 0.05), R5 "cruza menos, como apuntó el explora" (p 0.25), R6 "cruza más, hipótesis del director" (p 0.04), R7 neutra_L mediana ≤ 0.30 (medido 0.4166), R8 moneda_L mediana ≥ 0.40 (explora 0.80, medido 0.0), R13 letra original escalada. Cumplidas: R2 INDETERMINADO, R4 SIN DIFERENCIA, R9–R12. La hipótesis 2 del director (la cadena que conserva la regla cruza más) queda refutada en este montaje: 41 contra 42.
+- Auditoría posterior: **SE SOSTIENE.**
+- **Consecuencia:** el "CONSERVA en el umbral" del explora (`857bbb87`, 5 cadenas) no replicó. Se retira "la moneda era un candado" como causa del muro. Lo que queda: a 25k la selección purga la regla (0.26 contra 0.64, diagnóstico de mutación ÷10); a 100k con siembra de establecidos el resultado es INDETERMINADO.
+- **ERR-177 (método):** un resultado "en el umbral" (CONSERVA, n = 5, 4/5 estricto, cortes escogidos viendo los datos; ya ERR-176 había bajado 4/5 a 5/5 por falso positivo) entró a ESTADO, HANDOFF y REGISTRO escrito como causa ("la moneda era un candado", "100k-establecidos conserva") y no replicó. Regla desde hoy: **lo exploratorio en el umbral se registra como exploratorio hasta que cierre una réplica**, con el verbo en condicional y sin explicación causal.
+- Nivel del brief: sin cambio (diagnóstico del muro, no avance de nivel).
+
+### ★★ ESCALERA — la señal leída puede pisar memoria de lugar caducada (PISA): FUNCIONA ×2 (la serie, EN EL UMBRAL)
+- Preregistro `escalera/mixto/PREREGISTRO_pisa.md` (commit `0fa6c432`, 08:15, sha `e2f623c945e6f862`). Runner `corre_pisa_serie.py` (sha `13204ba2ab2cef87`); cada corrida ES `corre_juntos.tarea` (sha `db75135c8c2f3e0d`), mundo `mundo_tramo_c` (sha `4a1044a4e0e1d5c9`). Serie 738641–738660, commit `53c7e64d` (10:27), `resumen.json` sha `52a6777dd127cbb1`. Réplica 738671–738690, commit `e59b07a4` (11:30), `resumen.json` sha `00df9567f39a8471`. n = 20 semillas pareadas, T 100 000, el oasis se muda 4 veces (cada 20 000), 9 linajes, un explorador (e = i mod 9) y 8 lectores. 0 abortos ×2; las siete validez V1–V7 OK ×2.
+- Origen (cadena de hechos, nada de esto cuenta): "juntos" no sumó la señal a explorar → humo "uno explora, ocho leen" sin señal → sonda de sólo lectura `nl`: tras cada mudanza se rechazan 99.8 % (mix) y 98.8 % (sen9) de las lecturas que apuntaban al oasis nuevo porque `nl[b] != 0` no se borra con la mudanza → variante de UNA línea en `_sn_lee` (`SN_PISA`: si el sitio leído ya no vale en la memoria propia, se borra la marca `nl` y la señal puede sembrar). Memoria nueva: 0 floats. Es DISEÑO.
+- La letra la fijó el nulo simulado `nulo_pisa.py` (falso positivo máximo declarado 5.7 % para FUNCIONA) y se endureció antes de la serie: MODESTO exige que pase `G_var_pares`.
+
+| medida (mediana de la latencia de los 8 lectores, en pasos; menor gana) | serie | réplica |
+|---|---|---|
+| **pmix** (explorador + lectores PISA) | **973.5** | **982.5** |
+| mix (lectores originales, aísla la variante) | 1317.8 | 1205.5 |
+| pmixbar (los lectores leen al antípoda) | 1457.0 | 1516.2 |
+| pmudo (explorador mudo, lectores PISA) | 1566.0 | 1315.2 |
+| G_var_pares: pmix < mix (corte 14/20) | **15/20** (empata 0, pierde 5) | **17/20** (0, 3) |
+| G_var_magnitud: razón mediana pmix/mix (corte ≤ 0.85) | **0.7779** | **0.7836** |
+| G_contenido: pmix < pmixbar (corte 14/20) | **16/20** | **17/20** |
+| G_mudo: pmix < pmudo (corte 14/20) | **20/20** | **19/20** |
+| en el umbral (±1 par) | **sí** (15 contra 14) | no |
+| lectores que nunca llegan, mix / pmixbar / pmix / pmudo | 10 / 24 / 0 / 0 | 9 / 30 / 0 / 0 |
+
+- Letra: serie FUNCIONA (EN EL UMBRAL) → réplica lanzada por la regla de parada → réplica FUNCIONA fuera del umbral → **FUNCIONA ×2.**
+- Predicciones del creador (firmadas antes): cumplidas en la serie y en la réplica: pmix < mix 15 (rango 12–18), razón 0.80 (0.65–0.95), contenido 17, mudo 17, latencias pmix 900 (750–1100), mix 1200 (1000–1450), pmixbar 1450 (1200–1900). Refutadas o al borde: (a) la ficha 4 predecía latencia de lectores ≤ 700 pasos: 973.5 y 982.5, no se alcanzó (ya refutada en el humo 2); (b) latencia de pmudo 1800 (1300–2600): 1566 dentro, 1315 en el borde inferior, y **el orden predicho pmudo > pmixbar no se repitió en la réplica** (1315 contra 1516); (c) mundo A+C de pmix mayor que el de mix por 0.3–1.5: 1.67 en la serie (fuera) y 1.45 en la réplica. Veredicto firmado: FUNCIONA 0.45.
+- **Reservas (auditoría posterior: SE SOSTIENE CON RESERVAS; van siempre junto al veredicto):**
+  1. *Mundo distinto.* Mundo A+C (más alto = menos pelado): pmix 7.86 y 7.78, mix 6.19 y 6.33, pmixbar 7.27 y 7.48, pmudo 7.87 y 7.98. pmix y mix no corren en el mismo mundo.
+  2. *Efecto del explorador hablando.* pmudo, con el mundo igual de rico que pmix (7.87 contra 7.86), es más lento que mix (1566 contra 1318 en la serie; 1315 contra 1206 en la réplica): la ventaja de pmix sobre mix no es de la variante sola, depende de que el explorador hable y de que los lectores puedan pisar.
+  3. *Cruce.* Lectores que cruzan (de 160): pmix 140 y 143, mix 117 y 126, pmudo 140 y 138, pmixbar 33 y 37. El cruce mejora con la variante pero no depende de que el explorador hable (pmudo = pmix); el contenido equivocado lo hunde.
+  4. *Rumor.* Fracción de pisadas al oasis VIEJO en pmix: 18.2 % y 15.8 % (pmudo 21.9 % y 18.8 %; pmixbar 11.9 % y 9.8 %). Sin daño medido; no se midió el costo.
+  5. Fundadores de los lectores (media): pmix 1.1 y 0.6, mix 4.4 y 2.8, pmixbar 60.1 y 69.6.
+  6. Descriptivo, sólo serie y n = 10: `sen9` cruza 59 de 90 y `pisa9` (sin explorador) 70 de 90; latencia 1377 y 1399.5: sin explorador la variante no acelera.
+- Vocabulario permitido: "en el mundo con oasis que se muda, una señal con significado dado (bin y bono) en la pizarra, leída por lectores que borran la marca de un sitio ya caducado, hace llegar antes al oasis nuevo a los lectores cuando un explorador la emite; diseño, no selección; el módulo previo (P7) no cambia". Prohibido: "comunicación" y "lenguaje" a secas, "mensaje", "aprende de otros", "la señal suma sobre explorar" sin las reservas 1 y 2, comparaciones con el muro de la pista vieja.
+- Nivel del brief: sin cambio (diseño dirigido en un mundo propio; lo decide el director).
+
+### ESCALERA, sondas (exploratorio, nada se declara; commit `faf2fd0c`, 08:26, preregistro `escalera/sondas/PREREGISTRO_sondas.md` sha `3e8d9cbaeaf72e04`, escrito antes de leer números)
+- **P9 "planear": LIBERADO sin construir. ESPACIO NO.** Regla escrita antes (ESPACIO SÍ si el piso vive —establecidos ≥ 12/18—, cota dura − piso ≥ +4 cruces de 18 y ganancia efectiva ≥ 1.10). Semillas 737200–737201, T 100 000, 18 linajes, siete humos: **piso 8, oráculo 6, azar 6, regalo 6 de 18** (humos 1 y 2; establecidos 12, 14, 13). Cota − piso = −2. El plus energético no abre espacio (el tope de niveles 1.5 y el gasto fijo se lo comen); el plus reproductivo tampoco (humo 4: regalo 6 contra piso 8, partos 476 contra 449); en pista mixta el oráculo cruza menos (humo 5: 9/18 contra 12/18); a `extra_sin` 0.2 el piso casi muere (3 cruces) y el azar iguala o supera al oráculo (azar 10, techo 9, humo 7: no hay orden que pagar). Predicciones del creador de la sonda refutadas: "extra_sin 0.4 abre el espacio" (regalo 7 contra piso 7), "el plus reproductivo separa" (regalo − piso < +4), "en pista mixta el oráculo gana +0.20" (cruza menos). Acertada: "ESPACIO NO en el mundo del encargo".
+- **P8 sonda "celda retenida" (semillas 737300–737305, T 60 000, 54 linajes):** composición a medias: D (dentro − fuera) mediana 0.5, 0.43 de media en los válidos, ≥ 0.6 en 31 %; sin composición D = 0 exacto; la segunda puerta (B dentro) 0.0, mejor que lo predicho. No alcanza la regla (mediana ≥ 0.6). Dio los umbrales de la serie de P8.
+- **Reactor** (`reactor/`, sonda del motor ECO): el motor corre a escala 300, 900 y 1200 con costo casi lineal (12.1, 26.4 y 34.7 s por 100 000 pasos; 0.97, 0.89, 0.83 µs por cuerpo y paso); población viva de la segunda mitad ≈ 0.40 × escala (120.6, 359.0, 479.5); profundidad de eventos mutacionales al final de 14.3, 11.6 y 15.7 (a T/2: 8.1, 5.3, 5.4). Arnés 15/16: la prueba que falla es "la corrida no es trivial" porque la semilla se extinguió (vivos 0 al final); el resto PASA (comparador con control de cambio, ganchos, genealogía completa: 0 filas faltantes de 26 631).
+- **Paso 0 del Reactor** (esc 90, 40 semillas: serie 20 + réplica 20): se fija **un solo órgano funcional**, el rechazo (`pixF[AC]->boca+`), en 38/40 semillas. Base de segundas funciones: excluyendo el órgano de rechazo, ≥ 1 forma funcional fijada en 2/40 y ≥ 2 en 0/40. Es la línea base del borrador F1 (esc 90 contra esc 900; no se corre hoy: entra al PC nuevo).
+
+### ★★ ESCALERA, perillas: la selección sube la perilla del viaje donde el mundo la paga — FUNCIONA ×2 (una evidencia, no dos; con reservas)
+- Preregistro `escalera/perillas/PREREGISTRO_perillas.md` (commit `9f53cb60`, 07:46, sha `006d5613f2942c2c`; creador Fable). Runner `corre_perillas.py` (sha `f98b98527155f029`), constructor sha `b5d1a10f6f913556`, carros `O1_LUGAR_GEN` (`ecc996d2fecccc30`) y `O1_LUGAR_GEN0` (`89db6c8a74902fe1`); arnés 74/74. Serie: cadenas 741xxx, pruebas 741201–741220, commit `4f6b6d08` (11:02), `resumen.json` sha `39c7d12816f6597a`, n = 20 cadenas pareadas de 5 pasajes de 100 000, 0 abortos, 11 725 s.
+- Qué es: en el mundo con oasis de P1 el módulo de memoria de lugar es del ingeniero pero NACE APAGADO: dos genes (GW peso del bono, GV ganancia del viaje) arrancan en 0; mutación de un gen por nacimiento (σ 0.03, sesgo a la pérdida δ 0.01), cámara continua y siembra de establecidos. Neutro: misma cadena con `PS_LEE 0` (ningún cuerpo lee los genes). La prueba usa UN genoma monomórfico (la mediana de la cadena).
+- **Letra de la serie: FUNCIONA, fuera del umbral** (PG y PC pasan; validez V1–V7 OK).
+
+| | sel | neu | fab (1, 1) | o1 (0, 0) |
+|---|---|---|---|---|
+| GV mediano de la siembra final | **0.1939** | **0.023** | 1 | 0 |
+| PG: GV sel > neu + 0.05, pareado (corte 13/20) | **19/20** (pierde 0, empata 1) | | | |
+| cadenas con GV sobre 0.05 (sel / neu) | 20 / 6 | | | |
+| linajes que cruzan (de 180) | **79** | **14** | **80** | **6** |
+| PC: sel > neu (corte 13/20 y +10 en suma) | gana 19, empata 1, pierde 0 · +65 | | | |
+| sel contra o1 · sel contra fab | 20/0/0 · gana 6, empata 6, pierde 8 | | | |
+| GW (control interno: lo que el mundo no paga) | 0.0107 | 0.0158 | | |
+| R0 real mediano | 0.8097 | 0.3527 | 0.8054 | 0.2948 |
+| establecidos (0 fundadores tras 10k) | 119 | 24 | 134 | 8 |
+| **mundo A+C (menor = más pelado)** | **4.32** | 6.73 | 7.16 | **7.03** |
+| relojes del neutro (V7): profundidad mutacional mediana · refundaciones por cámara | **79.5** (mín 65; umbral 30) · **4819.5** (mín 4607; umbral 3000) | | | |
+| relojes de sel | 39.0 · 2941.5 | | | |
+
+- Trayectoria mediana de GV de sel por pasaje: 0.096, 0.137, 0.178, 0.191, 0.194; cadenas con GV sobre 0.05: 19, 20, 20, 20, 20. Gen por evento de mutación del propio brazo: GV 0.0052 en sel contra 0.0003 en neu.
+- Predicciones firmadas (Fable): Q1–Q8 y Q11–Q13 verificadas contra el log y cumplidas (Q1 fab 80 en [60, 100], o1 6 en [0, 25]; Q4 GV sel 0.194 en [0.10, 0.30], neu 0.023 ≤ 0.03; Q6 79 y 14; Q8 GW sube en 1/20 ≤ 6; Q11 79.5 y 4819.5 en rango; Q13 4.32 < 0.9 × 7.03). Q9 y Q10 cumplidas por las trayectorias medianas (aproximación). Veredicto firmado FUNCIONA 0.55.
+- **Reservas obligatorias (preregistro §7; auditoría posterior: SE SOSTIENE CON RESERVAS):**
+  1. **Mundo A+C: sel 4.32 contra o1 7.03** (fab 7.16). La selección deja el mundo más pelado que el diseño y que O1: parte de la ventaja de cruce puede venir de vaciar el oasis (ver la sonda `regimen` más abajo).
+  2. **Una evidencia, no dos.** Con neu ≈ (0, 0), PC equivale a "GV ≥ 0.1 contra O1", que ya está dado por diseño en P1. FUNCIONA se lee como UNA prueba: la selección sube la perilla hasta donde el mundo la paga.
+  3. sel iguala al diseño en cruce (79 contra 80) con GV 0.19 en vez de 1: no lo supera ni lo alcanza en establecidos (119 contra 134).
+  4. (auditoría posterior de la réplica: SE SOSTIENE CON RESERVAS) Los relojes de sel (36 y 2806 en la réplica) quedan bajo los umbrales, que sólo se exigen al neutro: no citarlos como reloj de sel. Serie y réplica comparten la misma pila de código: un bloque, no dos experimentos independientes en método. "Cruza como el diseño" sólo vale para la serie (79 contra 80); en el bloque: sel 149 contra fab 163 de 360.
+- Vocabulario permitido si cierra ×2: "en el mundo con oasis de P1, la selección por persistencia sube desde cero la perilla del viaje de la memoria de lugar, la deriva no, y el genoma que deja la selección cruza más que el que deja la deriva". Prohibido: "evoluciona la memoria", "inventa", "aprende a recordar", "la selección supera al diseñador", cualquier comparación con el muro de la pista vieja. El módulo lo escribió el ingeniero.
+- **Réplica** (cadenas 741300–741494, pruebas 741501–741520, commit `f34ea70c`, 14:14, `resumen.json` sha `fd45dc8a402236c2`, 0 abortos, 11 487 s, mismo sha de runner; validez V1–V7 OK): **FUNCIONA, fuera del umbral.** GV sel > neu + 0.05 en **20/20** (mediana sel 0.1914, neu 0.0); cruzan sel **70**, neu **7** (gana 20/20, +63), fab **83**, o1 **4**; GW sel 0.0001, neu 0.0207; relojes del neutro 82.5 (mín 67) y 4841 (mín 4598); mundo A+C sel 4.44, neu 6.88, fab 7.31, o1 6.95; establecidos sel 115, neu 10, fab 134, o1 5; sel contra fab gana 5, empata 4, pierde 11.
+- **Bloque:** FUNCIONA ×2 (una evidencia, no dos; letra cumplida fuera del umbral en la serie y en la réplica, 0 abortos): en el mundo con oasis de P1, la selección por persistencia sube desde cero la perilla del viaje de la memoria de lugar (GV mediano 0.19 ×2 contra 0.02 y 0.0 de la deriva; sel > neu + 0.05 en 19/20 y 20/20) y el genoma que deja la selección cruza más que el de la deriva (sel 79 y 70 contra neu 14 y 7 de 180; O1 6 y 4) y algo menos que el diseño (fab 80 y 83; en la réplica sel contra fab gana 5, empata 4, pierde 11, sin significación pareada). Reservas: sel deja el mundo A+C más pelado que O1 (4.32 y 4.44 contra 7.03 y 6.95), parte de la ventaja puede venir de vaciar el oasis; el módulo lo escribió el ingeniero y la selección sólo prende su perilla; queda en el primer escalón (GV ≈ 0.19), no en el diseño.
+- Nivel del brief: sin cambio.
+
+### Sonda de perillas: `escalera/regimen/` (EXPLORATORIA, n = 2 semillas, nada se declara; preregistro `PREREGISTRO_regimen.md` escrito después del análisis de los JSON de la serie y antes de la rejilla y la mixta)
+- Pregunta: ¿por qué sel deja el mundo pelado (4.32) si cruza como el diseño? Rejilla de genomas fijos (semillas 743801 y 743802, T 100 000): con GV 0.2 el mundo A+C queda en 4.36, 4.61, 4.51 (semilla 743801) y 5.23, 4.86, 5.08 (743802) (GW 0.2, 0 o 1: pelado); con GV 1 queda en 7.53 y 7.60 (GW 0) y 8.60 y 7.67 (GW 1) (no pela); (0, 0) 7.33 y 7.34. Es decir, **el mundo pelado lo causa GV intermedio (un viajero a medias: viaja sólo cuando el recuerdo es fuerte y sale a comer A/C fuera), no GW.** Análisis de la serie: dentro de sel, GV predice viajes (Spearman +0.83) y GW no predice nada; la relación GV → mundo A+C es en U.
+- Mixta (dos genomas sembrados al azar, "selección" (0, 0.2) y "diseño" (1, 1), semillas 743811–743812 × 2 paridades): ocupación sel 0.48 y fab 0.52; fundadores 941 y 916; cruzan 7 y 9. La selección no persiste más que el diseño (R8, "tragedia", no ocurre: sel con ocupación > 0.5 en 1 de 4 corridas, p firmada 0.25).
+- Lectura (marcada como exploratoria): la selección llegó al primer escalón donde el módulo paga, no al diseño; el diseño es igual o mejor por persistencia; no es un tramposo del pozo común. Predicciones del biotecnólogo refutadas: R3 en su segunda cláusula ((0, 1) ≥ (1, 1) − 0.5: 7.53 contra 8.60 en la semilla A); R1 por 0.03 en la semilla B (5.23 contra tope 5.2). n = 2: no concluyente.
+
+### ★★ ESCALERA P8, celda retenida — COMP2 FUNCIONA ×2 · COMP2 MEJORA ×2 · COMP NO (serie MODESTO, réplica NO: no declarado) (ERR-179, ERR-190)
+- Preregistro `escalera/p8/PREREGISTRO_p8.md` (commit `ffbe3362`, 09:04, sha `c4a32a1055d03928`); runner `corre_p8.py` (sha `f6e2b51a57d8b23a`); arnés 22/22; nulo `nulo_p8.py` (falso positivo de P1 bajo el nulo 6e-24; la potencia de COMP2 no está calculada). **Serie** 737500–737519, T 60 000, commit `bbbcdb8b` (12:08), `resumen.json` sha `c73e48e4b7d0cdf9`, 60 corridas, 0 abortos, 2324 s. **Réplica** 737520–737539, commit `ba1d7104` (12:46), `resumen.json` sha `da37149015addf81`, 0 abortos, 2247 s, mismo sha de runner. Es DISEÑO y no mide supervivencia: la celda E dentro del oasis está retenida de la crianza y se pregunta con observaciones sintéticas, sin mundo.
+- Brazos: comp (O1_LUGAR_COMP), comp2 (candidato: LG2 = la tabla por letra deja de absorber el extra del oasis, y COMPONE = 2 = compuerta cableada: el bono se suma a una letra mixta sólo si la letra alimenta algo), lug (sin composición); controles de memoria permutada; descriptivos `comp_s`, `comp2sg`, `lug2`.
+- **Letra (por código; unidad = semilla, empates en contra, n = 20):** COMP2: P1–P7 pasan en la serie y en la réplica → **FUNCIONA ×2**. COMP2 contra COMP pareado: **MEJORA ×2**. COMP: serie P2 (mediana ≥ 0.40) cae y P2m (≥ 0.25) pasa → HAY ALGO MODESTO; réplica P1 (13/20, corte 15), P2 y P2m caen → **NO**. Por la regla de parada del preregistro, un MODESTO de la serie que no se repite **no se declara**. Validez V1–V5 OK ×2.
+
+| | comp serie · réplica | comp2 serie · réplica | lug | comp_perm | comp2_perm | comp2sg (desc.) |
+|---|---|---|---|---|---|---|
+| semillas con D > 0 (corte 15/20) | 17 · **13** | **20 · 20** | 0 · 0 | 2 · 1 | 8 · 7 | 20 · 20 |
+| D mediana (FUNCIONA ≥ 0.40; MODESTO ≥ 0.25) | **0.25 · 0.1875** | **0.75 · 0.75** | 0 · 0 | 0 · 0 | 0 · 0 | 0.75 · 0.75 |
+| D media | 0.2938 · 0.2 | 0.7562 · 0.8125 | 0 | −0.0055 · −0.0055 | 0.0047 · −0.0016 | |
+| B dentro (corte ≤ 0.10) | 0 · 0 | 0 · 0 | 0 | | | **0.3065 · 0.2679** |
+| A sobre E en el mismo bin (corte ≥ 0.75) | 1.0 · 1.0 | 0.9938 · 0.9923 | 1.0 | | | |
+| A sobre E entre bins distintos (medida anterior, descriptiva) | 1.0 · 1.0 | **0.7244 · 0.7013** | 1.0 | | | |
+
+- COMP2 MEJORA: D(comp2) > D(comp) en 17/20 (empata 2, pierde 1) y 20/20 (0, 0); mediana de la diferencia +0.50 en las dos (corte ≥ 14/20 y ≥ +0.20).
+- **Lo que NO se detecta (trampas por código):** cruce de la crianza (de 180, serie · réplica): comp 44 · 52, lug 52 · 61, comp2 48 · 49. comp2 contra lug: serie gana 9, empata 2, pierde 9; réplica gana 4, empata 6, pierde 10; sumando las dos, comp2 97 contra lug 113 (comp 96): no significativo, pero **no se detecta costo de cruce y no se descarta**; comp también cruza menos que lug. Establecidos 131 · 130, 131 · 130, 129 · 128; mundo A+C comp 6.73 · 6.80, lug 6.25 · 6.31, comp2 7.59 · 7.46; vida mediana comp 1361 · 1227, lug 1300 · 1144, comp2 1532 · 1654; aprendizajes omitidos por LG2 en comp2: 53 973 y 53 270.
+- Predicciones del creador (firmadas antes): COMP2 mediana 0.75 (0.60–1.00) y k_pos 19–20: **acertadas** ×2 (0.75 y 20). **Refutadas:** COMP mediana 0.375–0.50 (medido 0.25 y 0.1875; la sonda daba 0.5, cifra que no se repite sobre COMP criado como COMP); la diferencia COMP2 − COMP de +0.25 a +0.40 (medida +0.50 ×2, por exceso); "comp ≈ lug en cruce a ±3 de 180" (44 contra 52 y 52 contra 61); `comp_s` "como la sonda 0.4–0.5" (0.25 y 0.25). Cumplida: `comp2sg` B dentro ≥ 0.3 en la serie (0.3065; en la réplica 0.2679, fuera).
+- **Reservas (auditoría posterior: SE SOSTIENE CON RESERVAS; van junto al veredicto):**
+  1. **Afirmación máxima, escrita en el preregistro (H-2):** "en el mundo con oasis, en celda retenida, con una suma cableada letra + bono y una compuerta cableada, un linaje que sólo vivió E fuera la muerde dentro del oasis aun con A a la vista, porque su memoria de lugar (aprendida sólo con A y C, en palabras del preregistro) tiene bono ahí; con la memoria de lugar permutada, no". No sostiene: aprendizaje o descubrimiento de la composición, de la compuerta o de LG2, "razona", "no la muerde fuera" en general, ni utilidad para cruzar.
+  2. **Qué mide D:** "E le gana a una A visible dentro del oasis y no fuera". Con la E sola (condición descriptiva) se la muerde 57 % FUERA en todos los brazos (0.567 en lug; 0.5673 en comp2); no es "no la muerde fuera".
+  3. **"A sobre E sólo a igual lugar" (ERR-179, enmienda, regla 11):** la puerta P7 heredada de la sonda (A contra E en bins DISTINTOS, umbral 0.90) confundía letra con lugar; tras el humo 1 (2 semillas, no cuentan) y ANTES de la serie se cambió a "mismo bin y balanceada", umbral 0.75. Mismo bin 0.99; **entre bins distintos 0.72 y 0.70: con la puerta vieja COMP2 = NO.** El umbral 0.75 se fijó habiendo visto 0.978.
+  4. **Lo empírico contra lo cableado:** LG2 y la compuerta son conocimiento puesto a mano (sin compuerta, B dentro sube a 0.31 y 0.27). Lo empírico es que la memoria de lugar tenga bono en los bins del oasis y no fuera. [Cifras del coordinador, no verificadas por el cronista en el log: bins del oasis con bono por linaje, de 4: comp2 2.8 y 2.7, comp 0.8 y 0.7, lug 0.8 y 0.9.]
+  5. **Costo de cruce no detectado, no descartado** (cifras arriba) y **mundo distinto:** A+C de comp2 7.5 contra 6.3 de lug; vida más larga.
+  6. COMP: en la serie "MODESTO" fue por igualdad exacta con el corte (mediana 0.25 contra MED_MOD 0.25; D sale en escalones de 0.125).
+- Prohibido en el titular y en cualquier resumen: "compone", "razona", "descubrió", "aprendió la compuerta", "no la muerde fuera", "mejor supervivencia".
+- **ERR-190 (instrumento, nuevo):** `_spearman` de `corre_p8.py:200–203` usa rangos ordinales (`argsort` de `argsort`) sin promediar empates; con D en escalones de 0.125 hay muchos empates. rho(D, linajes válidos) de comp2 recalculado 0.10 (serie) y 0.23 (réplica); el runner imprimió 0.25 y 0.44 [recalculado: cifras del coordinador; lo impreso, 0.25 y 0.438, sí está verificado en los logs]. Es la trampa 5b, descriptiva: **no entra en la letra y no cambia ningún veredicto.** El runner queda como está (sha fijado); se corrige en el siguiente uso.
+- Nivel del brief: sin cambio (diseño dirigido en celda retenida, sin medida de supervivencia).
+
+### EXPLORATORIO (1–2 semillas, nada se declara) — `muro_perillas/`, mapa del muro por genes de O1
+- Preregistro de sonda `muro_perillas/PREREGISTRO_muro_perillas.md` (sección 4, predicciones, escrita antes de correr el mapa). Instrumento `O1_MURO_GEN` (6 genes crudos: MARGEN, PRUEBA, PEN_OTRO, PISO, LIMPIA, HUECO; pista mixta por linaje). Una semilla (883001, T 100 000, 9 linajes). Corridos: lotes A, C y M (`mapa.log`); **lotes B y D sin correr; segunda semilla sin correr.**
+- **Actualización 15:00 — arnés PASA 33/33 (`identidad_muro_perillas_salida3.txt`); las dos fallas eran defectos de las pruebas del arnés ((R) comparaba `id` con el nombre del carro; (C) pedía refundaciones que a T 3000 no ocurren), no del instrumento; los lotes ya corridos valen. Corridos: M, C, A, D, B con la semilla 883001 y A2, M2 con la 883002 (`mapa.log`, `mapa2.log`). SONDA de 1–2 semillas: orienta, NO declara nada.**
+  - **MARGEN es una rampa, en las dos semillas** (cruzan de 9 con el resto en fábrica): 0 → 0 y 0; 0.03 → 0 y 4; 0.06 → 3 y 8; 0.10 → 8 y 9; fábrica 0.25 → 4 y 8; 0.5 → 5 y 5. No hay acantilado: cada paso paga (R0 0.83–0.89 ya en 0.03).
+  - **Desde todo apagado (lote D, una semilla):** off 0/9; +MARGEN solo **5/9** (R0 0.95); +PISO solo 0; +LIMPIA sola 0; +MARGEN+PISO 5; +MARGEN+LIMPIA+PISO **7**; +PEN_OTRO 7. El primer paso lo carga MARGEN; la limpieza suma sólo con MARGEN ya puesto. Lectura: escalera de dos peldaños con orden, no valle a ciegas.
+  - **PISO, PEN_OTRO, PRUEBA (lote B, una semilla):** PISO 0 / 0.2 / 0.4 / 0.6 / 1.0 → 8 / 4 / 3 / 8 / 7 (sin tendencia: ruido de una semilla); PEN_OTRO 1.0 → 5; PRUEBA 0 → 6.
+  - **Fundador limpio (candidato ERR-191, no abierto):** LIMPIA = 0 clonal cruza 5/9 con fundador limpio y 0/180 en el registro con fundador NO limpio; el comparador canónico `corre_v143.tarea('CTRL_O1_SINLIMPIA')` en s883001 da la misma fila campo a campo. Mecanismo leído en los JSON: cada refundador limpio nace con la tabla vacía y prueba B y D una vez (B+D ≈ fundadores + 2), de modo que los linajes que se hunden limpian el mundo con sus nacimientos. Hay que revisar qué series viejas usaron cada regla antes de leer nada sobre limpieza.
+  - **Pista mixta (bien público), dos semillas, con esa cautela:** en 8 × LIMPIA 0 + 1 × fábrica el único que limpia queda con R0 0.002 y 0.004 y 487 y 471 fundadores, mientras 6 de los 8 que no limpian cruzan (×2); al revés (8 × fábrica + 1 × LIMPIA 0) el que no limpia no cruza y no gana a sus vecinos (R0 0.83 y 0.14). Se ve el costo del que limpia; no se ve el beneficio del polizón; la limpieza por nacimiento lo confunde. La hipótesis del bien público sigue SIN MEDIR.
+  - Siguiente: completar la semilla 2 (C2, B2, D2), repetir con fundador NO limpio, y si la rampa se sostiene, "perillas del muro" con GEN_LETRA = MARGEN desde 0 (el runner ya está construido; se niega mientras GEN_LETRA sea None).
+- (Lo que sigue se escribió a las 13:00 con el arnés en 32/33; queda como historia. Donde dice "NO SE LEE" o "sin valor mientras el arnés falle", manda la actualización de arriba.)
+- Diagnóstico del ingeniero (sec. 7 del preregistro, sin auditar): (R) falla porque los `id` de linaje y los `ids` de la pista llevan el nombre del carro (`O1_MURO_GEN#i` contra `O1#i`), defecto del arnés, no del carro; (C) falla porque a T 3000 con fundador limpio no hay refundaciones que medir, defecto del arnés.
+- Descriptivo marcado como no leíble: LIMPIA = 0 en monocultivo con fundador limpio da 5/9 (R0 0.96), mientras el registro tiene 0/180 para el mismo organismo (sellada_sinlimpia, fundador NO limpio). El comparador canónico (`corre_v143.tarea('CTRL_O1_SINLIMPIA')`, s 883001) da la misma fila: 5/9. Hipótesis del ingeniero: con fundador limpio cada refundador nace con la tabla vacía y prueba B y D una vez antes de morir (B+D ≈ fundadores + 2), de modo que los linajes que se hunden limpian el mundo con sus nacimientos (≈ 750 mordidas malas por 100 000). **Candidato a ERR, no abierto** (el preregistro lo llama ERR-190, número que hoy quedó para `_spearman`: ver ERR). `compara_sinlimpia.py` falla al final con `KeyError: 'corridas'` al leer el crudo viejo (defecto del script; el crudo viejo con `fila()` da 0/180 como el registro).
+- Predicciones del ingeniero genético contra esta semilla (sin valor mientras el arnés falle): M1 cumplida (MARGEN 0 → 0/9); M2 a medias (0.06 → 3/9; 0.03 → 0/9); M3 parcial (0.10 → 8/9; "todo" 0.5 → 5/9; **fábrica 4/9, predicho 7–9**); **M6 refutada** (LIMPIA 0 → 5/9, predicho 0); M7 refutada (HUECO 0 → 7/9, fuera de ±2 de fábrica); M10 refutada (8 × LIMPIA 0 + 1 fábrica: cruzan 6, predicho ≤ 2).
+- **Hipótesis del genetista (`investigacion_20261001/FABLE_gen_perdido.md`), SIN MEDIR:** el gen perdido no es un gen sino el NIVEL de selección; la limpieza es un bien público. Su firma en `o1_evo` NO SE PUEDE LEER (señal de PISO dentro de semilla, débil y de poder bajo). Se mide con dos cámaras (mixta contra clonal), plan 3 de la próxima sesión.
+
+### Revisión de solo lectura de "Juaco revisión" y F0 corregido (1-oct)
+- `investigacion_20261001/REVISION_organelos_soloLectura.md` (sobre el commit `4f07e7f0`): **los cuatro FUNCIONA ×2 de la Escalera (P1, P7, P10) y el NO SUMAN ×2 de "juntos" se sostienen contra el repo**; sumas recalculadas desde los `prueba_*.json`. Hallazgos de numeración (doble reserva de ERR-179, "siguiente libre 177" desactualizado), de texto retirado vivo y de matices de F0.
+- **F0 (`F0_relojes.md` + `AUDITORIA_F0.md`, corregido):** el reloj medido es MUTACIONAL: ≈ 12 eventos de mutación en la ascendencia de un genoma en los montajes de pasajes (o1_libre serie 11.6, réplica 11.9; o1_evo y entre_linajes de orden 20–30, una serie, genes limitados). **El reloj de selección entre linajes NO está medido.** Ne de linajes 8.27 y 8.10 (1/Σp², máximo 9; no es un Ne genético). "Casi neutro" no se sostiene como explicación única (PISO se mueve 10/10 ×2; en la serie dos de cuatro definiciones de Ne·s quedan sobre 1).
+- JUACO 5 (rama `o1-libre`, no es nuestra; sólo se cita): **F2 "un gen por parto": NO.** La carga mutacional se quitó, el neutro llega a R0 0.97, pero lib 57 contra O1 72.
+
+### Exploratorio fuera de protocolo (irá en `exploratorio/` del repo; ninguno decide ni cuenta como nivel)
+- `investigacion_20261001/`: F0, Reactor (entregas 1–3), borrador F1 v2 (no se congela ni se corre hoy; entra al PC nuevo), espec P9 y su auditoría (la auditoría ya advertía ESPACIO NO con los números de la sonda), gen perdido, bloques autoentrenables, literatura (paso C).
+- `red_celulas/`, sin preregistro, 10 semillas: **informe 1 HAY ALGO MODESTO:** una red de células con reglas sólo locales alcanza acierto 0.9 en la SUMA mod 7 de los pares vistos en 550 exposiciones contra 2 550 del techo con retropropagación del mismo tamaño; no generaliza a los 19 pares no vistos (0.00–0.05, bajo el azar 0.14); la vida (nacer y podar) no suma nada medible y el tramposo aparece con 320 células. **Informe 2 NO en lo central:** con un techo justo (Adam + entropía cruzada) la red ya no gana en aprender (550 contra 412–525) y pierde 4× en readaptarse (887 contra 225); modesto lo lateral: el pago por camino chico (grupos de 4) elimina al tramposo. (Existe además un `INFORME_3.md`, el A1 de Alejo: HAY ALGO MODESTO en un régimen concreto, sintético, 10 semillas, sin réplica; no entra a ninguna cuenta.)
+- `alejo/`: documento de arranque del proyecto Alejo (experimento 2 del director; el nombre es el de su hijo; dos perspectivas: A bloque junto a un modelo, B modelo propio).
+
+### ERR de la jornada (esta sesión)
+- **ERR-177 (método, moneda): definido arriba.**
+- **ERR-178:** reservado a perillas, **no se usó** (queda sin dueño; no reutilizar sin nota).
+- **ERR-179 (enmienda de la puerta P7 de P8, "A sobre E" entre bins distintos → mismo bin balanceado):** definido arriba. Las reservas de 179 que tenían perillas (178–179) y sondas ("179, no se usa") quedan canceladas.
+- **ERR-190 (instrumento, `_spearman` de P8):** definido arriba. **Colisión a resolver:** `muro_perillas/PREREGISTRO_muro_perillas.md` (líneas 5 y 81) reserva "ERR-190" para su candidato (fundador limpio); ese texto debe pasar a "ERR-191 (candidato, no abierto)".
+- 180–189: bloque de la sesión de investigación (cero definiciones en el repo hoy). JUACO 5 (rama `o1-libre`): bloque 160–169, usó el 160. **Siguiente libre de esta sesión: ERR-191** (comprobado con grep: ningún archivo lo menciona; si se abre el candidato del muro, toma 191 y el siguiente es 192).
+
+### Niveles
+Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 son diseño dirigido en un mundo propio (lo decide el director, como P1, P7 y P10); perillas ×2 es la primera vez que la selección prende desde cero una capacidad que no es de supervivencia básica, sobre un módulo diseñado (lo decide el director); el NO de moneda_muro_rep no baja ningún nivel, retira una explicación.
+
+### Notas de corrección sobre entradas anteriores (sólo se AÑADEN; la historia no se borra)
+- **Sobre :7439–7442 (moneda_muro, "CONSERVA" y "la moneda era un candado") — nota del 1-oct, 09:09, ERR-177:** el CONSERVA del explora (en el umbral, n = 5, cortes elegidos viendo los datos) **no replicó**: la réplica `200e0d0a` da INDETERMINADO (moneda_L 0.0 contra neutra_L 0.42; cruce 41 contra 42 de 90). Léanse :7439–7441 como exploratorio sin réplica. La frase de :7442 queda reemplazada por: "a 25k la selección purga la regla (0.26 contra 0.64); a 100k con siembra de establecidos el resultado es INDETERMINADO; 'candado' no se sostiene como causa (exploratorio; el reloj de selección no está medido)".
+- **Sobre :7357 ("la selección afina perillas continuas pero no inventa combinaciones. La selección por pasajes tampoco encuentra la regla hecha a mano") — nota del 1-oct (AUDITORIA_F0):** reemplazo propuesto: "Con los montajes corridos (o1_libre ≈ 12 eventos mutacionales por línea; o1_evo y entre_linajes de orden 20–30, una serie, genes limitados), la selección afinó perillas continuas (termostato ×2) y no encontró combinaciones. No se midió el reloj de selección, de modo que no se concluye que no pueda." Hoy hay además un caso donde la selección sube una perilla desde cero donde el mundo la paga (perillas, serie 1: GV 0.19 contra 0.02 del neutro), FUNCIONA ×2 el mismo día (réplica `f34ea70c`).
+- **Sobre :7427–7428 ("la selección NO supera al diseñador", o1_evo) — nota del 1-oct:** añadir "(o1_evo: una serie, sin réplica, siembra de vivos, no comparable con o1_libre; n de orden 20–30)".
+- **Sobre :7444–7447 (O1 libre con poderes, "HAY ALGO MODESTO", "cuando puede elegir, la selección elige la memoria de lugar") — nota del 1-oct:** **[RETIRADA 1-oct; ver Corrección :7451–7453]**: el bloque cerró BLOQUE NO (la subida de MEM, 10/10 con dif 0.0596, no replicó: 6/10, dif 0.047).
+- **Sobre :7453 ("la selección sostiene a O1 frente a la deriva y no lo supera") — nota del 1-oct (AUDITORIA_F0):** añadir "en ≈ 12 eventos mutacionales por cadena; vale para ese reloj, no para evolución larga. 'Casi neutro' no se sostiene como explicación única: PISO se mueve 10/10 ×2; en la serie dos de cuatro definiciones de Ne·s quedan sobre 1".
+- **Sobre :7449 (lista de ERR) y :7438:** "Siguiente libre de esta sesión: ERR-177" quedó desactualizado; ver los ERR de la jornada del 1-oct.
+
+### Exploratorio de la tarde (en `exploratorio/investigacion_20261001/red_celulas/`; sin preregistro, 8–10 semillas, sin réplica; nada se declara)
+- `INFORME_3.md` (Alejo, perspectiva A, sintético): un bloque de células pegado a un modelo congelado corrige hechos que cambian tan bien como un diccionario que conoce la identidad del hecho (0.96 contra 0.98), gana a una memoria de vecinos en los seis regímenes (10/10 semillas), suelta la corrección cuando el hecho vuelve, y gana al diccionario sólo con memoria menor que los cambios + deriva continua + consultas desiguales (0.78 contra 0.72).
+- `hamburguesa/INFORME_HAMBURGUESA.md`: transformador diminuto entrenado con retropropagación y congelado + células de memoria viva sobre su estado interno. Asociación vista una vez y preguntada fuera de la ventana: 1.00 contra 0.32 del congelado, 0.32 con más contexto y 0.31 con gradiente en línea (8/8); generaliza la corrección a paráfrasis no vistas 0.97 (gradiente 0.58); controles: pago barajado 0.43, sin compuerta 0.12; costo +0.2 % por consulta. No gana a un RAG con oráculo de identidad (empate) ni al gradiente con memoria menor que los cambios, salvo con "sueño" (el modelo absorbe con gradiente lo que las células aprendieron y las libera). Compuerta fija frágil (0.9 falló 3/8; 0.98 elegida viendo esas tres, declarado).
+- `dim40/INFORME_DIM.md`: células en un espacio de D dimensiones con premio regado por cercanía: no aprende paridad (0.50 en toda D; el techo Adam 1.00 en 100 exposiciones); D acorta caminos (8.9 saltos en D 1, 1.8 en D 40) pero desde D ≈ 10 no suma sobre un grafo aleatorio; el premio regado discrimina quién aportó (correlación 0.25–0.35 contra 0.00 del premio global) y deja 24–34 tramposas de 195 contra 99–150 con premio igual para todas. Mover las células hacia el premio: NO (se apiñan en la salida y dejan solas a las entradas).
+- Patrón que se repite en cuatro montajes del día (muro, red de células, pago por camino, premio regado): a qué nivel se paga decide si ganan las que cobran sin aportar. Es una observación, no un resultado.
+
+### Nota de las 15:30 del 1-oct — `muro_perillas/`, segunda semilla completa (SONDA, dos semillas, nada se declara)
+- Lotes C2, D2 y B2 (semilla 883002; `mapa3.log`, `mapa4.log`). **Desde todo apagado, en las dos semillas (883001 · 883002):** off 0 · 0 de 9; +MARGEN solo **5 · 6**; +PISO solo 0 · 0; +LIMPIA sola 0 · 0; +MARGEN+PISO 5 · 6; +MARGEN+LIMPIA+PISO 7 · 7; +PEN_OTRO 7 · 6. El primer paso lo carga MARGEN y la limpieza suma sólo con MARGEN puesto: igual en las dos semillas.
+- Clonal, semilla 2: LIMPIA 0 → 6/9 (semilla 1: 5/9), con fundador limpio (candidato ERR-191); HUECO 0 → 6/9; MARGEN 0.1 + PISO 0.6 → 8; MARGEN 0.06 + PISO 0.4 → 2; MARGEN 0.1 + PISO 1.0 → 5.
+- Sigue siendo exploración: dos semillas, una sola regla de fundador. No se declara nada sobre el muro. Lo que decide es el experimento con protocolo ("perillas del muro" con MARGEN desde cero) y la repetición del mapa con fundador NO limpio.
+
+## Jornada del 5-oct-2026 (apertura; antes de la serie de "perillas del muro")
+> Sonda y preregistro; nada se declara todavía. Detalle en `experimentos/organelos/muro_perillas/INFORME_pasoA.md`, `INFORME_pasoB.md` y `PREREGISTRO_muro_perillas.md` sec. 13.
+
+### Sonda — mapa del muro con fundador NO limpio (dos semillas, 883001 y 883002; nada se declara)
+- **La rampa de MARGEN se sostiene sin la limpieza regalada** (cruzan de 9, fundador limpio → no limpio): MARGEN 0: 0, 0 → 0, 0 · 0.03: 0, 4 → 0, 4 · 0.06: 3, 8 → 7, 8 · 0.10: 8, 9 → 7, 9 · fábrica 0.25: 4, 8 → 5, 8.
+- **"MARGEN solo cruza desde todo apagado" NO se sostiene: era un artefacto del fundador limpio.** off+MARGEN 0.25: 5, 6 → **0, 0**; O1 sin limpieza: 5, 6 → **0, 0**; "todo" 0.5: 5, 5 → 0, 0; off+MARGEN+LIMPIA+PISO: 7, 7 → 2, 4. Desde todo apagado hay VALLE de dos pasos o más con las dos reglas. **Corrige la nota de las 15:30 del 1-oct**, que leía "el primer paso lo carga MARGEN" con fundador limpio.
+- **ERR-191 (instrumento/pista, ABIERTO):** con `fundador_limpio = 1` cada refundación nace con la tabla vacía y prueba B y D una vez antes de morir; los 2–4 linajes que se hunden en todo monocultivo de 9 refundan cientos de veces y retiran ~500–750 objetos malos por 100k: una limpieza que ningún gen paga. Medido: O1 sin limpieza 11/18 (fundador limpio) contra 0/18 (no limpio) y 0/180 (sellada del 22-sep); O1 de fábrica no cambia (12/18 contra 13/18). Afecta a toda comparación limpia / no limpia hecha con fundador limpio (ronda 2, corre_v143, o1_evo, termostato, mapa del 1-oct). Regla: reportar B+D y fundadores por linaje; para preguntas sobre limpieza, fundador no limpio. Regla de fundador de las series registradas: `juez.py:536-537`, `corre_v143.py:56`, `corre_o1_evo.py:8`.
+- Defecto de instrumento cazado y corregido antes de leer: `genoma('off+…')` se armaba sobre BASE cuando BASE dejó de ser el apagado; 12 JSON apartados en `datos/mapa/invalidos_etiqueta_fl0_D/` (no borrados); prueba añadida: genoma leído == pedido en cada corrida.
+
+### Preregistro — "perillas del muro" (O1 de fábrica, sólo MARGEN muta desde 0.03; tres brazos sel · neu · pur)
+- Dos auditorías previas. La primera: NO APTO tal cual (la letra podía pasar sin subida). La segunda: apto con cambios menores, aplicados.
+- **ERR-192 (método, ABIERTO):** el nulo de deriva no incluía la selección purificadora. Con una barrera letal en MARGEN 0 y sin ningún gradiente, la sola eliminación de los que bajan lleva la mediana a ~0.10 y da "sel ≥ 0.06 en ≥ 13/20" con probabilidad ≈ 1 (trinquete). Regla: todo nulo de un gen con valor letal en un extremo modela la barrera. Remedio en este bloque: brazo `pur` (lee min(gen, 0.045): mismo precipicio, sin ventaja por subir) y puerta de gradiente GR (sel > pur + 0.02 pareado en ≥ 13/20; falso positivo 0.006).
+- Letra: FUNCIONA = PG ∧ PC ∧ GR; PG sin GR = TRINQUETE (no prueba ausencia de gradiente; potencia de GR no calculada); sólo sel > neu = CONSERVA, NO SUBE. Predicción firmada: FUNCIONA 0.22, TRINQUETE 0.30, CONSERVA 0.13, MODESTO 0.10, NO 0.05, NO SE LEE 0.20.
+- Vocabulario: aun con FUNCIONA ×2 es "la selección sube el margen de la boca de O1", no "la selección cruzó el muro" ni "construyó a O1". ERR siguiente libre: 193.
+
+### Serie de "perillas del muro": DETENIDA por el coordinador a los 29 minutos — NO SE LEE (reloj corto); ERR-193
+- Preregistro `a3ca67e0`; lanzada 18:14 con pool 3; detenida 18:44 con 2 de 20 índices completos (6 cadenas). Los datos parciales quedan en `datos/serie_i883301-883320_20261005_181402/` y `serie_pool3.log`; no hay veredicto ni se lee ningún brazo.
+- Motivo: la validez V7 exige profundidad mutacional ≥ 30 y refundaciones ≥ 3 000 en ≥ 16/20 cadenas por brazo. Las 6 cadenas terminadas dan profundidad final 10–20 (sel 12 y 11; pur 10 y 12; neu 20 y 18.5) y unas 900–1 750 refundaciones en los 5 pasajes. Con ese reloj la serie terminaba en NO SE LEE con certeza práctica; seguir eran 5 h de CPU sin lectura posible.
+- **ERR-193 (método):** los umbrales del reloj (30 y 3 000) se heredaron de "perillas" (mundo con oasis, donde el neutro llegó a 80 y 4 800 en 5 pasajes) sin medir el reloj de ESTE mundo; el humo previo era de T corto y la auditoría previa lo dejó anotado como "no verificado". En la pista vieja, con O1 casi de fábrica, los linajes se establecen y refundan poco: el reloj mutacional corre unas 5 veces más lento. Regla: antes de preregistrar una serie de selección, una cadena completa de humo a la longitud real para medir los dos relojes; los umbrales y el número de pasajes se fijan con ese dato.
+- Qué haría falta para leerla: unos 15 pasajes por cadena (≈ 17 h con pool 3 por serie) o un montaje con más recambio. No se relanza ahora: aun con FUNCIONA diría "la selección afina una perilla de O1", y el costo se triplicó. Queda APARCADA con el instrumento construido y auditado.
+- Lo visto en las 6 cadenas no se lee (n = 2 por brazo, validez fallida): MARGEN final sel 0.044 y 0.020; pur 0.000 y 0.072; neu 0.006 y 0.059.

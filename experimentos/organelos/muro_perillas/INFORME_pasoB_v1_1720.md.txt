@@ -1,0 +1,59 @@
+# INFORME — PASO B (5-oct-2026, 17:20; ingeniero genético). PERILLAS DEL MURO: LISTA PARA AUDITAR Y CORRER. Nada corrido en serie.
+
+**VEREDICTO: CONSTRUIDA, VERIFICADA Y SIN CORRER. `ARNES PASA, 40/40 (446.3s)` (`identidad_muro_perillas_salida6.txt`, con `SHAS_PROPIOS` fijados y arranque 0.03).
+Humo de main de punta a punta con el runner final (`pasoB_humo.log`, `datos/humo/humo_serie_20261005_171530/`): 8 corridas en dos procesos, 60 000 pasos, 0 abortos,
+`--reanuda` saltó lo hecho, la letra se evaluó y dio NO SE LEE (T corto: V2 y V7 fallan, como corresponde a un humo).** Preregistro: `PREREGISTRO_muro_perillas.md`
+Parte II, secs. 10–11 bis (sha 62c12663bc4204ac en el humo; el commit del coordinador fija el definitivo).
+
+## 1. Qué es
+Serie confirmatoria "perillas del muro": carro `O1_MURO_GEN` con **MARGEN como gen desde el arranque 0.03 y el resto de O1 en fábrica** (los 6 genes mutan; MARGEN recibe 1/6
+de los eventos), montaje de perillas tal cual (1 mutación por nacimiento en 1 gen, σ 0.03, δ 0.01, cámara continua, 5 pasajes × 100k, siembra de linajes sin refundación
+en la segunda mitad, sel vs neu pareados con `PS_LEE 0`, prueba monomórfica T 100k para sel, neu, fab = O1 y off = BASE; n = 20; validez por los dos relojes del neutro).
+**Regla de fundador: `FL_SERIE = 1` (canónica del muro: ENMIENDA 5; archivo:línea en `INFORME_pasoA.md` §3).** fl 0 queda como segunda serie descriptiva (semillas 884xxx)
+si la primera da FUNCIONA/MODESTO: la rampa de MARGEN es la misma con las dos reglas (PASO A), así que la pregunta no depende de la regla; la segunda separa lo que
+el linaje paga de lo que le regalan los vecinos que se hunden (ERR-191).
+
+## 2. Las dos cosas del 1-oct, resueltas antes de la serie (decisiones escritas en el preregistro, sec. 11 bis)
+1. **Arranque.** `--humo_cadena` (T 20k) desde MARGEN 0.0: la cadena NO se extingue pero NO MUTA (18 fundadores, 15 partos en 9 linajes, R0 0.0, vida 20 000, profundidad 1):
+   con consigna EN U el cuerpo sólo come bajo U, nunca llega a la ventana de parto, no muere y no pare: el reloj no corre. **`ARRANQUE_MARGEN = 0.03`** (primer escalón medido:
+   R0 0.83–0.89, 8–9 establecidos, 0/4 cruzan en las dos reglas): desde 0.03, 72 fundadores (63 de cámara), 73 partos, profundidad 2 en 20k → ~700 eventos por 100k.
+2. **Margen del gen en la letra.** Nulo de deriva de ESTE gen (`nulo_margen.py` → `nulo_margen_salida.txt`; clip [0, 0.6], σ 0.03, δ 0.01, p 1/6): mediana de una siembra
+   neutra 0.010 (P > 0.03 = 0.13, P > 0.05 = 0.02); pareado, P(sel > neu + 0.03) por cadena bajo el nulo 0.06 → P(≥ 13/20) ≈ 1e-11. Dosis-respuesta medida (fl 1 / fl 0):
+   0.03 → 4/18 / 4/18; 0.06 → 11/18 / 15/18; 0.10 → 17/18 / 16/18; fab → 12/18 / 13/18. **`MARGEN_G = 0.03`** (nulo + primer escalón); zona funcional descriptiva
+   **0.06** (`FUNC_MARGEN`: cuántas cadenas sel llegan).
+
+## 3. La letra (por código: `corre_muro_perillas.lee_serie`; 6 casos sintéticos en el arnés (F))
+Validez (una falla: NO SE LEE): V1 completa y coherente · V2 fab > off en ≥ 16/20 · V4 estado por worker (carro, PERILLAS 1, `fl` 1, σ/δ/cámara/PS_LEE por brazo, prueba
+con un solo genoma = el del brazo) · V5 desde el arranque (9 fundadores de BASE en el pasaje 0; luego siembra; refundaciones de la cámara) · V7a profundidad neutra ≥ 30
+y V7b refundaciones neutras ≥ 3 000, en ≥ 16/20. Puertas: **PG** MARGEN sel > neu + 0.03 en ≥ 13/20 · **PC** sel > neu pareado ≥ 13/20 **y** +10. FUNCIONA / MODESTO (una)
+/ NO / EN EL UMBRAL ±1 / NO SE LEE manda. **Obligatorio en el informe:** sel vs fab (O1 de fábrica), sel vs off, neu vs off; B+D, A+C, sin-bueno y fundadores por brazo;
+**mayorías (≥ 5/9) por brazo** (`mayorias_(>=5/9)`) y `sel_mayoria_como_O1` (≥ 16/20). Vocabulario: frase máxima "en la pista vieja, la selección sube desde 0.03 el
+margen de la boca de O1 y el genoma que deja cruza más que el de la deriva"; nunca "cruzó el muro" salvo mayoría en ≥ 16/20 como O1, y aun así "O1 con una perilla libre".
+Predicciones firmadas B1–B11 y V (0.40 / 0.25 / 0.15 / 0.20) en el preregistro sec. 10.
+
+## 4. Candados, semillas, costo, comandos
+- Candados: `SHAS_PROPIOS` fijados (constructor 646aad399adb21dd · `O1_MURO_GEN` 28fab4936bb42d5d · `O1_MURO_GEN0` 2fcada2664cb931a); veredicto previo; regla de parada
+  (réplica sólo con FUNCIONA/MODESTO/NO en el umbral y mismo sha del runner); git limpio del preregistro, runner, constructor y carros; `--pool ≤ 2`; `--reanuda` (JSON por
+  pasaje y por trabajo, reintenta abortos, rearma cadenas cortadas); regla de CPU en humo/mapa.
+- Semillas NUEVAS (grep 5-oct en .py/.md fuera de la carpeta: sólo 883001/883002, las del mapa, aparecen): serie pasajes 883100 + 10 i + p, pruebas 883301–883320;
+  réplica 883500 + 10 i + p, 883701–883720; humos 883990–883998; segunda serie fl 0: 884100 + 10 i + p, 884001–884020.
+- **Costo medido:** corrida de 100k ≈ 137–172 s (mediana ~156 s, PC libre); por índice 10 pasajes + 4 pruebas ≈ 14 × 156 ≈ 2 200 s; **serie ≈ 44 000 s de CPU ≈ 6 h con
+  pool 2** (réplica igual). Humo de la serie: 185 s en total.
+```
+python experimentos/organelos/muro_perillas/construye_muro_perillas.py --verifica
+python experimentos/organelos/muro_perillas/identidad_muro_perillas.py                 # -> ARNES PASA, 40/40
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --humo_serie && python experimentos/organelos/muro_perillas/corre_muro_perillas.py --humo_serie --reanuda
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --serie --pool 2 2>&1 | tee experimentos/organelos/muro_perillas/serie_pool2.log      # SOLO el coordinador
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --serie --pool 2 --reanuda 2>&1 | tee -a experimentos/organelos/muro_perillas/serie_pool2.log
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --replica --pool 2    # sólo por la regla de parada
+```
+
+## 5. Shas al cierre (17:20) · lo no verificado · errores propios del día
+`construye_muro_perillas.py` 646aad399adb21dd · `carros/O1_MURO_GEN.py` 28fab4936bb42d5d · `O1_MURO_GEN0.py` 2fcada2664cb931a · `corre_muro_perillas.py` c60ba18e45999eb9 ·
+`identidad_muro_perillas.py` 0b73545065a0bca8 · `nulo_margen.py` 99ef5a9c62078f0b · `compara_sinlimpia.py` 999b7a3633c6f4a9 · preregistro 62c12663bc4204ac · `INFORME_pasoA.md`.
+Nada rastreado fuera de la carpeta tocado; sin commits (los tres archivos "M" son los míos ya commiteados por el coordinador el 1-oct).
+No verificado: la serie misma (no corrida); el costo real con pool 2 (estimado de corridas de un proceso); V7 con 5 pasajes desde 0.03 (el humo de 2 × 5k no llega: en
+perillas la profundidad neutra fue 55–80 con 5 × 100k; aquí MARGEN recibe 1/6 de los eventos pero el reloj V7 cuenta todos los eventos, no sólo los de MARGEN: declarado).
+Errores propios de hoy (corregidos antes de leer): (1) `genoma('off+…')` leía BASE tras cambiar BASE al arranque → 12 JSON fl 0 del lote D mal etiquetados, apartados en
+`datos/mapa/invalidos_etiqueta_fl0_D/`, prueba estática (K) y dinámica `genoma_ok` añadidas, lote repetido; (2) `NL` no definido en `--humo_cadena`; (3) arnés (K) exigía
+BASE == APAGADO. Predicción propia refutada: A4 a medias (el conjunto sin HUECO da 6/18 y 8/18 con fl 0, no ≥ 8 las dos veces).

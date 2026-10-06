@@ -1,0 +1,65 @@
+[00:44:21] CORRE_JUNTOS · humo · 20261001_004421 · python 3.14.2 · pool NO (un proceso) · corre_juntos.py db75135c8c2f3e0d · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\juntos\datos\humo\humo_s738592-738592_T30000_m10000_20261001_004421
+[00:44:21]   semillas 738592-738592 · T 30000 · brazos ['todo', 'sen', 'preg', 'lug', 'todobar'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 10000, 'c_e': 0.01} · reanuda False · nota 'humo 2 (runner final, los 5 brazos por main)'
+[00:44:21]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[00:44:21]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[00:44:21]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[00:44:21]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[00:44:21]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[00:44:21]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[00:44:21]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[00:44:21]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[00:44:21]   sha corre_p1.py 392b71186cf49b60 OK
+[00:44:21]   sha construye_p1.py 90dc1b6f848fac80 OK
+[00:44:21]   sha mundo_escalera.py 4f28b372207ba0a6 OK
+[00:44:21]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[00:44:21]   sha construye_c.py 024a89476109b997 OK
+[00:44:21]   sha corre_c.py 01e4ad94dd06e133 OK
+[00:44:21]   sha construye_p7.py 50179cf58798120c OK
+[00:44:21]   sha corre_p7.py 82c3811c144d1a2b OK
+[00:44:21]   sha construye_juntos.py d469c8f3bf194d64 OK
+[00:44:21]   carro O1_TODO == construye_juntos: True (sha b7519a4a481a0cf5)
+[00:44:21]   carro O1_TODO_SBAR == construye_juntos: True (sha 153891018a52b5db)
+[00:44:21]   carro O1_TODO_SEN == construye_juntos: True (sha dff5e762bd23612e)
+[00:44:21]   carro O1_TODO_PREG == construye_juntos: True (sha 382dafcf822b36a1)
+[00:44:21]   carro O1_TODO0 == construye_juntos: True (sha 4e197ff6d7d86841)
+[00:44:21]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[00:44:34]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[00:44:39]   IDENTIDAD CORTA C (salida ENTERA, N 9, s 739955, T 1200): mundo_tramo_c apagado == mundo_escalera True · promotores 0 == O1_LUGAR {'O1_LUGAR_COMP0': True, 'O1_LUGAR_PLAN0': True, 'O1_LUGAR_PREG0': True}
+[00:44:49]   IDENTIDAD CORTA JUNTOS (salida ENTERA, N 9, s 738530, T 1500, mueve 500, c_e 0.01): TODO0 == O1_LUGAR True · TODO_SEN == O1_LUGAR_SENAL True · TODO_PREG == O1_LUGAR_PREG True · TODO != parejas True
+[00:45:24]   [   63.5s] i0 todo    (35.2s) aborto None cruzan 7/9 R0 0.9231 fund [0, 0, 0, 0, 0, 0, 0, 0, 24] · oasis ratio pasos 6.117 · latencia 363.0 nunca 0 mudanzas 2 exc 61884 olv 73156 · escribe 1034 cobros 1034 lee 8117 siembra 69 · mundo AC 3.9748
+[00:45:51]   [   89.7s] i0 sen     (26.2s) aborto None cruzan 5/9 R0 0.9167 fund [0, 1, 0, 8, 0, 7, 0, 0, 0] · oasis ratio pasos 6.574 · latencia 962.0 nunca 1 mudanzas 2 exc 0 olv 0 · escribe 1488 cobros 1488 lee 11832 siembra 77 · mundo AC 7.5649
+[00:46:25]   [  124.4s] i0 preg    (34.7s) aborto None cruzan 1/9 R0 0.8 fund [0, 0, 0, 0, 0, 9, 32, 0, 7] · oasis ratio pasos 6.408 · latencia 672.5 nunca 0 mudanzas 2 exc 45691 olv 68145 · escribe 0 cobros 0 lee None siembra None · mundo AC 4.4902
+[00:46:56]   [  154.6s] i0 lug     (30.2s) aborto None cruzan 2/9 R0 0.6667 fund [5, 82, 28, 3, 2, 3, 0, 0, 16] · oasis ratio pasos 4.871 · latencia 2150.0 nunca 4 mudanzas 2 exc 0 olv 0 · escribe 0 cobros 0 lee None siembra None · mundo AC 5.9875
+[00:47:29]   [  187.7s] i0 todobar (33.0s) aborto None cruzan 0/9 R0 0.7 fund [0, 61, 24, 0, 0, 2, 0, 0, 17] · oasis ratio pasos 6.104 · latencia 442.5 nunca 0 mudanzas 2 exc 28907 olv 68125 · escribe 1003 cobros 1003 lee 7393 siembra 199 · mundo AC 6.0511
+[00:47:29] 
+================ LA LETRA (escalada a n 1) -- HUMO/EXPLORA: NO cuenta, no se declara
+[00:47:29]   validez: {'V1_completa': True, 'V2_mundo_pide': True, 'V3_mundo_actua': True, 'V4_estado': True, 'V5_modulos_actuan': True, 'V6_bandas': False}
+[00:47:29]   puertas: {'S_par_sen': True, 'S_suma_sen': True, 'S_par_preg': True, 'S_suma_preg': True, 'C_par_todobar': True, 'C_suma_todobar': True, 'E_estorban': False} · umbrales {'gana_par': 1, 'dif_suma': 1} · mejor pareja sen · EN EL UMBRAL (+-1): True · matiz None
+[00:47:29]   techo: {'sen': {'semillas_en_9': 0, 'ganables': 1, 'margen_suma': 4}, 'preg': {'semillas_en_9': 0, 'ganables': 1, 'margen_suma': 8}, 'SUMAN_alcanzable': True}
+[00:47:29]   todo vs sen: gana 1 empata 0 pierde 0 · suma 7 vs 5 (dif 2) · por indice [7] vs [5]
+[00:47:29]   todo vs preg: gana 1 empata 0 pierde 0 · suma 7 vs 1 (dif 6) · por indice [7] vs [1]
+[00:47:29]   todo vs todobar: gana 1 empata 0 pierde 0 · suma 7 vs 0 (dif 7) · por indice [7] vs [0]
+[00:47:29]   [sombra] fund_todo_menor_que_sen: gana 0 empata 0 pierde 1 · mediana 2.6667 vs 1.7778
+[00:47:29]   [sombra] latencia_todo_menor_que_sen: gana 1 empata 0 pierde 0 · mediana 363.0 vs 962.0
+[00:47:29]   [sombra] fund_todo_menor_que_preg: gana 1 empata 0 pierde 0 · mediana 2.6667 vs 5.3333
+[00:47:29]   [sombra] latencia_todo_menor_que_preg: gana 1 empata 0 pierde 0 · mediana 363.0 vs 672.5
+[00:47:29]   [sombra] SUMAN_en_sombra: True
+[00:47:29]   [desc] suma_cruzan: {'todo': 7, 'sen': 5, 'preg': 1, 'lug': 2, 'todobar': 0}
+[00:47:29]   [desc] mayorias: {'todo': 1, 'sen': 1, 'preg': 0, 'lug': 0, 'todobar': 0}
+[00:47:29]   [desc] R0_med: {'todo': 0.9231, 'sen': 0.9167, 'preg': 0.8, 'lug': 0.6667, 'todobar': 0.7}
+[00:47:29]   [desc] fund_media: {'todo': 2.6667, 'sen': 1.7778, 'preg': 5.3333, 'lug': 15.4444, 'todobar': 11.5556}
+[00:47:29]   [desc] establecidos_0fund_post10k: {'todo': 9, 'sen': 9, 'preg': 9, 'lug': 6, 'todobar': 8}
+[00:47:29]   [desc] vida_med: {'todo': 1736.0, 'sen': 1015.0, 'preg': 2072.0, 'lug': 800.5, 'todobar': 2343.5}
+[00:47:29]   [desc] latencia_mudanza_med: {'todo': 363.0, 'sen': 962.0, 'preg': 672.5, 'lug': 2150.0, 'todobar': 442.5}
+[00:47:29]   [desc] nunca_llegan: {'todo': 0, 'sen': 1, 'preg': 0, 'lug': 4, 'todobar': 0}
+[00:47:29]   [desc] mundo_AC: {'todo': 3.9748, 'sen': 7.5649, 'preg': 4.4902, 'lug': 5.9875, 'todobar': 6.0511}
+[00:47:29]   [desc] mundo_AC_todo_sobre_lug: 0.664
+[00:47:29]   [desc] ratio_pasos_oasis: {'todo': 6.117, 'sen': 6.574, 'preg': 6.408, 'lug': 4.871, 'todobar': 6.104}
+[00:47:29]   [desc] escrituras: {'todo': 1034.0, 'sen': 1488.0, 'preg': 0.0, 'lug': 0.0, 'todobar': 1003.0}
+[00:47:29]   [desc] siembras: {'todo': 69.0, 'sen': 77.0, 'preg': 0.0, 'lug': 0.0, 'todobar': 199.0}
+[00:47:29]   [desc] excursiones: {'todo': 61884.0, 'sen': 0.0, 'preg': 45691.0, 'lug': 0.0, 'todobar': 28907.0}
+[00:47:29]   [desc] olvidos: {'todo': 73156.0, 'sen': 0.0, 'preg': 68145.0, 'lug': 0.0, 'todobar': 68125.0}
+[00:47:29]   [desc] bandas: {'lug': {'banda': (3, 6), 'suma': 2}, 'preg': {'banda': (7, 9), 'suma': 1}, 'sen': {'banda': (2, 8), 'suma': 5}}
+[00:47:29] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\juntos\datos\humo\humo_s738592-738592_T30000_m10000_20261001_004421\resumen.json (sha 3f6353d48588dbc3) · abortos 0 · 187.7s
+[00:47:29] VEREDICTO: HUMO (no cuenta): NO SE LEE

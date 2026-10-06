@@ -1,0 +1,169 @@
+{
+ "sonda": 1,
+ "resumen": {
+  "brazos": {
+   "mixto": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 9,
+    "cruzan_por_corrida": [
+     5,
+     4
+    ],
+    "establecidos": 14,
+    "R0_med": 0.9071,
+    "vida_med": 1057.5,
+    "fund_media": 19.1111,
+    "mundo_AC": 6.7151,
+    "mundo_K": 0.9096,
+    "ratio_pasos_oasis": 6.7645,
+    "g_ef_1k": 2.9095,
+    "g_nom_1k": 4.7325,
+    "plus_ef_1k": 0.1008,
+    "plus_nom_1k": 0.3551,
+    "frac_llave": 0.1476,
+    "mord_K": 556,
+    "con": 799,
+    "sin": 4616,
+    "adel": 0,
+    "partos": 456,
+    "muertes": 800,
+    "mord_AC": 10051,
+    "mord_BD": 6598
+   },
+   "mixto2": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 6,
+    "cruzan_por_corrida": [
+     4,
+     2
+    ],
+    "establecidos": 11,
+    "R0_med": 0.514,
+    "vida_med": 700.25,
+    "fund_media": 33.3333,
+    "mundo_AC": 6.2672,
+    "mundo_K": 1.0153,
+    "ratio_pasos_oasis": 6.393,
+    "g_ef_1k": 2.8236,
+    "g_nom_1k": 4.5995,
+    "plus_ef_1k": 0.0895,
+    "plus_nom_1k": 0.32,
+    "frac_llave": 0.1374,
+    "mord_K": 536,
+    "con": 720,
+    "sin": 4522,
+    "adel": 0,
+    "partos": 402,
+    "muertes": 1002,
+    "mord_AC": 10121,
+    "mord_BD": 6589
+   }
+  },
+  "mixto": {
+   "roles": {
+    "techo": {
+     "n": 18,
+     "cruzan": 8,
+     "frac_cruzan": 0.444,
+     "establecidos": 12,
+     "R0_med": 0.6972,
+     "g_ef_1k_med": 2.9945,
+     "frac_llave": 0.3,
+     "mord_K": 1041,
+     "partos": 450,
+     "partos_por_linaje": 25.0,
+     "fund_med": 11.0,
+     "vida_med": 1000.0
+    },
+    "piso": {
+     "n": 18,
+     "cruzan": 7,
+     "frac_cruzan": 0.389,
+     "establecidos": 13,
+     "R0_med": 0.6521,
+     "g_ef_1k_med": 3.106,
+     "frac_llave": 0.009,
+     "mord_K": 51,
+     "partos": 408,
+     "partos_por_linaje": 22.7,
+     "fund_med": 8.5,
+     "vida_med": 802.5
+    }
+   },
+   "por_corrida": [
+    {
+     "i": 0,
+     "brazo": "mixto",
+     "techo": "3/5",
+     "piso": "2/4"
+    },
+    {
+     "i": 0,
+     "brazo": "mixto2",
+     "techo": "2/4",
+     "piso": "2/5"
+    },
+    {
+     "i": 1,
+     "brazo": "mixto",
+     "techo": "3/5",
+     "piso": "1/4"
+    },
+    {
+     "i": 1,
+     "brazo": "mixto2",
+     "techo": "0/4",
+     "piso": "2/5"
+    }
+   ]
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": "mixto,mixto2",
+ "semillas": [
+  737202,
+  737203
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.03,
+  "cerrojo": 0
+ },
+ "perillas_base": {
+  "plus": 0.4,
+  "d_plus": 600,
+  "extra_sin": null,
+  "adelanta": 0
+ },
+ "nota": "humo 6: PISTA MIXTA, mundo del encargo (plus energetico 0.4); mismas semillas del humo 5",
+ "sha_runner": "9f77ce1f378f1c59",
+ "sha_mundo_plus": "cb68a7266b61540b",
+ "carros": {
+  "O1_LUGAR_ORAC": "adc55edae3a6a9f5",
+  "O1_LUGAR_AZAR": "2b888d7de60d96b0",
+  "O1_LUGAR_ORAC0": "03f47a545b3a30e2"
+ },
+ "mundo_plus": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17,
+  "oasis": "OasisPlus",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "seg": 437.8
+}

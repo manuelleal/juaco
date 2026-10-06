@@ -1,0 +1,314 @@
+{
+ "modo": "humo",
+ "peldano": "d1",
+ "resumen": {
+  "indices": [
+   0,
+   1
+  ],
+  "brazos": {
+   "base": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 1.0,
+    "K_post": 4.42,
+    "partos": 392,
+    "nietos": 336,
+    "nietos_post": 78,
+    "rumbo": 0.0991,
+    "vida_med": 173.5,
+    "nobj": 20.76,
+    "causas": {
+     "hambre": 65,
+     "sed": 48,
+     "veneno": 961,
+     "sal": 947
+    }
+   },
+   "clon": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 0.5,
+    "K_post": 3.37,
+    "partos": 119,
+    "nietos": 84,
+    "nietos_post": 9,
+    "rumbo": 0.0226,
+    "vida_med": 90.25,
+    "nobj": 25.326,
+    "causas": {
+     "hambre": 8,
+     "sed": 16,
+     "veneno": 855,
+     "sal": 807
+    },
+    "sin_pareja": 334,
+    "con_pareja": 119,
+    "recomb": 0,
+    "pagos": 0,
+    "trofico": 0
+   },
+   "sexo": {
+    "n": 2,
+    "persisten": 1,
+    "vivos_T": 1.0,
+    "K_post": 2.29,
+    "partos": 106,
+    "nietos": 73,
+    "nietos_post": 5,
+    "rumbo": 0.0274,
+    "vida_med": 88.5,
+    "nobj": 30.1255,
+    "causas": {
+     "hambre": 7,
+     "sed": 11,
+     "veneno": 779,
+     "sal": 723
+    },
+    "sin_pareja": 368,
+    "con_pareja": 106,
+    "recomb": 106,
+    "pagos": 0,
+    "trofico": 0
+   }
+  },
+  "pareados": {
+   "base_vs_clon": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      146,
+      45
+     ],
+     [
+      190,
+      39
+     ]
+    ],
+    "K_post": [
+     [
+      4.94,
+      4.09
+     ],
+     [
+      3.9,
+      2.65
+     ]
+    ]
+   },
+   "base_vs_sexo": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      146,
+      39
+     ],
+     [
+      190,
+      34
+     ]
+    ],
+    "K_post": [
+     [
+      4.94,
+      1.7
+     ],
+     [
+      3.9,
+      2.88
+     ]
+    ]
+   },
+   "clon_vs_base": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      45,
+      146
+     ],
+     [
+      39,
+      190
+     ]
+    ],
+    "K_post": [
+     [
+      4.09,
+      4.94
+     ],
+     [
+      2.65,
+      3.9
+     ]
+    ]
+   },
+   "clon_vs_sexo": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      45,
+      39
+     ],
+     [
+      39,
+      34
+     ]
+    ],
+    "K_post": [
+     [
+      4.09,
+      1.7
+     ],
+     [
+      2.65,
+      2.88
+     ]
+    ]
+   },
+   "sexo_vs_base": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      39,
+      146
+     ],
+     [
+      34,
+      190
+     ]
+    ],
+    "K_post": [
+     [
+      1.7,
+      4.94
+     ],
+     [
+      2.88,
+      3.9
+     ]
+    ]
+   },
+   "sexo_vs_clon": {
+    "persiste": [
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ]
+    ],
+    "nietos": [
+     [
+      39,
+      45
+     ],
+     [
+      34,
+      39
+     ]
+    ],
+    "K_post": [
+     [
+      1.7,
+      4.09
+     ],
+     [
+      2.88,
+      2.65
+     ]
+    ]
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 50000,
+ "brazos": [
+  "sexo",
+  "clon",
+  "base"
+ ],
+ "semillas": [
+  739290,
+  739291
+ ],
+ "familia": {
+  "sexo": {
+   "sexo": 1,
+   "recombina": 1,
+   "pareja": "azar"
+  },
+  "clon": {
+   "sexo": 1,
+   "recombina": 0,
+   "pareja": "azar"
+  },
+  "base": null
+ },
+ "extra": {},
+ "eco": {
+  "refunda": 1,
+  "t_corte": 25000,
+  "p_mut": 0.05,
+  "sigma": 0.15,
+  "banco": 50,
+  "cada_gen": 2500,
+  "n_sombra": 0
+ },
+ "nota": "humo 1 d1: sexo (recombinacion) vs clon con pareja vs base; r_par 10",
+ "senal": "no",
+ "sha_runner": "b5aeb490e39805f0",
+ "mundo": {
+  "sha_motor_eco": "bca3033878b59622",
+  "sha_fuente_transformada": "4a7e0dffac15cffa",
+  "anclas": 12
+ },
+ "seg": 220.4
+}

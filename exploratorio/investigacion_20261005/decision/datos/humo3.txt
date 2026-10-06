@@ -1,0 +1,6 @@
+
+## N=8 T=3000 sitio cada 300 reglas 900,1800,2700 C=32 pan=onehot (n=1; paso 0 del pan: 1.000 [1.000–1.000])
+| brazo | comida/paso | tasa tras sitio | 1a comida tras sitio | 3a tras sitio | tasa tras regla | 1a tras regla | 3a tras regla | ops/decision | memoria | modelo vs mundo actual | modelo en lo que nunca cambió | pan solo vs original |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 0 oraculo | 0.199 [0.199–0.199] | 0.199 [0.199–0.199] | 3 [0–6] (6/6) | 13 [9–17] (6/6) | 0.199 [0.199–0.199] | 0 [0–3] (3/3) | 15 [2–16] (3/3) | 1465 | 0 [0–0] | 1.00 [1.00–1.00] | 1.00 [1.00–1.00] | 1.00 [1.00–1.00] |
+| 6 plan_pan_cel | 0.203 [0.203–0.203] | 0.207 [0.207–0.207] | 4 [1–8] (6/6) | 13 [11–18] (6/6) | 0.197 [0.197–0.197] | 9 [2–14] (3/3) | 17 [16–18] (3/3) | 3193 | 6 [6–6] | 1.00 [1.00–1.00] | 1.00 [1.00–1.00] | 1.00 [1.00–1.00] |

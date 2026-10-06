@@ -1,0 +1,36 @@
+IDENTIDAD_GRANDE · python 3.14.2 · numpy 2.4.3 · corre_grande.py e32d39add31f47da · pista_grande.py 15fea5afb19fdde4 · seed 718080 · T 3000
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\organelos\dinamita\carros\TPATAS.py 1b6272ef4616af8b OK
+  sha experimentos\organelos\o1_evo\grande\pista_grande.py 15fea5afb19fdde4 OK
+  pista_grande construida por anclas: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': 'bb6d7ad3f5ef9833', 'anclas': 10}
+  [OK] V0 shas de origen y anclas 
+U  unidad de Geografia
+  [OK] U1 zonas de W = L/10 = 72, disjuntas, pantano opuesto z0 7
+  [OK] U2 oasis: A y C -> (0.8, 0.8); B y D nominales {'A': (0.8, 0.8), 'B': (-0.4, 0.0), 'C': (0.8, 0.8), 'D': (0.0, -0.4)}
+  [OK] U3 fuera de las zonas: todo nominal y sin carga {'A': (0.8, 0.0), 'B': (-0.4, 0.0), 'C': (0.0, 0.8), 'D': (0.0, -0.4)}
+  [OK] U4 pantano: A nominal inmediato + 1 carga; B nominal sin carga 
+  [OK] U5 drenado exacto: 400 pasos (t 10..409) x 0.0025 = 1.0 pasos 400 drenado 1.000000000000
+  [OK] U6 cargas acumulables: 2 cargas -> 0.005 por paso 
+  [OK] U7 la carga muere con el cuerpo (y se cuenta la muerte con carga) 
+  [OK] U8 zonas por semilla: deterministas y NO fijas (10 semillas, >= 8 inicios distintos) [7, 564, 373, 444, 697, 573, 343, 499, 246, 636]
+  [OK] U9 solo rica: sin pantano; solo lento: sin oasis; el pantano no depende de rica 
+I1 regla 14 + fabrica (TPATAS_3 x9)
+  [OK] I1a tarea(fabrica) == corre_v143.tarea (resumen ENTERO) 
+  [OK] I1b crudo pista_grande == pista.run (ENTERO, rng del mundo incluido) rng a7c0f8170bdf86a1 / a7c0f8170bdf86a1
+  [OK] I1c sin claves nuevas con el mundo de fabrica 
+I2 tamano: G = 2 con 4 carros == pista.run(mundo_n = 8)
+  [OK] I2 salida ENTERA igual (salvo mundo_n) y pista['grande'] == {'G': 2} L 320 nobj 32
+I3 placebo: zonas definidas, efectos 0 (TPATAS_3 x9)
+  [OK] I3a placebo == fabrica (crudo ENTERO sin las claves nuevas) 
+  [OK] I3b los ganchos se ejercitaron (mordidas en oasis y pantano > 0; cargas 0) A+C oasis 28 · pantano 39
+C1 las cosas actuan (TPATAS_3 x9, rica = lento = 1, G = 1 para comparar con I1), espia en resultado()
+  [OK] C1a el crudo DIFIERE de fabrica (sin las claves nuevas) 
+  [OK] C1b dS reportado: (0.8, 0.8) en A/C del oasis, nominal en el resto mordidas 492 · A/C en oasis 30 · mal []
+  [OK] C1c veneno lento: cargas > 0 y drenado > 0 (<= 1.0 por carga) cargas 32 drenado 23.8950
+  mundo C1: {'G': 1, 'z0': 3, 'W': 36, 'frac_zona': 0.1, 'rica': 1, 'lento': 1, 'rica_extra': 0.8, 'lento_tasa': 0.0025, 'lento_dur': 400, 'oasis': [3, 38], 'pantano': [183, 218], 'comp_oasis': {'A': 0.127, 'B': 1.2, 'C': 0.1183, 'D': 0.9283}, 'comp_pantano': {'A': 0.4427, 'B': 1.116, 'C': 0.2507, 'D': 1.871}, 'comp_resto': {'A': 1.954, 'B': 12.8673, 'C': 1.7067, 'D': 13.418}}
+ARNES: 19/19 OK · TODO OK · 26.6s

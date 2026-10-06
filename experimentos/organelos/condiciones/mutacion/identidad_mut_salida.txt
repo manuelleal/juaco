@@ -1,0 +1,86 @@
+ARNES mutacion · 2026-09-30 17:06:18
+  shas: corre_mut.py 8912e9d77f397e40 · identidad_mut.py b08e1410de201065
+(K) shas fijados (corre_moneda, identidad_moneda; por corre_moneda.verifica: sentidos_muro, corre_bp, V143_BQ3, pista, juez)
+  sha experimentos\organelos\moneda\corre_moneda.py 0441aa7bf5b94316 OK
+  sha experimentos\organelos\moneda\identidad_moneda.py ceede3d6458597ac OK
+  -- verifica de corre_moneda (shas de sentidos_muro, corre_bp, V143_BQ3; pista, juez, carros):
+    sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+    sha experimentos\organelos\sentidos_muro\construye_sm.py 59e3a6693012d358 OK
+    sha experimentos\organelos\sentidos_muro\carros\V143_BQ3.py dd527e3c627e77fb OK
+    sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+    -- verifica de sentidos_muro (shas de pista, juez, corre_bp, V143_BQ2, TERMO; carros == construye_sm):
+      sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+      sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+      sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+      sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+      carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+      carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+(C) CONFIGURACION: CFG10 = CFG de fabrica con TODAS las tasas / 10; inicial y banco iguales; CERO == corre_moneda; 'fabrica' == corre_moneda.BRAZOS
+  CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · CFG10 {'inicial': 2, 'p_campo': 0.01, 'p_dup': 0.002, 'p_del': 0.007, 'p_ins': 0.005, 'banco': 50} · CERO {'inicial': 0, 'p_campo': 0.0, 'p_dup': 0.0, 'p_del': 0.0, 'p_ins': 0.0, 'banco': 50}: OK
+(I) siembra inyectada == la de corre_moneda en los tres brazos (y en las dos tasas)
+  moneda: OK
+  neutra: OK
+  cero: OK
+(F) A TASAS DE FABRICA ESTE RUNNER ES corre_moneda BIT A BIT
+  tarea moneda: 10 campos OK
+  tarea neutra: 10 campos OK
+  tarea cero: 10 campos OK
+  trabajo moneda (cadena 2 pasajes + prueba, T 1000): 3 JSON campo a campo y frac_A [0.5, 0.4644, 0.4489]: OK
+  trabajo neutra (cadena 2 pasajes, T 1000): 2 JSON campo a campo y frac_A [0.5, 0.4644, 0.4556]: OK
+  sha del pasaje guardado pasaje_moneda_i1_p0.json fe9dc0379be9aa70: OK
+  moneda i1 p0 (s 633110, T 25000, 26s) a tasas de fabrica == GUARDADO 29-sep en ['linajes', 'pista', 'R0_pista', 'tel', 'tel_termo', 'bq']: OK
+(A) LAS TASAS NUEVAS ACTUAN
+  el mismo pasaje a tasas / 10 (26s): cfg del carro == CFG10 y difiere del guardado: OK · intacta 1.0 (fabrica 0.9) · fraccion A 0.4756 (fabrica 0.5156)
+  operador _bq_muta del carro, 100000 hijos de [A]: cambia 0.2034 (fabrica) vs 0.0222 (/10), razon 0.109 en [0.07, 0.13]; tasas 0: 0.0: OK · delta largo medio -0.0019 (fabrica) -0.0003 (/10)
+(E) regla 14: ENTRADA campo a campo contra corre_bp.tarea (la de corre_moneda) con cfg explicito
+  moneda (/10) == corre_bp.tarea('V143_BQ3', CFG10, siembra): 8 campos OK
+  neutra (/10) == corre_bp.tarea('V143_BQ3', CFG10, siembra): 8 campos OK
+  cero (/10) == corre_bp.tarea('V143_BQ3', CERO, siembra): 8 campos OK
+  cero == corre_moneda.tarea('cero') (tasas 0 en los dos): OK
+  la siembra ACTUA: todo fundador sale del banco sembrado (44/44): OK
+(D) determinismo: moneda / 10, dos veces
+  OK
+(W) JSON antes de volver; un JSON con aborto SE REINTENTA; uno bueno NO se recorre; cadena completa por trabajo() y --reanuda
+  reintento: OK
+  trabajo() cadena 2 pasajes + prueba, aborto simulado en p1 y reanuda: identico ([0.5, 0.4644, 0.4444], cruzan 0; intacta [1.0, 1.0]): OK
+(X) el runner NIEGA pool > 2 y pool en el humo
+  ['--explora', '--pool', '3']: OK (niega)
+  ['--humo', '--pool', '2']: OK (niega)
+(L) LA LETRA en casos sinteticos
+  PAGA: moneda > neutra en 4/5: PAGA (espera PAGA) OK
+  PAGA exige estricto: empates no cuentan (2/5): OTRA MONEDA (espera OTRA MONEDA) OK
+  OTRA MONEDA: 3/5 mayor: OTRA MONEDA (espera OTRA MONEDA) OK
+  PURGA: <= 0.5 neutra en 4/5 y neutra >= 0.10: PURGA (espera PURGA) OK
+  PURGA: == 0.5 neutra cuenta: PURGA (espera PURGA) OK
+  no PURGA si la neutra mediana < 0.10: OTRA MONEDA (espera OTRA MONEDA) OK
+  NO SE LEE (aborto): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (cero fuera de banda): NO SE LEE (espera NO SE LEE) OK
+  cero en el borde 0.25 se lee: PAGA (espera PAGA) OK
+  NO SE LEE (cero con genotipo nuevo): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (carga no bajo: intacta neutra < 0.80): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (tasas no actuan: 0 listas mutadas): NO SE LEE (espera NO SE LEE) OK
+  NO SE LEE (arnes): NO SE LEE OK
+  NO SE LEE (referencias): NO SE LEE OK
+(R) referencias GUARDADAS: forzada3 y bq3_pas (sentidos_muro), prueba de moneda a tasas x1 y la lectura de moneda (sha16)
+  forzada3 s59201 45f584a52a12222b OK
+  forzada3 s59202 598d1e3511f75407 OK
+  forzada3 s59203 c38f58315cc06f8a OK
+  forzada3 s59204 dab209fb1e96edcd OK
+  forzada3 s59205 6eed99ada0876760 OK
+  bq3_pas s59201 f81ee08a42df3008 OK
+  bq3_pas s59202 e5717fc4fa44e43f OK
+  bq3_pas s59203 8dfc6994f235cfe2 OK
+  bq3_pas s59204 349fa9efcf35d174 OK
+  bq3_pas s59205 360e08b3bdb4faf7 OK
+  moneda_x1 s59201 76887fd3a09e9b5b OK
+  moneda_x1 s59202 74c62698acbe9f42 OK
+  moneda_x1 s59203 381e0d9c233d2906 OK
+  moneda_x1 s59204 c38771be6759281c OK
+  moneda_x1 s59205 a0a181996f3401a0 OK
+  lectura_moneda.json 45d316a8de26cf20 OK
+ARNES: PASA · 101s

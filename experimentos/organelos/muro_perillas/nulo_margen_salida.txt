@@ -1,0 +1,51 @@
+NULOS de MARGEN: arranque 0.03, sigma 0.03, delta 0.01, clip (0.0, 0.6), p(mutacion en MARGEN) 1.0, FUNC 0.06, letal 0.015, margen 0.03, 40000 linajes
+(1) DERIVA PURA por linaje
+   eventos   media  mediana  P>0.02  P>0.03  P>0.05  P>0.06  P>0.10
+         6  0.0246   0.0087   0.397   0.315   0.192   0.145   0.044
+        12  0.0268   0.0099   0.410   0.327   0.202   0.159   0.058
+        30  0.0294   0.0117   0.426   0.346   0.221   0.175   0.071
+        60  0.0296   0.0115   0.425   0.346   0.222   0.177   0.072
+       120  0.0299   0.0115   0.423   0.347   0.222   0.180   0.074
+       300  0.0296   0.0116   0.426   0.346   0.220   0.174   0.072
+(2) MEDIANA de siembra neutra (45 muestras, 4000 cadenas, profundidad 20-120): media 0.0137 mediana 0.0117 P>0.01 0.546 P>0.02 0.267 P>0.03 0.108 P>0.05 0.010 P>=0.06 0.004
+(3) PG (a) bajo el nulo de deriva pura (sel y neu intercambiables):
+  margen 0.02: P(sel > neu + margen) por cadena 0.110 -> P(>= 13/20) 1.19e-08
+  margen 0.03: P(sel > neu + margen) por cadena 0.037 -> P(>= 13/20) 1.75e-14
+  margen 0.05: P(sel > neu + margen) por cadena 0.004 -> P(>= 13/20) 8.96e-28
+(4) SELECCION PURIFICADORA sin gradiente (ERR-192): sel = 9 linajes en camara, muerte si MARGEN < 0.015, refundacion desde otro linaje; neu = deriva pura
+  sel purificadora: mediana 0.0963 media 0.1039 P>0.03 0.995 P>=0.06 0.886 refundaciones por cadena mediana 78.0
+  (a) P(sel > neu + 0.03) por cadena SIN gradiente 0.955 -> P(>= 13/20) 1.000   <- falso positivo de (a): por eso (a) sola no basta
+  (b) P(sel >= 0.06) por cadena SIN gradiente 0.886 -> P(>= 13/20) 9.99e-01   <- falso positivo de (b) (lo que decide)
+NULOS de MARGEN: arranque 0.03, sigma 0.03, delta 0.01, clip (0.0, 0.6), p(mutacion en MARGEN) 0.1667, FUNC 0.06, letal 0.015, margen 0.03, 40000 linajes
+(1) DERIVA PURA por linaje
+   eventos   media  mediana  P>0.02  P>0.03  P>0.05  P>0.06  P>0.10
+         6  0.0260   0.0300   0.648   0.231   0.111   0.070   0.006
+        12  0.0244   0.0203   0.504   0.301   0.153   0.100   0.015
+        30  0.0244   0.0102   0.407   0.317   0.185   0.138   0.038
+        60  0.0261   0.0099   0.406   0.326   0.199   0.154   0.053
+       120  0.0282   0.0109   0.417   0.336   0.215   0.170   0.066
+       300  0.0296   0.0118   0.424   0.344   0.222   0.177   0.072
+(2) MEDIANA de siembra neutra (45 muestras, 4000 cadenas, profundidad 20-120): media 0.0134 mediana 0.0100 P>0.01 0.500 P>0.02 0.277 P>0.03 0.124 P>0.05 0.021 P>=0.06 0.008
+(3) PG (a) bajo el nulo de deriva pura (sel y neu intercambiables):
+  margen 0.02: P(sel > neu + margen) por cadena 0.151 -> P(>= 13/20) 5.96e-07
+  margen 0.03: P(sel > neu + margen) por cadena 0.065 -> P(>= 13/20) 1.68e-11
+  margen 0.05: P(sel > neu + margen) por cadena 0.013 -> P(>= 13/20) 1.30e-20
+(4) SELECCION PURIFICADORA sin gradiente (ERR-192): sel = 9 linajes en camara, muerte si MARGEN < 0.015, refundacion desde otro linaje; neu = deriva pura
+  sel purificadora: mediana 0.0738 media 0.0779 P>0.03 0.991 P>=0.06 0.712 refundaciones por cadena mediana 27.0
+  (a) P(sel > neu + 0.03) por cadena SIN gradiente 0.888 -> P(>= 13/20) 0.999   <- falso positivo de (a): por eso (a) sola no basta
+  (b) P(sel >= 0.06) por cadena SIN gradiente 0.712 -> P(>= 13/20) 8.06e-01   <- falso positivo de (b) (lo que decide)
+NULOS de MARGEN: arranque 0.03, sigma 0.03, delta 0.01, clip (0.0, 0.6), p(mutacion en MARGEN) 1.0, FUNC 0.06, letal 0.005, margen 0.03, 40000 linajes
+  sel purificadora: mediana 0.0856 media 0.0935 P>0.03 0.988 P>=0.06 0.786 refundaciones por cadena mediana 77.0
+  (a) P(sel > neu + 0.03) por cadena SIN gradiente 0.905 -> P(>= 13/20) 1.000   <- falso positivo de (a): por eso (a) sola no basta
+  (b) P(sel >= 0.06) por cadena SIN gradiente 0.786 -> P(>= 13/20) 9.54e-01   <- falso positivo de (b) (lo que decide)
+NULOS de MARGEN: arranque 0.03, sigma 0.03, delta 0.01, clip (0.0, 0.6), p(mutacion en MARGEN) 1.0, FUNC 0.06, letal 0.03, margen 0.03, 40000 linajes
+  sel purificadora: mediana 0.1128 media 0.1192 P>0.03 1.000 P>=0.06 0.969 refundaciones por cadena mediana 83.0
+  (a) P(sel > neu + 0.03) por cadena SIN gradiente 0.983 -> P(>= 13/20) 1.000   <- falso positivo de (a): por eso (a) sola no basta
+  (b) P(sel >= 0.06) por cadena SIN gradiente 0.969 -> P(>= 13/20) 1.00e+00   <- falso positivo de (b) (lo que decide)
+(5) NULO DE GRADIENTE (sel y pur = dos cadenas purificadoras independientes, barrera 0.015, p=1, arranque 0.03; 3000 pares)
+  margen 0.0: P(sel > pur + m) por cadena 0.502 -> P(>= 13/20) 0.1348
+  margen 0.01: P(sel > pur + m) por cadena 0.423 -> P(>= 13/20) 0.0342
+  margen 0.02: P(sel > pur + m) por cadena 0.349 -> P(>= 13/20) 0.0059
+  margen 0.03: P(sel > pur + m) por cadena 0.288 -> P(>= 13/20) 0.0008
+  margen 0.04: P(sel > pur + m) por cadena 0.235 -> P(>= 13/20) 0.0001
+  |sel - pur| mediana 0.0369, P90 0.0992

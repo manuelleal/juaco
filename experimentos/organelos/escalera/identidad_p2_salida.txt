@@ -1,0 +1,10 @@
+ARNES identidad_p2.py
+  mundo_colonia: {'sha_motor': 'd10cb9021f5d0f41', 'sha_fuente_transformada': 'b4ad5428b5bab830', 'anclas': 10}
+  OK    (I1) pega 0 cuello 0 == motor_convive.run_solapadas BIT A BIT (salida entera, 9 O1, s 739551, T 4000) y mismo rng final del mundo
+  OK    (I2) pega 1 cuello 0: grupos fundados 5 > 0, tam_max 5 >= 2, pasos pegado 37662 > 0, grupos vivos 5 (tamanos [4, 2, 2, 1, 1]); y la fisica != base
+  OK    (I3) pega 1 cuello 2000 p_suelto 0.0: sortea (cuellos > 0) pero no mata; fisica == pega 1 cuello 0
+  OK    (I4) pega 0 cuello 2000 p 0.5: muertes por cuello 9 > 0 (de 18 candidatos en 1 cuellos), ninguna de pegados, fisica != base
+  OK    (I5) pega 1 cuello 2000 p 0.5: muertes por cuello 7 (pegados 5) de 19 candidatos; tam grupos vivos [2, 2, 1, 1, 1]; fisica != I2 y != I4
+  OK    (I6) trabajo peg sin aborto (None), fila con colonia y estado {'pega': 1, 'cuello': 2000, 'p_suelto': 0.5}; --reanuda relee igual
+
+ARNES PASA, 6/6 · 93.1s

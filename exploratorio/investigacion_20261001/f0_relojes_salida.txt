@@ -1,0 +1,268 @@
+F0_RELOJES · semilla bootstrap 20261001 · 10000 remuestreos · sigma 0.03 · numpy 2.4.3
+
+======================================================================================================================
+o1_libre SERIE  ·  C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre\datos\serie_i734201-734210_20260930_182134
+  ARCHIVOS LEIDOS: 120 (pasajes 60, pruebas 60) · cadenas por brazo {'lib': 10, 'neu': 10} · pasajes por cadena 3 x T 100000
+  genes y distancia de la fabrica al recorte mas cercano, en sigmas del gen: MARGEN:8.3 PRUEBA:16.7 PEN_OTRO:11.7 D0:27.8 PISO:6.7 U4:33.3 U2:33.3 U1:33.3 XURG:10.0 TOPE:16.7 MEM:0.0 SOC:0.0 RES:0.0 PAU:0.0
+  conjuntos: LEJOS(>=25s) ['D0', 'U4', 'U2', 'U1'] · MEDIO(>=10s) ['PRUEBA', 'PEN_OTRO', 'D0', 'U4', 'U2', 'U1', 'XURG', 'TOPE'] · principal = MEDIO
+
+  DEMOGRAFIA POR PASAJE (mediana [min-max] sobre cadenas)
+  brazo   p           partos          tarde         fund_n   de_siembra        colonos       nac/linaje  padres dist.        Ne_linajes         Ne_padres
+  lib     0  598.5 [556-669] 239.5 [219-281]  270 [130-483]      0 [0-0]  260 [121-474] 53.111 [48.778-59.556]  23.5 [18-28] 8.308 [7.459-8.581] 18 [15.341-18.664]
+  lib     1  587.5 [392-637]  241 [155-269]  222 [106-655]     9 [9-12]   213 [97-646] 49.722 [40-56.222]  25.5 [21-30] 8.182 [7.284-8.672] 17.725 [15.283-19.66]
+  lib     2  575.5 [283-636] 230.5 [116-265]   150 [50-915]     9 [9-11]   141 [41-906] 48.944 [31.111-58.111]    24 [21-29] 8.249 [7.459-8.654] 17.882 [14.516-19.286]
+  neu     0  584.5 [570-594] 245.5 [228-252]   175 [68-345]      0 [0-0]   166 [59-336] 51.889 [50-57.333]    25 [22-29] 8.491 [7.598-8.785] 18.326 [17.234-19.194]
+  neu     1  596.5 [584-614]  253 [235-281]   168 [73-305]      9 [9-9]   159 [64-296] 53.5 [51.222-55.222]    26 [22-30] 8.376 [7.849-8.544] 18.089 [16.331-20.769]
+  neu     2    590 [557-616] 241.5 [227-261] 116.5 [23-347]      9 [9-9] 107.5 [14-338] 54.111 [48.667-56.889]    26 [20-29] 8.438 [7.774-8.747] 19.014 [15.882-20.663]
+  TODOS LOS PASAJES lib: partos 586 [283-669] · fundadores 224.5 [50-915] (de siembra 9 [0-12]) · padres distintos 24 [18-30] · Ne_linajes 8.274 [7.284-8.672] · Ne_padres 17.881 [14.516-19.66]
+  TODOS LOS PASAJES neu: partos 592.5 [557-616] · fundadores 141 [23-347] (de siembra 9 [0-9]) · padres distintos 26 [20-30] · Ne_linajes 8.403 [7.598-8.785] · Ne_padres 18.622 [15.882-20.769]
+
+  RELOJ via (i): n acumulado = E[((g - fabrica)/sigma_j)^2] en la siembra tras el pasaje p (por cadena; mediana [min-max]; media e IC95 bootstrap sobre cadenas)
+  lib    LEJOS : p0 4.2 [2.2-7.2] media 4.7 IC 3.8-5.7 | p1 9.6 [4.5-16.2] media 10.0 IC 7.5-12.5 | p2 13.4 [7.0-20.7] media 13.2 IC 11.0-15.5
+  lib    MEDIO : p0 5.1 [3.2-6.5] media 4.8 IC 4.2-5.5 | p1 9.3 [6.2-12.9] media 9.4 IC 8.1-10.8 | p2 13.5 [11.8-19.5] media 14.3 IC 12.9-15.9
+  lib    TODOS : p0 4.3 [2.8-7.2] media 4.4 IC 3.7-5.2 | p1 8.7 [6.2-13.0] media 9.0 IC 7.9-10.2 | p2 13.9 [11.1-20.9] media 14.2 IC 12.7-16.0
+  lib    O1x10 : p0 4.6 [3.2-7.3] media 4.7 IC 4.1-5.5 | p1 9.1 [6.6-12.0] media 9.4 IC 8.3-10.5 | p2 13.9 [12.3-17.5] media 14.7 IC 13.6-15.9
+  lib    PODERES: p0 3.5 [1.7-7.0] media 3.6 IC 2.8-4.5 | p1 7.4 [4.0-15.4] media 7.9 IC 6.3-9.9 | p2 11.0 [6.9-29.5] media 12.9 IC 9.7-17.2
+  neu    LEJOS : p0 4.6 [2.6-5.6] media 4.4 IC 3.8-5.0 | p1 8.3 [6.4-9.5] media 8.0 IC 7.4-8.6 | p2 12.8 [6.6-16.2] media 11.1 IC 9.0-13.1
+  neu    MEDIO : p0 4.7 [3.0-5.4] media 4.5 IC 4.0-5.0 | p1 8.0 [6.2-10.2] media 8.1 IC 7.4-8.7 | p2 11.2 [7.6-16.6] media 11.6 IC 9.9-13.4
+  neu    TODOS : p0 4.4 [3.0-5.1] media 4.2 IC 3.7-4.6 | p1 7.9 [5.6-10.0] media 7.9 IC 7.3-8.5 | p2 10.8 [8.0-17.0] media 11.5 IC 10.0-13.1
+  neu    O1x10 : p0 4.8 [3.3-5.7] media 4.6 IC 4.2-5.0 | p1 8.2 [6.5-9.6] media 8.1 IC 7.5-8.6 | p2 11.5 [8.7-16.2] media 11.9 IC 10.4-13.5
+  neu    PODERES: p0 2.9 [1.1-4.6] media 3.0 IC 2.3-3.6 | p1 7.9 [3.5-10.9] media 7.6 IC 6.4-8.7 | p2 8.7 [3.9-20.2] media 10.5 IC 7.6-13.7
+  n POR GEN (neutro, siembra final, todas las cadenas): MARGEN:14.0 PRUEBA:15.0 PEN_OTRO:15.1 D0:10.5 PISO:11.9 U4:8.2 U2:14.0 U1:11.7 XURG:10.4 TOPE:8.1 MEM:11.1 SOC:9.0 RES:6.8 PAU:15.0
+  fraccion de genomas EN el recorte (neutro, final): MARGEN:0.00 PRUEBA:0.00 PEN_OTRO:0.00 D0:0.00 PISO:0.04 U4:0.00 U2:0.00 U1:0.00 XURG:0.01 TOPE:0.00 MEM:0.16 SOC:0.14 RES:0.14 PAU:0.20
+  n por gen del conjunto MEDIO: mediana 11.1 [min 8.1 - max 15.1] (8 genes)
+  incremento de n por pasaje (neutro, MEDIO; mediana [min-max]): p0 4.7 [3.0-5.4] | p1 3.6 [1.6-5.6] | p2 3.1 [-0.1-8.0]
+
+  RELOJ via (ii): genealogia encadenada NO ESTA en los JSON (solo conteos por linaje y la siembra).
+    COTA SUPERIOR demografica (neutro): sum_p [1 + 0.75 x nacimientos reales por linaje] = 122.5 [118.083-128.833]  (supone 1 generacion por nacimiento)
+    PROXY por padres distintos (neutro): sum_p [D/L + (D/L+1)/2] = 14.583 [13-14.833]   ·   via (i) MEDIO: 11.186 [7.558-16.631]
+    razon nacimientos/padres: 53 nacimientos por linaje y pasaje frente a ~5.8 cuerpos que paren por linaje y pasaje
+
+  SELECCION POR GEN (lib contra neu; siembra final; modelo del criador; IC95 bootstrap sobre 10 cadenas; n = reloj del neutro, conjunto MEDIO)
+  gen       media sel media neu        D              IC95 D  gana  V dentro  s_sigma                IC95  s_nivel                IC95
+  MARGEN       0.2699    0.2106   0.0593    [0.0032, 0.1161]  8/10   0.00466   0.0329    [0.0021, 0.0609]   0.0218   [-0.0165, 0.1163]
+  PRUEBA       0.4114    0.5002  -0.0888  [-0.1371, -0.0397]  1/10   0.00542  -0.0423  [-0.0667, -0.0209]   0.1249    [0.0515, 0.2417]
+  PEN_OTRO     0.3891    0.3622   0.0269   [-0.0003, 0.0547]  6/10   0.00545   0.0128   [-0.0002, 0.0275]   0.0166    [-0.0007, 0.064]
+  D0           2.9095    3.0128  -0.1034   [-0.2307, 0.0165]  4/10   0.04607  -0.0174   [-0.0427, 0.0027]   0.0175   [-0.0003, 0.0829]
+  PISO         0.3082    0.1830   0.1251    [0.0985, 0.1507] 10/10   0.00331   0.0978    [0.0697, 0.1404]   0.3526    [0.2396, 0.4824]
+  U4           3.9289    3.9690  -0.0401   [-0.2595, 0.1569]  5/10   0.06510  -0.0064   [-0.0445, 0.0253]   0.0038   [-0.0011, 0.1056]
+  U2           1.9951    2.0253  -0.0302   [-0.1375, 0.0902]  4/10   0.01699  -0.0092   [-0.0476, 0.0263]   0.0008   [-0.0066, 0.0502]
+  U1           1.0269    0.9971   0.0297   [-0.0129, 0.0762]  7/10   0.00630   0.0122   [-0.0046, 0.0428]   0.0109    [-0.001, 0.0853]
+  XURG         0.3140    0.2889   0.0252   [-0.0035, 0.0526]  7/10   0.00443   0.0147   [-0.0016, 0.0408]   0.0069   [-0.0033, 0.0427]
+  TOPE         0.5455    0.5248   0.0207    [-0.035, 0.0789]  6/10   0.00569   0.0094   [-0.0188, 0.0342]   0.0143   [-0.0079, 0.1008]
+  MEM          0.1233    0.0706   0.0526     [0.037, 0.0672] 10/10   0.00237   0.0573    [0.0367, 0.0843]   0.2353    [0.1479, 0.3511]
+  SOC          0.0833    0.0629   0.0204   [-0.0072, 0.0532]  7/10   0.00219   0.0241   [-0.0095, 0.0558]   0.0669      [-0.02, 0.205]
+  RES          0.0624    0.0578   0.0046   [-0.0103, 0.0224]  4/10   0.00185   0.0064   [-0.0166, 0.0266]   0.0132    [-0.0298, 0.066]
+  PAU          0.0738    0.0854  -0.0116   [-0.0503, 0.0343]  4/10   0.00178  -0.0169   [-0.0845, 0.0498]  -0.0415   [-0.1611, 0.1639]
+  Ne usados (brazo lib, media de cadenas y pasajes): Ne_linajes 8.19 · Ne_padres 17.54
+  >>> MEM: Ne_linajes x s_sigma = 0.469 IC [0.3013, 0.6908] · Ne_linajes x s_nivel = 1.928 IC [1.2131, 2.8659]
+  >>> MEM: Ne_padres  x s_sigma = 1.004 IC [0.6432, 1.4836] · Ne_padres  x s_nivel = 4.126 IC [2.5969, 6.1515]
+  >>> PISO (contraste: el gen de O1 que mas se mueve): Ne_linajes x s_sigma = 0.801 IC [0.5702, 1.1522] · Ne_padres x s_sigma = 1.715 IC [1.216, 2.4791]
+  trayectoria de MEM (media de cadenas; D = lib - neu pareado): p0 lib 0.049 neu 0.036 D +0.013 IC [0.0021, 0.0233] gana 8/10 | p1 lib 0.078 neu 0.050 D +0.028 IC [0.0208, 0.0353] gana 10/10 | p2 lib 0.123 neu 0.071 D +0.053 IC [0.037, 0.0672] gana 10/10
+  s DIRECTA (prueba 100k; los 4 poderes a la vez, no solo MEM): conquista mix - mixA por indice [6.55, 4.95, -11.35, 0.35, -4.15, -4.45, 9.4, -1.45, 5.9, 11.35]
+    mediana 2.65 · media 1.71 · mix > mixA en 6/10 · nacimientos lado lib en mixA: media 46.31, mediana 45.67
+    s (media/media) = 0.0369 IC95 [-0.0529, 0.1288] · al modo del investigador (mediana/mediana) = 0.058 · solo lado lib = -0.077 IC95 [-0.1197, -0.027]
+  >>> Ne_linajes x s_directa = 0.302 IC [-0.4334, 1.0555] · Ne_padres x s_directa = 0.648 IC [-0.9277, 2.2593]
+
+======================================================================================================================
+o1_libre REPLICA  ·  C:\Users\User\Documents\PROYECTOS\JUACO\o1libre\experimentos\organelos\o1_libre\datos\replica_i734501-734510_20260930_225227
+  ARCHIVOS LEIDOS: 120 (pasajes 60, pruebas 60) · cadenas por brazo {'lib': 10, 'neu': 10} · pasajes por cadena 3 x T 100000
+  genes y distancia de la fabrica al recorte mas cercano, en sigmas del gen: MARGEN:8.3 PRUEBA:16.7 PEN_OTRO:11.7 D0:27.8 PISO:6.7 U4:33.3 U2:33.3 U1:33.3 XURG:10.0 TOPE:16.7 MEM:0.0 SOC:0.0 RES:0.0 PAU:0.0
+  conjuntos: LEJOS(>=25s) ['D0', 'U4', 'U2', 'U1'] · MEDIO(>=10s) ['PRUEBA', 'PEN_OTRO', 'D0', 'U4', 'U2', 'U1', 'XURG', 'TOPE'] · principal = MEDIO
+
+  DEMOGRAFIA POR PASAJE (mediana [min-max] sobre cadenas)
+  brazo   p           partos          tarde         fund_n   de_siembra        colonos       nac/linaje  padres dist.        Ne_linajes         Ne_padres
+  lib     0  622.5 [520-649] 254.5 [195-270]  301 [114-381]      0 [0-0]  292 [104-370] 53.667 [49.111-56.556]  23.5 [19-29] 8.102 [7.744-8.728] 16.998 [15.341-20.149]
+  lib     1    560 [469-646] 233.5 [191-279]   282 [80-661]     9 [9-11]   273 [71-650] 49.389 [43.111-53.333]  25.5 [18-29] 8.429 [6.876-8.882] 17.96 [13.682-19.853]
+  lib     2    525 [314-637]  208 [132-259]  256 [19-1029]      9 [9-9]  247 [10-1020] 47.278 [33.778-57.778]    22 [18-30] 7.941 [7.019-8.654] 17.458 [15.458-21.774]
+  neu     0  591.5 [555-625]  240 [230-256]    174 [9-396]      0 [0-0]    165 [0-387] 52.722 [44.444-56.556]  24.5 [21-32] 8.403 [7.431-8.728] 17.922 [15.056-21.658]
+  neu     1  598.5 [571-611] 241.5 [226-251]   131 [26-333]      9 [9-9]   122 [17-324] 53.833 [48.556-55.778]  25.5 [23-30] 8.553 [8.004-8.766] 18.578 [17.308-21.774]
+  neu     2  584.5 [560-625]  243 [212-249] 216.5 [69-273]      9 [9-9] 207.5 [60-264] 53.444 [48.444-55.778]  24.5 [21-28] 8.572 [6.864-8.747] 18.125 [14.945-19.756]
+  TODOS LOS PASAJES lib: partos 578 [314-649] · fundadores 282 [19-1029] (de siembra 9 [0-11]) · padres distintos 23.5 [18-30] · Ne_linajes 8.102 [6.876-8.882] · Ne_padres 17.647 [13.682-21.774]
+  TODOS LOS PASAJES neu: partos 591 [555-625] · fundadores 184 [9-396] (de siembra 9 [0-9]) · padres distintos 25 [21-32] · Ne_linajes 8.526 [6.864-8.766] · Ne_padres 18.367 [14.945-21.774]
+
+  RELOJ via (i): n acumulado = E[((g - fabrica)/sigma_j)^2] en la siembra tras el pasaje p (por cadena; mediana [min-max]; media e IC95 bootstrap sobre cadenas)
+  lib    LEJOS : p0 3.5 [2.6-5.4] media 3.7 IC 3.2-4.3 | p1 8.0 [4.1-11.6] media 8.0 IC 6.7-9.3 | p2 14.8 [7.0-30.1] media 15.7 IC 11.9-20.0
+  lib    MEDIO : p0 4.2 [2.8-5.6] media 4.2 IC 3.7-4.7 | p1 9.1 [6.1-12.1] media 8.8 IC 7.9-9.8 | p2 14.8 [8.2-20.6] media 14.6 IC 12.3-16.9
+  lib    TODOS : p0 4.1 [2.4-5.0] media 4.0 IC 3.5-4.4 | p1 8.8 [8.0-12.4] media 9.2 IC 8.6-10.1 | p2 15.7 [13.2-21.5] media 16.0 IC 14.6-17.7
+  lib    O1x10 : p0 4.4 [2.8-6.1] media 4.2 IC 3.7-4.8 | p1 9.0 [7.2-12.0] media 9.1 IC 8.4-9.9 | p2 14.5 [10.9-23.0] media 15.3 IC 13.4-17.5
+  lib    PODERES: p0 3.3 [1.1-5.3] media 3.3 IC 2.5-4.0 | p1 8.7 [4.4-14.3] media 9.6 IC 7.7-11.5 | p2 15.0 [10.0-35.6] media 17.8 IC 13.7-22.9
+  neu    LEJOS : p0 4.5 [1.7-6.8] media 4.4 IC 3.5-5.3 | p1 7.8 [5.7-13.2] media 8.1 IC 6.9-9.6 | p2 12.0 [8.5-16.3] media 12.1 IC 10.6-13.5
+  neu    MEDIO : p0 4.5 [3.0-5.8] media 4.3 IC 3.7-4.9 | p1 8.1 [6.1-11.1] media 8.3 IC 7.4-9.3 | p2 11.6 [9.2-15.4] media 11.9 IC 10.7-13.1
+  neu    TODOS : p0 4.2 [2.6-4.8] media 4.0 IC 3.5-4.4 | p1 8.3 [5.6-8.8] media 7.9 IC 7.2-8.4 | p2 12.0 [8.4-13.3] media 11.4 IC 10.3-12.5
+  neu    O1x10 : p0 4.5 [3.0-5.5] media 4.3 IC 3.8-4.9 | p1 8.3 [6.2-10.3] media 8.2 IC 7.4-8.9 | p2 12.0 [9.3-13.4] media 11.7 IC 10.7-12.5
+  neu    PODERES: p0 3.1 [1.7-4.1] media 3.1 IC 2.6-3.5 | p1 7.4 [3.5-12.3] media 7.2 IC 5.7-8.7 | p2 11.2 [6.1-17.3] media 10.9 IC 8.6-13.2
+  n POR GEN (neutro, siembra final, todas las cadenas): MARGEN:9.0 PRUEBA:11.2 PEN_OTRO:12.1 D0:10.8 PISO:12.1 U4:12.4 U2:13.7 U1:11.4 XURG:10.9 TOPE:12.9 MEM:11.7 SOC:10.5 RES:11.7 PAU:9.6
+  fraccion de genomas EN el recorte (neutro, final): MARGEN:0.00 PRUEBA:0.00 PEN_OTRO:0.00 D0:0.00 PISO:0.01 U4:0.00 U2:0.00 U1:0.00 XURG:0.00 TOPE:0.00 MEM:0.20 SOC:0.16 RES:0.19 PAU:0.16
+  n por gen del conjunto MEDIO: mediana 11.7 [min 10.8 - max 13.7] (8 genes)
+  incremento de n por pasaje (neutro, MEDIO; mediana [min-max]): p0 4.5 [3.0-5.8] | p1 3.3 [2.3-6.8] | p2 3.6 [-0.1-5.6]
+
+  RELOJ via (ii): genealogia encadenada NO ESTA en los JSON (solo conteos por linaje y la siembra).
+    COTA SUPERIOR demografica (neutro): sum_p [1 + 0.75 x nacimientos reales por linaje] = 121.792 [118.167-126.25]  (supone 1 generacion por nacimiento)
+    PROXY por padres distintos (neutro): sum_p [D/L + (D/L+1)/2] = 13.833 [13.667-15]   ·   via (i) MEDIO: 11.569 [9.231-15.399]
+    razon nacimientos/padres: 53 nacimientos por linaje y pasaje frente a ~5.6 cuerpos que paren por linaje y pasaje
+
+  SELECCION POR GEN (lib contra neu; siembra final; modelo del criador; IC95 bootstrap sobre 10 cadenas; n = reloj del neutro, conjunto MEDIO)
+  gen       media sel media neu        D              IC95 D  gana  V dentro  s_sigma                IC95  s_nivel                IC95
+  MARGEN       0.2733    0.2645   0.0088   [-0.0404, 0.0503]  8/10   0.00530   0.0042   [-0.0207, 0.0219]   0.0032   [-0.0052, 0.0435]
+  PRUEBA       0.4344    0.4646  -0.0301     [-0.071, 0.021]  2/10   0.00467  -0.0162   [-0.0475, 0.0099]   0.0355   [-0.0117, 0.1332]
+  PEN_OTRO     0.3434    0.3326   0.0108    [-0.039, 0.0605]  5/10   0.00646   0.0042    [-0.016, 0.0287]  -0.0009    [-0.006, 0.0236]
+  D0           3.0577    2.9980   0.0596   [-0.1166, 0.2173]  6/10   0.04252   0.0106    [-0.024, 0.0394]   0.0068   [-0.0014, 0.0797]
+  PISO         0.3159    0.1911   0.1248    [0.0828, 0.1662] 10/10   0.00363   0.0865    [0.0608, 0.1181]   0.3342      [0.1903, 0.51]
+  U4           4.0353    4.0291   0.0062    [-0.2505, 0.255]  6/10   0.09016   0.0007     [-0.0284, 0.03]   0.0002   [-0.0038, 0.0679]
+  U2           1.9728    2.0543  -0.0814  [-0.1595, -0.0027]  3/10   0.01832  -0.0224  [-0.0451, -0.0008]   0.0101    [-0.006, 0.0574]
+  U1           1.0721    0.9843   0.0879     [0.048, 0.1346]  9/10   0.00538   0.0411    [0.0242, 0.0724]   0.0988    [0.0243, 0.2439]
+  XURG         0.3072    0.2849   0.0224   [-0.0286, 0.0733]  5/10   0.00488   0.0115    [-0.016, 0.0423]   0.0028   [-0.0034, 0.0638]
+  TOPE         0.4939    0.4914   0.0025    [-0.052, 0.0544]  6/10   0.00457   0.0014   [-0.0258, 0.0342]  -0.0003   [-0.0062, 0.0615]
+  MEM          0.0999    0.0721   0.0277   [-0.0074, 0.0633]  6/10   0.00242   0.0288   [-0.0079, 0.0697]   0.0959   [-0.0231, 0.2578]
+  SOC          0.1059    0.0754   0.0306    [-0.008, 0.0735]  5/10   0.00282   0.0272   [-0.0085, 0.0596]   0.0962    [-0.0233, 0.268]
+  RES          0.0984    0.0723   0.0261    [-0.0074, 0.062]  7/10   0.00252   0.0262   [-0.0061, 0.0736]   0.0858   [-0.0151, 0.3052]
+  PAU          0.0799    0.0681   0.0118   [-0.0248, 0.0597]  4/10   0.00308   0.0096   [-0.0257, 0.0448]   0.0256   [-0.0437, 0.1711]
+  Ne usados (brazo lib, media de cadenas y pasajes): Ne_linajes 8.09 · Ne_padres 17.50
+  >>> MEM: Ne_linajes x s_sigma = 0.233 IC [-0.0641, 0.5643] · Ne_linajes x s_nivel = 0.776 IC [-0.1879, 2.076]
+  >>> MEM: Ne_padres  x s_sigma = 0.504 IC [-0.1381, 1.2144] · Ne_padres  x s_nivel = 1.678 IC [-0.4015, 4.4776]
+  >>> PISO (contraste: el gen de O1 que mas se mueve): Ne_linajes x s_sigma = 0.7 IC [0.4917, 0.9584] · Ne_padres x s_sigma = 1.513 IC [1.0619, 2.0709]
+  trayectoria de MEM (media de cadenas; D = lib - neu pareado): p0 lib 0.040 neu 0.033 D +0.007 IC [-0.0012, 0.0162] gana 5/10 | p1 lib 0.083 neu 0.057 D +0.026 IC [0.0056, 0.0476] gana 8/10 | p2 lib 0.100 neu 0.072 D +0.028 IC [-0.0074, 0.0633] gana 6/10
+  s DIRECTA (prueba 100k; los 4 poderes a la vez, no solo MEM): conquista mix - mixA por indice [-4.7, 32.55, 0.6, 4.0, 16.7, 2.05, -0.85, 9.8, -8.0, 13.15]
+    mediana 3.025 · media 6.53 · mix > mixA en 7/10 · nacimientos lado lib en mixA: media 43.77, mediana 46.2
+    s (media/media) = 0.1492 IC95 [0.0035, 0.3422] · al modo del investigador (mediana/mediana) = 0.0655 · solo lado lib = 0.0063 IC95 [-0.0838, 0.119]
+  >>> Ne_linajes x s_directa = 1.207 IC [0.0286, 2.7684] · Ne_padres x s_directa = 2.61 IC [0.0619, 5.9885]
+
+======================================================================================================================
+o1_evo SERIE  ·  C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\o1_evo\datos\serie_i617201-617220_20260929_193426
+  ARCHIVOS LEIDOS: 520 (pasajes 400, pruebas 120) · cadenas por brazo {'o1neu': 20, 'o1pas': 20} · pasajes por cadena 10 x T 25000
+  genes y distancia de la fabrica al recorte mas cercano, en sigmas del gen: MARGEN:8.3 PRUEBA:16.7 PEN_OTRO:11.7 PISO:6.7
+  conjuntos: LEJOS(>=25s) [] · MEDIO(>=10s) ['PRUEBA', 'PEN_OTRO'] · principal = MEDIO
+
+  DEMOGRAFIA POR PASAJE (mediana [min-max] sobre cadenas)
+  brazo   p           partos          tarde         fund_n   de_siembra        colonos       nac/linaje  padres dist.        Ne_linajes         Ne_padres
+  o1pas   0    115 [100-151]        NO ESTA    127 [9-284]      0 [0-0]        NO ESTA 3.167 [0.444-6.333]    18 [14-22]           NO ESTA 12.199 [10.714-16.463]
+  o1pas   1     118 [92-143]        NO ESTA 190.5 [84-271] 190.5 [84-271]        NO ESTA 2.278 [1.222-4.333]    19 [14-23]           NO ESTA 12.898 [10.279-16.2]
+  o1pas   2     110 [75-145]        NO ESTA   122 [18-278] 122 [18-278]        NO ESTA 2.833 [1.444-5.778]    17 [12-22]           NO ESTA 11.912 [10.279-16.463]
+  o1pas   3   112.5 [85-132]        NO ESTA 144.5 [71-244] 144.5 [71-244]        NO ESTA  2.778 [1.222-5]    18 [14-24]           NO ESTA 12.5 [10.279-17.92]
+  o1pas   4     110 [70-137]        NO ESTA 120.5 [51-358] 120.5 [51-358]        NO ESTA  2.556 [0.444-4]    17 [13-22]           NO ESTA 12.126 [9.878-15]
+  o1pas   5     113 [75-164]        NO ESTA    173 [9-383]  173 [9-383]        NO ESTA 1.944 [0.667-3.667]  18.5 [13-24]           NO ESTA 12.5 [9.878-17.92]
+  o1pas   6   105.5 [71-168]        NO ESTA   201 [62-357] 201 [62-357]        NO ESTA 1.722 [0.667-4.556]    18 [13-26]           NO ESTA 11.573 [9.878-17.609]
+  o1pas   7     117 [68-143]        NO ESTA  177.5 [9-345] 177.5 [9-345]        NO ESTA  2.056 [0.333-4]    17 [13-21]           NO ESTA 11.982 [9.878-14.781]
+  o1pas   8     108 [61-159]        NO ESTA  143.5 [9-313] 143.5 [9-313]        NO ESTA 2.611 [1.111-5.444]    18 [14-23]           NO ESTA 12.273 [10.714-17.308]
+  o1pas   9   110.5 [68-144]        NO ESTA  142.5 [9-394] 142.5 [9-394]        NO ESTA 2.444 [1.222-4.222]    19 [12-25]           NO ESTA 12.199 [10.279-20.05]
+  o1neu   0   122.5 [87-152]        NO ESTA  133.5 [9-276]      0 [0-0]        NO ESTA 3.333 [0.556-6.444]  18.5 [11-22]           NO ESTA 12.054 [9.878-16.736]
+  o1neu   1  133.5 [103-157]        NO ESTA   132 [64-352] 132 [64-352]        NO ESTA 2.833 [0.556-4.444]  16.5 [14-23]           NO ESTA 11.774 [10.279-14.568]
+  o1neu   2     128 [89-144]        NO ESTA 152.5 [41-268] 152.5 [41-268]        NO ESTA 2.722 [1.333-4.667]    17 [14-23]           NO ESTA 12.425 [10.279-16.463]
+  o1neu   3     118 [94-142]        NO ESTA 127.5 [17-255] 127.5 [17-255]        NO ESTA 2.611 [1.111-5.778]  17.5 [14-23]           NO ESTA 12.5 [10.279-19.286]
+  o1neu   4   114.5 [89-142]        NO ESTA   128 [56-232] 128 [56-232]        NO ESTA 2.944 [1.222-4.889]  17.5 [12-24]           NO ESTA 12.203 [10.279-19.66]
+  o1neu   5     119 [99-152]        NO ESTA   123 [22-255] 123 [22-255]        NO ESTA  3.167 [0.556-4]    17 [12-24]           NO ESTA 12.425 [10.492-16.2]
+  o1neu   6   113.5 [94-149]        NO ESTA    139 [9-230]  139 [9-230]        NO ESTA 2.778 [1.667-4.222]    18 [14-22]           NO ESTA 12.21 [10.279-16.463]
+  o1neu   7  127.5 [107-152]        NO ESTA  154.5 [9-262] 154.5 [9-262]        NO ESTA 2.278 [1.333-4.111]    17 [13-23]           NO ESTA 11.774 [10.385-15.945]
+  o1neu   8  128.5 [100-152]        NO ESTA   164 [25-350] 164 [25-350]        NO ESTA 2.556 [0.889-4.333]    17 [14-21]           NO ESTA 11.849 [10.279-15.226]
+  o1neu   9     113 [94-166]        NO ESTA    132 [9-249]  132 [9-249]        NO ESTA 3.222 [1.111-4.889]    17 [13-23]           NO ESTA 11.912 [10.279-15.698]
+  TODOS LOS PASAJES o1pas: partos 112 [61-168] · fundadores 155.5 [9-394] (de siembra 148 [0-394]) · padres distintos 18 [12-26] · Ne_linajes NO ESTA · Ne_padres 12.273 [9.878-20.05]
+  TODOS LOS PASAJES o1neu: partos 124 [87-166] · fundadores 132 [9-352] (de siembra 131 [0-352]) · padres distintos 17 [11-24] · Ne_linajes NO ESTA · Ne_padres 12.126 [9.878-19.66]
+
+  RELOJ via (i): n acumulado = E[((g - fabrica)/sigma_j)^2] en la siembra tras el pasaje p (por cadena; mediana [min-max]; media e IC95 bootstrap sobre cadenas)
+  o1pas  LEJOS : sin genes en el conjunto
+  o1pas  MEDIO : p0 1.7 [0.6-3.3] media 1.8 IC 1.5-2.1 | p1 3.9 [1.5-7.9] media 4.0 IC 3.3-4.7 | p2 5.3 [2.6-11.9] media 5.9 IC 4.9-7.0 | p9 20.1 [4.9-109.0] media 24.9 IC 17.5-35.4
+  o1pas  TODOS : p0 1.8 [1.0-3.1] media 1.9 IC 1.7-2.1 | p1 3.8 [2.0-6.9] media 4.0 IC 3.5-4.5 | p2 6.4 [2.8-10.0] media 6.2 IC 5.5-6.9 | p9 17.1 [5.1-57.7] media 19.7 IC 15.6-24.9
+  o1neu  LEJOS : sin genes en el conjunto
+  o1neu  MEDIO : p0 2.3 [1.6-3.9] media 2.4 IC 2.1-2.6 | p1 4.3 [2.0-6.3] media 4.2 IC 3.6-4.7 | p2 5.8 [3.5-11.1] media 6.5 IC 5.5-7.6 | p9 19.2 [2.7-58.1] media 20.7 IC 16.0-26.2
+  o1neu  TODOS : p0 2.2 [1.5-3.7] media 2.3 IC 2.1-2.6 | p1 3.9 [2.6-7.5] media 4.2 IC 3.8-4.8 | p2 6.2 [2.8-10.5] media 6.5 IC 5.6-7.4 | p9 20.2 [8.7-41.2] media 20.6 IC 17.3-24.1
+  n POR GEN (neutro, siembra final, todas las cadenas): MARGEN:22.4 PRUEBA:21.8 PEN_OTRO:19.7 PISO:18.4
+  fraccion de genomas EN el recorte (neutro, final): MARGEN:0.01 PRUEBA:0.00 PEN_OTRO:0.00 PISO:0.05
+  n por gen del conjunto MEDIO: mediana 20.7 [min 19.7 - max 21.8] (2 genes)
+  incremento de n por pasaje (neutro, MEDIO; mediana [min-max]): p0 2.3 [1.6-3.9] | p1 1.7 [-0.6-4.2] | p2 2.1 [-0.4-5.8] | p3 2.7 [-2.0-7.9] | p4 1.2 [-2.8-6.5] | p5 0.8 [-10.0-13.9] | p6 0.6 [-3.2-11.4] | p7 2.4 [-7.4-7.0] | p8 1.5 [-3.8-10.5] | p9 3.0 [-5.8-38.0]
+
+  RELOJ via (ii): genealogia encadenada NO ESTA en los JSON (solo conteos por linaje y la siembra).
+    COTA SUPERIOR demografica (neutro): sum_p [1 + 1.0 x nacimientos reales por linaje] = 38.833 [33.444-43.889]  (supone 1 generacion por nacimiento)
+
+  SELECCION POR GEN (o1pas contra o1neu; siembra final; modelo del criador; IC95 bootstrap sobre 20 cadenas; n = reloj del neutro, conjunto MEDIO)
+  gen       media sel media neu        D              IC95 D  gana  V dentro  s_sigma                IC95  s_nivel                IC95
+  MARGEN       0.2537    0.2359   0.0178   [-0.0246, 0.0608] 13/20   0.00573   0.0045   [-0.0063, 0.0168]   0.0006   [-0.0034, 0.0155]
+  PRUEBA       0.4017    0.4785  -0.0768  [-0.1318, -0.0271]  6/20   0.00550  -0.0202  [-0.0298, -0.0091]   0.0662    [0.0224, 0.1272]
+  PEN_OTRO     0.3565    0.3486   0.0079   [-0.0413, 0.0578] 10/20   0.00734   0.0016   [-0.0083, 0.0116]   0.0003   [-0.0025, 0.0123]
+  PISO         0.2450    0.1773   0.0678    [0.0186, 0.1116] 15/20   0.00520   0.0189    [0.0052, 0.0352]   0.0283    [0.0039, 0.0721]
+  Ne usados (brazo o1pas, media de cadenas y pasajes): Ne_linajes 9.00 · Ne_padres 12.60
+  >>> PISO (contraste: el gen de O1 que mas se mueve): Ne_linajes x s_sigma = 0.17 IC [0.0466, 0.3165] · Ne_padres x s_sigma = 0.238 IC [0.0647, 0.4458]
+  s de MEM: NO ESTA (el carro O1_PAS no tiene gen de memoria: 4 genes, construye_o1_pas.py:45). Se dan los 4 genes que si existen.
+  >>> gen con mayor |s_sigma| (ELEGIDO DESPUES DE MIRAR: sesgado hacia arriba): PRUEBA · Ne_linajes x s_sigma = -0.182 IC [-0.2685, -0.0816] · Ne_padres x s_sigma = -0.255 IC [-0.3744, -0.1141]
+
+======================================================================================================================
+entre_linajes EXPLORA  ·  C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\condiciones\entre_linajes\datos\explora_i624201-624205_20260930_174213
+  ARCHIVOS LEIDOS: 170 (pasajes 150, pruebas 20) · cadenas por brazo {'igual': 5, 'neu': 5, 'sel': 5} · pasajes por cadena 10 x T 25000
+  genes y distancia de la fabrica al recorte mas cercano, en sigmas del gen: MARGEN:8.3 PRUEBA:16.7 PEN_OTRO:11.7 PISO:6.7
+  conjuntos: LEJOS(>=25s) [] · MEDIO(>=10s) ['PRUEBA', 'PEN_OTRO'] · principal = MEDIO
+
+  DEMOGRAFIA POR PASAJE (mediana [min-max] sobre cadenas)
+  brazo   p           partos          tarde         fund_n   de_siembra        colonos       nac/linaje  padres dist.        Ne_linajes         Ne_padres
+  sel     0    125 [111-136]        NO ESTA  194 [121-200]      0 [0-0]  185 [112-191] 2.111 [1.444-3.444]     10 [9-14] 7.584 [7.007-7.759] 8.402 [7.941-9.689]
+  sel     1     106 [90-133]        NO ESTA    95 [39-177]  95 [39-177]    86 [30-168] 3.444 [2.333-5.111]    12 [11-18] 8.004 [7.472-8.333] 9.163 [9.081-13.966]
+  sel     2     140 [82-156]        NO ESTA  240 [121-310] 240 [121-310]  230 [112-301] 1.222 [0.444-3.889]      8 [8-11] 6.864 [6.818-7.7] 7.642 [6.511-8.691]
+  sel     3     108 [88-145]        NO ESTA   128 [56-161] 128 [56-161]   119 [47-152] 3.111 [2.111-3.667]    12 [10-14] 7.528 [7.105-8.691] 8.691 [7.941-10.279]
+  sel     4    116 [103-122]        NO ESTA   125 [94-185] 125 [94-185]   116 [85-176]  2 [1.667-4.889]     14 [9-15] 7.7 [7.155-8.068] 10.075 [8.198-11.571]
+  sel     5    121 [103-132]        NO ESTA  133 [104-328] 133 [104-328]   123 [95-319] 2.667 [0.667-3.556]     10 [9-17] 7.819 [6.959-7.879] 7.941 [7.7-11.188]
+  sel     6    116 [107-127]        NO ESTA   144 [58-208] 144 [58-208]   135 [49-199] 3.111 [1.778-3.556]    13 [11-16] 7.528 [7.206-8.068] 9.419 [8.617-10.829]
+  sel     7     100 [86-123]        NO ESTA    149 [9-216]  149 [9-216]    140 [0-207] 2.889 [2.667-4.111]     14 [9-21] 7.819 [6.773-8.333] 10.075 [7.364-13.235]
+  sel     8     111 [87-134]        NO ESTA    95 [15-197]  95 [15-197]     86 [6-187] 2.444 [0.889-5.111]     12 [7-18] 8.133 [6.773-8.402] 9.507 [6.773-12.578]
+  sel     9     116 [86-131]        NO ESTA    126 [9-170]  126 [9-170]    117 [0-161] 2.778 [2.333-4.667]     13 [9-18] 7.879 [7.364-8.617] 10.714 [8.133-14.362]
+  neu     0    123 [100-149]        NO ESTA    132 [9-323]      0 [0-0]    123 [0-314] 2.778 [0.778-5.111]    13 [10-16] 7.642 [6.511-8.544] 10.946 [8.473-11.441]
+  neu     1     118 [99-122]        NO ESTA   130 [66-132] 130 [66-132]   121 [57-123] 3.778 [1.667-5.111]     10 [9-11] 7.819 [7.642-8.133] 8.544 [8.473-8.544]
+  neu     2    146 [120-169]        NO ESTA  178 [127-389] 178 [127-389]  169 [118-380] 2.333 [0.556-3.111]     14 [7-17] 7.819 [6.155-8.004] 9.878 [6.155-13.065]
+  neu     3    124 [106-138]        NO ESTA  132 [108-223] 132 [108-223]   123 [99-214] 3.333 [1.667-4.111]     12 [9-14] 7.819 [7.206-8.402] 9.689 [8.473-10.176]
+  neu     4    122 [114-134]        NO ESTA  153 [111-215] 153 [111-215]  144 [102-206]  2.667 [2-4.889]    13 [11-18] 7.418 [7.364-8.133] 10.075 [9-11.705]
+  neu     5    128 [109-147]        NO ESTA   155 [92-234] 155 [92-234]   146 [83-225]  2.778 [2-3.889]    15 [10-17] 7.819 [7.364-8.133] 10.075 [8.004-13.065]
+  neu     6     127 [93-138]        NO ESTA   136 [52-195] 136 [52-195]   127 [43-186] 2.667 [1.778-4.333]     13 [9-14] 7.7 [7.472-8.766] 9.507 [7.759-11.188]
+  neu     7    112 [106-123]        NO ESTA    114 [9-145]  114 [9-145]    105 [0-136] 2.889 [2.333-4.111]    12 [11-14] 8.133 [7.759-8.766] 10.176 [8.766-11.441]
+  neu     8    126 [115-132]        NO ESTA    132 [9-241]  132 [9-241]    123 [0-232] 1.889 [1.556-4.111]     13 [7-18] 7.819 [6.864-8.617] 10.492 [6.864-12.736]
+  neu     9    123 [103-137]        NO ESTA    132 [9-195]  132 [9-195]    123 [0-186]  3 [1.778-5.556]    12 [10-15] 7.819 [7.472-8.766] 9.507 [8.473-11.571]
+  igual   0     123 [98-130]        NO ESTA   183 [49-239]      0 [0-0]        0 [0-0] 2.222 [1.444-5.778]    18 [13-21]           NO ESTA 12.736 [10.385-16.736]
+  igual   1    107 [101-127]        NO ESTA   205 [22-317] 205 [22-317]        0 [0-0] 3.222 [1.222-4.889]    18 [16-22]           NO ESTA 12.898 [10.946-15.945]
+  igual   2    118 [102-137]        NO ESTA   132 [35-266] 132 [35-266]        0 [0-0]  2.667 [2-4.778]    17 [14-24]           NO ESTA 12.273 [11.188-15.698]
+  igual   3    129 [100-136]        NO ESTA  189 [132-284] 189 [132-284]        0 [0-0] 1.667 [0.889-2.556]    16 [15-21]           NO ESTA 11.441 [10.602-12.273]
+  igual   4     121 [87-160]        NO ESTA   204 [62-277] 204 [62-277]        0 [0-0]  2.667 [1-3.889]    18 [16-23]           NO ESTA 12.578 [11.705-14.362]
+  igual   5     115 [94-135]        NO ESTA   235 [98-301] 235 [98-301]        0 [0-0] 1.222 [0.667-4.333]    19 [14-21]           NO ESTA 12.898 [10.829-14.781]
+  igual   6     101 [81-145]        NO ESTA  218 [116-317] 218 [116-317]        0 [0-0] 2.333 [0.111-3.778]    19 [17-25]           NO ESTA 12.423 [11.982-15.458]
+  igual   7     116 [84-126]        NO ESTA   118 [68-263] 118 [68-263]        0 [0-0] 2.444 [0.556-3.889]    15 [14-18]           NO ESTA 11.188 [10.946-11.705]
+  igual   8      96 [80-148]        NO ESTA   102 [31-217] 102 [31-217]        0 [0-0]  4 [0.111-5.444]    17 [14-23]           NO ESTA 11.705 [10.279-17.017]
+  igual   9      99 [79-127]        NO ESTA   128 [63-190] 128 [63-190]        0 [0-0] 2.111 [1.111-4.222]    15 [15-20]           NO ESTA 10.946 [10.602-12.578]
+  TODOS LOS PASAJES sel: partos 115.5 [82-156] · fundadores 135.5 [9-328] (de siembra 127.5 [0-328]) · padres distintos 12 [7-21] · Ne_linajes 7.7 [6.773-8.691] · Ne_padres 9.122 [6.511-14.362]
+  TODOS LOS PASAJES neu: partos 123 [93-169] · fundadores 132 [9-389] (de siembra 132 [0-389]) · padres distintos 12.5 [7-18] · Ne_linajes 7.819 [6.155-8.766] · Ne_padres 9.878 [6.155-13.065]
+  TODOS LOS PASAJES igual: partos 112.5 [79-160] · fundadores 158.5 [22-317] (de siembra 132 [0-317]) · padres distintos 18 [13-25] · Ne_linajes NO ESTA · Ne_padres 12.127 [10.279-17.017]
+
+  RELOJ via (i): n acumulado = E[((g - fabrica)/sigma_j)^2] en la siembra tras el pasaje p (por cadena; mediana [min-max]; media e IC95 bootstrap sobre cadenas)
+  sel    LEJOS : sin genes en el conjunto
+  sel    MEDIO : p0 2.5 [0.9-3.9] media 2.5 IC 1.6-3.4 | p1 3.5 [2.4-10.6] media 4.7 IC 2.8-7.8 | p2 3.0 [1.8-13.6] media 5.2 IC 2.4-9.5 | p9 22.5 [5.7-71.8] media 31.3 IC 14.7-52.0
+  sel    TODOS : p0 2.1 [0.9-3.2] media 2.0 IC 1.4-2.7 | p1 3.6 [2.3-7.7] media 4.2 IC 2.8-6.1 | p2 4.4 [2.5-8.2] media 5.0 IC 3.5-6.9 | p9 18.0 [11.3-42.6] media 21.1 IC 13.5-31.9
+  neu    LEJOS : sin genes en el conjunto
+  neu    MEDIO : p0 1.9 [1.3-2.1] media 1.8 IC 1.6-2.0 | p1 2.6 [2.2-6.2] media 3.4 IC 2.3-4.9 | p2 4.9 [2.2-10.2] media 5.6 IC 3.5-8.1 | p9 25.3 [11.6-59.2] media 28.6 IC 14.4-44.8
+  neu    TODOS : p0 1.8 [1.7-2.5] media 1.9 IC 1.7-2.2 | p1 4.2 [2.4-7.0] media 4.6 IC 3.3-6.0 | p2 6.7 [4.9-8.6] media 6.5 IC 5.4-7.6 | p9 28.7 [17.1-34.9] media 27.9 IC 22.1-32.4
+  igual  LEJOS : sin genes en el conjunto
+  igual  MEDIO : p0 1.6 [1.3-2.6] media 1.8 IC 1.5-2.2 | p1 3.2 [2.8-4.6] media 3.5 IC 2.9-4.1 | p2 5.1 [3.9-5.7] media 4.8 IC 4.3-5.4 | p9 19.1 [8.6-96.7] media 34.0 IC 12.1-67.1
+  igual  TODOS : p0 2.0 [1.7-2.8] media 2.1 IC 1.8-2.5 | p1 4.4 [3.5-4.6] media 4.3 IC 3.9-4.6 | p2 5.6 [4.8-7.4] media 5.8 IC 5.2-6.7 | p9 20.0 [12.9-51.9] media 25.8 IC 16.2-39.9
+  n POR GEN (neutro, siembra final, todas las cadenas): MARGEN:30.3 PRUEBA:28.0 PEN_OTRO:29.1 PISO:24.4
+  fraccion de genomas EN el recorte (neutro, final): MARGEN:0.01 PRUEBA:0.00 PEN_OTRO:0.00 PISO:0.08
+  n por gen del conjunto MEDIO: mediana 28.5 [min 28.0 - max 29.1] (2 genes)
+  incremento de n por pasaje (neutro, MEDIO; mediana [min-max]): p0 1.9 [1.3-2.1] | p1 1.0 [0.4-4.1] | p2 1.9 [-0.4-4.4] | p3 3.9 [-0.4-6.7] | p4 2.9 [0.2-25.9] | p5 -0.4 [-14.7-11.4] | p6 7.4 [2.3-14.6] | p7 -1.0 [-4.9-27.0] | p8 -2.8 [-9.5-7.9] | p9 2.0 [-0.1-5.4]
+
+  RELOJ via (ii): genealogia encadenada NO ESTA en los JSON (solo conteos por linaje y la siembra).
+    COTA SUPERIOR demografica (neutro): sum_p [1 + 1.0 x nacimientos reales por linaje] = 38.556 [37.333-40.444]  (supone 1 generacion por nacimiento)
+
+  SELECCION POR GEN (sel contra neu; siembra final; modelo del criador; IC95 bootstrap sobre 5 cadenas; n = reloj del neutro, conjunto MEDIO)
+  gen       media sel media neu        D              IC95 D  gana  V dentro  s_sigma                IC95  s_nivel                IC95
+  MARGEN       0.2217    0.2306  -0.0088   [-0.1195, 0.1018]  2/5    0.00344  -0.0027   [-0.0506, 0.0374]   0.0025   [-0.0398, 0.0528]
+  PRUEBA       0.3845    0.5718  -0.1872  [-0.2339, -0.1473]  0/5    0.00386  -0.0509  [-0.1036, -0.0223]   0.1960     [0.067, 0.5483]
+  PEN_OTRO     0.3529    0.4158  -0.0630   [-0.2278, 0.0991]  2/5    0.00478  -0.0138    [-0.035, 0.0378]  -0.0013    [-0.022, 0.1997]
+  PISO         0.2401    0.2032   0.0369   [-0.0934, 0.1672]  3/5    0.00551   0.0070   [-0.0234, 0.0444]   0.0094    [-0.0029, 0.111]
+  Ne usados (brazo sel, media de cadenas y pasajes): Ne_linajes 7.64 · Ne_padres 9.40
+  >>> PISO (contraste: el gen de O1 que mas se mueve): Ne_linajes x s_sigma = 0.054 IC [-0.176, 0.3429] · Ne_padres x s_sigma = 0.066 IC [-0.212, 0.4315]
+  s de MEM: NO ESTA (el carro O1_PAS no tiene gen de memoria: 4 genes, construye_o1_pas.py:45). Se dan los 4 genes que si existen.
+  >>> gen con mayor |s_sigma| (ELEGIDO DESPUES DE MIRAR: sesgado hacia arriba): PRUEBA · Ne_linajes x s_sigma = -0.389 IC [-0.7895, -0.1734] · Ne_padres x s_sigma = -0.478 IC [-0.9864, -0.2126]
+
+======================================================================================================================
+RESUMEN (n = reloj mutacional del neutro, conjunto MEDIO; por cadena)
+  o1_libre SERIE           archivos  120 · n total mediana 11.186 [7.558-16.631] media 11.61 IC95 [9.941, 13.4139] · n LEJOS {'med': 12.772, 'media': 11.09, 'ic95': [9.0151, 13.1237]} · por pasaje 3.9 · Ne_linajes 8.19 · Ne_padres 17.54
+  o1_libre REPLICA         archivos  120 · n total mediana 11.569 [9.231-15.399] media 11.92 IC95 [10.7287, 13.1158] · n LEJOS {'med': 11.979, 'media': 12.08, 'ic95': [10.641, 13.5456]} · por pasaje 3.67 · Ne_linajes 8.09 · Ne_padres 17.5
+  o1_evo SERIE             archivos  520 · n total mediana 19.209 [2.73-58.146] media 20.72 IC95 [16.018, 26.1568] · n LEJOS None · por pasaje 2.03 · Ne_linajes 9.0 · Ne_padres 12.6
+  entre_linajes EXPLORA    archivos  170 · n total mediana 25.344 [11.556-59.153] media 28.55 IC95 [14.4487, 44.8288] · n LEJOS None · por pasaje 1.87 · Ne_linajes 7.64 · Ne_padres 9.4
+
+PREDICCION F0 (n <= 15 en 3 pasajes, serie y replica; se exige IC95 superior de la media <= 15): SE CUMPLE
+CONTROL (n >= 100): NO GANA
+escrito C:\Users\User\Documents\PROYECTOS\JUACO\investigacion_20261001\f0_relojes.json

@@ -1,0 +1,169 @@
+ARNES identidad_o1_evo.py
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+      sha experimentos\organelos\o1_evo\construye_o1_pas.py 8013e4a99a004bda OK
+      sha experimentos\organelos\o1_evo\carros\O1_PAS.py c5377ada6b28bee0 OK
+      sha experimentos\organelos\o1_evo\carros\O1_PAS0.py 940a70aeacb8581c OK
+      carro O1_PAS == construye_o1_pas: True
+      carro O1_PAS0 == construye_o1_pas: True
+  OK    (K) verifica(): shas fijados y carros == construye_o1_pas
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 617950, T 1500, fundador limpio): O1_PAS0 == O1 True · O1_PAS sigma 0 sin siembra == O1 True · O1_PAS sigma 0 con siembra de fabrica == O1 True
+  OK    (K) identidad corta del runner (O1_PAS0 y O1_PAS sigma 0 == O1)
+  OK    (K) los genes de fabrica del constructor son las constantes de O1.py
+  OK    (a) regla 14: tarea(o1) == corre_v143.tarea campo a campo (s 617951, T 2000)
+  OK    (a) regla 14: tarea(termo) == corre_v143.tarea campo a campo (s 617951, T 2000)
+  OK    (a) regla 14: tarea(v143) == corre_v143.tarea campo a campo (s 617951, T 2000)
+  OK    (b) O1_PAS0 == O1 (salida ENTERA, s 617952, T 3000)
+  OK    (b) O1_PAS sigma 0 SIEMBRA None == O1 (salida ENTERA)
+  OK    (b)   ...y la telemetria dice: fundadores de FABRICA (de_siembra 0) con genes de fabrica exactos
+  OK    (b) O1_PAS sigma 0 SIEMBRA de fabrica == O1 (salida ENTERA)
+  OK    (b) por el juez: o1ctl con sigma 0 == o1 (linajes, pista, R0_pista; ids normalizados; s 617953, T 2000)
+  OK    (b)   ...y el estado escrito dice carro O1_PAS, PASAJE 1, sigma 0
+  OK    (c) O1_PAS sigma 0 SIEMBRA X == O1_MANO(X) (salida ENTERA, s 617954, T 3000); X = {'MARGEN': 0.4, 'PRUEBA': 0.35, 'PEN_OTRO': 0.6, 'PISO': 0.3}
+  OK    (c) control que puede fallar: con X la salida != O1 (los genes actuan)
+  OK    (d) sigma 0: los 27 vivos muestreados llevan exactamente X; todos los fundadores de siembra
+  OK    (d) sigma 0.03: los genes se mueven (27 vivos; ninguno exactamente de fabrica) y quedan en el clip
+  OK    (d) sigma 0.03: hay partos con genes (21) y la salida != O1
+  OK    (n) PS_LEE 0, sigma 0.03, SIEMBRA X: salida ENTERA == O1 (s 617954, T 3000): los genes NO se leen
+  OK    (n)   ...pero se heredan y mutan igual (27 vivos, ninguno == X exacto; partos 15)
+  OK    (n) el runner deja PS_LEE en 1 tras cada tarea
+  OK    (e) cadena de 2 pasajes sin aborto (None); pasaje 0 de fabrica (0/22), pasaje 1 TODO de la siembra (48/48)
+  OK    (e) la siembra final es la del ultimo pasaje (n 27 = n_siembra 27)
+  OK    (e) --reanuda relee la cadena igual
+  OK    (e) --reanuda rehace la cadena desde los JSON por pasaje, igual
+  OK    (e) la prueba o1pas usa la siembra de SU cadena (genes {'MARGEN': 0.2302, 'PRUEBA': 0.4814, 'PEN_OTRO': 0.3754, 'PISO': 0.2209}; de siembra 33/33)
+  OK    (e) la prueba o1ctl no usa siembra (0/34) y su fisica difiere de o1pas
+  OK    (e) cadena o1neu: mismas semillas de pasaje que o1pas [617960, 617961], lee 0 en cada pasaje, pasaje 1 TODO de su siembra (35/35)
+  OK    (e) el pasaje 0 de o1neu es O1 de fabrica en el juez (== prueba o1 con la misma semilla y T)
+  OK    (e) la prueba o1neu usa la siembra de SU cadena y LEE los genes (lee 1; de siembra 29/29)
+  OK    (e) genes por linaje en la fila de la prueba (9 linajes, media y ultimo)
+  OK    (e) prueba o1pas sin cadena -> aborto (nube-9), no se inventa siembra
+  OK    (e) siembra() solo recibe la telemetria de genes (ni R0, ni hijos, ni cruza)
+  OK    (f) FUNCIONA: o1pas 8 contra 7 (o1, ctl y neu) en 20/20
+  OK    (f) MODESTO solo la suma (gana 12/20, +24): HAY ALGO MODESTO · y queda EN EL UMBRAL (12 = 13 - 1): True
+  OK    (f) MODESTO solo la suma lejos del umbral (gana 10, +20): HAY ALGO MODESTO, umbral False
+  OK    (f) MODESTO solo lo pareado (gana 15, +5): HAY ALGO MODESTO
+  OK    (f) NO: o1pas == o1 == ctl (empates EN CONTRA)
+  OK    (f) NO: gana a o1 pero NO a ctl (la mutacion sola basta)
+  OK    (f) NO: gana a ctl pero NO a o1
+  OK    (f) umbral exacto: gana 13 con +13 -> FUNCIONA y EN EL UMBRAL
+  OK    (f) umbral de la suma: +9 con gana 9 -> NO y EN EL UMBRAL
+  OK    (f) NO SE LEE: un aborto
+  OK    (f) NO SE LEE: O1 con mayoria en 15/20 (V2)
+  OK    (f) V2 pasa con 16/20
+  OK    (f) NO SE LEE: v143 fuera de banda (0.35, V3)
+  OK    (f) NO SE LEE: la siembra no actua en o1pas (V4)
+  OK    (L) PA, PB, PC pasan pero PN no (o1neu == o1pas): HAY ALGO MODESTO (transferencia, no seleccion)
+  OK    (L) PN a medias (par 10/20, suma +10): HAY ALGO MODESTO (transferencia, no seleccion) y EN EL UMBRAL (suma = 10)
+  OK    (L) PN pasa y todo pasa: FUNCIONA (o1neu por debajo de o1: la deriva sola cuesta)
+  OK    (L) PA/PC a medias y PN completo: HAY ALGO MODESTO (seleccion parcial)
+  OK    (L) NO: gana o1neu, no o1pas (o1pas == o1)
+  OK    (L) EN EL UMBRAL tambien por PN (par 14/20): True, FUNCIONA
+  OK    (L) NO SE LEE: la siembra no actua en o1neu (V4)
+  OK    (L) NO SE LEE: la cadena o1neu con lee 1 (V5: el neutro no fue neutro)
+  OK    (L) descriptivo: genes por linaje cruzados con fund_post10k (160 establecidos, 20 no)
+  OK    (f) bloque: FUNCIONA + MODESTO -> MODESTO; NO SE LEE manda
+  OK    (g) semillas: serie 220, replica 220, practica disjuntas y en 617xxx
+usage: identidad_o1_evo.py [-h] (--humo | --serie | --replica |
+                           --bloque BLOQUE | --lee LEE) [--pool POOL]
+                           [--reanuda]
+identidad_o1_evo.py: error: one of the arguments --humo --serie --replica --bloque --lee is required
+usage: identidad_o1_evo.py [-h] (--humo | --serie | --replica |
+                           --bloque BLOQUE | --lee LEE) [--pool POOL]
+                           [--reanuda]
+identidad_o1_evo.py: error: unrecognized arguments: --x
+  OK    (g) banderas desconocidas o abreviadas abortan (--ser, --humo --x)
+  OK    (g) --humo con --pool aborta; --pool 5 aborta
+  OK    (g) el humo cabe: proceso 1 = 2 cadenas x 2 pasajes + 2 pruebas = 6 corridas, 60000 pasos; proceso 2 = 4 corridas, 80000 pasos
+[19:26:30] CORRE_O1_EVO · serie · 20260929_192630 · python 3.14.2 · pool 4 · corre_o1_evo.py 95622a2f93bb38b0 · preregistro PREREGISTRO_o1_evo.md 04a2b0d4728154da · carpeta C:\Users\User\AppData\Local\Temp\tmp_wx62qqi\serie_i617201-617201_20260929_192630
+[19:26:30]   pasajes 617000-617001 (T 2000 x 2) · pruebas 617201-617201 (T 2000) · brazos ['o1pas', 'o1neu', 'o1ctl', 'o1', 'termo', 'v143'] · reanuda False
+[19:26:30]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[19:26:30]   sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+[19:26:30]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[19:26:30]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[19:26:30]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[19:26:30]   sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+[19:26:30]   sha experimentos\organelos\o1_evo\construye_o1_pas.py 8013e4a99a004bda OK
+[19:26:30]   sha experimentos\organelos\o1_evo\carros\O1_PAS.py c5377ada6b28bee0 OK
+[19:26:30]   sha experimentos\organelos\o1_evo\carros\O1_PAS0.py 940a70aeacb8581c OK
+[19:26:30]   carro O1_PAS == construye_o1_pas: True
+[19:26:30]   carro O1_PAS0 == construye_o1_pas: True
+[19:26:42]   IDENTIDAD CORTA (salida ENTERA, N 9, s 617950, T 1500, fundador limpio): O1_PAS0 == O1 True · O1_PAS sigma 0 sin siembra == O1 True · O1_PAS sigma 0 con siembra de fabrica == O1 True
+[19:27:08]   [   38.1s] cadena i0 o1pas (7.8s) aborto None cruzan por pasaje [0, 0] genes p-ultimo {'MARGEN': 0.2416, 'PRUEBA': 0.4753, 'PEN_OTRO': 0.3911, 'PISO': 0.1925}
+[19:27:12]   [   41.7s] cadena i0 o1neu (7.3s) aborto None cruzan por pasaje [0, 0] genes p-ultimo {'MARGEN': 0.2446, 'PRUEBA': 0.4759, 'PEN_OTRO': 0.3801, 'PISO': 0.2042}
+[19:27:16]   [   45.3s] prueba i0 o1ctl (3.7s) aborto None cruzan 0/9 fund [0, 8, 0, 0, 0, 0, 0, 8, 0] de siembra 0/25
+[19:27:16]   [   45.3s] prueba i0 o1    (3.5s) aborto None cruzan 0/9 fund [0, 8, 0, 0, 0, 0, 0, 8, 0] de siembra 0/0
+[19:27:16]   [   45.3s] prueba i0 termo (1.9s) aborto None cruzan 0/9 fund [0, 0, 0, 0, 14, 11, 0, 0, 0] de siembra 0/0
+[19:27:16]   [   45.3s] prueba i0 v143  (2.0s) aborto None cruzan 0/9 fund [6, 13, 0, 9, 9, 10, 0, 4, 0] de siembra 0/0
+[19:27:16]   [   45.3s] prueba i0 o1pas (3.7s) aborto None cruzan 0/9 fund [0, 8, 0, 0, 0, 0, 0, 0, 0] de siembra 17/17
+[19:27:16]   [   45.3s] prueba i0 o1neu (3.6s) aborto None cruzan 0/9 fund [0, 8, 0, 0, 0, 0, 0, 0, 0] de siembra 17/17
+[19:27:16] 
+================ LA LETRA (PREREGISTRO_o1_evo.md sec. 6)
+[19:27:16]   validez: {'V1_completa': True, 'V2_ancla_o1': False, 'V3_ancla_v143': False, 'V4_siembra_actua': True, 'V5_perillas': True}
+[19:27:16]   puertas: {'PA_par_o1': False, 'PB_suma_o1': False, 'PC_par_ctl': False, 'PC_suma_ctl': False, 'PN_par_neu': False, 'PN_suma_neu': False} · umbrales {'gana_par': 1, 'dif_suma': 1, 'o1_may': 1} · EN EL UMBRAL (+-1): True · matiz None
+[19:27:16]   pareado_o1: gana 0 empata 1 pierde 0 · suma 0 vs 0 (dif 0)
+[19:27:16]   pareado_ctl: gana 0 empata 1 pierde 0 · suma 0 vs 0 (dif 0)
+[19:27:16]   pareado_neu: gana 0 empata 1 pierde 0 · suma 0 vs 0 (dif 0)
+[19:27:16]   [desc] pareados: {'o1pas_vs_o1': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1pas_vs_o1ctl': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1pas_vs_o1neu': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1neu_vs_o1': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1neu_vs_o1ctl': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1ctl_vs_o1': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1pas_vs_termo': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'termo_vs_v143': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1_vs_v143': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}}
+[19:27:16]   [desc] suma_cruzan: {'o1pas': 0, 'o1neu': 0, 'o1ctl': 0, 'o1': 0, 'termo': 0, 'v143': 0}
+[19:27:16]   [desc] mayorias: {'o1pas': 0, 'o1neu': 0, 'o1ctl': 0, 'o1': 0, 'termo': 0, 'v143': 0}
+[19:27:16]   [desc] R0_med: {'o1pas': 0.0, 'o1neu': 0.0, 'o1ctl': 0.0, 'o1': 0.0, 'termo': 0.0, 'v143': 0.0}
+[19:27:16]   [desc] fund_por_linaje_media: {'o1pas': 0.8889, 'o1neu': 0.8889, 'o1ctl': 1.7778, 'o1': 1.7778, 'termo': 2.7778, 'v143': 5.6667}
+[19:27:16]   [desc] fund_por_linaje_mediana: {'o1pas': 0.0, 'o1neu': 0.0, 'o1ctl': 0.0, 'o1': 0.0, 'termo': 0.0, 'v143': 6.0}
+[19:27:16]   [desc] establecidos_0fund_post10k: {'o1pas': 9, 'o1neu': 9, 'o1ctl': 9, 'o1': 9, 'termo': 9, 'v143': 9}
+[19:27:16]   [desc] fund_o1pas_menos_que_o1: 1
+[19:27:16]   [desc] mundo_AC: {'o1pas': 5.0375, 'o1neu': 5.0375, 'o1ctl': 6.2085, 'o1': 6.036, 'termo': 6.9725, 'v143': 8.4455}
+[19:27:16]   [desc] genes_vivos_fin_prueba: {'o1pas': {'MARGEN': 0.2602, 'PRUEBA': 0.4636, 'PEN_OTRO': 0.3655, 'PISO': 0.1864}, 'o1neu': {'MARGEN': 0.2602, 'PRUEBA': 0.4636, 'PEN_OTRO': 0.3655, 'PISO': 0.1864}, 'o1ctl': {'MARGEN': 0.2627, 'PRUEBA': 0.4974, 'PEN_OTRO': 0.3477, 'PISO': 0.1989}}
+[19:27:16]   [desc] genes_linaje_vs_establecimiento: {'o1pas': {'n_establecidos': 9, 'n_no': 0, 'establecidos': {'MARGEN': 0.2729, 'PRUEBA': 0.4662, 'PEN_OTRO': 0.3667, 'PISO': 0.1927}, 'no_establecidos': {'MARGEN': None, 'PRUEBA': None, 'PEN_OTRO': None, 'PISO': None}}, 'o1neu': {'n_establecidos': 9, 'n_no': 0, 'establecidos': {'MARGEN': 0.2729, 'PRUEBA': 0.4662, 'PEN_OTRO': 0.3667, 'PISO': 0.1927}, 'no_establecidos': {'MARGEN': None, 'PRUEBA': None, 'PEN_OTRO': None, 'PISO': None}}, 'o1ctl': {'n_establecidos': 9, 'n_no': 0, 'establecidos': {'MARGEN': 0.267, 'PRUEBA': 0.4907, 'PEN_OTRO': 0.3522, 'PISO': 0.2073}, 'no_establecidos': {'MARGEN': None, 'PRUEBA': None, 'PEN_OTRO': None, 'PISO': None}}}
+[19:27:16]   [desc] o1pas_trayectoria_genes_siembra_mediana_por_pasaje: {'MARGEN': [0.2433, 0.2416], 'PRUEBA': [0.489, 0.4753], 'PEN_OTRO': [0.3601, 0.3911], 'PISO': [0.1987, 0.1925]}
+[19:27:16]   [desc] o1pas_desplazamiento_ultimo_vs_fabrica: {'MARGEN': {'med': -0.0084, 'med_abs': 0.0084, 'sube': 0, 'baja': 1}, 'PRUEBA': {'med': -0.0247, 'med_abs': 0.0247, 'sube': 0, 'baja': 1}, 'PEN_OTRO': {'med': 0.0411, 'med_abs': 0.0411, 'sube': 1, 'baja': 0}, 'PISO': {'med': -0.0075, 'med_abs': 0.0075, 'sube': 0, 'baja': 1}}
+[19:27:16]   [desc] o1pas_cadena_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[19:27:16]   [desc] o1pas_cadena_fund_por_linaje_por_pasaje: [1.0, 0.8889]
+[19:27:16]   [desc] o1neu_trayectoria_genes_siembra_mediana_por_pasaje: {'MARGEN': [0.2452, 0.2446], 'PRUEBA': [0.4886, 0.4759], 'PEN_OTRO': [0.3584, 0.3801], 'PISO': [0.2044, 0.2042]}
+[19:27:16]   [desc] o1neu_desplazamiento_ultimo_vs_fabrica: {'MARGEN': {'med': -0.0054, 'med_abs': 0.0054, 'sube': 0, 'baja': 1}, 'PRUEBA': {'med': -0.0241, 'med_abs': 0.0241, 'sube': 0, 'baja': 1}, 'PEN_OTRO': {'med': 0.0301, 'med_abs': 0.0301, 'sube': 1, 'baja': 0}, 'PISO': {'med': 0.0042, 'med_abs': 0.0042, 'sube': 1, 'baja': 0}}
+[19:27:16]   [desc] o1neu_cadena_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[19:27:16]   [desc] o1neu_cadena_fund_por_linaje_por_pasaje: [2.6667, 0.8889]
+[19:27:16] 
+  RESUMEN C:\Users\User\AppData\Local\Temp\tmp_wx62qqi\serie_i617201-617201_20260929_192630\resumen.json (sha dbb43136f7b1f3ef) · abortos 0 · 45.4s
+[19:27:16] VEREDICTO DE LA SERIE: NO SE LEE   (en el umbral: True; regla de parada: PREREGISTRO_o1_evo.md sec. 7)
+  OK    (h) --serie --pool 4 (Pool FALSO, 1 indice, 2 pasajes, T 2000): termina; archivos ['cadena_i00_o1neu.json', 'cadena_i00_o1pas.json', 'log.txt', 'pasaje_i00_o1neu_p00.json', 'pasaje_i00_o1neu_p01.json', 'pasaje_i00_o1pas_p00.json', 'pasaje_i00_o1pas_p01.json', 'prueba_i00_o1.json', 'prueba_i00_o1ctl.json', 'prueba_i00_o1neu.json', 'prueba_i00_o1pas.json', 'prueba_i00_termo.json', 'prueba_i00_v143.json', 'resumen.json']
+[19:27:16] CORRE_O1_EVO · serie · 20260929_192716 · python 3.14.2 · pool 4 · corre_o1_evo.py 95622a2f93bb38b0 · preregistro PREREGISTRO_o1_evo.md 04a2b0d4728154da · carpeta C:\Users\User\AppData\Local\Temp\tmp_wx62qqi\serie_i617201-617201_20260929_192716
+[19:27:16]   pasajes 617000-617001 (T 2000 x 2) · pruebas 617201-617201 (T 2000) · brazos ['o1pas', 'o1neu', 'o1ctl', 'o1', 'termo', 'v143'] · reanuda False
+[19:27:16]   NO SE CORRE (candado): ya existe ..\..\..\..\AppData\Local\Temp\tmp_wx62qqi\serie_i617201-617201_20260929_192630: solo --reanuda (cortada o NO SE LEE)
+  OK    (h) candado: --serie otra vez sin --reanuda se niega (hay carpeta)
+[19:27:16] CORRE_O1_EVO · replica · 20260929_192716 · python 3.14.2 · pool 4 · corre_o1_evo.py 95622a2f93bb38b0 · preregistro PREREGISTRO_o1_evo.md 04a2b0d4728154da · carpeta C:\Users\User\AppData\Local\Temp\tmp_wx62qqi\replica_i617501-617501_20260929_192716
+[19:27:16]   pasajes 617300-617301 (T 2000 x 2) · pruebas 617501-617501 (T 2000) · brazos ['o1pas', 'o1neu', 'o1ctl', 'o1', 'termo', 'v143'] · reanuda False
+[19:27:16]   REGLA DE PARADA (sec. 7): la replica solo si la serie da FUNCIONA, MODESTO o NO EN EL UMBRAL; serie = NO SE LEE (umbral True). No se corre.
+  OK    (h) regla de parada: --replica se niega (serie = NO SE LEE, umbral True)
+  validez: {'V1_completa': True, 'V2_ancla_o1': False, 'V3_ancla_v143': False, 'V4_siembra_actua': True, 'V5_perillas': True}
+  puertas: {'PA_par_o1': False, 'PB_suma_o1': False, 'PC_par_ctl': False, 'PC_suma_ctl': False, 'PN_par_neu': False, 'PN_suma_neu': False} · umbrales {'gana_par': 1, 'dif_suma': 1, 'o1_may': 1} · EN EL UMBRAL (+-1): True · matiz None
+  pareado_o1: gana 0 empata 1 pierde 0 · suma 0 vs 0 (dif 0)
+  pareado_ctl: gana 0 empata 1 pierde 0 · suma 0 vs 0 (dif 0)
+  pareado_neu: gana 0 empata 1 pierde 0 · suma 0 vs 0 (dif 0)
+  [desc] pareados: {'o1pas_vs_o1': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1pas_vs_o1ctl': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1pas_vs_o1neu': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1neu_vs_o1': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1neu_vs_o1ctl': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1ctl_vs_o1': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1pas_vs_termo': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'termo_vs_v143': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'o1_vs_v143': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}}
+  [desc] suma_cruzan: {'o1pas': 0, 'o1neu': 0, 'o1ctl': 0, 'o1': 0, 'termo': 0, 'v143': 0}
+  [desc] mayorias: {'o1pas': 0, 'o1neu': 0, 'o1ctl': 0, 'o1': 0, 'termo': 0, 'v143': 0}
+  [desc] R0_med: {'o1pas': 0.0, 'o1neu': 0.0, 'o1ctl': 0.0, 'o1': 0.0, 'termo': 0.0, 'v143': 0.0}
+  [desc] fund_por_linaje_media: {'o1pas': 0.8889, 'o1neu': 0.8889, 'o1ctl': 1.7778, 'o1': 1.7778, 'termo': 2.7778, 'v143': 5.6667}
+  [desc] fund_por_linaje_mediana: {'o1pas': 0.0, 'o1neu': 0.0, 'o1ctl': 0.0, 'o1': 0.0, 'termo': 0.0, 'v143': 6.0}
+  [desc] establecidos_0fund_post10k: {'o1pas': 9, 'o1neu': 9, 'o1ctl': 9, 'o1': 9, 'termo': 9, 'v143': 9}
+  [desc] fund_o1pas_menos_que_o1: 1
+  [desc] mundo_AC: {'o1pas': 5.0375, 'o1neu': 5.0375, 'o1ctl': 6.2085, 'o1': 6.036, 'termo': 6.9725, 'v143': 8.4455}
+  [desc] genes_vivos_fin_prueba: {'o1pas': {'MARGEN': 0.2602, 'PRUEBA': 0.4636, 'PEN_OTRO': 0.3655, 'PISO': 0.1864}, 'o1neu': {'MARGEN': 0.2602, 'PRUEBA': 0.4636, 'PEN_OTRO': 0.3655, 'PISO': 0.1864}, 'o1ctl': {'MARGEN': 0.2627, 'PRUEBA': 0.4974, 'PEN_OTRO': 0.3477, 'PISO': 0.1989}}
+  [desc] genes_linaje_vs_establecimiento: {'o1pas': {'n_establecidos': 9, 'n_no': 0, 'establecidos': {'MARGEN': 0.2729, 'PRUEBA': 0.4662, 'PEN_OTRO': 0.3667, 'PISO': 0.1927}, 'no_establecidos': {'MARGEN': None, 'PRUEBA': None, 'PEN_OTRO': None, 'PISO': None}}, 'o1neu': {'n_establecidos': 9, 'n_no': 0, 'establecidos': {'MARGEN': 0.2729, 'PRUEBA': 0.4662, 'PEN_OTRO': 0.3667, 'PISO': 0.1927}, 'no_establecidos': {'MARGEN': None, 'PRUEBA': None, 'PEN_OTRO': None, 'PISO': None}}, 'o1ctl': {'n_establecidos': 9, 'n_no': 0, 'establecidos': {'MARGEN': 0.267, 'PRUEBA': 0.4907, 'PEN_OTRO': 0.3522, 'PISO': 0.2073}, 'no_establecidos': {'MARGEN': None, 'PRUEBA': None, 'PEN_OTRO': None, 'PISO': None}}}
+  [desc] o1pas_trayectoria_genes_siembra_mediana_por_pasaje: {'MARGEN': [0.2433, 0.2416], 'PRUEBA': [0.489, 0.4753], 'PEN_OTRO': [0.3601, 0.3911], 'PISO': [0.1987, 0.1925]}
+  [desc] o1pas_desplazamiento_ultimo_vs_fabrica: {'MARGEN': {'med': -0.0084, 'med_abs': 0.0084, 'sube': 0, 'baja': 1}, 'PRUEBA': {'med': -0.0247, 'med_abs': 0.0247, 'sube': 0, 'baja': 1}, 'PEN_OTRO': {'med': 0.0411, 'med_abs': 0.0411, 'sube': 1, 'baja': 0}, 'PISO': {'med': -0.0075, 'med_abs': 0.0075, 'sube': 0, 'baja': 1}}
+  [desc] o1pas_cadena_cruzan_por_pasaje_mediana: [0.0, 0.0]
+  [desc] o1pas_cadena_fund_por_linaje_por_pasaje: [1.0, 0.8889]
+  [desc] o1neu_trayectoria_genes_siembra_mediana_por_pasaje: {'MARGEN': [0.2452, 0.2446], 'PRUEBA': [0.4886, 0.4759], 'PEN_OTRO': [0.3584, 0.3801], 'PISO': [0.2044, 0.2042]}
+  [desc] o1neu_desplazamiento_ultimo_vs_fabrica: {'MARGEN': {'med': -0.0054, 'med_abs': 0.0054, 'sube': 0, 'baja': 1}, 'PRUEBA': {'med': -0.0241, 'med_abs': 0.0241, 'sube': 0, 'baja': 1}, 'PEN_OTRO': {'med': 0.0301, 'med_abs': 0.0301, 'sube': 1, 'baja': 0}, 'PISO': {'med': 0.0042, 'med_abs': 0.0042, 'sube': 1, 'baja': 0}}
+  [desc] o1neu_cadena_cruzan_por_pasaje_mediana: [0.0, 0.0]
+  [desc] o1neu_cadena_fund_por_linaje_por_pasaje: [2.6667, 0.8889]
+VEREDICTO (letra): NO SE LEE (matiz None) · en el umbral True · abortos []
+  OK    (h) --lee relee la carpeta
+
+ARNES PASA, 64/64 · 179.6s

@@ -1,0 +1,107 @@
+ARNES identidad_perillas.py
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+      carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+      carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+      mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+      sha escalera/corre_p1.py 392b71186cf49b60 OK
+      sha escalera/construye_p1.py 90dc1b6f848fac80 OK
+      sha escalera/mundo_escalera.py 4f28b372207ba0a6 OK
+      sha escalera/carros\O1_LUGAR.py 49eee6bb278ea097 OK
+      sha perillas/construye_perillas.py b5d1a10f6f913556 OK
+      sha perillas/carros\O1_LUGAR_GEN.py ecc996d2fecccc30 OK
+      sha perillas/carros\O1_LUGAR_GEN0.py 89db6c8a74902fe1 OK
+      carro O1_LUGAR_GEN == construye_perillas: True
+      carro O1_LUGAR_GEN0 == construye_perillas: True
+  OK    (K) verifica(): shas de escalera fijados, carros == construye_perillas
+      IDENTIDAD CORTA PERILLAS (salida ENTERA, N 9, s 741950, T 1500, mundo de P1): GEN0 == O1_LUGAR True · GEN (1,1) sigma 0 == O1_LUGAR True · GEN (0,0) sigma 0 == O1 (salvo telemetria 'lugar') True · GEN PS_LEE 0, sigma 0.03, delta 0.01, camara 1 == O1 True · control O1_LUGAR != O1 True
+  OK    (K) identidad corta del runner
+  OK    (K) chequeo estatico revisa_carro O1_LUGAR_GEN: PASA
+  OK    (K) chequeo estatico revisa_carro O1_LUGAR_GEN0: PASA
+  OK    (K) constantes: BASE (0,0), DISENO (1,1) == (LUGAR_W, LG_VIAJA) de construye_p1, sigma 0.03, delta 0.01, recorte [0, 1.5], mundo == el de P1
+  OK    (C) GEN0 == O1_LUGAR (salida ENTERA, s 741951, T 4000, mundo de P1)
+  OK    (C) GEN con genoma (1, 1), sin mutacion == O1_LUGAR (salida ENTERA), con camara y sin camara
+  OK    (C) GEN con genoma (0, 0), sin mutacion == O1 (salida ENTERA salvo la telemetria 'lugar'), con camara y sin camara
+  OK    (C) GEN sin siembra (PS_BASE), sin mutacion == O1
+  OK    (C) NEUTRO: PS_LEE 0 con mutacion (sigma 0.03, delta 0.01), camara y siembra de genes ALTOS == O1 (ningun cuerpo los lee)
+  OK    (C)   ...y sus genes SI se mueven: 63 fundadores (9 de siembra = los 9 primeros, 54 de camara), 63 genomas distintos, profundidad mutacional maxima 12; el modulo no viaja (viajes 0)
+  OK    (C) el runner deja el modulo como estaba (SIEMBRA None, PS_LEE 1, sigma 0.03, delta 0.01, camara 1, registros vacios) y pista.run intacta
+  OK    (C) cableado GW: GEN (0.5, 1) sin mutacion == O1_LUGAR con LUGAR_W 0.5 escrito a mano (salvo telemetria)
+  OK    (C) cableado GV: GEN (1, 0) sin mutacion == O1_LUGAR con LG_VIAJA 0 escrito a mano (salvo telemetria)
+  OK    (C) control que debe diferir: O1_LUGAR != O1 (el modulo actua)
+  OK    (C) control que debe diferir: el gen del VIAJE actua (LG_VIAJA 0 != 1)
+  OK    (C) control que debe diferir: el gen del VALOR actua (GW 1.5 con GV 0 != O1 y GW 0.5 != O1; s 741956, T 12000; a T 4000 aun son iguales: actua poco y tarde)
+  OK    (C) control que debe diferir: LEER los genes actua (misma siembra alta y mutacion, PS_LEE 1 != PS_LEE 0)
+  OK    (C) el modulo de O1_LUGAR quedo como estaba
+  OK    (G) generador propio: uniforme en (0,1) media 0.5000 (0.5 +- 0.01), normal media -0.0043 (+- 0.02) desv 0.9936 (1 +- 0.02), P(z > 1.9) 0.0267 (0.029 +- 0.005)
+  OK    (G) primer fundador sin siembra: origen 0 (base), profundidad 1, genes = (0, 0) con UNA mutacion en un gen ([0.0, 0.0])
+  OK    (G) mutacion: UN gen por nacimiento (cambian 2 genes en 0 de 8000; 0 genes en 0), cada gen la mitad de las veces (0.508)
+  OK    (G) mutacion: gen' = gen - delta + N(0, sigma): media [-0.0106, -0.0098] (-0.01 +- 0.002), desv [0.0299, 0.0301] (0.03 +- 0.002)
+  OK    (G) recorte en 0: desde (0, 0) ningun gen negativo; queda en (0, 0) el 0.622 (esperado P(N(-0.01, 0.03) <= 0) = 0.63 +- 0.03); P(gen > 0.05) = 0.0257 (0.023 +- 0.008)
+  OK    (G) determinista por (semilla, indice, instancia): misma semilla -> mismos genes del fundador; otra semilla -> otra corriente
+  OK    (G) herencia: al_parir pone '_gen' = (genes mutados, profundidad + 1) en la memoria del hijo; nace lo toma (y no lo confunde con una letra de la tabla)
+  OK    (G) umbral del viaje: con recuerdo 0.10 en el bin 20, GV 1.0 -> celda 246, GV 0.6 -> 246, GV 0.4 -> None (0.04 <= LG_MIN 0.05: no viaja)
+  OK    (G) primer fundador con siembra: origen 1, profundidad 17 + 1, genes [0.299, 0.2] = (0.3, 0.2) con un gen mutado; el cuerpo los lee tal cual
+  OK    (G) CAMARA: la refundacion del linaje 3 copia (mutado) el genoma del OTRO linaje (5), nunca el suyo: origen 2, profundidad 40 + 1, genes [0.681, 0.6]
+  OK    (G) sin camara (PS_CAMARA 0, la PRUEBA): la refundacion sale de la SIEMBRA (origen 1)
+  OK    (G) PS_LEE 0: el cuerpo lee (0, 0) aunque su genoma sea alto
+  OK    (S) siembra sintetica: solo el linaje establecido da siembra ({'n_est': 1, 'respaldo': False, 'idx': [0], 'n': 3}), con su profundidad
+  OK    (S) respaldo: sin establecidos dan siembra los de menos instancias en la 2a mitad ({'n_est': 0, 'respaldo': True, 'idx': [1], 'n': 3})
+  OK    (S) sin vivos en la ventana: siembra None
+  OK    (S) genoma mediano por gen (sin la profundidad)
+  OK    (S) contra la fisica del juez (s 741954, T 12000): establecidos por instancia [1, 2, 4, 5, 7] == linajes sin fundacion (t_fund) entre T/2 y su ultima muestra [1, 2, 4, 5, 7]; siembra de 25 genomas, profundidad mutacional mediana 2.0
+  OK    (S) reloj de reemplazos contra la fisica: refundaciones por camara 138 == fundadores del juez 138 (el juez no cuenta los 9 primeros cuerpos; el carro si: 147 = 9 de siembra + camara)
+  OK    (a) regla 14: tarea (genoma (0,0), mundo liso) == corre_v143.tarea('O1') campo a campo salvo el nombre del carro en los ids (s 741955, T 2000)
+  OK    (e) cadenas sel y neu sin aborto (None, None), 2 pasajes, mismas semillas [741960, 741961]
+  OK    (e) estado escrito: sel lee 1, neu lee 0; sigma 0.03, delta 0.01, camara 1, mundo de P1; pasaje 0: 9 fundadores de la base y el resto de camara; pasaje 1: 9 de siembra y el resto de camara
+  OK    (e) el neutro no viaja en ningun pasaje (viajes [0, 0]); relojes del neutro: profundidad mutacional por pasaje [1.0, 3.0] (no baja), refundaciones por camara 82; genoma final {'GW': 0.0, 'GV': 0.0}
+  OK    (e) prueba sel: genoma == mediano de la siembra final de su cadena; sin mutacion ni camara; todos los fundadores con ESE genoma (43 fundadores, 1 genoma)
+  OK    (e) pruebas fab (1,1) y o1 (0,0): genomas de diseno y base; fab viaja (8705), o1 no (0); semilla de prueba 741975
+  OK    (e) --reanuda relee igual (prueba y cadena)
+  OK    (e) cadena cortada a mitad (queda el pasaje 0, falta el 1): --reanuda relee el 0, recorre el 1 y da la MISMA cadena (determinista)
+  OK    (e) trabajo fijo '1:0': genoma (1, 0), sin aborto, JSON escrito
+  OK    (e) brazo desconocido y prueba sin cadena -> aborto escrito (nube-9)
+  OK    (e) carga(): 2 cadenas, 3 pruebas, 1 fijo, 2 abortos
+  OK    (f) FUNCIONA: GV sel 0.2 vs neu 0 en 20/20 y sel cruza 4 vs neu 0: FUNCIONA
+  OK    (f) MODESTO: el gen sube pero la deriva cruza igual: HAY ALGO MODESTO (el gen sube pero no cruza mas que la deriva)
+  OK    (f) MODESTO: cruza mas pero el gen no pasa el margen 0.05 (0.04): HAY ALGO MODESTO (cruza mas que la deriva sin que el gen suba por la letra)
+  OK    (f) NO: ni gen ni cruce (con reloj valido)
+  OK    (f) NO: la deriva tambien sube el gen (sel 0.2, neu 0.2) y cruza igual
+  OK    (f) 12/20 en el gen y en el cruce (suma +48): NO y EN EL UMBRAL: NO True
+  OK    (f) 13/20 en las dos: FUNCIONA y EN EL UMBRAL: FUNCIONA True
+  OK    (f) cruce: gana 9/20 y suma +9: PC cae entero -> MODESTO (solo el gen), umbral por la suma: HAY ALGO MODESTO True
+  OK    (f) empates EN CONTRA en el gen: sel == neu + margen exacto no cuenta
+  OK    (f) NO SE LEE: un aborto
+  OK    (f) NO SE LEE: el mundo no paga (fab > o1 solo en 15/20) (V2)
+  OK    (f) NO SE LEE: el neutro LEYO los genes (lee 1 en su cadena) (V4)
+  OK    (f) NO SE LEE: el neutro viajo (V5)
+  OK    (f) NO SE LEE: la prueba muto (sigma 0.03 en la prueba) (V4)
+  OK    (f) NO SE LEE: la cadena corrio sin camara (V4)
+  OK    (f) NO SE LEE: el genoma de la prueba de sel no es el de su cadena (V4)
+  OK    (f) RELOJ: profundidad mutacional neutra < 30 en 5 cadenas (15/20 < 16): un 'NO' sin reloj es NO SE LEE: NO SE LEE False
+  OK    (f) RELOJ: con 4 cadenas cortas (16/20) se lee
+  OK    (f) RELOJ: refundaciones por camara neutras < 3000 en 5 cadenas: NO SE LEE (tambien si el resultado era FUNCIONA): NO SE LEE
+  OK    (f) NO SE LEE: cadenas con un pasaje de menos (V1)
+  OK    (f) bloque: FUNCIONA + MODESTO = MODESTO; FUNCIONA + NO SE LEE = NO SE LEE
+  OK    (g) semillas: serie (120), replica (120), explora, humo y arnes disjuntas y en 741xxx
+usage: identidad_perillas.py [-h] (--humo | --explora | --serie | --replica |
+                             --bloque BLOQUE | --lee LEE) [--pool POOL]
+                             [--reanuda] [--T T] [--n N] [--npas NPAS]
+                             [--genomas GENOMAS] [--cadenas CADENAS]
+                             [--desde DESDE] [--nota NOTA]
+identidad_perillas.py: error: one of the arguments --humo --explora --serie --replica --bloque --lee is required
+usage: identidad_perillas.py [-h] (--humo | --explora | --serie | --replica |
+                             --bloque BLOQUE | --lee LEE) [--pool POOL]
+                             [--reanuda] [--T T] [--n N] [--npas NPAS]
+                             [--genomas GENOMAS] [--cadenas CADENAS]
+                             [--desde DESDE] [--nota NOTA]
+identidad_perillas.py: error: unrecognized arguments: --x
+  OK    (g) banderas desconocidas o abreviadas abortan (--hum, --humo --x); --humo con --pool aborta; --pool 3 aborta
+  OK    (g) --explora: 8 corridas aborta (--npas 4 con 2 cadenas); T 250000 aborta; indice 4 aborta; --serie con --T aborta; 8 genomas fijos aborta
+  OK    (g) candado: con los shas propios sin fijar la serie no corre (SHAS_PROPIOS sin fijar: ['construye_peri...)
+  OK    (g) el humo cabe en un proceso: 6 corridas de <= 20000 pasos; serie: 20 indices x (2 cadenas x 5 pasajes de 100000 + 4 pruebas de 100000); pool max 2
+
+ARNES PASA, 74/74 · 122.8s

@@ -1,0 +1,42 @@
+PISTA_POB · HUMO · 2026-09-29 09:45:40 · pool NO (un proceso) · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\pista_pob\datos/humo_20260929_094401
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\carrera_escuderias\pista_pob.py d4ed07b28e4ba94b OK
+  run_gen por anclas: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '7b05c9615ee40483', 'anclas': 5} OK
+  CFG (tasas BQ_C de la ronda 2 = corre_bp.CFG0): {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50}
+  arnes: salida PASA · pista_pob.py actual d4ed07b28e4ba94b citado · corre_pista_pob.py actual 16d2293e09c4a549 citado
+  3 tareas: [('pob_sel', 59891, 59891), ('pob_neutro', 59891, 59891), ('v143', None, 59891)] · K 8 · T_evo 3000 · T prueba 10000
+  [   11.3s] pob_sel s59891 aborto None · seg evo 27.8 prueba 11.3 · camara {'migrantes': 323, 'limpios': 33, 'depositos': 130, 'siembra_por_linaje': [50, 50, 41, 50, 36, 50, 50, 50, 37]} · cruzan 0/9 · R0 real [0.0, 0.0, 0.2941, 0.6667, 0.75, 0.8571, 0.75, 0.0385, 0.0]
+  [   22.0s] pob_neutro s59891 aborto None · seg evo 28.5 prueba 10.7 · camara {'migrantes': 282, 'limpios': 34, 'depositos': 129, 'siembra_por_linaje': [50, 50, 37, 50, 36, 47, 50, 50, 44]} · cruzan 0/9 · R0 real [0.2857, 0.0, 0.6, 0.0, 0.5, 0.75, 0.0196, 0.0, 0.8571]
+  [   22.0s] v143 s59891 aborto None · seg evo None prueba 10.4 · camara None · cruzan 0/9 · R0 real [0.0182, 0.25, 0.0667, 0.0167, 0.1667, 0.8333, 0.0, 0.6667, 0.0]
+
+LECTURA pista_pob · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\pista_pob\datos/humo_20260929_094401 · semillas de prueba [59891] (HUMO: no decide)
+  brazo                  s59891   suma cruzan · R0 real med (mediana por semilla)
+  pob_sel          0/9 R0 0.294   0 · 0.294
+  pob_neutro       0/9 R0 0.286   0 · 0.286
+  v143             0/9 R0 0.067   0 · 0.067
+  termo                      --   -- · None
+  bloq2                      --   -- · None
+  bloq2aza                   --   -- · None
+  bloq_pas                   --   -- · None
+  o1                         --   -- · None
+  PUERTA: sel > neutro (cruzan) en 0/1 · sel >= bloq2 en 0/1 · suma cruzan sel 0 vs neutro 0 (+5 -> 5) · (solo se imprime: sel >= bloq_pas en 0/1)
+  VALIDEZ: abortos 0  · completos True · v143 R0 real mediano 0.067 en [0.4, 0.8]: False · O1 mayoria 0/1 (>= 4/5): False · arnes: salida PASA · pista_pob.py actual d4ed07b28e4ba94b citado · corre_pista_pob.py actual 16d2293e09c4a549 citado
+  PREDICCIONES (PREREGISTRO sec. 5) y lo medido (HUMO: no cuentan):
+    Q1 suma cruzan pob_sel en [18, 28] (p 0.65): medido 0 -> NO se cumple
+    Q2 suma cruzan pob_neutro en [16, 26] (p 0.65): medido 0 -> NO se cumple
+    Q3 pob_sel > pob_neutro en >= 4/5 (p 0.15): medido 0/1 -> NO se cumple
+    Q4 pob_sel >= bloq2 en >= 4/5 (p 0.30): medido 0/1 -> NO se cumple
+    Q5 PROXY: migrantes/(migrantes+limpios) >= 0.90 en los dos brazos, todos los indices (p 0.80): medido {'pob_sel': [0.907], 'pob_neutro': [0.892]} -> NO se cumple
+    Q6 v143 R0 real mediano en [0.40, 0.80] (p 0.80): medido 0.067 -> NO se cumple
+    Q7 fundadores (mediana de 9) pob_sel < pob_neutro en >= 3/5 (p 0.35): medido 1/1 -> SE CUMPLE
+  VEREDICTO (HUMO, no cuenta): NO APLICA
+Terminado en 22.0s

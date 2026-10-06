@@ -1,0 +1,125 @@
+
+(A) PRUEBAS por brazo (mediana sobre 20 indices)
+medida                 sel       neu       fab        o1
+cruzan                   4         0         4         0
+R0                  0.8097    0.3527    0.8054    0.2948
+mundo_AC             4.321     6.731     7.155     7.029
+mord_AC               5420      4326      5182      4278
+mord_BD               3319      2644      3544      2630
+mord_tot              8700      6979      8714      6937
+mord_AC_dentro        2379      1183      2714      1162
+mord_AC_fuera         3060      3159      2495      3115
+ratio_pasos          5.234     1.052     7.071     1.046
+viajes           4.568e+05         0 6.307e+05         0
+fund                   411     935.5     241.5       975
+nac                  333.5       418     210.5     411.5
+muertes                715      1352       476      1388
+vida                   600       200      1234       200
+est                      6         0         7         0
+partos               863.5     448.5     930.5     444.5
+bono_blancos     2.022e+04      3931 2.339e+04      3872
+max_med             0.3535     0.603    0.2995     0.682
+
+(B) DENTRO DE sel (n = 20 pruebas, genoma fijo mediano de su cadena): Spearman gen -> medida  [GV: rango de la serie]
+  GV en sel: min 0.123 med 0.194 max 0.311 · GW: min 0.000 med 0.011 max 0.055
+  cruzan           rho(GV) +0.14   rho(GW) -0.06
+  R0               rho(GV) +0.29   rho(GW) -0.07
+  mundo_AC         rho(GV) +0.44   rho(GW) +0.22
+  mord_AC          rho(GV) +0.64   rho(GW) -0.22
+  mord_BD          rho(GV) +0.78   rho(GW) -0.32
+  mord_tot         rho(GV) +0.70   rho(GW) -0.28
+  mord_AC_dentro   rho(GV) +0.82   rho(GW) -0.30
+  mord_AC_fuera    rho(GV) -0.19   rho(GW) +0.02
+  ratio_pasos      rho(GV) +0.61   rho(GW) -0.28
+  viajes           rho(GV) +0.83   rho(GW) -0.35
+  fund             rho(GV) -0.31   rho(GW) +0.33
+  nac              rho(GV) -0.60   rho(GW) -0.12
+  muertes          rho(GV) -0.50   rho(GW) +0.29
+  vida             rho(GV) +0.69   rho(GW) +0.08
+  est              rho(GV) +0.56   rho(GW) -0.01
+  partos           rho(GV) +0.73   rho(GW) -0.16
+  bono_blancos     rho(GV) +0.78   rho(GW) -0.37
+  max_med          rho(GV) -0.34   rho(GW) +0.10
+
+(B2) TODAS las pruebas con genoma propio (sel + neu, n = 40): Spearman GV -> medida (neu con GV ~0 son O1)
+  mundo_AC         rho(GV) -0.71
+  mord_AC          rho(GV) +0.91
+  mord_BD          rho(GV) +0.90
+  fund             rho(GV) -0.86
+  nac              rho(GV) -0.82
+  cruzan           rho(GV) +0.82
+  ratio_pasos      rho(GV) +0.90
+  viajes           rho(GV) +0.95
+
+(B3) las 20 pruebas sel ordenadas por GV
+  i     GV     GW cruz     R0     AC   mAC   mBD mACin mACout  ratio  viajes fund  nac est maxmed
+  0  0.123  0.002    3  0.712   3.88  5138  2972  2073   3065   4.49  365350  452  385   6  0.600
+ 19  0.131  0.042    4  0.489   4.60  5098  3064  2119   2979   4.00  374891  542  368   4  0.363
+ 13  0.145  0.003    5  0.930   4.03  5216  3200  2165   3051   4.90  399176  556  352   6  0.520
+ 15  0.163  0.037    4  0.817   4.17  5446  3245  2218   3228   4.29  403052  413  360   6  0.496
+  8  0.167  0.009    3  0.722   4.21  5303  3460  2123   3180   4.34  392669  562  333   5  0.290
+  2  0.167  0.018    5  0.915   4.51  5448  3207  2393   3055   5.48  467460  315  334   6  0.290
+ 17  0.176  0.034    3  0.709   5.00  5476  3225  2366   3110   5.29  456158  467  280   6  0.515
+ 11  0.178  0.033    5  0.976   3.59  5472  3325  2404   3068   5.46  451275  198  382   6  0.484
+ 14  0.183  0.055    3  0.875   4.21  5284  3206  2288   2996   5.20  415693  463  337   5  0.344
+  1  0.193  0.000    4  0.803   4.10  5292  3251  2392   2900   5.34  483567  270  377   6  0.254
+  5  0.194  0.011    2  0.641   4.32  5624  3467  2525   3099   5.81  475544  293  321   6  0.229
+ 16  0.201  0.000    3  0.722   4.81  5459  3533  2274   3185   4.73  433052  663  250   5  0.392
+  4  0.208  0.001    6  0.947   4.10  5391  3307  2464   2927   5.61  470518  275  362   6  0.238
+  3  0.209  0.045    3  0.842   4.32  5304  3388  2294   3010   5.04  449299  539  285   7  0.518
+  6  0.221  0.038    4  0.750   5.35  5394  3365  2316   3078   4.83  457401  647  208   6  0.204
+ 12  0.230  0.021    6  0.958   4.47  5312  3313  2417   2895   5.16  474416  367  316   7  0.281
+  9  0.230  0.000    3  0.885   3.87  5553  3437  2432   3121   5.27  469740  226  374   6  0.307
+ 18  0.236  0.011    4  0.719   5.02  5694  3669  2541   3153   5.75  514951  408  238   7  0.490
+ 10  0.256  0.000    4  0.762   4.96  5527  3511  2633   2894   5.68  524724  293  273   6  0.476
+  7  0.311  0.008    5  0.968   5.11  5622  3583  2606   3016   5.99  524705  409  244   7  0.331
+
+(B4) pruebas neu con GV > 0.05 (deriva que salio con el viaje medio prendido)
+  i00 GV 0.096 GW 0.027 cruzan 2 AC 4.46 mAC 4870 mBD 2939 ratio 3.64 viajes 278966 fund 748 nac 345
+  i07 GV 0.060 GW 0.006 cruzan 2 AC 6.83 mAC 4399 mBD 2595 ratio 1.41 viajes 49111 fund 942 nac 409
+  i08 GV 0.083 GW 0.000 cruzan 3 AC 5.21 mAC 4833 mBD 2937 ratio 2.63 viajes 230379 fund 878 nac 338
+  i11 GV 0.050 GW 0.000 cruzan 0 AC 6.82 mAC 4343 mBD 2677 ratio 1.05 viajes 0 fund 946 nac 427
+  i15 GV 0.074 GW 0.005 cruzan 2 AC 5.07 mAC 4732 mBD 2841 ratio 2.33 viajes 187289 fund 832 nac 376
+  i16 GV 0.149 GW 0.029 cruzan 2 AC 4.73 mAC 5444 mBD 3423 ratio 4.41 viajes 415168 fund 622 nac 275
+
+(C) CADENAS sel por pasaje (mediana de 20): GV de la siembra, mundo AC, mordidas, fundadores, ratio, viajes, cruzan  (y neu al lado)
+  sel p0: GV 0.0961 GW 0.0076 mundo_AC 6.1307 mord_AC 4744.5 mord_BD 2904.5 fund 932.5 nac 330.5 ratio 2.375 viajes 176717.0 cruzan 0.0 est 3.0 gen_vivos_GV 0.1089
+  sel p1: GV 0.1367 GW 0.0026 mundo_AC 4.6911 mord_AC 5199.5 mord_BD 3176.5 fund 663.5 nac 307.0 ratio 4.199 viajes 351522.0 cruzan 2.0 est 7.0 gen_vivos_GV 0.1377
+  sel p2: GV 0.178 GW 0.0067 mundo_AC 4.4625 mord_AC 5357.0 mord_BD 3290.0 fund 482.5 nac 315.5 ratio 4.557 viajes 409881.5 cruzan 3.0 est 8.0 gen_vivos_GV 0.1774
+  sel p3: GV 0.1912 GW 0.0123 mundo_AC 4.5347 mord_AC 5422.0 mord_BD 3392.5 fund 464.0 nac 299.5 ratio 5.075 viajes 452742.0 cruzan 4.0 est 8.0 gen_vivos_GV 0.1972
+  sel p4: GV 0.1939 GW 0.0107 mundo_AC 4.5644 mord_AC 5450.5 mord_BD 3367.0 fund 446.0 nac 284.5 ratio 4.9785 viajes 445871.0 cruzan 4.0 est 8.0 gen_vivos_GV 0.1911
+  neu p0: GV 0.0197 GW 0.0261 mundo_AC 7.0273 mord_AC 4343.5 mord_BD 2657.0 fund 964.5 nac 411.0 ratio 1.054 viajes 0.0 cruzan 0.0 est 2.0 gen_vivos_GV 0.0072
+  neu p1: GV 0.0306 GW 0.0128 mundo_AC 6.9555 mord_AC 4323.5 mord_BD 2638.0 fund 952.0 nac 414.5 ratio 1.052 viajes 0.0 cruzan 0.0 est 1.0 gen_vivos_GV 0.0289
+  neu p2: GV 0.0176 GW 0.0183 mundo_AC 7.0107 mord_AC 4373.0 mord_BD 2673.5 fund 949.0 nac 413.0 ratio 1.053 viajes 0.0 cruzan 0.0 est 2.0 gen_vivos_GV 0.0207
+  neu p3: GV 0.0224 GW 0.0059 mundo_AC 6.9653 mord_AC 4346.5 mord_BD 2650.5 fund 967.0 nac 409.0 ratio 1.052 viajes 0.0 cruzan 0.0 est 2.0 gen_vivos_GV 0.0106
+  neu p4: GV 0.023 GW 0.0158 mundo_AC 6.9999 mord_AC 4331.5 mord_BD 2689.0 fund 979.0 nac 407.5 ratio 1.0495 viajes 0.0 cruzan 0.0 est 1.0 gen_vivos_GV 0.0198
+
+(C2) sel pasaje 0 (arranca en 0,0; el gen sube dentro del pasaje): GV siembra final vs medidas del pasaje, n = 20
+  mundo_AC   rho(GV siembra p0) -0.74  · mediana 6.1307
+  mord_AC    rho(GV siembra p0) +0.68  · mediana 4744.5
+  fund       rho(GV siembra p0) -0.39  · mediana 932.5
+  viajes     rho(GV siembra p0) +0.78  · mediana 176717.0
+  ratio      rho(GV siembra p0) +0.71  · mediana 2.375
+  cruzan     rho(GV siembra p0) +0.18  · mediana 0.0
+
+(C3) por pasaje de sel: rho(GV siembra, mundo AC), rho(GV siembra, viajes), rho(viajes, mundo AC), rho(ratio, mundo AC)
+  p0: GV-AC -0.74 · GV-viajes +0.78 · viajes-AC -0.77 · ratio-AC -0.83
+  p1: GV-AC -0.28 · GV-viajes +0.61 · viajes-AC -0.46 · ratio-AC -0.52
+  p2: GV-AC -0.03 · GV-viajes +0.34 · viajes-AC -0.33 · ratio-AC -0.29
+  p3: GV-AC +0.14 · GV-viajes +0.79 · viajes-AC +0.03 · ratio-AC +0.17
+  p4: GV-AC +0.19 · GV-viajes +0.73 · viajes-AC +0.20 · ratio-AC +0.27
+
+(D) pareado sel - fab por indice (misma semilla de prueba):
+  cruzan           mediana(sel - fab)        0.0  sel>  6  fab>  8
+  R0               mediana(sel - fab)    -0.0042  sel> 10  fab> 10
+  mundo_AC         mediana(sel - fab)     -2.796  sel>  0  fab> 20
+  mord_AC          mediana(sel - fab)      181.5  sel> 15  fab>  5
+  mord_BD          mediana(sel - fab)     -197.5  sel>  3  fab> 17
+  mord_AC_dentro   mediana(sel - fab)     -408.5  sel>  0  fab> 20
+  mord_AC_fuera    mediana(sel - fab)      572.5  sel> 20  fab>  0
+  ratio_pasos      mediana(sel - fab)    -1.8145  sel>  0  fab> 20
+  viajes           mediana(sel - fab)  -180612.5  sel>  0  fab> 20
+  fund             mediana(sel - fab)      194.5  sel> 14  fab>  6
+  nac              mediana(sel - fab)      110.0  sel> 18  fab>  2
+  est              mediana(sel - fab)       -1.0  sel>  1  fab> 12
+  vida             mediana(sel - fab)    -633.75  sel>  0  fab> 20

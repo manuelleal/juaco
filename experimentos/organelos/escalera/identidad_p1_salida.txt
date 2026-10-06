@@ -1,0 +1,59 @@
+ARNES identidad_p1.py
+      sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+      sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+      sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+      sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+      carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+      carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+      carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+      mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+  OK    (K) verifica(): shas fijados, carros == construye_p1, mundo construido
+      IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+  OK    (K) identidad corta del runner (mundo oasis 0 == pista; O1_LUGAR0 == O1; O1_LUGAR sin oasis == O1)
+  OK    (K) chequeo estatico revisa_carro O1_LUGAR: PASA
+  OK    (K) chequeo estatico revisa_carro O1_LUGAR_BAR: PASA
+  OK    (K) chequeo estatico revisa_carro O1_LUGAR0: PASA
+  OK    (M) mundo oasis 0 == pista.run BIT A BIT (salida entera, N 9, s 739951, T 3000) y mismo estado final del rng del mundo
+  OK    (M) mundo oasis 1, extra 0.8, pobre 1.0 == pista_grande (G 1, rica 1, lento 0) en TODA la fisica; mismo oasis [z0, fin] [22, 57] == [22, 57]
+  OK    (M)   ...y los pasos dentro del oasis coinciden con pista_grande linaje a linaje
+  OK    (M) control que puede fallar: oasis 1 (pobre 0.5) != pista; pobre 0.5 != pobre 1.0
+  OK    (M) el oasis actua: O1 muerde A+C dentro (18) y fuera (173); extra 0.8 pobre 0.5 escritos
+  OK    (C) O1_LUGAR0 == O1 en el mundo con oasis (salida ENTERA, s 739952, T 3000)
+  OK    (M) P1b dens 0.5: el oasis es denso (objetos dentro 16.17 vs fuera 19.83; 10 % del anillo) y la fisica != dens 0
+  OK    (M) P1b vista 20: la fisica != vista 0 (O1 ve menos); vista 200 (>= media vuelta) == vista 0 (salida entera)
+  OK    (C) O1_LUGAR con LUGAR_W 0.0 y LG_VIAJA 0 (modulo mudo) == O1 en el mundo con oasis: fisica y carro (salvo la telemetria 'lugar')
+  OK    (C) O1_LUGAR sin oasis == O1 (salida ENTERA salvo telemetria; s 739952, T 3000): sin sitios que den de mas el bono es 0 exacto
+  OK    (C) control que puede fallar: O1_LUGAR != O1 con oasis (el modulo actua); O1_LUGAR_BAR != O1_LUGAR y != O1
+  OK    (m) O1_LUGAR (s 739953, T 6000): bins con bono [[], [10, 11, 12], [], [10, 11], [], [], [10, 11, 12], [9, 10, 11], []] · oasis en bins [9, 10, 11, 12] · linajes con memoria 4/9 (>= 3; los demas son refundaciones limpias sin memoria aun) y de ellos con TODOS sus bins con bono dentro del oasis 4/4 (todos)
+  OK    (m) O1_LUGAR: blancos con bono de lugar > 0 en TODOS los linajes con memoria ([0, 249, 0, 11, 0, 0, 205, 345, 0])
+  OK    (m) ERR-170: O1_LUGAR_BAR lee en el bin ANTIPODA fijo: con memoria solo en el bin 20, lee [1, .5] en la celda 66 (bin 5 = 20 - 15) y 0 en la celda 246 (bin 20); O1_LUGAR lee al reves; y _lg_meta de BAR apunta al bin 5 (celda 66)
+  OK    (m) O1_LUGAR_BAR escribe en el bin verdadero (baraja 1 = antipoda; bins con bono [[10, 11, 12], [], [], [10, 11], [11], [], [9, 10, 12], [10, 11], [10, 11, 12]]) y su fisica difiere de O1_LUGAR
+  OK    (a) regla 14: tarea('o1f') == corre_v143.tarea campo a campo (s 739954, T 2000)
+  OK    (a) el runner deja pista.run como estaba
+  OK    (e) trabajo lug sin aborto (None); fila con oasis, lugar y estado (carro O1_LUGAR, mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20})
+  OK    (e) --reanuda relee igual
+  OK    (e) trabajo o1f: sin oasis en la fila y mundo liso en el estado
+  OK    (e) brazo desconocido -> aborto escrito (nube-9)
+  OK    (f) FUNCIONA: lug 8 contra 7 (o1 y bar) 20/20 y usa el lugar (ratio 2.5 vs o1 1.0)
+  OK    (f) gana pero NO va al oasis (ratio 1.2): NO (gana sin ir al oasis (instrumento))
+  OK    (f) NO: lug == o1 == bar
+  OK    (f) NO: gana a o1 pero no a bar (el sesgo basta, no el contenido)
+  OK    (f) MODESTO solo la suma (gana 12, +24) y EN EL UMBRAL: HAY ALGO MODESTO True
+  OK    (f) NO SE LEE: un aborto
+  OK    (f) NO SE LEE: o1f con mayoria en 15/20 (V2)
+  OK    (g) semillas: serie, replica, explora, humo y arnes disjuntas y en 739xxx
+usage: identidad_p1.py [-h] (--humo | --explora | --serie | --replica |
+                       --lee LEE) [--pool POOL] [--reanuda] [--T T] [--n N]
+                       [--brazos BRAZOS] [--desde DESDE] [--nota NOTA]
+                       [--dens DENS] [--vista VISTA] [--pobre POBRE]
+identidad_p1.py: error: one of the arguments --humo --explora --serie --replica --lee is required
+usage: identidad_p1.py [-h] (--humo | --explora | --serie | --replica |
+                       --lee LEE) [--pool POOL] [--reanuda] [--T T] [--n N]
+                       [--brazos BRAZOS] [--desde DESDE] [--nota NOTA]
+                       [--dens DENS] [--vista VISTA] [--pobre POBRE]
+identidad_p1.py: error: unrecognized arguments: --x
+  OK    (g) banderas desconocidas o abreviadas abortan (--hum, --humo --x)
+  OK    (g) --humo con --pool aborta; --pool 3 aborta; --humo --n 3 (9 corridas) aborta; --explora --T 250000 aborta
+  OK    (g) el humo cabe: 6 corridas de 30000 · la exploracion: 6 de 100000
+
+ARNES PASA, 37/37 · 173.3s

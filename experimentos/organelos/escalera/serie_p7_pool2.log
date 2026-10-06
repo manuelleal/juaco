@@ -1,0 +1,105 @@
+=== Wed Sep 30 21:07:49 HPS 2026 | serie P7; el director autorizo 'corre todo' (PC de 16 nucleos): en paralelo con replica P1, humos de rafaga y JUACO 5 ===
+[21:07:50] CORRE_P7 · serie · 20260930_210749 · python 3.14.2 · pool 2 · corre_p7.py 82c3811c144d1a2b · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p7_serie_s739601-739620_T100000_20260930_210749
+[21:07:50]   semillas 739601-739620 · T 100000 · brazos ['sen', 'senbar', 'lug'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'c_e': 0.01} · reanuda False · nota ''
+[21:07:50]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[21:07:50]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[21:07:50]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[21:07:50]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[21:07:50]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[21:07:50]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[21:07:50]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[21:07:50]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[21:07:50]   sha corre_p1.py 392b71186cf49b60 OK
+[21:07:50]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[21:07:50]   carro O1_LUGAR_SENAL == construye_p7: True (sha fab119d6fda1e5f1)
+[21:07:50]   carro O1_LUGAR_SENAL_BAR == construye_p7: True (sha cab7460e91e215e3)
+[21:07:50]   carro O1_LUGAR_SENAL0 == construye_p7: True (sha 8b1a2f02d8894aaa)
+[21:07:50]   mundo_tramo_c: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_mundo_escalera': '4f28b372207ba0a6', 'sha_fuente_transformada': '7e2e177748dcd156', 'anclas': 17}
+[21:08:08]   IDENTIDAD CORTA (salida ENTERA, N 9, s 739950, T 1500, fundador limpio): mundo oasis 0 == pista True · O1_LUGAR0 == O1 True · O1_LUGAR sin oasis == O1 (salvo su telemetria 'lugar') True
+[21:08:16]   IDENTIDAD CORTA P7 (salida ENTERA, N 9, s 739750, T 1500): mundo_tramo_c c_e 0 == mundo_escalera True · SENAL0 == O1_LUGAR True · SENAL con pizarra 0 y c_e 0.01 == O1_LUGAR (mudo == base) True
+[21:10:31]   [  160.5s] i0 senbar (133.9s) aborto None cruzan 3/9 R0 0.8333 fund [0, 0, 3, 0, 15, 6, 66, 6, 215] · oasis ratio pasos 7.168 · escr 3954 cobros 3954 lee 28176 siembra 77 · latencia med 196.0 (n 150) · mundo AC 8.3508
+[21:10:33]   [  163.3s] i0 sen    (136.8s) aborto None cruzan 7/9 R0 0.9565 fund [0, 0, 0, 0, 3, 0, 0, 1, 0] · oasis ratio pasos 7.897 · escr 3397 cobros 3397 lee 25300 siembra 43 · latencia med 177.0 (n 144) · mundo AC 6.9527
+[21:12:23]   [  273.0s] i1 sen    (109.7s) aborto None cruzan 7/9 R0 0.9667 fund [0, 0, 0, 0, 0, 0, 1, 27, 0] · oasis ratio pasos 8.518 · escr 4782 cobros 4782 lee 34866 siembra 48 · latencia med 203.5 (n 220) · mundo AC 9.6294
+[21:12:34]   [  284.1s] i0 lug    (123.6s) aborto None cruzan 5/9 R0 0.9333 fund [0, 0, 8, 0, 0, 15, 205, 22, 1] · oasis ratio pasos 7.292 · escr 0 cobros 0 lee None siembra None · latencia med 202.5 (n 144) · mundo AC 7.6033
+[21:14:25]   [  394.8s] i1 senbar (121.8s) aborto None cruzan 4/9 R0 0.8718 fund [0, 41, 1, 1, 27, 92, 4, 7, 0] · oasis ratio pasos 7.893 · escr 5348 cobros 5348 lee 37388 siembra 127 · latencia med 205.0 (n 183) · mundo AC 9.0607
+[21:14:46]   [  415.5s] i1 lug    (131.5s) aborto None cruzan 4/9 R0 0.6897 fund [0, 25, 0, 0, 11, 8, 277, 35, 0] · oasis ratio pasos 7.408 · escr 0 cobros 0 lee None siembra None · latencia med 220.0 (n 134) · mundo AC 7.5621
+[21:16:28]   [  518.0s] i2 sen    (123.2s) aborto None cruzan 7/9 R0 0.9615 fund [10, 5, 0, 0, 0, 0, 0, 0, 0] · oasis ratio pasos 7.376 · escr 4366 cobros 4366 lee 34556 siembra 42 · latencia med 209.0 (n 159) · mundo AC 8.2043
+[21:16:44]   [  533.9s] i2 senbar (118.4s) aborto None cruzan 1/9 R0 0.7209 fund [6, 248, 13, 0, 15, 11, 38, 6, 6] · oasis ratio pasos 6.817 · escr 4584 cobros 4584 lee 32886 siembra 101 · latencia med 195.0 (n 170) · mundo AC 8.9198
+[21:18:39]   [  649.0s] i2 lug    (131.0s) aborto None cruzan 4/9 R0 0.8974 fund [10, 98, 4, 0, 17, 0, 0, 3, 0] · oasis ratio pasos 6.654 · escr 0 cobros 0 lee None siembra None · latencia med 189.0 (n 103) · mundo AC 6.4927
+[21:18:51]   [  660.8s] i3 sen    (126.8s) aborto None cruzan 6/9 R0 0.96 fund [0, 12, 0, 26, 0, 0, 0, 16, 0] · oasis ratio pasos 7.033 · escr 3065 cobros 3065 lee 20008 siembra 36 · latencia med 213.0 (n 166) · mundo AC 6.2055
+[21:20:45]   [  774.5s] i3 senbar (125.4s) aborto None cruzan 1/9 R0 0.4107 fund [0, 88, 47, 314, 5, 26, 32, 2, 12] · oasis ratio pasos 6.452 · escr 3424 cobros 3424 lee 23677 siembra 108 · latencia med 209.0 (n 130) · mundo AC 8.6244
+[21:21:08]   [  798.2s] i3 lug    (137.5s) aborto None cruzan 3/9 R0 0.64 fund [0, 128, 277, 0, 5, 18, 8, 0, 10] · oasis ratio pasos 6.583 · escr 0 cobros 0 lee None siembra None · latencia med 192.5 (n 94) · mundo AC 7.2546
+[21:22:41]   [  890.9s] i4 sen    (116.4s) aborto None cruzan 8/9 R0 0.9688 fund [0, 46, 0, 0, 0, 0, 0, 0, 0] · oasis ratio pasos 7.879 · escr 4022 cobros 4022 lee 30883 siembra 51 · latencia med 229.0 (n 194) · mundo AC 9.1247
+[21:23:07]   [  917.1s] i4 senbar (118.9s) aborto None cruzan 2/9 R0 0.7826 fund [33, 15, 284, 4, 4, 46, 2, 0, 0] · oasis ratio pasos 7.295 · escr 3566 cobros 3566 lee 23978 siembra 123 · latencia med 196.0 (n 157) · mundo AC 9.2486
+[21:24:53]   [ 1023.2s] i4 lug    (132.3s) aborto None cruzan 4/9 R0 0.8571 fund [34, 39, 4, 0, 0, 10, 137, 0, 0] · oasis ratio pasos 7.201 · escr 0 cobros 0 lee None siembra None · latencia med 191.5 (n 122) · mundo AC 6.859
+[21:25:15]   [ 1045.0s] i5 sen    (127.9s) aborto None cruzan 7/9 R0 0.9655 fund [0, 0, 12, 0, 3, 0, 0, 8, 0] · oasis ratio pasos 7.195 · escr 4435 cobros 4435 lee 33358 siembra 48 · latencia med 208.0 (n 187) · mundo AC 7.7435
+[21:26:52]   [ 1141.9s] i5 senbar (118.6s) aborto None cruzan 2/9 R0 0.6 fund [0, 47, 24, 8, 15, 18, 0, 2, 212] · oasis ratio pasos 6.727 · escr 4761 cobros 4761 lee 33039 siembra 124 · latencia med 199.5 (n 154) · mundo AC 9.5715
+[21:27:29]   [ 1178.8s] i5 lug    (133.8s) aborto None cruzan 3/9 R0 0.4643 fund [0, 129, 10, 25, 28, 44, 0, 1, 119] · oasis ratio pasos 6.349 · escr 0 cobros 0 lee None siembra None · latencia med 180.0 (n 121) · mundo AC 7.2462
+[21:28:52]   [ 1261.9s] i6 sen    (120.0s) aborto None cruzan 7/9 R0 0.9667 fund [0, 4, 0, 0, 0, 0, 0, 11, 0] · oasis ratio pasos 7.898 · escr 4560 cobros 4560 lee 33087 siembra 51 · latencia med 226.0 (n 212) · mundo AC 8.3206
+[21:29:31]   [ 1300.8s] i6 senbar (122.0s) aborto None cruzan 2/9 R0 0.5714 fund [17, 0, 0, 14, 156, 10, 33, 1, 325] · oasis ratio pasos 6.531 · escr 3085 cobros 3085 lee 20291 siembra 93 · latencia med 191.5 (n 122) · mundo AC 8.6288
+[21:30:50]   [ 1380.4s] i6 lug    (118.5s) aborto None cruzan 5/9 R0 0.9024 fund [14, 0, 0, 0, 3, 6, 0, 16, 88] · oasis ratio pasos 7.597 · escr 0 cobros 0 lee None siembra None · latencia med 223.0 (n 191) · mundo AC 7.9389
+[21:31:45]   [ 1435.2s] i7 sen    (134.4s) aborto None cruzan 7/9 R0 0.9677 fund [0, 0, 12, 0, 0, 0, 9, 0, 0] · oasis ratio pasos 7.07 · escr 4906 cobros 4906 lee 38138 siembra 45 · latencia med 213.5 (n 150) · mundo AC 6.4321
+[21:32:55]   [ 1505.4s] i7 senbar (125.0s) aborto None cruzan 2/9 R0 0.7273 fund [27, 62, 2, 5, 303, 137, 5, 0, 0] · oasis ratio pasos 6.474 · escr 3451 cobros 3451 lee 21614 siembra 126 · latencia med 179.0 (n 124) · mundo AC 9.5275
+[21:33:56]   [ 1565.9s] i7 lug    (130.8s) aborto None cruzan 3/9 R0 0.8333 fund [0, 7, 1, 26, 86, 67, 5, 0, 0] · oasis ratio pasos 6.852 · escr 0 cobros 0 lee None siembra None · latencia med 190.5 (n 124) · mundo AC 6.9707
+[21:34:59]   [ 1629.3s] i8 sen    (123.9s) aborto None cruzan 7/9 R0 0.963 fund [0, 0, 0, 10, 16, 0, 0, 0, 0] · oasis ratio pasos 8.061 · escr 3817 cobros 3817 lee 26994 siembra 32 · latencia med 192.5 (n 166) · mundo AC 7.8816
+[21:35:56]   [ 1685.7s] i8 senbar (119.7s) aborto None cruzan 1/9 R0 0.6842 fund [5, 345, 3, 55, 146, 4, 0, 24, 8] · oasis ratio pasos 6.733 · escr 3726 cobros 3726 lee 23895 siembra 89 · latencia med 157.0 (n 117) · mundo AC 8.1073
+[21:37:01]   [ 1751.2s] i8 lug    (121.9s) aborto None cruzan 6/9 R0 0.9524 fund [0, 0, 0, 1, 1, 160, 0, 44, 0] · oasis ratio pasos 7.436 · escr 0 cobros 0 lee None siembra None · latencia med 193.5 (n 134) · mundo AC 7.1521
+[21:37:57]   [ 1806.8s] i9 sen    (121.1s) aborto None cruzan 5/9 R0 0.9545 fund [0, 0, 0, 15, 55, 42, 9, 0, 0] · oasis ratio pasos 7.833 · escr 2695 cobros 2695 lee 18403 siembra 48 · latencia med 198.0 (n 179) · mundo AC 7.4739
+[21:38:55]   [ 1864.9s] i9 senbar (113.7s) aborto None cruzan 2/9 R0 0.5882 fund [172, 2, 4, 317, 0, 162, 64, 13, 0] · oasis ratio pasos 6.462 · escr 2717 cobros 2717 lee 15788 siembra 85 · latencia med 179.5 (n 120) · mundo AC 9.7535
+[21:39:53]   [ 1923.1s] i9 lug    (116.3s) aborto None cruzan 4/9 R0 0.875 fund [20, 0, 50, 0, 25, 118, 0, 2, 0] · oasis ratio pasos 7.473 · escr 0 cobros 0 lee None siembra None · latencia med 165.0 (n 111) · mundo AC 7.1667
+[21:40:44]   [ 1973.7s] i10 sen    (108.7s) aborto None cruzan 8/9 R0 0.963 fund [0, 10, 0, 0, 0, 0, 0, 0, 0] · oasis ratio pasos 8.024 · escr 5137 cobros 5137 lee 41002 siembra 45 · latencia med 217.0 (n 162) · mundo AC 7.5954
+[21:41:40]   [ 2030.0s] i10 senbar (106.9s) aborto None cruzan 2/9 R0 0.871 fund [247, 2, 3, 0, 2, 66, 8, 3, 5] · oasis ratio pasos 7.439 · escr 4108 cobros 4108 lee 28276 siembra 61 · latencia med 170.0 (n 143) · mundo AC 8.7995
+[21:42:37]   [ 2086.6s] i10 lug    (113.0s) aborto None cruzan 4/9 R0 0.8679 fund [0, 6, 166, 0, 0, 0, 7, 9, 58] · oasis ratio pasos 7.502 · escr 0 cobros 0 lee None siembra None · latencia med 169.5 (n 118) · mundo AC 7.4284
+[21:43:33]   [ 2142.9s] i11 sen    (112.9s) aborto None cruzan 7/9 R0 0.9583 fund [0, 12, 0, 0, 0, 0, 2, 12, 0] · oasis ratio pasos 7.567 · escr 3380 cobros 3380 lee 26190 siembra 43 · latencia med 177.0 (n 173) · mundo AC 7.4537
+[21:44:35]   [ 2205.2s] i11 senbar (118.6s) aborto None cruzan 2/9 R0 0.6765 fund [88, 10, 0, 2, 0, 22, 315, 55, 5] · oasis ratio pasos 6.471 · escr 3168 cobros 3168 lee 21230 siembra 113 · latencia med 172.0 (n 123) · mundo AC 8.5513
+[21:45:35]   [ 2265.0s] i11 lug    (122.0s) aborto None cruzan 3/9 R0 0.5938 fund [26, 217, 0, 87, 5, 0, 12, 0, 61] · oasis ratio pasos 6.468 · escr 0 cobros 0 lee None siembra None · latencia med 148.0 (n 111) · mundo AC 7.1046
+[21:46:16]   [ 2305.7s] i12 sen    (100.4s) aborto None cruzan 4/9 R0 0.8636 fund [0, 0, 7, 2, 0, 2, 22, 9, 23] · oasis ratio pasos 8.879 · escr 4700 cobros 4700 lee 33064 siembra 54 · latencia med 210.5 (n 218) · mundo AC 9.7861
+[21:47:26]   [ 2375.7s] i12 senbar (110.8s) aborto None cruzan 4/9 R0 0.5238 fund [0, 0, 199, 119, 9, 0, 250, 0, 11] · oasis ratio pasos 6.723 · escr 3271 cobros 3271 lee 18771 siembra 132 · latencia med 170.0 (n 109) · mundo AC 8.2787
+[21:48:13]   [ 2422.6s] i12 lug    (116.9s) aborto None cruzan 4/9 R0 0.8868 fund [0, 0, 26, 98, 0, 0, 172, 2, 5] · oasis ratio pasos 7.193 · escr 0 cobros 0 lee None siembra None · latencia med 173.0 (n 99) · mundo AC 6.5857
+[21:49:10]   [ 2479.9s] i13 sen    (104.2s) aborto None cruzan 6/9 R0 0.95 fund [0, 0, 0, 0, 14, 8, 0, 0, 6] · oasis ratio pasos 7.421 · escr 4255 cobros 4255 lee 29672 siembra 48 · latencia med 218.0 (n 183) · mundo AC 8.0033
+[21:49:56]   [ 2525.7s] i13 senbar (103.2s) aborto None cruzan 2/9 R0 0.5909 fund [9, 8, 55, 9, 0, 250, 0, 40, 20] · oasis ratio pasos 6.813 · escr 3705 cobros 3705 lee 25675 siembra 122 · latencia med 180.0 (n 161) · mundo AC 9.5622
+[21:50:56]   [ 2586.4s] i13 lug    (106.4s) aborto None cruzan 6/9 R0 0.9333 fund [0, 29, 0, 0, 0, 0, 0, 124, 11] · oasis ratio pasos 6.975 · escr 0 cobros 0 lee None siembra None · latencia med 212.0 (n 111) · mundo AC 7.1436
+[21:51:40]   [ 2629.8s] i14 sen    (104.0s) aborto None cruzan 3/9 R0 0.8182 fund [5, 4, 0, 0, 18, 18, 0, 6, 10] · oasis ratio pasos 7.084 · escr 3587 cobros 3587 lee 25345 siembra 71 · latencia med 196.0 (n 163) · mundo AC 8.2179
+[21:52:49]   [ 2698.7s] i14 senbar (112.4s) aborto None cruzan 2/9 R0 0.5882 fund [305, 20, 0, 64, 13, 1, 35, 5, 14] · oasis ratio pasos 6.043 · escr 3106 cobros 3106 lee 21275 siembra 88 · latencia med 197.0 (n 139) · mundo AC 7.9759
+[21:53:30]   [ 2740.0s] i14 lug    (110.2s) aborto None cruzan 3/9 R0 0.4474 fund [28, 0, 0, 0, 43, 242, 20, 4, 53] · oasis ratio pasos 6.28 · escr 0 cobros 0 lee None siembra None · latencia med 183.0 (n 93) · mundo AC 7.3974
+[21:54:36]   [ 2805.5s] i15 sen    (106.8s) aborto None cruzan 8/9 R0 0.9655 fund [0, 1, 0, 7, 0, 0, 0, 0, 1] · oasis ratio pasos 8.347 · escr 5073 cobros 5073 lee 40197 siembra 28 · latencia med 202.5 (n 192) · mundo AC 7.7638
+[21:55:20]   [ 2850.2s] i15 senbar (110.2s) aborto None cruzan 3/9 R0 0.8889 fund [4, 0, 0, 3, 50, 1, 352, 3, 0] · oasis ratio pasos 7.45 · escr 4131 cobros 4131 lee 28607 siembra 86 · latencia med 165.0 (n 127) · mundo AC 8.0224
+[21:56:34]   [ 2923.7s] i15 lug    (118.2s) aborto None cruzan 4/9 R0 0.8571 fund [17, 0, 0, 3, 34, 240, 0, 2, 64] · oasis ratio pasos 7.429 · escr 0 cobros 0 lee None siembra None · latencia med 152.0 (n 127) · mundo AC 7.2128
+[21:57:17]   [ 2967.3s] i16 sen    (117.1s) aborto None cruzan 7/9 R0 0.9565 fund [0, 0, 0, 11, 0, 46, 0, 0, 0] · oasis ratio pasos 6.983 · escr 3624 cobros 3624 lee 25775 siembra 49 · latencia med 194.0 (n 166) · mundo AC 7.0005
+[21:58:38]   [ 3048.1s] i16 senbar (124.4s) aborto None cruzan 2/9 R0 0.3019 fund [156, 25, 36, 1, 64, 12, 0, 225, 4] · oasis ratio pasos 6.112 · escr 3780 cobros 3780 lee 24422 siembra 143 · latencia med 181.0 (n 119) · mundo AC 8.7202
+[21:59:27]   [ 3096.9s] i16 lug    (129.6s) aborto None cruzan 3/9 R0 0.6863 fund [0, 24, 105, 1, 10, 100, 0, 15, 8] · oasis ratio pasos 6.625 · escr 0 cobros 0 lee None siembra None · latencia med 197.5 (n 120) · mundo AC 7.4345
+[22:00:32]   [ 3162.4s] i17 sen    (114.3s) aborto None cruzan 7/9 R0 0.9615 fund [0, 0, 0, 31, 0, 0, 13, 0, 0] · oasis ratio pasos 8.485 · escr 3903 cobros 3903 lee 28871 siembra 45 · latencia med 203.0 (n 183) · mundo AC 8.8724
+[22:01:36]   [ 3225.5s] i17 senbar (128.6s) aborto None cruzan 3/9 R0 0.7143 fund [305, 31, 0, 1, 13, 0, 43, 2, 102] · oasis ratio pasos 6.986 · escr 3300 cobros 3300 lee 22212 siembra 105 · latencia med 172.5 (n 108) · mundo AC 8.7001
+[22:02:47]   [ 3296.5s] i17 lug    (134.1s) aborto None cruzan 2/9 R0 0.72 fund [9, 9, 13, 204, 16, 0, 3, 0, 6] · oasis ratio pasos 7.328 · escr 0 cobros 0 lee None siembra None · latencia med 178.5 (n 126) · mundo AC 7.0866
+[22:03:26]   [ 3335.7s] i18 sen    (110.2s) aborto None cruzan 7/9 R0 0.9655 fund [0, 0, 0, 0, 0, 3, 33, 0, 0] · oasis ratio pasos 7.665 · escr 4781 cobros 4781 lee 36131 siembra 48 · latencia med 215.0 (n 226) · mundo AC 9.1655
+[22:04:38]   [ 3408.1s] i18 senbar (111.6s) aborto None cruzan 5/9 R0 0.9091 fund [206, 2, 2, 1, 107, 8, 0, 0, 0] · oasis ratio pasos 6.688 · escr 4312 cobros 4312 lee 28547 siembra 87 · latencia med 193.5 (n 144) · mundo AC 8.9428
+[22:05:31]   [ 3461.0s] i18 lug    (125.3s) aborto None cruzan 5/9 R0 0.9474 fund [0, 0, 37, 0, 2, 32, 14, 0, 0] · oasis ratio pasos 6.686 · escr 0 cobros 0 lee None siembra None · latencia med 192.0 (n 137) · mundo AC 6.2072
+[22:06:21]   [ 3511.1s] i19 sen    (102.9s) aborto None cruzan 7/9 R0 0.9474 fund [0, 17, 0, 0, 8, 1, 0, 0, 0] · oasis ratio pasos 7.648 · escr 3342 cobros 3342 lee 24562 siembra 57 · latencia med 200.0 (n 195) · mundo AC 8.3948
+[22:07:17]   [ 3566.6s] i19 senbar (105.6s) aborto None cruzan 4/9 R0 0.8571 fund [53, 4, 4, 1, 0, 55, 223, 5, 0] · oasis ratio pasos 6.762 · escr 4239 cobros 4239 lee 29385 siembra 109 · latencia med 187.0 (n 152) · mundo AC 9.3207
+[22:08:07]   [ 3617.3s] i19 lug    (106.2s) aborto None cruzan 5/9 R0 0.9048 fund [0, 1, 118, 26, 0, 1, 251, 1, 0] · oasis ratio pasos 6.579 · escr 0 cobros 0 lee None siembra None · latencia med 205.0 (n 126) · mundo AC 6.9034
+[22:08:08] 
+================ LA LETRA (escalada a n 20)
+[22:08:08]   validez: {'V1_completa': True, 'V2_canal_actua': True, 'V3_mundo_actua': True, 'V4_estado': True}
+[22:08:08]   puertas: {'PA_par_lug': True, 'PA_suma_lug': True, 'PB_par_senbar': True, 'PB_suma_senbar': True, 'PF_fund_par': True, 'PM_llegan_mas': True} · umbrales {'gana_par': 13, 'dif_suma': 10} · EN EL UMBRAL (+-1): False · matiz None
+[22:08:08]   pareado_lug: gana 17 empata 3 pierde 0 · suma 132 vs 80 (dif 52) · por indice [7, 7, 7, 6, 8, 7, 7, 7, 7, 5, 8, 7, 4, 6, 3, 8, 7, 7, 7, 7] vs [5, 4, 4, 3, 4, 3, 5, 3, 6, 4, 4, 3, 4, 6, 3, 4, 3, 2, 5, 5]
+[22:08:08]   pareado_senbar: gana 19 empata 1 pierde 0 · suma 132 vs 49 (dif 83) · por indice [7, 7, 7, 6, 8, 7, 7, 7, 7, 5, 8, 7, 4, 6, 3, 8, 7, 7, 7, 7] vs [3, 4, 1, 1, 2, 2, 2, 2, 1, 2, 2, 2, 4, 2, 2, 3, 2, 3, 5, 4]
+[22:08:08]   pareado_fund (menor gana): gana 20 empata 0 pierde 0 · mediana 3.0 vs 28.3889
+[22:08:08]   pareado_frac_vidas (mayor gana: PM): gana 20 empata 0 pierde 0 · mediana 0.5799 vs 0.2623
+[22:08:08]   pareado_latencia (menor gana: descriptivo): gana 5 empata 0 pierde 15 · mediana 205.75 vs 191.0
+[22:08:08]   [desc] suma_cruzan: {'sen': 132, 'senbar': 49, 'lug': 80}
+[22:08:08]   [desc] mayorias: {'sen': 18, 'senbar': 1, 'lug': 6}
+[22:08:08]   [desc] R0_med: {'sen': 0.9615, 'senbar': 0.6993, 'lug': 0.8625}
+[22:08:08]   [desc] fund_media: {'sen': 3.0, 'senbar': 48.3333, 'lug': 28.3889}
+[22:08:08]   [desc] establecidos_0fund_post10k: {'sen': 149, 'senbar': 119, 'lug': 135}
+[22:08:08]   [desc] vida_med: {'sen': 1847.75, 'senbar': 1120.25, 'lug': 1292.5}
+[22:08:08]   [desc] latencia_med: {'sen': 205.75, 'senbar': 184.0, 'lug': 191.0}
+[22:08:08]   [desc] frac_vidas_con_bocado_dentro: {'sen': 0.5799, 'senbar': 0.2148, 'lug': 0.2623}
+[22:08:08]   [desc] mundo_AC: {'sen': 7.9424, 'senbar': 8.7599, 'lug': 7.1594}
+[22:08:08]   [desc] ratio_pasos_oasis: {'sen': 7.749, 'senbar': 6.73, 'lug': 7.084}
+[22:08:08]   [desc] escrituras: {'sen': 4138.5, 'senbar': 3715.5, 'lug': 0.0}
+[22:08:08]   [desc] cobros: {'sen': 4138.5, 'senbar': 3715.5, 'lug': 0.0}
+[22:08:08]   [desc] siembras: {'sen': 48.0, 'senbar': 106.5, 'lug': None}
+[22:08:08]   [desc] linajes_que_escriben: {'sen': 180, 'senbar': 180, 'lug': 0}
+[22:08:08] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\datos\p7_serie_s739601-739620_T100000_20260930_210749\resumen.json (sha f9f9df348312041c) · abortos 0 · 3617.7s
+[22:08:08] VEREDICTO: FUNCIONA

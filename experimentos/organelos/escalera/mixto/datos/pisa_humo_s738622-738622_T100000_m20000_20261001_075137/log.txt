@@ -1,0 +1,26 @@
+[07:51:27] CORRE_PISA · humo · un proceso (sin Pool) · corre_pisa.py 445c27054bfdc82a
+[07:51:27]   sha juntos\corre_juntos.py db75135c8c2f3e0d OK
+[07:51:27]   sha mundo_tramo_c.py 4a1044a4e0e1d5c9 OK
+[07:51:27]   sha juntos\carros\O1_TODO.py b7519a4a481a0cf5 OK
+[07:51:27]   sha juntos\carros\O1_TODO_SEN.py dff5e762bd23612e OK
+[07:51:27]   sha juntos\carros\O1_TODO_PREG.py 382dafcf822b36a1 OK
+[07:51:27]   sha carros\O1_LUGAR_SENAL_BAR.py cab7460e91e215e3 OK
+[07:51:27]   sha corre_mixto.py f27edde098cf7a1a OK
+[07:51:27]   carro O1_SEN_PISA == construye_pisa: True (sha bca8f97bcb6cb353)
+[07:51:27]   carro O1_SEN_PISA_BAR == construye_pisa: True (sha 95cda0103eb80b40)
+[07:51:27]   carro O1_SEN_PISA0 == construye_pisa: True (sha 362a150ded4ff12d)
+[07:51:31]   IDENTIDAD [O1_SEN_PISA0] * 9 == corre_juntos.tarea(O1_TODO_SEN) · salida ENTERA sin 'seg'/'estado' · s 738631 T 1500 mueve 500: True (33876 bytes)
+[07:51:33]   EL ARNES PUEDE FALLAR: pisa9 != sen9 True
+[07:51:37]   IDENTIDAD [O1_SEN_PISA0] * 9 == corre_juntos.tarea(O1_TODO_SEN) · salida ENTERA sin 'seg'/'estado' · s 738631 T 1500 mueve 0: True (35285 bytes)
+[07:51:37]   ARNES OK
+[07:51:37]   semillas 738622-738622 · T 100000 · brazos ['pmix', 'pmixbar', 'sen9', 'pmudo'] · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20, 'mueve': 20000, 'c_e': 0.01} · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\mixto\datos\pisa_humo_s738622-738622_T100000_m20000_20261001_075137 · nota 'rafaga 2, semilla 2 de 2'
+[07:53:11]   [  94.8s] i0 s738622 pmix    (94.8s) LECTORES lat med 768.0 (n 32, nunca 0) por mudanza [545.5, 2174.5, 696.0, 768.0] · explorador [247, 483, 223, 323] · antes que el explorador 5 · cruzan 7/9 (lectores 7) R0 0.9697 fund [3, 0, 0, 0, 0, 11, 0, 0, 2] · lat por vida 203.0 (frac 0.6183) · lee 27345 siembra 666 pisa [None, 40, 46, 39, 33, 42, 44, 38, 50] escribe 3434 · ratio oasis 7.205 · mundo AC 7.99
+[07:54:59]   [ 202.3s] i0 s738622 pmixbar (107.5s) LECTORES lat med 1277.0 (n 32, nunca 1) por mudanza [2614.5, 2632.5, 1595.0, 915.0] · explorador [530, 530, 283, 252] · antes que el explorador 3 · cruzan 3/9 (lectores 2) R0 0.6912 fund [0, 115, 42, 119, 0, 20, 0, 50, 24] · lat por vida 96.0 (frac 0.1582) · lee 6342 siembra 763 pisa [None, 24, 27, 21, 28, 31, 44, 47, 11] escribe 1018 · ratio oasis 5.227 · mundo AC 7.0291
+[07:56:39]   [ 302.2s] i0 s738622 sen9    (99.9s) LECTORES lat med 1014.0 (n 36, nunca 0) por mudanza [903.0, 1024.0, 1243.0, 1550.0] · explorador None · antes que el explorador None · cruzan 7/9 (lectores 7) R0 0.9714 fund [1, 20, 0, 0, 0, 2, 0, 0, 3] · lat por vida 173.0 (frac 0.4351) · lee 43581 siembra 70 pisa [None, None, None, None, None, None, None, None, None] escribe 5588 · ratio oasis 6.595 · mundo AC 6.5407
+[07:58:11]   [ 393.9s] i0 s738622 pmudo   (91.7s) LECTORES lat med 1628.5 (n 32, nunca 0) por mudanza [755.0, 2837.5, 3283.0, 900.0] · explorador [625, 119, 590, 650] · antes que el explorador 4 · cruzan 8/9 (lectores 7) R0 0.9778 fund [0, 0, 0, 0, 0, 1, 0, 0, 23] · lat por vida 188.0 (frac 0.4786) · lee 20702 siembra 581 pisa [None, 31, 38, 39, 36, 41, 40, 42, 12] escribe 3251 · ratio oasis 6.723 · mundo AC 7.5836
+[07:58:11] 
+  ================ RESUMEN (RAFAGA: no cuenta, no se declara)
+[07:58:11]   pmix    {'lat_lectores_por_semilla': [768.0], 'lat_lectores_todas': 768.0, 'nunca': 0, 'cruza_lectores': [7], 'cruzan': [7], 'R0_med': [0.9697], 'lat_vida': [203.0], 'lat_explorador_med': [285.0], 'mundo_AC': [7.99]}
+[07:58:11]   pmixbar {'lat_lectores_por_semilla': [1277.0], 'lat_lectores_todas': 1277.0, 'nunca': 1, 'cruza_lectores': [2], 'cruzan': [3], 'R0_med': [0.6912], 'lat_vida': [96.0], 'lat_explorador_med': [406.5], 'mundo_AC': [7.0291]}
+[07:58:11]   sen9    {'lat_lectores_por_semilla': [1014.0], 'lat_lectores_todas': 1014.0, 'nunca': 0, 'cruza_lectores': [7], 'cruzan': [7], 'R0_med': [0.9714], 'lat_vida': [173.0], 'lat_explorador_med': [None], 'mundo_AC': [6.5407]}
+[07:58:11]   pmudo   {'lat_lectores_por_semilla': [1628.5], 'lat_lectores_todas': 1628.5, 'nunca': 0, 'cruza_lectores': [7], 'cruzan': [8], 'R0_med': [0.9778], 'lat_vida': [188.0], 'lat_explorador_med': [607.5], 'mundo_AC': [7.5836]}

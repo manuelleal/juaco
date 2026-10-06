@@ -1,0 +1,85 @@
+[18:10:31] CORRE_MURO_PERILLAS · humo_serie · 20261005_181031 · python 3.14.2 · pool 3 · runner 6490c67f1f6a77a6 · nota ''
+[18:10:31]   preregistro PREREGISTRO_muro_perillas.md 76ea26f49cfab840 · base (883990, 883998) · pasajes T 5000 x 2 · pruebas T 20000 · n 1 · sigma 0.03 delta 0.01 · GEN_LETRA MARGEN margen 0.03 zona 0.06 · BASE {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · mutan [0] · fundador_limpio 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_181031
+[18:10:31]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[18:10:31]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[18:10:31]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[18:10:31]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[18:10:31]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[18:10:31]   sha muro_perillas/construye_muro_perillas.py 1120f56ea5dc2c0f OK
+[18:10:31]   sha muro_perillas/carros\O1_MURO_GEN.py 83e7fe2a5eb9efd4 OK
+[18:10:31]   sha muro_perillas/carros\O1_MURO_GEN0.py e6be23e6a74718a6 OK
+[18:10:31]   carro O1_MURO_GEN == construye_muro_perillas: True
+[18:10:31]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[18:10:45]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[18:11:03]   [   32.4s] cadena i0 sel (16.6s) aborto None · cruzan [0, 0] · estab [8, 7] · prof [1.0, 2.0] · refund [13, 46] · genoma final {'MARGEN': 0.049754307204621984, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[18:11:03]   [   32.4s] cadena i0 neu (16.6s) aborto None · cruzan [0, 0] · estab [9, 9] · prof [1.0, 3.0] · refund [6, 0] · genoma final {'MARGEN': 0.006951488692543794, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[18:11:03]   [   32.4s] cadena i0 pur (16.3s) aborto None · cruzan [0, 0] · estab [8, 8] · prof [1.0, 2.0] · refund [35, 26] · genoma final {'MARGEN': 0.006921237665109919, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[18:11:35]   [   64.4s] prueba i0 sel  (31.8s) aborto None · genoma {'MARGEN': 0.049754307204621984, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.6667 estab 9 B+D 61.0 A+C 112.0
+[18:11:35]   [   64.4s] prueba i0 neu  (31.8s) aborto None · genoma {'MARGEN': 0.006951488692543794, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 9 B+D 39.0 A+C 91.0
+[18:11:35]   [   64.4s] prueba i0 pur  (31.7s) aborto None · genoma {'MARGEN': 0.006921237665109919, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 9 B+D 39.0 A+C 91.0
+[18:11:35]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_181031\resumen.json · abortos 0 · 64.4s
+[18:11:35] VEREDICTO: HUMO (no cuenta): parcial
+[18:11:35] CORRE_MURO_PERILLAS · humo_serie · 20261005_181135 · python 3.14.2 · pool NO (un proceso) · runner 6490c67f1f6a77a6 · nota ''
+[18:11:35]   preregistro PREREGISTRO_muro_perillas.md 76ea26f49cfab840 · base (883990, 883998) · pasajes T 5000 x 2 · pruebas T 20000 · n 1 · sigma 0.03 delta 0.01 · GEN_LETRA MARGEN margen 0.03 zona 0.06 · BASE {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · mutan [0] · fundador_limpio 1 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_181031
+[18:11:35]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[18:11:35]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[18:11:35]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[18:11:35]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[18:11:35]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[18:11:35]   sha muro_perillas/construye_muro_perillas.py 1120f56ea5dc2c0f OK
+[18:11:35]   sha muro_perillas/carros\O1_MURO_GEN.py 83e7fe2a5eb9efd4 OK
+[18:11:35]   sha muro_perillas/carros\O1_MURO_GEN0.py e6be23e6a74718a6 OK
+[18:11:35]   carro O1_MURO_GEN == construye_muro_perillas: True
+[18:11:35]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[18:11:49]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[18:11:49]   [   14.3s] cadena i0 sel (16.6s) aborto None · cruzan [0, 0] · estab [8, 7] · prof [1.0, 2.0] · refund [13, 46] · genoma final {'MARGEN': 0.049754307204621984, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[18:11:49]   [   14.3s] cadena i0 neu (16.6s) aborto None · cruzan [0, 0] · estab [9, 9] · prof [1.0, 3.0] · refund [6, 0] · genoma final {'MARGEN': 0.006951488692543794, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[18:11:49]   [   14.3s] cadena i0 pur (16.3s) aborto None · cruzan [0, 0] · estab [8, 8] · prof [1.0, 2.0] · refund [35, 26] · genoma final {'MARGEN': 0.006921237665109919, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0}
+[18:12:21]   [   45.7s] prueba i0 fab  (31.4s) aborto None · genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.75 estab 8 B+D 68.0 A+C 137.0
+[18:12:52]   [   76.7s] prueba i0 off  (31.0s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[18:12:52]   [   76.7s] prueba i0 sel  (31.8s) aborto None · genoma {'MARGEN': 0.049754307204621984, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.6667 estab 9 B+D 61.0 A+C 112.0
+[18:12:52]   [   76.7s] prueba i0 neu  (31.8s) aborto None · genoma {'MARGEN': 0.006951488692543794, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 9 B+D 39.0 A+C 91.0
+[18:12:52]   [   76.7s] prueba i0 pur  (31.7s) aborto None · genoma {'MARGEN': 0.006921237665109919, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 9 B+D 39.0 A+C 91.0
+[18:12:52]   [   76.7s] prueba i0 fab  (31.4s) aborto None · genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.75 estab 8 B+D 68.0 A+C 137.0
+[18:12:52]   [   76.7s] prueba i0 off  (31.0s) aborto None · genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 0.0 estab 8 B+D 37.0 A+C 104.0
+[18:12:52] 
+================ LA LETRA (PREREGISTRO_muro_perillas.md)
+[18:12:52]   validez {'V1_completa': True, 'V2_fab_gana_a_off': False, 'V4_estado': True, 'V5_desde_cero': True, 'V7a_profundidad_mutacional_neu_sel_pur': False, 'V7b_refundaciones_por_camara_neu_sel_pur': False} · puertas {'PG_a_sel_sobre_neu': True, 'PG_b_sel_en_zona_funcional': False, 'PG_gen_sube': False, 'PC_par_neu': False, 'PC_suma_neu': False, 'n_sel_en_zona': 0, 'GR_sel_sobre_pur': True, 'n_gr': 1} · umbral True · matiz None
+[18:12:52]   pareado_gen {'gen': 'MARGEN', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 1, 'pierde': 0, 'med_sel': 0.0498, 'med_neu': 0.007, 'por_cadena_sel': [0.0498], 'por_cadena_neu': [0.007]}
+[18:12:52]   pareado_neu {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}
+[18:12:52]   fab vs off {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}
+[18:12:52]   [desc] suma_cruzan: {'sel': 0, 'neu': 0, 'pur': 0, 'fab': 0, 'off': 0}
+[18:12:52]   [desc] mayorias_(>=5/9): {'sel': 0, 'neu': 0, 'pur': 0, 'fab': 0, 'off': 0}
+[18:12:52]   [desc] sel_mayoria_como_O1: False
+[18:12:52]   [desc] mord_BD_med: {'sel': 61.0, 'neu': 39.0, 'pur': 39.0, 'fab': 68.0, 'off': 37.0}
+[18:12:52]   [desc] mord_AC_med: {'sel': 112.0, 'neu': 91.0, 'pur': 91.0, 'fab': 137.0, 'off': 104.0}
+[18:12:52]   [desc] frac_sin_bueno_med: {'sel': 0.0232, 'neu': 0.0037, 'pur': 0.0037, 'fab': 0.028, 'off': 0.0059}
+[18:12:52]   [desc] fund_med: {'sel': 0.0, 'neu': 0.0, 'pur': 0.0, 'fab': 0.0, 'off': 0.0}
+[18:12:52]   [desc] sel_MARGEN_en_zona_funcional: 0
+[18:12:52]   [desc] fl_serie: 1
+[18:12:52]   [desc] muta_serie: [0]
+[18:12:52]   [desc] UNA_EVIDENCIA: PG y PC son UNA evidencia: neu cae a ~0.01 y con MARGEN ~0 nadie pare; PC con neu es casi off vs sel
+[18:12:52]   [desc] sel_cadenas_LIMPIA_le_0.5: 0
+[18:12:52]   [desc] sel_pruebas_BD_le_5: 0
+[18:12:52]   [desc] sel_MARGEN_final_por_cadena: [0.0498]
+[18:12:52]   [desc] R0_med: {'sel': 0.6667, 'neu': 0.0, 'pur': 0.0, 'fab': 0.75, 'off': 0.0}
+[18:12:52]   [desc] establecidos: {'sel': 9, 'neu': 9, 'pur': 9, 'fab': 8, 'off': 8}
+[18:12:52]   [desc] mundo_AC: {'sel': 2.6059, 'neu': 3.8155, 'pur': 3.8155, 'fab': 2.4046, 'off': 3.8015}
+[18:12:52]   [desc] genes: {'MARGEN': {'gen': 'MARGEN', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 1, 'pierde': 0, 'med_sel': 0.0498, 'med_neu': 0.007, 'por_cadena_sel': [0.0498], 'por_cadena_neu': [0.007]}, 'PRUEBA': {'gen': 'PRUEBA', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 0.5, 'med_neu': 0.5, 'por_cadena_sel': [0.5], 'por_cadena_neu': [0.5]}, 'PEN_OTRO': {'gen': 'PEN_OTRO', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 0.35, 'med_neu': 0.35, 'por_cadena_sel': [0.35], 'por_cadena_neu': [0.35]}, 'PISO': {'gen': 'PISO', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 0.2, 'med_neu': 0.2, 'por_cadena_sel': [0.2], 'por_cadena_neu': [0.2]}, 'LIMPIA': {'gen': 'LIMPIA', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 1.0, 'med_neu': 1.0, 'por_cadena_sel': [1.0], 'por_cadena_neu': [1.0]}, 'HUECO': {'gen': 'HUECO', 'otro': 'neu', 'margen': 0.03, 'n': 1, 'gana': 0, 'pierde': 0, 'med_sel': 1.0, 'med_neu': 1.0, 'por_cadena_sel': [1.0], 'por_cadena_neu': [1.0]}}
+[18:12:52]   [desc] gradiente_sel_vs_pur: {'gen': 'MARGEN', 'otro': 'pur', 'margen': 0.02, 'n': 1, 'gana': 1, 'pierde': 0, 'med_sel': 0.0498, 'med_neu': 0.0069, 'por_cadena_sel': [0.0498], 'por_cadena_neu': [0.0069]}
+[18:12:52]   [desc] GR_estratificado_profundidad: {'razon_sel_pur_por_cadena': [1.0], 'n_dentro_30pct': 1, 'GR_solo_en_ellas': {'gen': 'MARGEN', 'otro': 'pur', 'margen': 0.02, 'n': 1, 'gana': 1, 'pierde': 0, 'med_sel': 0.0498, 'med_neu': 0.0069, 'por_cadena_sel': [0.0498], 'por_cadena_neu': [0.0069]}, 'nota': 'descriptivo; no toca la letra'}
+[18:12:52]   [desc] gradiente_sel_vs_pur_dup: None
+[18:12:52]   [desc] pur_prueba_sin_tope: {'suma_cruzan': 0, 'mayorias': 0, 'R0_med': 0.0}
+[18:12:52]   [desc] pareados: {'sel_vs_neu': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'sel_vs_pur': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'pur_vs_neu': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'sel_vs_off': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'sel_vs_fab': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'neu_vs_off': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}, 'fab_vs_off': {'n': 1, 'gana': 0, 'empata': 1, 'pierde': 0, 'suma_a': 0, 'suma_b': 0, 'dif': 0, 'por_indice_a': [0], 'por_indice_b': [0]}}
+[18:12:52]   [desc] sel_trayectoria_gen_mediana_por_pasaje: {'MARGEN': [0.0333, 0.0498], 'PRUEBA': [0.5, 0.5], 'PEN_OTRO': [0.35, 0.35], 'PISO': [0.2, 0.2], 'LIMPIA': [1.0, 1.0], 'HUECO': [1.0, 1.0]}
+[18:12:52]   [desc] sel_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[18:12:52]   [desc] sel_establecidos_en_pasaje_mediana: [8.0, 7.0]
+[18:12:52]   [desc] neu_trayectoria_gen_mediana_por_pasaje: {'MARGEN': [0.0333, 0.007], 'PRUEBA': [0.5, 0.5], 'PEN_OTRO': [0.35, 0.35], 'PISO': [0.2, 0.2], 'LIMPIA': [1.0, 1.0], 'HUECO': [1.0, 1.0]}
+[18:12:52]   [desc] neu_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[18:12:52]   [desc] neu_establecidos_en_pasaje_mediana: [9.0, 9.0]
+[18:12:52]   [desc] pur_trayectoria_gen_mediana_por_pasaje: {'MARGEN': [0.0333, 0.0069], 'PRUEBA': [0.5, 0.5], 'PEN_OTRO': [0.35, 0.35], 'PISO': [0.2, 0.2], 'LIMPIA': [1.0, 1.0], 'HUECO': [1.0, 1.0]}
+[18:12:52]   [desc] pur_cruzan_por_pasaje_mediana: [0.0, 0.0]
+[18:12:52]   [desc] pur_establecidos_en_pasaje_mediana: [8.0, 8.0]
+[18:12:52]   [desc] relojes: {'sel': {'profundidad_mutacional_mediana': 2.0, 'profundidad_EFECTIVA_sobre_MARGEN_mediana': 2.0, 'refundaciones_por_camara_mediana': 59.0, 'cadenas_prof_sobre_min': 0, 'cadenas_refund_sobre_min': 0}, 'neu': {'profundidad_mutacional_mediana': 3.0, 'profundidad_EFECTIVA_sobre_MARGEN_mediana': 3.0, 'refundaciones_por_camara_mediana': 6.0, 'cadenas_prof_sobre_min': 0, 'cadenas_refund_sobre_min': 0}, 'pur': {'profundidad_mutacional_mediana': 2.0, 'profundidad_EFECTIVA_sobre_MARGEN_mediana': 2.0, 'refundaciones_por_camara_mediana': 61.0, 'cadenas_prof_sobre_min': 0, 'cadenas_refund_sobre_min': 0}}
+[18:12:52]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_serie_20261005_181031\resumen.json · abortos 0 · 76.7s
+[18:12:52] VEREDICTO: HUMO (no cuenta): NO SE LEE

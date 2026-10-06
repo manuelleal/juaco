@@ -1,0 +1,745 @@
+{
+ "modo": "explora",
+ "humo": false,
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_ancla_o1": true,
+   "V3_siembra_actua": true,
+   "V4_perillas": true,
+   "V5_mecanismo": true
+  },
+  "puertas": {
+   "P1_sel_gana_neu": true,
+   "P2_direccional": true,
+   "P3_sel_gana_o1": false,
+   "P4_sel_gana_igual": true
+  },
+  "veredicto": "FUNCIONA",
+  "matiz": null,
+  "en_umbral": true,
+  "umbrales": {
+   "gana": 4,
+   "gana_igual": 3,
+   "dir_signo": 4,
+   "mod_gana": 3,
+   "mod_suma": 4,
+   "o1_may": 4
+  },
+  "pareado_neu": {
+   "n": 5,
+   "gana": 4,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 30,
+   "suma_b": 14,
+   "dif": 16,
+   "por_indice_a": [
+    6,
+    6,
+    6,
+    7,
+    5
+   ],
+   "por_indice_b": [
+    2,
+    4,
+    0,
+    3,
+    5
+   ]
+  },
+  "pareado_o1": {
+   "n": 5,
+   "gana": 0,
+   "empata": 2,
+   "pierde": 3,
+   "suma_a": 30,
+   "suma_b": 35,
+   "dif": -5,
+   "por_indice_a": [
+    6,
+    6,
+    6,
+    7,
+    5
+   ],
+   "por_indice_b": [
+    8,
+    7,
+    6,
+    7,
+    7
+   ]
+  },
+  "pareado_igual": {
+   "n": 5,
+   "gana": 3,
+   "empata": 0,
+   "pierde": 2,
+   "suma_a": 30,
+   "suma_b": 30,
+   "dif": 0,
+   "por_indice_a": [
+    6,
+    6,
+    6,
+    7,
+    5
+   ],
+   "por_indice_b": [
+    5,
+    7,
+    5,
+    6,
+    7
+   ]
+  },
+  "descriptivo": {
+   "pareados": {
+    "sel_vs_neu": {
+     "n": 5,
+     "gana": 4,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 30,
+     "suma_b": 14,
+     "dif": 16,
+     "por_indice_a": [
+      6,
+      6,
+      6,
+      7,
+      5
+     ],
+     "por_indice_b": [
+      2,
+      4,
+      0,
+      3,
+      5
+     ]
+    },
+    "sel_vs_o1": {
+     "n": 5,
+     "gana": 0,
+     "empata": 2,
+     "pierde": 3,
+     "suma_a": 30,
+     "suma_b": 35,
+     "dif": -5,
+     "por_indice_a": [
+      6,
+      6,
+      6,
+      7,
+      5
+     ],
+     "por_indice_b": [
+      8,
+      7,
+      6,
+      7,
+      7
+     ]
+    },
+    "sel_vs_igual": {
+     "n": 5,
+     "gana": 3,
+     "empata": 0,
+     "pierde": 2,
+     "suma_a": 30,
+     "suma_b": 30,
+     "dif": 0,
+     "por_indice_a": [
+      6,
+      6,
+      6,
+      7,
+      5
+     ],
+     "por_indice_b": [
+      5,
+      7,
+      5,
+      6,
+      7
+     ]
+    },
+    "neu_vs_igual": {
+     "n": 5,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 5,
+     "suma_a": 14,
+     "suma_b": 30,
+     "dif": -16,
+     "por_indice_a": [
+      2,
+      4,
+      0,
+      3,
+      5
+     ],
+     "por_indice_b": [
+      5,
+      7,
+      5,
+      6,
+      7
+     ]
+    },
+    "igual_vs_o1": {
+     "n": 5,
+     "gana": 0,
+     "empata": 2,
+     "pierde": 3,
+     "suma_a": 30,
+     "suma_b": 35,
+     "dif": -5,
+     "por_indice_a": [
+      5,
+      7,
+      5,
+      6,
+      7
+     ],
+     "por_indice_b": [
+      8,
+      7,
+      6,
+      7,
+      7
+     ]
+    },
+    "neu_vs_o1": {
+     "n": 5,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 5,
+     "suma_a": 14,
+     "suma_b": 35,
+     "dif": -21,
+     "por_indice_a": [
+      2,
+      4,
+      0,
+      3,
+      5
+     ],
+     "por_indice_b": [
+      8,
+      7,
+      6,
+      7,
+      7
+     ]
+    }
+   },
+   "suma_cruzan": {
+    "sel": 30,
+    "neu": 14,
+    "igual": 30,
+    "o1": 35
+   },
+   "mayorias": {
+    "sel": 5,
+    "neu": 1,
+    "igual": 5,
+    "o1": 5
+   },
+   "R0_med": {
+    "sel": 0.9231,
+    "neu": 0.75,
+    "igual": 0.9333,
+    "o1": 0.9333
+   },
+   "fund_por_linaje_media": {
+    "sel": 53.1111,
+    "neu": 91.5556,
+    "igual": 34.0,
+    "o1": 37.3333
+   },
+   "establecidos_0fund_post10k": {
+    "sel": 35,
+    "neu": 25,
+    "igual": 35,
+    "o1": 38
+   },
+   "mundo_AC": {
+    "sel": 2.219,
+    "neu": 2.591,
+    "igual": 2.0818,
+    "o1": 2.1857
+   },
+   "genes_vivos_fin_prueba": {
+    "sel": {
+     "MARGEN": 0.2273,
+     "PRUEBA": 0.3999,
+     "PEN_OTRO": 0.2796,
+     "PISO": 0.2791
+    },
+    "neu": {
+     "MARGEN": 0.2319,
+     "PRUEBA": 0.4985,
+     "PEN_OTRO": 0.4175,
+     "PISO": 0.3231
+    },
+    "igual": {
+     "MARGEN": 0.2422,
+     "PRUEBA": 0.3868,
+     "PEN_OTRO": 0.3186,
+     "PISO": 0.2873
+    }
+   },
+   "direccional": {
+    "MARGEN": {
+     "sube": 0,
+     "baja": 5,
+     "med_abs_sel": 0.0245,
+     "med_abs_neu": 0.13,
+     "med_sel": -0.0245,
+     "med_neu": -0.0199,
+     "pasa": false
+    },
+    "PRUEBA": {
+     "sube": 0,
+     "baja": 5,
+     "med_abs_sel": 0.1108,
+     "med_abs_neu": 0.0544,
+     "med_sel": -0.1108,
+     "med_neu": 0.0398,
+     "pasa": true
+    },
+    "PEN_OTRO": {
+     "sube": 2,
+     "baja": 3,
+     "med_abs_sel": 0.15,
+     "med_abs_neu": 0.0572,
+     "med_sel": -0.0274,
+     "med_neu": 0.0472,
+     "pasa": false
+    },
+    "PISO": {
+     "sube": 3,
+     "baja": 2,
+     "med_abs_sel": 0.0772,
+     "med_abs_neu": 0.0805,
+     "med_sel": 0.0772,
+     "med_neu": 0.0033,
+     "pasa": false
+    }
+   },
+   "desplazamiento_sel_por_cadena": {
+    "MARGEN": [
+     -0.064,
+     -0.0019000000000000128,
+     -0.004500000000000004,
+     -0.0466,
+     -0.024499999999999994
+    ],
+    "PRUEBA": [
+     -0.018500000000000016,
+     -0.12109999999999999,
+     -0.06580000000000003,
+     -0.2611,
+     -0.11080000000000001
+    ],
+    "PEN_OTRO": [
+     -0.02739999999999998,
+     0.20200000000000007,
+     0.15000000000000002,
+     -0.21949999999999997,
+     -0.0907
+    ],
+    "PISO": [
+     -0.06560000000000002,
+     0.07789999999999997,
+     -0.006500000000000006,
+     0.07719999999999999,
+     0.11759999999999998
+    ]
+   },
+   "desplazamiento_neu_por_cadena": {
+    "MARGEN": [
+     0.0796,
+     0.15100000000000002,
+     -0.13,
+     -0.1779,
+     -0.0199
+    ],
+    "PRUEBA": [
+     0.15449999999999997,
+     0.010199999999999987,
+     0.2087,
+     -0.054400000000000004,
+     0.03979999999999995
+    ],
+    "PEN_OTRO": [
+     0.05720000000000003,
+     0.04720000000000002,
+     0.014600000000000002,
+     -0.07589999999999997,
+     0.2861
+    ],
+    "PISO": [
+     0.1179,
+     -0.11290000000000001,
+     0.08050000000000002,
+     0.0032999999999999974,
+     -0.0728
+    ]
+   },
+   "sel_trayectoria_genes_siembra_mediana": {
+    "MARGEN": [
+     0.2526,
+     0.2547,
+     0.2644,
+     0.2555,
+     0.2442,
+     0.2686,
+     0.2412,
+     0.2444,
+     0.238,
+     0.2255
+    ],
+    "PRUEBA": [
+     0.4891,
+     0.4937,
+     0.4698,
+     0.4648,
+     0.4768,
+     0.4708,
+     0.4405,
+     0.4368,
+     0.4159,
+     0.3892
+    ],
+    "PEN_OTRO": [
+     0.3568,
+     0.3414,
+     0.3273,
+     0.3512,
+     0.3518,
+     0.3511,
+     0.3397,
+     0.3406,
+     0.3444,
+     0.3226
+    ],
+    "PISO": [
+     0.201,
+     0.221,
+     0.2342,
+     0.227,
+     0.2125,
+     0.2016,
+     0.2118,
+     0.2353,
+     0.2729,
+     0.2772
+    ]
+   },
+   "sel_colonos_sobre_fundadores_por_pasaje": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "sel_fundadores_camara_por_pasaje": [
+    185.0,
+    86.0,
+    231.0,
+    119.0,
+    116.0,
+    124.0,
+    135.0,
+    140.0,
+    86.0,
+    117.0
+   ],
+   "sel_partos_por_pasaje": [
+    125.0,
+    106.0,
+    140.0,
+    108.0,
+    116.0,
+    121.0,
+    116.0,
+    100.0,
+    111.0,
+    116.0
+   ],
+   "sel_ne_pesos_siembra_por_pasaje": [
+    7.584,
+    8.004,
+    6.864,
+    7.528,
+    7.7,
+    7.819,
+    7.528,
+    7.819,
+    8.133,
+    7.879
+   ],
+   "sel_cadena_cruzan_por_pasaje": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "neu_trayectoria_genes_siembra_mediana": {
+    "MARGEN": [
+     0.254,
+     0.2737,
+     0.2507,
+     0.2226,
+     0.2511,
+     0.2647,
+     0.2693,
+     0.2391,
+     0.2594,
+     0.2301
+    ],
+    "PRUEBA": [
+     0.5005,
+     0.4969,
+     0.5143,
+     0.525,
+     0.5018,
+     0.5506,
+     0.6107,
+     0.6027,
+     0.5591,
+     0.5398
+    ],
+    "PEN_OTRO": [
+     0.3626,
+     0.3555,
+     0.3555,
+     0.3729,
+     0.3565,
+     0.3634,
+     0.3743,
+     0.3484,
+     0.3791,
+     0.3972
+    ],
+    "PISO": [
+     0.2056,
+     0.2136,
+     0.2529,
+     0.2169,
+     0.2034,
+     0.1996,
+     0.2081,
+     0.229,
+     0.2417,
+     0.2033
+    ]
+   },
+   "neu_colonos_sobre_fundadores_por_pasaje": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "neu_fundadores_camara_por_pasaje": [
+    123.0,
+    121.0,
+    169.0,
+    123.0,
+    144.0,
+    146.0,
+    127.0,
+    105.0,
+    123.0,
+    123.0
+   ],
+   "neu_partos_por_pasaje": [
+    123.0,
+    118.0,
+    146.0,
+    124.0,
+    122.0,
+    128.0,
+    127.0,
+    112.0,
+    126.0,
+    123.0
+   ],
+   "neu_ne_pesos_siembra_por_pasaje": [
+    7.642,
+    7.819,
+    7.819,
+    7.819,
+    7.418,
+    7.819,
+    7.7,
+    8.133,
+    7.819,
+    7.819
+   ],
+   "neu_cadena_cruzan_por_pasaje": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "igual_trayectoria_genes_siembra_mediana": {
+    "MARGEN": [
+     0.2554,
+     0.2694,
+     0.2679,
+     0.2711,
+     0.278,
+     0.2536,
+     0.2495,
+     0.2504,
+     0.2244,
+     0.2696
+    ],
+    "PRUEBA": [
+     0.4913,
+     0.4945,
+     0.4716,
+     0.4557,
+     0.475,
+     0.4581,
+     0.435,
+     0.436,
+     0.3932,
+     0.4005
+    ],
+    "PEN_OTRO": [
+     0.3633,
+     0.3542,
+     0.3452,
+     0.3578,
+     0.3306,
+     0.3263,
+     0.3397,
+     0.3422,
+     0.3384,
+     0.3258
+    ],
+    "PISO": [
+     0.2091,
+     0.2193,
+     0.2269,
+     0.2153,
+     0.2034,
+     0.1774,
+     0.2105,
+     0.2535,
+     0.2704,
+     0.2979
+    ]
+   },
+   "igual_colonos_sobre_fundadores_por_pasaje": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "igual_fundadores_camara_por_pasaje": [
+    174.0,
+    196.0,
+    123.0,
+    180.0,
+    195.0,
+    226.0,
+    209.0,
+    109.0,
+    93.0,
+    119.0
+   ],
+   "igual_partos_por_pasaje": [
+    123.0,
+    107.0,
+    118.0,
+    129.0,
+    121.0,
+    115.0,
+    101.0,
+    116.0,
+    96.0,
+    99.0
+   ],
+   "igual_ne_pesos_siembra_por_pasaje": [
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0,
+    9.0
+   ],
+   "igual_cadena_cruzan_por_pasaje": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "abortos": [],
+ "n": 5,
+ "npas": 10,
+ "T_pas": 25000,
+ "T_pru": 100000,
+ "veredicto": "FUNCIONA",
+ "preregistro": "PREREGISTRO_entre_linajes.md",
+ "sha_preregistro": "2847cc7246b5c8cd",
+ "sha_runner": "2ce1bafee633ed7b",
+ "sha_camara": "e2889842021e9241",
+ "shas": {
+  "experimentos\\carrera_escuderias\\pista_pob.py": "d4ed07b28e4ba94b",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\organelos\\o1_evo\\corre_o1_evo.py": "95622a2f93bb38b0",
+  "experimentos\\organelos\\o1_evo\\carros\\O1_PAS.py": "c5377ada6b28bee0",
+  "experimentos\\organelos\\o1_evo\\construye_o1_pas.py": "8013e4a99a004bda",
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22"
+ },
+ "seg": 5779.4
+}

@@ -1,0 +1,250 @@
+[19:34:26] CORRE_O1_EVO · serie · 20260929_193426 · python 3.14.2 · pool 4 · corre_o1_evo.py 95622a2f93bb38b0 · preregistro PREREGISTRO_o1_evo.md 5aeee2a75f66aba7 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\o1_evo\datos\serie_i617201-617220_20260929_193426
+[19:34:26]   pasajes 617000-617199 (T 25000 x 10) · pruebas 617201-617220 (T 100000) · brazos ['o1pas', 'o1neu', 'o1ctl', 'o1', 'termo', 'v143'] · reanuda False
+[19:34:26]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[19:34:26]   sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+[19:34:26]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[19:34:26]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[19:34:26]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[19:34:26]   sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+[19:34:26]   sha experimentos\organelos\o1_evo\construye_o1_pas.py 8013e4a99a004bda OK
+[19:34:26]   sha experimentos\organelos\o1_evo\carros\O1_PAS.py c5377ada6b28bee0 OK
+[19:34:26]   sha experimentos\organelos\o1_evo\carros\O1_PAS0.py 940a70aeacb8581c OK
+[19:34:26]   carro O1_PAS == construye_o1_pas: True
+[19:34:26]   carro O1_PAS0 == construye_o1_pas: True
+[19:34:42]   IDENTIDAD CORTA (salida ENTERA, N 9, s 617950, T 1500, fundador limpio): O1_PAS0 == O1 True · O1_PAS sigma 0 sin siembra == O1 True · O1_PAS sigma 0 con siembra de fabrica == O1 True
+[19:34:42]   git experimentos/organelos/o1_evo/PREREGISTRO_o1_evo.md: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[19:34:42]   git experimentos/organelos/o1_evo/corre_o1_evo.py: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[19:34:42]   git experimentos/organelos/o1_evo/construye_o1_pas.py: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[19:34:42]   git experimentos/organelos/o1_evo/carros/O1_PAS.py: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[19:45:17]   [  650.8s] cadena i1 o1pas (632.2s) aborto None cruzan por pasaje [0, 0, 1, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.192, 'PRUEBA': 0.4476, 'PEN_OTRO': 0.4617, 'PISO': 0.2899}
+[19:45:19]   [  652.8s] cadena i0 o1pas (636.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2579, 'PRUEBA': 0.3084, 'PEN_OTRO': 0.3505, 'PISO': 0.1184}
+[19:45:27]   [  660.8s] cadena i0 o1neu (642.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2467, 'PRUEBA': 0.4398, 'PEN_OTRO': 0.345, 'PISO': 0.2365}
+[19:45:29]   [  662.8s] cadena i1 o1neu (644.9s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1886, 'PRUEBA': 0.4673, 'PEN_OTRO': 0.4222, 'PISO': 0.0767}
+[19:55:51]   [ 1284.9s] cadena i3 o1pas (624.1s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1721, 'PRUEBA': 0.3692, 'PEN_OTRO': 0.339, 'PISO': 0.2436}
+[19:55:55]   [ 1288.9s] cadena i2 o1pas (638.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 1, 0] genes p-ultimo {'MARGEN': 0.2145, 'PRUEBA': 0.0842, 'PEN_OTRO': 0.4649, 'PISO': 0.1607}
+[19:55:59]   [ 1292.9s] cadena i2 o1neu (638.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1147, 'PRUEBA': 0.5032, 'PEN_OTRO': 0.5105, 'PISO': 0.1856}
+[19:56:03]   [ 1296.9s] cadena i3 o1neu (635.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3279, 'PRUEBA': 0.5795, 'PEN_OTRO': 0.3647, 'PISO': 0.0904}
+[20:06:25]   [ 1919.0s] cadena i5 o1pas (627.7s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.192, 'PRUEBA': 0.4749, 'PEN_OTRO': 0.334, 'PISO': 0.2793}
+[20:06:29]   [ 1923.0s] cadena i4 o1pas (639.5s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1719, 'PRUEBA': 0.3599, 'PEN_OTRO': 0.3065, 'PISO': 0.3616}
+[20:06:39]   [ 1933.0s] cadena i4 o1neu (645.4s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.245, 'PRUEBA': 0.6106, 'PEN_OTRO': 0.1474, 'PISO': 0.1722}
+[20:06:47]   [ 1941.0s] cadena i5 o1neu (643.2s) aborto None cruzan por pasaje [1, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2523, 'PRUEBA': 0.4413, 'PEN_OTRO': 0.3957, 'PISO': 0.1849}
+[20:16:55]   [ 2549.1s] cadena i6 o1pas (630.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2324, 'PRUEBA': 0.474, 'PEN_OTRO': 0.3924, 'PISO': 0.2131}
+[20:17:03]   [ 2557.1s] cadena i7 o1pas (623.7s) aborto None cruzan por pasaje [0, 0, 0, 1, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2698, 'PRUEBA': 0.3504, 'PEN_OTRO': 0.3848, 'PISO': 0.2447}
+[20:17:07]   [ 2561.1s] cadena i6 o1neu (638.1s) aborto None cruzan por pasaje [0, 0, 0, 1, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2969, 'PRUEBA': 0.4983, 'PEN_OTRO': 0.2906, 'PISO': 0.2194}
+[20:17:23]   [ 2577.1s] cadena i7 o1neu (635.5s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3151, 'PRUEBA': 0.4474, 'PEN_OTRO': 0.4671, 'PISO': 0.1741}
+[20:26:59]   [ 3153.2s] cadena i9 o1pas (591.3s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3147, 'PRUEBA': 0.5553, 'PEN_OTRO': 0.2488, 'PISO': 0.2779}
+[20:27:25]   [ 3179.2s] cadena i8 o1pas (629.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1696, 'PRUEBA': 0.3834, 'PEN_OTRO': 0.331, 'PISO': 0.2081}
+[20:27:35]   [ 3189.2s] cadena i8 o1neu (631.1s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.166, 'PRUEBA': 0.3756, 'PEN_OTRO': 0.3152, 'PISO': 0.165}
+[20:27:51]   [ 3205.2s] cadena i9 o1neu (628.7s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1275, 'PRUEBA': 0.502, 'PEN_OTRO': 0.336, 'PISO': 0.1229}
+[20:36:28]   [ 3722.0s] cadena i10 o1pas (569.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1786, 'PRUEBA': 0.3628, 'PEN_OTRO': 0.265, 'PISO': 0.3104}
+[20:37:08]   [ 3762.0s] cadena i10 o1neu (582.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1491, 'PRUEBA': 0.3516, 'PEN_OTRO': 0.4505, 'PISO': 0.1672}
+[20:37:08]   [ 3762.0s] cadena i11 o1pas (573.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2931, 'PRUEBA': 0.4549, 'PEN_OTRO': 0.3259, 'PISO': 0.2034}
+[20:37:32]   [ 3786.0s] cadena i11 o1neu (579.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 1, 0, 0, 0, 0, 1] genes p-ultimo {'MARGEN': 0.1853, 'PRUEBA': 0.5862, 'PEN_OTRO': 0.4594, 'PISO': 0.3937}
+=== REANUDA Wed Sep 30 15:59:06 HPS 2026 ===
+[15:59:07] CORRE_O1_EVO · serie · 20260930_155907 · python 3.14.2 · pool 4 · corre_o1_evo.py 95622a2f93bb38b0 · preregistro PREREGISTRO_o1_evo.md 5aeee2a75f66aba7 · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\o1_evo\datos\serie_i617201-617220_20260929_193426
+[15:59:07]   pasajes 617000-617199 (T 25000 x 10) · pruebas 617201-617220 (T 100000) · brazos ['o1pas', 'o1neu', 'o1ctl', 'o1', 'termo', 'v143'] · reanuda True
+[15:59:07]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[15:59:07]   sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+[15:59:07]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[15:59:07]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[15:59:07]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[15:59:07]   sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+[15:59:07]   sha experimentos\organelos\o1_evo\construye_o1_pas.py 8013e4a99a004bda OK
+[15:59:07]   sha experimentos\organelos\o1_evo\carros\O1_PAS.py c5377ada6b28bee0 OK
+[15:59:07]   sha experimentos\organelos\o1_evo\carros\O1_PAS0.py 940a70aeacb8581c OK
+[15:59:07]   carro O1_PAS == construye_o1_pas: True
+[15:59:07]   carro O1_PAS0 == construye_o1_pas: True
+[15:59:19]   IDENTIDAD CORTA (salida ENTERA, N 9, s 617950, T 1500, fundador limpio): O1_PAS0 == O1 True · O1_PAS sigma 0 sin siembra == O1 True · O1_PAS sigma 0 con siembra de fabrica == O1 True
+[15:59:20]   git experimentos/organelos/o1_evo/PREREGISTRO_o1_evo.md: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[15:59:20]   git experimentos/organelos/o1_evo/corre_o1_evo.py: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[15:59:20]   git experimentos/organelos/o1_evo/construye_o1_pas.py: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[15:59:20]   git experimentos/organelos/o1_evo/carros/O1_PAS.py: commiteado True · sin cambios vs HEAD True · ultimo commit b1a01e1a 2026-09-29T19:34:22-05:00
+[15:59:22]   [   15.0s] cadena i0 o1pas (636.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2579, 'PRUEBA': 0.3084, 'PEN_OTRO': 0.3505, 'PISO': 0.1184}
+[15:59:22]   [   15.0s] cadena i0 o1neu (642.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2467, 'PRUEBA': 0.4398, 'PEN_OTRO': 0.345, 'PISO': 0.2365}
+[15:59:22]   [   15.0s] cadena i1 o1pas (632.2s) aborto None cruzan por pasaje [0, 0, 1, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.192, 'PRUEBA': 0.4476, 'PEN_OTRO': 0.4617, 'PISO': 0.2899}
+[15:59:22]   [   15.0s] cadena i1 o1neu (644.9s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1886, 'PRUEBA': 0.4673, 'PEN_OTRO': 0.4222, 'PISO': 0.0767}
+[15:59:22]   [   15.0s] cadena i2 o1pas (638.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 1, 0] genes p-ultimo {'MARGEN': 0.2145, 'PRUEBA': 0.0842, 'PEN_OTRO': 0.4649, 'PISO': 0.1607}
+[15:59:22]   [   15.0s] cadena i2 o1neu (638.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1147, 'PRUEBA': 0.5032, 'PEN_OTRO': 0.5105, 'PISO': 0.1856}
+[15:59:22]   [   15.0s] cadena i3 o1pas (624.1s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1721, 'PRUEBA': 0.3692, 'PEN_OTRO': 0.339, 'PISO': 0.2436}
+[15:59:22]   [   15.0s] cadena i3 o1neu (635.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3279, 'PRUEBA': 0.5795, 'PEN_OTRO': 0.3647, 'PISO': 0.0904}
+[15:59:22]   [   15.0s] cadena i4 o1pas (639.5s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1719, 'PRUEBA': 0.3599, 'PEN_OTRO': 0.3065, 'PISO': 0.3616}
+[15:59:22]   [   15.0s] cadena i4 o1neu (645.4s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.245, 'PRUEBA': 0.6106, 'PEN_OTRO': 0.1474, 'PISO': 0.1722}
+[15:59:22]   [   15.0s] cadena i5 o1pas (627.7s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.192, 'PRUEBA': 0.4749, 'PEN_OTRO': 0.334, 'PISO': 0.2793}
+[15:59:22]   [   15.0s] cadena i5 o1neu (643.2s) aborto None cruzan por pasaje [1, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2523, 'PRUEBA': 0.4413, 'PEN_OTRO': 0.3957, 'PISO': 0.1849}
+[15:59:22]   [   15.0s] cadena i6 o1pas (630.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2324, 'PRUEBA': 0.474, 'PEN_OTRO': 0.3924, 'PISO': 0.2131}
+[15:59:22]   [   15.0s] cadena i6 o1neu (638.1s) aborto None cruzan por pasaje [0, 0, 0, 1, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2969, 'PRUEBA': 0.4983, 'PEN_OTRO': 0.2906, 'PISO': 0.2194}
+[15:59:22]   [   15.0s] cadena i7 o1pas (623.7s) aborto None cruzan por pasaje [0, 0, 0, 1, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2698, 'PRUEBA': 0.3504, 'PEN_OTRO': 0.3848, 'PISO': 0.2447}
+[15:59:22]   [   15.0s] cadena i7 o1neu (635.5s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3151, 'PRUEBA': 0.4474, 'PEN_OTRO': 0.4671, 'PISO': 0.1741}
+[15:59:22]   [   15.0s] cadena i8 o1pas (629.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1696, 'PRUEBA': 0.3834, 'PEN_OTRO': 0.331, 'PISO': 0.2081}
+[15:59:22]   [   15.0s] cadena i8 o1neu (631.1s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.166, 'PRUEBA': 0.3756, 'PEN_OTRO': 0.3152, 'PISO': 0.165}
+[15:59:22]   [   15.0s] cadena i9 o1pas (591.3s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3147, 'PRUEBA': 0.5553, 'PEN_OTRO': 0.2488, 'PISO': 0.2779}
+[15:59:22]   [   15.0s] cadena i9 o1neu (628.7s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1275, 'PRUEBA': 0.502, 'PEN_OTRO': 0.336, 'PISO': 0.1229}
+[15:59:22]   [   15.0s] cadena i10 o1pas (569.2s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1786, 'PRUEBA': 0.3628, 'PEN_OTRO': 0.265, 'PISO': 0.3104}
+[15:59:22]   [   15.0s] cadena i10 o1neu (582.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1491, 'PRUEBA': 0.3516, 'PEN_OTRO': 0.4505, 'PISO': 0.1672}
+[15:59:22]   [   15.0s] cadena i11 o1pas (573.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2931, 'PRUEBA': 0.4549, 'PEN_OTRO': 0.3259, 'PISO': 0.2034}
+[15:59:22]   [   15.0s] cadena i11 o1neu (579.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 1, 0, 0, 0, 0, 1] genes p-ultimo {'MARGEN': 0.1853, 'PRUEBA': 0.5862, 'PEN_OTRO': 0.4594, 'PISO': 0.3937}
+[16:02:20]   [  193.0s] cadena i12 o1pas (177.9s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.4271, 'PRUEBA': 0.3875, 'PEN_OTRO': 0.511, 'PISO': 0.3082}
+[16:03:36]   [  269.0s] cadena i12 o1neu (254.1s) aborto None cruzan por pasaje [2, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2567, 'PRUEBA': 0.4043, 'PEN_OTRO': 0.4662, 'PISO': 0.2072}
+[16:03:36]   [  269.0s] cadena i13 o1pas (254.5s) aborto None cruzan por pasaje [0, 1, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1945, 'PRUEBA': 0.4321, 'PEN_OTRO': 0.4441, 'PISO': 0.2229}
+[16:04:24]   [  317.1s] cadena i13 o1neu (303.7s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3434, 'PRUEBA': 0.4563, 'PEN_OTRO': 0.337, 'PISO': 0.1772}
+[16:10:44]   [  697.1s] cadena i14 o1pas (504.7s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3116, 'PRUEBA': 0.4406, 'PEN_OTRO': 0.4525, 'PISO': 0.2853}
+[16:11:49]   [  761.1s] cadena i15 o1pas (492.5s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1734, 'PRUEBA': 0.4459, 'PEN_OTRO': 0.2607, 'PISO': 0.2923}
+[16:12:03]   [  775.1s] cadena i14 o1neu (506.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1621, 'PRUEBA': 0.5774, 'PEN_OTRO': 0.2809, 'PISO': 0.1091}
+[16:12:45]   [  817.1s] cadena i15 o1neu (499.5s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.1296, 'PRUEBA': 0.5478, 'PEN_OTRO': 0.3208, 'PISO': 0.1932}
+[16:18:05]   [ 1137.2s] cadena i16 o1pas (440.8s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.25, 'PRUEBA': 0.4381, 'PEN_OTRO': 0.2406, 'PISO': 0.1694}
+[16:19:07]   [ 1199.2s] cadena i17 o1pas (424.6s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3579, 'PRUEBA': 0.4804, 'PEN_OTRO': 0.3553, 'PISO': 0.2164}
+[16:19:15]   [ 1207.2s] cadena i16 o1neu (445.1s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 1, 0] genes p-ultimo {'MARGEN': 0.2248, 'PRUEBA': 0.3703, 'PEN_OTRO': 0.4164, 'PISO': 0.2847}
+[16:20:07]   [ 1259.2s] cadena i17 o1neu (442.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3092, 'PRUEBA': 0.651, 'PEN_OTRO': 0.1464, 'PISO': 0.0992}
+[16:25:37]   [ 1589.3s] cadena i18 o1pas (451.6s) aborto None cruzan por pasaje [0, 0, 0, 1, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3489, 'PRUEBA': 0.387, 'PEN_OTRO': 0.4121, 'PISO': 0.268}
+[16:26:39]   [ 1651.3s] cadena i19 o1pas (445.9s) aborto None cruzan por pasaje [2, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.3531, 'PRUEBA': 0.3985, 'PEN_OTRO': 0.2493, 'PISO': 0.227}
+[16:26:43]   [ 1655.3s] cadena i18 o1neu (455.6s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.2357, 'PRUEBA': 0.3994, 'PEN_OTRO': 0.2341, 'PISO': 0.1169}
+[16:27:45]   [ 1717.3s] cadena i19 o1neu (458.0s) aborto None cruzan por pasaje [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] genes p-ultimo {'MARGEN': 0.4415, 'PRUEBA': 0.3611, 'PEN_OTRO': 0.2667, 'PISO': 0.1693}
+[16:28:17]   [ 1749.3s] prueba i0 termo (95.8s) aborto None cruzan 5/9 fund [85, 0, 0, 0, 24, 11, 0, 0, 930] de siembra 0/0
+[16:28:39]   [ 1771.3s] prueba i0 o1ctl (181.9s) aborto None cruzan 7/9 fund [0, 101, 0, 0, 0, 0, 0, 233, 0] de siembra 0/343
+[16:29:21]   [ 1813.3s] prueba i0 v143  (95.3s) aborto None cruzan 3/9 fund [6, 13, 0, 671, 9, 860, 0, 8, 0] de siembra 0/0
+[16:29:43]   [ 1835.3s] prueba i0 o1    (183.0s) aborto None cruzan 7/9 fund [0, 176, 0, 0, 0, 0, 0, 45, 0] de siembra 0/0
+[16:30:55]   [ 1907.3s] prueba i1 termo (94.5s) aborto None cruzan 4/9 fund [8, 128, 671, 0, 0, 85, 0, 116, 1] de siembra 0/0
+[16:31:17]   [ 1929.3s] prueba i1 o1ctl (180.0s) aborto None cruzan 4/9 fund [0, 0, 0, 283, 417, 0, 1, 0, 0] de siembra 0/710
+[16:31:19]   [ 1931.3s] prueba i1 v143  (96.7s) aborto None cruzan 2/9 fund [32, 120, 6, 828, 602, 0, 23, 0, 11] de siembra 0/0
+[16:31:39]   [ 1951.3s] prueba i1 o1    (180.4s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 0, 458, 0, 0, 75] de siembra 0/0
+[16:32:55]   [ 2027.3s] prueba i2 termo (95.1s) aborto None cruzan 8/9 fund [1152, 0, 0, 0, 0, 0, 0, 0, 0] de siembra 0/0
+[16:33:15]   [ 2047.3s] prueba i2 v143  (96.0s) aborto None cruzan 1/9 fund [441, 3, 757, 13, 8, 7, 575, 0, 152] de siembra 0/0
+[16:33:55]   [ 2087.4s] prueba i2 o1ctl (180.9s) aborto None cruzan 4/9 fund [329, 0, 0, 0, 46, 22, 0, 0, 7] de siembra 0/413
+[16:34:19]   [ 2111.4s] prueba i2 o1    (180.7s) aborto None cruzan 6/9 fund [0, 0, 0, 0, 117, 10, 0, 0, 9] de siembra 0/0
+[16:35:29]   [ 2181.4s] prueba i3 termo (94.0s) aborto None cruzan 2/9 fund [4, 0, 47, 5, 10, 909, 0, 23, 59] de siembra 0/0
+[16:35:55]   [ 2207.4s] prueba i3 o1ctl (179.5s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 337, 0] de siembra 0/346
+[16:35:55]   [ 2207.4s] prueba i3 v143  (95.4s) aborto None cruzan 3/9 fund [10, 102, 0, 32, 540, 0, 981, 12, 0] de siembra 0/0
+[16:36:15]   [ 2227.4s] prueba i3 o1    (180.4s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 172, 0] de siembra 0/0
+[16:37:29]   [ 2301.4s] prueba i4 termo (93.9s) aborto None cruzan 6/9 fund [0, 0, 0, 2, 139, 0, 864, 12, 2] de siembra 0/0
+[16:37:51]   [ 2323.4s] prueba i4 v143  (94.8s) aborto None cruzan 2/9 fund [135, 0, 41, 1108, 133, 0, 9, 6, 52] de siembra 0/0
+[16:38:27]   [ 2359.4s] prueba i4 o1ctl (176.7s) aborto None cruzan 6/9 fund [0, 0, 0, 59, 0, 475, 0, 97, 0] de siembra 0/640
+[16:38:53]   [ 2385.4s] prueba i4 o1    (178.9s) aborto None cruzan 7/9 fund [0, 14, 0, 491, 0, 0, 0, 0, 0] de siembra 0/0
+[16:39:59]   [ 2451.4s] prueba i5 termo (93.2s) aborto None cruzan 6/9 fund [0, 43, 49, 896, 0, 0, 0, 1, 0] de siembra 0/0
+[16:40:27]   [ 2479.4s] prueba i5 o1ctl (178.0s) aborto None cruzan 7/9 fund [398, 0, 0, 0, 0, 0, 0, 0, 46] de siembra 0/453
+[16:40:27]   [ 2479.4s] prueba i5 v143  (94.5s) aborto None cruzan 3/9 fund [0, 18, 89, 0, 14, 1212, 133, 54, 0] de siembra 0/0
+[16:40:51]   [ 2503.4s] prueba i5 o1    (180.2s) aborto None cruzan 8/9 fund [0, 0, 215, 0, 0, 0, 0, 0, 0] de siembra 0/0
+[16:42:01]   [ 2573.4s] prueba i6 termo (93.0s) aborto None cruzan 6/9 fund [0, 0, 0, 0, 52, 654, 185, 0, 0] de siembra 0/0
+[16:42:25]   [ 2597.4s] prueba i6 v143  (93.7s) aborto None cruzan 3/9 fund [128, 960, 586, 32, 0, 10, 5, 0, 0] de siembra 0/0
+[16:42:57]   [ 2629.4s] prueba i6 o1ctl (177.3s) aborto None cruzan 7/9 fund [0, 0, 0, 475, 0, 46, 0, 0, 0] de siembra 0/530
+[16:43:21]   [ 2653.4s] prueba i6 o1    (175.9s) aborto None cruzan 7/9 fund [0, 0, 0, 271, 0, 0, 261, 0, 0] de siembra 0/0
+[16:44:31]   [ 2723.5s] prueba i7 termo (93.4s) aborto None cruzan 6/9 fund [0, 24, 0, 1, 0, 2, 845, 0, 185] de siembra 0/0
+[16:44:57]   [ 2749.5s] prueba i7 v143  (94.9s) aborto None cruzan 4/9 fund [1101, 3, 0, 326, 8, 153, 2, 2, 0] de siembra 0/0
+[16:44:59]   [ 2751.5s] prueba i7 o1ctl (177.9s) aborto None cruzan 7/9 fund [0, 0, 8, 0, 0, 0, 0, 467, 0] de siembra 0/484
+[16:45:23]   [ 2775.5s] prueba i7 o1    (178.8s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 418, 0] de siembra 0/0
+[16:46:33]   [ 2845.5s] prueba i8 termo (93.9s) aborto None cruzan 5/9 fund [0, 28, 0, 0, 0, 0, 4, 993, 42] de siembra 0/0
+[16:46:59]   [ 2871.5s] prueba i8 v143  (96.2s) aborto None cruzan 2/9 fund [911, 5, 0, 617, 0, 320, 38, 68, 7] de siembra 0/0
+[16:47:29]   [ 2901.5s] prueba i8 o1ctl (179.5s) aborto None cruzan 8/9 fund [0, 0, 0, 429, 0, 0, 0, 0, 0] de siembra 0/438
+[16:47:57]   [ 2929.5s] prueba i8 o1    (179.6s) aborto None cruzan 4/9 fund [55, 62, 0, 28, 0, 170, 9, 0, 0] de siembra 0/0
+[16:49:01]   [ 2993.5s] prueba i9 termo (91.2s) aborto None cruzan 6/9 fund [0, 0, 0, 157, 0, 0, 815, 11, 0] de siembra 0/0
+[16:49:29]   [ 3021.5s] prueba i9 o1ctl (176.4s) aborto None cruzan 6/9 fund [446, 0, 0, 0, 0, 0, 59, 6, 0] de siembra 0/520
+[16:49:29]   [ 3021.5s] prueba i9 v143  (93.8s) aborto None cruzan 2/9 fund [0, 412, 888, 84, 21, 5, 231, 113, 0] de siembra 0/0
+[16:49:55]   [ 3047.5s] prueba i9 o1    (175.5s) aborto None cruzan 6/9 fund [0, 0, 0, 0, 0, 0, 11, 0, 486] de siembra 0/0
+[16:51:02]   [ 3114.4s] prueba i10 termo (92.5s) aborto None cruzan 4/9 fund [0, 23, 0, 0, 625, 0, 26, 21, 340] de siembra 0/0
+[16:51:28]   [ 3140.4s] prueba i10 v143  (93.5s) aborto None cruzan 1/9 fund [0, 593, 3, 196, 15, 221, 20, 579, 3] de siembra 0/0
+[16:51:56]   [ 3168.4s] prueba i10 o1ctl (174.2s) aborto None cruzan 7/9 fund [43, 0, 0, 0, 0, 0, 0, 187, 0] de siembra 0/239
+[16:52:22]   [ 3194.4s] prueba i10 o1    (174.1s) aborto None cruzan 7/9 fund [0, 0, 485, 0, 0, 0, 0, 9, 0] de siembra 0/0
+[16:53:26]   [ 3258.4s] prueba i11 termo (90.5s) aborto None cruzan 5/9 fund [0, 73, 10, 0, 48, 845, 0, 0, 0] de siembra 0/0
+[16:53:54]   [ 3286.4s] prueba i11 v143  (91.4s) aborto None cruzan 3/9 fund [82, 0, 0, 43, 6, 0, 1236, 23, 4] de siembra 0/0
+[16:53:56]   [ 3288.4s] prueba i11 o1ctl (172.7s) aborto None cruzan 7/9 fund [287, 0, 0, 0, 0, 12, 0, 0, 0] de siembra 0/308
+[16:54:22]   [ 3314.4s] prueba i11 o1    (174.5s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 419, 0] de siembra 0/0
+[16:55:28]   [ 3380.4s] prueba i12 termo (91.7s) aborto None cruzan 5/9 fund [15, 0, 70, 7, 899, 0, 0, 0, 0] de siembra 0/0
+[16:55:54]   [ 3406.4s] prueba i12 v143  (92.1s) aborto None cruzan 5/9 fund [1282, 0, 235, 4, 0, 2, 22, 0, 21] de siembra 0/0
+[16:56:20]   [ 3432.4s] prueba i12 o1ctl (174.0s) aborto None cruzan 5/9 fund [483, 0, 20, 0, 0, 0, 57, 0, 13] de siembra 0/582
+[16:56:48]   [ 3460.4s] prueba i12 o1    (174.5s) aborto None cruzan 4/9 fund [38, 10, 70, 0, 0, 0, 12, 0, 5] de siembra 0/0
+[16:57:50]   [ 3522.4s] prueba i13 termo (91.2s) aborto None cruzan 5/9 fund [0, 97, 0, 0, 816, 102, 1, 0, 14] de siembra 0/0
+[16:58:20]   [ 3552.4s] prueba i13 o1ctl (173.8s) aborto None cruzan 8/9 fund [425, 0, 0, 0, 0, 0, 0, 0, 0] de siembra 0/434
+[16:58:20]   [ 3552.4s] prueba i13 v143  (92.0s) aborto None cruzan 3/9 fund [0, 16, 49, 0, 4, 1, 40, 292, 1008] de siembra 0/0
+[16:58:50]   [ 3582.4s] prueba i13 o1    (176.1s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 0, 0, 0, 0, 329] de siembra 0/0
+[16:59:54]   [ 3646.5s] prueba i14 termo (93.8s) aborto None cruzan 4/9 fund [27, 0, 977, 0, 20, 0, 5, 0, 41] de siembra 0/0
+[17:00:26]   [ 3678.5s] prueba i14 v143  (94.2s) aborto None cruzan 3/9 fund [173, 50, 1198, 19, 0, 0, 61, 0, 5] de siembra 0/0
+[17:00:48]   [ 3700.5s] prueba i14 o1ctl (176.4s) aborto None cruzan 6/9 fund [0, 0, 0, 223, 490, 0, 0, 0, 0] de siembra 0/722
+[17:01:18]   [ 3730.5s] prueba i14 o1    (178.3s) aborto None cruzan 6/9 fund [0, 0, 0, 107, 495, 0, 0, 0, 0] de siembra 0/0
+[17:02:22]   [ 3794.5s] prueba i15 termo (94.2s) aborto None cruzan 4/9 fund [3, 1, 980, 0, 46, 0, 62, 5, 0] de siembra 0/0
+[17:02:54]   [ 3826.5s] prueba i15 o1ctl (180.1s) aborto None cruzan 8/9 fund [0, 0, 69, 0, 0, 0, 0, 0, 0] de siembra 0/78
+[17:02:54]   [ 3826.5s] prueba i15 v143  (94.9s) aborto None cruzan 4/9 fund [45, 1307, 103, 118, 0, 0, 0, 35, 2] de siembra 0/0
+[17:03:26]   [ 3858.5s] prueba i15 o1    (181.1s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 0, 336] de siembra 0/0
+[17:04:28]   [ 3920.5s] prueba i16 termo (92.8s) aborto None cruzan 5/9 fund [15, 0, 0, 0, 962, 0, 26, 0, 18] de siembra 0/0
+[17:04:58]   [ 3950.5s] prueba i16 v143  (92.7s) aborto None cruzan 2/9 fund [809, 49, 833, 16, 0, 0, 36, 9, 9] de siembra 0/0
+[17:05:18]   [ 3970.5s] prueba i16 o1ctl (175.7s) aborto None cruzan 8/9 fund [0, 118, 0, 0, 0, 0, 0, 0, 0] de siembra 0/127
+[17:05:48]   [ 4000.5s] prueba i16 o1    (175.1s) aborto None cruzan 7/9 fund [0, 383, 0, 0, 0, 0, 0, 0, 0] de siembra 0/0
+[17:06:50]   [ 4062.5s] prueba i17 termo (93.0s) aborto None cruzan 5/9 fund [0, 0, 51, 0, 8, 36, 0, 0, 995] de siembra 0/0
+[17:07:28]   [ 4100.5s] prueba i17 v143  (98.4s) aborto None cruzan 3/9 fund [39, 0, 173, 0, 98, 827, 0, 12, 675] de siembra 0/0
+[17:07:30]   [ 4102.5s] prueba i17 o1ctl (181.6s) aborto None cruzan 6/9 fund [175, 0, 0, 0, 0, 21, 0, 0, 51] de siembra 0/256
+[17:08:04]   [ 4136.5s] prueba i17 o1    (185.1s) aborto None cruzan 6/9 fund [2, 0, 0, 0, 0, 100, 0, 0, 45] de siembra 0/0
+[17:09:08]   [ 4200.5s] prueba i18 termo (99.4s) aborto None cruzan 5/9 fund [743, 2, 0, 0, 94, 134, 5, 3, 0] de siembra 0/0
+[17:09:44]   [ 4236.5s] prueba i18 v143  (99.3s) aborto None cruzan 2/9 fund [363, 0, 6, 0, 15, 39, 15, 913, 55] de siembra 0/0
+[17:10:00]   [ 4252.6s] prueba i18 o1ctl (190.1s) aborto None cruzan 7/9 fund [0, 0, 376, 0, 0, 0, 0, 0, 0] de siembra 0/385
+[17:10:38]   [ 4290.6s] prueba i18 o1    (190.2s) aborto None cruzan 8/9 fund [0, 0, 79, 0, 0, 0, 0, 0, 0] de siembra 0/0
+[17:11:40]   [ 4352.6s] prueba i19 termo (100.1s) aborto None cruzan 5/9 fund [0, 80, 0, 0, 7, 845, 27, 0, 1] de siembra 0/0
+[17:12:16]   [ 4388.6s] prueba i19 v143  (99.6s) aborto None cruzan 1/9 fund [16, 76, 542, 1026, 9, 6, 0, 61, 5] de siembra 0/0
+[17:12:20]   [ 4392.6s] prueba i19 o1ctl (190.8s) aborto None cruzan 8/9 fund [0, 116, 0, 0, 0, 0, 0, 0, 0] de siembra 0/125
+[17:12:52]   [ 4424.6s] prueba i19 o1    (188.9s) aborto None cruzan 6/9 fund [0, 28, 0, 0, 140, 0, 335, 0, 0] de siembra 0/0
+[17:14:48]   [ 4540.6s] prueba i0 o1pas (188.8s) aborto None cruzan 8/9 fund [0, 322, 0, 0, 0, 0, 0, 0, 0] de siembra 331/331
+[17:15:18]   [ 4570.6s] prueba i0 o1neu (181.1s) aborto None cruzan 5/9 fund [0, 4, 0, 0, 0, 406, 193, 0, 0] de siembra 612/612
+[17:15:28]   [ 4580.6s] prueba i1 o1pas (188.4s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 181, 0, 0, 0, 0] de siembra 190/190
+[17:15:48]   [ 4600.6s] prueba i1 o1neu (176.6s) aborto None cruzan 6/9 fund [0, 0, 0, 348, 292, 0, 0, 0, 14] de siembra 663/663
+[17:18:08]   [ 4740.7s] prueba i2 o1pas (200.2s) aborto None cruzan 8/9 fund [0, 0, 23, 0, 0, 0, 0, 0, 0] de siembra 32/32
+[17:18:18]   [ 4750.7s] prueba i2 o1neu (180.8s) aborto None cruzan 2/9 fund [0, 87, 0, 56, 226, 0, 38, 0, 0] de siembra 416/416
+[17:18:38]   [ 4770.7s] prueba i3 o1pas (191.1s) aborto None cruzan 3/9 fund [83, 0, 0, 358, 0, 0, 0, 0, 46] de siembra 496/496
+[17:18:42]   [ 4774.7s] prueba i3 o1neu (173.6s) aborto None cruzan 6/9 fund [0, 0, 0, 241, 0, 16, 0, 0, 260] de siembra 526/526
+[17:20:28]   [ 4880.8s] prueba i4 o1neu (130.1s) aborto None cruzan 0/9 fund [254, 251, 70, 49, 2, 0, 240, 0, 248] de siembra 1123/1123
+[17:21:14]   [ 4926.8s] prueba i4 o1pas (185.7s) aborto None cruzan 8/9 fund [0, 0, 0, 188, 0, 0, 0, 0, 0] de siembra 197/197
+[17:21:40]   [ 4952.8s] prueba i5 o1neu (178.6s) aborto None cruzan 6/9 fund [0, 0, 0, 0, 0, 405, 0, 65, 53] de siembra 532/532
+[17:21:44]   [ 4956.8s] prueba i5 o1pas (185.1s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 0, 247, 0, 0, 105] de siembra 361/361
+[17:23:36]   [ 5068.8s] prueba i6 o1pas (186.5s) aborto None cruzan 6/9 fund [62, 0, 0, 456, 0, 0, 0, 0, 0] de siembra 527/527
+[17:24:10]   [ 5102.8s] prueba i6 o1neu (174.8s) aborto None cruzan 3/9 fund [0, 0, 0, 283, 0, 0, 364, 0, 25] de siembra 681/681
+[17:24:48]   [ 5140.8s] prueba i7 o1neu (184.1s) aborto None cruzan 2/9 fund [0, 397, 33, 147, 0, 0, 308, 103, 0] de siembra 997/997
+[17:24:50]   [ 5142.8s] prueba i7 o1pas (189.0s) aborto None cruzan 5/9 fund [0, 152, 101, 0, 13, 0, 2, 0, 0] de siembra 277/277
+[17:26:46]   [ 5258.8s] prueba i8 o1pas (190.3s) aborto None cruzan 6/9 fund [0, 0, 0, 15, 0, 252, 0, 0, 1] de siembra 277/277
+[17:27:18]   [ 5290.8s] prueba i8 o1neu (189.2s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 0, 354] de siembra 363/363
+[17:27:46]   [ 5318.8s] prueba i9 o1pas (178.0s) aborto None cruzan 6/9 fund [0, 0, 0, 4, 0, 0, 245, 0, 118] de siembra 376/376
+[17:27:56]   [ 5328.8s] prueba i9 o1neu (187.3s) aborto None cruzan 5/9 fund [0, 0, 116, 132, 0, 0, 32, 0, 261] de siembra 550/550
+[17:29:46]   [ 5438.8s] prueba i10 o1pas (180.3s) aborto None cruzan 7/9 fund [66, 0, 0, 0, 0, 0, 1, 0, 0] de siembra 76/76
+[17:30:14]   [ 5466.8s] prueba i10 o1neu (176.4s) aborto None cruzan 4/9 fund [27, 0, 0, 0, 5, 0, 24, 23, 22] de siembra 110/110
+[17:30:16]   [ 5468.8s] prueba i11 o1neu (138.9s) aborto None cruzan 1/9 fund [242, 241, 33, 0, 0, 0, 10, 0, 226] de siembra 761/761
+[17:30:38]   [ 5490.8s] prueba i11 o1pas (172.4s) aborto None cruzan 7/9 fund [0, 0, 0, 329, 0, 0, 95, 0, 0] de siembra 433/433
+[17:32:36]   [ 5608.9s] prueba i12 o1pas (171.4s) aborto None cruzan 6/9 fund [50, 0, 0, 0, 0, 0, 90, 0, 490] de siembra 639/639
+[17:33:08]   [ 5640.9s] prueba i12 o1neu (173.7s) aborto None cruzan 7/9 fund [0, 0, 0, 0, 0, 0, 438, 0, 73] de siembra 520/520
+[17:33:10]   [ 5642.9s] prueba i13 o1pas (175.2s) aborto None cruzan 6/9 fund [24, 0, 91, 0, 0, 0, 0, 0, 0] de siembra 124/124
+[17:33:30]   [ 5662.9s] prueba i13 o1neu (172.0s) aborto None cruzan 5/9 fund [0, 0, 404, 0, 59, 0, 29, 22, 0] de siembra 523/523
+[17:35:30]   [ 5782.9s] prueba i14 o1pas (173.3s) aborto None cruzan 7/9 fund [0, 424, 0, 0, 0, 0, 0, 0, 208] de siembra 641/641
+[17:35:34]   [ 5786.9s] prueba i14 o1neu (143.6s) aborto None cruzan 0/9 fund [0, 18, 34, 109, 281, 0, 76, 299, 219] de siembra 1045/1045
+[17:35:54]   [ 5806.9s] prueba i15 o1neu (143.2s) aborto None cruzan 0/9 fund [0, 5, 2, 0, 246, 162, 0, 104, 260] de siembra 788/788
+[17:36:04]   [ 5816.9s] prueba i15 o1pas (176.3s) aborto None cruzan 7/9 fund [0, 192, 0, 0, 0, 0, 0, 0, 0] de siembra 201/201
+[17:38:18]   [ 5950.9s] prueba i17 o1pas (163.0s) aborto None cruzan 7/9 fund [0, 344, 346, 0, 0, 0, 0, 0, 0] de siembra 699/699
+[17:38:26]   [ 5958.9s] prueba i16 o1pas (176.3s) aborto None cruzan 5/9 fund [164, 477, 0, 37, 0, 0, 0, 0, 0] de siembra 687/687
+[17:38:26]   [ 5958.9s] prueba i17 o1neu (140.3s) aborto None cruzan 6/9 fund [0, 240, 0, 0, 0, 0, 231, 223, 0] de siembra 703/703
+[17:38:50]   [ 5982.9s] prueba i16 o1neu (177.6s) aborto None cruzan 4/9 fund [476, 0, 0, 0, 0, 0, 41, 0, 0] de siembra 526/526
+[17:41:14]   [ 6126.9s] prueba i18 o1pas (177.3s) aborto None cruzan 6/9 fund [0, 246, 0, 95, 0, 0, 11, 0, 0] de siembra 361/361
+[17:41:18]   [ 6130.9s] prueba i19 o1pas (172.7s) aborto None cruzan 5/9 fund [0, 0, 76, 0, 448, 272, 0, 0, 0] de siembra 805/805
+[17:41:24]   [ 6136.9s] prueba i18 o1neu (178.1s) aborto None cruzan 8/9 fund [0, 0, 0, 0, 0, 0, 0, 0, 56] de siembra 65/65
+[17:41:44]   [ 6157.0s] prueba i19 o1neu (172.6s) aborto None cruzan 3/9 fund [0, 3, 301, 0, 278, 429, 46, 0, 23] de siembra 1089/1089
+[17:41:45] 
+================ LA LETRA (PREREGISTRO_o1_evo.md sec. 6)
+[17:41:45]   validez: {'V1_completa': True, 'V2_ancla_o1': True, 'V3_ancla_v143': True, 'V4_siembra_actua': True, 'V5_perillas': True}
+[17:41:45]   puertas: {'PA_par_o1': False, 'PB_suma_o1': False, 'PC_par_ctl': False, 'PC_suma_ctl': False, 'PN_par_neu': True, 'PN_suma_neu': True} · umbrales {'gana_par': 13, 'dif_suma': 10, 'o1_may': 16} · EN EL UMBRAL (+-1): False · matiz None
+[17:41:45]   pareado_o1: gana 8 empata 2 pierde 10 · suma 128 vs 135 (dif -7)
+[17:41:45]   pareado_ctl: gana 7 empata 4 pierde 9 · suma 128 vs 134 (dif -6)
+[17:41:45]   pareado_neu: gana 16 empata 0 pierde 4 · suma 128 vs 81 (dif 47)
+[17:41:45]   [desc] pareados: {'o1pas_vs_o1': {'n': 20, 'gana': 8, 'empata': 2, 'pierde': 10, 'suma_a': 128, 'suma_b': 135, 'dif': -7, 'por_indice_a': [8, 8, 8, 3, 8, 7, 6, 5, 6, 6, 7, 7, 6, 6, 7, 7, 5, 7, 6, 5], 'por_indice_b': [7, 7, 6, 8, 7, 8, 7, 8, 4, 6, 7, 8, 4, 7, 6, 8, 7, 6, 8, 6]}, 'o1pas_vs_o1ctl': {'n': 20, 'gana': 7, 'empata': 4, 'pierde': 9, 'suma_a': 128, 'suma_b': 134, 'dif': -6, 'por_indice_a': [8, 8, 8, 3, 8, 7, 6, 5, 6, 6, 7, 7, 6, 6, 7, 7, 5, 7, 6, 5], 'por_indice_b': [7, 4, 4, 8, 6, 7, 7, 7, 8, 6, 7, 7, 5, 8, 6, 8, 8, 6, 7, 8]}, 'o1pas_vs_o1neu': {'n': 20, 'gana': 16, 'empata': 0, 'pierde': 4, 'suma_a': 128, 'suma_b': 81, 'dif': 47, 'por_indice_a': [8, 8, 8, 3, 8, 7, 6, 5, 6, 6, 7, 7, 6, 6, 7, 7, 5, 7, 6, 5], 'por_indice_b': [5, 6, 2, 6, 0, 6, 3, 2, 8, 5, 4, 1, 7, 5, 0, 0, 4, 6, 8, 3]}, 'o1neu_vs_o1': {'n': 20, 'gana': 2, 'empata': 2, 'pierde': 16, 'suma_a': 81, 'suma_b': 135, 'dif': -54, 'por_indice_a': [5, 6, 2, 6, 0, 6, 3, 2, 8, 5, 4, 1, 7, 5, 0, 0, 4, 6, 8, 3], 'por_indice_b': [7, 7, 6, 8, 7, 8, 7, 8, 4, 6, 7, 8, 4, 7, 6, 8, 7, 6, 8, 6]}, 'o1neu_vs_o1ctl': {'n': 20, 'gana': 3, 'empata': 2, 'pierde': 15, 'suma_a': 81, 'suma_b': 134, 'dif': -53, 'por_indice_a': [5, 6, 2, 6, 0, 6, 3, 2, 8, 5, 4, 1, 7, 5, 0, 0, 4, 6, 8, 3], 'por_indice_b': [7, 4, 4, 8, 6, 7, 7, 7, 8, 6, 7, 7, 5, 8, 6, 8, 8, 6, 7, 8]}, 'o1ctl_vs_o1': {'n': 20, 'gana': 5, 'empata': 8, 'pierde': 7, 'suma_a': 134, 'suma_b': 135, 'dif': -1, 'por_indice_a': [7, 4, 4, 8, 6, 7, 7, 7, 8, 6, 7, 7, 5, 8, 6, 8, 8, 6, 7, 8], 'por_indice_b': [7, 7, 6, 8, 7, 8, 7, 8, 4, 6, 7, 8, 4, 7, 6, 8, 7, 6, 8, 6]}, 'o1pas_vs_termo': {'n': 20, 'gana': 14, 'empata': 5, 'pierde': 1, 'suma_a': 128, 'suma_b': 101, 'dif': 27, 'por_indice_a': [8, 8, 8, 3, 8, 7, 6, 5, 6, 6, 7, 7, 6, 6, 7, 7, 5, 7, 6, 5], 'por_indice_b': [5, 4, 8, 2, 6, 6, 6, 6, 5, 6, 4, 5, 5, 5, 4, 4, 5, 5, 5, 5]}, 'termo_vs_v143': {'n': 20, 'gana': 17, 'empata': 2, 'pierde': 1, 'suma_a': 101, 'suma_b': 52, 'dif': 49, 'por_indice_a': [5, 4, 8, 2, 6, 6, 6, 6, 5, 6, 4, 5, 5, 5, 4, 4, 5, 5, 5, 5], 'por_indice_b': [3, 2, 1, 3, 2, 3, 3, 4, 2, 2, 1, 3, 5, 3, 3, 4, 2, 3, 2, 1]}, 'o1_vs_v143': {'n': 20, 'gana': 19, 'empata': 0, 'pierde': 1, 'suma_a': 135, 'suma_b': 52, 'dif': 83, 'por_indice_a': [7, 7, 6, 8, 7, 8, 7, 8, 4, 6, 7, 8, 4, 7, 6, 8, 7, 6, 8, 6], 'por_indice_b': [3, 2, 1, 3, 2, 3, 3, 4, 2, 2, 1, 3, 5, 3, 3, 4, 2, 3, 2, 1]}}
+[17:41:45]   [desc] suma_cruzan: {'o1pas': 128, 'o1neu': 81, 'o1ctl': 134, 'o1': 135, 'termo': 101, 'v143': 52}
+[17:41:45]   [desc] mayorias: {'o1pas': 19, 'o1neu': 10, 'o1ctl': 18, 'o1': 18, 'termo': 15, 'v143': 1}
+[17:41:45]   [desc] R0_med: {'o1pas': 0.9309, 'o1neu': 0.8944, 'o1ctl': 0.9375, 'o1': 0.933, 'termo': 0.9579, 'v143': 0.649}
+[17:41:45]   [desc] fund_por_linaje_media: {'o1pas': 39.1111, 'o1neu': 63.5556, 'o1ctl': 46.0556, 'o1': 39.9444, 'termo': 113.9444, 'v143': 179.5556}
+[17:41:45]   [desc] fund_por_linaje_mediana: {'o1pas': 0.0, 'o1neu': 0.0, 'o1ctl': 0.0, 'o1': 0.0, 'termo': 0.5, 'v143': 16.0}
+[17:41:45]   [desc] establecidos_0fund_post10k: {'o1pas': 141, 'o1neu': 118, 'o1ctl': 148, 'o1': 152, 'termo': 136, 'v143': 119}
+[17:41:45]   [desc] fund_o1pas_menos_que_o1: 10
+[17:41:45]   [desc] mundo_AC: {'o1pas': 2.0813, 'o1neu': 2.2719, 'o1ctl': 2.1461, 'o1': 2.1406, 'termo': 3.2026, 'v143': 3.3849}
+[17:41:45]   [desc] genes_vivos_fin_prueba: {'o1pas': {'MARGEN': 0.2487, 'PRUEBA': 0.4105, 'PEN_OTRO': 0.3669, 'PISO': 0.2545}, 'o1neu': {'MARGEN': 0.238, 'PRUEBA': 0.4612, 'PEN_OTRO': 0.3423, 'PISO': 0.1706}, 'o1ctl': {'MARGEN': 0.2397, 'PRUEBA': 0.4977, 'PEN_OTRO': 0.3487, 'PISO': 0.2102}}
+[17:41:45]   [desc] genes_linaje_vs_establecimiento: {'o1pas': {'n_establecidos': 141, 'n_no': 39, 'establecidos': {'MARGEN': 0.252, 'PRUEBA': 0.4283, 'PEN_OTRO': 0.3523, 'PISO': 0.2596}, 'no_establecidos': {'MARGEN': 0.248, 'PRUEBA': 0.4162, 'PEN_OTRO': 0.3453, 'PISO': 0.2255}}, 'o1neu': {'n_establecidos': 118, 'n_no': 62, 'establecidos': {'MARGEN': 0.2626, 'PRUEBA': 0.4333, 'PEN_OTRO': 0.3422, 'PISO': 0.1754}, 'no_establecidos': {'MARGEN': 0.2278, 'PRUEBA': 0.4965, 'PEN_OTRO': 0.3403, 'PISO': 0.1589}}, 'o1ctl': {'n_establecidos': 148, 'n_no': 32, 'establecidos': {'MARGEN': 0.2439, 'PRUEBA': 0.4978, 'PEN_OTRO': 0.3536, 'PISO': 0.2018}, 'no_establecidos': {'MARGEN': 0.2479, 'PRUEBA': 0.5003, 'PEN_OTRO': 0.3473, 'PISO': 0.2014}}}
+[17:41:45]   [desc] o1pas_trayectoria_genes_siembra_mediana_por_pasaje: {'MARGEN': [0.2487, 0.2517, 0.2596, 0.2551, 0.2637, 0.2323, 0.2305, 0.2289, 0.2334, 0.2412], 'PRUEBA': [0.5018, 0.494, 0.4838, 0.4731, 0.4616, 0.4582, 0.4561, 0.442, 0.4275, 0.4153], 'PEN_OTRO': [0.3544, 0.3546, 0.346, 0.3566, 0.353, 0.3648, 0.345, 0.339, 0.3521, 0.3448], 'PISO': [0.2046, 0.2013, 0.1941, 0.208, 0.2303, 0.2296, 0.2378, 0.2505, 0.2416, 0.2442]}
+[17:41:45]   [desc] o1pas_desplazamiento_ultimo_vs_fabrica: {'MARGEN': {'med': -0.0088, 'med_abs': 0.0631, 'sube': 9, 'baja': 10}, 'PRUEBA': {'med': -0.0847, 'med_abs': 0.0847, 'sube': 1, 'baja': 19}, 'PEN_OTRO': {'med': -0.0052, 'med_abs': 0.0736, 'sube': 10, 'baja': 10}, 'PISO': {'med': 0.0441, 'med_abs': 0.0563, 'sube': 17, 'baja': 3}}
+[17:41:45]   [desc] o1pas_cadena_cruzan_por_pasaje_mediana: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[17:41:45]   [desc] o1pas_cadena_fund_por_linaje_por_pasaje: [13.1111, 20.1667, 12.5556, 15.0556, 12.3889, 18.2222, 21.3333, 18.7222, 14.9444, 14.8333]
+[17:41:45]   [desc] o1neu_trayectoria_genes_siembra_mediana_por_pasaje: {'MARGEN': [0.248, 0.2404, 0.2464, 0.2407, 0.2555, 0.2471, 0.2423, 0.2397, 0.2433, 0.2404], 'PRUEBA': [0.4955, 0.4943, 0.4878, 0.4768, 0.4865, 0.478, 0.4812, 0.4667, 0.4763, 0.4618], 'PEN_OTRO': [0.3497, 0.3532, 0.3497, 0.3492, 0.3325, 0.3358, 0.3618, 0.3677, 0.3452, 0.341], 'PISO': [0.1985, 0.2052, 0.1979, 0.2026, 0.2001, 0.2077, 0.1842, 0.184, 0.183, 0.1731]}
+[17:41:45]   [desc] o1neu_desplazamiento_ultimo_vs_fabrica: {'MARGEN': {'med': -0.0097, 'med_abs': 0.0649, 'sube': 8, 'baja': 12}, 'PRUEBA': {'med': -0.0382, 'med_abs': 0.0785, 'sube': 8, 'baja': 12}, 'PEN_OTRO': {'med': -0.009, 'med_abs': 0.0707, 'sube': 9, 'baja': 11}, 'PISO': {'med': -0.0269, 'med_abs': 0.0339, 'sube': 5, 'baja': 15}}
+[17:41:45]   [desc] o1neu_cadena_cruzan_por_pasaje_mediana: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[17:41:45]   [desc] o1neu_cadena_fund_por_linaje_por_pasaje: [13.8333, 13.6667, 15.9444, 13.1667, 13.2222, 12.6667, 14.4444, 16.1667, 17.2222, 13.6667]
+[17:41:45] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\o1_evo\datos\serie_i617201-617220_20260929_193426\resumen.json (sha 4e15e94685227deb) · abortos 0 · 6157.1s
+[17:41:45] VEREDICTO DE LA SERIE: NO   (en el umbral: False; regla de parada: PREREGISTRO_o1_evo.md sec. 7)

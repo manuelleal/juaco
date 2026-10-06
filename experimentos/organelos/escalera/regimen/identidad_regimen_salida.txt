@@ -1,0 +1,17 @@
+[11:23:58] CORRE_REGIMEN · python 3.14.2 · corre_regimen.py ce5b70bae7e7ef2f · corre_perillas.py f98b98527155f029 · carro ecc996d2fecccc30 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20}
+[11:23:58]   OK    sha corre_perillas.py == f98b98527155f029
+[11:23:58]   OK    sha carros/O1_LUGAR_GEN.py == ecc996d2fecccc30
+[11:23:58]   OK    corre_perillas.verifica (shas de escalera, carros == construye_perillas)
+[11:24:06]   IDENTIDAD CORTA PERILLAS (salida ENTERA, N 9, s 743895, T 1500, mundo de P1): GEN0 == O1_LUGAR True · GEN (1,1) sigma 0 == O1_LUGAR True · GEN (0,0) sigma 0 == O1 (salvo telemetria 'lugar') True · GEN PS_LEE 0, sigma 0.03, delta 0.01, camara 1 == O1 True · control O1_LUGAR != O1 True
+[11:24:06]   OK    corre_perillas.identidad_corta: GEN (1,1) == O1_LUGAR · GEN (0,0) == O1 · neutro == O1 · control
+[11:24:09]   OK    envoltura FIJA (1:1) [siembra [g], sigma 0, delta 0, camara 0, lee 1] == O1_LUGAR bit a bit (salida ENTERA)
+[11:24:10]   OK    envoltura FIJA (0:0) == O1 bit a bit (salvo telemetria 'lugar')
+[11:24:13]   OK    envoltura FIJA (0:0.2) != O1 y != O1_LUGAR (control)
+[11:24:14]   OK    MIXTA [fab, fab] == O1_LUGAR bit a bit (la lista de dos iguales no cambia nada)
+[11:24:15]   OK    MIXTA [o1, o1] == O1 bit a bit (salvo telemetria)
+[11:24:31]   OK    MIXTA [fab, o1] != O1_LUGAR y != O1 (control, T 6000; a T 1500 aun coincide con O1_LUGAR: el modulo actua tarde)
+[11:24:37]   OK    MIXTA [fab, fab] == O1_LUGAR tambien a T 6000
+[11:24:45]   OK    MIXTA contabilidad (T 4000): fundadores sel + fab == fund_n (33 + 36 == 69), ajenos 0, los dos presentes, 9 primeros
+[11:24:45]   OK    MIXTA paridad: el orden invertido da la asignacion ESPEJO de los 9 primeros (sel 3 <-> fab 6) y el mundo es el mismo (oasis z0)
+[11:24:45]   OK    MIXTA estado: sigma 0, delta 0, camara 0, lee 1, siembra_n 2, carro O1_LUGAR_GEN, mundo de P1
+[11:24:45] ARNES REGIMEN: PASA

@@ -1,0 +1,73 @@
+ARNES genoma · 2026-09-30 17:15:55
+  shas: corre_gen.py 8836072c04c38767 · identidad_gen.py 73a6f9f7ec21fa19
+(K) shas fijados (sentidos_muro, corre_bp, V143_BQ2, V143_BQ2AZA; por sentidos_muro.verifica: TERMO, pista, juez, O1, V143, carros)
+  sha experimentos\organelos\sentidos_muro\corre_sentidos_muro.py 4776b80e18733079 OK
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2AZA.py aa88b32e4b4de152 OK
+  -- verifica de sentidos_muro (shas de corre_bp, V143_BQ2, TERMO, pista, juez, O1, V143; carros == construye_sm):
+    sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+    sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+    sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+    sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+    sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+    sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+    sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+    sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+    sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+    carro V143_BQ3 sha dd527e3c627e77fb == construye_sm: True · revisa_carro: PASA
+    carro V143_BQ3_0 sha baeb269537e585fd == construye_sm: True · revisa_carro: PASA
+(C) CONFIGURACION: CAP = CFG de fabrica con inicial 6 y p_dup 0.06 (nada mas); CFG == sentidos_muro == corre_bp.CFG0 == carros
+  CFG {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · CAP {'inicial': 6, 'p_campo': 0.1, 'p_dup': 0.06, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50} · delta largo esperado: cap +0.040, fab +0.000: OK
+(F) A TASAS DE FABRICA ESTE RUNNER ES EL INSTRUMENTO ORIGINAL BIT A BIT
+  fab == sentidos_muro.tarea('bq2_pas') sin siembra: 9 campos OK
+  fab == sentidos_muro.tarea('bq2_pas') con siembra (10 listas): OK
+  aza_largo a tasas de fabrica == corre_bp.tarea('bloq2aza'): 8 campos OK
+  cap a tasas de fabrica == fab: OK
+  trabajo fab == sentidos_muro.trabajo('pas', 'bq2_pas') (2 pasajes + prueba, T 1000): 3 JSON campo a campo, cruzan 0: OK
+  sha del pasaje guardado pasaje_bq2_pas_i1_p0.json 52c220e41ed445f7: OK
+  bq2_pas i1 p0 (s 614010, T 25000, 27s) por el brazo fab == GUARDADO 29-sep en ['linajes', 'pista', 'R0_pista', 'tel', 'tel_termo', 'bq']: OK
+(A) LAS TASAS NUEVAS ACTUAN
+  fab: cfg del carro == CFG; largo mediano de los fundadores sin banco 2.0 (inicial 2; n 41): OK
+  cap: cfg del carro == CAP; largo mediano de los fundadores sin banco 6.0 (inicial 6; n 33): OK
+  aza_largo: cfg del carro == CAP; largo mediano de los fundadores sin banco 6.0 (inicial 6; n 9): OK
+  operador _bq_muta del carro sobre listas de 6 reglas (60000 partos): delta largo cap +0.0403 (espera +0.04), fab -0.0019 (espera 0): OK
+(M) LA MEDIDA: es_doble / es_o1 en casos y piso de azar p_azar(n) contra Monte Carlo con el _bq_azar del carro
+  [[7, 0, 0, 0.5, 0, -3], [8, 0, 1, 0.5, 0, 3]]: doble True (espera True) · O1 True (espera True): OK
+  [[7, 0, 0, 0.5, 0, -3], [7, 2, 1, 0.5, 0, 1]]: doble True (espera True) · O1 False (espera False): OK
+  [[7, 0, 0, 0.5, 0, -3], [8, 0, 1, 0.5, 1, 3]]: doble False (espera False) · O1 False (espera False): OK
+  [[7, 0, 0, 0.5, 0, -3], [8, 0, 1, 0.5, 0, -3]]: doble False (espera False) · O1 False (espera False): OK
+  [[8, 0, 1, 0.5, 0, 3], [3, 4, 1, 0.5, 0, -3]]: doble False (espera False) · O1 False (espera False): OK
+  [[7, 0, 1, 0.5, 0, -3], [8, 0, 1, 0.5, 0, 3]]: doble True (espera True) · O1 False (espera False): OK
+  []: doble False (espera False) · O1 False (espera False): OK
+  corre_bp.PRUEBA_O1 es doble y tiene forma O1: OK
+  p_azar(6) 0.0354 vs Monte Carlo 0.0351 (K 100000): OK
+  p_azar(2) 0.0027 vs Monte Carlo 0.0028 (K 100000): OK
+(E) regla 14: ENTRADA campo a campo contra corre_bp.tarea(carro, cfg explicito)
+  cap == corre_bp.tarea('V143_BQ2', CAP): 8 campos OK
+  aza_largo == corre_bp.tarea('V143_BQ2AZA', CAP): 8 campos OK
+  la siembra ACTUA en cap: todo fundador sale del banco sembrado (36/36; siembra 7 listas): OK
+(D) determinismo: cap, dos veces
+  OK
+(W) JSON antes de volver; un JSON con aborto SE REINTENTA; uno bueno NO se recorre; cadena completa por trabajo() y --reanuda
+  reintento: OK
+  trabajo() 2 pasajes + prueba, aborto simulado en p1 y reanuda: identico (largo [5, 5], cruzan 0, largo_med 5.0): OK
+(X) el runner NIEGA pool > 2 y pool en el humo
+  ['--explora', '--pool', '3']: OK (niega)
+  ['--humo', '--pool', '2']: OK (niega)
+(L) LA LETRA en casos sinteticos
+  PAGA: gana a fab y a aza en 4/5: CAPACIDAD PAGA · compone False (espera CAPACIDAD PAGA · False) OK
+  PAGA exige las dos (aza 3/5): CAPACIDAD SIN USO · compone False (espera CAPACIDAD SIN USO · False) OK
+  empate no gana: CAPACIDAD SIN USO · compone False (espera CAPACIDAD SIN USO · False) OK
+  PURGADA: largo < 4 en 3/5: CAPACIDAD PURGADA · compone False (espera CAPACIDAD PURGADA · False) OK
+  largo 4.0 exacto cuenta como >= 4: CAPACIDAD SIN USO · compone False (espera CAPACIDAD SIN USO · False) OK
+  INDETERMINADO: largo >= 4 en 3/5 y < 4 en 2/5: INDETERMINADO · compone False (espera INDETERMINADO · False) OK
+  PAGA manda sobre PURGADA: CAPACIDAD PAGA · compone False (espera CAPACIDAD PAGA · False) OK
+  NO SE LEE (aborto): NO SE LEE · compone False (espera NO SE LEE · False) OK
+  NO SE LEE (tasas no actuan: cap p0 < fab p0 + 1): NO SE LEE · compone False (espera NO SE LEE · False) OK
+  NO SE LEE (incoherente): NO SE LEE · compone False (espera NO SE LEE · False) OK
+  COMPONE: doble >= 2 p_azar(6) en 3/5 y > aza en 4/5: CAPACIDAD SIN USO · compone True (espera CAPACIDAD SIN USO · True) OK
+  no COMPONE si aza igual: CAPACIDAD SIN USO · compone False (espera CAPACIDAD SIN USO · False) OK
+  NO SE LEE (arnes): NO SE LEE OK
+  NO SE LEE (incompleto): NO SE LEE OK
+ARNES: PASA · 108s

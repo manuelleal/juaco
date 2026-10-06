@@ -1,0 +1,47 @@
+ARNES identidad_muro_perillas.py
+       sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+       sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+       sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+       sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+       sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+       sha muro_perillas/construye_muro_perillas.py 4b7092184a16f4ca OK (NO FIJADO: solo humo/mapa)
+       sha muro_perillas/carros\O1_MURO_GEN.py 2f88a0b447b48d32 OK (NO FIJADO: solo humo/mapa)
+       sha muro_perillas/carros\O1_MURO_GEN0.py 36e00ceeb41b8ccb OK (NO FIJADO: solo humo/mapa)
+       carro O1_MURO_GEN == construye_muro_perillas: True
+       carro O1_MURO_GEN0 == construye_muro_perillas: True
+  OK    (K) verifica(): shas fijados (pista, juez, O1, CTRL_O1_SINLIMPIA, corre_v143), carros == construye
+  OK    (K) chequeo estatico revisa_carro O1_MURO_GEN: PASA
+  OK    (K) chequeo estatico revisa_carro O1_MURO_GEN0: PASA
+  OK    (K) constantes: FABRICA (0.25, 0.5, 0.35, 0.2, 1.0, 1.0) == literales de O1 + (1, 1); BASE = APAGADO (0.0, 0.5, 1.0, 1.0, 0.0, 0.0); DISENO = FABRICA; ambos dentro del clip; sigma 0.03 delta 0.01
+  OK    (C) GEN0 == O1 (salida ENTERA, s 883950, T 3000)
+  OK    (C) GEN con los genes de FABRICA, sin mutacion == O1 (salida ENTERA), con camara y sin camara
+  OK    (C) PISTA MIXTA: PS_POR_LINAJE con 9 x FABRICA == O1 (salida ENTERA); 9 fundadores, todos de origen 3 (por linaje)
+  OK    (C) PISTA MIXTA: 8 x FABRICA + 1 con LIMPIA 0 != O1 (el genoma por linaje actua y los vecinos lo sienten)
+  OK    (C) GEN con LIMPIA 0 (resto fabrica) == CTRL_O1_SINLIMPIA (la referencia existente, sha be029b0a1b8d6634)
+  OK    (C) control que debe diferir: CTRL_O1_SINLIMPIA != O1 (la limpieza actua a T 3000)
+  OK    (C) NEUTRO: PS_LEE 0 con mutacion (sigma 0.03, delta 0.01), camara, desde la base == O1 (ningun cuerpo lee los genes)
+  FALLA (C)   ...y sus genes SI se mueven: 9 fundadores (9 de la base, 0 de camara), 20 partos, 6 genomas distintos entre los vivos, profundidad maxima 2
+  OK    (C) el runner deja el modulo como estaba (SIEMBRA None, PS_LEE 1, sigma, delta, camara 1, registros vacios)
+  OK    (C) cableado MARGEN = 0.0 (resto fabrica) == O1 con MARGEN = 0.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) cableado MARGEN = 0.6 (resto fabrica) == O1 con MARGEN = 0.6 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) control que debe diferir: MARGEN actua (algun valor != O1 a T 12000)
+  OK    (C) cableado PRUEBA = 0.0 (resto fabrica) == O1 con PRUEBA = 0.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) cableado PRUEBA = 1.0 (resto fabrica) == O1 con PRUEBA = 1.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) control que debe diferir: PRUEBA actua (algun valor != O1 a T 12000)
+  OK    (C) cableado PEN_OTRO = 0.0 (resto fabrica) == O1 con PEN_OTRO = 0.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) cableado PEN_OTRO = 1.0 (resto fabrica) == O1 con PEN_OTRO = 1.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) control que debe diferir: PEN_OTRO actua (algun valor != O1 a T 12000)
+  OK    (C) cableado PISO = 0.0 (resto fabrica) == O1 con PISO = 0.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) cableado PISO = 1.0 (resto fabrica) == O1 con PISO = 1.0 escrito a mano (T 12000); difiere de O1: True
+  OK    (C) control que debe diferir: PISO actua (algun valor != O1 a T 12000)
+  OK    (C) cableado HUECO: gen 0 == O1 con `tgt = pos` escrito a mano (T 12000)
+  OK    (C) control que debe diferir: HUECO apagado != O1 (T 12000)
+  OK    (C) control que debe diferir: TODO apagado (base) != O1
+  OK    (C) pista.run intacta
+  OK    (R) regla 14, ENTRADA campo a campo: corre_muro_perillas.tarea(genes de fabrica) == corre_v143.tarea('O1') salvo el nombre del carro en los ids (s 883951, T 2000); difieren: linajes ['id'] pista ['ids']
+  OK    (R) fila: todos los fundadores de la siembra con EL genoma (17), contabilidad coherente, cruzan 0/9
+  OK    (G) generador propio: uniforme media 0.5025, normal media -0.0012 desv 1.0042
+  OK    (G) primer fundador sin siembra: origen base, profundidad 1, genes = BASE (0.0, 0.5, 1.0, 1.0, 0.0, 0.0) con UNA mutacion en un gen ([0.0, 0.5, 0.013, 1.0, 0.0, 0.0]); el cuerpo lee los genes crudos
+  (F) letra de la serie: GEN_LETRA no fijado (se fija tras el mapa; sin casos sinteticos todavia)
+
+ARNES FALLA, 32/33 (474.5s)

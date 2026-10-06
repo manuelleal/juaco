@@ -1,0 +1,22 @@
+  validez: {'V1_completa': True, 'V2_canal_actua': True, 'V3_mundo_actua': True, 'V4_estado': True}
+  puertas: {'PA_par_lug': True, 'PA_suma_lug': True, 'PB_par_senbar': True, 'PB_suma_senbar': True, 'PF_fund_par': True, 'PM_llegan_mas': True} · umbrales {'gana_par': 2, 'dif_suma': 1} · EN EL UMBRAL (+-1): True · matiz None
+  pareado_lug: gana 2 empata 0 pierde 0 · suma 4 vs 1 (dif 3) · por indice [2, 2] vs [1, 0]
+  pareado_senbar: gana 2 empata 0 pierde 0 · suma 4 vs 0 (dif 4) · por indice [2, 2] vs [0, 0]
+  pareado_fund (menor gana): gana 2 empata 0 pierde 0 · mediana 2.1667 vs 18.2778
+  pareado_frac_vidas (mayor gana: PM): gana 2 empata 0 pierde 0 · mediana 0.4172 vs 0.111
+  pareado_latencia (menor gana: descriptivo): gana 0 empata 0 pierde 2 · mediana 173.0 vs 108.25
+  [desc] suma_cruzan: {'sen': 4, 'senbar': 0, 'lug': 1}
+  [desc] mayorias: {'sen': 0, 'senbar': 0, 'lug': 0}
+  [desc] R0_med: {'sen': 0.8, 'senbar': 0.2552, 'lug': 0.3055}
+  [desc] fund_media: {'sen': 2.1667, 'senbar': 24.1111, 'lug': 18.2778}
+  [desc] establecidos_0fund_post10k: {'sen': 16, 'senbar': 13, 'lug': 13}
+  [desc] vida_med: {'sen': 1822.5, 'senbar': 285.0, 'lug': 804.0}
+  [desc] latencia_med: {'sen': 173.0, 'senbar': 160.25, 'lug': 108.25}
+  [desc] frac_vidas_con_bocado_dentro: {'sen': 0.4172, 'senbar': 0.1295, 'lug': 0.111}
+  [desc] mundo_AC: {'sen': 7.3102, 'senbar': 9.0263, 'lug': 6.7774}
+  [desc] ratio_pasos_oasis: {'sen': 6.9535, 'senbar': 5.35, 'lug': 6.0505}
+  [desc] escrituras: {'sen': 826.0, 'senbar': 822.5, 'lug': 0.0}
+  [desc] cobros: {'sen': 826.0, 'senbar': 822.5, 'lug': 0.0}
+  [desc] siembras: {'sen': 45.0, 'senbar': 113.0, 'lug': None}
+  [desc] linajes_que_escriben: {'sen': 18, 'senbar': 18, 'lug': 0}
+VEREDICTO (parcial/humo, no cuenta): FUNCIONA · abortos []

@@ -1,0 +1,34 @@
+ARNES pista_pob · 2026-09-29 09:33:20 · pista_pob.py d4ed07b28e4ba94b · corre_pista_pob.py 16d2293e09c4a549 · identidad_pista_pob.py 1552d9b32c417382
+(0) shas fijados y run_gen por anclas
+  sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+  sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+  sha experimentos\carrera_escuderias\revisa_carro.py 1c8a789f7427ab96 OK
+  sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+  sha experimentos\organelos\bloques_pista\carros\V143_BQ2.py 183fb81cf6ad520c OK
+  sha experimentos\organelos\bloques_pista\corre_bp.py 6b9c11a6639d3948 OK
+  sha experimentos\organelos\termo\corre_termo.py 66f1f2539f1030ef OK
+  sha experimentos\organelos\termo\carros\V143_TERMO.py 3db639cab75641fb OK
+  sha experimentos\tronco_v14_3\carros_v143\V143.py 2a03048a7f1525e5 OK
+  sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+  sha experimentos\carrera_escuderias\pista_pob.py d4ed07b28e4ba94b OK
+  run_gen por anclas: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '7b05c9615ee40483', 'anclas': 5} OK
+  CFG (tasas BQ_C ronda 2) {'inicial': 2, 'p_campo': 0.1, 'p_dup': 0.02, 'p_del': 0.07, 'p_ins': 0.05, 'banco': 50}
+I1  K = 1 == pista.run BIT A BIT (salida ENTERA)
+  FABRICA compat=1 T 5000 s 1: pista_pob K=1 == pista.run: OK · juez.identidad_corta OK · plano(pista_pob) == organismo_f9c REL: OK (2s)
+  9 x O1 s 59892 T 20000 fundador limpio: OK · fundadores 80 · migrantes 0 · depositos 103 (77s)
+  9 x V143_TERMO s 59892 T 20000 fundador limpio: OK · fundadores 229 · migrantes 0 · depositos 120 (40s)
+  9 x V143_BQ2 s 59892 T 20000 fundador limpio: OK (salida + estado de modulo) · fundadores 251 · migrantes 0 · depositos 90 (44s)
+I2  K = 2 SIN migracion (modo 'nada'): copia c == pista.run(semilla_copia) BIT A BIT; control con modulo compartido
+  copia 0 (semilla 59893) == pista.run: OK (salida + estado de modulo) · migrantes 0 · limpios 281
+  copia 1 (semilla 159893001) == pista.run: OK (salida + estado de modulo) · migrantes 0 · limpios 308
+  CONTROL canal oculto (UN modulo para las 2 copias): copia 1 != pista.run: OK (difiere: el canal existe y carga_modulo lo cierra) (131s)
+I3  CONTABILIDAD (K = 2, V143_BQ2, s 59893, T 20000)
+  sel: migrantes 398 · limpios 165 · fundadores 563 · depositos 217 · pool final [26, 5, 37, 3, 27, 27, 35, 47, 10] (tope 100) · muestras [15999, 16999, 17999, 18999, 19999] · siembra 409 ([50, 35, 50, 25, 50, 50, 50, 50, 49]) -> OK
+  neutro: migrantes 319 · limpios 176 · fundadores 495 · depositos 190 · pool final [18, 2, 35, 2, 23, 26, 23, 35, 26] (tope 100) · muestras [15999, 16999, 17999, 18999, 19999] · siembra 390 ([50, 20, 50, 20, 50, 50, 50, 50, 50]) -> OK
+  DEBEN DIFERIR: sel != nada True · neutro != nada True · sel != neutro True -> OK
+  determinismo (sel, K 2, T 3000, dos veces, salida + camara + siembra): OK (101s)
+I4  REGLA 14: la medida del runner == corre_bp.tarea; referencias guardadas reproducidas hoy
+  prueba() == corre_bp.tarea(s, 'bloq2', T, siembra) campo a campo (9 campos, siembra 105): OK (14s)
+  bloq2 s59201 T 100000 reproducido == JSON guardado (9 campos, menos 'seg'): OK (106s)
+  bloq_pas s59201 T 100000 reproducido == JSON guardado (10 campos, menos 'seg'): OK (107s)
+ARNES pista_pob: PASA (622s)

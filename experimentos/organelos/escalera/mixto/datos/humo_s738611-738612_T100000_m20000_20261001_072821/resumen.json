@@ -1,0 +1,106 @@
+{
+ "modo": "humo",
+ "n": 2,
+ "T": 100000,
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "mueve": 20000,
+  "c_e": 0.01
+ },
+ "semillas": [
+  738611,
+  738612
+ ],
+ "brazos": {
+  "mix": [
+   "O1_TODO",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN"
+  ],
+  "mixbar": [
+   "O1_TODO",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR",
+   "O1_LUGAR_SENAL_BAR"
+  ],
+  "sen9": [
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN",
+   "O1_TODO_SEN"
+  ]
+ },
+ "resumen": {
+  "mix": {
+   "lat_lectores_por_semilla": [
+    1547.5,
+    1093.5
+   ],
+   "lat_lectores_todas": 1209.0,
+   "nunca": 2,
+   "cruza_lectores": 14,
+   "lat_explorador_med": [
+    312.0,
+    315.0
+   ]
+  },
+  "mixbar": {
+   "lat_lectores_por_semilla": [
+    1236.0,
+    1860.5
+   ],
+   "lat_lectores_todas": 1464.5,
+   "nunca": 3,
+   "cruza_lectores": 3,
+   "lat_explorador_med": [
+    87.5,
+    535.0
+   ]
+  },
+  "sen9": {
+   "lat_lectores_por_semilla": [
+    1621.0,
+    1619.0
+   ],
+   "lat_lectores_todas": 1619.0,
+   "nunca": 0,
+   "cruza_lectores": 15,
+   "lat_explorador_med": [
+    null,
+    null
+   ]
+  }
+ },
+ "abortos": [],
+ "nota": "rafaga ficha 4",
+ "sha_runner": "f27edde098cf7a1a",
+ "shas": {
+  "juntos\\corre_juntos.py": "db75135c8c2f3e0d",
+  "mundo_tramo_c.py": "4a1044a4e0e1d5c9",
+  "juntos\\carros\\O1_TODO.py": "b7519a4a481a0cf5",
+  "juntos\\carros\\O1_TODO_SEN.py": "dff5e762bd23612e",
+  "juntos\\carros\\O1_TODO_PREG.py": "382dafcf822b36a1",
+  "carros\\O1_LUGAR_SENAL_BAR.py": "cab7460e91e215e3"
+ },
+ "seg": 591.3
+}

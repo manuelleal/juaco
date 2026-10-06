@@ -1,0 +1,293 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "abortos_0": true,
+   "completas": true,
+   "f_ini_05": true,
+   "moneda_actua": true,
+   "respaldo_raro": true,
+   "prueba_pareada": true,
+   "explora_sha": true,
+   "arnes": true
+  },
+  "veredicto": "INDETERMINADO",
+  "en_umbral": false,
+  "cruce": {
+   "n": 1,
+   "gana": 0,
+   "pierde": 0,
+   "empata": 1,
+   "D": 0,
+   "suma_moneda_L": 1,
+   "suma_neutra_L": 1,
+   "veredicto": "SIN DIFERENCIA",
+   "en_umbral": false
+  },
+  "fraccion": {
+   "n": 1,
+   "ge": 0,
+   "gt": 0,
+   "empates": 0,
+   "empates_arriba": 0,
+   "mitad": 0,
+   "mediana": 0.3086,
+   "estricta_b": false,
+   "original_a10": false,
+   "original_a5": false,
+   "estricta_8": false
+  },
+  "neutra_L_mediana": 0.605,
+  "sobre_inicial": {
+   "moneda_L": 0,
+   "neutra_L": 1
+  },
+  "moneda_L_media": 0.3086,
+  "neutra_L_media": 0.605,
+  "fijadas": {
+   "moneda_L": 0,
+   "neutra_L": 0
+  },
+  "perdidas": {
+   "moneda_L": 0,
+   "neutra_L": 0
+  },
+  "delta_pasaje": {
+   "moneda_L": -0.0957,
+   "neutra_L": 0.0525
+  },
+  "elegidos_mediana": {
+   "moneda_L": 6.5,
+   "neutra_L": 6.5
+  },
+  "cruzan_pasaje_media": {
+   "moneda_L": 2,
+   "neutra_L": 3
+  },
+  "pasajes": 4,
+  "pasajes_con_respaldo": 0,
+  "pasajes_donde_la_moneda_difiere": 4,
+  "final": {
+   "moneda_L": {
+    "14": 0.3086
+   },
+   "neutra_L": {
+    "14": 0.605
+   }
+  },
+  "cruzan": {
+   "moneda_L": {
+    "14": 1
+   },
+   "neutra_L": {
+    "14": 1
+   }
+  }
+ },
+ "bloque": null,
+ "explora": {
+  "veredicto": "CONSERVA",
+  "final": {
+   "moneda_L": {
+    "1": 0.8,
+    "2": 0.5,
+    "3": 0.996,
+    "4": 0.0,
+    "5": 0.8
+   },
+   "neutra_L": {
+    "1": 0.1429,
+    "2": 0.33,
+    "3": 0.0467,
+    "4": 0.0,
+    "5": 0.1457
+   }
+  },
+  "fraccion": {
+   "n": 5,
+   "ge": 5,
+   "gt": 4,
+   "empates": 1,
+   "empates_arriba": 0,
+   "mitad": 0,
+   "mediana": 0.8,
+   "estricta_b": false,
+   "original_a10": true,
+   "original_a5": true,
+   "estricta_8": false
+  },
+  "cruce": {
+   "n": 5,
+   "gana": 1,
+   "pierde": 3,
+   "empata": 1,
+   "D": -6,
+   "suma_moneda_L": 17,
+   "suma_neutra_L": 23,
+   "veredicto": "SIN DIFERENCIA",
+   "en_umbral": false
+  },
+  "neutra_L_mediana": 0.1429
+ },
+ "cadenas": {
+  "moneda_L": {
+   "14": {
+    "f_ini": 0.5,
+    "f": [
+     0.4267,
+     0.3086
+    ],
+    "f_sombra_vieja": [
+     0.4556,
+     0.3156
+    ],
+    "n_ele": [
+     6,
+     7
+    ],
+    "respaldo": [
+     false,
+     false
+    ],
+    "n_listas": [
+     300,
+     350
+    ],
+    "intacta": [
+     0.98,
+     0.9029
+    ],
+    "arrastre": [
+     0.563,
+     0.646
+    ],
+    "partos": [
+     150,
+     135
+    ],
+    "cruzan_pas": [
+     1,
+     3
+    ],
+    "est_fracA": [
+     [
+      0.64,
+      0.26,
+      0.32,
+      0.22,
+      0.3,
+      0.82
+     ],
+     [
+      0.28,
+      0.24,
+      0.3,
+      0.18,
+      0.24,
+      0.38,
+      0.54
+     ]
+    ],
+    "est_n": [
+     6,
+     7
+    ],
+    "mutadas": 40
+   }
+  },
+  "neutra_L": {
+   "14": {
+    "f_ini": 0.5,
+    "f": [
+     0.484,
+     0.605
+    ],
+    "f_sombra_vieja": [
+     0.5067,
+     0.5844
+    ],
+    "n_ele": [
+     5,
+     8
+    ],
+    "respaldo": [
+     false,
+     false
+    ],
+    "n_listas": [
+     250,
+     400
+    ],
+    "intacta": [
+     0.98,
+     0.9325
+    ],
+    "arrastre": [
+     0.56,
+     0.588
+    ],
+    "partos": [
+     174,
+     168
+    ],
+    "cruzan_pas": [
+     2,
+     4
+    ],
+    "est_fracA": [
+     [
+      0.34,
+      0.78,
+      0.24,
+      0.24,
+      0.82
+     ],
+     [
+      0.26,
+      0.38,
+      0.76,
+      0.76,
+      0.74,
+      0.72,
+      0.52,
+      0.7
+     ]
+    ],
+    "est_n": [
+     5,
+     8
+    ],
+    "mutadas": 32
+   }
+  }
+ },
+ "prueba": {
+  "moneda_L": {
+   "14": {
+    "seed": 647390,
+    "cruzan": 1,
+    "mayoria": 0,
+    "R0_med": 0.75,
+    "fund_med": 0.0,
+    "desc": 102,
+    "coherente": true
+   }
+  },
+  "neutra_L": {
+   "14": {
+    "seed": 647390,
+    "cruzan": 1,
+    "mayoria": 0,
+    "R0_med": 0.6667,
+    "fund_med": 0.0,
+    "desc": 112,
+    "coherente": true
+   }
+  }
+ },
+ "abortos": [],
+ "predicciones": [],
+ "preregistro": "PREREGISTRO_moneda_muro_rep.md",
+ "sha_runner": "11e3b7288aa0116b",
+ "sha_instrumento": "d45a5ed42e8514df"
+}

@@ -1,0 +1,454 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_mundo_paga": false,
+   "V3_mundo_actua": true,
+   "V4_estado": true,
+   "V5_desde_cero_y_neutro": true,
+   "V7a_profundidad_mutacional_neutra": false,
+   "V7b_refundaciones_por_camara_neutra": false
+  },
+  "puertas": {
+   "PG_gen_sube": false,
+   "PC_par_neu": false,
+   "PC_suma_neu": false
+  },
+  "veredicto": "NO SE LEE",
+  "matiz": null,
+  "en_umbral": true,
+  "umbrales": {
+   "gana_par": 1,
+   "dif_suma": 1,
+   "fab_gana": 1,
+   "margen_gen": 0.05,
+   "gen": "GV",
+   "prof_min": 30,
+   "refund_min": 3000,
+   "reloj_cadenas": 1
+  },
+  "pareado_gen": {
+   "gen": "GV",
+   "margen": 0.05,
+   "n": 1,
+   "gana": 0,
+   "pierde": 0,
+   "med_sel": 0.0,
+   "med_neu": 0.0,
+   "sel_sobre_margen": 0,
+   "neu_sobre_margen": 0,
+   "sel_positivo": 0,
+   "neu_positivo": 0,
+   "por_cadena_sel": [
+    0.0
+   ],
+   "por_cadena_neu": [
+    0.0
+   ]
+  },
+  "pareado_neu": {
+   "n": 1,
+   "gana": 0,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 1,
+   "suma_b": 1,
+   "dif": 0,
+   "por_indice_a": [
+    1
+   ],
+   "por_indice_b": [
+    1
+   ]
+  },
+  "pareado_fab_o1": {
+   "n": 1,
+   "gana": 0,
+   "empata": 0,
+   "pierde": 1,
+   "suma_a": 0,
+   "suma_b": 1,
+   "dif": -1,
+   "por_indice_a": [
+    0
+   ],
+   "por_indice_b": [
+    1
+   ]
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "sel": 1,
+    "neu": 1,
+    "fab": 0,
+    "o1": 1
+   },
+   "mayorias": {
+    "sel": 0,
+    "neu": 0,
+    "fab": 0,
+    "o1": 0
+   },
+   "R0_med": {
+    "sel": 0.15,
+    "neu": 0.15,
+    "fab": 0.16,
+    "o1": 0.15
+   },
+   "establecidos_0fund_post10k": {
+    "sel": 4,
+    "neu": 4,
+    "fab": 7,
+    "o1": 4
+   },
+   "fund_media": {
+    "sel": 24.1111,
+    "neu": 24.1111,
+    "fab": 22.5556,
+    "o1": 24.1111
+   },
+   "ratio_pasos_oasis": {
+    "sel": 1.045,
+    "neu": 1.045,
+    "fab": 5.329,
+    "o1": 1.045
+   },
+   "mundo_AC": {
+    "sel": 7.0137,
+    "neu": 7.0137,
+    "fab": 8.8186,
+    "o1": 7.0137
+   },
+   "genoma_prueba_mediana": {
+    "sel": {
+     "GW": 0.0072,
+     "GV": 0.0
+    },
+    "neu": {
+     "GW": 0.0072,
+     "GV": 0.0
+    },
+    "fab": {
+     "GW": 1.0,
+     "GV": 1.0
+    },
+    "o1": {
+     "GW": 0.0,
+     "GV": 0.0
+    }
+   },
+   "pareados": {
+    "sel_vs_neu": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 1,
+     "suma_b": 1,
+     "dif": 0,
+     "por_indice_a": [
+      1
+     ],
+     "por_indice_b": [
+      1
+     ]
+    },
+    "sel_vs_o1": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 1,
+     "suma_b": 1,
+     "dif": 0,
+     "por_indice_a": [
+      1
+     ],
+     "por_indice_b": [
+      1
+     ]
+    },
+    "sel_vs_fab": {
+     "n": 1,
+     "gana": 1,
+     "empata": 0,
+     "pierde": 0,
+     "suma_a": 1,
+     "suma_b": 0,
+     "dif": 1,
+     "por_indice_a": [
+      1
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "neu_vs_o1": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 1,
+     "suma_b": 1,
+     "dif": 0,
+     "por_indice_a": [
+      1
+     ],
+     "por_indice_b": [
+      1
+     ]
+    },
+    "fab_vs_o1": {
+     "n": 1,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 1,
+     "suma_a": 0,
+     "suma_b": 1,
+     "dif": -1,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      1
+     ]
+    }
+   },
+   "genes": {
+    "GW": {
+     "gen": "GW",
+     "margen": 0.05,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 0.0072,
+     "med_neu": 0.0072,
+     "sel_sobre_margen": 0,
+     "neu_sobre_margen": 0,
+     "sel_positivo": 1,
+     "neu_positivo": 1,
+     "por_cadena_sel": [
+      0.0072
+     ],
+     "por_cadena_neu": [
+      0.0072
+     ]
+    },
+    "GV": {
+     "gen": "GV",
+     "margen": 0.05,
+     "n": 1,
+     "gana": 0,
+     "pierde": 0,
+     "med_sel": 0.0,
+     "med_neu": 0.0,
+     "sel_sobre_margen": 0,
+     "neu_sobre_margen": 0,
+     "sel_positivo": 0,
+     "neu_positivo": 0,
+     "por_cadena_sel": [
+      0.0
+     ],
+     "por_cadena_neu": [
+      0.0
+     ]
+    }
+   },
+   "sel_trayectoria_gen_mediana_por_pasaje": {
+    "GW": [
+     0.0036,
+     0.0072
+    ],
+    "GV": [
+     0.0,
+     0.0
+    ]
+   },
+   "sel_cadenas_con_GV_sobre_margen_por_pasaje": [
+    0,
+    0
+   ],
+   "sel_frac_on_por_pasaje": [
+    0.0,
+    0.0
+   ],
+   "sel_establecidos_en_pasaje_mediana": [
+    4.0,
+    5.0
+   ],
+   "sel_respaldo_por_pasaje": [
+    0,
+    0
+   ],
+   "sel_profundidad_mutacional_por_pasaje_mediana": [
+    1.0,
+    3.0
+   ],
+   "sel_refundaciones_por_camara_por_pasaje_mediana": [
+    50.0,
+    52.0
+   ],
+   "sel_partos_por_pasaje_mediana": [
+    26.0,
+    22.0
+   ],
+   "sel_cruzan_por_pasaje_mediana": [
+    0.0,
+    0.0
+   ],
+   "sel_ratio_pasos_por_pasaje": [
+    1.06,
+    1.099
+   ],
+   "sel_viajes_por_pasaje": [
+    0.0,
+    0.0
+   ],
+   "neu_trayectoria_gen_mediana_por_pasaje": {
+    "GW": [
+     0.0036,
+     0.0072
+    ],
+    "GV": [
+     0.0,
+     0.0
+    ]
+   },
+   "neu_cadenas_con_GV_sobre_margen_por_pasaje": [
+    0,
+    0
+   ],
+   "neu_frac_on_por_pasaje": [
+    0.0,
+    0.0
+   ],
+   "neu_establecidos_en_pasaje_mediana": [
+    4.0,
+    5.0
+   ],
+   "neu_respaldo_por_pasaje": [
+    0,
+    0
+   ],
+   "neu_profundidad_mutacional_por_pasaje_mediana": [
+    1.0,
+    3.0
+   ],
+   "neu_refundaciones_por_camara_por_pasaje_mediana": [
+    50.0,
+    52.0
+   ],
+   "neu_partos_por_pasaje_mediana": [
+    26.0,
+    22.0
+   ],
+   "neu_cruzan_por_pasaje_mediana": [
+    0.0,
+    0.0
+   ],
+   "neu_ratio_pasos_por_pasaje": [
+    1.06,
+    1.099
+   ],
+   "neu_viajes_por_pasaje": [
+    0.0,
+    0.0
+   ],
+   "relojes": {
+    "sel": {
+     "profundidad_mutacional": {
+      "mediana": 3.0,
+      "minimo": 3.0,
+      "cadenas_sobre_minimo": 0,
+      "por_cadena": [
+       3.0
+      ]
+     },
+     "refundaciones_por_camara": {
+      "mediana": 102.0,
+      "minimo": 102,
+      "cadenas_sobre_minimo": 0,
+      "por_cadena": [
+       102
+      ],
+      "rondas_de_reemplazo_mediana": 11.3
+     },
+     "partos": {
+      "mediana": 48.0
+     }
+    },
+    "neu": {
+     "profundidad_mutacional": {
+      "mediana": 3.0,
+      "minimo": 3.0,
+      "cadenas_sobre_minimo": 0,
+      "por_cadena": [
+       3.0
+      ]
+     },
+     "refundaciones_por_camara": {
+      "mediana": 102.0,
+      "minimo": 102,
+      "cadenas_sobre_minimo": 0,
+      "por_cadena": [
+       102
+      ],
+      "rondas_de_reemplazo_mediana": 11.3
+     },
+     "partos": {
+      "mediana": 48.0
+     }
+    }
+   },
+   "gen_por_evento_de_mutacion": {
+    "sel": {
+     "GW": 0.0024,
+     "GV": 0.0
+    },
+    "neu": {
+     "GW": 0.0024,
+     "GV": 0.0
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 1,
+ "npas": 2,
+ "T_pas": 5000,
+ "T_pru": 20000,
+ "veredicto": "HUMO (no cuenta): NO SE LEE",
+ "nota": "",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20
+ },
+ "sigma": 0.03,
+ "delta": 0.01,
+ "vent": 5000,
+ "preregistro": "PREREGISTRO_perillas.md",
+ "sha_preregistro": null,
+ "sha_runner": "f98b98527155f029",
+ "shas_escalera": {
+  "corre_p1.py": "392b71186cf49b60",
+  "construye_p1.py": "90dc1b6f848fac80",
+  "mundo_escalera.py": "4f28b372207ba0a6",
+  "carros\\O1_LUGAR.py": "49eee6bb278ea097"
+ },
+ "shas_propios": {
+  "construye_perillas.py": "b5d1a10f6f913556",
+  "carros\\O1_LUGAR_GEN.py": "ecc996d2fecccc30",
+  "carros\\O1_LUGAR_GEN0.py": "89db6c8a74902fe1"
+ },
+ "mundo_escalera": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_fuente_transformada": "488e82252eece5f8",
+  "anclas": 9
+ },
+ "seg": 42.7
+}

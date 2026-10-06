@@ -1,0 +1,130 @@
+{
+ "sonda": 1,
+ "resumen": {
+  "brazos": {
+   "azar": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 6,
+    "cruzan_por_corrida": [
+     3,
+     3
+    ],
+    "establecidos": 13,
+    "R0_med": 0.6327,
+    "vida_med": 963.25,
+    "fund_media": 35.6667,
+    "mundo_AC": 6.3167,
+    "mundo_K": null,
+    "ratio_pasos_oasis": 6.2615,
+    "g_ef_1k": 2.7837,
+    "g_nom_1k": 4.5667,
+    "plus_ef_1k": 0.0804,
+    "plus_nom_1k": 0.3116,
+    "frac_llave": 0.1336,
+    "mord_K": 627,
+    "con": 701,
+    "sin": 4547,
+    "mord_AC": 10289,
+    "mord_BD": 6885
+   },
+   "piso": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 8,
+    "cruzan_por_corrida": [
+     4,
+     4
+    ],
+    "establecidos": 12,
+    "R0_med": 0.6606,
+    "vida_med": 805.75,
+    "fund_media": 41.2222,
+    "mundo_AC": 6.4985,
+    "mundo_K": null,
+    "ratio_pasos_oasis": 6.321,
+    "g_ef_1k": 2.6134,
+    "g_nom_1k": 4.0587,
+    "plus_ef_1k": 0.0019,
+    "plus_nom_1k": 0.0209,
+    "frac_llave": 0.0093,
+    "mord_K": 121,
+    "con": 47,
+    "sin": 5032,
+    "mord_AC": 9950,
+    "mord_BD": 7017
+   },
+   "techo": {
+    "n": 2,
+    "linajes": 18,
+    "cruzan": 6,
+    "cruzan_por_corrida": [
+     4,
+     2
+    ],
+    "establecidos": 14,
+    "R0_med": 0.8195,
+    "vida_med": 1164.0,
+    "fund_media": 25.7222,
+    "mundo_AC": 6.8081,
+    "mundo_K": null,
+    "ratio_pasos_oasis": 6.5745,
+    "g_ef_1k": 2.8306,
+    "g_nom_1k": 4.6564,
+    "plus_ef_1k": 0.0935,
+    "plus_nom_1k": 0.3565,
+    "frac_llave": 0.1508,
+    "mord_K": 600,
+    "con": 802,
+    "sin": 4514,
+    "mord_AC": 10107,
+    "mord_BD": 6705
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 100000,
+ "brazos": "piso,techo,azar",
+ "semillas": [
+  737200,
+  737201
+ ],
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "K",
+  "efecto_x": [
+   0.0,
+   0.0
+  ],
+  "p_x": 0.03,
+  "cerrojo": 0
+ },
+ "perillas_base": {
+  "plus": 0.4,
+  "d_plus": 600,
+  "extra_sin": null
+ },
+ "nota": "humo 1: mundo del encargo (extra 0.8 sin llave, +0.4 con llave, d 600, K p_x 0.03)",
+ "sha_runner": "43c7de29f2cc1be1",
+ "sha_mundo_plus": "70100a9a0efe98f0",
+ "carros": {
+  "O1_LUGAR_ORAC": "adc55edae3a6a9f5",
+  "O1_LUGAR_AZAR": "2b888d7de60d96b0",
+  "O1_LUGAR_ORAC0": "03f47a545b3a30e2"
+ },
+ "mundo_plus": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17,
+  "oasis": "OasisPlus",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "seg": 617.5
+}

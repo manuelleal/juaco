@@ -1,0 +1,221 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_ancla_o1f": null,
+   "V3_mundo_actua": true,
+   "V4_estado": true
+  },
+  "puertas": {
+   "PA_par_o1": false,
+   "PA_suma_o1": false,
+   "PB_par_bar": false,
+   "PB_suma_bar": false,
+   "PM_usa_el_lugar": false
+  },
+  "veredicto": "NO",
+  "matiz": null,
+  "en_umbral": false,
+  "umbrales": {
+   "gana_par": 2,
+   "dif_suma": 1,
+   "o1f_may": 2
+  },
+  "pareado_o1": {
+   "n": 2,
+   "gana": 0,
+   "empata": 0,
+   "pierde": 2,
+   "suma_a": 1,
+   "suma_b": 5,
+   "dif": -4,
+   "por_indice_a": [
+    1,
+    0
+   ],
+   "por_indice_b": [
+    3,
+    2
+   ]
+  },
+  "pareado_bar": {
+   "n": 2,
+   "gana": 0,
+   "empata": 0,
+   "pierde": 2,
+   "suma_a": 1,
+   "suma_b": 4,
+   "dif": -3,
+   "por_indice_a": [
+    1,
+    0
+   ],
+   "por_indice_b": [
+    3,
+    1
+   ]
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "lug": 1,
+    "bar": 4,
+    "o1": 5
+   },
+   "mayorias": {
+    "lug": 0,
+    "bar": 0,
+    "o1": 0
+   },
+   "R0_med": {
+    "lug": 0.5052,
+    "bar": 0.875,
+    "o1": 0.5209
+   },
+   "fund_media": {
+    "lug": 46.8333,
+    "bar": 38.9444,
+    "o1": 41.5556
+   },
+   "establecidos_0fund_post10k": {
+    "lug": 9,
+    "bar": 12,
+    "o1": 11
+   },
+   "vida_med": {
+    "lug": 1019.75,
+    "bar": 1896.0,
+    "o1": 1592.0
+   },
+   "mundo_AC": {
+    "lug": 2.2474,
+    "bar": 1.9264,
+    "o1": 2.0183
+   },
+   "mord_AC": {
+    "lug": 1525.5,
+    "bar": 1529.0,
+    "o1": 1506.0
+   },
+   "mord_BD": {
+    "lug": 740.5,
+    "bar": 774.5,
+    "o1": 752.5
+   },
+   "ratio_pasos_oasis": {
+    "lug": 1.0135,
+    "bar": 1.082,
+    "o1": 1.09
+   },
+   "ratio_mord_oasis": {
+    "lug": 1.0335,
+    "bar": 1.1185,
+    "o1": 1.019
+   },
+   "lugar": {
+    "lug": {
+     "bono_blancos": 15870.0,
+     "aprendizajes": 1458.0,
+     "max_med": 1.0365,
+     "bin_max_en_oasis": 7.5,
+     "bins_con_bono_med": 3.0,
+     "bins_con_bono_en_oasis": 1.0
+    },
+    "bar": {
+     "bono_blancos": 16972.0,
+     "aprendizajes": 1685.0,
+     "max_med": 0.9565,
+     "bin_max_en_oasis": 8.0,
+     "bins_con_bono_med": 3.0,
+     "bins_con_bono_en_oasis": 1.0
+    }
+   },
+   "pareados": {
+    "lug_vs_o1": {
+     "n": 2,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 2,
+     "suma_a": 1,
+     "suma_b": 5,
+     "dif": -4,
+     "por_indice_a": [
+      1,
+      0
+     ],
+     "por_indice_b": [
+      3,
+      2
+     ]
+    },
+    "lug_vs_bar": {
+     "n": 2,
+     "gana": 0,
+     "empata": 0,
+     "pierde": 2,
+     "suma_a": 1,
+     "suma_b": 4,
+     "dif": -3,
+     "por_indice_a": [
+      1,
+      0
+     ],
+     "por_indice_b": [
+      3,
+      1
+     ]
+    },
+    "bar_vs_o1": {
+     "n": 2,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 1,
+     "suma_a": 4,
+     "suma_b": 5,
+     "dif": -1,
+     "por_indice_a": [
+      3,
+      1
+     ],
+     "por_indice_b": [
+      3,
+      2
+     ]
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 30000,
+ "brazos": [
+  "lug",
+  "bar",
+  "o1"
+ ],
+ "semillas": [
+  739990,
+  739991
+ ],
+ "veredicto": "HUMO (no cuenta): NO",
+ "nota": "humo1",
+ "sha_runner": "6aa48e91663142ad",
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028"
+ },
+ "carros": {
+  "O1_LUGAR": "18a9604d5b76d97e",
+  "O1_LUGAR_BAR": "feac6801c64433cb",
+  "O1_LUGAR0": "aeade2c225e6e1c4"
+ },
+ "mundo": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_fuente_transformada": "c10ac3f1191d87b7",
+  "anclas": 7
+ },
+ "seg": 408.5
+}

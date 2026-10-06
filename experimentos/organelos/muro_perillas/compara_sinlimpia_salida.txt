@@ -1,0 +1,18 @@
+REGLA DE CPU: python.exe ajenos de trabajo 5 (totales 7) · tope 6
+mapa LIMPIA=0 s883001: cruzan 5/9 R0 0.9615 fund [0, 484, 0, 27, 0, 24, 0, 237, 0] B+D 2.0 estado {'carro': 'O1_MURO_GEN', 'sha': '2f88a0b447b48d32', 'PERILLAS': 1, 'PS_BASE': [0.0, 0.5, 1.0, 1.0, 0.0, 0.0], 'PS_APAGADO': [0.0, 0.5, 1.0, 1.0, 0.0, 0.0], 'PS_FABRICA': [0.25, 0.5, 0.35, 0.2, 1.0, 1.0], 'sigma': 0.0, 'delta': 0.0, 'camara': 0, 'siembra_n': 1, 'lee': 1, 'por_linaje': False}
+[144s] CANONICO CTRL_O1_SINLIMPIA (corre_v143.tarea, fundador limpio 1) s883001: cruzan 5/9 R0 0.9615 fund [0, 484, 0, 27, 0, 24, 0, 237, 0] B+D 2.0 causas {'hambre': 107, 'sed': 115, 'veneno': 354, 'sal': 414}
+  campo a campo (fila): IGUALES
+  escrito C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\mapa\canonico_CTRL_O1_SINLIMPIA_s883001_T100000.json
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "experimentos/organelos/muro_perillas\compara_sinlimpia.py", line 48, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "experimentos/organelos/muro_perillas\compara_sinlimpia.py", line 36, in main
+    for c in d['corridas']:
+             ~^^^^^^^^^^^^
+KeyError: 'corridas'
+crudo viejo SINLIMPIA (sellada 5001-5020, fundador_limpio None) con fila(): cruzan [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] suma 0/180 · R0 med 0.217 · fund med 52.5 · B+D 2.0 · establecidos 0

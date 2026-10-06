@@ -1,0 +1,246 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_se_muda": true,
+   "V3_mundo_actua": true,
+   "V4_estado": true,
+   "V5_modulo_actua": true
+  },
+  "puertas": {
+   "PA_par_lug": false,
+   "PA_suma_lug": false,
+   "PB_par_pregbar": false,
+   "PB_suma_pregbar": false,
+   "PF_fund_par": true,
+   "PM_latencia_par": true
+  },
+  "veredicto": "NO",
+  "matiz": null,
+  "en_umbral": true,
+  "umbrales": {
+   "gana_par": 1,
+   "dif_suma": 1
+  },
+  "pareado_lug": {
+   "n": 1,
+   "gana": 0,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 0,
+   "suma_b": 0,
+   "dif": 0,
+   "por_indice_a": [
+    0
+   ],
+   "por_indice_b": [
+    0
+   ]
+  },
+  "pareado_pregbar": {
+   "n": 1,
+   "gana": 0,
+   "empata": 1,
+   "pierde": 0,
+   "suma_a": 0,
+   "suma_b": 0,
+   "dif": 0,
+   "por_indice_a": [
+    0
+   ],
+   "por_indice_b": [
+    0
+   ]
+  },
+  "pareado_fund": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "pierde": 0,
+   "med_a": 0.0,
+   "med_b": 10.1111,
+   "por_indice_a": [
+    0.0
+   ],
+   "por_indice_b": [
+    10.11111111111111
+   ]
+  },
+  "pareado_latencia": {
+   "n": 1,
+   "gana": 1,
+   "empata": 0,
+   "pierde": 0,
+   "med_a": 560.0,
+   "med_b": 2450.0,
+   "por_indice_a": [
+    560.0
+   ],
+   "por_indice_b": [
+    2450.0
+   ]
+  },
+  "descriptivo": {
+   "suma_cruzan": {
+    "preg": 0,
+    "pregbar": 0,
+    "lug": 0
+   },
+   "mayorias": {
+    "preg": 0,
+    "pregbar": 0,
+    "lug": 0
+   },
+   "R0_med": {
+    "preg": 0.75,
+    "pregbar": 0.1333,
+    "lug": 0.4444
+   },
+   "fund_media": {
+    "preg": 0.0,
+    "pregbar": 8.7778,
+    "lug": 10.1111
+   },
+   "establecidos_0fund_post10k": {
+    "preg": 9,
+    "pregbar": 9,
+    "lug": 9
+   },
+   "vida_med": {
+    "preg": 2113.0,
+    "pregbar": 200.0,
+    "lug": 1000.0
+   },
+   "latencia_med": {
+    "preg": 560.0,
+    "pregbar": 10000.0,
+    "lug": 2450.0
+   },
+   "nunca_llegan": {
+    "preg": 1,
+    "pregbar": 15,
+    "lug": 12
+   },
+   "mundo_AC": {
+    "preg": 4.3838,
+    "pregbar": 9.4285,
+    "lug": 8.9284
+   },
+   "mundo_AC_cand_sobre_base": 0.491,
+   "ratio_pasos_oasis": {
+    "preg": 5.11,
+    "pregbar": 3.598,
+    "lug": 3.296
+   },
+   "excursiones": {
+    "preg": 24571.0,
+    "pregbar": 16543.0,
+    "lug": 0.0
+   },
+   "olvidos": {
+    "preg": 22606.0,
+    "pregbar": 6188.0,
+    "lug": 0.0
+   },
+   "pareados": {
+    "preg_vs_lug": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "preg_vs_pregbar": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    },
+    "pregbar_vs_lug": {
+     "n": 1,
+     "gana": 0,
+     "empata": 1,
+     "pierde": 0,
+     "suma_a": 0,
+     "suma_b": 0,
+     "dif": 0,
+     "por_indice_a": [
+      0
+     ],
+     "por_indice_b": [
+      0
+     ]
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 1,
+ "T": 10000,
+ "brazos": [
+  "preg",
+  "pregbar",
+  "lug"
+ ],
+ "semillas": [
+  739892,
+  739892
+ ],
+ "veredicto": "HUMO (no cuenta): NO",
+ "nota": "ERR-42: main() de corre_p10 de punta a punta con el runner final y los shas fijados; T 10k no cuenta",
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "mueve": 3000
+ },
+ "sha_runner": "4095be4a0baf78b2",
+ "shas_p10": {
+  "corre_p1.py": "392b71186cf49b60",
+  "construye_p1.py": "90dc1b6f848fac80",
+  "mundo_escalera.py": "4f28b372207ba0a6",
+  "mundo_tramo_c.py": "4a1044a4e0e1d5c9",
+  "construye_c.py": "024a89476109b997",
+  "corre_c.py": "01e4ad94dd06e133"
+ },
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028"
+ },
+ "carros": {
+  "O1_LUGAR_PREG": "4e12a5708ecb5dea",
+  "O1_LUGAR_PREG_BAR": "27489bd5d4431b85",
+  "O1_LUGAR_PREG0": "8d2e70c70ec651ff",
+  "O1_LUGAR": "49eee6bb278ea097"
+ },
+ "mundo_c": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 17
+ },
+ "seg": 76.9
+}

@@ -1,0 +1,6 @@
+sonda: 6 semillas · D por semilla (comp sobre memoria de lug) [0.25, 0.25, 0.5, 0.5, 0.5, 0.625] · mediana 0.5 · semillas con D > 0: 6/6
+NULO (memoria de lugar permutada, 600 semillas-permutacion): P(D de la semilla > 0) = 0.0150 · media -0.0013 · P(|D| > 0.1) = 0.0367
+  falso positivo de P1 (>= 15/20 semillas con D > 0) bajo el nulo: 6.33e-24 (cota con p0 x 5: 1.44e-13)
+  simulacion de 20 semillas (remuestreo, 20000): bajo el nulo P(P1 y mediana >= 0.4) = 0.0000 · P(P1 y mediana >= 0.25) = 0.0000
+  POTENCIA si la serie se parece a la sonda (remuestreo de 6 semillas; cruda): P(FUNCIONA por P1+P2) = 0.903 · P(al menos MODESTO) = 1.000
+  puerta P3 (|mediana de la permutada| <= 0.1) bajo el nulo, 20 semillas con media de 8 permutaciones: la mediana por semilla del nulo es 0 en 0.963 de los casos

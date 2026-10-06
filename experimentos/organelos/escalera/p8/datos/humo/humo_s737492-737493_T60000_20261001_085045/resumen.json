@@ -1,0 +1,470 @@
+{
+ "modo": "humo",
+ "letra": {
+  "validez": {
+   "V1_completa": true,
+   "V2_celda_retenida": true,
+   "V3_preguntar_no_cambia": true,
+   "V4_estado": true,
+   "V5_semillas_validas": true
+  },
+  "umbrales": {
+   "k_pos": 2,
+   "semillas_validas": 2,
+   "par_gana": 2,
+   "MIN_VAL": 3,
+   "MED_FUN": 0.4,
+   "MED_MOD": 0.25,
+   "PERM_MAX": 0.1,
+   "FGEN_MAX": 0.05,
+   "B_MAX": 0.1,
+   "ELIGE_MIN": 0.75,
+   "PAR_MED": 0.2
+  },
+  "brazos": {
+   "comp": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 12,
+    "validos_por_semilla": [
+     6,
+     6
+    ],
+    "D_semilla": [
+     0.25,
+     0.0
+    ],
+    "k_pos": 1,
+    "D_mediana": 0.125,
+    "D_media": 0.125,
+    "D_cero_exacto": false,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.25,
+    "L_E_fuera": 0.0,
+    "L_E_fgen": 0.0,
+    "L_D": 0.25,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.6842,
+    "S_E_fuera": 0.5733,
+    "elige_A": 1.0,
+    "elige_E": 0.0,
+    "eligeB_A": 1.0,
+    "eligeB_E": 0.0
+   },
+   "comp_perm": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 12,
+    "validos_por_semilla": [
+     6,
+     6
+    ],
+    "D_semilla": [
+     0.0,
+     0.0
+    ],
+    "k_pos": 0,
+    "D_mediana": 0.0,
+    "D_media": 0.0,
+    "D_cero_exacto": false,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.0234,
+    "L_E_fuera": 0.0156,
+    "L_E_fgen": 0.0365,
+    "L_D": 0.0078,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.5843,
+    "S_E_fuera": 0.581,
+    "elige_A": 1.0,
+    "elige_E": 0.0,
+    "eligeB_A": 1.0,
+    "eligeB_E": 0.0
+   },
+   "lug": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 12,
+    "validos_por_semilla": [
+     6,
+     6
+    ],
+    "D_semilla": [
+     0.0,
+     0.0
+    ],
+    "k_pos": 0,
+    "D_mediana": 0.0,
+    "D_media": 0.0,
+    "D_cero_exacto": true,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.0,
+    "L_E_fuera": 0.0,
+    "L_E_fgen": 0.0,
+    "L_D": 0.0,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.56,
+    "S_E_fuera": 0.56,
+    "elige_A": 1.0,
+    "elige_E": 0.0,
+    "eligeB_A": 1.0,
+    "eligeB_E": 0.0
+   },
+   "comp_s": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 12,
+    "validos_por_semilla": [
+     6,
+     6
+    ],
+    "D_semilla": [
+     0.25,
+     0.375
+    ],
+    "k_pos": 2,
+    "D_mediana": 0.3125,
+    "D_media": 0.3125,
+    "D_cero_exacto": false,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.3958,
+    "L_E_fuera": 0.0,
+    "L_E_fgen": 0.0,
+    "L_D": 0.3958,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.7375,
+    "S_E_fuera": 0.56,
+    "elige_A": 1.0,
+    "elige_E": 0.0,
+    "eligeB_A": 1.0,
+    "eligeB_E": 0.0
+   },
+   "comp2": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 13,
+    "validos_por_semilla": [
+     6,
+     7
+    ],
+    "D_semilla": [
+     1.0,
+     0.75
+    ],
+    "k_pos": 2,
+    "D_mediana": 0.875,
+    "D_media": 0.875,
+    "D_cero_exacto": false,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.8482,
+    "L_E_fuera": 0.0,
+    "L_E_fgen": 0.0,
+    "L_D": 0.8482,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.9363,
+    "S_E_fuera": 0.5719,
+    "elige_A": 0.7308,
+    "elige_E": 0.2692,
+    "eligeB_A": 0.9785,
+    "eligeB_E": 0.0215
+   },
+   "comp2_perm": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 13,
+    "validos_por_semilla": [
+     6,
+     7
+    ],
+    "D_semilla": [
+     -0.0312,
+     0.0
+    ],
+    "k_pos": 0,
+    "D_mediana": -0.0156,
+    "D_media": -0.0156,
+    "D_cero_exacto": false,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.0949,
+    "L_E_fuera": 0.1079,
+    "L_E_fgen": 0.1049,
+    "L_D": -0.013,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.6126,
+    "S_E_fuera": 0.6185,
+    "elige_A": 0.9429,
+    "elige_E": 0.0571,
+    "eligeB_A": 0.9975,
+    "eligeB_E": 0.0025
+   },
+   "comp2sg": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 13,
+    "validos_por_semilla": [
+     6,
+     7
+    ],
+    "D_semilla": [
+     1.0,
+     0.75
+    ],
+    "k_pos": 2,
+    "D_mediana": 0.875,
+    "D_media": 0.875,
+    "D_cero_exacto": false,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.8482,
+    "L_E_fuera": 0.0,
+    "L_E_fgen": 0.0,
+    "L_D": 0.8482,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.4256,
+    "S_E_dentro": 0.9363,
+    "S_E_fuera": 0.5719,
+    "elige_A": 0.7308,
+    "elige_E": 0.2692,
+    "eligeB_A": 0.9785,
+    "eligeB_E": 0.0215
+   },
+   "lug2": {
+    "n": 2,
+    "semillas_validas": 2,
+    "linajes_validos": 13,
+    "validos_por_semilla": [
+     6,
+     7
+    ],
+    "D_semilla": [
+     0.0,
+     0.0
+    ],
+    "k_pos": 0,
+    "D_mediana": 0.0,
+    "D_media": 0.0,
+    "D_cero_exacto": true,
+    "spearman_D_vs_validos": null,
+    "L_E_dentro": 0.0,
+    "L_E_fuera": 0.0,
+    "L_E_fgen": 0.0,
+    "L_D": 0.0,
+    "L_A_dentro": 1.0,
+    "L_B_dentro": 0.0,
+    "S_E_dentro": 0.5719,
+    "S_E_fuera": 0.5719,
+    "elige_A": 1.0,
+    "elige_E": 0.0,
+    "eligeB_A": 1.0,
+    "eligeB_E": 0.0
+   }
+  },
+  "puertas": {
+   "comp": {
+    "P1_semillas_D_pos": false,
+    "P2_mediana_fun": false,
+    "P2m_mediana_mod": false,
+    "P3_permutada": true,
+    "P4_sin_composicion_cero": true,
+    "P5_fuera_general": true,
+    "P6_B_dentro_rechazada": true,
+    "P7_A_sobre_E": true
+   },
+   "comp2": {
+    "P1_semillas_D_pos": true,
+    "P2_mediana_fun": true,
+    "P2m_mediana_mod": true,
+    "P3_permutada": true,
+    "P4_sin_composicion_cero": true,
+    "P5_fuera_general": true,
+    "P6_B_dentro_rechazada": true,
+    "P7_A_sobre_E": true
+   }
+  },
+  "veredictos": {
+   "comp": "NO",
+   "comp2": "FUNCIONA"
+  },
+  "pareado_comp2_vs_comp": {
+   "gana": 2,
+   "empata": 0,
+   "pierde": 0,
+   "dif_mediana": 0.75,
+   "dif": [
+    0.75,
+    0.75
+   ]
+  },
+  "mejora": "COMP2 MEJORA",
+  "en_umbral": true,
+  "trampas": {
+   "comp": {
+    "cruzan": 3,
+    "establecidos": 12,
+    "mundo_AC": 6.7386,
+    "vida_med": 499.75,
+    "R0_med": 0.34,
+    "mord_AC": 5627,
+    "mord_BD": 4002,
+    "lg2_omit": 0,
+    "linajes_validos": 12,
+    "ratio_pasos_oasis": 6.2955
+   },
+   "lug": {
+    "cruzan": 6,
+    "establecidos": 12,
+    "mundo_AC": 6.3021,
+    "vida_med": 1094.5,
+    "R0_med": 0.8195,
+    "mord_AC": 5669,
+    "mord_BD": 4013,
+    "lg2_omit": 0,
+    "linajes_validos": 12,
+    "ratio_pasos_oasis": 6.0985
+   },
+   "comp2": {
+    "cruzan": 3,
+    "establecidos": 13,
+    "mundo_AC": 7.9134,
+    "vida_med": 1717.5,
+    "R0_med": 0.6666,
+    "mord_AC": 5332,
+    "mord_BD": 3876,
+    "lg2_omit": 5393,
+    "linajes_validos": 13,
+    "ratio_pasos_oasis": 6.7485
+   },
+   "pareado_cruzan": {
+    "comp2_vs_lug": {
+     "gana": 0,
+     "empata": 1,
+     "pierde": 1,
+     "suma_a": 3,
+     "suma_b": 6
+    },
+    "comp2_vs_comp": {
+     "gana": 1,
+     "empata": 0,
+     "pierde": 1,
+     "suma_a": 3,
+     "suma_b": 3
+    },
+    "comp_vs_lug": {
+     "gana": 0,
+     "empata": 0,
+     "pierde": 2,
+     "suma_a": 3,
+     "suma_b": 6
+    }
+   }
+  }
+ },
+ "abortos": [],
+ "n": 2,
+ "T": 60000,
+ "semillas": [
+  737492,
+  737493
+ ],
+ "veredicto": "HUMO (no cuenta): COMP NO · COMP2 FUNCIONA · COMP2 MEJORA · EN EL UMBRAL (+-1)",
+ "nota": "humo 2: main de punta a punta con la Enmienda 1 (ERR-179: P7 en el mismo bin); semillas nuevas",
+ "crianza": {
+  "comp": "O1_LUGAR_COMP",
+  "lug": "O1_LUGAR",
+  "comp2": "O1_LUGAR_COMP2"
+ },
+ "preguntas": {
+  "comp": [
+   [
+    "comp",
+    "O1_LUGAR_COMP",
+    0
+   ],
+   [
+    "comp_perm",
+    "O1_LUGAR_COMP",
+    1
+   ]
+  ],
+  "lug": [
+   [
+    "lug",
+    "O1_LUGAR",
+    0
+   ],
+   [
+    "comp_s",
+    "O1_LUGAR_COMP",
+    0
+   ]
+  ],
+  "comp2": [
+   [
+    "comp2",
+    "O1_LUGAR_COMP2",
+    0
+   ],
+   [
+    "comp2_perm",
+    "O1_LUGAR_COMP2",
+    1
+   ],
+   [
+    "comp2sg",
+    "O1_LUGAR_COMP2SG",
+    0
+   ],
+   [
+    "lug2",
+    "O1_LUGAR",
+    0
+   ]
+  ]
+ },
+ "mundo": {
+  "oasis": 1,
+  "extra": 0.8,
+  "pobre": 0.5,
+  "dens": 0.5,
+  "vista_r": 20,
+  "letra_x": "E",
+  "efecto_x": [
+   0.3,
+   -0.1
+  ],
+  "p_x": 0.15
+ },
+ "retenida": 1,
+ "sha_runner": "f6e2b51a57d8b23a",
+ "shas": {
+  "experimentos\\tronco_v14_3\\corre_v143.py": "24100621c450da22",
+  "experimentos\\carrera_escuderias\\pista.py": "9f47c65e438e0ff4",
+  "experimentos\\carrera_escuderias\\juez.py": "6a68f640a7832f12",
+  "experimentos\\carrera_escuderias\\carros\\O1.py": "99436afa2715f028",
+  "experimentos\\organelos\\escalera\\sondas\\mundo_ret.py": "0b0d84552d176569",
+  "experimentos\\organelos\\escalera\\sondas\\corre_s2.py": "6977e4869261f3da",
+  "experimentos\\organelos\\escalera\\corre_c.py": "01e4ad94dd06e133"
+ },
+ "carros": {
+  "O1_LUGAR_COMP2": "f7437e8f82576d03",
+  "O1_LUGAR_COMP2SG": "e8df122158a0b9cd",
+  "O1_LUGAR_COMP2_0": "9f4004efb50961cc",
+  "O1_LUGAR_COMP": "c75b4cdb9eec933d"
+ },
+ "mundo_ret": {
+  "sha_pista": "9f47c65e438e0ff4",
+  "sha_juez": "6a68f640a7832f12",
+  "sha_mundo_escalera": "4f28b372207ba0a6",
+  "sha_fuente_transformada": "7e2e177748dcd156",
+  "anclas": 18,
+  "oasis": "OasisRet",
+  "sha_fuente_ret": "eff0e8d37d9556a2",
+  "sha_mundo_tramo_c": "4a1044a4e0e1d5c9"
+ },
+ "pool": 0,
+ "seg": 512.1
+}

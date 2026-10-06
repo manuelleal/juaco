@@ -1,0 +1,321 @@
+=== Thu Oct  1 11:43:03 HPS 2026 | mapa del muro, un proceso ===
+  O1_MURO_GEN: en disco == construido: True (sha 2f88a0b447b48d32)
+  O1_MURO_GEN0: en disco == construido: True (sha 36e00ceeb41b8ccb)
+  (F) letra de la serie: GEN_LETRA no fijado (se fija tras el mapa; sin casos sinteticos todavia)
+
+ARNES FALLA, 31/33 (495.8s)
+[11:51:20] CORRE_MURO_PERILLAS · humo · 20261001_115120 · python 3.14.2 · pool NO (un proceso) · runner 858817bcc0d421fb · nota ''
+[11:51:20]   REGLA DE CPU: python.exe ajenos de TRABAJO 5 (totales 7; los padres ociosos de Pool no cuentan) · tope 6
+[11:51:20]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[11:51:20]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[11:51:20]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[11:51:20]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[11:51:20]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[11:51:20]   sha muro_perillas/construye_muro_perillas.py 4b7092184a16f4ca OK (NO FIJADO: solo humo/mapa)
+[11:51:20]   sha muro_perillas/carros\O1_MURO_GEN.py 2f88a0b447b48d32 OK (NO FIJADO: solo humo/mapa)
+[11:51:20]   sha muro_perillas/carros\O1_MURO_GEN0.py 36e00ceeb41b8ccb OK (NO FIJADO: solo humo/mapa)
+[11:51:20]   carro O1_MURO_GEN == construye_muro_perillas: True
+[11:51:20]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[11:51:35]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[11:51:39]   [3.5s] off s883990 genoma {'MARGEN': 0.0, 'PRUEBA': 0.5, 'PEN_OTRO': 1.0, 'PISO': 1.0, 'LIMPIA': 0.0, 'HUECO': 0.0} · cruzan 0/9 mayoria 0 R0 real med 0.0 fund med 0.0 estab 9/9 · vida 2000.0 · causas {'hambre': 1, 'sed': 0, 'veneno': 3, 'sal': 4} · B+D 2.0 A+C 9.0 · mundo AC 14.4575 sin bueno 0.0 · coherente True
+[11:51:42]   [3.4s] fab s883990 genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 real med 0.0 fund med 0.0 estab 9/9 · vida 2000.0 · causas {'hambre': 0, 'sed': 0, 'veneno': 0, 'sal': 0} · B+D 7.0 A+C 16.0 · mundo AC 5.028 sin bueno 0.0145 · coherente True
+[11:51:49]   regla 14 (ENTRADA campo a campo): fab fijo == corre_v143.tarea('O1') (s 883990, T 2000): FALLA
+[11:51:49]   RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\humo\humo_20261001_115120\resumen.json · HUMO (no cuenta) · 29.1s
+[11:51:49] CORRE_MURO_PERILLAS · mapa · 20261001_115149 · python 3.14.2 · pool NO (un proceso) · runner 858817bcc0d421fb · nota ''
+[11:51:49]   REGLA DE CPU: python.exe ajenos de TRABAJO 5 (totales 7; los padres ociosos de Pool no cuentan) · tope 6
+[11:51:49]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[11:51:49]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[11:51:49]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[11:51:49]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[11:51:49]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[11:51:49]   sha muro_perillas/construye_muro_perillas.py 4b7092184a16f4ca OK (NO FIJADO: solo humo/mapa)
+[11:51:49]   sha muro_perillas/carros\O1_MURO_GEN.py 2f88a0b447b48d32 OK (NO FIJADO: solo humo/mapa)
+[11:51:49]   sha muro_perillas/carros\O1_MURO_GEN0.py 36e00ceeb41b8ccb OK (NO FIJADO: solo humo/mapa)
+[11:51:49]   carro O1_MURO_GEN == construye_muro_perillas: True
+[11:51:49]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[11:52:05]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[11:54:56]   [171.4s] mix:8xPISO=0.2+1xPISO=0.6 s883001 genoma MIXTA · cruzan 8/9 mayoria 1 R0 real med 0.9231 fund med 0.0 estab 8/9 · vida 3887.5 · causas {'hambre': 44, 'sed': 45, 'veneno': 61, 'sal': 86} · B+D 378.0 A+C 691.0 · mundo AC 2.0364 sin bueno 0.0402 · coherente True
+[11:54:56]       linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 378 A+C 733 limpiezas 376
+[11:54:56]       linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 362 A+C 704 limpiezas 360
+[11:54:56]       linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9565 fund 0 B+D 360 A+C 676 limpiezas 358
+[11:54:56]       linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 389 A+C 713 limpiezas 387
+[11:54:56]       linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 381 A+C 679 limpiezas 379
+[11:54:56]       linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 325 A+C 691 limpiezas 323
+[11:54:56]       linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 379 A+C 713 limpiezas 377
+[11:54:56]       linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.096 fund 112 B+D 417 A+C 530 limpiezas 409
+[11:54:56]       linaje 8 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9286 fund 0 B+D 347 A+C 678 limpiezas 345
+[11:57:56]   [180.0s] mix:8xPISO=0.6+1xPISO=0.2 s883001 genoma MIXTA · cruzan 8/9 mayoria 1 R0 real med 0.9231 fund med 0.0 estab 8/9 · vida 4080.0 · causas {'hambre': 61, 'sed': 56, 'veneno': 143, 'sal': 143} · B+D 333.0 A+C 650.0 · mundo AC 1.9235 sin bueno 0.0944 · coherente True
+[11:57:56]       linaje 0 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 0 R0 0.024 fund 284 B+D 454 A+C 289 limpiezas 444
+[11:57:56]       linaje 1 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 347 A+C 676 limpiezas 345
+[11:57:56]       linaje 2 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9091 fund 0 B+D 328 A+C 661 limpiezas 326
+[11:57:56]       linaje 3 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 326 A+C 649 limpiezas 324
+[11:57:56]       linaje 4 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 352 A+C 694 limpiezas 350
+[11:57:56]       linaje 5 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 283 A+C 643 limpiezas 281
+[11:57:56]       linaje 6 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 329 A+C 639 limpiezas 327
+[11:57:56]       linaje 7 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 333 A+C 650 limpiezas 331
+[11:57:56]       linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.95 fund 0 B+D 388 A+C 680 limpiezas 386
+[12:00:45]   [168.7s] mix:8xfab+1xLIMPIA=0 s883001 genoma MIXTA · cruzan 6/9 mayoria 1 R0 real med 0.9231 fund med 0.0 estab 7/9 · vida 4731.5 · causas {'hambre': 39, 'sed': 33, 'veneno': 382, 'sal': 375} · B+D 333.0 A+C 700.0 · mundo AC 2.3002 sin bueno 0.0389 · coherente True
+[12:00:45]       linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0311 fund 248 B+D 509 A+C 422 limpiezas 487
+[12:00:45]       linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 344 A+C 703 limpiezas 342
+[12:00:45]       linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 333 A+C 701 limpiezas 331
+[12:00:45]       linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 349 A+C 730 limpiezas 347
+[12:00:45]       linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0 fund 480 B+D 564 A+C 84 limpiezas 538
+[12:00:45]       linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 711 limpiezas 316
+[12:00:45]       linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 700 limpiezas 316
+[12:00:45]       linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 305 A+C 682 limpiezas 303
+[12:00:45]       linaje 8 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.8333 fund 0 B+D 2 A+C 599 limpiezas 0
+[12:03:12]   [147.4s] mix:8xLIMPIA=0+1xfab s883001 genoma MIXTA · cruzan 6/9 mayoria 1 R0 real med 0.9167 fund med 0.0 estab 6/9 · vida 4823.0 · causas {'hambre': 42, 'sed': 45, 'veneno': 569, 'sal': 563} · B+D 2.0 A+C 523.0 · mundo AC 1.9348 sin bueno 0.2023 · coherente True
+[12:03:12]       linaje 0 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 523 limpiezas 0
+[12:03:12]       linaje 1 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0041 fund 487 B+D 499 A+C 41 limpiezas 476
+[12:03:12]       linaje 2 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 524 limpiezas 0
+[12:03:12]       linaje 3 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 515 limpiezas 0
+[12:03:12]       linaje 4 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 530 limpiezas 0
+[12:03:12]       linaje 5 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9 fund 0 B+D 2 A+C 551 limpiezas 0
+[12:03:12]       linaje 6 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 537 limpiezas 0
+[12:03:12]       linaje 7 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0588 fund 159 B+D 165 A+C 346 limpiezas 157
+[12:03:12]       linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.002 fund 487 B+D 536 A+C 66 limpiezas 506
+[12:03:12] MAPA (genomas fijos, pista vieja, 9 linajes por corrida, T 100000) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\mapa
+[12:03:12]   genoma                      semillas   cruzan/9 por semilla  suma  R0 real med  fund med   estab   vida  causas h/s/v/sal  B+D  A+C  mundoAC
+[12:03:12]   mix:8xPISO=0.2+1xPISO=0.6   [883001]                    [8]     8       0.9231       0.0     [8] 3887.5  44/45/61/86  378.0  691.0  2.0364
+[12:03:12]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 378 A+C 733 limpiezas 376
+[12:03:12]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 362 A+C 704 limpiezas 360
+[12:03:12]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9565 fund 0 B+D 360 A+C 676 limpiezas 358
+[12:03:12]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 389 A+C 713 limpiezas 387
+[12:03:12]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 381 A+C 679 limpiezas 379
+[12:03:12]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 325 A+C 691 limpiezas 323
+[12:03:12]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 379 A+C 713 limpiezas 377
+[12:03:12]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.096 fund 112 B+D 417 A+C 530 limpiezas 409
+[12:03:12]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9286 fund 0 B+D 347 A+C 678 limpiezas 345
+[12:03:12]   mix:8xPISO=0.6+1xPISO=0.2   [883001]                    [8]     8       0.9231       0.0     [8] 4080.0  61/56/143/143  333.0  650.0  1.9235
+[12:03:12]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 0 R0 0.024 fund 284 B+D 454 A+C 289 limpiezas 444
+[12:03:12]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 347 A+C 676 limpiezas 345
+[12:03:12]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9091 fund 0 B+D 328 A+C 661 limpiezas 326
+[12:03:12]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 326 A+C 649 limpiezas 324
+[12:03:12]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 352 A+C 694 limpiezas 350
+[12:03:12]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 283 A+C 643 limpiezas 281
+[12:03:12]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 329 A+C 639 limpiezas 327
+[12:03:12]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 333 A+C 650 limpiezas 331
+[12:03:12]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.95 fund 0 B+D 388 A+C 680 limpiezas 386
+[12:03:12]   mix:8xfab+1xLIMPIA=0        [883001]                    [6]     6       0.9231       0.0     [7] 4731.5  39/33/382/375  333.0  700.0  2.3002
+[12:03:12]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0311 fund 248 B+D 509 A+C 422 limpiezas 487
+[12:03:12]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 344 A+C 703 limpiezas 342
+[12:03:12]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 333 A+C 701 limpiezas 331
+[12:03:12]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 349 A+C 730 limpiezas 347
+[12:03:12]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0 fund 480 B+D 564 A+C 84 limpiezas 538
+[12:03:12]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 711 limpiezas 316
+[12:03:12]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 700 limpiezas 316
+[12:03:12]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 305 A+C 682 limpiezas 303
+[12:03:12]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.8333 fund 0 B+D 2 A+C 599 limpiezas 0
+[12:03:12]   mix:8xLIMPIA=0+1xfab        [883001]                    [6]     6       0.9167       0.0     [6] 4823.0  42/45/569/563  2.0  523.0  1.9348
+[12:03:12]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 523 limpiezas 0
+[12:03:12]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0041 fund 487 B+D 499 A+C 41 limpiezas 476
+[12:03:12]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 524 limpiezas 0
+[12:03:12]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 515 limpiezas 0
+[12:03:12]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 530 limpiezas 0
+[12:03:12]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9 fund 0 B+D 2 A+C 551 limpiezas 0
+[12:03:12]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 537 limpiezas 0
+[12:03:12]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0588 fund 159 B+D 165 A+C 346 limpiezas 157
+[12:03:12]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.002 fund 487 B+D 536 A+C 66 limpiezas 506
+[12:03:12]   683.2s
+[12:03:13] CORRE_MURO_PERILLAS · mapa · 20261001_120313 · python 3.14.2 · pool NO (un proceso) · runner 858817bcc0d421fb · nota ''
+[12:03:13]   REGLA DE CPU: python.exe ajenos de TRABAJO 5 (totales 7; los padres ociosos de Pool no cuentan) · tope 6
+[12:03:13]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[12:03:13]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[12:03:13]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[12:03:13]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[12:03:13]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[12:03:13]   sha muro_perillas/construye_muro_perillas.py 4b7092184a16f4ca OK (NO FIJADO: solo humo/mapa)
+[12:03:13]   sha muro_perillas/carros\O1_MURO_GEN.py 2f88a0b447b48d32 OK (NO FIJADO: solo humo/mapa)
+[12:03:13]   sha muro_perillas/carros\O1_MURO_GEN0.py 36e00ceeb41b8ccb OK (NO FIJADO: solo humo/mapa)
+[12:03:13]   carro O1_MURO_GEN == construye_muro_perillas: True
+[12:03:13]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[12:03:28]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[12:05:50]   [142.0s] LIMPIA=0 s883001 genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 0.0, 'HUECO': 1.0} · cruzan 5/9 mayoria 1 R0 real med 0.9615 fund med 0.0 estab 7/9 · vida 1550.0 · causas {'hambre': 107, 'sed': 115, 'veneno': 354, 'sal': 414} · B+D 2.0 A+C 447.0 · mundo AC 1.4264 sin bueno 0.3096 · coherente True
+[12:08:34]   [164.2s] HUECO=0 s883001 genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 0.0} · cruzan 7/9 mayoria 1 R0 real med 0.9545 fund med 0.0 estab 8/9 · vida 2460.0 · causas {'hambre': 76, 'sed': 54, 'veneno': 164, 'sal': 134} · B+D 327.0 A+C 636.0 · mundo AC 2.1142 sin bueno 0.0413 · coherente True
+[12:11:22]   [167.6s] MARGEN=0.1+PISO=0.6 s883001 genoma {'MARGEN': 0.1, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.6, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 3/9 mayoria 0 R0 real med 0.875 fund med 0.0 estab 8/9 · vida 9201.5 · causas {'hambre': 26, 'sed': 37, 'veneno': 99, 'sal': 109} · B+D 243.0 A+C 571.0 · mundo AC 2.4827 sin bueno 0.0665 · coherente True
+[12:14:10]   [167.7s] MARGEN=0.06+PISO=0.4 s883001 genoma {'MARGEN': 0.06, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.4, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 1/9 mayoria 0 R0 real med 0.8333 fund med 0.0 estab 8/9 · vida 10620.5 · causas {'hambre': 34, 'sed': 29, 'veneno': 27, 'sal': 39} · B+D 262.0 A+C 544.0 · mundo AC 2.6047 sin bueno 0.0326 · coherente True
+[12:17:10]   [180.4s] MARGEN=0.1+PISO=1.0 s883001 genoma {'MARGEN': 0.1, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 1.0, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 4/9 mayoria 0 R0 real med 0.875 fund med 0.0 estab 7/9 · vida 4036.0 · causas {'hambre': 44, 'sed': 44, 'veneno': 271, 'sal': 265} · B+D 164.0 A+C 525.0 · mundo AC 2.3038 sin bueno 0.1509 · coherente True
+[12:19:42]   [152.3s] off s883001 genoma {'MARGEN': 0.0, 'PRUEBA': 0.5, 'PEN_OTRO': 1.0, 'PISO': 1.0, 'LIMPIA': 0.0, 'HUECO': 0.0} · cruzan 0/9 mayoria 0 R0 real med 0.0 fund med 65.0 estab 0/9 · vida 200.0 · causas {'hambre': 18, 'sed': 10, 'veneno': 281, 'sal': 323} · B+D 74.0 A+C 309.0 · mundo AC 4.9501 sin bueno 0.0468 · coherente True
+[12:19:42] MAPA (genomas fijos, pista vieja, 9 linajes por corrida, T 100000) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\mapa
+[12:19:42]   genoma                      semillas   cruzan/9 por semilla  suma  R0 real med  fund med   estab   vida  causas h/s/v/sal  B+D  A+C  mundoAC
+[12:19:42]   LIMPIA=0                    [883001]                    [5]     5       0.9615       0.0     [7] 1550.0  107/115/354/414  2.0  447.0  1.4264
+[12:19:42]   HUECO=0                     [883001]                    [7]     7       0.9545       0.0     [8] 2460.0  76/54/164/134  327.0  636.0  2.1142
+[12:19:42]   MARGEN=0.1+PISO=0.6         [883001]                    [3]     3        0.875       0.0     [8] 9201.5  26/37/99/109  243.0  571.0  2.4827
+[12:19:42]   MARGEN=0.06+PISO=0.4        [883001]                    [1]     1       0.8333       0.0     [8] 10620.5  34/29/27/39  262.0  544.0  2.6047
+[12:19:42]   MARGEN=0.1+PISO=1.0         [883001]                    [4]     4        0.875       0.0     [7] 4036.0  44/44/271/265  164.0  525.0  2.3038
+[12:19:42]   off                         [883001]                    [0]     0          0.0      65.0     [0]  200.0  18/10/281/323  74.0  309.0  4.9501
+[12:19:42]   mix:8xPISO=0.2+1xPISO=0.6   [883001]                    [8]     8       0.9231       0.0     [8] 3887.5  44/45/61/86  378.0  691.0  2.0364
+[12:19:42]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 378 A+C 733 limpiezas 376
+[12:19:42]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 362 A+C 704 limpiezas 360
+[12:19:42]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9565 fund 0 B+D 360 A+C 676 limpiezas 358
+[12:19:42]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 389 A+C 713 limpiezas 387
+[12:19:42]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 381 A+C 679 limpiezas 379
+[12:19:42]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 325 A+C 691 limpiezas 323
+[12:19:42]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 379 A+C 713 limpiezas 377
+[12:19:42]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.096 fund 112 B+D 417 A+C 530 limpiezas 409
+[12:19:42]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9286 fund 0 B+D 347 A+C 678 limpiezas 345
+[12:19:42]   mix:8xPISO=0.6+1xPISO=0.2   [883001]                    [8]     8       0.9231       0.0     [8] 4080.0  61/56/143/143  333.0  650.0  1.9235
+[12:19:42]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 0 R0 0.024 fund 284 B+D 454 A+C 289 limpiezas 444
+[12:19:42]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 347 A+C 676 limpiezas 345
+[12:19:42]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9091 fund 0 B+D 328 A+C 661 limpiezas 326
+[12:19:42]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 326 A+C 649 limpiezas 324
+[12:19:42]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 352 A+C 694 limpiezas 350
+[12:19:42]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 283 A+C 643 limpiezas 281
+[12:19:42]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 329 A+C 639 limpiezas 327
+[12:19:42]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 333 A+C 650 limpiezas 331
+[12:19:42]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.95 fund 0 B+D 388 A+C 680 limpiezas 386
+[12:19:42]   mix:8xfab+1xLIMPIA=0        [883001]                    [6]     6       0.9231       0.0     [7] 4731.5  39/33/382/375  333.0  700.0  2.3002
+[12:19:42]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0311 fund 248 B+D 509 A+C 422 limpiezas 487
+[12:19:42]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 344 A+C 703 limpiezas 342
+[12:19:42]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 333 A+C 701 limpiezas 331
+[12:19:42]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 349 A+C 730 limpiezas 347
+[12:19:42]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0 fund 480 B+D 564 A+C 84 limpiezas 538
+[12:19:42]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 711 limpiezas 316
+[12:19:42]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 700 limpiezas 316
+[12:19:42]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 305 A+C 682 limpiezas 303
+[12:19:42]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.8333 fund 0 B+D 2 A+C 599 limpiezas 0
+[12:19:42]   mix:8xLIMPIA=0+1xfab        [883001]                    [6]     6       0.9167       0.0     [6] 4823.0  42/45/569/563  2.0  523.0  1.9348
+[12:19:42]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 523 limpiezas 0
+[12:19:42]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0041 fund 487 B+D 499 A+C 41 limpiezas 476
+[12:19:42]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 524 limpiezas 0
+[12:19:42]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 515 limpiezas 0
+[12:19:42]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 530 limpiezas 0
+[12:19:42]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9 fund 0 B+D 2 A+C 551 limpiezas 0
+[12:19:42]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 537 limpiezas 0
+[12:19:42]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0588 fund 159 B+D 165 A+C 346 limpiezas 157
+[12:19:42]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.002 fund 487 B+D 536 A+C 66 limpiezas 506
+[12:19:42]   989.7s
+[12:19:43] CORRE_MURO_PERILLAS · mapa · 20261001_121943 · python 3.14.2 · pool NO (un proceso) · runner 858817bcc0d421fb · nota ''
+[12:19:43]   REGLA DE CPU: python.exe ajenos de TRABAJO 4 (totales 6; los padres ociosos de Pool no cuentan) · tope 6
+[12:19:43]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[12:19:43]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[12:19:43]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[12:19:43]   sha experimentos\carrera_escuderias\carros\CTRL_O1_SINLIMPIA.py be029b0a1b8d6634 OK
+[12:19:43]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[12:19:43]   sha muro_perillas/construye_muro_perillas.py 4b7092184a16f4ca OK (NO FIJADO: solo humo/mapa)
+[12:19:43]   sha muro_perillas/carros\O1_MURO_GEN.py 2f88a0b447b48d32 OK (NO FIJADO: solo humo/mapa)
+[12:19:43]   sha muro_perillas/carros\O1_MURO_GEN0.py 36e00ceeb41b8ccb OK (NO FIJADO: solo humo/mapa)
+[12:19:43]   carro O1_MURO_GEN == construye_muro_perillas: True
+[12:19:43]   carro O1_MURO_GEN0 == construye_muro_perillas: True
+[12:19:58]   IDENTIDAD CORTA MURO_PERILLAS (salida ENTERA, N 9, s 883950, T 1500): GEN dosis 1 sigma 0 == O1 True · GEN LIMPIA 0 == CTRL_O1_SINLIMPIA True · GEN PS_LEE 0 sigma 0.03 camara 1 desde la base == O1 True · control todo apagado != O1 True
+[12:22:46]   [167.7s] MARGEN=0.0 s883001 genoma {'MARGEN': 0.0, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 real med 0.0 fund med 8.0 estab 5/9 · vida 200.0 · causas {'hambre': 4, 'sed': 5, 'veneno': 127, 'sal': 109} · B+D 113.0 A+C 398.0 · mundo AC 4.9485 sin bueno 0.0055 · coherente True
+[12:25:32]   [166.7s] MARGEN=0.03 s883001 genoma {'MARGEN': 0.03, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 0/9 mayoria 0 R0 real med 0.8333 fund med 0.0 estab 8/9 · vida 10190.5 · causas {'hambre': 13, 'sed': 22, 'veneno': 70, 'sal': 70} · B+D 215.0 A+C 508.0 · mundo AC 3.1874 sin bueno 0.0136 · coherente True
+[12:28:20]   [168.1s] MARGEN=0.06 s883001 genoma {'MARGEN': 0.06, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 3/9 mayoria 0 R0 real med 0.8571 fund med 0.0 estab 8/9 · vida 7327.0 · causas {'hambre': 19, 'sed': 26, 'veneno': 149, 'sal': 161} · B+D 234.0 A+C 559.0 · mundo AC 2.9409 sin bueno 0.0171 · coherente True
+[12:31:13]   [172.5s] MARGEN=0.1 s883001 genoma {'MARGEN': 0.1, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 8/9 mayoria 1 R0 real med 0.9444 fund med 0.0 estab 8/9 · vida 3593.0 · causas {'hambre': 55, 'sed': 54, 'veneno': 51, 'sal': 43} · B+D 300.0 A+C 572.0 · mundo AC 2.2961 sin bueno 0.0401 · coherente True
+[12:34:03]   [169.6s] fab s883001 genoma {'MARGEN': 0.25, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 4/9 mayoria 0 R0 real med 0.8889 fund med 0.0 estab 7/9 · vida 3111.5 · causas {'hambre': 33, 'sed': 43, 'veneno': 266, 'sal': 251} · B+D 332.0 A+C 686.0 · mundo AC 2.2353 sin bueno 0.0314 · coherente True
+[12:36:44]   [161.4s] MARGEN=0.5 s883001 genoma {'MARGEN': 0.5, 'PRUEBA': 0.5, 'PEN_OTRO': 0.35, 'PISO': 0.2, 'LIMPIA': 1.0, 'HUECO': 1.0} · cruzan 5/9 mayoria 1 R0 real med 0.9333 fund med 0.0 estab 5/9 · vida 2154.0 · causas {'hambre': 65, 'sed': 48, 'veneno': 647, 'sal': 758} · B+D 228.0 A+C 854.0 · mundo AC 1.8291 sin bueno 0.039 · coherente True
+[12:36:44] MAPA (genomas fijos, pista vieja, 9 linajes por corrida, T 100000) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\mapa
+[12:36:44]   genoma                      semillas   cruzan/9 por semilla  suma  R0 real med  fund med   estab   vida  causas h/s/v/sal  B+D  A+C  mundoAC
+[12:36:44]   MARGEN=0.0                  [883001]                    [0]     0          0.0       8.0     [5]  200.0  4/5/127/109  113.0  398.0  4.9485
+[12:36:44]   MARGEN=0.03                 [883001]                    [0]     0       0.8333       0.0     [8] 10190.5  13/22/70/70  215.0  508.0  3.1874
+[12:36:44]   MARGEN=0.06                 [883001]                    [3]     3       0.8571       0.0     [8] 7327.0  19/26/149/161  234.0  559.0  2.9409
+[12:36:44]   MARGEN=0.1                  [883001]                    [8]     8       0.9444       0.0     [8] 3593.0  55/54/51/43  300.0  572.0  2.2961
+[12:36:44]   fab                         [883001]                    [4]     4       0.8889       0.0     [7] 3111.5  33/43/266/251  332.0  686.0  2.2353
+[12:36:44]   MARGEN=0.5                  [883001]                    [5]     5       0.9333       0.0     [5] 2154.0  65/48/647/758  228.0  854.0  1.8291
+[12:36:44]   LIMPIA=0                    [883001]                    [5]     5       0.9615       0.0     [7] 1550.0  107/115/354/414  2.0  447.0  1.4264
+[12:36:44]   HUECO=0                     [883001]                    [7]     7       0.9545       0.0     [8] 2460.0  76/54/164/134  327.0  636.0  2.1142
+[12:36:44]   MARGEN=0.1+PISO=0.6         [883001]                    [3]     3        0.875       0.0     [8] 9201.5  26/37/99/109  243.0  571.0  2.4827
+[12:36:44]   MARGEN=0.06+PISO=0.4        [883001]                    [1]     1       0.8333       0.0     [8] 10620.5  34/29/27/39  262.0  544.0  2.6047
+[12:36:44]   MARGEN=0.1+PISO=1.0         [883001]                    [4]     4        0.875       0.0     [7] 4036.0  44/44/271/265  164.0  525.0  2.3038
+[12:36:44]   off                         [883001]                    [0]     0          0.0      65.0     [0]  200.0  18/10/281/323  74.0  309.0  4.9501
+[12:36:44]   mix:8xPISO=0.2+1xPISO=0.6   [883001]                    [8]     8       0.9231       0.0     [8] 3887.5  44/45/61/86  378.0  691.0  2.0364
+[12:36:44]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 378 A+C 733 limpiezas 376
+[12:36:44]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 362 A+C 704 limpiezas 360
+[12:36:44]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9565 fund 0 B+D 360 A+C 676 limpiezas 358
+[12:36:44]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 389 A+C 713 limpiezas 387
+[12:36:44]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 381 A+C 679 limpiezas 379
+[12:36:44]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 325 A+C 691 limpiezas 323
+[12:36:44]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 379 A+C 713 limpiezas 377
+[12:36:44]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.096 fund 112 B+D 417 A+C 530 limpiezas 409
+[12:36:44]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9286 fund 0 B+D 347 A+C 678 limpiezas 345
+[12:36:44]   mix:8xPISO=0.6+1xPISO=0.2   [883001]                    [8]     8       0.9231       0.0     [8] 4080.0  61/56/143/143  333.0  650.0  1.9235
+[12:36:44]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 0 R0 0.024 fund 284 B+D 454 A+C 289 limpiezas 444
+[12:36:44]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 347 A+C 676 limpiezas 345
+[12:36:44]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9091 fund 0 B+D 328 A+C 661 limpiezas 326
+[12:36:44]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 326 A+C 649 limpiezas 324
+[12:36:44]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 352 A+C 694 limpiezas 350
+[12:36:44]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 283 A+C 643 limpiezas 281
+[12:36:44]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 329 A+C 639 limpiezas 327
+[12:36:44]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 333 A+C 650 limpiezas 331
+[12:36:44]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.95 fund 0 B+D 388 A+C 680 limpiezas 386
+[12:36:44]   mix:8xfab+1xLIMPIA=0        [883001]                    [6]     6       0.9231       0.0     [7] 4731.5  39/33/382/375  333.0  700.0  2.3002
+[12:36:44]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0311 fund 248 B+D 509 A+C 422 limpiezas 487
+[12:36:44]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 344 A+C 703 limpiezas 342
+[12:36:44]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 333 A+C 701 limpiezas 331
+[12:36:44]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 349 A+C 730 limpiezas 347
+[12:36:44]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0 fund 480 B+D 564 A+C 84 limpiezas 538
+[12:36:44]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 711 limpiezas 316
+[12:36:44]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 700 limpiezas 316
+[12:36:44]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 305 A+C 682 limpiezas 303
+[12:36:44]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.8333 fund 0 B+D 2 A+C 599 limpiezas 0
+[12:36:44]   mix:8xLIMPIA=0+1xfab        [883001]                    [6]     6       0.9167       0.0     [6] 4823.0  42/45/569/563  2.0  523.0  1.9348
+[12:36:44]       s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 523 limpiezas 0
+[12:36:44]       s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0041 fund 487 B+D 499 A+C 41 limpiezas 476
+[12:36:44]       s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 524 limpiezas 0
+[12:36:44]       s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 515 limpiezas 0
+[12:36:44]       s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 530 limpiezas 0
+[12:36:44]       s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9 fund 0 B+D 2 A+C 551 limpiezas 0
+[12:36:44]       s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 537 limpiezas 0
+[12:36:44]       s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0588 fund 159 B+D 165 A+C 346 limpiezas 157
+[12:36:44]       s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.002 fund 487 B+D 536 A+C 66 limpiezas 506
+[12:36:44]   1021.5s
+[12:36:44] CORRE_MURO_PERILLAS · mapa · 20261001_123644 · python 3.14.2 · pool NO (un proceso) · runner 9ec563b7d9573c4e · nota ''
+[12:36:45]   REGLA DE CPU: python.exe ajenos de TRABAJO 6 (totales 8; los padres ociosos de Pool no cuentan) · tope 6
+[12:36:45]   >= tope: NO SE CORRE (construye, lee y espera).
+[12:36:45] CORRE_MURO_PERILLAS · mapa · 20261001_123645 · python 3.14.2 · pool NO (un proceso) · runner 9ec563b7d9573c4e · nota ''
+[12:36:45]   REGLA DE CPU: python.exe ajenos de TRABAJO 6 (totales 8; los padres ociosos de Pool no cuentan) · tope 6
+[12:36:45]   >= tope: NO SE CORRE (construye, lee y espera).
+MAPA (genomas fijos, pista vieja, 9 linajes por corrida, T 100000) · C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\muro_perillas\datos\mapa
+  genoma                      semillas   cruzan/9 por semilla  suma  R0 real med  fund med   estab   vida  causas h/s/v/sal  B+D  A+C  mundoAC
+  MARGEN=0.0                  [883001]                    [0]     0          0.0       8.0     [5]  200.0  4/5/127/109  113.0  398.0  4.9485
+  MARGEN=0.03                 [883001]                    [0]     0       0.8333       0.0     [8] 10190.5  13/22/70/70  215.0  508.0  3.1874
+  MARGEN=0.06                 [883001]                    [3]     3       0.8571       0.0     [8] 7327.0  19/26/149/161  234.0  559.0  2.9409
+  MARGEN=0.1                  [883001]                    [8]     8       0.9444       0.0     [8] 3593.0  55/54/51/43  300.0  572.0  2.2961
+  fab                         [883001]                    [4]     4       0.8889       0.0     [7] 3111.5  33/43/266/251  332.0  686.0  2.2353
+  MARGEN=0.5                  [883001]                    [5]     5       0.9333       0.0     [5] 2154.0  65/48/647/758  228.0  854.0  1.8291
+  LIMPIA=0                    [883001]                    [5]     5       0.9615       0.0     [7] 1550.0  107/115/354/414  2.0  447.0  1.4264
+  HUECO=0                     [883001]                    [7]     7       0.9545       0.0     [8] 2460.0  76/54/164/134  327.0  636.0  2.1142
+  MARGEN=0.1+PISO=0.6         [883001]                    [3]     3        0.875       0.0     [8] 9201.5  26/37/99/109  243.0  571.0  2.4827
+  MARGEN=0.06+PISO=0.4        [883001]                    [1]     1       0.8333       0.0     [8] 10620.5  34/29/27/39  262.0  544.0  2.6047
+  MARGEN=0.1+PISO=1.0         [883001]                    [4]     4        0.875       0.0     [7] 4036.0  44/44/271/265  164.0  525.0  2.3038
+  off                         [883001]                    [0]     0          0.0      65.0     [0]  200.0  18/10/281/323  74.0  309.0  4.9501
+  mix:8xPISO=0.2+1xPISO=0.6   [883001]                    [8]     8       0.9231       0.0     [8] 3887.5  44/45/61/86  378.0  691.0  2.0364
+      s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 378 A+C 733 limpiezas 376
+      s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 362 A+C 704 limpiezas 360
+      s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9565 fund 0 B+D 360 A+C 676 limpiezas 358
+      s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 389 A+C 713 limpiezas 387
+      s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 381 A+C 679 limpiezas 379
+      s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 325 A+C 691 limpiezas 323
+      s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 379 A+C 713 limpiezas 377
+      s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.096 fund 112 B+D 417 A+C 530 limpiezas 409
+      s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9286 fund 0 B+D 347 A+C 678 limpiezas 345
+  mix:8xPISO=0.6+1xPISO=0.2   [883001]                    [8]     8       0.9231       0.0     [8] 4080.0  61/56/143/143  333.0  650.0  1.9235
+      s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 0 R0 0.024 fund 284 B+D 454 A+C 289 limpiezas 444
+      s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 347 A+C 676 limpiezas 345
+      s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9091 fund 0 B+D 328 A+C 661 limpiezas 326
+      s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 326 A+C 649 limpiezas 324
+      s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 352 A+C 694 limpiezas 350
+      s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 283 A+C 643 limpiezas 281
+      s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 329 A+C 639 limpiezas 327
+      s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.6, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 333 A+C 650 limpiezas 331
+      s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.95 fund 0 B+D 388 A+C 680 limpiezas 386
+  mix:8xfab+1xLIMPIA=0        [883001]                    [6]     6       0.9231       0.0     [7] 4731.5  39/33/382/375  333.0  700.0  2.3002
+      s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0311 fund 248 B+D 509 A+C 422 limpiezas 487
+      s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9375 fund 0 B+D 344 A+C 703 limpiezas 342
+      s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9474 fund 0 B+D 333 A+C 701 limpiezas 331
+      s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 349 A+C 730 limpiezas 347
+      s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.0 fund 480 B+D 564 A+C 84 limpiezas 538
+      s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 711 limpiezas 316
+      s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9231 fund 0 B+D 318 A+C 700 limpiezas 316
+      s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 1 R0 0.9524 fund 0 B+D 305 A+C 682 limpiezas 303
+      s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.8333 fund 0 B+D 2 A+C 599 limpiezas 0
+  mix:8xLIMPIA=0+1xfab        [883001]                    [6]     6       0.9167       0.0     [6] 4823.0  42/45/569/563  2.0  523.0  1.9348
+      s883001 linaje 0 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 523 limpiezas 0
+      s883001 linaje 1 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0041 fund 487 B+D 499 A+C 41 limpiezas 476
+      s883001 linaje 2 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 524 limpiezas 0
+      s883001 linaje 3 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 515 limpiezas 0
+      s883001 linaje 4 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9167 fund 0 B+D 2 A+C 530 limpiezas 0
+      s883001 linaje 5 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9 fund 0 B+D 2 A+C 551 limpiezas 0
+      s883001 linaje 6 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 1 R0 0.9333 fund 0 B+D 2 A+C 537 limpiezas 0
+      s883001 linaje 7 genes [0.25, 0.5, 0.35, 0.2, 0.0, 1.0] cruza 0 R0 0.0588 fund 159 B+D 165 A+C 346 limpiezas 157
+      s883001 linaje 8 genes [0.25, 0.5, 0.35, 0.2, 1.0, 1.0] cruza 0 R0 0.002 fund 487 B+D 536 A+C 66 limpiezas 506

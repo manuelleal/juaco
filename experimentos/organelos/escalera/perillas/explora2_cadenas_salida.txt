@@ -1,0 +1,27 @@
+[07:21:54] CORRE_PERILLAS · explora · 20261001_072154 · python 3.14.2 · pool NO (un proceso) · corre_perillas.py 014f9a8a52cda89e · preregistro PREREGISTRO_perillas.md NO EXISTE · carpeta C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\perillas\datos\explora\explora_cadenas_sel_neu_i0-0_p3_T100000_20261001_072154
+[07:21:54]   base de semillas (741900, 741941) · pasajes T 100000 x 3 · pruebas T 0 · n 1 · mundo {'oasis': 1, 'extra': 0.8, 'pobre': 0.5, 'dens': 0.5, 'vista_r': 20} · sigma 0.03 delta 0.01 (una mutacion por nacimiento, en un gen) · camara continua · moneda: vivos de los ultimos 5000 pasos de linajes sin refundacion en la segunda mitad · trabajos [('cadena', 0, 'sel'), ('cadena', 0, 'neu')] · reanuda False · nota 'explora 2: cadenas sel y neu, 3 pasajes de 100k con camara, 1 indice'
+[07:21:54]   sha experimentos\tronco_v14_3\corre_v143.py 24100621c450da22 OK
+[07:21:54]   sha experimentos\carrera_escuderias\pista.py 9f47c65e438e0ff4 OK
+[07:21:54]   sha experimentos\carrera_escuderias\juez.py 6a68f640a7832f12 OK
+[07:21:54]   sha experimentos\carrera_escuderias\carros\O1.py 99436afa2715f028 OK
+[07:21:54]   carro O1_LUGAR == construye_p1: True (sha 49eee6bb278ea097)
+[07:21:54]   carro O1_LUGAR_BAR == construye_p1: True (sha 93fc245b8db8794b)
+[07:21:54]   carro O1_LUGAR0 == construye_p1: True (sha 33a7ab0c66fe2b82)
+[07:21:54]   mundo_escalera: {'sha_pista': '9f47c65e438e0ff4', 'sha_juez': '6a68f640a7832f12', 'sha_fuente_transformada': '488e82252eece5f8', 'anclas': 9}
+[07:21:54]   sha escalera/corre_p1.py 392b71186cf49b60 OK
+[07:21:54]   sha escalera/construye_p1.py 90dc1b6f848fac80 OK
+[07:21:54]   sha escalera/mundo_escalera.py 4f28b372207ba0a6 OK
+[07:21:54]   sha escalera/carros\O1_LUGAR.py 49eee6bb278ea097 OK
+[07:21:54]   sha perillas/construye_perillas.py b5d1a10f6f913556 OK (NO FIJADO: solo humo/explora)
+[07:21:54]   sha perillas/carros\O1_LUGAR_GEN.py ecc996d2fecccc30 OK (NO FIJADO: solo humo/explora)
+[07:21:54]   sha perillas/carros\O1_LUGAR_GEN0.py 89db6c8a74902fe1 OK (NO FIJADO: solo humo/explora)
+[07:21:54]   carro O1_LUGAR_GEN == construye_perillas: True
+[07:21:54]   carro O1_LUGAR_GEN0 == construye_perillas: True
+[07:22:01]   IDENTIDAD CORTA PERILLAS (salida ENTERA, N 9, s 741950, T 1500, mundo de P1): GEN0 == O1_LUGAR True · GEN (1,1) sigma 0 == O1_LUGAR True · GEN (0,0) sigma 0 == O1 (salvo telemetria 'lugar') True · GEN PS_LEE 0, sigma 0.03, delta 0.01, camara 1 == O1 True · control O1_LUGAR != O1 True
+[07:26:35]   [  281.0s] cadena i0 sel (273.8s) aborto None · cruzan por pasaje [1, 3, 4] · establecidos [2, 7, 9] respaldo [0, 0, 0] · prof mutacional [10.5, 15.0, 30.0] · refundaciones por camara [972, 669, 255] · partos [524, 729, 840] · GV [0.0925, 0.1068, 0.1522] · GW [0.0418, 0.0, 0.0181] · frac_on [0.8, 0.857, 1.0] · ratio pasos [1.608, 3.905, 4.644] · genoma final {'GW': 0.018118905400498878, 'GV': 0.15224364228504064}
+[07:30:09]   [  495.0s] cadena i0 neu (213.9s) aborto None · cruzan por pasaje [0, 0, 0] · establecidos [2, 2, 1] respaldo [0, 0, 0] · prof mutacional [16.0, 29.5, 39.0] · refundaciones por camara [907, 938, 952] · partos [451, 453, 450] · GV [0.0231, 0.0092, 0.0] · GW [0.0372, 0.0366, 0.0909] · frac_on [0.4, 0.0, 0.0] · ratio pasos [1.048, 1.069, 1.059] · genoma final {'GW': 0.09088931469599602, 'GV': 0.0}
+[07:30:09] 
+  EXPLORA parcial: sin las 4 pruebas no hay letra
+[07:30:09] 
+  RESUMEN C:\Users\User\Documents\PROYECTOS\JUACO\organelos\experimentos\organelos\escalera\perillas\datos\explora\explora_cadenas_sel_neu_i0-0_p3_T100000_20261001_072154\resumen.json (sha 58099ad8e1098dfd) · abortos 0 · 495.0s
+[07:30:09] VEREDICTO: EXPLORA (no cuenta): parcial

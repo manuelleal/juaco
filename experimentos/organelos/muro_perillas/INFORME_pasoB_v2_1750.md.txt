@@ -1,0 +1,69 @@
+# INFORME — PASO B (5-oct-2026, 17:50; tras la auditoría previa). PERILLAS DEL MURO: APTA PARA AUDITAR Y CORRER. Nada corrido en serie. (v1 de las 17:20: `INFORME_pasoB_v1_1720.md.txt`)
+
+**VEREDICTO: CONSTRUIDA CON LOS 7 CAMBIOS DE LA AUDITORÍA, VERIFICADA Y SIN CORRER. `ARNES PASA, 44/44 (455.7s)` (`identidad_muro_perillas_salida7.txt`, shas
+finales fijados). Humo de main de punta a punta CON POOL 2 (ERR-42): `pasoB_audit.log`, `datos/humo/humo_serie_20261005_173551/`: 2 cadenas × 2 pasajes de 5k + 4 pruebas
+de 20k en dos procesos (pool 2 + `--reanuda`), 0 abortos, letra v2 evaluada (NO SE LEE por T corto, como corresponde). Preregistro: `PREREGISTRO_muro_perillas.md`
+sec. 12 (manda sobre 10–11 bis).** Falta sólo el commit del coordinador (candado git: preregistro, runner, constructor, arnés, nulo y carros).
+
+## 1. Los 7 puntos de la auditoría
+1. **B-1, PG con subida real.** PG = **(a)** MARGEN sel > neu + 0.03 en ≥ 13/20 **∧ (b)** MARGEN final de sel ≥ 0.06 (FUNC) en ≥ 13/20. (a) sin (b) → desenlace propio
+   **"CONSERVA, NO SUBE"** ("la selección impide que el margen caiga a 0; no lo sube"): no es MODESTO y no dispara réplica salvo (b) a ±1 (`conserva_b_umbral`, en la regla
+   de parada del runner). Letra, matices, 10 casos sintéticos del arnés (F) y tabla de frases por desenlace reescritos (sec. 12). **Nulo que faltaba (ERR-192):** deriva
+   con selección purificadora sin gradiente (barrera letal + cámara): **(b) es falso positivo con p 0.79–0.97 por cadena (P(≥ 13/20) ≈ 1)** y (a) siempre. Declarado en la
+   letra y en el vocabulario: FUNCIONA dice "la selección por persistencia lleva el margen a la zona funcional", no "un margen mayor es ventajoso". Reserva: el modelo supone
+   muerte bajo la barrera y en esta pista MARGEN 0 se congela sin morir (humo), lo que frena el trinquete; el control que lo separaría (brazo `pur`: gen leído con tope 0.045)
+   queda propuesto como segunda serie, no construido hoy para no invalidar el arnés. ERR-192 redactado en sec. 12.
+2. **B-2.** V7a (profundidad ≥ 30) y V7b (refundaciones ≥ 3 000) sobre neu **y** sel, en ≥ 16/20; si sel no llega → NO SE LEE. Profundidad EFECTIVA sobre MARGEN por brazo
+   (= profundidad: sólo MARGEN muta). Caso sintético nuevo "reloj de sel corto → NO SE LEE".
+3. **Diseño: sólo MARGEN muta** (`PS_MUTA = (0,)`, parámetro del carro fijado por el runner, en el estado de cada corrida y exigido por V4); los otros cinco fijos en fábrica en
+   sel y neu; "mutan los seis" como variante descriptiva; sin razón fuerte para dejarlos. **Nulo rehecho con p = 1:** mediana neutra de siembra 0.012 (P > 0.03 = 0.108;
+   P ≥ 0.06 = 0.004); (a) por cadena 0.037 → P(≥ 13/20) 1.8e-14. **MARGEN_G 0.03 y FUNC 0.06 siguen correctos contra la deriva** (contra el trinquete no: punto 1). Con p = 1
+   el neutro cae igual (estacionaria en ~30 eventos) y sel tiene 6× más reloj sobre el gen → B3b/B4 suben.
+4. **B-3 Sesgo declarado** (sec. 12): arranque 0.03, MARGEN_G 0.05 → 0.03, FUNC 0.06, FL_SERIE 1, sólo-MARGEN y la puerta (b) se fijaron tras el mapa, el PASO A y los humos,
+   antes de cualquier corrida de serie. La línea de la Parte I sec. 6 ("PG margen 0.05") lleva ahora nota de ANULADA.
+5. **Descriptivos obligatorios** junto al veredicto: `UNA_EVIDENCIA`, cadenas sel con LIMPIA ≤ 0.5, pruebas sel con B+D ≤ 5 (sujetas a ERR-191), sel vs fab / sel vs off /
+   neu vs off, mayorías por brazo, MARGEN final por cadena, relojes con profundidad efectiva.
+6. **ERR-42, rama Pool ejercitada:** `--humo_serie --pool 2` (17:35:51–17:36:55): cadenas sel y neu en paralelo, pruebas encoladas al terminar cada cadena, 64.6 s; luego
+   `--reanuda` en un proceso saltó lo hecho, corrió fab y off y evaluó la letra (76.3 s). Candado git ampliado con `identidad_muro_perillas.py` y `nulo_margen.py`. Dato del humo
+   (no cuenta): sel sube a MARGEN 0.050 en 2 × 5k con neu en 0.007 — el trinquete de ERR-192 a la vista.
+7. **Arnés con shas finales: `ARNES PASA, 44/44 (455.7s)`** (`salida7`): casos nuevos (K) con BASE = arranque y `off`/`base`/`off+`, (R) fundador no limpio, (F) 10 casos de la letra v2.
+
+Salida del humo con pool 2 (de `pasoB_audit.log`):
+```
+[17:35:51] CORRE_MURO_PERILLAS · (humo_serie) · pool 2 · runner 3a078f33c609875a · GEN_LETRA MARGEN margen 0.03 zona 0.06 · BASE MARGEN 0.03 resto fabrica · mutan [0] · fundador_limpio 1
+[17:36:23]   [32.5s] cadena i0 sel (16.5s) · cruzan [0, 0] · estab [8, 7] · prof [1.0, 2.0] · refund [13, 46] · genoma final MARGEN 0.0498
+[17:36:23]   [32.5s] cadena i0 neu (16.5s) · cruzan [0, 0] · estab [9, 9] · prof [1.0, 3.0] · refund [6, 0] · genoma final MARGEN 0.0070
+[17:36:55]   [64.5s] prueba i0 sel · cruzan 0/9 R0 0.667 estab 9 B+D 61 · prueba i0 neu · cruzan 0/9 R0 0.0 · RESUMEN · abortos 0 · 64.6s · VEREDICTO: HUMO (no cuenta): parcial
+[17:38:12]   (--reanuda) prueba i0 fab R0 0.75 · prueba i0 off R0 0.0 · validez {V1 True, V2 False, V4 True, V5 True, V7a False, V7b False} · puertas {PG_a True, PG_b False, PG False, PC False, n_sel_en_zona 0} · VEREDICTO: HUMO (no cuenta): NO SE LEE
+```
+
+## 2. Nulo nuevo (`nulo_margen_salida.txt`)
+| nulo (arranque 0.03, σ 0.03, δ 0.01, clip [0, 0.6]) | mediana siembra | P(> 0.03) | P(≥ 0.06) | (a) por cadena → P(≥ 13/20) | (b) por cadena → P(≥ 13/20) |
+|---|---|---|---|---|---|
+| deriva pura, p = 1 (el neutro de la serie) | 0.012 | 0.108 | 0.004 | 0.037 → 1.8e-14 | 0.004 → ~0 |
+| deriva pura, p = 1/6 (versión del mediodía) | 0.010 | 0.124 | 0.008 | 0.065 → 1.7e-11 | 0.008 → ~0 |
+| **purificadora + cámara, barrera 0.015 (ERR-192)** | 0.096 | 0.995 | 0.886 | 0.955 → 1.000 | **0.886 → ≈ 1.0** |
+| idem, barrera 0.005 / 0.03 | 0.086 / 0.113 | 0.99 / 1.00 | 0.79 / 0.97 | → 1.0 | → 0.95 / 1.00 |
+
+## 3. Predicciones firmadas v2 (sec. 12; cambios: B3 partida en a/b por la puerta nueva; B3b/B4 suben por p = 1 y el trinquete; B9 eliminada (los otros genes no mutan); B12 nueva)
+B1 fab [100, 150], off [15, 60] (0.75) · B2 V2 (0.85) · B3a (a) 16–20/20 (0.80) · B3b (b) 12–18/20 (0.55) · B4 MARGEN sel [0.05, 0.14], neu ≤ 0.02 (0.60) · B6 cruzan sel [70, 130],
+neu [10, 50] (0.55) · B7 PC (0.60) · B8 sel sin mayoría como O1, fab con ella (0.70/0.70) · B10 relojes neutros prof [40, 90], refund [3 500, 5 500], sel ±30 % (0.55) ·
+B11 V7 en neu y sel (0.75/0.85) · B12 cadenas sel con B+D ≤ 5: 0 (0.90) · **V: FUNCIONA 0.35 / CONSERVA 0.20 / MODESTO 0.15 / NO 0.10 / NO SE LEE 0.20.**
+
+## 4. Shas finales · comando · costo
+`construye_muro_perillas.py` 0fe3054279bba05e · `carros/O1_MURO_GEN.py` 08783834a20284cd · `O1_MURO_GEN0.py` 297098cc12cc2fd9 · `corre_muro_perillas.py` dee872ff3449cec5
+(tras el humo sólo cambió la etiqueta del modo en la primera línea del log: 3a078f33c609875a → dee872ff3449cec5, nada funcional) · `identidad_muro_perillas.py` 0b73545065a0bca8 ·
+`nulo_margen.py` 33eed8b55c9d4c20 · preregistro: el que quede commiteado (el runner lo registra). `SHAS_PROPIOS` fijados = constructor y carros de arriba.
+```
+python experimentos/organelos/muro_perillas/construye_muro_perillas.py --verifica && python experimentos/organelos/muro_perillas/identidad_muro_perillas.py
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --serie --pool 2 2>&1 | tee experimentos/organelos/muro_perillas/serie_pool2.log
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --serie --pool 2 --reanuda 2>&1 | tee -a experimentos/organelos/muro_perillas/serie_pool2.log
+python experimentos/organelos/muro_perillas/corre_muro_perillas.py --replica --pool 2    # sólo por la regla de parada (FUNCIONA, MODESTO, NO en el umbral, CONSERVA con (b) a ±1)
+```
+**Costo con sólo MARGEN mutando:** idéntico por corrida (la mutación no cuesta): ≈ 156 s × (10 pasajes + 4 pruebas) × 20 ≈ 44 000 s de CPU ≈ **6 h con pool 2**; réplica igual.
+
+## 5. Lo no verificado · errores propios de hoy
+No verificado: la serie; el costo real con pool 2 (el humo: 64.6 s para 6 corridas cortas en pool 2); que V7 llegue a 30/3 000 en sel y neu con 5 pasajes desde 0.03; el
+modelo de ERR-192 (barrera por muerte) frente a lo que hace la pista (congelación). Errores propios corregidos antes de leer: `genoma('off+')` con BASE cambiada (12 JSON
+apartados, pruebas estática y dinámica añadidas, lote repetido); `NL` en `--humo_cadena`; (K) con BASE == APAGADO; casos sintéticos sin `mayoria`/`muta`. Predicción propia
+refutada: A4 a medias (6/18 y 8/18) y la del nulo del mediodía ("0.06 separa subida de deriva": separa de la deriva, no del trinquete barrera + cámara).

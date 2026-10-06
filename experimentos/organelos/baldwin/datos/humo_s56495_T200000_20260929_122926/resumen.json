@@ -1,0 +1,196 @@
+{
+ "letra": {
+  "validez": {
+   "V0_completa_sin_abortos": true,
+   "V1_ancla_FIJO_Pinf_persiste": true,
+   "V2_cfg_por_brazo": true,
+   "V3_inversiones": true,
+   "V4_la_pieza_actua": true,
+   "V5_AZA_bit_al_azar": true
+  },
+  "v5_nota": "aplica: mediana 0.5067 en 1 semillas",
+  "puertas": {
+   "PA_rescate": false,
+   "PB_controles": false,
+   "PD_seleccion_prende": false,
+   "PE_seleccion_apaga": false
+  },
+  "secundarias": {
+   "curva_frac_pl_por_P": {
+    "P22k": null,
+    "Pinf": null
+   },
+   "pareados": {
+    "PLAST_V_P22k-PLAST_V_Pinf[frac_pl]": {
+     "gana": 0,
+     "n": 0,
+     "dif_med": null
+    },
+    "PLAST_V_P22k-PLAST_RW0_P22k[frac_pl]": {
+     "gana": 0,
+     "n": 0,
+     "dif_med": null
+    },
+    "PLAST_V_P22k-FIJO_V_P22k[K]": {
+     "gana": 0,
+     "n": 1,
+     "dif_med": -2.6535
+    },
+    "PLAST_V_Pinf-FIJO_V_Pinf[K]": {
+     "gana": 0,
+     "n": 1,
+     "dif_med": -35.099
+    },
+    "PLAST_V_P22k-FIJO_V_P22k[t_ext]": {
+     "gana": 0,
+     "n": 1,
+     "dif_med": -8227.0
+    }
+   },
+   "D1_curva_baja_con_P": false,
+   "RW0_frac_alta": 0,
+   "frac_pl_tiempo": {
+    "PLAST_V_P22k": {
+     "t": {
+      "50000": [
+       1.0,
+       1
+      ],
+      "100000": [
+       1.0,
+       1
+      ],
+      "150000": [
+       null,
+       0
+      ],
+      "200000": [
+       null,
+       0
+      ]
+     },
+     "ult": [
+      null
+     ]
+    },
+    "PLAST_AZA_P22k": {
+     "t": {
+      "50000": [
+       null,
+       0
+      ],
+      "100000": [
+       0.5286,
+       1
+      ],
+      "150000": [
+       null,
+       0
+      ],
+      "200000": [
+       null,
+       0
+      ]
+     },
+     "ult": [
+      0.5067
+     ]
+    },
+    "PLAST_RW0_P22k": {
+     "t": {
+      "50000": [
+       1.0,
+       1
+      ],
+      "100000": [
+       0.9215,
+       1
+      ],
+      "150000": [
+       null,
+       0
+      ],
+      "200000": [
+       null,
+       0
+      ]
+     },
+     "ult": [
+      0.9467
+     ]
+    },
+    "PLAST_V_Pinf": {
+     "t": {
+      "50000": [
+       1.0,
+       1
+      ],
+      "100000": [
+       1.0,
+       1
+      ],
+      "150000": [
+       null,
+       0
+      ],
+      "200000": [
+       null,
+       0
+      ]
+     },
+     "ult": [
+      null
+     ]
+    }
+   }
+  },
+  "veredicto": "NO",
+  "persiste": {
+   "PLAST_V_P22k": 0,
+   "FIJO_V_P22k": 0,
+   "PLAST_AZA_P22k": 0,
+   "PLAST_RW0_P22k": 0,
+   "PLAST_V_Pinf": 0,
+   "FIJO_V_Pinf": 1
+  },
+  "frac_pl": {
+   "PLAST_V_P22k": [
+    null
+   ],
+   "FIJO_V_P22k": [
+    null
+   ],
+   "PLAST_AZA_P22k": [
+    null
+   ],
+   "PLAST_RW0_P22k": [
+    null
+   ],
+   "PLAST_V_Pinf": [
+    null
+   ],
+   "FIJO_V_Pinf": [
+    null
+   ]
+  },
+  "abortos": [],
+  "n": 1,
+  "humo": true
+ },
+ "semillas": [
+  56495
+ ],
+ "T": 200000,
+ "humo": true,
+ "veredicto": "HUMO (no cuenta): NO",
+ "preregistro": "PREREGISTRO_baldwin.md",
+ "sha_preregistro": "207247c8027edb6c",
+ "sha_runner": "76e4c496fa42f4d5",
+ "shas": {
+  "experimentos\\organelos\\bloques\\opusM\\corre_bloques.py": "a090b82eae9f1ee3",
+  "experimentos\\organelos\\bloques\\opusM\\motor_bloques.py": "ff782697e54585a5",
+  "experimentos\\organelos\\bloques\\opusM\\motor_bloques3.py": "21b5ee28d086b3be",
+  "experimentos\\organelos\\bloques\\opusM\\construye_bloques3.py": "5532f1c1fddbb624",
+  "experimentos\\organelos\\baldwin\\motor_baldwin.py": "d0a620d2f5e2605e"
+ }
+}
