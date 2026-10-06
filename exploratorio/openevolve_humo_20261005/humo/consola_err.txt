@@ -1,0 +1,154 @@
+2026-10-05 18:50:56,072 - INFO - Logging to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\logs\openevolve_20261005_185056.log
+2026-10-05 18:50:56,081 - INFO - Set random seed to 42 for reproducibility
+2026-10-05 18:50:56,082 - INFO - Initialized LLM ensemble with models: sonnet (weight: 1.00)
+2026-10-05 18:50:56,084 - INFO - Initialized prompt sampler
+2026-10-05 18:50:56,086 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-05 18:50:56,086 - INFO - Initialized program database with 0 programs
+2026-10-05 18:50:56,089 - INFO - Successfully loaded evaluation function from C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\evaluador.py
+2026-10-05 18:50:56,089 - INFO - Initialized evaluator with C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\evaluador.py
+2026-10-05 18:50:56,090 - INFO - Initialized OpenEvolve with C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\raiz\programa_inicial.py
+2026-10-05 18:50:56,091 - INFO - Adding initial program to database
+2026-10-05 18:51:38,045 - INFO - Evaluated program 4be10b8f-3640-4c62-aaa2-4ab2d22ead48 in 41.95s: combined_score=0.0579, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.2632
+2026-10-05 18:51:38,047 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-05 18:51:38,047 - INFO - Stored artifacts for initial program
+2026-10-05 18:51:38,050 - INFO - Initialized process parallel controller with 1 workers
+2026-10-05 18:51:38,051 - INFO - Set max None tasks per child
+2026-10-05 18:51:38,051 - INFO - Started process pool with 1 processes
+2026-10-05 18:51:38,051 - INFO - Using island-based evolution with 1 islands
+2026-10-05 18:51:38,052 - INFO - Island Status:
+2026-10-05 18:51:38,052 - INFO -  * Island 0: 1 programs, best=0.0579, avg=0.0579, diversity=0.00, gen=0 (best: 4be10b8f-3640-4c62-aaa2-4ab2d22ead48)
+2026-10-05 18:51:38,052 - INFO - Starting process-based evolution from iteration 1 for 30 iterations (total: 31)
+2026-10-05 18:51:38,111 - INFO - Early stopping disabled
+2026-10-05 18:55:19,612 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-05 18:55:19,614 - INFO - Iteration 1: Program 873aac41-0ceb-4ede-ada1-32cc4b24b6fd (parent: 4be10b8f-3640-4c62-aaa2-4ab2d22ead48) completed in 220.69s | tokens: 0 (prompt: 2, completion: 15932)
+2026-10-05 18:55:19,614 - INFO - Metrics: combined_score=0.0579, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.2632
+2026-10-05 19:00:13,056 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 0, 'diversity': 0}
+2026-10-05 19:00:13,057 - INFO - Iteration 2: Program d6f6bf32-a5d7-4bcf-b0c1-068364fdffff (parent: 4be10b8f-3640-4c62-aaa2-4ab2d22ead48) completed in 293.45s | tokens: 0 (prompt: 2, completion: 18532)
+2026-10-05 19:00:13,058 - INFO - Metrics: combined_score=0.0538, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1250
+2026-10-05 19:10:15,052 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 9}
+2026-10-05 19:10:15,053 - INFO - New best program 3cea5926-c2f2-420c-8f93-eba70f50afd8 replaces 4be10b8f-3640-4c62-aaa2-4ab2d22ead48 (combined_score: 0.0579 → 0.3000, +0.2421)
+2026-10-05 19:10:15,054 - INFO - Iteration 3: Program 3cea5926-c2f2-420c-8f93-eba70f50afd8 (parent: 4be10b8f-3640-4c62-aaa2-4ab2d22ead48) completed in 601.99s | tokens: 0 (prompt: 2, completion: 20302)
+2026-10-05 19:10:15,054 - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:10:15,054 - INFO - 🌟 New best solution found at iteration 3: 3cea5926-c2f2-420c-8f93-eba70f50afd8
+2026-10-05 19:15:51,193 - INFO - Iteration 4: Program 7cae9fb0-fc6d-49fd-a3c7-f62b99adb6ed (parent: 873aac41-0ceb-4ede-ada1-32cc4b24b6fd) completed in 336.14s | tokens: 0 (prompt: 2, completion: 26599)
+2026-10-05 19:15:51,195 - INFO - Metrics: combined_score=0.0530, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.1000
+2026-10-05 19:20:05,981 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 3, 'diversity': 2}
+2026-10-05 19:20:05,981 - INFO - Iteration 5: Program 05ec2522-cbdc-4deb-a414-8b92257746eb (parent: 3cea5926-c2f2-420c-8f93-eba70f50afd8) completed in 254.79s | tokens: 0 (prompt: 2, completion: 17095)
+2026-10-05 19:20:05,982 - INFO - Metrics: combined_score=0.0638, etapa=2.0000, vida_med=2799.0000, persisten_frac=0.0000, sin_extincion_frac=0.1111, cruzan_frac=0.0000, R0_real_med=0.2000
+2026-10-05 19:20:05,982 - INFO - Checkpoint interval reached at iteration 5
+2026-10-05 19:20:05,983 - INFO - Island Status:
+2026-10-05 19:20:05,983 - INFO -  * Island 0: 6 programs, best=0.3000, avg=0.0977, diversity=345.05, gen=5 (best: 3cea5926-c2f2-420c-8f93-eba70f50afd8)
+2026-10-05 19:20:05,987 - INFO - Saved database with 6 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_5
+2026-10-05 19:20:05,989 - INFO - Saved best program at checkpoint 5 with metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:20:05,989 - INFO - Saved checkpoint at iteration 5 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_5
+2026-10-05 19:26:03,552 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 2}
+2026-10-05 19:26:03,552 - INFO - Iteration 6: Program 3dcd67df-f602-4568-9dee-962b8e1252b5 (parent: d6f6bf32-a5d7-4bcf-b0c1-068364fdffff) completed in 357.57s | tokens: 0 (prompt: 2, completion: 7343)
+2026-10-05 19:26:03,552 - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:32:17,119 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 2, 'diversity': 1}
+2026-10-05 19:32:17,121 - INFO - Iteration 7: Program 721dabdd-fe51-4765-aec4-f6bfe2afb1dc (parent: d6f6bf32-a5d7-4bcf-b0c1-068364fdffff) completed in 373.57s | tokens: 0 (prompt: 2, completion: 10165)
+2026-10-05 19:32:17,121 - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:39:27,621 - INFO - Iteration 8: Program c5f2241f-c9b9-4fbc-a262-cb2911220e8c (parent: 05ec2522-cbdc-4deb-a414-8b92257746eb) completed in 430.50s | tokens: 0 (prompt: 2, completion: 7531)
+2026-10-05 19:39:27,622 - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:48:03,297 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 2}
+2026-10-05 19:48:03,298 - INFO - Iteration 9: Program e462b512-aad5-44e7-ba0f-9130eabc1d52 (parent: 721dabdd-fe51-4765-aec4-f6bfe2afb1dc) completed in 515.67s | tokens: 0 (prompt: 2, completion: 33976)
+2026-10-05 19:48:03,298 - INFO - Metrics: combined_score=0.0500, etapa=2.0000, vida_med=600.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:54:50,568 - INFO - Iteration 10: Program 8f7834b8-215b-4e2c-8b88-c9fcb64ed89f (parent: 05ec2522-cbdc-4deb-a414-8b92257746eb) completed in 407.27s | tokens: 0 (prompt: 2, completion: 4979)
+2026-10-05 19:54:50,570 - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:54:50,570 - INFO - Checkpoint interval reached at iteration 10
+2026-10-05 19:54:50,571 - INFO - Island Status:
+2026-10-05 19:54:50,571 - INFO -  * Island 0: 11 programs, best=0.3000, avg=0.1669, diversity=92.87, gen=10 (best: 3cea5926-c2f2-420c-8f93-eba70f50afd8)
+2026-10-05 19:54:50,578 - INFO - Saved database with 11 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_10
+2026-10-05 19:54:50,580 - INFO - Saved best program at checkpoint 10 with metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 19:54:50,580 - INFO - Saved checkpoint at iteration 10 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_10
+2026-10-05 20:01:10,402 - INFO - Iteration 11: Program e360019e-7741-41bb-8bac-81fd4d28df8e (parent: e462b512-aad5-44e7-ba0f-9130eabc1d52) completed in 379.83s | tokens: 0 (prompt: 2, completion: 9057)
+2026-10-05 20:01:10,404 - INFO - Metrics: combined_score=0.3000, etapa=3.0000, vida_med=100000.0000, persisten_frac=0.0000, sin_extincion_frac=1.0000, cruzan_frac=0.0000, R0_real_med=0.0000
+2026-10-05 20:12:56,761 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 2}
+2026-10-05 20:12:56,762 - INFO - New best program 297b0ab6-331b-409c-a3e6-50cd614cd1a9 replaces 3cea5926-c2f2-420c-8f93-eba70f50afd8 (combined_score: 0.3000 → 0.8231, +0.5231)
+2026-10-05 20:12:56,762 - INFO - Iteration 12: Program 297b0ab6-331b-409c-a3e6-50cd614cd1a9 (parent: 8f7834b8-215b-4e2c-8b88-c9fcb64ed89f) completed in 706.37s | tokens: 0 (prompt: 2, completion: 37334)
+2026-10-05 20:12:56,762 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 20:12:56,762 - INFO - 🌟 New best solution found at iteration 12: 297b0ab6-331b-409c-a3e6-50cd614cd1a9
+2026-10-05 20:22:40,963 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 4, 'diversity': 1}
+2026-10-05 20:22:40,963 - INFO - Island 0 MAP-Elites coverage reached 10.0% (10/100 cells)
+2026-10-05 20:22:40,964 - INFO - Iteration 13: Program 031617dd-9390-4798-877a-acb79ef75c71 (parent: 721dabdd-fe51-4765-aec4-f6bfe2afb1dc) completed in 584.19s | tokens: 0 (prompt: 2, completion: 19007)
+2026-10-05 20:22:40,964 - INFO - Metrics: combined_score=0.5705, etapa=3.0000, vida_med=1639.0000, persisten_frac=0.3333, sin_extincion_frac=0.7778, cruzan_frac=0.3333, R0_real_med=0.8636
+2026-10-05 20:27:17,017 - INFO - Iteration 14: Program 62a36ed8-bd84-447a-a65f-28c1b914fd41 (parent: d6f6bf32-a5d7-4bcf-b0c1-068364fdffff) completed in 276.06s | tokens: 0 (prompt: 2, completion: 4428)
+2026-10-05 20:27:17,019 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 20:34:33,598 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 2}
+2026-10-05 20:34:33,601 - INFO - Iteration 15: Program 839ee41d-b1c1-4736-9da9-742ebfd21657 (parent: 297b0ab6-331b-409c-a3e6-50cd614cd1a9) completed in 436.58s | tokens: 0 (prompt: 2, completion: 14911)
+2026-10-05 20:34:33,601 - INFO - Metrics: combined_score=0.3462, etapa=3.0000, vida_med=1316.5000, persisten_frac=0.0000, sin_extincion_frac=0.5556, cruzan_frac=0.0000, R0_real_med=0.6604
+2026-10-05 20:34:33,601 - INFO - Checkpoint interval reached at iteration 15
+2026-10-05 20:34:33,602 - INFO - Island Status:
+2026-10-05 20:34:33,602 - INFO -  * Island 0: 16 programs, best=0.8231, avg=0.2937, diversity=89.55, gen=15 (best: 297b0ab6-331b-409c-a3e6-50cd614cd1a9)
+2026-10-05 20:34:33,612 - INFO - Saved database with 16 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_15
+2026-10-05 20:34:33,613 - INFO - Saved best program at checkpoint 15 with metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 20:34:33,613 - INFO - Saved checkpoint at iteration 15 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_15
+2026-10-05 20:41:25,388 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 7}
+2026-10-05 20:41:25,390 - INFO - Iteration 16: Program 6949bac4-1ee1-4eda-97e0-9bfe84f4dac2 (parent: 297b0ab6-331b-409c-a3e6-50cd614cd1a9) completed in 411.79s | tokens: 0 (prompt: 2, completion: 31645)
+2026-10-05 20:41:25,390 - INFO - Metrics: combined_score=0.1044, etapa=2.0000, vida_med=1750.0000, persisten_frac=0.4444, sin_extincion_frac=0.4444, cruzan_frac=0.1111, R0_real_med=0.7778
+2026-10-05 20:46:55,779 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 6, 'diversity': 3}
+2026-10-05 20:46:55,781 - INFO - Iteration 17: Program aa7f4929-b79e-4cb2-81ae-0b070aa4d897 (parent: 62a36ed8-bd84-447a-a65f-28c1b914fd41) completed in 330.39s | tokens: 0 (prompt: 2, completion: 21610)
+2026-10-05 20:46:55,781 - INFO - Metrics: combined_score=0.1002, etapa=2.0000, vida_med=1531.0000, persisten_frac=0.4444, sin_extincion_frac=0.4444, cruzan_frac=0.0000, R0_real_med=0.6364
+2026-10-05 20:52:08,587 - INFO - Iteration 18: Program 8a04e4e1-a3cd-4113-8261-533e914e3a61 (parent: 3dcd67df-f602-4568-9dee-962b8e1252b5) completed in 312.81s | tokens: 0 (prompt: 2, completion: 6825)
+2026-10-05 20:52:08,587 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 20:57:01,436 - INFO - Island 0 MAP-Elites cell replaced: {'complexity': 4, 'diversity': 1} (fitness: 0.570 -> 0.823)
+2026-10-05 20:57:01,437 - INFO - Iteration 19: Program 00d7e9ce-c271-434a-9aa9-6c7da30c4f34 (parent: 721dabdd-fe51-4765-aec4-f6bfe2afb1dc) completed in 292.83s | tokens: 0 (prompt: 2, completion: 6660)
+2026-10-05 20:57:01,437 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:02:56,269 - INFO - Iteration 20: Program 87c048ec-8a57-491c-a65b-3acbf4497474 (parent: e462b512-aad5-44e7-ba0f-9130eabc1d52) completed in 354.84s | tokens: 0 (prompt: 2, completion: 8260)
+2026-10-05 21:02:56,270 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:02:56,270 - INFO - Checkpoint interval reached at iteration 20
+2026-10-05 21:02:56,271 - INFO - Island Status:
+2026-10-05 21:02:56,272 - INFO -  * Island 0: 20 programs, best=0.8231, avg=0.3401, diversity=113.25, gen=20 (best: 297b0ab6-331b-409c-a3e6-50cd614cd1a9)
+2026-10-05 21:02:56,296 - INFO - Saved database with 20 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_20
+2026-10-05 21:02:56,298 - INFO - Saved best program at checkpoint 20 with metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:02:56,298 - INFO - Saved checkpoint at iteration 20 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_20
+2026-10-05 21:09:38,471 - INFO - Iteration 21: Program 64a89d84-b253-4dbd-b205-d2dffdad0fed (parent: d6f6bf32-a5d7-4bcf-b0c1-068364fdffff) completed in 402.19s | tokens: 0 (prompt: 2, completion: 5503)
+2026-10-05 21:09:38,472 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:17:20,331 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 8, 'diversity': 5}
+2026-10-05 21:17:20,334 - INFO - Iteration 22: Program 2a8bf61e-5f99-49dc-a223-dadb1d42bca1 (parent: 62a36ed8-bd84-447a-a65f-28c1b914fd41) completed in 461.85s | tokens: 0 (prompt: 2, completion: 16800)
+2026-10-05 21:17:20,334 - INFO - Metrics: combined_score=0.7867, etapa=3.0000, vida_med=2214.0000, persisten_frac=0.6667, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9524
+2026-10-05 21:24:12,748 - INFO - Iteration 23: Program 55ceb6c3-2adb-4bce-9e52-4fdbf3d0739e (parent: 8f7834b8-215b-4e2c-8b88-c9fcb64ed89f) completed in 412.42s | tokens: 0 (prompt: 2, completion: 5609)
+2026-10-05 21:24:12,749 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:29:00,249 - INFO - Iteration 24: Program 6ec7822c-6459-495e-a9d3-a4d7d05069f9 (parent: 05ec2522-cbdc-4deb-a414-8b92257746eb) completed in 287.51s | tokens: 0 (prompt: 2, completion: 7608)
+2026-10-05 21:29:00,251 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:33:33,868 - INFO - Iteration 25: Program 14883617-1cc2-47b6-b094-db1f750ee7e7 (parent: c5f2241f-c9b9-4fbc-a262-cb2911220e8c) completed in 273.61s | tokens: 0 (prompt: 2, completion: 4074)
+2026-10-05 21:33:33,870 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:33:33,870 - INFO - Checkpoint interval reached at iteration 25
+2026-10-05 21:33:33,871 - INFO - Island Status:
+2026-10-05 21:33:33,871 - INFO -  * Island 0: 25 programs, best=0.8231, avg=0.4353, diversity=150.67, gen=25 (best: 297b0ab6-331b-409c-a3e6-50cd614cd1a9)
+2026-10-05 21:33:33,885 - INFO - Saved database with 25 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_25
+2026-10-05 21:33:33,886 - INFO - Saved best program at checkpoint 25 with metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:33:33,886 - INFO - Saved checkpoint at iteration 25 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_25
+2026-10-05 21:38:11,364 - INFO - Iteration 26: Program aa4ce3e4-ff14-4a71-a151-a19f3132d1dd (parent: 873aac41-0ceb-4ede-ada1-32cc4b24b6fd) completed in 277.50s | tokens: 0 (prompt: 2, completion: 6017)
+2026-10-05 21:38:11,366 - INFO - Metrics: combined_score=0.8231, etapa=3.0000, vida_med=1815.0000, persisten_frac=0.7778, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9167
+2026-10-05 21:47:24,122 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 8}
+2026-10-05 21:47:24,124 - INFO - Iteration 27: Program 5b95fb95-b7e3-42f5-b3c1-f599e8e30b19 (parent: 55ceb6c3-2adb-4bce-9e52-4fdbf3d0739e) completed in 552.74s | tokens: 0 (prompt: 2, completion: 25752)
+2026-10-05 21:47:24,124 - INFO - Metrics: combined_score=0.7861, etapa=3.0000, vida_med=2203.5000, persisten_frac=0.6667, sin_extincion_frac=0.5556, cruzan_frac=0.6667, R0_real_med=0.9444
+2026-10-05 21:58:33,437 - INFO - Island 0 MAP-Elites cell replaced: {'complexity': 9, 'diversity': 8} (fitness: 0.786 -> 0.967)
+2026-10-05 21:58:33,439 - INFO - New best program 2c1bc565-f62f-4b7e-8ffc-bcadc8dd1a94 replaces 297b0ab6-331b-409c-a3e6-50cd614cd1a9 (combined_score: 0.8231 → 0.9666, +0.1436)
+2026-10-05 21:58:33,439 - INFO - Iteration 28: Program 2c1bc565-f62f-4b7e-8ffc-bcadc8dd1a94 (parent: 55ceb6c3-2adb-4bce-9e52-4fdbf3d0739e) completed in 669.32s | tokens: 0 (prompt: 2, completion: 34352)
+2026-10-05 21:58:33,440 - INFO - Metrics: combined_score=0.9666, etapa=3.0000, vida_med=1801.0000, persisten_frac=1.0000, sin_extincion_frac=0.5556, cruzan_frac=0.8889, R0_real_med=0.9677
+2026-10-05 21:58:33,440 - INFO - 🌟 New best solution found at iteration 28: 2c1bc565-f62f-4b7e-8ffc-bcadc8dd1a94
+2026-10-05 22:08:18,490 - INFO - Island 0 MAP-Elites cell replaced: {'complexity': 5, 'diversity': 2} (fitness: 0.050 -> 0.323)
+2026-10-05 22:08:18,492 - INFO - Iteration 29: Program c247eea8-ca9a-487b-a56e-95ef41ae0c76 (parent: 14883617-1cc2-47b6-b094-db1f750ee7e7) completed in 585.05s | tokens: 0 (prompt: 2, completion: 22860)
+2026-10-05 22:08:18,493 - INFO - Metrics: combined_score=0.3233, etapa=3.0000, vida_med=17707.5000, persisten_frac=0.0000, sin_extincion_frac=0.7778, cruzan_frac=0.0000, R0_real_med=0.3333
+2026-10-05 22:19:01,946 - INFO - Island 0 MAP-Elites cell replaced: {'complexity': 9, 'diversity': 8} (fitness: 0.967 -> 0.996)
+2026-10-05 22:19:01,947 - INFO - New best program cb3dc7b4-908d-40db-a2b6-6a087f0cb617 replaces 2c1bc565-f62f-4b7e-8ffc-bcadc8dd1a94 (combined_score: 0.9666 → 0.9956, +0.0290)
+2026-10-05 22:19:01,947 - INFO - Cleaned up 1 stale island best program references
+2026-10-05 22:19:01,947 - INFO - Iteration 30: Program cb3dc7b4-908d-40db-a2b6-6a087f0cb617 (parent: 2c1bc565-f62f-4b7e-8ffc-bcadc8dd1a94) completed in 643.46s | tokens: 0 (prompt: 2, completion: 26543)
+2026-10-05 22:19:01,948 - INFO - Metrics: combined_score=0.9956, etapa=3.0000, vida_med=2424.0000, persisten_frac=1.0000, sin_extincion_frac=0.7778, cruzan_frac=1.0000, R0_real_med=0.9375
+2026-10-05 22:19:01,948 - INFO - 🌟 New best solution found at iteration 30: cb3dc7b4-908d-40db-a2b6-6a087f0cb617
+2026-10-05 22:19:01,948 - INFO - Checkpoint interval reached at iteration 30
+2026-10-05 22:19:01,949 - INFO - Island Status:
+2026-10-05 22:19:01,949 - INFO -  * Island 0: 27 programs, best=0.9956, avg=0.4805, diversity=150.67, gen=30 (best: cb3dc7b4-908d-40db-a2b6-6a087f0cb617)
+2026-10-05 22:19:01,968 - INFO - Saved database with 27 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_30
+2026-10-05 22:19:01,970 - INFO - Saved best program at checkpoint 30 with metrics: combined_score=0.9956, etapa=3.0000, vida_med=2424.0000, persisten_frac=1.0000, sin_extincion_frac=0.7778, cruzan_frac=1.0000, R0_real_med=0.9375
+2026-10-05 22:19:01,970 - INFO - Saved checkpoint at iteration 30 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_30
+2026-10-05 22:19:01,970 - INFO - ✅ Evolution completed - Maximum iterations reached
+2026-10-05 22:19:01,970 - INFO - 📊 Total LLM Token Usage (30 calls): total_tokens=0 (prompt_tokens=60, completion_tokens=477309)
+2026-10-05 22:19:01,988 - INFO - Saved database with 27 programs to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_30
+2026-10-05 22:19:01,989 - INFO - Saved best program at checkpoint 30 with metrics: combined_score=0.9956, etapa=3.0000, vida_med=2424.0000, persisten_frac=1.0000, sin_extincion_frac=0.7778, cruzan_frac=1.0000, R0_real_med=0.9375
+2026-10-05 22:19:01,989 - INFO - Saved checkpoint at iteration 30 to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\checkpoints\checkpoint_30
+2026-10-05 22:19:01,996 - INFO - Stopped process pool
+2026-10-05 22:19:01,997 - INFO - Using tracked best program: cb3dc7b4-908d-40db-a2b6-6a087f0cb617
+2026-10-05 22:19:01,997 - INFO - Evolution complete. Best program has metrics: combined_score=0.9956, etapa=3.0000, vida_med=2424.0000, persisten_frac=1.0000, sin_extincion_frac=0.7778, cruzan_frac=1.0000, R0_real_med=0.9375
+2026-10-05 22:19:01,998 - INFO - Saved best program to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\best\best_program.py with program info to C:\Users\User\Documents\PROYECTOS\JUACO-OPENEVOLVE\humo\salida\best\best_program_info.json
