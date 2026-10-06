@@ -10,3 +10,27 @@
 2026-10-06 04:29:38,163 - openevolve.evaluator - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
 2026-10-06 04:29:38,163 - openevolve.controller - INFO - Initialized OpenEvolve with /home/user/juaco/experimentos/openevolve_serie/raiz/programa_inicial.py
 2026-10-06 04:29:38,164 - openevolve.controller - INFO - Adding initial program to database
+2026-10-06 04:30:31,670 - openevolve.evaluator - INFO - Evaluated program 3d86ff1d-37d0-498b-8889-d21e6a55ca2f in 53.51s: combined_score=0.0620, etapa=2.0000, vida_med=1401.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4000
+2026-10-06 04:30:31,671 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-06 04:30:31,671 - openevolve.controller - INFO - Stored artifacts for initial program
+2026-10-06 04:30:31,672 - openevolve.process_parallel - INFO - Initialized process parallel controller with 1 workers
+2026-10-06 04:30:31,673 - openevolve.process_parallel - INFO - Set max None tasks per child
+2026-10-06 04:30:31,673 - openevolve.process_parallel - INFO - Started process pool with 1 processes
+2026-10-06 04:30:31,673 - openevolve.controller - INFO - Using island-based evolution with 1 islands
+2026-10-06 04:30:31,673 - openevolve.database - INFO - Island Status:
+2026-10-06 04:30:31,673 - openevolve.database - INFO -  * Island 0: 1 programs, best=0.0620, avg=0.0620, diversity=0.00, gen=0 (best: 3d86ff1d-37d0-498b-8889-d21e6a55ca2f)
+2026-10-06 04:30:31,673 - openevolve.process_parallel - INFO - Starting process-based evolution from iteration 1 for 30 iterations (total: 31)
+2026-10-06 04:30:31,678 - openevolve.process_parallel - INFO - Early stopping disabled
+2026-10-06 04:30:31,690 - openevolve.llm.claude_code - INFO - Initialized ClaudeCodeLLM with model: haiku
+2026-10-06 04:30:31,692 - openevolve.llm.claude_code - INFO - Initialized ClaudeCodeLLM with model: haiku
+2026-10-06 04:30:31,693 - openevolve.prompt.sampler - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 04:30:31,697 - openevolve.evaluator - INFO - Successfully loaded evaluation function from /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 04:30:31,697 - openevolve.evaluator - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 04:30:31,700 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 04:35:52,985 - openevolve.evaluator - INFO - Evaluated program 9251b7be-ed7c-494f-b49d-0e891e2b6fbc in 194.98s: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:35:52,988 - openevolve.llm.ensemble - INFO - Sampled model: haiku
+2026-10-06 04:35:52,989 - openevolve.database - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-06 04:35:52,990 - openevolve.database - INFO - New best program 9251b7be-ed7c-494f-b49d-0e891e2b6fbc replaces 3d86ff1d-37d0-498b-8889-d21e6a55ca2f (combined_score: 0.0620 → 0.6426, +0.5806)
+2026-10-06 04:35:52,990 - openevolve.process_parallel - INFO - Iteration 1: Program 9251b7be-ed7c-494f-b49d-0e891e2b6fbc (parent: 3d86ff1d-37d0-498b-8889-d21e6a55ca2f) completed in 321.29s
+2026-10-06 04:35:52,990 - openevolve.process_parallel - INFO - Metrics: combined_score=0.6426, etapa=3.0000, vida_med=1401.0000, persisten_frac=0.4444, sin_extincion_frac=0.5556, cruzan_frac=0.4444, R0_real_med=0.8947
+2026-10-06 04:35:52,990 - openevolve.process_parallel - INFO - 🌟 New best solution found at iteration 1: 9251b7be-ed7c-494f-b49d-0e891e2b6fbc

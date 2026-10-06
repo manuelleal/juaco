@@ -10,3 +10,31 @@
 2026-10-06 04:29:38,165 - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
 2026-10-06 04:29:38,165 - INFO - Initialized OpenEvolve with /home/user/juaco/experimentos/openevolve_serie/raiz/programa_inicial.py
 2026-10-06 04:29:38,166 - INFO - Adding initial program to database
+2026-10-06 04:30:31,805 - INFO - Evaluated program f2a2a798-2bf3-4656-b7b8-be7126d1e176 in 53.64s: combined_score=0.0620, etapa=2.0000, vida_med=1401.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4000
+2026-10-06 04:30:31,806 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 5, 'diversity': 0}
+2026-10-06 04:30:31,811 - INFO - Stored artifacts for initial program
+2026-10-06 04:30:31,812 - INFO - Initialized process parallel controller with 1 workers
+2026-10-06 04:30:31,813 - INFO - Set max None tasks per child
+2026-10-06 04:30:31,814 - INFO - Started process pool with 1 processes
+2026-10-06 04:30:31,814 - INFO - Using island-based evolution with 1 islands
+2026-10-06 04:30:31,814 - INFO - Island Status:
+2026-10-06 04:30:31,814 - INFO -  * Island 0: 1 programs, best=0.0620, avg=0.0620, diversity=0.00, gen=0 (best: f2a2a798-2bf3-4656-b7b8-be7126d1e176)
+2026-10-06 04:30:31,814 - INFO - Starting process-based evolution from iteration 1 for 30 iterations (total: 31)
+2026-10-06 04:30:31,826 - INFO - Early stopping disabled
+2026-10-06 04:30:31,831 - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 04:30:31,832 - INFO - Initialized ClaudeCodeLLM with model: sonnet
+2026-10-06 04:30:31,833 - INFO - Set custom templates: system=evaluator_system_message, user=None
+2026-10-06 04:30:31,840 - INFO - Successfully loaded evaluation function from /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 04:30:31,840 - INFO - Initialized evaluator with /home/user/juaco/experimentos/openevolve_serie/evaluador.py
+2026-10-06 04:30:31,846 - INFO - Sampled model: sonnet
+2026-10-06 04:30:55,976 - WARNING - Iteration 1: only 1 of 3 SEARCH block(s) matched the parent program
+2026-10-06 04:31:48,631 - INFO - Evaluated program 3140d7eb-ef88-4e24-b3a4-88ab5b981abe in 52.66s: combined_score=0.0620, etapa=2.0000, vida_med=1401.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4000
+2026-10-06 04:31:48,634 - INFO - Sampled model: sonnet
+2026-10-06 04:31:48,639 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 5}
+2026-10-06 04:31:48,640 - INFO - Iteration 1: Program 3140d7eb-ef88-4e24-b3a4-88ab5b981abe (parent: f2a2a798-2bf3-4656-b7b8-be7126d1e176) completed in 76.79s
+2026-10-06 04:31:48,640 - INFO - Metrics: combined_score=0.0620, etapa=2.0000, vida_med=1401.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4000
+2026-10-06 04:33:05,637 - INFO - Evaluated program 1f372b1f-5f51-49f3-b71e-b968f1d503e3 in 53.99s: combined_score=0.0620, etapa=2.0000, vida_med=1401.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4000
+2026-10-06 04:33:05,639 - INFO - Sampled model: sonnet
+2026-10-06 04:33:05,648 - INFO - New MAP-Elites cell occupied in island 0: {'complexity': 9, 'diversity': 0}
+2026-10-06 04:33:05,648 - INFO - Iteration 2: Program 1f372b1f-5f51-49f3-b71e-b968f1d503e3 (parent: f2a2a798-2bf3-4656-b7b8-be7126d1e176) completed in 77.00s
+2026-10-06 04:33:05,648 - INFO - Metrics: combined_score=0.0620, etapa=2.0000, vida_med=1401.0000, persisten_frac=0.0000, sin_extincion_frac=0.0000, cruzan_frac=0.0000, R0_real_med=0.4000
