@@ -1227,3 +1227,12 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
   pero no decide).
   - El muro se cruza con una decisión de dos modos: limpiar lejos de criar, y llenar y no limpiar cerca de criar.
   - **Paso 2 (selección desde cero) es difícil:** las tres piezas sólo pagan juntas.
+
+### 6-oct-2026 (cierre ~21:15)
+- **Rama de trabajo:** `openevolve-local-20261006` (no fusionada en main). main en `c2b5d197` (contiene la serie de la nube y Frankenstein v1).
+- **OpenEvolve local:** R = NO; E = HAY ALGO MODESTO en la serie (le gana a O1 13/20; no baja el agotamiento del mundo). **Recoger de disco la réplica del examen:** `experimentos/openevolve_local_20261006/examen/s282021-282040/resumen.json`; registrarla, commit y push de la rama.
+- **Frankenstein v1:** HAY ALGO MODESTO (la reputación frena al cómplice en 2/3 semillas y se invierte en la tercera). Ya en main.
+- **Línea "R4 con propulsores" (modelo local afinado):** nueve informes y juicio final: como "IA con pesos propios" NO; como sistema medible sí hay plan (cuerpo abierto de ~4B + memoria con cuarentena + examen sellado del currículo colombiano con abstención). Paso 1 pendiente del permiso de descarga del director (Qwen3-4B-Instruct-2507 q4_k_m, ~2.5 GB). El activo son 150–200 h con maestros.
+- **Decisiones del director hoy:** fusionar la nube en main; "corre todo" (R y E); seguir investigando antes de empaquetar o mostrar; contactar a Corporación Talentum (DOROKY CORE): borrador en su Gmail, sin enviar.
+- **ERR:** 194 y 195 numerados por la nube; candidato a 196 (cambios de instrumento del examen local). Siguiente libre: 196.
+- **Quien retome lee:** esta sección → `experimentos/openevolve_local_20261006/PREREGISTRO_E.md` e `INCIDENCIA_E.md` → el resumen de la réplica.

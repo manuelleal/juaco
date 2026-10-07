@@ -7760,3 +7760,10 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
   - BANCO NECESARIA (p 0.10) y CAP NECESARIA (p 0.10): sorpresas.
   - PIZARRA, mi apuesta como llave: no lo es.
 - Sin ERR nuevo. Siguiente libre: ERR-196.
+
+### Nota del 6-oct-2026 — OpenEvolve local (rama `openevolve-local-20261006`; `experimentos/openevolve_local_20261006/`)
+- Preregistros R y E commiteados antes de correr (`3c605120`). Instrumento con cambios declarados: ctx sin la tabla del mundo, un módulo por linaje, 1/2/3 semillas de búsqueda por etapa, la etapa 2 exige cría (ERR-195). Adaptador ORIGINAL del humo (sha b1ae88ae; resuelve a Sonnet 5; la nube corrió Sonnet 5.5, sin modo seguro). Identidad y cordura PASAN.
+- **Brazo R (réplica de la búsqueda desde la raíz, 30 iteraciones, mediana 13 950 tokens por propuesta): NO.** Mejor puntaje 0.11, ningún programa llegó a la etapa 3. Examen sellado 282001–282020: MEJOR_R1 con mayoría en 0/20, 1 linaje de 180. La búsqueda acertó 1 de 5 (humo sí; A, B, H de la nube y R1 no).
+- **Brazo E (evolucionar HUMO, 29 de 30 iteraciones; `INCIDENCIA_E.md`, anotada antes del examen): HAY ALGO MODESTO en la serie.** MEJOR_E (sha 04b8e5887077): mayoría 20/20; gana a O1 13, pierde 2, empata 5 (P2 cumple); contra HUMO gana 10, pierde 6, empata 4; 161 linajes contra 156 de HUMO y 134 de O1. P3 (mundo sin comida buena ≤ 0.10) NO: 0.237. Validez V1–V4 cumple; sin sospechas.
+- Réplica del examen (282021–282040) lanzada el 6-oct a las 20:45; al cierre iba en 26/100 corridas. Resultado en `examen/s282021-282040/resumen.json`.
+- Gasto de modelo: ~12 USD equivalentes.
