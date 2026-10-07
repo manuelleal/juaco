@@ -1,0 +1,6 @@
+# Incidencia del brazo E (6-oct-2026, anotada por el coordinador ANTES de correr el examen)
+
+- El proceso del brazo E dejó de existir entre las 18:59:58 (última línea de `corridas/E/evaluaciones.jsonl`) y las 19:03, durante la iteración 30. El log `corridas/E.log` termina en la iteración 29 (18:57:23); no hay `FIN_BRAZO`, ni `corridas/E/fin.json`, ni `corridas/E/best/`. Causa no determinada (ningún Traceback en el log; el coordinador no mató el proceso).
+- Iteraciones completas: 29 de las 30 preregistradas. No se relanza ni se reanuda: una iteración 30 nueva sería otra propuesta del modelo, no la que se perdió.
+- MEJOR_E se congela a mano como el programa con mayor puntaje de búsqueda entre los evaluados en etapa 3: sha `04b8e5887077` (iteración 28, combined_score 0.7935; persisten 9/9/9, cruzan 9/8/8, mundo sin nada bueno 0.219/0.226/0.215 en las tres semillas de búsqueda). Copiado sin cambios de `corridas/E/programas_evaluados/04b8e5887077.py` a `examen/programas/MEJOR_E.py`.
+- Desviación respecto de PREREGISTRO_E.md: 29 iteraciones en vez de 30, y congelado manual en vez del automático de `corre_examen.py`. Ninguna perilla, semilla ni criterio cambia. El examen se corre con `--pool 6` en vez de 4 (sólo cambia el reloj; las corridas son deterministas por semilla).
