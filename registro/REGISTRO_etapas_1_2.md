@@ -7767,3 +7767,5 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 - **Brazo E (evolucionar HUMO, 29 de 30 iteraciones; `INCIDENCIA_E.md`, anotada antes del examen): HAY ALGO MODESTO en la serie.** MEJOR_E (sha 04b8e5887077): mayoría 20/20; gana a O1 13, pierde 2, empata 5 (P2 cumple); contra HUMO gana 10, pierde 6, empata 4; 161 linajes contra 156 de HUMO y 134 de O1. P3 (mundo sin comida buena ≤ 0.10) NO: 0.237. Validez V1–V4 cumple; sin sospechas.
 - Réplica del examen (282021–282040) lanzada el 6-oct a las 20:45; al cierre iba en 26/100 corridas. Resultado en `examen/s282021-282040/resumen.json`.
 - Gasto de modelo: ~12 USD equivalentes.
+
+- **Réplica del examen (282021–282040), terminada el 6-oct ~22:15:** validez V1–V4 cumple, sin sospechas. MEJOR_E mayoría 20/20, 159 linajes (HUMO 145, O1 138); contra O1 gana 11, pierde 5, empata 4: **P2 NO replica** (pedía ≥ 13); P3 NO (0.232); contra HUMO gana 12, pierde 5, empata 3. Veredicto de la réplica por la letra: NO. Serie MODESTO + réplica NO: "le gana a O1" no queda declarado (igual que HUMO en la nube: cumple en una tanda y no en la otra). MEJOR_R1: 0/20 y 0 linajes.
