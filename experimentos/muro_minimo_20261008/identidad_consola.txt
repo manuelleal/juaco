@@ -1,0 +1,64 @@
+IDENTIDAD MURO MINIMO 2026-10-08 14:25:47  python 3.14.2
+  IGUAL   corre_carro.py  (origen sha ddcfd0f06a7acc87)
+  IGUAL   evaluador.py  (origen sha 6736985f4f42cdc5)
+  IGUAL   programas\HUMO.py  (origen sha 69fcfcb2473fdbf6)
+  IGUAL   programas\O1_SINLIMPIA.py  (origen sha 50b2fc3241da510e)
+  IGUAL   experimentos\carrera_escuderias\carros\O1.py  sha 99436afa2715f028 (fijado 99436afa2715f028)
+  IGUAL   experimentos\carrera_escuderias\pista.py  sha 9f47c65e438e0ff4 (fijado 9f47c65e438e0ff4)
+  IGUAL   experimentos\carrera_escuderias\juez.py  sha 6a68f640a7832f12 (fijado 6a68f640a7832f12)
+  IGUAL   experimentos\carrera_escuderias\revisa_carro.py  sha 1c8a789f7427ab96 (fijado 1c8a789f7427ab96)
+CONSTRUYE: TODO IGUAL
+  filtro MINIMO: sha12 b9cfbb3bb7cb - PASA
+  filtro HUMO: sha12 69fcfcb2473f - PASA
+  filtro O1_SINLIMPIA: sha12 50b2fc3241da - PASA
+  MINIMO contra la raiz (lineas de codigo, docstrings incluidos): raiz 89, MINIMO 100, +27 / -16
+      -"""Cerebro de un linaje en el mundo del anillo. Interfaz fija: crea(ctx) devuelve un objeto con
+      +"""MINIMO: O1 sin limpieza + la decision de dos modos, escrita a mano (bloque MURO MINIMO, 8-oct-2026).
+      +Lejos de criar (alguna reserva bajo rep_umbral): prueba lo desconocido y LIMPIA (muerde lo malo conocido para que el mundo
+      +reponga), sin bajar de PISO la reserva golpeada. Cerca de criar (las dos reservas sobre rep_umbral): solo come lo que sirve,
+      +hasta TOPE. Nada mas: sin pizarra, sin radio, sin utilidad de limpiar. Interfaz fija: crea(ctx) devuelve un objeto con
+      -MARGEN = 0.25      # muerde una letra que sirve si la reserva que sube esta bajo rep_umbral + MARGEN
+      +TOPE = 1.5         # CAP: lo que sirve se come hasta el tope real de la reserva (la raiz paraba en rep_umbral + 0.25)
+      +PISO = 0.35        # RECICLA: limpiar no deja la reserva golpeada por debajo de esto
+      -            if x >= self.U + MARGEN: continue
+      +            if x >= TOPE: continue
+      -            g += u * min(v[j], self.U + 0.5 - x)
+      +            g += u * min(v[j], TOPE - x)
+      -    def _quiere(self, k, lev):
+      +    def _limpia(self, v, lev):
+      +        """RECICLA: una letra conocida que no sube nada se muerde para que el mundo reponga, si el golpe es costeable."""
+      +        return not (v > 0).any() and all(lev[j] + v[j] >= PISO for j in (0, 1) if v[j] < 0)
+      +    def _quiere(self, k, lev, criando):
+      -        if v is None: return min(lev) > PRUEBA
+      -        return bool(self._gana(v, lev))
+      +        if self._gana(v, lev): return True
+      +        if criando: return False                      # BANCO: cerca de criar no se prueba ni se limpia
+      +        return min(lev) > PRUEBA if v is None else self._limpia(v, lev)
+      -        mejor = None; desc = None
+      +        criando = min(lev) >= self.U                  # BANCO: los dos modos
+      +        mejor = None; desc = None; sucio = None
+      -            if v is None:
+      -                if min(lev) > PRUEBA and (desc is None or d < desc[0]): desc = (d, x)
+      -                continue
+      -            if not g: continue
+      -            s = g / (d + D0)
+      -            if otros and min(self._dist(o, x) for o in otros) < d: s *= PEN_OTRO
+      -            if mejor is None or s > mejor[0]: mejor = (s, x)
+      +            if g:
+      +                s = g / (d + D0)
+      +                if otros and min(self._dist(o, x) for o in otros) < d: s *= PEN_OTRO
+      +                if mejor is None or s > mejor[0]: mejor = (s, x)
+      +            elif not self._quiere(k, lev, criando): continue
+      +            elif v is None:
+      +                if desc is None or d < desc[0]: desc = (d, x)
+      +            elif sucio is None or d < sucio[0]: sucio = (d, x)
+      +        elif sucio is not None: tgt = sucio[1]        # RECICLA: sin nada mejor que hacer, va a lo malo mas cercano
+      -            muerde = bool(self._quiere(objs[p2], lev))
+      +            muerde = bool(self._quiere(objs[p2], lev, criando))
+  [14:25:47] ancla O1 s883001 T 100000 ...
+  [14:28:45] ancla O1 s883001: 33/33 campos iguales -> IDENTICA · cruzan 5/9 (registro 5) · rng 675172f7e621aeb3 (registro 675172f7e621aeb3) · 178.0 s (registro 234.4 s)
+  [14:28:45] ancla HUMO s276001 T 100000 ...
+  [14:32:17] ancla HUMO s276001: 33/33 campos iguales -> IDENTICA · cruzan 9/9 (registro 9) · rng 8d8bd7616abe0f2c (registro 8d8bd7616abe0f2c) · 211.1 s (registro 271.5 s)
+  [14:32:17] ancla O1_SINLIMPIA s883001 T 100000 ...
+  [14:34:55] ancla O1_SINLIMPIA s883001: 33/33 campos iguales -> IDENTICA · cruzan 0/9 (registro 0) · rng a276479db4c042d7 (registro a276479db4c042d7) · 157.9 s (registro 215.2 s)
+IDENTIDAD: 3 anclas corridas, TODAS IDENTICAS
