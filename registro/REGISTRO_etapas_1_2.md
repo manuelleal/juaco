@@ -7769,3 +7769,21 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 - Gasto de modelo: ~12 USD equivalentes.
 
 - **Réplica del examen (282021–282040), terminada el 6-oct ~22:15:** validez V1–V4 cumple, sin sospechas. MEJOR_E mayoría 20/20, 159 linajes (HUMO 145, O1 138); contra O1 gana 11, pierde 5, empata 4: **P2 NO replica** (pedía ≥ 13); P3 NO (0.232); contra HUMO gana 12, pierde 5, empata 3. Veredicto de la réplica por la letra: NO. Serie MODESTO + réplica NO: "le gana a O1" no queda declarado (igual que HUMO en la nube: cumple en una tanda y no en la otra). MEJOR_R1: 0/20 y 0 linajes.
+
+### MURO MÍNIMO (reconstrucción a mano de la decisión de dos modos) — 8-oct-2026, 14:55–20:50: **HAY ALGO MODESTO ×2**
+> Preregistro: `experimentos/muro_minimo_20261008/PREREGISTRO.md`, commiteado antes de correr (`5ed8fd63`), auditado (SE PUEDE LANZAR).
+> Semillas 283001–283020 y 283021–283040; T 100 000; fundador no limpio; pool 3; 0 USD de modelo. Rama `muro-minimo-20261008`.
+> MINIMO (sha12 b9cfbb3bb7cb): raíz de HUMO (O1 sin limpieza) + RECICLA, BANCO y CAP en su forma más simple; +27/−16 líneas; dos números (TOPE 1.5, PISO 0.35); sin pizarra.
+
+| tanda | MINIMO mayoría | HUMO | KO_PIZARRA | O1 | sin limpieza | linajes MINIMO / HUMO | MINIMO contra HUMO |
+|---|---|---|---|---|---|---|---|
+| serie | **10/20** | 20/20 | 18/20 | 19/20 | 0/20 | 87 / 155 (0.56) | gana 0, pierde 19 |
+| réplica | **11/20** | 20/20 | 19/20 | 17/20 | 0/20 | 94 / 151 (0.62) | gana 0, pierde 16 |
+
+- **P1 (mayoría ≥ 15/20) NO ×2; P2 (≥ 85 % de los linajes de HUMO) NO ×2.** MODESTO por el piso de 10/20 en las dos tandas. Validez V1–V4 y control C1 cumplen ×2.
+- Descriptivo: contra KO_PIZARRA 0.71 y 0.76 de sus linajes (gana 3 y 2, pierde 14 y 13); contra O1 gana 3 y 3, pierde 16 y 13.
+- **Lectura:** la decisión de dos modos escrita a mano saca al organismo del cero (0 linajes sin limpieza → mayoría en 21/40 semillas), pero NO es suficiente para cruzar como HUMO. La reconstrucción no cierra: a la lectura de la disección le falta algo.
+- **Dónde está la diferencia (hipótesis, no medido):** KO_PIZARRA (HUMO sin pizarra) cruza 37/40, así que no es la pizarra; queda entre lo que MINIMO omitió: radio de banco (RADIO_BANCO, D0_BANCO), utilidad de limpiar (RECIC_UTIL) y urgencia 1.3. Señales: vida mediana de MINIMO 1 898 y 1 954 contra ~2 450–2 580 de HUMO y KO_PIZARRA; refundaciones tardías 6 y 7.5 contra 0; mordidas malas ~6 900 contra ~9 000 (limpia menos).
+- **Lo que no dice:** nada sobre aprendizaje ni evolución (es diseño). Un resultado a medias no distingue cuál de las tres omisiones pesa.
+- Predicciones del creador: FUNCIONA 0.15 / MODESTO 0.45 / NO 0.35 → salió MODESTO. P1 (0.55) falló; P2 (0.25) falló; control (0.97) cumplió.
+- Sin ERR nuevo. Siguiente libre: ERR-196.
