@@ -7787,3 +7787,10 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 - **Lo que no dice:** nada sobre aprendizaje ni evolución (es diseño). Un resultado a medias no distingue cuál de las tres omisiones pesa.
 - Predicciones del creador: FUNCIONA 0.15 / MODESTO 0.45 / NO 0.35 → salió MODESTO. P1 (0.55) falló; P2 (0.25) falló; control (0.97) cumplió.
 - Sin ERR nuevo. Siguiente libre: ERR-196.
+
+### Nota del 9-oct-2026 — cuarentena por consecuencia contra envenenamiento de memoria (exploratorio, fuera del tronco): **HAY ALGO MODESTO; serie no corrida**
+- `exploratorio/investigacion_20261009/cuarentena_consecuencia/` (INFORME.md, PREREGISTRO.md con predicciones antes de correr). Línea Alejo A / alefast, nivel 0.
+- Humo 0 sin modelo, 5 semillas: q (voz por confirmación con peso por fuente o por verificación propia; peso 0 tras un fallo verificado) gana a memoria simple, voto ≥ 2 y cuarentena K=2 (1.00 → 0.02 de respuestas envenenadas en PAC2+SYB2) pero EMPATA con el rival estándar barato, voto ≥ 2 + lista negra (0.06); 0/5 semillas cumplen FUNCIONA y el control barajado no sube. Con Qwen 1.5B (semilla 0): mismo cuadro.
+- Lectura: "peso 0 tras un fallo verificado" es una lista negra; la probación sólo sube el precio de 2 a 4 identidades; la verificación propia es regalo del oráculo. La arquitectura ya está publicada. La serie (85 min) no se gasta.
+- Hallazgo lateral sin ejecutar: alefast promueve a "fast" con racha ≥ 2 sin contar fuentes distintas.
+- Humo sin auditoría independiente; no se declara nada más. Sin ERR nuevo. Siguiente libre: ERR-196.
