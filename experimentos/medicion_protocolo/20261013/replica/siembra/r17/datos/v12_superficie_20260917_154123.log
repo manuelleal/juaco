@@ -1,0 +1,45 @@
+[15:41:23 +    0.0s] ARRANQUE v12: superficie del canje (6 betas, semillas 41-60) + rama hija-madura (u en [1.0, 0.3], semillas 71-80). Pool(14).
+[15:41:23 +    0.0s] sha preregistro 1766b32e792aed40  script 7bebffd89d016b7f  v12 7f564687ec072da6  v12m c04a7f32b6eaa539  v12g b68d918f0db3ca8c  v11 f69e24063be1b194
+[15:41:24 +    0.4s] REGLA 11 — procesos python vivos (2), este es pid 22748
+[15:41:24 +    0.6s] ETAPA 1/4 — controles de inercia (57)...
+[15:42:46 +   82.3s]   I1  v12(beta=0) == v11          : 21/21
+[15:42:46 +   82.3s]   I2  v12(div_signo=False) == v10 : 21/21
+[15:42:46 +   82.3s]       v12m == v11m                : 9/9
+[15:42:46 +   82.3s]       v12g == v11g                : 6/6
+[15:42:46 +   82.3s]   Controles de inercia OK. Recien ahora se miran los puntos intermedios.
+[15:42:46 +   82.3s] ETAPA 2/4 — 420 corridas (superficie + rama)...
+[15:43:19 +  115.4s]           30/420
+[15:43:40 +  137.0s]           60/420
+[15:44:03 +  159.4s]           90/420
+[15:44:25 +  181.4s]           120/420
+[15:44:59 +  215.4s]           150/420
+[15:45:29 +  245.8s]           180/420
+[15:46:00 +  276.6s]           210/420
+[15:46:40 +  317.1s]           240/420
+[15:47:14 +  350.5s]           270/420
+[15:47:45 +  381.4s]           300/420
+[15:48:17 +  413.3s]           330/420
+[15:48:47 +  443.7s]           360/420
+[15:49:16 +  472.9s]           390/420
+[15:49:47 +  504.1s]           420/420
+[15:49:47 +  504.1s] ETAPA 3/4 — la rama no alcanza su prediccion en 71-80: no se tocan las semillas retenidas.
+[15:49:47 +  504.1s] 
+[15:49:47 +  504.1s]   TABLA UNICA (retencion = W_B<=-2 y W_A>=0.5; acierto = valor en patrones nunca vistos; fuga = hijas ajenas de 3)
+[15:49:47 +  504.1s]   condicion              semillas   retencion  guarda  acierto          azar   conducta  fuga   div   celdas  muertes  congel
+[15:49:47 +  504.1s]   beta=0.00              41-60       20/20      20/20  0.600 [0.40,0.90] 0.500  0.672     0.08      5     35      202      0
+[15:49:47 +  504.1s]   beta=0.15              41-60       20/20      20/20  0.575 [0.40,0.70] 0.500  0.657     0.13      5     35      202      0
+[15:49:47 +  504.1s]   beta=0.30              41-60       20/20      20/20  0.600 [0.40,0.80] 0.500  0.689     0.18      5     35      198      0
+[15:49:47 +  504.1s]   beta=0.50              41-60       19/20      20/20  0.600 [0.40,0.80] 0.500  0.664     0.22      6     36      196      0
+[15:49:47 +  504.1s]   beta=0.75              41-60       19/20      20/20  0.700 [0.30,0.90] 0.500  0.716     0.37      6     36      202      0
+[15:49:47 +  504.1s]   beta=1.00              41-60       12/20      20/20  0.700 [0.50,0.90] 0.500  0.692     0.57      7     37      202      0
+[15:49:47 +  504.1s]   rama u=1.0             71-80        5/10      10/10  0.700 [0.40,0.90] 0.500  0.740     0.65      7     37      210      1
+[15:49:47 +  504.1s]   rama u=0.3             71-80        5/10       5/10  0.750 [0.40,0.90] 0.500  0.718     0.67      7     37      222      6
+[15:49:47 +  504.1s] 
+[15:49:47 +  504.1s]   GUARDA: Spearman(beta, fuga) = +1.000 (>=+0.9): OK
+[15:49:47 +  504.1s]   H [el canje existe]: ningun beta con retencion 20/20 Y acierto >=0.78 -> SOSTENIDA
+[15:49:47 +  504.1s]   RAMA rama u=1.0              : retencion 5/10, acierto 0.700 -> REFUTADA
+[15:49:47 +  504.1s]   RAMA rama u=0.3              : retencion 5/10, acierto 0.750 -> REFUTADA
+[15:49:47 +  504.1s] 
+[15:49:47 +  504.1s] VEREDICTO v12: INERCIA=True H_canje=True GUARDA_perilla=True
+[15:49:47 +  504.1s] ETAPA 4/4 — escritura.
+[15:49:47 +  504.1s] datos -> v12_superficie_20260917_154123.json  sha256_16 = 9cc6c639405f7016
