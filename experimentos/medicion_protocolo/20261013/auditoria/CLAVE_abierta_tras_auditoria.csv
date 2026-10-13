@@ -1,0 +1,61 @@
+copia,tiene_defecto,tipo,archivo,linea,descripcion
+c01,no,,,,
+c02,si,lectura,VEREDICTO.md,21,Q4: v10 12/20 en el informe; el JSON da 10/20
+c03,no,,,,
+c04,si,criterio,PREREGISTRO_capacidad_grande.md,30,Censura N_agot = N* en semillas que no agotan: G3 (|N*-N_agot|<=5) pasa por construccion en esa parte de la muestra
+c05,si,instrumento,corre_curiosidad.py,49,La identidad compara mundo_largo_c consigo mismo: no puede fallar
+c06,si,criterio,PREREGISTRO_etapa4_v9.md,46,M3 mide niveles (|W_A|+|W_B|) y no el cambio: se cumple con cualquier valor aprendido; la guarda de M2 no puede fallar
+c07,si,criterio,PREREGISTRO_v12.md,60,"H exige acierto >= 0.90, por encima del propio v9 (0.80): el canje no puede refutarse"
+c08,no,,,,
+c09,si,lectura,VEREDICTO.md,24,Atribuye la retencion 0.83 al progreso ('aprende que proteger') cuando el control barajado da lo mismo (0.83) y P3 cae
+c10,si,criterio,PREREGISTRO_frontera_hambre.md,83,"Enmienda de F3 fechada 15:40, despues de la corrida (JSON 15:36), cambia brazo y baja el umbral a 1.4x justo bajo lo observado (1.42x): criterio recalibrado tras ver datos"
+c11,no,,,,
+c12,no,,,,
+c13,no,,,,
+c14,si,instrumento,corre_capacidad_grande.py,85,N_agot sin el +1 del preregistro (1 + t_agot/paso_t): desplaza en uno la cantidad que decide G3
+c15,no,,,,
+c16,no,,,,
+c17,si,criterio,PREREGISTRO_capacidad_grande.md,36,G2 con umbral en el nulo (diferencia >= 0): 'la ventaja no era del mundo pequeno' pasa con empate
+c18,no,,,,
+c19,si,instrumento,corre_etapa4_v9.py,71,"La cria corre con la semilla del progenitor (no 1000+s): mismo mundo, la trampa que el preregistro dice evitar"
+c20,no,,,,
+c21,si,criterio,PREREGISTRO.md,85,Tolerancia de P3 +-0.05 mayor que la diferencia entre lambda=0.001 y no decaer (0.011 y 0.033): P3 no distingue el mecanismo del nulo
+c22,si,criterio,PREREGISTRO_v10.md,61,Q3 (la prueba del mecanismo) sale de las condiciones que impiden congelar: su fallo no tiene consecuencia
+c23,no,,,,
+c24,no,,,,
+c25,si,instrumento,corre_hija_dispersa.py,56,"La identidad y P4 excluyen W, sep, lift y celdas (claves del mundo original): la comprobacion 'todas las claves' no mira los resultados"
+c26,si,criterio,PREREGISTRO_hija_dispersa.md,89,R3 (REL vs AZAR) con umbral 10/20 = azar pareado: la clausula que distingue relevancia de dispersion esta en el nulo
+c27,no,,,,
+c28,si,criterio,PREREGISTRO_reverificacion_v9.md,56,La tolerancia de K2 se justifica con el resultado de v9 a 60k (11.5 vs 12.0) en un texto que dice que sobre v9 no se ha corrido nada: criterio fijado tras ver datos
+c29,no,,,,
+c30,si,lectura,VEREDICTO.md,65,"Se declara 'aprende a ignorar lo irrelevante', vocabulario prohibido por el preregistro (s5) y sin prueba de aprendizaje"
+c31,si,criterio,PREREGISTRO_etapa4_v9.md,85,La regla de cierre de la Etapa 4 (memoria persistente) no exige M2 (recordar pese a la interferencia) ni H3/H4
+c32,si,instrumento,corre_frontera_hambre.py,56,kwarg hambre_boca omitido en tarea(): todos los brazos hb corren con el valor por defecto (perilla desconectada)
+c33,si,instrumento,mundo_temporal_v9.py,61,"Default memoria_rechazo=0 en mundo_temporal_v9 y el runner no lo pasa en el bloque T: 3T se mide sobre v8, no v9 (kwarg omitido)"
+c34,si,criterio,PREREGISTRO_curiosidad.md,37,P1 con umbral 0.70 = nivel ya conocido de MAPA (s0): 'recupera la exploracion' se cumple sin mejorar
+c35,no,,,,
+c36,si,instrumento,corre_v12.py,119,Retencion con 'or' en vez de 'and': mas laxa que la definicion preregistrada (W_B<=-2 y W_A>=0.5)
+c37,si,instrumento,corre_reverificacion.py,173,K1 se evalua sobre el brazo v8 (mem=0) en vez de v9 (mem=20): compara el brazo equivocado
+c38,si,criterio,PREREGISTRO_v10.md,46,"El confirmatorio Q3/Q4 se fija en las semillas 1-20, las mismas de las cifras exploratorias declaradas en s0"
+c39,no,,,,
+c40,no,,,,
+c41,si,instrumento,organismo_v12g.py,138,"En v12g beta multiplica (P<0), que nunca ocurre (P binario): la perilla beta no actua en el mundo de regla"
+c42,si,instrumento,corre_bug01.py,23,Escenario BUG sin plast=False: P1 no se mide en el escenario del bug del preregistro (kwarg omitido)
+c43,si,criterio,PREREGISTRO_frontera_hambre.md,105,La clausula de decision vuelve no vinculante el umbral de hb=1.0 (<=5/20): F2 no puede refutarse por la prediccion que la define
+c44,no,,,,
+c45,si,instrumento,corre_criterio_v4.py,129,"El desplazamiento de semilla se aplica a PLACEBO, no a TRONCO_B: TRONCO_B = OFF corrida a corrida y V4-1/V4-2 no pueden fallar"
+c46,si,lectura,VEREDICTO.md,17,P2 declarada SOSTENIDA 20/20; el JSON da P2=False y E2K W_B<=-2.4 en 19/20
+c47,si,lectura,VEREDICTO.md,31,F6 declarada SOSTENIDA desde el x1.10 redondeado del log; 155.5/142 = 1.095 < 1.10 y el JSON dice F6=False
+c48,si,instrumento,umbrales_v4.py,36,"umbrales_v4 usa margen 15.0 en T-C (ii) mientras la letra, la frase y el preregistro dicen 12.5"
+c49,si,criterio,PREREGISTRO_v12.md,113,Refutacion de la rama con 'y' y acierto < 0.50 (bajo el azar): la rama no puede refutarse
+c50,si,instrumento,corre_v10.py,106,"Hija = indice > 30: la celda 30 (primera hija) no cuenta, contra 'indice >= 30' del preregistro y del docstring"
+c51,no,,,,
+c52,si,instrumento,corre_capacidad_grande.py,84,Gg no filtra por paso: las corridas de 20k y 60k colisionan en la misma clave de semilla (gana la ultima)
+c53,si,criterio,PREREGISTRO_reverificacion_v9.md,41,"T3 con umbral en el nulo (lift_q4 > 0) mientras dice reutilizar los criterios del 3T 'sin cambiar un umbral' (0.15, el que usa T4)"
+c54,si,criterio,PREREGISTRO_curiosidad.md,26,"Control barajado permuta las celdas dentro del codigo: la media de 3 celdas es invariante, el control es identico al tratamiento por construccion"
+c55,si,instrumento,corre_hija_dispersa.py,161,Umbrales de P1 invertidos entre k=4 y k=5 respecto al preregistro (0.75 es para k=5)
+c56,si,instrumento,corre_etapa4_v9.py,61,Congelar se aplica al brazo con aprendizaje y no al control: M1/M2/M3 leen brazos invertidos
+c57,si,criterio,PREREGISTRO_calibracion_v4.md,45,La prediccion 'firmada antes del humo' P-1 se apoya en los resultados de la serie y la replica: prediccion fijada tras ver datos
+c58,si,criterio,PREREGISTRO.md,74,P1a con <= 9.00: el clip (3.0 por celda = 9.0 por codigo) lo garantiza siempre; el criterio de desbloqueo no puede fallar
+c59,no,,,,
+c60,si,lectura,VEREDICTO.md,21,Afirma que T-C (ii) atrapa a PEOR en la serie (LI -13.9); el JSON de la serie da PASA con LI -1.156
