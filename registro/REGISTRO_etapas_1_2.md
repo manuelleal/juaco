@@ -7794,3 +7794,48 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 - Lectura: "peso 0 tras un fallo verificado" es una lista negra; la probación sólo sube el precio de 2 a 4 identidades; la verificación propia es regalo del oráculo. La arquitectura ya está publicada. La serie (85 min) no se gasta.
 - Hallazgo lateral sin ejecutar: alefast promueve a "fast" con racha ≥ 2 sin contar fuentes distintas.
 - Humo sin auditoría independiente; no se declara nada más. Sin ERR nuevo. Siguiente libre: ERR-196.
+
+### MEDICIÓN DEL PROTOCOLO con errores sembrados — 13-oct-2026 (serie 60 copias + réplica 20): **HAY ALGO MODESTO**
+> Preregistro: `experimentos/medicion_protocolo/20261013/PREREGISTRO.md`, commiteado antes de sembrar y antes de auditar (`2d1eb41e`).
+> Veredicto: `experimentos/medicion_protocolo/20261013/VEREDICTO.md`. Clave sellada fuera del repo (sha256 en `siembra/CLAVE.sha256`), abierta sólo después de los lotes y coincide (`auditoria/PUNTAJE.md`).
+> No es una corrida del organismo: mide al auditor de sólo lectura del protocolo. 0 USD de modelo medido; sin Pool.
+
+**Diseño:**
+- Unidad: una copia de un bloque cerrado, con cero o un defecto sembrado por un agente sembrador (10 bloques elegidos con `random.Random(20261013)` sobre `experimentos/INDICE.md`).
+- Serie: 40 copias con defecto (18 criterio, 16 instrumento, 6 lectura/otro, proporcional al registro) + 20 limpias; auditor ciego (`metodo-auditor-ciego`, Sonnet) sin clave ni preregistro, en seis lotes de diez, una copia por bloque y un agente por lote; puntaje con `siembra/puntua.py` (acierto = fila `defecto=si` en el archivo de la clave; falsa alarma = limpia con alarma alta o media).
+- Réplica (semilla 20261014, 13 con defecto + 7 limpias) preregistrada sólo para la decisión sobre falsas alarmas, que en la serie cruzó el umbral por una copia.
+
+**Serie (60 copias: 40 con defecto, 20 limpias):**
+
+| Medida | Resultado | Wilson 95 % | Predicción | ¿Se cumplió? |
+|---|---|---|---|---|
+| Sensibilidad total | 28/40 = 0,70 | 0,55–0,82 | P1: 0,40–0,70 | En el borde superior |
+| Criterio | 7/18 = 0,39 | 0,20–0,61 | P2: instrumento > criterio | Sí |
+| Instrumento | 15/16 = 0,94 | 0,72–0,99 | | |
+| Lectura / otro | 6/6 = 1,00 | 0,61–1,00 | | |
+| Falsas alarmas (limpias con alarma alta o media) | 6/20 = 0,30 | 0,15–0,52 | P3: ≤ 3/20 | **NO** |
+
+**Réplica (20 copias nuevas, semilla 20261014):**
+
+| Medida (réplica) | Resultado | Wilson 95 % |
+|---|---|---|
+| Sensibilidad total | 7/13 = 0,54 | 0,29–0,77 |
+| Criterio | 2/6 = 0,33 | 0,10–0,70 |
+| Instrumento | 3/5 = 0,60 | 0,23–0,88 |
+| Lectura | 2/2 | 0,34–1,00 |
+| Falsas alarmas | 3/7 = 0,43 | 0,16–0,75 |
+
+- Serie y réplica juntas, descriptivo y NO preregistrado: total 35/53 = 0,66; instrumento 18/21 = 0,86; criterio 9/24 = 0,38; falsas alarmas 9/27 = 0,33.
+- **Veredicto: HAY ALGO MODESTO.** No cumple "≥ 0,70 en todos los tipos y falsas alarmas ≤ 3" (no es FUNCIONA); total ≥ 0,30 (no es NO). El auditor de sólo lectura atrapa casi todo lo que está en el código y poco de lo que está en la letra del criterio, y da más falsas alarmas de las predichas.
+
+**Decisiones, según los criterios escritos antes:**
+- Instrumento ≥ 0,50: el auditor **sí cuenta** como control para errores de instrumento; pasar esos chequeos a código (fase 2) es refuerzo, no rescate.
+- Criterio 0,39: el auditor **no basta** para errores de criterio (el tipo más frecuente del registro, 53 de 126). Hace falta cotejo automático preregistro ↔ runner (umbrales, semillas, controles) antes de correr.
+- Falsas alarmas 6/20 > 5/20 en la serie, cruzado por una copia; la réplica da 3/7 y **confirma**: el formato de hallazgos cambia, "dato que confirma" obligatorio antes de contar. La pregunta espejo del 12-oct no evitó las falsas alarmas.
+- Limitaciones declaradas: las copias limpias arrastran errores reales de los bloques originales (avisados por los sembradores antes de auditar; cuentan como falsas alarmas porque así se escribió; sin recuento); sembrador y auditor son de la misma familia de modelos; un solo proyecto; tiempo por copia sin medir; los sha de logs y JSON resellados en la siembra quitan una pista que en el repo real existe.
+- Errores reales sin numerar encontrados de paso en bloques cerrados (a registrar después del 15-oct): criterio_v4, bug01, hija_dispersa, v10, capacidad_grande (detalle en VEREDICTO.md).
+
+- **ERR-196 (procedimiento; montaje cambiado antes de los datos):** el preregistro no previó que seis copias del mismo bloque, lado a lado, delatan el defecto por comparación. Antes de auditar se repartieron en seis lotes de diez, una copia por bloque, fuera del repositorio, y cada lote lo auditó un agente distinto. Se numera igual.
+- **ERR-197 (criterio de puntaje; detectado tras ver datos; no se cambia aquí):** el acierto se cuenta por archivo. Un defecto de criterio sembrado sólo en el preregistro no se le reconoce al auditor que señala el runner con el umbral viejo (ocurrió en c34). Se deja como está; se corrige en el siguiente preregistro.
+- **ERR-198 (instrumento; sin efecto en los números):** `puntua.py` comparaba contra el sello de la primera siembra por ruta fija; en la réplica imprimió "NO COINCIDE" con la clave correcta (sha 370fb5ad…, verificado a mano). Corregido en `juaco-metodo`.
+- Siguiente ERR libre: **ERR-199**.

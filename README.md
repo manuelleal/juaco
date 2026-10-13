@@ -82,6 +82,11 @@ through Claude Code), working in fixed roles:
 
 Every claim above was recomputed from raw files by an auditor agent. Every agent error is numbered in the registry.
 
+The protocol itself (roles, preregistration, audits, seeded-error measurement) is maintained as a separate repository,
+[juaco-metodo](https://github.com/manuelleal/juaco-metodo); JUACO is its first case. The read-only auditor was measured
+with seeded errors on 13 Oct 2026: 28 of 40 detected in the series; details in
+[`experimentos/medicion_protocolo/20261013/`](experimentos/medicion_protocolo/20261013/) (`VEREDICTO.md`).
+
 ## Structure
 - `CLAUDE.md`: rules of the project.
 - `registro/`:
