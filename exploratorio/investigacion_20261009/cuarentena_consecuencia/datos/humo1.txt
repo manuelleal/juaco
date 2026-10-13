@@ -1,0 +1,62 @@
+semillas [0]; plantillas A; N=12 hechos por clase; CON modelo; mediana [mín–máx] entre semillas
+ENVENENADAS (respuestas que afirman la mentira / preguntas de la clase, todas las rondas)
+| brazo | CONS1 | SYB2 | SYB4 | PAC2 | PAC2+SYB2 (criterio) | SYB2U (sens.) | SYB4U (sens.) | total |
+|---|---|---|---|---|---|---|---|---|
+| a | 0.00 | 0.00 | 0.00 | 0.06 | 0.02 | 0.00 | 0.00 | 0.01 |
+| b | 1.00 | 1.00 | 1.00 | 0.89 | 0.96 | 1.00 | 1.00 | 0.99 |
+| bv2 | 0.00 | 0.80 | 1.00 | 0.83 | 0.81 | 0.97 | 1.00 | 0.71 |
+| bv2+LN | 0.00 | 0.03 | 0.17 | 0.06 | 0.04 | 0.60 | 0.73 | 0.26 |
+| bv2+LN+V | 0.00 | 0.03 | 0.17 | 0.06 | 0.04 | 0.60 | 0.73 | 0.26 |
+| c | 0.00 | 0.83 | 1.00 | 0.67 | 0.77 | 0.97 | 1.00 | 0.70 |
+| c3 | 0.00 | 0.00 | 1.00 | 0.06 | 0.02 | 0.00 | 1.00 | 0.34 |
+| r | 0.00 | 0.83 | 1.00 | 0.67 | 0.77 | 0.97 | 1.00 | 0.70 |
+| q | 0.00 | 0.00 | 0.13 | 0.06 | 0.02 | 0.00 | 0.73 | 0.15 |
+| q_baraja | 0.00 | 0.00 | 0.60 | 0.06 | 0.02 | 0.00 | 0.73 | 0.23 |
+| q_sinrep | 0.00 | 0.00 | 0.57 | 0.06 | 0.02 | 0.00 | 0.73 | 0.22 |
+| o | 0.00 | 0.00 | 0.00 | 0.06 | 0.02 | 0.00 | 0.00 | 0.01 |
+
+ACIERTO y costo
+| brazo | confirmable HC | una vez H1 | verdades de pacientes PACV | rondas hasta voz HC | nunca voz HC | rondas hasta voz H1 | nunca voz H1 | escala |
+|---|---|---|---|---|---|---|---|---|
+| a | 0.00 | 0.00 | 0.00 | — | 1.00 | — | 1.00 | 0.97 |
+| b | 1.00 | 1.00 | 1.00 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+| bv2 | 0.97 | 0.00 | 0.90 | 0.00 | 0.08 | — | 1.00 | 0.29 |
+| bv2+LN | 0.97 | 0.00 | 0.40 | 0.00 | 0.08 | — | 1.00 | 0.64 |
+| bv2+LN+V | 0.97 | 0.43 | 0.88 | 0.00 | 0.08 | 1.14 | 0.42 | 0.54 |
+| c | 0.87 | 0.00 | 0.83 | 0.00 | 0.08 | — | 1.00 | 0.29 |
+| c3 | 0.00 | 0.00 | 0.00 | — | 1.00 | — | 1.00 | 0.76 |
+| r | 0.87 | 0.00 | 0.83 | 0.00 | 0.08 | — | 1.00 | 0.29 |
+| q | 0.80 | 0.43 | 0.64 | 0.18 | 0.08 | 1.14 | 0.42 | 0.63 |
+| q_baraja | 0.47 | 0.43 | 0.45 | 1.25 | 0.33 | 1.14 | 0.42 | 0.66 |
+| q_sinrep | 0.47 | 0.43 | 0.43 | 1.25 | 0.33 | 1.14 | 0.42 | 0.66 |
+| o | 0.47 | 0.43 | 0.55 | 1.25 | 0.33 | 1.14 | 0.42 | 0.57 |
+
+ORÁCULO y MODELO (por semilla)
+| brazo | verificaciones gastadas | útiles | llamadas al modelo (respuestas) | llamadas reales (sin caché) | otro error |
+|---|---|---|---|---|---|
+| a | 0 | 0 | 282 | 108 | 8 |
+| b | 0 | 0 | 282 | 118 | 2 |
+| bv2 | 0 | 0 | 282 | 20 | 6 |
+| bv2+LN | 75 | 55 | 282 | 0 | 8 |
+| bv2+LN+V | 85 | 55 | 282 | 1 | 5 |
+| c | 0 | 0 | 282 | 78 | 13 |
+| c3 | 0 | 0 | 282 | 0 | 8 |
+| r | 0 | 0 | 282 | 0 | 13 |
+| q | 145 | 91 | 282 | 0 | 13 |
+| q_baraja | 145 | 91 | 282 | 1 | 9 |
+| q_sinrep | 145 | 91 | 282 | 0 | 10 |
+| o | 151 | 89 | 282 | 65 | 7 |
+
+Por semilla: envenenadas PAC2+SYB2 / PAC2 / SYB2 / confirmable
+  bv2       s0: 0.81/0.83/0.80/0.97
+  c         s0: 0.77/0.67/0.83/0.87
+  bv2+LN    s0: 0.04/0.06/0.03/0.97
+  bv2+LN+V  s0: 0.04/0.06/0.03/0.97
+  q         s0: 0.02/0.06/0.00/0.80
+  q_baraja  s0: 0.02/0.06/0.00/0.47
+  q_sinrep  s0: 0.02/0.06/0.00/0.47
+
+CRITERIO POR LA LETRA: semillas con (q<=0.25 y q<=rival-0.20 y confirmable>=rival-0.10): 0/1; control barajado en PAC2: +0.00 (pide >= +0.20); q gana a b, bv2 y c: True; q empata con bv2+LN: True -> MODESTO  [menos de 5 semillas: NO es veredicto]
+q == bv2+LN (misma tasa de envenenadas, semilla a semilla): CONS1 1/1, SYB2 0/1, SYB4 0/1, SYB2U 0/1, SYB4U 1/1, PAC2 1/1
+
+TIEMPO: total 502 s (carga del modelo 2 s); llamadas 3672, de caché 2993, reales 679; s por llamada real 0.74; extracción: 228/288 exacta, 253/288 valor dentro, 0.95 s/extracción; s por semilla 502

@@ -1,0 +1,21 @@
+[17:55:57 +    0.0s] ARRANQUE v10 confirmatorio (Q0, Q3, Q4). semillas 21..40. Pool(14).
+[17:55:57 +    0.0s] sha preregistro 0e035dc12f3fffd3  script c3b9474d522f94ee  v10 219d5033fe15b5b9  v10m c33253b850570308  v9 d3b72fb8819fbe8e
+[17:55:58 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 22668:
+[17:55:58 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[17:55:58 +    0.3s]     22668 "C:\Python314\python.exe" experimentos/v10_direccion_division/corre_v10.py
+[17:55:58 +    0.5s] ETAPA 1/3 — Q0 identidades (48)...
+[17:56:46 +   48.7s]   Q0a v10(mu_norm=False)==v9  : 42/42
+[17:56:46 +   48.7s]   Q0b v10m==v10               : 6/6
+[17:56:46 +   48.7s] ETAPA 2/3 — bloque M, 40 corridas (v9 y v10 con la misma instrumentacion)...
+[17:56:56 +   59.1s]           10/40
+[17:57:07 +   69.3s]           20/40
+[17:57:15 +   78.1s]           30/40
+[17:57:16 +   78.5s]           40/40
+[17:57:16 +   78.5s] ETAPA 3/3 — analisis.
+[17:57:16 +   78.5s]   Q3 hijas en codigo(B) en 100k: v9 14/20 (>=10), v10 6/20 (<=5); dW_B v10<v9 en 11/20 (>=12), v10 peor por >0.5 en 1 (==0) -> REFUTADA
+[17:57:16 +   78.5s]       dW_B mediana: v9 +2.237  v10 +0.861;  splits en la corrida: v9 6  v10 3
+[17:57:16 +   78.5s]   Q4 retencion W_B<=-2: v9 7/20, v10 10/20 (v10>=v9 y >=8); W_A>=0.5: v9 6, v10 6; guarda W_C<=-2.5 20/20, W_D>=0.85 20/20 (>=17) -> SOSTENIDA
+[17:57:16 +   78.5s]       W_B(100k) mediana: v9 -0.69  v10 -2.06;  muerde B al reencuentro: v9 9, v10 5;  muertes v9 200 v10 202
+[17:57:16 +   78.5s] 
+[17:57:16 +   78.5s] VEREDICTO v10_confirmatorio: Q0=True Q3=False Q4_guarda=True Q4=True   (Q1, Q2 en bateria_v10.py 20 --log)
+[17:57:16 +   78.5s] datos -> v10_confirmatorio_20260916_175557.json  sha256_16 = ea0fd051edf61d0a

@@ -1,0 +1,45 @@
+[14:24:55 +    0.0s] ARRANQUE capacidad grande: retina 10 px, 60 estimulos de peso 3, semillas 41..60, pasos (20000, 60000). Pool(14).
+[14:24:55 +    0.0s] sha preregistro c98776664cb80377  script 8c3e14f3e1085886  capD 85afad3f0769891f  mundo_grande 3b9feaf21e529c50  caph11 a34d3309221cc6c7  v11 f69e24063be1b194
+[14:24:55 +    0.5s] REGLA 11 — procesos python vivos (2), este es pid 5680:
+[14:24:55 +    0.5s]     22080 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[14:24:55 +    0.5s]     5680 C:\Python314\python.exe experimentos/capacidad_grande/corre_capacidad_grande.py
+[14:24:55 +    0.5s] ETAPA 1/3 — 120 corridas (primero las de 60k, 3600k pasos cada una)...
+[14:29:26 +  271.5s]           6/120
+[14:29:28 +  273.2s]           12/120
+[14:34:04 +  549.2s]           18/120
+[14:34:06 +  551.4s]           24/120
+[14:38:30 +  815.4s]           30/120
+[14:38:33 +  818.4s]           36/120
+[14:38:39 +  824.5s]           42/120
+[14:42:58 + 1083.6s]           48/120
+[14:43:03 + 1088.3s]           54/120
+[14:44:30 + 1174.9s]           60/120
+[14:44:39 + 1183.7s]           66/120
+[14:46:03 + 1268.6s]           72/120
+[14:47:29 + 1354.3s]           78/120
+[14:47:32 + 1357.6s]           84/120
+[14:47:42 + 1367.1s]           90/120
+[14:49:03 + 1448.0s]           96/120
+[14:49:08 + 1453.5s]           102/120
+[14:50:30 + 1535.2s]           108/120
+[14:50:34 + 1539.3s]           114/120
+[14:51:39 + 1604.7s]           120/120
+[14:51:39 + 1604.7s] ETAPA 2/3 — analisis.
+[14:51:39 + 1604.7s] 
+[14:51:39 + 1604.7s]   paso 20k (T = 1200000 pasos)
+[14:51:40 + 1604.7s]    v9  : N* 4.0 [2,6]  M_max 16.5 [11,26]  N_agot 21.0  agotan 20/20  celdas 90  divisiones 60  muertes 1630
+[14:51:40 + 1604.7s]    v10 : N* 6.0 [3,9]  M_max 21.0 [14,28]  N_agot 28.0  agotan 20/20  celdas 90  divisiones 60  muertes 1686
+[14:51:40 + 1604.7s]    v11 : N* 43.5 [6,60]  M_max 28.5 [24,38]  N_agot 33.5  agotan 20/20  celdas 90  divisiones 60  muertes 1617
+[14:51:40 + 1604.7s] 
+[14:51:40 + 1604.7s]   paso 60k (T = 3600000 pasos)
+[14:51:40 + 1604.7s]    v9  : N* 8.0 [5,27]  M_max 20.0 [15,28]  N_agot 19.5  agotan 20/20  celdas 90  divisiones 60  muertes 5119
+[14:51:40 + 1604.7s]    v10 : N* 9.0 [7,18]  M_max 24.0 [13,36]  N_agot 28.0  agotan 20/20  celdas 90  divisiones 60  muertes 5204
+[14:51:40 + 1604.7s]    v11 : N* 50.0 [31,60]  M_max 32.0 [27,41]  N_agot 32.5  agotan 20/20  celdas 90  divisiones 60  muertes 4849
+[14:51:40 + 1604.7s] 
+[14:51:40 + 1604.7s]   G1 mediana N*(v11) >= 20 en los dos pasos: 43.5 y 50.0 -> SOSTENIDA
+[14:51:40 + 1604.7s]   G2 N*(v11) - N*(v10) >= +5: 20k +37.5, 60k +41.0 -> SOSTENIDA
+[14:51:40 + 1604.7s]   G3 el limite de v11 lo pone el POOL: |N*-N_agot|<=5 en 20k 7/20, 60k 1/20; v10 lejos de su pool en 20k 20/20, 60k 19/20 (>=14) -> REFUTADA
+[14:51:40 + 1604.7s] 
+[14:51:40 + 1604.7s] VEREDICTO capacidad_grande: G1=True G2=True G3=False
+[14:51:40 + 1604.7s] ETAPA 3/3 — escritura.
+[14:51:40 + 1605.1s] datos -> capacidad_grande_20260917_142455.json  sha256_16 = da01ae07dc73a73d

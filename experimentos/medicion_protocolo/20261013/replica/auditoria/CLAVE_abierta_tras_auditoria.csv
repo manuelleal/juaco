@@ -1,0 +1,21 @@
+copia,tiene_defecto,tipo,archivo,linea,descripcion
+r01,no,,,,
+r02,si,instrumento,corre_frontera_hambre.py,176,F4 sin abs(): el preregistro pide +-10% y el runner solo acota por arriba; una caida grande de muertes con hb=0 (el caso 'F4 falla' de s4) pasa
+r03,no,,,,
+r04,si,criterio,PREREGISTRO_reverificacion_v9.md,65,"Clausula de decision que convierte en 'sostenido' todo fallo cercano al umbral: tolerancia oculta sobre T1-T4 y K1-K3, la no-regresion no puede fallar cerca del borde"
+r05,si,criterio,PREREGISTRO_v12.md,119,La enmienda que anade el punto u_madura=0.3 se escribe tras ver fallar la rama con u=1.0: segundo intento anadido despues de los datos (el VEREDICTO dice 'escritas antes de correr')
+r06,no,,,,
+r07,si,lectura,VEREDICTO.md,35,Declara a hb=2.0 optimo tambien en E2 por separado; la tabla y el log dan E2 146.0 con hb=2.5 frente a 146.5 con hb=2.0
+r08,si,instrumento,corre_reverificacion.py,83,m_max cuenta |W-R| < 0.3 (estricto) frente a <= 0.3 de la precision del docstring y de coste_techo (TOL 0.3): comparador mas estricto que el criterio; KK2 no lo ve porque recalcula lo viejo con la misma funcion
+r09,no,,,,
+r10,si,criterio,PREREGISTRO_calibracion_v4.md,57,V4-1 solo retira la letra si cae en las dos series (y da tercera oportunidad); la letra (CRITERIO_TRONCO_v4 s4) dice que una caida de V4-1 en cualquier serie la retira
+r11,no,,,,
+r12,no,,,,
+r13,si,criterio,PREREGISTRO_hija_dispersa.md,57,"Con la separacion declarada (s1 0.31, s4 0.28) el umbral delta=0.25 cae dentro de los distractores: la mascara REL incluye slots irrelevantes y 'cualquier umbral en [0.2,0.9] da la misma mascara' es falso"
+r14,si,lectura,VEREDICTO.md,40,"La frase declarable atribuye la degradacion suave a madres de un solo signo: sale del diagnostico post-hoc marcado 'no decide nada', no esta preregistrado y el mecanismo preregistrado (G3) cayo"
+r15,si,instrumento,corre_etapa4_v9.py,73,En la rama de herencia modo nunca es 'cero': heredar_patas siempre True y 'parcial' hereda patas como 'completa'; el control de s3 (parcial separa patas de memoria) queda anulado
+r16,si,instrumento,organismo_v7d.py,69,"ix = kc>=0 es verdadero en todas las celdas: el decaimiento es global en cada mordida, no local al codigo activo como exige el preregistro (s2); lam=0 sigue identico a v7"
+r17,no,,,,
+r18,si,criterio,PREREGISTRO_v10.md,39,El examen de congelacion Q1 se restringe a E2 y E2L (subconjunto sin enmienda); 'en las demas es v9 por construccion' solo vale donde no hay divisiones
+r19,si,criterio,PREREGISTRO_curiosidad.md,10,"El conocimiento previo declarado incluye la serie 41-60, la misma que s2 llama 'semillas NUEVAS' para el confirmatorio: criterio escrito con los datos de la serie a la vista"
+r20,si,instrumento,mundo_largo_c.py,48,La permutacion del control barajado se saca del RNG del organismo (no de seed+800000): el brazo control cambia el flujo de azar y difiere del tratamiento en algo mas que la prioridad

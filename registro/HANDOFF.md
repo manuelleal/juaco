@@ -1236,3 +1236,8 @@ todas NO; queda la ecuación R0 real = (D−F)/(D+1) y la propuesta "escudería 
 - **Decisiones del director hoy:** fusionar la nube en main; "corre todo" (R y E); seguir investigando antes de empaquetar o mostrar; contactar a Corporación Talentum (DOROKY CORE): borrador en su Gmail, sin enviar.
 - **ERR:** 194 y 195 numerados por la nube; candidato a 196 (cambios de instrumento del examen local). Siguiente libre: 196.
 - **Quien retome lee:** esta sección → `experimentos/openevolve_local_20261006/PREREGISTRO_E.md` e `INCIDENCIA_E.md` → el resumen de la réplica.
+
+### 8-oct-2026: MURO MÍNIMO = HAY ALGO MODESTO ×2
+- `main` avanzó a `9476692b` (fusión por avance directo de `openevolve-local-20261006`, por orden del director) y se empujó.
+- Rama `muro-minimo-20261008`: MINIMO (dos modos a mano, 27 líneas, sin pizarra) logra mayoría en 10/20 y 11/20 semillas selladas (283001–283040); HUMO 20/20 ×2; KO_PIZARRA 18 y 19; control sin limpieza 0 ×2. Puertas P1 y P2 NO ×2. La reconstrucción no iguala a HUMO: falta algo de lo omitido (radio de banco, utilidad de limpiar, urgencia). Detalle en REGISTRO.
+- Siguiente paso natural (un bloque, mismo instrumento): MINIMO + cada pieza omitida por separado (tres brazos), semillas nuevas, para ver cuál cierra la distancia. Sin fusionar en main hasta orden del director. Siguiente ERR libre: 196.

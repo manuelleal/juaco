@@ -1,0 +1,67 @@
+{
+ "construye_check": "TODO IGUAL",
+ "filtro": {
+  "MINIMO": {
+   "sha12": "b9cfbb3bb7cb",
+   "pasa": true,
+   "violaciones": []
+  },
+  "HUMO": {
+   "sha12": "69fcfcb2473f",
+   "pasa": true,
+   "violaciones": []
+  },
+  "O1_SINLIMPIA": {
+   "sha12": "50b2fc3241da",
+   "pasa": true,
+   "violaciones": []
+  }
+ },
+ "diff_MINIMO_vs_raiz": {
+  "lineas_raiz": 89,
+  "lineas_MINIMO": 100,
+  "agregadas": 27,
+  "quitadas": 16
+ },
+ "anclas": {
+  "O1": {
+   "seed": 883001,
+   "T": 100000,
+   "referencia": "experimentos/openevolve_serie/cordura/O1_s883001_T100000.json",
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cruzan_real": 5,
+   "rng_mundo_estado": "675172f7e621aeb3",
+   "seg_aqui": 178.0,
+   "seg_registro": 234.4,
+   "pared": 178.7
+  },
+  "HUMO": {
+   "seed": 276001,
+   "T": 100000,
+   "referencia": "experimentos/openevolve_serie/examen_grande/s276001-276020/HUMO_s276001_T100000.json",
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cruzan_real": 9,
+   "rng_mundo_estado": "8d8bd7616abe0f2c",
+   "seg_aqui": 211.1,
+   "seg_registro": 271.5,
+   "pared": 211.5
+  },
+  "O1_SINLIMPIA": {
+   "seed": 883001,
+   "T": 100000,
+   "referencia": "experimentos/openevolve_serie/cordura/CTRL_O1_SINLIMPIA_s883001_T100000.json",
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cruzan_real": 0,
+   "rng_mundo_estado": "a276479db4c042d7",
+   "seg_aqui": 157.9,
+   "seg_registro": 215.2,
+   "pared": 158.1
+  }
+ }
+}
