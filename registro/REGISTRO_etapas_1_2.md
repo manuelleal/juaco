@@ -7839,3 +7839,16 @@ Sin cambio de nivel ni de porcentaje por esta jornada. PISA ×2 y P8-COMP2 ×2 s
 - **ERR-197 (criterio de puntaje; detectado tras ver datos; no se cambia aquí):** el acierto se cuenta por archivo. Un defecto de criterio sembrado sólo en el preregistro no se le reconoce al auditor que señala el runner con el umbral viejo (ocurrió en c34). Se deja como está; se corrige en el siguiente preregistro.
 - **ERR-198 (instrumento; sin efecto en los números):** `puntua.py` comparaba contra el sello de la primera siembra por ruta fija; en la réplica imprimió "NO COINCIDE" con la clave correcta (sha 370fb5ad…, verificado a mano). Corregido en `juaco-metodo`.
 - Siguiente ERR libre: **ERR-199**.
+
+### ERR-199 a ERR-202 — errores reales en bloques cerrados, hallados por los sembradores de la medición y verificados por el auditor contra los originales (13-oct-2026)
+
+Ninguno altera un veredicto registrado. Los cinco candidatos los verificó `juaco-auditor` (sólo lectura) contra `datos/*.json`, este registro y git; dos no se sostienen y no se numeran (hija_dispersa: el sha del preregistro cambia porque el documento vivo recibió el párrafo de resultados después de la serie, y los sha registrados coinciden con las versiones de git; capacidad_grande: G1 ≥ 20 sí discrimina, v10 da 6.0 y 9.0 y v9 da 4.0 y 8.0).
+
+- **ERR-199 (lectura, criterio_v4).** La nota declarada (`REGISTRO:6231`) cita para PEOR el LI de TRONCO_B (−3.478); el JSON `datos/critv4_20260922_132544.json` da PEOR = −1.156. Rev 47.0/43.0 coincide en ambos brazos, de ahí la confusión. Conclusión intacta: ambos LI > −12.5 y T-A atrapa a PEOR. Quién lo atrapó: sembrador de la medición; verificado por auditor.
+- **ERR-200 (lectura, bug01).** `REGISTRO:624` y `:642` dicen que el equilibrio acierta "a 3 decimales"; los W del JSON están a 2 decimales y la desviación máxima contra EQ = 3ηR/(3η+λ) es 0.0033. El criterio preregistrado era ±0.02 y P3 pasa; la frase sobreafirma la precisión. Quién lo atrapó: sembrador; verificado por auditor.
+- **ERR-201 (lectura, nivel7_hija_dispersa).** (a) La Enmienda 1 lleva cabecera "00:50" pero el commit que la contiene (0461ee96) es de 00:09:16 y la serie 81–100 corrió 00:09:54–00:16:35: la enmienda es anterior a la serie y la hora escrita es errata. (b) `PREREGISTRO_hija_dispersa.md:92` cita "0.221 de REL" cuando la tabla da REL 0.195 y RELD 0.221 (mini-humo de n=3; sin consecuencia). Quién lo atrapó: sembrador; verificado por auditor.
+- **ERR-202 (criterio, v10_direccion_division).** `PREREGISTRO_v10.md:39,42` fijan Q1 y Q2 en las semillas 1–20, las mismas de las cifras exploratorias de la línea 18, que ya daban 20/20; Q2 (≥18/20) no podía fallar de forma informativa. ERR-17 cubre sólo Q3. v10 no se congeló por Q3 y la réplica; Q2 no decidió nada. Quién lo atrapó: sembrador; verificado por auditor.
+
+Observación sin numerar: `REGISTRO:3727` dice "466 corridas" donde el bloque de hija_dispersa tendría 400; no auditado.
+
+Siguiente ERR libre: **ERR-203**.
