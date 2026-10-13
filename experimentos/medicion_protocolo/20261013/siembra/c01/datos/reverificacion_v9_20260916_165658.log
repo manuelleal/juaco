@@ -1,0 +1,47 @@
+[16:56:58 +    0.0s] ARRANQUE re-verificacion sobre v9 (3T y 2K-bis). Pool(14).
+[16:56:58 +    0.0s] sha preregistro 2708cb73ab8531e8  script 9b132989cd369743  mundo_v9 18d96a1c79863bb0  caph9 1b113605dc803435
+[16:56:59 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 11548:
+[16:56:59 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[16:56:59 +    0.3s]     11548 "C:\Python314\python.exe" experimentos/v9_reverificacion/corre_reverificacion.py
+[16:56:59 +    0.5s] ETAPA 1/4 — controles de identidad (30)...
+[16:57:37 +   38.5s]   KT1: 18/18 -> OK
+[16:57:37 +   38.5s]   KK1: 12/12 -> OK
+[16:57:37 +   38.5s] ETAPA 2/4 — 200 corridas (K: 80 largas primero; T: 120)...
+[17:00:26 +  207.2s]           20/200
+[17:01:49 +  290.9s]           40/200
+[17:02:24 +  326.1s]           60/200
+[17:02:54 +  356.0s]           80/200
+[17:03:12 +  373.8s]           100/200
+[17:03:21 +  382.4s]           120/200
+[17:03:33 +  394.5s]           140/200
+[17:03:41 +  402.2s]           160/200
+[17:03:50 +  411.8s]           180/200
+[17:03:59 +  420.9s]           200/200
+[17:03:59 +  420.9s] ETAPA 3/4 — analisis.
+[17:03:59 +  420.9s] 
+[17:03:59 +  420.9s]   BLOQUE T (3T sobre v9)   KT2 C2b==C1: 20/20
+[17:03:59 +  420.9s]    C1   sep +0.00 [+0.00,+0.00]  lift_q4 -0.022  solap_A 3  splits 0  celdas90 0/20  muertes 104  truncan 0/20
+[17:03:59 +  420.9s]    C1p  sep +0.00 [+0.00,+0.00]  lift_q4 -0.031  solap_A 3  splits 60  celdas90 20/20  muertes 100  truncan 0/20
+[17:03:59 +  420.9s]    C2   sep +3.94 [+3.81,+3.98]  lift_q4 +0.388  solap_A 0  splits 0  celdas90 0/20  muertes 94  truncan 0/20
+[17:03:59 +  421.0s]    C2b  sep +0.00 [+0.00,+0.00]  lift_q4 -0.022  solap_A 3  splits 0  celdas90 0/20  muertes 104  truncan 0/20
+[17:03:59 +  421.0s]    C3   sep +3.93 [+3.72,+3.97]  lift_q4 +0.383  solap_A 1  splits 17  celdas90 0/20  muertes 100  truncan 0/20
+[17:03:59 +  421.0s]    C3C  sep -0.37 [-1.84,+1.11]  lift_q4 -0.043  solap_A 0  splits 60  celdas90 20/20  muertes 94  truncan 0/20
+[17:03:59 +  421.0s]    T1: SOSTENIDA
+[17:03:59 +  421.0s]    T2: SOSTENIDA
+[17:03:59 +  421.0s]    T3: SOSTENIDA
+[17:03:59 +  421.0s]    T4: SOSTENIDA
+[17:03:59 +  421.0s] 
+[17:03:59 +  421.0s]   BLOQUE K (2K-bis sobre v9)   KK2 reproduce N* y M_max de coste_techo (v8, 20k): 20/20
+[17:03:59 +  421.0s]    20k v8: N* 5.0 [3,7]  M_max 8.0 [6,11]  W=0 0/400  agotan 5/20  muertes 564  splits 49
+[17:03:59 +  421.0s]    20k v9: N* 5.0 [3,7]  M_max 8.0 [6,12]  W=0 0/400  agotan 4/20  muertes 514  splits 50
+[17:03:59 +  421.0s]    60k v8: N* 8.0 [3,14]  M_max 12.0 [9,17]  W=0 0/400  agotan 15/20  muertes 1650  splits 60
+[17:03:59 +  421.0s]    60k v9: N* 8.0 [5,17]  M_max 11.5 [6,15]  W=0 0/400  agotan 11/20  muertes 1521  splits 60
+[17:03:59 +  421.0s]    K1: SOSTENIDA
+[17:03:59 +  421.0s]    K2: SOSTENIDA
+[17:03:59 +  421.0s]    K3: SOSTENIDA
+[17:03:59 +  421.0s]    (sin voto) 20k pareado v9-v8: M_max mediana -0.5 (sube 6, baja 10); muertes mediana -50.0 (bajan 16)
+[17:03:59 +  421.0s]    (sin voto) 60k pareado v9-v8: M_max mediana -1.0 (sube 7, baja 12); muertes mediana -131.5 (bajan 17)
+[17:03:59 +  421.0s] 
+[17:03:59 +  421.0s] VEREDICTO reverificacion_v9: KT1=True KK1=True KT2=True T1=True T2=True T3=True T4=True KK2=True K1=True K2=True K3=True T_SOBREVIVE=True K_SOBREVIVE=True
+[17:03:59 +  421.0s] ETAPA 4/4 — escritura.
+[17:04:00 +  421.3s] datos -> reverificacion_v9_20260916_165658.json  sha256_16 = 111e25284b7b0e6d

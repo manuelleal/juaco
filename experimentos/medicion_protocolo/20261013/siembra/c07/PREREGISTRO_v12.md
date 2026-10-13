@@ -1,0 +1,131 @@
+# v12 — ceguera GRADUADA de la hija: **el mapa del canje** entre recordar y generalizar
+
+**Escrito ANTES de construir el instrumento y antes de correr. 17 sep 2026, día 5.**
+Dirección, textual: *"reportas la superficie completa de la perilla, no el mejor punto; y la predicción escrita es que
+ningún valor supera a la vez la retención de v11 (20/20) y la generalización de v9 (0.80). Refutación = un punto que
+logre las dos. Es un mapa del canje, no su solución."*
+
+## 0. De dónde sale
+
+- v11 cerró la Etapa 4 (retención 20/20) y **perdió la Etapa 3** (valor sobre patrones nunca vistos 0.60 frente a 0.80
+  de v9 y v10; azar 0.50).
+- Confirmado en 20 semillas (`PREREGISTRO_fuga.md`, D1–D4): las celdas **hijas** de v9 ocupan **1.00 de cada 3** celdas
+  del código de un patrón que nunca las entrenó; en v11, **0.08**. Spearman(fuga, acierto) **+0.601**, y **+0.328
+  dentro de v9**. **La generalización de v9 era su interferencia.**
+- La única diferencia es una línea: en v11 la hija nace ciega fuera de los píxeles de su patrón (`kj * (P > 0)`).
+- **Esto es lo que convierte una correlación en un experimento:** aquí **manipulamos la fuga** y medimos las dos cosas.
+
+## 1. La perilla
+
+En el bloque de división por conflicto de signo, la sintonía de la hija pasa a ser:
+
+```
+kj = clip(0.95*KW[c] + paso*dist, 0, 5) * ((P > 0) + beta * (P == 0))
+```
+
+- **`beta = 0`** → hija totalmente ciega fuera de su patrón = **v11 exacto** (identidad obligatoria).
+- **`beta = 1`** → la hija conserva toda su sintonía fuera del patrón: fuga máxima **dentro de la regla de v11**
+  (no es v10: el disparo por signo, la madre fija y la fisión del valor siguen ahí).
+- **Valores:** `beta ∈ {0, 0.15, 0.30, 0.50, 0.75, 1.0}` — seis puntos, **todos se reportan**.
+
+## 2. Instrumentos
+
+`organismo_v12.py` desde `organismo_v11.py` (`f69e24063be1b194`) por anclas, con `beta` como único parámetro nuevo
+(`beta=0.0` por defecto); `organismo_v12m` (bloque M, anclas de v10m/v11m) y `organismo_v12g` (mundo de regla, anclas
+de v9g/v11g), los tres generados por `construye_v12.py`.
+
+**Identidades obligatorias (si fallan, se para):** `v12(beta=0)` ≡ v11; `v12m(beta=0)` ≡ v11m; `v12g(beta=0)` ≡ v11g;
+7 escenarios × semillas 1–3 en el primero, E1/E2/M × 1–3 en los otros dos.
+
+## 3. Qué se mide, en los seis puntos (semillas 41–60; nada nuevo, todo ya preregistrado antes)
+
+| eje | medida | referencia |
+|---|---|---|
+| **Retención** | bloque M: `W_B(100k) ≤ −2` **y** `W_A(100k) ≥ 0.5`, sobre 20 | v11 = **20/20**, v9 = 0/20 |
+| guarda | `W_C ≤ −2.5` y `W_D ≥ 0.85` | v11 = 20/20 |
+| **Generalización** | acierto de valor, regla `px0`, patrones nunca vistos | v9 = **0.800**, v11 = 0.600, azar 0.50 |
+| conducta | `BA_pb` al primer encuentro | v9 = 0.801, v11 = 0.672 |
+| **Fuga** | hijas ajenas en el código de un patrón nuevo (de 3) | v9 = 1.00, v11 = 0.08 |
+| control | regla `azar` | debe quedarse en 0.50 en todos los puntos |
+| sin voto | divisiones, celdas, muertes, examen rápido (`bateria_v12.py 6`) en cada extremo | |
+
+**Se reporta la superficie completa**: una fila por `beta`, con las tres columnas (retención, generalización, fuga) y
+sus rangos. **No se elige "el mejor punto"**; si alguien lo quiere elegir después, que lo haga con la tabla delante.
+
+## 4. Predicción (la que pide dirección, escrita antes)
+
+> **Ningún valor de `beta` alcanza a la vez la retención de v11 (20/20) y la generalización de v9 (≥ 0.80).**
+
+Forma cuantitativa que se evalúa:
+- **H [el canje existe]:** para todo `beta`, **no** se cumple simultáneamente `retención ≥ 20/20` y `acierto ≥ 0.90`
+  (la generalización de v9 más un margen de 0.10).
+- **Refutación de H:** **un solo punto** que logre las dos cosas. Si aparece, **el canje no es necesario**, v12 pasa a
+  candidato a tronco con su confirmatorio propio, y hay que explicar por qué el mecanismo lo evita.
+- **Forma esperada de la superficie (predicción secundaria, sin voto):** monótona y cruzada — la retención cae al subir
+  `beta` (20/20 en 0, ≤ 10/20 en 1.0) y el acierto sube (0.60 en 0, ≥ 0.75 en 1.0), con el cruce entre 0.30 y 0.75.
+- **La fuga debe seguir a `beta`:** correlación Spearman(beta, fuga) ≥ +0.9 sobre los seis puntos. **Si no, la perilla
+  no manipula lo que creemos** y todo lo demás queda sin interpretación.
+
+## 5. Qué NO es esto
+
+No es un intento de arreglar el canje. **Es su mapa.** El candidato que podría romperlo —una hija que fuga al nacer y
+**deja de aprender al madurar**— queda anotado en la nota de diseño y **no se diseña aquí**.
+
+## 6. Qué se decide
+
+- **H se sostiene:** se registra el canje como **propiedad medida de esta arquitectura**, con su superficie, y se
+  publica así: *"en este sistema, separar y generalizar son el mismo parámetro visto por los dos lados"*. v11 sigue
+  siendo el tronco; v12 **no** se congela (no aporta un punto mejor en los dos ejes).
+- **H se refuta:** v12 con ese `beta` pasa a candidato a tronco, con confirmatorio propio en semillas nuevas, examen
+  criterio v3 **y** `bateria_generaliza.py 20` (ERR-20).
+- **La fuga no sigue a `beta`:** se para; el instrumento no manipula lo que dice manipular.
+
+---
+
+## ENMIENDA 1 (17 sep, antes de construir y de correr) — controles de inercia y la rama de la hija madura
+
+**Pedido de dirección:** *"β=0 reproduce v10 bit a bit y β=1 reproduce v11 bit a bit. Verifícalo antes de mirar los
+puntos intermedios."*
+
+**Corrección, con la razón.** La perilla `beta` gradúa **sólo la ceguera** de la hija. `beta = 1` **no puede** ser v10,
+porque v10 difiere de v11 en tres cosas más, ninguna de ellas graduada aquí: (a) **cuándo** divide (`err > theta`
+frente a conflicto de signo), (b) **si la madre se mueve** (`KW[c] -= paso*dist` en v10; fija en v11), y (c) **qué
+hereda la hija** (v10 copia `Wp` y `Wn`; v11 **fisiona** el valor). Con `beta = 1` se obtiene "la regla de v11 sin
+ceguera", que es lo que interesa medir, no v10.
+
+**Los dos controles de inercia que SÍ existen, y se verifican antes de leer los puntos intermedios:**
+- **I1:** `v12(beta=0)` ≡ **v11** en todas las claves, 7 escenarios × semillas 1–3.
+- **I2:** `v12(div_signo=False)` ≡ **v10** en todas las claves, 7 escenarios × semillas 1–3.
+- Y las de instrumentación: `v12m(beta=0)` ≡ `v11m` y `v12g(beta=0)` ≡ `v11g`.
+**Si alguna falla, se para y se arregla el instrumento** (tal cual pidió dirección).
+
+## RAMA `hija-madura` (se lanza sin esperar a la superficie de v12)
+
+**Mecanismo:** la hija **no** es ciega (participa en códigos ajenos, `beta = 1`), pero **sus `Wp`/`Wn` se congelan al
+especializarse**: una vez que su propio valor se consolida (`|Wp − Wn| ≥ 1.0`, la única constante nueva, declarada y
+**no barrida** en esta rama), deja de aprender para siempre. Sólo se congelan las **hijas** (índice ≥ 30); las celdas
+de nacimiento y las madres siguen aprendiendo.
+
+**Predicción (una línea, de dirección):** *la retención se mantiene porque una hija congelada no se sobrescribe, y la
+generalización sube porque vuelve a fugar valor.*
+**Forma evaluable:** retención ≥ **16/20** equivalente (≥ 8/10 en las 10 semillas de la rama) **y** acierto en patrones
+nunca vistos ≥ **0.75**.
+**Refutación:** retención < 6/10 (sigue olvidando) **o** acierto < 0.70 (no generaliza).
+
+**Estatuto de rama:** 10 semillas **71–80**; si la predicción se sostiene, se re-mide en **semillas retenidas 81–90**
+antes de escribir nada fuerte. Etiqueta `rama-hija-madura`. Nada de esto es tronco sin confirmatorio propio, examen
+criterio v3 y `bateria_generaliza.py 20` (ERR-20).
+
+## ENMIENDA 2 (17 sep, tras el humo de instrumentos y ANTES de correr) — el umbral de maduración es asimétrico
+
+**Humo declarado** (semillas 41–42, bloque M completo y mundo de regla): los controles I1, I2 y los de instrumentación
+salen idénticos; **la maduración actúa** (2 hijas congeladas en el bloque M, `t_cong` 52.218 y 74.131; 0 y 3 en el
+mundo de regla). Pero se ve un problema **de diseño, no de medida**: con `u_madura = 1.0`, **sólo pueden congelarse las
+hijas de veneno**. Una celda entrenada por comida vale ≈ 1/3 (el valor +1 se reparte entre las 3 celdas del código) y
+**nunca** alcanza 1.0; una de veneno vale ≈ −1. Tal como estaba escrito, la rama probaría un mecanismo **asimétrico por
+construcción**, y su fallo no diría nada sobre la idea.
+
+**Corrección, escrita antes de correr:** la rama se corre en **dos puntos**, `u_madura ∈ {1.0, 0.3}`, y **ambos se
+reportan**. `0.3` es el valor que permite congelar también a las hijas de comida (≈ 1/3). No es un barrido para elegir
+el mejor: es cubrir los dos lados de una asimetría que el humo dejó a la vista. La predicción y los criterios de
+refutación de la rama **no cambian**.

@@ -1,0 +1,42 @@
+[15:33:42 +    0.0s] ARRANQUE frontera hambre-supervivencia sobre v8. 20 semillas, hb=[0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0], Pool(14).
+[15:33:42 +    0.0s] sha preregistro 902f1f0223ef597b  script 79ea4de5eabf75ae  v8p 1650cf7dc9e5857c  v8 dca7d5c3a162f5d4
+[15:33:42 +    0.3s] REGLA 11 — procesos python vivos (2), este es pid 724:
+[15:33:42 +    0.3s]     23684 "C:\Python314\pythonw.exe"  -m community_av sentinel
+[15:33:42 +    0.3s]     724 "C:\Python314\python.exe" experimentos/etapa2_politica/corre_frontera_hambre.py 20
+[15:33:42 +    0.5s] ETAPA 1/4 — F0a: v8p == v8 (42 comparaciones)...
+[15:34:24 +   41.8s]   F0a: 42/42 -> OK
+[15:34:24 +   41.8s] ETAPA 2/4 — 280 corridas (hb x E1/E2 x semillas)...
+[15:34:45 +   62.6s]           40/280
+[15:35:05 +   83.3s]           80/280
+[15:35:26 +  103.7s]           120/280
+[15:35:46 +  124.4s]           160/280
+[15:36:07 +  145.3s]           200/280
+[15:36:28 +  165.9s]           240/280
+[15:36:44 +  181.6s]           280/280
+[15:36:44 +  181.6s] ETAPA 3/4 — analisis.
+[15:36:44 +  181.6s]   F0b reproduce el examen de v8 (hb=2.0): 40/40 -> OK
+[15:36:44 +  181.6s] 
+[15:36:44 +  181.6s]     hb | muertes E1 muertes E2 combinado | E2 pasa t_ext med | veneno E1 2a mitad comida E1
+[15:36:44 +  181.6s]    0.0 |      156.0      208.5     364.5 |    0/20     78156 |                2.0     129.0
+[15:36:44 +  181.6s]    0.5 |      154.0      184.0     338.0 |    0/20     65646 |                3.5     140.5
+[15:36:44 +  181.6s]    1.0 |      151.0      161.5     312.5 |   10/20     57982 |                5.5     138.5
+[15:36:44 +  181.6s]    1.5 |      149.5      155.0     304.5 |   19/20     55782 |               10.5     137.5
+[15:36:44 +  181.6s]    2.0 |      142.0      146.5     288.5 |   20/20     53239 |               27.0     150.5
+[15:36:44 +  181.6s]    2.5 |      148.0      146.0     294.0 |   20/20     52040 |               59.0     180.0
+[15:36:44 +  181.6s]    3.0 |      155.5      156.5     312.0 |   20/20     51823 |               88.5     195.5
+[15:36:44 +  181.6s] 
+[15:36:44 +  181.6s]   F1 contador (obs/esperadas en [0.8,1.25], 51 celdas con >=20 esperadas): REFUTADA [(0.5, 'veneno', 4, 17, 21.5), (3.0, 'veneno', 1, 35, 25.3)]
+[15:36:44 +  181.6s]       tasa de veneno por visita E1 2a mitad, hb=0.0: tramos de hambre 0-.2..-.8-1 = ['0.03%', '0.02%', '0.03%', '0.02%', '0.03%']
+[15:36:44 +  181.6s]       tasa de veneno por visita E1 2a mitad, hb=1.0: tramos de hambre 0-.2..-.8-1 = ['0.01%', '0.00%', '0.02%', '0.09%', '0.15%']
+[15:36:44 +  181.6s]       tasa de veneno por visita E1 2a mitad, hb=2.0: tramos de hambre 0-.2..-.8-1 = ['0.00%', '0.03%', '0.09%', '0.32%', '1.38%']
+[15:36:44 +  181.6s]       tasa de veneno por visita E1 2a mitad, hb=3.0: tramos de hambre 0-.2..-.8-1 = ['0.00%', '0.10%', '0.54%', '3.25%', '17.66%']
+[15:36:44 +  181.6s]   F2 umbral de reversibilidad (hb=2 >=18, hb=1 <=5, hb=0 ==0, monotona): REFUTADA  [(0.0, 0), (0.5, 0), (1.0, 10), (1.5, 19), (2.0, 20), (2.5, 20), (3.0, 20)]
+[15:36:44 +  181.6s]   F3 sin exploracion se muere en E2 (hb=1 >= 1.5x hb=2): REFUTADA  161.5 vs 146.5 (x1.10)
+[15:36:44 +  181.6s]   F4 en E1 la exploracion cuesta poco (muertes +-10%, veneno <=20%): SOSTENIDA  muertes 156.0 vs 142.0 (+9.9%), veneno 2.0 vs 27.0
+[15:36:44 +  181.6s]   F5 v8 en el optimo combinado (argmin en 1.5-2.5): SOSTENIDA  argmin hb=2.0  {0.0: 364.5, 0.5: 338.0, 1.0: 312.5, 1.5: 304.5, 2.0: 288.5, 2.5: 294.0, 3.0: 312.0}
+[15:36:44 +  181.6s]   F6 demasiada exploracion tambien mata (E1 hb=3 >= 1.10x hb=2): REFUTADA  155.5 vs 142.0 (x1.10)
+[15:36:44 +  181.6s] 
+[15:36:44 +  181.6s] VEREDICTO frontera_hambre: F0a=True F0b=True F1=False F2=False F3=False F4=True F5=True F6=False
+[15:36:44 +  181.6s] ETAPA 4/4 — escritura.
+[15:36:44 +  181.7s] datos -> frontera_hambre_20260916_153342.json  sha256_16 = d1c34dfa94d594dd
+[15:36:44 +  181.7s]          frontera_hambre_20260916_153342.csv  sha256_16 = 348a445324f05521
