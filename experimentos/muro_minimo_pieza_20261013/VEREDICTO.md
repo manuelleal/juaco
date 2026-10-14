@@ -14,7 +14,7 @@ Salida completa: `serie_consola.txt` (120/120 corridas; la primera ejecución se
 | M_RADIO (P2) | 8/20 | 87 |
 
 ## Lo que sí dice, sin declararlo
-- **El control bajo no es estable entre semillas:** MINIMO dio 10/20 y 11/20 en el bloque anterior (884xxx no; 883xxx y siguientes) y 15/20 aquí. La "brecha" MINIMO–HUMO que motivó el bloque es más chica y más ruidosa de lo que suponía el preregistro.
+- **El control bajo no es estable entre semillas:** MINIMO dio 10/20 y 11/20 en la serie y la réplica del bloque anterior (`muro_minimo_20261008`) y 15/20 aquí, con semillas nuevas. La "brecha" MINIMO–HUMO que motivó el bloque es más chica y más ruidosa de lo que suponía el preregistro.
 - Descriptivo: M_RECICLA suma +32 linajes sobre MINIMO (el umbral de MUEVE era +20) y es la única pieza por encima de MINIMO en las dos medidas, como predijo el creador. M_RADIO y M_URGENCIA quedan por debajo de MINIMO solo.
 - Nada de esto se declara: la tanda no se lee.
 
