@@ -1,0 +1,37 @@
+MURO MINIMO PIEZA HUMO-DE-RUNNER 2026-10-13 19:34:31 - semillas 884901-884901 - T 20000 - fundador no limpio - pool 1 - brazos ['MINIMO', 'M_PIZARRA', 'M_RADIO', 'M_RECICLA', 'M_URGENCIA', 'HUMO'] - corre_examen.py 39dfdb1aff7e03ab
+  IGUAL   corre_carro.py  (sha16 ddcfd0f06a7acc87)
+  IGUAL   evaluador.py  (sha16 6736985f4f42cdc5)
+  IGUAL   programas\MINIMO.py  (sha16 b9cfbb3bb7cb3de6)
+  IGUAL   programas\HUMO.py  (sha16 69fcfcb2473fdbf6)
+  IGUAL   programas\KO_PIZARRA.py  (sha16 965aaec1e366a098)
+  IGUAL   coteja_preregistro.py  (sha16 2fdae186bf60b492)
+  IGUAL   programas\M_PIZARRA.py  (sha16 1f320504565f0663)
+  IGUAL   programas\M_RADIO.py  (sha16 f886a5ff8c884c87)
+  IGUAL   programas\M_RECICLA.py  (sha16 fbd7cfc330f2f8e7)
+  IGUAL   programas\M_URGENCIA.py  (sha16 54a34b7207bcffc4)
+  IGUAL   programas\AUX_TRES.py  (sha16 7db3070c4b5234bd)
+  IGUAL   programas\AUX_TODAS.py  (sha16 873012bc1dc6aa00)
+  IGUAL   corre_examen.py  (sha16 39dfdb1aff7e03ab)
+  IGUAL   experimentos\carrera_escuderias\carros\O1.py  sha 99436afa2715f028 (fijado 99436afa2715f028)
+  IGUAL   experimentos\carrera_escuderias\pista.py  sha 9f47c65e438e0ff4 (fijado 9f47c65e438e0ff4)
+  IGUAL   experimentos\carrera_escuderias\juez.py  sha 6a68f640a7832f12 (fijado 6a68f640a7832f12)
+  IGUAL   experimentos\carrera_escuderias\revisa_carro.py  sha 1c8a789f7427ab96 (fijado 1c8a789f7427ab96)
+CONSTRUYE: TODO IGUAL
+  MINIMO: sha b9cfbb3bb7cb - filtro PASA
+  M_PIZARRA: sha 1f320504565f - filtro PASA
+  M_RADIO: sha f886a5ff8c88 - filtro PASA
+  M_RECICLA: sha fbd7cfc330f2 - filtro PASA
+  M_URGENCIA: sha 54a34b7207bc - filtro PASA
+  HUMO: sha 69fcfcb2473f - filtro PASA
+  cotejo PREREGISTRO.md <-> PREREGISTRADO: 14 nombres - TODO IGUAL
+  [19:36:20    109s   1/6] MINIMO       s884901 persisten 4/9 cruzan 0/9 R0 med 0.6364 vida med   1401.0 fund>10k   3 muertes   72 nac   50 mord malas  1491 sin nada bueno 0.161 (108.8 s)
+  [19:38:14    223s   2/6] M_PIZARRA    s884901 persisten 5/9 cruzan 0/9 R0 med 0.7500 vida med   1648.0 fund>10k   5 muertes   71 nac   55 mord malas  1347 sin nada bueno 0.182 (113.7 s)
+  [19:39:48    316s   3/6] M_RADIO      s884901 persisten 4/9 cruzan 0/9 R0 med 0.6250 vida med   1401.0 fund>10k   7 muertes   80 nac   52 mord malas  1268 sin nada bueno 0.263 (92.9 s)
+  [19:41:28    417s   4/6] M_RECICLA    s884901 persisten 2/9 cruzan 1/9 R0 med 0.7500 vida med   3431.0 fund>10k   0 muertes   42 nac   37 mord malas  1802 sin nada bueno 0.211 (100.0 s)
+  [19:43:19    528s   5/6] M_URGENCIA   s884901 persisten 7/9 cruzan 0/9 R0 med 0.5833 vida med   1308.5 fund>10k   1 muertes   76 nac   50 mord malas  1446 sin nada bueno 0.174 (110.7 s)
+  [19:44:27    596s   6/6] HUMO         s884901 persisten 1/9 cruzan 0/9 R0 med 0.7500 vida med   4134.0 fund>10k   0 muertes   32 nac   31 mord malas  2021 sin nada bueno 0.204 (67.5 s)
+
+POR SEMILLA (cruzan): 884901: MINIMO=0 M_PIZARRA=0 M_RADIO=0 M_RECICLA=1 M_URGENCIA=0 HUMO=0
+LETRA: {"mayoria": {"MINIMO": 0, "M_PIZARRA": 0, "M_RADIO": 0, "M_RECICLA": 0, "M_URGENCIA": 0, "HUMO": 0}, "suma_cruzan": {"MINIMO": 0, "M_PIZARRA": 0, "M_RADIO": 0, "M_RECICLA": 1, "M_URGENCIA": 0, "HUMO": 0}, "medianas": {"MINIMO": {"R0_real_med": 0.6364, "vida_med": 1401.0, "muertes": 72.0, "mordidas_malas": 1491.0, "limpiezas_fisicas": 1361.0, "frac_sin_bueno_mundo": 0.1613, "fund_post10k": 3.0}, "M_PIZARRA": {"R0_real_med": 0.75, "vida_med": 1648.0, "muertes": 71.0, "mordidas_malas": 1347.0, "limpiezas_fisicas": 1198.0, "frac_sin_bueno_mundo": 0.1825, "fund_post10k": 5.0}, "M_RADIO": {"R0_real_med": 0.625, "vida_med": 1401.0, "muertes": 80.0, "mordidas_malas": 1268.0, "limpiezas_fisicas": 1150.0, "frac_sin_bueno_mundo": 0.263, "fund_post10k": 7.0}, "M_RECICLA": {"R0_real_med": 0.75, "vida_med": 3431.0, "muertes": 42.0, "mordidas_malas": 1802.0, "limpiezas_fisicas": 1663.0, "frac_sin_bueno_mundo": 0.211, "fund_post10k": 0.0}, "M_URGENCIA": {"R0_real_med": 0.5833, "vida_med": 1308.5, "muertes": 76.0, "mordidas_malas": 1446.0, "limpiezas_fisicas": 1314.0, "frac_sin_bueno_mundo": 0.1742, "fund_post10k": 1.0}, "HUMO": {"R0_real_med": 0.75, "vida_med": 4134.0, "muertes": 32.0, "mordidas_malas": 2021.0, "limpiezas_fisicas": 1880.0, "frac_sin_bueno_mundo": 0.2037, "fund_post10k": 0.0}}, "n_semillas": 1, "validez": {"V1_completa": false}, "veredicto": "NO SE LEE"}
+VEREDICTO DE LA TANDA: NO SE LEE  (humo: no es veredicto)   (596 s)
+EXIT 0

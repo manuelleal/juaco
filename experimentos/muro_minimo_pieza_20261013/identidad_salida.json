@@ -1,0 +1,820 @@
+{
+ "fecha": "2026-10-13 19:46:46",
+ "python": "3.14.2",
+ "T_ID": 5000,
+ "semillas": [
+  884901,
+  884902,
+  884903
+ ],
+ "construye_check": "TODO IGUAL",
+ "programas": {
+  "MINIMO": {
+   "sha16": "b9cfbb3bb7cb3de6",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 100,
+   "vs_MINIMO": "+0/-0"
+  },
+  "HUMO": {
+   "sha16": "69fcfcb2473fdbf6",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 159,
+   "vs_MINIMO": "+89/-30"
+  },
+  "KO_PIZARRA": {
+   "sha16": "965aaec1e366a098",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 161,
+   "vs_MINIMO": "+91/-30"
+  },
+  "M_PIZARRA": {
+   "sha16": "1f320504565f0663",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 143,
+   "vs_MINIMO": "+46/-3"
+  },
+  "M_RADIO": {
+   "sha16": "f886a5ff8c884c87",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 104,
+   "vs_MINIMO": "+5/-1"
+  },
+  "M_RECICLA": {
+   "sha16": "fbd7cfc330f2f8e7",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 106,
+   "vs_MINIMO": "+6/-0"
+  },
+  "M_URGENCIA": {
+   "sha16": "54a34b7207bcffc4",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 101,
+   "vs_MINIMO": "+2/-1"
+  },
+  "AUX_TRES": {
+   "sha16": "7db3070c4b5234bd",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 111,
+   "vs_MINIMO": "+13/-2"
+  },
+  "AUX_TODAS": {
+   "sha16": "873012bc1dc6aa00",
+   "filtro_pasa": true,
+   "violaciones": [],
+   "lineas_codigo": 154,
+   "vs_MINIMO": "+59/-5"
+  }
+ },
+ "MINIMO_texto_igual_bloque_anterior": true,
+ "checks": [
+  {
+   "check": "a MINIMO == MINIMO bloque anterior",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "6edb45b5dce4c0e7",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "a MINIMO == MINIMO bloque anterior",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "137cd19649dcd599",
+    "137cd19649dcd599"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    8,
+    8
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "a MINIMO == MINIMO bloque anterior",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "bdd1c0d2439878f6",
+    "bdd1c0d2439878f6"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_PIZARRA llave 0 == MINIMO",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "6edb45b5dce4c0e7",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_PIZARRA llave 0 == MINIMO",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "137cd19649dcd599",
+    "137cd19649dcd599"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    8,
+    8
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_PIZARRA llave 0 == MINIMO",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "bdd1c0d2439878f6",
+    "bdd1c0d2439878f6"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_RADIO llave 0 == MINIMO",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "6edb45b5dce4c0e7",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_RADIO llave 0 == MINIMO",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "137cd19649dcd599",
+    "137cd19649dcd599"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    8,
+    8
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_RADIO llave 0 == MINIMO",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "bdd1c0d2439878f6",
+    "bdd1c0d2439878f6"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_RECICLA llave 0 == MINIMO",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "6edb45b5dce4c0e7",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_RECICLA llave 0 == MINIMO",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "137cd19649dcd599",
+    "137cd19649dcd599"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    8,
+    8
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_RECICLA llave 0 == MINIMO",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "bdd1c0d2439878f6",
+    "bdd1c0d2439878f6"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_URGENCIA llave 0 == MINIMO",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "6edb45b5dce4c0e7",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_URGENCIA llave 0 == MINIMO",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "137cd19649dcd599",
+    "137cd19649dcd599"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    8,
+    8
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "b M_URGENCIA llave 0 == MINIMO",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "bdd1c0d2439878f6",
+    "bdd1c0d2439878f6"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "c AUX_TODAS llave 0 == MINIMO",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "6edb45b5dce4c0e7",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "c AUX_TODAS llave 0 == MINIMO",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "137cd19649dcd599",
+    "137cd19649dcd599"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    8,
+    8
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "c AUX_TODAS llave 0 == MINIMO",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "bdd1c0d2439878f6",
+    "bdd1c0d2439878f6"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "d AUX_TODAS encendida == HUMO",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "82a395159c37e384",
+    "82a395159c37e384"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    4,
+    4
+   ],
+   "escrituras": [
+    44956,
+    44956
+   ]
+  },
+  {
+   "check": "d AUX_TODAS encendida == HUMO",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "967ff471fc5a4f65",
+    "967ff471fc5a4f65"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    5,
+    5
+   ],
+   "escrituras": [
+    44977,
+    44977
+   ]
+  },
+  {
+   "check": "d AUX_TODAS encendida == HUMO",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "fbe53517b0dff6c0",
+    "fbe53517b0dff6c0"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    13,
+    13
+   ],
+   "escrituras": [
+    44976,
+    44976
+   ]
+  },
+  {
+   "check": "d AUX_TRES encendida == KO_PIZARRA",
+   "semilla": 884901,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "18f22765227ab382",
+    "18f22765227ab382"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "d AUX_TRES encendida == KO_PIZARRA",
+   "semilla": 884902,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "d0b80ae02dc752ec",
+    "d0b80ae02dc752ec"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    4,
+    4
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "d AUX_TRES encendida == KO_PIZARRA",
+   "semilla": 884903,
+   "puerta": true,
+   "campos": 33,
+   "iguales": 33,
+   "difieren": [],
+   "cumple": true,
+   "rng": [
+    "c57de7ab9ecaa1b5",
+    "c57de7ab9ecaa1b5"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    10,
+    10
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "e M_PIZARRA encendida != MINIMO",
+   "semilla": 884901,
+   "puerta": false,
+   "campos": 33,
+   "iguales": 17,
+   "difieren": [
+    "R0_real",
+    "R0_real_med",
+    "causas",
+    "comp_mundo",
+    "comp_mundo_q",
+    "escrituras",
+    "frac_sin_bueno_mundo",
+    "fundadores"
+   ],
+   "cumple": true,
+   "rng": [
+    "b5c5422da4232da1",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    11,
+    7
+   ],
+   "escrituras": [
+    44956,
+    0
+   ]
+  },
+  {
+   "check": "e M_RADIO encendida != MINIMO",
+   "semilla": 884901,
+   "puerta": false,
+   "campos": 33,
+   "iguales": 17,
+   "difieren": [
+    "R0_real",
+    "R0_real_med",
+    "casi_inmortales",
+    "causas",
+    "comp_mundo",
+    "comp_mundo_q",
+    "frac_sin_bueno_mundo",
+    "fundadores"
+   ],
+   "cumple": true,
+   "rng": [
+    "7b65ee5bcb70a0c8",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    15,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "e M_RECICLA encendida != MINIMO",
+   "semilla": 884901,
+   "puerta": false,
+   "campos": 33,
+   "iguales": 19,
+   "difieren": [
+    "R0_real",
+    "R0_real_med",
+    "causas",
+    "comp_mundo",
+    "comp_mundo_q",
+    "frac_sin_bueno_mundo",
+    "fundadores",
+    "limpiezas_fisicas"
+   ],
+   "cumple": true,
+   "rng": [
+    "d7d5579facd07f56",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    7,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  },
+  {
+   "check": "e M_URGENCIA encendida != MINIMO",
+   "semilla": 884901,
+   "puerta": false,
+   "campos": 33,
+   "iguales": 18,
+   "difieren": [
+    "R0_real",
+    "casi_inmortales",
+    "causas",
+    "comp_mundo",
+    "comp_mundo_q",
+    "frac_sin_bueno_mundo",
+    "fundadores",
+    "limpiezas_fisicas"
+   ],
+   "cumple": true,
+   "rng": [
+    "113da40b376ae519",
+    "6edb45b5dce4c0e7"
+   ],
+   "cruzan": [
+    0,
+    0
+   ],
+   "nac": [
+    6,
+    7
+   ],
+   "escrituras": [
+    0,
+    0
+   ]
+  }
+ ],
+ "puertas_cumplen": "24/24",
+ "descriptivos_cumplen": "4/4",
+ "corridas": 37,
+ "pasos_totales": 185000,
+ "ARNES": "PASA"
+}
