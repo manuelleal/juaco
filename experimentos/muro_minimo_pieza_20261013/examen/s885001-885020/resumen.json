@@ -1,0 +1,3323 @@
+{
+ "terminado": true,
+ "hechas": 120,
+ "total": 120,
+ "T": 100000,
+ "humo": false,
+ "semillas": [
+  885001,
+  885002,
+  885003,
+  885004,
+  885005,
+  885006,
+  885007,
+  885008,
+  885009,
+  885010,
+  885011,
+  885012,
+  885013,
+  885014,
+  885015,
+  885016,
+  885017,
+  885018,
+  885019,
+  885020
+ ],
+ "brazos": [
+  "MINIMO",
+  "M_PIZARRA",
+  "M_RADIO",
+  "M_RECICLA",
+  "M_URGENCIA",
+  "HUMO"
+ ],
+ "letra": {
+  "mayoria": {
+   "MINIMO": 15,
+   "M_PIZARRA": 13,
+   "M_RADIO": 8,
+   "M_RECICLA": 18,
+   "M_URGENCIA": 9,
+   "HUMO": 20
+  },
+  "suma_cruzan": {
+   "MINIMO": 102,
+   "M_PIZARRA": 108,
+   "M_RADIO": 87,
+   "M_RECICLA": 134,
+   "M_URGENCIA": 88,
+   "HUMO": 159
+  },
+  "medianas": {
+   "MINIMO": {
+    "R0_real_med": 0.9481,
+    "vida_med": 1908.0,
+    "muertes": 329.0,
+    "mordidas_malas": 6962.5,
+    "limpiezas_fisicas": 6329.0,
+    "frac_sin_bueno_mundo": 0.1757,
+    "fund_post10k": 5.0
+   },
+   "M_PIZARRA": {
+    "R0_real_med": 0.9436,
+    "vida_med": 1981.0,
+    "muertes": 326.0,
+    "mordidas_malas": 6943.0,
+    "limpiezas_fisicas": 6300.5,
+    "frac_sin_bueno_mundo": 0.1822,
+    "fund_post10k": 7.5
+   },
+   "M_RADIO": {
+    "R0_real_med": 0.9282,
+    "vida_med": 1922.75,
+    "muertes": 329.0,
+    "mordidas_malas": 7040.0,
+    "limpiezas_fisicas": 6421.0,
+    "frac_sin_bueno_mundo": 0.2467,
+    "fund_post10k": 7.0
+   },
+   "M_RECICLA": {
+    "R0_real_med": 0.9535,
+    "vida_med": 2506.75,
+    "muertes": 249.5,
+    "mordidas_malas": 8996.5,
+    "limpiezas_fisicas": 8356.0,
+    "frac_sin_bueno_mundo": 0.1888,
+    "fund_post10k": 0.0
+   },
+   "M_URGENCIA": {
+    "R0_real_med": 0.9221,
+    "vida_med": 2000.75,
+    "muertes": 332.0,
+    "mordidas_malas": 6947.0,
+    "limpiezas_fisicas": 6315.5,
+    "frac_sin_bueno_mundo": 0.1795,
+    "fund_post10k": 6.0
+   },
+   "HUMO": {
+    "R0_real_med": 0.963,
+    "vida_med": 2362.25,
+    "muertes": 261.5,
+    "mordidas_malas": 8944.0,
+    "limpiezas_fisicas": 8299.5,
+    "frac_sin_bueno_mundo": 0.2473,
+    "fund_post10k": 0.0
+   }
+  },
+  "n_semillas": 20,
+  "validez": {
+   "V1_completa": true,
+   "V2_shas_filtro_cotejo": true,
+   "V3_HUMO_cruza": true
+  },
+  "control": {
+   "C1_MINIMO_no_cruza": false
+  },
+  "piezas": {
+   "M_PIZARRA": {
+    "mayoria": 13,
+    "linajes": 108,
+    "dif_linajes_vs_MINIMO": 6,
+    "cierra": false,
+    "mueve": false,
+    "estado": "NADA",
+    "vs_MINIMO": {
+     "gana": 11,
+     "pierde": 8
+    },
+    "vs_HUMO": {
+     "gana": 2,
+     "pierde": 16
+    },
+    "frac_linajes_de_HUMO": 0.6792
+   },
+   "M_RADIO": {
+    "mayoria": 8,
+    "linajes": 87,
+    "dif_linajes_vs_MINIMO": -15,
+    "cierra": false,
+    "mueve": false,
+    "estado": "NADA",
+    "vs_MINIMO": {
+     "gana": 5,
+     "pierde": 13
+    },
+    "vs_HUMO": {
+     "gana": 0,
+     "pierde": 19
+    },
+    "frac_linajes_de_HUMO": 0.5472
+   },
+   "M_RECICLA": {
+    "mayoria": 18,
+    "linajes": 134,
+    "dif_linajes_vs_MINIMO": 32,
+    "cierra": true,
+    "mueve": true,
+    "estado": "CIERRA",
+    "vs_MINIMO": {
+     "gana": 14,
+     "pierde": 2
+    },
+    "vs_HUMO": {
+     "gana": 4,
+     "pierde": 15
+    },
+    "frac_linajes_de_HUMO": 0.8428
+   },
+   "M_URGENCIA": {
+    "mayoria": 9,
+    "linajes": 88,
+    "dif_linajes_vs_MINIMO": -14,
+    "cierra": false,
+    "mueve": false,
+    "estado": "NADA",
+    "vs_MINIMO": {
+     "gana": 6,
+     "pierde": 12
+    },
+    "vs_HUMO": {
+     "gana": 0,
+     "pierde": 18
+    },
+    "frac_linajes_de_HUMO": 0.5535
+   }
+  },
+  "cierran": [
+   "M_RECICLA"
+  ],
+  "mueven": [],
+  "descriptivo": {
+   "MINIMO_vs_HUMO": {
+    "gana": 1,
+    "pierde": 18
+   }
+  },
+  "veredicto": "NO SE LEE"
+ },
+ "por_semilla": {
+  "HUMO_885001": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9412,
+   "vida_med": 2568.5,
+   "fund_post10k": 2,
+   "muertes": 276,
+   "nac_reales": 264,
+   "mordidas_malas": 8881,
+   "limpiezas_fisicas": 8269,
+   "frac_sin_bueno_mundo": 0.256,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 100,
+    "sed": 117,
+    "veneno": 27,
+    "sal": 32
+   },
+   "mord": {
+    "A": 5688,
+    "B": 4393,
+    "C": 5594,
+    "D": 4488
+   },
+   "seg": 314.9
+  },
+  "HUMO_885002": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.92,
+   "vida_med": 2253.5,
+   "fund_post10k": 2,
+   "muertes": 248,
+   "nac_reales": 226,
+   "mordidas_malas": 9253,
+   "limpiezas_fisicas": 8607,
+   "frac_sin_bueno_mundo": 0.2484,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 108,
+    "sed": 93,
+    "veneno": 24,
+    "sal": 23
+   },
+   "mord": {
+    "A": 5716,
+    "B": 4606,
+    "C": 5821,
+    "D": 4647
+   },
+   "seg": 357.5
+  },
+  "HUMO_885003": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9677,
+   "vida_med": 2121.5,
+   "fund_post10k": 0,
+   "muertes": 296,
+   "nac_reales": 294,
+   "mordidas_malas": 8885,
+   "limpiezas_fisicas": 8301,
+   "frac_sin_bueno_mundo": 0.2492,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 136,
+    "sed": 96,
+    "veneno": 37,
+    "sal": 27
+   },
+   "mord": {
+    "A": 5591,
+    "B": 4403,
+    "C": 5623,
+    "D": 4482
+   },
+   "seg": 368.6
+  },
+  "HUMO_885004": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9643,
+   "vida_med": 2579.0,
+   "fund_post10k": 0,
+   "muertes": 242,
+   "nac_reales": 242,
+   "mordidas_malas": 9278,
+   "limpiezas_fisicas": 8609,
+   "frac_sin_bueno_mundo": 0.233,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 95,
+    "sed": 98,
+    "veneno": 23,
+    "sal": 26
+   },
+   "mord": {
+    "A": 5840,
+    "B": 4726,
+    "C": 5789,
+    "D": 4552
+   },
+   "seg": 305.5
+  },
+  "HUMO_885005": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.963,
+   "vida_med": 2285.0,
+   "fund_post10k": 0,
+   "muertes": 261,
+   "nac_reales": 260,
+   "mordidas_malas": 8900,
+   "limpiezas_fisicas": 8273,
+   "frac_sin_bueno_mundo": 0.249,
+   "escrituras": 899977,
+   "causas": {
+    "hambre": 106,
+    "sed": 110,
+    "veneno": 20,
+    "sal": 25
+   },
+   "mord": {
+    "A": 5624,
+    "B": 4450,
+    "C": 5564,
+    "D": 4450
+   },
+   "seg": 321.6
+  },
+  "HUMO_885006": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9643,
+   "vida_med": 2265.0,
+   "fund_post10k": 0,
+   "muertes": 274,
+   "nac_reales": 271,
+   "mordidas_malas": 8783,
+   "limpiezas_fisicas": 8173,
+   "frac_sin_bueno_mundo": 0.2516,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 107,
+    "sed": 107,
+    "veneno": 31,
+    "sal": 29
+   },
+   "mord": {
+    "A": 5605,
+    "B": 4393,
+    "C": 5535,
+    "D": 4390
+   },
+   "seg": 363.3
+  },
+  "HUMO_885007": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.963,
+   "vida_med": 2673.0,
+   "fund_post10k": 0,
+   "muertes": 237,
+   "nac_reales": 233,
+   "mordidas_malas": 9047,
+   "limpiezas_fisicas": 8398,
+   "frac_sin_bueno_mundo": 0.2462,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 93,
+    "sed": 91,
+    "veneno": 27,
+    "sal": 26
+   },
+   "mord": {
+    "A": 5769,
+    "B": 4583,
+    "C": 5715,
+    "D": 4464
+   },
+   "seg": 355.2
+  },
+  "HUMO_885008": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9615,
+   "vida_med": 2215.0,
+   "fund_post10k": 12,
+   "muertes": 267,
+   "nac_reales": 249,
+   "mordidas_malas": 8992,
+   "limpiezas_fisicas": 8328,
+   "frac_sin_bueno_mundo": 0.2392,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 110,
+    "sed": 109,
+    "veneno": 24,
+    "sal": 24
+   },
+   "mord": {
+    "A": 5733,
+    "B": 4494,
+    "C": 5794,
+    "D": 4498
+   },
+   "seg": 303.8
+  },
+  "HUMO_885009": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.96,
+   "vida_med": 3047.0,
+   "fund_post10k": 0,
+   "muertes": 227,
+   "nac_reales": 226,
+   "mordidas_malas": 9057,
+   "limpiezas_fisicas": 8378,
+   "frac_sin_bueno_mundo": 0.2435,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 91,
+    "sed": 86,
+    "veneno": 28,
+    "sal": 22
+   },
+   "mord": {
+    "A": 5667,
+    "B": 4476,
+    "C": 5873,
+    "D": 4581
+   },
+   "seg": 229.0
+  },
+  "HUMO_885010": {
+   "persisten": 8,
+   "cruzan_real": 7,
+   "R0_real_med": 0.931,
+   "vida_med": 2394.5,
+   "fund_post10k": 1,
+   "muertes": 258,
+   "nac_reales": 250,
+   "mordidas_malas": 8855,
+   "limpiezas_fisicas": 8202,
+   "frac_sin_bueno_mundo": 0.253,
+   "escrituras": 899978,
+   "causas": {
+    "hambre": 117,
+    "sed": 92,
+    "veneno": 17,
+    "sal": 32
+   },
+   "mord": {
+    "A": 5584,
+    "B": 4338,
+    "C": 5700,
+    "D": 4517
+   },
+   "seg": 363.5
+  },
+  "HUMO_885011": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9677,
+   "vida_med": 2143.0,
+   "fund_post10k": 0,
+   "muertes": 277,
+   "nac_reales": 276,
+   "mordidas_malas": 8782,
+   "limpiezas_fisicas": 8105,
+   "frac_sin_bueno_mundo": 0.2577,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 113,
+    "sed": 102,
+    "veneno": 28,
+    "sal": 34
+   },
+   "mord": {
+    "A": 5607,
+    "B": 4413,
+    "C": 5530,
+    "D": 4369
+   },
+   "seg": 372.0
+  },
+  "HUMO_885012": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9655,
+   "vida_med": 2235.0,
+   "fund_post10k": 0,
+   "muertes": 262,
+   "nac_reales": 260,
+   "mordidas_malas": 9058,
+   "limpiezas_fisicas": 8433,
+   "frac_sin_bueno_mundo": 0.2416,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 104,
+    "sed": 106,
+    "veneno": 25,
+    "sal": 27
+   },
+   "mord": {
+    "A": 5731,
+    "B": 4562,
+    "C": 5631,
+    "D": 4496
+   },
+   "seg": 276.8
+  },
+  "HUMO_885013": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.963,
+   "vida_med": 2562.0,
+   "fund_post10k": 0,
+   "muertes": 240,
+   "nac_reales": 238,
+   "mordidas_malas": 9308,
+   "limpiezas_fisicas": 8656,
+   "frac_sin_bueno_mundo": 0.2399,
+   "escrituras": 899978,
+   "causas": {
+    "hambre": 104,
+    "sed": 88,
+    "veneno": 21,
+    "sal": 27
+   },
+   "mord": {
+    "A": 5799,
+    "B": 4587,
+    "C": 5766,
+    "D": 4721
+   },
+   "seg": 281.8
+  },
+  "HUMO_885014": {
+   "persisten": 8,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9667,
+   "vida_med": 2125.0,
+   "fund_post10k": 3,
+   "muertes": 287,
+   "nac_reales": 281,
+   "mordidas_malas": 8843,
+   "limpiezas_fisicas": 8248,
+   "frac_sin_bueno_mundo": 0.2378,
+   "escrituras": 899977,
+   "causas": {
+    "hambre": 121,
+    "sed": 112,
+    "veneno": 29,
+    "sal": 25
+   },
+   "mord": {
+    "A": 5630,
+    "B": 4419,
+    "C": 5658,
+    "D": 4424
+   },
+   "seg": 260.1
+  },
+  "HUMO_885015": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9286,
+   "vida_med": 2330.0,
+   "fund_post10k": 6,
+   "muertes": 285,
+   "nac_reales": 266,
+   "mordidas_malas": 9133,
+   "limpiezas_fisicas": 8506,
+   "frac_sin_bueno_mundo": 0.2698,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 105,
+    "sed": 114,
+    "veneno": 29,
+    "sal": 37
+   },
+   "mord": {
+    "A": 5496,
+    "B": 4539,
+    "C": 5505,
+    "D": 4594
+   },
+   "seg": 281.1
+  },
+  "HUMO_885016": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9565,
+   "vida_med": 2827.0,
+   "fund_post10k": 0,
+   "muertes": 236,
+   "nac_reales": 232,
+   "mordidas_malas": 9106,
+   "limpiezas_fisicas": 8454,
+   "frac_sin_bueno_mundo": 0.2283,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 77,
+    "sed": 90,
+    "veneno": 37,
+    "sal": 32
+   },
+   "mord": {
+    "A": 5769,
+    "B": 4573,
+    "C": 5910,
+    "D": 4533
+   },
+   "seg": 273.5
+  },
+  "HUMO_885017": {
+   "persisten": 8,
+   "cruzan_real": 8,
+   "R0_real_med": 0.963,
+   "vida_med": 2830.0,
+   "fund_post10k": 6,
+   "muertes": 257,
+   "nac_reales": 250,
+   "mordidas_malas": 8917,
+   "limpiezas_fisicas": 8286,
+   "frac_sin_bueno_mundo": 0.2529,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 93,
+    "sed": 108,
+    "veneno": 29,
+    "sal": 27
+   },
+   "mord": {
+    "A": 5653,
+    "B": 4487,
+    "C": 5551,
+    "D": 4430
+   },
+   "seg": 259.2
+  },
+  "HUMO_885018": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.96,
+   "vida_med": 3102.0,
+   "fund_post10k": 0,
+   "muertes": 230,
+   "nac_reales": 228,
+   "mordidas_malas": 8909,
+   "limpiezas_fisicas": 8249,
+   "frac_sin_bueno_mundo": 0.2316,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 86,
+    "sed": 90,
+    "veneno": 25,
+    "sal": 29
+   },
+   "mord": {
+    "A": 5692,
+    "B": 4468,
+    "C": 5760,
+    "D": 4441
+   },
+   "seg": 286.1
+  },
+  "HUMO_885019": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9643,
+   "vida_med": 2516.0,
+   "fund_post10k": 0,
+   "muertes": 263,
+   "nac_reales": 259,
+   "mordidas_malas": 8971,
+   "limpiezas_fisicas": 8298,
+   "frac_sin_bueno_mundo": 0.2368,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 118,
+    "sed": 90,
+    "veneno": 28,
+    "sal": 27
+   },
+   "mord": {
+    "A": 5647,
+    "B": 4506,
+    "C": 5717,
+    "D": 4465
+   },
+   "seg": 273.5
+  },
+  "HUMO_885020": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9688,
+   "vida_med": 2267.0,
+   "fund_post10k": 0,
+   "muertes": 271,
+   "nac_reales": 271,
+   "mordidas_malas": 8528,
+   "limpiezas_fisicas": 7949,
+   "frac_sin_bueno_mundo": 0.2839,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 112,
+    "sed": 106,
+    "veneno": 22,
+    "sal": 31
+   },
+   "mord": {
+    "A": 5438,
+    "B": 4273,
+    "C": 5357,
+    "D": 4255
+   },
+   "seg": 241.0
+  },
+  "MINIMO_885001": {
+   "persisten": 7,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9355,
+   "vida_med": 2179.0,
+   "fund_post10k": 16,
+   "muertes": 313,
+   "nac_reales": 282,
+   "mordidas_malas": 7029,
+   "limpiezas_fisicas": 6391,
+   "frac_sin_bueno_mundo": 0.1805,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 129,
+    "sed": 132,
+    "veneno": 33,
+    "sal": 19
+   },
+   "mord": {
+    "A": 4759,
+    "B": 3476,
+    "C": 4835,
+    "D": 3553
+   },
+   "seg": 521.2
+  },
+  "MINIMO_885002": {
+   "persisten": 3,
+   "cruzan_real": 1,
+   "R0_real_med": 0.8636,
+   "vida_med": 1876.0,
+   "fund_post10k": 32,
+   "muertes": 362,
+   "nac_reales": 304,
+   "mordidas_malas": 6979,
+   "limpiezas_fisicas": 6361,
+   "frac_sin_bueno_mundo": 0.1907,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 150,
+    "sed": 145,
+    "veneno": 33,
+    "sal": 34
+   },
+   "mord": {
+    "A": 4620,
+    "B": 3522,
+    "C": 4606,
+    "D": 3457
+   },
+   "seg": 585.3
+  },
+  "MINIMO_885003": {
+   "persisten": 7,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9487,
+   "vida_med": 1931.0,
+   "fund_post10k": 7,
+   "muertes": 341,
+   "nac_reales": 320,
+   "mordidas_malas": 6894,
+   "limpiezas_fisicas": 6273,
+   "frac_sin_bueno_mundo": 0.1855,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 139,
+    "sed": 144,
+    "veneno": 35,
+    "sal": 23
+   },
+   "mord": {
+    "A": 4634,
+    "B": 3456,
+    "C": 4630,
+    "D": 3438
+   },
+   "seg": 571.3
+  },
+  "MINIMO_885004": {
+   "persisten": 4,
+   "cruzan_real": 1,
+   "R0_real_med": 0.9024,
+   "vida_med": 1808.0,
+   "fund_post10k": 10,
+   "muertes": 345,
+   "nac_reales": 319,
+   "mordidas_malas": 6819,
+   "limpiezas_fisicas": 6199,
+   "frac_sin_bueno_mundo": 0.1757,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 138,
+    "sed": 151,
+    "veneno": 32,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4719,
+    "B": 3454,
+    "C": 4590,
+    "D": 3365
+   },
+   "seg": 524.8
+  },
+  "MINIMO_885005": {
+   "persisten": 8,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9487,
+   "vida_med": 1686.0,
+   "fund_post10k": 5,
+   "muertes": 370,
+   "nac_reales": 354,
+   "mordidas_malas": 6747,
+   "limpiezas_fisicas": 6143,
+   "frac_sin_bueno_mundo": 0.2004,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 139,
+    "sed": 165,
+    "veneno": 32,
+    "sal": 34
+   },
+   "mord": {
+    "A": 4629,
+    "B": 3453,
+    "C": 4466,
+    "D": 3294
+   },
+   "seg": 501.8
+  },
+  "MINIMO_885006": {
+   "persisten": 4,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9189,
+   "vida_med": 2034.0,
+   "fund_post10k": 9,
+   "muertes": 324,
+   "nac_reales": 302,
+   "mordidas_malas": 6938,
+   "limpiezas_fisicas": 6270,
+   "frac_sin_bueno_mundo": 0.1757,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 153,
+    "sed": 123,
+    "veneno": 30,
+    "sal": 18
+   },
+   "mord": {
+    "A": 4607,
+    "B": 3408,
+    "C": 4704,
+    "D": 3530
+   },
+   "seg": 512.2
+  },
+  "MINIMO_885007": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9583,
+   "vida_med": 2412.0,
+   "fund_post10k": 0,
+   "muertes": 300,
+   "nac_reales": 289,
+   "mordidas_malas": 6889,
+   "limpiezas_fisicas": 6262,
+   "frac_sin_bueno_mundo": 0.2007,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 122,
+    "sed": 122,
+    "veneno": 25,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4681,
+    "B": 3414,
+    "C": 4671,
+    "D": 3475
+   },
+   "seg": 589.6
+  },
+  "MINIMO_885008": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9615,
+   "vida_med": 2452.0,
+   "fund_post10k": 7,
+   "muertes": 303,
+   "nac_reales": 285,
+   "mordidas_malas": 7165,
+   "limpiezas_fisicas": 6484,
+   "frac_sin_bueno_mundo": 0.155,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 143,
+    "sed": 119,
+    "veneno": 15,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4915,
+    "B": 3577,
+    "C": 4928,
+    "D": 3588
+   },
+   "seg": 599.3
+  },
+  "MINIMO_885009": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9474,
+   "vida_med": 2002.0,
+   "fund_post10k": 0,
+   "muertes": 312,
+   "nac_reales": 296,
+   "mordidas_malas": 7085,
+   "limpiezas_fisicas": 6474,
+   "frac_sin_bueno_mundo": 0.1729,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 131,
+    "sed": 124,
+    "veneno": 31,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4843,
+    "B": 3575,
+    "C": 4763,
+    "D": 3510
+   },
+   "seg": 526.1
+  },
+  "MINIMO_885010": {
+   "persisten": 7,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9487,
+   "vida_med": 2022.0,
+   "fund_post10k": 2,
+   "muertes": 304,
+   "nac_reales": 293,
+   "mordidas_malas": 7080,
+   "limpiezas_fisicas": 6442,
+   "frac_sin_bueno_mundo": 0.1709,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 130,
+    "sed": 127,
+    "veneno": 22,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4789,
+    "B": 3509,
+    "C": 4758,
+    "D": 3571
+   },
+   "seg": 487.7
+  },
+  "MINIMO_885011": {
+   "persisten": 9,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9167,
+   "vida_med": 1854.5,
+   "fund_post10k": 0,
+   "muertes": 324,
+   "nac_reales": 301,
+   "mordidas_malas": 6975,
+   "limpiezas_fisicas": 6336,
+   "frac_sin_bueno_mundo": 0.1633,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 125,
+    "sed": 145,
+    "veneno": 23,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4909,
+    "B": 3518,
+    "C": 4887,
+    "D": 3457
+   },
+   "seg": 631.8
+  },
+  "MINIMO_885012": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9211,
+   "vida_med": 1836.0,
+   "fund_post10k": 5,
+   "muertes": 347,
+   "nac_reales": 313,
+   "mordidas_malas": 6925,
+   "limpiezas_fisicas": 6324,
+   "frac_sin_bueno_mundo": 0.1764,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 168,
+    "sed": 120,
+    "veneno": 29,
+    "sal": 30
+   },
+   "mord": {
+    "A": 4542,
+    "B": 3381,
+    "C": 4777,
+    "D": 3544
+   },
+   "seg": 632.4
+  },
+  "MINIMO_885013": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9688,
+   "vida_med": 2461.5,
+   "fund_post10k": 3,
+   "muertes": 291,
+   "nac_reales": 281,
+   "mordidas_malas": 6990,
+   "limpiezas_fisicas": 6332,
+   "frac_sin_bueno_mundo": 0.1754,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 124,
+    "sed": 122,
+    "veneno": 23,
+    "sal": 22
+   },
+   "mord": {
+    "A": 4742,
+    "B": 3478,
+    "C": 4763,
+    "D": 3512
+   },
+   "seg": 468.8
+  },
+  "MINIMO_885014": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9048,
+   "vida_med": 2131.5,
+   "fund_post10k": 3,
+   "muertes": 342,
+   "nac_reales": 306,
+   "mordidas_malas": 6950,
+   "limpiezas_fisicas": 6326,
+   "frac_sin_bueno_mundo": 0.174,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 145,
+    "sed": 151,
+    "veneno": 28,
+    "sal": 18
+   },
+   "mord": {
+    "A": 4734,
+    "B": 3459,
+    "C": 4808,
+    "D": 3491
+   },
+   "seg": 371.3
+  },
+  "MINIMO_885015": {
+   "persisten": 5,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9487,
+   "vida_med": 1777.0,
+   "fund_post10k": 14,
+   "muertes": 346,
+   "nac_reales": 319,
+   "mordidas_malas": 6844,
+   "limpiezas_fisicas": 6206,
+   "frac_sin_bueno_mundo": 0.1631,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 146,
+    "sed": 149,
+    "veneno": 22,
+    "sal": 29
+   },
+   "mord": {
+    "A": 4740,
+    "B": 3490,
+    "C": 4605,
+    "D": 3354
+   },
+   "seg": 453.9
+  },
+  "MINIMO_885016": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9714,
+   "vida_med": 1801.0,
+   "fund_post10k": 5,
+   "muertes": 328,
+   "nac_reales": 315,
+   "mordidas_malas": 6873,
+   "limpiezas_fisicas": 6293,
+   "frac_sin_bueno_mundo": 0.1856,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 130,
+    "sed": 137,
+    "veneno": 35,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4669,
+    "B": 3420,
+    "C": 4579,
+    "D": 3453
+   },
+   "seg": 454.3
+  },
+  "MINIMO_885017": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.925,
+   "vida_med": 1885.0,
+   "fund_post10k": 2,
+   "muertes": 309,
+   "nac_reales": 289,
+   "mordidas_malas": 6992,
+   "limpiezas_fisicas": 6342,
+   "frac_sin_bueno_mundo": 0.1726,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 113,
+    "sed": 141,
+    "veneno": 27,
+    "sal": 28
+   },
+   "mord": {
+    "A": 4771,
+    "B": 3488,
+    "C": 4769,
+    "D": 3504
+   },
+   "seg": 514.1
+  },
+  "MINIMO_885018": {
+   "persisten": 4,
+   "cruzan_real": 2,
+   "R0_real_med": 0.8571,
+   "vida_med": 1938.0,
+   "fund_post10k": 15,
+   "muertes": 354,
+   "nac_reales": 313,
+   "mordidas_malas": 6915,
+   "limpiezas_fisicas": 6309,
+   "frac_sin_bueno_mundo": 0.1754,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 138,
+    "sed": 157,
+    "veneno": 29,
+    "sal": 30
+   },
+   "mord": {
+    "A": 4736,
+    "B": 3531,
+    "C": 4535,
+    "D": 3384
+   },
+   "seg": 481.9
+  },
+  "MINIMO_885019": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9688,
+   "vida_med": 1877.0,
+   "fund_post10k": 11,
+   "muertes": 340,
+   "nac_reales": 309,
+   "mordidas_malas": 6984,
+   "limpiezas_fisicas": 6363,
+   "frac_sin_bueno_mundo": 0.1802,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 145,
+    "sed": 140,
+    "veneno": 25,
+    "sal": 30
+   },
+   "mord": {
+    "A": 4648,
+    "B": 3453,
+    "C": 4644,
+    "D": 3531
+   },
+   "seg": 465.4
+  },
+  "MINIMO_885020": {
+   "persisten": 8,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9706,
+   "vida_med": 1739.5,
+   "fund_post10k": 1,
+   "muertes": 330,
+   "nac_reales": 317,
+   "mordidas_malas": 7033,
+   "limpiezas_fisicas": 6385,
+   "frac_sin_bueno_mundo": 0.1782,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 158,
+    "sed": 123,
+    "veneno": 22,
+    "sal": 27
+   },
+   "mord": {
+    "A": 4665,
+    "B": 3515,
+    "C": 4746,
+    "D": 3518
+   },
+   "seg": 457.2
+  },
+  "M_PIZARRA_885001": {
+   "persisten": 4,
+   "cruzan_real": 4,
+   "R0_real_med": 0.913,
+   "vida_med": 1906.0,
+   "fund_post10k": 18,
+   "muertes": 330,
+   "nac_reales": 299,
+   "mordidas_malas": 6899,
+   "limpiezas_fisicas": 6268,
+   "frac_sin_bueno_mundo": 0.1899,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 145,
+    "sed": 135,
+    "veneno": 25,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4715,
+    "B": 3470,
+    "C": 4755,
+    "D": 3429
+   },
+   "seg": 549.4
+  },
+  "M_PIZARRA_885002": {
+   "persisten": 4,
+   "cruzan_real": 3,
+   "R0_real_med": 0.878,
+   "vida_med": 1876.0,
+   "fund_post10k": 17,
+   "muertes": 341,
+   "nac_reales": 305,
+   "mordidas_malas": 7040,
+   "limpiezas_fisicas": 6453,
+   "frac_sin_bueno_mundo": 0.1754,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 142,
+    "sed": 151,
+    "veneno": 25,
+    "sal": 23
+   },
+   "mord": {
+    "A": 4607,
+    "B": 3486,
+    "C": 4686,
+    "D": 3554
+   },
+   "seg": 624.4
+  },
+  "M_PIZARRA_885003": {
+   "persisten": 5,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8974,
+   "vida_med": 2058.5,
+   "fund_post10k": 10,
+   "muertes": 304,
+   "nac_reales": 285,
+   "mordidas_malas": 6754,
+   "limpiezas_fisicas": 6166,
+   "frac_sin_bueno_mundo": 0.1916,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 132,
+    "sed": 112,
+    "veneno": 28,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4737,
+    "B": 3375,
+    "C": 4711,
+    "D": 3379
+   },
+   "seg": 587.0
+  },
+  "M_PIZARRA_885004": {
+   "persisten": 7,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9697,
+   "vida_med": 1888.0,
+   "fund_post10k": 7,
+   "muertes": 315,
+   "nac_reales": 303,
+   "mordidas_malas": 7062,
+   "limpiezas_fisicas": 6436,
+   "frac_sin_bueno_mundo": 0.193,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 124,
+    "sed": 125,
+    "veneno": 35,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4767,
+    "B": 3594,
+    "C": 4728,
+    "D": 3468
+   },
+   "seg": 545.1
+  },
+  "M_PIZARRA_885005": {
+   "persisten": 6,
+   "cruzan_real": 6,
+   "R0_real_med": 0.931,
+   "vida_med": 2167.0,
+   "fund_post10k": 7,
+   "muertes": 312,
+   "nac_reales": 296,
+   "mordidas_malas": 6963,
+   "limpiezas_fisicas": 6315,
+   "frac_sin_bueno_mundo": 0.177,
+   "escrituras": 899977,
+   "causas": {
+    "hambre": 130,
+    "sed": 129,
+    "veneno": 24,
+    "sal": 29
+   },
+   "mord": {
+    "A": 4787,
+    "B": 3478,
+    "C": 4694,
+    "D": 3485
+   },
+   "seg": 521.3
+  },
+  "M_PIZARRA_885006": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9444,
+   "vida_med": 2002.0,
+   "fund_post10k": 2,
+   "muertes": 319,
+   "nac_reales": 307,
+   "mordidas_malas": 6723,
+   "limpiezas_fisicas": 6084,
+   "frac_sin_bueno_mundo": 0.1946,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 162,
+    "sed": 99,
+    "veneno": 30,
+    "sal": 28
+   },
+   "mord": {
+    "A": 4448,
+    "B": 3329,
+    "C": 4724,
+    "D": 3394
+   },
+   "seg": 554.2
+  },
+  "M_PIZARRA_885007": {
+   "persisten": 4,
+   "cruzan_real": 3,
+   "R0_real_med": 0.8936,
+   "vida_med": 1991.0,
+   "fund_post10k": 11,
+   "muertes": 329,
+   "nac_reales": 310,
+   "mordidas_malas": 6810,
+   "limpiezas_fisicas": 6148,
+   "frac_sin_bueno_mundo": 0.1834,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 145,
+    "sed": 127,
+    "veneno": 26,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4708,
+    "B": 3354,
+    "C": 4727,
+    "D": 3456
+   },
+   "seg": 606.0
+  },
+  "M_PIZARRA_885008": {
+   "persisten": 7,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9394,
+   "vida_med": 2201.0,
+   "fund_post10k": 4,
+   "muertes": 290,
+   "nac_reales": 280,
+   "mordidas_malas": 6942,
+   "limpiezas_fisicas": 6295,
+   "frac_sin_bueno_mundo": 0.1698,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 126,
+    "sed": 119,
+    "veneno": 22,
+    "sal": 23
+   },
+   "mord": {
+    "A": 4725,
+    "B": 3451,
+    "C": 4770,
+    "D": 3491
+   },
+   "seg": 612.9
+  },
+  "M_PIZARRA_885009": {
+   "persisten": 6,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9688,
+   "vida_med": 1897.0,
+   "fund_post10k": 6,
+   "muertes": 325,
+   "nac_reales": 306,
+   "mordidas_malas": 7021,
+   "limpiezas_fisicas": 6375,
+   "frac_sin_bueno_mundo": 0.1845,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 136,
+    "sed": 134,
+    "veneno": 23,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4731,
+    "B": 3484,
+    "C": 4725,
+    "D": 3537
+   },
+   "seg": 547.5
+  },
+  "M_PIZARRA_885010": {
+   "persisten": 4,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9474,
+   "vida_med": 1816.0,
+   "fund_post10k": 11,
+   "muertes": 334,
+   "nac_reales": 316,
+   "mordidas_malas": 6768,
+   "limpiezas_fisicas": 6155,
+   "frac_sin_bueno_mundo": 0.1838,
+   "escrituras": 899978,
+   "causas": {
+    "hambre": 149,
+    "sed": 147,
+    "veneno": 18,
+    "sal": 20
+   },
+   "mord": {
+    "A": 4592,
+    "B": 3446,
+    "C": 4521,
+    "D": 3322
+   },
+   "seg": 529.8
+  },
+  "M_PIZARRA_885011": {
+   "persisten": 4,
+   "cruzan_real": 3,
+   "R0_real_med": 0.925,
+   "vida_med": 1971.0,
+   "fund_post10k": 8,
+   "muertes": 336,
+   "nac_reales": 321,
+   "mordidas_malas": 6999,
+   "limpiezas_fisicas": 6353,
+   "frac_sin_bueno_mundo": 0.1811,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 132,
+    "sed": 150,
+    "veneno": 22,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4756,
+    "B": 3550,
+    "C": 4615,
+    "D": 3449
+   },
+   "seg": 662.9
+  },
+  "M_PIZARRA_885012": {
+   "persisten": 6,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9444,
+   "vida_med": 2104.5,
+   "fund_post10k": 5,
+   "muertes": 303,
+   "nac_reales": 295,
+   "mordidas_malas": 6935,
+   "limpiezas_fisicas": 6233,
+   "frac_sin_bueno_mundo": 0.176,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 146,
+    "sed": 102,
+    "veneno": 26,
+    "sal": 29
+   },
+   "mord": {
+    "A": 4780,
+    "B": 3448,
+    "C": 4792,
+    "D": 3487
+   },
+   "seg": 647.0
+  },
+  "M_PIZARRA_885013": {
+   "persisten": 9,
+   "cruzan_real": 9,
+   "R0_real_med": 0.9643,
+   "vida_med": 1993.5,
+   "fund_post10k": 0,
+   "muertes": 298,
+   "nac_reales": 294,
+   "mordidas_malas": 6944,
+   "limpiezas_fisicas": 6306,
+   "frac_sin_bueno_mundo": 0.1609,
+   "escrituras": 899978,
+   "causas": {
+    "hambre": 145,
+    "sed": 104,
+    "veneno": 31,
+    "sal": 18
+   },
+   "mord": {
+    "A": 4711,
+    "B": 3377,
+    "C": 4883,
+    "D": 3567
+   },
+   "seg": 478.7
+  },
+  "M_PIZARRA_885014": {
+   "persisten": 7,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9688,
+   "vida_med": 2207.5,
+   "fund_post10k": 7,
+   "muertes": 309,
+   "nac_reales": 300,
+   "mordidas_malas": 7064,
+   "limpiezas_fisicas": 6424,
+   "frac_sin_bueno_mundo": 0.1709,
+   "escrituras": 899977,
+   "causas": {
+    "hambre": 123,
+    "sed": 136,
+    "veneno": 24,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4747,
+    "B": 3536,
+    "C": 4796,
+    "D": 3528
+   },
+   "seg": 392.1
+  },
+  "M_PIZARRA_885015": {
+   "persisten": 6,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9429,
+   "vida_med": 1884.0,
+   "fund_post10k": 14,
+   "muertes": 351,
+   "nac_reales": 330,
+   "mordidas_malas": 7066,
+   "limpiezas_fisicas": 6449,
+   "frac_sin_bueno_mundo": 0.1789,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 153,
+    "sed": 142,
+    "veneno": 23,
+    "sal": 33
+   },
+   "mord": {
+    "A": 4658,
+    "B": 3541,
+    "C": 4619,
+    "D": 3525
+   },
+   "seg": 461.0
+  },
+  "M_PIZARRA_885016": {
+   "persisten": 8,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9697,
+   "vida_med": 1955.0,
+   "fund_post10k": 1,
+   "muertes": 332,
+   "nac_reales": 324,
+   "mordidas_malas": 6863,
+   "limpiezas_fisicas": 6243,
+   "frac_sin_bueno_mundo": 0.1822,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 141,
+    "sed": 145,
+    "veneno": 27,
+    "sal": 19
+   },
+   "mord": {
+    "A": 4656,
+    "B": 3455,
+    "C": 4650,
+    "D": 3408
+   },
+   "seg": 468.2
+  },
+  "M_PIZARRA_885017": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9394,
+   "vida_med": 2243.0,
+   "fund_post10k": 16,
+   "muertes": 316,
+   "nac_reales": 288,
+   "mordidas_malas": 7057,
+   "limpiezas_fisicas": 6419,
+   "frac_sin_bueno_mundo": 0.183,
+   "escrituras": 899976,
+   "causas": {
+    "hambre": 129,
+    "sed": 129,
+    "veneno": 32,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4752,
+    "B": 3536,
+    "C": 4709,
+    "D": 3521
+   },
+   "seg": 495.6
+  },
+  "M_PIZARRA_885018": {
+   "persisten": 3,
+   "cruzan_real": 3,
+   "R0_real_med": 0.9143,
+   "vida_med": 1801.0,
+   "fund_post10k": 16,
+   "muertes": 364,
+   "nac_reales": 341,
+   "mordidas_malas": 6840,
+   "limpiezas_fisicas": 6234,
+   "frac_sin_bueno_mundo": 0.175,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 154,
+    "sed": 146,
+    "veneno": 32,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4574,
+    "B": 3441,
+    "C": 4583,
+    "D": 3399
+   },
+   "seg": 496.6
+  },
+  "M_PIZARRA_885019": {
+   "persisten": 7,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9688,
+   "vida_med": 2054.0,
+   "fund_post10k": 2,
+   "muertes": 327,
+   "nac_reales": 320,
+   "mordidas_malas": 6957,
+   "limpiezas_fisicas": 6351,
+   "frac_sin_bueno_mundo": 0.1823,
+   "escrituras": 899975,
+   "causas": {
+    "hambre": 134,
+    "sed": 144,
+    "veneno": 25,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4737,
+    "B": 3528,
+    "C": 4725,
+    "D": 3429
+   },
+   "seg": 483.7
+  },
+  "M_PIZARRA_885020": {
+   "persisten": 5,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9487,
+   "vida_med": 1949.5,
+   "fund_post10k": 10,
+   "muertes": 359,
+   "nac_reales": 343,
+   "mordidas_malas": 6876,
+   "limpiezas_fisicas": 6250,
+   "frac_sin_bueno_mundo": 0.187,
+   "escrituras": 899974,
+   "causas": {
+    "hambre": 171,
+    "sed": 135,
+    "veneno": 29,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4498,
+    "B": 3406,
+    "C": 4506,
+    "D": 3470
+   },
+   "seg": 485.9
+  },
+  "M_RADIO_885001": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8913,
+   "vida_med": 1794.0,
+   "fund_post10k": 14,
+   "muertes": 347,
+   "nac_reales": 312,
+   "mordidas_malas": 6799,
+   "limpiezas_fisicas": 6223,
+   "frac_sin_bueno_mundo": 0.262,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 151,
+    "sed": 148,
+    "veneno": 31,
+    "sal": 17
+   },
+   "mord": {
+    "A": 4583,
+    "B": 3348,
+    "C": 4727,
+    "D": 3451
+   },
+   "seg": 452.7
+  },
+  "M_RADIO_885002": {
+   "persisten": 5,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8718,
+   "vida_med": 2219.0,
+   "fund_post10k": 13,
+   "muertes": 317,
+   "nac_reales": 276,
+   "mordidas_malas": 7177,
+   "limpiezas_fisicas": 6569,
+   "frac_sin_bueno_mundo": 0.2391,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 134,
+    "sed": 122,
+    "veneno": 30,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4734,
+    "B": 3566,
+    "C": 4820,
+    "D": 3611
+   },
+   "seg": 521.6
+  },
+  "M_RADIO_885003": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8611,
+   "vida_med": 1839.0,
+   "fund_post10k": 7,
+   "muertes": 349,
+   "nac_reales": 302,
+   "mordidas_malas": 7153,
+   "limpiezas_fisicas": 6507,
+   "frac_sin_bueno_mundo": 0.2565,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 137,
+    "sed": 146,
+    "veneno": 35,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4665,
+    "B": 3565,
+    "C": 4802,
+    "D": 3588
+   },
+   "seg": 498.1
+  },
+  "M_RADIO_885004": {
+   "persisten": 5,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9394,
+   "vida_med": 1801.0,
+   "fund_post10k": 5,
+   "muertes": 338,
+   "nac_reales": 315,
+   "mordidas_malas": 6936,
+   "limpiezas_fisicas": 6276,
+   "frac_sin_bueno_mundo": 0.2521,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 152,
+    "sed": 133,
+    "veneno": 21,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4705,
+    "B": 3462,
+    "C": 4702,
+    "D": 3474
+   },
+   "seg": 449.5
+  },
+  "M_RADIO_885005": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8919,
+   "vida_med": 2285.0,
+   "fund_post10k": 7,
+   "muertes": 328,
+   "nac_reales": 300,
+   "mordidas_malas": 6931,
+   "limpiezas_fisicas": 6320,
+   "frac_sin_bueno_mundo": 0.2653,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 132,
+    "sed": 140,
+    "veneno": 20,
+    "sal": 36
+   },
+   "mord": {
+    "A": 4809,
+    "B": 3475,
+    "C": 4669,
+    "D": 3456
+   },
+   "seg": 437.1
+  },
+  "M_RADIO_885006": {
+   "persisten": 5,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9545,
+   "vida_med": 2142.5,
+   "fund_post10k": 4,
+   "muertes": 329,
+   "nac_reales": 314,
+   "mordidas_malas": 6830,
+   "limpiezas_fisicas": 6264,
+   "frac_sin_bueno_mundo": 0.2369,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 146,
+    "sed": 129,
+    "veneno": 19,
+    "sal": 35
+   },
+   "mord": {
+    "A": 4777,
+    "B": 3396,
+    "C": 4820,
+    "D": 3434
+   },
+   "seg": 476.5
+  },
+  "M_RADIO_885007": {
+   "persisten": 5,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9394,
+   "vida_med": 1914.0,
+   "fund_post10k": 14,
+   "muertes": 316,
+   "nac_reales": 291,
+   "mordidas_malas": 7022,
+   "limpiezas_fisicas": 6391,
+   "frac_sin_bueno_mundo": 0.2464,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 126,
+    "sed": 141,
+    "veneno": 25,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4853,
+    "B": 3500,
+    "C": 4760,
+    "D": 3522
+   },
+   "seg": 502.1
+  },
+  "M_RADIO_885008": {
+   "persisten": 4,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9333,
+   "vida_med": 1894.0,
+   "fund_post10k": 8,
+   "muertes": 332,
+   "nac_reales": 316,
+   "mordidas_malas": 7101,
+   "limpiezas_fisicas": 6502,
+   "frac_sin_bueno_mundo": 0.2234,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 140,
+    "sed": 142,
+    "veneno": 27,
+    "sal": 23
+   },
+   "mord": {
+    "A": 4838,
+    "B": 3571,
+    "C": 4771,
+    "D": 3530
+   },
+   "seg": 511.2
+  },
+  "M_RADIO_885009": {
+   "persisten": 8,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8723,
+   "vida_med": 2148.5,
+   "fund_post10k": 2,
+   "muertes": 328,
+   "nac_reales": 303,
+   "mordidas_malas": 7108,
+   "limpiezas_fisicas": 6474,
+   "frac_sin_bueno_mundo": 0.2478,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 131,
+    "sed": 138,
+    "veneno": 27,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4883,
+    "B": 3636,
+    "C": 4688,
+    "D": 3472
+   },
+   "seg": 445.6
+  },
+  "M_RADIO_885010": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9388,
+   "vida_med": 1825.0,
+   "fund_post10k": 11,
+   "muertes": 341,
+   "nac_reales": 313,
+   "mordidas_malas": 6828,
+   "limpiezas_fisicas": 6204,
+   "frac_sin_bueno_mundo": 0.2538,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 148,
+    "sed": 130,
+    "veneno": 39,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4645,
+    "B": 3409,
+    "C": 4655,
+    "D": 3419
+   },
+   "seg": 444.8
+  },
+  "M_RADIO_885011": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9,
+   "vida_med": 1982.5,
+   "fund_post10k": 7,
+   "muertes": 328,
+   "nac_reales": 292,
+   "mordidas_malas": 6942,
+   "limpiezas_fisicas": 6349,
+   "frac_sin_bueno_mundo": 0.2526,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 150,
+    "sed": 131,
+    "veneno": 22,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4694,
+    "B": 3462,
+    "C": 4712,
+    "D": 3480
+   },
+   "seg": 558.2
+  },
+  "M_RADIO_885012": {
+   "persisten": 4,
+   "cruzan_real": 3,
+   "R0_real_med": 0.8824,
+   "vida_med": 1931.5,
+   "fund_post10k": 20,
+   "muertes": 370,
+   "nac_reales": 321,
+   "mordidas_malas": 6858,
+   "limpiezas_fisicas": 6263,
+   "frac_sin_bueno_mundo": 0.2521,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 151,
+    "sed": 153,
+    "veneno": 30,
+    "sal": 36
+   },
+   "mord": {
+    "A": 4707,
+    "B": 3414,
+    "C": 4737,
+    "D": 3444
+   },
+   "seg": 394.1
+  },
+  "M_RADIO_885013": {
+   "persisten": 5,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9565,
+   "vida_med": 2078.5,
+   "fund_post10k": 6,
+   "muertes": 329,
+   "nac_reales": 318,
+   "mordidas_malas": 7096,
+   "limpiezas_fisicas": 6514,
+   "frac_sin_bueno_mundo": 0.242,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 148,
+    "sed": 117,
+    "veneno": 34,
+    "sal": 30
+   },
+   "mord": {
+    "A": 4776,
+    "B": 3511,
+    "C": 4797,
+    "D": 3585
+   },
+   "seg": 380.3
+  },
+  "M_RADIO_885014": {
+   "persisten": 9,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9231,
+   "vida_med": 1739.0,
+   "fund_post10k": 0,
+   "muertes": 311,
+   "nac_reales": 291,
+   "mordidas_malas": 7168,
+   "limpiezas_fisicas": 6509,
+   "frac_sin_bueno_mundo": 0.2306,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 149,
+    "sed": 110,
+    "veneno": 30,
+    "sal": 22
+   },
+   "mord": {
+    "A": 4892,
+    "B": 3585,
+    "C": 4929,
+    "D": 3583
+   },
+   "seg": 321.7
+  },
+  "M_RADIO_885015": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9348,
+   "vida_med": 1592.5,
+   "fund_post10k": 29,
+   "muertes": 358,
+   "nac_reales": 315,
+   "mordidas_malas": 7079,
+   "limpiezas_fisicas": 6441,
+   "frac_sin_bueno_mundo": 0.2364,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 165,
+    "sed": 140,
+    "veneno": 26,
+    "sal": 27
+   },
+   "mord": {
+    "A": 4756,
+    "B": 3550,
+    "C": 4670,
+    "D": 3529
+   },
+   "seg": 390.9
+  },
+  "M_RADIO_885016": {
+   "persisten": 5,
+   "cruzan_real": 3,
+   "R0_real_med": 0.9091,
+   "vida_med": 2130.0,
+   "fund_post10k": 4,
+   "muertes": 321,
+   "nac_reales": 302,
+   "mordidas_malas": 6975,
+   "limpiezas_fisicas": 6357,
+   "frac_sin_bueno_mundo": 0.2321,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 146,
+    "sed": 120,
+    "veneno": 25,
+    "sal": 30
+   },
+   "mord": {
+    "A": 4743,
+    "B": 3485,
+    "C": 4875,
+    "D": 3490
+   },
+   "seg": 389.0
+  },
+  "M_RADIO_885017": {
+   "persisten": 3,
+   "cruzan_real": 2,
+   "R0_real_med": 0.8824,
+   "vida_med": 1744.0,
+   "fund_post10k": 16,
+   "muertes": 354,
+   "nac_reales": 322,
+   "mordidas_malas": 7058,
+   "limpiezas_fisicas": 6445,
+   "frac_sin_bueno_mundo": 0.244,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 154,
+    "sed": 141,
+    "veneno": 28,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4634,
+    "B": 3464,
+    "C": 4813,
+    "D": 3594
+   },
+   "seg": 417.3
+  },
+  "M_RADIO_885018": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9394,
+   "vida_med": 2286.0,
+   "fund_post10k": 3,
+   "muertes": 322,
+   "nac_reales": 301,
+   "mordidas_malas": 7149,
+   "limpiezas_fisicas": 6485,
+   "frac_sin_bueno_mundo": 0.2316,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 130,
+    "sed": 132,
+    "veneno": 27,
+    "sal": 33
+   },
+   "mord": {
+    "A": 4850,
+    "B": 3574,
+    "C": 4769,
+    "D": 3575
+   },
+   "seg": 403.3
+  },
+  "M_RADIO_885019": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9444,
+   "vida_med": 2217.5,
+   "fund_post10k": 5,
+   "muertes": 325,
+   "nac_reales": 310,
+   "mordidas_malas": 7204,
+   "limpiezas_fisicas": 6538,
+   "frac_sin_bueno_mundo": 0.2474,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 130,
+    "sed": 137,
+    "veneno": 33,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4830,
+    "B": 3621,
+    "C": 4825,
+    "D": 3583
+   },
+   "seg": 415.5
+  },
+  "M_RADIO_885020": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9375,
+   "vida_med": 1557.0,
+   "fund_post10k": 2,
+   "muertes": 341,
+   "nac_reales": 314,
+   "mordidas_malas": 7014,
+   "limpiezas_fisicas": 6401,
+   "frac_sin_bueno_mundo": 0.2469,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 142,
+    "sed": 141,
+    "veneno": 33,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4675,
+    "B": 3506,
+    "C": 4670,
+    "D": 3508
+   },
+   "seg": 411.3
+  },
+  "M_RECICLA_885001": {
+   "persisten": 8,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9524,
+   "vida_med": 2656.0,
+   "fund_post10k": 2,
+   "muertes": 244,
+   "nac_reales": 230,
+   "mordidas_malas": 8783,
+   "limpiezas_fisicas": 8140,
+   "frac_sin_bueno_mundo": 0.1937,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 103,
+    "sed": 104,
+    "veneno": 22,
+    "sal": 15
+   },
+   "mord": {
+    "A": 5585,
+    "B": 4393,
+    "C": 5568,
+    "D": 4390
+   },
+   "seg": 524.8
+  },
+  "M_RECICLA_885002": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9231,
+   "vida_med": 2581.0,
+   "fund_post10k": 0,
+   "muertes": 242,
+   "nac_reales": 232,
+   "mordidas_malas": 8930,
+   "limpiezas_fisicas": 8297,
+   "frac_sin_bueno_mundo": 0.195,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 94,
+    "sed": 95,
+    "veneno": 24,
+    "sal": 29
+   },
+   "mord": {
+    "A": 5619,
+    "B": 4447,
+    "C": 5686,
+    "D": 4483
+   },
+   "seg": 595.7
+  },
+  "M_RECICLA_885003": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9615,
+   "vida_med": 2567.0,
+   "fund_post10k": 0,
+   "muertes": 240,
+   "nac_reales": 230,
+   "mordidas_malas": 8992,
+   "limpiezas_fisicas": 8367,
+   "frac_sin_bueno_mundo": 0.1737,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 94,
+    "sed": 98,
+    "veneno": 25,
+    "sal": 23
+   },
+   "mord": {
+    "A": 5785,
+    "B": 4456,
+    "C": 5828,
+    "D": 4536
+   },
+   "seg": 587.3
+  },
+  "M_RECICLA_885004": {
+   "persisten": 9,
+   "cruzan_real": 3,
+   "R0_real_med": 0.8621,
+   "vida_med": 1801.0,
+   "fund_post10k": 0,
+   "muertes": 273,
+   "nac_reales": 240,
+   "mordidas_malas": 8872,
+   "limpiezas_fisicas": 8216,
+   "frac_sin_bueno_mundo": 0.1904,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 122,
+    "sed": 89,
+    "veneno": 34,
+    "sal": 28
+   },
+   "mord": {
+    "A": 5682,
+    "B": 4504,
+    "C": 5576,
+    "D": 4368
+   },
+   "seg": 524.6
+  },
+  "M_RECICLA_885005": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9259,
+   "vida_med": 2664.5,
+   "fund_post10k": 0,
+   "muertes": 249,
+   "nac_reales": 237,
+   "mordidas_malas": 9118,
+   "limpiezas_fisicas": 8427,
+   "frac_sin_bueno_mundo": 0.1715,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 116,
+    "sed": 86,
+    "veneno": 25,
+    "sal": 22
+   },
+   "mord": {
+    "A": 5780,
+    "B": 4526,
+    "C": 5865,
+    "D": 4592
+   },
+   "seg": 525.1
+  },
+  "M_RECICLA_885006": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9643,
+   "vida_med": 2170.5,
+   "fund_post10k": 0,
+   "muertes": 266,
+   "nac_reales": 261,
+   "mordidas_malas": 9019,
+   "limpiezas_fisicas": 8356,
+   "frac_sin_bueno_mundo": 0.1877,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 120,
+    "sed": 92,
+    "veneno": 25,
+    "sal": 29
+   },
+   "mord": {
+    "A": 5580,
+    "B": 4440,
+    "C": 5697,
+    "D": 4579
+   },
+   "seg": 617.4
+  },
+  "M_RECICLA_885007": {
+   "persisten": 8,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9545,
+   "vida_med": 2472.0,
+   "fund_post10k": 2,
+   "muertes": 248,
+   "nac_reales": 229,
+   "mordidas_malas": 9030,
+   "limpiezas_fisicas": 8375,
+   "frac_sin_bueno_mundo": 0.2089,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 91,
+    "sed": 105,
+    "veneno": 25,
+    "sal": 27
+   },
+   "mord": {
+    "A": 5761,
+    "B": 4603,
+    "C": 5640,
+    "D": 4427
+   },
+   "seg": 583.4
+  },
+  "M_RECICLA_885008": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.96,
+   "vida_med": 2586.5,
+   "fund_post10k": 0,
+   "muertes": 237,
+   "nac_reales": 227,
+   "mordidas_malas": 9167,
+   "limpiezas_fisicas": 8479,
+   "frac_sin_bueno_mundo": 0.1731,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 98,
+    "sed": 93,
+    "veneno": 15,
+    "sal": 31
+   },
+   "mord": {
+    "A": 5849,
+    "B": 4580,
+    "C": 5756,
+    "D": 4587
+   },
+   "seg": 513.5
+  },
+  "M_RECICLA_885009": {
+   "persisten": 9,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9231,
+   "vida_med": 2479.0,
+   "fund_post10k": 0,
+   "muertes": 269,
+   "nac_reales": 245,
+   "mordidas_malas": 8899,
+   "limpiezas_fisicas": 8267,
+   "frac_sin_bueno_mundo": 0.1843,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 98,
+    "sed": 113,
+    "veneno": 32,
+    "sal": 26
+   },
+   "mord": {
+    "A": 5681,
+    "B": 4487,
+    "C": 5667,
+    "D": 4412
+   },
+   "seg": 417.9
+  },
+  "M_RECICLA_885010": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.963,
+   "vida_med": 2815.0,
+   "fund_post10k": 0,
+   "muertes": 234,
+   "nac_reales": 230,
+   "mordidas_malas": 9001,
+   "limpiezas_fisicas": 8356,
+   "frac_sin_bueno_mundo": 0.175,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 95,
+    "sed": 94,
+    "veneno": 23,
+    "sal": 22
+   },
+   "mord": {
+    "A": 5645,
+    "B": 4452,
+    "C": 5739,
+    "D": 4549
+   },
+   "seg": 605.3
+  },
+  "M_RECICLA_885011": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9565,
+   "vida_med": 2852.0,
+   "fund_post10k": 0,
+   "muertes": 242,
+   "nac_reales": 237,
+   "mordidas_malas": 9029,
+   "limpiezas_fisicas": 8379,
+   "frac_sin_bueno_mundo": 0.1792,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 97,
+    "sed": 91,
+    "veneno": 31,
+    "sal": 23
+   },
+   "mord": {
+    "A": 5659,
+    "B": 4485,
+    "C": 5747,
+    "D": 4544
+   },
+   "seg": 638.5
+  },
+  "M_RECICLA_885012": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.95,
+   "vida_med": 2286.0,
+   "fund_post10k": 0,
+   "muertes": 232,
+   "nac_reales": 224,
+   "mordidas_malas": 9132,
+   "limpiezas_fisicas": 8500,
+   "frac_sin_bueno_mundo": 0.1747,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 93,
+    "sed": 101,
+    "veneno": 16,
+    "sal": 22
+   },
+   "mord": {
+    "A": 5765,
+    "B": 4614,
+    "C": 5751,
+    "D": 4518
+   },
+   "seg": 456.3
+  },
+  "M_RECICLA_885013": {
+   "persisten": 8,
+   "cruzan_real": 7,
+   "R0_real_med": 0.96,
+   "vida_med": 2261.5,
+   "fund_post10k": 4,
+   "muertes": 268,
+   "nac_reales": 253,
+   "mordidas_malas": 8527,
+   "limpiezas_fisicas": 7920,
+   "frac_sin_bueno_mundo": 0.2022,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 114,
+    "sed": 109,
+    "veneno": 23,
+    "sal": 22
+   },
+   "mord": {
+    "A": 5501,
+    "B": 4315,
+    "C": 5399,
+    "D": 4212
+   },
+   "seg": 442.7
+  },
+  "M_RECICLA_885014": {
+   "persisten": 8,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9032,
+   "vida_med": 2642.0,
+   "fund_post10k": 1,
+   "muertes": 260,
+   "nac_reales": 239,
+   "mordidas_malas": 9287,
+   "limpiezas_fisicas": 8592,
+   "frac_sin_bueno_mundo": 0.1586,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 97,
+    "sed": 108,
+    "veneno": 31,
+    "sal": 24
+   },
+   "mord": {
+    "A": 5894,
+    "B": 4682,
+    "C": 5816,
+    "D": 4605
+   },
+   "seg": 438.5
+  },
+  "M_RECICLA_885015": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9286,
+   "vida_med": 2534.5,
+   "fund_post10k": 0,
+   "muertes": 250,
+   "nac_reales": 242,
+   "mordidas_malas": 8785,
+   "limpiezas_fisicas": 8137,
+   "frac_sin_bueno_mundo": 0.2113,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 100,
+    "sed": 103,
+    "veneno": 18,
+    "sal": 29
+   },
+   "mord": {
+    "A": 5510,
+    "B": 4411,
+    "C": 5443,
+    "D": 4374
+   },
+   "seg": 452.9
+  },
+  "M_RECICLA_885016": {
+   "persisten": 7,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9259,
+   "vida_med": 2251.0,
+   "fund_post10k": 3,
+   "muertes": 267,
+   "nac_reales": 251,
+   "mordidas_malas": 9224,
+   "limpiezas_fisicas": 8559,
+   "frac_sin_bueno_mundo": 0.1828,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 116,
+    "sed": 94,
+    "veneno": 34,
+    "sal": 23
+   },
+   "mord": {
+    "A": 5700,
+    "B": 4648,
+    "C": 5615,
+    "D": 4576
+   },
+   "seg": 479.6
+  },
+  "M_RECICLA_885017": {
+   "persisten": 9,
+   "cruzan_real": 6,
+   "R0_real_med": 0.9091,
+   "vida_med": 2281.0,
+   "fund_post10k": 0,
+   "muertes": 262,
+   "nac_reales": 235,
+   "mordidas_malas": 8916,
+   "limpiezas_fisicas": 8255,
+   "frac_sin_bueno_mundo": 0.1933,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 127,
+    "sed": 89,
+    "veneno": 26,
+    "sal": 20
+   },
+   "mord": {
+    "A": 5594,
+    "B": 4457,
+    "C": 5507,
+    "D": 4459
+   },
+   "seg": 432.0
+  },
+  "M_RECICLA_885018": {
+   "persisten": 9,
+   "cruzan_real": 8,
+   "R0_real_med": 0.9615,
+   "vida_med": 2876.5,
+   "fund_post10k": 0,
+   "muertes": 237,
+   "nac_reales": 232,
+   "mordidas_malas": 8688,
+   "limpiezas_fisicas": 8047,
+   "frac_sin_bueno_mundo": 0.2198,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 100,
+    "sed": 95,
+    "veneno": 21,
+    "sal": 21
+   },
+   "mord": {
+    "A": 5680,
+    "B": 4313,
+    "C": 5610,
+    "D": 4375
+   },
+   "seg": 475.8
+  },
+  "M_RECICLA_885019": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9655,
+   "vida_med": 2356.0,
+   "fund_post10k": 0,
+   "muertes": 266,
+   "nac_reales": 261,
+   "mordidas_malas": 9104,
+   "limpiezas_fisicas": 8478,
+   "frac_sin_bueno_mundo": 0.1899,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 106,
+    "sed": 109,
+    "veneno": 22,
+    "sal": 29
+   },
+   "mord": {
+    "A": 5820,
+    "B": 4643,
+    "C": 5664,
+    "D": 4461
+   },
+   "seg": 457.3
+  },
+  "M_RECICLA_885020": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9655,
+   "vida_med": 1911.0,
+   "fund_post10k": 0,
+   "muertes": 299,
+   "nac_reales": 285,
+   "mordidas_malas": 8513,
+   "limpiezas_fisicas": 7926,
+   "frac_sin_bueno_mundo": 0.218,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 125,
+    "sed": 118,
+    "veneno": 25,
+    "sal": 31
+   },
+   "mord": {
+    "A": 5302,
+    "B": 4241,
+    "C": 5344,
+    "D": 4272
+   },
+   "seg": 422.7
+  },
+  "M_URGENCIA_885001": {
+   "persisten": 5,
+   "cruzan_real": 3,
+   "R0_real_med": 0.9231,
+   "vida_med": 1900.0,
+   "fund_post10k": 5,
+   "muertes": 351,
+   "nac_reales": 331,
+   "mordidas_malas": 6900,
+   "limpiezas_fisicas": 6282,
+   "frac_sin_bueno_mundo": 0.1898,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 142,
+    "sed": 152,
+    "veneno": 32,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4808,
+    "B": 3525,
+    "C": 4613,
+    "D": 3375
+   },
+   "seg": 534.7
+  },
+  "M_URGENCIA_885002": {
+   "persisten": 7,
+   "cruzan_real": 3,
+   "R0_real_med": 0.8929,
+   "vida_med": 2238.0,
+   "fund_post10k": 9,
+   "muertes": 301,
+   "nac_reales": 277,
+   "mordidas_malas": 7103,
+   "limpiezas_fisicas": 6497,
+   "frac_sin_bueno_mundo": 0.1704,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 147,
+    "sed": 120,
+    "veneno": 16,
+    "sal": 18
+   },
+   "mord": {
+    "A": 4757,
+    "B": 3562,
+    "C": 4844,
+    "D": 3541
+   },
+   "seg": 579.6
+  },
+  "M_URGENCIA_885003": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9333,
+   "vida_med": 2015.0,
+   "fund_post10k": 6,
+   "muertes": 334,
+   "nac_reales": 313,
+   "mordidas_malas": 6851,
+   "limpiezas_fisicas": 6262,
+   "frac_sin_bueno_mundo": 0.1922,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 125,
+    "sed": 145,
+    "veneno": 29,
+    "sal": 35
+   },
+   "mord": {
+    "A": 4632,
+    "B": 3421,
+    "C": 4625,
+    "D": 3430
+   },
+   "seg": 579.6
+  },
+  "M_URGENCIA_885004": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9024,
+   "vida_med": 2089.5,
+   "fund_post10k": 17,
+   "muertes": 334,
+   "nac_reales": 306,
+   "mordidas_malas": 6842,
+   "limpiezas_fisicas": 6207,
+   "frac_sin_bueno_mundo": 0.1763,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 153,
+    "sed": 122,
+    "veneno": 27,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4603,
+    "B": 3393,
+    "C": 4660,
+    "D": 3449
+   },
+   "seg": 523.9
+  },
+  "M_URGENCIA_885005": {
+   "persisten": 6,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9459,
+   "vida_med": 2186.0,
+   "fund_post10k": 5,
+   "muertes": 335,
+   "nac_reales": 319,
+   "mordidas_malas": 6836,
+   "limpiezas_fisicas": 6218,
+   "frac_sin_bueno_mundo": 0.1765,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 137,
+    "sed": 153,
+    "veneno": 17,
+    "sal": 28
+   },
+   "mord": {
+    "A": 4747,
+    "B": 3430,
+    "C": 4694,
+    "D": 3406
+   },
+   "seg": 532.4
+  },
+  "M_URGENCIA_885006": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9167,
+   "vida_med": 1801.0,
+   "fund_post10k": 9,
+   "muertes": 311,
+   "nac_reales": 288,
+   "mordidas_malas": 6966,
+   "limpiezas_fisicas": 6312,
+   "frac_sin_bueno_mundo": 0.1795,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 120,
+    "sed": 138,
+    "veneno": 22,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4712,
+    "B": 3486,
+    "C": 4616,
+    "D": 3480
+   },
+   "seg": 599.0
+  },
+  "M_URGENCIA_885007": {
+   "persisten": 5,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9412,
+   "vida_med": 2016.0,
+   "fund_post10k": 8,
+   "muertes": 320,
+   "nac_reales": 300,
+   "mordidas_malas": 6934,
+   "limpiezas_fisicas": 6304,
+   "frac_sin_bueno_mundo": 0.1796,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 153,
+    "sed": 114,
+    "veneno": 21,
+    "sal": 32
+   },
+   "mord": {
+    "A": 4671,
+    "B": 3443,
+    "C": 4738,
+    "D": 3491
+   },
+   "seg": 589.4
+  },
+  "M_URGENCIA_885008": {
+   "persisten": 4,
+   "cruzan_real": 3,
+   "R0_real_med": 0.9459,
+   "vida_med": 2012.0,
+   "fund_post10k": 8,
+   "muertes": 333,
+   "nac_reales": 305,
+   "mordidas_malas": 7109,
+   "limpiezas_fisicas": 6474,
+   "frac_sin_bueno_mundo": 0.1826,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 126,
+    "sed": 147,
+    "veneno": 33,
+    "sal": 27
+   },
+   "mord": {
+    "A": 4790,
+    "B": 3571,
+    "C": 4693,
+    "D": 3538
+   },
+   "seg": 517.7
+  },
+  "M_URGENCIA_885009": {
+   "persisten": 7,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9211,
+   "vida_med": 1860.0,
+   "fund_post10k": 6,
+   "muertes": 326,
+   "nac_reales": 305,
+   "mordidas_malas": 7040,
+   "limpiezas_fisicas": 6434,
+   "frac_sin_bueno_mundo": 0.1952,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 128,
+    "sed": 132,
+    "veneno": 33,
+    "sal": 33
+   },
+   "mord": {
+    "A": 4773,
+    "B": 3545,
+    "C": 4678,
+    "D": 3495
+   },
+   "seg": 421.9
+  },
+  "M_URGENCIA_885010": {
+   "persisten": 7,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9333,
+   "vida_med": 2040.0,
+   "fund_post10k": 6,
+   "muertes": 316,
+   "nac_reales": 304,
+   "mordidas_malas": 6920,
+   "limpiezas_fisicas": 6297,
+   "frac_sin_bueno_mundo": 0.1704,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 141,
+    "sed": 132,
+    "veneno": 17,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4771,
+    "B": 3407,
+    "C": 4941,
+    "D": 3513
+   },
+   "seg": 616.4
+  },
+  "M_URGENCIA_885011": {
+   "persisten": 8,
+   "cruzan_real": 4,
+   "R0_real_med": 0.8776,
+   "vida_med": 1801.0,
+   "fund_post10k": 1,
+   "muertes": 348,
+   "nac_reales": 311,
+   "mordidas_malas": 6976,
+   "limpiezas_fisicas": 6334,
+   "frac_sin_bueno_mundo": 0.1695,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 142,
+    "sed": 152,
+    "veneno": 32,
+    "sal": 22
+   },
+   "mord": {
+    "A": 4791,
+    "B": 3530,
+    "C": 4673,
+    "D": 3446
+   },
+   "seg": 631.5
+  },
+  "M_URGENCIA_885012": {
+   "persisten": 5,
+   "cruzan_real": 3,
+   "R0_real_med": 0.913,
+   "vida_med": 1784.0,
+   "fund_post10k": 9,
+   "muertes": 354,
+   "nac_reales": 319,
+   "mordidas_malas": 6769,
+   "limpiezas_fisicas": 6179,
+   "frac_sin_bueno_mundo": 0.1938,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 151,
+    "sed": 149,
+    "veneno": 26,
+    "sal": 28
+   },
+   "mord": {
+    "A": 4799,
+    "B": 3448,
+    "C": 4620,
+    "D": 3321
+   },
+   "seg": 461.8
+  },
+  "M_URGENCIA_885013": {
+   "persisten": 9,
+   "cruzan_real": 7,
+   "R0_real_med": 0.9688,
+   "vida_med": 2143.0,
+   "fund_post10k": 0,
+   "muertes": 294,
+   "nac_reales": 288,
+   "mordidas_malas": 6934,
+   "limpiezas_fisicas": 6331,
+   "frac_sin_bueno_mundo": 0.1695,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 139,
+    "sed": 117,
+    "veneno": 17,
+    "sal": 21
+   },
+   "mord": {
+    "A": 4747,
+    "B": 3448,
+    "C": 4771,
+    "D": 3486
+   },
+   "seg": 435.3
+  },
+  "M_URGENCIA_885014": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.913,
+   "vida_med": 1989.5,
+   "fund_post10k": 5,
+   "muertes": 354,
+   "nac_reales": 318,
+   "mordidas_malas": 7039,
+   "limpiezas_fisicas": 6414,
+   "frac_sin_bueno_mundo": 0.1648,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 147,
+    "sed": 158,
+    "veneno": 23,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4751,
+    "B": 3544,
+    "C": 4659,
+    "D": 3495
+   },
+   "seg": 433.6
+  },
+  "M_URGENCIA_885015": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9189,
+   "vida_med": 2066.0,
+   "fund_post10k": 10,
+   "muertes": 319,
+   "nac_reales": 294,
+   "mordidas_malas": 6811,
+   "limpiezas_fisicas": 6195,
+   "frac_sin_bueno_mundo": 0.183,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 123,
+    "sed": 142,
+    "veneno": 26,
+    "sal": 28
+   },
+   "mord": {
+    "A": 4690,
+    "B": 3393,
+    "C": 4632,
+    "D": 3418
+   },
+   "seg": 450.9
+  },
+  "M_URGENCIA_885016": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9412,
+   "vida_med": 1940.5,
+   "fund_post10k": 9,
+   "muertes": 322,
+   "nac_reales": 303,
+   "mordidas_malas": 7038,
+   "limpiezas_fisicas": 6382,
+   "frac_sin_bueno_mundo": 0.1857,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 133,
+    "sed": 127,
+    "veneno": 31,
+    "sal": 31
+   },
+   "mord": {
+    "A": 4646,
+    "B": 3550,
+    "C": 4728,
+    "D": 3488
+   },
+   "seg": 493.9
+  },
+  "M_URGENCIA_885017": {
+   "persisten": 6,
+   "cruzan_real": 4,
+   "R0_real_med": 0.9048,
+   "vida_med": 1892.0,
+   "fund_post10k": 5,
+   "muertes": 331,
+   "nac_reales": 309,
+   "mordidas_malas": 6977,
+   "limpiezas_fisicas": 6369,
+   "frac_sin_bueno_mundo": 0.1678,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 150,
+    "sed": 127,
+    "veneno": 30,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4745,
+    "B": 3462,
+    "C": 4846,
+    "D": 3515
+   },
+   "seg": 456.5
+  },
+  "M_URGENCIA_885018": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9394,
+   "vida_med": 1783.0,
+   "fund_post10k": 2,
+   "muertes": 334,
+   "nac_reales": 307,
+   "mordidas_malas": 7051,
+   "limpiezas_fisicas": 6420,
+   "frac_sin_bueno_mundo": 0.1846,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 137,
+    "sed": 145,
+    "veneno": 26,
+    "sal": 26
+   },
+   "mord": {
+    "A": 4694,
+    "B": 3528,
+    "C": 4819,
+    "D": 3523
+   },
+   "seg": 462.3
+  },
+  "M_URGENCIA_885019": {
+   "persisten": 7,
+   "cruzan_real": 5,
+   "R0_real_med": 0.9355,
+   "vida_med": 2286.0,
+   "fund_post10k": 4,
+   "muertes": 328,
+   "nac_reales": 310,
+   "mordidas_malas": 6865,
+   "limpiezas_fisicas": 6283,
+   "frac_sin_bueno_mundo": 0.1799,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 146,
+    "sed": 124,
+    "veneno": 34,
+    "sal": 24
+   },
+   "mord": {
+    "A": 4718,
+    "B": 3459,
+    "C": 4766,
+    "D": 3406
+   },
+   "seg": 442.6
+  },
+  "M_URGENCIA_885020": {
+   "persisten": 4,
+   "cruzan_real": 3,
+   "R0_real_med": 0.9048,
+   "vida_med": 1782.0,
+   "fund_post10k": 23,
+   "muertes": 362,
+   "nac_reales": 327,
+   "mordidas_malas": 6960,
+   "limpiezas_fisicas": 6319,
+   "frac_sin_bueno_mundo": 0.1742,
+   "escrituras": 0,
+   "causas": {
+    "hambre": 175,
+    "sed": 127,
+    "veneno": 35,
+    "sal": 25
+   },
+   "mord": {
+    "A": 4530,
+    "B": 3505,
+    "C": 4618,
+    "D": 3455
+   },
+   "seg": 398.2
+  }
+ }
+}

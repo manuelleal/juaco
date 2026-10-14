@@ -7852,3 +7852,6 @@ Ninguno altera un veredicto registrado. Los cinco candidatos los verificó `juac
 Observación sin numerar: `REGISTRO:3727` dice "466 corridas" donde el bloque de hija_dispersa tendría 400; no auditado.
 
 Siguiente ERR libre: **ERR-203**.
+
+### MURO MÍNIMO, PIEZA POR PIEZA — 14-oct-2026: **NO SE LEE** (control bajo en 15/20)
+Preregistro `f7a54099` (13-oct). Serie 885001–885020, 120 corridas: HUMO 20/20, M_RECICLA 18/20 (suma 134), MINIMO 15/20 (102), M_PIZARRA 13/20 (108), M_URGENCIA 9/20 (88), M_RADIO 8/20 (87). Con MINIMO en ≥ 15/20 la letra declara que no hay brecha: NO SE LEE, y el bloque también (una tanda que no se lee lo invalida); réplica no corrida por inútil según la letra. Lectura no declarada: el control bajo es inestable (10/20, 11/20 antes; 15/20 ahora) y P3 (recicla) es la única pieza por encima de MINIMO en las dos medidas. Propuesta: medir MINIMO solo con 40 semillas nuevas antes de otro bloque de piezas. Detalle: `experimentos/muro_minimo_pieza_20261013/VEREDICTO.md`. Siguiente ERR libre: ERR-203.
